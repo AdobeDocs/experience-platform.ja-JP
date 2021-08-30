@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをAzure Data Lake Storage Gen2に接続する方法を説明します。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 7%
+source-wordcount: '520'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Azure Data Lake Storage Gen2]（以下「ADLS Gen2」と呼びます）のベース接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Azure Data Lake Storage Gen2]（以下「ADLS Gen2」と呼びます）のベース接続を作成する手順を説明します。
 
 ## はじめに
 

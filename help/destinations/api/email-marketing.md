@@ -6,10 +6,10 @@ description: このドキュメントでは、Adobe Experience Platform APIを�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1705'
-ht-degree: 72%
+source-wordcount: '1701'
+ht-degree: 71%
 
 ---
 
@@ -66,7 +66,7 @@ Platformのユーザーインターフェイスを使用して宛先を接続し
 
 ### Swagger のドキュメント
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能な宛先のリストを取得する {#get-the-list-of-available-destinations}
 

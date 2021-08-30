@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してPlatformをMicrosoft Dynamicsアカウントに接続する方法を説明します。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 10%
+source-wordcount: '633'
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Microsoft Dynamics]（以下「[!DNL Dynamics]」と呼びます）のベース接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Microsoft Dynamics]（以下「[!DNL Dynamics]」と呼びます）のベース接続を作成する手順を説明します。
 
 ## はじめに
 

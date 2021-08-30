@@ -1,35 +1,34 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの更新
+keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；アカウントの更新
 solution: Experience Platform
-title: Flow Service APIを使用したアカウントの更新
+title: フローサービスAPIを使用したアカウントの更新
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用してアカウントの詳細と秘密鍵証明書を更新する手順について説明します。
+description: このチュートリアルでは、フローサービスAPIを使用してアカウントの詳細と資格情報を更新する手順を説明します。
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 31%
+source-wordcount: '683'
+ht-degree: 32%
 
 ---
 
-# Flow Service APIを使用してアカウントを更新する
+# フローサービスAPIを使用したアカウントの更新
 
-状況によっては、既存のソース接続の詳細を更新する必要がある場合があります。 [!DNL Flow Service] 既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
+状況によっては、既存のソース接続の詳細を更新する必要が生じる場合があります。 [!DNL Flow Service] には、既存のバッチ接続またはストリーミング接続の詳細（名前、説明、資格情報など）を追加、編集および削除する機能があります。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して接続の詳細と秘密鍵証明書を更新する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して接続の詳細と資格情報を更新する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、既存の接続と有効な接続IDが必要です。 既存の接続がない場合は、[ソースの概要](../../home.md)から選択し、このチュートリアルを試みる前に説明されている手順に従ってください。
+このチュートリアルでは、既存の接続と有効な接続IDが必要です。 既存の接続がない場合は、[ソースの概要](../../home.md)から目的のソースを選択し、このチュートリアルを試す前に説明した手順に従います。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用して接続を正しく更新するために知っておく必要がある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して接続を正しく更新するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -37,7 +36,7 @@ ht-degree: 31%
 
 ### 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -51,9 +50,9 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 * `Content-Type: application/json`
 
-## 接続の詳細を検索する
+## 接続の詳細の検索
 
-接続を更新する最初の手順は、接続IDを使用して詳細を取得することです。 接続の現在の詳細を取得するために、更新する接続の接続IDを提供しながら、[!DNL Flow Service] APIにGETリクエストを行います。
+接続を更新する最初の手順は、接続IDを使用して詳細を取得することです。 接続の現在の詳細を取得するには、更新する接続の接続IDを指定しながら、[!DNL Flow Service] APIにGETリクエストを送信します。
 
 **API 形式**
 
@@ -67,7 +66,7 @@ GET /connections/{CONNECTION_ID}
 
 **リクエスト**
 
-次の要求は、接続に関する情報を取得します。
+次のリクエストは、接続に関する情報を取得します。
 
 ```shell
 curl -X GET \
@@ -80,7 +79,7 @@ curl -X GET \
 
 **応答**
 
-正常に応答すると、資格情報、一意の識別子(`id`)、バージョンを含む、接続の現在の詳細が返されます。 接続を更新するには、バージョンの値が必要です。
+正常な応答は、資格情報、一意の識別子(`id`)、バージョンを含む、接続の現在の詳細を返します。 接続を更新するには、バージョン値が必要です。
 
 ```json
 {
@@ -118,11 +117,11 @@ curl -X GET \
 
 ## 接続の更新
 
-接続の名前、説明、資格情報を更新するには、接続ID、PATCH、および使用する新しい情報を提供しながら、[!DNL Flow Service] APIに接続リクエストを実行します。
+接続の名前、説明、および資格情報を更新するには、接続ID、バージョン、使用する新しい情報を指定しながら、[!DNL Flow Service] APIに対してPATCHリクエストを実行します。
 
 >[!IMPORTANT]
 >
->PATCHリクエストを行う場合は、`If-Match`ヘッダーが必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>`If-Match`ヘッダーは、PATCHリクエストをおこなう際に必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -136,7 +135,7 @@ PATCH /connections/{CONNECTION_ID}
 
 **リクエスト**
 
-次の要求では、接続を更新するための新しい名前と説明、および新しい秘密鍵証明書のセットを提供します。
+次のリクエストでは、接続を更新するための新しい名前と説明、および新しい資格情報セットを提供します。
 
 ```shell
 curl -X PATCH \
@@ -177,7 +176,7 @@ curl -X PATCH \
 
 **応答**
 
-応答が成功すると、接続IDと更新されたeタグが返されます。 接続IDを指定しながら[!DNL Flow Service] APIにGETリクエストを行うことで、更新を検証できます。
+リクエストが成功した場合は、接続IDと更新されたeタグが返されます。 接続IDを提供しながら[!DNL Flow Service] APIにGETリクエストを送信することで、更新を確認できます。
 
 ```json
 {
@@ -188,4 +187,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して、接続に関連付けられた資格情報と情報を更新できます。 ソースコネクタの使用に関する詳細は、[ソースの概要](../../home.md)を参照してください。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、接続に関連付けられた資格情報と情報を更新しました。 ソースコネクタの使用について詳しくは、「[ソースの概要](../../home.md)」を参照してください。

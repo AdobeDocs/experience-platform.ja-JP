@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのCRMシステムからデータを取得し、ソースコネクタとAPIを使用してそれらをPlatformに取り込む手順について説明します。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1582'
-ht-degree: 19%
+source-wordcount: '1578'
+ht-degree: 18%
 
 ---
 
 # ソースコネクタとAPIを使用したCRMデータの収集
 
-このチュートリアルでは、サードパーティのCRMからデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してAdobe Experience Platformに取り込む手順を説明します。
+このチュートリアルでは、サードパーティのCRMからデータを取得し、ソースコネクタと[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用してAdobe Experience Platformに取り込む手順を説明します。
 
 ## はじめに
 

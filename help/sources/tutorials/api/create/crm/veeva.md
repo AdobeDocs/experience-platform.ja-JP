@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをVeeva CRMに接続する方法を説明します。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 9bd241d5f986759268edd072cee72d02f40f858f
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 11%
+source-wordcount: '514'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Veeva CRM]の基本接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Veeva CRM]の基本接続を作成する手順を説明します。
 
 ## はじめに
 

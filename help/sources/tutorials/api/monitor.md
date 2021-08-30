@@ -1,51 +1,50 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；監視データフロー；フローサービスapi；フローサービス
+keywords: Experience Platform、ホーム、人気のあるトピック、データフローの監視、フローサービスapi、フローサービス
 solution: Experience Platform
-title: Flow Service APIを使用したデータフローの監視
+title: フローサービスAPIを使用したデータフローの監視
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、完全性、エラーおよび指標に関するフロー実行データを監視する手順を説明します。
+description: このチュートリアルでは、フローサービスAPIを使用して、完全性、エラーおよび指標のフロー実行データを監視する手順を説明します。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 23%
+source-wordcount: '629'
+ht-degree: 32%
 
 ---
 
-# Flow Service APIを使用してデータフローを監視する
+# フローサービスAPIを使用したデータフローの監視
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
-このチュートリアルでは、フローの実行データを監視し、完全性、エラー、および指標を[[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して監視する手順について説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、完全性、エラーおよび指標のフロー実行データを監視する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効なデータフローのID値が必要です。 有効なデータフローIDがない場合は、[ソース概要](../../home.md)から選択したコネクタを選択し、このチュートリアルを試みる前に概要を説明した手順に従ってください。
+このチュートリアルでは、有効なデータフローのID値が必要です。 有効なデータフローIDがない場合は、[ソースの概要](../../home.md)から目的のコネクタを選択し、このチュートリアルを試す前に説明した手順に従います。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してフローの実行を正しく監視するために知っておく必要がある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用してフローの実行を正しく監視するために必要な追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,7 +52,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 * `Content-Type: application/json`
 
-## フローの実行の監視
+## フロー実行の監視
 
 データフローを作成したら、[!DNL Flow Service] APIに対してGETリクエストを実行します。
 
@@ -82,7 +81,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、作成日、ソース接続、ターゲット接続、およびフロー実行の固有な識別子(`id`)など、フロー実行に関する詳細を返します。
+正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、およびフロー実行の一意の識別子(`id`)を含む、フロー実行に関する詳細を返します。
 
 ```json
 {
@@ -249,12 +248,12 @@ curl -X GET \
 | `items` | 特定のフロー実行に関連付けられたメタデータの単一のペイロードが含まれます。 |
 | `metrics` | フロー実行のデータの特性を定義します。 |
 | `activities` | データの変換方法を定義します。 |
-| `durationSummary` | フロー実行の開始と終了時間を定義します。 |
+| `durationSummary` | フロー実行の開始時刻と終了時刻を定義します。 |
 | `sizeSummary` | データのボリュームをバイト単位で定義します。 |
 | `recordSummary` | データのレコード数を定義します。 |
 | `fileSummary` | データのファイル数を定義します。 |
-| `statusSummary` | フローの実行が成功か失敗かを定義します。 |
+| `statusSummary` | フロー実行が成功か失敗かを定義します。 |
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してデータフローの指標とエラー情報を取得できます。 これで、取り込みスケジュールに応じてデータフローを監視し続け、ステータスと取り込み率を追跡できます。 ユーザー・インタフェースを使用して同じタスクを実行する方法については、[ユーザー・インタフェース](../ui/monitor.md)を使用したデータの監視のチュートリアルを参照してください
+このチュートリアルでは、[!DNL Flow Service] APIを使用してデータフローの指標とエラー情報を取得しました。 これで、取得スケジュールに応じて、データフローを引き続き監視し、ステータスと取得率を追跡できます。 ユーザーインターフェイスを使用して同じタスクを実行する方法について詳しくは、[ユーザーインターフェイスを使用したデータフローの監視に関するチュートリアル](../ui/monitor.md)を参照してください。

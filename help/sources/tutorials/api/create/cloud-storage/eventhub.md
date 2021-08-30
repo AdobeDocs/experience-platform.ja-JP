@@ -6,17 +6,17 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをAzure Event Hubsアカウントに接続する方法を説明します。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 091f6751f4377a25844328ce924f3c33899b3344
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 8%
+source-wordcount: '719'
+ht-degree: 7%
 
 ---
 
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure Event Hubs]ソース接続を作成する
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Azure Event Hubs]（以下「[!DNL Event Hubs]」と呼びます）をExperience Platformに接続する手順について説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Azure Event Hubs]（以下「[!DNL Event Hubs]」と呼びます）をExperience Platformに接続する手順について説明します。
 
 ## はじめに
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.namespace` | アクセスする[!DNL Event Hubs]の名前空間。 |
 | `connectionSpec.id` | [!DNL Event Hubs]接続仕様IDは次のとおりです。`bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 この接続IDは、次の手順でソース接続を作成する際に必要になります。
 

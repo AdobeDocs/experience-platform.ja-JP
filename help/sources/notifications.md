@@ -5,10 +5,10 @@ solution: Experience Platform
 title: フロー実行通知
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 6%
+source-wordcount: '782'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、内の様々な異なるソースから顧客データを収集し、一元化するために使用されま [!DNL Platform]す。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) APIは、内の様々な異なるソースから顧客データを収集し、一元化するために使用さ [!DNL Platform]れます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
 Adobe I/Oイベントを使用すると、イベントにサブスクライブし、Webフックを使用してフロー実行のステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功または実行の失敗につながったエラーに関する情報が含まれます。
 

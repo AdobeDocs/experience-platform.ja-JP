@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用して、Adobe Experience PlatformをAmazon Kinesisソースに接続する方法を説明します。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: fe7c498542cc0dd5f53bc3a434ab34d62e449048
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 8%
+source-wordcount: '730'
+ht-degree: 7%
 
 ---
 
 # フローサービスAPIを使用して[!DNL Amazon Kinesis]ソース接続を作成する
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Amazon Kinesis]（以下「[!DNL Kinesis]」と呼びます）をExperience Platformに接続する手順について説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Amazon Kinesis]（以下「[!DNL Kinesis]」と呼びます）をExperience Platformに接続する手順について説明します。
 
 ## はじめに
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.region` | [!DNL Kinesis]アカウントの地域。 |
 | `connectionSpec.id` | [!DNL Kinesis]接続仕様ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次の手順でソース接続を作成する際に必要になります。
 
@@ -154,7 +154,7 @@ curl -X POST \
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。`raw`と`xdm`が表示されます。 |
 | `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest`を使用して最新のデータから読み取りを開始し、`earliest`を使用してストリーム内の最初に使用可能なデータから読み取りを開始します。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 このIDは、次のチュートリアルでデータフローを作成する際に必要になります。
 

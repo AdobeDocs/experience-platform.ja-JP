@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをFTP（ファイル転送プロトコル）サーバーに接続する方法を説明します。
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 13%
+source-wordcount: '485'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 13%
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL FTP]（ファイル転送プロトコル）のベース接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL FTP]（ファイル転送プロトコル）のベース接続を作成する手順を説明します。
 
 ## はじめに
 

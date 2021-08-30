@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをGoogle PubSubアカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f13afbd70db18e5faa1a101300f3dc7ec944baa3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 9%
+source-wordcount: '740'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 9%
 >
 >[!DNL Google PubSub]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）をExperience Platformに接続する手順について説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）をExperience Platformに接続する手順について説明します。
 
 ## はじめに
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.credentials` | [!DNL PubSub]の認証に必要な資格情報またはキー。 |
 | `connectionSpec.id` | [!DNL PubSub]接続仕様ID:`70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このベース接続IDは、次の手順でソース接続を作成する際に必要になります。
 
@@ -158,7 +158,7 @@ curl -X POST \
 | `params.subscriptionId` | 購読IDは、購読アプリケーションに配信される単一の特定のトピックからのメッセージストリームを表す、特定の名前付きリソースを定義します。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。`raw`と`xdm`が表示されます。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 このIDは、次のチュートリアルでデータフローを作成する際に必要になります。
 

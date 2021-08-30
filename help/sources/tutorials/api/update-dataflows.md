@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；更新データフロー
+keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；データフローの更新
 solution: Experience Platform
-title: Flow Service APIを使用したデータフローの更新
+title: フローサービスAPIを使用したデータフローの更新
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、名前、説明、スケジュールなど、Flow Service APIを使用してデータフローを更新する手順を説明します。
+description: このチュートリアルでは、フローサービスAPIを使用して、名前、説明、スケジュールなど、データフローを更新する手順を説明します。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '611'
 ht-degree: 33%
 
 ---
 
-# Flow Service APIを使用してデータフローを更新する
+# フローサービスAPIを使用したデータフローの更新
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して、名前、説明、スケジュールなど、データフローを更新する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用した名前、説明、スケジュールなど、データフローの更新手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効なフローIDが必要です。 有効なフローIDがない場合は、[ソースの概要](../../home.md)から選択したコネクタを選択し、このチュートリアルを試みる前に説明した手順に従ってください。
+このチュートリアルでは、有効なフローIDが必要です。 有効なフローIDがない場合は、[ソースの概要](../../home.md)から目的のコネクタを選択し、このチュートリアルを試す前に説明した手順に従います。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してデータフローを正しく更新するために知っておく必要がある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用してデータフローを正しく更新するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -35,7 +34,7 @@ ht-degree: 33%
 
 ### 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -51,7 +50,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 ## データフローの詳細の検索
 
-データフローを更新する最初の手順は、フローIDを使用してデータフローの詳細を取得することです。 `/flows`エンドポイントにGETリクエストを行うことで、既存のデータフローの現在の詳細を表示できます。
+データフローを更新する最初の手順は、フローIDを使用してデータフローの詳細を取得することです。 `/flows`エンドポイントに対してGETリクエストを実行すると、既存のデータフローの現在の詳細を表示できます。
 
 **API 形式**
 
@@ -78,7 +77,7 @@ curl -X GET \
 
 **応答**
 
-正常に応答すると、バージョン、スケジュール、一意の識別子(`id`)を含む、データフローの現在の詳細が返されます。
+正常な応答は、バージョン、スケジュール、一意の識別子(`id`)を含む、データフローの現在の詳細を返します。
 
 ```json
 {
@@ -192,11 +191,11 @@ curl -X GET \
 
 ## データフローの更新
 
-データフローの実行スケジュール、名前、説明を更新するには、[!DNL Flow Service] APIに対してPATCHリクエストを実行し、フローID、バージョン、使用する新しいスケジュールを指定します。
+データフローの実行スケジュール、名前および説明を更新するには、使用するフローID、バージョン、新しいスケジュールを指定しながら、[!DNL Flow Service] APIに対してPATCHリクエストを実行します。
 
 >[!IMPORTANT]
 >
->PATCHリクエストを行う場合は、`If-Match`ヘッダーが必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>`If-Match`ヘッダーは、PATCHリクエストをおこなう際に必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -206,7 +205,7 @@ PATCH /flows/{FLOW_ID}
 
 **リクエスト**
 
-次のリクエストは、フロー実行スケジュール、およびデータフローの名前と説明を更新します。
+次のリクエストは、フロー実行スケジュールと、データフローの名前および説明を更新します。
 
 ```shell
 curl -X PATCH \
@@ -237,13 +236,13 @@ curl -X PATCH \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `op` | データフローの更新に必要なアクションの定義に使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
 **応答**
 
-正常な応答が返されると、フローIDと更新されたeタグが返されます。 フローIDを提供しながら[!DNL Flow Service] APIにGETリクエストを行うことで、更新を検証できます。
+リクエストが成功した場合は、フローIDと更新されたeタグが返されます。 フローIDを提供しながら[!DNL Flow Service] APIにGETリクエストを送信することで、更新を確認できます。
 
 ```json
 {
@@ -254,4 +253,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して、データフローの実行スケジュール、名前、説明を更新します。 ソースコネクタの使用に関する詳細は、[ソースの概要](../../home.md)を参照してください。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、データフローの実行スケジュール、名前、説明を更新しました。 ソースコネクタの使用について詳しくは、「[ソースの概要](../../home.md)」を参照してください。

@@ -5,10 +5,10 @@ title: フローサービスAPIを使用した広告システムの調査
 topic-legacy: overview
 description: フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。 このチュートリアルでは、フローサービスAPIを使用して広告システムを調べます。
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 11%
+source-wordcount: '502'
+ht-degree: 10%
 
 ---
 
@@ -16,12 +16,11 @@ ht-degree: 11%
 
 ベース接続が作成されたら、一意のベース接続IDを使用してソースのデータ構造とコンテンツをナビゲートし、調べることができるようになりました。 これにより、データフローを作成してAdobe Experience Platformに引き渡す前に、特定の項目とそれぞれのデータタイプおよび形式を識別できます。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用します。 広告システムを調査する。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して広告システムを調べます。
 
 ## はじめに
 
 >[!IMPORTANT]
-
 このチュートリアルでは、広告ソースに対して一意のベース接続IDを持っている必要があります。 このIDがない場合は、広告ソースをPlatform](../../api/create/advertising/ads.md)に接続する方法に関するチュートリアルを参照してください。[
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。

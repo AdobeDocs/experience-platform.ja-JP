@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
-ht-degree: 19%
+source-wordcount: '1619'
+ht-degree: 18%
 
 ---
 
 # ソースコネクタとAPIを使用したデータベースからのデータの収集
 
-このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタと[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用してPlatformに取り込む手順について説明します。
+このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタと[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用してPlatformに取り込む手順について説明します。
 
 ## はじめに
 
@@ -30,7 +30,7 @@ ht-degree: 19%
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してサードパーティのデータベースに正しく接続するために必要な追加情報を示します。
+以下の節では、[!DNL Flow Service] APIを使用してサードパーティのデータベースに正しく接続するために必要な追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -431,7 +431,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、Platformに取り込む役割を果たします。 GETフローを作成するには、まず[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIに対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を果たします。
+データフローは、ソースからデータを収集し、Platformに取り込む役割を果たします。 GETフローを作成するには、まず[!DNL Flow Service] APIに対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を果たします。
 
 **API 形式**
 

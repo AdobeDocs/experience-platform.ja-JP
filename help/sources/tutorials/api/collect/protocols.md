@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1535'
 ht-degree: 19%
 
 ---
 
 # ソースコネクタとAPIを使用したプロトコルデータの収集
 
-このチュートリアルでは、サードパーティのプロトコルアプリケーションからデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してAdobe Experience Platformに取り込む手順を説明します。
+このチュートリアルでは、サードパーティのプロトコルアプリケーションからデータを取得し、ソースコネクタと[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用してAdobe Experience Platformに取り込む手順を説明します。
 
 ## はじめに
 
