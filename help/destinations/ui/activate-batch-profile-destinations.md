@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
+source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1959'
 ht-degree: 7%
 
 ---
@@ -75,9 +75,12 @@ ht-degree: 7%
 
    >[!IMPORTANT]
    >
-   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうために、Adobeでは、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。これは、今後のリリースで対処される予定の制限です。
+   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうために、Adobeでは、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。この制限は、今後のリリースで対処される予定です。
 
 1. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
+   >[!TIP]
+   >
+   > 日別のエクスポートの場合は、開始日と終了日を、ダウンストリームプラットフォームのキャンペーン期間に合わせて設定します。
 1. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
 
 
@@ -96,14 +99,17 @@ ht-degree: 7%
    * **[!UICONTROL 毎日]**:増分ファイルエクスポートのスケジュールを、指定した時刻に毎日1回設定します。
    * **[!UICONTROL 1時間ごと]**:3、6、8、12時間ごとに差分ファイルエクスポートをスケジュールします。
 
-2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、エクスポートを実行する時刻を[!DNL UTC]形式で選択します。
+1. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、エクスポートを実行する時刻を[!DNL UTC]形式で選択します。
 
    >[!IMPORTANT]
    >
-   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうために、Adobeでは、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。これは、今後のリリースで対処される予定の制限です。
+   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうために、Adobeでは、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。この制限は、今後のリリースで対処される予定です。
 
-3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
-4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
+1. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
+   >[!TIP]
+   >
+   >ダウンストリームプラットフォームでのキャンペーン期間に合わせて、開始日と終了日を設定します。
+1. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
 
 ### ファイル名の設定 {#file-names}
 
@@ -174,7 +180,7 @@ ht-degree: 7%
 
 必須の属性を選択しない場合、属性に関係なく、すべての適合済みプロファイルがエクスポートされます。
 
-属性の1つをスキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
+属性の1つを、スキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
 
 ### 重複排除キー {#deduplication-keys}
 
