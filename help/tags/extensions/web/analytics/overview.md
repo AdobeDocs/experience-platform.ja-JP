@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Adobe Analytics 拡張機能の設定に関する情報、およびこの拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -110,7 +110,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 
 EU プライバシー Cookie に基づいたトラッキングを有効または無効にします。
 
-EU コンプライアンスのチェックボックスをオンにすると、「[!UICONTROL Cookie 名をトラッキング]」フィールドが表示されます。トラッキング cookie により、デフォルトのトラッキング cookie 名が上書きされます。タグが、別の Cookie の受信に対するオプトアウトステータスを追跡するために使用する名前をカスタマイズできます。
+EU コンプライアンスのチェックボックスをオンにすると、「[!UICONTROL Cookie 名をトラッキング]」フィールドが表示されます。トラッキング cookie により、デフォルトのトラッキング cookie 名が上書きされます。タグが、別の cookie の受信に対するオプトアウトステータスを追跡するために使用する名前をカスタマイズできます。
 
 ページが読み込まれる際に、システムは、sat\_track という名前（またはプロパティ編集ページで変更したカスタム名）の Cookie が設定されているかどうかを確認します。次の情報を考慮してください。
 
@@ -269,7 +269,7 @@ Cookie の存続期間を決定します。
 
 Audience Manager サブドメインは、Adobe Audience Manager によって割り当てられます。「パートナー ID」や「パートナーサブドメイン」と呼ばれることもあります。パートナー名が不明な場合は、アドビのコンサルタントまたはカスタマーケアにお問い合わせください。
 
-詳細設定をおこなうには、「**詳細設定を表示**」を選択して希望する設定を入力します。
+「**詳細設定を表示**」を選択し、環境設定を入力することで、詳細設定をおこなうことができます。
 
 ![](../../../images/an-ext-aam-adv.png)
 
@@ -366,7 +366,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 ページビューを増分する場合に選択します。
 
-#### Do not increment a pageview - s.t()
+#### ページビューを増分しない — s.tl()
 
 ページビューを増分しない場合に選択します。
 
