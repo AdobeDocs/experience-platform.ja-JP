@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；RStudio;rstudio;クエリサービスに接続；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；RStudio;rstudio；クエリサービスへの接続；
 solution: Experience Platform
-title: RStudioをクエリサービスに接続
+title: RStudioをクエリサービスに接続する
 topic-legacy: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 18%
+source-wordcount: '362'
+ht-degree: 12%
 
 ---
 
 # [!DNL RStudio]をクエリサービスに接続
 
-このドキュメントでは、[!DNL RStudio]とAdobe Experience Platform[!DNL Query Service]を結ぶ手順を順を追って説明します。
+このドキュメントでは、[!DNL RStudio]とAdobe Experience Platform [!DNL Query Service]を接続する手順について説明します。
 
 >[!NOTE]
 >
-> このガイドは、[!DNL RStudio]へのアクセス権が既にあり、その使い方に精通していることを前提としています。 [!DNL RStudio]に関する詳細は、[正式な [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/)を参照してください。
+> このガイドは、[!DNL RStudio]へのアクセス権を既に持っており、使い方に精通していることを前提としています。 [!DNL RStudio]に関する詳細は、[公式の [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/)を参照してください。
 > 
-> さらに、クエリサービスでRStudioを使用するには、PostgreSQL JDBC 4.2ドライバーをインストールする必要があります。 JDBCドライバは[PostgreSQL公式サイト](https://jdbc.postgresql.org/download.html)からダウンロードできます。
+> さらに、クエリサービスでRStudioを使用するには、PostgreSQL JDBC 4.2ドライバーをインストールする必要があります。 [PostgreSQL公式サイト](https://jdbc.postgresql.org/download.html)からJDBCドライバをダウンロードできます。
 
-## [!DNL RStudio]インターフェイスに[!DNL Query Service]接続を作成する
+## [!DNL RStudio]インターフェイスで[!DNL Query Service]接続を作成します。
 
-[!DNL RStudio]をインストールした後、RJDBCパッケージをインストールする必要があります。 **[!DNL Packages]**&#x200B;ウィンドウに移動し、**[!DNL Install]**&#x200B;を選択します。
+[!DNL RStudio]をインストールした後、RJDBCパッケージをインストールする必要があります。 **[!DNL Packages]**&#x200B;ウィンドウに移動し、「**[!DNL Install]**」を選択します。
 
 ![](../images/clients/rstudio/install-package.png)
 
-**[!DNL Install Packages]**&#x200B;画面が表示され、ポップアップが表示されます。 **[!DNL Install from]**&#x200B;セクションで&#x200B;**[!DNL Repository (CRAN)]**&#x200B;が選択されていることを確認します。 **[!DNL Packages]**&#x200B;の値は`RJDBC`にする必要があります。 **[!DNL Install dependencies]**&#x200B;が選択されていることを確認します。 すべての値が正しいことを確認したら、**[!DNL Install]**&#x200B;を選択してパッケージをインストールします。
+ポップアップが表示され、**[!DNL Install Packages]**&#x200B;画面が表示されます。 **[!DNL Install from]**&#x200B;セクションで&#x200B;**[!DNL Repository (CRAN)]**&#x200B;が選択されていることを確認します。 **[!DNL Packages]**&#x200B;の値は`RJDBC`にする必要があります。 **[!DNL Install dependencies]**&#x200B;が選択されていることを確認します。 すべての値が正しいことを確認したら、**[!DNL Install]**&#x200B;を選択してパッケージをインストールします。
 
 ![](../images/clients/rstudio/install-jrdbc.png)
 
-RJDBCパッケージがインストールされたら、RStudioを再起動してインストールプロセスを完了します。
+RJDBCパッケージがインストールされたので、RStudioを再起動してインストールプロセスを完了します。
 
-RStudioを再起動した後、クエリサービスに接続できるようになりました。 **[!DNL Packages]**&#x200B;ウィンドウで&#x200B;**[!DNL RJDBC]**&#x200B;パッケージを選択し、コンソールで次のコマンドを入力します。
+RStudioが再起動した後、クエリサービスに接続できるようになりました。 **[!DNL Packages]**&#x200B;ウィンドウで&#x200B;**[!DNL RJDBC]**&#x200B;パッケージを選択し、コンソールで次のコマンドを入力します。
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-{PATH TO THE POSTGRESQL JDBC JAR}は、コンピューターにインストールされたPostgreSQL JDBC JARへのパスを表します。
+{PATH TO THE POSTGRESQL JDBC JAR}は、お使いのコンピューターにインストールされたPostgreSQL JDBC JARへのパスを表します。
 
-コンソールで次のコマンドを入力して、クエリサービスへの接続を作成できます。
+これで、コンソールで次のコマンドを入力して、クエリサービスへの接続を作成できます。
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -51,15 +50,15 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択してから、**[!UICONTROL 資格情報]**&#x200B;を選択します。
+>データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、『[資格情報ガイド](../ui/credentials.md)』を参照してください。 資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択し、**[!UICONTROL 資格情報]**&#x200B;を選択します。
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## クエリの記述
 
-[!DNL Query Service]に接続したので、SQL文を実行および編集するクエリを書き込むことができます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
+[!DNL Query Service]に接続したら、SQL文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、[エクスペリエンスイベント](../best-practices/experience-event-queries.md)を含むデータセットを使用し、デバイスの画面の高さが決まると、Webサイトのページ表示のヒストグラムを作成します。
+次のクエリでは、[エクスペリエンスイベント](../best-practices/experience-event-queries.md)を含むデータセットを使用し、デバイスの画面の高さを指定して、Webサイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -96,4 +95,4 @@ df_pageviews
 
 ## 次の手順
 
-クエリの書き込みと実行の方法の詳細については、[実行中のクエリ](../best-practices/writing-queries.md)のガイドを参照してください。
+クエリの書き込みと実行の方法の詳細については、[クエリ](../best-practices/writing-queries.md)の実行に関するガイドを参照してください。

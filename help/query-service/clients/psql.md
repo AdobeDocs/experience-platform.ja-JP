@@ -1,35 +1,34 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;クエリサービスへのpsqlconnect;クエリサービス；クエリサービス；
+keywords: Experience Platform；ホーム；人気のあるトピック；PSQL;psqlconnect to query service；クエリサービス；クエリサービス；
 solution: Experience Platform
 title: PSQLをクエリサービスに接続
 topic-legacy: connect
 description: PSQLは、PostgreSQLをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 13%
+source-wordcount: '275'
+ht-degree: 12%
 
 ---
 
 # PSQLをクエリサービスに接続
 
-PSQLは、[!DNL PostgreSQL]をマシンにインストールするときにインストールされるコマンドラインインターフェイスです。 このドキュメントでは、PSQLをAdobe Experience Platform[!DNL Query Service]と接続する手順を説明します。
+PSQLは、[!DNL PostgreSQL]をコンピュータにインストールする際にインストールされるコマンドラインインターフェイスです。 このドキュメントでは、PSQLをAdobe Experience Platform [!DNL Query Service]に接続する手順を説明します。
 
 >[!NOTE]
 >
-> このガイドは、[!DNL PSQL]へのアクセス権が既にあり、その使い方に精通していることを前提としています。 [!DNL PSQL]について詳しくは、[official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html.
+> このガイドは、[!DNL PSQL]へのアクセス権を既に持っており、使い方に精通していることを前提としています。 [!DNL PSQL]に関する詳細は、[公式の[!DNL PSQL]ドキュメント](https://www.postgresql.org/docs/current/app-psql.html)を参照してください。
 
-PSQLをコンピューターにインストールした後、PSQLをクエリサービスに接続する準備が整いました。 [!DNL Platform] UIに戻り、**[!UICONTROL クエリ]**&#x200B;を選択し、次に&#x200B;**[!UICONTROL 資格情報]**&#x200B;を選択します。
+PSQLをコンピューターにインストールした後、PSQLをクエリサービスに接続する準備が整いました。 [!DNL Platform] UIに戻り、「**[!UICONTROL クエリ]**」を選択し、次に「**[!UICONTROL 資格情報]**」を選択します。
 
 ![画像](../images/clients/psql/connect-bi.png)
 
-**[!UICONTROL PSQL Command]**&#x200B;というラベルの付いたセクションをコピーするアイコンを選択し、コマンド文字列を端末またはコマンドラインウィンドウに貼り付けてから、enterキーを押します。
+**[!UICONTROL PSQL Command]**&#x200B;というラベルのセクションをコピーするアイコンを選択し、Enterキーを押す前に、ターミナルまたはコマンドラインウィンドウにコマンド文字列を貼り付けます。
 
 >[!IMPORTANT]
 >
->PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。 さらに、バージョン12.0以降を使用している場合は、接続文字列に`PGGSSENCMODE=disable`を追加する必要があります。
+>PCの場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。 バージョン12.0以降を使用している場合は、接続文字列に`PGGSSENCMODE=disable`を追加する必要があります。 また、期限切れにならない資格情報を使用する場合は、「password」フィールドを期限切れにならない資格情報パスワードに置き換えます。 期限が切れない資格情報の詳細については、[資格情報ガイド](../ui/credentials.md)を参照してください。
 
 次のような結果が表示されます。
 
@@ -44,4 +43,4 @@ all=>
 
 ## 次の手順
 
-[!DNL Query Service]に接続したので、PSQLを使ってクエリを書くことができます。 クエリの書き込みと実行の方法の詳細については、[実行中のクエリ](../best-practices/writing-queries.md)のガイドを参照してください。
+[!DNL Query Service]と接続したので、PSQLを使用してクエリを記述できます。 クエリの書き込みと実行の方法の詳細については、[クエリ](../best-practices/writing-queries.md)の実行に関するガイドを参照してください。

@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；ポスティコ；ポスティコ；クエリサービスに接続；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；ポスティコ；ポスティコ；クエリサービスへの接続；
 solution: Experience Platform
 title: Posticoをクエリサービスに接続
 topic-legacy: connect
-description: このドキュメントには、Adobe Experience Platformクエリサービス用のバックアップクライアントPosticoをインストールするためのリンクが含まれています。
+description: このドキュメントには、Adobe Experience Platform Query Service用のバックアップクライアントPosticoをインストールするためのリンクが含まれています。
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 16%
+source-wordcount: '248'
+ht-degree: 7%
 
 ---
 
 # [!DNL Postico]をクエリサービス(Mac)に接続
 
-このドキュメントでは、[!DNL Postico]をAdobe Experience Platform[!DNL Query Service]に接続する手順を説明します。
+このドキュメントでは、[!DNL Postico]をAdobe Experience Platform [!DNL Query Service]に接続する手順を説明します。
 
 >[!NOTE]
 >
-> このガイドは、[!DNL Postico]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Postico]に関する詳細は、[正式な [!DNL Postico] ドキュメント](https://eggerapps.at/postico/docs)を参照してください。
+> このガイドは、[!DNL Postico]へのアクセス権を既に持っており、インターフェイスの操作方法に精通していることを前提としています。 [!DNL Postico]に関する詳細は、[公式の [!DNL Postico] ドキュメント](https://eggerapps.at/postico/docs)を参照してください。
 > 
-> さらに、[!DNL Postico]は&#x200B;****&#x200B;のみで、macOSデバイスで使用できます。
+> また、[!DNL Postico]は&#x200B;**のみ**&#x200B;で、macOSデバイスで使用できます。
 
-[!DNL Postico]をクエリサービスに接続するには、[!DNL Postico]を開いて&#x200B;**[!DNL New Favorite]**&#x200B;を選択します。
+[!DNL Postico]をクエリサービスに接続するには、[!DNL Postico]を開き、**[!DNL New Favorite]**&#x200B;を選択します。
 
 ![](../images/clients/postico/open-postico.png)
 
-現在は、値を入力してAdobe Experience Platformと接続できます。
+Adobe Experience Platformに接続する値を入力できるようになりました。
 
-データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択してから、**[!UICONTROL 資格情報]**&#x200B;を選択します。
+データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、『[資格情報ガイド](../ui/credentials.md)』を参照してください。 資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択し、**[!UICONTROL 資格情報]**&#x200B;を選択します。
 
-資格情報を挿入した後、**[!DNL Connect]**&#x200B;を選択してクエリサービスに接続します。
+資格情報を挿入したら、**[!DNL Connect]**&#x200B;を選択してクエリサービスに接続します。
 
 ![](../images/clients/postico/authentication-details.png)
 
-プラットフォームに接続すると、クエリサービスとの関係がすべて、以前にリストされたことを確認できます。
+Platformに接続すると、以前にクエリサービスでおこなわれたすべての関係のリストを表示できます。
 
 ![](../images/clients/postico/show-queries.png)
 
@@ -55,4 +54,4 @@ ht-degree: 16%
 
 ## 次の手順
 
-[!DNL Query Service]に接続したので、[!DNL Postico]を使ってクエリを書くことができます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。
+[!DNL Query Service]と接続したので、[!DNL Postico]を使用してクエリを記述できます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。

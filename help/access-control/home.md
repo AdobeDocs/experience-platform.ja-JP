@@ -5,10 +5,10 @@ topic-legacy: overview
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
+source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 97%
+source-wordcount: '1363'
+ht-degree: 95%
 
 ---
 
@@ -115,6 +115,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Dashboards] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] | ライセンス使用状況ダッシュボードを表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL 標準ダッシュボードの管理] | Data Warehouse にないカスタム属性の追加。 |
 | [!DNL Query Service] | [!UICONTROL クエリの管理] | Platform データの構造化 SQL クエリの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | 期限が切れていない資格情報を作成、更新、削除して、クエリサービスにアクセスできるようにするアクセス。 |
 
 ## 次の手順
 

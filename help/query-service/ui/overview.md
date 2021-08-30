@@ -5,10 +5,10 @@ title: クエリサービスUIガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 44%
+source-wordcount: '614'
+ht-degree: 40%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Query Service]は、クエリの書き込みと�
 
 ## 資格情報
 
-「**[!UICONTROL 資格情報]**」タブには、 の資格情報が表示されます。[!DNL Postgres]任意のフィールドの横にある&#x200B;**[!UICONTROL コピー]**&#x200B;アイコンを選択して、その内容をキーボードバッファに保存します。 これらの資格情報を使用して外部クライアントと接続する方法の詳細については、[クライアントとの接続ガイド](../clients/overview.md)を参照してください。
+「**[!UICONTROL 資格情報]**」タブには、期限切れの資格情報と期限切れにならない資格情報の両方が表示されます。 これらの資格情報を使用して外部クライアントと接続する方法の詳細については、『[資格情報ガイド](../clients/overview.md)』を参照してください。
 
 ![画像](../images/ui/overview/credentials.png)
 

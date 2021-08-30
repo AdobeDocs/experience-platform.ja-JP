@@ -5,10 +5,10 @@ title: Power BI をクエリサービスに接続します。
 topic-legacy: connect
 description: このドキュメントでは、Adobe Experience Platformクエリサービスを使用してPower BIを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 7%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ npgsqlが正しくインストールされていることを確認するには�
 
 ![](../images/clients/power-bi/get-data.png)
 
-これで、サーバーとデータベースの値を入力できます。 データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択し、**[!UICONTROL 資格情報]**&#x200B;を選択します。
+これで、サーバーとデータベースの値を入力できます。 データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、『[資格情報ガイド](../ui/credentials.md)』を参照してください。 資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択し、**[!UICONTROL 資格情報]**&#x200B;を選択します。
 
 **[!DNL Server]** は、接続の詳細で見つかったホストです。実稼動環境の場合は、ホスト文字列の末尾にポート`:80`を追加します。 **[!DNL Database]** は、「すべて」またはデータセットテーブル名です。
 
