@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックスAPIガイドの付録
 description: このドキュメントでは、サンドボックスAPIの操作に関する補足情報を提供します。
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 10%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 ## クエリパラメーターの使用 {#query}
 
-[[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)では、サンドボックスのリスト表示時にクエリパラメーターを使用して、結果をページ化およびフィルタリングできます。
+[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)では、サンドボックスのリスト表示時にクエリパラメーターを使用して、結果をページ化およびフィルタリングできます。
 
 >[!NOTE]
 >

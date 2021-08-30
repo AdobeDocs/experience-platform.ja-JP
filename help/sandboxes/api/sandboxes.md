@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス管理APIエンドポイント
 topic-legacy: developer guide
 description: サンドボックスAPIの/sandboxesエンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
-source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 49%
+source-wordcount: '1436'
+ht-degree: 50%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## サンドボックスのリストの取得 {#list}
 
@@ -400,7 +400,7 @@ curl -X PUT \
 }
 ```
 
-デフォルトの実稼動サンドボックスとユーザー作成の実稼動サンドボックスは、そのIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフも[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)機能にも使用されている場合は、リセットできません。
+デフォルトの実稼動サンドボックスとユーザー作成の実稼動サンドボックスは、そのIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフも[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)機能にも使用されている場合は、リセットできません。
 
 サンドボックスのリセットを妨げる可能性がある、考えられる例外のリストを次に示します。
 

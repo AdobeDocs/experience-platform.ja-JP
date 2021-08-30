@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
 user-guide-description: 開発、テスト、およびアプリケーションのデプロイメント用に、Platform インスタンスを仮想環境へとパーティション化します。
-feature: データ管理
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+feature: Data Management
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 90%
+source-wordcount: '60'
+ht-degree: 81%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 90%
    * [サンドボックスのタイプ](api/types.md)
    * [付録](api/appendix.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
