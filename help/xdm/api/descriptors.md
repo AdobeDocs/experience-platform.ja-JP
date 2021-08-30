@@ -5,10 +5,10 @@ title: 記述子APIエンドポイント
 description: スキーマレジストリAPIの/descriptorsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDM記述子をプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 57%
+source-wordcount: '1630'
+ht-degree: 56%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 57%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 記述子のリストの取得 {#list}
 
@@ -63,7 +63,7 @@ curl -X GET \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 応答には、定義された記述子を持つ各記述子タイプの配列が含まれます。つまり、ある種の `@type` 記述子が定義されていない場合、その記述子型の空の配列は返されません。
 
@@ -278,7 +278,7 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
@@ -315,7 +315,7 @@ ID記述子は、「[!UICONTROL sourceSchema]」の「[!UICONTROL sourceProperty
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
-| `xdm:namespace` | ID 名前空間の `id` または `code`。名前空間のリストは、[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使用して見つかります。 |
+| `xdm:namespace` | ID 名前空間の `id` または `code`。名前空間のリストは、[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)を使用して見つかります。 |
 | `xdm:property` | `xdm:id` または `xdm:code`（使用されている `xdm:namespace` に応じる）。 |
 | `xdm:isPrimary` | オプションのブール値。true の場合、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。 |
 

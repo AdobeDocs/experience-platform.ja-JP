@@ -5,10 +5,10 @@ title: IDサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 80%
+source-wordcount: '2177'
+ht-degree: 79%
 
 ---
 
@@ -78,11 +78,11 @@ API を使用して ID 記述子を作成する際に名前空間を定義する
 
 ## 組織で使用できる ID 名前空間のリストはどこで見つけられますか？
 
-[ID サービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) を使用して、`/idnamespace/identities` エンドポイントに GET リクエストをおこなうことで、組織で使用可能なすべての ID 名前空間をリストできます。詳しくは、「ID サービス API の概要」で[使用可能な名前空間のリスト](./api/list-namespaces.md)を参照してください。
+[ID サービス API](https://www.adobe.io/experience-platform-apis/references/identity-service) を使用して、`/idnamespace/identities` エンドポイントに GET リクエストをおこなうことで、組織で使用可能なすべての ID 名前空間をリストできます。詳しくは、「ID サービス API の概要」で[使用可能な名前空間のリスト](./api/list-namespaces.md)を参照してください。
 
 ## 組織のカスタム名前空間を作成する方法を教えてください。
 
-[ID サービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) を使用して `/idnamespace/identities` エンドポイントに POST リクエストをおこなうことで、組織のカスタム ID 名前空間を作成できます。詳しくは、「ID サービス API の概要」の[カスタム名前空間の作成](./api/create-custom-namespace.md)に関する節を参照してください。
+[ID サービス API](https://www.adobe.io/experience-platform-apis/references/identity-service) を使用して `/idnamespace/identities` エンドポイントに POST リクエストをおこなうことで、組織のカスタム ID 名前空間を作成できます。詳しくは、「ID サービス API の概要」の[カスタム名前空間の作成](./api/create-custom-namespace.md)に関する節を参照してください。
 
 ## 複合 ID と XID とは何ですか。
 

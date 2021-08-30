@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 49%
+source-wordcount: '2422'
+ht-degree: 48%
 
 ---
 
@@ -176,7 +176,7 @@ curl -X GET \
 }
 ```
 
-### フィールドグループ{#add-a-field-group}を追加します
+### フィールドグループの追加 {#add-a-field-group}
 
 「ロイヤルティメンバー」スキーマが作成され、確認されたので、フィールドグループを追加できます。
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->使用可能な「xdm:namespace」値をリストするか、[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使用して新しい値を作成できます。 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
+>使用可能な「xdm:namespace」値をリストするか、[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)を使用して新しい値を作成できます。 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
 
 **応答** 
 
