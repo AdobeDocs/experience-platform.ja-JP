@@ -7,10 +7,10 @@ landing-page-description: よくある質問への回答、および Experience 
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f83e4150210af8d3e9e67285d1f9665b6e243f54
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '1727'
-ht-degree: 67%
+source-wordcount: '1723'
+ht-degree: 66%
 
 ---
 
@@ -195,7 +195,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 | サービス | API リファレンス | トラブルシューティング |
 | --- | --- | --- |
-| アクセス制御 | [アクセス制御 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
+| アクセス制御 | [アクセス制御 API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platformでのデータ取得 | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [バッチ取得トラブルシューティング](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[ガイドストリーミング取得トラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform のデータガバナンス | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |

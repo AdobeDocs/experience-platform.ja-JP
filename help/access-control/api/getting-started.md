@@ -5,10 +5,10 @@ title: アクセス制御 API ガイド
 topic-legacy: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。次の節では、Schema Registry API を正しく呼び出すために、開発者が知っておく必要がある追加情報を示します。
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '389'
-ht-degree: 100%
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 98%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 [!DNL Experience Platform] の [!DNL Access control] は、[Adobe Admin Console](https://adminconsole.adobe.com) でおこないます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。詳しくは、「[アクセス制御の概要](../home.md)」を参照してください。
 
-この開発者ガイドでは、[[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) へのリクエストのフォーマット方法に関する情報を提供し、次の操作について説明します。
+この開発者ガイドでは、[[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) へのリクエストのフォーマット方法に関する情報を提供し、次の操作について説明します。
 
 - [権限名とリソースタイプのリスト](./permissions-and-resource-types.md)
 - [現在のユーザーに対して効果の高いポリシーの表示](./effective-policies.md)

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
-feature: データ取得、ソース
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 18%
 
 ---
@@ -248,4 +248,5 @@ ht-degree: 18%
 - [フロー実行の通知](notifications.md)
 - [IPアドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
+- [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
