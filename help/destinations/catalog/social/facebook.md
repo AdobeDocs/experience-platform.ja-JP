@@ -3,7 +3,7 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 12%
@@ -177,7 +177,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ### 400 Bad Requestエラーメッセージ {#bad-request}
 
-[!DNL Facebook]に対してセグメントをアクティブ化すると、次のエラーが表示される場合があります。
+この宛先を設定すると、次のエラーが発生する場合があります。
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 

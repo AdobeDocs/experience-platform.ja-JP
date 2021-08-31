@@ -3,9 +3,9 @@ keywords: googleカスタマーマッチ；Googleカスタマーマッチ；Goog
 title: Googleカスタマーマッチ接続
 description: Googleカスタマーマッチを使用すると、オンラインデータとオフラインデータを使用して、Googleが所有し、運用するSearch、Shopping、Gmail、YouTubeなどのプロパティをまたいで顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 Experience Platformで[!DNL Google Customer Match]の宛先を設定する前に、[Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717)で概要を説明しているGoogleの[!DNL Customer Match]使用ポリシーを読み、順守していることを確認してください。
 
-次に、[!DNL Google]アカウントが[!DNL Standard]以上のアクセスレベルに設定されていることを確認します。 詳しくは、[Google広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
+次に、[!DNL Google]アカウントが[!DNL Standard]以上の権限レベルに設定されていることを確認します。 詳しくは、[Google広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
 
 ### 許可リスト {#allowlist}
 
@@ -174,6 +174,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 セグメントを[!DNL IDFA]と[!DNL GAID]の両方のモバイルIDにマッピングする場合、 [!DNL Google Customer Match]はIDマッピングごとに別のセグメントを作成します。 [!DNL Google Ads]アカウントには、[!DNL IDFA]用と[!DNL GAID]用の2つの異なるセグメントが表示されます。
 
+## トラブルシューティング {#troubleshooting}
+
+### 400 Bad Requestエラーメッセージ {#bad-request}
+
+この宛先を設定すると、次のエラーが発生する場合があります。
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+このエラーは、顧客アカウントが[前提条件](#google-account-prerequisites)を満たしていない場合に発生します。 この問題を解決するには、Googleに問い合わせ、お使いのアカウントが許可リストに登録され、[!DNL Standard]以上の権限レベルで設定されていることを確認してください。 詳しくは、[Google広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
+
 ## その他のリソース {#additional-resources}
 
 * [Googleカスタマーマッチの統合 — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

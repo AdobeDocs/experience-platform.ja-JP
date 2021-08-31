@@ -3,9 +3,9 @@ keywords: Google広告；google広告；google adwords;Google AdWords;Google Adw
 title: Google広告接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '698'
 ht-degree: 18%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 18%
 >
 > [!DNL Google] では、サードパーテ [!DNL Google Ads] ィベンダーとの新しいcookie統合が廃止されました。次の節の許可リスト手順を実行するには、[!DNL Google Ads]との既存の統合が必要です。 その結果、[!DNL Google Ads]を使用する場合の推奨アプローチは、[!DNL Google Customer Match]統合を設定することです。 [!DNL Google Customer Match]統合の作成について詳しくは、[[!DNL Google Customer Match]](./google-customer-match.md)接続の作成に関するチュートリアルを参照してください。
 
-### 許可リスト
+### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ Platformで[!DNL Google Ads]の宛先を作成する前に、[!DNL Google]に連
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-
 ## エクスポートされたデータ
 
 データが[!DNL Google Ads]の宛先に正常に書き出されたかどうかを確認するには、[!DNL Google Ads]アカウントを確認します。 アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
+
+## トラブルシューティング {#troubleshooting}
+
+### 400 Bad Requestエラーメッセージ {#bad-request}
+
+この宛先を設定すると、次のエラーが発生する場合があります。
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+このエラーは、お客様が既存の[!DNL Google Ads]アカウントを使用せずに宛先を設定しようとすると発生します。
+
+[!DNL Google] では、サードパーテ [!DNL Google Ads] ィベンダーとの新しいcookie統合が廃止されました。[許可リスト](#allow-listing)の手順を実行するには、[!DNL Google Ads]との既存の統合が必要です。
+
+[!DNL Google Ads]を使用する場合の推奨アプローチは、[[!DNL Google Customer Match]](google-customer-match.md)統合を設定することです。

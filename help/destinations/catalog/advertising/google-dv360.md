@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Google DisplayとVideo 360の接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 41%
+source-wordcount: '709'
+ht-degree: 40%
 
 ---
 
@@ -45,13 +45,13 @@ ht-degree: 41%
 
 **セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
-### 許可リスト
+### 許可リストへの登録
 
 >[!NOTE]
 >
->許可リストは、Platformで最初の[!DNL Google Display & Video 360]宛先を設定する前に必須です。 宛先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
+>許可リストへの登録は、Platformで最初の[!DNL Google Display & Video 360]宛先を設定する前に行う必要があります。 宛先を作成する前に、Googleが以下に説明する許可リスト登録プロセスを完了していることを確認してください。
 
 Platformで[!DNL Google Display & Video 360]の宛先を作成する前に、Googleに連絡して、許可されたデータプロバイダーのリストに登録するAdobeと、許可リストに追加するアカウントを要求する必要があります。 Google に連絡し、次の情報を提供します。
 
@@ -85,3 +85,13 @@ Platformで[!DNL Google Display & Video 360]の宛先を作成する前に、Goo
 ## エクスポートされたデータ
 
 データが[!DNL Google Display & Video 360]の宛先に正常に書き出されたかどうかを確認するには、[!DNL Google Display & Video 360]アカウントを確認します。 アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
+
+## トラブルシューティング {#troubleshooting}
+
+### 400 Bad Requestエラーメッセージ {#bad-request}
+
+この宛先を設定すると、次のエラーが発生する場合があります。
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+このエラーは、顧客アカウントが[前提条件](#prerequisites)を満たしていない場合に発生します。 この問題を修正するには、Googleに連絡し、お使いのアカウントが許可リストに登録されていることを確認してください。
