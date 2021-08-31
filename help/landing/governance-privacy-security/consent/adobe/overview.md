@@ -5,7 +5,7 @@ title: Adobe Experience Platformでの同意処理
 topic-legacy: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Platformでの同意処理のサポートの現在のリリースでは、Platfo
 
 ### 同意データを処理するExperience PlatformWeb SDKの設定 {#web-sdk}
 
-Webサイト上の同意変更イベントをリッスンするようにCMPを設定したら、Experience PlatformWeb SDKを統合して、更新された同意設定を受け取り、ページの読み込みのたびに、同意変更イベントが発生したときにPlatformに送信できます。 詳しくは、[顧客の同意データを処理するためのWeb SDKの設定](./sdk.md)に関するガイドを参照してください。
+Webサイト上の同意変更イベントをリッスンするようにCMPを設定したら、Experience PlatformWeb SDKを統合して、更新された同意設定を受け取り、ページの読み込みのたびに、同意変更イベントが発生したときにPlatformに送信できます。 詳しくは、[顧客の同意データを処理するためのWeb SDKの設定](../sdk.md)に関するガイドを参照してください。
 
 ### 同意データを処理するExperience PlatformMobile SDKの設定 {#mobile-sdk}
 

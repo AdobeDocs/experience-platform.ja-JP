@@ -5,9 +5,9 @@ title: IAB TCF 2.0同意データを取り込むデータセットの作成
 topic-legacy: privacy events
 description: このドキュメントでは、IAB TCF 2.0同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 9b75a69cc6e31ea0ad77048a6ec1541df2026f27
+source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1655'
 ht-degree: 3%
 
 ---
@@ -39,19 +39,19 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework](TCF)2.0�
 
 ## TCF 2.0フィールドグループ {#field-groups}
 
-[!UICONTROL IAB TCF 2.0 Consent]スキーマフィールドグループは、TCF 2.0のサポートに必要な顧客の同意フィールドを提供します。 このフィールドグループには、次の2つのバージョンがあります。1つは[!DNL XDM Individual Profile]クラスと互換性があり、もう1つは[!DNL XDM ExperienceEvent]クラスと互換性があります。
+[!UICONTROL IAB TCF 2.0 Consent Details]スキーマフィールドグループは、TCF 2.0のサポートに必要な顧客の同意フィールドを提供します。 このフィールドグループには、次の2つのバージョンがあります。1つは[!DNL XDM Individual Profile]クラスと互換性があり、もう1つは[!DNL XDM ExperienceEvent]クラスと互換性があります。
 
 以下の節では、取り込み時に予想されるデータを含め、これらの各フィールドグループの構造について説明します。
 
 ### プロファイルフィールドグループ {#profile-field-group}
 
-[!DNL XDM Individual Profile]に基づくスキーマの場合、[!UICONTROL IAB TCF 2.0 Consent]フィールドグループには、顧客IDをTCF同意設定にマッピングする、単一のマップタイプフィールド`identityPrivacyInfo`が用意されています。 自動強制をおこなうには、このフィールドグループを、リアルタイム顧客プロファイルが有効なレコードベースのスキーマに含める必要があります。
+[!DNL XDM Individual Profile]に基づくスキーマの場合、[!UICONTROL IAB TCF 2.0 Consent Details]フィールドグループには、顧客IDをTCFの同意設定にマッピングする、1つのマップタイプフィールド`identityPrivacyInfo`が用意されています。 自動強制をおこなうには、このフィールドグループを、リアルタイム顧客プロファイルが有効なレコードベースのスキーマに含める必要があります。
 
 このフィールドグループの構造と使用例について詳しくは、[リファレンスガイド](../../../../xdm/field-groups/profile/iab.md)を参照してください。
 
 ### イベントフィールドグループ {#event-field-group}
 
-同意変更イベントを時間の経過と共に追跡する場合は、[!UICONTROL IAB TCF 2.0 Consent]フィールドグループを[!UICONTROL XDM ExperienceEvent]スキーマに追加します。
+同意変更イベントを時間の経過と共に追跡する場合は、[!UICONTROL IAB TCF 2.0 Consent Details]フィールドグループを[!UICONTROL XDM ExperienceEvent]スキーマに追加します。
 
 同意の変更イベントを経時的に追跡する予定がない場合は、このフィールドグループをイベントスキーマに含める必要はありません。 TCFの同意値を自動的に適用する場合、Experience Platformは、[profileフィールドグループ](#profile-field-group)に取り込まれた最新の同意情報のみを使用します。 イベントによってキャプチャされた同意の値は、自動実施ワークフローには関与しません。
 
@@ -60,6 +60,8 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework](TCF)2.0�
 ## 顧客の同意スキーマの作成 {#create-schemas}
 
 同意データをキャプチャするデータセットを作成するには、まずXDMスキーマを作成し、これらのデータセットのベースとする必要があります。
+
+前の節で説明したように、ダウンストリームのPlatformワークフローで同意を強制するために、[!UICONTROL XDM Individual Profile]クラスを使用するスキーマが必要です。 また、時間の経過と共に同意の変更を追跡する場合は、[!UICONTROL XDM ExperienceEvent]に基づいて別のスキーマを作成することもできます。 両方のスキーマに、`identityMap`フィールドと適切なTCF 2.0フィールドグループが含まれている必要があります。
 
 Platform UIで、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「[!UICONTROL スキーマ]」ワークスペースを開きます。 ここから、以下の節の手順に従って、必要な各スキーマを作成します。
 
@@ -75,11 +77,15 @@ Platform UIで、左側のナビゲーションで「**[!UICONTROL スキーマ]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-**[!UICONTROL フィールドグループの追加]**&#x200B;ダイアログが表示され、すぐにフィールドグループをスキーマに追加できます。 ここから、リストから&#x200B;**[!UICONTROL IAB TCF 2.0 Consent]**&#x200B;を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。 フィールドグループを選択したら、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+**[!UICONTROL フィールドグループの追加]**&#x200B;ダイアログが表示され、すぐにフィールドグループをスキーマに追加できます。 ここから、リストから&#x200B;**[!UICONTROL IAB TCF 2.0 Consent Details]**&#x200B;を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-キャンバスが再び表示され、「`identityPrivacyInfo`」フィールドがスキーマ構造に追加されたことが示されます。
+次に、リストから&#x200B;**[!UICONTROL IdentityMap]**&#x200B;フィールドグループを探し、同じように選択します。 両方のフィールドグループが右側のレールに表示されたら、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
+
+キャンバスが再び表示され、 `identityPrivacyInfo`フィールドと`identityMap`フィールドがスキーマ構造に追加されたことが示されます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
@@ -87,18 +93,9 @@ Platform UIで、左側のナビゲーションで「**[!UICONTROL スキーマ]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
 
-名前と説明を指定したら、キャンバスの左側にある「**[!UICONTROL フィールドグループ]**」セクションの下にある「**[!UICONTROL 追加]**」を選択します。
+名前と説明を指定したら、キャンバスの左側にある「**[!UICONTROL フィールドグループ]**」セクションで「**[!UICONTROL 追加]**」を選択して、スキーマにフィールドを追加できます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
-
-ここから、ダイアログを使用して、次のフィールドグループをスキーマに追加します。
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL プロファイルのデータ取得領域]
-* [!UICONTROL 人口統計の詳細]
-* [!UICONTROL 個人の連絡先の詳細]
-
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 既に[!DNL Real-time Customer Profile]での使用が有効になっている既存のスキーマを編集する場合は、「**[!UICONTROL 保存]**」を選択して変更を確定してから、[同意スキーマに基づくデータセットの作成](#dataset)の節に進みます。 新しいスキーマを作成する場合は、次の節で説明する手順に従います。
 
@@ -110,7 +107,7 @@ Platformが受け取った同意データを特定の顧客プロファイルに
 >
 >この節に示すサンプルのスキーマでは、`identityMap`フィールドをプライマリIDとして使用しています。 別のフィールドをプライマリIDとして設定する場合は、Cookie IDなどの間接識別子を使用し、Eメールアドレスなどの興味/関心に基づく広告で使用できない直接識別可能なフィールドを使用しないようにします。 どのフィールドが制限されているかが不明な場合は、弁護士に相談してください。
 >
->スキーマのプライマリIDフィールドを設定する手順については、『[スキーマ作成のチュートリアル](../../../../xdm/tutorials/create-schema-ui.md#identity-field)』を参照してください。
+>スキーマのプライマリIDフィールドを設定する手順については、『[[!UICONTROL スキーマ] UIガイド](../../../../xdm/ui/fields/identity.md)』を参照してください。
 
 [!DNL Profile]のスキーマを有効にするには、左側のレールでスキーマの名前を選択して、「**[!UICONTROL スキーマのプロパティ]**」セクションを開きます。 ここから、「**[!UICONTROL プロファイル]**」切り替えボタンを選択します。
 
@@ -126,19 +123,24 @@ Platformが受け取った同意データを特定の顧客プロファイルに
 
 ### イベント同意スキーマの作成 {#event-schema}
 
+>[!NOTE]
+>
+>イベントの同意スキーマは、同意の変更イベントを経時的に追跡する目的でのみ使用され、ダウンストリームの実施ワークフローには関与しません。 時間の経過と共に同意の変更を追跡しない場合は、[同意データセット](#datasets)の作成に関する次の節に進んでください。
+
 **[!UICONTROL スキーマ]**&#x200B;ワークスペースで、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンから「**[!UICONTROL XDM ExperienceEvent]**」を選択します。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-**[!UICONTROL フィールドグループの追加]**&#x200B;ダイアログが表示されます。 ここから、リストから&#x200B;**[!UICONTROL IAB TCF 2.0 Consent]**&#x200B;を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。 フィールドグループを選択したら、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+**[!UICONTROL フィールドグループの追加]**&#x200B;ダイアログが表示されます。 ここから、リストから&#x200B;**[!UICONTROL IAB TCF 2.0 Consent Details]**&#x200B;を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。
 
->[!NOTE]
->
->このフィールドグループをイベントスキーマに含める必要があるのは、同意の変更イベントを経時的に追跡する場合のみです。 これらのイベントを追跡しない場合は、Web SDKを設定する際に、これらのフィールドを使用せずにイベントスキーマを使用できます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-キャンバスが再び表示され、「`consentStrings`」フィールドがスキーマ構造に追加されたことが示されます。
+次に、リストから&#x200B;**[!UICONTROL IdentityMap]**&#x200B;フィールドグループを探し、同じように選択します。 両方のフィールドグループが右側のレールに表示されたら、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
+
+キャンバスが再び表示され、 `consentStrings`フィールドと`identityMap`フィールドがスキーマ構造に追加されたことが示されます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
@@ -146,18 +148,11 @@ Platformが受け取った同意データを特定の顧客プロファイルに
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
 
-名前と説明を指定したら、キャンバスの左側にある「**[!UICONTROL フィールドグループ]**」セクションの下にある「**[!UICONTROL 追加]**」を選択します。
+名前と説明を指定したら、キャンバスの左側にある「**[!UICONTROL フィールドグループ]**」セクションで「**[!UICONTROL 追加]**」を選択して、スキーマにフィールドを追加できます。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-ここから、上記の手順を繰り返して、次のフィールドグループをスキーマに追加します。
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL 環境の詳細]
-* [!UICONTROL Webの詳細]
-* [!UICONTROL 実装の詳細]
-
-フィールドグループを追加したら、「**[!UICONTROL 保存]**」を選択して作業を完了します。
+必要なフィールドグループを追加したら、「**[!UICONTROL 保存]**」を選択して作業を完了します。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
@@ -187,13 +182,13 @@ Platformが受け取った同意データを特定の顧客プロファイルに
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
-上記の手順を再度実行して、TCF 2.0への準拠に必要なその他のデータセットを作成します。
+上記の手順に従って、イベントベースのデータセットのスキーマを作成します。
 
 ## 次の手順
 
-このチュートリアルに従って、顧客の同意データを収集するために使用できる2つのデータセットを作成しました。
+このチュートリアルに従うことで、顧客の同意データを収集するために使用できるデータセットが少なくとも1つ作成されました。
 
-* リアルタイム顧客プロファイルで使用できるレコードベースのデータセット。
-* [!DNL Profile]に対して有効になっていない時系列ベースのデータセット。
+* リアルタイム顧客プロファイルで使用できるレコードベースのデータセット。 **(必須)**
+* [!DNL Profile]に対して有効になっていない時系列ベースのデータセット。 （オプション）
 
 これで、[IAB TCF 2.0の概要](./overview.md#merge-policies)に戻り、TCF 2.0への準拠のためのプラットフォーム設定のプロセスを続行できます。

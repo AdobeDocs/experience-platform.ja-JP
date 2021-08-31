@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 98%
@@ -46,10 +46,10 @@ ht-degree: 98%
       * Adobe 標準 {#adobe}
          * [概要](./governance-privacy-security/consent/adobe/overview.md)
          * [同意データと基本設定データを取り込むためのデータセットの設定](./governance-privacy-security/consent/adobe/dataset.md)
-         * [Platform Web SDK を統合して、同意データと環境設定データを処理する](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [概要](./governance-privacy-security/consent/iab/overview.md)
          * [同意データと基本設定データを取り込むためのデータセットの設定](./governance-privacy-security/consent/iab/dataset.md)
+      * [Platform Web SDK を統合して、同意データと環境設定データを処理する](./governance-privacy-security/consent/sdk.md)
    * 監査ログ（ベータ版） {#audit-logs}
       * [概要](./governance-privacy-security/audit-logs/overview.md)
 * [ライセンス使用状況ダッシュボード](license-usage-dashboard.md)
