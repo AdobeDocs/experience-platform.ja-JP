@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 39%
+source-wordcount: '1268'
+ht-degree: 37%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 39%
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、フローサービスAPIを使用したストリーミング接続の作成手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、フローサービスAPIを使用したストリーミング接続の作成手順を説明します。
 
 ## はじめに
 
@@ -295,7 +295,9 @@ curl -X POST \
 
 ## ターゲット接続の作成
 
-ソース接続を作成したら、ターゲット接続を作成できます。 ターゲット接続を作成する場合は、以前に作成したデータセットの`id`値が必要です。
+ターゲット接続は、取り込んだデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様IDの一意の識別子が得られます。 これらの識別子を使用して、[!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
 **API 形式**
 
