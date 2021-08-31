@@ -3,9 +3,9 @@ keywords: Google広告；google広告；google adwords;Google AdWords;Google Adw
 title: Google広告接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 18%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 18%
 
 **セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 ### 既存の[!DNL Google Ads]アカウント
 
@@ -95,7 +95,7 @@ Platformで[!DNL Google Ads]の宛先を作成する前に、[!DNL Google]に連
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、お客様が既存の[!DNL Google Ads]アカウントを使用せずに宛先を設定しようとすると発生します。
+このエラーは、顧客アカウントが[前提条件](#prerequisites)に準拠していない場合、または顧客が既存の[!DNL Google Ads]アカウントを使用せずに宛先を設定しようとした場合に発生します。
 
 [!DNL Google] では、サードパーテ [!DNL Google Ads] ィベンダーとの新しいcookie統合が廃止されました。[許可リスト](#allow-listing)の手順を実行するには、[!DNL Google Ads]との既存の統合が必要です。
 
