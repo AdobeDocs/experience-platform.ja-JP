@@ -1,14 +1,14 @@
 ---
 keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先の概要
-seo-title: 広告の宛先の概要
+seo-title: Advertising destinations overview
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、広告ネットワーク、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
-seo-description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、広告ネットワーク、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
+seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 35%
+source-wordcount: '227'
+ht-degree: 37%
 
 ---
 
@@ -34,6 +34,7 @@ Adobe Experience Platformを、需要側プラットフォーム(DSP)、サプ�
 * [Googleカスタマーマッチ接続](google-customer-match.md)
 * [Microsoft Bing接続](bing.md)
 * [トレードデスクの接続](tradedesk.md)
+* [Yahoo/Verizon DataX](datax.md)
 
 ### 拡張機能
 
