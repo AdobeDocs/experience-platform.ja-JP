@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API、プレビュー、サンプル
 title: プレビューサンプルステータス（プロファイルプレビュー）APIエンドポイント
-description: リアルタイム顧客プロファイルAPIの一部であるプレビューサンプルステータスエンドポイントを使用して、最新の成功したプロファイルデータのサンプルをプレビューし、データセット別およびID別にプロファイル配分をリストし、データセット重複レポートを生成できます。
+description: リアルタイム顧客プロファイルAPIの一部であるプレビューサンプルステータスエンドポイントを使用すると、最新の成功したプロファイルデータをプレビューし、データセット別およびID別にプロファイル配分をリストし、データセットの重複、IDの重複、不明なプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
+source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2882'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Adobe Experience Platformを使用すると、複数のソースから顧客データを取り込み、個々の顧客に対して堅牢で統合されたプロファイルを作成できます。 データがPlatformに取り込まれると、サンプルジョブが実行され、プロファイル数やその他のリアルタイム顧客プロファイルデータ関連指標が更新されます。
 
-このサンプルジョブの結果は、リアルタイム顧客プロファイルAPIの一部である`/previewsamplestatus`エンドポイントを使用して表示できます。 このエンドポイントは、データセットとID名前空間の両方によるプロファイル配分のリストを作成したり、データセット重複レポートとID重複レポートを生成して、組織のプロファイルストアの構成を把握したりするのにも使用できます。 このガイドでは、`/previewsamplestatus` APIエンドポイントを使用してこれらの指標を表示するために必要な手順について説明します。
+このサンプルジョブの結果は、リアルタイム顧客プロファイルAPIの一部である`/previewsamplestatus`エンドポイントを使用して表示できます。 このエンドポイントは、データセットとID名前空間の両方によるプロファイル配分のリストを作成したり、組織のプロファイルストアの構成を把握できるように、複数のレポートを生成したりするのにも使用できます。 このガイドでは、`/previewsamplestatus` APIエンドポイントを使用してこれらの指標を表示するために必要な手順について説明します。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Experience Platform内でのプロファイルとその役割について詳し�
 
 プロファイル数と名前空間別のプロファイルは、Experience PlatformUIの[!UICONTROL Profiles]セクション内でも使用できます。 UIを使用してプロファイルデータにアクセスする方法について詳しくは、[[!DNL Profile] UIガイド](../ui/user-guide.md)を参照してください。
 
-## 最後のサンプルステータス{#view-last-sample-status}を表示
+## 最後のサンプルステータスの表示 {#view-last-sample-status}
 
 `/previewsamplestatus`エンドポイントに対してGETリクエストを実行し、IMS組織に対して最後に正常に実行されたサンプルジョブの詳細を表示できます。 これには、サンプル内のプロファイルの合計数、プロファイル数指標、またはExperience Platform内に組織が持つプロファイルの合計数が含まれます。
 
@@ -206,7 +206,7 @@ curl -X GET \
 
 ## ID名前空間別のプロファイル配分のリスト
 
-`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内のすべての結合プロファイルにわたるID名前空間での分類を表示できます。 これには、Adobeが提供する標準IDと、組織が定義するカスタムIDの両方が含まれます。
+`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内のすべての結合プロファイルにわたるID名前空間による分類を表示できます。 これには、Adobeが提供する標準IDと、組織が定義するカスタムIDの両方が含まれます。
 
 ID名前空間は、Adobe Experience Platform IDサービスの重要なコンポーネントで、顧客データが関連するコンテキストのインジケーターとして機能します。 詳しくは、まず[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
@@ -363,22 +363,23 @@ curl -X GET \
 ```
 
 このレポートには次の情報が表示されます。
+
 * 次のデータセットからのデータで構成される123個のプロファイルがあります。`5d92921872831c163452edc8`、`5da7292579975918a851db57`、`5eb2cdc6fa3f9a18a7592a98`。
 * 次の2つのデータセットから得られるデータで構成される454,412件のプロファイルがあります。`5d92921872831c163452edc8`と`5eb2cdc6fa3f9a18a7592a98`が表示されます。
 * データセット`5eeda0032af7bb19162172a7`のデータのみから構成される107個のプロファイルがあります。
 * 組織には、合計454,642件のプロファイルがあります。
 
-## ID重複レポートの生成
+## ID名前空間の重複レポートの生成
 
-ID重複レポートは、アドレス可能なオーディエンス（結合プロファイル）に最も貢献するIDを公開することで、組織のプロファイルストアの構成を可視化します。 これには、Adobeが提供する標準IDと、組織が定義するカスタムIDの両方が含まれます。
+ID名前空間重複レポートは、アドレス可能なオーディエンス（結合プロファイル）に最も貢献するID名前空間を公開することで、組織のプロファイルストアの構成を可視化できます。 これには、Adobeが提供する標準ID名前空間と、組織が定義したカスタムID名前空間の両方が含まれます。
 
-`/previewsamplestatus/report/identity/overlap`エンドポイントに対してGETリクエストを実行すると、ID重複レポートを生成できます。
+`/previewsamplestatus/report/namespace/overlap`エンドポイントに対してGETリクエストを実行すると、ID名前空間の重複レポートを生成できます。
 
 **API 形式**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 | パラメーター | 説明 |
@@ -391,7 +392,7 @@ GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -399,7 +400,7 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功すると、HTTPステータス200(OK)とID重複レポートが返されます。
+リクエストが成功すると、HTTPステータス200(OK)とID名前空間の重複レポートが返されます。
 
 ```json
 {
@@ -446,7 +447,7 @@ curl -X GET \
 | 名前空間コード | `code`は、各ID名前空間名の短い形式です。 各`code`の`name`へのマッピングは、[Adobe Experience Platform IDサービスAPI](../../identity-service/api/list-namespaces.md)を使用して見つかります。 `code`は、Experience PlatformUIでは[!UICONTROL ID記号]とも呼ばれます。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。 |
 | `reportTimestamp` | レポートのタイムスタンプ。 リクエスト中に`date`パラメーターが指定された場合、指定された日付のレポートが返されます。 `date`パラメーターを指定しない場合は、最新のレポートが返されます。 |
 
-### ID重複レポートの解釈
+### ID名前空間の重複レポートの解釈
 
 レポートの結果は、応答のIDとプロファイルの数から解釈できます。 各行の数値は、標準ID名前空間とカスタムID名前空間の正確な組み合わせで構成されるプロファイルの数を示します。
 
@@ -459,11 +460,137 @@ curl -X GET \
 ```
 
 このレポートには次の情報が表示されます。
+
 * `AAID`、`ECID`、`Email`の標準IDで構成される142個のプロファイルと、カスタムの`crmid` ID名前空間のプロファイルがあります。
 * `AAID`と`ECID`のID名前空間で構成される24個のプロファイルがあります。
 * `ECID` IDのみを含むプロファイルは6,565個あります。
 
+## 不明なプロファイルレポートの生成
+
+不明なプロファイルレポートを使用すると、組織のプロファイルストアの構成をさらに詳しく把握できます。 「不明なプロファイル」は、特定の期間、未関連付けおよび非アクティブの両方に該当するプロファイルを指します。 「未関連付け」プロファイルは、1つのプロファイルフラグメントのみを含むプロファイルで、「非アクティブ」プロファイルは、指定された期間、新しいイベントを追加しなかった任意のプロファイルです。 不明なプロファイルレポートは、7日、30日、60日、90日、120日のプロファイルの分類を表示します。
+
+`/previewsamplestatus/report/unknownProfiles`エンドポイントに対してGETリクエストを実行すると、不明なプロファイルレポートを生成できます。
+
+**API 形式**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**リクエスト**
+
+次のリクエストは、不明なプロファイルレポートを返します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**応答**
+
+リクエストが成功すると、HTTPステータス200(OK)と不明なプロファイルレポートが返されます。
+
+>[!NOTE]
+>
+>このガイドの目的上、レポートは`"120days"`と&quot;`7days`&quot;の期間のみを含むように切り捨てられています。 完全な不明なプロファイルレポートは、7日、30日、60日、90日、120日のプロファイルの分類を表示します。
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+| プロパティ | 説明 |
+|---|---|
+| `data` | `data`オブジェクトには、不明なプロファイルレポートに対して返される情報が含まれます。 |
+| `totalNumberOfProfiles` | プロファイルストア内の一意のプロファイルの合計数。 これは、アドレス可能なオーディエンスの数と同じです。 既知のプロファイルと不明なプロファイルの両方が含まれます。 |
+| `totalNumberOfEvents` | プロファイルストア内のExperienceEventsの合計数。 |
+| `unknownProfiles` | 期間別の不明なプロファイル（未関連付けおよび非アクティブ）の分類を含むオブジェクト。 不明なプロファイルレポートは、7日、30日、60日、90日、120日の期間のプロファイルの分類を表示します。 |
+| `countOfProfiles` | その期間の不明なプロファイルの数または名前空間の不明なプロファイルの数。 |
+| `eventsAssociated` | 時間範囲のExperienceEventsの数または名前空間のイベントの数。 |
+| `nsDistribution` | 個々のID名前空間と、各名前空間の不明なプロファイルおよびイベントの配分を含むオブジェクト。 注意：`nsDistribution`オブジェクトの各ID名前空間の合計`countOfProfiles`を加算すると、その期間の`countOfProfiles`が等しくなります。 名前空間ごとの`eventsAssociated`と期間ごとの合計`eventsAssociated`についても同じことが言えます。 |
+| `reportTimestamp` | レポートのタイムスタンプ。 |
+
+### 不明なプロファイルレポートの解釈
+
+レポートの結果から、組織がプロファイルストア内に持つ未関連付けプロファイルと非アクティブなプロファイルの数に関するインサイトを得ることができます。
+
+`data`オブジェクトの次の抜粋を考えてみましょう。
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+このレポートには次の情報が表示されます。
+
+* 1,782個のプロファイルがあり、1つのプロファイルフラグメントのみが含まれ、過去7日間新しいイベントが発生していません。
+* 1,782件の不明なプロファイルに関連付けられたExperienceEventsは29,151件あります。
+* ECIDのID名前空間の単一のプロファイルフラグメントを含む不明なプロファイルは1,734件あります。
+* 1,734件の不明なプロファイルに関連付けられた28,591件のイベントがあり、この中には、ECIDのID名前空間の1つのプロファイルフラグメントが含まれています。
+
 ## 次の手順
 
-これで、プロファイルストアでサンプルデータをプレビューし、複数の重複レポートを実行する方法がわかったので、セグメント化サービスAPIの推定エンドポイントとプレビューエンドポイントを使用して、セグメント定義に関する概要レベルの情報を表示できます。 この情報は、セグメント内の予期されるオーディエンスを確実に分離するのに役立ちます。 セグメント化APIを使用したセグメントプレビューと推定の操作について詳しくは、『[プレビューと推定エンドポイントのガイド](../../segmentation/api/previews-and-estimates.md)』を参照してください。
+これで、プロファイルストアでサンプルデータをプレビューし、データに関する複数のレポートを実行する方法がわかったので、セグメント化サービスAPIの推定エンドポイントとプレビューエンドポイントを使用して、セグメント定義に関する概要レベルの情報を表示できます。 この情報は、セグメント内の予期されるオーディエンスを確実に分離するのに役立ちます。 セグメント化APIを使用したセグメントプレビューと推定の操作について詳しくは、『[プレビューと推定エンドポイントのガイド](../../segmentation/api/previews-and-estimates.md)』を参照してください。
 
