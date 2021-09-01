@@ -1,20 +1,19 @@
 ---
-title: Adobe Experience PlatformWeb SDKコマンドの実行
+title: Adobe Experience Platform Web SDKコマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
-keywords: コマンドの実行；commandName;Promises;getLibraryInfo;responseオブジェクト；同意；
-translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+keywords: コマンドの実行；commandName;Promise;getLibraryInfo；応答オブジェクト；同意；
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
-
 
 # コマンドの実行
 
 
-Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、サーバから外部ファイル(`alloy.js`)が読み込まれるのを待つ必要はありません。 SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
+Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル(`alloy.js`)がサーバーから読み込まれるのを待つ必要はありません。 SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
 
 コマンドは、次の構文を使用して実行されます。
 
@@ -66,15 +65,15 @@ alloy("commandName", options)
 
 ### 応答オブジェクト
 
-コマンドから返されるすべてのプロミスは`result`オブジェクトで解決されます。 結果オブジェクトには、コマンドおよびユーザーの同意に応じたデータが含まれます。 例えば、次のコマンドでは、library infoがresultsオブジェクトのプロパティとして渡されます。
+コマンドから返されるすべてのpromiseは`result`オブジェクトを使用して解決されます。 結果オブジェクトには、コマンドとユーザーの同意に応じたデータが含まれます。 例えば、次のコマンドで、ライブラリ情報がresultsオブジェクトのプロパティとして渡されます。
 
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 
 ### 同意
 
-ユーザーが特定の目的に対して同意を示さなかった場合、約束は解決されます。ただし、responseオブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
+ユーザーが特定の目的に対して同意しない場合、プロミスは解決されます。ただし、応答オブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
