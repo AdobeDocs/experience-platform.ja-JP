@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 12%
 
 ---
@@ -62,6 +62,9 @@ ht-degree: 12%
    >
    > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。[!DNL Adobe Experience Platform]統合には権限が必要です。
 * [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`に移動します。`accountID`は[!DNL Facebook Ad Account ID]です。
+   >[!IMPORTANT]
+   >
+   >[!DNL Facebook Custom Audiences]利用規約に署名する場合は、Facebook APIでの認証に使用したのと同じユーザーアカウントを使用してください。
 
 ## ID一致の要件 {#id-matching-requirements}
 
