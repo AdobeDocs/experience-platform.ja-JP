@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: UIでAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 8%
 
 ---
 
 # UIでのAdobe Analyticsソース接続の作成
 
-このチュートリアルでは、UIでAdobe Analyticsソース接続を作成し、[!DNL Analytics]レポートスイートデータをAdobe Experience Platformに取り込む手順を説明します。
+このチュートリアルでは、UIでAdobe Analyticsソース接続を作成して、[!DNL Analytics]レポートスイートデータをAdobe Experience Platformに取り込む手順を説明します。
 
 ## はじめに
 
@@ -30,7 +30,7 @@ ht-degree: 8%
 このドキュメント全体で使用される以下の主要用語を理解しておくことが重要です。
 
 * **標準属性**:標準属性は、Adobeで事前定義された属性です。これらは、すべての顧客に対して同じ意味を持ち、[!DNL Analytics]ソースデータと[!DNL Analytics]スキーマフィールドグループで使用できます。
-* **カスタム属性**:カスタム属性は、のカスタムディメンション階層の任意の属性で [!DNL Analytics]す。また、スキーマ定義のAdobeにも含まれますが、お客様によって異なる解釈が可能です。 カスタム属性には、eVar、prop、リストが含まれます。 eVarについて詳しくは、次の[[!DNL Analytics] コンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)のドキュメントを参照してください。
+* **カスタム属性**:カスタム属性は、のカスタム変数階層の任意の属性で [!DNL Analytics]す。カスタム属性は、Adobe Analyticsの実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートとレポートスイートで使用方法が異なる場合があります。 カスタム属性には、eVar、prop、リストが含まれます。 eVarについて詳しくは、次の[[!DNL Analytics] コンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)のドキュメントを参照してください。
 * **カスタムフィールドグループの属性**:顧客が作成したフィールドグループから派生する属性はすべてユーザー定義で、標準属性とカスタム属性のどちらでもありません。
 * **わかりやすい名前**:わかりやすい名前は、実装内のカスタム変数に対して人が指定するラベル [!DNL Analytics] です。わかりやすい名前について詳しくは、次の[[!DNL Analytics] コンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)のドキュメントを参照してください。
 
@@ -46,15 +46,15 @@ ht-degree: 8%
 
 ### データの選択
 
-**[!UICONTROL Analyticsソースのデータ追加]**&#x200B;手順が表示されます。 **[!UICONTROL レポートスイート]**&#x200B;を選択してAnalyticsレポートスイートデータのソース接続の作成を開始し、取り込むレポートスイートを選択します。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
+**[!UICONTROL Analyticsソースのデータ追加]**&#x200B;手順が表示されます。 **[!UICONTROL レポートスイート]**&#x200B;を選択してAnalyticsレポートスイートデータのソース接続の作成を開始し、取り込むレポートスイートを選択します。 選択できないレポートスイートは、このサンドボックスまたは別のサンドボックスで既に取り込まれています。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
 >[!NOTE]
 >
->1つのソースに対する複数のインバウンド接続を、異なるデータを取り込むために作成できます。
+>複数のインバウンド接続を作成して複数のレポートスイートを取り込むことができますが、リアルタイム顧客データプラットフォームで一度に使用できるレポートスイートは1つだけです。
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### マッピング
 
@@ -74,9 +74,9 @@ ht-degree: 8%
 
 | 標準フィールドのマッピング | 説明 |
 | --- | --- |
-| [!UICONTROL 標準マッピングの適用] | [!UICONTROL 適用された標準マッピング]パネルには、マッピングされた標準属性の合計数が表示されます。 標準マッピングとは、ソース[!DNL Analytics]データの標準属性と[!DNL Analytics]フィールドグループの標準属性との間のマッピングセットを指します。 これらは事前にマッピングされており、編集できません。 |
-| [!UICONTROL 非一致の標準マッピング] | [!UICONTROL 標準マッピング]パネルに一致しないと、わかりやすい名前の競合を含む、マッピングされた標準属性の数が表示されます。 これらの競合は、既にフィールド記述子のセットが入力されているスキーマを再利用する際に発生します。 わかりやすい名前の競合があっても、[!DNL Analytics]データフローを続行できます。 |
-| [!UICONTROL カスタムマッピング] | [!UICONTROL カスタムマッピング]パネルには、eVar、prop、リストを含む、マッピングされたカスタム属性の数が表示されます。 カスタムマッピングとは、ソース[!DNL Analytics]データのカスタム属性と[!DNL Analytics]フィールドグループのカスタム属性とのマッピングセットを指します。 カスタム属性は、標準属性だけでなく、他のカスタム属性にマッピングできます。 |
+| [!UICONTROL 標準マッピングの適用] | [!UICONTROL 適用された標準マッピング]パネルに、マッピングされた属性の合計数が表示されます。 標準マッピングとは、ソース[!DNL Analytics]データ内のすべての属性と[!DNL Analytics]フィールドグループ内の対応する属性との間のマッピングセットを指します。 これらは事前にマッピングされており、編集できません。 |
+| [!UICONTROL 非一致の標準マッピング] | [!UICONTROL 標準マッピング]パネルに一致しないと、わかりやすい名前の競合を含むマッピング済み属性の数が表示されます。 これらの競合は、別のレポートスイートのフィールド記述子のセットが既に入力されているスキーマを再利用する場合に表示されます。 わかりやすい名前の競合があっても、[!DNL Analytics]データフローを続行できます。 |
+| [!UICONTROL カスタムマッピング] | [!UICONTROL カスタムマッピング]パネルには、eVar、prop、リストを含む、マッピングされたカスタム属性の数が表示されます。 カスタムマッピングとは、ソース[!DNL Analytics]データのカスタム属性と、選択したスキーマに含まれるカスタムフィールドグループの属性との間のマッピングセットを指します。 |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platformは、わかりやすい名前の競合に対して、マッピングセ
 
 ![マッピング](../../../../images/tutorials/create/analytics/mapping.png)
 
-マッピングセット内にわかりやすい名前の競合がある場合は、引き続き[!DNL Analytics]データフローを使用し、フィールド記述子が同じであることを確認できます。 または、空の記述子のセットを持つ新しいスキーマを作成することもできます。
+ソースレポートスイートと選択したスキーマとの間にわかりやすい名前の競合がある場合でも、[!DNL Analytics]データフローを続行し、フィールド記述子は変更されないことを確認できます。 または、空の記述子のセットを持つ新しいスキーマを作成することもできます。
 
 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
@@ -181,7 +181,7 @@ Platformは、わかりやすい名前の競合に対して、マッピングセ
 
 ## 次の手順とその他のリソース
 
-接続が作成されると、ターゲットスキーマとデータフローが自動的に作成され、受信データが格納されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。最初の取り込みが完了すると、[!DNL Analytics]データが作成され、[!DNL Real-time Customer Profile]やセグメント化サービスなど、ダウンストリームのPlatformサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
+接続が作成されると、データフローが自動的に作成され、受信データが格納され、選択したスキーマでデータセットが設定されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。最初の取り込みが完了すると、[!DNL Analytics]データが作成され、[!DNL Real-time Customer Profile]やセグメント化サービスなど、ダウンストリームのPlatformサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Real-time Customer Profile] の概要](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] の概要](../../../../../segmentation/home.md)
