@@ -5,9 +5,9 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3684'
 ht-degree: 30%
 
 ---
@@ -68,7 +68,11 @@ IDデータをPlatformに送信する方法は2つあります。
 
 `identityMap` は、個人の様々なID値と、関連する名前空間を説明するマップタイプのフィールドです。このフィールドは、スキーマ自体の構造内でID値を定義する代わりに、スキーマのID情報を提供するために使用できます。
 
-`identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として見えなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。 `identityMap`を使用するスキーマも関係に参加できません。
+`identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として見えなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。
+
+>[!NOTE]
+>
+>`identityMap`を使用するスキーマは、関係のソーススキーマとして使用できますが、宛先スキーマとしては使用できません。 これは、すべての宛先スキーマは、ソーススキーマ内の参照フィールドにマッピングできる、可視IDを持つ必要があるからです。 ソーススキーマと宛先スキーマの要件について詳しくは、 [関係](../tutorials/relationship-ui.md)のUIガイドを参照してください。
 
 ただし、IDを一緒に保存するソースからデータを取り込む場合([!DNL Airship]やAdobe Audience Managerなど)や、スキーマのID数が可変の場合は、IDマップが特に役立ちます。 また、[Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)を使用する場合は、IDマップが必要です。
 
