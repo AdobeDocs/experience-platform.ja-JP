@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKを使用したイベントの追跡
 description: Adobe Experience Platform Web SDKのイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 32%
+source-wordcount: '1082'
+ht-degree: 34%
 
 ---
 
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### `eventType` の設定 {#event-types}
 
-XDMエクスペリエンスイベントには、オプションの`eventType`フィールドがあります。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信する様々なイベントを区別するのに役立ちます。 XDMには、使用できる定義済みのイベントタイプがいくつか用意されています。また、使用事例に合わせて独自のカスタムイベントタイプを常に作成することもできます。 XDMが提供するすべての事前定義済みイベントタイプのリストを以下に示します。 [詳しくは、XDMパブリックリポジトリー](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)を参照してください。
-
-
-| **イベントタイプ:** | **定義:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | 時間指定メディアアセットが最後まで視聴されたかどうかを示します。これは、視聴者がビデオ全体を視聴したとは限りません。閲覧者は先にスキップした可能性があります |
-| advertising.timePlayed | 特定の時間指定メディアアセットに対するユーザーの滞在時間を示します |
-| advertising.federated | エクスペリエンスイベントがデータフェデレーション（顧客間でのデータ共有）を通じて作成されたかどうかを示します |
-| advertising.clicks | 広告に対するクリック操作 |
-| advertising.conversions | パフォーマンス評価用のイベントをトリガーする、顧客の事前定義済みのアクション |
-| advertising.firstQuartiles | デジタルビデオ広告は、通常の速度で再生時間の25%を再生しました |
-| advertising.impressions | エンドユーザーに対する広告のインプレッション（視聴可能性あり） |
-| advertising.midpoints | デジタルビデオ広告は、通常の速度で再生時間の50%を再生しました |
-| advertising.starts | デジタルビデオ広告の再生が開始されました |
-| advertising.thirdQuartiles | デジタルビデオ広告は、通常の速度で再生時間の75%を再生しました |
-| web.webpagedetails.pageViews | Webページの表示が発生しました |
-| web.webinteraction.linkClicks | Webリンクのクリックが発生しました |
-| commerce.checkouts | 製品リストのチェックアウトプロセス中のイベント。チェックアウトプロセスに複数のステップがある場合は、複数のチェックアウトアクションが存在する可能性があります。複数の手順がある場合、イベント時間情報と参照先のページまたはエクスペリエンスを使用して、個々のイベントが順に表す手順を識別します |
-| commerce.productListAdds | 製品の製品リストへの追加。買い物かごへの製品の追加例 |
-| commerce.productListOpens | 新しい製品リストの初期化。買い物かごの作成例 |
-| commerce.productListRemovals | 製品エントリの製品リストからの削除例 — 買い物かごからの製品の削除 |
-| commerce.productListReopens | アクセスできなくなった（破棄された）製品リストが、ユーザーによって再度アクティブ化されました。リマーケティングアクティビティの例 |
-| commerce.productListViews | 製品リストの表示が発生しました |
-| commerce.productViews | 製品の表示が発生しました |
-| commerce.purchases | 注文が受け入れられました。コマースコンバージョンで必要なアクションは購入のみです。購入では、製品リストを参照する必要があります |
-| commerce.saveForLaters | 製品のリストは、今後の使用のために保存されます。製品ウィッシュリストの例 |
-| delivery.feedback | 配信のフィードバックイベント。 Eメール配信のフィードバックイベントの例 |
-
+XDM ExperienceEventスキーマには、オプションの`eventType`フィールドがあります。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信する様々なイベントを区別するのに役立ちます。 XDMには、使用できる定義済みのイベントタイプがいくつか用意されています。また、使用事例に合わせて独自のカスタムイベントタイプを常に作成することもできます。 XDMのドキュメントを参照して、事前定義されたすべてのイベントタイプ](../../xdm/classes/experienceevent.md#eventType)の[リストを確認してください。
 
 これらのイベントタイプは、タグ拡張を使用する場合や、タグを使用せずに常に渡すことができる場合に、ドロップダウンに表示されます。 これらは、`xdm`オプションの一部として渡すことができます。
 
