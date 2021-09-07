@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 57%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 57%
       * [LinkedIn Insight タグ拡張機能](./catalog/advertising/linkedin.md)
       * [Microsoft Bing接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
+      * [Pinterest Customer Listの接続](./catalog/advertising/pinterest.md)
       * [トレードデスクの接続](./catalog/advertising/tradedesk.md)
       * [Twitter ユニバーサルウェブサイトタグ拡張](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX接続](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 57%
       * [タグ拡張の概要](./catalog/launch-extensions/overview.md)
    * モバイルエンゲージメントの宛先{#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
-      * [（ベータ版）飛行船属性の接続](./catalog/mobile-engagement/airship-attributes.md)
-      * [（ベータ版）飛行船タグの接続](./catalog/mobile-engagement/airship-tags.md)
-      * [（ベータ版）接続をブレーズ](./catalog/mobile-engagement/braze.md)
+      * [飛行船属性の接続](./catalog/mobile-engagement/airship-attributes.md)
+      * [航空船タグ接続](./catalog/mobile-engagement/airship-tags.md)
+      * [接続をブレーズ](./catalog/mobile-engagement/braze.md)
    * パーソナライズ機能の宛先 {#personalization}
       * [パーソナライズ機能の宛先の概要](./catalog/personalization/overview.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
