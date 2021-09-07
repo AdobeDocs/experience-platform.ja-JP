@@ -1,20 +1,21 @@
 ---
 title: Satelliteオブジェクトの参照
 description: クライアント側の_satelliteオブジェクトと、タグで実行できる様々な機能について説明します。
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 84%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
-# サテライトオブジェクトのリファレンス
+# Satellite オブジェクトのリファレンス
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-このドキュメントは、クライアントサイドの `_satellite` オブジェクトと、それを使用して実行できる様々な機能の参照として機能します。
+このドキュメントは、クライアントサイドの `_satellite` オブジェクトと、それを使用して実行できる様々な機能のリファレンスとして機能します。
 
 ## `track`
 
@@ -30,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` は、コアタグ拡張機能から指定された識別子で設定されたダイレクトコールイベントタイプを使用して、すべてのルールを実行します。上記の例では、ダイレクト型イベントタイプを使用する（`contact_submit` 識別子が設定されている）すべてのルールをトリガーします。関連情報を含むオプションのオブジェクトも渡されます。詳細オブジェクトにアクセスするには、条件やアクションのテキストフィールド内で「`%event.detail%`」と入力するか、カスタムコード条件またはアクションのコードエディター内で「`event.detail`」と入力します。
+`track` は、コアタグ拡張機能から指定された識別子を使用して設定されたダイレクトコールイベントタイプを使用するすべてのルールを実行します。上記の例では、ダイレクト型イベントタイプを使用する（`contact_submit` 識別子が設定されている）すべてのルールをトリガーします。関連情報を含むオプションのオブジェクトも渡されます。詳細オブジェクトにアクセスするには、条件やアクションのテキストフィールド内で「`%event.detail%`」と入力するか、カスタムコード条件またはアクションのコードエディター内で「`event.detail`」と入力します。
 
 ## `getVar`
 
@@ -46,9 +47,9 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-提供されている例では、名前が一致するデータ要素が存在する場合、データ要素の値が返されます。一致するデータ要素が存在しない場合は、一致する名前のカスタム変数が、以前に `_satellite.setVar()` を使用して設定されているかどうかを確認します。一致するカスタム変数が見つかると、その値が返されます。
+この例では、名前が一致するデータ要素が存在する場合、そのデータ要素の値が返されます。一致するデータ要素が存在しない場合は、一致する名前のカスタム変数が、以前に `_satellite.setVar()` を使用して設定されているかどうかを確認します。一致するカスタム変数が見つかると、その値が返されます。
 
-データ収集ユーザーインターフェイスの多くのフォームフィールドでは、`%%` 構文を使用して変数を参照し、`_satellite.getVar()` の呼び出しを減らすことができます。たとえば、%product% を使用すると、製品データ要素またはカスタム変数の値にアクセスします。
+データ収集ユーザーインターフェイスの多くのフォームフィールドでは、`%%` 構文を使用して変数を参照できるため、`_satellite.getVar()` の呼び出しを減らすことができます。たとえば、%product% を使用すると、製品データ要素またはカスタム変数の値にアクセスします。
 
 ## `setVar`
 
@@ -64,7 +65,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` は、指定した名前と値を持つカスタム変数を設定します。変数の値は、`_satellite.getVar()` を使用して後でアクセスできます。
+`setVar()` は、指定した名前と値でカスタム変数を設定します。変数の値は、`_satellite.getVar()` を使用して後でアクセスできます。
 
 オプションとして、キーが変数名、値がそれぞれの変数値であるオブジェクトを渡すことにより、複数の変数を一度に設定できます。
 
@@ -114,7 +115,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-`logger` オブジェクトを使用すると、メッセージをブラウザーコンソールに記録できます。メッセージは、ユーザーがタグデバッグを有効にして（`_satellite.setDebug(true)` を呼び出す、または適切なブラウザー拡張機能を使用して）いる場合にのみ表示されます。
+`logger` オブジェクトを使用すると、メッセージをブラウザーコンソールに記録できます。このメッセージは、ユーザーが（`_satellite.setDebug(true)` を呼び出す、または適切なブラウザー拡張機能を使用して）タグのデバッグを有効にした場合にのみ表示されます。
 
 ### ログ取得廃止の警告
 
@@ -132,7 +133,7 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` には、Cookieの読み取りと書き込みを行う関数が含まれます。これは、サードパーティのライブラリ js-cookie の公開済みコピーです。このライブラリのより高度な使用方法の詳細については、[js-cookieのドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
+`_satellite.cookie` には、Cookieの読み取りと書き込みを行う関数が含まれます。これは、サードパーティライブラリ js-cookie の公開コピーです。このライブラリのより高度な使用方法の詳細については、[js-cookieのドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
 
 ### cookieの設定 {#cookie-set}
 
@@ -200,7 +201,7 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-このオブジェクトには、現在のタグランタイムライブラリのビルドに関する情報が含まれています。オブジェクトには、次のプロパティが含まれています。
+このオブジェクトには、現在のタグのランタイムライブラリのビルドに関する情報が含まれています。オブジェクトには、次のプロパティが含まれています。
 
 ### `turbineVersion`
 
@@ -214,7 +215,31 @@ _satellite.buildInfo
 
 現在のライブラリが構築された日付（ISO 8601 形式）。
 
-### `environment`
+この例では、オブジェクトの値を示します。
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**コード**
+
+```javascript
+_satellite.environment
+```
+
+このオブジェクトには、現在のタグランタイムライブラリがデプロイされている環境に関する情報が含まれます。 オブジェクトには、次のプロパティが含まれています。
+
+### `id`
+
+環境のID。
+
+### `stage`
 
 このライブラリが構築された環境。次のいずれかの値となります。
 
@@ -226,10 +251,8 @@ _satellite.buildInfo
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,9 +274,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` は、ブラウザーコンソールにメッセージを記録します。メッセージは、ユーザーがタグのデバッグを有効にして（`_satellite.setDebug(true)` を呼び出す、または適切なブラウザー拡張機能を使用して）いる場合にのみ表示されます。
+`notify` は、ブラウザーコンソールにメッセージを記録します。このメッセージは、ユーザーが（`_satellite.setDebug(true)` を呼び出すか、適切なブラウザ拡張機能を使用して）タグのデバッグを有効にした場合にのみ表示されます。
 
-オプションのログレベルを渡すことができます。ログレベルは、記録されるメッセージのスタイル設定とフィルタリングに影響を与えます。サポートされているレベルは次のとおりです。
+ログに記録されるメッセージのスタイル設定とフィルタリングに影響を与えるオプションのログレベルを渡すことができます。サポートされているレベルは次のとおりです。
 
 3 - 情報メッセージ。
 
@@ -301,7 +324,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-これにより、ユーザーのブラウザーから cookie が読み取られます。
+これにより、ユーザーのブラウザーから cookie を読み取ります。
 
 ## `removeCookie`
 
@@ -321,7 +344,7 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-これにより、ユーザーのブラウザーから cookie が削除されます。
+これにより、ユーザーのブラウザーから cookie を削除します。
 
 ## デバッグ関数
 
@@ -399,7 +422,7 @@ _satellite._monitors
 </html>
 ```
 
-最初のスクリプト要素では、タグライブラリがまだ読み込まれていないので、最初の `_satellite` のオブジェクトが作成され、`_satellite._monitors` の配列が初期化されます。次に、スクリプトがそ配列にモニターオブジェクトを追加します。モニターオブジェクトは、次のメソッドを指定できます。これらのメソッドは、後でタグライブラリによって呼び出されます。
+最初のスクリプト要素では、タグライブラリがまだ読み込まれていないので、最初の `_satellite` オブジェクトが作成され、`_satellite._monitors` の配列が初期化されます。次に、スクリプトがそ配列にモニターオブジェクトを追加します。モニターオブジェクトは、後でタグライブラリによって呼び出される次のメソッドを指定できます。
 
 ### `ruleTriggered`
 
@@ -407,7 +430,7 @@ _satellite._monitors
 
 ### `ruleCompleted`
 
-この関数は、ルールが完全に処理された後に呼び出されます。つまり、イベントが発生し、すべての条件をクリアし、すべてのアクションが実行された後です。`ruleCompleted` に渡されたイベントオブジェクトには、完了したルールに関する情報が含まれます。
+この関数は、ルールが完全に処理された後に呼び出されます。 （つまり、イベントが発生し、すべての条件をクリアし、すべてのアクションが実行された後）`ruleCompleted` に渡された event オブジェクトには、完了したルールに関する情報が含まれます。
 
 ### `ruleConditionFailed`
 
@@ -417,7 +440,7 @@ _satellite._monitors
 
 >[!NOTE]
 >
->1 つのモニターで、3 つのメソッドすべて（`ruleTriggered`、`ruleCompleted`、および `ruleConditionFailed`）を指定する必要はありません。Adobe Experience Platform のタグは、モニターで提供されている、サポート対象メソッドで機能します。
+>1 つのモニターで、3 つのメソッドすべて（`ruleTriggered`、`ruleCompleted`、および `ruleConditionFailed`）を指定する必要はありません。Adobe Experience Platform のタグは、モニターで提供されている、あらゆるサポートメソッドで機能します。
 
 ### モニターのテスト
 
@@ -430,4 +453,4 @@ _satellite._monitors
 
 ![](../../images/debug.png)
 
-必要に応じて、追加のフックまたは追加の情報をこれらのハンドラーに追加できます。
+これらのハンドラーには、必要に応じて、さらにフックや情報が追加される場合があります。

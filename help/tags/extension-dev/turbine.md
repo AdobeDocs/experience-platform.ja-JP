@@ -1,10 +1,11 @@
 ---
 title: turbine 自由変数
-description: turbine オブジェクトについて説明します。この自由変数は、Adobe Experience Platform タグランタイム固有の情報とユーティリティを提供します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 94%
+source-wordcount: '598'
+ht-degree: 91%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
-`turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。これは Adobe Experience Platform タグランタイム専用の情報とユーティリティを提供し、`require()` を使用しなくても、常にライブラリモジュールで使用できます。
+`turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。Adobe Experience Platform タグのランタイムに固有の情報とユーティリティを提供し、`require()` を使用しなくてもライブラリモジュールでいつでも利用できます。
 
 ## [!DNL buildInfo]
 
@@ -22,14 +23,13 @@ ht-degree: 94%
 console.log(turbine.buildInfo.turbineBuildDate);
 ```
 
-`turbine.buildInfo` は、現在のタグランタイムライブラリに関するビルド情報を含むオブジェクトです。
+`turbine.buildInfo` は、現在のタグのランタイムライブラリに関するビルド情報を含むオブジェクトです。
 
 ```js
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,12 +38,32 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | 現在のライブラリ内で使用されている [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) バージョン。 |
 | `turbineBuildDate` | コンテナ内で使用されている [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) のバージョンが作成された日付（ISO 8601 形式）。 |
 | `buildDate` | 現在のライブラリが構築された日付（ISO 8601 形式）。 |
-| `environment` | このライブラリが構築された環境。指定できる値は、`development`、`staging`、`production` です。 |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` は、ライブラリがデプロイされている環境に関する情報を含むオブジェクトです。
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `id` | 環境のID。 |
+| `stage` | このライブラリが構築された環境。指定できる値は、`development`、`staging`、`production` です。 |
 
 
 ## [!DNL debugEnabled]
 
-タグのデバッグが現在有効になっているかどうかを確認します。
+タグのデバッグが現在有効になっているかどうか。
 
 メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使用してメッセージをログに記録し、タグのデバッグが有効になっている場合にのみメッセージがコンソールに出力されるようにします。
 
@@ -63,7 +83,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 [拡張機能の設定](./configuration.md)ビューから最後に保存された設定オブジェクトが返されます。
 
-返される設定オブジェクト内の値は、データ要素から取得した値である可能性があることに注意してください。このため、データ要素の値が変更されている場合、異なる時間に `getExtensionSettings()` を呼び出すと、違う結果が返されることがあります。最新の値を取得するには、できるだけ遅くまで待ってから、`getExtensionSettings()` を呼び出してください。
+返される設定オブジェクト内の値は、データ要素から取得した値である可能性があることに注意してください。このため、データ要素の値が変更されている場合、異なる時間に `getExtensionSettings()` を呼び出すと、違う結果が返されることがあります。最新の値を取得するには、できるだけ長い間待ってから、`getExtensionSettings()` を呼び出してください。
 
 ### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
 
@@ -74,7 +94,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-[hostedLibFiles](./manifest.md) プロパティを拡張機能マニフェスト内で定義して、タグランタイムライブラリと共に様々なファイルをホストすることができます。このモジュールによって、指定されたライブラリファイルがホストされている URL が返されます。
+[hostedLibFiles](./manifest.md) プロパティは、タグのランタイムライブラリとともに様々なファイルをホストするために、拡張機能マニフェスト内で定義できます。このモジュールによって、指定されたライブラリファイルがホストされている URL が返されます。
 
 ### [!DNL getSharedModule] {#shared}
 
@@ -90,7 +110,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-ログユーティリティは、メッセージをコンソールに記録する際に使用されます。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)を使用することをお勧めします。 別の方法として、ユーザーはブラウザーの開発者コンソール内でコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
+ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)を使用することをお勧めします。 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
 
 * `logger.log(message: string)`：コンソールにメッセージを記録します。
 * `logger.info(message: string)`：コンソールに情報メッセージを記録します。
@@ -100,9 +120,9 @@ turbine.logger.error('Error!');
 
 ### [!DNL onDebugChanged]
 
-コールバック関数を `turbine.onDebugChanged` に渡すと、タグは、デバッグが切り替えられるたびにコールバックを呼び出します。タグは、デバッグが有効な場合は true、デバッグが無効な場合は false のブール値をコールバック関数に渡します。
+コールバック関数を `turbine.onDebugChanged` に渡すと、タグは、デバッグが切り替えられるたびにコールバックを呼び出します。タグ は、デバッグが有効な場合は true、デバッグが無効な場合は false のブール値をコールバック関数に渡します。
 
-メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使用してメッセージをログに記録します。タグのデバッグが有効な場合、メッセージはコンソールにのみ表示されます。
+メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使ってメッセージをログに記録すると、タグデバッグが有効な場合にメッセージがコンソールにのみ出力されます。
 
 ### [!DNL propertySettings] {#property-settings}
 
@@ -110,7 +130,7 @@ turbine.logger.error('Error!');
 console.log(turbine.propertySettings.domains);
 ```
 
-現在のタグランタイムライブラリのプロパティに対してユーザーが定義する次の設定を含むオブジェクト：
+現在のタグのランタイムライブラリのプロパティに対してユーザーが定義する、次の設定を含むオブジェクト：
 
 * `propertySettings.domains: Array<String>`
 
