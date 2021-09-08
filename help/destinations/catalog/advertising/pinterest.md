@@ -1,7 +1,7 @@
 ---
 title: Pinterest Customer Listの接続
 description: 顧客リスト、サイトを訪問した人、またはPinterest上でコンテンツに対して既にインタラクションを起こしている人からオーディエンスを作成します。
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 6%
@@ -21,8 +21,8 @@ ht-degree: 6%
 
 ## 前提条件 {#prerequisites}
 
-* ユーザーは、オーディエンスの追加先の広告主アカウントにアクセスできるPinterestアカウントを認証する必要があります。 広告主アカウントの共有について詳しくは、次を参照してください。https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. 特に、ユーザーには「オーディエンス」アクセスレベルが必要です。
-* 顧客リストのID形式の詳細については、次を参照してください。https://help.pinterest.com/en/business/article/audience-targeting.
+* ユーザーは、オーディエンスの追加先の広告主アカウントにアクセスできるPinterestアカウントを認証する必要があります。 広告主アカウントの共有に関する詳細は、[こちら](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)を参照してください。 特に、ユーザーには「オーディエンス」アクセスレベルが必要です。
+* 顧客リストのID形式の詳細は、[こちら](https://help.pinterest.com/en/business/article/audience-targeting)を参照してください。
 
 
 ## サポートされるID {#supported-identities}
@@ -76,4 +76,4 @@ pinterest Customer Listの宛先をいつどのように使用すべきかを理
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、 Pinterestヘルプセンターのページ(https://help.pinterest.com/en/business/article/audience-targeting)を参照してください。
+詳しくは、[Pinterestヘルプセンターのページ](https://help.pinterest.com/en/business/article/audience-targeting)を参照してください。
