@@ -2,16 +2,20 @@
 title: Adobe Experience Platform Web SDK拡張機能のリリースノート
 description: Adobe Experience Platform Web SDKタグ拡張
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
+source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 51%
+source-wordcount: '1185'
+ht-degree: 49%
 
 ---
 
 # Adobe Experience Platform Web SDK拡張機能のリリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDKタグ拡張のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
+
+## バージョン2.7.1 - 2021年9月8日
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.4 が含まれます。
 
 ## バージョン2.7.0 - 2021年8月17日
 
@@ -70,7 +74,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 ## バージョン2.2.0 - 2020年10月2日
 
 * お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platformを呼び出すAPIは環境を認識するようになったので、ユーザーには、編集にアクセスできるスキーマのみが表示されます。
-* `identityMap` データ要素を使用する場合、 名前空間はドロップダウンで事前設定されるので、手動で入力する必要がありません。
+* `identityMap`データ要素を使用する場合、名前空間がドロップダウンに事前入力されるので、手動で入力する必要がなくなりました。
 * `xdmObject` データ要素の UI が改良されました。新しい UI では、オブジェクトに各項目を入力しなくても、入力されたフィールドを確認できます。
 
 ## バージョン2.1.1 - 2020年8月27日

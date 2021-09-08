@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 4%
 
 ---
 
 # リリースノート
+
+## バージョン2.6.4 - 2021年9月8日
+
+* `head`要素に適用されたHTML Adobe Targetアクションが`head`コンテンツ全体を置き換える問題を修正しました。 次に、`head`要素に適用されたHTMLアクションの設定が、HTMLを追加するように変更されます。
 
 ## バージョン2.6.3 - 2021年8月17日
 
