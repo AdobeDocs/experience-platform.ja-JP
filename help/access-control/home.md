@@ -5,9 +5,9 @@ topic-legacy: overview
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1375'
 ht-degree: 95%
 
 ---
@@ -103,6 +103,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先への読み取り、作成、編集、無効化アクセス |
 | [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先への読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能この権限を持つユーザーは、宛先をアクティブ化するユーザーに、「宛先の表示」または「[!UICONTROL 宛先]の管理」のいずれかを付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform宛先SDK](../destinations/destination-sdk/overview.md)を使用して宛先を作成する機能。 |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | パートナーが2つのIMS組織を接続し、[!DNL Segment Match]フローを有効にするための手作業を作成、受け入れ、拒否するアクセス。 |
