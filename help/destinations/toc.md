@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 57%
+source-wordcount: '627'
+ht-degree: 46%
 
 ---
 
@@ -139,5 +139,38 @@ ht-degree: 57%
       * [Invoca Tags 拡張機能](./catalog/voice/invoca.md)
       * [Medallia 拡張機能](./catalog/voice/medallia.md)
       * [Talk URL Inbox 拡張機能](./catalog/voice/talkurl.md)
+* 宛先SDK {#destination-sdk}
+   * [概要](./destination-sdk/overview.md)
+   * [統合の前提条件](./destination-sdk/integration-prerequisites.md)
+   * [はじめに](./destination-sdk/getting-started.md)
+   * 宛先SDK機能{#functionality}
+      * [設定オプション](./destination-sdk/configuration-options.md)
+      * [宛先の設定](./destination-sdk/destination-configuration.md)
+      * [サーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
+      * [メッセージのフォーマット](./destination-sdk/message-format.md)
+      * [Audience Metadata Management](./destination-sdk/audience-metadata-management.md)
+      * [認証の設定](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2認証](./destination-sdk/oauth2-authentication.md)
+      * 開発者ツール{#developer-tools}
+         * [メッセージ変換テンプレートの作成とテスト](./destination-sdk/create-template.md)
+         * [宛先設定のテスト](./destination-sdk/test-destination.md)
+   * API リファレンス {#api-reference}
+      * [宛先エンドポイントAPI操作](./destination-sdk/destination-configuration-api.md)
+      * [宛先サーバーエンドポイントAPIの操作](./destination-sdk/destination-server-api.md)
+      * [オーディエンスメタデータエンドポイントAPIの操作](./destination-sdk/audience-metadata-api.md)
+      * [Credentials endpoint API操作](./destination-sdk/credentials-configuration-api.md)
+      * [パブリッシュエンドポイントAPIの操作](./destination-sdk/destination-publish-api.md)
+      * 開発者ツールリファレンス{#developer-tools-reference}
+         * [「Get sample template API」操作](./destination-sdk/sample-template-api.md)
+         * [レンダリングテンプレートAPI操作](./destination-sdk/render-template-api.md)
+         * [宛先テストAPI操作](./destination-sdk/destination-testing-api.md)
+         * [プロファイル生成API操作の例](./destination-sdk/sample-profile-generation-api.md)
+   * ガイド {#guides}
+      * [宛先SDKを使用した宛先の設定](./destination-sdk/configure-destination-instructions.md)
+   * 宛先{#document-destination}を文書化します。
+      * [Adobe Experience Platformでの宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [GitHub Webインターフェイスを使用して、宛先のドキュメントページを作成します](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [ローカル環境でテキストエディターを使用した、宛先のドキュメントページの作成](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
 * [よくある質問](./destinations-faq.md)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
