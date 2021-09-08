@@ -1,15 +1,15 @@
 ---
 title: Pinterest Customer Listの接続
 description: 顧客リスト、サイトを訪問した人、またはPinterest上でコンテンツに対して既にインタラクションを起こしている人からオーディエンスを作成します。
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 6%
+source-wordcount: '516'
+ht-degree: 5%
 
 ---
 
-
-# Pinterest Customer Listの接続
+# [!DNL Pinterest Customer List] 接続
 
 ## 概要 {#overview}
 
@@ -27,14 +27,14 @@ ht-degree: 6%
 
 ## サポートされるID {#supported-identities}
 
-pinterestの顧客リストの宛先では、以下の表で説明するIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started)の詳細を説明します。
+[!DNL Pinterest Customer List]の宛先では、以下の表で説明するIDのアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started)の詳細を説明します。
 
 宛先のアクティベーションワークフローの[マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)で、目的のIDをターゲットフィールド&#x200B;*pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestにデータを取り込む際に識別され、解決されます。
 
 | ターゲットID | 説明 | 注意点 |
 |---|---|---|
-| GAID | Google広告ID | *GAID*&#x200B;ソースID名前空間をターゲットIDフィールド&#x200B;*pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestにデータを取り込む際に識別され、解決されます。 |
-| IDFA | Apple の広告主 ID | *IDFA*&#x200B;ソースID名前空間をターゲットIDフィールド&#x200B;*pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestにデータを取り込む際に識別され、解決されます。 |
+| GAID | [!DNL Google Advertising ID] | *GAID*&#x200B;ソースID名前空間をターゲットIDフィールド&#x200B;*pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestにデータを取り込む際に識別され、解決されます。 |
+| IDFA | [!DNL Apple ID for Advertisers] | *IDFA*&#x200B;ソースID名前空間をターゲットIDフィールド&#x200B;*pinterest_audience*&#x200B;にマッピングします。 IDは、Pinterestにデータを取り込む際に識別され、解決されます。 |
 | EMAIL | 電子メールアドレス（クリアテキストまたはSHA256アルゴリズムでハッシュ化） | プレーンテキストとSHA256ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 <br> Eメールア ** ドレス *Email_LC_SHA256* ソースID名前空間をターゲットIDフィールド *pinterest_audience*&#x200B;にマッピングします。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ pinterestの顧客リストの宛先では、以下の表で説明するIDのア
 
 ## ユースケース {#use-cases}
 
-pinterest Customer Listの宛先をいつどのように使用すべきかを理解しやすくするために、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL Pinterest Customer List]宛先をいつどのように使用するかを理解しやすくするために、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
 
 ### ユースケース 1

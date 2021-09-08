@@ -1,9 +1,10 @@
 ---
-description: '宛先SDKの一部として、Adobeは、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定をテストする方法について説明します。 '
+description: 宛先SDKの一部として、Adobeは、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定をテストする方法について説明します。
 title: 宛先設定のテスト
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 次の手順
 
-宛先が正しく設定されていることを確認したら、Adobe[セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md)を使用して、宛先のドキュメントページを作成します。
+宛先をテストし、正しく設定されていることを確認したら、[宛先パブリッシングAPI](./destination-publish-api.md)を使用して、設定をAdobeに送信し、レビューを受けます。

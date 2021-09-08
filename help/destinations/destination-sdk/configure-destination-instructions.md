@@ -3,7 +3,8 @@ description: このページでは、宛先SDKの「設定オプション」の�
 seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
 seo-title: How to use Destination SDK to configure your destination
 title: 宛先SDKを使用した宛先の設定方法
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -161,7 +162,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順7:宛先の公開 {#publish-destination}
 
-宛先を設定およびテストした後。 [宛先パブリッシングAPI](./destination-publish-api.md)を使用して、設定をレビュー用にAdobeに送信します。
+宛先の設定とテストが完了したら、[宛先公開API](./destination-publish-api.md)を使用して、確認用に設定をAdobeに送信します。
 
 ## 手順8:宛先のドキュメント化 {#document-destination}
 

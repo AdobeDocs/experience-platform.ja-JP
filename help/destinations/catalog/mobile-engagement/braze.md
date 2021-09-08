@@ -3,18 +3,14 @@ keywords: モバイル；勇気づけメッセージ
 title: 接続をブレーズ
 description: Brazeは、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# （ベータ版） [!DNL Braze]接続
-
->[!IMPORTANT]
->
->Adobe Experience PlatformのBrazeの宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+# [!DNL Braze] 接続
 
 ## 概要 {#overview}
 
@@ -98,11 +94,9 @@ XDMフィールドを[!DNL Braze]宛先フィールドに正しくマッピン�
 
 ![宛先ターゲットマッピングのブレーズ](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-[!UICONTROL ターゲットフィールドを選択]ウィンドウで、次の3つのカテゴリのターゲットフィールドを選択できます。
-* [!UICONTROL 属性の選択]:このオプションを使用して、XDM属性を標準属性にマッピン [!DNL Braze] グします。
+[!UICONTROL ターゲットフィールドを選択]ウィンドウで、次の2つのカテゴリのターゲットフィールドを選択できます。
 * [!UICONTROL ID名前空間の選択]:ID名前空間をID名前空間にマ [!DNL Platform] ッピングするに [!DNL Braze] は、このオプションを使用します。
-* [!UICONTROL カスタム属性の選択]:このオプションを使用して、XDM属性を、アカウントで定 [!DNL Braze] 義したカスタム属性にマッピン [!DNL Braze] グします。
-* また、このオプションを使用して、既存のXDM属性の名前を[!DNL Braze]に変更することもできます。 例えば、`lastName` XDM属性を[!DNL Braze]のカスタム`Last_Name`属性にマッピングすると、[!DNL Braze]に`Last_Name`属性が作成されます（属性がまだ存在しない場合）。また、`lastName` XDM属性をマッピングします。
+* [!UICONTROL カスタム属性の選択]:このオプションを使用して、XDM属性を、アカウントで定 [!DNL Braze] 義したカスタム属性にマッピン [!DNL Braze] グします。<br> また、このオプションを使用して、既存のXDM属性の名前をに変更できま [!DNL Braze]す。例えば、`lastName` XDM属性を[!DNL Braze]のカスタム`Last_Name`属性にマッピングすると、[!DNL Braze]に`Last_Name`属性が作成されます（属性がまだ存在しない場合）。また、`lastName` XDM属性をマッピングします。
 
 ![宛先ターゲットマッピングフィールドの分類](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
