@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platformのデータ収集のエンドツーエンドの概要
-description: Adobe Experience Platformデータ収集を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: データ収集のエンドツーエンドの概要
+description: Adobe Experience Platformが提供するデータ収集テクノロジーを使用して、Adobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 1%
 
 ---
 
-# Adobe Experience Platformのデータ収集のエンドツーエンドの概要
+# データ収集のエンドツーエンドの概要
 
-Adobe Experience Platformデータ収集は、連携してデータを収集し、他のAdobe製品やサードパーティの宛先にデータを転送するいくつかのテクノロジーを提供します。 アプリケーションからAdobe Experience Platform Edgeネットワークにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先にデータを配信するように設定する方法を理解することが重要です。
+Adobe Experience Platformでは、データ収集とは、連携してデータを収集し、他のAdobe製品やサードパーティの宛先にデータを転送する複数のテクノロジーを指します。 アプリケーションからAdobe Experience Platform Edgeネットワークにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先にデータを配信するように設定する方法を理解することが重要です。
 
 このガイドでは、データ収集テクノロジーを使用してEdgeネットワークを通じてイベントを送信する方法に関する概要レベルのチュートリアルを提供します。 特に、このチュートリアルでは、データ収集UI内でAdobe Experience Platform Web SDKタグ拡張機能をインストールおよび設定する手順について説明します。
 
