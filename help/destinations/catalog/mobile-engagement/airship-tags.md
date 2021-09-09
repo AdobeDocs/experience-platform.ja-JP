@@ -3,18 +3,14 @@ keywords: 飛行船タグ、飛行船の宛先
 title: 航空船タグ接続
 description: AdobeのオーディエンスデータをAirshipにAudience Tagsとしてシームレスに渡し、Airship内でターゲティングをおこないます。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 2%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# （ベータ版） [!DNL Airship Tags]接続 {#airship-tags-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platformの[!DNL Airship Tags]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+# [!DNL Airship Tags] 接続 {#airship-tags-destination}
 
 ## 概要
 

@@ -3,18 +3,14 @@ keywords: 飛行船の属性；飛行船の宛先
 title: 飛行船属性の接続
 description: Airship内でターゲティングをおこなうために、Adobeのオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 2%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# （ベータ版） [!DNL Airship Attributes]接続 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platformの[!DNL Airship Attributes]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+# [!DNL Airship Attributes] 接続 {#airship-attributes-destination}
 
 ## 概要 {#overview}
 
@@ -61,7 +57,7 @@ Adobe Experience Platformプロファイル属性は[!DNL Airship]属性に似�
 
 ### 使用例#1
 
-Adobe Experience Platform内で収集したプロファイルデータを活用して、[!DNL Airship]のチャネルの中でメッセージとリッチコンテンツをパーソナライズします。 例えば、[!DNL Experience Platform]プロファイルデータを利用して、[!DNL Airship]内に場所属性を設定します。 これにより、ホテルのブランドは、各ユーザーに最も近いホテルの場所の画像を表示できます。
+Adobe Experience Platform内で収集されたプロファイルデータを活用して、[!DNL Airship]のチャネルの中でメッセージとリッチコンテンツをパーソナライズします。 例えば、[!DNL Experience Platform]プロファイルデータを利用して、[!DNL Airship]内に場所属性を設定します。 これにより、ホテルのブランドは、各ユーザーに最も近いホテルの場所の画像を表示できます。
 
 ### 使用例#2
 

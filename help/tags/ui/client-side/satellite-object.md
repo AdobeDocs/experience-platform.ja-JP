@@ -2,9 +2,9 @@
 title: Satelliteオブジェクトの参照
 description: クライアント側の_satelliteオブジェクトと、タグで実行できる様々な機能について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ _satellite.buildInfo
 
 ## `environment`
 
+このオブジェクトには、現在のタグランタイムライブラリがデプロイされている環境に関する情報が含まれます。
+
 **コード**
 
 ```javascript
 _satellite.environment
 ```
 
-このオブジェクトには、現在のタグランタイムライブラリがデプロイされている環境に関する情報が含まれます。 オブジェクトには、次のプロパティが含まれています。
-
-### `id`
-
-環境のID。
-
-### `stage`
-
-このライブラリが構築された環境。次のいずれかの値となります。
-
-* 開発
-* ステージング
-* 実稼動
-
-この例では、オブジェクトの値を示します。
+オブジェクトには、次のプロパティが含まれています。
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `id` | 環境のID。 |
+| `stage` | このライブラリが構築された環境。指定できる値は`development`、`staging`、`production`です。 |
 
 ## `notify`
 
