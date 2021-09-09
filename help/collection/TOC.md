@@ -3,16 +3,16 @@ audience: user
 user-guide-title: Adobe Experience Platform のデータ収集
 breadcrumb-title: データ収集ガイド
 user-guide-description: Adobe Experience Platform エッジネットワークのクライアントサイドのデータ収集を有効にします。
-feature: データ収集
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+feature: Data Collection
+source-git-commit: 6aaab0f5615b1f438ba8cef798aa1038a1953b33
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 100%
+source-wordcount: '28'
+ht-degree: 92%
 
 ---
 
 
-# Adobe Experience Platform コレクション {#collection}
+# Adobe Experience Platform のデータ収集 {#collection}
 
-- [データ収集の概要](home.md)
-- 
+- [データ収集の概要](./home.md)
+- [エンドツーエンドの概要](./e2e.md)
