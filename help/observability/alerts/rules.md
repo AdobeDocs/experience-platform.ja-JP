@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 title: 標準のアラートルール
-description: 'このドキュメントでは、Experience Platformが提供する事前定義済みのアラート・ルールについて説明します。 '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: このドキュメントでは、Experience Platformが提供する事前定義済みのアラート・ルールについて説明します。
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 17%
 
 ---
-
 
 # 標準のアラートルール
 

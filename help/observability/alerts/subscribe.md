@@ -2,8 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 title: Adobe I/Oイベント通知の購読
 description: このドキュメントでは、Adobe Experience Platformサービス用のAdobe I/Oイベント通知をサブスクライブする手順を説明します。 利用可能なイベントタイプに関する参照情報と、該当する各 [!DNL Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクも提供されています。
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 8%
@@ -34,7 +35,7 @@ ht-degree: 8%
 
 ## 開発者コンソールでの新しいAdobeの作成
 
-[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してサインインします。次に、Adobe開発者コンソールのドキュメントの[空のプロジェクト](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)の作成に関するチュートリアルで説明されている手順に従います。
+[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Adobe開発者コンソールのドキュメントの[空のプロジェクト](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)の作成に関するチュートリアルで説明されている手順に従います。
 
 ## イベントの購読
 
@@ -58,8 +59,8 @@ ht-degree: 8%
 >使用しているサービスに対してサブスクライブするイベントが不明な場合は、サービス固有の通知に関するドキュメントを参照してください。
 >
 >* [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -72,7 +73,7 @@ ht-degree: 8%
 
 キーペアが生成されると、ブラウザーによって自動的にダウンロードされます。 このファイルは開発者コンソールに保持されないので、自分で保存する必要があります。
 
-次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
+次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 ![](../images/notifications/keypair-generated.png)
 

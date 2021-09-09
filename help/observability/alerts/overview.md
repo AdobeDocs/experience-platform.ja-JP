@@ -2,13 +2,14 @@
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformのアラートについて説明します。
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 4%
 
 ---
-
 
 # アラートの概要
 
@@ -56,6 +57,10 @@ Platform操作の特定の条件（システムがしきい値に達した場合
 アクティビティ監視の効率的な自動化を促進するために、設定済みのWebhookにアラートを送信できます。 Webhookを介してアラートを受け取るには、Platform開発者コンソールで、WebhookをAdobeに登録する必要があります。 具体的な手順については、[Adobe I/Oイベント通知](./subscribe.md)の購読に関するガイドを参照してください。
 
 ### Platform UI {#ui}
+
+Platform UIを使用すると、受信したアラートを表示し、アラートルールを管理できます。 次のビデオでは、これらの機能の概要を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Platform UIでアラートを操作するには、Adobe Admin Consoleを通じて次のアクセス制御権限を有効にする必要があります。
 
