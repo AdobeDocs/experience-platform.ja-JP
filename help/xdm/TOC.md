@@ -4,9 +4,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '324'
 ht-degree: 41%
 
 ---
@@ -47,9 +47,13 @@ ht-degree: 41%
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
       * [デバイスのトレードインの詳細](./field-groups/event/device-trade-in-details.md)
+      * [食事予約](./field-groups/event/dining-reservation.md)
       * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
       * [環境の詳細](./field-groups/event/environment-details.md)
+      * [飛行予約](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0の同意](./field-groups/event/iab.md)
+      * [宿泊予約](./field-groups/event/lodging-reservation.md)
+      * [予約の詳細](./field-groups/event/reservation-details.md)
       * [Webの詳細](./field-groups/event/web-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
@@ -89,6 +93,7 @@ ht-degree: 41%
    * [検索](./data-types/search.md)
    * [購読](./data-types/subscription.md)
    * [通信購読](./data-types/telecom-subscription.md)
+   * [トランザクション](./data-types/transaction.md)
    * [Web情報](./data-types/web-information.md)
    * [Webインタラクション](./data-types/web-interaction.md)
    * [Webページの詳細](./data-types/webpage-details.md)
