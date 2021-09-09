@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK拡張機能のリリースノート
 description: Adobe Experience Platform Web SDKタグ拡張
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
+source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 49%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +13,11 @@ ht-degree: 49%
 
 このドキュメントでは、 Adobe Experience Platform Web SDKタグ拡張のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
 
-## バージョン2.7.1 - 2021年9月8日
+## バージョン2.7.3 - 2021年9月8日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.4 が含まれます。
+
+* `container.buildInfo.environment.`に対する廃止の警告は表示されなくなりました。
 
 ## バージョン2.7.0 - 2021年8月17日
 
