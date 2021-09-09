@@ -2,8 +2,7 @@
 keywords: Experience Platform、ユーザーインターフェイス、UI、ダッシュボード、ダッシュボード、プロファイル、セグメント、宛先、ライセンスの使用
 title: 標準ダッシュボードウィジェット
 description: 'このガイドでは、Adobe Experience Platformダッシュボードに標準ウィジェットを追加する手順を説明します。 '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%

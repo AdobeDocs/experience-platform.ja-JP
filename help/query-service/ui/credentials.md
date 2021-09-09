@@ -4,8 +4,7 @@ solution: Experience Platform
 title: クエリサービスUIガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
-exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: aabe89f236bc68a51f14ee1909687982f4fe5973
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%

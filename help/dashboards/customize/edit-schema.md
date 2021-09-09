@@ -2,8 +2,7 @@
 keywords: Experience Platform、ユーザーインターフェイス、UI、ダッシュボード、ダッシュボード、プロファイル、セグメント、宛先、ライセンスの使用
 title: スキーマを編集してカスタムダッシュボードウィジェットを作成する
 description: 'このガイドでは、Adobe Experience Platformダッシュボードのカスタムウィジェットを作成するために、属性を選択し、組織のスキーマを設定する手順を説明します。 '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%

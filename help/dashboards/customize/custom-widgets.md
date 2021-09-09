@@ -2,8 +2,7 @@
 keywords: Experience Platform、ユーザーインターフェイス、UI、ダッシュボード、ダッシュボード、プロファイル、セグメント、宛先、ライセンス使用、ウィジェット、指標、
 title: ダッシュボードのカスタムウィジェットの作成
 description: 'このガイドでは、Adobe Experience Platformダッシュボードで使用するカスタムウィジェットを作成する手順を説明します。 '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%

@@ -5,8 +5,7 @@ title: UIでのVeeva CRMソース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UIを使用してVeeva CRMソース接続を作成する方法を説明します。
-exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 076e0880c9efd1fe1cbfb4c610c5e15093adf460
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 13%
