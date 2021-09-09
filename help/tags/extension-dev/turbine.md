@@ -2,10 +2,10 @@
 title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ turbine.logger.error('Error!');
 * `logger.warn(message: string)`：コンソールに警告メッセージを記録します。
 * `logger.error(message: string)`：コンソールにエラーメッセージを記録します。
 * `logger.debug(message: string)`：デバッグメッセージをコンソールに記録します。（ブラウザーコンソール内で`verbose` ログが有効になっている場合にのみ表示されます）
+* `logger.deprecation(message: string)`:ユーザーがタグデバッグを有効にしているかどうかに関する警告メッセージをコンソールに記録します。
 
 ### `onDebugChanged`
 
