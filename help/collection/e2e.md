@@ -2,9 +2,9 @@
 title: データ収集のエンドツーエンドの概要
 description: Adobe Experience Platformが提供するデータ収集テクノロジーを使用して、Adobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platformでは、データ収集とは、連携してデータ�
 
 ## プロセスの概要
 
-WebサイトのEdgeネットワークを設定するプロセスを、次のように要約できます。
+Webサイトのデータ収集を設定するプロセスを、次のように要約できます。
 
 1. [スキーマを作](#schema) 成し、Edgeネットワークに送信する際のデータの構造を決定します。
 1. [データス](#datastream) トリームを作成し、データの送信先を設定します。
