@@ -1,9 +1,10 @@
 ---
 title: データ収集のエンドツーエンドの概要
 description: Adobe Experience Platformが提供するデータ収集テクノロジーを使用して、Adobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 1%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 1%
 
 Adobe Experience Platformでは、データ収集とは、連携してデータを収集し、他のAdobe製品やサードパーティの宛先にデータを転送する複数のテクノロジーを指します。 アプリケーションからAdobe Experience Platform Edgeネットワークにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先にデータを配信するように設定する方法を理解することが重要です。
 
-このガイドでは、データ収集テクノロジーを使用してEdgeネットワークを通じてイベントを送信する方法に関する概要レベルのチュートリアルを提供します。 特に、このチュートリアルでは、データ収集UI内でAdobe Experience Platform Web SDKタグ拡張機能をインストールおよび設定する手順について説明します。
+このガイドでは、データ収集テクノロジーを使用してEdgeネットワークを通じてイベントを送信する方法に関する概要レベルのチュートリアルを提供します。 特に、このチュートリアルでは、データ収集UI(旧称Adobe Experience Platform Launch)内でAdobe Experience Platform Web SDKタグ拡張機能をインストールおよび設定する手順について説明します。
 
 >[!NOTE]
 >
@@ -141,7 +142,7 @@ SDKの設定ページが表示されます。 必要な値のほとんどはデ�
 
 ![Web SDKの設定](./images/e2e/configure-sdk.png)
 
-ただし、SDKをインストールする前に、データの送信先を把握できるように、データストリームを選択する必要があります。 **[!UICONTROL 「Datastreams]**」の下で、ドロップダウンメニューを使用して、[前の手順](#datastream)で設定したデータストリームを選択します。 データストリームを設定したら、「**[!UICONTROL 保存]**」を選択して、SDKのプロパティへのインストールを完了します。
+ただし、SDKをインストールする前に、データの送信先がわかるようにデータストリームを選択する必要があります。 **[!UICONTROL 「Datastreams]**」の下で、ドロップダウンメニューを使用して、[前の手順](#datastream)で設定したデータストリームを選択します。 データストリームを設定したら、「**[!UICONTROL 保存]**」を選択して、SDKのプロパティへのインストールを完了します。
 
 ![データストリームの設定と保存](./images/e2e/set-datastream.png)
 
@@ -179,9 +180,26 @@ XDMオブジェクトタイプの設定ダイアログが表示されます。 �
 
 データ要素を保存した後、次の手順では、Webサイトで特定のイベントが発生した場合（顧客が買い物かごに商品を追加した場合など）に常にEdgeネットワークにデータ要素を送信するルールを作成します。
 
-例えば、この節では、顧客が買い物かごに品目を追加したときにトリガーを表示するルールを作成する方法を示します。 ただし、Webサイト上で発生する可能性のあるほぼすべてのイベントに対してルールを設定できます。
+Webサイト上で発生する可能性のあるほぼすべてのイベントに対してルールを設定できます。 例として、この節では、顧客がフォームを送信したときにトリガーするルールを作成する方法を示します。 次のHTMLは、「買い物かごに追加」フォーム（ルールの件名）が含まれるシンプルなWebページを表しています。
 
-左側のナビゲーションで「**[!UICONTROL ルール]**」を選択し、「**[!UICONTROL 新しいルールを作成]**」を選択します。
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+データ収集UIで、左側のナビゲーションで「**[!UICONTROL ルール]**」を選択し、「**[!UICONTROL 新しいルールを作成]**」を選択します。
 
 ![ルール](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ XDMオブジェクトタイプの設定ダイアログが表示されます。 �
 
 ![名前の規則](./images/e2e/name-rule.png)
 
-イベント設定ページが表示されます。 イベントを設定するには、まずイベントタイプを選択する必要があります。 イベントタイプは拡張機能で提供されます。 例えば、「フォーム送信」イベントを設定するには、**[!UICONTROL Core]**&#x200B;拡張機能を選択し、**[!UICONTROL フォーム]**&#x200B;カテゴリで&#x200B;**[!UICONTROL 送信]**&#x200B;イベントタイプを選択します。 表示される設定ダイアログで、このルールを実行する特定のフォームのCSSセレクターを指定できます。
+イベント設定ページが表示されます。 イベントを設定するには、まずイベントタイプを選択する必要があります。 イベントタイプは拡張機能で提供されます。 例えば、「フォーム送信」イベントを設定するには、**[!UICONTROL Core]**&#x200B;拡張機能を選択し、**[!UICONTROL フォーム]**&#x200B;カテゴリで&#x200B;**[!UICONTROL 送信]**&#x200B;イベントタイプを選択します。
 
 >[!NOTE]
 >
 >AdobeのWeb拡張機能で提供される様々なAdobeタイプについて詳しくは、タグのドキュメントの[イベント拡張機能のリファレンス](../tags/extensions/web/overview.md)を参照してください。
 
-「**[!UICONTROL 変更を保持]**」を選択して、ルールにイベントを追加します。
+フォーム送信イベントを使用すると、[CSSセレクター](https://www.w3schools.com/css/css_selectors.asp)を使用して、ルールで実行する特定の要素を参照できます。 次の例では、ID `add-to-cart-form`が使用され、「Add to Cart」フォームに対してのみこのルールが実行されます。 「**[!UICONTROL 変更を保持]**」を選択して、ルールにイベントを追加します。
 
 ![イベント設定](./images/e2e/event-config.png)
 
