@@ -4,7 +4,7 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: 宛先SDKを使用した宛先の設定方法
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{

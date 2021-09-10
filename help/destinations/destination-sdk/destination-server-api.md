@@ -1,7 +1,8 @@
 ---
 description: このページでは、「/authoring/destination-servers」 APIエンドポイントを使用して実行できるすべてのAPI操作について説明します。 宛先のサーバー仕様とテンプレート仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDKで設定できます。
 title: 宛先サーバーエンドポイントAPIの操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 5%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 文字列 | サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。 この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
 | `destinationServerType` | 文字列 | `URL_BASED` は現在、唯一のオプションです。 |
-| `urlBasedDestination.url.templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{endpoint.region}}/items`. </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
 | `urlBasedDestination.maxUsersPerRequest` | 整数 | Adobeは、1回のHTTP呼び出しで、書き出された複数のプロファイルを集計できます。 1回のHTTP呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これは、ベストエフォートの集計です。 例えば、値を100に指定した場合、Adobeは1回の呼び出しで100未満の任意の数のプロファイルを送信できます。 <br> サーバーがリクエストごとに複数のユーザーを受け入れない場合、この値を1に設定します。 |
 | `urlBasedDestination.splitUserById` | Boolean | 宛先への呼び出しをIDで分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに1つのIDしか受け入れない場合、このフラグを`true`に設定します。 |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{

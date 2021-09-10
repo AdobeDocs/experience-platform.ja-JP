@@ -1,7 +1,8 @@
 ---
 description: サーバーとテンプレートの仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDKで設定できます。
 title: 宛先SDKのサーバーおよびテンプレート仕様の設定オプション
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 7%
@@ -23,7 +24,7 @@ ht-degree: 7%
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ ht-degree: 7%
 |---|---|---|
 | `name` | 文字列 | サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。 この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
 | `destinationServerType` | 文字列 | `URL_BASED` は現在、唯一のオプションです。 |
-| `templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
 | `value` | 文字列 | Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
 
 {style=&quot;table-layout:auto&quot;}

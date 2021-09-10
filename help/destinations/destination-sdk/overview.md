@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDKは、選択したデータおよび認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントに配信するためのExperience Platformの宛先統合パターンを設定できる設定APIのセットです。 設定はExperience Platformに保存され、APIを介して取得して追加の更新をおこなうことができます。
 title: Adobe Experience Platform宛先SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 4%
 
 ---
@@ -63,8 +63,8 @@ This documentation set provides you with all the necessary information to add yo
 ---------|----------|
 | 独立系ソフトウェアベンダー(ISV) | [Adobe交換プログラム](https://partners.adobe.com/exchangeprogram/experiencecloud.html)に参加し、宛先SDKへのアクセスをプロビジョニングしたExperience Platformサンドボックスを取得するリクエストを送信します。 |
 | システムインテグレーター(SI) | [Adobeソリューションパートナープログラム](https://solutionpartners.adobe.com/home.html)でゴールドまたはプラチナのレベルにある必要があります。Experience Platformサンドボックスがプロビジョニングされ、Destination SDKにアクセスできます。 |
-| Experience Platformのお客様（アクティベーションパッケージ） | デフォルトでは、Experience Platformサンドボックスと宛先SDKへのアクセス権を取得します。 |
-| リアルタイムCDPパッケージでのExperience Platformのお客様 | 宛先SDKにアクセスできませんが、宛先SDKを使用して他の会社が設定し、Experience Platform組織全体に公開した、製品化されたすべての宛先にアクセスできます。 |
+| [アクティベーションパッケージ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)のExperience Platformのお客様 | デフォルトでは、Experience Platformサンドボックスと宛先SDKへのアクセス権を取得します。 |
+| [リアルタイムCDPパッケージ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)のExperience Platformのお客様 | 宛先SDKにアクセスできませんが、宛先SDKを使用して他の会社が設定し、Experience Platform組織全体に公開した、製品化されたすべての宛先にアクセスできます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
