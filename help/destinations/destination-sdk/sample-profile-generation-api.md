@@ -1,10 +1,11 @@
 ---
 description: このページでは、「/authoring/sample-profiles」 APIエンドポイントを使用して実行できる、宛先テストで使用するサンプルプロファイルを生成するAPI操作の一覧と説明を示します。
 title: プロファイル生成API操作の例
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 2%
+source-wordcount: '805'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する宛先インスタンスのID。 |
 | `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、`1 - 1000`の間の値を取ることができます。 <br> countパラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、宛先サーバー設 `maxUsersPerRequest` 定の値によ [って決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは1つのサンプルプロファイルを生成します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **リクエスト**
@@ -170,6 +173,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
 | `identityMap` | 個人の様々なID値と、関連する名前空間を説明するmap-typeフィールド。 `identityMap`の詳細については、「[スキーマ構成の基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)」を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## ターゲットスキーマに基づいてサンプルプロファイルを生成する {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | サンプルプロファイルを生成する場所に基づく宛先設定のID。 |
 | `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、`1 - 1000`の間の値を取ることができます。 <br> countパラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、宛先サーバー設 `maxUsersPerRequest` 定の値によ [って決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは1つのサンプルプロファイルを生成します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 

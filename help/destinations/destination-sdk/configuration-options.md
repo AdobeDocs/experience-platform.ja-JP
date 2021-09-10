@@ -3,10 +3,11 @@ description: Adobe Experience Platformの宛先サービスは、宛先機能を
 seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
 seo-title: Configuration options in Destination SDK
 title: 宛先SDKの設定オプション
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 1%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -39,3 +40,5 @@ Adobe Experience Platformの宛先サービスは、宛先機能を構築する�
 | [メッセージのフォーマット](./message-format.md) | - |
 | [宛先のテスト](./test-destination.md) | [宛先テストAPI操作](./destination-testing-api.md) |
 | [宛先の公開](./configure-destination-instructions.md#publish-destination) | [宛先公開APIの操作](./destination-publish-api.md) |
+
+{style=&quot;table-layout:auto&quot;}

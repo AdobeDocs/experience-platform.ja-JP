@@ -1,9 +1,10 @@
 ---
 description: このページでは、「/authoring/destinations/publish」 APIエンドポイントを使用して実行できるすべてのAPI操作について説明します。
 title: 公開先APIエンドポイントの操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 5%
 
 ---
@@ -123,6 +124,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `publishDetailsList.allowedOrgs` | 文字列 | 宛先を使用できるExperience Platform組織を返します。 |
 | `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。 指定できる値は、`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED`です。 |
 | `publishDetailsList.publishedDate` | 文字列 | 発行の宛先が送信された日付（エポックタイム）。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 既存の宛先公開リクエストの更新 {#update}
 

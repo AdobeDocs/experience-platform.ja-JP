@@ -1,9 +1,10 @@
 ---
 description: このページでは、「/authoring/testing/destinationInstance/」 APIエンドポイントを使用して実行できるすべてのAPI操作の一覧と説明を示し、宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証します。
 title: 宛先テストAPI操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -158,6 +159,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `results.httpCalls.response` | 宛先から受信したAdobeに含まれます。 |
 | `inputProfiles` | 宛先への呼び出し時に書き出されたプロファイルが含まれます。 プロファイルは、ソーススキーマと一致します。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 呼び出しに追加されたプロファイルを使用して、宛先設定をテストする {#test-with-added-profiles}
 

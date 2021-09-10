@@ -1,10 +1,11 @@
 ---
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができるIDも決まります。
 title: 宛先SDKの宛先設定オプション
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 4%
+source-wordcount: '1527'
+ht-degree: 5%
 
 ---
 
@@ -123,6 +124,8 @@ ht-degree: 4%
 | `description` | 文字列 | Adobeが宛先カードの宛先カタログで使用するExperience Platformの説明を入力します。 4～5文以下を目指す。 |
 | `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。宛先を最初に設定する際には、`TEST`を使用します。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 顧客認証設定 {#customer-authentication-configurations}
 
 このセクションでは、Experience Platformユーザーインターフェイスのアカウントページが生成され、ユーザーは、宛先にExperience Platformを接続するアカウントに接続します。 `authType`フィールドに指定したExperience Platformオプションに応じて、次のようにユーザー用の認証ページが生成されます。
@@ -145,6 +148,8 @@ ht-degree: 4%
 | `customerAuthenticationConfigurations` | 文字列 | サーバーに対するExperience Platform顧客の認証に使用される設定を示します。 使用可能な値については、以下の`authType`を参照してください。 |
 | `authType` | 文字列 | 指定できる値は`OAUTH2, BEARER`です。<br><ul><li> 宛先がOAuth 2認証をサポートしている場合は、「宛先SDK OAuth 2認証」ページに示すように、「`OAUTH2`」値を選択し、OAuth 2に必要なフィールドを追加します。 さらに、「[宛先の配信セクション](./destination-configuration.md)」で「`authenticationRule=CUSTOMER_AUTHENTICATION`」を選択する必要があります。 </li><li>bearer認証の場合、`BEARER`を選択し、[宛先配信セクション](./destination-configuration.md)で`authenticationRule=CUSTOMER_AUTHENTICATION`を選択します。</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 顧客データフィールド {#customer-data-fields}
 
 このセクションでは、パートナーがカスタムフィールドを導入できます。 上記の例の設定では、`customerDataFields`は、ユーザーが認証フローでエンドポイントを選択し、宛先を持つ顧客IDを示す必要があります。 次に示すように、設定は認証フローに反映されます。
@@ -161,6 +166,8 @@ ht-degree: 4%
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用してパターンを適用します。 例えば、顧客IDに数値やアンダースコアが含まれない場合は、このフィールドに`^[A-Za-z]+$`と入力します。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## UI属性 {#ui-attributes}
 
 この節では、Adobe Experience Platformユーザーインターフェイスの宛先にAdobeが使用する、上記の設定のUI要素について説明します。 次を参照してください。
@@ -171,6 +178,8 @@ ht-degree: 4%
 | `category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)を参照してください。 次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | 文字列 | `Server-to-server` は現在、唯一のオプションです。 |
 | `frequency` | 文字列 | `Streaming` は現在、唯一のオプションです。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## マッピング手順のスキーマ設定 {#schema-configuration}
 
@@ -184,6 +193,8 @@ ht-degree: 4%
 | `profileRequired` | Boolean | 上記の設定例に示すように、Experience Platformから宛先側のカスタム属性にプロファイル属性をマッピングできる場合は、`true`を使用します。 |
 | `segmentRequired` | Boolean | 常に`segmentRequired:true`を使用します。 |
 | `identityRequired` | Boolean | ユーザーがID名前空間をExperience Platformから目的のスキーマにマッピングできる場合は、`true`を使用します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## IDと属性 {#identities-and-attributes}
 
@@ -205,6 +216,8 @@ ID名前空間では、[!DNL Platform]と宛先の間に1対1の対応関係は�
 | `allowedAttributesTransformation` | 文字列 | *サンプルの設定*&#x200B;では示されていません。例えば、[!DNL Platform]の顧客が属性としてプレーンなEメールアドレスを持ち、プラットフォームがハッシュ化されたEメールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、Eメールを小文字に変換し、ハッシュ化）を指定します。 |
 | `acceptedGlobalNamespaces` | - | *サンプルの設定*&#x200B;では示されていません。プラットフォームが[標準のID名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（IDFAなど）を受け入れる場合に使用されるので、PlatformユーザーがこれらのID名前空間を選択するように制限できます。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 宛先の配信 {#destination-delivery}
 
 | パラメーター | タイプ | 説明 |
@@ -212,6 +225,8 @@ ID名前空間では、[!DNL Platform]と宛先の間に1対1の対応関係は�
 | `authenticationRule` | 文字列 | [!DNL Platform]ユーザーが宛先に接続する方法を示します。 指定できる値は`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platformのお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法でシステムにログインする場合は、`CUSTOMER_AUTHENTICATION`を使用します。 例えば、`customerAuthenticationConfigurations`で`authType: OAUTH2`または`authType:BEARER`も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、[!DNL Platform]のお客様が宛先に接続するための認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION`を使用します。 この場合、[Credentials](./credentials-configuration.md)設定を使用してcredentialsオブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE`を使用します。 </li></ul> |
 | `destinationServerId` | 文字列 | この宛先に使用される[宛先サーバー設定](./destination-server-api.md)の`instanceId`。 |
 | `backfillHistoricalProfileData` | Boolean | 宛先に対してセグメントをアクティブ化した場合に、履歴プロファイルデータを書き出すかどうかを制御します。<br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前にセグメントに適合した過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## セグメントマッピングの設定 {#segment-mapping}
 

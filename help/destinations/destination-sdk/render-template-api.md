@@ -1,9 +1,10 @@
 ---
 description: このページでは、メッセージ変換テンプレートに基づいて、「/authoring/testing/template/render」 APIエンドポイントを使用して、宛先に書き出されたデータをレンダリングするために実行できるAPI操作の一覧と説明を示します。
 title: レンダリングテンプレートAPI操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '523'
 ht-degree: 2%
 
 ---
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | 書き出したデータをレンダリングする宛先設定のID。 |
 | `template` | 書き出したデータをレンダリングする際に使用する、テンプレートの文字エスケープバージョン。 |
 | `profiles` | 呼び出しの本文にプロファイルを追加する場合は、[サンプルプロファイル生成API](./sample-profile-generation-api.md)を使用して、プロファイルを生成できます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 次の例に示すように、書き出したデータをレンダリングできます。

@@ -1,9 +1,10 @@
 ---
 description: このページでは、「/authoring/destinations」 APIエンドポイントを使用して実行できるすべてのAPI操作について説明します。
 title: 宛先APIエンドポイントの操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2381'
 ht-degree: 5%
 
 ---
@@ -383,7 +384,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `uiAttributes.connectionType` | 文字列 | `Server-to-server` は現在、唯一のオプションです。 |
 | `uiAttributes.frequency` | 文字列 | `Streaming` は現在、唯一のオプションです。 |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 詳しくは、Adobe Experience Platformの[カスタム名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces)を参照してください。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 文字列 | _サンプルの設定_&#x200B;では示されていません。例えば、[!DNL Platform]の顧客が属性としてプレーンなEメールアドレスを持ち、プラットフォームがハッシュ化されたEメールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、Eメールを小文字に変換し、ハッシュ化）を指定します。 |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _サンプルの設定_&#x200B;では示されていません。プラットフォームが[標準のID名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（IDFAなど）を受け入れる場合に使用されるので、PlatformユーザーがこれらのID名前空間を選択するように制限できます。 |
 | `destinationDelivery.authenticationRule` | 文字列 | [!DNL Platform]ユーザーが宛先に接続する方法を示します。 指定できる値は`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platformのお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法でシステムにログインする場合は、`CUSTOMER_AUTHENTICATION`を使用します。 例えば、`customerAuthenticationConfigurations`で`authType: OAUTH2`または`authType:BEARER`も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、[!DNL Platform]のお客様が宛先に接続するための認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION`を使用します。 この場合、[Credentials](./credentials-configuration.md)設定を使用してcredentialsオブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE`を使用します。 </li></ul> |
@@ -396,6 +397,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | 宛先のアクティベーションワークフローのセグメントマッピングIDがExperience Platformセグメント名かどうかを制御します。 |
 | `segmentMappingConfig.audienceTemplateId` | Boolean | この宛先に使用される[オーディエンスメタデータテンプレート](./audience-metadata-management.md)の`instanceId`。 オーディエンスメタデータテンプレートを設定するには、[オーディエンスメタデータAPIリファレンス](./audience-metadata-api.md)をお読みください。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 既存の宛先設定の更新 {#update}
 
