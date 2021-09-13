@@ -3,10 +3,10 @@ keywords: 解析。 ly;parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics 拡張機能
 description: Parse.ly Analytics拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 22%
+source-wordcount: '439'
+ht-degree: 23%
 
 ---
 
@@ -26,7 +26,7 @@ Parse.lyは、Adobe Experience PlatformのAnalytics拡張機能です。 拡張�
 
 この拡張機能は、Platformを購入したすべての顧客の[!DNL Destinations]カタログで利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
+この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 

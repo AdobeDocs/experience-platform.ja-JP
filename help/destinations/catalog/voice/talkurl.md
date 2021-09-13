@@ -3,10 +3,10 @@ keywords: Talk URL Inbox;Talk URL Inbox;Talk URL inbox;Talk URL inbox;Talk URL;T
 title: Talk URL Inbox 拡張機能
 description: Talk URL Inbox拡張機能は、Adobe Experience Platformの顧客の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 25%
+source-wordcount: '486'
+ht-degree: 26%
 
 ---
 
@@ -24,7 +24,7 @@ Web ページ訪問者から音声メッセージを受信します。ホスト 
 
 この拡張機能は、Platformを購入したすべての顧客の[!DNL Destinations]カタログで利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
+この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
