@@ -4,17 +4,17 @@ description: Experience Platformリリースノート（2021年8月26日）
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 44%
+source-wordcount: '709'
+ht-degree: 33%
 
 ---
 
-
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 25 月 8 日**
+**リリース日：2021 年 8 月 25 日**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
@@ -27,10 +27,22 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 宛先は、Adobe Experience Platformからのデータのシームレスなアクティブ化を可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | Airship Attributesの宛先（以前はベータ版）が一般に使用できるようになりました。 |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | 以前はベータ版だった飛行船タグの宛先が、一般に使用できるようになりました。 |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | 以前はベータ版だったBrazeの宛先が一般的に使用できるようになりました。 |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | pinterestの顧客リストの宛先を使用すると、顧客リスト、サイトを訪問した人、またはPinterestでコンテンツに対して何らかのアクションを起こした人からオーディエンスを作成できます。 |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | twitterで既存のフォロワーと顧客をターゲットに設定し、Adobe Experience Platform内で作成したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します。 |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataXは、Verizon Media/Yahooが外部パートナーと安全で自動化された拡張性の高い方法でデータを交換できる様々なコンポーネントをホストする、Verizon Media/Yahooの集約インフラストラクチャです。 |
+
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDKは、選択したデータおよび認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントに配信するためのExperience Platformの宛先統合パターンを設定できる設定APIのスイートです。 設定はExperience Platformに保存され、APIを介して取得して追加の更新をおこなうことができます。 |
 | [宛先のユーザビリティの改善](../../destinations/ui/activation-overview.md) | 宛先のユーザビリティの改善により、マーケターは既存の宛先に対するセグメントをシームレスにアクティブ化できます。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
