@@ -1,10 +1,11 @@
 ---
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 98%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,16 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021 年 8 月 24 日（PT）
+
+### Adobe Analytics Extension 1.8.6
+
+#### バグの修正
+
+* [AppMeasurementをv2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)にアップグレードしました。
+* innerHTMLを使用する代わりに、Activity Mapロジックを反映するようにlinkNameのフォールバックを更新しました。
 
 ## 2020 年 8 月 6 日（PT）
 
@@ -24,7 +34,7 @@ ht-degree: 98%
 
 #### 機能
 
-* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました。
+* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました。
 * 小さな UI が変更され、追加の設定がチェックボックスではなくアコーディオンで折りたたまれて表示されるようになりました。
 
 ## 2020 年 6 月 2 日（PT）
@@ -148,7 +158,7 @@ ht-degree: 98%
 
 #### バグの修正
 
-* appMeasurement 2.13.0 でバグが見つかった後に拡張機能をロールバックしました。appMeasurement 2.13.0 では、ECID に送信されない問題が発生していました。そのため、1.7.3 をインストールしている場合は、問題を回避するため、1.7.4 にアップグレードすることをお勧めします。AppMeasurement の更新バージョンがリリースされるまで、clearVars は継続します
+* AppMeasurement 2.13.0 でバグが見つかった後に拡張機能をロールバックしました。AppMeasurement 2.13.0 では、ECID に送信されない問題が発生していました。そのため、1.7.3 をインストールしている場合は、問題を回避するため、1.7.4 にアップグレードすることをお勧めします。AppMeasurement の更新バージョンがリリースされるまで、clearVars は継続します
 
 ## 2019 年 4 月 12 日（PT）
 
