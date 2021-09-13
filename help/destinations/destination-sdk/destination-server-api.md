@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destination-servers」 APIエンドポイントを使用して実行できるすべてのAPI操作について説明します。 宛先のサーバー仕様とテンプレート仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDKで設定できます。
 title: 宛先サーバーエンドポイントAPIの操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '837'
 ht-degree: 5%
 
 ---
@@ -70,8 +70,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | 文字列 | `URL_BASED` は現在、唯一のオプションです。 |
 | `urlBasedDestination.url.templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
-| `urlBasedDestination.maxUsersPerRequest` | 整数 | Adobeは、1回のHTTP呼び出しで、書き出された複数のプロファイルを集計できます。 1回のHTTP呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これは、ベストエフォートの集計です。 例えば、値を100に指定した場合、Adobeは1回の呼び出しで100未満の任意の数のプロファイルを送信できます。 <br> サーバーがリクエストごとに複数のユーザーを受け入れない場合、この値を1に設定します。 |
-| `urlBasedDestination.splitUserById` | Boolean | 宛先への呼び出しをIDで分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに1つのIDしか受け入れない場合、このフラグを`true`に設定します。 |
 | `httpTemplate.httpMethod` | 文字列 | サーバーへの呼び出しでAdobeが使用するメソッド。 オプションは`GET`、`PUT`、`POST`、`DELETE`、`PATCH`です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | `PEBBLE_V1`.を使用します。 |
 | `httpTemplate.requestBody.value` | 文字列 | この文字列は、Platformの顧客のデータをサービスが想定する形式に変換する文字エスケープバージョンです。<br> <ul><li> テンプレートの書き込み方法については、[テンプレートの使用](./message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、RFC JSON標準の7](https://tools.ietf.org/html/rfc8259#section-7)節を参照してください。[ </li><li> 単純な変換の例については、[プロファイル属性](./message-format.md#attributes)変換を参照してください。 </li></ul> |
