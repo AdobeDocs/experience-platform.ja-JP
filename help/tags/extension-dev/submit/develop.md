@@ -2,9 +2,9 @@
 title: 拡張機能の開発
 description: このドキュメントでは、タグ拡張機能開発プロセスの一般的な概要と、詳細なプロセスに関するその他のドキュメントへのリンクを示します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '531'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグ拡張機能は、独自の要件を持つ（小規模の）製品として考える必要があります。 Adobe Experience Platform のユーザーが拡張機能をどのように使用するかを把握すると、拡張機能で提供する必要があるイベント、条件、アクション、データ要素の各タイプに基づいて機能を分類しやすくなります。
 
