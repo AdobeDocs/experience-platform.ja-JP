@@ -2,9 +2,9 @@
 title: AEM Asset Insights 拡張機能の概要
 description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1118'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 この拡張機能は、[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) と共に使用することを意図しています。具体的には、「pageTracker」プロセスと埋め込みコードが置き換えられます。設定すると、この拡張機能によって Asset *Impression* と *Click* 指標が Adobe Analytics に送信され、その後、AEM Asset Insights レポートに読み込まれます。その後、AEM Asset Insights または Adobe Analytics プロジェクトの Workspace を使用して、アセット指標をレポートできます。
 
@@ -36,7 +36,7 @@ Adobe Experience Platform 用の「*Adobe Analytics*」 タグ拡張機能は、
 
 ### Adobe Experience Manager（AEM）
 
-1. 「[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)」を有効にします。AEM で、**[!UICONTROL ツール／Assets]** を選択し、**[!UICONTROL インサイト設定]**&#x200B;パネルを開きます。
+1. 「[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)」を有効にします。AEM で、**[!UICONTROL ツール／Assets]** を選択し、**[!UICONTROL インサイト設定]**&#x200B;パネルを開きます。
 
 1. 「UUID トラッキング」を無効にします。
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 用の「*Adobe Analytics*」 タグ拡張機能は、
 
 ### AEM での Asset Insight の有効化
 
-Asset Insights を有効にする手順については、[Experience Manager 6.5 Assets ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)を参照してください。
+Asset Insights を有効にする手順については、[Experience Manager 6.5 Assets ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)を参照してください。
 
 ### アセットの UUID トラッキングの有効化
 
@@ -131,7 +131,7 @@ UUID を有効にしたら、「data-asset-id」データ要素にアセット�
 
    * ブラウザーの表示領域にアセットがありませんでした
 
-   * AEM で [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) が有効になっているページにアセットが設定されていませんでした。
+   * AEM で [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) が有効になっているページにアセットが設定されていませんでした。
 
 **クリック数**
 
@@ -141,7 +141,7 @@ UUID を有効にしたら、「data-asset-id」データ要素にアセット�
 
 （次のページからの）結果の Analytics イメージリクエストで、宛先ページのアセット ID が `a.assets.idlist` に含まれ、元のページで選択されたアセットのアセット ID が `a.assets.clickedid` に含まれる場合、ルールは正しく動作しています。
 
-`a.assets.clickedid` がイメージリクエストに含まれていない場合、選択したアセットの[アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)が AEM で有効になっていないことがほとんどです。
+`a.assets.clickedid` がイメージリクエストに含まれていない場合、選択したアセットの[アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)が AEM で有効になっていないことがほとんどです。
 
 **クリック（宛先なし）**
 
@@ -151,4 +151,4 @@ UUID を有効にしたら、「data-asset-id」データ要素にアセット�
 
 結果の Analytics イメージリクエストで、`a.assets.clickedid` にアセット ID がある場合、ルールは正しく動作しています。
 
-`a.assets.clickedid` がイメージリクエストに含まれていない場合、選択されたアセットの[アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)が AEM で有効になっていないことがほとんどです。
+`a.assets.clickedid` がイメージリクエストに含まれていない場合、選択されたアセットの[アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja)が AEM で有効になっていないことがほとんどです。
