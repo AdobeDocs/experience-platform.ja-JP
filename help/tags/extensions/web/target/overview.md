@@ -2,9 +2,9 @@
 title: Adobe Target 拡張機能の概要
 description: Adobe Experience Platform での Adobe Target のタグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1194'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、この拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -67,7 +67,7 @@ Target がブラウザー内で Cookie を設定する場所を決定します�
 
 定義された期間内に Target からの受信されなかった場合、リクエストはタイムアウトし、デフォルトコンテンツが表示されます。訪問者のセッション中、追加のリクエストが引き続き試行されます。デフォルト値は「3000ms」です（Target ユーザーインターフェイスで設定されているタイムアウトとは異なる可能性があります）。
 
-タイムアウトの設定の仕組みについて詳しくは、[Adobe Target ヘルプ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ja)を参照してください。
+タイムアウトの設定の仕組みについて詳しくは、 [Adobe Target ヘルプ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ja) を参照してください。
 
 #### Target ユーザーインターフェイスで利用可能なその他の at.js 設定
 
@@ -114,7 +114,7 @@ Target 拡張機能は、ルールの「Then」部分に次のアクションを
 * **Body Hiding：**&#x200B;この設定を有効または無効にすることができます。デフォルト値は false です。この場合、HTML BODY は非表示にはなります。
 * **Body Hidden Style：**&#x200B;デフォルトの値は `body{opacity:0}`です。この値は別の値（`body{display:none}`など）に変更することもできます。
 
-詳しくは、[Target のオンラインヘルプドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ja)を参照してください。
+詳しくは、 [Target のオンラインヘルプドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ja) を参照してください。
 
 ## Adobe Target の基本的なデプロイメント
 
