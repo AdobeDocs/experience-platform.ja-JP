@@ -2,9 +2,9 @@
 title: リリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '498'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 80%
 
 ## 2021 年 7 月 19 日（PT）
 
-**「プロパティの管理」権限の調整**  — プロパティの管理権限で、ユーザーが新しいプロパティを作成する権限を持っているが、作成後に表示できない問題が発生しました(こちらのコミュニティスレッドで説明していま [す](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176))。記事の説明に従って、修正が有効になり、権限が適用されるようになりました。
+**「プロパティの管理」権限の調整** - プロパティの管理権限で、ユーザーが新しいプロパティを作成する権限を持っているにもかかわらず、作成後に表示できない問題というが発生しました（[こちら](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=ja) のコミュニティスレッドで説明しています）。記事で説明されているように、修正が有効になり、権限が適用されるようになりました。
 
 >[!NOTE]
 >
->新しい「プロパティを編集」権限をユーザーグループに割り当てた場合、UIは更新されず、プロパティ設定画面のフィールドが有効になりません。 この問題の修正は、今後のリリースで実装されます。
+>新しい「プロパティを編集」権限をユーザーグループに割り当てても、UI は更新されず、プロパティ設定画面のフィールドが有効になりません。 この問題の修正は、今後のリリースで実装される予定です。
 
 ## 2021 年 5 月 17 日（PT）
 
