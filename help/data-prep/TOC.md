@@ -4,9 +4,9 @@ user-guide-title: Data Prep ガイド
 user-guide-description: Adobe Experience Platform に取り込むデータを準備します。
 feature: データ管理、データ取得
 source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
