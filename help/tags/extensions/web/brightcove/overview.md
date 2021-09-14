@@ -2,9 +2,9 @@
 title: BrightCove ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の BrightCove ビデオトラッキングタグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '915'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 前提条件
 
@@ -32,7 +32,7 @@ Adobe Experience Platform の各タグプロパティには、拡張機能画面
 
 この拡張機能を使用している Web ページで、関連するスクリプトが完全に読み込まれる前にビデオとやり取りする場合、問題を解決するために実行できるアクションが 2 つあります。まず、タグライブラリを同期的に読み込み、次に、ページ上に埋め込んだビデオの前に `<script type="text/javascript">\_satellite.pageBottom();\</script\>` 要素を配置します。
 
-この拡張機能で使用されるコンポーネントメソッドとイベントについて詳しくは、[BrightCove API のドキュメント](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer)を参照してください。
+この拡張機能で使用されるコンポーネントメソッドとイベントについて詳しくは、 [BrightCove API のドキュメント](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) を参照してください。
 
 ## データ要素
 
@@ -99,7 +99,7 @@ Adobe Experience Platform の各タグプロパティには、拡張機能画面
 
 >[!TIP]
 >
->ビデオ要素ごとに複数の eVar や prop をプロビジョニングしたくない場合は、別の方法があります。データ要素の値は、データ収集 UI 内で連結できます。次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。 詳しくは、[分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja)のドキュメントを参照してください。最後に、これらは Analysis Workspace でセグメントとして適用されます。
+>ビデオ要素ごとに複数の eVar や prop をプロビジョニングしたくない場合は、別の方法があります。データ要素の値は、データ収集 UI 内で連結できます。次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。 詳しくは、 [分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) のドキュメントを参照してください。最後に、これらは Analysis Workspace でセグメントとして適用されます。
 >
 >これをおこなうには、「ビデオメタデータ」のような新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、連結するようにプログラミングします。
 
