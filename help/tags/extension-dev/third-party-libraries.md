@@ -2,9 +2,9 @@
 title: サードパーティ製ライブラリの実装
 description: Adobe Experience Platform タグ拡張機能内でサードパーティ製ライブラリをホストする様々な方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1330'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ拡張機能の主な目的の 1 つに、既存のマーケティング技術（ライブラリ）を容易に Web サイトに実装できるようにするという点があります。拡張機能を使用すると、web サイトの HTML を手動で編集することなく、サードパーティのコンテンツ配信ネットワーク（CDN）が提供するライブラリを実装できます。
 
@@ -20,7 +20,7 @@ Adobe Experience Platform のタグ拡張機能の主な目的の 1 つに、既
 
 ## 前提条件
 
-このドキュメントでは、タグ内の拡張機能について、その機能とその構成方法を含め、十分な理解が必要です。詳しくは、[拡張機能開発の概要](./overview.md)を参照してください。
+このドキュメントでは、タグ内の拡張機能について、その機能とその構成方法を含め、十分な理解が必要です。詳しくは、 [拡張機能開発の概要](./overview.md) を参照してください。
 
 ## ベースコードの読み込みプロセス
 
@@ -83,7 +83,7 @@ firstScriptElement.parentNode.insertBefore(
 
 ## タグ実装オプション
 
-以下の節では、前述の例で示した Pinterest ベースコードを使用して、拡張機能にベンダーライブラリを読み込む様々な方法について説明します。各例では、Web サイト上のライブラリを読み込む [Web 拡張機能のアクションタイプ](./web/action-types.md)の作成方法について説明しています。
+以下の節では、前述の例で示した Pinterest ベースコードを使用して、拡張機能にベンダーライブラリを読み込む様々な方法について説明します。各例では、Web サイト上のライブラリを読み込む [Web 拡張機能のアクションタイプ](./web/action-types.md) の作成方法について説明しています。
 
 >[!NOTE]
 >
