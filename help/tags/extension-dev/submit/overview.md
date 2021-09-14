@@ -2,9 +2,9 @@
 title: 拡張機能の送信プロセスの概要
 description: Adobe Experience Platform で、開発からリリースへ拡張機能を送信する手順について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 拡張機能を Adobe Experience Platform のデータ収集カタログに送信するのは、大変な作業のように見えるかもしれません。このドキュメントでは、個々の順を追ったガイドを使用して拡張機能を送信する手順を説明します。 拡張機能を送信するには、次の手順を実行する必要があります。
 
