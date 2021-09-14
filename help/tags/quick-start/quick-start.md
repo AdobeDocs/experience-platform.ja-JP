@@ -2,9 +2,9 @@
 title: クイックスタートガイド
 description: Adobe Experience Platform でタグをすぐにインストールおよび導入する方法について説明します。
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1532'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 タグは、Adobe Experience Platform の次世代のタグ管理テクノロジーです。誰でも独自の統合を構築し、アドビのお客様がそれをサイトにデプロイできる、オープンで持続可能なエコシステムをサポートするためにゼロから構築されています。これは API ファーストのアプリケーションです。UI 経由で実行できるすべての操作は API 経由で行うことができます。
 
@@ -36,7 +36,7 @@ ht-degree: 96%
 
 ## 2. にログインする
 
-タグ権限が Adobe ID に追加されたら、データ収集 UI にログインする必要があります。これをおこなうには、[Experience Cloudのログイン画面](https://experiencecloud.adobe.com)に直接移動し、「クイックアクセス」タブから「データ収集UI」を選択します。
+タグ権限が Adobe ID に追加されたら、データ収集 UI にログインする必要があります。これをおこなうには、 [Experience Cloud ログイン画面](https://experiencecloud.adobe.com) に直接移動し、「クイックアクセス」タブから「データ収集 UI」を選択します。
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ ht-degree: 96%
 
 すべての新しいプロパティには、[Core 拡張機能](../extensions/web/core/overview.md)がインストールされています。モバイルプロパティには、追加の拡張機能が付属しています。Core 拡張機能は、データレイヤーのデータ要素タイプとルールのイベントタイプの堅牢なデフォルトセットを提供するために、アドビが構築したものです。実行するアクション（ECID の取得、[!DNL Adobe Analytics] ビーコンの送信、[!DNL Target] グローバル mbo x など）のほとんどは、カタログからインストールする拡張機能のものです。
 
-Platform のタグが他と異なるのは、誰でもこれらの拡張機能を構築できるためです。サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR] に対応するため、プライバシーやエンドユーザーの同意を管理する必要がありますか？Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合Clicktale をご覧ください。詳しくは、[新しい拡張子の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension)の節を参照してください。
+Platform のタグが他と異なるのは、誰でもこれらの拡張機能を構築できるためです。サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR] に対応するため、プライバシーやエンドユーザーの同意を管理する必要がありますか？Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合Clicktale をご覧ください。詳しくは、 [新しい拡張機能の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension) の節を参照してください。
 
 ## 5. データ要素とルールを作成する
 
@@ -66,9 +66,9 @@ Platform のタグが他と異なるのは、誰でもこれらの拡張機能�
 * セッションとローカルストレージ
 * その他すべて
 
-データ要素が定義されている場合は、データ収集 UI の任意の場所で要素を使用し、任意の拡張機能を実行できます。詳しくは、[データ要素](../ui/managing-resources/data-elements.md)のドキュメントを参照してください。
+データ要素が定義されている場合は、データ収集 UI の任意の場所で要素を使用し、任意の拡張機能を実行できます。詳しくは、 [データ要素](../ui/managing-resources/data-elements.md) のドキュメントを参照してください。
 
-**ルール**&#x200B;は、実装の論理的な中心であり、サイト上のすべてのタグの内容、タイミング、場所、および方法を制御します。イベントを定義し、条件と例外を設定して、アクションと順序を定義します。最後に、変更をパブリッシュして結果を確認します。詳しくは、[ルール](../ui/managing-resources/rules.md)を参照してください。
+**ルール**&#x200B;は、実装の論理的な中心であり、サイト上のすべてのタグの内容、タイミング、場所、および方法を制御します。イベントを定義し、条件と例外を設定して、アクションと順序を定義します。最後に、変更をパブリッシュして結果を確認します。詳しくは、 [ルール](../ui/managing-resources/rules.md) を参照してください。
 
 ## 6. 開発環境でテストする
 
