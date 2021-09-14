@@ -2,9 +2,9 @@
 title: Adobe Audience Manager 拡張機能の概要
 description: Adobe Experience Platform の Adobe Audience Manager タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Audience Manager タグ拡張機能を使用すれば、Audience Manager が使用する DIL コードを Adobe Experience Platform のプロパティと統合できます。
 
@@ -66,7 +66,7 @@ URL が正規表現の場合は、正規表現を有効にします。
 
 「**[!UICONTROL 項目を選択]**」を選択して、プロパティを追加します。
 
-「i」アイコンの上にマウスポインターを置くと、各プロパティの動作がわかります。プロパティの詳細については、[Audience Manager DIL ドキュメント](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)を参照してください。
+「i」アイコンの上にマウスポインターを置くと、各プロパティの動作がわかります。プロパティの詳細については、[Audience Manager DIL ドキュメント](https://experiencecloud.adobe.com/resources/help/ja_JP/aam/r_dil_create.html)を参照してください。
 
 拡張機能の設定が完了したら、「**[!UICONTROL 保存]**」を選択します。
 
