@@ -2,9 +2,9 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新リリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '572'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -12,31 +12,31 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 7 月 20 日（PT）
 
 ### Adobe Target v2 Extension 0.15.1
 
-- `stringify`関数名のクラッシュが原因で、`sessionId`や`requestId`に対して誤ったUUID値が生成されていた問題を修正しました。
+- `stringify` 関数名のクラッシュが原因で、`sessionId` や `requestId` などに対して誤った UUID 値が生成されていた問題を修正しました。
 
 ## 2021 年 7 月 16 日（PT）
 
 ### Adobe Target v2 Extension 0.15.0
 
-- at.js設定secureOnlyがtrueに設定されている場合は常に、セキュア属性をcookieに追加します。
-- `triggerView()`
-- `CONTENT_RENDERING_NO_OFFERS`イベントに関連するバグを修正しました。 現在は、Targetからコンテンツが返されない場合は常に正しくトリガーされます
-- プリフェッチ要求を使用すると、A4Tクリック指標の詳細が正しく返される
-- UUID生成は、`Math.random()`を使用しなくなりましたが、`window.crypto`を使用します
-- `sessionId` すべてのネットワーク呼び出しでcookieの有効期限が正しく拡張される
-- SPAビューキャッシュの初期化が正しく処理され、`viewsEnable`設定に従うようになりました。
+- at.js 設定 secureOnly が true に設定されている場合は、常にセキュア属性を cookie に追加するようになりました
+- `triggerView()` を使用する際にレスポンストークンを使用できるようになりました
+- `CONTENT_RENDERING_NO_OFFERS` イベントに関連するバグを修正しました。Target からコンテンツが返されない場合でも、常に正しくトリガーされるようになりました
+- プリフェッチリクエストを使用したときに、A4T のクリック指標の詳細が正しく返されるようになりました
+- UUID の生成で `Math.random()` の使用を終了し、`window.crypto` に基づくようになりました
+- `sessionId` cookie の有効期限は、すべてのネットワーク呼び出しで正しく延長されます
+- SPA ビューのキャッシュの初期化が正しく処理され、`viewsEnable` 設定に従うようになりました
 
 ## 2021 年 6 月 2 日（PT）
 
 ### Adobe Target v2 Extension 0.14.2
 
-- 最終的なバンドルに2つのat.jsバージョン（1つはオンデバイス判定付き、もう1つは非デバイス）が含まれるバグを修正します。
+- 最終的なバンドルに 2 つの at.js バージョン（オンデバイス判定がありとなし）が含まれるバグを修正しました。
 
 ## 2021 年 5 月 19 日（PT）
 
@@ -66,7 +66,7 @@ ht-degree: 76%
 
 - 統合プロファイル / プラットフォーム ID が API customerIds を配信する際のサポートを追加しました。
 - 無効なスタイルタグが挿入される問題を修正しました。
-- at.s から 2.4.0 への更新
+- at.s から 2.4.0 への更新。
 - 未定義のパラメーターが不正な配信リクエストを引き起こす可能性がある問題を解決しました。
 
 ## 2020 年 11 月 25 日（PT）
@@ -89,7 +89,7 @@ ht-degree: 76%
 ### Adobe Target v2 Extension 0.13.2
 
 - CNAME とエッジの上書きを使用している際に、at.js 1.x で誤ってサーバードメインが作成され、Target リクエストが失敗することがあった問題を修正しました。
-- Target および Adobe Analytics タグ拡張機能用の v2 タグ拡張機能を使用する際に、Target によって Analytics の sendBeacon 呼び出しで遅延が発生する問題を修正しました
+- Target および Adobe Analytics タグ拡張機能用の v2 タグ拡張機能を使用する際に、Target によって Analytics の sendBeacon 呼び出しで遅延が発生する問題を修正しました。
 - `deviceIdLifetime` 設定を向上し、`targetGlobalSettings` 経由で上書きできるようにしました。
 
 ## 2020 年 3 月 25 日（PT）
