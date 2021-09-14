@@ -1,18 +1,18 @@
 ---
-title: タグトラブルシューティングガイド
+title: タグのトラブルシューティングガイド
 description: Adobe Experience Platform のタグに関するよくある質問への回答を示します。
 source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1055'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
-# タグトラブルシューティングガイド
+# タグのトラブルシューティングガイド
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](./term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](./term-updates.md)を参照してください。
 
 このドキュメントでは、Adobe Experience Platform のタグに関するよくある質問に対して回答を示します。
 
@@ -91,17 +91,17 @@ ht-degree: 83%
 
 ## タグはネイティブのモバイルアプリで機能しますか？
 
-できます。タグは、ネイティブのモバイルアプリケーション環境でデータ収集と配信を実装する新しい Adobe Experience Platform [Mobile SDK](https://sdkdocs.com) のモバイルプロパティと設定をサポートするようになりました。詳しくは、[ドキュメント](https://sdkdocs.com)を参照してください。
+できます。タグは、ネイティブのモバイルアプリケーション環境でデータ収集と配信を実装する新しい Adobe Experience Platform [Mobile SDK](https://sdkdocs.com) のモバイルプロパティと設定をサポートするようになりました。詳しくは、 [ドキュメント](https://sdkdocs.com) を参照してください。
 
-## アカウントの読み込み中にUIでエラーが発生した理由を教えてください。
+## マイアカウントの読み込み中に UI でエラーが発生したのはなぜですか？
 
-アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。 Adobe Admin Consoleで製品プロファイルを設定してデータ収集UIへのアクセスを許可する方法については、[権限の管理](./ui/administration/manage-permissions.md)に関するガイドを参照してください。
+アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Console で製品プロファイルを設定してデータ収集 UI へのアクセスを許可する方法については、 [権限の管理](./ui/administration/manage-permissions.md) に関するガイドを参照してください。
 
-## UIにプロパティを追加できないのはなぜですか？
+## UI でプロパティを追加できないのはなぜですか？
 
-データ収集UIにログインしたときに新しいプロパティを作成できない場合は、お使いのアカウントが、プロパティの管理権限を持つ製品プロファイルに属していません。
+データ収集 UI にログインしたときに新しいプロパティを作成できない場合は、アカウントが「プロパティの管理」権限を持つ製品プロファイルに属していません。
 
-Adobe Admin Consoleで製品プロファイルを設定してプロパティの管理権限を付与する方法については、[権限の管理](./ui/administration/manage-permissions.md)に関するガイドを参照してください。 タグの様々な権限について詳しくは、[tags](./ui/administration/user-permissions.md)のユーザー権限の概要を参照してください。
+Adobe Admin Console で製品プロファイルを設定して「プロパティの管理」権限を付与する方法については、 [権限の管理](./ui/administration/manage-permissions.md) に関するガイドを参照してください。タグの様々な権限について詳しくは、 [タグのユーザー権限](./ui/administration/user-permissions.md) の概要を参照してください。
 
 ## 他に質問がある場合
 
