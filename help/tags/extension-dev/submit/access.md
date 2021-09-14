@@ -2,9 +2,9 @@
 title: ユーザーアクセスの許可
 description: チームメンバーのタグユーザーアカウントと権限を Adobe Experience Platform で設定します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '738'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 拡張機能パッケージを使用する前に、チームメンバーのユーザーアカウントおよび権限を設定する必要があります。それには、[Adobe Admin Console](https://adminconsole.adobe.com/) を使用します。
 
@@ -39,7 +39,7 @@ Adobe Experience Cloud の組織管理者は、[Admin Console](https://admincons
 
 製品プロファイルはグループです。個々の権限が製品プロファイルに割り当てられ、プロファイル内のすべてのユーザーがそれらの権限を継承します。
 
-上部の「**[!UICONTROL 製品]**」リンクを選択し、左側の「**[!UICONTROL Experience Cloud]**」を選択します。データ収集UIが表示されない場合、顧客はアカウントチームに、パートナーは<ExchangeTechEC@adobe.com>に電子メールを送信する必要があります。
+上部の「**[!UICONTROL 製品]**」リンクを選択し、左側の「**[!UICONTROL Experience Cloud]**」を選択します。データ収集 UI がリストに表示されない場合、お客様はアカウントチームに、パートナーはメール（ <ExchangeTechEC@adobe.com>）にお問い合わせください。
 
 ![Admin Console の「製品」タブ](../images/getting-started/admin-console-products-launch.png)
 
