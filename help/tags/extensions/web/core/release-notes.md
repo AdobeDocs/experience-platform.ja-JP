@@ -2,9 +2,9 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform の Core 拡張機能に関する最新のリリースノートです。
 source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1293'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 8 月 11 日（PT）
 
 v3.0.0
 
-* PDCL-6153:キャッシュされたカスタムコードアクションの完全修飾URLを確実に取り込むためのサポートを追加しました。
+* PDCL-6153：完全修飾 URL を、キャッシュされたカスタムコードアクションへと確実に取り込むためのサポートを追加しました。
 
-Core拡張機能のv3.0.0と[v27.2.0の変更](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)が組み合わされ、Adobeが管理するホスティング地域（Premium CDNをサポートしている場合）にライブラリを読み込むことができます。
+Core 拡張機能の v3.0.0 は、[Turbine web ランタイム v27.2.0](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0) の変更点と連動しています。これにより、ユーザー企業がプレミアム CDN をサポートしている場合、Adobe が管理する多くのホスティングリージョン間でライブラリを読み込むことができます。
 
-このアップグレードは、Premium CDNを使用しないユーザーに対してはオプションで後方互換性があり、会社でPremium CDNを有効にしているお客様には必須です。
+このアップグレードは、プレミアム CDN を使用していない場合はオプションであり後方互換性があります。プレミアム CDN を有効にしている企業では必須です。
 
 ## 2021 年 5 月 20 日（PT）
 
@@ -49,7 +49,7 @@ v2.0.4
 
 * さまざまなフィールドにデータ要素のサポートを追加しました - 次のイベントにデータ要素のサポートが追加されました：「ページ滞在時間」、「ビューポートに入る」、「ホバー」、「メディアの再生時間」。次の条件もあります：「サイト滞在時間」と「値の比較」
 * リンクディレイの使用時の Ctrl／Command キーを押しながらクリック、およびマウスの中ボタンのクリックに対するデフォルト動作のサポートを追加します。
-* **クリックイベントでのリンクディレイを「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の[データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)を参照してください
+* **クリックイベントでのリンクディレイを「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の [データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) を参照してください
 
 ## 2021 年 1 月 6 日（PT）
 
@@ -89,7 +89,7 @@ v1.8.0
 * **カスタムコードの Promise**：カスタムコードの条件と、グローバルスコープで実行されない JavaScript アクションが Promises を返すようになりました。これらを使用して後続の条件を設定し、カスタムコードで非同期プロセスが完了するのを待ってから次の項目に進むことができます。
 * **HTML カスタムコードアクションのコールバック**：`onCustomCodeSuccess()` コールバックと `onCustomCodeFailure()` コールバックを使用して HTML カスタムコードアクションでも、同じ結果を実現できます。
 
-詳しくは、条件／カスタムコードとアクション／カスタムコードの[コア拡張機能リファレンス](./overview.md)を参照してください。
+詳しくは、条件／カスタムコードとアクション／カスタムコードの [コア拡張機能リファレンス](./overview.md) を参照してください。
 
 ## 2020 年 4 月 7 日（PT）
 
@@ -113,7 +113,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、指定した nonce を使用します。この変更は、タグスクリプトをCSP環境で引き続き読み込めるように、コンテンツセキュリティポリシーとnonceの使用をサポートします。 CSPでのタグの使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
+* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、指定した nonce を使用します。この変更により、コンテンツセキュリティポリシーをナンスで使用できるため、引き続き CSP 環境でタグスクリプトを読み込むことができます。CSP でのタグの使用について詳しくは、 [こちら](../../../ui/client-side/content-security-policy.md) を参照してください。
 
 ## 2019 年 6 月 18 日（PT）
 
