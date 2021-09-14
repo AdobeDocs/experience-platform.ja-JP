@@ -2,9 +2,9 @@
 title: イベント転送の概要
 description: このステップバイステップのチュートリアルに従って、Adobe Experience Platform でイベント転送の使用を開始してください。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '907'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でイベント転送を使用するには、次の 3 つのオプションの 1 つ以上を使用して、データを Adobe Experience Platform Edge ネットワークに送信する必要があります。
 
@@ -48,7 +48,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 1. スキーマを保存し、付けた名前をメモします。
 
-スキーマについて詳しくは、[Experience Data Model（XDM）システムのヘルプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)を参照してください。
+スキーマについて詳しくは、 [Experience Data Model（XDM）システムのヘルプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) 参照してください。
 
 ## イベント転送プロパティの作成
 
@@ -63,7 +63,7 @@ Adobe Experience Platform で、スキーマを作成します。
 1. 「**[!UICONTROL 保存]**」を選択します。
 
 プロパティを作成したら、新しいプロパティの「**[!UICONTROL 環境]**」タブに移動し、
-環境 ID をメモします。データストリームで使用されるAdobe組織がAdobe転送で使用されるイベント組織と異なる場合は、**[!UICONTROL 「環境]**」タブから環境IDをコピーし、データストリームの作成時に貼り付けることができます。 それ以外の場合は、ドロップダウンメニューから環境を選択できます。
+環境 ID をメモします。データストリームで使用するアドビ組織とイベント転送で使用するアドビ組織が異なる場合は、「**[!UICONTROL 環境]**」タブから環境 ID をコピーして、データストリーム作成時に貼り付けることができます。それ以外の場合は、ドロップダウンメニューから環境を選択できます。
 
 ## データストリームの作成
 
@@ -110,7 +110,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 1. Edge ドメインを選択します。
 
-設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md)を参照してください。
+設定オプションについて詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md) を参照してください。
 
 ## Platform web SDK にデータを送信するタグルールを作成する
 
