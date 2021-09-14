@@ -2,9 +2,9 @@
 title: ルール
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1977'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグは、ルールベースのシステムに従います。これは、ユーザーの操作に関する各種データを参照します。ルールで設定された条件が満たされると、ルールは、特定した拡張機能、スクリプトまたはクライアント側コードをトリガーします。
 
@@ -28,7 +28,7 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 
 >[!IMPORTANT]
 >
-> 変更は[公開](../publishing/overview.md)されるまでは反映されません。
+> 変更は [公開](../publishing/overview.md) されるまでは反映されません。
 
 ### イベントと条件（if）
 
