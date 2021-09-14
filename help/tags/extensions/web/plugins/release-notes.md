@@ -2,9 +2,9 @@
 title: Common Analytics Plugins 拡張機能のリリースノート
 description: Adobe Experience Platform の Common Analytics Plugins タグ拡張機能に関する最新のリリースノートです。
 source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 96%
 
 #### バグの修正
 
-* 特殊文字を使用するとgetPercentPageViewedが壊れる問題を修正しました
+* 特殊文字を使用すると getPercentPageViewed が壊れる問題を修正しました
 
 ## 2021 年 5 月 20 日（PT）
 
