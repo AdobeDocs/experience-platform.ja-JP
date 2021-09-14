@@ -2,9 +2,9 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2392'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でタグ拡張機能をテストするには、タグ API やコマンドラインツールを使用して拡張機能パッケージをアップロードします。次に、データ収集 UI を使用して、拡張機能パッケージをプロパティにインストールし、タグライブラリ内でその機能を実行してビルドします。
 
@@ -28,7 +28,7 @@ Adobe Experience Platform でタグ拡張機能をテストするには、タグ
 
 アップロードする前に、必須フィールドまたは設定が存在することを確認してください。例えば、少なくとも[拡張機能マニフェスト](../manifest.md)、[拡張機能の設定](../configuration.md)、[表示](../web/views.md)、[ライブラリモジュール](../web/format.md)を確認することをお勧めします。
 
-具体的な例としては、ロゴファイルが挙げられます。`extension.json` ファイルに `"iconPath": "example.svg",` 行を追加して、そのロゴ画像ファイルをプロジェクトに含めます。これは、拡張機能に表示されるアイコンへの相対パスです。先頭にスラッシュを配置することはできません。拡張子が `.svg` の SVG ファイルを参照する必要があります。SVG は、正方形にレンダリングされると通常どおりに表示され、ユーザーインターフェイスで拡大縮小できます。詳しくは、[SVG の拡大・縮小方法](https://css-tricks.com/scale-svg/)を参照してください。
+具体的な例としては、ロゴファイルが挙げられます。`extension.json` ファイルに `"iconPath": "example.svg",` 行を追加して、そのロゴ画像ファイルをプロジェクトに含めます。これは、拡張機能に表示されるアイコンへの相対パスです。先頭にスラッシュを配置することはできません。拡張子が `.svg` の SVG ファイルを参照する必要があります。SVG は、正方形にレンダリングされると通常どおりに表示され、ユーザーインターフェイスで拡大縮小できます。詳しくは、 [SVG の拡大・縮小方法](https://css-tricks.com/scale-svg/) を参照してください。
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ Facebook 拡張機能の例を使用して、テストサイトでページが�
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-開発環境の&#x200B;**Web Install Instructions**&#x200B;ダイアログが表示されます。 コピーアイコンを選択して、`<script>` タグ全体をコピーします。
+開発環境の **Web インストール手順** ダイアログが表示されます。コピーアイコンを選択して、`<script>` タグ全体をコピーします。
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
@@ -223,7 +223,7 @@ Facebook 拡張機能の例を使用して、テストサイトでページが�
 
    >[!NOTE]
    >
-   >コマンドラインで引数を渡すと、認証情報を何度も入力しなくて済むため、時間を節約できます。詳しくは、[reactor-uploader のドキュメント](https://www.npmjs.com/package/@adobe/reactor-uploader)を参照してください。
+   >コマンドラインで引数を渡すと、認証情報を何度も入力しなくて済むため、時間を節約できます。詳しくは、 [reactor-uploader のドキュメント](https://www.npmjs.com/package/@adobe/reactor-uploader) を参照してください。
 1. 既存のパッケージを更新する際に、インストール手順をスキップできます。
 1. リソースの変更 - 拡張機能コンポーネントの設定が変更された場合は、データ収集 UI でそれらのリソースを更新する必要があります。
 1. 最新の変更をライブラリに追加して、再度ビルドします。
