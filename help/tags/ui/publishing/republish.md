@@ -2,9 +2,9 @@
 title: ライブラリの再公開
 description: Adobe Experience Platform で以前のタグライブラリを再公開する方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '650'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Web プロパティ上の実稼動環境に発行された最新の 5 つのライブラリは、後で取得できます。この機能は、実稼動用ライブラリにバグが見つかり、正常な既知の状態へとすぐにロールバックする必要がある場合に役立ちます。
 
