@@ -1,10 +1,10 @@
 ---
-title: Adobe MediumAnalytics (3.x SDK) for Audio and Video拡張機能の概要
+title: Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能の概要
 description: Adobe Experience Platform の Adobe Media Analytics (3.x SDK) for Audio and Video タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '764'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 
@@ -84,7 +84,7 @@ MA 拡張機能は、[!UICONTROL 設定]ページ内の「Window オブジェク
 
 ### 他の拡張機能からの使用
 
-MA 拡張機能は、`media` を共有モジュールとして他の拡張機能に公開します。（共有モジュールについて詳しくは、[共有モジュールのドキュメント](../../../extension-dev/web/shared.md)/を参照してください。）
+MA 拡張機能は、`media` を共有モジュールとして他の拡張機能に公開します。（共有モジュールについて詳しくは、 [共有モジュールのドキュメント](../../../extension-dev/web/shared.md) /を参照してください。）
 
 >[!IMPORTANT]
 >
@@ -109,4 +109,4 @@ MA 拡張機能は、`media` を共有モジュールとして他の拡張機能
 
 >[!NOTE]
 >
->**テスト：**&#x200B;このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [ Platform ](../../../extension-dev/submit/upload-and-test.md) に拡張機能をアップロードする必要があります。
+>**テスト：**&#x200B;このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [Platform](../../../extension-dev/submit/upload-and-test.md) に拡張機能をアップロードする必要があります。
