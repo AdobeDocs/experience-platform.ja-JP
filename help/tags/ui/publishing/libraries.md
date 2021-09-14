@@ -2,9 +2,9 @@
 title: ライブラリ
 description: タグライブラリの概念や、Adobe Experience Platform 内でそれらがどう機能するかについて説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '791'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ライブラリは、デプロイ後に、拡張機能や、データ要素、ルールがどのように相互作用するかを示す、命令のセットです。ライブラリを作成するときには、ライブラリに加えたい変更を指定します。ビルド時には、これらの変更が、以前のライブラリで送信、承認または公開されたすべての変更と組み合わせられます。
 
