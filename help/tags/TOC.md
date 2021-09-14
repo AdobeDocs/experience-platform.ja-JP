@@ -5,7 +5,7 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: データ収集
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '380'
 ht-degree: 100%
 
