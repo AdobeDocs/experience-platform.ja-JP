@@ -2,9 +2,9 @@
 title: リソースのコピー
 description: Adobe Experience Platform で既存のタグリソースの設定を使用して新しいタグリソースを作成する方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '785'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 既存のリソースの設定を使用して新しいリソースを作成すると便利な場合があります。この場合、コピーを作成できます。
 
