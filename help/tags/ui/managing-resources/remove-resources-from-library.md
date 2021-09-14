@@ -2,9 +2,9 @@
 title: ライブラリからのリソースの削除
 description: タグライブラリからリソースを削除する方法を説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ビルド内でリソースの効果が必要がなくなった場合は、そのリソースを含むライブラリからそのリソースを削除し、新しいビルドを作成する必要があります。
 
