@@ -2,9 +2,9 @@
 title: サブリソースの整合性（SRI）のサポート
 description: Adobe Experience Platform においてサブリソースの整合性（SRI）がどのようにサポートされているかについて説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '601'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントでは、Adobe Experience Platform でサブリソースの整合性（SRI）がどのようにサポートされているかについて説明します。
 
@@ -37,7 +37,7 @@ SRI の検証プロセスの概要は次のとおりです。
 
 ただし、スクリプトコンテンツが変更されると、それらのコンテンツの暗号化ハッシュも変更されます。したがって、TMS で SRI を機能させる唯一の方法は、新しいビルドを公開するのと同時に埋め込みコードを更新することです。多くの場合、これによって、最初から TMS を使用する主な目的がなくなります。
 
-タグに対する次善のセキュリティオプションは、コンテンツセキュリティポリシーを実装することです。詳細については、[CSP とタグ](./content-security-policy.md)に関するガイドを参照してください。
+タグに対する次善のセキュリティオプションは、コンテンツセキュリティポリシーを実装することです。詳細については、 [CSP とタグ](./content-security-policy.md) に関するガイドを参照してください。
 
 ## SRI をビルドデプロイメントに統合する
 
