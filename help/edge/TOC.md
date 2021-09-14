@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: データ管理
 source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -51,9 +51,9 @@ ht-degree: 90%
    * [同意のサポート](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [概要](consent/iab-tcf/overview.md)
-      * [タグとの統合](consent/iab-tcf/with-launch.md)
+      * [タグを使用した統合](consent/iab-tcf/with-launch.md)
       * [タグなしでの統合](consent/iab-tcf/without-launch.md)
-* Web SDKタグ拡張{#extension}
+* Web SDK タグ拡張機能 {#extension}
    * [Web SDK 拡張機能](extension/web-sdk-extension-configuration.md)
    * [イベントタイプ](extension/event-types.md)
    * [アクションタイプ](extension/action-types.md)
