@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -38,13 +38,13 @@ Adobe Experience Platform Web およびモバイル SDK では、すべてのア
 
 ## アドビテクノロジーをデプロイするためのスイッチ切り替えプロセス {#edge}
 
-Platform Edge Network は、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーのネットワークです。タグを使用して、Adobe Target、Adobe Audience Manager、Adobe Analyticsなどの製品に[datastreams](../edge/fundamentals/datastreams.md)を設定し、クライアント側のコードを変更せずに、サーバー側でこれらの製品をアクティブ化できます。
+Platform Edge Network は、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーのネットワークです。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../edge/fundamentals/datastreams.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
 
 ![](./images/deploy.png)
 
 >[!NOTE]
 >
->Platform Edgeネットワークの概要については、次の[インタラクティブ製品ツアー](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)を参照してください。
+>Platform Edge ネットワークの詳細な説明については、次の [インタラクティブ製品ツアー](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1) を参照してください。
 
 ## データの迅速かつ安全な変換、拡張、送信
 
