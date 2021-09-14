@@ -1,7 +1,8 @@
 ---
 title: ビルドエンドポイント
 description: Reactor API で /builds エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 99%
@@ -472,7 +473,7 @@ curl -X PATCH \
 
 次の呼び出しは、ビルドの関連リソースを取得する方法を示しています。 [ビルドを検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### ビルドに関連するデータ要素のリスト {#data-elements}
 

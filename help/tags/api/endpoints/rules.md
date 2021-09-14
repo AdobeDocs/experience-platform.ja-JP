@@ -1,7 +1,8 @@
 ---
 title: ルールエンドポイント
 description: Reactor API で /rules エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 99%
@@ -519,13 +520,13 @@ curl -X DELETE \
 
 ## ルールのメモの管理 {#notes}
 
-ルールは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。ルールや他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモのエンドポイントガイド](./notes.md)を参照してください。
+ルールは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。ルールや他の互換性のあるリソースのメモを管理する方法について詳しくは、 [メモエンドポイントガイド](./notes.md) を参照してください。
 
 ## ルールの関連リソースの取得 {#related}
 
 次の呼び出しは、ルールの関連リソースを取得する方法を示しています。 [ルールを検索](#lookup)すると、これらの関係は `relationships` ルールの下にリストされます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### ルールに関連するライブラリのリスト {#libraries}
 

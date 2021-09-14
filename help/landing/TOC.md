@@ -6,7 +6,7 @@ user-guide-description: Experience Platform を使用して、パーソナライ
 source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 

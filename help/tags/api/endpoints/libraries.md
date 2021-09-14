@@ -1,7 +1,8 @@
 ---
 title: ライブラリエンドポイント
 description: Reactor API で /libraries エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 99%
@@ -38,7 +39,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストされたライブラリを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用して、リストされたライブラリを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -275,7 +276,7 @@ POST /properties/{PROPERTY_ID}/libraries
 
 **リクエスト**
 
-次のリクエストは、指定されたプロパティの新しいライブラリを作成します。 ライブラリを最初に作成するときは、`name` 属性のみを設定できます。 データ要素、拡張機能、ルールをライブラリに追加するには、関係を作成する必要があります。詳しくは、 [ライブラリリソースの管理](#resources) の節を参照してください。
+次のリクエストは、指定されたプロパティの新しいライブラリを作成します。 ライブラリを最初に作成するときは、`name` 属性のみを設定できます。 データ要素、拡張機能、ルールをライブラリに追加するには、関係を作成する必要があります。詳しくは、 [ライブラリリソースの管理](#resources) に関する節を参照してください。
 
 ```shell
 curl -X POST \
@@ -904,13 +905,13 @@ curl -X POST \
 
 ## ライブラリのメモの管理 {#notes}
 
-ライブラリは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。ライブラリや、その他の互換リソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
+ライブラリは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。ライブラリや他の互換性のあるリソースのメモを管理する方法について詳しくは、 [メモエンドポイントガイド](./notes.md) を参照してください。
 
 ## ライブラリに関連するリソースの取得 {#related}
 
 次の呼び出しは、ライブラリの関連リソースを取得する方法を示しています。[ライブラリを検索](#lookup)すると、これらの関係は `relationships` プロパティの下にリストされます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### ライブラリに関連するデータ要素のリスト {#data-elements}
 

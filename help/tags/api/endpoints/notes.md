@@ -1,7 +1,8 @@
 ---
 title: メモエンドポイント
 description: Reactor API で /notes エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 99%

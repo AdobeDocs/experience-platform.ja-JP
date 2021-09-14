@@ -1,10 +1,11 @@
 ---
 title: 拡張パッケージエンドポイント
 description: Reactor API で /extension_packages エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '951'
-ht-degree: 73%
+ht-degree: 99%
 
 ---
 
@@ -22,33 +23,33 @@ ht-degree: 73%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、[はじめる前に](../getting-started.md)を参照して、API への認証方法に関する重要な情報を確認してください。
 
-Reactor APIの呼び出し方法を理解するだけでなく、拡張機能パッケージの`status`属性と`availability`属性が、Reactor APIに対して実行できるアクションに与える影響も理解することが重要です。 これらは、以下の節で説明します。
+Reactor API の呼び出し方法だけでなく、拡張機能パッケージの `status` と `availability` 属性が、Reactor API に対して実行できるアクションに与える影響も理解することが重要です。 これらについては、以下の節で説明します。
 
 ### ステータス
 
-拡張機能パッケージには、次の3つのステータスがあります。`pending`、`succeeded`、および`failed`。
+拡張機能パッケージには、`pending`、`succeeded`、および `failed` の 3 つのステータスがあります。
 
 | ステータス | 説明 |
 | --- | --- |
-| `pending` | 拡張機能パッケージを作成すると、その`status`が`pending`に設定されます。 これは、システムが拡張機能パッケージの情報を受け取り、処理を開始することを示します。 ステータスが`pending`の拡張パッケージは使用できません。 |
-| `succeeded` | 処理が正常に完了すると、拡張機能パッケージのステータスが`succeeded`に更新されます。 |
-| `failed` | 処理が正常に完了しなかった場合、拡張機能パッケージのステータスは`failed`に更新されます。 ステータスが`failed`の拡張パッケージは、処理が正常に完了するまで更新される場合があります。 ステータスが`failed`の拡張パッケージは使用できません。 |
+| `pending` | 拡張機能パッケージを作成すると、その `status` が `pending` に設定されます。 これは、システムが拡張機能パッケージの情報を受け取り、処理を開始することを示します。 ステータスが `pending` の拡張パッケージは使用できません。 |
+| `succeeded` | 処理が正常に完了すると、拡張機能パッケージのステータスが `succeeded` に更新されます。 |
+| `failed` | 処理が正常に完了しなかった場合、拡張機能パッケージのステータスは `failed` に更新されます。 ステータスが `failed` の拡張パッケージは、処理が正常に完了するまで更新される場合があります。 ステータスが `failed` の拡張パッケージは使用できません。 |
 
 ### 対応プラットフォーム
 
-拡張機能パッケージには、次のレベルの可用性があります。`development`、`private`、および`public`。
+拡張機能パッケージの可用性レベルには `development`、`private`、および`public` があります。
 
 | 対応プラットフォーム | 説明 |
 | --- | --- |
-| `development` | `development`内の拡張機能パッケージは、それを所有する会社に対してのみ表示され、内部で使用できます。 また、拡張機能の開発用に設定されたプロパティでのみ使用できます。 |
-| `private` | `private`拡張機能パッケージは、その拡張機能を所有する会社にのみ表示され、会社が所有するプロパティにのみインストールできます。 |
-| `public` | `public`拡張機能パッケージが表示され、すべての会社とプロパティで使用できます。 |
+| `development` | `development` 内の拡張機能パッケージは、その拡張機能を所有する会社内でのみ表示および使用できます。 また、拡張機能の開発用に設定されたプロパティでのみ使用できます。 |
+| `private` | `private` 拡張機能パッケージは、その拡張機能を所有する会社にのみ表示され、その会社が所有するプロパティにのみインストールできます。 |
+| `public` | `public` 拡張機能パッケージは、すべての会社とプロパティが表示および使用できます。 |
 
 >[!NOTE]
 >
->拡張機能パッケージを作成すると、`availability`が`development`に設定されます。 テストが完了したら、拡張機能パッケージを`private`または`public`に移行できます。
+>拡張機能パッケージを作成すると、`availability` が `development` に設定されます。 テストが完了したら、拡張機能パッケージを `private` または `public` に移行できます。
 
 ## 拡張機能パッケージのリストの取得 {#list}
 
@@ -469,9 +470,9 @@ curl -X GET \
 }
 ```
 
-## 拡張機能パッケージの作成 {#create}
+## 拡張パッケージの作成 {#create}
 
-拡張機能パッケージは、Node.js の基礎モードツールを使用して作成され、ローカルマシンに保存後、Reactor API に送信されます。 拡張機能パッケージの設定について詳しくは、[拡張機能の開発の手引き](../../extension-dev/getting-started.md)を参照してください。
+拡張機能パッケージは、Node.js の基礎モードツールを使用して作成され、ローカルマシンに保存後、Reactor API に送信されます。 拡張機能パッケージの設定について詳しくは、 [拡張機能の開発の概要](../../extension-dev/getting-started.md) を参照してください。
 
 拡張機能パッケージファイルを作成したら、POST リクエストを通じて Reactor API に送信できます。 
 
@@ -704,7 +705,7 @@ curl -X POST \
 
 ## 拡張機能パッケージの更新 {#update}
 
-拡張機能パッケージを更新するには、拡張機能リクエストのパスにIDを含めます。PATCH
+拡張機能パッケージを更新するには、PATCH リクエストのパスに ID を含めます。
 
 **API 形式**
 

@@ -1,7 +1,8 @@
 ---
 title: プロパティエンドポイント
 description: Reactor API で /properties エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 99%
@@ -26,7 +27,7 @@ ht-degree: 99%
 
 プロパティは、1 つの[会社](./companies.md)のみに属します。 会社は多くのプロパティを持つことができます。
 
-プロパティとそのタグ管理での役割に関する一般的な情報について詳しくは、[会社とプロパティ](../../ui/administration/companies-and-properties.md)の概要を参照してください。
+プロパティとタグ管理での役割に関する一般情報について詳しくは、 [会社とプロパティ](../../ui/administration/companies-and-properties.md) の概要を参照してください。
 
 ## はじめに
 
@@ -709,13 +710,13 @@ curl -X DELETE \
 
 ## プロパティのメモの管理 {#notes}
 
-プロパティは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。 プロパティやその他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
+プロパティは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。 プロパティやその他の互換性のあるリソースのメモを管理する方法について詳しくは、 [メモエンドポイントガイド](./notes.md) を参照してください。
 
 ## プロパティの関連リソースの取得 {#related}
 
 次の呼び出しは、プロパティの関連リソースを取得する方法を示しています。 [プロパティを検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### プロパティに関連する callbacks のリスト {#callbacks}
 

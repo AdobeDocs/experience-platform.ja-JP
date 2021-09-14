@@ -8,7 +8,7 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 95%
 
 ## アクセス制御階層とワークフロー
 
-[!DNL Experience Platform] 用にアクセス制御を設定するには、[!DNL Experience Platform] 製品統合を持つ組織の管理者権限が必要です。権限を付与または取り消す最小の役割は、製品プロファイル管理者です。権限を管理できる他の管理者の役割は、 製品管理者（製品内のすべてのプロファイルを管理）とシステム管理者（制限なし）です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
+[!DNL Experience Platform] 用にアクセス制御を設定するには、[!DNL Experience Platform] 製品統合を持つ組織の管理者権限が必要です。権限を付与または取り消す最小の役割は、製品プロファイル管理者です。権限を管理できる他の管理者の役割は、 製品管理者（製品内のすべてのプロファイルを管理）とシステム管理者（制限なし）です。詳しくは、 [管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) に関する Adobe Help Center の記事を参照してください。
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Data Governance] | [!UICONTROL データ使用ラベルの適用] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
-| [!DNL Data Governance] | [!UICONTROL 監査ログの表示] | Platformアクティビティの記録された[監査ログ](../landing/governance-privacy-security/audit-logs/overview.md)を表示する読み取り専用アクセス。 |
+| [!DNL Data Governance] | [!UICONTROL 監査ログの表示] | Platform のアクティビティを記録した [監査ログ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] | ライセンス使用状況ダッシュボードを表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL 標準ダッシュボードの管理] | Data Warehouse にないカスタム属性の追加。 |
 | [!DNL Query Service] | [!UICONTROL クエリの管理] | Platform データの構造化 SQL クエリの読み取り、作成、編集、および削除へのアクセス。 |

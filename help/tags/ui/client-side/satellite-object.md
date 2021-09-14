@@ -1,19 +1,19 @@
 ---
-title: Satelliteオブジェクトの参照
-description: クライアント側の_satelliteオブジェクトと、タグで実行できる様々な機能について説明します。
+title: サテライトオブジェクトのリファレンス
+description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
 source-wordcount: '1279'
-ht-degree: 83%
+ht-degree: 97%
 
 ---
 
-# Satellite オブジェクトのリファレンス
+# サテライトオブジェクトのリファレンス
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントは、クライアントサイドの `_satellite` オブジェクトと、それを使用して実行できる様々な機能のリファレンスとして機能します。
 
@@ -87,7 +87,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-プロパティに [!DNL Adobe Experience Cloud ID] 拡張機能がインストールされている場合、このメソッドは訪問者 ID インスタンスを返します。詳しくは、[Experience Cloud ID サービスのドキュメント](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を参照してください。
+プロパティに [!DNL Adobe Experience Cloud ID] 拡張機能がインストールされている場合、このメソッドは訪問者 ID インスタンスを返します。詳しくは、 [Experience Cloud ID サービスのドキュメント](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja) を参照してください。
 
 ## `logger`
 
@@ -133,11 +133,11 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` には、Cookieの読み取りと書き込みを行う関数が含まれます。これは、サードパーティライブラリ js-cookie の公開コピーです。このライブラリのより高度な使用方法の詳細については、[js-cookieのドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
+`_satellite.cookie` には、cookie の読み取りと書き込みをおこなう関数が含まれます。これは、サードパーティのライブラリ js-cookie の公開済みコピーです。このライブラリのより高度な使用方法の詳細については、[js-cookie のドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
 
-### cookieの設定 {#cookie-set}
+### cookie の設定 {#cookie-set}
 
-Cookieを設定するには、`_satellite.cookie.set()`を使用します。
+cookie を設定するには、`_satellite.cookie.set()` を使用します。
 
 **コード**
 
@@ -147,19 +147,19 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->古い[`setCookie`](#setCookie)メソッドでは、この関数呼び出しの3番目の（オプション）引数は、cookieの有効期間(TTL)を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを3番目の引数として受け取ります。 新しいメソッドを使用してCookieのTTLを設定するには、attributesオブジェクトに`expires`プロパティを指定し、目的の値に設定する必要があります。 これは、次の例で示されます。
+>古い [`setCookie`](#setCookie) メソッドを使う cookie の設定方法では、この関数呼び出しの 3 番目（オプション）の引数は、cookie の有効期間（TTL）を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを 3 番目の引数として受け取ります。 新しいメソッドを使用して cookie の TTL を設定するには、attributes オブジェクトに `expires` プロパティを指定し、目的の値に設定する必要があります。以下に例を示します。
 
 **例**
 
-次の関数呼び出しは、1週間で期限切れになるCookieを書き込みます。
+次の関数呼び出しは、1 週間で期限切れになる cookie を書き込みます。
 
 ```javascript
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 ```
 
-### Cookieの取得 {#cookie-get}
+### cookie の取得 {#cookie-get}
 
-Cookieを取得するには、`_satellite.cookie.get()`を使用します。
+cookie を取得するには、`_satellite.cookie.get()` を使用します。
 
 **コード**
 
@@ -169,15 +169,15 @@ _satellite.cookie.get(name: string) => string
 
 **例**
 
-次の関数呼び出しは、以前に設定されたCookieを読み取ります。
+次の関数呼び出しは、以前に設定された cookie を読み取ります。
 
 ```javascript
 var product = _satellite.cookie.get('product');
 ```
 
-### cookieの削除 {#cookie-remove}
+### cookie の削除 {#cookie-remove}
 
-cookieを削除するには、`_satellite.cookie.remove()`を使用します。
+cookie を削除するには、`_satellite.cookie.remove()` を使用します。
 
 **コード**
 
@@ -187,7 +187,7 @@ _satellite.cookie.remove(name: string)
 
 **例**
 
-次の関数呼び出しは、以前に設定されたCookieを削除します。
+次の関数呼び出しは、以前に設定された cookie を削除します。
 
 ```javascript
 _satellite.cookie.remove('product');

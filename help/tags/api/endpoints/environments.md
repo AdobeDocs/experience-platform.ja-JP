@@ -1,7 +1,8 @@
 ---
 title: 環境エンドポイント
 description: Reactor API で /environments エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 99%
@@ -573,7 +574,7 @@ curl -X DELETE \
 
 次の呼び出しは、環境の関連リソースを取得する方法を示しています。 [環境を検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### 環境の関連ビルドのリスト {#builds}
 

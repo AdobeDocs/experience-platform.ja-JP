@@ -1,7 +1,8 @@
 ---
 title: プロファイルエンドポイント
 description: Reactor API で /profiles エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 97%
@@ -99,4 +100,3 @@ curl -X GET \
   }
 }
 ```
-

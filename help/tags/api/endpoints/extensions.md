@@ -1,7 +1,8 @@
 ---
 title: 拡張機能エンドポイント
 description: Reactor API で /extensions エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 99%
@@ -595,13 +596,13 @@ curl -X DELETE \
 
 ## 拡張機能のメモの管理 {#notes}
 
-拡張機能は「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。拡張機能や他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモのエンドポイントガイド](./notes.md)を参照してください。
+拡張機能は「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。拡張機能や他の互換性のあるリソースのメモを管理する方法について詳しくは、 [メモエンドポイントガイド](./notes.md) を参照してください。
 
 ## 拡張機能の関連リソースの取得 {#related}
 
 次の呼び出しは、拡張機能の関連リソースを取得する方法を示しています。 [拡張機能を検索](#lookup)すると、これらの関係は `relationships` プロパティの下にリストされます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### 拡張機能に関連するライブラリのリスト {#libraries}
 

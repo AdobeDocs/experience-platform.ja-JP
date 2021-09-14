@@ -1,10 +1,11 @@
 ---
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
-source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
+exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Adobe Analytics 拡張機能の設定に関する情報、およびこの拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -133,13 +134,13 @@ _satellite.cookie.set("sat_track", "true");
 
 イメージリクエストのエンコード方法を決定します。実装またはサイトで非 ASCII 文字を使用している場合は、ここで文字セットを定義することが重要です。プリセット文字セットを選択するか、カスタム文字セットを指定できます。サイトと同じ文字コードを使用することをお勧めします。通常、この値は UTF-8 です。
 
-文字セットは、`s.charSet` 変数を使用して Analytics カスタムコードで設定できます。文字セットについて詳しくは、[charSet のドキュメント](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=ja)を参照してください。
+文字セットは、`s.charSet` 変数を使用して Analytics カスタムコードで設定できます。文字セットについて詳しくは、 [charSet のドキュメント](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=ja) を参照してください。
 
 ### Currency Code
 
 売上高および通貨イベントに適用するコンバージョン率を決定します。サイトが訪問者に対し、複数の通貨での購入を許可している場合、通貨コードを設定すると、金額が正しく変換されて保存されます。
 
-サポートされる通貨コードについて詳しくは、[currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=ja) を参照してください。
+サポートされる通貨コードについて詳しくは、 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=ja) を参照してください。
 
 ### Tracking Server
 
@@ -273,7 +274,7 @@ Audience Manager サブドメインは、Adobe Audience Manager によって割�
 
 ![](../../../images/an-ext-aam-adv.png)
 
-各設定について詳しくは、情報アイコンを選択するか、[Adobe Audience Manager のドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja)を参照してください。
+各設定について詳しくは、情報アイコンを選択するか、 [Adobe Audience Manager のドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) を参照してください。
 
 ## Analytics 拡張機能のアクションタイプ
 

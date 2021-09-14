@@ -1,7 +1,8 @@
 ---
 title: データ要素エンドポイント
 description: Reactor API で /data_elements エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: ea346682-441b-415b-af06-094158eb7c71
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 99%
@@ -355,7 +356,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `attributes.name` | **（必須）**&#x200B;データ要素の人間が判読できる名前。 |
-| `attributes.delegate_descriptor_id` | **（必須）**&#x200B;データ要素を拡張機能パッケージに関連付けるフォーマットされた文字列。すべてのデータ要素は、最初に作成されるときに拡張パッケージに関連付ける必要があります。各拡張パッケージは、デリゲートデータ要素と互換性のあるタイプと、その意図された動作を定義しているからです。詳しくは、 [デリゲート記述子 ID](../guides/delegate-descriptor-ids.md) に関するガイドを参照してください。 |
+| `attributes.delegate_descriptor_id` | **（必須）**&#x200B;データ要素を拡張機能パッケージに関連付けるフォーマットされた文字列。すべてのデータ要素は、最初に作成されるときに拡張パッケージに関連付ける必要があります。各拡張パッケージは、デリゲートデータ要素と互換性のあるタイプと、その意図された動作を定義しているからです。詳しくは 、[デリゲート記述子 ID](../guides/delegate-descriptor-ids.md) に関するガイドを参照してください。 |
 | `attributes.settings` | 文字列として表される設定 JSON オブジェクト。 |
 | `attributes.default_value` | データ要素の評価結果が `undefined` の場合に返されるデフォルト値。 |
 | `attributes.enabled` | データ要素が有効かどうかを示すブール値。 |
@@ -805,7 +806,7 @@ curl -X DELETE \
 
 次の呼び出しは、データ要素の関連リソースを取得する方法を示しています。 [データ要素を検索](#lookup)すると、これらの関係は `relationships` プロパティの下にリストされます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### データ要素に関連するライブラリのリスト {#libraries}
 

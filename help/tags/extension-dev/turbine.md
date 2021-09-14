@@ -5,7 +5,7 @@ exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 86%
+ht-degree: 91%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 `turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。Adobe Experience Platform タグのランタイムに固有の情報とユーティリティを提供し、`require()` を使用しなくてもライブラリモジュールでいつでも利用できます。
 
@@ -110,7 +110,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)を使用することをお勧めします。 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
+ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) を使用することをお勧めします。別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
 
 * `logger.log(message: string)`：コンソールにメッセージを記録します。
 * `logger.info(message: string)`：コンソールに情報メッセージを記録します。
