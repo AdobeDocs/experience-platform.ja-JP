@@ -6,7 +6,7 @@ topic-legacy: getting started
 description: Adobe Experience Platform を使用すると、組織はデータサイエンスと機械学習を適用する前に顧客データを一元化および標準化して、パーソナライズされた豊かなエクスペリエンスの設計と配信を劇的に改善することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform]ドキュメント
 
-[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、[Platform ドキュメントの概要](documentation/overview.md)を参照してください。
+[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
 
 特定の [!DNL Platform] サービスに関する詳細な情報を得るには、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って、適切なガイドを選択します。
 
