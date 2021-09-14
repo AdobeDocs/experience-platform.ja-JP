@@ -2,9 +2,9 @@
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 拡張機能の基本ディレクトリには、`extension.json` という名前のファイルを作成する必要があります。 このファイルには、Adobe Experience Platform が拡張機能を適切に使用できるようにするための重要な詳細が含まれています。 内容の一部は、[npm の`package.json`](https://docs.npmjs.com/files/package.json) の形式に従って構成されます。
 
@@ -22,7 +22,7 @@ ht-degree: 99%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、[命名規則](#naming-rules)に従う必要があります。 **これは、タグで識別子として使用されます。拡張機能を公開した後は変更しないでください。** |
+| `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、 [命名規則](#naming-rules) に従う必要があります。 **これは、タグで識別子として使用されます。拡張機能を公開した後は変更しないでください。** |
 | `platform` | 拡張機能のプラットフォーム。 現時点で使用できる値は `web` のみです。 |
 | `version` | 拡張機能のバージョン。 [semver](http://semver.org/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
 | `displayName` | 人間が判読できる、拡張機能の名前。これは、Platform ユーザーに表示されます。「タグ」や「拡張機能」に言及する必要はありません。ユーザーは、タグ拡張機能が表示されることを既に知っています。 |
@@ -92,7 +92,7 @@ ht-degree: 99%
     </tr>
     <tr>
       <td><code>transforms</code> <em>（オプション）</em></td>
-      <td>オブジェクトの配列。各オブジェクトは、ランタイムライブラリに発行されるときに、対応するすべての settings オブジェクトで実行する必要がある変換を表します。 このプロパティが必要となる理由とその使い方の詳細ついては、<a href="#transforms">変換</a>の節を参照してください。</td>
+      <td>オブジェクトの配列。各オブジェクトは、ランタイムライブラリに発行されるときに、対応するすべての settings オブジェクトで実行する必要がある変換を表します。 このプロパティが必要となる理由とその使い方の詳細ついては、 <a href="#transforms">変換</a> の節を参照してください。</td>
     </tr>
   </tbody>
 </table>
@@ -134,25 +134,25 @@ ht-degree: 99%
       <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="http://json-schema.org/">JSON スキーマ</a> のオブジェクト。 通常、設定はユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクト対して実行されるライブラリモジュールと互換性のある形式であることを、Platform が適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
 {
-  "$schema":"http://json-schema.org/draft-04/schema#",
-  "type":"object",
-  "properties":{
-    "delay":{
-      "type":"数値",
-      "minimum":3
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
     }
   },
-  "required":[
+  "required": [
     "delay"
-  ]
-  "additionalProperties":false
+  ],
+  "additionalProperties": false
 }
 </pre>
       手動でスキーマをテストするには、<a href="http://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>（オプション）</em></td>
-      <td>オブジェクトの配列。各オブジェクトは、ランタイムライブラリに発行されるときに、対応するすべての settings オブジェクトで実行する必要がある変換を表します。 このプロパティが必要となる理由とその使い方の詳細については、<a href="#transforms">変換</a>の節を参照してください。</td>
+      <td>オブジェクトの配列。各オブジェクトは、ランタイムライブラリに発行されるときに、対応するすべての settings オブジェクトで実行する必要がある変換を表します。 このプロパティが必要となる理由とその使い方の詳細については、 <a href="#transforms">変換</a> の節を参照してください。</td>
     </tr>
   </tbody>
 </table>
