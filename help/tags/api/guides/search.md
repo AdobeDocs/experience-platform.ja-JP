@@ -2,7 +2,7 @@
 title: Reactor API でリソースを検索する
 description: Reactor API でリソースを検索する方法について説明します。
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
 ht-degree: 100%
 
