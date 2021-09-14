@@ -2,9 +2,9 @@
 title: SFTP ホスト
 description: セキュリティで保護された自己ホスト SFTP サーバーにライブラリビルドを配信するように Adobe Experience Platform のタグを設定する方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '527'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,14 +12,14 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ユーザーがホストしているライブラリをアドビに管理させたくない場合、その他のオプションとして、Adobe Experience Platform に、ユーザーがホストしている保護された SFTP サーバーにビルドを配信させることができます。
 
 Platform は、暗号化されたキーを使用して SFTP サイトに接続します。これを正しく設定するには、いくつかの手順があります。
 
-1. SFTP サーバーに公開鍵と秘密鍵のペアがインストールされている必要があります。これらのキーは、サーバー上で生成したり、他の場所に生成してサーバーにインストールしたりできます。詳しくは、[SSH キーを生成する方法](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key)に関する GitHub のドキュメントを参照してください。
-1. 秘密キーは、公開 GPG キーの暗号化に使用されます。SFTP ホストの作成プロセス中に、秘密キーを提供する必要があります。公開 GPG キーを暗号化する手順については、Reactor API ドキュメントの[値の暗号化](https://developer.adobelaunch.com/api/guides/encrypting_values/)の節を参照してください。特定の GPG キーが必要であることがわかっている場合を除き、実稼動環境の GPG キーを使用します。最後に、任意のマシンから秘密鍵を暗号化することができます。サーバーに GPG をインストールしてこの手順を完了する必要はありません。
+1. SFTP サーバーに公開鍵と秘密鍵のペアがインストールされている必要があります。これらのキーは、サーバー上で生成したり、他の場所に生成してサーバーにインストールしたりできます。詳しくは、 [SSH キーを生成する方法](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key) に関する GitHub のドキュメントを参照してください。
+1. 秘密キーは、公開 GPG キーの暗号化に使用されます。SFTP ホストの作成プロセス中に、秘密キーを提供する必要があります。公開 GPG キーを暗号化する手順については、Reactor API ドキュメントの [値の暗号化](https://developer.adobelaunch.com/api/guides/encrypting_values/) の節を参照してください。特定の GPG キーが必要であることがわかっている場合を除き、実稼動環境の GPG キーを使用します。最後に、任意のマシンから秘密鍵を暗号化することができます。サーバーに GPG をインストールしてこの手順を完了する必要はありません。
 1. Platform が SFTP サーバーに到達して接続できるように、会社のファイアウォールで IP アドレスを承認する必要がある場合があります。これらの IP アドレスは次のとおりです。
    * `184.72.239.68`
    * `23.20.85.113`
@@ -29,7 +29,7 @@ Platform は、暗号化されたキーを使用して SFTP サイトに接続�
 >
 >タグビルドの構造は、時間の経過と共に変化しています。 内部的にシンボリックリンク（symlinks）を使用して以前の埋め込みコードの下位互換性を維持し、以前の埋め込みコードが最新のビルド構造で引き続き機能するようにします。タグビルドの有効な宛先として機能するには、SFTP サーバーがシンボリックリンクの使用をサポートしている必要があります。
 
-詳しくは、[SFTP サーバーを設定してビルドを配信する方法](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6)に関する次の Medium の記事を参照してください。
+詳しくは、 [SFTP サーバーを設定してビルドを配信する方法](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6) に関する次の Medium の記事を参照してください。
 
 ## SFTP ホストの作成
 
