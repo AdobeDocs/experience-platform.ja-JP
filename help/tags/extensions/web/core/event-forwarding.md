@@ -2,9 +2,9 @@
 title: Core イベント転送拡張機能の概要
 description: Adobe Experience Platform の Core イベント転送拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1724'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Core イベント転送拡張機能には、Adobe Experience Platform でのイベント転送に使用できるデフォルトのイベント、条件およびデータタイプが用意されています。
 
@@ -165,7 +165,7 @@ module.exports = (context) => {
 getDataElementValue('productName') 
 ```
 
-イベント転送アクションは順番に実行されます。 また、1 つのアクション内のカスタムコードで、後続のアクションに使用できる値を返すこともできます。返される値は、そのアクション内のコード、または外部ソースに対する呼び出しの応答の本文から取得できます。Core 拡張機能が使用される 1 つのルール内で以前に実行したアクションのデータを参照するには、`Path` タイプのデータ要素を作成し、次のパスを使用して、Core 拡張機能内のカスタムコードで定義された `productCategory` という変数の値を参照します。
+イベント転送アクションが順番に実行されます。また、1 つのアクション内のカスタムコードで、後続のアクションに使用できる値を返すこともできます。返される値は、そのアクション内のコード、または外部ソースに対する呼び出しの応答の本文から取得できます。Core 拡張機能が使用される 1 つのルール内で以前に実行したアクションのデータを参照するには、`Path` タイプのデータ要素を作成し、次のパスを使用して、Core 拡張機能内のカスタムコードで定義された `productCategory` という変数の値を参照します。
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
