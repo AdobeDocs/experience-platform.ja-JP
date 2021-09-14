@@ -2,9 +2,9 @@
 title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 **前提条件**
 
@@ -59,7 +59,7 @@ document.onreadystatechange = function () {
 拡張機能内では 8 つのイベントを使用できます。カスタムキューポイントトラッキングのみが設定を必要とします。
 
 * **ビデオ準備完了：** ビデオがキューに入り、再生の準備ができたときにトリガーされます。
-* **ビデオ開始：** ビデオが最初に開始されたときと `player.getCurrentTime() === 0` ときにトリガーされます
+* **ビデオ開始：** ビデオが最初に開始されたときと`player.getCurrentTime() === 0` ときにトリガーされます
 * **ビデオ再生：** ビデオがキューに入ったときにトリガーされ、最初の開始の後に再生されます。このトリガーは、すべてのリプレイで実行されます。
 * **ビデオ一時停止：** ビデオが一時停止されたときにトリガーされます。
 * **ビデオ再開：** ビデオが再開されたとき、および `player.getCurrentTime() !== 0` ときにトリガーされます 
