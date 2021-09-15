@@ -2,13 +2,13 @@
 title: Adobe Experience Platform Web SDKでサポートされる使用例
 description: Adobe Experience Platform Web SDKでサポートされる使用例を説明します。
 keywords: web sdk；使用例
-source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
+exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
+source-git-commit: ed092b85d74eaa0fdc29f3a8d28f84fe81ccca17
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 15%
+source-wordcount: '445'
+ht-degree: 20%
 
 ---
-
 
 # サポートされるユースケース
 
@@ -21,12 +21,11 @@ ht-degree: 15%
 | 合理化された1つのSDK |  |
 | グローバルデータ収集ネットワーク |  |
 | コースの詳細な同意 |  |
-| IAB 2.0の同意文字列 | [IAB TCF 2.0のサポート](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
-| 詳細な同意の収集 | [Web SDKとAdobe2.0の同意の統合](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| 様々な標準に基づいて顧客の同意を得る | <ul><li>[Adobeの同意2.0のサポート](../../landing/governance-privacy-security/consent/adobe/overview.md)</li><li>[IAB TCF 2.0のサポート](../../landing/governance-privacy-security/consent/iab/overview.md)</li><li>[Edgeネットワークに同意シグナルを送信するためのSDKの統合](../../landing/governance-privacy-security/consent/sdk.md)</li></ul> |
 | ECIDのサポート | ECIDの取得について詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity)および[こちら](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension)を参照してください。 |
 | 複数エンティティの収集 |  |
 | デバイスグラフのサポート（公開/非公開） | [ドキュメント](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
-| ページ上の複数の組織へのデータ送信 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
+| ページ上の複数の組織へのデータ送信 | [ドキュメント](./interacting-with-multiple-properties.md) |
 | 詳細なエラーレポートとログ |  |
 | クライアント側およびサーバー側の要求をトレースする |  |
 | タグ拡張 | [Web SDK拡張機能のドキュメント](../../tags/extensions/web/sdk/overview.md) |
@@ -39,10 +38,10 @@ ht-degree: 15%
 | 使用例 | 詳細情報 |
 | --- | --- |
 | エクスペリエンスイベントの送信 |  |
-| Offer Decisioning | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| Offer Decisioning | [ドキュメント](../personalization/offer-decisioning/offer-decisioning-overview.md) |
 | プロファイルに対してデータセットが有効になっている場合、リアルタイム顧客データプロファイルにデータを送信する機能 |  |
 | データをCustomer Journey Analyticsにリアルタイムで送信 |  |
-| プロファイルへの書き込み同意 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| プロファイルへの書き込み同意 | [ドキュメント](../../landing/governance-privacy-security/consent/sdk.md) |
 | サーバーサイドでリアルタイムにサードパーティにデータを転送する | [ドキュメント](../../tags/ui/event-forwarding/overview.md) |
 | ID名前空間のサポート |  |
 
@@ -59,14 +58,14 @@ ht-degree: 15%
 | prop、eVar、イベント |  |
 | ListVarによるAdobe Analyticsのサポート |  |
 | OSとブラウザーのバージョン |  |
-| 標準の変数 | [自動的にマッピングされた変数](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
+| 標準の変数 | [自動的にマッピングされた変数](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | VISTAルール/処理ルール |  |
 | 訪問者属性のサポート |  |
 | 離脱リンクのサポート |  |
 | カスタムリンク/ダウンロードリンク |  |
 | 状態とアクションの追跡 |  |
 | 標準イベントのイベントのシリアル化 |  |
-| products 変数 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| products 変数 | [ドキュメント](../data-collection/collect-commerce-data.md#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,10 +74,10 @@ ht-degree: 15%
 | 使用例 | 詳細情報 |
 | --- | --- |
 | すべてのアクティビティのタイプ |  |
-| ネイティブおよびSPA Visual Experience Composerのサポート | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
+| ネイティブおよびSPA Visual Experience Composerのサポート | [ドキュメント](../personalization/adobe-target/spa-implementation.md) |
 | フォームベースのコンポーザー |  |
-| グローバルmboxのサポート | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
-| カスタム mbox | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
+| グローバルmboxのサポート | [ドキュメント](../personalization/rendering-personalization-content.md#automatically-rendering-content) |
+| カスタム mbox | [ドキュメント](../personalization/rendering-personalization-content.md#manually-rendering-content) |
 | Analytics for Target（A4T） |  |
 | 環境のサポート |  |
 | Workspaceのサポート |  |
@@ -88,10 +87,10 @@ ht-degree: 15%
 | プロファイルスクリプト |  |
 | XDMがmboxパラメーターになる |  |
 | A4Tレポートでサポートされるリダイレクトオファー | [ドキュメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
-| Targetプロファイルの更新 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Targetプロファイルの更新 | [ドキュメント](../personalization/adobe-target/target-overview.md#single-profile-update) |
 | 推奨事項 |  |
 | mboxサードパーティID |  |
-| レスポンストークン | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
+| レスポンストークン | [ドキュメント](../personalization/adobe-target/accessing-response-tokens.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
