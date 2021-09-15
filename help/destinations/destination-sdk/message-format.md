@@ -4,10 +4,10 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: メッセージのフォーマット
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
-ht-degree: 3%
+source-wordcount: '2056'
+ht-degree: 2%
 
 ---
 
@@ -775,17 +775,22 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 }
 ```
 
-### テンプレートに集計キーを含めて、エクスポートされたプロファイルを様々な条件でグループ化します。 {#template-aggregation-key}
+### テンプレートに集計キーを含めて、様々な条件でグループ化され、エクスポートされたプロファイルにアクセスします {#template-aggregation-key}
 
-宛先設定で[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用する場合、次の例に示すように、メッセージ変換テンプレートを編集し、セグメントID、セグメントエイリアス、セグメントメンバーシップ、ID名前空間などの条件に基づいて、宛先に書き出したプロファイルをグループ化できます。
+宛先設定で[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用する場合、セグメントID、セグメントエイリアス、セグメントメンバーシップ、ID名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化できます。
+
+メッセージ変換テンプレートでは、次の節の例に示すように、上記の集計キーにアクセスできます。 これは、宛先で想定される形式に合わせて、Experience Platformから書き出されるHTTPメッセージを書式設定するのに役立ちます。
 
 #### テンプレートでのセグメントID集計キーの使用 {#aggregation-key-segment-id}
 
-[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートで`segmentId`を使用して、宛先にエクスポートされるHTTPメッセージ内のプロファイルをグループ化できます。
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合、宛先に書き出されるHTTPメッセージ内のプロファイルはセグメントIDでグループ化されます。 テンプレートのセグメントIDにアクセスする方法については、以下を参照してください。
 
 **入力**
 
-以下の4つのプロファイルを考えてみましょう。最初の2つはセグメントID `788d8874-8007-4253-92b7-ee6b6c20c6f3`のセグメントの一部で、残りの2つはセグメントID `8f812592-3f06-416b-bd50-e7831848a31a`のセグメントの一部です。
+次の4つのプロファイルについて考えてみます。
+* 最初の2つは、セグメントIDが`788d8874-8007-4253-92b7-ee6b6c20c6f3`のセグメントの一部です
+* 3つ目のプロファイルは、セグメントIDが`8f812592-3f06-416b-bd50-e7831848a31a`のセグメントの一部です。
+* 4つ目のプロファイルは、上記の両方のセグメントの一部です。
 
 プロファイル1:
 
@@ -873,6 +878,10 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 >
 >使用するすべてのテンプレートに対して、[宛先サーバー設定](./server-and-template-configuration.md#template-specs)にテンプレートを挿入する前に、二重引用符`""`などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON標準](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)の第9章を参照してください。
 
+以下に、テンプレートで`audienceId`がセグメントIDにアクセスする方法を示します。 これは、宛先の分類でセグメントメンバーシップに`audienceId`を使用していることを前提としています。 独自の分類に応じて、他のフィールド名を代わりに使用できます。
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### テンプレートでのセグメントエイリアス集計キーの使用 {#aggregation-key-segment-alias}
 
-[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートでセグメントエイリアスを使用して、宛先にエクスポートされたHTTPメッセージ内のプロファイルをグループ化できます。
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレート内のセグメントエイリアスにアクセスすることもできます。
 
-テンプレートの下に行を追加し、セグメントエイリアスに基づいて、書き出したプロファイルをグループ化します。
+テンプレートの下に行を追加して、セグメントエイリアスでグループ化してエクスポートされたプロファイルにアクセスします。
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### テンプレートでのセグメントステータス集計キーの使用 {#aggregation-key-segment-status}
 
-[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`と`includeSegmentStatus`をtrueに設定した場合は、テンプレートでセグメントステータスを使用して、プロファイルをセグメントに追加または削除するかに基づいて、宛先にエクスポートするHTTPメッセージ内のプロファイルをグループ化できます。
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`と`includeSegmentStatus`をtrueに設定した場合、テンプレートのセグメントステータスにアクセスして、プロファイルをセグメントに追加または削除するかに基づいて、宛先にエクスポートするHTTPメッセージ内のプロファイルをグループ化できます。
 
 次のような値を選択できます。
 
@@ -962,10 +969,10 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 * 既存
 * 終了
 
-上記の値に基づいて、テンプレートの下に行を追加し、セグメントに対してプロファイルを追加または削除します。：
+上記の値に基づいて、テンプレートの下に行を追加し、セグメントに対してプロファイルを追加または削除します。
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### テンプレートでID名前空間集計キーを使用する {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 >
 >使用するすべてのテンプレートに対して、[宛先サーバー設定](./server-and-template-configuration.md#template-specs)にテンプレートを挿入する前に、二重引用符`""`などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON標準](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)の第9章を参照してください。
 
+`input.aggregationKey.identityNamespaces`は以下のテンプレートで使用されています。
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 }
 ```
 
-#### URLテンプレートでの集計キーの使用
+#### URLテンプレートでの集計キーの使用 {#aggregation-key-url-template}
 
 使用事例に応じて、以下に示すように、ここに示す集計キーもURLで使用できます。
 
