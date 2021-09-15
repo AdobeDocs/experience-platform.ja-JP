@@ -3,9 +3,10 @@ description: このページのコンテンツを、パートナーの宛先の�
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: メッセージのフォーマット
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1982'
 ht-degree: 3%
 
 ---
@@ -93,17 +94,15 @@ Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/)と類似した
 
 1. 単純な変換の例です。 [プロファイル属性](./message-format.md#attributes)、[セグメントメンバーシップ](./message-format.md#segment-membership)、[ID](./message-format.md#identities)フィールドの単純な変換でテンプレートがどのように機能するかを説明します。
 2. 上記のフィールドを組み合わせたテンプレートの複雑な例を増やしました。[セグメントとIDを送信するテンプレートを作成](./message-format.md#segments-and-identities)および[セグメント、ID、プロファイル属性を送信するテンプレートを作成](./message-format.md#segments-identities-attributes)します。
-3. 業界パートナーのテンプレートの例を2つ示し、最も深く掘り下げます。
+3. テンプレートには集計キーが含まれます。 宛先設定で[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用すると、Experience Platformは、セグメントID、セグメントステータス、ID名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
 書き出したプロファイル属性を宛先に変換するには、以下のJSONとコードサンプルを参照してください。
 
-
 >[!IMPORTANT]
 >
 >Adobe Experience Platformで使用可能なすべてのプロファイル属性のリストについては、[XDMフィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en)を参照してください。
-
 
 
 **入力**
@@ -776,7 +775,311 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 }
 ```
 
-### リファレンス：変換テンプレートで使用されるコンテキストと関数
+### テンプレートに集計キーを含めて、エクスポートされたプロファイルを様々な条件でグループ化します。 {#template-aggregation-key}
+
+宛先設定で[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用する場合、次の例に示すように、メッセージ変換テンプレートを編集し、セグメントID、セグメントエイリアス、セグメントメンバーシップ、ID名前空間などの条件に基づいて、宛先に書き出したプロファイルをグループ化できます。
+
+#### テンプレートでのセグメントID集計キーの使用例 {#aggregation-key-segment-id}
+
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートで`segmentId`を使用して、宛先にエクスポートされるHTTPメッセージ内のプロファイルをグループ化できます。
+
+**入力**
+
+以下の4つのプロファイルを考えてみましょう。最初の2つはセグメントID `788d8874-8007-4253-92b7-ee6b6c20c6f3`のセグメントの一部で、残りの2つはセグメントID `8f812592-3f06-416b-bd50-e7831848a31a`のセグメントの一部です。
+
+プロファイル1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+プロファイル2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+プロファイル3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+プロファイル4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**テンプレート**
+
+>[!IMPORTANT]
+>
+>使用するすべてのテンプレートに対して、[宛先サーバー設定](./server-and-template-configuration.md#template-specs)にテンプレートを挿入する前に、二重引用符`""`などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON標準](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)の第9章を参照してください。
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**結果**
+
+宛先に書き出すと、プロファイルは、セグメントIDに基づいて2つのグループに分割されます。
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### テンプレートでのセグメントエイリアス集計キーの使用例 {#aggregation-key-segment-alias}
+
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートでセグメントエイリアスを使用して、宛先にエクスポートされたHTTPメッセージ内のプロファイルをグループ化できます。
+
+テンプレートの下に行を追加し、セグメントエイリアスに基づいて、書き出したプロファイルをグループ化します。
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### テンプレートでのセグメントステータス集計キーの使用例 {#aggregation-key-segment-status}
+
+[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`と`includeSegmentStatus`をtrueに設定した場合は、テンプレートでセグメントステータスを使用して、プロファイルをセグメントに追加または削除するかに基づいて、宛先にエクスポートするHTTPメッセージ内のプロファイルをグループ化できます。
+
+次のような値を選択できます。
+
+* 実現
+* 既存
+* 終了
+
+上記の値に基づいて、テンプレートの下に行を追加し、セグメントに対してプロファイルを追加または削除します。：
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### テンプレートでのID名前空間集計キーの使用例 {#aggregation-key-identity}
+
+次の例では、宛先設定の[設定可能な集計](./destination-configuration.md#configurable-aggregation)が、書き出されたプロファイルをID名前空間別に集計するように設定されています（`"identityNamespaces": ["email", "phone"]`形式）
+
+**入力**
+
+プロファイル1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+プロファイル2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**テンプレート**
+
+>[!IMPORTANT]
+>
+>使用するすべてのテンプレートに対して、[宛先サーバー設定](./server-and-template-configuration.md#template-specs)にテンプレートを挿入する前に、二重引用符`""`などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON標準](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)の第9章を参照してください。
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**結果**
+
+以下の`json`は、Adobe Experience Platformからエクスポートされたデータを表しています。
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### URLテンプレートでの集計キーの使用例
+
+使用事例に応じて、以下に示すように、ここに示す集計キーもURLで使用できます。
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### リファレンス：変換テンプレートで使用されるコンテキストと関数 {#reference}
 
 テンプレートに指定されたコンテキストには、`input`（この呼び出しで書き出されるプロファイル/データ）と`destination`(Adobeがデータを送信する宛先に関するデータ。すべてのプロファイルで有効)が含まれます。
 

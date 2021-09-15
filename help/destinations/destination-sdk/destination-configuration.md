@@ -2,9 +2,9 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができるIDも決まります。
 title: 宛先SDKの宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,8 @@ ID名前空間では、[!DNL Platform]と宛先の間に1対1の対応関係は�
 集計ポリシーは、エクスポートされたプロファイルをデータエクスポートで結合する方法を決定します。 次の選択肢があります。
 * ベストエフォート集計
 * 設定可能な集計（上の設定で表示）
+
+[テンプレート](./message-format.md#using-templating)と[集計の主な例](./message-format.md#template-aggregation-key)の使用に関する節を読み、選択した集計ポリシーに基づいてメッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
 
 ### ベストエフォート集計 {#best-effort-aggregation}
 
