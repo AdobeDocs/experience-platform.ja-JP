@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: メッセージのフォーマット
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 3%
 
 ---
@@ -779,7 +779,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 
 宛先設定で[設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用する場合、次の例に示すように、メッセージ変換テンプレートを編集し、セグメントID、セグメントエイリアス、セグメントメンバーシップ、ID名前空間などの条件に基づいて、宛先に書き出したプロファイルをグループ化できます。
 
-#### テンプレートでのセグメントID集計キーの使用例 {#aggregation-key-segment-id}
+#### テンプレートでのセグメントID集計キーの使用 {#aggregation-key-segment-id}
 
 [設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートで`segmentId`を使用して、宛先にエクスポートされるHTTPメッセージ内のプロファイルをグループ化できます。
 
@@ -942,7 +942,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 }
 ```
 
-#### テンプレートでのセグメントエイリアス集計キーの使用例 {#aggregation-key-segment-alias}
+#### テンプレートでのセグメントエイリアス集計キーの使用 {#aggregation-key-segment-alias}
 
 [設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`をtrueに設定した場合は、テンプレートでセグメントエイリアスを使用して、宛先にエクスポートされたHTTPメッセージ内のプロファイルをグループ化できます。
 
@@ -952,7 +952,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### テンプレートでのセグメントステータス集計キーの使用例 {#aggregation-key-segment-status}
+#### テンプレートでのセグメントステータス集計キーの使用 {#aggregation-key-segment-status}
 
 [設定可能な集計](./destination-configuration.md#configurable-aggregation)を使用し、`includeSegmentId`と`includeSegmentStatus`をtrueに設定した場合は、テンプレートでセグメントステータスを使用して、プロファイルをセグメントに追加または削除するかに基づいて、宛先にエクスポートするHTTPメッセージ内のプロファイルをグループ化できます。
 
@@ -968,7 +968,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### テンプレートでのID名前空間集計キーの使用例 {#aggregation-key-identity}
+#### テンプレートでID名前空間集計キーを使用する {#aggregation-key-identity}
 
 次の例では、宛先設定の[設定可能な集計](./destination-configuration.md#configurable-aggregation)が、書き出されたプロファイルをID名前空間別に集計するように設定されています（`"identityNamespaces": ["email", "phone"]`形式）
 
@@ -1071,7 +1071,7 @@ Experience PlatformのIDについて詳しくは、[ID名前空間の概要](htt
 }
 ```
 
-#### URLテンプレートでの集計キーの使用例
+#### URLテンプレートでの集計キーの使用
 
 使用事例に応じて、以下に示すように、ここに示す集計キーもURLで使用できます。
 
