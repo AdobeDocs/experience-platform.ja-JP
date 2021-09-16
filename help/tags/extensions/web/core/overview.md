@@ -2,10 +2,10 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 95%
+source-wordcount: '5257'
+ht-degree: 93%
 
 ---
 
@@ -708,6 +708,61 @@ CSS セレクターチェーン：
 ローカルストレージを使用すると、ブラウザーはページからページへと情報を保存できます（[https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)）。ローカルストレージは cookie のように機能しますが、cookie よりも大きく、柔軟です。
 
 指定したフィールドを使用して、ローカルストレージ項目用に作成した値（例：`lastProductViewed.`）を指定します。
+
+### 結合されたオブジェクト
+
+各要素がオブジェクトを提供する複数のデータ要素を選択します。 これらのオブジェクトは、深く（再帰的に）マージされ、新しいオブジェクトが生成されます。 ソースオブジェクトは変更されません。 複数のソースオブジェクト上の同じ場所にプロパティが見つかった場合は、後者のオブジェクトの値が使用されます。 ソースプロパティの値が`undefined`の場合、以前のソースオブジェクトの値は上書きされません。 複数のソース・オブジェクト上の同じ場所に配列が見つかった場合、配列は連結されます。
+
+例えば、次のオブジェクトを提供するデータ要素を選択するとします。
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+次のオブジェクトを提供する別のデータ要素も選択するとします。
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+結合されたオブジェクトのデータ要素の結果は、次のオブジェクトになります。
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### ページ情報
 
