@@ -1,10 +1,11 @@
 ---
 title: コア拡張機能のリリースノート
-description: Adobe Experience Platform の Core 拡張機能に関する最新のリリースノートです。
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: ht
-source-wordcount: '1293'
-ht-degree: 100%
+description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+workflow-type: tm+mt
+source-wordcount: '1417'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +13,19 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021年9月16日（PT）
+
+v3.1.0
+
+新しいデータ要素が追加されました。
+
+* Merged Object — 各データ要素がオブジェクトを提供する複数のデータ要素を選択します。 これらのオブジェクトは、深く（再帰的に）マージされ、新しいオブジェクトが生成されます。
+* 条件付き値 — 比較の結果に基づいて、2つの値（conditionalValueまたはfallbackValue）のいずれかを返します。
+* ランタイム環境 — 次のLaunch環境変数のいずれかを返します。環境ステージ、ライブラリビルド日、プロパティ名、プロパティID、ルール名、ルールID、イベントタイプ、イベント詳細ペイロード、ダイレクト呼び出し識別子。
+* JavaScriptツール — 一般的なJavaScript操作用のラッパー：基本的な文字列操作(replace、substring、regex match、first and last index、split、slice)、基本的な配列操作(slice、join、pop、shift)および基本的なユニバーサル操作(slice、length)。
+* デバイス属性 — ウィンドウサイズや画面サイズなどのデバイス属性を返します。
 
 ## 2021 年 8 月 11 日（PT）
 
@@ -141,8 +154,8 @@ v1.4.2
 ## 2018 年 11 月 8 日（PT）
 
 * **コホート保持オプション**：コホートを持続するオプションがサンプリング条件に追加されました。これにより、セッションをまたいでサンプルコホートにユーザーを保持したり、サンプルコホートから削除できるようになります。例えば、「persist cohort」チェックボックスがオンになっており、条件が特定の訪問者に対して最初に実行されたときに true を返す場合、同じ訪問者に対して、その後のすべての条件の実行時に true が返されます。同様に、「persist cohort」チェックボックスがオンになっており、条件が特定の訪問者に対して最初に実行されたときに false を返す場合、同じ訪問者に対して、その後のすべての条件の実行時に false が返されます。
-* **バグ修正**：タグが同時に読み込まれるけれど、正常にインストールされない（`_satellite.pageBottom()` への呼び出しをおこなわない）ページにおいて、「Page Bottom」イベントと「Custom Code」アクションを使用するルールによって Web サイトのコンテンツが消去される問題を修正しました。
-* **バグ修正**：タグライブラリが非同期で読み込まれ、ブラウザーの DOMContentLoaded イベントが実行された後に読み込みを終了した場合、「Enters Viewport」が機能しない問題を修正しました。
+* **バグ修正**：タグが同期的に読み込まれるが適切にインストールされていない（`_satellite.pageBottom()` への呼び出しがない）ページで「Page Bottom」イベントとカスタムコードアクションを使用するルールが Web サイトのコンテンツを消去する問題を修正しました。
+* **バグ修正**：タグライブラリが非同期で読み込まれ、ブラウザーの DOMContentLoaded イベントが実行された後に読み込みを終了した場合、「ビューポートを開く」が機能しない問題を修正しました。
 
 ## 2018 年 5 月 24 日（PT）
 
