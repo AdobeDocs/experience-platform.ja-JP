@@ -1,10 +1,10 @@
 ---
 title: Pinterest Conversion Tracking 拡張機能
 description: pinterest Conversion Tracking拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: e7959e678ec7d086a50f3142e9e64b34adb57214
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 28%
+ht-degree: 29%
 
 ---
 
