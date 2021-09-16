@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイルUIガイド
 topic-legacy: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 12%
 
 ---
@@ -75,15 +75,21 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL Pro
 
 「**[!UICONTROL 参照]**」タブでは、結合ポリシーを使用してサンプルプロファイルを表示したり、ID名前空間と値を使用して特定のプロファイルを検索したりできます。
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### [!UICONTROL 結合ポリシー]で参照
 
-**[!UICONTROL 「]**&#x200B;で参照」セレクターはデフォルトで「[!UICONTROL 結合ポリシー]」に設定され、「**[!UICONTROL 結合ポリシー]**」が組織のデフォルトの結合ポリシーに選択されています。
+「**[!UICONTROL 参照]**」タブは、デフォルトで組織のデフォルトの結合ポリシーに設定されます。 別の結合ポリシーを選択するには、結合ポリシー名の横にある`X`を選択し、セレクターを使用して&#x200B;**[!UICONTROL 結合ポリシーを選択]**&#x200B;ダイアログを開きます。
 
-結合ポリシーとPlatform内での役割について詳しくは、[結合ポリシーの概要](../merge-policies/overview.md)を参照してください。
+>[!NOTE]
+>
+>結合ポリシーが選択されていない場合は、「**[!UICONTROL 結合ポリシー]**」フィールドの横にあるセレクターボタンを使用して、選択ダイアログを開きます。
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+**[!UICONTROL 結合ポリシー]**&#x200B;を選択ダイアログから結合ポリシーを選択するには、ポリシー名の横にあるラジオボタンを選択し、**[!UICONTROL 選択]**&#x200B;を使用して「[!UICONTROL 参照]」タブに戻ります。 次に、「**[!UICONTROL 表示]**」を選択して、サンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプリングを確認できます。
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 表示されるプロファイルは、選択した結合ポリシーが適用された後に、組織のプロファイルストアから最大20個のプロファイルのサンプルを表します。 選択した結合ポリシーのサンプルプロファイルは、新しいデータが組織のプロファイルストアに追加されると更新されます。
 
@@ -91,21 +97,16 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL Pro
 
 ![](../images/user-guide/sample-profiles.png)
 
-別の結合ポリシーを選択するには、結合ポリシー名の横にある`X`を選択し、セレクターを使用して&#x200B;**[!UICONTROL 結合ポリシーを選択]**&#x200B;ダイアログを開きます。
+結合ポリシーとPlatform内での役割について詳しくは、[結合ポリシーの概要](../merge-policies/overview.md)を参照してください。
 
-![](../images/user-guide/merge-policy-select.png)
-
-**[!UICONTROL 結合ポリシー]**&#x200B;を選択ダイアログから結合ポリシーを選択するには、ポリシー名の横にあるラジオボタンを選択し、**[!UICONTROL 選択]**&#x200B;を使用して「[!UICONTROL 参照]」タブに戻ります。 次に、「**[!UICONTROL 表示]**」を選択して、サンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプリングを確認できます。
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### [!UICONTROL ID]で参照
 
-****&#x200B;で参照セレクターを使用して、[!UICONTROL ID]を選択し、ID値で特定のプロファイルを検索できます。 IDで参照する場合は、結合ポリシー、ID名前空間、ID値も指定する必要があります。
+「**[!UICONTROL 参照]**」タブでは、ID名前空間を使用して、ID値で特定のプロファイルを検索できます。 IDで参照するには、結合ポリシー、ID名前空間、ID値を指定する必要があります。
 
 ![](../images/user-guide/browse-by-identity.png)
 
-**[!UICONTROL 結合ポリシー]**&#x200B;セレクターを使用して&#x200B;**[!UICONTROL 結合ポリシー]**&#x200B;を選択ダイアログを開き、使用する結合ポリシーを選択します。
+必要に応じて、**[!UICONTROL 結合ポリシー]**&#x200B;セレクターを使用して&#x200B;**[!UICONTROL 結合ポリシー]**&#x200B;を選択ダイアログを開き、使用する結合ポリシーを選択します。
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
