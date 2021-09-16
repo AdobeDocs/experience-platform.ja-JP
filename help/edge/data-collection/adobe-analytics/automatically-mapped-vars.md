@@ -4,9 +4,9 @@ description: Adobe AnalyticsでExperience PlatformWeb SDKを使用して自動�
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics；変数；analytics；自動マップ；自動マッピング；
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 35%
 
 ---
@@ -88,9 +88,8 @@ ht-degree: 35%
 | placeContext.geo.longitude | lon | AppMeasurement クエリパラメーター LONGITUDE のマッピング。 |
 | placeContext.geo.postalCode | 郵便番号 | AppMeasurement クエリパラメーター ZIP のマッピング。 |
 | placeContext.geo.stateProvince | state | AppMeasurement クエリパラメーター STATE のマッピング。 |
-| productlistitems[いいえ]._[NAME_SPACE].* | 製品 | AppMeasurementクエリパラメーター「製品」の「商品イベント/Evars」のマッピング。 |
-| productListItems[N].lineItemId | 製品 | AppMeasurementクエリパラメーター「製品名」のマッピング。 |
-| productlistitems[N].name | 製品 | AppMeasurementクエリパラメーター「製品カテゴリ」のマッピング。 |
+| productListItems[N].lineItemId | 製品 | AppMeasurementクエリパラメーター「製品カテゴリ」のマッピング。 |
+| productlistitems[N].name | 製品 | AppMeasurementクエリパラメーター「製品名」のマッピング。 |
 | productlistitems[N].priceTotal | 製品 | AppMeasurementクエリパラメーター「製品価格」のマッピング。 |
 | productlistitems[N].quantity | 製品 | AppMeasurementクエリパラメーター「製品数量」のマッピング。 |
 | web.webInteraction.URL | pev1 | AppMeasurementクエリパラメーターPAGE_EVENT_VAR1のマッピング。 |
