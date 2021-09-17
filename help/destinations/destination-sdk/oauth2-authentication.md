@@ -2,9 +2,9 @@
 description: このページでは、宛先SDKでサポートされる様々なOAuth 2認証フローについて説明し、宛先のOAuth 2認証を設定する手順を説明します。
 title: OAuth 2認証
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 6%
 
 ---
@@ -21,18 +21,15 @@ ht-degree: 6%
 
 ### システムの前提条件 {#prerequisites}
 
-最初の手順として、Adobe Experience Platform用のシステムでアプリを作成するか、システムにExperience Platformを登録する必要があります。 目標は、宛先への認証に必要なクライアントIDとクライアント秘密鍵を生成することです。 システムのこの設定の一部として、Adobe Experience Platform OAuth 2リダイレクト/コールバックURLが必要です。このURLは、以下の表から取得できます。
+最初の手順として、Adobe Experience Platform用のシステムでアプリを作成するか、システムにExperience Platformを登録する必要があります。 目標は、宛先への認証に必要なクライアントIDとクライアント秘密鍵を生成することです。 システムでのこの設定の一部として、Adobe Experience Platform OAuth 2リダイレクト/コールバックURLが必要です。これは、以下のリストから取得できます。
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >システムにAdobe Experience Platformのリダイレクト/コールバックURLを登録する手順は、承認コード](./oauth2-authentication.md#authorization-code)付与タイプの[OAuth 2に対してのみ必要です。 サポートされている他の2種類の付与タイプ（パスワードとクライアント資格情報）については、この手順をスキップできます。
-
-| リダイレクト/コールバックURL | 環境 |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | 実稼動 |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | ステージング |
-
-{style=&quot;table-layout:auto&quot;}
 
 この手順の最後に、次の操作をおこなう必要があります。
 * クライアントID。
@@ -466,7 +463,7 @@ Adobeは、ユーザーがプラットフォームにログインし直す必要
 | response.body | HTTP応答本文 | ``{{ response.body.access_token }}`` |
 | response.status | HTTP レスポンスステータス | ``{{ response.status }}`` |
 | response.headers | HTTP応答ヘッダー | ``{{ response.headers.server[0] }}`` |
-| authContext | 現在の認証試行に関する情報にアクセスします | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | 現在の認証試行に関する情報にアクセスします | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
