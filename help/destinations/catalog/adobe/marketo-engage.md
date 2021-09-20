@@ -1,13 +1,13 @@
 ---
 title: Marketo Engage先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対応する、エンドツーエンドのカスタマーエクスペリエンス管理(CXM)ソリューションの1つです。 CRMのリード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高アトリビューションに至るまで、アクティビティを自動化および管理できます。
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '307'
 ht-degree: 3%
 
 ---
-
 
 # （ベータ版）Marketo Engage先 {#beta-marketo-engage-destination}
 
@@ -32,18 +32,26 @@ Marketo Engageは、マーケティング、広告、分析、コマースに対
 
 セグメントのエクスポート — セグメントの宛先で使用されている識別子（名前、電話番号など）を持つセグメント（オーディエンス）のすべてのMarketo Engageをエクスポートします。
 
-## 設定 {#set-up}
+## 宛先の設定とセグメントのアクティブ化 {#set-up}
 
-宛先[の設定方法に関する説明は、](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)を参照してください。
+宛先の設定方法とセグメントのアクティブ化方法について詳しくは、Marketoドキュメントの「[Adobe Experience PlatformセグメントをMarketo静的リストにプッシュする](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)」を参照してください。
 
-## 宛先に接続 {#connect}
+<!--
 
-この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
+## Connect to the destination {#connect}
+
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+
+-->
 
 ## データの使用とガバナンス {#data-usage-governance}
 
 すべての[!DNL Adobe Experience Platform]宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform]によるデータガバナンスの強制方法について詳しくは、[データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)を参照してください。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+<!--
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
+## Activate segments to this destination {#activate}
+
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+-->
