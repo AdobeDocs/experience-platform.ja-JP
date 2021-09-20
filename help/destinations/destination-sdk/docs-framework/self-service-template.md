@@ -2,7 +2,7 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先の公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 3%
@@ -59,14 +59,13 @@ ht-degree: 3%
 
 *YOURDESTINATION*&#x200B;の宛先をいつどのように使用するかを理解しやすくするために、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
-
-### ユースケース 1
+### 使用例#1
 
 *モバイルメッセージプラットフォームの場合：*
 
 *自宅でのレンタルや販売のプラットフォームでは、顧客のAndroidやiOSデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みのリストが100件あることを知らせたいと考えています。*
 
-### ユースケース 2
+### 使用例#2
 
 *ソーシャルネットワークプラットフォームの場合：*
 
@@ -151,7 +150,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## 書き出されたデータ {#exported-data}
+## エクスポートされたデータ {#exported-data}
 
 *宛先へのデータの書き出し方法に関する注意を追加します。これは、顧客が宛先と正しく統合されていることを確認するのに役立ちます。 例えば、以下のようなJSONのサンプルを提供できます。*
 
