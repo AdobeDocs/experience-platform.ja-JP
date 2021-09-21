@@ -5,9 +5,9 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 56%
 
 ---
@@ -38,7 +38,7 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Audience Manager
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
 - [UIでの [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### 広告
+### Advertising Cloud
 
 Experience Platformは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
@@ -97,6 +97,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL Oracle] コネクタ](connectors/databases/oracle.md)
 - [[!DNL Phoenix] コネクタ](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] コネクタ](connectors/databases/postgres.md)
+- [[!DNL Snowflake] コネクタ](connectors/databases/snowflake.md)
 
 ### e コマース
 

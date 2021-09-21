@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 18%
+source-wordcount: '647'
+ht-degree: 19%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 18%
          - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Marketo Engageの名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - 広告 {#advertising}
+   - Advertising Cloud {#advertising}
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - クラウドストレージ{#cloud-storage}
       - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
@@ -71,6 +71,7 @@ ht-degree: 18%
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
       - [PostgreSQLコネクタ](connectors/databases/postgres.md)
+      - [Snowflakeコネクタ](connectors/databases/snowflake.md)
    - e コマース {#ecommerce}
       - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
    - ローカルシステム{#local-system}
@@ -86,7 +87,7 @@ ht-degree: 18%
       - [HTTP APIコネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
    - ベース接続{#create}を作成します。
-      - 広告 {#advertising}
+      - Advertising Cloud {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
          - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -125,6 +126,7 @@ ht-degree: 18%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [フェニックス](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -173,7 +175,7 @@ ht-degree: 18%
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - 広告 {#create}
+      - Advertising Cloud {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
          - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -214,6 +216,7 @@ ht-degree: 18%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [フェニックス](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - ローカルシステム{#local-system}
