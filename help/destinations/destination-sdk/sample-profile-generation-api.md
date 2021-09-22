@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/sample-profiles」 APIエンドポイントを使用して実行できる、宛先テストで使用するサンプルプロファイルを生成するAPI操作の一覧と説明を示します。
 title: プロファイル生成API操作の例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ AdobeXDMソーススキーマまたは宛先でサポートされているター
 続行する前に、[はじめに](./getting-started.md)を参照し、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## ソーススキーマに基づくサンプルプロファイルの生成 {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>[宛先](./test-destination.md)をテストする際に、ここで生成されたサンプルプロファイルをHTTP呼び出しに追加します。
 
 `authoring/sample-profiles/`エンドポイントにGETリクエストを送信し、テストする宛先設定に基づいて作成した宛先インスタンスのIDを指定することで、ソーススキーマに基づいてサンプルプロファイルを生成できます。
 
@@ -176,6 +180,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 {style=&quot;table-layout:auto&quot;}
 
 ## ターゲットスキーマに基づいてサンプルプロファイルを生成する {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>テンプレートの作成時に、[レンダリングテンプレートの手順](./render-template-api.md#multiple-profiles-with-body)で生成されたサンプルプロファイルを使用します。
 
 `authoring/sample-profiles/`エンドポイントに対してGETリクエストをおこなうターゲットスキーマに基づいて、サンプルプロファイルを生成し、テンプレートを作成するターゲット設定に基づいて宛先設定の宛先IDを指定できます。
 

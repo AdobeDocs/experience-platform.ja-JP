@@ -2,10 +2,10 @@
 description: サーバーとテンプレートの仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDKで設定できます。
 title: 宛先SDKのサーバーおよびテンプレート仕様の設定オプション
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 9%
 
 ---
 
@@ -48,10 +48,10 @@ ht-degree: 7%
 
 | パラメーター | タイプ | 説明 |
 |---|---|---|
-| `name` | 文字列 | サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。 この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
-| `destinationServerType` | 文字列 | `URL_BASED` は現在、唯一のオプションです。 |
-| `templatingStrategy` | 文字列 | <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
-| `value` | 文字列 | Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
+| `name` | 文字列 | *必須* サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
+| `destinationServerType` | 文字列 | *必須* `URL_BASED` は現在、唯一のオプションです。 |
+| `templatingStrategy` | 文字列 | *必須.* <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
+| `value` | 文字列 | *必須* Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,10 +83,10 @@ ht-degree: 7%
 
 | パラメーター | タイプ | 説明 |
 |---|---|---|
-| `httpMethod` | 文字列 | サーバーへの呼び出しでAdobeが使用するメソッド。 オプションは`GET`、`PUT`、`POST`、`DELETE`、`PATCH`です。 |
-| `templatingStrategy` | 文字列 | `PEBBLE_V1`.を使用します。 |
-| `value` | 文字列 | この文字列は、Platformの顧客のデータをサービスが想定する形式に変換する文字エスケープバージョンです。 <br> テンプレートの作成方法について詳しくは、テンプレートの使用の節 [を参照してください](./message-format.md#using-templating)。<br> 文字のエスケープについて詳しくは、 [RFC JSON標準の7節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、プロファイルのAttributetransformationを参照し [てく](./message-format.md#attributes) ださい。 |
-| `contentType` | 文字列 | サーバーが受け入れるコンテンツタイプ。 この値は`application/json`と考えられます。 |
+| `httpMethod` | 文字列 | *必須* サーバーへの呼び出しでAdobeが使用するメソッド。オプションは`GET`、`PUT`、`POST`、`DELETE`、`PATCH`です。 |
+| `templatingStrategy` | 文字列 | *必須* 用途 `PEBBLE_V1`. |
+| `value` | 文字列 | *必須* この文字列は、Platformの顧客のデータをサービスが想定する形式に変換する文字エスケープバージョンです。<br> テンプレートの作成方法について詳しくは、テンプレートの使用の節 [を参照してください](./message-format.md#using-templating)。<br> 文字のエスケープについて詳しくは、 [RFC JSON標準の7節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、プロファイルのAttributetransformationを参照し [てく](./message-format.md#attributes) ださい。 |
+| `contentType` | 文字列 | *必須* サーバーが受け入れるコンテンツタイプ。この値は`application/json`と考えられます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

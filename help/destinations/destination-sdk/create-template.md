@@ -1,9 +1,10 @@
 ---
 description: 宛先SDKの一部として、Adobeは、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。
 title: メッセージ変換テンプレートの作成とテスト
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-指定した宛先IDが`maxUsersPerRequest=1`を含む宛先サーバーテンプレートに対応する場合、リクエストは次のようなサンプルテンプレートを返します。
+指定した宛先IDが、集計ポリシーの[best effort aggregation](./destination-configuration.md#best-effort-aggregation)と`maxUsersPerRequest=1`を使用した宛先設定に対応している場合、リクエストは次のようなサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-指定した宛先IDが`maxUsersPerRequest`が1より大きい宛先サーバーテンプレートに対応している場合、リクエストは次のようなサンプルテンプレートを返します。
+指定した宛先IDが、[構成可能な集計](./destination-configuration.md#configurable-aggregation)または[ベストエフォート集計](./destination-configuration.md#best-effort-aggregation)が1より大きい宛先サーバーテンプレートに対応する場合、リクエストは次のようなサンプルテンプレートを返します。`maxUsersPerRequest`
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

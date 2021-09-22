@@ -1,9 +1,10 @@
 ---
 description: このページでは、「/authoring/testing/template/sample」 APIエンドポイントを使用して実行できる、宛先のテストメッセージ変換テンプレートを取得するためのAPI操作の一覧と説明を示します。
 title: 「Get sample template API」操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '401'
 ht-degree: 2%
 
 ---
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 正常な応答は、HTTPステータス200と、期待されるデータ形式に合わせて編集できるサンプルテンプレートを返します。
 
-指定した宛先IDが`maxUsersPerRequest=1`を含む宛先サーバーテンプレートに対応する場合、リクエストは次のようなサンプルテンプレートを返します。
+指定した宛先IDが、集計ポリシーの[best effort aggregation](./destination-configuration.md#best-effort-aggregation)と`maxUsersPerRequest=1`を使用した宛先設定に対応している場合、リクエストは次のようなサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-指定した宛先IDが`maxUsersPerRequest`が1より大きい宛先サーバーテンプレートに対応している場合、リクエストは次のようなサンプルテンプレートを返します。
+指定した宛先IDが、[構成可能な集計](./destination-configuration.md#configurable-aggregation)または[ベストエフォート集計](./destination-configuration.md#best-effort-aggregation)が1より大きい宛先サーバーテンプレートに対応する場合、リクエストは次のようなサンプルテンプレートを返します。`maxUsersPerRequest`
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
