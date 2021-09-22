@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDKを使用した顧客の同意データ�
 topic-legacy: getting started
 description: Adobe Experience Platform Web SDKを統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -97,6 +97,10 @@ SDK拡張機能がインストールされている場合は、ユーザーの�
 ## 同意変更コマンドの実行 {#commands}
 
 SDK拡張機能をWebサイトに統合したら、 Platform Web SDK `setConsent`コマンドを使用して、Platformに同意データを送信できます。
+
+>[!IMPORTANT]
+>
+>`setConsent`コマンドは、プロファイルストア内のデータのみを直接更新し、データレイクにデータを送信しません。
 
 サイト上で`setConsent`が呼び出されるシナリオは2つあります。
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## SDK応答の処理
 
 すべての[!DNL Platform SDK]コマンドは、呼び出しが成功したか失敗したかを示すpromiseを返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 具体的な例については、SDKコマンドの実行に関するガイドの[成功または失敗](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure)の処理に関する節を参照してください。
+
+SDKで`setConsent`の呼び出しが正常におこなわれたら、Platform UIのプロファイルビューアを使用して、データがプロファイルストアにランディングしているかどうかを確認できます。 詳しくは、[IDによるプロファイルの参照](../../../profile/ui/user-guide.md#browse-identity)の節を参照してください。
 
 ## 次の手順
 

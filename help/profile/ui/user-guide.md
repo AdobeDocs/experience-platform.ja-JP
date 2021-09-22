@@ -4,7 +4,7 @@ title: リアルタイム顧客プロファイルUIガイド
 topic-legacy: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 12%
@@ -100,7 +100,7 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL Pro
 結合ポリシーとPlatform内での役割について詳しくは、[結合ポリシーの概要](../merge-policies/overview.md)を参照してください。
 
 
-### [!UICONTROL ID]で参照
+### [!UICONTROL ID]で参照 {#browse-identity}
 
 「**[!UICONTROL 参照]**」タブでは、ID名前空間を使用して、ID値で特定のプロファイルを検索できます。 IDで参照するには、結合ポリシー、ID名前空間、ID値を指定する必要があります。
 
