@@ -4,7 +4,7 @@ description: Adobe AnalyticsでExperience PlatformWeb SDKを使用して自動�
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics；変数；analytics；自動マップ；自動マッピング；
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 35%
@@ -46,7 +46,7 @@ ht-degree: 35%
 | environment.browserDetails.viewportWidth | bw | AppMeasurement クエリパラメーター BROWSER_WIDTH のマッピング。 |
 | environment.connectionType | ct | AppMeasurement クエリパラメーター CT_CONNECT_TYPE のマッピング。 |
 | environment.ipV4 | X-Forwarded-For | これはHTTPヘッダーマッピングで、X-FORWARDED-FORです。 |
-| identityMap.ECID.[0].id | mid | AppMeasurement クエリパラメーター MID のマッピング。 |
+| identityMap.ECID[0].id | mid | AppMeasurement クエリパラメーター MID のマッピング。 |
 | marketing.trackingCode | v0 | AppMeasurement クエリパラメーター CAMPAIGN のマッピング。 |
 | media.mediaTimed.completes.value | c.a.media.complete | AppMeasurementコンテキストデータ。 |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | AppMeasurementコンテキストデータ。 |
@@ -58,10 +58,10 @@ ht-degree: 35%
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | AppMeasurement コンテキストデータ `c.a.media.pauseCount` のマッピング。 |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | AppMeasurementコンテキストデータ。 |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | AppMeasurement コンテキストデータ `c.a.media.friendlyName` のマッピング。 |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurementコンテキストデータ。 |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurementコンテキストデータ。 |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | AppMeasurement コンテキストデータ `c.a.media.episode` のマッピング。 |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | AppMeasurementコンテキストデータ。 |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurementコンテキストデータ。 |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurementコンテキストデータ。 |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | AppMeasurement コンテキストデータ `c.a.media.season` のマッピング。 |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | AppMeasurement コンテキストデータ `a.media.name` のマッピング。 |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | AppMeasurement コンテキストデータ `c.a.media.show` のマッピング。 |
