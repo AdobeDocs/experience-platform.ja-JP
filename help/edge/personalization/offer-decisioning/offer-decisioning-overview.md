@@ -3,10 +3,10 @@ title: Platform Web SDKでのOffer decisioningの使用
 description: Adobe Experience Platform Web SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 オファーUIまたはAPIを使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 10%
+source-wordcount: '826'
+ht-degree: 7%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->現在、Adobe Experience Platform Web SDK での Offer Decisioning の使用は、一部のユーザーが早期にアクセスできます。この機能は、すべての IMS 組織で使用できるわけではありません。
+>Adobe Experience Platform Web SDKでのOffer decisioningの使用は、一部のユーザーが早期にアクセスできる場合に便利です。 この機能は、一部の IMS 組織ではご利用いただけきません。
 
 Adobe Experience Platform [!DNL Web SDK]は、Offer decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 オファーユーザーインターフェイス(UI)またはAPIを使用して、オファーやその他の関連Offer decisioningを作成できます。
 
@@ -30,7 +30,7 @@ offer decisioningを扱う際には、次の用語を理解することが重要
 
 * **コンテナ：** コンテナは、様々な懸念事項を分離するための分離メカニズムです。コンテナ ID は、すべてのリポジトリー API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
-* **判定範囲：** Offer decisioningの場合、offer decisioningサービスでオファーの提案に使用するアクティビティIDと配置IDを含む、Base64でエンコードされたJSON文字列です。
+* **判定範囲：** Offer decisioningの場合、判定範囲は、offer decisioningサービスでオファーの提案に使用するアクティビティIDと配置IDを含む、Base64でエンコードされたJSON文字列です。
 
    *判定範囲JSON:*
 
@@ -55,11 +55,11 @@ offer decisioningを扱う際には、次の用語を理解することが重要
 
 * **データストリーム：** 詳しくは、datastreamsのドキュメントを参照して [](../../fundamentals/datastreams.md) ください。
 
-* **ID**:詳しくは、 [Platform Web SDKがIDサービスを利用する方法を概要する、このドキュメントをお読みください](../../identity/overview.md)。
+* **ID**:詳しくは、 [Platform Web SDKがIDサービスを使用する方法を概要する、このドキュメントをお読みください](../../identity/overview.md)。
 
 ## 有効化Offer decisioning
 
-offer decisioningを有効にするには、次の手順を実行する必要があります。
+offer decisioningを有効にするには、次の手順を実行します。
 
 1. [datastream](../../fundamentals/datastreams.md)でAdobe Experience Platformを有効にし、「Offer decisioning」ボックスをオンにします
 
@@ -85,7 +85,7 @@ offer decisioningを有効にするには、次の手順を実行する必要が
 
       1. [タグプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
       1. [ 埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 先ほど作成したデータストリームを使用して、「Datastream」ドロップダウンから設定を選択し、Platform Web SDK拡張機能をインストールして設定します。 [拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
+      1. 「Datastream」ドロップダウンから設定を選択し、作成したDatastreamを使用して、Platform Web SDK拡張機能をインストールおよび設定します。 [拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ offer decisioningを有効にするには、次の手順を実行する必要が
 | `content` | 提案されたオファーに関連付けられたコンテンツ（文字列形式）。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | 提案されたオファーに関連付けられた画像コンテンツ（URL形式）。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 提案されたオファーに関連付けられている特性（JSONオブジェクトの形式）。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## 制限事項
+
+キャッピングなど、モバイルエクスペリエンスエッジワークフローでは、現在サポートされていないオファー制約もあります。 「キャッピング」フィールドの値は、すべてのユーザーに対してオファーを提示できる回数を指定します。 詳しくは、[オファーの実施要件ルールと制約のドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
