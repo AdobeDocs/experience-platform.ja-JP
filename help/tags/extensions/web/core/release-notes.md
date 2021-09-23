@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 85%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 90%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021年9月23日（PT）
+
+v3.2.1
+
+* フィールドの値が0の場合に、条件付き値データ要素の表示の初期化が正しく機能しないエラーを修正しました。
+
+## 2021年9月23日（PT）
+
+v3.2.0
+
+条件付き値データ要素に次の変更が加えられました。
+
+* 条件付き値とフォールバック値のチェックボックスを追加します。このチェックボックスを使用して、未定義の値を返すかどうかをユーザーが選択できます。
+* 数値は、 settingsオブジェクトで数値として公開されます。
+* 条件付き値は不要になり、フォールバック値と同じように動作します。
 
 ## 2021年9月17日（PT）
 
