@@ -1,0 +1,30 @@
+---
+title: XDM Business Marketing List Membersクラス
+description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDM Business Marketing List Membersクラスの概要を説明します。
+source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 4%
+
+---
+
+# [!UICONTROL XDM Business Marketing List Membersclass ] 
+
+>[!NOTE]
+>
+>このクラスは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+
+[!UICONTROL XDM Business Marketing Listメンバー] は、マーケティングリストに関連付けられたメンバー、個人、または連絡先を記述する、標準のExperience Data Model(XDM)クラスです。
+
+![](../../images/classes/b2b/business-marketing-list-members.png)
+
+| プロパティ | データタイプ | 説明 |
+| --- | --- | --- |
+| `extSourceSystemAudit` | [[!UICONTROL 外部ソース・システム監査属性]](../../data-types/external-source-system-audit-attributes.md) | マーケティングリストのメンバーシップが外部ソースシステムから取得された場合、このオブジェクトはそのシステムの監査属性を取り込みます。 |
+| `marketingListKey` | [[!UICONTROL B2Bソース]](../../data-types/b2b-source.md) | 個人がメンバーであるマーケティングリストの複合識別子。 |
+| `marketingListMemberKey` | [[!UICONTROL B2Bソース]](../../data-types/b2b-source.md) | マーケティングリストメンバーシップエンティティの複合識別子。 |
+| `personKey` | [[!UICONTROL B2Bソース]](../../data-types/b2b-source.md) | マーケティングリストのメンバーである個人の複合識別子。 |
+| `_id` | 文字列 | レコードの一意の識別子。 これは、`marketingListMemberID`とは別のシステム生成値です。 |
+| `marketingListID` | 文字列 | マーケティングリストの一意のID。 |
+| `marketingListMemberID` | 文字列 | マーケティングリストのメンバーシップエンティティの一意のID。 |
+| `personId` | 文字列 | 個人の一意のID。 |

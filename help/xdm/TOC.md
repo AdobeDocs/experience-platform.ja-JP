@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 41%
+source-wordcount: '375'
+ht-degree: 35%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 41%
    * [データモデリングのベストプラクティス](schema/best-practices.md)
    * [XDMフィールドタイプの制約](schema/field-constraints.md)
    * [XDMでの名前空間](./schema/namespaces.md)
-   * [XDM フィールド辞書](schema/field-dictionary.md)
+   * [XDM フィールドディクショナリ](schema/field-dictionary.md)
    * 業界データモデル{#industries}
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
@@ -31,6 +31,15 @@ ht-degree: 41%
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
+   * B2Bクラス{#b2b}
+      * [XDMビジネスアカウント](./classes/b2b/business-account.md)
+      * [XDMビジネスアカウント担当者の関係](./classes/b2b/business-account-person-relation.md)
+      * [XDM Business Campaign](./classes/b2b/business-campaign.md)
+      * [XDM Business Campaignメンバー](./classes/b2b/business-campaign-members.md)
+      * [XDMビジネス機会](./classes/b2b/business-opportunity.md)
+      * [XDM Business Opportunity Person関係](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
+      * [XDMビジネスマーケティングリストメンバー](./classes/b2b/business-marketing-list-members.md)
 * スキーマフィールドグループ {#field-groups}
    * プロファイルフィールドグループ{#profile}
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 41%
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
       * [通信購読](./field-groups/profile/telecom-subscription.md)
       * [勤務先の詳細](./field-groups/profile/work-contact-details.md)
+      * [XDM Business Personコンポーネント](./field-groups/profile/business-person-components.md)
+      * [XDMビジネス担当者の詳細](./field-groups/profile/business-person-details.md)
    * イベントフィールドグループ{#event}
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
@@ -60,7 +71,8 @@ ht-degree: 41%
    * [アプリケーション](./data-types/application.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
-   * [コマース](./data-types/commerce.md)
+   * [B2Bソース](./data-types/b2b-source.md)
+   * [Commerce](./data-types/commerce.md)
    * [Consent String](./data-types/consent-string.md)
    * [同意と環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
@@ -68,6 +80,7 @@ ht-degree: 41%
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
    * [エクスペリエンスチャネル](./data-types/experience-channel.md)
+   * [外部ソース・システム監査属性](./data-types/external-source-system-audit-attributes.md)
    * [一般的な同意フィールド](./data-types/consent-field.md)
    * [汎用マーケティング環境設定フィールド](./data-types/marketing-field.md)
    * [購読付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)

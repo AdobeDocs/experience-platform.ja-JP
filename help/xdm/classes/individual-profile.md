@@ -5,9 +5,9 @@ title: XDM Individual Profileクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM Individual Profileクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ ht-degree: 1%
 
 Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
 
+* [[!UICONTROL 同意と環境設定]](../field-groups/profile/consents.md)
 * [[!UICONTROL 人口統計の詳細]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL ロイヤルティの詳細]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 個人の連絡先の詳細]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 同意と環境設定]](../field-groups/profile/consents.md)
 * [[!UICONTROL セグメントメンバーシップの詳細]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 通信購読]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL 勤務先の詳細]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM Business Personコンポーネント]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDMビジネス担当者の詳細]](../field-groups/profile/business-person-details.md)\*
+
+*\*このフィールドグループは、リアルタイム顧客データプラットフォームのB2B版にアクセスできる組織のみが使用できます。*
 
 [!DNL XDM Individual Profile]の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHubリポジトリ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile)を参照してください。
