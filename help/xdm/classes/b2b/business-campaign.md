@@ -1,10 +1,10 @@
 ---
 title: XDMビジネスキャンペーンクラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDMビジネスキャンペーンクラスの概要を説明します。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 6%
+source-wordcount: '181'
+ht-degree: 4%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->このクラスは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+>このクラスは、リアルタイム顧客データプラットフォームB2Bエディションにアクセスできる組織でのみ使用できます。
 
 [!UICONTROL XDM Business Campaign] は、ビジネスキャンペーンに最低限必要なプロパティを取り込む、標準のエクスペリエンスデータモデル(XDM)クラスです。
 
@@ -27,3 +27,5 @@ ht-degree: 6%
 | `campaignID` | 文字列 | キャンペーンエンティティの一意の識別子。 |
 | `campaignName` | 文字列 | キャンペーンの名前。 |
 | `campaignType` | 文字列 | キャンペーンのタイプまたはターゲットオーディエンス。 |
+
+このクラスと他のB2Bクラスとの概念的な関係と、Adobe Experience Platform UIでこれらの関係を確立する方法については、 Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)の[スキーマの関係に関するガイドを参照してください。

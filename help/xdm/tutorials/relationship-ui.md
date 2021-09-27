@@ -6,14 +6,18 @@ description: このドキュメントでは、スキーマユーザーインタ�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 25%
+source-wordcount: '1020'
+ht-degree: 24%
 
 ---
 
 # [!DNL Schema Editor]
+
+>[!NOTE]
+>
+>リアルタイム顧客データプラットフォームB2Bエディションを使用している場合は、代わりに[B2Bの関係の作成](./relationship-b2b.md)に関するガイドを参照してください。
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。[!DNL Experience Data Model](XDM)スキーマの構造内でこれらの関係を定義すると、顧客データに関する複雑なインサイトを得ることができます。
 

@@ -1,10 +1,10 @@
 ---
 title: XDM Business Opportunity Person関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDM Business Opportunity Person Relationクラスの概要を説明します。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 4%
+source-wordcount: '257'
+ht-degree: 3%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->このクラスは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+>このクラスは、リアルタイム顧客データプラットフォームB2Bエディションにアクセスできる組織でのみ使用できます。
 
 [!UICONTROL XDM Business Opportunity Person Relationationap] は、ビジネスオポチュニティに関連付けられている個人の最低限必要なプロパティを取得する、標準のExperience Data Model(XDM)クラスです。
 
@@ -30,3 +30,5 @@ ht-degree: 4%
 | `isPrimary` | Boolean | 個人がこの営業案件の主要連絡先かどうかを示します。 |
 | `personID` | 文字列 | 営業案件と個人の関係にある個人の一意の識別子です。 |
 | `personRole` | 文字列 | 営業案件と個人の関係における個人の役割です。 |
+
+このクラスと他のB2Bクラスとの概念的な関係と、Adobe Experience Platform UIでこれらの関係を確立する方法については、 Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)の[スキーマの関係に関するガイドを参照してください。

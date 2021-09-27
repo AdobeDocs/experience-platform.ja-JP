@@ -1,10 +1,10 @@
 ---
 title: XDM Business Campaignメンバークラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDM Business Campaign Membersクラスの概要を説明します。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 4%
+source-wordcount: '220'
+ht-degree: 3%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->このクラスは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+>このクラスは、リアルタイム顧客データプラットフォームB2Bエディションにアクセスできる組織でのみ使用できます。
 
 [!UICONTROL XDM Business Campaignメンバ] ーは、ビジネスキャンペーンに関連付けられた連絡先またはリードを記述する標準のエクスペリエンスデータモデル(XDM)クラスです。
 
@@ -28,3 +28,5 @@ ht-degree: 4%
 | `campaignID` | 文字列 | 関連するキャンペーンの一意のID。 |
 | `campaignMemberID` | 文字列 | キャンペーンメンバーシップエンティティの一意のID。 |
 | `personId` | 文字列 | 関連するキャンペーンのメンバーである個人の一意のID。 |
+
+このクラスと他のB2Bクラスとの概念的な関係と、Adobe Experience Platform UIでこれらの関係を確立する方法については、 Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)の[スキーマの関係に関するガイドを参照してください。
