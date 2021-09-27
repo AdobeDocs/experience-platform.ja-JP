@@ -1,18 +1,18 @@
 ---
 title: XDM Business Opportunity Person関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDM Business Opportunity Person Relationクラスの概要を説明します。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM Business Opportunity Person Relationclass ] 
+# [!UICONTROL XDM Business Opportunity Person ] Relationclass（ベータ版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->このクラスは、リアルタイム顧客データプラットフォームB2Bエディションにアクセスできる組織でのみ使用できます。
+>このクラスは、現在ベータ版であるリアルタイム顧客データプラットフォームB2Bエディションの一部として使用できます。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDM Business Opportunity Person Relationationap] は、ビジネスオポチュニティに関連付けられている個人の最低限必要なプロパティを取得する、標準のExperience Data Model(XDM)クラスです。
 

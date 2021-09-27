@@ -1,18 +1,18 @@
 ---
 title: XDM Business Marketing List Membersクラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDM Business Marketing List Membersクラスの概要を説明します。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 3%
+source-wordcount: '236'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM Business Marketing List Membersclass ] 
+# [!UICONTROL XDM Business Marketing List Membersclass(ベ] ータ版)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->このクラスは、リアルタイム顧客データプラットフォームB2Bエディションにアクセスできる組織でのみ使用できます。
+>このクラスは、現在ベータ版であるリアルタイム顧客データプラットフォームB2Bエディションの一部として使用できます。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDM Business Marketing Listメンバー] は、マーケティングリストに関連付けられたメンバー、個人、または連絡先を記述する、標準のExperience Data Model(XDM)クラスです。
 

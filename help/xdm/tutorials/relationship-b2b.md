@@ -1,14 +1,18 @@
 ---
 title: リアルタイム顧客データプラットフォームB2Bエディションでの2つのスキーマ間の関係の定義
 description: リアルタイム顧客データプラットフォームB2Bエディションで、2つのスキーマ間の多対1の関係を定義する方法を説明します。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 6%
+source-wordcount: '1220'
+ht-degree: 7%
 
 ---
 
 # リアルタイム顧客データプラットフォームB2Bエディションでの2つのスキーマ間の関係の定義
+
+>[!IMPORTANT]
+>
+>リアルタイム顧客データプラットフォームB2Bエディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 >[!NOTE]
 >

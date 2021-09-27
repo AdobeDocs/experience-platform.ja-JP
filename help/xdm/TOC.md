@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 34%
+source-wordcount: '391'
+ht-degree: 28%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 34%
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
-   * B2Bクラス{#b2b}
+   * B2Bクラス（ベータ版） {#b2b}
       * [XDMビジネスアカウント](./classes/b2b/business-account.md)
       * [XDMビジネスアカウント担当者の関係](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 34%
    * [Mixin（非推奨）](api/mixins.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
-   * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
-   * [スキーマの作成（API）](tutorials/create-schema-api.md)
-   * [2 つのスキーマ間の関係の定義（UI）](tutorials/relationship-ui.md)
-   * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
-   * [2つのスキーマ間の関係の定義(B2B)](tutorials/relationship-b2b.md)
+   * [UIでのスキーマの作成](tutorials/create-schema-ui.md)
+   * [APIでのスキーマの作成](tutorials/create-schema-api.md)
+   * [UIでのスキーマ関係の定義](tutorials/relationship-ui.md)
+   * [APIでのスキーマ関係の定義](tutorials/relationship-api.md)
+   * [Real-time CDP B2B Edition（ベータ版）でのスキーマ関係の定義](tutorials/relationship-b2b.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
