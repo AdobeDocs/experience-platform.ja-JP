@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをSFTP（セキュアファイル転送プロトコル）サーバーに接続する方法を説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9ad09fba3119b631576f22574a2151c74f91e07b
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '809'
 ht-degree: 7%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 7%
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | [!DNL SFTP]サーバーに関連付けられている名前またはIPアドレス。 |
+| `port` | 接続先のSFTPサーバーポート。 指定しない場合、値はデフォルトで`22`になります。 |
 | `username` | [!DNL SFTP]サーバーへのアクセス権を持つユーザー名。 |
 | `password` | [!DNL SFTP]サーバーのパスワード。 |
 | `privateKeyContent` | Base64でエンコードされたSSH秘密鍵のコンテンツ。 OpenSSHキーのタイプは、RSAまたはDSAに分類する必要があります。 |
@@ -55,7 +56,7 @@ Platform APIを正常に呼び出す方法について詳しくは、[Platform A
 
 ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL SFTP]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
-### 基本認証を使用した[!DNL SFTP]接続の作成
+### 基本認証を使用した[!DNL SFTP]ベース接続の作成
 
 基本的なPOSTを使用して[!DNL SFTP]ベース接続を作成するには、接続の`host`、`userName`および`password`に値を指定しながら、[!DNL Flow Service] APIに対して認証リクエストを実行します。
 
@@ -113,7 +114,7 @@ curl -X POST \
 }
 ```
 
-### SSH公開鍵認証を使用した[!DNL SFTP]接続の作成
+### SSH公開鍵認証を使用した[!DNL SFTP]ベース接続の作成
 
 SSH公開鍵POSTを使用して[!DNL SFTP]ベース接続を作成するには、接続の`host`、`userName`、`privateKeyContent`および`passPhrase`に値を指定しながら、[!DNL Flow Service] APIに認証リクエストを送信します。
 
