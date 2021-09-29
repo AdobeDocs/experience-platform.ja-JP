@@ -5,7 +5,7 @@ title: エッジセグメント化UIガイド
 topic-legacy: ui guide
 description: エッジのセグメント化は、Platform内のセグメントを即座にエッジ上で評価する機能で、同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8f2540902cdcff99627393429424dbfe1de2d3da
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 >
 >エッジセグメント化は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-エッジセグメント化とは、Adobe Experience Platformのセグメントを瞬時にエッジ上で評価し、同じページおよび次のページのパーソナライゼーションの使用例を可能にする機能です。
+エッジセグメント化は、エッジ](../../edge/home.md)上でAdobe Experience Platformのセグメントを瞬時に[評価する機能で、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。
 
 ## エッジセグメント化のクエリのタイプ
 

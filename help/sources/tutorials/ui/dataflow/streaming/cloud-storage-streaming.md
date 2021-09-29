@@ -1,108 +1,142 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クラウドストレージコネクタ；クラウドストレージ
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；クラウドストレージコネクタ；クラウドストレージ
 solution: Experience Platform
-title: UIでのクラウドストレージストリーミングコネクタのデータフローの設定
+title: UIでのクラウドストレージソースのストリーミングデータフローの作成
 topic-legacy: overview
 type: Tutorial
-description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージベースのコネクタを使用して新しいデータフローを設定する手順を説明します。
+description: データフローは、ソースからPlatformデータセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、クラウドストレージベースのコネクタを使用して新しいデータフローを設定する手順を説明します。
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4a2d82fd6aec25f2570082ebc54f826251bc0a51
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 6%
+source-wordcount: '1060'
+ht-degree: 10%
 
 ---
 
-# UIでのクラウドストレージストリーミング接続のデータフローの設定
+# UIでのクラウドストレージソースのストリーミングデータフローの作成
 
-データフローとは、ソースからデータセット[!DNL Platform]にデータを取得し、取り込むスケジュール済みのタスクです。 このチュートリアルでは、クラウドストレージベースのコネクタを使用して新しいデータフローを設定する手順を説明します。
+データフローは、ソースからAdobe Experience Platformデータセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、UIでクラウドストレージソースのストリーミングデータフローを作成する手順を説明します。
+
+このチュートリアルを試す前に、まずクラウドストレージアカウントとPlatformの間に有効な認証済み接続を確立する必要があります。 認証済みの接続がまだない場合は、次のチュートリアルのいずれかを参照して、ストリーミングクラウドストレージアカウントの認証をおこなってください。
+
+- [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../../../ui/create/cloud-storage/google-pubsub.md)
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+- [データフロー](../../../../../dataflows/home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは、ソースから[!DNL Identity Service]、[!DNL Profile]、[!DNL Destinations]など、様々なサービスで設定されます。
+- [Data Prep](../../../../../data-prep/home.md)：Data Prep を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。Data Prep は、CSV 取得ワークフローなどのデータ取得プロセスで「マッピング」手順として表示されます。
+- [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+   - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-また、このチュートリアルでは、クラウドストレージコネクタを既に作成済みである必要があります。 UIで異なるクラウドストレージコネクタを作成するためのチュートリアルのリストは、[source connectors overview](../../../../home.md)にあります。
+## データの追加
 
-## データの選択
+認証するストリーミングクラウドストレージアカウントを作成した後、**[!UICONTROL データを選択]**&#x200B;の手順が表示され、Platformに送信するデータストリームを選択するためのインターフェイスが表示されます。
 
-クラウドストレージコネクタを作成すると、*データを選択*&#x200B;の手順が表示され、データのストリーミング元となるストリームを選択するためのインターフェイスが提供されます。
+- インターフェイスの左側は、アカウント内で使用可能なデータストリームを表示できるブラウザーです。
+- インターフェイスの右側では、JSONファイルから最大100行のデータをプレビューできます。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-data.png)
+![インターフェイス](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
-## データフィールドのXDMスキーマへのマッピング
+使用するデータストリームを選択し、「**[!UICONTROL ファイル]**&#x200B;を選択」を選択して、サンプルスキーマをアップロードします。
 
-**[!UICONTROL マッピング]**&#x200B;の手順が表示され、ソースデータを[!DNL Platform]データセットにマッピングするためのインタラクティブなインターフェイスが提供されます。
+>[!TIP]
+>
+>データがXDMに準拠している場合は、サンプルスキーマのアップロードをスキップし、「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
-取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
+![select-stream](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
 
-**既存のデータセットを使用する**
+スキーマのアップロードが完了すると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 [!UICONTROL 検索フィールド]ユーティリティを使用して、スキーマ内の特定の項目にアクセスすることもできます。
 
-既存のデータセットにデータを取り込むには、**[!UICONTROL 既存のデータセット]**&#x200B;を使用を選択し、データセットアイコンをクリックします。
+終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
+![schema-preview](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
-**[!UICONTROL データセットを選択]**&#x200B;ダイアログが表示されます。 使用するデータセットを見つけて選択し、**[!UICONTROL 続行]**&#x200B;をクリックします。
+## マッピング
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
+**[!UICONTROL マッピング]**&#x200B;手順が表示され、ソースデータをPlatformデータセットにマッピングするためのインターフェイスが提供されます。
 
-**新しいデータセットの使用**
+取り込む受信データのデータセットを選択します。 既存のデータセットを使用するか、新しく作成できます。
 
-データを新しいデータセットに取り込むには、**[!UICONTROL 新しいデータセットを作成]**&#x200B;を選択し、提供されたフィールドにデータセットの名前と説明を入力します。 次に、使用するスキーマをドロップダウンで選択します。
+### 新しいデータセット
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-new-dataset.png)
+データを新しいデータセットに取り込むには、**[!UICONTROL New dataset]**&#x200B;を選択し、提供されたフィールドにデータセットの名前と説明を入力します。 スキーマを追加するには、**[!UICONTROL スキーマを選択]**&#x200B;ダイアログボックスに既存のスキーマ名を入力します。 または、「**[!UICONTROL スキーマ詳細検索]**」を選択して、適切なスキーマを検索することもできます。
 
-## データフローに名前を付ける
+![new-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
-**[!UICONTROL Dataflow detail]**&#x200B;ステップが表示され、新しいデータフローに名前を付け、簡単な説明を入力できます。
+[!UICONTROL スキーマを選択]ウィンドウが開き、選択可能なスキーマのリストが表示されます。 リストからスキーマを選択し、右側のパネルを更新して、選択したスキーマに固有の詳細（スキーマが[!DNL Profile]に対して有効になっているかどうかに関する情報など）を表示します。
 
-データフローの値を指定し、**[!UICONTROL 次へ]**&#x200B;をクリックします。
+使用するスキーマを特定して選択したら、「**[!UICONTROL 完了]**」を選択します。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/name-your-dataflow.png)
+![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
-### データフローの確認
+[!UICONTROL Targetデータセット]ページは、選択したスキーマがデータセットの一部として表示され、更新されます。 この手順の間に、[!DNL Profile]のデータセットを有効にし、エンティティの属性と動作の全体的な表示を作成できます。 有効なすべてのデータセットのデータは[!DNL Profile]に含まれ、データフローを保存すると変更が適用されます。
 
-「**[!UICONTROL レビュー]**」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
+「**[!UICONTROL プロファイルデータセット]**」ボタンを切り替えて、[!DNL Profile]のターゲットデータセットを有効にします。
 
-- **[!UICONTROL ソースの詳細]**:ソースのタイプおよびソースに関するその他の関連詳細を表示します。
-- **[!UICONTROL ターゲットの詳細]**:ソースデータが取り込まれるデータセット(データセットに従うスキーマなど)を示します。
+![新規プロファイル](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
-データフローを確認したら、**[!UICONTROL 「Finish]**」をクリックし、データフローの作成に時間を割り当てます。
+### 既存のデータセット
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
+データを既存のデータセットに取り込むには、**[!UICONTROL Existing dataset]**&#x200B;を選択し、データセットアイコンを選択します。
+
+![existing-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
+
+**[!UICONTROL データセットを選択]**&#x200B;ダイアログが表示され、使用可能なデータセットのリストから選択できます。 リストからデータセットを選択し、右側のレールを更新して、選択したデータセットに固有の詳細（[!DNL Profile]に対してデータセットを有効にできるかどうかに関する情報など）を表示します。
+
+使用するデータセットを特定して選択したら、「**[!UICONTROL 完了]**」を選択します。
+
+![select-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
+
+データセットを選択したら、[!DNL Profile]切り替えを選択して[!DNL Profile]のデータセットを有効にします。
+
+![既存のプロファイル](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
+
+### 標準フィールドのマッピング
+
+データセットとスキーマが確立されると、**[!UICONTROL 標準フィールドのマッピング]**&#x200B;インターフェイスが表示され、データのマッピングフィールドを手動で設定できます。
+
+>[!TIP]
+>
+>Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントな推奨事項を提供します。 使用例に合わせてマッピングルールを手動で調整できます。
+
+必要に応じて、フィールドを直接マッピングするか、データ準備関数を使用してソースデータを変換し、計算済み値または計算済み値を導き出すことができます。 マッパー関数と計算フィールドの詳細については、『[データ準備関数ガイド](../../../../../data-prep/functions.md)』または『[計算フィールドガイド](../../../../../data-prep/calculated-fields.md)』を参照してください。
+
+ソースデータがマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
+
+![マッピング](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
+
+## データフローの詳細
+
+**[!UICONTROL データフローの詳細]**&#x200B;手順が表示され、新しいデータフローに名前を付け、簡単な説明を入力できます。
+
+データフローの値を指定し、「**[!UICONTROL 次へ]**」を選択します。
+
+![データフローの詳細](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
+
+### レビュー
+
+「**[!UICONTROL レビュー]**」手順が表示され、新しいデータフローを作成前に確認できます。 詳細は、次のカテゴリにグループ化されます。
+
+- **[!UICONTROL 接続]**:アカウント名、ソースのタイプ、および使用しているストリーミングクラウドストレージソースに固有のその他の情報が表示されます。
+- **[!UICONTROL データセットとマップのフィールドの割り当て]**:データフローに使用するターゲットデータセットとスキーマが表示されます。
+
+データフローをレビューしたら、「**[!UICONTROL 完了]**」を選択し、データフローの作成にしばらく時間をかけます。
+
+![レビュー](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
 ## データフローの監視と削除
 
-クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データフローの監視と削除の詳細については、[データフローの監視](../../../../../ingestion/quality/monitor-data-ingestion.md)のチュートリアルを参照してください。
+ストリーミングクラウドストレージのデータフローを作成したら、そのデータを通じて取り込まれるデータを監視できます。 ストリーミングデータフローの監視と削除について詳しくは、[ストリーミングデータフローの監視](../../monitor-streaming.md)に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このチュートリアルに従うと、外部のクラウドストレージからデータを取り込むためのデータフローが正しく作成され、データセットの監視に関する洞察が得られます。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、クラウドストレージソースからデータをストリーミングするデータフローを正常に作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]など、ダウンストリームのPlatformサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
-- [[!DNL Real-time Customer Profile] 概要](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] 概要](../../../../../data-science-workspace/home.md)
-
-## 付録
-
-以下の節では、ソースコネクタを使用する場合の追加情報について説明します。
-
-### データフローの無効化
-
-データフローが作成されると、そのデータはすぐにアクティブになり、指定されたスケジュールに従ってデータを取り込みます。 アクティブなデータフローは、次の手順に従っていつでも無効にできます。
-
-**[!UICONTROL ソース]**&#x200B;ワークスペース内で、**[!UICONTROL 「参照]**」タブをクリックします。 次に、無効にするアクティブなデータフローに関連付けられている接続の名前をクリックします。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
-
-**[!UICONTROL ソースアクティビティ]**&#x200B;ページが表示されます。 リストからアクティブなデータフローを選択し、画面の右側に&#x200B;**[!UICONTROL Properties]**&#x200B;列を開きます。この列には&#x200B;**[!UICONTROL Enabled]**&#x200B;トグルボタンが含まれています。 切り替えボタンをクリックして、データフローを無効にします。 同じ切り替えを使用して、データフローを無効にした後で再び有効にできます。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
-
-### [!DNL Profile]母集団の受信データをアクティブ化
-
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
+- [[!DNL Real-time Customer Profile] の概要](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] の概要](../../../../../data-science-workspace/home.md)

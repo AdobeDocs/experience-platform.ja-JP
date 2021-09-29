@@ -1,10 +1,11 @@
 ---
 title: XDMビジネスアカウント担当者関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDMビジネスアカウント担当者関係クラスの概要を説明します。
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 6%
+source-wordcount: '337'
+ht-degree: 7%
 
 ---
 
@@ -35,5 +36,7 @@ ht-degree: 6%
 | `personRole` | 文字列 | アカウントと個人の関係における個人の役割。 |
 | `relationEndDate` | DateTime | アカウントと個人の関係が終了した日付。 |
 | `relationStartDate` | DateTime | アカウントと個人の関係が開始された日付。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 このクラスと他のB2Bクラスとの概念的な関係と、Adobe Experience Platform UIでこれらの関係を確立する方法については、 Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)の[スキーマの関係に関するガイドを参照してください。

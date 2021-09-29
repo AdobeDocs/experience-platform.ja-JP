@@ -1,18 +1,19 @@
 ---
 title: B2Bソースデータタイプ
 description: このドキュメントでは、B2Bソースエクスペリエンスデータモデル(XDM)データタイプの概要を説明します。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 3%
+source-wordcount: '302'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL B2Bソー] スデータ型
+# [!UICONTROL B2Bソー] スデータタイプ（ベータ版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->このデータタイプは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+>このデータ型は、現在ベータ版であるリアルタイム顧客データプラットフォームB2Bエディションの一部として使用できます。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL B2Bソー] スは、B2Bエンティティの複合識別子(アカウン [ト](../classes/b2b/business-account.md)、オポチュニティ [、キャンペーン](../classes/b2b/business-opportunity.md)など)を表す標準のエクスペリエンスデータモデル(XDM)データ型 [](../classes/b2b/business-campaign.md)です。
 

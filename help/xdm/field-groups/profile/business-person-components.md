@@ -1,19 +1,19 @@
 ---
 title: XDM Business Personコンポーネントスキーマフィールドグループ
 description: このドキュメントでは、XDMビジネスパーソンコンポーネントスキーマフィールドグループの概要を説明します。
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '441'
+ht-degree: 5%
 
 ---
 
+# [!UICONTROL XDMビジネスパーソンコン] ポーネントスキーマフィールドグループ（ベータ版）
 
-# [!UICONTROL XDM Business Person Componentsschemaフィー] ルドグループ
-
->[!NOTE]
+>[!IMPORTANT]
 >
->このフィールドグループは、リアルタイム顧客データプラットフォーム（リアルタイムCDP）のB2Bエディションにアクセスできる組織でのみ使用できます。
+>このフィールドグループは、現在ベータ版であるリアルタイム顧客データプラットフォームB2Bエディションの一部として利用できます。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDMビジネスパーソ] ンコンポーネントは、ある個人の複数のソースレコードと、個人のセグメント化に必要なその他の属性を取り込む、クラスの標準スキーマフィールドグループで [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) す。
 

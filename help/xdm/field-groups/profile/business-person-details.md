@@ -1,19 +1,19 @@
 ---
 title: XDMビジネス担当者詳細スキーマフィールドグループ
 description: このドキュメントでは、XDMビジネスパーソン詳細スキーマフィールドグループの概要を説明します。
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 10%
+source-wordcount: '562'
+ht-degree: 12%
 
 ---
 
+# [!UICONTROL XDMビジネス担当者詳] 細スキーマフィールドグループ（ベータ版）
 
-# [!UICONTROL XDMビジネス担当者詳細ス] キーマフィールドグループ
-
->[!NOTE]
+>[!IMPORTANT]
 >
->このフィールドグループは、リアルタイム顧客データプラットフォームのB2Bエディションにアクセスできる組織でのみ使用できます。
+>このフィールドグループは、現在ベータ版であるリアルタイム顧客データプラットフォームB2Bエディションの一部として利用できます。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDMビジネ] ス担当者詳細は、ビジネス間(B2B)企業のコンテキストで個人の情報を取得する、クラスの標準スキーマフィールドグループで [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) す。
 

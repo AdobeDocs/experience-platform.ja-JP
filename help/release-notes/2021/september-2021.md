@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの最新のリリースノートです。
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
 workflow-type: tm+mt
 source-wordcount: '290'

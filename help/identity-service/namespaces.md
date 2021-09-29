@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気のあるトピック；名前
 solution: Experience Platform
 title: ID名前空間の概要
 topic-legacy: overview
-description: ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値CRM IDとして区別します。
+description: ID 名前空間 は、ID の関連先コンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値CRM IDとして区別します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 18%
+source-wordcount: '1598'
+ht-degree: 19%
 
 ---
 
@@ -45,7 +45,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | デバイスID | デバイスIDは、IDFA（iPhoneおよびiPad）、GAID(Android)、RIDA(Roku)などのハードウェアデバイスを識別し、世帯の複数のユーザーが共有できます。 |
 | 電子メールアドレス | Eメールアドレスは多くの場合、1人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には、個人を特定できる情報（PII）が含まれています。これは、[!DNL Identity Service]に対して、値を慎重に処理することを示しています。 |
 | 人以外の識別子 | 非ユーザーIDは、名前空間を必要とするが、人物クラスターに接続されていないIDを保存するために使用されます。 例えば、製品SKU、製品、組織、店舗に関連するデータなどです。 |
-| 電話番号 | 電話番号は多くの場合、1人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には PII が含まれます。これは、[!DNL Identity Service]に対して、値を慎重に処理することを示しています。 |
+| 電話番号 | 電話番号は多くの場合、1人の人物に関連付けられているので、異なるチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には PII が含まれます。これは、[!DNL Identity Service]に対して、値を慎重に処理することを示しています。 |
 
 ### 標準名前空間
 
@@ -61,7 +61,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | Apple Push Notificationサービス | Apple Push Notificationサービスを使用して収集されたIDを表す名前空間。 詳しくは、[Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)の次のドキュメントを参照してください。 |
 | CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前でも参照できます。「Adobe AudienceManager」 詳しくは、[Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)に関する以下のドキュメントを参照してください。 |
 | ECID | ECIDを表す名前空間。 この名前空間は、次のエイリアスでも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 詳しくは、[ECID](./ecid.md)に関する次のドキュメントを参照してください。 |
-| Email | 電子メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、1人の人に関連付けられるので、異なるチャネルをまたいでその人を識別するために使用できます。 |
+| メール | 電子メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、1人の人に関連付けられるので、異なるチャネルをまたいでその人を識別するために使用できます。 |
 | 電子メール（SHA256、小文字） | 事前にハッシュ化された電子メールアドレス用の名前空間。 この名前空間で指定された値は、SHA256でハッシュする前に小文字に変換されます。 Eメールアドレスを正規化する前に、先頭と末尾の空白文字をトリミングする必要があります。 この設定を遡って変更することはできません。 詳しくは、[SHA256ハッシュサポート](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support)に関する次のドキュメントを参照してください。 |
 | Firebase Cloud Messaging | プッシュ通知用にGoogle Firebase Cloud Messagingを使用して収集されたIDを表す名前空間です。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)の次のドキュメントを参照してください。 |
 | Google広告ID(GAID) | Google広告IDを表す名前空間。 詳しくは、[Google広告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)の次のドキュメントを参照してください。 |
@@ -79,7 +79,7 @@ UIでID名前空間を表示するには、左側のナビゲーションで「*
 
 ![参照](./images/browse.png)
 
-ID名前空間のリストがページのメインインターフェイスに表示され、名前、ID記号、最終更新日、および標準名前空間かカスタム名前空間かに関する情報が表示されます。 右側のレールには、[!UICONTROL 一意のID]と[!UICONTROL IDグラフの強さ]に関する情報が含まれます。 [!UICONTROL 一意の] IDは、使用する特定のサンドボックスに存在するIDの数を表しま [!UICONTROL す。IDグラフは強化されていま] す。サンドボックス内のCookieの数と非Cookie IDの数に関する情報を表示します。
+ID名前空間のリストがページのメインインターフェイスに表示され、名前、ID記号、最終更新日、および標準名前空間かカスタム名前空間かに関する情報が表示されます。 右側のレールには、[!UICONTROL IDグラフの強さ]に関する情報が含まれます。
 
 ![id](./images/identities.png)
 
@@ -91,7 +91,7 @@ Platformは、統合のための名前空間も提供します。 これらの�
 
 ![select-namespace](./images/select-namespace.png)
 
-## カスタム名前空間{#manage-namespaces}を管理します
+## カスタム名前空間の管理 {#manage-namespaces}
 
 組織のデータや使用事例によっては、カスタム名前空間が必要な場合があります。カスタム名前空間は、[[!DNL Identity Service]](./api/create-custom-namespace.md) APIを使用して、またはUIを使用して作成できます。
 

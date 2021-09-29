@@ -5,9 +5,9 @@ title: ID サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 56%
 
 ---
@@ -35,7 +35,6 @@ Adobe Experience Platform IDサービスは、デバイスやシステム間でI
 | ID名前空間 | ID名前空間は、IDのコンテキストまたはタイプを区別するために機能します。 例えば、IDは、「name<span>@email.com」を電子メールアドレスとして、または「443522」を数値CRM IDとして区別します。 ID名前空間は、個々のIDを検索し、ID値のコンテキストを提供するために使用されます。 これにより、異なるプライマリIDを含み、`email` ID名前空間に同じ値を共有する2つの[!DNL Profile]フラグメントが、実際には同じ個人であると判断できます。 詳しくは、「[ID 名前空間の概要](./namespaces.md)」を参照してください。 |
 | ID グラフ | IDグラフは、異なるID間の関係のマップで、どの顧客IDが結び付けられているかと方法を視覚化し、より深く理解できます。 詳しくは、IDグラフビューア](./ui/identity-graph-viewer.md)の使用に関する[のチュートリアルを参照してください。 |
 | 個人を特定できる情報(PII) | PIIは、電子メールアドレスや電話番号など、顧客を直接識別できる情報です。 PII値は、多くの場合、照合に使用されます。 異なるシステム間での顧客の複数のID。 |
-| 一意のID | 一意のIDは、特定のサンドボックスにのみ存在するIDです。 |
 | 不明または匿名のID | 不明または匿名のIDは、デバイスを使用している実際の人物を識別せずにデバイスを分離する指標です。 不明なIDと匿名IDには、訪問者のIPアドレスやcookie IDなどの情報が含まれます。 不明なIDと匿名IDは行動データを提供できますが、顧客がPIIを提供するまでは制限されます。 |
 
 ## [!DNL Identity Service] とは？

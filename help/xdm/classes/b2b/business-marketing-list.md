@@ -1,10 +1,11 @@
 ---
 title: XDM Business Marketing List Class
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のXDMビジネスマーケティングリストクラスの概要を説明します。
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 7%
+source-wordcount: '213'
+ht-degree: 8%
 
 ---
 
@@ -26,5 +27,7 @@ ht-degree: 7%
 | `marketingListDescription` | 文字列 | マーケティングリストの説明。 |
 | `marketingListID` | 文字列 | マーケティングリストエンティティの一意のID。 |
 | `marketingListName` | 文字列 | マーケティングリストの名前。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 このクラスと他のB2Bクラスとの概念的な関係と、Adobe Experience Platform UIでこれらの関係を確立する方法については、 Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)の[スキーマの関係に関するガイドを参照してください。

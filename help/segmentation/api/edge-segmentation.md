@@ -5,10 +5,10 @@ title: 'APIを使用したエッジのセグメント化 '
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service APIでエッジセグメントを使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 17%
+source-wordcount: '636'
+ht-degree: 12%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 17%
 - [[!DNL Segmentation]](../home.md):データからセグメントやオーディエンスを作成する機能を提 [!DNL Real-time Customer Profile] 供します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
-[!DNL Data Prep] API エンドポイントへの呼び出しを正常におこなうには、[Platform API の概要](../../landing/api-guide.md)を読み、必要なヘッダーとサンプル API 呼び出しの読み込み方法を確認してください。
+Experience PlatformAPIエンドポイントを正しく呼び出すには、[Platform APIの概要](../../landing/api-guide.md)を読み、必要なヘッダーとサンプルAPI呼び出しの読み方を確認してください。
 
 ## エッジセグメント化のクエリのタイプ {#query-types}
 
