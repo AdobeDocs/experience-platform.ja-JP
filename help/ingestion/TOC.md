@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Platform に取り込みます。
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 95%
+source-wordcount: '124'
+ht-degree: 88%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 95%
    - [Kafka コネクタ](streaming-ingestion/kafka.md)
    - [トラブルシューティング](streaming-ingestion/troubleshooting.md)
 - バッチ取得 {#batch}
-   - [概要](batch-ingestion/overview.md)
-   - [バッチ取得 API](batch-ingestion/api-overview.md)
+   - [バッチ取得 API の概要](batch-ingestion/getting-started.md)
+   - [API の概要](batch-ingestion/overview.md)
+   - [API 開発者ガイド](batch-ingestion/api-overview.md)
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}

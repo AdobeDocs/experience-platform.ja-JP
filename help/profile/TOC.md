@@ -3,10 +3,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 96%
+source-wordcount: '136'
+ht-degree: 93%
 
 ---
 
@@ -43,8 +43,8 @@ ht-degree: 96%
    * [結合スキーマ UI ガイド](ui/union-schema.md)
    * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
 * チュートリアル {#tutorials}
-   * [ [!DNL Profile] へのデータの追加](tutorials/add-profile-data.md)
-   * [サービス [!DNL Profile] & [!DNL Identity] 用データセットの設定](tutorials/dataset-configuration.md)
+   * [リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)
+   * [データセットのプロファイル設定](tutorials/dataset-configuration.md)
    * [データセットの重複レポートの生成](tutorials/dataset-overlap-report.md)
    * [その他のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [プライバシーリクエストの処理](privacy.md)

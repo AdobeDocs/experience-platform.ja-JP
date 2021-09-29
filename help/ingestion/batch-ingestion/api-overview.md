@@ -1,91 +1,27 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取得；バッチ取得；取得；開発者ガイド；apiガイド；アップロード；Parquetの取り込み；jsonの取り込み；
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取得；バッチ取得；取得；開発者ガイド；api ガイド；アップロード；Parquet の取り込み；json の取り込み；
 solution: Experience Platform
-title: バッチ取得APIガイド
-topic-legacy: developer guide
-description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
+title: バッチ取得 API ガイド
+description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 89%
+source-wordcount: '2373'
+ht-degree: 77%
 
 ---
 
-# バッチ取得APIガイド
+# バッチ取得開発者ガイド
 
-このドキュメントでは、[バッチ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の使用に関する包括的な概要を説明します。
+このドキュメントでは、Adobe Experience Platformで [ バッチ取得 API エンドポイント ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) を使用する際の包括的なガイドを示します。 前提条件やベストプラクティスなど、バッチ取得 API の概要については、まず「[ バッチ取得 API の概要 ](overview.md)」をお読みください。
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
+このガイドで使用される API エンドポイントは、[ データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の一部です。 データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
 
-次の節では、バッチ取得 API を正しく呼び出すために知っておく必要がある、または手元に置く必要がある追加情報を示します。
-
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
-
-- [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分割 [!DNL Platform] し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
-
-### API 呼び出し例の読み取り
-
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
-
-### 必須ヘッダーの値の収集
-
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
-
-ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。
-
-## タイプ
-
-データを取り込む際は、[!DNL Experience Data Model](XDM)スキーマの動作を理解することが重要です。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
-
-データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
-
-例えば、JSON も CSV も日付や時刻のタイプを持ちません。その結果、これらの値は[ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUnix時間形式のミリ秒(1531263959000)を使用して表され、取り込み時にターゲットXDMタイプに変換されます。
-
-次の表に、データの取得時にサポートされる変換を示します。
-
-| 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 文字列 | X | X | X | X | X | X | X | X |  |  |
-| バイト | X | X | X | X | X | X |  |  |  |  |
-| Short | X | X | X | X | X | X |  |  |  |  |
-| 整数 | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
-| ダブル | X | X | X | X | X | X |  |  |  |  |
-| 日付 |  |  |  |  |  |  | X |  |  |  |
-| Date-Time |  |  |  |  |  |  |  | X |  |  |
-| オブジェクト |  |  |  |  |  |  |  |  | X | X |
-| マップ |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
-> ブール値と配列は他の型に変換できません。
-
-## 取得の制約
-
-バッチデータ取得には、いくつかの制約があります。
-- バッチあたりの最大ファイル数：1500
-- 最大バッチサイズ：100GB
-- 1 行あたりのプロパティまたはフィールドの最大数：10000
-- 1 ユーザーあたりの 1 分あたりの最大バッチ数：138
+続行する前に、[ バッチ取得 API の概要 ](overview.md) と [ はじめにガイド ](getting-started.md) を参照してください。
 
 ## JSON ファイルの取得
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### ファイルのアップロード
 
-これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
+バッチを作成したら、バッチ作成応答のバッチ ID を使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
 
 >[!NOTE]
 >
@@ -193,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
 
 **応答** 
 
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Parquet ファイルの取得
+## Parquet ファイルの取得 {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -328,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
 
 **応答** 
 
@@ -503,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
 
 
 **応答** 
@@ -717,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
 
 
 **応答** 
@@ -806,11 +742,26 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答** 
+**応答**
 
 ```http
 200 OK
 ```
+
+## バッチのパッチ適用
+
+組織のプロファイルストアのデータを更新する必要が生じる場合があります。 例えば、レコードの修正や属性値の変更が必要になる場合があります。 Adobe Experience Platformは、アップサートアクションまたは「バッチのパッチ適用」を通じて、プロファイルストアデータの更新またはパッチをサポートします。
+
+>[!NOTE]
+>
+>これらの更新は、エクスペリエンスイベントではなく、プロファイルレコードでのみ許可されます。
+
+バッチにパッチを適用するには、次が必要です。
+
+- **プロファイルと属性の更新が有効になったデータセット。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを配列に追加する必要があ `unifiedProfile` ります。データセットを作成する方法、またはアップサート用の既存のデータセットを設定する方法について詳しくは、[ プロファイル更新のデータセットを有効にする ](../../catalog/datasets/enable-upsert.md) 方法に関するチュートリアルを参照してください。
+- **パッチ適用の対象となるフィールドとプロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するデータ形式は、通常のバッチ取得プロセスに似ています。必須の入力は Parquet ファイルで、更新するフィールドに加えて、プロファイルストア内のデータと一致させるために、アップロードされるデータに ID フィールドが含まれている必要があります。
+
+プロファイルとアップサートを有効にし、パッチを適用するフィールドと必要な ID フィールドを含む Parquet ファイルを作成したら、バッチ取得を通じてパッチを完了するために、[Parquet ファイル ](#ingest-parquet-files) の取り込み手順に従います。
 
 ## バッチの再生
 
@@ -924,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
 
 **応答** 
 
@@ -964,9 +915,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 付録
 
+次の節では、バッチ取得を使用してデータをExperience Platformに取り込む方法について説明します。
+
 ### バッチ取得用のデータ変換
 
-データファイルを[!DNL Experience Platform]に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[エクスペリエンスデータモデル(XDM)](../../xdm/home.md)スキーマに準拠している必要があります。
+データファイルを [!DNL Experience Platform] に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [ エクスペリエンスデータモデル (XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データ取得；バッチ；バッチ；データセットの有効化；バッチ取得の概要；概要；バッチ取得の概要；
+keywords: Experience Platform；ホーム；よく読まれるトピック；データ取得；バッチ；バッチ；データセットの有効化；バッチ取得の概要；概要；バッチ取得の概要；
 solution: Experience Platform
-title: バッチ取得の概要
+title: バッチ取得 API の概要
 topic-legacy: overview
-description: Adobe Experience Platform Data Ingestion APIを使用すると、データをバッチファイルとしてPlatformに取り込むことができます。 CRMシステムのフラットファイルのプロファイルデータ（Parquetファイルなど）、またはExperience Data Model(XDM)レジストリの既知のスキーマに適合するデータを取り込むことができます。
+description: Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 79%
+source-wordcount: '1388'
+ht-degree: 70%
 
 ---
 
-# バッチ取得の概要
+# バッチ取得 API の概要
 
-Adobe Experience Platform Data Ingestion APIを使用すると、データをバッチファイルとしてPlatformに取り込むことができます。 CRMシステムのフラットファイルのプロファイルデータ（Parquetファイルなど）、または[!DNL Experience Data Model](XDM)レジストリの既知のスキーマに適合するデータを取り込むことができます。
+Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 取り込まれるデータは、フラットファイル（Parquet ファイルなど）のプロファイルデータや、[!DNL Experience Data Model] (XDM) レジストリの既知のスキーマに適合するデータです。
 
 [データ取得 API のリファレンスは](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)では、これらの API 呼び出しに関する追加情報が提供されています。
 
@@ -22,20 +22,15 @@ Adobe Experience Platform Data Ingestion APIを使用すると、データをバ
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## API の使用
+## はじめに
 
-[!DNL Data Ingestion] APIを使用すると、次の3つの基本的な手順で、データをバッチ（1つのユニットとして取り込む1つ以上のファイルで構成されるデータの単位）として[!DNL Experience Platform]に取り込むことができます。
-
-1. 新しいバッチを作成します。
-2. データの XDM スキーマと一致する、指定したデータセットにファイルをアップロードします。
-3. バッチの終了を示します。
-
+このガイドで使用される API エンドポイントは、[ データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の一部です。 続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](getting-started.md) を参照してください。
 
 ### [!DNL Data Ingestion] 前提条件
 
 - アップロードするデータは、Parquet 形式または JSON 形式である必要があります。
-- [[!DNL Catalog services]](../../catalog/home.md)に作成されたデータセット。
-- Parquetファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致する必要があります。
+- [[!DNL Catalog services]](../../catalog/home.md) に作成されたデータセット。
+- Parquet ファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致する必要があります。
 - 認証後に固有のアクセストークンを取得する必要があります。
 
 ### バッチインジェストのベストプラクティス
@@ -43,33 +38,55 @@ Adobe Experience Platform Data Ingestion APIを使用すると、データをバ
 - 推奨されるバッチサイズは 256 MB～100 GB です。
 - 各バッチには、最大 1,500 個のファイルを含めることができます。
 
-512 MB を超えるファイルをアップロードする場合は、ファイルを小さなチャンクに分割する必要があります。サイズの大きなファイルをアップロードする手順については、[こちら](#large-file-upload---create-file)を参照してください。
+### バッチ取得の制約
 
-### API 呼び出し例の読み取り
+バッチデータ取得には、いくつかの制約があります。
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
-
-### 必須ヘッダーの値の収集
-
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
-
-- Authorization： Bearer `{ACCESS_TOKEN}`
-- x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
-
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-- x-sandbox-name： `{SANDBOX_NAME}`
+- バッチあたりの最大ファイル数：1500
+- 最大バッチサイズ：100GB
+- 1 行あたりのプロパティまたはフィールドの最大数：10000
+- 1 ユーザーあたりの 1 分あたりの最大バッチ数：138
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>512 MB を超えるファイルをアップロードする場合は、ファイルを小さなチャンクに分割する必要があります。大きなファイルをアップロードする手順は、このドキュメントの [ 大きなファイルのアップロードの節に記載されています。](#large-file-upload---create-file)
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+### タイプ
 
-- Content-Type: application/json
+データを取り込む際は、[!DNL Experience Data Model](XDM) スキーマの動作を理解することが重要です。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
-### バッチの作成
+データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
+
+例えば、JSON も CSV も `date` 型も `date-time` 型もありません。 その結果、これらの値は [ISO 8061 形式の文字列 ](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;) または Unix 時間形式のミリ秒 (1531263959000) を使用して表され、取り込み時にターゲット XDM タイプに変換されます。
+
+次の表に、データの取得時にサポートされる変換を示します。
+
+| 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 文字列 | X | X | X | X | X | X | X | X |  |  |
+| バイト | X | X | X | X | X | X |  |  |  |  |
+| Short | X | X | X | X | X | X |  |  |  |  |
+| 整数 | X | X | X | X | X | X |  |  |  |  |
+| Long | X | X | X | X | X | X | X | X |  |  |
+| ダブル | X | X | X | X | X | X |  |  |  |  |
+| 日付 |  |  |  |  |  |  | X |  |  |  |
+| Date-Time |  |  |  |  |  |  |  | X |  |  |
+| オブジェクト |  |  |  |  |  |  |  |  | X | X |
+| マップ |  |  |  |  |  |  |  |  | X | X |
+
+>[!NOTE]
+>
+> ブール値と配列は他の型に変換できません。
+
+## API の使用
+
+[!DNL Data Ingestion] API を使用すると、データをバッチ（1 つのユニットとして取り込む 1 つ以上のファイルで構成されるデータの単位）として [!DNL Experience Platform] に取り込むことができます。取り込む手順は次の 3 つです。
+
+1. 新しいバッチを作成します。
+2. データの XDM スキーマと一致する、指定したデータセットにファイルをアップロードします。
+3. バッチの終了を示します。
+
+## バッチの作成
 
 データをデータセットに追加するには、データをバッチにリンクする必要があります。その後、バッチは、指定したデータセットにアップロードされます。
 
@@ -130,7 +147,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->以下の例では、[Apache Parquet](https://parquet.apache.org/documentation/latest/)ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
+>バッチ取り込みは、プロファイルストア内のデータを増分的に更新するために使用できます。 詳しくは、『[ バッチ取得開発者ガイド ](api-overview.md)』の「[ バッチ ](#patch-a-batch) の更新」の節を参照してください。
+
+>[!INFO]
+>
+>以下の例では、[Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](api-overview.md)』を参照してください。
 
 ### サイズの小さなファイルのアップロード
 
@@ -237,7 +258,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## バッチ完了を示す
 
-すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。これにより、完了したファイルに対して[!DNL Catalog] DataSetFileエントリが作成され、上で生成したバッチに関連付けられます。 これにより、[!DNL Catalog] のバッチが成功とマークされ、ダウンストリームフローがトリガーされて使用可能なデータを取り込みます。
+すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。これにより、完了したファイルに対して [!DNL Catalog] DataSetFile エントリが作成され、上で生成したバッチに関連付けられます。 これにより、[!DNL Catalog] のバッチが成功とマークされ、ダウンストリームフローがトリガーされて使用可能なデータを取り込みます。
 
 **リクエスト**
 
@@ -388,7 +409,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | ステータス | 説明 |
 | ------ | ----------- |
 | Abandoned | バッチは、予想期間内に完了しませんでした。 |
-| Aborted | 指定したバッチに対して、中止操作が&#x200B;**明示的に**（Batch Ingest API を介して）呼び出されました。バッチが「Loaded」状態になると、バッチを中止することはできません。 |
+| Aborted | 指定したバッチに対して、中止操作が&#x200B;**明示的に**（Batch Ingest API を介して）呼び出されました。バッチの状態が「Loaded」の場合、バッチを中止することはできません。 |
 | アクティブ | バッチは正常に昇格しており、ダウンストリームで使用することができます。このステータスは、「Success」と同じ意味で使用できます。 |
 | Deleted | バッチのデータは完全に削除されました。 |
 | Failed | 設定またはデータ、あるいはその両方が不正なために発生した、失敗の状態。失敗したバッチのデータは、表示&#x200B;**されません**。このステータスは、「Failure」と同じ意味で使用できます。 |
