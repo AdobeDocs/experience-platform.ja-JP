@@ -1,12 +1,10 @@
 ---
 title: Adobe Experience Platformでの宛先のドキュメント化
-seo-title: Document your destination in Adobe Experience Platform
-description: Adobe Experience Platformで宛先のドキュメントを作成する手順
-seo-description: Step-by-step instructions how to create documentation for your destination in Adobe Experience Platform
+description: Adobe Experience Platformで宛先のドキュメントページを作成する手順を説明します
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -15,31 +13,31 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformへようこそ、ここに来て！
+Adobe Experience Platformへようこそ！
 宛先のドキュメント化は、Adobe Experience Platformでライブに設定する前の最後の手順です。
 
-このドキュメントの節は次のとおりです。
+このドキュメントの節は、以下を含みます。
 
 * 新しい宛先のドキュメントページを作成する手順を説明します。
 * 宛先に入力するテンプレート。
-* [Markdownの使用に関する一般的な説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en)
-* [AdobeMarkdownのフレーバーに固有の指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (AdobeMarkdownのフレーバーは、通常のMarkdownと非常に似ています)。
+* [Markdown の使用に関する一般的な説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en)
+* [Markdown のフレーバーに固有のAdobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (Markdown のAdobeは、通常の Markdown に非常に似ています )。
 
 ## 前提条件 {#prerequisites}
 
 この記事の手順に従って宛先のドキュメントを作成するには、次の項目が必要です。
 
-* **GitHubアカウント**&#x200B;を作成します。まだアカウントを持っていない場合は、[GitHub](https://github.com/)に新規登録します。
-* **GitHub Desktop**&#x200B;を参照してください。[ローカル環境にドキュメントを作成](./work-in-local-environment.md)する場合は、[GitHub Desktop](https://desktop.github.com/)を使用する必要があります。
+* **GitHub アカウント**。まだアカウントを持っていない場合は、[GitHub](https://github.com/) に新規登録します。
+* **GitHub Desktop**&#x200B;を参照してください。[ ローカル環境にドキュメントを作成 ](./work-in-local-environment.md) する場合は、[GitHub Desktop](https://desktop.github.com/) を使用する必要があります。
 * Adobeとの統合は、Adobe Experience Platformのステージング環境にデプロイされた宛先とのテスト段階にある必要があります。
 
-## Adobe Experience Platformで宛先のドキュメントを作成するための概要手順 {#high-level-instructions}
+## Adobe Experience Platformで宛先のドキュメントを作成する手順の概要 {#high-level-instructions}
 
-宛先のドキュメントを大まかに作成するには、Adobe Experience Platformドキュメントリポジトリの[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)を作成し、新しいブランチで提供される[ドキュメントテンプレート](./self-service-template.md)を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい宛先ページを作成します。 準備が整ったら、プルリクエスト(PR)を開きます。 これをおこなう手順は、[新しい宛先ページを作成する手順](./documentation-instructions.md#steps-to-create-docs-page)で詳しく説明します。
+宛先のドキュメントを作成するには、Adobe Experience Platformドキュメントリポジトリの [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) を作成し、新しいブランチで提供される [ ドキュメントテンプレート ](./self-service-template.md) を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい宛先ページを作成します。 準備が整ったら、プルリクエスト (PR) を開きます。 これをおこなう手順は、[ 新しい宛先ページを作成する手順 ](./documentation-instructions.md#steps-to-create-docs-page) で詳しく説明します。
 
 >[!TIP]
 >
->ドキュメントのオーサリング時にAdobeドキュメントチームが使用する簡単な記述のヒントについては、[Adobeドキュメントの記述ガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en)を参照してください。
+>Adobeドキュメントの作成時にAdobeドキュメントチームが使用する簡単な記述のヒントについては、[ ドキュメントの記述ガイダンス ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) を参照してください。
 
 <!--
 
@@ -50,11 +48,11 @@ Adobe Experience Platformへようこそ、ここに来て！
 
 ## ドキュメントテンプレート {#documentation-template}
 
-ドキュメントページの作成を支援するために、Adobeは、[ドキュメントテンプレート](./self-service-template.md)を事前に入力しています。 さらに下記では、テンプレートの編集方法とプルリクエストの開き方について説明します。 Adobeのドキュメントチームが、新しい宛先のドキュメントを確認して公開します。
+ドキュメントページの作成を支援するため、Adobeは、[ ドキュメントテンプレート ](./self-service-template.md) を事前に入力しています。 以下では、テンプレートを編集し、プル要求を開く方法について説明します。 Adobeドキュメントチームが、新しい宛先のドキュメントを確認して公開します。
 
 [ここでテンプレートを](assets/yourdestination-template.zip) ダウンロードし、ファイルを解凍してファイルを抽 `yourdestination.md` 出します。
 
-ドキュメントページの作成にテンプレートを使用する手順は、以下で説明します。
+テンプレートを使用してドキュメントページを作成する手順については、以下で詳しく説明します。
 
 <!--
 
@@ -85,10 +83,10 @@ If you are new to the GitHub contribution model and not used to working in a tex
 
 ## 新しい宛先ページの作成手順 {#steps-to-create-docs-page}
 
-GitHub Webインターフェイスまたはローカル環境を使用して、Adobe Experience Platformでの新しい宛先に関するドキュメントを作成できます。 次のリンクの両方のオプションの手順を確認してください。
+GitHub Web インターフェイスまたはローカル環境を使用して、Adobe Experience Platformでの新しい宛先に関するドキュメントを作成できます。 両方のオプションの手順については、次のリンクを参照してください。
 
-* [GitHub Webインターフェイスを使用して、宛先のドキュメントページを作成します](./use-github-interface-to-create-documentation.md)
-* [ローカル環境でテキストエディターを使用した、宛先のドキュメントページの作成](./work-in-local-environment.md)
+* [GitHub Web インターフェイスを使用して、宛先のドキュメントページを作成します](./use-github-interface-to-create-documentation.md)
+* [ローカル環境でテキストエディターを使用して、宛先のドキュメントページを作成する](./work-in-local-environment.md)
 
 
 <!--
@@ -108,7 +106,7 @@ The instructions below show you how to use the GitHub web interface to author do
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`.
 1. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown in the image below.
 
-   ![fork repo](./assets/ssd-fork-repo.png)
+   ![fork repo](./assets/ssd-fork-repository.gif)
 
 1. In your fork of the repository, create a new branch for your project, as shown below. You will use this branch for the work in this tutorial.
 
@@ -139,7 +137,7 @@ The instructions below show you how to use the GitHub web interface to author do
 
 1. After you saved the file and uploaded your desired images, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch that you worked on is selected and select **Pull request**.
 
-   ![create pull request](./assets/ssd-create-pull-request-1.png)
+   ![create pull request](./assets/ssd-create-pull-request-1.gif)
 
 1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository. 
    >[!TIP]
@@ -173,7 +171,7 @@ Please see [Install Git and Markdown Authoring tools](https://docs.adobe.com/con
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`
 1. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown in the screenshot.
 
-   ![fork repo](./assets/ssd-fork-repo.png)
+   ![fork repo](./assets/ssd-fork-repository.gif)
 
 1. Clone the repository to your local machine. Select **Code > HTTPS > Open with GitHub Desktop**, as shown below. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. For further reference, read [Create a local clone of the repository](https://docs.adobe.com/content/help/en/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) in the Adobe contributor guide.
 
@@ -211,7 +209,7 @@ Please see [Install Git and Markdown Authoring tools](https://docs.adobe.com/con
 
 1. In the GitHub web interface, open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch you worked on is selected and select **Pull request**.
 
-   ![create pull request](./assets/ssd-create-pull-request-1.png)
+   ![create pull request](./assets/ssd-create-pull-request-1.gif)
 
 1.  Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository. 
    >[!TIP]
