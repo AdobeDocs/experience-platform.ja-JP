@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Data Ingestion, Sources
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 18%
 
 ---
@@ -15,89 +15,89 @@ ht-degree: 18%
 # ソースコネクタ {#sources}
 
 - [ソースコネクタの概要](home.md)
-- 使用可能なソースコネクタ{#connectors}
+- 使用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
-      - [Analytics分類ソースコネクタ](connectors/adobe-applications/classifications.md)
-      - [Analyticsソースコネクタ](connectors/adobe-applications/analytics.md)
+      - [Analytics 分類ソースコネクタ](connectors/adobe-applications/classifications.md)
+      - [Analytics ソースコネクタ](connectors/adobe-applications/analytics.md)
       - [Audience Managerソースコネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性ソースコネクタ](connectors/adobe-applications/customer-attributes.md)
-      - Adobeアプリケーションフィールドのマッピング{#mapping}
-         - [Analyticsフィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
+      - フィールドマッピング {#mapping}
+         - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Managerフィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットフィールドのマッピング](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engageフィールドのマッピング](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage {#marketo}
+      - B2B {#b2b}
          - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Marketo Engageの名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [B2B 名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising Cloud {#advertising}
-      - [Google AdWordsコネクタ](connectors/advertising/ads.md)
-   - クラウドストレージ{#cloud-storage}
+      - [Google AdWords コネクタ](connectors/advertising/ads.md)
+   - クラウドストレージ {#cloud-storage}
       - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
-      - [Amazon S3コネクタ](connectors/cloud-storage/s3.md)
-      - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
-      - [Azure Data Lake Storage Gen2コネクタ](connectors/cloud-storage/adls-gen2.md)
+      - [Amazon S3 コネクタ](connectors/cloud-storage/s3.md)
+      - [Apache HDFS コネクタ](connectors/cloud-storage/hdfs.md)
+      - [Azure Data Lake Storage Gen2 コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob コネクタ](connectors/cloud-storage/blob.md)
-      - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
-      - [Azureファイルストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
+      - [Azure Event Hubs コネクタ](connectors/cloud-storage/eventhub.md)
+      - [Azure ファイルストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [データランディングゾーン](connectors/cloud-storage/data-landing-zone.md)
-      - [FTPコネクタ](connectors/cloud-storage/ftp.md)
-      - [Google Cloud Storageコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [FTP コネクタ](connectors/cloud-storage/ftp.md)
+      - [Google Cloud Storage コネクタ](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Oracleオブジェクトストレージ](connectors/cloud-storage/oracle-object-storage.md)
-      - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
-      - [Amazon S3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
+      - [SFTP コネクタ](connectors/cloud-storage/sftp.md)
+      - [Amazon S3 および Azure Blob コネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
-      - [Salesforceコネクタ](connectors/crm/salesforce.md)
-      - [Veeva CRMコネクタ](connectors/crm/veeva.md)
-   - 顧客の成功{#customer-success}
-      - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
-      - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
-   - データベース{#databases}
-      - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
-      - [Azure HDInsightsコネクタ上のApache Hive](connectors/databases/hive.md)
-      - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
+      - [Salesforce コネクタ](connectors/crm/salesforce.md)
+      - [Veeva CRM コネクタ](connectors/crm/veeva.md)
+   - 顧客の成功 {#customer-success}
+      - [Salesforce Service Cloud コネクタ](connectors/customer-success/salesforce-service-cloud.md)
+      - [ServiceNow コネクタ](connectors/customer-success/servicenow.md)
+   - データベース {#databases}
+      - [Amazon Redshift コネクタ](connectors/databases/redshift.md)
+      - [Azure HDInsights コネクタの Apache Hive](connectors/databases/hive.md)
+      - [Azure HDInsights コネクタの Apache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
       - [azure synapse分析コネクタ](connectors/databases/synapse-analytics.md)
-      - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
-      - [Couchbaseコネクタ](connectors/databases/couchbase.md)
-      - [Google BigQueryコネクタ](connectors/databases/bigquery.md)
-      - [GreenPlumコネクタ](connectors/databases/greenplum.md)
-      - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
-      - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
-      - [MariaDBコネクタ](connectors/databases/mariadb.md)
-      - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
-      - [MySQLコネクタ](connectors/databases/mysql.md)
+      - [Azure テーブルストレージコネクタ](connectors/databases/ats.md)
+      - [Couchbase コネクタ](connectors/databases/couchbase.md)
+      - [Google BigQuery コネクタ](connectors/databases/bigquery.md)
+      - [GreenPlum コネクタ](connectors/databases/greenplum.md)
+      - [HP Vertica コネクタ](connectors/databases/hp-vertica.md)
+      - [IBM DB2 コネクタ](connectors/databases/ibm-db2.md)
+      - [MariaDB コネクタ](connectors/databases/mariadb.md)
+      - [Microsoft SQL Server コネクタ](connectors/databases/sql-server.md)
+      - [MySQL コネクタ](connectors/databases/mysql.md)
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
-      - [PostgreSQLコネクタ](connectors/databases/postgres.md)
+      - [PostgreSQL コネクタ](connectors/databases/postgres.md)
       - [Snowflakeコネクタ](connectors/databases/snowflake.md)
    - e コマース {#ecommerce}
-      - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
-   - ローカルシステム{#local-system}
+      - [Shopify コネクタ](connectors/ecommerce/shopify.md)
+   - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
-   - マーケティングの自動化{#marketing-automation}
-      - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
+   - マーケティングの自動化 {#marketing-automation}
+      - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
-   - 支払{#payments}
-      - [PayPalコネクタ](connectors/payments/paypal.md)
-   - プロトコル{#protocols}
-      - [汎用ODataコネクタ](connectors/protocols/odata.md)
-   - ストリーミング{#streaming}
-      - [HTTP APIコネクタ](connectors/streaming/http.md)
+   - 支払 {#payments}
+      - [PayPal コネクタ](connectors/payments/paypal.md)
+   - プロトコル {#protocols}
+      - [汎用 OData コネクタ](connectors/protocols/odata.md)
+   - ストリーミング {#streaming}
+      - [HTTP API コネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
-   - ベース接続{#create}を作成します。
+   - 基本接続 {#create} を作成します
       - Advertising Cloud {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - クラウドストレージ{#cloud-storage}
-         - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
+      - クラウドストレージ {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure BLOB](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azureイベントハブ](tutorials/api/create/cloud-storage/eventhub.md)
-         - [Azureファイルストレージ](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Azure イベントハブ](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Azure ファイルストレージ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [データランディングゾーン](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
@@ -108,13 +108,13 @@ ht-degree: 18%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-      - 顧客の成功{#customer-success}
+      - 顧客の成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
-      - データベース{#databases}
+      - データベース {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
-         - [Azure HDInsightsのApache Hive](tutorials/api/create/databases/hive.md)
-         - [Ache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure HDInsights の Apache Hive](tutorials/api/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
@@ -132,45 +132,45 @@ ht-degree: 18%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
-      - マーケティングの自動化{#marketing-automation}
+      - マーケティングの自動化 {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 支払{#payments}
+      - 支払 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-      - プロトコル{#protocols}
-         - [汎用OData](tutorials/api/create/protocols/odata.md)
-      - ストリーミング{#streaming}
+      - プロトコル {#protocols}
+         - [汎用 OData](tutorials/api/create/protocols/odata.md)
+      - ストリーミング {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - データの調査 {#explore}
       - [広告データの参照](tutorials/api/explore/advertising.md)
       - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
-      - [CRMデータの調査](tutorials/api/explore/crm.md)
+      - [CRM データの調査](tutorials/api/explore/crm.md)
       - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
       - [データベースデータの調査](tutorials/api/explore/database-nosql.md)
-      - [eコマースデータの参照](tutorials/api/explore/ecommerce.md)
+      - [e コマースデータの参照](tutorials/api/explore/ecommerce.md)
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払データの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
-   - データを収集{#collect}
+   - データを収集 {#collect}
       - [広告データの収集](tutorials/api/collect/advertising.md)
       - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
-      - [CRMデータの収集](tutorials/api/collect/crm.md)
+      - [CRM データの収集](tutorials/api/collect/crm.md)
       - [顧客成功データの収集](tutorials/api/collect/customer-success.md)
       - [データベースデータの収集](tutorials/api/collect/database-nosql.md)
-      - [eコマースデータの収集](tutorials/api/collect/ecommerce.md)
+      - [e コマースデータの収集](tutorials/api/collect/ecommerce.md)
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
       - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
-   - [サードパーティのクラウドストレージシステムからのParquetデータの取り込み](tutorials/api/cloud-storage-parquet.md)
+   - [サードパーティのクラウドストレージシステムからの Parquet データの取り込み](tutorials/api/cloud-storage-parquet.md)
    - [データセット接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [データフローの監視](tutorials/api/monitor.md)
    - [アカウントの更新](tutorials/api/update.md)
    - [データフローの更新](tutorials/api/update-dataflows.md)
    - [アカウントの削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
-- UIチュートリアル{#ui-tutorials}
-   - ソース接続{#create}を作成します。
+- UI チュートリアル {#ui-tutorials}
+   - ソース接続 {#create} の作成
       - アドビアプリケーション {#adobe-applications}
          - [Adobe Analytics（レポートスイートデータ）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（分類データ）](tutorials/ui/create/adobe-applications/classifications.md)
@@ -179,32 +179,32 @@ ht-degree: 18%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Advertising Cloud {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - クラウドストレージ{#cloud-storage}
-         - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+      - クラウドストレージ {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure BLOB](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azureイベントハブ](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azureファイルストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Azure イベントハブ](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure ファイルストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [データランディングゾーン](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracleオブジェクトストレージ](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
-         - [Amazon S3とBlob](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Amazon S3 と Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-      - 顧客の成功{#customer-success}
+      - 顧客の成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
-      - データベース{#databases}
+      - データベース {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
-         - [Azure HDInsightsのApache Hive](tutorials/ui/create/databases/hive.md)
-         - [Ache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure HDInsights の Apache Hive](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
@@ -222,26 +222,26 @@ ht-degree: 18%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
-      - ローカルシステム{#local-system}
+      - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
-      - マーケティングの自動化{#marketing-automation}
+      - マーケティングの自動化 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 支払{#payments}
+      - 支払 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-      - プロトコル{#protocols}
-         - [汎用OData](tutorials/ui/create/protocols/odata.md)
-      - ストリーミング{#streaming}
+      - プロトコル {#protocols}
+         - [汎用 OData](tutorials/ui/create/protocols/odata.md)
+      - ストリーミング {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
-   - データフロー{#dataflow}の設定
+   - データフローの設定 {#dataflow}
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Streaming Cloudストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [CRM接続のデータフロー](tutorials/ui/dataflow/crm.md)
+      - [Streaming Cloud ストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [CRM 接続データフロー](tutorials/ui/dataflow/crm.md)
       - [顧客成功接続のデータフロー](tutorials/ui/dataflow/customer-success.md)
       - [データベース接続のデータフロー](tutorials/ui/dataflow/databases.md)
-      - [eコマース接続のデータフロー](tutorials/ui/dataflow/ecommerce.md)
-      - [マーケティング自動接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
+      - [e コマース接続のデータフロー](tutorials/ui/dataflow/ecommerce.md)
+      - [マーケティング自動化接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
    - [顧客プロファイルに入力するインバウンドデータのアクティブ化](tutorials/ui/profile.md)
@@ -251,8 +251,8 @@ ht-degree: 18%
    - [データフローの更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
-- [フロー実行の通知](notifications.md)
-- [IPアドレス許可リスト](ip-address-allow-list.md)
+- [フロー実行通知](notifications.md)
+- [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
