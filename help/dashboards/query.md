@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Experience Platform ダッシュボードを機能させる未加工データセットの調査と処理
+title: ' Platform ダッシュボードを機能させる未加工データセットの調査と処理'
 type: Documentation
 description: クエリサービスを使用して、Experience Platform でプロファイル、セグメント、宛先ダッシュボードを機能させる未加工データセットを調査し、処理する方法を説明します。
-source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
-workflow-type: ht
-source-wordcount: '614'
-ht-degree: 100%
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
+source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+workflow-type: tm+mt
+source-wordcount: '738'
+ht-degree: 66%
 
 ---
-
 
 # クエリサービスを使用したダッシュボードデータセットの調査、検証、処理
 
@@ -27,19 +27,36 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 
 ### プロファイル属性データセット
 
-リアルタイム顧客プロファイルのアクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
+プロファイルダッシュボードのインサイトは、組織で定義された結合ポリシーに結び付けられます。 アクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
 
-これらのデータセットの命名規則では、**プロファイル属性**&#x200B;の後に英数字の値が続きます。例：`Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+これらのデータセットの命名規則は、**Profile-Snapshot-Export** の後に、システムで生成されるランダムなアルファ値が続きます。 例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
 
-各データセットの完全なスキーマを理解するには、Experience Platform UI のデータセットビューアを使用して、データセットをプレビューし、調査します。
+各プロファイルスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、[ データセットをプレビューし、調査します。
+
+![](images/query/profile-attribute.png)
+
+#### プロファイル属性データセットと結合ポリシー ID のマッピング
+
+各プロファイル属性データセットには、**プロファイルスナップショットエクスポート** の後に、システムで生成されたランダムな英数字の値が続きます。 例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
+
+この英数字値は、組織が作成したいずれかの結合ポリシーの結合ポリシー ID にマッピングされる、システム生成のランダムな文字列です。 各結合ポリシー ID と関連するプロファイル属性データセット文字列とのマッピングは、 `adwh_dim_merge_policies` データセットで保持されます。
+
+`adwh_dim_merge_policies` データセットには、次のフィールドが含まれます。
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
+このデータセットは、クエリエディターの UI を使用してExperience Platformで確認できます。 クエリエディターの使用について詳しくは、[ クエリエディターの UI ガイド ](../query-service/ui/user-guide.md) を参照してください。
 
 ### セグメントメタデータデータセット
 
 組織の各セグメントのメタデータを含むデータレイクで使用できるセグメントメタデータデータセットがあります。
 
-このデータセットの命名規則では、**プロファイルセグメント定義**&#x200B;の後に英数字の値が続きます。例：`Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+このデータセットの命名規則は、**Segmentdefinition-Snapshot-Export** の後に英数字が続きます。 例：`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-データセットの完全なスキーマを理解するには、Experience Platform UI のデータセットビューアを使用して、スキーマをプレビューし、調査します。
+各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、[ データセットをプレビューし、調査します。
 
 ![](images/query/segment-metadata.png)
 
@@ -49,7 +66,7 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 
 このデータセットの命名規則は **DIM_Destination** です。
 
-データセットの完全なスキーマを理解するには、Experience Platform UI のデータセットビューアを使用して、スキーマをプレビューし、調査します。
+DIM の宛先データセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、データセット [ をプレビューし、調査します。
 
 ![](images/query/destinations-metadata.png)
 
@@ -59,7 +76,11 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 
 ### ID 別のプロファイルの数
 
-このプロファイルインサイトは、データセット内のすべての結合プロファイルにわたって ID の分類を提供します。1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
+このプロファイルインサイトは、データセット内のすべての結合プロファイルにわたって ID の分類を提供します。
+
+>[!NOTE]
+>
+>1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
 
 **クエリ**
 
@@ -72,7 +93,7 @@ Select
            Select
                explode(identitymap)
            from
-              profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+              Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
         )
      group by
         namespace;
@@ -96,7 +117,7 @@ Select
                   Select
                     explode(Segmentmembership)
                   from
-                    profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+                    Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
