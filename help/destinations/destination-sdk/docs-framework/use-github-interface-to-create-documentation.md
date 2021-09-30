@@ -2,9 +2,9 @@
 title: 'GitHub Web インターフェイスを使用して、宛先のドキュメントページを作成します '
 description: このページの手順では、GitHub Web インターフェイスを使用して、Experience Platformの宛先に関するドキュメントページを作成し、レビュー用に送信する方法を示します。
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 ## GitHub オーサリング環境の設定 {#set-up-environment}
 
 1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.en` に移動します。
-2. リポジトリを [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) するには、下の図に示すように、「**Fork**」をクリックします。
+2. リポジトリを [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) するには、次に示すように **Fork** をクリックします。 これにより、自分の GitHub アカウントにExperience Platformリポジトリのコピーが作成されます。
 
    ![フォークAdobeドキュメントリポジトリ](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 >
 >ここでは何も壊せないことに注意してください。 この節の手順に従うことで、単にドキュメントの更新を提案するだけです。 推奨される更新は、Adobe Experience Platformドキュメントチームによって承認または編集されます。
 
-1. ファイルを保存し、必要な画像をアップロードした後、プルリクエスト (PR) を開いて、作業ブランチをAdobeドキュメントリポジトリの master ブランチにマージできます。 作業中のブランチが選択されていることを確認し、**Contribute/Pull request** を選択します。
+1. ファイルを保存し、必要な画像をアップロードした後、プルリクエスト (PR) を開いて、作業ブランチをAdobeドキュメントリポジトリの master ブランチにマージできます。 作業中のブランチが選択されていることを確認し、**Contribute/Open pull request** を選択します。
 
 ![プル要求の作成](./assets/ssd-create-pull-request-1.gif)
 

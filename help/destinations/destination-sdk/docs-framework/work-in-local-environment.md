@@ -2,9 +2,9 @@
 title: ローカル環境でテキストエディターを使用して、宛先のドキュメントページを作成する
 description: このページの手順では、テキストエディターを使用してローカル環境で作業し、Experience Platformの宛先のドキュメントページを作成して、レビュー用に送信する方法を示します。
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 ## GitHub に接続し、ローカルのオーサリング環境を設定する {#set-up-environment}
 
 1. ブラウザーで、`https://github.com/AdobeDocs/experience-platform.en` に移動します。
-2. リポジトリを [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) するには、スクリーンショットに示すように **Fork** をクリックします。
+2. リポジトリを [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) するには、次に示すように **Fork** をクリックします。 これにより、自分の GitHub アカウントにExperience Platformリポジトリのコピーが作成されます。
 
    ![フォークAdobeドキュメントリポジトリ](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 2%
 
    ![コミットをプッシュ](./assets/push-local-to-remote.png)
 
-1. GitHub Web インターフェイスで、プルリクエスト (PR) を開き、作業ブランチをAdobeドキュメントリポジトリの master ブランチに結合します。 作業中のブランチが選択されていることを確認し、「**プルリクエスト**」を選択します。
+1. GitHub Web インターフェイスで、プルリクエスト (PR) を開き、作業ブランチをAdobeドキュメントリポジトリの master ブランチに結合します。 作業中のブランチが選択されていることを確認し、**Contribute/Open pull request** を選択します。
 
    ![プル要求の作成](./assets/ssd-create-pull-request-1.gif)
 
