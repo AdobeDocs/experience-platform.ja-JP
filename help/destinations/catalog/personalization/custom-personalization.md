@@ -1,10 +1,10 @@
 ---
 keywords: カスタムパーソナライゼーション；宛先；experience platform カスタムの宛先；
-title: カスタムパーソナライゼーションの宛先
+title: カスタムパーソナライゼーション接続（ベータ版）
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先では、ユーザープロファイルのセグメントメンバーシップに基づいて、リアルタイムの 1 対 1 のパーソナライゼーションを提供します。
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 8%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 8%
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルリクエスト**  — 単一のプロファイルに対して、カスタムパーソナライゼーションの宛先にマッピングされるすべてのセグメントを要求します。パーソナライゼーションの宛先は、異なるAdobeデータ収集データストリームに対して設定できます。
+**プロファイルリクエスト**  — 単一のプロファイルに対して、カスタムパーソナライゼーションの宛先にマッピングされるすべてのセグメントを要求します。異なる [Adobeデータ収集データストリーム ](../../../edge/fundamentals/datastreams.md) に対して、異なるカスタムパーソナライゼーションの宛先を設定できます。
 
 ## ユースケース {#use-cases}
 
-この宛先は、Adobeサーバーおよび広告以外のパーソナライゼーションアプリケーションとオーディエンスを共有し、リアルタイムで使用して、Web サイトでどの広告ユーザーに表示するかを決定します。
+この宛先は、Adobeサーバーおよび広告以外のパーソナライゼーションアプリケーションとオーディエンスを共有し、リアルタイムで使用して、Web サイトで広告ユーザーに表示する広告を決定します。
 
 ### ユースケース 1
 
@@ -62,7 +62,7 @@ ht-degree: 8%
 
 [Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイする場合は、[send event complete](../../../edge/extension/event-types.md) 機能を使用します。カスタムコードアクションには、書き出されたデータを確認するための `event.destinations` 変数が含まれます。
 
-[Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイしない場合は、[ イベントからの応答の処理 ](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用します。
+[Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイしない場合は、[ イベントからの応答の処理 ](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認します。
 
 Adobe Experience Platformからの JSON 応答を解析して、Adobe Experience Platformと統合しているアプリケーションの対応する統合エイリアスを見つけることができます。 セグメント ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有に見えるサンプルを示します。
 

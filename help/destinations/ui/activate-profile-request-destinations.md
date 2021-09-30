@@ -1,13 +1,13 @@
 ---
 keywords: プロファイルリクエストの宛先のアクティブ化、データのアクティブ化、プロファイルリクエストの宛先のアクティブ化
-title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化
+title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化（ベータ版）
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 10%
 
 ### セグメント結合ポリシー {#merge-policy}
 
-プロファイルリクエストの宛先は、現在、デフォルトの結合ポリシーを使用するセグメントのアクティブ化のみをサポートしています。 異なる結合ポリシーでセグメントをアクティブ化しようとすると、[[!UICONTROL Review]](#review) ページでエラーが発生します。
+現在、プロファイルリクエストの宛先は、[ デフォルトの結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies) を使用するセグメントのアクティブ化のみをサポートしています。
 
 ## 宛先の選択 {#select-destination}
 
