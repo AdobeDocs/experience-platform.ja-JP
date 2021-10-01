@@ -3,9 +3,9 @@ title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2202'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Analytics 拡張機能がまだインストールされていない場合�
 
 ### ページに既にインストールされているライブラリを使用する
 
-#### Set the following report suites on tracker
+#### トラッカーで次のレポートスイートを設定する
 
 このオプションを選択する場合は、次の各環境に対して 1 つ以上のレポートスイートを指定します。
 
@@ -55,7 +55,7 @@ Adobe Analytics 拡張機能がまだインストールされていない場合�
 
 Activity Map は、AAM モジュールと同様、個別のモジュールとして読み込まれます。デフォルトでは Activity Map はオンになっていますが、オフにしたい場合は、設定でチェックボックスをオフにすることができます。
 
-#### Tracker is accessible on the global variable named
+#### 次の名前のグローバル変数でトラッカーにアクセスできる
 
 このチェックボックスをオンにすると、トラッカーオブジェクトをグローバルに使用することができます。例えば、サイト上の任意の場所で変数 `window.s.pageName` を定義できます。
 
@@ -69,7 +69,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 
 ライブラリの URL を指定します。
 
-#### トラッカーに次のレポートスイートを設定します。
+#### トラッカーで次のレポートスイートを設定する
 
 このオプションを選択する場合は、次の各環境に対して 1 つ以上のレポートスイートを指定します。
 
@@ -77,7 +77,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 * ステージング
 * 実稼動
 
-#### トラッカーには、
+#### 次の名前のグローバル変数でトラッカーにアクセスできる
 
 グローバルに使用するトラッカーオブジェクトを指定します。
 
@@ -91,7 +91,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 >
 >タグコードエディターで使用されるバリデーターは、開発者が作成したコードの問題を識別するように作られています。縮小処理をおこなったコード（コードマネージャーからダウンロードした AppMeasurement.js コードなど）は、タグバリデーターによって、誤って「問題あり」とフラグ付けされることがありますが、通常は無視できます。
 
-#### トラッカーに次のレポートスイートを設定します。
+#### トラッカーで次のレポートスイートを設定する
 
 このオプションを選択する場合は、次の各環境に対して 1 つ以上のレポートスイートを指定します。
 
@@ -99,7 +99,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 * ステージング
 * 実稼動
 
-#### トラッカーには、
+#### 次の名前のグローバル変数でトラッカーにアクセスできる
 
 グローバルに使用するトラッカーオブジェクトを指定します。
 
@@ -107,7 +107,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 
 設定ページの「General」セクションからオプションを選択します。次の設定オプションを使用できます。
 
-### Enable EU compliance for Adobe Analytics
+### Enable EU compliance for Adobe Analytics で EU 
 
 EU プライバシー Cookie に基づいたトラッキングを有効または無効にします。
 
@@ -130,19 +130,19 @@ _satellite.cookie.set("sat_track", "false");
 _satellite.cookie.set("sat_track", "true");
 ```
 
-### Character Set
+### 文字セット
 
 イメージリクエストのエンコード方法を決定します。実装またはサイトで非 ASCII 文字を使用している場合は、ここで文字セットを定義することが重要です。プリセット文字セットを選択するか、カスタム文字セットを指定できます。サイトと同じ文字コードを使用することをお勧めします。通常、この値は UTF-8 です。
 
 文字セットは、`s.charSet` 変数を使用して Analytics カスタムコードで設定できます。文字セットについて詳しくは、 [charSet のドキュメント](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=ja) を参照してください。
 
-### Currency Code
+### 通貨コード
 
 売上高および通貨イベントに適用するコンバージョン率を決定します。サイトが訪問者に対し、複数の通貨での購入を許可している場合、通貨コードを設定すると、金額が正しく変換されて保存されます。
 
 サポートされる通貨コードについて詳しくは、 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=ja) を参照してください。
 
-### Tracking Server
+### トラッキングサーバー
 
 ファーストパーティ cookie の保存場所を示すために、ファーストパーティ cookie の実装で使用されます。Experience Cloud ID サービスを使用する場合、アドビでは、このフィールドの入力についてアドバイスします。
 
@@ -150,7 +150,7 @@ _satellite.cookie.set("sat_track", "true");
 
 Adobe Analytics 実装ガイドの「[trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html?lang=ja)」を参照してください。
 
-### SSL Tracking Server
+### SSL トラッキングサーバー
 
 ファーストパーティ cookie の保存場所を示すために、SSL ファーストパーティ cookie の実装で使用されます。Experience Cloud ID サービスを使用する場合、アドビでは、このフィールドの入力についてアドバイスします。定義されていない場合、SSL データはトラッキングサーバーを使用します。
 
@@ -158,7 +158,7 @@ SSL トラッキングサーバーは、`s.trackingServerSecure` 変数を使用
 
 「[trackingServerSecure](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserversecure.html?lang=ja)」を参照してください。
 
-## Global Variables
+## グローバル変数
 
 このセクションを使用して、[eVar と Prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=ja) を設定し、階層を作成します。
 
@@ -166,7 +166,7 @@ SSL トラッキングサーバーは、`s.trackingServerSecure` 変数を使用
 
 Web アプリケーションが通常 1 ページに 1 つのビーコンを送信する場合、このセクションを使用すれば、変数を 1 か所で簡単に設定できます。アプリケーションがページごとに 1 つ以上のビーコンを送信し（シングルページアプリケーションなど）、変数をクリアして同じトラッキングオブジェクトを使用してリセットする必要がある場合は、変数を設定およびクリアするルールに依存する方が簡単です。
 
-## Link Tracking
+## リンクトラッキング
 
 設定ページの「Link Trackng」セクションからオプションを選択します。次の設定オプションを使用できます。
 
@@ -292,7 +292,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 #### eVar
 
-1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html) を設定します。
+1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=ja) を設定します。
 
 1. ドロップダウンから eVar を選択します。
 1. eVar を値として設定（Set As）するか、別の eVar をコピー（Duplicate From）するかを指定します。
@@ -363,11 +363,11 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 ### ビーコンを送信 {#send-beacon}
 
-#### Increment a pageview - s.t()
+#### ページプレビューを増分 - s.t()
 
 ページビューを増分する場合に選択します。
 
-#### ページビューを増分しない — s.tl()
+#### ページビューをインクリメントしないでください - s.tl()
 
 ページビューを増分しない場合に選択します。
 
