@@ -4,7 +4,7 @@ title: スキーマを編集してカスタムダッシュボードウィジェ�
 description: このガイドでは、Adobe Experience Platform ダッシュボードのカスタムウィジェットを作成するために、属性を選択し、組織のスキーマを設定する手順を順を追って説明します。
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '467'
 ht-degree: 100%
 
