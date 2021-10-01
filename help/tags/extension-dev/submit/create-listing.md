@@ -3,7 +3,7 @@ title: 拡張機能の Exchange リストの作成
 description: Adobe Experience Platform の公開カタログに拡張機能を追加する方法を説明します。
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1162'
 ht-degree: 100%
 
