@@ -3,9 +3,9 @@ title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '619'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -57,13 +57,13 @@ console.log(turbine.environment.stage);
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 環境のID。 |
-| `stage` | このライブラリが構築された環境。指定できる値は`development`、`staging`、`production`です。 |
+| `id` | 環境の ID。 |
+| `stage` | このライブラリが構築された環境。有効な値は `development`、`staging`、および `production` です。 |
 
 
 ## `debugEnabled`
 
-タグデバッグが現在有効になっているかどうかを示すboolean値。
+タグデバッグが現在有効になっているかどうかを示すブール値。
 
 メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使用してメッセージをログに記録し、タグのデバッグが有効になっている場合にのみメッセージがコンソールに出力されるようにします。
 
@@ -117,7 +117,7 @@ turbine.logger.error('Error!');
 * `logger.warn(message: string)`：コンソールに警告メッセージを記録します。
 * `logger.error(message: string)`：コンソールにエラーメッセージを記録します。
 * `logger.debug(message: string)`：デバッグメッセージをコンソールに記録します。（ブラウザーコンソール内で`verbose` ログが有効になっている場合にのみ表示されます）
-* `logger.deprecation(message: string)`:ユーザーがタグデバッグを有効にしているかどうかに関する警告メッセージをコンソールに記録します。
+* `logger.deprecation(message: string)`：ユーザーがタグデバッグを有効にしているかどうかに関わらず、警告メッセージをコンソールに記録します。
 
 ### `onDebugChanged`
 
