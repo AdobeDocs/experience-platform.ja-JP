@@ -5,9 +5,9 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
