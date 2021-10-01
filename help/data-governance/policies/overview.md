@@ -6,9 +6,9 @@ topic-legacy: policies
 description: データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1073'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
