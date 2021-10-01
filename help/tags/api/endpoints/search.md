@@ -3,9 +3,9 @@ title: 検索エンドポイント
 description: Reactor API で /search エンドポイントを呼び出す方法を説明します。
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '658'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Reactor API の `/search` エンドポイントは、クエリとして表現さ
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、[はじめる前に](../getting-started.md)を参照して、API への認証方法に関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 ## 検索の実行 {#perform}
 
