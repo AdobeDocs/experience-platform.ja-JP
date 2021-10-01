@@ -4,7 +4,7 @@ title: ダッシュボードのカスタムウィジェットの作成
 description: このガイドでは、Adobe Experience Platform ダッシュボードで使用するカスタムウィジェットの作成手順を説明します。
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '902'
 ht-degree: 100%
 
