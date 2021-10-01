@@ -3,9 +3,9 @@ title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1249'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 8 月 24 日（PT）
 
@@ -21,8 +21,8 @@ ht-degree: 97%
 
 #### バグの修正
 
-* [AppMeasurementをv2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)にアップグレードしました。
-* innerHTMLを使用する代わりに、Activity Mapロジックを反映するようにlinkNameのフォールバックを更新しました。
+* [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) にアップグレードしました。
+* innerHTML を使用する代わりに、Activity Map ロジックを反映するように linkName のフォールバックを更新しました。
 
 ## 2020 年 8 月 6 日（PT）
 
@@ -34,7 +34,7 @@ ht-degree: 97%
 
 #### 機能
 
-* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました。
+* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました。
 * 小さな UI が変更され、追加の設定がチェックボックスではなくアコーディオンで折りたたまれて表示されるようになりました。
 
 ## 2020 年 6 月 2 日（PT）
@@ -62,7 +62,7 @@ ht-degree: 97%
 
 #### 機能
 
-* [AppMeasurement を 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました
+* [AppMeasurement を 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました
 
 ## 2020 年 3 月 2 日（PT）
 
@@ -74,7 +74,7 @@ ht-degree: 97%
 
 #### 機能
 
-* [AppMeasurement を 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました
+* [AppMeasurement を 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました
 * Audience Manager モジュールの DIL ライブラリを 9.4 に更新しました
 * 拡張機能内の入力フィールドの長さを増やしました
 * 拡張機能およびアクション設定の eVar と prop で、Analytics のわかりやすい名前が表示されるようになりました
@@ -135,7 +135,7 @@ ht-degree: 97%
 
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
-* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
+* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
 * 現在サポートされていないので、次のチェックボックスを削除しました：「Do not attach the destination publishing IFRAME to the DOM or fire destinations」
 
 ## 2019 年 6 月 4 日（PT）
