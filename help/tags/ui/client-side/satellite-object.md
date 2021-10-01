@@ -3,9 +3,9 @@ title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1279'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -227,7 +227,7 @@ _satellite.buildInfo
 
 ## `environment`
 
-このオブジェクトには、現在のタグランタイムライブラリがデプロイされている環境に関する情報が含まれます。
+このオブジェクトには、現在のタグランタイムライブラリがデプロイされている環境に関する情報が含まれています。
 
 **コード**
 
@@ -246,8 +246,8 @@ _satellite.environment
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 環境のID。 |
-| `stage` | このライブラリが構築された環境。指定できる値は`development`、`staging`、`production`です。 |
+| `id` | 環境の ID。 |
+| `stage` | このライブラリが構築された環境。使用できる値は、`development`、`staging`、`production` です。 |
 
 ## `notify`
 
