@@ -1,10 +1,11 @@
 ---
 title: Reactor API ガイド
 description: Reactor API を使用すると、開発者は Adobe Experience Platform のタグのすべてのリソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '1035'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
