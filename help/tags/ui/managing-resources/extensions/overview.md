@@ -3,7 +3,7 @@ title: 拡張機能
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '497'
 ht-degree: 100%
 
@@ -41,11 +41,11 @@ ht-degree: 100%
 
 拡張機能ページには 3 つのビューがあります。
 
-* Installed
+* インストール済み
 
    インストールされている拡張機能をすべて表示します。
 
-* Catalog
+* カタログ
 * 使用可能なすべての拡張機能を表示します。
 * 更新
 
