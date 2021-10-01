@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: Experience Data Model（XDM）ガイド
-user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
+user-guide-description: エクスペリエンスデータモデル (XDM) クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 28%
+source-wordcount: '393'
+ht-degree: 29%
 
 ---
 
@@ -18,32 +18,32 @@ ht-degree: 28%
 * スキーマ {#schema}
    * [スキーマ合成の基本](schema/composition.md)
    * [データモデリングのベストプラクティス](schema/best-practices.md)
-   * [XDMフィールドタイプの制約](schema/field-constraints.md)
-   * [XDMでの名前空間](./schema/namespaces.md)
+   * [XDM フィールドタイプの制約](schema/field-constraints.md)
+   * [XDM での名前空間](./schema/namespaces.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
-   * 業界データモデル{#industries}
+   * 業界データモデル {#industries}
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
       * [金融サービス](./schema/industries/financial.md)
       * [通信業](./schema/industries/telecom.md)
-      * [旅行と接客業](./schema/industries/travel-hospitality.md)
+      * [旅行と接客](./schema/industries/travel-hospitality.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
-   * B2Bクラス（ベータ版） {#b2b}
-      * [XDMビジネスアカウント](./classes/b2b/business-account.md)
-      * [XDMビジネスアカウント担当者の関係](./classes/b2b/business-account-person-relation.md)
+   * B2B クラス（ベータ版） {#b2b}
+      * [XDM ビジネスアカウント](./classes/b2b/business-account.md)
+      * [XDM ビジネスアカウント担当者の関係](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
-      * [XDM Business Campaignメンバー](./classes/b2b/business-campaign-members.md)
-      * [XDMビジネス機会](./classes/b2b/business-opportunity.md)
-      * [XDM Business Opportunity Person関係](./classes/b2b/business-opportunity-person-relation.md)
-      * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
-      * [XDMビジネスマーケティングリストメンバー](./classes/b2b/business-marketing-list-members.md)
+      * [XDM Business Campaign メンバー](./classes/b2b/business-campaign-members.md)
+      * [XDM ビジネス機会](./classes/b2b/business-opportunity.md)
+      * [XDM Business Opportunity Person 関係](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM ビジネスマーケティングリスト](./classes/b2b/business-marketing-list.md)
+      * [XDM ビジネスマーケティングリストメンバー](./classes/b2b/business-marketing-list-members.md)
 * スキーマフィールドグループ {#field-groups}
-   * プロファイルフィールドグループ{#profile}
+   * プロファイルフィールドグループ {#profile}
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
-      * [IAB TCF 2.0の同意](./field-groups/profile/iab.md)
+      * [IAB TCF 2.0 の同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
@@ -51,29 +51,29 @@ ht-degree: 28%
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
       * [通信購読](./field-groups/profile/telecom-subscription.md)
       * [勤務先の詳細](./field-groups/profile/work-contact-details.md)
-      * [XDM Business Personコンポーネント](./field-groups/profile/business-person-components.md)
-      * [XDMビジネス担当者の詳細](./field-groups/profile/business-person-details.md)
-   * イベントフィールドグループ{#event}
+      * [XDM Business Person コンポーネント](./field-groups/profile/business-person-components.md)
+      * [XDM ビジネス担当者の詳細](./field-groups/profile/business-person-details.md)
+   * イベントフィールドグループ {#event}
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
       * [デバイスのトレードインの詳細](./field-groups/event/device-trade-in-details.md)
-      * [食事予約](./field-groups/event/dining-reservation.md)
-      * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
+      * [食事の予約](./field-groups/event/dining-reservation.md)
+      * [エンドユーザー ID の詳細](./field-groups/event/enduserids.md)
       * [環境の詳細](./field-groups/event/environment-details.md)
       * [飛行予約](./field-groups/event/flight-reservation.md)
-      * [IAB TCF 2.0の同意](./field-groups/event/iab.md)
+      * [IAB TCF 2.0 の同意](./field-groups/event/iab.md)
       * [宿泊予約](./field-groups/event/lodging-reservation.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
-      * [Webの詳細](./field-groups/event/web-details.md)
+      * [Web の詳細](./field-groups/event/web-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アプリケーション](./data-types/application.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
-   * [B2Bソース](./data-types/b2b-source.md)
+   * [B2B ソース](./data-types/b2b-source.md)
    * [Commerce](./data-types/commerce.md)
-   * [Consent String](./data-types/consent-string.md)
+   * [コンセントストリング](./data-types/consent-string.md)
    * [同意と環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
    * [デバイス](./data-types/device.md)
@@ -81,9 +81,9 @@ ht-degree: 28%
    * [環境](./data-types/environment.md)
    * [エクスペリエンスチャネル](./data-types/experience-channel.md)
    * [外部ソース・システム監査属性](./data-types/external-source-system-audit-attributes.md)
-   * [一般的な同意フィールド](./data-types/consent-field.md)
+   * [汎用同意フィールド](./data-types/consent-field.md)
    * [汎用マーケティング環境設定フィールド](./data-types/marketing-field.md)
-   * [購読付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
+   * [購読付き汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
    * [汎用パーソナライゼーション設定フィールド](./data-types/personalization-field.md)
    * [地域](./data-types/geo.md)
    * [ジオサークル](./data-types/geo-circle.md)
@@ -98,27 +98,27 @@ ht-degree: 28%
    * [ユーザー](./data-types/person.md)
    * [ユーザー名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
-   * [場所コンテキスト](./data-types/place-context.md)
-   * [POIの詳細](./data-types/poi-details.md)
-   * [POIインタラクション](./data-types/poi-interaction.md)
+   * [場所のコンテキスト](./data-types/place-context.md)
+   * [POI の詳細](./data-types/poi-details.md)
+   * [POI インタラクション](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
    * [製品リスト項目](./data-types/product-list-item.md)
    * [検索](./data-types/search.md)
    * [購読](./data-types/subscription.md)
    * [通信購読](./data-types/telecom-subscription.md)
    * [トランザクション](./data-types/transaction.md)
-   * [Web情報](./data-types/web-information.md)
-   * [Webインタラクション](./data-types/web-interaction.md)
-   * [Webページの詳細](./data-types/webpage-details.md)
-*  スキーマUI  {#ui}
+   * [Web 情報](./data-types/web-information.md)
+   * [Web インタラクション](./data-types/web-interaction.md)
+   * [Web ページの詳細](./data-types/webpage-details.md)
+*  スキーマ UI  {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
-   * リソースの作成と編集{#resources}
+   * リソースの作成と編集 {#resources}
       * [スキーマ](./ui/resources/schemas.md)
       * [クラス](./ui/resources/classes.md)
       * [フィールドグループ](./ui/resources/field-groups.md)
       * [データタイプ](./ui/resources/data-types.md)
-   * フィールド{#fields}を定義します。
+   * フィールド {#fields} を定義します
       * [概要](./ui/fields/overview.md)
       * [必須フィールド](./ui/fields/required.md)
       * [オブジェクトフィールド](./ui/fields/object.md)
@@ -126,8 +126,9 @@ ht-degree: 28%
       * [列挙フィールド](./ui/fields/enum.md)
       * [ID フィールド](./ui/fields/identity.md)
       * [関係フィールド](./ui/fields/relationship.md)
-   * [サンプルXDMデータの生成](./ui/sample.md)
-   * [XDMスキーマの書き出し](./ui/export.md)
+   * [フィールドベースのワークフロー](./ui/field-based-workflows.md)
+   * [サンプル XDM データの生成](./ui/sample.md)
+   * [XDM スキーマの書き出し](./ui/export.md)
 * スキーマレジストリ API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
@@ -145,11 +146,11 @@ ht-degree: 28%
    * [Mixin（非推奨）](api/mixins.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
-   * [UIでのスキーマの作成](tutorials/create-schema-ui.md)
-   * [APIでのスキーマの作成](tutorials/create-schema-api.md)
-   * [UIでのスキーマ関係の定義](tutorials/relationship-ui.md)
-   * [APIでのスキーマ関係の定義](tutorials/relationship-api.md)
-   * [Real-time CDP B2B Edition（ベータ版）でのスキーマ関係の定義](tutorials/relationship-b2b.md)
+   * [UI でのスキーマの作成](tutorials/create-schema-ui.md)
+   * [API でのスキーマの作成](tutorials/create-schema-api.md)
+   * [UI でのスキーマの関係の定義](tutorials/relationship-ui.md)
+   * [API でのスキーマの関係の定義](tutorials/relationship-api.md)
+   * [リアルタイム CDP B2B エディション（ベータ版）でのスキーマ関係の定義](tutorials/relationship-b2b.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
