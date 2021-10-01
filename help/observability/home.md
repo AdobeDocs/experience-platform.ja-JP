@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform Observability Insights は、Platform アクティビティに主要指標を公開できる RESTful API です。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -24,11 +24,11 @@ API の使用について詳しくは、『[[!DNL Observability Insights] API �
 
 ## アラート
 
-Experience Platformを使用すると、Platform操作の特定の条件セットに達した場合に、特定の観察性指標に基づいてアラートをサブスクライブできます。 アラートは、1回限りの通知の形式を取ることも、アラートをトリガーした条件が解決されるまで、事前に定義された時間間隔で繰り返すこともできます。
+Experience Platform では、Platform 操作が特定の条件セットに達した場合に、特定の可観測性指標に基づいたアラートを登録できます。 アラートは、1 回限りの通知の形式を取ることも、アラートをトリガーした条件が解決されるまで事前に定義された時間間隔で繰り返すこともできます。
 
-アラートをサブスクライブすることで、ジョブの完了時、ワークフロー内の特定のマイルストーンに達した場合、またはプロセス中にエラーが発生した場合に備えて、独自のダウンストリームプロトコルを設定できます。
+イベントを登録することで、ジョブが完了したとき、ワークフロー内の特定のマイルストーンに達したとき、またはプロセス中にエラーが発生した場合に使用する独自のダウンストリームプロトコルを設定できます。
 
-詳しくは、[アラート](./alerts/overview.md)の概要を参照してください。
+詳細については、 [アラート](./alerts/overview.md)の概要を参照してください。
 
 ## 次の手順
 
