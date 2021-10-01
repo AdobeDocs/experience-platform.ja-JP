@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。データ使用ポリシーの表示、作成、更新、削除に関する API 呼び出しには、すべて /policies エンドポイントを使用します。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1813'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
