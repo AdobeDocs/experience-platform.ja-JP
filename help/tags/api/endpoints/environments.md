@@ -3,9 +3,9 @@ title: 環境エンドポイント
 description: Reactor API で /environments エンドポイントを呼び出す方法を説明します。
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1038'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
