@@ -7,9 +7,9 @@ type: Tutorial
 description: Policy Service API を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。このドキュメントでは、Policy Service API を使用してポリシーを作成する、順を追ったチュートリアルを提供します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1215'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
