@@ -5,9 +5,9 @@ breadcrumb-title: アクセス制御ガイド
 user-guide-description: Adobe Admin Console の製品プロファイルを活用して、ユーザーを、権限やサンドボックスとリンクさせます。
 feature: Access Control
 source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
