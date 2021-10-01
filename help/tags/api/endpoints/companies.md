@@ -3,9 +3,9 @@ title: 会社エンドポイント
 description: Reactor API で /companies エンドポイントを呼び出す方法を説明します。
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
