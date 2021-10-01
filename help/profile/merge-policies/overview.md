@@ -3,13 +3,13 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: 結合ポリシーの概要
 type: Documentation
 description: Adobe Experience Platform では、複数のソースのデータフラグメントを統合および組み合わせて、個々の顧客の全体像を把握できます。結合ポリシーとは、データを統合する場合のデータの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
-source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
-workflow-type: tm+mt
+exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '1252'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
-
 
 # 結合ポリシーの概要
 
@@ -23,7 +23,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 * [リアルタイム顧客プロファイル](../home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：様々なデータソースから得られた ID を [!DNL Platform] に取り込むことで、リアルタイム顧客プロファイルを有効にします。
-* [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)[!DNL Platform]： が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
+* [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：[!DNL Platform]  が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 
 ## 結合ポリシーについて
 
