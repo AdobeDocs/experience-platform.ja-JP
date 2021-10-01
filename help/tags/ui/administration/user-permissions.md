@@ -3,7 +3,7 @@ title: タグのユーザー権限
 description: タグに使用できる様々なタイプの権限と、様々なビジネスユースケース向けの基本的な実装戦略について説明します。
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1307'
 ht-degree: 100%
 
@@ -84,11 +84,11 @@ Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Consol
 
 製品プロファイルの作成とプロファイルへのユーザーの追加を考慮する際に使用できる、一般的なシナリオと推奨される出発点を以下に示します。
 
-### One-person show
+### 一人ですべてを担当
 
 1 人であらゆることを担当する小さな企業では、このユーザーにすべてのプロパティへのアクセス権を付与し、上記のすべての権限を割り当てます。
 
-### Separation of duties
+### 作業の分担
 
 組織内で多くの人がタグ付けに関わっている場合を考えます。たとえば、ルールとデータ要素の作成担当者（外部コンサルタントなど）に、実稼動環境へのアクセス権は与えたくない場合があります。この場合、IT チームのメンバーのみが実稼動環境にデプロイできるようにしたいと思います。
 
@@ -121,4 +121,4 @@ Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Consol
 
 ## 次の手順
 
-このドキュメントでは、ExperiencePlatform のタグで使用できる権限の概要を説明しました。Adobe Admin Console でタグ用の製品プロファイルを設定する手順については、 [ユーザー権限の管理](./manage-permissions.md) に関するガイドを参照してください。
+このドキュメントでは、Experience Platform のタグで使用できる権限の概要を説明しました。Adobe Admin Console でタグ用の製品プロファイルを設定する手順については、 [ユーザー権限の管理](./manage-permissions.md) に関するガイドを参照してください。
