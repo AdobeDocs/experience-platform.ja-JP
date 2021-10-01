@@ -5,10 +5,10 @@ title: Marketo Engageコネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 14%
+source-wordcount: '474'
+ht-degree: 13%
 
 ---
 
@@ -70,3 +70,4 @@ XDM と Platform での役割について詳しくは、「[XDM システムの�
 * [!DNL Marketo] で使用される B2B 名前空間とスキーマの基本的な設定については、[B2B 名前空間とスキーマ ](./marketo-namespaces.md) のドキュメントを参照してください。
 * [!DNL Marketo] マンチキン ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo]  認証ガイド ](./marketo-auth.md) を参照してください。
 * [!DNL Marketo] データセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo]  フィールドマッピング ](../mapping/marketo.md) に関するドキュメントを参照してください。
+* [!DNL Real-time Customer Data Platform B2B Edition] とその機能に関する一般的な情報については、[[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) のドキュメントを参照してください。
