@@ -4,7 +4,7 @@ title: 標準ダッシュボードウィジェット
 description: このガイドでは、Adobe Experience Platform のダッシュボードに標準ウィジェットを追加するための手順を説明します。
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '403'
 ht-degree: 100%
 
