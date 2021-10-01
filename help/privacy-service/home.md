@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1390'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、企業による顧客の�
    * [!DNL Privacy Service] を最大限に活用するには、顧客から収集するデータのタイプと、どのデータがプライバシー規制の対象となるかについて、詳細に理解する必要があります。詳しくは、[プライバシー要件の決定](#requirements)のセクションを参照してください。
 1. **データに正しいラベルを付けているか。**
    * サービスがプライバシージョブ中にアクセスまたは削除するフィールドを決定するには、データに適切なラベルを付ける必要があります。詳しくは、[データのラベル付け](#label)の節を参照してください。
-1. **送信先の ID がどれかわかっているか[!DNL Privacy Service]。**
+1. **送信先の ID がどれかわかっているか [!DNL Privacy Service]。**
    * プライバシーリクエストを送信する際は、特定の Adobe アプリケーション固有の、個々の顧客 ID を入力する必要があります。詳しくは、[ID データの提供](#identity)と[プライバシーリクエスト](#requests)に関するセクションを参照してください。
 1. **プライバシー業務をどのようにトラッキングするか。**
    * プライバシーリクエストをおこなった後、そのステータスと結果をトラッキングするためのオプションがいくつか用意されています。詳しくは、[プライバシージョブの監視](#monitor)の節を参照してください。
