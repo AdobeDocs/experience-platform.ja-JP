@@ -1,10 +1,11 @@
 ---
 title: ホストエンドポイント
 description: Reactor API で /hosts エンドポイントを呼び出す方法を説明します。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '765'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API でホストを管理する方法について説明します。タグのホストに関する一般的な情報については、公開ドキュメントの [ホストの概要](../../ui/publishing/hosts/hosts-overview.md) に関するガイドを参照してください。
+>このドキュメントでは、Reactor API でホストを管理する方法について説明します。タグのホストの一般的な情報について詳しくは、公開ドキュメントの [ホストの概要](../../ui/publishing/hosts/hosts-overview.md) に関するガイドを参照してください。
 
 Reactor API では、ホストが[ビルド](./builds.md)を配信できる宛先を定義します。
 
@@ -221,7 +222,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `attributes.name` | **（必須）**&#x200B;人間が判読できるホスト名。 |
-| `attributes.type_of` | **（必須）**&#x200B;ホストのタイプ。次の 2 つのオプションのいずれかを指定できます。 <ul><li>[アドビが管理するホスト](../../ui/publishing/hosts/managed-by-adobe-host.md)用 `akamai`</li><li>`sftp`[SFTP ホスト用](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **（必須）**&#x200B;ホストのタイプ。次の 2 つのオプションのいずれかを指定できます。 <ul><li>`akamai`[アドビが管理するホスト](../../ui/publishing/hosts/managed-by-adobe-host.md)の場合  </li><li>`sftp`：[SFTP ホスト](../../ui/publishing/hosts/sftp-host.md)の場合 </li></ul> |
 | `attributes.encrypted_private_key` | ホスト認証に使用するオプションの秘密鍵。 |
 | `attributes.path` | `server` URL に追加するパス。 |
 | `attributes.port` | 使用する特定のサーバーポートを示す整数。 |
@@ -393,7 +394,7 @@ curl -X DELETE \
 
 次の呼び出しは、ホストの関連リソースを取得する方法を示しています。 [ホストを検索](#lookup)すると、これらの関係が `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。
 
 ### ホストの関連プロパティの検索 {#property}
 
