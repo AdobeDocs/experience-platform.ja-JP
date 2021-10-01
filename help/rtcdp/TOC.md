@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: 8030eb8798ffe2bc9cb299203bafb6c53a9edebc
+source-git-commit: 213f6f1cad7ab2bec6f62f292f3492bd9aefc69c
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 82%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 82%
 * セグメント {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
    * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
+   * [B2B セグメント化](segmentation/b2b.md)
    * [顧客 AI](segmentation/customer-ai.md)
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)
