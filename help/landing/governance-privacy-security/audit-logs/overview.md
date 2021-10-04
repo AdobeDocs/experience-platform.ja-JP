@@ -2,9 +2,9 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platformで誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
+source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '608'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platformの監査ログ機能は現在ベータ版です。 このドキュメントで説明する機能は変更される場合があります。
+>Adobe Experience Platformの監査ログ機能は現在ベータ版で、お客様の組織がまだアクセスできない可能性があります。 このドキュメントで説明する機能は変更される場合があります。
 
 Adobe Experience Platformでは、システムで実行されるアクティビティの透明性と可視性を高めるために、様々なサービスや機能のユーザーアクティビティを「監査ログ」の形式で監査できます。 これらのログは、Platform 上の問題のトラブルシューティングに役立つ監査記録を形成し、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。
 
