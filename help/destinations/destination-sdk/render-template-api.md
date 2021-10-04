@@ -2,7 +2,7 @@
 description: このページでは、メッセージ変換テンプレートに基づいて、「/authoring/testing/template/render」 API エンドポイントを使用して、宛先に書き出したデータをレンダリングするために実行できるすべての API 操作について説明します。
 title: レンダリングテンプレート API 操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 2%
@@ -228,39 +228,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --data-raw '
 {
    "destinationId":"{DESTINATION_ID}",
-   "template":"{# THIS is an example template for multiple profiles #}\r\n{\r\n    \"profiles\": [\r\n        {% for profile in input.profiles %}\r\n            {\r\n                \"identities\": [\r\n                    {% for email in profile.identityMap.email %}\r\n                        {\r\n                            \"type\": \"email\",\r\n                            \"id\": \"{{ email.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n\r\n                    {# Add a comma only if we have both emails and external_ids. #}\r\n                    {% if profile.identityMap.email is not empty and profile.identityMap.external_id is not empty %}\r\n                        ,\r\n                    {% endif %}\r\n\r\n                    {% for external in profile.identityMap.external_id %}\r\n                        {\r\n                            \"type\": \"external_id\",\r\n                            \"id\": \"{{ external.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n                ],\r\n                \"AdobeExperiencePlatformSegments\": {\r\n                    \"add\": [\r\n                        {% for segment in profile.segmentMembership.ups | added %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ],\r\n                    \"remove\": [\r\n                        {# Alternative syntax for filtering segments by status: #}\r\n                        {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ]\r\n                }\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ]\r\n}",
-   "profiles":[
-      {
-         "segmentMembership":{
-            "ups":{
-               "segmentid1":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870859Z",
-                  "status":"existing"
-               },
-               "segmentid3":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870860Z",
-                  "status":"exited"
-               },
-               "segmentid2":{
-                  "lastQualificationTime":"2021-06-17T12:08:07.870860Z",
-                  "status":"realized"
-               }
-            }
-         },
-         "identityMap":{
-            "email":[
-               {
-                  "id":"Email-gq3zZ"
-               }
-            ],
-            "external_id":[
-               {
-                  "id":"external_id"
-               }
-            ]
-         }
-      }
-   ]
+   "template":"{# THIS is an example template for multiple profiles #}\r\n{\r\n    \"profiles\": [\r\n        {% for profile in input.profiles %}\r\n            {\r\n                \"identities\": [\r\n                    {% for email in profile.identityMap.email %}\r\n                        {\r\n                            \"type\": \"email\",\r\n                            \"id\": \"{{ email.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n\r\n                    {# Add a comma only if we have both emails and external_ids. #}\r\n                    {% if profile.identityMap.email is not empty and profile.identityMap.external_id is not empty %}\r\n                        ,\r\n                    {% endif %}\r\n\r\n                    {% for external in profile.identityMap.external_id %}\r\n                        {\r\n                            \"type\": \"external_id\",\r\n                            \"id\": \"{{ external.id }}\"\r\n                        }{% if not loop.last %},{% endif %}\r\n                    {% endfor %}\r\n                ],\r\n                \"AdobeExperiencePlatformSegments\": {\r\n                    \"add\": [\r\n                        {% for segment in profile.segmentMembership.ups | added %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ],\r\n                    \"remove\": [\r\n                        {# Alternative syntax for filtering segments by status: #}\r\n                        {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                            \"{{ segment.key }}\"{% if not loop.last %},{% endif %}\r\n                        {% endfor %}\r\n                    ]\r\n                }\r\n            }{% if not loop.last %},{% endif %}\r\n        {% endfor %}\r\n    ]\r\n}"
 }'
 ```
 

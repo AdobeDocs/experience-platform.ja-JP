@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2352'
 ht-degree: 5%
 
 ---
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -85,7 +85,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -172,14 +176,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.isRequired` | Boolean | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用してパターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに `^[A-Za-z]+$` と入力します。 |
-| `uiAttributes.documentationLink` | 文字列 | 宛先の [ 宛先カタログ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) のドキュメントページを参照します。 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。 Moviestar という宛先の場合は、`http://www.adobe.com/go/destinations-moviestar-en` を使用します。 |
+| `uiAttributes.documentationLink` | 文字列 | 宛先の [ 宛先カタログ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) のドキュメントページを参照します。 `https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。 Moviestar という宛先の場合は、`https://www.adobe.com/go/destinations-moviestar-en` を使用します。 |
 | `uiAttributes.category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指定します。 詳しくは、[ 宛先カテゴリ ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories) を参照してください。 次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `uiAttributes.connectionType` | 文字列 | `Server-to-server` は現在、唯一のオプションです。 |
 | `uiAttributes.frequency` | 文字列 | `Streaming` は現在、唯一のオプションです。 |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 文字列 | _サンプルの設定_&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を指定します。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _サンプルの設定_&#x200B;では示されていません。プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 <br> を使用する場合、を使用 `acceptedGlobalNamespaces`して、電子メールア `"requiredTransformation":"sha256(lower($))"` ドレスや電話番号を小文字にしてハッシュ化できます。このパラメーターの使用方法を確認するには、[ 宛先の設定を更新 ](./destination-configuration-api.md#update) の下のセクションで設定を参照してください。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 <br> を使用する場合、を使用 `acceptedGlobalNamespaces`して、電子メールア `"requiredTransformation":"sha256(lower($))"` ドレスや電話番号を小文字にしてハッシュ化できます。 |
 | `destinationDelivery.authenticationRule` | 文字列 | [!DNL Platform] ユーザーが宛先に接続する方法を示します。 指定できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE` です。<br> <ul><li>Platform のお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法を使用してシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。 例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` または `authType:BEARER` も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、`PLATFORM_AUTHENTICATION` 顧客が宛先に接続するための認証資格情報を提供する必要がない場合は、[!DNL Platform] を使用します。 この場合、[Credentials](./credentials-configuration.md) 設定を使用して credentials オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 文字列 | この宛先に使用する [ 宛先サーバーテンプレート ](./destination-server-api.md) の `instanceId`。 |
 | `backfillHistoricalProfileData` | Boolean | 宛先に対してセグメントをアクティブ化した場合に、履歴プロファイルデータを書き出すかどうかを制御します。<br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前にセグメントに適合した過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
@@ -279,7 +283,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
             }
          ],
          "uiAttributes":{
-            "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+            "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
             "category":"mobile",
             "connectionType":"Server-to-server",
             "frequency":"Streaming"
@@ -287,7 +291,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
          "identityNamespaces":{
             "external_id":{
                "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
+               "acceptsCustomNamespaces":true,
+               "acceptedGlobalNamespaces":{
+                  "Email":{
+                     
+                  }
+               }
             },
             "another_id":{
                "acceptsAttributes":true,
@@ -379,14 +388,14 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `customerDataFields.isRequired` | Boolean | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用してパターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに `^[A-Za-z]+$` と入力します。 |
-| `uiAttributes.documentationLink` | 文字列 | 宛先の [ 宛先カタログ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) のドキュメントページを参照します。 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。 Moviestar という宛先の場合は、`http://www.adobe.com/go/destinations-moviestar-en` |
+| `uiAttributes.documentationLink` | 文字列 | 宛先の [ 宛先カタログ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) のドキュメントページを参照します。 `https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。 Moviestar という宛先の場合は、`https://www.adobe.com/go/destinations-moviestar-en` |
 | `uiAttributes.category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指定します。 詳しくは、[ 宛先カテゴリ ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories) を参照してください。 次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | 文字列 | `Server-to-server` は現在、唯一のオプションです。 |
 | `uiAttributes.frequency` | 文字列 | `Streaming` は現在、唯一のオプションです。 |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 詳しくは、Adobe Experience Platformの [ カスタム名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) を参照してください。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 文字列 | _サンプルの設定_&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を指定します。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _サンプルの設定_&#x200B;では示されていません。プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
 | `destinationDelivery.authenticationRule` | 文字列 | [!DNL Platform] ユーザーが宛先に接続する方法を示します。 指定できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE` です。<br> <ul><li>Platform のお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法を使用してシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。 例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` または `authType:BEARER` も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、`PLATFORM_AUTHENTICATION` 顧客が宛先に接続するための認証資格情報を提供する必要がない場合は、[!DNL Platform] を使用します。 この場合、[Credentials](./credentials-configuration.md) 設定を使用して credentials オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 文字列 | この宛先に使用する [ 宛先サーバーテンプレート ](./destination-server-api.md) の `instanceId`。 |
 | `inputSchemaId` | 文字列 | このフィールドは自動的に生成され、入力は必要ありません。 |
@@ -465,7 +474,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -473,7 +482,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -647,7 +660,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -655,7 +668,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,

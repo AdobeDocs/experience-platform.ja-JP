@@ -2,9 +2,9 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
 title: 宛先 SDK の宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1552'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,12 @@ ht-degree: 5%
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -214,7 +219,7 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 | `acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
 | `acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
 | `allowedAttributesTransformation` | 文字列 | *サンプルの設定*&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を指定します。 |
-| `acceptedGlobalNamespaces` | - | *サンプルの設定*&#x200B;では示されていません。プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
+| `acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

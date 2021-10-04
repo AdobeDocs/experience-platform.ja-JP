@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/testing/destinationInstance/」 API エンドポイントを使用して実行できる、宛先が正しく設定されているかどうかのテストおよび設定した宛先へのデータフローの整合性の検証をおこなう API 操作の一覧と説明を示します。
 title: 宛先テスト API 操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 2%
 呼び出しにプロファイルを追加するかどうかにかかわらず、テストエンドポイントにリクエストをおこないます。 リクエストでプロファイルを送信しない場合、Adobeは内部でプロファイルを生成し、リクエストに追加します。
 
 [ サンプルプロファイル生成 API](./sample-profile-generation-api.md) を使用して、宛先テスト API へのリクエストで使用するプロファイルを作成できます。
+
+## 宛先インスタンス ID の取得方法 {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
