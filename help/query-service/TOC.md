@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 90%
 - クエリサービス UI {#ui}
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザガイド](ui/user-guide.md)
-   - [クエリサービス資格情報の使用](ui/credentials.md)
+   - [クエリサービスの認証情報の使用](ui/credentials.md)
    - [クエリ結果からのデータセットの生成](ui/create-datasets.md)
 - ベストプラクティス {#best-practices}
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)

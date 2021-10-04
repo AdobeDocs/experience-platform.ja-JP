@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platformの最新のリリースノートです。
+description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
 source-wordcount: '381'
-ht-degree: 43%
+ht-degree: 50%
 
 ---
 
@@ -51,8 +51,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Data Landing Zone] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) を使用して、[!DNL Data Landing Zone] ソース接続を作成できるようになりました。 [!DNL Data Landing Zone] は、Platform によっ [!DNL Azure Blob] てプロビジョニングされたストレージインターフェイスで、Platform の内外でファイルを取り込み、出力するための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。詳しくは、[[!DNL Data Landing Zone]  概要 ](../../sources/connectors/cloud-storage/data-landing-zone.md) を参照してください。 |
-| [!DNL Snowflake] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/databases/snowflake.md) を使用して [!DNL Snowflake] ソース接続を作成し、[!DNL Snowflake] データベースから Platform にデータを取り込めるようになりました。 詳しくは、[[!DNL Snowflake]  概要 ](../../sources/connectors/databases/snowflake.md) を参照してください。 |
-| [!DNL SFTP] ソースの機能強化 | [!DNL SFTP] ソース接続を作成する際に、カスタムポート番号を手動で設定できます。 詳しくは、[[!DNL SFTP]  概要 ](../../sources/connectors/cloud-storage/sftp.md) を参照してください。 |
+| [!DNL Data Landing Zone] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) を使用して、[!DNL Data Landing Zone] ソース接続を作成できるようになりました。 [!DNL Data Landing Zone] は、Platform によっ [!DNL Azure Blob] てプロビジョニングされたストレージインターフェイスで、Platform の内外でファイルを取り込み、出力するための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。詳しくは、[[!DNL Data Landing Zone]  の概要](../../sources/connectors/cloud-storage/data-landing-zone.md)を参照してください。 |
+| [!DNL Snowflake] | [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/databases/snowflake.md) を使用して [!DNL Snowflake] ソース接続を作成し、[!DNL Snowflake] データベースから Platform にデータを取り込めるようになりました。 詳しくは、[[!DNL Snowflake]  の概要](../../sources/connectors/databases/snowflake.md)を参照してください。 |
+| [!DNL SFTP] ソースの機能強化 | [!DNL SFTP] ソース接続を作成する際に、カスタムポート番号を手動で設定できます。 詳しくは、[[!DNL SFTP]  の概要](../../sources/connectors/cloud-storage/sftp.md)を参照してください。 |
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。

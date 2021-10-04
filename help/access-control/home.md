@@ -8,7 +8,7 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -103,11 +103,11 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先への読み取り、作成、編集、無効化アクセス |
 | [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先への読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能この権限を持つユーザーは、宛先をアクティブ化するユーザーに、「宛先の表示」または「[!UICONTROL 宛先]の管理」のいずれかを付与する必要があります。 |
-| [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform宛先 SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
+| [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | パートナーが 2 つの IMS 組織を接続し、[!DNL Segment Match] フローを有効にするための、パートナーのハンドシェイクの作成、承認、拒否へのアクセス。 |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーとの [!DNL Segment Match] フィードの読み取り、作成、編集および公開にアクセスできます。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの IMS 組織を接続し、[!DNL Segment Match] フローを有効にするパートナーハンドシェイクを作成、承認、拒否するためのアクセス。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーで [!DNL Segment Match] フィードを読み取り、作成、編集、公開するためのアクセス権。 |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ラベルの適用] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
@@ -116,7 +116,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Dashboards] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] | ライセンス使用状況ダッシュボードを表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL 標準ダッシュボードの管理] | Data Warehouse にないカスタム属性の追加。 |
 | [!DNL Query Service] | [!UICONTROL クエリの管理] | Platform データの構造化 SQL クエリの読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | 期限が切れていない資格情報を作成、更新、削除して、クエリサービスにアクセスできる。 |
+| [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | クエリサービスアクセスの有効期限が切れていない認証情報を作成、更新、削除するためのアクセス。 |
 
 ## 次の手順
 

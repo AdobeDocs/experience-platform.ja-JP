@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -49,5 +49,5 @@ ht-degree: 93%
    * [その他のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [プライバシーリクエストの処理](privacy.md)
 * [[!DNL Profile] トラブルシューティングガイド](troubleshooting.md)
-* [Profile API のリファレンス](https://www.adobe.com/go/profile-apis-en)
-* [Platform リリースノート](https://www.adobe.com/go/platform-release-notes-en)
+* [Profile API のリファレンス](https://www.adobe.com/go/profile-apis-jp)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

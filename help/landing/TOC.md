@@ -15,7 +15,7 @@ ht-degree: 99%
 
 * [Platform の概要](home.md)
 * [Platform の概要（動画）](video/platform-overview.md)
-* [Platformチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
+* [Platform チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [Platform による顧客体験（動画）](video/customer-experience.md)
 * [Platform による顧客体験の背景（動画）](video/customer-experience-bts.md)
 * はじめに {#getting-started}
