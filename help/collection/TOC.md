@@ -5,7 +5,7 @@ breadcrumb-title: データ収集ガイド
 user-guide-description: Adobe Experience Platform エッジネットワークのクライアントサイドのデータ収集を有効にします。
 feature: Data Collection
 source-git-commit: 6aaab0f5615b1f438ba8cef798aa1038a1953b33
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 100%
 

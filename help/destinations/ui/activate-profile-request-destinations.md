@@ -5,7 +5,8 @@ type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: cd7132eb-4047-4faa-a224-47366846cb56
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 10%

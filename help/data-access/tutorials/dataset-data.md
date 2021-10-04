@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform、ホーム、人気のあるトピック、データアクセス、データアクセスapi、クエリデータアクセス
+keywords: Experience Platform；ホーム；よく読まれるトピック；データアクセス；データアクセス api；クエリデータアクセス
 solution: Experience Platform
-title: データアクセスAPIを使用したデータセットデータの表示
+title: データアクセス API を使用したデータセットデータの表示
 topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience PlatformのデータアクセスAPIを使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする方法を説明します。 また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
+description: Adobe Experience Platformのデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする方法を説明します。 また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
 source-wordcount: '1390'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
-# [!DNL Data Access] APIを使用したデータセットデータの表示
+# [!DNL Data Access] API を使用したデータセットデータの表示
 
-このドキュメントでは、Adobe Experience Platformの[!DNL Data Access] APIを使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする手順を説明するチュートリアルを提供します。 また、ページングや部分的なダウンロードなど、[!DNL Data Access] APIの固有の機能の一部も紹介されます。
+このドキュメントでは、Adobe Experience Platformの [!DNL Data Access] API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする手順を説明するチュートリアルを提供します。 また、ページングや部分的なダウンロードなど、[!DNL Data Access] API の固有の機能の一部も紹介します。
 
 ## はじめに
 
@@ -49,23 +49,23 @@ ht-degree: 74%
 
 ## シーケンス図
 
-このチュートリアルでは、以下のシーケンス図に示す手順に従って、[!DNL Data Access] APIのコア機能を強調表示します。</br>
+このチュートリアルでは、以下のシーケンス図に示す手順に従って、[!DNL Data Access] API のコア機能を強調表示します。</br>
 ![](../images/sequence_diagram.png)
 
-[!DNL Catalog] APIを使用すると、バッチやファイルに関する情報を取得できます。 [!DNL Data Access] APIを使用すると、ファイルのサイズに応じて、HTTP経由でこれらのファイルにアクセスし、フルダウンロードまたは部分的なダウンロードとしてダウンロードできます。
+[!DNL Catalog] API を使用すると、バッチやファイルに関する情報を取得できます。 [!DNL Data Access] API を使用すると、ファイルのサイズに応じて、HTTP 経由でこれらのファイルにアクセスし、フルダウンロードまたは部分ダウンロードでダウンロードできます。
 
 ## データの検索
 
-[!DNL Data Access] APIを使用する前に、アクセスするデータの場所を特定する必要があります。 [!DNL Catalog] APIには、組織のメタデータを参照し、アクセスするバッチまたはファイルのIDを取得するために使用できるエンドポイントが2つあります。
+[!DNL Data Access] API を使用する前に、アクセスするデータの場所を特定する必要があります。 [!DNL Catalog] API には、組織のメタデータを参照し、アクセスするバッチまたはファイルの ID を取得するために使用できるエンドポイントが 2 つあります。
 
 - `GET /batches`：組織内のバッチのリストを返します
 - `GET /dataSetFiles`：組織内のファイルのリストを返します
 
-[!DNL Catalog] APIのエンドポイントの包括的なリストについては、『[APIリファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
+[!DNL Catalog] API のエンドポイントの包括的なリストについては、「[API リファレンス ](https://www.adobe.io/experience-platform-apis/references/catalog/)」を参照してください。
 
 ## IMS 組織内のバッチのリストを取得する
 
-[!DNL Catalog] APIを使用して、組織のバッチのリストを返すことができます。
+[!DNL Catalog] API を使用して、組織のバッチのリストを返すことができます。
 
 **API 形式**
 
@@ -196,7 +196,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ## 特定のバッチに属するすべてのファイルのリストを取得する
 
-アクセスするバッチのIDが決まったら、[!DNL Data Access] APIを使用して、そのバッチに属するファイルのリストを取得できます。
+アクセスするバッチの ID が決まったら、[!DNL Data Access] API を使用して、そのバッチに属するファイルのリストを取得できます。
 
 **API 形式**
 
@@ -253,7 +253,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 ## ファイル ID を使用したファイルへのアクセス
 
-一意のファイルIDを取得したら、[!DNL Data Access] APIを使用して、ファイルの名前、バイト単位のサイズ、ダウンロード用リンクなど、ファイルに関する特定の詳細にアクセスできます。
+一意のファイル ID を取得したら、[!DNL Data Access] API を使用して、ファイルの名前、バイト単位のサイズ、ダウンロード用のリンクなど、ファイルに関する具体的な詳細にアクセスできます。
 
 **API 形式**
 
@@ -386,7 +386,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 ## ファイルのコンテンツへのアクセス
 
-[!DNL Data Access] APIを使用して、ファイルのコンテンツにアクセスすることもできます。
+[!DNL Data Access] API を使用して、ファイルのコンテンツにアクセスすることもできます。
 
 **API 形式**
 
@@ -415,7 +415,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## ファイルの一部コンテンツのダウンロード
 
-[!DNL Data Access] APIを使用すると、ファイルをチャンク単位でダウンロードできます。 範囲ヘッダーは、ファイルから特定のバイト範囲をダウンロードする`GET /files/{FILE_ID}`リクエスト時に指定できます。範囲を指定しない場合、API はデフォルトでファイル全体をダウンロードします。
+[!DNL Data Access] API を使用すると、ファイルをチャンク単位でダウンロードできます。 範囲ヘッダーは、ファイルから特定のバイト範囲をダウンロードする`GET /files/{FILE_ID}`リクエスト時に指定できます。範囲を指定しない場合、API はデフォルトでファイル全体をダウンロードします。
 
 [前の節](#retrieve-the-metadata-of-a-file)の HEAD の例では、特定のファイルのサイズをバイト単位で示しています。
 
@@ -450,12 +450,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 応答本体には、（リクエストの「範囲」ヘッダーで指定された）ファイルの最初の 100 バイトと、HTTP ステータス 206（部分的な内容）が含まれます。応答には、次のヘッダーも含まれます。
 
 - コンテンツの長さ：100（返されるバイト数）
-- コンテンツタイプ：application/parquet（Parquetファイルがリクエストされたので、応答コンテンツタイプは`parquet`）
+- Content-type:application/parquet（Parquet ファイルがリクエストされたので、応答コンテンツタイプは `parquet`）
 - コンテンツ範囲：バイト 0～99／249058（合計バイト数（249058）のうち、リクエストされた範囲（0-99））
 
 ## API 応答のページネーションの設定
 
-[!DNL Data Access] API内の応答はページ分割されます。 デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
+[!DNL Data Access] API 内の応答はページ分割されます。 デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
 
 - `limit`：「limit」パラメーターを使用して、必要に応じて 1 ページあたりのエントリ数を指定できます。
 - `start`：オフセットは、「開始」クエリパラメーターで設定できます。

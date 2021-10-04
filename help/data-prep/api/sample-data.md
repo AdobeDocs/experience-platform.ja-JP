@@ -5,7 +5,7 @@ title: サンプルデータ API エンドポイント
 topic-legacy: sample data
 description: 'Adobe Experience Platform API で「/samples」エンドポイントを使用し、マッピングのサンプルデータをプログラムにより取得、作成、更新および検証できます。 '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 100%
 
@@ -109,7 +109,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   }'
 ```
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTP ステータス 200 と、新しく作成されたサンプルデータに関する情報が返されます。
 
@@ -148,7 +148,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTP ステータス 200 と、新しく作成されたサンプルデータに関する情報が返されます。
 
@@ -189,7 +189,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTP ステータス 200 と、取得するサンプルデータオブジェクトの情報が返されます。
 

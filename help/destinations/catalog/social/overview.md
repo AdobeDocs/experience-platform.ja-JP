@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ## サポートされるソーシャルの宛先 {#supported-destinations}
 
-Adobe Experience Platformは現在、次のソーシャルの宛先をサポートしています。
+Adobe Experience Platformは、現在、次のソーシャルの宛先をサポートしています。
 
-* [Adobe [!DNL Livefyre] 拡張](adobe-livefyre.md)
+* [Adobe [!DNL Livefyre]  拡張](adobe-livefyre.md)
 * [[!DNL Facebook] 接続](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] 接続](linkedin.md)
 * [[!DNL Twitter Custom Audiences] 接続](twitter.md)
 
 ## 新しいソーシャルの宛先に接続 {#connect-destination}
 
-キャンペーンのソーシャルの宛先にセグメントを送信するには、まずPlatformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーンのソーシャルの宛先にセグメントを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[ 宛先の作成に関するチュートリアル ](../../ui/connect-destination.md) を参照してください。

@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Platform Web SDKでのデバッグ
-description: Web SDKのデバッグ機能を切り替える方法についてExperience Platformします。
-keywords: Web sdkのデバッグ；デバッグ；設定；コマンドの設定；debugコマンド；edgeConfigId;setDebug;debugEnabled;debug;
+title: Adobe Experience Platform Web SDK でのデバッグ
+description: Web SDK でデバッグ機能を切り替える方法についてExperience Platformします。
+keywords: デバッグ Web SDK；デバッグ；設定；設定；コマンドの設定；debug コマンド；edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
 workflow-type: tm+mt
@@ -14,12 +14,12 @@ ht-degree: 65%
 
 デバッグが有効になっている場合、SDK は、実装のデバッグや SDK の動作の理解に役立つメッセージをブラウザーコンソールに出力します。
 
-デバッグはデフォルトで無効になっていますが、次の4つの方法でオンに切り替えることができます。
+デバッグはデフォルトで無効になっていますが、次の 4 つの方法でオンに切り替えることができます。
 
 * `configure` コマンド
 * `setDebug` コマンド
 * クエリ文字列パラメーター
-* Adobe Experience Platform Debuggerでのデバッグの有効化をオンに切り替える。 Adobe Experience Platformは、Webページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debuggerは、[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)および[Firefox](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/)の両方の拡張機能として使用できます。 デバッグは、AEP Web SDKセクションの「設定」タブで有効にできます。
+* Adobe Experience Platform Debugger で「デバッグを有効にする」をオンに切り替える。 Adobe Experience Platformは、Web ページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debugger は、[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) および [Firefox](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/) の両方の拡張機能として使用できます。 デバッグは、AEP Web SDK セクションの「設定」タブで有効にできます。
 
 ![](../images/enable-debugging.png)
 
@@ -63,7 +63,7 @@ http://example.com/?alloy_debug=true
 
 ## 優先度と期間
 
-デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この2つの場合、セッション中もデバッグはオンのままになります。 つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
+デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この 2 つの場合、セッション中もデバッグはオンのままになります。 つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
 
 * セッションの終了
 * `debug` コマンドを実行します
@@ -81,4 +81,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 現在、指定された `libraryInfo` オブジェクトには次のプロパティが含まれています。
 
-* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリをタグ拡張（「AEP Web SDK」という名前）内で実行すると、バージョンはライブラリバージョンとなり、「+」記号で結合されたタグ拡張バージョンになります。 例えば、ライブラリのバージョンが1.0.0で、タグ拡張のバージョンが1.2.0の場合、値は`1.0.0+1.2.0`になります。
+* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリをタグ拡張（「AEP Web SDK」という名前）内で実行すると、バージョンはライブラリバージョンになり、タグ拡張バージョンは「+」記号で結合されます。 例えば、ライブラリのバージョンが 1.0.0 で、タグ拡張のバージョンが 1.2.0 の場合、値は `1.0.0+1.2.0` になります。

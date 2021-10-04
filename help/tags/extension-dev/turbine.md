@@ -3,7 +3,7 @@ title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 100%
 

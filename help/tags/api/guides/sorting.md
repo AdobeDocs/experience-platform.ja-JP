@@ -1,8 +1,9 @@
 ---
-title: Reactor APIで の応答の並べ替え
+title: Reactor API での応答の並べ替え
 description: Reactor API でリソースをリストする際に結果をフィルタリングする方法を説明します。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: 49dcf0b6-4ce8-41d9-9e3a-e44f5c0ff905
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 100%
 
@@ -14,21 +15,19 @@ Reactor API でエンドポイントをリストすると、指定した属性�
 
 ## 昇順に並べ替え
 
-並べ替える属性を指定し、先頭に `+` を付けると、リソースを属性の昇順で並べ替えることができます。
-
+リソースを属性の昇順で並べ替えるするには、並べ替えたい属性を指定し、その属性の前に `+` を付けます。
 
 `GET /companies/:company_id/properties?sort=+name`
 
 ## 降順に並べ替え
 
-並べ替える属性を指定し、先頭に `-` を付けると、リソースを属性の降順で並べ替えることができます。
-
+リソースを属性別に降順で並べ替えるには、並べ替えたい属性を指定し、その属性の前に `-` を付けます。
 
 `GET /companies/:company_id/properties?sort=-name`
 
 ## 複数の並べ替え
 
-複数の値で並べ替えるには、並べ替えディレクティブをコンマ区切りのリストとして指定します。
+複数の値で並べ替えるには、並べ替えディレクティブをコンマ区切りリストで指定します。
 
 
 `GET /companies/:company_id/properties?sort=+name,-org_id`

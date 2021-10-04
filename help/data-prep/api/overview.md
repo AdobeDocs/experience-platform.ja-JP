@@ -5,7 +5,7 @@ topic-legacy: guide
 description: Data Prep API を使用すると、マッピングセットと関数をプログラムによって作成し、ソーススキーマと宛先スキーマの間でデータを変換できます。
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 100%
 

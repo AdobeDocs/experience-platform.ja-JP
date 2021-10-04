@@ -18,7 +18,7 @@ ht-degree: 90%
 
 ## サポートされるパーソナライゼーションの宛先 {#supported-destinations}
 
-現在、Platformは、以下に示すパーソナライゼーションの宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Platform は、以下に示すパーソナライゼーションの宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Adobe Target 拡張機能](adobe-target.md)
 * [Adobe Target v2 拡張機能](adobe-target-v2.md)

@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Policy Service API を使用して Experience Platform のデータ使用ラベルを管理する方法を説明します。
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 100%
 

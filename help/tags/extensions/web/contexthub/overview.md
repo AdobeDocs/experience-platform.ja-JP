@@ -1,8 +1,9 @@
 ---
 title: Adobe ContextHub 拡張機能の概要
 description: Adobe Experience Platform の Adobe ContextHub タグ拡張機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Adobe ContextHub 拡張機能の設定に関する情報、およびこの拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -30,7 +31,7 @@ ContextHub のタイプを選択します。次の設定オプションを使用
 
 ### デフォルトの ContextHub データレイヤー
 
-このオプションは、タグでこの統合のデフォルトの ContextHub スキーマを参照する場合に使用します。ContextHub スキーマに修正を加えている場合や、別のデータレイヤーを使用する場合は、カスタムオプションを使用してください。
+このオプションは、タグでこの統合にデフォルトの ContextHub スキーマを参照する場合に使用します。ContextHub スキーマに修正を加えている場合や、別のデータレイヤーを使用する場合は、カスタムオプションを使用してください。
 
 ### カスタムの ContextHub データレイヤー
 

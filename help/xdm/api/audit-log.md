@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；監査；監査ログ；変更ログ；rpc;
+keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；監査；監査ログ；変更ログ；rpc;
 solution: Experience Platform
-title: 監査ログAPIエンドポイント
-description: スキーマレジストリAPIの/auditlogエンドポイントを使用すると、既存のXDMリソースに対して行われた変更のリストを時系列で取得できます。
+title: 監査ログ API エンドポイント
+description: スキーマレジストリ API の/auditlog エンドポイントを使用すると、既存の XDM リソースに加えられた変更のリストを時系列で取得できます。
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
 # 監査ログエンドポイント
 
-[!DNL Schema Registry]は、エクスペリエンスデータモデル(XDM)リソースごとに、異なる更新の間に発生したすべての変更のログを保持します。 [!DNL Schema Registry] APIの`/auditlog`エンドポイントを使用すると、IDで指定された任意のクラス、スキーマフィールドグループ、データタイプ、またはスキーマの監査ログを取得できます。
+[!DNL Schema Registry] は、各エクスペリエンスデータモデル (XDM) リソースに対して、異なる更新間に発生したすべての変更のログを保持します。 [!DNL Schema Registry] API の `/auditlog` エンドポイントを使用すると、ID で指定された任意のクラス、スキーマフィールドグループ、データタイプ、スキーマの監査ログを取得できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
 
-`/auditlog`エンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントは、`Accept`や`Content-Type`のような追加のヘッダーを必要とせず、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、名前空間`/rpc`を使用する必要があります。
+`/auditlog` エンドポイントは、[!DNL Schema Registry] でサポートされるリモートプロシージャコール (RPC) の一部です。 [!DNL Schema Registry] API の他のエンドポイントとは異なり、RPC エンドポイントは `Accept` や `Content-Type` のような追加のヘッダーを必要とせず、`CONTAINER_ID` を使用しません。 代わりに、以下の API 呼び出しで示すように、 `/rpc` 名前空間を使用する必要があります。
 
 ## リソースの監査ログの取得
 
-スキーマライブラリ内の任意のクラス、フィールドグループ、データタイプ、またはスキーマの監査ログを取得するには、`/auditlog`エンドポイントへのGETリクエストのパスでリソースのIDを指定します。
+`/auditlog` エンドポイントへのGETリクエストのパスでリソースの ID を指定することで、スキーマライブラリ内の任意のクラス、フィールドグループ、データ型、またはスキーマの監査ログを取得できます。
 
 **API 形式**
 
@@ -34,13 +34,13 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_ID}` | 監査ログを取得するリソースの`meta:altId`またはURLエンコードされた`$id`。 |
+| `{RESOURCE_ID}` | 監査ログを取得するリソースの `meta:altId` または URL エンコードされた `$id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、`Restaurant`フィールドグループの監査ログを取得します。
+次のリクエストは、`Restaurant` フィールドグループの監査ログを取得します。
 
 ```shell
 curl -X GET \
@@ -92,10 +92,10 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `auditTrails` | オブジェクトの配列。各オブジェクトは、指定されたリソースまたはその依存リソースに対して行われた変更を表します。 |
-| `id` | 変更されたリソースの`$id`。 この値は通常、リクエストパスで指定されたリソースを表しますが、変更のソースである場合は、依存リソースを表す場合があります。 |
-| `action` | 行われた変更のタイプ。 |
-| `path` | 変更または追加された特定のフィールドへのパスを示す[JSONポインター](../../landing/api-fundamentals.md#json-pointer)文字列。 |
-| `value` | 新しいフィールドまたは更新されたフィールドに割り当てられた値。 |
+| `auditTrails` | オブジェクトの配列。各オブジェクトは、指定したリソースまたはその依存リソースに対する変更を表します。 |
+| `id` | 変更されたリソースの `$id`。 この値は通常、リクエストパスで指定されたリソースを表しますが、変更のソースである場合は、依存リソースを表す場合があります。 |
+| `action` | 加えられた変更のタイプ。 |
+| `path` | 変更または追加された特定のフィールドへのパスを示す [JSON ポインター ](../../landing/api-fundamentals.md#json-pointer) 文字列。 |
+| `value` | 新規または更新されたフィールドに割り当てられた値。 |
 
 {style=&quot;table-layout:auto&quot;}

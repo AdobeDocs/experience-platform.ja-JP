@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
 solution: Experience Platform
 title: クエリサービスでのクエリ実行に関する一般的なガイダンス
 topic-legacy: queries
@@ -13,19 +13,19 @@ ht-degree: 50%
 
 ---
 
-# [!DNL Query Service]でのクエリ実行の一般的なガイダンス
+# [!DNL Query Service] でのクエリ実行の一般的なガイダンス
 
-このドキュメントでは、Adobe Experience Platform [!DNL Query Service]でクエリを記述する際に知っておくべき重要な詳細について説明します。
+このドキュメントでは、Adobe Experience Platform [!DNL Query Service] でクエリを記述する際に知っておくべき重要な詳細について説明します。
 
-[!DNL Query Service]で使用されるSQL構文の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
+[!DNL Query Service] で使用される SQL 構文の詳細については、[SQL 構文のドキュメント ](../sql/syntax.md) を参照してください。
 
 ## クエリ実行モデル
 
-Adobe Experience Platform [!DNL Query Service]には、クエリ実行の2つのモデルがあります。インタラクティブで非インタラクティブ。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
+Adobe Experience Platform [!DNL Query Service] には、クエリ実行の 2 つのモデルがあります。インタラクティブで非インタラクティブ。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
 
 ### インタラクティブクエリの実行
 
-クエリは、[!DNL Query Service] UIまたは[を通じて接続されたクライアント](../clients/overview.md)を通じて送信することで、インタラクティブに実行できます。 接続されたクライアントを通じて[!DNL Query Service]を実行すると、送信されたクエリが返すかタイムアウトするまで、クライアントと[!DNL Query Service]の間でアクティブなセッションが実行されます。
+クエリは、[!DNL Query Service] UI または [ 接続されたクライアント ](../clients/overview.md) を通じて送信することで、インタラクティブに実行できます。 接続されたクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返すかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
 
 インタラクティブクエリの実行には、次の制限があります。
 
@@ -39,11 +39,11 @@ Adobe Experience Platform [!DNL Query Service]には、クエリ実行の2つの
 >
 > 最大行数の制限を上書きするには、`LIMIT 0` をクエリに含めます。10 分のクエリタイムアウトは引き続き適用されます。
 
-デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果を[!DNL Experience Platform]のデータセットとして永続化するには、クエリで`CREATE TABLE AS SELECT`構文を使用する必要があります。
+デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果を [!DNL Experience Platform] のデータセットとして永続化するには、クエリで `CREATE TABLE AS SELECT` 構文を使用する必要があります。
 
 ### 非インタラクティブクエリの実行
 
-[!DNL Query Service] APIを使用して送信されたクエリは、非インタラクティブに実行されます。 非インタラクティブ実行とは、[!DNL Query Service]がAPI呼び出しを受け取り、受け取った順序でクエリを実行することを意味します。 非インタラクティブクエリは、常に[!DNL Experience Platform]に新しいデータセットを生成して結果を受け取るか、既存のデータセットに新しい行を挿入します。
+[!DNL Query Service] API を通じて送信されたクエリは、非インタラクティブに実行されます。 非インタラクティブ実行とは、[!DNL Query Service] が API 呼び出しを受け取り、受け取った順にクエリを実行することを意味します。 非インタラクティブクエリでは、常に [!DNL Experience Platform] に新しいデータセットが生成されて結果が取得されるか、既存のデータセットに新しい行が挿入されます。
 
 ## オブジェクト内の特定のフィールドへのアクセス
 
@@ -190,11 +190,11 @@ LIMIT 10
 
 ## テーブル情報の表示
 
-クエリサービスに接続したら、`\d`または`SHOW TABLES`コマンドを使用して、Platformで使用可能なすべてのテーブルを表示できます。
+クエリサービスに接続すると、`\d` または `SHOW TABLES` コマンドを使用して、Platform で使用可能なすべてのテーブルを表示できます。
 
-### 標準のテーブル表示
+### 標準のテーブルビュー
 
-`\d`コマンドは、テーブルを一覧表示するための標準のPostgreSQLビューを示します。 このコマンドの出力の例を次に示します。
+`\d` コマンドは、テーブルを一覧表示するための標準の PostgreSQL ビューを示します。 このコマンドの出力の例を次に示します。
 
 ```sql
              List of relations
@@ -219,9 +219,9 @@ LIMIT 10
 
 ### スキーマ情報
 
-テーブル内のスキーマに関する詳細情報を表示するには、`\d {TABLE_NAME}`コマンドを使用します。`{TABLE_NAME}`は、スキーマ情報を表示するテーブルの名前です。
+テーブル内のスキーマに関する詳細な情報を表示するには、`\d {TABLE_NAME}` コマンドを使用します。ここで `{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
 
-次の例は、`luma_midvalues`テーブルのスキーマ情報を示しています。この情報は、`\d luma_midvalues`を使用して確認できます。
+次の例は、`luma_midvalues` テーブルのスキーマ情報を示しています。この情報は、`\d luma_midvalues` を使用して確認できます。
 
 ```sql
                          Table "public.luma_midvalues"
@@ -244,9 +244,9 @@ LIMIT 10
  search            | search                      |           |          | 
 ```
 
-さらに、テーブル名に列の名前を追加すると、特定の列に関する詳細情報を取得できます。 これは`\d {TABLE_NAME}_{COLUMN}`の形式で書き込まれます。
+さらに、テーブル名に列の名前を付けると、特定の列に関する詳細な情報を取得できます。 これは `\d {TABLE_NAME}_{COLUMN}` の形式で書き込まれます。
 
-次の例は、`web`列の追加情報を示しています。次のコマンドを使用して呼び出されます。`\d luma_midvalues_web`:
+次の例は、`web` 列の追加情報を示しています。次のコマンドを使用して呼び出されます。`\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -260,7 +260,7 @@ LIMIT 10
 
 複数のデータセットを結合して、他のデータセットのデータをクエリに含めることができます。
 
-次の例は、次の2つのデータセット（`your_analytics_table`と`custom_operating_system_lookup`）を結合し、ページビュー数別に上位50のオペレーティングシステムの`SELECT`ステートメントを作成します。
+次の例では、次の 2 つのデータセット（`your_analytics_table` と `custom_operating_system_lookup`）を結合し、上位 50 のオペレーティングシステムに対して、ページビュー数別の `SELECT` ステートメントを作成します。
 
 **クエリ**
 
@@ -300,10 +300,10 @@ LIMIT 50;
 
 ## 重複の除外
 
-クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、「[クエリサービスの重複排除ガイド](./deduplication.md)」を参照してください。
+クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、「[ クエリサービスの重複排除ガイド ](./deduplication.md)」を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Query Service]を使用してクエリを記述する際の重要な考慮事項について説明しました。 SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
+このドキュメントでは、[!DNL Query Service] を使用してクエリを記述する際の重要な考慮事項について説明しました。 SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
 
-クエリサービス内で使用できるクエリの詳細なサンプルについては、[Adobe Analyticsサンプルクエリ](./adobe-analytics.md)、[Adobe Targetサンプルクエリ](./adobe-target.md)、[ExperienceEventサンプルクエリ](./experience-event-queries.md)に関するガイドを参照してください。
+クエリサービス内で使用できるクエリの詳細なサンプルについては、[Adobe Analyticsサンプルクエリ ](./adobe-analytics.md)、[Adobe Targetサンプルクエリ ](./adobe-target.md)、[ExperienceEvent サンプルクエリ ](./experience-event-queries.md) のガイドを参照してください。

@@ -3,30 +3,30 @@ keywords: Experience Platform；ホーム；人気のあるトピック；スキ
 solution: Experience Platform
 title: マーケティングデータタイプ
 topic-legacy: overview
-description: このドキュメントでは、マーケティングXDMデータタイプの概要を説明します。
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+description: このドキュメントでは、マーケティング XDM データタイプの概要を説明します。
+exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 7%
 
 ---
 
+#  Marketingdata type
 
-#  マーケティングデータタイプ
-
- マーケティングは、特定のタッチポイントでアクティブなマーケティングアクティビティを記述する標準のXDMデータ型です。
+ マーケティングは、特定のタッチポイントでアクティブなマーケティングアクティビティを記述する標準の XDM データ型です。
 
 ![](../images/data-types/marketing.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `campaignGroup` | 文字列 | キャンペーングループの名前（複数のキャンペーンが`50%_DISCOUNT`のようにグループ化されている場合）。 |
-| `campaignName` | 文字列 | `50%_DISCOUNT_USA`や`50%_DISCOUNT_ASIA`など、マーケティングキャンペーンの名前。 |
+| `campaignGroup` | 文字列 | キャンペーングループの名前（複数のキャンペーンを `50%_DISCOUNT` のようにグループ化する場合）。 |
+| `campaignName` | 文字列 | `50%_DISCOUNT_USA` や `50%_DISCOUNT_ASIA` など、マーケティングキャンペーンの名前。 |
 | `trackingCode` | 文字列 | イベントが関連付けられているマーケティングキャンペーンを識別するために使用できるトラッキングコード。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-フィールドグループについて詳しくは、パブリックXDMリポジトリを参照してください。
+フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.example.1.json)
+* [入力例](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.schema.json)

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；論理量指定子；論理量指定子；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；論理量指定子；論理量指定子；
 solution: Experience Platform
-title: PQL論理量指定子
+title: PQL 論理量指定子
 topic-legacy: developer guide
 description: 論理量指定子を使用すると、プロファイルクエリ言語（PQL）で配列にチェック条件を付けることができます。
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
@@ -15,7 +14,7 @@ ht-degree: 79%
 
 # 論理量指定子関数
 
-[!DNL Profile Query Language] (PQL)内の配列と条件をアサートするために、論理量指定子を使用できます。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+論理量指定子は、[!DNL Profile Query Language] (PQL) 内の配列に条件をアサートするために使用できます。 その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## exists
 

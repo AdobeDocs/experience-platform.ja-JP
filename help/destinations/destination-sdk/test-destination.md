@@ -1,5 +1,5 @@
 ---
-description: 宛先SDKの一部として、Adobeは、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定をテストする方法について説明します。
+description: 宛先 SDK の一部として、Adobeには、宛先の設定とテストを支援する開発者ツールが用意されています。 このページでは、宛先設定をテストする方法について説明します。
 title: 宛先設定のテスト
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
@@ -13,17 +13,17 @@ ht-degree: 1%
 
 ## 概要 {#overview}
 
-宛先SDKの一部として、Adobeは、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定をテストする方法について説明します。 メッセージ変換テンプレートの作成方法について詳しくは、「[メッセージ変換テンプレート](./create-template.md)の作成とテスト」を参照してください。
+宛先 SDK の一部として、Adobeには、宛先の設定とテストを支援する開発者ツールが用意されています。 このページでは、宛先設定をテストする方法について説明します。 メッセージ変換テンプレートの作成方法については、「[ メッセージ変換テンプレートの作成とテスト ](./create-template.md)」を参照してください。
 
-**宛先が正しく設定されているかどうかをテストし、設定した宛先**&#x200B;へのデータフローの整合性を検証するには、*宛先テストツール*&#x200B;を使用します。 このツールを使用すると、REST APIエンドポイントにメッセージを送信して、宛先設定をテストできます。
+**宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証するには**、*宛先テストツール* を使用します。 このツールを使用すると、REST API エンドポイントにメッセージを送信して、宛先の設定をテストできます。
 
-次の図に、宛先SDKの[宛先設定ワークフロー](./configure-destination-instructions.md)に宛先のテストがどのように適合するかを示します。
+次の図に、宛先 SDK の [ 宛先設定ワークフロー ](./configure-destination-instructions.md) に宛先のテストがどのように適合するかを示します。
 
 ![宛先テスト手順が宛先設定ワークフローに適合する場所の図](./assets/test-destination-step.png)
 
 ## 宛先テストツール {#destination-testing-tool}
 
-このツールを使用して、[サーバー設定](./server-and-template-configuration.md)で指定したパートナーエンドポイントにメッセージを送信し、宛先設定をテストします。
+このツールを使用して、[ サーバー設定 ](./server-and-template-configuration.md) で指定したパートナーエンドポイントにメッセージを送信し、宛先設定をテストします。
 
 このツールを使用すると、宛先を設定した後、次の操作を実行できます。
 * 宛先が正しく設定されているかどうかをテストする。
@@ -33,20 +33,20 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->APIリファレンスに関する完全なドキュメントについては、[宛先テストAPI操作](./destination-testing-api.md)を参照してください。
+>API リファレンスのドキュメントについて詳しくは、[ 宛先テスト API 操作 ](./destination-testing-api.md) を参照してください。
 
-リクエストにプロファイルを追加する場合も、追加しない場合も、宛先テストAPIエンドポイントへの呼び出しをおこなうことができます。
+宛先テスト API エンドポイントへの呼び出しは、リクエストにプロファイルを追加する場合と、追加しない場合のどちらでおこなうこともできます。
 
-リクエストにプロファイルを追加しない場合、Adobeは内部でプロファイルを生成し、リクエストに追加します。 このリクエストで使用するプロファイルを生成する場合は、[サンプルのプロファイル生成APIリファレンス](./sample-profile-generation-api.md)を参照してください。 [APIリファレンス](./sample-profile-generation-api.md#generate-sample-profiles-source-schema)に示すように、ソースXDMスキーマに基づいてプロファイルを生成する必要があります。 ソーススキーマは、使用しているサンドボックスの[和集合スキーマ](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en)です。
+リクエストにプロファイルを追加しない場合、Adobeは内部でプロファイルを生成し、リクエストに追加します。 このリクエストで使用するプロファイルを生成する場合は、[ サンプルのプロファイル生成 API リファレンス ](./sample-profile-generation-api.md) を参照してください。 [API リファレンス ](./sample-profile-generation-api.md#generate-sample-profiles-source-schema) に示すように、ソース XDM スキーマに基づいてプロファイルを生成する必要があります。 ソーススキーマは、使用しているサンドボックスの [ 和集合スキーマ ](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) です。
 
-応答には、宛先リクエスト処理の結果が含まれます。 リクエストには、次の3つの主なセクションが含まれます。
-* 宛先のAdobeによって生成された要求。
+応答には、宛先リクエスト処理の結果が含まれます。 リクエストには、次の 3 つの主なセクションが含まれます。
+* 宛先に対してAdobeによって生成された要求。
 * 宛先から受信した応答。
-* リクエストで送信されたプロファイルのリスト。プロファイルがリクエスト](./destination-testing-api.md/#test-with-added-profiles)に[追加されたか、Adobe([宛先テストリクエストの本文が空の場合は](./destination-testing-api.md#test-without-adding-profiles)によって生成されたか。
+* リクエストで送信されたプロファイルのリスト。リクエスト ](./destination-testing-api.md/#test-with-added-profiles) で追加されたプロファイルか、宛先テストリクエストの本文が空の場合はAdobeによって生成されたプロファイルか。[[](./destination-testing-api.md#test-without-adding-profiles)
 
 >[!NOTE]
 >
->Adobeは、複数のリクエストと応答のペアを生成できます。 例えば、値が7の宛先に10件のプロファイルを送信した場合、1件のリクエストに7件のプロファイル、もう1件のリクエストに3件のプロファイルが含まれます。`maxUsersPerRequest`
+>Adobeは、複数のリクエストと応答のペアを生成できます。 例えば、値が 7 の宛先に 10 件のプロファイルを送信した場合、1 件のリクエストに 7 件のプロファイルが送信され、もう 1 件のリクエストに 3 件のプロファイルが送信されます。`maxUsersPerRequest`
 
 **本文にプロファイルパラメーターを含むリクエストのサンプル**
 
@@ -121,7 +121,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **レスポンスのサンプル**
 
-`results.httpCalls`パラメーターの内容は、REST APIに固有です。
+`results.httpCalls` パラメーターの内容は REST API に固有です。
 
 ```json
 {
@@ -225,8 +225,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-リクエストパラメーターと応答パラメーターの説明については、[宛先テストAPIの操作](./destination-testing-api.md)を参照してください。
+リクエストパラメーターと応答パラメーターについて詳しくは、[ 宛先テスト API の操作 ](./destination-testing-api.md) を参照してください。
 
 ## 次の手順
 
-宛先をテストし、正しく設定されていることを確認したら、[宛先パブリッシングAPI](./destination-publish-api.md)を使用して、設定をAdobeに送信し、レビューを受けます。
+宛先をテストし、正しく設定されていることを確認したら、[ 宛先パブリッシング API](./destination-publish-api.md) を使用して、設定をAdobeに送信し、確認します。

@@ -6,7 +6,7 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
 source-wordcount: '963'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 [!DNL Real-time Customer Profile] API には、次に示すように、複数のエンドポイントが含まれています。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
 
-使用可能なすべてのエンドポイントと CRUD 操作を表示するには、「[ リアルタイム顧客プロファイル API リファレンス」スウォッチ ](https://www.adobe.com/go/profile-apis-en) を参照してください。
+使用可能なすべてのエンドポイントと CRUD 操作を表示するには、「[ リアルタイム顧客プロファイル API リファレンス」スウォッチ ](https://www.adobe.com/go/profile-apis-jp) を参照してください。
 
 [!DNL Experience Platform] UI での [!DNL Real-time Customer Profile] データの操作に関するガイドについては、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 

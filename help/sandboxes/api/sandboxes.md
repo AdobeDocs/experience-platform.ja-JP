@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックス開発者ガイド
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
-title: サンドボックス管理APIエンドポイント
+title: サンドボックス管理 API エンドポイント
 topic-legacy: developer guide
-description: サンドボックスAPIの/sandboxesエンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+description: Sandbox API の/sandboxes エンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 50%
@@ -13,15 +14,15 @@ ht-degree: 50%
 
 # サンドボックス管理エンドポイント
 
-Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。[!DNL Sandbox] APIの`/sandboxes`エンドポイントを使用すると、Platformのサンドボックスをプログラムで管理できます。
+Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。[!DNL Sandbox] API の `/sandboxes` エンドポイントを使用すると、Platform のサンドボックスをプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
 
 ## サンドボックスのリストの取得 {#list}
 
-`/sandboxes`エンドポイントにGETリクエストをおこなうことで、IMS組織（アクティブまたはその他）に属するすべてのサンドボックスをリストできます。
+`/sandboxes` エンドポイントにGETリクエストをおこなうことで、IMS 組織（アクティブまたはその他）に属するすべてのサンドボックスをリストできます。
 
 **API 形式**
 
@@ -31,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、[クエリパラメーター](./appendix.md#query)の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、[ クエリパラメータ ](./appendix.md#query) の節を参照してください。 |
 
 **リクエスト**
 
@@ -127,10 +128,10 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | サンドボックスの名前。このプロパティは、API呼び出しで参照目的で使用されます。 |
+| `name` | サンドボックスの名前。このプロパティは、API 呼び出しで参照目的に使用されます。 |
 | `title` | サンドボックスの表示名。 |
 | `state` | サンドボックスの現在の処理状態です。サンドボックスの状態は、次のいずれかになります。<br/><ul><li>`creating`:サンドボックスは作成されましたが、システムによって引き続きプロビジョニングされています。</li><li>`active`:サンドボックスが作成され、アクティブです。</li><li>`failed`:エラーが原因で、サンドボックスはシステムでプロビジョニングできず、無効になっています。</li><li>`deleted`:サンドボックスは手動で無効になっています。</li></ul> |
-| `type` | サンドボックスのタイプ。 現在サポートされているサンドボックスの種類は、`development`と`production`です。 |
+| `type` | サンドボックスのタイプ。 現在サポートされているサンドボックスタイプには、`development` と `production` があります。 |
 | `isDefault` | このサンドボックスが組織のデフォルトの実稼動サンドボックスであるかどうかを示すブール型プロパティです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
 
@@ -182,20 +183,20 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | サンドボックスの名前。このプロパティは、API呼び出しで参照目的で使用されます。 |
+| `name` | サンドボックスの名前。このプロパティは、API 呼び出しで参照目的に使用されます。 |
 | `title` | サンドボックスの表示名。 |
 | `state` | サンドボックスの現在の処理状態。サンドボックスの状態は、次のいずれかになります。 <ul><li>**作成**：サンドボックスは作成されましたが、システムによって引き続きプロビジョニングされています。</li><li>**アクティブ**：サンドボックスが作成され、アクティブです。</li><li>**失敗**：エラーが原因で、サンドボックスはシステムでプロビジョニングできず、無効になっています。</li><li>**削除**：サンドボックスは手動で無効にされています。</li></ul> |
-| `type` | サンドボックスのタイプ。 現在サポートされているサンドボックスのタイプは次のとおりです。`development`と`production`が表示されます。 |
+| `type` | サンドボックスのタイプ。 現在サポートされているサンドボックスタイプは次のとおりです。`development` と `production`。 |
 | `isDefault` | このサンドボックスが組織のデフォルトのサンドボックスであるかどうかを示すブール型のプロパティです。通常、これは実稼働用サンドボックスです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
 
 ## サンドボックスの作成 {#create}
 
-`/sandboxes`エンドポイントにPOSTリクエストを送信することで、新しい開発用サンドボックスまたは実稼動用サンドボックスを作成できます。
+`/sandboxes` エンドポイントにPOSTリクエストを送信することで、新しい開発用サンドボックスまたは実稼動用サンドボックスを作成できます。
 
 ### 開発用サンドボックスの作成
 
-開発用サンドボックスを作成するには、リクエストペイロードで`type`属性の値を`development`に指定する必要があります。
+開発用サンドボックスを作成するには、リクエストペイロードで `type` 属性の値を `development` に指定する必要があります。
 
 **API 形式**
 
@@ -225,7 +226,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 今後のリクエストでサンドボックスにアクセスするために使用される識別子。この値は一意である必要があります。ベストプラクティスはできる限りわかりやすい値にすることです。この値には、スペースや特殊文字を含めることはできません。 |
 | `title` | Platform ユーザーインターフェイスでの表示用に使用される、わかりやすい名前。 |
-| `type` | 作成するサンドボックスのタイプ。実稼動以外のサンドボックスの場合、この値は`development`にする必要があります。 |
+| `type` | 作成するサンドボックスのタイプ。実稼動以外のサンドボックスの場合、この値は `development` にする必要があります。 |
 
 **応答**
 
@@ -243,11 +244,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->サンドボックスのプロビジョニングには約30秒かかり、その後、 `state`が「アクティブ」または「失敗」になります。
+>サンドボックスのプロビジョニングには約 30 秒かかり、その後、 `state` が「アクティブ」または「失敗」になります。
 
 ### 実稼動用サンドボックスの作成
 
-実稼動用サンドボックスを作成するには、リクエストペイロードに`type`属性と値`production`を指定する必要があります。
+実稼働用サンドボックスを作成するには、リクエストペイロードで `type` 属性の値を `production` に指定する必要があります。
 
 **API 形式**
 
@@ -278,7 +279,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 今後のリクエストでサンドボックスにアクセスするために使用される識別子。この値は一意である必要があります。ベストプラクティスはできる限りわかりやすい値にすることです。この値には、スペースや特殊文字を含めることはできません。 |
 | `title` | Platform ユーザーインターフェイスでの表示用に使用される、わかりやすい名前。 |
-| `type` | 作成するサンドボックスのタイプ。実稼動用サンドボックスの場合、この値は`production`にする必要があります。 |
+| `type` | 作成するサンドボックスのタイプ。実稼動用サンドボックスの場合、この値は `production` にする必要があります。 |
 
 **応答**
 
@@ -296,7 +297,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->サンドボックスのプロビジョニングには約30秒かかり、その後、 `state`が「アクティブ」または「失敗」になります。
+>サンドボックスのプロビジョニングには約 30 秒かかり、その後、 `state` が「アクティブ」または「失敗」になります。
 
 ## サンドボックスの更新 {#put}
 
@@ -318,7 +319,7 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 **リクエスト**
 
-次のリクエストは、「acme」という名前のサンドボックスの`title`プロパティを更新します。
+次のリクエストは、「acme」という名前のサンドボックスの `title` プロパティを更新します。
 
 ```shell
 curl -X PATCH \
@@ -359,7 +360,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | パラメーター | 説明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | リセットするサンドボックスの `name` プロパティです。 |
-| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスのリセット操作に対してプリフライトチェックを実行できるオプションのパラメーター。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを`validationOnly=true`に設定します。 |
+| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスのリセット操作に対してプリフライトチェックをおこなうことができるオプションのパラメーターです。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを `validationOnly=true` に設定します。 |
 
 **リクエスト**
 
@@ -385,7 +386,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->サンドボックスがリセットされると、システムによってプロビジョニングされるまで約30秒かかります。
+>サンドボックスがリセットされると、システムによってプロビジョニングされるまでに約 30 秒かかります。
 
 正常な応答は、更新されたサンドボックスの詳細を返し、`state` が「リセット中」であることを示します。
 
@@ -400,7 +401,7 @@ curl -X PUT \
 }
 ```
 
-デフォルトの実稼動サンドボックスとユーザー作成の実稼動サンドボックスは、そのIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフも[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)機能にも使用されている場合は、リセットできません。
+デフォルトの実稼働サンドボックスとユーザー作成の実稼働サンドボックスは、その ID グラフがAdobe Analyticsで [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja) 機能にも使用されている場合、またはAdobe Audience Managerでホストされている ID グラフも [People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja) 機能にも使用されている場合は、リセットできません。
 
 サンドボックスのリセットを妨げる可能性がある、考えられる例外のリストを次に示します。
 
@@ -427,7 +428,7 @@ curl -X PUT \
 }
 ```
 
-リクエストに`ignoreWarnings`パラメーターを追加することで、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向セグメント共有に使用する実稼動用サンドボックスのリセットに進むことができます。
+リクエストに `ignoreWarnings` パラメーターを追加することで、[!DNL Audience Manager] または [!DNL Audience Core Service] との双方向セグメント共有に使用する実稼動用サンドボックスのリセットに進むことができます。
 
 **API 形式**
 
@@ -438,7 +439,7 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 | パラメーター | 説明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | リセットするサンドボックスの `name` プロパティです。 |
-| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向のセグメント共有に使用される実稼動用サンドボックスを強制的にリセットできるオプションのパラメーター。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
+| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager] または [!DNL Audience Core Service] との双方向セグメント共有に使用される実稼動用サンドボックスのリセットを強制できるオプションのパラメーターです。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
 
 **リクエスト**
 
@@ -492,12 +493,12 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | パラメーター | 説明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 削除するサンドボックスの `name`。 |
-| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスの削除操作に対してプリフライトチェックを実行できるオプションのパラメーター。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを`validationOnly=true`に設定します。 |
-| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向のセグメント共有に使用されるユーザー作成の実稼動用サンドボックスを強制的に削除できるオプションのパラメーター。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
+| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスの削除操作に対してプリフライトチェックをおこなうことができるオプションのパラメーターです。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを `validationOnly=true` に設定します。 |
+| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager] または [!DNL Audience Core Service] との双方向のセグメント共有に使用されるユーザー作成の実稼動サンドボックスを強制的に削除するオプションのパラメーターです。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
 
 **リクエスト**
 
-次のリクエストは、「acme」という実稼動用サンドボックスを削除します。
+次のリクエストは、「acme」という名前の実稼動用サンドボックスを削除します。
 
 ```shell
 curl -X DELETE \

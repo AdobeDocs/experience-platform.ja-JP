@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；準備文；準備文；sql;
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；準備済み文；準備済み；SQL;
 solution: Experience Platform
-title: クエリサービスにおける作成済明細書
+title: クエリサービスの準備済み文
 topic-legacy: prepared statements
-description: SQLでは、準備された文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して準備済み文をサポートします。
+description: SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して準備済み文をサポートします。
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
@@ -15,7 +14,7 @@ ht-degree: 89%
 
 # 準備済み文
 
-SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform[!DNL Query Service]は、パラメータ化クエリを使用した準備文をサポートしています。 クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
+SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] は、パラメータ化されたクエリを使用して準備済み文をサポートします。 クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
 
 ## 準備済み文の使用
 
@@ -108,12 +107,12 @@ EXECUTE getIdRange(10000, 10005);
 
 | ID | 名 | 姓 | 生年月日 | 電子メール | 都市 | 国 |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | アレクサン | デイビス | 1993-09-15 | example@example.com | バンクーバー | カナダ |
-| 10001 | アントイン | ダボイ | 1967-03-14 | example2@example.com | パリ | フランス |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | バンクーバー | カナダ |
+| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | パリ | フランス |
 | 10002 | 京子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | 亜麻 | ペターソン | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
-| 10004 | aasir | ワイタカ | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
-| 10005 | フェルナン | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
 
 準備済み文の使用が終了したら、次の呼び出しを使用して、その文の割り当てを解除できます。
 

@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；アカウントの更新
-description: 状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 ソースワークスペースでは、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
+description: 状況によっては、既存のソースアカウントの詳細を更新する必要が生じる場合があります。 「ソース」ワークスペースでは、既存のバッチ接続またはストリーミング接続の詳細（名前、説明、資格情報など）を追加、編集および削除できます。
 solution: Experience Platform
-title: UIでのソース接続アカウントの詳細の更新
+title: UI でのソース接続アカウントの詳細の更新
 topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '453'
@@ -14,51 +13,51 @@ ht-degree: 9%
 
 ---
 
-# UIでのアカウントの詳細の更新
+# UI でのアカウントの詳細の更新
 
-状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 [!UICONTROL ソース]ワークスペースでは、既存のバッチ接続またはストリーミング接続の詳細（名前、説明、秘密鍵証明書など）を追加、編集および削除できます。
+状況によっては、既存のソースアカウントの詳細を更新する必要が生じる場合があります。 [!UICONTROL Sources] ワークスペースでは、既存のバッチ接続またはストリーミング接続の詳細（名前、説明、資格情報など）を追加、編集および削除できます。
 
-このチュートリアルでは、[!UICONTROL ソース]ワークスペースから既存のアカウントの詳細と秘密鍵証明書を更新する手順を説明します。
+このチュートリアルでは、既存のアカウントの詳細と資格情報を [!UICONTROL Sources] ワークスペースから更新する手順を説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+- [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 - [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ## アカウントの更新
 
-[Experience PlatformUI](https://platform.adobe.com)にログインし、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して[!UICONTROL ソース]ワークスペースにアクセスします。 上部のヘッダーから「**[!UICONTROL アカウント]**」を選択して、既存のアカウントを表示します。
+[Experience PlatformUI](https://platform.adobe.com) にログインし、左のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL  ソース ]」ワークスペースにアクセスします。 上部のヘッダーから「**[!UICONTROL アカウント]**」を選択して、既存のアカウントを表示します。
 
 ![カタログ](../../images/tutorials/update/catalog.png)
 
-**[!UICONTROL アカウント]**&#x200B;ページが表示されます。 このページには、ソース、ユーザー名、データ・フロー数、作成日など、表示可能なアカウントのリストが表示されます。
+「**[!UICONTROL アカウント]**」ページが表示されます。 このページには、ソース、ユーザー名、データフロー数、作成日に関する情報を含む、表示可能なアカウントのリストが表示されます。
 
-左上のフィルターアイコン![フィルター](../../images/tutorials/update/filter.png)を選択して、並べ替えパネルを起動します。
+左上のフィルターアイコン ![ フィルター ](../../images/tutorials/update/filter.png) を選択して、並べ替えパネルを起動します。
 
-![アカウントリスト](../../images/tutorials/update/accounts-list.png)
+![accounts-list](../../images/tutorials/update/accounts-list.png)
 
-並べ替えパネルには、すべてのソースのリストが表示されます。 リストから複数のソースを選択して、様々なソースに関連付けられたアカウントのフィルタされた選択範囲にアクセスできます。
+並べ替えパネルには、すべてのソースのリストが表示されます。 リストから複数のソースを選択して、様々なソースに関連付けられた、フィルタされた一連のアカウントにアクセスできます。
 
-既存のアカウントのリストを表示するために操作するソースを選択します。 更新するアカウントを特定したら、アカウント名の横にある三点リーダー(`...`)を選択します。
+既存のアカウントのリストを表示するには、使用するソースを選択します。 更新するアカウントを特定したら、アカウント名の横にある省略記号 (`...`) を選択します。
 
-![アカウントの並べ替え](../../images/tutorials/update/accounts-sort.png)
+![accounts-sort](../../images/tutorials/update/accounts-sort.png)
 
-ドロップダウンメニューが表示され、**[!UICONTROL 追加データ]**、**[!UICONTROL 詳細を編集]**、**[!UICONTROL 削除]**&#x200B;の各オプションが表示されます。 メニューから[**[!UICONTROL 詳細を編集]**]を選択して、アカウントを更新します。
+ドロップダウンメニューが表示され、「**[!UICONTROL データを追加]**」、「**[!UICONTROL 詳細を編集]**」、「**[!UICONTROL 削除]**」のオプションが表示されます。 メニューから「**[!UICONTROL 詳細を編集]**」を選択して、アカウントを更新します。
 
-![update](../../images/tutorials/update/update.png)
+![更新](../../images/tutorials/update/update.png)
 
-**[!UICONTROL アカウントの詳細を編集]**&#x200B;ダイアログボックスを使用すると、アカウントの名前、説明、認証資格情報を更新できます。 必要な情報を更新したら、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL アカウントの詳細を編集]** ダイアログボックスでは、アカウントの名前、説明、認証資格情報を更新できます。 目的の情報を更新したら、「**[!UICONTROL 保存]**」を選択します。
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
-しばらくすると、画面下部に、更新が成功したことを確認する確認ボックスが表示されます。
+しばらくすると、更新が正常に完了したことを確認する確認ボックスが画面の下部に表示されます。
 
-![更新確認済み](../../images/tutorials/update/update-confirmed.png)
+![update-confirmed](../../images/tutorials/update/update-confirmed.png)
 
 ## 次の手順
 
-このチュートリアルに従うと、[!UICONTROL ソース]ワークスペースを使用して、既存のソースアカウントの情報を更新できます。
+このチュートリアルでは、[!UICONTROL Sources] ワークスペースを使用して、既存のソースアカウントの情報を更新しました。
 
-[!DNL Flow Service] APIを使用してプログラムでこれらの操作を実行する手順については、[Flow Service API](../../tutorials/api/update.md)を使用した接続情報の更新に関するチュートリアルを参照してください。
+[!DNL Flow Service] API を使用してこれらの操作をプログラムで実行する手順については、[ フローサービス API](../../tutorials/api/update.md) を使用した接続情報の更新に関するチュートリアルを参照してください。

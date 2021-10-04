@@ -3,7 +3,7 @@ title: ルールコンポーネントエンドポイント
 description: Reactor API で /rule_components エンドポイントを呼び出す方法を説明します。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 100%
 

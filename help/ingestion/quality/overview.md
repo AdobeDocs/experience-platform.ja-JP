@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データの質；品質；サポートされる検証；検証；サポートされる検証；
+keywords: Experience Platform；ホーム；人気のあるトピック；データ品質；品質；品質；サポートされる検証；検証；サポートされる検証；
 solution: Experience Platform
-title: データの質
+title: データ品質
 topic-legacy: overview
-description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミング取り込みでサポートされているチェックおよび検証動作の概要を示します。
+description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミングの取り込みでサポートされるチェックと検証動作の概要を示します。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
@@ -15,7 +14,7 @@ ht-degree: 70%
 
 # Adobe Experience Platform のデータ品質
 
-Adobe Experience Platform では、バッチまたはストリーミングの取り込みによりアップロードされたすべてのデータの完全性、正確性、一貫性が保証されています。次のドキュメントは、[!DNL Experience Platform]でのバッチおよびストリーミング取り込みに対してサポートされているチェックと検証の動作の概要を示しています。
+Adobe Experience Platform では、バッチまたはストリーミングの取り込みによりアップロードされたすべてのデータの完全性、正確性、一貫性が保証されています。次のドキュメントでは、[!DNL Experience Platform] でのバッチおよびストリーミングの取り込みでサポートされるチェックと検証動作の概要を示します。
 
 ## サポートされるチェック
 
@@ -30,7 +29,7 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 
 ## サポートされる検証ビヘイビアー
 
-バッチとストリーミングの取り込みの両方で、[!DNL Data Lake]で取り出しと分析のために不正なデータを移動し、失敗したデータがダウンストリームに行かないようにします。 バッチおよびストリーミングの取り込みでは、データに対して次の検証が実行されます。
+バッチとストリーミングの両方の取り込みでは、[!DNL Data Lake] での取得と分析に不正なデータが移動され、失敗したデータがダウンストリームに移動するのを防ぎます。 バッチおよびストリーミングの取り込みでは、データに対して次の検証が実行されます。
 
 ### バッチの取り込み
 
@@ -56,4 +55,4 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-[!DNL Platform]によるデータの監視と検証の方法について詳しくは、[モニタリングデータフロードキュメント](./monitor-data-ingestion.md)を参照してください。
+[!DNL Platform] がデータを監視および検証する方法について詳しくは、[ データフローの監視に関するドキュメント ](./monitor-data-ingestion.md) を参照してください。

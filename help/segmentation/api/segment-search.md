@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform；セグメント化；セグメント化サービス；トラブルシューティング；API；セグメント；セグメント；検索；セグメント検索；
-title: セグメント検索APIエンドポイント
+keywords: Experience Platform；セグメント化；セグメント化サービス；トラブルシューティング；API；セグメント；セグメント；セグメント；検索；セグメント検索；
+title: セグメント検索 API エンドポイント
 topic-legacy: guide
-description: Segmentation Service API(Adobe Experience PlatformセグメントサービスAPI)では、セグメント検索を使用して、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返します。 このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
+description: Adobe Experience Platform Segmentation Service API では、セグメント検索を使用して、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返します。 このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1201'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
-# セグメント検索エンドポイント
+# セグメントの検索エンドポイント
 
 セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返す場合に使用します。
 
-このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
+このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を見て、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、[ はじめに ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しを含む API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
 
-「はじめに」の節で説明されている必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
+「はじめに」で説明した必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
 - x-ups-search-version:&quot;1.0&quot;
 
-### 複数の名前空間に対する検索
+### 複数の名前空間での検索
 
-この検索エンドポイントは、様々な名前空間を対象に検索を行い、検索数の結果のリストを返すのに使用できます。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+この検索エンドポイントは、様々な名前空間をまたいで検索するために使用でき、検索数の結果のリストを返します。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
 
 **API 形式**
 
@@ -39,8 +38,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}は、検索オブジェクトに関連付けられたスキーマクラス値を表します。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}は、Microsoftが [Luceneの検索構文を実装した場合に適合するクエリを表します](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、このドキュメントの[付録](#appendix)を参照してください。 |
+| `schema.name={SCHEMA}` | **（必須）** {SCHEMA} は、検索オブジェクトに関連付けられているスキーマクラス値を表します。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM} は、Microsoft による Lucene の検索構文の実装に適合するク [エリを表します](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
 
 **リクエスト**
 
@@ -55,7 +54,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTP ステータス 200 と次の情報を返します。
 
@@ -87,7 +86,7 @@ curl -X GET \
 
 ### 個々のエンティティの検索
 
-この検索エンドポイントは、指定した名前空間内にあるすべてのフルテキストインデックス付きオブジェクトのリストを取得するために使用できます。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+この検索エンドポイントは、指定した名前空間内のすべてのフルテキストインデックスオブジェクトのリストを取得するために使用できます。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
 
 **API 形式**
 
@@ -99,12 +98,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}には、Microsoftによる [Luceneの検索構文の実装に準拠するクエリが含まれています](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、このドキュメントの[付録](#appendix)を参照してください。 |
-| `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID}で指定した指定フォルダー内での検索を制限します。 |
-| `limit={LIMIT}` | *（オプション）* {LIMIT}は、返す検索結果の数を表します。デフォルト値は 50 です。 |
-| `page={PAGE}` | *（オプション）* {PAGE}は、検索したクエリのページ番号の結果を示すページ番号です。**0**&#x200B;のページ番号開始に注意してください。 |
+| `schema.name={SCHEMA}` | **（必須）** {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `namespace={NAMESPACE}` | **（必須）** {NAMESPACE} には、検索する名前空間が含まれます。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM} には、Microsoft による Lucene の検索構文の実装に準拠するク [エリが含まれます](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
+| `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID} で指定された指定フォルダー内に検索を制限します。 |
+| `limit={LIMIT}` | *（オプション）* {LIMIT} は、返す検索結果の数を表します。デフォルト値は 50 です。 |
+| `page={PAGE}` | *（オプション）* ここで、{PAGE} は、検索したクエリの結果に使用するページ番号を表します。ページ番号は **0** から始まります。 |
 
 
 **リクエスト**
@@ -120,9 +119,9 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答** 
+**応答**
 
-応答が成功すると、検索クエリに一致する結果のHTTPステータス200が返されます。
+正常な応答は、HTTP ステータス 200 と、検索クエリと一致する結果を返します。
 
 ```json
 {
@@ -160,7 +159,7 @@ curl -X GET \
 
 ### 検索オブジェクトの構造情報の取得
 
-この検索エンドポイントは、要求された検索オブジェクトに関する構造情報を取得するために使用できます。
+この検索エンドポイントは、要求された検索オブジェクトに関する構造情報を取得するのに使用できます。
 
 **API 形式**
 
@@ -170,9 +169,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれます。 |
-| `entityId={ENTITY_ID}` | **（必須）** {ENTITY_ID}で指定された、構造情報を取得する検索オブジェクトのID。 |
+| `schema.name={SCHEMA}` | **（必須）** {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `namespace={NAMESPACE}` | **（必須）** {NAMESPACE} には、検索する名前空間が含まれます。 |
+| `entityId={ENTITY_ID}` | **（必須）** 構造情報を取得する検索オブジェクトの ID。{ENTITY_ID} で指定します。 |
 
 **リクエスト**
 
@@ -187,9 +186,9 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答** 
+**応答**
 
-応答が成功すると、HTTPステータス200が返され、要求された検索オブジェクトに関する詳細な構造情報が返されます。
+正常な応答は、HTTP ステータス 200 と、要求された検索オブジェクトに関する詳細な構造情報を返します。
 
 ```json
 {
@@ -221,32 +220,32 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドを読むと、セグメント検索のしくみをより深く理解できます。
+このガイドを読むと、セグメント検索の仕組みがより深く理解できます。
 
 ## 付録 {#appendix}
 
-以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。`s={FieldName}:{SearchExpression}`. したがって、例えばAAMまたは[!DNL Platform]という名前のセグメントを検索するには、次の検索クエリを使用します。`s=segmentName:AAM%20OR%20Platform`.
+以下の節では、検索用語の仕組みに関する追加情報を示します。 検索クエリは次の方法で記述します。`s={FieldName}:{SearchExpression}`. 例えば、AAMまたは [!DNL Platform] という名前のセグメントを検索するには、次の検索クエリを使用します。`s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] ベストプラクティスとして、上の例のように、検索式はHTMLエンコードする必要があります。
+> !![NOTE] ベストプラクティスについては、上の例のように、検索式は HTML エンコードする必要があります。
 
-### 検索フィールド{#search-fields}
+### 検索フィールド {#search-fields}
 
-次の表に、検索クエリパラメータ内で検索できるフィールドを示します。
+次の表に、検索クエリパラメーター内で検索できるフィールドを示します。
 
 | フィールド名 | 説明 |
 | ---------- | ----------- |
-| folderId | 指定した検索のフォルダIDを持つフォルダ。 |
+| folderId | 指定した検索のフォルダー ID を持つフォルダー。 |
 | folderLocation | 指定した検索のフォルダーの場所を持つ場所。 |
-| parentFolderId | 指定した検索の親フォルダーIDを持つセグメントまたはフォルダー。 |
-| segmentId | セグメントは、指定した検索のセグメントIDと一致します。 |
+| parentFolderId | 指定した検索の親フォルダー ID を持つセグメントまたはフォルダー。 |
+| segmentId | このセグメントは、指定した検索のセグメント ID と一致します。 |
 | segmentName | このセグメントは、指定した検索のセグメント名と一致します。 |
-| segmentDescription | このセグメントは、指定した検索のセグメントの説明と一致します。 |
+| segmentDescription | このセグメントは、指定した検索のセグメント説明と一致します。 |
 
-### 検索式{#search-expression}
+### 検索式 {#search-expression}
 
-次の表に、セグメント検索APIを使用する場合の検索クエリの機能に関する詳細リストを示します。
+次の表に、セグメント検索 API を使用する際の検索クエリの仕組みに関する詳細を示します。
 
->!![NOTE] 次の例は、HTML以外のエンコード形式で表示され、わかりやすくなっています。ベストプラクティスとして、検索式をHTMLエンコードしてください。
+>!![NOTE] 次の例は、HTML 以外でエンコードされた形式で、わかりやすく示しています。ベストプラクティスについては、検索式を HTML エンコードしてください。
 
 | 検索式の例 | 説明 |
 | ------------------------- | ----------- |

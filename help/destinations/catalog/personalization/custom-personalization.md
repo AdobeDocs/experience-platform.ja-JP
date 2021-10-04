@@ -2,7 +2,8 @@
 keywords: カスタムパーソナライゼーション；宛先；experience platform カスタムの宛先；
 title: カスタムパーソナライゼーション接続（ベータ版）
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先では、ユーザープロファイルのセグメントメンバーシップに基づいて、リアルタイムの 1 対 1 のパーソナライゼーションを提供します。
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 8%

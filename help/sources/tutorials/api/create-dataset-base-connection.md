@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データセット接続フローサービス；フローサービス；フローサービス接続
+keywords: Experience Platform；ホーム；人気のあるトピック；データセット接続フローサービス；フローサービス；フローサービス接続
 solution: Experience Platform
-title: Flow Service APIを使用したAdobe Experience Platformデータセットベース接続の作成
+title: フローサービス API を使用したAdobe Experience Platformデータセットベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用して、Adobe Experience Platformへのデータセットベース接続を作成する方法を説明します。
+description: フローサービス API を使用して、Adobe Experience Platformへのデータセットベース接続を作成する方法を説明します。
 exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 28%
+ht-degree: 36%
 
 ---
 
-# [!DNL Flow Service] APIを使用した[!DNL Experience Platform]データセットベースの接続の作成
+# [!DNL Flow Service] API を使用した [!DNL Experience Platform] データセットベース接続の作成
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースから接続できます。
 
-サードパーティのソースのデータを[!DNL Platform]に接続するには、まずデータセットベースの接続を確立する必要があります。
+サードパーティのソースから [!DNL Platform] にデータを接続するには、まずデータセットベース接続を確立する必要があります。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、データセットベースの接続を作成する手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用して、データセットベースの接続を作成する手順を説明します。
 
 ## はじめに
 
@@ -28,26 +27,26 @@ ht-degree: 28%
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマレジストリ開発ガイド](../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [カタログサービス](../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-* [バッチインジェスト](../../../ingestion/batch-ingestion/overview.md):バッチ取り込みAPIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
-* [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+   * [スキーマレジストリ開発者ガイド](../../../xdm/api/getting-started.md):スキーマレジストリ API への呼び出しを正しく実行するために知っておく必要がある重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+* [カタログサービス](../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードのシステムで [!DNL Experience Platform]す。
+* [バッチ取得](../../../ingestion/batch-ingestion/overview.md):バッチ取得 API を使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してData Lakeに正常に接続するために必要な追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] API を使用してデータレイクに正常に接続するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,13 +56,13 @@ ht-degree: 28%
 
 ## 接続仕様の検索
 
-データセットベースの接続を作成する最初の手順は、[!DNL Flow Service]内から一連の接続仕様を取得することです。
+データセットベース接続を作成する最初の手順は、[!DNL Flow Service] 内から一連の接続仕様を取得することです。
 
 **API 形式**
 
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、クエリパラメーターを使用して、データセットベースの接続の接続仕様を調べることができます。
+使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、クエリパラメーターを使用して、データセットベース接続の接続仕様を調べることができます。
 
-クエリパラメーターを指定しないでGETリクエストを送信すると、使用可能なすべてのソースの接続仕様が返されます。 クエリ`property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"`を含めて、データセットベースの接続に関する情報を取得できます。
+クエリパラメーターを指定せずにGETリクエストを送信すると、使用可能なすべてのソースの接続仕様が返されます。 クエリ `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` を含めて、データセットベース接続の情報を取得できます。
 
 ```http
 GET /connectionSpecs
@@ -85,7 +84,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、接続仕様と、ベース接続の作成に必要な一意の識別子(`id`)を返します。
+正常な応答は、接続仕様と、ベース接続の作成に必要な一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -137,9 +136,9 @@ curl -X GET \
 }
 ```
 
-## データセットベースの接続の作成
+## データセットベース接続の作成
 
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクターを作成する場合に使用できるので、必要なデータセットベース接続は1つだけです。
+ベース接続は、ソースを指定し、そのソースの資格情報を含みます。 複数のソースコネクタを作成して異なるデータを取り込む場合に使用できるので、データセットベース接続は 1 つだけです。
 
 **API 形式**
 
@@ -169,11 +168,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | ------------- | --------------- |
-| `connectionSpec.id` | 前の手順で取得した接続仕様`id`。 |
+| `connectionSpec.id` | 前の手順で取得した接続仕様 `id`。 |
 
 **応答**
 
-正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を返します。 このIDは、ターゲット接続を作成し、サードパーティのソースコネクタからデータを取り込むために必要です。
+正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、ターゲット接続を作成し、サードパーティのソースコネクタからデータを取り込むために必要です。
 
 ```json
 {
@@ -184,7 +183,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用したデータセットベースの接続を作成し、接続の固有のID値を取得したことになります。 この基本接続を使用して、ターゲット接続を作成できます。 次のチュートリアルでは、使用するソースコネクタのカテゴリに応じて、ターゲット接続を作成する手順を説明します。
+このチュートリアルでは、[!DNL Flow Service] API を使用してデータセットベース接続を作成し、接続の一意の ID 値を取得しました。 このベース接続を使用して、ターゲット接続を作成できます。 次のチュートリアルでは、使用するソースコネクタのカテゴリに応じて、ターゲット接続を作成する手順を説明します。
 
 * [クラウドストレージ](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)

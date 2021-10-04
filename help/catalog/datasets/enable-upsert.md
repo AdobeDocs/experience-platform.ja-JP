@@ -3,13 +3,13 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: API を使用したプロファイル更新データセットの有効化
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「upsert」機能を持つデータセットを有効にする方法について説明します。
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 35%
 
 ---
-
 
 # API を使用したプロファイル更新のデータセットの有効化
 

@@ -1,8 +1,9 @@
 ---
 title: Web 拡張機能のアクションの種類
 description: Web プロパティでタグ拡張機能のアクションタイプライブラリモジュールを定義する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 データ収集タグのコンテキストでは、アクションとは、ルールイベントが発生し、すべての条件が評価を渡した後に実行される操作です。
 
@@ -37,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-例えば、Adobe Experience Platform ユーザーがメッセージを設定できるようにするには、ユーザーがメッセージを入力して設定オブジェクトに保存できるようにします。次のようなオブジェクト。
+例えば、Adobe Experience Platform ユーザーがメッセージを設定できるように、ユーザーに対し、メッセージを入力して settings オブジェクトに保存することを許可できます。 オブジェクトは次のようになります。
 
 ```json
 {
@@ -55,7 +56,7 @@ module.exports = function(settings) {
 
 ## コンテキストイベントデータ
 
-次に、2 番目の引数を、ルールを起動するイベントに関するコンテキスト情報を含むモジュールに渡す必要があります。これは状況によってはメリットがあり、次のように指定することで実現できます。
+次に、2 つ目の引数を、ルールを実行するイベントに関するコンテキスト情報を含むモジュールに渡す必要があります。 これは状況によってはメリットがあり、次のように指定することで実現できます。
 
 ```js
 module.exports = function(settings, event) {

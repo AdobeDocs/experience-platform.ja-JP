@@ -3,7 +3,7 @@ title: コールバックエンドポイント
 description: Reactor API で /callbacks エンドポイントを呼び出す方法を説明します。
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 100%
 

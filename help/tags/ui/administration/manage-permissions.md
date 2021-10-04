@@ -1,8 +1,9 @@
 ---
 title: タグの権限管理
 description: Adobe Experience Platform でタグの権限を付与する方法について説明します。
-source-git-commit: 72d2e9328bcfb6abf0a7f8f0c5113f021a112a35
-workflow-type: ht
+exl-id: b0439909-c515-4829-82b9-267da8862cba
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でタグを使用するには、Adobe Admin Console で 1 つ以上の Adobe Experience Cloud 製品へのアクセス権が付与されている必要があります。さらに、データ収集 UI にログインしたときに特定のアクションを実行するには、製品プロファイルのレベルでタグへのアクセス権も付与されているる必要があります。
 

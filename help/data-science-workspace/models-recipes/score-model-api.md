@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；モデルのスコア；データサイエンスワークスペース；人気の高いトピック；先生の機械学習api
+keywords: Experience Platform；モデルのスコア付け；Data Science Workspace；人気のあるトピック；sensei 機械学習 api
 solution: Experience Platform
-title: Senesie Machine Learning APIを使用したモデルのスコア設定
+title: Sensei 機械学習 API を使用したモデルのスコア
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Senesie Machine Learning APIを使用して、テストとテストの実行を作成する方法を説明します。
+description: このチュートリアルでは、Sensei 機械学習 API を活用して実験と実験実行を作成する方法を説明します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
@@ -14,7 +13,7 @@ ht-degree: 91%
 
 ---
 
-# [!DNL Sensei Machine Learning API]
+# [!DNL Sensei Machine Learning API] を使用してモデルにスコアを付けます
 
 このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。API ドキュメントの詳細なリストについては、[このドキュメント](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html)を参照してください。
 

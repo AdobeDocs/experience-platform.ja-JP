@@ -1,8 +1,9 @@
 ---
 title: Web 拡張機能の共有モジュール
-description: Adobe Experience Platform の Web 拡張機能の共有ライブラリモジュールを定義する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform で Web 拡張機能の共有ライブラリモジュールを定義する方法について説明します。
+exl-id: ec013a39-966c-43f3-bc36-31198990a17e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 共有モジュールは、他の拡張機能と通信するためのメカニズムです。例えば、拡張機能 A はデータを非同期的に読み込み、[promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) を介して拡張機能 B で使用できるようにします。
 

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；アトリビューションの概要；人気のあるトピック；アトリビューションの概要；アトリビューションの概要
+keywords: Experience Platform;attribution ai の概要；人気のあるトピック；attribution ai;Attribution ai
 solution: Experience Platform, Intelligent Services
 title: Attribution AIの概要
 topic-legacy: Attribution AI
 description: Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。タッチポイントの例としては、ディスプレイ広告インプレッション、E メールの送信、E メールの開封、有料検索のクリックなどがあります。
-landing-page-description: Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。
+landing-page-description: Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '499'
@@ -24,11 +23,11 @@ Attribution AI は、コンバージョンイベントにつながるタッチ�
 
 Attribution AI の出力は、様々なディメンションに分けられ、カスタマージャーニーの様々な段階で利用できます。これは、ビジネスニーズを機械学習の問題に置き換え、アルゴリズムを選択し、モデルをトレーニングしてデプロイしなくてもおこなえます。
 
-Attribution AIデータはAdobeから取得できます(例：[!DNL Analytics])またはAdobe以外のデータソース。
+Attribution AIデータはAdobeから取得できます ( 例：[!DNL Analytics]) または非Adobeのデータソース
 
 Attribution AI では、スコアの 2 つのカテゴリ（アルゴリズムとルールベース）をサポートしています。アルゴリズムスコアには、増分スコアと影響スコアが含まれます。ルールベーススコアには、ファーストタッチ、ラストタッチ、リニア、U 字形、タイムディケイが含まれます。
 
-次のビデオは、Attribution AIに関する理解を深めるためのものです。
+次のビデオは、お客様がAttribution AIを理解できるように作られています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
@@ -44,7 +43,7 @@ Attribution AI を使用すると、以下のサンプルユースケースで�
 
 ### その他の機能
 
-Attribution AIは、[!DNL Adobe Analytics]などの他のAdobeソリューションとのオファー統合も可能です。 これにより、これらのソリューションで、カスタマイズ可能なアルゴリズムモデルを利用して、メディアのパフォーマンスを評価したり、分析インサイトを提供したりできます。
+Attribution AIは、[!DNL Adobe Analytics] などの他のAdobeソリューションとの統合も提供します。 これにより、これらのソリューションで、カスタマイズ可能なアルゴリズムモデルを利用して、メディアのパフォーマンスを評価したり、分析インサイトを提供したりできます。
 
 ## 次の手順
 

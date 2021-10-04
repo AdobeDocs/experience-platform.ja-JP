@@ -1,25 +1,24 @@
 ---
-keywords: rtcdpプロファイル;プロファイルrtcdp;rtcdp identities;rtcdpマージポリシー；リアルタイム顧客プロファイル
+keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結合ポリシー；リアルタイム顧客プロファイル
 title: リアルタイム顧客プロファイルの概要
-seo-title: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイル
-description: リアルタイム顧客データプラットフォームを使用すると、リアルタイム顧客プロファイルを使用している顧客に対して、連携し、一貫性のある、関連性のあるエクスペリエンスを提供できます。
-seo-description: リアルタイムの顧客データプラットフォーム，プロファイル，データ，エクスペリエンス，チャネル
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+seo-title: Real-time Customer Profile in Real-time Customer Data Platform
+description: リアルタイム顧客データプラットフォームを使用して、顧客に対して調整され、一貫性のある、関連性の高いエクスペリエンスをリアルタイム顧客プロファイルを使用して提供する方法を説明します。
+seo-description: Real-time Customer Data Platform, Profile, data, experiences, channels
+exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 35%
+source-wordcount: '388'
+ht-degree: 34%
 
 ---
 
+# [!DNL Real-time Customer Profile] の概要
 
-# [!DNL Real-time Customer Profile]概要
+[!DNL Real-time Customer Profile] を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。[!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客とのやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
 
-[!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせることで、各顧客の全体的な表示を確認できます。[!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+## [!DNL Real-time Customer Data Platform] 内のプロファイル
 
-## [!DNL Real-time Customer Data Platform]のプロファイル
-
-[!DNL Real-time Customer Data Platform] 顧客がブランドのどこで、いつどこで取引を行っても、顧客に対して、調整された一貫したエクスペリエンスを提供できます。適切でタイムリーに感じるようにパーソナライズされたエクスペリエンスを提供することは、小さな業績ではありませんが、Adobe Experience Platformの[!DNL Real-time Customer Profile]を使用することで達成できます。 リアルタイムCDPは[!DNL Experience Platform]の上に構築されており、プロファイルの作成など、多くの[!DNL Experience Platform]サービスと機能を利用しています。 個々の顧客のこれらの集計ビューでは、様々なマーケティングチャネルや、現在顧客データの保存に使用している多様なシステムからのデータを統合します。
+[!DNL Real-time Customer Data Platform] を使用すると、顧客がブランドとどこやいつやり取りしても、顧客に対して調整され、一貫性のあるエクスペリエンスを提供できます。関連性とタイムリー性を感じるように、パーソナライズされたこれらのエクスペリエンスを提供することは大変なことではありませんが、Adobe Experience Platformの一部である [!DNL Real-time Customer Profile] を使用して達成できます。 リアルタイム CDP は [!DNL Experience Platform] をベースに構築され、プロファイルの作成を含む、多くの [!DNL Experience Platform] サービスと機能を利用します。 個々の顧客のこれらの集計ビューでは、様々なマーケティングチャネルや、現在顧客データの保存に使用している多様なシステムからのデータを統合します。
 
 ## ID と ID 名前空間
 
@@ -27,12 +26,12 @@ ht-degree: 35%
 
 ## 結合ポリシー
 
-顧客データを統合する際、結合ポリシーは、[!DNL Platform]がデータの優先順位付け方法とどのデータを結合して統合表示を作成するかを決定する際に使用する規則です。 結合ポリシーについて詳しくは、「[結合ポリシーの概要](/help/rtcdp/profile/merge-policies.md)」を参照してください。
+顧客データを統合する場合、結合ポリシーは、データの優先順位付け方法とどのデータを組み合わせて統合するかを決定する際に [!DNL Platform] が使用するルールです。 結合ポリシーについて詳しくは、「[結合ポリシーの概要](/help/rtcdp/profile/merge-policies.md)」を参照してください。
 
 ## プロファイルビューアー
 
-[!DNL Platform] 顧客プロファイルを容易に表示し、様々な属性を使用して特定のプロファイルを検索できます。[!DNL Platform]内での表示プロファイル方法について詳しくは、[プロファイルビューアの概要](/help/rtcdp/profile/profile-viewer.md)を参照してください。
+[!DNL Platform] では、顧客プロファイルを簡単に表示し、様々な属性を使用して特定のプロファイルを検索できます。[!DNL Platform] 内でのプロファイルの表示方法について詳しくは、[ プロファイルビューアの概要 ](/help/rtcdp/profile/profile-viewer.md) を参照してください。
 
 ## 次の手順
 
-この概要を読んだ後、リアルタイムCDPが[!DNL Real-time Customer Profile]を使って、チャネル間のパーソナライゼーションを大規模に行う方法を理解する必要があります。 異なるソースの ID を結合することで、個々の顧客の全体像を把握して、マーケティングキャンペーンをまったく新しいレベルまで引き上げることができます。ユーザーインターフェイスおよびAPIを使用して[!DNL Real-time Customer Profile]データを操作するためのベストプラクティスやチュートリアルなど、詳細については、[リアルタイム顧客プロファイルドキュメント](../../profile/home.md)を参照してください。
+この概要を読むと、リアルタイム CDP が [!DNL Real-time Customer Profile] を利用してチャネル間のパーソナライゼーションを大規模に強化する方法を理解できます。 異なるソースの ID を結合することで、個々の顧客の全体像を把握して、マーケティングキャンペーンをまったく新しいレベルまで引き上げることができます。ユーザーインターフェイスと API で [!DNL Real-time Customer Profile] データを操作する際のベストプラクティスやチュートリアルなど、詳細については、[ リアルタイム顧客プロファイルのドキュメント ](../../profile/home.md) を参照してください。

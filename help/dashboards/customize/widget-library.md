@@ -4,7 +4,7 @@ title: ダッシュボードのウィジェットライブラリの概要
 description: 'このガイドでは、Adobe Experience Platform のウィジェットライブラリにアクセスする手順を説明します。 '
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 100%
 

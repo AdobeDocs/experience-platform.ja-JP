@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Experience Platform ダッシュボードを PDF にダウンロード
 type: Documentation
 description: Experience Platform UI で使用できる PDF へのダウンロード機能を使用して、ダッシュボードのビジュアライゼーションのコピーを保存します。
-source-git-commit: a95f77d048b5bb9562507122d249f592e68a1bcf
-workflow-type: ht
+exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 100%
 
 ---
-
 
 # ダッシュボードを PDF にダウンロード
 

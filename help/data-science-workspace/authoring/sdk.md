@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；Data Science Workspace；人気のあるトピック；テスト
+keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；Data Science Workspace；よく読まれるトピック；テスト
 solution: Experience Platform
 title: モデルオーサリング SDK
 topic-legacy: Overview
-description: モデルオーサリングSDKを使用すると、PySparkとSpark (Scala)で実装可能なテンプレートを提供する、Adobe Experience Platformデータサイエンスワークスペースで使用できるカスタム機械学習レシピと機能パイプラインを開発できます。
+description: モデルオーサリング SDK を使用すると、Adobe Experience Platform Data Science Workspace で使用できるカスタム機械学習レシピと機能パイプラインを開発し、PySpark および Spark(Scala) に実装可能なテンプレートを提供できます。
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
@@ -15,9 +14,9 @@ ht-degree: 70%
 
 # モデルオーサリング SDK
 
-モデルオーサリングSDKを使用すると、[!DNL Adobe Experience Platform] Data Science Workspaceで使用できるカスタム機械学習レシピと機能パイプラインを開発し、[!DNL PySpark]と[!DNL Spark (Scala)]で実装可能なテンプレートを提供できます。
+モデルオーサリング SDK を使用すると、[!DNL Adobe Experience Platform] Data Science Workspace で使用できるカスタム機械学習レシピと機能パイプラインを開発し、[!DNL PySpark] と [!DNL Spark (Scala)] に実装可能なテンプレートを提供できます。
 
-このドキュメントは、モデルオーサリングSDK内の様々なクラスに関する情報を提供します。
+このドキュメントでは、モデルオーサリング SDK 内の様々なクラスに関する情報を提供します。
 
 ## DataLoader {#dataloader}
 
@@ -53,7 +52,7 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
 
 **Spark**
 
-次の表に、[!DNL Spark] Data Loaderクラスの抽象メソッドを示します。
+次の表に、[!DNL Spark] データローダークラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -78,9 +77,9 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
     </tbody>
 </table>
 
-### [!DNL Platform]データセット{#load-data-from-a-platform-dataset}からのデータの読み込み
+### [!DNL Platform] データセットからのデータの読み込み {#load-data-from-a-platform-dataset}
 
-次の例では、IDで[!DNL Platform]データを取得し、DataFrameを返します。この場合、データセットID(`datasetId`)は設定ファイル内で定義されたプロパティです。
+次の例では、[!DNL Platform] データを ID で取得し、DataFrame を返します。データセット ID(`datasetId`) は設定ファイルで定義されたプロパティです。
 
 **PySpark**
 
@@ -130,7 +129,7 @@ class MyDataLoader(DataLoader):
         return pd
 ```
 
-**Spark (Scala)**
+**Spark(Scala)**
 
 ```scala
 // Spark
@@ -199,7 +198,7 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
 
 **PySpark**
 
-次の表に、[!DNL PySpark] Data Saverクラスの抽象メソッドを示します。
+次の表に、[!DNL PySpark] データセーバークラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -225,9 +224,9 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark(Scala)**
 
-次の表に、[!DNL Spark] Data Saverクラスの抽象メソッドを示します。
+次の表に、[!DNL Spark] データセーバークラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -252,11 +251,11 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
     </tbody>
 </table>
 
-### データを[!DNL Platform]データセット{#save-data-to-a-platform-dataset}に保存
+### データを [!DNL Platform] データセットに保存する {#save-data-to-a-platform-dataset}
 
-データを[!DNL Platform]データセットに格納するには、プロパティを次のいずれかの方法で指定するか、設定ファイルで定義する必要があります。
+データを [!DNL Platform] データセットに格納するには、設定ファイルでプロパティを指定するか、定義する必要があります。
 
-- データの格納先となる有効な[!DNL Platform]データセットID
+- データの保存先となる有効な [!DNL Platform] データセット ID
 - 組織に属するテナント ID
 
 次の例では、データ（`prediction`[!DNL Platform]）を データセットに格納します。データセット ID（`datasetId`）とテナント ID（`tenantId`）は、設定ファイル内で定義されたプロパティです。
@@ -327,7 +326,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**Spark (Scala)**
+**Spark(Scala)**
 
 ```scala
 // Spark
@@ -395,7 +394,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-DatasetTransformer クラスは、データセットの構造を変更および変換します。[!DNL Sensei Machine Learning Runtime]は、このコンポーネントを定義する必要はなく、要件に基づいて実装されます。
+DatasetTransformer クラスは、データセットの構造を変更および変換します。[!DNL Sensei Machine Learning Runtime] は、このコンポーネントを定義する必要はなく、要件に基づいて実装されます。
 
 特徴パイプラインに関しては、データセットトランスフォーマーを特徴パイプラインファクトリと協力して使用し、特徴エンジニアリングのためのデータを準備できます。
 
@@ -427,9 +426,9 @@ DatasetTransformer クラスは、データセットの構造を変更および�
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark(Scala)**
 
-次の表に、[!DNL Spark]データセットトランスフォーマークラスの抽象メソッドを示します。
+次の表に、[!DNL Spark] データセット変換クラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -454,7 +453,7 @@ DatasetTransformer クラスは、データセットの構造を変更および�
     </tbody>
 </table>
 
-## FeaturePipelineFactory  {#featurepipelinefactory}
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含まれ、特徴パイプラインのステージを開始から終了まで定義します。
 
@@ -498,9 +497,9 @@ FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含ま
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark(Scala)**
 
-次の表に、[!DNL Spark] FeaturePipelineFactoryのクラスメソッドを示します。
+次の表に、 [!DNL Spark] FeaturePipelineFactory のクラスメソッドを示します。
 
 <table>
     <thead>
@@ -536,9 +535,9 @@ FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含ま
     </tbody>
 </table>
 
-## PipelineFactory  {#pipelinefactory}
+## PipelineFactory {#pipelinefactory}
 
-PipelineFactoryクラスには、モデルトレーニングとスコアリングのメソッドと定義がカプセル化されています。トレーニングロジックとアルゴリズムは[!DNL Spark]パイプラインの形式で定義されます。
+PipelineFactory クラスは、モデルのトレーニングとスコアリングのメソッドと定義をカプセル化します。トレーニングロジックとアルゴリズムは、[!DNL Spark] パイプラインの形式で定義されます。
 
 **PySpark**
 
@@ -607,9 +606,9 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark(Scala)**
 
-次の表に、[!DNL Spark] PipelineFactoryのクラスメソッドを示します。
+次の表に、[!DNL Spark] PipelineFactory のクラスメソッドを示します。
 
 <table>
     <thead>
@@ -645,7 +644,7 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
     </tbody>
 </table>
 
-## MLEvaluator  {#mlevaluator}
+## MLEvaluator {#mlevaluator}
 
 MLEvaluator クラスは、評価指標を定義するメソッドと、トレーニングとテストデータセットを決定するためのメソッドを提供します。
 
@@ -691,9 +690,9 @@ MLEvaluator クラスは、評価指標を定義するメソッドと、トレ�
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark(Scala)**
 
-次の表に、[!DNL Spark] MLEvaluatorのクラスメソッドを示します。
+次の表に、[!DNL Spark] MLEvaluator のクラスメソッドを示します。
 
 <table>
     <thead>

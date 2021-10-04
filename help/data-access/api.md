@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform：ホーム;人気のトピック;データアクセス;python sdk;spark sdk;data access api；書き出し；書き出し
 solution: Experience Platform
-title: データアクセスAPIガイド
+title: データアクセス API ガイド
 topic-legacy: developer guide
-description: データアクセスAPIは、Adobe Experience Platformをサポートし、Experience Platform内で取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスを開発者に提供します。
+description: データアクセス API は、Experience Platform内で取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
-# データアクセスAPIガイド
+# データアクセス API ガイド
 
-データアクセスAPIは、[!DNL Experience Platform]内で取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
+データアクセス API は、[!DNL Experience Platform] 内で取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
 ![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
@@ -203,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## ファイルのコンテンツへのアクセス
 
-[!DNL Data Access] APIを使用して、ファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
+[!DNL Data Access] API を使用して、ファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
 
 **API 形式**
 

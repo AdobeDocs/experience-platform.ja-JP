@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；開発者ガイド；SDK；データアクセスSDK；データサイエンスワークスペース；人気の高いトピック
+keywords: Experience Platform，開発者ガイド， SDK，データアクセス SDK, Data Science Workspace，よく読まれるトピック
 solution: Experience Platform
-title: Adobe Experience PlatformプラットフォームSDKを使用したモデルオーサリング
+title: Adobe Experience Platform Platform SDK を使用したモデルオーサリング
 topic-legacy: SDK authoring
-description: このチュートリアルでは、PythonとRの両方でdata_access_sdk_pythonを新しいPythonプラットフォームSdkに変換する方法について説明します。
+description: このチュートリアルでは、Python と R の両方で data_access_sdk_python を新しい Python platform_sdk に変換する方法について説明します。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
@@ -13,17 +12,17 @@ ht-degree: 79%
 
 ---
 
-# Adobe Experience Platform[!DNL Platform] SDKを使用したモデルオーサリング
+# Adobe Experience Platform [!DNL Platform] SDK を使用したモデルオーサリング
 
 このチュートリアルでは、Python と R の両方で `data_access_sdk_python` を新しい Python `platform_sdk` に変換する方法について説明します。このチュートリアルでは、次の操作について説明します。
 
 - [認証の構築](#build-authentication)
 - [データの基本読み取り](#basic-reading-of-data)
-- [データの基本書き込み](#basic-writing-of-data)
+- [データの基本的な書き込み](#basic-writing-of-data)
 
-## 認証の構築  {#build-authentication}
+## 認証の構築 {#build-authentication}
 
-認証は、[!DNL Adobe Experience Platform]を呼び出すために必要で、APIキー、IMS組織ID、ユーザートークン、サービストークンで構成されます。
+[!DNL Adobe Experience Platform] を呼び出すには認証が必要で、API キー、IMS 組織 ID、ユーザートークン、サービストークンで構成されます。
 
 ### Python
 
@@ -68,9 +67,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## データの基本読み取り  {#basic-reading-of-data}
+## データの基本読み取り {#basic-reading-of-data}
 
-新しい[!DNL Platform] SDKでは、最大読み取りサイズは32 GBで、最大読み取り時間は10分です。
+新しい [!DNL Platform] SDK では、最大読み取りサイズは 32 GB で、最大読み取り時間は 10 分です。
 
 読み取り時間が長すぎる場合は、次のいずれかのフィルターオプションを使用してみてください。
 
@@ -105,7 +104,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## オフセットと制限によるフィルター  {#filter-by-offset-and-limit}
+## オフセットと制限によるフィルター {#filter-by-offset-and-limit}
 
 バッチ ID によるフィルタリングはサポートされなくなったので、データの読み取りの範囲を絞るには、`offset` と `limit` を使用する必要があります。
 
@@ -123,7 +122,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 日付によるフィルター  {#filter-by-date}
+## 日付によるフィルター {#filter-by-date}
 
 日付フィルターの精度が、日別に設定されるのではなく、タイムスタンプによって定義されるようになりました。
 
@@ -147,7 +146,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-新しい[!DNL Platform] SDKは、次の操作をサポートします。
+新しい [!DNL Platform] SDK では、次の操作がサポートされます。
 
 | 操作 | 関数 |
 | --------- | -------- |
@@ -159,7 +158,7 @@ df2
 | および（`&`） | `And()` |
 | または（`|`） | `Or()` |
 
-## 選択した列によるフィルター  {#filter-by-selected-columns}
+## 選択した列によるフィルター {#filter-by-selected-columns}
 
 データの読み取りをさらに絞り込むために、列名でフィルターすることもできます。
 
@@ -175,7 +174,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 並べ替え結果の取得  {#get-sorted-results}
+## 並べ替え結果の取得 {#get-sorted-results}
 
 受け取った結果は、それぞれ、ターゲットデータセットの指定した列と、その順序（昇順または降順）で並べ替えることができます。
 
@@ -193,7 +192,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## データの基本的な書き込み  {#basic-writing-of-data}
+## データの基本的な書き込み {#basic-writing-of-data}
 
 >[!NOTE]
 >

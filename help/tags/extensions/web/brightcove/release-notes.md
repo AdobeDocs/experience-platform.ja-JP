@@ -1,8 +1,9 @@
 ---
 title: BrightCove ビデオトラッキング拡張機能のリリースノート
-description: Adobe Experience Platform の BrightCove ビデオトラッキング拡張機能に関する最新のリリースノートです。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform の BrightCove ビデオトラッキングタグ拡張機能に関する最新のリリースノートです。
+exl-id: 2e24a28f-b0c6-4aa5-a98f-3056024d312c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 7 月 6 日（PT）
 

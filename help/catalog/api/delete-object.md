@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；オブジェクトの削除；カタログサービス；api
+keywords: Experience Platform；ホーム；人気の高いトピック；オブジェクトの削除；カタログサービス；api
 solution: Experience Platform
-title: APIでのオブジェクトの削除
+title: API でのオブジェクトの削除
 topic-legacy: developer guide
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
@@ -13,13 +12,13 @@ ht-degree: 47%
 
 ---
 
-# APIでのオブジェクトの削除
+# API でのオブジェクトの削除
 
-DELETEリクエストのパスに[!DNL Catalog]オブジェクトのIDを指定すると、オブジェクトを削除できます。
+[!DNL Catalog] オブジェクトを削除するには、削除リクエストのパスに ID を指定します。DELETE
 
 >[!WARNING]
 >
->オブジェクトの削除は取り消しができず、[!DNL Experience Platform]の他の場所で改行の変更が行われる可能性があるので、注意が必要です。
+>オブジェクトの削除は元に戻せず、[!DNL Experience Platform] の他の場所で破壊的な変更が生じる可能性があるので、特に注意が必要です。
 
 **API 形式**
 
@@ -29,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->`DELETE /batches/{ID}`エンドポイントは非推奨です。 バッチを削除するには、[バッチ取り込みAPI](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)を使用する必要があります。
+>`DELETE /batches/{ID}` エンドポイントは非推奨です。 バッチを削除するには、[ バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) を使用する必要があります。
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 削除する[!DNL Catalog]オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 削除する [!DNL Catalog] オブジェクトの種類。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -61,4 +60,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->リクエストで指定されたIDに一致する[!DNL Catalog]オブジェクトがない場合、HTTPステータスコード200を引き続き受け取ることができますが、応答配列は空になります。
+>リクエストで指定した ID に一致する [!DNL Catalog] オブジェクトがない場合でも、HTTP ステータスコード 200 が表示される可能性がありますが、応答配列は空になります。

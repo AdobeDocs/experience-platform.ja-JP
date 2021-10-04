@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取得；取得；時系列データ；時系列データのストリーム；
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；時系列データ；ストリーム時系列データ；
 solution: Experience Platform
-title: ストリーミング取得APIを使用した時系列データのストリーミング
+title: ストリーミング取得 API を使用した時系列データのストリーミング
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
@@ -13,17 +13,17 @@ ht-degree: 67%
 
 ---
 
-# ストリーミング取得APIを使用した時系列データのストリーミング
+# ストリーミング取得 API を使用した時系列データのストリーミング
 
-このチュートリアルは、Adobe Experience Platform [!DNL Data Ingestion Service] APIの一部であるストリーミング取得APIの使用を開始する際に役立ちます。
+このチュートリアルは、Adobe Experience Platform [!DNL Data Ingestion Service] API の一部であるストリーミング取得 API の使用を開始する際に役立ちます。
 
 ## はじめに
 
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを整理する際に使用する標 [!DNL Platform] 準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを整理する際に使用す [!DNL Platform] る標準化されたフレームワーク。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):APIの使用可能な各エンドポイントと、それらのエンドポイントを呼び [!DNL Schema Registry] 出す方法をカバーする包括的なガイドです。これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):API の使用可能な各エンドポイントと、それらのエンドポイントを呼 [!DNL Schema Registry] び出す方法をカバーする包括的なガイドです。これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
@@ -55,7 +55,7 @@ ht-degree: 67%
 
 ## XDM ExperienceEvent クラスベースのスキーマの作成
 
-データセットを作成するには、まず[!DNL XDM ExperienceEvent]クラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データセットを作成するには、まず [!DNL XDM ExperienceEvent] クラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 **API 形式**
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマ名。この名前は一意である必要があります。 |
 | `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | この例では、`union`タグを使用して、データを[[!DNL Real-time Customer Profile]](../../profile/home.md)に保持します。 |
+| `meta:immutableTags` | この例では、`union` タグを使用して、データを [[!DNL Real-time Customer Profile]](../../profile/home.md) に保持します。 |
 
 **応答** 
 
@@ -248,7 +248,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->このデータセットは、適切なタグを設定することで、**[!DNL Real-time Customer Profile]**&#x200B;と&#x200B;**[!DNL Identity]**&#x200B;に対して有効になります。
+>このデータセットは、適切なタグを設定することで、**[!DNL Real-time Customer Profile]** と **[!DNL Identity]** に対して有効になります。
 
 **API 形式**
 
@@ -298,7 +298,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 時系列データのストリーミング接続への取得
 
-データセット、ストリーミング接続、データフローを作成したら、XDM形式のJSONレコードを取り込み、[!DNL Platform]内の時系列データを取り込むことができます。
+データセット、ストリーミング接続、データフローを作成した状態で、XDM 形式の JSON レコードを取り込み、[!DNL Platform] 内の時系列データを取り込むことができます。
 
 **API 形式**
 
@@ -309,19 +309,19 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 新しく作成されたストリーミング接続の `id` 値。 |
-| `syncValidation` | 開発目的のクエリーパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。このクエリパラメーターを`true`に設定した場合、リクエストのレートは`CONNECTION_ID`あたり60回に制限されることに注意してください。 |
+| `syncValidation` | 開発目的のクエリーパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。このクエリパラメーターを `true` に設定した場合、リクエストのレートは `CONNECTION_ID` あたり 60 回に制限されることに注意してください。 |
 
 **リクエスト**
 
-時系列データのストリーミング接続への取り込みは、ソース名を使用しておこなうことも、使用しないこともできます。
+時系列データをストリーミング接続に取り込む操作は、ソース名を使用する場合と使用しない場合のどちらでも実行できます。
 
-次のリクエストの例では、ソース名が不明な時系列データをPlatformに取り込みます。 データにソース名がない場合は、ストリーミング接続定義からソースIDが追加されます。
+次のリクエストの例では、ソース名が不明な時系列データを Platform に取り込みます。 データにソース名がない場合は、ストリーミング接続定義からソース ID が追加されます。
 
 >[!IMPORTANT]
 >
-> 独自の `xdmEntity._id` および `xdmEntity.timestamp` を生成する必要があります。IDを生成する良い方法は、データ準備でUUID関数を使用することです。 UUID関数の詳細については、『[データ準備関数ガイド](../../data-prep/functions.md)』を参照してください。 `xdmEntity._id`属性は、レコード自体の一意の識別子を表し、**レコードが存在する個人またはデバイスの一意のID**&#x200B;を表しません。 ユーザーIDまたはデバイスIDは、スキーマの個人IDまたはデバイスIDとして割り当てられる属性に固有です。
+> 独自の `xdmEntity._id` および `xdmEntity.timestamp` を生成する必要があります。ID を生成する良い方法は、データ準備で UUID 関数を使用することです。 UUID 関数の詳細については、『[ データ準備関数ガイド ](../../data-prep/functions.md)』を参照してください。 `xdmEntity._id` 属性は、レコード自体の一意の識別子を表し、**レコードが存在する個人またはデバイスの一意の ID ではなく**、 です。 ユーザー ID またはデバイス ID は、スキーマの個人 ID またはデバイス ID として割り当てられる属性に固有です。
 >
->`xdmEntity._id`と`xdmEntity.timestamp`の両方が、時系列データの必須フィールドです。 また、次の API 呼び出しでは、認証ヘッダーは必要あり&#x200B;**ません**。
+>`xdmEntity._id` と `xdmEntity.timestamp` の両方が、時系列データの必須フィールドです。 また、次の API 呼び出しでは、認証ヘッダーは必要あり&#x200B;**ません**。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -404,7 +404,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 **応答**
 
-正常な応答は、HTTPステータス200と、新しくストリーミングされた[!DNL Profile]の詳細を返します。
+正常な応答は、HTTP ステータス 200 と、新しくストリーミングされた [!DNL Profile] の詳細を返します。
 
 ```json
 {
@@ -419,18 +419,18 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 前に作成したストリーミング接続の`inletId`。 |
+| `{CONNECTION_ID}` | 前に作成したストリーミング接続の `inletId`。 |
 | `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この ID は、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
 | `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
 | `syncValidation.status` | クエリーパラメーター `syncValidation=true` が追加されたので、この値が表示されます。検証が成功した場合、ステータスは `pass` になります。 |
 
 ## 新しく取得した時系列データの取得
 
-以前に取り込んだレコードを検証するには、 [[!DNL Profile Access API]](../../profile/api/entities.md)を使用して時系列データを取得します。 これは、`/access/entities` エンドポイントへの GET リクエストとオプションのクエリーパラメーターを使用しておこなうことができます。複数のパラメーターを使用でき、アンパサンド（&amp;）で区切ります。
+以前に取り込んだレコードを検証するには、 [[!DNL Profile Access API]](../../profile/api/entities.md) を使用して時系列データを取得します。 これは、`/access/entities` エンドポイントへの GET リクエストとオプションのクエリーパラメーターを使用しておこなうことができます。複数のパラメーターを使用でき、アンパサンド（&amp;）で区切ります。
 
 >[!NOTE]
 >
->結合ポリシーIDが定義されておらず、`schema.name`または`relatedSchema.name`が`_xdm.context.profile`の場合、[!DNL Profile Access]は&#x200B;**すべての**&#x200B;関連IDを取得します。
+>結合ポリシー ID が定義されておらず、`schema.name` または `relatedSchema.name` が `_xdm.context.profile` の場合、[!DNL Profile Access] は **** 関連するすべての ID を取得します。
 
 **API 形式**
 
@@ -528,6 +528,6 @@ curl -X GET \
 
 ## 次の手順
 
-このドキュメントでは、ストリーミング接続を使用して[!DNL Platform]にレコードデータを取り込む方法を説明します。 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、[!DNL Platform] UIを使用して、取り込んだデータの監視を開始できます。 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
+このドキュメントでは、ストリーミング接続を使用して [!DNL Platform] にレコードデータを取り込む方法を説明します。 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、[!DNL Platform] UI を使用して、取り込んだデータの監視を開始できます。 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
 
 一般的なストリーミング取得の詳細については、『[ストリーミング取得の概要](../streaming-ingestion/overview.md)』を参照してください。

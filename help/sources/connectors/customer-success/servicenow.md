@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；servicenow;ServiceNow
 solution: Experience Platform
-title: ServiceNow Source Connectorの概要
+title: ServiceNow Source Connector の概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用してServiceNowをAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用して ServiceNow をAdobe Experience Platformに接続する方法を説明します。
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
@@ -14,23 +14,23 @@ ht-degree: 8%
 
 # [!DNL ServiceNow] コネクタ
 
-Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティの顧客成功システムからデータを取り込む機能を提供します。カスタマーサクセスプロバイダーのサポートには[!DNL ServiceNow]が含まれます。
+[!DNL Experience Platform] は、サードパーティの顧客成功システムからデータを取り込む機能を提供します。カスタマーサクセスプロバイダーのサポートは [!DNL ServiceNow] です。
 
-## IPアドレス許可リスト
+## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
-以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL ServiceNow]を[!DNL Platform]に接続する方法について説明します。
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL ServiceNow] を [!DNL Platform] に接続する方法について説明します。
 
-## APIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続します
+## API を使用して [!DNL ServiceNow] を [!DNL Platform] に接続
 
-- [フローサービスAPIを使用したServiceNowベース接続の作成](../../tutorials/api/create/customer-success/servicenow.md)
-- [フローサービスAPIを使用した顧客成功ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/customer-success.md)
-- [フローサービスAPIを使用した顧客成功ソースのデータフローの作成](../../tutorials/api/collect/customer-success.md)
+- [フローサービス API を使用した ServiceNow ベース接続の作成](../../tutorials/api/create/customer-success/servicenow.md)
+- [フローサービス API を使用した顧客成功ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/customer-success.md)
+- [フローサービス API を使用した顧客成功ソースのデータフローの作成](../../tutorials/api/collect/customer-success.md)
 
-## UIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続します
+## UI を使用して [!DNL ServiceNow] を [!DNL Platform] に接続します
 
-- [UIでのServiceNowソース接続の作成](../../tutorials/ui/create/customer-success/servicenow.md)
-- [UIでの顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)
+- [UI での ServiceNow ソース接続の作成](../../tutorials/ui/create/customer-success/servicenow.md)
+- [UI での顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

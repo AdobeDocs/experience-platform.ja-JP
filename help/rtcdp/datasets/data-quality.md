@@ -1,17 +1,16 @@
 ---
-keywords: データ品質； rtcdpデータ品質
-title: リアルタイム顧客データプラットフォームにおけるデータ品質
-seo-title: リアルタイム顧客データプラットフォームのデータ品質
+keywords: データ品質； rtcdp データ品質
+title: リアルタイム顧客データプラットフォームでのデータ品質
+seo-title: Data quality on Real-time Customer Data Platform
 description: リアルタイム顧客データプラットフォームのデータ品質に関するドキュメント
-seo-description: リアルタイム顧客データプラットフォームでのバッチ処理およびデータ取り込みによるデータ品質の仕組みを説明するドキュメント
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
+exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 76%
+source-wordcount: '126'
+ht-degree: 84%
 
 ---
-
 
 # リアルタイム顧客データプラットフォームでのデータ品質
 

@@ -1,8 +1,9 @@
 ---
 title: Adobe Media Analytics for Audio and Video 拡張機能の概要
 description: Adobe Experience Platform の Adobe Media Analytics for Audio and Video タグ拡張機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 100%
 
@@ -12,11 +13,11 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 
-Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.x SDK）を追加します。この拡張機能では、タグサイトまたはプロジェクトに `MediaHeartbeat` トラッカーインスタンスを追加する機能を提供します。MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
+Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.x SDK）を追加します。この拡張機能では、タグのサイトまたはプロジェクトに `MediaHeartbeat` トラッカーインスタンスを追加する機能を提供します。MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
 
 * [Analytics 拡張機能](../analytics/overview.md)
 * [Experience Cloud ID 拡張機能](../id-service/overview.md)
@@ -129,8 +130,8 @@ MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュ�
 
       | プロパティ | 説明 | 必須 |
       | :--- | :--- | :--- |
-      | Online Video Provider | コンテンツの配布に使用するオンラインビデオプラットフォームの名前。 | いいえ。存在する場合、拡張機能の設定時に定義された値を上書きします。 |
-      | Player Name | 使用中のメディアプレーヤーの名前（例：「AVPlayer」、「HTML5 Player」、「My VideoPlayer」）。 | いいえ。存在する場合、拡張機能の設定時に定義された値を上書きします。 |
+      | オンラインビデオプロバイダー | コンテンツの配布に使用するオンラインビデオプラットフォームの名前。 | いいえ。存在する場合、拡張機能の設定時に定義された値を上書きします。 |
+      | プレーヤー名 | 使用中のメディアプレーヤーの名前（例：「AVPlayer」、「HTML5 Player」、「My VideoPlayer」）。 | いいえ。存在する場合、拡張機能の設定時に定義された値を上書きします。 |
       | チャネル | チャネル名プロパティ | いいえ。存在する場合、拡張機能の設定時に定義された値を上書きします。 |
    **戻り値：** `MediaHeartbeat` インスタンスで解決されるか、エラーメッセージが表示されて拒否されるプロミス。
 

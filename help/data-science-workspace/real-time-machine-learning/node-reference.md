@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；開発者ガイド；Data Science Workspace；よく読まれるトピック；リアルタイム機械学習；ノードリファレンス；
+keywords: Experience Platform；開発者ガイド；Data Science Workspace；人気のあるトピック；リアルタイム機械学習；ノード参照；
 solution: Experience Platform
 title: リアルタイム機械学習ノードリファレンス
 topic-legacy: Nodes reference
-description: ノードは、グラフを形成する基本単位です。 各ノードは特定のタスクを実行し、リンクを使用してMLパイプラインを表すグラフを形成して、互いにチェーンできます。 タスクは、データやスキーマの変換、機械学習推論などの入力データに対する操作を表す。 ノードは、変換された値または推定された値を次のノードに出力します。
+description: ノードは、グラフが形成される基本単位です。 各ノードは特定のタスクを実行し、リンクを使用して連結し、ML パイプラインを表すグラフを形成できます。 ノードが実行するタスクは、データやスキーマの変換、機械学習の推論などの入力データに対する操作を表す。 ノードは、変換または推論された値を次のノードに出力します。
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
@@ -17,15 +16,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
+>リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファ版で、まだテスト中です。 このドキュメントは変更される場合があります。
 
-ノードは、グラフを形成する基本単位です。 各ノードは特定のタスクを実行し、リンクを使用してMLパイプラインを表すグラフを形成して、互いにチェーンできます。 タスクは、データやスキーマの変換、機械学習推論などの入力データに対する操作を表す。 ノードは、変換された値または推定された値を次のノードに出力します。
+ノードは、グラフが形成される基本単位です。 各ノードは特定のタスクを実行し、リンクを使用して連結し、ML パイプラインを表すグラフを形成できます。 ノードが実行するタスクは、データやスキーマの変換、機械学習の推論などの入力データに対する操作を表す。 ノードは、変換または推論された値を次のノードに出力します。
 
-次のガイドは、リアルタイム機械学習でサポートされるノードライブラリの概要を示しています。
+次のガイドでは、リアルタイム機械学習でサポートされるノードライブラリの概要を説明します。
 
-## MLパイプラインで使用するノードを検出しています
+## ML パイプラインで使用するノードの検出
 
-次のコードを[!DNL Python]ノートブックにコピーして、使用可能なすべてのノードを表示します。
+次のコードを [!DNL Python] ノートブックにコピーして、使用可能なすべてのノードを表示します。
 
 ```python
 from pprint import pprint
@@ -38,7 +37,7 @@ from rtml_nodelibs.core.nodefactory import NodeFactory as nf
 pprint(nf.discover_nodes())
 ```
 
-**レスポンスの例**
+**応答の例**
 
 ```json
 {'FieldOps': 'rtml_nodelibs.nodes.standard.preprocessing.fieldops.FieldOps',
@@ -55,11 +54,11 @@ pprint(nf.discover_nodes())
 
 ## 標準ノード
 
-標準ノードは、PandasやScikitLearnなどのオープンソースのデータサイエンスライブラリを基に構築されます。
+標準ノードは、Pandas や ScikitLearn などのオープンソースデータサイエンスライブラリを基に構築されます。
 
 ### ModelUpload
 
-ModelUploadノードは、model_pathを使用し、ローカルモデルパスからReal-time Machine Learning blobストアにモデルをアップロードする内部Adobeノードです。
+ModelUpload ノードは、 model_path を取得し、ローカルモデルパスからリアルタイム機械学習 BLOB ストアにモデルをアップロードする内部Adobeノードです。
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -71,21 +70,21 @@ model_id = msg_model.model['model_id']
 
 ### ONXNode
 
-ONXNodeは、モデルIDを使用して事前にトレーニングを受けたONNXモデルを引き出し、それを使用して受信データのスコアを算出する内部Adobeノードです。
+ONXNode は、モデル ID を取得して、事前にトレーニングされた ONNX モデルを取り込み、それを使用して受信データに対するスコアを付ける内部Adobeノードです。
 
 >[!TIP]
 >
->ONNXモデルにデータを送信してスコアを求めるのと同じ順序で列を指定します。
+>ONNX モデルにスコアを付けるデータの送信順と同じ順序で列を指定します。
 
 ```python
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
 ```
 
-### パンダ{#pandas}
+### パンダス {#pandas}
 
-次のPandasノードを使用すると、任意の`pd.DataFrame`メソッドまたは任意の一般的なpandasトップレベル関数を読み込むことができます。 Pandasのメソッドの詳細については、[Pandasメソッドドキュメント](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)を参照してください。 トップレベルの関数について詳しくは、[Pandas APIリファレンスガイド（一般的な関数](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)）を参照してください。
+次の Pandas ノードを使用して、任意の `pd.DataFrame` メソッドまたは一般的な pandas の最上位機能をインポートできます。 Pandas メソッドの詳細については、[Pandas メソッドのドキュメント ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) を参照してください。 トップレベルの関数について詳しくは、[ 一般的な関数の Pandas API リファレンスガイド ](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html) を参照してください。
 
-以下のノードでは、`"import": "map"`を使用してメソッド名をパラメーター内の文字列として読み込み、次にパラメーターをマップ関数として入力します。 以下の例では、`{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`を使用してこれを行います。 マップを配置した後、`inplace`を`True`または`False`に設定するオプションがあります。 変換をインプレイスで適用するかどうかに基づいて、`inplace`を`True`または`False`に設定します。 デフォルトでは`"inplace": False`は新しい列を作成します。 新しい列名の提供のサポートは、以降のリリースで追加されるように設定されています。 最後の行`cols`は、1つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では`device`が指定されています。
+以下のノードは、`"import": "map"` を使用して、メソッド名をパラメーターに文字列として読み込み、その後、パラメーターをマップ関数として入力します。 以下の例では、`{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` を使用してこれを行います。 マップを配置した後、`inplace` を `True` または `False` に設定するオプションがあります。 変換をインプレースで適用するかどうかに基づいて、 `inplace` を `True` または `False` に設定します。 デフォルトでは、`"inplace": False` は新しい列を作成します。 新しい列名の提供のサポートは、今後のリリースで追加される予定です。 最後の行 `cols` は、1 つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では、`device` が指定されています。
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -106,7 +105,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### ScikitLearn
 
-ScikitLearnノードを使用すると、任意のScikitLearn MLモデルまたはスケーラを読み込むことができます。 この例で使用されている値の詳細については、次の表を参照してください。
+ScikitLearn ノードを使用すると、任意の ScikitLearn ML モデルまたはスケーラを読み込むことができます。 この例で使用されている値の詳細については、次の表を参照してください。
 
 ```python
 model_train = ScikitLearn(params={
@@ -123,17 +122,17 @@ msg6 = model_train.process(msg5)
 
 | 値 | 説明 |
 | --- | --- |
-| features | モデルに入力フィーチャを追加します(文字列のリスト)。 <br> 次に例を示します。 `browser`,  `device`,  `login_page`,  `product_page`,  `search_page` |
-| label | ターゲットの列名（文字列） |
+| features | モデルに対する入力フィーチャ（文字列のリスト）。 <br> 例： `browser`,  `device`,  `login_page`,  `product_page`,  `search_page` |
+| label | ターゲット列名（文字列） |
 | mode | トレーニング/テスト（文字列） |
-| model_path | onnx形式でローカルに保存したモデルのパス。 |
-| params.model | モデルへの絶対インポートパス（文字列）:`sklearn.linear_model.LogisticRegression`. |
-| params.model_params | モデルハイパーパラメーターについて詳しくは、[sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)のドキュメントを参照してください。 |
-| node_instance.process(data_message_from_previous_node) | `process()`メソッドは、前のノードからDataMsgを取得し、変換を適用します。 これは、現在使用されているノードに依存します。 |
+| model_path | onnx 形式でローカルに保存モデルのパス。 |
+| params.model | モデルの絶対読み込みパス（文字列）:`sklearn.linear_model.LogisticRegression`. |
+| params.model_params | モデルハイパーパラメーターについては、 [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) のドキュメントを参照してください。 |
+| node_instance.process(data_message_from_previous_node) | メソッド `process()` は、前のノードから DataMsg を取得し、変換を適用します。 これは、現在使用されているノードによって異なります。 |
 
 ### Split
 
-次のノードを使用して、`train_size`または`test_size`を渡して、データフレームをトレインに分割し、テストします。 複数のインデックスを持つデータ・フレームを返します。 列車とテストのデータフレームには、次の例`msg5.data.xs(“train”)`を使用してアクセスできます。
+次のノードを使用して、`train_size` または `test_size` を渡して、データフレームをトレーニングとテストに分割します。 これにより、複数インデックスを持つデータフレームが返されます。 `msg5.data.xs(“train”)` の例を使用して、トレーニングとテストのデータフレームにアクセスできます。
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## 次の手順
 
-次の手順は、リアルタイム機械学習モデルのスコアリングに使用するノードを作成することです。 詳細については、『[リアルタイム機械学習ノートブックユーザガイド](./rtml-authoring-notebook.md)』を参照してください。
+次の手順では、リアルタイム機械学習モデルのスコアリングに使用するノードを作成します。 詳しくは、[ リアルタイム機械学習ノートブックのユーザーガイド ](./rtml-authoring-notebook.md) を参照してください。

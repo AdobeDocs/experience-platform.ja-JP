@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；フィールドグループ；データ型；データ型；データ型；データ型；データ型；データ型；データ型；データ型；スキーマ；スキーマ；スキーマ；スキーマ設計；マップ；
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；フィールドグループ；データ型；データ型；データ型；データ型；データ型；データ型；データ型；データ型；スキーマ；スキーマ；スキーマ設計；マップ；
 solution: Experience Platform
-title: XDMフィールドタイプ制約
+title: XDM フィールドタイプの制約
 topic-legacy: overview
-description: Experience Data Model(XDM)のフィールドタイプ制約のリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールドタイプを定義する方法などが含まれます。
+description: マッピングできる他のシリアル化形式や API で独自のフィールドタイプを定義する方法など、エクスペリエンスデータモデル (XDM) のフィールドタイプ制約のリファレンスです。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
 source-wordcount: '1097'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
-# XDMフィールドタイプの制約
+# XDM フィールドタイプの制約
 
-エクスペリエンスデータモデル(XDM)スキーマでは、フィールドのタイプによって、フィールドに格納できるデータの種類が制限されます。 このドキュメントでは、各コアフィールドタイプの概要を示します。マッピングできるその他のシリアル化形式や、異なる制約を実施するためにAPIで独自のフィールドタイプを定義する方法も示します。
+エクスペリエンスデータモデル (XDM) スキーマでは、フィールドのタイプによって、フィールドに格納できるデータの種類が制限されます。 このドキュメントでは、各コアフィールドタイプの概要を示します。マッピングできるその他のシリアル化形式や、異なる制約を適用するために API で独自のフィールドタイプを定義する方法も示します。
 
 ## はじめに
 
-このガイドを使用する前に、[スキーマ構成の基本](./composition.md)を参照し、XDMスキーマ、クラス、スキーマフィールドグループの概要を確認してください。
+このガイドを使用する前に、[ スキーマ構成の基本 ](./composition.md) を参照して、XDM スキーマ、クラス、スキーマフィールドグループの概要を確認してください。
 
-APIで独自のフィールドの種類を定義する場合は、『[スキーマレジストリ開発者ガイド](../api/getting-started.md)』から始めて、カスタムフィールドを含めるフィールドグループとデータ型の作成方法を学ぶことを強くお勧めします。 Experience PlatformUIを使用してスキーマを作成する場合は、[UIでのフィールドの定義](../ui/fields/overview.md)のガイドを参照して、カスタムフィールドグループおよびデータ型内で定義するフィールドに制約を実装する方法を確認してください。
+API で独自のフィールドの種類を定義する場合は、『[ スキーマレジストリ開発者ガイド ](../api/getting-started.md)』から始めて、カスタムフィールドを含めるフィールドグループとデータ型の作成方法を学ぶことを強くお勧めします。 Experience PlatformUI を使用してスキーマを作成する場合は、[UI でのフィールドの定義 ](../ui/fields/overview.md) のガイドを参照して、カスタムフィールドグループおよびデータ型内で定義するフィールドに制約を実装する方法を確認してください。
 
 ## 基本構造と例
 
-XDMはJSONスキーマに基づいて構築されているので、XDMフィールドは、タイプを定義する際に同様の構文を継承します。 JSONスキーマで異なるフィールドタイプがどのように表されるかを理解すると、各タイプの基本制約を示すのに役立ちます。
+XDM は JSON スキーマに基づいて構築されているので、XDM フィールドのタイプを定義する際に、同様の構文を継承します。 JSON スキーマで異なるフィールドタイプがどのように表されるかを理解すると、各タイプの基本制約を示すのに役立ちます。
 
 >[!NOTE]
 >
->JSONスキーマとPlatform APIのその他の基盤となるテクノロジーについて詳しくは、[APIの基本原則ガイド](../../landing/api-fundamentals.md#json-schema)を参照してください。
+>JSON スキーマと Platform API のその他の基盤となるテクノロジーの詳細については、『[API の基本原則ガイド ](../../landing/api-fundamentals.md#json-schema)』を参照してください。
 
-次の表に、各XDMタイプがJSONスキーマでどのように表されるかと、タイプに準拠する値の例を示します。
+次の表に、各 XDM タイプが JSON スキーマでどのように表されるかと、タイプに準拠するサンプル値の概要を示します。
 
 <table style="table-layout:auto">
   <thead>
@@ -42,7 +42,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
   </thead>
   <tbody>
     <tr>
-      <td>[!UICONTROL文字列]</td>
+      <td>[!UICONTROL 文字列 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type":"string"}</pre>
@@ -70,7 +70,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL整数]</td>
+      <td>[!UICONTROL 整数 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
@@ -82,7 +82,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL短]</td>
+      <td>[!UICONTROL 短 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
@@ -94,7 +94,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
       <td><code>15781</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROLバイト]</td>
+      <td>[!UICONTROL バイト ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
@@ -106,7 +106,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL日付]*</td>
+      <td>[!UICONTROL 日付 ]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
@@ -138,36 +138,36 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
   </tbody>
 </table>
 
-**すべての日付形式の文字列は、ISO 8601標準（[RFC 3339、セクション5.6](https://tools.ietf.org/html/rfc3339#section-5.6)）に準拠している必要があります。*
+**すべての日付形式の文字列は、ISO 8601 標準（[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)）に準拠している必要があります。*
 
 ## 他の形式への XDM タイプのマッピング
 
-以下の節では、各XDMタイプを他の一般的なシリアル化形式にマッピングする方法について説明します。
+以下の節では、各 XDM タイプを他の一般的なシリアル化形式にマッピングする方法について説明します。
 
 * [Parquet、Spark SQL、Java](#parquet)
 * [Scala、.NET、CosmosDB](#scala)
-* [MongoDB、Aerospike、およびProtobuf 2](#mongo)
+* [MongoDB、Aerospike、および Protobuf 2](#mongo)
 
 >[!IMPORTANT]
 >
->以下の表に示す標準のXDMタイプの中で、[!UICONTROL Map]タイプも含まれます。 マップは、特定の値にマッピングされるキーとしてデータが表される場合や、キーを静的スキーマに合理的に含めることができず、データ値として扱う必要がある場合に、標準スキーマで使用されます。
+>以下の表に示す標準の XDM タイプの中で、[!UICONTROL Map] タイプも含まれます。 マップは、特定の値にマッピングされるキーとしてデータが表される場合や、キーを静的スキーマに合理的に含めることができず、データ値として扱う必要がある場合に、標準スキーマで使用されます。
 >
->マップタイプフィールドは、業界やベンダーのスキーマの使用のために予約されているので、ユーザーが定義したカスタムリソースでは使用できません。 以下の表へのマップタイプの組み込みは、既存のデータが現在以下に示す形式のいずれかで保存されている場合に、そのデータをXDMにマップする方法を判断するのに役立つものです。
+>マップタイプのフィールドは、業界およびベンダースキーマの使用のために予約されているので、定義したカスタムリソースでは使用できません。 以下の表に示すマップタイプの組み込みは、既存のデータが次のいずれかの形式で格納されている場合に、そのデータを XDM にマッピングする方法を判断するのに役立ちます。
 
 ### Parquet、Spark SQL、Java {#parquet}
 
 | XDM タイプ | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | 型：`BYTE_ARRAY`<br>注釈：`UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL 文字列] | 型：`BYTE_ARRAY`<br> 注釈：`UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Double] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | 型：`INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL 整数] | 型：`INT32`<br>注釈：`INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | 型：`INT32`<br>注釈：`INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL Byte] | 型：`INT32`<br>注釈：`INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL 日付] | 型：`INT32`<br>注釈：`DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateTime] | 型：`INT64`<br>注釈：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL 整数] | 型：`INT32`<br> 注釈：`INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | 型：`INT32`<br> 注釈：`INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | 型：`INT32`<br> 注釈：`INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL 日付] | 型：`INT32`<br> 注釈：`DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | 型：`INT64`<br> 注釈：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL ブール型] | 型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL マップ] | `MAP`-annotated group<br><br>(`<key-type>` 必ず `STRING`) | `MapType`<br><br>(必`keyType` 須 `StringType`) | `java.util.Map` |
+| [!UICONTROL マップ] | `MAP`-annotated group<br><br>(`<key-type>` 必ず `STRING`) | `MapType`<br><br>( 必`keyType` 須 `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -188,7 +188,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
 
 {style=&quot;table-layout:auto&quot;}
 
-### MongoDB、Aerospike、およびProtobuf 2 {#mongo}
+### MongoDB、Aerospike、および Protobuf 2 {#mongo}
 
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
@@ -198,24 +198,24 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
 | [!UICONTROL 整数] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
 | [!UICONTROL バイト] | `int` | `Integer` | `int32` |
-| [!UICONTROL 日付] | `date` | `Integer`<br>（Unixミリ秒） | `int64`<br>（Unixミリ秒） |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>（Unixミリ秒） | `int64`<br>（Unixミリ秒） |
-| [!UICONTROL ブール型] | `bool` | `Integer`<br>（0/1バイナリ） | `bool` |
+| [!UICONTROL 日付] | `date` | `Integer`<br>（UNIX ミリ秒） | `int64`<br>（UNIX ミリ秒） |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>（UNIX ミリ秒） | `int64`<br>（UNIX ミリ秒） |
+| [!UICONTROL ブール型] | `bool` | `Integer`<br>（0/1 バイナリ） | `bool` |
 | [!UICONTROL マップ] | `object` | `map` | `map<key_type, value_type>` |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 
-すべてのXDMフィールドは、フィールドタイプに適用される標準の[JSONスキーマ](https://json-schema.org/)制約を使用して定義され、[!DNL Experience Platform]によって適用されるフィールド名に対する追加の制約が適用されます。 スキーマレジストリAPIを使用すると、形式とオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMフィールドタイプは、フィールドレベルの属性`meta:xdmType`で公開されます。
+すべての XDM フィールドは、フィールドタイプに適用される標準の [JSON スキーマ ](https://json-schema.org/) 制約を使用して定義され、[!DNL Experience Platform] によって適用されるフィールド名に対する追加の制約が適用されます。 スキーマレジストリ API を使用すると、形式とオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDM フィールドタイプは、フィールドレベルの属性 `meta:xdmType` で公開されます。
 
 >[!NOTE]
 >
->`meta:xdmType` はシステムで生成される値なので、APIを使用する際に、フィールドのJSONにこのプロパティを追加する必要はありません。ベストプラクティスは、JSONスキーマタイプ（`string`や`integer`など）を、以下の表で定義されている適切な最小/最大制約と共に使用することです。
+>`meta:xdmType` はシステムで生成される値なので、API を使用する際に、フィールドの JSON にこのプロパティを追加する必要はありません。ベストプラクティスは、JSON スキーマタイプ（`string` や `integer` など）を、次の表で定義されている適切な最小/最大制約と共に使用することです。
 
-次の表に、オプションのプロパティを含む、様々なフィールドタイプを定義するための適切な書式の概要を示します。 オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
+次の表に、各種のフィールドタイプを定義する適切な書式の概要を示します。オプションのプロパティを含むフィールドタイプも同様です。 オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-まず、目的のフィールドタイプを見つけ、提供されたサンプルコードを使用して、[フィールドグループ](../api/field-groups.md#create)または[データ型](../api/data-types.md#create)を作成するAPIリクエストを作成します。
+まず、目的のフィールドタイプを探し、提供されたサンプルコードを使用して、[ フィールドグループ ](../api/field-groups.md#create) または [ データ型 ](../api/data-types.md#create) を作成するための API リクエストを作成します。
 
 <table style="table-layout:auto">
   <tr>
@@ -224,7 +224,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     <th>例</th>
   </tr>
   <tr>
-    <td>[!UICONTROL文字列]</td>
+    <td>[!UICONTROL 文字列 ]</td>
     <td>
       <ul>
         <li><code>pattern</code></li>
@@ -260,7 +260,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>制約付きの列挙値は<code>enum</code>配列の下に提供されますが、各値のオプションの顧客向けラベルは<code>meta:enum</code>の下に提供できます。
+    <td>制約付き列挙値は <code>enum</code> 配列の下に提供されますが、各値のオプションの顧客向けラベルは <code>meta:enum</code> の下に提供できます。
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "string",
@@ -279,7 +279,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL数値]</td>
+    <td>[!UICONTROL 数値 ]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -301,7 +301,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL整数]</td>
+    <td>[!UICONTROL 整数 ]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -313,7 +313,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL短]</td>
+    <td>[!UICONTROL 短 ]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -325,7 +325,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROLバイト]</td>
+    <td>[!UICONTROL バイト ]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -352,7 +352,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL日付]</td>
+    <td>[!UICONTROL 日付 ]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -368,15 +368,15 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-          "type": "string",
-          "format": "date-time",
-          "examples": ["2004-10-23T12:00:00-06:00"]
+"sampleField":{
+  "type":"string",
+  "format":"date-time",
+  "examples":["2004-10-23T12:00:00-06:00"]
 }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL配列]</td>
+    <td>[!UICONTROL 配列 ]</td>
     <td></td>
     <td>基本的なスカラー型の配列（例：文字列）:
       <pre class="JSON language-JSON hljs">
@@ -397,9 +397,9 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROLオブジェクト]</td>
+    <td>[!UICONTROL オブジェクト ]</td>
     <td></td>
-    <td><code>properties</code>の下に定義された各サブフィールドの<code>type</code>属性は、任意のスカラ型を使用して定義できます。
+    <td><code>properties</code> の下に定義された各サブフィールドの <code>type</code> 属性は、任意のスカラー型を使用して定義できます。
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -412,7 +412,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     }
   }
 }</pre>
-      オブジェクトタイプのフィールドは、データ型の<code>$id</code>を参照することで定義できます。
+      オブジェクトタイプのフィールドは、データ型の <code>$id</code> を参照することで定義できます。
       <pre class="JSON language-JSON hljs">
 "sampleField":{
   "type":"object",
@@ -421,9 +421,9 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROLマップ]</td>
+    <td>[!UICONTROL マップ ]</td>
     <td></td>
-    <td>マップ<strong>でプロパティを定義することはできません</strong>。 この<strong>は、マップ内に含まれる値のタイプを記述する単一の<code>additionalProperties</code>スキーマを定義する必要があります（各マップには1つのデータタイプのみを含めることができます）。 </strong>値には、任意の有効なXDM <code>type</code>属性を指定するか、<code>$ref</code>属性を使用する別のスキーマへの参照を指定します。<br/><br/>文字列タイプの値を持つmapフィールド：
+    <td>マップ <strong> でプロパティを定義することはできません </strong>。 この <strong> は、マップ内に含まれる値のタイプを記述する単一の <code>additionalProperties</code> スキーマを定義する必要があります（各マップには 1 つのデータタイプのみを含めることができます）。 </strong>値には、任意の有効な XDM <code>type</code> 属性、または <code>$ref</code> 属性を使用した別のスキーマへの参照を指定できます。<br/><br/>文字列型の値を持つ map フィールド：
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -431,7 +431,7 @@ XDMはJSONスキーマに基づいて構築されているので、XDMフィー�
             "type": "string"
   }
 }</pre>
-    値の文字列の配列を持つmapフィールド：
+    値の文字列配列を持つ map フィールド：
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",

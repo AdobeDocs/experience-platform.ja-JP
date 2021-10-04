@@ -1,5 +1,5 @@
 ---
-keywords: 調査の宛先；調査；予測；瞬間；Web切片調査；Qualtrics
+keywords: 調査の宛先；調査；予測；インモーメント；Web 切片調査；Qualtrics
 title: 調査先の概要
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Experience Platformとデータを共有します。
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
@@ -18,7 +18,7 @@ ht-degree: 34%
 
 ## サポートされる調査先 {#supported-destinations}
 
-現在、Platformは、以下に示す調査先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Platform は、以下に示す調査先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Forese 拡張機能](./foresee.md)
 * [InMoment 拡張機能](./inmoment.md)

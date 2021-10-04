@@ -1,8 +1,9 @@
 ---
 title: リソースリビジョンの比較
 description: Adobe Experience Platform でタグリソースの改訂履歴を表示する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 リソースリビジョンを比較して、個々のリソースの履歴を確認します。リソースの現在の状態を古いバージョンと比較したり、現在公開されているリソースを、保存済みの最新の変更セットと比較したりできます。
 

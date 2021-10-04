@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスの概要
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックスの概要
 solution: Experience Platform
-title: サンドボックスUIの概要
+title: サンドボックス UI の概要
 topic-legacy: user guide
 description: Adobe Experience Platform は仮想サンドボックスを提供し、単一の Platform インスタンスを個別の独立した仮想環境に分割します。サンドボックスユーザーインターフェイスは、Experience Platform UI 内にあります。
 exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e

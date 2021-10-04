@@ -1,8 +1,9 @@
 ---
 title: 公開フロー
-description: ライブラリを作成し、ビルドをテストして、Adobe Experience Platform の実稼動環境を承認するプロセスについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform でライブラリを作成、ビルドをテストし、実稼動環境用に承認するプロセスについて説明します。
+exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ公開フローは、ライブラリを作成し、ビルドをテストして、実稼動用に承認するプロセスを指します。
 
@@ -30,7 +31,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 権限は包括的ではありません。1 人のユーザーが最初から最後までワークフローを実行するには、そのユーザーに特定のプロパティ内で 3 つの権限すべてを付与する必要があります。
 
-タグの権限の管理の詳細については、[ユーザー権限のガイド](../administration/user-permissions.md)を参照してください。
+タグの権限の管理について詳しくは、[ユーザー権限ガイド](../administration/user-permissions.md)を参照してください。
 
 ## ライブラリの状態 {#state}
 
@@ -79,7 +80,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 | [!UICONTROL 承認して実稼動環境に公開] | この操作は、承認権限と公開権限の両方を持つユーザーのみが実行できます。 このアクションにより、ステージング環境からライブラリの割り当てが解除され、[!UICONTROL 承認済み]の状態に遷移し、実稼動環境に公開されます。実稼動用のビルドが完了すると、ライブラリは[!UICONTROL 公開済み]の状態に遷移します。このアクションは、ステージング環境でビルドが正常に完了しているかどうかに関わらず実行できます。 |
 | [!UICONTROL 拒否] | ステージング環境からライブラリの割り当てを解除し、さらに変更を加えるためにライブラリを「[!UICONTROL 開発]」列に戻してさらに変更を加えます。 |
 
-### [!UICONTROL Approved] {#approved}
+### [!UICONTROL 承認済み] {#approved}
 
 ライブラリが承認されると、公開権限を持つユーザーはライブラリを公開または却下できます。 却下されたビルドは「[!UICONTROL 開発]」に戻るので、変更を加えてから公開フローを再開することができます。
 
@@ -121,4 +122,4 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 ## 次の手順
 
-このガイドでは、Adobe Experience Platform におけるライブラリの公開フローの概要を詳細に示しました。ライブラリの公開方法について詳しくは、「[公開の概要](./overview.md)」を参照してください。
+このガイドでは、Adobe Experience Platform におけるライブラリの公開フローの概要を示しました。ライブラリの公開方法について詳しくは、「[公開の概要](./overview.md)」を参照してください。

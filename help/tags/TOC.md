@@ -3,10 +3,10 @@ audience: user
 user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
-feature: データ収集
+feature: Data Collection
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
-workflow-type: ht
-source-wordcount: '380'
+workflow-type: tm+mt
+source-wordcount: '378'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 100%
 * クライアント側の情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
-   * [サテライトオブジェクトのリファレンス](./ui/client-side/satellite-object.md)
+   * [Satellite オブジェクトのリファレンス](./ui/client-side/satellite-object.md)
    * [顧客の同意を管理する JavaScript タグのデプロイ](./ui/client-side/consent.md)
    * [コンテンツセキュリティポリシー（CSP）のサポート](./ui/client-side/content-security-policy.md)
    * [サブリソースの整合性（SRI）のサポート](./ui/client-side/sri.md)
@@ -169,8 +169,8 @@ ht-degree: 100%
       * [ビルド](./api/endpoints/builds.md)
       * [環境](./api/endpoints/environments.md)
       * [ホスト](./api/endpoints/hosts.md)
-      * [アプリ設定](./api/endpoints/app-configurations.md)
-      * [イベントの監査](./api/endpoints/audit-events.md)
+      * [アプリの設定](./api/endpoints/app-configurations.md)
+      * [監査イベント](./api/endpoints/audit-events.md)
       * [コールバック](./api/endpoints/callbacks.md)
       * [備考](./api/endpoints/notes.md)
       * [プロファイル](./api/endpoints/profile.md)
@@ -179,7 +179,7 @@ ht-degree: 100%
       * [デリゲート記述子 ID](./api/guides/delegate-descriptor-ids.md)
       * [値の暗号化](./api/guides/encrypting-values.md)
       * [エラー処理](./api/guides/error-handling.md)
-      * [応答のフィルタリング](./api/guides/filtering.md)
+      * [回答のフィルタリング](./api/guides/filtering.md)
       * [応答のページ分割](./api/guides/pagination.md)
       * [応答の並べ替え](./api/guides/sorting.md)
       * [関係](./api/guides/relationships.md)

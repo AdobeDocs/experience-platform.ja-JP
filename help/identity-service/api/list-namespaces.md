@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；名前空間リスト;リスト名前空間
+keywords: Experience Platform；ホーム；人気の高いトピック；名前空間リスト；リスト名前空間
 solution: Experience Platform
-title: リストが使用できるID名前空間
+title: 使用可能な ID 名前空間のリスト
 topic-legacy: API guide
-description: 使用可能なすべての名前空間をリストします。
+description: 使用可能な名前空間をすべてリストします。
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '83'
@@ -13,7 +12,7 @@ ht-degree: 44%
 
 ---
 
-# リストが使用できるID名前空間
+# 使用可能な ID 名前空間のリスト
 
 **API 形式**
 
@@ -34,7 +33,7 @@ curl -X GET \
 
 **応答**
 
-応答には、各オブジェクトが使用可能な名前空間を表すオブジェクトの配列が含まれます。「[!UICONTROL カスタム]」の値が「[!UICONTROL false]」の名前空間は標準名前空間ですが、「[!UICONTROL カスタム]」の値が「[!UICONTROL true]」の名前空間は組織が作成したです。
+応答には、各オブジェクトが使用可能な名前空間を表すオブジェクトの配列が含まれます。「[!UICONTROL  カスタム ]」の値が「[!UICONTROL false]」の名前空間は標準の名前空間ですが、「[!UICONTROL  カスタム ]」の値が「[!UICONTROL true]」の名前空間は組織が作成した名前空間です。
 
 >[!NOTE]
 >

@@ -1,59 +1,59 @@
 ---
-title: Adobe Experience Platform Web SDKを使用したExperience CloudIDの取得
-description: Adobe Experience Platform Web SDKを使用してAdobe Experience Cloud ID(ECID)を取得する方法について説明します。
-seo-description: Adobe Experience Cloud Idの取得方法を説明します。
-keywords: ID；ファーストパーティID;IDサービス；サードパーティID;IDの移行；訪問者ID；サードパーティID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期ID;syncEvent;identityMap；プライマリ；ID名前空間；ID；認証状態hashEnabled;
+title: Adobe Experience Platform Web SDK を使用したExperience CloudID の取得
+description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得する方法について説明します。
+seo-description: Learn how to get Adobe Experience Cloud Id.
+keywords: ID；ファーストパーティ ID;ID サービス；サードパーティ ID;ID の移行；訪問者 ID；サードパーティ ID；サードパーティ ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity；同期 ID;sendEvent;IDMap；プライマリ；ID 名前空間；ID；認証状態 hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 5%
+source-wordcount: '1209'
+ht-degree: 6%
 
 ---
 
 # Adobe Experience Cloud ID
 
-Adobe Experience Platform Web SDKは、[AdobeIDサービス](../../identity-service/ecid.md)を利用します。 これにより、各デバイスには、デバイス上で保持される一意の識別子が割り当てられ、ページ間のアクティビティを結び付けることができます。
+Adobe Experience Platform Web SDK は、[AdobeID サービス ](../../identity-service/ecid.md) を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを結び付けることができます。
 
-## ファーストパーティID
+## ファーストパーティ ID
 
-[!DNL Identity Service]は、IDをファーストパーティドメインのcookieに保存します。 [!DNL Identity Service]は、ドメインのHTTPヘッダーを使用してCookieの設定を試みます。 失敗した場合、[!DNL Identity Service]はJavaScriptでのcookieの設定にフォールバックします。 [Edgeドメイン設定](../fundamentals/configuring-the-sdk.md#edgeConfigId)にCNAMEを設定することをお勧めします。
+[!DNL Identity Service] は、ID をファーストパーティドメインの cookie に保存します。 [!DNL Identity Service] は、ドメインの HTTP ヘッダーを使用して Cookie の設定を試みます。 失敗した場合、[!DNL Identity Service] は JavaScript での cookie の設定にフォールバックします。 [Edge ドメイン設定 ](../fundamentals/configuring-the-sdk.md#edgeConfigId) には CNAME を設定することをお勧めします。
 
-Platform Web SDKからのすべてのヒットには、Edgeネットワーク上のIDサービスによってECIDが追加されます。 初回訪問者の場合、ECIDが生成され、ペイロードに追加されます。 繰り返し訪問者の場合、ECIDは`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookieから取得され、ペイロードに追加されます。
+Platform Web SDK からのすべてのヒットには、Edge ネットワーク上の ID サービスによって ECID が追加されます。 初回訪問者の場合、ECID が生成され、ペイロードに追加されます。 繰り返し訪問者の場合、ECID は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie から取得され、ペイロードに追加されます。
 
-ECIDは`xdm`の`identityMap`フィールドに追加されます。 ブラウザーの開発ツールを使用して、タイプのペイロードの下で応答のECIDを表示できます。`identity:result`ですが、リクエスト内のECIDは確認できません。
+ECID は `xdm` の `identityMap` フィールドの下に追加されます。 ブラウザーの開発ツールを使用して、タイプがのペイロードの下で、応答の ECID を確認できます。`identity:result` ですが、リクエスト内の ECID は表示されません。
 
-CNAME 実装を使用すると、アドビで使用される収集ドメインをカスタマイズして、独自のドメインと一致させることができます。 これにより、アドビは JavaScript を使用して、クライアントサイドではなくサーバーサイドでファーストパーティ Cookie を設定できます。 以前は、これらのサーバー側ファーストパーティcookieには、Safariブラウザー上のAppleのIntelligent Tracking Prevention(ITP)ポリシーに基づいて課された制限は適用されていませんでした。 ただし、2020年11月に、Appleは、CNAMEを使用して設定されたCookieにもこれらの制限が適用されるようにポリシーを更新しました。 現在、CNAMEによってサーバー側に設定されたCookieとJavaScriptによってクライアント側に設定されたCookieの両方が、ITPでの7日間または24時間の有効期限に制限されています。 ITPポリシーについて詳しくは、[tracking prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp)に関するAppleのドキュメントを参照してください。
+CNAME 実装を使用すると、アドビで使用される収集ドメインをカスタマイズして、独自のドメインと一致させることができます。 これにより、アドビは JavaScript を使用して、クライアントサイドではなくサーバーサイドでファーストパーティ Cookie を設定できます。 以前は、これらのサーバー側のファーストパーティ cookie には、Safari ブラウザーに対する Apple の Intelligent Tracking Prevention(ITP) ポリシーに基づく制限は適用されていませんでした。 ただし、2020 年 11 月に、Apple は、CNAME を介して設定される Cookie にもこれらの制限が適用されるようにポリシーを更新しました。 現在、CNAME によってサーバー側に設定された Cookie と JavaScript によってクライアント側に設定された Cookie の両方が、ITP での 7 日間または 24 時間の有効期限に制限されています。 ITP ポリシーについて詳しくは、[ トラッキングの防止 ](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) に関する Apple のドキュメントを参照してください。
 
-CNAME実装はcookieの有効期間に関してメリットを提供しませんが、広告ブロッカーや一般的でないブラウザーなど、データがトラッカーとして分類するドメインに送信されないというメリットがあります。 このような場合、CNAMEを使用すると、これらのツールを使用するユーザーのデータ収集が中断されるのを防ぐことができます。
+CNAME 実装は cookie の有効期間に関してメリットはありませんが、広告ブロッカーや一般的でないブラウザーなど、データがトラッカーとして分類するドメインに送信されないというメリットがあります。 このような場合、CNAME を使用すると、これらのツールを使用するユーザーのデータ収集が中断されなくなる可能性があります。
 
-## サードパーティID
+## サードパーティ ID
 
-[!DNL Identity Service]には、IDをサードパーティドメイン(demdex.net)と同期して、サイト間での追跡を有効にする機能があります。 これを有効にすると、訪問者（ECIDのない訪問者など）に対する最初のリクエストがdemdex.netに対しておこなわれます。 これは、ChromeなどのChromeを許可するブラウザーでのみ実行され、設定の`thirdPartyCookiesEnabled`パラメーターで制御されます。 この機能をすべて一緒に無効にする場合は、`thirdPartyCookiesEnabled`をfalseに設定します。
+[!DNL Identity Service] には、ID をサードパーティドメイン (demdex.net) と同期して、サイト間での追跡を有効にする機能があります。 これを有効にすると、訪問者（ECID のない訪問者など）に対する最初のリクエストが demdex.net に対しておこなわれます。 これは、Chrome などの Chrome を許可しているブラウザーでのみ実行され、設定の `thirdPartyCookiesEnabled` パラメーターで制御されます。 この機能をすべて一緒に無効にする場合は、`thirdPartyCookiesEnabled` を false に設定します。
 
-## IDの移行
+## ID の移行
 
-訪問者APIを使用してから移行する場合は、既存のAMCV Cookieを移行することもできます。 ECID移行を有効にするには、設定で`idMigrationEnabled`パラメーターを設定します。 ID移行を使用すると、次のような場合に役立ちます。
+訪問者 API を使用してから移行する場合は、既存の AMCV Cookie を移行することもできます。 ECID 移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 ID 移行を使用すると、次のような使用例が可能になります。
 
-* ドメインの一部のページが訪問者APIを使用し、他のページがこのSDKを使用している場合。 この場合をサポートするために、SDKは既存のAMCV Cookieを読み取り、既存のECIDで新しいCookieを書き込みます。 さらに、SDKは、SDKが実装されたページで最初にECIDを取得した場合、訪問者APIが実装された後続のページで同じECIDを持つように、AMCV Cookieを書き込みます。
-* Adobe Experience Platform Web SDKが、訪問者APIも持つページで設定されている場合。 このケースをサポートするために、AMCV Cookieが設定されていない場合、SDKはページ上で訪問者APIを探し、呼び出してECIDを取得します。
-* サイト全体でAdobe Experience Platform Web SDKを使用していて、訪問者APIがない場合は、再訪問者の情報を保持できるように、ECIDを移行すると便利です。 `idMigrationEnabled`を使用して一定期間SDKをデプロイした後、ほとんどの訪問者Cookieが移行されるように、設定をオフにできます。
+* ドメインの一部のページが訪問者 API を使用し、他のページがこの SDK を使用している場合。 この場合をサポートするため、SDK は既存の AMCV Cookie を読み取り、既存の ECID で新しい Cookie を書き込みます。 さらに、SDK は AMCV Cookie を書き込み、SDK が実装されたページで最初に ECID を取得した場合、訪問者 API が実装された後続のページで同じ ECID を持つようにします。
+* 訪問者 API も含むページでAdobe Experience Platform Web SDK が設定されたとき。 このケースをサポートするために、AMCV Cookie が設定されていない場合、SDK はページで訪問者 API を探し、それを呼び出して ECID を取得します。
+* サイト全体でAdobe Experience Platform Web SDK を使用していて、訪問者 API がない場合は、ECID を移行して、再訪問者の情報を保持すると便利です。 `idMigrationEnabled` を使用して SDK をデプロイして、ほとんどの訪問者の Cookie が移行されるまでの時間が経過すると、設定をオフにできます。
 
 ## 移行用の特性の更新
 
-XDM形式のデータがAudience Managerに送信される場合、このデータは移行時にシグナルに変換する必要があります。 XDMが提供する新しいキーを反映するには、特性を更新する必要があります。 このプロセスは、Audience Managerが作成した[BAAAMツール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)を使用することで容易になります。
+XDM 形式のデータがAudience Managerに送信される場合、このデータは移行時にシグナルに変換する必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) を使用することで容易になります。
 
 ## サーバー側転送
 
-現在サーバー側転送が有効になっていて、`appmeasurement.js`を使用している場合。 `visitor.js`サーバー側転送機能を有効にしたままにしておくと、問題は発生しません。 バックエンドで、AdobeはAAMセグメントを取得し、Analyticsへの呼び出しに追加します。 Analyticsへの呼び出しにこれらのセグメントが含まれる場合、Analyticsは、データを転送するAudience Managerを呼び出さないので、二重のデータ収集はおこなわれません。 また、Web SDKを使用する際にロケーションヒントを使用する必要もありません。これは、同じセグメント化エンドポイントがバックエンドで呼び出されるからです。
+現在、サーバー側転送が有効になっていて、`appmeasurement.js` を使用している場合。 `visitor.js` サーバー側転送機能を有効にしたままにしておくと、問題は発生しません。 バックエンドで、AdobeはAAMセグメントを取得し、Analytics への呼び出しに追加します。 Analytics への呼び出しにこれらのセグメントが含まれる場合、Analytics は、データを転送するAudience Managerを呼び出さないので、二重のデータ収集はありません。 また、Web SDK を使用する際にロケーションヒントを使用する必要はありません。これは、同じセグメント化エンドポイントがバックエンドで呼び出されるからです。
 
-## 訪問者IDおよび地域IDの取得
+## 訪問者 ID と地域 ID の取得
 
-一意の訪問者IDを使用する場合は、`getIdentity`コマンドを使用します。 `getIdentity` は、現在の訪問者の既存のECIDを返します。ECIDを持たない初回訪問者の場合、このコマンドは新しいECIDを生成します。 `getIdentity` は、訪問者の地域IDも返します。詳しくは、『Adobe Audience Managerユーザーガイド[』を参照してください。](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html)
+一意の訪問者 ID を使用する場合は、`getIdentity` コマンドを使用します。 `getIdentity` は、現在の訪問者の既存の ECID を返します。まだ ECID を持たない初回訪問者の場合、このコマンドは新しい ECID を生成します。 `getIdentity` は、訪問者の地域 ID も返します。詳しくは、『Adobe Audience Managerユーザーガイド ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ja)』を参照してください。[
 
 >[!NOTE]
 >
->このメソッドは、通常、[!DNL Experience Cloud] IDを読み取るか、Adobe Audience Managerのロケーションヒントが必要なカスタムソリューションで使用されます。 標準の実装では使用されません。
+>このメソッドは、通常、[!DNL Experience Cloud] ID を読み取るか、Adobe Audience Managerのロケーションヒントが必要なカスタムソリューションで使用されます。 標準の実装では使用されません。
 
 ```javascript
 alloy("getIdentity")
@@ -68,19 +68,19 @@ alloy("getIdentity")
   });
 ```
 
-## IDの同期
+## ID の同期
 
 >[!NOTE]
 >
->`syncIdentity`メソッドは、ハッシュ機能に加えて、バージョン2.1.0で削除されました。 バージョン2.1.0以降を使用してIDを同期する場合は、`identityMap`フィールドの`sendEvent`コマンドの`xdm`オプションで直接IDを送信できます。
+>`syncIdentity` メソッドは、ハッシュ機能に加えて、バージョン 2.1.0 で削除されました。 バージョン 2.1.0 以降を使用して ID を同期する場合は、`identityMap` フィールドの `sendEvent` コマンドの `xdm` オプションで直接 ID を送信できます。
 
-さらに、[!DNL Identity Service]を使用すると、`syncIdentity`コマンドを使用して独自のIDをECIDと同期できます。
+さらに、[!DNL Identity Service] では、`syncIdentity` コマンドを使用して独自の ID を ECID と同期できます。
 
 >[!NOTE]
 >
->`sendEvent`コマンドのたびに、使用可能なIDをすべて渡すことを強くお勧めします。 これにより、パーソナライゼーションを含む様々な使用例のロックが解除されます。 これらのIDを`sendEvent`コマンドで渡せるようになったので、DataLayerに直接配置できます。
+>すべての `sendEvent` コマンドで使用可能な ID を渡すことを強くお勧めします。 これにより、パーソナライゼーションを含む様々なユースケースのロックが解除されます。 これらの ID を `sendEvent` コマンドで渡せるようになったので、DataLayer に直接配置できます。
 
-IDの同期では、複数のIDを使用してデバイスやユーザーを識別し、認証状態を設定して、どのIDを主要な識別子と見なすかを決定できます。 識別子が`primary`として設定されていない場合、プライマリはデフォルトで`ECID`になります。
+ID の同期では、複数の ID を使用してデバイスやユーザーを識別し、認証状態を設定して、どの ID を主要識別子と見なすかを決定できます。 識別子が `primary` として設定されていない場合、プライマリはデフォルトで `ECID` になります。
 
 ```javascript
 alloy("sendEvent", {
@@ -98,9 +98,9 @@ alloy("sendEvent", {
 });
 ```
 
-`identityMap`内の各プロパティは、特定の[ID名前空間](../../identity-service/namespaces.md)に属するIDを表します。 プロパティ名は、ID名前空間のシンボルである必要があります。このシンボルは、Adobe Experience Platformのユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されます。 プロパティ値は、そのID名前空間に関連するIDの配列である必要があります。
+`identityMap` 内の各プロパティは、特定の [ID 名前空間 ](../../identity-service/namespaces.md) に属する ID を表します。 プロパティ名は、ID 名前空間のシンボルである必要があります。このシンボルは、Adobe Experience Platformのユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されます。 プロパティ値は、その ID 名前空間に関連する ID の配列である必要があります。
 
-ID配列内の各IDオブジェクトは、次のように構造化されています。
+ID 配列内の各 ID オブジェクトは、次のように構造化されます。
 
 ### `id`
 
@@ -108,7 +108,7 @@ ID配列内の各IDオブジェクトは、次のように構造化されてい�
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-これは、指定した名前空間の同期するIDです。
+これは、特定の名前空間の同期する ID です。
 
 ### `authenticationState`
 
@@ -116,7 +116,7 @@ ID配列内の各IDオブジェクトは、次のように構造化されてい�
 | -------- | ------------ | ----------------- | ------------------------------------ |
 | 文字列 | ○ | 曖昧な | あいまい、認証済み、ログアウト済み |
 
-IDの認証状態。
+ID の認証状態。
 
 ### `primary`
 
@@ -124,4 +124,4 @@ IDの認証状態。
 | -------- | ------------ | ----------------- |
 | Boolean | オプション | false |
 
-このIDを、統合プロファイルでプライマリフラグメントとして使用するかどうかを指定します。 デフォルトでは、ECIDがユーザーのプライマリ識別子として設定されています。
+この ID を、統合プロファイルでプライマリフラグメントとして使用するかどうかを指定します。 デフォルトでは、ECID はユーザーの主識別子として設定されています。

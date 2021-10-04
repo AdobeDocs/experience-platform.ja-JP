@@ -1,5 +1,5 @@
 ---
-keywords: analyticsの宛先；analyticsの宛先
+keywords: analytics の宛先；analytics の宛先
 title: Analytics の宛先の概要
 description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
@@ -16,9 +16,9 @@ ht-degree: 90%
 
 Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 
-## サポートされるAnalyticsの宛先 {#supported-destinations}
+## サポートされる Analytics の宛先 {#supported-destinations}
 
-現在、Adobe Experience Platformは、以下に示すAnalyticsの宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Adobe Experience Platformは、以下に示す Analytics の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Adform Website Tracking 拡張機能](adform.md)
 * [Adobe Analytics 拡張機能](adobe-analytics.md)

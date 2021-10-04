@@ -14,7 +14,7 @@ ht-degree: 46%
 
 # 宛先 {#destinations}
 
-* [宛先概要](./home.md)
+* [Destinations overview](./home.md)
 * [宛先のタイプとカテゴリ](./destination-types.md)
 * API チュートリアル {#api}
    * [フローサービス API を使用したストリーミング宛先への接続とデータのアクティブ化](./api/streaming-destinations.md)

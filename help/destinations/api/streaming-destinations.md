@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；APIチュートリアルストリーミング宛先API;Platform
+keywords: Experience Platform；ホーム；人気のあるトピック；API チュートリアル；ストリーミング宛先 API;Platform
 solution: Experience Platform
-title: Adobe Experience Platformでのストリーミング宛先への接続とフローサービスAPIを使用したデータのアクティブ化
-description: このドキュメントでは、Adobe Experience Platform APIを使用したストリーミング宛先の作成について説明します
+title: Adobe Experience Platformのストリーミング宛先に接続し、フローサービス API を使用してデータをアクティブ化する
+description: このドキュメントでは、Adobe Experience Platform API を使用したストリーミング宛先の作成について説明します
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
 source-wordcount: '2021'
-ht-degree: 52%
+ht-degree: 53%
 
 ---
 
-# フローサービスAPIを使用したストリーミング宛先への接続とデータのアクティブ化
+# フローサービス API を使用したストリーミング宛先への接続とデータのアクティブ化
 
 >[!NOTE]
 >
->Platformの[!DNL Amazon Kinesis]と[!DNL Azure Event Hubs]の宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Platform の [!DNL Amazon Kinesis] と [!DNL Azure Event Hubs] の宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続する方法、ストリーミングクラウドストレージの宛先([AmazonKinesis](../catalog/cloud-storage/amazon-kinesis.md)または[Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md))への接続の作成方法、新しく作成した宛先へのデータフローの作成方法、新しく作成した宛先へのデータのアクティブ化方法を示します。
+このチュートリアルでは、API 呼び出しを使用してAdobe Experience Platformデータに接続し、ストリーミングクラウドストレージの宛先 ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) または [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)) への接続を作成し、新しく作成した宛先にデータをアクティブ化する方法を説明します。
 
-このチュートリアルでは、すべての例で[!DNL Amazon Kinesis]の宛先を使用しますが、手順は[!DNL Azure Event Hubs]で同じです。
+このチュートリアルでは、すべての例で [!DNL Amazon Kinesis] の宛先を使用しますが、手順は [!DNL Azure Event Hubs] と同じです。
 
 ![概要 — ストリーミング宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/streaming-destination/overview.png)
 
-Platformのユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md)と[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../ui/activate-segment-streaming-destinations.md)のチュートリアルを参照してください。
+Platform のユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、 [ 宛先の接続 ](../ui/connect-destination.md) と [ ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化 ](../ui/activate-segment-streaming-destinations.md) のチュートリアルを参照してください。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを整理する際に使用する標準化されたExperience Platformフレームワーク。
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列の記録システムです。
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、データの場所とリネージのExperience Platformです。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、Platformのストリーミング宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報を示します。
+以下の節では、Platform のストリーミング宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
 このチュートリアルの手順を完了するには、接続してセグメントをアクティブ化する宛先の種類に応じて、次の資格情報を準備しておく必要があります。
 
-* [!DNL Amazon Kinesis]接続の場合：`accessKeyId`、`secretKey`、`region`または`connectionUrl`
-* [!DNL Azure Event Hubs]接続の場合：`sasKeyName`、`sasKey`、`namespace`
+* [!DNL Amazon Kinesis] 接続の場合：`accessKeyId`、`secretKey`、`region` または `connectionUrl`
+* [!DNL Azure Event Hubs] 接続の場合：`sasKeyName`、`sasKey`、`namespace`
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -70,7 +70,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ### Swagger のドキュメント {#swagger-docs}
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/) の [ フローサービス API のドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能なストリーミング宛先のリストを取得する {#get-the-list-of-available-streaming-destinations}
 
@@ -98,7 +98,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、[!DNL Amazon Kinesis]または[!DNL Azure Event Hubs]に接続してセグメントを配信する場合、応答で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、[!DNL Amazon Kinesis] または [!DNL Azure Event Hubs] に接続してセグメントを配信する場合、応答内で次のスニペットを探します。
 
 ```json
 {
@@ -154,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様ID( )を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
+* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様 ID( ) を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
 
 **応答** 
 
@@ -199,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得した ID を使用します。
-* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様ID( )を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
+* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様 ID( ) を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
 
 **応答**
 
-正常な応答は、新しく作成したプロファイルサービスへのソース接続を表す一意の識別子(`id`)を返します。 識別子が返された場合、Experience Platform データに正常に接続できています。この値は、後の手順で必要になるため保存します。
+正常な応答は、新しく作成したプロファイルサービスへのソース接続を表す一意の識別子 (`id`) を返します。 識別子が返された場合、Experience Platform データに正常に接続できています。この値は、後の手順で必要になるため保存します。
 
 ```json
 {
@@ -218,7 +218,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 この手順では、目的のストリーミング宛先への接続を設定します。 そのためには、以下に示す 2 つの手順を実行します。
 
-1. 最初に、ベース接続を設定して、ストリーミング宛先へのアクセスを認証する呼び出しを実行する必要があります。
+1. 最初に、ベース接続を設定して、ストリーミング先へのアクセスを承認する呼び出しを実行する必要があります。
 2. 次に、ベース接続 ID を使用して、ターゲット接続を作成する別の呼び出しを実行します。これで、書き出されたデータが送信されるストレージアカウント内の場所と、書き出されるデータの形式が指定されます。
 
 ### ストリーミング先へのアクセスを承認する
@@ -233,7 +233,7 @@ POST /connections
 
 >[!IMPORTANT]
 >
->次の例には、`//`というプレフィックスが付いたコードコメントが含まれています。 これらのコメントは、異なるストリーミング先に異なる値を使用する必要がある場所を強調表示します。 スニペットを使用する前に、コメントを削除してください。
+>以下の例には、`//` というプレフィックスが付いたコードコメントが含まれています。 これらのコメントは、異なるストリーミング先に異なる値を使用する必要がある場所を強調します。 スニペットを使用する前に、コメントを削除してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -267,12 +267,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
 * `{AUTHENTICATION_CREDENTIALS}`:ストリーミング先の名前を入力します。 `Aws Kinesis authentication credentials` または `Azure EventHub authentication credentials`。
-* `{ACCESS_ID}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisストレージの場所のアクセスID。
+* `{ACCESS_ID}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisストレージの場所のアクセス ID。
 * `{SECRET_KEY}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisストレージの場所の秘密鍵。
-* `{REGION}`: *接続の [!DNL Amazon Kinesis] 場合。* Platformがデータをストリ [!DNL Amazon Kinesis] ーミングするアカウントの地域。
-* `{SAS_KEY_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* SASキー名を入力します。[Microsoftのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)で、SASキーを使用した[!DNL Azure Event Hubs]の認証について説明します。
-* `{SAS_KEY}`: *接続の [!DNL Azure Event Hubs] 場合。* SASキーを入力します。[Microsoftのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)で、SASキーを使用した[!DNL Azure Event Hubs]の認証について説明します。
-* `{EVENT_HUB_NAMESPACE}`: *接続の [!DNL Azure Event Hubs] 場合。* Platformがデータをス [!DNL Azure Event Hubs] トリーミングする名前空間を入力します。詳しくは、[!DNL Microsoft]ドキュメントの[イベントハブの名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)の作成を参照してください。
+* `{REGION}`: *接続の [!DNL Amazon Kinesis] 場合。* Platform がデータをストリ [!DNL Amazon Kinesis] ーミングするアカウントの地域。
+* `{SAS_KEY_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キー名を入力します。[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
+* `{SAS_KEY}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キーを入力します。[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
+* `{EVENT_HUB_NAMESPACE}`: *接続の [!DNL Azure Event Hubs] 場合。* Platform がデータをス [!DNL Azure Event Hubs] トリーミングする名前空間を入力します。詳細については、[!DNL Microsoft] ドキュメントの [Event Hubs 名前空間の作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 
 **応答** 
 
@@ -296,7 +296,7 @@ POST /targetConnections
 
 >[!IMPORTANT]
 >
->次の例には、`//`というプレフィックスが付いたコードコメントが含まれています。 これらのコメントは、異なるストリーミング先に異なる値を使用する必要がある場所を強調表示します。 スニペットを使用する前に、コメントを削除してください。
+>以下の例には、`//` というプレフィックスが付いたコードコメントが含まれています。 これらのコメントは、異なるストリーミング先に異なる値を使用する必要がある場所を強調します。 スニペットを使用する前に、コメントを削除してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -327,13 +327,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得したベース接続 ID を使用します。
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{NAME_OF_DATA_STREAM}`: *接続の [!DNL Amazon Kinesis] 場合。* アカウント内の既存のデータストリームの名前を指定 [!DNL Amazon Kinesis] します。プラットフォームは、このストリームにデータを書き出します。
-* `{REGION}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisアカウント内の、Platformがデータをストリーミングする地域です。
-* `{EVENT_HUB_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* Platformがデータをス [!DNL Azure Event Hub] トリーミングする名前を入力します。詳しくは、[!DNL Microsoft]ドキュメントの[イベントハブ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)の作成を参照してください。
+* `{NAME_OF_DATA_STREAM}`: *接続の [!DNL Amazon Kinesis] 場合。* アカウント内の既存のデータストリームの名前を指定 [!DNL Amazon Kinesis] します。Platform は、このストリームにデータを書き出します。
+* `{REGION}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisアカウント内の、Platform がデータをストリーミングする地域です。
+* `{EVENT_HUB_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* Platform がデータをス [!DNL Azure Event Hub] トリーミングする名前を入力します。詳しくは、[!DNL Microsoft] ドキュメントの [ イベントハブ ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) の作成を参照してください。
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したストリーミング宛先へのターゲット接続を表す一意の識別子(`id`)が返されます。 この値は、後の手順で必要になるため保存します。
+リクエストが成功した場合は、新しく作成したストリーミング先へのターゲット接続を表す一意の識別子 (`id`) が返されます。 この値は、後の手順で必要になるため保存します。
 
 ```json
 {
@@ -400,9 +400,9 @@ curl -X POST \
 }
 ```
 
-* `{FLOW_SPEC_ID}`:プロファイルベースの宛先のフロー仕様IDはで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。この値は呼び出しで使用します。
+* `{FLOW_SPEC_ID}`:プロファイルベースの宛先のフロー仕様 ID はで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。この値は呼び出しで使用します。
 * `{SOURCE_CONNECTION_ID}`：手順「[Experience Platform データへの接続](#connect-to-your-experience-platform-data)」で取得したソース接続 ID を使用します。
-* `{TARGET_CONNECTION_ID}`:手順「ストリーミング宛先への接続」で取得したターゲ [ット接続IDを使用します](#connect-to-streaming-destination)。
+* `{TARGET_CONNECTION_ID}`:手順「ストリーミング宛先への接続」で取得したターゲ [ット接続 ID を使用します](#connect-to-streaming-destination)。
 
 **応答** 
 
@@ -469,7 +469,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`：前述の手順で取得したデータフローを使用します。
 * `{ETAG}`：前述の手順で取得した ETag を使用します。
-* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメントIDを取得するには、**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;に移動し、左側のナビゲーションメニューで「**[!UICONTROL Segmentation Service API]**」を選択して、「**[!UICONTROL Segment Definitions]**」で`GET /segment/definitions`操作を探します。
+* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメント ID を取得するには、**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** に移動し、左側のナビゲーションメニューで **[!UICONTROL Segmentation Service API]** を選択して、**[!UICONTROL Segment Definitions]** で `GET /segment/definitions` 操作を探します。
 * `{PROFILE_ATTRIBUTE}`:例：ま `personalEmail.address` たは  `person.lastName`
 
 **応答** 
@@ -553,7 +553,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 手順[新しい宛先に対してデータをアクティブ化](#activate-data)でのプロファイル属性とセグメントに加えて、[!DNL AWS Kinesis]と[!DNL Azure Event Hubs]で書き出されたデータには、IDマップに関する情報も含まれます。 これは、書き出されたプロファイルのID（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、モバイルID、Google ID、電子メールアドレスなど）を表します。 以下の例を参照してください。
+> 手順 [ 新しい宛先に対してデータをアクティブ化 ](#activate-data) でのプロファイル属性とセグメントに加えて、[!DNL AWS Kinesis] と [!DNL Azure Event Hubs] で書き出されたデータには、ID マップに関する情報も含まれます。 これは、書き出されたプロファイルの ID を表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど）。 以下の例を参照してください。
 
 ```json
 {
@@ -593,34 +593,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## Postmanコレクションを使用したストリーミング宛先への接続  {#collections}
+## Postman コレクションを使用したストリーミング宛先への接続  {#collections}
 
-このチュートリアルで説明しているストリーミング先により効率的に接続するには、[[!DNL Postman]](https://www.postman.com/)を使用します。
+このチュートリアルで説明したストリーミングの宛先により効率的に接続するには、[[!DNL Postman]](https://www.postman.com/) を使用します。
 
-[!DNL Postman] は、API呼び出しをおこなったり、事前に定義された呼び出しと環境のライブラリを管理したりするのに使用できるツールです。
+[!DNL Postman] は、API 呼び出しをおこなったり、事前に定義された呼び出しと環境のライブラリを管理したりするのに使用できるツールです。
 
-このチュートリアルでは、次の[!DNL Postman]コレクションが添付されています。
+このチュートリアルでは、次の [!DNL Postman] コレクションが添付されています。
 
 * [!DNL AWS Kinesis] [!DNL Postman] collection
-* [!DNL Azure Event Hubs] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] コレクション
 
-[ここ](../assets/api/streaming-destination/DestinationPostmanCollection.zip)をクリックして、コレクションアーカイブをダウンロードします。
+[ ここ ](../assets/api/streaming-destination/DestinationPostmanCollection.zip) をクリックして、コレクションアーカイブをダウンロードします。
 
-各コレクションには、 [!DNL AWS Kinesis]と[!DNL Azure Event Hub]に対して必要なリクエストと環境変数が含まれます。
+各コレクションには、 [!DNL AWS Kinesis] と [!DNL Azure Event Hub] に対して必要なリクエストと環境変数が含まれます。
 
-### Postmanコレクションの使用方法
+### Postman コレクションの使用方法
 
-添付された[!DNL Postman]コレクションを使用して宛先に正常に接続するには、次の手順に従います。
+添付された [!DNL Postman] コレクションを使用して宛先に正常に接続するには、次の手順に従います。
 
-* [!DNL Postman]をダウンロードしてインストールします。
+* [!DNL Postman] をダウンロードしてインストールします。
 * [](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 添付されたコレクションをダウンロードして解凍します。
-* 対応するフォルダーからPostmanにコレクションを読み込む。
-* この記事の手順に従って、環境変数を入力します。
-* この記事の指示に基づいて、Postmanからの[!DNL API]リクエストを実行します。
+* 対応するフォルダーから Postman にコレクションを読み込む。
+* この記事の手順に従って環境変数を入力します。
+* この記事の指示に基づいて、Postman からの [!DNL API] リクエストを実行します。
 
 ## 次の手順
 
-このチュートリアルに従うと、Platformを目的のストリーミング宛先の1つに接続し、それぞれの宛先へのデータフローを設定できます。 これで、送信データを、顧客分析やその他の実行が必要なデータ操作の宛先で使用できるようになります。 詳しくは、以下のページを参照してください。
+このチュートリアルに従うと、Platform を目的のストリーミング宛先の 1 つに接続し、それぞれの宛先へのデータフローを設定できます。 これで、送信データを、顧客分析やその他の実行が必要なデータ操作の宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
 
 * [Destinations overview](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックス開発者ガイド
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
-title: サンドボックスAPIガイド
+title: サンドボックス API ガイド
 topic-legacy: developer guide
-description: サンドボックスAPIを使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: サンドボックス API を使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 ---
 
-# サンドボックスAPIガイド
+# サンドボックス API ガイド
 
 Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 
@@ -20,11 +20,11 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## サンドボックス API - はじめに
 
-IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[使用可能なサンドボックスエンドポイント](./available.md)を使用して、現在のユーザーのアクティブなサンドボックスを一覧表示するだけです。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[ 使用可能なサンドボックスエンドポイント ](./available.md) を使用して、現在のユーザーのアクティブなサンドボックスを一覧表示することのみできます。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。API 呼び出し例のドキュメントで使用される表記について詳しくは、『Experience Platform トラブルシューティングガイド』の [API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。API 呼び出し例のドキュメントで使用される表記について詳しくは、『Experience Platform トラブルシューティングガイド』の [API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必要なヘッダーの値の収集
 

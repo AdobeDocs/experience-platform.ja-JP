@@ -3,13 +3,13 @@ keywords: Experience Platform;ホーム;人気のあるトピック;データセ
 solution: Experience Platform
 title: データセットの有効期間
 description: このドキュメントでは、Adobe Experience Platform のプロファイルストアにあるデータセットの有効期間（TTL）に関する一般的なガイダンスを提供します。
-source-git-commit: 878c04c688268f8cf1850c3e8d40f958a6d2d69b
-workflow-type: ht
+exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 100%
 
 ---
-
 
 # プロファイルサービスの有効期間（TTL）
 
@@ -43,4 +43,3 @@ ht-degree: 100%
 1. すべての新しいイベントは、取り込まれた時点で 30 日の TTL 値が適用されます。
 2. 4 月 15 日より古いタイムスタンプを持つ既存のイベントはすべて、システムジョブによって直ちに削除されます。
 3. 4 月 15 日より新しいタイムスタンプを持つ既存のイベントはすべて、TTL 有効期限値がイベントタイムスタンプの 30 日後に設定されます。したがって、イベントのタイムスタンプが 4 月 18 日の場合、そのタイムスタンプの日付の 30 日後（5 月 18 日）にイベントが削除されます。
-

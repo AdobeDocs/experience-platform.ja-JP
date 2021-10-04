@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；マップ関数；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；マップ関数；マップ；
 solution: Experience Platform
-title: PQLマップ関数
+title: PQL マップ関数
 topic-legacy: developer guide
 description: Profile Query Language（PQL）には、マップとのやり取りを容易にする関数が用意されています。
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 76%
+ht-degree: 81%
 
 ---
 
-# map 関数
+# マップ関数
 
-[!DNL Profile Query Language] (PQL)オファーは、マップとのやり取りを容易にする機能です。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+[!DNL Profile Query Language]（PQL）の機能を使用すると、マップの操作が容易になります。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## get
 

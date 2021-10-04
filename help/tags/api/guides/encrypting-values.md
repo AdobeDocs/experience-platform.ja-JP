@@ -1,8 +1,9 @@
 ---
 title: 値の暗号化
 description: Reactor API を使用する際に機密性の高い値を暗号化する方法を説明します。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 100%
 
@@ -15,16 +16,16 @@ Adobe Experience Platform でタグを使用する場合、一部のワークフ
 
 このドキュメントでは、[GnuPG 暗号化](https://www.gnupg.org/gph/en/manual/x110.html)（GPG とも呼ばれます）を使用して機密性の高い値を暗号化し、タグシステムだけが読み取れるようにする方法について説明します。
 
-## GPG 公開キーとチェックサムの取得
+## 公開 GPG キーとチェックサムの取得
 
-最新バージョンの GPG を[ダウンロード](https://gnupg.org/download/)してインストールした後、タグ実稼動環境用の以下の GPG 公開キーを取得する必要があります。
+[ダウンロード](https://gnupg.org/download/)して最新バージョンの GPG をインストールした後、タグの実稼動環境用の公開 GPG キーを取得する必要があります。
 
 * [GPG キー](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [チェックサム](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
-## キーチェーンに鍵を読み込む
+## キーチェーンにキーをインポート
 
-マシンにキーを保存したら、そのキーを GPG キーチェーンに追加します。
+マシンにキーを保存したら、次はそのキーを GPG キーチェーンに追加します。
 
 **構文**
 
@@ -34,7 +35,7 @@ gpg --import {KEY_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{KEY_NAME}` | 公開キーのファイルの名前。 |
+| `{KEY_NAME}` | 公開キーファイルの名前。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -46,20 +47,20 @@ gpg --import launch@adobe.com_pub.gpg
 
 ## 値の暗号化
 
-キーチェーンにキーを追加したら、`--encrypt` フラグを使用して値の暗号化を開始できます。次のスクリプトは、このコマンドがどのように動作するかを示しています。
+キーチェーンにキーを追加した後、`--encrypt` フラグを使用して値の暗号化を開始できます。 次のスクリプトは、このコマンドの動作方法を示します。
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
 ```
 
-このコマンドは、次のように分解できます。
+このコマンドは、次のように分類できます。
 
 * 入力は `gpg` コマンドに渡されます。
-* `--armor` はバイナリではなく ASCII アーマー形式の出力を作成します。これで、JSON を使用して値を簡単に転送できるようになります。
-* `--encrypt` によって、GPG にデータの暗号化が指示されます。
-* `-r` によって、データの受信者が設定されます。受信者（公開キーに対応する秘密キーの保有者）のみがデータを復号化できます。`gpg --list-keys` の出力を調べることで、目的のキーの受信者名が分かります。
+* `--armor` はバイナリではなく ASCII アーマー形式の出力を作成します。これにより、JSON を使用した値の転送が簡単になります。
+* `--encrypt` は、GPG にデータの暗号化を指示します。
+* `-r` は、データの受信者を設定します。受信者（公開キーに対応する秘密キーの所有者）だけがデータを復号化できます。 目的のキーの受信者名は、`gpg --list-keys` の出力を調べれば見つかります。
 
-上記のコマンドは、`Tags Data Encryption <launch@adobe.com>` の公開キーを使用して、値 `Example value` を ASCII アーマー形式で暗号化します。
+上記のコマンドは、`Tags Data Encryption <launch@adobe.com>` の公開キーを使用して、ASCII アーマー形式の値 `Example value` を暗号化します。
 
 コマンドの出力は次のようになります。
 
@@ -83,10 +84,10 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 -----END PGP MESSAGE-----
 ```
 
-この出力を復号化できるのは、`Tags Data Encryption <launch@adobe.com>` 公開キーに対応する秘密キーを持つシステムのみです。
+この出力は、`Tags Data Encryption <launch@adobe.com>` 公開キーに対応する秘密キーを持つシステムによってのみ復号化できます。
 
-この出力の値は、Reactor API にデータを送信する際に指定する必要があります。システムにはこの暗号化された出力が保存され、必要に応じて一時的に復号化されます。例えば、システムでは、サーバーへの接続を開始するのに十分な長さのホスト認証情報が復号化され、復号化された値のトレースすべてがすぐに削除されます。
+この出力は、Reactor API へのデータ送信時に提供する必要がある値です。システムは、この暗号化された出力を保存し、必要に応じて一時的に復号化します。 例えば、システムはサーバーへの接続を開始するのに十分な時間、ホストの認証情報を復号化し、その後、復号化された値のすべてのトレースをすぐに削除します。
 
 >[!NOTE]
 >
->アーマー形式の暗号化された値は重要です。リクエストで指定された値で、行の戻り値が適切にエスケープされていることを確認します。
+>変換され、暗号化された値の形式は重要です。リクエストで指定された値で行の戻り値が適切にエスケープされていることを確認します。

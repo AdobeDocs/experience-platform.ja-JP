@@ -1,7 +1,7 @@
 ---
-keywords: 宛先；experience cloudソリューション；ターゲット；ターゲットの宛先；ad cloud;advertising cloud;audience manager;adobe targetの宛先；target;audience managerの宛先；
+keywords: 宛先；experience cloud ソリューション；ターゲット；ターゲットの宛先；ad cloud;advertising cloud;audience manager;adobe target の宛先；target;audience manager の宛先；
 title: アドビの宛先の概要
-description: Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこなうことで、顧客体験を管理します
+description: Platform のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこなうことで、顧客体験を管理します
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 27%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などを行い、顧客体験を管理します。
+Adobe Experience Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこない、顧客体験を管理します。
 
 ## サポートされるAdobeの宛先 {#supported-destinations}
 
-現在、Platformは、以下に示すAdobeの宛先をサポートしています。
+現在、Platform は、以下に示す宛先Adobeをサポートしています。
 
-接続と拡張機能の違いについては、宛先のタイプとカテゴリページの[接続](../../destination-types.md#connections)を参照してください。
+接続と拡張機能の違いについては、宛先のタイプとカテゴリページの [ 接続 ](../../destination-types.md#connections) を参照してください。
 
 ### 接続
 
@@ -43,6 +43,6 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 
 ## Experience Platformセグメントの共有
 
-Experience Platformセグメント共有機能を使用して、Experience Platformセグメントを他のAdobe先と共有します。 詳しくは、以下のページを参照してください(Audience Managerドキュメントポータルで開きます)。
+Experience Platformセグメント共有機能を使用して、Experience Platformセグメントを他のAdobe先と共有します。 詳しくは、以下のページを参照してください (Audience Managerドキュメントポータルで開きます )。
 
 * [コアサービスの統合を通じたAdobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとのExperience Platformセグメント共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)

@@ -1,8 +1,9 @@
 ---
 title: Adobe Analytics 拡張機能の共有モジュール
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能で提供される共有ライブラリモジュールについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 [Adobe Analytics 拡張機能](./overview.md)では、エクスペリエンスアプリケーションに統合できる 2 つの異なる[共有モジュール](../../../extension-dev/web/shared.md)が提供されます。これらのモジュールについては、以下の節で説明します。
 
@@ -51,7 +52,7 @@ if (getTracker) {
 
 ## [!DNL augment-tracker]
 
-トラッカーオブジェクト初期化したら、プロセスの次の手順は強化です。この手順では、Adobe Analytics 拡張機能の設定から変数が適用される前、またはビーコンが送信される前に、拡張機能でトラッカーに必要なものをすべて追加することができます。
+トラッカーオブジェクト初期化したら、プロセスの次の手順は強化です。この手順では、Adobe Analytics 拡張機能の設定から変数が適用される前に、またはビーコンが送信される前に、拡張機能でトラッカーに必要なものをすべて追加することができます。
 
 また、拡張機能では、サーバーからのデータや JavaScript の取得など、独自の非同期タスクを実行している間、トラッカーの初期化プロセスを一時停止することができます。
 

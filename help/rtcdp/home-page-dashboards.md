@@ -1,21 +1,20 @@
 ---
-keywords: 指標の概要；rtcdp指標の概要
+keywords: 指標の概要；rtcdp 指標の概要
 title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
-seo-title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
+seo-title: Real-time Customer Data Platform Home Page and Dashboards
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
-seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
+exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 75%
+source-wordcount: '619'
+ht-degree: 74%
 
 ---
 
-
 # [!DNL Real-time Customer Data Platform] ホームページとダッシュボード
 
-指標ダッシュボードを含むReal-time Customer Data Platform(Real-time CDP)ホームページは、Real-time CDPにログインすると表示されます。
+リアルタイム CDP にログインすると、指標ダッシュボードを含むリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページが表示されます。
 
 ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
@@ -44,13 +43,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### データセット
 
-**[!UICONTROL Datasets]**&#x200B;カウンターは、システム内のデータセットの数と[!DNL Platform]内のデータの量を示します。 このカウンターは、データセットの作成時に更新されます。
+**[!UICONTROL Datasets]** カウンターは、システム内のデータセットの数と [!DNL Platform] 内のデータの量を示します。 このカウンターは、データセットの作成時に更新されます。
 
 データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### プロファイル
 
-**[!UICONTROL プロファイル]**&#x200B;の数は、[!DNL Real-time Customer Profile]内のプロファイルを持つ人の合計数を示します。 プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
+**[!UICONTROL プロファイル]** の数は、[!DNL Real-time Customer Profile] 内のプロファイルを持つ人の合計数を示します。 プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
 このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 
@@ -108,7 +107,7 @@ The number of failed profile records is updated hourly. -->
 
 **[!UICONTROL 最近のデータセット]**&#x200B;カードには、組織内で作成された最新の 5 つのデータセットが表示されます。このリストは、新しいデータセットが作成されると更新されます。
 
-データセットを選択してその項目の詳細を表示するか、**[!UICONTROL 表示ーall]**&#x200B;を選択してデータセットのリストを確認します。 ここから、詳細の特定のソースを選択できます。
+データセットを選択してその項目の詳細を表示するか、**[!UICONTROL すべての]** を表示してデータセットのリストを表示します。 ここから、特定のソースを選択して詳細を表示できます。
 
 データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
@@ -116,7 +115,7 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近のソース]**」指標カードには、組織内で作成された最新の 5 つのソースが表示されます。このリストは、新しいソースが作成されると更新されます。
 
-ソースを選択してそのアイテムの詳細を表示するか、**[!UICONTROL すべての]**&#x200B;を表示してソースのリストを確認します。 ここから、詳細の特定のソースを選択できます。
+ソースを選択してその項目の詳細を表示するか、**[!UICONTROL すべて表示]** を選択してソースのリストを表示します。 ここから、特定のソースを選択して詳細を表示できます。
 
 ソースについて詳しくは、「[ソースの概要](sources/sources-overview.md)」を参照してください。
 
@@ -124,7 +123,7 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近のセグメント]**」指標カードには、組織内で作成された最新の 5 つのセグメントが表示されます。このリストは、新しいセグメントが作成されると更新されます。
 
-セグメントを選択してその項目の詳細を表示するか、**[!UICONTROL すべての]**&#x200B;を表示してその他のセグメントの詳細を表示します。
+セグメントを選択してその項目の詳細を表示するか、**[!UICONTROL すべて表示]** を選択してその他のセグメントに関する情報を表示します。
 
 セグメントについて詳しくは、「[セグメント化サービスの概要](segmentation/segmentation-overview.md)」を参照してください。
 
@@ -132,6 +131,6 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近の宛先]**」指標カードには、組織内で作成された最新の 5 つの宛先が表示されます。このリストは、新しい宛先が作成されると更新されます。
 
-目的のアイテムの詳細を表示する宛先を選択するか、**[!UICONTROL すべての]**&#x200B;を表示して、その他の宛先に関する情報を表示します。
+宛先を選択してその項目の詳細を表示するか、**[!UICONTROL すべて表示]** を選択してその他の宛先に関する情報を表示します。
 
 宛先について詳しくは、「[宛先の概要](destinations/overview.md)」を参照してください。

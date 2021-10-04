@@ -45,7 +45,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 3. [製品プロファイルのサン **** ドボックスと **クエリサービ** ](../../access-control/ui/permissions.md) ス統合の管理の権限の両方を設定します。
 4. [新しいユーザーを製品プロファイルに追加](../../access-control/ui/users.md) し、ユーザーに設定済みの権限を付与します。
 5. [ユーザーを製品プロファイル管理者として追加し](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) て、任意のアクティブな製品プロファイルのアカウント作成を許可します。
-6. [統合を作成するには、ユーザーを製品プロ](https://helpx.adobe.com/enterprise/using/manage-developers.html) ファイル開発者として追加します。
+6. [統合を作成するには、ユーザーを製品プロ](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) ファイル開発者として追加します。
 
 権限の割り当て方法の詳細については、[ アクセス制御 ](../../access-control/home.md) のドキュメントを参照してください。
 

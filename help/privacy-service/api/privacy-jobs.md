@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック
+keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: プライバシージョブAPIエンドポイント
+title: プライバシージョブ API エンドポイント
 topic-legacy: developer guide
-description: Privacy ServiceAPIを使用してExperience Cloudアプリのプライバシージョブを管理する方法について説明します。
+description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-translation-type: tm+mt
 source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1362'
+ht-degree: 68%
 
 ---
 
 # プライバシージョブエンドポイント
 
-このドキュメントでは、API呼び出しを使用してプライバシージョブを操作する方法について説明します。 特に、[!DNL Privacy Service] APIでの`/job`エンドポイントの使用をカバーしています。 このガイドを読む前に、[はじめに](./getting-started.md#getting-started)を参照し、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+このドキュメントでは、API 呼び出しを使用してプライバシージョブを操作する方法について説明します。 特に、[!DNL Privacy Service] API での `/job` エンドポイントの使用について説明します。 このガイドを読む前に、[ はじめに ](./getting-started.md#getting-started) を参照して、必要なヘッダーやサンプル API 呼び出しを含む、API を正しく呼び出すために必要な重要な情報を確認してください。
 
 >[!NOTE]
 >
->お客様からの同意またはオプトアウト要求を管理する場合は、[同意エンドポイントガイド](./consent.md)を参照してください。
+>お客様からの同意またはオプトアウトリクエストを管理する場合は、[ 同意エンドポイントガイド ](./consent.md) を参照してください。
 
 ## すべてのジョッブをリスト {#list}
 
-`/jobs`エンドポイントにGETリクエストを行うことで、組織内で使用可能なすべてのプライバシージョブのリストを表示できます。
+`/jobs` エンドポイントにGETリクエストをおこなうと、組織内で使用可能なすべてのプライバシージョブのリストを表示できます。
 
 **API 形式**
 
-このリクエスト形式では、`/jobs`エンドポイントに`regulation`クエリパラメーターが使用されているので、次に示す疑問符(`?`)で始まります。 応答はページ分割され、他のクエリパラメーター（`page` および `size`）を使用して応答をフィルターできます。アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
+このリクエストの形式では、`/jobs` エンドポイントで `regulation` クエリパラメーターが使用されるので、次に示すように疑問符 (`?`) で始まります。 応答はページ分割され、他のクエリパラメーター（`page` および `size`）を使用して応答をフィルターできます。アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -38,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。次の値を指定できます。 <ul><li>`gdpr` (ヨーロッパ和集合)</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` （ブラジル）</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` （タイ）</li></ul> |
+| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`gdpr` （欧州連合）</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` (ブラジル)</li><li>`nzpa_nzl` (ニュージーランド)</li><li>`pdpa_tha` (タイ)</li></ul> |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
 
@@ -66,13 +65,13 @@ curl -X GET \
 
 ## プライバシージョブの作成 {#create-job}
 
-新しいジョブリクエストを作成する前に、まず、データにアクセス、削除、またはオプトアウトするデータ主体の識別情報を収集する必要があります。必要なデータを取得したら、`/jobs`エンドポイントへのPOST要求のペイロードで指定する必要があります。
+新しいジョブリクエストを作成する前に、まず、データにアクセス、削除、またはオプトアウトするデータ主体の識別情報を収集する必要があります。必要なデータを取得したら、`/jobs` エンドポイントへのPOSTリクエストのペイロードでそのデータを提供する必要があります。
 
 >[!NOTE]
 >
-> 互換性のある Adobe Experience Cloud アプリケーションは、データの主題を識別するために異なる値を使用します。アプリに必要な識別子について詳しくは、[Privacy Service および Experience Cloud アプリケーションの](../experience-cloud-apps.md)に関するガイドを参照してください。[!DNL Privacy Service]に送信するIDの決定に関する一般的なガイダンスについては、](../identity-data.md)のプライバシー要求[のIDデータのドキュメントを参照してください。
+> 互換性のある Adobe Experience Cloud アプリケーションは、データの主題を識別するために異なる値を使用します。アプリに必要な識別子について詳しくは、[Privacy Service および Experience Cloud アプリケーションの](../experience-cloud-apps.md)に関するガイドを参照してください。[!DNL Privacy Service] に送信する ID の決定に関する一般的なガイダンスについては、プライバシーリクエスト ](../identity-data.md) の [ID データに関するドキュメントを参照してください。
 
-[!DNL Privacy Service] APIは、個人データに対する2種類のジョブリクエストをサポートしています。
+[!DNL Privacy Service] API は、個人データに対する 2 種類のジョブリクエストをサポートしています。
 
 * [アクセスや削除](#access-delete)：個人データにアクセス（読み取り）または削除します。
 * [販売オプトアウト](#opt-out)：個人データを販売しないものとして指定します。
@@ -157,14 +156,14 @@ curl -X POST \
 | `companyContexts` **(必須)** | 組織の認証情報を含む配列。リストに表示される各識別子には、次の属性が含まれます。 <ul><li>`namespace`：識別子の名前空間。</li><li>`value`：識別子の値。</li></ul>識別子の 1 つが `imsOrgId` を `namespace` として使用し、`value` が IMS 組織の一意の ID を含む&#x200B;**必要**&#x200B;があります。<br/><br/>追加の識別子は、組織に属するアドビ会社との統合を識別する、製品固有の会社修飾子（例：`Campaign`）にすることができます。有効な値には、アカウント名、クライアントコード、テナント ID、その他のアプリケーション識別子が含まれます。 |
 | `users` **(必須)** | アクセスまたは削除する情報を持つユーザーの少なくとも 1 人のコレクションを含む配列。単一のリクエストで提供できるユーザー ID は、最大 1,000 個です。各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。この値に対して一意の、簡単に識別できる文字列を選択し、後で簡単に参照または参照できるようにすることをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。実行するアクションに応じて、この配列には `access`、`delete` またはその両方を含める必要があります。</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID は`namespace`、`value`、および名前空間修飾子（`type`）で構成されます。これらの必須プロパティの詳細については、[付録](appendix.md)を参照してください。</li></ul> `users` と `userIDs` の詳細については、[トラブルシューティングガイド](../troubleshooting-guide.md#user-ids)を参照してください。 |
 | `include` **(必須)** | 処理に含めるアドビ製品の配列。この値がない場合や空の場合、リクエストは拒否されます。組織が統合している製品のみを含めます。詳しくは、付録の「[受け入れられる製品値](appendix.md)」の節を参照してください。 |
-| `expandIDs` | `true`に設定した場合に、アプリケーション内のIDを処理するための最適化を表すオプションのプロパティです（現在、[!DNL Analytics]でのみサポートされています）。 省略した場合、この値はデフォルトで `false` になります。 |
+| `expandIDs` | `true` に設定した場合、アプリケーションで ID を処理するための最適化を表すオプションのプロパティです（現在、[!DNL Analytics] でのみサポートされています）。 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
-| `regulation` **(必須)** | プライバシー業務に関する規則。 次の値を指定できます。 <ul><li>`gdpr` (ヨーロッパ和集合)</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` （ブラジル）</li><li>`nzpa_nzl` （ニュージーランド）</li><li>`pdpa_tha` （タイ）</li></ul> |
+| `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`gdpr` （欧州連合）</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` (ブラジル)</li><li>`nzpa_nzl` (ニュージーランド)</li><li>`pdpa_tha` (タイ)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたジョブの詳細を返します。
 
@@ -220,7 +219,7 @@ curl -X POST \
 
 ## ジョブのステータスの確認 {#check-status}
 
-`/jobs`エンドポイントへのGET要求のパスに、現在の処理ステータスなど、特定のジョブに関する情報を取得できます。`jobId`
+`/jobs` エンドポイントへのGETリクエストのパスにそのジョブの `jobId` を含めることで、特定のジョブに関する情報（現在の処理ステータスなど）を取得できます。
 
 >[!IMPORTANT]
 >
@@ -234,7 +233,7 @@ GET /jobs/{JOB_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{JOB_ID}` | 検索するジョブのID。 [ジョブ](#create-job)および[すべてのジョブ](#list)をリストするジョブとの作成に成功したAPI応答で、`jobId`の下にこのIDが返されます。 |
+| `{JOB_ID}` | 検索するジョブの ID。 この ID は、[ ジョブ ](#create-job) の作成と [ すべてのジョブ ](#list) のリストの作成に関する正常な API 応答の `jobId` の下で返されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -326,19 +325,19 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `productStatusResponse` | `productResponses`配列内の各オブジェクトには、特定の[!DNL Experience Cloud]アプリケーションに関するジョブの現在の状態に関する情報が含まれます。 |
-| `productStatusResponse.status` | ジョブの現在のステータスカテゴリ。 [利用可能なステータスカテゴリ](#status-categories)のリストと、対応する意味については、以下の表を参照してください。 |
+| `productStatusResponse` | `productResponses` 配列内の各オブジェクトには、特定の [!DNL Experience Cloud] アプリケーションに関するジョブの現在のステータスに関する情報が含まれます。 |
+| `productStatusResponse.status` | ジョブの現在のステータスカテゴリ。 [ 使用可能なステータスカテゴリ ](#status-categories) と、対応する意味の一覧は、次の表を参照してください。 |
 | `productStatusResponse.message` | ステータスカテゴリに対応する、ジョブの固有のステータス。 |
-| `productStatusResponse.responseMsgCode` | [!DNL Privacy Service]が受信した製品応答メッセージの標準コード。 メッセージの詳細は`responseMsgDetail`の下に表示されます。 |
-| `productStatusResponse.responseMsgDetail` | ジョブのステータスに関する詳細な説明。 同様のステータスのメッセージは、製品によって異なる場合があります。 |
-| `productStatusResponse.results` | 特定のステータスの場合、一部の製品は`responseMsgDetail`では扱われない追加情報を提供する`results`オブジェクトを返す場合があります。 |
+| `productStatusResponse.responseMsgCode` | [!DNL Privacy Service] が受信した製品の応答メッセージの標準コード。 メッセージの詳細は `responseMsgDetail` の下に表示されます。 |
+| `productStatusResponse.responseMsgDetail` | ジョブのステータスの詳細な説明。 類似のステータスのメッセージは、製品によって異なる場合があります。 |
+| `productStatusResponse.results` | 特定のステータスの製品では、`responseMsgDetail` で扱われない追加情報を提供する `results` オブジェクトが返される場合があります。 |
 | `downloadURL` | ジョブのステータスが `complete` の場合、この属性はジョブの結果を ZIP ファイルとしてダウンロードする URL を指定します。このファイルは、ジョブの完了後 60 日間ダウンロードできます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-### ジョブステータスカテゴリ{#status-categories}
+### ジョブステータスカテゴリ {#status-categories}
 
-次の表に、様々なジョブステータスカテゴリと、それに対応する意味を示します。
+次の表に、様々な可能性のある製造オーダー・ステータス・カテゴリと、対応する意味を示します。
 
 | ステータスカテゴリ | 意味 |
 | -------------- | -------- |
@@ -351,8 +350,8 @@ curl -X GET \
 
 >[!NOTE]
 >
->依存する子ジョブがまだ処理中の場合、送信されたジョブは`processing`状態のままになる可能性があります。
+>依存する子ジョブがまだ処理中の場合、送信済みのジョブは `processing` 状態のままになる可能性があります。
 
 ## 次の手順
 
-これで、[!DNL Privacy Service] APIを使用してプライバシージョブを作成および監視する方法がわかりました。 ユーザーインターフェイスを使用して同じタスクを実行する方法について詳しくは、「[Privacy Service UI の概要](../ui/overview.md)」を参照してください。
+[!DNL Privacy Service] API を使用してプライバシージョブを作成および監視する方法を理解できました。 ユーザーインターフェイスを使用して同じタスクを実行する方法について詳しくは、「[Privacy Service UI の概要](../ui/overview.md)」を参照してください。

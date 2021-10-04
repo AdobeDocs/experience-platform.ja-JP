@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；etl;ETL;etl変換；ETL変換
+keywords: Experience Platform；ホーム；人気のあるトピック；etl;ETL;ETL 変換；ETL 変換
 solution: Experience Platform
 title: ETL 変換の例
 topic-legacy: overview
 description: この記事では、抽出、変換、読み込み（ETL）の開発者が経験する可能性がある変換の例を示します。
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
@@ -21,7 +20,7 @@ ht-degree: 88%
 
 ### サンプルファイル
 
-サンプルのCSVファイルとJSONファイルは、パブリックETLリファレンス[!DNL GitHub]のレポート(Adobeによって管理)から入手できます。
+サンプルの CSV ファイルと JSON ファイルは、Adobeが管理する公開 ETL リファレンス [!DNL GitHub] リポジトリーから入手できます。
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -178,7 +177,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### データフレームの例
 
-次の例のデータフレームの構造は、[!DNL XDM Individual Profile]クラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
+次のデータフレーム例の構造は、[!DNL XDM Individual Profile] クラスを実装するスキーマにマッピングされ、そのタイプのスキーマに関連付けられた最も一般的なフィールドを含みます。
 
 ```python
 [

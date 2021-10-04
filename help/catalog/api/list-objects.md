@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ
+keywords: Experience Platform；ホーム；人気のあるトピック；フィルター；フィルター；データのフィルター；データのフィルター
 solution: Experience Platform
-title: リストカタログオブジェクト
+title: カタログオブジェクトのリスト
 topic-legacy: developer guide
 description: 1 回の API 呼び出しで、特定のタイプの使用可能なすべてのオブジェクトのリストを取得できます。ベストプラクティスは、応答のサイズを制限するフィルターを含めることです。
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
@@ -26,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 表示する[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 表示する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[カタログデータのフィルタリング](filter-data.md)に関するガイドを参照してください。 |
 
 **リクエスト**
@@ -44,11 +43,11 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、[!DNL Catalog]オブジェクトのリストをキーと値のペアの形式で返し、リクエストに指定されたクエリパラメーターでフィルタリングします。 キーと値のペアごとに、キーは対象の[!DNL Catalog]オブジェクトの固有な識別子を表します。その後、詳細については、特定のオブジェクト](look-up-object.md)を呼び出す[表示の別の呼び出しで使用できます。
+正常な応答は、[!DNL Catalog] オブジェクトのリストをキーと値のペアの形式で返し、リクエストで指定されたクエリパラメーターでフィルタリングします。 キーと値のペアごとに、キーは問題の [!DNL Catalog] オブジェクトの一意の識別子を表します。これを別の呼び出しで使用して、 [ 特定のオブジェクト ](look-up-object.md) を表示して詳細を確認できます。
 
 >[!NOTE]
 >
->返されたオブジェクトに、`properties`クエリで示される要求されたプロパティが1つ以上含まれていない場合、応答は、以下の&#x200B;***`Sample Dataset 3`***&#x200B;と&#x200B;***`Sample Dataset 4`***&#x200B;に示すように、要求されたプロパティのみを返します。
+>返されたオブジェクトに、`properties` クエリで指定された 1 つ以上のリクエストされたプロパティが含まれていない場合、次の ***`Sample Dataset 3`*** と ***`Sample Dataset 4`*** に示すように、応答は、含まれているリクエストされたプロパティのみを返します。
 
 ```json
 {

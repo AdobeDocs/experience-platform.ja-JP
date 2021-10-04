@@ -6,7 +6,7 @@ topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 100%
 

@@ -1,8 +1,9 @@
 ---
 title: Adobe Target v2 拡張機能のリリースノート
-description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新リリースノートです。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 7 月 20 日（PT）
 
@@ -57,7 +58,7 @@ ht-degree: 100%
 ### Adobe Target v2 Extension 0.13.7
 
 - mbox リクエストに `targetPageParams` が含まれる問題を修正しました。 `targetPageParams` は `pageLoad` リクエストにのみ含めてください。
-- グローバルオブジェクトの依存関係を直接参照に置き換えることで、タグ拡張機能のドキュメントおよびウィンドウのグローバルオブジェクトに関する問題を修正しました。
+- グローバルオブジェクトの依存関係を直接参照で置き換えることで、タグ拡張機能のドキュメントおよびウィンドウのグローバルオブジェクトに関する問題を修正しました。
 - at.js を 2.4.1 に更新しました。
 
 ## 2021 年 1 月 25 日（PT）

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；日付と時間関数；日付と時間関数；日付；時刻；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；日付と時間関数；日時関数；日時；日付；時間；
 solution: Experience Platform
-title: PQLの日付と時間関数
+title: PQL 日付と時間関数
 topic-legacy: developer guide
 description: 日付および時間関数は、プロファイルクエリ言語（PQL）内の値に対して日付と時間の操作を実行するために使用されます。
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '508'
@@ -15,7 +14,7 @@ ht-degree: 89%
 
 # 日付および時間関数
 
-日付および時間関数 は、[!DNL Profile Query Language] (PQL)内の値に対して日付と時間の操作を実行するために使用されます。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+日付および時間関数 は、[!DNL Profile Query Language](PQL) 内の値に対して日付と時刻の操作を実行するために使用されます。 その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## Current month
 

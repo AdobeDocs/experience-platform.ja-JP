@@ -5,7 +5,7 @@ breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ポリシーを使用して、データ使用に関する制限を実施します。
 feature: Data Governance
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ topic-legacy: schemas
 description: Adobe Experience Platform API で「/functions」エンドポイントを使用して、マッピング式を検証し、使用可能なマッピングセット関数をリストできます。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 100%
 
@@ -72,7 +72,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 応答に成功すると、HTTP ステータス 200 と、使用可能なマッピングセット関数のリストが返されます。
 
@@ -137,7 +137,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 応答に成功すると、HTTP ステータス 200 と、使用可能なマッピングセット演算子のリストが返されます。
 

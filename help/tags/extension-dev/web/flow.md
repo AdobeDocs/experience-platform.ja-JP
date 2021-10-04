@@ -1,8 +1,9 @@
 ---
 title: Web 拡張機能のフロー
-description: Adobe Experience Platform で、実行時に Web 拡張機能コンポーネントがどのように相互にやり取りするかについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform で実行時に Web 拡張機能コンポーネントが相互にやり取りする方法を説明します。
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 web 拡張機能のイベント、条件、アクション、およびデータ要素の各タイプには、ユーザーが設定を変更できるビューと、これらのユーザー定義の設定に基づいて動作するライブラリモジュールの両方が用意されています。
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ；日付範囲
+keywords: Experience Platform；ホーム；人気のあるトピック；フィルター；フィルター；データのフィルター；データのフィルター；日付範囲
 solution: Experience Platform
-title: クエリパラメーターを使用したカタログデータのフィルター
+title: クエリー・パラメータを使用したカタログ・データのフィルタ
 topic-legacy: developer guide
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2121'
@@ -13,15 +12,15 @@ ht-degree: 85%
 
 ---
 
-# クエリパラメーターを使用して[!DNL Catalog]データをフィルター
+# クエリパラメーターを使用して [!DNL Catalog] データをフィルター
 
-[!DNL Catalog Service] APIを使用すると、リクエストクエリーパラメーターを使用して応答データをフィルタリングできます。 [!DNL Catalog]のベストプラクティスの一部は、すべてのAPI呼び出しでフィルターを使用することです。これらの呼び出しは、APIの負荷を軽減し、全体的なパフォーマンスの向上に役立ちます。
+[!DNL Catalog Service] API を使用すると、応答データをリクエストクエリパラメーターを使用してフィルタリングできます。 [!DNL Catalog] のベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを向上させるのに役立ちます。
 
-このドキュメントでは、APIの[!DNL Catalog]オブジェクトをフィルタリングする最も一般的な方法について説明します。 [!DNL Catalog] APIの使い方の詳細については、[カタログ開発者ガイド](getting-started.md)を読みながら、このドキュメントを参照することをお勧めします。 [!DNL Catalog Service]の一般的な情報については、[[!DNL Catalog] 概要](../home.md)を参照してください。
+このドキュメントでは、API で [!DNL Catalog] オブジェクトをフィルタリングする最も一般的な方法について説明します。 [!DNL Catalog] API とのやり取り方法の詳細については、『[ カタログ開発者ガイド ](getting-started.md)』を読みながら、このドキュメントを参照することをお勧めします。 [!DNL Catalog Service] に関する一般的な情報については、[[!DNL Catalog]  概要 ](../home.md) を参照してください。
 
 ## 返されるオブジェクトの制限
 
-`limit` クエリパラメーターは、応答で返されるオブジェクトの数を制限します。[!DNL Catalog] 次の制限に従って、応答は自動的に課金されます。
+`limit` クエリパラメーターは、応答で返されるオブジェクトの数を制限します。[!DNL Catalog] 応答は、設定された制限に従って自動的に課金されます。
 
 * `limit` パラメーターが指定されていない場合、応答ペイロードあたりのオブジェクトの最大数は 20 です。
 * データセットクエリの場合、`properties` クエリパラメーターを使用して `observableSchema` がリクエストされた場合、返されるデータセットの最大数は 20 です。
@@ -37,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
@@ -105,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | 取得する特定の[!DNL Catalog]オブジェクトの固有な識別子。 |
+| `{OBJECT_ID}` | 取得する特定の [!DNL Catalog] オブジェクトの一意の識別子。 |
 
 **リクエスト**
 
@@ -124,7 +123,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、[!DNL Catalog]オブジェクトのリストが返され、要求されたプロパティのみが表示されます。
+正常な応答は、[!DNL Catalog] オブジェクトのリストと、リクエストされたプロパティのみが表示されたを返します。
 
 ```json
 {
@@ -158,7 +157,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->各データセットの`schemaRef`プロパティには、バージョン番号がスキーマの最新のマイナーバージョンを示しています。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
+>各データセットの `schemaRef` プロパティで、バージョン番号はスキーマの最新のマイナーバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
 
 ## 応答リストのオフセット開始インデックス
 
@@ -210,9 +209,9 @@ curl -X GET \
 * 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
-* 次のタグ名は、[!DNL Experience Platform]全体で使用するために予約されているので、組織のタグ名として宣言することはできません。
-   * `unifiedProfile`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Real-time Customer Profile]](../../profile/home.md)ます。
-   * `unifiedIdentity`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Identity Service]](../../identity-service/home.md)ます。
+* 次のタグ名は、[!DNL Experience Platform] 全体で使用するために予約されているので、組織のタグ名として宣言することはできません。
+   * `unifiedProfile`:このタグ名は、で取り込まれるデータセット用に予約されていま [[!DNL Real-time Customer Profile]](../../profile/home.md)す。
+   * `unifiedIdentity`:このタグ名は、で取り込まれるデータセット用に予約されていま [[!DNL Identity Service]](../../identity-service/home.md)す。
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
@@ -266,7 +265,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
 | `{TAG_VALUE}` | フィルターに使用するタグの値。ワイルドカード文字（`*`）をサポートします。 |
 
@@ -337,7 +336,7 @@ curl -X GET \
 
 ## 日付範囲によるフィルター
 
-[!DNL Catalog] APIの一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付の場合はこのパラメーターが使用されます。
+[!DNL Catalog] API の一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付が使用されます。
 
 **API 形式**
 
@@ -364,7 +363,7 @@ curl -X GET \
 
 **応答** 
 
-成功した応答には、指定した日付範囲に該当する[!DNL Catalog]オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+正常な応答は、指定した日付範囲に該当する [!DNL Catalog] オブジェクトのリストを含みます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -432,7 +431,7 @@ curl -X GET \
 
 **応答** 
 
-成功した応答には、`orderBy`パラメーターに従って並べ替えられた[!DNL Catalog]オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+正常な応答は、`orderBy` パラメーターに従って並べ替えられた [!DNL Catalog] オブジェクトのリストを含みます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -477,7 +476,7 @@ curl -X GET \
 
 ## プロパティによるフィルター
 
-[!DNL Catalog] プロパティでフィルタリングする方法は2つあり、以下の節で詳しく説明します。
+[!DNL Catalog] には、プロパティでフィルタリングする 2 つの方法があります。この方法については、以下の節で詳しく説明します。
 
 * [単純なフィルターの使用](#using-simple-filters)：特定のプロパティが特定の値と一致するかどうかでフィルタリングします。
 * [プロパティパラメーターの使用](#using-the-property-parameter)：条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
@@ -501,7 +500,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
@@ -551,7 +550,7 @@ curl -X GET \
 }
 ```
 
-### `property` パラメータの使用 {#using-the-property-parameter}
+### `property` パラメータの使用  {#using-the-property-parameter}
 
 `property` クエリパラメーターは、単純なパラメーターよりも柔軟にプロパティベースのフィルタリングをおこなえます。プロパティに特定の値が含まれるかどうかに基づいてフィルタリングする以外に、`property` パラメーターは他の比較演算子（「より大きい」（`>`）や「より小さい」（`<`）など）を正規式としてプロパティ値によるフィルタリングに使用できます。また、値に関係なく、プロパティが存在するかどうかでフィルタリングすることもできます。
 
@@ -577,7 +576,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
 `property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。

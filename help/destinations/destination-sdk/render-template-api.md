@@ -1,6 +1,6 @@
 ---
-description: このページでは、メッセージ変換テンプレートに基づいて、「/authoring/testing/template/render」 APIエンドポイントを使用して、宛先に書き出されたデータをレンダリングするために実行できるAPI操作の一覧と説明を示します。
-title: レンダリングテンプレートAPI操作
+description: このページでは、メッセージ変換テンプレートに基づいて、「/authoring/testing/template/render」 API エンドポイントを使用して、宛先に書き出したデータをレンダリングするために実行できるすべての API 操作について説明します。
+title: レンダリングテンプレート API 操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 2%
 
 ---
 
-# レンダリングテンプレートAPI操作 {#render-template-api-operations}
+# レンダリングテンプレート API 操作 {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-このページでは、`/authoring/testing/template/render` APIエンドポイントを使用して、[メッセージ変換テンプレート](./message-format.md#using-templating)に基づいて、宛先に対して書き出されたデータをレンダリングするために実行できるAPI操作の一覧と説明を示します。 このエンドポイントでサポートされる機能の説明については、[テンプレートの作成](./create-template.md)を参照してください。
+このページでは、`/authoring/testing/template/render` API エンドポイントを使用して、[ メッセージ変換テンプレート ](./message-format.md#using-templating) に基づいて、宛先に書き出されたデータをレンダリングするために実行できるすべての API 操作について説明します。 このエンドポイントでサポートされる機能の説明については、[ テンプレートの作成 ](./create-template.md) を参照してください。
 
-## レンダリングテンプレートAPI操作の概要 {#get-started}
+## レンダリングテンプレート API 操作の概要 {#get-started}
 
-続行する前に、[はじめに](./getting-started.md)を参照し、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+続行する前に、[ はじめに ](./getting-started.md) を参照して、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
 
-## テンプレートに基づいて書き出されたデータをレンダリング {#render-exported-data}
+## 書き出されたデータをテンプレートに基づいてレンダリング {#render-exported-data}
 
-`authoring/testing/template/render`エンドポイントにPOSTリクエストを送信し、宛先設定の宛先IDと、[サンプルテンプレートAPIエンドポイント](./sample-template-api.md)を使用して作成したテンプレートを指定することで、書き出されたデータをレンダリングできます。
+`authoring/testing/template/render` エンドポイントにPOSTリクエストを送信し、[ サンプルテンプレート API エンドポイント ](./sample-template-api.md) を使用して作成した宛先設定の宛先 ID とテンプレートを指定することで、書き出されたデータをレンダリングできます。
 
 >[!TIP]
 >
->* ここで使用する宛先IDは、`/destinations`エンドポイントを使用して作成された、宛先設定に対応する`instanceId`です。 [宛先設定APIリファレンス](./destination-configuration-api.md#retrieve-list)を参照してください。
+>* ここで使用する宛先 ID は、`/destinations` エンドポイントを使用して作成された、宛先設定に対応する `instanceId` です。 [ 宛先設定 API リファレンス ](./destination-configuration-api.md#retrieve-list) を参照してください。
 
 
 
@@ -40,17 +40,17 @@ POST authoring/testing/template/render
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `destinationId` | 書き出したデータをレンダリングする宛先設定のID。 |
-| `template` | 書き出したデータをレンダリングする際に使用する、テンプレートの文字エスケープバージョン。 |
-| `profiles` | 呼び出しの本文にプロファイルを追加する場合は、[サンプルプロファイル生成API](./sample-profile-generation-api.md)を使用して、プロファイルを生成できます。 |
+| `destinationId` | 書き出したデータをレンダリングする宛先設定の ID。 |
+| `template` | 書き出されたデータをレンダリングする際に基づくテンプレートの文字エスケープバージョン。 |
+| `profiles` | 呼び出しの本文にプロファイルを追加する場合は、[ サンプルプロファイル生成 API](./sample-profile-generation-api.md) を使用してプロファイルを生成できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 
-次の例に示すように、書き出したデータをレンダリングできます。
+次の例に示すように、書き出されたデータをレンダリングできます。
 
 * [本文でプロファイルを送信しないテンプレートのレンダリング](./render-template-api.md#multiple-profiles-no-body)
-* [本文で送信したプロファイルを使用してテンプレートをレンダリングする](./render-template-api.md#multiple-profiles-with-body)
+* [本文で送信したプロファイルを使用したテンプレートのレンダリング](./render-template-api.md#multiple-profiles-with-body)
 
 <!--
 
@@ -266,9 +266,9 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **応答**
 
-応答は、テンプレートのレンダリング結果、または発生したエラーを返します。
-正常な応答は、HTTPステータス200と、エクスポートされたデータの詳細を返します。
-失敗した応答は、HTTPステータス500と、発生したエラーの説明を返します。
+応答は、テンプレートのレンダリングの結果、または発生したエラーを返します。
+正常な応答は、HTTP ステータス 200 と、エクスポートされたデータの詳細を返します。
+失敗した応答は、HTTP ステータス 500 と、発生したエラーの説明を返します。
 
 ```json
 {
@@ -319,11 +319,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }       
 ```
 
-### 本文で送信したプロファイルを使用してテンプレートをレンダリングする {#multiple-profiles-with-body}
+### 本文で送信したプロファイルを使用したテンプレートのレンダリング {#multiple-profiles-with-body}
 
 **リクエスト**
 
-次のリクエストは、宛先で想定されている形式に一致するサンプルプロファイルをレンダリングします。 [サンプルプロファイル生成API](./sample-profile-generation-api.md)を使用して、呼び出し時に送信するプロファイルを生成できます。
+次のリクエストでは、宛先で想定されている形式に一致するサンプルプロファイルがレンダリングされます。 [ サンプルプロファイル生成 API](./sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -374,9 +374,9 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **応答**
 
-応答は、テンプレートのレンダリング結果、または発生したエラーを返します。
-正常な応答は、HTTPステータス200と、エクスポートされたデータの詳細を返します。
-失敗した応答は、HTTPステータス500と、発生したエラーの説明を返します。
+応答は、テンプレートのレンダリングの結果、または発生したエラーを返します。
+正常な応答は、HTTP ステータス 200 と、エクスポートされたデータの詳細を返します。
+失敗した応答は、HTTP ステータス 500 と、発生したエラーの説明を返します。
 
 ```json
 {
@@ -406,10 +406,10 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## APIエラー処理 {#api-error-handling}
+## API エラー処理 {#api-error-handling}
 
-宛先SDK APIエンドポイントは、一般的なExperience PlatformAPIエラーメッセージの原則に従います。 Platformトラブルシューティングガイドの[APIステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)および[リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)を参照してください。
+宛先 SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [ リクエストヘッダーのエラー ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、メッセージ変換テンプレートを使用して、宛先で予想されるデータ形式に一致する書き出し済みプロファイルを生成する方法がわかりました。 [宛先SDKを使用して宛先](./configure-destination-instructions.md)を設定する方法を読み、この手順が宛先の設定プロセスにどのように適合するかを理解してください。
+このドキュメントを読むと、メッセージ変換テンプレートを使用して、宛先で予想されるデータ形式に一致する書き出し済みのプロファイルを生成する方法がわかります。 [ 宛先 SDK を使用して宛先を設定する方法 ](./configure-destination-instructions.md) を読んで、この手順が宛先の設定プロセスにどのように適しているかを確認してください。

@@ -16,7 +16,7 @@ ht-degree: 56%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service] は、Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスとRESTful APIを提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Flow Service] は、Platform 内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスと RESTful API を提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業をおこなうことができます。
 
@@ -29,14 +29,14 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 Experience Platformを使用すると、Adobe Analytics、Adobe Audience Managerなどの他のAdobeアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
-- [UIでのAdobe Audience Managerソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classificationsデータソース接続の概要](connectors/adobe-applications/classifications.md)
-- [UIでのAdobe Analytics Classificationsデータソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics Report Suiteデータソース接続の概要](connectors/adobe-applications/analytics.md)
-- [UIでのAdobe Analyticsソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
-- [UIでの顧客属性ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [UI でのAdobe Audience Managerソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics Classifications データソース接続の概要](connectors/adobe-applications/classifications.md)
+- [UI でのAdobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Adobe Analytics Report Suite データソース接続の概要](connectors/adobe-applications/analytics.md)
+- [UI でのAdobe Analyticsソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UI での顧客属性ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
-- [UIでの [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising Cloud
 
@@ -46,7 +46,7 @@ Experience Platformは、サードパーティの広告システムからデー�
 
 ### クラウドストレージ
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON形式、XDM Parquet形式または区切り形式で指定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Azure Data Lake Storage Gen2] コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] コネクタ](connectors/cloud-storage/blob.md)
@@ -64,7 +64,7 @@ Experience Platformは、サードパーティの広告システムからデー�
 
 ### 顧客関係管理（CRM）
 
-CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Experience Platformは、[!DNL Microsoft Dynamics 365]と[!DNL Salesforce]からCRMデータを取り込む機能を提供します。 詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Experience Platformは、[!DNL Microsoft Dynamics 365] と [!DNL Salesforce] から CRM データを取り込む機能を提供します。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Microsoft Dynamics] コネクタ](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] コネクタ](connectors/crm/salesforce.md)
@@ -102,7 +102,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### e コマース
 
-Experience Platformは、サードパーティのeコマースシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platformは、サードパーティの e コマースシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
@@ -145,7 +145,7 @@ Experience Platformは、サードパーティのプロトコルシステムか�
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL ソースの表示]**&#x200B;オン | 「カタログ」タブの各ソースタイプのソースおよび「参照」、「アカウント」、「データフロー」タブのソースに読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL ソースの表示]**&#x200B;オン | 「カタログ」タブの各ソース・タイプおよび「参照」タブ、「アカウント」タブ、「データフロー」タブの各ソース・タイプのソースに読み取り専用アクセス権を付与します。 |
 | **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
 | 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
@@ -153,10 +153,10 @@ Admin Console から付与される使用可能な権限（これら 4 つのソ
 
 ## 利用条件 {#terms-and-conditions}
 
-ベータ版（「ベータ版」）という名称のソースを使用することにより、お客様は、ベータ版が、いかなる種類の保証もなく、そのまま提供されることを認めます&#x200B;***。***
+ベータ版（「ベータ版」）という名称のソースを使用することにより、お客様は、ベータ版が現状のままで提供され、いかなる種類の保証も付与されないことを認めます ***。***
 
-Adobeは、ベータ版を維持、修正、更新、変更、変更、またはその他のサポートする義務を負いません。 お客様は、ベータ版や付属の資料の正しい機能やパフォーマンスに何らかの方法で依存しないように注意して使用することをお勧めします。 ベータ版は機密情報と見なされますAdobe。
+Adobeは、ベータ版の保守、修正、更新、変更、変更、その他のサポートを義務付けていません。 お客様は、ベータ版および/または付属の資料の正しい機能または性能に何らかの方法で依存しないように注意を払うことをお勧めします。 ベータ版は機密情報と見なされますAdobe。
 
-お客様がAdobeに提供する「フィードバック」（ベータ版の使用中に発生した問題や欠陥を含み、これらに限定されない）に関する情報は、すべての権利、タイトル、関心を含むAdobeに割り当てられます。
+お客様がAdobeに提供する「フィードバック」（ベータ版の使用中に発生した問題や欠陥を含み、これらに限定されない情報）は、すべての権利、タイトル、関心を含むAdobeに割り当てられます。
 
-オープンフィードバックを送信するか、サポートチケットを作成して、提案を共有したり、バグを報告したり、機能強化を求めたりします。
+オープンフィードバックを送信するか、サポートチケットを作成して提案を共有したり、バグを報告したり、機能強化を求めたりします。

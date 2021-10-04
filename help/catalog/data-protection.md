@@ -6,7 +6,7 @@ topic-legacy: data protection
 description: データレイクに保持されるすべてのデータは、組織に固有の独立した Azure Data Lake Storage アカウントで暗号化、保存、管理されます。次のプロセスフロー図は、Experience Platform でのデータの取得、処理、暗号化、保持の仕組みを示しています。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 100%
 

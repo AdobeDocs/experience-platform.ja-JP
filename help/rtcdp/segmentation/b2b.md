@@ -3,8 +3,8 @@ title: リアルタイム CDP B2B エディションのセグメント化の使�
 description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
 source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1121'
+ht-degree: 2%
 
 ---
 

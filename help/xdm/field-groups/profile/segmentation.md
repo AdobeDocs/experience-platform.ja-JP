@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；セグメント；segmentMembership；セグメントメンバーシップ；スキーマデザイン；マップ；マップ；
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；スキーマ；セグメント；segmentMembership；セグメントメンバーシップ；スキーマデザイン；マップ；マップ；
 solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
 topic-legacy: overview
@@ -8,32 +8,32 @@ exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Segment Membership Details] schema field group
+# [!UICONTROL Segment Membership ] Detailsschema フィールドグループ
 
 >[!NOTE]
 >
->複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
+>複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[ フィールドグループ名の更新 ](../name-updates.md) のドキュメントを参照してください。
 
-[!UICONTROL Segment Membership Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). フィールドグループは、セグメントのメンバーシップに関する情報（個人が属するセグメント、最終認定時間、メンバーシップが有効になるまで）を取得する単一のマップフィールドを提供します。
+[!UICONTROL セグメントのメ] ンバーシップ [[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグ](../../classes/individual-profile.md)ループの詳細。フィールドグループは、セグメントのメンバーシップに関する情報（個人が属するセグメント、最終認定時間、メンバーシップが有効になるまでなど）を取り込む単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
->While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
+>`segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で値を入力または更新しないでください。 セグメント化ジョブが実行されると、各プロファイルの `segmentMembership` マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `segmentMembership` | マップ | 個人のセグメントメンバーシップを表すmapオブジェクト。 このオブジェクトの構造について、以下で詳しく説明します。 |
+| `segmentMembership` | マップ | 個人のセグメントメンバーシップを表す map オブジェクト。 このオブジェクトの構造について、以下で詳しく説明します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-次に、特定のプロファイルに対してシステムが入力した`segmentMembership`マップの例を示します。 セグメントのメンバーシップは、オブジェクトのルートレベルキーで示される名前空間で並べ替えられます。 次に、各名前空間の下の個々のキーは、プロファイルがメンバーとして属するセグメントのIDを表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供するいくつかのサブフィールドが含まれます。
+次の例は、特定のプロファイルに対してシステムが入力した `segmentMembership` マップです。 セグメントのメンバーシップは、オブジェクトのルートレベルのキーで示される名前空間で並べ替えられます。 次に、各名前空間の下の個々のキーは、プロファイルがメンバーとして含まれるセグメントの ID を表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供する複数のサブフィールドが含まれます。
 
 ```json
 {
@@ -74,15 +74,15 @@ ht-degree: 3%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `xdm:version` | The version of the segment that this profile qualified for. |
-| `xdm:lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
-| `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. |
-| `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
-| `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` ペイロードのタイプ(`boolean`、 `number`、 `propensity`または `string`)を示し、兄弟プロパティはペイロードタイプの値を提供します。 |
+| `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
+| `xdm:lastQualificationTime` | このプロファイルが最後にセグメントに適合した時刻のタイムスタンプ。 |
+| `xdm:validUntil` | セグメントのメンバーシップが有効と見なされなくなった日時のタイムスタンプ。 |
+| `xdm:status` | 現在のリクエストの一部としてセグメントのメンバーシップが認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントの一部であり、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
+| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、特定の型の 1 つだけです。 `xdm:payloadType` ペイロードのタイプ (`boolean`、 `number`、 `propensity`または `string`) を示し、兄弟プロパティはペイロードタイプの値を提供します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-For more details on the field group, refer to the public XDM repository:
+フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [入力例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

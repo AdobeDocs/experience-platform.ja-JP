@@ -1,8 +1,9 @@
 ---
 title: 非同期デプロイメント
-description: Web サイトで Adobe Experience Platform タグライブラリを非同期でデプロイする方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Web サイトで Adobe Experience Platform タブライブラリを非同期でデプロイする方法について説明します。
+exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-アドビの製品で必要となる JavaScript ライブラリのパフォーマンスとノンブロッキングデプロイメントは、 Adobe Experience Cloud ユーザーにとってますます重要となっています。[[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) などのツールは、自社のサイトでのアドビライブラリのデプロイ方法を変更するユーザーにお勧めです。この記事では、アドビの JavaScript ライブラリを非同期で使用する方法について説明します。
+製品で必要となる JavaScript ライブラリのパフォーマンスとノンブロッキングデプロイメントは、 Adobe Experience Cloud ユーザーにとってますます重要となっています。[[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) などのツールでは、ユーザーがサイトにアドビライブラリをデプロイする方法を変更することを推奨しています。この記事では、非同期的に Adobe JavaScript ライブラリを使用する方法について説明します。
 
 ## 同期と非同期
 
@@ -44,13 +45,13 @@ ht-degree: 100%
 
 ## 非同期デプロイメントに関する考慮事項
 
-前述のように、同期デプロイメントでは、Adobe Experience Platform タグライブラリの読み込みおよび実行中、ブラウザーはページの解析とレンダリングを一時停止します。一方、非同期デプロイメントでは、ライブラリの読み込み中、ブラウザーはページの解析とレンダリングを続行します。ページの解析とレンダリングに関連して、タグライブラリの読み込みが完了するタイミングのばらつきを考慮する必要があります。
+上述のように、同期デプロイメントでは、Adobe Experience Platform タブライブラリの読み込み中および実行中、ブラウザーはページの解析とレンダリングを一時停止します。一方、非同期デプロイメントでは、ライブラリの読み込み中、ブラウザーはページの解析とレンダリングを続行します。ページの解析とレンダリングに関連して、タグライブラリの読み込みが完了するタイミングのばらつきを考慮する必要があります。
 
-まず、タグライブラリの読み込みは、ページの下部が解析および実行される前に終わることもあれば、後に終わることもあるため、ページコードから `_satellite.pageBottom()` を呼び出すべきではありません（`_satellite` は、ライブラリが読み込まれるまでは使用できません）。これについては、[タグ埋め込みコードの非同期読み込み](#loading-the-tags-embed-code-asynchronously)で説明しています。
+まず、タグライブラリの読み込みは、ページの下部が解析および実行される前に終わることもあれば、後に終わることもあるため、ページコードから `_satellite.pageBottom()` を呼び出さないでください（`_satellite` はライブラリが読み込まれるまで利用できません）。これについては、[タグ埋め込みコードの非同期読み込み](#loading-the-tags-embed-code-asynchronously)で説明しています。
 
-次に、タグライブラリは、[`DOMContentLoaded`](https://developer.mozilla.org/ja-JP/docs/Web/Events/DOMContentLoaded) ブラウザーイベント（DOM Ready）の発生前または発生後に読み込みを終了する場合があります。
+次に、タグライブラリは、[`DOMContentLoaded`](https://developer.mozilla.org/ja-JP/docs/Web/Events/DOMContentLoaded) ブラウザーイベント（DOM Ready）の発生前または発生後に読み込みを終了できます。
 
-これらの 2 点により、 タグライブラリを非同期的に読み込む際、Core 拡張機能の [Library Loaded](../../extensions/web/core/overview.md#library-loaded-page-top)、[Page Bottom](../../extensions/web/core/overview.md#page-bottom)、[DOM Ready](../../extensions/web/core/overview.md#page-bottom) および [Window Loaded](../../extensions/web/core/overview.md#window-loaded) イベントタイプがどのように機能するかを示すとよいでしょう。
+これら 2 つの点により、 ライブラリを非同期的に読み込む際、コア拡張機能の [Library Loaded](../../extensions/web/core/overview.md#library-loaded-page-top)、[Page Bottom](../../extensions/web/core/overview.md#page-bottom)、[DOM Ready](../../extensions/web/core/overview.md#page-bottom) および [Window Loaded](../../extensions/web/core/overview.md#window-loaded) イベントタイプがどのように機能するかを示すとよいでしょう。
 
 タグプロパティに次の 4 つのルールが含まれる場合：
 
@@ -66,8 +67,8 @@ ht-degree: 100%
 順序は常に適用されますが、ルールにはタグライブラリの読み込みが終了するとすぐに実行されるものと、後で実行されるものがあります。タグライブラリ読み込みが終了すると、次のことが発生します。
 
 1. ルール A はすぐに実行されます。
-1. `DOMContentLoaded` ブラウザーイベント（DOM Ready）が既に発生している場合は、ルール B とルール C がすぐに実行されます。それ以外の場合は、ルール B とルール C は後で [`DOMContentLoaded`](https://developer.mozilla.org/ja-JP/docs/Web/Events/DOMContentLoaded) ブラウザーイベントが発生したときに実行されます。
-1. [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベント（Window Loaded）が既に発生している場合は、ルール D が即座に実行されます。それ以外の場合は、ルール D は後で [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベントが発生したときに実行されます。手順に従ってタグライブラリをインストールした場合、タグライブラリでは&#x200B;*常に*、[`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベントが発生する前にライブラリの読み込みが完了することに注意してください。
+1. `DOMContentLoaded` ブラウザーイベント（DOM Ready）が既に発生している場合は、ルール B とルール C がすぐに実行されます。それ以外の場合は、ルール B とルール C は後で [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) ブラウザーイベントが発生したときに実行されます。
+1. [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベント（Window Loaded）が既に発生している場合は、ルール D が即座に実行されます。それ以外の場合は、ルール D は後で [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) ブラウザーイベントが発生したときに実行されます。指示に従ってタグライブラリをインストールした場合、 タグライブラリでは&#x200B;*常に*、 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) ブラウザーイベントが発生する前に読み込みが完了することに注意してください。
 
 これらの原則を独自の Web サイトに適用する際には、次の点に注意してください。
 
@@ -78,11 +79,11 @@ ht-degree: 100%
 
 ## 非同期でのタグ埋め込みコードの読み込み
 
-タグでは、[環境](../publishing/environments.md)設定時に埋め込みコードを作成する際、非同期での読み込みをオンにする切り替えを提供します。また、非同期読み込みを自分で設定することもできます。
+タグでは、[環境](../publishing/environments.md)を設定する時に埋め込みコードを作成する際、非同期での読み込みをオンにする切り替えを提供します。また、非同期読み込みを自分で設定することもできます。
 
 1. 非同期属性を `<script>` タグに追加して、非同期的にスクリプトを読み込みます。
 
-   タグ埋め込みコードの場合、これを変更することになります。
+   タグ埋め込みコードの場合、次のコードを変更します。
 
    ```markup
    <script src="//www.yoururl.com/launch-EN1a3807879cfd4acdc492427deca6c74e.min.js"></script>
@@ -100,4 +101,4 @@ ht-degree: 100%
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   このコードは、ブラウザーパーサーがページの末尾に到達したことを Platform に伝えます。この時間までにタグが読み込みおよび実行されていない可能性があるため、`_satellite.pageBottom()` を呼び出すとエラーが発生し、「Page Bottom」イベントタイプが期待どおりに動作しない場合があります。
+   このコードは、ブラウザーパーサーがページの最下部に到達したことを Platform に伝えます。この時間までにタグが読み込みおよび実行されていない可能性があるため、`_satellite.pageBottom()` を呼び出すとエラーが発生し、「Page Bottom」イベントタイプが期待どおりに動作しない可能性があります。

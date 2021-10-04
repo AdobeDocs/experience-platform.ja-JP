@@ -16,6 +16,6 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] は、現在、次のモバイルエンゲージメントの宛先をサポートしています。
 
-* [飛行船属性の接続](airship-attributes.md)
+* [航空船属性の接続](airship-attributes.md)
 * [航空船タグ接続](airship-tags.md)
 * [接続をブレーズ](braze.md)

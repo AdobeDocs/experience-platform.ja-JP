@@ -3,7 +3,7 @@ title: ホストエンドポイント
 description: Reactor API で /hosts エンドポイントを呼び出す方法を説明します。
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Platform Web SDKで自動的に収集された情報
-description: Adobe Experience Platform SDKが自動的に収集する各情報の概要です。
-keywords: 情報の収集；コンテキスト；設定；device;screenHeight;screenOrientation;screenOrientation;screenOrientation;screenWidth;screenWidth;environment;viewportHeight;viewportWidth;viewportWidth;viewportWidth;browserDetails；実装の詳細；実装の詳細；バージョン；placeContext;localTime;localTime;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+title: Adobe Experience Platform Web SDK で自動的に収集される情報
+description: Adobe Experience Platform SDK が自動的に収集する各情報の概要です。
+keywords: 情報の収集；コンテキスト；設定；デバイス；screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;environment;viewportHeight;viewportHeight;viewportWidth;viewportWidth;viewportWidth;crowserDetails；ブラウザー詳細；実装の詳細；実装の詳細；バージョン；placeContext;localTime;localTimezoneOffset ローカルタイムゾーンのオフセット；タイムスタンプ；web;url;webPageDetails;web ページの詳細；webReferrer;web Referrer;landscape;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 # 自動的に収集された情報
 
-Adobe Experience Platform Web SDKは、特別な設定を行わずに、多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
+Adobe Experience Platform Web SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
 ## デバイス（`device`）
 
@@ -54,7 +54,7 @@ Adobe Experience Platform Web SDKは、特別な設定を行わずに、多数�
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-エクスペリエンスが表示される環境のタイプ。 Adobe Experience Platform Web SDKは、常に`browser`に設定します。
+エクスペリエンスが表示される環境のタイプ。 Adobe Experience Platform Web SDK は、常に `browser` に設定します。
 
 ### ビューポートの高さ
 
@@ -82,7 +82,7 @@ Adobe Experience Platform Web SDKは、特別な設定を行わずに、多数�
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。スタンドアロンライブラリを使用する場合、値は`https://ns.adobe.com/experience/alloy`です。 ライブラリをタグ拡張の一部として使用する場合、値は`https://ns.adobe.com/experience/alloy+reactor`です。
+ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。スタンドアロンライブラリを使用する場合、値は `https://ns.adobe.com/experience/alloy` です。 ライブラリをタグ拡張の一部として使用する場合、値は `https://ns.adobe.com/experience/alloy+reactor` です。
 
 ### バージョン
 
@@ -90,7 +90,7 @@ Adobe Experience Platform Web SDKは、特別な設定を行わずに、多数�
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-スタンドアロンライブラリを使用する場合、の値は単にライブラリバージョンになります。 ライブラリをタグ拡張の一部として使用する場合、これはライブラリバージョンであり、「+」で結合されたタグ拡張バージョンです。 例えば、ライブラリのバージョンが2.1.0で、タグ拡張のバージョンが2.1.3の場合、値は`2.1.0+2.1.3`になります。
+スタンドアロンライブラリを使用する場合、の値は単にライブラリバージョンです。 ライブラリをタグ拡張の一部として使用する場合、これはライブラリバージョンであり、タグ拡張のバージョンは「+」で結合されています。 例えば、ライブラリのバージョンが 2.1.0 で、タグ拡張のバージョンが 2.1.3 の場合、値は `2.1.0+2.1.3` になります。
 
 ### 環境
 
@@ -98,7 +98,7 @@ Adobe Experience Platform Web SDKは、特別な設定を行わずに、多数�
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-データが収集された環境。 これは常に`browser`に設定されます。
+データが収集された環境。 これは常に `browser` に設定されます。
 
 ## 場所コンテキスト（`placeContext`）
 

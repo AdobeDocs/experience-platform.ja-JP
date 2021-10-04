@@ -5,7 +5,7 @@ title: スキーマ API エンドポイント
 topic-legacy: schemas
 description: 'Adobe Experience Platform API で「/schemas」エンドポイントを使用し、Platform のマッパーで使用するスキーマをプログラムにより取得、作成および更新できます。 '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 100%
 

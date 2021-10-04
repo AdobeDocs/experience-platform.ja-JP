@@ -1,8 +1,9 @@
 ---
 title: 自己ホスト型ライブラリ
-description: Adobe Experience Platform でタグライブラリビルドの自己ホストを実装する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform でタグライブラリビルドのセルフホスティングを実装する方法について説明します。
+exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Adobe Experience Platform のタグを使用すると、[ビルド](../builds.md)と呼ばれる一連のファイルを作成できます。このファイルセットは、実行時のアプリケーションの動作を制御します。
+Adobe Experience Platform のタグを使用すると、 [ビルド](../builds.md) と呼ばれる一連のファイルを作成できます。このファイルセットは、実行時のアプリケーションの動作を制御します。
 
 ビルドは任意の場所にホストする必要があり、クライアントデバイスが必要に応じて実行時に取得できるよう、どこかでホストする必要があります。
 
@@ -32,7 +33,7 @@ Platform がこれらのファイルのホストを管理することも、ユ�
 
 ## 自己ホスト
 
-ホストされているファイルの管理をアドビに任せたくない場合は、自社でホストする必要があります。ファイルをホストするには、Platform から完成したビルドを取得し、会社のリリースサイクルを通じて会社が管理するサーバーでファイルを取得する責任を負う必要があります。
+ホストされているファイルの管理をアドビに任せたくない場合は、自社でホストする必要があります。ファイルをホストするには、Platform から完成したビルドを取得し、会社のリリースサイクルを通じて会社が管理するサーバーにファイルを取得する必要があります。
 
 ### 自己ホストを使用する理由
 

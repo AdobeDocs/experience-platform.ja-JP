@@ -2,13 +2,13 @@
 keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシュボード;ダッシュボード;プロファイル;セグメント;宛先
 title: ダッシュボードのカスタマイズの概要
 description: Adobe Experience Platform ダッシュボードに表示されるデータをカスタマイズする方法について詳しく説明します。
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
-workflow-type: ht
+exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 100%
 
 ---
-
 
 # ダッシュボードのカスタマイズの概要
 

@@ -5,7 +5,7 @@ description: アラートルールの定義方法など、Adobe Experience Platf
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 100%
 

@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform、ホーム、人気のあるトピック、データタイプ、データタイプ、データタイプ、データタイプ、セグメント化データタイプ、セグメント化、セグメント化、セグメント化サービス、セグメント化サービスのデータタイプ、
+keywords: Experience Platform；ホーム；人気のあるトピック；データタイプ；データタイプ；データタイプ；データタイプ；データタイプ；セグメント化データタイプ；セグメント化；セグメント化；セグメント化サービス；セグメント化サービスデータタイプ；
 solution: Experience Platform
 title: セグメント化サービスでサポートされるデータタイプ
 topic-legacy: overview
-description: エクスペリエンスデータモデル(XDM)のすべてのデータタイプは、エクスペリエンスセグメント化サービス内でAdobeされます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+description: エクスペリエンスデータモデル (XDM) のすべてのデータタイプは、エクスペリエンスセグメント化サービス内でAdobeされます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
 # セグメント化サービスでサポートされるデータタイプ
 
-Adobe Experience Platform Segmentation Service内では、すべてのエクスペリエンスデータモデル(XDM)データタイプがサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+すべてのエクスペリエンスデータモデル (XDM) データタイプは、Adobe Experience Platform Segmentation Service 内でサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
 ## 文字列データ
 
@@ -39,7 +39,7 @@ Adobe Experience Platform Segmentation Service内では、すべてのエクス�
 
 ## エクスペリエンスイベント
 
-Adobe Experience Platformスキーマとして、[!DNL XDM ExperienceEvents]は、顧客と[!DNL Platform]統合されたアプリケーションとの明示的および暗黙的なやり取りを記録します。これには、やり取りがおこなわれた時点のシステムのスナップショットが含まれます。 [!DNL ExperienceEvents] はファクトレコードです。したがって、セグメント定義時に使用できるデータソースになります。
+Adobe Experience Platformスキーマとして、[!DNL XDM ExperienceEvents] は、顧客と [!DNL Platform] 統合されたアプリケーションとの明示的かつ暗黙的なやり取りを記録します。これには、やり取りがおこなわれた時点のシステムのスナップショットが含まれます。 [!DNL ExperienceEvents] はファクトレコードです。したがって、セグメント定義時に使用できるデータソースになります。
 
 次の表に示すように、イベントデータは、イベント動作の絞り込みやイベント属性の指定に役立つキーワードを使用して表現されます。
 
@@ -54,11 +54,11 @@ Adobe Experience Platformスキーマとして、[!DNL XDM ExperienceEvents]は�
 
 外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
 
-現在、外部オーディエンスとしてはAdobe Audience Managerのみがサポートされ、今後追加のソースが有効になる予定です。 Adobe Audience ManagerオーディエンスをPlatformで使用する方法について詳しくは、Adobe Audience Managerドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)の「[オーディエンス共有ガイド」を参照してください。
+現在、外部オーディエンスとしてはAdobe Audience Managerのみがサポートされ、今後追加のソースが有効になります。 Adobe Audience Managerオーディエンスを Platform で使用する方法について詳しくは、Adobe Audience Managerドキュメントの ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja) にある「[ オーディエンス共有ガイド」を参照してください。
 
 ### セグメントの共有
 
-Platformで作成されたセグメントは、他の[Adobe Experience Cloudコアサービス](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html)内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
+Platform で作成されたセグメントは、他の [Adobe Experience Cloudコアサービス ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
 
 ## その他のデータタイプ
 

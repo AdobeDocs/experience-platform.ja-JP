@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: 電子メールマーケティングの宛先に接続し、フローサービスAPIを使用してデータをアクティブ化する
-description: このドキュメントでは、Adobe Experience Platform APIを使用した電子メールマーケティングの宛先の作成について説明します
+title: 電子メールマーケティングの宛先に接続し、フローサービス API を使用してデータをアクティブ化する
+description: このドキュメントでは、Adobe Experience Platform API を使用した電子メールマーケティングの宛先の作成について説明します
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '1701'
-ht-degree: 71%
+ht-degree: 72%
 
 ---
 
-# 電子メールマーケティングの宛先に接続し、フローサービスAPIを使用してデータをアクティブ化する
+# 電子メールマーケティングの宛先に接続し、フローサービス API を使用してデータをアクティブ化する
 
 このチュートリアルでは、API 呼び出しを使用して Adobe Experience Platform のデータに接続する方法、[電子メールマーケティングの宛先](../catalog/email-marketing/overview.md)を作成する方法、新しく作成した宛先へのデータフローを作成する方法および新しく作成した宛先へのデータをアクティブ化する方法を説明します。
 
@@ -21,23 +21,23 @@ ht-degree: 71%
 
 ![概要 - 宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/email-marketing/overview.png)
 
-Platformのユーザーインターフェイスを使用して宛先を接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md)と[オーディエンスデータをバッチプロファイル書き出し先にアクティブ化](../ui/activate-batch-profile-destinations.md)のチュートリアルを参照してください。
+Platform のユーザーインターフェイスを使用して宛先を接続し、データをアクティブ化する場合は、 [ 宛先の接続 ](../ui/connect-destination.md) と [ オーディエンスデータをバッチプロファイル書き出し先にアクティブ化 ](../ui/activate-batch-profile-destinations.md) のチュートリアルを参照してください。
 
 ## はじめに
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所とリネージのレコードシステムで [!DNL Experience Platform]す。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分割 [!DNL Platform] し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所とリネージのレコードのシステムで [!DNL Experience Platform]す。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分 [!DNL Platform] 割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、Platformで電子メールマーケティングの宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報を示します。
+以下の節では、Platform の電子メールマーケティングの宛先に対してデータをアクティブ化するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
 このチュートリアルの手順を完了するには、接続してセグメントをアクティブ化する宛先の種類に応じて、次の資格情報を準備しておく必要があります。
 
-* 電子メールマーケティングプラットフォームへの[!DNL Amazon] S3接続の場合：`accessId`、`secretKey`
+* 電子メールマーケティングプラットフォームへの [!DNL Amazon] S3 接続の場合：`accessId`, `secretKey`
 * 電子メールマーケティングプラットフォームへの SFTP 接続：`domain`、`port`、`username`、`password`または`ssh key`（FTP ロケーションへの接続方法による）
 
 ### API 呼び出し例の読み取り
@@ -52,7 +52,7 @@ Platformのユーザーインターフェイスを使用して宛先を接続し
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform]内のリソースは、特定の仮想サンドボックスに分離できます。 [!DNL Platform] APIへのリクエストでは、操作を実行するサンドボックスの名前とIDを指定できます。 次に、オプションのパラメーターを示します。
+[!DNL Experience Platform] 内のリソースは、特定の仮想サンドボックスに分離できます。 [!DNL Platform] API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。 次に、オプションのパラメーターを示します。
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -66,7 +66,7 @@ Platformのユーザーインターフェイスを使用して宛先を接続し
 
 ### Swagger のドキュメント
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/) の [ フローサービス API のドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能な宛先のリストを取得する {#get-the-list-of-available-destinations}
 
@@ -120,17 +120,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## [!DNL Experience Platform]データに接続する {#connect-to-your-experience-platform-data}
+## [!DNL Experience Platform] データに接続 {#connect-to-your-experience-platform-data}
 
 ![宛先の指定手順の概要 - 手順 2](../assets/api/email-marketing/step2.png)
 
-次に、[!DNL Experience Platform]データに接続し、目的の宛先でプロファイルデータを書き出してアクティブ化できるようにする必要があります。 そのためには、以下に示す 2 つの手順を実行します。
+次に、[!DNL Experience Platform] データに接続し、目的の宛先にプロファイルデータを書き出してアクティブ化できるようにする必要があります。 そのためには、以下に示す 2 つの手順を実行します。
 
-1. まず、[!DNL Experience Platform]内のデータへのアクセスを認証する呼び出しを実行し、ベース接続を設定する必要があります。
-2. 次に、ベース接続IDを使用して、ソース接続を作成する別の呼び出しをおこない、[!DNL Experience Platform]データへの接続を確立します。
+1. 最初に、[!DNL Experience Platform] 内のデータへのアクセスを認証する呼び出しを実行します。そのためには、ベース接続を設定します。
+2. 次に、ベース接続 ID を使用して、ソース接続を作成する別の呼び出しを行い、[!DNL Experience Platform] データへの接続を確立します。
 
 
-### [!DNL Experience Platform]のデータへのアクセスを許可する
+### [!DNL Experience Platform] 内のデータへのアクセスを許可する
 
 **API 形式**
 
@@ -182,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様ID( )を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
+* `{CONNECTION_SPEC_ID}`:プロファイルサービスの接続仕様 ID( ) を使用しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
 
 **応答** 
 
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### [!DNL Experience Platform]データに接続する {#connect-to-platform-data}
+### [!DNL Experience Platform] データに接続 {#connect-to-platform-data}
 
 **API 形式**
 
@@ -256,11 +256,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得した ID を使用します。
-* `{CONNECTION_SPEC_ID}`: — の接続仕様IDを使用 [!DNL Profile Service] しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
+* `{CONNECTION_SPEC_ID}`: — の接続仕様 ID を使用 [!DNL Profile Service] しま `8a9c3494-9708-43d7-ae3f-cda01e5030e1`す。
 
 **応答**
 
-正常な応答は、[!DNL Profile Service]への新しく作成されたソース接続を表す一意の識別子(`id`)を返します。 これにより、[!DNL Experience Platform]データに正常に接続できたことが確認できます。 この値は、後の手順で必要になるため保存します。
+正常な応答は、[!DNL Profile Service] への新しく作成されたソース接続を表す一意の識別子 (`id`) を返します。 これにより、[!DNL Experience Platform] データに正常に接続できたことが確認できます。 この値は、後の手順で必要になるため保存します。
 
 ```json
 {
@@ -364,9 +364,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] は、エクスポートファイルを1ファイルあたり500万レコード（行）に自動的に分割します。各行は、1つのプロファイルを表します。
+>[!DNL Adobe Experience Platform] は、エクスポートファイルを 1 ファイルあたり 500 万レコード（行）に自動的に分割します。各行は、1 つのプロファイルを表します。
 >
->分割ファイル名には、ファイルが大きなエクスポートの一部であることを示す数字が付加されます。例：`filename.csv`、`filename_2.csv`、`filename_3.csv`。
+>分割ファイル名には、次のように、ファイルが大きなエクスポートの一部であることを示す数字が付加されます。`filename.csv`、`filename_2.csv`、`filename_3.csv`。
 
 **API 形式**
 
@@ -442,8 +442,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得したベース接続 ID を使用します。
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{BUCKETNAME}`:Platformが [!DNL Amazon] データ書き出しを格納するS3バケット。
-* `{FILEPATH}`:Platformがデータ書き出し [!DNL Amazon] を格納するS3バケットディレクトリのパス。
+* `{BUCKETNAME}`:Platform が [!DNL Amazon] データ書き出しを格納する S3 バケット。
+* `{FILEPATH}`:Platform がデータ書き出 [!DNL Amazon] しを格納する S3 バケットディレクトリのパス。
 
 **応答** 
 
@@ -459,7 +459,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![宛先の指定手順の概要 - 手順 4](../assets/api/email-marketing/step4.png)
 
-前の手順で取得したIDを使用して、[!DNL Experience Platform]データと、データをアクティブ化する宛先との間にデータフローを作成できます。 この手順は、パイプラインを構築し、このパイプラインを通って[!DNL Experience Platform]と目的の宛先との間を流れると考えます。
+前の手順で取得した ID を使用して、[!DNL Experience Platform] データと、データをアクティブ化する宛先との間にデータフローを作成できます。 この手順は、後でデータが流れるパイプラインを構築する手順と考えてください。このパイプラインを通って、[!DNL Experience Platform] と目的の宛先の間を流れます。
 
 データフローを作成するには、以下のような POST リクエストを実行します。このとき、ペイロード内で以下に示す値を指定します。
 
@@ -592,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`：前述の手順で取得したデータフローを使用します。
 * `{ETAG}`：前述の手順で取得した ETag を使用します。
-* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメントIDを取得するには、**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;に移動し、左側のナビゲーションメニューで「**[!UICONTROL Segmentation Service API]**」を選択して、「**[!UICONTROL Segment Definitions]**」で`GET /segment/definitions`操作を探します。
+* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメント ID を取得するには、**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** に移動し、左側のナビゲーションメニューで **[!UICONTROL Segmentation Service API]** を選択して、**[!UICONTROL Segment Definitions]** で `GET /segment/definitions` 操作を探します。
 * `{PROFILE_ATTRIBUTE}`：例えば、`"person.lastName"` などです。
 
 **応答** 
@@ -659,7 +659,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 次の手順
 
-このチュートリアルに従うと、Platformを目的の電子メールマーケティングの宛先の1つに接続し、それぞれの宛先へのデータフローを設定できます。 これで、発信データを電子メールキャンペーン、ターゲット広告、ほかの多くの使用事例の宛先で使用することができます。詳しくは、以下のページを参照してください。
+このチュートリアルに従うと、Platform を目的の電子メールマーケティングの宛先の 1 つに接続し、それぞれの宛先へのデータフローを設定できます。 これで、発信データを電子メールキャンペーン、ターゲット広告、ほかの多くの使用事例の宛先で使用することができます。詳しくは、以下のページを参照してください。
 
 * [Destinations overview](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

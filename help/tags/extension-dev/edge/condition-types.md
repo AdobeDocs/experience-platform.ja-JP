@@ -1,8 +1,9 @@
 ---
 title: Edge 拡張機能の条件のタイプ
 description: Adobe Experience Platform のエッジ拡張機能の条件タイプライブラリモジュールを定義する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+> Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグのルールでは、条件はイベントの発生後に評価されます。 ルールの処理を続行するには、すべての条件が true を返す必要があります。 条件タイプは拡張機能によって提供され、対象が true と false のどちらであるかを評価します。
 
@@ -31,7 +32,7 @@ ht-degree: 100%
 1. データ収集 UI に表示されるビュー。条件の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、条件を評価します。
 
-例えば、ユーザーが `example.com` ホスト上にいるかどうかを評価したい場合、モジュールは次のようになります。
+例えば、ユーザーがホスト `example.com` にいるかどうかを評価したい場合、モジュールは次のようになります。
 
 ```js
 module.exports = (context) => {
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-ユーザーがホスト名を設定できるようにして、ホスト名の入力を許可し、設定オブジェクトに保存する場合、オブジェクトは次の例のようになります。
+ユーザーがホスト名を設定できるようにして、ホスト名の入力を許可し、settings オブジェクトに保存する場合、オブジェクトはこの例のようになります。
 
 ```js
 {

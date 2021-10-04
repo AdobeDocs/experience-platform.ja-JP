@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；AmazonKinesis;amazon kinesis;Kinesis;kinesis
+keywords: Experience Platform；ホーム；人気のあるトピック；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: AmazonKinesisソースコネクタの概要
+title: Amazon Kinesis Source Connector の概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用して、AmazonKinesisをAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-translation-type: tm+mt
 source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
 workflow-type: tm+mt
 source-wordcount: '497'
@@ -15,30 +14,30 @@ ht-degree: 1%
 
 # [!DNL Amazon Kinesis] コネクタ
 
-Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
+Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供します。 これらのシステムのデータを [!DNL Platform] に取り込むことができます。
 
-Cloudストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを[!DNL Platform]に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parket、または区切り形式で形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] データをリアルタイムで取り込むこ [!DNL Amazon Kinesis] とができます。
+クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] を使用すると、からデータをリアルタイム [!DNL Amazon Kinesis] で取り込むことができます。
 
-## IPアドレス許可リスト
+## IP アドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
 ## 前提条件
 
-次の節では、[!DNL Kinesis]ソース接続を作成する前に必要な前提条件の設定に関する詳細を説明します。
+次の節では、[!DNL Kinesis] ソース接続を作成する前に必要な前提条件の設定に関する詳細を説明します。
 
 ### アクセスポリシーの設定
 
-[!DNL Kinesis]ストリームは、ソース接続を作成するために次の権限が必要です。
+[!DNL Kinesis] ストリームには、ソース接続を作成するために次の権限が必要です。
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-これらの権限は[!DNL Kinesis]コンソールを介して設定され、資格情報を入力してデータストリームを選択すると、プラットフォームによって確認されます。
+これらの権限は、[!DNL Kinesis] コンソールを通じて設定され、資格情報を入力してデータストリームを選択すると、Platform によって確認されます。
 
-次の例は、[!DNL Kinesis]ソース接続を作成するのに必要な最小アクセス権を示しています。
+次の例は、[!DNL Kinesis] ソース接続を作成するために必要な最小限のアクセス権を示しています。
 
 ```json
 {
@@ -62,39 +61,39 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `kinesis:GetShardIterator` | レコード間を移動するために必要なアクションです。 |
-| `kinesis:GetRecords` | 特定のオフセットIDまたは共有IDからレコードを取得するために必要なアクション。 |
-| `kinesis:DescribeStream` | 共有IDの生成に必要な共有マップを含むストリームに関する情報を返すアクション。 |
-| `kinesis:ListStreams` | UIから選択できる使用可能なストリームをリストするために必要なアクション。 |
+| `kinesis:GetShardIterator` | レコード間を移動するために必要なアクション。 |
+| `kinesis:GetRecords` | 特定のオフセット ID または共有 ID からレコードを取得するために必要なアクション。 |
+| `kinesis:DescribeStream` | シャードマップを含むストリームに関する情報を返すアクション。シャード ID の生成に必要です。 |
+| `kinesis:ListStreams` | UI から選択できる使用可能なストリームのリストアウトに必要なアクション。 |
 
-[!DNL Kinesis]データストリームのアクセス制御について詳しくは、次の[[!DNL Kinesis] ドキュメント](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)を参照してください。
+[!DNL Kinesis] データストリームのアクセス制御の詳細については、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
 
-### 反復子の型を設定
+### イテレータ型の設定
 
-[!DNL Kinesis] は、次のイテレータタイプをサポートしており、データの読み取り順序を指定できます。
+[!DNL Kinesis] では、次のイテレータ型をサポートしており、データの読み取り順序を指定できます。
 
-| 反復子タイプ | 説明 |
+| 反復子の型 | 説明 |
 | ------------- | ----------- |
-| `AT_SEQUENCE_NUMBER` | 特定のシーケンス番号で識別される位置からデータの読み出しを開始する。 |
-| `AFTER_SEQUENCE_NUMBER` | 特定のシーケンス番号で識別された位置からデータの読み出しを開始する。 |
-| `AT_TIMESTAMP` | 特定のタイムスタンプで識別される位置からデータの読み出しを開始する。 |
-| `TRIM_HORIZON` | 最も古いデータレコードからデータが読み込まれます。 |
-| `LATEST` | 最新のデータレコードからデータが読み込まれます。 |
+| `AT_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
+| `AFTER_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
+| `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別された位置から読み出される。 |
+| `TRIM_HORIZON` | データは、最も古いデータレコードから読み取られます。 |
+| `LATEST` | データは、最新のデータレコードから読み取られます。 |
 
-[!DNL Kinesis] UIソースは現在`TRIM_HORIZON`をサポートしていますが、APIはデータを取得するためのモードとして`TRIM_HORIZON`と`LATEST`の両方をサポートしています。 Platformが[!DNL Kinesis]ソースに対して使用するデフォルトのイテレータ値は`TRIM_HORIZON`です。
+現在、[!DNL Kinesis] UI ソースは `TRIM_HORIZON` のみをサポートしていますが、API はデータを取得するモードとして、`TRIM_HORIZON` と `LATEST` の両方をサポートしています。 Platform が [!DNL Kinesis] ソースに使用するデフォルトのイテレータ値は `TRIM_HORIZON` です。
 
-イテレーターの型について詳しくは、次の[[!DNL Kinesis] ドキュメント](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)を参照してください。
+イテレータ型の詳細は、次の [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) を参照してください。
 
-## [!DNL Amazon Kinesis]を[!DNL Platform]に接続
+## [!DNL Amazon Kinesis] を [!DNL Platform] に接続
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Amazon Kinesis]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Amazon Kinesis] を [!DNL Platform] に接続する方法について説明します。
 
-### APIの使用
+### API の使用
 
-- [Flow Service APIを使用してAmazonKinesisのソース接続を作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Flow Service APIを使用してストリーミングデータを収集する](../../tutorials/api/collect/streaming.md)
+- [フローサービス API を使用したAmazon Kinesisソース接続の作成](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [フローサービス API を使用したストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
-- [UIでのAmazonKinesisソース接続の作成](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [UI でのAmazon Kinesisソース接続の作成](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [UI でのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

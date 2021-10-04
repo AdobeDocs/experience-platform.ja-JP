@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Observability Insights は、Platform アクティビティに主要指標を公開できる RESTful API です。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 100%
 

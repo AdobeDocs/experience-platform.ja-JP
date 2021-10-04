@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；エンジン；先生の機械学習api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；よく読まれるトピック；エンジン；sensei 機械学習 api
 solution: Experience Platform
-title: エンジンAPIエンドポイント
+title: エンジン API エンドポイント
 topic-legacy: Developer guide
 description: エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
@@ -21,7 +20,7 @@ ht-degree: 69%
 
 >[!TIP]
 >
->Docker URLがない場合は、[Package source files into a recipe](../models-recipes/package-source-files-recipe.md)チュートリアルを参照し、DockerホストURLの作成手順を確認してください。
+>Docker URL がない場合は、『[ ソースファイルをレシピにパッケージ化 ](../models-recipes/package-source-files-recipe.md)』チュートリアルを参照して、Docker ホスト URL の作成手順を確認してください。
 
 パッケージ化されたレシピファイル（Docker ホストの URL、ユーザー名、パスワードなど）をアップロードするには、Docker レジストリ資格情報が必要です。この情報は、次の GET リクエストを実行することで調べることができます。
 
@@ -67,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 POST /engines
 ```
 
-**Python/Rの要求**
+**Python/R をリクエスト**
 
 ```shell
 curl -X POST \
@@ -103,9 +102,9 @@ curl -X POST \
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
 
-**PySpark/Scalaの要求**
+**PySpark/Scala をリクエスト**
 
-PySparkレシピをリクエストする際、`executionType`と`type`は&quot;PySpark&quot;です。 Scalaレシピのリクエストを行う場合、`executionType`と`type`は&quot;Spark&quot;です。 次のScalaレシピの例ではSparkを使用しています。
+PySpark レシピをリクエストする場合、 `executionType` と `type` は「PySpark」になります。 Scala レシピをリクエストする場合、`executionType` と `type` は「Spark」になります。 次の Scala レシピの例では、Spark を使用しています。
 
 ```shell
 curl -X POST \
@@ -137,14 +136,14 @@ curl -X POST \
 | --- | --- |
 | `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
-| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドは`databricks-spark`に設定する必要があります。 |
-| `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
+| `type` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 値は Spark または PySpark に設定できます。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 このフィールドは `databricks-spark` に設定する必要があります。 |
+| `artifacts.default.image.location` | Docker イメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhub のみがサポートされています。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 「Spark」または「PySpark」を指定できます。 |
 
 **応答**
 
-正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次に示すのは、Pythonエンジンの応答例です。 すべてのエンジンの応答は次の形式に従います。
+正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次のレスポンスの例は、Python エンジン用です。 すべてのエンジン応答は、次の形式に従います。
 
 ```json
 {
@@ -171,9 +170,9 @@ curl -X POST \
 }
 ```
 
-## Docker URLを使用してフィーチャパイプラインエンジンを作成する{#feature-pipeline-docker}
+## Docker URL を使用した機能パイプラインエンジンの作成 {#feature-pipeline-docker}
 
-フィーチャパイプラインエンジンは、メタデータとDockerPOSTを参照するDocker URLを提供しながらイメージリクエストを実行することで作成できます。
+機能パイプラインエンジンを作成するには、メタデータと Docker 画像を参照する Docker URL を提供しながらPOSTリクエストを実行します。
 
 **API 形式**
 
@@ -214,19 +213,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
-| `algorithm` | 使用中のアルゴリズムで、この値を`fp` （フィーチャパイプライン）に設定します。 |
-| `name` | フィーチャーパイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
+| `type` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 値は Spark または PySpark に設定できます。 |
+| `algorithm` | 使用するアルゴリズムで、この値を `fp`（機能パイプライン）に設定します。 |
+| `name` | 機能パイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドは`databricks-spark`に設定する必要があります。 |
-| `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
-| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は`docker`に設定する必要があります。 |
-| `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json`構成ファイルのパラメーター。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 このフィールドは `databricks-spark` に設定する必要があります。 |
+| `artifacts.default.image.location` | Docker イメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhub のみがサポートされています。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 「Spark」または「PySpark」を指定できます。 |
+| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は `docker` に設定する必要があります。 |
+| `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json` 構成ファイルのパラメータ。 |
 
 **応答**
 
-成功した応答は、新たに作成されたフィーチャーパイプラインエンジンの詳細を含むペイロードを返します。この詳細には、一意の識別子(`id`)が含まれます。 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
+正常な応答は、新しく作成された機能パイプラインエンジンの一意の識別子 (`id`) を含む詳細を含むペイロードを返します。 次のレスポンスは、PySpark 機能パイプラインエンジンの場合のものです。
 
 ```json
 {

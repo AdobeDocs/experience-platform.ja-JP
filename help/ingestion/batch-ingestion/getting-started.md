@@ -3,13 +3,13 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: データ取得 API の概要
 type: Documentation
 description: 『データ取得 API 入門ガイド』では、API を使用してデータをExperience Platformに取り込む前に知っておく必要がある、主な概念と基本機能の概要を説明しています。
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 43%
 
 ---
-
 
 # データ取得 API の概要 {#getting-started}
 

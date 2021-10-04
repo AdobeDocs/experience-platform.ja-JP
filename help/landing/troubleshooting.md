@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、ホーム、人気のあるトピック、APIエラーコード、APIエラーコード、エラーコードAPI、エラーコードAPI、APIリクエストエラー、APIトラブルシューティング、APIエラー
+keywords: Experience Platform、ホーム、人気のあるトピック、API エラーコード、API エラーコード、エラーコード API、エラーコード API、API リクエストエラー、API トラブルシューティング、API エラー
 solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
 description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
@@ -10,35 +10,35 @@ exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
-# [!DNL Platform] FAQとトラブルシューティングガイド
+# [!DNL Platform] FAQ とトラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platformに関するよくある質問と、[!DNL Experience Platform] APIで発生する可能性のある一般的なエラーの概要レベルのトラブルシューティングガイドについて回答します。 個々の[!DNL Platform]サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+このドキュメントでは、Adobe Experience Platformに関するよくある質問と、[!DNL Experience Platform] API で発生する可能性のある一般的なエラーの高度なトラブルシューティングガイドについて回答します。 個々の [!DNL Platform] サービスのトラブルシューティングガイドについては、以下の [ サービストラブルシューティングディレクトリ ](#service-troubleshooting-directory) を参照してください。
 
 ## FAQ {#faq}
 
 次に、Adobe Experience Platform に関するよくある質問に対する回答をリストします。
 
-## [!DNL Experience Platform] APIとは {#what-are-experience-platform-apis}
+## [!DNL Experience Platform] API とは {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] は、HTTPリクエストを使用してリソースにアクセスする複数のRESTful APIを提 [!DNL Platform] 供します。これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。
+[!DNL Experience Platform] は、HTTP リクエストを使用してリソースにアクセスする複数の RESTful API を提 [!DNL Platform] 供します。これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。
 
 ## API リクエストの形式を設定する方法を教えてください。  {#how-do-i-format-an-api-request}
 
-リクエストの形式は、使用する[!DNL Platform] APIによって異なります。 API呼び出しの構造を学ぶ最善の方法は、使用している特定の[!DNL Platform]サービスのドキュメントに記載されている例に従うことです。
+リクエストの形式は、使用する [!DNL Platform] API によって異なります。 API 呼び出しの構造を学ぶ最善の方法は、使用している特定の [!DNL Platform] サービスのドキュメントに記載されている例に従うことです。
 
-APIリクエストの形式について詳しくは、『Platform API入門ガイド』のAPI呼び出し例](./api-guide.md#sample-api)の節を参照してください。[
+API リクエストの形式について詳しくは、『Platform API 入門ガイド [API 呼び出し例 ](./api-guide.md#sample-api)』の節を参照してください。
 
 ## IMS 組織とは何ですか。  {#what-is-my-ims-organization}
 
-IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。IMS組織が[!DNL Experience Platform]の権利を付与されると、開発者にアクセス権を割り当てることができます。 IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。このIDは、[Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui)で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動し、「**クライアント資格情報**」の下にIDを探します。 [!DNL Platform]への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を参照してください。
+IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。IMS 組織が [!DNL Experience Platform] の権利を付与されると、開発者にアクセス権を割り当てることができます。 IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。この ID は、[Adobe開発者コンソール ](https://www.adobe.com/go/devs_console_ui) で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動し、「**クライアント資格情報**」の下に ID が表示されます。 [!DNL Platform] への認証方法の詳しい手順については、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis) を参照してください。
 
 ## API キーはどこで入手できますか？  {#where-can-i-find-my-api-key}
 
-API キーは、すべての API リクエストのヘッダーとして必要です。これは、[Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui)で確認できます。 コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。[!DNL Platform]に対する認証方法の詳しい手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。
+API キーは、すべての API リクエストのヘッダーとして必要です。これは [Adobe開発者コンソール ](https://www.adobe.com/go/devs_console_ui) で確認できます。 コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。[!DNL Platform] に対する認証方法の詳しい手順については、[ 認証に関するチュートリアル ](https://www.adobe.com/go/platform-api-authentication-en) を参照してください。
 
 ## アクセストークンはどのように入手できますか？  {#how-do-i-get-an-access-token}
 
@@ -46,7 +46,7 @@ API キーは、すべての API リクエストのヘッダーとして必要�
 
 ## クエリーパラメーターの使用方法  {#how-do-i-user-query-parameters}
 
-一部の[!DNL Platform] APIエンドポイントは、クエリパラメーターを受け取って特定の情報を検索し、応答で返される結果をフィルタリングします。 リクエストパスに疑問符（`?`）記号が付加され、その後に 1 つ以上のクエリーパラメーターが `paramName=paramValue` 形式で追加されます。1 回の呼び出しで複数のパラメーターを組み合わせる場合、アンパサンド（`&`）を使用して個々のパラメーターを区切る必要があります。次の例は、複数のクエリーパラメーターを使用するリクエストがドキュメントでどのように表現されているかを示しています。
+一部の [!DNL Platform] API エンドポイントは、クエリパラメーターを受け取って特定の情報を検索し、応答で返される結果をフィルタリングします。 リクエストパスに疑問符（`?`）記号が付加され、その後に 1 つ以上のクエリーパラメーターが `paramName=paramValue` 形式で追加されます。1 回の呼び出しで複数のパラメーターを組み合わせる場合、アンパサンド（`&`）を使用して個々のパラメーターを区切る必要があります。次の例は、複数のクエリーパラメーターを使用するリクエストがドキュメントでどのように表現されているかを示しています。
 
 以下は、一般的に使用されるクエリーパラメーターの例です。
 
@@ -60,19 +60,19 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## PATCH リクエストで更新する JSON フィールドを指定する方法を教えてください。  {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-[!DNL Platform] APIの多くのPATCH操作では、[JSON Pointer](https://tools.ietf.org/html/rfc6901)文字列を使用して、更新するJSONプロパティを示します。 これらは通常、[JSON パッチ](https://tools.ietf.org/html/rfc6902) 形式を使用してリクエストペイロードに含まれます。これらのテクノロジーに必要な構文について詳しくは、[API の基本原則ガイド](api-fundamentals.md)を参照してください。
+[!DNL Platform] API の多くのPATCH操作では、[JSON Pointer](https://tools.ietf.org/html/rfc6901) 文字列を使用して、更新する JSON プロパティを示します。 これらは通常、[JSON パッチ](https://tools.ietf.org/html/rfc6902) 形式を使用してリクエストペイロードに含まれます。これらのテクノロジーに必要な構文について詳しくは、[API の基本原則ガイド](api-fundamentals.md)を参照してください。
 
-## Postmanを使用して[!DNL Platform] APIを呼び出すことはできますか？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Postman を使用して [!DNL Platform] API を呼び出すことはできますか？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman は](https://www.postman.com/)、RESTful API への呼び出しを視覚化する便利なツールです。[Platform API入門ガイド](api-guide.md)には、Postmanコレクションを読み込むためのビデオと手順が含まれています。 さらに、各サービスのPostmanコレクションのリストが提供されます。
+[Postman は](https://www.postman.com/)、RESTful API への呼び出しを視覚化する便利なツールです。[Platform API 入門ガイド ](api-guide.md) には、Postman コレクションを読み込むためのビデオと手順が含まれています。 また、各サービスの Postman コレクションのリストも提供されます。
 
-## [!DNL Platform]の必要システム構成は何ですか？{#what-are-the-system-requirements-for-platform}
+## [!DNL Platform] の必要システム構成は何ですか？{#what-are-the-system-requirements-for-platform}
 
 UI と API のどちらを使用しているかによって、次の必要システム構成が適用されます。
 
 **UI ベースの操作の場合：**
-- 最新の標準的な Web ブラウザー。[!DNL Chrome]の最新バージョンをお勧めしますが、[!DNL Firefox]、[!DNL Internet Explorer]、Safariの最新および以前のメジャーリリースもサポートされています。
-   - 新しいメジャーバージョンがリリースされるたびに、[!DNL Platform]は最新バージョンのサポートを開始しますが、3番目に新しいバージョンのサポートは終了します。
+- 最新の標準的な Web ブラウザー。[!DNL Chrome] の最新バージョンをお勧めしますが、[!DNL Firefox]、[!DNL Internet Explorer]、Safari の最新および以前のメジャーリリースもサポートされています。
+   - 新しいメジャーバージョンがリリースされるたびに、[!DNL Platform] は最新バージョンのサポートを開始し、3 番目に新しいバージョンのサポートは終了します。
 - すべてのブラウザーで、Cookie と JavaScript が有効になっている必要があります。
 
 **API および開発者のインタラクションの場合：**
@@ -80,11 +80,11 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-以下は、[!DNL Experience Platform]サービスを使用する際に発生する可能性のあるエラーのリストです。 個々の[!DNL Platform]サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+以下は、[!DNL Experience Platform] サービスを使用する際に発生する可能性のあるエラーのリストです。 個々の [!DNL Platform] サービスのトラブルシューティングガイドについては、以下の [ サービストラブルシューティングディレクトリ ](#service-troubleshooting-directory) を参照してください。
 
 ## API ステータスコード {#api-status-codes}
 
-以下のステータスコードは、どの[!DNL Experience Platform] APIでも発生する場合があります。 それぞれに様々な原因があり、本項で述べる説明は概して一般的なものです。個々の[!DNL Platform]サービスで発生する特定のエラーに関する詳細は、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+以下のステータスコードは、どの [!DNL Experience Platform] API でも発生する場合があります。 それぞれに様々な原因があり、本項で述べる説明は概して一般的なものです。個々の [!DNL Platform] サービスでの特定のエラーに関する詳細は、以下の [ サービストラブルシューティングディレクトリ ](#service-troubleshooting-directory) を参照してください。
 
 | ステータスコード | 説明 | 考えられる原因 |
 |--- | --- | ---|
@@ -92,11 +92,11 @@ UI と API のどちらを使用しているかによって、次の必要シス
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
 | 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。 |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
-| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、 [データのフィルタリング](../catalog/api/filter-data.md)に関するAPI開発者ガイド[!DNL Catalog Service]を参照してください）。 リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
+| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[ データのフィルタリング ](../catalog/api/filter-data.md) に関する API 開発者ガイド [!DNL Catalog Service] を参照してください）。 リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 
 ## リクエストヘッダーエラー {#request-header-errors}
 
-[!DNL Platform]内のすべてのAPI呼び出しには、特定のリクエストヘッダーが必要です。 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
+[!DNL Platform] 内のすべての API 呼び出しには、特定のリクエストヘッダーが必要です。 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
@@ -187,23 +187,23 @@ UI と API のどちらを使用しているかによって、次の必要シス
 }
 ```
 
-このエラーメッセージは、アカウント（指定された認証資格情報で表される）がExperience Platform用の製品プロファイルに関連付けられていない場合に表示されます。 『Platform API認証チュートリアル』の[アクセス資格情報](./api-authentication.md#authentication-for-each-session)の生成手順に従って、アカウントにPlatformを追加し、それに応じて認証資格情報を更新します。
+このエラーメッセージは、アカウント（指定された認証資格情報で表されるもの）がExperience Platform用の製品プロファイルに関連付けられていない場合に表示されます。 『Platform API 認証チュートリアル』の [ アクセス資格情報 ](./api-authentication.md#authentication-for-each-session) の生成手順に従って、アカウントに Platform を追加し、それに応じて認証資格情報を更新します。
 
 ## サービストラブルシューティングディレクトリ {#service-troubleshooting-directory}
 
-以下は、 [!DNL Experience Platform] APIのトラブルシューティングガイドとAPIリファレンスドキュメントのリストです。 各トラブルシューティングガイドでは、個々の[!DNL Platform]サービスに固有のよくある質問と問題の解決方法を示します。 API リファレンスドキュメントは、各サービスで使用可能なすべてのエンドポイントの包括的なガイドを提供し、受け取る可能性のあるリクエストの本文、応答、エラーコードのサンプルを示します。
+以下は、 [!DNL Experience Platform] API のトラブルシューティングガイドと API リファレンスドキュメントのリストです。 各トラブルシューティングガイドでは、個々の [!DNL Platform] サービスに固有のよくある質問と問題の解決方法を示します。 API リファレンスドキュメントは、各サービスで使用可能なすべてのエンドポイントの包括的なガイドを提供し、受け取る可能性のあるリクエストの本文、応答、エラーコードのサンプルを示します。
 
 | サービス | API リファレンス | トラブルシューティング |
 | --- | --- | --- |
 | アクセス制御 | [アクセス制御 API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platformでのデータ取得 | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [バッチ取得トラブルシューティング](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[ガイドストリーミング取得トラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platformでのデータ取得 | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [バッチ取得トラブルシューティングガ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[イドストリーミング取得トラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform のデータガバナンス | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform ID サービス | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] トラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform クエリサービス | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] トラブルシューティングガイド](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
-| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQとトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ とトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] および [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
 | サンドボックス | [サンドボックス API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |

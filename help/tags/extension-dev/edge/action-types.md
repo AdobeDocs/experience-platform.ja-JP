@@ -1,8 +1,9 @@
 ---
 title: エッジ拡張機能のアクションタイプ
 description: エッジプロパティでタグ拡張機能用にアクションタイプのライブラリモジュールを定義する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグのルールでは、アクションとは、ルールの条件が評価を渡した後に実行される操作です。アクションタイプは拡張機能によって提供され、その効果は拡張機能の作成者が定義します。
 
@@ -56,7 +57,7 @@ module.exports = (context) {
 }
 ```
 
-ユーザー定義のエンドポイントを操作するには、モジュールを次のように変更する必要があります。
+ユーザー定義のエンドポイントを操作するには、モジュールを次の例のように変更する必要があります。
 
 ```js
 module.exports = (context) {

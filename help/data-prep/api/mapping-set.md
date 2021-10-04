@@ -6,7 +6,7 @@ topic-legacy: mapping sets
 description: Adobe Experience Platform API で「/mappingSets」エンドポイントを使用すると、マッピングセットをプログラムにより取得、作成、更新および検証できます。
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 100%
 
@@ -370,7 +370,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 }'
 ```
 
-**応答** 
+**応答**
 
 応答に成功すると、HTTPステータス 200 と、マッピングされたデータのプレビューが返されます。
 
@@ -640,7 +640,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 }
 ```
 
-**応答** 
+**応答**
 
 応答に成功すると、HTTP ステータス 200 と、新しくなったマッピングセットに関する詳細情報が返されます。
 

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；リストサンドボックス
 solution: Experience Platform
-title: サンドボックスタイプAPIエンドポイント
+title: サンドボックスタイプ API エンドポイント
 topic-legacy: developer guide
-description: /sandboxTypesエンドポイントに対してGETリクエストを実行することで、組織でサポートされているサンドボックスタイプのリストを取得できます。
+description: /sandboxTypes エンドポイントに対してGETリクエストを実行することで、組織でサポートされているサンドボックスタイプのリストを取得できます。
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
@@ -18,9 +18,9 @@ ht-degree: 45%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
 
-## サポートされているサンドボックスタイプのリストの取得
+## サポートされるサンドボックスタイプのリストの取得
 
 `/sandboxTypes` エンドポイントに対して GET リクエストを実行すると、組織でサポートされているサンドボックスタイプのリストを取得できます。
 

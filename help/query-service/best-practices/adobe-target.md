@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；サンプルクエリ；サンプルクエリ；アドビターゲット;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリサービス；クエリ例；クエリ例； adobe target;
 solution: Experience Platform
-title: Adobe Targetデータのサンプルクエリ
+title: Adobe Targetデータのクエリ例
 topic-legacy: queries
-description: Adobe Target のデータは ExperienceEvent スキーマに変換され、ユーザーのデータセットとして Experience Platform に取り込まれます。このドキュメントには、クエリサービスをAdobe Targetのデータセットと共に使用するためのサンプルクエリが含まれています。
+description: Adobe Target のデータは ExperienceEvent スキーマに変換され、ユーザーのデータセットとして Experience Platform に取り込まれます。このドキュメントには、Adobe Targetデータセットでクエリサービスを使用するためのクエリ例が含まれています。
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
@@ -15,26 +14,26 @@ ht-degree: 51%
 
 # Adobe Target データのサンプルクエリ
 
-Adobe TargetのデータはエクスペリエンスイベントXDMスキーマに変換され、Adobe Experience Platformにデータセットとして取り込まれます。 このデータを使用したAdobe Experience Platformクエリサービスの使用例は多数あり、以下のサンプルクエリはAdobe Targetのデータセットと連携する必要があります。
+Adobe Targetのデータは Experience Event XDM スキーマに変換され、ユーザーのデータセットとしてAdobe Experience Platformに取り込まれます。 このデータを使用するAdobe Experience Platformクエリサービスの使用例は多数あり、次のサンプルクエリはAdobe Targetデータセットと連携する必要があります。
 
-Experience Platformでは、自動作成されるデータセットの名前は「Adobe Targetエクスペリエンスイベント」です。 クエリでこのデータセットを使用する場合は、`adobe_target_experience_events`という名前を使用する必要があります。
+Experience Platformでは、自動作成されたデータセットの名前は「Adobe Target Experience Events」です。 このデータセットをクエリで使用する場合は、`adobe_target_experience_events` という名前を使用する必要があります。
 
 ## 高レベルの XDM フィールド部分マッピング
 
-次のリストは、対応するXDMフィールドにマップするターゲットフィールドを示しています。
+次のリストは、対応する XDM フィールドにマッピングされる Target フィールドを示しています。
 
 >[!NOTE]
 >
-> XDMフィールド内で`[ ]`を使用すると、配列を表します。
+> XDM フィールド内で `[ ]` を使用することは、配列を表します。
 
 - mboxName: `_experience.target.mboxname`
 - アクティビティ ID: `_experience.target.activities.activityID`
 - エクスペリエンス ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
 - Segment ID: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
 - イベント範囲: `_experience.target.activities[].activityEvents[].eventScope`
-   - このフィールドは、新規訪問者および訪問を追跡します。
+   - このフィールドは、新規訪問者と新規訪問を追跡します。
 - 手順 ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
-   - このフィールドは、Adobe CampaignのカスタムステップIDです。
+   - このフィールドは、Adobe Campaignのカスタム手順 ID です。
 - 価格合計: `commerce.order.priceTotal`
 
 ## クエリ例

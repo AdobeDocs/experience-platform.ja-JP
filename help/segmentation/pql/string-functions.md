@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；文字列関数；文字列；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；文字列関数；文字列；
 solution: Experience Platform
-title: PQL文字列関数
+title: PQL 文字列関数
 topic-legacy: developer guide
 description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
@@ -15,7 +14,7 @@ ht-degree: 94%
 
 # 文字列関数
 
-[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+[!DNL Profile Query Language] (PQL) は、文字列の操作を簡単にする関数を提供します。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## like
 

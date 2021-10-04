@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform ダッシュボードのヘルプ
 breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードで Experience Platform データを視覚化します。
-feature: データ管理
+feature: Data Management
 source-git-commit: 168960692605b96324533ca295544c2f855481b1
-workflow-type: ht
-source-wordcount: '60'
+workflow-type: tm+mt
+source-wordcount: '58'
 ht-degree: 100%
 
 ---

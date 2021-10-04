@@ -1,40 +1,39 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；uiガイド；ワークフローuiガイド；ワークフロー;ワークフローユーザーガイド；
+keywords: Experience Platform；ホーム；人気のあるトピック；Adobe Experience Platform；ユーザーガイド；ui ガイド；ワークフロー ui ガイド；ワークフロー；ワークフローユーザーガイド；
 solution: Experience Platform
-title: ワークフローUIガイド
+title: ワークフロー UI ガイド
 topic-legacy: ui guide
-description: 複数手順のワークフローに従って、Adobe Experience Platformユーザーインターフェイス内で共通の操作を実行する方法を説明します。
+description: Adobe Experience Platformユーザーインターフェイス内で共通の操作を実行するための複数手順のワークフローに従う方法を説明します。
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-#  WorkflowsUIガイド
+# [!UICONTROL ワークフロー UI ガイド]
 
-Adobe Experience Platformユーザーインターフェイス内の&#x200B;**[!UICONTROL ワークフロー]**&#x200B;セクションは、プラットフォーム内で操作を実行するための複数手順のワークフローのリストを示しています。 これらのワークフローは、データ取り込みやデータ科学などの領域をカバーします。
+Adobe Experience Platformユーザーインターフェイス内の **[!UICONTROL ワークフロー]** セクションには、Platform 内で操作を実行するための複数手順のワークフローのリストが表示されます。 これらのワークフローは、データ取り込みやデータサイエンスなどの領域をカバーします。
 
 ![ワークフロー](./images/workflows/workflows.png)
 
-## [!UICONTROL データの取り込み]
+## [!UICONTROL データ取得]
 
-**[!UICONTROL CSVをXDMスキーマにマップ]**&#x200B;ワークフローを使用すると、CSVファイルをアップロードしてExperience Data Model(XDM)スキーマに変換できます。 このワークフローに関する詳細は、[CSVファイルをXDMスキーマ](../ingestion/tutorials/map-a-csv-file.md)にマッピングするチュートリアルを参照してください。
+**[!UICONTROL CSV を XDM スキーマにマッピング]** ワークフローを使用して、CSV ファイルをアップロードし、XDM(Experience Data Model) スキーマに変換できます。 このワークフローの詳細については、[CSV ファイルの XDM スキーマへのマッピング ](../ingestion/tutorials/map-a-csv-file.md) に関するチュートリアルを参照してください。
 
-**[!UICONTROL スキーマからデータセットを作成]**&#x200B;ワークフローを使用すると、既存のXDMスキーマから新しいデータセットを作成できます。 このワークフローに関する詳細は、『[datasetsユーザーガイド](../catalog/datasets/user-guide.md#schema)』を参照してください。
+**[!UICONTROL スキーマからデータセットを作成]** ワークフローを使用して、既存の XDM スキーマから新しいデータセットを作成できます。 このワークフローの詳細については、『[ データセットユーザガイド ](../catalog/datasets/user-guide.md#schema)』を参照してください。
 
-**[!UICONTROL CSVからデータセットを作成]**&#x200B;ワークフローを使用すると、CSVファイルをアップロードして新しいデータセットを作成できます。 このワークフローに関する詳細は、『[datasetsユーザーガイド](../catalog/datasets/user-guide.md#csv)』を参照してください。
+**[!UICONTROL CSV からデータセットを作成]** ワークフローでは、CSV ファイルをアップロードして新しいデータセットを作成できます。 このワークフローの詳細については、『[ データセットユーザガイド ](../catalog/datasets/user-guide.md#csv)』を参照してください。
 
 ## [!UICONTROL モデル]
 
-**[!UICONTROL インポートレシピ]**&#x200B;ワークフローを使用すると、レシピのインポートと設定を行うことができます。 このワークフローの詳細については、[パッケージ化されたレシピの読み込み](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md)のチュートリアルを参照してください。
+**[!UICONTROL レシピのインポート]** ワークフローでは、レシピをインポートして設定できます。 このワークフローの詳細については、[ パッケージ化されたレシピのインポート ](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) に関するチュートリアルを参照してください。
 
-**[!UICONTROL モデルを作成]**&#x200B;ワークフローを使用すると、機械学習モデルを作成できます。 このワークフローに関する詳細は、[モデルトレーニングと評価のチュートリアル](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)を参照してください。
+**[!UICONTROL モデルを作成]** ワークフローを使用して、機械学習モデルを作成できます。 このワークフローの詳細については、[ モデルトレーニングと評価のチュートリアル ](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) を参照してください。
 
-**[!UICONTROL モデルをサービスとして発行]**&#x200B;ワークフローを使用すると、作成したモデルをスコアを割り当て可能なサービスとして発行できます。 このワークフローに関する詳細は、[サービスとしてのモデルの公開](../data-science-workspace/models-recipes/publish-model-service-ui.md)のチュートリアルを参照してください。
+**[!UICONTROL モデルをサービスとして公開]** ワークフローを使用して、作成したモデルをスコアリング可能なサービスとして公開できます。 このワークフローの詳細については、[ モデルをサービスとして公開する ](../data-science-workspace/models-recipes/publish-model-service-ui.md) に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このガイドを読むと、Experience Platformユーザーインターフェイス内の[!UICONTROL ワークフロー]に紹介されています。 プラットフォームUIの機能について詳しくは、[Adobe Experience PlatformUIガイド](ui-guide.md)を参照してください。
+このガイドでは、Experience Platformユーザーインターフェイス内の [!UICONTROL  ワークフロー ] について説明しました。 Platform UI の機能について詳しくは、『[Adobe Experience Platform UI ガイド ](ui-guide.md)』を参照してください。

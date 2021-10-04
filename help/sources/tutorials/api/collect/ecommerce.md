@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；eコマースデータの収集；eコマースデータ
+keywords: Experience Platform；ホーム；人気のあるトピック；e コマースデータの収集；e コマースデータ
 solution: Experience Platform
-title: ソースコネクタとAPIを使用したeコマースデータの収集
+title: ソースコネクタと API を使用した e コマースデータの収集
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、サードパーティのeコマースシステムからデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
+description: このチュートリアルでは、サードパーティの e コマースシステムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '1515'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
-# ソースコネクタとAPIを使用したeコマースデータの収集
+# ソースコネクタと API を使用した e コマースデータの収集
 
-このチュートリアルでは、サードパーティの&#x200B;**[!UICONTROL eコマース]**&#x200B;システムからデータを取得し、ソースコネクタと[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Platform]に取り込む手順について説明します。
+このチュートリアルでは、サードパーティの **[!UICONTROL e コマース]** システムからデータを取得し、ソースコネクタと [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Platform] に取り込む手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な接続を通じて&#x200B;**[!UICONTROL eコマース]**&#x200B;システムにアクセスできるほか、[!DNL Platform]に取り込むファイルに関する情報（ファイルのパスと構造を含む）を入手できる必要があります。 この情報がない場合は、このチュートリアルを試す前に、[フローサービスAPI](../explore/ecommerce.md)を使用したeコマースシステムの調査に関するチュートリアルを参照してください。
+このチュートリアルでは、有効な接続を通じて **[!UICONTROL e コマース]** システムにアクセスできるほか、[!DNL Platform] に取り込むファイルに関する情報（ファイルのパスと構造を含む）を入手できる必要があります。 この情報がない場合は、このチュートリアルを試す前に、[ フローサービス API](../explore/ecommerce.md) を使用した e コマースシステムの調査に関するチュートリアルを参照してください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):顧客体験データを整理する際に使用する標準化されたExperience Platformフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマレジストリAPI](../../../../xdm/api/getting-started.md):スキーマレジストリAPIへの呼び出しを正常に実行する方法を説明します。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所とリネージの記録システムで [!DNL Experience Platform]す。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得APIを使用すると、データをバッチファイルと [!DNL Experience Platform] してに取り込みます。
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分割 [!DNL Platform] し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+   * [スキーマレジストリ API](../../../../xdm/api/getting-started.md):スキーマレジストリ API への呼び出しを正常に実行する方法を説明します。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードのシステムで [!DNL Experience Platform]す。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得 API を使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込みます。
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分 [!DNL Platform] 割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] APIを使用して&#x200B;**[!UICONTROL eコマース]**&#x200B;システムに正常に接続するために知っておく必要がある追加情報を示します。
+以下の節では、[!DNL Flow Service] API を使用して **[!UICONTROL e コマース]** システムに正しく接続するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -54,7 +54,7 @@ ht-degree: 18%
 
 ## ソース接続の作成 {#source}
 
-[!DNL Flow Service] APIにPOSTリクエストを送信して、ソース接続を作成できます。 ソース接続は、接続ID、ソースデータファイルへのパス、接続仕様IDで構成されます。
+[!DNL Flow Service] API にPOSTリクエストを実行して、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルのパス、接続仕様 ID で構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
@@ -66,7 +66,7 @@ ht-degree: 18%
 | JSON | `json` |
 | Parquet | `parquet` |
 
-すべてのテーブルベースのコネクタで、値を`tabular`に設定します。
+すべてのテーブルベースのコネクタで、値を `tabular` に設定します。
 
 **API 形式**
 
@@ -113,13 +113,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | **[!UICONTROL eコマース]**&#x200B;ソースの接続ID。 |
+| `baseConnectionId` | **[!UICONTROL e コマース]** ソースの接続 ID。 |
 | `params.path` | ソースファイルのパス。 |
-| `connectionSpec.id` | **[!UICONTROL eコマース]**&#x200B;ソースの接続仕様ID。 |
+| `connectionSpec.id` | **[!UICONTROL e コマース]** ソースの接続仕様 ID。 |
 
 **応答**
 
-正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 このIDは、後の手順でターゲット接続を作成する際に必要になります。
+正常な応答は、新しく作成されたソース接続の一意の識別子 (`id`) を返します。 この ID は、後の手順でターゲット接続を作成する際に必要になります。
 
 ```json
 {
@@ -128,11 +128,11 @@ curl -X POST \
 }
 ```
 
-## ターゲットXDMスキーマの作成 {#target-schema}
+## ターゲット XDM スキーマの作成 {#target-schema}
 
-[!DNL Platform]でソースデータを使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが格納される[!DNL Platform]データセットを作成します。 このターゲットXDMスキーマは、XDM [!DNL Individual Profile]クラスも拡張します。
+[!DNL Platform] でソースデータを使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが格納される [!DNL Platform] データセットを作成します。 このターゲット XDM スキーマは、XDM [!DNL Individual Profile] クラスも拡張します。
 
-[スキーマレジストリAPI](https://www.adobe.io/experience-platform-apis/references/schema-registry/)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
+[ スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に対してPOSTリクエストを実行すると、ターゲット XDM スキーマを作成できます。
 
 **API 形式**
 
@@ -142,7 +142,7 @@ POST /tenant/schemas
 
 **リクエスト**
 
-次のリクエスト例は、XDM [!DNL Individual Profile]クラスを拡張するXDMスキーマを作成します。
+次のリクエスト例は、XDM [!DNL Individual Profile] クラスを拡張する XDM スキーマを作成します。
 
 ```shell
 curl -X POST \
@@ -176,7 +176,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたスキーマの一意の識別子(`$id`)を含む詳細を返します。 このIDは、後の手順で、ターゲットデータセット、マッピング、データフローを作成する際に必要になります。
+正常な応答は、新しく作成されたスキーマの一意の識別子 (`$id`) を含む詳細を返します。 この ID は、後の手順で、ターゲットデータセット、マッピング、データフローを作成するために必要です。
 
 ```json
 {
@@ -240,7 +240,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-[カタログサービスAPI](https://www.adobe.io/experience-platform-apis/references/catalog/)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで、ターゲットデータセットを作成できます。
+[ カタログサービス API](https://www.adobe.io/experience-platform-apis/references/catalog/) に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
 **API 形式**
 
@@ -269,12 +269,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `schemaRef.id` | ターゲットXDMスキーマの`$id`。 |
-| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
+| `schemaRef.id` | ターゲット XDM スキーマの `$id`。 |
+| `schemaRef.contentType` | スキーマのバージョン。 この値は `application/vnd.adobe.xed-full-notext+json;version=1` に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
 
 **応答**
 
-正常な応答は、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲット接続とデータフローを作成する際に必要になるターゲットデータセットIDを保存します。
+正常な応答は、新しく作成されたデータセットの ID を `"@/datasets/{DATASET_ID}"` の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順で必要になるターゲットデータセット ID を保存して、ターゲット接続とデータフローを作成します。
 
 ```json
 [
@@ -284,9 +284,9 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込んだデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取得されたデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様IDの一意の識別子が得られます。 [!DNL Flow Service] APIを使用して、これらの識別子を、受信ソースデータを格納するデータセットと共に指定することで、ターゲット接続を作成できます。
+これで、ターゲットスキーマ、ターゲットデータセット、およびデータレイクへの接続仕様 ID に一意の識別子が割り当てられました。 [!DNL Flow Service] API を使用して、これらの識別子と、受信ソースデータを格納するデータセットを指定することで、ターゲット接続を作成できます。
 
 **API 形式**
 
@@ -326,14 +326,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.schema.id` | ターゲットXDMスキーマの`$id`。 |
-| `data.schema.version` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
-| `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | データレイクへの接続に使用する接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
+| `data.schema.version` | スキーマのバージョン。 この値は `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
+| `params.dataSetId` | ターゲットデータセットの ID。 |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答**
 
-正常な応答は、新しいターゲット接続の一意の識別子(`id`)を返します。 この値は、後の手順でデータフローを作成する際に必要になります。
+正常な応答は、新しいターゲット接続の一意の識別子 (`id`) を返します。 この値は、後の手順でデータフローを作成する際に必要です。
 
 ```json
 {
@@ -344,7 +344,7 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まずターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して、[POSTサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)に対して変換リクエストを実行することで実現されます。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して、[POSTサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) に対して変換リクエストを実行することで実現されます。
 
 **API 形式**
 
@@ -386,11 +386,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `xdmSchema` | ターゲットXDMスキーマの`$id`。 |
+| `xdmSchema` | ターゲット XDM スキーマの `$id`。 |
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要になります。
+正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、後の手順でデータフローを作成する際に必要です。
 
 ```json
 {
@@ -405,7 +405,7 @@ curl -X POST \
 
 ## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、[!DNL Platform]に取り込みます。 GETフローを作成するには、まず[!DNL Flow Service] APIに対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、**[!UICONTROL eコマース]**&#x200B;ソースからデータを収集します。
+データフローは、ソースからデータを収集し、[!DNL Platform] に取り込みます。 GETフローを作成するには、まず [!DNL Flow Service] API に対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、**[!UICONTROL e コマース]** ソースからデータを収集します。
 
 **API 形式**
 
@@ -425,7 +425,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、ソースからPlatformにデータを取り込む必要があるデータフロー仕様の詳細を返します。 この応答には、新しいデータフローの作成に必要な固有のフロー仕様`id`が含まれます。
+正常な応答は、ソースから Platform にデータを取り込む必要があるデータフロー仕様の詳細を返します。 応答には、新しいデータフローの作成に必要な固有のフロー仕様 `id` が含まれます。
 
 ```json
 {
@@ -656,16 +656,16 @@ curl -X GET \
 
 ## データフローの作成
 
-データを収集するための最後の手順は、データフローを作成することです。 この時点で、次の必要な値を準備しておく必要があります。
+データを収集する最後の手順は、データフローを作成することです。 この時点で、次の必須値を準備しておく必要があります。
 
-* [ソース接続ID](#source)
-* [ターゲット接続ID](#target)
+* [ソース接続 ID](#source)
+* [ターゲット接続 ID](#target)
 * [マッピング ID](#mapping)
-* [データフロー仕様ID](#specs)
+* [データフロー仕様 ID](#specs)
 
-データフローは、ソースからデータをスケジュールおよび収集する役割を担います。 データフローを作成するには、リクエストペイロード内に前述の値を指定してPOSTリクエストを実行します。
+データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、リクエストペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
 
-取り込みをスケジュールするには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または`week`。 interval値は、2つの連続した取り込みの間隔を指定し、1回限りの取り込みを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の間隔の値は、`15`以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または `week`。 interval 値は、2 つの連続した取り込みから 1 回限りの取り込みを作成するまでの間隔を指定し、間隔を設定する必要はありません。 その他のすべての周波数の間隔値は、`15` 以上に設定する必要があります。
 
 **API 形式**
 
@@ -713,18 +713,18 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `flowSpec.id` | 前の手順で取得した[フロー仕様ID](#specs)。 |
-| `sourceConnectionIds` | 前の手順で取得した[ソース接続ID](#source)。 |
-| `targetConnectionIds` | 前の手順で取得した[ターゲット接続ID](#target-connection)。 |
-| `transformations.params.mappingId` | 前の手順で取得した[マッピングID](#mapping)。 |
-| `transformations.params.mappingId` | **[!UICONTROL eコマース]**&#x200B;ソースに関連付けられたマッピングID。 |
-| `scheduleParams.startTime` | エポックタイムでのデータフローの開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する`frequency`。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または`week`。 |
-| `scheduleParams.interval` | この間隔は、2つの連続したフロー実行の間隔を指定します。 間隔の値はゼロ以外の整数にする必要があります。 `frequency`が`once`に設定され、他の`frequency`値の`15`以上である必要がある場合は、間隔は不要です。 |
+| `flowSpec.id` | 前の手順で取得した [ フロー仕様 ID](#specs)。 |
+| `sourceConnectionIds` | 前の手順で取得した [ ソース接続 ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した [ ターゲット接続 ID](#target-connection)。 |
+| `transformations.params.mappingId` | 前の手順で取得した [ マッピング ID](#mapping)。 |
+| `transformations.params.mappingId` | **[!UICONTROL e コマース]** ソースに関連付けられているマッピング ID。 |
+| `scheduleParams.startTime` | エポック時間でのデータフローの開始時間。 |
+| `scheduleParams.frequency` | データフローがデータを収集する `frequency`。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または `week`。 |
+| `scheduleParams.interval` | この間隔は、2 つの連続したフロー実行の間隔を指定します。 間隔の値はゼロ以外の整数にする必要があります。 `frequency` が `once` に設定されている場合は、間隔は不要で、他の `frequency` 値の場合は `15` 以上である必要があります。 |
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したデータフローのID `id`が返されます。
+リクエストが成功した場合は、新しく作成したデータフローの ID `id` が返されます。
 
 ```json
 {
@@ -735,11 +735,11 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローを作成したら、そのデータを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。 データフローの監視方法について詳しくは、API ](../monitor.md)での[データフローの監視に関するチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、API ](../monitor.md) での [ データフローの監視に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このチュートリアルでは、データ&#x200B;**[!UICONTROL eコマース]**&#x200B;をスケジュールに従って収集するソースコネクタを作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]など、ダウンストリームの[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、データ **[!UICONTROL e コマース]** をスケジュールに基づいて収集するソースコネクタを作成しました。 受信データは、[!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

@@ -1,6 +1,6 @@
 ---
-description: サーバーとテンプレートの仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDKで設定できます。
-title: 宛先SDKのサーバーおよびテンプレート仕様の設定オプション
+description: サーバーとテンプレートの仕様は、共通のエンドポイント「/authoring/destination-servers」を使用して、Adobe Experience Platform Destination SDK で設定できます。
+title: 宛先 SDK でのサーバーおよびテンプレート仕様の設定オプション
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 ## 概要 {#overview}
 
-サーバーとテンプレートの仕様は、共通のエンドポイント`/authoring/destination-servers`を介してAdobe Experience Platform Destination SDKで設定できます。 エンドポイントで実行できる操作の完全なリストについては、[宛先APIエンドポイントの操作](./destination-server-api.md)をお読みください。
+サーバーとテンプレートの仕様は、共通のエンドポイント `/authoring/destination-servers` を介してAdobe Experience Platform Destination SDK で設定できます。 エンドポイントで実行できる操作の完全なリストについては、[ 宛先 API エンドポイントの操作 ](./destination-server-api.md) をお読みください。
 
 ## 設定例 {#example-configuration}
 
@@ -40,18 +40,18 @@ ht-degree: 9%
 
 ## サーバーの仕様 {#server-specs}
 
-![強調表示されたサーバ設定](./assets/server-configuration.png)
+![強調表示されたサーバー設定](./assets/server-configuration.png)
 
-お客様は、HTTPエクスポートを使用して、Adobe Experience Platformから宛先へデータをアクティブ化できます。 サーバー設定には、メッセージを受信するサーバー（サイド側のサーバー）に関する情報が含まれます。
+お客様は、HTTP エクスポートを使用して、Adobe Experience Platformから宛先にデータをアクティブ化できます。 サーバー設定には、メッセージを受信したサーバー（サイドのサーバー）に関する情報が含まれます。
 
-このプロセスは、ユーザーデータを一連のHTTPメッセージとして宛先プラットフォームに配信します。 以下のパラメーターは、 HTTPサーバー仕様テンプレートを形成します。
+このプロセスは、ユーザーデータを一連の HTTP メッセージとして宛先プラットフォームに配信します。 以下のパラメーターは、HTTP サーバー仕様テンプレートを形成します。
 
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | *必須* サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
 | `destinationServerType` | 文字列 | *必須* `URL_BASED` は現在、唯一のオプションです。 |
-| `templatingStrategy` | 文字列 | *必須.* <ul><li>Adobeが下の`value`フィールドのURLを変換する必要がある場合は、`PEBBLE_V1`を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE`を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
-| `value` | 文字列 | *必須* Experience Platformが接続するAPIエンドポイントのアドレスを入力します。 |
+| `templatingStrategy` | 文字列 | *必須.* <ul><li>Adobeが下の `value` フィールドの URL を変換する必要がある場合は、`PEBBLE_V1` を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe側に変換が必要ない場合は、`NONE` を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items` </li></ul> |
+| `value` | 文字列 | *必須* Experience Platformが接続する API エンドポイントのアドレスを入力します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -72,21 +72,21 @@ ht-degree: 9%
 
 ![強調表示されたテンプレート設定](./assets/template-configuration.png)
 
-テンプレート仕様を使用すると、書き出したメッセージを宛先にフォーマットする方法を設定できます。 Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/)と類似したテンプレート言語を使用して、XDMスキーマのフィールドを、宛先でサポートされている形式に変換します。 変換について詳しくは、以下のリンクを参照してください。
+テンプレート仕様を使用すると、書き出したメッセージを宛先にフォーマットする方法を設定できます。 Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様のテンプレート言語を使用して、XDM スキーマのフィールドを、宛先でサポートされる形式に変換します。 変換について詳しくは、以下のリンクを参照してください。
 
 * [メッセージのフォーマット](./message-format.md)
-* [ID、属性、セグメントメンバーシップ変換にテンプレート言語を使用する ](./message-format.md#using-templating)
+* [ID、属性、セグメントメンバーシップ変換に対するテンプレート言語の使用 ](./message-format.md#using-templating)
 
 >[!TIP]
 >
->Adobeには、メッセージ変換テンプレートの作成とテストに役立つ[開発者ツール](./create-template.md)が用意されています。
+>Adobeには、メッセージ変換テンプレートの作成とテストに役立つ [ 開発者ツール ](./create-template.md) が用意されています。
 
 | パラメーター | タイプ | 説明 |
 |---|---|---|
-| `httpMethod` | 文字列 | *必須* サーバーへの呼び出しでAdobeが使用するメソッド。オプションは`GET`、`PUT`、`POST`、`DELETE`、`PATCH`です。 |
+| `httpMethod` | 文字列 | *必須* サーバーへの呼び出しでAdobeが使用するメソッド。オプションは `GET`、`PUT`、`POST`、`DELETE`、`PATCH` です。 |
 | `templatingStrategy` | 文字列 | *必須* 用途 `PEBBLE_V1`. |
-| `value` | 文字列 | *必須* この文字列は、Platformの顧客のデータをサービスが想定する形式に変換する文字エスケープバージョンです。<br> テンプレートの作成方法について詳しくは、テンプレートの使用の節 [を参照してください](./message-format.md#using-templating)。<br> 文字のエスケープについて詳しくは、 [RFC JSON標準の7節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、プロファイルのAttributetransformationを参照し [てく](./message-format.md#attributes) ださい。 |
-| `contentType` | 文字列 | *必須* サーバーが受け入れるコンテンツタイプ。この値は`application/json`と考えられます。 |
+| `value` | 文字列 | *必須* この文字列は、Platform の顧客のデータをサービスが想定する形式に変換する、文字エスケープバージョンです。<br> テンプレートの作成方法について詳しくは、テンプレートの使用の [節を参照してください](./message-format.md#using-templating)。<br> 文字のエスケープについて詳しくは、 [RFC JSON 標準の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、プロファイルのアトリビュート変換を参 [照して](./message-format.md#attributes) ください。 |
+| `contentType` | 文字列 | *必須* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
 {style=&quot;table-layout:auto&quot;}
 

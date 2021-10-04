@@ -2,13 +2,13 @@
 keywords: target のパーソナライゼーション；宛先；experience platform ターゲットの宛先；adobe target の宛先；
 title: Adobe Target connection（ベータ版）
 description: Adobe Targetは、Web サイトやモバイルアプリなどのすべてのインバウンド顧客インタラクションで、リアルタイム、 1:1 および AI を利用したパーソナライゼーションと実験を提供するアプリケーションです。
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 13%
 
 ---
-
 
 # Adobe Target connection（ベータ版） {#adobe-target-connection}
 

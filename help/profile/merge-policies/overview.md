@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform では、複数のソースのデータフラグメントを統合および組み合わせて、個々の顧客の全体像を把握できます。結合ポリシーとは、データを統合する場合のデータの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 100%
 

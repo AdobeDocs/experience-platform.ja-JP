@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 100%
 

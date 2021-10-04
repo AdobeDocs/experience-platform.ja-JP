@@ -12,4 +12,4 @@ ht-degree: 0%
 
 必要に応じて、宛先開発者チームがこのファイルを使用して、宛先 SDK のハンズオンセッションに関連する資料をリンクできます。
 
-If you want to link to Postman collections, store the collection in `https://git.corp.adobe.com/AdobeDocs/experience-platform.en/tree/master/help/destinations/destination-sdk/assets` and link to it from here. [ サンプルの Postman コレクション ](/help/destinations/destination-sdk/assets/sample-postman-collection.json) へのリンク例。
+Postman コレクションにリンクする場合は、 `https://git.corp.adobe.com/AdobeDocs/experience-platform.en/tree/master/help/destinations/destination-sdk/assets` にコレクションを保存し、ここからそのコレクションにリンクします。 [ サンプルの Postman コレクション ](/help/destinations/destination-sdk/assets/sample-postman-collection.json) へのリンク例。

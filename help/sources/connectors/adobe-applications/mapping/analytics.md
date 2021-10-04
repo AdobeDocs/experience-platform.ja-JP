@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Analyticsマッピングフィールド；Analyticsマッピング
+keywords: Experience Platform；ホーム；人気の高いトピック；Analytics マッピングフィールド；分析マッピング
 solution: Experience Platform
-title: Adobe Analyticsソースコネクタのフィールドのマッピング
+title: Adobe Analytics Source Connector のフィールドのマッピング
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-translation-type: tm+mt
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '3405'
@@ -13,7 +12,7 @@ ht-degree: 99%
 
 ---
 
-# Analyticsフィールドのマッピング
+# Analytics フィールドのマッピング
 
 Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 
@@ -156,13 +155,13 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | m_color | device.colorDepth | 整数 | c_color 列の値に基づく色深度 ID。 |
 | m_cookies | environment.browserDetails.cookiesEnabled | ブール値 | Cookie サポートディメンションで使用される変数。 |
 | m_event_list | commerce.purchases、commerce.productViews、commerce.productListOpens、commerce.checkouts、commerce.productListAdds、commerce.productListRemovals、commerce.productListViews | オブジェクト | 標準コマースイベントがヒット時にトリガーされました。 | {id (文字列), value (数値)} |
-| m_イベント_リスト | _Experience.analytics.event1to100.event1 ～ _experience.analytics.event1to100.event100、_experience.analytics.event101to200.event101 ～ _experience.analytics.event101to200.event200、_experience.analytics.event201to300.event201 ～ _experience.analytics.event201to300.event300、_experience.analytics.event301to400.event301 ～ _experience.analytics.event301to400.event400、_experience.analytics.event401to500.event401 ～ _experience.analytics.event401to500.event500、_experience.analytics.event501to600.event501 ～ _experience.analytics.event501to600.event600、_experience.analytics.event601to700.event601 ～ _experience.analytics.event601to700.event700、_experience.analytics.event701to800.event701 ～ _experience.analytics.event701to800.event800、_experience.analytics.event801to900.event801 ～ _experience.analytics.event801to900.event900、_experience.analytics.event901to1000.event901 ～ _experience.analytics.event901to1000.event1000 | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
+| m_event_list | _Experience.analytics.event1to100.event1 ～ _experience.analytics.event1to100.event100、_experience.analytics.event101to200.event101 ～ _experience.analytics.event101to200.event200、_experience.analytics.event201to300.event201 ～ _experience.analytics.event201to300.event300、_experience.analytics.event301to400.event301 ～ _experience.analytics.event301to400.event400、_experience.analytics.event401to500.event401 ～ _experience.analytics.event401to500.event500、_experience.analytics.event501to600.event501 ～ _experience.analytics.event501to600.event600、_experience.analytics.event601to700.event601 ～ _experience.analytics.event601to700.event700、_experience.analytics.event701to800.event701 ～ _experience.analytics.event701to800.event800、_experience.analytics.event801to900.event801 ～ _experience.analytics.event801to900.event900、_experience.analytics.event901to1000.event901 ～ _experience.analytics.event901to1000.event1000 | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
 | m_geo_country | placeContext.geo.countryCode | 文字列 | ヒット元の国（IP に基づく）の略。 |
 | m_geo_latitude | placeContext.geo._schema.latitude | 数値 | <!-- MISSING --> |
 | m_geo_longitude | placeContext.geo._schema.longitude | 数値 | <!-- MISSING --> |
 | m_java_enabled | environment.browserDetails.javaEnabled | ブール値 | Java が有効かどうかを示すフラグ。 |
-| m_latitude | placeContext.geo._スキーマ.latitude | 数値 | <!-- MISSING --> |
-| m_longitude | placeContext.geo._スキーマ.経度 | 数値 | <!-- MISSING --> |
+| m_latitude | placeContext.geo._schema.latitude | 数値 | <!-- MISSING --> |
+| m_longitude | placeContext.geo._schema.longitude | 数値 | <!-- MISSING --> |
 | m_page_event_var1 | web.webInteraction.URL | 文字列 | リンクトラッキングイメージリクエストでのみ使用される変数。この変数には、クリックされたダウンロードリンク、出口リンク、またはカスタムリンクの URL が含まれます。 |
 | m_page_event_var2 | web.webInteraction.name | 文字列 | リンクトラッキングイメージリクエストでのみ使用される変数。このリストは、リンクのカスタム名をリスト表示します（指定されている場合）。 |
 | m_page_type | web.webPageDetails.isErrorPage | ブール値 | 「ページが見つかりません」ディメンションの入力に使用される変数。この変数は、空にするか、「ErrorPage」を含む必要があります。 |
@@ -175,11 +174,11 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_cust_hit_time_gmt | timestamp | 文字列 | タイムスタンプが有効なデータセットでのみ使用されます。Unix 時間に基づいて送信されるタイムスタンプです。 |
 | post_cust_visid | identityMap | オブジェクト | 顧客訪問者 ID。 |
 | post_cust_visid | endUserIDs._experience.aacustomid.primary | ブール値 | 顧客訪問者 ID。 |
-| post_cust_visid | endUserIDs。_experience.aacustomid.namespace.code | 文字列 | 顧客訪問者 ID。 |
+| post_cust_visid | endUserIDs_experience.aacustomid.namespace.code | 文字列 | 顧客訪問者 ID。 |
 | post_visid_high + visid_low | identityMap | オブジェクト | 訪問の一意の ID。 |
-| post_visid_high + visid_low | endUserIDs。_experience.aaid.id | 文字列 | 訪問の一意の ID。 |
-| post_visid_high | endUserIDs。_experience.aaid.primary | ブール値 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
-| post_visid_high | endUserIDs。_experience.aaid.namespace.code | 文字列 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
+| post_visid_high + visid_low | endUserIDs_experience.aaid.id | 文字列 | 訪問の一意の ID。 |
+| post_visid_high | endUserIDs_experience.aaid.primary | ブール値 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
+| post_visid_high | endUserIDs_experience.aaid.namespace.code | 文字列 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
 | post_visid_low | identityMap | オブジェクト | visid_high と組み合わせて使用し、訪問を一意に識別します。 |
 | hit_time_gmt | receivedTimestamp | 文字列 | ヒットのタイムスタンプ（UNIX 時間）。 |
 | hitid_high + hitid_low | _id | 文字列 | ヒットを識別する一意の ID。 |
@@ -187,9 +186,9 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | ip | environment.ipV4 | 文字列 | イメージリクエストの HTTP ヘッダーに基づく IP アドレス。 |
 | j_jscript | environment.browserDetails.javaScriptEnabled | ブール値 | 使用する JavaScript のバージョン。 |
 | mcvisid_high + mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
-| mcvisid_high + mcvisid_low | endUserIDs。_experience.mcid.id | 文字列 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs。_experience.mcid.primary | ブール値 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs。_experience.mcid.namespace.code | 文字列 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high + mcvisid_low | endUserIDs_experience.mcid.id | 文字列 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high | endUserIDs_experience.mcid.primary | ブール値 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high | endUserIDs_experience.mcid.namespace.code | 文字列 | Experience Cloud 訪問者 ID。 |
 | mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | 文字列 | ヒットステッチ ID。解析フィールド sdid_high と sdid_low は、2 つ以上の受信ヒットを結合するために使用される補足的なデータ ID です。 |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | 文字列 | Mobile Services ビーコンの近接性. |
@@ -218,7 +217,7 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_browser_width | environment.browserDetails.viewportWidth | 整数 | ブラウザーの幅（ピクセル単位）。 |
 | post_campaign | marketing.trackingCode | 文字列 | トラッキングコードディメンションで使用される変数。 |
 | post_channel | web.webPageDetails.siteSection | 文字列 | 「サイトセクション」ディメンションで使用される変数。 |
-| post_cust_visid | endUserIDs。_experience.aacustomid.id | 文字列 | カスタム訪問者 ID（設定されている場合）。 |
+| post_cust_visid | endUserIDs_experience.aacustomid.id | 文字列 | カスタム訪問者 ID（設定されている場合）。 |
 | post_first_hit_page_url | _experience.analytics.endUser.firstWeb.webPageDetails.URL | 文字列 | 訪問者が最初に到達するページの URL。 |
 | post_first_hit_pagename | _experience.analytics.endUser.firstWeb.webPageDetails.name | 文字列 | 「オリジナルの入口ページ」ディメンションで使用される変数。訪問者の入口ページのページ名。 |
 | post_keywords | search.keywords | 文字列 | ヒット用に収集されたキーワード。 |
@@ -229,14 +228,14 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_state | _experience.analytics.customDimensions.stateProvince | 文字列 | 状態変数。 |
 | post_user_server | web.webPageDetails.server | 文字列 | 「サーバー」ディメンションで使用される変数。 |
 | post_zip | _experience.analytics.customDimensions.postalCode | 文字列 | 「郵便番号」ディメンションの生成に使用される変数。 |
-| ブラウザー | _experience.analytics.環境.browserID | 整数 | ブラウザーの数値 ID。 |
+| ブラウザー | _experience.analytics.environment.browserID | 整数 | ブラウザーの数値 ID。 |
 | ドメイン | environment.domain | 文字列 | 「ドメイン」ディメンションで使用される変数。ユーザーのインターネットサービスプロバイダー（ISP）に基づきます。 |
 | first_hit_referrer | _experience.analytics.endUser.firstWeb.webReferrer.URL | 文字列 | 訪問者の最初の参照 URL。 |
 | geo_city | placeContext.geo.city | 文字列 | ヒットの市区町村の名前。ヒットの IP アドレスに基づきます。 |
 | geo_dma | placeContext.geo.dmaID | 整数 | ヒットの人口統計領域の数値 ID。ヒットの IP アドレスに基づきます。 |
 | geo_region | placeContext.geo.stateProvince | 文字列 | ヒットの都道府県または地域の名前。ヒットの IP アドレスに基づきます。 |
 | geo_zip | placeContext.geo.postalCode | 文字列 | ヒットの郵便番号。ヒットの IP アドレスに基づきます。 |
-| os | _experience.analytics.環境.operatingSystemID | 整数 | 訪問者のオペレーティングシステムを表す数値 ID。user_agent 列に基づきます。 |
+| os | _experience.analytics.environment.operatingSystemID | 整数 | 訪問者のオペレーティングシステムを表す数値 ID。user_agent 列に基づきます。 |
 | search_page_num | search.pageDepth | 整数 | この変数は、「すべての検索ページのランク」ディメンションで使用され、ユーザーがクリックスルーしてサイトに到達する前に、お客様のサイトが表示された | 検索結果のページを示します。 |
 | visit_keywords | _experience.analytics.session.search.keywords | 文字列 | 「検索キーワード」ディメンションで使用される変数。 |
 | visit_num | _experience.analytics.session.num | 整数 | 「訪問回数」ディメンションで使用される変数。1 から始まり、（訪問者ごとに）新しい訪問が開始されるたびに増分されます。 |
@@ -248,12 +247,12 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | Post_mvvar1 ～ post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] ～ _experience.analytics.customDimensions.lists.list3.list[] | 配列 | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 | {value (文字列), key (文字列)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | ブール値 | 「cookie サポート」ディメンションで使用される変数。 |
 | post_event_list | commerce.purchases、commerce.productViews、commerce.productListOpens、commerce.checkouts、commerce.productListAdds、commerce.productListRemovals、commerce.productListViews | オブジェクト | 標準コマースイベントがヒット時にトリガーされました。 | {id (文字列), value (数値)} |
-| post_イベント_リスト | _Experience.analytics.event1to100.event1 ～ _experience.analytics.event1to100.event100、_experience.analytics.event101to200.event101 ～ _experience.analytics.event101to200.event200、_experience.analytics.event201to300.event201 ～ _experience.analytics.event201to300.event300、_experience.analytics.event301to400.event301 ～ _experience.analytics.event301to400.event400、_experience.analytics.event401to500.event401 ～ _experience.analytics.event401to500.event500、_experience.analytics.event501to600.event501 ～ _experience.analytics.event501to600.event600、_experience.analytics.event601to700.event601 ～ _experience.analytics.event601to700.event700、_experience.analytics.event701to800.event701 ～ _experience.analytics.event701to800.event800、_experience.analytics.event801to900.event801 ～ _experience.analytics.event801to900.event900、_experience.analytics.event901to1000.event901 ～ _experience.analytics.event901to1000.event1000 | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
+| post_event_list | _Experience.analytics.event1to100.event1 ～ _experience.analytics.event1to100.event100、_experience.analytics.event101to200.event101 ～ _experience.analytics.event101to200.event200、_experience.analytics.event201to300.event201 ～ _experience.analytics.event201to300.event300、_experience.analytics.event301to400.event301 ～ _experience.analytics.event301to400.event400、_experience.analytics.event401to500.event401 ～ _experience.analytics.event401to500.event500、_experience.analytics.event501to600.event501 ～ _experience.analytics.event501to600.event600、_experience.analytics.event601to700.event601 ～ _experience.analytics.event601to700.event700、_experience.analytics.event701to800.event701 ～ _experience.analytics.event701to800.event800、_experience.analytics.event801to900.event801 ～ _experience.analytics.event801to900.event900、_experience.analytics.event901to1000.event901 ～ _experience.analytics.event901to1000.event1000 | オブジェクト | カスタムイベントがヒット時にトリガーされました。 | {id (オブジェクト), value (オブジェクト)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | ブール値 | Java が有効かどうかを示すフラグ。 |
-| post_latitude | placeContext.geo._スキーマ.latitude | 数値 | <!-- MISSING --> |
-| post_longitude | placeContext.geo._スキーマ.経度 | 数値 | <!-- MISSING --> |
+| post_latitude | placeContext.geo._schema.latitude | 数値 | <!-- MISSING --> |
+| post_longitude | placeContext.geo._schema.longitude | 数値 | <!-- MISSING --> |
 | post_page_event | web.webInteraction.type | 文字列 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、出口リンク、クリックされたカスタムリンク）。 |
-| post_page_イベント | web.webInteraction.linkClicks.value | 数値 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、出口リンク、クリックされたカスタムリンク）。 |
+| post_page_event | web.webInteraction.linkClicks.value | 数値 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、出口リンク、クリックされたカスタムリンク）。 |
 | post_page_event_var1 | web.webInteraction.URL | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。ダウンロードリンク、出口リンクまたはクリックされたカスタムリンクの URL です。 |
 | post_page_event_var2 | web.webInteraction.name | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。リンクのカスタム名になります。 |
 | post_page_type | web.webPageDetails.isErrorPage | ブール値 | 「エラーページ」ディメンションの入力に使用されます。この変数の値は、空か「ErrorPage」である必要があります。 |
@@ -261,14 +260,14 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_product_list | productListItems[].items | 配列 | 製品リスト。products 変数を通じて渡されます。 | {SKU (文字列), quantity (整数), priceTotal (数値)} |
 | post_search_engine | search.searchEngine | 文字列 | サイトに訪問者を誘導した検索エンジンを表す数値 ID。 |
 | mvvar1_instances | .list.items[] | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
-| mvvar2_instances | .リスト.items[] | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
-|  | mvvar3_instances | .リスト.items[] | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
+| mvvar2_instances | .list.items[] | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
+|  | mvvar3_instances | .list.items[] | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
 | color | device.colorDepth | 整数 | c_color 列の値に基づく色深度 ID。 |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | 文字列 | 訪問者の最初のリファラーのリファラータイプを表す数値 ID。 |
 | first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 整数 | 訪問者の最初のヒットのタイムスタンプ（Unix 時間）。 |
 | geo_country | placeContext.geo.countryCode | 文字列 | ヒットの発生元となった国の略称（IP アドレスに基づく）。 |
-| geo_latitude | placeContext.geo._スキーマ.latitude | 数値 | <!-- MISSING --> |
-| geo_longitude | placeContext.geo._スキーマ.経度 | 数値 | <!-- MISSING --> |
+| geo_latitude | placeContext.geo._schema.latitude | 数値 | <!-- MISSING --> |
+| geo_longitude | placeContext.geo._schema.longitude | 数値 | <!-- MISSING --> |
 | paid_search | search.isPaid | ブール値 | ヒットが有料検索の検出に一致した場合に設定されるフラグ。 |
 | ref_type | web.webReferrer.type | 文字列 | ヒットのリファラルのタイプを表す数値 ID。 |
 | visit_paid_search | _experience.analytics.session.search.isPaid | ブール値 | 訪問の最初のヒットが有料検索ヒットからのヒットであったかどうかを示すフラグ（1 = 有料、0 = 無料）。 |

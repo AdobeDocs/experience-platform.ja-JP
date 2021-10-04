@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
+keywords: Experience Platform；ホーム；人気のあるトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
 solution: Experience Platform
-title: APIでのデータセットの作成
+title: API でのデータセットの作成
 topic-legacy: developer guide
-description: このドキュメントでは、Catalog Service APIでデータセットオブジェクトを作成する方法について説明します。
+description: このドキュメントでは、カタログサービス API でデータセットオブジェクトを作成する方法について説明します。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 48%
+ht-degree: 53%
 
 ---
 
-# APIでのデータセットの作成
+# API でのデータセットの作成
 
-[!DNL Catalog] APIを使用してデータセットを作成するには、データセットの基になる[!DNL Experience Data Model] (XDM)スキーマの`$id`値を把握しておく必要があります。 スキーマIDを取得したら、[!DNL Catalog] APIの`/datasets`エンドポイントにPOSTリクエストを行って、データセットを作成できます。
+[!DNL Catalog] API を使用してデータセットを作成するには、データセットの基となる [!DNL Experience Data Model](XDM) スキーマの `$id` 値を把握しておく必要があります。 スキーマ ID を取得したら、[!DNL Catalog] API の `/datasets` エンドポイントにPOSTリクエストを送信して、データセットを作成できます。
 
 >[!NOTE]
 >
->このドキュメントでは、[!DNL Catalog]内でデータセットオブジェクトを作成する方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の[チュートリアル](../datasets/create.md)を参照してください。
+>このドキュメントでは、[!DNL Catalog] でのデータセットオブジェクトの作成方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の[チュートリアル](../datasets/create.md)を参照してください。
 
 **API 形式**
 
@@ -52,11 +51,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
 | `schemaRef.id` | データセットの基になる XDM スキーマの URI `$id` 値。 |
-| `schemaRef.contentType` | スキーマの形式とバージョンを示します。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
+| `schemaRef.contentType` | スキーマの形式とバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
 >[!NOTE]
 >
->この例では、`containerFormat`プロパティに[Apache Parket](https://parquet.apache.org/documentation/latest/)ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
+>この例では、`containerFormat` プロパティに [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
 
 **応答**
 

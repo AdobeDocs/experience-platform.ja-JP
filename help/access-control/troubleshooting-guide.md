@@ -6,7 +6,7 @@ topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
 

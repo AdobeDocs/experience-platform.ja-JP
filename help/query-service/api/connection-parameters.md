@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；apiガイド；接続パラメータ；クエリサービス；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；api ガイド；接続パラメーター；クエリサービス；
 solution: Experience Platform
-title: 接続パラメーターAPIエンドポイント
+title: 接続パラメーター API エンドポイント
 topic-legacy: connection parameters
-description: /connection_parametersエンドポイントにGET要求を行うことで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
+description: インタラクティブサービスを使用するための接続パラメーターを取得するには、/connection_parameters エンドポイントにGETリクエストを送信します。
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
@@ -17,11 +16,11 @@ ht-degree: 38%
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーを理解できたので、[!DNL Query Service] API の呼び出しを開始できます。 以下の節では、[!DNL Query Service] API を使用しておこなえる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
-### 接続パラメーターの要求
+### 接続パラメーターのリクエスト
 
-`/connection_parameters`エンドポイントにGETリクエストを行うことで、接続パラメーターを取得できます。 インタラクティブサービスを介した接続に接続パラメーターを使用するクライアントについては、[クエリサービスクライアント](../clients/overview.md)に関するドキュメントを参照してください。
+`/connection_parameters` エンドポイントにGETリクエストを送信することで、接続パラメーターを取得できます。 インタラクティブサービスを介した接続に接続パラメーターを使用するクライアントについては、[クエリサービスクライアント](../clients/overview.md)に関するドキュメントを参照してください。
 
 **API 形式**
 

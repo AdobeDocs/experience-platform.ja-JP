@@ -6,7 +6,7 @@ topic-legacy: labels
 description: Adobe Experience Platform データガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。このドキュメントでは、Experience Platform でのデータ使用ラベルの概要を説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 100%
 

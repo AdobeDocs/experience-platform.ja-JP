@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；チュートリアル；フィーチャパイプライン；データサイエンスワークスペース；人気の高いトピック
-title: モデルオーサリングSDKを使用したフィーチャパイプラインの作成
+keywords: Experience Platform；チュートリアル；機能パイプライン；Data Science Workspace；よく読まれるトピック
+title: モデルオーサリング SDK を使用した機能パイプラインの作成
 topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platformでは、カスタムフィーチャパイプラインを作成して作成し、Senei Machine Learning Framework Runtimeを通じて尺度を変更してフィーチャエンジニアリングを実行できます。 このドキュメントでは、フィーチャパイプラインにある各種クラスについて説明し、PySparkのModel Authoring SDKを使用してカスタムフィーチャパイプラインを作成するための手順を説明します。
+description: Adobe Experience Platformでは、カスタム機能パイプラインを構築して作成し、Sensei Machine Learning Framework Runtime を通じて機能エンジニアリングを大規模に実行できます。 このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark のモデルオーサリング SDK を使用してカスタム機能パイプラインを作成する手順を示すチュートリアルを提供します。
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
@@ -13,39 +12,39 @@ ht-degree: 28%
 
 ---
 
-# モデルオーサリングSDKを使用したフィーチャパイプラインの作成
+# モデルオーサリング SDK を使用した機能パイプラインの作成
 
 >[!IMPORTANT]
 >
-> 機能のパイプラインは現在、APIからのみ使用できます。
+> 機能パイプラインは現在、API からのみ使用できます。
 
-Adobe Experience Platformでは、Sensei Machine Learning Framework Runtime（以下「Runtime」と呼ぶ）を使用して、カスタムフィーチャパイプラインを作成し、スケールでフィーチャエンジニアリングを実行できます。
+Adobe Experience Platformでは、カスタム機能パイプラインを作成して、Sensei Machine Learning Framework Runtime（以下「Runtime」）を通じて、機能エンジニアリングを大規模に実行できます。
 
-このドキュメントでは、フィーチャパイプラインにある各種クラスを説明し、PySparkの[Model Authoring SDK](./sdk.md)を使用してカスタムフィーチャパイプラインを作成するためのチュートリアルを順を追って示します。
+このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark の [ モデルオーサリング SDK](./sdk.md) を使用してカスタム機能パイプラインを作成する手順を示します。
 
-フィーチャパイプラインを実行すると、次のワークフローが実行されます。
+機能パイプラインの実行時に、次のワークフローが実行されます。
 
-1. レシピはデータセットをパイプラインに読み込みます。
-2. データセット上で機能の変換が行われ、Adobe Experience Platformに書き戻されます。
+1. レシピは、データセットをパイプラインに読み込みます。
+2. 機能の変換はデータセットでおこなわれ、Adobe Experience Platformに書き戻されます。
 3. 変換されたデータは、トレーニング用に読み込まれます。
-4. フィーチャーパイプラインは、選択したモデルとしてグラデーション倍力回帰を使用してステージを定義します。
-5. パイプラインはトレーニングデータのフィットに使用され、トレーニングされたモデルが作成されます。
-6. モデルがスコアリングデータセットと共に変換されます。
-7. 出力の対象となる列が選択され、[!DNL Experience Platform]に関連付けられたデータと共に保存されます。
+4. フィーチャパイプラインは、勾配ブースト回帰を選択したモデルとして使用してステージを定義します。
+5. パイプラインはトレーニングデータに合わせて使用され、トレーニング済みモデルが作成されます。
+6. モデルは、スコアリングデータセットで変換されます。
+7. 出力の対象となる列が選択され、関連するデータと共に [!DNL Experience Platform] に保存されます。
 
 ## はじめに
 
-任意の組織でレシピを実行するには、次の手順が必要です。
+任意の組織でレシピを実行するには、次が必要です。
 - 入力データセット。
 - データセットのスキーマ。
-- 変換後のスキーマと、そのスキーマに基づく空のデータセット。
+- 変換済みのスキーマと、そのスキーマに基づく空のデータセット。
 - 出力スキーマと、そのスキーマに基づく空のデータセット。
 
-上記のデータセットはすべて[!DNL Platform] UIにアップロードする必要があります。 この設定を行うには、Adobeが提供する[ブートストラップスクリプト](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)を使用します。
+上記のデータセットはすべて、[!DNL Platform] UI にアップロードする必要があります。 これを設定するには、Adobeが提供する [bootstrap スクリプト ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) を使用します。
 
-## フィーチャパイプラインクラス
+## 機能パイプラインのクラス
 
-次の表に、フィーチャパイプラインを構築するために拡張する必要がある主な抽象クラスを示します。
+次の表に、機能パイプラインを構築するために拡張する必要がある主な抽象クラスを示します。
 
 | 抽象クラス | 説明 |
 | -------------- | ----------- |
@@ -54,24 +53,24 @@ Adobe Experience Platformでは、Sensei Machine Learning Framework Runtime（�
 | FeaturePipelineFactory | FeaturePipelineFactory クラスは、一連の Spark Transformer から成り、機能エンジニアリングを実施する Spark パイプラインを構築します。FeaturePipelineFactory クラスを指定する代わりに、DatasetTransformer クラス内に機能エンジニアリングロジックを実装することもできます。 |
 | DataSaver | DataSaver クラスは、機能データセットのストレージのロジックを提供します。 |
 
-Feature Pipelineジョブが開始されると、Runtimeは最初にDataLoaderを実行して入力データをDataFrameとして読み込み、次にDatasetTransformer、FeaturePipelineFactory、またはその両方を実行してDataFrameを変更します。 最後に、生成された機能データセットが DataSaver を通して保存されます。
+機能パイプラインジョブが開始されると、Runtime はまず DataLoader を実行して入力データを DataFrame として読み込み、次に DatasetTransformer、FeaturePipelineFactory、またはその両方を実行して DataFrame を変更します。 最後に、生成された機能データセットが DataSaver を通して保存されます。
 
 次のフローチャートに、Runtime の実行順序を示します。
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## 機能パイプラインのクラスを実装する  {#implement-your-feature-pipeline-classes}
+## 機能パイプラインのクラスを実装する {#implement-your-feature-pipeline-classes}
 
 以下の節では、機能パイプラインに必要なクラスの説明とその実装例を示します。
 
-### 設定 JSON ファイルで変数を定義する  {#define-variables-in-the-configuration-json-file}
+### 設定 JSON ファイルで変数を定義する {#define-variables-in-the-configuration-json-file}
 
 設定 JSON ファイルはキーと値のペアで構成され、後から実行時に定義する変数を指定することを目的としています。これらのキーと値のペアでは、入力データセットの場所、出力データセット ID、テナント ID、列ヘッダーなどのプロパティを定義できます。
 
-次の例は、設定ファイル内にあるキーと値のペアを示しています。
+次の例は、設定ファイル内のキーと値のペアを示しています。
 
-**設定JSONの例**
+**設定 JSON の例**
 
 ```json
 [
@@ -103,13 +102,13 @@ Feature Pipelineジョブが開始されると、Runtimeは最初にDataLoader�
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-詳細な設定の例については、Data Science Workspaceが提供する[pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)ファイルを参照してください。
+設定の詳細な例については、Data Science Workspace から提供される [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) ファイルを参照してください。
 
 ### DataLoader を使用して入力データを準備する {#prepare-the-input-data-with-dataloader}
 
 DataLoader では、入力データの取得とフィルタリングをおこないます。DataLoader の実装では、抽象クラス `DataLoader` を拡張し、抽象メソッド `load` をオーバーライドする必要があります。
 
-次の例では、IDで[!DNL Platform]データセットを取得し、DataFrameとして返します。ここで、データセットID(`dataset_id`)は設定ファイル内で定義されたプロパティです。
+次の例では、[!DNL Platform] データセットを ID で取得し、DataFrame として返します。データセット ID(`dataset_id`) は設定ファイルで定義されたプロパティです。
 
 **PySpark の例**
 
@@ -162,7 +161,7 @@ class MyDataLoader(DataLoader):
 
 DatasetTransformer は、入力 DataFrame を変換するロジックを提供し、新しい派生 DataFrame を返します。このクラスは、FeaturePipelineFactory と協働するように、または唯一の機能エンジニアリングコンポーネントとして動作するように実装できます。また、このクラスを実装しないことも可能です。
 
-次の例は、DatasetTransformerクラスを拡張したものです。
+次の例では、 DatasetTransformer クラスを拡張しています。
 
 **PySpark の例**
 
@@ -222,7 +221,7 @@ class MyDatasetTransformer(DatasetTransformer):
 
 FeaturePipelineFactory を使用すると、機能エンジニアリングロジックを実装できます。そのためには、Spark パイプラインを通じて、一連の Spark Transformer を定義および連結します。このクラスは、DatasetTransformer と協働するように、または唯一の機能エンジニアリングコンポーネントとして動作するように実装できます。また、このクラスを実装しないことも可能です。
 
-次の例は、FeaturePipelineFactoryクラスを拡張します。
+次の例では、FeaturePipelineFactory クラスを拡張しています。
 
 **PySpark の例**
 
@@ -285,9 +284,9 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### DataSaver を使用して機能データセットを保存する {#store-your-feature-dataset-with-datasaver}
 
-DataSaverは、結果の機能データセットをストレージの場所に保存する役割を持ちます。 DataSaver の実装では、抽象クラス `DataSaver` を拡張し、抽象メソッド `save` をオーバーライドする必要があります。
+DataSaver は、作成された機能データセットをストレージの場所に保存します。 DataSaver の実装では、抽象クラス `DataSaver` を拡張し、抽象メソッド `save` をオーバーライドする必要があります。
 
-次の例は、DataSaverクラスを拡張して、データをIDで[!DNL Platform]データセットに格納します。ここで、データセットID(`featureDatasetId`)とテナントID(`tenantId`)が設定で定義されています。
+次の例では、データを ID 別に [!DNL Platform] データセットに格納する DataSaver クラスを拡張しています。データセット ID(`featureDatasetId`) とテナント ID(`tenantId`) は、設定で定義されたプロパティです。
 
 **PySpark の例**
 
@@ -353,9 +352,9 @@ class MyDataSaver(DataSaver):
 
 ### アプリケーションファイルで実装済みクラス名を指定する {#specify-your-implemented-class-names-in-the-application-file}
 
-フィーチャパイプラインクラスが定義され、実装されたら、クラスの名前をアプリケーションのYAMLファイルに指定する必要があります。
+機能パイプラインクラスを定義して実装したら、YAML アプリケーションファイルでクラスの名前を指定する必要があります。
 
-次の例では、実装されるクラス名を示します。
+次の例では、実装済みのクラス名を指定します。
 
 **PySpark の例**
 
@@ -386,56 +385,56 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## API {#create-feature-pipeline-engine-api}を使用して、機能のパイプラインエンジンを作成します。
+## API を使用して機能パイプラインエンジンを作成する {#create-feature-pipeline-engine-api}
 
-フィーチャパイプラインを作成したら、[!DNL Sensei Machine Learning] APIのフィーチャパイプラインエンドポイントを呼び出すために、Dockerイメージを作成する必要があります。 フィーチャパイプラインエンドポイントを呼び出すには、DockerイメージURLが必要です。
+機能パイプラインを作成したら、Docker イメージを作成して、[!DNL Sensei Machine Learning] API の機能パイプラインエンドポイントを呼び出す必要があります。 機能パイプラインエンドポイントを呼び出すには、Docker イメージ URL が必要です。
 
 >[!TIP]
 >
->Docker URLがない場合は、[Package source files into a recipe](../models-recipes/package-source-files-recipe.md)チュートリアルを参照し、DockerホストURLの作成手順を確認してください。
+>Docker URL がない場合は、『[ ソースファイルをレシピにパッケージ化 ](../models-recipes/package-source-files-recipe.md)』チュートリアルを参照して、Docker ホスト URL の作成手順を確認してください。
 
-オプションで、次のPostmanコレクションを使用して、機能のパイプラインAPIワークフローの完了を支援することもできます。
+オプションで、次の Postman コレクションを使用して、機能パイプライン API ワークフローの完了を支援することもできます。
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### フィーチャパイプラインエンジンを作成{#create-engine-api}
+### フィーチャパイプラインエンジンの作成 {#create-engine-api}
 
-Dockerイメージの場所を決めたら、`/engines`に対するPOSTを実行して、[!DNL Sensei Machine Learning] APIを使用して、[機能パイプラインエンジン](../api/engines.md#feature-pipeline-docker)を作成できます。 フィーチャパイプラインエンジンの作成に成功すると、エンジン固有の識別子(`id`)が提供されます。 続行する前に、この値を保存してください。
+Docker イメージの場所が決まったら、`/engines` に対するPOSTを実行して、[!DNL Sensei Machine Learning] API を使用して [ 機能パイプラインエンジン ](../api/engines.md#feature-pipeline-docker) を作成できます。 機能パイプラインエンジンが正常に作成されると、エンジン固有の識別子 (`id`) が提供されます。 続行する前に、この値を必ず保存してください。
 
 ### MLInstance の作成 {#create-mlinstance}
 
-新しく作成した`engineID`を使用して、`/mlInstance`エンドポイントにPOSTリクエストを行って、[MLIstance](../api/mlinstances.md#create-an-mlinstance)を作成する必要があります。 正常な応答は、次のAPI呼び出しで使用される一意の識別子(`id`)を含む、新しく作成されたMLInstanceの詳細を含むペイロードを返します。
+新しく作成した `engineID` を使用して、`/mlInstance` エンドポイントにPOSTリクエストを実行して、[MLIstance](../api/mlinstances.md#create-an-mlinstance) を作成する必要があります。 正常な応答は、次の API 呼び出しで使用される一意の識別子 (`id`) を含む、新しく作成された MLInstance の詳細を含むペイロードを返します。
 
 ### Experiment の作成 {#create-experiment}
 
-次に、[テスト](../api/experiments.md#create-an-experiment)を作成する必要があります。 テストを作成するには、MLIstanceの一意の識別子(`id`)を持っていて、`/experiment`エンドポイントにPOSTリクエストを行う必要があります。 正常な応答は、次のAPI呼び出しで使用される一意の識別子(`id`)を含む、新しく作成されたテストの詳細を含むペイロードを返します。
+次に、[ 実験 ](../api/experiments.md#create-an-experiment) を作成する必要があります。 実験を作成するには、MLIstance の一意の識別子 (`id`) を持ち、`/experiment` エンドポイントに対してPOSTリクエストを実行する必要があります。 成功応答は、新しく作成された実験の詳細 ( 次の API 呼び出しで使用される一意の識別子 (`id`) を含む ) を含むペイロードを返します。
 
-### テスト実行機能のパイプラインタスクを指定{#specify-feature-pipeline-task}
+### 実験実行機能パイプラインタスクの指定 {#specify-feature-pipeline-task}
 
-テストを作成したら、テストのモードを`featurePipeline`に変更する必要があります。 モードを変更するには、`EXPERIMENT_ID`と共に[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)に追加POSTを行い、本体内で`{ "mode":"featurePipeline"}`を送って、フィーチャパイプラインのテスト実行を指定します。
+実験を作成した後、実験のモードを `featurePipeline` に変更する必要があります。 モードを変更するには、`EXPERIMENT_ID` を使用して [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) に追加のPOSTを行い、本文で `{ "mode":"featurePipeline"}` を送信して、機能パイプラインの Experiment Run を指定します。
 
-完了したら、`/experiments/{EXPERIMENT_ID}`に対して[テストのステータス](../api/experiments.md#retrieve-specific)を取得するGETリクエストを行い、テストのステータスが更新されて完了するのを待ちます。
+完了したら、`/experiments/{EXPERIMENT_ID}` から [ 実験のステータス ](../api/experiments.md#retrieve-specific) を取得するGETリクエストを実行し、実験のステータスが更新されて完了するのを待ちます。
 
-### テストの実行のトレーニングタスク{#training}を指定
+### 実験実行のトレーニングタスクの指定 {#training}
 
-次に、[トレーニングの実行タスク](../api/experiments.md#experiment-training-scoring)を指定する必要があります。 `experiments/{EXPERIMENT_ID}/runs`にPOSTを行い、本文でモードを`train`に設定し、トレーニングパラメーターを含むタスクの配列を送信します。 成功応答は、要求された実験の詳細を含むペイロードを返します。
+次に、[ トレーニングの実行タスク ](../api/experiments.md#experiment-training-scoring) を指定する必要があります。 `experiments/{EXPERIMENT_ID}/runs` にPOSTし、本文でモードを `train` に設定して、トレーニングパラメーターを含むタスクの配列を送信します。 成功応答は、要求された実験の詳細を含むペイロードを返します。
 
-完了したら、`/experiments/{EXPERIMENT_ID}`に対して[テストのステータス](../api/experiments.md#retrieve-specific)を取得するGETリクエストを行い、テストのステータスが更新されて完了するのを待ちます。
+完了したら、`/experiments/{EXPERIMENT_ID}` から [ 実験のステータス ](../api/experiments.md#retrieve-specific) を取得するGETリクエストを実行し、実験のステータスが更新されて完了するのを待ちます。
 
-### テストの実行スコアタスク{#scoring}を指定
+### 実験実行のスコアリングタスクの指定 {#scoring}
 
 >[!NOTE]
 >
-> この手順を完了するには、テストに関連したトレーニングを1回以上実行する必要があります。
+> この手順を完了するには、1 つ以上の成功したトレーニング実行を実験に関連付ける必要があります。
 
-トレーニングの実行が成功したら、[スコアリング実行タスク](../api/experiments.md#experiment-training-scoring)を指定する必要があります。 `experiments/{EXPERIMENT_ID}/runs`にPOSTし、本文で`mode`属性を「score」に設定します。 この開始は、スコアリングテストの実行です。
+トレーニングの実行が成功したら、[ スコア付けの実行タスク ](../api/experiments.md#experiment-training-scoring) を指定する必要があります。 `experiments/{EXPERIMENT_ID}/runs` にPOSTし、本文で `mode` 属性を「score」に設定します。 これにより、スコアリング Experiment Run が開始されます。
 
-完了したら、`/experiments/{EXPERIMENT_ID}`に対して[テストのステータス](../api/experiments.md#retrieve-specific)を取得するGETリクエストを行い、テストのステータスが更新されて完了するのを待ちます。
+完了したら、`/experiments/{EXPERIMENT_ID}` から [ 実験のステータス ](../api/experiments.md#retrieve-specific) を取得するGETリクエストを実行し、実験のステータスが更新されて完了するのを待ちます。
 
-スコアリングが完了したら、機能のパイプラインが動作する必要があります。
+スコアリングが完了したら、機能パイプラインが動作可能になります。
 
 ## 次の手順 {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-このドキュメントを読むと、Model Authoring SDKを使用して機能パイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して[!DNL Sensei Machine Learning] APIを使用して機能パイプラインモデルを作成します。 これで、[[!DNL Sensei Machine Learning API]](../api/getting-started.md)を使用して、データセットの変換とデータ機能の拡張を続行する準備が整いました。
+このドキュメントでは、モデルオーサリング SDK を使用して機能パイプラインを作成し、Docker 画像を作成し、[!DNL Sensei Machine Learning] API を使用して Docker 画像 URL を使用して機能パイプラインモデルを作成しました。 これで、 [[!DNL Sensei Machine Learning API]](../api/getting-started.md) を使用して、引き続きデータセットの変換とデータ機能の抽出を大規模に行う準備が整いました。

@@ -1,8 +1,9 @@
 ---
 title: クラウドコネクタ拡張機能の概要
 description: Adobe Experience Platform の Cloud Connector イベント転送拡張機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: f3713652-ac32-4171-8dda-127c8c235849
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1616'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Cloud Connector イベント転送拡張機能を使用すると、宛先にデータを送信したり、宛先からデータを取得したりするためのカスタム HTTP リクエストを作成できます。Cloud Connector の拡張機能は、Postman を Adobe Experience Platform Edge ネットワークに配置する場合と似ており、専用の拡張機能を持たないエンドポイントへのデータ送信に使用できます。
 
@@ -44,13 +45,13 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 
 #### クエリのパラメーター
 
-クエリ文字列パラメーターとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。「siteSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{siteSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+クエリ文字列パラメーターとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「siteSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{siteSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 クエリのパラメーターを追加するには、「**[!UICONTROL さらに追加]**」を選択してください。
 
 #### ヘッダー
 
-ヘッダーとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。「pageName」という名前のデータ要素の値をキーまたは値として参照するには、「`{{pageName}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+ヘッダーとして送信するキーと値のペアごとにキーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「pageName」という名前のデータ要素の値をキーまたは値として参照するには、「`{{pageName}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 ヘッダーを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
@@ -63,13 +64,13 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | ヘッダー | 説明 |
 |---|---|
 | [A-IM](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
-| Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
-| Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
+| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
+| Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
+| Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
 | Authorization | サーバーでユーザーエージェントを認証するための資格情報が含まれます。 |
 | [Cache-Control](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Cache-Control) | リクエストと応答の両方のキャッシュメカニズム用のディレクティブ。 |
 | [接続](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Connection) | 現在のトランザクションが終了した後、ネットワーク接続を開いたままにするかどうかを制御します。 |
@@ -87,7 +88,7 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | [If-None-Match](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-None-Match) |  |
 | [if-Range](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Range) |  |
 | [If-Unmodified-Since](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
+| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
 | [Origin](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Origin) |  |
 | [Pragma](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Pragma) | 実装固有のヘッダー。リクエスト応答チェーンの任意の場所で様々な効果を持つ場合があります。Cache-Control ヘッダーが存在しない HTTP/1.0 キャッシュとの下位互換性を確保するために使用されます。 |  |
 | [Proxy-Authorization](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Proxy-Authorization) |
@@ -103,17 +104,17 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 
 #### 本文（JSON）
 
-リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。「appSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{appSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
+リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{appSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。
 
 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
 #### 本文（生）
 
-リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。「appSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{appSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。1 つ以上のデータ要素を追加できます。
+リクエストの本文で送信するキーと値のペアごとに、キーと値を定義します。データ要素を手動で入力するには、中括弧を使用して、イベント転送向けにデータ要素をトークン化します。 「appSection」という名前のデータ要素の値をキーまたは値として参照するには、「`{{appSection}}`」と入力します。または、ドロップダウンメニューで以前に作成したデータ要素を選択します。1 つ以上のデータ要素を追加できます。
 
 ### アドバンス
 
-イベント転送のルール内のアクションは順番に実行されます。クライアントからの着信イベントにないデータを外部ソースから取得し、この応答を受け取って、同じルール内の後続アクションでデータを変換する、または最終的な宛先に送信する必要がある場合があります。詳細セクションの「リクエスト応答を保存」で、この処理を有効にできます。
+イベント転送のルール内のアクションは順番に実行されます。 クライアントからの着信イベントにないデータを外部ソースから取得し、この応答を受け取って、同じルール内の後続アクションでデータを変換する、または最終的な宛先に送信する必要がある場合があります。詳細セクションの「リクエスト応答を保存」で、この処理を有効にできます。
 
 エンドポイントからの応答の本文を保存するには、「 **[!UICONTROL リクエストの応答を保存]**」ボックスをチェックして、テキストフィールドで応答キーを定義します。
 

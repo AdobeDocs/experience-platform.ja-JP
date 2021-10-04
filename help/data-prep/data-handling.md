@@ -6,7 +6,7 @@ topic-legacy: overview
 description: このドキュメントでは、Data Prep における様々なデータ型の処理方法の概要について説明します。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 100%
 

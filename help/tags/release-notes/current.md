@@ -1,8 +1,9 @@
 ---
 title: リリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
-source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
-workflow-type: ht
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 ## 2021 年 7 月 19 日（PT）
 
@@ -32,7 +33,7 @@ ht-degree: 100%
 
 ## 2021 年 4 月 22 日（PT）
 
-**Adobe Experience Platform データ収集** - アドビへのデータ送信は、タグをサイトにデプロイしたり、設定をアプリにデプロイしたりすることだけではありません。Experience Platform SDK と Edge Network を使用するには、他の Platform 機能にアクセスする必要があります。以前はこのために、いくつかの異なるツールにログインする必要がありましたが、現在では、ツールが 1 か所にまとめられています。
+**Adobe Experience Platform でのデータ収集** - アドビへのデータ送信は、タグをサイトにデプロイしたり、アプリに設定したりすることだけではありません。Experience Platform SDK と Edge Network を使用するには、他の Platform 機能にアクセスする必要があります。以前はこのために、いくつかの異なるツールにログインする必要がありましたが、現在では、ツールが 1 か所にまとめられています。
 
 Platform のデータ収集は 6 つの機能で構成され、新しく合理化されたナビゲーションには、会社およびユーザーアカウントがアクセスできる項目のみが含まれます。機能名の一部は、Experience Platform の命名パターンに合わせて更新されています。
 
@@ -47,7 +48,7 @@ Experience Platform とデータ収集の進化にともない、さらに多く
 
 ## 2021 年 2 月 18 日（PT）
 
-* データ収集 UI が react-spectrum v3 に更新されました。
+* データ収集 UI を react-spectrum v3 に更新
 * 最新の Spectrum パターンに適合するように拡張機能カードを更新しました
 * アプリ全体で名前フィールドのサイズを大きくしました
 

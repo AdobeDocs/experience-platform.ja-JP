@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの置き換え
+keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの置換
 solution: Experience Platform
 title: カタログオブジェクトの置換
 topic-legacy: developer guide
 description: PUT リクエストを使用して、カタログオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードで置き換えられます。
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
@@ -15,11 +14,11 @@ ht-degree: 60%
 
 # カタログオブジェクトの置換
 
-PUTリクエストを使用して[!DNL Catalog]オブジェクトの内容を上書きできます。このリソース全体がリクエストペイロードに置き換えられます。
+PUTリクエストを使用して [!DNL Catalog] オブジェクトの内容を上書きできます。この場合、リソース全体がリクエストペイロードで置き換えられます。
 
 >[!NOTE]
 >
->[!DNL Catalog]オブジェクト内の特定のフィールドの数を更新するだけで済む場合は、PATCHリクエストを使用する方が効率的です。
+>[!DNL Catalog] オブジェクト内の特定のフィールドのみを更新する必要がある場合は、PATCHリクエストを使用する方が効率的です。
 
 **API 形式**
 
@@ -29,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 置き換える[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 置き換える [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**

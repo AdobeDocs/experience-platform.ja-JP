@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Admin Console を操作して Platform のアクセス制御を管理する方法について説明します。
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 100%
 

@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；配列関数；配列；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；配列関数；配列；
 solution: Experience Platform
-title: アレイ、リスト、および設定PQL関数
+title: 配列、リスト、および設定 PQL 関数
 topic-legacy: developer guide
 description: プロファイルクエリ言語（PQL）は、配列、リスト、および文字列とのやり取りを容易にする関数を提供します。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+[!DNL Profile Query Language]（PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## In
 
@@ -41,7 +40,7 @@ person.birthMonth in [3, 6, 9]
 
 >[!NOTE]
 >
-> `notIn`また&#x200B;*、* 関数は、いずれの値も null に等しくないことを確認します。したがって、結果は `in` 関数の完全な否定ではありません。
+>この`notIn` 関数は&#x200B;*また*、どの値も NULL ではないことを保証します。したがって、結果は `in` 関数の完全な否定ではありません。
 
 **形式**
 
@@ -229,7 +228,7 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## First `n` in array  {#first-n}
+## First `n` in array {#first-n}
 
 `topN` 関数は、指定した数値式に基づいて昇順で並べ替えられた場合、配列の最初の `N` 項目を返すために使用します。
 

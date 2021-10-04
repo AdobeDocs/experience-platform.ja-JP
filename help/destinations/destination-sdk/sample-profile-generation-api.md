@@ -1,6 +1,6 @@
 ---
-description: このページでは、「/authoring/sample-profiles」 APIエンドポイントを使用して実行できる、宛先テストで使用するサンプルプロファイルを生成するAPI操作の一覧と説明を示します。
-title: プロファイル生成API操作の例
+description: このページでは、「/authoring/sample-profiles」 API エンドポイントを使用して実行できる、宛先テストで使用するサンプルプロファイルを生成する API 操作の一覧と説明を示します。
+title: プロファイル生成 API 操作の例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
@@ -9,36 +9,36 @@ ht-degree: 3%
 
 ---
 
-# プロファイル生成API操作の例 {#sample-profile-api-operations}
+# プロファイル生成 API 操作の例 {#sample-profile-api-operations}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-このページでは、`/authoring/sample-profiles` APIエンドポイントを使用して実行できるすべてのAPI操作について説明します。
+このページでは、`/authoring/sample-profiles` API エンドポイントを使用して実行できるすべての API 操作について説明します。
 
-このAPIエンドポイントを使用すると、使用するサンプルプロファイルを生成できます。
-* メッセージ変換テンプレートのテスト時。 詳しくは、[メッセージ変換テンプレート](./create-template.md)を作成してテストしてください。
-* 宛先が正しく設定されているかどうかをテストする場合。 詳しくは、[宛先の設定](./test-destination.md)をテストしてください。
+この API エンドポイントを使用すると、使用するサンプルプロファイルを生成できます。
+* メッセージ変換テンプレートのテスト時。 詳しくは、[ メッセージ変換テンプレート ](./create-template.md) の作成とテストを参照してください。
+* 宛先が正しく設定されているかどうかをテストする場合。 詳しくは、[ 宛先の設定 ](./test-destination.md) をテストしてください。
 
-AdobeXDMソーススキーマまたは宛先でサポートされているターゲットスキーマに基づいて、サンプルプロファイルを生成できます。 AdobeのXDMソーススキーマとターゲットスキーマの違いを理解するには、[メッセージ形式](./message-format.md)の記事を参照してください。
+サンプルプロファイルは、AdobeXDM ソーススキーマか、宛先でサポートされているターゲットスキーマのどちらかに基づいて生成できます。 Adobeの XDM ソーススキーマとターゲットスキーマの違いを理解するには、[ メッセージ形式 ](./message-format.md) の記事を参照してください。
 
-## サンプルプロファイル生成API操作の概要 {#get-started}
+## サンプルプロファイル生成 API 操作の概要 {#get-started}
 
-続行する前に、[はじめに](./getting-started.md)を参照し、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+続行する前に、[ はじめに ](./getting-started.md) を参照して、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
 
 ## ソーススキーマに基づくサンプルプロファイルの生成 {#generate-sample-profiles-source-schema}
 
 >[!IMPORTANT]
 >
->[宛先](./test-destination.md)をテストする際に、ここで生成されたサンプルプロファイルをHTTP呼び出しに追加します。
+>[ 宛先 ](./test-destination.md) をテストする際に、ここで生成したサンプルプロファイルを HTTP 呼び出しに追加します。
 
-`authoring/sample-profiles/`エンドポイントにGETリクエストを送信し、テストする宛先設定に基づいて作成した宛先インスタンスのIDを指定することで、ソーススキーマに基づいてサンプルプロファイルを生成できます。
+`authoring/sample-profiles/` エンドポイントにGETリクエストを送信し、テストする宛先設定に基づいて作成した宛先インスタンスの ID を指定することで、ソーススキーマに基づいてサンプルプロファイルを生成できます。
 
 >[!TIP]
 >
->* 宛先との接続を参照する際に、URLから、ここで使用する必要がある宛先インスタンスIDを取得します。
-   >![UI画像宛先インスタンスIDの取得方法](./assets/get-destination-instance-id.png)
+>* 宛先との接続を参照する際に、URL からここで使用する必要がある宛先インスタンス ID を取得します。
+   >![UI 画像宛先インスタンス ID の取得方法](./assets/get-destination-instance-id.png)
 
 
 **API 形式**
@@ -50,15 +50,15 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 
 | クエリパラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する宛先インスタンスのID。 |
-| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、`1 - 1000`の間の値を取ることができます。 <br> countパラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、宛先サーバー設 `maxUsersPerRequest` 定の値によ [って決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは1つのサンプルプロファイルを生成します。 |
+| `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する際の基になる宛先インスタンスの ID。 |
+| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 このパラメーターは `1 - 1000` の間の値を取ることができます。 <br> count パラメーターを指定しない場合、生成されるプロファイルのデフォルト数は、宛先サーバー `maxUsersPerRequest` 設定の値 [によって決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 
 **リクエスト**
 
-次のリクエストは、`{DESTINATION_INSTANCE_ID}`および`{COUNT}`クエリパラメーターで設定されたサンプルプロファイルを生成します。
+次のリクエストは、`{DESTINATION_INSTANCE_ID}` および `{COUNT}` クエリパラメーターで設定されたサンプルプロファイルを生成します。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -72,7 +72,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **応答**
 
-正常な応答は、HTTPステータス200と、指定された数のサンプルプロファイル、およびソースXDMスキーマに対応するセグメントメンバーシップ、ID、プロファイル属性を返します。
+正常な応答は、HTTP ステータス 200 と、指定された数のサンプルプロファイル、およびソース XDM スキーマに対応するセグメントメンバーシップ、ID、プロファイル属性を返します。
 
 >[!TIP]
 >
@@ -172,24 +172,24 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentMembership` | 個人のセグメントメンバーシップを表すmapオブジェクト。 `segmentMembership`の詳細については、[Segment Membership Details](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)を参照してください。 |
-| `lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
-| `identityMap` | 個人の様々なID値と、関連する名前空間を説明するmap-typeフィールド。 `identityMap`の詳細については、「[スキーマ構成の基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)」を参照してください。 |
+| `segmentMembership` | 個人のセグメントメンバーシップを表す map オブジェクト。 `segmentMembership` の詳細については、[Segment Membership Details](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html) を参照してください。 |
+| `lastQualificationTime` | このプロファイルが最後にセグメントに適合した時刻のタイムスタンプ。 |
+| `xdm:status` | 現在のリクエストの一部としてセグメントのメンバーシップが認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントの一部であり、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
+| `identityMap` | 個人の様々な ID 値と、関連する名前空間を示す map-type フィールド。 `identityMap` の詳細は、[ スキーマ構成の基礎 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## ターゲットスキーマに基づいてサンプルプロファイルを生成する {#generate-sample-profiles-target-schema}
+## ターゲットスキーマに基づくサンプルプロファイルの生成 {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->テンプレートの作成時に、[レンダリングテンプレートの手順](./render-template-api.md#multiple-profiles-with-body)で生成されたサンプルプロファイルを使用します。
+>テンプレートの作成時にここで生成したサンプルプロファイルを、[ レンダリングテンプレートの手順 ](./render-template-api.md#multiple-profiles-with-body) で使用します。
 
-`authoring/sample-profiles/`エンドポイントに対してGETリクエストをおこなうターゲットスキーマに基づいて、サンプルプロファイルを生成し、テンプレートを作成するターゲット設定に基づいて宛先設定の宛先IDを指定できます。
+`authoring/sample-profiles/` エンドポイントに対してGETリクエストをおこなうターゲットスキーマに基づいて、サンプルプロファイルを生成し、テンプレートを作成するターゲット設定に基づいて宛先設定の宛先 ID を指定できます。
 
 >[!TIP]
 >
->* ここで使用する宛先IDは、`/destinations`エンドポイントを使用して作成された、宛先設定に対応する`instanceId`です。 [宛先設定APIリファレンス](./destination-configuration-api.md#retrieve-list)を参照してください。
+>* ここで使用する宛先 ID は、`/destinations` エンドポイントを使用して作成された、宛先設定に対応する `instanceId` です。 [ 宛先設定 API リファレンス ](./destination-configuration-api.md#retrieve-list) を参照してください。
 
 
 **API 形式**
@@ -201,14 +201,14 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 
 | クエリパラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | サンプルプロファイルを生成する場所に基づく宛先設定のID。 |
-| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、`1 - 1000`の間の値を取ることができます。 <br> countパラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、宛先サーバー設 `maxUsersPerRequest` 定の値によ [って決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは1つのサンプルプロファイルを生成します。 |
+| `{DESTINATION_ID}` | サンプルプロファイルを生成する場所に基づく宛先設定の ID。 |
+| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 このパラメーターは `1 - 1000` の間の値を取ることができます。 <br> count パラメーターを指定しない場合、生成されるプロファイルのデフォルト数は、宛先サーバー `maxUsersPerRequest` 設定の値 [によって決まります](./destination-server-api.md#create)。このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、`{DESTINATION_ID}`および`{COUNT}`クエリパラメーターで設定されたサンプルプロファイルを生成します。
+次のリクエストは、`{DESTINATION_ID}` および `{COUNT}` クエリパラメーターで設定されたサンプルプロファイルを生成します。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -222,7 +222,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **応答**
 
-正常な応答は、HTTPステータス200と、指定された数のサンプルプロファイル、およびターゲットXDMスキーマに対応するセグメントメンバーシップ、ID、プロファイル属性を返します。
+正常な応答は、HTTP ステータス 200 と、指定された数のサンプルプロファイル、およびターゲット XDM スキーマに対応するセグメントメンバーシップ、ID、プロファイル属性を返します。
 
 ```json
 [
@@ -364,10 +364,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 ]
 ```
 
-## APIエラー処理 {#api-error-handling}
+## API エラー処理 {#api-error-handling}
 
-宛先SDK APIエンドポイントは、一般的なExperience PlatformAPIエラーメッセージの原則に従います。 Platformトラブルシューティングガイドの[APIステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)および[リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)を参照してください。
+宛先 SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [ リクエストヘッダーのエラー ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、メッセージ変換テンプレート](./create-template.md)をテストする場合、または[テスト（宛先が正しく設定されている場合）に使用するサンプルプロファイルを生成する方法がわかります。](./test-destination.md)[
+このドキュメントを読むと、[ メッセージ変換テンプレート ](./create-template.md) のテスト時、または [ テスト時に、](./test-destination.md) 宛先が正しく設定されているかどうかをテストする際に使用するサンプルプロファイルを生成できます。

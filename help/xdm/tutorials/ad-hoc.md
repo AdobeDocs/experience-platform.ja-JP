@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；アドホック；アドホック；アドホック；Ad hoc；チュートリアル；作成；スキーマ；スキーマ
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；アドホック；アドホック；Ad hoc;Ad hoc;Tutorial;Create；スキーマ；スキーマ
 solution: Experience Platform
 title: アドホックスキーマの作成
 description: 特定の状況において、1 つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ Experience Data Model（XDM）スキーマを作成する必要が出ることがあります。これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSV ファイルの取り込みや特定の種類のソース接続の作成など、Experience Platform の様々なデータ取り込みワークフローで使用されます。
@@ -9,24 +9,24 @@ exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 75%
+ht-degree: 76%
 
 ---
 
 # アドホックスキーマの作成
 
-特定の状況で、1つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ[!DNL Experience Data Model] (XDM)スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSVファイルの取り込みや特定の種類のソース接続の作成など、[!DNL Experience Platform]の様々なデータ取り込みワークフローで使用されます。
+特定の状況で、1 つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ [!DNL Experience Data Model] (XDM) スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSV ファイルの取り込みや特定の種類のソース接続の作成など、 [!DNL Experience Platform] の様々なデータ取り込みワークフローで使用されます。
 
-このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) を使用してアドホックスキーマを作成する一般的な手順を示します。ワークフローの一部としてアドホックスキーマを作成する必要がある他の[!DNL Experience Platform]チュートリアルと組み合わせて使用することを目的としています。 これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
+このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) を使用してアドホックスキーマを作成する一般的な手順を示します。ワークフローの一部としてアドホックスキーマを作成する必要がある他の [!DNL Experience Platform] チュートリアルと組み合わせて使用することを目的としています。 これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Experience Data Model](XDM)システムに関する十分な知識が必要です。 このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
+このチュートリアルでは、[!DNL Experience Data Model](XDM) システムに関する十分な知識が必要です。 このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
 
-- [XDMシステムの概要](../home.md):XDMと、での実装の概要で [!DNL Experience Platform]す。
+- [XDM システムの概要](../home.md):XDM とでの実装の概要で [!DNL Experience Platform]す。
 - [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的なコンポーネントの概要。
 
-このチュートリアルを開始する前に、『[開発者ガイド](../api/getting-started.md)』を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 ## アドホッククラスの作成
 
@@ -246,7 +246,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-次のリクエストでは、Accept ヘッダー`application/vnd.adobe.xed-full+json; version=1`を使用して、拡張形式のスキーマを返します。[!DNL Schema Registry]から特定のリソースを取得する場合、リクエストのAcceptヘッダーには、該当するリソースのメジャーバージョンが含まれている必要があります。
+次のリクエストでは、Accept ヘッダー`application/vnd.adobe.xed-full+json; version=1`を使用して、拡張形式のスキーマを返します。[!DNL Schema Registry] から特定のリソースを取得する場合、リクエストの Accept ヘッダーには、該当するリソースのメジャーバージョンが含まれている必要があります。
 
 ```shell
 curl -X GET \
@@ -312,4 +312,4 @@ curl -X GET \
 
 このチュートリアルに従い、新しいアドホックスキーマを作成しました。別のチュートリアルの一部としてこのドキュメントにたどり着いた場合は、アドホックスキーマの `$id` を使用し、指示に従ってワークフローを完了することができるようになりました。
 
-[!DNL Schema Registry] APIの使用に関する詳細は、[開発者ガイド](../api/getting-started.md)を参照してください。
+[!DNL Schema Registry] API の使用について詳しくは、[ 開発者ガイド ](../api/getting-started.md) を参照してください。

@@ -4,13 +4,13 @@ description: 2021 年 4 月 21 日（PT）の Experience Platform リリース�
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: ht
+exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Experience Platform リリースノート
 

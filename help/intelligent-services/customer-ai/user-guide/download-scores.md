@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；スコアのダウンロード；顧客ai；人気のあるトピック；エクスポート；エクスポート；顧客aiダウンロード；顧客aiスコア
+keywords: Experience Platform；ダウンロードスコア；顧客 AI；人気のあるトピック；書き出し；書き出し；顧客 AI ダウンロード；顧客 AI スコア
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: 顧客AIでのスコアのダウンロード
+title: 顧客 AI でのスコアのダウンロード
 topic-legacy: Downloading scores
-description: 顧客AIでは、スコアをParketファイル形式でダウンロードできます。
+description: 顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
@@ -13,15 +12,15 @@ ht-degree: 85%
 
 ---
 
-# 顧客AIでのスコアのダウンロード
+# 顧客 AI でのスコアのダウンロード
 
 このドキュメントは、顧客 AI のスコアをダウンロードする際のガイドとして提供されています。
 
 ## はじめに
 
-顧客AIでは、スコアをParketファイル形式でダウンロードできます。 このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
+顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。 このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
 
-さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、[顧客AIインスタンスの設定](./configure.md)にアクセスします。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、[ 顧客 AI インスタンスの設定 ](./configure.md) を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 現在は、2 つの方法で顧客 AI スコアをダウンロードできます。
 
@@ -38,9 +37,9 @@ ht-degree: 85%
 
 ![データセット ID](../images/download-scores/access-scores.png)
 
-## バッチ ID を取得する  {#retrieve-your-batch-id}
+## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、limitクエリーパラメーターの値を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、この API 呼び出しに使用されます。 追加のバッチを返すには、limit クエリパラメーターの数を、返す量に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -62,9 +61,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチID `01E5QSWCAASFQ054FNBKYV6TIQ`です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+正常な応答は、バッチ ID オブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチ ID `01E5QSWCAASFQ054FNBKYV6TIQ` です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 ```json
 {
@@ -113,7 +112,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## バッチ ID を使用して次の API 呼び出しを取得する  {#retrieve-the-next-api-call-with-your-batch-id}
+## バッチ ID を使用して次の API 呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
 
 バッチ ID を取得したら、`/batches` に対して新しい GET リクエストを実行できます。リクエストを実行すると、次の API リクエストとして使用するリンクが返されます。
 
@@ -167,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## ファイルを取得する  {#retrieving-your-files}
+## ファイルを取得する {#retrieving-your-files}
 
 前の手順で取得した `href` 値を API 呼び出しとして使用して、新しい GET リクエストを実行し、ファイルディレクトリを取得します。
 

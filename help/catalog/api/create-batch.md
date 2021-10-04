@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；作成バッチ；カタログサービス；api
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチの作成；カタログサービス；api
 solution: Experience Platform
-title: APIでのバッチの作成
+title: API でのバッチの作成
 topic-legacy: developer guide
-description: カタログAPIの/batchesエンドポイントにPOSTリクエストを作成して、バッチを作成できます。
+description: バッチを作成するには、カタログ API の/batches エンドポイントにPOSTリクエストを送信します。
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
@@ -15,7 +14,7 @@ ht-degree: 51%
 
 # バッチの作成
 
-データセットがデータを取得するには、バッチが関連付けられている必要があります。既存のデータセットの`id`値を使用して、[!DNL Catalog] APIの`/batches`エンドポイントへのPOSTリクエストを行うことで、バッチを作成できます。
+データセットがデータを取得するには、バッチが関連付けられている必要があります。既存のデータセットの `id` 値を使用して、[!DNL Catalog] API の `/batches` エンドポイントにPOSTリクエストを送信し、バッチを作成できます。
 
 **API 形式**
 

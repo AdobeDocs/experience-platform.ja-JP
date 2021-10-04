@@ -1,8 +1,9 @@
 ---
 title: Adobe クライアントデータレイヤー拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe クライアントデータレイヤーのタグ拡張機能についての最新のリリースノートです。
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
-workflow-type: ht
+exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 100%
 

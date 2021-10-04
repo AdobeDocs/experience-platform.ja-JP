@@ -1,5 +1,5 @@
 ---
-title: Experience Cloud・アプリケーションとの統合
+title: Experience Cloudアプリケーションとの統合
 description: このビデオでは、Adobe Experience PlatformがAdobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、顧客属性、オーディエンスライブラリ、タグなどのExperience Cloudアプリケーションや機能と統合する方法の概要を説明します。
 kt: 4334
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Experience Cloudアプリケーションとの統合
 
-このビデオでは、Adobe Experience PlatformとAdobe Experience Cloudのアプリケーションおよび機能(Adobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、顧客属性、オーディエンスライブラリ、タグなど)との統合の概要を説明します。
+このビデオでは、Adobe Experience PlatformとAdobe Experience Cloudのアプリケーションおよび機能 (Adobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、顧客属性、オーディエンスライブラリ、タグなど ) の統合方法の概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)

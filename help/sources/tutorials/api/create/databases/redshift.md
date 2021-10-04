@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
-title: フローサービスAPIを使用したAmazon Redshiftベース接続の作成
+title: フローサービス API を使用したAmazon Redshift ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービスAPIを使用してAdobe Experience PlatformをAmazon Redshiftに接続する方法を説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをAmazon Redshift に接続する方法を説明します。
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '463'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Amazon Redshift]ベース接続を作成する
+# [!DNL Flow Service] API を使用して [!DNL Amazon Redshift] ベース接続を作成する
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して[!DNL Amazon Redshift]の基本接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Amazon Redshift] の基本接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] APIを使用して[!DNL Amazon Redshift]に正常に接続するために知っておく必要がある追加情報を示します。
+以下の節では、[!DNL Flow Service] API を使用して [!DNL Amazon Redshift] に正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service]が[!DNL Amazon Redshift]と接続するには、次の接続プロパティを指定する必要があります。
+[!DNL Flow Service] が [!DNL Amazon Redshift] と接続するには、次の接続プロパティを指定する必要があります。
 
 | **資格情報** | **説明** |
 | -------------- | --------------- |
-| `server` | [!DNL Amazon Redshift]アカウントに関連付けられたサーバー。 |
-| `username` | [!DNL Amazon Redshift]アカウントに関連付けられているユーザー名。 |
-| `password` | [!DNL Amazon Redshift]アカウントに関連付けられているパスワード。 |
-| `database` | アクセスする[!DNL Amazon Redshift]データベース。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Amazon Redshift]の接続仕様IDは`3416976c-a9ca-4bba-901a-1f08f66978ff`です。 |
+| `server` | [!DNL Amazon Redshift] アカウントに関連付けられたサーバー。 |
+| `username` | [!DNL Amazon Redshift] アカウントに関連付けられているユーザー名。 |
+| `password` | [!DNL Amazon Redshift] アカウントに関連付けられたパスワード。 |
+| `database` | アクセスする [!DNL Amazon Redshift] データベース。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Amazon Redshift] の接続仕様 ID は `3416976c-a9ca-4bba-901a-1f08f66978ff` です。 |
 
-使い始める方法については、この[[!DNL Amazon Redshift] ドキュメント](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)を参照してください。
+使い始める方法については、この [[!DNL Amazon Redshift]  ドキュメント ](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html) を参照してください。
 
-### Platform APIの使用
+### Platform API の使用
 
-Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
+Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続を作成する
 
-ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
+ベース接続は、ソースと Platform の間の情報を保持します。これには、ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID などが含まれます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL Amazon Redshift]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
+ベースPOSTID を作成するには、要求パラメーターの一部として [!DNL Amazon Redshift] 認証資格情報を指定しながら、`/connections` エンドポイントに接続要求を行います。
 
 **API 形式**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、[!DNL Amazon Redshift]のベース接続を作成します。
+次のリクエストは、[!DNL Amazon Redshift] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -91,15 +91,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | ------------- | --------------- |
-| `auth.params.server` | [!DNL Amazon Redshift]サーバー。 |
-| `auth.params.database` | [!DNL Amazon Redshift]アカウントに関連付けられたデータベース。 |
-| `auth.params.password` | [!DNL Amazon Redshift]アカウントに関連付けられているパスワード。 |
-| `auth.params.username` | [!DNL Amazon Redshift]アカウントに関連付けられているユーザー名。 |
-| `connectionSpec.id` | [!DNL Amazon Redshift]接続仕様ID:`3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `auth.params.server` | [!DNL Amazon Redshift] サーバー。 |
+| `auth.params.database` | [!DNL Amazon Redshift] アカウントに関連付けられたデータベース。 |
+| `auth.params.password` | [!DNL Amazon Redshift] アカウントに関連付けられたパスワード。 |
+| `auth.params.username` | [!DNL Amazon Redshift] アカウントに関連付けられているユーザー名。 |
+| `connectionSpec.id` | [!DNL Amazon Redshift] 接続仕様 ID:`3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **応答**
 
-正常な応答は、新しく作成された接続を、一意の識別子(`id`)を含めて返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) が含まれます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Amazon Redshift]接続を作成し、接続の一意のID値を取得しました。 次のチュートリアルでは、フローサービスAPI](../../explore/database-nosql.md)を使用してデータベースやNoSQLシステムを調べる方法を学ぶ際に、この接続IDを使用できます。[
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Amazon Redshift] 接続を作成し、接続の一意の ID 値を取得しました。 この接続 ID は、次のチュートリアルで [ フローサービス API](../../explore/database-nosql.md) を使用してデータベースや NoSQL システムを調べる方法を学ぶ際に使用できます。

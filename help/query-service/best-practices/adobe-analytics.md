@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；サンプルクエリ；サンプルクエリ;adobe analytics;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリサービス；クエリ例；クエリ例；Adobe Analytics;
 solution: Experience Platform
-title: Adobe Analyticsデータのサンプルクエリ
+title: Adobe Analyticsデータのクエリ例
 topic-legacy: queries
 description: 選択した Adobe Analytics レポートスイートのデータは XDM ExperienceEvents に変換され、データセットとして Adobe Experience Platform に取得されます。このドキュメントでは、Adobe Experience Platform クエリサービスがこのデータを利用する多くの使用例を説明し、付属のクエリ例が Adobe Analytics データセットと連携するようにします。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
@@ -15,9 +14,9 @@ ht-degree: 58%
 
 # Adobe Analytics データのクエリ例
 
-選択したAdobe Analyticsのレポートスイートのデータは、[!DNL XDM ExperienceEvent]クラスに従うデータに変換され、データセットとしてAdobe Experience Platformに取り込まれます。
+選択したAdobe Analyticsレポートスイートのデータは、 [!DNL XDM ExperienceEvent] クラスに準拠したデータに変換され、データセットとしてAdobe Experience Platformに取り込まれます。
 
-このドキュメントでは、Adobe Experience Platform[!DNL Query Service]がこのデータを使用する様々な使用例の概要を説明します。この例には、サンプルクエリがAdobe Analyticsのデータセットと連携する必要がある場合も含まれます。 [!DNL Experience Events]へのマッピングについて詳しくは、[Analyticsフィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md)のドキュメントを参照してください。
+このドキュメントでは、Adobe Experience Platform [!DNL Query Service] がこのデータを利用する多くの使用例を説明します。例えば、サンプルクエリがAdobe Analyticsデータセットと連携する必要があります。 [!DNL Experience Events] へのマッピングについて詳しくは、[Analytics フィールドマッピング ](../../sources/connectors/adobe-applications/mapping/analytics.md) のドキュメントを参照してください。
 
 ## はじめに
 
@@ -25,7 +24,7 @@ ht-degree: 58%
 
 ## よく使用される SQL の例
 
-次の例は、Adobe Analyticsデータの分析に一般的に使用されるSQLクエリを示しています。
+次の例は、Adobe Analyticsデータを分析するための一般的に使用される SQL クエリを示しています。
 
 ### 特定の日の時間別訪問者数
 
@@ -124,13 +123,13 @@ ORDER BY Hour;
 
 ### 製品の構文
 
-Adobe Analyticsでは、カスタムの製品レベルのデータは、マーチャンダイジング変数と呼ばれる特別に設定された変数を通じて収集できます。 これらは、eVarまたはカスタムイベントに基づいています。 これらの変数とその標準的な使用法の違いは、ヒットの単一の値ではなく、ヒットの各製品の個別の値を表すという点です。
+Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特別に設定された変数を使用して、カスタムの製品レベルのデータを収集できます。 これらは、イベントまたはカスタムeVarに基づいています。 これらの変数とその標準的な使用法の違いは、ヒットの単一の値ではなく、ヒットの各製品の個別の値を表すという点です。
 
-これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、顧客の検索結果で、製品ごとの「割引金額」や、製品の「ページ上の場所」に関する情報などの情報を収集できます。
+これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引金額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
-製品の構文の使用について詳しくは、[製品の構文](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax)を使用したeVarの実装に関するAdobe Analyticsのドキュメントを参照してください。
+製品の構文の使用について詳しくは、[ 製品の構文 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax) を使用した eVar の実装に関するAdobe Analyticsのドキュメントを参照してください。
 
-以下の節では、[!DNL Analytics]データセット内のマーチャンダイジング変数にアクセスするために必要なXDMフィールドの概要を説明します。
+以下の節では、[!DNL Analytics] データセット内のマーチャンダイジング変数にアクセスするために必要な XDM フィールドの概要を説明します。
 
 #### eVar
 
@@ -138,7 +137,7 @@ Adobe Analyticsでは、カスタムの製品レベルのデータは、マー�
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-- `#`:アクセスするアレイのインデックス。
+- `#`:アクセスする配列のインデックス。
 - `evar#`:アクセスする特定のeVar変数。
 
 #### カスタムイベント
@@ -147,7 +146,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-- `#`:アクセスするアレイのインデックス。
+- `#`:アクセスする配列のインデックス。
 - `event#`:アクセスする特定のカスタムイベント変数。
 
 #### クエリ例
@@ -166,7 +165,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-次のクエリは`productListItems`配列を探索し、各マーチャンダイジングeVarとイベントを製品ごとに返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。`_id`値は、データセットの一意の主キーです。
+次のクエリでは、`productListItems` 配列を調査し、製品ごとの各マーチャンダイジングeVarとイベントを返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。`_id` 値は、データセットの一意のプライマリキーです。
 
 ```sql
 SELECT
@@ -188,16 +187,16 @@ LIMIT 20
 
 >[!NOTE]
 >
-> 現在のデータセットに存在しないフィールドを取得しようとすると、「No suct field」エラーが発生します。 エラーメッセージに返された理由を評価して使用可能なフィールドを特定し、クエリを更新して再実行します。
+> 現在のデータセットに存在しないフィールドを取得しようとすると、「No such struct field」エラーが発生します。 エラーメッセージに返された理由を評価して使用可能なフィールドを特定し、クエリを更新して再実行します。
 >
 >
 ```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
-### 変換構文
+### コンバージョン構文
 
-Adobe Analyticsにある別のタイプのマーチャンダイジング変数は、コンバージョン構文です。 製品の構文を使用すると、製品と同時に値が収集されますが、そのためにはデータが同じページに存在する必要があります。 製品に関連するコンバージョンや関心のあるイベントの前に、ページでデータが発生するシナリオがあります。例えば、商品を探す方法の使用例を考えてみましょう。
+Adobe Analyticsにある別のタイプのマーチャンダイジング変数は、コンバージョン構文です。 製品の構文を使用すると、値は製品と同時に収集されますが、同じページにデータが存在する必要があります。 製品に関連するコンバージョンや関心のあるイベントの前に、ページでデータが発生するシナリオがあります。例えば、製品検索方法のユースケースを考えてみましょう。
 
 1. ユーザーが「冬帽子」の内部検索を実行し、コンバージョン構文が有効なマーチャンダイジング eVar6 を「内部検索:冬帽子」に設定します。
 2. ユーザーが「ワッフルビーニー」をクリックし、製品の詳細ページに移動します。\
@@ -213,14 +212,14 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 レポートでは、注文件数、売上高、製品表示数、買い物かごへの追加数が eVar6 に対してレポートされ、連結された製品のアクティビティに合わせて調整されます。
 
-| eVar6（製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
+| eVar6 （製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 内部検索：夏のシャツ | 19.99 | 1 | 3 | 3 |
-| 内部検索：冬帽子 | 12.99 | 3 | 3 | 3 |
+| 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
+| 内部検索：冬帽子 | 12.99 | 1 | 1 | 1 |
 
-変換構文の使用について詳しくは、[コンバージョン構文](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)を使用したeVarの実装に関するAdobe Analyticsのドキュメントを参照してください。
+変換構文の使用について詳しくは、[ 変換構文 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax) を使用した eVar の実装に関するAdobe Analyticsのドキュメントを参照してください。
 
-[!DNL Analytics]データセットに変換構文を生成するためのXDMフィールドを次に示します。
+[!DNL Analytics] データセットに変換構文を生成する XDM フィールドを次に示します。
 
 #### eVar
 
@@ -236,7 +235,7 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-- `#`:アクセスするアレイのインデックス。
+- `#`:アクセスする配列のインデックス。
 
 #### クエリ例
 

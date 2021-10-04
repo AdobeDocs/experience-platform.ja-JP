@@ -1,8 +1,9 @@
 ---
 title: リソースの削除
 description: Adobe Experience Platform でタグリソースを削除する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-リソースを削除すると、そのリソースは Adobe Experience Platform から完全に削除されます。リソースをデータ収集 UI に表示したいが、タグライブラリには表示したくない場合は、[ライブラリからリソースを削除する](remove-resources-from-library.md)を参照してください。
+リソースを削除すると、そのリソースは Adobe Experience Platform から完全に削除されます。タグライブラリには表示せず、データ収集 UI 内にリソースを保持したい場合は、[ライブラリからリソースを削除する](remove-resources-from-library.md)を参照してください。
 
 データ要素、ルール、拡張機能、ホスト、環境およびプロパティを削除できます。削除したリソースは復元できません。
 

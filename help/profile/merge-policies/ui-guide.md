@@ -5,7 +5,7 @@ type: Documentation
 description: 複数のソースから得られたデータを Experience Platform で統合する際に、Platform では、データの優先順位を設定する方法と統合ビューを作成するために組み合わせるデータを決定するためのルールとして、結合ポリシーを使用します。このガイドでは、Adobe Experience Platform ユーザーインターフェイスを使用して結合ポリシーを操作する手順を説明します。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 100%
 

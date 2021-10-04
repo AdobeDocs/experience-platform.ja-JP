@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；ブール関数；ブール関数；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；ブール関数；ブール関数；
 solution: Experience Platform
-title: PQLブール関数
+title: PQL ブール関数
 topic-legacy: developer guide
 description: ブール関数は、プロファイルクエリ言語（PQL）の異なる要素にブール論理を実行するために使用されます。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
@@ -15,7 +14,7 @@ ht-degree: 83%
 
 # ブール関数
 
-ブール関数 は、[!DNL Profile Query Language] (PQL)の異なる要素に対してブールロジックを実行するために使用されます。  他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+ブール関数 は、[!DNL Profile Query Language](PQL) 内の異なる要素に対してブール論理を実行するために使用されます。  その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## And
 

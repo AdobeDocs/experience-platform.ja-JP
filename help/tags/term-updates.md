@@ -1,8 +1,9 @@
 ---
 title: 用語の更新
 description: Adobe Experience Platform Launch のリブランディングの影響を受ける用語と UI 要素の完全なリストです。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
-workflow-type: ht
+exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 100%
 

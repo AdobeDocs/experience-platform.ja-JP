@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；比較関数；比較；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；比較関数；比較；
 solution: Experience Platform
-title: PQL比較関数
+title: PQL 比較関数
 topic-legacy: developer guide
-description: 様々な式と値を比較する際に、比較関数を使用します。結果は、「true」または「false」です。
+description: 比較関数は、異なる式と値を比較するために使用され、それに応じて「true」または「false」を返します。
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '326'
@@ -15,7 +14,7 @@ ht-degree: 85%
 
 # 比較関数
 
-比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
+比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## Equals
 
@@ -65,7 +64,7 @@ homeAddress.countryISO != "CA"
 
 **例**
 
-次の PQL クエリでは、1 月または 2 月に誕生日が該当しない人を定義します。
+次の PQL クエリでは、誕生日が 1 月または 2 月に該当しない人を定義します。
 
 ```sql
 person.birthMonth > 2

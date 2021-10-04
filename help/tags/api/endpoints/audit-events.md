@@ -3,7 +3,7 @@ title: 監査イベントエンドポイント
 description: Reactor API で /audit_events エンドポイントを呼び出す方法を説明します。
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 100%
 

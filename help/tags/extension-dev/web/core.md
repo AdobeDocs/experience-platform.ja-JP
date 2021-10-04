@@ -1,8 +1,9 @@
 ---
 title: Web 拡張機能用のコアライブラリモジュール
 description: Web 拡張機能で使用できるコアライブラリモジュールについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントでは、Web 拡張機能内で使用できるコアライブラリモジュールの一覧を示します。これらのモジュールには `require('@adobe/{MODULE}')` を使ってアクセスできます。`{MODULE}` は、使用するコアモジュールの名前です。
 
@@ -78,7 +79,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` は、ECMAScript 6 にネイティブの [Promise API](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) を模倣するコンストラクタです。ネイティブの Promise API が使用可能な場合は、代わりに返されます。
+`reactor-promise` は、ECMAScript 6 にネイティブの [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) を模倣するコンストラクタです。ネイティブの Promise API が使用可能な場合は、代わりに返されます。
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');

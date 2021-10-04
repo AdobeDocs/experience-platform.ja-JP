@@ -1,8 +1,9 @@
 ---
 title: Experience Cloud 組織の設定
-description: Adobe Experience Platform の拡張機能の開発を開始するために、Adobe Experience Cloud 組織を登録する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform の拡張機能の開発を開始するために Adobe Experience Cloud 組織を登録する方法について説明します。
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-Adobe Experience Platform でタグ拡張を開発するには、Adobe Experience Cloud 組織を登録する必要があります。
+Adobe Experience Platform でタグ拡張機能を開発するには、Adobe Experience Cloud 組織を登録する必要があります。
 
 Experience Cloud の顧客には、契約が締結される際に組織が割り当てられます。既存のお客様で、既に組織が登録されている場合は、このドキュメントをスキップし、[拡張機能開発のためのユーザーアクセスの許可](./access.md)に関するガイドに進むことができます。Experience Cloud の顧客でない場合は、次に示す Adobe パートナープログラムの 1 つに参加することで組織を作成できます。
 
@@ -30,13 +31,13 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 
 ## ソリューションパートナープログラム（SPP）
 
-このプログラムは、アドビの顧客が投資を最大限に活用できるよう支援するコンサルティング会社、およびアドビソリューションを販売するパートナーを対象としています。ソリューションパートナープログラムへの参加方法に関する順次ガイドは、[Adobe Spark の Web サイト](https://spark.adobe.com/page/7PKZzIJJjkcDd/)に移動するか、[ソリューションパートナープログラムサイト](https://solutionpartners.adobe.com/home.html)を参照してください。
+このプログラムは、アドビの顧客が投資を最大限に活用し、アドビソリューションを再販するパートナーを支援するコンサルティング会社向けです。ソリューションパートナープログラムへの参加方法に関するステップバイステップガイドは、[Adobe Spark の Web サイト](https://spark.adobe.com/page/7PKZzIJJjkcDd/)に移動するか、[ソリューションパートナープログラムサイト](https://solutionpartners.adobe.com/home.html)を参照してください。
 
 >[!NOTE]
 >
->Exchange の契約には Adobe Experience Platform の拡張機能開発に関する利用条件が含まれているので、ソリューションパートナーは Exchange パートナープログラムにも[登録](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html)する必要があります。
+>Exchange の契約には、Adobe Experience Platform の拡張機能開発に関する利用条件が含まれているので、ソリューションパートナーは Exchange パートナープログラムに[登録](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html)する必要があります。
 >
->Exchange への登録を完了する前に、Exchange 管理者（<ExchangeHelpEC@adobe.com>）に電子メールを送信し、 の拡張機能を宣伝するために登録しようとしていることを説明してください。これをおこなわないと、アプリケーションが拒否され、代わりに SPP を参照する可能性があります。
+>Exchange への登録を完了する前に、Exchange 管理者（<ExchangeHelpEC@adobe.com>）に電子メールを送信し、 の拡張機能を宣伝するために登録しようとしていることを説明してください。これをおこなわないと、アプリケーションが却下され、代わりに SPP を参照する可能性があります。
 >
 >現在、会社の電子メールは一度に 1 つのパートナープログラムでのみ使用できるので、各プログラムの登録連絡先には、それぞれ別の電子メールを使用する必要があります。
 
@@ -44,4 +45,4 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 
 ## 個人の開発者
 
-独立した開発者、またはリストに記載されたパートナープログラムのいずれかに参加できない場合で、Adobe Experience Platform のタグ拡張機能を構築したい場合は、launch-ext-dev@adobe.com に電子メールを送信してアクセスをリクエストしてください。Adobe Experience Platform のタグに関する経験と、計画されている拡張機能プロジェクトのロードマップを示してください。
+独立した開発者、またはリストに記載されたパートナープログラムの 1 つに参加できない場合で、Adobe Experience Platform のタグ拡張機能を構築したい場合は、launch-ext-dev@adobe.com に電子メールを送信してアクセスをリクエストしてください。Adobe Experience Platform のタグでのエクスペリエンスに関する背景と、予定している拡張機能プロジェクトのロードマップを提供してください。

@@ -1,8 +1,9 @@
 ---
 title: 備考
-description: Adobe Experience Platform の特定のタグリソースにテキスト注釈を追加する方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Adobe Experience Platform の特定のタグリソースに、テキスト注釈を付加する方法について説明します。
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 メモは、Adobe Experience Platform の特定のタグリソースに追加できるテキスト注釈です。 メモは、次のリソースに添付できます。
 
@@ -42,6 +43,6 @@ ht-degree: 100%
 
 ## その他
 
-* タグリソースのメモは、変更や編集、削除ができない点が、DTM のメモの動作と同じです。
+* タグリソースのメモは、変更できず、編集や削除ができない点が、DTM のメモの動作と同じです。
 * リソースの古いリビジョンを表示すると、そのリビジョンの `created_at` 日より前に作成されたメモのみが表示されます。
 * リソースを削除すると、そのリソースに添付されているすべてのメモも削除されます。

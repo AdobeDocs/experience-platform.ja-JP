@@ -4,7 +4,7 @@ title: Platform のダッシュボードを UI で変更
 description: 'このガイドでは、組織の Adobe Experience Platform のデータをダッシュボードで表示する方法をカスタマイズする手順を説明します。 '
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: be2c38f37dd288f5035f1688be9d56abc2cd31a7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 100%
 

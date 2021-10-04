@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；http api
+keywords: Experience Platform；ホーム；よく読まれるトピック；http api
 solution: Experience Platform
-title: HTTP APIソースコネクタの概要
-description: APIまたはユーザーインターフェイスを使用して、ストリーミングコネクタを作成し、Adobe Experience Platformと接続する方法を学びます。
-translation-type: tm+mt
-source-git-commit: a4019227abaddd9dbe143899d273580ebf21849e
+title: HTTP API ソースコネクタの概要
+description: API またはユーザーインターフェイスを使用してAdobe Experience Platformに接続するストリーミングコネクタを作成する方法を説明します。
+exl-id: 41e079f3-75b2-4033-8138-73162c31461a
+source-git-commit: 0cbd5a933f8c67b26051012e9a5aa78cb06b055d
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 13%
 
 ---
 
+# HTTP API コネクタ
 
-# HTTP APIコネクタ
+Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Platform] に接続する HTTP API ストリーミングコネクタを作成する方法について説明します。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Platform]と接続するHTTP APIストリーミングコネクタを作成する方法に関する情報を提供しています。
+## API を使用した HTTP API ストリーミングコネクタの作成
 
-## APIを使用したHTTP APIストリーミングコネクタの作成
+- [フローサービス API を使用した HTTP ストリーミング接続の作成](../../tutorials/api/create/streaming/http.md)
 
-- [Flow Service APIを使用したHTTPストリーミング接続の作成](../../tutorials/api/create/streaming/http.md)
+## UI を使用した HTTP API ストリーミングコネクタの作成
 
-## UIを使用したHTTP APIストリーミングコネクタの作成
-
-- [UIでのHTTP APIストリーミング接続の作成](../../tutorials/ui/create/streaming/http.md)
+- [UI での HTTP API ストリーミング接続の作成](../../tutorials/ui/create/streaming/http.md)

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；トレーニングと評価；データサイエンスワークスペース；人気の高いトピック；Senesie Machine Learning API
+keywords: Experience Platform；トレーニングと評価；Data Science Workspace；よく読まれるトピック；Sensei 機械学習 API
 solution: Experience Platform
-title: Senesie Machine Learning APIを使用したモデルのトレーニングと評価
+title: Sensei 機械学習 API を使用したモデルのトレーニングと評価
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
+description: このチュートリアルでは、Sensei 機械学習 API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1235'
@@ -14,7 +13,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Sensei Machine Learning] APIを使用してモデルをトレーニングおよび評価する
+# [!DNL Sensei Machine Learning] API を使用したモデルのトレーニングと評価
 
 
 このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
@@ -23,7 +22,7 @@ ht-degree: 92%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-[Experience PlatformAPI認証のチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)に従って、API呼び出しを行う開始を実行します。
+[Experience PlatformAPI 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis) に従って、API 呼び出しの開始を行います。
 
 このチュートリアルから、次の値を入手できます。
 
@@ -41,7 +40,7 @@ API を使用したモデルのトレーニングと評価に必要なエンジ�
 
 >[!NOTE]
 >
->「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UIからアクセスしている場合、次の表に相違点を示します。
+>「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UI から使用する場合、次の表に違いを示します。
 
 | UI 用語 | API 用語 |
 | --- | --- |
@@ -126,7 +125,7 @@ curl -X POST \
 >
 >`{JSON_PAYLOAD}` では、トレーニングとスコアリングに使用するパラメーターを `tasks` 配列で定義します。`{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
 
-応答には、作成されたMLInstanceを表す`{INSTANCE_ID}`が含まれます。 設定が異なる複数のモデル MLInstance を作成できます。
+応答には、作成された MLInstance を表す `{INSTANCE_ID}` が含まれます。 設定が異なる複数のモデル MLInstance を作成できます。
 
 **応答** 
 

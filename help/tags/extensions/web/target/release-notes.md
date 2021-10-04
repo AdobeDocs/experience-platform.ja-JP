@@ -1,8 +1,9 @@
 ---
 title: Adobe Target 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target タグ拡張機能に関する最新のリリースノートです。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 7 月 24 日（PT）
 
@@ -74,7 +75,7 @@ ht-degree: 100%
 
 #### **機能**
 
-* Target タグが実行される方法とタイミングを制御するために、タグを介してサポートされるオプトインプライバシー機能がサポートされている at.js 1.7.0 を使用するよう拡張機能を更新しました。オプトインの実装をセットアップする方法については、タグドキュメントを確認してください。空の値を持つ mbox パラメーターが Target に送信されるかどうかをカスタマイズできます。
+* Target タグを実行する方法とタイミングを制御するために、タグを介してサポートされるオプトインプライバシー機能がサポートされている at.js 1.7.0 を使用するように拡張機能を更新しました。オプトインの実装をセットアップする方法については、「タグドキュメント」を確認してください。空の値を持つ mbox パラメーターが Target に送信されるかどうかをカスタマイズできます。
 
 ## 2019 年 1 月 23 日（PT）
 
@@ -140,7 +141,7 @@ ht-degree: 100%
 
 #### **バグの修正**
 
-* タグを通じて Visual Experience Composer をデプロイすると、ページを非表示にできなかった Adobe Target 拡張機能のエラーを修正しました。
+* タグを通じてデプロイしたときに、Visual Experience Composer がページの非表示を解除できなかった Adobe Target 拡張機能のエラーを修正しました。
 
 ## 2018 年 2 月 8 日（PT）
 

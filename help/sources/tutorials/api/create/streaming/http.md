@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；apiガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取得；
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；api ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取得；
 solution: Experience Platform
-title: APIを使用したストリーミング接続の作成
+title: API を使用したストリーミング接続の作成
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
@@ -16,18 +16,18 @@ ht-degree: 37%
 
 # API を使用したストリーミング接続の作成
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
+フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースから接続できます。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、フローサービスAPIを使用したストリーミング接続の作成手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、フローサービス API を使用したストリーミング接続の作成手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):エクスペリエンスデータを整理する際に使用する標 [!DNL Platform] 準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):エクスペリエンスデータを整理する際に使用す [!DNL Platform] る標準化されたフレームワーク。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
-さらに、ストリーミング接続を作成するには、ターゲットXDMスキーマとデータセットが必要です。 これらのデータの作成方法については、[レコードデータのストリーミング](../../../../../ingestion/tutorials/streaming-record-data.md)に関するチュートリアル、または[時系列データのストリーミング](../../../../../ingestion/tutorials/streaming-time-series-data.md)に関するチュートリアルを参照してください。
+さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらのデータの作成方法については、[ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアル、または [ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) に関するチュートリアルを参照してください。
 
 以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
 
@@ -57,11 +57,11 @@ ht-degree: 37%
 
 ## ベース接続を作成する
 
-ベース接続ではソースを指定し、フローをストリーミング取得APIと互換性を持たせるために必要な情報を含みます。 ベース接続を作成する場合、非認証接続と認証済み接続を作成するオプションがあります。
+ベース接続ではソースを指定し、フローをストリーミング取得 API と互換性を持たせるために必要な情報を含めます。 ベース接続を作成する場合、非認証接続と認証済み接続を作成できます。
 
 ### 非認証接続
 
-非認証接続は、データをPlatformにストリーミングする場合に作成できる標準のストリーミング接続です。
+非認証接続は、データを Platform にストリーミングする際に作成できる標準のストリーミング接続です。
 
 **API 形式**
 
@@ -71,7 +71,7 @@ POST /flowservice/connections
 
 **リクエスト**
 
-ストリーミング接続を作成するには、POSTリクエストの一部としてプロバイダーIDと接続仕様IDを指定する必要があります。 プロバイダーIDは`521eee4d-8cbe-4906-bb48-fb6bd4450033`で、接続仕様IDは`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`です。
+ストリーミング接続を作成するには、プロバイダーリクエストの一部として、プロバイダー ID と接続仕様 ID をPOSTする必要があります。 プロバイダー ID は `521eee4d-8cbe-4906-bb48-fb6bd4450033` で、接続仕様 ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb` です。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -100,14 +100,14 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.sourceId` | 作成するストリーミング接続のID。 |
-| `auth.params.dataType` | ストリーミング接続のデータタイプ。 この値は`xdm`にする必要があります。 |
+| `auth.params.sourceId` | 作成するストリーミング接続の ID。 |
+| `auth.params.dataType` | ストリーミング接続のデータタイプ。 この値は `xdm` にする必要があります。 |
 | `auth.params.name` | 作成するストリーミング接続の名前。 |
-| `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
+| `connectionSpec.id` | ストリーミング接続の接続仕様 `id`。 |
 
 **応答**
 
-正常な応答は、HTTPステータス201と、新しく作成された接続の詳細(一意の識別子(`id`)を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成された接続の詳細 ( 一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -123,7 +123,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ### 認証済み接続
 
-認証済みの接続は、信頼できるソースと信頼できないソースからのレコードを区別する必要がある場合に使用します。 個人情報(PII)を含む情報を送信するユーザーは、情報をPlatformにストリーミングする際に、認証済みの接続を作成する必要があります。
+認証済みの接続は、信頼できるソースと信頼できないソースからのレコードを区別する必要がある場合に使用します。 個人情報 (PII) を含む情報を送信するユーザーは、情報を Platform にストリーミングする際に、認証済みの接続を作成する必要があります。
 
 **API 形式**
 
@@ -133,7 +133,7 @@ POST /flowservice/connections
 
 **リクエスト**
 
-ストリーミング接続を作成するには、POSTリクエストの一部としてプロバイダーIDと接続仕様IDを指定する必要があります。 プロバイダーIDは`521eee4d-8cbe-4906-bb48-fb6bd4450033`で、接続仕様IDは`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`です。
+ストリーミング接続を作成するには、プロバイダーリクエストの一部として、プロバイダー ID と接続仕様 ID をPOSTする必要があります。 プロバイダー ID は `521eee4d-8cbe-4906-bb48-fb6bd4450033` で、接続仕様 ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb` です。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -164,15 +164,15 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.sourceId` | 作成するストリーミング接続のID。 |
-| `auth.params.dataType` | ストリーミング接続のデータタイプ。 この値は`xdm`にする必要があります。 |
+| `auth.params.sourceId` | 作成するストリーミング接続の ID。 |
+| `auth.params.dataType` | ストリーミング接続のデータタイプ。 この値は `xdm` にする必要があります。 |
 | `auth.params.name` | 作成するストリーミング接続の名前。 |
 | `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
-| `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
+| `connectionSpec.id` | ストリーミング接続の接続仕様 `id`。 |
 
 **応答**
 
-正常な応答は、HTTPステータス201と、新しく作成された接続の詳細(一意の識別子(`id`)を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成された接続の詳細 ( 一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -186,9 +186,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `id` | 新しく作成した接続の `id`。ここでは、`{CONNECTION_ID}` を指します。 |
 | `etag` | 接続に割り当てられ、接続のリビジョンを指定する識別子。 |
 
-## ストリーミングエンドポイントURLの取得
+## ストリーミングエンドポイント URL の取得
 
-ベース接続が作成されたら、ストリーミングエンドポイントURLを取得できます。
+ベース接続が作成されたら、ストリーミングエンドポイント URL を取得できます。
 
 **API 形式**
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **応答**
 
-リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。ストリーミングエンドポイントURLは、接続を使用して自動的に作成され、`inletUrl`値を使用して取得できます。
+リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。ストリーミングエンドポイントの URL は、接続を使用して自動的に作成され、 `inletUrl` 値を使用して取得できます。
 
 ```json
 {
@@ -251,7 +251,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## ソース接続の作成
 
-ベース接続を作成した後、ソース接続を作成する必要があります。 ソース接続を作成する場合、作成したベース接続の`id`値が必要です。
+ベース接続を作成した後、ソース接続を作成する必要があります。 ソース接続を作成する場合は、作成したベース接続の `id` 値が必要です。
 
 **API 形式**
 
@@ -282,7 +282,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201と、新しく作成されたソース接続の詳細(一意の識別子(`id`)を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成されたソース接続の詳細 ( 一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -293,9 +293,9 @@ curl -X POST \
 
 ## ターゲット接続の作成
 
-ターゲット接続は、取り込んだデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取得されたデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様IDの一意の識別子が得られます。 これらの識別子を使用して、[!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
+これで、ターゲットスキーマ、ターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。 これらの識別子を使用して、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
 **API 形式**
 
@@ -331,7 +331,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201と、新しく作成されたターゲット接続の詳細(一意の識別子(`id`)を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成されたターゲット接続の詳細 ( 一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -342,7 +342,7 @@ curl -X POST \
 
 ## データフローの作成
 
-ソース接続とターゲット接続を作成したら、データフローを作成できます。 データフローは、ソースからデータをスケジュールおよび収集する役割を担います。 `/flows`エンドポイントに対してPOSTリクエストを実行すると、データフローを作成できます。
+ソース接続とターゲット接続を作成したら、データフローを作成できます。 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、`/flows` エンドポイントに対してPOSTリクエストを実行します。
 
 **API 形式**
 
@@ -378,7 +378,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201と、新しく作成したデータフローの詳細(一意の識別子(`id`)を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成したデータフローの詳細 ( 一意の識別子 (`id`) を返します。
 
 ```json
 {
@@ -389,9 +389,9 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、ストリーミングHTTP接続を作成し、ストリーミングエンドポイントを使用してデータをPlatformに取り込むことができます。 UIでストリーミング接続を作成する手順については、[ストリーミング接続の作成に関するチュートリアル](../../../ui/create/streaming/http.md)を参照してください。
+このチュートリアルに従って、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用してデータを Platform に取り込むことができます。 UI でストリーミング接続を作成する手順については、[ ストリーミング接続の作成に関するチュートリアル ](../../../ui/create/streaming/http.md) を参照してください。
 
-データをPlatformにストリーミングする方法については、[時系列データのストリーミング](../../../../../ingestion/tutorials/streaming-time-series-data.md)に関するチュートリアル、または[レコードデータのストリーミング](../../../../../ingestion/tutorials/streaming-record-data.md)に関するチュートリアルを参照してください。
+データを Platform にストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) に関するチュートリアル、または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
 
 ## 付録
 
@@ -416,9 +416,9 @@ curl -X POST \
 }
 ```
 
-### Platformに取り込む生データの後処理 {#ingest-data}
+### Platform に取り込む生データの POST {#ingest-data}
 
-フローを作成したら、以前に作成したストリーミングエンドポイントにJSONメッセージを送信できます。
+これでフローが作成され、以前に作成したストリーミングエンドポイントに JSON メッセージを送信できます。
 
 **API 形式**
 
@@ -432,7 +432,7 @@ POST /collection/{CONNECTION_ID}
 
 **リクエスト**
 
-この例のリクエストは、以前に作成されたストリーミングエンドポイントに生データを取り込みます。
+この例のリクエストは、以前に作成したストリーミングエンドポイントに生データを取り込みます。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
@@ -456,7 +456,7 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
 
 **応答**
 
-正常な応答は、HTTPステータス200と、新しく取り込んだ情報の詳細を返します。
+正常な応答は、HTTP ステータス 200 と、新しく取り込んだ情報の詳細を返します。
 
 ```json
 {

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ;
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ；
 solution: Experience Platform
-title: エクスペリエンスイベントのサンプルクエリ
+title: エクスペリエンスイベントのクエリ例
 topic-legacy: queries
 type: Tutorial
-description: 次のドキュメントは、Adobe Experience Platformクエリサービスのエクスペリエンスイベントに関するクエリの例を示しています。
+description: 次のドキュメントは、Adobe Experience Platformクエリサービスの Experience Events に関するクエリの例を示しています。
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
@@ -14,17 +13,17 @@ ht-degree: 58%
 
 ---
 
-# [!DNL Experience Events]のサンプルクエリ
+# [!DNL Experience Events] のクエリ例
 
-標準的なSQLクエリに加えて、Adobe Experience Platform[!DNL Query Service]は[!DNL Experience Events]を使用したクエリの書き込みをサポートしています。 エクスペリエンスイベントは、Experience Data Model(XDM)ExperienceEventクラスで表されます。Experience Data Model(XDM)ExperienceEventクラスは、ユーザーがWebサイトやサービスを操作したときに不変で非集計的なスナップショットを取り込むので、時間ドメインの分析に使用できます。
+Adobe Experience Platform [!DNL Query Service] では、標準の SQL クエリに加えて、[!DNL Experience Events] を使用したクエリの記述もサポートしています。 エクスペリエンスイベントは、エクスペリエンスデータモデル (XDM) の ExperienceEvent クラスで表されます。このクラスは、ユーザーが Web サイトやサービスを操作したときに、不変で非集計のシステムのスナップショットを取り込むので、時間ドメイン分析に使用できます。
 
-XDMと[!DNL Experience Events]について詳しくは、[[!DNL XDM System] 概要](../../xdm/home.md)を参照してください。 [!DNL Query Service]と[!DNL Experience Events]を組み合わせることで、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、[!DNL Experience Events]に関するクエリの例を示しています。
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 [!DNL Query Service] と [!DNL Experience Events] を組み合わせることで、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、[!DNL Experience Events] に関するクエリの例です。
 
 ## 特定の日付範囲での日別イベントのトレンドレポートの作成
 
 次の例では、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成します。具体的には、A、B、C の様々な解析値を合計し、パーカーが閲覧された回数を合計します。
 
-[!DNL Experience Event]データセットにあるタイムスタンプ列はUTCです。 次の例では、`from_utc_timestamp()` 関数を使用して、タイムスタンプを UTC から EDT に変換します。その後、`date_format()` 関数を使用して、残りのタイムスタンプから日付を分離します。
+[!DNL Experience Event] データセットにあるタイムスタンプ列は UTC です。 次の例では、`from_utc_timestamp()` 関数を使用して、タイムスタンプを UTC から EDT に変換します。その後、`date_format()` 関数を使用して、残りのタイムスタンプから日付を分離します。
 
 ```sql
 SELECT 

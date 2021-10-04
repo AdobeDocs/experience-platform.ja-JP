@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クラウドストレージ；クラウドストレージ
 solution: Experience Platform
-title: フローサービスAPIを使用したCloudストレージシステムの調査
+title: フローサービス API を使用した Cloud ストレージシステムの調査
 topic-legacy: overview
-description: このチュートリアルでは、フローサービスAPIを使用して、サードパーティのクラウドストレージシステムを調べます。
+description: このチュートリアルでは、フローサービス API を使用して、サードパーティのクラウドストレージシステムを調べます。
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 25%
+ht-degree: 27%
 
 ---
 
-# [!DNL Flow Service] APIを使用したクラウドストレージシステムの調査
+# [!DNL Flow Service] API を使用したクラウドストレージシステムの調査
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、サードパーティのクラウドストレージシステムを調べます。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してサードパーティのクラウドストレージシステムを調べます。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [ソース](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
 * [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] APIを使用してクラウドストレージシステムに正常に接続するために必要な追加情報を示します。
+以下の節では、[!DNL Flow Service] API を使用してクラウドストレージシステムに正常に接続するために知っておく必要がある追加情報を示します。
 
-### 接続IDの取得
+### 接続 ID の取得
 
-[!DNL Platform] APIを使用してサードパーティのクラウドストレージを調査するには、有効な接続IDが必要です。 使用するストレージの接続がまだない場合は、次のチュートリアルを通じてストレージを作成できます。
+[!DNL Platform] API を使用してサードパーティのクラウドストレージを調べるには、有効な接続 ID が必要です。 使用するストレージの接続がまだない場合は、次のチュートリアルを通じてストレージを作成できます。
 
 * [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
 * [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
@@ -61,14 +61,14 @@ ht-degree: 25%
 
 ## クラウドストレージの参照
 
-クラウドストレージの接続IDを使用して、GETリクエストを実行することでファイルとディレクトリを調べることができます。 クラウドストレージを調査するためのGETリクエストを実行する場合、次の表に示すクエリパラメーターを含める必要があります。
+クラウドストレージの接続 ID を使用して、GETリクエストを実行することで、ファイルとディレクトリを調べることができます。 クラウドストレージを調査するためのGETリクエストを実行する場合、次の表に示すクエリーパラメーターを含める必要があります。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `objectType` | 調査するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`:特定のディレクトリの参照</li><li>`root`:ルートディレクトリを表示します。</li></ul> |
-| `object` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、調査するディレクトリのパスを表します。 |
+| `object` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 この値は、調査するディレクトリのパスを表します。 |
 
-次の呼び出しを使用して、[!DNL Platform]に取り込むファイルのパスを見つけます。
+次の呼び出しを使用して、[!DNL Platform] に取り込むファイルのパスを探します。
 
 **API 形式**
 
@@ -79,7 +79,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続ID。 |
+| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続 ID。 |
 | `{PATH}` | ディレクトリのパス。 |
 
 **リクエスト**
@@ -95,7 +95,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、クエリーされたディレクトリ内にあるファイルとフォルダーの配列を返します。 アップロードするファイルの`path`プロパティに注意してください。このプロパティは、次の手順で指定して構造を検査する必要があります。
+正常な応答は、クエリーされたディレクトリ内にあるファイルとフォルダーの配列を返します。 アップロードするファイルの `path` プロパティをメモしておきます。次の手順で指定して構造を確認する必要があります。
 
 ```json
 [
@@ -127,7 +127,7 @@ curl -X GET \
 
 クラウドストレージからGETファイルの構造を調べるには、ファイルのパスと型をクエリパラメーターとして指定しながら、データリクエストを実行します。
 
-ファイルのパスとタイプを指定しながらGETリクエストを実行することで、クラウドストレージソースからデータファイルの構造を調べることができます。 また、CSV、TSV、圧縮JSON、区切り文字付きファイルなど、様々なファイルタイプを調べる場合は、クエリパラメーターの一部としてファイルタイプを指定します。
+クラウドストレージソースからGETファイルの構造を調べるには、ファイルのパスとタイプを指定してデータリクエストを実行します。 また、CSV、TSV、圧縮 JSON、区切り形式のファイルなど、様々なファイルタイプを調べる場合は、クエリパラメーターの一部にファイルタイプを指定します。
 
 **API 形式**
 
@@ -139,10 +139,10 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&prev
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続ID。 |
-| `{FILE_PATH}` | 検査するファイルへのパス。 |
-| `{FILE_TYPE}` | ファイルのタイプ。 次のファイルタイプがサポートされています。<ul><li>区切り</code>:区切り文字区切り値。 DSVファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScriptオブジェクト表記。 JSONファイルはXDMに準拠している必要がある</li><li>PARQUET</code>:Apache Parquet。 ParquetファイルはXDMに準拠している必要があります。</li></ul> |
-| `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、[クエリパラメーター](#query)の節を参照してください。 |
+| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続 ID。 |
+| `{FILE_PATH}` | 検査するファイルのパス。 |
+| `{FILE_TYPE}` | ファイルのタイプ。 次のファイルタイプがサポートされています。<ul><li>区切り </code>:区切り文字区切り値。 DSV ファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScript オブジェクト表記。 JSON ファイルは XDM に準拠している必要がある</li><li>PARQUET</code>:Apache Parquet。 Parquet ファイルは XDM に準拠している必要があります。</li></ul> |
+| `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、[ クエリパラメータ ](#query) の節を参照してください。 |
 
 **リクエスト**
 
@@ -186,13 +186,13 @@ curl -X GET \
 
 ## クエリパラメーターの使用 {#query}
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)は、様々なファイルタイプをプレビューおよび検査するためのクエリパラメーターの使用をサポートしています。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) では、様々なファイルタイプをプレビューおよび検査するためのクエリパラメーターの使用がサポートされています。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `columnDelimiter` | CSVファイルまたはTSVファイルを調べる列区切りとして指定した1文字の値。 パラメーターを指定しない場合、値はデフォルトでコンマ`(,)`になります。 |
-| `compressionType` | 圧縮された区切りファイルまたはJSONファイルをプレビューするための必須のクエリパラメーター。 サポートされている圧縮ファイルは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `columnDelimiter` | CSV または TSV ファイルを調べる列区切り文字として指定した 1 文字の値。 パラメーターを指定しない場合、値のデフォルトはコンマ `(,)` です。 |
+| `compressionType` | 圧縮された区切りファイルまたは JSON ファイルをプレビューするための必須のクエリパラメーター。 サポートされる圧縮ファイルは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## 次の手順
 
-このチュートリアルでは、クラウドストレージシステムを調べ、[!DNL Platform]に取り込むファイルのパスを見つけ、その構造を確認しました。 次のチュートリアルでこの情報を使用して、クラウドストレージからデータを[収集し、Platform](../collect/cloud-storage.md)に取り込むことができます。
+このチュートリアルでは、クラウドストレージシステムを調べ、[!DNL Platform] に取り込むファイルのパスを見つけ、その構造を確認しました。 次のチュートリアルでこの情報を使用して、クラウドストレージからデータを収集し、Platform](../collect/cloud-storage.md) に取り込むことができます。[

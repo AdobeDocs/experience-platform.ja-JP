@@ -23,7 +23,7 @@ ht-degree: 81%
    * [はじめに](api/getting-started.md)
    * [使用可能なサンドボックス](api/available.md)
    * [サンドボックス管理](api/sandboxes.md)
-   * [サンドボックスのタイプ](api/types.md)
+   * [サンドボックスタイプ](api/types.md)
    * [付録](api/appendix.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox)

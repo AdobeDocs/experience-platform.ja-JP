@@ -3,7 +3,7 @@ title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1279'
 ht-degree: 100%
 

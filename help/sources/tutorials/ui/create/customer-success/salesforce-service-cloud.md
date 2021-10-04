@@ -1,72 +1,71 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce Service Cloud;salesforceサービスクラウド
+keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce Service Cloud;Salesforce サービスクラウド
 solution: Experience Platform
-title: UIでのSalesforceサービスクラウドソース接続の作成
+title: UI での Salesforce サービスクラウドソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience PlatformUIを使用してSalesforceサービスクラウドのソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用して Salesforce Service Cloud ソース接続を作成する方法を説明します。
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '482'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
-# UIに[!DNL Salesforce Service Cloud]ソース接続を作成する
+# UI での [!DNL Salesforce Service Cloud] ソース接続の作成
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Salesforce Service Cloud] （以下「SSC」と呼びます）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Salesforce Service Cloud]（以下「SSC」と呼ばれます）ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターの UI を使用してカスタムスキーマを作成する方法を説明します。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効なSSC接続がある場合は、このドキュメントの残りの部分をスキップし、[データフロー](../../dataflow/customer-success.md)の設定のチュートリアルに進むことができます
+既に有効な SSC 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/customer-success.md) に関するチュートリアルに進んでください。
 
 ### 必要な資格情報の収集
 
-[!DNL Platform]のSSCアカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Platform] の SSC アカウントにアクセスするには、次の値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `username` | ユーザーアカウントのユーザー名です。 |
-| `password` | ユーザーアカウントのパスワードです。 |
+| `username` | ユーザーアカウントのユーザー名。 |
+| `password` | ユーザーアカウントのパスワード。 |
 | `securityToken` | ユーザーアカウントのセキュリティトークン。 |
 
-開始方法の詳細については、[この [!DNL Salesforce Service Cloud] ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm)を参照してください。
+使い始める方法については、[ この  [!DNL Salesforce Service Cloud]  ドキュメント ](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm) を参照してください。
 
-## [!DNL Salesforce Service Cloud]アカウントに接続
+## [!DNL Salesforce Service Cloud] アカウントに接続
 
-必要な資格情報を収集したら、次の手順に従ってSSCアカウントを[!DNL Platform]にリンクできます。
+必要な資格情報を収集したら、以下の手順に従って SSC アカウントを [!DNL Platform] にリンクします。
 
-[Adobe Experience Platform](https://platform.adobe.com)にログインし、左のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して&#x200B;**[!UICONTROL ソース]**&#x200B;ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には様々なソースが表示され、このソースを使用してアカウントを作成できます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから「**[!UICONTROL ソース]**」を選択して、「**[!UICONTROL ソース]**」ワークスペースにアクセスします。 **[!UICONTROL カタログ]** 画面には、アカウントを作成するための様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、目的の特定のソースを見つけることもできます。
 
-「**[!UICONTROL Customer Success]**」カテゴリで、「**[!UICONTROL Salesforce Service Cloud]**」を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しいSSCコネクタを作成します。
+「**[!UICONTROL 顧客の成功]**」カテゴリで、「**[!UICONTROL Salesforce Service Cloud]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL Add data]**」を選択して新しい SSC コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ssc/catalog.png)
 
-**[!UICONTROL Salesforce Service Cloud]**&#x200B;に接続ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「**[!UICONTROL Salesforce Service Cloud に接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
-### 新しいアカウント
+### 新規アカウント
 
-新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームに、名前、オプションの説明、およびSSC証明書を入力します。 終了したら、[**[!UICONTROL 接続]**]を選択し、新しい接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、説明（オプション）、SSC 資格情報を入力します。 終了したら、[**[!UICONTROL 接続]**] を選択し、新しい接続が確立されるまでしばらく時間をかけます。
 
-![connect](../../../../images/tutorials/create/ssc/connect.png)
+![接続](../../../../images/tutorials/create/ssc/connect.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するSSCアカウントを選択し、**[!UICONTROL 次へ]**&#x200B;を選択して次に進みます。
+既存のアカウントに接続するには、接続する SSC アカウントを選択し、**[!UICONTROL 次へ]** を選択して次に進みます。
 
-![既存の](../../../../images/tutorials/create/ssc/existing.png)
+![既存](../../../../images/tutorials/create/ssc/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従うことで、SSCアカウントへの接続を確立できました。 次のチュートリアルに進み、[顧客の成功データを [!DNL Platform]](../../dataflow/customer-success.md)に送るようにデータフローを設定できます。
+このチュートリアルに従って、SSC アカウントへの接続を確立しました。 次のチュートリアルに進み、顧客成功データを  [!DNL Platform]](../../dataflow/customer-success.md) に取り込むように [ データフローを設定します。

@@ -3,7 +3,7 @@ title: 拡張機能
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 100%
 

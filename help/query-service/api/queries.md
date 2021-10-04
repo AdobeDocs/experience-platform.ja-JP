@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；apiガイド；クエリ；クエリ；クエリサービス；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；api ガイド；クエリ；クエリ；クエリ；クエリサービス；
 solution: Experience Platform
-title: クエリAPIエンドポイント
+title: クエリ API エンドポイント
 topic-legacy: queries
-description: 以降の節では、クエリサービスAPIの/querysエンドポイントを使用しておこなう呼び出しについて説明します。
+description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 92%
 
 ## サンプル API 呼び出し
 
-以降の節では、[!DNL Query Service] APIの`/queries`エンドポイントを使用しておこなう呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以降の節では、[!DNL Query Service] API の `/queries` エンドポイントを使用しておこなう呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリのリストの取得
 

@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Experience Platform ダッシュボードのアクセス権限の取得方法と付与方法
 type: Documentation
 description: Adobe Admin Console を使用して Experience Platform ダッシュボードの表示、編集、更新の機能をユーザーに付与します。
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
-workflow-type: ht
+exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 100%
 
 ---
-
 
 # ダッシュボードのアクセス権限
 

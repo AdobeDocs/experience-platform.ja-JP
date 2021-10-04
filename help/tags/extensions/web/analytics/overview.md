@@ -3,7 +3,7 @@ title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 100%
 
@@ -292,7 +292,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 #### eVar
 
-1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=ja) を設定します。
+1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html) を設定します。
 
 1. ドロップダウンから eVar を選択します。
 1. eVar を値として設定（Set As）するか、別の eVar をコピー（Duplicate From）するかを指定します。

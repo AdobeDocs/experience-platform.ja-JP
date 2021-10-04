@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；エクスポート；インポート；rpc;
+keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；書き出し；読み込み；rpc;
 solution: Experience Platform
-title: APIエンドポイントの書き出し/読み込み
-description: スキーマレジストリAPIの/exportエンドポイントと/importエンドポイントを使用すると、IMS組織とサンドボックスの間でXDMリソースを共有できます。
+title: API エンドポイントの書き出し/読み込み
+description: スキーマレジストリ API の/export エンドポイントと/import エンドポイントを使用すると、IMS 組織とサンドボックスの間で XDM リソースを共有できます。
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# エンドポイントの書き出し/読み込み
+# 書き出し/読み込みエンドポイント
 
-[!DNL Schema Library]内のすべてのリソースは、IMS組織内の特定のサンドボックスに含まれます。 サンドボックスとIMS組織の間でエクスペリエンスデータモデル(XDM)リソースを共有する必要が生じる場合があります。 [!DNL Schema Registry] APIは2つのエンドポイントを提供し、[!DNL  Schema Library]内の任意のスキーマ、スキーマフィールドグループまたはデータ型の書き出しペイロードを生成し、そのペイロードを使用してそのリソース（およびすべての依存リソース）をターゲットサンドボックスとIMS組織に読み込みます。
+[!DNL Schema Library] 内のすべてのリソースは、IMS 組織内の特定のサンドボックスに含まれます。 サンドボックスと IMS 組織の間でエクスペリエンスデータモデル (XDM) リソースを共有する必要が生じる場合があります。 [!DNL Schema Registry] API は 2 つのエンドポイントを提供し、[!DNL  Schema Library] 内の任意のスキーマ、スキーマフィールドグループまたはデータ型の書き出しペイロードを生成し、そのペイロードを使用して、そのリソース（およびすべての依存リソース）をターゲットサンドボックスと IMS 組織に読み込みます。
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
 
-書き出し/読み込みエンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントは、`Accept`や`Content-Type`のような追加のヘッダーを必要とせず、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、名前空間`/rpc`を使用する必要があります。
+書き出し/読み込みエンドポイントは、[!DNL Schema Registry] でサポートされるリモートプロシージャコール (RPC) の一部です。 [!DNL Schema Registry] API の他のエンドポイントとは異なり、RPC エンドポイントは `Accept` や `Content-Type` のような追加のヘッダーを必要とせず、`CONTAINER_ID` を使用しません。 代わりに、以下の API 呼び出しで示すように、 `/rpc` 名前空間を使用する必要があります。
 
 ## リソースの書き出しペイロードの取得 {#export}
 
-[!DNL Schema Library]内の既存のスキーマ、フィールドグループまたはデータタイプに対して、`/export`エンドポイントにGETリクエストを送信し、パス内のリソースのIDを指定することで、書き出しペイロードを生成できます。
+[!DNL Schema Library] 内の既存のスキーマ、フィールドグループまたはデータ型については、`/export` エンドポイントにGETリクエストを送信し、パスにリソースの ID を指定することで、書き出しペイロードを生成できます。
 
 **API 形式**
 
@@ -34,13 +34,13 @@ GET /rpc/export/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_ID}` | 書き出すXDMリソースの`meta:altId`またはURLエンコードされた`$id`。 |
+| `{RESOURCE_ID}` | 書き出す XDM リソースの `meta:altId` または URL エンコードされた `$id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、`Restaurant`フィールドグループの書き出しペイロードを取得します。
+次のリクエストは、`Restaurant` フィールドグループの書き出しペイロードを取得します。
 
 ```shell
 curl -X GET \
@@ -54,9 +54,9 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功した場合は、ターゲットXDMリソースとその依存リソースをすべて表す、オブジェクトの配列が返されます。 この例では、配列の最初のオブジェクトは、 `Restaurant`フィールドグループが採用するテナントで作成された`Property`データ型で、2番目のオブジェクトは`Restaurant`フィールドグループ自体です。 このペイロードは、その後、[リソース](#import)を別のサンドボックスまたはIMS組織にインポートするために使用できます。
+正常な応答は、オブジェクトの配列を返します。この配列は、ターゲット XDM リソースと、そのすべての依存リソースを表します。 この例では、配列の最初のオブジェクトは、 `Restaurant` フィールドグループが使用するテナント作成の `Property` データ型で、2 番目のオブジェクトは `Restaurant` フィールドグループ自体です。 このペイロードは、その後、[ リソース ](#import) を別のサンドボックスまたは IMS 組織にインポートするために使用できます。
 
-リソースのテナントIDのインスタンスはすべて`<XDM_TENANTID_PLACEHOLDER>`に置き換えられます。 これにより、スキーマレジストリは、後続の読み込み呼び出しで送信される場所に応じて、正しいテナントIDをリソースに自動的に適用できます。
+リソースのテナント ID のインスタンスはすべて `<XDM_TENANTID_PLACEHOLDER>` に置き換えられます。 これにより、スキーマレジストリは、後続の読み込み呼び出しで送信される場所に応じて、適切なテナント ID をリソースに自動的に適用できます。
 
 ```json
 [
@@ -198,7 +198,7 @@ curl -X GET \
 
 ## リソースのインポート {#import}
 
-XDMリソースに対して[書き出しペイロード](#export)を生成したら、`/import`エンドポイントへのPOSTリクエストでそのペイロードを使用して、そのリソースをターゲットIMS組織とサンドボックスに読み込むことができます。
+XDM リソースの書き出しペイロード ](#export) を [ 生成したら、そのペイロードを `/import` エンドポイントへのPOSTリクエストで使用して、そのリソースをターゲット IMS 組織とサンドボックスに読み込むことができます。
 
 **API 形式**
 
@@ -208,7 +208,7 @@ POST /rpc/import
 
 **リクエスト**
 
-次のリクエストは、前の[書き出しの例](#export)で返されたペイロードを受け取り、 `x-gw-ims-org-id`ヘッダーと`x-sandbox-name`ヘッダーで決定される、 `Restaurant`フィールドグループを新しいIMS組織とサンドボックスに読み込みます。
+次のリクエストは、前の [ 書き出しの例 ](#export) で返されたペイロードを受け取り、 `Restaurant` フィールドグループを新しい IMS 組織とサンドボックスに読み込みます。これは、 `x-gw-ims-org-id` ヘッダーと `x-sandbox-name` ヘッダーで決まります。
 
 ```shell
 curl -X POST \
@@ -359,7 +359,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、読み込まれたリソースのリストと、適切なテナントIDおよびIMS Org値が適用された状態を返します。
+正常な応答は、読み込まれたリソースのリストと、適切なテナント ID および IMS Org 値が適用された状態を返します。
 
 ```json
 [

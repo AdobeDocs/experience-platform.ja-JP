@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；予定クエリの実行；予定クエリの実行；クエリサービス；予定クエリ；予定クエリ;
+keywords: Experience Platform、ホーム、人気のあるトピック、クエリサービス、スケジュール済みクエリの実行、スケジュール済みクエリの実行、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ、
 solution: Experience Platform
-title: スケジュールされたクエリはAPIエンドポイントを実行
+title: スケジュール済みクエリ実行 API エンドポイント
 topic-legacy: runs for scheduled queries
-description: 以下の節では、クエリサービスAPIを使用してスケジュール済みのクエリを実行するために実行できる様々なAPI呼び出しについて説明します。
+description: 以下の節では、クエリサービス API を使用してスケジュール済みクエリを実行する際に実行できる様々な API 呼び出しについて説明します。
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
@@ -13,11 +12,11 @@ ht-degree: 88%
 
 ---
 
-# スケジュールされたクエリ実行エンドポイント
+# スケジュール済みクエリ実行エンドポイント
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーを理解できたので、[!DNL Query Service] API の呼び出しを開始できます。 以下の節では、[!DNL Query Service] API を使用しておこなえる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### 指定されたスケジュール済みクエリのすべての実行のリストを取得
 

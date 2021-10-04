@@ -1,20 +1,21 @@
 ---
-title: Core イベント転送拡張機能の概要
-description: Adobe Experience Platform の Core イベント転送拡張機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+title: コアイベント転送拡張機能の概要
+description: Adobe Experience Platform のコアイベント拡張機能について説明します。
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
 
 ---
 
-# Core イベント転送拡張機能の概要
+# コアイベント転送拡張機能の概要
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Core イベント転送拡張機能には、Adobe Experience Platform でのイベント転送に使用できるデフォルトのイベント、条件およびデータタイプが用意されています。
+コアイベント転送拡張機能は、Adobe Experience Platform でのイベント転送のデフォルトのイベント、条件、データタイプを提供します。
 
 このリファレンスは、この拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -24,7 +25,7 @@ Core イベント転送拡張機能には、Adobe Experience Platform でのイ�
 
 ### カスタムコード
 
-イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。Adobe Experience Platform のイベント転送では、ES6 がサポートされています。
+イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。Adobe Experience Platform でのイベント転送は、ES6 をサポートしています。
 
 1. 「**[!UICONTROL エディターを開く]**」を選択します。
 1. カスタムコードを入力します。
@@ -153,7 +154,7 @@ module.exports = (context) => {
 
 ### カスタムコード
 
-イベントのトリガー後に実行して条件を評価するコードを提供します。Adobe Experience Platform のイベント転送では、ES6 がサポートされています。
+イベントのトリガー後に実行して条件を評価するコードを提供します。Adobe Experience Platform でのイベント転送は、ES6 をサポートしています。
 
 1. アクションコードに名前を付けます。
 1. 「**[!UICONTROL エディターを開く]**」を選択します。
@@ -224,4 +225,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->クライアントからの `interact` 呼び出しには `events` が含まれていますが、イベント転送の場合は `event` が必要です。これは、イベント転送では、クライアントで見られるような複数のイベントのバッチとしてではなく、各イベントが個別に調査されるためです。
+>クライアントからの `interact` 呼び出しには `events` が含まれていますが、イベント転送の場合は `event` が必要です。これは、イベント転送では、クライアントで表示される複数のイベントのバッチとしてではなく、各イベントが個別に調査されるからです。

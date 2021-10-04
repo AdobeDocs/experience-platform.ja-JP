@@ -4,7 +4,7 @@ user-guide-title: Observability Insights ガイド
 user-guide-description: 統計指標とイベント通知を使用して、Platform アクティビティを監視します。
 feature: Data Management
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

@@ -1,7 +1,8 @@
 ---
 title: 匿名ブロッククエリの例
-description: '匿名ブロックは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文で、一連のクエリを効率的に実行できます '
-source-git-commit: dffa03d9ab8e26e2c99a359ae000022d6d469572
+description: 匿名ブロックは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文で、一連のクエリを効率的に実行できます
+exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
+source-git-commit: 50d4b49b43cf7882612e6de54cbbd680d549665a
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%

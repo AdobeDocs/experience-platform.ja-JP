@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；データノートブックの分析
 solution: Experience Platform
-title: ノートブックを使用したデータの分析
+title: ノートブックを使用したデータ分析
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Data Science Workspaceに組み込まれたJupterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。
+description: このチュートリアルでは、Data Science Workspace に組み込まれた Jupyter ノートブックを使用して、データにアクセスし、調査し、視覚化する方法に焦点を当てます。
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1731'
@@ -16,35 +15,35 @@ ht-degree: 76%
 
 # ノートブックを使用したデータの分析
 
-このチュートリアルでは、Data Science Workspaceに組み込まれたJupterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。 このチュートリアルを終えるまでに、データをよりよく理解するために、Jupyter Notebooksオファーの機能の一部を理解しておく必要があります。
+このチュートリアルでは、Data Science Workspace に組み込まれた Jupyter ノートブックを使用して、データにアクセスし、調査し、視覚化する方法に焦点を当てます。 このチュートリアルを終了するまでに、Jupyter ノートブックで提供される機能の一部を理解し、データをより深く理解する必要があります。
 
 次の概念が導入されています。
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupterの次世代のWebベースのインターフェースで、に緊密に統合されて [!DNL Adobe Experience Platform]います。
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyter の次世代 Web ベースのインターフェイスで、に緊密に統合されていま [!DNL Adobe Experience Platform]す。
 - **バッチ**：データセットはいくつかのバッチで構成されます。バッチとは、一定期間に収集され 1 つの単位として一緒に処理される一連のデータです。データセットにデータが追加されると、新しいバッチが作成されます。
-- **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。[[!DNL Platform SDK]](../authoring/platform-sdk.md)ガイドを使ってください。
+- **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。[[!DNL Platform SDK]](../authoring/platform-sdk.md) ガイドをご利用ください。
 
 ## Data Science Workspace でのノートブックの調査
 
 この節では、既に小売販売スキーマに取り込まれているデータを調査します。
 
-Data Science Workspaceを使用すると、ユーザーは[!DNL JupyterLab]プラットフォームを介して[!DNL Jupyter Notebooks]を作成し、そこで機械学習ワークフローを作成および編集できます。 [!DNL JupyterLab] は、Web ブラウザーでノートブックドキュメントを編集できるサーバー／クライアント型のコラボレーションツールです。これらのノートブックには、実行可能コードとリッチテキスト要素の両方を含めることができます。当社の目的では、分析の説明と実行可能な[!DNL Python]コードにMarkdownを使用して、データの調査と分析を行います。
+Data Science Workspace を使用すると、ユーザーは [!DNL JupyterLab] プラットフォームを通じて [!DNL Jupyter Notebooks] を作成し、機械学習ワークフローを作成および編集できます。 [!DNL JupyterLab] は、Web ブラウザーでノートブックドキュメントを編集できるサーバー／クライアント型のコラボレーションツールです。これらのノートブックには、実行可能コードとリッチテキスト要素の両方を含めることができます。ここでは、分析の説明と実行可能な [!DNL Python] コードに Markdown を使用し、データの調査と分析を行います。
 
 ### ワークスペースの選択
 
-[!DNL JupyterLab]を起動すると、Jupyter Notebooks用のWebベースのインターフェースが表示されます。 選択するノートブックタイプに応じて、対応するカーネルが起動します。
+[!DNL JupyterLab] を起動すると、Jupyter ノートブックの Web ベースのインターフェイスが表示されます。 選択するノートブックタイプに応じて、対応するカーネルが起動します。
 
-使用する環境を比較する際には、各サービスの制限事項を考慮する必要があります。例えば、 で [pandas](https://pandas.pydata.org/) ライブラリを使用する場合、通常のユーザーであれば、RAM の上限は 2 GB です。[!DNL Python]パワーユーザーの場合でも、20 GB の RAM に制限されます。より大きな計算を扱う場合は、すべてのノートブックインスタンスで共有されるオファー1.5 TBを[!DNL Spark]使用すると効果的です。
+使用する環境を比較する際には、各サービスの制限事項を考慮する必要があります。例えば、 で [pandas](https://pandas.pydata.org/) ライブラリを使用する場合、通常のユーザーであれば、RAM の上限は 2 GB です。[!DNL Python]パワーユーザーの場合でも、20 GB の RAM に制限されます。より大きな計算を扱う場合は、[!DNL Spark] を使用すると、すべてのノートブックインスタンスで共有される 1.5 TB の容量を提供します。
 
 デフォルトでは、Tensorflow レシピは GPU クラスターで動作し、Python は CPU クラスター内で動作します。
 
 ### ノートコンピューターの新規作成
 
-[!DNL Adobe Experience Platform] UIで、上部メニューの「データサイエンス」タブをクリックして、データサイエンスワークスペースに移動します。 このページで、[!DNL JupyterLab]タブをクリックすると[!DNL JupyterLab]ランチャーが開きます。 次のようなページが表示されます。
+[!DNL Adobe Experience Platform] UI で、上部のメニューの「Data Science」タブをクリックして、Data Science Workspace に移動します。 このページで、「[!DNL JupyterLab]」タブをクリックして、[!DNL JupyterLab] ランチャーを開きます。 次のようなページが表示されます。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
-このチュートリアルでは、ジュピターノートブックの[!DNL Python] 3を使用して、データにアクセスし、調査する方法を示します。 ランチャーページには、サンプルのノートブックが用意されています。[!DNL Python] 3の小売売上のレシピを使用します。
+このチュートリアルでは、Jupyter ノートブックで [!DNL Python] 3 を使用して、データにアクセスして調査する方法を示します。 ランチャーページには、サンプルのノートブックが用意されています。[!DNL Python] 3 の小売販売レシピを使用します。
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -56,11 +55,11 @@ Retail Sales レシピは、同じ Retail Sales データセットを使用し�
 >
 > `data_access_sdk_python` は廃止されているので、お勧めしません。コードを変換する場合は、[データアクセス SDK の Platform SDK への変換](../authoring/platform-sdk.md)チュートリアルを参照してください。このチュートリアルでも、以下と同じ手順を使用します。
 
-[!DNL Adobe Experience Platform]から内部的にデータにアクセスし、外部からデータにアクセスすることを確認します。 `data_access_sdk_python` ライブラリを使用して、データセットや XDM スキーマなどの内部データにアクセスします。外部データの場合は、パンダ[!DNL Python]ライブラリを使用します。
+[!DNL Adobe Experience Platform] から内部的にデータにアクセスし、外部からデータにアクセスします。 `data_access_sdk_python` ライブラリを使用して、データセットや XDM スキーマなどの内部データにアクセスします。外部データの場合は、pandas [!DNL Python] ライブラリを使用します。
 
 #### 外部データ
 
-Retail Sales ノートブックを開き、「Load Data」ヘッダーを探します。次の[!DNL Python]コードは、pandas&#39; `DataFrame`データ構造と[read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)関数を使用して、[!DNL Github]でホストされているCSVをDataFrameに読み込みます。
+Retail Sales ノートブックを開き、「Load Data」ヘッダーを探します。次の [!DNL Python] コードは、pandas の `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用して、[!DNL Github] でホストされている CSV を DataFrame に読み込みます。
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -74,17 +73,17 @@ pandas の DataFrame データ構造は、2 次元のラベル付きデータ構
 
 #### [!DNL Experience Platform] data
 
-次に、[!DNL Experience Platform]データへのアクセスを確認します。
+次に、[!DNL Experience Platform] データへのアクセスについて説明します。
 
 ##### データセット ID 別
 
 この節では、Retail Sales データセットを使用します。これは、Retail Sales サンプルノートブックで使用されているのと同じデータセットです。
 
-ジュピター・ノートブックでは、左側の&#x200B;**データ**&#x200B;タブ![データタブ](../images/jupyterlab/analyze-data/dataset-tab.png)からデータにアクセスできます。 タブを選択すると、2つのフォルダーが表示されます。 **[!UICONTROL Datasets]**&#x200B;フォルダーを選択します。
+Jupyter Notebook では、左側の **「Data**」タブ ![「data tab](../images/jupyterlab/analyze-data/dataset-tab.png)」からデータにアクセスできます。 「 」タブを選択すると、2 つのフォルダーが提供されます。 **[!UICONTROL Datasets]** フォルダーを選択します。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Datasetsディレクトリに取り込まれたすべてのデータセットが表示されます。 ディレクトリにデータセットが大量に入力されている場合は、すべてのエントリの読み込みに 1 分程度かかる場合があります。
+これで、Datasets ディレクトリに、取り込んだすべてのデータセットが表示されます。 ディレクトリにデータセットが大量に入力されている場合は、すべてのエントリの読み込みに 1 分程度かかる場合があります。
 
 データセットは同じなので、外部データを使用した前の節の読み込みデータを置き換えます。「**Load Data**」の下のコードブロックを選択し、キーボードの **D** キーを 2 回押します。フォーカスがテキスト内ではなく、ブロック上にあることを確認します。**D** キーを 2 回押す前に、**Esc** キーを押してテキストフォーカスをエスケープすることができます。
 
@@ -92,7 +91,7 @@ Datasetsディレクトリに取り込まれたすべてのデータセットが
 
 >[!TIP]
 >
->[[!DNL Platform SDK]](../authoring/platform-sdk.md)ガイドを参照して、コードを変換してください。
+>コードを変換するには、[[!DNL Platform SDK]](../authoring/platform-sdk.md) ガイドを参照してください。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -102,7 +101,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-[!DNL Python]以外のカーネルで作業している場合は、[!DNL Adobe Experience Platform]のデータにアクセスするには、[このページ](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform)を参照してください。
+[!DNL Python] 以外のカーネルで作業している場合は、[!DNL Adobe Experience Platform] のデータにアクセスするには、[ このページ ](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) を参照してください。
 
 実行可能なセルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。`head()` の出力は、データセットのキーを列にした、データセットの最初の n 行分のテーブルです。`head()` では、出力する行数を指定する整数の引数を受け取ります。デフォルトでは、これは 5 です。
 
@@ -128,7 +127,7 @@ df.head()
 
 #### 統計概要
 
-[!DNL Python's] pandasライブラリを利用して、各属性のデータタイプを取得できます。 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
+[!DNL Python's] pandas ライブラリを利用して、各属性のデータ型を取得できます。 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
 
 ```PYTHON
 df.info()
@@ -156,7 +155,7 @@ df.describe()
 
 #### データの視覚化
 
-データフレームの値がわかったので、これに視覚化を補って、情報をより明確にし、パターンを識別しやすくしたいと思います。結果をオーディエンスに伝える場合はグラフも便利です。視覚化に役立つ[!DNL Python]ライブラリの一部を以下に示します。
+データフレームの値がわかったので、これに視覚化を補って、情報をより明確にし、パターンを識別しやすくしたいと思います。結果をオーディエンスに伝える場合はグラフも便利です。視覚化に役立つ [!DNL Python] ライブラリには、次のものがあります。
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -196,8 +195,8 @@ df.describe()
 
 ## 次の手順
 
-このチュートリアルでは、データサイエンスワークスペースで新しいジャプターノートブックを作成する方法、および[!DNL Adobe Experience Platform]から外部のデータにアクセスする方法について説明しました。 特に、次の手順を詳しく説明しました。
-- 新しいジャプターノートブックを作成する
+このチュートリアルでは、Data Science Workspace で新しい Jupyter ノートブックを作成する方法と、[!DNL Adobe Experience Platform] から外部および外部のデータにアクセスする方法について説明しました。 特に、次の手順を詳しく説明しました。
+- Jupyter ノートブックの新規作成
 - データセットとスキーマへのアクセス
 - データセットの調査
 

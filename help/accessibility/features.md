@@ -4,13 +4,13 @@ title: Platform の一般的なアクセシビリティ機能
 topic-legacy: guide
 type: Documentation
 description: キーボードナビゲーション、カラーパレットとコントラスト、支援テクノロジーのサポートなど、Adobe Experience Platform でサポートされている一般的なアクセシビリティ機能について説明します。
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 100%
 
 ---
-
 
 # Experience Platform のアクセシビリティ機能
 

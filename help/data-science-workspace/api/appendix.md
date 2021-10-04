@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；
 solution: Experience Platform
-title: Senesie Machine Learning APIガイド付録
+title: Sensei 機械学習 API ガイドの付録
 topic-legacy: Developer guide
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
@@ -13,13 +12,13 @@ ht-degree: 80%
 
 ---
 
-# [!DNL Sensei Machine Learning] APIガイドの付録
+# [!DNL Sensei Machine Learning] API ガイドの付録
 
-以下の節では、[!DNL Sensei Machine Learning] APIの様々な機能に関するリファレンス情報を提供します。
+以下の節では、[!DNL Sensei Machine Learning] API の様々な機能に関するリファレンス情報を提供します。
 
 ## アセット取得用のクエリーパラメーター {#query}
 
-[!DNL Sensei Machine Learning] APIは、アセットの取得に関するクエリパラメーターのサポートを提供します。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+[!DNL Sensei Machine Learning] API は、アセットの取得に関するクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
@@ -75,7 +74,7 @@ Python Engines は、トレーニングまたはスコアリングの目的で C
 
 ## PySpark および Spark のリソース設定 {#resource-config}
 
-Spark Enginesには、トレーニングとスコアリングの目的で計算リソースを変更する機能があります。 次の表に、これらのリソースを示します。
+Spark Engines には、トレーニングやスコアリングの目的で計算リソースを変更する機能があります。 次の表に、これらのリソースを示します。
 
 | リソース | 説明 | タイプ |
 | -------- | ----------- | ---- |

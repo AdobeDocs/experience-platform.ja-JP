@@ -1,6 +1,6 @@
 ---
 title: Experience Platform上に構築されたアプリケーションとインテリジェントサービス
-description: このビデオでは、Adobe Experience Platformをベースに構築されたアプリケーションサービスとインテリジェントサービスの概要を説明します。これは、Experience CloudのApplications&amp、mdash、リアルタイム顧客データプラットフォーム、Journey Orchestration、Customer Journey Analytics、Attribution AI、顧客AIを補完します。
+description: このビデオでは、Adobe Experience Platform上に構築されたアプリケーションサービスとインテリジェントサービスの概要を説明します。これは、Experience Cloudの Applications&mdash;Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AIおよび顧客 AI を補完します。
 kt: 4333
 audience: all
 doc-type: video
@@ -18,11 +18,11 @@ ht-degree: 17%
 
 このビデオでは、Experience Platform上に構築されたアプリケーションとインテリジェントサービスの概要を説明します。
 
-詳しくは、各アプリケーションのドキュメントにアクセスするためのリンクを使用してください。
+詳しくは、各アプリのドキュメントにアクセスするためのリンクを参照してください。
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/ja-JP/experience-cloud/user-guides/home.translate.html)
 * [インテリジェントサービス](https://experienceleague.adobe.com/docs/intelligent-services.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ja-JP/experience-cloud/user-guides/home.translate.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=ja)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=ja)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 

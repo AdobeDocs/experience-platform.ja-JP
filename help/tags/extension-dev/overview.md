@@ -1,8 +1,9 @@
 ---
 title: 拡張機能の開発の概要
-description: 様々なタグ拡張機能タイプの主要コンポーネントと、Adobe Experience Platform での拡張機能開発プロセスについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: 様々なタグ拡張タイプの主要コンポーネントと、Adobe Experience Platform での拡張開発プロセスについて説明します。
+exl-id: b72df3df-f206-488d-a690-0f086973c5b6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエンジニアが Web サイトやモバイルアプリケーションで追加の機能を公開できる、オープンなエコシステムを構築することです。これは、タグ拡張機能で実現できます。タグプロパティに拡張機能をインストールすると、プロパティのすべてのユーザーがその拡張機能を使用できるようになります。
 

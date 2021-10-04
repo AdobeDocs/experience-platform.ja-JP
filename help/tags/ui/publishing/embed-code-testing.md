@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform Debugger を使用した埋め込みコードのテスト
 description: Platform Debugger を使用して、Web サイト上で Adobe Experience Platform の様々な埋め込みコードをローカルでテストする方法について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 
@@ -12,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグライブラリビルドに変更を加える場合は、ビルドを実稼動環境にデプロイする前に、これらの変更をテストする必要があります。Web サイトに専用のステージングまたは開発環境がない場合は、Adobe Experience Platform Debugger を使用して、サイト内の様々な埋め込みコードをローカルでテストできます。
 
 ## 前提条件
 
-このチュートリアルでは、データ収集 UI での環境と埋め込みコードの使用について、十分に理解している必要があります。「[環境の概要](./environments.md) 」で詳細情報を参照してください。
+このチュートリアルでは、データ収集 UI での環境と埋め込みコードの使用に関する十分な知識が必要です。「[環境の概要](./environments.md) 」で詳細情報を参照してください。
 
 また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、クロムおよび Firefox ブラウザーでのみ使用できます。 チュートリアルを開始する前に、次のリンクのいずれかを使用して、拡張機能をインストールしてください。
 
@@ -27,7 +28,7 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 ## Web サイトで Platform Debugger を開きます
 
-選択したブラウザーを使用して、Web サイトに移動し、Platform Debugger 拡張機能を開きます。Platform Debugger が現在接続しているサイトが、ウィンドウの下部に表示されます。 タグが現在サイトで実行中の場合は、「[!UICONTROL 概要]」タブに表示されます。
+選択したブラウザーを使用して、Web サイトに移動し、Platform Debugger 拡張機能を開きます。Platform Debugger が現在接続しているサイトが、ウィンドウの下部に表示されます。 タグが現在サイト上で実行中の場合は、「[!UICONTROL 概要]」タブに表示されます。
 
 ![](./images/embed-code-testing/summary.png)
 

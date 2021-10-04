@@ -5,7 +5,6 @@ title: 複数のカタログオブジェクトの検索
 topic-legacy: developer guide
 description: オブジェクトごとに 1 つのリクエストを実行する代わりに、複数のオブジェクトを表示する場合、カタログには同じ種類のオブジェクトを複数リクエストするためのシンプルなショートカットが用意されています。1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
@@ -15,11 +14,11 @@ ht-degree: 49%
 
 # 複数のカタログオブジェクトの検索
 
-1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合、[!DNL Catalog]は同じ型の複数のオブジェクトをリクエストする簡単なショートカットを提供します。 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
+1 つのオブジェクトにつき 1 回のリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合、[!DNL Catalog] は同じ型の複数のオブジェクトをリクエストするためのシンプルなショートカットを提供します。 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 
 >[!NOTE]
 >
->特定の[!DNL Catalog]オブジェクトをリクエストする場合でも、`properties`クエリパラメーターに必要なプロパティのみを返すことをお勧めします。
+>特定の [!DNL Catalog] オブジェクトを要求する場合でも、必要なプロパティのみを返すように `properties` クエリパラメーターを設定することをお勧めします。
 
 **API 形式**
 
@@ -30,8 +29,8 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` | 取得する特定のオブジェクトの1つを表す識別子。 |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 取得する特定のオブジェクトの 1 つの識別子。 |
 
 **リクエスト**
 
@@ -52,7 +51,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->返されたオブジェクトに、`properties`クエリで示される要求されたプロパティが1つ以上含まれていない場合、応答は、以下の&#x200B;***`Sample Dataset 3`***&#x200B;と&#x200B;***`Sample Dataset 4`***&#x200B;に示すように、要求されたプロパティのみを返します。
+>返されたオブジェクトに、`properties` クエリで指定された 1 つ以上のリクエストされたプロパティが含まれていない場合、次の ***`Sample Dataset 3`*** と ***`Sample Dataset 4`*** に示すように、応答は、含まれているリクエストされたプロパティのみを返します。
 
 ```json
 {

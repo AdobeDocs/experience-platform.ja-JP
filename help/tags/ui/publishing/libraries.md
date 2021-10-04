@@ -1,8 +1,9 @@
 ---
 title: ライブラリ
-description: タグライブラリの概念や、Adobe Experience Platform 内でそれらがどう機能するかについて説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: タグライブラリの概念や、Adobe Experience Platform 内ででそれらがどう機能するかについて説明します。
+exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ライブラリは、デプロイ後に、拡張機能や、データ要素、ルールがどのように相互作用するかを示す、命令のセットです。ライブラリを作成するときには、ライブラリに加えたい変更を指定します。ビルド時には、これらの変更が、以前のライブラリで送信、承認または公開されたすべての変更と組み合わせられます。
 
@@ -105,7 +106,7 @@ ht-degree: 100%
 
    ![](../../images/library-contents-revision.jpg)
 
-1. **すべて**&#x200B;の項目を表示するか、**変更済み**&#x200B;項目を表示するかを選択します。
+1. **すべて**&#x200B;の項目または&#x200B;**変更済み**&#x200B;項目のどちらを表示するかを選択します。
 1. リビジョンを選択し、「**[!UICONTROL リビジョンを選択]**」を選択します。
 1. 「**[!UICONTROL 変更を追加]**」または「**[!UICONTROL 変更されたすべてのリソースを追加]**」を選択します。
 
@@ -113,9 +114,9 @@ ht-degree: 100%
 
 ライブラリには、デプロイしたコードに加えたい一連の変更がカプセル化されています。アクティブライブラリを使用すると、変更を迅速に繰り返し、影響を確認することができます。
 
-拡張機能、ルール、データ要素を、作業中のライブラリに直接保存できるようになりました。必要に応じて、新しいビルドを[!UICONTROL アクティブなライブラリ]ドロップダウンから作成したり、新しいライブラリを作成したりすることもできます。
+拡張機能、ルール、データ要素を、作業中のライブラリに直接保存できるようになりました。 必要に応じて、[!UICONTROL アクティブなライブラリ]ドロップダウンから新しいビルドや、新しいライブラリを作成したりすることもできます。
 
-次のリストは、アクティブなライブラリの管理に関する詳細情報を示しています。
+次のリストは、アクティブなライブラリの管理に関する詳細を示しています。
 
 1. [新しい開発ライブラリを作成](libraries.md#create-a-library)します。
 1. [Rules](../managing-resources/rules.md)、[Data Elements](../managing-resources/data-elements.md)、または [Extensions](../managing-resources/extensions/overview.md) に移動します。

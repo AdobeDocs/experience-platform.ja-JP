@@ -1,55 +1,54 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；cs;CS；顧客の成功システム
+keywords: Experience Platform；ホーム；人気のあるトピック；cs;CS；顧客成功システム
 solution: Experience Platform
-title: Flow Service APIを使用した顧客成功システムの調査
+title: フローサービス API を使用した顧客成功システムの調査
 topic-legacy: overview
-description: このチュートリアルでは、Flow Service APIを使用して顧客成功(CS)システムを調べます。
+description: このチュートリアルでは、フローサービス API を使用して、カスタマーサクセス (CS) システムを調べます。
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 25%
+ht-degree: 35%
 
 ---
 
-# [!DNL Flow Service] APIを使用して、お客様の成功システムを調べます。
+# [!DNL Flow Service] API を使用したカスタマーサクセスシステムの調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースから接続できます。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用してカスタマーサクセス(CS)システムを調べます。
+このチュートリアルでは、 [!DNL Flow Service] API を使用してカスタマーサクセス (CS) システムを調べます。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してCSシステムに正しく接続するために必要な追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] API を使用して CS システムに正しく接続するために知っておく必要がある追加情報を示します。
 
 ### ベース接続の取得
 
-[!DNL Platform] APIを使用してCSシステムを調べるには、有効なベース接続IDが必要です。 作業対象のCSシステムに対する基本的な接続がまだない場合は、次のチュートリアルを使用して作成できます。
+[!DNL Platform] API を使用して CS システムを調べるには、有効なベース接続 ID が必要です。 操作する CS システムのベース接続がまだない場合は、次のチュートリアルを通じて CS システムを作成できます。
 
-* [Salesforceサービスクラウド](../create/customer-success/salesforce-service-cloud.md)
+* [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* Authorization： Bearer `{ACCESS_TOKEN}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
@@ -57,7 +56,7 @@ ht-degree: 25%
 
 ## データテーブルの調査
 
-CSシステムのベース接続を使用して、GETリクエストを実行することで、データテーブルを調べることができます。 次の呼び出しを使用して、[!DNL Platform]に検査または取り込むテーブルのパスを探します。
+CS システムのベース接続を使用して、GETリクエストを実行することで、データテーブルを調べることができます。 次の呼び出しを使用して、[!DNL Platform] に検査または取り込むテーブルのパスを見つけます。
 
 **API 形式**
 
@@ -67,7 +66,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | CSベース接続のID。 |
+| `{BASE_CONNECTION_ID}` | CS ベース接続の ID。 |
 
 **リクエスト**
 
@@ -80,9 +79,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常に応答すると、CSシステムから一連のテーブルが返されます。 [!DNL Platform]に取り込むテーブルを探し、その`path`プロパティをメモしておきます。これは、次の手順でその構造を調べるために指定する必要があるためです。
+正常な応答は、CS システムからのテーブルの配列を返します。 [!DNL Platform] に取り込むテーブルを探し、その `path` プロパティをメモしておきます。次の手順でその構造を調べるために指定する必要があります。
 
 ```json
 [
@@ -117,9 +116,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造をInspectにする
+## Inspectテーブルの構造
 
-CSシステムからテーブルの構造を検査するには、テーブルのパスをクエリパラメーターとして指定しながらGETリクエストを実行します。
+CS システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメータとして指定し、GETリクエストを実行します。
 
 **API 形式**
 
@@ -129,7 +128,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | CSベース接続のID。 |
+| `{BASE_CONNECTION_ID}` | CS ベース接続の ID。 |
 | `{TABLE_PATH}` | テーブルのパス。 |
 
 ```shell
@@ -143,7 +142,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns`配列の要素内にあります。
+正常な応答は、指定したテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -178,4 +177,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、CSシステムを調べ、[!DNL Platform]に取り込むテーブルのパスを見つけ、その構造に関する情報を得ました。 この情報は、次のチュートリアルで[CSシステムからデータを収集し、プラットフォーム](../collect/customer-success.md)に取り込むために使用できます。
+このチュートリアルでは、CS システムを調べ、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を得ました。 この情報は、次のチュートリアルで [CS システムからデータを収集し、Platform](../collect/customer-success.md) に取り込む際に使用できます。

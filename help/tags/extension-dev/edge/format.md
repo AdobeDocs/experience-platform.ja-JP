@@ -1,8 +1,9 @@
 ---
 title: エッジ拡張機能のライブラリモジュール
-description: エッジプロパティでタグ拡張機能のライブラリモジュールの形式を設定します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: エッジプロパティのタグ拡張機能のライブラリモジュールの形式設定です。
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 100%
 
@@ -12,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 >[!IMPORTANT]
 >
 >このドキュメントでは、エッジ拡張のライブラリモジュールの形式について説明します。web 拡張機能を開発する場合は、 [web 拡張機能モジュールの形式](../web/format.md) に関するガイドを参照してください。
 
-ライブラリモジュールは、拡張機能によって提供される再利用可能なコードで、Adobe Experience Platform Launch のタグランタイムライブラリ（エッジノード上で実行されるライブラリ）内で発行されます。例えば、`sendBeacon` アクションタイプには、エッジノード上で実行され、ビーコンを送信するライブラリモジュールがあります。
+ライブラリモジュールは、拡張機能によって提供される再利用可能なコードで、Adobe Experience Platform（エッジノード上で実行されるライブラリ）のタグのランタイムライブラリ内で発行されます。例えば、`sendBeacon` アクションタイプには、エッジノード上で実行され、ビーコンを送信するライブラリモジュールがあります。
 
 ライブラリモジュールは、[CommonJS モジュール](http://wiki.commonjs.org/wiki/Modules/1.1.1)として構造化されています。CommonJS モジュール内では、次の変数を使用できます。
 
