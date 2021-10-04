@@ -5,14 +5,18 @@ title: Marketoソースコネクタの認証
 topic-legacy: overview
 description: このドキュメントでは、Marketo認証資格情報の生成方法に関する情報を提供します。
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 0%
+source-wordcount: '622'
+ht-degree: 2%
 
 ---
 
-# [!DNL Marketo Engage] ソースコネクタの認証
+# （ベータ版）[!DNL Marketo Engage] ソースコネクタを認証します。
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platformの [!DNL Marketo Engage] ソースは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 [!DNL Marketo Engage]（以下「[!DNL Marketo]」と呼ばれる）ソースコネクタを作成する前に、まず [!DNL Marketo] インターフェイスを使用してカスタムサービスを設定し、Munchkin ID、クライアント ID、クライアントシークレットの値を取得する必要があります。
 

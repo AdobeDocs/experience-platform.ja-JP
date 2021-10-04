@@ -2,14 +2,18 @@
 title: リアルタイム顧客データプラットフォーム B2B エディションのソース
 description: リアルタイム顧客データプラットフォーム B2B エディションでのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 0%
+source-wordcount: '179'
+ht-degree: 4%
 
 ---
 
 # リアルタイム顧客データプラットフォーム B2B エディションのソース
+
+>[!IMPORTANT]
+>
+>リアルタイム顧客データプラットフォーム B2B エディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 リアルタイム顧客データプラットフォーム B2B エディションを使用すると、[[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) ソースコネクタを介して B2B データを取り込み、サービスを使用して受信データの構造化、ラベル付け、強化をおこなうことができます。
 

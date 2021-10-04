@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、UI でMarketo Engageソースコネクタを作成して B2B データをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 9c8b63bf577a4258a7ef87c11bc8f87c1a01cc20
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1355'
 ht-degree: 6%
 
 ---
 
-# UI での [!DNL Marketo Engage] ソースコネクタの作成
+# （ベータ版）UI で [!DNL Marketo Engage] ソースコネクタを作成する
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platformの [!DNL Marketo Engage] ソースは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 このチュートリアルでは、B2B データをAdobe Experience Platformに取り込むための UI で [!DNL Marketo Engage]（以下「[!DNL Marketo]」と呼ばれる）ソースコネクタを作成する手順を説明します。
 

@@ -5,14 +5,18 @@ title: Marketo Engageコネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 13%
+source-wordcount: '493'
+ht-degree: 14%
 
 ---
 
-# [!DNL Marketo Engage] コネクタ
+# （ベータ版） [!DNL Marketo Engage] コネクタ
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platformの [!DNL Marketo Engage] ソースは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
