@@ -113,7 +113,6 @@ Edge ネットワークにデータを送信できるようになったら、組
 >
 >* [SDK のインストール](../edge/fundamentals/installing-the-sdk.md)
 >* [SDK の設定](../edge/fundamentals/configuring-the-sdk.md)
-
 >
 >また、イベント転送のみを使用する場合でも、[後の手順](#event-forwarding)でイベント転送を設定する前に、説明に従って SDK をインストールして設定する必要があります。
 
