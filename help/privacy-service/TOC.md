@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Privacy Service ヘルプ
 breadcrumb-title: Privacy Service ガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、顧客データリクエストを管理します。
 feature: Privacy
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 100%
+source-wordcount: '86'
+ht-degree: 95%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 100%
    * [概要](regulations/overview.md)
    * [FAQ](regulations/faq.md)
    * [用語](regulations/terminology.md)
+* [データ衛生 API（アルファ）](data-hygiene-api.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [リリースノート](release-notes.md)
