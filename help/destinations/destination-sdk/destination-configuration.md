@@ -2,7 +2,7 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
 title: 宛先 SDK の宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 5%
@@ -92,7 +92,6 @@ ht-degree: 5%
       "mapUserInput":false,
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{

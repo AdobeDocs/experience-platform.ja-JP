@@ -4,7 +4,7 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: 宛先 SDK を使用した宛先の設定方法
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -130,8 +130,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
-   ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed"
+   ]
 }
 ```
 

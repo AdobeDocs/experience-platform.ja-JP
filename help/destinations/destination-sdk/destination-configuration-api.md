@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2340'
 ht-degree: 5%
 
 ---
@@ -365,7 +365,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
                "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
             }
          ],
-         "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
          "destConfigId":"410631b8-f6b3-4b7c-82da-7998aa3f327c",
          "backfillHistoricalProfileData":true
       }
@@ -398,7 +397,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
 | `destinationDelivery.authenticationRule` | 文字列 | [!DNL Platform] ユーザーが宛先に接続する方法を示します。 指定できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE` です。<br> <ul><li>Platform のお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法を使用してシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。 例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` または `authType:BEARER` も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、`PLATFORM_AUTHENTICATION` 顧客が宛先に接続するための認証資格情報を提供する必要がない場合は、[!DNL Platform] を使用します。 この場合、[Credentials](./credentials-configuration.md) 設定を使用して credentials オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 文字列 | この宛先に使用する [ 宛先サーバーテンプレート ](./destination-server-api.md) の `instanceId`。 |
-| `inputSchemaId` | 文字列 | このフィールドは自動的に生成され、入力は必要ありません。 |
 | `destConfigId` | 文字列 | このフィールドは自動的に生成され、入力は必要ありません。 |
 | `backfillHistoricalProfileData` | Boolean | 宛先に対してセグメントをアクティブ化した場合に、履歴プロファイルデータを書き出すかどうかを制御します。<br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前にセグメントに適合した過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Boolean | 宛先のアクティベーションワークフローのセグメントマッピング ID をユーザーが入力するかどうかを制御します。 |
@@ -586,7 +584,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
@@ -773,7 +770,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
