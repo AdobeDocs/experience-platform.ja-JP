@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2407'
 ht-degree: 5%
 
 ---
@@ -125,33 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -195,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Boolean | 上記の設定例に示すように、Experience Platformから宛先のカスタム属性にプロファイル属性をマッピングできる場合は、`true` を使用します。 |
 | `schemaConfig.segmentRequired` | Boolean | 常に `segmentRequired:true` を使用します。 |
 | `schemaConfig.identityRequired` | Boolean | ユーザーが ID 名前空間をExperience Platformから目的のスキーマにマッピングできる場合は、`true` を使用します。 |
-| `aggregation.aggregationType` | - | 「`BEST_EFFORT`」または「`CONFIGURABLE_AGGREGATION`」を選択します。上記の例の設定には両方の集計タイプが含まれていますが、必要なのは、宛先に対してどちらかを選択することだけです。 |
+| `aggregation.aggregationType` | - | 「`BEST_EFFORT`」または「`CONFIGURABLE_AGGREGATION`」を選択します。上記の例の設定には、`BEST_EFFORT` 集計が含まれています。 `CONFIGURABLE_AGGREGATION` の例については、[ 宛先の設定 ](./destination-configuration.md#example-configuration) ドキュメントの例の設定を参照してください。 設定可能な集計に関連するパラメータを、この表に示します。 |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整数 | Experience Platformは、1 回の HTTP 呼び出しで、書き出された複数のプロファイルを集計できます。 1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これは、ベストエフォートの集計です。 例えば、値 100 を指定すると、1 回の呼び出しで、Platform は 100 未満の任意の数のプロファイルを送信できます。 <br> サーバーが 1 回の要求で複数のユーザーを受け入れない場合、この値を 1 に設定します。 |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolean | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、このフラグを `true` に設定します。 |
-| `aggregation.configurableAggregation.splitUserById` | Boolean | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、このフラグを `true` に設定します。 |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | *最大値：3600*&#x200B;を参照してください。`maxNumEventsInBatch` と共に、エンドポイントに API 呼び出しを送信するまでExperience Platformが待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platformは、3600 秒または 10.000 の修飾済みプロファイルが存在するまで待ってから API 呼び出しをおこないます（いずれか最初に達成される方を待ちます）。 |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | 整数 | *最大値：10000*&#x200B;を参照してください。上の `maxBatchAgeInSecs` を参照してください。 |
-| `aggregation.configurableAggregation.aggregationKey` | Boolean | 次のパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。<br> <ul><li>セグメント ID</li><li> セグメントのステータス </li><li> ID 名前空間 </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | セグメント ID で宛先に書き出したプロファイルをグループ化する場合は、これを `true` に設定します。 |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | 宛先に書き出されたプロファイルをセグメント ID とセグメントステータスでグループ化する場合は、 `includeSegmentId:true` と `includeSegmentStatus:true` の両方を設定する必要があります。 |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | ID 名前空間で宛先に書き出したプロファイルをグループ化する場合は、これを `true` に設定します。 |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | このパラメーターを使用して、書き出されたプロファイルを単一の ID（GAID、IDFA、電話番号、電子メールなど）のグループに集計するかどうかを指定します。 |
-| `aggregation.configurableAggregation.aggregationKey.groups` | 文字列 | ID 名前空間のグループで、宛先に書き出したプロファイルをグループ化する場合は、ID グループのリストを作成します。 例えば、IDFA と GAID のモバイル識別子を含むプロファイルを、宛先への呼び出しと、この例の設定を使用して別の電子メールに組み合わせることができます。 |
+| `aggregation.configurableAggregation.splitUserById` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、このフラグを `true` に設定します。 |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | *最大値：3600*&#x200B;を参照してください。設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 `maxNumEventsInBatch` と共に、エンドポイントに API 呼び出しを送信するまでExperience Platformが待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platformは、3600 秒または 10.000 の修飾済みプロファイルが存在するまで待ってから API 呼び出しをおこないます（いずれか最初に達成される方を待ちます）。 |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | 整数 | *最大値：10000*&#x200B;を参照してください。設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 上の `maxBatchAgeInSecs` を参照してください。 |
+| `aggregation.configurableAggregation.aggregationKey` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 次のパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。<br> <ul><li>セグメント ID</li><li> セグメントのステータス </li><li> ID 名前空間 </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 セグメント ID で宛先に書き出したプロファイルをグループ化する場合は、これを `true` に設定します。 |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 宛先に書き出されたプロファイルをセグメント ID とセグメントステータスでグループ化する場合は、 `includeSegmentId:true` と `includeSegmentStatus:true` の両方を設定する必要があります。 |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 ID 名前空間で宛先に書き出したプロファイルをグループ化する場合は、これを `true` に設定します。 |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 このパラメーターを使用して、書き出されたプロファイルを単一の ID（GAID、IDFA、電話番号、電子メールなど）のグループに集計するかどうかを指定します。 |
+| `aggregation.configurableAggregation.aggregationKey.groups` | 文字列 | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 ID 名前空間のグループで、宛先に書き出したプロファイルをグループ化する場合は、ID グループのリストを作成します。 例えば、IDFA と GAID のモバイル識別子を含むプロファイルを、宛先への呼び出しと、この例の設定を使用して別の電子メールに組み合わせることができます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -330,33 +303,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
             "bestEffortAggregation":{
                "maxUsersPerRequest":10,
                "splitUserById":false
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
             }
          },
          "destinationDelivery":[
@@ -551,33 +497,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -735,33 +654,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       "bestEffortAggregation":{
          "maxUsersPerRequest":10,
          "splitUserById":false
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
       }
    },
    "destinationDelivery":[
