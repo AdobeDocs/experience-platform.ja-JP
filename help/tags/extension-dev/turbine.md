@@ -2,9 +2,9 @@
 title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 100%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | コンテナ内で使用されている [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) のバージョンが作成された日付（ISO 8601 形式）。 |
 | `buildDate` | 現在のライブラリが構築された日付（ISO 8601 形式）。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | 環境の ID。 |
 | `stage` | このライブラリが構築された環境。有効な値は `development`、`staging`、および `production` です。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ console.log(turbine.environment.stage);
 
 メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使用してメッセージをログに記録し、タグのデバッグが有効になっている場合にのみメッセージがコンソールに出力されるようにします。
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 データ要素の値が返されます。
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 返される設定オブジェクト内の値は、データ要素から取得した値である可能性があることに注意してください。このため、データ要素の値が変更されている場合、異なる時間に `getExtensionSettings()` を呼び出すと、違う結果が返されることがあります。最新の値を取得するには、できるだけ長い間待ってから、`getExtensionSettings()` を呼び出してください。
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 [hostedLibFiles](./manifest.md) プロパティは、タグのランタイムライブラリとともに様々なファイルをホストするために、拡張機能マニフェスト内で定義できます。このモジュールによって、指定されたライブラリファイルがホストされている URL が返されます。
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 別の拡張機能から共有されているモジュールを取得します。一致するモジュールが見つからない場合は、`undefined` が返されます。共有モジュールの詳細については、[共有モジュールの実装](./web/shared.md)に関するページを参照してください。
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ turbine.logger.error('Error!');
 * `logger.debug(message: string)`：デバッグメッセージをコンソールに記録します。（ブラウザーコンソール内で`verbose` ログが有効になっている場合にのみ表示されます）
 * `logger.deprecation(message: string)`：ユーザーがタグデバッグを有効にしているかどうかに関わらず、警告メッセージをコンソールに記録します。
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 コールバック関数を `turbine.onDebugChanged` に渡すと、タグは、デバッグが切り替えられるたびにコールバックを呼び出します。タグ は、デバッグが有効な場合は true、デバッグが無効な場合は false のブール値をコールバック関数に渡します。
 
 メッセージをログに記録するだけの場合、これを使用する必要はありません。代わりに、常に `turbine.logger` を使ってメッセージをログに記録すると、タグデバッグが有効な場合にメッセージがコンソールにのみ出力されます。
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
