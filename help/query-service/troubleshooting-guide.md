@@ -5,10 +5,10 @@ title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 29%
+source-wordcount: '699'
+ht-degree: 22%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 時系列データを使用してクエリを実行する場合、分析をより正確におこなうには、可能な限りタイムスタンプフィルターを使用する必要があります。
 
+>[!NOTE]
+>
+> 日付文字列 **は `yyyy-mm-ddTHH24:MM:SS` の形式にする必要があります。**
+
 タイムスタンプフィルターの使用例を次に示します。
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### データセットからすべての行を取得する場合は、*などのワイルドカードを使用する必要がありますか？
 
 クエリサービスは、従来の行ベースのストアシステムではなく **column-store** として扱う必要があるので、ワイルドカードを使用して行からすべてのデータを取得することはできません。
+
+### SQL クエリで `NOT IN` を使用する必要はありますか。
+
+`NOT IN` 演算子は、他のテーブルや SQL ステートメントに見つからない行を取得する場合によく使用されます。 この演算子は、パフォーマンスが低下する可能性があり、比較対象の列が `NOT NULL` を受け入れる場合、またはレコード数が多い場合は、予期しない結果が返される可能性があります。
+
+`NOT IN` を使用する代わりに、`NOT EXISTS` または `LEFT OUTER JOIN` を使用できます。
+
+例えば、次のテーブルが作成されている場合：
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+`NOT EXISTS` 演算子を使用している場合は、次のクエリを使用して `NOT IN` 演算子を使用してレプリケートできます。
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+また、 `LEFT OUTER JOIN` 演算子を使用している場合は、次のクエリを使用して `NOT IN` 演算子を使用してレプリケートできます。
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### `OR` 演算子と `UNION` 演算子の正しい使用方法を教えてください。
+
+### `CAST` 演算子を使用して SQL クエリのタイムスタンプを正しく変換するには、どうすればよいですか。
+
+`CAST` 演算子を使用してタイムスタンプを変換する場合は、**と** の両方の日付を含める必要があります。
+
+例えば、以下に示すように、時間コンポーネントが見つからないと、エラーが発生します。
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+`CAST` 演算子の正しい使用方法を次に示します。
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## REST API エラー
 

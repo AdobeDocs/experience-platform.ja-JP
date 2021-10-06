@@ -5,9 +5,9 @@ title: クエリサービスの Spark SQL 関数
 topic-legacy: spark sql functions
 description: このドキュメントには、SQL 機能を拡張する Spark SQL 関数に関する情報が含まれています。
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3909'
 ht-degree: 2%
 
 ---
@@ -153,8 +153,8 @@ Adobe Experience Platformクエリサービスには、SQL 機能を拡張する
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | 入力よりも後の最初の日を返します |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | 入力の四半期を返します |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 文字列の秒を返します |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 文字列を日付に変換します |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 文字列をタイムスタンプに変換します |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 文字列を日付に変換します。 **注意：** 文字列はの形 **** 式で指定する必要がありま `yyyy-mm-ddTHH24:MM:SS`す。 |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 文字列をタイムスタンプに変換します。 **注意：** 文字列はの形 **** 式で指定する必要がありま `yyyy-mm-ddTHH24:MM:SS`す。 |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 文字列を Unix タイムスタンプに変換します |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 文字列を UTC タイムスタンプに変換します |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 日付を切り捨てます |
