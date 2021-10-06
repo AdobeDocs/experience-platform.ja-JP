@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 70%
+source-wordcount: '160'
+ht-degree: 66%
 
 ---
 
@@ -24,19 +24,24 @@ ht-degree: 70%
       * [リアルタイム CDP B2B エディションの概要](./b2b-use-case.md)
 * 管理 {#admin}
    * [管理の概要](administration/admin-overview.md)
+* アカウントプロファイル {#account}
+   * [アカウントプロファイルの概要](accounts/account-profile-overview.md)
+   * [アカウントプロファイル UI ガイド](accounts/account-profile-ui-guide.md)
 * データセット {#datasets}
    * [データセット](datasets/dataset.md)
    * [プラットフォーム上のデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
    * [Destinations overview](destinations/overview.md)
+* ID {#identity}
+   * [ID と ID 名前空間](profile/identities-overview.md)
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
+* 結合ポリシー {#merge-policies}
+   * [結合ポリシーの概要](profile/merge-policies.md)
 * プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
-   * [ID と ID 名前空間](profile/identities-overview.md)
-   * [結合ポリシー](profile/merge-policies.md)
-   * [プロファイルビューアー](profile/profile-viewer.md)
+   * [プロファイルの参照](profile/profile-browse.md)
 * セグメント {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
    * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)

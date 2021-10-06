@@ -1,18 +1,18 @@
 ---
 keywords: 結合ポリシー rtcdp;rtcdp 結合ポリシー
-title: リアルタイム顧客データプラットフォームでのポリシーの結合
+title: Real-time Customer Data Platformでのポリシーの結合
 description: リアルタイム顧客データプラットフォームでの結合ポリシーの使用
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 17%
+source-wordcount: '156'
+ht-degree: 38%
 
 ---
 
-# リアルタイム顧客データプラットフォームでのポリシーの結合
+# 結合ポリシーの概要
 
-[!DNL Real-time Customer Data Platform] はAdobe Experience Platformをベースに構築されており、複数のソースからデータを統合して、個々の顧客の全体像を把握できます。 このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合された顧客ビューを作成するために組み合わされるデータを決定するために [!DNL Platform] で使用されるルールです。
+Adobe Experience Platform では、複数のソースからデータを組み合わせて、個々の顧客の全体像を把握できます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、どのデータを組み合わせてプロファイルの統合表示を作成するかを決定する際に [!DNL Platform] で使用されるルールです。
 
 RESTful API とExperience Platformユーザーインターフェイスを使用して、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。 また、データソースに関する環境設定を指定し、結合中に競合が発生した場合にどのデータの優先順位を持つかを指定することもできます。
 

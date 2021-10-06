@@ -1,16 +1,16 @@
 ---
 keywords: ID rtcdp;rtcdp ID；リアルタイム CDP ID
-title: リアルタイム顧客データプラットフォームでの ID
+title: Real-time Customer Data Platformの ID
 description: Adobe Experience Platform ID サービスは、デバイスとシステム間で ID を結合することで、顧客とその行動をより良く把握できるようにします。
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 74%
+source-wordcount: '431'
+ht-degree: 72%
 
 ---
 
-# リアルタイム顧客データプラットフォームでの ID
+# ID の概要
 
 Adobe Experience Platform [!DNL Identity Service] は、デバイスとシステム間で ID を結び付けることで、顧客とその行動をより良く把握できるようにします。 通常、顧客は複数のチャネルを通じてブランドとやり取りします。これには、Web サイトのオンライン閲覧、店頭での購入、ロイヤリティープログラムへの参加、サポートのためのヘルプデスクへの電話、他多数が含まれます。これらの複数のシステムにまたがって、その顧客に対して ID が作成され、[!DNL Identity Service] を使用すると、それらの ID を統合して全体像を確認できます。
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Identity Service] は、デバイスとシステ
 
 ## ID 名前空間
 
-ID 名前空間は [!DNL Identity Service] のコンポーネントで、顧客 ID に追加のコンテキストを提供するインジケーターとして機能します。 一般的に使用される ID 名前空間の例としては、「電子メール」が挙げられます。複数の Web サイトで同じ電子メールアドレスが使用されると、同じ顧客に属する複数の異なる（それぞれが一意の顧客 ID を持つ） ID を結合できます。[!DNL Experience Platform] では、ID 名前空間を使用して、ユーザーインターフェイス内の個々のプロファイルを検索できます。プロファイルの表示について詳しくは、「[プロファイルビューアの概要](/help/rtcdp/profile/profile-viewer.md)」を参照してください。ID 名前空間について詳しくは、「[ID 名前空間の概要](../../identity-service/namespaces.md)」を参照してください。
+ID 名前空間は [!DNL Identity Service] のコンポーネントで、顧客 ID に追加のコンテキストを提供するインジケーターとして機能します。 一般的に使用される ID 名前空間の例としては、「電子メール」が挙げられます。複数の Web サイトで同じ電子メールアドレスが使用されると、同じ顧客に属する複数の異なる（それぞれが一意の顧客 ID を持つ） ID を結合できます。[!DNL Experience Platform] では、ID 名前空間を使用して、ユーザーインターフェイス内の個々のプロファイルを検索できます。プロファイルの表示の詳細については、[ プロファイルの参照の概要 ](profile-browse.md) を参照してください。 ID 名前空間について詳しくは、「[ID 名前空間の概要](../../identity-service/namespaces.md)」を参照してください。
 
 ## ID グラフ
 
