@@ -3,9 +3,9 @@ title: データ衛生 API（アルファ）
 description: Adobe Experience Platformで顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 18%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | 組織の認証情報を含む配列。次のプロパティを持つ 1 つのオブジェクトを含める必要があります。 <ul><li>`namespace`:に設定する必要がありま `imsOrgID`す。</li><li>`value`:お使いの IMS Org ID。これは `x-gw-ims-org-id` ヘッダーで指定された値と同じです。</li></ul> |
 | `users` | 削除する情報を持つユーザーが少なくとも 1 人コレクションを含む配列。 各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。この値に対して一意で、容易に識別できる文字列を選択し、後で参照または参照できるようにすることをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。次の 1 つの文字列値を含む必要があります。`delete`.</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`:ID に関 [連](../identity-service/namespaces.md) 付けられた ID 名前空間。これは、Platform で認識される [ 標準の名前空間 ](./api/appendix.md#standard-namespaces) か、組織で定義されるカスタム名前空間にすることができます。 使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`:ID 値。</li><li>`type`:グローバルに認識される `standard` 名前空間を使用する場合、または組織で定 `custom` 義された名前空間を使用する場合は、をに設定する必要があります。</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **応答**
 
