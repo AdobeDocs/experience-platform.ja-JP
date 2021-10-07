@@ -3,9 +3,9 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続（ベータ版）
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先では、ユーザープロファイルのセグメントメンバーシップに基づいて、リアルタイムの 1 対 1 のパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,28 @@ ht-degree: 8%
 ## エクスポートされたデータ {#exported-data}
 
 [Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイする場合は、[send event complete](../../../edge/extension/event-types.md) 機能を使用します。カスタムコードアクションには、書き出されたデータを確認するための `event.destinations` 変数が含まれます。
+
+`event.destinations` 変数の値の例を次に示します。
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 [Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイしない場合は、[ イベントからの応答の処理 ](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認します。
 
