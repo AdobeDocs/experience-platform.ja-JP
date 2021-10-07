@@ -3,9 +3,10 @@ title: データ衛生 API（アルファ）
 description: Adobe Experience Platformで顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '535'
 ht-degree: 18%
 
 ---
@@ -17,6 +18,8 @@ ht-degree: 18%
 >データ衛生 API は現在アルファ状態で、お客様の組織がまだアクセスできない可能性があります。 このドキュメントで説明する機能は変更される場合があります。
 
 データの衛生管理 API を使用すると、Adobe Experience Platformに保存された顧客の個人データをプログラムで修正または削除できます。 Privacy ServiceAPI とは異なり、これらの操作は法的なプライバシー規制に関連付ける必要はなく、純粋にデータをクリーンで正確に保つために使用できます。
+
+この API には、次のルートパスからアクセスできます。`https://platform.adobe.io/data/core/hygiene/`
 
 ## はじめに
 
