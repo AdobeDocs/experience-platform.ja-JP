@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft SQL;Microsoft SQL;SQL;SQL
+keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: SQL Server ソースコネクタの概要
 topic-legacy: overview
-description: API またはユーザーインターフェイスを使用して Microsoft SQL Server をAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用してMicrosoft SQL Server をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 9%
+source-wordcount: '254'
+ht-degree: 11%
 
 ---
 
@@ -22,19 +22,15 @@ Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
->[!IMPORTANT]
->
->[!DNL Microsoft] SQL Server ソースコネクタは、現在、Platform への同じ領域接続をサポートしていません。 つまり、Azure インスタンスが Platform と同じネットワーク領域を使用している場合、Platform ソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、担当のAdobeアカウントマネージャーにお問い合わせください。
-
 以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Microsoft] SQL Server を [!DNL Platform] に接続する方法に関する情報を提供します。
 
 ## API を使用して [!DNL Microsoft] SQL Server を [!DNL Platform] に接続
 
-- [フローサービス API を使用した Microsoft SQL Server ベース接続の作成](../../tutorials/api/create/databases/sql-server.md)
+- [フローサービス API を使用したMicrosoft SQL Server ベース接続の作成](../../tutorials/api/create/databases/sql-server.md)
 - [フローサービス API を使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
 - [フローサービス API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ## UI を使用して [!DNL Microsoft] SQL Server を [!DNL Platform] に接続
 
-- [UI での Microsoft SQL Server ソース接続の作成](../../tutorials/ui/create/databases/sql-server.md)
+- [UI でのMicrosoft SQL Server ソース接続の作成](../../tutorials/ui/create/databases/sql-server.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
