@@ -4,10 +4,10 @@ title: 通信業界のデータモデル ERD
 topic-legacy: overview
 description: Adobe Experience Platformで使用するエクスペリエンスデータモデル (XDM) と互換性のある、通信業界用の標準化されたデータモデルを示すエンティティ関係図 (ERD) を表示します。
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 421b4a448370f9903b8bc826fd9be9e5b2e11c59
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 0%
+source-wordcount: '422'
+ht-degree: 4%
 
 ---
 
@@ -33,3 +33,15 @@ ht-degree: 0%
 >[!NOTE]
 >
 >エクスペリエンスイベントエンティティには、XDM ExperienceEvent クラスが提供する一意の識別子 (`_id`) 属性を表す「_ID」フィールドが含まれます。 この値に何が予想されるかについて詳しくは、[XDM ExperienceEvent](../../classes/experienceevent.md) の参照ドキュメントを参照してください。
+
+##  通信事例
+
+次の表に、通信業界の一般的な使用例の推奨クラスとスキーマフィールドグループを示します。
+
+| 使用例 | 推奨クラスとフィールドグループ |
+| --- | --- |
+| 現在の保有状況と閲覧行動に基づいて、アップセルやクロスセルの機会に適した顧客を把握します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL アップセルの詳細]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL アップグレードの詳細]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 通信購読]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL 人口統計の詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| 関連する広告と自動パーソナライズされた E メールを通じて、買い物かごの放棄者を再ターゲット化します。 コンバージョン時に広告を抑制します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL コマースの詳細]](../../field-groups/event/upsell-details.md) （買い物かごの放棄をキャプチャするため）</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 通信購読]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL 人口統計の詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| 顧客が（従業員のインタラクションまたは自動機械学習アルゴリズムに基づいて）チャーンする可能性が高いとマークされた場合、顧客の詳細をデジタルチャネルと非デジタルチャネルに送信します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL キャンペーンマーケティングの詳細]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL チャネルの詳細]](../../field-groups/event/channel-details.md)</li><li>パーソナライズされたコンテンツを含むカスタムフィールドグループ</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 人口統計の詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}

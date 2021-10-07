@@ -4,9 +4,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル (XDM) クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 29%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 29%
       * [IAB TCF 2.0 の同意](./field-groups/event/iab.md)
       * [宿泊予約](./field-groups/event/lodging-reservation.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
+      * [アップグレードの詳細](./field-groups/event/upgrade-details.md)
+      * [アップセルの詳細](./field-groups/event/upsell-details.md)
       * [Web の詳細](./field-groups/event/web-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 29%
    * [地域インタラクションの詳細](./data-types/geo-interaction-details.md)
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [Impressions](./data-types/impressions.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
    * [Order](./data-types/order.md)
