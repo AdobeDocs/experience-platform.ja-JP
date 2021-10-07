@@ -4,9 +4,9 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: 宛先 SDK を使用した宛先の設定方法
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 ## 手順 2:宛先設定の作成 {#create-destination-configuration}
 
 以下に、`/destinations` API エンドポイントを使用して作成した宛先テンプレートの設定例を示します。 このテンプレートについて詳しくは、[ 宛先の設定 ](./destination-configuration.md) を参照してください。
+
+手順 1 のサーバーとテンプレートの設定をこの宛先の設定に接続するには、サーバーのインスタンス ID とテンプレートの設定を `destinationServerId` に追加します。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -109,6 +111,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -138,20 +146,24 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 [ID、属性、セグメントメンバーシップ変換にテンプレート言語を使用する ](./message-format.md#using-templating) の節のテンプレートの例を参照し、Adobeが提供する [ テンプレートオーサリングツール ](./create-template.md) を使用します。
 
+自動的に機能するメッセージ変換テンプレートを作成したら、手順 1 で作成したサーバーおよびテンプレート設定にそのテンプレートを追加します。
+
 ## 手順 4:オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、宛先 SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータテンプレートを設定する必要があります。 この設定をおこなう必要があるタイミングと方法については、[Audience metadata management](./audience-metadata-management.md) を参照してください。
+一部の宛先では、宛先 SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータ設定を設定する必要があります。 この設定をおこなう必要があるタイミングと方法については、[Audience metadata management](./audience-metadata-management.md) を参照してください。
+
+オーディエンスのメタデータ設定を使用する場合は、手順 2 で作成した宛先設定に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を `audienceTemplateId` として宛先設定に追加します。
 
 ## 手順 5:資格情報の設定の作成/認証の設定 {#set-up-authentication}
 
 上記の宛先設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` と `"authenticationRule": "PLATFORM_AUTHENTICATION"` のどちらを指定したかに応じて、`/destination` または `/credentials` エンドポイントを使用して、宛先の認証を設定できます。
 
-* **最も一般的なケース**:を選択し、宛先 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` が OAuth 2 認証方法をサポートしている場合は、OAuth 2 認証 [を読み取ります](./oauth2-authentication.md)。
+* **最も一般的なケース**:宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択し、宛先が OAuth 2 認証方法をサポートしている場合は、「 [OAuth 2 認証](./oauth2-authentication.md)」を読み取ります。
 * `"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合は、リファレンスドキュメントの [ 資格情報の設定 ](./credentials-configuration.md) を参照してください。
 
 ## 手順 6:宛先のテスト {#test-destination}
 
-前の手順のテンプレートを使用して宛先を設定した後、[ 宛先テストツール ](./create-template.md) を使用して、Adobe Experience Platformと宛先の統合をテストできます。
+前の手順で設定エンドポイントを使用して宛先を設定した後、[ 宛先テストツール ](./create-template.md) を使用して、Adobe Experience Platformと宛先の統合をテストできます。
 
 宛先をテストするプロセスの一部として、Experience PlatformUI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
 

@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2405'
 ht-degree: 5%
 
 ---
@@ -168,7 +168,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Boolean | 上記の設定例に示すように、Experience Platformから宛先のカスタム属性にプロファイル属性をマッピングできる場合は、`true` を使用します。 |
 | `schemaConfig.segmentRequired` | Boolean | 常に `segmentRequired:true` を使用します。 |
 | `schemaConfig.identityRequired` | Boolean | ユーザーが ID 名前空間をExperience Platformから目的のスキーマにマッピングできる場合は、`true` を使用します。 |
-| `aggregation.aggregationType` | - | 「`BEST_EFFORT`」または「`CONFIGURABLE_AGGREGATION`」を選択します。上記の例の設定には、`BEST_EFFORT` 集計が含まれています。 `CONFIGURABLE_AGGREGATION` の例については、[ 宛先の設定 ](./destination-configuration.md#example-configuration) ドキュメントの例の設定を参照してください。 設定可能な集計に関連するパラメータを、この表に示します。 |
+| `aggregation.aggregationType` | - | 「`BEST_EFFORT`」または「`CONFIGURABLE_AGGREGATION`」を選択します。上記の例の設定には、`BEST_EFFORT` 集計が含まれています。 `CONFIGURABLE_AGGREGATION` の例については、[ 宛先の設定 ](./destination-configuration.md#example-configuration) ドキュメントの例の設定を参照してください。 設定可能な集計に関連するパラメータを次の表に示します。 |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整数 | Experience Platformは、1 回の HTTP 呼び出しで、書き出された複数のプロファイルを集計できます。 1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これは、ベストエフォートの集計です。 例えば、値 100 を指定すると、1 回の呼び出しで、Platform は 100 未満の任意の数のプロファイルを送信できます。 <br> サーバーが 1 回の要求で複数のユーザーを受け入れない場合、この値を 1 に設定します。 |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolean | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、このフラグを `true` に設定します。 |
 | `aggregation.configurableAggregation.splitUserById` | Boolean | 設定例のパラメータ [ ここ ](./destination-configuration.md#example-configuration) を参照してください。 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、このフラグを `true` に設定します。 |

@@ -2,9 +2,9 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
 title: 宛先 SDK の宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 5%
 
 ## 概要 {#overview}
 
-この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
+この設定を使用すると、宛先名、カテゴリ、説明、ロゴなど、重要な情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
+
+また、この設定は、宛先サーバーとオーディエンスメタデータを機能させるために必要な他の設定も、この設定に接続します。 [ の後の ](./destination-configuration.md#connecting-all-configurations) の節で、2 つの設定を参照する方法を確認してください。
 
 このドキュメントで説明する機能は、`/authoring/destinations` API エンドポイントを使用して設定できます。 エンドポイントで実行できる操作の完全なリストについては、[ 宛先 API エンドポイントの操作 ](./destination-configuration-api.md) をお読みください。
 
@@ -118,14 +120,15 @@ ht-degree: 5%
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `name` | 文字列 | 宛先カタログ内の宛先のタイトルをExperience Platformします。 |
-| `description` | 文字列 | Adobeが宛先カードの宛先カタログで使用するExperience Platformの説明を入力します。 4～5 文以下を目指す。 |
+| `description` | 文字列 | 宛先カタログで、宛先カードの説明をExperience Platformします。 4～5 文以下を目指す。 |
 | `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。宛先を最初に設定する際は、`TEST` を使用します。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ ht-degree: 5%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `profileFields` | 配列 | *上記の設定例では示していません。* 事前定義済みのを追 `profileFields`加すると、Experience Platform属性を宛先側の定義済み属性にマッピングするオプションがユーザーに表示されます。 |
+| `profileFields` | 配列 | *上記の設定例では示していません。* 事前定義済みを追加す `profileFields`ると、Experience Platformユーザーは、Platform 属性を宛先の側の定義済み属性にマッピングするオプションがあります。 |
 | `profileRequired` | Boolean | 上記の設定例に示すように、Experience Platformから宛先のカスタム属性にプロファイル属性をマッピングできる場合は、`true` を使用します。 |
 | `segmentRequired` | Boolean | 常に `segmentRequired:true` を使用します。 |
 | `identityRequired` | Boolean | ユーザーが ID 名前空間をExperience Platformから目的のスキーマにマッピングできる場合は、`true` を使用します。 |
@@ -204,7 +207,7 @@ ht-degree: 5%
 
 この節のパラメーターは、Experience Platformユーザーインターフェイスのマッピング手順でターゲットの ID と属性を入力する方法を決定します。ユーザーは、XDM スキーマを宛先のスキーマにマッピングします。
 
-Adobeは、顧客が宛先に書き出すことができる [!DNL Platform] ID を把握する必要があります。 例えば、[!DNL Experience Cloud ID]、ハッシュ化された電子メール、デバイス ID([!DNL IDFA]、[!DNL GAID]) などがあります。 これらの値は [!DNL Platform] ID 名前空間で、顧客が宛先の ID 名前空間にマッピングできます。
+顧客が宛先に書き出すことのできる [!DNL Platform] ID を指定する必要があります。 例えば、[!DNL Experience Cloud ID]、ハッシュ化された電子メール、デバイス ID([!DNL IDFA]、[!DNL GAID]) などがあります。 これらの値は [!DNL Platform] ID 名前空間で、顧客が宛先の ID 名前空間にマッピングできます。
 
 ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関係は必要ありません。
 例えば、お客様は [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL IDFA] 名前空間にマッピングできます。また、同じ [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL Customer ID] 名前空間にマッピングできます。
@@ -217,7 +220,7 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 |---------|----------|------|
 | `acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
 | `acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
-| `allowedAttributesTransformation` | 文字列 | *サンプルの設定*&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 ここで、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を指定します。 |
+| `allowedAttributesTransformation` | 文字列 | *サンプルの設定*&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 このオブジェクトでは、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を実行できます。 例については、[ 宛先設定 API リファレンス ](./destination-configuration-api.md#update) の `requiredTransformation` を参照してください。 |
 | `acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,6 +245,14 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 
 上記の設定に示したパラメーターは、[ 宛先エンドポイント API リファレンス ](./destination-configuration-api.md) に記載されています。
 
+## この設定が、宛先に必要な情報をすべて接続する方法 {#connecting-all-configurations}
+
+宛先の一部の設定は、宛先サーバーまたはオーディエンスメタデータエンドポイントを通じて設定できます。 宛先の設定エンドポイントは、次の手順で設定を参照することで、これらの設定をすべて接続します。
+
+* `destinationServerId` を使用して、宛先サーバーと、宛先に対して設定されたテンプレート設定を参照します。
+* `audienceMetadataId` を使用して、宛先に設定されたオーディエンスメタデータ設定を参照します。
+
+
 ## 集計ポリシー {#aggregation}
 
 ![構成テンプレートの集計ポリシー](./assets/aggregation-configuration.png)
@@ -258,9 +269,9 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 
 >[!TIP]
 >
->API エンドポイントが API 呼び出しあたり 100 個未満のプロファイルを受け入れる場合は、このオプションを使用します。
+>API エンドポイントが受け入れるプロファイルが API 呼び出しあたり 100 件未満の場合は、このオプションを使用します。
 
-このオプションは、リクエストあたりのプロファイル数が少なく、データ量が少ない方がリクエスト数が多い方が、データ量が少ない方がリクエスト数が多い方が良いと考えられます。
+このオプションは、リクエストあたりのプロファイル数が少なく、データ量が多いリクエストよりも少ない方がリクエスト数が多い宛先に最適です。
 
 `maxUsersPerRequest` パラメーターを使用して、宛先がリクエストで取得できるプロファイルの最大数を指定します。
 
@@ -277,10 +288,10 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 
 集計パラメーターの詳細については、[ 宛先 API エンドポイントの操作 ](./destination-configuration-api.md) リファレンスページを参照してください。各パラメーターについて説明します。
 
-<!--
+## 過去のプロファイル認定
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+宛先の設定で `backfillHistoricalProfileData` パラメーターを使用して、過去のプロファイル認定を宛先に書き出す必要があるかどうかを判断できます。
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| パラメーター | タイプ | 説明 |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | Boolean | 宛先に対してセグメントをアクティブ化した場合に、履歴プロファイルデータを書き出すかどうかを制御します。<br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前にセグメントに適合した過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
