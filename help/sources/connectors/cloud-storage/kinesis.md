@@ -5,10 +5,10 @@ title: Amazon Kinesis Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -17,10 +17,6 @@ ht-degree: 1%
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供します。 これらのシステムのデータを [!DNL Platform] に取り込むことができます。
 
 クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] を使用すると、からデータをリアルタイム [!DNL Amazon Kinesis] で取り込むことができます。
-
-## IP アドレス許可リスト
-
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
 ## 前提条件
 
