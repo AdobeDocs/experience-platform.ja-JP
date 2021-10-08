@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
+source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 66%
+source-wordcount: '171'
+ht-degree: 61%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 66%
    * [プラットフォーム上のデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
    * [Destinations overview](destinations/overview.md)
+   * [リアルタイム CDP B2B エディションでの宛先](destinations/b2b.md)
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * プライバシーとデータガバナンス {#privacy}
@@ -45,7 +46,7 @@ ht-degree: 66%
 * セグメント {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
    * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
-   * [B2B セグメント化](segmentation/b2b.md)
+   * [リアルタイム CDP B2B エディションでのセグメント化](segmentation/b2b.md)
    * [顧客 AI](segmentation/customer-ai.md)
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)

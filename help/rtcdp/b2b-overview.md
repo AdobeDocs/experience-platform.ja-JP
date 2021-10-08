@@ -1,24 +1,24 @@
 ---
-keywords: RTCDP;CDP;B2B エディション；リアルタイム顧客データプラットフォーム；リアルタイム顧客データプラットフォーム；リアルタイム cdp;b2b;cdp；顧客 AI
+keywords: RTCDP;CDP;B2B エディション；Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム CDP;b2b;CDP；顧客 AI
 title: リアルタイム CDP B2B エディションの概要
 seo-title: Real-time Customer Data Platform B2B Edition overview
-description: リアルタイム顧客データプラットフォーム B2B エディションアカウントの概要
+description: Real-time Customer Data Platform B2B Edition アカウントの概要
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
+source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1057'
 ht-degree: 3%
 
 ---
 
-# リアルタイム顧客データプラットフォーム B2B エディションの概要
+# Real-time Customer Data Platform B2B Edition の概要
 
 >[!IMPORTANT]
 >
 >リアルタイム CDP B2B エディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-リアルタイム顧客データプラットフォーム（リアルタイム CDP）を基に構築された Real-time CDP B2B Edition は、ビジネスツービジネスサービスモデルで動作するマーケター向けに設計されています。 複数のソースのデータを統合し、ユーザーとアカウントのプロファイルの単一のビューに組み合わせます。 この統合データにより、マーケターは特定のオーディエンスを正確にターゲティングし、利用可能なすべてのチャネルをまたいでそれらのオーディエンスを惹きつけることができます。
+Real-time CDP B2B Edition は、Real-time Customer Data Platform(Real-time CDP) をベースに構築され、ビジネス間サービスモデルで動作するマーケター向けに設計されています。 複数のソースのデータを統合し、ユーザーとアカウントのプロファイルの単一のビューに組み合わせます。 この統合データにより、マーケターは特定のオーディエンスを正確にターゲティングし、利用可能なすべてのチャネルをまたいでそれらのオーディエンスを惹きつけることができます。
 
 リアルタイム CDP B2B エディションと B2C エディションを対応する B2C とを区別する、様々なAdobe Experience Platform機能が改善されました。 B2B の使用例に対するエクスペリエンスデータモデル (XDM) の改善、ID 解決とプロファイルセグメント化のアップグレード、[!DNL Marketo Engage] のカスタムビルドコネクタと宛先などが含まれます。 [!DNL Marketo] コネクタを使用すると、B2B ブランドは業界をリードする B2B エンゲージメントデータと行動情報を結び付け、リードを育て、アカウントベースのマーケティング活動を強化できます。
 
@@ -69,22 +69,16 @@ Real-time CDP B2B Edition がデータを取り込み、人、会社、属性、
 >
 >[!DNL Marketo] ソースは、リアルタイム CDP B2B エディションを使用するのに必要な **ではありません**。
 
-Marketoと B2B データを Platform に取り込む方法の詳細については、「 Real-time CDP B2B Edition のドキュメント」のソースを参照してください。
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+Marketoと B2B データを Platform に取り込む方法について詳しくは、Real-time CDP B2B Edition](./sources/b2b.md) のドキュメントの [ ソースを参照してください。
 
 ## B2B の宛先
 
-[!DNL Google]、[!DNL Linkedin]、[!DNL Facebook] などのExperience Platformの宛先はすべて、リアルタイム CDP B2B エディションで使用可能で、完全にサポートされています。 また、[!DNL Marketo] または Platform 外のデータをストリーミングして、オーディエンスとして使用できるようにする [!DNL Marketo Engage] 宛先もあります。
+Google、Linkedin、FacebookなどのExperience Platformの宛先は、リアルタイム CDP B2B エディションで使用可能で、完全にサポートされます。 また、Marketo Engageの宛先は、セグメントメンバーシップデータを Platform からストリーミングし、Marketoでリストとして使用できるようにします。
 
-[!DNL Marketo] 宛先は、Experience Platformから [!DNL Marketo] に情報をシームレスかつ迅速に取り込む方法を提供します。 宛先を使用すると、マーケターはAdobe Experience Platformで作成したセグメントを [!DNL Marketo] にプッシュできます。 [!DNL Marketo] では、これらのオーディエンスは静的リストとして使用できます。
-
-複数の CRM を持つ企業の場合、リアルタイム CDP B2B エディションでは、[!DNL Marketo] または CRM のインスタンスを分離するように宛先コネクタを設定できます。 必要に応じて、各インスタンスに宛先コネクタを設定し、各 CRM インスタンスに個別にオーディエンスを送信できます。
+複数の CRM を持つ企業の場合、リアルタイム CDP B2B エディションでは、宛先コネクタをMarketoまたは CRM のインスタンスを分離するように設定できます。 必要に応じて、各インスタンスに宛先コネクタを設定し、各 CRM インスタンスに個別にオーディエンスを送信できます。
 
 ## 次の手順
 
 リアルタイム CDP B2B エディションで提供されるマーケターのメリットと、そのメリットとリアルタイム CDP の違いをより深く理解できたので、これらの機能を独自の IMS 組織に適用する方法を学ぶことができます。
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
-リアルタイム CDP B2B エディションがビジネス間サービスモデルにどのようなメリットをもたらすかを理解するには、リアルタイム CDP B2B エディションの使用例を参照してください。 また、スキーマの作成と、基本的な B2B データエンティティの関係の定義に関する詳細なガイダンスについては、リアルタイム顧客データプラットフォーム B2B エディション ](./schemas/b2b.md) のドキュメントの [ スキーマを参照してください。
+リアルタイム CDP B2B エディションがビジネス間サービスモデルにどのようなメリットをもたらすかを理解するには、[ リアルタイム CDP B2B エディションの使用例 ](./b2b-use-case.md) を参照してください。 または、Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) のドキュメントの [ スキーマを参照して、スキーマの作成と、基本的な B2B データエンティティの関係の定義に関する詳細なガイダンスを参照することもできます。

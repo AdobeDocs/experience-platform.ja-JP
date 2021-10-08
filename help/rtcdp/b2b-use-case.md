@@ -1,25 +1,25 @@
 ---
-keywords: RTCDP;CDP；リアルタイム顧客データプラットフォーム；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
-title: リアルタイム顧客データプラットフォーム B2B エディションの使用例
-description: このシナリオのサンプルは、リアルタイム顧客データプラットフォーム B2B エディションの実装の設定例を示しています。
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
+title: Real-time Customer Data Platform B2B Edition の使用例
+description: このシナリオのサンプルは、Real-time Customer Data Platform B2B Edition の実装の設定例を示しています。
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
 
-# リアルタイム顧客データプラットフォーム B2B エディションの使用例
+# Real-time Customer Data Platform B2B Edition の使用例
 
 >[!IMPORTANT]
 >
 >Real-time CDP Business to Business Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-リアルタイム顧客データプラットフォーム B2B エディションは、既存のリアルタイム CDP およびAdobe Experience Platform製品を拡張して、B2B のデータとワークフローをサポートします。 このドキュメントでは、B2B Edition が提供するその他のメリットを示す使用例を示します。 次のようなものがあります。
+Real-time Customer Data Platform B2B Edition は、既存のリアルタイム CDP およびAdobe Experience Platform製品を拡張して、B2B のデータとワークフローをサポートします。 このドキュメントでは、B2B Edition が提供するその他のメリットを示す使用例を示します。 次のようなものがあります。
 
 - 様々なサイル化されたデータソースの人物データとアカウントデータを組み合わせて、包括的なビューを作成し、顧客の理解を深め、セグメント化をより正確に行うことができます。 詳しくは、 [ 様々な B2B ソースで使用する XDM スキーマの関係の作成 ](./schemas/b2b.md) に関するドキュメントを参照してください。
-- 関連エンティティの属性に基づいてオーディエンスをセグメント化する。 これには、アカウント、オポチュニティ、キャンペーン、マーケティングリストが含まれます。 セグメントは、ユーザー属性とエクスペリエンスイベントのみに制限されなくなりました。 B2B 固有のオーディエンスの作成例の詳細については、 B2B セグメント化のドキュメントを参照してください。
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- 関連エンティティの属性に基づいてオーディエンスをセグメント化する。 これには、アカウント、オポチュニティ、キャンペーン、マーケティングリストが含まれます。 セグメントは、ユーザー属性とエクスペリエンスイベントのみに制限されなくなりました。 B2B 固有のオーディエンスの作成例の詳細については、[B2B のセグメント化に関するドキュメント ](./segmentation/b2b.md) を参照してください。
 - 複数のアカウントに関連する 1 人のユースケースをネイティブでサポートします。
 
 ## 使用例
@@ -97,12 +97,10 @@ Marketo EngageとLinkedInの宛先を使用することで、Bodea はマーケ�
 
 B2B 固有の機能をより深く理解するには、次のドキュメントを参照することをお勧めします。
 
-<!-- - [Marketo connector]() -->
-- [リアルタイム顧客データプラットフォーム B2B エディションのスキーマ](./schemas/b2b.md)
-- [Marketo Engageの宛先に関するドキュメント](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [LinkedInと一致したオーディエンスの宛先の設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition のソース](./sources/b2b.md)
+- [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
+- [B2B セグメント化の例](./segmentation/b2b.md)
+- [アカウントプロファイルの概要](./accounts/account-profile-overview.md)
+- [Real-time Customer Data Platform B2B Edition の宛先](./destinations/b2b.md)
+- [LinkedInと一致したオーディエンスの宛先の設定](../destinations/catalog/social/linkedin.md)
