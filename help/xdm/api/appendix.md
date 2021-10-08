@@ -5,10 +5,10 @@ title: スキーマレジストリ API ガイドの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
+source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 38%
+ht-degree: 36%
 
 ---
 
@@ -77,29 +77,30 @@ ht-degree: 38%
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767
-        }
+{
+  "xdm:birthDate":{
+    "title":「生年月日」
+    "type":"string",
+    "format":"date"
+  },
+  "xdm:birthDayAndMonth":{
+    "title":「生年月日」
+    "type":"string",
+    "pattern":"[0-1][0-9]-[0-9][0-9]"
+  },
+  "xdm:birthYear":{
+    "title":「生年」
+    "type":"integer",
+    "minimum":1,
+    "maximum":32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "birthDate": {
+{
+  "birthDate": {
               "title": "Birth Date",
               "type": "string",
               "format": "date",
@@ -120,7 +121,8 @@ ht-degree: 38%
               "maximum": 32767,
               "meta:xdmField": "xdm:birthYear",
               "meta:xdmType": "short"
-        }
+  }
+}
       </pre>
   </td>
   </tr>
