@@ -2,10 +2,10 @@
 title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -99,7 +99,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 設定後、新しいプロパティの環境 ID をメモします。
 
-## タグ Web SDK 拡張機能を設定して、前に作成したデータストリームにデータを送信する
+## Platform Web SDK 拡張機能を設定して、前に作成したデータストリームにデータを送信する
 
 データ収集 UI でプロパティを作成し、Adobe Experience Platform Web SDK 拡張機能を使用して設定します。
 
