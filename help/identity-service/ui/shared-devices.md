@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: 共有デバイス検出は、同じデバイスの異なる認証済みユーザーを識別し、ID グラフで顧客データをより正確に表示できます
 hide: true
 hidefromtoc: true
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '656'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をわかりやすく表示できます。これによって、インパクトのある個人的なデジタル体験をリアルタイムで提供できます。
 
-[!DNL Shared Device Detection] は、複数の個人が使用するデバイスを指します。共有デバイスの例としては、タブレット、ライブラリコンピューター、キオスクなどがあります。 [!DNL Shared Device Detection] を通じて、同じデバイスの異なるユーザーが単一の ID に結合されるのを防ぎ、より正確な表現を可能にします。
+[!DNL Shared Device] は、複数の個人が使用するデバイスを指します。共有デバイスの例としては、タブレット、ライブラリコンピューター、キオスクなどがあります。 [!DNL Shared Device Detection] 機能を使用すると、同じデバイスの異なるユーザーが単一の ID に結合されるのを防ぐことができ、より正確な表現が可能です。
 
 [!DNL Shared Device Detection] では、以下のことが可能です。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 >[!TIP]
 >
->[!DNL Identity Service] にデータが流れ始めると、設定を変更しなくなるので、データセットの [!DNL Profile] を有効にする前に [!DNL Shared Device Detection] の設定を完了する必要があります。
+>[!DNL Identity Service] にグラフが生成された後は、設定を変更しなくなったので、データセットの [!DNL Profile] を有効にする前に、[!DNL Shared Device Detection] の設定を完了する必要があります。
 
 ## はじめに
 
