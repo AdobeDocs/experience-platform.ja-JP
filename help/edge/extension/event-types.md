@@ -4,7 +4,7 @@ description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SD
 solution: Experience Platform
 feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # イベントタイプ
 
-このページでは、 Adobe Experience Platform Web SDK タグ拡張機能が提供するAdobe Experience Platformイベントタイプについて説明します。 これらは [ ルール ](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) の作成に使用され、XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja) の [`eventType` フィールドと混同しないでください。
+このページでは、 Adobe Experience Platform Web SDK タグ拡張機能が提供するAdobe Experience Platformイベントタイプについて説明します。 これらは [ ルール ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) の作成に使用され、XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja) の [`eventType` フィールドと混同しないでください。
 
 ## [!UICONTROL イベントの送信完了]
 
@@ -170,12 +170,12 @@ var propositions = event.propositions;
 ]
 ```
 
-この時点で、適切な位置に提案コンテンツをレンダリングできます。 この例では、`discount` スコープに一致する提案は、Adobe Targetのフォームベースの Experience Composer を使用して構築された HTML 提案です。 ページ上に ID が `daily-special` の要素があり、`discount` 提案から `daily-special` 要素にコンテンツをレンダリングするとします。 以下の操作を実行します。
+この時点で、適切な位置に提案コンテンツをレンダリングできます。 この例では、`discount` 範囲に一致する提案は、Adobe Targetのフォームベースの Experience Composer を使用して構築されたHTML提案です。 ページ上に ID が `daily-special` の要素があり、`discount` 提案から `daily-special` 要素にコンテンツをレンダリングするとします。 以下の操作を実行します。
 
 1. `event` オブジェクトから提案を抽出します。
 1. 各提案をループし、`discount` の範囲を持つ提案を探します。
-1. 提案が見つかった場合は、提案内の各項目をループし、HTML コンテンツの項目を探します。 （確かめる方がよい）
-1. HTML コンテンツを含む項目が見つかった場合は、ページで `daily-special` 要素を探し、その HTML をパーソナライズされたコンテンツに置き換えます。
+1. 提案が見つかった場合は、提案内の各項目をループし、HTMLコンテンツの項目を探します。 （確かめる方がよい）
+1. HTMLコンテンツを含むHTMLが見つかった場合は、ページ上の `daily-special` 要素を探し、その項目をパーソナライズされたコンテンツに置き換えます。
 
 [!UICONTROL Custom code] アクション内のカスタムコードは、次のようになります。
 
