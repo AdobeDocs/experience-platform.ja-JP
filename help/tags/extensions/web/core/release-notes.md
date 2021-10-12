@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 85%
+source-wordcount: '1543'
+ht-degree: 84%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 85%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021 年 10 月 9 日
+
+v3.2.2
+
+* 使用可能なすべての演算子に対して、条件付き値データ要素の JSON スキーマを修正しました。
+* https://github.com/adobe/reactor-extension-core/issues/64を修正します。
 
 ## 2021年9月23日（PT）
 
