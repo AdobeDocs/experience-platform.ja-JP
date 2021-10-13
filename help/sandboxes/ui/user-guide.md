@@ -5,10 +5,10 @@ title: サンドボックス UI ガイド
 topic-legacy: user guide
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 30%
+source-wordcount: '832'
+ht-degree: 28%
 
 ---
 
@@ -43,6 +43,10 @@ Platform UI で、左側のナビゲーションで「**[!UICONTROL サンドボ
 ![](../images/ui/sandbox-search.png)
 
 ## 新しいサンドボックスの作成
+
+>[!NOTE]
+>
+>新しいサンドボックスを作成する場合は、まず [Adobe Admin Console](https://adminconsole.adobe.com/) の製品プロファイルにその新しいサンドボックスを追加してから、新しいサンドボックスの使用を開始する必要があります。 製品プロファイルにサンドボックスをプロビジョニングする方法については、[ 製品プロファイルの権限の管理 ](../../access-control/ui/permissions.md) に関するドキュメントを参照してください。
 
 Experience Platformでのサンドボックスの使用方法の概要については、次のビデオを参照してください。
 

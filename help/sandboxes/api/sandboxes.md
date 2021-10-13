@@ -5,10 +5,10 @@ title: サンドボックス管理 API エンドポイント
 topic-legacy: developer guide
 description: Sandbox API の/sandboxes エンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 50%
+source-wordcount: '1489'
+ht-degree: 48%
 
 ---
 
@@ -191,6 +191,10 @@ curl -X GET \
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
 
 ## サンドボックスの作成 {#create}
+
+>[!NOTE]
+>
+>新しいサンドボックスを作成する場合は、まず [Adobe Admin Console](https://adminconsole.adobe.com/) の製品プロファイルにその新しいサンドボックスを追加してから、新しいサンドボックスの使用を開始する必要があります。 製品プロファイルにサンドボックスをプロビジョニングする方法については、[ 製品プロファイルの権限の管理 ](../../access-control/ui/permissions.md) に関するドキュメントを参照してください。
 
 `/sandboxes` エンドポイントにPOSTリクエストを送信することで、新しい開発用サンドボックスまたは実稼動用サンドボックスを作成できます。
 
