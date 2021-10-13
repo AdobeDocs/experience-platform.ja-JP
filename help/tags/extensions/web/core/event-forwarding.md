@@ -1,8 +1,9 @@
 ---
 title: コアイベント転送拡張機能の概要
 description: Adobe Experience Platform のコアイベント拡張機能について説明します。
+feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%

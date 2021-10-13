@@ -3,8 +3,8 @@ audience: user
 user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
-feature: Data Collection
-source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
+feature: Tags
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%
