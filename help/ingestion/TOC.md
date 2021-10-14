@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 92%
 - バッチ取得 {#batch}
    - [バッチ取得 API の概要](batch-ingestion/getting-started.md)
    - [API の概要](batch-ingestion/overview.md)
-   - [API 開発者ガイド](batch-ingestion/api-overview.md)
+   - [API デベロッパーガイド](batch-ingestion/api-overview.md)
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}

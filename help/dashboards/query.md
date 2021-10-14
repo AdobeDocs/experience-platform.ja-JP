@@ -7,7 +7,7 @@ exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
 workflow-type: tm+mt
 source-wordcount: '738'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -27,19 +27,19 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 
 ### プロファイル属性データセット
 
-プロファイルダッシュボードのインサイトは、組織で定義された結合ポリシーに結び付けられます。 アクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
+プロファイルダッシュボードのインサイトは、組織で定義された結合ポリシーに結び付けられます。アクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
 
-これらのデータセットの命名規則は、**Profile-Snapshot-Export** の後に、システムで生成されるランダムなアルファ値が続きます。 例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
+これらのデータセットの命名規則は、**Profile-Snapshot-Export** の後に、システムで生成されるランダムなアルファ値が続きます。例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
 
-各プロファイルスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、[ データセットをプレビューし、調査します。
+各プロファイルスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience Platform UI の[データセットビューアを使用](../catalog/datasets/user-guide.md)して、 データセットをプレビューし、調査します。
 
 ![](images/query/profile-attribute.png)
 
 #### プロファイル属性データセットと結合ポリシー ID のマッピング
 
-各プロファイル属性データセットには、**プロファイルスナップショットエクスポート** の後に、システムで生成されたランダムな英数字の値が続きます。 例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
+各プロファイル属性データセットには、**プロファイルスナップショットエクスポート**&#x200B;の後に、システムで生成されるランダムな英数字の値が続きます。例：`Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
 
-この英数字値は、組織が作成したいずれかの結合ポリシーの結合ポリシー ID にマッピングされる、システム生成のランダムな文字列です。 各結合ポリシー ID と関連するプロファイル属性データセット文字列とのマッピングは、 `adwh_dim_merge_policies` データセットで保持されます。
+この英数字値は、組織が作成したいずれかの結合ポリシーの結合ポリシー ID にマッピングされる、システム生成のランダムな文字列です。各結合ポリシー ID と関連するプロファイル属性データセット文字列とのマッピングは、`adwh_dim_merge_policies` データセットで保持されます。
 
 `adwh_dim_merge_policies` データセットには、次のフィールドが含まれます。
 
@@ -48,15 +48,15 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 * `merge_policy`
 * `dataset_id`
 
-このデータセットは、クエリエディターの UI を使用してExperience Platformで確認できます。 クエリエディターの使用について詳しくは、[ クエリエディターの UI ガイド ](../query-service/ui/user-guide.md) を参照してください。
+このデータセットは、クエリエディター UI を使用して Experience Platform で確認できます。クエリエディターの使用について詳しくは、[クエリエディターの UI ガイド](../query-service/ui/user-guide.md)を参照してください。
 
 ### セグメントメタデータデータセット
 
 組織の各セグメントのメタデータを含むデータレイクで使用できるセグメントメタデータデータセットがあります。
 
-このデータセットの命名規則は、**Segmentdefinition-Snapshot-Export** の後に英数字が続きます。 例：`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+このデータセットの命名規則は、**Segmentdefinition-Snapshot-Export** の後に英数字が続きます。例：`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、[ データセットをプレビューし、調査します。
+各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、[Experience Platform UI のデータセットビューアを使用して、 ](../catalog/datasets/user-guide.md)データセットをプレビューし、調査します。
 
 ![](images/query/segment-metadata.png)
 
@@ -66,7 +66,7 @@ Adobe Experience Platform クエリサービスは、標準の SQL を使用し�
 
 このデータセットの命名規則は **DIM_Destination** です。
 
-DIM の宛先データセットの完全なスキーマを理解するには、Experience PlatformUI のデータセットビューア ](../catalog/datasets/user-guide.md) を使用して、データセット [ をプレビューし、調査します。
+DIM の宛先データセットの完全なスキーマを理解するには、Experience Platform UI の[データセットビューアを使用して、](../catalog/datasets/user-guide.md)データセット をプレビューし、調査します。
 
 ![](images/query/destinations-metadata.png)
 

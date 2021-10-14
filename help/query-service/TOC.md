@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 97%
    - [エクスペリエンスイベントクエリの例](best-practices/experience-event-queries.md)
    - [Adobe Analytics クエリの例](best-practices/adobe-analytics.md)
    - [Adobe Target クエリの例](best-practices/adobe-target.md)
-   - [匿名ブロッククエリの例](best-practices/anonymous-block.md)
+   - [匿名ブロッククエリのサンプル](best-practices/anonymous-block.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)

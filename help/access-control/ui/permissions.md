@@ -8,7 +8,7 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 84%
 
 例えば、プロファイル管理の権限を更新するには、「**[!UICONTROL プロファイル管理]**」を選択します。
 
-![プロファイル管理](../images/profile-management.png)
+![profile-management](../images/profile-management.png)
 
-権限を追加するには、権限名の横にあるプラス **(+)** アイコンを選択します。 または、「**[!UICONTROL すべて追加]**」をクリックして、現在のカテゴリのすべての権限をプロファイルに追加します。追加された権限は、「**[!UICONTROL 含まれる権限項目]**」の下に表示されます。
+権限を追加するには、権限名の横にあるプラス&#x200B;**（+）**&#x200B;アイコンを選択します。または、「**[!UICONTROL すべて追加]**」をクリックして、現在のカテゴリのすべての権限をプロファイルに追加します。追加された権限は、「**[!UICONTROL 含まれる権限項目]**」の下に表示されます。
 
 ![add-permission](../images/add-permission.png)
 
@@ -42,7 +42,7 @@ ht-degree: 84%
 
 引き続き使用可能なカテゴリを確認し、必要な権限を追加します。終了したら「**[!UICONTROL 保存]**」をクリックします。
 
-![remove-permission](../images/remove-permission.png)
+![remove-permisson](../images/remove-permission.png)
 
 製品プロファイルの 「**[!UICONTROL 権限]**」タブが再び表示され、選択した権限がアクティブになったことが示されます。
 

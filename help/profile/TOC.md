@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 96%
    * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
 * チュートリアル {#tutorials}
    * [リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)
-   * [データセットのプロファイル設定](tutorials/dataset-configuration.md)
+   * [プロファイルデータセットの設定](tutorials/dataset-configuration.md)
    * [データセットの重複レポートの生成](tutorials/dataset-overlap-report.md)
    * [その他のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [プライバシーリクエストの処理](privacy.md)
