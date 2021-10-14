@@ -4,8 +4,7 @@ audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成を行います。
-feature: Data Science Workspace
-source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 100%

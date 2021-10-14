@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに；Attribution Ai；人気の高いトピック
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: はじめに (Attribution AI)
 topic-legacy: Getting started
 description: 以下のガイドでは、Attribution AI の使用に関連する様々な Adobe Experience Platform サービスについて理解している必要があります。このチュートリアルを始める前に、次のドキュメントを確認してください。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 70%

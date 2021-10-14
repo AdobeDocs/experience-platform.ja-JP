@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；インサイト；Attribution Ai；人気のあるトピック；Attribution Ai インサイト
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Attribution AIのインサイトの検出
 topic-legacy: Attribution AI insights
 description: このドキュメントは、アドビインテリジェントサービスのユーザーインターフェイスでサービスインスタンスのインサイトを操作する際のガイドとして提供されています。
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 49%

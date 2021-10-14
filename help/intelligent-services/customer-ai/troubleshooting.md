@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform；はじめに；顧客 ai；人気のあるトピック；顧客 ai 入力；顧客 ai 出力；顧客 ai トラブルシューティング；顧客 ai エラー
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: 顧客 AI エラーのトラブルシューティング
 topic-legacy: Getting started
 description: 顧客 AI でよく発生するエラーへの回答を見つけます。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

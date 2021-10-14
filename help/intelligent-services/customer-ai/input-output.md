@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform；はじめに；顧客 ai；人気のあるトピック；顧客 ai 入力；顧客 ai 出力
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI で使用される必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2971'
 ht-degree: 16%
@@ -90,7 +91,7 @@ Platform UI でフィールドグループを表示するには、左側のパ�
 
 ### カスタムフィールドグループの追加
 
-顧客 AI で使用される [ 標準のイベントフィールド ](#standard-events) の他に追加情報を含める場合。 [ インスタンスの設定 ](./user-guide/configure.md#custom-events) 中にカスタムイベントオプションが提供されます。
+顧客 AI で使用される [ 標準のイベントフィールド ](#standard-events) の他に追加情報を含める場合。 [ インスタンスの設定 ](./user-guide/configure.md#custom-events) 中に、カスタムイベントオプションが提供されます。
 
 選択したデータセットに、スキーマに定義されているホテルやレストランの予約などのカスタムイベントが含まれている場合は、それらをインスタンスに追加できます。 これらの追加のカスタムイベントは、モデルの品質を向上し、より正確な結果を提供するために、顧客 AI で使用されます。
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに；Attribution Ai；人気のあるトピック；Attribution Ai 入力；Attribution Ai 出力；
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 14%
