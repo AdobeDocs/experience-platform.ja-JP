@@ -5,10 +5,10 @@ title: B2B 名前空間とスキーマ
 topic-legacy: overview
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 11%
+source-wordcount: '1679'
+ht-degree: 10%
 
 ---
 
@@ -87,6 +87,7 @@ B2B 名前空間は、エンティティのプライマリ ID で使用されま
 | B2B キャンペーンメンバー | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | B2B マーケティングリスト | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | B2B マーケティングリストメンバー | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| B2B 口座個人関連 | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ Experience Platform では、スキーマを使用して、一貫性のある再
 | B2B マーケティングリスト | XDM ビジネスマーケティングリスト | なし | 有効 | `marketingListKey.sourceKey` 基底クラスで | B2B マーケティングリスト | なし | なし | なし | 静的リストは [!DNL Salesforce] から同期されないので、セカンダリ ID を持ちません。 |
 | B2B マーケティングリストメンバー | XDM ビジネスマーケティングリストメンバー | なし | 有効 | `marketingListMemberKey.sourceKey` 基底クラスで | B2B マーケティングリストメンバー | なし | なし | **最初の関係**<ul><li>`PersonKey.sourceKey` 基底クラスで</li><li>型：多対 1</li><li>参照スキーマ：B2B 人</li><li>名前空間：B2B 人</li><li>宛先プロパティ：`b2b.personKey.sourceKey`</li><li>現在のスキーマの関係名：ユーザー</li><li>参照スキーマの関係名：マーケティングリスト</li></ul>**第 2 の関係**<ul><li>`marketingListKey.sourceKey` 基底クラスで</li><li>型：多対 1</li><li>参照スキーマ：B2B マーケティングリスト</li><li>名前空間：B2B マーケティングリスト</li><li>宛先プロパティ：`marketingListKey.sourceKey`</li><li>現在のスキーマの関係名：マーケティングリスト</li><li>参照スキーマの関係名：People</li></ul> | 静的リストメンバーは [!DNL Salesforce] から同期されないので、セカンダリ ID を持ちません。 |
 | B2B アクティビティ | XDM ExperienceEvent | <ul><li>Web ページにアクセス</li><li>新しいリード</li><li>リードの変換</li><li>リストに追加</li><li>リストから削除</li><li>商談に追加</li><li>商談から削除</li><li>入力済みフォーム</li><li>リンククリック数</li><li>電子メール配信</li><li>開封済みの電子メール</li><li>電子メールのクリック</li><li>電子メールのバウンス</li><li>電子メールバウンスソフト</li><li>E メールの購読解除</li><li>変更されたスコア</li><li>更新されたオポチュニティ</li><li>変更されたキャンペーン進行のステータス</li><li>ユーザー ID</li><li>Marketo Web URL</li><li>面白い瞬間</li></ul> | 有効 | `personKey.sourceKey` 個人 ID フィールドグループの | B2B 人 | なし | なし | **最初の関係**<ul><li>`listOperations.listKey.sourceKey` field</li><li>型：1 対 1 の</li><li>参照スキーマ：B2B マーケティングリスト</li><li>名前空間：B2B マーケティングリスト</li></ul>**第 2 の関係**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>型：1 対 1 の</li><li>参照スキーマ：B2B オポチュニティ</li><li>名前空間：B2B オポチュニティ</li></ul>**3 番目の関係**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>型：1 対 1 の</li><li>参照スキーマ：B2B キャンペーン</li><li>名前空間：B2B キャンペーン</li></ul> | `ExperienceEvent` エンティティとは異なります。エクスペリエンスイベントの ID は、アクティビティを実行した人です。 |
+| B2B 口座個人関連 | XDM ビジネスアカウント担当者の関係 | ID マップ | 有効 | `accountPersonKey.sourceKey` 基底クラスで | B2B 口座個人関連 | なし | なし | **最初の関係**<ul><li>`personKey.sourceKey` 基底クラスで</li><li>型：多対 1</li><li>参照スキーマ：B2B 人</li><li>名前空間：B2B 人</li><li>宛先プロパティ：`b2b.personKey.SourceKey`</li><li>現在のスキーマの関係名：People</li><li>参照スキーマの関係名：アカウント</li></ul>**第 2 の関係**<ul><li>`accountKey.sourceKey` 基底クラスで</li><li>型：多対 1</li><li>参照スキーマ：B2B アカウント</li><li>名前空間：B2B アカウント</li><li>宛先プロパティ：`accountKey.sourceKey`</li><li>現在のスキーマの関係名：アカウント</li><li>参照スキーマの関係名：People</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
