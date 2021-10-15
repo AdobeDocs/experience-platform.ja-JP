@@ -39,7 +39,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | パラメーター | 説明 |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** {SCHEMA} は、検索オブジェクトに関連付けられているスキーマクラス値を表します。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM} は、Microsoft による Lucene の検索構文の実装に適合するク [エリを表します](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} は、Lucene の検索構文のMicrosoft実装に準拠す [るクエリを表します](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
 
 **リクエスト**
 
@@ -100,7 +100,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** {NAMESPACE} には、検索する名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM} には、Microsoft による Lucene の検索構文の実装に準拠するク [エリが含まれます](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM} には、Lucene の検索構文のMicrosoft実装に準拠するク [エリが含まれます](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しい説明は、このドキュメントの [ 付録 ](#appendix) に記載されています。 |
 | `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID} で指定された指定フォルダー内に検索を制限します。 |
 | `limit={LIMIT}` | *（オプション）* {LIMIT} は、返す検索結果の数を表します。デフォルト値は 50 です。 |
 | `page={PAGE}` | *（オプション）* ここで、{PAGE} は、検索したクエリの結果に使用するページ番号を表します。ページ番号は **0** から始まります。 |
@@ -226,7 +226,7 @@ curl -X GET \
 
 以下の節では、検索用語の仕組みに関する追加情報を示します。 検索クエリは次の方法で記述します。`s={FieldName}:{SearchExpression}`. 例えば、AAMまたは [!DNL Platform] という名前のセグメントを検索するには、次の検索クエリを使用します。`s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] ベストプラクティスについては、上の例のように、検索式は HTML エンコードする必要があります。
+> !![NOTE] ベストプラクティスについては、上の例のように、検索式はHTMLエンコードする必要があります。
 
 ### 検索フィールド {#search-fields}
 
@@ -245,7 +245,7 @@ curl -X GET \
 
 次の表に、セグメント検索 API を使用する際の検索クエリの仕組みに関する詳細を示します。
 
->!![NOTE] 次の例は、HTML 以外でエンコードされた形式で、わかりやすく示しています。ベストプラクティスについては、検索式を HTML エンコードしてください。
+>!![NOTE] 次の例は、非HTMLエンコード形式で、わかりやすく示しています。ベストプラクティスについては、HTMLで検索式をエンコードしてください。
 
 | 検索式の例 | 説明 |
 | ------------------------- | ----------- |

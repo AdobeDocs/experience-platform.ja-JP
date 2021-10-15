@@ -14,7 +14,7 @@ ht-degree: 26%
 
 # Adobeサービスのクエリ定義 SQL 関数
 
-Adobe定義関数（ここで ADF と呼ばれる）は、Adobe Experience Platformクエリサービスの事前に作成された関数で、[!DNL Experience Event] データに対して一般的なビジネス関連タスクを実行するのに役立ちます。 例えば、Adobe Analyticsのような [ セッション化 ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) および [ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) の関数が含まれます。
+Adobe定義関数（ここで ADF と呼ばれる）は、Adobe Experience Platformクエリサービスの事前に作成された関数で、[!DNL Experience Event] データに対して一般的なビジネス関連タスクを実行するのに役立ちます。 例えば、Adobe Analyticsのような [ セッション化 ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) および [ アトリビューション ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja) の関数が含まれます。
 
 このドキュメントでは、[!DNL Query Service] で使用できるAdobe定義関数について説明します。
 

@@ -1,7 +1,8 @@
 ---
 title: Impressions データタイプ
 description: このドキュメントでは、インプレッション XDM データタイプの概要を説明します。
-source-git-commit: 7fc16546176d196582a3cdfcee51f799eeef9788
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 7%

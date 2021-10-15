@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のあるトピック；Data Science Workspace;Data Science
 solution: Experience Platform
-title: Sensei 機械学習 API ガイド
+title: Sensei機械学習 API ガイド
 topic-legacy: Developer guide
-description: Sensei 機械学習 API を使用すると、開発者は様々な Data Science Workspace リソースに対して CRUD 操作を実行できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: Senseiの機械学習 API を使用すると、開発者は様々な Data Science Workspace リソースに対して CRUD 操作を実行できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

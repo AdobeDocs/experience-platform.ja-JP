@@ -1,21 +1,21 @@
 ---
-title: リアルタイム顧客データプラットフォーム B2B エディションのスキーマ
-description: リアルタイム顧客データプラットフォーム B2B エディションでのエクスペリエンスデータモデル (XDM) スキーマの役割の概要です。
+title: Real-time Customer Data Platform B2B Edition のスキーマ
+description: Real-time Customer Data Platform B2B Edition での Experience Data Model(XDM) スキーマの役割の概要です。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 65afc75d89a4183d0ad03200f6c08c72dd104180
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
-# リアルタイム顧客データプラットフォーム B2B エディション（ベータ版）のスキーマ
+# Real-time Customer Data Platform B2B Edition（ベータ版）のスキーマ
 
 >[!IMPORTANT]
 >
->リアルタイム顧客データプラットフォーム B2B エディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Real-time Customer Data Platform B2B Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-リアルタイム顧客データプラットフォーム B2B エディションは、アカウント、オポチュニティ、キャンペーンなど、重要な B2B データエンティティの詳細を取り込む、いくつかの標準 [Experience Data Model (XDM) クラス ](../../xdm/schema/composition.md#class) を提供します。 さらに、Real-time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
+Real-time Customer Data Platform B2B Edition は、アカウント、オポチュニティ、キャンペーンなど、重要な B2B データエンティティの詳細を取り込む、いくつかの標準的な [Experience Data Model (XDM) クラス ](../../xdm/schema/composition.md#class) を提供します。 さらに、Real-time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
 
 リアルタイム CDP B2B エディションでは、次の標準クラスが提供されます。
 

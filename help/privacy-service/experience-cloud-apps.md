@@ -8,7 +8,7 @@ exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | アプリケーション | アクセス / 削除 | 販売のオプトアウト | ドキュメントと考慮事項 |
 | --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA のオプトアウトオブセールに関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=ja)</li><li>[!DNL Analytics] は、[プライバシーレポート変数](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)を使用してオプトアウトリクエストを処理します。</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=ja)</li><li>[!DNL Analytics] は、[プライバシーレポート変数](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=ja)を使用してオプトアウトリクエストを処理します。</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[オプトアウトに関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/consents.md)</li></ul> |
 | Adobe顧客属性 (CRS) | ✓ | なし | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>顧客属性にはデータを転送する機能がないので、販売のオプトアウトリクエストは利用できません。</li></ul> |

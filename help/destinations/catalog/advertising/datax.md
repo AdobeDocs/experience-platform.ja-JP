@@ -68,7 +68,7 @@ Verizon Media では、以下の表で説明する ID のアクティブ化を�
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にデータを自動的にハッシュ化します。[!DNL Platform] |
-| GAID | Google 広告 ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
+| GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 
 {style=&quot;table-layout:auto&quot;}

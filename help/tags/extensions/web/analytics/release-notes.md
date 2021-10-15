@@ -15,7 +15,7 @@ ht-degree: 99%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-## 2021年9月16日（PT）
+## 2021 年 9 月 16 日（PT）
 
 ### Adobe Analytics Extension 1.8.7
 

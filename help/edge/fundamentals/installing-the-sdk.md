@@ -37,7 +37,7 @@ URL 構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js また
 
 ### コードの追加 {#adding-the-code}
 
-事前にビルドされたスタンドアロンバージョンには、ページに直接追加された「ベースコード」が必要です。 次の「ベースコード」を、HTML の `<head>` タグのできる限り上位にコピーして貼り付けます。
+事前にビルドされたスタンドアロンバージョンには、ページに直接追加された「ベースコード」が必要です。 次の「ベースコード」を、HTMLの `<head>` タグのできる限り上位にコピーして貼り付けます。
 
 ```markup
 <script>
@@ -95,7 +95,7 @@ URL 構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js また
 
 ### JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
-[ コード ](#adding-the-code) の追加で説明したように、コピーして Web サイトの HTML に貼り付けたベースコードは、外部ファイルを読み込みます。 外部ファイルには、SDK のコア機能が含まれています。 このファイルの読み込み中に実行しようとしたコマンドは、キューに入れられ、ファイルの読み込み後に処理されます。 ファイルを非同期で読み込むのが、最もパフォーマンスの高いインストール方法です。
+[ コード ](#adding-the-code) の追加で説明したように、Web サイトのHTMLにコピー&amp;ペーストしたベースコードは、外部ファイルを読み込みます。 外部ファイルには、SDK のコア機能が含まれています。 このファイルの読み込み中に実行しようとしたコマンドは、キューに入れられ、ファイルの読み込み後に処理されます。 ファイルを非同期で読み込むのが、最もパフォーマンスの高いインストール方法です。
 
 ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
@@ -113,7 +113,7 @@ URL 構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js また
 
 ## オプション 3:NPM パッケージの使用
 
-Adobe Experience Platform Web SDK は、NPM パッケージとしても使用できます。 [](https://www.npmjs.com) NPM は、JavaScript 用のパッケージマネージャーです。NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript のビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015(ES6) モジュールを公開します。
+Adobe Experience Platform Web SDK は、NPM パッケージとしても使用できます。 [](https://www.npmjs.com) NPM は、JavaScript 用パッケージマネージャーです。NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript のビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015(ES6) モジュールを公開します。
 
 ```bash
 npm install @adobe/alloy

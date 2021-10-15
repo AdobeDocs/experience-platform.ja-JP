@@ -1,6 +1,6 @@
 ---
 title: Experience Platform上に構築されたアプリケーションとインテリジェントサービス
-description: このビデオでは、Adobe Experience Platform上に構築されたアプリケーションサービスとインテリジェントサービスの概要を説明します。これは、Experience Cloudの Applications&mdash;Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AIおよび顧客 AI を補完します。
+description: このビデオでは、Adobe Experience Platform上に構築されたアプリケーションサービスとインテリジェントサービスの概要を説明します。これは、Experience Cloudの Applications&amp、mdash、Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AIおよび顧客 AI を補完します。
 kt: 4333
 audience: all
 doc-type: video

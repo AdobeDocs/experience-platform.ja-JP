@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；モデルのスコア付け；Data Science Workspace；人気のあるトピック；sensei 機械学習 api
 solution: Experience Platform
-title: Sensei 機械学習 API を使用したモデルのスコア
+title: Sensei Machine Learning API を使用したモデルのスコア
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Sensei 機械学習 API を活用して実験と実験実行を作成する方法を説明します。
+description: このチュートリアルでは、Sensei Machine Learning API を活用して Experiment と Experiment Run を作成する方法を説明します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

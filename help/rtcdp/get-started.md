@@ -1,6 +1,6 @@
 ---
-keywords: RTCDP;CDP；リアルタイム顧客データプラットフォーム；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
-title: リアルタイム顧客データプラットフォームの概要
+keywords: RTCDP;CDP;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;cdp;rtcdp
+title: Real-time Customer Data Platformの概要
 description: リアルタイム顧客データプラットフォームの実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
@@ -10,9 +10,9 @@ ht-degree: 81%
 
 ---
 
-# リアルタイム顧客データプラットフォームの概要
+# Real-time Customer Data Platformの概要
 
-この入門ガイドでは、リアルタイム顧客データプラットフォーム（リアルタイム CDP）のサンプル実装を順を追って説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
+この入門ガイドでは、Real-time Customer Data Platform（リアルタイム CDP）のサンプル実装を順を追って説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
 
 この例は、 Experience Platform が提供するアドビのリアルタイム顧客データプラットフォームの次の機能を示しています。
 

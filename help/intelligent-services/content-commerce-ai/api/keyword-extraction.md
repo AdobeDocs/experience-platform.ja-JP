@@ -38,7 +38,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->PDF を処理する場合は、このドキュメント内の [PDF キーワード抽出 ](#pdf-extraction) の手順に進んでください。 また、docx、ppt、amd xml などの追加のファイルタイプのサポートは、後日リリースされるように設定されています。
+>PDFを処理する場合は、このドキュメントの [PDFキーワード抽出 ](#pdf-extraction) の手順に進んでください。 また、docx、ppt、amd xml などの追加のファイルタイプのサポートは、後日リリースされるように設定されています。
 
 **API 形式**
 
@@ -227,9 +227,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 }
 ```
 
-## PDF キーワード抽出 {#pdf-extraction}
+## PDFキーワードの抽出 {#pdf-extraction}
 
-キーワード抽出サービスは PDF をサポートしますが、PDF ファイルに新しい AnalyzerID を使用し、ドキュメントタイプを PDF に変更する必要があります。 詳しくは、以下の例を参照してください。
+キーワード抽出サービスはPDFをサポートしますが、PDFファイルに新しい AnalyzerID を使用し、ドキュメントの種類を「PDF」に変更する必要があります。 詳しくは、以下の例を参照してください。
 
 **API 形式**
 
@@ -239,11 +239,11 @@ POST /services/v1/predict
 
 **リクエスト**
 
-次のリクエストは、ペイロードで提供された入力パラメーターに基づいて、PDF ドキュメントからキーワードを抽出します。
+次のリクエストは、ペイロードで提供された入力パラメーターに基づいて、PDFドキュメントからキーワードを抽出します。
 
 >[!CAUTION]
 >
->`analyzer_id` どれを使用す [!DNL Sensei Content Framework] るかを決定します。リクエストを行う前に、適切な `analyzer_id` を持っていることを確認してください。 PDF キーワード抽出の場合、`analyzer_id` ID は次のようになります。
+>`analyzer_id` どれを使用す [!DNL Sensei Content Framework] るかを決定します。リクエストを行う前に、適切な `analyzer_id` を持っていることを確認してください。 PDFのキーワード抽出の場合、`analyzer_id` ID は次のようになります。
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -358,7 +358,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 }
 ```
 
-PDF 抽出の使用に関する詳細とサンプルには、AEM Cloud Service との設定、デプロイ、統合の手順が含まれています。 [CCAI PDF 抽出ワーカー github リポジトリ ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract) を参照してください。
+PDF抽出の使用に関する詳細とサンプルには、AEM Cloud Service との設定、デプロイ、統合の手順が含まれています。 [CCAIPDF抽出ワーカー github リポジトリ ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract) を参照してください。
 
 ## 付録 {#appendix}
 

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: フローサービス API を使用した Google BigQuery ベース接続の作成
+title: フローサービス API を使用したGoogle BigQuery ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Google BigQuery に接続する方法を説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをGoogle BigQuery に接続する方法を説明します。
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

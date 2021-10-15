@@ -133,7 +133,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **応答**
 
-正常な応答は、診断が保存された場所を詳細に記述した `path` オブジェクトを含む JSON オブジェクトを返します。 応答は、`path` オブジェクトを [JSON 行 ](https://jsonlines.org/) 形式で返します。
+正常な応答は、診断が保存された場所を詳細に記述した `path` オブジェクトを含む JSON オブジェクトを返します。 応答は `path` オブジェクトを [JSON 行 ](https://jsonlines.org/) 形式で返します。
 
 ```json
 {"path": "F1.json"}

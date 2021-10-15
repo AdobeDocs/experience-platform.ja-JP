@@ -23,7 +23,7 @@ Platform Web SDK からのすべてのヒットには、Edge ネットワーク�
 
 ECID は `xdm` の `identityMap` フィールドの下に追加されます。 ブラウザーの開発ツールを使用して、タイプがのペイロードの下で、応答の ECID を確認できます。`identity:result` ですが、リクエスト内の ECID は表示されません。
 
-CNAME 実装を使用すると、アドビで使用される収集ドメインをカスタマイズして、独自のドメインと一致させることができます。 これにより、アドビは JavaScript を使用して、クライアントサイドではなくサーバーサイドでファーストパーティ Cookie を設定できます。 以前は、これらのサーバー側のファーストパーティ cookie には、Safari ブラウザーに対する Apple の Intelligent Tracking Prevention(ITP) ポリシーに基づく制限は適用されていませんでした。 ただし、2020 年 11 月に、Apple は、CNAME を介して設定される Cookie にもこれらの制限が適用されるようにポリシーを更新しました。 現在、CNAME によってサーバー側に設定された Cookie と JavaScript によってクライアント側に設定された Cookie の両方が、ITP での 7 日間または 24 時間の有効期限に制限されています。 ITP ポリシーについて詳しくは、[ トラッキングの防止 ](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) に関する Apple のドキュメントを参照してください。
+CNAME 実装を使用すると、アドビで使用される収集ドメインをカスタマイズして、独自のドメインと一致させることができます。 これにより、アドビは JavaScript を使用して、クライアントサイドではなくサーバーサイドでファーストパーティ Cookie を設定できます。 以前は、これらのサーバー側のファーストパーティ Cookie には、Safari ブラウザーのApple Intelligent Tracking Prevention(ITP) ポリシーに基づいて課された制限は適用されませんでした。 ただし、2020 年 11 月に、Appleは、CNAME を介して設定される cookie にもこれらの制限が適用されるように、ポリシーを更新しました。 現在、CNAME によってサーバー側に設定された Cookie と JavaScript によってクライアント側に設定された Cookie の両方が、ITP での 7 日間または 24 時間の有効期限に制限されています。 ITP ポリシーについて詳しくは、[ トラッキングの防止 ](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) に関するこのAppleのドキュメントを参照してください。
 
 CNAME 実装は cookie の有効期間に関してメリットはありませんが、広告ブロッカーや一般的でないブラウザーなど、データがトラッカーとして分類するドメインに送信されないというメリットがあります。 このような場合、CNAME を使用すると、これらのツールを使用するユーザーのデータ収集が中断されなくなる可能性があります。
 

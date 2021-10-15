@@ -19,7 +19,7 @@ Platform Web SDK を使用するには、まず以下をおこなう必要があ
 
 >[!IMPORTANT]
 >
->**11/10/20の時点で、ファーストパーティ CNAME 実装は、すべての Safari ブラウザーとモバイル iOS デバイスで 7 日間の有効期限が設定されています。**
+>**11/10/20の時点で、ファーストパーティ CNAME 実装は、すべての Safari ブラウザーとモバイルiOSデバイスで 7 日間の有効期限が設定されています。**
 
 - Adobe Experience Platform　を使用する資格がある. Adobe Experience Platformを購入していない場合、Adobeは、SDK で限られた方法で使用するために必要なアクセス権を追加料金なしで提供します。
 - Web サイトで、Adobe Experience Platform LaunchのExperience CloudAPI またはExperience CloudID サービス拡張機能を使用して、Web サイトで既に [ 訪問者 ID サービス ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) を使用していて、Adobe Experience Platform Web SDK への移行中に引き続き使用する場合は、訪問者 API の最新バージョンまたはExperience CloudID サービス拡張機能を使用する必要があります。 詳しくは、[ID の移行 ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) を参照してください。

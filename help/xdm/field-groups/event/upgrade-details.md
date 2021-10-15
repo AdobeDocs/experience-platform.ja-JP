@@ -1,7 +1,8 @@
 ---
 title: アップグレード詳細スキーマフィールドグループ
 description: このドキュメントでは、「アップグレードの詳細」スキーマフィールドグループの概要を説明します。
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 5%

@@ -78,7 +78,7 @@ ht-degree: 5%
 * ネットワーク
 * Operating System
 * サイトのページ
-* ブラウザー
+* Browser
 * トラフィックソース
 * 時間枠
 

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；google adwords;Google AdWords;adwords
 solution: Experience Platform
-title: フローサービス API を使用した Google AdWords ベース接続の作成
+title: フローサービス API を使用したGoogle AdWords ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Google AdWords に接続する方法を説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをGoogle AdWords に接続する方法を説明します。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

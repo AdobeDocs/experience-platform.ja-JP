@@ -21,7 +21,7 @@ ht-degree: 2%
 | プロパティ | 説明 |
 | --- | --- |
 | `address` | RFC2822 以降の標準で一般的に定義される E メールの技術アドレス（例：`name@domain.com`）。 |
-| `label` | 利用可能な追加の表示情報。 例えば、Microsoft Outlook のリッチアドレス表示が `John Smith smithjr@company.uk` の電子メールの場合、`John Smith` はこのフィールドに配置されます。 |
+| `label` | 利用可能な追加の表示情報。 例えば、E メールにMicrosoft Outlook のリッチアドレス表示が `John Smith smithjr@company.uk` の場合、`John Smith` はこのフィールドに配置されます。 |
 | `primary` | これが個人のプライマリ E メールアドレスであるかどうかを示します。 1 つのプロファイルに指定できる E メールアドレスは、一度に 1 つだけ `primary` です。 |
 | `status` | 電子メールアドレスが現在使用可能かどうかを示します |
 | `statusReason` | 現在の `status` の説明。 |

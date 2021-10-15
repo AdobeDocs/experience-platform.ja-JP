@@ -14,7 +14,7 @@ ht-degree: 39%
 
 #  地理データタイプ
 
- Geois は、イベントが観察された地域を示す標準の XDM データ型です。
+ Geois は、イベントが観察された地域を示す標準 XDM データ型です。
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 

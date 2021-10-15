@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: フローサービス API を使用した IBM [!DNL IBM DB2]  ベース接続の作成
+title: フローサービス API を使用したIBM [!DNL IBM DB2]  ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用して IBM [!DNL IBM DB2]  をAdobe Experience Platformに接続する方法を説明します。
+description: フローサービス API を使用してIBM [!DNL IBM DB2]  をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ---
 
-# [!DNL Flow Service] API を使用して IBM [!DNL IBM DB2] ベース接続を作成する
+# [!DNL Flow Service] API を使用したIBM [!DNL IBM DB2] ベース接続の作成
 
 >[!NOTE]
 >
@@ -108,4 +108,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して IBM [!DNL IBM DB2] 接続を作成し、接続の一意の ID 値を取得しました。 この ID は、次のチュートリアルでフローサービス API](../../explore/database-nosql.md) を使用してデータベースを調べる方法を学ぶ際に使用できます。[
+このチュートリアルでは、[!DNL Flow Service] API を使用してIBM [!DNL IBM DB2] 接続を作成し、接続の一意の ID 値を取得しました。 この ID は、次のチュートリアルでフローサービス API](../../explore/database-nosql.md) を使用してデータベースを調べる方法を学ぶ際に使用できます。[

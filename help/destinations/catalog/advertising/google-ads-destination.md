@@ -1,6 +1,6 @@
 ---
-keywords: Google 広告；Google 広告；Google アドワード；Google AdWords;Google アドワード
-title: Google 広告接続
+keywords: Google広告；google 広告；google adwords;Google AdWords;Google Adwords
+title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
@@ -25,25 +25,25 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads] で最初の宛先を作成したい場合で、以前に (Audience Managerや他のアプリケーションで )Experience CloudID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしていない場合は、Adobeコンサルティングまたはカスタマーケアに問い合わせて ID 同期を有効にしてください。 以前に Google 統合をAudience Managerで設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>[!DNL Google Ads] で最初の宛先を作成したい場合で、以前に (Audience Managerや他のアプリケーションで )Experience CloudID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしていない場合は、Adobeコンサルティングまたはカスタマーケアに問い合わせて ID 同期を有効にしてください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Ad Manager] では、以下の表で説明する ID のアクティブ化をサポートしています。
+[!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google は、[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニア州のユーザーをターゲット設定し、他のすべてのユーザーの Google Cookie ID を使用します。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニアのユーザーをターゲットし、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
 | [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲット設定します。 |
 | RIDA | 広告用の Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
-| MAID | Microsoft 広告 ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
+| MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
 ## 書き出しタイプ {#export-type}
 
-**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーを Google の宛先に書き出します。
+**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
 ## 前提条件 {#prerequisites}
 
@@ -61,8 +61,8 @@ ht-degree: 19%
 
 Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] に問い合わせて、許可されたデータプロバイダーのリストにAdobeを登録し、お使いのアカウントを許可リストに追加する必要があります。 [!DNL Google] に問い合わせ、次の情報を入力します。
 
-* **アカウント ID**:Adobeのアカウント ID が Google に送信されます。アカウント ID:87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID（Google を使用）。顧客 ID:89690775.
+* **アカウント ID**:AdobeのGoogleアカウント ID。アカウント ID:87933855.
+* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。顧客 ID:89690775.
 * アカウントのタイプ：**AdWords**
 * **Google AdWords ID**:これは、を使用した ID で [!DNL Google]す。通常、ID の形式は 123-456-7890 です。
 

@@ -1,7 +1,7 @@
 ---
-keywords: Google 広告；Google 広告；Google 広告拡張；Google 広告拡張
+keywords: Google広告；google 広告；google 広告拡張；Google広告拡張
 title: Google 広告拡張機能
-description: Google 広告拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Google Ads 拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt

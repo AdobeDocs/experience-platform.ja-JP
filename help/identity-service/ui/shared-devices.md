@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: 共有デバイス検出は、同じデバイスの異なる認証済みユーザーを識別し、ID グラフで顧客データをより正確に表示できます
 hide: true
 hidefromtoc: true
-source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
+exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
+source-git-commit: b948aef2032503bba763b9843402c27cbd747c0d
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 6%

@@ -37,7 +37,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## 宛先 {#destinations}
 
-[ リアルタイム顧客データプラットフォーム ](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合で、これらのパートナーに対するデータをシームレスにアクティブ化します。
+[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
 
 **新しい宛先**
 
@@ -45,7 +45,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 | 宛先 | 説明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、Google が所有および運用する次のようなプロパティをまたいで顧客にリーチし、再び関与させることができます。[!DNL Search]、[!DNL Shopping]、Gmail、YouTube。 <br><br> 宛先の詳 [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) 細とリアルタイム CDP での設定方法については、宛先カタログのページを参照してください。 |
+| [!DNL Google Customer Match] | Google Customer Match を使用すると、オンラインおよびオフラインのデータを使用して、Googleが所有および操作する次のようなプロパティをまたいで、顧客にリーチし、再び関与させることができます。[!DNL Search]、[!DNL Shopping]、Gmail、YouTube。 <br><br> 宛先の詳 [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) 細とリアルタイム CDP での設定方法については、宛先カタログのページを参照してください。 |
 
 **新機能**
 
@@ -56,7 +56,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-リアルタイム顧客データプラットフォーム ([!DNL Real-time CDP]) は、Experience Platformを基に構築され、既知のデータと不明なデータを統合して、カスタマージャーニー全体を通じてインテリジェントな判定をおこない、顧客プロファイルをアクティブ化します。 [!DNL Real-time CDP] は、複数の企業データソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。次に、これらのプロファイルから作成したセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスで 1 対 1 でパーソナライズされた顧客体験を提供できます。
+Real-time Customer Data Platform([!DNL Real-time CDP]) は、Experience Platformを基に構築され、既知および不明なデータを統合して、カスタマージャーニー全体を通じてインテリジェントな判定をおこない、顧客プロファイルをアクティブ化します。 [!DNL Real-time CDP] は、複数の企業データソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。次に、これらのプロファイルから作成したセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスで 1 対 1 でパーソナライズされた顧客体験を提供できます。
 
 **新機能**
 

@@ -1,5 +1,5 @@
 ---
-keywords: Google Universal Analytics;Google Universal Analytics;Google Universal Analytics
+keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Google Universal Analytics 拡張機能
 description: Google Universal Analytics 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4

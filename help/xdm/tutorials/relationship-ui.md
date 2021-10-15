@@ -17,7 +17,7 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->リアルタイム顧客データプラットフォーム B2B エディションを使用している場合は、代わりに [B2B の関係の作成 ](./relationship-b2b.md) に関するガイドを参照してください。
+>Real-time Customer Data Platform B2B Edition を使用している場合は、代わりに [B2B の関係の作成 ](./relationship-b2b.md) に関するガイドを参照してください。
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。[!DNL Experience Data Model](XDM) スキーマの構造内でこれらの関係を定義すると、顧客データに関する複雑なインサイトを得ることができます。
 

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft SQL;Microsoft SQL;SQL Server;SQL Server
+keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: フローサービス API を使用した SQL Server ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Microsoft SQL Server に接続する方法を説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをMicrosoft SQL Server に接続する方法を説明します。
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

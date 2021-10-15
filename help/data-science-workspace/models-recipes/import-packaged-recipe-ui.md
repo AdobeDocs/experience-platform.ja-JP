@@ -173,7 +173,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
-> ** 型は分類 **** と回 **[!UICONTROL 帰をサポート]**&#x200B;モデルがこれらのタイプのいずれにも該当しない場合は、**[!UICONTROL カスタム]** を選択します。
+> ** 型は分類と **** 回帰をサ **[!UICONTROL ポートします]**。モデルがこれらのタイプのいずれにも該当しない場合は、**[!UICONTROL カスタム]** を選択します。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -207,7 +207,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
-> ** 型は分類 **** と回 **[!UICONTROL 帰をサポート]**&#x200B;モデルがこれらのタイプのいずれにも該当しない場合は、**[!UICONTROL カスタム]** を選択します。
+> ** 型は分類と **** 回帰をサ **[!UICONTROL ポートします]**。モデルがこれらのタイプのいずれにも該当しない場合は、**[!UICONTROL カスタム]** を選択します。
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 

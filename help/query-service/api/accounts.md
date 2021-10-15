@@ -52,7 +52,7 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `accountName` | **** 必須：クエリサービス統合アカウントの名前。 |
+| `accountName` | **** 必須クエリサービス統合アカウントの名前。 |
 | `assignedToUser` | **** 必須：クエリサービス統合アカウントを作成するAdobe ID。 |
 | `credential` | *（オプション）* クエリサービスの統合に使用する秘密鍵証明書。指定しない場合は、システムによって自動的に資格情報が生成されます。 |
 | `description` | *（オプション）* クエリサービス統合アカウントの説明。 |

@@ -9,7 +9,7 @@ exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1271'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 
 このチュートリアルは、 Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターの UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -44,7 +44,7 @@ CSV データを既存のデータセットに取り込むには、「**[!UICONT
 
 ![select-existing-dataset](../../../../images/tutorials/create/local/select-existing-dataset.png)
 
-データセットを選択し、データフローの名前と説明（オプション）を入力します。
+With a dataset selected, provide a name for your dataflow and an optional description.
 
 このプロセスの間に、[!UICONTROL  エラー診断 ] および [!UICONTROL  部分取得 ] を有効にすることもできます。 [!UICONTROL エラー] 診断では、データフローで発生したエラーレコードの詳細なエラーメッセージ生成が可能で [!UICONTROL す。部分的な取り込みで] は、エラーを含むデータを、手動で定義した特定のしきい値まで取り込むことができます。詳しくは、[ バッチの部分取得の概要 ](../../../../../ingestion/batch-ingestion/partial.md) を参照してください。
 
@@ -56,11 +56,11 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 
 ![select-new-dataset](../../../../images/tutorials/create/local/select-new-dataset.png)
 
-スキーマを選択して、データフローの名前とオプションの説明を入力し、データフローに必要な [!UICONTROL  エラー診断 ] および [!UICONTROL  部分取得 ] 設定を適用します。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
+With a schema selected, provide a name for your dataflow and an optional description, and then apply the [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion] settings you want for your dataflow. 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-### データの選択
+### Select data
 
-[!UICONTROL  データを選択 ] 手順が表示され、ローカルファイルをアップロードし、構造とコンテンツをプレビューするためのインターフェイスが表示されます。 「**[!UICONTROL ファイル]** を選択」を選択して、ローカルシステムから CSV ファイルをアップロードします。 または、アップロードする CSV ファイルを [!UICONTROL  ファイルをドラッグ&amp;ドロップ ] パネルにドラッグ&amp;ドロップできます。
+The [!UICONTROL Select data] step appears, providing you an interface to upload your local files and preview their structure and contents. 「**[!UICONTROL ファイル]** を選択」を選択して、ローカルシステムから CSV ファイルをアップロードします。 または、アップロードする CSV ファイルを [!UICONTROL  ファイルをドラッグ&amp;ドロップ ] パネルにドラッグ&amp;ドロップできます。
 
 >[!TIP]
 >
@@ -112,11 +112,11 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 | フィールド | 「フィールド」タブには、ソーススキーマで使用できるフィールドと属性が表示されます。 |
 | 演算子 | 「演算子」タブには、データの変換に使用できる演算子が一覧表示されます。 |
 
-式エディターを選択して、フィールド、関数、演算子を手動で追加します。 計算フィールドを作成したら、「**[!UICONTROL 保存]**」を選択して次に進みます。
+式エディターを選択して、フィールド、関数、演算子を手動で追加します。 Once you have created a calculated field, select **[!UICONTROL Save]** to proceed.
 
 ![式エディター](../../../../images/tutorials/create/local/expression-editor.png)
 
-#### ソーススキーママッピングツリーのフィルタリング
+#### Filter source schema mapping tree
 
 ソーススキーマをフィルタリングするには、「**[!UICONTROL すべてのソースフィールド]**」を選択し、ドロップダウンメニューからマッピングする特定のフィールドを選択します。
 
@@ -133,9 +133,9 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 
 ![all-source-fields](../../../../images/tutorials/create/local/all-source-fields.png)
 
-#### インテリジェントな推奨事項
+#### Intelligent recommendations
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対して、インテリジェントなレコメンデーションを自動的に提供します。 マッピングルールは、使用例に合わせて手動で調整できます。
+Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 ![source-schema-tree](../../../../images/tutorials/create/local/source-schema-tree.png)
 
@@ -161,7 +161,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 ## データ取得の監視
 
-CSV ファイルがマッピングされ、作成されたら、監視ダッシュボードを使用して、CSV ファイルを通じて取り込まれるデータを監視できます。 詳しくは、UI](../../../../../dataflows/ui/monitor-sources.md) でのソースデータフローの監視に関するチュートリアルを参照してください。[
+CSV ファイルがマッピングされ、作成されたら、監視ダッシュボードを使用して、CSV ファイルを通じて取り込まれるデータを監視できます。 For more information, see the tutorial on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
 
 ## 次の手順
 

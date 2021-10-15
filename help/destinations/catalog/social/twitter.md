@@ -29,7 +29,7 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Adobe Experience Platformでは、Google 広告 ID(GAID) と Apple ID for Advertisers(IDFA) がサポートされています。 宛先のアクティベーションワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、ソーススキーマからこれらの名前空間や属性をマッピングしてください。 |
+| device_id | IDFA/AdID/Android ID | Google広告 ID(GAID) とApple ID for Advertisers(IDFA) は、Adobe Experience Platformでサポートされています。 宛先のアクティベーションワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、ソーススキーマからこれらの名前空間や属性をマッピングしてください。 |
 | 電子メール | ユーザーの電子メールアドレス | プレーンテキストの電子メールアドレスと SHA256 ハッシュの電子メールアドレスを、このフィールドにマッピングしてください。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にデータを自動的にハッシュ化します。 [!DNL Platform]顧客の電子メールアドレスをAdobe Experience Platformにアップロードする前にハッシュ化する場合、これらの ID は、ソルトなしで SHA256 を使用してハッシュ化する必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}

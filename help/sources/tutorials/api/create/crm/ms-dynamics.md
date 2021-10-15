@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: フローサービス API を使用した Microsoft Dynamics Base 接続の作成
+title: フローサービス API を使用したMicrosoft Dynamics Base 接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用して Platform を Microsoft Dynamics アカウントに接続する方法を説明します。
+description: フローサービス API を使用して、Platform をMicrosoft Dynamics アカウントに接続する方法を説明します。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

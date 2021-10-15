@@ -7,7 +7,7 @@ user-guide-description: 複数のエンタープライズソースから既知�
 source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 61%
+ht-degree: 74%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 61%
 # リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
 
 * [リアルタイム CDP の概要](overview.md)
-* [リアルタイム CDP B2B エディションの概要](b2b-overview.md)
+* [Real-time CDP B2B Edition の概要](b2b-overview.md)
 * はじめに {#intro}
    * リアルタイム CDP {#rtcdp-intro}
       * [リアルタイム CDP の概要](get-started.md)
@@ -50,9 +50,9 @@ ht-degree: 61%
    * [顧客 AI](segmentation/customer-ai.md)
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)
-   * [リアルタイム CDP B2B エディションのスキーマ](schemas/b2b.md)
+   * [Real-time CDP B2B Edition のスキーマ](schemas/b2b.md)
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
-   * [リアルタイム CDP B2B エディションのソース](sources/b2b.md)
+   * [Real-time CDP B2B Edition のソース](sources/b2b.md)
 * [Experience Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)

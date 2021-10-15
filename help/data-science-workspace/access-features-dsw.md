@@ -24,7 +24,7 @@ ht-degree: 18%
 
 「サービス」タブのみが表示されるのはなぜですか？
 
-- お客様の組織は、顧客 AI AI/ML サービスを含むリアルタイム顧客データプラットフォーム (RTCDP) のみを利用できます。
+- お客様の組織は、顧客 AI AI/ML サービスを含むReal-time Customer Data Platform(RTCDP) のみを利用できます。
 
 「**Data Science**」タブが表示されず、Data Science Workspace 機能の使用を希望する場合は、会社の管理者に問い合わせて、Adobe Experience Platform Intelligence のライセンスを持っているかどうかを確認してください。
 
@@ -59,7 +59,7 @@ Experience Platform のアクセス制御は、[Adobe Admin Console](https://adm
 
 | 権限 | 有効 | 無効 |
 |---|---|---|
-| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace 内のすべてのサービスへの API および UI アクセスが無効になっています。 無効にしている間は、**ノートブック**、**モデル**、**サービス** の各ページを選択できません。 <li>**サービス** へのアクセスは、引き続きリアルタイム顧客データプラットフォーム (RTCDP) を通じて利用できます。</li> |
+| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace 内のすべてのサービスへの API および UI アクセスが無効になっています。 無効にしている間は、**ノートブック**、**モデル**、**サービス** の各ページを選択できません。 <li>**サービス** へのアクセスは、引き続きReal-time Customer Data Platform(RTCDP) を通じて利用できます。</li> |
 
 ## サンドボックスのサポート
 

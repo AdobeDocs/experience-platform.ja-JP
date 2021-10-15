@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；トレーニングと評価；Data Science Workspace；よく読まれるトピック；Sensei 機械学習 API
+keywords: Experience Platform；トレーニングと評価；Data Science Workspace；人気の高いトピック；Sensei Machine Learning API
 solution: Experience Platform
-title: Sensei 機械学習 API を使用したモデルのトレーニングと評価
+title: Sensei Machine Learning API を使用したモデルのトレーニングと評価
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Sensei 機械学習 API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
+description: このチュートリアルでは、Sensei Machine Learning API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；DB2;DB2;IBM DB2;ibm db2
 solution: Experience Platform
-title: UI での IBM DB2 ソース接続の作成
+title: UI でのIBM DB2 ソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して IBM DB2 ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してIBM DB2 ソース接続を作成する方法を説明します。
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 11%
 
 ---
 
-# UI での IBM DB2 ソース接続の作成
+# UI でのIBM DB2 ソース接続の作成
 
 >[!NOTE]
 >
-> IBM DB2 Connector はベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ ソースの概要 ](../../../../home.md#terms-and-conditions)」を参照してください。
+> IBM DB2 コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ ソースの概要 ](../../../../home.md#terms-and-conditions)」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して IBM DB2（以下「DB2」と呼ばれます）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用してIBM DB2（以下「DB2」と呼びます）ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -57,7 +57,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![カタログ](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
-「**[!UICONTROL IBM DB2 に接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+「IBM DB2 に接続 ]**」ページが表示されます。**[!UICONTROL &#x200B;このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新規アカウント
 

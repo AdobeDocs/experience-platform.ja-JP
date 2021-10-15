@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->このデータ型は、現在ベータ版のリアルタイム顧客データプラットフォーム B2B エディションの一部です。 ドキュメントと機能は変更される場合があります。
+>このデータ型は、現在ベータ版のReal-time Customer Data Platform B2B Edition の一部です。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL B2B ソー] スは、B2B エンティティ ( [アカウント](../classes/b2b/business-account.md)、オポチュニティ [、キャンペーン](../classes/b2b/business-opportunity.md)など ) の複合識別子を表す標準のエクスペリエンスデータモデル (XDM) データ型で [](../classes/b2b/business-campaign.md)す。
 

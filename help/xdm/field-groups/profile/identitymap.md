@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[ フィールドグループ名の更新 ](../name-updates.md) のドキュメントを参照してください。
 
- IdentityMap は、クラスの標準スキーマフィールドグ [[!DNL XDM Individual Profile] ループです](../../classes/individual-profile.md)。フィールドグループは単一のマップフィールドを提供し、名前空間でキー設定された一連のユーザー ID を含みます。
+ IdentityMap は、クラス [[!DNL XDM Individual Profile] の標準スキーマフィールドグ](../../classes/individual-profile.md)ループです。フィールドグループは単一のマップフィールドを提供し、名前空間でキー設定された一連のユーザー ID を含みます。
 
 >[!WARNING]
 >

@@ -24,7 +24,7 @@ Adobe Experience Platform Destination SDK は、Experience Platform の宛先統
 宛先 SDK パートナーは、製品化された宛先を [Experience Platformカタログ ](/help/destinations/catalog/overview.md) に追加するメリットがあります。
 1. 事前設定済みのパラメーターを使用して、顧客全体で統合設定を標準化し、顧客の設定エクスペリエンスをシンプル化します。
 2. 顧客の設定と認識を簡素化するために、Experience Platformの宛先カタログにブランドの宛先カードを導入します。
-3. Adobe Experience Platformおよびリアルタイム顧客データプラットフォームとの、製品化された宛先統合として機能します。
+3. Adobe Experience PlatformとReal-time Customer Data Platformの製品化された宛先統合としてお勧めします。
 
 Experience Platformをご利用のお客様は、独自の非公開のカスタムの宛先を作成できます。この宛先は、アクティベーションのニーズに最適です。
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；モデルの公開；Data Science Workspace；よく読まれるトピック；sensei 機械学習 api
 solution: Experience Platform
-title: Sensei 機械学習 API を使用したモデルのサービスとしての公開
+title: Sensei Machine Learning API を使用したモデルのサービスとしての公開
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API を使用してモデルをサービスとして公開するプロセスについて説明します。

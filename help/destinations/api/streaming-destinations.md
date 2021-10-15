@@ -270,8 +270,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{ACCESS_ID}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisストレージの場所のアクセス ID。
 * `{SECRET_KEY}`: *接続の [!DNL Amazon Kinesis] 場合。* Amazon Kinesisストレージの場所の秘密鍵。
 * `{REGION}`: *接続の [!DNL Amazon Kinesis] 場合。* Platform がデータをストリ [!DNL Amazon Kinesis] ーミングするアカウントの地域。
-* `{SAS_KEY_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キー名を入力します。[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
-* `{SAS_KEY}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キーを入力します。[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
+* `{SAS_KEY_NAME}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キー名を入力します。[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
+* `{SAS_KEY}`: *接続の [!DNL Azure Event Hubs] 場合。* SAS キーを入力します。[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
 * `{EVENT_HUB_NAMESPACE}`: *接続の [!DNL Azure Event Hubs] 場合。* Platform がデータをス [!DNL Azure Event Hubs] トリーミングする名前空間を入力します。詳細については、[!DNL Microsoft] ドキュメントの [Event Hubs 名前空間の作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 
 **応答** 
@@ -553,7 +553,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 手順 [ 新しい宛先に対してデータをアクティブ化 ](#activate-data) でのプロファイル属性とセグメントに加えて、[!DNL AWS Kinesis] と [!DNL Azure Event Hubs] で書き出されたデータには、ID マップに関する情報も含まれます。 これは、書き出されたプロファイルの ID を表します（例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど）。 以下の例を参照してください。
+> 手順 [ 新しい宛先に対してデータをアクティブ化 ](#activate-data) でのプロファイル属性とセグメントに加えて、[!DNL AWS Kinesis] と [!DNL Azure Event Hubs] で書き出されたデータには、ID マップに関する情報も含まれます。 これは、書き出されたプロファイルの ID を表します ( 例：[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど )。 以下の例を参照してください。
 
 ```json
 {

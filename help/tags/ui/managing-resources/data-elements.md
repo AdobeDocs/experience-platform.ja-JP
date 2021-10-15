@@ -196,7 +196,7 @@ CSS セレクターチェーン：
 * リファラー
 * Title
 
-### クエリー文字列パラメーター
+### Query String Parameter
 
 単一の URL パラメーターを「[!UICONTROL URL パラメーター]」フィールドで指定します。
 

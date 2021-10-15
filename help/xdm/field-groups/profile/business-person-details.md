@@ -13,7 +13,7 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->このフィールドグループは、現在ベータ版のリアルタイム顧客データプラットフォーム B2B エディションの一部です。 ドキュメントと機能は変更される場合があります。
+>このフィールドグループは、現在ベータ版のReal-time Customer Data Platform B2B Edition の一部です。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDM ビジネス担当者詳] 細は、B2B(B2B) 企業のコンテキストにおける個人の情報を取得する、クラスの標準スキーマフィールドグループで [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) す。
 

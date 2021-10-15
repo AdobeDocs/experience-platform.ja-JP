@@ -66,9 +66,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `name` | 文字列 | *必須* サーバーのわかりやすい名前を表し、Adobeにのみ表示されます。この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
+| `name` | 文字列 | *必須* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. 例 `Moviestar destination server`. |
 | `destinationServerType` | 文字列 | *必須* `URL_BASED` は現在、唯一のオプションです。 |
-| `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須.* <ul><li>Adobeが下の `value` フィールドの URL を変換する必要がある場合は、`PEBBLE_V1` を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Adobe側に変換が必要ない場合は、`NONE` を使用します。例えば、次のようなエンドポイントがある場合などです。`https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須.* <ul><li>Adobeが下の `value` フィールドの URL を変換する必要がある場合は、`PEBBLE_V1` を使用します。 次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | *必須* Experience Platformが接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須* サーバーへの呼び出しでAdobeが使用するメソッド。オプションは `GET`、`PUT`、`POST`、`DELETE`、`PATCH` です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | *必須* 用途 `PEBBLE_V1`. |
@@ -184,7 +184,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 既存の宛先サーバー設定の更新 {#update}
 
-既存の宛先サーバー設定を更新するには、`/authoring/destination-servers` エンドポイントにPUTリクエストを送信し、更新する宛先サーバー設定のインスタンス ID を指定します。 呼び出しの本文で、更新された宛先サーバーの設定を指定します。
+既存の宛先サーバー設定を更新するには、`/authoring/destination-servers` エンドポイントにPUTリクエストを送信し、更新する宛先サーバー設定のインスタンス ID を指定します。 In the body of the call, provide the updated destination server configuration.
 
 **API 形式**
 
@@ -233,7 +233,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 
 
-## 特定の宛先サーバー設定の取得 {#get}
+## Retrieve a specific destination server configuration {#get}
 
 `/authoring/destination-servers` エンドポイントにGETリクエストを送信し、更新する宛先サーバー設定のインスタンス ID を指定することで、特定の宛先サーバー設定に関する詳細な情報を取得できます。
 
@@ -312,10 +312,10 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 正常な応答は、HTTP ステータス 200 と空の HTTP 応答を返します。
 
-## API エラー処理
+## API error handling
 
 宛先 SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [ リクエストヘッダーのエラー ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、 `/authoring/destination-servers` API エンドポイントを使用して宛先サーバーを設定し、テンプレートを作成する方法がわかります。 [ 宛先 SDK を使用して宛先を設定する方法 ](./configure-destination-instructions.md) を読んで、この手順が宛先の設定プロセスにどのように適しているかを確認してください。
+After reading this document, you now know how to configure your destination server and templating using the `/authoring/destination-servers` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.

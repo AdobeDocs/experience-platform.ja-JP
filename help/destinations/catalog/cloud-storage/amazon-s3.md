@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## 概要 {#overview}
 
-[!DNL Amazon Web Services](AWS)S3 ストレージへのライブアウトバウンド接続を作成して、タブ区切りのデータファイルまたは CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
+[!DNL Amazon Web Services](AWS)S3 ストレージへのライブアウトバウンド接続を作成して、タブ区切りのデータファイルまたは CSV データファイルをAdobe Experience Platformから S3 バケットに定期的に書き出します。
 
 ## 書き出しタイプ {#export-type}
 
@@ -30,7 +30,7 @@ ht-degree: 9%
 
 [ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
-* **[!DNL Amazon S3]アクセ** スキー **[!DNL Amazon S3]と秘密鍵**:で、 [!DNL Amazon S3]アカウントへの `access key - secret access key` アクセスを Platform に許可するペアを生成 [!DNL Amazon S3] します。詳しくは、[Amazon Web サービスのドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
+* **[!DNL Amazon S3]アクセ** スキー **[!DNL Amazon S3]と秘密鍵**:で、 [!DNL Amazon S3]アカウントへの `access key - secret access key` アクセスを Platform に許可するペアを生成 [!DNL Amazon S3] します。詳しくは、[Amazon Web Servicesのドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
 * **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**:この宛先で使用す [!DNL Amazon S3] るバケットの名前を入力します。

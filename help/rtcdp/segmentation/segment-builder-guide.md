@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp セグメント；セグメントビルダー rtcdp;rtcdp セグメント
-title: リアルタイム顧客データプラットフォームのセグメントビルダー
+title: Real-time Customer Data Platformのセグメントビルダー
 seo-title: Using the Segmentation Service Segment Builder in Real-time Customer Data Platform
 description: セグメントビルダーの使用方法を説明するガイドです。
 seo-description: A user guide describing how to use the Segmentation Service Segment Builder on Real-time Customer Data Platform.
@@ -12,7 +12,7 @@ ht-degree: 49%
 
 ---
 
-# リアルタイム顧客データプラットフォームのセグメントビルダー
+# Real-time Customer Data Platformのセグメントビルダー
 
 Adobe Experience Platformに加えて、[!DNL Real-time Customer Data Platform] は [!DNL Experience Platform] の一部であるセグメントビルダー機能をフルに活用できます。 セグメントビルダーのユーザーインターフェイス内で、新しいセグメントの作成、既存のセグメントへのアクセス、既存のセグメントの変更をおこなうことができます。
 

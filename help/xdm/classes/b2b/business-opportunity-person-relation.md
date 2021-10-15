@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->このクラスは、現在ベータ版のリアルタイム顧客データプラットフォーム B2B エディションの一部です。 ドキュメントと機能は変更される場合があります。
+>このクラスは、現在ベータ版のReal-time Customer Data Platform B2B Edition の一部です。 ドキュメントと機能は変更される場合があります。
 
 [!UICONTROL XDM Business Opportunity Person ] Relationations は、ビジネスオポチュニティに関連付けられている個人の最低限必要なプロパティを取得する、標準の Experience Data Model(XDM) クラスです。
 

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Google AdWords;Google AdWords ソースコネクタ；google adwords コネクタ
 solution: Experience Platform
-title: UI での Google AdWords ソース接続の作成
+title: UI でのGoogle AdWords ソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して Google AdWords ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してGoogle AdWords ソース接続を作成する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -54,11 +54,11 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、目的の特定のソースを見つけることもできます。
 
-「**[!UICONTROL 広告]**」カテゴリで、「**[!UICONTROL Google AdWords]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して新しい [!DNL Google AdWords] コネクタを作成します。
+「**[!UICONTROL Advertising]**」カテゴリで、「**[!UICONTROL Google AdWords]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して新しい [!DNL Google AdWords] コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ads/catalog.png)
 
-「**[!UICONTROL Google AdWords に接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Google AdWords に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新規アカウント
 

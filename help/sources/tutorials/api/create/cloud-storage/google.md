@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;google クラウドストレージ；google;Google
+keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
-title: フローサービス API を使用した Google Cloud Storage Base 接続の作成
+title: フローサービス API を使用したGoogle Cloud Storage Base 接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Google Cloud Storage アカウントに接続する方法を説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをGoogle Cloud Storage アカウントに接続する方法を説明します。
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
@@ -26,7 +26,7 @@ ht-degree: 11%
 * [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] API を使用して Google Cloud Storage アカウントに正常に接続するために知っておく必要がある追加情報を示します。
+以下の節では、[!DNL Flow Service] API を使用してGoogle Cloud Storage アカウントに正常に接続するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
@@ -37,7 +37,7 @@ ht-degree: 11%
 | `accessKeyId` | [!DNL Google Cloud Storage] アカウントを Platform に対して認証するために使用される 61 文字の英数字の文字列。 |
 | `secretAccessKey` | [!DNL Google Cloud Storage] アカウントを Platform に対して認証するために使用される、40 文字のベース 64 エンコードされた文字列。 |
 
-これらの値について詳しくは、『[Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)』ガイドを参照してください。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
+これらの値の詳細については、『Google Cloud Storage HMAC キー ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)』ガイドを参照してください。 [独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
 
 ### Platform API の使用
 

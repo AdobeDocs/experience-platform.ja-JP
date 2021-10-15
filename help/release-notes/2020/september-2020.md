@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020年9月9日（PT）**
+**リリース日：2020 年 9 月 9 日（PT）**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
@@ -40,7 +40,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## 宛先 {#destinations}
 
-[ リアルタイム顧客データプラットフォーム ](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合で、これらのパートナーに対するデータをシームレスにアクティブ化します。
+[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
 
 **新機能**
 

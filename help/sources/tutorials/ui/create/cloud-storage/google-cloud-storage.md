@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;Google クラウドストレージ；GCS;gcs
+keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;google クラウドストレージ；GCS;gcs
 solution: Experience Platform
-title: UI での Google Cloud ストレージソース接続の作成
+title: UI でのGoogle Cloud ストレージソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して Google Cloud Storage ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してGoogle Cloud Storage ソース接続を作成する方法を説明します。
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -45,7 +45,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | アクセスキー ID | [!DNL Google Cloud Storage] アカウントを Platform に対して認証するために使用される 61 文字の英数字の文字列。 |
 | 秘密アクセスキー | [!DNL Google Cloud Storage] アカウントを Platform に対して認証するために使用される、40 文字のベース 64 エンコードされた文字列。 |
 
-これらの値について詳しくは、『[Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)』ガイドを参照してください。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
+これらの値の詳細については、『Google Cloud Storage HMAC キー ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)』ガイドを参照してください。 [独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
 
 ## [!DNL Google Cloud Storage] アカウントに接続
 

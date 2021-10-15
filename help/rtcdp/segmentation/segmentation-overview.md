@@ -1,6 +1,6 @@
 ---
 keywords: セグメント化；セグメント化 rtcdp；リアルタイム顧客データプラットフォームセグメント化
-title: リアルタイム顧客データプラットフォームでのセグメント化サービス
+title: Real-time Customer Data Platformのセグメント化サービス
 seo-title: Segmentation Service in Real-time Customer Data Platform
 description: リアルタイム CDP は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
@@ -27,7 +27,7 @@ ht-degree: 31%
 
 ## 顧客 AI
 
-リアルタイム顧客データプラットフォームに含まれる顧客 AI は、顧客予測と説明を個人レベルで生み出す力を提供します。
+Real-time Customer Data Platformに含まれる顧客 AI は、顧客予測と説明を個人レベルで生み出す力を提供します。
 
 顧客 AI は、影響力のある要因の助けを借りて、顧客が何をする可能性があるかとその理由を知ることができます。さらに、顧客 AI の予測とインサイトから得たメリットを活用して、最も適切なオファーとメッセージを提供することで、顧客体験をパーソナライズできます。 顧客 AI は、次の機能をサポートします。
 

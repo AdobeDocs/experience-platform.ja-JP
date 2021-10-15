@@ -5,7 +5,7 @@ exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
 source-wordcount: '1122'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->リアルタイム CDP B2B エディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Real-time CDP B2B Edition は現在ベータ版です。ドキュメントと機能は変更される場合があります。
 
 このドキュメントでは、リアルタイム CDP B2B エディションで使用できるセグメント化と、一般的な B2B の使用例で様々な種類の属性を組み合わせる方法に関する例を示します。
 

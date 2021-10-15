@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp 管理の概要；管理の概要
-title: リアルタイム顧客データプラットフォーム管理の概要
+title: Real-time Customer Data Platform管理の概要
 seo-title: Real-Time CDP administration overview
 description: 'このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。 '
 seo-description: seo description
@@ -12,7 +12,7 @@ ht-degree: 64%
 
 ---
 
-# リアルタイム顧客データプラットフォーム管理の概要
+# Real-time Customer Data Platform管理の概要
 
 このドキュメントでは、Adobe Experience Platformを利用した [!DNL Real-time Customer Data Platform] の管理機能の概要を説明します。
 

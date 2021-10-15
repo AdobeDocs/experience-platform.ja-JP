@@ -89,7 +89,7 @@ Adobe Experience Platform [!DNL Data Governance] は、顧客データを管理�
 
 ## 宛先 {#destinations}
 
-[ リアルタイム顧客データプラットフォーム ](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合で、これらのパートナーに対するデータをシームレスにアクティブ化します。
+[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
 
 **新しい宛先**
 

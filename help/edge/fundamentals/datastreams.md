@@ -89,7 +89,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 ### [!UICONTROL Target 環境 ID]
 
-[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Adobe Targetの環境は、あらゆる開発段階を通じて実装を管理するのに役立ちます。この設定は、各環境で使用する環境を指定します。
+[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 環境Adobe Targetは、あらゆる開発段階を通じて実装を管理するのに役立ちます。この設定は、各環境で使用する環境を指定します。
 
 Adobeでは、この設定を `dev`、`stage`、`prod` の各データストリーム環境ごとに異なる方法でおこない、シンプルな設定を維持することをお勧めします。 ただし、既にAdobe Target環境を定義している場合は、それらを使用できます。
 

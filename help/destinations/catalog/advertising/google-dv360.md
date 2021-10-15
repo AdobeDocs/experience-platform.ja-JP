@@ -25,7 +25,7 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前に Google 統合をAudience Managerで設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
@@ -35,15 +35,15 @@ ht-degree: 41%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google は、[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニア州のユーザーをターゲット設定し、他のすべてのユーザーの Google Cookie ID を使用します。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニアのユーザーをターゲットし、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
 | [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲット設定します。 |
 | RIDA | 広告用の Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
-| MAID | Microsoft 広告 ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
+| MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
 ## 書き出しタイプ {#export-type}
 
-**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーを Google の宛先に書き出します。
+**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
 ## 前提条件 {#prerequisites}
 
@@ -51,12 +51,12 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->許可リストへの登録は、Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に行う必要があります。 宛先を作成する前に、Google が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>許可リストへの登録は、Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に行う必要があります。 宛先を作成する前に、以下に説明する許可リスト登録プロセスがGoogleによって完了していることを確認してください。
 
-Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、Google に問い合わせて、許可されたデータプロバイダーのリストに登録するAdobeと、許可リストに追加するアカウントを依頼する必要があります。 Google に連絡し、次の情報を提供します。
+Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、Googleに問い合わせて、許可されたデータプロバイダーのリストに登録するAdobeと、お使いのアカウントを許可リストに追加する方法を依頼する必要があります。 Google に連絡し、次の情報を提供します。
 
-* **アカウント ID**:Adobeのアカウント ID が Google に送信されます。アカウント ID:87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID（Google を使用）。顧客 ID:89690775.
+* **アカウント ID**:AdobeのGoogleアカウント ID。アカウント ID:87933855.
+* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。顧客 ID:89690775.
 * **アカウントの種類**：**[!DNL Invite advertiser]** を使用して、Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するか、**[!DNL Invite partner]** を使用して Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有します。
 
 ## 宛先に接続 {#connect}
@@ -94,4 +94,4 @@ Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [ 前提条件 ](#prerequisites) を満たしていない場合に発生します。 この問題を修正するには、Google に問い合わせ、お使いのアカウントが許可リストに登録されていることを確認してください。
+このエラーは、顧客アカウントが [ 前提条件 ](#prerequisites) を満たしていない場合に発生します。 この問題を修正するには、Googleに連絡し、お使いのアカウントが許可リストに登録されていることを確認してください。

@@ -36,7 +36,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | ---------- | ----------- |
 | `accessKeyId` | [!DNL Kinesis] アカウントのアクセスキー ID。 |
 | `Secret access key` | [!DNL Kinesis] アカウントの秘密アクセスキー。 |
-| `region` | AWS サーバーの地域。 |
+| `region` | AWSサーバーの地域です。 |
 
 これらの値の詳細は、[ この  [!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html) を参照してください。
 

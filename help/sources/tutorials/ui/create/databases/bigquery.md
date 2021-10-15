@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google Big Query;google Big Query;GBQ;gbq
+keywords: Experience Platform；ホーム；人気のあるトピック；Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
-title: UI での Google ビッグクエリソース接続の作成
+title: UI でのGoogleビッグクエリソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して Google ビッグクエリソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してGoogleビッグクエリソース接続を作成する方法を説明します。
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -45,7 +45,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 これらの値の詳細は、[ この BigQuery ドキュメント ](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing) を参照してください。
 
-## Google BigQuery アカウントに接続する
+## Google BigQuery アカウントの接続
 
 必要な資格情報を収集したら、以下の手順に従って、BigQuery アカウントを [!DNL Platform] にリンクします。
 
@@ -57,7 +57,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-「**[!UICONTROL Google Big Query]** に接続」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+「**[!UICONTROL Googleビッグクエリに接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新規アカウント
 

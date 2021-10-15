@@ -43,7 +43,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >以下の画像は説明用です。 宛先の接続の詳細は、宛先間で異なります。 宛先の接続の詳細について詳しくは、各 [ 宛先カタログ ](../catalog/overview.md) ページの **接続パラメーター** の節を参照してください（例：[Google カスタマーマッチ ](..//catalog/advertising/google-customer-match.md#parameters)）。
+   >以下の画像は説明用です。 宛先の接続の詳細は、宛先間で異なります。 宛先の接続の詳細について詳しくは、各 [ 宛先カタログ ](../catalog/overview.md) ページの **接続パラメーター** の節を参照してください ( 例：[Googleカスタマーマッチ ](..//catalog/advertising/google-customer-match.md#parameters))。
 
    ![宛先に接続](../assets/ui/connect-destinations/connect-destination.png)
 

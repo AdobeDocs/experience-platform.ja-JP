@@ -14,7 +14,7 @@ ht-degree: 5%
 
 #  Commercedata type
 
- Commerceis は、購入および販売活動に関連する記録を記述する標準の Experience Data Model(XDM) データ型です。
+ Commerceis は、購入および販売活動に関連するレコードを記述する標準の Experience Data Model(XDM) データ型です。
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 

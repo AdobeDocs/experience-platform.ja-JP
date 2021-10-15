@@ -31,15 +31,15 @@ ht-degree: 27%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google は、[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニア州のユーザーをターゲット設定し、他のすべてのユーザーの Google Cookie ID を使用します。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニアのユーザーをターゲットし、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
 | [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲット設定します。 |
 | RIDA | 広告用の Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
-| MAID | Microsoft 広告 ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
+| MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
 ## 書き出しタイプ {#export-type}
 
-**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーを Google の宛先に書き出します。
+**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
 ## 前提条件
 
@@ -53,8 +53,8 @@ ht-degree: 27%
 
 Platform で [!DNL Google Ad Manager] の宛先を作成する前に、[!DNL Google] に問い合わせて、許可されたデータプロバイダーのリストにAdobeを登録し、お使いのアカウントを許可リストに追加する必要があります。 [!DNL Google] に問い合わせ、次の情報を入力します。
 
-* **アカウント ID**:Adobeのアカウント ID が Google に送信されます。アカウント ID:87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID（Google を使用）。顧客 ID:89690775.
+* **アカウント ID**:AdobeのGoogleアカウント ID。アカウント ID:87933855.
+* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。顧客 ID:89690775.
 * **ネットワーク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * アカウントの種類。Google DFP または AdX 購入者。

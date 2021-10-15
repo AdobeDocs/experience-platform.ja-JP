@@ -20,7 +20,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->この問題は解決しましたが、Google Chrome 80.x ブラウザーには引き続き表示されます。 Chrome ブラウザーが最新であることを確認してください。
+>この問題は解決しましたが、Google Chrome 80.x ブラウザーで引き続き発生する可能性があります。 Chrome ブラウザーが最新であることを確認してください。
 
 [!DNL Google Chrome] ブラウザーのバージョン 80.x では、すべてのサードパーティ Cookie がデフォルトでブロックされます。 このポリシーにより、Adobe Experience Platform内で [!DNL JupyterLab] が読み込まれなくなる場合があります。
 

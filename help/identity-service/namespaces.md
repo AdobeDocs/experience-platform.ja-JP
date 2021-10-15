@@ -42,7 +42,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | --- | --- |
 | cookie ID | cookie ID は Web ブラウザーを識別します。 この ID は拡張に不可欠で、ID グラフの大部分を占めます。ただし、cookie は、その性質上急速に劣化し、時間の経過と共にその価値が失われます。 |
 | クロスデバイス ID | クロスデバイス ID は個人を識別し、通常は他の ID を結び付けます。 例としては、ログイン ID、CRM ID、ロイヤリティ ID などがあります。 これは、[!DNL Identity Service] に対して、値を慎重に処理することを示しています。 |
-| デバイス ID | デバイス ID は、IDFA（iPhone および iPad）、GAID(Android)、RIDA(Roku) などのハードウェアデバイスを識別し、世帯の複数のユーザーが共有できます。 |
+| デバイス ID | デバイス ID は、IDFA(iPhoneとiPad)、GAID(Android)、RIDA(Roku) などのハードウェアデバイスを識別し、世帯内の複数のユーザーが共有できます。 |
 | 電子メールアドレス | 多くの場合、E メールアドレスは 1 人のユーザーに関連付けられているので、異なるチャネルをまたいでそのユーザーを識別するために使用できます。 このタイプの ID には、個人を特定できる情報（PII）が含まれています。これは、[!DNL Identity Service] に対して、値を慎重に処理することを示しています。 |
 | 非人物識別子 | 非人物 ID は、名前空間を必要とするが、人物クラスターに接続されていない ID の保存に使用されます。 例えば、製品 SKU、製品、組織、店舗に関連するデータなどです。 |
 | 電話番号 | 電話番号は多くの場合、1 人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には PII が含まれます。これは、[!DNL Identity Service] に対して、値を慎重に処理することを示しています。 |
@@ -58,14 +58,14 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | AdCloud | AdCloud を表すAdobe。 |
 | Adobe Analytics（レガシー ID） | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間 ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) に関する次のドキュメントを参照してください。 |
 | Apple IDFA（広告主の ID） | Apple ID for Advertisers を表す名前空間。 詳しくは、[ 興味ベースの広告 ](https://support.apple.com/ja-jp/HT202074) に関する次のドキュメントを参照してください。 |
-| Apple Push Notification サービス | Apple Push Notification サービスを使用して収集された ID を表す名前空間。 詳しくは、[Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) の次のドキュメントを参照してください。 |
+| Apple Push Notification サービス | Appleプッシュ通知サービスを使用して収集された ID を表す名前空間。 詳しくは、[Appleプッシュ通知サービス ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) の次のドキュメントを参照してください。 |
 | CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前でも参照できます。「Adobe AudienceManager」 詳しくは、[Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) に関する次のドキュメントを参照してください。 |
 | ECID | ECID を表す名前空間。 この名前空間は、次のエイリアスでも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 詳しくは、[ECID](./ecid.md) の次のドキュメントを参照してください。 |
 | メール | 電子メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、1 人のユーザーに関連付けられているので、異なるチャネルをまたいでそのユーザーを識別するために使用できます。 |
 | 電子メール（SHA256、小文字） | 事前にハッシュ化された電子メールアドレス用の名前空間。 この名前空間で指定された値は、SHA256 でハッシュする前に小文字に変換されます。 E メールアドレスが正規化される前に、先頭と末尾の空白文字をトリミングする必要があります。 この設定を遡って変更することはできません。 詳しくは、[SHA256 ハッシュサポート ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) に関する次のドキュメントを参照してください。 |
-| Firebase Cloud Messaging | プッシュ通知用に Google Firebase Cloud Messaging を使用して収集された ID を表す名前空間です。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) の次のドキュメントを参照してください。 |
-| Google 広告 ID(GAID) | Google 広告 ID を表す名前空間。 詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) の次のドキュメントを参照してください。 |
-| Google クリック ID | Google クリック ID を表す名前空間。 詳しくは、[Google 広告でのクリック追跡 ](https://developers.google.com/adwords/api/docs/guides/click-tracking) に関する次のドキュメントを参照してください。 |
+| Firebase Cloud Messaging | Google Firebase Cloud Messaging を使用してプッシュ通知用に収集された ID を表す名前空間。 詳しくは、[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) の次のドキュメントを参照してください。 |
+| Google広告 ID(GAID) | Google Advertising ID を表す名前空間。 詳しくは、[Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) の次のドキュメントを参照してください。 |
+| Google Click ID | Google Click ID を表す名前空間。 詳しくは、[Google Ads でのクリック追跡 ](https://developers.google.com/adwords/api/docs/guides/click-tracking) に関する次のドキュメントを参照してください。 |
 | Phone | 電話番号を表す名前空間。 このタイプの名前空間は、多くの場合、1 人のユーザーに関連付けられているので、異なるチャネルをまたいでそのユーザーを識別するために使用できます。 |
 | 電話 (E.164) | E.164 形式でハッシュ化する必要がある生の電話番号を表す名前空間。 E.164 形式には、プラス記号 (`+`)、国際通話コード、地域コード、電話番号が含まれます。 例：`(+)(country code)(area code)(phone number)`。 |
 | 電話 (SHA256) | SHA256 を使用してハッシュ化する必要がある電話番号を表す名前空間。 記号、文字、および先頭のゼロを削除する必要があります。 また、呼び出し元の国をプレフィックスとして追加する必要があります。 |

@@ -14,7 +14,7 @@ ht-degree: 14%
 
 ## 概要 {#overview}
 
-[!DNL Azure Blob] ( 以下、と呼ばれま [!DNL Blob]す ) は、Microsoft が提供するクラウド向けオブジェクトストレージソリューションです。このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Blob] の宛先を作成する手順を説明します。
+[!DNL Azure Blob] ( 以下、「 」と呼ばれま [!DNL Blob]す ) は、Microsoftが提供するクラウド用オブジェクトストレージソリューションです。このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Blob] の宛先を作成する手順を説明します。
 
 ## はじめに
 
@@ -42,7 +42,7 @@ ht-degree: 14%
 [ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
 * **[!UICONTROL 接続文字列]**:BLOB ストレージ内のデータにアクセスするには、接続文字列が必要です。[!DNL Blob] 接続文字列パターンは次の文字列で始まります。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * [!DNL Blob] 接続文字列の設定の詳細については、Microsoft のドキュメントの「[Azure ストレージアカウントの接続文字列の設定 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)」を参照してください。
+   * [!DNL Blob] 接続文字列の設定について詳しくは、Microsoftのドキュメントの [Azure ストレージアカウントの接続文字列の設定 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) を参照してください。
 
 * 必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、[!DNL Base64] エンコードされた文字列として書き込む必要があります。
 * **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。

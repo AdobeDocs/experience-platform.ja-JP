@@ -115,7 +115,7 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスに次の�
 |  | XDM プロファイルスキーマ | [!DNL Braze] インスタンス |
 |---|---|---|
 | 属性 | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>名 </code></li><li>姓 </code></li><li>電話番号 </code></li></ul> |
-| ID | <ul><li>メール</code></li><li>Google 広告 ID (GAID)</code></li><li>Apple ID For Advertisers(IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| ID | <ul><li>メール</code></li><li>Google広告 ID (GAID)</code></li><li>Apple Id For Advertisers(IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 正しいマッピングは次のようになります。
 

@@ -3,7 +3,7 @@ keywords: Experience Platform；チュートリアル；機能パイプライン
 title: モデルオーサリング SDK を使用した機能パイプラインの作成
 topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platformでは、カスタム機能パイプラインを構築して作成し、Sensei Machine Learning Framework Runtime を通じて機能エンジニアリングを大規模に実行できます。 このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark のモデルオーサリング SDK を使用してカスタム機能パイプラインを作成する手順を示すチュートリアルを提供します。
+description: Adobe Experience Platformでは、カスタム機能パイプラインを構築して作成し、Sensei Machine Learning Framework Runtime を通じて、機能エンジニアリングを大規模に実行できます。 このドキュメントでは、機能パイプラインに含まれる様々なクラスについて説明し、PySpark のモデルオーサリング SDK を使用してカスタム機能パイプラインを作成する手順を示すチュートリアルを提供します。
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt

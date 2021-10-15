@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のあるトピック；Google
 solution: Experience Platform
 title: Google AdWords ソースコネクタの概要
 topic-legacy: overview
-description: API またはユーザーインターフェイスを使用して Google AdWords をAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用してGoogle AdWords をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: fa3b83372db557d7f0aed16303cef4124c7dd897
 workflow-type: tm+mt
@@ -32,11 +32,11 @@ Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使
 
 ### API の使用
 
-- [フローサービス API を使用した Google AdWords ベース接続の作成](../../tutorials/api/create/advertising/ads.md)
+- [フローサービス API を使用したGoogle AdWords ベース接続の作成](../../tutorials/api/create/advertising/ads.md)
 - [フローサービス API を使用した広告ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/advertising.md)
 - [フローサービス API を使用した広告ソースのデータフローの作成](../../tutorials/api/collect/advertising.md)
 
 ### UI の使用
 
-- [UI での Google AdWords ソース接続の作成](../../tutorials/ui/create/advertising/ads.md)
+- [UI でのGoogle AdWords ソース接続の作成](../../tutorials/ui/create/advertising/ads.md)
 - [UI での広告ソース接続のデータフローの作成](../../tutorials/ui/dataflow/advertising.md)

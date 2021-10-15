@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；
 solution: Experience Platform
-title: Sensei 機械学習 API ガイドの付録
+title: Sensei機械学習 API ガイドの付録
 topic-legacy: Developer guide
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff

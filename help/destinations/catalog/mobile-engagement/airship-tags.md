@@ -92,11 +92,11 @@ Adobe Experience Platform のセグメントの概念は、Airship の [ タグ 
 
 ## マッピングの考慮事項 {#mapping-considerations}
 
-[!DNL Airship] タグは、デバイスインスタンス（iPhone など）を表すチャネル上で設定できます。また、すべてのユーザーのデバイスを顧客 ID などの共通の識別子にマッピングする名前付きユーザー上でも設定できます。スキーマにプライマリ ID としてプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがある場合は、**[!UICONTROL ソース属性]** の電子メールフィールドを選択し、以下に示すように、**[!UICONTROL ターゲット ID]** の下の右の列の [!DNL Airship] にマッピングします。
+[!DNL Airship] タグは、デバイスインスタンス (iPhoneなど ) を表すチャネル上で設定できます。また、すべてのユーザーのデバイスを顧客 ID などの共通の識別子にマッピングする名前付きユーザー上でも設定できます。スキーマにプライマリ ID としてプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがある場合は、**[!UICONTROL ソース属性]** の電子メールフィールドを選択し、以下に示すように、**[!UICONTROL ターゲット ID]** の下の右の列の [!DNL Airship] にマッピングします。
 
 ![名前付きユーザーマッピング](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-チャネルにマッピングする必要がある識別子（デバイスなど）の場合、ソースに基づく適切なチャネルにマッピングします。 次の画像は、Google 広告 ID を [!DNL Airship] Android チャネルにマッピングする方法を示しています。
+チャネルにマッピングする必要がある識別子（デバイスなど）の場合、ソースに基づく適切なチャネルにマッピングします。 次の画像は、Google Advertising ID を [!DNL Airship] Android チャネルにマッピングする方法を示しています。
 
 ![航空船タグに接続航](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![空船タグに接続チャ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)

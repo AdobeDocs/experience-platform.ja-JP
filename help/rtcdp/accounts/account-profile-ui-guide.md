@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結合ポリシー；リアルタイム顧客プロファイル
 title: アカウントプロファイル UI ガイド
-description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platformユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
+description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->アカウントプロファイルは、Real-time Customer Data Platform B2B Edition のお客様のみご利用いただけます。 各ライセンスタイプで使用できる機能など、リアルタイム CDP の詳細については、まず「[ リアルタイム CDP の概要 ](../overview.md)」を参照してください。
+>Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. 各ライセンスタイプで使用できる機能など、リアルタイム CDP の詳細については、まず「[ リアルタイム CDP の概要 ](../overview.md)」を参照してください。
 
-アカウントプロファイルを使用すると、複数のソースからアカウント情報を統合できます。 このアカウントの統合表示により、様々なマーケティングチャネルや、顧客アカウント情報の保存に組織が現在使用している様々なシステムのデータが統合されます。 このドキュメントでは、Adobe Experience Platformユーザーインターフェイス (UI) で使用できるリアルタイム CDP、B2B エディション機能を使用してアカウントプロファイルを操作する方法について説明します。
+Account profiles enable you to unify account information from multiple sources. このアカウントの統合表示により、様々なマーケティングチャネルや、顧客アカウント情報の保存に組織が現在使用している様々なシステムのデータが統合されます。 このドキュメントでは、Adobe Experience Platformユーザーインターフェイス (UI) で使用できるリアルタイム CDP、B2B エディション機能を使用してアカウントプロファイルを操作する方法について説明します。
 
 ## アカウントプロファイルの参照
 
-アカウントプロファイルを参照するには、まず左のナビゲーションで [!UICONTROL Accounts] の下の「**[!UICONTROL Profiles]**」を選択します。
+To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation.
 
 ![](images/b2b-account-browse.png)
 
@@ -48,25 +48,25 @@ ht-degree: 0%
 
 ![](images/b2b-account-select-source.png)
 
-接続名の横のラジオボタンを選択してソースを選択し、**[!UICONTROL 選択]** を使用して「[!UICONTROL  参照 ]」タブに戻ります。
+You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
 
-ソースを選択した状態で、ソースに関連する **[!UICONTROL アカウント ID]** を入力する必要があります。 例えば、Salesforce ソースを選択すると、その ID に関連付けられたアカウントプロファイルを表示するために、Salesforce インスタンスからアカウント ID を入力する必要があります。
+With a source selected, you must now enter an **[!UICONTROL Account ID]** related to the source. For example, selecting a Salesforce source would require you to enter an account ID from the Salesforce instance in order to view the account profile tied to that ID.
 
 >[!NOTE]
 >
 >Marketoアカウント ID には、参照可能な 2 つのアカウントテーブルがあるので、正しいアカウントを表示するために特定の構文を使用する必要があります。
 >
->最も一般的な標準構文は、`.mkto_org` の後に付いたMarketoアカウント ID です（例：`1234567.mkto_org`）。 Marketoのアカウントベースのマーケティングのお客様は、`.mkto_account` に付加されたMarketoアカウント ID を使用して、追加の値を見つけることができます。 使用する構文が不明な場合は、Marketo管理者に問い合わせてください。
+>最も一般的な標準構文は、`.mkto_org` の後に付いたMarketoアカウント ID です（例：`1234567.mkto_org`）。 Marketo Account-Based Marketing customers may have additional values that can be found using the Marketo account ID appended by `.mkto_account`. If you are unsure of which syntax to use, please check with your Marketo administrator.
 
 ![](images/b2b-account-browse-id.png)
 
-### [!UICONTROL  その他 ] で参照
+### Browse by [!UICONTROL Others]
 
-リアルタイム CDP、B2B エディションは、表示するアカウントの **[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力でき、直接検索を実行できます。 ソース名とインスタンスを直接入力することで、Experience Platformが正しいアカウントプロファイルデータを検索して表示するのに必要なコンテキストを提供します。
+リアルタイム CDP、B2B エディションは、表示するアカウントの **[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力でき、直接検索を実行できます。 By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
 
-直接検索を実行する機能は、ソースからデータに直接接続できない状況で役立ちます。 例えば、組織で CRM への直接接続を妨げるデータガバナンスポリシーが設定されている場合、そのデータをクラウドストレージシステムにエクスポートし、Experience Platformに取り込むことができます。
+直接検索を実行する機能は、ソースからデータに直接接続できない状況で役立ちます。 For example, if your organization has data governance policies in place that prevent connecting directly to a CRM, you can export that data into a cloud storage system and then ingest it into Experience Platform.
 
-別の例として、システムを離れて Platform に入る間に、データに対して変換を実行する場合があります。 直接検索機能を使用して、データのコンテキストを提供できます ( 例えば、Amazon S3 バケットからのデータであるにもかかわらず、データがMarketoデータであることを指定するなど )。これにより、データの検索場所と適切なレンダリング方法がわかります。
+別の例として、システムを離れて Platform に入る間に、データに対して変換を実行する場合があります。 You can use the direct lookup functionality to provide context for the data (such as specifying that it is Marketo data, despite the fact that it is coming from an Amazon S3 bucket, for example) so that the system knows where to look for, and how to properly render, the data.
 
 直接参照を開始するには、**[!UICONTROL 「&lt;a3/で参照」ドロップダウンから「**[!UICONTROL  その他 ]**」を選択し、表示するアカウントの**[!UICONTROL  ソース名 ]**、**[!UICONTROL  ソースインスタンス ]**、**[!UICONTROL  アカウント ID ]**を入力します。]**
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## アカウントプロファイルの詳細の表示
 
-「**** を参照 **[!UICONTROL 」タブを使用してアカウントプロファイルを検索した後、「 プロファイル ID]**」を選択すると、アカウントプロファイルの「**[!UICONTROL 詳細]**」タブが開きます。 **[!UICONTROL 「詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々のアカウントを単一の表示にできます。 これには、基本属性やソーシャルメディアデータなどのアカウントの詳細が含まれます。
+After using the **[!UICONTROL Browse]** tab to locate an account profile, selecting the **[!UICONTROL Profile ID]** opens the **[!UICONTROL Detail]** tab for the account profile. **[!UICONTROL 「詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々のアカウントを単一の表示にできます。 これには、基本属性やソーシャルメディアデータなどのアカウントの詳細が含まれます。
 
 表示されるデフォルトのフィールドは、組織レベルで変更して、優先するアカウントプロファイル属性を表示することもできます。
 
@@ -100,15 +100,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->「[!UICONTROL  ユーザー ]」タブには、アカウントに関連付けられた最大 25 人のユーザーのリストが表示されます。 関連する人が 25 人を超えるアカウントの場合、システムは 25 レコードのランダムサンプリングを示しています。
+>The [!UICONTROL People] tab displays a list of up to 25 people associated with the account. For accounts with more than 25 associated people, the system shows a random sampling of 25 records.
 
-連絡先の情報のスナップショットを表示するほか、リストされる各担当者には **[!UICONTROL プロファイル ID]** が含まれています。これは、その個人のリアルタイム顧客プロファイルを参照できるクリック可能なリンクです。 アカウントに関連する個々の顧客プロファイルの表示について詳しくは、Real-time CDP, B2B Edition](../profile/profile-browse.md) での [ プロファイルの参照に関するガイドを参照してください。
+In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![](images/b2b-account-people.png)
 
 ## 「オポチュニティ」タブ
 
-「**[!UICONTROL Opportunity]**」タブには、アカウントに関連するオープン・オポチュニティとクローズ・オポチュニティの情報が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、リアルタイム CDP、B2B エディションを使用すると、マーケティング担当者は、これらのオポチュニティをすべて 1 か所で簡単に確認できます。
+「**[!UICONTROL Opportunity]**」タブには、アカウントに関連するオープン・オポチュニティとクローズ・オポチュニティの情報が表示されます。 These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
 
 >[!NOTE]
 >

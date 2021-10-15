@@ -53,7 +53,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス ](../../identity
 | 電話 (SHA256_E.164) | SHA256 形式と E.164 形式の両方を使用してハッシュ化する必要がある生の電話番号を表す名前空間。 |
 | ECID | Experience CloudID(ECID) 値を表す名前空間。 この名前空間は、次のエイリアスでも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 詳しくは、[ECID の概要](../../identity-service/ecid.md)を参照してください。 |
 | Apple IDFA（広告主の ID） | Apple ID for Advertisers を表す名前空間。 詳しくは、[ 興味ベースの広告 ](https://support.apple.com/ja-jp/HT202074) に関する次のドキュメントを参照してください。 |
-| Google 広告 ID | Google 広告 ID を表す名前空間。 詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) の次のドキュメントを参照してください。 |
+| Google 広告 ID | Google Advertising ID を表す名前空間。 詳しくは、[Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) の次のドキュメントを参照してください。 |
 
 ### 同意設定の設定
 

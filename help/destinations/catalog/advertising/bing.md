@@ -1,7 +1,7 @@
 ---
 keywords: '広告；bing; '
 title: Microsoft Bing 接続
-description: Microsoft Bing の接続先を使用して、Microsoft ディスプレイ広告をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
+description: Microsoft Bing の接続先を使用すると、Microsoftディスプレイ広告をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 | ターゲット ID | 説明 |
 |---|---|
-| MAID | Microsoft 広告 ID |
+| MAID | Microsoft Advertising ID |
 
 ## 書き出しタイプ {#export-type}
 

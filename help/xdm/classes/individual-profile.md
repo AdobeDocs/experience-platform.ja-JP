@@ -53,6 +53,6 @@ Adobeは、[!DNL XDM Individual Profile] クラスで使用するいくつかの
 * [[!UICONTROL XDM Business Person コンポーネント]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM ビジネス担当者の詳細]](../field-groups/profile/business-person-details.md)\*
 
-*\*このフィールドグループは、リアルタイム顧客データプラットフォームの B2B エディションにアクセスできる組織のみが使用できます。*
+*\*このフィールドグループは、Real-time Customer Data Platformの B2B 版にアクセスできる組織のみが使用できます。*
 
 [!DNL XDM Individual Profile] の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub リポジトリ ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile) を参照してください。

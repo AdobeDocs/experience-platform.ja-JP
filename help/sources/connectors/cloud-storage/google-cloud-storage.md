@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;Google クラウドストレージ
+keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloud Storage;google クラウドストレージ
 solution: Experience Platform
 title: Google Cloud Storage Source コネクタの概要
 topic-legacy: overview
-description: API またはユーザーインターフェイスを使用して Google Cloud Storage をAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用してGoogle Cloud Storage をAdobe Experience Platformに接続する方法を説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
@@ -55,11 +55,11 @@ Platform に接続するには、まず [!DNL Google Cloud Storage] アカウン
 
 ### API の使用
 
-- [フローサービス API を使用した Google Cloud Storage ベース接続の作成](../../tutorials/api/create/cloud-storage/google.md)
+- [フローサービス API を使用したGoogle Cloud Storage ベース接続の作成](../../tutorials/api/create/cloud-storage/google.md)
 - [フローサービス API を使用したクラウドストレージソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/cloud-storage.md)
 - [フローサービス API を使用したクラウドストレージソースのデータフローの作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UI での Google Cloud Storage ソース接続の作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [UI でのGoogle Cloud ストレージソース接続の作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [UI でのクラウドストレージ接続のデータフローの作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)

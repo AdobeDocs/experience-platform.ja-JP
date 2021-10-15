@@ -1,7 +1,8 @@
 ---
 title: アップセル詳細スキーマフィールドグループ
 description: このドキュメントでは、「アップセル詳細」スキーマフィールドグループの概要を説明します。
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 5%

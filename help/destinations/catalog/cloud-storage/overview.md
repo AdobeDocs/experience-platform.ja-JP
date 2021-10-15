@@ -1,7 +1,7 @@
 ---
 keywords: クラウドストレージの宛先；クラウドストレージ
 title: クラウドストレージの宛先の概要
-description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azure Event Hubs、または SFTP クラウドのストレージの場所に配信できます。
+description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドのストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt

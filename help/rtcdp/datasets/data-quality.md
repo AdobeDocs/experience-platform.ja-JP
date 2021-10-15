@@ -1,6 +1,6 @@
 ---
 keywords: データ品質； rtcdp データ品質
-title: リアルタイム顧客データプラットフォームでのデータ品質
+title: Real-time Customer Data Platformのデータ品質
 seo-title: Data quality on Real-time Customer Data Platform
 description: リアルタイム顧客データプラットフォームのデータ品質に関するドキュメント
 seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 ---
 
-# リアルタイム顧客データプラットフォームでのデータ品質
+# Real-time Customer Data Platformのデータ品質
 
 リアルタイムの顧客データプラットフォーム（リアルタイム CDP）を使用すると、複数のソースからデータを取り込んで統合し、顧客に一貫性のある調整されたエクスペリエンスを提供できます。その結果、データが完全、正確、簡潔であることが最も重要になります。
 

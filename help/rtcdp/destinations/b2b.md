@@ -1,7 +1,8 @@
 ---
 title: Real-time Customer Data Platform B2B Edition の宛先
 description: Real-time Customer Data Platform B2B Edition における宛先の役割の概要です。
-source-git-commit: f2706d871383fdcb47a9c668f062879cfea0d623
+exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
+source-git-commit: 3e92a3beb303a187fb2494206dd923805ae7aae7
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

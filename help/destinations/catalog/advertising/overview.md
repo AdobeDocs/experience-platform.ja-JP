@@ -29,9 +29,9 @@ Adobe Experience Platformを、需要側プラットフォーム (DSP)、サプ�
 ### 接続
 
 * [Google Display と Video 360 の接続](google-dv360.md)
-* [Google 広告接続](google-ads-destination.md)
+* [Google Ads 接続](google-ads-destination.md)
 * [Google Ad Manager 接続](google-ad-manager.md)
-* [Google カスタマーマッチ接続](google-customer-match.md)
+* [Google Customer Match 接続](google-customer-match.md)
 * [Microsoft Bing 接続](bing.md)
 * [Pinterest Customer List の接続](pinterest.md)
 * [トレードデスクの接続](tradedesk.md)

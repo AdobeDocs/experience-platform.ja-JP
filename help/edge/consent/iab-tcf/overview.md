@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform Web SDK での IAB TCF 2.0 のサポート
 
-Adobe Experience Platform Web SDK は、Interactive Advertising Bureau の Transparency &amp; Consent Framework バージョン 2.0(IAB TCF 2.0) をサポートしています。 このガイドでは、リアルタイム顧客データプラットフォーム、Audience Manager、Experience Events、Adobe Analytics、Experience Edge と統合された、Adobe Experience Platform Web SDK を通じて IAB TCF 2.0 をサポートするための要件を示します。
+Adobe Experience Platform Web SDK は、Interactive Advertising Bureau の Transparency &amp; Consent Framework バージョン 2.0(IAB TCF 2.0) をサポートしています。 このガイドでは、Real-time Customer Data Platform、Audience Manager、Experience Event、Adobe Analytics、および Experience Edge との統合により、Adobe Experience Platform Web SDK を介して IAB TCF 2.0 をサポートするための要件を示します。
 
 また、タグの有無に関わらず、IAB TCF 2.0 を統合する方法を学ぶのに役立つガイドを次に示します。
 

@@ -1,6 +1,6 @@
 ---
-title: リアルタイム顧客データプラットフォーム B2B エディションでの 2 つのスキーマ間の関係の定義
-description: リアルタイム顧客データプラットフォーム B2B エディションで 2 つのスキーマ間の多対 1 の関係を定義する方法を説明します。
+title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
+description: Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間の多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 7%
 
 ---
 
-# リアルタイム顧客データプラットフォーム B2B エディション（ベータ版）で 2 つのスキーマ間の関係を定義する
+# Real-time Customer Data Platform B2B Edition（ベータ版）で 2 つのスキーマ間の関係を定義する
 
 >[!IMPORTANT]
 >
->リアルタイム顧客データプラットフォーム B2B エディションは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Real-time Customer Data Platform B2B Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 >[!NOTE]
 >
->リアルタイム顧客データプラットフォーム B2B エディションを使用していない場合は、[ 非 B2B 関係の作成 ](./relationship-ui.md) に関するガイドを参照してください。
+>Real-time Customer Data Platform B2B Edition を使用していない場合は、[B2B 以外の関係の作成 ](./relationship-ui.md) に関するガイドを参照してください。
 
-リアルタイム顧客データプラットフォーム B2B エディションは、[accounts](../classes/b2b/business-account.md)、[opportunity](../classes/b2b/business-opportunity.md)、[campaigns](../classes/b2b/business-campaign.md) など、基本的な B2B データエンティティをキャプチャする、複数のエクスペリエンスデータモデル (XDM) クラスを提供します。 これらのクラスに基づいてスキーマを作成し、[ リアルタイム顧客プロファイル ](../../profile/home.md) で使用できるようにすることで、異なるソースのデータを和集合スキーマと呼ばれる統合表現に結合できます。
+Real-time Customer Data Platform B2B Edition は、基本的な B2B データエンティティ（[ アカウント ](../classes/b2b/business-account.md)、[ オポチュニティ ](../classes/b2b/business-opportunity.md)、[ キャンペーン ](../classes/b2b/business-campaign.md) など）をキャプチャする、複数のエクスペリエンスデータモデル (XDM) クラスを提供します。 これらのクラスに基づいてスキーマを作成し、[ リアルタイム顧客プロファイル ](../../profile/home.md) で使用できるようにすることで、異なるソースのデータを和集合スキーマと呼ばれる統合表現に結合できます。
 
 ただし、和集合スキーマには、同じクラスを共有するスキーマによってキャプチャされたフィールドのみを含めることができます。 スキーマの関係はここで生じます。 B2B スキーマに関係を実装すると、これらのビジネスエンティティが相互にどのように関係するかを説明し、ダウンストリームセグメント化の使用例で複数のクラスの属性を含めることができます。
 

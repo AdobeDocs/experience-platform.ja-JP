@@ -22,11 +22,11 @@ ht-degree: 3%
 
 [!DNL Azure Event Hubs] ストレージへのリアルタイム送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
-* [!DNL Azure Event Hubs] の詳細については、[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) を参照してください。
+* [!DNL Azure Event Hubs] について詳しくは、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) を参照してください。
 * プログラムで [!DNL Azure Event Hubs] に接続するには、『[ ストリーミングの宛先 API のチュートリアル ](../../api/streaming-destinations.md)』を参照してください。
 * Platform ユーザーインターフェイスを使用して [!DNL Azure Event Hubs] に接続するには、以下の節を参照してください。
 
-![UI での AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![UI でのAWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## ユースケース {#use-cases}
 
@@ -46,8 +46,8 @@ ht-degree: 3%
 
 [ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
-* **[!UICONTROL SAS キー名]** と SAS **[!UICONTROL キー]**:SAS キー名とキーを入力します。[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
-* **[!UICONTROL 名前空間]**:名前空間に入力 [!DNL Azure Event Hubs] します。[!DNL Azure Event Hubs] 名前空間については、[Microsoft のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
+* **[!UICONTROL SAS キー名]** と SAS **[!UICONTROL キー]**:SAS キー名とキーを入力します。[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
+* **[!UICONTROL 名前空間]**:名前空間に入力 [!DNL Azure Event Hubs] します。[!DNL Azure Event Hubs] 名前空間については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 * **[!UICONTROL 名前]**:への接続の名前を入力しま [!DNL Azure Event Hubs]す。
 * **[!UICONTROL 説明]**:接続の説明を入力します。例：「プレミアム層のお客様」、「キテサーフィンに興味のある男性」。
 * **[!UICONTROL eventHubName]**:宛先へのストリームの名前を指定し [!DNL Azure Event Hubs] ます。

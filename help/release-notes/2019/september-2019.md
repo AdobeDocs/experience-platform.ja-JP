@@ -14,7 +14,7 @@ ht-degree: 46%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2019年9月10日（PT）**
+**リリース日：2019 年 9 月 10 日（PT）**
 
 Adobe Experience Platform の既存の機能のアップデート：
 

@@ -7,7 +7,7 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
 source-wordcount: '2373'
-ht-degree: 77%
+ht-degree: 78%
 
 ---
 
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## バッチのパッチ適用
 
-組織のプロファイルストアのデータを更新する必要が生じる場合があります。 例えば、レコードの修正や属性値の変更が必要になる場合があります。 Adobe Experience Platformは、アップサートアクションまたは「バッチのパッチ適用」を通じて、プロファイルストアデータの更新またはパッチをサポートします。
+場合によっては、組織のプロファイルストアのデータを更新する必要があります。例えば、レコードを修正したり、属性値を変更したりする必要がある場合があります。Adobe Experience Platformは、アップサートアクションまたは「バッチのパッチ適用」を通じて、プロファイルストアデータの更新またはパッチをサポートします。
 
 >[!NOTE]
 >

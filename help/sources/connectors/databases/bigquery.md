@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のあるトピック；BigQue
 solution: Experience Platform
 title: Google BigQuery ソースコネクタの概要
 topic-legacy: overview
-description: API またはユーザーインターフェイスを使用して Google BigQuery をAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用してGoogle BigQuery をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
@@ -49,11 +49,11 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 ### API の使用
 
-- [フローサービス API を使用した Google BigQuery ベース接続の作成](../../tutorials/api/create/databases/bigquery.md)
+- [フローサービス API を使用したGoogle BigQuery ベース接続の作成](../../tutorials/api/create/databases/bigquery.md)
 - [フローサービス API を使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
 - [フローサービス API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ### UI の使用
 
-- [UI での Google BigQuery ソース接続の作成](../../tutorials/ui/create/databases/bigquery.md)
+- [UI でのGoogle BigQuery ソース接続の作成](../../tutorials/ui/create/databases/bigquery.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

@@ -14,7 +14,7 @@ ht-degree: 17%
 
 #  Searchdata type
 
- 検索は、Web 検索アクティビティに関する情報を含む、標準的な Experience Data Model(XDM) データ型です。
+ 検索は、Web 検索アクティビティに関する情報を含む、標準のエクスペリエンスデータモデル (XDM) データ型です。
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 

@@ -85,7 +85,7 @@ ht-degree: 3%
 
 [ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]アカウントへの `access key - secret access key` アクセスを Platform に許可するペアを生成 [!DNL Amazon Kinesis] します。詳しくは、[Amazon Web サービスのドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]アカウントへの `access key - secret access key` アクセスを Platform に許可するペアを生成 [!DNL Amazon Kinesis] します。詳しくは、[Amazon Web Servicesのドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
 * **地域**:データをスト [!DNL Amazon Web Services] リーミングする地域を指定します。
 * **名前**:接続先の名前を指定します。  [!DNL Amazon Kinesis]
 * **説明**:への接続の説明を入力しま [!DNL Amazon Kinesis]す。

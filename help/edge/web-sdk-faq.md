@@ -153,7 +153,7 @@ CNAME の詳細については、[Adobeのドキュメント ](https://experienc
 
 ## Adobe Experience Platform Web SDK は Cookie を使用しますか。 その場合、どのような Cookie が使用されますか。
 
-はい。現在、Web SDK は、実装に応じて 1 ～ 4 の Cookie を使用します。 Web SDK で表示される 4 つの Cookie と、その使用方法の一覧を以下に示します。
+はい。現在、Web SDK は、実装に応じて 1 ～ 4 個の Cookie を使用します。 Web SDK で表示される 4 つの Cookie と、その使用方法の一覧を以下に示します。
 
 **kndct_orgid_identity:** ID Cookie は、ECID および ECID に関連するその他の情報を保存するために使用されます。
 
@@ -165,7 +165,7 @@ CNAME の詳細については、[Adobeのドキュメント ](https://experienc
 
 ## Adobe Experience Platform Web SDK はどのブラウザーをサポートしていますか？
 
-Adobe Experience Platform Web SDK は、最新バージョンの Google Chrome、Safari、Firefox、Internet Explorer 11 および Microsoft Edge Chromium で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+Adobe Experience Platform Web SDK は、Google Chrome、Safari、Firefox、Internet Explorer 11 およびMicrosoft Edge Chromium の最新バージョンで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 ## Adobe Experience Platform Web SDK の詳細はどこで入手できますか？
 

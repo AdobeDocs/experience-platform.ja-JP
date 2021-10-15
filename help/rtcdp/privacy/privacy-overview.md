@@ -1,8 +1,8 @@
 ---
 keywords: データガバナンス rtcdp、rtcdp データガバナンス、リアルタイム顧客データプロファイルデータガバナンス、プライバシー rtcdp、rtcdp プライバシー
-title: リアルタイム顧客データプラットフォームでのプライバシー
+title: Real-time Customer Data Platformのプライバシー
 seo-title: Privacy in Real-time Customer Data Platform
-description: リアルタイム顧客データプラットフォームを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
+description: Real-time Customer Data Platformを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 ---
 
-# リアルタイム顧客データプラットフォームでのプライバシー
+# Real-time Customer Data Platformのプライバシー
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) は、マーケターが複数のエンタープライズシステムからデータを統合し、顧客の識別、理解、関与を促進するのに役立ちます。アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
 

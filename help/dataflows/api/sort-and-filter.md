@@ -1,7 +1,8 @@
 ---
 title: フローサービス API での応答の並べ替えとフィルタリング
 description: このチュートリアルでは、フローサービス API のクエリパラメーターを使用した並べ替えとフィルタリングの構文について説明します。これには、高度な使用例が含まれます。
-source-git-commit: ccca81357bd7d7083abd3f395aa547c85ebf65fd
+exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
+source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 7%

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft Dynamics;microsoft dynamics;Dynamics;Dynamics
 solution: Experience Platform
-title: UI での Microsoft Dynamics ソース接続の作成
+title: UI でのMicrosoft Dynamics ソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して Microsoft Dynamics ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してMicrosoft Dynamics ソース接続を作成する方法を説明します。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

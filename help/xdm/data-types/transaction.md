@@ -12,7 +12,7 @@ ht-degree: 11%
 
 #  Transactiondata type
 
- トランザクションは、金融トランザクションの詳細を説明する標準の Experience Data Model(XDM) データ型です。
+ トランザクションは、通貨トランザクションの詳細を説明する標準のエクスペリエンスデータモデル (XDM) データ型です。
 
 ![トランザクション構造](../images/data-types/transaction.png)
 

@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp ソース、ソース rtcdp、リアルタイム顧客データプラットフォームソース
-title: リアルタイム顧客データプラットフォームのソース
+title: Real-time Customer Data Platformのソース
 seo-title: Sources in Real-time Customer Data Platform
 description: このドキュメントでは、リアルタイム顧客データプラットフォームのソースの概要を説明します。
 seo-description: This document provides an overview of Sources in Real-Time Customer Data Platform
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 ---
 
-# リアルタイム顧客データプラットフォームのソース
+# Real-time Customer Data Platformのソース
 
 [!DNL Real-Time Customer Data Platform] を使用すると、外部ソースからデータを取り込みながら、 サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。[!DNL Platform]アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。
 

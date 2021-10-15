@@ -79,7 +79,7 @@ ht-degree: 10%
 
 「**[!UICONTROL プロファイルデータセット]**」ボタンを切り替えて、[!DNL Profile] のターゲットデータセットを有効にします。
 
-![新規プロファイル](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
+![new-profile](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
 ### 既存のデータセット
 

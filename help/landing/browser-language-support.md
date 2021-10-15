@@ -18,7 +18,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) は、複�
 
 ## ブラウザーのサポート
 
-Platform UI は、Google Chrome、Safari、Firefox および Microsoft Edge の **最新バージョン** で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+Platform UI は、Google Chrome、Safari、Firefox およびMicrosoft Edge の **最新バージョン** で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 | オペレーティングシステム | サポートされているブラウザー |
 |---|---|

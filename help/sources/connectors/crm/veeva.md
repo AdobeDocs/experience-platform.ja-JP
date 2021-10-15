@@ -36,5 +36,5 @@ Experience Platformは、サードパーティの CRM システムからデー�
 
 ## UI を使用して [!DNL Veeva CRM] を [!DNL Platform] に接続します
 
-- [UI での Microsoft Dynamics ソース接続の作成](../../tutorials/ui/create/crm/veeva.md)
+- [UI でのMicrosoft Dynamics ソース接続の作成](../../tutorials/ui/create/crm/veeva.md)
 - [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

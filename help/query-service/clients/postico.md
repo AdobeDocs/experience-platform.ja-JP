@@ -20,7 +20,7 @@ ht-degree: 7%
 >
 > このガイドは、既に [!DNL Postico] にアクセスでき、インターフェイスの操作方法に精通していることを前提としています。 [!DNL Postico] の詳細については、[ 公式の  [!DNL Postico]  ドキュメント ](https://eggerapps.at/postico/docs) を参照してください。
 > 
-> また、[!DNL Postico] は **** のみで、macOS デバイスで使用できます。
+> また、[!DNL Postico] は **のみ** で、macOSデバイスで使用できます。
 
 [!DNL Postico] をクエリサービスに接続するには、[!DNL Postico] を開いて **[!DNL New Favorite]** を選択します。
 

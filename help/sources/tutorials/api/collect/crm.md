@@ -723,7 +723,7 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得した [ ソース接続 ID](#source)。 |
 | `targetConnectionIds` | 前の手順で取得した [ ターゲット接続 ID](#target-connection)。 |
 | `transformations.params.mappingId` | 前の手順で取得した [ マッピング ID](#mapping)。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータの区別に使用する指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn` でサポートされている形式は `yyyy-MM-dd HH:mm:ss` です。 Microsoft Dynamics を使用している場合、`deltaColumn` でサポートされる形式は `yyyy-MM-ddTHH:mm:ssZ` です。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータの区別に使用する指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn` でサポートされている形式は `yyyy-MM-dd HH:mm:ss` です。 Microsoft Dynamics を使用している場合、`deltaColumn` でサポートされている形式は `yyyy-MM-ddTHH:mm:ssZ` です。 |
 | `transformations.params.mappingId` | データベースに関連付けられているマッピング ID。 |
 | `scheduleParams.startTime` | エポック時間でのデータフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または `week`。 |

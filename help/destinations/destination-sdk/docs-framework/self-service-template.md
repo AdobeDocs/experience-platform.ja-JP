@@ -38,11 +38,11 @@ ht-degree: 4%
 
 *宛先でサポートされている ID に関する情報をこの節に追加します。いくつかの標準値をテーブルに事前入力しました。 宛先に適用しない値と、事前入力されていない値を削除します。*
 
-** YOURDESTINATION では、以下の表で説明する ID のアクティブ化をサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) の詳細をご覧ください。
+** 宛先では、以下の表で説明する ID のアクティブ化をサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) の詳細をご覧ください。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | Google 広告 ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
+| GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、次のエイリアスでも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 詳しくは、[ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) の次のドキュメントを参照してください。 |
 | phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にデータを自動的にハッシュ化します。[!DNL Platform] |
@@ -63,7 +63,7 @@ ht-degree: 4%
 
 *モバイルメッセージプラットフォームの場合：*
 
-*レンタルや販売のプラットフォームでは、顧客の Android や iOS デバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みのリストが 100 件あることを知らせたいと考えています。*
+*自宅のレンタルおよび販売プラットフォームでは、顧客の Android およびiOSデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みのリストが 100 件あることを知らせたいと考えています。*
 
 ### 使用例#2
 
