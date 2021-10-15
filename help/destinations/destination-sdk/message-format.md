@@ -1,12 +1,10 @@
 ---
-description: このページのコンテンツを、パートナーの宛先の残りの設定オプションと共に使用します。 このページでは、Adobe Experience Platformから宛先に書き出されるデータのメッセージ形式について説明し、他のページでは、宛先への接続と認証に関する詳細について説明します。
-seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
-seo-title: Message format
+description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 title: メッセージのフォーマット
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1981'
 ht-degree: 2%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 2%
 
 ## 前提条件 — Adobe Experience Platformの概念 {#prerequisites}
 
-Adobe側のプロセスを理解するには、次のExperience Platform概念を理解してください。
+Adobe側のメッセージ形式、プロファイル設定および変換プロセスを理解するには、次のExperience Platformの概念を理解してください。
 
 * **エクスペリエンスデータモデル (XDM)**&#x200B;を参照してください。[XDM の概](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) 要と  [Adobe Experience Platformでの XDM スキーマの作成方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)を参照してください。
 * **クラス**. [UI でクラスを作成および編集します](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en)。
@@ -24,11 +22,11 @@ Adobe側のプロセスを理解するには、次のExperience Platform概念�
 
 ## 概要 {#overview}
 
-このページのコンテンツを、パートナーの宛先 ](./configuration-options.md) の残りの [ 設定オプションと共に使用します。 このページでは、Adobe Experience Platformから宛先に書き出されるデータのメッセージ形式について説明し、他のページでは、宛先への接続と認証に関する詳細について説明します。
+このページのコンテンツを、パートナーの宛先 ](./configuration-options.md) の残りの [ 設定オプションと共に使用します。 このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。 その他のページでは、宛先への接続と認証に関する詳細について説明します。
 
 Adobe Experience Platformは、様々なデータ形式で、大量の宛先にデータを書き出します。 宛先のタイプの例としては、広告プラットフォーム (Google)、ソーシャルネットワーク (Facebook)、クラウドストレージの場所 (Amazon S3、Azure Event Hubs) があります。
 
-Experience Platformは、書き出されたメッセージの形式を、想定される形式に合わせて調整できます。 このカスタマイズを理解するには、次の概念が重要です。
+Experience Platformは、書き出されたプロファイルのメッセージ形式を、お客様の側で期待される形式に合わせて調整できます。 このカスタマイズを理解するには、次の概念が重要です。
 * Adobe Experience Platformのソース (1) とターゲット (2) の XDM スキーマ
 * パートナー側 (3) で期待されるメッセージ形式
 * XDM スキーマと期待されるメッセージ形式の間の変換レイヤー。[ メッセージ変換テンプレート ](./message-format.md#using-templating) を作成して定義できます。
@@ -49,7 +47,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **宛先プロファイル属性の JSON 標準スキーマ (3)**:この項目は、プラッ [トフ](https://json-schema.org/learn/miscellaneous-examples.html) ォームがサポートするすべてのプロファイル属性とそのタイプ ( 例：オブジェクト、文字列、配列 )。宛先でサポートされるフィールドの例は、`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName` などです。 Experience Platformから書き出したデータを、必要な形式に合わせて調整するには、[ メッセージ変換テンプレート ](./message-format.md#using-templating) が必要です。
 
-上記のスキーマ変換に基づいて、ソース XDM スキーマとパートナー側のサンプルスキーマとの間でメッセージの構造がどのように変化するかを次に示します。
+上記のスキーマ変換に基づいて、ソース XDM スキーマとパートナー側のサンプルスキーマとの間でプロファイル設定がどのように変化するかを以下に示します。
 
 ![変換メッセージの例](./assets/transformations-with-examples.png)
 
@@ -58,7 +56,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## はじめに — 3 つの基本的な属性の変換 {#getting-started}
 
-次の例では、Adobe Experience Platformの 3 つの共通のプロファイル属性を使用して、変換プロセスを示します。**名**、**姓**、**電子メールアドレス**。
+次の例では、Adobe Experience Platformの 3 つの共通のプロファイル属性を使用して、プロファイル変換プロセスを示します。**名**、**姓**、**電子メールアドレス**。
 
 >[!NOTE]
 >
@@ -93,7 +91,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様のテンプレート言語を使用して、XDM スキーマのフィールドを、宛先でサポートされる形式に変換します。
 
-この節では、入力 XDM スキーマからテンプレートを介して、宛先で受け入れられるペイロード形式にこれらの変換が出力される方法の例をいくつか示します。 以下の例は、次のように複雑さを増して分類されています。
+この節では、これらの変換がおこなわれる例をいくつか示します。入力 XDM スキーマから、テンプレートを介して、宛先で受け入れられるペイロード形式に出力する方法です。 以下の例は、次のように複雑さを増して示します。
 
 1. 単純な変換の例。 [ プロファイル属性 ](./message-format.md#attributes)、[ セグメントメンバーシップ ](./message-format.md#segment-membership)、[ID](./message-format.md#identities) フィールドの単純な変換でテンプレートがどのように機能するかを説明します。
 2. 上記のフィールドを組み合わせたテンプレートの複雑な例を増やしました。[ セグメントと ID を送信するテンプレートを作成 ](./message-format.md#segments-and-identities) および [ セグメント、ID、プロファイル属性を送信するテンプレートを作成 ](./message-format.md#segments-identities-attributes) します。

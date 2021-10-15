@@ -1,10 +1,10 @@
 ---
-description: この設定は、データをアクティブ化するためにAdobe Experience Platformユーザーが宛先エンドポイントに対して認証する方法を決定します。
-title: 宛先 SDK での資格情報の設定オプション
+description: Adobe Experience Platform Destination SDK でサポートされている認証設定を使用して、ユーザーを認証し、宛先エンドポイントに対してデータをアクティブ化します。
+title: 認証の設定
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## サポートされる認証タイプ {#supported-authentication-types}
 
-Adobe Experience Platformは、複数の認証タイプをサポートしています。
+Adobe Experience Platform宛先 SDK は、次の複数の認証タイプをサポートします。
 
 * ベアラ認証
 * 認証コードを持つ OAuth 2
