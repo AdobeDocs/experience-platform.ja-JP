@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 19%
 
 ---
@@ -134,6 +134,8 @@ ht-degree: 19%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - マーケティングの自動化 {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [MailChimp キャンペーン](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+         - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
