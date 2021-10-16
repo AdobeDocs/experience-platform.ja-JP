@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Platform ユーザーインターフェイスを使用してデータランディングゾーンソースコネクタを作成する方法を説明します。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 9%
+source-wordcount: '418'
+ht-degree: 10%
 
 ---
 
 # UI を使用して [!DNL Data Landing Zone] を Platform に接続
 
-[!DNL Data Landing Zone] は、Adobe Experience Platformでプロビジョニングされた一時ファイルストレージのクラウドベースのデータストレージ機能です。[!DNL Data Landing Zone] は、Platform へのデータの入出力にのみ使用されます。データは 7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
+[!DNL Data Landing Zone] は、Adobe Experience Platformでプロビジョニングされた一時ファイルストレージのクラウドベースのデータストレージ機能です。データは 7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
 このチュートリアルでは、Platform のユーザーインターフェイスを使用して [!DNL Data Landing Zone] ソース接続を作成する手順を説明します。
 

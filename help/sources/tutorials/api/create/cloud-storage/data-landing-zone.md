@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '935'
 ht-degree: 9%
 
 ---
 
 # フローサービス API を使用して [!DNL Data Landing Zone] をAdobe Experience Platformに接続
 
-[!DNL Data Landing Zone] は、Adobe Experience Platformでプロビジョニングされた一時ファイルストレージのクラウドベースのデータストレージ機能です。[!DNL Data Landing Zone] は、Platform へのデータの入出力にのみ使用されます。データは 7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
+[!DNL Data Landing Zone] は、Adobe Experience Platformでプロビジョニングされた一時ファイルストレージのクラウドベースのデータストレージ機能です。データは 7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Data Landing Zone] ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] を取得する方法と、資格情報を表示および更新する方法についても説明します。
 
