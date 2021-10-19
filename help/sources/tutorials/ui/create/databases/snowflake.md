@@ -1,71 +1,71 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Snowflake
-title: UI でのSnowflakeソース接続の作成
+keywords: エクスペリエンス Platform、home、人気のある話題。スキー
+title: UI でのスノーフレークソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用してSnowflakeソース接続を作成する方法を説明します。
+description: Adobe エクスペリエンスプラットフォーム UI を使用して、スノーフレークソース接続を作成する方法について説明します。
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
+source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '461'
 ht-degree: 10%
 
 ---
 
-# UI での [!DNL Snowflake] ソース接続の作成
+# [!DNL Snowflake]UI でのソース接続の作成
 
 >[!NOTE]
 >
-> [!DNL Snowflake] コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ ソースの概要 ](../../../../home.md#terms-and-conditions)」を参照してください。
+> [!DNL Snowflake]コネクタがベータ版に含まれています。[ ](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用について詳しくは、ソースの概要を参照してください。
 
-このチュートリアルでは、Adobe Experience Platformユーザーインターフェイスを使用して [!DNL Snowflake] ソースコネクタを作成する手順を説明します。
+このチュートリアルでは [!DNL Snowflake] 、Adobe エクスペリエンスプラットフォームのユーザーインターフェイスを使用してソースコネクタを作成する方法について説明します。
 
 ## はじめに
 
 このチュートリアルは、 Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
+* [ソース ](../../../../home.md) : [!DNL Experience Platform] 多種多様なソースからのデータの ingested を可能にするとともに、サービスを使用した受信データを構造化、ラベル付け、拡張するための機能を提供し [!DNL Platform] ます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] のSnowflakeアカウントにアクセスするには、次の認証値を指定する必要があります。
+でスノーフレークアカウントにアクセスするには [!DNL Platform] 、次の認証値を入力する必要があります。
 
-| 資格情報 | 説明 |
+| Chap | 説明 |
 | ---------- | ----------- |
-| アカウント | Platform に接続する [!DNL Snowflake] アカウント。 |
-| 倉庫 | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データを Platform に引き渡す際には個別にアクセスする必要があります。 |
-| データベース | [!DNL Snowflake] には、プラットフォームに取り込むデータが含まれます。 |
-| ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
-| パスワード | [!DNL Snowflake] ユーザーアカウントのパスワード。 |
-| 接続文字列 | [!DNL Snowflake] インスタンスへの接続に使用する接続文字列。 [!DNL Snowflake] の接続文字列パターンは `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` です。 |
+| アカウント | アカウントに関連付けられた完全なアカウント名を指定 [!DNL Snowflake] します。 完全修飾アカウント名には、 [!DNL Snowflake] お客様のアカウント名、地域、およびクラウドプラットフォームが含まれています。 たとえば、`cj12345.east-us-2.azure` のように設定します。アカウント名について詳しくは、次を参照してください [[!DNL Snowflake document on account identifiers] ](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html) 。 |
+| Warehouse | ウェアハウスによって、 [!DNL Snowflake] アプリケーションのクエリ実行プロセスが管理されます。 各 [!DNL Snowflake] ウェアハウスは互いに独立したもので、プラットフォームにデータを取り込むときに個別にアクセスする必要があります。 |
+| データベース | データベースには、 [!DNL Snowflake] プラットフォームに取り込むデータが格納されています。 |
+| ユーザー名 | [!DNL Snowflake]取引先企業のユーザー名です。 |
+| パスワード | ユーザーアカウントのパスワードを入力し [!DNL Snowflake] ます。 |
+| 接続ストリング | インスタンスへの接続に使用する接続ストリング [!DNL Snowflake] です。 の接続ストリングパターンは、に [!DNL Snowflake] `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` あります。 |
 
-これらの値の詳細については、[ このSnowflakeドキュメント ](https://docs.snowflake.com/en/user-guide/oauth-custom.html) を参照してください。
+これらの値について詳しくは、 [ この「スノーフレークドキュメント」を参照してください ](https://docs.snowflake.com/en/user-guide/oauth-custom.html) 。
 
-## Snowflakeアカウントの接続
+## スノーフレークアカウントへの接続
 
-Platform UI で、左のナビゲーションから「 **[!UICONTROL ソース]** 」を選択して、「 [!UICONTROL  ソース ] 」ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+プラットフォーム UI で、左側のナビゲーションから「ソース」を選択して、 **** [!UICONTROL  ソースワークスペースにアクセスし ] ます。 カタログ画面には、  でアカウントを作成できる様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索バーを使用して、作業対象の特定のソースを見つけることもできます。
+画面の左側のカタログから適切なカテゴリを選択できます。 検索バーを使用して目的のソースを検索することもできます。
 
-「[!UICONTROL Databases]」カテゴリで「**[!UICONTROL Snowflake]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
+「 [!UICONTROL  データベース ] 」カテゴリーで、「スノーフレーク」を選択し、 **** 「データを追加」を選択し **** ます。
 
 ![](../../../../images/tutorials/create/snowflake/catalog.png)
 
-「**[!UICONTROL Snowflakeに接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+「 **[!UICONTROL スノーフレーク「に接続」]** ページが表示されます。 このページでは、新しい資格情報を使用するか、既存の資格情報を使用することができます。
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するSnowflakeアカウントを選択し、**[!UICONTROL 次へ]** を選択して次に進みます。
+既存のアカウントを接続するには、接続するスノーフレークアカウントを選択し、「次へ」を選択して先 **** に進みます。
 
 ![](../../../../images/tutorials/create/snowflake/existing.png)
 
-### 新規アカウント
+### 新しいアカウント
 
-新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、説明（オプション）およびSnowflakeの資格情報を入力します。 終了したら、[**[!UICONTROL 接続]**] を選択し、新しい接続が確立されるまでしばらく時間をかけます。
+新しい認証情報を使用している場合は、「新規アカウント」を選択し **** ます。 表示された入力フォームに、名前、オプションの説明、およびスノーフレーククリデンシャルを指定します。 終了したら、「接続」を選択し、 **** 新しい接続が確立されるまでしばらく待ちます。
 
 ![](../../../../images/tutorials/create/snowflake/new.png)
 
 ## 次の手順
 
-このチュートリアルに従って、Snowflakeアカウントへの接続を確立しました。 次のチュートリアルに進み、[ にデータを取り込むようにデータフローを設定します。 [!DNL Platform]](../../dataflow/databases.md)
+このチュートリアルでは、スノーフレークアカウントへの接続を確立します。 次のチュートリアルに進み、 [ データを取り込むようにデータフローを設定し  [!DNL Platform]](../../dataflow/databases.md) ます。
