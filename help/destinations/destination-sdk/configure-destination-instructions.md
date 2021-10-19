@@ -1,35 +1,37 @@
 ---
-description: このページでは、宛先 SDK の「設定」オプションの参照情報を使用して、宛先 SDK を使用して宛先を設定する方法について説明します。
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: 宛先 SDK を使用した宛先の設定方法
+description: このページでは、デスティネーション SDK を使用してストリーミング出力先を設定する手順について説明します。
+title: 目的の SDK を使用してストリーミング出力先を設定する方法
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
 
-# 宛先 SDK を使用した宛先の設定方法
+# 目的の SDK を使用してストリーミング出力先を設定する方法
 
 ## 概要 {#overview}
 
-このページでは、宛先 SDK の [ 設定オプションの参照情報を使用して、宛先を設定する方法について説明します。](./configuration-options.md) 手順は、次の順に並べられます。
+このページでは、 [ 送信先 sdk の設定オプション、 ](./configuration-options.md) およびその他のターゲット sdk 機能と API リファレンスドキュメントで、ストリーミング出力先を設定するための情報を使用する方法について説明し [ ](/help/destinations/destination-types.md#streaming-destinations) ます。 ステップは、次の順序で配置されます。
+
+>[!NOTE]
+>
+>送信先 SDK を使用したバッチ出力先の設定は、現在サポートされていません。
 
 ## 前提条件 {#prerequisites}
 
-以下の図に示す手順に進む前に、[ 宛先 SDK の概要 ](./getting-started.md) ページを参照して、宛先 SDK API で使用するために必要なAdobe I/O認証資格情報の取得およびその他の前提条件を確認してください。
+以下の手順を実行する前に、移行先 SDK の「はじめに」ページを参照してください [ ](./getting-started.md) 。必要な Adobe i/o 認証資格情報や、宛先 sdk api を使用するためのその他の前提条件について詳しくは、こちらを参照してください。
 
-## 宛先 SDK の設定オプションを使用して宛先を設定する手順 {#steps}
+## 送り先 SDK の設定オプションを使用して、宛先を設定する手順 {#steps}
 
-![宛先 SDK エンドポイントの使用手順の説明](./assets/destination-sdk-steps.png)
+![「ターゲット SDK エンドポイントの使用」の例を示します。](./assets/destination-sdk-steps.png)
 
-## 手順 1:サーバーとテンプレートの設定の作成 {#create-server-template-configuration}
+## ステップ 1: サーバーとテンプレートの設定の作成 {#create-server-template-configuration}
 
-まず、`/destinations-server` エンドポイントを使用してサーバーとテンプレートの設定を作成します（[API リファレンス ](./destination-server-api.md) を読み取ります）。 サーバーとテンプレートの設定の詳細については、リファレンスの節の [ サーバーとテンプレートの仕様 ](./configuration-options.md#server-and-template) を参照してください。
+最初に、エンドポイントを使用してサーバーとテンプレートの設定を作成し `/destinations-server` ます (「API リファレンスの読み取り」 [ ](./destination-server-api.md) )。 サーバーとテンプレートの設定について詳しくは、『リファレンスガイド』の [ 「サーバーとテンプレートの仕様」を参照してください ](./configuration-options.md#server-and-template) 。
 
-次に、設定例を示します。 `requestBody.value` パラメーター内のメッセージ変換テンプレートは、手順 3、[ 変換テンプレートの作成 ](./configure-destination-instructions.md#create-transformation-template) で指定します。
+次に例を示します。 パラメーターのメッセージ変換テンプレートは、 `requestBody.value` 手順3で「変換テンプレートを作成」に指定されていることに注意して [ ](./configure-destination-instructions.md#create-transformation-template) ください。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -54,11 +56,11 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 }
 ```
 
-## 手順 2:宛先設定の作成 {#create-destination-configuration}
+## ステップ 2: 宛先設定の作成 {#create-destination-configuration}
 
-以下に、`/destinations` API エンドポイントを使用して作成した宛先テンプレートの設定例を示します。 このテンプレートについて詳しくは、[ 宛先の設定 ](./destination-configuration.md) を参照してください。
+次に示すのは、API エンドポイントを使用して作成された宛先テンプレートの設定例です `/destinations` 。 このテンプレートについて詳しくは、宛先の設定を参照してください [ ](./destination-configuration.md) 。
 
-手順 1 のサーバーとテンプレートの設定をこの宛先の設定に接続するには、サーバーのインスタンス ID とテンプレートの設定を `destinationServerId` に追加します。
+手順1でサーバーとテンプレートの設定を「この宛先設定」に接続するには、サーバーとテンプレートの設定のインスタンス ID をここに追加し `destinationServerId` ます。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -142,39 +144,38 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## 手順 3:メッセージ変換テンプレートの作成 — テンプレート言語を使用してメッセージ出力形式を指定します {#create-transformation-template}
+## ステップ 3: メッセージ変換テンプレートの作成-テンプレート言語を使用してメッセージ出力形式を指定します。 {#create-transformation-template}
 
-宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 [ID、属性、セグメントメンバーシップ変換にテンプレート言語を使用する ](./message-format.md#using-templating) の節のテンプレートの例を参照し、Adobeが提供する [ テンプレートオーサリングツール ](./create-template.md) を使用します。
+出力先でサポートされているペイロードに基づいて、書き出されたデータのフォーマットを Adobe XDM フォーマットから出力先の形式に変換するテンプレートを作成する必要があります。 このセクションでは、テンプレート [ 言語を使用して id、属性、セグメントメンバーシップを変換する方法を示してい ](./message-format.md#using-templating) [ ます。また、 ](./create-template.md) アドビから提供されているテンプレートオーサリングツールを使用してください。
 
-自動的に機能するメッセージ変換テンプレートを作成したら、手順 1 で作成したサーバーおよびテンプレート設定にそのテンプレートを追加します。
+使用できるようにするメッセージ変形テンプレートを作成したら、手順1で作成したサーバー構成とテンプレート構成にそれを追加します。
 
-## 手順 4:オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
+## 手順 4: 対象ユーザー向けメタデータ設定の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、宛先 SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータ設定を設定する必要があります。 この設定をおこなう必要があるタイミングと方法については、[Audience metadata management](./audience-metadata-management.md) を参照してください。
+一部の宛先については、移動先の SDK で、宛先の対象ユーザーをプログラムによって作成、更新、または削除するように、対象ユーザーのメタデータの設定を構成する必要があります。 [ ](./audience-metadata-management.md) この設定を設定する必要がある場合について詳しくは、対象ユーザー向けメタデータの管理とその方法を参照してください。
 
-オーディエンスのメタデータ設定を使用する場合は、手順 2 で作成した宛先設定に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を `audienceTemplateId` として宛先設定に追加します。
+オーディエンスメタデータの設定を使用する場合は、手順2で作成したターゲットの設定に接続する必要があります。 対象ユーザーのメタデータ設定のインスタンス ID をという宛先設定に追加し `audienceTemplateId` ます。
 
-## 手順 5:資格情報の設定の作成/認証の設定 {#set-up-authentication}
+## ステップ 5: 認証情報の設定/認証を設定する {#set-up-authentication}
 
-上記の宛先設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` と `"authenticationRule": "PLATFORM_AUTHENTICATION"` のどちらを指定したかに応じて、`/destination` または `/credentials` エンドポイントを使用して、宛先の認証を設定できます。
+上記の宛先設定を指定するか、またはそのエンドポイントを使用して、宛先に認証を設定するかに応じて、 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` `"authenticationRule": "PLATFORM_AUTHENTICATION"` 宛先に対する認証を設定することができ `/destination` `/credentials` ます。
 
-* **最も一般的なケース**:宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択し、宛先が OAuth 2 認証方法をサポートしている場合は、「 [OAuth 2 認証](./oauth2-authentication.md)」を読み取ります。
-* `"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合は、リファレンスドキュメントの [ 資格情報の設定 ](./credentials-configuration.md) を参照してください。
+* **最も一般的なケース** : `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 宛先設定で選択し、宛先で oauth 2 認証メソッドがサポートされている場合は、 [ oauth 2 認証を確認して ](./oauth2-authentication.md) ください。
+* 「」を選択した場合は `"authenticationRule": "PLATFORM_AUTHENTICATION"` 、リファレンスマニュアルの「クリデンシャルの設定」を参照してください [ ](./credentials-configuration.md) 。
 
-## 手順 6:宛先のテスト {#test-destination}
+## 手順 6: 移動先のテスト {#test-destination}
 
-前の手順で設定エンドポイントを使用して宛先を設定した後、[ 宛先テストツール ](./create-template.md) を使用して、Adobe Experience Platformと宛先の統合をテストできます。
+前の手順で設定されているエンドポイントを使用して宛先を設定した後、移行先のテストツールを使用して、 [ ](./create-template.md) Adobe エクスペリエンスプラットフォームと宛先間の統合をテストすることができます。
 
-宛先をテストするプロセスの一部として、Experience PlatformUI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
+出力先をテストするプロセスの一部として、経験 Platform の UI を使用してセグメントを作成し、宛先にアクティブにする必要があります。 ここでは、次の2つのリソースを参照してください。操作プラットフォームでセグメントを作成する方法について説明します。
 
-* [セグメントドキュメントの作成ページ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [セグメントのビデオチュートリアルの作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [セグメントドキュメントページの作成](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [セグメントの作成ビデオウォークスルー](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
+## 手順 7: 宛先のパブリッシュ {#publish-destination}
 
-## 手順 7:宛先の公開 {#publish-destination}
+ターゲットの設定とテストが完了したら、宛先パブリッシュ API を使用して、 [ ](./destination-publish-api.md) レビュー用に Adobe に設定を送信します。
 
-宛先の設定とテストが完了したら、[ 宛先公開 API](./destination-publish-api.md) を使用して設定をAdobeに送信し、確認します。
+## 手順 8: 作成先をドキュメント化する {#document-destination}
 
-## 手順 8:宛先のドキュメント化 {#document-destination}
-
-[ 製品化されたExperience League](./overview.md#productized-custom-integrations) を作成する Independent Software Vendor(ISV) または System Integrator(SI) の場合、[ セルフサービスドキュメントプロセス ](./docs-framework/documentation-instructions.md) を使用して、 [ 統合先カタログ ](/help/destinations/catalog/overview.md) に、製品ドキュメントページを作成します。
+独立系ソフトウェアベンダー (ISV) またはシステムインテグレーター (SI) が productized を作成している場合は [ ](./overview.md#productized-custom-integrations) 、セルフサービスのマニュアルを参照して、 [ ](./docs-framework/documentation-instructions.md) 宛先用の製品ドキュメントページを使用して、 [ リーグの出力先カタログを作成し ](/help/destinations/catalog/overview.md) ます。
