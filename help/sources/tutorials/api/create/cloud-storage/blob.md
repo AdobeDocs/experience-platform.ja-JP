@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Azure;azure blob;blob;Blob
+keywords: エクスペリエンス Platform、home、人気のある話題。Azure、azure ブロブ、ブロッブ、Blob
 solution: Experience Platform
 title: フローサービス API を使用した Azure Blob Base 接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Azure BLOB に接続する方法を説明します。
+description: フローサービス API を使用して Adobe エクスペリエンスプラットフォームを Azure Blob に接続する方法について説明します。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 8%
+source-wordcount: '692'
+ht-degree: 9%
 
 ---
 
-# [!DNL Flow Service] API を使用して [!DNL Azure Blob] ベース接続を作成する
+# [!DNL Azure Blob]API を使用したベース接続の作成 [!DNL Flow Service]
 
-ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
+ベース接続は、ソースと Adobe エクスペリエンスプラットフォームとの間の認証された接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Blob]（以下「[!DNL Blob]」と呼ばれます）の基本接続を作成する手順を説明します。
+このチュートリアルでは、 [!DNL Azure Blob] API を使用して (hereinafter と呼ばれる) ベース接続を作成する手順について説明し [!DNL Blob] [[!DNL Flow Service]  ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ます。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
+* [ソース: エクスペリエンスプラットフォームを使用すると、 ](../../../../home.md) 多種多様なソースからデータを ingested することができます。また、プラットフォームサービスを使用して、着信データを構造化、ラベル付け、拡張する機能が提供されます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL Blob] ソース接続を正しく作成するために知っておく必要がある追加情報を示します。
+以下の各セクションでは、 [!DNL Blob] API を使用してソース接続を正常に作成するために必要な追加情報を示し [!DNL Flow Service] ます。
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service] が [!DNL Blob] ストレージと接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]ストレージに接続するには [!DNL Blob] 、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| Chap | 説明 |
 | ---------- | ----------- |
-| `connectionString` | [!DNL Blob] の認証に必要な認証情報を含むExperience Platform。 [!DNL Blob] 接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 接続文字列の詳細については、[ 接続文字列 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) の設定に関するこの [!DNL Blob] ドキュメントを参照してください。 |
-| `sasUri` | [!DNL Blob] アカウントに接続するための代替の認証タイプとして使用できる共有アクセス署名 URI です。 [!DNL Blob] SAS URI パターンは次のとおりです。`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 詳しくは、[ 共有アクセスの署名 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) にあるこの [!DNL Blob] ドキュメントを参照してください。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Blob] の接続仕様 ID は次のとおりです。`d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `connectionString` | プラットフォームを利用した認証に必要な認証情報を含むストリング [!DNL Blob] 。 [!DNL Blob]接続ストリングパターンは、次のとおりです `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` 。接続ストリングについて詳しくは、このドキュメントを参照してください [!DNL Blob] [ ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) 。 |
+| `sasUri` | アカウントに接続するための代替認証タイプとして使用できる shared access signature URI [!DNL Blob] です。 [!DNL Blob]SAS URI パターンは以下のとおりです。 `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 詳しくは、 [!DNL Blob] [ shared access signature URIs について、このドキュメントを参照してください ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) 。 |
+| `connectionSpec.id` | コネクション仕様は、ベースおよびソース接続の作成に関連付けられた認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL Blob] は、次のとおりです `d771e9c1-4f26-40dc-8617-ce58c4b53702` 。 |
 
-### Platform API の使用
+### プラットフォーム Api の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../../landing/api-guide.md) を参照してください。
+プラットフォーム Api の呼び出しを適切に行う方法については、Platform Api の概要を参照してください [ ](../../../../../landing/api-guide.md) 。
 
-## ベース接続を作成する
+## ベース接続の作成
 
-ベース接続は、ソースと Platform の間の情報を保持します。これには、ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID などが含まれます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
+ベース接続を行うと、ソースとプラットフォームの間の情報が保持されます。ソースの認証の資格情報、接続の現在の状態、および一意の基本接続 ID が含まれています。 ベース接続 ID を使用して、ソース内でファイルを検索してナビゲートし、データの種類とフォーマットに関する情報も含めて、取り込む特定のアイテムを指定することができます。
 
-ベースPOSTID を作成するには、要求パラメーターの一部として [!DNL Blob] 認証資格情報を指定しながら、`/connections` エンドポイントに接続要求を行います。
+ベース接続 ID を作成するには、そのエンドポイントに POST 要求を行います。この場合は、 `/connections` [!DNL Blob] 要求パラメーターの一部として認証資格情報を指定します。
 
-### 接続文字列ベースの認証を使用して [!DNL Blob] ベース接続を作成する
+### [!DNL Blob]接続ストリングベースの認証を使用したベース接続の作成
 
-接続文字列ベースのPOSTを使用して [!DNL Blob] ベース接続を作成するには、[!DNL Blob] `connectionString` を提供しながら、[!DNL Flow Service] API に接続リクエストを実行します。
+[!DNL Blob]接続ストリングベースの認証を使用してベース接続を作成するには、API への POST 要求を行い [!DNL Flow Service] [!DNL Blob] `connectionString` ます。
 
 **API 形式**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、接続文字列ベースの認証を使用して [!DNL Blob] のベース接続を作成します。
+次のリクエストは、 [!DNL Blob] 接続ストリングベースの認証を使用するための基本的な接続を作成します。
 
 ```shell
 curl -X POST \
@@ -88,12 +88,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | BLOB ストレージ内のデータにアクセスするために必要な接続文字列。 BLOB 接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | BLOB ストレージ接続仕様 ID は次のとおりです。`4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | ブロブストレージのデータにアクセスするには、接続ストリングを指定する必要があります。 Blob 接続ストリングパターンは、次のとおりです `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` 。 |
+| `connectionSpec.id` | ブロブストレージの接続スペシフィケーション ID は以下のとおりです。 `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、次の手順でソース接続を作成する際に必要です。
+応答が成功した場合は、一意の識別子 () を含む、新しく作成されたベース接続の詳細が返され `id` ます。 この ID は、次の手順に従ってソース接続を作成する必要があります。
 
 ```json
 {
@@ -102,11 +102,11 @@ curl -X POST \
 }
 ```
 
-### 共有アクセス署名 URI を使用した [!DNL Blob] ベース接続の作成
+### [!DNL Blob]Shared access SIGNATURE URI を使用したベース接続の作成
 
-共有アクセス署名 (SAS) URI を使用すると、[!DNL Blob] アカウントに対する安全な委任承認を実行できます。 SAS ベースの認証では、権限、開始日、有効期限、および特定のリソースに対するプロビジョニングを設定できるので、SAS を使用して、様々なアクセスレベルで認証資格情報を作成できます。
+Shared access signature (SAS) URI を使用すると、アカウントに対して安全に委任された認証を行うことができ [!DNL Blob] ます。 Sas を使用すると、様々なアクセス許可を持つ認証資格情報を作成することができます。 SAS ベースの認証を使用すると、アクセス権、開始日と終了日を設定できます。また、特定のリソースに対する繰り入れも設定できます。
 
-共有アクセスPOSTURI を使用して [!DNL Blob] BLOB 接続を作成するには、[!DNL Blob] `sasUri` に値を指定しながら、[!DNL Flow Service] API に対して署名要求を行います。
+[!DNL Blob]Shared access SIGNATURE URI を使用して blob 接続を作成するには、API への POST 要求を行い、 [!DNL Flow Service] の値を指定し [!DNL Blob] `sasUri` ます。
 
 **API 形式**
 
@@ -116,7 +116,7 @@ POST /connections
 
 **リクエスト**
 
-次の要求は、共有アクセス署名 URI を使用して [!DNL Blob] のベース接続を作成します。
+次の要求によっ [!DNL Blob] て、shared access SIGNATURE URI を使用するための基本的な接続が作成されます。
 
 ```shell
 curl -X POST \
@@ -144,12 +144,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | [!DNL Blob] ストレージ内のデータにアクセスするために必要な SAS URI。 [!DNL Blob] SAS URI パターンは次のとおりです。`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
-| `connectionSpec.id` | [!DNL Blob] ストレージ接続の仕様 ID は次のとおりです。`4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | 格納されたデータにアクセスするには、SAS URI が必要に [!DNL Blob] なります。 [!DNL Blob]SAS URI パターンは、次のとおりです `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 。 |
+| `connectionSpec.id` | [!DNL Blob]ストレージ接続のスペシフィケーション ID は以下のとおりです。`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、次の手順でソース接続を作成する際に必要です。
+応答が成功した場合は、一意の識別子 () を含む、新しく作成されたベース接続の詳細が返され `id` ます。 この ID は、次の手順に従ってソース接続を作成する必要があります。
 
 ```json
 {
@@ -160,4 +160,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、API を使用して [!DNL Blob] 接続を作成し、応答本文の一部として一意の ID を取得しました。 この接続 ID を使用して [ フローサービス API](../../explore/cloud-storage.md) または [ フローサービス API](../../cloud-storage-parquet.md) を使用して Parquet データを取り込み、クラウドストレージを調べることができます。
+このチュートリアルでは、Api を使用して接続を作成し、 [!DNL Blob] 応答本体の一部として一意の ID を取得しました。 この接続 ID を使用し [ て、フローサービス API を使用してクラウドストレージを探すことができ ](../../explore/cloud-storage.md) ます。
