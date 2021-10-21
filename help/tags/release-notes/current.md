@@ -2,10 +2,10 @@
 title: リリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '578'
+ht-degree: 87%
 
 ---
 
@@ -14,6 +14,16 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+
+## 2021 年 10 月 21 日（PT）
+
+**イベント転送時に認証されたエンドポイントにデータを送信** –シークレットを使用して、次の認証プロトコルが必要なエンドポイントにデータを送信することができます。
+
+* **[!UICONTROL Token]** : 認証トークン値を表す1つのストリングです。
+* **[!UICONTROL Simple HTTP]** : ユーザー名とパスワードに対して2つのストリング属性を指定します。
+* **[!UICONTROL OAuth2]** : OAuth2 仕様をサポートするためのいくつかの属性が含まれてい [ ](https://datatracker.ietf.org/doc/html/rfc6749) ます。
+
+詳しくは、 [ データ収集 UI の機密情報の管理 ](../ui/event-forwarding/secrets.md) または [ Reactor API でのシークレットの管理に関するガイドを参照してください ](../api/guides/secrets.md) 。
 
 ## 2021 年 7 月 19 日（PT）
 
