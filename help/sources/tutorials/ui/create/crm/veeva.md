@@ -1,70 +1,70 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Veeva CRM;veeva
+keywords: エクスペリエンス Platform、home、人気のある話題。Veeva CRM、veeva
 solution: Experience Platform
-title: UI での Veeva CRM ソース接続の作成
+title: UI で Veeva CRM ソース接続を作成します。
 topic-legacy: overview
 type: Tutorial
-description: Adobe Experience Platform UI を使用して Veeva CRM ソース接続を作成する方法を説明します。
+description: Adobe エクスペリエンスプラットフォーム UI を使用して、Veeva CRM ソース接続を作成する方法を説明しています。
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 8b4e3b9e95dd4c2ff8f3b5a1399eb7d114024bb6
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '428'
 ht-degree: 13%
 
 ---
 
-# UI での [!DNL Veeva CRM] ソース接続の作成
+# [!DNL Veeva CRM]UI でのソース接続の作成
 
-Adobe Experience Platformのソースコネクタは、外部ソースの CRM データをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Veeva CRM] ソースコネクタを作成する手順を説明します。
+Adobe エクスペリエンスプラットフォームのソースコネクターには、指定された時間に外部の CRM データを取り込む機能が用意されています。 このチュートリアルでは [!DNL Veeva CRM] 、ユーザーインターフェイスを使用してソースコネクタを作成する方法について説明し [!DNL Platform] ます。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] System ](../../../../../xdm/home.md) : [!DNL Experience Platform] カスタマーエクスペリエンスデータを整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターの UI を使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディターチュートリアル ](../../../../../xdm/tutorials/create-schema-ui.md) : スキーマエディター UI を使用してカスタムスキーマを作成する方法について説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Veeva CRM] アカウントがある場合は、このドキュメントの残りの部分をスキップし、[ データフローの設定 ](../../dataflow/crm.md) に関するチュートリアルに進んでください。
+既に有効なアカウントを持っている場合は、 [!DNL Veeva CRM] このドキュメントの残りの部分をスキップして、フローの設定に関するチュートリアルに進んで [ ](../../dataflow/crm.md) ください。
 
 ### 必要な資格情報の収集
 
-| 資格情報 | 説明 |
+| Chap | 説明 |
 | ---------- | ----------- |
-| `environmentUrl` | [!DNL Veeva CRM] ソースインスタンスの URL。 |
-| `username` | [!DNL Veeva CRM] ユーザーアカウントのユーザー名。 |
-| `password` | [!DNL Veeva CRM] ユーザーアカウントのパスワード。 |
-| `securityToken` | [!DNL Veeva CRM] ユーザーアカウントのセキュリティトークン。 |
+| `environmentUrl` | ソースインスタンスの URL を指定 [!DNL Veeva CRM] します。 |
+| `username` | ユーザーアカウントのユーザー名 [!DNL Veeva CRM] です。 |
+| `password` | ユーザーアカウントのパスワードを入力し [!DNL Veeva CRM] ます。 |
+| `securityToken` | ユーザーアカウントのセキュリティトークン [!DNL Veeva CRM] 。 |
 
-開始方法の詳細については、[ この Veeva CRM ドキュメント ] を参照してください。
+概要について詳しくは、このドキュメントを参照してください [[!DNL Veeva CRM]  ](https://developer.veevacrm.com/api/#order-management-rest-api) 。
 
-## [!DNL Veeva CRM] アカウントに接続
+## アカウントの接続 [!DNL Veeva CRM]
 
-必要な資格情報を収集したら、以下の手順に従って [!DNL Veeva CRM] アカウントを [!DNL Platform] にリンクします。
+必要な情報を収集したら、次の手順に従って [!DNL Veeva CRM] アカウントをにリンク [!DNL Platform] します。
 
-プラットフォーム UI で、左のナビゲーションバーから「 **[!UICONTROL ソース]** 」を選択して、「 [!UICONTROL  ソース ] 」ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成するための様々なソースが表示されます。
+プラットフォーム UI で、左側のナビゲーションバーの「ソース」を選択して、 **** [!UICONTROL  ソースワークスペースにアクセスし ] ます。 [!UICONTROL カタログ画面にはさまざまなソースが ] 表示されます。これは、でアカウントを作成することができます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、目的の特定のソースを見つけることもできます。
+画面の左側のカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、目的のソースを検索することもできます。
 
-「[!UICONTROL CRM]」カテゴリで「**[!UICONTROL Veeva CRM]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
+「 [!UICONTROL  CRM ] 」カテゴリーで「VEEVA CRM」を選択し、 **** 「データを追加」を選択し **** ます。
 
-![カタログ](../../../../images/tutorials/create/veeva/catalog.png)
+![差し込み](../../../../images/tutorials/create/veeva/catalog.png)
 
-**[!UICONTROL Veeva CRM アカウントに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+「 **[!UICONTROL 接続 Veeva CRM アカウント」]** ページが表示されます。 このページでは、新しい資格情報を使用するか、既存の資格情報を使用することができます。
 
 ### 既存のアカウント
 
-既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Veeva CRM] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して次に進みます。
+既存のアカウントを使用するには、新しいフローを作成するアカウントを選択し、「 [!DNL Veeva CRM] 次へ」を選択して先 **** に進みます。
 
-![既存](../../../../images/tutorials/create/veeva/existing.png)
+![従来](../../../../images/tutorials/create/veeva/existing.png)
 
-### 新規アカウント
+### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、名前、説明（オプション）、[!DNL Veeva CRM] 資格情報を入力します。 終了したら、[**[!UICONTROL ソースに接続]**] を選択し、新しい接続が確立されるまでしばらく時間をかけます。
+新しいアカウントを作成する場合は、「 **[!UICONTROL 新規アカウント」を選択]** し、名前、オプションの説明、および資格情報を入力し [!DNL Veeva CRM] ます。 終了したら、「ソースに接続」を選択し、 **** 新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/veeva/new.png)
 
 ## 次の手順
 
-このチュートリアルに従って、[!DNL Veeva CRM] アカウントへの接続を確立しました。 次のチュートリアルに進み、データを Platform に取り込むように [ データフローを設定します。](../../dataflow/crm.md)
+このチュートリアルでは、お使いのアカウントへの接続が確立されてい [!DNL Veeva CRM] ます。 次のチュートリアルに進み、 [ データをプラットフォームに取り込むようにデータフローを設定することができ ](../../dataflow/crm.md) ます。
