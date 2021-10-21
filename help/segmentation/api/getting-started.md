@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；api;
+keywords: 経験のあるプラットホーム、home、ポピュラーな話題、セグメンテーション、セグメンテーション、分類セグメンテーションサービス。
 solution: Experience Platform
-title: セグメント化サービス API の概要
+title: セグメンテーションサービス API を使用した作業の開始
 topic-legacy: developer guide
-description: 次のドキュメントは、Segmentation API を正しく操作するために知っておく必要がある追加情報を示しています。
+description: 次のマニュアルには、セグメンテーション API を使用して正常に動作するために必要な追加情報が記載されています。
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 50%
+source-wordcount: '353'
+ht-degree: 47%
 
 ---
 
-# セグメント化サービス API の概要 {#getting-started}
+# セグメンテーションサービス API を使用した作業の開始 {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] では、セグメントを作成し、[!DNL Real-time Customer Profile] データからAdobe Experience Platformでオーディエンスを生成できます。
+Adobe エクスペリエンスプラットフォーム [!DNL Segmentation Service] を使用して、データからセグメントを作成し、対象ユーザーを adobe の操作プラットフォームで生成でき [!DNL Real-time Customer Profile] ます。
 
-開発者ガイドでは、[!DNL Segmentation Service] の使用に関連する様々な [!DNL Experience Platform] サービスに関する十分な知識が必要です。
+デベロッパーガイドでは、を使用するための様々なサービスについて、理解しておく必要があり [!DNL Experience Platform] [!DNL Segmentation Service] ます。
 
-- [[!DNL Segmentation]](../home.md):データからオーディエンスセグメントを作成 [!DNL Real-time Customer Profile] できます。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
+- [[!DNL Segmentation]](../home.md)「」: データから対象ユーザーセグメントを作成できます [!DNL Real-time Customer Profile] 。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。セグメンテーションを最大限に活用するには、データモデリングのベストプラクティスに従い、データをプロファイルとイベントとして ingested にしておく必要が [ ](../../xdm/schema/best-practices.md) あります。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Segmentation] API を正しく操作するために知っておく必要がある追加情報を示します。
+以下の各セクションでは、API を正常に使用するために必要な追加情報について説明し [!DNL Segmentation] ます。
 
 ## API 呼び出し例の読み取り
 
@@ -37,14 +37,14 @@ Adobe Experience Platform [!DNL Segmentation Service] では、セグメント�
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。Api に対するすべての要求には [!DNL Platform] 、操作を行うサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Experience Platform] でのサンドボックスの操作について詳しくは、[ サンドボックスの概要に関するドキュメント ](../../sandboxes/home.md) を参照してください。
+>でのサンドボックスの操作について詳しくは、 [!DNL Experience Platform] 「サンドボックスの概要」を参照してください [ ](../../sandboxes/home.md) 。
 
 ## 次の手順
 
-[!DNL Segmentation Service] API を使用して呼び出しをおこなうには、左側のナビゲーションまたは [ 開発者ガイドの概要 ](./overview.md) 内で、使用可能なエンドポイントガイドの 1 つを選択します
+API を使用して呼び出しを行うに [!DNL Segmentation Service] は、左側のナビゲーションまたはデベロッパーズガイドのいずれかを使用して、使用可能なエンドポイントガイドのいずれかを選択します。 [](./overview.md)

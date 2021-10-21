@@ -5,9 +5,9 @@ title: セグメンテーションサービス UI ガイド
 topic-legacy: ui guide
 description: Adobe エクスペリエンスプラットフォームセグメンテーションサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d65bcf62f0de29dc293a1a1313178a408613a024
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1691'
 ht-degree: 22%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 22%
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] で格納されたデータを [!DNL Experience Platform] 個人 (顧客、見込顧客、ユーザーまたは組織など) に分割できます。これにより、より小さなグループになります。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 異なるデータソースからの id を ingested につなぎ、カスタマープロファイルを作成できるようにし [!DNL Platform] ます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。セグメンテーションを最大限に活用するには、データモデリングのベストプラクティスに従い、データをプロファイルとイベントとして ingested にしておく必要が [ ](../../xdm/schema/best-practices.md) あります。
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
 - **セグメント定義**：ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。
