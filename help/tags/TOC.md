@@ -4,10 +4,10 @@ user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 100%
+source-wordcount: '381'
+ht-degree: 99%
 
 ---
 
@@ -54,6 +54,7 @@ ht-degree: 100%
 * イベントの転送 {#event-forwarding}
    * [概要](./ui/event-forwarding/overview.md)
    * [はじめに](./ui/event-forwarding/getting-started.md)
+   * [機密](./ui/event-forwarding/secrets.md)
 * 管理 {#admin}
    * [概要](./ui/administration/overview.md)
    * [会社とプロパティ](./ui/administration/companies-and-properties.md)
@@ -175,6 +176,7 @@ ht-degree: 100%
       * [備考](./api/endpoints/notes.md)
       * [プロファイル](./api/endpoints/profile.md)
       * [検索](./api/endpoints/search.md)
+      * [機密](./api/endpoints/secrets.md)
    * ガイド {#guides}
       * [デリゲート記述子 ID](./api/guides/delegate-descriptor-ids.md)
       * [値の暗号化](./api/guides/encrypting-values.md)
@@ -184,6 +186,7 @@ ht-degree: 100%
       * [応答の並べ替え](./api/guides/sorting.md)
       * [関係](./api/guides/relationships.md)
       * [リソースの検索](./api/guides/search.md)
+      * [機密](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [用語の更新](./term-updates.md)
 * リリースノート {#release-notes}
