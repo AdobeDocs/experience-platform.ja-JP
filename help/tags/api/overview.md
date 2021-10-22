@@ -2,10 +2,10 @@
 title: Reactor API ガイド
 description: Reactor API を使用すると、開発者は Adobe Experience Platform のタグのすべてのリソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 100%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -114,6 +114,10 @@ API でこの情報を表示する方法については、[プロファイルエ
 ## 検索
 
 `/search` エンドポイントは、クエリとして表現され、目的の条件に一致するリソースを見つける方法を提供します。 すべてのクエリは、現在の会社およびアクセス可能なプロパティを範囲とします。この機能の使用方法については、[検索エンドポイントガイド](./endpoints/search.md)を参照してください。
+
+## 機密
+
+シークレットには、セキュリティで保護されたデータ交換を行うために、他のシステムに対する認証をイベント転送に許可する資格情報が含まれます。 Reactor API での機密情報の管理方法については、「シークレットガイド」を参照してください [ ](./guides/secrets.md) 。イベント転送の機能について詳しくは、シークレットガイドを参照してください [ ](./endpoints/secrets.md) 。
 
 ## 次の手順
 
