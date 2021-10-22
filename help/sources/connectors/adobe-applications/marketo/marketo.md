@@ -1,65 +1,69 @@
 ---
-keywords: Experience Platform、ホーム、人気のあるトピック、Marketo Engage、marketo engage、marketo
+keywords: エクスペリエンス Platform、home、人気のある話題。Marketo Marketo 連携; Marketo
 solution: Experience Platform
-title: Marketo Engageコネクタ
+title: Marketo 提携コネクタ
 topic-legacy: overview
-description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
+description: このドキュメントでは、Marketo 連携ソースコネクタの概要について、その認証、マッピング、データの遅延について説明しています。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 14%
+source-wordcount: '548'
+ht-degree: 13%
 
 ---
 
-# （ベータ版） [!DNL Marketo Engage] コネクタ
+# (ベータ版) [!DNL Marketo Engage] コネクタ
 
 >[!IMPORTANT]
 >
->Adobe Experience Platformの [!DNL Marketo Engage] ソースは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>[!DNL Marketo Engage]現在のところ、Adobe エクスペリエンスプラットフォームのソースがベータ版になっています。ドキュメントと機能は変更される場合があります。
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) ( 以下「[!DNL Marketo]」と呼ばれる ) は、複雑な購入ジャーニーの各ステージを通じてエンゲージメントをおこなうことで顧客体験を変えようとしているリード管理や B2B マーケター向けの完全なソリューションです。
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) (hereinafter &quot;&quot; と呼ば [!DNL Marketo] れる) は、複雑な購入 journeys のあらゆる段階で、カスタマーエクスペリエンスを変革させたいと考える、リード管理および B2B マーケティング向けの包括的なソリューションです。
 
-[!DNL Marketo] ソースコネクタを使用すると、B2B データを [!DNL Marketo] から Platform に取り込み、Platform に接続されたアプリケーションを使用して、このデータを最新の状態に保つことができます。
+[!DNL Marketo]ソースコネクタを使用すると、B2B データ [!DNL Marketo] をプラットフォームに取り込んで、プラットフォームに接続されたアプリケーションを使用してデータを最新の状態に保つことができます。
 
-このドキュメントでは、コネクタの認証方法、[!DNL Marketo] フィールドをエクスペリエンスデータモデル (XDM) にマッピングする方法、コネクタのデータ待ち時間など、[!DNL Marketo] ソースコネクタの概要を説明します。
+この記事では [!DNL Marketo] 、コネクタの認証方法、データモデル (XDM) を利用できるようにフィールドをマップする方法、コネクタのデータ潜在期間について、ソースコネクタの概要を説明して [!DNL Marketo] います。
 
-## [!DNL Marketo] コネクタの認証
+## コネクタの認証 [!DNL Marketo]
 
-[!DNL Marketo] を Platform に接続するには、まず `munchkinId`、`clientId` および `clientSecret` の値を取得する必要があります。
+プラットフォームに接続するには、まず、、、 [!DNL Marketo] およびの値を取得する必要があり `munchkinId` `clientId` `clientSecret` ます。
 
-資格情報を取得するには、 Marketoソースコネクタの認証 ](./marketo-auth.md) ドキュメントで説明されている手順を参照してください。[
+[ ](./marketo-auth.md) 資格情報を取得するには、「Marketo ソースコネクターを認証する」で説明されている手順を参照してください。
+
+## Adobe エクスペリエンスクラウドの共有を設定します。
+
+用マッピングセットを確立する前に [!DNL Marketo] 、まず Adobe エクスペリエンスクラウドの共有を設定する必要があります。 これを行う方法について詳しくは、 [ アドビシステムズ社の共有ユーザー向けクラウドの設定についてのガイドを参照してください  [!DNL Marketo] ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en) 。
 
 ## エクスペリエンスデータモデル（XDM）
 
-XDM は公に文書化された仕様で、サードパーティのソースからデータを取り込んでダウンストリームの Platform サービスで使用するための共通の構造と定義を提供します。
+XDM は、サードパーティのソースからデータを取り込み、下流のプラットフォームサービスで使用するための一般的な構造と定義を提供する、公開された仕様仕様です。
 
-XDM 標準に準拠することで、データを Platform エコシステムに均等に組み込むことができ、データの配信と情報の収集が容易になります。
+XDM 規格に準拠しているので、データを均等にプラットフォームに組み込むことができ、データを配信し、情報を収集することが容易になります。
 
-XDM と Platform での役割について詳しくは、「[XDM システムの概要 ](../../../../xdm/home.md)」を参照してください。
+XDM とその役割について詳しくは、xdm システムの概要を参照してください [ ](../../../../xdm/home.md) 。
 
-## [!DNL Marketo] から XDM へのフィールドマッピング
+## フィールドマッピングの場合 [!DNL Marketo] は XDM になります。
 
-[!DNL Marketo] と Platform の間のソース接続を確立するには、Platform に取り込む前に、Marketoのソースデータフィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
+And Platform の間にソース接続を確立するには [!DNL Marketo] 、Marketo source データフィールドを、プラットフォームに ingested する前に、適切なターゲット XDM フィールドにマップする必要があります。
 
-[!DNL Marketo] データセットと Platform の間のフィールドマッピングルールについて詳しくは、次を参照してください。
+データセットとプラットフォーム間のフィールドマッピングルールについて詳しくは、次の項目を参照してください [!DNL Marketo] 。
 
 * [アクティビティ](../mapping/marketo.md#activities)
 * [プログラム](../mapping/marketo.md#programs)
-* [プログラムのメンバーシップ](../mapping/marketo.md#program-memberships)
+* [プログラムメンバーシップ](../mapping/marketo.md#program-memberships)
 * [会社](../mapping/marketo.md#companies)
-* [静的リスト](../mapping/marketo.md#static-lists)
-* [静的リストのメンバーシップ](../mapping/marketo.md#static-list-memberships)
+* [静的なリスト](../mapping/marketo.md#static-lists)
+* [静的なリストメンバーシップ](../mapping/marketo.md#static-list-memberships)
 * [名前付きアカウント](../mapping/marketo.md#named-accounts)
-* [機会](../mapping/marketo.md#opportunities)
-* [商談の連絡先の役割](../mapping/marketo.md#opportunity-contact-roles)
+* [パートナー](../mapping/marketo.md#opportunities)
+* [営業案件取引先担当者ロール](../mapping/marketo.md#opportunity-contact-roles)
 * [人](../mapping/marketo.md#persons)
 
-## Platform での [!DNL Marketo] データの予想される遅延
+## プラットフォーム上のデータの予想レイテンシー [!DNL Marketo]
 
-次の表に、取り込みの性質と目的の宛先に基づいて、[!DNL Marketo] データを Platform に取り込む際に予想される遅延を示します。
+以下の表に、取り込むデータをプラットフォームに取り込む際の予想されるレーテンシーの概略を [!DNL Marketo] 示します。これは、取り込む対象の種類と目的に応じて異なります。
 
 | 宛先 | 予想される遅延 |
 | ----------- | ---------------- |
@@ -68,10 +72,10 @@ XDM と Platform での役割について詳しくは、「[XDM システムの�
 
 ## 次の手順とその他のリソース
 
-次のドキュメントでは、[!DNL Marketo] ソース接続の作成に関する詳細情報を提供します。
+ソース接続の作成について詳しくは、次のマニュアルを参照して [!DNL Marketo] ください。
 
-* [!DNL Marketo] データを Platform に接続する方法について詳しくは、[UI でのMarketoソースコネクタの作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) に関するチュートリアルを参照してください。
-* [!DNL Marketo] で使用される B2B 名前空間とスキーマの基本的な設定については、[B2B 名前空間とスキーマ ](./marketo-namespaces.md) のドキュメントを参照してください。
-* [!DNL Marketo] マンチキン ID の検索と資格情報の生成について詳しくは、[[!DNL Marketo]  認証ガイド ](./marketo-auth.md) を参照してください。
-* [!DNL Marketo] データセットに適用される特定のマッピングルールについて詳しくは、[[!DNL Marketo]  フィールドマッピング ](../mapping/marketo.md) に関するドキュメントを参照してください。
-* [!DNL Real-time Customer Data Platform B2B Edition] とその機能に関する一般的な情報については、[[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) のドキュメントを参照してください。
+* データをプラットフォームに接続する方法につい [!DNL Marketo] ては、Marketo source connector FOR UI の作成に関するチュートリアルを参照してください [ ](../../../tutorials/ui/create/adobe-applications/marketo.md) 。
+* によって使用される B2B 名前空間およびスキーマの基になる設定について詳しくは [!DNL Marketo] 、 [ b2b 名前空間とスキーマのマニュアルを参照してください ](./marketo-namespaces.md) 。
+* Munchkin ID の検索およびサインイン情報の生成について詳しくは、 [!DNL Marketo] 認証ガイドを参照してください [[!DNL Marketo]  ](./marketo-auth.md) 。
+* データセットに適用される具体的なマッピングルールについて詳しくは [!DNL Marketo] 、フィールドマッピングに関するドキュメントを参照してください [[!DNL Marketo]  ](../mapping/marketo.md) 。
+* 概要とその機能については [!DNL Real-time Customer Data Platform B2B Edition] 、のマニュアルを参照してください [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md) 。
