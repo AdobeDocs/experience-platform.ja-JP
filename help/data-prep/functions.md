@@ -5,10 +5,10 @@ title: データ準備マップ関数
 topic-legacy: overview
 description: このドキュメントでは、データ準備に使用されるマッピング関数について説明します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c4fc370929000a5d34ce2696da7efe8c75abd07c
+source-git-commit: 41d6374e69899108c5323df667272f8df14c3389
 workflow-type: tm+mt
-source-wordcount: '3940'
-ht-degree: 18%
+source-wordcount: '3970'
+ht-degree: 17%
 
 ---
 
@@ -115,9 +115,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | now | 現在の時刻を取得します。 |  | now() | now () | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp () | 1571850624571 |
 | format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付: **** 入力日付、つまり、フォーマットするのは、Zone eddatetime オブジェクトです。</li><li>フォーマット: **** 日付の変更後の形式を指定する必要があります。</li></ul> | フォーマット (日付、フォーマット) | format (2019-10-23T11 :24: 00 + 00:00、&quot;YYYY-MM-DD HH :mm: ss&quot;) | 「2019-10-23 11 :24: 35」 |
-| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ **:** フォーマットするタイムスタンプを指定する必要があります。 これはミリ秒単位で作成されます。</li><li>フォーマット: **** タイムスタンプを変更するフォーマットを指定する必要があります。</li></ul> | dformat (タイムスタンプ、フォーマット) | dformat (1571829875000、「yyyy-mm-dd」をお持ちの場合は、「_」 HH ss ということに :mm: なります。SSSX &quot;) | &quot;2019-10-23T11 :24: 35.000 z&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付: **必須「日付」を** 表すストリングです。</li><li>フォーマット: **必要なのは** 、日付のフォーマットを表すストリングです。</li><li>DEFAULT_DATE: **** 指定された日付が null の場合は、戻り値としてデフォルトの日付を指定する必要があります。</li></ul> | 日付 (日付、形式、DEFAULT_DATE) | date (&quot;2019-10-23 11:24&quot;, &quot;yyyy-mm-dd HH: MM&quot;、now ()) | &quot;2019-10-23T11: 24Z&quot; |
-| 古い | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付: **必須「日付」を** 表すストリングです。</li><li>フォーマット: **必要なのは** 、日付のフォーマットを表すストリングです。</li></ul> | 日付 (日付、フォーマット) | date (&quot;2019-10-23 11:24&quot;, &quot;yyyy-mm-dd HH: MM&quot;) | &quot;2019-10-23T11: 24Z&quot; |
+| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ **:** フォーマットするタイムスタンプを指定する必要があります。 これはミリ秒単位で作成されます。</li><li>フォーマット: **タイムスタンプを表示するフォーマットを指定する必要** があります。</li></ul> | dformat (タイムスタンプ、フォーマット) | dformat (1571829875000、「yyyy-mm-dd」をお持ちの場合は、「_」 HH ss ということに :mm: なります。SSSX &quot;) | &quot;2019-10-23T11 :24: 35.000 z&quot; |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付: **必須「日付」を** 表すストリングです。</li><li>形式: **必要なの** は、ソース日付のフォーマットを表すストリングです。**注意:** これは **** 、日付ストリングをに変換する形式を表しているわけではありません。 </li><li>DEFAULT_DATE: **** 指定された日付が null の場合は、戻り値としてデフォルトの日付を指定する必要があります。</li></ul> | 日付 (日付、形式、DEFAULT_DATE) | date (&quot;2019-10-23 11:24&quot;, &quot;yyyy-mm-dd HH: MM&quot;、now ()) | &quot;2019-10-23T11: 24Z&quot; |
+| 古い | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付: **必須「日付」を** 表すストリングです。</li><li>形式: **必要なの** は、ソース日付のフォーマットを表すストリングです。**注意:** これは **** 、日付ストリングをに変換する形式を表しているわけではありません。 </li></ul> | 日付 (日付、フォーマット) | date (&quot;2019-10-23 11:24&quot;, &quot;yyyy-mm-dd HH: MM&quot;) | &quot;2019-10-23T11: 24Z&quot; |
 | 古い | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付: **必須「日付」を** 表すストリングです。</li></ul> | 日付 (日付) | date (&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11: 24Z&quot; |
 | date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | <ul><li>コンポーネント: **必須** 日付の部分を表すストリングです。 </li><li>日付: **** 日付を標準形式で指定します。</li></ul> | date_part (コンポーネント、日付) | date_part (&quot;MM&quot;、日付 (&quot;2019-10-17 11:&quot; :55: )) | 10 |
 | set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント: **必須** 日付の部分を表すストリングです。 </li><li>値: **必須** 指定された日付について、コンポーネントに設定する値です。</li><li>日付: **** 日付を標準形式で指定します。</li></ul> | set_date_part (コンポーネント、値、日付) | set_date_part (&quot;m&quot;、4、日付 (&quot;2016-11-09T11 :44: 44.797&quot;) | &quot;2016 年-04-09T11 :44: 44.797&quot; |
