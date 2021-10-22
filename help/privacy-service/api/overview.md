@@ -1,10 +1,10 @@
 ---
 title: プライバシーサービス API ガイド
 description: プライバシーサービス API を使用して、サポートされている Adobe エクスペリエンスクラウドアプリケーションのプライバシージョブをプログラムによって管理する方法について説明します。
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
-ht-degree: 32%
+ht-degree: 21%
 
 ---
 
@@ -30,4 +30,4 @@ ht-degree: 32%
 
 ## 次の手順
 
- API を使用して呼び出しを開始するには、[はじめに](./getting-started.md)を参照し、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を確認します。
+プライバシーサービス API を使用して電話をかけるには、 [ 『ファーストステップガイド』を参照してから、特定のエンドポイントを ](./getting-started.md) 使用する方法を説明します。
