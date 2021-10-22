@@ -5,10 +5,10 @@ title: Privacy Service の概要
 topic-legacy: overview
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
-source-wordcount: '1390'
-ht-degree: 100%
+source-wordcount: '1389'
+ht-degree: 97%
 
 ---
 
@@ -73,7 +73,7 @@ CRM システムが利用する [!DNL Experience Cloud] アプリケーション
 
 #### API の使用
 
-[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。この API を使用するための詳細な手順については、「 [ プライバシーサービス API ガイド」を参照してください ](api/overview.md) 。
 
 #### UI の使用
 
@@ -90,7 +90,7 @@ CRM システムが利用する [!DNL Experience Cloud] アプリケーション
 | 監視方法 | 説明 |
 | --- | --- |
 | [!DNL Privacy Service] UI | [!DNL Privacy Service] UI は監視ダッシュボードを備えており、すべてのアクティブなリクエストのステータスを視覚的に表示できます。詳しくは、『[Privacy Service ユーザガイド](ui/overview.md)』を参照してください。 |
-| [!DNL Privacy Service] API | [!DNL Privacy Service] API が提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムによって監視できます。API の使用方法について、詳しくは『[Privacy Service 開発者用ガイド](./api/getting-started.md)』を参照してください。 |
+| [!DNL Privacy Service] API | [!DNL Privacy Service] API が提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムによって監視できます。この [ ](./api/overview.md) api を使用する手順について詳しくは、プライバシーに関するサービス api ガイドを参照してください。 |
 | [!DNL Privacy Events] | [!DNL Privacy Events] は効率的なジョブリクエストの自動処理を容易にするために、設定済みの Webhook に送信される Adobe I/O イベントを活用します。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために [!DNL Privacy Service] API をポーリングする必要性が削減される、または完全になくなります。詳しくは、[プライバシーイベントの登録](./privacy-events.md)のチュートリアルを参照してください。 |
 
 ## 次の手順

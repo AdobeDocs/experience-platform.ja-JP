@@ -1,52 +1,52 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Privacy Serviceイベントの購読
+title: プライバシーに関するサービスのイベントの購読
 topic-legacy: privacy events
-description: 事前設定済みの Webhook を使用してPrivacy Serviceイベントを購読する方法を説明します。
+description: 事前に構成された webhook を使用して、プライバシーサービスイベントを購読する方法について説明します。
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '436'
 ht-degree: 15%
 
 ---
 
-# [!DNL Privacy Service Events] に登録
+# 購読 [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] は、設定済みの Webhook に送信され [!DNL Privacy Service]るAdobe I/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために [!DNL Privacy Service] API をポーリングする必要性が削減される、または完全になくなります。
+[!DNL Privacy Service Events] は、設定された [!DNL Privacy Service] webhook に送られる adobe I/o イベントを使用して、効率的なジョブ要求の自動化を促進する、Adobe 体験プラットフォームによって提供されているメッセージです。 ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために [!DNL Privacy Service] API をポーリングする必要性が削減される、または完全になくなります。
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
 | タイプ | 説明 |
 | --- | --- |
-| ジョブ完了 | すべての [!DNL Experience Cloud] アプリケーションがレポートを返し、ジョブの全体的なステータスまたはグローバルステータスが完了とマークされました。 |
-| ジョブエラー | リクエストの処理中に 1 つ以上のアプリケーションがエラーを報告しました。 |
-| 製品完了 | このジョブに関連付けられているアプリケーションの 1 つが、作業を完了しました。 |
-| 製品エラー | リクエストの処理中に、1 つのアプリケーションでエラーが報告されました。 |
+| ジョブ完了 | すべての [!DNL Experience Cloud] アプリケーションが報告を送り、ジョブの全体または全体のステータスが完了状態になっていることを確認しました。 |
+| ジョブエラー | 要求の処理中に、1つ以上のアプリケーションでエラーが報告されました。 |
+| 製品完了 | このジョブに関連付けられたアプリケーションのいずれかの操作が完了しました。 |
+| 製品エラー | 要求の処理中に、アプリケーションのいずれかがエラーを報告しました。 |
 
-このドキュメントでは、[!DNL Privacy Service] 通知のイベント登録を設定する手順と、通知ペイロードの解釈方法を説明します。
+このドキュメントでは、通知用にイベント登録を設定 [!DNL Privacy Service] する手順と、通知ペイロードの解釈方法について説明します。
 
 ## はじめに
 
-このチュートリアルを開始する前に、次のPrivacy Serviceドキュメントを確認してください。
+このチュートリアルを開始する前に、プライバシーに関する以下のマニュアルを参照してください。
 
 * [Privacy Service の概要](./home.md)
-* [Privacy ServiceAPI 開発者ガイド](./api/getting-started.md)
+* [プライバシーサービス API ガイド](./api/overview.md)
 
-## Webhook を [!DNL Privacy Service Events] に登録します。
+## Webhook をに登録します。 [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] を受け取るには、Adobe開発者コンソールを使用して、Webhook を [!DNL Privacy Service] 統合に登録する必要があります。
+受信するためには [!DNL Privacy Service Events] 、Adobe Developer Console を使用して、webhook を統合に登録する必要があり [!DNL Privacy Service] ます。
 
-これをおこなう方法の詳細な手順については、[ [!DNL I/O Event]  通知 ](../observability/alerts/subscribe.md) の購読に関するチュートリアルを参照してください。 上記のイベントにアクセスするには、イベントプロバイダーとして **[!UICONTROL Privacy Serviceイベント]** を選択してください。
+[  [!DNL I/O Event]  ](../observability/alerts/subscribe.md) この方法の詳細な手順については、通知の購読に関するチュートリアルを参照してください。**** 上記のイベントにアクセスするには、イベントプロバイダーとして「プライバシーサービス」のイベントを選択していることを確認してください。
 
-## [!DNL Privacy Service Event] 通知を受信
+## 通知の受信 [!DNL Privacy Service Event]
 
-Webhook の登録が完了し、プライバシージョブが実行されたら、イベント通知の受信を開始できます。 これらのイベントは、Webhook 自体を使用するか、Adobe開発者コンソールでプロジェクトのイベント登録の概要の「**[!UICONTROL デバッグトレース]**」タブを選択して表示できます。
+Webhook ジョブが正常に登録されたら、イベント通知の受信を開始できます。 これらのイベントを表示するには、webhook 自体を使用するか、 **** Adobe Developer Console でプロジェクトのイベント登録概要の「デバッグトレース」タブを選択します。
 
 ![](images/privacy-events/debug-tracing.png)
 
-次の JSON は、プライバシージョブに関連付けられたアプリケーションの 1 つがその作業を完了したときに Webhook に送信される [!DNL Privacy Service Event] 通知ペイロードの例です。
+次の JSON は、 [!DNL Privacy Service Event] プライバシジョブに関連付けられたアプリケーションのいずれかが処理を完了したときに webhook に送信される通知ペイロードの例です。
 
 ```json
 {
@@ -68,11 +68,11 @@ Webhook の登録が完了し、プライバシージョブが実行されたら
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 通知用の、システムで生成された一意の ID。 |
-| `type` | 送信される通知のタイプ。`data` で提供される情報にコンテキストを与えます。 次のような値が考えられます。 <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
-| `time` | イベントが発生した日時のタイムスタンプ。 |
-| `data.value` | 通知をトリガーした理由に関する追加情報が含まれます。 <ul><li>`jobId`:通知をトリガーしたプライバシージョブの ID。</li><li>`message`:ジョブの特定のステータスに関するメッセージ。`productcomplete` または `producterror` 通知の場合、このフィールドは問題のExperience Cloudアプリケーションを示します。</li></ul> |
+| `id` | システムによって生成される通知の一意の ID です。 |
+| `type` | 送信される通知のタイプ。で提供されている情報にコンテキストが表示され `data` ます。 次のような値を指定します。 <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | イベントが発生したときのタイムスタンプ。 |
+| `data.value` | 通知をトリガーした対象に関する追加情報が含まれています。 <ul><li>`jobId`: 通知をトリガーしたプライバシージョブの ID。</li><li>`message`: ジョブの特定の状態に関するメッセージを表示します。 `productcomplete`または通知については、このフィールドには、対象となる `producterror` エクスペリエンスクラウドアプリケーションが表示されます。</li></ul> |
 
 ## 次の手順
 
-このドキュメントでは、設定済みの Webhook にPrivacy Serviceイベントを登録する方法と、通知ペイロードの解釈方法について説明しました。 ユーザーインターフェイスを使用してプライバシージョブを追跡する方法については、『[Privacy Serviceユーザーガイド ](./ui/user-guide.md)』を参照してください。
+このドキュメントでは、プライバシーサービスイベントを設定された webhook に登録する方法、および通知ペイロードの解釈方法について説明しました。 ユーザーインターフェイスを使用してプライバシージョブを追跡する方法については、 [ プライバシーサービスユーザーガイドを参照してください ](./ui/user-guide.md) 。

@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: 同意 API エンドポイント
+title: 承認 API エンドポイント
 topic-legacy: developer guide
-description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションに対する顧客の同意リクエストを管理する方法を説明します。
+description: プライバシーサービス API を使用して、経験のあるクラウドアプリケーションに対する顧客の同意要求を管理する方法について説明します。
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 5%
 
 ---
 
-# 同意エンドポイント
+# 承認エンドポイント
 
-特定の規制では、個人データを収集する前に、明示的な顧客の同意が必要です。 [!DNL Privacy Service] API の `/consent` エンドポイントを使用すると、顧客の同意リクエストを処理して、プライバシーワークフローに統合できます。
+特定の規制については、個人データを収集する前に明示的なお客様の同意が必要です。 `/consent`API のエンドポイントを [!DNL Privacy Service] 使用すると、顧客の同意要求を処理し、プライバシーのワークフローに組み込むことができます。
 
-このガイドを使用する前に、以下の API 呼び出し例で示す必要な認証ヘッダーの詳細について、[ はじめに ](./getting-started.md) の節を参照してください。
+このガイドを使用する前に、 [ 以下の「 ](./getting-started.md) API の例」で説明されている必要な認証ヘッダーに関する情報については、入門ガイドを参照してください。
 
-## 顧客の同意要求の処理
+## お客様の同意要求を処理
 
-同意要求は、`/consent` エンドポイントに対してPOST要求をおこなうことで処理されます。
+承認要求は、エンドポイントに対して POST 要求によって処理され `/consent` ます。
 
 **API 形式**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **リクエスト**
 
-次のリクエストは、`entities` 配列で指定されたユーザー ID に対して新しい同意ジョブを作成します。
+次の要求によって、配列で指定されたユーザー Id に対して新しい同意ジョブが作成され `entities` ます。
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `optOutOfSale` | true に設定した場合、`entities` の下に提供されたユーザーが、自分の個人データの販売または共有をオプトアウトすることを示します。 |
-| `entities` | 同意リクエストが適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、`namespace` と `values` の配列が含まれ、その名前空間と個々のユーザーを照合します。 |
-| `nameSpace` | `entities` 配列の各オブジェクトには、Privacy ServiceAPI で認識される [ 標準 ID 名前空間 ](./appendix.md#standard-namespaces) の 1 つを含める必要があります。 |
-| `values` | 各ユーザーの値の配列。指定された `nameSpace` に対応します。 |
+| `optOutOfSale` | True に設定されている場合 `entities` は、セールのオプトアウトまたは個人データの共有を行うために、ユーザーが指定したことを示します。 |
+| `entities` | 承認要求が適用されるユーザーを表すオブジェクトの配列です。 各オブジェクトには、 `namespace` `values` その名前空間を使用して個々のユーザーと一致させるためのおよびの配列が含まれています。 |
+| `nameSpace` | 配列内の各オブジェクトには、 `entities` [ ](./appendix.md#standard-namespaces) プライバシーサービス API によって認識される標準の id 名前空間のうちの1つが含まれている必要があります。 |
+| `values` | 指定されたの値に対応する各ユーザーの値の配列 `nameSpace` 。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->[!DNL Privacy Service] に送信する顧客 ID 値を決定する方法の詳細については、[ID データの提供 ](../identity-data.md) に関するガイドを参照してください。
+>どの顧客 id 値を送信するかを決定する方法について詳しくは、 [!DNL Privacy Service] id データの指定に関するガイドを参照してください [ ](../identity-data.md) 。
 
 **応答**
 
-正常な応答は、ペイロードなしで HTTP ステータス 202（許可済み）を返し、要求が [!DNL Privacy Service] によって受け入れられ、処理中であることを示します。
+応答が成功した場合は、ペイロードなしの HTTP ステータス 202 (受諾) が返されます。これは、要求が受け入れられ、処理が進行中であることを示し [!DNL Privacy Service] ます。
