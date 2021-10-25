@@ -1,78 +1,78 @@
 ---
-keywords: プロファイルの宛先のアクティブ化；宛先のアクティブ化；データのアクティブ化電子メールマーケティングの宛先のアクティブ化クラウドストレージの宛先のアクティブ化
-title: ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化
+keywords: プロファイルの宛先のアクティブ化、宛先のアクティブ化、データのアクティブ化、電子メールのマーケティング対象をアクティブにします。クラウドの保存先のアクティブ化
+title: ストリーミングプロファイルの書き出し先に対する対象ユーザーデータのアクティブ化
 type: Tutorial
 seo-title: Activate audience data to streaming profile export destinations
-description: ストリーミングプロファイルベースの宛先にセグメントを送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
+description: Adobe エクスペリエンスプラットフォームにある対象ユーザーデータをアクティブにする方法については、ストリーミングプロファイルに基づいた宛先にセグメントを送信します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 7%
 
 ---
 
-# ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化
+# ストリーミングプロファイルの書き出し先に対する対象ユーザーデータのアクティブ化
 
 ## 概要 {#overview}
 
-この記事では、Amazon Kinesisなど、Adobe Experience Platformストリーミングプロファイルベースの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。
+この記事では、Amazon Kinesis など、Adobe エクスペリエンスプラットフォームのストリーミングプロファイルに基づいた宛先において、対象ユーザーデータをアクティブにするために必要なワークフローについて説明しています。
 
 ## 前提条件 {#prerequisites}
 
-宛先に対してデータをアクティブ化するには、宛先 ](./connect-destination.md) に [ 正常に接続されている必要があります。 まだの場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照して、使用する宛先を設定します。
+データを転送先にアクティブにするには、宛先に正しく接続されている必要があり [ ](./connect-destination.md) ます。 まだ作成していない場合は、宛先カタログに移動し [ ](../catalog/overview.md) て、サポートされている出力先を参照し、使用する宛先を設定します。
 
-## 宛先の選択 {#select-destination}
+## 宛先を選択します。 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]** に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
+1. 「接続 > 宛先」に移動し、「 **** **[!UICONTROL カタログ」タブを選択し]** ます。
 
-   ![「宛先カタログ」タブ](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![「送信先カタログ」タブ](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
+1. **** 次の図に示すように、セグメントのライセンス認証を行う宛先に対応するカードの「セグメントをアクティブにする」を選択します。
 
    ![「セグメントをアクティブ化」ボタン](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
-1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+1. 使用する接続先を選択し、「次へ」を選択し **** ます。
 
-   ![宛先の選択](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![移動先を選択](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. 次のセクションに移動して [ セグメントを選択します ](#select-segments)。
+1. 次のセクションに移動し [ て、セグメントを選択し ](#select-segments) ます。
 
-## セグメントの選択 {#select-segments}
+## セグメントを選択します。 {#select-segments}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
+セグメント名の左側にあるチェックボックスを使用して、宛先にアクティブ化するセグメントを選択し、「次へ」を選択し **** ます。
 
 ![セグメントの選択](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## プロファイル属性の選択 {#select-attributes}
 
-ターゲットの宛先に送信するプロファイル属性を選択します。
+目的の宛先に送信するプロファイル属性を選択します。
 
 >[!NOTE]
 >
-> Adobe Experience Platformは、スキーマの 4 つの推奨される、一般的に使用される属性を使用して、選択内容を事前入力します。`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`。
+> アドビシステムズ社では、選択したアイテムに、スキーマでよく使用される4つの属性を設定します。、、、、の各属性について学習 `person.name.firstName` `person.name.lastName` `personalEmail.address` `segmentMembership.status` します。
 
-`segmentMembership.status` が選択されているかどうかによって、ファイルのエクスポートは次の方法で異なります。
-* 「`segmentMembership.status`」フィールドを選択した場合、エクスポートされるファイルには、最初のフルスナップショットの「**[!UICONTROL アクティブ]**」メンバーと、後続の増分エクスポートの「**[!UICONTROL アクティブ]**」および「**[!UICONTROL 期限切れ]**」メンバーが含まれます。
-* 「 `segmentMembership.status` 」フィールドが選択されていない場合、エクスポートされたファイルには、最初の完全なスナップショットとそれ以降の増分エクスポートで **[!UICONTROL アクティブ]** メンバーのみが含まれます。
+ファイルの書き出し方法は、「」が選択されているかどうかによって異なり `segmentMembership.status` ます。
+* この `segmentMembership.status` フィールドが選択されている場合、 **[!UICONTROL 最初のフルスナップショットにはアクティブなメンバーが、以降の増分書きについてはアクティブなメンバーと期限切れのメンバーが書き出さ]** **** **** れます。
+* この `segmentMembership.status` フィールドが選択されていない場合、 **[!UICONTROL 最初の]** フルスナップショットとその後の増分エクスポートにはアクティブなメンバーのみが書き出されます。
 
 ![推奨属性](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
-1. **[!UICONTROL 属性を選択]** ページで、「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
+1. 「 **[!UICONTROL 属性を選択」]** ページで、「新規フィールドを追加」を選択し **** ます。
 
    ![新しいマッピングの追加](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. 「**[!UICONTROL スキーマフィールド]**」エントリの右側にある矢印を選択します。
+1. スキーマフィールドエントリの右側にある矢印をクリックし **** ます。
 
-   ![ソースフィールドの選択](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![ソースフィールドを選択](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. **[!UICONTROL フィールド]** を選択ページで、宛先に送信する XDM 属性を選択し、「**[!UICONTROL 選択]**」を選択します。
+1. 「 **[!UICONTROL フィールドを選択」]** ページで、宛先に送信する XDM 属性を選択し、「選択」を選択し **** ます。
 
-   ![ソースフィールドページを選択](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![ソースフィールドを選択ページ](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
-1. マッピングをさらに追加するには、手順 1 ～ 3 を繰り返し、「**[!UICONTROL 次へ]**」を選択します。
+1. マッピングをさらに追加するには、手順 1 ~ 3 を繰り返してから、「次へ」を選択し **** ます。
 
 ## レビュー {#review}
 
@@ -80,22 +80,22 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反する例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法について詳しくは、データガバナンスのドキュメントの節の [ ポリシーの適用 ](../../rtcdp/privacy/data-governance-overview.md#enforcement) を参照してください。
+>この手順では、Adobe Experience Platform がデータ使用ポリシー違反を確認します。 次の例は、ポリシーに違反する場合を示しています。 この違反が解決されるまで、セグメントアクティブ化ワークフローを完了することはできません。 ポリシー違反を解決する方法については、「 [ ](../../rtcdp/privacy/data-governance-overview.md#enforcement) データガバナンスドキュメント」セクションの「ポリシーの適用」を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されなかった場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確認し、宛先へのデータの送信を開始します。
+ポリシー違反が検出されなかった場合は、「完了」をクリックして **** 選択内容を確認し、宛先へのデータの送信を開始します。
 
 ![レビュー](../assets/ui/activate-streaming-profile-destinations/review.png)
 
-## セグメントのアクティベーションの検証 {#verify}
+## セグメントのライセンス認証の検証 {#verify}
 
-書き出された [!DNL Experience Platform] データは、JSON 形式のターゲット宛先に格納されます。 例えば、以下のイベントは、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性を含みます。 この見込顧客の ID は ECID と電子メールです。
+エクスポートさ [!DNL Experience Platform] れたデータは、JSON 形式のターゲットの出力先に格納されます。 例えば、次のイベントには、特定のセグメントを対象としていて、別のセグメントを終了した対象ユーザーの電子メールアドレスプロファイル属性が含まれています。 このようなお客様の id は、d と email になります。
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {

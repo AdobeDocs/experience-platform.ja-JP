@@ -2,7 +2,7 @@
 description: このページでは、デスティネーション SDK を使用してストリーミング出力先を設定する手順について説明します。
 title: 目的の SDK を使用してストリーミング出力先を設定する方法
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -178,4 +178,4 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 8: 作成先をドキュメント化する {#document-destination}
 
-独立系ソフトウェアベンダー (ISV) またはシステムインテグレーター (SI) が productized を作成している場合は [ ](./overview.md#productized-custom-integrations) 、セルフサービスのマニュアルを参照して、 [ ](./docs-framework/documentation-instructions.md) 宛先用の製品ドキュメントページを使用して、 [ リーグの出力先カタログを作成し ](/help/destinations/catalog/overview.md) ます。
+独立系ソフトウェアベンダー (ISV) またはシステムインテグレーター (SI) が productized を作成している場合は [ ](./overview.md#productized-custom-integrations) 、セルフサービスのマニュアルを参照して、プラットフォームの利用先 [ ](./docs-framework/documentation-instructions.md) カタログに、宛先の製品ドキュメントページを作成し [ ](/help/destinations/catalog/overview.md) ます。

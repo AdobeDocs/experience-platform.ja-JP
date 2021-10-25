@@ -1,69 +1,69 @@
 ---
-keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure EventHub
-title: （ベータ版） !DNL Azure Event Hubs] 接続
-description: '!DNL Azure Event Hubs] ストレージへのリアルタイムアウトバウンド接続を作成し、Experience Platformからデータをストリーミングします。'
+keywords: Azure event hub のコピー先。 azure event hub、azure eventhub
+title: (ベータ版)!DNL Azure Event Hub] 接続
+description: へのリアルタイムでの送信接続を作成します。DNL Azure Event Hub] エクスペリエンスプラットフォームからデータをストリーミングするための記憶領域です。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 3%
 
 ---
 
-# （ベータ版） [!DNL Azure Event Hubs] 接続
+# (ベータ版) [!DNL Azure Event Hubs] 接続
 
 ## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->Platform の [!DNL Azure Event Hubs] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>[!DNL Azure Event Hubs]プラットフォームの移行先は、現在ベータ版になっています。ドキュメントと機能は変更される場合があります。
 
-[!DNL Azure Event Hubs] は、ビッグデータストリーミングプラットフォームおよびイベント取り込みサービスです。1 秒あたりに何百万ものイベントを受信して処理できます。 イベントハブに送信されたデータは、任意のリアルタイム分析プロバイダーまたはバッチ/ストレージアダプターを使用して、変換および保存できます。
+[!DNL Azure Event Hubs] は、非常に大きなデータストリーミングプラットフォームとイベント取り込みサービスです。 毎秒数百万のイベントの受信と処理ができます。 イベントハブに送信されたデータは、任意のリアルタイム分析プロバイダー、またはバッチまたはストレージアダプターを使用して、変換して保存することができます。
 
-[!DNL Azure Event Hubs] ストレージへのリアルタイム送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
+[!DNL Azure Event Hubs]Adobe エクスペリエンスプラットフォームからデータをストリーミングするために、ストレージへのリアルタイムでの送信接続を作成することができます。
 
-* [!DNL Azure Event Hubs] について詳しくは、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) を参照してください。
-* プログラムで [!DNL Azure Event Hubs] に接続するには、『[ ストリーミングの宛先 API のチュートリアル ](../../api/streaming-destinations.md)』を参照してください。
-* Platform ユーザーインターフェイスを使用して [!DNL Azure Event Hubs] に接続するには、以下の節を参照してください。
+* について詳しくは、 [!DNL Azure Event Hubs] Microsoft のマニュアルを参照してください [ ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) 。
+* プログラムに接続するには [!DNL Azure Event Hubs] 、 [ ストリーミング送信先 API のチュートリアルを参照してください ](../../api/streaming-destinations.md) 。
+* プラットフォームのユーザーインターフェイスを使用してに接続するには、 [!DNL Azure Event Hubs] 以下の項を参照してください。
 
-![UI でのAWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![AWS Kinesis の UI の機能について](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## ユースケース {#use-cases}
 
-[!DNL Azure Event Hubs] などのストリーミング宛先を使用すると、高価値のセグメント化イベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
+などのストリーミング出力を使用することにより、必要に応じて [!DNL Azure Event Hubs] 、高い値を持つセグメンテーションイベントおよび関連するプロファイル属性を、選択したシステムに簡単に送ることができます。
 
-例えば、見込み客がホワイトペーパーをダウンロードし、それを「コンバージョン傾向が高い」セグメントに認定したとします。 見込み客が属するセグメントを [!DNL Azure Event Hubs] の宛先にマッピングすると、このイベントは [!DNL Azure Event Hubs] で発生します。 企業の IT システムと最適に連携すると考えられるように、お客様自身のアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+例えば、取引先によってホワイトペーパーがダウンロードされています。これにより、「propensity」セグメントに限定されます。 取引関係があるセグメントを宛先にマップすることによって [!DNL Azure Event Hubs] 、このイベントがに表示され [!DNL Azure Event Hubs] ます。 企業の IT システムに最適な機能として、開発者は独自のアプローチを採用し、イベントの上部にビジネスロジックを説明することができます。
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベース**  — セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：電子メールアドレス、電話番号、姓 )。 [オーディエンスアクティベーションワークフローの属性を選択画面](../../ui/activate-streaming-profile-destinations.md#select-attributes)から選択します。
+**プロファイルベース** -セグメントのすべてのメンバーを、出席者のアクティブ化ワークフローの「属性の選択」画面で選択したとおりに、目的のスキーマフィールド (例えば、電子メールアドレス、電話番号、姓) と共に書き出すことができ [ ](../../ui/activate-streaming-profile-destinations.md#select-attributes) ます。
 
-## 宛先に接続 {#connect}
+## 目的の場所に接続します。 {#connect}
 
-この宛先に接続するには、[ 宛先の設定に関するチュートリアル ](../../ui/connect-destination.md) で説明されている手順に従います。
+この送信先に接続するには、宛先の設定チュートリアルで説明されている手順に従って [ ](../../ui/connect-destination.md) ください。
 
 ### 接続パラメーター {#parameters}
 
-[ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
+このコピー先を設定する際に、 [ ](../../ui/connect-destination.md) 次の情報を入力する必要があります。
 
-* **[!UICONTROL SAS キー名]** と SAS **[!UICONTROL キー]**:SAS キー名とキーを入力します。[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) で、SAS キーを使用した [!DNL Azure Event Hubs] の認証について説明します。
-* **[!UICONTROL 名前空間]**:名前空間に入力 [!DNL Azure Event Hubs] します。[!DNL Azure Event Hubs] 名前空間については、[Microsoftのドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
-* **[!UICONTROL 名前]**:への接続の名前を入力しま [!DNL Azure Event Hubs]す。
-* **[!UICONTROL 説明]**:接続の説明を入力します。例：「プレミアム層のお客様」、「キテサーフィンに興味のある男性」。
-* **[!UICONTROL eventHubName]**:宛先へのストリームの名前を指定し [!DNL Azure Event Hubs] ます。
+* **[!UICONTROL SAS キー名]** と **[!UICONTROL sas キー]** : sas キー名とキーを入力します。 Microsoft のマニュアルに記載されている SAS キーを使用した認証方法について説明 [!DNL Azure Event Hubs] [ ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) します。
+* **[!UICONTROL 名前空間]** : [!DNL Azure Event Hubs] 名前空間に名前を入力します。 Microsoft の [!DNL Azure Event Hubs] マニュアルに記載されている名前空間について説明 [ ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) します。
+* **[!UICONTROL 名前]** : 接続の名前を入力 [!DNL Azure Event Hubs] します。
+* **[!UICONTROL 説明]** : 接続に関する説明を入力します。  例: &quot;Premium tier customers&quot;、&quot;Males kitesurfing&quot; に関心があります。
+* **[!UICONTROL eventHubName]** : ストリームの名前を指定 [!DNL Azure Event Hubs] します。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## セグメントをこの宛先にアクティブにします。 {#activate}
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ ストリーミングプロファイルの書き出し先へのオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+[ ](../../ui/activate-streaming-profile-destinations.md) この宛先までの視聴ユーザーセグメントをアクティブにする方法については、「プロファイルの書き出し先のストリーミング送信先のストリーミングについて」を参照してください。
 
-## エクスポートされたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
-書き出された [!DNL Experience Platform] データは、JSON 形式で [!DNL Azure Event Hubs] に格納されます。 例えば、以下のイベントは、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性を含みます。 この見込顧客の ID は ECID と電子メールです。
+書き出した [!DNL Experience Platform] データは [!DNL Azure Event Hubs] JSON 形式になります。 例えば、次のイベントには、特定のセグメントを対象としていて、別のセグメントを終了した対象ユーザーの電子メールアドレスプロファイル属性が含まれています。 このようなお客様の id は、d と email になります。
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
@@ -101,7 +101,7 @@ ht-degree: 3%
 
 >[!MORELIKETHIS]
 >
->* [Azure Event Hubs に接続し、フローサービス API を使用してデータをアクティブ化する](../../api/streaming-destinations.md)
->* [AWS Kinesisの宛先](./amazon-kinesis.md)
+>* [フローサービス API を使用して、Azure Event Hub に接続し、データを有効にします。](../../api/streaming-destinations.md)
+>* [AWS Kinesis 宛先](./amazon-kinesis.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
 
