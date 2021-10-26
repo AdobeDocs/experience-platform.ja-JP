@@ -4,8 +4,7 @@ title: UI での汎用 REST API ソース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して汎用 REST API ソース接続を作成する方法を説明します。
-exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 1a9c4d5ba3ba9201378e78c0e92dea5101668a24
+source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 8%
