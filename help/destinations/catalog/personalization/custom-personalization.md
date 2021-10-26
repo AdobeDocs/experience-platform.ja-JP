@@ -3,7 +3,7 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続（ベータ版）
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先では、ユーザープロファイルのセグメントメンバーシップに基づいて、リアルタイムの 1 対 1 のパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
+source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 8%
@@ -22,11 +22,11 @@ ht-degree: 8%
 
 ## 前提条件 {#prerequisites}
 
-この統合は、[Adobe Experience Platform Web SDK](../../../edge/home.md) によって実行されます。 この宛先を使用するには、この SDK を使用する必要があります。
+この統合は、 [Adobe Experience Platform Web SDK](../../../edge/home.md). この宛先を使用するには、この SDK を使用する必要があります。
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルリクエスト**  — 単一のプロファイルに対して、カスタムパーソナライゼーションの宛先にマッピングされるすべてのセグメントを要求します。異なる [Adobeデータ収集データストリーム ](../../../edge/fundamentals/datastreams.md) に対して、異なるカスタムパーソナライゼーションの宛先を設定できます。
+**プロファイルリクエスト** ：単一のプロファイルに対して、カスタムパーソナライゼーションの宛先にマッピングされるすべてのセグメントを要求します。 様々なカスタムパーソナライゼーションの宛先を様々な [Adobeデータ収集データストリーム](../../../edge/fundamentals/datastreams.md).
 
 ## ユースケース {#use-cases}
 
@@ -44,26 +44,26 @@ ht-degree: 8%
 
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、[ 宛先の設定に関するチュートリアル ](../../ui/connect-destination.md) で説明されている手順に従います。
+この宛先に接続するには、 [宛先の設定チュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-[ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
+While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 * **[!UICONTROL 統合エイリアス]**:この値は、JSON オブジェクト名としてExperience PlatformWeb SDK に送信されます。
-* **[!UICONTROL データストリーム ID]**:これにより、ページへの応答に含まれるデータ収集データストリームを決定します。ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。 詳しくは、[ データストリームの設定 ](../../../edge/fundamentals/datastreams.md) を参照してください。
+* **[!UICONTROL Datastream ID]**:これにより、ページへの応答に含まれるデータ収集データストリームを決定します。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/fundamentals/datastreams.md) を参照してください。
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-この宛先に対するオーディエンスセグメントをアクティブ化する手順については、[ プロファイルリクエストの宛先へのプロファイルとセグメントのアクティブ化 ](../../ui/activate-profile-request-destinations.md) を参照してください。
+読み取り [プロファイルリクエストの宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-profile-request-destinations.md) を参照してください。
 
 ## エクスポートされたデータ {#exported-data}
 
-[Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイする場合は、[send event complete](../../../edge/extension/event-types.md) 機能を使用します。カスタムコードアクションには、書き出されたデータを確認するための `event.destinations` 変数が含まれます。
+を [Adobeタグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベント完了の送信](../../../edge/extension/event-types.md) 機能とカスタムコードアクションには、 `event.destinations` 変数を使用して、書き出されたデータを確認できます。
 
-`event.destinations` 変数の値の例を次に示します。
+次に、 `event.destinations` 変数：
 
 ```
 [
@@ -85,7 +85,7 @@ ht-degree: 8%
 ]
 ```
 
-[Adobeタグ ](../../../tags/home.md) を使用してExperience PlatformWeb SDK をデプロイしない場合は、[ イベントからの応答の処理 ](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認します。
+を [Adobeタグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベントからの応答の処理](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認できます。
 
 Adobe Experience Platformからの JSON 応答を解析して、Adobe Experience Platformと統合しているアプリケーションの対応する統合エイリアスを見つけることができます。 セグメント ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有に見えるサンプルを示します。
 
@@ -102,15 +102,15 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
-    if(results.destinations) { // Looking to see if the destination results are there
+}).then(function(result) {
+    if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -124,4 +124,4 @@ alloy("sendEvent", {
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] の宛先はすべて、データを処理する際のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform] によるデータガバナンスの強制方法について詳しくは、「[ データガバナンスの概要 ](../../../data-governance/home.md)」を参照してください。
+すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制し、 [データガバナンスの概要](../../../data-governance/home.md).
