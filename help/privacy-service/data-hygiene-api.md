@@ -1,13 +1,13 @@
 ---
 title: データ衛生 API（アルファ）
-description: Adobe Experience Platformで顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
+description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
@@ -15,19 +15,19 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->データ衛生 API は現在アルファ状態で、お客様の組織がまだアクセスできない可能性があります。 このドキュメントで説明する機能は変更される場合があります。
+>データ衛生 API は現在アルファ版のため、お客様の組織はまだアクセスできない可能性があります。このドキュメントで説明されている機能は変更されることがあります。
 
-データの衛生管理 API を使用すると、Adobe Experience Platformに保存された顧客の個人データをプログラムで修正または削除できます。 Privacy ServiceAPI とは異なり、これらの操作は法的なプライバシー規制に関連付ける必要はなく、純粋にデータをクリーンで正確に保つために使用できます。
+データ衛生 API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。Privacy Service API とは異なり、これらの操作は法的なプライバシー規制に関連付ける必要はなく、純粋にデータをクリーンで正確に保つために使用できます。
 
 この API には、次のルートパスからアクセスできます。`https://platform.adobe.io/data/core/hygiene/`
 
 ## はじめに
 
-この節では、データ衛生 API を呼び出す前に知っておく必要がある中心概念の概要を説明します。
+この節では、データ衛生 API を呼び出す前に知っておく必要がある基本概念の概要を説明します。
 
 ### 必須ヘッダーの値の収集
 
-データ衛生 API への呼び出しをおこなうには、まず認証資格情報を収集する必要があります。 これらは、Privacy ServiceAPI へのアクセスに使用される資格情報と同じです。 Privacy ServiceAPI の [ 開始ガイド ](./api/getting-started.md) に従って、次に示すように、データ衛生 API に必要な各ヘッダーの値を生成します。
+データ衛生 API を呼び出すには、まず認証資格情報を収集する必要があります。これらは、Privacy Service API へのアクセスに使用される資格情報と同じです。Privacy Service API の[開始ガイド](./api/getting-started.md)に従って、次に示すように、データ衛生 API に必要な各ヘッダーの値を生成します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -39,11 +39,11 @@ ht-degree: 18%
 
 ### API 呼び出し例の読み取り
 
-このドキュメントでは、API 呼び出しの例を示し、リクエストの形式を設定する方法を示します。 ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience PlatformAPI の入門ガイドの [API 呼び出し例 ](../landing/api-guide.md#sample-api) の読み方に関する節を参照してください。
+このドキュメントでは、リクエストの形式を示すために、API 呼び出しの例を提供しています。サンプル API 呼び出しのドキュメントで使用されている規則については、Experience Platform API の開始ガイドの[API 呼び出し例の読み方](../landing/api-guide.md#sample-api)に関する節を参照してください。
 
 ## 削除ジョブの作成
 
-削除ジョブを作成するには、ジョブリクエストをPOSTします。
+POST リクエストをおこなうことで、削除ジョブを作成できます。
 
 **API 形式**
 
@@ -53,7 +53,7 @@ POST /jobs
 
 **リクエスト**
 
-リクエストペイロードの構造は、Privacy ServiceAPI](./api/privacy-jobs.md#access-delete) の [ 削除リクエストの構造と同じです。 この配列には、削除するデータを持つユーザーを表すオブジェクトを持つ `users` 配列が含まれます。
+リクエストペイロードは、](./api/privacy-jobs.md#access-delete)Privacy Service API の削除リクエスト[と同様の構造になっています。これには、データが削除されるユーザーをオブジェクトが表す `users` 配列が含まれています。
 
 ```shell
 curl -X POST \
@@ -107,8 +107,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `companyContexts` | 組織の認証情報を含む配列。次のプロパティを持つ 1 つのオブジェクトを含める必要があります。 <ul><li>`namespace`:に設定する必要がありま `imsOrgID`す。</li><li>`value`:お使いの IMS Org ID。これは `x-gw-ims-org-id` ヘッダーで指定された値と同じです。</li></ul> |
-| `users` | 削除する情報を持つユーザーが少なくとも 1 人コレクションを含む配列。 各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。この値に対して一意で、容易に識別できる文字列を選択し、後で参照または参照できるようにすることをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。次の 1 つの文字列値を含む必要があります。`delete`.</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`:ID に関 [連](../identity-service/namespaces.md) 付けられた ID 名前空間。これは、Platform で認識される [ 標準の名前空間 ](./api/appendix.md#standard-namespaces) か、組織で定義されるカスタム名前空間にすることができます。 使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`:ID 値。</li><li>`type`:グローバルに認識される `standard` 名前空間を使用する場合、または組織で定 `custom` 義された名前空間を使用する場合は、をに設定する必要があります。</li></ul></li></ul> |
+| `companyContexts` | 組織の認証情報を含む配列。次のプロパティのオブジェクトを 1 つ含める必要があります。 <ul><li>`namespace`：`imsOrgID` に設定する必要があります。</li><li>`value`：IMS 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで提供される値と同じです。</li></ul> |
+| `users` | 情報を削除する 1 人以上のユーザーのコレクションを含む配列。各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。後で参照または検索できるように、この値には一意で簡単に識別できる文字列を選択することをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。単一の文字列値「`delete`」を含む必要があります。</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`：ID に関連付けられた [ID 名前空間](../identity-service/namespaces.md)。これは、Platform で認識される[標準の名前空間](./api/appendix.md#standard-namespaces)にすることも、組織で定義されるカスタム名前空間にすることもできます。使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`：ID 値。</li><li>`type`：グローバルに認識された名前空間を使用している場合は `standard`、組織で定義されている名前空間を使用している場合は `custom` に設定する必要があります。</li></ul></li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

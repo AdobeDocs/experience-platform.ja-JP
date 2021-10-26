@@ -1,12 +1,12 @@
 ---
 keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結合ポリシー；リアルタイム顧客プロファイル
 title: アカウントプロファイル UI ガイド
-description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
+description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
 source-wordcount: '1191'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. 各ライセンスタイプで使用できる機能など、リアルタイム CDP の詳細については、まず「[ リアルタイム CDP の概要 ](../overview.md)」を参照してください。
+>アカウントプロファイルは、Real-time Customer Data Platform B2B Edition をご利用のお客様のみが利用できます。 各ライセンスタイプで使用できる機能など、Real-time CDP について詳しくは、まず[Real-time CDP の概要](../overview.md)を参照してください。
 
-Account profiles enable you to unify account information from multiple sources. このアカウントの統合表示により、様々なマーケティングチャネルや、顧客アカウント情報の保存に組織が現在使用している様々なシステムのデータが統合されます。 このドキュメントでは、Adobe Experience Platformユーザーインターフェイス (UI) で使用できるリアルタイム CDP、B2B エディション機能を使用してアカウントプロファイルを操作する方法について説明します。
+アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 この統一されたアカウントビューは、多くのマーケティングチャネルや、顧客のアカウント情報を保存するために組織が現在使用している多様なシステムからのデータを統合します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイス（UI）で使用できる Real-time CDP、B2B Edition 機能を使用してアカウントプロファイルを操作するためのガイドです。
 
 ## アカウントプロファイルの参照
 
-To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation.
+アカウントプロファイルを参照するには、まず左のナビゲーションで「[!UICONTROL アカウント] 」の下の「**[!UICONTROL プロファイル]**」を選択します。
 
 ![](images/b2b-account-browse.png)
 
@@ -32,88 +32,88 @@ To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [
 
 ![](images/b2b-account-browse-by.png)
 
-### [!UICONTROL  接続されたエンタープライズソース ] で参照
+### [!UICONTROL 接続されたエンタープライズソース]で参照
 
-接続されたエンタープライズソースでアカウントプロファイルを参照するには、**[!UICONTROL 「]** で参照」ドロップダウンから「**[!UICONTROL 接続されたエンタープライズソース]**」を選択し、「**[!UICONTROL ソース]**」フィールドの横のセレクターボタンを使用して接続されたソースを選択します。
+接続しているエンタープライズソース別にアカウントプロファイルを参照するには、「**[!UICONTROL 参照]**」ドロップダウンから「**[!UICONTROL 接続しているエンタープライズソース]**」を選択し、「**[!UICONTROL ソース]**」フィールドの横のセレクターボタンを使用して接続しているソースを選択します。
 
 ![](images/b2b-account-browse.png)
 
-**[!UICONTROL ソースを選択]** ダイアログが開き、組織が確立した接続に基づいてソースを選択できます。
+これにより、「**[!UICONTROL ソースを選択]**」ダイアログが開き、組織が確立した接続に基づいてソースを選択できます。
 
 >[!NOTE]
 >
->同じサービスプロバイダー (Marketoなど ) に対して複数のソースが設定されている場合があるので、接続名、ソースシステム、ソースシステムの各インスタンスを確認し、正しいソースインスタンスで検索していることを確認することが重要です。
+>組織は、同じサービスプロバイダー（Marketo など）に対して複数のソースを設定することがあります。そのため、接続名、ソースシステム、およびソースシステムインスタンスを確認して、正しいソースインスタンスで検索していることを確認することが重要です。
 
-エンタープライズソースの接続について詳しくは、[ ソースの概要 ](../sources/sources-overview.md) を参照してください。
+エンタープライズソースの接続について詳しくは、[ソースの概要](../sources/sources-overview.md)を参照してください。
 
 ![](images/b2b-account-select-source.png)
 
-You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
+接続名の横のラジオボタンを選択してソースを選び、「**[!UICONTROL 選択]**」を使用して「[!UICONTROL 参照]」タブに戻ることができます。
 
-With a source selected, you must now enter an **[!UICONTROL Account ID]** related to the source. For example, selecting a Salesforce source would require you to enter an account ID from the Salesforce instance in order to view the account profile tied to that ID.
+ソースを選択した状態で、ソースに関連する&#x200B;**[!UICONTROL アカウント ID]** を入力する必要があります。例えば、Salesforce ソースを選択すると、その ID に関連付けられたアカウントプロファイルを表示するために、Salesforce インスタンスからアカウント ID を入力する必要があります。
 
 >[!NOTE]
 >
->Marketoアカウント ID には、参照可能な 2 つのアカウントテーブルがあるので、正しいアカウントを表示するために特定の構文を使用する必要があります。
+>Marketo のアカウント ID については、参照できるアカウントテーブルが 2 つあるため、正しいアカウントを確実に表示するには、特定の構文を使用する必要があります。
 >
->最も一般的な標準構文は、`.mkto_org` の後に付いたMarketoアカウント ID です（例：`1234567.mkto_org`）。 Marketo Account-Based Marketing customers may have additional values that can be found using the Marketo account ID appended by `.mkto_account`. If you are unsure of which syntax to use, please check with your Marketo administrator.
+>最も一般的な標準構文は、`.mkto_org` が付加された Marketo アカウント ID です（例：`1234567.mkto_org`）。Marketo アカウントベースのマーケティングのお客様は、`.mkto_account` が付加された Marketo アカウント ID を使用して見つけることができる追加の値を持っている場合があります。使用する構文がわからない場合は、Marketo 管理者に確認してください。
 
 ![](images/b2b-account-browse-id.png)
 
-### Browse by [!UICONTROL Others]
+### [!UICONTROL その他]で参照
 
-リアルタイム CDP、B2B エディションは、表示するアカウントの **[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力でき、直接検索を実行できます。 By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
+Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力できるようにすることで、直接検索を実行する機能をサポートしています。ソース名とインスタンスを直接入力することで、Experience Platform が正しいアカウントプロファイルデータを検索して表示するのに必要なコンテキストを提供します。
 
-直接検索を実行する機能は、ソースからデータに直接接続できない状況で役立ちます。 For example, if your organization has data governance policies in place that prevent connecting directly to a CRM, you can export that data into a cloud storage system and then ingest it into Experience Platform.
+直接検索を実行する機能は、ソースに直接データを接続できない状況下で役立ちます。例えば、組織で CRM への直接接続を妨げるデータガバナンスポリシーが設定されている場合、そのデータをクラウドストレージシステムに書き出してから、Experience Platform に取り込むことができます。
 
-別の例として、システムを離れて Platform に入る間に、データに対して変換を実行する場合があります。 You can use the direct lookup functionality to provide context for the data (such as specifying that it is Marketo data, despite the fact that it is coming from an Amazon S3 bucket, for example) so that the system knows where to look for, and how to properly render, the data.
+別の例として、データがシステムを離れてから Platform に入るまでの間に、データに対して変換を実行している場合があります。直接検索機能を使用して、データのコンテキストを提供できます ( 例えば、Amazon S3 バケットからのデータであるにもかかわらず、データが Marketo データであることを指定するなど )。これにより、データの検索場所と適切なレンダリング方法がわかります。
 
-直接参照を開始するには、**[!UICONTROL 「&lt;a3/で参照」ドロップダウンから「**[!UICONTROL  その他 ]**」を選択し、表示するアカウントの**[!UICONTROL  ソース名 ]**、**[!UICONTROL  ソースインスタンス ]**、**[!UICONTROL  アカウント ID ]**を入力します。]**
+直接検索を開始するには、「**[!UICONTROL 参照方法]**」ドロップダウンから「**[!UICONTROL その他]**」を選択し、表示するアカウントの&#x200B;**[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力します。
 
 ![](images/b2b-account-browse-adhoc.png)
 
 ## アカウントプロファイルの詳細の表示
 
-After using the **[!UICONTROL Browse]** tab to locate an account profile, selecting the **[!UICONTROL Profile ID]** opens the **[!UICONTROL Detail]** tab for the account profile. **[!UICONTROL 「詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々のアカウントを単一の表示にできます。 これには、基本属性やソーシャルメディアデータなどのアカウントの詳細が含まれます。
+「**[!UICONTROL 参照]**」タブを使用してアカウントプロファイルを検索した後、「**[!UICONTROL プロファイル ID]**」を選択すると、アカウントプロファイルの「**[!UICONTROL 詳細]**」タブが開きます。「**[!UICONTROL 詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々のアカウントの単一のビューを形成したものです。これには、基本属性やソーシャルメディアデータなどのアカウントの詳細が含まれます。
 
-表示されるデフォルトのフィールドは、組織レベルで変更して、優先するアカウントプロファイル属性を表示することもできます。
+表示されるデフォルトのフィールドは、組織レベルで変更して、優先アカウントプロファイル属性を表示することもできます。
 
 >[!NOTE]
 >
->顧客プロファイルにも同様の機能があり、属性の追加と削除、パネルのサイズ変更などの手順を含むステップバイステップガイドが作成されました。 詳しくは、[ プロファイルの詳細カスタマイズガイド ](../../profile/ui/profile-customization.md) を参照してください。
+>同様の機能が顧客プロファイルで利用可能で、属性の追加と削除、パネルのサイズ変更などの手順が記載されたステップバイステップガイドが作成されています。詳しくは、[プロファイルの詳細カスタマイズガイド](../../profile/ui/profile-customization.md)を参照してください。
 
 ![](images/b2b-account-details.png)
 
-利用可能なタブを選択すると、アカウントに関する追加の詳細を表示できます。 これらのタブには、属性、ユーザー、営業機会タブが含まれ、企業システム全体のアカウントに関連する営業機会と営業機会を示します。 各タブについて詳しくは、次の節を参照してください。
+使用可能な別のタブを選択すると、アカウントに関連する追加の詳細を表示できます。これらのタブには、属性、人物、企業システム全体でそのアカウントに関連するオープンな機会とクローズされた機会を表示する機会タブが含まれます。各タブについて詳しくは、次の節を参照してください。
 
 ## 「属性」タブ
 
-「**[!UICONTROL 属性]**」タブには、アカウントに関連するすべてのレコード情報が表示されます。 これには、複数のソースから得られる属性データが含まれ、結合後にアカウントの単一の表示が形成されます。
+「**[!UICONTROL 属性]**」タブには、アカウントに関連するすべてのレコード情報が一覧表示されます。これには、アカウントの単一のビューを形成するために結合された複数のソースからの属性データが含まれます。
 
-検索バーを使用して、リスト内のデータを表示できるだけでなく、特定の属性を検索したり、レコードデータを JSON 形式で表示したりできます。
+リスト内のデータを表示できることに加えて、検索バーを使用して特定の属性を検索したり、レコードデータを JSON 形式で表示したりできます。
 
 ![](images/b2b-account-attributes.png)
 
-## 「人」タブ
+## 「人物」タブ
 
-「**[!UICONTROL 人]**」タブには、アカウントに関連付けられた個々の人のリストが表示されます。 これらのユーザーは、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-time CDP, B2B Edition では、1 つのリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
+「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個々の人物のリストが表示されます。これらの人物は、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-time CDP B2B Edition では、単一のリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
 
 >[!NOTE]
 >
->The [!UICONTROL People] tab displays a list of up to 25 people associated with the account. For accounts with more than 25 associated people, the system shows a random sampling of 25 records.
+>「[!UICONTROL 人物]」タブには、アカウントに関連付けられた最大 25 人の人物のリストが表示されます。関連する人物が 25 人を超えるアカウントの場合、システムは 25 件のレコードのランダムサンプリングを表示します。
 
-In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-time CDP, B2B Edition](../profile/profile-browse.md).
+連絡先の情報のスナップショットを表示するほか、リストされている各ユーザーには&#x200B;**[!UICONTROL プロファイル ID]** も含まれています。これは、その個人のリアルタイム顧客プロファイルを参照できるクリック可能なリンクです。アカウントに関連する個々の顧客プロファイルの表示について詳しくは、[Real-time CDP B2B Edition でのプロファイルの参照](../profile/profile-browse.md)に関するガイドを参照してください。
 
 ![](images/b2b-account-people.png)
 
-## 「オポチュニティ」タブ
+## 「機会」タブ
 
-「**[!UICONTROL Opportunity]**」タブには、アカウントに関連するオープン・オポチュニティとクローズ・オポチュニティの情報が表示されます。 These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
+「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する情報が表示されます。これらの機会は複数のソースからExperience Platform に取り込むことができますが、Real-time CDP B2B エディションを使用すると、マーケティング担当者は、これらの機会をすべて 1 か所で簡単に確認できます。
 
 >[!NOTE]
 >
->「[!UICONTROL Opportunity]」タブには、アカウントに関連付けられているオポチュニティのリストが最大 25 個表示されます。 関連するオポチュニティが 25 件を超えるアカウントの場合、25 件のレコードのランダムサンプリングが表示されます。
+>「[!UICONTROL 機会]」タブには、アカウントに関連付けられている機会のリストが最大 25 個表示されます。関連する機会が 25 件を超えるアカウントの場合、システムは 25 件のレコードのランダムサンプリングを表示します。
 
-各オポチュニティには、オポチュニティの名前、その金額、ステージ、オポチュニティがオープン、クローズ、ウォン、ロストのどれであるかなどの情報が含まれます。
+各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 
 ![](images/b2b-account-opportunities.png)

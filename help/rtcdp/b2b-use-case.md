@@ -6,7 +6,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 96%
 Real-time Customer Data Platform B2B Edition は、既存の Real-time CDP および Adobe Experience Platform 製品を拡張して、B2B データおよびワークフローをサポートします。このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
 
 - 様々なサイロ化されたデータソースからの個人データとアカウントデータを組み合わせて、顧客の理解を深め、より正確なセグメント化を可能にする包括的なビューを作成します。詳しくは、様々な B2Bソースで使用するための [XDM スキーマ関係の作成](./schemas/b2b.md)に関するドキュメントを参照してください。
-- 関連するエンティティの属性に基づいてオーディエンスをセグメント化します。これには、アカウント、オポチュニティ、キャンペーンおよびマーケティングリストが含まれます。セグメントは、ユーザー属性とエクスペリエンスイベントだけに限定されなくなりました。B2B 固有のオーディエンスの作成例の詳細については、[B2B のセグメント化に関するドキュメント ](./segmentation/b2b.md) を参照してください。
+- 関連するエンティティの属性に基づいてオーディエンスをセグメント化します。これには、アカウント、オポチュニティ、キャンペーンおよびマーケティングリストが含まれます。セグメントは、ユーザー属性とエクスペリエンスイベントだけに限定されなくなりました。B2B 固有のオーディエンスを作成するその他の例については、[B2B セグメント化のドキュメント](./segmentation/b2b.md)を参照してください。
 - 複数のアカウントに関連する 1 ユーザーのユースケースをネイティブにサポートします。
 
 ## 使用例
@@ -84,7 +84,7 @@ CRM1 からの B2B データ（人物、アカウント、機会およびアク�
 - 様々なマーケティングイニシアチブのために、この集計データを使用して一意のセグメントを作成します。この例では、セグメントは次のようなすべての人物を検索します。
 
    - すべてのアカウントで、関連する商談の価値が 100 万ドルを超える
-   - AND
+   - おび
    - 先月製品ページにアクセスしました
 
 - Bodea の新しいマーケティングキャンペーンの最も効率的な受け手となるオーディエンスを作成します。この例では、RT-CDP B2B Edition は、マーケティング担当者がマーケティングキャンペーンの適切なターゲットとして `p2@townsend.com` を特定するのに役立ちます。
@@ -98,9 +98,9 @@ Marketo Engage と LinkedIn の宛先を使用することにより、Bodea は�
 B2B 固有の機能の理解を深めるために、次のドキュメントをお勧めします。
 
 <!-- PLACEHOLDER Link to B2B tutorial required  -->
-- [Real-time Customer Data Platform B2B Edition のソース](./sources/b2b.md)
+- [Real-time Customer Data Platform B2B エディションのソース](./sources/b2b.md)
 - [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
 - [B2B セグメント化の例](./segmentation/b2b.md)
 - [アカウントプロファイルの概要](./accounts/account-profile-overview.md)
-- [Real-time Customer Data Platform B2B Edition の宛先](./destinations/b2b.md)
+- [Real-time Customer Data Platform B2B エディションの宛先](./destinations/b2b.md)
 - [LinkedIn でマッチしたオーディエンスの宛先を設定](../destinations/catalog/social/linkedin.md)

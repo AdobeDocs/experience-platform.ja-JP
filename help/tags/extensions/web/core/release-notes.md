@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-## 2021 年 10 月 9 日
+## 2021年10月8日（PT）
 
 v3.2.2
 
-* 使用可能なすべての演算子に対して、条件付き値データ要素の JSON スキーマを修正しました。
-* https://github.com/adobe/reactor-extension-core/issues/64を修正します。
+* 使用可能なすべての演算子について、条件付き値データ要素の JSON スキーマを修正します。
+* https://github.com/adobe/reactor-extension-core/issues/64 を修正します。
 
 ## 2021 年 9 月 23 日（PT）
 
