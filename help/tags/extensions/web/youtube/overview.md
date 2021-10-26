@@ -2,7 +2,7 @@
 title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 100%
@@ -103,7 +103,7 @@ document.onreadystatechange = function () {
 ビデオ情報の値を連結するには、「Video Meta Data」という新しいデータ要素を作成し、プログラムしてすべてのビデオデータ要素（上記を参照）を取り込み、それらをまとめます。 次に例を示します。
 
 ```javascript
-var r = ””;
+var r = [];
 
 r.push('YouTube'); //Player Name
 r.push(_satellite.getVar('Video ID'));

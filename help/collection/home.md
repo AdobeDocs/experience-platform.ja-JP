@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 100%
+source-wordcount: '357'
+ht-degree: 96%
 
 ---
 
@@ -28,9 +28,14 @@ Experience Platform が提供するデータ収集テクノロジーは、取り
 * [タグ](../tags/home.md)
 * [イベントの転送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Adobe Experience Platform モバイル SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe エクスペリエンス Platform デバッガ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [エクスペリエンスデータモデル（XDM）](../xdm/home.md)
+* [Adobe Experience Platform ID サービス](../identity-service/home.md)
 
+<!-- (Outdated terminology)
 ![](./images/Collection.png)
+-->
 
 ## 簡素な実装とクライアントサイドのパフォーマンスの高速化
 
@@ -40,7 +45,9 @@ Adobe Experience Platform Web およびモバイル SDK では、すべてのア
 
 Platform Edge Network は、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーのネットワークです。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../edge/fundamentals/datastreams.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
 
+<!-- (Outdated terminology)
 ![](./images/deploy.png)
+-->
 
 >[!NOTE]
 >
@@ -50,4 +57,6 @@ Platform Edge Network は、データを大規模に受信および処理でき�
 
 [Adobe Experience Platform のイベント転送](../tags/ui/event-forwarding/overview.md)では、任意の Platform データストリームを利用できます。クライアントデバイスにサードパーティのコードを追加することなく、アドビ以外の任意の宛先に対して、非常に少ない遅延でデータを変換、拡張、および送信することができるため、より高速で安全なデータ収集と配信が実現します。
 
+<!-- (Outdated terminology)
 ![](./images/launch.png)
+-->
