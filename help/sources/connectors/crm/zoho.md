@@ -1,11 +1,10 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題。Zoho CRM; Zoho crm;Zoho;zoho
+keywords: Experience Platform；ホーム；人気のあるトピック；Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Zoho CRM ソースコネクタの概要
 topic-legacy: overview
-description: Api を使用して、またはユーザーインターフェイスを使用して、Zoho CRM を Adobe エクスペリエンスプラットフォームに接続する方法について説明します。
-exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: 7a15090d8ed2c1016d7dc4d7d3d0656640c4785c
+description: API またはユーザーインターフェイスを使用して Zoho CRM をAdobe Experience Platformに接続する方法を説明します。
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 3%
@@ -16,49 +15,49 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->[!DNL Zoho CRM]ソースはベータ版です。[ ](../../home.md#terms-and-conditions) ベータ版のコネクタの使用について詳しくは、ソースの概要を参照してください。
+>10. [!DNL Zoho CRM] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベルのコネクタの使用に関する詳細
 
-Adobe エクスペリエンスプラットフォームでは、ingested を使用して、外部ソースからデータを取得することができます。また、サービスを使用した受信データを構造化、ラベル付け、拡張する機能が提供され [!DNL Platform] ます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込みながら、 [!DNL Platform] サービス アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-エクスペリエンスプラットフォームは、サードパーティの CRM システムからの ingesting データのサポートを提供します。 CRM プロバイダーのサポートが含ま [!DNL Zoho CRM] れています。
+Experience Platformは、サードパーティの CRM システムからデータを取り込む機能を提供します。 CRM プロバイダーのサポートには以下が含まれます。 [!DNL Zoho CRM].
 
 ## IP アドレス許可リスト
 
-ソースコネクタを使用する前に、許可リストに IP アドレスのリストが追加されている必要があります。 使用している地域に固有の IP アドレスを許可リストに追加していないと、ソースを使用しているときにエラーが発生したり、パフォーマンスが低下することがあります。 [詳細については、IP アドレス許可リストページを参照してください ](../../ip-address-allow-list.md) 。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、 [IP アドレス許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
-## の認証資格情報を取得します。 [!DNL Zoho CRM]
+## の認証資格情報の取得 [!DNL Zoho CRM]
 
-アカウントからプラットフォームにデータを取り込む前に [!DNL Zoho CRM] 、ソースを認証するために、まず資格情報を取得する必要があり [!DNL Zoho CRM] ます。 クライアント ID、クライアントシークレット、アクセストークン、および更新トークンを取得するには、次の手順を実行します。
+データを [!DNL Zoho CRM] アカウントから Platform にアクセスする場合、まず資格情報を取得して、 [!DNL Zoho CRM] ソース。 次の手順に従って、クライアント ID、クライアントの秘密鍵、アクセストークン、更新トークンを取得します。
 
-### アプリケーションの登録
+### アプリの登録
 
-認証資格情報を取得する最初の手順は、developer console を使用してアプリケーションを登録することです [[!DNL Zoho CRM]  ](https://accounts.zoho.com/) 。 アプリケーションを登録するには、次のいずれかのクライアントタイプを選択する必要があります。 Java Script、web ベース、mobile、非ブラウザーモバイルアプリケーション、または自己クライアントです。 次に、アプリケーションの名前に値、web ページの URL、および許可されたリダイレクト URI を指定し [!DNL Zoho CRM] ます。これを使用して、グラントトークンを使ったリダイレクトを行うことができます。
+認証資格情報を取得する最初の手順は、 [[!DNL Zoho CRM] 開発者コンソール](https://accounts.zoho.com/). アプリケーションを登録するには、次の中からクライアントタイプを選択する必要があります。Java Script、Web ベース、モバイル、ブラウザー以外のモバイルアプリケーション、またはセルフクライアント。 次に、アプリケーションの名前、Web ページの URL、認証済みのリダイレクト URI の値を指定します。 [!DNL Zoho CRM] その後、を使用して、付与トークンでリダイレクトできます。
 
-登録が成功した場合、クライアント ID とクライアントシークレットが返されます。
+登録が成功すると、クライアント ID とクライアントの秘密鍵が返されます。
 
-### 認証要求の作成
+### 認証リクエストの作成
 
-次に、 [ ](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) web ベースのアプリケーションまたはセルフクライアントを使用して認証要求を作成する必要があります。 承認要求によって許可トークンが返されます。これにより、アクセストークンを取得することができます。
+次に、 [認証要求](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) web ベースのアプリケーションまたはセルフクライアントを使用する。 認証リクエストは付与トークンを返し、アクセストークンを取得できます。
 
-認証要求を作成する場合は、 **スコープとアクセスタイプの両方の値を入力する必要があり** **** ます。 スコープについて詳しくは、このドキュメントを参照してください [[!DNL Zoho CRM]  ](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) **。アクセスタイプは、** 常にに設定されている必要があり `offline` ます。
+承認リクエストを作成する場合、 **スコープ** および **アクセスタイプ**. 詳しくは、 [[!DNL Zoho CRM] 文書](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) スコープの詳細は、 **アクセスタイプ** は常に `offline`.
 
-### アクセストークンと更新トークンの生成
+### アクセスおよび更新トークンの生成
 
-許可トークンを取得したら、 [ ](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) `{ACCOUNTS_URL}/oauth/v2/token` クライアント ID、クライアントシークレット、許可トークン、およびリダイレクト URI を提供するために POST 要求を行うことによって、アクセスと更新トークンを生成できます。 この手順では、パラメーターとしてを指定し、その値をに設定する必要もあり `grant_type` `"authorization_code"` ます。
+付与トークンを取得したら、 [アクセスおよび更新トークン](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) ～にPOSTを要求して `{ACCOUNTS_URL}/oauth/v2/token` クライアント ID、クライアントの秘密鍵、付与トークン、リダイレクト URI を指定する際に使用します。 この手順の間、 `grant_type` をパラメーターとして指定し、値を `"authorization_code"`.
 
-要求を完了すると、アクセスと更新トークンが返されます。これにより認証に使用することができます。
+リクエストが成功すると、アクセストークンと更新トークンが返され、これを使用して認証できます。
 
-資格情報を取得するための詳細な手順については、認証ガイドを参照してください [[!DNL Zoho CRM]  ](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html) 。
+資格情報の取得に関する詳細な手順については、 [[!DNL Zoho CRM] 認証ガイド](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## [!DNL Zoho CRM]Api を [!DNL Platform] 使用したへの接続
+## 接続 [!DNL Zoho CRM] を [!DNL Platform] API の使用
 
-以下は、 [!DNL Zoho CRM] api またはユーザーインターフェイスを使用してプラットフォームに接続する方法を示しています。
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Zoho CRM] API またはユーザーインターフェイスを使用して Platform に送信するには：
 
-- [ [!DNL Zoho CRM] フローサービス API を使用したベース接続の作成](../../tutorials/api/create/crm/zoho.md)
-- [フローサービス API を使用して、CRM ソースのデータ構造とコンテンツを表示します。](../../tutorials/api/explore/crm.md)
-- [フローサービス API を使用した CRM ソース用の流れ図の作成](../../tutorials/api/collect/crm.md)
+- [の作成 [!DNL Zoho CRM] フローサービス API を使用したベース接続](../../tutorials/api/create/crm/zoho.md)
+- [フローサービス API を使用した CRM ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/crm.md)
+- [フローサービス API を使用した CRM ソースのデータフローの作成](../../tutorials/api/collect/crm.md)
 
-## [!DNL Zoho CRM]UI を使用してに接続し [!DNL Platform] ます。
+## 接続 [!DNL Zoho CRM] を [!DNL Platform] UI の使用
 
-- [ [!DNL Zoho CRM] UI でのソース接続の作成](../../tutorials/ui/create/crm/zoho.md)
-- [UI での CRM ソース接続用の流れ図の作成](../../tutorials/ui/dataflow/crm.md)
+- [の作成 [!DNL Zoho CRM] UI でのソース接続](../../tutorials/ui/create/crm/zoho.md)
+- [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)
