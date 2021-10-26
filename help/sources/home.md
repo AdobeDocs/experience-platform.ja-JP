@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ソースコネクタ；ソースコネクタ；ソース；データソース；データソース；データソース；データソース接続
+keywords: エクスペリエンス Platform、home、ポピュラーなトピック、ソースコネクター、ソースコネクター、ソース、データソース、データソース、データソース接続、データソース接続
 solution: Experience Platform
 title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 56%
@@ -16,7 +16,7 @@ ht-degree: 56%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service] は、Platform 内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスと RESTful API を提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Flow Service] は、多種多様なプラットフォーム内の顧客データを収集して集中管理するために使用されます。 このサービスでは、ユーザーインターフェイスと RESTful API を使用して、様々なデータプロバイダーへのソース接続を容易に設定できるようになっています。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業をおこなうことができます。
 
@@ -26,27 +26,27 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 
 ### アドビアプリケーション
 
-Experience Platformを使用すると、Adobe Analytics、Adobe Audience Managerなどの他のAdobeアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームを使用すると、adobe アナリティクスや Adobe Audience Manager など、他の Adobe アプリケーションからデータを ingested することができます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
-- [UI でのAdobe Audience Managerソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications データソース接続の概要](connectors/adobe-applications/classifications.md)
-- [UI でのAdobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics Report Suite データソース接続の概要](connectors/adobe-applications/analytics.md)
-- [UI でのAdobe Analyticsソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UI での Adobe オーディエンス Manager ソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe アナリティクス分類データソース接続の概要](connectors/adobe-applications/classifications.md)
+- [UI での Adobe アナリティクス分類データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Adobe アナリティクスレポートスイートデータソース接続の概要](connectors/adobe-applications/analytics.md)
+- [UI での Adobe アナリティクスソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UI での顧客属性ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
-- [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [ [!DNL Marketo Engage] UI でのソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising Cloud
 
-Experience Platformは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、サードパーティの広告システムからの ingesting データのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) コネクタ
 
 ### クラウドストレージ
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。Ingested データは、XDM、XDM Parquet、または区切られた形式にフォーマットすることができます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Azure Data Lake Storage Gen2] コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] コネクタ](connectors/cloud-storage/blob.md)
@@ -64,13 +64,14 @@ Experience Platformは、サードパーティの広告システムからデー�
 
 ### 顧客関係管理（CRM）
 
-CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Experience Platformは、[!DNL Microsoft Dynamics 365] と [!DNL Salesforce] から CRM データを取り込む機能を提供します。 詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。エクスペリエンスプラットフォームは、およびからの ingesting CRM データのサポートを提供し [!DNL Microsoft Dynamics 365] [!DNL Salesforce] ます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Microsoft Dynamics] コネクタ](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] コネクタ](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### 顧客の成功
+### お客様の成功
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
@@ -102,13 +103,13 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### e コマース
 
-Experience Platformは、サードパーティの e コマースシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、サードパーティの電子商取引システムからのデータの ingesting をサポートします。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### ローカルシステム
 
-Experience Platformは、ローカルシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、ローカルシステムからのデータの ingesting をサポートします。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md)
 
@@ -121,21 +122,21 @@ Experience Platform は、サードパーティのマーケティング自動化
 - [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### 支払
+### 行わ
 
-Experience Platformは、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、サードパーティの支払システムからのデータの ingesting をサポートします。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL PayPal] コネクタ](connectors/payments/paypal.md)
 
 ### ストリーミング
 
-Experience Platformは、ストリーミングソースからデータを取り込む機能を備えています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、ストリーミングソースからのデータの ingesting をサポートします。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
 ### プロトコル
 
-Experience Platformは、サードパーティのプロトコルシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+エクスペリエンスプラットフォームは、サードパーティのプロトコルシステムからのデータの ingesting をサポートします。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Generic OData] コネクタ](connectors/protocols/odata.md)
 
@@ -147,7 +148,7 @@ Experience Platformは、サードパーティのプロトコルシステムか�
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL ソースの表示]**&#x200B;オン | 「カタログ」タブの各ソース・タイプおよび「参照」タブ、「アカウント」タブ、「データフロー」タブの各ソース・タイプのソースに読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL ソースの表示]**&#x200B;オン | 「カタログ」タブの各ソースタイプにおいて、「参照」、「勘定」および「流れ図」の各ソースには読み取り専用のアクセスを許可します。 |
 | **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
 | 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
@@ -155,10 +156,10 @@ Admin Console から付与される使用可能な権限（これら 4 つのソ
 
 ## 利用条件 {#terms-and-conditions}
 
-ベータ版（「ベータ版」）という名称のソースを使用することにより、お客様は、ベータ版が現状のままで提供され、いかなる種類の保証も付与されないことを認めます ***。***
+ベータ (&quot;ベータ版&quot;) というラベルが付いたソースのいずれかを使用すると、ベータ版に「現状のまま」が提供されているということを、 ***何らいかなる種類の保証なしであるものとし*** ます。
 
-Adobeは、ベータ版の保守、修正、更新、変更、変更、その他のサポートを義務付けていません。 お客様は、ベータ版および/または付属の資料の正しい機能または性能に何らかの方法で依存しないように注意を払うことをお勧めします。 ベータ版は機密情報と見なされますAdobe。
+アドビは、ベータ版を維持、修正、更新、変更、修正、またはサポートする必要がありません。このようなベータ版や付属資料の適切な機能やパフォーマンスについては、慎重に使用してください。 ベータ版は、アドビの機密情報として認識されています。
 
-お客様がAdobeに提供する「フィードバック」（ベータ版の使用中に発生した問題や欠陥を含み、これらに限定されない情報）は、すべての権利、タイトル、関心を含むAdobeに割り当てられます。
+「フィードバック」 (「フィードバック」 (ベータ版に関する情報を含むが、ベータ版では問題または不具合のみが含まれていますが、このようなフィードバックはお勧めします)。これにより、すべての権利、権原、関心、そのようなフィードバックが含まれます。
 
-オープンフィードバックを送信するか、サポートチケットを作成して提案を共有したり、バグを報告したり、機能強化を求めたりします。
+オープンなフィードバックを送信するか、サポートチケットを作成して、提案を共有したり、バグを報告したりするには、機能強化をシークします。

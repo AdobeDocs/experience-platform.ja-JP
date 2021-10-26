@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 19%
+source-wordcount: '651'
+ht-degree: 21%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 19%
       - [Azure Blob コネクタ](connectors/cloud-storage/blob.md)
       - [Azure Event Hub コネクター](connectors/cloud-storage/eventhub.md)
       - [Azure File Storage コネクター](connectors/cloud-storage/azure-file-storage.md)
-      - [データランディングゾーン](connectors/cloud-storage/data-landing-zone.md)
+      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [FTP コネクタ](connectors/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -51,6 +51,7 @@ ht-degree: 19%
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforce コネクタ](connectors/crm/salesforce.md)
       - [Veeva CRM コネクター](connectors/crm/veeva.md)
+      - [Zoho CRM connector](connectors/crm/zoho.md)
    - お客様の成功 {#customer-success}
       - [Salesforce サービスクラウドコネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow コネクター](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 19%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - お客様の成功 {#customer-success}
          - [Salesforce サービスクラウド](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 19%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce.com](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - お客様の成功 {#customer-success}
          - [Salesforce サービスクラウド](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
