@@ -1,21 +1,25 @@
 ---
-keywords: Experience Platform；ホーム；よく読まれるトピック；http api
+keywords: Experience Platform；ホーム；人気の高いトピック；http api
 solution: Experience Platform
 title: HTTP API ソースコネクタの概要
-description: API またはユーザーインターフェイスを使用してAdobe Experience Platformに接続するストリーミングコネクタを作成する方法を説明します。
+description: API またはユーザーインターフェイスを使用してAdobe Experience Platformに接続するストリーミングコネクタを作成する方法について説明します。
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 0cbd5a933f8c67b26051012e9a5aa78cb06b055d
+source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 13%
+source-wordcount: '156'
+ht-degree: 12%
 
 ---
 
 # HTTP API コネクタ
 
-Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+>[!IMPORTANT]
+>
+>HTTP API ソースのマッパー関数は、現在、API でのみサポートされています。ユーザーインターフェイスではサポートされていません。
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Platform] に接続する HTTP API ストリーミングコネクタを作成する方法について説明します。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込みながら、 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+
+以下のドキュメントでは、と接続する HTTP API ストリーミングコネクタの作成方法に関する情報を提供します。 [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
 
 ## API を使用した HTTP API ストリーミングコネクタの作成
 
