@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 0c507a26f551af1eb17889e8e77a036e3c106240
+source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 66%
+source-wordcount: '315'
+ht-degree: 56%
 
 ---
 
@@ -14,7 +14,21 @@ ht-degree: 66%
 
 Adobe Experience Platform の既存の機能のアップデート：
 
+- [[!DNL Data Prep]](#data-prep)
 - [ソース](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| `contains_key` 関数 | 10. `contains_key` 関数が導入されました。この関数を使用すると、オブジェクトがソース内に存在するかどうかを確認できます。 この関数は、 `is_set` 関数に含まれる必要はありません。現在は非推奨です。 |
+| エラーメッセージ | で返されるエラーメッセージ `/mappingSets/preview` データ準備 API のエンドポイントが、実行時に生成されるエラーメッセージと一致するようになりました。 |
+
+詳しくは、 [[!DNL Data Prep] 概要](../../data-prep/home.md) を参照してください。
 
 ## ソース {#sources}
 
