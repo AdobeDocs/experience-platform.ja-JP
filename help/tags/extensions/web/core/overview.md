@@ -2,10 +2,10 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 100%
+source-wordcount: '5292'
+ht-degree: 99%
 
 ---
 
@@ -219,7 +219,13 @@ onLoad がブラウザーによって呼び出され、ページの読み込み�
 
 #### カスタムコード
 
-イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。
+イベントの条件として使用する必要があるカスタムコードを指定します。
+
+>[!NOTE]
+>
+>ES6+ JavaScript がカスタムコードでサポートされるようになりました。 一部の古いブラウザーは ES6 以降をサポートしていません。 ES6+関数を使用した場合の影響を理解するには、サポートが必要なすべての Web ブラウザーに対してテストしてください。
+
+組み込みのコードエディターを使用してカスタムコードを入力します。
 
 1. 「**[!UICONTROL エディターを開く]**」を選択します。
 1. カスタムコードを入力します。
@@ -514,7 +520,7 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 条件が true を返す最大回数を指定します。選択できる項目は次のとおりです。
 
 * Page view
-* Sessions
+* セッション
 * Visitor
 * Seconds
 * Minutes
