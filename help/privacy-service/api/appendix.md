@@ -5,9 +5,9 @@ title: Privacy ServiceAPI ガイドの付録
 topic-legacy: developer guide
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
+source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '480'
 ht-degree: 71%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 71%
 
 ## 標準 ID 名前空間 {#standard-namespaces}
 
-[!DNL Privacy Service] に送信される ID はすべて、特定の ID 名前空間で指定する必要があります。 ID 名前空間は [Adobe Experience Platform ID サービス](../../identity-service/home.md)のコンポーネントで、ID が関連付けられているコンテキストを示します。
+に送信されるすべての ID [!DNL Privacy Service] は、特定の id 名前空間で指定する必要があります。 ID 名前空間は [Adobe Experience Platform ID サービス](../../identity-service/home.md)のコンポーネントで、ID が関連付けられているコンテキストを示します。
 
-次の表に、[!DNL Experience Platform] で使用可能な、一般的に使用される事前定義済みの ID タイプと、それに関連する `namespace` 値の概要を示します。
+次の表に、で使用可能な、一般的に使用される事前定義済みの ID タイプの概要を示します [!DNL Experience Platform]と関連付けられた `namespace` 値：
 
 | ID タイプ | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ ht-degree: 71%
 >
 > 各 ID タイプには整数値の `namespaceId` があります。これは、ID の `namespace` プロパティを「namespaceId」に設定する際に `type` 文字列の代わりに使用できます。詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
-[!DNL Identity Service] API の `idnamespace/identities` エンドポイントにGETリクエストを送信して、組織で使用している ID 名前空間のリストを取得できます。 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
+組織で使用中の ID 名前空間のリストを取得するには、にGETリクエストを送信します `idnamespace/identities` エンドポイント [!DNL Identity Service] API 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
 ## 名前空間修飾子
 
@@ -49,12 +49,12 @@ ht-degree: 71%
 | 修飾子 | 定義 |
 | --------- | ---------- |
 | `standard` | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
-| `custom` | 組織のコンテキストで作成された一意の名前空間で、[!DNL Experience Cloud] 間で共有されるものではありません。 この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
+| `custom` | 組織のコンテキストで作成された一意の名前空間で、すべての [!DNL Experience Cloud]. この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
 | `integrationCode` | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
 | `namespaceId` | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
 | `unregistered` | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
-| `analytics` | 名前空間サービスではなく、[!DNL Analytics] で内部的にマッピングされるカスタム名前空間。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
-| `target` | [!DNL Target] によって内部的に認識されるカスタム名前空間で、名前空間サービスでは認識されません。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| `analytics` | 内部的にマッピングされるカスタム名前空間 [!DNL Analytics]ではなく、名前空間サービスで使用されます。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| `target` | 内部的に認識されるカスタム名前空間 [!DNL Target]ではなく、名前空間サービスで使用されます。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -71,8 +71,9 @@ ht-degree: 71%
 | Adobe Experience Platform | `AdobeCloudPlatform` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
-| 自動化製品 | `automationProduct` |
+| 自動処理製品 | `automationProduct` |
 | 顧客属性 (CRS) | `CRS` |
+| ID サービス | `Identity` |
 | リアルタイム顧客プロファイル | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}

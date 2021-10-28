@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 81b325fe0994eef73111f9fc474984a4550dd256
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '98'
 ht-degree: 100%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 100%
    - [ID グラフビューア](ui/identity-graph-viewer.md)
    - [共有デバイスの検出](ui/shared-devices.md)
 - [ECID の概要](ecid.md)
+- [プライバシーリクエストの処理](privacy.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
