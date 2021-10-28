@@ -1,8 +1,8 @@
 ---
-description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
+description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
 title: 宛先 SDK の宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '1757'
 ht-degree: 5%
@@ -13,15 +13,15 @@ ht-degree: 5%
 
 ## 概要 {#overview}
 
-この設定を使用すると、宛先名、カテゴリ、説明など、重要な情報を指定できます。 また、この設定の設定によって、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決まります。
+この設定を使用すると、宛先名、カテゴリ、説明などの重要な情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
 
-また、この設定は、宛先サーバーとオーディエンスメタデータを機能させるために必要な他の設定も、この設定に接続します。 [ の後の ](./destination-configuration.md#connecting-all-configurations) の節で、2 つの設定を参照する方法を確認してください。
+また、この設定は、宛先サーバーとオーディエンスメタデータの機能に必要な他の設定も、この設定に接続します。 2 つの設定を [下のセクション](./destination-configuration.md#connecting-all-configurations).
 
-このドキュメントで説明する機能は、`/authoring/destinations` API エンドポイントを使用して設定できます。 エンドポイントで実行できる操作の完全なリストについては、[ 宛先 API エンドポイントの操作 ](./destination-configuration-api.md) をお読みください。
+このドキュメントで説明する機能は、 `/authoring/destinations` API エンドポイント。 読み取り [宛先 API エンドポイントの操作](./destination-configuration-api.md) エンドポイントで実行できる操作の完全なリストについては、を参照してください。
 
 ## 設定例 {#example-configuration}
 
-架空の宛先 Moviestar の設定例を以下に示します。この宛先は、世界の 4 つの場所にエンドポイントを持っています。 宛先は、モバイルの宛先カテゴリに属します。 次の節では、この設定の構築方法を詳しく説明します。
+次に、架空の宛先 Moviestar の設定例を示します。この宛先は、世界の 4 つの場所にエンドポイントを持っています。 宛先は、モバイル宛先カテゴリに属しています。 次の節では、この設定の構築方法を詳しく説明します。
 
 ```json
 {
@@ -128,100 +128,100 @@ ht-degree: 5%
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `name` | 文字列 | 宛先カタログ内の宛先のタイトルをExperience Platformします。 |
-| `description` | 文字列 | 宛先カタログで、宛先カードの説明をExperience Platformします。 4～5 文以下を目指す。 |
-| `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。宛先を最初に設定する際は、`TEST` を使用します。 |
+| `description` | 文字列 | 宛先カタログで宛先カードの説明をExperience Platformします。 4～5 文以下を目指します。 |
+| `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。用途 `TEST` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 顧客認証設定 {#customer-authentication-configurations}
 
-このセクションは、Experience Platformのユーザーインターフェイスに「[ 新しい宛先を設定 ](/help/destinations/ui/connect-destination.md)」ページを生成します。このページで、Experience Platformを宛先に接続したアカウントに接続します。 `authType` フィールドに指定した認証オプションに応じて、Experience Platformページが次のように生成されます。
+宛先設定のこのセクションは、 [新しい宛先の設定](/help/destinations/ui/connect-destination.md) ページを開きます。このページでは、Experience Platformが、宛先のアカウントにExperience Platformを接続できます。 に指定する認証オプションに応じて、 `authType` 」フィールドに値を入力すると、Experience Platformページが次のように生成されます。
 
-**ベアラ認証**
+**Bearer 認証**
 
 bearer 認証タイプを設定する場合、ユーザーは宛先から取得した bearer トークンを入力する必要があります。
 
-![ベアラ認証を使用した UI レンダリング](./assets/bearer-authentication-ui.png)
+![bearer 認証を使用した UI レンダリング](./assets/bearer-authentication-ui.png)
 
 **OAuth 2 認証**
 
-次の例に示すように、ユーザーは「 **[!UICONTROL 宛先に接続]** 」を選択して、OAuth 2 認証フローを宛先にトリガーします。Twitter Cloud Audiences の宛先の場合は、 宛先エンドポイントへの OAuth 2 認証の設定について詳しくは、専用の [ 宛先 SDK OAuth 2 認証ページ ](./oauth2-authentication.md) を参照してください。
+ユーザーが選択 **[!UICONTROL 宛先に接続]** を使用して、Twitter Cloud Audiences の宛先に対する次の例に示すように、OAuth 2 認証フローを宛先にトリガーします。 宛先エンドポイントに対する OAuth 2 認証の設定について詳しくは、専用の [宛先 SDK OAuth 2 認証ページ](./oauth2-authentication.md).
 
 ![OAuth 2 認証を使用した UI レンダリング](./assets/oauth2-authentication-ui.png)
 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `customerAuthenticationConfigurations` | 文字列 | サーバーへのExperience Platform顧客の認証に使用する設定を示します。 受け入れられる値については、以下の `authType` を参照してください。 |
-| `authType` | 文字列 | 指定できる値は `OAUTH2, BEARER` です。 <br><ul><li> 宛先が OAuth 2 認証をサポートしている場合は、`OAUTH2` 値を選択し、[ 宛先 SDK OAuth 2 認証ページ ](./oauth2-authentication.md) に示すように、OAuth 2 の必須フィールドを追加します。 さらに、[ 宛先配信セクション ](./destination-configuration.md) で `authenticationRule=CUSTOMER_AUTHENTICATION` を選択する必要があります。 </li><li>bearer 認証の場合、`BEARER` を選択し、[ 宛先配信セクション ](./destination-configuration.md) で `authenticationRule=CUSTOMER_AUTHENTICATION` を選択します。</li></ul> |
+| `customerAuthenticationConfigurations` | 文字列 | サーバーへのExperience Platform顧客の認証に使用する設定を示します。 詳しくは、 `authType` を参照してください。 |
+| `authType` | 文字列 | 指定できる値は次のとおりです。 `OAUTH2, BEARER`. <br><ul><li> 宛先が OAuth 2 認証をサポートしている場合は、 `OAUTH2` の値を入力して、OAuth 2 の必須フィールドを追加します ( [宛先 SDK OAuth 2 認証ページ](./oauth2-authentication.md). また、 `authenticationRule=CUSTOMER_AUTHENTICATION` 内 [宛先の配信セクション](./destination-configuration.md). </li><li>bearer 認証の場合は、「 」を選択します。 `BEARER` を選択し、 `authenticationRule=CUSTOMER_AUTHENTICATION` 内 [宛先の配信セクション](./destination-configuration.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 顧客データフィールド {#customer-data-fields}
 
-このセクションでは、パートナーがカスタムフィールドを導入できます。 上記の例の設定では、`customerDataFields` は、ユーザーが認証フローでエンドポイントを選択し、宛先で顧客 ID を示す必要があります。 設定は、次に示すように、認証フローに反映されます。
+このセクションでは、パートナーがカスタムフィールドを導入できます。 上記の例の設定では、 `customerDataFields` では、ユーザーは認証フローでエンドポイントを選択し、顧客 ID と宛先を指定する必要があります。 次に示すように、設定は認証フローに反映されます。
 
 ![カスタムフィールド認証フロー](./assets/custom-field-authentication-flow.png)
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `name` | 文字列 | 紹介するカスタムフィールドの名前を指定します。 |
-| `type` | 文字列 | 導入するカスタムフィールドの種類を示します。 指定できる値は `string`、`object`、`integer` です。 |
-| `title` | 文字列 | ユーザーインターフェイスでユーザーに表示されるフィールドの名前をExperience Platformします。 |
+| `type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は次のとおりです。 `string`, `object`, `integer`. |
+| `title` | 文字列 | ユーザーインターフェイスのユーザーに表示されるフィールドの名前をExperience Platformします。 |
 | `description` | 文字列 | カスタムフィールドの説明を入力します。 |
 | `isRequired` | Boolean | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
-| `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用してパターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに `^[A-Za-z]+$` と入力します。 |
+| `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、 `^[A-Za-z]+$` を選択します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## UI 属性 {#ui-attributes}
 
-この節では、Adobe Experience Platformユーザーインターフェイスの宛先にAdobeが使用する、上記の設定の UI 要素について説明します。 次を参照してください。
+この節では、Adobe Experience Platformユーザーインターフェイスの宛先にAdobeが使用する必要がある、上記の設定の UI 要素について説明します。 次を参照してください。
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `documentationLink` | 文字列 | 宛先の [ 宛先カタログ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) のドキュメントページを参照します。 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。 Moviestar という宛先の場合は、`http://www.adobe.com/go/destinations-moviestar-en` |
-| `category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指定します。 詳しくは、[ 宛先カテゴリ ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html) を参照してください。 次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `connectionType` | 文字列 | `Server-to-server` は現在、唯一のオプションです。 |
-| `frequency` | 文字列 | `Streaming` は現在、唯一のオプションです。 |
+| `documentationLink` | 文字列 | ページの [宛先カタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) を設定します。 用途 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`で、 `YOURDESTINATION` は、宛先の名前です。 Moviestar という宛先の場合、 `http://www.adobe.com/go/destinations-moviestar-en` |
+| `category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指します。 詳しくは、 [宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 次のいずれかの値を使用します。 `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `connectionType` | 文字列 | `Server-to-server` は現在唯一の利用可能なオプションです。 |
+| `frequency` | 文字列 | `Streaming` は現在唯一の利用可能なオプションです。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## マッピング手順でのスキーマ設定 {#schema-configuration}
+## マッピング手順のスキーマ設定 {#schema-configuration}
 
-![マッピング手順の有効化](./assets/enable-mapping-step.png)
+![マッピングステップの有効化](./assets/enable-mapping-step.png)
 
-`schemaConfig` のパラメーターを使用して、宛先のアクティベーションワークフローのマッピング手順を有効にします。 以下に説明するパラメーターを使用すると、Experience Platformユーザーがプロファイル属性や ID を宛先の側の目的のスキーマにマッピングできるかどうかを判断できます。
+のパラメーターを使用します。 `schemaConfig` ：宛先のアクティベーションワークフローのマッピング手順を有効にします。 以下に説明するパラメーターを使用することで、Experience Platformユーザーがプロファイル属性や ID を宛先の側の目的のスキーマにマッピングできるかどうかを判断できます。
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `profileFields` | 配列 | *上記の設定例では示していません。* 事前定義済みを追加す `profileFields`ると、Experience Platformユーザーは、Platform 属性を宛先の側の定義済み属性にマッピングするオプションがあります。 |
-| `profileRequired` | Boolean | 上記の設定例に示すように、Experience Platformから宛先のカスタム属性にプロファイル属性をマッピングできる場合は、`true` を使用します。 |
-| `segmentRequired` | Boolean | 常に `segmentRequired:true` を使用します。 |
-| `identityRequired` | Boolean | ユーザーが ID 名前空間をExperience Platformから目的のスキーマにマッピングできる場合は、`true` を使用します。 |
+| `profileFields` | 配列 | *上記の設定例では示していません。* 定義済みの `profileFields`の場合、Experience Platformユーザーは、Platform 属性を宛先の側の事前定義済み属性にマッピングするオプションがあります。 |
+| `profileRequired` | ブール値 | 用途 `true` 上記の設定例に示すように、ユーザーがExperience Platformから宛先側のカスタム属性にプロファイル属性をマッピングできる場合。 |
+| `segmentRequired` | ブール値 | 常に使用 `segmentRequired:true`. |
+| `identityRequired` | ブール値 | 用途 `true` ( ユーザーが、id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合 )。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## ID と属性 {#identities-and-attributes}
 
-この節のパラメーターは、宛先が受け入れる ID を決定します。 この設定では、Experience Platformユーザーインターフェイスの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) でターゲットの ID と属性も設定されます。この手順では、XDM スキーマの ID と属性を宛先のスキーマにマッピングします。
+この節のパラメーターは、宛先が受け入れる ID を決定します。 また、この設定により、 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) を使用します。
 
-顧客が宛先に書き出すことのできる [!DNL Platform] ID を指定する必要があります。 例えば、[!DNL Experience Cloud ID]、ハッシュ化された電子メール、デバイス ID([!DNL IDFA]、[!DNL GAID]) などがあります。 これらの値は [!DNL Platform] ID 名前空間で、顧客が宛先の ID 名前空間にマッピングできます。 また、顧客が宛先でサポートされている ID にカスタム名前空間をマッピングできるかどうかを指定することもできます。
+どちらを指定するかを指定する必要があります [!DNL Platform] id 顧客は、を宛先に書き出すことができます。 以下に例を示します。 [!DNL Experience Cloud ID]，ハッシュ化された電子メール，デバイス ID ([!DNL IDFA], [!DNL GAID]) をクリックします。 これらの値は次のとおりです。 [!DNL Platform] ユーザーが宛先の id 名前空間にマッピングできる id 名前空間。 また、顧客が宛先でサポートされている ID にカスタム名前空間をマッピングできるかどうかを指定することもできます。
 
-ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関係は必要ありません。
-例えば、お客様は [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL IDFA] 名前空間にマッピングできます。また、同じ [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL Customer ID] 名前空間にマッピングできます。
+ID 名前空間では、 [!DNL Platform] および宛先
+例えば、お客様は [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL IDFA] 名前空間を宛先から作成するか、同じ名前空間をマッピングできます。 [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL Customer ID] 名前空間を使用します。
 
-詳しくは、[ID 名前空間の概要 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja) を参照してください。
+詳しくは、 [ID 名前空間の概要](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja).
 
 ![UI でのターゲット ID のレンダリング](./assets/target-identities-ui.png)
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `acceptsAttributes` | Boolean | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
-| `acceptsCustomNamespaces` | Boolean | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
-| `allowedAttributesTransformation` | 文字列 | *サンプルの設定*&#x200B;では示されていません。例えば、[!DNL Platform] の顧客が属性としてプレーンな電子メールアドレスを持ち、プラットフォームがハッシュ化された電子メールのみを受け入れる場合に使用します。 このオブジェクトでは、適用する必要がある変換（例えば、E メールを小文字に変換し、ハッシュ化）を実行できます。 例については、[ 宛先設定 API リファレンス ](./destination-configuration-api.md#update) の `requiredTransformation` を参照してください。 |
-| `acceptedGlobalNamespaces` | - | プラットフォームが [ 標準 ID 名前空間 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例えば、IDFA）を受け入れる場合に使用されるので、Platform ユーザーは、これらの ID 名前空間のみを選択するように制限できます。 |
+| `acceptsAttributes` | ブール値 | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されています。 |
+| `acceptsCustomNamespaces` | ブール値 | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
+| `allowedAttributesTransformation` | 文字列 | *サンプル設定には表示されません*. 例えば、 [!DNL Platform] のお客様は、属性としてプレーンな電子メールアドレスを持っており、プラットフォームはハッシュ化された電子メールのみを受け取ります。 このオブジェクトでは、適用が必要な変換（例えば、E メールを小文字に変換し、ハッシュ化）を適用できます。 例については、 `requiredTransformation` 内 [宛先設定 API リファレンス](./destination-configuration-api.md#update). |
+| `acceptedGlobalNamespaces` | - | プラットフォームがを受け入れる場合に使用します [標準 id 名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例えば IDFA）を使用して、Platform ユーザーがこれらの ID 名前空間を選択するように制限できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -229,67 +229,67 @@ ID 名前空間では、[!DNL Platform] と宛先の間に 1 対 1 の対応関�
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | [!DNL Platform] ユーザーが宛先に接続する方法を示します。 指定できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE` です。<br> <ul><li>Platform のお客様が、ユーザー名とパスワード、ベアラートークン、または別の認証方法を使用してシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。 例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` または `authType:BEARER` も選択した場合は、このオプションを選択します。 </li><li> Adobeと宛先の間にグローバル認証システムがあり、`PLATFORM_AUTHENTICATION` 顧客が宛先に接続するための認証資格情報を提供する必要がない場合は、[!DNL Platform] を使用します。 この場合、[Credentials](./credentials-configuration.md) 設定を使用して credentials オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
-| `destinationServerId` | 文字列 | この宛先で使用される [ 宛先サーバー設定 ](./destination-server-api.md) の `instanceId`。 |
+| `authenticationRule` | 文字列 | 方法を示します [!DNL Platform] のお客様が宛先に接続します。 指定できる値は次のとおりです。 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>用途 `CUSTOMER_AUTHENTICATION` Platform のお客様が、ユーザー名とパスワード、ベアラートークンまたはその他の認証方法を使用してシステムにログインした場合。 例えば、このオプションを選択する場合は、 `authType: OAUTH2` または `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 用途 `PLATFORM_AUTHENTICATION` Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 [資格情報](./credentials-configuration-api.md) 設定。 </li><li>用途 `NONE` 宛先プラットフォームにデータを送信するために認証が必要ない場合に使用します。 </li></ul> |
+| `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./destination-server-api.md) この宛先に使用されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## セグメントマッピングの設定 {#segment-mapping}
 
-![セグメントマッピングの設定セクション](./assets/segment-mapping-configuration.png)
+![セグメントマッピング設定セクション](./assets/segment-mapping-configuration.png)
 
-宛先設定のこの節では、セグメント名や ID などのセグメントメタデータを、宛先との間で共有する方法について説明します。
+宛先設定のこのセクションは、セグメント名や ID などのセグメントメタデータをExperience Platformと宛先の間で共有する方法に関連しています。
 
-`audienceTemplateId` を通じて、この設定と [ オーディエンスメタデータ設定 ](./audience-metadata-management.md) を結び付けます。
+を通じて `audienceTemplateId`の場合、この節では、この設定を [オーディエンスメタデータ設定](./audience-metadata-management.md).
 
-上記の設定に示したパラメーターは、[ 宛先エンドポイント API リファレンス ](./destination-configuration-api.md) に記載されています。
+上記の設定で示されたパラメーターは、 [宛先エンドポイント API リファレンス](./destination-configuration-api.md).
 
 ## 集計ポリシー {#aggregation}
 
-![構成テンプレートの集計ポリシー](./assets/aggregation-configuration.png)
+![設定テンプレートの集計ポリシー](./assets/aggregation-configuration.png)
 
 このセクションでは、宛先にデータをエクスポートする際にExperience Platformが使用する集計ポリシーを設定できます。
 
 集計ポリシーは、データエクスポートでエクスポートされたプロファイルを組み合わせる方法を決定します。 次の選択肢があります。
-* ベストエフォートの集計
+* ベストエフォート集計
 * 設定可能な集計（上記の設定で表示）
 
-[ テンプレート ](./message-format.md#using-templating) と [ 集計の主な例 ](./message-format.md#template-aggregation-key) の使用の節を読み、選択した集計ポリシーに基づいて、メッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
+の節を読む [テンプレートの使用](./message-format.md#using-templating) そして [集計の主な例](./message-format.md#template-aggregation-key) を参照して、選択した集計ポリシーに基づいて、メッセージ変換テンプレートに集計ポリシーを含める方法を理解してください。
 
-### ベストエフォートの集計 {#best-effort-aggregation}
+### ベストエフォート集計 {#best-effort-aggregation}
 
 >[!TIP]
 >
->API エンドポイントが受け入れるプロファイルが API 呼び出しあたり 100 件未満の場合は、このオプションを使用します。
+>API エンドポイントが API 呼び出しごとに受け入れるプロファイル数が 100 未満の場合は、このオプションを使用します。
 
-このオプションは、リクエストあたりのプロファイル数が少なく、データ量が多いリクエストよりも少ない方がリクエスト数が多い宛先に最適です。
+このオプションは、リクエストあたりのプロファイル数が少ない宛先で最適で、より少ないデータでより多くのリクエストを取得する方が、より少ないデータでより少ないリクエストを取得する方が効果的です。
 
-`maxUsersPerRequest` パラメーターを使用して、宛先がリクエストで取得できるプロファイルの最大数を指定します。
+以下を使用： `maxUsersPerRequest` パラメーターを使用して、宛先がリクエストで取得できるプロファイルの最大数を指定します。
 
 ### 設定可能な集計 {#configurable-aggregation}
 
-このオプションは、同じ呼び出しで何千ものプロファイルを含む大きなバッチを取る場合に最適です。 また、このオプションを使用すると、複雑な集計ルールに基づいて、書き出されたプロファイルを集計できます。
+このオプションは、同じ呼び出しで数千のプロファイルを含む大きなバッチを取る場合に最も適しています。 また、このオプションを使用すると、複雑な集計ルールに基づいて、書き出されたプロファイルを集計できます。
 
 このオプションを使用すると、次のことができます。
-* 宛先に対して API 呼び出しがおこなわれるまでに集計するプロファイルの最大時間と最大数を設定します。
-* 次の項目に基づいて、宛先にマッピングされた書き出し済みプロファイルを集計します。
+* 宛先に対する API 呼び出しがおこなわれるまでに集計するプロファイルの最大時間と最大数を設定します。
+* 次の条件に基づいて、宛先にマッピングされたエクスポート済みプロファイルを集計します。
    * Segment ID;
-   * セグメントのステータス
+   * セグメントのステータス。
    * ID または ID のグループ。
 
-集計パラメーターの詳細については、[ 宛先 API エンドポイントの操作 ](./destination-configuration-api.md) リファレンスページを参照してください。各パラメーターについて説明します。
+集計パラメータの詳細については、 [宛先 API エンドポイントの操作](./destination-configuration-api.md) 参照ページ。各パラメータについて説明します。
 
-## 過去のプロファイル認定 {#profile-backfill}
+## 過去のプロファイルの選定 {#profile-backfill}
 
-宛先の設定で `backfillHistoricalProfileData` パラメーターを使用して、過去のプロファイル認定を宛先に書き出す必要があるかどうかを判断できます。
+以下を使用して、 `backfillHistoricalProfileData` パラメーターを使用して、過去のプロファイル選定を宛先に書き出す必要があるかどうかを指定します。
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | Boolean | 宛先に対してセグメントをアクティブ化した場合に、履歴プロファイルデータを書き出すかどうかを制御します。<br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前にセグメントに適合した過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
+| `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。 <br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前に、そのセグメントの対象として認定された過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
 
-## この設定が、宛先に必要な情報をすべて接続する方法 {#connecting-all-configurations}
+## この設定により、宛先に必要なすべての情報が接続される仕組み {#connecting-all-configurations}
 
-宛先設定の一部は、[ 宛先サーバー ](./server-and-template-configuration.md) または [ オーディエンスメタデータ設定 ](./audience-metadata-management.md) を使用して設定する必要があります。 ここで説明する宛先設定では、次のように、他の 2 つの設定を参照することで、これらの設定をすべて接続します。
+一部の宛先設定は、 [宛先サーバー](./server-and-template-configuration.md) または [オーディエンスメタデータ設定](./audience-metadata-management.md). ここで説明する宛先設定では、次のように、他の 2 つの設定を参照することで、これらの設定をすべて接続します。
 
-* `destinationServerId` を使用して、宛先サーバーと、宛先に対して設定されたテンプレート設定を参照します。
-* `audienceMetadataId` を使用して、宛先に設定されたオーディエンスメタデータ設定を参照します。
+* 以下を使用： `destinationServerId` を使用して、目的の宛先に対して設定された宛先サーバーおよびテンプレート設定を参照します。
+* 以下を使用： `audienceMetadataId` を使用して、目的の宛先に対して設定されたオーディエンスメタデータを参照します。

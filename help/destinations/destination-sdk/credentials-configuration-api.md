@@ -1,29 +1,29 @@
 ---
 description: このページでは、「/authoring/credentials」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
-title: Credentials endpoint API 操作
+title: 資格情報エンドポイント API 操作
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%
 
 ---
 
-# Credentials endpoint API 操作 {#credentials}
+# 資格情報エンドポイント API 操作 {#credentials}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-このページでは、`/authoring/credentials` API エンドポイントを使用して実行できるすべての API 操作について説明します。
+このページでは、 `/authoring/credentials` API エンドポイント。
 
-## `/credentials` API エンドポイントを使用するタイミング {#when-to-use}
+## 使用するタイミング `/credentials` API エンドポイント {#when-to-use}
 
 >[!IMPORTANT]
 >
->ほとんどの場合、*API エンドポイントを使用する必要は* ありません。`/credentials` 代わりに、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを使用して、宛先の認証情報を設定できます。 詳しくは、[ 資格情報の設定 ](./credentials-configuration.md) をお読みください。
+>ほとんどの場合、 *しない* 使用する必要がある `/credentials` API エンドポイント。 代わりに、 `customerAuthenticationConfigurations` のパラメーター `/destinations` endpoint. 読み取り [認証設定](./authentication-configuration.md#when-to-use) を参照してください。
 
-Adobeと宛先の間にグローバル認証システムがあり、[!DNL Platform] 顧客が宛先に接続するための認証資格情報を提供する必要がない場合は、この API エンドポイントを使用し、 [ 宛先設定 ](./destination-configuration.md#destination-delivery) で `PLATFORM_AUTHENTICATION` を選択します。 この場合、`/credentials` API エンドポイントを使用して資格情報オブジェクトを作成する必要があります。
+この API エンドポイントを使用し、「 」を選択します。 `PLATFORM_AUTHENTICATION` 内 [宛先設定](./destination-configuration.md#destination-delivery) Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 `/credentials` API エンドポイント。
 
 <!--
 
@@ -146,11 +146,11 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## 資格情報設定 API 操作の概要 {#get-started}
 
-続行する前に、[ はじめに ](./getting-started.md) を参照して、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
+続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## 資格情報設定の作成 {#create}
 
-`/authoring/credentials` エンドポイントにPOSTリクエストを送信して、新しい資格情報の設定を作成できます。
+新しい資格情報の設定を作成するには、 `/authoring/credentials` endpoint.
 
 **API 形式**
 
@@ -161,7 +161,7 @@ POST /authoring/credentials
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された、新しい資格情報設定を作成します。 以下のペイロードには、`/authoring/credentials` エンドポイントが受け入れるすべてのパラメーターが含まれています。 すべてのパラメーターを呼び出しに追加する必要はなく、API の要件に従ってテンプレートをカスタマイズできます。
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい資格情報設定を作成します。 以下のペイロードには、 `/authoring/credentials` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -209,10 +209,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `username` | 文字列 | 資格情報ログインユーザー名 |
-| `password` | 文字列 | 資格情報ログインパスワード |
+| `password` | 文字列 | 資格情報設定ログインパスワード |
 | `url` | 文字列 | 認証プロバイダーの URL |
-| `clientId` | 文字列 | クライアント/アプリケーション資格情報のクライアント ID |
-| `clientSecret` | 文字列 | クライアント/アプリケーション資格情報のクライアント秘密鍵 |
+| `clientId` | 文字列 | クライアント/アプリケーション秘密鍵証明書のクライアント ID |
+| `clientSecret` | 文字列 | クライアント/アプリケーション秘密鍵証明書のクライアント秘密鍵 |
 | `accessToken` | 文字列 | 認証プロバイダーから提供されたアクセストークン |
 | `expiration` | 文字列 | アクセストークンの有効期間 |
 | `refreshToken` | 文字列 | 認証プロバイダーから提供された更新トークン |
@@ -226,7 +226,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## 資格情報設定のリスト {#retrieve-list}
 
-`/authoring/credentials` エンドポイントに対してGETリクエストを実行することで、IMS 組織のすべての資格情報設定のリストを取得できます。
+IMS 組織のすべての資格情報設定のリストを取得するには、にGETリクエストをおこないます `/authoring/credentials` endpoint.
 
 **API 形式**
 
@@ -249,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、アクセス権のある資格情報設定のリストと共に HTTP ステータス 200 を返します。 1 つの `instanceId` は、1 つの資格情報設定のテンプレートに対応します。 応答は短く切り捨てられます。
+次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある資格情報設定のリストを返します。 1 `instanceId` は、1 つの資格情報設定のテンプレートに対応します。 簡潔にするために、応答は切り捨てられます。
 
 ```json
 {
@@ -276,7 +276,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 既存の資格情報設定の更新 {#update}
 
-既存の資格情報の設定を更新するには、`/authoring/credentials` エンドポイントにPUTリクエストを送信し、更新する資格情報設定のインスタンス ID を指定します。 呼び出しの本文で、更新された資格情報の設定を指定します。
+既存の資格情報設定を更新するには、 `/authoring/credentials` エンドポイントを作成し、更新する資格情報設定のインスタンス ID を指定します。 呼び出しの本文で、更新された資格情報の設定を指定します。
 
 **API 形式**
 
@@ -291,7 +291,7 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された既存の資格情報設定を更新します。
+次のリクエストは、ペイロードで指定されたパラメーターで設定された、既存の資格情報設定を更新します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
@@ -322,9 +322,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 
 
-## 特定の資格情報の設定の取得 {#get}
+## 特定の資格情報設定の取得 {#get}
 
-特定の資格情報設定に関する詳細な情報を取得するには、`/authoring/credentials` エンドポイントにGETリクエストを送信し、更新する資格情報設定のインスタンス ID を指定します。
+特定の資格情報設定に関する詳細な情報を取得するには、 `/authoring/credentials` エンドポイントを作成し、更新する資格情報設定のインスタンス ID を指定します。
 
 **API 形式**
 
@@ -372,7 +372,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 特定の資格情報設定の削除 {#delete}
 
-`/authoring/credentials` エンドポイントにDELETEリクエストを送信し、リクエストパスで削除する資格情報設定の ID を指定することで、指定した資格情報設定を削除できます。
+指定した資格情報設定を削除するには、 `/authoring/credentials` エンドポイントを作成し、リクエストパスで削除する資格情報設定の ID を指定します。
 
 **API 形式**
 
@@ -382,7 +382,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 削除する資格情報設定の `id`。 |
+| `{INSTANCE_ID}` | この `id` を設定します。 |
 
 **リクエスト**
 
@@ -400,8 +400,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 ## API エラー処理
 
-宛先 SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [ リクエストヘッダーのエラー ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) を参照してください。
+宛先 SDK API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、資格情報エンドポイントを使用するタイミングと、 `/authoring/credentials` API エンドポイントまたは `/authoring/destinations` エンドポイントを使用して資格情報を設定する方法がわかります。 [ 宛先 SDK を使用して宛先を設定する方法 ](./configure-destination-instructions.md) を読んで、この手順が宛先の設定プロセスにどのように適しているかを確認してください。
+このドキュメントを読むと、資格情報エンドポイントを使用するタイミングと、 `/authoring/credentials` API エンドポイントまたは `/authoring/destinations` endpoint. 読み取り [宛先 SDK を使用して宛先を設定する方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
