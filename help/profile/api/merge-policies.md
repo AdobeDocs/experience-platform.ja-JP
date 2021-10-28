@@ -3,12 +3,12 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: 結合ポリシー API エンドポイント
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合表示を作成するためにどのデータを組み合わせるかを決定する際に Platform で使用されるルールです。
+description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 72%
+source-wordcount: '2469'
+ht-degree: 66%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform では、個々の顧客の全体像を把握するた
 
 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、API を使用して結合ポリシーを操作する手順を説明します。
 
-UI を使用して結合ポリシーを操作するには、『[ 結合ポリシー UI ガイド ](../merge-policies/ui-guide.md)』を参照してください。 一般的な結合ポリシーと、Experience Platform内での役割について詳しくは、まず [ 結合ポリシーの概要 ](../merge-policies/overview.md) をお読みください。
+UI を使用して結合ポリシーを操作するには、 [結合ポリシー UI ガイド](../merge-policies/ui-guide.md). 一般的な結合ポリシーと、Experience Platform内での役割について詳しくは、まず [結合ポリシーの概要](../merge-policies/overview.md).
 
 ## はじめに
 
@@ -28,13 +28,17 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
-結合ポリシーは IMS 組織外には非公開であり、必要に応じてスキーマを結合するために異なるポリシーを作成できます。[!DNL Profile] データにアクセスする API には結合ポリシーが必要ですが、明示的に指定されていない場合はデフォルトが使用されます。 [!DNL Platform] は、組織にデフォルトの結合ポリシーを提供します。または、特定の Experience Data Model(XDM) スキーマクラスの結合ポリシーを作成し、組織のデフォルトとしてマークすることもできます。
+結合ポリシーは IMS 組織外には非公開であり、必要に応じてスキーマを結合するために異なるポリシーを作成できます。任意の API アクセス [!DNL Profile] データには結合ポリシーが必要ですが、明示的に指定されていない場合はデフォルトが使用されます。 [!DNL Platform] は、組織にデフォルトの結合ポリシーを提供します。または、特定の Experience Data Model(XDM) スキーマクラスの結合ポリシーを作成して、組織のデフォルトとして指定することもできます。
 
-各組織はスキーマクラスごとに複数の結合ポリシーを持つことができますが、各クラスは 1 つのデフォルトの結合ポリシーのみを持つことができます。 デフォルトとして設定された結合ポリシーは、スキーマクラスの名前が指定され、結合ポリシーが必要で指定されていない場合に使用されます。
+各組織はスキーマクラスごとに複数の結合ポリシーを持つことができますが、各クラスは 1 つのデフォルト結合ポリシーのみを持つことができます。 デフォルトとして設定された結合ポリシーは、スキーマクラスの名前が指定され、結合ポリシーが必要であるが指定されていない場合に使用されます。
 
 >[!NOTE]
 >
->新しい結合ポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存の結合ポリシーは自動的に更新され、デフォルトとして使用されなくなります。
+>新しい結合ポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存の結合ポリシーは自動的にデフォルトとして使用されなくなります。
+
+すべてのプロファイルコンシューマーがエッジ上で同じビューで動作するように、結合ポリシーをエッジ上でアクティブとしてマークできます。 セグメントをエッジでアクティブ化（エッジセグメントとしてマーク）するには、エッジでアクティブとマークされた結合ポリシーに結び付ける必要があります。 セグメントが **not** は、エッジでアクティブとマークされた結合ポリシーに結び付けられ、そのセグメントはエッジでアクティブとマークされず、ストリーミングセグメントとしてマークされます。
+
+また、各 IMS 組織は、 **1 つ** エッジでアクティブな結合ポリシー。 結合ポリシーがエッジでアクティブな場合、エッジプロファイル、エッジセグメント化、エッジ上の宛先など、エッジ上の他のシステムで使用できます。
 
 ### 完全な結合ポリシーオブジェクト
 
@@ -57,6 +61,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
+        "isActiveOnEdge": "{BOOLEAN}",
         "default": "{BOOLEAN}",
         "updateEpoch": "{UPDATE_TIME}"
     }
@@ -67,11 +72,12 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 | `id` | 作成時に割り当てられる、システムで生成された一意の ID |
 | `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
+| `schema.name` | の一部 [`schema`](#schema) オブジェクト、 `name` フィールドには、結合ポリシーが関連する XDM スキーマクラスが含まれます。 スキーマとクラスの詳細については、 [XDM ドキュメント](../../xdm/home.md). |
+| `version` | [!DNL Platform] 結合ポリシーのバージョンが維持されます。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
-| `attributeMerge` | [データ](#attribute-merge) の競合時に結合ポリシーがプロファイル属性に優先順位を付ける方法を示す属性 mergeobject。 |
-| `schema.name` | [`schema`](#schema) オブジェクトの一部で、 `name` フィールドには、結合ポリシーが関連する XDM スキーマクラスが含まれます。 スキーマとクラスの詳細については、[XDM のドキュメント ](../../xdm/home.md) を参照してください。 |
+| `attributeMerge` | [属性の結合](#attribute-merge) データの競合時に結合ポリシーがプロファイル属性に優先順位を付ける方法を示すオブジェクト。 |
+| `isActiveOnEdge` | この結合ポリシーをエッジで使用できるかどうかを示すブール値。 デフォルトでは、この値は `false`. |
 | `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
-| `version` | [!DNL Platform] 結合ポリシーの維持バージョン。この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
 | `updateEpoch` | 結合ポリシーの最後の更新日。 |
 
 **結合ポリシーの例**
@@ -91,6 +97,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
         "attributeMerge": {
             "type": "timestampOrdered"
         },
+        "isActiveOnEdge": false,
         "default": true,
         "updateEpoch": 1551660639
     }
@@ -98,7 +105,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 
 ### ID グラフ {#identity-graph}
 
-[Adobe Experience Platform ](../../identity-service/home.md) ID サービスは、グローバルに、の各組織で使用される ID グラフを管理しま [!DNL Experience Platform]す。結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) は、グローバルに、およびの各組織で使用される id グラフを管理します。 [!DNL Experience Platform]. 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
 
 **ID グラフオブジェクト**
 
@@ -123,7 +130,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 
 ### 属性の結合 {#attribute-merge}
 
-プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用される ID グラフタイプが複数の ID になる場合、プロファイル属性が競合する可能性があり、優先度を指定する必要があります。 `attributeMerge` を使用すると、キー値（レコードデータ）タイプのデータセット間で結合の競合が発生した場合に優先順位を付けるプロファイル属性を指定できます。
+プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用される ID グラフタイプが複数の ID になる場合、プロファイル属性が競合する可能性があり、優先度を指定する必要があります。 使用 `attributeMerge`を使用すると、「キー値（レコードデータ） 」タイプのデータセット間で結合の競合が発生した場合に、優先するプロファイル属性を指定できます。
 
 **attributeMerge オブジェクト**
 
@@ -135,11 +142,11 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 
 ここで、`{ATTRIBUTE_MERGE_TYPE}` は次のいずれかです。
 
-* **`timestampOrdered`**:（デフォルト）最後に更新されたプロファイルを優先します。この結合タイプを使用する場合、`data` 属性は不要です。
-* **`dataSetPrecedence`** :訪問者のデータセットに基づいて、プロファイルフラグメントを優先します。これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
-   * **`order`**:「dataSetPrecedence」を使用する場合、配列にはデ `order` ータセットのリストが必要です。データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
+* **`timestampOrdered`**:（デフォルト）最後に更新されたプロファイルを優先します。 この結合タイプを使用する場合、`data` 属性は不要です。
+* **`dataSetPrecedence`** :訪問者のデータセットに基づいて、プロファイルフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
+   * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合、 `order` 配列は、データセットのリストと共に指定する必要があります。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-#### `dataSetPrecedence` 型を使用した `attributeMerge` オブジェクトの例
+#### 例 `attributeMerge` 使用するオブジェクト `dataSetPrecedence` type
 
 ```json
     "attributeMerge": {
@@ -153,7 +160,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
     }
 ```
 
-#### `timestampOrdered` 型を使用した `attributeMerge` オブジェクトの例
+#### 例 `attributeMerge` 使用するオブジェクト `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -163,7 +170,7 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
 
 ### スキーマ {#schema}
 
-スキーマオブジェクトは、この結合ポリシーを作成するエクスペリエンスデータモデル (XDM) スキーマクラスを指定します。
+スキーマオブジェクトは、この結合ポリシーを作成する Experience Data Model(XDM) スキーマクラスを指定します。
 
 **`schema`オブジェクト**
 
@@ -183,11 +190,11 @@ UI を使用して結合ポリシーを操作するには、『[ 結合ポリシ
     }
 ```
 
-XDM の詳細とExperience Platformでのスキーマの操作については、まず「[XDM システムの概要 ](../../xdm/home.md)」を読んでください。
+XDM の詳細とExperience Platformでのスキーマの操作については、まず [XDM システムの概要](../../xdm/home.md).
 
 ## 結合ポリシーへのアクセス {#access-merge-policies}
 
-[!DNL Real-time Customer Profile] API を使用すると、`/config/mergePolicies` エンドポイントで検索リクエストを実行して、ID で特定の結合ポリシーを表示したり、IMS 組織内のすべての結合ポリシーに特定の条件でフィルターしてアクセスしたりできます。 `/config/mergePolicies/bulk-get` エンドポイントを使用して、ID で複数の結合ポリシーを取得することもできます。 これらの各呼び出しを実行する手順については、以下の節で説明します。
+の使用 [!DNL Real-time Customer Profile] API、 `/config/mergePolicies` エンドポイントを使用すると、検索リクエストを実行して、ID で特定の結合ポリシーを表示したり、IMS 組織内のすべての結合ポリシーを、特定の条件でフィルターして表示したりできます。 また、 `/config/mergePolicies/bulk-get` エンドポイントを使用して、ID で複数の結合ポリシーを取得できます。 これらの各呼び出しを実行する手順について、以下の節で概要を説明します。
 
 ### ID による単一の結合ポリシーへのアクセス
 
@@ -232,6 +239,7 @@ curl -X GET \
     "attributeMerge": {
         "type": "timestampOrdered"
     },
+    "isActiveOnEdge": "false",
     "default": false,
     "updateEpoch": 1551127597
 }
@@ -241,7 +249,7 @@ curl -X GET \
 
 ### ID による複数の結合ポリシーの取得
 
-`/config/mergePolicies/bulk-get` エンドポイントにPOSTリクエストを送信し、取得する結合ポリシーの ID をリクエスト本文に含めることで、複数の結合ポリシーを取得できます。
+複数の結合ポリシーを取得するには、 `/config/mergePolicies/bulk-get` エンドポイントを探し、取得する結合ポリシーの ID をリクエスト本文に含めます。
 
 **API 形式**
 
@@ -300,6 +308,7 @@ curl -X POST \
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -327,6 +336,7 @@ curl -X POST \
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -351,6 +361,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `default` | 結合ポリシーがフィルタークラスのデフォルトであるかどうかによって結果をスキーマするブール値。 |
 | `limit` | ページに含める結果の数を制御するためのページサイズの制限を指定します。デフォルト値：20 |
 | `orderBy` | 名前を昇順で並べ替えるには `orderBy=name` または `orderBy=+name` のように結果を並べ替えるフィールドを指定し、降順で並べ替えるには `orderBy=-name` を指定します。この値を省略すると、`name` のデフォルトの並べ替え順が昇順になります。 |
+| `isActiveOnEdge` | 結合ポリシーがエッジでアクティブかどうかで結果をフィルタリングする boolean 値です。 |
 | `schema.name` | 使用可能な結合スキーマを取得するポリシーの名前。 |
 | `identityGraph.type` | フィルターは、ID グラフのタイプ別に表示されます。有効な値は、「none」と「pdg」（プライベートグラフ）です。 |
 | `attributeMerge.type` | フィルターは、使用される属性の結合タイプ別に結果を返します。指定できる値は、「timestampOrdered」と「dataSetPrecedence」です。 |
@@ -404,6 +415,7 @@ curl -X GET \
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -431,6 +443,7 @@ curl -X GET \
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -483,6 +496,7 @@ curl -X POST \
     "schema": {
         "name":"_xdm.context.profile"
     },
+    "isActiveOnEdge": true,
     "default": true
 }'
 ```
@@ -493,6 +507,7 @@ curl -X POST \
 | `identityGraph.type` | 結合する関連 ID を取得する ID グラフのタイプ。可能な値：「none」または「pdg」（プライベートグラフ）。 |
 | `attributeMerge` | データの競合時にプロファイル属性値に優先順位を付ける方法。 |
 | `schema` | 結合ポリシーに関連付けられた XDM スキーマクラス。 |
+| `isActiveOnEdge` | この結合ポリシーがエッジでアクティブかどうかを指定します。 |
 | `default` | この結合ポリシーがスキーマのデフォルトかどうかを指定します。 |
 
 詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
@@ -526,6 +541,7 @@ curl -X POST \
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -573,7 +589,7 @@ curl -X PATCH \
 | プロパティ | 説明 |
 |---|---|
 | `op` | 操作を指定します。その他のパッチ操作の例については、 [JSON パッチのドキュメント](http://jsonpatch.com)を参照してください |
-| `path` | 更新するフィールドのパス。指定できる値は「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」です。 |
+| `path` | 更新するフィールドのパス。指定できる値は「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」です。, &quot;/isActiveOnEdge&quot; |
 | `value` | 指定したフィールドに設定する値。 |
 
 詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
@@ -608,6 +624,7 @@ curl -X PATCH \
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -656,6 +673,7 @@ curl -X PUT \
                 "5b76f8d787a6af01e2ceda18"
             ]
         },
+        "isActiveOnEdge": true,
         "default": true,
         "updateEpoch": 1551898378
     }'
@@ -667,10 +685,10 @@ curl -X PUT \
 | `identityGraph` | 結合する関連 ID を取得する ID グラフ。 |
 | `attributeMerge` | データの競合時にプロファイル属性値に優先順位を付ける方法。 |
 | `schema` | 結合ポリシーに関連付けられた XDM スキーマクラス。 |
+| `isActiveOnEdge` | この結合ポリシーがエッジでアクティブかどうかを指定します。 |
 | `default` | この結合ポリシーがスキーマのデフォルトかどうかを指定します。 |
 
 詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
-
 
 **応答** 
 
@@ -701,6 +719,7 @@ curl -X PUT \
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -709,6 +728,10 @@ curl -X PUT \
 ## 結合ポリシーの削除
 
 結合ポリシーを削除するには、`/config/mergePolicies` エンドポイントに DELETE リクエストをおこない、削除する結合ポリシーの ID をリクエストパスに含めます。
+
+>[!NOTE]
+>
+>結合ポリシーに `isActiveOnEdge` true に設定すると、結合ポリシーが **できません** を削除します。 次のいずれかを使用します。 [PATCH](#edit-individual-merge-policy-fields) または [PUT](#overwrite-a-merge-policy) エンドポイントを使用して結合ポリシーを更新してから削除してください。
 
 **API 形式**
 
@@ -739,6 +762,6 @@ curl -X DELETE \
 
 ## 次の手順
 
-組織の結合ポリシーを作成および設定する方法がわかったので、それらを使用して Platform 内の顧客プロファイルの表示を調整し、[!DNL Real-time Customer Profile] データからオーディエンスセグメントを作成できます。
+組織の結合ポリシーを作成および設定する方法がわかったので、それらを使用して Platform 内の顧客プロファイルの表示を調整し、 [!DNL Real-time Customer Profile] データ。
 
 セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。

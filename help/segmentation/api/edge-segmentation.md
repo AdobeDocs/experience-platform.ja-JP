@@ -5,10 +5,10 @@ title: 'API を使用したエッジのセグメント化 '
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 8%
+source-wordcount: '942'
+ht-degree: 7%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 8%
 | 24 時間以内に複数の受信ヒット | 24 時間以内に発生した複数のイベントを参照するセグメント定義。 | ホームページを訪問した人 **または** 過去 24 時間以内にチェックアウトページにアクセスしました。 |
 | 24 時間の期間内にプロファイルを持つ複数のイベント | 24 時間以内に発生する 1 つ以上のプロファイル属性と複数のイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **および** 過去 24 時間以内にチェックアウトページにアクセスしました。 |
 
-{style=&quot;table-layout:auto&quot;}
+また、 **必須** エッジ上でアクティブな結合ポリシーに結び付けられている。 結合ポリシーの詳細については、 [結合ポリシーガイド](../../profile/api/merge-policies.md).
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
