@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform Overview
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 100%
+source-wordcount: '421'
+ht-degree: 70%
 
 ---
 
@@ -26,6 +26,14 @@ Adobe Experience Cloud とのネイティブな統合に加え、リアルタイ
 * 既知と未知の識別子に対して、信頼されたガバナンスとプライバシーコントロールを使用し、プロファイルを責任を持って管理します。
 * Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
+
+## Real-time Customer Data Platform B2B Edition（ベータ版）
+
+また、ビジネス間の組織のニーズに合わせて利用できるリアルタイム CDP には、別のエディションも用意されています。 リアルタイム CDP B2B エディションは、マーケター向けのリアルタイム CDP の機能を拡張するために設計されています。 Adobe Experience Platformエコシステム内で有効にされる機能は、B2B サービスモデル内での動作に適したものです。
+
+リアルタイム CDP B2B エディションを使用すると、マーケターは、ユーザーとアカウントの総合的なプロファイルを作成できます。 特に、統合アカウントプロファイルの一元化されたストアから、すべてのクロスソースデータをエンリッチメント、セグメント化、書き出しできます。 このデータは、一元化プロセスの各ステップで利用できるデータガバナンスツールを使用して管理できます。
+
+詳しくは、 [リアルタイム CDP B2B エディションの概要](./b2b-overview.md) を参照してください。
 
 ## 追加情報
 

@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;b2b;cdp;顧客 AI
-title: Real-time CDP B2B Edition の概要
+title: Real-time CDP B2B Edition の概要 （ベータ版）
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 93%
+source-wordcount: '1092'
+ht-degree: 91%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition の概要
+# Real-time Customer Data Platform B2B Edition の概要 （ベータ版）
 
 >[!IMPORTANT]
 >
@@ -73,9 +73,9 @@ Marketo および B2B データを Platform に取り込む方法の詳細につ
 
 ## B2B の宛先
 
-Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ads などのExperience Platformの宛先は、リアルタイム CDP B2B Edition で使用可能で、完全にサポートされます。 また、Marketo Engageの宛先では、セグメントメンバーシップデータを Platform からストリーミングし、Marketoでリストとして使用できるようにします。
+Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などのExperience Platform先は、Real-time CDP B2B Edition で使用でき、完全にサポートされます。 また、Marketo Engageの宛先では、セグメントメンバーシップデータを Platform からストリーミングし、Marketoでリストとして使用できるようにします。
 
-詳しくは、 [Marketo Engage先](../destinations/catalog/adobe/marketo-engage.md) を参照してください。
+概要については、 [Marketo Engage先](../destinations/catalog/adobe/marketo-engage.md) を参照してください。
 
 複数の CRM を使用している企業の場合、Real-time CDP B2B エディションには、Marketo または CRM のインスタンスを分離するように宛先コネクタを設定するオプションがあります。必要に応じて、各インスタンスへの宛先コネクタを設定し、オーディエンスを各 CRM インスタンスに個別に送信できます。
 
@@ -83,4 +83,15 @@ Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Googl
 
 Real-time CDP B2B Edition が提供するマーケターのメリットと、Real-time CDP との違いについて理解が深まったので、これらの機能を独自の IMS 組織に適用する方法について学習できます。
 
-Real-time CDP B2B エディションが B2B サービスモデルにどのように役立つかを理解するには、[Real-time CDP B2B エディションの使用例](./b2b-use-case.md)を参照してください。また、スキーマの作成と重要な B2B データエンティティの関係の定義に関する詳細なガイダンスについては、[Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)ドキュメントを参照してください。
+リアルタイム CDP B2B エディションがビジネス間サービスモデルに与えるメリットを理解するには、以下のドキュメントを参照して開始方法を確認してください。
+
+* [リアルタイム CDP B2B エディションの使用例](./b2b-use-case.md)
+* [データの取り込み方法](./sources/b2b.md)
+* [プロファイルへのアクセス方法](./profile/profile-overview.md)
+* [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
+* [セグメントの作成方法](./segmentation/b2b.md)
+* [宛先へのセグメントのアクティブ化の方法](./destinations/b2b.md)
+* [データガバナンスポリシーの定義と実施方法](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

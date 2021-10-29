@@ -1,16 +1,16 @@
 ---
 keywords: rtcdp b2b;b2b;アカウント;アカウントプロファイル;アカウントプロファイル rtcdp;real-time customer data platform;
-title: Real-time CDP B2B Edition のアカウントプロファイル
+title: Real-time CDP B2B Edition のアカウントプロファイル （ベータ版）
 description: Real-time Customer Data Platform B2B Edition でアカウントプロファイルを使用して、複数のソースからアカウント情報を統合する方法について説明します。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 8115a8716abbe6260321ce57728d86a6cc94d19c
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '275'
 ht-degree: 100%
 
 ---
 
-# アカウントプロファイルの概要
+# アカウントプロファイルの概要 （ベータ版）
 
 >[!IMPORTANT]
 >
