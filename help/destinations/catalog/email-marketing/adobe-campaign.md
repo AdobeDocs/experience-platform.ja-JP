@@ -3,10 +3,10 @@ keywords: E メール；E メール；E メールの宛先；Adobe Campaign;Camp
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 18%
+source-wordcount: '713'
+ht-degree: 16%
 
 ---
 
@@ -55,7 +55,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 * **[!UICONTROL バケット名]**：*S3 接続用*。S3 バケットの場所を入力します。ここで、 [!DNL Platform] は、書き出しデータを CSV ファイルとして保存します。
 * **[!UICONTROL フォルダーパス]**:ストレージの場所に次のパスを指定します。 [!DNL Platform] は、書き出しデータを CSV ファイルとして保存します。
 * **[!UICONTROL コンテナ]**: *BLOB 接続の場合*. フォルダーパスが含まれる BLOB を格納するコンテナです。
-* **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+* **[!UICONTROL ファイル形式]**:選択 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 

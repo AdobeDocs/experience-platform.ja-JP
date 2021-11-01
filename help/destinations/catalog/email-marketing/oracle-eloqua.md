@@ -3,10 +3,10 @@ keywords: E メール；E メール；E メールの宛先；oracleEloqua;oracle
 title: OracleEloqua 接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 26%
+source-wordcount: '487'
+ht-degree: 23%
 
 ---
 
@@ -54,7 +54,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:Platform が書き出しデータを CSV ファイルとして格納するストレージの場所のパスを指定します。
-* **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+* **[!UICONTROL ファイル形式]**:選択 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
 
 <!--
 

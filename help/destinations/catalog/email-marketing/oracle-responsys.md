@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メールの宛先；oracler
 title: OracleResponsys 接続
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 24%
+source-wordcount: '471'
+ht-degree: 20%
 
 ---
 
@@ -55,7 +55,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:Platform が書き出しデータを CSV ファイルとして格納するストレージの場所のパスを指定します。
-* **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+* **[!UICONTROL ファイル形式]**:選択 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
 
 <!--
 
