@@ -1,14 +1,14 @@
 ---
-keywords: プロファイルの宛先のアクティブ化；宛先のアクティブ化；データのアクティブ化電子メールマーケティングの宛先のアクティブ化クラウドストレージの宛先のアクティブ化
+keywords: プロファイルの宛先のアクティブ化、宛先のアクティブ化、データのアクティブ化電子メールマーケティングの宛先をアクティブ化する。クラウドストレージの宛先をアクティブ化
 title: プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化
 type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
-description: セグメントをプロファイルベースの宛先バッチに送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
+description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1958'
 ht-degree: 7%
 
 ---
@@ -17,76 +17,76 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-この記事では、クラウドストレージや電子メールマーケティングの宛先など、Adobe Experience Platformの一括プロファイルベースの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。
+この記事では、クラウドストレージや電子メールマーケティングの宛先など、Adobe Experience Platformのバッチプロファイルベースの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。
 
 ## 前提条件 {#prerequisites}
 
-宛先に対してデータをアクティブ化するには、宛先 ](./connect-destination.md) に [ 正常に接続されている必要があります。 まだの場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照して、使用する宛先を設定します。
+宛先に対してデータをアクティブ化するには、次の条件を満たしている必要があります。 [宛先に接続されている](./connect-destination.md). まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。
 
-## 宛先の選択 {#select-destination}
+## 宛先を選択 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]** に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
+1. に移動します。 **[!UICONTROL 接続/宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。
 
    ![「宛先カタログ」タブ](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
+1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
 
    ![「セグメントをアクティブ化」ボタン](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
-1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+1. セグメントのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-   ![宛先の選択](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![宛先を選択](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
-1. 次のセクションに移動して [ セグメントを選択します ](#select-segments)。
+1. 次のセクションに移動： [セグメントを選択](#select-segments).
 
-## セグメントの選択 {#select-segments}
+## セグメントを選択 {#select-segments}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
+セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![セグメントの選択](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![セグメントを選択](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
-## スケジュールセグメントの書き出し {#scheduling}
+## セグメントの書き出しをスケジュール {#scheduling}
 
-[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先のデータをファイルの形式で書き [!DNL CSV] 出します。**[!UICONTROL スケジュール]** ページで、エクスポートする各セグメントのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先のデータを [!DNL CSV] ファイル。 内 **[!UICONTROL スケジュール]** ページでは、書き出す各セグメントのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] は、エクスポートファイルを 1 ファイルあたり 500 万レコード（行）に自動的に分割します。各行は、1 つのプロファイルを表します。
+>[!DNL Adobe Experience Platform] は、1 ファイルあたり 500 万件のレコード（行）でエクスポートファイルを自動的に分割します。 各行は 1 つのプロファイルを表します。
 >
->分割ファイル名には、次のように、ファイルが大きなエクスポートの一部であることを示す数字が付加されます。`filename.csv`、`filename_2.csv`、`filename_3.csv`。
+>次のように、分割ファイル名には、ファイルが大きなエクスポートの一部であることを示す数字が付加されます。 `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-宛先に送信するセグメントに対応する「**[!UICONTROL スケジュール]** を作成」ボタンを選択します。
+を選択します。 **[!UICONTROL スケジュールを作成]** ボタンをクリックします。
 
 ![「スケジュールを作成」ボタン](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
-### 完全なファイルの書き出し {#export-full-files}
+### 完全なファイルを書き出し {#export-full-files}
 
-「**[!UICONTROL 完全なファイルをエクスポート]**」を選択して、選択したセグメントのすべてのプロファイル認定の完全なスナップショットを含むファイルのエクスポートをトリガーします。
+選択 **[!UICONTROL 完全なファイルを書き出し]** ：選択したセグメントのすべてのプロファイル認定の完全なスナップショットを含むファイルのエクスポートをトリガーします。
 
-![完全なファイルの書き出し](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![完全なファイルを書き出し](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. **[!UICONTROL 頻度]** セレクターを使用して、書き出し頻度を選択します。
+1. 以下を使用： **[!UICONTROL 頻度]** 書き出し頻度を選択するセレクター：
 
-   * **[!UICONTROL 1 回]**:1 回のオンデマンドフルファイルエクスポートをスケジュールします。
-   * **[!UICONTROL 毎日]**:指定した時刻に、1 日に 1 回フルファイルエクスポートをスケジュールします。
+   * **[!UICONTROL 1 回]**:1 回のオンデマンドフルファイル書き出しをスケジュールします。
+   * **[!UICONTROL 毎日]**:指定した時刻に、毎日 1 回、ファイルの完全なエクスポートをスケジュールします。
 
-1. **[!UICONTROL 時刻]** セレクターを使用して、エクスポートを実行する時刻を [!DNL UTC] 形式で選択します。
+1. 以下を使用： **[!UICONTROL 時間]** 時刻を選択するセレクター ( ) [!DNL UTC] 形式を指定します。
 
    >[!IMPORTANT]
    >
-   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全なファイルと増分ファイルの両方に対して、完全で最新のバックフィルデータの書き出しを確実におこなうには、Adobeでは、次の日の午後 12 時 (GMT) 以降の最初のファイル書き出し時間を設定することをお勧めします。この制限は、今後のリリースで対処される予定です。
+   >内部Experience Platform処理の設定方法により、最初の増分処理またはフルファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。 <br> <br> フルファイルと増分ファイルの両方で最新の完全なバックフィルデータ書き出しを確実におこなうには、Adobeでは、次の日の午後 12 時 (GMT) 以降に最初のファイル書き出し時間を設定することをお勧めします。 この制限は、今後のリリースで対処される予定です。
 
-1. **[!UICONTROL 日付]** セレクターを使用して、エクスポートを実行する日または間隔を選択します。
+1. 以下を使用： **[!UICONTROL 日付]** セレクターを使用して、エクスポートを実行する日または間隔を選択します。
    >[!TIP]
    >
-   > 日別のエクスポートの場合は、開始日と終了日を、ダウンストリームプラットフォームのキャンペーン期間に合わせて設定します。
-1. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
+   > 毎日のエクスポートの場合、開始日と終了日を、ダウンストリームプラットフォームでのキャンペーンの期間に合わせて設定します。
+1. 選択 **[!UICONTROL 作成]** スケジュールを保存します。
 
 
 ### 増分ファイルの書き出し {#export-incremental-files}
 
-「**[!UICONTROL 増分ファイルを書き出し]**」を選択して書き出しをトリガーします。最初のファイルは、選択したセグメントのすべてのプロファイル認定の完全なスナップショットで、後続のファイルは、前回の書き出し以降の増分プロファイル認定です。
+選択 **[!UICONTROL 増分ファイルの書き出し]** 最初のファイルが、選択したセグメントに対するすべてのプロファイル認定の完全なスナップショットであるエクスポートをトリガーし、それ以降のファイルは、前回のエクスポート以降の増分プロファイル認定です。
 
 >[!IMPORTANT]
 >
@@ -94,111 +94,111 @@ ht-degree: 7%
 
 ![増分ファイルの書き出し](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. **[!UICONTROL 頻度]** セレクターを使用して、書き出し頻度を選択します。
+1. 以下を使用： **[!UICONTROL 頻度]** 書き出し頻度を選択するセレクター：
 
-   * **[!UICONTROL 毎日]**:増分ファイルのエクスポートを、指定した時刻に 1 日 1 回スケジュールします。
-   * **[!UICONTROL 1 時間ごと]**:3、6、8、12 時間ごとに増分ファイルのエクスポートをスケジュールします。
+   * **[!UICONTROL 毎日]**:増分ファイルの書き出しを、指定した時刻に毎日 1 回スケジュールします。
+   * **[!UICONTROL 毎時]**:3、6、8、12 時間ごとに増分ファイルのエクスポートをスケジュールします。
 
-1. **[!UICONTROL 時刻]** セレクターを使用して、エクスポートを実行する時刻を [!DNL UTC] 形式で選択します。
+1. 以下を使用： **[!UICONTROL 時間]** 時刻を選択するセレクター ( ) [!DNL UTC] 形式を指定します。
 
    >[!IMPORTANT]
    >
-   >内部Experience Platform処理の設定方法により、最初の増分ファイル書き出しまたは完全ファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。<br> <br> 完全なファイルと増分ファイルの両方に対して、完全で最新のバックフィルデータの書き出しを確実におこなうには、Adobeでは、次の日の午後 12 時 (GMT) 以降の最初のファイル書き出し時間を設定することをお勧めします。この制限は、今後のリリースで対処される予定です。
+   >内部Experience Platform処理の設定方法により、最初の増分処理またはフルファイル書き出しにすべてのバックフィルデータが含まれていない場合があります。 <br> <br> フルファイルと増分ファイルの両方で最新の完全なバックフィルデータ書き出しを確実におこなうには、Adobeでは、次の日の午後 12 時 (GMT) 以降に最初のファイル書き出し時間を設定することをお勧めします。 この制限は、今後のリリースで対処される予定です。
 
-1. **[!UICONTROL 日付]** セレクターを使用して、エクスポートを実行する日または間隔を選択します。
+1. 以下を使用： **[!UICONTROL 日付]** セレクターを使用して、エクスポートを実行する日または間隔を選択します。
    >[!TIP]
    >
-   >開始日と終了日を、ダウンストリームプラットフォームのキャンペーン期間に合わせて設定します。
-1. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
+   >開始日と終了日を設定して、ダウンストリームプラットフォームでのキャンペーンの期間に合わせます。
+1. 選択 **[!UICONTROL 作成]** スケジュールを保存します。
 
 ### ファイル名の設定 {#file-names}
 
-デフォルトのファイル名は、宛先名、セグメント ID、日時インジケーターで構成されます。 例えば、エクスポートしたファイル名を編集して、異なるキャンペーンを区別したり、データのエクスポート時間をファイルに追加したりできます。
+デフォルトのファイル名は、宛先名、セグメント ID、日時インジケーターで構成されます。 例えば、エクスポートされたファイル名を編集して、異なるキャンペーンを区別したり、データのエクスポート時間をファイルに追加したりできます。
 
-鉛筆アイコンを選択してモーダルウィンドウを開き、ファイル名を編集します。 ファイル名は 255 文字までに制限されます。
+鉛筆アイコンを選択してモーダルウィンドウを開き、ファイル名を編集します。 ファイル名は 255 文字までに制限されています。
 
-![ファイル名の設定](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+![ファイル名を設定](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
-ファイル名エディターで、ファイル名に追加する別のコンポーネントを選択できます。
+ファイル名エディターで、別のコンポーネントを選択してファイル名に追加できます。
 
-![ファイル名のオプションの編集](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![ファイル名のオプションを編集](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 宛先名とセグメント ID をファイル名から削除することはできません。 これらに加えて、次を追加できます。
 
 * **[!UICONTROL セグメント名]**:ファイル名にセグメント名を追加できます。
-* **[!UICONTROL 日時]**:形式を追加する `MMDDYYYY_HHMMSS` か、ファイルが生成された時刻の 10 桁のタイムスタンプを Unix に追加するかを選択します。各増分エクスポートで生成される動的ファイル名をファイルに設定する場合は、次のオプションのいずれかを選択します。
+* **[!UICONTROL 日時]**:追加する項目を選択 `MMDDYYYY_HHMMSS` 形式または Unix の 10 桁のタイムスタンプ。 増分エクスポートごとに動的ファイル名を生成する場合は、次のオプションのいずれかを選択します。
 * **[!UICONTROL カスタムテキスト]**:ファイル名にカスタムテキストを追加します。
 
-「**[!UICONTROL 変更を適用]**」を選択して、選択を確定します。
+選択 **[!UICONTROL 変更を適用]** をクリックして選択を確定します。
 
 >[!IMPORTANT]
 > 
->**[!UICONTROL 日付と時刻]** コンポーネントを選択しない場合、ファイル名は静的になり、新しく書き出されたファイルによって、保存場所にある以前のファイルが書き出しごとに上書きされます。 ストレージの場所から電子メールマーケティングプラットフォームに繰り返しインポートジョブを実行する場合は、このオプションをお勧めします。
+>選択しない場合、 **[!UICONTROL 日時]** コンポーネントの場合、ファイル名は静的になり、新しく書き出されたファイルは、保存場所にある以前のファイルを書き出しごとに上書きします。 ストレージの場所から電子メールマーケティングプラットフォームに繰り返しインポートジョブを実行する場合は、このオプションをお勧めします。
 
-すべてのセグメントの設定が完了したら、「**[!UICONTROL 次へ]**」を選択して続行します。
+すべてのセグメントの設定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
-## プロファイル属性の選択 {#select-attributes}
+## プロファイル属性を選択 {#select-attributes}
 
-プロファイルベースの宛先の場合、ターゲットの宛先に送信するプロファイル属性を選択する必要があります。
+プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
 
-1. **[!UICONTROL 属性を選択]** ページで、「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
+1. 内 **[!UICONTROL 属性を選択]** ページ、選択 **[!UICONTROL 新しいフィールドを追加]**.
 
-   ![新しいマッピングの追加](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![新しいマッピングを追加](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
-1. 「**[!UICONTROL スキーマフィールド]**」エントリの右側にある矢印を選択します。
+1. 右側の矢印を選択します。 **[!UICONTROL スキーマフィールド]** エントリ。
 
-   ![ソースフィールドの選択](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![ソースフィールドを選択](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. **[!UICONTROL フィールド]** を選択ページで、宛先に送信する XDM 属性を選択し、「**[!UICONTROL 選択]**」を選択します。
+1. 内 **[!UICONTROL フィールドを選択]** ページで、宛先に送信する XDM 属性を選択してから、「 」を選択します **[!UICONTROL 選択]**.
 
    ![ソースフィールドページを選択](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-1. マッピングをさらに追加するには、手順 1 ～ 3 を繰り返します。
+1. さらにマッピングを追加するには、手順 1 ～ 3 を繰り返します。
 
 >[!NOTE]
 >
-> Adobe Experience Platformは、スキーマの 4 つの推奨される、一般的に使用される属性を使用して、選択内容を事前入力します。`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`。
+> Adobe Experience Platformは、スキーマの 4 つの推奨される、一般的に使用される属性を事前に選択します。 `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-`segmentMembership.status` が選択されているかどうかによって、ファイルのエクスポートは次の方法で異なります。
-* 「`segmentMembership.status`」フィールドを選択した場合、エクスポートされるファイルには、最初のフルスナップショットの「**[!UICONTROL アクティブ]**」メンバーと、後続の増分エクスポートの「**[!UICONTROL アクティブ]**」および「**[!UICONTROL 期限切れ]**」メンバーが含まれます。
-* 「 `segmentMembership.status` 」フィールドが選択されていない場合、エクスポートされたファイルには、最初の完全なスナップショットとそれ以降の増分エクスポートで **[!UICONTROL アクティブ]** メンバーのみが含まれます。
+ファイルの書き出しは、 `segmentMembership.status` が選択されている場合：
+* この `segmentMembership.status` フィールドが選択され、書き出されたファイルは次を含む **[!UICONTROL アクティブ]** 最初のフルスナップショットのメンバーと **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** 以降の増分エクスポートのメンバー
+* この `segmentMembership.status` フィールドが選択されていない場合、書き出されたファイルは次のみを含みます **[!UICONTROL アクティブ]** 最初のフルスナップショットと、その後の増分エクスポートのメンバー。
 
 ![推奨属性](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
-### 必須属性 {#mandatory-attributes}
+### 必須の属性 {#mandatory-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
->title="必須属性について"
->abstract="書き出されたすべてのプロファイルに含める必要がある XDM スキーマ属性を選択します。 必須キーのないプロファイルは、宛先にエクスポートされません。 必須キーを選択しない場合、属性に関係なく、すべての認定済みプロファイルがエクスポートされます。"
+>title="必須の属性について"
+>abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。 必須キーのないプロファイルは、宛先に書き出されません。 必須キーを選択しない場合、属性に関係なく、すべての認定プロファイルがエクスポートされます。"
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="詳しくは、ドキュメントを参照してください。"
 
-必須属性は、選択した属性がすべてのプロファイルレコードに含まれるようにする、ユーザーが有効なチェックボックスです。 例：書き出されるすべてのプロファイルには、電子メールアドレスが含まれ&#x200B;ます。
+必須属性は、選択した属性がすべてのプロファイルレコードに含まれるようにする、ユーザーが有効にしたチェックボックスです。 例：書き出されるすべてのプロファイルには、電子メールアドレスが含まれ&#x200B;ます。
 
-属性を必須としてマークして、[!DNL Platform] が特定の属性を含むプロファイルのみを書き出すようにすることができます。 その結果、追加のフィルタリング形式として使用できます。 属性を必須としてマークする必要は **ありません**。
+属性を必須としてマークして、 [!DNL Platform] は、特定の属性を含むプロファイルのみを書き出します。 その結果、追加のフィルタリング形式として使用できます。 属性を必須としてマークすることは **not** 必須
 
 必須属性を選択しない場合、属性に関係なく、すべての認定済みプロファイルがエクスポートされます。
 
-属性の 1 つは、スキーマの [ 一意の識別子 ](../../destinations/catalog/email-marketing/overview.md#identity) にすることをお勧めします。 必須属性について詳しくは、[ 電子メールマーケティングの宛先 ](../../destinations/catalog/email-marketing/overview.md#identity) ドキュメントの ID に関する節を参照してください。
+属性の 1 つを [一意の ID](../../destinations/catalog/email-marketing/overview.md#identity) スキーマから。 必須属性について詳しくは、 [電子メールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity) ドキュメント。
 
 ### 重複排除キー {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="重複排除キーについて"
->abstract="重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 1 つの名前空間または最大 2 つの XDM スキーマ属性を重複排除キーとして選択します。 重複排除キーを選択しないと、エクスポートファイルでプロファイルエントリが重複する場合があります。"
+>abstract="重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 重複排除キーとして 1 つの名前空間または最大 2 つの XDM スキーマ属性を選択します。 重複排除キーを選択しないと、エクスポートファイルでプロファイルエントリが重複する場合があります。"
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="詳しくは、ドキュメントを参照してください。"
 
-重複排除キーは、ユーザー定義のプライマリキーで、ユーザーがプロファイルの重複を排除する ID を決定しま&#x200B;す。
+重複排除キーは、ユーザーがプロファイルの重複排除を希望する ID を決定する、ユーザー定義のプライマリキー&#x200B;です。
 
 重複排除キーを使用すると、同じプロファイルの複数のレコードが 1 つのエクスポートファイルに含まれる可能性がなくなります。
 
-[!DNL Platform] で重複排除キーを使用する方法は 3 つあります。
+で重複排除キーを使用する方法は 3 つあります。 [!DNL Platform]:
 
-* 単一の ID 名前空間を [!UICONTROL  重複排除キー ] として使用
-* [!DNL XDM] プロファイルの単一のプロファイル属性を [!UICONTROL  重複排除キー ] として使用
-* [!DNL XDM] プロファイルの 2 つのプロファイル属性の組み合わせを複合キーとして使用する
+* 単一の ID 名前空間をとして使用 [!UICONTROL 重複排除キー]
+* 単一のプロファイル属性を [!DNL XDM] as a のプロファイル [!UICONTROL 重複排除キー]
+* 1 つの [!DNL XDM] 複合キーとしてのプロファイル
 
 >[!IMPORTANT]
 >
@@ -292,7 +292,7 @@ ht-degree: 7%
 
 ### 重複排除の使用例 2:id 名前空間に基づく重複排除 {#deduplication-use-case-2}
 
-[!DNL Email] 名前空間による重複排除を想定すると、書き出しファイルには次のエントリが含まれます。 プロファイル B はセグメントに適合する最新のものなので、書き出されるのはプロファイル B のみです。
+での重複排除 [!DNL Email] 名前空間の場合、書き出しファイルには次のエントリが含まれます。 プロファイル B はセグメントに適合する最新のものなので、書き出されるのは 1 つだけです。
 
 | メール* | personalEmail | firstName | lastName |
 |---|---|---|---|
@@ -301,7 +301,7 @@ ht-degree: 7%
 
 ### 重複排除の使用例 3:単一のプロファイル属性に基づく重複排除 {#deduplication-use-case-3}
 
-`personal Email` 属性による重複排除を想定すると、エクスポートファイルには次のエントリが含まれます。 プロファイル B はセグメントに適合する最新のものなので、書き出されるのはプロファイル B のみです。
+での重複排除 `personal Email` 属性を指定した場合、エクスポートファイルには次のエントリが含まれます。 プロファイル B はセグメントに適合する最新のものなので、書き出されるのは 1 つだけです。
 
 | personalEmail* | firstName | lastName |
 |---|---|---|
@@ -310,7 +310,7 @@ ht-degree: 7%
 
 ### 重複排除の使用例 4:2 つのプロファイル属性に基づく重複排除 {#deduplication-use-case-4}
 
-複合キー `personalEmail + lastName` による重複排除を想定すると、エクスポートファイルには次のエントリが含まれます。
+複合キーによる重複排除の想定 `personalEmail + lastName`を指定した場合、エクスポートファイルには次のエントリが含まれます。
 
 | personalEmail* | lastName* | firstName |
 |---|---|---|
@@ -318,17 +318,17 @@ ht-degree: 7%
 | johndoe@example.com | Doe | John |
 
 
-Adobeでは、すべてのプロファイルレコードが一意に識別されるように、[!DNL CRM ID] や E メールアドレスなどの ID 名前空間を重複排除キーとして選択することをお勧めします。
+Adobeは、などの ID 名前空間を選択することをお勧めします [!DNL CRM ID] または電子メールアドレスを重複排除キーとして指定して、すべてのプロファイルレコードを一意に識別できるようにします。
 
 >[!NOTE]
 > 
->データセット内の特定のフィールド（データセット全体ではなく）にデータ使用ラベルが適用されている場合、アクティブ化時にこれらのフィールドレベルのラベルが適用されるのは、次の条件下です。
+>データセット内の特定のフィールドに（データセット全体ではなく）データ使用ラベルが適用されている場合、アクティベーション時にこれらのフィールドレベルのラベルが適用されます。
 >
 >* これらのフィールドは、セグメント定義で使用されます。
 >* フィールドは、ターゲット先の予測属性として設定されます。
 
 >
-> 例えば、フィールド `person.name.firstName` に、宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、「[Adobe Experience Platformのデータガバナンス ](../../rtcdp/privacy/data-governance-overview.md#destinations)」を参照してください。
+> 例えば、 `person.name.firstName` には、宛先のマーケティングアクションと競合する特定のデータ使用ラベルがあり、レビュー手順にデータ使用ポリシー違反が表示されます。 詳しくは、 [Adobe Experience Platformのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## レビュー {#review}
 
@@ -336,18 +336,18 @@ Adobeでは、すべてのプロファイルレコードが一意に識別され
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反する例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法について詳しくは、データガバナンスのドキュメントの節の [ ポリシーの適用 ](../../rtcdp/privacy/data-governance-overview.md#enforcement) を参照してください。
+>この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反した場合の例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されなかった場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確認し、宛先へのデータの送信を開始します。
+ポリシー違反が検出されていない場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
 
 ![レビュー](../assets/ui/activate-batch-profile-destinations/review.png)
 
-## セグメントのアクティベーションの検証 {#verify}
+## セグメントのアクティベーションを検証 {#verify}
 
 
-電子メールマーケティングの宛先とクラウドストレージの宛先の場合、Adobe Experience Platformは指定したストレージの場所にタブ区切りの `.csv` ファイルを作成します。 新しいファイルはストレージの場所に毎日作成されます。デフォルトのファイル形式は次のとおりです。
+電子メールマーケティングの宛先とクラウドストレージの宛先の場合、Adobe Experience Platformは `.csv` ファイルを指定したストレージの場所に保存します。 新しいファイルはストレージの場所に毎日作成されます。デフォルトのファイル形式は次のとおりです。
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 3 日連続で受け取るファイルは次のようになります。
@@ -358,4 +358,4 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-これらのファイルがストレージの場所に存在すれば、アクティベーションは成功しています。書き出されたファイルの構造を理解するには、サンプルの.csv ファイル ](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) を [ ダウンロードします。 このサンプルファイルには、プロファイル属性 `person.firstname`、`person.lastname`、`person.gender`、`person.birthyear`、`personalEmail.address` が含まれます。
+これらのファイルがストレージの場所に存在すれば、アクティベーションは成功しています。書き出されたファイルの構造を理解するには、次の手順を実行します。 [サンプルの.csv ファイルをダウンロード](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). このサンプルファイルには、プロファイル属性が含まれています `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`、および `personalEmail.address`.
