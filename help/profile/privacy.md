@@ -3,24 +3,24 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
 type: Documentation
-description: Adobe Experience Platform Privacy Serviceは、多数のプライバシー規制に基づき、個人データへのアクセス、販売のオプトアウト、削除に対するお客様のリクエストを処理します。 このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
+description: Adobe Experience Platform Privacy Serviceは、多数のプライバシー規制に従って、個人データへのアクセス、販売のオプトアウト、削除の顧客リクエストを処理します。 このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
+source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1170'
 ht-degree: 30%
 
 ---
 
-# [!DNL Real-time Customer Profile] でのプライバシーリクエストの処理
+# でのプライバシーリクエストの処理 [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護規則 (GDPR) や [!DNL California Consumer Privacy Act](CCPA) などのプライバシー規制に基づき、自分の個人データに対するアクセス、販売のオプトアウト、削除の要求を処理します。
+Adobe Experience Platform [!DNL Privacy Service] は、一般データ保護規則 (GDPR) や [!DNL California Consumer Privacy Act] (CCPA)。
 
-このドキュメントでは、Adobe Experience Platform内での [!DNL Real-time Customer Profile] のプライバシーリクエストの処理に関する基本的な概念について説明します。
+このドキュメントでは、のプライバシーリクエストの処理に関する基本的な概念について説明します。 [!DNL Real-time Customer Profile] Adobe Experience Platformの
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformの Profile データストアに対してプライバシーリクエストを実行する方法についてのみ説明します。 また、Platform データレイクにプライバシーリクエストをおこなう予定がある場合は、このチュートリアルに加えて、データレイク ](../catalog/privacy.md) の [ プライバシーリクエストの処理に関するガイドを参照してください。
+>このガイドでは、プライバシーでのプロファイルデータストアに対するプライバシーリクエストのExperience Platformについてのみ説明します。 Platform データレイクに対してプライバシーリクエストもおこなう予定がある場合は、 [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md) を追加しました。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -42,36 +42,35 @@ ID サービスは、グローバルに定義された（標準）ID および�
 
 ## リクエストの送信 {#submit}
 
-以下の節では、[!DNL Privacy Service] API または UI を使用して [!DNL Real-time Customer Profile] のプライバシーリクエストをおこなう方法について説明します。 これらの節を読む前に、[Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) のドキュメントを参照して、リクエストペイロードで送信されたユーザー ID データを適切に書式設定する方法など、プライバシージョブの送信手順を確認することを強くお勧めします。
+以下の節では、のプライバシーリクエストをおこなう方法の概要を説明します。 [!DNL Real-time Customer Profile] の使用 [!DNL Privacy Service] API または UI これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) リクエストペイロードで送信されたユーザー id データを適切に書式設定する方法など、プライバシージョブを送信する手順に関する完全なドキュメントです。
 
 >[!IMPORTANT]
 >
->Privacy Serviceは、ID の結合を実行しない結合ポリシーを使用して [!DNL Profile] データのみを処理できます。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、[!UICONTROL ID ステッチ ] タイプが「[!DNL None]」のポリシーを使用していることを確認します。 つまり、[!UICONTROL ID のステッチ ] が「[!UICONTROL  プライベートグラフ ]」に設定されている結合ポリシーは使用できません。
+>Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、「[!DNL None]」 [!UICONTROL ID のステッチ] タイプ。 つまり、 [!UICONTROL ID のステッチ] が&quot;に設定されている[!UICONTROL プライベートグラフ]&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
 >
->また、プライバシーリクエストが完了するまでにかかる時間は保証できないことに注意する必要があります。 リクエストの処理中に [!DNL Profile] データに変更が発生した場合は、それらのレコードが処理されるかどうかも保証できません。
+>また、プライバシーリクエストの完了に要する時間は保証できないことに注意する必要があります。 変更が [!DNL Profile] リクエストの処理中にデータを保証することはできません。
 
 ### API の使用
 
-API でジョブリクエストを作成する場合、`userIDs` 内で提供される ID は、特定の `namespace` と `type` を使用する必要があります。 [!DNL Identity Service] で認識される有効な [ID 名前空間 ](#namespaces) を `namespace` 値に指定し、`type` は `standard` または `unregistered`（標準名前空間とカスタム名前空間の場合）にする必要があります。
+API でジョブリクエストを作成する際に、内で提供される ID `userIDs` は、特定の `namespace` および `type`. 有効な [id 名前空間](#namespaces) ～に認識される [!DNL Identity Service] は、 `namespace` 値、 `type` は、次のいずれかである必要があります `standard` または `unregistered` （標準名前空間とカスタム名前空間の場合）。
 
 >[!NOTE]
 >
->ID グラフと、プロファイルフラグメントの Platform データセットでの配布方法に応じて、各顧客に複数の ID を指定する必要がある場合があります。 詳しくは、次の [ プロファイルフラグメント ](#fragments) を参照してください。
+>ID グラフと、プロファイルフラグメントを Platform データセットでどのように配布するかに応じて、各顧客に対して複数の ID を指定する必要が生じる場合があります。 次の節を参照してください [プロファイルフラグメント](#fragments) を参照してください。
 
-さらに、リクエストペイロードの `include` 配列には、リクエストがおこなわれる別のデータストアの製品値を含める必要があります。[!DNL Data Lake] にリクエストを送信する場合、配列には「ProfileService」という値を含める必要があります。
+さらに、リクエストペイロードの `include` 配列には、リクエストがおこなわれる別のデータストアの製品値を含める必要があります。リクエストを [!DNL Data Lake]の場合、配列には「ProfileService」という値を含める必要があります。
 
-次のリクエストは、[!DNL Profile] ストア内の 1 人の顧客のデータに対して新しいプライバシージョブを作成します。 顧客に対して `userIDs` 配列で 2 つの ID 値が提供されます。1 つは標準の `Email` id 名前空間を使用し、もう 1 つはカスタムの `Customer_ID` 名前空間を使用します。 [!DNL Profile](`ProfileService`) の製品値も `include` 配列に含まれます。
+次のリクエストは、 [!DNL Profile] ストア。 顧客に対して、 `userIDs` 配列；標準を使ったもの `Email` ID 名前空間と、カスタムを使用する他の `Customer_ID` 名前空間。 また、 [!DNL Profile] (`ProfileService`) を `include` 配列：
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -104,6 +103,10 @@ curl -X POST \
 }'
 ```
 
+>[!IMPORTANT]
+>
+>Platform は、すべての [サンドボックス](../sandboxes/home.md) 組織に属している。 その結果、 `x-sandbox-name` リクエストに含まれるヘッダーは、システムでは無視されます。
+
 ### UI の使用
 
 UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品]**」の下の「**[!UICONTROL AEP Data Lake]**」または「**[!UICONTROL プロファイル]**」を必ず選択し、[!DNL Data Lake]または[!DNL Real-time Customer Profile]に保存されたデータのジョブを処理します。
@@ -112,38 +115,34 @@ UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品
 
 ## プライバシーリクエストのプロファイルフラグメント {#fragments}
 
-[!DNL Profile] データストアでは、個々の顧客の個人データは、多くの場合、ID グラフを通じて個人に関連付けられる複数のプロファイルフラグメントで構成されます。 [!DNL Profile] ストアにプライバシーリクエストを送信する場合、リクエストはプロファイル全体ではなく、プロファイルフラグメントレベルでのみ処理されることに注意する必要があります。
+内 [!DNL Profile] データストアとは、多くの場合、個々の顧客の個人データを複数のプロファイルフラグメントで構成し、id グラフを通じて個人に関連付けます。 プライバシーリクエストを [!DNL Profile] に保存する際には、要求はプロファイル全体ではなく、プロファイルフラグメントレベルでのみ処理されることに注意する必要があります。
 
 例えば、顧客属性データを 3 つの異なるデータセットに保存し、異なる識別子を使用してそのデータを個々の顧客に関連付ける場合を考えてみましょう。
 
-| データセット名 | プライマリID フィールド | 格納済み属性 |
+| データセット名 | プライマリID フィールド | 保存済み属性 |
 | --- | --- | --- |
 | データセット 1 | `customer_id` | `address` |
 | データセット 2 | `email_id` | `firstName`、`lastName` |
 | データセット 3 | `email_id` | `mlScore` |
 
-データセットの 1 つは主識別子として `customer_id` を使用し、他の 2 つは `email_id` を使用します。 ユーザー ID 値に `email_id` のみを使用してプライバシーリクエスト（アクセスまたは削除）を送信した場合、`firstName`、`lastName` および `mlScore` 属性のみが処理され、`address` は影響を受けません。
+データセットの 1 つが `customer_id` を主識別子として使用する一方、他の 2 つは `email_id`. 以下のみを使用してプライバシーリクエスト（アクセスまたは削除）を送信する場合 `email_id` ユーザー ID 値として、 `firstName`, `lastName`、および `mlScore` 属性が処理され、 `address` 影響を受けない
 
-プライバシーリクエストですべての関連する顧客属性を確実に処理するには、該当するすべてのデータセットに対して、それらの属性を保存できるプライマリ ID 値を指定する必要があります（1 人の顧客につき最大 9 つの ID）。 ID として一般的にマークされるフィールドについて詳しくは、「[ スキーマ構成の基本 ](../xdm/schema/composition.md#identity)」の ID フィールドに関する節を参照してください。
-
->[!NOTE]
->
->異なる [ サンドボックス ](../sandboxes/home.md) を使用して [!DNL Profile] データを保存する場合は、 `x-sandbox-name` ヘッダー内の適切なサンドボックス名を示し、各サンドボックスに対して個別のプライバシーリクエストを実行する必要があります。
+プライバシーリクエストがすべての関連する顧客属性を確実に処理するには、該当するすべてのデータセットに対して、それらの属性を保存できるプライマリ ID 値を指定する必要があります（1 人の顧客につき最大 9 つの ID）。 詳しくは、 [スキーマ構成の基本](../xdm/schema/composition.md#identity) id として一般的にマークされるフィールドについて詳しくは、を参照してください。
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。プライバシージョブが完了すると、レコードは [!DNL Data Lake] または [!DNL Profile] ストアから削除されます。 削除ジョブの処理中は、データはソフト削除されるので、[!DNL Platform] サービスからはアクセスできません。 ジョブのステータスの追跡の詳細については、[[!DNL Privacy Service]  ドキュメント ](../privacy-service/home.md#monitor) を参照してください。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、レコードが [!DNL Data Lake] または [!DNL Profile] プライバシージョブが完了したら、を保存します。 削除ジョブが処理中の間、データはソフト削除されるので、誰もアクセスできません [!DNL Platform] サービス。 詳しくは、 [[!DNL Privacy Service] ドキュメント](../privacy-service/home.md#monitor) を参照してください。
 
 >[!IMPORTANT]
 >
 >削除リクエストが成功すると、顧客（または顧客のセット）の収集された属性データが削除されますが、このリクエストでは、ID グラフで確立された関連付けは削除されません。
 >
->例えば、顧客の `email_id` と `customer_id` を使用する削除リクエストでは、これらの ID に保存されているすべての属性データが削除されます。 ただし、同じ `customer_id` の下で取り込まれた後も、関連付けがまだ存在するので、適切な `email_id` に関連付けられます。
+>例えば、顧客の `email_id` および `customer_id` は、これらの ID の下に保存されているすべての属性データを削除します。 ただし、その後、同じ `customer_id` が適切な `email_id`と呼ばれ、関連付けはまだ存在するので、
 
 今後のリリースでは、データが物理的に削除された後、[!DNL Platform] は [!DNL Privacy Service] へと確認を送信します。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Experience Platform] でのプライバシーリクエストの処理に関する重要な概念について説明しました。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
+このドキュメントでは、プライバシーリクエストの処理に関する重要な概念を紹介しました。 [!DNL Experience Platform]. ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
 
-[!DNL Profile] で使用しない [!DNL Platform] リソースのプライバシーリクエストの処理について詳しくは、データレイク ](../catalog/privacy.md) の [ プライバシーリクエストの処理に関するドキュメントを参照してください。
+のプライバシーリクエストの処理に関する情報 [!DNL Platform] 使用されないリソース [!DNL Profile]を参照し、 [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md).

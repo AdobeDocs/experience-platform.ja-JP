@@ -5,10 +5,10 @@ title: データレイクでのプライバシーリクエストの処理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
+source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 100%
+source-wordcount: '1380'
+ht-degree: 92%
 
 ---
 
@@ -72,7 +72,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 >
 >この節では、データセットの XDM スキーマの固有の URI ID 値を把握していることを前提としています。この値がわからない場合は、[!DNL Catalog Service] API を使用して取得できます。デベロッパーガイドの[はじめに](./api/getting-started.md)の節を読んだ後、[!DNL Catalog] オブジェクトの[リスト](./api/list-objects.md)または[検索](./api/look-up-object.md)で概説されている手順に従ってください。スキーマ ID は `schemaRef.id` の下にあります。
 >
-> この節には、スキーマレジストリ API の呼び出しが含まれます。`{TENANT_ID}` やコンテナの概念を把握するなど、API の使用に関する重要な情報については、デベロッパーガイドの[はじめに](../xdm/api/getting-started.md)の節を参照してください。
+>また、この節では、スキーマレジストリ API の呼び出し方法を理解していることを前提としています。 API の使用に関する重要な情報 ( `{TENANT_ID}` コンテナの概念については、 [はじめに](../xdm/api/getting-started.md) 」の節を参照してください。
 
 [!DNL Schema Registry] API の `/descriptors` エンドポイントに POST リクエストをおこなうことで、データセットの XDM スキーマに ID 記述子を追加できます。
 
@@ -90,10 +90,10 @@ POST /descriptors
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '
       {
         "@type": "xdm:descriptorIdentity",
@@ -154,19 +154,19 @@ UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品
 
 ### API の使用
 
-API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。[!DNL Data Lake]の ID は、`type` 値に「未登録」を使用し、適用可能なデータセットに追加された[プライバシーラベル](#privacy-labels)と一致する `namespace` 値を使用する必要があります。
+API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。の ID [!DNL Data Lake] 使用する `unregistered` その `type` 値と `namespace` 一致する値 [プライバシーラベル](#privacy-labels) を適用可能なデータセットに追加しました。
 
 さらに、リクエストペイロードの `include` 配列には、リクエストがおこなわれる別のデータストアの製品値を含める必要があります。[!DNL Data Lake]にリクエストを送信する場合、配列には「`aepDataLake`」という値を含める必要があります。
 
-次のリクエストは、未登録の「email_label」名前空間を使用して、[!DNL Data Lake]に新しいプライバシージョブを作成します。また、`include` 配列内の[!DNL Data Lake]に対する製品値も含まれます。
+次のリクエストは、 [!DNL Data Lake]( 未登録の `email_label` 名前空間。 また、`include` 配列内の[!DNL Data Lake]に対する製品値も含まれます。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -198,6 +198,10 @@ curl -X POST \
     "regulation": "ccpa"
 }'
 ```
+
+>[!IMPORTANT]
+>
+>Platform は、すべての [サンドボックス](../sandboxes/home.md) 組織に属している。 その結果、 `x-sandbox-name` リクエストに含まれるヘッダーは、システムでは無視されます。
 
 ## リクエスト処理の削除
 
