@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Marketo Engage;marketo engage;Marketo；マッピング
+keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage;marketo engage;Marketo；マッピング
 solution: Experience Platform
-title: Marketo Engage・ソースのフィールドのマッピング
+title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
-description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールドのマッピングを示します。
+description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: bbd2b92d1ad1e8abf4a6b624c00132ffa96aa676
+source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # [!DNL Marketo Engage] フィールドマッピング
 
-次の表には、9 つの [!DNL Marketo] データセット内のフィールドと、対応する Experience Data Model(XDM) フィールド間のマッピングが含まれています。
+次の表に、9 つのフィールド間のマッピングを示します [!DNL Marketo] データセットと、対応する Experience Data Model(XDM) フィールドに関する情報です。
 
 ## アクティビティ {#activities}
 
@@ -22,13 +22,13 @@ ht-degree: 9%
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
-| `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
+| `web.webPageDetails.URL` | `web.webPageDetails.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4` |
 | `search.keywords` | `search.keywords` |
@@ -98,10 +98,10 @@ ht-degree: 9%
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -126,9 +126,9 @@ ht-degree: 9%
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 関係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -142,7 +142,7 @@ ht-degree: 9%
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -156,10 +156,10 @@ ht-degree: 9%
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -187,7 +187,7 @@ ht-degree: 9%
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -200,28 +200,28 @@ ht-degree: 9%
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 関係 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 名前付きアカウント {#named-accounts}
+## 特定顧客 {#named-accounts}
 
 >[!IMPORTANT]
 >
->名前付きアカウントデータセットは、Marketoのアカウントベースマーケティング (ABM) 機能でのみ必要です。 ABM を使用しない場合は、名前付きアカウントのマッピングを設定する必要はありません。
+>重点顧客データセットは、Marketoのアカウントベースドマーケティング (ABM) 機能でのみ必要です。 ABM を使用しない場合は、重点顧客のマッピングを設定する必要はありません。
 
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -238,15 +238,15 @@ ht-degree: 9%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 機会 {#opportunities}
+## 商談 {#opportunities}
 
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -264,22 +264,22 @@ ht-degree: 9%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | このソースデータセットは、 [!DNL Salesforce] 統合を使用しているユーザーのみが使用できます。 |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | このソースデータセットは、 [!DNL Salesforce] 統合とも呼ばれます。 |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 商談の連絡先の役割 {#opportunity-contact-roles}
+## オポチュニティ連絡先の役割 {#opportunity-contact-roles}
 
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | プライマリID。 `"${MUNCHKIN_ID}"` の値は Explore API の一部として置き換えられます。 |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | プライマリID。 の値 `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | 関係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
 | `role` | `personRole` |
@@ -289,15 +289,15 @@ ht-degree: 9%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 人 {#persons}
+## 人物 {#persons}
 
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | プライマリID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 購読解除が `true`（例えば、値= `1`）の場合、`consents.marketing.email.val` を (`n`) と設定します。 購読解除が `false` の場合（例えば、値= `0`）、`consents.marketing.email.val` を `null` に設定します。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 配信停止済みが `true` ( 例：value = `1`) を選択し、 `consents.marketing.email.val` (`n`) をクリックします。 配信停止済みが `false` ( 例：value = `0`) を選択し、 `consents.marketing.email.val` as `null`. |
 | `unsubscribedReason` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -309,7 +309,7 @@ ht-degree: 9%
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | `extSourceSystemAudit.externalKey.sourceKey` はセカンダリ ID です。 |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | この `extSourceSystemAudit.externalKey.sourceKey` はセカンダリ ID です。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -343,8 +343,8 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))` ソースフィールドは、Platform UI の「[!UICONTROL  計算済みフィールドを追加 ]」オプションを使用して追加する必要がある計算済みフィールドです。 詳しくは、[ 計算フィールドの追加 ](../../../../data-prep/calculated-fields.md) に関するチュートリアルを参照してください。
+>この `to_object('ECID',arrays_to_objects('id',explode(ecids)))` ソースフィールドは、 [!UICONTROL 計算フィールドを追加] 」オプションを使用して、Platform UI に表示されます。 に関するチュートリアルを参照してください。 [計算フィールドの追加](../../../../data-prep/calculated-fields.md) を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Marketo] データセットと対応する XDM フィールドの間のマッピングの関係に関する洞察を得ました。 [ [!DNL Marketo]  ソース接続 ](../../../tutorials/ui/create/adobe-applications/marketo.md) の作成に関するチュートリアルを参照して、[!DNL Marketo] データフローを完了してください。
+このドキュメントを読むと、 [!DNL Marketo] データセットと対応する XDM フィールド。 に関するチュートリアルを参照してください。 [作成 [!DNL Marketo] ソース接続](../../../tutorials/ui/create/adobe-applications/marketo.md) を [!DNL Marketo] データフロー。
