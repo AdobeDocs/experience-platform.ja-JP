@@ -5,7 +5,7 @@ title: （ベータ版）Experience Platformアドホックアクティベーシ
 description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 12%
@@ -124,9 +124,9 @@ Adobe Experience Platformは、24 時間に 1 回、スケジュールされた�
 
 セグメントの書き出しジョブが完了したら、アクティベーションをトリガーできます。
 
->[!WARNING]
+>[!NOTE]
 >
->アドホックアクティベーションジョブあたり、最大で 50 個のセグメントをアクティブ化できます。 より多くのセグメントをアクティブ化しようとすると、ジョブが失敗します。
+>アドホックアクティベーションジョブあたり、最大 20 個のセグメントをアクティブ化できます。 より多くのセグメントをアクティブ化しようとすると、ジョブが失敗します。
 
 ### リクエスト
 
