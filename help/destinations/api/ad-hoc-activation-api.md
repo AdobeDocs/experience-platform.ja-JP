@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform、宛先 API、アドホックアクティベーション、セグメントのアドホックアクティブ化
 solution: Experience Platform
-title: （ベータ版）Experience Platformアドホックアクティベーション API を使用してオーディエンスセグメントをアクティブ化します
-description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
+title: （ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します
+description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してオーディエンスセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 12%
 
 ---
 
 
-# （ベータ版）Experience Platformアドホックアクティベーション API を使用してオーディエンスセグメントをアクティブ化します
+# （ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ ht-degree: 12%
 
 ### Flashの売り上げまたはプロモーション
 
-あるオンライン小売業者は、限定的なフラッシュ販売を準備しており、顧客に短い通知で通知したいと考えています。 マーケティングチームは、Experience Platformアドホックアクティベーション API を使用して、オーディエンスセグメントをオンデマンドでエクスポートし、プロモーション E メールを顧客ベースにすばやく送信できます。
+あるオンライン小売業者は、限定的なフラッシュ販売を準備しており、顧客に短い通知で通知したいと考えています。 Experience Platformアドホックアクティベーション API を使用して、マーケティングチームは、セグメントをオンデマンドで書き出し、プロモーション E メールを顧客ベースにすばやく送信できます。
 
 
 ### 最新のイベントまたは最新のニュース
 
-ホテルは、翌日の悪天候を期待し、チームは到着したゲストに迅速に知らせたいので、適切な計画を立てることができます。 マーケティングチームは、Experience Platformアドホックアクティベーション API を使用して、オーディエンスセグメントをオンデマンドで書き出し、ゲストに通知できます。
+ホテルは、翌日の悪天候を期待し、チームは到着したゲストに迅速に知らせたいので、適切な計画を立てることができます。 マーケティングチームは、Experience Platformアドホックアクティベーション API を使用して、セグメントをオンデマンドで書き出し、ゲストに通知できます。
 
 ### 統合テスト
 
-IT マネージャーは、Experience Platformのアドホックアクティベーション API を使用してオーディエンスセグメントをオンデマンドで書き出し、Adobe Experience Platformとのカスタム統合をテストして、すべてが正しく動作していることを確認できます。
+IT マネージャーは、Experience Platformのアドホックアクティベーション API を使用して、セグメントをオンデマンドで書き出し、Adobe Experience Platformとのカスタム統合をテストして、すべてが正しく動作していることを確認できます。
 
 
 ## ガードレール {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスセグメントをアクティブ化する宛先インスタンスの ID。 |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスセグメントの ID。 |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | セグメントをアクティブ化する宛先インスタンスの ID。 |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するセグメントの ID。 |
 | <ul><li>`exportId1`</li></ul> | ID が [セグメントの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 詳しくは、 [手順 4:最新のセグメント書き出しジョブ ID を取得する](#segment-export-id) を参照してください。 |
 
 ### 応答
