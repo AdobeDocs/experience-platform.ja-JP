@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
+source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 39%
@@ -16,7 +16,7 @@ ht-degree: 39%
 
 Experience Platformの更新。
 
-### [ユーザーインターフェイス] {#ui}
+### ユーザーインターフェイス {#ui}
 
 ユーザーインターフェイスが更新され、次の変更が加えられました。
 
