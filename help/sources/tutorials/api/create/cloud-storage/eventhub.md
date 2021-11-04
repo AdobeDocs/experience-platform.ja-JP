@@ -1,54 +1,54 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；イベントハブ；Azure イベントハブ；イベントハブ
+keywords: Experience Platform；ホーム；人気の高いトピック；イベントハブ；Azure イベントハブ；イベントハブ
 solution: Experience Platform
 title: フローサービス API を使用した Azure Event Hubs ソース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '737'
 ht-degree: 8%
 
 ---
 
 
-# [!DNL Flow Service] API を使用して [!DNL Azure Event Hubs] ソース接続を作成する
+# の作成 [!DNL Azure Event Hubs] を使用したソース接続 [!DNL Flow Service] API
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Event Hubs]（以下「[!DNL Event Hubs]」と呼びます）をExperience Platformに接続する手順について説明します。
+このチュートリアルでは、接続の手順について説明します [!DNL Azure Event Hubs] （以下「」という。）[!DNL Event Hubs]&quot;) をExperience Platform、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
+- [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
 - [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL Event Hubs] を Platform に正しく接続するために知っておく必要がある追加情報を示します。
+次の節では、接続を成功させるために知っておく必要がある追加情報を示します [!DNL Event Hubs] を使用して Platform に [!DNL Flow Service] API
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service] が [!DNL Event Hubs] アカウントと接続するには、次の接続プロパティの値を指定する必要があります。
+次のために [!DNL Flow Service] を [!DNL Event Hubs] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `sasKeyName` | 承認規則の名前。SAS キー名とも呼ばれます。 |
-| `sasKey` | 生成された共有アクセス署名。 |
-| `namespace` | アクセスする [!DNL Event Hubs] の名前空間。 [!DNL Event Hubs] 名前空間は一意のスコープコンテナを提供し、そこで 1 つ以上の [!DNL Event Hubs] を作成できます。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Event Hubs] 接続仕様 ID は次のとおりです。`bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKeyName` | 認証規則の名前。SAS キー名とも呼ばれます。 |
+| `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` この `sasKey` 必ず～に対応する `manage` 次に対して設定された権限： [!DNL Event Hubs] リストに値を入力します。 |
+| `namespace` | の名前空間 [!DNL Event Hubs] にアクセスしています。 An [!DNL Event Hubs] 名前空間は、1 つ以上のスコーピングコンテナを作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 この [!DNL Event Hubs] 接続仕様 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
-これらの値の詳細については、[ この Event Hubs のドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
+これらの値について詳しくは、 [この Event Hubs ドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../../landing/api-guide.md) を参照してください。
+Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../../landing/api-guide.md).
 
 ## ベース接続を作成する
 
-ソース接続を作成する最初の手順は、[!DNL Event Hubs] ソースを認証し、ベース接続 ID を生成することです。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
+ソース接続を作成する最初の手順は、 [!DNL Event Hubs] ソースおよびベース接続 ID を生成します。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
 
-ベースPOSTID を作成するには、要求パラメーターの一部として [!DNL Event Hubs] 認証資格情報を指定しながら、`/connections` エンドポイントに接続要求を行います。
+ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Event Hubs] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -86,14 +86,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.sasKeyName` | 承認規則の名前。SAS キー名とも呼ばれます。 |
+| `auth.params.sasKeyName` | 認証規則の名前。SAS キー名とも呼ばれます。 |
 | `auth.params.sasKey` | 生成された共有アクセス署名。 |
-| `auth.params.namespace` | アクセスする [!DNL Event Hubs] の名前空間。 |
-| `connectionSpec.id` | [!DNL Event Hubs] 接続仕様 ID は次のとおりです。`bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | の名前空間 [!DNL Event Hubs] にアクセスしています。 |
+| `connectionSpec.id` | この [!DNL Event Hubs] 接続仕様 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この接続 ID は、次の手順でソース接続を作成する際に必要です。
+正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この接続 ID は、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
@@ -104,9 +104,9 @@ curl -X POST \
 
 ## ソース接続の作成
 
-ソース接続は、データの取り込み元の外部ソースへの接続を作成し、管理します。 ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと IMS 組織に固有です。
+ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。 ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと IMS 組織に固有です。
 
-ソース接続を作成するには、[!DNL Flow Service] API の `/sourceConnections` エンドポイントにPOSTリクエストを実行します。
+ソース接続を作成するには、 `/sourceConnections` エンドポイント [!DNL Flow Service] API
 
 **API 形式**
 
@@ -146,16 +146,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすいことを確認します。 |
+| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | ソース接続に関する詳細情報を含めるために指定できるオプションの値です。 |
-| `baseConnectionId` | 前の手順で生成した [!DNL Event Hubs] ソースの接続 ID。 |
-| `connectionSpec.id` | [!DNL Event Hubs] の固定接続仕様 ID。 この ID は、です。`bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | 取り込む [!DNL Event Hubs] データの形式。 現在サポートされているデータ形式は `json` のみです。 |
-| `params.eventHubName` | [!DNL Event Hubs] ソースの名前。 |
-| `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。`raw` と `xdm`。 |
-| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest` を使用して最新のデータから読み取りを開始し、`earliest` を使用してストリーム内の最初に使用可能なデータから読み取りを開始します。 このパラメーターはオプションで、指定しない場合はデフォルトで `earliest` になります。 |
-| `params.consumerGroup` | [!DNL Event Hubs] に使用するパブリッシュまたはサブスクリプションのメカニズム。 このパラメーターはオプションで、指定しない場合はデフォルトで `$Default` になります。 詳しくは、この [[!DNL Event Hubs]  イベントコンシューマーのガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 |
+| `baseConnectionId` | の接続 ID [!DNL Event Hubs] 前の手順で生成されたソース。 |
+| `connectionSpec.id` | の固定接続仕様 ID [!DNL Event Hubs]. この ID は： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `data.format` | の形式 [!DNL Event Hubs] 取り込むデータ。 現在、サポートされているデータ形式は次のみです。 `json`. |
+| `params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
+| `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。 `raw` および `xdm`. |
+| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 用途 `latest` 最新のデータから読み込みを開始するには、 `earliest` をクリックして、ストリーム内の最初の使用可能なデータから読み取りを開始します。 このパラメーターはオプションで、デフォルトはです。 `earliest` 指定されていない場合は。 |
+| `params.consumerGroup` | 使用する公開または購読のメカニズム [!DNL Event Hubs]. このパラメーターはオプションで、デフォルトはです。 `$Default` 指定されていない場合は。 詳しくは、 [[!DNL Event Hubs] イベント消費者向けガイド](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 |
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Event Hubs] ソース接続を作成しました。 次のチュートリアルでこのソース接続 ID を使用して、 [!DNL Flow Service] API](../../collect/streaming.md) を使用してストリーミングデータフローを作成できます。[
+このチュートリアルに従って、 [!DNL Event Hubs] を使用したソース接続 [!DNL Flow Service] API 次のチュートリアルでは、このソース接続 ID を使用して、 [を使用してストリーミングデータフローを作成する [!DNL Flow Service] API](../../collect/streaming.md).
