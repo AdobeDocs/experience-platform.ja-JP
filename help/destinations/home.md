@@ -5,9 +5,9 @@ seo-title: Destinations overview
 description: クロスチャネルマーケティングキャンペーン、電子メール、ターゲット広告などの宛先に対してAdobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 42%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 42%
 
 ## 宛先とソース {#destinations-and-sources}
 
-Platform の主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。 [sources](../sources/home.md) を使用して、データを Platform および宛先に取り込み、Platform からデータを書き出します。
+Platform の主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。 用途 [ソース](../sources/home.md) を使用して、Platform と宛先にデータを取り込み、Platform からデータを書き出します。
 
 ## 宛先の手順 {#steps}
 
-* Platform で使用可能なすべての宛先の [ セルフサービスカタログ ](./catalog/overview.md) から選択します。
-* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信します。
+* 次から選択： [セルフサービスカタログ](./catalog/overview.md) を含む ) を含める必要があります。
+* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
@@ -48,14 +48,14 @@ Platform の宛先機能は、Adobe Experience Platformのアクセス制御権�
 
 アクセス制御の詳細については、「[アクセス制御ユーザーガイド](../access-control/ui/overview.md)」を参照してください。
 
-## [!DNL Data Governance] 宛先へのデータのアクティブ化の制限 {#data-governance}
+## 宛先へのデータのアクティブ化に関するデータガバナンス制限 {#data-governance}
 
 データガバナンスは、次の方法で Platform の宛先に適用されます。
 
-* *宛先* の作成ワークフローで選択できるマーケティングアクション
-* *特定の使用ラベルを含むデータを制限するデータ使用ポリシー* は、特定のマーケティングアクションを持つ宛先に対して、アクティブ化されません。
+* *マーケティングアクション* 宛先の作成ワークフローで選択できるもの。
+* *データ使用ポリシー* 特定の使用ラベルを含むデータを、特定のマーケティングアクションを持つ宛先に対してアクティブ化しないように制限する機能を追加しました。
 
-[ マーケティングアクション ](../data-governance/policies/overview.md) と [ データポリシー違反の解決 ](../data-governance/enforcement/auto-enforcement.md) について詳しくは、Platform ドキュメントの [!DNL Data Governance] を参照してください。
+詳しくは、Platform のドキュメントの「データガバナンス」を参照してください。 [マーケティングアクション](../data-governance/policies/overview.md) および [データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md).
 
 宛先の作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Platform の様々な宛先タイプについて、次のページを参照してください。
 
@@ -66,7 +66,7 @@ Platform の宛先機能は、Adobe Experience Platformのアクセス制御権�
 * [電子メールマーケティングの宛先](./catalog/email-marketing/overview.md)
 * [ソーシャルの宛先](./catalog/social/overview.md)
 
-セグメントのアクティベーションワークフローでのデータポリシー違反の詳細については、次のガイドの「確認」の手順を参照してください。
+セグメントのアクティベーションワークフローでのデータポリシー違反について詳しくは、次のガイドの「確認」の手順を参照してください。
 
 * [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md#review)
 * [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-streaming-profile-destinations.md#review)

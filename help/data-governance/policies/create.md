@@ -6,10 +6,10 @@ topic-legacy: policies
 type: Tutorial
 description: Policy Service API を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。このドキュメントでは、Policy Service API を使用してポリシーを作成する、順を追ったチュートリアルを提供します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 100%
+source-wordcount: '1217'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 100%
 
 ## マーケティングアクションの定義 {#define-action}
 
-[!DNL Data Governance] フレームワークで、マーケティングアクションとは、[!DNL Experience Platform] のデータ消費者がおこなうアクションのことで、データ使用ポリシーの違反を確認する必要があります。
+データガバナンスフレームワークでは、マーケティングアクションとは、 [!DNL Experience Platform] データコンシューマーは、データ使用ポリシーの違反を確認する必要があるを取得します。
 
 データ使用ポリシーを作成する最初の手順は、ポリシーが評価するマーケティングアクションを決定することです。これは、次のいずれかのオプションを使用しておこなうことができます。
 

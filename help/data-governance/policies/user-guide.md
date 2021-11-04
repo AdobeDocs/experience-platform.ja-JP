@@ -5,16 +5,16 @@ title: UI でのデータ使用ポリシーの管理
 topic-legacy: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platform ユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要について説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 100%
 
 ---
 
 # UI でのデータ使用ポリシーの管理
 
-Adobe Experience Platform [!DNL Data Governance]は、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、[!DNL Experience Platform] ユーザーインターフェイスの&#x200B;**ポリシー**&#x200B;ワークスペースで実行できるアクションの概要について説明します。
+Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、[!DNL Experience Platform] ユーザーインターフェイスの&#x200B;**ポリシー**&#x200B;ワークスペースで実行できるアクションの概要について説明します。
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Data Governance]は、データ使用ポリシ�
 
 このガイドでは、次の [!DNL Experience Platform] の概念に関する十分な知識が必要です。
 
-- [[!DNL Data Governance]](../home.md)
+- [データガバナンス](../home.md)
 - [データ使用ポリシー](./overview.md)
 
 ## 既存のポリシーの表示 {#view-policies}

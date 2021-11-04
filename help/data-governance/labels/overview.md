@@ -5,16 +5,16 @@ title: データ使用ラベルの概要
 topic-legacy: labels
 description: Adobe Experience Platform データガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。このドキュメントでは、Experience Platform でのデータ使用ラベルの概要を説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 100%
+source-wordcount: '615'
+ht-degree: 92%
 
 ---
 
 # データ使用ラベルの概要
 
-Adobe Experience Platform [!DNL Data Governance]を使用すると、データセットとフィールドにデータ使用ラベルを付けて、関連するデータ使用ポリシーに従って各データを分類できます。
+Adobe Experience Platformデータガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。
 
 このドキュメントでは、[!DNL Experience Platform] のデータ使用ラベルの概要を説明します。データガバナンスフレームワークのより詳しい説明については、このガイドを読む前に、[データガバナンスの概要](../home.md)を参照してください。
 
@@ -38,7 +38,7 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 ### Adobe Audience Manager データ書き出しのコントロールからの継承
 
-[!DNL Experience Platform] には、Adobe Audience Manager とセグメントを共有する機能があります。Audience Manager セグメントに適用されたデータエクスポートのコントロールは、[!DNL Experience Platform] [!DNL Data Governance] が認識する同等のラベルおよびマーケティングアクションに変換されます。
+[!DNL Experience Platform] には、Adobe Audience Manager とセグメントを共有する機能があります。Audience Managerセグメントに適用されたデータ書き出しコントロールは、 [!DNL Experience Platform] データガバナンス。
 
 特定のデータ書き出しのコントロールが [!DNL Platform] のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Manager ドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aam-data-export-control-in-aep)を参照してください。
 

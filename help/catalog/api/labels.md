@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データ使用ラベル；カタログサービス
+keywords: Experience Platform；ホーム；人気の高いトピック；データ使用ラベル；カタログサービス
 solution: Experience Platform
-title: データセットサービス API のデータ使用ラベル
+title: データセットサービス API のデータ使用状況ラベル
 topic-legacy: developer guide
-description: データセットサービス API は、データセットのデータ使用ラベルを管理するためのエンドポイントを提供します。
+description: データセットサービス API は、データセットのデータ使用ラベルを管理するエンドポイントを提供します。
 exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
 
 # データセットサービス API のデータ使用ラベル
 
-[!DNL Dataset Service] API は、カタログサービス API とは別に、データセットのデータ使用ラベルを管理するエンドポイントを提供します。 これらのエンドポイントを呼び出す手順については、Adobe Experience Platformの [!DNL Data Governance] ドキュメントの API](../../data-governance/labels/dataset-api.md) を使用したデータ使用ラベルの管理に関するガイドを参照してください。[
+カタログサービス API( [!DNL Dataset Service] API は、データセットのデータ使用ラベルを管理するエンドポイントを提供します。 これらのエンドポイントを呼び出す手順については、 [API を使用したデータ使用ラベルの管理](../../data-governance/labels/dataset-api.md) ( Adobe Experience Platform Data Governance ドキュメント ) を参照してください。

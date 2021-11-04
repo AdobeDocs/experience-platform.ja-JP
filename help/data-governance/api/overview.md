@@ -5,16 +5,16 @@ title: Policy Service API ガイド
 topic-legacy: developer guide
 description: Policy Service API を使用すると、開発者は Experience Platform でデータ使用ラベルとポリシーを管理できます。このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 100%
+source-wordcount: '504'
+ht-degree: 93%
 
 ---
 
 # [!DNL Policy Service] API ガイド
 
-Adobe Experience Platform [!DNL Data Governance]を使用すると、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保できます。[!DNL Experience Platform] 内の様々なレベルで重要な役割を果たします（例えば、カタログ化、データ系列、データ使用ラベル、データ使用ポリシー、マーケティングアクションのデータの使用制御など）。
+Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。[!DNL Experience Platform] 内の様々なレベルで重要な役割を果たします（例えば、カタログ化、データ系列、データ使用ラベル、データ使用ポリシー、マーケティングアクションのデータの使用制御など）。
 
 [!DNL Policy Service] API は複数のエンドポイントを提供し、データ使用ラベルとポリシーをプログラム的に管理したり、ポリシー違反のマーケティングアクションを評価したりできます。これらのエンドポイントの概要を以下に示します。詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)のガイドを参照してください。
 
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Data Governance]を使用すると、顧客デ�
 
 ## マーケティングアクション
 
-マーケティングアクション（マーケティングのユースケースとも呼ばれます）は、[!DNL Data Governance] フレームワークのコンテキストでは、組織がデータの使用を制限したいと考えている、[!DNL Experience Platform] データ消費者が取ることのできるアクションです。マーケティングアクションの操作について詳しくは、[マーケティングアクションエンドポイントガイド](./marketing-actions.md)を参照してください。
+マーケティングアクション（マーケティングユースケースとも呼ばれます）は、データガバナンスフレームワークの観点から言えば、 [!DNL Experience Platform] データ消費者は、組織がデータの使用を制限する目的で実行できます。 マーケティングアクションの操作について詳しくは、[マーケティングアクションエンドポイントガイド](./marketing-actions.md)を参照してください。
 
 ## ポリシー
 

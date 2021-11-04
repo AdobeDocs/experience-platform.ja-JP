@@ -5,16 +5,16 @@ title: UI でのデータ使用ラベルの管理
 topic-legacy: labels
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 100%
+source-wordcount: '1140'
+ht-degree: 98%
 
 ---
 
 # UI でのデータ使用ラベルの管理
 
-このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。このガイドを使用する前に、[[!DNL Data Governance] の概要](../home.md)で [!DNL Data Governance] フレームワークの詳細を参照してください。
+このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。このガイドを使用する前に、 [データガバナンスの概要](../home.md) 」を参照してください。
 
 ## データセットレベルでのラベルの管理
 
@@ -132,6 +132,6 @@ ht-degree: 100%
 
 ## その他のリソース
 
-次のビデオは、[!DNL Data Governance] に関する理解を深めるために、データセットと個々のフィールドにラベルを適用する方法の概要を説明しています。
+次のビデオは、データガバナンスに関する理解を深めるために、データセットと個々のフィールドにラベルを適用する方法の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

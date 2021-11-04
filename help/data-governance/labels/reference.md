@@ -5,10 +5,10 @@ title: データ使用ラベルの用語集
 topic-legacy: labels
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 100%
+source-wordcount: '1984'
+ht-degree: 99%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Adobe Experience Platform データガバナンスでは、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
 
-このドキュメントでは、[!DNL Experience Platform] が現在提供しているコアデータ使用ラベルの概要を説明します。[!DNL Data Governance] に関する詳細は、[データガバナンスの概要](../home.md)を参照してください。
+このドキュメントでは、[!DNL Experience Platform] が現在提供しているコアデータ使用ラベルの概要を説明します。データガバナンスについて詳しくは、 [データガバナンスの概要](../home.md).
 
 ## 契約ラベル
 
