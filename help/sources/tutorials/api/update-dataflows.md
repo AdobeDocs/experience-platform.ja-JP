@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；データフローの更新
+keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；データフローの更新
 solution: Experience Platform
 title: フローサービス API を使用したデータフローの更新
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、フローサービス API を使用して、名前、説明、スケジュールを含むデータフローを更新する手順を説明します。
+description: このチュートリアルでは、フローサービス API を使用して、名前、説明、スケジュールなど、データフローを更新する手順を説明します。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 34%
+source-wordcount: '767'
+ht-degree: 27%
 
 ---
 
 # フローサービス API を使用したデータフローの更新
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用した名前、説明、スケジュールなど、データフローを更新する手順を説明します。
+このチュートリアルでは、を使用した基本情報、スケジュール、マッピングセットなど、データフローの更新手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
-このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、[ ソースの概要 ](../../home.md) から目的のコネクタを選択し、このチュートリアルを試す前に説明した手順に従います。
+このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、選択したコネクタを [ソースの概要](../../home.md) このチュートリアルを試す前に、概要を説明した手順に従ってください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] API を使用してデータフローを正しく更新するために知っておく必要がある追加情報を示します。
+以下の節では、 [!DNL Flow Service] API
 
 ### API 呼び出し例の読み取り
 
@@ -40,7 +40,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Flow Service] に属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,7 +50,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 ## データフローの詳細の検索
 
-データフローを更新する最初の手順は、フロー ID を使用してデータフローの詳細を取得することです。 `/flows` エンドポイントに対してGETリクエストを実行することで、既存のデータフローの現在の詳細を表示できます。
+データフローを更新する最初の手順は、フロー ID を使用してデータフローの詳細を取得することです。 に対してGETリクエストを実行することで、既存のデータフローの現在の詳細を表示できます `/flows` endpoint.
 
 **API 形式**
 
@@ -60,11 +60,11 @@ GET /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 取得するデータフローの一意の `id` 値。 |
+| `{FLOW_ID}` | 一意の `id` 取得するデータフローの値。 |
 
 **リクエスト**
 
-次のリクエストは、フロー ID に関する更新済み情報を取得します。
+次のリクエストでは、フロー ID に関する更新済み情報を取得します。
 
 ```shell
 curl -X GET \
@@ -77,7 +77,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、バージョン、スケジュール、一意の識別子 (`id`) を含む、データフローの現在の詳細を返します。
+正常な応答は、バージョン、スケジュール、一意の識別子 (`id`) をクリックします。
 
 ```json
 {
@@ -189,13 +189,13 @@ curl -X GET \
 }
 ```
 
-## データフローの更新
+## データフローを更新
 
-データフローの実行スケジュール、名前および説明を更新するには、使用するフロー ID、バージョン、新しいスケジュールを指定しながら、[!DNL Flow Service] API に対してPATCHリクエストを実行します。
+データフローの実行スケジュール、名前、説明を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] 使用するフロー ID、バージョンおよび新しいスケジュールを指定する際の API。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCHリクエストを行う際に必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新する接続の一意のバージョンです。 etag の値は、データフローが正常に更新されるたびに更新されます。
 
 **API 形式**
 
@@ -234,15 +234,15 @@ curl -X PATCH \
         ]'
 ```
 
-| パラメーター | 説明 |
+| プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションの定義に使用する操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
-| `path` | 更新するパラメーターのパス。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `path` | 更新するフローの部分を定義します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新されたタグが返されます。 フロー ID を提供しながら、[!DNL Flow Service] API にGETリクエストを送信することで、更新を確認できます。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
 
 ```json
 {
@@ -251,6 +251,62 @@ curl -X PATCH \
 }
 ```
 
+## マッピングを更新
+
+既存のデータフローのマッピングセットを更新するには、 [!DNL Flow Service] API を使用し、 `mappingId` および `mappingVersion`.
+
+**API 形式**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**リクエスト**
+
+次のリクエストは、データフローのマッピングセットを更新します。
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -d '[
+        {
+            "op": "replace",
+            "path": "/transformations/0",
+            "value": {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                    "mappingVersion": 2
+                }
+            }
+        }
+    ]'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `path` | 更新するフローの部分を定義します。 この例では、 `transformations` は更新中です。 |
+| `value.name` | 更新するプロパティの名前。 |
+| `value.params.mappingId` | データフローのマッピングセットを更新するために使用する新しいマッピング ID。 |
+| `value.params.mappingVersion` | 更新されたマッピング ID に関連付けられた新しいマッピングバージョン。 |
+
+**応答**
+
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用してデータフローの実行スケジュール、名前、説明を更新しました。 ソースコネクタの使用について詳しくは、「[ ソースの概要 ](../../home.md)」を参照してください。
+このチュートリアルでは、 [!DNL Flow Service] API ソースコネクタの使用について詳しくは、 [ソースの概要](../../home.md).
