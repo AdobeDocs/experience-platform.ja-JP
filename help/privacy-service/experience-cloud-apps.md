@@ -5,10 +5,10 @@ title: Privacy ServiceとExperience Cloudの適用
 topic-legacy: overview
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 47%
+source-wordcount: '617'
+ht-degree: 49%
 
 ---
 
@@ -37,6 +37,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[データレイクのためのアクセス / 削除に関するドキュメント](../catalog/privacy.md)</li><li>[ID サービスのアクセス/削除に関するドキュメント](../identity-service/privacy.md)</li><li>[リアルタイム顧客プロファイルのためのアクセス / 削除に関するドキュメント](../profile/privacy.md)</li><li>[!DNL Experience Platform] 名誉 [オーディエンスセグメントのオプトアウトリクエスト](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime Authentication | ✓ | なし | <ul><li>[アクセス / 削除に関するドキュメント](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
 | Adobe Target | ✓ | なし | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=ja)</li><li>[!DNL Target] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
+| Marketo Engage | ✓ | なし | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -50,7 +51,6 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 顧客プライバシー管理者または AEM 管理者が GDPR リクエストを処理する方法の概要。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre を使用して GDPR にアクセスしたり、リクエストを削除したりする手順。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerceのインストールが、特定のプライバシー法の要件に従っていることを確認します。 |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | プライバシー規制がMarketoにどのように適用されるかを説明します。 |
 | [Adobe Experience Platform のタグ](../tags/ui/client-side/consent.md) | 拡張機能とルールビルダーを使用してオプトインおよびオプトアウトソリューションを定義する方法。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfrontが個人データを収集する方法、およびデータ主体がフォームを使用してプライバシーリクエストを送信する方法について説明します。 |
 

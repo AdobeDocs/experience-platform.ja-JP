@@ -5,9 +5,9 @@ title: Privacy ServiceAPI ガイドの付録
 topic-legacy: developer guide
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '482'
 ht-degree: 71%
 
 ---
@@ -75,5 +75,6 @@ ht-degree: 71%
 | 顧客属性 (CRS) | `CRS` |
 | ID サービス | `Identity` |
 | リアルタイム顧客プロファイル | `profileService` |
+| Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
