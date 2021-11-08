@@ -5,9 +5,9 @@ title: （ベータ版）アドホックアクティベーション API を使�
 description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してオーディエンスセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
+source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1065'
 ht-degree: 12%
 
 ---
@@ -51,7 +51,7 @@ IT マネージャーは、Experience Platformのアドホックアクティベ�
 
 アドホックアクティベーション API を使用する際は、次のガードレールに注意してください。
 
-* 各アドホックアクティベーションジョブは、最大 20 個のセグメントをアクティブ化できます。 1 つのジョブにつき 20 個を超えるセグメントをアクティブ化しようとすると、ジョブが失敗します。
+* 現在、各アドホックアクティベーションジョブは、最大 20 個のセグメントをアクティブ化できます。 1 つのジョブにつき 20 個を超えるセグメントをアクティブ化しようとすると、ジョブが失敗します。 この動作は、今後のリリースで変更される可能性があります。
 * アドホックアクティベーションジョブは、スケジュール済みと並行して実行できません [セグメントの書き出しジョブ](../../segmentation/api/export-jobs.md). アドホックアクティベーションジョブを実行する前に、スケジュールされたセグメントの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフロー監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。終了するのを待ってから、アドホックアクティベーションジョブを実行します。
 * セグメントごとに複数の同時アドホックアクティベーションジョブを実行しないでください。
 
@@ -126,7 +126,7 @@ Adobe Experience Platformは、24 時間に 1 回、スケジュールされた�
 
 >[!NOTE]
 >
->アドホックアクティベーションジョブあたり、最大 20 個のセグメントをアクティブ化できます。 より多くのセグメントをアクティブ化しようとすると、ジョブが失敗します。
+>現在、各アドホックアクティベーションジョブは、最大 20 個のセグメントをアクティブ化できます。 1 つのジョブにつき 20 個を超えるセグメントをアクティブ化しようとすると、ジョブが失敗します。 この動作は、今後のリリースで変更される可能性があります。
 
 ### リクエスト
 
@@ -166,20 +166,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `code` | API 応答コード。 呼び出しが成功すると、が返されます。 `DEST-ADH-200` （ステータスコード 200）の場合、正しくない形式のときは `DEST-ADH-400` （ステータスコード 400）。 |
-| `message` | API から返される成功またはエラーメッセージ。 |
-| `statusURLs` | アクティベーションフローのステータス URL。 フローの進行状況は、 [フローサービス API](../../sources/tutorials/api/monitor.md). |
+| `segment` | アクティブ化されたセグメントの ID。 |
+| `order` | セグメントがアクティブ化された宛先の ID。 |
+| `statusURL` | アクティベーションフローのステータス URL。 フローの進行状況は、 [フローサービス API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API エラー処理
