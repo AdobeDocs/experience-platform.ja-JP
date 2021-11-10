@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；SQL 構文；SQL;CTAS;CTAS；選択としてテーブルを作成
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL 構文；SQL;CTAS;CTAS；選択としてテーブルを作成
 solution: Experience Platform
 title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
+source-git-commit: b0cd372589be1db3d7ae571edaac68df9a3c493f
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 13%
+source-wordcount: '2207'
+ht-degree: 12%
 
 ---
 
 # クエリサービスの SQL 構文
 
-Adobe Experience Platformクエリサービスは、`SELECT` 文やその他の制限付きコマンドに標準の ANSI SQL を使用する機能を提供します。 このドキュメントでは、[!DNL Query Service] でサポートされる SQL 構文について説明します。
+Adobe Experience Platformクエリサービスは、 `SELECT` ステートメントおよびその他の制限付きコマンド このドキュメントでは、 [!DNL Query Service].
 
-## SELECT クエリ {#select-queries}
+## クエリを選択 {#select-queries}
 
-次の構文は、[!DNL Query Service] でサポートされる `SELECT` クエリを定義します。
+次の構文は、 `SELECT` 次をサポートするクエリ [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -36,7 +36,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-ここで、`from_item` は、次のいずれかのオプションです。
+場所 `from_item` は、次のいずれかのオプションです。
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -54,7 +54,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-と `grouping_element` は、次のいずれかのオプションです。
+および `grouping_element` は、次のいずれかのオプションです。
 
 ```sql
 ( )
@@ -86,11 +86,11 @@ GROUPING SETS ( grouping_element [, ...] )
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
 
-次のサブセクションでは、上記の形式に従っている場合に、クエリで使用できる追加の句の詳細を示します。
+以下のサブセクションでは、上記の形式に従う場合に、クエリで使用できる追加の句の詳細を示します。
 
 ### SNAPSHOT 句
 
-この句は、スナップショット ID に基づいてテーブルのデータを増分的に読み取る場合に使用できます。 スナップショット ID は、データが書き込まれるたびにデータレイクテーブルに適用される Long 型の番号で表されるチェックポイントマーカーです。 `SNAPSHOT` 句は、その隣で使用されるテーブルの関係にそれ自体を付加します。
+この句は、スナップショット ID に基づいてテーブルのデータを増分的に読み取るために使用できます。 スナップショット ID は、データが書き込まれるたびにデータレイクテーブルに適用される長整数型の数字で表されるチェックポイントマーカーです。 この `SNAPSHOT` 句は、その句の隣で使用されるテーブルの関係にそれ自体を付加します。
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -114,22 +114,22 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-`SNAPSHOT` 句はテーブルまたはテーブルのエイリアスで使用できますが、サブクエリやビューの上にはありません。 `SNAPSHOT` 句は、テーブルに対して `SELECT` クエリを適用できる場所であればどこでも機能します。
+なお、 `SNAPSHOT` 句は、テーブルまたはテーブルのエイリアスに対して機能しますが、サブクエリまたはビューの上には機能しません。 A `SNAPSHOT` 節はどこでも機能する `SELECT` テーブルのクエリを適用できます。
 
-また、`HEAD` と `TAIL` は、スナップショット句の特別なオフセット値として使用できます。 `HEAD` を使用すると最初のスナップショットの前のオフセットを参照し、 `TAIL` は最後のスナップショットの後のオフセットを参照します。
+また、 `HEAD` および `TAIL` スナップショット句の特別なオフセット値として。 使用 `HEAD` は最初のスナップショットの前のオフセットを指し、 `TAIL` は、最後のスナップショットの後のオフセットを指します。
 
 >[!NOTE]
 >
->2 つのスナップショット ID 間でクエリを実行し、開始スナップショットの有効期限が切れた場合、オプションのフォールバック動作フラグ (`resolve_fallback_snapshot_on_failure`) が設定されているかどうかに応じて、次の 2 つのシナリオが発生する可能性があります。
+>2 つのスナップショット ID 間でクエリを実行し、開始スナップショットが期限切れになった場合、オプションのフォールバック動作フラグ (`resolve_fallback_snapshot_on_failure`) が設定されている場合は次のようになります。
 >
->- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは最も古い使用可能なスナップショットを選択し、開始スナップショットとして設定し、最も古い使用可能なスナップショットと指定した終了スナップショットの間のデータを返します。 このデータは、利用可能な最も古いスナップショットの **** を含みます。
+>- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは、利用可能な最も古いスナップショットを選択し、開始スナップショットとして設定し、利用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータは **包括的** 最も古いスナップショットの
 >
 >- オプションのフォールバック動作フラグが設定されていない場合は、エラーが返されます。
 
 
 ### WHERE 句
 
-デフォルトでは、`SELECT` クエリの `WHERE` 句で生成された一致では、大文字と小文字が区別されます。 一致で大文字と小文字を区別しない場合は、`LIKE` の代わりにキーワード `ILIKE` を使用できます。
+デフォルトでは、 `WHERE` 条項 `SELECT` クエリでは大文字と小文字が区別されます。 一致で大文字と小文字を区別しない場合は、キーワード `ILIKE` の代わりに `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -155,7 +155,7 @@ WHERE CustomerName ILIKE 'a%';
 
 ### 結合
 
-JOIN を使用する `SELECT` クエリの構文は次のとおりです。
+A `SELECT` 結合を使用するクエリの構文は次のとおりです。
 
 ```sql
 SELECT statement
@@ -166,7 +166,7 @@ ON join condition
 
 ### UNION、INTERSECT、EXCEPT
 
-`UNION`、`INTERSECT` および `EXCEPT` 句は、2 つ以上のテーブルから同様の行を結合または除外するために使用します。
+この `UNION`, `INTERSECT`、および `EXCEPT` 句は、2 つ以上のテーブルから同様の行を結合または除外するために使用します。
 
 ```sql
 SELECT statement 1
@@ -176,7 +176,7 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT
 
-次の構文は、`CREATE TABLE AS SELECT` (CTAS) クエリを定義します。
+次の構文は、 `CREATE TABLE AS SELECT` (CTAS) クエリ：
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
@@ -184,9 +184,9 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 **パラメーター**
 
-- `schema`:XDM スキーマのタイトル。この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。
-- `rowvalidation`:（オプション）新しく作成したデータセットに対して取り込まれるすべての新しいバッチの行レベルの検証を、ユーザーが希望するかどうかを指定します。デフォルト値は `true` です。
-- `select_query`:文 `SELECT` 。`SELECT` クエリの構文は、[SELECT クエリの節 ](#select-queries) に記載されています。
+- `schema`:XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。
+- `rowvalidation`:（オプション）新しく作成したデータセットに対して取り込まれる新しいバッチの行レベルの検証を、すべてユーザーが必要とするかどうかを指定します。 デフォルト値は `true` です。
+- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
 
 **例**
 
@@ -200,11 +200,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->`SELECT` 文には、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが含まれている必要があります。また、`SELECT` 文は () 括弧付きでも付きも付きも付きもしないこともできます。 `SNAPSHOT` 句を指定して、増分差分をターゲットテーブルに読み込むことができます。
+>`SELECT` 文には、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが含まれている必要があります。また、 `SELECT` 文は () 括弧ありでもなしでも使用できます。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
 
 ## INSERT INTO
 
-`INSERT INTO` コマンドは次のように定義されます。
+この `INSERT INTO` コマンドは次のように定義されます。
 
 ```sql
 INSERT INTO table_name select_query
@@ -213,7 +213,7 @@ INSERT INTO table_name select_query
 **パラメーター**
 
 - `table_name`:クエリを挿入するテーブルの名前。
-- `select_query`:文 `SELECT` 。`SELECT` クエリの構文は、[SELECT クエリの節 ](#select-queries) に記載されています。
+- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
 
 **例**
 
@@ -224,11 +224,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
 >[!NOTE]
-> `SELECT` 文 **は () 括弧で囲んではいけません**。 また、`SELECT` 文の結果のスキーマは、`INSERT INTO` 文で定義されたテーブルの結果に準拠している必要があります。 `SNAPSHOT` 句を指定して、増分差分をターゲットテーブルに読み込むことができます。
+> この `SELECT` 文 **次の値を指定する** は () 括弧で囲んでください。 また、 `SELECT` 文は、 `INSERT INTO` 文。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
 
 ## DROP TABLE
 
-`DROP TABLE` コマンドは、既存のテーブルを削除し、外部テーブルでない場合は、テーブルに関連付けられたディレクトリをファイルシステムから削除します。 テーブルが存在しない場合は、例外が発生します。
+この `DROP TABLE` コマンドは、既存のテーブルを削除し、外部テーブルでない場合は、テーブルに関連付けられたディレクトリをファイルシステムから削除します。 テーブルが存在しない場合は、例外が発生します。
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -236,11 +236,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **パラメーター**
 
-- `IF EXISTS`:これを指定した場合、テーブルに notexist が含まれている場合は例外はスローさ **** れません。
+- `IF EXISTS`:これを指定した場合、テーブルが **not** 存在する。
 
-## データベースの削除
+## データベースを削除
 
-`DROP DATABASE` コマンドは、既存のデータベースを削除します。
+この `DROP DATABASE` コマンドは、既存のデータベースを削除します。
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -248,11 +248,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 **パラメーター**
 
-- `IF EXISTS`:これを指定した場合、データベースが notexist の場合は例外は発生し **** ません。
+- `IF EXISTS`:これを指定した場合、データベースが **not** 存在する。
 
-## スキーマを削除
+## スキーマをドロップ
 
-`DROP SCHEMA` コマンドは既存のスキーマを削除します。
+この `DROP SCHEMA` コマンドは既存のスキーマを削除します。
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -260,15 +260,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 **パラメーター**
 
-- `IF EXISTS`:これを指定した場合、スキーマが notexist の場合は例外は発生し **** ません。
+- `IF EXISTS`:これを指定した場合、スキーマが **not** 存在する。
 
-- `RESTRICT`:モードのデフォルト値。これを指定した場合、スキーマは **テーブルを含まない** 場合にのみ削除されます。
+- `RESTRICT`:モードのデフォルト値。 これを指定した場合、スキーマは指定した場合にのみ削除されます **doesn&#39;t** には、任意のテーブルが含まれます。
 
-- `CASCADE`:これを指定すると、スキーマは、スキーマ内に存在するすべてのテーブルと共に削除されます。
+- `CASCADE`:これを指定した場合、スキーマは、スキーマ内に存在するすべてのテーブルと共にドロップされます。
 
 ## CREATE VIEW
 
-次の構文は `CREATE VIEW` クエリを定義します。
+次の構文は、 `CREATE VIEW` クエリ：
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -277,7 +277,7 @@ CREATE VIEW view_name AS select_query
 **パラメーター**
 
 - `view_name`:作成するビューの名前。
-- `select_query`:文 `SELECT` 。`SELECT` クエリの構文は、[SELECT クエリの節 ](#select-queries) に記載されています。
+- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
 
 **例**
 
@@ -289,7 +289,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ## DROP VIEW
 
-次の構文は `DROP VIEW` クエリを定義します。
+次の構文は、 `DROP VIEW` クエリ：
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -297,7 +297,7 @@ DROP VIEW [IF EXISTS] view_name
 
 **パラメーター**
 
-- `IF EXISTS`:これを指定した場合、ビューが notexist でない場合は例外は発生し **** ません。
+- `IF EXISTS`:これを指定した場合、ビューが **not** 存在する。
 - `view_name`:削除するビューの名前。
 
 **例**
@@ -307,13 +307,51 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
+## 匿名ブロック
+
+匿名ブロックは、次の 2 つのセクションで構成されます。実行可能セクションと例外処理セクション 匿名ブロックでは、実行可能セクションは必須です。 ただし、例外処理セクションはオプションです。
+
+次の例は、1 つ以上のステートメントを組み合わせて実行するブロックの作成方法を示しています。
+
+```sql
+BEGIN
+  statementList
+[EXCEPTION exceptionHandler]
+END
+
+exceptionHandler:
+      WHEN OTHER
+      THEN statementList
+
+statementList:
+    : (statement (';')) +
+```
+
+匿名ブロックの使用例を以下に示します。
+
+```sql
+$$
+BEGIN
+   SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_log_id = select now();
+   CREATE TABLE tracking_email_id_incrementally
+     AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
+
+EXCEPTION
+  WHEN OTHER THEN
+    DROP TABLE IF EXISTS tracking_email_id_incrementally;
+    SELECT 'ERROR';
+END$$;
+```
+
 ## [!DNL Spark] SQL コマンド
 
-次のサブ節では、クエリサービスでサポートされる Spark SQL コマンドを示します。
+次のサブ節では、クエリサービスでサポートされる Spark SQL コマンドについて説明します。
 
 ### SET
 
-`SET` コマンドは、プロパティを設定し、既存のプロパティの値を返すか、既存のすべてのプロパティをリストします。 既存プロパティのキーに値が指定された場合、古い値が上書きされます。
+この `SET` コマンドは、プロパティを設定し、既存のプロパティの値を返すか、既存のプロパティをすべてリストします。 既存プロパティのキーに値が指定された場合、古い値が上書きされます。
 
 ```sql
 SET property_key = property_value
@@ -324,7 +362,7 @@ SET property_key = property_value
 - `property_key`:リストまたは変更するプロパティの名前。
 - `property_value`:プロパティを設定する値です。
 
-設定の値を返すには、`property_value` を付けずに `SET [property key]` を使用します。
+任意の設定の値を返すには、 `SET [property key]` 無しに `property_value`.
 
 ## PostgreSQL コマンド
 
@@ -332,7 +370,7 @@ SET property_key = property_value
 
 ### BEGIN
 
-`BEGIN` コマンド、または `BEGIN WORK` または `BEGIN TRANSACTION` コマンドを使用して、トランザクションブロックを開始します。 begin コマンドの後に入力された文は、明示的な COMMIT または ROLLBACK コマンドが指定されるまで、単一のトランザクションで実行されます。 このコマンドは `START TRANSACTION` と同じです。
+この `BEGIN` コマンドを使用するか、または `BEGIN WORK` または `BEGIN TRANSACTION` コマンドを使用して、トランザクションブロックを開始します。 begin コマンドの後に入力された文は、明示的な COMMIT または ROLLBACK コマンドが指定されるまで、単一のトランザクションで実行されます。 このコマンドは、 `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -342,29 +380,29 @@ BEGIN TRANSACTION
 
 ### CLOSE
 
-`CLOSE` コマンドは、開いたカーソルに関連付けられたリソースを解放します。 カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
+この `CLOSE` コマンドは、開いたカーソルに関連付けられたリソースを解放します。 カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-`CLOSE name` を使用した場合、`name` は閉じる必要がある開いたカーソルの名前を表します。 `CLOSE ALL` を使用すると、すべてのオープンカーソルが閉じられます。
+If `CLOSE name` が使用されます。 `name` は、閉じる必要がある開いたカーソルの名前を表します。 If `CLOSE ALL` を使用すると、すべてのオープンカーソルが閉じられます。
 
 ### DEALLOCATE
 
-`DEALLOCATE` コマンドを使用すると、事前に準備された SQL 文の割り当てを解除できます。 準備された文の割り当てを明示的に解除しない場合は、セッションが終了すると割り当てが解除されます。準備済み文の詳細については、[PREPARE コマンド ](#prepare) の節を参照してください。
+この `DEALLOCATE` コマンドを使用すると、事前に準備された SQL 文の割り当てを解除できます。 準備された文の割り当てを明示的に解除しない場合は、セッションが終了すると割り当てが解除されます。準備済み文の詳細については、 [PREPARE コマンド](#prepare) 」セクションに入力します。
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-`DEALLOCATE name` を使用した場合、`name` は割り当てを解除する必要がある準備済み文の名前を表します。 `DEALLOCATE ALL` を使用すると、すべての準備済み文の割り当てが解除されます。
+If `DEALLOCATE name` が使用されます。 `name` は、割り当てを解除する必要がある準備済み文の名前を表します。 If `DEALLOCATE ALL` を使用する場合、すべての準備済み文の割り当てが解除されます。
 
 ### DECLARE
 
-`DECLARE` コマンドを使用すると、カーソルを作成できます。これは、大きなクエリから少数の行を取得するのに使用できます。 カーソルが作成された後、`FETCH` を使用して行がカーソルから取得されます。
+この `DECLARE` コマンドを使用すると、カーソルを作成できます。これは、大きなクエリから少数の行を取得するために使用できます。 カーソルが作成された後、`FETCH` を使用して行がカーソルから取得されます。
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -377,9 +415,9 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-`EXECUTE` コマンドは、事前に準備された文を実行するために使用します。 準備済み文はセッション中にのみ存在するので、現在のセッションで前に実行された `PREPARE` 文によって作成される必要があります。 準備済み文の使用に関する詳細は、[`PREPARE` コマンド ](#prepare) の節を参照してください。
+この `EXECUTE` コマンドは、事前に準備された文を実行するために使用されます。 準備済み文はセッション中にのみ存在するので、準備済み文は `PREPARE` 現在のセッションで前に実行された文。 準備済み文の使用に関する詳細については、 [`PREPARE` command](#prepare) 」セクションに入力します。
 
-文を作成した `PREPARE` 文が一部のパラメータを指定した場合は、互換性のある一連のパラメータを `EXECUTE` 文に渡す必要があります。 これらのパラメーターが渡されない場合、エラーが発生します。
+この `PREPARE` 文を作成した文が一部のパラメーターを指定した場合は、互換性のある一連のパラメーターを `EXECUTE` 文。 これらのパラメーターが渡されない場合、エラーが発生します。
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -392,13 +430,13 @@ EXECUTE name [ ( parameter ) ]
 
 ### EXPLAIN
 
-`EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画では、文で参照されるテーブルがスキャンされる方法が示されます。  複数のテーブルが参照されている場合は、各入力テーブルから必要な行を組み合わせるために使用される結合アルゴリズムが表示されます。
+この `EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画では、文で参照されるテーブルがスキャンされる方法が示されます。  複数のテーブルが参照されている場合は、各入力テーブルから必要な行を組み合わせるために使用される結合アルゴリズムが表示されます。
 
 ```sql
 EXPLAIN option statement
 ```
 
-ここで、`option` は次のいずれかになります。
+ここで、 `option` は、次のいずれかに該当します。
 
 ```sql
 ANALYZE
@@ -407,8 +445,8 @@ FORMAT { TEXT | JSON }
 
 **パラメーター**
 
-- `ANALYZE`:にが含ま `option` れる場 `ANALYZE`合は、実行時間と他の統計が表示されます。
-- `FORMAT`:にが含ま `option` れ `FORMAT`る場合は、出力形式を指定します（または）。 `TEXT`   `JSON`テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。
+- `ANALYZE`:この `option` 次を含む `ANALYZE`に値を指定しない場合は、実行時間やその他の統計情報が表示されます。
+- `FORMAT`:この `option` 次を含む `FORMAT`を指定する場合は、出力形式を指定します。 `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。
 - `statement`：実行計画を表示する `SELECT`、`INSERT`、`UPDATE`、`DELETE`、`VALUES`、`EXECUTE`、`DECLARE`、`CREATE TABLE AS`、`CREATE MATERIALIZED VIEW AS` 文のいずれか。
 
 >[!IMPORTANT]
@@ -417,7 +455,7 @@ FORMAT { TEXT | JSON }
 
 **例**
 
-次の例は、単一の `integer` 列と10000行のテーブルに対する単純なクエリの計画を示しています。
+次の例は、単一の `integer` 列と10000行：
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -432,7 +470,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-`FETCH` コマンドは、前に作成したカーソルを使用して行を取得します。
+この `FETCH` コマンドは、以前に作成したカーソルを使用して行を取得します。
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -445,11 +483,11 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARE {#prepare}
 
-`PREPARE` コマンドを使用すると、準備済み文を作成できます。 準備済み文は、類似の SQL 文をテンプレート化するために使用できるサーバー側のオブジェクトです。
+この `PREPARE` コマンドを使用すると、準備済み文を作成できます。 準備済み文は、類似した SQL 文をテンプレート化するために使用できるサーバー側のオブジェクトです。
 
-準備済み文は、パラメーターを受け取ることができます。パラメーターとは、文の実行時に文内で置き換えられる値です。 パラメーターは、準備済み文を使用する場合、$1、$2 などを使用して、位置で参照されます。
+準備済み文は、パラメーターを受け取ることができます。パラメーターは、文の実行時に文内で置き換えられる値です。 パラメーターは、準備済み文を使用する場合、$1、$2 などを使用して、位置で参照されます。
 
-必要に応じて、パラメータデータ型のリストを指定できます。 パラメーターのデータ型が一覧にない場合は、その型をコンテキストから推論できます。
+必要に応じて、パラメータのデータ型のリストを指定できます。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。
 
 ```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
@@ -458,11 +496,11 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 **パラメーター**
 
 - `name`:準備済み文の名前。
-- `data_type`:準備済み文のパラメーターのデータ型。パラメーターのデータ型が一覧にない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りのリストで追加できます。
+- `data_type`:準備済み文のパラメーターのデータ型。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りのリストで追加できます。
 
 ### ROLLBACK
 
-`ROLLBACK` コマンドは、現在のトランザクションを取り消し、トランザクションによって行われた更新をすべて破棄します。
+この `ROLLBACK` コマンドは、現在のトランザクションを元に戻し、トランザクションが行ったすべての更新を破棄します。
 
 ```sql
 ROLLBACK
@@ -471,7 +509,7 @@ ROLLBACK WORK
 
 ### SELECT INTO
 
-`SELECT INTO` コマンドは、新しいテーブルを作成し、クエリで計算されたデータで埋めます。 通常の `SELECT` コマンドと同様に、データはクライアントに返されません。 新しいテーブルの列には、`SELECT` コマンドの出力列に関連付けられた名前とデータ型が含まれます。
+この `SELECT INTO` コマンドは、新しいテーブルを作成し、クエリで計算されたデータで埋めます。 通常の `SELECT` コマンドを使用します。 新しいテーブルの列には、 `SELECT` コマンドを使用します。
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -493,15 +531,15 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 **パラメーター**
 
-標準の SELECT クエリパラメータの詳細については、[SELECT クエリの節 ](#select-queries) を参照してください。 このセクションでは、`SELECT INTO` コマンドに対して排他的なパラメータのみをリストします。
+標準の SELECT クエリーパラメーターの詳細については、 [SELECT クエリセクション](#select-queries). このセクションでは、 `SELECT INTO` コマンドを使用します。
 
-- `TEMPORARY` または `TEMP`:オプションのパラメーター。指定した場合、作成されるテーブルは一時テーブルになります。
-- `UNLOGGED`:オプションのパラメーター。指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログなしのテーブルについて詳しくは、[PostgreSQL のドキュメント ](https://www.postgresql.org/docs/current/sql-createtable.html) を参照してください。
+- `TEMPORARY` または `TEMP`:オプションのパラメーター。 指定した場合、作成されるテーブルは一時テーブルになります。
+- `UNLOGGED`:オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [PostgreSQL のドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html).
 - `new_table`:作成するテーブルの名前。
 
 **例**
 
-次のクエリは、新しいテーブル `films_recent` を作成します。このテーブルの `films` の最近のエントリのみから構成されます。
+次のクエリは、新しいテーブルを作成します `films_recent` テーブルの最近のエントリのみから成る `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -509,7 +547,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-`SHOW` コマンドは、実行時パラメータの現在の設定を表示します。 これらの変数は、`SET` 文を使用して、`postgresql.conf` 設定ファイルを編集し、`PGOPTIONS` 環境変数（libpq または libpq ベースのアプリケーションを使用する場合）を使用して設定できます。また、Postgres サーバーを起動する際にはコマンドラインフラグを使用します。
+この `SHOW` コマンドは、ランタイムパラメータの現在の設定を表示します。 これらの変数は、 `SET` ステートメントを編集する `postgresql.conf` 設定ファイル ( `PGOPTIONS` 環境変数（libpq または libpq ベースのアプリケーションを使用する場合）、または Postgres サーバーの起動時にコマンドラインフラグを使用します。
 
 ```sql
 SHOW name
@@ -518,8 +556,8 @@ SHOW ALL
 
 **パラメーター**
 
-- `name`:情報が必要なランタイムパラメーターの名前。ランタイムパラメーターに指定できる値は次のとおりです。
-   - `SERVER_VERSION`:このパラメーターは、サーバーのバージョン番号を示します。
+- `name`:情報が必要なランタイムパラメーターの名前。 ランタイムパラメーターに指定できる値は次のとおりです。
+   - `SERVER_VERSION`:このパラメータは、サーバーのバージョン番号を示します。
    - `SERVER_ENCODING`:このパラメーターは、サーバー側の文字セットエンコーディングを示します。
    - `LC_COLLATE`:このパラメータは、照合（テキストの順序付け）のためのデータベースのロケール設定を示します。
    - `LC_CTYPE`:このパラメータは、文字分類に関するデータベースのロケール設定を示します。
@@ -528,7 +566,7 @@ SHOW ALL
 
 **例**
 
-次のクエリは、パラメータ `DateStyle` の現在の設定を示しています。
+次のクエリは、パラメーターの現在の設定を示します `DateStyle`.
 
 ```sql
 SHOW DateStyle;
@@ -543,7 +581,7 @@ SHOW DateStyle;
 
 ### コピー
 
-`COPY` コマンドは、任意の `SELECT` クエリの出力を指定した場所にダンプします。 このコマンドを正常に実行するには、ユーザーがこの場所にアクセスできる必要があります。
+この `COPY` コマンドは、 `SELECT` クエリを指定した場所に送信します。 このコマンドを正常に実行するには、ユーザーがこの場所にアクセスできる必要があります。
 
 ```sql
 COPY query
@@ -554,19 +592,19 @@ COPY query
 **パラメーター**
 
 - `query`:コピーするクエリ。
-- `format_name`:クエリをコピーする形式。`format_name` は、`parquet`、`csv`、`json` のいずれかです。 デフォルト値は `parquet` です。
+- `format_name`:クエリをコピーする形式。 この `format_name` 次のいずれかを指定できます。 `parquet`, `csv`または `json`. デフォルトでは、値は `parquet`.
 
 >[!NOTE]
 >
->完全な出力パスは `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>` です。
+>完全な出力パスは次のようになります。 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTER TABLE
 
-`ALTER TABLE` コマンドを使用すると、プライマリキーや外部キーの制約を追加または削除したり、テーブルに列を追加したりできます。
+この `ALTER TABLE` コマンドを使用すると、プライマリキーまたは外部キーの制約を追加または削除したり、テーブルに列を追加したりできます。
 
 #### 制約を追加または削除
 
-次の SQL クエリは、表に制約を追加または削除する例を示しています。
+次の SQL クエリは、テーブルに制約を追加または削除する例を示しています。
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
@@ -585,12 +623,12 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 - `table_name`:編集するテーブルの名前。
 - `constraint_name`:追加または削除する制約の名前。
 - `column_name`:制約を追加する列の名前。
-- `referenced_table_name`:外部キーが参照するテーブルの名前。
-- `primary_column_name`:外部キーが参照する列の名前。
+- `referenced_table_name`:外部キーによって参照されるテーブルの名前。
+- `primary_column_name`:外部キーによって参照される列の名前。
 
 >[!NOTE]
 >
->テーブルスキーマは一意であり、複数のテーブル間で共有されない必要があります。 また、プライマリキーの制約には名前空間が必須です。
+>テーブルスキーマは一意で、複数のテーブル間で共有されないようにする必要があります。 また、プライマリキーの制約には名前空間が必須です。
 
 #### 列を追加
 
@@ -606,11 +644,11 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 - `table_name`:編集するテーブルの名前。
 - `column_name`:追加する列の名前。
-- `data_type`:追加する列のデータ型。次のようなデータタイプがサポートされています。bigint, char，文字列，日付，日時，倍精度，整数， smallint, tinyint, varchar
+- `data_type`:追加する列のデータ型です。 次のようなデータタイプがサポートされています。bigint, char，文字列，日付，日時，倍精度，整数， smallint, tinyint, varchar.
 
 ### プライマリキーを表示
 
-`SHOW PRIMARY KEYS` コマンドは、指定したデータベースの主キー制約をすべてリストします。
+この `SHOW PRIMARY KEYS` コマンドは、指定したデータベースのすべての主キー制約をリストします。
 
 ```sql
 SHOW PRIMARY KEYS
@@ -623,9 +661,9 @@ SHOW PRIMARY KEYS
  table_name_2 | column_name2  | text     | "AAID"
 ```
 
-### 外部キーの表示
+### 外部キーを表示
 
-`SHOW FOREIGN KEYS` コマンドは、指定したデータベースの外部キー制約をすべてリストします。
+この `SHOW FOREIGN KEYS` コマンドは、指定されたデータベースのすべての外部キー制約をリストします。
 
 ```sql
 SHOW FOREIGN KEYS
