@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '658'
 ht-degree: 20%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 20%
       - [Apache HDFS コネクタ](connectors/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2 コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob コネクタ](connectors/cloud-storage/blob.md)
-      - [Azure Event Hubs コネクタ](connectors/cloud-storage/eventhub.md)
+      - [Azure イベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure ファイルストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [FTP コネクタ](connectors/cloud-storage/ftp.md)
@@ -71,7 +71,7 @@ ht-degree: 20%
       - [Microsoft SQL Server コネクタ](connectors/databases/sql-server.md)
       - [MySQL コネクタ](connectors/databases/mysql.md)
       - [Oracleコネクタ](connectors/databases/oracle.md)
-      - [フェニックスコネクタ](connectors/databases/phoenix.md)
+      - [Phoenix コネクタ](connectors/databases/phoenix.md)
       - [PostgreSQL コネクタ](connectors/databases/postgres.md)
       - [Snowflakeコネクタ](connectors/databases/snowflake.md)
    - e コマース {#ecommerce}
@@ -81,7 +81,7 @@ ht-degree: 20%
    - マーケティングの自動化 {#marketing-automation}
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
-   - 支払 {#payments}
+   - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
    - プロトコル {#protocols}
       - [汎用 OData コネクタ](connectors/protocols/odata.md)
@@ -117,10 +117,10 @@ ht-degree: 20%
       - データベース {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights の Apache Hive](tutorials/api/create/databases/hive.md)
-         - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure HDInsights の Apache Spark](tutorials/api/create/databases/spark.md)
          - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azure Table Storage](tutorials/api/create/databases/ats.md)
+         - [Azure テーブルストレージ](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
@@ -129,7 +129,7 @@ ht-degree: 20%
          - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
-         - [フェニックス](tutorials/api/create/databases/phoenix.md)
+         - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -140,7 +140,7 @@ ht-degree: 20%
          - [MailChimp キャンペーン](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 支払 {#payments}
+      - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/api/create/protocols/odata.md)
@@ -148,31 +148,31 @@ ht-degree: 20%
       - ストリーミング {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - データの調査 {#explore}
-      - [広告データの参照](tutorials/api/explore/advertising.md)
+      - [広告データの調査](tutorials/api/explore/advertising.md)
       - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
       - [CRM データの調査](tutorials/api/explore/crm.md)
       - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
       - [データベースデータの調査](tutorials/api/explore/database-nosql.md)
-      - [e コマースデータの参照](tutorials/api/explore/ecommerce.md)
+      - [e コマースデータの調査](tutorials/api/explore/ecommerce.md)
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
-      - [支払データの調査](tutorials/api/explore/payments.md)
+      - [支払いデータの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
-   - データの収集 {#collect}
-      - [広告データの収集](tutorials/api/collect/advertising.md)
-      - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
-      - [CRM データの収集](tutorials/api/collect/crm.md)
+   - データを収集 {#collect}
+      - [広告データを収集](tutorials/api/collect/advertising.md)
+      - [クラウドストレージデータを収集](tutorials/api/collect/cloud-storage.md)
+      - [CRM データを収集](tutorials/api/collect/crm.md)
       - [顧客成功データの収集](tutorials/api/collect/customer-success.md)
-      - [データベースデータの収集](tutorials/api/collect/database-nosql.md)
-      - [e コマースデータの収集](tutorials/api/collect/ecommerce.md)
+      - [データベースデータを収集](tutorials/api/collect/database-nosql.md)
+      - [e コマースデータを収集](tutorials/api/collect/ecommerce.md)
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
-      - [支払データの収集](tutorials/api/collect/payments.md)
-      - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
-      - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
+      - [支払データを収集](tutorials/api/collect/payments.md)
+      - [プロトコルデータを収集](tutorials/api/collect/protocols.md)
+      - [ストリーミングデータを収集](tutorials/api/collect/streaming.md)
    - [データフローの監視](tutorials/api/monitor.md)
-   - [アカウントの更新](tutorials/api/update.md)
-   - [データフローの更新](tutorials/api/update-dataflows.md)
+   - [アカウントを更新](tutorials/api/update.md)
+   - [データフローを更新](tutorials/api/update-dataflows.md)
    - [アカウントの削除](tutorials/api/delete.md)
-   - [データフローの削除](tutorials/api/delete-dataflows.md)
+   - [データフローを削除](tutorials/api/delete-dataflows.md)
 - UI チュートリアル {#ui-tutorials}
    - ソース接続の作成 {#create}
       - アドビアプリケーション {#adobe-applications}
@@ -209,10 +209,10 @@ ht-degree: 20%
       - データベース {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights の Apache Hive](tutorials/ui/create/databases/hive.md)
-         - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure HDInsights の Apache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
+         - [Azure テーブルストレージ](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
@@ -222,7 +222,7 @@ ht-degree: 20%
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
-         - [フェニックス](tutorials/ui/create/databases/phoenix.md)
+         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - e コマース {#ecommerce}
@@ -232,33 +232,32 @@ ht-degree: 20%
       - マーケティングの自動化 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 支払 {#payments}
+      - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/ui/create/protocols/odata.md)
-         - [汎用 REST API](tutorials/ui/create/protocols/generic-rest.md)
       - ストリーミング {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - データフローの設定 {#dataflow}
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Streaming Cloud ストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [CRM 接続データフロー](tutorials/ui/dataflow/crm.md)
+      - [ストリーミングクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [CRM 接続のデータフロー](tutorials/ui/dataflow/crm.md)
       - [顧客成功接続のデータフロー](tutorials/ui/dataflow/customer-success.md)
       - [データベース接続のデータフロー](tutorials/ui/dataflow/databases.md)
       - [e コマース接続のデータフロー](tutorials/ui/dataflow/ecommerce.md)
       - [マーケティング自動化接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
-   - [顧客プロファイルに入力するインバウンドデータのアクティブ化](tutorials/ui/profile.md)
+   - [顧客プロファイルに入力するインバウンドデータをアクティブ化](tutorials/ui/profile.md)
    - [バッチデータフローの監視](tutorials/ui/monitor.md)
    - [ストリーミングデータフローの監視](tutorials/ui/monitor-streaming.md)
-   - [アカウントの更新](tutorials/ui/update.md)
-   - [データフローの更新](tutorials/ui/update-dataflows.md)
+   - [アカウントを更新](tutorials/ui/update.md)
+   - [データフローを更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
-   - [データフローの削除](tutorials/ui/delete.md)
+   - [データフローを削除](tutorials/ui/delete.md)
 - [フロー実行通知](notifications.md)
-- [IP アドレス許可リスト](ip-address-allow-list.md)
+- [IP アドレスの許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
