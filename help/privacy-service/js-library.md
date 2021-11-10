@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Adobe プライバシーに関する JavaScript ライブラリの概要
+title: Adobeプライバシー JavaScript ライブラリの概要
 topic-legacy: overview
-description: Adobe Privacy JavaScript ライブラリを使用すると、プライバシーサービスで使用するために、データサブジェクト id を取得することができます。
+description: Adobeプライバシー JavaScript ライブラリを使用すると、Privacy Serviceで使用するデータ主体の ID を取得できます。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 7f3a0594147a8cea292263f60aa45dc5ebb8484e
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 69%
+source-wordcount: '1012'
+ht-degree: 59%
 
 ---
 
 # アドビのプライバシー JavaScript ライブラリの概要
 
-アドビは、データプロセッサーとして、お客様の許可と指示に従って個人データを処理します。データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe エクスペリエンスクラウドソリューションで送信するように選択した情報によって、 [!DNL General Data Protection Regulation] (GDPR) や (ccpa) などプライバシーに関する規制に適用される個人情報が保存さ [!DNL California Consumer Privacy Act] れます。 Experience Cloud ソリューションによる個人データの収集について詳しくは、[Adobe Experience Cloud のプライバシー](https://www.adobe.com/jp/privacy/experience-cloud.html)に関するドキュメントを参照してください。
+アドビは、データプロセッサーとして、お客様の許可と指示に従って個人データを処理します。データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudソリューションを通じて送信するように選択した情報に応じて、Adobeは、 [!DNL General Data Protection Regulation] (GDPR) および [!DNL California Consumer Privacy Act] (CCPA)。 Experience Cloud ソリューションによる個人データの収集について詳しくは、[Adobe Experience Cloud のプライバシー](https://www.adobe.com/jp/privacy/experience-cloud.html)に関するドキュメントを参照してください。
 
 データ管理者は、**アドビのプライバシー JavaScript ライブラリ**&#x200B;を使用して、特定のドメインについて ソリューションで生成されたすべてのデータサブジェクトの ID を自動的に取得できます。[!DNL Experience Cloud][Adobe Experience Platform Privacy Service](home.md) が提供する API では、これらの ID を使用して、データサブジェクトに属する個人データへのアクセスリクエストと削除リクエストを作成できます。
 
 >[!NOTE]
 >
->通常、は [!DNL Privacy JS Library] プライバシー関連のページにのみインストールする必要があります。これは、web サイトまたはドメインのすべてのページにインストールする必要はありません。
+>この [!DNL Privacy JS Library] 通常は、プライバシー関連のページにのみインストールする必要があり、web サイトやドメインのすべてのページにインストールする必要はありません。
 
 ## 関数
 
-では、 [!DNL Privacy JS Library] で id を管理するためのいくつかの機能が提供されて [!DNL Privacy Service] います。 これらの関数は、ブラウザーに保存されている、特定の訪問者の ID を管理する場合にのみ使用できます。これを使用して直接に情報を送信することはできません [!DNL Experience Cloud Central Service] 。
+この [!DNL Privacy JS Library] には、で ID を管理するためのいくつかの関数が用意されています。 [!DNL Privacy Service]. これらの関数は、ブラウザーに保存されている、特定の訪問者の ID を管理する場合にのみ使用できます。これらを使用して [!DNL Experience Cloud Central Service] 直接
 
 次の表に、ライブラリが提供する様々な関数の概要を示します。
 
 | 関数 | 説明 |
 | --- | --- |
-| `retrieveIdentities` | によって検索された id の配列および見つからなかった id の配列を返し `validIds` [!DNL Privacy Service] `failedIds` ます ()。 |
+| `retrieveIdentities` | 一致する ID の配列 (`validIds`) [!DNL Privacy Service]、および見つからなかった ID の配列 (`failedIds`) をクリックします。 |
 | `removeIdentities` | 一致する（有効な）各 ID をブラウザーから削除します。一致する ID の配列（`validIds`）を返します。各 ID には、この ID が削除されたかどうかを示す `isDeletedClientSide` ブール値が含まれます。 |
 | `retrieveThenRemoveIdentities` | 一致する ID の配列（`validIds`）を取得し、ブラウザーからそれらの ID を削除します。この関数は `removeIdentities` に似ていますが、削除の前に、使用中の Adobe ソリューションでアクセス要求を実行する必要がある場合（削除リクエストに指定する固有の ID を取得する必要がある場合など）に最も適しています。 |
 
@@ -43,15 +43,16 @@ ht-degree: 69%
 
 ## インストール
 
-の使用を開始するには、 [!DNL Privacy JS Library] 次のいずれかの方法を使用してコンピューターにインストールする必要があります。
+を使用し始めるには、以下を実行します。 [!DNL Privacy JS Library]を使用する場合は、次のいずれかの方法を使用して、コンピューターにインストールする必要があります。
 
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
-* [名前の下に Adobe プライバシータグの拡張機能をインストールします。 ](../tags/extensions/web/privacy/overview.md)`AdobePrivacy`
-* [エクスペリエンスクラウド GitHub リポジトリからダウンロード](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* からをダウンロード [Experience CloudGitHub リポジトリ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-## インスタンス化します。 [!DNL Privacy JS Library]
+また、データ収集 UI のタグ拡張を使用してライブラリをインストールすることもできます。 概要については、 [Adobeプライバシータグ拡張](../tags/extensions/web/privacy/overview.md) を参照してください。
 
-を使用するすべてのアプリは、 [!DNL Privacy JS Library] 新規オブジェクトをインスタンス化する必要があり `AdobePrivacy` ますが、これは特定のアドビソリューションに設定されている必要があります。 例えば、Adobe Analytics でインスタンス化する場合は、次のようになります。
+## をインスタンス化します。 [!DNL Privacy JS Library]
+
+を使用するすべてのアプリ [!DNL Privacy JS Library] は、新しい `AdobePrivacy` オブジェクトを選択します。このオブジェクトは、特定のAdobeソリューションに設定する必要があります。 例えば、Adobe Analytics でインスタンス化する場合は、次のようになります。
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -64,13 +65,13 @@ var adobePrivacy = new AdobePrivacy({
 
 様々なアドビソリューションのためにサポートされている全パラメーターのリストについては、付録の、サポートされている[アドビソリューションの設定パラメーター](#adobe-solution-configuration-parameters)に関する節を参照してください。
 
-## コードサンプル
+## コードサンプル {#samples}
 
-次のコードサンプルは、 [!DNL Privacy JS Library] タグを使用していない一般的なシナリオについて、を使用する方法を示しています。
+以下のコードサンプルは、 [!DNL Privacy JS Library] タグを使用しない場合の一般的なシナリオをいくつか示します。
 
 ### ID の取得
 
-次の例では、から id のリストを取得する方法を示し [!DNL Experience Cloud] ます。
+この例では、次の ID のリストを取得する方法を示します： [!DNL Experience Cloud].
 
 #### JavaScript
 
@@ -92,7 +93,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべての ID を含む JSON オブジェクト。 |
-| `failedIDs` | 取得されたものではないすべての Id が含まれている JSON オブジェクト [!DNL Privacy Service] 。または、それ以外の場合は見つかりませんでした。 |
+| `failedIDs` | から取得されなかったすべての ID を含む JSON オブジェクト [!DNL Privacy Service]または見つからなかった場合、 |
 
 #### 結果
 
@@ -121,7 +122,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 
 この例では、ブラウザーから ID のリストを削除する方法を示しています。
 
-#### &lt;/C2>
+#### JavaScript
 
 次のコードは、関数 `handleRemovedIDs` を定義します。これは、ブラウザーから削除された後に、`removeIdentities` で取得された ID を処理するコールバックまたは promise として使用されます。
 
@@ -141,7 +142,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべての ID を含む JSON オブジェクト。 |
-| `failedIDs` | 取得されたものではないすべての Id が含まれている JSON オブジェクト [!DNL Privacy Service] 。または、それ以外の場合は見つかりませんでした。 |
+| `failedIDs` | から取得されなかったすべての ID を含む JSON オブジェクト [!DNL Privacy Service]または見つからなかった場合、 |
 
 #### 結果
 
@@ -170,32 +171,32 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 次の手順
 
-このドキュメントでは、の主な機能について紹介されてい [!DNL Privacy JS Library] ます。 ライブラリを使用して id のリストを取得した後は、それらの id を使用して、データアクセスを作成したり、API に対する要求を削除したりすることができ [!DNL Privacy Service] ます。 [詳細については、プライバシーサービス API ガイドを参照してください ](api/overview.md) 。
+このドキュメントでは、 [!DNL Privacy JS Library]. ライブラリを使用して ID のリストを取得したら、これらの ID を使用して、 [!DNL Privacy Service] API 詳しくは、 [Privacy ServiceAPI ガイド](api/overview.md) を参照してください。
 
 ## 付録
 
-この節では、を使用するための補助的な情報が記載されてい [!DNL Privacy JS Library] ます。
+この節では、 [!DNL Privacy JS Library].
 
-### アドビソリューションの設定パラメーター
+### アドビソリューションの設定パラメーター {#config-params}
 
 次のリストは、サポートされているアドビソリューションで受け入れ可能な、[AdobePrivacy オブジェクトのインスタンス化](#instantiate-the-privacy-js-library)に使用される設定パラメーターを示しています。
+
+**すべてのソリューション**
+
+| パラメーター | 説明 |
+| --- | --- |
+| `key` | ユーザーまたはデータ主体を識別する一意の ID。 このプロパティは、独自の内部トラッキング目的で使用することを目的としており、Adobeでは使用されません。 |
 
 **Adobe Analytics**
 
 | パラメーター | 説明 |
 | --- | --- |
-| `cookieDomainPeriods` | cookie 追跡用のドメイン内のピリオド数（デフォルトは 2）。 |
-| `dataCenter` | アドビのデータ収集データセンター。これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。設定可能な値は次のとおりです。 <ul><li>d1：サンノゼデータセンター</li><li>d2：ダラスデータセンター</li></ul> |
-| `reportSuite` | JavaScript Web ビーコンで指定されたレポートスイート ID（「s_code.js」や「dtm」など）。 |
-| `trackingServer` | データ収集ドメイン（非 SSL）。これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
-| `trackingServerSecure` | データ収集ドメイン（SSL）。これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
-| `visitorNamespace` | 訪問者のグループ化に使用される名前空間。これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
-
-**Adobe Target**
-
-| パラメーター | 説明 |
-| --- | --- |
-| `clientCode` | Adobe Target システムでクライアントを識別するクライアントコード。 |
+| `cookieDomainPeriods` | cookie の追跡に使用するドメイン内のピリオドの数 ( デフォルトは `2`例： `.domain.com`) をクリックします。 JavaScript Web ビーコンで指定されていない限り、ここで定義しないでください。 |
+| `dataCenter` | Adobeデータ収集データセンター。 これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。設定可能な値は次のとおりです。 <ul><li>`d1`:サンノゼデータセンター</li><li>`d2`:ダラスデータセンター</li></ul> |
+| `reportSuite` | JavaScript Web ビーコンで指定されたレポートスイート ID( 例： `s_code.js` または `dtm`) をクリックします。 |
+| `trackingServer` | 非 SSL データ収集ドメイン。 これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
+| `trackingServerSecure` | SSL データ収集ドメイン。 これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
+| `visitorNamespace` | 訪問者のグループ化に使用する名前空間。 これは、JavaScript Web ビーコンで指定されている場合にのみ、含める必要があります。 |
 
 **Adobe Audience Manager**
 
@@ -203,8 +204,14 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | --- | --- |
 | `aamUUIDCookieName` | Adobe Audience Manager から返された一意のユーザー ID を含むファーストパーティ Cookie の名前。 |
 
-**Adobe ID サービス（ECID）**
+**Adobe Experience Cloud ID サービス (ECID)**
 
 | パラメーター | 説明 |
 | --- | --- |
 | `imsOrgID` | IMS 組織 ID。 |
+
+**Adobe Target**
+
+| パラメーター | 説明 |
+| --- | --- |
+| `clientCode` | Adobe Target システムでクライアントを識別するクライアントコード。 |
