@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 45%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 45%
    * [ （アルファ）HTTP 接続](./catalog/http-destination.md)
    * アドビの宛先 {#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
-      * [（ベータ版）Marketo Engage接続](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage接続](./catalog/adobe/marketo-engage.md)
       * [Experience Platformセグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
    * 広告の宛先 {#advertising}
       * [広告の宛先の概要](./catalog/advertising/overview.md)
@@ -148,7 +148,7 @@ ht-degree: 45%
    * [概要](./destination-sdk/overview.md)
    * [統合の前提条件](./destination-sdk/integration-prerequisites.md)
    * [はじめに](./destination-sdk/getting-started.md)
-   * 宛先 SDK 機能 {#functionality}
+   * Destination SDK機能 {#functionality}
       * [設定オプション](./destination-sdk/configuration-options.md)
       * [宛先の設定](./destination-sdk/destination-configuration.md)
       * [サーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 45%
          * [メッセージ変換テンプレートの作成とテスト](./destination-sdk/create-template.md)
          * [宛先設定のテスト](./destination-sdk/test-destination.md)
    * API 操作 {#api}
-      * [宛先 SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK(Destination Authoring)API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [宛先エンドポイント API 操作](./destination-sdk/destination-configuration-api.md)
       * [宛先サーバーエンドポイント API の操作](./destination-sdk/destination-server-api.md)
       * [オーディエンスメタデータエンドポイント API の操作](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 45%
          * [宛先テスト API 操作](./destination-sdk/destination-testing-api.md)
          * [プロファイル生成 API 操作の例](./destination-sdk/sample-profile-generation-api.md)
    * ガイド {#guides}
-      * [宛先 SDK を使用したストリーミング先の設定](./destination-sdk/configure-destination-instructions.md)
+      * [Destination SDKを使用したストリーミング先の設定](./destination-sdk/configure-destination-instructions.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platformでの宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub Web インターフェイスを使用して、宛先のドキュメントページを作成します](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
