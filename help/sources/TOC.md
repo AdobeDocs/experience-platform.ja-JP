@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
+source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '661'
 ht-degree: 20%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 20%
          - [Audience Managerフィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットフィールドのマッピング](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engageフィールドのマッピング](connectors/adobe-applications/mapping/marketo.md)
+         - [Salesforce フィールドのマッピング](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
