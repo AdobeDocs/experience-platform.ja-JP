@@ -1,20 +1,16 @@
 ---
 keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結合ポリシー；リアルタイム顧客プロファイル
-title: アカウントプロファイル UI ガイド （ベータ版）
+title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1172'
 ht-degree: 100%
 
 ---
 
-# アカウントプロファイル UI ガイド （ベータ版）
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+# アカウントプロファイル UI ガイド
 
 >[!NOTE]
 >

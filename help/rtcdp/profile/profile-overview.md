@@ -3,10 +3,10 @@ keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結
 title: リアルタイム CDP でのリアルタイム顧客プロファイルについて
 description: Real-time Customer Data Platformを使用して、顧客に対して、リアルタイム顧客プロファイルを使用して、調整され、一貫性のある、関連性の高いエクスペリエンスを提供する方法を説明します。
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 50%
+source-wordcount: '456'
+ht-degree: 48%
 
 ---
 
@@ -20,11 +20,7 @@ ht-degree: 50%
 
 リアルタイム CDP はExperience Platformをベースに構築され、プロファイルの作成など、多くの主要なExperience Platform機能を利用します。 個々の顧客のこれらの集計ビューでは、様々なマーケティングチャネルや、現在顧客データの保存に使用している多様なシステムからのデータを統合します。
 
-## リアルタイム CDP、B2B エディション（ベータ版）のプロファイルの強化
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+## リアルタイム CDP、B2B エディションのプロファイルの強化
 
 リアルタイム CDP がサポートするプロファイル機能に加えて、リアルタイム CDP（B2B エディション）を使用して、アカウントやオポチュニティなど、個人に関連する重要な情報を参照できます。 リアルタイム CDP、B2B エディションのプロファイル拡張について詳しくは、まず [プロファイル参照ガイド](profile-browse.md).
 

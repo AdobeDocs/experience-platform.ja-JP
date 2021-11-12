@@ -3,10 +3,10 @@ keywords: プロファイルの表示 rtcdp、rtcdp プロファイルビュー�
 title: Real-time Customer Data Platformでのプロファイルの参照
 description: Real-time Customer Data Platformを使用すると、Adobe Experience Platformユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータを参照できます。
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 24%
+source-wordcount: '533'
+ht-degree: 21%
 
 ---
 
@@ -19,11 +19,7 @@ Adobe Experience Platformユーザーインターフェイス内では、これ�
 
 Real-time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience PlatformUI のプロファイル表示機能を利用できます。 Platform ユーザーインターフェイス内での顧客プロファイルの表示に関する詳細なガイドについては、 [リアルタイム顧客プロファイルユーザーガイド](../../profile/ui/user-guide.md).
 
-## リアルタイム CDP、B2B エディション（ベータ版）のプロファイルの強化
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+## リアルタイム CDP、B2B エディションのプロファイルの強化
 
 B2B Edition ユーザーは、Adobe Experience Platformでサポートされるプロファイル参照機能に加えて、Real-time CDP、B2B Edition により、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定します。 B2B データは、セグメント化の実行にも使用でき、これらのセグメントは顧客の [!UICONTROL セグメントのメンバーシップ] タブを非 B2B セグメントと一緒に表示します。
 

@@ -1,22 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;b2b;cdp;顧客 AI
-title: Real-time CDP B2B Edition の概要 （ベータ版）
+title: Real-time CDP B2B Edition の概要
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1092'
-ht-degree: 91%
+source-wordcount: '1072'
+ht-degree: 90%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition の概要 （ベータ版）
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition は現在ベータ版です。ドキュメントと機能は変更される場合があります。
+# Real-time Customer Data Platform B2B Edition の概要
 
 Real-time Customer Data Platform（Real-time CDP）上に構築された Real-time CDP B2B Edition は、B2B サービスを行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 
