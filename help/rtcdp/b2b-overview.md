@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 90%
+source-wordcount: '1083'
+ht-degree: 89%
 
 ---
 
@@ -82,12 +82,10 @@ Real-time CDP B2B Edition が提供するマーケターのメリットと、Rea
 リアルタイム CDP B2B エディションがビジネス間サービスモデルに与えるメリットを理解するには、以下のドキュメントを参照して開始方法を確認してください。
 
 * [リアルタイム CDP B2B エディションの使用例](./b2b-use-case.md)
+* [Real-time Customer Data Platform B2B Edition のエンドツーエンドのチュートリアル](./b2b-tutorial.md)
 * [データの取り込み方法](./sources/b2b.md)
 * [プロファイルへのアクセス方法](./profile/profile-overview.md)
 * [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
 * [セグメントの作成方法](./segmentation/b2b.md)
 * [宛先へのセグメントのアクティブ化の方法](./destinations/b2b.md)
 * [データガバナンスポリシーの定義と実施方法](./privacy/data-governance-overview.md)
-
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

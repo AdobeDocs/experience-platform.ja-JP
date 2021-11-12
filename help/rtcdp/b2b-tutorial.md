@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP;CDP;B2B エディション；Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;b2b;cdp
 solution: Experience Platform
-title: Real-time Customer Data Platform B2B Edition の概要（ベータ版）
+title: Real-time Customer Data Platform B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
-source-git-commit: 6d55139325cb32cf0e0aac659f6056b7c5e9157b
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1178'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition の概要（ベータ版）
+# Real-time Customer Data Platform B2B Edition の概要
 
 このドキュメントでは、Real-time Customer Data Platform(CDP)B2B Edition を使い始めるための、主要な概念を説明する使用例を使用した、エンドツーエンドの高レベルなワークフローを示します。
 

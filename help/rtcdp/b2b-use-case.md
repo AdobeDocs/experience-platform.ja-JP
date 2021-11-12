@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;cdp;rtcdp
-title: Real-time Customer Data Platform B2B Edition のユースケースの例 （ベータ版）
+title: Real-time Customer Data Platform B2B Edition のユースケースの例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B Edition の実装の構成例を示します。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 100%
+source-wordcount: '1134'
+ht-degree: 99%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition のユースケースの例 （ベータ版）
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition は現在ベータ版です。ドキュメントと機能は変更される場合があります。
+# Real-time Customer Data Platform B2B Edition のユースケースの例
 
 Real-time Customer Data Platform B2B Edition は、既存の Real-time CDP および Adobe Experience Platform 製品を拡張して、B2B データおよびワークフローをサポートします。このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
 
@@ -29,8 +25,6 @@ Real-time Customer Data Platform B2B Edition は、既存の Real-time CDP お�
 ただし、Bodea には 2 つの異なるビジネスがあります。Bodea の最初のビジネス部門である「Line 1」は、自動車業界向けのソフトウェアを作成しています。2 番目のビジネス部門である「Line 2」は、自動車部品を製造する 3D プリンターを販売しています。Bodea の 2 つのビジネス部門の結果として、Bodea の顧客アカウントから生成された収益データは単一のビューに統合されていません。
 
 各ビジネス部門には、「CRM 1」と「CRM 2」という独自の販売システムがあります。これらの CRM 販売システムは両方とも、独自のマーケティング自動処理プラットフォーム「Marketo 1」および「Marketo 2」に接続されています。CRM 1 からのデータは Marketo 1 にのみ同期され、CRM 2 からのデータは Marketo 2 にのみ同期されます。最終的に、それらのデータは様々な企業情報サイロに保持されます。
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## 現在のデータ状況
 
@@ -97,7 +91,7 @@ Marketo Engage と LinkedIn の宛先を使用することにより、Bodea は�
 
 B2B 固有の機能の理解を深めるために、次のドキュメントをお勧めします。
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition のエンドツーエンドのチュートリアル](./b2b-tutorial.md)
 - [Real-time Customer Data Platform B2B エディションのソース](./sources/b2b.md)
 - [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
 - [B2B セグメント化の例](./segmentation/b2b.md)

@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform Overview
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 70%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Cloud とのネイティブな統合に加え、リアルタイ
 * Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-## Real-time Customer Data Platform B2B Edition（ベータ版）
+## Real-time Customer Data Platform B2B エディション
 
 また、ビジネス間の組織のニーズに合わせて利用できるリアルタイム CDP には、別のエディションも用意されています。 リアルタイム CDP B2B エディションは、マーケター向けのリアルタイム CDP の機能を拡張するために設計されています。 Adobe Experience Platformエコシステム内で有効にされる機能は、B2B サービスモデル内での動作に適したものです。
 

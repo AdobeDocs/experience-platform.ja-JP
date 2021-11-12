@@ -1,21 +1,15 @@
 ---
-title: リアルタイム CDP B2B エディション（ベータ版）のセグメント化の使用例の概要
+title: リアルタイム CDP B2B エディションのセグメント化の使用例の概要
 description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 3%
+source-wordcount: '1096'
+ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition のセグメント化の使用例の概要（ベータ版）
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition は現在ベータ版です。ドキュメントと機能は変更される場合があります。
+# Real-time Customer Data Platform B2B Edition のセグメント化の使用例の概要
 
 このドキュメントでは、Real-time CDP B2B Edition で使用できるセグメント化と、一般的な B2B の使用例で様々なタイプの属性を組み合わせる方法に関する例を示します。
 
