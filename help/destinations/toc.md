@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 45%
+source-wordcount: '677'
+ht-degree: 44%
 
 ---
 
@@ -174,6 +174,7 @@ ht-degree: 45%
          * [プロファイル生成 API 操作の例](./destination-sdk/sample-profile-generation-api.md)
    * ガイド {#guides}
       * [Destination SDKを使用したストリーミング先の設定](./destination-sdk/configure-destination-instructions.md)
+      * [Destination SDKで作成した宛先を確認用に送信](./destination-sdk/submit-destination.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platformでの宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub Web インターフェイスを使用して、宛先のドキュメントページを作成します](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
