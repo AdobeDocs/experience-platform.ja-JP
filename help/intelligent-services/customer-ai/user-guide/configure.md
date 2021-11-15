@@ -6,7 +6,7 @@ title: 顧客 AI インスタンスの設定
 topic-legacy: Instance creation
 description: インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 13%
@@ -74,7 +74,7 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 情報アイコンの選択 ![情報アイコン](../images/user-guide/info-icon.png) データセットの横にある「データセットのプレビュー」ポップオーバーが開きます。
 
-![データセットを選択して検索します。](../images/user-guide/dataset-info-2.png)
+![データセットを選択して検索します。](../images/user-guide/dataset-info.png)
 
 データセットのプレビューには、最終更新時間、ソーススキーマ、最初の 10 列のプレビューなどのデータが含まれます。
 
@@ -85,8 +85,8 @@ UI の右側にあるコントロールを使用して、サービスインス�
 >[!NOTE]
 >
 >データセットの完全性は、顧客 AI の最大トレーニング期間（1 年）を使用して計算されます。 つまり、データセットの完全性の値を表示する際に、1 年以上前のデータは考慮されません。
-<!-- training dataset completness needs to change -->
-![データセットの完全性](../images/user-guide/dataset-info.png)
+
+![データセットの完全性](../images/user-guide/dataset-info-2.png)
 
 ### ID を選択 {#identity}
 
