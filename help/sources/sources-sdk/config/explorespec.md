@@ -5,7 +5,7 @@ topic-legacy: overview
 description: このドキュメントでは、ソース SDK を使用するために準備が必要な設定の概要を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -87,4 +87,4 @@ ht-degree: 2%
 
 ## 次の手順
 
-エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API 詳しくは、 [[!DNL Sources SDK] API ガイド](../api/api-overview.md) を参照してください。
+エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API 詳しくは、 [[!DNL Sources SDK] API ガイド](../api/overview.md) を参照してください。
