@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 18%
+source-wordcount: '731'
+ht-degree: 19%
 
 ---
 
@@ -259,23 +259,20 @@ ht-degree: 18%
    - [データフローを削除](tutorials/ui/delete.md)
 - ソース SDK {#sdk}
    - [概要](sources-sdk/overview.md)
-   - ソース SDK の設定 {#config}
-      - [設定オプション](sources-sdk/config/config.md)
-      - [認証仕様の設定](sources-sdk/config/authspec.md)
-      - [ソースの指定を構成](sources-sdk/config/sourcespec.md)
-      - [エクスプローラの仕様を設定](sources-sdk/config/explorespec.md)
-   - ソース SDK API チュートリアル {#sdk-api}
-      - [ソース SDK API の概要](sources-sdk/api/overview.md)
-      - [はじめに](sources-sdk/api/getting-started.md)
-      - [接続仕様の作成](sources-sdk/api/create.md)
-      - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
-      - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
-      - [ソースを送信](sources-sdk/api/submit.md)
-   - ソースをドキュメント化 {#document}
-      - [Adobe Experience Platformでのソースのドキュメント化](sources-sdk/documentation/overview.md)
-      - [GitHub Web インターフェイスを使用してソースドキュメントページを作成する](sources-sdk/documentation/github.md)
-      - [ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。](sources-sdk/documentation/text-editor.md)
-      - [ドキュメントのセルフサービステンプレート](sources-sdk/documentation/template.md)
+   - [設定オプション](sources-sdk/config/config.md)
+   - [認証仕様の設定](sources-sdk/config/authspec.md)
+   - [ソースの指定を構成](sources-sdk/config/sourcespec.md)
+   - [エクスプローラの仕様を設定](sources-sdk/config/explorespec.md)
+   - [ソース SDK API の概要](sources-sdk/api/api-overview.md)
+   - [はじめに](sources-sdk/api/getting-started.md)
+   - [接続仕様の作成](sources-sdk/api/create.md)
+   - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
+   - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
+   - [ソースを送信](sources-sdk/api/submit.md)
+   - [Adobe Experience Platformでのソースのドキュメント化](sources-sdk/documentation/doc-overview.md)
+   - [GitHub Web インターフェイスを使用してソースドキュメントページを作成する](sources-sdk/documentation/github.md)
+   - [ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。](sources-sdk/documentation/text-editor.md)
+   - [ドキュメントのセルフサービステンプレート](sources-sdk/documentation/template.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレスの許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)

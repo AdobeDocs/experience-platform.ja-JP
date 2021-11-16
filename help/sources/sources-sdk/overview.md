@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK は、Flow Service API を使用して REST API ベースのソースを統合し、データをExperience Platformに導くための一連の設定 API です。
 hide: true
 hidefromtoc: true
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 8%
@@ -41,17 +41,17 @@ Adobe Experience Platform Sources SDK は、REST API ベースのソースを統
 
 ソース SDK を使用すると、独自の REST API ベースのソースを統合し、データをと Platform に取り込むことができます。 [!DNL Flow Service]. ソース SDK を使用すると、 [!DNL Flow Service] API
 
-詳しくは、 [新しい接続仕様の作成](./api/overview.md) 新しいソースを Platform に統合する方法について詳しくは、を参照してください。
+詳しくは、 [新しい接続仕様の作成](./api/api-overview.md) 新しいソースを Platform に統合する方法について詳しくは、を参照してください。
 
 ## ソースをドキュメント化
 
-ソースを作成したら、 [ドキュメントガイド](./documentation/overview.md) を使用してソースをドキュメント化する方法について [!DNL GitHub] Web インターフェイス、または独自のテキストエディターを使用する。
+ソースを作成したら、 [ドキュメントガイド](./documentation/doc-overview.md) を使用してソースをドキュメント化する方法について [!DNL GitHub] Web インターフェイス、または独自のテキストエディターを使用する。
 
 ## 高レベルのプロセス
 
 Experience Platformでソースを設定する手順を以下に示します。
 
-* 詳しくは、 [ソース SDK API ガイド](./api/overview.md);
+* 詳しくは、 [ソース SDK API ガイド](./api/api-overview.md);
    * 詳しくは、 [入門ガイド](./api/getting-started.md);
    * 次のチュートリアルに従います。 [新しい接続仕様の作成](./api/create.md);
    * 次のチュートリアルに従います。 [接続仕様の更新](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Experience Platformでソースを設定する手順を以下に示します。
    * 詳しくは、 [認証仕様の設定](./config/authspec.md);
    * 詳しくは、 [ソース仕様の構成](./config/sourcespec.md);
    * 詳しくは、 [参照仕様の設定](./config/explorespec.md);
-* ソースのドキュメント化を開始するには、 [ソース SDK 用ドキュメント作成の概要](./documentation/overview.md)
+* ソースのドキュメント化を開始するには、 [ソース SDK 用ドキュメント作成の概要](./documentation/doc-overview.md)
    * この [ソースドキュメントテンプレート](./documentation/template.md) ドキュメントを構築するには、以下を実行します。
    * 詳しくは、 [GitHub Web インターフェイスの使用](./documentation/github.md) を参照してください。
    * 詳しくは、 [テキストエディターの使用](./documentation/text-editor.md) ローカルマシンを使用してドキュメントを作成する手順については、を参照してください。
