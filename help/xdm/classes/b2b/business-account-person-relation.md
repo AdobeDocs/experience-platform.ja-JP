@@ -2,14 +2,18 @@
 title: XDM ビジネスアカウント人物関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスアカウント人物関係クラスの概要を説明します。
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '349'
 ht-degree: 5%
 
 ---
 
 # [!UICONTROL XDM ビジネスアカウント人物関係] クラス
+
+>[!IMPORTANT]
+>
+>このクラスは、 [Real-time Customer Data Platform B2B エディション](../../../rtcdp/b2b-overview.md). このクラスがに参加するには、Real-time CDP B2B Edition へのアクセス権が必要です。 [リアルタイム顧客プロファイル](../../../profile/home.md).
 
 [!UICONTROL XDM ビジネスアカウント人物関係] は、ビジネスアカウントに関連付けられている個人の最小限必要なプロパティを取得する、標準 Experience Data Model(XDM) クラスです。
 

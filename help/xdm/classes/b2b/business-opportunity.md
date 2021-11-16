@@ -2,14 +2,18 @@
 title: XDM ビジネスオポチュニティクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM Business Opportunity クラスの概要を説明します。
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 7%
+source-wordcount: '237'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL XDM ビジネスオポチュニティ] クラス
+
+>[!IMPORTANT]
+>
+>このクラスは、 [Real-time Customer Data Platform B2B エディション](../../../rtcdp/b2b-overview.md). このクラスがに参加するには、Real-time CDP B2B Edition へのアクセス権が必要です。 [リアルタイム顧客プロファイル](../../../profile/home.md).
 
 [!UICONTROL XDM ビジネスオポチュニティ] は、ビジネスオポチュニティに最低限必要なプロパティを取り込む、標準 Experience Data Model(XDM) クラスです。
 

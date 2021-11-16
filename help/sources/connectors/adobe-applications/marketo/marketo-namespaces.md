@@ -5,9 +5,9 @@ title: B2B 名前空間とスキーマ
 topic-legacy: overview
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 10%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 10%
 # B2B 名前空間とスキーマ
 
 このドキュメントでは、B2B ソースで使用する名前空間とスキーマの基になる設定に関する情報を提供します。 このドキュメントでは、B2B 名前空間とスキーマの生成に必要な Postman 自動化ユーティリティの設定に関する詳細も説明します。
+
+>[!IMPORTANT]
+>
+>次へのアクセス権が必要です： [Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) B2B スキーマがに参加するために [リアルタイム顧客プロファイル](../../../../profile/home.md).
 
 ## B2B 名前空間とスキーマ自動生成ユーティリティの設定
 

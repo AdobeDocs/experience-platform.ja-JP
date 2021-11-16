@@ -2,14 +2,18 @@
 title: XDM ビジネスアカウントクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスアカウントクラスの概要を説明します。
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 6%
+source-wordcount: '187'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL XDM ビジネスアカウント] クラス
+
+>[!IMPORTANT]
+>
+>このクラスは、 [Real-time Customer Data Platform B2B エディション](../../../rtcdp/b2b-overview.md). このクラスがに参加するには、Real-time CDP B2B Edition へのアクセス権が必要です。 [リアルタイム顧客プロファイル](../../../profile/home.md).
 
 [!UICONTROL XDM ビジネスアカウント] は、ビジネスアカウントに最低限必要なプロパティを取り込む、標準の Experience Data Model(XDM) クラスです。
 

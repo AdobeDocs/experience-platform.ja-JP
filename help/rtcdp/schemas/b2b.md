@@ -2,16 +2,20 @@
 title: Real-time Customer Data Platform B2B Edition のスキーマ
 description: Real-time Customer Data Platform B2B Edition の Experience Data Model(XDM) スキーマの役割の概要です。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 9%
+source-wordcount: '220'
+ht-degree: 8%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
 Real-time Customer Data Platform B2B Edition は、いくつかの標準を提供します [エクスペリエンスデータモデル (XDM) クラス](../../xdm/schema/composition.md#class) は、アカウント、商談、キャンペーンなど、重要な B2B データエンティティに関する詳細をキャプチャするためのものです。 さらに、Real-time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
+
+>[!IMPORTANT]
+>
+>B2B スキーマがに参加するには、リアルタイム CDP B2B エディションへのアクセス権が必要です。 [リアルタイム顧客プロファイル](../../profile/home.md).
 
 リアルタイム CDP B2B エディションでは、次の標準クラスが提供されます。
 

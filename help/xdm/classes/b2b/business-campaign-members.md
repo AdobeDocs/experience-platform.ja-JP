@@ -2,14 +2,18 @@
 title: XDM ビジネスキャンペーンメンバークラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンメンバークラスの概要を説明します。
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 5%
+source-wordcount: '245'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL XDM ビジネスキャンペーンメンバー] クラス
+
+>[!IMPORTANT]
+>
+>このクラスは、 [Real-time Customer Data Platform B2B エディション](../../../rtcdp/b2b-overview.md). このクラスがに参加するには、Real-time CDP B2B Edition へのアクセス権が必要です。 [リアルタイム顧客プロファイル](../../../profile/home.md).
 
 [!UICONTROL XDM ビジネスキャンペーンメンバー] は、ビジネスキャンペーンに関連付けられた連絡先またはリードを記述する標準 Experience Data Model(XDM) クラスです。
 
