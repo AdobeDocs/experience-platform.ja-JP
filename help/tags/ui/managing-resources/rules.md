@@ -2,9 +2,9 @@
 title: ルール
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1969'
 ht-degree: 100%
 
 ---
@@ -155,10 +155,6 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 これらのイベントは、（条件が false に評価されない限り）ほとんど常に実行される必要があるので、効率性を考慮して、埋め込みコードによって参照されるファイルであるメインライブラリにバンドルされます。
 
 * **JavaScript：** JavaScript は、メインのタグライブラリに埋め込まれます。カスタムスクリプトはスクリプトタグでラップされ、`document.write` を使用してドキュメントに書き込まれます。ルールに複数のカスタムスクリプトがある場合、それらは順番に記述されます。
-
-   >[!NOTE]
-   >
-   >タグは ES5 JavaScript を使用します。 イベント転送は ES6 を使用します。
 
 * **HTML：** HTML はメインのタグライブラリに埋め込まれています。`document.write` を使用して、ドキュメントに HTML を書き込みます。ルールに複数のカスタムスクリプトがある場合、それらは順番に記述されます。
 

@@ -2,10 +2,10 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 99%
+source-wordcount: '5362'
+ht-degree: 97%
 
 ---
 
@@ -542,6 +542,10 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 
 ### カスタムコード
 
+>[!NOTE]
+>
+>ES6+ JavaScript がカスタムコードでサポートされるようになりました。 一部の古いブラウザーは ES6 以降をサポートしていません。 ES6+関数を使用した場合の影響を理解するには、サポートが必要なすべての Web ブラウザーに対してテストしてください。
+
 イベントのトリガー後に実行して条件を評価するコードを提供します。
 
 1. アクションコードに名前を付けます。
@@ -645,6 +649,10 @@ setTimeout(function() {
 `string`
 
 ### カスタムコード
+
+>[!NOTE]
+>
+>ES6+ JavaScript がカスタムコードでサポートされるようになりました。 一部の古いブラウザーは ES6 以降をサポートしていません。 ES6+関数を使用した場合の影響を理解するには、サポートが必要なすべての Web ブラウザーに対してテストしてください。
 
 カスタム JavaScript を UI に入力するには、「エディターを開く」を選択してエディターウィンドウにコードを挿入します。
 

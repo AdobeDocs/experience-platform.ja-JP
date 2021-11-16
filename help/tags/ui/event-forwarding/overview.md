@@ -3,9 +3,9 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 100%
 
 ---
@@ -61,9 +61,5 @@ Adobe Experience Platform のイベント転送は、通常クライアントで
 * 一連のルールアクション
 
    ルールの「アクション」セクションでは、イベント転送のルールは常に順番に実行されます。ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグを使用した場合のように選択することはできません。
-
-* カスタムコードの JavaScript バージョン
-
-   タグは、JavaScript バージョン es5 を使用します。 イベント転送はバージョン es6 を使用します。
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->
