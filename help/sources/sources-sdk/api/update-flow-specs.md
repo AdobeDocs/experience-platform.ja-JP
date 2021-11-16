@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: 次のドキュメントでは、ソース SDK 用の Flow Service API を使用して、フロー仕様を取得および更新する手順を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ PUT -X GET \
 
 ## 次の手順
 
-新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 詳しくは、 [新しいソースのテストと送信](./overview.md#submit) を参照してください。
+新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 詳しくは、 [新しいソースのテストと送信](./submit.md) を参照してください。
