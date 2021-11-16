@@ -2,7 +2,7 @@
 description: オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新、削除します。 Adobeは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。 テンプレートを定義、テスト、送信すると、Adobeはこのテンプレートを使用して、宛先への API 呼び出しを構造化します。
 title: Audience metadata management
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
+source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 1%
@@ -15,58 +15,58 @@ ht-degree: 1%
 
 オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新、削除します。 Adobeは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。 設定を定義、テスト、送信すると、Adobeはこの設定を使用して、宛先への API 呼び出しを構造化します。
 
-このドキュメントで説明する機能は、`/authoring/audience-templates` API エンドポイントを使用して設定できます。 エンドポイントで実行できる操作の完全なリストについては、[ オーディエンスメタデータエンドポイント API の操作 ](./audience-metadata-api.md) をお読みください。
+このドキュメントで説明する機能は、 `/authoring/audience-templates` API エンドポイント。 読み取り [オーディエンスメタデータエンドポイント API の操作](./audience-metadata-api.md) エンドポイントで実行できる操作の完全なリストについては、を参照してください。
 
-## オーディエンスメタデータ管理エンドポイントを使用するタイミング {#when-to-use}
+## Audience Metadata Management エンドポイントを使用するタイミング {#when-to-use}
 
-API 設定によっては、Audience で宛先を設定する際に、Audience Metadata Management エンドポイントを使用する必要がある場合とならない場合があります。Experience Platform 以下のデシジョンツリー図を使用して、オーディエンスメタデータエンドポイントを使用するタイミングと、宛先に対するオーディエンスメタデータテンプレートの設定方法を理解します。
+API 設定に応じて、Experience Platformで宛先を設定する際に、Audience Metadata Management エンドポイントを使用する必要がある場合とならない場合があります。 以下のデシジョンツリー図を使用して、オーディエンスメタデータエンドポイントを使用するタイミングと、宛先に対するオーディエンスメタデータテンプレートの設定方法を理解します。
 
 ![デシジョンツリー図](./assets/audience-metadata-decision-tree.png)
 
 ## Audience Metadata Management でサポートされる使用例 {#use-cases}
 
-宛先 SDK でのオーディエンスメタデータのサポートを使用すると、Experience Platformの宛先を設定する際に、Platform ユーザーが宛先にセグメントをマッピングし、アクティブ化する際に、いくつかのオプションの 1 つを指定できます。 [ 宛先設定 ](./destination-configuration.md#segment-mapping) のセグメントマッピングセクションのパラメーターを使用して、ユーザーが使用できるオプションを制御できます。
+Destination SDKでのオーディエンスメタデータのサポートを使用すると、Experience Platformの宛先を設定する際に、Platform ユーザーがセグメントをマッピングし、宛先に対してアクティブ化する際に、いくつかのオプションの 1 つを指定できます。 ユーザーが使用できるオプションは、 [宛先設定](./destination-configuration.md#segment-mapping).
 
-### 使用例 1 — サードパーティの API を持っていて、ユーザーはマッピング ID を入力する必要がない
+### 使用例 1 — サードパーティの API があり、ユーザーはマッピング ID を入力する必要がない
 
-セグメントやオーディエンスを作成、更新、削除する API エンドポイントがある場合は、オーディエンスメタデータテンプレートを使用して、セグメントの作成、更新、削除エンドポイントの仕様に合わせて宛先 SDK を設定できます。 Experience Platformは、プログラムによってセグメントを作成、更新、削除し、メタデータをExperience Platformに同期できます。
+セグメントやオーディエンスを作成、更新、削除する API エンドポイントがある場合は、オーディエンスメタデータテンプレートを使用して、セグメントの作成、更新、削除エンドポイントの仕様に合わせてDestination SDKを設定できます。 Experience Platformは、セグメントをプログラムで作成/更新/削除し、メタデータをExperience Platformに同期できます。
 
-Experience Platformユーザーインターフェイス (UI) で宛先に対してセグメントをアクティブ化する場合、アクティベーションワークフローのセグメントマッピング ID フィールドに手動で入力する必要はありません。
+Experience Platformユーザーインターフェイス (UI) で宛先に対してセグメントをアクティブ化する際に、アクティベーションワークフローのセグメントマッピング ID フィールドに手動で入力する必要はありません。
 
-### 使用例 2 — ユーザーは最初に宛先にセグメントを作成する必要があり、マッピング ID を手動で入力する必要がある
+### 使用例 2 — ユーザーは最初に宛先でセグメントを作成する必要があり、マッピング ID を手動で入力する必要がある
 
-宛先でパートナーやユーザーが手動でセグメントやその他のメタデータを作成する必要がある場合は、アクティベーションワークフローの「セグメントマッピング ID 」フィールドに手動で入力して、宛先とExperience Platformの間でセグメントメタデータを同期する必要があります。
+セグメントや他のメタデータをパートナーやユーザーが手動で宛先に作成する必要がある場合は、Experience Platformがアクティベーションワークフローの「セグメントマッピング ID 」フィールドに手動で入力し、宛先と宛先の間でセグメントメタデータを同期します。
 
-![Input mapping ID](./assets/input-mapping-id.png)
+![入力マッピング ID](./assets/input-mapping-id.png)
 
 ### 使用例 3 — 宛先がExperience Platformセグメント ID を受け入れる、ユーザーがマッピング ID を手動で入力する必要がない
 
-宛先システムがExperience Platformセグメント ID を受け入れる場合は、オーディエンスメタデータテンプレートで設定できます。 ユーザーは、セグメントをアクティブ化する際に、セグメントマッピング ID を設定する必要はありません。
+宛先システムがExperience Platformセグメント ID を受け入れる場合、オーディエンスメタデータテンプレートで設定できます。 ユーザーは、セグメントをアクティブ化する際に、セグメントマッピング ID を入力する必要はありません。
 
-## 汎用の拡張可能なオーディエンステンプレート {#generic-and-extensible}
+## 汎用で拡張可能なオーディエンステンプレート {#generic-and-extensible}
 
-上記の使用例をサポートするため、Adobeは、API の仕様に合わせてカスタマイズ可能な汎用テンプレートを提供します。
+上記の使用例をサポートするために、Adobeでは、API の仕様に合わせてカスタマイズできる汎用テンプレートを提供しています。
 
-API が以下をサポートしている場合は、汎用テンプレートを使用して [ 新しいオーディエンステンプレート ](./audience-metadata-api.md#create) を作成できます。
+汎用テンプレートを使用して、 [新しいオーディエンステンプレートの作成](./audience-metadata-api.md#create) お使いの API が以下をサポートしている場合：
 
 * HTTP メソッド：POST,GET,PUT,DELETE,PATCH
-* 認証タイプは次のとおりです。OAuth 1、OAuth 2（更新トークンあり）、OAuth 2（bearer トークンあり）
+* 認証タイプは次のとおりです。OAuth 1、OAuth 2（更新トークン）、OAuth 2（bearer トークン）
 * 関数は次のとおりです。オーディエンスの作成、オーディエンスの更新、オーディエンスの取得、オーディエンスの削除、資格情報の検証
 
-Adobeエンジニアリングチームは、ユースケースで必要な場合は、ユーザーと協力して、カスタムフィールドを含む汎用テンプレートを展開できます。
+Adobeエンジニアリングチームが協力して、カスタムフィールドを含む汎用テンプレートを拡張できます（使用例が必要な場合）。
 
 ## 設定例 {#configuration-examples}
 
-この節では、参照用の 3 つの一般的なオーディエンスメタデータ設定の例と、設定の主なセクションの説明を示します。 URL、ヘッダー、リクエスト、応答本文の違いに注意してください。 これは、3 つのサンプルプラットフォームのマーケティング API の仕様が異なるためです。
+この節では、参照用の 3 つの汎用オーディエンスメタデータ設定の例と、設定の主な節の説明を示します。 URL、ヘッダー、リクエスト、応答本文は、3 つの設定例でどのように異なるかに注意してください。 これは、3 つのサンプルプラットフォームのマーケティング API の仕様が異なるためです。
 
-一部の例では、`{{authData.accessToken}}` や `{{segment.name}}` などのマクロフィールドが URL で使用され、他の例では、これらのフィールドがヘッダーやリクエスト本文で使用されます。 実際には、マーケティング API の仕様によって異なります。
+一部の例では、 `{{authData.accessToken}}` または `{{segment.name}}` は URL で使用され、その他の例ではヘッダーまたはリクエスト本文で使用されます。 実際の動作はマーケティング API の仕様によって異なります。
 
 | テンプレートセクション | 説明 |
 |--- |--- |
-| `create` | API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めます。これらのコンポーネントを使用して、プラットフォーム内にセグメント/オーディエンスをプログラムで作成し、情報をAdobe Experience Platformに同期します。 |
-| `update` | API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めます。これにより、プラットフォームのセグメント/オーディエンスをプログラムで更新し、情報をAdobe Experience Platformに同期できます。 |
-| `delete` | API への HTTP 呼び出しをおこない、プラットフォーム内のセグメント/オーディエンスをプログラムで削除するために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含みます。 |
-| `validations` | パートナー API を呼び出す前に、テンプレート設定内のすべてのフィールドの検証を実行します。 例えば、ユーザーのアカウント ID が正しく入力されていることを検証できます。 |
+| `create` | API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、プラットフォーム内のセグメント/オーディエンスをプログラムで作成し、情報をAdobe Experience Platformに同期します。 |
+| `update` | API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームのセグメント/オーディエンスをプログラムで更新し、情報をAdobe Experience Platformに同期します。 |
+| `delete` | API に対する HTTP 呼び出しをおこない、プラットフォーム内のセグメント/オーディエンスをプログラムで削除するために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含みます。 |
+| `validate` | パートナー API を呼び出す前に、テンプレート設定のすべてのフィールドの検証を実行します。 例えば、ユーザーのアカウント ID が正しく入力されていることを検証できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,7 +79,7 @@ Adobeエンジニアリングチームは、ユースケースで必要な場合
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -118,7 +118,7 @@ Adobeエンジニアリングチームは、ユースケースで必要な場合
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -155,7 +155,7 @@ Adobeエンジニアリングチームは、ユースケースで必要な場合
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {
@@ -375,7 +375,7 @@ Adobeエンジニアリングチームは、ユースケースで必要な場合
 }
 ```
 
-テンプレート内のすべてのパラメーターの説明については、リファレンスドキュメント [ オーディエンスメタデータエンドポイント API の操作 ](./audience-metadata-api.md) を参照してください。
+テンプレート内のすべてのパラメーターの説明については、リファレンスドキュメントを参照してください。 [オーディエンスメタデータエンドポイント API の操作](./audience-metadata-api.md).
 
 ## オーディエンスメタデータテンプレートで使用されるマクロ
 
@@ -383,13 +383,13 @@ Experience Platformと API の間でセグメント ID、アクセストーク�
 
 | マクロ | 説明 |
 |--- |--- |
-| `{{segment.alias}}` | 「 」セグメントのエイリアスにExperience Platformでアクセスできます。 |
+| `{{segment.alias}}` | 「 」でセグメントエイリアスにアクセスできるExperience Platform。 |
 | `{{segment.name}}` | 「 」でセグメント名にアクセスできます。Experience Platform |
-| `{{segment.id}}` | Experience Platformのセグメント ID にアクセスできます。 |
+| `{{segment.id}}` | 「 」でセグメント ID にアクセスできるExperience Platform。 |
 | `{{customerData.accountId}}` | 宛先設定で設定したアカウント ID フィールドにアクセスできます。 |
 | `{{oauth2ServiceAccessToken}}` | OAuth 2 の設定に基づいて、アクセストークンを動的に生成できます。 |
-| `{{authData.accessToken}}` | アクセストークンを API エンドポイントに渡すことができます。 Experience Platformが期限切れでないトークンを使用して宛先に接続する場合は `{{authData.accessToken}}` を使用し、期限切れでない場合は `{{oauth2ServiceAccessToken}}` を使用してアクセストークンを生成します。 |
-| `{{body.segments[0].segment.id}}` | 作成したオーディエンスの一意の識別子をキー `externalAudienceId` の値として返します。 |
-| `{{error.message}}` | エラー UI でユーザーに表示されるエラーExperience Platformを返します。 |
+| `{{authData.accessToken}}` | API エンドポイントにアクセストークンを渡すことができます。 用途 `{{authData.accessToken}}` Experience Platformが期限切れでないトークンを使用して宛先に接続する場合は、 `{{oauth2ServiceAccessToken}}` をクリックしてアクセストークンを生成します。 |
+| `{{body.segments[0].segment.id}}` | 作成されたオーディエンスの一意の識別子をキーの値として返します `externalAudienceId`. |
+| `{{error.message}}` | ユーザー UI でユーザーに表示されるエラーメッセージをExperience Platformに返します。 |
 
 {style=&quot;table-layout:auto&quot;}
