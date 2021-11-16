@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 20%
+source-wordcount: '741'
+ht-degree: 18%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 20%
          - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising Cloud {#advertising}
+   - Advertising {#advertising}
       - [Google AdWords コネクタ](connectors/advertising/ads.md)
    - クラウドストレージ {#cloud-storage}
       - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
@@ -91,7 +91,7 @@ ht-degree: 20%
       - [HTTP API コネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
    - ベース接続を作成する {#create}
-      - Advertising Cloud {#advertising}
+      - 広告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -182,7 +182,7 @@ ht-degree: 20%
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Advertising Cloud {#create}
+      - 広告 {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -257,6 +257,25 @@ ht-degree: 20%
    - [データフローを更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローを削除](tutorials/ui/delete.md)
+- [ソース SDK] {#sources-sdk}
+   - [概要](sources-sdk/overview.md)
+   - [ソース SDK 機能] {#functionality}
+      - [設定オプション](sources-sdk/config/config.md)
+      - [認証仕様の設定](sources-sdk/config/authspec.md)
+      - [ソースの指定を構成](sources-sdk/config/sourcespec.md)
+      - [エクスプローラの仕様を設定](sources-sdk/config/explorespec.md)
+   - [ソース SDK API チュートリアル] {#sdk-tutorials}
+      - [ソース SDK API の概要](sources-sdk/api/overview.md)
+      - [はじめに](sources-sdk/api/getting-started.md)
+      - [接続仕様の作成](sources-sdk/api/create.md)
+      - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
+      - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
+      - [ソースを送信](sources-sdk/api/submit.md)
+   - [ソースをドキュメント化] {#document}
+      - [Adobe Experience Platformでのソースのドキュメント化](sources-sdk/documentation/overview.md)
+      - [GitHub Web インターフェイスを使用してソースドキュメントページを作成する](sources-sdk/documentation/github.md)
+      - [ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。](sources-sdk/documentation/text-editor.md)
+      - [ドキュメントのセルフサービステンプレート](sources-sdk/documentation/template.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレスの許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
