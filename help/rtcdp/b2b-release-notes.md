@@ -3,10 +3,10 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B Edition リリースノート
 description: Adobe Experience Platform Real-time Customer Data Platform B2B Edition の最新のリリースノートです。
-source-git-commit: f5d9252b25793bd9233b5bc8dcc83be464ce7fdd
+source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 27%
+source-wordcount: '445'
+ht-degree: 22%
 
 ---
 
@@ -36,7 +36,7 @@ Real-time CDP B2B Edition の詳細については、 [概要](./b2b-overview.md
 
 | 機能 | 説明 |
 |---|---|
-| Marketo Engageソースコネクタ | Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。Marketo Engageソースコネクタは、リード管理と B2B マーケター向けの完全なソリューションです。 |
+| Marketo Engageソースコネクタ | Marketo Engageソースコネクタを使用すると、マーケターは 1 つ以上のMarketoインスタンスからAdobe Experience Platformインスタンスにデータをシームレスに取り込み、リード管理と B2B マーケター向けの完全なソリューションを提供します。 |
 | Marketo Engage先 | この [Marketoの宛先](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=ja) Adobe Experience Platformで作成したセグメントをMarketoにプッシュし、静的リストとして表示できます。 |
 
 Marketo Source Connector について詳しくは、 [概要](../sources/connectors/adobe-applications/marketo/marketo.md)
