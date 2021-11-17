@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2021 年 11 月のリリースノート。
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 34%
 
 ---
