@@ -3,9 +3,9 @@ title: メモエンドポイント
 description: Reactor API で /notes エンドポイントを呼び出す方法を説明します。
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '527'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Reactor API の `/notes` エンドポイントを使用すると、これらの�
 * [プロパティ](./properties.md)
 * [ルールコンポーネント](./rule-components.md)
 * [ルール](./rules.md)
-* [機密](./secrets.md)
+* [秘密鍵](./secrets.md)
 
 これら 6 種類はまとめて「メモ機能のある」リソースと呼ばれます。メモ機能のあるリソースを削除すると、関連付けられたメモも削除されます。
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | 検索するメモの `id` です。 |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | メモを作成するリソースのタイプ。 次の値のいずれかである必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | メモを作成する特定のリソースの `id`。 |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **（必須）** 更新するリソースのタイプ。このエンドポイントの場合は、値を `notes` にする必要があります。 |
 | `attributes.text` | **（必須）** メモを含むテキスト。各メモは、512 文字の Unicode 文字に制限されています。 |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 **応答**
 
