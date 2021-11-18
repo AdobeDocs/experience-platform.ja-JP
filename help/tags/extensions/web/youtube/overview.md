@@ -3,7 +3,7 @@ title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-ビデオプレーヤーがレンダリングされる各 web ページの HTML にある Google 開発者ドキュメントから[「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)コードスニペットを使用します。
+ビデオプレーヤーがレンダリングされる各 web ページの HTML にある Google 開発者ドキュメントから[「&lt;iframe\> タグを使用してプレーヤーを埋め込む」](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)コードスニペットを使用します。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
