@@ -5,9 +5,9 @@ breadcrumb-title: Privacy Service ガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、顧客データリクエストを管理します。
 feature: Privacy
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 95%
    * [概要](./regulations/overview.md)
    * [FAQ](./regulations/faq.md)
    * [用語](./regulations/terminology.md)
-* [データの予防 API (α)](./data-hygiene-api.md)
+* [データ衛生 API（アルファ）](./data-hygiene-api.md)
 * [トラブルシューティングガイド](./troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [リリースノート](./release-notes.md)
