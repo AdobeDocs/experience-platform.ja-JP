@@ -3,9 +3,9 @@ title: リリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '578'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 87%
 >
 >Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
-## 2021 年 10 月 21 日（PT）
+## 2021年10月21日（PT）
 
-**イベント転送時に認証されたエンドポイントにデータを送信** –シークレットを使用して、次の認証プロトコルが必要なエンドポイントにデータを送信することができます。
+**イベント転送での認証済みエンドポイントへのデータ送信** - 秘密鍵を使用して、次の認証プロトコルを必要とするエンドポイントにデータを送信できます。
 
-* **[!UICONTROL Token]** : 認証トークン値を表す1つのストリングです。
-* **[!UICONTROL Simple HTTP]** : ユーザー名とパスワードに対して2つのストリング属性を指定します。
-* **[!UICONTROL OAuth2]** : OAuth2 仕様をサポートするためのいくつかの属性が含まれてい [ ](https://datatracker.ietf.org/doc/html/rfc6749) ます。
+* **[!UICONTROL トークン]**：認証トークンの値を表す単一の文字列。
+* **[!UICONTROL シンプルな HTTP]**：ユーザー名とパスワードの 2 つの文字列属性が含まれます。
+* **[!UICONTROL OAuth2]**：[OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) 仕様をサポートする複数の属性が含まれます。
 
-詳しくは、 [ データ収集 UI の機密情報の管理 ](../ui/event-forwarding/secrets.md) または [ Reactor API でのシークレットの管理に関するガイドを参照してください ](../api/guides/secrets.md) 。
+詳しくは、[データ収集 UI での秘密鍵の管理](../ui/event-forwarding/secrets.md)または [Reactor API での秘密鍵の管理](../api/guides/secrets.md)に関するガイドを参照してください。
 
 ## 2021 年 7 月 19 日（PT）
 
