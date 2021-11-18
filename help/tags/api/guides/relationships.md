@@ -3,9 +3,9 @@ title: Reactor API における関係
 description: 各リソースの関係要件など、Reactor API でリソースの関係が確立される方法を説明します。
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | リソースの一意の ID。 各 `id` には、問題のリソースのタイプを示す兄弟 `type` プロパティを付ける必要があります。 |
 | `type` | 兄弟 `id` フィールドによって参照されるリソースのタイプ。 許容値としては、`data_elements`、`rules`、`extensions`、`environments` などがあります。 |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ## URL による関係の作成 {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | リソースの一意の ID。 各 `id` には、問題のリソースのタイプを示す兄弟 `type` プロパティを付ける必要があります。 |
 | `type` | 兄弟 `id` フィールドによって参照されるリソースのタイプ。 許容値としては、`data_elements`、`rules`、`extensions`、`environments` などがあります。 |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ## リソース別の関係要件 {#requirements}
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### ビルド
 
@@ -166,7 +166,7 @@ curl -X POST \
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### コールバック
 
@@ -174,7 +174,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### 会社
 
@@ -182,7 +182,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### データ要素
 
@@ -197,7 +197,7 @@ curl -X POST \
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### 環境
 
@@ -208,7 +208,7 @@ curl -X POST \
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### 拡張機能
 
@@ -222,7 +222,7 @@ curl -X POST \
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### ホスト
 
@@ -230,7 +230,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### ライブラリ
 
@@ -246,7 +246,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### 備考
 
@@ -254,7 +254,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### プロパティ
 
@@ -268,7 +268,7 @@ curl -X POST \
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### ルールコンポーネント
 
@@ -283,7 +283,7 @@ curl -X POST \
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style = &quot;テーブル-layout: auto&quot;}
+{style=&quot;table-layout:auto&quot;}
 
 ### ルール
 
@@ -296,7 +296,7 @@ curl -X POST \
 | `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
 
-### 機密
+### 秘密鍵
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
