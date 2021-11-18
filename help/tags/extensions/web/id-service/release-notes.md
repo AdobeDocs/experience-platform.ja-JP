@@ -2,7 +2,7 @@
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能に関する最新のリリースノートです。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud ID サービス自体のリリースノートについては、[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
-## 2020 年 11 月 3 日（PT）
+## 2021 年 11 月 3 日（PT）
 
 ### Experience Cloud ID Extension 5.2.1
 
