@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1389'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、企業による顧客の�
 
 CRM システムが利用する [!DNL Experience Cloud] アプリケーションによって、各顧客に指定する必要のある ID 値の種類と数は異なります。一部のアプリケーションは、独自の内部顧客 ID 値（Adobe Target ID など）を利用し、他のソリューションは、Adobe [!DNL Experience Cloud Identity Service] (ECID) のグローバル識別子に依存しています。これは、すべての [!DNL Experience Cloud] アプリケーションで顧客のアクティビティを追跡します。また、メールアドレスや電話番号などの一般的な個人情報も、有効な ID データとして機能します。
 
-プライバシーリクエスト](./identity-data.md)の ID データ[に関するドキュメントは、[!DNL Privacy Service] で使用可能な ID 情報の種類に関する詳細を提供します。また、ドキュメントは、Adobe テクノロジーを活用して、Web サイトとやり取りする際に顧客から適切な ID 情報を効果的に取得し、そのデータを API リクエストの [!DNL Privacy Service] に送信する方法に関するガイダンスも提供します。
+プライバシーリクエスト[の ID データ](./identity-data.md)に関するドキュメントは、[!DNL Privacy Service] で使用可能な ID 情報の種類に関する詳細を提供します。また、ドキュメントは、Adobe テクノロジーを活用して、Web サイトとやり取りする際に顧客から適切な ID 情報を効果的に取得し、そのデータを API リクエストの [!DNL Privacy Service] に送信する方法に関するガイダンスも提供します。
 
 ### プライバシーリクエストの開始 {#requests}
 
@@ -73,7 +73,7 @@ CRM システムが利用する [!DNL Experience Cloud] アプリケーション
 
 #### API の使用
 
-[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。この API を使用するための詳細な手順については、「 [ プライバシーサービス API ガイド」を参照してください ](api/overview.md) 。
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。API の使用方法の手順について詳しくは、[Privacy Service API ガイド](api/overview.md)を参照してください。
 
 #### UI の使用
 
@@ -90,7 +90,7 @@ CRM システムが利用する [!DNL Experience Cloud] アプリケーション
 | 監視方法 | 説明 |
 | --- | --- |
 | [!DNL Privacy Service] UI | [!DNL Privacy Service] UI は監視ダッシュボードを備えており、すべてのアクティブなリクエストのステータスを視覚的に表示できます。詳しくは、『[Privacy Service ユーザガイド](ui/overview.md)』を参照してください。 |
-| [!DNL Privacy Service] API | [!DNL Privacy Service] API が提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムによって監視できます。この [ ](./api/overview.md) api を使用する手順について詳しくは、プライバシーに関するサービス api ガイドを参照してください。 |
+| [!DNL Privacy Service] API | [!DNL Privacy Service] API が提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムによって監視できます。API の使用方法の手順について詳しくは、[Privacy Service API ガイド](./api/overview.md)を参照してください。 |
 | [!DNL Privacy Events] | [!DNL Privacy Events] は効率的なジョブリクエストの自動処理を容易にするために、設定済みの Webhook に送信される Adobe I/O イベントを活用します。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために [!DNL Privacy Service] API をポーリングする必要性が削減される、または完全になくなります。詳しくは、[プライバシーイベントの登録](./privacy-events.md)のチュートリアルを参照してください。 |
 
 ## 次の手順
