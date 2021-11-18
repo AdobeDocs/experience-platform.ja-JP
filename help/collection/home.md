@@ -8,7 +8,7 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
 source-wordcount: '458'
-ht-degree: 52%
+ht-degree: 55%
 
 ---
 
@@ -30,17 +30,17 @@ Experience Platform が提供するデータ収集テクノロジーは、取り
 * [イベントの転送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform モバイル SDK](https://aep-sdks.gitbook.io/docs/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Adobe Experience Platform デバッガー](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=ja)
 * [エクスペリエンスデータモデル（XDM）](../xdm/home.md)
 * [Adobe Experience Platform ID サービス](../identity-service/home.md)
 
-このガイドでは、データ収集フレームワークの概要と、Platform Edge ネットワークを介してAdobe Experience Cloud製品や非Adobeアプリケーションにデータを送信する方法について説明します。
+このガイドでは、データ収集フレームワークの概要と、Platform Edge Network を通じてAdobe Experience Cloud製品やAdobe以外のアプリケーションにデータを送信する方法について説明します。
 
 ## タグ、Web SDK、モバイル SDK
 
-Platform Web SDK および Platform Mobile SDK は、すべてのAdobe製品ライブラリを折りたたみ、圧縮して、Web およびモバイルプラットフォーム用の単一の開発キットにします。 これらは、生のコードを使用するか、 [タグ](../tags/home.md) データ収集 UI を使用する。
+Platform Web SDK および Platform Mobile SDK は、すべてのAdobe製品ライブラリを折りたたみ、圧縮して、Web およびモバイルプラットフォーム用の単一の開発キットにします。 これらは、生のコードを使用して、または [タグ](../tags/home.md) データ収集 UI を使用します。
 
-これらのライブラリを圧縮すると、データ収集が高速化され、クライアント側のデバイスから Platform Edge ネットワークに至る操作が 1 つのストリームに統合されます。
+これらのライブラリを圧縮すると、データ収集が高速化され、操作がクライアント側のデバイスから Platform Edge ネットワークへと 1 つのストリームに統合されます。
 
 ![タグ、Web SDK、モバイル SDK](./images/home/tags-sdks.png)
 
@@ -56,7 +56,7 @@ Platform Edge Network は、データを大規模に受信および処理でき�
 
 ## イベントの転送
 
-[イベントの転送](../tags/ui/event-forwarding/overview.md) は任意のExperience Platformデータストリームをタップして取り込み、極端に低い待ち時間で、クライアントデバイスにサードパーティコードを追加することなく、Adobe以外の任意の宛先にデータを変換、エンリッチメント、送信できます。
+[イベント転送](../tags/ui/event-forwarding/overview.md) は、任意のExperience Platformデータストリームをタップして、非Adobeの宛先に対して、極めて低い待ち時間で、サードパーティのコードをクライアントデバイスに追加することなく、データを変換、エンリッチメントおよび送信できます。
 
 ![イベントの転送](./images/home/event-forwarding.png)
 
