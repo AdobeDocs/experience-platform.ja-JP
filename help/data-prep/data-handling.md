@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、Data Prep における様々なデータ型の処理方法の概要について説明します。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '568'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{DATE}` | 必須。日付を表す文字列。 |
-| `{FORMAT}` | オプション。ソース日付の形式を表すストリング。 文字列の形式について詳しくは、[日付 / 時刻形式文字列の節](#format)を参照してください。 |
+| `{FORMAT}` | オプション。ソースの日付の形式を表す文字列。文字列の形式について詳しくは、[日付 / 時刻形式文字列の節](#format)を参照してください。 |
 | `{DEFAULT_DATE}` | オプション。指定した日付が null の場合に返されるデフォルトの日付。 |
 
 例えば、式 `date(orderDate, "yyyy-MM-dd")` は、「2020 年 12 月 31 日」の `orderDate` 値を「2020-12-31」の datetime 値に変換します。
@@ -95,7 +95,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | a | 午前 / 午後マーカー | テキスト | 午後 |
 | H | 時刻（0 ～ 23） | 数値 | 0 |
 | k | 時刻（1 ～ 24） | 数値 | 24 |
-| K | 午前/午後（0～11）の時間 | 数値 | raid-0 |
+| K | 午前/午後（0～11）の時間 | 数値 | 0 |
 | h | 午前/午後（1～12）の時間 | 数値 | 12 |
 | m | 分（時刻） | 数値 | 38 |
 | s | 秒（時刻） | 数値 | 44 |
