@@ -4,9 +4,9 @@ title: 同意および環境設定スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「同意」および「環境設定」スキーマフィールドグループの概要を説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >詳しくは、 [XDM リソースの調査](../../ui/explore.md) を参照して、XDM リソースを検索し、Platform UI でその構造を調べる手順を確認してください。
 
-次の JSON は、 [!UICONTROL 同意および環境設定] フィールドグループを処理できます。 これらの各フィールドの具体的な使用方法に関する情報は、以降の節で説明します。
+次の JSON は、 [!UICONTROL 同意および環境設定] フィールドグループを処理できます。 フィールドグループが提供するほとんどのフィールドの使用方法について詳しくは、 [同意および環境設定データタイプ](../../data-types/consents.md). 以下のサブセクションでは、フィールドグループがデータ型に追加する一意の属性に焦点を当てます。
 
 ```json
 {
@@ -96,8 +96,6 @@ ht-degree: 0%
 >* [UI でのサンプルデータの生成](../../ui/sample.md)
 >* [API でサンプルデータを生成する](../../api/sample-data.md)
 
-
-フィールドグループが提供するほとんどのフィールドの使用方法について詳しくは、 [同意および環境設定データタイプ](../../data-types/consents.md). 以下のサブセクションでは、フィールドグループがデータ型に追加する一意の属性に焦点を当てます。
 
 ### `idSpecific`
 
