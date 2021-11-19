@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '798'
 ht-degree: 13%
 
 ---
@@ -77,7 +77,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 
 **Platform UI で、個別のFacebookアカウントに対して複数のFacebook宛先を作成できますか？**
 
-facebookのExperience Platform先は、Facebookの広告アカウントに 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。
+はい。facebookのExperience Platform先は、Facebookの広告アカウントに 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。 接続できるFacebook広告アカウントの数に制限はありません。
 
 ## linkedIn Matched Audiences {#linkedin}
 
