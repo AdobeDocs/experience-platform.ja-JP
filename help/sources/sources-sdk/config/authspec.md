@@ -5,13 +5,13 @@ topic-legacy: overview
 description: このドキュメントでは、ソース SDK を使用するために準備が必要な設定の概要を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # ソース SDK の認証仕様の設定
 
@@ -180,7 +180,7 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 | プロパティ | 説明 | 例 |
 | --- | --- | --- |
 | `authSpec.name` | サポートされている認証タイプの名前を表示します。 | `Basic Authentication` |
-| `authSpec.type` | ソースでサポートされる認証のタイプを定義します。 | `oAuth2-refresh-code` |
+| `authSpec.type` | ソースでサポートされる認証のタイプを定義します。 | `BasicAuthentication` |
 | `authSpec.spec` | 認証のスキーマ、データタイプ、プロパティに関する情報が含まれます。 |
 | `authSpec.spec.$schema` | 認証に使用するスキーマを定義します。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | スキーマのデータ型を定義します。 | `object` |
