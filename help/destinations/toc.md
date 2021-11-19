@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 44%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 44%
    * [データフローの監視](./ui/monitor-dataflows.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
-   * [ （アルファ）HTTP 接続](./catalog/http-destination.md)
    * アドビの宛先 {#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
       * [Marketo Engage接続](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 44%
       * [Facebook接続](./catalog/social/facebook.md)
       * [linkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
+   * ストリーミング先 {#streaming}
+      * [ （ベータ版）HTTP API 接続](./catalog/streaming/http-destination.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese 拡張機能の宛先](./catalog/survey/foresee.md)
