@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 28%
+source-wordcount: '798'
+ht-degree: 25%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 28%
 Adobe Experience Platform の新機能：
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [（ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します](#ad-hoc-activation)
 
 ## 既存の機能の更新
 
@@ -62,6 +64,10 @@ Real-time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overv
 
 詳しくは、 [Real-time Customer Data Platform B2B Edition のスキーマ](../../rtcdp/schemas/b2b.md) B2B データエンティティのキャプチャに関する詳細は、ドキュメントを参照してください。
 
+### （ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
+
+アドホックアクティベーション API を使用すると、マーケターは、即時アクティベーションが必要な状況に対し、すばやく効率的に、宛先に対するオーディエンスセグメントをプログラムでアクティブ化できます。 アドホックオーディエンスのアクティベーションは、 [バッチファイルベースの宛先](../../destinations/destination-types.md#file-based) 現在はベータ版です。 詳しくは、 [アドホックアクティベーション API ドキュメント](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
@@ -85,3 +91,4 @@ Real-time Customer Data Platformで使用できる顧客 AI は、個々のプ�
 | カスタムプロファイル属性 | 顧客 AI で、標準のイベントフィールドに加えて、データでカスタムプロファイルデータセットフィールド（タイムスタンプ付き）を定義できるようになりました。 このオプションを使用すると、影響力があると見なすプロファイル属性を追加して、モデルの品質を向上させ、より正確な結果を提供できます。 |
 
 顧客 AI について詳しくは、 [顧客 AI ドキュメント](../../intelligent-services/customer-ai/overview.md).
+

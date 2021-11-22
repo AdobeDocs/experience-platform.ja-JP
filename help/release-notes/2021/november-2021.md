@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2021 年 11 月のリリースノート。
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 27%
+source-wordcount: '798'
+ht-degree: 24%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 27%
 Adobe Experience Platform の新機能：
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [（ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します](#ad-hoc-activation)
 
 ## 既存の機能の更新
 
@@ -61,6 +63,10 @@ Real-time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overv
 | 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition は、アカウント、商談、キャンペーンなど、B2B の重要なデータエンティティに関する詳細をキャプチャする、いくつかの標準 XDM を提供します。 |
 
 詳しくは、 [Real-time Customer Data Platform B2B Edition のスキーマ](../../rtcdp/schemas/b2b.md) B2B データエンティティのキャプチャに関する詳細は、ドキュメントを参照してください。
+
+### （ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
+
+アドホックアクティベーション API を使用すると、マーケターは、即時アクティベーションが必要な状況に対し、すばやく効率的に、宛先に対するオーディエンスセグメントをプログラムでアクティブ化できます。 アドホックオーディエンスのアクティベーションは、 [バッチファイルベースの宛先](../../destinations/destination-types.md#file-based) 現在はベータ版です。 詳しくは、 [アドホックアクティベーション API ドキュメント](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 
