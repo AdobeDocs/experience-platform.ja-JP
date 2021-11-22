@@ -2,7 +2,7 @@
 description: このページでは、Destination SDKを使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDKを使用したストリーミング先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 6:宛先のテスト {#test-destination}
 
-前の手順の設定エンドポイントを使用して宛先を設定した後、 [宛先テストツール](./create-template.md) を使用して、Adobe Experience Platformと宛先の統合をテストします。
+前の手順の設定エンドポイントを使用して宛先を設定した後、 [宛先テストツール](./test-destination.md) を使用して、Adobe Experience Platformと宛先の統合をテストします。
 
 宛先をテストするプロセスの一部として、Experience PlatformUI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
 
