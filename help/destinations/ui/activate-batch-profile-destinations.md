@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '2114'
 ht-degree: 7%
 
 ---
@@ -48,6 +48,12 @@ ht-degree: 7%
 
 ## セグメントの書き出しをスケジュール {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="スケジュール"
+>abstract="セグメントを保存すると、ファイルエクスポートのタイプ（完全ファイルまたは増分ファイル）やスケジュールは変更できなくなります。"
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="詳しくは、ドキュメントを参照してください。"
+
 [!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先のデータを [!DNL CSV] ファイル。 内 **[!UICONTROL スケジュール]** ページでは、書き出す各セグメントのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
 >[!IMPORTANT]
@@ -61,6 +67,12 @@ ht-degree: 7%
 ![「スケジュールを作成」ボタン](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 完全なファイルを書き出し {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="ファイル書き出しオプション"
+>abstract="選択 **完全なファイルを書き出し** を使用して、セグメントに該当するすべてのプロファイルの完全なスナップショットを書き出します。 <br> 選択 **増分ファイルの書き出し** ：前回のエクスポート以降にセグメントの対象として認定されたプロファイルのみをエクスポートします。 最初の増分ファイルの書き出しには、セグメントに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初の増分ファイルエクスポート以降にセグメントで認定されたプロファイルのみが含まれます。"
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="詳しくは、ドキュメントを参照してください。"
 
 選択 **[!UICONTROL 完全なファイルを書き出し]** ：選択したセグメントのすべてのプロファイル認定の完全なスナップショットを含むファイルのエクスポートをトリガーします。
 
@@ -112,6 +124,12 @@ ht-degree: 7%
 1. 選択 **[!UICONTROL 作成]** スケジュールを保存します。
 
 ### ファイル名の設定 {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="ファイル名を設定"
+>abstract="ファイルベースの宛先の場合、セグメントごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="詳しくは、ドキュメントを参照してください。"
 
 デフォルトのファイル名は、宛先名、セグメント ID、日時インジケーターで構成されます。 例えば、エクスポートされたファイル名を編集して、異なるキャンペーンを区別したり、データのエクスポート時間をファイルに追加したりできます。
 
