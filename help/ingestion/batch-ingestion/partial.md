@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；よく読まれるトピック；バッチ取得；バッチ取得；バッチ取得；部分取得；部分取得；取得エラー；取得エラー；部分バッチ取得；部分バッチ取得；部分；取得；取得；
+keywords: Experience Platform；ホーム；人気の高いトピック；バッチ取得；バッチ取得；バッチ取得；部分取得；部分取得；エラーの取得；部分バッチ取得；部分バッチ取得；部分；取得；取得；
 solution: Experience Platform
-title: 部分バッチ取得の概要
+title: 部分バッチ取り込みの概要
 topic-legacy: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 636d6dcbe8eb73b7898fc3794f6b4567956e5618
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 44%
@@ -22,10 +22,10 @@ ht-degree: 44%
 
 このチュートリアルでは、部分バッチ取得に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [バッチ取得](./overview.md):CSV や Parquet などの [!DNL Platform] データファイルからデータを取得して保存する方法。
+- [バッチ取得](./overview.md):メソッド [!DNL Platform] CSV や Parquet などのデータファイルからデータを取得して保存します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
-以下の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
+以下の節では、への呼び出しを正しくおこなうために知っておく必要がある追加情報を示します。 [!DNL Platform] API
 
 ### API 呼び出し例の読み取り
 
@@ -47,46 +47,46 @@ ht-degree: 44%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-## API での部分バッチ取得に対するバッチの有効化 {#enable-api}
+## API での部分バッチ取り込み用のバッチの有効化 {#enable-api}
 
 >[!NOTE]
 >
->この節では、API を使用した部分バッチ取得のバッチの有効化について説明します。 UI の使用手順については、「 [UI](#enable-ui) での部分バッチ取得のバッチの有効化」を参照してください。
+>この節では、API を使用した部分バッチ取得のバッチの有効化について説明します。 UI の使用手順については、 [UI での部分バッチ取り込み用のバッチの有効化](#enable-ui) 手順
 
 部分取得を有効にした新しいバッチを作成できます。
 
-新しいバッチを作成するには、『[ バッチ取得開発者ガイド ](./api-overview.md)』の手順に従います。 **[!UICONTROL バッチ]** を作成の手順に達したら、リクエスト本文に次のフィールドを追加します。
+新しいバッチを作成するには、 [バッチ取得開発者ガイド](./api-overview.md). 次に **[!UICONTROL バッチを作成]** ステップで、リクエスト本文内に次のフィールドを追加します。
 
 ```json
 {
     "enableErrorDiagnostics": true,
-    "partialIngestionPercentage": 5
+    "partialIngestionPercent": 5
 }
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | [!DNL Platform] がバッチに関する詳細なエラーメッセージを生成できるフラグ。 |
-| `partialIngestionPercentage` | バッチ全体が失敗する前の許容エラー率。したがって、この例では、失敗する前に、バッチの最大 5%にエラーが発生する可能性があります。 |
+| `enableErrorDiagnostics` | 許可するフラグ [!DNL Platform] ：バッチに関する詳細なエラーメッセージを生成します。 |
+| `partialIngestionPercent` | バッチ全体が失敗する前の許容エラー率。したがって、この例では、失敗する前に、バッチの最大 5%がエラーになる場合があります。 |
 
 
-## UI での部分バッチ取得のバッチの有効化 {#enable-ui}
+## UI での部分バッチ取り込み用のバッチの有効化 {#enable-ui}
 
 >[!NOTE]
 >
->この節では、UI を使用した部分バッチ取得のバッチの有効化について説明します。 API を使用して部分バッチ取得のバッチを既に有効にしている場合は、次の節に進んでください。
+>この節では、UI を使用した部分バッチ取り込みのバッチの有効化について説明します。 API を使用して部分バッチ取得のバッチを既に有効にしている場合は、次の節に進んでください。
 
-[!DNL Platform] UI から部分取得用のバッチを有効にするには、ソース接続を使用して新しいバッチを作成するか、既存のデータセットで新しいバッチを作成するか、「[!UICONTROL CSV を XDM フローにマッピング ]」を使用して新しいバッチを作成します。
+バッチで [!DNL Platform] UI では、ソース接続を使用して新しいバッチを作成したり、既存のデータセットで新しいバッチを作成したり、「[!UICONTROL CSV を XDM フローにマッピング]&quot;.
 
-### 新しいソース接続の作成 {#new-source}
+### 新しいソース接続を作成 {#new-source}
 
-新しいソース接続を作成するには、[ ソースの概要 ](../../sources/home.md) の手順に従います。 **[!UICONTROL データフローの詳細]** 手順に達したら、「**[!UICONTROL 部分取得]**」および「**[!UICONTROL エラー診断]**」フィールドに注意します。
+新しいソース接続を作成するには、 [ソースの概要](../../sources/home.md). 次に **[!UICONTROL データフローの詳細]** ステップ、メモ **[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールド。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
 「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-**[!UICONTROL エラー診断]** 切り替えは、**[!UICONTROL 部分取得]** 切り替えがオフの場合にのみ表示されます。 この機能を使用すると、取得したバッチに関する詳細なエラーメッセージを [!DNL Platform] で生成できます。 「**[!UICONTROL 部分取得]**」切り替えがオンになっている場合、拡張されたエラー診断が自動的に適用されます。
+この **[!UICONTROL エラー診断]** トグルは、 **[!UICONTROL 部分取り込み]** 切り替えはオフです。 この機能を使用すると、 [!DNL Platform] 取り込んだバッチに関する詳細なエラーメッセージを生成する場合。 この **[!UICONTROL 部分取り込み]** 切り替えをオンにすると、拡張エラー診断が自動的に適用されます。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -100,30 +100,30 @@ ht-degree: 44%
 
 「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-**[!UICONTROL エラー診断]** 切り替えは、**[!UICONTROL 部分取得]** 切り替えがオフの場合にのみ表示されます。 この機能を使用すると、取得したバッチに関する詳細なエラーメッセージを [!DNL Platform] で生成できます。 「**[!UICONTROL 部分取得]**」切り替えがオンになっている場合、拡張されたエラー診断が自動的に適用されます。
+この **[!UICONTROL エラー診断]** トグルは、 **[!UICONTROL 部分取り込み]** 切り替えはオフです。 この機能を使用すると、 [!DNL Platform] 取り込んだバッチに関する詳細なエラーメッセージを生成する場合。 この **[!UICONTROL 部分取り込み]** 切り替えをオンにすると、拡張エラー診断が自動的に適用されます。
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
 **[!UICONTROL エラーしきい値]**&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
 
-これで、「**データを追加**」ボタンを使用してデータをアップロードでき、部分的な取得を使用して取り込まれます。
+これで、 **データを追加** ボタンに貼り付け、部分取り込みを使用して取り込まれます。
 
-### 「[!UICONTROL CSV を XDM スキーマにマッピング ]」フローを使用します。 {#map-flow}
+### 「[!UICONTROL CSV を XDM スキーマにマッピング]`フロー {#map-flow}
 
-「[!UICONTROL CSV を XDM スキーマにマッピング ]」フローを使用するには、『[CSV ファイルのマッピングのチュートリアル ](../tutorials/map-a-csv-file.md)』に記載されている手順に従います。 **[!UICONTROL データを追加]** の手順に達したら、**[!UICONTROL 部分取得]** および **[!UICONTROL エラー診断]** のフィールドを控えておきます。
+「[!UICONTROL CSV を XDM スキーマにマッピング]&quot;フロー、 [CSV ファイルのマッピングのチュートリアル](../tutorials/map-a-csv-file.md). 次に **[!UICONTROL データを追加]** ステップ、メモ **[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールド。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
 「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-**[!UICONTROL エラー診断]** 切り替えは、**[!UICONTROL 部分取得]** 切り替えがオフの場合にのみ表示されます。 この機能を使用すると、取得したバッチに関する詳細なエラーメッセージを [!DNL Platform] で生成できます。 「**[!UICONTROL 部分取得]**」切り替えがオンになっている場合、拡張されたエラー診断が自動的に適用されます。
+この **[!UICONTROL エラー診断]** トグルは、 **[!UICONTROL 部分取り込み]** 切り替えはオフです。 この機能を使用すると、 [!DNL Platform] 取り込んだバッチに関する詳細なエラーメッセージを生成する場合。 この **[!UICONTROL 部分取り込み]** 切り替えをオンにすると、拡張エラー診断が自動的に適用されます。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL エラー]** しきい値を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+**[!UICONTROL エラーしきい値]** では、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 デフォルトでは、この値は 5% に設定されています。
 
 ## 次の手順 {#next-steps}
 
 このチュートリアルでは、部分バッチ取得を有効にするデータセットの作成または変更方法について説明しました。バッチ取得について詳しくは、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
 
-部分取得エラーの監視については、『[ バッチ取得エラー診断ガイド ](../quality/error-diagnostics.md)』を参照してください。
+部分取り込みエラーの監視について詳しくは、 [バッチ取得エラー診断ガイド](../quality/error-diagnostics.md).
