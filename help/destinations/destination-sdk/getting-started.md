@@ -1,11 +1,11 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDK を認証し、使用を開始する方法について説明します。 これには、Adobe I/O認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限の取得方法に関する手順が含まれています。
-title: 宛先 SDK の概要
+description: このページでは、Adobe Experience Platform Destination SDKを認証し、使用を開始する方法について説明します。 これには、Adobe I/O認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限の取得方法に関する手順が含まれています。
+title: Destination SDKの概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 8356c63688fc57ece2f4e549a9ed0d1cc50f04db
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 7%
+source-wordcount: '596'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-このページでは、Adobe Experience Platform Destination SDK を認証し、使用を開始する方法について説明します。 これには、Adobe I/O認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限の取得方法に関する手順が含まれています。
+このページでは、Adobe Experience Platform Destination SDKを認証し、使用を開始する方法について説明します。 これには、Adobe I/O認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限の取得方法に関する手順が含まれています。
 
 ## 用語 {#terminology}
 
@@ -21,9 +21,9 @@ ht-degree: 7%
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 
-宛先 SDK は、 [Adobe I/O](https://www.adobe.io/) 認証用のゲートウェイ。 宛先 SDK エンドポイントへの API 呼び出しをおこなうには、API 呼び出しに特定のヘッダーを指定する必要があります。 Exchange のAdobeチームと協力して、 [Adobe開発者コンソール](http://console.adobe.io/).
+Destination SDKは [Adobe I/O](https://www.adobe.io/) 認証用のゲートウェイ。 Destination SDKエンドポイントに対する API 呼び出しをおこなうには、API 呼び出しに特定のヘッダーを指定する必要があります。 Exchange のAdobeチームと協力して、 [Adobe開発者コンソール](http://console.adobe.io/).
 
-宛先 SDK API エンドポイントを正常に呼び出すには、 [Experience Platform認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). チュートリアルを「[API キー、IMS Org ID およびクライアントの秘密鍵を生成します](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;ステップ。 Adobe交換チームが前の手順を処理します。 認証に関するチュートリアルを完了すると、次に示すように、宛先 SDK API 呼び出しの必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントを正常に呼び出すには、 [Experience Platform認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). チュートリアルを「[API キー、IMS Org ID およびクライアントの秘密鍵を生成します](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;ステップ。 Adobe交換チームが前の手順を処理します。 次に示すように、Destination SDK API 呼び出しの各必要なヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {IMS_ORG}`（組織 ID とも呼ばれます）
@@ -48,15 +48,15 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## 宛先の所有権とサンドボックス {#destination-ownership}
 
-Experience Platform のすべてのリソースは、特定の仮想サンドボックスに分離されています。宛先 SDK へのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform のすべてのリソースは、特定の仮想サンドボックスに分離されています。Destination SDKへのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Destination SDK API エンドポイントへの呼び出しで使用する必要があるサンドボックス名は、ExchangeAdobeチームから提供されます。
+Sandbox Exchange チームが提供するAdobe名は、Destination SDK API エンドポイントへの呼び出しで使用する必要があります。
 
 ## ロールベースのアクセス制御 (RBAC) {#rbac}
 
-宛先 SDK API エンドポイントを使用するには、 [リファレンスドキュメント](./configuration-options.md)、 **[!UICONTROL 宛先のオーサリング]** アクセス制御権限。 Exchange チームと連携して、Adobeに割り当てられた権限を取得する [Adobe Admin Console](https://adminconsole.adobe.com/).
+Destination SDK API エンドポイントを使用するには、 [リファレンスドキュメント](./configuration-options.md)、 **[!UICONTROL 宛先のオーサリング]** アクセス制御権限。 Exchange チームと連携して、Adobeに割り当てられた権限を取得する [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![宛先オーサリング権限](./assets/destination-authoring-permission.png)
 
@@ -73,6 +73,7 @@ Destination SDK API エンドポイントへの呼び出しで使用する必要
 
 ## 次の手順 {#next-steps}
 
-この記事の手順に従って、Adobe I/Oに対する認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限を取得しました。 次に、宛先 SDK を使用して宛先を設定できます。
-* 読み取り [宛先 SDK を使用した宛先の設定](./configure-destination-instructions.md) を参照してください。
+この記事の手順に従って、Adobe I/Oに対する認証資格情報、サンドボックス名、宛先オーサリングのアクセス制御権限を取得しました。 次に、Destination SDKを使用して宛先を設定できます。
+* 読み取り [Destination SDKを使用した宛先の設定](./configure-destination-instructions.md) を参照してください。
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* 以下を使用： [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) Destination SDK API エンドポイントを使用して宛先を設定する場合。 Postman の使用を開始するには、 [環境とコレクションの読み込み手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832).
