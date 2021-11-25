@@ -1,222 +1,71 @@
 ---
-keywords: Experience Platform；チュートリアル；Data Science Workspace；よく読まれるトピック
+keywords: Experience Platform；チュートリアル；Data Science Workspace；人気の高いトピック；data science コース；コース；dsw
 solution: Experience Platform
-title: Data Science Workspace のチュートリアル
-topic-legacy: Walkthrough
-description: このドキュメントでは、Adobe Experience Platform Data Science Workspace　のチュートリアルを提供します。特に、データサイエンティストが機械学習を使用した問題を解決するための一般的なワークフローについて説明します。
+title: Data Science Workspace コース
+description: このドキュメントでは、 Adobe Experience Platform Data Science Workspace コースのリンクと説明を提供します。
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 7d98340e7949aadc744513415c4fc7469efd2403
+source-git-commit: 7733fe16984cacf04c1070e92673a7ee19eaea47
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 33%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
-# [!DNL Data Science Workspace] チュートリアル
 
-このドキュメントでは、Adobe Experience Platform [!DNL Data Science Workspace] に関する説明を提供します。 このチュートリアルでは、一般的なデータサイエンティストのワークフローと、それらが機械学習を使用して問題にアプローチし、解決する方法について説明します。
+# [!DNL Data Science Workspace] コース
 
-## 前提条件
+このドキュメントでは、Adobe Experience Platform Data Science Workspace コースで期待される学習結果について説明します。 コースを表示するには、Adobe IDを使用してExperience Leagueにログインする必要があります。
 
-- 登録済みの Adobe ID アカウント
-   - Adobe IDアカウントは、Adobe Experience Platformおよび [!DNL Data Science Workspace] へのアクセス権を持つ組織に追加されている必要があります。
+この [データサイエンティスト向け Data Science Workspace の概要コース](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) は、JupyterLab Notebooks を使用して、インサイトとクエリデータを取得し、プロファイル対応データセットを作成し、自動機械学習モデルを公開し、Adobeアプリケーションと非Adobeアプリケーションの両方で機械学習の洞察をアクティブ化する方法を学ぶデータ科学者向けに設計されています。
 
-## 小売の使用例
+## コースの前提条件
 
-現在の市場での競争力を維持するために、ある小売業者は多くの課題に直面しています。小売業者の主な懸念事項の 1 つは、製品の最適価格を決定し、販売傾向を予測することです。 正確な予測モデルを使用すると、小売業者は、需要と価格設定ポリシーの関係を見つけ、販売と売上高を最大化するために最適化された価格決定を行うことができます。
+- 登録済みの Adobe ID アカウント.
+   - Adobe IDアカウントがAdobe Experience Platformおよび [!DNL Data Science Workspace].
+- 実稼動以外のサンドボックス。
 
-## データサイエンティストの解決法
+### 予想される学習結果
 
-データサイエンティストのソリューションは、小売業者が提供する豊富な履歴情報を活用し、将来の傾向を予測し、価格決定を最適化することです。 このチュートリアルでは、過去の販売データを使用して機械学習モデルをトレーニングし、モデルを使用して将来の販売傾向を予測します。 これにより、最適な価格変更をおこなうのに役立つインサイトを生成できます。
+以下の学習結果については、 Data Science Workspace コースで説明します。 さらに、コース用に提供されている傾向モデルの作成と公開の際に従うこともできます。
 
-この概要は、データサイエンティストがデータセットを取得し、週別の売上を予測するモデルを作成する手順を反映しています。 このチュートリアルでは、Adobe Experience Platform [!DNL Data Science Workspace] のサンプル小売販売ノートブックの次の節を扱います。
+- Data Science Workspace のアーキテクチャ
+- JupyterLab の使用方法
+- Data Science Workspace でデータとクエリデータにアクセスする方法
+- 探索的データ分析
+- レシピとモデルの作成方法
+- モデルのトレーニングとスコアリングに使用する方法
+- モデル開発におけるハイパーパラメーターの役割
+- トレーニング済みモデルをサービスとして公開する方法
+- Data Science Workspace を使用してリアルタイム顧客プロファイルデータを強化する方法
+- モデル出力を使用したストリーミングセグメントの作成方法
 
-- [セットアップ](#setup)
-- [データの調査](#exploring-data)
-- [特徴エンジニアリング](#feature-engineering)
-- [トレーニングと検証](#training-and-verification)
+## レッスン
 
-### [!DNL Data Science Workspace] のノートブック
+Data Science Workspace コースは、5 つのレッスンに分かれています。
 
-Adobe Experience Platform UI で、「**[!UICONTROL データサイエンス]**」タブから「**[!UICONTROL ノートブック]**」を選択して、「[!UICONTROL  ノートブック ]」の概要ページに移動します。 このページで、「[!DNL JupyterLab]」タブを選択して [!DNL JupyterLab] 環境を起動します。 [!DNL JupyterLab] のデフォルトのランディングページは、**[!UICONTROL ランチャー]** です。
+### レッスン 1
 
-![](./images/walkthrough/notebooks.png)
+**はじめに（19 分）:** このコースの詳細を説明し、必要なコースアセットを含む Data Science Workspace の概要を説明します。
 
-![](./images/walkthrough/jupyterlab_launcher.png)
+### レッスン 2
 
-このチュートリアルでは、[!DNL JupyterLab Notebooks] の [!DNL Python] 3 を使用して、データにアクセスして調査する方法を示します。 ランチャーページには、サンプルのノートブックが用意されています。以下の例では、**[!UICONTROL 小売売上]** サンプルノートブックを使用しています。
+**JupyterLab でデータを読み込み、クエリ、調査します（24 分）。** Experience Platformに関する JupyterLab が、データの収集、データのクリーニング、データの視覚化、インサイトの検出など、データサイエンティストの主要なワークフローをシンプル化し、容易にする方法を説明します。
 
-### セットアップ {#setup}
+### レッスン 3
 
-Retail Sales ノートブックを開いた状態で、まずワークフローに必要なライブラリを読み込む必要があります。 次のリストは、後の手順の例で使用する各ライブラリの簡単な説明です。
+**JupyterLab でモデルを作成します（26 分）。** Data Science Workspace でモデルの構築を開始する方法を説明します。
 
-- **数値**:大きな多次元配列と行列のサポートを追加する科学計算ライブラリ
-- **pandas**:データの操作と分析に使用するデータ構造と操作を提供するライブラリ
-- **matplotlib.pyplot**:印刷時に MATLAB と同じような操作を行う印刷ライブラリ
-- **seaborn** :Matplotlib に基づく高レベルのインターフェイスデータ視覚化ライブラリ
-- **sklearn**:分類、回帰、サポートベクトル、クラスターアルゴリズムを備えた機械学習ライブラリ
-- **warnings**:警告メッセージを制御するライブラリ
+### レッスン 4
 
-### データの調査 {#exploring-data}
+**Data Science Workspace を使用して、モデルのトレーニングとスコアリングをおこないます（6 分）。** モデルを作成し、モデルでサービスとして公開する方法をExperience Platform。
 
-#### データの読み込み
+### レッスン 5
 
-ライブラリが読み込まれたら、データの確認を開始できます。 次の [!DNL Python] コードは、pandas の `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用して、[!DNL Github] でホストされている CSV を pandas DataFrame に読み込みます。
-
-![](./images/walkthrough/read_csv.png)
-
-Pandas の DataFrame データ構造は、2 次元のラベル付きデータ構造です。データの次元をすばやく確認するには、`df.shape` を使用します。 DataFrame の次元を表すタプルが返されます。
-
-![](./images/walkthrough/df_shape.png)
-
-最後に、データの表示をプレビューできます。 `df.head(n)` を使用して、DataFrame の最初の `n` 行を表示できます。
-
-![](./images/walkthrough/df_head.png)
-
-#### 統計概要
-
-[!DNL Python's] pandas ライブラリを利用して、各属性のデータ型を取得できます。 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
-
-```PYTHON
-df.info()
-```
-
-![](./images/walkthrough/df_info.png)
-
-各列のデータタイプを知ることで、データの処理方法がわかるので、この情報は役に立ちます。
-
-次に、統計の概要を見てみましょう。数値データタイプのみが表示されるため、`date`、`storeType`、`isHoliday`は出力されません。
-
-```PYTHON
-df.describe()
-```
-
-![](./images/walkthrough/df_describe.png)
-
-これにより、各特性に対して 6435 個のインスタンスが存在することがわかります。 また、平均、標準偏差（std）、最小、最大、四分位数などの統計情報も表示されます。これにより、データの偏差に関する情報が得られます。次の節では、ビジュアライゼーションについて説明します。ビジュアライゼーションは、この情報と連携して、データを完全に理解できます。
-
-`store` の最小値と最大値を見ると、データが表す 45 箇所の一意の店舗があることがわかります。 店舗の種類を識別する `storeTypes` もあります。`storeTypes` の分布は、次の方法で確認できます。
-
-![](./images/walkthrough/df_groupby.png)
-
-つまり、22 店舗が `storeType A`、17 店舗が `storeType B`、6 店舗が `storeType C` です。
-
-#### データの視覚化
-
-データフレームの値がわかったので、これをビジュアライゼーションで補完して、情報をより明確にし、パターンを識別しやすくします。 これらのグラフは、結果をオーディエンスに伝える場合にも便利です。
-
-#### 一変量グラフ
-
-一変量グラフは、個々の変数のグラフです。データの視覚化に使用される一般的な一変量グラフは、箱ひげ図です。
-
-以前の小売データセットを使用して、45 店舗とその週別売上高ごとにボックスウィスカープロットを生成できます。 プロットは、`seaborn.boxplot` 関数を使用して生成されます。
-
-![](./images/walkthrough/box_whisker.png)
-
-箱ひげ図は、データの分布を示すのに使用されます。箱ひげ図の外側の線は上下の四分位数を示し、ボックスは四分位数の範囲に及びます。ボックス内の線は中央値を示します。上四分位数または下四分位数の 1.5 倍以上のデータポイントは、円としてマークされます。これらの点は外れ値と見なされます。
-
-次に、週別の売上高を時間と共にプロットできます。 最初のストアの出力のみが表示されます。 ノートブック内のコードは、データセット内の 45 店舗のうち 6 店舗に対応する 6 プロットを生成します。
-
-![](./images/walkthrough/weekly_sales.png)
-
-この図を使用すると、2 年間の週別の売上高を比較できます。 販売のピークやトラフのパターンが時間の経過と共に見えやすくなります。
-
-#### 多変量分析グラフ
-
-多変量プロットは、変数間の相互作用を確認するために使用されます。この視覚化手法を使用すると、データサイエンティストは変数間に相関関係やパターンがあるかどうかを確認できます。一般的に使用される多変量グラフは相関行列です。多変数間の依存関係が相関係数で定量化されます。
-
-同じ小売データセットを使用して、相関行列を生成できます。
-
-![](./images/walkthrough/correlation_1.png)
-
-真ん中に斜めの 1 がそろっていることに注目してください。これは、変数をそれ自体と比較する場合、完全に正の相関関係があることを示しています。強い正の相関は 1 に近い大きさになり、弱い相関は 0 に近い大きさになります。負の相関は、逆の傾向を示す負の係数で示されます。
-
-### 特徴エンジニアリング {#feature-engineering}
-
-この節では、機能エンジニアリングを使用して、次の操作を実行して小売データセットを変更します。
-
-- 週と年の列を足す
-- storeType をインジケーター変数に変換する
-- isHoliday を数値変数に変換する
-- 来週の売上を予測する
-
-#### 週と年の列を足す
-
-日付の現在の形式 (`2010-02-05`) では、週ごとのデータを区別するのが困難です。 このため、日付を週と年を含むように変換する必要があります。
-
-![](./images/walkthrough/date_to_week_year.png)
-
-週と日付は次のようになります。
-
-![](./images/walkthrough/date_week_year.png)
-
-#### storeType をインジケーター変数に変換する
-
-次に、storeType 列を各 `storeType` を表す列に変換します。 ストアタイプは 3 つ (`A`、`B`、`C`) あり、ここから 3 つの新しい列を作成します。 各列に設定される値はブール値で、「1」は `storeType` の内容に応じて設定され、他の 2 列の `0` にも設定されます。
-
-![](./images/walkthrough/storeType.png)
-
-現在の `storeType` 列は削除されます。
-
-#### isHoliday を数値型に変換する
-
-次の修正は、`isHoliday` ブール値を数値表現に変更することです。
-
-![](./images/walkthrough/isHoliday.png)
-
-#### 来週の売上を予測する
-
-次に、各データセットに、前週の売上高と将来の週の売上高を追加します。 `weeklySales` をオフセットすることで、これを行うことができます。 さらに、`weeklySales` の差が計算されます。 これは、`weeklySales` で前の週の `weeklySales` 値を引くことでおこなわれます 。
-
-![](./images/walkthrough/weekly_past_future.png)
-
-`weeklySales` データ 45 データセットを前方に、45 データセットを後方にオフセットして新しい列を作成するので、最初と最後の 45 データポイントには NaN 値が設定されます。 これらのポイントは、NaN 値を持つすべての行を削除する `df.dropna()` 関数を使用して、データセットから削除できます。
-
-![](./images/walkthrough/dropna.png)
-
-変更後のデータセットの概要を次に示します。
-
-![](./images/walkthrough/df_info_new.png)
-
-### トレーニングと検証 {#training-and-verification}
-
-次に、データの一部のモデルを作成し、将来の売上を予測するのに最もパフォーマンスの高いモデルを選択します。次の 5 つのアルゴリズムを評価します。
-
-- 線形回帰
-- 決定木
-- ランダムフォレスト
-- 勾配ブースティング
-- K 近傍法
-
-#### データセットのトレーニングおよびテストサブセットへの分割
-
-モデルがどの程度正確に値を予測できるかを知る方法が必要です。 この評価は、検証として使用するデータセットの一部を割り当て、残りをトレーニングデータとして割り当てることでおこなうことができます。`weeklySalesAhead` は `weeklySales` の実際の将来値なので、この値を使用して、モデルが値を予測する際の正確性を評価できます。 分割は次の手順でおこないます。
-
-![](./images/walkthrough/split_data.png)
-
-これで、モデルを準備する `X_train` と `y_train`、後で評価する `X_test` と `y_test` が用意されました。
-
-#### スポットチェックアルゴリズム
-
-この節では、すべてのアルゴリズムを `model` という配列に宣言します。 次に、この配列を繰り返し処理し、各アルゴリズムに対して、モデル `mdl` を作成する `model.fit()` を使用してトレーニングデータを入力します。 このモデルを使用すると、`X_test` データで `weeklySalesAhead` を予測できます。
-
-![](./images/walkthrough/training_scoring.png)
-
-スコアリングの場合、予測された `weeklySalesAhead` と `y_test` データ内の実際の値との間の平均パーセント差を取ります。 予測と実際の結果の差を最小限に抑えたいので、勾配ブースト回帰は最もパフォーマンスの高いモデルです。
-
-#### 予測の視覚化
-
-最後に、予測モデルを実際の週別売上高値で視覚化します。 青い線は実際の数を表し、緑は勾配ブースティングを使用した予測を表します。 次のコードは、データセット内の 45 店舗のうち 6 店舗を表す 6 プロットを生成します。 ここでは `Store 1` のみが表示されます。
-
-![](./images/walkthrough/visualize_prediction.png)
+**データサイエンスインサイトの消費と配信（11 分）:** Data Science Workspace モデルの出力をリアルタイム顧客プロファイルで使用して、Adobeのアプリケーションやサービスを使用してパーソナライズされたエクスペリエンスを提供する方法を説明します。
 
 ## 次の手順
 
-このドキュメントでは、小売販売の問題を解決するための一般的なデータサイエンティストワークフローについて説明しました。 要約すると、
+Data Science Workspace コースを修了したら、 [Sensei機械学習 API ガイド](./api/getting-started.md) を参照してください。
 
-- ワークフローに必要なライブラリを読み込みます。
-- ライブラリを読み込むと、統計の概要、ビジュアライゼーション、グラフを使用して、データの表示を開始できます。
-- 次に、機能エンジニアリングを使用して小売データセットを変更します。
-- 最後に、データのモデルを作成し、将来の売上を予測するのに最もパフォーマンスの高いモデルを選択します。
 
-準備が整ったら、まず、『[JupyterLab ユーザーガイド ](./jupyterlab/overview.md)』を読み、Adobe Experience Platform Data Science Workspace のノートブックの概要を簡単に確認してください。 さらに、モデルとレシピの学習に関心がある場合は、まず [ 小売販売スキーマとデータセット ](./models-recipes/create-retails-sales-dataset.md) のチュートリアルをお読みください。
+
