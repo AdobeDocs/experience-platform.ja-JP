@@ -5,9 +5,9 @@ title: ストリーミングセグメント化 UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platformでのストリーミングセグメント化により、データの充実性に焦点を当てながら、ほぼリアルタイムでセグメント化をおこなうことができます。 ストリーミングセグメント化を使用すると、データが Platform に到着する際にセグメント認定がおこなわれるので、セグメント化ジョブのスケジュールと実行の必要性が軽減されました。 この機能を使用すると、ほとんどのセグメントルールを、データが Platform に渡される際に評価できるようになりました。つまり、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行せずに最新の状態に保たれます。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -85,8 +85,6 @@ ht-degree: 0%
 Adobe Experience Platformユーザーインターフェイスの使用について詳しくは、 [セグメント化ユーザーガイド](./overview.md).
 
 ## 付録
-
-次の節では、ストリーミングセグメント化に関するよくある質問を示します。
 
 次の節では、ストリーミングセグメント化に関するよくある質問を示します。
 
