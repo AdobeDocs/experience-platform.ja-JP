@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
-ht-degree: 63%
+source-wordcount: '1595'
+ht-degree: 61%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 63%
 
 このドキュメントでは、 [[!DNL Segmentation API]](../api/getting-started.md).
 
-## はじめに
+## 概要
 
 このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
@@ -86,12 +86,11 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 ### セグメントジョブの作成
 
-セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。セグメント定義と、その方法を制御する結合ポリシーを参照します [!DNL Real-time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 セグメント定義と、その方法を制御する結合ポリシーを参照します [!DNL Real-time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。セグメント定義に現在適合しているオーディエンスを更新するたびに、セグメントジョブを実行する必要があります。
 
 新しいセグメントジョブを作成するには、 `/segment/jobs` エンドポイント [!DNL Real-time Customer Profile] API
 
 このエンドポイントの使用に関する詳細については、 [セグメントジョブエンドポイントガイド](../api/segment-jobs.md#create)
-
 
 ### セグメントジョブステータスの検索
 
