@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: aac052502ea9ac0d6fae5839d8af02a077c3d6db
+source-git-commit: 85a68d49614f021ec7e4be2c11f91ef835e88929
 workflow-type: tm+mt
 source-wordcount: '2076'
 ht-degree: 3%
@@ -187,13 +187,14 @@ JSON ファイルの場合、フィールドを他のフィールドに直接マ
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## データフローの詳細を入力
+## データフローの詳細を入力 {#provide-dataflow-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="ソースアラートを購読"
 >abstract="このオプションを選択して、ソースのデータフローの通知アラートをサブスクライブします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="詳しくは、ドキュメントを参照してください。"
+
 
 この **[!UICONTROL データフローの詳細]** 手順が表示され、新しいデータフローに名前を付け、簡単な説明を入力できます。
 
