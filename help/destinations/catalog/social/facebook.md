@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 12%
 
 ---
@@ -138,6 +138,21 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 >title="オーディエンスの起源"
 >abstract="セグメント内の顧客データが最初に収集された方法を選択します。 ユーザーがセグメントのターゲットになっている場合、データはFacebookに表示されます"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="詳しくは、ドキュメントを参照してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="オーディエンスの起源"
+>abstract="広告主が顧客から直接データを収集します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="オーディエンスの起源"
+>abstract="広告主はパートナーから直接データを収集します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="オーディエンスの起源"
+>abstract="広告主は、顧客やパートナーから直接データを収集します。"
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
