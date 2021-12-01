@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '735'
 ht-degree: 19%
 
 ---
@@ -257,6 +257,7 @@ ht-degree: 19%
    - [データフローを更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローを削除](tutorials/ui/delete.md)
+   - [ソースアラートを購読](tutorials/ui/alerts.md)
 - ソース SDK {#sdk}
    - [概要](sources-sdk/overview.md)
    - [設定オプション](sources-sdk/config/config.md)
@@ -264,7 +265,7 @@ ht-degree: 19%
    - [ソースの指定を構成](sources-sdk/config/sourcespec.md)
    - [エクスプローラの仕様を設定](sources-sdk/config/explorespec.md)
    - [ソース SDK API の概要](sources-sdk/api/api-overview.md)
-   - [はじめに](sources-sdk/api/getting-started.md)
+   - [概要](sources-sdk/api/getting-started.md)
    - [接続仕様の作成](sources-sdk/api/create.md)
    - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
    - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
