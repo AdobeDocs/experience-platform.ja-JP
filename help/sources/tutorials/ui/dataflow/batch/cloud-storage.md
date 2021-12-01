@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2045'
 ht-degree: 4%
 
 ---
@@ -187,13 +187,7 @@ JSON ファイルの場合、フィールドを他のフィールドに直接マ
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## データフローの詳細を入力 {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="ソースアラートを購読"
->abstract="ソースデータフローの通知アラートを受け取るためにサブスクライブするオプションを選択します。"
->text="Learn more in documentation"
+## データフローの詳細を入力
 
 この **[!UICONTROL データフローの詳細]** 手順が表示され、新しいデータフローに名前を付け、簡単な説明を入力できます。
 
