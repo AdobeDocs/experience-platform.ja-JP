@@ -1,33 +1,34 @@
 ---
-keywords: Experience Platform；小売販売レシピ；Data Science Workspace；よく読まれるトピック；レシピ
+keywords: Experience Platform；小売販売レシピ；Data Science Workspace；人気の高いトピック；レシピ
 solution: Experience Platform
 title: 小売販売スキーマとデータセットの作成
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 64%
 
 ---
 
+
 # 小売販売スキーマとデータセットの作成
 
-このチュートリアルでは、他のすべての [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアルに必要な前提条件とアセットについて説明します。 完了すると、 [!DNL Experience Platform] の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを使用できるようになります。
+このチュートリアルでは、その他すべてに必要な前提条件とアセットについて説明します [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアル 完了すると、IMS 組織のメンバーと共に、小売販売スキーマとデータセットをで使用できるようになります。 [!DNL Experience Platform].
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
-- [!DNL Adobe Experience Platform] へのアクセス [!DNL Experience Platform] の IMS 組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせください。
-- [!DNL Experience Platform] API 呼び出しを行うための認証。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)』チュートリアルを完了して次の値を取得してください。
+- アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+- 作成の認証 [!DNL Experience Platform] API 呼び出し。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - クライアント秘密鍵：`{CLIENT_SECRET}`
    - クライアント証明書：`{PRIVATE_KEY}`
-- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。このチュートリアルやその他の [!DNL Data Science Workspace] チュートリアルに必要なアセットを、[Adobeのパブリック Git リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/) からダウンロードします。
+- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。この他に必要なアセットをダウンロードする [!DNL Data Science Workspace] からのチュートリアル [Adobeのパブリック Git リポジトリ](https://github.com/adobe/experience-platform-dsw-reference/).
 - [ 2.7 以降](https://www.python.org/downloads/)[!DNL Python]および次の Python パッケージ：
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -43,7 +44,7 @@ ht-degree: 64%
 
 ### ファイルの設定
 
-1. [!DNL Experience Platform] チュートリアルリソースパッケージ内で、`bootstrap` ディレクトリに移動し、適切なテキストエディターを使用して `config.yaml` を開きます。
+1. 内部 [!DNL Experience Platform] チュートリアルリソースパッケージ、ディレクトリに移動 `bootstrap`を開き、 `config.yaml` 適切なテキストエディターを使用する。
 2. 「`Enterprise`」セクションの下で、次の値を入力します。
 
    ```yaml
@@ -92,7 +93,7 @@ ht-degree: 64%
 
 ### ブートストラップスクリプトの実行
 
-1. ターミナルアプリケーションを開き、 [!DNL Experience Platform] チュートリアルリソースディレクトリに移動します。
+1. ターミナルアプリケーションを開き、 [!DNL Experience Platform] チュートリアルリソースディレクトリ。
 2. `bootstrap` ディレクトリを現在の作業パスに設定し、次のコマンドを入力して `bootstrap.py` スクリプトを実行します。[!DNL Python]
 
    ```bash
@@ -105,12 +106,12 @@ ht-degree: 64%
 
 ## 次の手順
 
-ブートストラップスクリプトが正常に完了すると、小売販売の入出力スキーマとデータセットを [!DNL Experience Platform] で表示できます。 詳しくは、『[プレビュースキーマデータのチュートリアル](./preview-schema-data.md)』を参照してください。
+ブートストラップスクリプトが正常に完了すると、小売販売の入出力スキーマとデータセットをで表示できます。 [!DNL Experience Platform]. 詳しくは、『[プレビュースキーマデータのチュートリアル](./preview-schema-data.md)』を参照してください。
 
-また、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータを [!DNL Experience Platform] に取り込みました。
+また、小売販売のサンプルデータをに取り込みました [!DNL Experience Platform] 提供されたブートストラップスクリプトを使用する。
 
 取得したデータを引き続き使用するには、以下を実行します。
-- [Jupyter ノートブックを使用したデータ分析](../jupyterlab/analyze-your-data.md)
+- [Jupyter Notebook を使用したデータ分析](../jupyterlab/analyze-your-data.md)
    - Data Science Workspace の Jupyter ノートブックを使用して、データにアクセスし、調査、視覚化、理解します。
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
-   - このチュートリアルでは、インポート可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルを [!DNL Data Science Workspace] に取り込む方法を説明します。
+   - このチュートリアルでは、独自のモデルをに取り込む方法を説明します。 [!DNL Data Science Workspace] インポート可能なレシピファイルにソースファイルをパッケージ化する。

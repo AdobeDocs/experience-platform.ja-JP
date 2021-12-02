@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform，開発者ガイド， SDK，データアクセス SDK, Data Science Workspace，よく読まれるトピック
+keywords: Experience Platform、開発者ガイド、SDK、データアクセス SDK、Data Science Workspace、人気の高いトピック
 solution: Experience Platform
 title: Adobe Experience Platform Platform SDK を使用したモデルオーサリング
 topic-legacy: SDK authoring
 description: このチュートリアルでは、Python と R の両方で data_access_sdk_python を新しい Python platform_sdk に変換する方法について説明します。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 79%
 
 ---
 
-# Adobe Experience Platform [!DNL Platform] SDK を使用したモデルオーサリング
+# Adobe Experience Platformを使用したモデルオーサリング [!DNL Platform] SDK
 
 このチュートリアルでは、Python と R の両方で `data_access_sdk_python` を新しい Python `platform_sdk` に変換する方法について説明します。このチュートリアルでは、次の操作について説明します。
 
@@ -22,7 +22,7 @@ ht-degree: 79%
 
 ## 認証の構築 {#build-authentication}
 
-[!DNL Adobe Experience Platform] を呼び出すには認証が必要で、API キー、IMS 組織 ID、ユーザートークン、サービストークンで構成されます。
+への呼び出しをおこなうには認証が必要です [!DNL Adobe Experience Platform]は、API キー、IMS 組織 ID、ユーザートークン、サービストークンで構成されます。
 
 ### Python
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## データの基本読み取り {#basic-reading-of-data}
 
-新しい [!DNL Platform] SDK では、最大読み取りサイズは 32 GB で、最大読み取り時間は 10 分です。
+新しい [!DNL Platform] SDK の最大読み取りサイズは 32 GB で、最大読み取り時間は 10 分です。
 
 読み取り時間が長すぎる場合は、次のいずれかのフィルターオプションを使用してみてください。
 
@@ -146,7 +146,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-新しい [!DNL Platform] SDK では、次の操作がサポートされます。
+新しい [!DNL Platform] SDK は、次の操作をサポートします。
 
 | 操作 | 関数 |
 | --------- | -------- |
@@ -221,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と特徴量エンジニアリングについては、 ノートブックを使用したレシピの作成に関するチュートリアルで、「[データの準備と特徴量エンジニアリング](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering)」の節を参照してください。[!DNL JupyterLab]
+`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と特徴量エンジニアリングについては、 ノートブックを使用したレシピの作成に関するチュートリアルで、「[データの準備と特徴量エンジニアリング](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)」の節を参照してください。[!DNL JupyterLab]

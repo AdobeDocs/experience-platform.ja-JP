@@ -5,10 +5,10 @@ breadcrumb-title: Data Science Workspace ガイド
 user-guide-description: 機械学習を利用して、Adobe Sensei と JupyterLab Notebooks でモデルとレシピを開発、トレーニング、評価します。
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 100%
+source-wordcount: '248'
+ht-degree: 94%
 
 ---
 
@@ -24,10 +24,10 @@ ht-degree: 100%
    * [データの分析](jupyterlab/analyze-your-data.md)
    * [クエリサービス](jupyterlab/query-service.md)
    * [探索的データ分析（EDA）](jupyterlab/eda-notebook.md)
-   * [レシピの作成](jupyterlab/create-a-recipe.md)
+   * [レシピビルダーを使用したモデルの作成](jupyterlab/create-a-model.md)
    * [Git を使用した JupyterLab でのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
-   * [はじめに](api/getting-started.md)
+   * [概要](api/getting-started.md)
    * [エンジン](api/engines.md)
    * [MLInstances（レシピ）](api/mlinstances.md)
    * [実験](api/experiments.md)
@@ -52,6 +52,7 @@ ht-degree: 100%
    * [Spark データアクセス](authoring/spark.md)
 * モデルとレシピのチュートリアル {#models-recipes}
    * [機械学習モデルの作成と公開](models-recipes/create-publish-model.md)
+   * [デモ Luma スキーマとデータセットの作成](models-recipes/create-luma-data.md)
    * [小売売上データセットとスキーマの作成](models-recipes/create-retails-sales-dataset.md)
    * [プレビュースキーマとデータセット](models-recipes/preview-schema-data.md)
    * [ソースファイルのレシピへのパッケージ化](models-recipes/package-source-files-recipe.md)
