@@ -2,9 +2,9 @@
 title: 自己ホスト型ライブラリ
 description: Adobe Experience Platform でタグライブラリビルドのセルフホスティングを実装する方法について説明します。
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '489'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,6 @@ Platform がこれらのファイルのホストを管理することも、ユ�
 
 * 一部のブラウザーは、エンドユーザーが設定したプライバシー設定に基づいて assets.adobedtm.com ドメインをブロックします
 * 自己ホスト型を使用すると、必要な DNS ルックアップ数が削減されます
-* HTTP/2 を使用する必要がある
 * 特定のヘッダーをセキュリティ用に設定する必要がある
 * キャッシュの制御要件が、アドビのデフォルト設定とは異なる
 * エッジノードの位置をより細かく制御したい場合
