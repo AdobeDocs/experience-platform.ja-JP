@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
 source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '233'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -37,12 +37,12 @@ ht-degree: 92%
 * Platform ドキュメント {#documentation}
    * [概要](documentation/overview.md)
    * [言語サポート](documentation/language-support.md)
-* Platform で構築されたアプリケーションサービス {#ecosystem}
+* Platform {#ecosystem} に構築されたアプリケーションサービス
    * [概要](application-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
    * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=ja)
-   * [Real-time Customer Data Platform （すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（動画）](video/application-intelligent-services.md)
    * [Platform と Experience Cloud の統合（動画）](video/experience-cloud-integrations.md)
 * ガバナンス、プライバシー、セキュリティ {#governance-privacy-security}
