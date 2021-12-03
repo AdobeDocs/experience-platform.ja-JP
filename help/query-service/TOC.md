@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
 source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '141'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
