@@ -6,9 +6,9 @@ description: Real-time Customer Data Platform B2B Edition アカウントの概�
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1083'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -69,9 +69,9 @@ Marketo および B2B データを Platform に取り込む方法の詳細につ
 
 ## B2B の宛先
 
-Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などのExperience Platform先は、Real-time CDP B2B Edition で使用でき、完全にサポートされます。 また、Marketo Engageの宛先では、セグメントメンバーシップデータを Platform からストリーミングし、Marketoでリストとして使用できるようにします。
+Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads および Google Ad Manager などの Experience Platform の宛先は、Real-time CDP B2B Edition で使用でき、完全にサポートされます。また、Platform からセグメントメンバーシップデータをストリーミングし、Marketo でリストとして利用できるようにする Marketo Engage の宛先もあります。
 
-概要については、 [Marketo Engage先](../destinations/catalog/adobe/marketo-engage.md) を参照してください。
+詳しくは、[Marketo Engageの宛先](../destinations/catalog/adobe/marketo-engage.md)の概要を参照してください。
 
 複数の CRM を使用している企業の場合、Real-time CDP B2B エディションには、Marketo または CRM のインスタンスを分離するように宛先コネクタを設定するオプションがあります。必要に応じて、各インスタンスへの宛先コネクタを設定し、オーディエンスを各 CRM インスタンスに個別に送信できます。
 
@@ -79,9 +79,9 @@ Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Googl
 
 Real-time CDP B2B Edition が提供するマーケターのメリットと、Real-time CDP との違いについて理解が深まったので、これらの機能を独自の IMS 組織に適用する方法について学習できます。
 
-リアルタイム CDP B2B エディションがビジネス間サービスモデルに与えるメリットを理解するには、以下のドキュメントを参照して開始方法を確認してください。
+Real-time CDP B2B Edition が B2B サービスモデルに与えるメリットについては、使用を開始するのに役立つ以下のドキュメントを参照してください。
 
-* [リアルタイム CDP B2B エディションの使用例](./b2b-use-case.md)
+* [Real-time CDP B2B Edition のユースケース](./b2b-use-case.md)
 * [Real-time Customer Data Platform B2B Edition のエンドツーエンドのチュートリアル](./b2b-tutorial.md)
 * [データの取り込み方法](./sources/b2b.md)
 * [プロファイルへのアクセス方法](./profile/profile-overview.md)
