@@ -6,15 +6,15 @@ topic-legacy: labels
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1140'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # UI でのデータ使用ラベルの管理
 
-このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。このガイドを使用する前に、 [データガバナンスの概要](../home.md) 」を参照してください。
+このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。データガバナンスフレームワークのより詳しい説明については、このガイドを読む前に、[データガバナンスの概要](../home.md)を参照してください。
 
 ## データセットレベルでのラベルの管理
 
@@ -50,7 +50,7 @@ ht-degree: 98%
 
 ![「データセットアクティビティ」ページ](../images/labels/dataset-created.png)
 
-### データセットへのデータ使用状況ラベルの追加 {#add-labels}
+### データセットへのデータ使用ラベルの追加 {#add-labels}
 
 **[!UICONTROL データセット]**&#x200B;ワークスペースのリストから既存のデータセットを選択するか、新しいデータセットしたら、「**[!UICONTROL データガバナンス]**」をクリックして&#x200B;**[!UICONTROL データガバナンス]** ワークスペースを開きます。ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
 
