@@ -6,21 +6,21 @@ topic-legacy: developer guide
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '444'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # [!DNL Policy Service] API の概要
 
-この [!DNL Policy Service] API を使用すると、Adobe Experience Platform Data Governance に関連する様々なリソースを作成および管理できます。 このドキュメントでは、[!DNL Policy Service] API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+[!DNL Policy Service] API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、[!DNL Policy Service] API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## 前提条件
 
 デベロッパーガイドを使用するには、データガバナンス機能の操作に関わる様々な [!DNL Experience Platform] サービスについて実際に理解しておく必要があります。[!DNL Policy Service API] の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
-* [データガバナンス](../home.md)：[!DNL Experience Platform] がデータ使用のコンプライアンスを強制するフレームワーク。
+* [データガバナンス](../home.md)：[!DNL Experience Platform] がデータ使用コンプライアンスを実施するためのフレームワーク。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
@@ -37,7 +37,7 @@ ht-degree: 92%
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-のすべてのリソース [!DNL Experience Platform]（データガバナンスに属するものを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+データガバナンスに属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
