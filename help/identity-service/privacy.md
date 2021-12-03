@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 title: ID サービスでのプライバシーリクエストの処理
-description: Adobe Experience Platform Privacy Serviceは、多数のプライバシー規制に従って、個人データへのアクセス、販売のオプトアウト、削除の顧客リクエストを処理します。 このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
+description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
 source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '666'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 
-# でのプライバシーリクエストの処理 [!DNL Identity Service]
+# [!DNL Identity Service] でのプライバシーリクエストの処理
 
-Adobe Experience Platform [!DNL Privacy Service] は、一般データ保護規則 (GDPR) や [!DNL California Consumer Privacy Act] (CCPA)。
+Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護規則（GDPR）や [!DNL California Consumer Privacy Act]（CCPA）などのプライバシー規制に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。
 
-このドキュメントでは、のプライバシーリクエストの処理に関する基本的な概念について説明します。 [!DNL Identity Service] Adobe Experience Platformの
+このドキュメントでは、Adobe Experience Platform における [!DNL Identity Service] のプライバシーリクエスト処理に関する基本的な概念について説明します。
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformの ID データストアに対してプライバシーリクエストを実行する方法についてのみ説明します。 Platform データレイクに対してプライバシーリクエストもおこなう予定の場合、または [!DNL Real-time Customer Profile]( [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md) そして [プロファイルのプライバシーリクエストの処理](../profile/privacy.md) を追加しました。
+>このガイドでは、Experience Platform の ID データストアに対してプライバシーリクエストを行う方法についてのみ説明します。Platform Data Lake または [!DNL Real-time Customer Profile] に対してもプライバシーリクエストを行う予定の場合、このチュートリアルに加えて、[Data Lake でのプライバシーリクエストの処理](../catalog/privacy.md)および [Profile でのプライバシーリクエストの処理](../profile/privacy.md)に関する各ガイドも参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -27,12 +27,12 @@ Adobe Experience Platform [!DNL Privacy Service] は、一般データ保護規�
 このガイドを読む前に、次の [!DNL Experience Platform] サービスに関する十分な理解を得ることをお勧めします。
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
-* [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験のフラグメント化によって発生する基本的な課題を解決します。
+* [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験データの断片化によって発生する根本的な課題を解決します。
 * [[!DNL Real-time Customer Profile]](home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## ID 名前空間について {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service]**は ID 名前空間を使用して、ID の値を元のシステムと関連付け、それらの値に対するコンテキストを提供します。**&#x200B;名前空間は、電子メールアドレス（「電子メール」）などの汎用概念を表すことや、ID を特定のアプリケーション（Adobe Advertising Cloud ID（「AdCloud」）や Adobe Target ID（「TNTID」）など）に関連付けることができます。
+Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service] は **ID 名前空間**&#x200B;を使用して、ID の値を元のシステムと関連付け、それらの値を識別するコンテキストを提供します。名前空間は、電子メールアドレス（「電子メール」）などの一般的な概念を表すことがあります。また、ID を特定のアプリケーション（Adobe Advertising Cloud ID（「AdCloud」）や Adobe Target ID（「TNTID」）など）に関連付けることができます。
 
 ID サービスは、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
@@ -40,15 +40,15 @@ ID サービスは、グローバルに定義された（標準）ID および�
 
 ## リクエストの送信 {#submit}
 
-以下の節では、のプライバシーリクエストをおこなう方法の概要を説明します。 [!DNL Identity Service] の使用 [!DNL Privacy Service] API または UI これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) リクエストペイロードのユーザーデータを適切に書式設定する方法など、プライバシージョブを送信する手順に関する完全なドキュメントです。
+以下のセクションでは、[!DNL Privacy Service] の API または UI を使用して [!DNL Identity Service] に対しプライバシーリクエストを行う方法について概説しています。これらのセクションを読む前に、リクエストペイロードでユーザーデータを適切にフォーマットする方法など、プライバシージョブの送信方法に関する詳細な手順を確認するために、[Privacy Service API](../privacy-service/api/getting-started.md) または [Privacy Service UI](../privacy-service/ui/overview.md) のドキュメントを参照することを強くお勧めします。
 
 ### API の使用
 
-API でジョブリクエストを作成する際に、内で提供される ID `userIDs` は、特定の `namespace` および `type`. 有効な [id 名前空間](#namespaces) ～に認識される [!DNL Identity Service] は、 `namespace` 値、 `type` は、次のいずれかである必要があります `standard` または `unregistered` （標準名前空間とカスタム名前空間の場合）。
+API でジョブリクエストを作成する際は、`userIDs` 内で指定するいずれの ID に対しても固有の `namespace` および `type` を使用する必要があります。[!DNL Identity Service] によって認識される有効な [ID 名前空間](#namespaces) を `namespace` 値に指定する必要があり、`type` には、`standard` または `unregistered` のいずれかを（標準名前空間とカスタム名前空間のそれぞれに応じて）指定する必要があります。
 
-さらに、リクエストペイロードの `include` 配列には、リクエストがおこなわれる別のデータストアの製品値を含める必要があります。にリクエストする際 [!DNL Identity]の場合、配列には値を含める必要があります `Identity`.
+さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。[!DNL Identity] に対してリクエストをする場合は、配列に `Identity` 値を含める必要があります。
 
-次のリクエストは、GDPR の下に、 [!DNL Identity] ストア。 顧客に対して、 `userIDs` 配列；標準を使ったもの `Email` id 名前空間と、他の id 名前空間を使用 `ECID` 名前空間に含まれ、 [!DNL Identity] (`Identity`) を `include` 配列：
+次のリクエストは、1 件の顧客データについて、GDPR に適合した新しいプライバシージョブを [!DNL Identity] ストアに作成します。顧客の `userIDs` 配列に 2 つの ID 値が指定されています。1 つは標準の `Email` ID 名前空間、もう 1 つは `ECID` 名前空間を使用しています。また、[!DNL Identity]（`Identity`）の製品値が `include` 配列に含まれています。
 
 ```shell
 curl -X POST \
@@ -90,14 +90,14 @@ curl -X POST \
 
 ### UI の使用
 
-UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL ID]** under **[!UICONTROL 製品]** に保存されたデータのジョブを処理するために [!DNL Identity Service].
+UI でジョブリクエストを作成する場合は、[!DNL Identity Service] に保存されたデータのジョブを処理するために、必ず&#x200B;**[!UICONTROL 製品]**&#x200B;の下にある **[!UICONTROL ID]** を選択します。
 
 ![identity-gdpr](./images/identity-gdpr.png)
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。個々の ID の削除は、提供された名前空間または ID 値に基づいておこなわれます。 さらに、特定の IMS 組織に関連付けられているすべてのサンドボックスに対して、削除がおこなわれます。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、指定した IMS 組織に関連付けられているすべてのサンドボックスに対して削除が行われます。
 
 ## 次の手順
 
-このドキュメントでは、プライバシーリクエストの処理に関する重要な概念を紹介しました。 [!DNL Identity Service]. 他のユーザーのプライバシーリクエストの処理に関する情報 [!DNL Experience Cloud] アプリケーション、次のドキュメントを参照 [[!DNL Privacy Service] and [!DNL Experience Cloud] アプリ](../privacy-service/experience-cloud-apps.md).
+このドキュメントでは、[!DNL Identity Service] におけるプライバシーリクエストの処理に関する重要な概念について説明します。他の [!DNL Experience Cloud] アプリケーションにおけるプライバシーリクエストの処理について詳しくは、[[!DNL Privacy Service] and [!DNL Experience Cloud]  アプリケーション](../privacy-service/experience-cloud-apps.md)のドキュメントを参照してください。
