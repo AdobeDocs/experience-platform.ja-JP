@@ -6,15 +6,15 @@ topic-legacy: developer guide
 description: マーケティングアクションは、Adobe Experience Platform データガバナンスのコンテキストでは、Experience Platform データコンシューマーがおこなうアクションのことで、そのため、データ使用ポリシーの違反がないかを確認する必要があります。
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '732'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # マーケティングアクションエンドポイント
 
-マーケティングアクションとは、Adobe Experience Platformデータガバナンスの観点から言えば、 [!DNL Experience Platform] データコンシューマーは、データ使用ポリシーの違反を確認する必要があるを取得します。
+マーケティングアクションは、（Adobe Experience Platform データガバナンスのコンテキストでは）[!DNL Experience Platform] データ利用者が実行するアクションを表し、データ使用ポリシーの違反をチェックする必要があります。
 
 Policy Service API の `/marketingActions` エンドポイントを使用して、組織のマーケティングアクションを管理できます。
 
