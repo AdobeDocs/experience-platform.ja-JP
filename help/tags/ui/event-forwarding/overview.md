@@ -4,7 +4,7 @@ description: Platform Edge ネットワークを使用して、タグの実装�
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '533'
 ht-degree: 100%
 
