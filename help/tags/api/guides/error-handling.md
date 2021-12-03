@@ -3,9 +3,9 @@ title: エラー処理
 description: Reactor API でのエラーの処理方法を説明します。
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1068'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -86,7 +86,7 @@ Reactor API を呼び出す際に問題が発生した場合は、次のいず�
 | `invalid-rule` | 無効なルールをライブラリに追加することはできません。 |
 | `invalid-settings-syntax` | 設定 JSON の解析中に構文エラーが発生しました。 |
 | `library-file-not-found` | extension.json で定義された必須のファイルが zip パッケージ内に見つかりませんでした。 |
-| `minification-error` | コードが無効なので、コードをコンパイルできませんでした。 |
+| `minification-error` | 無効なコードが原因で、コードをコンパイルできませんでした。 |
 | `multiple-revisions` | 1 つのライブラリに含めることができるリビジョンは、各リソースで 1 つだけです。 |
 | `no-available-orgs` | このユーザーアカウントは、タグへのアクセス権を持つ製品プロファイルに属していません。Admin Console を使用して、タグ権限を持つ製品プロファイルにこのユーザーを追加します。 |
 | `not-authorized` | このユーザーアカウントには、この操作を実行するために必要な権限がありません。 |
