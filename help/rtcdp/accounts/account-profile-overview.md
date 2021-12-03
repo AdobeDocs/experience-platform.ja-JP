@@ -4,7 +4,7 @@ title: Real-time CDP B2B Edition のアカウントプロファイル
 description: Real-time Customer Data Platform B2B Edition でアカウントプロファイルを使用して、複数のソースからアカウント情報を統合する方法について説明します。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '254'
 ht-degree: 100%
 
