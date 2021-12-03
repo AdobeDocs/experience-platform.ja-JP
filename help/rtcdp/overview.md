@@ -6,9 +6,9 @@ description: リアルタイム顧客データプラットフォームの概要
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '420'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -27,13 +27,13 @@ Adobe Experience Cloud とのネイティブな統合に加え、リアルタイ
 * Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-## Real-time Customer Data Platform B2B エディション
+## Real-time Customer Data Platform B2B Edition
 
-また、ビジネス間の組織のニーズに合わせて利用できるリアルタイム CDP には、別のエディションも用意されています。 リアルタイム CDP B2B エディションは、マーケター向けのリアルタイム CDP の機能を拡張するために設計されています。 Adobe Experience Platformエコシステム内で有効にされる機能は、B2B サービスモデル内での動作に適したものです。
+また、Real-time CDP には、B2B の組織のニーズに合わせた別のエディションもあります。Real-time CDP B2B Edition は、マーケター向けに Real-time CDP の機能を拡張することを目的としています。これには Adobe Experience Platform エコシステム内で有効になっている様々な機能が備わっており、B2B サービスモデル内での運用に適しています。
 
-リアルタイム CDP B2B エディションを使用すると、マーケターは、ユーザーとアカウントの総合的なプロファイルを作成できます。 特に、統合アカウントプロファイルの一元化されたストアから、すべてのクロスソースデータをエンリッチメント、セグメント化、書き出しできます。 このデータは、一元化プロセスの各ステップで利用できるデータガバナンスツールを使用して管理できます。
+Real-time CDP B2B Edition を使用すると、マーケターは、人物とアカウントの総合的なプロファイルを作成できます。具体的には、統合アカウントプロファイルの一元化されたストアから、すべてのクロスソースデータを強化、セグメント化およびエクスポートできます。このデータは、一元化プロセスの各ステップで利用できるデータガバナンスツールを使用して管理できます。
 
-詳しくは、 [リアルタイム CDP B2B エディションの概要](./b2b-overview.md) を参照してください。
+より包括的な情報については、[Real-time CDP B2B Edition の概要](./b2b-overview.md)を参照してください。
 
 ## 追加情報
 
