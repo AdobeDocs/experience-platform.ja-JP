@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1747'
 ht-degree: 100%
 
@@ -76,7 +76,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ID グラフは異なる ID 名前空間の関係を表すマップで、顧客 ID 同士の結び付きを視覚化し、わかりやすくします。詳しくは、[ID グラフビューア の使用](./ui/identity-graph-viewer.md)に関するチュートリアルを参照してください。
 
-次のビデオでは、ID と ID のグラフについての理解をサポートすることを目的としています。
+次のビデオは、ID と ID のグラフについての理解をサポートすることを目的としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
