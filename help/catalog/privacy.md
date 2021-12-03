@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1380'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 * [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
 * [[!DNL Catalog Service]](home.md)：[!DNL Experience Platform] 内のデータの場所と系列のレコードのシステム。データセットメタデータの更新に使用できる API を提供します。
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-* [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験のフラグメント化によって発生する基本的な課題を解決します。
+* [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験データの断片化によって発生する根本的な課題を解決します。
 
 ## ID 名前空間について {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service] は ID 名前空間を使用して、ID の値を元のシステムと関連付け、それらの値に対するコンテキストを提供します。名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
+Adobe Experience Platform [!DNL Identity Service] は、システムやデバイスをまたいで顧客 ID データを結び付けます。[!DNL Identity Service] は ID 名前空間を使用して、ID の値を元のシステムと関連付け、それらの値に対するコンテキストを提供します。名前空間は、電子メールアドレス（「電子メール」）などの一般的な概念を表すことがあります。また、ID を特定のアプリケーション（Adobe Advertising Cloud ID（「AdCloud」）や Adobe Target ID（「TNTID」）など）に関連付けることができます。
 
 [!DNL Identity Service] は、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
@@ -72,7 +72,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 >
 >この節では、データセットの XDM スキーマの固有の URI ID 値を把握していることを前提としています。この値がわからない場合は、[!DNL Catalog Service] API を使用して取得できます。デベロッパーガイドの[はじめに](./api/getting-started.md)の節を読んだ後、[!DNL Catalog] オブジェクトの[リスト](./api/list-objects.md)または[検索](./api/look-up-object.md)で概説されている手順に従ってください。スキーマ ID は `schemaRef.id` の下にあります。
 >
->また、この節では、スキーマレジストリ API の呼び出し方法を理解していることを前提としています。 API の使用に関する重要な情報 ( `{TENANT_ID}` コンテナの概念については、 [はじめに](../xdm/api/getting-started.md) 」の節を参照してください。
+>また、この節では、スキーマレジストリ API の呼び出し方法を理解していることを前提としています。 `{TENANT_ID}` やコンテナの概念を把握するなど、API の使用に関連する重要な情報については、API ガイドの「[はじめに](../xdm/api/getting-started.md)」の節を参照してください。
 
 [!DNL Schema Registry] API の `/descriptors` エンドポイントに POST リクエストをおこなうことで、データセットの XDM スキーマに ID 記述子を追加できます。
 
@@ -154,11 +154,11 @@ UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品
 
 ### API の使用
 
-API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。の ID [!DNL Data Lake] 使用する `unregistered` その `type` 値と `namespace` 一致する値 [プライバシーラベル](#privacy-labels) を適用可能なデータセットに追加しました。
+API でジョブリクエストを作成する場合、提供されるすべての `userIDs` は、適用するデータストアに応じて、特定の `namespace` と `type` を使用する必要があります。[!DNL Data Lake] の ID は、`type` 値に `unregistered` を使用し、該当するデータセットに追加された[プライバシーラベル](#privacy-labels) の 1 つと一致する `namespace` 値を使用する必要があります。
 
 さらに、リクエストペイロードの `include` 配列には、リクエストがおこなわれる別のデータストアの製品値を含める必要があります。[!DNL Data Lake]にリクエストを送信する場合、配列には「`aepDataLake`」という値を含める必要があります。
 
-次のリクエストは、 [!DNL Data Lake]( 未登録の `email_label` 名前空間。 また、`include` 配列内の[!DNL Data Lake]に対する製品値も含まれます。
+次のリクエストは、未登録の `email_label` 名前空間を使用して、[!DNL Data Lake] の新しいプライバシージョブを作成します。また、`include` 配列の [!DNL Data Lake] に対する製品値も含まれます。
 
 ```shell
 curl -X POST \
@@ -201,7 +201,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform は、すべての [サンドボックス](../sandboxes/home.md) 組織に属している。 その結果、 `x-sandbox-name` リクエストに含まれるヘッダーは、システムでは無視されます。
+>Platform は、組織に属するすべての[サンドボックス](../sandboxes/home.md)でプライバシーリクエストを処理します。その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
 
 ## リクエスト処理の削除
 
