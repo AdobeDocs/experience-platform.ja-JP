@@ -6,7 +6,7 @@ topic-legacy: getting started
 description: Adobe Experience Platform を使用すると、組織はデータサイエンスと機械学習を適用する前に顧客データを一元化および標準化して、パーソナライズされた豊かなエクスペリエンスの設計と配信を劇的に改善することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
 ht-degree: 100%
 
@@ -36,7 +36,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform] チュートリアル
 
-取り込み用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Platform] をすばやく簡単に開始できます。これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
+取得用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Platform] をすばやく簡単に開始できます。これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
 
 使い始めるには、[Experience Platform のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)のランディングページにアクセスしてください。
 
