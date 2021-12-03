@@ -4,7 +4,7 @@ title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1172'
 ht-degree: 100%
 
@@ -92,7 +92,7 @@ Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**
 
 ## 「人物」タブ
 
-「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個々の人物のリストが表示されます。これらの人物は、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-time CDP B2B Edition では、単一のリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
+「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個人のリストが表示されます。これらの人物は、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-time CDP B2B Edition では、単一のリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
 
 >[!NOTE]
 >
