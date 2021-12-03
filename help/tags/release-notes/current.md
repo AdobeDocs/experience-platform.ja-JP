@@ -2,10 +2,10 @@
 title: リリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
-workflow-type: ht
-source-wordcount: '578'
-ht-degree: 100%
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 87%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+
+## 2021 年 11 月 15 日（PT）
+
+**タグで ES6 コードを受け入れる**  — 拡張機能と ES6 コードを含むカスタムコードをタグで使用できるようになりました。 拡張機能カタログでは、ES6 コードを含む各拡張機能のカード内に ES6+ラベルが表示されます。 IE10 および IE11 は、ES6 コードをサポートしていません。 タグライブラリで ES6 コードを使用する前に、適切な拡張をおこないます。
+
+**Terser を JavaScript 圧縮形式として使用** - Uglifier は Terser に置き換えられました。 このリリース以降、すべてのタグライブラリは Terser によって縮小されます。
 
 ## 2021年10月21日（PT）
 
