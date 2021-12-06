@@ -1,10 +1,10 @@
 ---
-description: 宛先 SDK の一部として、Adobeには、宛先の設定とテストを支援する開発者ツールが用意されています。 このページでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。
+description: Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -13,49 +13,53 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-宛先 SDK の一部として、Adobeには、宛先の設定とテストを支援する開発者ツールが用意されています。 このページでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。 宛先のテスト方法について詳しくは、[ 宛先設定のテスト ](./test-destination.md) を参照してください。
+Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。 宛先のテスト方法について詳しくは、 [宛先設定のテスト](./test-destination.md).
 
-**Adobe Experience Platformのターゲットスキーマと、宛先でサポートされるメッセージ形式との間にメッセージ変換テンプレート** を作成してテストするには、後述の *テンプレートオーサリングツール* を使用します。  ソースとターゲットのスキーマ間でのデータ変換について詳しくは、[ メッセージ形式のドキュメント ](./message-format.md#using-templating) を参照してください。
+宛先 **メッセージ変換テンプレートの作成とテスト** Adobe Experience Platformのターゲットスキーマと、宛先でサポートされるメッセージ形式の間で、 *テンプレートオーサリングツール* 以下で詳しく説明します。  詳しくは、 [メッセージ形式ドキュメント](./message-format.md#using-templating).
 
-次の図に、宛先 SDK の [ 宛先設定ワークフロー ](./configure-destination-instructions.md) に適合するメッセージ変換テンプレートの作成とテスト方法を示します。
+次の図に、メッセージ変換テンプレートが [宛先設定ワークフロー](./configure-destination-instructions.md) Destination SDK:
 
-![テンプレートの作成手順が宛先設定ワークフローに適合する場所のグラフィック](./assets/create-template-step.png)
+![テンプレート作成手順が宛先設定ワークフローに適用される場所のグラフィック](./assets/create-template-step.png)
 
 ## メッセージ変換テンプレートの作成とテストが必要な理由 {#why-create-message-transformation-template}
 
-宛先 SDK での宛先を作成する最初の手順の 1 つは、セグメントのメンバーシップ、ID、プロファイル属性のデータ形式が、Adobe Experience Platformから宛先に書き出される際にどのように変換されるかを考えることです。 AdobeXDM スキーマと宛先スキーマの変換に関する情報を、[ メッセージ形式のドキュメント ](./message-format.md#using-templating) で確認します。
+Destination SDKで宛先を作成する最初の手順の 1 つは、セグメントメンバーシップ、ID、プロファイル属性のデータ形式がAdobe Experience Platformから宛先に書き出される際にどのように変換されるかを考えることです。 で宛先スキーマ XDMAdobeとの変換に関する情報を見つけます。 [メッセージ形式ドキュメント](./message-format.md#using-templating).
 
-変換を正常に実行するには、次の例のような変換テンプレートを指定する必要があります。[ セグメント、ID およびプロファイル属性を送信するテンプレートを作成します ](./message-format.md#segments-identities-attributes)。
+変換を正常に実行するには、次の例のような変換テンプレートを指定する必要があります。 [セグメント、ID およびプロファイル属性を送信するテンプレートの作成](./message-format.md#segments-identities-attributes).
 
 Adobeは、AdobeXDM 形式のデータを、宛先でサポートされる形式に変換するメッセージテンプレートを作成およびテストできるテンプレートツールを提供します。 このツールには、次の 2 つの API エンドポイントを使用できます。
-* *サンプルテンプレート API* を使用して、サンプルテンプレートを取得します。
-* *レンダリングテンプレート API* を使用してサンプルテンプレートをレンダリングし、結果と宛先の予想されるデータ形式を比較できます。 書き出されたデータを、宛先で予想されるデータ形式と比較した後、テンプレートを編集できます。 これにより、書き出されたデータは、宛先で予想されるデータ形式と一致します。
-
-## サンプルテンプレート API とレンダリングテンプレート API を使用して、宛先のテンプレートを作成する方法 {#iterative-process}
-
-テンプレートを取得してテストするプロセスは反復的です。 書き出されたプロファイルが宛先の期待されるデータ形式と一致するまで、以下の手順を繰り返します。
-
-1. まず、[ サンプルテンプレート ](./create-template.md#sample-template-api) を取得します。
-2. サンプルテンプレートを基に、独自のドラフトを作成します。
-3. 独自のテンプレートで [ レンダリングテンプレート API エンドポイント ](./create-template.md#render-template-api) を呼び出します。 Adobeは、スキーマに基づいてサンプルプロファイルを生成し、結果または発生したエラーを返します。
-4. 書き出されたデータと、宛先で予想されるデータ形式を比較します。 必要に応じて、テンプレートを編集します。
-5. 書き出されたプロファイルが宛先の期待されるデータ形式と一致するまで、このプロセスを繰り返します。
+* 以下を使用： *サンプルテンプレート API* をクリックして、サンプルテンプレートを取得します。
+* 以下を使用： *レンダリングテンプレート API* を使用してサンプルテンプレートをレンダリングし、結果を宛先の期待されるデータ形式と比較できるようにします。 書き出されたデータを、宛先で想定されるデータフォーマットと比較した後、テンプレートを編集できます。 この方法では、生成した書き出しデータは、宛先で想定されているデータ形式と一致します。
 
 ## テンプレートを作成する前に完了する手順 {#prerequisites}
 
 テンプレートを作成する準備が整う前に、次の手順を実行してください。
 
-1. [宛先サーバー設定の作成](./destination-server-api.md)を参照してください。生成するテンプレートは、`maxUsersPerRequest` パラメーターに指定した値に基づいて異なります。
-   * 宛先への API 呼び出しに単一のプロファイルと、そのセグメント認定、ID、プロファイル属性を含める場合は、 `maxUsersPerRequest=1` を使用します。
-   * 宛先への API 呼び出しに複数のプロファイルと、そのセグメント認定、ID、プロファイル属性を含める場合は、 `maxUsersPerRequest` を 1 より大きい値で使用します。
-2. [宛先設定を作](./destination-configuration-api.md#create) 成し、で宛先サーバー設定の ID を追加しま `destinationDelivery.destinationServerId`す。
-3. [作成した宛先設定の ID](./destination-configuration-api.md#retrieve-list) を取得し、テンプレート作成ツールで使用できるようにします。
+1. [宛先サーバー設定の作成](./destination-server-api.md). 生成するテンプレートは、 `maxUsersPerRequest` パラメーター。
+   * 用途 `maxUsersPerRequest=1` 宛先への API 呼び出しに単一のプロファイルを含める場合は、そのセグメント認定、ID、プロファイル属性を含めます。
+   * 用途 `maxUsersPerRequest` 宛先への API 呼び出しに複数のプロファイルと、そのセグメント認定、ID、プロファイル属性を含める場合は、値が 1 より大きい。
+2. [宛先設定の作成](./destination-configuration-api.md#create) をクリックし、 `destinationDelivery.destinationServerId`.
+3. [宛先設定の ID を取得する](./destination-configuration-api.md#retrieve-list) 作成したばかりのテンプレートを、テンプレート作成ツールで使用できます。
+
+## サンプルテンプレート API とレンダリングテンプレート API を使用して、宛先のテンプレートを作成する方法 {#iterative-process}
+
+>[!TIP]
+>
+>メッセージ変換テンプレートを作成および編集する前に、まず [レンダリングテンプレート API エンドポイント](./render-template-api.md#render-exported-data) 変換を適用せずに生のプロファイルを書き出す単純なテンプレートを使用します。 シンプルなテンプレートの構文は次のとおりです。 <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+
+テンプレートを取得してテストするプロセスは反復的です。 書き出されたプロファイルが宛先の想定されるデータ形式に一致するまで、以下の手順を繰り返します。
+
+1. まず、 [サンプルテンプレートの取得](./create-template.md#sample-template-api).
+2. サンプルテンプレートを基に、独自のドラフトを作成します。
+3. を [レンダリングテンプレート API エンドポイント](./create-template.md#render-template-api) 独自のテンプレートを使用して、 Adobeは、スキーマに基づいてサンプルプロファイルを生成し、結果または発生したエラーを返します。
+4. 書き出されたデータを、宛先で予想されるデータフォーマットと比較します。 必要に応じて、テンプレートを編集します。
+5. 書き出されたプロファイルが宛先の想定されるデータ形式に一致するまで、この処理を繰り返します。
 
 ## サンプルテンプレート API を使用したサンプルテンプレートの取得 {#sample-template-api}
 
 >[!NOTE]
 >
->API リファレンスに関する完全なドキュメントについては、[Get sample template API operations](./sample-template-api.md) を参照してください。
+>API リファレンスのドキュメントについて詳しくは、 [「Get sample template API」操作](./sample-template-api.md).
 
 以下に示すように、呼び出しに宛先 ID を追加すると、応答は宛先 ID に対応するテンプレートの例を返します。
 
@@ -69,7 +73,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-指定した宛先 ID が、集計ポリシーの [ ベストエフォートの集計 ](./destination-configuration.md#best-effort-aggregation) と `maxUsersPerRequest=1` を使用した宛先設定に対応している場合、リクエストは次のようなサンプルテンプレートを返します。
+指定した宛先 ID が [ベストエフォート集計](./destination-configuration.md#best-effort-aggregation) および `maxUsersPerRequest=1` 集計ポリシーでは、リクエストは次のようなサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -102,7 +106,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-指定した宛先 ID が、[ 構成可能な集計 ](./destination-configuration.md#configurable-aggregation) または [ ベストエフォート集計 ](./destination-configuration.md#best-effort-aggregation) が 1 より大きい宛先サーバーテンプレートに対応する場合、リクエストは次のようなサンプルテンプレートを返します。`maxUsersPerRequest`
+指定した宛先 ID が、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) または [ベストエフォート集計](./destination-configuration.md#best-effort-aggregation) と `maxUsersPerRequest` 1 より大きい場合、リクエストは次のようなサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -141,25 +145,25 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-## テンプレートの文字エスケープ {#character-escape-template}
+## テンプレートを文字エスケープ {#character-escape-template}
 
-テンプレートを使用して宛先の想定される形式に一致するプロファイルをレンダリングする前に、テンプレートを文字エスケープする必要があります（下の画面の記録を参照）。
+テンプレートを使用して宛先の想定される形式に一致するプロファイルをレンダリングする前に、テンプレートを文字エスケープする必要があります（下の画面での記録を参照）。
 
 ![オンラインの文字エスケープツールを使用してテンプレートを文字エスケープする方法を示すビデオ](./assets/escape-characters.gif)
 
-オンラインの文字エスケープツールを使用できます。 上記のデモでは、[JSON エスケープフォーマッター ](https://jsonformatter.org/json-escape) を使用しています。
+オンラインの文字エスケープツールを使用できます。 上記のデモでは、 [JSON Escape フォーマッター](https://jsonformatter.org/json-escape).
 
 ## レンダリングテンプレート API {#render-template-api}
 
-[ サンプルテンプレート API](./create-template.md#sample-template-api) を使用してメッセージ変換テンプレートを作成したら、[ テンプレートをレンダリングして ](./render-template-api.md)、テンプレートに基づいて書き出されたデータを生成できます。 これにより、Adobe Experience Platformが宛先に書き出すプロファイルが、目的の宛先の形式と一致するかどうかを確認できます。
+メッセージ変換テンプレートを作成した後、 [サンプルテンプレート API](./create-template.md#sample-template-api)、 [テンプレートをレンダリング](./render-template-api.md) をクリックして、書き出されたデータを生成します。 これにより、Adobe Experience Platformが宛先に書き出すプロファイルが、目的の宛先の想定される形式と一致しているかどうかを確認できます。
 
 実行できる呼び出しの例については、 API リファレンスを参照してください。
 
-* [本文でプロファイルを送信しないテンプレートのレンダリング](./render-template-api.md#multiple-profiles-no-body)
-* [本文で送信したプロファイルを使用したテンプレートのレンダリング](./render-template-api.md#multiple-profiles-with-body)
+* [本文に送信されたプロファイルを含まないテンプレートのレンダリング](./render-template-api.md#multiple-profiles-no-body)
+* [本文で送信されたプロファイルを使用してテンプレートをレンダリングする](./render-template-api.md#multiple-profiles-with-body)
 
-テンプレートを編集し、書き出されたプロファイルが宛先の予想されるデータ形式と一致するまで、レンダーテンプレート API エンドポイントを呼び出します。
+テンプレートを編集し、書き出されたプロファイルが宛先の想定されるデータ形式に一致するまで、レンダリングテンプレート API エンドポイントを呼び出します。
 
-## 文字エスケープテンプレートを宛先サーバーの設定に追加する
+## 文字エスケープテンプレートを宛先サーバー設定に追加する
 
-メッセージ変換テンプレートの設定が完了したら、 `httpTemplate.requestBody.value` の [ 宛先サーバー設定 ](./server-and-template-configuration.md) に追加します。
+メッセージの変換テンプレートの設定が完了したら、そのテンプレートを [宛先サーバーの設定](./server-and-template-configuration.md)、 `httpTemplate.requestBody.value`.

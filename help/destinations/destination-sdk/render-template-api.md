@@ -2,10 +2,10 @@
 description: このページでは、メッセージ変換テンプレートに基づいて、宛先に対して書き出されたデータをレンダリングするために、「/authoring/testing/template/render」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: レンダリングテンプレート API 操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 2%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
@@ -24,6 +24,8 @@ ht-degree: 2%
 ## メッセージ変換テンプレートに基づいて、書き出されたプロファイルをレンダリング {#render-exported-data}
 
 書き出されたプロファイルをレンダリングするには、 `authoring/testing/template/render` エンドポイントを作成し、宛先設定の宛先 ID と、 [サンプルテンプレート API エンドポイント](./sample-template-api.md).
+
+まず、変換を適用せずに生のプロファイルを書き出す単純なテンプレートを使用し、次に、変換をプロファイルに適用するより複雑なテンプレートに進むことができます。 シンプルなテンプレートの構文は次のとおりです。 <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
