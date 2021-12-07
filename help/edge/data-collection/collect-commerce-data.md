@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK を使用したコマースおよび製
 description: Adobe Experience Platform Web SDK を使用して、製品や買い物かごに関連するデータを追加する方法について説明します。
 keywords: 製品；コマース；測定；注文；cartAbandons;checkouts;productListAdds;productListOpens;productListReopens;productListViews;productListReopens;productViews;purchases;saveForLaters;cyCe;paymentType;transationIDpriceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 93%
+source-wordcount: '1326'
+ht-degree: 91%
 
 ---
 
@@ -114,7 +114,7 @@ alloy("sendEvent",{
 | **フィールド** | **推奨** | **説明** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | オプション | 製品の [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 通貨。異なる通貨コードを持つ製品がある場合と、該当する場合にのみ便利です。例えば、購入があった場合や買い物かごに追加された場合などです。 |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強く推奨 | 該当する場合にのみ設定する必要があります。例えば、製品のバリエーションが異なると、価格が異なるのに `productListAdds` に記載されている場合があるので、`productView` では設定できない場合があります。 |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強く推奨 | 該当する場合にのみ設定する必要があります。例えば、 `productView` 製品の異なるバリエーションは、異なる価格を持つことができますが、 `productListAdds` イベント。 |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 強く推奨 | 製品の XDM ID。 |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 強く推奨 | 訪問者が製品項目をリストに追加するために使用した方法。`productListAdds` 測定とともに設定され、製品がリストに追加された場合にのみ使用します。例として、`add to cart button`、`quick add`、および `upsell` があります。 |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | 強く推奨 | 製品の表示名または人が読み取り可能な名前に設定します。 |
