@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；greenplum;Greenplum
+keywords: Experience Platform；ホーム；人気のトピック；greenplum;Greenplum
 solution: Experience Platform
 title: フローサービス API を使用した GreenPlum ベース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して GreenPlum をAdobe Experience Platformに接続する方法を説明します。
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: c3a72d5a4aea33f123f81bd416557a9cfe879224
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
-# [!DNL Flow Service] API を使用して [!DNL GreenPlum] ベース接続を作成する
+# の作成 [!DNL GreenPlum] を使用したベース接続 [!DNL Flow Service] API
 
 ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL GreenPlum] の基本接続を作成する手順を説明します。
+このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL GreenPlum] の使用 [[!DNL Flow Service] API](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL GreenPlum] に正常に接続するために知っておく必要がある追加情報を示します。
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL GreenPlum] の使用 [!DNL Flow Service] API
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | [!DNL GreenPlum] インスタンスへの接続に使用する接続文字列。 [!DNL GreenPlum] の接続文字列パターンは `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` です |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL GreenPlum] の接続仕様 ID は `37b6bf40-d318-4655-90be-5cd6f65d334b` です。 |
+| `connectionString` | の [!DNL GreenPlum] インスタンス。 次の接続文字列パターン： [!DNL GreenPlum] が `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL GreenPlum] が `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-接続文字列の取得について詳しくは、[ この GreenPlum ドキュメント ](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn) を参照してください。
+接続文字列の取得について詳しくは、 [この GreenPlum ドキュメント](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
 ### Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../../landing/api-guide.md) を参照してください。
+Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../../landing/api-guide.md).
 
 ## ベース接続を作成する
 
-ベース接続は、ソースと Platform の間の情報を保持します。これには、ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID などが含まれます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
+ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
 
-ベースPOSTID を作成するには、要求パラメーターの一部として [!DNL GreenPlum] 認証資格情報を指定しながら、`/connections` エンドポイントに接続要求を行います。
+ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL GreenPlum] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -53,7 +53,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、[!DNL GreenPlum] のベース接続を作成します。
+次のリクエストは、 [!DNL GreenPlum]:
 
 ```shell
 curl -X POST \
@@ -81,12 +81,12 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | [!DNL GreenPlum] アカウントへの接続に使用する接続文字列。 接続文字列パターンは次のとおりです。`HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | [!DNL GreenPlum] 接続仕様 ID:`37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | 接続に使用する接続文字列 [!DNL GreenPlum] アカウント 接続文字列のパターンは次のとおりです。 `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | この [!DNL GreenPlum] 接続仕様 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **応答**
 
-正常な応答は、新しく作成された接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成された接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -97,4 +97,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL GreenPlum] 接続を作成し、接続の一意の ID 値を取得しました。 この ID は、次のチュートリアルでフローサービス API](../../explore/database-nosql.md) を使用してデータベースを調べる方法を学ぶ際に使用できます。[
+このチュートリアルに従って、 [!DNL GreenPlum] を使用した接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用したデータベースの調査](../../explore/database-nosql.md).
