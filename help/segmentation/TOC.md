@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: Segments
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 75%
+source-wordcount: '163'
+ht-degree: 74%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 75%
    - [はじめに](api/getting-started.md)
    - [エッジセグメント化](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
-   - [プレビューと予測](api/previews-and-estimates.md)
+   - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
    - [セグメントの定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
@@ -31,11 +31,13 @@ ht-degree: 75%
    - [概要](ui/overview.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
-   - [Segment Match](ui/segment-match.md)
    - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
    - [ストリーミングセグメント化 (ビデオ)](video/streaming-segmentation-overview.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
+   - Segment Match {#segment-match}
+      - [セグメントマッチの概要](ui/segment-match/overview.md)
+      - [トラブルシューティング](ui/segment-match/troubleshooting.md)
 - [同意の遵守](consents.md)
 - [マルチエンティティのセグメント化](multi-entity-segmentation.md)
 - プロファイルクエリ言語 {#pql}
@@ -56,7 +58,7 @@ ht-degree: 75%
    - [セグメントの作成](tutorials/create-a-segment.md)
    - [セグメントの作成 (ビデオ)](video/create-segment.md)
    - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
-   - [複数エンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
+   - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
    - [外部オーディエンスのインポートと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
