@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 17%
 
 ---
@@ -114,8 +114,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 現在の時刻を取得します。 |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付： **必須** 形式を設定する ZonedDateTime オブジェクトとしての入力日。</li><li>形式： **必須** 日付を変更する形式を指定します。</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| long_to_date | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ： **必須** 形式を設定するタイムスタンプです。 これはミリ秒単位で書き込まれます。</li><li>形式： **必須** タイムスタンプを取得する形式です。</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
+| format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付： **必須** 形式を設定する ZonedDateTime オブジェクトとしての入力日。</li><li>形式： **必須** 日付を変更する形式を指定します。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
+| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ： **必須** 形式を設定するタイムスタンプです。 これはミリ秒単位で書き込まれます。</li><li>形式： **必須** タイムスタンプを取得する形式です。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li><li>DEFAULT_DATE: **必須** 指定された日付が null の場合に返されるデフォルトの日付。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
 | 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
@@ -244,7 +244,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_os_name_version | ユーザーエージェント文字列からオペレーティングシステムの名前とバージョンを抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_os_name_version(&#x200B;USER_AGENT) | ua_os_name_version(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | ユーザーエージェント文字列からエージェントのバージョンを抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_agent_version(USER_&#x200B;AGENT) | ua_agent_version(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
 | ua_agent_version_major | ユーザーエージェント文字列からエージェント名とメジャーバージョンを抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_agent_version_major(&#x200B;USER_AGENT) | ua_agent_version_major(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | ユーザーエージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_agent_name(&#x200B;USER_AGENT) | ua_agent_name(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
+| ua_agent_name | ユーザーエージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_agent_name(&#x200B;USER_AGENT) | ua_agent_name(&quot;Mozilla/5.&#x200B;0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_device_class(&#x200B;USER_AGENT) | ua_device_class(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
 
 {style=&quot;table-layout:auto&quot;}
