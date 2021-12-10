@@ -5,7 +5,7 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 21%
@@ -45,7 +45,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## 参照
+## 参照 {#browse}
 
 を選択します。 **[!UICONTROL 参照]** タブをクリックして、IMS 組織のすべてのセグメント定義のリストを表示します。
 
