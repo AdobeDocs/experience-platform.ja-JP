@@ -2,9 +2,9 @@
 description: このページでは、Destination SDKを使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDKを使用したストリーミング先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 次に、を使用して作成された、宛先テンプレートの設定例を示します。 `/destinations` API エンドポイント。 このテンプレートについて詳しくは、 [宛先の設定](./destination-configuration.md).
 
 手順 1 のサーバーとテンプレート設定をこの宛先設定に接続するには、サーバーのインスタンス ID とテンプレート設定を、 `destinationServerId` こちら。
+
+>[!IMPORTANT]
+>
+>正しく設定された宛先を作成するには、次の手順を実行します。 *必須* 少なくとも 1 つのターゲット id をに追加する `identityNamespaces`、以下に示すように。 ターゲット ID が設定されていない場合、ユーザーは [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 」をクリックします。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
