@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B Edition のスキーマ
 description: Real-time Customer Data Platform B2B Edition におけるエクスペリエンスデータモデル（XDM）スキーマの役割の概要です。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
-workflow-type: ht
-source-wordcount: '220'
-ht-degree: 100%
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 93%
 
 ---
 
@@ -27,6 +27,8 @@ Real-time CDP B2B Edition には、次の標準クラスが用意されていま
 * [XDM Business Opportunity Person Relation](../../xdm/classes/b2b/business-opportunity-person-relation.md)
 * [XDM Business Marketing List](../../xdm/classes/b2b/business-marketing-list.md)
 * [XDM Business Marketing List Members](../../xdm/classes/b2b/business-marketing-list-members.md)
+
+スキーマが B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md).
 
 2 つのスキーマ間に多対 1 の関係を作成する手順については、[B2B スキーマの関係の定義](../../xdm/tutorials/relationship-b2b.md)に関するチュートリアルを参照してください。
 

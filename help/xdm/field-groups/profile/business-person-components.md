@@ -2,10 +2,10 @@
 title: XDM ビジネス人物コンポーネントスキーマフィールドグループ
 description: このドキュメントでは、XDM ビジネスユーザーコンポーネントスキーマフィールドグループの概要を説明します。
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 4%
+source-wordcount: '554'
+ht-degree: 3%
 
 ---
 
@@ -16,6 +16,15 @@ ht-degree: 4%
 を通じて人物のプロファイルが作成されたとき [リアルタイム顧客プロファイル](../../../profile/home.md) リアルタイム CDP の B2B エディションでは、そのプロファイルの作成に使用される情報は、多くのソースレコードから取得される可能性があります。 例えば、ある人が 2 つの異なる会社で作業する場合、多くの CRM システムでは、あるコピーが A 社にリンクされ、他のコピーが B 社にリンクされるように、その人のコピーを意図的に複製します。そのデータをAdobe Experience Platformに取り込む場合、このフィールドグループは、異なるソースレコードを単一の表現に結合するために使用されます。
 
 フィールドグループは、ルートレベルを提供します `personComponents` フィールド。オブジェクトの配列です。 配列内の各オブジェクトは、異なるソースレコードを表します。
+
+>[!IMPORTANT]
+>
+>取り込みパターンに従う必要があります ( [ソースドキュメント](../../../rtcdp/sources/b2b.md). その他のフィールドマッピングメソッドは、必ずしも機能するとは限りません。
+>
+>例えば、 `personComponents` 配列は、標準の取り込みパターンで個別に送信され、Platform によって配列に追加されます。 オブジェクトの配列を Business Person コンポーネントに手動で追加すると、エラーが返されます。
+>B2B データのスキーマを作成する場合は、自動生成ユーティリティを使用する必要があります。 の使用方法については、ドキュメントを参照してください [B2B 名前空間とスキーマ自動生成ユーティリティ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 自動生成ユーティリティを使用せず、データモデルを手動でマッピングする場合は、 [Real-time Customer Data Platform B2B Edition Experience Data Model(XDM) クラス](../../../rtcdp/schemas/b2b.md) を参照してください。
+>
+>詳しくは、 [エンドツーエンドのチュートリアル](../../../rtcdp/b2b-tutorial.md) を参照してください。
 
 ![](../../images/field-groups/business-person-components.png)
 

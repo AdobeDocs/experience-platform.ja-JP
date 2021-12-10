@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B エディションのソース
 description: Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 6%
+source-wordcount: '290'
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,9 @@ Real-time Customer Data Platform B2B Edition を使用すると、 [[!DNL Market
 
 >[!TIP]
 >
->Real-time Customer Data Platform B2B Edition は、データの取り込みに使用できる様々な外部ソースを提供していますが、Real-time Customer Data Platformで使用できる外部ソースは限られています。 組織で使用可能なソースコネクタを確認するには、Platform UI でソースカタログを表示します。 カタログにアクセスするには、 **ソース** 左側のナビゲーションで、「 **カタログ**.
+>Real-time Customer Data Platform B2B Edition は、データの取り込みに使用できる様々な外部ソースを提供していますが、Real-time Customer Data Platformで使用できる外部ソースは限られています。 組織で使用可能なソースコネクタを確認するには、Platform UI でソースカタログを表示します。 カタログにアクセスするには、左側のナビゲーションで、「**ソース**」を選択してから、「**カタログ**」を選択します。
+
+ソースが B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 詳しくは、 [ソースコネクタの概要](../../sources/home.md) Adobe Experience Platformで使用できるソースのタイプについて詳しくは、を参照してください。
 

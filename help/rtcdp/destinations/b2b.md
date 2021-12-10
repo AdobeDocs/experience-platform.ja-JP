@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B エディションの宛先
 description: Real-time Customer Data Platform B2B Edition における宛先の役割の概要です。
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 8%
+source-wordcount: '238'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 8%
 >Real-time Customer Data Platform B2B Edition を使用していない場合は、 [宛先の概要](../../destinations/home.md) 代わりに、
 
 Real-time CDP B2B Edition で完全にサポートされるExperience Platformの宛先には、Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager が含まれます。
+
+宛先が B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Real-time Customer Data Platform B2B Edition を使用すると、B2B データを書き出し先コネクタを通じてMarketo Engageできます。 Marketo Engageの宛先を使用すると、Adobe Experience Platformで作成したセグメントをMarketoにプッシュして、静的リストとして表示することができます。
 

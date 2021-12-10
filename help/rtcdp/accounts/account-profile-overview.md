@@ -3,10 +3,10 @@ keywords: rtcdp b2b;b2b;アカウント;アカウントプロファイル;アカ
 title: Real-time CDP B2B Edition のアカウントプロファイル
 description: Real-time Customer Data Platform B2B Edition でアカウントプロファイルを使用して、複数のソースからアカウント情報を統合する方法について説明します。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: ht
-source-wordcount: '254'
-ht-degree: 100%
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 >
 >アカウントプロファイルは、Real-time Customer Data Platform B2B Edition をご利用のお客様のみが利用できます。 利用可能な機能をはじめ Real-time CDP B2B Edition について詳しくは、まず [Real-time CDP B2B Edition の概要](../b2b-overview.md)を参照してください。
 
-アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 アカウントに関するこの統合ビューでは、顧客のアカウントデータを保存するために組織で現在使用している、多くのマーケティングチャンネルや多様なシステム全体のデータをまとめて表示することができます。
+アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 アカウントに関するこの統合ビューでは、顧客のアカウントデータを保存するために組織で現在使用している、多くのマーケティングチャンネルや多様なシステム全体のデータをまとめて表示することができます。B2B ワークフローの一部としてアカウントプロファイルを作成する方法について詳しくは、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md).
 
 様々なソースのアカウントデータを組み合わせることで、各顧客アカウントとそれらに関連するビジネス機会および接点の全体像を詳細に把握できます。 これにより、組織はこれまでより一歩進んだ B2B マーケティングキャンペーンを展開できるようになります。 Real-time CDP B2B Edition の特長について詳しくは、[Real-time CDP B2B Edition のユースケース](../b2b-use-case.md)を参照してください。
 

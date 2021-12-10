@@ -1,17 +1,17 @@
 ---
-title: リアルタイム CDP B2B エディションのセグメント化の使用例の概要
+title: リアルタイム CDP B2B エディションのセグメント化の使用例
 description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1105'
 ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition のセグメント化の使用例の概要
+# Real-time Customer Data Platform B2B Edition のセグメント化の使用例
 
-このドキュメントでは、Real-time CDP B2B Edition で使用できるセグメント化と、一般的な B2B の使用例で様々なタイプの属性を組み合わせる方法に関する例を示します。
+このドキュメントでは、Real-time CDP B2B Edition のセグメント定義の例と、一般的な B2B の使用例で様々な種類の属性を組み合わせる方法を示します。 宛先が B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
