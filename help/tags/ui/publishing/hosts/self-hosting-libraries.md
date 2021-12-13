@@ -3,7 +3,7 @@ title: 自己ホスト型ライブラリ
 description: Adobe Experience Platform でタグライブラリビルドのセルフホスティングを実装する方法について説明します。
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '489'
 ht-degree: 100%
 
