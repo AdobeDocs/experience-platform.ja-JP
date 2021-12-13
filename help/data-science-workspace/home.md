@@ -6,7 +6,7 @@ topic-legacy: overview
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2388'
 ht-degree: 100%
 
@@ -124,7 +124,7 @@ Data Science Workspace は、実験プロセスの柔軟性を大幅に高めま
 データの保護は、アドビの最優先事項です。アドビは、業界で認められた標準、規制、および認定に準拠するために開発されたセキュリティプロセスと制御を使用して、ユーザーのデータを保護します。
 
 セキュリティは、Adobe Secure Product Lifecycle の一環としてソフトウェアとサービスに組み込まれています。
-アドビのデータおよびソフトウェアのセキュリティやコンプライアンスなどの詳細については、セキュリティページ（https://www.adobe.com/security.html）を参照してください。
+アドビのデータおよびソフトウェアのセキュリティやコンプライアンスなどの詳細については、セキュリティページ（https://www.adobe.com/jp/security.html）を参照してください。
 
 ## 実行中の [!DNL Data Science Workspace]
 
