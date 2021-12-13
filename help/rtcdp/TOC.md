@@ -2,28 +2,28 @@
 product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 audience: user
-user-guide-title: リアルタイムの顧客データプラットフォームガイド
+user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '174'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
-# リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
+# Real-time Customer Data Platform のヘルプ {#rtcdp}
 
-* [リアルタイム CDP の概要](overview.md)
+* [Real-time CDP の概要](overview.md)
 * [Real-time CDP B2B Edition の概要](b2b-overview.md)
 * はじめに {#intro}
-   * リアルタイム CDP {#rtcdp-intro}
+   * Real-time CDP {#rtcdp-intro}
       * [Real-time CDP の概要](get-started.md)
       * [指標の概要](home-page-dashboards.md)
    * Real-time CDP B2B Edition {#rtcdpb2b-intro}
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
-      * [リアルタイム CDP B2B エディションガードレール](b2b-guardrails.md)
+      * [Real-time CDP B2B Edition のガードレール](b2b-guardrails.md)
 * アカウントプロファイル {#account}
    * [アカウントプロファイルの概要](accounts/account-profile-overview.md)
    * [アカウントプロファイル UI ガイド](accounts/account-profile-ui-guide.md)
@@ -33,7 +33,7 @@ ht-degree: 92%
    * [データセット](datasets/dataset.md)
    * [プラットフォーム上のデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
-   * [Destinations overview](destinations/overview.md)
+   * [宛先の概要](destinations/overview.md)
    * [Real-time CDP B2B Edition の宛先](destinations/b2b.md)
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
