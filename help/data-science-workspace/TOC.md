@@ -6,9 +6,9 @@ user-guide-description: 機械学習を利用して、Adobe Sensei と JupyterLa
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
 source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '248'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 * [Data Science Workspace の概要](home.md)
 * [Data Science Workspace のアクセスと機能](access-features-dsw.md)
-* [Data Science Workspace　のチュートリアル](walkthrough.md)
+* [Data Science Workspace のチュートリアル](walkthrough.md)
 * JupyterLab ノートブック {#jupyterlab}
    * [概要](jupyterlab/overview.md)
    * [データアクセス](jupyterlab/access-notebook-data.md)
@@ -27,7 +27,7 @@ ht-degree: 94%
    * [レシピビルダーを使用したモデルの作成](jupyterlab/create-a-model.md)
    * [Git を使用した JupyterLab でのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
-   * [概要](api/getting-started.md)
+   * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
    * [MLInstances（レシピ）](api/mlinstances.md)
    * [実験](api/experiments.md)
@@ -47,25 +47,25 @@ ht-degree: 94%
 * モデルオーサリング {#authoring}
    * [モデルオーサリング SDK](authoring/sdk.md)
    * [機能パイプラインの作成](authoring/feature-pipeline.md)
-   * [Platform SDK（Python）を使用したモデル制作](authoring/platform-sdk.md)
+   * [Platform SDK（Python）を使用したモデルオーサリング](authoring/platform-sdk.md)
    * [Python データアクセス](authoring/python.md)
    * [Spark データアクセス](authoring/spark.md)
 * モデルとレシピのチュートリアル {#models-recipes}
    * [機械学習モデルの作成と公開](models-recipes/create-publish-model.md)
-   * [デモ Luma スキーマとデータセットの作成](models-recipes/create-luma-data.md)
-   * [小売売上データセットとスキーマの作成](models-recipes/create-retails-sales-dataset.md)
-   * [プレビュースキーマとデータセット](models-recipes/preview-schema-data.md)
+   * [Luma のデモ用スキーマとデータセットの作成](models-recipes/create-luma-data.md)
+   * [小売販売のスキーマとデータセットの作成](models-recipes/create-retails-sales-dataset.md)
+   * [スキーマとデータセットのプレビュー](models-recipes/preview-schema-data.md)
    * [ソースファイルのレシピへのパッケージ化](models-recipes/package-source-files-recipe.md)
-   * [パッケージ化されたレシピのインポート（UI）](models-recipes/import-packaged-recipe-ui.md)
+   * [パッケージ化されたレシピ（UI）の読み込み](models-recipes/import-packaged-recipe-ui.md)
    * [パッケージ化されたレシピ（API）の読み込み](models-recipes/import-packaged-recipe-api.md)
    * [モデル（UI）のトレーニングと評価](models-recipes/train-evaluate-model-ui.md)
    * [モデルのトレーニングと評価（API）](models-recipes/train-evaluate-model-api.md)
    * [モデルのスコアリング（UI）](models-recipes/score-model-ui.md)
    * [モデルのスコアリング（API）](models-recipes/score-model-api.md)
    * [モデルの最適化](models-recipes/optimize-model.md)
-   * [機械学習の洞察によるリアルタイム顧客プロファイルの強化](models-recipes/enrich-profile.md)
-   * [モデルのサービスとしての公開（UI）](models-recipes/publish-model-service-ui.md)
-   * [モデルをサービスとして公開する（API）](models-recipes/publish-model-service-api.md)
+   * [機械学習のインサイトによるリアルタイム顧客プロファイルのエンリッチメント](models-recipes/enrich-profile.md)
+   * [サービスとしてのモデルの公開（UI）](models-recipes/publish-model-service-ui.md)
+   * [サービスとしてのモデルの公開（API）](models-recipes/publish-model-service-api.md)
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
