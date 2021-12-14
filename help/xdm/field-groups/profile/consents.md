@@ -4,7 +4,7 @@ title: 同意および環境設定スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「同意」および「環境設定」スキーマフィールドグループの概要を説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -124,7 +124,7 @@ ht-degree: 0%
       }
     }
   },
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 ```json
 "idSpecific": {
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"

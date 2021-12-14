@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 64%
@@ -68,7 +68,7 @@ ht-degree: 64%
    ```
 
    - `platform_gateway`：API 呼び出しのベースパス。この値は変更しないでください。
-   - `ims_token`：`{ACCESS_TOKEN}` はここに入ります。
+   - `ims_token`：`{ACCESS_TOKEN}` はここに格納されます。
    - `ingest_data`：このチュートリアルの目的では、小売販売のスキーマとデータセットを作成するために、この値を `"True"` に設定します。`"False"` の値は、スキーマを作成するだけです。
    - `build_recipe_artifacts`：このチュートリアルの目的で、スクリプトがレシピアーティファクトを生成しないように、この値を `"False"` に設定します。
    - `kernel_type`：レシピアーティファクトの実行タイプ。この値は、`build_recipe_artifacts` が `"False"` に設定されている場合、`Python` のままにし、それ以外の場合は正しい実行タイプを指定します。

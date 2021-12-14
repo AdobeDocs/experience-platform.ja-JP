@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
-source-wordcount: '3971'
+source-wordcount: '3964'
 ht-degree: 17%
 
 ---
@@ -114,10 +114,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 現在の時刻を取得します。 |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
-| format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付： **必須** 形式を設定する ZonedDateTime オブジェクトとしての入力日。</li><li>形式： **必須** 日付を変更する形式を指定します。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ： **必須** 形式を設定するタイムスタンプです。 これはミリ秒単位で書き込まれます。</li><li>形式： **必須** タイムスタンプを取得する形式です。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li><li>DEFAULT_DATE: **必須** 指定された日付が null の場合に返されるデフォルトの日付。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
-| 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
+| format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付： **必須** 形式を設定する ZonedDateTime オブジェクトとしての入力日。</li><li>形式： **必須** 日付を変更する形式を指定します。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
+| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ： **必須** 形式を設定するタイムスタンプです。 これはミリ秒単位で書き込まれます。</li><li>形式： **必須** タイムスタンプを取得する形式です。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li><li>DEFAULT_DATE: **必須** 指定された日付が null の場合に返されるデフォルトの日付。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
+| 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li><li>形式： **必須** ソースの日付の形式を表す文字列です。**注意：** これは **not** は、日付文字列の変換先の形式を表します。 </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | <ul><li>コンポーネント： **必須** 日付の部分を表す文字列です。 </li><li>日付： **必須** 標準形式の日付。</li></ul> | date_part(&#x200B;COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;) | 10 |
 | set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント： **必須** 日付の部分を表す文字列です。 </li><li>値： **必須** 指定した日付のコンポーネントに設定する値。</li><li>日付： **必須** 標準形式の日付。</li></ul> | set_date_part(&#x200B;COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
@@ -214,7 +214,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | 指定された文字列から JSON コンテンツを逆シリアル化します。 | <ul><li>文字列： **必須** シリアル化を解除する JSON 文字列。</li></ul> | json_to_object(&#x200B;STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}}) | JSON を表すオブジェクト。 |
+| json_to_object | 指定された文字列から JSON コンテンツを逆シリアル化します。 | <ul><li>文字列： **必須** シリアル化を解除する JSON 文字列。</li></ul> | json_to_object(&#x200B;STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSON を表すオブジェクト。 |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリテンプレート；api ガイド；テンプレート；クエリサービス；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリテンプレート；api ガイド；テンプレート；クエリサービス；
 solution: Experience Platform
 title: クエリテンプレート API エンドポイント
 topic-legacy: query templates
 description: 以下のドキュメントでは、クエリサービス API のクエリテンプレートを使用して実行できる様々な API 呼び出しについて説明します。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 89%
@@ -16,7 +16,7 @@ ht-degree: 89%
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーを理解できたので、[!DNL Query Service] API の呼び出しを開始できます。 以下の節では、[!DNL Query Service] API を使用しておこなえる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーを理解できたので、 [!DNL Query Service] API 以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリテンプレートのリストの取得
 
@@ -82,7 +82,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -162,7 +162,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -220,7 +220,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -292,7 +292,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }

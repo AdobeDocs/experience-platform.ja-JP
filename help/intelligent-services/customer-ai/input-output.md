@@ -6,7 +6,7 @@ title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 16%
@@ -114,7 +114,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 >
 > 30 は、適格な母集団に必要な最小日数です。 指定しない場合、デフォルトは 120 日です。
 
-例 :
+例：
 
 - 顧客が今後 30 日間に腕時計を購入する可能性が高いかどうかを予測したい場合。 また、過去 60 日間に何らかの Web アクティビティを持つユーザーにスコアを付けたい場合もあります。 この場合、必要なデータの最小長= 60 日+ 30 日。 適格な母集団は 60 日で、結果期間は 30 日間で、合計 90 日です。
 

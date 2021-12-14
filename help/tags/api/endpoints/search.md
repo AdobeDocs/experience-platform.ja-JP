@@ -2,7 +2,7 @@
 title: 検索エンドポイント
 description: Reactor API で /search エンドポイントを呼び出す方法を説明します。
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 100%
@@ -65,7 +65,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "from": 0,
           "size": 25,
           "query": {

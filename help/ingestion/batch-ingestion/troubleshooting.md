@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；よく読まれるトピック；取り込んだデータ；トラブルシューティング；faq；取り込み；バッチ取り込み；バッチ取り込み；
+keywords: Experience Platform；ホーム；人気の高いトピック；取り込んだデータ；トラブルシューティング；faq；取り込み；バッチ取り込み；バッチ取り込み；
 solution: Experience Platform
 title: バッチ取得トラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントは、Adobe Experience Platform バッチデータ取得 API に関するよくある質問に答えるのに役立ちます。
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
@@ -14,7 +14,7 @@ ht-degree: 87%
 
 # バッチ取得トラブルシューティングガイド
 
-このドキュメントは、Adobe Experience Platform [!DNL Batch Data Ingestion] API に関するよくある質問に回答するのに役立ちます。
+このドキュメントは、Adobe Experience Platformに関するよくある質問への回答に役立ちます [!DNL Batch Data Ingestion] API
 
 ## バッチ API 呼び出し
 
@@ -49,7 +49,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -60,13 +60,13 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### アップロードされたデータがデータセットに表示されないのはなぜですか？
 
-データをデータセットに表示するには、バッチが完了とマークされている必要があります。 取り込むすべてのファイルをアップロードしてから、バッチの完了としてマークする必要があります。 バッチを完了としてマークする例を次に示します。
+データをデータセットに表示するには、バッチが完了とマークされている必要があります。 取り込むすべてのファイルをアップロードしてから、バッチが完了とマークする必要があります。 バッチを完了としてマークする例を次に示します。
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -79,7 +79,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -121,7 +121,7 @@ JSON 行の場合、1 行に 1 つの JSON オブジェクトがあります。�
 ]
 ```
 
-デフォルトでは、[!DNL Batch Data Ingestion] は 1 行の JSON を使用します。
+デフォルトでは、 [!DNL Batch Data Ingestion] は 1 行の JSON を使用します。
 
 ### CSV の取得はサポートされていますか？
 
@@ -149,7 +149,7 @@ CSV の取得は、フラットなスキーマのみサポートされていま�
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 このリクエストを使用すると、次のような応答が返されます。
@@ -183,7 +183,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ステータス | マスターに書き込まれたデータ | 説明 |
 | ------ | ---------------------- | ----------- |
 | Abandoned |  | クライアントは、予想された時間枠でバッチを完了できませんでした。 |
-| Aborted |  | クライアントは、[!DNL Batch Data Ingestion] API を介して、指定したバッチの中止操作を明示的に呼び出しました。 Loaded 状態になったバッチは中止することはできません。 |
+| Aborted |  | クライアントが、 [!DNL Batch Data Ingestion] API：指定したバッチの中止操作。 Loaded 状態になったバッチは中止することはできません。 |
 | Active／Success | x | バッチはステージからマスターに正常にプロモートされ、ダウンストリーム消費で使用できるようになりました。**注意**：「Active」と「Success」は同じ意味で使用されます。 |
 | Archived |  | バッチはコールドストレージにアーカイブされています。 |
 | Failed／Failure |  | 不良な設定または不正なデータ、あるいはその両方から生じる端末の状態。クライアントがデータを修正して再送信できるように、実行可能なエラーはバッチと共に記録されます。**注意**：「Failed」と「Failure」は同じ意味で使用されます。 |
@@ -205,7 +205,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチの「Stalled」とは何を意味しますか？
 
-バッチが「停止」の場合は、[!DNL Data Ingestion Services] でバッチの取り込みが困難で、すべての再試行が使い果たされています。
+バッチが「Stalled」の場合は、 [!DNL Data Ingestion Services] バッチの取り込みが困難で、すべての再試行が使い果たされています。
 
 ### バッチの「Loading」とは何を意味しますか？
 
@@ -240,7 +240,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチを削除する方法を教えてください。
 
-[!DNL Catalog] から直接削除する代わりに、次のいずれかの方法を使用してバッチを削除する必要があります。
+から直接削除する代わりに、 [!DNL Catalog]、バッチは、次のいずれかの方法を使用して削除する必要があります。
 
 1. バッチが進行中の場合は、バッチを中止する必要があります。
 2. バッチが正常にマスターされた場合は、バッチを元に戻す必要があります。
@@ -251,11 +251,11 @@ Active／Success 状態のバッチに対しては、次のバッチレベルの
 
 | 指標 | 説明 |
 | ------ | ----------- |
-| inputByteSize | [!DNL Data Ingestion Services] が処理するためにステージングされたバイトの総数です。 |
-| inputRecordSize | [!DNL Data Ingestion Services] が処理するためにステージングされた行の合計数です。 |
-| outputByteSize | [!DNL Data Ingestion Services] から [!DNL Data Lake] に出力されたバイトの総数。 |
-| outputRecordSize | [!DNL Data Ingestion Services] から [!DNL Data Lake] に出力された行の総数。 |
-| partitionCount | [!DNL Data Lake] に書き込まれたパーティションの合計数です。 |
+| inputByteSize | に対してステージングされたバイトの合計数です [!DNL Data Ingestion Services] 処理する |
+| inputRecordSize | に対してステージングされた行の合計数 [!DNL Data Ingestion Services] 処理する |
+| outputByteSize | が出力したバイトの合計数 [!DNL Data Ingestion Services] から [!DNL Data Lake]. |
+| outputRecordSize | が出力した行の合計数 [!DNL Data Ingestion Services] から [!DNL Data Lake]. |
+| partitionCount | に書き込まれたパーティションの合計数 [!DNL Data Lake]. |
 
 ### 指標が一部のバッチで使用できないのはなぜですか？
 

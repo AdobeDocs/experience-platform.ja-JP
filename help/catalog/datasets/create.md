@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；よく読まれるトピック；データセット；データセット；データセットの作成；データセットの作成
+keywords: Experience Platform；ホーム；人気のトピック；データセット；データセット；データセットの作成；データセットの作成
 solution: Experience Platform
 title: API を使用したデータセットの作成
 topic-legacy: datasets
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 85%
@@ -22,9 +22,9 @@ ht-degree: 85%
 
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] では、データをバッチファイルとして取り込むことができます。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分 [!DNL Platform] 割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一を分割する仮想サンドボックスを提供します [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立てます。
 
-以下の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
+以下の節では、 [!DNL Platform] API
 
 ### API 呼び出し例の読み取り
 
@@ -60,9 +60,9 @@ ht-degree: 85%
 
 このチュートリアルは、[スキーマレジストリ API チュートリアル](../../xdm/tutorials/create-schema-api.md)が終わったところから始まり、チュートリアルの中で作成したロイヤルティメンバースキーマを利用します。
 
-[!DNL Schema Registry] チュートリアルを完了していない場合は、まず始めて、必要なスキーマを構成した後で、このデータセットチュートリアルを続行してください。
+まだ [!DNL Schema Registry] チュートリアルを開始し、必要なスキーマを構成した後で、このデータセットチュートリアルを続行してください。
 
-次の呼び出しを使用して、 [!DNL Schema Registry] API チュートリアルで作成した「ロイヤルティメンバー」スキーマを表示できます。
+次の呼び出しは、 [!DNL Schema Registry] API チュートリアル：
 
 **API 形式**
 
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->このチュートリアルでは、すべての例で [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用します。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
+>このチュートリアルでは、 [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を参照してください。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
 
 **応答** 
 
@@ -246,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -317,7 +317,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
   -H 'content-type: application/octet-stream' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
@@ -329,7 +329,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## シグナルバッチ完了
 
-すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。完了を通知すると、サービスはアップロードされたファイルの [!DNL Catalog] `DataSetFile` エントリを作成し、それらを以前に生成されたバッチに関連付けます。 [!DNL Catalog] バッチは成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して機能するようになります。
+すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。完了を通知すると、サービスが作成されます [!DNL Catalog] `DataSetFile` アップロードされたファイルのエントリを追加し、それらを以前に生成されたバッチに関連付けます。 この [!DNL Catalog] バッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して使用できるようになります。
 
 **API 形式**
 
@@ -345,7 +345,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
@@ -373,7 +373,7 @@ GET /batches?batch={BATCH_ID}
 ```SHELL
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?batch=5d01230fc78a4e4f8c0c6b387b4b8d1c' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'

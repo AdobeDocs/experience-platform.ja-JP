@@ -1,35 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ソース；コネクタ；ソースコネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
 solution: Experience Platform
-title: フローサービス API を使用した MailChimp キャンペーンのデータフローの作成
+title: フローサービス API を使用して、MailChimp キャンペーンのデータフローを作成します
 topic-legacy: tutorial
 description: フローサービス API を使用してAdobe Experience Platformを MailChimp Campaign に接続する方法を説明します。
-source-git-commit: c8d94af6185785a0e4bfce9889c04405ed223b1f
+exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 7%
 
 ---
 
-# フローサービス API を使用した [!DNL MailChimp Campaign] のデータフローの作成
+# のデータフローの作成 [!DNL MailChimp Campaign] フローサービス API の使用
 
-次のチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL MailChimp Campaign] データを Platform に取り込むためのソース接続とデータフローを作成する手順を説明します。
+次のチュートリアルでは、ソース接続とデータフローを作成して、 [!DNL MailChimp Campaign] を使用して Platform にデータを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 前提条件
 
-OAuth 2 更新コードを使用して [!DNL MailChimp] をAdobe Experience Platformに接続する前に、まず [!DNL MailChimp.] のアクセストークンを取得する必要があります。アクセストークンの検索方法について詳しくは、[[!DNL MailChimp] OAuth 2 のガイド ](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
+接続する前に [!DNL MailChimp] OAuth 2 の更新コードを使用してAdobe Experience Platformにアクセスするには、まず [!DNL MailChimp.] 詳しくは、 [[!DNL MailChimp] OAuth 2 ガイド](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
 
 ## ベース接続を作成する {#base-connection}
 
-[!DNL MailChimp] 認証資格情報を取得したら、データフローの作成プロセスを開始して、[!DNL MailChimp Campaign] データを Platform に取り込むことができます。 データフローを作成する最初の手順は、ベース接続を作成することです。
+一度 [!DNL MailChimp] 認証資格情報を使用する場合は、データフローの作成プロセスを開始して、 [!DNL MailChimp Campaign] データを Platform に送信します。 データフローを作成する最初の手順は、ベース接続を作成することです。
 
-ベース接続は、ソースと Platform の間の情報を保持します。これには、ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID などが含まれます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
+ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
 
-[!DNL MailChimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。次の例で、いずれかの認証タイプを使用して認証する方法に関するガイダンスを参照してください。
+[!DNL MailChimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。 どちらの認証タイプを使用して認証する方法については、次の例を参照してください。
 
-### 基本認証を使用して [!DNL MailChimp] ベース接続を作成する
+### の作成 [!DNL MailChimp] 基本認証を使用したベース接続
 
-基本的なPOSTを使用して [!DNL MailChimp] ベース接続を作成するには、`host`、`authorizationTestUrl`、`username` および `password` の資格情報を指定しながら、[!DNL Flow Service] API の `/connections` エンドポイントに対して認証リクエストを実行します。
+を作成するには、以下を実行します。 [!DNL MailChimp] 基本認証を使用したベース接続、 `/connections` エンドポイント [!DNL Flow Service] の資格情報を指定する際の API `host`, `authorizationTestUrl`, `username`、および `password`.
 
 **API 形式**
 
@@ -39,7 +40,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、[!DNL MailChimp] のベース接続を作成します。
+次のリクエストは、 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -70,18 +71,18 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ベース接続の名前。 ベース接続の名前がわかりやすいことを確認します。これを使用して、ベース接続の情報を検索できます。 |
+| `name` | ベース接続の名前。 ベース接続の情報を検索する際に使用できるので、ベース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
-| `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、ソースが登録され、[!DNL Flow Service] API を通じて承認された後に取得できます。 |
+| `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、ソースが登録され、で承認された後に、 [!DNL Flow Service] API |
 | `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
-| `auth.params.host` | [!DNL MailChimp] API への接続に使用するルート URL。 ルート URL の形式は `https://{DC}.api.mailchimp.com` です。`{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
-| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用します。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的にチェックされます。 |
-| `auth.params.username` | [!DNL MailChimp] アカウントに対応するユーザー名。 これは基本認証に必要です。 |
-| `auth.params.password` | [!DNL MailChimp] アカウントに対応するパスワード。 これは基本認証に必要です。 |
+| `auth.params.host` | 接続に使用するルート URL [!DNL MailChimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
+| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的に確認されます。 |
+| `auth.params.username` | に対応するユーザー名 [!DNL MailChimp] アカウント これは、基本認証に必要です。 |
+| `auth.params.password` | ユーザーの [!DNL MailChimp] アカウント これは、基本認証に必要です。 |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続を返します。この中には一意の接続識別子 (`id`) も含まれます。 この ID は、次の手順でソースのファイル構造とコンテンツを調べるために必要です。
+正常な応答は、新しく作成されたベース接続を返します。この中には、一意の接続識別子 (`id`) をクリックします。 この ID は、次の手順でソースのファイル構造とコンテンツを調べるために必要です。
 
 ```json
 {
@@ -90,9 +91,9 @@ curl -X POST \
 }
 ```
 
-### OAuth 2 更新コードを使用して [!DNL MailChimp] ベース接続を作成する
+### の作成 [!DNL MailChimp] OAuth 2 更新コードを使用したベース接続
 
-OAuth 2 更新コードを使用して [!DNL MailChimp] ベースPOSTを作成するには、`host`、`authorizationTestUrl` および `accessToken` の資格情報を指定しながら、`/connections` エンドポイントに接続リクエストを実行します。
+を作成するには、以下を実行します。 [!DNL MailChimp] OAuth 2 更新コードを使用したベース接続。 `/connections` が `host`, `authorizationTestUrl`、および `accessToken`.
 
 **API 形式**
 
@@ -102,7 +103,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp] のベース接続を作成します。
+次のリクエストは、 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -132,17 +133,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ベース接続の名前。 ベース接続の名前がわかりやすいことを確認します。これを使用して、ベース接続の情報を検索できます。 |
+| `name` | ベース接続の名前。 ベース接続の情報を検索する際に使用できるので、ベース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
-| `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、[!DNL Flow Service] API を使用してソースを登録した後に取得できます。 |
+| `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、 [!DNL Flow Service] API |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.host` | [!DNL MailChimp] API への接続に使用するルート URL。 ルート URL の形式は `https://{DC}.api.mailchimp.com` です。`{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
-| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用します。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的にチェックされます。 |
-| `auth.params.accessToken` | ソースの認証に使用される、対応するアクセストークン。 これは、OAuth ベースの認証に必要です。 |
+| `auth.params.host` | 接続に使用するルート URL [!DNL MailChimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
+| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的に確認されます。 |
+| `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。 これは、OAuth ベースの認証に必要です。 |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続を返します。この中には一意の接続識別子 (`id`) も含まれます。 この ID は、次の手順でソースのファイル構造とコンテンツを調べるために必要です。
+正常な応答は、新しく作成されたベース接続を返します。この中には、一意の接続識別子 (`id`) をクリックします。 この ID は、次の手順でソースのファイル構造とコンテンツを調べるために必要です。
 
 ```json
 {
@@ -151,22 +152,22 @@ curl -X POST \
 }
 ```
 
-## ソースの参照 {#explore}
+## ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用して、GETリクエストを実行することで、ファイルとディレクトリを調べることができます。 ソースのファイル構造とコンテンツを調べるためにGETリクエストを実行する場合は、次の表に示すクエリーパラメーターを含める必要があります。
+前の手順で生成したベース接続 ID を使用して、GETリクエストを実行することで、ファイルとディレクトリを調べることができます。 ソースのファイル構造とコンテンツを調べるためのGETリクエストを実行する場合は、次の表に示すクエリーパラメーターを含める必要があります。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
-| `{OBJECT_TYPE}` | 調査するオブジェクトのタイプ。 REST ソースの場合、この値はデフォルトで `rest` に設定されます。 |
-| `{OBJECT}` | 調査するオブジェクト。 |
-| `{FILE_TYPE}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 この値は、調査するディレクトリのパスを表します。 |
+| `{OBJECT_TYPE}` | 参照するオブジェクトのタイプ。 REST ソースの場合、この値はデフォルトでになります。 `rest`. |
+| `{OBJECT}` | 参照するオブジェクト。 |
+| `{FILE_TYPE}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 その値は、参照するディレクトリのパスを表します。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義する boolean 値です。 |
-| `{SOURCE_PARAMS}` | `campaign_id` の base64 エンコードされた文字列。 |
+| `{SOURCE_PARAMS}` | の base64 エンコードされた文字列 `campaign_id`. |
 
 >[!TIP]
 >
->`{SOURCE_PARAMS}` に対して受け入れられる書式型を取得するには、base64 で `campaignId` 文字列全体をエンコードする必要があります。 例えば、base64 でエンコードされた `{"campaignId": "c66a200cda"}` は `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9` と同じです。
+>の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`を使用する場合は、 `campaignId` 文字列を base64 に格納します。 例： `{"campaignId": "c66a200cda"}` base64 でエンコードされた値は、次の値と等しくなります。 `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
 
 **API 形式**
 
@@ -187,7 +188,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、問い合わせられたファイルの構造を返します。
+正常な応答は、クエリされたファイルの構造を返します。
 
 ```json
 {
@@ -256,11 +257,11 @@ curl -X GET \
 
 ## ソース接続の作成 {#source-connection}
 
-[!DNL Flow Service] API にPOSTリクエストを実行して、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルのパス、接続仕様 ID で構成されます。
+ソース接続を作成するには、 [!DNL Flow Service] API ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID で構成されます。
 
-ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+ソース接続を作成するには、 data format 属性の enum 値も定義する必要があります。
 
-ファイルベースのソースには、次の列挙値を使用します。
+ファイルベースのソースには、次の enum 値を使用します。
 
 | データフォーマット | 列挙値 |
 | ----------- | ---------- |
@@ -268,7 +269,7 @@ curl -X GET \
 | JSON | `json` |
 | Parquet | `parquet` |
 
-すべてのテーブルベースのソースで、値を `tabular` に設定します。
+すべてのテーブルベースのソースで、値をに設定します。 `tabular`.
 
 **API 形式**
 
@@ -278,7 +279,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-次のリクエストは、[!DNL MailChimp] のソース接続を作成します。
+次のリクエストは、 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -307,16 +308,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすいことを確認します。 |
+| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | ソース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
-| `baseConnectionId` | [!DNL MailChimp] のベース接続 ID。 この ID は、前の手順で生成されました。 |
+| `baseConnectionId` | のベース接続 ID [!DNL MailChimp]. この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様 ID。 |
-| `data.format` | 取り込む [!DNL MailChimp] データの形式。 |
-| `params.campaignId` | [!DNL MailChimp] キャンペーン ID は、特定の [!DNL MailChimp] キャンペーンを識別します。このキャンペーンを使用して、リストやオーディエンスに E メールを送信できます。 |
+| `data.format` | の形式 [!DNL MailChimp] 取り込むデータ。 |
+| `params.campaignId` | この [!DNL MailChimp] キャンペーン ID は特定の [!DNL MailChimp] キャンペーンを開き、リストやオーディエンスに e メールを送信できます。 |
 
 **応答**
 
-正常な応答は、新しく作成されたソース接続の一意の識別子 (`id`) を返します。 この ID は、後の手順でデータフローを作成する際に必要です。
+正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -327,23 +328,23 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成し、ソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-[ スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に対してPOSTリクエストを実行すると、ターゲット XDM スキーマを作成できます。
+ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、[API を使用したスキーマの作成 ](../../../../../xdm/api/schemas.md) に関するチュートリアルを参照してください。
+ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../../xdm/api/schemas.md).
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-[ カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
+ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
 
-ターゲットデータセットの作成方法について詳しくは、[API を使用したデータセットの作成 ](../../../../../catalog/api/create-dataset.md) に関するチュートリアルを参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../../catalog/api/create-dataset.md).
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取得されたデータの宛先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様 ID を指定する必要があります。 この ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが格納される宛先への接続を表します。 ターゲット接続を作成するには、 [!DNL Data Lake]. この ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-これで、ターゲットスキーマとターゲットデータセット、接続仕様 ID が一意の識別子で [!DNL Data Lake] になりました。 これらの識別子を使用して、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
+これで、ターゲットスキーマとターゲットデータセットに一意の識別子、および [!DNL Data Lake]. これらの識別子を使用すると、 [!DNL Flow Service] 受信ソースデータを格納するデータセットを指定する API。
 
 **API 形式**
 
@@ -353,7 +354,7 @@ POST /targetConnections
 
 **リクエスト**
 
-次のリクエストは、[!DNL MailChimp] のターゲット接続を作成します。
+次のリクエストは、 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -385,16 +386,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | ターゲット接続の名前。 ターゲット接続の名前がわかりやすい名前であることを確認します。これは、ターゲット接続に関する情報を検索する場合に使用できます。 |
-| `description` | ターゲット接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
-| `connectionSpec.id` | [!DNL Data Lake] に対応する接続仕様 ID。 この固定 ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Platform に取り込む [!DNL MailChimp] データの形式。 |
+| `name` | ターゲット接続の名前。 ターゲット接続の名前がわかりやすい名前であることを確認します。これを使用して、ターゲット接続に関する情報を検索できます。 |
+| `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
+| `connectionSpec.id` | に対応する接続仕様 ID [!DNL Data Lake]. この修正済み ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | の形式 [!DNL MailChimp] Platform に取り込むデータです。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
 **応答**
 
-正常な応答は、新しいターゲット接続の一意の識別子 (`id`) を返します。 この ID は後の手順で必要になります。
+正常な応答は、新しいターゲット接続の一意の識別子 (`id`) をクリックします。 この ID は、後の手順で必要になります。
 
 ```json
 {
@@ -405,7 +406,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->現在、[!DNL MailChimp Campaign] のデータ準備関数はサポートされていません。
+>データ準備関数は、現在、 [!DNL MailChimp Campaign].
 
 <!--
 ## Create a mapping {#mapping}
@@ -475,14 +476,14 @@ A successful response returns details of the newly created mapping including its
 
 ## フローの作成 {#flow}
 
-[!DNL MailChimp] データを Platform に取り込む最後の手順は、データフローを作成することです。 現時点では、次の必須値が用意されています。
+～に向けた最後の一歩 [!DNL MailChimp] データを Platform に送信する場合、データフローを作成します。 現時点では、次の必要な値が準備されています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、前述の値をPOST内に指定しながらペイロードリクエストを実行します。
 
-取り込みをスケジュールするには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または `week`。 間隔値は、2 つの連続した取り込みと 1 回限りの取り込み (`once`) の作成の間隔を指定します。 その他のすべての周波数の間隔値は、`15` 以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。 `once`, `minute`, `hour`, `day`または `week`. 間隔の値は、2 つの連続した取り込みから 1 回の取り込みを作成するまでの間隔を指定します (`once`) に間隔を設定する必要はありません。 その他のすべての頻度では、間隔の値を次の値以上に設定する必要があります `15`.
 
 
 **API 形式**
@@ -524,19 +525,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | データフローの名前。 データフローの情報を調べるのに使用できるので、データフローの名前が説明的であることを確認します。 |
+| `name` | データフローの名前。 データフローの情報を検索する際に使用できるので、データフローの名前が説明的であることを確認します。 |
 | `description` | （オプション）データフローの詳細を提供するために含めることができるプロパティ。 |
-| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。 この固定 ID は次のとおりです。`6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | フロー仕様 ID の対応するバージョン。 この値のデフォルトは `1.0` です。 |
-| `sourceConnectionIds` | 前の手順で生成された [ ソース接続 ID](#source-connection)。 |
-| `targetConnectionIds` | 前の手順で生成された [ ターゲット接続 ID](#target-connection)。 |
+| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。 この修正済み ID は次のとおりです。 `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | フロー仕様 ID の対応するバージョン。 この値のデフォルトはです。 `1.0`. |
+| `sourceConnectionIds` | この [ソース接続 ID](#source-connection) が以前の手順で生成された場合に発生します。 |
+| `targetConnectionIds` | この [ターゲット接続 ID](#target-connection) が以前の手順で生成された場合に発生します。 |
 | `scheduleParams.startTime` | データの最初の取り込みが開始されるまでの指定された開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または `week`。 |
-| `scheduleParams.interval` | この間隔は、2 つの連続したフロー実行の間隔を指定します。 間隔の値はゼロ以外の整数にする必要があります。 頻度が `once` に設定されている場合は、間隔は不要で、他の頻度値の場合は `15` 以上にする必要があります。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`, `minute`, `hour`, `day`または `week`. |
+| `scheduleParams.interval` | 間隔は、2 つの連続したフロー実行の間隔を示します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が `once` およびは次よりも大きいか等しい必要があります `15` を使用します。 |
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したデータフローの ID(`id`) が返されます。 この ID を使用して、データフローを監視、更新または削除できます。
+成功すると、ID(`id`) を含める必要があります。 この ID を使用して、データフローを監視、更新または削除できます。
 
 ```json
 {
@@ -570,7 +571,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、フロー実行に関する詳細を返します。フロー実行の作成日、ソース接続、ターゲット接続、およびフロー実行の一意の識別子 (`id`) に関する情報が含まれます。
+正常な応答は、フロー実行に関する詳細 ( 作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子 (`id`) をクリックします。
 
 ```json
 {
@@ -656,17 +657,17 @@ curl -X GET \
 | `id` | データフローに対応する ID が表示されます。 |
 | `state` | データフローの現在の状態を表示します。 |
 | `inheritedAttributes` | フローを定義する属性が含まれます。例えば、対応するベース、ソース、ターゲット接続の ID などです。 |
-| `scheduleParams` | 開始時間（エポック時間）、頻度、間隔など、データフローの取り込みスケジュールに関する情報が含まれます。 |
-| `transformations` | データフローに適用する変換プロパティに関する情報が含まれます。 |
+| `scheduleParams` | データフローの取り込みスケジュールに関する情報が含まれます。例えば、開始時間（エポック時間）、頻度、間隔などです。 |
+| `transformations` | データフローに適用される変換プロパティに関する情報が含まれます。 |
 | `runs` | フローの対応する実行 ID を表示します。 この ID を使用して、特定のフロー実行を監視できます。 |
 
-## データフローの更新
+## データフローを更新する
 
-データフローの実行スケジュール、名前および説明を更新するには、使用するフロー ID、バージョン、新しいスケジュールを指定しながら、[!DNL Flow Service] API に対してPATCHリクエストを実行します。
+データフローの実行スケジュール、名前、説明を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] 使用するフロー ID、バージョンおよび新しいスケジュールを指定する際の API。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCHリクエストを行う際に必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -707,13 +708,13 @@ curl -X PATCH \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションの定義に使用する操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新されたタグが返されます。 フロー ID を提供しながら、[!DNL Flow Service] API にGETリクエストを送信することで、更新を確認できます。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
 
 ```json
 {
@@ -722,9 +723,9 @@ curl -X PATCH \
 }
 ```
 
-## データフローの削除
+## データフローを削除
 
-既存のフロー ID を使用すると、[!DNL Flow Service] API に対してDELETEリクエストを実行して、データフローを削除できます。
+既存のフロー ID を使用すると、 [!DNL Flow Service] API
 
 **API 形式**
 
@@ -734,7 +735,7 @@ DELETE /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 削除するデータフローの一意の `id` 値。 |
+| `{FLOW_ID}` | 一意の `id` の値を指定します。 |
 
 **リクエスト**
 
@@ -749,15 +750,15 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行して、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
+正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行することで、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
 
-## 接続を更新する
+## 接続を更新
 
-接続の名前、説明、および資格情報を更新するには、[!DNL Flow Service] API に対してPATCHリクエストを実行し、基本接続 ID、バージョン、使用する新しい情報を指定します。
+接続の名前、説明、および資格情報を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] ベース接続 ID、バージョンおよび使用する新しい情報を提供する際の API。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCHリクエストを行う際に必要です。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -767,7 +768,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 更新する接続の一意の `id` 値。 |
+| `{BASE_CONNECTION_ID}` | 一意の `id` 更新する接続の値。 |
 
 **リクエスト**
 
@@ -811,7 +812,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ベース接続 ID と更新された etag を返します。 接続 ID を提供しながら [!DNL Flow Service] API にGETリクエストを送信することで、更新を確認できます。
+正常な応答は、ベース接続 ID と更新された etag を返します。 更新を検証するには、 [!DNL Flow Service] 接続 ID を指定する際の API。
 
 ```json
 {
@@ -820,9 +821,9 @@ curl -X PATCH \
 }
 ```
 
-## 接続を削除する
+## 接続を削除
 
-既存のベース接続 ID がある場合は、[!DNL Flow Service] API に対してDELETEリクエストを実行します。
+既存のベース接続 ID がある場合は、 [!DNL Flow Service] API
 
 **API 形式**
 
@@ -832,7 +833,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 削除するベース接続の一意の `id` 値。 |
+| `{BASE_CONNECTION_ID}` | 一意の `id` 削除するベース接続の値。 |
 
 **リクエスト**
 
@@ -849,4 +850,4 @@ curl -X DELETE \
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
-接続に対して検索 (GET) リクエストを試行すると、削除を確認できます。
+接続に対して検索 (GET) リクエストを試みて、削除を確認できます。

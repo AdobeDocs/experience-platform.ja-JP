@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取得；バッチ取得；取得；開発者ガイド；api ガイド；アップロード；Parquet の取り込み；json の取り込み；
+keywords: Experience Platform；ホーム；人気の高いトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；API ガイド；アップロード；取り込み Parquet；取り込み json;
 solution: Experience Platform
 title: バッチ取得 API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 78%
@@ -13,15 +13,15 @@ ht-degree: 78%
 
 # バッチ取得開発者ガイド
 
-このドキュメントでは、Adobe Experience Platformで [ バッチ取得 API エンドポイント ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) を使用する際の包括的なガイドを示します。 前提条件やベストプラクティスなど、バッチ取得 API の概要については、まず「[ バッチ取得 API の概要 ](overview.md)」をお読みください。
+このドキュメントでは、 [バッチ取得 API エンドポイント](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) Adobe Experience Platform 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [バッチ取得 API の概要](overview.md).
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、[ データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の一部です。 データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
+このガイドで使用される API エンドポイントは、 [データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
 
-続行する前に、[ バッチ取得 API の概要 ](overview.md) と [ はじめにガイド ](getting-started.md) を参照してください。
+続行する前に、 [バッチ取得 API の概要](overview.md) そして [入門ガイド](getting-started.md).
 
 ## JSON ファイルの取得
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -93,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### ファイルのアップロード
 
-バッチを作成したら、バッチ作成応答のバッチ ID を使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これで、バッチを作成したので、バッチ作成応答のバッチ ID を使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
 
 >[!NOTE]
 >
@@ -122,14 +122,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
 
 **応答** 
 
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -257,14 +257,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
 
 **応答** 
 
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
 
 
 **応答** 
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -646,14 +646,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
 
 
 **応答** 
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 バッチにパッチを適用するには、次が必要です。
 
-- **プロファイルと属性の更新が有効になったデータセット。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを配列に追加する必要があ `unifiedProfile` ります。データセットを作成する方法、またはアップサート用の既存のデータセットを設定する方法について詳しくは、[ プロファイル更新のデータセットを有効にする ](../../catalog/datasets/enable-upsert.md) 方法に関するチュートリアルを参照してください。
-- **パッチ適用の対象となるフィールドとプロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するデータ形式は、通常のバッチ取得プロセスに似ています。必須の入力は Parquet ファイルで、更新するフィールドに加えて、プロファイルストア内のデータと一致させるために、アップロードされるデータに ID フィールドが含まれている必要があります。
+- **データセットのプロファイルと属性の更新が有効になっている。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを `unifiedProfile` 配列。 データセットを作成する方法、またはアップサート用に既存のデータセットを設定する方法の詳細については、 [プロファイル更新用のデータセットの有効化](../../catalog/datasets/enable-upsert.md).
+- **パッチを適用するフィールドとプロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するデータ形式は、通常のバッチ取り込みプロセスに似ています。 入力が必要なのは Parquet ファイルです。また、更新するフィールドに加えて、プロファイルストア内のデータと一致させるために、アップロードされたデータには ID フィールドが含まれている必要があります。
 
-プロファイルとアップサートを有効にし、パッチを適用するフィールドと必要な ID フィールドを含む Parquet ファイルを作成したら、バッチ取得を通じてパッチを完了するために、[Parquet ファイル ](#ingest-parquet-files) の取り込み手順に従います。
+プロファイルとアップサートを有効にし、パッチを適用するフィールドと必要な ID フィールドを含む Parquet ファイルを作成したら、次の手順に従います。 [Parquet ファイルの取得](#ingest-parquet-files) バッチ取得を使用してパッチを完了するため。
 
 ## バッチの再生
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -868,14 +868,14 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json` のようなローカルファイルパスです。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
 
 **応答** 
 
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -915,11 +915,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 付録
 
-次の節では、バッチ取得を使用してデータをExperience Platformに取り込む方法について説明します。
+次の節では、バッチ取得を使用してExperience Platform内のデータを取り込む方法について説明します。
 
 ### バッチ取得用のデータ変換
 
-データファイルを [!DNL Experience Platform] に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [ エクスペリエンスデータモデル (XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
+データファイルをに取り込むため [!DNL Experience Platform]の場合、ファイルの階層構造は [エクスペリエンスデータモデル (XDM)](../../xdm/home.md) スキーマは、アップロード先のデータセットに関連付けられています。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

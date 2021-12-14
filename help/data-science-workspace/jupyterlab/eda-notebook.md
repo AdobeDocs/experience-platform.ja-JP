@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このガイドでは、調査データ分析 (EDA) ノートブックを使用して、Web データのパターンを検出する方法、予測目標を持つイベントを集計する方法、集計データを消去する方法、および予測者と目標の関係を理解する方法に焦点を当てます。
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%
@@ -21,7 +21,7 @@ EDA ノートブックの例は、Web ベースのデータを考慮して最適
 
 第 2 部は、Python ライブラリを使用して集計データに対して記述的分析を実行することから始めます。 このノートブックは、ヒストグラム、散布グラフ、ボックスプロット、相関行列などのビジュアライゼーションを示し、目標の予測に役立つと思われる機能を判断するために使用される実用的なインサイトを導き出します。
 
-## 概要
+## はじめに
 
 このガイドを読む前に、 [[!DNL JupyterLab] ユーザーガイド](./overview.md) ～の高度な紹介のために [!DNL JupyterLab] と、Data Science Workspace 内での役割を表します。 さらに、独自のデータを使用している場合は、 [のデータアクセス [!DNL Jupyterlab] notebooks](./access-notebook-data.md). このガイドでは、ノートブックのデータ制限に関する重要な情報を説明します。
 
@@ -342,7 +342,7 @@ iplot(fig)
 - `COUNT_CHECK_OUTS`:チェックアウト数。
 - `COUNT_PURCHASES`:購入の数。
 - `COUNT_INSTANCE_PRODUCTADDS`:製品追加インスタンスの数。
-- `NUMBER_VISITS` :訪問の数。
+- `NUMBER_VISITS`:訪問の数。
 - `COUNT_PAID_SEARCHES`:有料検索の数。
 - `DAYS_SINCE_VISIT`:前回の訪問からの経過日数。
 - `TOTAL_ORDER_REVENUE`:合計注文売上高。
@@ -469,7 +469,7 @@ Data.head(5)
 このセルは、一意のプロファイルの数を出力します。
 
 ```python
-print("Count of unique profiles :", (len(Data)))
+print("Count of unique profiles:", (len(Data)))
 ```
 
 ### 欠落した値と外れ値の検出
@@ -621,11 +621,11 @@ for column in Data_categorical.columns[0:]:
 for col in Data.columns:
     if len(Data[col].unique()) == 1:
         if col == 'TARGET':
-            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         elif col == 'ID':
-            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         else:
-            print('Dropped column :',col)
+            print('Dropped column:',col)
             Data.drop(col,inplace=True,axis=1)
 ```
 

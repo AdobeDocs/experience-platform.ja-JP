@@ -5,7 +5,7 @@ title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 14%
@@ -42,13 +42,13 @@ Attribution AIは、次のデータセットを分析してアルゴリズムス
 | --- | --- |
 | プライマリID フィールド | タッチポイント/コンバージョン |
 | タイムスタンプ | タッチポイント/コンバージョン |
-| チャネル._type | タッチポイント |
+| チャネル._タイプ | タッチポイント |
 | Channel.mediaAction | タッチポイント |
 | Channel.mediaType | タッチポイント |
 | Marketing.trackingCode | タッチポイント |
 | Marketing.campaignname | タッチポイント |
 | Marketing.campaigngroup | タッチポイント |
-| Commerce | コンバージョン |
+| Commerce | 変換 |
 
 通常、アトリビューションは、「コマース」下の注文、購入、チェックアウトなどのコンバージョン列で実行されます。 「チャネル」および「マーケティング」の列は、Attribution AIのタッチポイント ( 例： `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`) をクリックします。 最適な結果とインサイトを得るには、できる限り多くのコンバージョン列とタッチポイント列を含めることを強くお勧めします。 また、上記の列に限定されるわけではありません。 その他の推奨列またはカスタム列をコンバージョンまたはタッチポイント定義として含めることができます。
 

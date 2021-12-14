@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチの作成；カタログサービス；api
+keywords: Experience Platform；ホーム；人気の高いトピック；バッチの作成；カタログサービス；API
 solution: Experience Platform
 title: API でのバッチの作成
 topic-legacy: developer guide
-description: バッチを作成するには、カタログ API の/batches エンドポイントにPOSTリクエストを送信します。
+description: カタログ API の/batches エンドポイントにPOSTリクエストを送信して、バッチを作成できます。
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 51%
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 # バッチの作成
 
-データセットがデータを取得するには、バッチが関連付けられている必要があります。既存のデータセットの `id` 値を使用して、[!DNL Catalog] API の `/batches` エンドポイントにPOSTリクエストを送信し、バッチを作成できます。
+データセットがデータを取得するには、バッチが関連付けられている必要があります。の使用 `id` 既存のデータセットの値の場合、 `/batches` エンドポイント [!DNL Catalog] API
 
 **API 形式**
 
@@ -30,7 +30,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"

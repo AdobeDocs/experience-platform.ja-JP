@@ -5,7 +5,7 @@ title: マッピングセットの概要
 topic-legacy: overview
 description: Adobe Experience Platform Data Prep でのマッピングセットの使用方法を説明します。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 100%
@@ -33,9 +33,9 @@ ht-degree: 100%
 
 ```json
 {
-    "id" : "cbb0da769faa48fcb29e026a924ba29d",
-    "name" : "Demo Mapping Set",
-    "inputSchema" : {
+    "id": "cbb0da769faa48fcb29e026a924ba29d",
+    "name": "Demo Mapping Set",
+    "inputSchema": {
         "id": "a167ff2947ff447ebd8bcf7ef6756232",
         "version": 0
     },
@@ -50,8 +50,8 @@ ht-degree: 100%
             "sourceType": "ATTRIBUTE",
             "source": "Id",
             "destination": "_id",
-            "name" : "Id",
-            "description" : "Identifier field"
+            "name": "Id",
+            "description": "Identifier field"
         },
         {
             "sourceType": "ATTRIBUTE",

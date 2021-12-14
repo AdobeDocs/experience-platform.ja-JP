@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 8%
@@ -149,7 +149,7 @@ curl -X POST \
 | `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | ソース接続に関する詳細情報を含めるために指定できるオプションの値です。 |
 | `baseConnectionId` | の接続 ID [!DNL Event Hubs] 前の手順で生成されたソース。 |
-| `connectionSpec.id` | の固定接続仕様 ID [!DNL Event Hubs]. この ID は： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | の固定接続仕様 ID [!DNL Event Hubs]. この ID は次のとおりです。 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 | `data.format` | の形式 [!DNL Event Hubs] 取り込むデータ。 現在、サポートされているデータ形式は次のみです。 `json`. |
 | `params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。 `raw` および `xdm`. |

@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: 計算済み属性 API エンドポイント
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platformでは、計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドでは、リアルタイム顧客プロファイル API を使用して、計算済み属性を作成、表示、更新および削除する方法について説明します。
+description: Adobe Experience Platformでは、計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドでは、リアルタイム顧客プロファイル API を使用して計算済み属性を作成、表示、更新および削除する方法について説明します。
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2272'
 ht-degree: 65%
@@ -18,21 +18,21 @@ ht-degree: 65%
 >
 >このドキュメントで説明されている計算済み属性機能は、現在アルファ段階であり、すべてのユーザーが使用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドには、`/computedAttributes` エンドポイントを使用して基本的な CRUD 操作を実行するための API 呼び出し例が含まれています。
+計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドには、 `/computedAttributes` endpoint.
 
-計算済み属性の詳細については、まず [ 計算済み属性の概要 ](overview.md) を参照してください。
+計算済み属性の詳細については、まず [計算済み属性の概要](overview.md).
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、[ リアルタイム顧客プロファイル API](https://www.adobe.com/go/profile-apis-jp) の一部です。
+このガイドで使用される API エンドポイントは、 [リアルタイム顧客プロファイル API](https://www.adobe.com/go/profile-apis-jp).
 
-続行する前に、『[ プロファイル API 入門ガイド ](../api/getting-started.md)』で、推奨ドキュメントへのリンク、このドキュメントに表示される API 呼び出し例の読み方、Experience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+続行する前に、 [プロファイル API 入門ガイド](../api/getting-started.md) 推奨ドキュメントへのリンク、このドキュメントに表示される API 呼び出し例の読み方のガイド、および任意のExperience PlatformAPI を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
 
 ## 計算属性フィールドの設定
 
 計算済み属性を作成するには、まず、計算済み属性値を保持するスキーマ内のフィールドを識別する必要があります。
 
-スキーマで計算済み属性フィールドを作成するための完全なエンドツーエンドのガイドについては、[ 計算済み属性の設定 ](configure-api.md) に関するドキュメントを参照してください。
+詳しくは、 [計算済み属性の設定](configure-api.md) スキーマで計算済み属性フィールドを作成するための完全なエンドツーエンドのガイドを参照してください。
 
 >[!WARNING]
 >
@@ -40,9 +40,9 @@ ht-degree: 65%
 
 ## 計算済み属性の作成 {#create-a-computed-attribute}
 
-プロファイル対応スキーマで定義した計算済み属性フィールドを使用して、計算済み属性を設定できます。 まだ設定していない場合は、[ 計算済み属性の設定 ](configure-api.md) ドキュメントで説明されているワークフローに従ってください。
+プロファイル対応スキーマで定義した計算済み属性フィールドを使用して、計算済み属性を設定できます。 まだ実行していない場合は、 [計算済み属性の設定](configure-api.md) ドキュメント。
 
-計算済み属性を作成するには、まず、作成する計算済み属性の詳細を含むリクエスト本文を使用して、`/config/computedAttributes` エンドポイントにPOSTリクエストを送信します。
+計算済み属性を作成するには、まず `/config/computedAttributes` エンドポイント：作成する計算済み属性の詳細が含まれるリクエスト本文を持ちます。
 
 **API 形式**
 
@@ -61,13 +61,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "birthdayCurrentMonth",
-        "path" : "_{TENANT_ID}",
-        "description" : "Computed attribute to capture if the customer birthday is in the current month.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "person.birthDate.getMonth() = currentMonth()"
+        "name": "birthdayCurrentMonth",
+        "path": "_{TENANT_ID}",
+        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "person.birthDate.getMonth() = currentMonth()"
         },
         "schema": 
           {
@@ -83,7 +83,7 @@ curl -X POST \
 | `path` | 計算済み属性を含むフィールドへのパス。このパスは、スキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
 | `{TENANT_ID}` | テナント ID に慣れていない場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)で、テナント ID を見つける手順を参照してください。 |
 | `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。IMS 組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `expression.value` | 有効な [!DNL Profile Query Language] (PQL) 式。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、[PQL 式のサンプル ](expressions.md) のドキュメントを参照してください。 |
+| `expression.value` | 有効な [!DNL Profile Query Language] (PQL) 式を使用します。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、 [サンプル PQL 式](expressions.md) ドキュメント。 |
 | `schema.name` | 計算済み属性フィールドを含むスキーマの基となるクラス。例：XDM ExperienceEvent クラスに基づくスキーマの場合 `_xdm.context.experienceevent`。 |
 
 **応答** 
@@ -146,9 +146,9 @@ curl -X POST \
 | `type` | 作成されるリソースのタイプ。この場合は「ComputedAttribute」がデフォルト値です。 |
 | `createEpoch` および `updateEpoch` | 計算済み属性が作成された時刻と最後に更新された時刻。 |
 
-## 既存の計算済み属性を参照する計算済み属性の作成
+## 既存の計算済み属性を参照する計算済み属性を作成します
 
-既存の計算済み属性を参照する計算済み属性を作成することもできます。 そのためには、まず `/config/computedAttributes` エンドポイントにPOSTリクエストを送信します。 リクエスト本文には、次の例に示すように、`expression.value` フィールドに計算済み属性への参照が含まれます。
+既存の計算済み属性を参照する計算済み属性を作成することもできます。 これをおこなうには、まず `/config/computedAttributes` endpoint. リクエスト本文には、計算済み属性への参照が `expression.value` フィールドに値を入力します。
 
 **API 形式**
 
@@ -158,12 +158,12 @@ POST /config/computedAttributes
 
 **リクエスト**
 
-この例では、2 つの計算済み属性が既に作成されており、3 番目の属性を定義するために使用されます。 既存の計算済み属性は次のとおりです。
+この例では、2 つの計算済み属性が既に作成されており、3 番目の計算済み属性を定義するために使用されます。 既存の計算済み属性は次のとおりです。
 
-* **`totalSpend`:** 顧客が支払った合計ドル額を取り込みます。
-* **`countPurchases`:** 顧客が行った購入の数を数えます。
+* **`totalSpend`:** 顧客が支出した合計ドル額をキャプチャします。
+* **`countPurchases`:** 顧客が行った購入の数をカウントします。
 
-以下のリクエストは、2 つの既存の計算済み属性を参照し、有効な PQL を使用して新しい `averageSpend` 計算済み属性を計算します。
+以下のリクエストは、2 つの既存の計算済み属性を参照し、新しいを計算するために有効な PQL を使用して除算します `averageSpend` 計算済み属性。
 
 ```shell
 curl -X POST \
@@ -174,13 +174,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "averageSpend",
-        "path" : "_{TENANT_ID}.purchaseSummary",
-        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+        "name": "averageSpend",
+        "path": "_{TENANT_ID}.purchaseSummary",
+        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -196,7 +196,7 @@ curl -X POST \
 | `path` | 計算済み属性を含むフィールドへのパス。このパスは、スキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
 | `{TENANT_ID}` | テナント ID に慣れていない場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)で、テナント ID を見つける手順を参照してください。 |
 | `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。IMS 組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `expression.value` | 有効な PQL 式。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、[PQL 式のサンプル ](expressions.md) のドキュメントを参照してください。<br/><br/>この例では、式は 2 つの既存の計算済み属性を参照します。属性は、計算済み属性が定義されたスキーマに表示される計算済み属性の `path` と `name` を使用して参照されます。 例えば、最初に参照される計算済み属性の `path` は `_{TENANT_ID}.purchaseSummary` で、`name` は `totalSpend` です。 |
+| `expression.value` | 有効な PQL 式。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、 [サンプル PQL 式](expressions.md) ドキュメント。<br/><br/>この例では、式は 2 つの既存の計算済み属性を参照します。 属性は、 `path` そして `name` 計算済み属性が定義されたスキーマ内に表示される計算済み属性。 例えば、 `path` 最初に参照される計算済み属性の `_{TENANT_ID}.purchaseSummary` そして `name` が `totalSpend`. |
 | `schema.name` | 計算済み属性フィールドを含むスキーマの基となるクラス。例：XDM ExperienceEvent クラスに基づくスキーマの場合 `_xdm.context.experienceevent`。 |
 
 **応答** 
@@ -220,9 +220,9 @@ curl -X POST \
         "purchaseSummary"
     ],
     "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+    "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
@@ -278,10 +278,10 @@ curl -X POST \
 
 API を使用して計算済み属性を操作する場合、組織で定義された計算済み属性にアクセスするためのオプションは 2 つあります。1 つ目は、すべての計算済み属性をリストする方法、もう 1 つは、一意の `id` によって固有の計算済み属性を表示する方法です。
 
-両方のアクセスパターンの手順については、このドキュメントで説明します。 開始するには、次のいずれかを選択します。
+両方のアクセスパターンの手順については、このドキュメントで概要を説明します。 開始するには、次のいずれかを選択します。
 
-* **[既存のすべての計算済み属性のリスト](#list-all-computed-attributes):** 組織で作成した既存の計算済み属性のリストを返します。
-* **[特定の計算済み属性の表示](#view-a-computed-attribute):** リクエスト時に ID を指定して、単一の計算済み属性の詳細を返します。
+* **[既存の計算済み属性をすべてリスト](#list-all-computed-attributes):** 組織が作成したすべての既存の計算済み属性のリストを返します。
+* **[特定の計算済み属性の表示](#view-a-computed-attribute):** リクエスト時に ID を指定して、1 つの計算済み属性の詳細を返します。
 
 ### すべての計算済み属性のリスト {#list-all-computed-attributes}
 
@@ -308,7 +308,7 @@ curl -X GET \
 
 成功応答には、`_page` 属性が含まれ、計算済み属性（`totalCount`）の数とページ上の計算済み属性の数（`pageSize`）を提供します。
 
-応答には、1 つ以上のオブジェクトで構成される `children` 配列も含まれ、それぞれに 1 つの計算済み属性の詳細が含まれます。組織に計算済みの属性がない場合、`totalCount` と `pageSize` は 0（ゼロ）になり、`children` 配列は空になります。
+応答には、1 つ以上のオブジェクトで構成される `children` 配列も含まれ、それぞれに 1 つの計算済み属性の詳細が含まれます。計算済み属性が組織にない場合、 `totalCount` および `pageSize` は 0（ゼロ）で、 `children` 配列が空になります。
 
 ```json
 {
@@ -375,8 +375,8 @@ curl -X GET \
             ],
             "description": "Calculate total product downloads.",
             "expression": {
-                "type" : "PQL", 
-                "format" : "pql/text", 
+                "type": "PQL", 
+                "format": "pql/text", 
                 "value":  "let Y = xEvent[_coresvc.event.subType = \"DOWNLOAD\"].groupBy(_coresvc.attributes[name = \"product\"].value).map({
                   \"downloaded\": this.head()._coresvc.attributes[name = \"product\"].head().value,
                   \"downloadsSum\": this.count(),
@@ -423,7 +423,7 @@ curl -X GET \
 
 ### 計算済み属性の表示 {#view-a-computed-attribute}
 
-特定の計算済み属性を表示するには、`/config/computedAttributes` エンドポイントにGETリクエストを送信し、計算済み属性 ID をリクエストパスに含めます。
+特定の計算済み属性を表示するには、 `/config/computedAttributes` エンドポイントを作成し、計算済み属性 ID をリクエストパスに含めます。
 
 **API 形式**
 
@@ -524,8 +524,8 @@ curl -X PATCH \
           "path": "/expression",
           "value": 
           {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "{NEW_EXPRESSION_VALUE}"
           }
         }
@@ -534,7 +534,7 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | 有効な [!DNL Profile Query Language] (PQL) 式。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、[PQL 式のサンプル ](expressions.md) のドキュメントを参照してください。 |
+| `{NEW_EXPRESSION_VALUE}` | 有効な [!DNL Profile Query Language] (PQL) 式を使用します。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、 [サンプル PQL 式](expressions.md) ドキュメント。 |
 
 **応答** 
 
@@ -577,9 +577,9 @@ curl -X DELETE \
 
 Adobe Experience Platform を使用すると、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメントを作成できます。セグメント定義には、PQL で記述されたクエリをカプセル化する式が含まれます。 これらの式は、計算済み属性を参照することもできます。
 
-次の例では、既存の計算済み属性を参照するセグメント定義を作成します。 セグメント定義の詳細と、セグメント化サービス API での使用方法については、『[ セグメント定義 API エンドポイントガイド ](../../segmentation/api/segment-definitions.md)』を参照してください。
+次の例では、既存の計算済み属性を参照するセグメント定義を作成します。 セグメント定義と、セグメント化サービス API での使用方法について詳しくは、 [セグメント定義 API エンドポイントガイド](../../segmentation/api/segment-definitions.md).
 
-まず、`/segment/definitions` エンドポイントにPOSTリクエストを実行し、計算済み属性をリクエスト本文に指定します。
+まず、 `/segment/definitions` エンドポイント：リクエスト本文に計算済み属性を指定します。
 
 **API 形式**
 
@@ -617,7 +617,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | 文字列としてのセグメントの一意の名前。 |
+| `name` | セグメントの一意の名前（文字列）。 |
 | `description` | 人間が判読できる、定義の説明。 |
 | `schema.name` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
 | `expression` | セグメント定義に関する情報を含むフィールドを含むオブジェクト。 |
@@ -625,11 +625,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | 値内の式の構造を示します。現在は、`pql/text` のみがサポートされています。 |
 | `expression.value` | 有効な PQL 式。この例では、既存の計算済み属性への参照が含まれます。 |
 
-スキーマ定義属性の詳細については、『[ セグメント定義 API エンドポイントガイド ](../../segmentation/api/segment-definitions.md)』の例を参照してください。
+スキーマ定義属性の詳細については、 [セグメント定義 API エンドポイントガイド](../../segmentation/api/segment-definitions.md).
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。セグメント定義の応答オブジェクトについて詳しくは、[ セグメント定義 API エンドポイントガイド ](../../segmentation/api/segment-definitions.md) を参照してください。
+リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。セグメント定義の応答オブジェクトについて詳しくは、 [セグメント定義 API エンドポイントガイド](../../segmentation/api/segment-definitions.md).
 
 ```json
 {
