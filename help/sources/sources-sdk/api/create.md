@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
+keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
 solution: Experience Platform
-title: Create a new connection specification using the Flow Service API (Beta)
+title: フローサービス API（ベータ版）を使用して新しい接続仕様を作成します
 topic-legacy: tutorial
-description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
+description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、ソース SDK を使用して新しいソースを統合する手順を説明します。
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: baa5f95fc8155c6a3f6c2faab99182046f33f49a
+source-git-commit: 5af36c096a030c9f06c304f2c899ce49066ae4cb
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 3%
 
 ---
 
-# [!DNL Flow Service]
+# を使用して新しい接続仕様を作成します。 [!DNL Flow Service] API（ベータ版）
 
 >[!IMPORTANT]
 >
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+>ソース SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
 
-A connection specification represents the structure of a source. It contains information on a source&#39;s authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. `/connectionSpecs`[!DNL Flow Service]
+接続仕様は、ソースの構造を表します。 ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。 この `/connectionSpecs` エンドポイント [!DNL Flow Service] API を使用すると、組織内の接続仕様をプログラムで管理できます。
 
-[!DNL Flow Service]
+次のドキュメントでは、 [!DNL Flow Service] API を使用し、Sources SDK を使用して新しいソースを統合します。
 
 ## はじめに
 
-[](./getting-started.md)
+続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のExperience PlatformAPI を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
 
-## Collect artifacts
+## アーティファクトを収集
 
-[!DNL Sources SDK]****************
+を通じて新しいソースを作成する最初の手順 [!DNL Sources SDK] は、Adobeの担当者と調整し、ソースの対応する値を特定するために使用します **アイコン**, **説明**, **ラベル**、および **カテゴリ**.
 
-| Artifacts | 説明 | 例 |
+| アーティファクト | 説明 | 例 |
 | --- | --- | --- |
-| ラベル | The name of your source. | [!DNL MailChimp Members] |
-| 説明 | A brief description of your source. | [!DNL Mailchimp Members] |
-| アイコン | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| カテゴリ | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| ラベル | ソースの名前。 | [!DNL MailChimp Members] |
+| 説明 | ソースの簡単な説明。 | へのライブインバウンド接続を作成します [!DNL Mailchimp Members] インスタンスを使用して、履歴データとスケジュールされたデータの両方をExperience Platformに取り込みます。 |
+| アイコン | ソースを表す画像またはロゴ。 このアイコンは、ソースの Platform UI レンダリングに表示されます。 | `mailchimp-members-icon.svg` |
+| カテゴリ | ソースのカテゴリ。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Copy connection specification template
+## 接続仕様テンプレートをコピー
 
-`{}`
+必要なアーティファクトを収集したら、次の接続仕様テンプレートをコピーして任意のテキストエディターに貼り付け、ブラケットで属性を更新します `{}` 特定のソースに関連する情報を含む。
 
 ```json
 {
@@ -285,19 +285,19 @@ A connection specification represents the structure of a source. It contains inf
 }
 ```
 
-## Create a connection specification {#create}
+## 接続仕様の作成 {#create}
 
-Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source.
+接続仕様テンプレートを取得したら、ソースに対応する適切な値を入力して、新しい接続仕様の作成を開始できます。
 
-A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications.
+接続仕様は、次の 3 つの個別の部分に分割できます。認証仕様、ソース仕様、およびエクスプローラ仕様。
 
-See the following documents for instructions on how to populate the values of each part of a connection specification:
+接続仕様の各部分の値を入力する手順については、次のドキュメントを参照してください。
 
-* [Configure your authentication specification](../config/authspec.md)
-* [Configure your source specification](../config/sourcespec.md)
-* [Configure your explore specification](../config/explorespec.md)
+* [認証仕様の設定](../config/authspec.md)
+* [ソースの指定を構成します。](../config/sourcespec.md)
+* [エクスプローラの仕様を設定する](../config/explorespec.md)
 
-`/connectionSpecs`[!DNL Flow Service]
+仕様情報を更新したら、に対してPOST・リクエストを実行して、新しい接続仕様を発行できます。 `/connectionSpecs` エンドポイント [!DNL Flow Service] API
 
 **API 形式**
 
@@ -307,7 +307,7 @@ POST /connectionSpecs
 
 **リクエスト**
 
-[!DNL MailChimp]
+次のリクエストは、 [!DNL MailChimp] ソース：
 
 ```shell
 curl -X POST \
@@ -482,7 +482,7 @@ curl -X POST \
 
 **応答**
 
-`id`
+正常な応答は、新しく作成された接続仕様 ( 一意の `id`.
 
 ```json
 {
@@ -667,6 +667,6 @@ curl -X POST \
 
 ## 次の手順
 
-Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. [](./update-flow-specs.md)
+新しい接続仕様を作成したら、対応する接続仕様 ID を既存のフロー仕様に追加する必要があります。 に関するチュートリアルを参照してください。 [フロー仕様の更新](./update-flow-specs.md) を参照してください。
 
-[](./update-connection-specs.md)
+作成した接続仕様を変更するには、次のチュートリアルを参照してください。 [接続仕様の更新](./update-connection-specs.md).
