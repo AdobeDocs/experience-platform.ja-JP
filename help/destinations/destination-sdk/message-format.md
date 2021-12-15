@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 title: メッセージのフォーマット
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 2%
@@ -13,23 +13,23 @@ ht-degree: 2%
 
 ## 前提条件 — Adobe Experience Platformの概念 {#prerequisites}
 
-Adobe側のメッセージ形式、プロファイル設定および変換プロセスを理解するには、次のExperience Platformの概念を理解してください。
+Adobe側のメッセージ形式、プロファイル設定および変換プロセスを理解するには、次のExperience Platformの概念を把握してください。
 
-* **エクスペリエンスデータモデル (XDM)**&#x200B;を参照してください。[XDM の概](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) 要と  [Adobe Experience Platformでの XDM スキーマの作成方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)を参照してください。
-* **クラス**. [UI でクラスを作成および編集します](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en)。
-* **IdentityMap**&#x200B;を参照してください。ID マップは、Adobe Experience Platform内のすべてのエンドユーザー ID のマップを表します。 [XDM フィールドディクショナリ ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) の `xdm:identityMap` を参照してください。
-* **SegmentMembership**&#x200B;を参照してください。[segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。 `status` フィールドの 3 つの異なる値については、[Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html) に関するドキュメントをお読みください。
+* **エクスペリエンスデータモデル (XDM)**. [XDM の概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) および  [Adobe Experience Platformで XDM スキーマを作成する方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **クラス**. [UI でのクラスの作成と編集](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
+* **IdentityMap**. ID マップは、Adobe Experience Platformのすべてのエンドユーザー ID のマップを表します。 参照： `xdm:identityMap` 内 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+* **SegmentMembership**. この [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。 の `status` フィールドには、 [セグメントメンバーシップの詳細スキーマフィールドグループ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 ## 概要 {#overview}
 
-このページのコンテンツを、パートナーの宛先 ](./configuration-options.md) の残りの [ 設定オプションと共に使用します。 このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。 その他のページでは、宛先への接続と認証に関する詳細について説明します。
+このページのコンテンツを他の [パートナー宛先の設定オプション](./configuration-options.md). このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。 その他のページでは、宛先への接続と認証に関する詳細について説明します。
 
 Adobe Experience Platformは、様々なデータ形式で、大量の宛先にデータを書き出します。 宛先のタイプの例としては、広告プラットフォーム (Google)、ソーシャルネットワーク (Facebook)、クラウドストレージの場所 (Amazon S3、Azure Event Hubs) があります。
 
-Experience Platformは、書き出されたプロファイルのメッセージ形式を、お客様の側で期待される形式に合わせて調整できます。 このカスタマイズを理解するには、次の概念が重要です。
+Experience Platformは、書き出されたプロファイルのメッセージ形式を、想定される形式に合わせて調整できます。 このカスタマイズを理解するには、次の概念が重要です。
 * Adobe Experience Platformのソース (1) とターゲット (2) の XDM スキーマ
 * パートナー側 (3) で期待されるメッセージ形式
-* XDM スキーマと期待されるメッセージ形式の間の変換レイヤー。[ メッセージ変換テンプレート ](./message-format.md#using-templating) を作成して定義できます。
+* XDM スキーマと期待されるメッセージ形式の間の変換レイヤー。これは、 [メッセージ変換テンプレート](./message-format.md#using-templating).
 
 ![スキーマから JSON への変換](./assets/transformations-3-steps.png)
 
@@ -41,13 +41,13 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**ソース XDM スキーマ (1)**:この項目は、顧客がスキーマで使用するExperience Platformを指します。Experience Platformでは、宛先のアクティブ化ワークフローの [ マッピング手順 ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) で、顧客はソーススキーマのフィールドを宛先のターゲットスキーマにマッピングします (2)。
+**ソース XDM スキーマ (1)**:この項目は、顧客がスキーマで使用するExperience Platformを指します。 Experience Platform内、 [マッピング手順](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) 「宛先のアクティブ化」ワークフローで、ユーザーは、ソーススキーマのフィールドを宛先のターゲットスキーマにマッピングします (2)。
 
-**ターゲット XDM スキーマ (2)**:宛先で予想される形式の JSON 標準スキーマ (3) に基づいて、ターゲット XDM スキーマでプロファイル属性と ID を定義できます。これは、宛先の設定の [schemaConfig](./destination-configuration.md#schema-configuration) および [identityNamespaces](./destination-configuration.md#identities-and-attributes) オブジェクトでおこなえます。
+**Target XDM スキーマ (2)**:宛先で想定されている形式の JSON 標準スキーマ (3) に基づいて、ターゲット XDM スキーマでプロファイル属性と ID を定義できます。 これは、の宛先設定でおこなえます。 [schemaConfig](./destination-configuration.md#schema-configuration) および [identityNamespaces](./destination-configuration.md#identities-and-attributes) オブジェクト。
 
-**宛先プロファイル属性の JSON 標準スキーマ (3)**:この項目は、プラッ [トフ](https://json-schema.org/learn/miscellaneous-examples.html) ォームがサポートするすべてのプロファイル属性とそのタイプ ( 例：オブジェクト、文字列、配列 )。宛先でサポートされるフィールドの例は、`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName` などです。 Experience Platformから書き出したデータを、必要な形式に合わせて調整するには、[ メッセージ変換テンプレート ](./message-format.md#using-templating) が必要です。
+**宛先プロファイル属性の JSON 標準スキーマ (3)**:この項目は、 [JSON スキーマ](https://json-schema.org/learn/miscellaneous-examples.html) プラットフォームがサポートするすべてのプロファイル属性とそのタイプ ( 例：オブジェクト、文字列、配列 ) の形式を使用します。 例えば、宛先でサポートされるフィールドは次のようになります。 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`など。 次が必要です： [メッセージ変換テンプレート](./message-format.md#using-templating) を使用して、Experience Platformから書き出されたデータを、目的の形式に合わせて調整します。
 
-上記のスキーマ変換に基づいて、ソース XDM スキーマとパートナー側のサンプルスキーマとの間でプロファイル設定がどのように変化するかを以下に示します。
+上記のスキーマ変換に基づいて、ソース XDM スキーマとパートナー側のサンプルスキーマの間でプロファイル設定がどのように変化するかを次に示します。
 
 ![変換メッセージの例](./assets/transformations-with-examples.png)
 
@@ -56,11 +56,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## はじめに — 3 つの基本的な属性の変換 {#getting-started}
 
-次の例では、Adobe Experience Platformの 3 つの共通のプロファイル属性を使用して、プロファイル変換プロセスを示します。**名**、**姓**、**電子メールアドレス**。
+次の例では、Adobe Experience Platformの 3 つの一般的なプロファイル属性を使用して、プロファイル変換プロセスを示しています。 **名**, **姓**、および **電子メールアドレス**.
 
 >[!NOTE]
 >
->顧客は、[ 宛先ワークフローのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) の **マッピング** 手順で、ソース XDM スキーマの属性をAdobe Experience Platform UI のパートナー XDM スキーマにマッピングします。
+>顧客は、ソース XDM スキーマの属性を、Adobe Experience Platform UI のパートナー XDM スキーマにマッピングします ( **マッピング** 手順 [宛先ワークフローを有効化](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 プラットフォームが次のようなメッセージ形式を受信できるとします。
 
@@ -79,7 +79,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-メッセージ形式を考えると、対応する変換は次のようになります。
+メッセージ形式を考慮すると、対応する変換は次のようになります。
 
 | Adobe側のパートナー XDM スキーマの属性 | 変換 | 側の HTTP メッセージの属性 |
 |---------|----------|---------|
@@ -87,23 +87,23 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-## ID、属性、セグメントメンバーシップ変換に対するテンプレート言語の使用 {#using-templating}
+## ID、属性、セグメントメンバーシップの変換にテンプレート言語を使用する {#using-templating}
 
-Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様のテンプレート言語を使用して、XDM スキーマのフィールドを、宛先でサポートされる形式に変換します。
+Adobeでは、 [神社](https://jinja.palletsprojects.com/en/2.11.x/) を使用して、XDM スキーマのフィールドを、宛先でサポートされている形式に変換します。
 
-この節では、これらの変換がおこなわれる例をいくつか示します。入力 XDM スキーマから、テンプレートを介して、宛先で受け入れられるペイロード形式に出力する方法です。 以下の例は、次のように複雑さを増して示します。
+この節では、これらの変換の方法の例をいくつか示します。入力 XDM スキーマから、テンプレートを介して、宛先で受け入れられるペイロード形式に出力する方法です。 以下の例は、次のように複雑さを増すことで示しています。
 
-1. 単純な変換の例。 [ プロファイル属性 ](./message-format.md#attributes)、[ セグメントメンバーシップ ](./message-format.md#segment-membership)、[ID](./message-format.md#identities) フィールドの単純な変換でテンプレートがどのように機能するかを説明します。
-2. 上記のフィールドを組み合わせたテンプレートの複雑な例を増やしました。[ セグメントと ID を送信するテンプレートを作成 ](./message-format.md#segments-and-identities) および [ セグメント、ID、プロファイル属性を送信するテンプレートを作成 ](./message-format.md#segments-identities-attributes) します。
-3. 集計キーを含むテンプレート。 宛先の設定で [ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) を使用すると、Experience Platformは、セグメント ID、セグメントステータス、ID 名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化します。
+1. 単純な変換の例です。 テンプレートが、 [プロファイル属性](./message-format.md#attributes), [セグメントのメンバーシップ](./message-format.md#segment-membership)、および [ID](./message-format.md#identities) フィールド。
+2. 上記のフィールドを組み合わせたテンプレートの複雑な例を増やしました。 [セグメントと ID を送信するテンプレートの作成](./message-format.md#segments-and-identities) および [セグメント、ID およびプロファイル属性を送信するテンプレートの作成](./message-format.md#segments-identities-attributes).
+3. 集計キーを含むテンプレート。 を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) 宛先設定で、Experience Platformは、セグメント ID、セグメントステータス、id 名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
-書き出したプロファイル属性を宛先に変換するには、以下の JSON とコードサンプルを参照してください。
+宛先に書き出したプロファイル属性を変換するには、以下の JSON とコードサンプルを参照してください。
 
 >[!IMPORTANT]
 >
->Adobe Experience Platformで使用可能なすべてのプロファイル属性のリストについては、[XDM フィールドディクショナリ ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) を参照してください。
+>Adobe Experience Platformで使用可能なすべてのプロファイル属性の一覧については、 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
 **入力**
@@ -140,7 +140,7 @@ Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様の�
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -182,8 +182,8 @@ Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様の�
 
 ### セグメントのメンバーシップ {#segment-membership}
 
-[segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。
-`status` フィールドの 3 つの異なる値については、[Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html) に関するドキュメントをお読みください。
+この [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。
+の `status` フィールドには、 [セグメントメンバーシップの詳細スキーマフィールドグループ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 **入力**
 
@@ -238,7 +238,7 @@ Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様の�
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -297,7 +297,7 @@ Adobeは、[Jinjer](https://jinja.palletsprojects.com/en/2.11.x/) と同様の�
 
 ### ID {#identities}
 
-Experience Platformの ID について詳しくは、[ID 名前空間の概要 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja) を参照してください。
+Experience Platformの ID について詳しくは、 [ID 名前空間の概要](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja).
 
 **入力**
 
@@ -342,7 +342,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -412,7 +412,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 ### セグメントと ID を送信するテンプレートの作成 {#segments-and-identities}
 
 この節では、AdobeXDM スキーマとパートナー宛先スキーマの間でよく使用される変換の例を示します。
-次の例は、セグメントのメンバーシップと ID の形式を変換して、宛先に出力する方法を示しています。
+次の例では、セグメントのメンバーシップと ID の形式を変換し、宛先に出力する方法を示します。
 
 **入力**
 
@@ -480,7 +480,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -528,7 +528,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 **結果**
 
-以下の `json` は、Adobe Experience Platformから書き出されたデータを表しています。
+この `json` 以下に、Adobe Experience Platformから書き出されたデータを示します。
 
 ```json
 {
@@ -580,7 +580,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 この節では、AdobeXDM スキーマとパートナー宛先スキーマの間でよく使用される変換の例を示します。
 
-もう 1 つの一般的な使用例は、セグメントのメンバーシップ、ID( 例：電子メールアドレス、電話番号、広告 ID)、プロファイル属性。 この方法でデータをエクスポートするには、以下の例を参照してください。
+もう 1 つの一般的な使用例は、セグメントメンバーシップ ID（例： ）を含むデータを書き出す場合です。電子メールアドレス、電話番号、広告 ID) およびプロファイル属性。 この方法でデータをエクスポートするには、以下の例を参照してください。
 
 **入力**
 
@@ -662,7 +662,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -720,7 +720,7 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 **結果**
 
-以下の `json` は、Adobe Experience Platformから書き出されたデータを表しています。
+この `json` 以下に、Adobe Experience Platformから書き出されたデータを示します。
 
 ```json
 {
@@ -776,21 +776,21 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 }
 ```
 
-### テンプレートに集計キーを含めて、様々な条件でグループ化してエクスポートされたプロファイルにアクセスします。 {#template-aggregation-key}
+### テンプレートに集計キーを含めて、様々な条件でグループ化されてエクスポートされたプロファイルにアクセスします {#template-aggregation-key}
 
-宛先の設定で [ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) を使用すると、セグメント ID、セグメントエイリアス、セグメントメンバーシップ、ID 名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化できます。
+を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) 宛先設定で、セグメント ID、セグメントエイリアス、セグメントメンバーシップ、id 名前空間などの条件に基づいて、宛先に書き出したプロファイルをグループ化できます。
 
-メッセージ変換テンプレートでは、次の節の例に示すように、上記の集計キーにアクセスできます。 集計キーを使用して、Experience Platformからエクスポートされる HTTP メッセージを構造化し、宛先で予想される形式とレート制限に一致するようにします。
+メッセージ変換テンプレートでは、次の節の例に示すように、上記の集計キーにアクセスできます。 集計キーを使用して、宛先で想定される形式とレート制限に一致するように、Experience Platformから書き出された HTTP メッセージを構造化します。
 
-#### テンプレートでのセグメント ID 集計キーの使用 {#aggregation-key-segment-id}
+#### テンプレートでセグメント ID 集計キーを使用 {#aggregation-key-segment-id}
 
-[ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) を使用し、`includeSegmentId` を true に設定した場合、宛先に書き出される HTTP メッセージ内のプロファイルはセグメント ID でグループ化されます。 以下で、テンプレートのセグメント ID にアクセスする方法を参照してください。
+次を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) および設定 `includeSegmentId` を true に設定すると、宛先に書き出される HTTP メッセージ内のプロファイルは、セグメント ID でグループ化されます。 以下で、テンプレートのセグメント ID へのアクセス方法を参照してください。
 
 **入力**
 
-次の 4 つのプロファイルについて考えてみましょう。
-* 最初の 2 つは、セグメント ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` を持つセグメントの一部です。
-* 3 つ目のプロファイルは、セグメント ID `8f812592-3f06-416b-bd50-e7831848a31a` を持つセグメントの一部です。
+以下の 4 つのプロファイルについて考えてみましょう。
+* 最初の 2 つは、セグメント ID を持つセグメントの一部です `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* 3 番目のプロファイルは、セグメント ID を持つセグメントの一部です `8f812592-3f06-416b-bd50-e7831848a31a`
 * 4 つ目のプロファイルは、上記の両方のセグメントの一部です。
 
 プロファイル 1:
@@ -881,9 +881,9 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-次に、テンプレートで `audienceId` がセグメント ID にアクセスする方法を示します。 この例では、宛先の分類でセグメントメンバーシップに `audienceId` を使用していることを前提としています。 独自の分類に応じて、他の任意のフィールド名を代わりに使用できます。
+以下に、 `audienceId` は、セグメント ID にアクセスするためにテンプレートで使用されます。 この例では、 `audienceId` を使用します。 独自の分類に応じて、他のフィールド名を代わりに使用できます。
 
 ```python
 {
@@ -933,35 +933,35 @@ Experience Platformの ID について詳しくは、[ID 名前空間の概要 ]
 }
 ```
 
-#### テンプレートでのセグメントエイリアス集計キーの使用 {#aggregation-key-segment-alias}
+#### テンプレートでセグメントエイリアス集計キーを使用 {#aggregation-key-segment-alias}
 
-[ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) を使用し、`includeSegmentId` を true に設定した場合は、テンプレートのセグメントエイリアスにアクセスすることもできます。
+次を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) および設定 `includeSegmentId` を true に設定すると、テンプレートのセグメントエイリアスにアクセスすることもできます。
 
-テンプレートの下に行を追加して、セグメントエイリアスでグループ化されてエクスポートされたプロファイルにアクセスします。
+テンプレートに以下の行を追加して、セグメントエイリアスでグループ化された書き出されたプロファイルにアクセスします。
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### テンプレートでのセグメントステータス集計キーの使用 {#aggregation-key-segment-status}
+#### テンプレートでセグメントステータス集計キーを使用 {#aggregation-key-segment-status}
 
-[ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) を使用し、`includeSegmentId` と `includeSegmentStatus` を true に設定した場合は、テンプレートのセグメントのステータスにアクセスできます。 この方法では、宛先に書き出された HTTP メッセージ内のプロファイルを、プロファイルをセグメントに追加するか、セグメントから削除するかに基づいてグループ化できます。
+次を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) および設定 `includeSegmentId` および `includeSegmentStatus` を true に設定すると、テンプレートのセグメントステータスにアクセスできます。 これにより、プロファイルをセグメントに追加またはセグメントから削除するかに基づいて、宛先に書き出された HTTP メッセージ内のプロファイルをグループ化できます。
 
 次のような値を選択できます。
 
 * 実現
 * 既存
-* 出口
+* 終了
 
-上記の値に基づいて、テンプレートに下の行を追加し、セグメントに対してプロファイルを追加または削除します。
+上記の値に基づいて、以下の行をテンプレートに追加し、セグメントに対してプロファイルを追加または削除します。
 
 ```python
 action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
-#### テンプレートで ID 名前空間集計キーを使用する {#aggregation-key-identity}
+#### テンプレートで ID 名前空間集計キーを使用 {#aggregation-key-identity}
 
-次の例では、宛先設定の [ 設定可能な集計 ](./destination-configuration.md#configurable-aggregation) が、書き出されたプロファイルを ID 名前空間別に `"namespaces": ["email", "phone"]` および `"namespaces": ["GAID", "IDFA"]` の形式で集計するように設定されています。 このグループ化について詳しくは、[ 宛先設定 API リファレンス ](./destination-configuration-api.md) の `groups` パラメーターを参照してください。
+以下は、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) の宛先設定は、書き出されたプロファイルを id 名前空間別に集計するように、フォーム内で集計するように設定されます。 `"namespaces": ["email", "phone"]` および `"namespaces": ["GAID", "IDFA"]`. 詳しくは、 `groups` パラメーター [宛先設定 API リファレンス](./destination-configuration-api.md) を参照してください。
 
 **入力**
 
@@ -1033,9 +1033,9 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 >[!IMPORTANT]
 >
->使用するすべてのテンプレートに対して、[ 宛先サーバー設定 ](./server-and-template-configuration.md#template-specs) にテンプレートを挿入する前に、二重引用符 `""` などの無効な文字をエスケープする必要があります。 二重引用符のエスケープについて詳しくは、[JSON 標準 ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) の第 9 章を参照してください。
+>使用するすべてのテンプレートに対して、二重引用符などの不正な文字をエスケープする必要があります `""` テンプレートを [宛先サーバーの設定](./server-and-template-configuration.md#template-specs). 二重引用符のエスケープについて詳しくは、 [JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-`input.aggregationKey.identityNamespaces` は以下のテンプレートで使用されています。
+次の点に注意してください。 `input.aggregationKey.identityNamespaces` は、以下のテンプレートで使用されています
 
 ```python
 {
@@ -1109,25 +1109,25 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### URL テンプレートでの集計キーの使用 {#aggregation-key-url-template}
 
-使用事例に応じて、以下に示すように、ここに記載されている集計キーも URL で使用できます。
+使用事例に応じて、次に示すように、URL にここに記載されている集計キーも使用できます。
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 ```
 
-### リファレンス：変換テンプレートで使用されるコンテキストと関数 {#reference}
+### 参照：変換テンプレートで使用されるコンテキストと関数 {#reference}
 
-テンプレートに指定したコンテキストには、`input`（この呼び出しで書き出されるプロファイル/データ）と `destination`(Adobeがデータを送信する宛先に関するデータ。すべてのプロファイルで有効 ) が含まれます。
+テンプレートに指定されたコンテキストにはが含まれます `input`  （この呼び出しで書き出されるプロファイル/データ）および `destination` (Adobeがデータを送信する宛先に関するデータ。すべてのプロファイルで有効 )。
 
-次の表に、上記の例の関数の説明を示します。
+以下の表では、上記の例に含まれる関数の説明を示します。
 
 | 関数 | 説明 |
 |---------|----------|
-| `input.profile` | プロファイル。[JsonNode](http://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) で表されます。 このページで後述するパートナー XDM スキーマに従います。 |
+| `input.profile` | プロファイル。 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). このページで後述するパートナー XDM スキーマに従います。 |
 | `destination.segmentAliases` | Adobe Experience Platform名前空間のセグメント ID からパートナーのシステムのセグメントエイリアスにマッピングします。 |
-| `destination.segmentNames` | Adobe Experience Platform名前空間のセグメント名からパートナーのシステムのセグメント名にマッピングします。 |
-| `addedSegments(listOfSegments)` | ステータス `realized` または `existing` を持つセグメントのみを返します。 |
-| `removedSegments(listOfSegments)` | ステータス `exited` を持つセグメントのみを返します。 |
+| `destination.segmentNames` | Adobe Experience Platform名前空間内のセグメント名からパートナーのシステム内のセグメント名にマッピングします。 |
+| `addedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `realized` または `existing`. |
+| `removedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `exited`. |
 
 <!--
 

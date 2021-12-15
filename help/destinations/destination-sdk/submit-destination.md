@@ -1,9 +1,10 @@
 ---
 description: このページでは、Destination SDKを使用して作成した宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: Destination SDKで作成した宛先を確認用に送信
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト）
 
 独立系ソフトウェアベンダー (ISV) またはシステムインテグレータ (SI) の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md) をクリックして、目的の宛先に関する製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト (PR) を提供します。
-
-既存の統合パートナーの PR の例を次に示します。
-* [Yahoo 宛先ドキュメント PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [飛行船の宛先ドキュメント PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## 宛先のロゴ
 
