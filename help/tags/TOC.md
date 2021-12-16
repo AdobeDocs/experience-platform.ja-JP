@@ -4,10 +4,10 @@ user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
-source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 100%
+source-wordcount: '382'
+ht-degree: 99%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 100%
 * イベントの転送 {#event-forwarding}
    * [概要](./ui/event-forwarding/overview.md)
    * [はじめに](./ui/event-forwarding/getting-started.md)
-   * [秘密鍵](./ui/event-forwarding/secrets.md)
+   * [シークレットの設定](./ui/event-forwarding/secrets.md)
 * 管理 {#admin}
    * [概要](./ui/administration/overview.md)
    * [会社とプロパティ](./ui/administration/companies-and-properties.md)
