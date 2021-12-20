@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google AdWords;google adwords
+keywords: Experience Platform；ホーム；人気の高いトピック；Google AdWords;google adwords
 solution: Experience Platform
-title: Google AdWords ソースコネクタの概要
+title: Google AdWords ソースの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してGoogle AdWords をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: fa3b83372db557d7f0aed16303cef4124c7dd897
+source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 9%
+source-wordcount: '240'
+ht-degree: 10%
 
 ---
 
-# [!DNL Google AdWords] コネクタ
+# [!DNL Google AdWords] ソース
 
 >[!NOTE]
 >
->[!DNL Google AdWords] コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ ソースの概要 ](../../home.md#terms-and-conditions)」を参照してください。
+>この [!DNL Google AdWords] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
-Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込みながら、 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。広告プロバイダーのサポートは [!DNL Google AdWords] です。
+[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込む機能を備えています。 広告プロバイダーのサポートは次のとおりです。 [!DNL Google AdWords].
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、 [IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
 
-## [!DNL Google AdWords] を Platform に接続
+## 接続 [!DNL Google AdWords] Platform へ
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Google AdWords] を Platform に接続する方法について説明します。
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Google AdWords] API またはユーザーインターフェイスを使用して Platform に接続するには、次の手順を実行します。
 
 ### API の使用
 
