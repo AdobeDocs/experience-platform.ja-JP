@@ -2,7 +2,7 @@
 title: Reactor API の概要
 description: 必要なアクセス認証情報を生成する手順など、Reactor API の使用を開始する方法について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## Adobe Experience Platform への開発者のアクセス
 
-Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)の最初の手順に従ってください。「Adobe Developer Console でアクセス認証情報を生成する」の手順に進んだら、このチュートリアルに戻って Reactor API に固有の認証情報を生成します。
+Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)の最初の手順に従ってください。「Adobe Developer Console でアクセス認証情報を生成する」の手順に進んだら、このチュートリアルに戻って Reactor API に固有の認証情報を生成します。
 
 ## アクセス認証情報の生成
 

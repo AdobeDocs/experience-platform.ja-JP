@@ -4,7 +4,7 @@ title: 同意および環境設定のデータタイプ
 description: プライバシー、パーソナライゼーション、マーケティング環境設定に関する同意のデータ型は、お客様のデータ操作から、CMP（同意管理プラットフォーム）およびその他のソースで生成される顧客の権限と設定を収集できるようにするものです。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 このドキュメントでは、XDM と、 [!DNL Experience Platform]. 続行する前に、次のドキュメントを確認してください。
 
-* [XDM システムの概要](http://www.adobe.com/go/xdm-home-en)
-* [スキーマ構成の基本](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM システムの概要](https://www.adobe.com/go/xdm-home-en)
+* [スキーマ構成の基本](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## データタイプの構造 {#structure}
 
@@ -255,7 +255,7 @@ ht-degree: 2%
 
 を使用するには、 [!UICONTROL 同意および環境設定] データタイプを使用して顧客から同意データを取り込むには、そのデータタイプを含むスキーマに基づいてデータセットを作成する必要があります。
 
-に関するチュートリアルを参照してください。 [UI でのスキーマの作成](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) を参照してください。 以下の手順で、 [!UICONTROL 同意および環境設定] データタイプについては、 [データセットの作成](../../catalog/datasets/user-guide.md#create) データセットユーザーガイドの手順に従って、既存のスキーマを使用してデータセットを作成します。
+に関するチュートリアルを参照してください。 [UI でのスキーマの作成](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) を参照してください。 以下の手順で、 [!UICONTROL 同意および環境設定] データタイプについては、 [データセットの作成](../../catalog/datasets/user-guide.md#create) データセットユーザーガイドの手順に従って、既存のスキーマを使用してデータセットを作成します。
 
 >[!IMPORTANT]
 >

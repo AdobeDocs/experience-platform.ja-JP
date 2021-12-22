@@ -4,7 +4,7 @@ title: 同意および環境設定スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「同意」および「環境設定」スキーマフィールドグループの概要を説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 を使用するには、 [!UICONTROL 同意および環境設定] フィールドグループを使用して、お客様の同意データを取り込むには、そのフィールドグループを含むスキーマに基づいたデータセットを作成する必要があります。
 
-に関するチュートリアルを参照してください。 [UI でのスキーマの作成](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) フィールドグループをフィールドに割り当てる手順については、を参照してください。 以下の手順で、 [!UICONTROL 同意および環境設定] フィールドグループ ( [データセットの作成](../../../catalog/datasets/user-guide.md#create) データセットユーザーガイドの手順に従って、既存のスキーマを使用してデータセットを作成します。
+に関するチュートリアルを参照してください。 [UI でのスキーマの作成](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) フィールドグループをフィールドに割り当てる手順については、を参照してください。 以下の手順で、 [!UICONTROL 同意および環境設定] フィールドグループ ( [データセットの作成](../../../catalog/datasets/user-guide.md#create) データセットユーザーガイドの手順に従って、既存のスキーマを使用してデータセットを作成します。
 
 >[!IMPORTANT]
 >
