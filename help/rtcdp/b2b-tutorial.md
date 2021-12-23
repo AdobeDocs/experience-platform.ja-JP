@@ -5,9 +5,9 @@ title: Real-time Customer Data Platform B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のサンプルシナリオを使用します。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1205'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 97%
 初期セットアップの一環として、Bodea の IT 部門は、Platform に取り込む際にデータが標準形式に従い、様々な Platform サービスや Adobe Experience Cloud 製品（Adobe Analytics や Adobe Target など）をまたいでそれらのデータを行動につなげられるようにする XDM スキーマを作成する必要があります。
 
 >!![WARNING]
-このチュートリアル全体でリンクされている関連ソースドキュメントに記載されているように、取り込みパターンに従う必要があります。 その他のフィールドマッピングメソッドは、必ずしも機能するとは限りません。
+このチュートリアル全体を通じてリンクされている関連ソースのドキュメントに記載しているように、取り込みパターンに従う必要があります。その他のフィールドマッピングメソッドは、動作を保証するものではありません。
 
 Adobe Experience Platform を使用すると、B2B データソースに必要なスキーマと名前空間を自動的に生成できます。このツールは、作成されたスキーマが構造的に再利用可能な方法でデータを記述していることを保証します。セットアッププロセスの完全なリファレンスについては、[B2B 名前空間とスキーマ自動生成ユーティリティのドキュメント](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) に従ってください。
 
