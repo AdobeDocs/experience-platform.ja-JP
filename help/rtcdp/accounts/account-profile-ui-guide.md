@@ -4,9 +4,9 @@ title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1193'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->アカウントプロファイルは、Real-time Customer Data Platform B2B Edition をご利用のお客様のみが利用できます。 各ライセンスタイプで使用できる機能など、Real-time CDP について詳しくは、まず[Real-time CDP の概要](../overview.md)を参照してください。
+>アカウントプロファイルは、Real-time Customer Data Platform B2B Edition をご利用のお客様のみが利用できます。 各ライセンスタイプで使用できる機能など、Real-time CDP について詳しくは、まず [Real-time CDP の概要](../overview.md)を参照してください。
 
 アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 この統一されたアカウントビューは、多くのマーケティングチャネルや、顧客のアカウント情報を保存するために組織が現在使用している多様なシステムからのデータを統合します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイス（UI）で使用できる Real-time CDP、B2B Edition 機能を使用してアカウントプロファイルを操作するためのガイドです。
 
-B2B ワークフローの一部としてアカウントプロファイルを作成する方法について詳しくは、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md).
+B2B ワークフローの一部としてアカウントプロファイルを作成する方法について詳しくは、[エンドツーエンドのチュートリアル](../b2b-tutorial.md)を参照してください。
 
 ## アカウントプロファイルの参照
 
