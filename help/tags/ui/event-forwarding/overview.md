@@ -3,7 +3,7 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 12%
@@ -38,7 +38,7 @@ Adobe Experience Platformと組み合わされたイベント転送 [Web SDK](..
 
 * 透明性を高め、どのデータをどこに送信するかをすべてのプロパティにわたって制御します。
 
-## イベント転送とタグの違い
+## イベント転送とタグの違い {#differences-from-tags}
 
 設定に関して、イベント転送ではタグと同じ概念の多くを使用します。例えば、 [ルール](../managing-resources/rules.md), [データ要素](../managing-resources/data-elements.md)、および [拡張機能](../managing-resources/extensions/overview.md). この 2 つの主な違いは、次のように要約できます。
 
@@ -47,7 +47,7 @@ Adobe Experience Platformと組み合わされたイベント転送 [Web SDK](..
 
 タグは Platform Web および Mobile SDK を使用してサイトまたはネイティブモバイルアプリケーションから直接イベントデータを収集しますが、イベント転送は、イベントデータを宛先に転送するために、Platform Edge Network を介して既に送信されている必要があります。 つまり、イベント転送を使用するには、デジタルプロパティに Platform Web または Mobile SDK を（タグを通じてまたは生のコードを使用して）実装する必要があります。
 
-### プロパティ
+### プロパティ {#properties}
 
 イベント転送は、タグとは別に独自のプロパティストアを維持します。このプロパティは、データ収集 UI で「 **[!UICONTROL イベント転送]** をクリックします。
 
@@ -61,13 +61,13 @@ Adobe Experience Platformと組み合わされたイベント転送 [Web SDK](..
 
 ![データ収集 UI のイベント転送拡張機能](../../images/ui/event-forwarding/overview/extensions.png)
 
-### データ要素
+### データ要素 {#data-elements}
 
 イベント転送で使用できるデータ要素のタイプは、互換性のあるのカタログに制限されています [拡張機能](#extensions) それが彼らを提供する
 
 データ要素自体は、タグの場合と同様にイベント転送で作成および設定されますが、Platform Edge Network からのデータの参照方法に関しては、いくつかの重要な構文上の違いがあります。
 
-#### Platform Edge Network からのデータの参照
+#### Platform Edge Network からのデータの参照 {#edge}
 
 Platform Edge Network からデータを参照するには、そのデータへの有効なパスを提供するデータ要素を作成する必要があります。 UI でデータ要素を作成する場合は、「 **[!UICONTROL コア]** 拡張機能と **[!UICONTROL パス]** の値を指定します。
 
@@ -75,23 +75,23 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 
 ![イベント転送のパスタイプデータ要素の例](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### ルール
+### ルール {#rules}
 
 イベント転送プロパティでのルールの作成は、タグと同様の方法で動作します。重要な違いは、イベントをルールコンポーネントとして選択できない点です。 代わりに、イベント転送ルールは、 [datastream](../../../edge/fundamentals/datastreams.md) およびは、特定の条件が満たされた場合、これらのイベントを宛先に転送します。
 
 ![データ収集 UI のイベント転送ルール](../../images/ui/event-forwarding/overview/rules.png)
 
-#### データ要素のトークン化
+#### データ要素のトークン化 {#tokenization}
 
 タグルールでは、データ要素は `%` データ要素名の先頭と末尾（例： ） `%viewportHeight%`) をクリックします。 イベント転送ルールでは、データ要素は、代わりに `{{` 最初に `}}` データ要素名の末尾に配置する ( 例： `{{viewportHeight}}`) をクリックします。
 
 ![イベント転送のパスタイプデータ要素の例](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### 一連のルールアクション
+#### 一連のルールアクション {#action-sequencing}
 
 この [!UICONTROL アクション] イベント転送ルールの「 」セクションは、常に順番に実行されます。 ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグを使用できるのと同様に、非同期で実行することはできません。
 
-## 秘密鍵
+## 秘密鍵 {#secrets}
 
 イベント転送を使用すると、データの送信先のサーバーへの認証に使用できる秘密鍵を作成、管理、保存できます。 詳しくは、 [秘密](./secrets.md) 様々な種類の使用可能な秘密鍵のタイプと、UI での実装方法について説明します。
 
