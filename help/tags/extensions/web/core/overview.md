@@ -2,10 +2,10 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: ht
-source-wordcount: '5362'
-ht-degree: 100%
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
+workflow-type: tm+mt
+source-wordcount: '5492'
+ht-degree: 96%
 
 ---
 
@@ -128,9 +128,13 @@ focus イベントは、フォームがフォーカスを取得したときの�
 
 指定したデータ要素が変更されると、イベントをトリガーします。データ要素の名前を指定する必要があります。 データ要素を選択するには、テキストフィールドにその名前を入力するか、テキストフィールドの右側にあるデータ要素アイコンを選択し、表示されるダイアログ内のリストから選択します。
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-ダイレクトコールイベントは、イベント検出と参照システムをバイパスします。 ダイレクトコールルールは、Platform に対して何が行われるかを正確に伝えたい場合に最適です。また、Adobe Flash を使用しているなど、Platform が DOM でイベントを検出できない場合にも最適です。識別子テキストフィールドに `_satellite.track` 文字列を指定します。
+ダイレクトコールイベントは、イベント検出とルックアップシステムをバイパスします。 ダイレクト型ルールは、システムに対して、何がおこなわれるかを正確に伝えたい場合に最適です。 また、システムが DOM でイベントを検出できない場合にも最適です。
+
+ダイレクト型イベントを定義する場合、このイベントの識別子として機能する文字列を指定する必要があります。 次の場合、 [トリガーの直接呼び出しアクション](#direct-call-action) 同じ識別子を含めたが実行されると、その識別子をリスンするダイレクト型イベントルールが実行されます。
+
+![データ収集 UI での直接呼び出しイベントのスクリーンショット](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -520,7 +524,7 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 条件が true を返す最大回数を指定します。選択できる項目は次のとおりです。
 
 * Page view
-* Sessions
+* セッション
 * Visitor
 * Seconds
 * Minutes
@@ -588,7 +592,7 @@ Core 拡張機能は、すべての Adobe Experience Platform ユーザーが使
 
 *JavaScript*
 
-JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
+JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
 
 >[!NOTE]
 >
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### トリガーダイレクト型 {#direct-call-action}
+
+このアクションは、特定の [ダイレクト型イベント](#direct-call-event). アクションを設定する際に、トリガーするダイレクト型イベントの識別子文字列を指定する必要があります。 オプションで、 `detail` オブジェクト。キーと値のペアのカスタムセットを含めることができます。
+
+![データ収集 UI でのトリガーの直接呼び出しアクションのスクリーンショット](../../../images/extensions/core/direct-call-action.png)
+
+アクションは、 [`track` メソッド](../../../ui/client-side/satellite-object.md?lang=en#track) 内 `satellite` オブジェクト。クライアントサイドコードからアクセスできます。
 
 ## Core 拡張機能データ要素のタイプ
 
@@ -787,7 +799,7 @@ CSS セレクターチェーン：
 * URL
 * Hostname
 * Pathname
-* Protocol
+* プロトコル
 * リファラー
 * Title
 

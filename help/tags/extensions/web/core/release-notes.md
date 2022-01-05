@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 100%
+source-wordcount: '1565'
+ht-degree: 98%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2022 年 1 月 4 日（PT）
+
+v3.3.0
+
+* を変更します。 [トリガーの直接呼び出しアクション](./overview.md#direct-call-action) を使用して、ダイレクト型ルールに送信するカスタムイベント情報を指定できます。
 
 ## 2021年10月8日（PT）
 
