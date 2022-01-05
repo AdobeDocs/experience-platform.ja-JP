@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリサービス；クエリ例；クエリ例；Adobe Analytics;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ例；クエリ例；クエリ例； adobe analytics;
 solution: Experience Platform
-title: Adobe Analyticsデータのクエリ例
+title: Adobe Analytics Data のクエリ例
 topic-legacy: queries
 description: 選択した Adobe Analytics レポートスイートのデータは XDM ExperienceEvents に変換され、データセットとして Adobe Experience Platform に取得されます。このドキュメントでは、Adobe Experience Platform クエリサービスがこのデータを利用する多くの使用例を説明し、付属のクエリ例が Adobe Analytics データセットと連携するようにします。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 58%
+source-wordcount: '1052'
+ht-degree: 57%
 
 ---
 
 # Adobe Analytics データのクエリ例
 
-選択したAdobe Analyticsレポートスイートのデータは、 [!DNL XDM ExperienceEvent] クラスに準拠したデータに変換され、データセットとしてAdobe Experience Platformに取り込まれます。
+選択したAdobe Analyticsレポートスイートのデータは、 [!DNL XDM ExperienceEvent] クラスを使用し、Adobe Experience Platformにデータセットとして取り込みました。
 
-このドキュメントでは、Adobe Experience Platform [!DNL Query Service] がこのデータを利用する多くの使用例を説明します。例えば、サンプルクエリがAdobe Analyticsデータセットと連携する必要があります。 [!DNL Experience Events] へのマッピングについて詳しくは、[Analytics フィールドマッピング ](../../sources/connectors/adobe-applications/mapping/analytics.md) のドキュメントを参照してください。
+このドキュメントでは、Adobe Experience Platformの様々な使用例の概要を説明します [!DNL Query Service] は、このデータを使用します。このデータには、サンプルクエリを含め、Adobe Analyticsデータセットと連携させる必要があります。 詳しくは、 [Analytics フィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md) マッピングの詳細 [!DNL Experience Events].
 
 ## はじめに
 
@@ -118,6 +118,10 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
+## 重複の除外
+
+Adobe Experience Platformクエリサービスは、データの重複排除をサポートしています。 詳しくは、 [クエリサービスドキュメントのデータ重複排除](./deduplication.md) を参照してください。 [!DNL Experience Event] データセット。
+
 ## マーチャンダイジング変数（製品構文）
 
 
@@ -125,11 +129,11 @@ ORDER BY Hour;
 
 Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特別に設定された変数を使用して、カスタムの製品レベルのデータを収集できます。 これらは、イベントまたはカスタムeVarに基づいています。 これらの変数とその標準的な使用法の違いは、ヒットの単一の値ではなく、ヒットの各製品の個別の値を表すという点です。
 
-これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引金額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
+これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
-製品の構文の使用について詳しくは、[ 製品の構文 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax) を使用した eVar の実装に関するAdobe Analyticsのドキュメントを参照してください。
+製品構文の使用方法の詳細については、 Adobe Analyticsのドキュメントを参照してください。 [製品構文を使用した eVar の実装](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
-以下の節では、[!DNL Analytics] データセット内のマーチャンダイジング変数にアクセスするために必要な XDM フィールドの概要を説明します。
+以下の節では、 [!DNL Analytics] データセット：
 
 #### eVar
 
@@ -165,7 +169,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-次のクエリでは、`productListItems` 配列を調査し、製品ごとの各マーチャンダイジングeVarとイベントを返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。`_id` 値は、データセットの一意のプライマリキーです。
+次のクエリでは、 `productListItems` 配列を返します。また、製品ごとの各マーチャンダイジングeVarとイベントを返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。この `_id` の値は、データセットの一意のプライマリキーです。
 
 ```sql
 SELECT
@@ -196,7 +200,7 @@ LIMIT 20
 
 ### コンバージョン構文
 
-Adobe Analyticsにある別のタイプのマーチャンダイジング変数は、コンバージョン構文です。 製品の構文を使用すると、値は製品と同時に収集されますが、同じページにデータが存在する必要があります。 製品に関連するコンバージョンや関心のあるイベントの前に、ページでデータが発生するシナリオがあります。例えば、製品検索方法のユースケースを考えてみましょう。
+Adobe Analyticsにある別のタイプのマーチャンダイジング変数は、コンバージョン構文です。 製品の構文を使用すると、値は製品と同時に収集されますが、そのためにはデータが同じページに存在する必要があります。 製品に関連するコンバージョンや関心のあるイベントの前に、ページでデータが発生するシナリオがあります。例えば、製品検索方法の使用例を考えてみましょう。
 
 1. ユーザーが「冬帽子」の内部検索を実行し、コンバージョン構文が有効なマーチャンダイジング eVar6 を「内部検索:冬帽子」に設定します。
 2. ユーザーが「ワッフルビーニー」をクリックし、製品の詳細ページに移動します。\
@@ -212,14 +216,14 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 レポートでは、注文件数、売上高、製品表示数、買い物かごへの追加数が eVar6 に対してレポートされ、連結された製品のアクティビティに合わせて調整されます。
 
-| eVar6 （製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
+| eVar6 （製品の検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
 | 内部検索：冬帽子 | 12.99 | 1 | 1 | 1 |
 
-変換構文の使用について詳しくは、[ 変換構文 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax) を使用した eVar の実装に関するAdobe Analyticsのドキュメントを参照してください。
+変換構文の使用方法の詳細については、 Adobe Analyticsのドキュメント ( [コンバージョン構文を使用した eVar の実装](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-[!DNL Analytics] データセットに変換構文を生成する XDM フィールドを次に示します。
+次に、 [!DNL Analytics] データセット：
 
 #### eVar
 
