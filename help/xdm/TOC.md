@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル (XDM) クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 29%
+source-wordcount: '405'
+ht-degree: 37%
 
 ---
 
@@ -18,28 +18,29 @@ ht-degree: 29%
 * スキーマ {#schema}
    * [スキーマ合成の基本](schema/composition.md)
    * [データモデリングのベストプラクティス](schema/best-practices.md)
+   * [機密データと個人データ](./schema/sensitive-and-personal-data.md)
    * [XDM フィールドタイプ制約](schema/field-constraints.md)
    * [XDM での名前空間](./schema/namespaces.md)
-   * [XDM フィールドディクショナリ](schema/field-dictionary.md)
    * 業界のデータモデル {#industries}
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
       * [金融サービス](./schema/industries/financial.md)
       * [通信業](./schema/industries/telecom.md)
       * [旅行と接客](./schema/industries/travel-hospitality.md)
+   * [XDM フィールドディクショナリ](schema/field-dictionary.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
    * B2B クラス {#b2b}
-      * [XDM ビジネスアカウント](./classes/b2b/business-account.md)
-      * [XDM ビジネスアカウント人物関係](./classes/b2b/business-account-person-relation.md)
-      * [XDM ビジネスキャンペーン](./classes/b2b/business-campaign.md)
-      * [XDM ビジネスキャンペーンメンバー](./classes/b2b/business-campaign-members.md)
-      * [XDM ビジネスオポチュニティ](./classes/b2b/business-opportunity.md)
-      * [XDM ビジネスオポチュニティ人物関係](./classes/b2b/business-opportunity-person-relation.md)
-      * [XDM ビジネスマーケティングリスト](./classes/b2b/business-marketing-list.md)
-      * [XDM ビジネスマーケティングリストメンバー](./classes/b2b/business-marketing-list-members.md)
+      * [XDM Business Account](./classes/b2b/business-account.md)
+      * [XDM Business Account Person Relation](./classes/b2b/business-account-person-relation.md)
+      * [XDM Business Campaign](./classes/b2b/business-campaign.md)
+      * [XDM Business Campaign Members](./classes/b2b/business-campaign-members.md)
+      * [XDM Business Opportunity](./classes/b2b/business-opportunity.md)
+      * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
+      * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * フィールドグループ {#field-groups}
    * プロファイルフィールドグループ {#profile}
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
