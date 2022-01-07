@@ -4,10 +4,11 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先のデータフローの削除
 type: Tutorial
 description: フローサービス API を使用して、バッチ宛先およびストリーミング宛先にデータフローを削除する方法について説明します。
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 44%
+source-wordcount: '565'
+ht-degree: 43%
 
 ---
 
@@ -90,3 +91,5 @@ curl -X DELETE \
 このチュートリアルでは、 [!DNL Flow Service] 宛先への既存のデータフローを削除する API。
 
 ユーザーインターフェイスを使用してこれらの操作を実行する手順については、 [UI でのデータフローの削除](../ui/delete-destinations.md).
+
+これで先に進め、 [宛先アカウントを削除](/help/destinations/api/delete-destination-account.md) の使用 [!DNL Flow Service] API

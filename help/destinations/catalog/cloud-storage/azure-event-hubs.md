@@ -1,11 +1,11 @@
 ---
 keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure EventHub
-title: （ベータ版） !DNL Azure Event Hubs] 接続
-description: '!DNL Azure Event Hubs] ストレージへのリアルタイムアウトバウンド接続を作成し、Experience Platformからデータをストリーミングします。'
+title: （ベータ版） [!DNL Azure Event Hubs] 接続
+description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---

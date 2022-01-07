@@ -4,9 +4,10 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先アカウントの削除
 type: Tutorial
 description: フローサービス API を使用して宛先アカウントを削除する方法を説明します。
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 37%
 
 ---
@@ -184,4 +185,4 @@ curl -X DELETE \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Flow Service] 既存の宛先アカウントを削除する API。
+このチュートリアルでは、 [!DNL Flow Service] 既存の宛先アカウントを削除する API。 宛先の使用について詳しくは、 [宛先の概要](/help/destinations/home.md).
