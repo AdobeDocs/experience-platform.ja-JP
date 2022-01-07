@@ -2,20 +2,20 @@
 description: このページでは、「/authoring/testing/destinationInstance/」 API エンドポイントを使用して実行できる、宛先が正しく設定されているかどうかのテストおよび設定した宛先へのデータフローの整合性の検証をおこなうための API 操作の一覧と説明を示します。
 title: 宛先テスト API 操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
 
-# Destination testing API operations {#template-api-operations}
+# 宛先テスト API 操作 {#template-api-operations}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
+このページでは、 `/authoring/testing/destinationInstance/` API エンドポイント：宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証します。 このエンドポイントでサポートされる機能については、 [宛先設定のテスト](./test-destination.md).
 
 呼び出しにプロファイルを追加するかどうかに関わらず、テストエンドポイントにリクエストをおこないます。 リクエストでプロファイルを送信しない場合、Adobeは内部でプロファイルを生成し、リクエストに追加します。
 
@@ -31,7 +31,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## 宛先テスト API 操作の概要 {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## 呼び出しにプロファイルを追加せずに、宛先設定をテストする {#test-without-adding-profiles}
 
@@ -228,7 +228,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **応答**
 
-A successful response returns HTTP status 200 along with the API response from your destination&#39;s REST API endpoint.
+正常な応答は、HTTP ステータス 200 と共に、宛先の REST API エンドポイントからの API 応答を返します。
 
 ```json
 {
@@ -321,7 +321,7 @@ A successful response returns HTTP status 200 along with the API response from y
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
 
 ## 次の手順
 

@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations/publish」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 公開先 API エンドポイントの操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '757'
 ht-degree: 5%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 5%
 >
 >**API エンドポイント**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-このページでは、`/authoring/destinations/publish` API エンドポイントを使用して実行できるすべての API 操作について説明します。
+このページでは、 `/authoring/destinations/publish` API エンドポイント。
 
-宛先の設定とテストが完了したら、レビューおよび公開用にAdobeに送信できます。
+宛先を設定およびテストしたら、レビューおよび公開用にAdobeに送信できます。
 
-公開先 API エンドポイントを使用して、次の場合に公開リクエストを送信します。
-* 宛先 SDK パートナーは、製品化された宛先を、すべてのExperience Platform組織で、使用するすべてのExperience Platformの顧客が利用できるようにします。
-* カスタムの宛先を、すべてのサンドボックスで、独自のExperience Platform組織で使用できるようにする。
+公開リクエストを送信するには、次の場合に公開先 API エンドポイントを使用します。
+* Destination SDKパートナーは、製品化された宛先をすべてのExperience Platform組織で利用できるようにし、すべてのExperience Platformのお客様が使用できるようにしたいと考えます。
+* すべてのサンドボックスにわたって、独自のExperience Platform組織でカスタムの宛先を使用できるようにする。
 
 ## 宛先公開 API 操作の概要 {#get-started}
 
-続行する前に、[ はじめに ](./getting-started.md) を参照して、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
+続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
-## 公開用の宛先設定の送信 {#create}
+## 公開用の宛先設定を送信 {#create}
 
-`/authoring/destinations/publish` エンドポイントにPOSTリクエストを送信することで、公開用の宛先設定を送信できます。
+公開用の宛先設定を送信するには、 `/authoring/destinations/publish` endpoint.
 
 **API 形式**
 
@@ -40,7 +40,7 @@ POST /authoring/destinations/publish
 
 **リクエスト**
 
-次のリクエストでは、ペイロードで指定されたパラメーターで設定された組織全体に対して、公開用の宛先が送信されます。 以下のペイロードには、`/authoring/destinations/publish` エンドポイントが受け入れるすべてのパラメーターが含まれています。
+次のリクエストでは、ペイロードで指定されたパラメーターで設定された組織全体に対して、公開用の宛先を送信します。 以下のペイロードには、 `/authoring/destinations/publish` endpoint.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -62,9 +62,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `destinationId` | 文字列 | 公開用に送信する宛先設定の宛先 ID。 [ 宛先設定 API リファレンス ](./destination-configuration-api.md#retrieve-list) を使用して、宛先設定の宛先 ID を取得します。 |
-| `destinationAccess` | 文字列 | `ALL` または `LIMITED`.宛先をすべてのExperience Platform顧客のカタログに表示するか、特定の組織のみに表示するかを指定します。<br> **注意**:を使用する場 `LIMITED`合、宛先はExperience Platform組織に対してのみ公開されます。顧客テストのために宛先をExperience Platform組織のサブセットに公開する場合は、Adobeサポートにお問い合わせください。 |
-| `allowedOrgs` | 文字列 | `"destinationAccess":"LIMITED"` を使用する場合は、宛先を使用できるExperience Platform組織を指定します。 |
+| `destinationId` | 文字列 | 公開用に送信する宛先設定の宛先 ID。 を使用して、宛先設定の宛先 ID を取得する [宛先設定 API リファレンス](./destination-configuration-api.md#retrieve-list). |
+| `destinationAccess` | 文字列 | `ALL` または `LIMITED`.宛先をすべてのExperience Platform顧客のカタログに表示するか、特定の組織のみに表示するかを指定します。 <br> **注意**:次を使用する場合、 `LIMITED`の場合、宛先はExperience Platform組織に対してのみ公開されます。 顧客テストのために宛先をExperience Platform組織のサブセットに公開する場合は、Adobeサポートにお問い合わせください。 |
+| `allowedOrgs` | 文字列 | 次を使用する場合、 `"destinationAccess":"LIMITED"`「 」で、宛先を使用できるExperience Platform組織を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 宛先の公開リクエストのリスト {#retrieve-list}
 
-IMS 組織用に公開用に送信されたすべての宛先のリストを取得するには、`/authoring/destinations/publish` エンドポイントにGETリクエストをおこないます。
+IMS 組織に対して公開用に送信されたすべての宛先のリストを取得するには、にGETリクエストをおこないます `/authoring/destinations/publish` endpoint.
 
 **API 形式**
 
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある公開用に送信された宛先のリストを返します。 1 つの `configId` は、1 つの宛先の公開要求に対応します。
+次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある公開用に送信された宛先のリストを返します。 1 `configId` は、1 つの宛先の公開要求に対応します。
 
 ```json
 {
@@ -120,16 +120,16 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `destinationId` | 文字列 | 公開用に送信した宛先設定の宛先 ID。 |
-| `publishDetailsList.configId` | 文字列 | 送信先の発行リクエストの一意の ID。 |
+| `publishDetailsList.configId` | 文字列 | 送信された宛先の宛先公開リクエストの一意の ID。 |
 | `publishDetailsList.allowedOrgs` | 文字列 | 宛先を使用できるExperience Platform組織を返します。 |
-| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。 指定できる値は、`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED` です。 |
-| `publishDetailsList.publishedDate` | 文字列 | 発行の宛先が送信された日付（エポックタイム）。 |
+| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。 指定できる値は次のとおりです。 `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
+| `publishDetailsList.publishedDate` | 文字列 | 発行のために宛先が送信された日付（エポック時間）。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 既存の宛先公開リクエストの更新 {#update}
 
-既存の宛先公開リクエストで許可された組織を更新するには、`/authoring/destinations/publish` エンドポイントにPUTリクエストを送信し、許可された組織を更新する宛先の ID を指定します。 呼び出しの本文で、更新された許可された組織を指定します。
+PUTリクエストを `/authoring/destinations/publish` エンドポイントを作成し、許可された組織を更新する宛先の ID を指定します。 呼び出しの本文で、更新された許可された組織を指定します。
 
 **API 形式**
 
@@ -164,9 +164,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 }
 ```
 
-## 特定の宛先の公開要求のステータスの取得 {#get}
+## 特定の宛先の公開リクエストのステータスの取得 {#get}
 
-`/authoring/destinations/publish` エンドポイントにGETリクエストを送信し、公開ステータスを取得する宛先の ID を指定することで、特定の宛先の公開リクエストに関する詳細な情報を取得できます。
+特定の宛先の公開リクエストに関する詳細な情報を取得するには、GETリクエストを `/authoring/destinations/publish` エンドポイントを検索し、公開ステータスを取得する宛先の ID を指定します。
 
 **API 形式**
 
@@ -212,8 +212,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API エラー処理
 
-宛先 SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [ リクエストヘッダーのエラー ](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) を参照してください。
+Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、宛先に対して発行リクエストを送信する方法がわかります。 Adobe Experience Platformチームが公開リクエストを確認し、5 営業日で返信します。
+このドキュメントを読んだ後、宛先の公開リクエストを送信する方法がわかりました。 Adobe Experience Platformチームが公開リクエストを確認し、5 営業日で連絡します。

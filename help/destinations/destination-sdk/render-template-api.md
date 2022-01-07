@@ -2,9 +2,9 @@
 description: このページでは、メッセージ変換テンプレートに基づいて、宛先に対して書き出されたデータをレンダリングするために、「/authoring/testing/template/render」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: レンダリングテンプレート API 操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -1067,8 +1067,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読み終えたら、メッセージ変換テンプレートを使用して、宛先で期待されるデータ形式に一致する、書き出されたプロファイルを生成する方法を理解できました。 読み取り [Destination SDKを使用した宛先の設定方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
+このドキュメントを読み終えたら、メッセージ変換テンプレートを使用して、宛先で期待されるデータ形式に一致する、書き出されたプロファイルを生成する方法を理解できました。 読み取り [宛先の設定にDestination SDKを使用する方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。

@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 5%
 
 ---
@@ -146,7 +146,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は次のとおりです。 `string`, `object`, `integer` |
 | `customerDataFields.title` | 文字列 | Experience Platformユーザーインターフェイスの顧客に表示されるフィールドの名前を示します |
 | `customerDataFields.description` | 文字列 | カスタムフィールドの説明を入力します。 |
-| `customerDataFields.isRequired` | Boolean | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
+| `customerDataFields.isRequired` | ブール値 | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、 `^[A-Za-z]+$` を選択します。 |
 | `uiAttributes.documentationLink` | 文字列 | ページの [宛先カタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) を設定します。 用途 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`で、 `YOURDESTINATION` は、宛先の名前です。 Moviestar という宛先の場合、 `https://www.adobe.com/go/destinations-moviestar-en`. |
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptsAttributes` | ブール値 | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されます。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | ブール値 | 顧客が宛先にカスタム名前空間を設定できるかどうかを示します。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 文字列 | _サンプル設定には表示されません_. 例えば、 [!DNL Platform] のお客様は、属性としてプレーンな電子メールアドレスを持っており、プラットフォームはハッシュ化された電子メールのみを受け取ります。 適用が必要な変換（例えば、E メールを小文字に変換し、ハッシュ化）を指定する場所です。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | プラットフォームがを受け入れる場合に使用します [標準 id 名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例えば IDFA）を使用して、Platform ユーザーがこれらの ID 名前空間を選択するように制限できます。 <br> を使用する場合、 `acceptedGlobalNamespaces`を使用する場合、 `"requiredTransformation":"sha256(lower($))"` を小文字にしてハッシュ化した電子メールアドレスまたは電話番号に変換します。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | プラットフォームがを受け入れる場合に使用します [標準 id 名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例えば IDFA）を使用して、Platform ユーザーがこれらの ID 名前空間を選択するように制限できます。 <br> を使用する場合、 `acceptedGlobalNamespaces`を使用する場合、 `"requiredTransformation":"sha256(lower($))"` を小文字にし、ハッシュ化した電子メールアドレスまたは電話番号に変換します。 |
 | `destinationDelivery.authenticationRule` | 文字列 | 方法を示します [!DNL Platform] のお客様が宛先に接続します。 指定できる値は次のとおりです。 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>用途 `CUSTOMER_AUTHENTICATION` Platform のお客様が、ユーザー名とパスワード、ベアラートークンまたはその他の認証方法を使用してシステムにログインした場合。 例えば、このオプションを選択する場合は、 `authType: OAUTH2` または `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 用途 `PLATFORM_AUTHENTICATION` Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 [資格情報](./credentials-configuration-api.md) 設定。 </li><li>用途 `NONE` 宛先プラットフォームにデータを送信するために認証が必要ない場合に使用します。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーテンプレート](./destination-server-api.md) この宛先に使用されます。 |
 | `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。 <br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前に、そのセグメントの対象として認定された過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
@@ -167,12 +167,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileFields` | 配列 | 定義済みの `profileFields` 上記の設定で示すように、ユーザーは、Experience Platform属性を宛先側の事前定義済み属性にマッピングするオプションを持ちます。 |
 | `schemaConfig.profileRequired` | ブール値 | 用途 `true` 上記の設定例に示すように、ユーザーがExperience Platformから宛先側のカスタム属性にプロファイル属性をマッピングできる場合。 |
 | `schemaConfig.segmentRequired` | ブール値 | 常に使用 `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | ブール値 | 用途 `true` ( ユーザーが、id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合 )。 |
+| `schemaConfig.identityRequired` | ブール値 | 用途 `true` id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合。 |
 | `aggregation.aggregationType` | - | 「`BEST_EFFORT`」または「`CONFIGURABLE_AGGREGATION`」を選択します。上記の設定例には以下が含まれます。 `BEST_EFFORT` 集計。 例： `CONFIGURABLE_AGGREGATION`( [宛先設定](./destination-configuration.md#example-configuration) 文書。 設定可能な集計に関連するパラメーターを、この表で説明します。 |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整数 | Experience Platformは、1 回の HTTP 呼び出しで、書き出された複数のプロファイルを集計できます。 1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これはベストエフォートの集計です。 例えば、値 100 を指定した場合、Platform は 1 回の呼び出しで 100 未満の任意の数のプロファイルを送信できます。 <br> サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を 1 に設定します。 |
 | `aggregation.bestEffortAggregation.splitUserById` | ブール値 | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 このフラグをに設定します。 `true` サーバーが呼び出しごとに 1 つの id しか受け入れない場合、特定の名前空間に対して。 |
 | `aggregation.configurableAggregation.splitUserById` | ブール値 | 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。 このフラグをに設定します。 `true` サーバーが呼び出しごとに 1 つの id しか受け入れない場合、特定の名前空間に対して。 |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | *最大値：3600*. 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). と `maxNumEventsInBatch`に値を指定する場合、Experience Platformがエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platformは 3600 秒または 10.000 個の認定済みプロファイルが存在するまで待ってから API 呼び出しをおこないます（いずれか最初に行われます）。 |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | *最大値：3600*. 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). と `maxNumEventsInBatch`に値を指定する場合、Experience Platformがエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platformは 3600 秒または 10.000 個の認定済みプロファイルが存在するまで待ってから API 呼び出しをおこないます（いずれか最初に待ちます）。 |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | 整数 | *最大値：10000*. 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). 詳しくは、 `maxBatchAgeInSecs` ちょうど上に |
 | `aggregation.configurableAggregation.aggregationKey` | ブール値 | 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). 以下のパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。 <br> <ul><li>セグメント ID</li><li> セグメントのステータス </li><li> id 名前空間 </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). これを `true` を選択します。 |
@@ -679,7 +679,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | この `id` 削除する宛先設定の名前を指定します。 |
+| `{INSTANCE_ID}` | この `id` 削除する宛先設定の情報です。 |
 
 **リクエスト**
 
@@ -697,8 +697,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API エラー処理
 
-宛先 SDK API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
 
 ## 次の手順
 
-このドキュメントを読んだ後、 `/authoring/destinations` API エンドポイント。 読み取り [宛先 SDK を使用して宛先を設定する方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
+このドキュメントを読んだ後、 `/authoring/destinations` API エンドポイント。 読み取り [宛先の設定にDestination SDKを使用する方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
