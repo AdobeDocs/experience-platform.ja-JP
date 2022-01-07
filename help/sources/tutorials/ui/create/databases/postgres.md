@@ -1,69 +1,80 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；PSQL;psql;PostgreSQL
+keywords: Experience Platform；ホーム；人気の高いトピック；[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
 solution: Experience Platform
 title: UI での PostgreSQL ソース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して PostgreSQL ソース接続を作成する方法を説明します。
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: eea815f72c1e807f4ad6ca6273ba18a9da09ac6e
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 13%
+source-wordcount: '500'
+ht-degree: 14%
 
 ---
 
-# UI での [!DNL PostgreSQL] ソース接続の作成
+# の作成 [!DNL PostgreSQL] UI のソース接続
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL PostgreSQL]（以下「PSQL」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、 [!DNL PostgreSQL] を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Experience Platform] は顧客体験データを整理します。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターの UI を使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な PSQL 接続がある場合は、このドキュメントの残りの部分をスキップし、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進んでください。
+既に有効な [!DNL PostgreSQL] 接続する場合は、このドキュメントの残りの部分をスキップして、 [データフローの設定](../../dataflow/databases.md).
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] の PSQL アカウントにアクセスするには、次の値を指定する必要があります。
+次の項目にアクセスするには、 [!DNL PostgreSQL] アカウント [!DNL Platform]に値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | PSQL アカウントに関連付けられた接続文字列。 PSQL 接続文字列パターンは次のとおりです。`Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | 次に示すように、 [!DNL PostgreSQL] アカウント この [!DNL PostgreSQL] 接続文字列のパターン： `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
-使い始める方法については、この [PSQL ドキュメント ](https://www.postgresql.org/docs/9.2/app-psql.html) を参照してください。
+導入の詳細については、 [[!DNL PostgreSQL] 文書](https://www.postgresql.org/docs/9.2/app-psql.html).
 
-## PSQL アカウントの接続
+#### 接続文字列の SSL 暗号化の有効化
 
-必要な資格情報を収集したら、以下の手順に従って PSQL アカウントを [!DNL Platform] にリンクします。
+の SSL 暗号化を有効にすることができます [!DNL PostgreSQL] 接続文字列を追加します。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから「**[!UICONTROL ソース]**」を選択して、「**[!UICONTROL ソース]**」ワークスペースにアクセスします。 **[!UICONTROL カタログ]** 画面には、アカウントを作成するための様々なソースが表示されます。
+| プロパティ | 説明 | 例 |
+| --- | --- | --- |
+| `EncryptionMethod` | で SSL 暗号化を有効にできます [!DNL PostgreSQL] データ。 | <uL><li>`EncryptionMethod=0`(無効)</li><li>`EncryptionMethod=1`(有効)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
+| `ValidateServerCertificate` | が送信した証明書を検証します [!DNL PostgreSQL] データベース `EncryptionMethod` が適用されます。 | <uL><li>`ValidationServerCertificate=0`(無効)</li><li>`ValidationServerCertificate=1`(有効)</li></ul> |
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、目的の特定のソースを見つけることもできます。
+次に、 [!DNL PostgreSQL] SSL 暗号化が追加された接続文字列： `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
-「**[!UICONTROL Databases]**」カテゴリで、「**[!UICONTROL PostgreSQL DB]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい PSQL コネクタを作成します。
+## 接続 [!DNL PostgreSQL] アカウント
 
-![](../../../../images/tutorials/create/psql/catalog.png)
+必要な資格情報を収集したら、次の手順に従って、 [!DNL PostgreSQL] アカウント [!DNL Platform].
 
-「**[!UICONTROL PSQL に接続]**」ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 この **[!UICONTROL カタログ]** 画面には、アカウントを作成できる様々なソースが表示されます。
 
-### 新規アカウント
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、説明（オプション）および PSQL 資格情報を入力します。 終了したら、[**[!UICONTROL 接続]**] を選択し、新しい接続が確立されるまでしばらく時間をかけます。
+以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL PostgreSQL DB]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL PostgreSQL] コネクタ。
 
-![](../../../../images/tutorials/create/psql/connect.png)
+![](../../../../images/tutorials/create/postgresql/catalog.png)
+
+この **[!UICONTROL 接続先[!DNL PostgreSQL]]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+
+### 新しいアカウント
+
+新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL PostgreSQL] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+
+![](../../../../images/tutorials/create/postgresql/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する PSQL アカウントを選択し、**[!UICONTROL 次へ]** を選択して次に進みます。
+既存のアカウントに接続するには、 [!DNL PostgreSQL] 接続するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして続行します。
 
-![](../../../../images/tutorials/create/psql/existing.png)
+![](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、PSQL アカウントへの接続を確立しました。 次のチュートリアルに進み、[ にデータを取り込むようにデータフローを設定します。 [!DNL Platform]](../../dataflow/databases.md)
+このチュートリアルに従うことで、 [!DNL PostgreSQL] アカウント 次のチュートリアルに進み、 [データをに取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md).
