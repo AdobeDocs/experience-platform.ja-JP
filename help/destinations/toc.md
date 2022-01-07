@@ -4,22 +4,24 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 44%
+source-wordcount: '686'
+ht-degree: 46%
 
 ---
 
 
 # 宛先 {#destinations}
 
-* [Destinations overview](./home.md)
+* [宛先の概要](./home.md)
 * [宛先のタイプとカテゴリ](./destination-types.md)
 * API チュートリアル {#api}
    * [フローサービス API を使用して、ストリーミング宛先に接続し、データをアクティブ化する](./api/streaming-destinations.md)
    * [フローサービス API を使用して、電子メールマーケティングの宛先に接続し、データをアクティブ化する](./api/email-marketing.md)
-   * [（ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します](./api/ad-hoc-activation-api.md)
+   * [（ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します](./api/ad-hoc-activation-api.md)
+   * [宛先アカウントの削除](./api/delete-destination-account.md)
+   * [宛先データフローを削除](./api/delete-destination-dataflow.md)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続を作成](./ui/connect-destination.md)
@@ -162,7 +164,7 @@ ht-degree: 44%
          * [メッセージ変換テンプレートの作成とテスト](./destination-sdk/create-template.md)
          * [宛先設定のテスト](./destination-sdk/test-destination.md)
    * API 操作 {#api}
-      * [Destination SDK(Destination Authoring)API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [宛先エンドポイント API 操作](./destination-sdk/destination-configuration-api.md)
       * [宛先サーバーエンドポイント API の操作](./destination-sdk/destination-server-api.md)
       * [オーディエンスメタデータエンドポイント API の操作](./destination-sdk/audience-metadata-api.md)
@@ -175,7 +177,7 @@ ht-degree: 44%
          * [プロファイル生成 API 操作の例](./destination-sdk/sample-profile-generation-api.md)
    * ガイド {#guides}
       * [Destination SDKを使用したストリーミング先の設定](./destination-sdk/configure-destination-instructions.md)
-      * [Destination SDKで作成した宛先を確認用に送信](./destination-sdk/submit-destination.md)
+      * [送信してレビュー用に、Destination SDKで作成した宛先を送信](./destination-sdk/submit-destination.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platformでの宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub Web インターフェイスを使用して、宛先のドキュメントページを作成します](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
