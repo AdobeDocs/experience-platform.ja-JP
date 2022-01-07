@@ -1,54 +1,54 @@
 ---
-keywords: Amazon Kinesis; Kinesis 宛先; Kinesis
-title: Amazon Kinesis 接続
-description: Adobe エクスペリエンスプラットフォームからデータをストリーミングするために、Amazon Kinesis storage へのリアルタイムの送信接続を作成します。
+keywords: Amazon Kinesis;kinesis destination;kinesis
+title: Amazon Kinesis接続
+description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 3%
+source-wordcount: '824'
+ht-degree: 2%
 
 ---
 
-# (ベータ版) [!DNL Amazon Kinesis] 接続
+# （ベータ版） [!DNL Amazon Kinesis] 接続
 
 ## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Kinesis]プラットフォームの移行先は、現在ベータ版になっています。ドキュメントと機能は変更される場合があります。
+>この [!DNL Amazon Kinesis] の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-このサービスにより、 [!DNL Kinesis Data Streams] [!DNL Amazon Web Services] 大量のデータレコードを収集し、リアルタイムに処理することができます。
+この [!DNL Kinesis Data Streams] サービス [!DNL Amazon Web Services] を使用すると、大量のデータレコードをリアルタイムで収集して処理できます。
 
-[!DNL Amazon Kinesis]Adobe エクスペリエンスプラットフォームからデータをストリーミングするために、ストレージへのリアルタイムでの送信接続を作成することができます。
+へのリアルタイムアウトバウンド接続を作成できます [!DNL Amazon Kinesis] Adobe Experience Platformからデータをストリーミングするためのストレージ。
 
-* について詳しくは [!DNL Amazon Kinesis] 、Amazon のマニュアルを参照してください [ ](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) 。
-* プログラムに接続するには [!DNL Amazon Kinesis] 、 [ ストリーミング送信先 API のチュートリアルを参照してください ](../../api/streaming-destinations.md) 。
-* プラットフォームのユーザーインターフェイスを使用してに接続するには、 [!DNL Amazon Kinesis] 以下の項を参照してください。
+* 詳しくは、 [!DNL Amazon Kinesis]を参照し、 [Amazonドキュメント](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* 接続するには [!DNL Amazon Kinesis] プログラムを使用して、 [ストリーミング宛先 API のチュートリアル](../../api/streaming-destinations.md).
+* 接続するには [!DNL Amazon Kinesis] Platform ユーザーインターフェイスを使用する場合は、以下の節を参照してください。
 
-![UI の Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![UI でのAmazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## ユースケース {#use-cases}
 
-などのストリーミング出力を使用することにより、必要に応じて [!DNL Amazon Kinesis] 、高い値を持つセグメンテーションイベントおよび関連するプロファイル属性を、選択したシステムに簡単に送ることができます。
+次のようなストリーミング宛先を使用する [!DNL Amazon Kinesis]を使用すると、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
-例えば、取引先によってホワイトペーパーがダウンロードされています。これにより、「propensity」セグメントに限定されます。 取引関係があるセグメントを宛先にマップすることによって [!DNL Amazon Kinesis] 、このイベントがに表示され [!DNL Amazon Kinesis] ます。 企業の IT システムに最適な機能として、開発者は独自のアプローチを採用し、イベントの上部にビジネスロジックを説明することができます。
+例えば、見込み客がホワイトペーパーをダウンロードし、それを「コンバージョン傾向が高い」セグメントに認定したとします。 見込み客が属するセグメントを [!DNL Amazon Kinesis] の宛先に指定した場合、このイベントは [!DNL Amazon Kinesis]. 企業の IT システムに最適に対応できると思われるように、このイベントの上に、自らのアプローチを使用し、ビジネスロジックを説明することができます。
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベース** -セグメントのすべてのメンバーを、出席者のアクティブ化ワークフローの「属性の選択」画面で選択したとおりに、目的のスキーマフィールド (例えば、電子メールアドレス、電話番号、姓) と共に書き出すことができ [ ](../../ui/activate-streaming-profile-destinations.md#select-attributes) ます。
+**プロファイルベース**  — セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：電子メールアドレス、電話番号、姓 )。 [オーディエンスのアクティベーションワークフロー](../../ui/activate-streaming-profile-destinations.md#select-attributes).
 
-## 必要な [!DNL Amazon Kinesis] 権限 {#required-kinesis-permission}
+## 必須 [!DNL Amazon Kinesis] 権限 {#required-kinesis-permission}
 
-データをストリームに正しく接続して書き出すには [!DNL Amazon Kinesis] 、次の操作を実行するために必要なプラットフォームの権限が必要です。
+データを正常に接続してに書き出すには、以下を実行します。 [!DNL Amazon Kinesis] ストリーム、Experience Platformには次のアクションに対する権限が必要です：
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-これらの権限は、console によって表示され、 [!DNL Kinesis] プラットフォームのユーザーインターフェイスで Kinesis の出力先を設定すると、プラットフォームによってチェックされます。
+これらの権限は、 [!DNL Kinesis] コンソールとは、Platform ユーザーインターフェイスでKinesisの宛先を設定すると、Platform によって確認されます。
 
-次の例は、宛先にデータを正しく書き出すために必要な最低限のアクセス権を示して [!DNL Kinesis] います。
+次の例は、データをに正常に書き出すために必要な最小限のアクセス権を示しています [!DNL Kinesis] 宛先。
 
 ```json
 {
@@ -71,25 +71,25 @@ ht-degree: 3%
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `kinesis:ListStreams` | Amazon Kinesis データストリームを一覧表示するアクションです。 |
-| `kinesis:PutRecord` | 1つのデータレコードを Kinesis データストリームに書き込むアクション。 |
-| `kinesis:PutRecords` | 複数のデータレコードを1回の呼び出しで Kinesis データストリームに書き込むアクション。 |
+| `kinesis:ListStreams` | Amazon Kinesisのデータストリームをリストするアクション。 |
+| `kinesis:PutRecord` | 単一のデータレコードをKinesisデータストリームに書き込むアクション。 |
+| `kinesis:PutRecords` | 1 回の呼び出しで複数のデータレコードをKinesisデータストリームに書き込むアクション。 |
 
-データストリームのアクセス制御について詳しくは [!DNL Kinesis] 、次のドキュメントを参照して [[!DNL Kinesis]  ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) ください。
+のアクセス制御の詳細 [!DNL Kinesis] データストリーム、以下を読む [[!DNL Kinesis] 文書](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## 目的の場所に接続します。 {#connect}
+## 宛先に接続 {#connect}
 
-この送信先に接続するには、宛先の設定チュートリアルで説明されている手順に従って [ ](../../ui/connect-destination.md) ください。
+この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-このコピー先を設定する際に、 [ ](../../ui/connect-destination.md) 次の情報を入力する必要があります。
+While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
-* **[!DNL Amazon Web Services]「In」キーと** 「秘密鍵」: 「In」により、プラットフォームへの [!DNL Amazon Web Services] `access key - secret access key` アクセスを許可するためのペアが生成さ [!DNL Amazon Kinesis] れます。 詳しくは、 [ Amazon Web サービスのマニュアルを参照 ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) してください。
-* **region** : [!DNL Amazon Web Services] データをストリーミングする領域を指定します。
-* **名前** : 接続の名前を指定します。 [!DNL Amazon Kinesis]
-* **説明** : への接続に関する説明を入力 [!DNL Amazon Kinesis] します。
-* **stream** : アカウントに既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 プラットフォームによって、データがこのストリームに書き出されます。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:In [!DNL Amazon Web Services]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon Kinesis] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **地域**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
+* **名前**:接続先の名前を指定してください [!DNL Amazon Kinesis]
+* **説明**:接続先の説明を入力してください [!DNL Amazon Kinesis].
+* **ストリーム**:の既存のデータストリームの名前を指定します。 [!DNL Amazon Kinesis] アカウント Platform はこのストリームにデータを書き出します。
 
 <!--
 
@@ -99,13 +99,25 @@ ht-degree: 3%
 
 -->
 
-## セグメントをこの宛先にアクティブにします。 {#activate}
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-[ ](../../ui/activate-streaming-profile-destinations.md) この宛先までの視聴ユーザーセグメントをアクティブにする方法については、「プロファイルの書き出し先のストリーミング送信先のストリーミングについて」を参照してください。
+詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
-## 書き出したデータ {#exported-data}
+## プロファイルの書き出し動作 {#profile-export-behavior}
 
-書き出した [!DNL Experience Platform] データは [!DNL Amazon Kinesis] JSON 形式になります。 例えば、次のイベントには、特定のセグメントを対象としていて、別のセグメントを終了した対象ユーザーの電子メールアドレスプロファイル属性が含まれています。 このようなお客様の id は、d と email になります。
+Experience Platformは、セグメントの選定または他の重要なイベントに従ってプロファイルに関連する更新が発生した場合にのみ、プロファイルの書き出し動作をAmazon Kinesisの宛先に最適化します。 プロファイルは、次の状況で宛先に書き出されます。
+
+* プロファイルの更新は、宛先にマッピングされた少なくとも 1 つのセグメントのセグメントメンバーシップの変更によってトリガーされました。 例えば、プロファイルは、宛先にマッピングされたいずれかのセグメントに適合しているか、宛先にマッピングされたいずれかのセグメントから退出しています。
+* プロファイルの更新は、 [id マップ](/help/xdm/field-groups/profile/identitymap.md). 例えば、宛先にマッピングされたセグメントの 1 つに対して既に適合しているプロファイルの ID マップ属性に新しい ID が追加されたとします。
+* プロファイルの更新は、宛先にマッピングされた少なくとも 1 つの属性の属性の変更によってトリガーされました。 例えば、マッピング手順で宛先にマッピングされた属性の 1 つがプロファイルに追加されます。
+
+上記のすべての場合、関連する更新がおこなわれたプロファイルのみが宛先にエクスポートされます。 例えば、宛先フローにマッピングされたセグメントのメンバーが 100 人で、5 つの新しいプロファイルがセグメントの対象として認定されている場合、宛先への書き出しは増分で、5 つの新しいプロファイルのみが含まれます。
+
+変更内容がどこにあっても、プロファイルに対してマッピングされたすべての属性が書き出されることに注意してください。 したがって、上の例では、属性自体が変更されていない場合でも、これら 5 つの新しいプロファイルに対してマッピングされたすべての属性が書き出されます。
+
+## 書き出されたデータ {#exported-data}
+
+エクスポート済み [!DNL Experience Platform] データは次の場所に配置されます： [!DNL Amazon Kinesis] JSON 形式で書き出します。 例えば、以下のイベントには、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれます。 この見込み客の ID は、ECID と電子メールです。
 
 ```json
 {
@@ -149,7 +161,7 @@ ht-degree: 3%
 
 >[!MORELIKETHIS]
 >
->* [Amazon Kinesis に接続し、フローサービス API を使用してデータを有効にします。](../../api/streaming-destinations.md)
->* [Azure イベントハブの移行先](./azure-event-hubs.md)
+>* [Amazon Kinesisに接続し、フローサービス API を使用してデータをアクティブ化する](../../api/streaming-destinations.md)
+>* [Azure イベントハブの宛先](./azure-event-hubs.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
 
