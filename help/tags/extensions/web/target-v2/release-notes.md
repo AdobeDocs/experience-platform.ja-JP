@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
-workflow-type: ht
-source-wordcount: '589'
-ht-degree: 100%
+source-git-commit: 644be95d9f90e20622c4f8ad68252ac57c09a288
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 95%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2022 年 1 月 7 日（PT）
+
+### Adobe Target v2 拡張機能 0.17.0
+
+- at.js v2.8.0 のサポートを追加しました。これは、機能使用量とパフォーマンスのテレメトリデータを収集するようになりました。  個人データは収集されません。 この機能をオプトアウトするには、 `telemetryEnabled` から `false` in `targetGlobalSettings`.
 
 ## 2021年10月28日（PT）
 
