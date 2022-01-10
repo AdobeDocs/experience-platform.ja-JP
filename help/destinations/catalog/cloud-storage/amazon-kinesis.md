@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 2%
@@ -122,7 +122,14 @@ Experience Platformは、セグメントの選定または他の重要なイベ�
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {

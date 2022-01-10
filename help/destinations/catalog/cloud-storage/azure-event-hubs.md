@@ -3,7 +3,7 @@ keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure E
 title: （ベータ版） [!DNL Azure Event Hubs] 接続
 description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
+source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 2%
@@ -75,7 +75,14 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {
