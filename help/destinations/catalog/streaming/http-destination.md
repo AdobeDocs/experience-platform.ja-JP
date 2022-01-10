@@ -3,9 +3,9 @@ keywords: ストリーミング；
 title: HTTP API 接続
 description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '646'
 ht-degree: 5%
 
 ---
@@ -76,7 +76,7 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 
 ## 書き出されたデータ {#exported-data}
 
-エクスポート済み [!DNL Experience Platform] データは、 [!DNL HTTP] の宛先を JSON 形式で指定します。 例えば、以下のイベントには、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれます。 この見込み客の ID は次のとおりです [!DNL ECID] 電子メール
+エクスポート済み [!DNL Experience Platform] データは、 [!DNL HTTP] の宛先を JSON 形式で指定します。 例えば、以下のエクスポートには、特定のセグメントに適合し、別のセグメントから離脱したプロファイルが含まれ、プロファイル属性の名、姓、生年月日、個人の E メールアドレスが含まれます。 このプロファイルの ID は、ECID と電子メールです。
 
 ```json
 {

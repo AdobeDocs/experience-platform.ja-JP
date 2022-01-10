@@ -3,9 +3,9 @@ keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure E
 title: （ベータ版） [!DNL Azure Event Hubs] 接続
 description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '752'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 
 ## 書き出されたデータ {#exported-data}
 
-エクスポート済み [!DNL Experience Platform] データは次の場所に配置されます： [!DNL Azure Event Hubs] JSON 形式で書き出します。 例えば、以下のイベントには、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれます。 この見込み客の ID は、ECID と電子メールです。
+エクスポート済み [!DNL Experience Platform] データは次の場所に配置されます： [!DNL Azure Event Hubs] JSON 形式で書き出します。 例えば、以下のエクスポートには、特定のセグメントに適合し、別のセグメントから離脱したプロファイルが含まれ、プロファイル属性の名、姓、生年月日、個人の E メールアドレスが含まれます。 このプロファイルの ID は、ECID と電子メールです。
 
 ```json
 {

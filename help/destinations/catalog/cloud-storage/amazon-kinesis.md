@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '835'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Experience Platformは、セグメントの選定または他の重要なイベ�
 
 ## 書き出されたデータ {#exported-data}
 
-エクスポート済み [!DNL Experience Platform] データは次の場所に配置されます： [!DNL Amazon Kinesis] JSON 形式で書き出します。 例えば、以下のイベントには、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれます。 この見込み客の ID は、ECID と電子メールです。
+エクスポート済み [!DNL Experience Platform] データは次の場所に配置されます： [!DNL Amazon Kinesis] JSON 形式で書き出します。 例えば、以下のエクスポートには、特定のセグメントに適合し、別のセグメントから離脱したプロファイルが含まれ、プロファイル属性の名、姓、生年月日、個人の E メールアドレスが含まれます。 このプロファイルの ID は、ECID と電子メールです。
 
 ```json
 {
