@@ -6,7 +6,7 @@ topic-legacy: overview
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4075'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマ�
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
-- [Experience Platform API の認証と承認](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)
+- [Experience Platform API の認証と承認](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 このガイドには、ETL コネクタの設計時に使用する API 呼び出しの例も含まれています。また、各 [!DNL Experience Platform] サービスの概要と API の使用について詳しく説明したドキュメントへのリンクも含まれています。
@@ -56,7 +56,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -64,7 +64,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
-- Content-Type： application/json
+- Content-Type：application/json
 
 ## 一般的なユーザーフロー
 
@@ -215,7 +215,7 @@ curl -X GET \
 
 [!DNL Schema Registry] デベロッパーガイドには、この表以外にも、[!DNL Schema Registry] API を使用して実行できるすべての呼び出しの詳細な例が記載されています。
 
-### データセットの「schema」プロパティ（廃止 — EOL 2019-05-30）
+### データセットの「schema」プロパティ（廃止 — EOL 2019/05/30（PT））
 
 データセットには、現在は廃止されいるが後方互換性を確保するために一時的に使用可能なままになっている、「schema」プロパティが含まれている場合があります。例えば、以前に作成したリスト（GET）リクエストと同様のリスト（`properties` クエリパラメーターで「schema」が「schemaRef」に置き換えられた場合）は、次のように返されます。
 
@@ -790,4 +790,4 @@ Adobe Experience Platform は、現在、遅延データを識別していませ
 | 2019-01-19 | データセットから「fields」プロパティを削除しました。 | データセットには、以前は、スキーマのコピーを含む「fields」プロパティが含まれていました。この機能は使用しないでください。「fields」プロパティが見つかった場合は無視し、「observedSchema」または「schemaRef」を代わりに使用する必要があります。 |
 | 2019/03/15（PT） | 「schemaRef」プロパティをデータセットに追加しました。 | データセットの「schemaRef」プロパティには、データセットの基となる XDM スキーマを参照する URI が含まれ、そのデータセットで使用できるすべての潜在的なフィールドを表します。 |
 | 2019/03/15（PT） | すべてのエンドユーザー識別子が「identityMap」プロパティにマップされます。 | 「identityMap」は、CRM ID、ECID、ロイヤリティプログラム ID など、主体のすべての一意の ID をカプセル化したものです。このマップは、[[!DNL Identity Service]](../identity-service/home.md) で使用され、サブジェクトの既知の ID と匿名 ID をすべて解決し、各エンドユーザーの ID グラフを 1 つ作成します。 |
-| 2019/05/30 | データセットから「schema」プロパティを EOL と削除しました。 | データセットの「schema」プロパティは、[!DNL Catalog] API の廃止済み `/xdms` エンドポイントを使用して、スキーマへの参照リンクを提供しました。これは、スキーマの「id」、「version」、「contentType」を提供する「schemaRef」に置き換えられ、新しい [!DNL Schema Registry] API で参照されます。 |
+| 2019/05/30（PT） | データセットから「schema」プロパティを EOL と削除しました。 | データセットの「schema」プロパティは、[!DNL Catalog] API の廃止済み `/xdms` エンドポイントを使用して、スキーマへの参照リンクを提供しました。これは、スキーマの「id」、「version」、「contentType」を提供する「schemaRef」に置き換えられ、新しい [!DNL Schema Registry] API で参照されます。 |
