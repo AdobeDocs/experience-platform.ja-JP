@@ -4,9 +4,9 @@ title: API を使用したプロファイル更新のデータセットの有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 35%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 35%
 
 ## はじめに
 
-このチュートリアルでは、プロファイル対応データセットの管理に関わるいくつかのAdobe Experience Platformサービスに関する十分な知識が必要です。 このチュートリアルを開始する前に、次の関連する DNL Platform サービスのドキュメントを確認してください。
+このチュートリアルでは、プロファイル対応データセットの管理に関わるいくつかのAdobe Experience Platformサービスに関する十分な知識が必要です。 このチュートリアルを開始する前に、関連するドキュメントを確認してください [!DNL Platform] サービス：
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Catalog Service]](../../catalog/home.md):データセットを作成し、それらを設定できる RESTful API [!DNL Real-time Customer Profile] および [!DNL Identity Service].
@@ -32,7 +32,7 @@ ht-degree: 35%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

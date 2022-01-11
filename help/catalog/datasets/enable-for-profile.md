@@ -4,9 +4,9 @@ title: API を使用したプロファイルおよび ID サービスのデー�
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルおよび ID サービスでデータセットを有効にする方法について説明します。
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 56%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 56%
 
 ## はじめに
 
-このチュートリアルでは、プロファイル対応データセットの管理に関わるいくつかのAdobe Experience Platformサービスに関する十分な知識が必要です。 このチュートリアルを開始する前に、次の関連する DNL Platform サービスのドキュメントを確認してください。
+このチュートリアルでは、プロファイル対応データセットの管理に関わるいくつかのAdobe Experience Platformサービスに関する十分な知識が必要です。 このチュートリアルを開始する前に、関連するドキュメントを確認してください [!DNL Platform] サービス：
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-time Customer Profile] に取り込まれる様々なデータソースの ID を結合することによって [!DNL Platform].
@@ -39,7 +39,7 @@ ht-degree: 56%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
