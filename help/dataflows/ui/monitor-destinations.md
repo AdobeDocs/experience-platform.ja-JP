@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
 - [宛先](../../destinations/home.md):宛先は、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に対して、Platform からデータをシームレスにアクティブ化できる、一般的に使用されるアプリケーションとの事前定義済みの統合です。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-## 宛先ワークスペースでのデータフローの監視
+## 宛先ワークスペースでのデータフローの監視 {#monitor-dataflows-in-the-destinations-workspace}
 
 内 **[!UICONTROL 宛先]** Platform UI 内のワークスペースで、 **[!UICONTROL 参照]** 「 」タブをクリックし、表示する宛先の名前を選択します。
 
@@ -42,21 +42,27 @@ ht-degree: 4%
 | ------ | ----------- |
 | 有効 | この `Enabled` 「 」ステータスは、データフローがアクティブで、指定されたスケジュールに従ってデータをエクスポートしていることを示します。 |
 | 無効 | この `Disabled` status は、データフローが非アクティブで、データをエクスポートしていないことを示します。 |
-| Processing | この `Processing` 「 」ステータスは、データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
+| 処理中 | この `Processing` 「 」ステータスは、データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
 | エラー | この `Error` ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 |
 
-### ストリーミング宛先のデータフロー実行
+### ストリーミング宛先のデータフロー実行 {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="アクティブ化された ID"
 >abstract="選択した宛先に対して正常にアクティブ化された個々のプロファイル ID の数。"
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="除外された ID"
 >abstract="属性が見つからず、同意違反に基づいて、選択した宛先のアクティベーションから除外された個々のプロファイルレコードの数。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="失敗した ID"
+>abstract="選択した宛先に対して失敗した個々のプロファイル ID の数。 詳細は、エラー診断を確認してください。"
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
 
 ストリーミング先の場合、 [!UICONTROL データフローの実行] 「 」タブには、データフローの実行時に指標データが 1 時間ごとに更新されます。 ラベル付けされた最も重要な統計は、ID 用です。
@@ -93,7 +99,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### バッチ宛先のデータフロー実行
+### バッチ宛先のデータフロー実行 {#dataflow-runs-for-batch-destinations}
 
 バッチ保存先の場合、 [!UICONTROL データフローの実行] 「 」タブには、データフローの実行に関する指標データが表示されます。 個々の実行とその特定の指標のリストが表示され、次の ID の合計が表示されます。
 

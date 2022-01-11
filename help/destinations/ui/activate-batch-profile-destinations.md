@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
+source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 7%
@@ -71,8 +71,8 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="ファイル書き出しオプション"
->abstract="選択 **完全なファイルを書き出し** を使用して、セグメントに該当するすべてのプロファイルの完全なスナップショットを書き出します。 <br> 選択 **増分ファイルの書き出し** ：前回のエクスポート以降にセグメントの対象として認定されたプロファイルのみをエクスポートします。 最初の増分ファイルの書き出しには、セグメントに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初の増分ファイルエクスポート以降にセグメントで認定されたプロファイルのみが含まれます。"
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="詳しくは、ドキュメントを参照してください。"
+>abstract="「 Export full files 」を選択すると、セグメントに該当するすべてのプロファイルの完全なスナップショットが書き出されます。 「増分ファイルを書き出し」を選択して、最後の書き出し以降にセグメントの対象として認定されたプロファイルのみを書き出します。 最初の増分ファイルの書き出しには、セグメントに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初の増分ファイルエクスポート以降にセグメントで認定されたプロファイルのみが含まれます。"
+>additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="増分ファイルの書き出し"
 
 選択 **[!UICONTROL 完全なファイルを書き出し]** ：選択したセグメントのすべてのプロファイル認定の完全なスナップショットを含むファイルのエクスポートをトリガーします。
 
