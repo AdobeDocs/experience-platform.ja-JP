@@ -1,15 +1,15 @@
 ---
-title: イベント転送でのシークレットの設定
+title: イベント転送での秘密鍵の設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために、データ収集 UI で秘密鍵を設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1449'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# イベント転送でのシークレットの設定
+# イベント転送での秘密鍵の設定
 
 イベント転送では、秘密鍵は別のシステムの認証情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
 
