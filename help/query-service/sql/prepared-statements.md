@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；準備済み文；準備済み；SQL;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；準備済み文；準備済み；SQL;
 solution: Experience Platform
 title: クエリサービスの準備済み文
 topic-legacy: prepared statements
 description: SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して準備済み文をサポートします。
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 89%
+source-wordcount: '374'
+ht-degree: 85%
 
 ---
 
 # 準備済み文
 
-SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] は、パラメータ化されたクエリを使用して準備済み文をサポートします。 クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
+SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] は、パラメーター化されたクエリを使用して準備済み文をサポートします。 クエリを繰り返し再解析する必要がなくなったので、パフォーマンスを最適化できます。
 
 ## 準備済み文の使用
 

@@ -1,10 +1,11 @@
 ---
 title: 増分読み込みクエリの例
 description: 増分読み込み機能は、匿名ブロックとスナップショットの両方の機能を使用して、データレイクからデータウェアハウスにデータを移動する際に、一致するデータを無視する、ほぼリアルタイムのソリューションを提供します。
-source-git-commit: fb464c6e6b1972f5a2653872385517749936691a
+exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
+source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 3%
+source-wordcount: '687'
+ht-degree: 2%
 
 ---
 
@@ -22,11 +23,11 @@ ht-degree: 3%
 
 このガイドで使用される用語のガイダンスについては、 [SQL 構文ガイド](../sql/syntax.md).
 
-## 手順
+## データを増分的に読み込む
 
 次の手順では、スナップショットと匿名ブロック機能を使用して、データを作成し増分的に読み込む方法を示します。 デザインパターンは、独自のクエリシーケンスのテンプレートとして使用できます。
 
-1. の作成 `checkpoint_log` データを正常に処理するために使用された最新のスナップショットを追跡するテーブル。 トラッキングテーブル (`checkpoint_log` （この例では）を最初に初期化して、 `null` データセットを増分的に処理するために使用します。
+1. a `checkpoint_log` データを正常に処理するために使用された最新のスナップショットを追跡するテーブル。 トラッキングテーブル (`checkpoint_log` （この例では）を最初に初期化して、 `null` データセットを増分的に処理するために使用します。
 
 ```SQL
 DROP TABLE IF EXISTS checkpoint_log;
@@ -39,7 +40,7 @@ SELECT
    WHERE false;
 ```
 
-1. 次の項目に `checkpoint_log` 増分処理が必要なデータセットの空のレコードが 1 つあるテーブル。 `DIM_TABLE_ABC` は、次の例で処理されるデータセットです。 処理を初めておこなう場合 `DIM_TABLE_ABC`、 `last_snapshot_id` は次のように初期化されます： `null`. これにより、最初にデータセット全体を処理し、その後段階的に処理できます。
+2. `checkpoint_log` 増分処理が必要なデータセットの空のレコードが 1 つあるテーブル。 `DIM_TABLE_ABC` は、次の例で処理されるデータセットです。 処理を初めておこなう場合 `DIM_TABLE_ABC`、 `last_snapshot_id` は次のように初期化されます： `null`. これにより、最初にデータセット全体を処理し、その後段階的に処理できます。
 
 ```SQL
 INSERT INTO
@@ -51,20 +52,19 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. 次へ、初期化 `DIM_TABLE_ABC_Incremental` 処理済み出力を含む `DIM_TABLE_ABC`. 匿名ブロック ( **必須** 以下の SQL の例の実行の節では、手順 1 ～ 4 で説明していますが、データを増分的に処理するために、順番に実行されます。
+3 次、初期化 `DIM_TABLE_ABC_Incremental` 処理済み出力を含む `DIM_TABLE_ABC`. 匿名ブロック ( **必須** 以下の SQL の例の実行の節では、手順 1 ～ 4 で説明していますが、データを増分的に処理するために、順番に実行されます。
 
-   1. を `from_snapshot_id` 処理の開始位置を示します。 この `from_snapshot_id` 例では、 `checkpoint_log` ～で使用するテーブル `DIM_TABLE_ABC`. 最初の実行時に、スナップショット ID は次のようになります。 `null` つまり、データセット全体が処理されます。
-   2. を `to_snapshot_id` ソーステーブルの現在のスナップショット ID(`DIM_TABLE_ABC`) をクリックします。 この例では、ソーステーブルの metadata テーブルからクエリが実行されます。
-   3. 以下を使用： `CREATE` 作成するキーワード `DIM_TABLE_ABC_Incremenal` を宛先テーブルとして使用します。 宛先テーブルには、ソースデータセット (`DIM_TABLE_ABC`) をクリックします。 これにより、ソーステーブルから、次の間の処理済みデータを取得できます。 `from_snapshot_id` および `to_snapshot_id`を追加します。
-   4. を更新します。 `checkpoint_log` テーブル `to_snapshot_id` ( ソースデータに対して `DIM_TABLE_ABC` 正常に処理されました。
-   5. 匿名ブロックの連続して実行されたクエリが失敗した場合、 **オプション** 例外セクションが実行されます。 これによりエラーが返され、プロセスが終了します。
+1. を `from_snapshot_id` 処理の開始位置を示します。 この `from_snapshot_id` 例では、 `checkpoint_log` ～で使用するテーブル `DIM_TABLE_ABC`. 最初の実行時に、スナップショット ID は次のようになります。 `null` つまり、データセット全体が処理されます。
+2. を `to_snapshot_id` ソーステーブルの現在のスナップショット ID(`DIM_TABLE_ABC`) をクリックします。 この例では、ソーステーブルの metadata テーブルからクエリが実行されます。
+3. 以下を使用： `CREATE` 作成するキーワード `DIM_TABLE_ABC_Incremenal` を宛先テーブルとして使用します。 宛先テーブルには、ソースデータセット (`DIM_TABLE_ABC`) をクリックします。 これにより、ソーステーブルから、次の間の処理済みデータを取得できます。 `from_snapshot_id` および `to_snapshot_id`を追加します。
+4. を更新します。 `checkpoint_log` テーブル `to_snapshot_id` ( ソースデータに対して `DIM_TABLE_ABC` 正常に処理されました。
+5. 匿名ブロックの連続して実行されたクエリが失敗した場合、 **オプション** 例外セクションが実行されます。 これによりエラーが返され、プロセスが終了します。
 
 >[!NOTE]
 >
 >この `history_meta('source table name')` は、データセット内の使用可能なスナップショットへのアクセス権を取得するために使用される便利な方法です。
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -86,17 +86,16 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
-1. 以下の匿名ブロックの例で増分データ読み込みロジックを使用して、（最新のタイムスタンプ以降の）ソースデータセットからの新しいデータを処理し、通常のサイクルで宛先テーブルに追加できるようにします。 この例では、データは `DIM_TABLE_ABC` が処理され、に追加されます `DIM_TABLE_ABC_incremental`.
+4 以下の匿名ブロックの例で増分データ読み込みロジックを使用して、（最新のタイムスタンプ以降の）ソースデータセットからの新しいデータを処理し、通常のサイクルで宛先テーブルに追加できるようにします。 この例では、データは `DIM_TABLE_ABC` が処理され、に追加されます `DIM_TABLE_ABC_incremental`.
 
 >[!NOTE]
 >
 > `_ID` は両方のプライマリキー `DIM_TABLE_ABC_Incremental` および `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -118,7 +117,7 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 このロジックは任意のテーブルに適用して、増分荷重を実行できます。
@@ -138,7 +137,6 @@ SET resolve_fallback_snapshot_on_failure=true;
 コードブロック全体は次のようになります。
 
 ```SQL
-$$
 BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
@@ -160,7 +158,7 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 ## 次の手順
