@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1879'
 ht-degree: 4%
 
 ---
@@ -83,7 +83,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 - **[!UICONTROL 処理時間]**:データフローの処理に要した時間。
 - **[!UICONTROL 受信したプロファイル]**:データフローで受信したプロファイルの合計数。
 - **[!UICONTROL アクティブ化された ID]**:選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。
-- **[!UICONTROL 除外された ID]**:見つからない属性と同意違反に基づいてアクティベーション用に除外されたプロファイル ID の合計数です。
+- **[!UICONTROL 除外された ID]**:属性が見つからず、同意違反に基づいてアクティベーションから除外されたプロファイル ID の合計数です。
 - **[!UICONTROL 失敗した ID]** エラーが原因で宛先に対してアクティブ化されなかったプロファイル ID の合計数です。
 - **[!UICONTROL 有効化率]**:正常にアクティブ化されたか、スキップされた受信 ID の割合。 次の式は、この値の計算方法を示しています。
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 
 ### バッチ宛先のデータフロー実行 {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="データフロー実行の詳細"
+>abstract="宛先のデータフロー実行の詳細には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。 詳しくは、指標の定義に関するガイドを参照してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="受信したプロファイル"
+>abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
+
 バッチ保存先の場合、 [!UICONTROL データフローの実行] 「 」タブには、データフローの実行に関する指標データが表示されます。 個々の実行とその特定の指標のリストが表示され、次の ID の合計が表示されます。
 
 - **[!UICONTROL アクティブ化された ID]**:選択した宛先に対して正常にアクティブ化された個々のプロファイル ID の数。
-- **[!UICONTROL 除外された ID]**:見つからない属性や同意違反に基づいて、選択した宛先のアクティベーション用に除外された個々のプロファイル ID の数。
+- **[!UICONTROL 除外された ID]**:見つからない属性や同意違反に基づいて、選択した宛先のアクティブ化から除外された個々のプロファイル ID の数。
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 - **[!UICONTROL 処理時間]**:データフローの実行が処理されるまでに要した時間。
 - **[!UICONTROL 受信したプロファイル]**:データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。
 - **[!UICONTROL アクティブ化された ID]**:選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。
-- **[!UICONTROL 除外された ID]**:見つからない属性と同意違反に基づいてアクティベーション用に除外されたプロファイル ID の合計数です。
+- **[!UICONTROL 除外された ID]**:属性が見つからず、同意違反に基づいてアクティベーションから除外されたプロファイル ID の合計数です。
 - **[!UICONTROL ステータス]**:データフローの状態を表します。 次の 3 つの状態のいずれかを指定できます。 [!UICONTROL 成功], [!UICONTROL 失敗]、および [!UICONTROL 処理中]. [!UICONTROL 成功] は、データフローがアクティブで、指定されたスケジュールに従ってデータをエクスポートしていることを意味します。 [!UICONTROL 失敗] は、エラーが原因でデータのアクティベーションが中断されたことを意味します。 [!UICONTROL 処理中] は、データフローがまだアクティブではなく、通常、新しいデータフローの作成時に発生することを意味します。
 
 特定のデータフロー実行の詳細を表示するには、リストから実行の開始時刻を選択します。
@@ -136,6 +147,11 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## 「宛先の監視」ダッシュボード {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activation"
+>abstract="宛先のアクティベーションには、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。"
 
 次の手順で [!UICONTROL 監視] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL 宛先]. この [!UICONTROL 監視] ダッシュボードには、宛先の実行ジョブに関する指標と情報が含まれています。
 
