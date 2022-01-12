@@ -2,10 +2,10 @@
 title: Web 拡張機能のライブラリモジュール
 description: Adobe Experience Platform で Web 拡張機能のライブラリモジュールを書式設定する方法について説明します。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 100%
+source-wordcount: '378'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ライブラリモジュールは、拡張機能によって提供される再利用可能なコードで、Adobe Experience Platform のタグのランタイムライブラリ内で発行されます。 このライブラリは、クライアントの Web サイト上で実行されます。 例えば、`gesture` イベントタイプには、クライアントの Web サイト上で実行され、ユーザーのジェスチャーを検出するライブラリモジュールがあります。
 
-ライブラリモジュールは、[CommonJS モジュール](http://wiki.commonjs.org/wiki/Modules/1.1.1)として構造化されています。CommonJS モジュール内では、次の変数を使用できます。
+ライブラリモジュールは、[CommonJS モジュール](https://nodejs.org/api/modules.html#modules-commonjs-modules)として構造化されています。CommonJS モジュール内では、次の変数を使用できます。
 
 ## [!DNL require]
 

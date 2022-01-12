@@ -2,10 +2,10 @@
 title: 拡張機能の開発の概要
 description: 様々なタグ拡張タイプの主要コンポーネントと、Adobe Experience Platform での拡張開発プロセスについて説明します。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '949'
+ht-degree: 99%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエ
 
 ### ライブラリモジュール
 
-ライブラリモジュールは、拡張機能が提供する様々な [コンポーネント](#components) （タグのランタイムライブラリで生成されるロジック）を記述するファイルです。各ライブラリモジュールファイルの内容は、 [CommonJS モジュールの標準](http://wiki.commonjs.org/wiki/Modules/1.1.1) に従う必要があります。
+ライブラリモジュールは、拡張機能が提供する様々な [コンポーネント](#components) （タグのランタイムライブラリで生成されるロジック）を記述するファイルです。各ライブラリモジュールファイルの内容は、 [CommonJS モジュールの標準](https://nodejs.org/api/modules.html#modules-commonjs-modules) に従う必要があります。
 
 たとえば、「ビーコンを送信」というアクションタイプを作成する場合、ビーコンを送信するロジックを含むファイルが必要です。JavaScript を使用する場合、ファイルは `sendBeacon.js` のようになります。このファイルの内容は、タグランタイムライブラリ内で生成されます。
 

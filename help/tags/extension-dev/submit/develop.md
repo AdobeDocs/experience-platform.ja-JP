@@ -2,10 +2,10 @@
 title: 拡張機能の開発
 description: このドキュメントでは、タグ拡張機能開発プロセスの一般的な概要と、詳細なプロセスに関するその他のドキュメントへのリンクを示します。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 100%
+source-wordcount: '538'
+ht-degree: 97%
 
 ---
 
@@ -27,10 +27,10 @@ ht-degree: 100%
 * [拡張機能チュートリアルビデオ](https://youtu.be/rxjtC9o4rl0) は、仕様を開始する際に非常に役立ちます。
 * YouTube プレイリストの「[拡張機能の概要](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m)」では、拡張機能パッケージの作成プロセスを順を追って説明しています。
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
-* 「[JSON Lint/Validator](http://jsonlint.com/)」を参照してください。。
+* 「[JSON Lint/Validator](https://jsonlint.com/)」を参照してください。。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 拡張機能を使用して、JSON および JSONP をハイライト表示および印刷してください。
 * [jsonschema.net](https://jsonschema.net/#/editor) エディターは、オブジェクトから JSON スキーマを作成するのに役立ちます。。
-* [JSON スキーマバリデータ](http://www.jsonschemavalidator.net/) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
+* [JSON スキーマバリデータ](https://www.jsonschemavalidator.net) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
 
 ## ツール
 
@@ -53,6 +53,6 @@ GitHub には、スタータープロジェクトとしてレビューまたは�
 
 ## Slack ワークスペース
 
-Slack コミュニティワークスペースへのアクセスをリクエストできます。このワークスペースでは、拡張機能の作成者はこの[リクエストフォーム](http://join.launchdevelopers.chat)を使用して相互にサポートできます。
+Slack コミュニティワークスペースへのアクセスをリクエストできます。このワークスペースでは、拡張機能の作成者はこの[リクエストフォーム](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)を使用して相互にサポートできます。
 
 **注意**：この Slack ワークスペースにはアドビのメンバーも所属していますが、このワークスペースは、アドビが後援や管理をおこなっていないコミュニティリソースです。

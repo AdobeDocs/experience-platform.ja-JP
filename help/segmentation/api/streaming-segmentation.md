@@ -5,9 +5,9 @@ title: 'ストリーミングセグメント化を使用したほぼリアルタ
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1831'
 ht-degree: 34%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 34%
 >
 >ストリーミングによるセグメント化は、Platform にストリーミングされるデータを評価する場合にのみ使用できます。 つまり、バッチ取り込みで取り込まれたデータは、ストリーミングのセグメント化によって評価されず、夜間にスケジュールされたセグメント化ジョブと共に評価されます。
 
-## 概要
+## はじめに
 
 この開発者ガイドでは、 [!DNL Adobe Experience Platform] ストリーミングセグメント化に関連するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
@@ -42,7 +42,7 @@ ht-degree: 34%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -50,7 +50,7 @@ ht-degree: 34%
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **（必須）**&#x200B;文字列形式のジョブタイプ。サポートされているタイプは `batch_segmentation` と `export` です。 |
 | `properties` | **（必須）**&#x200B;スケジュールに関連する追加のプロパティを含むオブジェクト。 |
 | `properties.segments` | **（`type` が `batch_segmentation` と等しい場合は必須）**`["*"]` を使用すると、すべてのセグメントが含まれます。 |
-| `schedule` | **（必須）**&#x200B;ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。例 (`0 0 1 * * ?`) は、ジョブが毎日 1 時にトリガーされることを意味します。:00:00 UTC です。 詳しくは、[CRON 式形式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)のドキュメントを参照してください。 |
+| `schedule` | **（必須）**&#x200B;ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。例 (`0 0 1 * * ?`) は、ジョブが毎日 1 時にトリガーされることを意味します。:00:00 UTC です。 詳しくは、[CRON 式形式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)のドキュメントを参照してください。 |
 | `state` | *（オプション）*&#x200B;スケジュールの状態を含む文字列。使用可能な値は `active` と `inactive` です。デフォルト値は `inactive` です。IMS 組織で作成できるスケジュールは 1 つだけです。スケジュールを更新する手順は、このチュートリアルの後半で説明します。 |
 
 **応答** 
@@ -381,7 +381,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **リクエスト**
 
-次のリクエストでは、スケジュールの `state` を `active` に更新するために、[JSON パッチの形式](http://jsonpatch.com/)を使用しています。
+次のリクエストでは、スケジュールの `state` を `active` に更新するために、[JSON パッチの形式](https://datatracker.ietf.org/doc/html/rfc6902)を使用しています。
 
 ```shell
 curl -X POST \

@@ -2,7 +2,7 @@
 title: 件数（Web 拡張機能）
 description: Adobe Experience Platform Web 拡張機能のライブラリモジュールのビューを定義する方法について説明します。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
 ht-degree: 100%
@@ -74,7 +74,7 @@ window.extensionBridge.register({
 | `propertySettings` | プロパティの設定を含むオブジェクトです。 このオブジェクトに何が含まれるかについて詳しくは、 [turbine オブジェクトのガイド](../turbine.md#property-settings) を参照してください。 |
 | `tokens` | API トークンを含むオブジェクトです。 表示内から Adobe API にアクセスするには、通常 `tokens.imsAccess` 下の IMS トークンを使用する必要があります。このトークンは、アドビが開発した拡張機能に対してのみ使用できます。アドビが作成した拡張機能をアドビ従業員が代表する場合は、[データ収集エンジニアリングチームにメールを送信](mailto:reactor@adobe.com)し、許可リストに追加できるように拡張機能の名前を指定してください。 |
 | `company` | 1 つのプロパティ `orgId` を含むオブジェクトです。これ自体は、Adobe Experience Cloud ID（24 文字の英数字文字列）を表します。 |
-| `schema` | [JSON スキーマ](http://json-schema.org/)形式のオブジェクトです。このオブジェクトは[拡張機能マニフェスト](../manifest.md)から取得され、フォームの検証に役立つ場合があります。 |
+| `schema` | [JSON スキーマ](https://json-schema.org/)形式のオブジェクトです。このオブジェクトは[拡張機能マニフェスト](../manifest.md)から取得され、フォームの検証に役立つ場合があります。 |
 
 表示は、この情報を使用してフォームのレンダリングと管理をおこなう必要があります。 `info.settings` を扱うだけで済むこともありますが、場合によってはその他の情報も指定する必要があります。
 

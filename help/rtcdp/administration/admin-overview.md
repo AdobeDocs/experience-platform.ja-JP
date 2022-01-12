@@ -5,7 +5,7 @@ seo-title: Real-Time CDP administration overview
 description: 'このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。 '
 seo-description: seo description
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 64%
@@ -14,15 +14,15 @@ ht-degree: 64%
 
 # Real-time Customer Data Platform管理の概要
 
-このドキュメントでは、Adobe Experience Platformを利用した [!DNL Real-time Customer Data Platform] の管理機能の概要を説明します。
+このドキュメントでは、の管理機能の概要を説明します。 [!DNL Real-time Customer Data Platform](Adobe Experience Platformを活用 )
 
 [!DNL Experience Platform]管理者は、 を使用して、ユーザーのロールベースのアクセス制御を管理したり、アプリケーション開発用の仮想サンドボックスを管理したりできます。
 
-以下の節では、[!DNL Experience Platform] 管理機能の中心的なコンポーネントの紹介と、詳細な情報を提供する [!DNL Experience Platform] ドキュメントへのリンクを示します。
+以下の節では、の中央コンポーネントの紹介を示します。 [!DNL Experience Platform] 管理機能と、 [!DNL Experience Platform] 詳細情報が記載されているドキュメント。
 
 ## アクセス制御
 
-アクセス制御は、[Adobe Admin Console](http://adminconsole.adobe.com) でおこないます。この機能は、[!DNL Admin Console] の製品プロファイルを利用して、権限とサンドボックスを持つユーザーをリンクできます。 この機能を使用すると、管理者は、定義されたユーザーのセットに対して、特定のリアルタイム CDP 機能に対するアクセスを許可または制限できます。
+アクセス制御は、[Adobe Admin Console](https://adminconsole.adobe.com) でおこないます。この機能は、 [!DNL Admin Console]を使用して、権限とサンドボックスを持つユーザーをリンクできます。 この機能を使用すると、管理者は、定義されたユーザーのセットに対して、特定のリアルタイム CDP 機能に対するアクセスを許可または制限できます。
 
 アクセス制御について詳しくは、 ドキュメントの「[アクセス制御の概要](../../access-control/home.md)」を参照してください。[!DNL Experience Platform]
 
@@ -34,6 +34,6 @@ ht-degree: 64%
 
 Adobe Experience Platform（および拡張機能によるリアルタイム CDP）は、デジタルエクスペリエンスアプリケーションをグローバルに拡張するために構築されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
 
-このニーズに対処するため、Adobe Experience Platformは「サンドボックス」を提供し、1 つの [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に使用できます。
+このニーズに対処するために、Adobe Experience Platformでは「サンドボックス」を提供し、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に使用できます。
 
 サンドボックスについて詳しくは、 ドキュメントの[サンドボックスの概要](../../sandboxes/home.md)を参照してください。[!DNL Experience Platform]

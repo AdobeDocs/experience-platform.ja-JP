@@ -5,9 +5,9 @@ title: 指標 API エンドポイント
 topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 42%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | オブジェクトの配列。取得する指標ごとに 1 つずつ。 |
 | `name` | 観察性インサイトで認識される指標の名前。 詳しくは、 [付録](#available-metrics) を参照してください。 |
 | `filters` | 特定のデータセットで指標をフィルタリングできるオプションのフィールドです。 フィールドはオブジェクトの配列（各フィルターに対して 1 つ）で、各オブジェクトには次のプロパティが含まれます。 <ul><li>`name`:指標をフィルターするエンティティのタイプ。 現在は、`dataSets` のみがサポートされています。</li><li>`value`:1 つ以上のデータセットの ID。 複数のデータセット ID を 1 つの文字列として指定でき、各 ID を縦棒グラフ (`\|`) をクリックします。</li><li>`groupBy`:true に設定した場合、は、対応する `value` は、指標の結果を個別に返す必要がある複数のデータセットを表します。 false に設定した場合、これらのデータセットの指標の結果は 1 つにグループ化されます。</li></ul> |
-| `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能な集約について詳しくは、 [OpenTSDB ドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | フィールドを間隔（「グループ」）に並べ替えることで、集計関数を指定して、指標データのサンプリング率を減らすことができるオプションのフィールドです。 ダウンサンプリングの間隔は、 `granularity` プロパティ。 ダウンサンプリングについて詳しくは、 [OpenTSDB ドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能な集約について詳しくは、 [OpenTSDB ドキュメント](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | フィールドを間隔（「グループ」）に並べ替えることで、集計関数を指定して、指標データのサンプリング率を減らすことができるオプションのフィールドです。 ダウンサンプリングの間隔は、 `granularity` プロパティ。 ダウンサンプリングについて詳しくは、 [OpenTSDB ドキュメント](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 

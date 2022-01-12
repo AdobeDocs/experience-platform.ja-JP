@@ -2,10 +2,10 @@
 title: エッジ拡張機能のライブラリモジュール
 description: エッジプロパティのタグ拡張機能のライブラリモジュールの形式設定です。
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 100%
+source-wordcount: '307'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ライブラリモジュールは、拡張機能によって提供される再利用可能なコードで、Adobe Experience Platform（エッジノード上で実行されるライブラリ）のタグのランタイムライブラリ内で発行されます。例えば、`sendBeacon` アクションタイプには、エッジノード上で実行され、ビーコンを送信するライブラリモジュールがあります。
 
-ライブラリモジュールは、[CommonJS モジュール](http://wiki.commonjs.org/wiki/Modules/1.1.1)として構造化されています。CommonJS モジュール内では、次の変数を使用できます。
+ライブラリモジュールは、[CommonJS モジュール](https://nodejs.org/api/modules.html#modules-commonjs-modules)として構造化されています。CommonJS モジュール内では、次の変数を使用できます。
 
 ## [!DNL require]
 

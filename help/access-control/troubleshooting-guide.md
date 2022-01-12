@@ -5,7 +5,7 @@ title: アクセス制御トラブルシューティングガイド
 topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。その他の [!DNL Platform] サービスに関する質問とトラブルシューティングについては、『[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)』を参照してください。
 
-[!DNL Experience Platform] は、[Adobe Admin Console](http://adminconsole.adobe.com) の製品プロファイルを活用して、役割ベースのアクセス制御を提供し、ユーザーを権限およびサンドボックスにリンクします。  詳しくは、「[アクセス制御の概要](home.md)」を参照してください。
+[!DNL Experience Platform] は、[Adobe Admin Console](https://adminconsole.adobe.com) の製品プロファイルを活用して、役割ベースのアクセス制御を提供し、ユーザーを権限およびサンドボックスにリンクします。  詳しくは、「[アクセス制御の概要](home.md)」を参照してください。
 
 ## 現在のアクセス権限はどこで確認できますか。
 

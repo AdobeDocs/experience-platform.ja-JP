@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 70%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 |---|---|
-| `op` | 操作を指定します。その他のパッチ操作の例については、 [JSON パッチのドキュメント](http://jsonpatch.com)を参照してください |
+| `op` | 操作を指定します。その他のパッチ操作の例については、 [JSON パッチのドキュメント](https://datatracker.ietf.org/doc/html/rfc6902)を参照してください |
 | `path` | 更新するフィールドのパス。指定できる値は「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」です。, &quot;/isActiveOnEdge&quot; |
 | `value` | 指定したフィールドに設定する値。 |
 

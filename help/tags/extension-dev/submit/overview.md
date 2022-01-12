@@ -2,10 +2,10 @@
 title: 拡張機能の送信プロセスの概要
 description: 開発からリリースまで、Adobe Experience Platform で拡張機能を送信する手順について説明します。
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 100%
+source-wordcount: '238'
+ht-degree: 92%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 
 ## サポート
 
-拡張機能の構築とテストをおこなう際には、タグ開発者コミュニティ Slack ワークスペースでサポートを利用できます。Slack ワークスペースは、拡張機能の作成者が相互にサポートするオンラインコミュニティです。[http://join.launchdevelopers.chat](http://join.launchdevelopers.chat) でアクセスをリクエストできます。
+拡張機能の構築とテストをおこなう際には、タグ開発者コミュニティ Slack ワークスペースでサポートを利用できます。Slack ワークスペースは、拡張機能の作成者が相互にサポートするオンラインコミュニティです。次を使用してアクセスをリクエストできます [オンラインフォーム](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

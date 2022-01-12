@@ -5,7 +5,7 @@ title: Privacy ServiceとExperience Cloudの適用
 topic-legacy: overview
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: b430b9741beb2f8d41bcbe8168cb20a73d13c750
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 37%
@@ -39,7 +39,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | Adobe Campaign Standard | ✓ | ✓ | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/consents.md)</li></ul> |
 | Adobe顧客属性 (CRS) | ✓ | なし | データ主体の属性がシステムから削除されます。 | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>顧客属性にはデータを転送する機能がないので、販売のオプトアウトリクエストは利用できません。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Experience Platform が Privacy Service から削除リクエストを受信すると、Platform は、Privacy Service に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。プライバシージョブが完了すると、レコードはデータレイクまたはプロファイルストアから削除されます。 ジョブが完了する前に、データはソフト削除されるので、どの Platform サービスからもアクセスできません。 | <ul><li>[データレイクのためのアクセス / 削除に関するドキュメント](../catalog/privacy.md)</li><li>[ID サービスのアクセス/削除に関するドキュメント](../identity-service/privacy.md)</li><li>[リアルタイム顧客プロファイルのためのアクセス / 削除に関するドキュメント](../profile/privacy.md)</li><li>[!DNL Experience Platform] 名誉 [オーディエンスセグメントのオプトアウトリクエスト](../segmentation/consents.md).</li></ul> |
-| Adobe Primetime Authentication | ✓ | なし | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
+| Adobe Primetime Authentication | ✓ | なし | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
 | Adobe Target | ✓ | なし | データ主体の ID に関連付けられているすべてのデータは、訪問者プロファイルから削除されます。 個人を特定しない、またはコンテンツデータなどとは無関係な集計データや匿名化データは、削除リクエストには適用されません。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=ja)</li><li>[!DNL Target] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
 | Marketo Engage | ✓ | なし | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] にはデータを転送する機能がないため、販売のオプトアウトリクエストは利用できません。</li></ul> |
 
