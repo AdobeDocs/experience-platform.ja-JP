@@ -1,39 +1,43 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
+keywords: Experience Platform；ホーム；人気の高いトピック；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 2%
+source-wordcount: '491'
+ht-degree: 1%
 
 ---
 
 # [!DNL Amazon Kinesis] コネクタ
 
-Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供します。 これらのシステムのデータを [!DNL Platform] に取り込むことができます。
+Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
-クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] を使用すると、からデータをリアルタイム [!DNL Amazon Kinesis] で取り込むことができます。
+クラウドストレージソースは、独自のデータを [!DNL Platform] をダウンロード、フォーマット、アップロードする必要はありません。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順が、ソースワークフローに統合されます。 [!DNL Platform] を使用すると、次のデータを取り込むことができます： [!DNL Amazon Kinesis] リアルタイムで。
+
+>[!NOTE]
+>
+>の尺度 [!DNL Kinesis] 大量のデータを取り込む必要がある場合は、を増やす必要があります。 現在、 [!DNL Kinesis] Platform へのアカウントは、1 秒あたり 4,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
 
 ## 前提条件
 
-次の節では、[!DNL Kinesis] ソース接続を作成する前に必要な前提条件の設定に関する詳細を説明します。
+次の節では、を作成する前に必要な前提条件の設定について詳しく説明します [!DNL Kinesis] ソース接続。
 
-### アクセスポリシーの設定
+### アクセスポリシーを設定する
 
-[!DNL Kinesis] ストリームには、ソース接続を作成するために次の権限が必要です。
+A [!DNL Kinesis] ストリームでソース接続を作成するには、次の権限が必要です。
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-これらの権限は、[!DNL Kinesis] コンソールを通じて設定され、資格情報を入力してデータストリームを選択すると、Platform によって確認されます。
+これらの権限は、 [!DNL Kinesis] コンソールにアクセスし、資格情報を入力してデータストリームを選択すると、Platform によって確認されます。
 
-次の例は、[!DNL Kinesis] ソース接続を作成するために必要な最小限のアクセス権を示しています。
+次の例は、 [!DNL Kinesis] ソース接続。
 
 ```json
 {
@@ -57,32 +61,32 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `kinesis:GetShardIterator` | レコード間を移動するために必要なアクション。 |
+| `kinesis:GetShardIterator` | レコードをトラバースするのに必要なアクション。 |
 | `kinesis:GetRecords` | 特定のオフセット ID または共有 ID からレコードを取得するために必要なアクション。 |
-| `kinesis:DescribeStream` | シャードマップを含むストリームに関する情報を返すアクション。シャード ID の生成に必要です。 |
+| `kinesis:DescribeStream` | シャード ID の生成に必要なシャードマップを含む、ストリームに関する情報を返すアクション。 |
 | `kinesis:ListStreams` | UI から選択できる使用可能なストリームのリストアウトに必要なアクション。 |
 
-[!DNL Kinesis] データストリームのアクセス制御の詳細については、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) を参照してください。
+のアクセス制御の詳細 [!DNL Kinesis] データストリームについては、次を参照してください。 [[!DNL Kinesis] 文書](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-### イテレータ型の設定
+### イテレータータイプを設定
 
-[!DNL Kinesis] では、次のイテレータ型をサポートしており、データの読み取り順序を指定できます。
+[!DNL Kinesis] では、次のイテレータータイプをサポートしており、データの読み取り順序を指定できます。
 
-| 反復子の型 | 説明 |
+| 反復子タイプ | 説明 |
 | ------------- | ----------- |
 | `AT_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
-| `AFTER_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
+| `AFTER_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別される位置の後から読み出される。 |
 | `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別された位置から読み出される。 |
 | `TRIM_HORIZON` | データは、最も古いデータレコードから読み取られます。 |
 | `LATEST` | データは、最新のデータレコードから読み取られます。 |
 
-現在、[!DNL Kinesis] UI ソースは `TRIM_HORIZON` のみをサポートしていますが、API はデータを取得するモードとして、`TRIM_HORIZON` と `LATEST` の両方をサポートしています。 Platform が [!DNL Kinesis] ソースに使用するデフォルトのイテレータ値は `TRIM_HORIZON` です。
+A [!DNL Kinesis] UI ソースは現在、 `TRIM_HORIZON`API は `TRIM_HORIZON` および `LATEST` をデータを取得するモードとして使用します。 Platform が [!DNL Kinesis] ソースは `TRIM_HORIZON`.
 
-イテレータ型の詳細は、次の [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) を参照してください。
+反復子のタイプの詳細については、次を参照してください。 [[!DNL Kinesis] 文書](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## [!DNL Amazon Kinesis] を [!DNL Platform] に接続
+## 接続 [!DNL Amazon Kinesis] から [!DNL Platform]
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Amazon Kinesis] を [!DNL Platform] に接続する方法について説明します。
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Amazon Kinesis] から [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
 
 ### API の使用
 
