@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform、ホーム、人気の高いトピック、クエリサービス、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ
+keywords: Experience Platform、ホーム、人気の高いトピック、クエリサービス、クエリサービス、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ
 solution: Experience Platform
 title: スケジュール済みクエリ API エンドポイント
 topic-legacy: scheduled queries
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
+source-git-commit: f1b982e5f788282a8cf2a9c4523370c520b82d0e
 workflow-type: tm+mt
 source-wordcount: '1113'
-ht-degree: 80%
+ht-degree: 77%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 80%
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーを理解できたので、[!DNL Query Service] API の呼び出しを開始できます。 以下の節では、[!DNL Query Service] API を使用しておこなえる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーを理解できたので、 [!DNL Query Service] API 以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### スケジュールされたクエリのリストの取得
 
@@ -124,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-`/schedules` エンドポイントに POST リクエストを送信することで、新しいスケジュール済みクエリを作成できます。API でスケジュール済みクエリを作成すると、クエリエディターでもクエリを確認できます。 UI でのスケジュールされたクエリの詳細については、[ クエリエディターのドキュメント ](../ui/user-guide.md#scheduled-queries) を参照してください。
+`/schedules` エンドポイントに POST リクエストを送信することで、新しいスケジュール済みクエリを作成できます。API でスケジュール済みクエリを作成すると、クエリエディターでもクエリを表示できます。 UI でのスケジュール済みクエリについて詳しくは、 [クエリエディターのドキュメント](../ui/user-guide.md#scheduled-queries).
 
 **API 形式**
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | スケジュール済みクエリを作成するデータベースの名前。 |
 | `query.sql` | 作成する SQL クエリ。 |
 | `query.name` | スケジュール済みクエリの名前。 |
-| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br>または、次の短縮形の式を使用できます。<ul><li>`@once`:クエリは 1 回だけ実行されます。</li><li>`@hourly`:クエリは、毎時間、時間の初めに実行されます。これは、Cron 式 `0 * * * *` と同じです。</li><li>`@daily`:クエリは、1 日 1 回午前 0 時に実行されます。これは、Cron 式 `0 0 * * *` と同じです。</li><li>`@weekly`:クエリは、週に 1 回、日曜日は午前 0 時に実行されます。これは、Cron 式 `0 0 * * 0` と同じです。</li><li>`@monthly`:クエリは、月に 1 回、月の最初の日の午前 0 時に実行されます。これは、Cron 式 `0 0 1 * *` と同じです。</li><li>`@yearly`:クエリは、年に 1 回、1 月 1 日午前 0 時に実行されます。これは、Cron 式 `1 0 0 1 1 *` と同じです。 |
+| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br>また、次の短縮形の式を使用することもできます。<ul><li>`@once`:クエリは 1 回だけ実行されます。</li><li>`@hourly`:クエリは、1 時間ごとに 1 時間ごとに実行されます。 これは、Cron 式と同じです。 `0 * * * *`.</li><li>`@daily`:クエリは、1 日 1 回午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 * * *`.</li><li>`@weekly`:クエリは、週に 1 回、日曜日、午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 * * 0`.</li><li>`@monthly`:クエリは、月に 1 回、月の最初の日の午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 1 * *`.</li><li>`@yearly`:クエリは、年に 1 回、1 月 1 日、午前 0 時に実行されます。 これは、Cron 式と同じです。 `1 0 0 1 1 *`. |
 | `schedule.startDate` | スケジュール済みクエリの開始日（UTC タイムスタンプ形式）です。 |
 
 **応答**
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
+| `{SCHEDULE_ID}` | この `id` PATCHするスケジュール済みクエリの値。 |
 
 
 **リクエスト**
@@ -374,7 +374,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
+| `{SCHEDULE_ID}` | この `id` PATCHするスケジュール済みクエリの値。 |
 
 **リクエスト**
 
@@ -429,7 +429,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
+| `{SCHEDULE_ID}` | この `id` DELETEするスケジュール済みクエリの値。 |
 
 **リクエスト**
 
