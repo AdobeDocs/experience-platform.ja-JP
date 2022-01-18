@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1897'
 ht-degree: 4%
 
 ---
@@ -152,6 +152,11 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="宛先のアクティベーションには、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="セグメントジョブ"
+>abstract="セグメントジョブダッシュボードには、すべてのセグメントの評価ジョブと書き出しジョブに関する情報が含まれています。"
 
 次の手順で [!UICONTROL 監視] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL 宛先]. この [!UICONTROL 監視] ダッシュボードには、宛先の実行ジョブに関する指標と情報が含まれています。
 
