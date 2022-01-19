@@ -3,32 +3,57 @@ keywords: ストリーミング；
 title: HTTP API 接続
 description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 5%
+source-wordcount: '833'
+ht-degree: 4%
 
 ---
 
-# （ベータ版） [!DNL HTTP] API 接続
+# （ベータ版）HTTP API 接続
 
 >[!IMPORTANT]
 >
->この [!DNL HTTP] の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Platform の HTTP API の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
-この [!DNL HTTP] API の宛先は [!DNL Adobe Experience Platform] プロファイルデータをサードパーティに送信するのに役立つストリーミングの宛先 [!DNL HTTP] エンドポイント。
+HTTP API の宛先は [!DNL Adobe Experience Platform] プロファイルデータをサードパーティの HTTP エンドポイントに送信する際に役立つストリーミングの宛先です。
 
-プロファイルデータをに送信するには [!DNL HTTP] エンドポイントの場合、最初に [[!DNL Adobe Experience Platform]](#connect-destination).
+プロファイルデータを HTTP エンドポイントに送信するには、まず [宛先に接続](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## ユースケース {#use-cases}
 
-この [!DNL HTTP] の宛先は、XDM プロファイルデータとオーディエンスセグメントを汎用のに書き出す必要があるお客様をターゲットにしています [!DNL HTTP] エンドポイント。
+HTTP 宛先は、XDM プロファイルデータとオーディエンスセグメントを汎用の HTTP エンドポイントに書き出す必要があるお客様をターゲットにしています。
 
-[!DNL HTTP] エンドポイントは、お客様独自のシステムまたはサードパーティ製ソリューションのいずれかになります。
+HTTP エンドポイントは、お客様独自のシステムまたはサードパーティのソリューションのいずれかになります。
 
-## 宛先に接続 {#connect}
+## 前提条件 {#prerequisites}
+
+>[!IMPORTANT]
+>
+>会社で HTTP API 宛先ベータ版機能を有効にする場合は、Adobe担当者またはAdobeカスタマーケアにお問い合わせください。
+
+HTTP API の宛先を使用してExperience Platformからデータを書き出すには、次の前提条件を満たす必要があります。
+
+* REST API をサポートする HTTP エンドポイントが必要です。
+* HTTP エンドポイントは、Experience Platformプロファイルスキーマをサポートする必要があります。 HTTP API の宛先では、サードパーティのペイロードスキーマへの変換はサポートされていません。 詳しくは、 [書き出されたデータ](#exported-data) 「 」セクションに、Experience Platform出力スキーマの例を示します。
+* HTTP エンドポイントはヘッダーをサポートする必要があります。
+* HTTP エンドポイントはをサポートしている必要があります [OAuth 2.0 クライアント資格情報](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 認証。 この要件は、HTTP API の宛先がベータ段階にある間に有効です。
+* 次の例に示すように、クライアント資格情報をエンドポイントへのPOSTリクエストの本文に含める必要があります。
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+また、 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) ：統合を設定し、HTTP エンドポイントにExperience Platformプロファイルデータを送信します。
+
+## 宛先に接続 {#connect-destination}
 
 この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
