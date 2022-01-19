@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform Web SDK を使用したパーソナライズされたコンテンツのレンダリング
-description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法を説明します。
+description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0246de5810c632134288347ac7b35abddf2d4308
+source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 2%
@@ -12,11 +12,11 @@ ht-degree: 2%
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDK は、[Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) を含む、Adobe時のパーソナライゼーションソリューションからパーソナライズされたコンテンツを取得できます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) を使用してAdobe Target内で作成されたコンテンツは、SDK で自動的に取得およびレンダリングできます。 [ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningを使用してAdobe Target内で作成されたコンテンツは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、手動でコンテンツをレンダリングする必要があります。
+Adobe Experience Platform Web SDK は、次のようなパーソナライゼーションソリューションからのAdobe時のパーソナライズされたコンテンツの取得をサポートします。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja). Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング
 
-イベントをサーバーに送信する際に、`renderDecisions` オプションを `true` に設定できます。 これにより、SDK は、自動レンダリングの対象となるパーソナライズされたコンテンツを自動的にレンダリングします。
+イベントをサーバーに送信する際に、 `renderDecisions` 選択肢 `true`. これにより、SDK は、自動レンダリングの対象となるパーソナライズされたコンテンツを自動的にレンダリングします。
 
 ```javascript
 alloy("sendEvent", {
@@ -34,11 +34,11 @@ alloy("sendEvent", {
 });
 ```
 
-パーソナライズされたコンテンツのレンダリングは非同期的なので、特定のコンテンツのレンダリングがいつ完了するかを前提にしてはいけません。
+パーソナライズされたコンテンツのレンダリングは非同期的なので、特定のコンテンツがいつレンダリングを完了するかについて前提にしないでください。
 
 ## コンテンツの手動レンダリング
 
-パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDK がサーバーから正常な応答を受け取った後に呼び出されます。 コールバックには `result` オブジェクトが指定され、返されるパーソナライゼーションコンテンツを含む `propositions` プロパティを含めることができます。 イベントの送信時にコールバック関数を指定する方法の例を以下に示します。
+パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定できます。この関数は、SDK がサーバーから正常な応答を受け取った後に呼び出されます。 コールバックは `result` オブジェクト ( `propositions` 返されたパーソナライゼーションコンテンツを含むプロパティ。 イベントの送信時にコールバック関数を指定する方法の例を以下に示します。
 
 ```javascript
 alloy("sendEvent", {
@@ -50,9 +50,9 @@ alloy("sendEvent", {
   });
 ```
 
-この例では、`result.propositions` が存在する場合、イベントに関連するパーソナライゼーションの提案を含む配列です。 デフォルトでは、自動レンダリングの対象となる提案のみが含まれます。
+この例では、 `result.propositions`が存在する場合、は、イベントに関連するパーソナライゼーションの提案を含む配列です。 デフォルトでは、自動レンダリングの対象となる提案のみが含まれます。
 
-`propositions` 配列は次の例のようになります。
+この `propositions` 配列は次の例のようになります。
 
 ```json
 [
@@ -99,11 +99,11 @@ alloy("sendEvent", {
 ]
 ```
 
-この例では、`sendEvent` コマンドの実行時に `renderDecisions` オプションが `true` に設定されていなかったので、SDK はコンテンツの自動レンダリングを試みませんでした。 ただし、SDK は自動レンダリングの対象となるコンテンツを自動的に取得し、必要に応じて手動でレンダリングするように指定します。 各提案オブジェクトの `renderAttempted` プロパティが `false` に設定されていることに注意してください。
+この例では、 `renderDecisions` オプションが設定されていません `true` ( `sendEvent` コマンドが実行されたので、SDK はコンテンツの自動レンダリングを試みませんでした。 ただし、SDK は、自動レンダリングの対象となるコンテンツを自動的に取得します。自動レンダリングをおこなう場合は、この値を手動でレンダリングする必要があります。 各提案オブジェクトには、 `renderAttempted` プロパティを `false`.
 
-代わりに、イベントの送信時に `renderDecisions` オプションを `true` に設定した場合、SDK は（前述のように）自動レンダリングの対象となる提案をすべてレンダリングしようとしました。 その結果、各提案オブジェクトの `renderAttempted` プロパティが `true` に設定されます。 この場合、これらの提案を手動でレンダリングする必要はありません。
+代わりに `renderDecisions` 選択肢 `true` イベントを送信すると、SDK は（前述のように）自動レンダリングの対象となる提案をレンダリングしようとしました。 その結果、各提案オブジェクトには、 `renderAttempted` プロパティを `true`. この場合、これらの提案を手動でレンダリングする必要はありません。
 
-これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ (Adobe Targetの Visual Experience Composer で作成されたコンテンツ ) についてのみ説明しました。 自動レンダリングの対象とならないパーソナライゼーションコンテンツ __ を取得するには、イベントの送信時に `decisionScopes` オプションを設定して、コンテンツをリクエストする必要があります。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
+これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ (Adobe Targetの Visual Experience Composer で作成されたコンテンツ ) についてのみ説明しました。 パーソナライゼーションコンテンツを取得するには _not_ 自動レンダリングの対象となる場合は、 `decisionScopes` 」オプションを使用して設定できます。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
 
 次に例を示します。
 
@@ -118,7 +118,7 @@ alloy("sendEvent", {
   });
 ```
 
-この例では、提案が `salutation` スコープまたは `discount` スコープに一致するサーバー上で見つかった場合、提案は返され、`result.propositions` 配列に含まれます。 `renderDecisions` オプションや `decisionScopes` オプションの設定方法に関係なく、自動レンダリングの条件を満たす提案は引き続き `propositions` 配列に含まれます。 `propositions` 配列は、この例のようになります。
+この例では、提案が `salutation` または `discount` スコープ、返され、 `result.propositions` 配列。 自動レンダリングの条件を満たす提案は、引き続き `propositions` 配列を、設定方法に関係なく `renderDecisions` または `decisionScopes` オプション。 この `propositions` 配列の場合、この例は次のようになります。
 
 ```json
 [
@@ -216,13 +216,13 @@ alloy("sendEvent", {
 ]
 ```
 
-この時点で、適切な位置に提案コンテンツをレンダリングできます。 この例では、`discount` 範囲に一致する提案は、Adobe Targetのフォームベースの Experience Composer を使用して構築されたHTML提案です。 ページ上に ID が `daily-special` の要素があり、`discount` 提案から `daily-special` 要素にコンテンツをレンダリングする場合は、次の手順を実行します。
+この時点で、適切に提案コンテンツをレンダリングできます。 この例では、 `discount` 範囲は、Adobe Targetのフォームベースの Experience Composer を使用して構築されたHTMLの提案です。 ページ上に、という ID を持つ要素があるとします。 `daily-special` 次の場所からコンテンツをレンダリングしたい場合、 `discount` 提案 `daily-special` 要素を使用する場合は、次の操作を行います。
 
-1. `result` オブジェクトから提案を抽出します。
-1. 各提案をループし、`discount` の範囲を持つ提案を探します。
-1. 提案が見つかった場合は、提案内の各項目をループし、HTMLコンテンツの項目を探します。 （確かめる方がよい）
-1. HTMLコンテンツを含むHTMLが見つかった場合は、ページ上の `daily-special` 要素を探し、その項目をパーソナライズされたコンテンツに置き換えます。
-1. コンテンツがレンダリングされたら、`display` イベントを送信します。
+1. 提案を `result` オブジェクト。
+1. 各提案をループし、範囲を持つ提案を探します。 `discount`.
+1. 提案が見つかった場合は、提案内の各項目をループし、HTMLコンテンツの項目を探します。 （想定するよりも確認する方が良い）。
+1. HTMLコンテンツを含む項目が見つかった場合は、 `daily-special` 要素を作成し、その要素をパーソナライズされたコンテンツにHTMLで置き換えます。
+1. コンテンツがレンダリングされた後、 `display` イベント。
 
 コードは次のようになります。
 
@@ -266,7 +266,7 @@ alloy("sendEvent", {
       // Send a "display" event 
     alloy("sendEvent", {
       xdm: {
-        eventType: "display",
+        eventType: "decisioning.propositionDisplay",
         _experience: {
           decisioning: {
             propositions: [
@@ -287,8 +287,8 @@ alloy("sendEvent", {
 
 >[!TIP]
 >
->Adobe Targetを使用する場合、スコープはサーバー上の mbox に対応しますが、個々にリクエストされるのではなく、すべて同時にリクエストされる点が異なります。 グローバル mbox は常に返されます。
+>Adobe Targetを使用する場合、スコープはサーバー上の mbox に対応しますが、すべて個別にリクエストされるのではなく、一度にリクエストされる点が異なります。 グローバル mbox は常に返されます。
 
 ### フリッカーの管理
 
-SDK は、パーソナライゼーションプロセス中に [ ちらつき ](../personalization/manage-flicker.md) を管理する機能を提供します。
+SDK は、次の機能を提供します。 [ちらつきを制御](../personalization/manage-flicker.md) パーソナライゼーションプロセス中に
