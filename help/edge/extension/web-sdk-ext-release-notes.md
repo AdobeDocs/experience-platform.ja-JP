@@ -1,39 +1,43 @@
 ---
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
-description: Adobe Experience Platform Web SDK タグ拡張
+description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1256'
 ht-degree: 48%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
-このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン 2.9.0 - 2022 年 1 月 20 日
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含まれます。
 
 ## バージョン 2.8.0 - 2021 年 10 月 27 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-* Experience Edge からの追加情報は、「イベント完了を送信」イベントで利用できます。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される場合があります。 詳しくは、 [イベントの追跡。](../fundamentals/tracking-events.md)
+* Experience Edge からの追加情報は、「イベント完了を送信」イベントで利用できます。以下に例を示します。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変わる場合があります。 詳しくは、 [イベントの追跡。](../fundamentals/tracking-events.md)
 
 ## バージョン 2.7.3 - 2021 年 9 月 8 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.4 が含まれます。
 
-* 廃止の警告が `container.buildInfo.environment.`
+* 以下に対する廃止の警告はなくなりました： `container.buildInfo.environment.`
 
 ## バージョン 2.7.0 - 2021 年 8 月 17 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.3 が含まれます。
 
-* ID マップデータ要素タイプを使用する場合、文字列が設定されていない値に解決される ID を持つ識別子は、ID マップから自動的に削除されるようになりました。
-* XDM オブジェクトデータ要素タイプを使用してデータ要素を保存しようとして、スキーマが選択されていない場合に発生するエラーを修正しました。
-* ユーザーインターフェイスタイポグラフィを改善しました。
+* ID マップデータ要素タイプを使用する場合、入力されていない文字列に解決される ID を持つ識別子は、ID マップから自動的に削除されるようになりました。
+* XDM オブジェクトデータ要素タイプを使用してデータ要素を保存しようとしたときに、スキーマが選択されていない場合に発生するエラーを修正しました。
+* ユーザーインターフェイスタイポグラフィの改善。
 
-## バージョン 2.6.2 - 2021 年 8 月 5 日
+## バージョン 2.6.2 - 2021 年 8 月 4 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.2 が含まれます。
 
@@ -41,37 +45,37 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.2 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.1 が含まれます。
 
-## バージョン 2.6.0 - 2021 年 7 月 28 日
+## バージョン 2.6.0 - 2021 年 7 月 27 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.0 が含まれます。
 
 * 「エッジ設定」という用語を使用するラベル、説明およびエラーメッセージは、最新のAdobe Experience Platformの用語に合わせて「datastream」という用語を使用するように変更されました。
-* 拡張機能の設定表示で、大量のデータストリームとデータストリーム環境を処理するためのサポートが追加されました。
-* XDM オブジェクトデータ要素ビューで、大量のスキーマを処理するためのサポートが追加されました。
-* Send Event Complete イベントタイプが追加されました。このタイプは、イベントがサーバーに送信され、応答が受信された後にルールを実行するために使用できます。 近日中に、その他のドキュメントも提供される予定です。
-* Decisions Received イベントタイプは非推奨（廃止予定）となりました。 代わりに、「 Send Event Complete 」イベントタイプを使用してください。
-* ユーザーインターフェイスとエラー処理が一般的に改善されました。
+* 拡張機能の設定表示で、大量のデータストリームおよびデータストリーム環境を処理するためのサポートが追加されました。
+* XDM オブジェクトのデータ要素ビューで、大量のスキーマを処理するためのサポートが追加されました。
+* Send Event Complete イベントタイプが追加されました。これは、イベントがサーバーに送信され、応答が受信された後にルールを実行するために使用できます。 近日中に、その他のドキュメントも利用できるようになります。
+* Decisions Received イベントタイプは非推奨（廃止予定）となりました。 代わりに、「イベント完了を送信」イベントタイプを使用してください。
+* ユーザーインターフェイスとエラー処理の全般的な改善がおこなわれました。
 
 ## バージョン 2.5.0 - 2021 年 6 月 2 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含まれます。
 
-* に `data` 「イベントを送信」アクションのフィールド。 今後のドキュメントでは、特定のシナリオでこの機能を使用する方法を説明します。
-* XDM オブジェクトデータ要素ビューで、ユーザーがAdobe Experience Platformサンドボックスにアクセスできるが、組織のデフォルトとして設定されたサンドボックスにアクセスできない場合にエラーが発生する問題が修正されました。
-* XDM オブジェクトデータ要素ビューで、親オブジェクトに値が含まれていない場合でも、必須のスキーマフィールドが無効と見なされる問題が修正されました。
+* 追加された `data` 「イベントを送信」アクションのフィールド。 今後のドキュメントでは、特定のシナリオでこの機能を使用する方法を説明します。
+* XDM オブジェクトのデータ要素ビューで、ユーザーがAdobe Experience Platformサンドボックスにアクセスできるが、組織のデフォルトとして設定されたサンドボックスにアクセスできない場合にエラーがスローされる問題が修正されました。
+* XDM オブジェクトのデータ要素ビューで、親オブジェクトに値が含まれていない場合でも、必須スキーマフィールドが無効と見なされる問題が修正されました。
 
 ## バージョン 2.4.0 - 2021 年 3 月 9 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-* 追加 [&quot;ドキュメントのアンロード&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 「 」チェックボックスをオンにして、イベントアクション UI を送信します。
-* のサポートを追加しました。 `out` オプション [デフォルトの同意の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 同意が得られるまで、すべてのイベントを廃棄する ( `pending` オプションはイベントをキューに追加し、同意を受け取るとイベントを送信します )。
+* 追加済み [&quot;ドキュメントのアンロード中&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 「 」チェックボックスをオンにして、イベントアクション UI を送信します。
+* のサポートを追加しました。 `out` オプション [デフォルト同意の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 同意が得られるまで、すべてのイベントを破棄します ( 既存の `pending` オプションはイベントをキューに追加し、同意を受け取ったら送信します )。
 * デフォルトの同意フィールドにツールチップを追加しました。
 * のサポートを追加しました。 [Adobeの同意 2.0 標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
-* ユーザーのアクセストークンが無効か不適切にプロビジョニングされた場合、XDM オブジェクトデータ要素の UI に、より優れたエラーが表示されるようになりました。
-* XDM オブジェクトデータ要素を表示した際にブラウザー開発者コンソールに表示されたクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
+* ユーザーのアクセストークンが無効か不適切にプロビジョニングされた場合、XDM オブジェクトデータ要素の UI により良いエラーが表示されるようになりました。
+* XDM オブジェクトのデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
-## バージョン 2.3.0 - 2020 年 11 月 5 日
+## バージョン 2.3.0 - 2020 年 11 月 4 日
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含まれます。
 
@@ -82,7 +86,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 ## バージョン 2.2.0 - 2020 年 10 月 2 日
 
 * お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platform を呼び出す API が環境を認識するようになったので、ユーザーには、編集にアクセスできるスキーマのみが表示されます。
-* を使用する場合 `identityMap` データ要素に値を入力する必要がなくなり、名前空間がドロップダウンに事前に設定されるようになりました。
+* を使用する場合、 `identityMap` データ要素に値を入力する必要がなくなり、名前空間がドロップダウンに事前入力されるようになりました。
 * `xdmObject` データ要素の UI が改良されました。新しい UI では、オブジェクトに各項目を入力しなくても、入力されたフィールドを確認できます。
 
 ## バージョン 2.1.1 - 2020 年 8 月 27 日
@@ -116,7 +120,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。
 * `setCustomerIds` アクションの名前を `syncIdentity` に変更しました。
 * `getIdentity` コマンドを追加しました。現在のところ、カスタムコードでのみ使用できます。
-* を使用したデバッグの有効化 `_satellite` は、Adobe Experience Platform Web SDK でデバッグを有効にします。
+* を使用したデバッグの有効化 `_satellite` Adobe Experience Platform Web SDK でデバッグを有効にできるようになりました。
 * XDM オブジェクトに入力された値（ブール値、数字、および小数）のサポートを追加しました。
 
 ## バージョン 0.0.10 - 2020 年 3 月 16 日
@@ -137,7 +141,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 * アクティビティトラッカーの設定をタグ拡張に追加
 * イベントコマンドで EventType と EventMergeId を公開。
-* タグ拡張に onBeforeEventSend 設定を追加
+* タグ拡張機能に onBeforeEventSend 設定を追加
 * タグ拡張に edgeBasePath 設定を追加
 
 ## バージョン 0.0.3 - 2019 年 11 月 26 日
