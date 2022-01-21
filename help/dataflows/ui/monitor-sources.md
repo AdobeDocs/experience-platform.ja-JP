@@ -6,7 +6,7 @@ title: UI でのソースのデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 9%
@@ -41,13 +41,13 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="ソースの取り込み"
->abstract="ソース処理には、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれます。 <br> 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ソース処理には、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="データフロー実行の詳細"
->abstract="ソース処理には、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれます。 <br> 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ソース処理には、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 内 [Platform UI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションから [!UICONTROL 監視] ダッシュボード。 この [!UICONTROL 監視] ダッシュボードには、ソースからソースへのデータトラフィックの状態に関するインサイトを含む、すべてのソースデータフローに関する指標と情報が含まれます。 [!DNL Identity Service]、および [!DNL Profile].
@@ -151,7 +151,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 処理"
->abstract="ID 処理には、ID サービスに取り込まれたレコードに関する情報（追加された ID の数、作成されたグラフ、更新されたグラフなど）が含まれます。 <br> 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ID 処理には、ID サービスに取り込まれたレコードに関する情報（追加された ID の数、作成されたグラフ、更新されたグラフなど）が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 この [!UICONTROL ID 処理] ページには、次の場所に取り込まれたレコードに関する情報が含まれます： [!DNL Identity Service]（追加された id 数、作成されたグラフ、更新されたグラフなど）
