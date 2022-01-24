@@ -6,9 +6,9 @@ title: UI でのソースのデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1856'
 ht-degree: 9%
 
 ---
@@ -154,6 +154,11 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >abstract="ID 処理には、ID サービスに取り込まれたレコードに関する情報（追加された ID の数、作成されたグラフ、更新されたグラフなど）が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="データフロー実行の詳細"
+>abstract="データフローの実行の詳細ページには、IMS 組織 ID やデータフローの実行 ID など、ID データフローの実行に関する詳細が表示されます。"
+
 この [!UICONTROL ID 処理] ページには、次の場所に取り込まれたレコードに関する情報が含まれます： [!DNL Identity Service]（追加された id 数、作成されたグラフ、更新されたグラフなど）
 
 フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-sources/filter.png) を追加し、 [!DNL Identity] データフローの実行。
@@ -191,6 +196,11 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >title="プロファイルの処理"
 >abstract="プロファイル処理には、作成されたプロファイルフラグメントの数、更新されたプロファイルフラグメントの数、プロファイルフラグメントの合計数など、プロファイルサービスに取り込まれたレコードに関する情報が含まれます。"
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="データフロー実行の詳細"
+>abstract="データフローの実行の詳細ページには、IMS 組織 ID やデータフローの実行 ID など、プロファイルのデータフローの実行に関する詳細が表示されます。"
 
 この [!UICONTROL プロファイルの処理] ページには、次の場所に取り込まれたレコードに関する情報が含まれます： [!DNL Profile]（作成したプロファイルフラグメントの数、更新したプロファイルフラグメントの数、プロファイルフラグメントの合計数を含む）。
 

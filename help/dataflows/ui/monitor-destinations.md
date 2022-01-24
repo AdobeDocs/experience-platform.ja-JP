@@ -6,10 +6,10 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
+source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 4%
+source-wordcount: '2050'
+ht-degree: 3%
 
 ---
 
@@ -65,6 +65,35 @@ ht-degree: 4%
 >abstract="選択した宛先に対して失敗した個々のプロファイル ID の数。 詳細は、エラー診断を確認してください。"
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_streaming"
+>title="データフロー実行の詳細"
+>abstract="宛先のデータフロー実行の詳細には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。 詳しくは、指標の定義に関するガイドを参照してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received_streaming"
+>title="受信したプロファイル"
+>abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_streaming"
+>title="アクティブ化された ID"
+>abstract="選択した宛先に対して正常にアクティブ化された個々のプロファイル ID の数。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_streaming"
+>title="除外された ID"
+>abstract="属性が見つからず、同意違反に基づいて、選択した宛先のアクティベーションから除外された個々のプロファイルレコードの数。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed_streaming"
+>title="失敗した ID"
+>abstract="選択した宛先に対して失敗した個々のプロファイル ID の数。 詳細は、エラー診断を確認してください。"
+>text="Learn more in documentation"
+
 ストリーミング先の場合、 [!UICONTROL データフローの実行] 「 」タブには、データフローの実行時に指標データが 1 時間ごとに更新されます。 ラベル付けされた最も重要な統計は、ID 用です。
 
 ID は、プロファイルの様々なファセットを表します。 例えば、プロファイルに電話番号と電子メールアドレスの両方が含まれている場合、そのプロファイルには 2 つの ID が含まれます。
@@ -102,15 +131,33 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 ### バッチ宛先のデータフロー実行 {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation"
+>id="platform_monitoring_profiles_received"
+>title="受信したプロファイル"
+>abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="データフロー実行の詳細"
 >abstract="宛先のデータフロー実行の詳細には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。 詳しくは、指標の定義に関するガイドを参照してください。"
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
+>id="platform_monitoring_profiles_received_batch"
 >title="受信したプロファイル"
 >abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_batch"
+>title="アクティブ化された ID"
+>abstract="選択した宛先に対して正常にアクティブ化された個々のプロファイル ID の数。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_batch"
+>title="除外された ID"
+>abstract="属性が見つからず、同意違反に基づいて、選択した宛先のアクティベーションから除外された個々のプロファイルレコードの数。"
+>text="Learn more in documentation"
 
 バッチ保存先の場合、 [!UICONTROL データフローの実行] 「 」タブには、データフローの実行に関する指標データが表示されます。 個々の実行とその特定の指標のリストが表示され、次の ID の合計が表示されます。
 
