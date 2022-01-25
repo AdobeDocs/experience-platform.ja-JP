@@ -5,18 +5,14 @@ title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2 人以上の Platform ユーザーが安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 3c0be965189c7c62b0b3509cf8a07d37ed9cbb68
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1968'
 ht-degree: 6%
 
 ---
 
-# （ベータ版） [!DNL Segment Match] 概要
-
->[!IMPORTANT]
->
->セグメントマッチは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+# [!DNL Segment Match] の概要
 
 Adobe Experience Platform Segment Match は、2 人以上の Platform ユーザーが、安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、セグメント共有サービスです。 [!DNL Segment Match] は、ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など、Platform のプライバシー標準と個人識別子を使用します。
 
