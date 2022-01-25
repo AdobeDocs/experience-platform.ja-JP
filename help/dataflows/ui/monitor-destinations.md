@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 3%
 
 ---
@@ -135,6 +135,11 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 >title="受信したプロファイル"
 >abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="データフロー実行の詳細"
+>abstract="宛先のデータフロー実行の詳細には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。 詳しくは、指標の定義に関するガイドを参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
