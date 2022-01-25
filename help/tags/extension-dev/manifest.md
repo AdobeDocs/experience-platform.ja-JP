@@ -3,9 +3,9 @@ title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 | --- | --- |
 | `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、 [命名規則](#naming-rules) に従う必要があります。 **これは、タグが識別子として使用します。拡張機能を公開した後は変更しないでください。** |
 | `platform` | 拡張機能のプラットフォーム。 現時点で使用できる値は `web` のみです。 |
-| `version` | 拡張機能のバージョン。 [semver](https://semver.org/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
+| `version` | 拡張機能のバージョン。 [semver](https://semver.org/lang/ja/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
 | `displayName` | 人間が判読できる、拡張機能の名前。これは、Platform ユーザーに表示されます。「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
 | `description` | 拡張機能の説明。これは、Platform ユーザーに表示されます。拡張機能によってユーザーが Web サイトに製品を実装できるようになる場合は、製品の動作を説明します。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
 | `iconPath` *（オプション）* | 拡張機能用に表示されるアイコンの相対パス。 スラッシュで始めることはできません。拡張子 `.svg` が付いた SVG ファイルを参照する必要があります。 SVG は正方形にする必要があり、Platform で拡大縮小できます。 |
@@ -132,9 +132,22 @@ ht-degree: 99%
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a> のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクト対して実行されるライブラリモジュールと互換性のある形式であることを、Platform が適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
+      <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクト対して実行されるライブラリモジュールと互換性のある形式であることを、Platform が適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema":"http://json-schema.org/draft-04/schema#", "type":"object", "properties":{ "delay":{ "type":"number", "minimum":1 } }, "required":[ "delay" ], "additionalProperties":false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
