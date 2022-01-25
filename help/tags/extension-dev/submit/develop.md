@@ -3,9 +3,9 @@ title: 拡張機能の開発
 description: このドキュメントでは、タグ拡張機能開発プロセスの一般的な概要と、詳細なプロセスに関するその他のドキュメントへのリンクを示します。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '538'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 97%
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
 * 「[JSON Lint/Validator](https://jsonlint.com/)」を参照してください。。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 拡張機能を使用して、JSON および JSONP をハイライト表示および印刷してください。
-* [jsonschema.net](https://jsonschema.net/#/editor) エディターは、オブジェクトから JSON スキーマを作成するのに役立ちます。。
+* [jsonschema.net](https://jsonschema.net/#/editor) エディターは、オブジェクトから JSON スキーマを作成するのに役立ちます。
 * [JSON スキーマバリデータ](https://www.jsonschemavalidator.net) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
 
 ## ツール
