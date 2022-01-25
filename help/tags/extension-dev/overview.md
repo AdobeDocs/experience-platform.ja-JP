@@ -3,9 +3,9 @@ title: 拡張機能の開発の概要
 description: 様々なタグ拡張タイプの主要コンポーネントと、Adobe Experience Platform での拡張開発プロセスについて説明します。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '949'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
