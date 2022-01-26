@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2188'
 ht-degree: 7%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="スケジュール"
->abstract="セグメントを保存すると、ファイルエクスポートのタイプ（完全ファイルまたは増分ファイル）やスケジュールは変更できなくなります。"
+>abstract="ファイルのエクスポートタイプ（完全なファイルまたは増分ファイル）とエクスポート頻度を設定します。"
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="詳しくは、ドキュメントを参照してください。"
 
 [!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先のデータを [!DNL CSV] ファイル。 内 **[!UICONTROL スケジュール]** ページでは、書き出す各セグメントのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
