@@ -5,20 +5,26 @@ title: 'API を使用したエッジのセグメント化 '
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 7%
+source-wordcount: '989'
+ht-degree: 6%
 
 ---
 
-# エッジのセグメント化（ベータ版）
+# エッジセグメント化
 
 >[!NOTE]
 >
->次のドキュメントでは、API を使用してエッジのセグメント化を実行する方法を説明します。 UI を使用してエッジセグメント化を実行する方法については、 [エッジセグメント化 UI ガイド](../ui/edge-segmentation.md). また、エッジセグメント化は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>次のドキュメントでは、API を使用してエッジのセグメント化を実行する方法を説明します。 UI を使用してエッジセグメント化を実行する方法については、 [エッジセグメント化 UI ガイド](../ui/edge-segmentation.md).
+>
+>エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。 ベータ版でエッジセグメントを作成した場合、これらのセグメントは引き続き動作します。
 
 エッジのセグメント化は、エッジ上でAdobe Experience Platformで瞬時にセグメントを評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
+
+>[!IMPORTANT]
+>
+> エッジデータは、収集された場所に最も近いエッジサーバーの場所に保存され、ハブ（またはプリンシパル）Adobe Experience Platformデータセンターとして指定された場所以外の場所に保存される場合があります。
 
 ## はじめに
 
