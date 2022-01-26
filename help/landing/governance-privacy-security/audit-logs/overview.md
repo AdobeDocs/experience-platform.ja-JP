@@ -2,9 +2,9 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platformで誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 6%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 組織でこの機能を有効にすると、アクティビティの発生に応じて監査ログが自動的に収集されます。 手動でログの収集を有効にする必要はありません。
 
-監査ログを表示および書き出すには、「監査ログの表示」アクセス制御権限（「データガバナンス」カテゴリの下）が付与されている必要があります。 Platform 機能の個々の権限を管理する方法については、 [アクセス制御ドキュメント](../../../access-control/home.md).
+監査ログを表示および書き出すには、 **[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限が付与されている ( [!UICONTROL データガバナンス] カテゴリ ) です。 Platform 機能の個々の権限を管理する方法については、 [アクセス制御ドキュメント](../../../access-control/home.md).
 
 ## UI での監査ログの管理
 
