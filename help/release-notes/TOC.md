@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートです。
-source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
-workflow-type: ht
-source-wordcount: '56'
+source-git-commit: 3ff39848d1e3362c33f1c91cc3dc4e56d0e4a710
+workflow-type: tm+mt
+source-wordcount: '58'
 ht-degree: 100%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 100%
 # Adobe Experience Platform リリースノート {#release-notes}
 
 * [現在の Platform リリースノート](latest/latest.md)
+* 2022 年 {#2022}
+   * [2022 年 1 月](2022/january-2022.md)
 * 2021 {#2021}
    * [2021年11月](2021/november-2021.md)
    * [2021年10月](2021/october-2021.md)
