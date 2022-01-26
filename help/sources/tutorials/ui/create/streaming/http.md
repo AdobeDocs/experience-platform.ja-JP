@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1058'
 ht-degree: 10%
 
 ---
@@ -90,7 +90,8 @@ Parquet ファイルは XDM に準拠している必要があり、手動でマ�
 
 ### 標準フィールドをマッピング
 
-必要に応じて、フィールドを直接マッピングするか、データ準備関数を使用してソースデータを変換し、計算値または計算値を導出できます。 マッパー関数と計算フィールドの詳細については、 [データ準備関数ガイド](../../../../../data-prep/functions.md) または [計算フィールドガイド](../../../../../data-prep/calculated-fields.md).
+
+必要に応じて、フィールドを直接マッピングするか、データ準備関数を使用してソースデータを変換し、計算値または計算値を導出できます。 マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
 新しいソースフィールドを追加するには、「 **[!UICONTROL 新しいマッピングを追加]**.
 

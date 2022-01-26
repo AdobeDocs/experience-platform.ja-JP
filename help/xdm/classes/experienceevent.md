@@ -5,7 +5,7 @@ title: XDM ExperienceEvent クラス
 topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスを説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 3%
@@ -53,7 +53,7 @@ ht-degree: 3%
 
 [Adobe Experience Platform Data Prep](../../data-prep/home.md) では、XDM との間でデータのマッピング、変換、検証をおこなうことができます。 使用可能な [マッピング関数](../../data-prep/functions.md) サービスによって提供される論理演算子を呼び出して、Experience Platformに取り込まれる際に、複数イベントレコードのデータを優先順位付け、変換、統合することができます。 上記の例では、 `eventType` は、両方が発生した場合に「製品表示」よりも「ページ表示」の方を優先する計算フィールドとして使用します。
 
-UI を使用して手動で Platform にデータを取り込む場合は、 [計算フィールド](../../data-prep/calculated-fields.md) を参照してください。
+UI を使用して手動で Platform にデータを取り込む場合は、 [計算フィールド](../../data-prep/ui/mapping.md#calculated-fields) を参照してください。
 
 ソース接続を使用してデータを Platform にストリーミングする場合は、代わりに計算フィールドを使用するようにソースを設定できます。 詳しくは、 [特定のソースのドキュメント](../../sources/home.md) を参照してください。
 

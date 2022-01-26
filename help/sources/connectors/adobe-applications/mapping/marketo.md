@@ -5,7 +5,7 @@ title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
 description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->この `to_object('ECID',arrays_to_objects('id',explode(ecids)))` ソースフィールドは、 [!UICONTROL 計算フィールドを追加] 」オプションを使用して、Platform UI に表示されます。 に関するチュートリアルを参照してください。 [計算フィールドの追加](../../../../data-prep/calculated-fields.md) を参照してください。
+>この `to_object('ECID',arrays_to_objects('id',explode(ecids)))` ソースフィールドは、 [!UICONTROL 計算フィールドを追加] 」オプションを使用して、Platform UI に表示されます。 に関するチュートリアルを参照してください。 [計算フィールドの追加](../../../../data-prep/ui/mapping.md#calculated-fields) を参照してください。
 
 ## 次の手順
 
