@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
+source-git-commit: 9cd9307d54d0950d4f67d5d8cee9c6412a558275
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 44%
+source-wordcount: '708'
+ht-degree: 27%
 
 ---
 
@@ -14,10 +14,12 @@ ht-degree: 44%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [アラート](#alerts)
-- [データ準備](#data-prep)
-- [サンドボックス](#sandboxes)
-- [セグメント化サービス](#segmentation)
+- [アラート {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [クエリサービス {#query-service}](#query-service-query-service)
+- [サンドボックス {#sandboxes}](#sandboxes-sandboxes)
+- [セグメント化サービス {#segmentation}](#segmentation-service-segmentation)
 
 ## アラート {#alerts}
 
@@ -42,6 +44,29 @@ Platform のアラートについて詳しくは、 [アラートの概要](../.
 | 統合マッピングエクスペリエンス | Platform UI の新しいマッピングインターフェイスでは、一貫したマッピング操作を使用して、インテリジェントマッピングレコメンデーションを活用し、マッピングルールを手動で設定し、マッピングセットに発生したエラーをデバッグできます。 詳しくは、 [[!DNL Data Prep] UI ガイド](../../data-prep/home.md). |
 
 詳しくは、 [!DNL Data Prep]詳しくは、 [[!DNL Data Prep] 概要](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] きれいな事をする。
+
+| 機能 | 説明 |
+|---------|-------------|
+| インテリジェントキャプション | 機械学習アルゴリズムは、プロファイルとオーディエンスデータに関するインサイトを自動的に提供し、30 ～ 90 日（12 か月）のパターンとトレンドを示します。 キャプションには、 <ul><li>全体的な形状と統計</li><li>トレンドと急激な変化</li><li>季節柄</li><li>予期しない異常値</li></ul> 詳しくは、 [プロファイルダッシュボード](../../dashboards/guides/profiles.md#profiles-count-trend) および [セグメントダッシュボード](../../dashboards/guides/segments.md#audience-size-trend) ドキュメント。 |
+| ダッシュボードの在庫 | PowerBI などのインストール済み統合を含む、プロファイル、セグメント、宛先ダッシュボードの事前設定済みレポートに、一元的にアクセスします。 詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md). |
+| PowerBI レポートテンプレート | 新しい PowerBI グラフを使用して、プロファイル、セグメントおよび宛先レポートのデータモデルから指標を作成、カスタマイズ、拡張します。 自動インストールワークフローを使用すると、PowerBI 環境内から組織全体でマーケティングインサイトを共有できます。 詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md). |
+
+詳しくは、 [!DNL Dashboards]詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md).
+
+## クエリサービス {#query-service}
+
+[!DNL Query Service] では、標準 SQL を使用してAdobe Experience Platformでデータに対してクエリを実行できます [!DNL Data Lake]. 任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+
+| 機能 | 説明 |
+|----------------------|-----------------------|
+| 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行し、増分データの読み込みをおこなうことができます。 詳しくは、 [クエリサービスの概要](../../query-service/home.md). |
+| データセットの構成 | サンドボックス内のデータアセットの量が増えるにつれ、クエリサービスで使用するデータアセットを整理するための一貫性のある論理的なデータ構造を提供します。 詳しくは、 [クエリサービスの概要](../../query-service/home.md). |
+
+詳しくは、 [!DNL Query Service]詳しくは、 [[!DNL Query Service] 概要](../../query-service/home.md).
 
 ## サンドボックス {#sandboxes}
 
