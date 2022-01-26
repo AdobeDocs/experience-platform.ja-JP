@@ -1,24 +1,20 @@
 ---
 keywords: ターゲットのパーソナライゼーション；宛先；experience platform ターゲットの宛先；adobe target の宛先；
-title: Adobe Target接続（ベータ版）
-description: Adobe Targetは、Web サイト、モバイルアプリなどのすべてのインバウンド顧客インタラクションで、リアルタイム、1:1 および AI を利用したパーソナライゼーションと実験を提供するアプリケーションです。
+title: Adobe Target接続
+description: Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 11%
+source-wordcount: '432'
+ht-degree: 10%
 
 ---
 
-# Adobe Target接続（ベータ版） {#adobe-target-connection}
+# Adobe Target接続 {#adobe-target-connection}
 
 ## 概要 {#overview}
 
->[!IMPORTANT]
->
->Adobe Experience PlatformのAdobe Target接続は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-Adobe Targetは、Web サイト、モバイルアプリなどのすべてのインバウンド顧客インタラクションで、AI を利用したパーソナライゼーションと実験をリアルタイムで提供するアプリケーションです。
+Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 
 Adobe Targetは、Adobe Experience Platformのパーソナライゼーション接続です。
 
