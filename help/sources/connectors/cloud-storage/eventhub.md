@@ -5,9 +5,9 @@ title: Azure Event Hubs ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
+source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '534'
 ht-degree: 4%
 
 ---
@@ -35,13 +35,29 @@ Platform 側での取り込み速度を上げるには、Platform で、ソー�
 
 ## 仮想ネットワークを使用して接続する [!DNL Event Hubs] Platform へ
 
-仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 次に、 **所要時間** をクリックします。 次に、 [!DNL Azure] アカウントを使用して資格情報を選択し、 [!DNL Event Hubs] Platform に取り込む名前空間、リソースグループ、サブスクリプションです。
+仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) およびは、次に示す手順に従います。
 
-設定が完了したら、 **リクエスト本文** 次のリストから、ご使用のネットワーク地域に対応する JSON を使用できます。
+* 選択 **所要時間** （REST API パネルから）
+* の認証 [!DNL Azure] 同じブラウザーの資格情報を使用するアカウント
+* を選択します。 [!DNL Event Hubs] Platform に取り込んでから選択する名前空間、リソースグループ、購読 **実行**;
+* 表示される JSON 本文で、次の Platform サブネットをの下に追加します。 `virtualNetworkRules` inside `properties`:
 
->[!TIP]
+
+>[!IMPORTANT]
 >
->この呼び出しの後に削除されるので、既存のファイアウォール IP フィルタリングルールのバックアップを作成する必要があります。
+>を更新する前に、受け取る JSON 本文のバックアップを作成する必要があります `virtualNetworkRules` 既存の IP フィルタリングルールを含むプラットフォームサブネットを使用します。 それ以外の場合、ルールは呼び出しの後で削除されます。
+
+
+```json
+{
+    "subnet": {
+        "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+    },
+    "ignoreMissingVnetServiceEndpoint": true
+}
+```
+
+Platform サブネットの様々な地域については、以下のリストを参照してください。
 
 ### VA7:北米
 
@@ -108,10 +124,10 @@ Platform 側での取り込み速度を上げるには、Platform で、ソー�
 
 ### API の使用
 
-- [フローサービス API を使用したイベントハブソース接続の作成](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [フローサービス API を使用したストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
+* [フローサービス API を使用したイベントハブソース接続の作成](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [フローサービス API を使用したストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
-- [UI での Event Hubs ソース接続の作成](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [UI でのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [UI での Event Hubs ソース接続の作成](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [UI でのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
