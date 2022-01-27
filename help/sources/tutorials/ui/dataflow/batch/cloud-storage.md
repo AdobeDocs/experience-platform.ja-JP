@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 4%
+source-wordcount: '2083'
+ht-degree: 3%
 
 ---
 
@@ -171,7 +171,7 @@ JSON ファイルの場合、フィールドを他のフィールドに直接マ
 
 >[!NOTE]
 >
->バッチ取り込みの場合、その後のデータフローでは、それぞれの **最終変更日** タイムスタンプ。 つまり、バッチデータフローでは、新しいファイルまたは最後のデータフローの実行以降に変更されたファイルをソースから選択します。
+>バッチ取り込みの場合、その後のデータフローでは、それぞれの **最終変更日** タイムスタンプ。 つまり、バッチデータフローでは、新しいフローまたは最後のフロー実行以降に変更されたファイルをソースから選択します。 また、ファイルのアップロードからフローの実行までに十分な時間がかかることを確認する必要があります。予定フローの実行時間より前に、クラウドストレージアカウントに完全にアップロードされていないファイルは取り込み対象から除外されます。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
