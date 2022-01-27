@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '694'
 ht-degree: 45%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 45%
       * [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md)
       * [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-streaming-profile-destinations.md)
       * [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-batch-profile-destinations.md)
-      * [プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化（ベータ版）](./ui/activate-profile-request-destinations.md)
+      * [プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化](./ui/activate-profile-request-destinations.md)
       * [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](./ui/configure-personalization-destinations.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)

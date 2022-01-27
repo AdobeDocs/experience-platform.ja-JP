@@ -1,73 +1,69 @@
 ---
-keywords: プロファイルリクエストの宛先のアクティブ化、データのアクティブ化、プロファイルリクエストの宛先のアクティブ化
+keywords: プロファイルリクエストの宛先のアクティブ化、データのアクティブ化、プロファイルリクエストの宛先
 title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化（ベータ版）
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
-description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
+description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 10%
+source-wordcount: '454'
+ht-degree: 9%
 
 ---
 
-# プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化（ベータ版）
+# プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化
 
 ## 概要 {#overview}
 
->[!IMPORTANT]
->
->Adobe Experience Platformのプロファイルリクエストの宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 プロファイルリクエストの宛先の例としては、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 接続と [ カスタムパーソナライゼーション ](../../destinations/catalog/personalization/custom-personalization.md) 接続があります。
+この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 プロファイルリクエストの宛先の例は、 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。
 
 ## 前提条件 {#prerequisites}
 
-宛先に対してデータをアクティブ化するには、宛先 ](./connect-destination.md) に [ 正常に接続されている必要があります。 まだの場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照して、使用する宛先を設定します。
+To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven&#39;t done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
-### セグメント結合ポリシー {#merge-policy}
+### Segment merge policy {#merge-policy}
 
-現在、プロファイルリクエストの宛先は、[ デフォルトの結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies) を使用するセグメントのアクティブ化のみをサポートしています。
+現在、プロファイルリクエストの宛先は、 [デフォルトの結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies).
 
-## 宛先の選択 {#select-destination}
+## 宛先を選択 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]** に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
+1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
 
    ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
+1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
 
-   ![ボタンの有効化](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
+   ![Activate buttons](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
-1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+1. セグメントのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-   ![宛先の選択](../assets/ui/activate-profile-request-destinations/select-destination.png)
+   ![宛先を選択](../assets/ui/activate-profile-request-destinations/select-destination.png)
 
-1. 次のセクションに移動して [ セグメントを選択します ](#select-segments)。
+1. 次のセクションに移動： [セグメントを選択](#select-segments).
 
-## セグメントの選択 {#select-segments}
+## セグメントを選択 {#select-segments}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
+セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![セグメントの選択](../assets/ui/activate-profile-request-destinations/select-segments.png)
+![Select segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
 
-## スケジュールセグメントの書き出し {#scheduling}
+## セグメントの書き出しをスケジュール {#scheduling}
 
-デフォルトでは、[!UICONTROL  セグメントスケジュール ] ページには、現在のアクティベーションフローで選択した新しく選択したセグメントのみが表示されます。
+デフォルトでは、 [!UICONTROL セグメントスケジュール] ページには、現在のアクティベーションフローで選択した新しく選択されたセグメントのみが表示されます。
 
 ![新しいセグメント](../assets/ui/activate-profile-request-destinations/new-segments.png)
 
-宛先に対してアクティブ化されているすべてのセグメントを表示するには、フィルタリングオプションを使用して、「**[!UICONTROL Show new segments only]**」フィルターを無効にします。
+To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
 
-![すべてのセグメント](../assets/ui/activate-profile-request-destinations/all-segments.png)
+![All segments](../assets/ui/activate-profile-request-destinations/all-segments.png)
 
-**[!UICONTROL セグメントスケジュール]** ページで、各セグメントを選択し、**[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクターを使用して、宛先にデータを送信する時間間隔を設定します。
+On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
-![セグメントスケジュール](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
+![Segment schedule](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
 
-**[!UICONTROL 次へ]** を選択して、[!UICONTROL  レビュー ] ページに移動します。
+Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 ## レビュー {#review}
 
@@ -75,14 +71,14 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反する例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法について詳しくは、データガバナンスのドキュメントの節の [ ポリシーの適用 ](../../rtcdp/privacy/data-governance-overview.md#enforcement) を参照してください。
+>この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 Shown below is an example where a policy is violated. 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![data policy violation](../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されなかった場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確認し、宛先へのデータの送信を開始します。
+ポリシー違反が検出されていない場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
 
 ![レビュー](../assets/ui/activate-profile-request-destinations/review.png)
 
-## セグメントのアクティベーションの検証 {#verify}
+## セグメントのアクティベーションを検証 {#verify}
 
-宛先へのデータのフローを監視する方法の詳細については、[ 宛先の監視に関するドキュメント ](../../dataflows/ui/monitor-destinations.md) を参照してください。
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
