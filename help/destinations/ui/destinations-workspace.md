@@ -4,89 +4,90 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。 以下の節で説明します。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 20%
+source-wordcount: '883'
+ht-degree: 19%
 
 ---
 
 # 宛先ワークスペース {#destinations-workspace}
 
-Adobe Experience Platformで、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、「[!UICONTROL  宛先 ]」ワークスペースにアクセスします。
+Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーションバーから [!UICONTROL 宛先] ワークスペース。
 
-[!UICONTROL  宛先 ] ワークスペースは、以下の節で説明する [!UICONTROL  概要 ]、[!UICONTROL  カタログ ]、[!UICONTROL  参照 ]、[!UICONTROL  アカウント ]、[!UICONTROL  システムビュー ] の 5 つのセクションで構成されます。
+この [!UICONTROL 宛先] ワークスペースは 5 つのセクションで構成されています。 [!UICONTROL 概要], [!UICONTROL カタログ], [!UICONTROL 参照], [!UICONTROL アカウント]、および [!UICONTROL システム表示]（以下の節で説明）
 
 ![宛先 — 概要](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL 概要] {#overview}
 
-「**[!UICONTROL 概要]**」タブに [!UICONTROL  宛先 ] ダッシュボードが表示され、組織の宛先データに関連する主要指標が示されます。 詳しくは、[[!UICONTROL  宛先 ] ダッシュボードガイド ](../../dashboards/guides/destinations.md) を参照してください。
+この **[!UICONTROL 概要]** タブには、 [!UICONTROL 宛先] ダッシュボードに表示され、組織の宛先データに関連する主要指標を指定できます。 詳しくは、 [[!UICONTROL 宛先] ダッシュボードガイド](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->組織がExperience Platformを初めて使用し、アクティブな宛先がまだない場合、「[!UICONTROL  宛先 ]」ダッシュボードと「[!UICONTROL  概要 ]」タブは表示されません。 代わりに、左のナビゲーションから「[!UICONTROL  宛先 ]」を選択すると、「[[!UICONTROL  カタログ ]」タブ ](#catalog) が表示されます。
+>組織がExperience Platformを初めて使用し、まだアクティブな宛先がない場合、 [!UICONTROL 宛先] ダッシュボードと [!UICONTROL 概要] タブが表示されません。 代わりに、「 [!UICONTROL 宛先] 左のナビゲーションから、 [[!UICONTROL カタログ] タブ](#catalog).
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL カタログ] {#catalog}
 
-「**[!UICONTROL カタログ]**」タブには、[!DNL Platform] で使用可能なすべての宛先のリストが表示されます。このリストには、データを送信できます。
+この **[!UICONTROL カタログ]** タブには、 [!DNL Platform]を使用して、にデータを送信できます。
 
-[!DNL Platform] ユーザーインターフェイスには、宛先カタログページでの検索およびフィルターのオプションがいくつか用意されています。
+この [!DNL Platform] ユーザーインターフェイスには、宛先カタログページに対して複数の検索およびフィルターオプションが用意されています。
 
-* ページ上の検索機能を使用して、特定の宛先を検索します。
-* [!UICONTROL  カテゴリ ] コントロールを使用して宛先をフィルタリングします。
-* [!UICONTROL  すべての宛先 ] と [!UICONTROL My destinations] を切り替えます。 「**[!UICONTROL すべての宛先]**」を選択すると、使用可能なすべての宛先 [!DNL Platform] が表示されます。 「**[!UICONTROL 宛先]**」を選択すると、接続を確立した宛先のみが表示されます。
-* **[!UICONTROL 接続]** や **[!UICONTROL 拡張]** を表示する場合に選択します。 2 つのカテゴリの違いを理解するには、[ 宛先のタイプとカテゴリ ](../destination-types.md) を参照してください。
+* ページ上の検索機能を使用して、特定の宛先を見つけます。
+* を使用した宛先のフィルタリング [!UICONTROL カテゴリ] コントロール。
+* 切り替え [!UICONTROL すべての宛先] および [!UICONTROL 宛先]. 次を選択した場合： **[!UICONTROL すべての宛先]**，すべて利用可能 [!DNL Platform] の宛先が表示されます。 次を選択した場合： **[!UICONTROL 宛先]**&#x200B;を使用すると、接続を確立した宛先のみを表示できます。
+* 選択して表示 **[!UICONTROL 接続]** および/または **[!UICONTROL 拡張機能]**. この 2 つのカテゴリの違いについては、 [宛先のタイプとカテゴリ](../destination-types.md).
 
 ![カタログ](../assets/ui/workspace/catalog.png)
 
-宛先カードには、**[!UICONTROL 設定]** または **[!UICONTROL アクティブ化セグメント]** コントロールと、追加のオプションを表示するセカンダリコントロールが含まれます。 以下に、これらのコントロールについて説明します。
+宛先カードには、 **[!UICONTROL 設定]** または **[!UICONTROL セグメントのアクティブ化]** コントロールと、より多くのオプションを表示するセカンダリコントロール。 以下に、これらのコントロールについて説明します。
 
 | 制御 | 説明 |
 |---------|----------|
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
 | [!UICONTROL セグメントのアクティブ化] | 宛先への接続を確立したら、セグメントをアクティブ化できます。 |
-| [!UICONTROL アカウントの表示] | 宛先に接続したアカウントを表示します。 |
-| [!UICONTROL データフローの表示] | 宛先に存在するデータアクティベーションフローを表示します。 |
-| [!UICONTROL ドキュメントを表示] | その特定の宛先のドキュメントページへのリンクを開きます。詳細情報と設定方法が表示されます。 |
+| [!UICONTROL アカウントを表示] | 宛先に接続したアカウントを表示します。 |
+| [!UICONTROL データフローを表示] | 宛先に存在するデータのアクティベーションフローを表示します。 |
+| [!UICONTROL ドキュメントを表示] | その特定の宛先のドキュメントページへのリンクを開きます。詳細情報や設定に役立ちます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-![宛先カードのコントロール](../assets/ui/workspace/destination-card-options.png)
+![宛先カード上のコントロール](../assets/ui/workspace/destination-card-options.png)
 
-カタログ内の宛先カードを選択して、右側のパネルを開きます。 ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロールが表示されます。これには、宛先の説明、宛先のカテゴリとタイプが示されます。
+カタログ内の宛先カードを選択して、右側のパネルを開きます。 ここでは、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロールが表示されます。これには、宛先の説明、宛先のカテゴリおよびタイプが含まれます。
 
 ![宛先カタログオプション](../assets/ui/workspace/destination-right-rail.png)
 
-宛先カテゴリと各宛先の情報について詳しくは、「[ 宛先カタログ ](../catalog/overview.md)」と「[ 宛先のタイプとカテゴリ ](../destination-types.md)」を参照してください。
+宛先カテゴリと各宛先の情報について詳しくは、 [宛先カタログ](../catalog/overview.md) および [宛先のタイプとカテゴリ](../destination-types.md).
 
 ## [!UICONTROL アカウント] {#accounts}
 
-「**[!UICONTROL アカウント]**」タブには、様々な宛先で確立した接続の詳細が表示され、既存の接続の詳細を更新できます。 詳細な手順については、[ アカウントの更新 ](update-accounts.md) を参照してください。
+この **[!UICONTROL アカウント]** 「 」タブには、様々な宛先との接続に関する詳細が表示され、既存の接続の詳細を更新できます。 詳しくは、 [アカウントを更新](update-accounts.md) を参照してください。
 
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。**[!UICONTROL 有効/無効]** 切り替えをオンにした宛先は、それぞれアクティブまたは非アクティブに設定します。 **[!UICONTROL Segments]** / **[!UICONTROL Browse]** を選択し、検査するセグメントを選択すると、データのフロー先を表示することもできます。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。を使用した宛先 **[!UICONTROL 有効/無効]** 切り替えをオンにして、宛先をそれぞれアクティブまたは非アクティブに設定します。 また、「 」を選択すると、データのフロー先を表示することもできます **[!UICONTROL セグメント]** > **[!UICONTROL 参照]** 検査するセグメントを選択します。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
 >[!TIP]
 >
-> * 「[!UICONTROL  名前 ]」列の 3 つのドットを選択し、「![ セグメントを追加」ボタン ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 「セグメントをアクティブ化 ]**」ボタンを使用して、セグメントをその宛先に送信します。
-> * 「[!UICONTROL  名前 ]」列の 3 つのドットを選択し、「![ 宛先を削除」ボタン ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 「]**を削除」ボタンを使用して、宛先への既存の接続を [ 削除 ](delete-destinations.md) します。
+> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
+> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destinations.md) 宛先への既存の接続。
+> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![監視ボタン](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視&#x200B;]**ボタンをクリックして、 [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 
 | 要素 | 説明 |
 |---------|----------|
-| 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の 2 つのコントロールが含まれます。 と [!UICONTROL  宛先の削除 ] を有効にします。 |
-| [!UICONTROL 最後のフロー実行ステータス] | 最後のデータフロー実行のステータス。 データフロー実行の詳細については、「[ 宛先の詳細の表示 ](destination-details-page.md)」を参照してください。 |
-| [!UICONTROL 最終フロー実行日] | 最後のデータフロー実行が発生した日時。 データフロー実行の詳細については、「[ 宛先の詳細の表示 ](destination-details-page.md)」を参照してください。 |
+| 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の 2 つのコントロールが含まれます。 [!UICONTROL 有効化 ] および [!UICONTROL 宛先の削除]. |
+| [!UICONTROL 前回のフロー実行ステータス] | 最後のデータフロー実行のステータス。 詳しくは、 [宛先の詳細を表示](destination-details-page.md) データフローの実行の詳細を参照してください。 |
+| [!UICONTROL 前回のフロー実行日] | 最後のデータフロー実行が発生した日時。 詳しくは、 [宛先の詳細を表示](destination-details-page.md) データフローの実行の詳細を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、[!DNL Azure Blob] のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：[!DNL Azure Event Hubs] または [!DNL Amazon Kinesis] を指定できます。</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、または [!DNL Azure Blob].</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：可能 [!DNL Azure Event Hubs] または [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
-| [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されるセグメントの数を示します。 このコントロールを選択して、アクティブ化されたセグメントの詳細を確認します。 アクティブ化されたセグメントの詳細については、宛先の詳細ページの「[ アクティブ化データ ](/help/destinations/ui/destination-details-page.md#activation-data)」を参照してください。 |
+| [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されるセグメントの数を示します。 このコントロールを選択して、アクティブ化されたセグメントの詳細を確認します。 参照： [アクティベーションデータ](/help/destinations/ui/destination-details-page.md#activation-data) 宛先の詳細ページで、アクティブ化されたセグメントに関する詳細を参照してください。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
 | [!UICONTROL ステータス] | `Active` または `Inactive`.データがこの宛先に対してアクティブ化されているかどうかを示します。 |
 
@@ -98,10 +99,10 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 ## [!UICONTROL システム表示] {#system-view}
 
-「**[!UICONTROL システム表示]**」タブには、Adobe Experience Platformで設定したアクティベーションフローの図が表示されます。
+この **[!UICONTROL システム表示]** 「 」タブには、Adobe Experience Platformで設定したアクティベーションフローの図が表示されます。
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
-ページに表示される任意の宛先を選択し、「**[!UICONTROL データフローを表示]**」をクリックして、各宛先に設定したすべての接続に関する情報を表示します。
+ページに表示される任意の宛先を選択し、「 **[!UICONTROL データフローを表示]** を参照して、各宛先に設定したすべての接続に関する情報を確認します。
 
 ![Data-flows2](../assets/ui/workspace/data-flows2.png)
