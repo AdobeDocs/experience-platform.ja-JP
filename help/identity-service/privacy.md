@@ -2,13 +2,13 @@
 keywords: Experience Platform;ホーム;人気のトピック
 title: ID サービスでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
-workflow-type: ht
-source-wordcount: '666'
-ht-degree: 100%
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 92%
 
 ---
-
 
 # [!DNL Identity Service] でのプライバシーリクエストの処理
 
@@ -50,6 +50,10 @@ API でジョブリクエストを作成する際は、`userIDs` 内で指定す
 
 次のリクエストは、1 件の顧客データについて、GDPR に適合した新しいプライバシージョブを [!DNL Identity] ストアに作成します。顧客の `userIDs` 配列に 2 つの ID 値が指定されています。1 つは標準の `Email` ID 名前空間、もう 1 つは `ECID` 名前空間を使用しています。また、[!DNL Identity]（`Identity`）の製品値が `include` 配列に含まれています。
 
+>[!TIP]
+>
+>API を使用してカスタム名前空間を削除する場合は、表示名の代わりに ID 記号を名前空間として指定する必要があります。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### UI の使用
+
+>[!TIP]
+>
+>UI を使用してカスタム名前空間を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。 さらに、非実稼動用サンドボックスの UI では、カスタム名前空間を削除できません。
 
 UI でジョブリクエストを作成する場合は、[!DNL Identity Service] に保存されたデータのジョブを処理するために、必ず&#x200B;**[!UICONTROL 製品]**&#x200B;の下にある **[!UICONTROL ID]** を選択します。
 
