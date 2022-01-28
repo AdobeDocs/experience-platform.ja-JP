@@ -2,16 +2,16 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 29%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 1 月 26 日（PT）**
+**リリース日：2022年1月26日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -44,8 +44,8 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | 機能 | 説明 |
 | --- | --- |
 | インテリジェントキャプション | 機械学習アルゴリズムは、プロファイルとオーディエンスデータに関するインサイトを自動的に提供し、30 ～ 90 日（12 か月）のパターンとトレンドを示します。 キャプションには、 <ul><li>全体的な形状と統計</li><li>トレンドと急激な変化</li><li>季節柄</li><li>予期しない異常値</li></ul> 詳しくは、 [プロファイルダッシュボード](../../dashboards/guides/profiles.md#profiles-count-trend) および [セグメントダッシュボード](../../dashboards/guides/segments.md#audience-size-trend) ドキュメント。 |
-| ダッシュボードの在庫 | PowerBI などのインストール済み統合を含む、プロファイル、セグメント、宛先ダッシュボードの事前設定済みレポートに、一元的にアクセスします。 詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md). |
-| PowerBI レポートテンプレート | 新しい PowerBI グラフを使用して、プロファイル、セグメントおよび宛先レポートのデータモデルから指標を作成、カスタマイズ、拡張します。 自動インストールワークフローを使用すると、PowerBI 環境内から組織全体でマーケティングインサイトを共有できます。 詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md). |
+| ダッシュボードの在庫 | PowerBI などのインストール済み統合を含む、プロファイル、セグメント、宛先ダッシュボードの事前設定済みレポートに、一元的にアクセスします。 詳しくは、 [[!DNL Dashboards] 在庫ドキュメント](../../dashboards/inventory.md). |
+| PowerBI レポートテンプレート | 新しい PowerBI グラフを使用して、プロファイル、セグメントおよび宛先レポートのデータモデルから指標を作成、カスタマイズ、拡張します。 自動インストールワークフローを使用すると、PowerBI 環境内から組織全体でマーケティングインサイトを共有できます。 詳しくは、 [PowerBI レポートテンプレートドキュメント](../../dashboards/integrations/power-bi.md). |
 
 詳しくは、 [!DNL Dashboards]詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md).
 
@@ -91,8 +91,8 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行し、増分データの読み込みをおこなうことができます。 詳しくは、 [クエリサービスの概要](../../query-service/home.md). |
-| データセットの構成 | サンドボックス内のデータアセットの量が増えるにつれ、クエリサービスで使用するデータアセットを整理するための一貫性のある論理的なデータ構造を提供します。 詳しくは、 [クエリサービスの概要](../../query-service/home.md). |
+| 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行し、増分データの読み込みをおこなうことができます。 詳しくは、 [匿名ブロックドキュメントのクエリ例](../../query-service/best-practices/anonymous-block.md). |
+| データセットの構成 | サンドボックス内のデータアセットの量が増えるにつれ、クエリサービスで使用するデータアセットを整理するための一貫性のある論理的なデータ構造を提供します。 詳しくは、 [データアセットの整理に関するドキュメント](../../query-service/best-practices/organize-data-assets.md). |
 
 詳しくは、 [!DNL Query Service]詳しくは、 [[!DNL Query Service] 概要](../../query-service/home.md).
 
