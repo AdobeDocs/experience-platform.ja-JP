@@ -5,9 +5,9 @@ title: 'API を使用したエッジのセグメント化 '
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1015'
 ht-degree: 6%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 > エッジデータは、収集された場所に最も近いエッジサーバーの場所に保存され、ハブ（またはプリンシパル）Adobe Experience Platformデータセンターとして指定された場所以外の場所に保存される場合があります。
+>
+> さらに、エッジセグメントエンジンは、があるエッジでのリクエストにのみ従います **1 つ** エッジベース以外のプライマリ ID と一致する、プライマリマーク ID。
 
 ## はじめに
 

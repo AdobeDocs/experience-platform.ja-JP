@@ -5,9 +5,9 @@ title: エッジセグメント UI ガイド
 topic-legacy: ui guide
 description: エッジのセグメント化は、Platform 内のセグメントを即座にエッジ上で評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > エッジデータは、収集された場所に最も近いエッジサーバーの場所に保存され、ハブ（またはプリンシパル）Adobe Experience Platformデータセンターとして指定された場所以外の場所に保存される場合があります。
+>
+> さらに、エッジセグメントエンジンは、があるエッジでのリクエストにのみ従います **1 つ** エッジベース以外のプライマリ ID と一致する、プライマリマーク ID。
 
 ## エッジセグメント化のクエリタイプ
 
