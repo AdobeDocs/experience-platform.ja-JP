@@ -4,9 +4,9 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。 以下の節で説明します。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 19%
 
 ---
@@ -74,7 +74,7 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 >
 > * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
 > * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destinations.md) 宛先への既存の接続。
-> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![監視ボタン](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視&#x200B;]**ボタンをクリックして、 [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![監視ボタンで表示](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視で表示&#x200B;]**ボタンをクリックして、この宛先のアクティベーション情報を表示します。 [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
