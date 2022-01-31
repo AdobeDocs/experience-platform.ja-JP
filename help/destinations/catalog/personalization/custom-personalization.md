@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
+source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 7%
+source-wordcount: '635'
+ht-degree: 6%
 
 ---
 
@@ -39,6 +39,12 @@ ht-degree: 7%
 同じ Web サイトで、広告サーバーに対して個別のカスタムパーソナライゼーションの宛先を使用し、Adobe Experience Platformとは異なるセグメントセットをターゲット条件として、オンサイト広告のターゲット設定をおこなうことができます。
 
 ## 宛先に接続 {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_custom_personalization_datastream"
+>title="データストリーム ID について"
+>abstract="このオプションは、ページへの応答にセグメントを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。 宛先を設定する前に、データストリームを設定する必要があります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="データストリームの設定方法を説明します。"
 
 この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
