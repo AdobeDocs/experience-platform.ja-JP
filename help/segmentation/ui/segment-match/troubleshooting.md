@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント一致；セグメント一致
 solution: Experience Platform
-title: セグメント一致に関する FAQ（ベータ版）
+title: セグメント一致に関する FAQ
 description: セグメントマッチは、2 人以上の Platform ユーザーが安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] よくある質問（ベータ版）
+# [!DNL Segment Match] よくある質問
 
 このガイドでは、Adobe Experience Platform Segment Match に関してよく寄せられる、プライバシーに関する回答と法的な質問に対する回答を示します。
 
