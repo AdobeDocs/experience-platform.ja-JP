@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 8%
 
 ---
@@ -61,6 +61,16 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 >[!IMPORTANT]
 >
 >Data Prep のサポート機能 [!DNL Analytics] ソースはベータ版です。
+
+マッピングする前に、 [!DNL Analytics] XDM スキーマをターゲットにするデータは、まず、デフォルトのスキーマを使用するかカスタムのスキーマを使用するかを選択する必要があります。
+
+デフォルトのスキーマは、お客様に代わって新しいスキーマを作成し、 [!DNL Analytics] フィールドグループを使用します。 デフォルトのスキーマを使用するには、「 **[!UICONTROL デフォルトのスキーマ]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+カスタムスキーマを使用すると、 [!DNL Analytics] データ、そのスキーマに [!DNL Analytics] フィールドグループを使用します。 カスタムスキーマを使用するには、「 **[!UICONTROL カスタムスキーマ]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 この [!UICONTROL マッピング] ページには、ソースフィールドを適切なターゲットスキーマフィールドにマッピングするためのインターフェイスが用意されています。 ここから、カスタム変数を新しいスキーマフィールドグループにマッピングし、Data Prep のサポートに従って計算を適用できます。 ターゲットスキーマを選択してマッピングプロセスを開始します。
 
