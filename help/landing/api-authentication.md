@@ -1,122 +1,128 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題。認証、アクセス
+keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
 topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 19%
+source-wordcount: '1272'
+ht-degree: 18%
 
 ---
 
 
 # Experience Platform API の認証とアクセス
 
-このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。このチュートリアルの最後には、すべてのプラットフォーム API 呼び出しに必要な次の資格情報が生成されます。
+このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。このチュートリアルの最後に、すべての Platform API 呼び出しに必要な次の資格情報が生成されます。
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
 * `{IMS_ORG}`
 
-アプリケーションとユーザーのセキュリティを維持するには、Adobe I/O API へのすべてのリクエストが、OAuth や JSON Web Tokens（JWT）などの標準を使用して認証され、承認される必要があります。JWT は、personal access トークンを生成するために、クライアント固有の情報と共に使用されます。
+アプリケーションとユーザーのセキュリティを維持するには、Adobe I/O API へのすべてのリクエストが、OAuth や JSON Web Tokens（JWT）などの標準を使用して認証され、承認される必要があります。JWT は、個人用アクセストークンを生成するために、クライアント固有の情報と共に使用されます。
 
-このチュートリアルでは、以下のフローチャートで説明しているように、プラットフォームの認証のために必要な資格情報を収集する方法について説明します。
+このチュートリアルでは、次のフローチャートに示すように、Platform API 呼び出しを認証するために必要な資格情報を収集する方法について説明します。
 
 ![](./images/api-authentication/authentication-flowchart.png)
 
 ## 前提条件
 
-プラットフォーム Api を呼び出すには、次の手順を実行する必要があります。
+Experience PlatformAPI を正しく呼び出すには、次が必要です。
 
 * Adobe Experience Platform へのアクセス権を持つ IMS 組織.
-* 開発者として、および製品プロファイルにユーザーを追加できる管理コンソール管理者。
+* Admin Consoleプロファイルの開発者およびユーザーとして追加できる製品管理者。
 
-このチュートリアルを実行するには、Adobe ID も必要です。 Adobe ID をお持ちでない場合は、次の手順で作成できます。
+また、このチュートリアルを完了するには、Adobe IDが必要です。 Adobe ID をお持ちでない場合は、次の手順で作成できます。
 
-1. [Adobe Developer Console に移動 ](https://console.adobe.io) します。
-2. 「 **[!UICONTROL 新規アカウントを作成」を選択し]** ます。
-3. サインアップ処理を完了します。
+1. に移動します。 [Adobe開発者コンソール](https://console.adobe.io).
+2. 選択 **[!UICONTROL 新しいアカウントを作成]**.
+3. サインアッププロセスを完了します。
 
-## エクスペリエンスプラットフォーム用の開発者およびユーザーアクセスの取得
+## Experience Platform用の開発者とユーザーアクセスの獲得
 
-Adobe Developer Console にインテグレーションを作成する前に、Adobe Admin Console で、ご利用のアカウントに、経験 Platform 製品プロファイルの開発者およびユーザー権限があることを確認してください。
+Adobe開発者コンソールで統合を作成する前に、Adobe Admin ConsoleのExperience Platform製品プロファイルの開発者とユーザー権限がアカウントに必要です。
 
 ### 開発者アクセスの獲得
 
-を [!DNL Admin Console] 使用して、社内の管理者に連絡して、開発者がエクスペリエンスプラットフォーム製品プロファイルに追加されるように [[!DNL Admin Console] ](https://adminconsole.adobe.com/) します。[!DNL Admin Console] [ 製品プロフィールの開発者のアクセスを管理する方法について詳しくは、マニュアルを参照してください ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) 。
+連絡先： [!DNL Admin Console] 組織の管理者に問い合わせて、 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 詳しくは、 [!DNL Admin Console] 方法に関する具体的な手順に関するドキュメント [製品プロファイルの開発者アクセスの管理](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-開発者に割り当てたら、Adobe Developer Console でインテグレーションの作成を開始でき [ ](https://www.adobe.com/go/devs_console_ui) ます。 この統合により、外部のアプリケーションとサービスから Adobe Api へのパイプラインができます。
+開発者として割り当てられたら、で統合の作成を開始できます。 [Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui). これらの統合は、外部のアプリやサービスからAdobeAPI へのパイプラインです。
 
 ### ユーザーアクセスの取得
 
-[!DNL Admin Console]管理者は、同じ製品プロファイルにユーザーを追加することもできます。詳細については、 [ のユーザーグループの管理に関するガイドを参照してください  [!DNL Admin Console] ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 。
+お使いの [!DNL Admin Console] また、管理者はユーザーを同じ製品プロファイルに追加する必要があります。 詳しくは、 [ユーザーグループの管理 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) を参照してください。
 
-## API キー、IMS 組織 ID、クライアントシークレットを生成します。 {#api-ims-secret}
+## API キー、IMS Org ID およびクライアントの秘密鍵を生成します {#api-ims-secret}
 
 >[!NOTE]
 >
->このドキュメントに記載されているプライバシーに関する情報については、以下の説明を参照して [ ](../privacy-service/api/getting-started.md) [!DNL Privacy Service] ください。
+>このドキュメントを [Privacy ServiceAPI ガイド](../privacy-service/api/getting-started.md)に戻り、固有のアクセス資格情報を生成できるようになりました。 [!DNL Privacy Service].
 
-プラットフォームから開発者およびユーザーにアクセスするに [!DNL Admin Console] は、次の手順に従って、 `{IMS_ORG}` `{API_KEY}` Adobe developer Console でおよび証明書を生成します。 これらの資格情報は一度だけ生成される必要があり、将来のプラットフォーム API 呼び出しで再利用できます。
+を通じて Platform への開発者およびユーザーアクセス権を付与されたら、 [!DNL Admin Console]次の手順は、 `{IMS_ORG}` および `{API_KEY}` Adobe開発者コンソールの資格情報。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
 
-### エクスペリエンスプラットフォームをプロジェクトに追加する
+### プロジェクトにExperience Platformを追加する
 
 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Adobe Developer Console のドキュメントの[空のプロジェクトの作成](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)チュートリアルで概説されている手順に従います。
 
-新しいプロジェクトを作成したら、 **** 「プロジェクト概要」画面で「API を追加」を選択し **** ます。
+新しいプロジェクトを作成したら、「 **[!UICONTROL API を追加]** の **[!UICONTROL プロジェクトの概要]** 画面
 
 ![](./images/api-authentication/add-api.png)
 
-**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 Adobe エクスペリエンスプラットフォーム用の製品アイコンを選択してから、「次へ」を選択する前に、「Platform API を体験」を選択し **** **** ます。
+**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 Adobe Experience Platformの製品アイコンを選択し、「 **[!UICONTROL Experience PlatformAPI]** 選択する前に **[!UICONTROL 次へ]**.
 
 ![](./images/api-authentication/platform-api.png)
 
-このチュートリアルでは、 [ サービスアカウント (JWT) を使用してプロジェクトに api を追加する方法について説明している手順に従って ](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) ください (「Api の設定」を参照してください)。
+ここから、 [サービスアカウント (JWT) を使用したプロジェクトへの API の追加](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) （「API の設定」手順から開始）を実行して、プロセスを完了します。
 
 >[!IMPORTANT]
 >
->前述の手順では、ブラウザーによって、非公開鍵と関連する公開証明書が自動的にダウンロードされます。 この秘密キーは、このチュートリアルの後の手順で必要となるため、コンピューターに格納されている場所に注意してください。
+>上記にリンクされたプロセス中の特定の手順で、ブラウザーは、秘密鍵と関連する公開証明書を自動的にダウンロードします。 この秘密鍵は、このチュートリアルの後の手順で必要になるので、お使いのコンピューター上のどこに保存されるかをメモしておきます。
 
 ### 資格情報の収集
 
-API がプロジェクトに追加されると、 **[!UICONTROL プロジェクトの「エクスペリエンスプラットフォーム api]** 」ページに、プラットフォーム api のすべての呼び出しに必要な次の資格情報が表示されます。
+API がプロジェクトに追加されると、 **[!UICONTROL Experience PlatformAPI]** プロジェクトのページには、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` ([!UICONTROL クライアント ID])
 * `{IMS_ORG}` ([!UICONTROL Organization ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
-上記の資格情報に加えて、生成された **[!UICONTROL クライアントシークレットも]** 今後の手順に必要です。 「 **[!UICONTROL クライアントシークレットを取得して値を公開」を選択]** し、後で使用するためにコピーします。
+上記の資格情報に加えて、生成された **[!UICONTROL クライアント秘密鍵]** を参照してください。 選択 **[!UICONTROL クライアント秘密鍵を取得]** をクリックして値を表示し、後で使用するためにコピーします。
 
 ![](././images/api-authentication/client-secret.png)
 
-## JSON Web Token (JWT) を生成します。 {#jwt}
+## JSON Web トークン (JWT) の生成 {#jwt}
 
-次の手順では、アカウントの資格情報に基づいて、JSON Web Token (JWT) を生成します。 この値を使用して `{ACCESS_TOKEN}` 、プラットフォーム API 呼び出しで使用するための資格情報が生成されます。これは、24時間ごとに再生成する必要があります。
+次の手順では、アカウントの資格情報に基づいて JSON Web トークン (JWT) を生成します。 この値は、 `{ACCESS_TOKEN}` Platform API 呼び出しで使用する資格情報。24 時間ごとに再生成する必要があります。
 
-**[!UICONTROL 左側のナビゲーションで「サービスアカウント (jwt)」を選択]** し、「jwt の生成」を選択し **** ます。
+>[!IMPORTANT]
+>
+>このチュートリアルの目的上、以下の手順では、開発者コンソール内で JWT を生成する方法の概要を説明します。 ただし、この生成方法は、テストおよび評価の目的でのみ使用する必要があります。
+>
+>通常の使用では、JWT を自動的に生成する必要があります。 プログラムによる JWT の生成方法について詳しくは、 [サービスアカウント認証ガイド](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe開発者。
+
+選択 **[!UICONTROL サービスアカウント (JWT)]** 左側のナビゲーションで、「 **[!UICONTROL JWT を生成]**.
 
 ![](././images/api-authentication/generate-jwt.png)
 
-「カスタム JWT の生成」の下のテキストボックスに **** 、プラットフォーム API をサービスアカウントに追加するときに生成された秘密キーの内容を貼り付けます。 次に、「トークンを生成」を選択し **** ます。
+の下に表示されるテキストボックス内 **[!UICONTROL カスタム JWT を生成]**、Platform API をサービスアカウントに追加する際に以前生成した秘密鍵の内容を貼り付けます。 次に、 **[!UICONTROL トークンを生成]**.
 
 ![](././images/api-authentication/paste-key.png)
 
-ページには、生成された JWT が表示されるように更新されます。さらに、access トークンを生成するためのサンプル cURL コマンドもあります。 このチュートリアルでは、「生成された JWT」の横にある「コピー」を選択して、 **** トークンを **** クリップボードにコピーします。
+ページが更新され、生成された JWT が表示されます。また、アクセストークンを生成できるサンプルの cURL コマンドも表示されます。 このチュートリアルの目的で、 **[!UICONTROL コピー]** 次の **[!UICONTROL 生成された JWT]** をクリックして、トークンをクリップボードにコピーします。
 
 ![](././images/api-authentication/copy-jwt.png)
 
 ## アクセストークンの生成
 
-生成された JWT は、API 呼び出しで使用して、を生成でき `{ACCESS_TOKEN}` ます。 And の値とは異なり、 `{API_KEY}` `{IMS_ORG}` プラットフォーム api を継続して使用するには、24時間ごとに新しいトークンを生成する必要があります。
+JWT を生成したら、API 呼び出しで使用して、 `{ACCESS_TOKEN}`. の値とは異なる `{API_KEY}` および `{IMS_ORG}`に設定する場合、Platform API を使用し続けるには、24 時間ごとに新しいトークンを生成する必要があります。
 
 **リクエスト**
 
-次の要求は、 `{ACCESS_TOKEN}` ペイロードで指定された資格情報に基づいて、新規に作成されます。 このエンドポイントは、フォームデータをペイロードとしてのみ受け入れます。そのため、のヘッダーが付いている必要があり `Content-Type` `multipart/form-data` ます。
+次のリクエストでは、新しい `{ACCESS_TOKEN}` ペイロードで指定された資格情報に基づきます。 このエンドポイントは、フォームデータをペイロードとしてのみ受け入れるので、 `Content-Type` ヘッダー `multipart/form-data`.
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -128,13 +134,13 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `{API_KEY}` | `{API_KEY}`前の [!UICONTROL  手順で取得した (クライアント ID ] ) [ ](#api-ims-secret) 。 |
-| `{SECRET}` | 前の手順で取得したクライアントシークレット [ ](#api-ims-secret) |
-| `{JWT}` | 前の手順で生成した JWT [ ](#jwt) 。 |
+| `{API_KEY}` | この `{API_KEY}` ([!UICONTROL クライアント ID]) [前の手順](#api-ims-secret). |
+| `{SECRET}` | で取得したクライアント秘密鍵 [前の手順](#api-ims-secret). |
+| `{JWT}` | で生成した JWT [前の手順](#jwt). |
 
 >[!NOTE]
 >
->同じ API キー、クライアントシークレット、および JWT を使用して、各セッションに対して新しいアクセストークンを生成できます。 これにより、アプリケーション内のアクセストークンの生成を自動化することができます。
+>同じ API キー、クライアントの秘密鍵、JWT を使用して、各セッションに対して新しいアクセストークンを生成できます。 これにより、アプリケーションでのアクセストークンの生成を自動化できます。
 
 **応答** 
 
@@ -148,13 +154,13 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `token_type` | 返されるトークンのタイプ。 アクセストークンの場合、この値は常に設定されて `bearer` います。 |
-| `access_token` | 生成された `{ACCESS_TOKEN}` . この値は、プリフィックス「」という単語が付い `Bearer` ており、 `Authentication` すべてのプラットフォーム API 呼び出しのヘッダーとして指定する必要があります。 |
-| `expires_in` | アクセストークンの有効期限が切れるまでの残り時間 (ミリ秒) です。 この値を0に設定した場合は、新しいアクセストークンを生成して、プラットフォーム Api を継続して使用する必要があります。 |
+| `token_type` | 返されるトークンのタイプ。 アクセストークンの場合、この値は常に `bearer`. |
+| `access_token` | 生成された `{ACCESS_TOKEN}`. この値の先頭には、「 `Bearer`は、 `Authentication` すべての Platform API 呼び出し用のヘッダー。 |
+| `expires_in` | アクセストークンの有効期限が切れるまでの残り時間（ミリ秒）。 この値が 0 に達したら、Platform API を使用し続けるには、新しいアクセストークンを生成する必要があります。 |
 
 ## アクセス資格情報のテスト
 
-必要なすべての資格情報を収集したら、次の API 呼び出しを試みることができます。 この通話 [!DNL Experience Data Model] には、組織で使用可能なすべての標準 (XDM) クラスが一覧表示されます。
+3 つの必要な資格情報をすべて収集したら、次の API 呼び出しをおこないます。 この呼び出しでは、すべての標準 [!DNL Experience Data Model] (XDM) 組織で使用可能なクラス。
 
 **リクエスト**
 
@@ -168,7 +174,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 **応答**
 
-次に示すような応答がある場合は、資格情報が有効で動作していることを示します。 （スペース節約のために応答は部分的に表示されています。）
+応答が次に示すような場合は、資格情報が有効で機能しています。 （スペース節約のために応答は部分的に表示されています。）
 
 ```JSON
 {
@@ -191,10 +197,10 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## Postman を使用した API 呼び出しの認証とテスト
 
-[Postman ](https://www.postman.com/) は、開発者が RESTful api を調べてテストできるようにするための一般的なツールです。 この中には、Postman を設定して、 [ ](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 認証を自動的に実行する方法と、プラットフォーム api を使用するために使用する方法が説明されています。
+[Postman](https://www.postman.com/) は、開発者が RESTful API を調べてテストできる一般的なツールです。 この [投稿（中）](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 認証を自動的に実行し、それを使用して Platform API を使用するように Postman を設定する方法について説明します。
 
 ## 次の手順
 
-このドキュメントを読むことによって、プラットフォーム Api のアクセス資格情報が収集され、正常にテストされました。 ここでは、マニュアル全体に記載されている API 呼び出しを使用して説明を行うことができ [ ](../landing/documentation/overview.md) ます。
+このドキュメントでは、Platform API のアクセス資格情報を収集し、正常にテストしました。 これで、 [ドキュメント](../landing/documentation/overview.md).
 
-このチュートリアルで収集した認証値の他にも、多くのプラットフォーム Api には、 `{SANDBOX_NAME}` ヘッダーとして提供されるのに有効なものが必要です。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
+このチュートリアルで収集した認証値に加えて、多くの Platform API では有効な `{SANDBOX_NAME}` ヘッダーとして提供される。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。

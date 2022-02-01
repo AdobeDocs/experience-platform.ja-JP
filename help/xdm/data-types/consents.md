@@ -4,9 +4,9 @@ title: 同意および環境設定のデータタイプ
 description: プライバシー、パーソナライゼーション、マーケティング環境設定に関する同意のデータ型は、お客様のデータ操作から、CMP（同意管理プラットフォーム）およびその他のソースで生成される顧客の権限と設定を収集できるようにするものです。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2058'
 ht-degree: 2%
 
 ---
@@ -53,10 +53,11 @@ ht-degree: 2%
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ ht-degree: 2%
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ ht-degree: 2%
 
 ### `adID`
 
-`adID` は、広告主 ID（IDFA または GAID）を使用して、このデバイス上のアプリ間で顧客をリンクできるかどうかに関する顧客の同意を表します。
+`adID` は、広告主 ID を使用してこのデバイス上のアプリをまたいで顧客をリンクできるかどうかに関する顧客の同意を表します。
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
+| `idType` | 広告 ID タイプ。 `IDFA` (Apple広告主 ID または `GAID` (Google広告主 ID の場合 )。Android 広告主 ID(AAID) とも呼ばれます。 |
 | `val` | この使用例に対する、お客様が指定した同意の選択。 詳しくは、 [付録](#choice-values) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
