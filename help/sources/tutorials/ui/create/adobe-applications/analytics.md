@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 8%
@@ -64,11 +64,11 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 マッピングする前に、 [!DNL Analytics] XDM スキーマをターゲットにするデータは、まず、デフォルトのスキーマを使用するかカスタムのスキーマを使用するかを選択する必要があります。
 
-デフォルトのスキーマは、お客様に代わって新しいスキーマを作成し、 [!DNL Analytics] フィールドグループを使用します。 デフォルトのスキーマを使用するには、「 **[!UICONTROL デフォルトのスキーマ]**.
+デフォルトのスキーマは、お客様に代わって新しいスキーマを作成し、 [!DNL Adobe Analytics ExperienceEvent Template] フィールドグループを使用します。 デフォルトのスキーマを使用するには、「 **[!UICONTROL デフォルトのスキーマ]**.
 
 ![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-カスタムスキーマを使用すると、 [!DNL Analytics] データ、そのスキーマに [!DNL Analytics] フィールドグループを使用します。 カスタムスキーマを使用するには、「 **[!UICONTROL カスタムスキーマ]**.
+カスタムスキーマを使用すると、 [!DNL Analytics] データ ( スキーマに [!DNL Adobe Analytics ExperienceEvent Template] フィールドグループを使用します。 カスタムスキーマを使用するには、「 **[!UICONTROL カスタムスキーマ]**.
 
 ![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 >[!TIP]
 >
->スキーマのみ [!DNL Analytics] テンプレートフィールドグループが、スキーマ選択メニューに表示されます。 その他のスキーマは省略されます。 お使いのレポートスイートデータに適したスキーマがない場合は、新しいスキーマを作成する必要があります。 スキーマの作成手順について詳しくは、 [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md).
+>スキーマのみ [!DNL Adobe Analytics ExperienceEvent Template] フィールドグループがスキーマ選択メニューに表示されます。 その他のスキーマは省略されます。 お使いのレポートスイートデータに適したスキーマがない場合は、新しいスキーマを作成する必要があります。 スキーマの作成手順について詳しくは、 [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
