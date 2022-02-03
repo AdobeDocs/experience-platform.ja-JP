@@ -1,21 +1,19 @@
 ---
-keywords: personalization; target; destination; personalizationo destinations; configure personalization destinations; same page; next page;
-title: Configure personalization destinations for same-page and next-page personalization
+keywords: パーソナライゼーション；ターゲット；宛先；パーソナライゼーションの宛先；パーソナライゼーションの宛先の設定同じページ；次のページ
+title: 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定
 type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定する方法について説明します。
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定
-
-## 概要 {#overview}
 
 Adobe Experience Platform使用 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) を使用すれば、顧客はオーディエンスセグメントを高い規模でリアルタイムに作成およびターゲット設定できます。
 
@@ -23,13 +21,17 @@ Adobe Experience Platform使用 [エッジセグメント化](../../segmentation
 
 この記事では、これらの使用例でExperience Platformとパーソナライゼーションの宛先を設定する手順を順を追って説明します。
 
-## 手順 1:Experience PlatformWeb SDK のデータストリームの設定 {#configure-datastream}
+## 手順 1:データ収集 UI でのデータストリームの設定 {#configure-datastream}
 
-The first step in configuring your personalization use case is to configure a [!DNL Web SDK datastream].
+パーソナライゼーションの宛先を設定する最初の手順は、Experience PlatformWeb SDK のデータストリームを設定することです。 これは、データ収集 UI でおこないます。
 
-次に示す手順に従います： [データストリーム設定](../../edge/fundamentals/datastreams.md) ドキュメント。
+データストリームを設定する場合、 **[!UICONTROL Adobe Experience Platform]** 両方を確実にする **[!UICONTROL エッジセグメント化]** および **[!UICONTROL パーソナライズ機能の宛先]** が選択されている。
 
-## Step 2: Configure your personalization destination {#configure-destination}
+![データストリーム設定](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+データストリームの設定方法の詳細については、 [Platform Web SDK ドキュメント](../../edge/fundamentals/datastreams.md).
+
+## 手順 2:パーソナライゼーションの宛先の設定 {#configure-destination}
 
 データストリームを設定したら、パーソナライゼーションの宛先の設定を開始できます。
 
@@ -38,17 +40,17 @@ The first step in configuring your personalization use case is to configure a [!
 設定する宛先に応じて、宛先固有の前提条件と関連情報については、次の記事を参照してください。
 
 * [Adobe Target接続](../catalog/personalization/adobe-target-connection.md)
-* [Custom personalization connection](../catalog/personalization/custom-personalization.md)
+* [カスタムパーソナライゼーション接続](../catalog/personalization/custom-personalization.md)
 
-## Step 3: Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
+## 手順 3:の作成 [!DNL Active-On-Edge] 結合ポリシー {#create-merge-policy}
 
 宛先接続を作成したら、 [!DNL Active-On-Edge] 結合ポリシー。
 
 次の手順に従います。 [結合ポリシーの作成](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)を有効にし、必ず **[!UICONTROL エッジ上のアクティブな結合ポリシー]** 切り替え
 
-## Step 4: Create a new segment in Platform {#create-segment}
+## 手順 4:Platform での新しいセグメントの作成 {#create-segment}
 
-After you have created the [!DNL Active-On-Edge] merge policy, you must create a new segment in Platform.
+次の [!DNL Active-On-Edge] 結合ポリシーの場合、Platform で新しいセグメントを作成する必要があります。
 
 フォロー： [セグメントビルダー](../../segmentation/ui/segment-builder.md) 新しいセグメントを作成する際のガイドを参照し、必ず [割り当てる](../../segmentation/ui/segment-builder.md#merge-policies) の [!DNL Active-On-Edge] 手順 3 で作成した結合ポリシーです。
 
