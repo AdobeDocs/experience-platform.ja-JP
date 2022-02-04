@@ -4,10 +4,10 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。 以下の節で説明します。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 19%
+source-wordcount: '1084'
+ht-degree: 20%
 
 ---
 
@@ -64,11 +64,30 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 
 ## [!UICONTROL アカウント] {#accounts}
 
-この **[!UICONTROL アカウント]** 「 」タブには、様々な宛先との接続に関する詳細が表示され、既存の接続の詳細を更新できます。 詳しくは、 [アカウントを更新](update-accounts.md) を参照してください。
+この **[!UICONTROL アカウント]** 「 」タブには、様々な宛先との接続を確立した場合の詳細が表示され、既存のアカウントの詳細を更新または削除できます。 各宛先アカウントで取得できるすべての情報については、次の表を参照してください。
+
+>[!TIP]
+>
+> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
+> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![「詳細を編集」ボタン](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 詳細を編集&#x200B;]**ボタン [更新](update-accounts.md) 既存の宛先アカウントの詳細。
+> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destination-account.md) 既存の宛先アカウント。
+
+
+![「アカウント」タブ](../assets/ui/workspace/destination-account-options.png)
+
+| 要素 | 説明 |
+|---|---|
+| [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先へのアカウント接続タイプを表します。 宛先に応じて、認証オプションは次のとおりです。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、Azure Blob のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li><li>OAuth 1 または OAuth 2 認証</li><li>Bearer トークン認証</li></ul> |
+| [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](../catalog/email-marketing/overview.md#connect-destination)で選択したユーザー名。 |
+| [!UICONTROL 宛先] | 宛先に対して作成された基本情報と接続された、一意に成功した宛先データフローの数を表します。 |
+| [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。を使用した宛先 **[!UICONTROL 有効/無効]** 切り替えをオンにして、宛先をそれぞれアクティブまたは非アクティブに設定します。 また、「 」を選択すると、データのフロー先を表示することもできます **[!UICONTROL セグメント]** > **[!UICONTROL 参照]** 検査するセグメントを選択します。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。を使用した宛先 **[!UICONTROL 有効/無効]** 切り替えをオンにして、宛先をそれぞれアクティブまたは非アクティブに設定します。 また、「 」を選択すると、データのフロー先を表示することもできます **[!UICONTROL セグメント]** > **[!UICONTROL 参照]** 検査するセグメントを選択します。 次の表に、 [!UICONTROL 参照] タブ：
 
 >[!TIP]
 >
