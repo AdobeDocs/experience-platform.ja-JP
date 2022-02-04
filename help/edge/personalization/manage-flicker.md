@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform Web SDK を使用した、パーソナライズされたエクスペリエンスのちらつき制御
+title: Adobe Experience Platform Web SDK を使用して、パーソナライズされたエクスペリエンスのちらつきを管理する
 description: Adobe Experience Platform Web SDK を使用して、ユーザーエクスペリエンスのちらつきを管理する方法について説明します。
 keywords: target;flicker;prehidingStyle；非同期；非同期；
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 76%
@@ -12,7 +12,7 @@ ht-degree: 76%
 
 # フリッカーの管理
 
-パーソナライゼーションコンテンツをレンダリングする場合、SDK はちらつきがないことを確認する必要があります。ちらつきは FOOC( オリジナルコンテンツのFlash) とも呼ばれ、テストやパーソナライゼーションの際に代替コンテンツが表示される前に、元のコンテンツが短く表示されます。 SDK は、パーソナライゼーションコンテンツが正常にレンダリングされるまでこれらの要素が非表示になるよう、ページの要素に CSS スタイルを適用しよう試みます。
+パーソナライゼーションコンテンツをレンダリングする場合、SDK はちらつきがないことを確認する必要があります。ちらつき (FOOC( 元のコンテンツのFlash) とも呼ばれます ) は、テスト/パーソナライゼーション中に代替コンテンツが表示される前に、元のコンテンツが短く表示される場合です。 SDK は、パーソナライゼーションコンテンツが正常にレンダリングされるまでこれらの要素が非表示になるよう、ページの要素に CSS スタイルを適用しよう試みます。
 
 ちらつき管理機能には、いくつかのフェーズがあります。
 
@@ -22,9 +22,9 @@ ht-degree: 76%
 
 ## 事前非表示
 
-事前非表示フェーズでは、SDK は `prehidingStyle` 設定オプションを使用して HTML スタイルタグを作成し、DOM に追加して、ページの大きな部分が非表示になるようにします。ページのどの部分がパーソナライズされるかが不明な場合は、`prehidingStyle` を `body { opacity: 0 !important }` に設定することをお勧めします。これにより、ページ全体が非表示になります。ただし、これは、Lighthouse や Web ページテストなどのツールで報告されるページレンダリングパフォーマンスの低下につながるという欠点があります。 最高のページレンダリングパフォーマンスを得るには、`prehidingStyle` をコンテナ要素（パーソナライズするページの部分を含む）のリストに設定することをお勧めします。
+事前非表示フェーズでは、SDK は `prehidingStyle` 設定オプションを使用して HTML スタイルタグを作成し、DOM に追加して、ページの大きな部分が非表示になるようにします。ページのどの部分がパーソナライズされるかが不明な場合は、`prehidingStyle` を `body { opacity: 0 !important }` に設定することをお勧めします。これにより、ページ全体が非表示になります。ただし、これは、Lighthouse や Web ページテストなどのツールで報告されるページレンダリングパフォーマンスの低下につながる悪い面もあります。 最高のページレンダリングパフォーマンスを得るには、`prehidingStyle` をコンテナ要素（パーソナライズするページの部分を含む）のリストに設定することをお勧めします。
 
-次のようなHTMLページがあり、`bar` と `bazz` のコンテナ要素のみがパーソナライズされることがわかっている場合：
+次のようなHTMLページがあり、 `bar` および `bazz` コンテナ要素はパーソナライズされます。
 
 ```html
 <html>
@@ -68,7 +68,7 @@ ht-degree: 76%
     var o=e.createElement("style");
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
     setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
+    (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
 </script>
 ```
 
