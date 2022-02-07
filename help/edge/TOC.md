@@ -3,12 +3,12 @@ solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
-user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
+user-guide-description: Edge ネットワークを通じてExperience Cloudサービスを操作します。
 feature: Web SDK
-source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
+source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 100%
+source-wordcount: '146'
+ht-degree: 90%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 100%
       * [概要](personalization/adobe-target/target-overview.md)
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
       * [レスポンストークンへのアクセス](personalization/adobe-target/accessing-response-tokens.md)
+      * [mbox サードパーティ ID の使用](personalization/adobe-target/using-mbox-3rdpartyid.md)
    * Offer Decisioning {#offer-decisioning}
       * [概要](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
