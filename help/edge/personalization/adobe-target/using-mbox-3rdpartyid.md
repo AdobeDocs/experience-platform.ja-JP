@@ -2,9 +2,9 @@
 title: mbox3rdPartyId のリアルタイムプロファイル同期
 description: Adobe Experience Platform Web SDK で mbox3rdPartyId を使用する方法について説明します。
 keywords: パーソナライゼーション；target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
-source-git-commit: 86acedc6813a14648848a25e08aa7e65f48d1a2a
+source-git-commit: 439f26177837e985ef95e972c3102cc2db37d539
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 9%
 
 ---
@@ -28,7 +28,7 @@ Adobe Targetの mbox3rdPartyId は、会社のロイヤルティプログラム�
 
 ### 手順 2:を `mbox3rdpartyId` ターゲットに
 
-を `mbox3rdpartyId` を `sendEvent` 」コマンドを使用し、手順 1 で設定した ID 名前空間を使用します。
+を `mbox3rdpartyId` を `sendEvent` 」コマンドを使用します。手順 1 で設定した ID 名前空間を使用します。
 [ID の送信の詳細](../../identity/overview.md#syncing-identities)
 
 ```javascript
