@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；API;API；削除；データフローの削除
+keywords: Experience Platform、ホーム、人気の高いトピック、フローサービス、API、API、削除、データフローの削除
 solution: Experience Platform
 title: フローサービス API を使用したデータフローの削除
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してバッチおよびストリーミングデータフローを削除する方法を説明します。
+description: フローサービス API を使用してバッチおよびストリーミングのデータフローを削除する方法について説明します。
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 42%
@@ -15,20 +15,20 @@ ht-degree: 42%
 
 # フローサービス API を使用したデータフローの削除
 
-エラーを含むバッチおよびストリーミングデータフローを削除したり、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して古くなったデータフローを削除したりできます。
+エラーを含む、または古くなったバッチおよびストリーミングのデータフローは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-このチュートリアルでは、[!DNL Flow Service] を使用して、バッチソースとストリーミングソースの両方で作成したデータフローを削除する手順を説明します。
+このチュートリアルでは、を使用して、バッチソースとストリーミングソースの両方でおこなったデータフローを削除する手順を説明します。 [!DNL Flow Service].
 
 ## はじめに
 
-このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、[ ソースの概要 ](../../home.md) から目的のコネクタを選択し、このチュートリアルを試す前に説明した手順に従います。
+このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、選択したコネクタを [ソースの概要](../../home.md) このチュートリアルを試す前に、概要を説明した手順に従ってください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
+* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
 * [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-次の節では、[!DNL Flow Service] API を使用してデータフローを正しく削除するために知っておく必要がある追加情報を示します。
+以下の節では、 [!DNL Flow Service] API
 
 ### API 呼び出し例の読み取り
 
@@ -36,7 +36,7 @@ ht-degree: 42%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -52,7 +52,7 @@ ht-degree: 42%
 
 ## データフローの削除
 
-既存のフロー ID を使用すると、[!DNL Flow Service] API に対してDELETEリクエストを実行して、データフローを削除できます。
+既存のフロー ID を使用すると、 [!DNL Flow Service] API
 
 **API 形式**
 
@@ -62,13 +62,13 @@ DELETE /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 削除するデータフローの一意の `id` 値。 |
+| `{FLOW_ID}` | 一意の `id` の値を指定します。 |
 
 **リクエスト**
 
 ```shell
 curl -X DELETE \
-    'https://platform-int.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -77,10 +77,10 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行して、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
+正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行することで、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して既存のデータフローを削除しました。
+このチュートリアルでは、 [!DNL Flow Service] 既存のデータフローを削除する API。
 
-ユーザーインターフェイスを使用してこれらの操作を実行する手順については、UI でのデータフローの [ 削除に関するチュートリアルを参照してください。](../../tutorials/ui/delete.md)
+ユーザーインターフェイスを使用してこれらの操作を実行する手順については、 [UI でのデータフローの削除](../../tutorials/ui/delete.md)

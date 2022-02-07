@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してアカウントを削除する方法を説明します。
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 14%
@@ -54,7 +54,7 @@ DELETE /connections/{BASE_CONNECTION_ID}
 
 ```shell
 curl -X DELETE \
-  'https://platform-int.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

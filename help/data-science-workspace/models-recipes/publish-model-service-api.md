@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform；モデルの公開；Data Science Workspace；よく読まれるトピック；sensei 機械学習 api
+keywords: Experience Platform；モデルの公開；Data Science Workspace；人気の高いトピック；sensei 機械学習 api
 solution: Experience Platform
 title: Sensei Machine Learning API を使用したモデルのサービスとしての公開
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Sensei Machine Learning API を使用してモデルをサービスとして公開するプロセスについて説明します。
+description: このチュートリアルでは、Sensei Machine Learning API を使用して、モデルをサービスとして公開するプロセスについて説明します。
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 47%
 
 ---
 
-# [!DNL Sensei Machine Learning API]
+# を使用して、モデルをサービスとして公開する [!DNL Sensei Machine Learning API]
 
-このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を使用して、モデルをサービスとして公開するプロセスについて説明します。
+このチュートリアルでは、 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platform Data Science Workspace に関する十分な知識が必要です。 このチュートリアルを開始する前に、「[Data Science Workspace の概要 ](../home.md)」でサービスの概要を確認してください。
+このチュートリアルでは、Adobe Experience Platform Data Science Workspace に関する十分な知識が必要です。 このチュートリアルを開始する前に、 [Data Science Workspace の概要](../home.md) を参照してください。
 
-このチュートリアルに従うには、既存の ML エンジン、ML インスタンス、Experiment が必要です。 API でこれらを作成する手順については、[ パッケージ化されたレシピ ](./import-packaged-recipe-api.md) のインポートに関するチュートリアルを参照してください。
+このチュートリアルに従うには、既存の ML エンジン、ML インスタンス、Experiment が必要です。 API でこれらを作成する手順については、 [パッケージ化されたレシピのインポート](./import-packaged-recipe-api.md).
 
-最後に、このチュートリアルを開始する前に、開発者ガイドの「 [ 使用の手引き ](../api/getting-started.md) 」の節を参照して、 [!DNL Sensei Machine Learning] API を正しく呼び出すために必要な重要な情報を確認してください。
+最後に、このチュートリアルを開始する前に、 [はじめに](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、開発者ガイドの「 」の節を参照してください。 [!DNL Sensei Machine Learning] API（このチュートリアル全体で使用される必要なヘッダーを含む）:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -39,13 +39,13 @@ ht-degree: 47%
 
 | 用語 | 定義 |
 | --- | --- |
-| **機械学習インスタンス（ML インスタンス）** | 特定のテナントの [!DNL Sensei] エンジンのインスタンス。特定のデータ、パラメーター、および [!DNL Sensei] コードが含まれます。 |
+| **機械学習インスタンス（ML インスタンス）** | のインスタンス [!DNL Sensei] 特定のテナントのエンジン ( 特定のデータ、パラメーター、および [!DNL Sensei] コード。 |
 | **Experiment** | トレーニング Experiment Run、スコアリングExperiment Run、またはその両方を保持するための包括的なエンティティ。 |
 | **スケジュールに沿った Experiment** | トレーニング Experiment Run またはスコアリング Experiment Run の自動化を表す用語。これらの実験は、ユーザー定義のスケジュールに従って実行されます。 |
 | **Experiment Run** | トレーニング Experiment やスコアリング Experiment の特定のインスタンス。特定の Experiment から複数の Experiment Run をおこなう場合、トレーニングやスコアリングに使用されるデータセット値が異なる場合があります。 |
 | **トレーニング済みモデル** | モデルを検証、評価、および確定する前に、実験と機能の設計プロセスから作成された機械学習モデル。 |
 | **公開済みモデル** | トレーニング、検証、および評価を経て確定された、バージョン管理されたモデル。 |
-| **機械学習サービス（ML サービス）** | API エンドポイントを使用したトレーニングとスコアリングのオンデマンドリクエストをサポートするために、サービスとしてデプロイされた ML インスタンス。 ML サービスは、既存のトレーニング済み Experiment Run を使用して作成することもできます。 |
+| **機械学習サービス（ML サービス）** | API エンドポイントを使用したトレーニングとスコアリングのオンデマンドリクエストをサポートするため、サービスとしてデプロイされた ML インスタンス。 ML サービスは、既存のトレーニング済み Experiment Run を使用して作成することもできます。 |
 
 ## 既存のトレーニング Experiment Run とスケジュールに沿ったスコアリングを使用して ML サービスを作成する
 
@@ -84,18 +84,18 @@ curl -X POST
 | プロパティ | 説明 |
 | --- | --- |
 | `mlInstanceId` | 既存の ML インスタンス ID。ML サービスの作成に使用するトレーニング Experiment Run は、この特定の ML インスタンスに対応している必要があります。 |
-| `trainingExperimentId` | ML インスタンスの ID に対応する実験 ID。 |
+| `trainingExperimentId` | ML インスタンスの ID に対応する Experiment ID。 |
 | `trainingExperimentRunId` | ML サービスの公開に使用する特定のトレーニング Experiment Run。 |
 | `scoringDataSetId` | スケジュールに沿ったスコアリング Experiment Run に使用する特定のデータセットを表す ID。 |
 | `scoringTimeframe` | 分数を表す整数値。スコアリング Experiment Run に使用するデータをフィルタリングします。例えば、値 `10080` を指定すると、過去 10,080 分（168 時間）のデータが、スケジュールに沿ったスコアリング Experiment Run に使用されます。値 `0` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがスコアリングに使用されます。 |
 | `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | スコアリングを開始するタイミングを示す日時。 |
 | `scoringSchedule.endTime` | スコアリングを開始するタイミングを示す日時。 |
-| `scoringSchedule.cron` | 実験実行のスコアを付ける間隔を示す Cron 値。 |
+| `scoringSchedule.cron` | Experiment Run のスコアを付ける間隔を示す Cron 値。 |
 
 **応答**
 
-成功応答は、新しく作成した ML サービスの詳細を返します。この詳細には、一意の `id` と、対応するスコアリング Experiment の `scoringExperimentId` が含まれます。
+正常な応答は、新しく作成された ML サービスの詳細（一意の ML サービスを含む）を返します `id` そして `scoringExperimentId` を返します。
 
 
 ```JSON
@@ -121,16 +121,16 @@ curl -X POST
 
 ## 既存の ML インスタンスから ML サービスを作成する
 
-具体的な使用例と要件に応じて、ML インスタンスを使用して ML サービスを作成する際には、トレーニング Experiment Run とスコアリング Experiment Run のスケジュールを柔軟に設定できます。 このチュートリアルでは、次のような特定のケースについて説明します。
+具体的な使用例や要件に応じて、トレーニング Experiment Run とスコアリング Experiment Run のスケジュールを設定し、ML サービスを ML インスタンスで柔軟に作成できます。 このチュートリアルでは、次のような特定のケースについて説明します。
 
 - [スケジュールに沿ったトレーニングは必要ない一方で、スケジュールに沿ったスコアリングは必要な場合。](#ml-service-with-scheduled-experiment-for-scoring)
 - [トレーニングとスコアの両方で、スケジュールに沿った Experiment Run が必要な場合。](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
-ML サービスは、トレーニング Experiment やスコアリング Experiment のスケジュールを設定しなくても、ML インスタンスを使用して作成できます。 このような ML サービスでは、通常の Experiment エンティティと、トレーニングおよびスコアリング用の 1 つの Experiment Run が作成されます。
+ML サービスは、トレーニング Experiment やスコアリング Experiment のスケジュールを設定しなくても、ML インスタンスを使用して作成できます。 このような ML サービスでは、通常の Experiment エンティティと、トレーニングとスコアリングに対して 1 つの Experiment Run が作成されます。
 
 ### スケジュールに沿ったスコアリング Experiment を含む ML サービス {#ml-service-with-scheduled-experiment-for-scoring}
 
-ML サービスを作成するには、スケジュールに沿ったスコアリング Experiment Run を含む ML インスタンスを公開します。このインスタンスは、トレーニング用の通常の Experiment エンティティを作成します。 トレーニング Experiment Run が生成され、スケジュールに沿ったすべてのスコアリング Experiment Run に使用されます。 MLサービスの作成に必要な `mlInstanceId`、`trainingDataSetId` および `scoringDataSetId` があること、これらが存在し、有効な値であることを確認します。
+ML サービスを作成するには、スケジュールに沿ったスコアリング Experiment Run を含む ML インスタンスを公開します。この ML インスタンスは、トレーニング用の通常の Experiment エンティティを作成します。 トレーニング Experiment Run が生成され、スケジュールに沿ったすべてのスコアリング Experiment Run に使用されます。 MLサービスの作成に必要な `mlInstanceId`、`trainingDataSetId` および `scoringDataSetId` があること、これらが存在し、有効な値であることを確認します。
 
 **API 形式**
 
@@ -173,11 +173,11 @@ curl -X POST
 | `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | スコアリングを開始するタイミングを示す日時。 |
 | `scoringSchedule.endTime` | スコアリングを開始するタイミングを示す日時。 |
-| `scoringSchedule.cron` | 実験実行のスコアを付ける間隔を示す Cron 値。 |
+| `scoringSchedule.cron` | Experiment Run のスコアを付ける間隔を示す Cron 値。 |
 
 **応答**
 
-正常な応答は、新しく作成された ML サービスの詳細を返します。 これには、サービスの一意の `id` に加えて、対応するトレーニング Experiment とスコアリング Experiment の `trainingExperimentId` と `scoringExperimentId` が含まれます。
+正常な応答は、新しく作成された ML サービスの詳細を返します。 これには、サービスの一意の `id`、および `trainingExperimentId` および `scoringExperimentId` を取得する必要があります。
 
 ```JSON
 {
@@ -203,7 +203,7 @@ curl -X POST
 
 ### スケジュールに沿ったトレーニングおよびスコアリング Experiment を含む ML サービス {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-スケジュールに沿ったトレーニング Experiment Run とスコアリング Experiment Run を含む ML サービスとして既存の ML インスタンスを公開するには、トレーニングとスコアリングの両方のスケジュールを指定する必要があります。 この設定の ML サービスを作成すると、トレーニングとスコアの両方にスケジュールに沿った Experiment エンティティも作成されます。 トレーニングとスコアリングのスケジュールが同じである必要はありません。スコアリングジョブの実行中に、スケジュールに沿ったトレーニング Experiment Run によって生成された最新のトレーニング済みモデルが取得され、スケジュールに沿ったスコアリングの実行に使用されます。
+スケジュールに沿ったトレーニング Experiment Run とスコアリング Experiment Run を含む ML サービスとして既存の ML インスタンスを公開するには、トレーニングとスコアリングの両方のスケジュールを指定する必要があります。 この設定の ML サービスを作成すると、トレーニングとスコアの両方にスケジュールに沿った Experiment エンティティが作成されます。 トレーニングとスコアリングのスケジュールが同じである必要はありません。スコアリングジョブの実行中に、スケジュールに沿ったトレーニング Experiment Run によって生成された最新のトレーニング済みモデルが取得され、スケジュールに沿ったスコアリングの実行に使用されます。
 
 **API 形式**
 
@@ -214,7 +214,7 @@ POST /mlServices
 **リクエスト**
 
 ```SHELL
-curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
+curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
   -H 'x-gw-ims-org-id: {IMS_ORG}' 
@@ -251,11 +251,11 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 | `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | スコアリングを開始するタイミングを示す日時。 |
 | `scoringSchedule.endTime` | スコアリングを開始するタイミングを示す日時。 |
-| `scoringSchedule.cron` | 実験実行のスコアを付ける間隔を示す Cron 値。 |
+| `scoringSchedule.cron` | Experiment Run のスコアを付ける間隔を示す Cron 値。 |
 
 **応答**
 
-正常な応答は、新しく作成された ML サービスの詳細を返します。 これには、サービスの一意の `id` に加えて、対応するトレーニング Experiment とスコアリング Experiment の `trainingExperimentId` と `scoringExperimentId` が含まれます。 次のレスポンスの例では、`trainingSchedule` と `scoringSchedule` がある場合、トレーニングとスコアリングの Experiment エンティティがスケジュールに沿った Experiment であることを示しています。
+正常な応答は、新しく作成された ML サービスの詳細を返します。 これには、サービスの一意の `id`、および `trainingExperimentId` および `scoringExperimentId` に含まれる値を格納します。 以下のレスポンスの例では、 `trainingSchedule` および `scoringSchedule` は、トレーニングとスコアリングの Experiment エンティティがスケジュールに沿った Experiment であることを示しています。
 
 ```JSON
 {
@@ -286,7 +286,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 ## ML サービスの検索 {#retrieving-ml-services}
 
-`/mlServices` に `GET` リクエストを送信し、パスに ML サービスの一意の `id` を指定することで、既存の ML サービスを検索できます。
+既存の ML サービスを検索するには、 `GET` ～を要求する `/mlServices` そして、一意の `id` を設定します。
 
 **API 形式**
 
@@ -296,7 +296,7 @@ GET /mlServices/{SERVICE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SERVICE_ID}` | 検索する ML サービスの一意の `id`。 |
+| `{SERVICE_ID}` | 一意の `id` 検索する ML サービスの |
 
 **リクエスト**
 
@@ -346,7 +346,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 ## トレーニングまたはスコアリングのスケジュール
 
-公開済みの ML サービスでスコアリングとトレーニングのスケジュールを設定する場合は、`/mlServices` の `PUT` リクエストを使用して既存の ML サービスを更新します。
+公開済みの ML サービスでスコアリングとトレーニングのスケジュールを設定するには、 `PUT` リクエストオン `/mlServices`.
 
 **API 形式**
 
@@ -356,11 +356,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SERVICE_ID}` | 更新する ML サービスの一意の `id`。 |
+| `{SERVICE_ID}` | 一意の `id` 更新する ML サービスの |
 
 **リクエスト**
 
-次のリクエストでは、 `startTime` キー、 `endTime` キー、 `cron` キーをそれぞれ追加し、既存の ML サービスのトレーニングとスコアリングをスケジュールします。`trainingSchedule``scoringSchedule`
+次のリクエストは、 `trainingSchedule` および `scoringSchedule` それぞれのキー `startTime`, `endTime`、および `cron` キー。
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -393,7 +393,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->既存のスケジュールに沿ったトレーニングジョブとスコアリングジョブの `startTime` を変更しないでください。 `startTime` を変更する必要がある場合は、同じモデルを公開して、トレーニングジョブとスコアリングジョブのスケジュールを再設定することを検討してください。
+>この `startTime` 既存のスケジュール済みトレーニングジョブとスコアリングジョブの `startTime` を変更する必要がある場合は、同じモデルを公開して、トレーニングジョブとスコアリングジョブのスケジュールを再設定することを検討してください。
 
 **応答** 
 
