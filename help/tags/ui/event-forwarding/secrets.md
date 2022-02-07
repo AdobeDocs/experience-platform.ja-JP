@@ -2,10 +2,10 @@
 title: イベント転送での秘密鍵の設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために、データ収集 UI で秘密鍵を設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '1449'
-ht-degree: 100%
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+workflow-type: tm+mt
+source-wordcount: '1447'
+ht-degree: 98%
 
 ---
 
@@ -130,7 +130,7 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 | 秘密鍵タイプ | 再試行プロトコル |
 | --- | --- |
 | [!UICONTROL トークン] | 「**[!UICONTROL 秘密鍵の交換]**」を選択し、秘密鍵の交換を再試行します。このコントロールは、秘密鍵に接続された環境がある場合にのみ使用できます。 |
-| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、認証情報を base64 に交換します。環境が接続されている場合は、「**[!UICONTROL 秘密鍵の交換とデプロイ]**」を選択して base64 と交換し、秘密鍵を Cloudfare にデプロイします。 |
+| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、認証情報を base64 に交換します。環境が添付されている場合は、「次を選択」を選択します。 **[!UICONTROL Exchange と Deploy の秘密鍵]** を使用して base64 と交換し、秘密鍵をデプロイします。 |
 | [!UICONTROL OAuth2] | 「**[!UICONTROL トークンの生成]**」を選択して認証情報を交換し、認証プロバイダーからアクセストークンを返します。 |
 
 ## 秘密鍵の削除
