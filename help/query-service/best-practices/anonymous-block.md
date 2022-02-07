@@ -2,7 +2,7 @@
 title: 匿名ブロッククエリの例
 description: 匿名ブロックは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文で、一連のクエリを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%
@@ -33,18 +33,14 @@ Adobe Experience Platformクエリサービスは、匿名ブロックをサポ�
 次のクエリは、SQL 文を連結する例を示しています。 詳しくは、 [クエリサービスの SQL 構文](../sql/syntax.md) ドキュメントを参照してください。
 
 ```SQL
-BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 次の例では、 `SET` の結果を保持します `SELECT` クエリを指定します。 変数は、匿名ブロックに対してスコープ設定されます。
 
@@ -53,10 +49,11 @@ END;
 データベーススナップショットは、SQL Server データベースの読み取り専用の静的ビューです。 詳細 [スナップショット句に関する情報](../sql/syntax.md#SNAPSHOT-clause) SQL 構文のドキュメントを参照してください。
 
 ```SQL
-BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## 次の手順

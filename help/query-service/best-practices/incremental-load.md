@@ -2,7 +2,7 @@
 title: 増分読み込みクエリの例
 description: 増分読み込み機能は、匿名ブロックとスナップショットの両方の機能を使用して、データレイクからデータウェアハウスにデータを移動する際に、一致するデータを無視する、ほぼリアルタイムのソリューションを提供します。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -65,7 +65,7 @@ INSERT INTO
 >この `history_meta('source table name')` は、データセット内の使用可能なスナップショットへのアクセス権を取得するために使用される便利な方法です。
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 以下の匿名ブロックの例で増分データ読み込みロジックを使用して、（最新のタイムスタンプ以降の）ソースデータセットからの新しいデータを処理し、通常のサイクルで宛先テーブルに追加できるようにします。 この例では、データは `DIM_TABLE_ABC` が処理され、に追加されます `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` は両方のプライマリキー `DIM_TABLE_ABC_Incremental` および `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 このロジックは任意のテーブルに適用して、増分荷重を実行できます。
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 コードブロック全体は次のようになります。
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## 次の手順
