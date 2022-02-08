@@ -5,10 +5,10 @@ title: 'ストリーミングセグメント化を使用したほぼリアルタ
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 34%
+source-wordcount: '1834'
+ht-degree: 33%
 
 ---
 
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **（必須）**&#x200B;文字列形式のジョブタイプ。サポートされているタイプは `batch_segmentation` と `export` です。 |
 | `properties` | **（必須）**&#x200B;スケジュールに関連する追加のプロパティを含むオブジェクト。 |
 | `properties.segments` | **（`type` が `batch_segmentation` と等しい場合は必須）**`["*"]` を使用すると、すべてのセグメントが含まれます。 |
-| `schedule` | **（必須）**&#x200B;ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。例 (`0 0 1 * * ?`) は、ジョブが毎日 1 時にトリガーされることを意味します。:00:00 UTC です。 詳しくは、[CRON 式形式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)のドキュメントを参照してください。 |
+| `schedule` | **（必須）**&#x200B;ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。例 (`0 0 1 * * ?`) は、ジョブが毎日 1 時にトリガーされることを意味します。:00:00 UTC です。 詳しくは、 [cron 式形式](./schedules.md#appendix) のドキュメント内で、セグメント化のスケジュールに関する説明を追加しました。 |
 | `state` | *（オプション）*&#x200B;スケジュールの状態を含む文字列。使用可能な値は `active` と `inactive` です。デフォルト値は `inactive` です。IMS 組織で作成できるスケジュールは 1 つだけです。スケジュールを更新する手順は、このチュートリアルの後半で説明します。 |
 
 **応答** 
