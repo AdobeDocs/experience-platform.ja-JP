@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；モデルのスコア付け；Data Science Workspace；人気のあるトピック；sensei 機械学習 api
+keywords: Experience Platform；モデルのスコア付け；Data Science Workspace；人気の高いトピック；sensei 機械学習 API
 solution: Experience Platform
-title: Sensei Machine Learning API を使用したモデルのスコア
+title: Sensei Machine Learning API を使用したモデルのスコアリング
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Sensei Machine Learning API を活用して Experiment と Experiment Run を作成する方法を説明します。
+description: このチュートリアルでは、Sensei Machine Learning API を活用して Experiment と Experiment Run を作成する方法を示します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 91%
+source-wordcount: '554'
+ht-degree: 87%
 
 ---
 
-# [!DNL Sensei Machine Learning API] を使用してモデルにスコアを付けます
+# を使用してモデルにスコアを付ける [!DNL Sensei Machine Learning API]
 
-このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。API ドキュメントの詳細なリストについては、[このドキュメント](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html)を参照してください。
+このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。Sensei Machine Learning API のすべてのエンドポイントのリストについては、を参照してください。 [このドキュメント](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## スコアリングのためのスケジュールされた実験の作成
 
