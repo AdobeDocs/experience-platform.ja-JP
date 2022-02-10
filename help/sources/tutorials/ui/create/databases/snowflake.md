@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してSnowflakeソース接続を作成する方法を説明します。
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 10%
@@ -36,7 +36,7 @@ ht-degree: 10%
 | パスワード | のパスワード [!DNL Snowflake] ユーザーアカウント。 |
 | 接続文字列 | の [!DNL Snowflake] インスタンス。 次の接続文字列パターン： [!DNL Snowflake] が `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-これらの値について詳しくは、 [このSnowflake文書](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+これらの値について詳しくは、 [このSnowflake文書](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Snowflakeアカウントに接続
 
