@@ -5,7 +5,7 @@ exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
 source-git-commit: 51f0cfc1423f8a3bd2ffbceb65de4a09c39d474b
 workflow-type: tm+mt
 source-wordcount: '1341'
-ht-degree: 29%
+ht-degree: 39%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | ダッシュボードの在庫 | PowerBI などのインストール済み統合を含む、プロファイル、セグメント、宛先ダッシュボードの事前設定済みレポートに、一元的にアクセスします。 詳しくは、 [[!DNL Dashboards] 在庫ドキュメント](../../dashboards/inventory.md). |
 | PowerBI レポートテンプレート | 新しい PowerBI グラフを使用して、プロファイル、セグメントおよび宛先レポートのデータモデルから指標を作成、カスタマイズ、拡張します。 自動インストールワークフローを使用すると、PowerBI 環境内から組織全体でマーケティングインサイトを共有できます。 詳しくは、 [PowerBI レポートテンプレートドキュメント](../../dashboards/integrations/power-bi.md). |
 
-詳しくは、 [!DNL Dashboards]詳しくは、 [[!DNL Dashboards] 概要](../../dashboards/home.md).
+[!DNL Dashboards] について詳しくは、[[!DNL Dashboards]  の概要](../../dashboards/home.md)を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -57,9 +57,9 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 統合マッピングエクスペリエンス | Platform UI の新しいマッピングインターフェイスでは、一貫したマッピング操作を使用して、インテリジェントマッピングレコメンデーションを活用し、マッピングルールを手動で設定し、マッピングセットに発生したエラーをデバッグできます。 詳しくは、 [[!DNL Data Prep] UI ガイド](../../data-prep/ui/mapping.md). |
+| 統合マッピングエクスペリエンス | Platform UI の新しいマッピングインターフェイスでは、一貫したマッピング操作を使用して、インテリジェントマッピングレコメンデーションを活用し、マッピングルールを手動で設定し、マッピングセットに発生したエラーをデバッグできます。 詳しくは、[[!DNL Data Prep]  UI ガイド](../../data-prep/ui/mapping.md) を参照してください。 |
 
-詳しくは、 [!DNL Data Prep]詳しくは、 [[!DNL Data Prep] 概要](../../data-prep/home.md).
+[!DNL Data Prep] について詳しくは、[[!DNL Data Prep]  の概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -94,7 +94,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行し、増分データの読み込みをおこなうことができます。 詳しくは、 [匿名ブロックドキュメントのクエリ例](../../query-service/best-practices/anonymous-block.md). |
 | データセットの構成 | サンドボックス内のデータアセットの量が増えるにつれ、クエリサービスで使用するデータアセットを整理するための一貫性のある論理的なデータ構造を提供します。 詳しくは、 [データアセットの整理に関するドキュメント](../../query-service/best-practices/organize-data-assets.md). |
 
-詳しくは、 [!DNL Query Service]詳しくは、 [[!DNL Query Service] 概要](../../query-service/home.md).
+[!DNL Query Service] について詳しくは、[[!DNL Query Service]  の概要](../../query-service/home.md)を参照してください。
 
 ## サンドボックス {#sandboxes}
 
@@ -104,9 +104,9 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| サンドボックス UI の強化 | サンドボックスインジケーターが、すべての Platform UI アプリケーションのヘッダー内に統合されるようになりました。 サンドボックスインジケーターは、サンドボックスの名前、地域、タイプを表示し、ドロップダウンメニューにアクセスしてサンドボックス間を切り替えることもできます。 詳しくは、 [サンドボックス UI ガイド](../../sandboxes/ui/user-guide.md). |
+| サンドボックス UI の強化 | サンドボックスインジケーターが、すべての Platform UI アプリケーションのヘッダー内に統合されるようになりました。サンドボックスインジケーターは、サンドボックスの名前、地域、タイプを表示し、ドロップダウンメニューにアクセスしてサンドボックス間を切り替えることもできます。詳しくは、 [サンドボックス UI ガイド](../../sandboxes/ui/user-guide.md) を参照してください。 |
 
-サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md).
+サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -116,7 +116,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| Segment Match | セグメントマッチは、2 人以上の Platform ユーザーが、共通の識別子に基づいて、安全で管理され、プライバシーに優しい方法でデータを交換できるデータコラボレーションサービスです。 セグメントマッチは、Platform のプライバシー標準と個人識別子（ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。 詳しくは、 [セグメントマッチの概要](../../segmentation/ui/segment-match/overview.md). |
+| Segment Match | Segment Match は、2 人以上の Platform ユーザーが、共通の識別子に基づいて、安全で管理され、プライバシーに優しい方法でデータを交換できるデータコラボレーションサービスです。セグメントマッチは、Platform のプライバシー標準と個人識別子（ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。 詳しくは、 [Segment Match の概要](../../segmentation/ui/segment-match/overview.md) を参照してください。 |
 
 [!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
