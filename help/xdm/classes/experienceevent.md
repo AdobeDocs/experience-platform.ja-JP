@@ -5,9 +5,9 @@ title: XDM ExperienceEvent クラス
 topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスを説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 3%
 
 ---
@@ -118,6 +118,10 @@ Adobeには、 [!DNL XDM ExperienceEvent] クラス。 次に、クラスで一�
 | `directMarketing.emailDelivered` | 担当者の電子メールサービスに電子メールが正常に配信されました |
 | `directMarketing.emailOpened` | マーケティング電子メールを開いた人。 |
 | `directMarketing.emailUnsubscribed` | マーケティング電子メールの購読を解除した人。 |
+| `inappmessageTracking.dismiss` | アプリ内メッセージが閉じられました。 |
+| `inappmessageTracking.display` | アプリ内メッセージが表示されました。 |
+| `inappmessageTracking.interact` | アプリ内メッセージがとやり取りしました。 |
+| `leadOperation.callWebhook` | リードに応じてウェブフックが呼び出されました。 |
 | `leadOperation.convertLead` | リードが変換されました。 |
 | `leadOperation.interestingMoment` | ある人にとって面白い瞬間が記録された。 |
 | `leadOperation.newLead` | リードが作成されました。 |
