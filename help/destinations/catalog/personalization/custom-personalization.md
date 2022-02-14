@@ -3,9 +3,9 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
+source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '637'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 
 ## 書き出されたデータ {#exported-data}
 
-次を使用する場合： [Adobeタグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベント完了の送信](../../../edge/extension/event-types.md) 機能とカスタムコードアクションには `event.destinations` 変数を使用して、エクスポートされたデータを確認できます。
+次を使用する場合： [Adobe Experience Platformのタグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベント完了の送信](../../../edge/extension/event-types.md) 機能とカスタムコードアクションには `event.destinations` 変数を使用して、エクスポートされたデータを確認できます。
 
 次に、 `event.destinations` 変数：
 
@@ -85,7 +85,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 ]
 ```
 
-を使用しない場合、 [Adobeタグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベントからの応答の処理](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認できます。
+を使用しない場合、 [タグ](../../../tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [イベントからの応答の処理](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 機能を使用して、書き出されたデータを確認できます。
 
 Adobe Experience Platformからの JSON 応答は、Adobe Experience Platformと統合しているアプリケーションの対応する統合エイリアスを見つけるために解析できます。 セグメント ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有に見えるサンプルを示します。
 
