@@ -1,10 +1,10 @@
 ---
-title: at.js と Platform Web SDK の比較
-description: at.js の機能と Web SDK の比較方法を説明します
+title: at.js とExperience PlatformWeb SDK の比較
+description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 7%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-AEP WEB SDK は、WEB SDK によって実行されたオファーと共に通知を自動的に送信します。次に、通知リクエストペイロードの例を示します。
+Experience PlatformWeb SDK は、WEB SDK によって実行されたオファーと共に通知を自動的に送信します。次に、通知リクエストペイロードの例を示します。
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK の使用
 
-単一ページアプリケーションの View Change をトリガーまたはシグナルにするには、 `web.webPageDetails.viewName` プロパティ `xdm` オプション `sendEvent` コマンドを使用します。 AEP WEB SDK は、ビューキャッシュをチェックします ( `viewName` 指定： `sendEvent` 実行され、表示通知イベントが送信されます。
+単一ページアプリケーションの View Change をトリガーまたはシグナルにするには、 `web.webPageDetails.viewName` プロパティ `xdm` オプション `sendEvent` コマンドを使用します。 Web SDK は、 `viewName` 指定： `sendEvent` 実行され、表示通知イベントが送信されます。
 
 **例**
 
