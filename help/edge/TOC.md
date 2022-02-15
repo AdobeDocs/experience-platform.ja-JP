@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワークを通じてExperience Cloudサービスを操作します。
 feature: Web SDK
-source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
+source-git-commit: f237ee364cdf6048840dca797f7827b9b88dd73b
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 90%
+source-wordcount: '154'
+ht-degree: 85%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 90%
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
       * [レスポンストークンへのアクセス](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox サードパーティ ID の使用](personalization/adobe-target/using-mbox-3rdpartyid.md)
+      * [at.js ライブラリと Web SDK の比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
    * Offer Decisioning {#offer-decisioning}
       * [概要](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
