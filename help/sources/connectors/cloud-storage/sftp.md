@@ -5,7 +5,7 @@ title: SFTP ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して SFTP サーバーをAdobe Experience Platformに接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 1abbe74c1005e1358b5388f580d309f0aec5f124
+source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -58,7 +58,7 @@ Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネ�
 インストールされていない場合は、「 」を選択します。 **インストール** そして、 **[!DNL Powershell]** 次のコマンドを実行して秘密鍵を生成します。
 
 ```shell
-PS C:\Users\lucy> ssh-keygen -t rsa
+PS C:\Users\lucy> ssh-keygen -t rsa -m pem
 Generating public/private rsa key pair.
 Enter file in which to save the key (C:\Users\lucy/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -94,7 +94,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 を使用している場合、 [!DNL Mac]，開く **ターミナル** 次のコマンドを実行して秘密鍵を生成します ( この場合、秘密鍵は `/Documents/id_rsa`):
 
 ```shell
-ssh-keygen -t rsa -f ~/Documents/id_rsa
+ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
