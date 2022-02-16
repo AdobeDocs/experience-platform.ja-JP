@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
 solution: Experience Platform
 title: クエリサービスでのクエリ実行に関する一般的なガイダンス
 topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておく必要のある重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 3f3a8d100a38d60dc8e15a8c3589e5566492885f
+source-git-commit: c36ef1d5f5e5f7875da2b7a878c86b449d46c3c5
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 50%
+source-wordcount: '1031'
+ht-degree: 47%
 
 ---
 
-# [!DNL Query Service] でのクエリ実行の一般的なガイダンス
+# でのクエリ実行に関する一般的なガイダンス [!DNL Query Service]
 
-このドキュメントでは、Adobe Experience Platform [!DNL Query Service] でクエリを記述する際に知っておくべき重要な詳細について説明します。
+このドキュメントでは、Adobe Experience Platformでクエリを記述する際に知っておくべき重要な詳細について説明します。 [!DNL Query Service].
 
-[!DNL Query Service] で使用される SQL 構文の詳細については、[SQL 構文のドキュメント ](../sql/syntax.md) を参照してください。
+で使用される SQL 構文の詳細については、 [!DNL Query Service]を読んでください。 [SQL 構文ドキュメント](../sql/syntax.md).
 
 ## クエリ実行モデル
 
-Adobe Experience Platform [!DNL Query Service] には、クエリ実行の 2 つのモデルがあります。インタラクティブで非インタラクティブ。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
+Adobe Experience Platform [!DNL Query Service] には、次の 2 つのモデルのクエリを実行します。インタラクティブで非インタラクティブ。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
 
 ### インタラクティブクエリの実行
 
-クエリは、[!DNL Query Service] UI または [ 接続されたクライアント ](../clients/overview.md) を通じて送信することで、インタラクティブに実行できます。 接続されたクライアントを介して [!DNL Query Service] を実行すると、送信されたクエリが返すかタイムアウトするまで、クライアントと [!DNL Query Service] の間でアクティブなセッションが実行されます。
+クエリは、 [!DNL Query Service] UI または [接続されたクライアントを通じて](../clients/overview.md). 実行時 [!DNL Query Service] 接続されたクライアントを通じて、クライアントと [!DNL Query Service] 送信されたクエリが返されるか、タイムアウトするまで。
 
 インタラクティブクエリの実行には、次の制限があります。
 
@@ -39,11 +39,11 @@ Adobe Experience Platform [!DNL Query Service] には、クエリ実行の 2 つ
 >
 > 最大行数の制限を上書きするには、`LIMIT 0` をクエリに含めます。10 分のクエリタイムアウトは引き続き適用されます。
 
-デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果を [!DNL Experience Platform] のデータセットとして永続化するには、クエリで `CREATE TABLE AS SELECT` 構文を使用する必要があります。
+デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果をデータセットとしてに保持するには [!DNL Experience Platform]を使用する場合、クエリでは `CREATE TABLE AS SELECT` 構文と同じです。
 
 ### 非インタラクティブクエリの実行
 
-[!DNL Query Service] API を通じて送信されたクエリは、非インタラクティブに実行されます。 非インタラクティブ実行とは、[!DNL Query Service] が API 呼び出しを受け取り、受け取った順にクエリを実行することを意味します。 非インタラクティブクエリでは、常に [!DNL Experience Platform] に新しいデータセットが生成されて結果が取得されるか、既存のデータセットに新しい行が挿入されます。
+を通じて送信されたクエリ [!DNL Query Service] API は、非インタラクティブに実行されます。 非インタラクティブ実行とは、 [!DNL Query Service] は API 呼び出しを受け取り、クエリを受信した順序で実行します。 非インタラクティブクエリを使用すると、常に [!DNL Experience Platform] 結果を受け取るか、既存のデータセットに新しい行を挿入します。
 
 ## オブジェクト内の特定のフィールドへのアクセス
 
@@ -113,7 +113,7 @@ LIMIT 1
 
 ## 引用符
 
-一重引用符、二重引用符、逆引用符は、クエリサービスクエリ内で異なる用途を持ちます。
+一重引用符、二重引用符、逆引用符は、クエリサービスクエリ内で異なる使用状況を持ちます。
 
 ### 一重引用符
 
@@ -198,11 +198,11 @@ LIMIT 10
 
 ## テーブル情報の表示
 
-クエリサービスに接続すると、`\d` または `SHOW TABLES` コマンドを使用して、Platform で使用可能なすべてのテーブルを表示できます。
+クエリサービスに接続すると、Platform で使用可能なすべてのテーブルを表示するには、 `\d` または `SHOW TABLES` コマンド
 
-### 標準のテーブルビュー
+### 標準のテーブル表示
 
-`\d` コマンドは、テーブルを一覧表示するための標準の PostgreSQL ビューを示します。 このコマンドの出力の例を次に示します。
+この `\d` コマンドは、テーブルを一覧表示するための標準の PostgreSQL ビューを表示します。 このコマンドの出力の例を次に示します。
 
 ```sql
              List of relations
@@ -215,7 +215,7 @@ LIMIT 10
 
 ### 詳細なテーブル表示
 
-`SHOW TABLES` コマンドは、テーブルに関する詳細情報を提供するカスタムコマンドです。このコマンドの出力の例を次に示します。
+`SHOW TABLES` コマンドは、テーブルに関する詳細情報を提供するカスタムコマンドです。 このコマンドの出力の例を次に示します。
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -227,9 +227,9 @@ LIMIT 10
 
 ### スキーマ情報
 
-テーブル内のスキーマに関する詳細な情報を表示するには、`\d {TABLE_NAME}` コマンドを使用します。ここで `{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
+テーブル内のスキーマに関する詳細情報を表示するには、 `\d {TABLE_NAME}` コマンド、ここで `{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
 
-次の例は、`luma_midvalues` テーブルのスキーマ情報を示しています。この情報は、`\d luma_midvalues` を使用して確認できます。
+次の例は、 `luma_midvalues` 表を使用して表示する `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -252,9 +252,9 @@ LIMIT 10
  search            | search                      |           |          | 
 ```
 
-さらに、テーブル名に列の名前を付けると、特定の列に関する詳細な情報を取得できます。 これは `\d {TABLE_NAME}_{COLUMN}` の形式で書き込まれます。
+さらに、特定の列に関する詳細な情報を取得するには、その列の名前をテーブル名に追加します。 これは次の形式で書き込まれます： `\d {TABLE_NAME}_{COLUMN}`.
 
-次の例は、`web` 列の追加情報を示しています。次のコマンドを使用して呼び出されます。`\d luma_midvalues_web`:
+次の例は、 `web` 列に格納され、次のコマンドを使用して呼び出されます。 `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -268,7 +268,7 @@ LIMIT 10
 
 複数のデータセットを結合して、他のデータセットのデータをクエリに含めることができます。
 
-次の例では、次の 2 つのデータセット（`your_analytics_table` と `custom_operating_system_lookup`）を結合し、上位 50 のオペレーティングシステムに対して、ページビュー数別の `SELECT` ステートメントを作成します。
+次の例は、次の 2 つのデータセット (`your_analytics_table` および `custom_operating_system_lookup`) とをクリックし、 `SELECT` 上位 50 のオペレーティングシステムに関する文（ページ表示数別）。
 
 **クエリ**
 
@@ -308,10 +308,14 @@ LIMIT 50;
 
 ## 重複の除外
 
-クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、「[ クエリサービスの重複排除ガイド ](./deduplication.md)」を参照してください。
+クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、 [クエリサービス重複排除ガイド](./deduplication.md).
+
+## クエリサービスでのタイムゾーンの計算
+
+クエリサービスは、UTC タイムスタンプ形式を使用して、Adobe Experience Platformで保持されるデータを標準化します。 タイムゾーン要件を UTC タイムスタンプに変換する方法と UTC タイムスタンプから変換する方法の詳細については、 [タイムゾーンを UTC タイムスタンプに変更する方法と UTC タイムスタンプから変更する方法に関する FAQ の節](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Query Service] を使用してクエリを記述する際の重要な考慮事項について説明しました。 SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
+このドキュメントでは、 [!DNL Query Service]. SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
 
-クエリサービス内で使用できるクエリの詳細なサンプルについては、[Adobe Analyticsサンプルクエリ ](./adobe-analytics.md)、[Adobe Targetサンプルクエリ ](./adobe-target.md)、[ExperienceEvent サンプルクエリ ](./experience-event-queries.md) のガイドを参照してください。
+クエリサービス内で使用できるクエリのその他のサンプルについては、 [Adobe Analyticsクエリ例](./adobe-analytics.md), [Adobe Targetクエリ例](./adobe-target.md)または [ExperienceEvent クエリ例](./experience-event-queries.md).
