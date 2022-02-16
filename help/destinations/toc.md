@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: c53deb0186797e718fbf633b8f5f92f97cdfeed9
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '701'
 ht-degree: 45%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 45%
 * [宛先のタイプとカテゴリ](./destination-types.md)
 * API チュートリアル {#api}
    * [フローサービス API を使用して、ストリーミング宛先に接続し、データをアクティブ化する](./api/streaming-destinations.md)
-   * [フローサービス API を使用して、電子メールマーケティングの宛先に接続し、データをアクティブ化する](./api/email-marketing.md)
+   * [フローサービス API を使用して、バッチクラウドストレージおよび電子メールマーケティングの宛先に接続し、データをアクティブ化します](./api/connect-activate-batch-destinations.md)
    * [（ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します](./api/ad-hoc-activation-api.md)
    * [宛先データフローを更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
