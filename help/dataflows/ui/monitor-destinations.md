@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3205'
 ht-degree: 2%
 
 ---
@@ -203,7 +203,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="セグメントジョブ"
->abstract="セグメントジョブダッシュボードには、すべてのセグメントの評価ジョブと書き出しジョブに関する情報が含まれています。"
+>abstract="セグメントジョブビューには、すべてのセグメントの評価ジョブと書き出しジョブに関する情報が含まれています。"
 
 次の手順で [!UICONTROL セグメントジョブ] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL セグメントジョブ]. この [!UICONTROL 監視] ダッシュボードには、セグメント評価ジョブと書き出しジョブに関する指標と情報が含まれています。
 
@@ -226,7 +226,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="宛先のアクティベーションには、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。"
+>abstract="宛先のアクティベーション表示には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。"
 
 次の手順で [!UICONTROL 監視] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL 宛先]. この [!UICONTROL 監視] ダッシュボードには、宛先の実行ジョブに関する指標と情報が含まれています。
 

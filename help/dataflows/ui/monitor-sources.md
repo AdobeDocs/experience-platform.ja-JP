@@ -6,9 +6,9 @@ title: UI でのソースのデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 9%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="ソースの取り込み"
->abstract="ソース処理には、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ソース取り込みビューには、取り込まれたレコードと失敗したレコードを含む、データレイクサービスのデータアクティビティのステータスと指標に関する情報が含まれています。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -88,7 +88,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 
 または、検索バーにソースを入力して、1 つのソースを分離することもできます。 ソースを特定したら、フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-sources/filter.png) その横に、アクティブなデータフローのリストを表示します。
 
-![検索を](../assets/ui/monitor-sources/search.png)
+![search](../assets/ui/monitor-sources/search.png)
 
 データフローのリストが表示されます。 リストを絞り込み、エラーのあるデータフローに焦点を当てるには、「 」を選択します。 **[!UICONTROL 失敗のみを表示]**.
 
@@ -151,7 +151,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 処理"
->abstract="ID 処理には、ID サービスに取り込まれたレコードに関する情報（追加された ID の数、作成されたグラフ、更新されたグラフなど）が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ID 処理ビューには、追加された ID の数、作成されたグラフ、更新されたグラフなど、ID サービスに取り込まれたレコードに関する情報が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="プロファイルの処理"
->abstract="プロファイル処理には、作成されたプロファイルフラグメントの数、更新されたプロファイルフラグメントの数、プロファイルフラグメントの合計数など、プロファイルサービスに取り込まれたレコードに関する情報が含まれます。"
+>abstract="プロファイル処理ビューには、作成されたプロファイルフラグメントの数、更新されたプロファイルフラグメント、プロファイルフラグメントの合計数など、プロファイルサービスに取り込まれたレコードに関する情報が含まれます。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
