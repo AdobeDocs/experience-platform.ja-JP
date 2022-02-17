@@ -5,7 +5,7 @@ title: 指標 API エンドポイント
 topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 42%
@@ -282,7 +282,7 @@ curl -X POST \
 | timeseries.profiles.dataset.batchsuccess.count | 数 [!DNL Profile] データセットまたはすべてのデータセットに対して取り込まれるバッチ。 | データセット ID |
 | timeseries.profiles.dataset.batchfailed.count | 数 [!DNL Profile] 1 つのデータセットまたはすべてのデータセットでバッチが失敗しました。 | データセット ID |
 | platform.ups.ingest.streaming.request.m1_rate | 受信要求の速度。 | IMS 組織 (**必須**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | 取得成功率。 | IMS 組織 (**必須**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | 取得成功率。 | IMS 組織 (**必須**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | データセットに対して取得された新しいレコードの割合。 | データセット ID (**必須**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | データセットの作成要求のタイムスタンプが正しくないレコードの割合。 | データセット ID (**必須**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | データセットに対する最後のレコード作成要求のタイムスタンプ。 | データセット ID (**必須**) |
