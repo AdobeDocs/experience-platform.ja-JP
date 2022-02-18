@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3124'
 ht-degree: 2%
 
 ---
@@ -46,24 +46,6 @@ ht-degree: 2%
 | エラー | この `Error` ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 |
 
 ### ストリーミング宛先のデータフロー実行 {#dataflow-runs-for-streaming-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="アクティブ化された ID"
->abstract="選択した宛先に対して正常にアクティブ化された個々のプロファイル ID の数。"
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="除外された ID"
->abstract="属性が見つからず、同意違反に基づいて、選択した宛先のアクティベーションから除外された個々のプロファイルレコードの数。"
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="失敗した ID"
->abstract="選択した宛先に対して失敗した個々のプロファイル ID の数。 詳細は、エラー診断を確認してください。"
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="詳しくは、ドキュメントを参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
@@ -129,12 +111,6 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 ![ストリーミング先のデータフローレコード](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### バッチ宛先のデータフロー実行 {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="受信したプロファイル"
->abstract="データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
