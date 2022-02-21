@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 100%
 
