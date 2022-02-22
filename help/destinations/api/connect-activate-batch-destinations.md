@@ -6,9 +6,9 @@ description: フローサービス API を使用してバッチクラウドス�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: ae9c43b3a3cd59b0c0bcfd5034f5edc5ebb818d8
+source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3083'
 ht-degree: 20%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 20%
 
 このチュートリアルでは、フローサービス API を使用してバッチを作成する方法を示します [クラウドストレージ](../catalog/cloud-storage/overview.md) または [電子メールマーケティングの宛先](../catalog/email-marketing/overview.md)、新しく作成した宛先にデータフローを作成し、CSV ファイルを使用して新しく作成した宛先にデータを書き出します。
 
-このチュートリアルでは、すべての例でAdobe Campaignの宛先を使用しますが、手順はすべてのバッチクラウドストレージと電子メールマーケティングの宛先で同じです。
+このチュートリアルでは、 [!DNL Adobe Campaign] の宛先に関する情報はすべての例で同じですが、手順はすべてのバッチクラウドストレージと電子メールマーケティングの宛先で同じです。
 
 ![概要 - 宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/email-marketing/overview.png)
 
@@ -37,14 +37,14 @@ Platform ユーザーインターフェイスを使用して宛先に接続し�
 
 このチュートリアルの手順を完了するには、接続してセグメントをアクティブ化する宛先のタイプに応じて、次の資格情報を準備しておく必要があります。
 
-* の場合 [!DNL Amazon] S3 接続： `accessId`, `secretKey`
-* の場合 [!DNL Amazon] への S3 接続 [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* の場合 [!DNL Amazon S3] 接続： `accessId`, `secretKey`
+* の場合 [!DNL Amazon S3] 接続 [!DNL Adobe Campaign]: `accessId`, `secretKey`
 * SFTP 接続の場合： `domain`, `port`, `username`, `password` または `sshKey` （FTP の場所への接続方法に応じて）
 * の場合 [!DNL Azure Blob] 接続： `connectionString`
 
 >[!NOTE]
 >
->資格情報 `accessId`, `secretKey` (Amazon S3 接続用 ) および `accessId`, `secretKey` Amazon S3 のAdobe Campaignへの接続は同一です。
+>資格情報 `accessId`, `secretKey` 対象 [!DNL Amazon S3] 接続と `accessId`, `secretKey` 対象 [!DNL Amazon S3] 接続 [!DNL Adobe Campaign] が同一である。
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、Adobe Campaign に接続してセグメントを提供する場合、レスポンス内で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、に接続してセグメントを配信する場合は、 [!DNL Adobe Campaign]の場合、応答内で次のスニペットを探します。
 
 ```json
 {
@@ -115,13 +115,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 | 宛先 | 接続仕様 ID |
 ---------|----------|
-| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
-| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
-| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
-| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
-| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
-| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
-| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+| [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
+| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
+| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
+| [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
+| [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
+| [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
+| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -163,11 +163,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `name` | Experience Platformプロファイルストアへのベース接続の名前を指定します。 |
+| `name` | Experience Platformへのベース接続の名前を指定 [!DNL Profile Store]. |
 | `description` | オプションで、ベース接続の説明を指定できます。 |
 | `connectionSpec.id` | の接続仕様 ID を使用します。 [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
-**応答** 
+{style=&quot;table-layout:auto&quot;}
+
+**応答**
 
 リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でソース接続を作成する際に必要になるため保存します。
 
@@ -212,11 +214,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `name` | Experience Platformプロファイルストアへのソース接続の名前を指定します。 |
+| `name` | Experience Platformへのソース接続の名前を指定 [!DNL Profile Store]. |
 | `description` | 必要に応じて、ソース接続の説明を入力できます。 |
 | `connectionSpec.id` | の接続仕様 ID を使用します。 [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | 前の手順で取得したベース接続 ID を使用します。 |
 | `data.format` | `CSV` は、現在、サポートされている唯一のファイル書き出し形式です。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **応答**
 
@@ -247,7 +251,7 @@ POST /connections
 
 **リクエスト**
 
-以下のリクエストは、Adobe Campaignの宛先へのベース接続を確立します。 ファイルの書き出し先のストレージの場所 (Amazon S3、SFTP、Azure Blob) に応じて、適切な `auth` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Adobe Campaign] 宛先。 ファイルの書き出し先のストレージの場所に応じて ([!DNL Amazon S3], SFTP, [!DNL Azure Blob])、適切な `auth` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -297,9 +301,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Amazon S3 の宛先への接続リクエストの例
+サポートされている他のバッチクラウドストレージおよび電子メールマーケティングの宛先に接続するためのリクエスト例を以下に示します。
 
-次のリクエストは、Amazon S3 の宛先へのベース接続を確立します。
++++ 接続リクエストの例 [!DNL Amazon S3] 宛先
+
+以下のリクエストは、 [!DNL Amazon S3] 宛先。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -327,9 +333,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Azure BLOB の宛先への接続リクエストの例
++++ 接続リクエストの例 [!DNL Azure Blob] 宛先
 
-次のリクエストは、Azure Blob の宛先へのベース接続を確立します。
+以下のリクエストは、 [!DNL Azure Blob] 宛先。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -356,9 +362,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracleEloqua の宛先への接続リクエストの例
++++ 接続リクエストの例 [!DNL Oracle Eloqua] 宛先
 
-以下のリクエストは、Eloqua の宛先へのベースOracleを確立します。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Oracle Eloqua] 宛先。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -397,9 +403,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracleResponsys の宛先への接続リクエストの例
++++ 接続リクエストの例 [!DNL Oracle Responsys] 宛先
 
-以下のリクエストは、Responsys の宛先へのベースOracleを確立します。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Oracle Responsys] 宛先。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -438,9 +444,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ SalesforceMarketing Cloud先への接続リクエストの例
++++ 接続リクエストの例 [!DNL Salesforce Marketing Cloud] 宛先
 
-以下のリクエストは、Salesforce の宛先へのベースMarketing Cloudを確立します。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Salesforce Marketing Cloud] 宛先。 ファイルの書き出し先のストレージの場所に応じて、適切な `auth` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -518,7 +524,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | 宛先の認証形式を示します。 宛先の specName を調べるには、 [接続仕様エンドポイントへのGET呼び出し](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)：目的の宛先の接続仕様を指定します。 パラメーターを探します。 `authSpec.name` を返します。 <br> 例えば、Adobe Campaignの宛先の場合は、任意の `S3`, `SFTP with Password`または `SFTP with SSH Key`. |
 | `params` | 接続先に応じて、異なる必須認証パラメーターを指定する必要があります。 Amazon S3 接続の場合、Amazon S3 ストレージの場所にアクセス ID と秘密鍵を指定する必要があります。 <br> 宛先に必要なパラメーターを調べるには、 [接続仕様エンドポイントへのGET呼び出し](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)：目的の宛先の接続仕様を指定します。 パラメーターを探します。 `authSpec.spec.required` を返します。 |
 
-**応答** 
+{style=&quot;table-layout:auto&quot;}
+
+**応答**
 
 リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でターゲット接続を作成する際に必要になるため保存します。
 
@@ -546,7 +554,7 @@ POST /targetConnections
 
 **リクエスト**
 
-次のリクエストは、Adobe Campaignの宛先へのターゲット接続を確立し、書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Adobe Campaign] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -589,9 +597,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Amazon S3 の宛先のストレージの場所を設定するリクエストの例
+次のリクエストの例を参照して、サポートされている他のバッチクラウドストレージおよび電子メールマーケティングの宛先の保存場所を設定します。
 
-次のリクエストは、書き出されたファイルが格納場所を特定するために、Amazon S3 の宛先へのターゲット接続を確立します。
++++ のストレージの場所を設定するリクエストの例 [!DNL Amazon S3] 宛先
+
+以下のリクエストは、 [!DNL Amazon S3] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -625,9 +635,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Azure BLOB の宛先のストレージの場所を設定するリクエストの例
++++ のストレージの場所を設定するリクエストの例 [!DNL Azure Blob] 宛先
 
-次のリクエストは、Azure BLOB の宛先へのターゲット接続を確立し、書き出されたファイルが格納場所に配置される場所を決定します。
+以下のリクエストは、 [!DNL Azure Blob] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -661,9 +671,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracleEloqua の宛先のストレージの場所を設定するリクエストの例
++++ のストレージの場所を設定するリクエストの例 [!DNL Oracle Eloqua] 宛先
 
-以下のリクエストは、OracleEloqua の宛先へのターゲット接続を確立し、書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Oracle Eloqua] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -702,9 +712,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracleResponsys の宛先のストレージの場所を設定するリクエストの例
++++ のストレージの場所を設定するリクエストの例 [!DNL Oracle Responsys] 宛先
 
-以下のリクエストは、OracleResponsys の宛先へのターゲット接続を確立し、書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Oracle Responsys] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -743,9 +753,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ SalesforceMarketing Cloud先の保存場所を設定するリクエストの例
++++ のストレージの場所を設定するリクエストの例 [!DNL Salesforce Marketing Cloud] 宛先
 
-以下のリクエストは、SalesforceMarketing Cloud先へのターゲット接続を確立し、書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
+以下のリクエストは、 [!DNL Salesforce Marketing Cloud] の宛先：書き出されたファイルが格納場所に配置される場所を決定します。 ファイルの書き出し先のストレージの場所に応じて、適切な `params` を指定し、その他を削除します。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -831,6 +841,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.path` | S3 接続の場合は、ファイルの書き出し先となるストレージの場所にファイルパスを指定します。 |
 | `params.format` | `CSV` は、現在、サポートされている唯一のファイル書き出しタイプです。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 **応答**
 
 正常な応答は、一意の識別子 (`id`) を使用します。 この値は、後の手順で必要になるため保存します。
@@ -908,9 +920,9 @@ curl -X POST \
 
 | 宛先 | フロー仕様 ID |
 ---------|----------|
-| すべてのクラウドストレージの宛先 (Amazon S3、SFTP、Azure Blob) およびOracleEloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
-| Oracle Responsys | 51d675ce-e270-408d-91fc-22717bdf2148 |
-| Salesforce Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
+| すべてのクラウドストレージの宛先 ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) および [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
+| [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
+| [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
 
 **応答** 
 
@@ -1019,6 +1031,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `frequency` | 必須. <br> <ul><li>の `"DAILY_FULL_EXPORT"` エクスポートモード： `ONCE` または `DAILY`.</li><li>の `"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモード： `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `endDate` | 選択時には適用されません `"exportMode":"DAILY_FULL_EXPORT"` および `"frequency":"ONCE"`. <br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
 | `startTime` | 必須. セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **応答**
 
