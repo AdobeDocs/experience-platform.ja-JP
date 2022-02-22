@@ -1,61 +1,58 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題。Zoho CRM; Zoho crm;Zoho;zoho
+keywords: Experience Platform；ホーム；人気のトピック；Zoho CRM;Zoho crm;Zoho;zoho
 solution: Experience Platform
 title: フローサービス API を使用した Zoho CRM ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用して Adobe エクスペリエンスプラットフォームを Zoho CRM に接続する方法について説明します。
-source-git-commit: 7a15090d8ed2c1016d7dc4d7d3d0656640c4785c
+description: フローサービス API を使用してAdobe Experience Platformを Zoho CRM に接続する方法を説明します。
+exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '649'
 ht-degree: 8%
 
 ---
 
-# 版[!DNL Zoho CRM]API を使用したベース接続の作成 [!DNL Flow Service]
+# の作成 [!DNL Zoho CRM] を使用したベース接続 [!DNL Flow Service] API
 
->[!NOTE]
->
->[!DNL Zoho CRM]ソースはベータ版です。[ ](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用について詳しくは、ソースの概要を参照してください。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-ベース接続は、ソースと Adobe エクスペリエンスプラットフォームとの間の認証された接続を表します。
-
-このチュートリアルでは、API を使用するための基本的な接続を作成する手順について説明し [!DNL Zoho CRM] [[!DNL Flow Service]  ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ます。
+このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Zoho CRM] の使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース ](../../../../home.md) : [!DNL Experience Platform] 多種多様なソースからのデータの ingested を可能にするとともに、サービスを使用した受信データを構造化、ラベル付け、拡張するための機能を提供し [!DNL Platform] ます。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の各セクションでは、API を使用して正常に接続するために必要な追加情報を示し [!DNL Zoho CRM] [!DNL Flow Service] ます。
+次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Zoho CRM] の使用 [!DNL Flow Service] API
 
 ### 必要な資格情報の収集
 
-に [!DNL Flow Service] 接続するには [!DNL Zoho CRM] 、次の接続プロパティの値を指定する必要があります。
+次のために [!DNL Flow Service] ～とつながる [!DNL Zoho CRM]を使用する場合、次の接続プロパティの値を指定する必要があります。
 
-| Chap | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
-| `endpoint` | [!DNL Zoho CRM]要求を出しているサーバーのエンドポイントを指定します。 |
-| `accountsUrl` | Accounts URL は、アクセスおよび更新トークンを生成するために使用されます。 URL は、ドメイン固有である必要があります。 |
-| `clientId` | ユーザーアカウントに対応しているクライアント ID [!DNL Zoho CRM] 。 |
-| `clientSecret` | このクライアントシークレットには、 [!DNL Zoho CRM] ユーザーアカウントが含まれています。 |
-| `accessToken` | アクセストークンによって、アカウントに対するセキュリティで保護された安全なアクセスが認証され [!DNL Zoho CRM] ます。 |
-| `refreshToken` | 更新トークンは、アクセストークンの有効期限が切れると、新しいアクセストークンを生成するために使用されるトークンです。 |
-| `connectionSpec.id` | コネクション仕様は、ベースおよびソース接続の作成に関連付けられた認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL Zoho CRM] は、次のとおりです `929e4450-0237-4ed2-9404-b7e1e0a00309` 。 |
+| `endpoint` | のエンドポイント [!DNL Zoho CRM] リクエスト先のサーバー。 |
+| `accountsUrl` | アカウント URL は、アクセスおよび更新トークンの生成に使用されます。 URL は、ドメイン固有である必要があります。 |
+| `clientId` | に対応するクライアント ID [!DNL Zoho CRM] ユーザーアカウント。 |
+| `clientSecret` | に対応するクライアントの秘密鍵 [!DNL Zoho CRM] ユーザーアカウント。 |
+| `accessToken` | アクセストークンは、 [!DNL Zoho CRM] アカウント |
+| `refreshToken` | 更新トークンは、アクセストークンの有効期限が切れた後に、新しいアクセストークンの生成に使用されるトークンです。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL Zoho CRM] 次に該当： `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
-これらの資格情報について詳しくは、認証に関するドキュメントを参照してください [[!DNL Zoho CRM]  ](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html) 。
+これらの資格情報について詳しくは、 [[!DNL Zoho CRM] 認証](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-### プラットフォーム Api の使用
+### Platform API の使用
 
-プラットフォーム Api の呼び出しを適切に行う方法については、Platform Api の概要を参照してください [ ](../../../../../landing/api-guide.md) 。
+Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../../landing/api-guide.md).
 
-## ベース接続の作成
+## ベース接続を作成する
 
-ベース接続を行うと、ソースとプラットフォームの間の情報が保持されます。ソースの認証の資格情報、接続の現在の状態、および一意の基本接続 ID が含まれています。 ベース接続 ID を使用して、ソース内でファイルを検索してナビゲートし、データの種類とフォーマットに関する情報も含めて、取り込む特定のアイテムを指定することができます。
+ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
 
-ベース接続 ID を作成するには、そのエンドポイントに POST 要求を行います。この場合は、 `/connections` [!DNL Zoho CRM] 要求パラメーターの一部として認証資格情報を指定します。
+ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Zoho CRM] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -67,9 +64,9 @@ POST /connections
 
 >[!TIP]
 >
->アカウント URL ドメインは、適切なドメインの場所に対応している必要があります。 次の例は、各ドメインとそれに対応するアカウント Url を示しています。<ul><li>日本: https://accounts.zoho.com</li><li>オーストラリア: https://accounts.zoho.com.au</li><li>ヨーロッパ: https://accounts.zoho.eu</li><li>インド: https://accounts.zoho.in</li><li>中国: https://accounts.zoho.com.cn</li></ul>
+>アカウント URL ドメインは、適切なドメインの場所に対応している必要があります。 様々なドメインと対応するアカウント URL を次に示します。<ul><li>米国：https://accounts.zoho.com</li><li>オーストラリア：https://accounts.zoho.com.au</li><li>ヨーロッパ：https://accounts.zoho.eu</li><li>インド：https://accounts.zoho.in</li><li>中国：https://accounts.zoho.com.cn</li></ul>
 
-次の要求によって、次のような基本的な接続が作成され [!DNL Zoho CRM] ます。
+次のリクエストは、 [!DNL Zoho CRM]:
 
 ```shell
 curl -X POST \
@@ -102,20 +99,20 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `name` | ベース接続の名前を指定 [!DNL Zoho CRM] します。 この名前を使用して、基本的な接続を検索することができ [!DNL Zoho CRM] ます。 |
-| `description` | 基本的な接続に関する説明を指定します (オプション) [!DNL Zoho CRM] 。 |
-| `auth.specName` | 接続に使用される認証の種類です。 |
-| `auth.params.endpoint` | [!DNL Zoho CRM]要求を出しているサーバーのエンドポイントを指定します。 |
-| `auth.params.accountsUrl` | Accounts URL は、アクセスおよび更新トークンを生成するために使用されます。 URL は、ドメイン固有である必要があります。 |
-| `auth.params.clientId` | ユーザーアカウントに対応しているクライアント ID [!DNL Zoho CRM] 。 |
-| `auth.params.clientSecret` | このクライアントシークレットには、 [!DNL Zoho CRM] ユーザーアカウントが含まれています。 |
-| `auth.params.accessToken` | アクセストークンによって、アカウントに対するセキュリティで保護された安全なアクセスが認証され [!DNL Zoho CRM] ます。 |
-| `auth.params.refreshToken` | 更新トークンは、アクセストークンの有効期限が切れると、新しいアクセストークンを生成するために使用されるトークンです。 |
-| `connectionSpec.id` | の接続仕様 ID [!DNL Zoho CRM] `929e4450-0237-4ed2-9404-b7e1e0a00309` 。. |
+| `name` | お客様の [!DNL Zoho CRM] ベース接続。 この名前を使用して、 [!DNL Zoho CRM] ベース接続。 |
+| `description` | （オプション） [!DNL Zoho CRM] ベース接続。 |
+| `auth.specName` | 接続に使用する認証タイプ。 |
+| `auth.params.endpoint` | のエンドポイント [!DNL Zoho CRM] リクエスト先のサーバー。 |
+| `auth.params.accountsUrl` | アカウント URL は、アクセスおよび更新トークンの生成に使用されます。 URL は、ドメイン固有である必要があります。 |
+| `auth.params.clientId` | に対応するクライアント ID [!DNL Zoho CRM] ユーザーアカウント。 |
+| `auth.params.clientSecret` | に対応するクライアントの秘密鍵 [!DNL Zoho CRM] ユーザーアカウント。 |
+| `auth.params.accessToken` | アクセストークンは、 [!DNL Zoho CRM] アカウント |
+| `auth.params.refreshToken` | 更新トークンは、アクセストークンの有効期限が切れた後に、新しいアクセストークンの生成に使用されるトークンです。 |
+| `connectionSpec.id` | の接続仕様 ID [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 **応答**
 
-応答が成功した場合は、一意の識別子 () を含む、新しく作成されたベース接続の詳細が返され `id` ます。 この ID は、次の手順に従ってソース接続を作成する必要があります。
+正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
@@ -126,4 +123,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Zoho CRM] API を使用した基本的な接続を作成 [!DNL Flow Service] し、接続の一意の ID 値を取得しました。 この ID は、 [ フローサービス API を使用して CRM システムを検索する方法について学習するために、次のチュートリアルで使用でき ](../../explore/crm.md) ます。
+このチュートリアルに従って、 [!DNL Zoho CRM] を使用したベース接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用した CRM システムの調査](../../explore/crm.md).
