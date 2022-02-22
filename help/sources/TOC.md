@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '741'
 ht-degree: 19%
 
 ---
@@ -81,6 +81,7 @@ ht-degree: 19%
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - マーケティングの自動化 {#marketing-automation}
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
@@ -232,6 +233,8 @@ ht-degree: 19%
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - マーケティングの自動化 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+         - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
@@ -265,7 +268,7 @@ ht-degree: 19%
    - [ソースの指定を構成](sources-sdk/config/sourcespec.md)
    - [エクスプローラの仕様を設定](sources-sdk/config/explorespec.md)
    - [ソース SDK API の概要](sources-sdk/api/api-overview.md)
-   - [概要](sources-sdk/api/getting-started.md)
+   - [はじめに](sources-sdk/api/getting-started.md)
    - [接続仕様の作成](sources-sdk/api/create.md)
    - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
    - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)

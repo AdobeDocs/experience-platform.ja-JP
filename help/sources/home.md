@@ -5,9 +5,9 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 56%
 
 ---
@@ -117,9 +117,8 @@ Experience Platformは、ローカルシステムからデータを取り込む�
 
 Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNL HubSpot] コネクタ](connectors/marketing-automation/hubspot.md)
-- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
-- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### 支払い
