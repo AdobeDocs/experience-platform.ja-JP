@@ -3,7 +3,7 @@ keywords: ターゲットのパーソナライゼーション；宛先；experie
 title: Adobe Target接続
 description: Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 9%
@@ -34,15 +34,15 @@ Adobe Targetは、Adobe Experience Platformのパーソナライゼーション�
 
 ## 宛先に接続 {#connect}
 
->[!IMPORTANT]
->
->を作成する前に [!DNL Adobe Target] 接続の場合、 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
-
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="データストリーム ID について"
 >abstract="このオプションは、ページへの応答にセグメントを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。 宛先を設定する前に、データストリームを設定する必要があります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="データストリームの設定方法を説明します。"
+
+>[!IMPORTANT]
+>
+>を作成する前に [!DNL Adobe Target] 接続の場合、 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
 
 この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
