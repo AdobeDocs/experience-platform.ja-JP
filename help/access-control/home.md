@@ -5,9 +5,9 @@ topic-legacy: overview
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1392'
 ht-degree: 99%
 
 ---
@@ -97,6 +97,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
 | [!DNL Identities] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
 | [!DNL Identities] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
+| [!DNL Identities] | [!UICONTROL ID グラフを表示] | ID グラフへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの表示] | 組織に属するサンドボックスへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスのリセット] | サンドボックスをリセットする機能 |
