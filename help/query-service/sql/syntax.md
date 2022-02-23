@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
+source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 12%
+source-wordcount: '2360'
+ht-degree: 11%
 
 ---
 
@@ -217,14 +217,37 @@ INSERT INTO table_name select_query
 
 **例**
 
+>[!NOTE]
+>
+>以下は、単に説明目的で考案された例です。
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE]
+>[!INFO]
+> 
 > この `SELECT` 文 **次の値を指定する** は () 括弧で囲んでください。 また、 `SELECT` 文は、 `INSERT INTO` 文。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
+
+実際の XDM スキーマ内のフィールドのほとんどは、ルートレベルで見つからず、SQL ではドット表記の使用は許可されていません。 ネストされたフィールドを使用して現実的な結果を得るには、 `INSERT INTO` パス。
+
+宛先 `INSERT INTO` ネストされたパスには、次の構文を使用します。
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**例**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## DROP TABLE
 
