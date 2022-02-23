@@ -1,64 +1,88 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリサービス；Power BI;power bi；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；Power BI;power bi；クエリサービスへの接続；
 solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
 topic-legacy: connect
-description: このドキュメントでは、Adobe Experience PlatformクエリサービスとPower BIを接続する手順について説明します。
+description: このドキュメントでは、Adobe Experience Platformクエリサービスを使用してPower BIを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 2%
+source-wordcount: '969'
+ht-degree: 3%
 
 ---
 
-# [!DNL Power BI] をクエリサービス (PC) に接続
+# Power BI をクエリサービスに接続します。
 
-このドキュメントでは、Adobe Experience PlatformクエリサービスとPower BIを接続する手順を説明します。
+このドキュメントでは、Power BIデスクトップをAdobe Experience Platformクエリサービスに接続する手順を説明します。
 
->[!NOTE]
+## はじめに
+
+このガイドでは、Power BIデスクトップアプリケーションに既にアクセスでき、インターフェイスのナビゲーション方法に詳しいユーザーが必要です。 Power BIデスクトップをダウンロードするには、 [公式Power BI文書](https://docs.microsoft.com/ja-JP/power-bi/).
+
+>[!IMPORTANT]
 >
-> このガイドは、既に [!DNL Power BI] にアクセスでき、インターフェイスの操作方法に精通していることを前提としています。 [!DNL Power BI] の詳細については、[ 公式の  [!DNL Power BI]  ドキュメント ](https://docs.microsoft.com/ja-JP/power-bi/) を参照してください。
->
-> また、Power BIは **Windows デバイスでのみ** 使用可能です。
+> Power BIデスクトップアプリケーションは **のみ** は、Windows デバイスで使用できます。
 
-Power BIをインストールした後、PostgreSQL 用の.NET ドライバパッケージ `Npgsql` をインストールする必要があります。 Npgsql に関する詳細は、[Npgsql のドキュメント ](https://www.npgsql.org/doc/index.html) を参照してください。
+Power BIをExperience Platformに接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。 現在クエリワークスペースへのアクセス権がない場合は、IMS 組織管理者に問い合わせてください。
+
+Power BIをインストールした後、 `Npgsql`:PostgreSQL 用の.NET ドライバーパッケージです。 Npgsql の詳細については、 [Npgsql ドキュメント](https://www.npgsql.org/doc/index.html).
 
 >[!IMPORTANT]
 >
 >新しいバージョンではエラーが発生するので、v4.0.10 以前をダウンロードする必要があります。
 
-カスタムセットアップ画面の「[!DNL Npgsql GAC Installation]」で、「**[!DNL Will be installed on local hard drive]**」を選択します。
+&quot;の下[!DNL Npgsql GAC Installation]」をクリックします。 **[!DNL Will be installed on local hard drive]**.
 
-npgsql が正しくインストールされていることを確認するには、次の手順に進む前にコンピューターを再起動してください。
+Npgsql が正しくインストールされていることを確認するには、次の手順に進む前にコンピューターを再起動してください。
 
-## [!DNL Power BI] を [!DNL Query Service] に接続
+## Power BI をクエリサービスに接続します。 {#connect-power-bi}
 
-[!DNL Power BI] を [!DNL Query Service] に接続するには、[!DNL Power BI] を開き、上部のメニューリボンで **[!DNL Get Data]** を選択します。
+Power BIをクエリサービスに接続するには、Power BIを開いて、 **[!DNL Get Data]** をクリックします。
 
 ![](../images/clients/power-bi/open-power-bi.png)
 
-**[!DNL PostgreSQL database]** を選択し、その後に **[!DNL Connect]** を選択します。
+検索バーに「PostgreSQL」と入力して、データソースのリストを絞り込みます。 表示される結果の下で、「 」を選択します。 **[!DNL PostgreSQL database]**&#x200B;に続いて **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-これで、サーバーとデータベースの値を入力できます。 データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を探すには、[!DNL Platform] にログインし、**[!UICONTROL クエリ]** を選択してから、**[!UICONTROL 資格情報]** を選択します。
+PostgreSQl データベースダイアログが表示され、サーバとデータベースの値を要求します。 これらの値は、Adobe Experience Platformの資格情報から取得されます。 資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md).
 
-**[!DNL Server]** は、接続の詳細で見つかったホストです。実稼動環境の場合は、ホスト文字列の末尾にポート `:80` を追加します。 **[!DNL Database]** は、「すべて」またはデータセットテーブル名です。
+![Experience Platformクエリ資格情報ダッシュボード（認証情報付き）がハイライトされています。](../images/clients/power-bi/query-service-credentials-page.png)
 
-さらに、**[!DNL Data Connectivity mode]** を選択することもできます。 **[!DNL Import]** を選択して使用可能なすべてのテーブルのリストを表示するか、**[!DNL DirectQuery]** を選択してクエリを直接作成します。
+の **[!DNL Server]** 「Power BI」フィールドに、「クエリサービス資格情報」セクションにあるホストの値を入力します。 本番用に、ポートを追加 `:80` をホスト文字列の末尾に追加します。 例：`made-up.platform-query.adobe.io:80`。
 
-**[!DNL Import]** モードの詳細については、[ テーブルのプレビューと読み込み ](#preview) の節を参照してください。 **[!DNL DirectQuery]** モードの詳細については、[SQL 文の作成 ](#create) の節を参照してください。 データベースの詳細を確認した後、**[!DNL OK]** を選択します。
+この **[!DNL Database]** フィールドには、「すべて」またはデータセットテーブル名を指定できます。 例：`prod:all`。
+
+![サーバーおよびPower BIベースの入力フィールドがハイライト表示されたデータダッシュボード。](../images/clients/power-bi/postgresql-database-dialog.png)
+
+### データ接続モード
+
+次に、 **[!DNL Data Connectivity mode]**. 選択 **[!DNL Import]** 続いて **[!DNL OK]** すべての使用可能なテーブルのリストを表示するには、または **[!DNL DirectQuery]** を使用すると、データを直接Power BIにインポートまたはコピーせずに、データソースに対して直接クエリを実行できます。
+
+詳しくは、以下を参照してください。 **[!DNL Import]** モード、次の項を参照してください： [テーブルのインポート](#import). 詳しくは、以下を参照してください。 **[!DNL DirectQuery]** モード、次の項を参照してください： [データをインポートせずにデータセットをクエリする](#direct-query).
+
+選択 **[!DNL OK]** データベースの詳細を確認した後。
 
 ![](../images/clients/power-bi/connectivity-mode.png)
 
-ユーザー名、パスワード、アプリケーションの設定を求めるプロンプトが表示されます。 次の手順に進むには、この詳細を入力し、**[!DNL Connect]** を選択します。
+### 認証
+
+ユーザー名、パスワード、およびアプリケーション設定を求めるプロンプトが表示されます。 この場合のユーザー名は組織 ID で、パスワードは認証トークンです。 両方とも、クエリサービス資格情報ページにあります。
+
+これらの詳細を入力し、「 **[!DNL Connect]** をクリックして、次の手順に進みます。
 
 ![](../images/clients/power-bi/import-mode.png)
 
-## テーブルのプレビューとインポート {#preview}
+## テーブルのインポート {#import}
 
-**[!DNL Import]** モードを選択すると、ダイアログが表示され、使用可能なすべてのテーブルのリストが表示されます。 プレビューするテーブルを選択し、**[!DNL Load]** を選択してデータセットを [!DNL Power BI] に取り込みます。
+次を選択すると、 **[!DNL Import]** [!DNL Data Connectivity mode]：フルPower BIセットがインポートされ、選択したテーブルと列をそのままデスクトップアプリケーション内で使用できます。
+
+>[!IMPORTANT]
+>
+>最初のインポート以降に発生したPower BIの変更を確認するには、データセット全体を再度インポートして、データ内のデータを更新する必要があります。
+
+テーブルをインポートするには、サーバーとデータベースの詳細を入力します [上記のように](#connect-power-bi) をクリックし、 **[!DNL Import]** [!DNL Data Connectivity mode]に続いて **[!DNL OK]**. ダイアログが開き、使用可能なすべてのテーブルのリストが表示されます。 プレビューするテーブルを選択し、その後に **[!DNL Load]** データセットをPower BIに取り込む
 
 ![](../images/clients/power-bi/preview-table.png)
 
@@ -66,18 +90,34 @@ npgsql が正しくインストールされていることを確認するには�
 
 ![](../images/clients/power-bi/import-table.png)
 
-## SQL 文の作成 {#create}
+### カスタム SQL を使用したテーブルのインポート
 
-**[!DNL DirectQuery]** モードを選択した場合は、作成する SQL クエリを「詳細オプション」セクションに入力する必要があります。
+Power BIや、Tableau などのその他のサードパーティツールでは、現在、ユーザーは、Platform で XDM オブジェクトなど、ネストされたオブジェクトを読み込むことはできません。 これを考慮するために、Power BIは、カスタム SQL を使用してネストされたフィールドにアクセスし、データの統合された表示を作成できます。 次に、Power BIは、以前にネストされたデータのこのフラット化されたビューを通常のテーブルとして読み込みます。
 
-**[!DNL SQL statement]** の下に、作成する SQL クエリを挿入します。 **[!DNL Include relationship columns]** というラベルの付いたチェックボックスが選択されていることを確認します。 クエリを作成したら、**[!DNL OK]** を選択して続行します。
+PostgreSQL データベースポップオーバーで、 **[!DNL Advanced options]** カスタム SQL クエリを **[!DNL SQL statement]** 」セクションに入力します。 このカスタムクエリは、JSON の名前と値のペアをテーブル形式に統合するために使用する必要があります。
+
+![カスタム SQL 文を作成するためのデータ接続モードの詳細オプション。](../images/clients/power-bi/custom-sql-statement.png)
+
+カスタマイズしたクエリを入力したら、 **[!DNL OK]** をクリックして、データベースへの接続を続行します。 詳しくは、 [認証](#authentication) 上記の節を参照して、ワークフローのこの部分からデータベースに接続する方法を確認してください。
+
+認証が完了すると、統合されたデータのプレビューが、Power BIデスクトップダッシュボードに表として表示されます。 サーバー名とデータベース名がダイアログの上部に表示されます。 選択 **[!DNL Load]** をクリックして、インポートプロセスを完了します。
+
+![インポートされた統合済みテーブル (Power BIダッシュボード )。](../images/clients/power-bi/imported-table-preview.png)
+
+ビジュアライゼーションをPower BIデスクトップアプリケーションで編集および書き出しできるようになりました。
+
+## データをインポートせずにデータセットをクエリする {#direct-query}
+
+この **[!DNL DirectQuery]** [!DNL Data Connectivity mode] は、データをデータデスクトップに読み込んだりコピーしたりせずに、Power BIソースを直接クエリします。 この接続モードを使用すると、UI を使用して、すべてのビジュアライゼーションを現在のデータで更新できます。 ただし、ビジュアライゼーションの作成または更新に要する時間は、基になるデータソースのパフォーマンスに応じて異なります。
+
+これを使用するには [!DNL Data Connectivity mode]を選択し、 **[!DNL DirectQuery]** 切り替え **[!DNL Advanced options]** カスタム SQL クエリを **[!DNL SQL statement]** 」セクションに入力します。 以下を確認します。 **[!DNL Include relationship columns]** が選択されている。 クエリを完了したら、「 **[!DNL OK]** をクリックして続行します。
 
 ![](../images/clients/power-bi/direct-query-mode.png)
 
-クエリのプレビューが表示されます。 **[!DNL Load]** を選択して、クエリの結果を表示します。
+クエリのプレビューが表示されます。 選択 **[!DNL Load]** をクリックして、クエリの結果を確認します。
 
 ![](../images/clients/power-bi/preview-direct-query.png)
 
 ## 次の手順
 
-[!DNL Query Service] に接続したら、[!DNL Power BI] を使用してクエリを記述できます。 クエリの書き込みと実行の詳細については、[ クエリの実行 ](../best-practices/writing-queries.md) に関するガイドを参照してください。
+このドキュメントでは、Power BIデスクトップアプリケーションへの接続方法と、使用可能な様々なデータ接続モードについて説明します。 クエリの書き込みと実行の方法について詳しくは、 [クエリ実行のガイダンス](../best-practices/writing-queries.md).
