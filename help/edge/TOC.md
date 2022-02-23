@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワークを通じてExperience Cloudサービスを操作します。
 feature: Web SDK
-source-git-commit: f237ee364cdf6048840dca797f7827b9b88dd73b
+source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 85%
+source-wordcount: '157'
+ht-degree: 84%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 85%
    * [サポートされるユースケース](fundamentals/supported-use-cases.md)
 * ID {#identity}
    * [概要](identity/overview.md)
+   * [ファーストパーティデバイス ID](identity/first-party-device-ids.md)
 * データ収集 {#data-collection}
    * [自動的に収集された情報](data-collection/automatic-information.md)
    * [リンクのトラッキング](data-collection/track-links.md)
