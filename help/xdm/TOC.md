@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル (XDM) クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 37%
+source-wordcount: '412'
+ht-degree: 36%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 37%
       * [XDM ビジネス人物コンポーネント](./field-groups/profile/business-person-components.md)
       * [XDM ビジネス人物の詳細](./field-groups/profile/business-person-details.md)
    * イベントフィールドグループ {#event}
+      * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
@@ -95,6 +96,7 @@ ht-degree: 37%
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [Impressions](./data-types/impressions.md)
+   * [キーと値のペア](./data-types/key-value-pair.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
    * [Order](./data-types/order.md)
