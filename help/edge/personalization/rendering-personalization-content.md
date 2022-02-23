@@ -3,16 +3,20 @@ title: Adobe Experience Platform Web SDK を使用したパーソナライズさ
 description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
+source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDK は、次のようなパーソナライゼーションソリューションからのAdobe時のパーソナライズされたコンテンツの取得をサポートします。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja). Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
+Adobe Experience Platform Web SDK は、次のようなパーソナライゼーションソリューションからのパーソナライズされたコンテンツのAdobeをサポートします。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja).
+
+さらに、Web SDK を使用すると、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../../destinations/ui/configure-personalization-destinations.md).
+
+Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング
 
