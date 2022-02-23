@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 41%
@@ -37,7 +38,7 @@ Platform でのデータ収集について詳しくは、 [データ収集の概
 
 [!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
 
-**更新された機能**
+**新機能**
 
 | 機能 | 説明 |
 | --- | --- |

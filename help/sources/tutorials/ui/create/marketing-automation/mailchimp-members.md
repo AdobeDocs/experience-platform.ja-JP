@@ -4,13 +4,15 @@ solution: Experience Platform
 title: Platform UI を使用して MailChimp メンバーのソース接続を作成する
 topic-legacy: tutorial
 description: Platform UI を使用してAdobe Experience Platformを MailChimp メンバーに接続する方法を説明します。
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 4%
 
 ---
-
 
 # の作成 [!DNL Mailchimp Members] Platform UI を使用したソース接続
 
