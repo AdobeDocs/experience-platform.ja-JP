@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定する方法について説明します。
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Adobe Experience Platform使用 [エッジセグメント化](../../segmentation
 さらに、エンドツーエンドの設定プロセスの概要については、以下のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、次の節で説明する設定手順を参照してください。
 
 ## 手順 1:データ収集 UI でのデータストリームの設定 {#configure-datastream}
 

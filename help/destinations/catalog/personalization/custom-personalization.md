@@ -3,9 +3,9 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '676'
 ht-degree: 6%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 6%
 ## 前提条件 {#prerequisites}
 
 この統合は、 [Adobe Experience Platform Web SDK](../../../edge/home.md) または [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). この宛先を使用するには、次の SDK のいずれかを使用する必要があります。
+
+>[!IMPORTANT]
+>
+>カスタムパーソナライゼーション接続を作成する前に、次の手順に関するガイドをお読みください。 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
 
 ## 書き出しタイプ {#export-type}
 
@@ -39,10 +43,6 @@ ht-degree: 6%
 同じ Web サイトで、広告サーバーに対して個別のカスタムパーソナライゼーションの宛先を使用し、Adobe Experience Platformとは異なるセグメントセットをターゲット条件として、オンサイト広告のターゲット設定をおこなうことができます。
 
 ## 宛先に接続 {#connect}
-
->[!IMPORTANT]
->
->カスタムパーソナライゼーション接続を作成する前に、次の手順に関するガイドを読むことをお勧めします。 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
