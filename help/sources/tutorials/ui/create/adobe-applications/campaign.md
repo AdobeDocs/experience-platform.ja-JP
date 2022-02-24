@@ -4,10 +4,10 @@ title: Platform UI を使用したAdobe Campaign Managed Servicesソース接続
 description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Servicesに接続する方法について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 24d7a549e83245fc363bd76f26ba58130e980c6c
+source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 4%
+source-wordcount: '300'
+ht-degree: 5%
 
 ---
 
@@ -31,30 +31,24 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 以下 **[!UICONTROL Adobe]** カテゴリ、選択 **[!UICONTROL Adobe Campaign Managed Services]** 次に、 **[!UICONTROL データを追加]**.
 
-### データを選択
+### データを選択 {#select-data}
 
 この [!UICONTROL データを選択] 手順が表示され、 [!UICONTROL Adobe Campaignインスタンス], [!UICONTROL ターゲットマッピング]、および [!UICONTROL スキーマ名].
 
-#### キャンペーンインスタンスを選択 {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="キャンペーンインスタンスを選択"
+>title="ACC インスタンス"
 >abstract="使用するAdobe Campaign Classic環境の名前。"
 >text="Learn more in documentation"
 
-#### キャンペーンマッピングを選択 {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="キャンペーンターゲットマッピングを選択"
+>title="ターゲットマッピング"
 >abstract="ターゲットマッピングは、メッセージの配信に使用される技術的なオブジェクトで、配信の送信に必要なすべての技術的な設定（アドレス、電話番号、オプトイン指標、追加の識別子など）が含まれます。"
 >text="Learn more in documentation"
 
-#### キャンペーンスキーマを選択 {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="キャンペーンスキーマ名を選択"
+>title="スキーマ名"
 >abstract="Adobe Campaignデータベースで定義されたエンティティの名前。"
 >text="Learn more in documentation"
