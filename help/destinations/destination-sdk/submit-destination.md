@@ -2,9 +2,9 @@
 description: このページでは、Destination SDKを使用して作成した宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: 送信してレビュー用に、Destination SDKで作成した宛先を送信
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
+source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,10 @@ ht-degree: 1%
 * 宛先に対して、 [宛先公開 API](./destination-publish-api.md).
 * （製品化された統合のみ）ドキュメントの PR（プル要求）。 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md).
 * 画像の宛先カタログ内の宛先カードのロゴとして表示されるExperience Platformファイル。
+
+>[!NOTE]
+>
+>Adobeの宛先の公開要求を確認するための標準的な応答時間は、5 営業日です。
 
 各項目の詳細については、以下の節を参照してください。
 
