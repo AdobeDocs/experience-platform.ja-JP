@@ -2,9 +2,9 @@
 description: このページでは、Destination SDKを使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDKを使用したストリーミング先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,11 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-このページでは、 [宛先 SDK の設定オプション](./configuration-options.md) 他のDestination SDK機能および API リファレンスドキュメントで、 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). 手順は、次の順に並べられます。
-
->[!NOTE]
->
->Destination SDKを使用したバッチ保存先の設定は、現在、サポートされていません。
+このページでは、 [宛先 SDK の設定オプション](./configuration-options.md) を設定するには、他のDestination SDK機能と API リファレンスドキュメントで [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). 手順は、次の順に並べられます。
 
 ## 前提条件 {#prerequisites}
 
-以下に示す手順に進む前に、 [Destination SDKはじめに](./getting-started.md) Destination SDK API を使用するために必要なAdobe I/O認証資格情報およびその他の前提条件の取得に関する情報を含むページです。
+以下に示す手順に進む前に、 [Destination SDKの概要](./getting-started.md) ページを参照してください。Adobe I/O認証に必要な資格情報や、Destination SDKAPI を使用するためのその他の前提条件が取得されます。
 
 ## Destination SDKの設定オプションを使用して宛先を設定する手順 {#steps}
 
@@ -29,7 +25,7 @@ ht-degree: 0%
 
 ## 手順 1:サーバーとテンプレートの設定を作成する {#create-server-template-configuration}
 
-まず、 `/destinations-server` endpoint （読み取り） [API リファレンス](./destination-server-api.md)) をクリックします。 サーバーとテンプレートの設定について詳しくは、 [サーバーとテンプレートの仕様](./configuration-options.md#server-and-template) を参照してください。
+まず、 `/destinations-server` endpoint （読み取り） [API リファレンス](destination-server-api.md)) をクリックします。 サーバーとテンプレートの設定について詳しくは、 [サーバーとテンプレートの仕様](server-and-template-configuration.md) を参照してください。
 
 次に設定例を示します。 なお、 `requestBody.value` 手順 3 で指定したパラメータ [変換テンプレートを作成](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 手順 2:宛先設定の作成 {#create-destination-configuration}
 
-次に、を使用して作成された、宛先テンプレートの設定例を示します。 `/destinations` API エンドポイント。 このテンプレートについて詳しくは、 [宛先の設定](./destination-configuration.md).
+次に、を使用して作成された、宛先テンプレートの設定例を示します。 `/destinations` API エンドポイント。 この設定について詳しくは、 [宛先の設定](./destination-configuration.md).
 
 手順 1 のサーバーとテンプレート設定をこの宛先設定に接続するには、サーバーのインスタンス ID とテンプレート設定を、 `destinationServerId` こちら。
 
@@ -156,11 +152,11 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 4:オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、Destination SDKは、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータ設定を設定する必要があります。 参照： [Audience metadata management](./audience-metadata-management.md) を参照してください。
+一部の宛先では、Destination SDKは、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを設定する必要があります。 参照： [Audience metadata management](./audience-metadata-management.md) を参照してください。
 
 オーディエンスメタデータ設定を使用する場合は、手順 2 で作成した宛先設定に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を、 `audienceTemplateId`.
 
-## 手順 5:資格情報の設定を作成/認証を設定 {#set-up-authentication}
+## 手順 5:認証の設定 {#set-up-authentication}
 
 次の項目を指定するかどうかに応じて、 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` または `"authenticationRule": "PLATFORM_AUTHENTICATION"` 上記の宛先設定で、 `/destination` または `/credentials` endpoint.
 

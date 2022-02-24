@@ -2,10 +2,10 @@
 description: このページでは、「/authoring/destination-servers」 API エンドポイントを使用して実行できるすべての API 操作について説明します。 宛先のサーバーおよびテンプレートの仕様は、共通のエンドポイント「/authoring/destination-servers」を介してAdobe Experience Platform Destination SDKで設定できます。
 title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 7%
+source-wordcount: '1454'
+ht-degree: 8%
 
 ---
 
@@ -21,12 +21,11 @@ ht-degree: 7%
 
 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
-## 宛先サーバーの設定を作成する {#create}
+## ストリーミング先サーバの設定を作成する {#create}
 
-新しい宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
+ストリーミング先に対して新しい宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
 
 **API 形式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -67,7 +66,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `name` | 文字列 | *必須* サーバーのわかりやすい名前を表し、Adobeのみに表示されます。 この名前は、パートナーや顧客には表示されません。 例 `Moviestar destination server`. |
-| `destinationServerType` | 文字列 | *必須* `URL_BASED` は現在唯一の利用可能なオプションです。 |
+| `destinationServerType` | 文字列 | *必須* に設定 `URL_BASED` ストリーミング先用 |
 | `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須.* <ul><li>用途 `PEBBLE_V1` Adobeが `value` フィールドを参照してください。 次のようなエンドポイントがある場合は、このオプションを使用します。 `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 用途 `NONE` Adobe側で変換が必要ない場合（例えば、次のようなエンドポイントがある場合）、 `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | *必須* Experience Platformが接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須* サーバーへの呼び出しでAdobeが使用するメソッド。 オプションは次のとおりです。 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
@@ -80,6 +79,560 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 **応答**
 
 正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
+
+## ファイルベースの宛先サーバーの設定を作成する {#create-file-based}
+
+### 例：SFTP 宛先サーバーの設定の作成
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+
+新しい SFTP 宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
+
+**API 形式**
+
+```http
+POST /authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。 以下のペイロードには、 `/authoring/destination-servers` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"File-based SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.rootDirectory}}"
+      }, 
+      "port": 22,
+      "encryptionMode" : "PGP"
+   },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
++++
+
++++例：Amazon S3 宛先サーバーの設定を作成する
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+
+新しいAmazon S3 の宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
+
+**API 形式**
+
+```http
+POST /authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。 以下のペイロードには、 `/authoring/destination-servers` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
++++
+
++++例：Azure Blob 宛先サーバーの設定を作成する
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+
+新しい Azure Blob 宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
+
+**API 形式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。 以下のペイロードには、 `/authoring/destination-servers` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.container}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
++++
+
++++例：Azure Data Lake Storage(ADLS) の宛先サーバーの設定を作成する
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+
+新しい ADLS 宛先サーバー設定を作成するには、 `/authoring/destination-servers` endpoint.
+
+**API 形式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。 以下のペイロードには、 `/authoring/destination-servers` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
++++
+
++++例：Data Landing Zone(DLZ) の宛先サーバーの構成を作成する
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+
+[!DNL Data Landing Zone] ([!DNL DLZ]) は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 詳しくは、
+
+新しい DLZ 宛先サーバ構成を作成するには、 `/authoring/destination-servers` endpoint.
+
+**API 形式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。 以下のペイロードには、 `/authoring/destination-servers` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "useCase": "Your use case"
+   },
+   "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先サーバー設定の詳細を返します。
++++
 
 ## 宛先サーバー設定のリスト {#retrieve-list}
 
@@ -228,10 +781,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
-
-
-
 
 ## 特定の宛先サーバー設定の取得 {#get}
 

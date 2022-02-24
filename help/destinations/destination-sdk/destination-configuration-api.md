@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/destinations」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 07ab607a96822b4d4c11bec128764fa08402def6
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2506'
 ht-degree: 5%
 
 ---
@@ -21,12 +21,11 @@ ht-degree: 5%
 
 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
-## 宛先の設定を作成する {#create}
+## ストリーミング先の設定を作成する {#create}
 
 新しい宛先設定を作成するには、 `/authoring/destinations` endpoint.
 
 **API 形式**
-
 
 ```http
 POST /authoring/destinations
@@ -34,9 +33,9 @@ POST /authoring/destinations
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先設定を作成します。 以下のペイロードには、 `/authoring/destinations` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しいストリーミング先設定を作成します。 以下のペイロードには、 `/authoring/destinations` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
 
-```shell
+```json
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -141,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | 文字列 | Adobeが宛先カードの宛先カタログで使用するExperience Platformを指定します。 4～5 文以下を目指します。 |
 | `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。用途 `TEST` を設定します。 |
 | `customerAuthenticationConfigurations` | 文字列 | サーバーへのExperience Platform顧客の認証に使用する設定を示します。 詳しくは、 `authType` を参照してください。 |
-| `customerAuthenticationConfigurations.authType` | 文字列 | 指定できる値は次のとおりです。 `OAUTH2, BEARER`. |
+| `customerAuthenticationConfigurations.authType` | 文字列 | ストリーミングの宛先でサポートされる値は次のとおりです。 <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> ファイルベースの宛先でサポートされている値は次のとおりです。 <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | 文字列 | 紹介するカスタムフィールドの名前を指定します。 |
 | `customerDataFields.type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は次のとおりです。 `string`, `object`, `integer` |
 | `customerDataFields.title` | 文字列 | Experience Platformユーザーインターフェイスの顧客に表示されるフィールドの名前を示します |
@@ -182,6 +181,254 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.groups` | 文字列 | 設定例の「パラメーター」を参照してください。 [ここ](./destination-configuration.md#example-configuration). 宛先に書き出されたプロファイルを ID 名前空間のグループ別にグループ化する場合は、ID グループのリストを作成します。 例えば、IDFA および GAID モバイル識別子を含むプロファイルを、例の設定を使用して、宛先への呼び出しと、別の電子メールへと組み合わせることができます。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく作成された宛先設定の詳細を返します。
+
+## ファイルベースの宛先の設定を作成する {#create-file-based}
+
+新しい宛先設定を作成するには、 `/authoring/destinations` endpoint.
+
+**API 形式**
+
+```http
+POST /authoring/destinations
+```
+
+**リクエスト**
+
+次のリクエストは、 [!DNL Amazon S3] ファイルベースの宛先設定。ペイロードで指定されたパラメーターで設定されます。 以下のペイロードには、 `/authoring/destinations` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+
+```json
+{
+        "name": "S3 Destination with CSV Options",
+        "description": "S3 Destination with CSV Options",
+        "releaseNotes": "S3 Destination with CSV Options",
+        "status": "TEST",
+        "customerAuthenticationConfigurations": [
+            {
+                "authType": "S3"
+            }
+        ],
+        "customerEncryptionConfigurations": [
+            {
+                "encryptionAlgo": ""
+            }
+        ],
+        "customerDataFields": [
+            {
+                "name": "bucket",
+                "title": "Select S3 Bucket",
+                "description": "Select S3 Bucket",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "path",
+                "title": "S3 path",
+                "description": "Select S3 Bucket",
+                "type": "string",
+                "isRequired": true,
+                "pattern": "^[A-Za-z]+$",
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "sep",
+                "title": "Select separator for each field and value",
+                "description": "Select for each field and value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "encoding",
+                "title": "Specify encoding (charset) of saved CSV files",
+                "description": "Select encoding of csv files",
+                "type": "string",
+                "enum": ["UTF-8", "UTF-16"],
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "quote",
+                "title": "Select a single character used for escaping quoted values",
+                "description": "Select single charachter for escaping quoted values",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "quoteAll",
+                "title": "Quote All",
+                "description": "Select flag for escaping quoted values",
+                "type": "string",
+                "enum" : ["true","false"],
+                "default": "true",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false
+            },
+             {
+                "name": "escape",
+                "title": "Select a single character used for escaping quotes",
+                "description": "Select a single character used for escaping quotes inside an already quoted value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "escapeQuotes",
+                "title": "Escape quotes",
+                "description": "A flag indicating whether values containing quotes should always be enclosed in quotes",
+                "type": "string",
+                "enum" : ["true","false"],
+                "isRequired": false,
+                "default": "true",
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "header",
+                "title": "header",
+                "description": "Writes the names of columns as the first line.",
+                "type": "string",
+                "isRequired": false,
+                "enum" : ["true","false"],
+                "readOnly": false,
+                "default": "true",
+                "hidden": false
+            },
+            {
+                "name": "ignoreLeadingWhiteSpace",
+                "title": "Ignore leading white space",
+                "description": "A flag indicating whether or not leading whitespaces from values being written should be skipped.",
+                "type": "string",
+                "isRequired": false,
+                "enum" : ["true","false"],
+                "readOnly": false,
+                "default": "true",
+                "hidden": false
+            },
+            {
+                "name": "nullValue",
+                "title": "Select the string representation of a null value",
+                "description": "Sets the string representation of a null value. ",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "dateFormat",
+                "title": "Date format",
+                "description": "Select the string that indicates a date format. ",
+                "type": "string",
+                "default": "yyyy-MM-dd",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+             {
+                "name": "charToEscapeQuoteEscaping",
+                "title": "Char to escape quote escaping",
+                "description": "Sets a single character used for escaping the escape for the quote character",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "emptyValue",
+                "title": "Select the string representation of an empty value",
+                "description": "Select the string representation of an empty value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "default": "",
+                "hidden": false
+            },
+            {
+                "name": "compression",
+                "title": "Select compression",
+                "description": "Select compressiont",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "enum" : ["SNAPPY","GZIP","DEFLATE", "NONE"]
+            },
+            {
+                "name": "fileType",
+                "title": "Select a fileType",
+                "description": "Select fileType",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false,
+                "enum" :["csv", "json", "parquet"],
+                "default" : "csv"
+            }
+        ],
+        "uiAttributes": {
+            "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+            "category": "S3",
+            "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+            "connectionType": "S3",
+            "flowRunsSupported": true,
+            "monitoringSupported": true,
+            "frequency": "Batch"
+        },
+        "destinationDelivery": [
+            {
+                "deliveryMatchers" : [
+                    {
+                        "type" : "SOURCE",
+                        "value" : [
+                            "batch"
+                        ]
+                    }
+                ],
+                "authenticationRule": "CUSTOMER_AUTHENTICATION",
+                "destinationServerId": "{{destinationServerId}}"
+            }
+        ],
+        "schemaConfig" : {
+            "profileRequired" : true,
+            "segmentRequired" : true,
+            "identityRequired" : true
+        },
+        "batchConfig":{
+            "allowMandatoryFieldSelection": true,
+            "allowJoinKeyFieldSelection": true,
+            "defaultExportMode": "DAILY_FULL_EXPORT",
+            "allowedExportMode":[
+                "DAILY_FULL_EXPORT",
+                "FIRST_FULL_THEN_INCREMENTAL"
+            ],
+            "allowedScheduleFrequency":[
+                "DAILY",
+                "EVERY_3_HOURS",
+                "EVERY_6_HOURS",
+                "EVERY_8_HOURS",
+                "EVERY_12_HOURS",
+                "ONCE",
+                "EVERY_HOUR"
+            ],
+            "defaultFrequency":"DAILY",
+            "defaultStartTime":"00:00"
+        },
+        "backfillHistoricalProfileData": true
+    }
+```
+
+上記のすべてのパラメーターについて詳しくは、 [ファイルベースの宛先設定](file-based-destination-configuration.md).
 
 **応答**
 

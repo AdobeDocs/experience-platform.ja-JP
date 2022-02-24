@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/credentials」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 資格情報エンドポイント API 操作
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -17,6 +17,11 @@ ht-degree: 6%
 
 このページでは、 `/authoring/credentials` API エンドポイント。
 
+このエンドポイントでサポートされる機能については、以下を参照してください。
+
+* [ストリーミング先の設定](destination-configuration.md) の機能については、ストリーミング先用にを設定できます。
+* [ファイルベースの宛先設定](file-based-destination-configuration.md) を参照してください。
+
 ## 使用するタイミング `/credentials` API エンドポイント {#when-to-use}
 
 >[!IMPORTANT]
@@ -24,125 +29,6 @@ ht-degree: 6%
 >ほとんどの場合、 *しない* 使用する必要がある `/credentials` API エンドポイント。 代わりに、 `customerAuthenticationConfigurations` のパラメーター `/destinations` endpoint. 読み取り [認証設定](./authentication-configuration.md#when-to-use) を参照してください。
 
 この API エンドポイントを使用し、「 」を選択します。 `PLATFORM_AUTHENTICATION` 内 [宛先設定](./destination-configuration.md#destination-delivery) Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 `/credentials` API エンドポイント。
-
-<!--
-
-Commenting out the example configurations
-
-## Example configurations
-
-**Example configuration for a Basic authentication credential configuration with username and password**
-
-```json
-{
-  "type": "BASIC",
-  "name": "YOUR_DESTINATION_NAME",
-  "basicAuthentication": {
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "password": "YOUR_DESTINATION_SERVER_PASSWORD"
-  }
-}
-
-```
-
-**Example configuration for an OAuth2 credential configuration**
-
-```json
-
-{
-  "oauth2AccessTokenAuthentication": {
-    "accessToken": "YOUR_DESTINATION_SERVER_ACCESS_TOKEN",
-    "expiration": "YOUR_TOKEN_TIME_TO_LIVE",
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "userId": "YOUR_DESTINATION_USER_ID",
-    "url": "AUTHORIZATION_PROVIDER_URL",
-    "header": "YOUR_AUTHORIZATION_HEADER"
-  }
-}
-
-```
-
-The sections below list out the necessary parameters for each authentication type. Let us know which authentication type your server uses and provide us with the relevant information for your server type.
-
-## Basic authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`username` | String | credentials configuration login username |
-|`password` | String | credentials configuration login password |
-
-
-
-// commenting out this part as these types of authentication methods are not supported in phase one
-
-### S3 authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|accessId | String | credentials configuration S3 credential Access key ID |
-|secretKey | String | credentials configuration S3 credential Secret key |
-
-### SSH 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|username | String | credentials configuration SSH username |
-|SSHKey | String | credentials configuration SSH key |
-
-
-
-## OAuth1
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`apiKey` | String | A value used by the Destinations Service to identify itself to the Service Provider. |
-|`apiSecret` | String | Secret used by the Destinations Service to establish ownership of the API key to the Service Provider. |
-|`acccessToken` | String | A value used by the Destinations Service to gain access to the Protected Resources on behalf of the User |
-|`tokenSecret` | String | A secret used by the Destinations Service to establish ownership of an access token. |
-
-## OAuth2 user credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username` | String | The user's username to log on to your platform. |
-|`password` | String | The user's password to log on to your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 client credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username`| String | URL of authorization provider |
-|`password` | String | Any header required for authorization |
-
-## OAuth2 access token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`accessToken` | String | Access token provided by the authorization provider |
-|`expiration` | String | The time-to-live for the access token |
-|`username` | String | The user's username to log on to your platform. |
-|`userId` | String | The user's ID with your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 refresh token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`refreshToken` | String | Refresh token provided by the authorization provider |
-|`url` | String | URL of authorization provider |
-|`expiration` | String | The time-to-live for the refresh token |
-|`header` | String | Any header required for authorization |
-
--->
 
 ## 資格情報設定 API 操作の概要 {#get-started}
 
@@ -153,7 +39,6 @@ The sections below list out the necessary parameters for each authentication typ
 新しい資格情報の設定を作成するには、 `/authoring/credentials` endpoint.
 
 **API 形式**
-
 
 ```http
 POST /authoring/credentials
@@ -202,14 +87,36 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
+   },
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   },
+   "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   },
+   "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   },
+   "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   },
+   "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
    }
 }
 ```
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `username` | 文字列 | 資格情報ログインユーザー名 |
-| `password` | 文字列 | 資格情報設定ログインパスワード |
+| `username` | 文字列 | 資格情報設定ログインユーザー名 |
+| `password` | 文字列 | 資格情報設定のログインパスワード |
 | `url` | 文字列 | 認証プロバイダーの URL |
 | `clientId` | 文字列 | クライアント/アプリケーション秘密鍵証明書のクライアント ID |
 | `clientSecret` | 文字列 | クライアント/アプリケーション秘密鍵証明書のクライアント秘密鍵 |
@@ -217,6 +124,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `expiration` | 文字列 | アクセストークンの有効期間 |
 | `refreshToken` | 文字列 | 認証プロバイダーから提供された更新トークン |
 | `header` | 文字列 | 認証に必要なヘッダー |
+| `accessId` | 文字列 | Amazon S3 アクセス ID |
+| `secretKey` | 文字列 | Amazon S3 秘密鍵 |
+| `sshKey` | 文字列 | SSH 認証を使用した SFTP 用の SSH キー |
+| `tenant` | 文字列 | Azure Data Lake Storage テナント |
+| `servicePrincipalId` | 文字列 | Azure Data Lake Storage の Azure Service プリンシパル ID |
+| `servicePrincipalKey` | 文字列 | Azure Data Lake Storage の Azure Service プリンシパルキー |
+| `connectionString` | 文字列 | Azure Blob ストレージ接続文字列 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -318,16 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
-
-
-
 ## 特定の資格情報設定の取得 {#get}
 
 特定の資格情報設定に関する詳細な情報を取得するには、 `/authoring/credentials` エンドポイントを作成し、更新する資格情報設定のインスタンス ID を指定します。
 
 **API 形式**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -368,7 +277,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
    }
 }
 ```
-
 
 ## 特定の資格情報設定の削除 {#delete}
 

@@ -2,7 +2,7 @@
 description: このページでは、「/authoring/destinations/publish」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 公開先 API エンドポイントの操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 5%
@@ -20,6 +20,7 @@ ht-degree: 5%
 宛先を設定およびテストしたら、レビューおよび公開用にAdobeに送信できます。
 
 公開リクエストを送信するには、次の場合に公開先 API エンドポイントを使用します。
+
 * Destination SDKパートナーは、製品化された宛先をすべてのExperience Platform組織で利用できるようにし、すべてのExperience Platformのお客様が使用できるようにしたいと考えます。
 * すべてのサンドボックスにわたって、独自のExperience Platform組織でカスタムの宛先を使用できるようにする。
 
@@ -32,7 +33,6 @@ ht-degree: 5%
 公開用の宛先設定を送信するには、 `/authoring/destinations/publish` endpoint.
 
 **API 形式**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ IMS 組織に対して公開用に送信されたすべての宛先のリスト�
 
 **API 形式**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ]
 }
-    
 ```
 
 | パラメーター | タイプ | 説明 |
@@ -132,7 +130,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 PUTリクエストを `/authoring/destinations/publish` エンドポイントを作成し、許可された組織を更新する宛先の ID を指定します。 呼び出しの本文で、更新された許可された組織を指定します。
 
 **API 形式**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 特定の宛先の公開リクエストに関する詳細な情報を取得するには、GETリクエストを `/authoring/destinations/publish` エンドポイントを検索し、公開ステータスを取得する宛先の ID を指定します。
 
 **API 形式**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

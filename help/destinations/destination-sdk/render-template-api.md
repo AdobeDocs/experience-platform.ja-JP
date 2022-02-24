@@ -2,7 +2,7 @@
 description: このページでは、メッセージ変換テンプレートに基づいて、宛先に対して書き出されたデータをレンダリングするために、「/authoring/testing/template/render」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: レンダリングテンプレート API 操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -30,7 +30,6 @@ ht-degree: 1%
 >[!TIP]
 >
 >* ここで使用する必要がある宛先 ID は、です。 `instanceId` を使用して作成された、宛先の設定に対応する `/destinations` endpoint. 詳しくは、 [宛先設定 API 操作](./destination-configuration-api.md#retrieve-list).
-
 
 
 **API 形式**

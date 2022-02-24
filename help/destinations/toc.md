@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 45%
+source-wordcount: '722'
+ht-degree: 43%
 
 ---
 
@@ -156,8 +156,10 @@ ht-degree: 45%
    * [はじめに](./destination-sdk/getting-started.md)
    * Destination SDK機能 {#functionality}
       * [設定オプション](./destination-sdk/configuration-options.md)
-      * [宛先の設定](./destination-sdk/destination-configuration.md)
-      * [サーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
+      * [ストリーミング先の設定](./destination-sdk/destination-configuration.md)
+      * [ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
+      * [ストリーミング宛先のサーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
+      * [ファイルベースの宛先サーバーとファイル仕様](./destination-sdk/server-and-file-configuration.md)
       * [メッセージのフォーマット](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * 認証 {#authentication}
@@ -180,6 +182,7 @@ ht-degree: 45%
          * [プロファイル生成 API 操作の例](./destination-sdk/sample-profile-generation-api.md)
    * ガイド {#guides}
       * [Destination SDKを使用したストリーミング先の設定](./destination-sdk/configure-destination-instructions.md)
+      * [（ベータ版）Destination SDKを使用してファイルベースの宛先を設定する](./destination-sdk/configure-file-based-destination-instructions.md)
       * [送信してレビュー用に、Destination SDKで作成した宛先を送信](./destination-sdk/submit-destination.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platformでの宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)

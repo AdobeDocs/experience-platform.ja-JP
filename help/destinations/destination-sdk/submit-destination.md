@@ -1,15 +1,15 @@
 ---
 description: このページでは、Destination SDKを使用して作成した宛先のレビュー用に送信する必要があるすべての情報を提供します。
-title: Destination SDKで作成した宛先を確認用に送信
+title: 送信してレビュー用に、Destination SDKで作成した宛先を送信
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
 
 ---
 
-# Destination SDKで作成した宛先を確認用に送信
+# 送信してレビュー用に、Destination SDKで作成した宛先を送信
 
 ## 概要 {#overview}
 
@@ -37,6 +37,7 @@ ht-degree: 1%
 ## テスト宛先 API を使用した後の結果のテスト
 
 を使用した後にテスト結果を提供する [宛先 API のテスト](./test-destination.md) エンドポイントを使用して、宛先への HTTP 呼び出しを実行します。 これには以下が含まれます。
+
 * テスト API を使用して宛先エンドポイントに対しておこなわれた完全な API リクエスト（ヘッダーと本文）。
 * 宛先エンドポイントから受け取った API 応答。
 

@@ -1,27 +1,27 @@
 ---
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
-title: 宛先 SDK の宛先設定オプション
+title: Destination SDK用のストリーミング宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1756'
 ht-degree: 5%
 
 ---
 
-# 宛先の設定 {#destination-configuration}
+# ストリーミング先の設定 {#destination-configuration}
 
 ## 概要 {#overview}
 
-この設定を使用すると、宛先名、カテゴリ、説明などの重要な情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
+この設定を使用すると、宛先名、カテゴリ、説明など、ストリーミング先に関する重要な情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
 
 また、この設定は、宛先サーバーとオーディエンスメタデータの機能に必要な他の設定も、この設定に接続します。 2 つの設定を [下のセクション](./destination-configuration.md#connecting-all-configurations).
 
 このドキュメントで説明する機能は、 `/authoring/destinations` API エンドポイント。 読み取り [宛先 API エンドポイントの操作](./destination-configuration-api.md) エンドポイントで実行できる操作の完全なリストについては、を参照してください。
 
-## 設定例 {#example-configuration}
+## ストリーミング設定の例 {#example-configuration}
 
-次に、架空の宛先 Moviestar の設定例を示します。この宛先は、世界の 4 つの場所にエンドポイントを持っています。 宛先は、モバイル宛先カテゴリに属しています。 次の節では、この設定の構築方法を詳しく説明します。
+これは架空のストリーミング宛先 Moviestar の設定例で、世界の 4 つの場所にエンドポイントがあります。 宛先は、モバイル宛先カテゴリに属しています。
 
 ```json
 {
@@ -137,29 +137,28 @@ ht-degree: 5%
 
 宛先設定のこのセクションは、 [新しい宛先の設定](/help/destinations/ui/connect-destination.md) ページを開きます。このページでは、Experience Platformが、宛先のアカウントにExperience Platformを接続できます。 に指定する認証オプションに応じて、 `authType` 」フィールドに値を入力すると、Experience Platformページが次のように生成されます。
 
-**Bearer 認証**
+### Bearer 認証
 
 bearer 認証タイプを設定する場合、ユーザーは宛先から取得した bearer トークンを入力する必要があります。
 
-![bearer 認証を使用した UI レンダリング](./assets/bearer-authentication-ui.png)
+![bearer 認証を使用した UI レンダリング](assets/bearer-authentication-ui.png)
 
-**OAuth 2 認証**
+### OAuth 2 認証
 
-ユーザーが選択 **[!UICONTROL 宛先に接続]** を使用して、Twitter Cloud Audiences の宛先に対する次の例に示すように、OAuth 2 認証フローを宛先にトリガーします。 宛先エンドポイントに対する OAuth 2 認証の設定について詳しくは、専用の [宛先 SDK OAuth 2 認証ページ](./oauth2-authentication.md).
+ユーザーが選択 **[!UICONTROL 宛先に接続]** を使用して、Twitterのカスタムオーディエンスの宛先に対する次の例に示すように、OAuth 2 認証フローを宛先にトリガー化します。 宛先エンドポイントに対する OAuth 2 認証の設定について詳しくは、専用の [Destination SDKOAuth 2 認証ページ](./oauth2-authentication.md).
 
-![OAuth 2 認証を使用した UI レンダリング](./assets/oauth2-authentication-ui.png)
-
+![OAuth 2 認証を使用した UI レンダリング](assets/oauth2-authentication-ui.png)
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 文字列 | サーバーへのExperience Platform顧客の認証に使用する設定を示します。 詳しくは、 `authType` を参照してください。 |
-| `authType` | 文字列 | 指定できる値は次のとおりです。 `OAUTH2, BEARER`. <br><ul><li> 宛先が OAuth 2 認証をサポートしている場合は、 `OAUTH2` の値を入力して、OAuth 2 の必須フィールドを追加します ( [宛先 SDK OAuth 2 認証ページ](./oauth2-authentication.md). また、 `authenticationRule=CUSTOMER_AUTHENTICATION` 内 [宛先の配信セクション](./destination-configuration.md). </li><li>bearer 認証の場合は、「 」を選択します。 `BEARER` を選択し、 `authenticationRule=CUSTOMER_AUTHENTICATION` 内 [宛先の配信セクション](./destination-configuration.md).</li></ul> |
+| `authType` | 文字列 | ストリーミング先には、次の値を指定できます。<ul><li>`BEARER`に対する質問に回答します。宛先が bearer 認証をサポートしている場合、 `"authType":"Bearer"` および  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 内 [宛先の配信セクション](./destination-configuration.md).</li><li>`OAUTH2`に対する質問に回答します。宛先が OAuth 2 認証をサポートしている場合は、 `"authType":"OAUTH2"` OAuth 2 の必須フィールドを追加します ( [Destination SDKOAuth 2 認証ページ](./oauth2-authentication.md). さらに、 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 内 [宛先の配信セクション](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 顧客データフィールド {#customer-data-fields}
 
-このセクションでは、パートナーがカスタムフィールドを導入できます。 上記の例の設定では、 `customerDataFields` では、ユーザーは認証フローでエンドポイントを選択し、顧客 ID と宛先を指定する必要があります。 次に示すように、設定は認証フローに反映されます。
+このセクションを使用して、Experience PlatformUI で宛先に接続する際に、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。 次に示すように、設定は認証フローに反映されます。
 
 ![カスタムフィールド認証フロー](./assets/custom-field-authentication-flow.png)
 
@@ -169,7 +168,7 @@ bearer 認証タイプを設定する場合、ユーザーは宛先から取得�
 | `type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は次のとおりです。 `string`, `object`, `integer`. |
 | `title` | 文字列 | ユーザーインターフェイスのユーザーに表示されるフィールドの名前をExperience Platformします。 |
 | `description` | 文字列 | カスタムフィールドの説明を入力します。 |
-| `isRequired` | Boolean | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
+| `isRequired` | ブール値 | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、 `^[A-Za-z]+$` を選択します。 |
 
@@ -184,7 +183,7 @@ bearer 認証タイプを設定する場合、ユーザーは宛先から取得�
 | `documentationLink` | 文字列 | ページの [宛先カタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) を設定します。 用途 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`で、 `YOURDESTINATION` は、宛先の名前です。 Moviestar という宛先の場合、 `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指します。 詳しくは、 [宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 次のいずれかの値を使用します。 `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | 文字列 | `Server-to-server` は現在唯一の利用可能なオプションです。 |
-| `frequency` | 文字列 | `Streaming` は現在唯一の利用可能なオプションです。 |
+| `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 サポートされている値： <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ bearer 認証タイプを設定する場合、ユーザーは宛先から取得�
 | `identityRequired` | ブール値 | 用途 `true` ( ユーザーが、id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合 )。 |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## ID と属性 {#identities-and-attributes}
 

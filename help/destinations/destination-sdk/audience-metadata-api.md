@@ -2,7 +2,7 @@
 description: このページでは、「/authoring/audience-templates」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: オーディエンスメタデータエンドポイント API の操作
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 5%
@@ -26,7 +26,6 @@ ht-degree: 5%
 新しいオーディエンステンプレートを作成するには、 `/authoring/audience-templates` endpoint.
 
 **API 形式**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 既存のオーディエンステンプレートを更新するには、 `/authoring/audience-templates` エンドポイントを作成し、更新するオーディエンステンプレートのインスタンス ID を指定します。 呼び出しの本文で、更新したテンプレートを指定します。
 
 **API 形式**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## オーディエンステンプレートのリストの取得 {#retrieve-list}
 
@@ -430,7 +452,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 特定のオーディエンステンプレートに関する詳細な情報を取得するには、 `/authoring/audience-templates` エンドポイントを作成し、取得するオーディエンステンプレートのインスタンス ID を指定します。
 
 **API 形式**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

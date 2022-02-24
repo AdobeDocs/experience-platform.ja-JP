@@ -2,10 +2,10 @@
 description: オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新、削除します。 Adobeは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。 テンプレートを定義、テスト、送信すると、Adobeはこのテンプレートを使用して、宛先への API 呼び出しを構造化します。
 title: Audience metadata management
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 1%
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -67,10 +67,11 @@ Adobeエンジニアリングチームが協力して、カスタムフィール
 | `update` | API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含め、プラットフォームのセグメント/オーディエンスをプログラムで更新し、情報をAdobe Experience Platformに同期します。 |
 | `delete` | API に対する HTTP 呼び出しをおこない、プラットフォーム内のセグメント/オーディエンスをプログラムで削除するために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含みます。 |
 | `validate` | パートナー API を呼び出す前に、テンプレート設定のすべてのフィールドの検証を実行します。 例えば、ユーザーのアカウント ID が正しく入力されていることを検証できます。 |
+| `notify` | ファイルベースの宛先にのみ適用されます。 API への HTTP 呼び出しをおこなうために必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、ファイルの書き出しが成功したことを通知します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-### 最初の例 {#example-1}
+### ストリーミングの例 1 {#example-1}
 
 ```json
 {
@@ -179,7 +180,7 @@ Adobeエンジニアリングチームが協力して、カスタムフィール
 }
 ```
 
-### 2 つ目の例： {#example-2}
+### ストリーミングの例 2 {#example-2}
 
 ```json
 {
@@ -273,7 +274,7 @@ Adobeエンジニアリングチームが協力して、カスタムフィール
 }
 ```
 
-### 3 番目の例 {#example-3}
+### ストリーミングの例 3 {#example-3}
 
 ```json
 {
@@ -371,6 +372,153 @@ Adobeエンジニアリングチームが協力して、カスタムフィール
          ]
       },
       "name":"Moviestar audience template - Third example"
+   }
+}
+```
+
+
+### ファイルベースの例 {#example-file-based}
+
+```json
+{
+   "instanceId":"34ab9cc2-2536-44a5-9dc5-b2fea60b3bd6",
+   "createdDate":"2021-07-26T19:30:52.012490Z",
+   "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}",
+                     "source_type":"FIRST_PARTY",
+                     "ad_account_id":"{{customerData.accountId}}",
+                     "retention_in_days":180
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "notify":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "name":"Moviestar destination audience template - Example 1"
    }
 }
 ```
