@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 43%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 43%
    * Destination SDK機能 {#functionality}
       * [設定オプション](./destination-sdk/configuration-options.md)
       * [ストリーミング先の設定](./destination-sdk/destination-configuration.md)
-      * [ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
+      * [（ベータ版）ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
       * [ストリーミング宛先のサーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
-      * [ファイルベースの宛先サーバーとファイル仕様](./destination-sdk/server-and-file-configuration.md)
+      * [（ベータ版）ファイルベースの宛先サーバーとファイル仕様](./destination-sdk/server-and-file-configuration.md)
       * [メッセージのフォーマット](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * 認証 {#authentication}
