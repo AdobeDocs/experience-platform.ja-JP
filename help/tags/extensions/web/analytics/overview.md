@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 100%
+source-wordcount: '2275'
+ht-degree: 96%
 
 ---
 
@@ -327,13 +327,22 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 必要に応じて、追加の階層を設定します。
 
+#### ページ名
+
+この値は、特定のページの名前を参照し、 [`pageName` 変数](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics の
+
+>[!IMPORTANT]
+>
+>Adobe Experience Manager実装では、この変数は、取得した Analytics レポートの保存場所をAEMに指示します。 レポートが適切に保持されるようにするには、ページ名の文字列をコロンで区切ったサイトへのパスとして書式設定する必要があります。
+>
+>例えば、 `content/we-retail/language-masters/en/men.html` ページ名の値は次の値にする必要があります： `content:we-retail:language-masters:en:men`.
+
 #### その他の情報
 
 ページで使用するその他の情報を指定します。
 
 この設定には、次のものが含まれています。
 
-* ページ名
 * ページ URL
 * サーバー
 * チャネル
