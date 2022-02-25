@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、UI でMarketo Engageソースコネクタを作成して B2B データをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1369'
 ht-degree: 6%
 
 ---
@@ -52,19 +52,19 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 ![カタログ](../../../../images/tutorials/create/marketo/catalog.png)
 
-この **[!UICONTROL Marketo Engageに接続]** ページが表示されます。 このページでは、新しいアカウントを使用するか、既存のアカウントにアクセスできます。
-
-### 新しいアカウント
-
-新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、アカウント名、オプションの説明および [!DNL Marketo] 認証資格情報。 終了したら、「 」を選択します。 **[!UICONTROL ソースに接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
-
-![新規アカウント](../../../../images/tutorials/create/marketo/new.png)
+この **[!UICONTROL 接続Marketo Engageアカウント]** ページが表示されます。 このページでは、新しいアカウントを使用するか、既存のアカウントにアクセスできます。
 
 ### 既存のアカウント
 
 既存のアカウントでデータフローを作成するには、「 」を選択します。 **[!UICONTROL 既存のアカウント]** 次に、 [!DNL Marketo] アカウントを使用します。 選択 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![既存](../../../../images/tutorials/create/marketo/existing.png)
+
+### 新しいアカウント
+
+新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、アカウント名、オプションの説明および [!DNL Marketo] 認証資格情報。 終了したら、「 」を選択します。 **[!UICONTROL ソースに接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+
+![新規](../../../../images/tutorials/create/marketo/new.png)
 
 ## データセットの選択
 
@@ -74,41 +74,53 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 >[!NOTE]
 >
->簡潔にするために、次のチュートリアルではを使用します。 [!UICONTROL 特定顧客] 例として、以下の手順は 10 のいずれかに適用されます。 [!DNL Marketo] データセット。
+>簡潔にするために、次のチュートリアルではを使用します。 [!UICONTROL 商談] 例として、以下の手順は 10 のいずれかに適用されます。 [!DNL Marketo] データセット。
 
 最初に取り込むデータセットを選択し、次に「 」を選択します。 **[!UICONTROL 次へ]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## マップ [!DNL Marketo] スキーマから Platform へ
+## データフローの詳細を入力
 
-この [!UICONTROL マッピング] ステップが表示され、マッピングするインターフェイスが提供されます [!DNL Marketo] スキーマを Platform に追加します。
+この [!UICONTROL データフローの詳細] ページでは、既存のデータセットと新しいデータセットのどちらを使用するかを選択できます。 この処理の間に、 [!UICONTROL プロファイルデータセット], [!UICONTROL エラー診断], [!UICONTROL 部分取り込み]、および [!UICONTROL アラート].
 
-取り込むインバウンドデータのデータセットを選択します。 既存のデータセットを使用するか、新しいデータセットを作成できます。
+![データフローの詳細](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
 ### 既存のデータセットを使用する
 
-既存のデータセットにデータを取り込むには、「 」を選択します。 **[!UICONTROL 既存のデータセット]**「 」、「 」の順に選択し、データセットアイコンを選択します。
+既存のデータセットにデータを取り込むには、「 」を選択します。 **[!UICONTROL 既存のデータセット]**. 既存のデータセットは、 [!UICONTROL 詳細検索] 」オプションを使用するか、ドロップダウンメニュー内の既存のデータセットのリストをスクロールします。 データセットを選択したら、データフローの名前と説明を入力します。
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-この **[!UICONTROL データセットを選択]** ダイアログが表示されます。 使用する適切なスキーマのデータセットを見つけ、選択して、「 」を選択します。 **[!UICONTROL 確認]**.
-
-![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
-
 ### 新しいデータセットを使用
 
-データを新しいデータセットに取り込むには、「 **[!UICONTROL 新しいデータセット]** をクリックし、提供されたフィールドにデータセットの名前と説明を入力します。
+新しいデータセットに取り込むには、「 **[!UICONTROL 新しいデータセット]** 次に、出力データセット名とオプションの説明を入力します。 次に、 [!UICONTROL 詳細検索] 」オプションを使用するか、ドロップダウンメニュー内の既存のスキーマのリストをスクロールします。 スキーマを選択したら、データフローの名前と説明を指定します。
 
-スキーマの名前を **[!UICONTROL スキーマを選択]** 検索バー。 ドロップダウンアイコンを選択して、既存のスキーマのリストを表示することもできます。 または、 **[!UICONTROL 詳細検索]** 既存のスキーマの各ページ（それぞれの詳細を含む）にアクセスする。
+![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
 
-切り替え **[!UICONTROL プロファイルデータセット]** ボタンを使用して [!DNL Profile]を使用して、エンティティの属性と動作の全体像を作成できます。 すべてのデータから [!DNL Profile]有効なデータセットは、 [!DNL Profile] および変更は、データフローを保存する際に適用されます。
+### 有効にする [!DNL Profile] およびエラー診断
 
-![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+次に、 **[!UICONTROL プロファイルデータセット]** をに切り替えて、データセットを有効にします。 [!DNL Profile]. これにより、エンティティの属性と動作の全体像を作成できます。 すべてのデータから [!DNL Profile]有効なデータセットは、 [!DNL Profile] および変更は、データフローを保存する際に適用されます。
 
-スキーマを選択したら、下にスクロールしてマッピングダイアログを表示し、 [!DNL Marketo] データセットフィールドを適切なターゲット XDM フィールドに設定します。
+[!UICONTROL エラー診断] は、データフローで発生するエラーレコードに対して、詳細なエラーメッセージ生成を有効にします。 [!UICONTROL 部分取り込み] では、エラーを含むデータを、手動で定義した特定のしきい値まで取り込むことができます。 詳しくは、 [部分バッチ取得の概要](../../../../../ingestion/batch-ingestion/partial.md) を参照してください。
 
-### マッピング [!DNL Marketo] XDM フィールドをターゲットにするデータセットソースフィールド
+>[!IMPORTANT]
+>
+>この [!DNL Marketo] コネクタは、バッチ取り込みを使用してすべての履歴レコードを取り込み、リアルタイム更新にストリーミング取り込みを使用します。 これにより、誤ったレコードを取り込みながら、コネクタのストリーミングを続行できます。 を有効にします。 **[!UICONTROL 部分取り込み]** 切り替えて、 [!UICONTROL エラーしきい値%] を最大にして、データフローが失敗するのを防ぎます。
+
+![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+
+### アラートを有効にする
+
+アラートを有効にして、データフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るようサブスクライブします。 アラートの詳細については、 [UI を使用したソースアラートの購読](../../alerts.md).
+
+データフローへの詳細の指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
+
+![アラート](../../../../images/tutorials/create/marketo/alerts.png)
+
+## マッピング [!DNL Marketo] XDM フィールドをターゲットにするデータセットソースフィールド
+
+この [!UICONTROL マッピング] 手順が表示され、ソーススキーマのソースフィールドをターゲットスキーマ内の適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
 各 [!DNL Marketo] データセットには、従うべき独自のマッピングルールがあります。 マッピング方法の詳細については、次を参照してください [!DNL Marketo] データセットから XDM:
 
@@ -123,33 +135,11 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 * [オポチュニティ連絡先の役割](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [人物](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-選択 **[!UICONTROL データをプレビュー]** 選択したデータセットに基づいてマッピング結果を確認するには、次の手順を実行します。
+必要に応じて、フィールドを直接マッピングするか、データ準備関数を使用してソースデータを変換し、計算値または計算値を導出できます。 マッピングインターフェイスの使用に関する包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
 ![マッピング](../../../../images/tutorials/create/marketo/mapping.png)
 
-この [!UICONTROL プレビュー] ポップオーバーには、選択したデータセットから最大 100 行のサンプルデータのマッピング結果を調査するためのインターフェイスが用意されています。
-
-![プレビュー](../../../../images/tutorials/create/marketo/mapping-preview.png)
-
-ソースフィールドが適切なターゲットフィールドにマッピングされたら、 **[!UICONTROL 閉じる]**.
-
-## データフローの詳細を入力
-
-この [!UICONTROL データフローの詳細] 手順が表示され、新しいデータフローの名前と簡単な説明を指定できます。
-
-![データフローの詳細](../../../../images/tutorials/create/marketo/dataflow-detail.png)
-
-を有効にします。 **[!UICONTROL エラー診断]** を切り替えて、新しく取り込んだバッチに関する詳細なエラーメッセージを生成し、API を使用してダウンロードできます。 詳しくは、 [データ取得エラー診断の取得](../../../../../ingestion/quality/error-diagnostics.md).
-
-![エラー](../../../../images/tutorials/create/marketo/errors.png)
-
-この [!DNL Marketo] コネクタは、バッチ取り込みを使用してすべての履歴レコードを取り込み、リアルタイム更新にストリーミング取り込みを使用します。 これにより、誤ったレコードを取り込みながら、コネクタのストリーミングを続行できます。 を有効にします。 **[!UICONTROL 部分取り込み]** 切り替えて、 [!UICONTROL エラーしきい値%] を最大にして、データフローが失敗するのを防ぎます。
-
-**[!UICONTROL 部分取り込み]** は、エラーを含むデータを特定のしきい値まで取り込む機能を提供します。 詳しくは、 [部分バッチ取得の概要](../../../../../ingestion/batch-ingestion/partial.md).
-
-データフローの詳細を指定し、エラーしきい値を「最大」に設定したら、「 」を選択します。 **[!UICONTROL 次へ]**.
-
-![部分取り込み](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+マッピングセットの準備が整ったら、「 」を選択します。 **[!UICONTROL 次へ]** 新しいデータフローを作成するまでしばらく待ちます。
 
 ## データフローの確認
 
@@ -158,7 +148,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 * **[!UICONTROL 接続]**:ソースのタイプ、選択したソースエンティティの関連パス、およびそのソースエンティティ内の列の数を表示します。
 * **[!UICONTROL データセットの割り当てとフィールドのマッピング]**:データセットが準拠するスキーマを含め、ソースデータの取り込み先のデータセットを示します。
 
-データフローをレビューしたら、「 」を選択します。 **[!UICONTROL 完了]** とは、データフローが作成されるまでしばらく時間をかけます。
+データフローをレビューしたら、「 」を選択します。 **[!UICONTROL 保存して取り込み]** とは、データフローが作成されるまでしばらく時間をかけます。
 
 ![レビュー](../../../../images/tutorials/create/marketo/review.png)
 
