@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワークを通じてExperience Cloudサービスを操作します。
 feature: Web SDK
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: ea2bd2ff025c2fbd898e58b171c24abf1dbe55b1
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 84%
+source-wordcount: '163'
+ht-degree: 80%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 84%
    * [リンクのトラッキング](data-collection/track-links.md)
    * [コマースおよび製品データの収集](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [概要](data-collection/adobe-analytics/analytics-overview.md)
+      * [Adobe Analyticsと Platform Web SDK の使用](data-collection/adobe-analytics/analytics-overview.md)
       * [Analytics 変数のマッピング](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [自動的にマッピングされた変数](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Analytics へのデータの送信](data-collection/adobe-analytics/sending-data-to-analytics.md)
