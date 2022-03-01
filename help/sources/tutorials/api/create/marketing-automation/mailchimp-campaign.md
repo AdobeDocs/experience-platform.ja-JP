@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
 solution: Experience Platform
-title: フローサービス API を使用して、MailChimp キャンペーンのデータフローを作成します
+title: フローサービス API を使用して、Mailchimp キャンペーンのデータフローを作成します
 topic-legacy: tutorial
 description: フローサービス API を使用してAdobe Experience Platformを MailChimp Campaign に接続する方法を説明します。
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
 workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 7%
 
 ---
 
-# のデータフローの作成 [!DNL MailChimp Campaign] フローサービス API の使用
+# のデータフローの作成 [!DNL Mailchimp Campaign] フローサービス API の使用
 
-次のチュートリアルでは、ソース接続とデータフローを作成して、 [!DNL MailChimp Campaign] を使用して Platform にデータを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+次のチュートリアルでは、ソース接続とデータフローを作成して、 [!DNL Mailchimp Campaign] を使用して Platform にデータを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 前提条件
 
-接続する前に [!DNL MailChimp] OAuth 2 の更新コードを使用してAdobe Experience Platformにアクセスするには、まず [!DNL MailChimp.] 詳しくは、 [[!DNL MailChimp] OAuth 2 ガイド](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
+接続する前に [!DNL Mailchimp] OAuth 2 の更新コードを使用してAdobe Experience Platformにアクセスするには、まず [!DNL MailChimp.] 詳しくは、 [[!DNL Mailchimp] OAuth 2 ガイド](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) を参照してください。
 
 ## ベース接続を作成する {#base-connection}
 
-一度 [!DNL MailChimp] 認証資格情報を使用する場合は、データフローの作成プロセスを開始して、 [!DNL MailChimp Campaign] データを Platform に送信します。 データフローを作成する最初の手順は、ベース接続を作成することです。
+一度 [!DNL Mailchimp] 認証資格情報を使用する場合は、データフローの作成プロセスを開始して、 [!DNL Mailchimp Campaign] データを Platform に送信します。 データフローを作成する最初の手順は、ベース接続を作成することです。
 
 ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
 
-[!DNL MailChimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。 どちらの認証タイプを使用して認証する方法については、次の例を参照してください。
+[!DNL Mailchimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。 どちらの認証タイプを使用して認証する方法については、次の例を参照してください。
 
-### の作成 [!DNL MailChimp] 基本認証を使用したベース接続
+### の作成 [!DNL Mailchimp] 基本認証を使用したベース接続
 
-を作成するには、以下を実行します。 [!DNL MailChimp] 基本認証を使用したベース接続、 `/connections` エンドポイント [!DNL Flow Service] の資格情報を指定する際の API `host`, `authorizationTestUrl`, `username`、および `password`.
+を作成するには、以下を実行します。 [!DNL Mailchimp] 基本認証を使用したベース接続、 `/connections` エンドポイント [!DNL Flow Service] の資格情報を指定する際の API `host`, `authorizationTestUrl`, `username`、および `password`.
 
 **API 形式**
 
@@ -40,7 +40,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp]:
+次のリクエストは、 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -51,8 +51,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with basic authentication",
-      "description": "MailChimp Campaign base connection with basic authentication",
+      "name": "Mailchimp base connection with basic authentication",
+      "description": "Mailchimp Campaign base connection with basic authentication",
       "connectionSpec": {
           "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
           "version": "1.0"
@@ -75,10 +75,10 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、ソースが登録され、で承認された後に、 [!DNL Flow Service] API |
 | `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
-| `auth.params.host` | 接続に使用するルート URL [!DNL MailChimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
+| `auth.params.host` | 接続に使用するルート URL [!DNL Mailchimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的に確認されます。 |
-| `auth.params.username` | に対応するユーザー名 [!DNL MailChimp] アカウント これは、基本認証に必要です。 |
-| `auth.params.password` | ユーザーの [!DNL MailChimp] アカウント これは、基本認証に必要です。 |
+| `auth.params.username` | に対応するユーザー名 [!DNL Mailchimp] アカウント これは、基本認証に必要です。 |
+| `auth.params.password` | ユーザーの [!DNL Mailchimp] アカウント これは、基本認証に必要です。 |
 
 **応答**
 
@@ -91,9 +91,9 @@ curl -X POST \
 }
 ```
 
-### の作成 [!DNL MailChimp] OAuth 2 更新コードを使用したベース接続
+### の作成 [!DNL Mailchimp] OAuth 2 更新コードを使用したベース接続
 
-を作成するには、以下を実行します。 [!DNL MailChimp] OAuth 2 更新コードを使用したベース接続。 `/connections` が `host`, `authorizationTestUrl`、および `accessToken`.
+を作成するには、以下を実行します。 [!DNL Mailchimp] OAuth 2 更新コードを使用したベース接続。 `/connections` が `host`, `authorizationTestUrl`、および `accessToken`.
 
 **API 形式**
 
@@ -103,7 +103,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp]:
+次のリクエストは、 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -114,8 +114,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with OAuth 2 refresh code",
-      "description": "MailChimp Campaign base connection with OAuth 2 refresh code",
+      "name": "Mailchimp base connection with OAuth 2 refresh code",
+      "description": "Mailchimp Campaign base connection with OAuth 2 refresh code",
       "connectionSpec": {
           "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
           "version": "1.0"
@@ -137,7 +137,7 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、 [!DNL Flow Service] API |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.host` | 接続に使用するルート URL [!DNL MailChimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
+| `auth.params.host` | 接続に使用するルート URL [!DNL Mailchimp] API ルート URL の形式は、 `https://{DC}.api.mailchimp.com`で、 `{DC}` は、お使いのアカウントに対応するデータセンターを表します。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。 指定しない場合、代わりに、ソース接続の作成手順で資格情報が自動的に確認されます。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。 これは、OAuth ベースの認証に必要です。 |
 
@@ -279,7 +279,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp]:
+次のリクエストは、 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -310,10 +310,10 @@ curl -X POST \
 | --- | --- |
 | `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
 | `description` | ソース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
-| `baseConnectionId` | のベース接続 ID [!DNL MailChimp]. この ID は、前の手順で生成されました。 |
+| `baseConnectionId` | のベース接続 ID [!DNL Mailchimp]. この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様 ID。 |
-| `data.format` | の形式 [!DNL MailChimp] 取り込むデータ。 |
-| `params.campaignId` | この [!DNL MailChimp] キャンペーン ID は特定の [!DNL MailChimp] キャンペーンを開き、リストやオーディエンスに e メールを送信できます。 |
+| `data.format` | の形式 [!DNL Mailchimp] 取り込むデータ。 |
+| `params.campaignId` | この [!DNL Mailchimp] キャンペーン ID は特定の [!DNL Mailchimp] キャンペーンを開き、リストやオーディエンスに e メールを送信できます。 |
 
 **応答**
 
@@ -354,7 +354,7 @@ POST /targetConnections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp]:
+次のリクエストは、 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -389,7 +389,7 @@ curl -X POST \
 | `name` | ターゲット接続の名前。 ターゲット接続の名前がわかりやすい名前であることを確認します。これを使用して、ターゲット接続に関する情報を検索できます。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | に対応する接続仕様 ID [!DNL Data Lake]. この修正済み ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | の形式 [!DNL MailChimp] Platform に取り込むデータです。 |
+| `data.format` | の形式 [!DNL Mailchimp] Platform に取り込むデータです。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
@@ -406,7 +406,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->データ準備関数は、現在、 [!DNL MailChimp Campaign].
+>データ準備関数は、現在、 [!DNL Mailchimp Campaign].
 
 <!--
 ## Create a mapping {#mapping}
@@ -476,7 +476,7 @@ A successful response returns details of the newly created mapping including its
 
 ## フローの作成 {#flow}
 
-～に向けた最後の一歩 [!DNL MailChimp] データを Platform に送信する場合、データフローを作成します。 現時点では、次の必要な値が準備されています。
+～に向けた最後の一歩 [!DNL Mailchimp] データを Platform に送信する場合、データフローを作成します。 現時点では、次の必要な値が準備されています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)

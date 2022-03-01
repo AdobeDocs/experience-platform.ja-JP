@@ -1,54 +1,40 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；クラウドストレージデータ
 solution: Experience Platform
-title: ソースコネクタと API を使用したクラウドストレージデータの収集
+title: フローサービス API を使用したクラウドストレージソースのデータフローの作成
 topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用してそれらを Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 17%
+source-wordcount: '1575'
+ht-degree: 9%
 
 ---
 
-# ソースコネクタと API を使用したクラウドストレージデータの収集
+# を使用して、クラウドストレージソースのデータフローを作成します。 [!DNL Flow Service] API
 
-このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、クラウドストレージソースからデータを取得し、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>データフローを作成するには、Platform 上の次のクラウドストレージソースのいずれかと有効なベース接続 ID が必要です。<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
 
 ## はじめに
 
-このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスし、ファイルのパスや構造を含め、Platform に取り込むファイルに関する情報を入手する必要があります。 この情報がない場合は、 [を使用したサードパーティのクラウドストレージの調査 [!DNL Flow Service] API](../explore/cloud-storage.md) このチュートリアルを試す前に
-
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md):Schema Registry API への呼び出しを正しく実行するために知っておく必要がある重要な情報が含まれています。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 - [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、データの場所とリネージのExperience Platformです。
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得 API を使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
-- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。以下の節では、 [!DNL Flow Service] API
+- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-### API 呼び出し例の読み取り
+### Platform API の使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
-
-### 必須ヘッダーの値の収集
-
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-- `Content-Type: application/json`
+Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../landing/api-guide.md).
 
 ## ソース接続の作成 {#source}
 
@@ -193,154 +179,13 @@ curl -X POST \
 
 ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-**API 形式**
+ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../xdm/api/schemas.md).
 
-```http
-POST /schemaregistry/tenant/schemas
-```
+## ターゲットデータセットの作成 {#target-dataset}
 
-**リクエスト**
+ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
 
-次のリクエスト例では、XDM Individual Profile クラスを拡張する XDM スキーマを作成します。
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "type": "object",
-        "title": "Target schema for a Cloud Storage connector",
-        "description": "Target schema for a Cloud Storage connector",
-        "allOf": [
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            }
-        ],
-        "meta:containerId": "tenant",
-        "meta:resourceType": "schemas",
-        "meta:xdmType": "object",
-        "meta:class": "https://ns.adobe.com/xdm/context/profile"
-    }'
-```
-
-**応答**
-
-正常な応答は、新しく作成されたスキーマの一意の識別子 (`$id`) をクリックします。 この ID は、後の手順で、ターゲットデータセット、マッピング、データフローを作成するために必要になります。
-
-```json
-{
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-    "meta:resourceType": "schemas",
-    "version": "1.0",
-    "title": "Target schema cloud storage",
-    "type": "object",
-    "description": "Target schema for cloud storage",
-    "allOf": [
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        }
-    ],
-    "refs": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "imsOrg": "{IMS_ORG}",
-    "meta:extensible": false,
-    "meta:abstract": false,
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/common/auditable",
-        "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "meta:xdmType": "object",
-    "meta:registryMetadata": {
-        "repo:createdDate": 1597783248870,
-        "repo:lastModifiedDate": 1597783248870,
-        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
-        "xdm:createdUserId": "{CREATED_USER_ID}",
-        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
-        "meta:globalLibVersion": "1.13.3"
-    },
-    "meta:class": "https://ns.adobe.com/xdm/context/profile",
-    "meta:containerId": "tenant",
-    "meta:tenantNamespace": "{TENANT_ID}"
-}
-```
-
-## ターゲットデータセットの作成
-
-ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/experience-platform-apis/references/catalog/)：ペイロード内にターゲットスキーマの ID を指定します。
-
-**API 形式**
-
-```http
-POST /catalog/dataSets
-```
-
-**リクエスト**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Target dataset for cloud storage",
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        }
-    }'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `schemaRef.id` | ターゲット XDM スキーマの ID。 |
-| `schemaRef.contentType` | スキーマのバージョン。 この値を設定する必要があります `application/vnd.adobe.xed-full-notext+json;version=1`：スキーマの最新のマイナーバージョンを返します。 |
-
-**応答**
-
-正常な応答は、新しく作成されたデータセットの ID をの形式で含む配列を返します `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順で、ターゲット接続とデータフローを作成するには、ターゲットデータセット ID が必要です。
-
-```json
-[
-    "@/dataSets/5f3c3cedb2805c194ff0b69a"
-]
-```
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md).
 
 ## ターゲット接続の作成 {#target-connection}
 
@@ -403,7 +248,9 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたPOSTマッピングを使用して、変換サービスに対するデータリクエストを実行することで実現されます。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
+
+マッピングセットを作成するには、 `mappingSets` エンドポイント [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) （ターゲット XDM スキーマを提供する際） `$id` 作成するマッピングセットの詳細。
 
 >[!TIP]
 >
