@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをGoogle PubSub アカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '724'
 ht-degree: 8%
 
 ---
 
 # の作成 [!DNL Google PubSub] フローサービス API を使用したソース接続
-
->[!NOTE]
->
->この [!DNL Google PubSub] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 このチュートリアルでは、接続の手順について説明します [!DNL Google PubSub] （以下「」という。）[!DNL PubSub]&quot;) をExperience Platform、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

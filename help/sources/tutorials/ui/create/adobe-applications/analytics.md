@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 8%
 
 ---
@@ -57,6 +57,10 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### マッピング
+
+>[!IMPORTANT]
+>
+>Data Prep での [!DNL Analytics] ソースは現在ベータ版です。 この機能とドキュメントは変更される場合があります。
 
 マッピングする前に、 [!DNL Analytics] XDM スキーマをターゲットにするデータは、まず、デフォルトのスキーマを使用するかカスタムのスキーマを使用するかを選択する必要があります。
 

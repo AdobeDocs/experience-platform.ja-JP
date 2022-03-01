@@ -1,30 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Google PubSub;google pubsub
+keywords: Experience Platform；ホーム；人気の高いトピック；Google PubSub;google pubsub
 solution: Experience Platform
 title: Google PubSub Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してGoogle PubSub をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '174'
 ht-degree: 2%
 
 ---
 
-# （ベータ版） [!DNL Google PubSub] コネクタ
+# [!DNL Google PubSub] コネクタ
 
->[!NOTE]
->
->[!DNL Google PubSub] コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+Adobe Experience Platformは、 [!DNL AWS], [!DNL Google Cloud Platform]、および [!DNL Azure]を使用すると、これらのシステムから Platform にデータを取り込み、ダウンストリームのサービスや宛先で使用できます。
 
-Adobe Experience Platformは、[!DNL AWS]、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供し、これらのシステムからデータを Platform に取り込んで、ダウンストリームのサービスや宛先で使用できます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、データを Platform に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。 Platform では、次の場所からデータを取り込むことができます： [!DNL Azure Event Hubs] リアルタイムで。
 
-クラウドストレージソースを使用すると、ダウンロード、形式設定、アップロードをおこなう必要なく、データを Platform に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 Platform では、[!DNL Azure Event Hubs] からデータをリアルタイムで取り込むことができます。
+## 接続 [!DNL Google PubSub] Platform へ
 
-## [!DNL Google PubSub] を Platform に接続
-
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Google PubSub] を Platform に接続する方法について説明します。
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Google PubSub] API またはユーザーインターフェイスを使用して Platform に接続するには、次の手順を実行します。
 
 ### API の使用
 
