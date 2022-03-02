@@ -5,9 +5,9 @@ description: このドキュメントでは、Adobe Experience Platform サー�
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: 29b1942e4009770d4f9d346a760b6e78cef23969
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '774'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -56,10 +56,10 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->使用しているサービスを購読するイベントが不明な場合は、次のドキュメントを参照してください。
+>使用しているサービスでどのイベントに登録すればよいかわからない場合は、次のドキュメントを参照してください。
 >
->* [プラットフォーム通知](./rules.md)
->* [Privacy Service通知](../../privacy-service/privacy-events.md)
+>* [Platform 通知](./rules.md)
+>* [Privacy Service 通知](../../privacy-service/privacy-events.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
