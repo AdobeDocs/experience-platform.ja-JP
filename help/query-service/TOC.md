@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 0247d43429bb3d4cbf43ba0a94d435d01fbaf7a8
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 93%
 - ベストプラクティス {#best-practices}
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)
    - [データアセット組織のガイダンス](./best-practices/organize-data-assets.md)
-   - [Working with nested data structures](best-practices/nested-data-structures.md)
+   - [ネストされたデータ構造の使用](best-practices/nested-data-structures.md)
    - [データ重複排除](best-practices/deduplication.md)
    - [エクスペリエンスイベントクエリの例](best-practices/experience-event-queries.md)
    - [Adobe Analytics クエリの例](best-practices/adobe-analytics.md)
