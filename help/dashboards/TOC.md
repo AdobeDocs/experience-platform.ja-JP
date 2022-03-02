@@ -5,9 +5,9 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードで Experience Platform データを視覚化します。
 feature: Dashboards
 source-git-commit: 058f1cf5aa0ea134f276d1b3bc7064195fb252f1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 93%
 
 * [ダッシュボードの概要](home.md)
 * [ダッシュボードへのアクセス権限](permissions.md)
-* [ダッシュボードの在庫](inventory.md)
+* [ダッシュボードインベントリ](inventory.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
