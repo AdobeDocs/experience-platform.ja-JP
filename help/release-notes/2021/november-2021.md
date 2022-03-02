@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
-workflow-type: tm+mt
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: c02f6ace461e6964b0005d07caee9026dca47e63
+workflow-type: ht
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -90,4 +91,3 @@ Real-time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 | カスタムプロファイル属性 | 顧客 AI では、標準のイベントフィールドに加えて、カスタムプロファイルデータセットフィールド（タイムスタンプ付き）をデータに定義できるようになりました。 このオプションを使用すると、モデルの品質向上やより正確な結果の提供につながる可能性のあるプロファイル属性を追加できます。。 |
 
 顧客 AI について詳しくは、[顧客 AI のドキュメント](../../intelligent-services/customer-ai/overview.md)を参照してください。
-
