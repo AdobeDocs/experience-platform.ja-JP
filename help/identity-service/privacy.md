@@ -4,9 +4,9 @@ title: ID サービスでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '722'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->UI を使用してカスタム名前空間を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。 さらに、非実稼動用サンドボックスの UI では、カスタム名前空間を削除できません。
+>UI を使用してカスタム名前空間を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。さらに、非実稼動用 UI では、カスタム名前空間を削除できません。
 
 UI でジョブリクエストを作成する場合は、[!DNL Identity Service] に保存されたデータのジョブを処理するために、必ず&#x200B;**[!UICONTROL 製品]**&#x200B;の下にある **[!UICONTROL ID]** を選択します。
 
