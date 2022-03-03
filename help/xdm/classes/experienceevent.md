@@ -5,9 +5,9 @@ title: XDM ExperienceEvent クラス
 topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスを説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
+source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1797'
 ht-degree: 3%
 
 ---
@@ -65,9 +65,13 @@ UI を使用して手動で Platform にデータを取り込む場合は、 [�
 
 Adobeには、 [!DNL XDM ExperienceEvent] クラス。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
 
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL 残高移動]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティングの詳細]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL カードアクション]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャネルの詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマースの詳細]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL 預金の詳細]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイスの下取りの詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事の予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID の詳細]](../field-groups/event/enduserids.md)
@@ -75,6 +79,7 @@ Adobeには、 [!DNL XDM ExperienceEvent] クラス。 次に、クラスで一�
 * [[!UICONTROL フライトの予約]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 宿泊施設の予約]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL 見積依頼の詳細]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 予約の詳細]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web の詳細]](../field-groups/event/web-details.md)
 

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: Experience Data Model（XDM）ガイド
-user-guide-description: エクスペリエンスデータモデル (XDM) クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
+user-guide-description: エクスペリエンスデータモデル（XDM）クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 36%
+source-wordcount: '435'
+ht-degree: 40%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 36%
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [ポリシー](./classes/policy.md)
+   * [製品](./classes/product.md)
    * [セグメント定義](./classes/segment-definition.md)
    * B2B クラス {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 36%
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * フィールドグループ {#field-groups}
-   * プロファイルフィールドグループ {#profile}
+   * XDM 個人プロファイル {#profile}
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 36%
       * [仕事用連絡先の詳細](./field-groups/profile/work-contact-details.md)
       * [XDM ビジネス人物コンポーネント](./field-groups/profile/business-person-components.md)
       * [XDM ビジネス人物の詳細](./field-groups/profile/business-person-details.md)
-   * イベントフィールドグループ {#event}
+   * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [残高移動](./field-groups/event/balance-transfers.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
+      * [カードアクション](./field-groups/event/card-actions.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
+      * [預金の詳細](./field-groups/event/deposit-details.md)
       * [デバイスの下取りの詳細](./field-groups/event/device-trade-in-details.md)
       * [食事の予約](./field-groups/event/dining-reservation.md)
       * [エンドユーザー ID の詳細](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 36%
       * [フライトの予約](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 同意](./field-groups/event/iab.md)
       * [宿泊施設の予約](./field-groups/event/lodging-reservation.md)
+      * [見積依頼の詳細](./field-groups/event/quote-request-details.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
+      * [サポートサイト検索](./field-groups/event/support-site-search.md)
       * [アップグレードの詳細](./field-groups/event/upgrade-details.md)
       * [アップセルの詳細](./field-groups/event/upsell-details.md)
       * [Web の詳細](./field-groups/event/web-details.md)
+   * 製品 {#product}
+      * [製品カタログ](./field-groups/product/product-catalog.md)
+      * [製品カテゴリ](./field-groups/product/product-category.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アプリケーション](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 36%
    * [環境](./data-types/environment.md)
    * [Experience チャネル](./data-types/experience-channel.md)
    * [外部ソースシステム監査属性](./data-types/external-source-system-audit-attributes.md)
+   * [金融口座](./data-types/financial-account.md)
    * [汎用同意フィールド](./data-types/consent-field.md)
    * [汎用マーケティング環境設定フィールド](./data-types/marketing-field.md)
    * [サブスクリプション付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 36%
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [Impressions](./data-types/impressions.md)
+   * [内部サイト検索](./data-types/internal-site-search.md)
    * [キーと値のペア](./data-types/key-value-pair.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)

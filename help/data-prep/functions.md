@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 080ff800c78263a29f855ae6fe0e6acdb73554d5
 workflow-type: tm+mt
-source-wordcount: '3964'
+source-wordcount: '3965'
 ht-degree: 17%
 
 ---
@@ -140,7 +140,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力： **必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力： **必須** キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | サンプルが必要 | サンプルが必要 |
 | to_object | 指定されたフラットなキーと値のペアに基づいてオブジェクトを作成します。 | <ul><li>入力： **必須** キーと値のペアのフラットなリスト。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列： **必須** オブジェクトを作成するために解析される文字列。</li><li>値の区切り： *オプション* フィールドを値から区切る区切り文字。 デフォルトの区切り文字は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールド値のペアを区切る区切り文字。 デフォルトの区切り文字は `,`.</li></ul> | str_to_object(&#x200B;STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列： **必須** オブジェクトを作成するために解析される文字列。</li><li>値の区切り： *オプション* フィールドを値から区切る区切り文字。 デフォルトの区切り文字は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールド値のペアを区切る区切り文字。 デフォルトの区切り文字は `,`.</li></ul> | str_to_object(&#x200B;STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | contains_key | ソースデータ内にオブジェクトが存在するかどうかを確認します。 **注意：** この関数は、非推奨の `is_set()` 関数に置き換えます。 | <ul><li>入力： **必須** ソースデータ内に存在する場合に確認するパス。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | 無効にする | 属性の値をに設定します。 `null`. これは、フィールドをターゲットスキーマにコピーしない場合に使用します。 |  | nullify() | nullify() | `null` |
 | get_keys | キーと値のペアを解析し、すべてのキーを返します。 | <ul><li>オブジェクト： **必須** キーの抽出元のオブジェクト。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;:&quot;Pride and Pairaming&quot;, &quot;book2&quot;:&quot;1984&quot;}) | `["book1", "book2"]` |
