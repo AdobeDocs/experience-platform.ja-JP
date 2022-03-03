@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能の設定
 description: データ収集 UI でのAdobe Experience Platform Web SDK タグ拡張の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 8%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 ### **[!UICONTROL エッジドメイン]**
 
-この [!UICONTROL Edge ドメイン] は、Adobe Experience Platform拡張機能がデータの送受信をおこなうドメインです。 拡張機能では、実稼動用トラフィックにファーストパーティの CNAME を使用する必要があります。デフォルトのサードパーティドメインは開発環境で使用できますが、実稼動環境には適していません。ファーストパーティ CNAME の設定方法については、[ここ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ja)で説明します。
+この [!UICONTROL Edge ドメイン] は、Adobe Experience Platform拡張機能がデータの送受信をおこなうドメインです。 Adobeでは、この拡張機能にファーストパーティドメイン (CNAME) を使用することをお勧めします。 デフォルトのサードパーティドメインは開発環境で使用できますが、実稼動環境には適していません。ファーストパーティ CNAME の設定方法については、[ここ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ja)で説明します。
 
 ## [!UICONTROL データストリーム]
 
