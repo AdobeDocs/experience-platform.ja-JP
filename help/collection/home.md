@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
-workflow-type: ht
-source-wordcount: '458'
-ht-degree: 100%
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 95%
 
 ---
 
@@ -59,6 +59,10 @@ Platform Edge Network とは、世界中に分散された信頼性の高い高�
 [イベント転送](../tags/ui/event-forwarding/overview.md)では、任意の Experience Platform データストリームを利用できます。そのため、データの変換、エンリッチメントおよびアドビ以外の宛先への送信が可能で、しかも待ち時間は極めて短く、サードパーティのコードをクライアントデバイスに追加する必要もありません。
 
 ![イベント転送](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>イベント転送は、Real-time Customer Data Platform Connections の機能の一部としてのみ含まれる有料機能です。
 
 ## 次の手順
 
