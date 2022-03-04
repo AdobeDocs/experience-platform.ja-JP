@@ -3,9 +3,9 @@ keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure E
 title: （ベータ版） [!DNL Azure Event Hubs] 接続
 description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,11 @@ ht-degree: 1%
 
 While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
-* **[!UICONTROL SAS キー名]** および **[!UICONTROL SAS キー]**:SAS キー名とキーを入力します。 認証の詳細 [!DNL Azure Event Hubs] に SAS キーを設定 [Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL SAS キー名]**:認証規則の名前。SAS キー名とも呼ばれます。
+* **[!UICONTROL SAS キー]**:Event Hubs 名前空間のプライマリキー。 この `sasPolicy` この `sasKey` 必ず～に対応する **管理** [Event Hubs] リストに値が入力されるように設定された権限。 認証の詳細 [!DNL Azure Event Hubs] に SAS キーを設定 [Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL 名前空間]**:次の項目を入力します。 [!DNL Azure Event Hubs] 名前空間。 詳細 [!DNL Azure Event Hubs] 名前空間 [Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL 名前]**:接続先の名前を入力 [!DNL Azure Event Hubs].
-* **[!UICONTROL 説明]**:接続の説明を入力します。  例：&quot;プレミアム層顧客&quot;、&quot;キテサーフィンに興味を持つ男性&quot;。
+* **[!UICONTROL 説明]**:接続の説明を入力します。  例：&quot;プレミアム層のお客様&quot;、&quot;Customers in terested in kitesurfing&quot;。
 * **[!UICONTROL eventHubName]**:ストリームの名前を [!DNL Azure Event Hubs] 宛先。
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
