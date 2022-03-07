@@ -2,12 +2,10 @@
 title: Platform Web SDK のファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用のファーストパーティデバイス ID(FPID) の設定方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 0%
+source-wordcount: '1776'
+ht-degree: 1%
 
 ---
 
@@ -27,36 +25,44 @@ Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https
 
 ## FPID の使用
 
-ファーストパーティ Cookie は、DNS CNAME とは異なり、DNS A レコードを利用する顧客が所有するサーバーを使用して設定される場合に最も効果的です。 ファーストパーティデバイス ID を使用すると、DNS A レコードを使用して Cookie に独自のデバイス ID を設定できます。 その後、これらの ID をAdobeに送信し、シードとして使用して、Adobe Experience Cloudアプリケーションの主要な識別子であり続ける ECID を生成できます。
+FPID は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS を利用するサーバーを使用して設定される場合に最も効果的です [レコード](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAA レコード](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）。DNS CNAME または JavaScript コードとは異なります。
+
+>[!IMPORTANT]
+>
+>レコードまたは AAAA レコードは、Cookie の設定とトラッキングに対してのみサポートされます。 データ収集の主な方法は、DNS CNAME を使用する方法です。 つまり、FPID は A レコードまたは AAAA レコードを使用して設定され、CNAME を使用してAdobeに送信されます。
+>
+>この [Adobe管理証明書プログラム](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でも引き続きサポートされます。
+
+FPID Cookie が設定されると、その値を取得し、イベントデータの収集時にAdobeに送信できます。 収集された FPID は、ECID を生成するシードとして使用されます。ECID は、引き続きAdobe Experience Cloudアプリケーションの主な識別子です。
 
 Web サイト訪問者の FPID を Platform Edge Network に送信するには、 `identityMap` を選択します。 このドキュメントの後半の節を参照 [での FPID の使用 `identityMap`](#identityMap) を参照してください。
 
-## ID 形式の要件
+### ID 形式の要件
 
 Platform Edge ネットワークは、 [UUIDv4 形式](https://datatracker.ietf.org/doc/html/rfc4122). UUIDv4 形式でないデバイス ID は拒否されます。
 
 UUID を生成すると、ほとんどの場合、一意のランダムな ID が生成され、衝突の発生確率は無視できます。 UUIDv4 は、IP アドレスやその他の個人情報 (PII) を使用してシードすることはできません。 UUID はあらゆる場所に存在し、ほぼすべてのプログラミング言語でライブラリを見つけて生成できます。
 
-## DNS A レコードを使用した cookie の設定
+## 独自のサーバーを使用した cookie の設定
 
-様々な方法を使用して、ブラウザーポリシーによる Cookie の制限を防ぐように Cookie を設定できます。
+所有しているサーバーを使用して Cookie を設定する場合、ブラウザーポリシーによって Cookie が制限されるのを防ぐために、様々な方法を使用できます。
 
 * サーバー側スクリプティング言語を使用して Cookie を生成する
 * サイトのサブドメインまたは他のエンドポイントに対しておこなわれた API リクエストに応じて、Cookie を設定します。
 * CMS を使用して Cookie を生成する
 * CDN を使用して Cookie を生成する
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >JavaScript の `document.cookie` メソッドは、cookie の期間を制限するブラウザーポリシーからほとんど保護されません。
 
-## Cookie を設定するタイミング
+### Cookie を設定するタイミング
 
 FPID Cookie は、Edge ネットワークにリクエストを送信する前に設定するのが理想的です。 ただし、この方法が使用できない場合でも、ECID は既存のメソッドを使用して生成され、cookie が存在する限り、プライマリ識別子として機能します。
 
 ECID が最終的にブラウザー削除ポリシーの影響を受けますが、FPID が影響を受けない場合、FPID は次の訪問時の主な識別子になり、後続の訪問のたびに ECID のシードに使用されます。
 
-## cookie の有効期限の設定
+### cookie の有効期限の設定
 
 Cookie の有効期限の設定は、FPID 機能を実装する際に慎重に検討する必要があります。 この決定を下す際は、組織が活動する国や地域と、それらの各地域の法律やポリシーを考慮に入れる必要があります。
 
