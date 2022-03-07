@@ -3,7 +3,7 @@ title: Experience PlatformWeb SDK 用の Datastream の設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Cookie 宛先；Analytics 設定ブロックスイート ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 2%
@@ -70,7 +70,7 @@ Data Prep は、Experience Data Model(XDM) との間でデータのマッピン�
 
 選択 **[!UICONTROL マッピングの保存と追加]** 完了後 [基本設定手順](#configure)、および **[!UICONTROL データを選択]** 手順が表示されます。 ここから、Platform に送信する予定のデータの構造を表すサンプル JSON オブジェクトを提供する必要があります。 このオプションを選択して、オブジェクトをファイルとしてアップロードするか、生のオブジェクトを指定されたテキストボックスに貼り付けることができます。
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >JSON オブジェクトには 1 つのルートノードが必要です `data` 検証に合格するために。
 
