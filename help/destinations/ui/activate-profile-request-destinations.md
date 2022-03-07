@@ -6,10 +6,10 @@ seo-title: Activate audience data to profile request destinations
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 9%
+source-wordcount: '457'
+ht-degree: 8%
 
 ---
 
@@ -21,21 +21,21 @@ ht-degree: 9%
 
 ## 前提条件 {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven&#39;t done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+宛先に対してデータをアクティブ化するには、次の条件を満たしている必要があります。 [宛先に接続されている](./connect-destination.md). まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。
 
-### Segment merge policy {#merge-policy}
+### セグメント結合ポリシー {#merge-policy}
 
-現在、プロファイルリクエストの宛先は、 [デフォルトの結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies).
+現在、プロファイルリクエストの宛先は、 [エッジ上のアクティブな結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies) をデフォルトとして設定します。
 
 ## 宛先を選択 {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
+1. に移動します。 **[!UICONTROL 接続/宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。
 
    ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
 
-   ![Activate buttons](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
+   ![ボタンの有効化](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
 1. セグメントのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -47,7 +47,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![Select segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
+![セグメントを選択](../assets/ui/activate-profile-request-destinations/select-segments.png)
 
 ## セグメントの書き出しをスケジュール {#scheduling}
 
@@ -55,15 +55,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ![新しいセグメント](../assets/ui/activate-profile-request-destinations/new-segments.png)
 
-To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
+宛先に対してアクティブ化されているすべてのセグメントを表示するには、フィルタリングオプションを使用して、 **[!UICONTROL 新しいセグメントのみを表示]** フィルター。
 
-![All segments](../assets/ui/activate-profile-request-destinations/all-segments.png)
+![すべてのセグメント](../assets/ui/activate-profile-request-destinations/all-segments.png)
 
-On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
+の **[!UICONTROL セグメントスケジュール]** ページで、各セグメントを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
 
-![Segment schedule](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
+![セグメントスケジュール](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
 
-Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
+選択 **[!UICONTROL 次へ]** 行く [!UICONTROL レビュー] ページ。
 
 ## レビュー {#review}
 
@@ -71,9 +71,9 @@ Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 Shown below is an example where a policy is violated. 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
+>この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反した場合の例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
 
-![data policy violation](../assets/common/data-policy-violation.png)
+![データポリシー違反](../assets/common/data-policy-violation.png)
 
 ポリシー違反が検出されていない場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
 
@@ -81,4 +81,4 @@ Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 ## セグメントのアクティベーションを検証 {#verify}
 
-Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+次を確認します。 [宛先の監視に関するドキュメント](../../dataflows/ui/monitor-destinations.md) を参照してください。
