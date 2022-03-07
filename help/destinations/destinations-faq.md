@@ -5,10 +5,10 @@ seo-title: Frequently asked questions
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
+source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 13%
+source-wordcount: '864'
+ht-degree: 12%
 
 ---
 
@@ -78,6 +78,12 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 **Platform UI で、個別のFacebookアカウントに対して複数のFacebook宛先を作成できますか？**
 
 はい。facebookのExperience Platform先は、Facebookの広告アカウントに 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。 接続できるFacebook広告アカウントの数に制限はありません。
+
+## Google カスタマーマッチ {#google-customer-match}
+
+**Google Customer Match にセグメントを書き出すと、Googleインターフェイスのセグメント名の末尾に追加された余分な数字が表示されるのはなぜですか。**
+
+Googleでは、セグメント名を一意にする必要があります。 表示される数は次のとおりです [UNIX タイムスタンプ](https://www.unixtimestamp.com/) 同じセグメントを複数のGoogleの宛先にマッピングした場合、セグメント名を一意にするために追加されます。
 
 ## linkedIn Matched Audiences {#linkedin}
 
