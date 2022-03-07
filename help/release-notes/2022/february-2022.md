@@ -2,16 +2,20 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
+source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '732'
 ht-degree: 30%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 2 月 23 日（PT）**
+**リリース日：2022 年 3 月 7 日（PT）**
+
+>[!NOTE]
+>
+>今回のリリースは、元の 2 月 23 日から 3 月 7 日に移行しました。
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
