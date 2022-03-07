@@ -5,10 +5,10 @@ title: Mailchimp コネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Mailchimp をAdobe Experience Platformに接続する方法を説明します。
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 16%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
@@ -27,15 +27,9 @@ Experience Platform は、サードパーティのマーケティング自動化
 ## 接続 [!DNL Mailchimp Campaigns] Platform へ
 
 * [ソース接続を作成して [!DNL Mailchimp Campaigns] API を使用した Platform へのデータの取得](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
--->
+* [ソース接続を作成して [!DNL Mailchimp Campaigns] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## 接続 [!DNL Mailchimp Members] Platform へ
 
 * [ソース接続を作成して [!DNL Mailchimp Members] API を使用した Platform へのデータの取得](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
--->
+* [ソース接続を作成して [!DNL Mailchimp Members] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
