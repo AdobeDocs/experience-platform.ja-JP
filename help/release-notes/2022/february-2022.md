@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '502'
 ht-degree: 41%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 41%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データの収集](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [ソース](#sources)
 
@@ -33,18 +32,6 @@ Platform は、クライアント側の顧客体験データを収集し、Adobe
 | ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を提供できます。 詳しくは、 [ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) を参照してください。 |
 
 Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| [!DNL Data Prep] Adobe Analyticsソースコネクタのサポート | Adobe Analyticsソースコネクタで Data Prep 機能がサポートされ、データフローの作成時に Analytics レポートスイートデータをターゲット XDM スキーマにマッピングできるようになりました。 に関するチュートリアルを参照してください。 [Analytics ソースコネクタの作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を参照してください。 |
-
-[!DNL Data Prep] について詳しくは、[[!DNL Data Prep]  の概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Identity Service] {#identity}
 
