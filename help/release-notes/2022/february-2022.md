@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 41%
+source-wordcount: '720'
+ht-degree: 30%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 41%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Dashboards]](#dashboards)
 - [データの収集](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [ソース](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットでキャプチャされた、組織のデータに関する重要なインサイトを表示できます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 新しい標準の宛先ウィジェット | 次の標準ウィジェットを使用すると、宛先に関連する様々な指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。 このウィジェットには、最近アクティブ化された上位 5 つのセグメントが、選択した宛先に応じて降順で表示されます。</li><li>オーディエンスサイズのトレンド。 このウィジェットは、対象のアカウントにマッピングされたセグメントの一定期間のプロファイル数の関係を示します。</li><li>ID によるマッピングされていないセグメント。 このウィジェットは、特定の宛先と ID に対して ID 数を降順に並べた、マッピングされていない上位 5 つのセグメントをリストします。</li><li>ID によってマッピングされたセグメント。 このウィジェットは、マッピングされた上位 5 つのセグメントをリストします。 セグメントは、ウィジェットのドロップダウンメニューで選択した宛先 ID と一致するソース ID の数に応じて、高い順から低い順に並べられます。</li><li>一般的なオーディエンス。 このウィジェットには、ページ上部で選択された宛先アカウントでアクティブ化された上位 5 つのセグメントと、ウィジェットドロップダウンで選択された宛先のリストが表示されます。</li></ul> 使用可能な標準ウィジェットについて詳しくは、 [宛先ダッシュボードドキュメント。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+[!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
 ## データの収集 {#data-collection}
 
