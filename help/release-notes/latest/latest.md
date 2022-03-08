@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 30%
+source-wordcount: '1018'
+ht-degree: 26%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 30%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Dashboards]](#dashboards)
-- [データの収集](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [ソース](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Platform は、クライアント側の顧客体験データを収集し、Adobe
 | ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を提供できます。 詳しくは、 [ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) を参照してください。 |
 
 Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| （ベータ版）ファイルベースの宛先のDestination SDKのサポート | [Destination SDKによるファイルベースの宛先のサポート](../../destinations/destination-sdk/file-based-destination-configuration.md) は現在非公開ベータ版で、一部の数のパートナーや顧客のみが利用できます。 機能と関連ドキュメントは、一般リリースの前に変更される場合があります。<br><br>この機能へのアクセス方法については、Adobeのアカウント担当者にお問い合わせください。 Adobe内部のアカウント担当者は、Experience Platformの宛先の製品およびエンジニアリングチームに連絡して、サポートされる使用例について話し合う必要があります。 <br><br> ファイルベースの宛先のDestination SDKサポートのベータ段階では、ベータパートナーおよびお客様は、 [Experience PlatformDestination SDK](/help/destinations/destination-sdk/overview.md) 非公開の宛先を構築して、次の機能を活用します。 <ul><li>Amazon S3、SFTP サーバー、Azure Blob、Azure Data Lake Storage、Data Landing Zone ストレージを使用して、ファイルベース（バッチ）の宛先を作成します。</li><li>デフォルトのファイル書き出しスケジュールおよび頻度オプションを設定および設定します。</li><li>書き出した CSV ファイルの形式（区切り文字、エスケープ文字、その他のオプション）を設定するオプションを設定および設定します。</li><li>カスタムファイルヘッダーを設定および編集する機能。</li><li>ファイルとセグメントの書き出しに関するイベント通知を受け取る機能。</li><li>CSV、TSV、JSON、Parquet など、追加のファイルタイプを書き出す機能。</li></ul>  <br>新機能の使用を開始するには、以下をお読みください。 [（ベータ版）Destination SDKを使用してファイルベースの宛先を設定する](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> 非公開または製品化されたを作成する機能 *ストリーミング* Destination SDKを使用して宛先を設定する方法は、すべてのExperience Platformの顧客およびパートナーが既に利用できます。 方法に関するガイドを読む [Destination SDKを使用したストリーミング先の設定](/help/destinations/destination-sdk/configure-destination-instructions.md) 」を参照してください。 |
 
 ## [!DNL Identity Service] {#identity}
 
