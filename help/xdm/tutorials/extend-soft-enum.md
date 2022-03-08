@@ -1,10 +1,11 @@
 ---
 title: ソフト列挙フィールドの拡張
 description: スキーマレジストリ API でソフト列挙フィールドを拡張する方法を説明します。
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -197,4 +198,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このガイドでは、スキーマレジストリ API でソフト列挙を拡張する方法を説明しました。 API で様々なフィールドタイプを定義する方法について詳しくは、 [XDM フィールドタイプ制約](../schema/field-constraints.md#define-fields).
+このガイドでは、スキーマレジストリ API でソフト列挙を拡張する方法を説明しました。 詳しくは、 [API でのカスタムフィールドの定義](./custom-fields-api.md) 様々なフィールドタイプの作成方法の詳細については、を参照してください。

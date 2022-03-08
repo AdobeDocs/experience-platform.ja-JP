@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 40%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -166,6 +166,7 @@ ht-degree: 40%
 * チュートリアル {#tutorials}
    * [UI でのスキーマの作成](tutorials/create-schema-ui.md)
    * [API でのスキーマの作成](tutorials/create-schema-api.md)
+   * [API でカスタムフィールドを定義する](./tutorials/custom-fields-api.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でスキーマの関係を定義する](tutorials/relationship-api.md)
    * [Real-time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
