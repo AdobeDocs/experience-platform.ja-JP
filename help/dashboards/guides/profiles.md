@@ -4,7 +4,7 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 5%
@@ -51,7 +51,7 @@ Experience Platformユーザーインターフェイス内のすべてのプロ�
 
 この [!UICONTROL 有効性] 「 」タブには、プロファイル有効性ウィジェットを使用したプロファイルデータの品質と完全性に関する指標が表示されます。 これらのウィジェットは、プロファイルの構成、完全性の経時的な傾向、およびプロファイルデータの品質に関する評価を一目で示します。
 
-[プロファイルの有効性ダッシュボード。](../images/profiles/attributes-quality-assessment.png)
+![プロファイルの有効性ダッシュボード。](../images/profiles/attributes-quality-assessment.png)
 
 詳しくは、 [プロファイル有効性ウィジェットセクション](#profile-efficacy-widgets) 現在利用可能なウィジェットの詳細については、を参照してください。
 
