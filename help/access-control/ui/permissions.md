@@ -5,10 +5,10 @@ title: 製品プロファイルに対する権限の管理
 topic-legacy: user guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Platform の製品プロファイルの権限を管理する方法について説明します。
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
+source-git-commit: 4881b456cbb6281f35cf1bdcb81e1d21fe764297
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 **[!UICONTROL 権限の編集]**&#x200B;ページには、選択した製品プロファイルの権限を追加および削除するためのワークスペースが表示されます。画面の左側には、権限カテゴリのリストが表示されます。カテゴリをクリックすると、**[!UICONTROL 使用可能な権限項目]**&#x200B;に表示される権限が変更されます。
 
-例えば、プロファイル管理の権限を更新するには、「**[!UICONTROL プロファイル管理]**」を選択します。
+例えば、データモデリングの権限を更新するには、「 」を選択します。 **[!UICONTROL データモデリング]**.
 
 ![profile-management](../images/profile-management.png)
 
