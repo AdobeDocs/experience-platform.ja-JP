@@ -5,9 +5,9 @@ title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 5%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## サードパーティツール {#third-party-tools}
 
-+++回答この節では、PSQL やPower BIなどのサードパーティツールの使用に関する情報を示します。
-+++
+この節では、PSQL やPower BIなどのサードパーティツールの使用に関する情報を示します。
 
 ### クエリサービスをサードパーティのツールに接続できますか？
 
