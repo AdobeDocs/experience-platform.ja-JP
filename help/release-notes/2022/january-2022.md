@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 100%
@@ -16,8 +16,8 @@ ht-degree: 100%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [アラート](#alerts)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [クエリサービス](#query-service)
 - [サンドボックス](#sandboxes)

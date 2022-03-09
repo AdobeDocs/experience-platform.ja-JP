@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておく必要のある重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c36ef1d5f5e5f7875da2b7a878c86b449d46c3c5
+source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 47%
@@ -318,4 +318,4 @@ LIMIT 50;
 
 このドキュメントでは、 [!DNL Query Service]. SQL 構文を使用して独自のクエリを記述する方法の詳細については、[SQL構文のドキュメント](../sql/syntax.md)を参照してください。
 
-クエリサービス内で使用できるクエリのその他のサンプルについては、 [Adobe Analyticsクエリ例](./adobe-analytics.md), [Adobe Targetクエリ例](./adobe-target.md)または [ExperienceEvent クエリ例](./experience-event-queries.md).
+クエリサービス内で使用できるクエリのその他のサンプルについては、 [Adobe Analyticsクエリ例](../sample-queries/adobe-analytics.md), [Adobe Targetクエリ例](../sample-queries/adobe-target.md)または [ExperienceEvent クエリ例](../sample-queries/experience-event.md).

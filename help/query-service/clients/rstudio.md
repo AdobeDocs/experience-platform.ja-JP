@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；RStudio;rstudio；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；RStudio;rstudio；クエリサービスへの接続；
 solution: Experience Platform
 title: RStudio をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 12%
 
 ---
 
-# [!DNL RStudio] をクエリサービスに接続
+# 接続 [!DNL RStudio] クエリサービスへ
 
-このドキュメントでは、[!DNL RStudio] とAdobe Experience Platform [!DNL Query Service] を接続する手順について説明します。
+このドキュメントでは、 [!DNL RStudio] Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> このガイドは、既に [!DNL RStudio] にアクセスでき、使い方に精通していることを前提としています。 [!DNL RStudio] の詳細については、[ 公式の  [!DNL RStudio]  ドキュメント ](https://rstudio.com/products/rstudio/) を参照してください。
+> このガイドは、ユーザーが既に [!DNL RStudio] そしてその使い方に精通している 詳細情報： [!DNL RStudio] は [公式 [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/).
 > 
-> また、クエリサービスで RStudio を使用するには、PostgreSQL JDBC 4.2 ドライバーをインストールする必要があります。 [PostgreSQL 公式サイト ](https://jdbc.postgresql.org/download.html) から JDBC ドライバをダウンロードできます。
+> また、クエリサービスで RStudio を使用するには、PostgreSQL JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、 [PostgreSQL 公式サイト](https://jdbc.postgresql.org/download.html).
 
-## [!DNL RStudio] インターフェイスで [!DNL Query Service] 接続を作成する
+## の作成 [!DNL Query Service] 接続 [!DNL RStudio] インターフェイス
 
-[!DNL RStudio] をインストールした後、RJDBC パッケージをインストールする必要があります。 **[!DNL Packages]** ウィンドウに移動し、**[!DNL Install]** を選択します。
+インストール後 [!DNL RStudio]RJDBC パッケージをインストールする必要があります。 次に移動： **[!DNL Packages]** ウィンドウ枠で、 **[!DNL Install]**.
 
 ![](../images/clients/rstudio/install-package.png)
 
-ポップアップが表示され、**[!DNL Install Packages]** 画面が表示されます。 **[!DNL Install from]** セクションで **[!DNL Repository (CRAN)]** が選択されていることを確認します。 **[!DNL Packages]** の値は `RJDBC` にする必要があります。 **[!DNL Install dependencies]** が選択されていることを確認します。 すべての値が正しいことを確認したら、**[!DNL Install]** を選択してパッケージをインストールします。
+ポップアップが表示され、 **[!DNL Install Packages]** 画面 以下を確認します。 **[!DNL Repository (CRAN)]** が **[!DNL Install from]** 」セクションに入力します。 の値 **[!DNL Packages]** は、 `RJDBC`. 確認 **[!DNL Install dependencies]** が選択されている。 すべての値が正しいことを確認したら、「 」を選択します。 **[!DNL Install]** をクリックして、パッケージをインストールします。
 
 ![](../images/clients/rstudio/install-jrdbc.png)
 
-RJDBC パッケージがインストールされたら、RStudio を再起動してインストールプロセスを完了します。
+RJDBC パッケージがインストールされたので、RStudio を再起動して、インストールプロセスを完了します。
 
-RStudio が再起動した後、クエリサービスに接続できるようになりました。 **[!DNL Packages]** ウィンドウで **[!DNL RJDBC]** パッケージを選択し、コンソールで次のコマンドを入力します。
+RStudio が再起動した後、クエリサービスに接続できるようになりました。 を選択します。 **[!DNL RJDBC]** パッケージを **[!DNL Packages]** ウィンドウに移動し、コンソールに次のコマンドを入力します。
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
@@ -50,15 +50,15 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を探すには、[!DNL Platform] にログインし、**[!UICONTROL クエリ]** を選択してから、**[!UICONTROL 資格情報]** を選択します。
+>データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## クエリの記述
 
-[!DNL Query Service] に接続したら、SQL 文を実行および編集するクエリを書き込むことができます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
+これで、 [!DNL Query Service]を使用すると、SQL 文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、[ エクスペリエンスイベント ](../best-practices/experience-event-queries.md) を含むデータセットを使用し、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
+次のクエリでは、 [エクスペリエンスイベント](../sample-queries/experience-event.md) およびは、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -95,4 +95,4 @@ df_pageviews
 
 ## 次の手順
 
-クエリの書き込みと実行の詳細については、[ クエリの実行 ](../best-practices/writing-queries.md) に関するガイドを参照してください。
+クエリの書き込みと実行の方法について詳しくは、 [クエリの実行](../best-practices/writing-queries.md).

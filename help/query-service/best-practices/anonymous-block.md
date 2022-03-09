@@ -1,15 +1,15 @@
 ---
-title: 匿名ブロッククエリの例
+title: クエリサービスの匿名ブロック
 description: 匿名ブロックは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文で、一連のクエリを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 1%
 
 ---
 
-# 匿名ブロックのクエリ例
+# クエリサービスの匿名ブロック
 
 Adobe Experience Platformクエリサービスは、匿名ブロックをサポートします。 匿名ブロック機能を使用すると、順に実行される 1 つ以上の SQL 文を連結できます。 また、例外処理のオプションも使用できます。
 
@@ -60,4 +60,4 @@ $$;
 
 このドキュメントを読むと、匿名ブロックの構造と構造を明確に理解できます。 [クエリの実行の詳細](./writing-queries.md)を参照してください。クエリサービスでのクエリの実行に関するガイドをお読みください。
 
-クエリサービス内で使用できるクエリのその他のサンプルについては、 [Adobe Analyticsクエリ例](./adobe-analytics.md), [Adobe Targetクエリ例](./adobe-target.md)または [ExperienceEvent クエリ例](./experience-event-queries.md).
+また、 [増分読み込み設計パターンで匿名ブロックを使用する方法](./incremental-load.md) を使用してクエリの効率を高めます。

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 95%
+source-wordcount: '151'
+ht-degree: 96%
 
 ---
 
@@ -32,12 +32,13 @@ ht-degree: 95%
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)
    - [データアセット組織のガイダンス](./best-practices/organize-data-assets.md)
    - [ネストされたデータ構造の使用](best-practices/nested-data-structures.md)
-   - [データ重複排除](best-practices/deduplication.md)
-   - [エクスペリエンスイベントクエリの例](best-practices/experience-event-queries.md)
-   - [Adobe Analytics クエリの例](best-practices/adobe-analytics.md)
-   - [Adobe Target クエリの例](best-practices/adobe-target.md)
    - [匿名ブロッククエリのサンプル](best-practices/anonymous-block.md)
    - [増分読み込み](best-practices/incremental-load.md)
+   - [データ重複排除](best-practices/deduplication.md)
+- サンプルクエリ {#sample-queries}
+   - [エクスペリエンスイベントクエリの例](sample-queries/experience-event.md)
+   - [Adobe Analytics クエリの例](sample-queries/adobe-analytics.md)
+   - [Adobe Target クエリの例](sample-queries/adobe-target.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
