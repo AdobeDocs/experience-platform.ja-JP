@@ -4,10 +4,10 @@ user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '382'
-ht-degree: 100%
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 98%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 100%
    * [ライブラリ](./ui/publishing/libraries.md)
    * [自己ホスト型ライブラリ](./ui/publishing/hosts/self-hosting-libraries.md)
    * [ライブラリの再公開](./ui/publishing/republish.md)
+   * [Premium CDN サポート（ベータ版）](./ui/publishing/premium-cdn.md)
 * クライアント側の情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
