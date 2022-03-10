@@ -3,10 +3,10 @@ title: Experience PlatformWeb SDK 用の Datastream の設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Cookie 宛先；Analytics 設定ブロックスイート ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 2%
+source-wordcount: '1940'
+ht-degree: 3%
 
 ---
 
@@ -107,14 +107,6 @@ JSON が有効な場合は、右側のパネルにプレビュースキーマが
 新しいデータストリームを設定するか、表示する既存のデータストリームを選択すると、そのデータストリームの詳細ページが表示されます。 ID など、データストリームに関する詳細情報は、ここで確認できます。
 
 ![作成されたデータストリームの詳細ページ](../images/datastreams/view-details.png)
-
-データストリームを作成すると、同じ設定で、関連する 3 つの環境が自動的に作成されます。 次の 3 つの環境があります。 `dev`, `stage`、および `prod`( [タグのデフォルト環境](../../tags/ui/publishing/environments.md). タグライブラリを `dev` 環境の場合、ライブラリは `dev` 環境を datastream から取得します。 必要に応じて、個々の環境で自由に設定を編集できます。
-
-SDK 実装で、 `edgeConfigId` は、データストリームとそのデータストリーム内の特定の環境を指定する複合 ID です。 例えば、 `stage` ID を持つデータストリームの環境 `1c86778b-cdba-4684-9903-750e52912ad1`、 `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->複合 ID に環境が存在しない場合、実稼動環境 (`prod`) が使用されます。
 
 データストリームの詳細画面から、次の操作を実行できます。 [サービスの追加](#add-services) アクセス権のあるAdobe Experience Cloud製品の機能を有効にする。
 
