@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能に関する最新のリリースノートです。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
-workflow-type: ht
-source-wordcount: '521'
-ht-degree: 100%
+source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 86%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 100%
 
 Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud ID サービス自体のリリースノートについては、[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
-## 2021年11月3日（PT）
+## 2022 年 3 月 10 日
 
-### Experience Cloud ID Extension 5.2.1
+### Experience Cloud ID Extension 5.4.0
 
 #### **機能**
 
-* このパッチには、Google Chrome ブラウザーで属性 `SameSite=None` を持つ iFrame から Cookie を書き込むための修正が含まれています。
+* このバージョンには、次の更新が含まれる最新の Visitor 5.4.0 が含まれています。
+
+   * ライフタイムの設定機能 `s_ecid` cookieLifetime 設定を使用した cookie
+   * ページが子 iFrame に読み込まれる際に発生する Firefox ブラウザーの問題に対する更新
+
+## 2021 年 10 月 11 日
+
+### Experience Cloud ID Extension 5.3.1
+
+#### **機能**
+
+* このバージョンには、次の新しいアップデートが適用された最新の Visitor 5.3.0 が含まれています。
+
+   * ローカル ECID を生成するアルゴリズムを更新しました
+   * での最新のオプトイン `Secure` および `SameSite` プライバシー cookie のフラグ
+   * ページが子 iFrame に読み込まれる際の Firefox ブラウザーの問題を修正しました。
 
 ## 2021 年 1 月 12 日（PT）
 
@@ -32,6 +47,14 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 #### **機能**
 
 * 同意を受け取ったときに、ECID DataElement の修正を含む VisitorJS 5.2.0 パッチへのアップデートを更新できませんでした。
+
+## 2020 年 11 月 3 日（PT）
+
+### Experience Cloud ID Extension 5.2.1
+
+#### **機能**
+
+* このパッチには、Google Chrome ブラウザーで属性 `SameSite=None` を持つ iFrame から Cookie を書き込むための修正が含まれています。
 
 ## 2020 年 10 月 27 日（PT）
 
