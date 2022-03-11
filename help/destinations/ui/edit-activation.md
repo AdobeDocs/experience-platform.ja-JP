@@ -6,16 +6,18 @@ seo-title: Edit activation dataflows
 description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションデータフローを編集します。
 seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 0%
+source-wordcount: '328'
+ht-degree: 1%
 
 ---
 
 # アクティベーションデータフローを編集 {#edit-activation-flows}
 
 Adobe Experience Platformでは、既存のアクティベーションデータフローの様々なコンポーネントを、書き出したセグメントやプロファイル属性、書き出し頻度、アクティベーションデータフローが有効か無効かなど、宛先に編集できます。
+
+## データフローを編集 {#edit-dataflows}
 
 既存のアクティベーションデータフローを編集するには、次の手順に従います。
 
@@ -42,4 +44,8 @@ Adobe Experience Platformでは、既存のアクティベーションデータ�
 
    ![宛先の詳細](../assets/ui/edit-activation/destination-details.png)
 
-5. 参照： [Activation の概要](activation-overview.md) 宛先に対して新しいセグメントをアクティブ化する方法の詳細については、を参照してください。
+## 次の手順 {#next-steps}
+
+このチュートリアルでは、 **[!UICONTROL 宛先]** ワークスペースを使用して、既存の宛先データフローを更新します。
+
+宛先について詳しくは、 [宛先の概要](../catalog/overview.md).
