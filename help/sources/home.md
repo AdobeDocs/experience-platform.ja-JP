@@ -5,7 +5,7 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 56%
@@ -24,7 +24,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 Experience Platform のソースは、次のカテゴリに分類されます。
 
-### アドビアプリケーション
+### アドビアプリケーション {#adobe-applications}
 
 Experience Platformを使用すると、Adobe Analytics、Adobe Audience Managerなどの他のAdobeアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
 
@@ -38,13 +38,13 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Audience Manager
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
 - [の作成 [!DNL Marketo Engage] UI のソース接続](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 Experience Platformは、サードパーティの広告システムからデータを取り込む機能を提供しています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) コネクタ
 
-### クラウドストレージ
+### クラウドストレージ {#cloud-storage}
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
@@ -62,7 +62,7 @@ Experience Platformは、サードパーティの広告システムからデー�
 - [[!DNL Oracle Object Storage] コネクタ](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] コネクタ](connectors/cloud-storage/sftp.md)
 
-### 顧客関係管理（CRM）
+### 顧客関係管理（CRM） {#crm}
 
 CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Experience Platformは、次から CRM データを取り込む機能を提供します。 [!DNL Microsoft Dynamics 365] および [!DNL Salesforce]. 詳しくは、次の関連ドキュメントを参照してください。
 
@@ -71,14 +71,14 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### 顧客の成功
+### 顧客の成功 {#customer-success}
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Salesforce Service Cloud] コネクタ](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] コネクタ](connectors/customer-success/servicenow.md)
 
-### データベース
+### データベース {#database}
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
@@ -101,19 +101,19 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL PostgreSQL] コネクタ](connectors/databases/postgres.md)
 - [[!DNL Snowflake] コネクタ](connectors/databases/snowflake.md)
 
-### e コマース
+### e コマース {#ecommerce}
 
 Experience Platformは、サードパーティの e コマースシステムからデータを取り込む機能を提供しています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### ローカルシステム
+### ローカルシステム {#local-system}
 
 Experience Platformは、ローカルシステムからデータを取り込む機能を提供しています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md)
 
-### マーケティングの自動処理
+### マーケティングの自動処理 {#marketing-automation}
 
 Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
@@ -121,19 +121,19 @@ Experience Platform は、サードパーティのマーケティング自動化
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### 支払い
+### 支払い {#payments}
 
 Experience Platformは、サードパーティの支払いシステムからデータを取り込む機能を提供しています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL PayPal] コネクタ](connectors/payments/paypal.md)
 
-### ストリーミング
+### ストリーミング {#streaming}
 
 Experience Platformは、ストリーミングソースからデータを取り込む機能を備えています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### プロトコル
+### プロトコル {#protocols}
 
 Experience Platformは、サードパーティのプロトコルシステムからデータを取り込む機能を提供しています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
