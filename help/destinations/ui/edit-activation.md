@@ -1,38 +1,45 @@
 ---
 keywords: アクティベーションの編集，宛先の編集，宛先の編集
-title: アクティベーションフローの編集
+title: アクティベーションデータフローを編集
 type: Tutorial
-seo-title: Edit activation flows
-description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。
-seo-description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
+seo-title: Edit activation dataflows
+description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションデータフローを編集します。
+seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
-# アクティベーションフローの編集 {#edit-activation-flows}
+# アクティベーションデータフローを編集 {#edit-activation-flows}
 
-次の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。
+Adobe Experience Platformでは、既存のアクティベーションデータフローの様々なコンポーネントを、書き出したセグメントやプロファイル属性、書き出し頻度、アクティベーションデータフローが有効か無効かなど、宛先に編集できます。
 
-1. [Experience PlatformUI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから **[!UICONTROL 宛先]** を選択します。 上部のヘッダーから「**[!UICONTROL 参照]**」を選択して、既存の宛先を表示します。
+既存のアクティベーションデータフローを編集するには、次の手順に従います。
+
+1. にログインします。 [Experience PlatformUI](https://platform.adobe.com/) を選択し、 **[!UICONTROL 宛先]** をクリックします。 選択 **[!UICONTROL 参照]** を上部のヘッダーから開き、既存の宛先データフローを表示します。
 
    ![宛先の参照](../assets/ui/edit-activation/browse-destinations.png)
 
-2. 左上のフィルターアイコン ![ フィルターアイコン ](../assets/ui/edit-activation/filter.png) を選択して、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたデータフローのフィルタ選択を表示できます。
+2. フィルターアイコンを選択します。 ![フィルターアイコン](../assets/ui/edit-activation/filter.png) をクリックして、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたデータフローのフィルタリングされた選択を表示できます。
 
-   ![宛先のフィルター](../assets/ui/edit-activation/filter-destinations.png)
+   ![宛先のフィルタリング](../assets/ui/edit-activation/filter-destinations.png)
 
-3. 編集する宛先の名前を選択します。
+3. 編集する宛先データフローの名前を選択します。
 
-   ![宛先の選択](../assets/ui/edit-activation/destination-select.png)
+   ![宛先を選択](../assets/ui/edit-activation/destination-select.png)
 
-4. 宛先の **[!UICONTROL Dataflow runs]** ページが表示され、使用可能なコントロールが示されます。 右側のレールで「**[!UICONTROL アクティブ化]**」を選択して、宛先に送信するセグメントを変更します。
+4. この **[!UICONTROL データフローの実行]** リンク先のページが表示され、使用可能なコントロールが示されます。 この時点で、宛先データフローの複数のコンポーネントを編集できます。
 
-   さらに、宛先の名前と説明を編集できます。
+   * 選択 **[!UICONTROL セグメントのアクティブ化]** をクリックして、宛先に送信するセグメントまたはプロファイル属性を変更します。 このアクションを実行すると、アクティベーションワークフローが表示されます。このワークフローは、宛先のタイプに応じて異なります。 詳しくは、次のガイドを参照してください。
+      * [ストリーミング宛先をセグメント化するためのオーディエンスデータのアクティブ化](./activate-segment-streaming-destinations.md) ( 例：Facebook、Twitter)。
+      * [プロファイルベースの宛先へのオーディエンスデータのアクティブ化](./activate-batch-profile-destinations.md) ( 例：Amazon S3 またはOracleEloqua)。
+      * [ストリーミングプロファイルベースの宛先に対するオーディエンスデータのアクティブ化](./activate-streaming-profile-destinations.md) ( 例：HTTP API やAmazon Kinesis)。
+   * さらに、宛先のデータフローの名前と説明を編集できます。
+   * 以下を使用して、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
 
    ![宛先の詳細](../assets/ui/edit-activation/destination-details.png)
 
-5. 宛先に対して新しいセグメントをアクティブ化する方法について詳しくは、[ アクティベーションの概要 ](activation-overview.md) を参照してください。
+5. 参照： [Activation の概要](activation-overview.md) 宛先に対して新しいセグメントをアクティブ化する方法の詳細については、を参照してください。

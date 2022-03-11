@@ -4,9 +4,9 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。 以下の節で説明します。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 20%
 
 ---
@@ -107,8 +107,8 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、または [!DNL Azure Blob].</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：可能 [!DNL Azure Event Hubs] または [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されるセグメントの数を示します。 このコントロールを選択して、アクティブ化されたセグメントの詳細を確認します。 参照： [アクティベーションデータ](/help/destinations/ui/destination-details-page.md#activation-data) 宛先の詳細ページで、アクティブ化されたセグメントに関する詳細を参照してください。 |
-| [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
-| [!UICONTROL ステータス] | `Active` または `Inactive`.データがこの宛先に対してアクティブ化されているかどうかを示します。 |
+| [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。アクティベーションフローを新しい順または古い順に並べ替えるには、上向き/下向き矢印記号を選択します。 |
+| [!UICONTROL ステータス] | `Enabled` または `Disabled`.データがこの宛先に対してアクティブ化されているかどうかを示します。 |
 
 目的の行をクリックすると、目的の行に関する詳細情報が右側のレールに表示されます。
 

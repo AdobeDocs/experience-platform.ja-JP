@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 43%
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
-   * [アクティベーションフローを編集](./ui/edit-activation.md)
+   * [アクティベーションデータフローを編集](./ui/edit-activation.md)
    * [宛先の削除](./ui/delete-destinations.md)
    * [データフローの監視](./ui/monitor-dataflows.md)
 * 宛先カタログ {#catalog}
@@ -120,7 +120,7 @@ ht-degree: 43%
       * [接続をブレーズ](./catalog/mobile-engagement/braze.md)
    * パーソナライズ機能の宛先 {#personalization}
       * [パーソナライズ機能の宛先の概要](./catalog/personalization/overview.md)
-      * [Adobe Target接続](./catalog/personalization/adobe-target-connection.md)
+      * [Adobe Target 接続](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 拡張機能](./catalog/personalization/adobe-target-v2.md)
       * [Beemray 拡張機能](./catalog/personalization/beemray.md)
