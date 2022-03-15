@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 61%
@@ -17,7 +17,7 @@ ht-degree: 61%
 
 このドキュメントでは、 [[!DNL Segmentation API]](../api/getting-started.md).
 
-## 概要
+## はじめに
 
 このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
@@ -28,7 +28,7 @@ ht-degree: 61%
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -36,7 +36,7 @@ ht-degree: 61%
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。へのリクエスト [!DNL Platform] API には、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 - [エクスポートの進行状況を監視](#monitor-export-progress) - エクスポートプロセスの現在の進行状況を確認します。
 - [オーディエンスデータの読み取り](#next-steps) - オーディエンスのメンバーを表している、結果の XDM 個別プロファイルを取得します。
 
-### ターゲットデータセットの作成
+### ターゲットデータセットの作成 {#create-dataset}
 
 オーディエンスをエクスポートする場合は、まずターゲットデータセットを作成する必要があります。データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 

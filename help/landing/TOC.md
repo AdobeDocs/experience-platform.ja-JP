@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
-source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
-workflow-type: ht
-source-wordcount: '233'
-ht-degree: 100%
+source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 98%
 
 ---
 
@@ -14,18 +14,19 @@ ht-degree: 100%
 # Adobe Experience Platform 概要 {#landing}
 
 * [Platform の概要](home.md)
-* [Platform の概要（動画）](video/platform-overview.md)
+* [Platform の概要（ビデオ）](video/platform-overview.md)
 * [Platform チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
-* [Platform による顧客体験（動画）](video/customer-experience.md)
-* [Platform による顧客体験の背景（動画）](video/customer-experience-bts.md)
+* [Platform による顧客体験（ビデオ）](video/customer-experience.md)
+* [Platform による顧客体験の背景（ビデオ）](video/customer-experience-bts.md)
 * はじめに {#getting-started}
-   * [主な機能（動画）](video/key-capabilities.md)
-   * [主なユースケース（動画）](video/platform-use-cases.md)
-   * [Platform のアーキテクチャ（動画）](video/platform-architecture.md)
-   * [役割とプロジェクトのフェーズ（動画）](video/roles-project-phases.md)
+   * [エンドツーエンドのサンプルワークフロー](end-to-end-tutorial.md)
+   * [主な機能（ビデオ）](video/key-capabilities.md)
+   * [主なユースケース（ビデオ）](video/platform-use-cases.md)
+   * [Platform のアーキテクチャ（ビデオ）](video/platform-architecture.md)
+   * [役割とプロジェクトのフェーズ（ビデオ）](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
    * [Platform UI ガイド](ui-guide.md)
-   * [Platform UI ツアー（動画）](video/platform-ui.md)
+   * [Platform UI ツアー（ビデオ）](video/platform-ui.md)
    * [ワークフロー UI ガイド](workflows.md)
    * [ブラウザーと言語のサポート](browser-language-support.md)
 * Experience Platform API {#platform-apis}
@@ -43,8 +44,8 @@ ht-degree: 100%
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
    * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=ja)
    * [Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
-   * [アプリケーションとインテリジェントサービス（動画）](video/application-intelligent-services.md)
-   * [Platform と Experience Cloud の統合（動画）](video/experience-cloud-integrations.md)
+   * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
+   * [Platform と Experience Cloud の統合（ビデオ）](video/experience-cloud-integrations.md)
 * ガバナンス、プライバシー、セキュリティ {#governance-privacy-security}
    * [概要](./governance-privacy-security/overview.md)
    * 同意管理 {#consent}
