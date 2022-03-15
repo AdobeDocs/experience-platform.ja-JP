@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 48%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン2.10.0 - 2022 年 3 月 10 日
+
+* 更新されたAdobe Target VEC エディターと連携するように、設定ページでコピーできる、事前に非表示になるスニペットを更新します。
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.9.0 が含まれます。
 
 ## バージョン 2.9.0 - 2022 年 1 月 20 日
 

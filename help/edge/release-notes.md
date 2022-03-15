@@ -3,14 +3,24 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 4%
+source-wordcount: '976'
+ht-degree: 3%
 
 ---
 
 # リリースノート
+
+## バージョン 2.9.0 - 2022 年 3 月 10 日
+
+* トラッキングのサポートを追加しました [!DNL control (default)] Adobe Targetエクスペリエンス。
+* 単一ページアプリケーションのビュー変更イベントを最適化しました。 パーソナライズされたエクスペリエンスがレンダリングされた際に、表示通知が変更表示イベントに含まれるようになりました。
+* 次の場合のコンソール警告を削除しました。 `eventType` が存在する。
+* 問題を修正しました。 `propositions` プロパティはからのみ返されました `sendEvent` コマンドを使用します。 この `propositions` プロパティは、常に配列として定義されるようになりました。
+* Adobe Experience Edge からエラーが返された場合に、非表示のコンテナが表示されない問題を修正しました。
+* インタラクションイベントがAdobe Targetでカウントされない問題を修正しました。 これは、XDM の web.webPageDetails.viewName にビュー名を追加することで修正されました。
+* コンソールメッセージのドキュメントのリンク切れを修正しました。
 
 ## バージョン 2.8.0 - 2022 年 1 月 20 日
 
