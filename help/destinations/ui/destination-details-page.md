@@ -4,9 +4,9 @@ title: 宛先の詳細を表示
 description: '個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションを編集し、データフローを有効/無効にするためのコントロールが含まれます。 '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '708'
 ht-degree: 6%
 
 ---
@@ -76,6 +76,10 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 ## [!UICONTROL データフローの実行] {#dataflow-runs}
 
 この [!UICONTROL データフローの実行] 「 」タブには、バッチ宛先とストリーミング宛先に対するデータフロー実行の指標データが表示されます。 参照： [データフローの監視](monitor-dataflows.md) を参照してください。
+
+>[!NOTE]
+>
+>宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)、および [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) 宛先。
 
 ![データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)
 
