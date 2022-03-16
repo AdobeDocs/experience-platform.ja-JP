@@ -1,47 +1,59 @@
 ---
-keywords: Experience Platform；はじめに；顧客 ai；人気のあるトピック；顧客 ai 入力；顧客 ai 出力；顧客 ai トラブルシューティング；顧客 ai エラー
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: 顧客 AI エラーのトラブルシューティング
+title: Customer AI error troubleshooting
 topic-legacy: Getting started
-description: 顧客 AI でよく発生するエラーへの回答を見つけます。
+description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-# 顧客 AI エラーのトラブルシューティング
+# Customer AI error troubleshooting
 
-モデルのトレーニング、スコアリングおよび設定に失敗すると、顧客 AI にエラーが表示されます。 **[!UICONTROL サービスインスタンス]** セクションで、**[!UICONTROL LAST RUN STATUS]** の列に次のいずれかのメッセージが表示されます。**[!UICONTROL 成功]**、**[!UICONTROL トレーニングの問題]**、**[!UICONTROL 失敗]**。
+Customer AI displays errors when model training, scoring, and configuration fails. ********************
 
-![最終実行ステータス](./images/errors/last-run-status.png)
+![](./images/errors/last-run-status.png)
 
-「**[!UICONTROL 失敗]**」または「**[!UICONTROL トレーニングの問題]**」と表示された場合は、実行ステータスを選択してサイドパネルを開くことができます。 サイドパネルには、**[!UICONTROL 前回の実行ステータス]** と **[!UICONTROL 前回の実行の詳細]** が表示されます。 **[!UICONTROL 前回の実行の詳]** 細には、実行が失敗した理由に関する情報が含まれます。顧客 AI からエラーの詳細を入力できない場合は、提供されたエラーコードをサポートに問い合わせてください。
+******************** In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
-## モデルの品質が悪い
+## Unable to access Customer AI in Chrome incognito
 
-「[!UICONTROL  モデルの品質が悪い」というエラーが表示された場合は、 変更した設定 ]&quot;で新しいアプリを作成することをお勧めします。 トラブルシューティングに役立つよう、以下の推奨手順に従います。
+Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+
+<img src="./images/errors/error.PNG" width="500" /><br />
+
+### Recommended fix
+
+To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. ************`[*.]experience.adobe.com`********
+
+![](./images/errors/cookies2.gif)
+
+## Model quality is poor
+
+Follow the recommended steps below to help troubleshoot.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
-### 推奨修正
+### Recommended fix
 
-「モデルの品質が低い」とは、モデルの精度が許容可能な範囲内にないことを意味します。 顧客 AI は、トレーニング後、信頼できるモデルと AUC（ROC 曲線下の面積） &lt; 0.65 を構築できませんでした。 エラーを修正するには、いずれかの設定パラメーターを変更し、トレーニングを再実行することをお勧めします。
+&quot;Model quality is poor&quot; means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) &lt; 0.65 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
 
-まず、データの正確性を確認します。 データには、予測結果に必要なフィールドが含まれていることが重要です。
+Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
-- データセットに最新の日付があるかどうかを確認します。 顧客 AI は、モデルがトリガーされる際に、常にデータが最新であると想定します。
-- 定義した予測および実施要件ウィンドウ内に見つからないデータがないかどうかを確認します。 データは、ギャップなしで完全にする必要があります。 また、データセットが [ 顧客 AI の履歴データ要件 ](./input-output.md#data-requirements) を満たしていることを確認します。
-- スキーマフィールドプロパティ内のコマース、アプリケーション、Web および検索で、見つからないデータを確認します。
+- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
+- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. [](./input-output.md#data-requirements)
+- Check for missing data in commerce, application, web, and search, within your schema field properties.
 
-データに問題がないように見える場合は、モデルの実施要件母集団条件を変更して、モデルを特定のプロファイルに制限してみます（例えば、過去 56 日間に `_experience.analytics.customDimensions.eVars.eVar142` が存在する）。 これにより、トレーニング期間で使用するデータの母集団とサイズが制限されます。
+`_experience.analytics.customDimensions.eVars.eVar142`This restricts the population and size of the data used in the training window.
 
-実施要件母集団の制限が機能しなかったか、または機能しなかった場合は、予測ウィンドウを変更します。
+If restricting the eligibility population did not work or is not possible, change your prediction window.
 
-- 予測期間を 7 日に変更して、エラーが引き続き発生するかどうかを確認します。 エラーが発生しない場合は、定義した予測ウィンドウに対して十分なデータがない可能性があることを示します。
+- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.

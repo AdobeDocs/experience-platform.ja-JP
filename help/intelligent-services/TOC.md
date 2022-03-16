@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成を行います。
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '123'
 ht-degree: 100%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 100%
    - [インサイトの獲得](attribution-ai/discover-insights.md)
    - [スコアのダウンロード](attribution-ai/download-scores.md)
    - [クエリサービスを使用したスコアの分析](attribution-ai/aai-query-service.md)
+   - [エラーのトラブルシューティング](attribution-ai/troubleshooting.md)
 - Content and Commerce AI（ベータ版） {#content-commerce-ai}
    - [概要](content-commerce-ai/overview.md)
    - [はじめに](content-commerce-ai/getting-started.md)
