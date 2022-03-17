@@ -3,9 +3,9 @@ title: Experience PlatformWeb SDK 用の Datastream の設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Cookie 宛先；Analytics 設定ブロックスイート ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 
 >[!NOTE]
 >
->UI でこの機能にアクセスするには、組織がこの機能のプロビジョニングを受ける必要があります。 アクセス権がない場合は、カスタマーサクセスマネージャー (CSM) に問い合わせて、問題の原因を突き止めてくだ許可リストさい。
+>UI でこの機能にアクセスするには、組織がこの機能のプロビジョニングを受ける必要があります。 アクセス権がない場合は、次の情報を入力してください [フォーム](http://adobe.ly/websdkaccess) 必要なアクセス権を与えます。
 
 ## 次にアクセス： [!UICONTROL データストリーム] workspace
 
