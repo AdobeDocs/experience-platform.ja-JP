@@ -3,10 +3,10 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 1%
+source-wordcount: '1297'
+ht-degree: 2%
 
 ---
 
@@ -34,9 +34,16 @@ ht-degree: 1%
 
 例えば、見込み客がホワイトペーパーをダウンロードし、それを「コンバージョン傾向が高い」セグメントに認定したとします。 見込み客が属するセグメントを [!DNL Amazon Kinesis] の宛先に指定した場合、このイベントは [!DNL Amazon Kinesis]. 企業の IT システムに最適に対応できると思われるように、このイベントの上に、自らのアプローチを使用し、ビジネスロジックを説明することができます。
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**プロファイルベース**  — セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：電子メールアドレス、電話番号、姓 )。 [オーディエンスのアクティベーションワークフロー](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 必須 [!DNL Amazon Kinesis] 権限 {#required-kinesis-permission}
 

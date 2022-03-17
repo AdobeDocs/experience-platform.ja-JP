@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1652'
 ht-degree: 12%
 
 ---
@@ -48,9 +48,16 @@ ht-degree: 12%
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「 [ID 一致要件](#id-matching-requirements-id-matching-requirements) を参照し、プレーンテキストとハッシュ化された電子メールアドレスに適切な名前空間をそれぞれ使用してください。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**セグメントの書き出し** :Facebookの宛先で使用されている識別子（名前、電話番号など）を持つセグメント（オーディエンス）のすべてのメンバーを書き出します。
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | facebookの宛先で使用されている識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Facebookアカウントの前提条件 {#facebook-account-prerequisites}
 

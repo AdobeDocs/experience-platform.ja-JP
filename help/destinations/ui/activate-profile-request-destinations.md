@@ -1,15 +1,15 @@
 ---
 keywords: プロファイルリクエストの宛先のアクティブ化、データのアクティブ化、プロファイルリクエストの宛先
-title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化（ベータ版）
+title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
+source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 8%
+source-wordcount: '434'
+ht-degree: 9%
 
 ---
 
@@ -79,6 +79,12 @@ ht-degree: 8%
 
 ![レビュー](../assets/ui/activate-profile-request-destinations/review.png)
 
-## セグメントのアクティベーションを検証 {#verify}
+<!--
 
-次を確認します。 [宛先の監視に関するドキュメント](../../dataflows/ui/monitor-destinations.md) を参照してください。
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
+## Verify segment activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

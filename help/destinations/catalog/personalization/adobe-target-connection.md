@@ -1,22 +1,22 @@
 ---
 keywords: ターゲットのパーソナライゼーション；宛先；experience platform ターゲットの宛先；adobe target の宛先；
-title: Adobe Target接続
+title: Adobe Target 接続
 description: Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 9%
+source-wordcount: '530'
+ht-degree: 12%
 
 ---
 
-# Adobe Target接続 {#adobe-target-connection}
+# Adobe Target 接続 {#adobe-target-connection}
 
 ## 概要 {#overview}
 
 Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 
-Adobe Targetは、Adobe Experience Platformのパーソナライゼーション接続です。
+Adobe Target は、Adobe Experience Platform のパーソナライゼーション接続です。
 
 ## 前提条件 {#prerequisites}
 
@@ -26,9 +26,16 @@ Adobe Targetは、Adobe Experience Platformのパーソナライゼーション�
 >
 >を作成する前に [!DNL Adobe Target] 接続、 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**プロファイルリクエスト** ：単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのセグメントを要求しています。
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのセグメントを要求しています。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ユースケース {#use-cases}
 

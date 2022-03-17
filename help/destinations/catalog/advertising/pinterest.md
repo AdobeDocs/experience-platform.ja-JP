@@ -2,10 +2,10 @@
 title: Pinterest Customer List の接続
 description: 顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 6%
+source-wordcount: '578'
+ht-degree: 7%
 
 ---
 
@@ -39,9 +39,16 @@ ht-degree: 6%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**セグメントの書き出し** - Pinterest Customer List の宛先で使用される識別子（名前、電話番号など）を持つセグメント（オーディエンス）のすべてのメンバーを書き出します。
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | pinterestの顧客リストの宛先で使用されている識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ユースケース {#use-cases}
 

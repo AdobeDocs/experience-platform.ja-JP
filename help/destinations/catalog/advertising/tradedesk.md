@@ -3,10 +3,10 @@ keywords: 広告；トレードデスク広告販売店
 title: トレードデスクの連携
 description: トレードデスクは、広告バイヤーがディスプレイ、ビデオ、モバイルの在庫ソースをまたいで再ターゲティングを実行し、オーディエンスにターゲットを絞ったデジタルキャンペーンを実施するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 4%
+source-wordcount: '552'
+ht-degree: 5%
 
 ---
 
@@ -34,9 +34,18 @@ ht-degree: 4%
 | IDFA | [!DNL Apple ID for Advertisers] |
 | トレードデスク ID | トレードデスクプラットフォームの広告主 ID |
 
-## 書き出しタイプ {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** ：セグメント（オーディエンス）のすべてのメンバーを宛先に書き出します。
+## エクスポートのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーを宛先に書き出しています。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 

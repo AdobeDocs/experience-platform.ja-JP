@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション；宛先；experience pl
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 6%
+source-wordcount: '678'
+ht-degree: 7%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 6%
 >
 >カスタムパーソナライゼーション接続を作成する前に、次の手順に関するガイドをお読みください。 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](../../ui/configure-personalization-destinations.md). このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
 **プロファイルリクエスト** ：単一のプロファイルのカスタムパーソナライゼーションの宛先にマッピングされているすべてのセグメントを要求しています。 様々なカスタムパーソナライゼーションの宛先を様々な [Adobeデータ収集データストリーム](../../../edge/fundamentals/datastreams.md).
 

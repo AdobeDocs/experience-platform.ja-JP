@@ -3,10 +3,10 @@ keywords: Azure Blob;BLOB 宛先；s3;azure BLOB 宛先
 title: Azure BLOB 接続
 description: Azure Blob ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 14%
+source-wordcount: '474'
+ht-degree: 16%
 
 ---
 
@@ -22,16 +22,27 @@ ht-degree: 14%
 
 * [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な [!DNL Blob] の宛先については、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください。 [宛先へのセグメントのアクティブ化](../../ui/activate-batch-profile-destinations.md).
+
+## エクスポートのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳細を表示 [バッチファイルベースの宛先](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## サポートされているファイル形式 {#file-formats}
 
 [!DNL Experience Platform] は、次のファイル形式の書き出し先をサポートしています。 [!DNL Blob]:
 
-* 区切り文字区切り値 (DSV):DSV 形式のデータ・ファイルのサポートは、現在、コンマ区切りの値に制限されています。 一般的な DSV ファイルのサポートは、今後提供される予定です。
+* コンマ区切り値 (CSV):書き出しデータファイルのサポートは、現在、コンマ区切り値に制限されています。
 
 ## 宛先に接続 {#connect}
 

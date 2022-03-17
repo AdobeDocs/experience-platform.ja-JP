@@ -3,9 +3,9 @@ keywords: Google広告；google 広告；google adwords;Google AdWords;Google Ad
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '774'
 ht-degree: 19%
 
 ---
@@ -14,89 +14,98 @@ ht-degree: 19%
 
 ## 概要 {#overview}
 
-[!DNL Google Ads]（旧称） [!DNL Google AdWords]は、テキストベースの検索、グラフィックディスプレイ、ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスで [!DNL YouTube] す。
+[!DNL Google Ads]( 旧称： [!DNL Google AdWords]は、テキストベースの検索、グラフィック表示をまたいで、企業がクリック課金広告を可能にするオンライン広告サービスです。 [!DNL YouTube] ビデオおよびアプリ内モバイルディスプレイ。
 
 ## 宛先の詳細 {#specifics}
 
-次の [!DNL Google Ads] の宛先に固有の詳細に注意してください。
+次に示す詳細は、 [!DNL Google Ads] 宛先：
 
-* アクティブ化されたオーディエンスは、[!DNL Google] プラットフォームでプログラムによって作成されます。
-* [!DNL Platform] 現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
+* アクティブ化されたオーディエンスは、 [!DNL Google] プラットフォーム。
+* [!DNL Platform] は、現在、アクティブ化の成功を検証するための測定指標を含んでいません。 統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads] で最初の宛先を作成したい場合で、以前に (Audience Managerや他のアプリケーションで )Experience CloudID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしていない場合は、Adobeコンサルティングまたはカスタマーケアに問い合わせて ID 同期を有効にしてください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>を使用して最初の宛先を作成する場合は、 [!DNL Google Ads] 有効にしていない [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Ad Manager] では、以下の表で説明する id のアクティブ化をサポートしています。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニアのユーザーをターゲットし、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
-| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲット設定します。 |
-| RIDA | 広告用の Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja)別名 [!DNL Device ID]. 数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google使用 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja) を使用してカリフォルニアのユーザーをターゲット設定し、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
+| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲットにします。 |
+| RIDA | 広告用 Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
 | MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
-## 書き出しタイプ {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
+## エクスポートのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 
-### 既存の [!DNL Google Ads] アカウント
+### 既存 [!DNL Google Ads] アカウント
 
 >[!IMPORTANT]
 >
-> [!DNL Google] では、サードパーテ [!DNL Google Ads] ィベンダーとの新しい cookie 統合が非推奨（廃止予定）となりました。次の節の許可リスト手順を実行するには、[!DNL Google Ads] との既存の統合が必要です。 その結果、[!DNL Google Ads] を使用する場合の推奨アプローチは、[!DNL Google Customer Match] 統合を設定することです。 [!DNL Google Customer Match] 統合の作成の詳細については、[[!DNL Google Customer Match]](./google-customer-match.md) 接続の作成に関するチュートリアルを参照してください。
+> [!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の節の許可リスト手順を実行するには、 [!DNL Google Ads]. その結果、 [!DNL Google Ads] は [!DNL Google Customer Match] 統合とも呼ばれます。 詳しくは、 [!DNL Google Customer Match] 統合については、 [[!DNL Google Customer Match]](./google-customer-match.md) 接続。
 
 ### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
->許可リストは、Platform で最初の [!DNL Google Ads] 宛先を設定する前に必須です。 宛先を作成する前に、[!DNL Google] が以下に説明する許可リストプロセスを完了していることを確認してください。
+>許可リストは、最初の [!DNL Google Ads] の宛先を設定します。 以下に説明する許可リストプロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
 
-Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] に問い合わせて、許可されたデータプロバイダーのリストにAdobeを登録し、お使いのアカウントを許可リストに追加する必要があります。 [!DNL Google] に問い合わせ、次の情報を入力します。
+を作成する前に [!DNL Google Ads] の宛先に設定する場合は、 [!DNL Google] Adobeを許可されたデータプロバイダーのリストに追加し、お使いのアカウントを許可リストに追加する場合。 連絡先 [!DNL Google] 次の情報を入力します。
 
-* **アカウント ID**:AdobeのGoogleアカウント ID。アカウント ID:87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。顧客 ID:89690775.
+* **アカウント ID**:AdobeのGoogleアカウント ID。 アカウント ID :87933855.
+* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。 顧客 ID :89690775.
 * アカウントのタイプ：**AdWords**
-* **Google AdWords ID**:これは、を使用した ID で [!DNL Google]す。通常、ID の形式は 123-456-7890 です。
+* **Google AdWords ID**:これは ID です。 [!DNL Google]. 通常、ID の形式は 123-456-7890 です。
 
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、[ 宛先の設定に関するチュートリアル ](../../ui/connect-destination.md) で説明されている手順に従います。
+この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-[ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
+While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
-* **[!UICONTROL アカウント ID]**:アカウント ID にを入力しま [!DNL Google Ads]す。通常、ID の形式は 123-456-7890 です。
+* **[!UICONTROL アカウント ID]**:アカウント ID に [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化 ](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## エクスポートされたデータ
+## 書き出されたデータ
 
-データが [!DNL Google Ads] の宛先に正常に書き出されたかどうかを確認するには、[!DNL Google Ads] アカウントを確認します。 アクティブ化に成功した場合は、オーディエンスがアカウントに入力されます。
+データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Ads] 宛先、 [!DNL Google Ads] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
 
 ## トラブルシューティング {#troubleshooting}
 
 ### 400 Bad Request エラーメッセージ {#bad-request}
 
-この宛先を設定すると、次のエラーが発生する場合があります。
+この宛先を設定する際に、次のエラーが発生する場合があります。
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [ 前提条件 ](#prerequisites) に従っていない場合、または顧客が既存の [!DNL Google Ads] アカウントを使用せずに宛先を設定しようとした場合に発生します。
+このエラーは、顧客アカウントが [前提条件](#prerequisites) または、顧客が既存の [!DNL Google Ads] アカウント
 
-[!DNL Google] では、サードパーテ [!DNL Google Ads] ィベンダーとの新しい cookie 統合が非推奨（廃止予定）となりました。[allow-list](#allow-listing) 手順を実行するには、[!DNL Google Ads] との既存の統合が必要です。
+[!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の手順で [allow-list](#allow-listing) の手順では、 [!DNL Google Ads].
 
-[!DNL Google Ads] を使用する場合の推奨アプローチは、[[!DNL Google Customer Match]](google-customer-match.md) 統合を設定することです。
+を使用するための推奨される方法 [!DNL Google Ads] は [[!DNL Google Customer Match]](google-customer-match.md) 統合とも呼ばれます。

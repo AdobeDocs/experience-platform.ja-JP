@@ -3,10 +3,10 @@ keywords: '広告；ビング '
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 4%
+source-wordcount: '464'
+ht-degree: 5%
 
 ---
 
@@ -30,9 +30,20 @@ ht-degree: 4%
 |---|---|
 | MAID | Microsoft Advertising ID |
 
-## 書き出しタイプ {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
 **[!DNL Segment Export]**  — セグメント（オーディエンス）のすべてのメンバーを [!DNL Microsoft Bing] 宛先。
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーをに書き出しています [!DNL Microsoft Bing] 宛先。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 

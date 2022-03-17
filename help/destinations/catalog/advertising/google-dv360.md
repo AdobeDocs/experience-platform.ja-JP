@@ -1,12 +1,12 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick bid Manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
+keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Display 360;display 360;display and video
 title: Google Display と Video 360 の接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 3154020d5be029c738c3a5bfe52ae975a15be2ec
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 41%
+source-wordcount: '769'
+ht-degree: 40%
 
 ---
 
@@ -18,10 +18,10 @@ ht-degree: 41%
 
 ## 宛先の詳細 {#specifics}
 
-次の [!DNL Google Display & Video 360] の宛先に固有の詳細に注意してください。
+次に示す詳細は、 [!DNL Google Display & Video 360] 宛先：
 
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラムを使用して作成されます。
-* [!DNL Platform] 現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスターゲティングの規模を理解するには、Google でのオーディエンス数を参照します。
+* [!DNL Platform] は、現在、アクティブ化の成功を検証するための測定指標を含んでいません。 統合を検証し、オーディエンスターゲティングの規模を理解するには、Google でのオーディエンス数を参照します。
 
 >[!IMPORTANT]
 >
@@ -29,43 +29,48 @@ ht-degree: 41%
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Ad Manager] では、以下の表で説明する ID のアクティブ化をサポートしています。
+[!DNL Google Ad Manager] では、以下の表で説明する id のアクティブ化をサポートしています。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)（別名） [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) を使用してカリフォルニアのユーザーをターゲットし、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
-| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲット設定します。 |
-| RIDA | 広告用の Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja)別名 [!DNL Device ID]. 数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google使用 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja) を使用してカリフォルニアのユーザーをターゲット設定し、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
+| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲットにします。 |
+| RIDA | 広告用 Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
 | MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 前提条件 {#prerequisites}
 
-### 許可リストへの登録
+### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
->許可リストへの登録は、Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に行う必要があります。 宛先を作成する前に、以下に説明する許可リスト登録プロセスがGoogleによって完了していることを確認してください。
+>許可リストへの登録は、最初の [!DNL Google Display & Video 360] の宛先を設定します。 宛先を作成する前に、Googleが以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
 
-Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、Googleに問い合わせて、許可されたデータプロバイダーのリストに登録するAdobeと、お使いのアカウントを許可リストに追加する方法を依頼する必要があります。 Google に連絡し、次の情報を提供します。
+を作成する前に [!DNL Google Display & Video 360] の宛先に設定する場合は、Googleに問い合わせて、許可されたデータプロバイダーのリストにAdobeを追加する方法と、お使いのアカウントを許可リストに追加する方法を依頼する必要があります。 Google に連絡し、次の情報を提供します。
 
-* **アカウント ID**:AdobeのGoogleアカウント ID。アカウント ID:87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。顧客 ID:89690775.
+* **アカウント ID**:AdobeのGoogleアカウント ID。 アカウント ID :87933855.
+* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。 顧客 ID :89690775.
 * **アカウントの種類**：**[!DNL Invite advertiser]** を使用して、Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するか、**[!DNL Invite partner]** を使用して Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有します。
 
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、[ 宛先の設定に関するチュートリアル ](../../ui/connect-destination.md) で説明されている手順に従います。
+この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-[ この宛先を設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
+While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
@@ -76,22 +81,22 @@ Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、
 
 >[!NOTE]
 >
->[!DNL Google Display & Video 360] の宛先を設定する際は、[!DNL Google Account Manager] またはAdobeの担当者にお問い合わせのうえ、お持ちのアカウントの種類をご確認ください。
+>の設定時に [!DNL Google Display & Video 360] の宛先については、 [!DNL Google Account Manager] またはAdobe担当者を参照して、お持ちのアカウントの種類を確認してください。
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化 ](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## エクスポートされたデータ
+## 書き出されたデータ
 
-データが [!DNL Google Display & Video 360] の宛先に正常に書き出されたかどうかを確認するには、[!DNL Google Display & Video 360] アカウントを確認します。 アクティブ化に成功した場合は、オーディエンスがアカウントに入力されます。
+データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Display & Video 360] 宛先、 [!DNL Google Display & Video 360] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
 
 ## トラブルシューティング {#troubleshooting}
 
 ### 400 Bad Request エラーメッセージ {#bad-request}
 
-この宛先を設定すると、次のエラーが発生する場合があります。
+この宛先を設定する際に、次のエラーが発生する場合があります。
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [ 前提条件 ](#prerequisites) を満たしていない場合に発生します。 この問題を修正するには、Googleに連絡し、お使いのアカウントが許可リストに登録されていることを確認してください。
+このエラーは、顧客アカウントが [前提条件](#prerequisites). この問題を修正するには、Googleに連絡し、お使いのアカウントが許可リストに登録されていることを確認してください。

@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '651'
 ht-degree: 17%
 
 ---
@@ -73,9 +73,16 @@ Verizon Media では、以下の表で説明する ID のアクティブ化を�
 
 {style=&quot;table-layout:auto&quot;}
 
-## 書き出しタイプ {#export-type}
+## エクスポートのタイプと頻度 {#export-type-frequency}
 
-**セグメントの書き出し** - Verizon Media の宛先で使用される識別子（E メール）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | Verizon Media の宛先で使用される識別子（E メール、GAID、IDFA）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ユースケース {#use-cases}
 

@@ -3,9 +3,9 @@ keywords: ストリーミング；
 title: HTTP API 接続
 description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,17 @@ HTTP API の宛先は [!DNL Adobe Experience Platform] プロファイルデー�
 HTTP 宛先は、XDM プロファイルデータとオーディエンスセグメントを汎用の HTTP エンドポイントに書き出す必要があるお客様をターゲットにしています。
 
 HTTP エンドポイントは、お客様独自のシステムまたはサードパーティのソリューションのいずれかになります。
+
+## エクスポートのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 
