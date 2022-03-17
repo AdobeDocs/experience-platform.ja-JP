@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK の概要
 description: Adobe Experience Platform Web SDK を使用して、Platform 機能を Web サイトに統合する方法について説明します。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 13%
+source-wordcount: '622'
+ht-degree: 17%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 Adobe Experience Platform Web SDK は、Adobe Experience Cloudのお客様が [!DNL Experience Cloud] Adobe Experience Platform Edge Network を通じて JavaScript ライブラリに加えて、 [タグ拡張](./extension/web-sdk-extension-configuration.md) Web SDK の設定に役立ちます。
 
-**タグを使用した Web SDK の設定とソリューションへのデータの送信に関する詳しい手順については、 [Web SDK を使用したAdobe Experience Cloudの実装のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
+**タグを使用した Web SDK の設定とソリューションへのデータの送信に関する詳しい手順については、 [Web SDK を使用したAdobe Experience Cloudの実装のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja)**
 
 ## Experience Edge
 
@@ -62,9 +62,4 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-この製品は、より多くの使用例をサポートするために、常に進化し、成長しています。 最新の情報に対応するには、 [サポートされる使用例ページ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). このページでは、現在サポートされている使用例と、利用可能な場合の詳細情報へのリンクを示します。
-
-* **まだサポートされていないユースケース：** これらは、アドビのロードマップに記載されている、将来サポートされる使用例です。
-* **進行中のユースケース：** チームが現在リリースの完了に取り組んでいる使用例を以下に示します。
-* **サポートされるユースケース：** これらは現在サポートされ、機能している使用例です。
-* **サポートしないユースケース：** これらは、サポートしないことを決定した使用例です。
+この製品は、より多くの使用例をサポートするために、常に進化し、成長しています。 最新の情報に対応し、現在サポートされている内容を確認するには、 [サポートされる使用例ページ](https://github.com/orgs/adobe/projects/18/views/1).

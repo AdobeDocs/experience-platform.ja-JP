@@ -3,10 +3,10 @@ title: Adobe Analyticsと Platform Web SDK の使用
 description: Adobe Experience Platform Web SDK を使用してAdobe Analyticsにデータを送信する方法について説明します。
 keywords: adobe analytics;analytics；マッピングされたデータ；マッピングされた var;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 62%
+source-wordcount: '233'
+ht-degree: 51%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 62%
 ## セットアップ
 
 顧客設定 UI でレポートスイートがマッピングされている場合、Adobe Analytics はユーザーが送信するデータを自動的に取得します。ここでは、1 つ以上のレポートを特定の設定にマッピングできます。レポートスイートのマッピングが完了したら、データのフローが自動的に開始します。
+
+## XDM フィールドグループ
+
+最も一般的なAdobe Analytics指標を簡単に取り込めるように、使用できる Analytics フィールドグループを提供しています。 このスキーマについて詳しくは、 [Adobe Analytics ExperienceEvent Full Extension スキーマフィールドグループ](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## 自動的にマッピングされたデータ
 
