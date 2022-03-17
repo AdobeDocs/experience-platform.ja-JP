@@ -3,7 +3,7 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services(AWS)S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -39,20 +39,17 @@ ht-degree: 1%
 >id="platform_destinations_connect_s3_bucket"
 >title="バケット名"
 >abstract="3 ～ 63 文字の長さにする必要があります。 先頭および末尾は文字または数字にする必要があります。 小文字、数字、ハイフン (-) のみを含める必要があります。 IP アドレス（例：192.100.1.1）の形式にはできません。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="フォルダーパス"
 >abstract="A ～ Z、a ～ z、0 ～ 9 の文字のみを含める必要があります。また、次の特殊文字を含めることができます。 `/!-_.'()"^[]+$%.*"`. セグメントファイルごとにフォルダーを作成するには、/%SEGMENT_NAME%または/%SEGMENT_ID%または/%SEGMENT_NAME%/%SEGMENT_ID%マクロをテキストフィールドに挿入します。 マクロは、フォルダーパスの最後にのみ挿入できます。 マクロの例をドキュメントに表示します。"
->text="Learn more in documentation"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="マクロを使用して、ストレージの場所にフォルダーを作成する"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA 公開鍵"
 >abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、Base64 エンコードされた文字列として書き込む必要があります。"
->text="Learn more in documentation"
 
 While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 

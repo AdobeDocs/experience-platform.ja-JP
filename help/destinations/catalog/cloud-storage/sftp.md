@@ -3,7 +3,7 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 2%
@@ -43,7 +43,6 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 >id="platform_destinations_connect_sftp_rsa"
 >title="RSA 公開鍵"
 >abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、Base64 エンコードされた文字列として書き込む必要があります。"
->text="Learn more in documentation"
 
 While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 

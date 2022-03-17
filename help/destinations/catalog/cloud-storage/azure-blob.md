@@ -3,10 +3,10 @@ keywords: Azure Blob;BLOB 宛先；s3;azure BLOB 宛先
 title: Azure BLOB 接続
 description: Azure Blob ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 16%
+source-wordcount: '503'
+ht-degree: 15%
 
 ---
 
@@ -49,6 +49,11 @@ ht-degree: 16%
 この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_rsa"
+>title="RSA 公開鍵"
+>abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、Base64 エンコードされた文字列として書き込む必要があります。"
 
 While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
 
