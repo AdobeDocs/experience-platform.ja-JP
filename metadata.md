@@ -9,7 +9,7 @@ getting-started-title: ドキュメント
 getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja
 tutorials-title: チュートリアル
 tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja
-git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.ja-JP
+git-repo: https://github.com/AdobeDocs/experience-platform.ja-JP
 solution: Experience Platform
 type: Documentation
 index: true
@@ -18,6 +18,7 @@ source-git-commit: 3dbf99bd25bb2e3983de2ca5f0e1f20e9020ba7e
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
+showfeedback: true
 
 ---
 
