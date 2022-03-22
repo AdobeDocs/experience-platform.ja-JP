@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
+source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 11%
+source-wordcount: '2378'
+ht-degree: 10%
 
 ---
 
@@ -182,11 +182,11 @@ SELECT statement 2
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**パラメーター**
-
-- `schema`:XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。
-- `rowvalidation`:（オプション）新しく作成したデータセットに対して取り込まれる新しいバッチの行レベルの検証を、すべてユーザーが必要とするかどうかを指定します。 デフォルト値は `true` です。
-- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
+| パラメーター | 説明 |
+| ----- | ----- |
+| `schema` | XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。 |
+| `rowvalidation` | （オプション）新しく作成したデータセットに対して取り込まれる新しいバッチの行レベルの検証を、すべてユーザーが必要とするかどうかを指定します。 デフォルト値は `true` です。 |
+| `select_query` | A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
 
 **例**
 
@@ -210,10 +210,10 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 INSERT INTO table_name select_query
 ```
 
-**パラメーター**
-
-- `table_name`:クエリを挿入するテーブルの名前。
-- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
+| パラメーター | 説明 |
+| ----- | ----- |
+| `table_name` | クエリを挿入するテーブルの名前。 |
+| `select_query` | A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
 
 **例**
 
@@ -257,9 +257,9 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**パラメーター**
-
-- `IF EXISTS`:これを指定した場合、テーブルが **not** 存在する。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `IF EXISTS` | これを指定した場合、テーブルが **not** 存在する。 |
 
 ## データベースを削除
 
@@ -269,9 +269,9 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**パラメーター**
-
-- `IF EXISTS`:これを指定した場合、データベースが **not** 存在する。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `IF EXISTS` | これを指定した場合、データベースが **not** 存在する。 |
 
 ## スキーマをドロップ
 
@@ -281,13 +281,11 @@ DROP DATABASE [IF EXISTS] db_name
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**パラメーター**
-
-- `IF EXISTS`:これを指定した場合、スキーマが **not** 存在する。
-
-- `RESTRICT`:モードのデフォルト値。 これを指定した場合、スキーマは指定した場合にのみ削除されます **doesn&#39;t** には、任意のテーブルが含まれます。
-
-- `CASCADE`:これを指定した場合、スキーマは、スキーマ内に存在するすべてのテーブルと共にドロップされます。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `IF EXISTS` | これを指定した場合、スキーマが **not** 存在する。 |
+| `RESTRICT` | モードのデフォルト値。 これを指定した場合、スキーマは指定した場合にのみ削除されます **doesn&#39;t** には、任意のテーブルが含まれます。 |
+| `CASCADE` | これを指定した場合、スキーマは、スキーマ内に存在するすべてのテーブルと共にドロップされます。 |
 
 ## CREATE VIEW
 
@@ -297,10 +295,10 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 CREATE VIEW view_name AS select_query
 ```
 
-**パラメーター**
-
-- `view_name`:作成するビューの名前。
-- `select_query`:A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries).
+| パラメーター | 説明 |
+| ------ | ------ |
+| `view_name` | 作成するビューの名前。 |
+| `select_query` | A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
 
 **例**
 
@@ -318,10 +316,10 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**パラメーター**
-
-- `IF EXISTS`:これを指定した場合、ビューが **not** 存在する。
-- `view_name`:削除するビューの名前。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `IF EXISTS` | これを指定した場合、ビューが **not** 存在する。 |
+| `view_name` | 削除するビューの名前。 |
 
 **例**
 
@@ -396,10 +394,10 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 SET property_key = property_value
 ```
 
-**パラメーター**
-
-- `property_key`:リストまたは変更するプロパティの名前。
-- `property_value`:プロパティを設定する値です。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `property_key` | リストまたは変更するプロパティの名前。 |
+| `property_value` | プロパティを設定する値です。 |
 
 任意の設定の値を返すには、 `SET [property key]` 無しに `property_value`.
 
@@ -447,10 +445,10 @@ If `DEALLOCATE name` が使用されます。 `name` は、割り当てを解除
 DECLARE name CURSOR FOR query
 ```
 
-**パラメーター**
-
-- `name`：作成するカーソルの名前。
-- `query`：カーソルが返す行を指定する `SELECT` または `VALUES` コマンド。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `name` | 作成するカーソルの名前。 |
+| `query` | A `SELECT` または `VALUES` コマンドを使用して、カーソルが返す行を指定します。 |
 
 ### EXECUTE
 
@@ -462,10 +460,10 @@ DECLARE name CURSOR FOR query
 EXECUTE name [ ( parameter ) ]
 ```
 
-**パラメーター**
-
-- `name`：実行する準備済み文の名前。
-- `parameter`：準備済み文のパラメーターの実際の値。これは、準備済み文の作成時に決定された、このパラメーターのデータ型と互換性のある値を生成する式である必要があります。準備済み文に複数のパラメーターがある場合は、コンマで区切ります。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `name` | 実行する準備済み文の名前。 |
+| `parameter` | 準備済み文のパラメーターの実際の値。 これは、準備済み文の作成時に決定された、このパラメーターのデータ型と互換性のある値を生成する式である必要があります。準備済み文に複数のパラメーターがある場合は、コンマで区切ります。 |
 
 ### EXPLAIN
 
@@ -482,11 +480,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**パラメーター**
-
-- `ANALYZE`:この `option` 次を含む `ANALYZE`に値を指定しない場合は、実行時間やその他の統計情報が表示されます。
-- `FORMAT`:この `option` 次を含む `FORMAT`を指定する場合は、出力形式を指定します。 `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。
-- `statement`：実行計画を表示する `SELECT`、`INSERT`、`UPDATE`、`DELETE`、`VALUES`、`EXECUTE`、`DECLARE`、`CREATE TABLE AS`、`CREATE MATERIALIZED VIEW AS` 文のいずれか。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `ANALYZE` | この `option` 次を含む `ANALYZE`に値を指定しない場合は、実行時間やその他の統計情報が表示されます。 |
+| `FORMAT` | この `option` 次を含む `FORMAT`を指定する場合は、出力形式を指定します。 `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
+| `statement` | 任意 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`または `CREATE MATERIALIZED VIEW AS` ステートメントに含まれ、その実行プランを表示します。 |
 
 >[!IMPORTANT]
 >
@@ -515,10 +513,10 @@ EXPLAIN SELECT * FROM foo;
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**パラメーター**
-
-- `num_of_rows`:取得する行の数。
-- `cursor_name`:情報を取得するカーソルの名前。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `num_of_rows` | 取得する行の数。 |
+| `cursor_name` | 情報を取得するカーソルの名前。 |
 
 ### PREPARE {#prepare}
 
@@ -532,10 +530,10 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**パラメーター**
-
-- `name`:準備済み文の名前。
-- `data_type`:準備済み文のパラメーターのデータ型。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りのリストで追加できます。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `name` | 準備済み文の名前。 |
+| `data_type` | 準備済み文のパラメーターのデータ型。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りのリストで追加できます。 |
 
 ### ROLLBACK
 
@@ -568,13 +566,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**パラメーター**
-
 標準の SELECT クエリーパラメーターの詳細については、 [SELECT クエリセクション](#select-queries). このセクションでは、 `SELECT INTO` コマンドを使用します。
 
-- `TEMPORARY` または `TEMP`:オプションのパラメーター。 指定した場合、作成されるテーブルは一時テーブルになります。
-- `UNLOGGED`:オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [PostgreSQL のドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`:作成するテーブルの名前。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `TEMPORARY` または `TEMP` | オプションのパラメーター。 指定した場合、作成されるテーブルは一時テーブルになります。 |
+| `UNLOGGED` | オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [PostgreSQL のドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | 作成するテーブルの名前。 |
 
 **例**
 
@@ -593,15 +591,10 @@ SHOW name
 SHOW ALL
 ```
 
-**パラメーター**
-
-- `name`:情報が必要なランタイムパラメーターの名前。 ランタイムパラメーターに指定できる値は次のとおりです。
-   - `SERVER_VERSION`:このパラメータは、サーバーのバージョン番号を示します。
-   - `SERVER_ENCODING`:このパラメーターは、サーバー側の文字セットエンコーディングを示します。
-   - `LC_COLLATE`:このパラメータは、照合（テキストの順序付け）のためのデータベースのロケール設定を示します。
-   - `LC_CTYPE`:このパラメータは、文字分類に関するデータベースのロケール設定を示します。
-      `IS_SUPERUSER`:このパラメータは、現在の役割にスーパーユーザー権限があるかどうかを示します。
-- `ALL`：すべての設定パラメーターの値と説明を表示します。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `name` | 情報が必要なランタイムパラメーターの名前。 ランタイムパラメーターに指定できる値は次のとおりです。<br>`SERVER_VERSION`:このパラメータは、サーバーのバージョン番号を示します。<br>`SERVER_ENCODING`:このパラメーターは、サーバー側の文字セットエンコーディングを示します。<br>`LC_COLLATE`:このパラメータは、照合（テキストの順序付け）のためのデータベースのロケール設定を示します。<br>`LC_CTYPE`:このパラメータは、文字分類に関するデータベースのロケール設定を示します。<br>`IS_SUPERUSER`:このパラメータは、現在の役割にスーパーユーザー権限があるかどうかを示します。 |
+| `ALL` | すべての設定パラメーターの値と説明を表示します。 |
 
 **例**
 
@@ -628,10 +621,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**パラメーター**
-
-- `query`:コピーするクエリ。
-- `format_name`:クエリをコピーする形式。 この `format_name` 次のいずれかを指定できます。 `parquet`, `csv`または `json`. デフォルトでは、値は `parquet`.
+| パラメーター | 説明 |
+| ------ | ------ |
+| `query` | コピーするクエリ。 |
+| `format_name` | クエリをコピーする形式。 この `format_name` 次のいずれかを指定できます。 `parquet`, `csv`または `json`. デフォルトでは、値は `parquet`. |
 
 >[!NOTE]
 >
@@ -657,13 +650,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**パラメーター**
-
-- `table_name`:編集するテーブルの名前。
-- `constraint_name`:追加または削除する制約の名前。
-- `column_name`:制約を追加する列の名前。
-- `referenced_table_name`:外部キーによって参照されるテーブルの名前。
-- `primary_column_name`:外部キーによって参照される列の名前。
+| パラメーター | 説明 |
+| ------ | ------ |
+| `table_name` | 編集するテーブルの名前。 |
+| `constraint_name` | 追加または削除する制約の名前。 |
+| `column_name` | 制約を追加する列の名前。 |
+| `referenced_table_name` | 外部キーによって参照されるテーブルの名前。 |
+| `primary_column_name` | 外部キーによって参照される列の名前。 |
 
 >[!NOTE]
 >
@@ -679,11 +672,11 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-**パラメーター**
-
-- `table_name`:編集するテーブルの名前。
-- `column_name`:追加する列の名前。
-- `data_type`:追加する列のデータ型です。 次のようなデータタイプがサポートされています。bigint, char，文字列，日付，日時，倍精度，整数， smallint, tinyint, varchar.
+| パラメーター | 説明 |
+| ------ | ------ |
+| `table_name` | 編集するテーブルの名前。 |
+| `column_name` | 追加する列の名前。 |
+| `data_type` | 追加する列のデータ型です。 次のようなデータタイプがサポートされています。bigint, char，文字列，日付，日時，倍精度，整数， smallint, tinyint, varchar. |
 
 ### プライマリキーを表示
 
