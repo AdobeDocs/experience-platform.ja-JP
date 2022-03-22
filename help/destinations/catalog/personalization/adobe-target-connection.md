@@ -3,7 +3,7 @@ keywords: ターゲットのパーソナライゼーション；宛先；experie
 title: Adobe Target 接続
 description: Adobe Targetは、Web サイトやモバイルアプリなどをまたいだすべての受信顧客インタラクションで、AI を利用したリアルタイムのパーソナライゼーションおよび実験機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 12%
@@ -49,7 +49,7 @@ Adobe Target は、Adobe Experience Platform のパーソナライゼーショ�
 >id="platform_destinations_target_datastream"
 >title="データストリーム ID について"
 >abstract="このオプションは、ページへの応答にセグメントを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。 宛先を設定する前に、データストリームを設定する必要があります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="データストリームの設定方法を説明します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="データストリームの設定方法を説明します"
 
 この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
