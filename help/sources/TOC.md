@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 19%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 19%
    - [Adobe Experience Platformでのソースのドキュメント化](sources-sdk/documentation/doc-overview.md)
    - [GitHub Web インターフェイスを使用してソースドキュメントページを作成する](sources-sdk/documentation/github.md)
    - [ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。](sources-sdk/documentation/text-editor.md)
-   - [ドキュメントのセルフサービステンプレート](sources-sdk/documentation/template.md)
+   - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
+   - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレスの許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)

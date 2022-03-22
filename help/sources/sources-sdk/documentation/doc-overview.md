@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platformで新しいソースをライブにする前の最後の手順は、新しいソースをドキュメント化することです。
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ Adobe Experience Platformで新しいソースをライブに設定する前の�
 
 事前入力された [ドキュメントテンプレート](./template.md) を使用して、ソースのドキュメントを作成できます。 以下では、テンプレートの編集方法とプル要求の開き方について説明します。 新しいソース用に送信されたドキュメントは、Adobeドキュメントチームがレビューおよび公開します。
 
-また、 [ドキュメントテンプレートはこちら](../assets/template.zip).
+また、以下のドキュメントテンプレートをダウンロードすることもできます。
+
+* [API ドキュメントのテンプレート](../assets/template.zip)
+* [UI ドキュメントテンプレート](../assets/ui-template.zip)
 
 ## 新しいソースページを作成します
 

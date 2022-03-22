@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK は、Flow Service API を使用して REST API ベースのソースを統合し、データをExperience Platformに導くための一連の設定 API です。
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 8%
 
 ---
@@ -62,7 +63,7 @@ Experience Platformでソースを設定する手順を以下に示します。
    * 詳しくは、 [ソース仕様の構成](./config/sourcespec.md);
    * 詳しくは、 [参照仕様の設定](./config/explorespec.md);
 * ソースのドキュメント化を開始するには、 [ソース SDK 用ドキュメント作成の概要](./documentation/doc-overview.md)
-   * この [ソースドキュメントテンプレート](./documentation/template.md) ドキュメントを構築するには、以下を実行します。
+   * この [ソース API ドキュメントテンプレート](./documentation/template.md) API ドキュメントを構築する
+   * この [ソース UI ドキュメントテンプレート](./documentation/ui-template.md) UI ドキュメントを構築するには、以下を実行します。
    * 詳しくは、 [GitHub Web インターフェイスの使用](./documentation/github.md) を参照してください。
    * 詳しくは、 [テキストエディターの使用](./documentation/text-editor.md) ローカルマシンを使用してドキュメントを作成する手順については、を参照してください。
-

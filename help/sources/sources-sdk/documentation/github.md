@@ -6,10 +6,11 @@ topic-legacy: tutorial
 description: このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 3%
+source-wordcount: '624'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +36,11 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ![create-branch](../assets/create-branch.png)
 
-フォークされたリポジトリの GitHub フォルダー構造で、 `experience-platform.en/help/sources/tutorials/api/create/` 次に、ソースに適したカテゴリをリストから選択します。 例えば、新しいクラウドストレージソースのドキュメントを作成する場合は、 **クラウドストレージ**.
+フォークされたリポジトリの GitHub フォルダー構造で、に移動します。 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 次に、ソースに適したカテゴリをリストから選択します。 例えば、新しいクラウドストレージソースのドキュメントを作成する場合は、 **クラウドストレージ**.
+
+>[!TIP]
+>
+>UI 用のドキュメントを作成している場合は、に移動します。 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) をクリックし、ソースに適したカテゴリを選択します。 画像を追加するには、以下に移動します。 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) 次に、 `sdk` フォルダー。
 
 ![クラウドストレージ](../assets/cloud-storage.png)
 
