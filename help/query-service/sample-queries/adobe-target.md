@@ -5,18 +5,18 @@ title: Adobe Target Data のクエリ例
 topic-legacy: queries
 description: Adobe Target のデータは ExperienceEvent スキーマに変換され、ユーザーのデータセットとして Experience Platform に取り込まれます。このドキュメントには、クエリサービスをAdobe Targetデータセットと共に使用するためのクエリ例が含まれています。
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 51%
+source-wordcount: '324'
+ht-degree: 52%
 
 ---
 
 # Adobe Target データのサンプルクエリ
 
-Adobe Targetのデータは Experience Event XDM スキーマに変換され、ユーザーのデータセットとしてAdobe Experience Platformに取り込まれます。 このデータを使用するAdobe Experience Platformクエリサービスの使用例は多数あり、次のサンプルクエリはAdobe Targetデータセットと連携する必要があります。
+Adobe Targetから取り込んだデータは Experience Event XDM スキーマに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 Adobe Experience Platformクエリサービスは、このデータの多くの使用例を容易におこなえるようにし、以下のサンプルクエリはAdobe Targetデータセットと連携します。
 
-Experience Platformでは、自動作成されたデータセットの名前は「Adobe Target Experience Events」です。 このデータセットをクエリで使用する場合は、という名前を使用する必要があります `adobe_target_experience_events`.
+Experience Platformでは、自動作成されたデータセットの名前は「Adobe Target Experience Events」です。 このデータセットをクエリで使用する場合は、名前を使用します `adobe_target_experience_events`.
 
 ## 高レベルの XDM フィールド部分マッピング
 
