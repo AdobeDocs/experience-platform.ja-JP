@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: Adobe Analytics Data のクエリ例
 topic-legacy: queries
-description: 選択した Adobe Analytics レポートスイートのデータは XDM ExperienceEvents に変換され、データセットとして Adobe Experience Platform に取得されます。このドキュメントでは、Adobe Experience Platform クエリサービスがこのデータを利用する多くの使用例を説明し、付属のクエリ例が Adobe Analytics データセットと連携するようにします。
+description: 選択したAdobe Analyticsレポートスイートのデータは XDM ExperienceEvents に変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、クエリサービスがこのデータを利用する多くの使用例の概要を説明し、Adobe Analyticsデータセットと連携するように設計されたサンプルクエリを示します。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: bb5ece5e48ca5e3bb97aa1367515f510ab03deee
+source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 57%
+source-wordcount: '1066'
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 57%
 
 選択したAdobe Analyticsレポートスイートのデータは、 [!DNL XDM ExperienceEvent] クラスを使用し、Adobe Experience Platformにデータセットとして取り込みました。
 
-このドキュメントでは、Adobe Experience Platformの様々な使用例の概要を説明します [!DNL Query Service] は、このデータを使用します。このデータには、サンプルクエリを含め、Adobe Analyticsデータセットと連携させる必要があります。 詳しくは、 [Analytics フィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md) マッピングの詳細 [!DNL Experience Events].
+このドキュメントでは、Adobe Experience Platformの様々な使用例の概要を説明します [!DNL Query Service] は、Adobe Analyticsデータセットと連携するように設計されたサンプルクエリを含め、このデータを使用します。 詳しくは、 [Analytics フィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md) マッピングの詳細 [!DNL Experience Events].
 
 ## はじめに
 
@@ -24,7 +24,7 @@ ht-degree: 57%
 
 ## よく使用される SQL の例
 
-次の例は、Adobe Analyticsデータを分析するための一般的に使用される SQL クエリを示しています。
+次の例は、Adobe Analyticsデータを分析する一般的な使用例に関する SQL クエリを示しています。
 
 ### 特定の日の時間別訪問者数
 
@@ -120,14 +120,15 @@ ORDER BY Hour;
 
 ## 重複の除外
 
-Adobe Experience Platformクエリサービスは、データの重複排除をサポートしています。 詳しくは、 [クエリサービスドキュメントのデータ重複排除](../best-practices/deduplication.md) を参照してください。 [!DNL Experience Event] データセット。
+[!DNL Query Service] は、データの重複排除をサポートします。 詳しくは、 [でのデータ重複排除 [!DNL Query Service] ドキュメント](../best-practices/deduplication.md) を参照してください。 [!DNL Experience Event] データセット。
 
 ## マーチャンダイジング変数（製品構文）
 
+以下の節では、 [!DNL Analytics] データセット。
 
 ### 製品の構文
 
-Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特別に設定された変数を使用して、カスタムの製品レベルのデータを収集できます。 これらは、イベントまたはカスタムeVarに基づいています。 これらの変数とその標準的な使用法の違いは、ヒットの単一の値ではなく、ヒットの各製品の個別の値を表すという点です。
+Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特別に設定された変数を使用して、カスタムの製品レベルのデータを収集できます。 これらは、イベントまたはカスタムeVarに基づいています。 これらの変数とその一般的な使用法の違いは、ヒットの単一の値ではなく、ヒットの各製品の個別の値を表す点です。
 
 これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
@@ -205,7 +206,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 1. ユーザーが「冬帽子」の内部検索を実行し、コンバージョン構文が有効なマーチャンダイジング eVar6 を「内部検索:冬帽子」に設定します。
 2. ユーザーが「ワッフルビーニー」をクリックし、製品の詳細ページに移動します。\
    a. ここでランディングすると、12.99 ドルの「ワッフルビーニー」の `Product View` イベントが発生します。\
-   b. `Product View`がバインディングイベントとして設定されているので、製品の「ワッフルビーニー」は「内部検索：冬帽子」の eVar6 値にバインドされるようになります。「ワッフルビーニー」製品が収集されるたびに、(1) 有効期限の設定に達するか、(2) 新しい eVar6 値が設定され、その製品で再びバインディングイベントが発生するまで、「内部検索：冬帽」に関連付けられます。
+   b.次以降 `Product View` がバインディングイベントとして設定されると、製品の「ワッフルビーニー」が「内部検索：冬帽子」のeVar6 値にバインドされるようになりました。 「ワッフルビーニー」製品が収集されるたびに、(1) 有効期限の設定に達するか、(2) 新しい eVar6 値が設定され、その製品で再びバインディングイベントが発生するまで、「内部検索：冬帽」に関連付けられます。
 3. ユーザーが製品を買い物かごに追加し、`Cart Add` イベントが発生します。
 4. ユーザーが「夏シャツ」に対して別の内部検索を実行すると、コンバージョン構文によりマーチャンダイジング eVar6 が「内部検索: 夏シャツ」に設定されます。
 5. ユーザーが「スポーティーな T シャツ」をクリックし、製品の詳細ページに移動します。\
