@@ -4,9 +4,9 @@ title: サブスクリプションデータタイプを含む汎用マーケテ�
 topic-legacy: overview
 description: このドキュメントでは、Subscriptions XDM データ型を持つ汎用マーケティング環境設定フィールドの概要を説明します。
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `reason` | 文字列 | 顧客がマーケティングの使用例からオプトアウトした場合、この文字列フィールドは、顧客がオプトアウトした理由を表します。 |
 | `subscriptions` | マップ | 特定のサブスクリプションに関する顧客マーケティング環境のマップ。 詳しくは、 [購読](#subscriptions) を参照してください。 |
-| `time` | DateTime | マーケティング環境設定が変更されたときの ISO 8601 タイムスタンプ（該当する場合）。 |
+| `time` | 日時 | マーケティング環境設定が変更されたときの ISO 8601 タイムスタンプ（該当する場合）。 |
 | `val` | 文字列 | このマーケティング使用例での、お客様が指定する環境設定の選択。 詳しくは、 [次のセクション](#val) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -59,29 +59,31 @@ ht-degree: 2%
 次の JSON は、 `subscriptions` マップ。 各キー `subscriptions` オブジェクトは、マーケティングチャネルの個々の購読を表します。 次に、各購読にはオプトイン値 (`val`) をクリックします。
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ ht-degree: 2%
 
 | プロパティ | 説明 |
 | --- | --- |
+| `val` | この [同意値](#val) 購読の |
 | `type` | 購読タイプ。 15 文字以下の任意の説明的な文字列を指定できます。 |
+| `topics` | 顧客が購読する関心のある領域を表す文字列の配列です。顧客に関連するコンテンツを送信するために使用できます。 |
 | `subscribers` | 特定のサブスクリプションを購読した識別子（電子メールアドレスや電話番号など）のセットを表す、オプションの map-type フィールドです。 このオブジェクトの各キーは、問題の識別子を表し、次の 2 つのサブプロパティを含みます。 <ul><li>`time`:ID が購読した時点の ISO 8601 タイムスタンプ（該当する場合）。</li><li>`source`:サブスクライバーの元のソース。 15 文字以下の任意の説明的な文字列を指定できます。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
