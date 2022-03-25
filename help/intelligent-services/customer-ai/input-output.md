@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；はじめに；顧客 ai；人気のトピック；顧客 ai 入力；顧客 ai 出力
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 16%
@@ -88,7 +88,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 |  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| [!UICONTROL 検索の詳細] | 検索を | search.keywords |
+| [!UICONTROL 検索の詳細] | 検索 | search.keywords |
 
 さらに、顧客 AI は購読データを使用して、より優れたチャーンモデルを構築できます。 購読データは、 [[!UICONTROL 購読]](../../xdm/data-types/subscription.md) データタイプの形式。 ほとんどのフィールドはオプションですが、最適なチャーンモデルの場合は、できるだけ多くのフィールド（例： ）にデータを指定することを強くお勧めします。 `startDate`, `endDate`、およびその他の関連する詳細
 
@@ -144,7 +144,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 - checkouts
 - purchases
 - webVisit
-- 検索を
+- 検索
 
 **その他の推奨される標準イベントタイプ：**
 
@@ -162,7 +162,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 - checkouts
 - purchases
 - webVisit
-- 検索を
+- 検索
 
 この例では、 `order`, `checkouts`、および `purchases` は、購読が購入されたこととそのタイプを示すために使用されます。
 
@@ -184,7 +184,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 - checkouts
 - purchases
 - webVisit
-- 検索を
+- 検索
 
 **その他の推奨される標準イベントタイプ：**
 
@@ -202,7 +202,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 - checkouts
 - purchases
 - webVisit
-- 検索を
+- 検索
 
 **その他の推奨される標準イベントタイプ：**
 
@@ -217,7 +217,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 この特定の予測目標を使用した最適な顧客 AI 出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外することもできますが、複数のイベントを除外すると、結果の質が低下する場合があります。
 
 - webVisit
-- 検索を
+- 検索
 
 また、正確なモデルを得るには、 [購読データタイプ](../../xdm/data-types/subscription.md).
 

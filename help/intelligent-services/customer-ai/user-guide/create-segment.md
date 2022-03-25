@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；インサイト；顧客 ai；人気のあるトピック；顧客 ai セグメント
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform；インサイト；顧客 AI；人気の高いトピック；顧客 AI セグメント
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: 予測スコアを使用した顧客セグメントの作成
 topic-legacy: Create a segment
 description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 83%
@@ -35,10 +35,10 @@ ht-degree: 83%
 
 ![](../images/user-guide/properties.png)
 
-左側の *フィールド* 列の上にある **歯車** アイコンをクリックし、ドロップダウンから *結合ポリシー* を選択します。 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
+左側の上 *フィールド* 列で、 **ギア** アイコンをクリックし、 *結合ポリシー* 」をクリックします。 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
 
 ![](../images/user-guide/merge_policy.png)
 
 ## 次の手順
 
-このチュートリアルでは、セグメントビルダーを使用して、傾向スコアに基づくオーディエンスを見つけました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](../../../destinations/home.md)」を参照してください。
+このチュートリアルでは、セグメントビルダーを使用して、傾向スコアに基づくオーディエンスを見つけることができました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](../../../destinations/home.md)」を参照してください。

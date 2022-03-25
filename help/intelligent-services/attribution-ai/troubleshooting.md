@@ -1,29 +1,30 @@
 ---
-keywords: Experience Platform;getting started;attribution ai;popular topics;attribution ai input;attribution ai output;attribution ai troubleshooting;attribution ai errors
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform；はじめに；attribution ai；人気の高いトピック；attribution ai 入力；attribution ai 出力；attribution ai トラブルシューティング；attribution ai エラー
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Attribution AI
-title: Attribution AI error troubleshooting
-description: Find answers to common errors in Attribution AI.
+title: Attribution AIエラーのトラブルシューティング
+description: Attribution AIの一般的なエラーに対する回答を見つけます。
 type: Documentation
-source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
+exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# Attribution AI error troubleshooting
+# Attribution AIエラーのトラブルシューティング
 
-This document provides answers to frequently asked questions about Attribution AI.
+このドキュメントでは、Attribution AIに関するよくある質問に対する回答を示します。
 
-## Unable to access Attribution AI in Chrome incognito
+## Chrome の匿名Attribution AIにアクセスできません
 
-Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。 この問題は、experience.adobe.com を信頼されたドメインにするために、Chrome で積極的に作業を進めています。
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
-### Recommended fix
+### 推奨される修正
 
-To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. ************`[*.]experience.adobe.com`********
+この問題に対処するには、常に cookie を使用できるサイトとして experience.adobe.com を追加する必要があります。 最初に、 **chrome://settings/cookies**. 次に、 **カスタマイズされた動作** セクションで **追加** ボタンをクリックします。 表示されるポップオーバーで、コピーして貼り付けます。 `[*.]experience.adobe.com` 次に、 **サードパーティ Cookie を含める** （このサイトのチェックボックス）。 完了したら、「 」を選択します。 **追加** をクリックし、匿名でAttribution AIを再読み込みします。
 
-![](./images/faq/cookies2.gif)
+![推奨修正](./images/faq/cookies2.gif)

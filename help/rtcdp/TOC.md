@@ -1,11 +1,11 @@
 ---
 product: adobe experience platform
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
-workflow-type: ht
+source-git-commit: c0ea64691ad5f901bca9729ff6d742ffd423f1e5
+workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 100%
 

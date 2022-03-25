@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；概要；顧客 ai；人気のあるトピック；顧客 ai の概要
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform、概要、顧客 AI、人気のトピック、顧客 AI の概要
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI の概要
 topic-legacy: Customer AI Overview
 description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
 landing-page-description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 85%
@@ -38,11 +38,11 @@ ht-degree: 85%
 
 - 顧客 AI を使用して、ダイナミックプライシングや顧客が購入するプライスポイントを予測しないでください。
 - 顧客 AI では、オファーを提供することで、顧客が品目を購入する可能性が高まるかどうかを判断できません。傾向スコアに基づいて割引オファーを送信したとしても、それがその顧客をコンバージョンする最良の方法とは限りません。
-- 顧客 AI は製品の推奨ツールではありません。何千もの SKU がある場合は、顧客 AI を [!DNL Adobe Target] のような実際の製品推奨ソリューションの代わりに使用しないでください。
+- 顧客 AI は製品の推奨ツールではありません。数千の SKU がある場合は、顧客 AI を、 [!DNL Adobe Target].
 - 顧客 AI は、顧客が購入ジャーニーのどの段階にいるか、つまり「認知」、「検討」、「購入」、「定着」のどの段階にいるかを予測できません。
 - 顧客 AI を使用して、将来発売される製品を購入する可能性のある顧客を判断しないでください。そのためには、顧客 AI がデータに関する機械学習アルゴリズムを適切に習得するための、特定の成功イベントがこれまでに存在している必要があります。
 
-次のビデオは、顧客 AI に関する理解を深めるためのものです。
+次のビデオは、顧客 AI に対する理解を深めるためのものです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
@@ -52,4 +52,4 @@ ht-degree: 85%
 
 ## 次の手順
 
-『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、顧客 AI に必要な前提条件をすべて設定する手順を説明します。 既にすべての資格情報とデータの準備ができている場合は、[ 顧客 AI インスタンスの設定 ](./user-guide/configure.md) を参照してください。 顧客 AI を使用する手順を説明します。
+『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、顧客 AI に必要なすべての前提条件を設定する手順を説明します。 既にすべての資格情報とデータの準備ができている場合は、にアクセスします。  [顧客 AI インスタンスの設定](./user-guide/configure.md). 顧客 AI を使用する手順を説明します。

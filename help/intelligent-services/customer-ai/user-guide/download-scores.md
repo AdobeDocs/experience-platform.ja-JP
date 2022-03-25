@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ダウンロードスコア；顧客 AI；人気のあるトピック；書き出し；書き出し；顧客 AI ダウンロード；顧客 AI スコア
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform、ダウンロードスコア、顧客 AI、人気の高いトピック、エクスポート、エクスポート、顧客 AI ダウンロード、顧客 AI スコア
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI でのスコアのダウンロード
 topic-legacy: Downloading scores
-description: 顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。
+description: 顧客 AI を使用すると、Parquet ファイル形式でスコアをダウンロードできます。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 85%
@@ -19,9 +19,9 @@ ht-degree: 85%
 
 ## はじめに
 
-顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。 このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
+顧客 AI を使用すると、Parquet ファイル形式でスコアをダウンロードできます。 このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
 
-さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、[ 顧客 AI インスタンスの設定 ](./configure.md) を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、次にアクセスします。 [顧客 AI インスタンスの設定](./configure.md). サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 現在は、2 つの方法で顧客 AI スコアをダウンロードできます。
 
@@ -40,7 +40,7 @@ ht-degree: 85%
 
 ## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、この API 呼び出しに使用されます。 追加のバッチを返すには、limit クエリパラメーターの数を、返す量に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、この API 呼び出しに使用されます。 追加のバッチを返すには、limit クエリーパラメーターの数を、返す数に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **応答**
 
-正常な応答は、バッチ ID オブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチ ID `01E5QSWCAASFQ054FNBKYV6TIQ` です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+正常な応答は、バッチ ID オブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチ ID です `01E5QSWCAASFQ054FNBKYV6TIQ`. バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 ```json
 {
