@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 19%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 19%
    - マーケティングの自動化 {#marketing-automation}
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
+      - [OracleEloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 19%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp キャンペーン](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -236,6 +238,7 @@ ht-degree: 19%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [OracleEloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
