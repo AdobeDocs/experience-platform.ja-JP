@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
+keywords: Experience Platform；ホーム；人気のトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
 solution: Experience Platform
 title: API でのデータセットの作成
 topic-legacy: developer guide
 description: このドキュメントでは、カタログサービス API でデータセットオブジェクトを作成する方法について説明します。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 53%
+source-wordcount: '253'
+ht-degree: 52%
 
 ---
 
 # API でのデータセットの作成
 
-[!DNL Catalog] API を使用してデータセットを作成するには、データセットの基となる [!DNL Experience Data Model](XDM) スキーマの `$id` 値を把握しておく必要があります。 スキーマ ID を取得したら、[!DNL Catalog] API の `/datasets` エンドポイントにPOSTリクエストを送信して、データセットを作成できます。
+データセットを作成するには、 [!DNL Catalog] API の場合は、 `$id` 値 [!DNL Experience Data Model] (XDM) データセットの基となるスキーマ。 スキーマ ID を取得したら、 `/datasets` エンドポイント [!DNL Catalog] API
 
 >[!NOTE]
 >
->このドキュメントでは、[!DNL Catalog] でのデータセットオブジェクトの作成方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の[チュートリアル](../datasets/create.md)を参照してください。
+>このドキュメントでは、 [!DNL Catalog]. データセットの作成、設定、監視の手順について詳しくは、次の[チュートリアル](../datasets/create.md)を参照してください。
 
 **API 形式**
 
@@ -55,7 +55,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->この例では、`containerFormat` プロパティに [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
+>この例では、 [Apache Parquet](https://parquet.apache.org/docs/) のファイル形式 `containerFormat` プロパティ。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
 
 **応答**
 

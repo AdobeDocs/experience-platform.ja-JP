@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform、Attribution Ai、アクセススコア、人気のあるトピック、ダウンロードスコア、Attribution Ai スコア、書き出し、書き出し
+keywords: Experience Platform、attribution ai、アクセススコア、人気の高いトピック、ダウンロードスコア、attribution ai スコア、書き出し、書き出し
 feature: Attribution AI
 title: スコアのダウンロード (Attribution AI)
 topic-legacy: Downloading scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1053'
-ht-degree: 68%
+source-wordcount: '1052'
+ht-degree: 67%
 
 ---
 
-# スコアのAttribution AI
+# スコアをAttribution AIでダウンロード
 
 このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 
 ## はじめに
 
-Attribution AIを使用すると、Parquet ファイル形式でスコアをダウンロードできます。 このチュートリアルでは、[ はじめに ](./getting-started.md) ガイドのAttribution AIスコアのダウンロードに関する節を読み終えている必要があります。
+Attribution AIを使用すると、Parquet ファイル形式でスコアをダウンロードできます。 このチュートリアルでは、 [はじめに](./getting-started.md) ガイド。
 
-また、Attribution AIのスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。 新しいサービスインスタンスを作成するには、『[Attribution AIユーザーガイド ](./user-guide.md)』を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+また、Attribution AIのスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。 新しいサービスインスタンスを作成するには、 [Attribution AIユーザーガイド](./user-guide.md). サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 ## データセット ID を見つける {#dataset-id}
 
-Attribution AIインサイトのサービスインスタンス内で、右上のナビゲーションの「*その他のアクション*」ドロップダウンをクリックし、「**[!UICONTROL アクセススコア]**」を選択します。
+サービスインスタンス内でAttribution AIインサイトを表示するには、 *その他のアクション* 右上のナビゲーションのドロップダウンから、 **[!UICONTROL スコアへのアクセス]**.
 
 ![その他のアクション](./images/download-scores/more-actions.png)
 
@@ -34,7 +34,7 @@ Attribution AIインサイトのサービスインスタンス内で、右上の
 
 ## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、この API 呼び出しに使用されます。 追加のバッチを返すには、`limit` クエリパラメーターの数を、返す量に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、この API 呼び出しに使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターを使用して、必要な分だけ返されます。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -58,11 +58,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **応答**
 
-正常な応答は、バッチ ID オブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチ ID `01E5QSWCAASFQ054FNBKYV6TIQ` です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+正常な応答は、バッチ ID オブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチ ID です `01E5QSWCAASFQ054FNBKYV6TIQ`. バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 >[!NOTE]
 >
-> 次の応答では、読みやすくするために `tags` オブジェクトの形式が変更されています。
+> 次の応答は、 `tags` オブジェクトを読みやすくするために形式変更しました。
 
 ```json
 {
@@ -260,19 +260,19 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![端末](./images/download-scores/terminal-output.png)
 
-ダウンロードしたスコアは Parquet 形式で、スコアを表示するには [!DNL Spark] シェルまたは Parquet リーダーが必要です。 生のスコア表示には、[Apache Parquet ツール ](https://parquet.apache.org/documentation/latest/) を使用できます。 Parquet ツールは、[!DNL Spark] を使用してデータを分析できます。
+ダウンロードされたスコアは Parquet 形式で、次のいずれかが必要になります。 [!DNL Spark]-shell または Parquet リーダーを使用して、スコアを表示できます。 未加工のスコア表示の場合、 [Apache Parquet ツール](https://parquet.apache.org/docs/). Parquet ツールは、 [!DNL Spark].
 
 ## 次の手順
 
-このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順について説明しました。 スコア出力の詳細については、[Attribution AI input and output](./input-output.md) のドキュメントを参照してください。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順について説明しました。 スコア出力の詳細については、 [アトリビューション AI の入出力](./input-output.md) ドキュメント。
 
-## Snowflake
+## Snowflakeを使用したスコアへのアクセス
 
 >[!IMPORTANT]
 >
->Snowflakeを使用したスコアへのアクセスについて詳しくは、 attributionai-support@adobe.comにお問い合わせください。
+>Snowflakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
 
-Snowflakeを使用して、集計Attribution AIスコアにアクセスできます。 現在、Snowflake のリーダーアカウントを設定して、その資格情報を受け取るには、アドビサポート（attributionai-support@adobe.com）に電子メールでお問い合わせいただく必要があります。
+Snowflakeを使用して、集計Attribution AIのスコアにアクセスできます。 現在、Snowflake のリーダーアカウントを設定して、その資格情報を受け取るには、アドビサポート（attributionai-support@adobe.com）に電子メールでお問い合わせいただく必要があります。
 
 アドビサポートがリクエストを処理すると、Snowflake のリーダーアカウントの URL と、それに対応する資格情報が提供されます（以下を参照）。
 

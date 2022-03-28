@@ -5,9 +5,9 @@ title: API を使用したデータセットの作成
 topic-legacy: datasets
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 85%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 85%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,7 +40,7 @@ ht-degree: 85%
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name： `{SANDBOX_NAME}`
+* x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->このチュートリアルでは、 [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を参照してください。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
+>このチュートリアルでは、 [Apache Parquet](https://parquet.apache.org/docs/) ファイル形式を参照してください。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
 
 **応答** 
 

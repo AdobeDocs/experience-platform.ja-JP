@@ -5,9 +5,9 @@ title: バッチ取得 API の概要
 topic-legacy: overview
 description: Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 71%
 
 ---
@@ -151,7 +151,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!INFO]
 >
->以下の例では、 [Apache Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](api-overview.md)』を参照してください。
+>以下の例では、 [Apache Parquet](https://parquet.apache.org/docs/) ファイル形式。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](api-overview.md)』を参照してください。
 
 ### サイズの小さなファイルのアップロード
 
