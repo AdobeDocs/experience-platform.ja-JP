@@ -3,16 +3,16 @@ title: Experience PlatformWeb SDK 用の Datastream の設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Cookie 宛先；Analytics 設定ブロックスイート ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
-ht-degree: 3%
+source-wordcount: '2004'
+ht-degree: 2%
 
 ---
 
 # データストリームの設定
 
-datastream は、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバー側の設定を表します。 また、 [設定コマンド](configuring-the-sdk.md) は、クライアントで処理する必要のあるものを制御します ( 例えば、 `edgeDomain`)、データストリームは、SDK のその他すべての設定を処理します。 リクエストがAdobe Experience Platform Edge Network に送信されると、 `edgeConfigId` は、データストリームを参照するために使用されます。 これにより、Web サイトでコードを変更しなくても、サーバー側の設定を更新できます。
+datastream は、Adobe Experience Platform Web およびMobile SDK を実装する際のサーバー側の設定を表します。 また、 [設定コマンド](configuring-the-sdk.md) は、クライアントで処理する必要のあるものを制御します ( 例えば、 `edgeDomain`)、データストリームは、SDK のその他すべての設定を処理します。 リクエストがAdobe Experience Platform Edge Network に送信されると、 `edgeConfigId` は、データストリームを参照するために使用されます。 これにより、Web サイトでコードを変更しなくても、サーバー側の設定を更新できます。
 
 このドキュメントでは、データ収集 UI でデータストリームを設定する手順を説明します。
 
@@ -50,6 +50,16 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 
 ![データストリームの基本設定](../images/datastreams/configure.png)
 
+選択 **[!UICONTROL 詳細オプション]** をクリックすると、データストリームを設定する追加のコントロールが表示されます。
+
+![詳細設定オプション](../images/datastreams/advanced-options.png)
+
+| 設定 | 説明 |
+| --- | --- |
+| [!UICONTROL 地域] | ユーザーの IP アドレスに基づいて GPS 検索を行うかどうかを指定します。 デフォルト設定 **[!UICONTROL なし]** GPS 検索を無効にし、 **[!UICONTROL 市区町村]** を設定すると、小数点以下 2 桁までの GPS 座標が表示されます。 |
+| [!UICONTROL ファーストパーティ ID Cookie] | この設定が有効な場合、 [ファーストパーティデバイス ID](../identity/first-party-device-ids.md)を使用します。<br><br>この設定を有効にする場合、ID の保存先となる Cookie の名前を指定する必要があります。 |
+| [!UICONTROL サードパーティ ID の同期] | ID 同期をコンテナにグループ化して、ID 同期を異なる時間に実行できるようにします。 この設定を有効にすると、このデータストリームに対して実行する ID 同期のコンテナを指定できます。 |
+
 この節の残りの部分では、選択した Platform イベントスキーマにデータをマッピングする手順に焦点を当てます。 Mobile SDK を使用している場合や、Platform 用にデータストリームを設定していない場合は、 **[!UICONTROL 保存]** ～に関する次の項に進む前に [データストリームへのサービスの追加](#add-services).
 
 ### データ収集用のデータ準備 {#data-prep}
@@ -58,7 +68,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 >
 >データ収集用のデータ準備は、現在、Mobile SDK 実装ではサポートされていません。
 
-Data Prep は、Experience Data Model(XDM) との間でデータのマッピング、変換、検証をおこなえるExperience Platformサービスです。 Platform が有効なデータストリームを設定する場合、Data Prep 機能を使用して、Platform Edge ネットワークに送信する際にソースデータを XDM にマッピングできます。
+データ準備は、Experience Data Model(XDM) との間でデータのマッピング、変換、検証をおこなえるExperience Platformサービスです。 Platform が有効なデータストリームを設定する場合、Data Prep 機能を使用して、Platform Edge ネットワークに送信する際にソースデータを XDM にマッピングできます。
 
 以下のサブセクションでは、データ収集 UI 内でデータをマッピングするための基本的な手順について説明します。 計算フィールドの変換関数を含む、すべての Data Prep 機能に関する包括的なガイダンスについては、次のドキュメントを参照してください。
 
@@ -170,7 +180,7 @@ JSON が有効な場合は、右側のパネルにプレビュースキーマが
 | [!UICONTROL イベントデータセット] | **（必須）** 顧客イベントデータのストリーミング先の Platform データセットを選択します。 このスキーマでは [XDM ExperienceEvent クラス](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先の Platform データセットを選択します。 このスキーマでは [XDM Individual Profile クラス](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Platform Web SDK 実装のOffer decisioningを有効にするには、このチェックボックスを選択します。 詳しくは、 [Platform Web SDK でのOffer decisioningの使用](../personalization/offer-decisioning/offer-decisioning-overview.md) を参照してください。 offer decisioning機能について詳しくは、 [Adobe Journey Optimizerドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja). |
-| [!UICONTROL エッジセグメント化] | 有効にするには、このチェックボックスを選択します [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームを介してデータを送信すると、該当するプロファイルの更新済みのセグメントメンバーシップが応答に返されます。<br><br>このオプションは、 [!UICONTROL パーソナライズ機能の宛先] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL エッジセグメント化] | 有効にするには、このチェックボックスを選択します [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームを介してデータを送信すると、該当するプロファイルの更新済みのセグメントメンバーシップが応答に返されます。<br><br>このオプションは、 [!UICONTROL Personalization Destinations] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL パーソナライズ機能の宛先] | を [!UICONTROL エッジセグメント化] 「 」チェックボックスにチェックを入れると、データストリームがAdobe Targetなどのパーソナライゼーションエンジンに接続できるようになります。 の具体的な手順については、宛先のドキュメントを参照してください。 [パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Adobe Target設定
@@ -199,16 +209,6 @@ JSON が有効な場合は、右側のパネルにプレビュースキーマが
 >[!NOTE]
 >
 >次を選択できます。 **[!UICONTROL ID を手動で入力]** をクリックして、ドロップダウンメニューを使用する代わりにプロパティ名と環境名を入力します。
-
-### [!UICONTROL サードパーティ ID の同期] 設定
-
-サードパーティ ID セクションは、常に表示される唯一のセクションです。 次の 2 つの設定を使用できます。&quot;[!UICONTROL サードパーティ ID 同期が有効になっています]&quot;および&quot;[!UICONTROL サードパーティ ID 同期コンテナ ID]&quot;.
-
-![設定 UI の「サードパーティ ID 同期」セクション](../images/datastreams/third-party-id-sync-config.png)
-
-| 設定 | 説明 |
-| --- | --- |
-| [!UICONTROL サードパーティ ID 同期コンテナ ID] | ID 同期をコンテナにグループ化して、ID 同期を異なる時間に実行できるようにします。 このデータストリームに対して実行される ID 同期のコンテナを制御します。 |
 
 ## 次の手順
 
