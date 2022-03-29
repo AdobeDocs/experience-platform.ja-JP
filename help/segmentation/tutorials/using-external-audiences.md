@@ -1,101 +1,264 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: 外部ユーザーのインポートと使用
-description: このチュートリアルでは、Adobe エクスペリエンスプラットフォームで外部ユーザーを使用する方法について説明します。
+title: 外部オーディエンスのインポートと使用
+description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 077622e891f4c42ce283e2553d6a2983569d3584
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 9%
+source-wordcount: '1471'
+ht-degree: 5%
 
 ---
 
-# 外部ユーザーのインポートと使用
+# 外部オーディエンスのインポートと使用
 
-Adobe エクスペリエンスプラットフォームでは外部ユーザーを取り込む機能がサポートされています。これは、後で外部ユーザーを追加するためのコンポーネントとして使用できます。 このドキュメントでは、外部ユーザーを読み込んで使用するためにエクスペリエンスプラットフォームを設定するためのチュートリアルを提供しています。
+Adobe Experience Platformは、外部オーディエンスをインポートする機能をサポートしています。これは、その後、新しいセグメント定義のコンポーネントとして使用できます。 このドキュメントでは、外部オーディエンスをインポートして使用するExperience Platformを設定するためのチュートリアルを提供します。
 
 ## はじめに
 
-このチュートリアルでは、対象となるセグメントを作成するための様々なサービスについて、十分に理解しておく必要があり [!DNL Adobe Experience Platform] ます。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [ セグメント化サービス](../home.md)：リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
 - [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
-- [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメンテーションを最大限に活用するには、データモデリングのベストプラクティスに従い、データをプロファイルとイベントとして ingested にしておく必要が [ ](../../xdm/schema/best-practices.md) あります。
+- [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
-- [ストリーミング ](../../ingestion/streaming-ingestion/overview.md) の取得: プラットフォームの ingests について説明します。これにより、クライアント側とサーバー側のデバイスのデータがリアルタイムで格納されます。
+- [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
 ### セグメントデータとセグメントメタデータ
 
-外部ユーザーの読み込みと使用を開始する前に、セグメントデータとセグメントメタデータの違いを理解しておくことが重要です。
+外部オーディエンスの読み込みと使用を開始する前に、セグメントデータとセグメントメタデータの違いを理解しておくことが重要です。
 
-セグメントデータは、セグメントの認定条件を満たすプロファイルを意味します。したがって、出席者に属していることになります。
+セグメントデータは、セグメント認定条件を満たすプロファイルを指すので、オーディエンスの一部になります。
 
-セグメントメタデータは、名前、説明、表現 (存在する場合)、作成日、最後に変更された日付、および ID が含まれます。 この ID は、セグメントのメタデータを、セグメントの認定条件を満たす個別のプロファイルにリンクさせることができます。
+セグメントメタデータは、セグメント自体に関する情報で、名前、説明、式（該当する場合）、作成日、最終変更日、ID などが含まれます。 ID は、セグメントメタデータを、セグメントの認定を満たし、結果として得られるオーディエンスの一部となる個々のプロファイルにリンクします。
 
 | セグメントデータ | セグメントメタデータ |
 | ------------ | ---------------- |
-| セグメントの認定条件を満たすプロファイル | セグメント自体に関する情報 |
+| セグメント認定を満たすプロファイル | セグメント自体に関する情報 |
 
-## 外部ユーザーに対する id 名前空間の作成
+## 外部オーディエンス用の ID 名前空間の作成
 
-外部の視聴者を使用するための最初の手順は、id 名前空間を作成することです。 Id 名前空間を使用すると、プラットフォームは、セグメントの発生元を関連付けます。
+外部オーディエンスを使用する最初の手順は、ID 名前空間を作成することです。 ID 名前空間を使用すると、Platform はセグメントの元となる場所を関連付けることができます。
 
-Identity 名前空間を作成するには、「id 名前空間ガイド」の説明に従って [ ](../../identity-service/namespaces.md#manage-namespaces) ください。 Id 名前空間を作成するときに、アイデンティティ名前空間にソース詳細を追加し [!UICONTROL  、 ] 人物の識別子として使用しないように設定し **** ます。
+ID 名前空間を作成するには、 [id 名前空間ガイド](../../identity-service/namespaces.md#manage-namespaces). ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その ID 名前空間をマークします [!UICONTROL タイプ] as a **[!UICONTROL 人以外の識別子]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
+>[!NOTE]
+>
+>外部オーディエンスでカスタム名前空間を使用し始めるには、サポートチケットを作成する必要があります。 詳しくは、Adobe担当者にお問い合わせください。
+
 ## セグメントメタデータのスキーマの作成
 
-Identity 名前空間を作成した後は、作成するセグメントの新しいスキーマを作成する必要があります。
+ID 名前空間を作成した後、作成するセグメント用に新しいスキーマを作成する必要があります。
 
-スキーマの作成を開始するには、まず左側のナビゲーションバーで「スキーマ」を選択し、次に「スキーマ」 **** **** ワークスペースの右上隅にある「作成」をクリックします。 ここから、「参照」をクリックし **** て、使用可能なスキーマタイプをすべて選択します。
+スキーマの構成を開始するには、まず「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションバーで、 **[!UICONTROL スキーマを作成]** を使用して、スキーマワークスペースの右上隅に表示します。 ここからを選択します。 **[!UICONTROL 参照]** をクリックして、使用可能なスキーマタイプの完全な選択を確認します。
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-事前に定義されたクラスであるセグメント定義を作成しているため、「既存のクラスを使用」を選択し **** ます。 次に、セグメント定義クラスを選択し、 **** その後に **[!UICONTROL クラスを割り当て]** ます。
+事前に定義されたクラスであるセグメント定義を作成するので、「 」を選択します。 **[!UICONTROL 既存のクラスを使用]**. 次に、 **[!UICONTROL セグメント定義]** クラス、その後に **[!UICONTROL クラスを割り当て]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
-これで、スキーマが作成されたので、セグメント ID を格納するフィールドを指定する必要があります。 このフィールドは、1次 id としてマークし、以前に作成した名前空間に割り当てる必要があります。
+スキーマが作成されたので、セグメント ID を含むフィールドを指定する必要があります。 このフィールドをプライマリ ID としてマークし、以前に作成した名前空間に割り当てる必要があります。
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-`_id`フィールドをプライマリ id としてマークした後、スキーマのタイトルと、その後に表示されるラベルの付いたプロファイルを選択し **** ます。「有効」を選択 **** すると、スキーマが有効に [!DNL Real-time Customer Profile] なります。
+をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
-現在は、このスキーマがプロファイルに対して有効になっています。これにより、ユーザーが作成した非 person id 名前空間に割り当てられます。 そのため、このスキーマを使用してプラットフォームにインポートされたセグメントメタデータは、他の人物に関連するプロファイルデータと ingested には統合されません。
+これで、このスキーマがプロファイルに対して有効になり、作成した個人以外の ID 名前空間にプライマリ ID が割り当てられます。 その結果、このスキーマを使用して Platform に読み込まれたセグメントメタデータは、他の人関連のプロファイルデータと結合されずに、プロファイルに取り込まれます。
 
 ## スキーマのデータセットの作成
 
-スキーマを設定したら、セグメントメタデータ用のデータセットを作成する必要があります。
+スキーマを設定した後、セグメントメタデータのデータセットを作成する必要があります。
 
-データセットを作成するには、「データセット」ユーザーガイドの指示に従い [ ](../../catalog/datasets/user-guide.md#create) ます。 事前に作成した **[!UICONTROL スキーマを使用して、「スキーマからデータセットを作成」オプションを選択し]** ます。
+データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
-データセットを作成した後は、「データセット」ユーザーガイドの指示に従って、 [ ](../../catalog/datasets/user-guide.md#enable-profile) このデータセットをリアルタイムカスタマープロファイルに対して有効にすることができます。
+データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
 
 ![](../images/tutorials/external-audiences/dataset-profile.png)
 
-## 対象データの設定とインポート
+## オーディエンスデータの設定とインポート
 
-データセットが有効になっていると、UI を通じて、またはエクスペリエンスプラットフォーム Api を使用して、データをプラットフォームに送信できるようになりました。 このデータをプラットフォームに取り込むには、ストリーミング接続を作成する必要があります。
+データセットを有効にした場合、UI を使用して、またはExperience PlatformAPI を使用して、データを Platform に送信できるようになりました。 このデータは、バッチ接続またはストリーミング接続を使用して取り込むことができます。
 
-ストリーミング接続を作成するには、「API チュートリアル」または「UI チュートリアル」に記載された手順に従って [ ](../../sources/tutorials/api/create/streaming/http.md) [ ](../../sources/tutorials/ui/create/streaming/http.md) ください。
+### バッチ接続を使用したデータの取得
 
-ストリーミング接続を作成すると、にデータを送信できる独自のストリーミングエンドポイントへのアクセスが可能になります。 このようなエンドポイントにデータを送信する方法については、「 [ レコードデータのストリーミング」のチュートリアルを参照してください ](../../ingestion/tutorials/streaming-record-data.md#ingest-data) 。
+バッチ接続を作成するには、汎用の [ローカルファイルアップロード UI ガイド](../../sources/tutorials/ui/create/local-system/local-file-upload.md). データの取り込みに使用できる利用可能なソースの完全なリストについては、 [ソースの概要](../../sources/home.md).
+
+### ストリーミング接続を使用したデータの取り込み
+
+ストリーミング接続を作成するには、 [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
+
+ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
-## 読み込んだ視聴者を使用したセグメントの作成
+## オーディエンスのメタデータ構造
 
-読み込んだ対象ユーザーの設定が完了したら、セグメンテーションプロセスの一部として使用できます。 外部ユーザーを検索するには、「セグメントビルダー」に移動し、 **** **[!UICONTROL 「フィールド」セクションの「配信先」タブを選択し]** ます。
+接続を作成した後、データを Platform に取り込めるようになりました。
+
+外部オーディエンスペイロードのメタデータの例を以下に示します。
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{SEGMENT_ID}",
+            "description": "Sample description",
+            "identityMap": {
+                "{IDENTITY_NAMESPACE}": [{
+                    "id": "{}"
+                }]
+            },
+            "segmentName" : "{SEGMENT_NAME}",
+            "segmentStatus": "ACTIVE",
+            "version": "1.0"
+        }
+    }
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `schemaRef` | スキーマ **必須** 前に作成したセグメントメタデータのスキーマを参照します。 |
+| `datasetId` | データセット ID **必須** 先ほど作成したスキーマ用に前に作成したデータセットを参照します。 |
+| `xdmEntity._id` | ID **必須** 外部オーディエンスと同じセグメント ID を参照します。 |
+| `xdmEntity.identityMap` | この節 **必須** には、以前に作成した名前空間の作成時に使用する id ラベルが含まれます。 |
+| `{IDENTITY_NAMESPACE}` | これは、以前に作成した ID 名前空間のラベルです。 例えば、ID 名前空間を「externalAudience」と呼ぶ場合は、それを配列のキーとして使用します。 |
+| `segmentName` | 外部オーディエンスをセグメント化するセグメントの名前。 |
+
+## インポートしたオーディエンスを使用したセグメントの作成
+
+インポートしたオーディエンスを設定したら、セグメント化プロセスの一部として使用できます。 外部オーディエンスを検索するには、セグメントビルダーに移動して、 **[!UICONTROL オーディエンス]** 」タブをクリックします。 **[!UICONTROL フィールド]** 」セクションに入力します。
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
 ## 次の手順
 
-これで、セグメントに外部の対象ユーザーを使用できるようになりました。そのため、セグメントビルダーを使用してセグメントを作成することができます。 セグメントの作成方法について詳しくは、セグメント作成のチュートリアルを参照してください [ ](./create-a-segment.md) 。
+これで、セグメントで外部オーディエンスを使用できるようになったので、セグメントビルダーを使用してセグメントを作成できます。 セグメントの作成方法については、 [セグメントの作成に関するチュートリアル](./create-a-segment.md).
+
+## 付録
+
+読み込まれた外部オーディエンスメタデータを使用し、それらを使用してセグメントを作成する以外に、外部セグメントメンバーシップを Platform に読み込むこともできます。
+
+### 外部セグメントメンバーシップの宛先スキーマの設定
+
+スキーマの構成を開始するには、まず「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションバーで、 **[!UICONTROL スキーマを作成]** を使用して、スキーマワークスペースの右上隅に表示します。 ここからを選択します。 **[!UICONTROL XDM 個人プロファイル]**.
+
+![](../images/tutorials/external-audiences/create-schema-profile.png)
+
+スキーマが作成されたので、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 それには、「 [!UICONTROL セグメントメンバーシップの詳細]に続いて [!UICONTROL フィールドグループを追加].
+
+![](../images/tutorials/external-audiences/segment-membership-details.png)
+
+さらに、スキーマが **[!UICONTROL プロファイル]**. これをおこなうには、フィールドをプライマリ ID としてマークする必要があります。
+
+![](../images/tutorials/external-audiences/external-segment-profile.png)
+
+### データセットの設定
+
+スキーマを作成したら、データセットを作成する必要があります。
+
+データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
+
+![](../images/tutorials/external-audiences/select-schema.png)
+
+データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
+
+![](../images/tutorials/external-audiences/dataset-profile.png)
+
+## 外部オーディエンスメンバーシップデータの設定とインポート
+
+データセットを有効にした場合、UI を使用して、またはExperience PlatformAPI を使用して、データを Platform に送信できるようになりました。 このデータは、バッチ接続またはストリーミング接続を使用して取り込むことができます。
+
+### バッチ接続を使用したデータの取得
+
+バッチ接続を作成するには、汎用の [ローカルファイルアップロード UI ガイド](../../sources/tutorials/ui/create/local-system/local-file-upload.md). データの取り込みに使用できる利用可能なソースの完全なリストについては、 [ソースの概要](../../sources/home.md).
+
+### ストリーミング接続を使用したデータの取り込み
+
+ストリーミング接続を作成するには、 [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
+
+ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+
+![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## セグメントメンバーシップ構造
+
+接続を作成した後、データを Platform に取り込めるようになりました。
+
+外部オーディエンスメンバーシップペイロードの例を以下に示します。
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience Membership"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{UNIQUE_ID}",
+            "description": "Sample description",
+            "{TENANT_NAME}": {
+                "identities": {
+                    "{SCHEMA_IDENTITY}": "sample-id"
+                }
+            },
+            "personId" : "sample-name",
+            "segmentMembership": {
+                "{IDENTITY_NAMESPACE}": {
+                    "{EXTERNAL_IDENTITY}": {
+                        "status": "realized",
+                        "lastQualificationTime": "2022-03-14T:00:00:00Z"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `schemaRef` | スキーマ **必須** 前に作成したスキーマをセグメントメンバーシップデータに参照します。 |
+| `datasetId` | データセット ID **必須** 先ほど作成したメンバーシップスキーマの、前に作成したデータセットを参照します。 |
+| `xdmEntity._id` | データセット内のレコードを一意に識別するために使用される適切な ID です。 |
+| `{TENANT_NAME}.identities` | このセクションは、カスタム ID のフィールドグループを、以前読み込んだユーザーと接続するために使用します。 |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | これは、以前に作成したカスタム ID 名前空間のラベルです。 例えば、ID 名前空間を「externalAudience」と呼ぶ場合は、それを配列のキーとして使用します。 |
