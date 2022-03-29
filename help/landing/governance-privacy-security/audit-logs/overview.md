@@ -2,18 +2,14 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platformで誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 6%
+source-wordcount: '757'
+ht-degree: 8%
 
 ---
 
-# 監査ログ（ベータ版） 
-
->[!IMPORTANT]
->
->Adobe Experience Platformの監査ログ機能は現在ベータ版で、お客様の組織がまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
+# 監査ログ
 
 Adobe Experience Platformでは、システムで実行されるアクティビティの透明性と可視性を高めるために、様々なサービスや機能のユーザーアクティビティを「監査ログ」の形式で監査できます。 これらのログは、Platform 上の問題のトラブルシューティングに役立つ監査証跡を形成し、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。
 
@@ -27,13 +23,18 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 | リソース | アクション |
 | --- | --- |
-| [データセット](../../../catalog/datasets/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li></ul> |
-| [スキーマ](../../../xdm/schema/composition.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [データセット](../../../catalog/datasets/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li></ul> |
+| [スキーマ](../../../xdm/schema/composition.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>プロファイルに対して有効にする</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [サンドボックス](../../../sandboxes/home.md) | <ul><li>選択からの    </li><li>更新</li><li>リセット</li><li>削除</li></ul> |
-| [宛先](../../../destinations/home.md) | <ul><li>アクティブ化</li></ul> |
+| [宛先](../../../destinations/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [セグメント](../../../segmentation/home.md) | <ul><li>選択からの    </li><li>削除</li><li>セグメントの有効化</li><li>セグメント削除</li></ul> |
+| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [製品プロファイル](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [アカウント (Adobe)](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 
 ## 監査ログへのアクセス
 
@@ -47,7 +48,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 ![監査ログダッシュボード](../../images/audit-logs/audits.png)
 
-システムは、昨年の監査ログのみを表示します。 この制限を超えるログは自動的にシステムから削除されます。
+監査ログは、365 日間保持され、その後システムから削除されます。 したがって、元に戻せる期間は最大 365 日までです。
 
 リストからイベントを選択すると、その詳細が右側のパネルに表示されます。
 
@@ -55,7 +56,12 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 ### 監査ログのフィルタリング
 
-ファネルアイコン (![フィルターアイコン](../../images/audit-logs/icon.png)) をクリックして、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。
+>[!NOTE]
+>
+>この新機能により、表示されるデータは 2022 年 3 月まで遡ります。 選択したリソースに応じて、2022 年 1 月より前のデータを利用できるようになります。
+
+
+ファネルアイコン (![フィルターアイコン](../../images/audit-logs/icon.png)) をクリックして、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。 選択した各種フィルターに関係なく、直近の 1000 件のレコードのみが表示されます。
 
 ![フィルター](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ UI の監査イベントには、次のフィルターを使用できます。
 | --- | --- |
 | [!UICONTROL カテゴリ] | ドロップダウンメニューを使用して、表示される結果を次の項目でフィルタリングします。 [カテゴリ](#category). |
 | [!UICONTROL アクション] | アクションでフィルターします。 現在のみ [!UICONTROL 作成] および [!UICONTROL 削除] アクションはフィルタリングできます。 |
+| [!UICONTROL ユーザー] | 完全なユーザー ID を入力します ( 例： `johndoe@acme.com`) を使用して、ユーザーでフィルタリングできます。 |
 | [!UICONTROL ステータス] | アクションが許可（完了）されたか、または不足により拒否されたかによってフィルターします [アクセス制御](../../../access-control/home.md) 権限。 |
-| [!UICONTROL 日付] | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 |
+| [!UICONTROL 日付] | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 データは 90 日間のルックバック期間で書き出すことができます ( 例：2021-12-15 ～ 2022-03-15)。 これは、イベントタイプによって異なる場合があります。 |
 
 フィルターを削除するには、該当するフィルターのピルアイコンの「X」を選択するか、「 **[!UICONTROL すべてクリア]** をクリックして、すべてのフィルターを削除します。
 
@@ -90,6 +97,10 @@ UI で実行できるすべてのアクションは、API 呼び出しを使用�
 
 Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次を参照してください。 [文書](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## 次の手順
+## 次の手順とその他のリソース
 
 このガイドでは、監査ログをExperience Platformで管理する方法を説明します。 Platform アクティビティの監視方法について詳しくは、 [Observability Insights](../../../observability/home.md) および [データ取得の監視](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Experience Platformの監査ログに関する理解を深めるには、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
