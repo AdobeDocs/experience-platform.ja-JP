@@ -4,10 +4,10 @@ title: 標準アラートルール
 description: このドキュメントでは、Experience Platform が提供する事前定義済みのアラートルールについて説明します。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
-workflow-type: ht
-source-wordcount: '728'
-ht-degree: 100%
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+workflow-type: tm+mt
+source-wordcount: '785'
+ht-degree: 94%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 | ソースフロー実行情報 | ソースフロー実行の成功 | このアラートは、データがソース接続から正常に取り込まれたときにトリガーします。 |
 | ソースフロー実行の遅延、失敗、エラー | ソースフロー実行の失敗 | このアラートは、ソース接続からデータを取り込む際にエラーが発生した場合にトリガーします。 |
 | ソースフロー実行の遅延、失敗、エラー | 取り込み遅延 | このアラートは、バッチ取得フローの実行処理が 150 分以上かかるとトリガーします。 |
+| ソースフロー実行の遅延、失敗、エラー | 摂取不足 | このアラートは、取り込みが 7 時間以上遅れ、データが Platform に取り込まれない場合に、メッセージを送信します。 |
+| ソースフロー実行の遅延、失敗、エラー | 取り込み失敗 | このアラートトリガーは、失敗したレコードとすべてのレコードの比率がしきい値の 0.5%を超えた場合に発生します |
 
 {style=&quot;table-layout:auto&quot;}
 
