@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B エディションのソース
 description: Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 17%
+source-wordcount: '223'
+ht-degree: 8%
 
 ---
 
@@ -16,10 +16,6 @@ ht-degree: 17%
 >Real-time Customer Data Platform B2B Edition を使用していない場合は、 [ソースの概要](./sources-overview.md) 代わりに、
 
 Real-time Customer Data Platform B2B Edition を使用すると、 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) ソースコネクタ、Salesforce、Amazon S3、ADLS など。 この様々なソースを使用すると、サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
-
->[!TIP]
->
->Real-time Customer Data Platform B2B Edition は、データの取り込みに使用できる様々な外部ソースを提供していますが、Real-time Customer Data Platformで使用できる外部ソースは限られています。 組織で使用可能なソースコネクタを確認するには、Platform UI でソースカタログを表示します。 カタログにアクセスするには、左側のナビゲーションで、「**ソース**」を選択してから、「**カタログ**」を選択します。
 
 ソースが B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
