@@ -3,10 +3,10 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: （ベータ版）Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
 workflow-type: tm+mt
-source-wordcount: '1298'
-ht-degree: 2%
+source-wordcount: '1340'
+ht-degree: 1%
 
 ---
 
@@ -44,6 +44,10 @@ ht-degree: 2%
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
+
+## IP アドレスの許可リスト {#ip-address-allowlist}
+
+お客様のセキュリティおよびコンプライアンス要件を満たすために、Experience Platformは、 [!DNL Amazon Kinesis] 宛先。 参照： [ストリーミング先の IP アドレス許可リスト](/help/destinations/catalog/streaming/ip-address-allow-list.md) ：する IP の完全なリストを表示しま許可リストす。
 
 ## 必須 [!DNL Amazon Kinesis] 権限 {#required-kinesis-permission}
 

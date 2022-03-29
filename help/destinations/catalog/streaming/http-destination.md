@@ -3,9 +3,9 @@ keywords: ストリーミング；
 title: HTTP API 接続
 description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 3%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 また、 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) ：統合を設定し、HTTP エンドポイントにExperience Platformプロファイルデータを送信します。
+
+## IP アドレスの許可リスト {#ip-address-allowlist}
+
+お客様のセキュリティおよびコンプライアンス要件を満たすために、Experience Platformは HTTP API 宛先に対してできる静的 IP のリストを提供しま許可リストす。 参照： [ストリーミング先の IP アドレス許可リスト](/help/destinations/catalog/streaming/ip-address-allow-list.md) ：する IP の完全なリストを表示しま許可リストす。
 
 ## 宛先に接続 {#connect-destination}
 
@@ -97,10 +100,6 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 ### 宛先属性 {#attributes}
 
 内 [[!UICONTROL 属性を選択]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 手順に従い、Adobeでは、 [和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas). 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
-
-## 製品に関する考慮事項 {#product-considerations}
-
-Experience Platformは、固定の静的 IP セットを介して HTTP エンドポイントにデータをストリーミングアウトしません。 したがって、Adobeは HTTP API の宛先に対してできる静的 IP のリストを提供できません許可リスト。
 
 ## プロファイルの書き出し動作 {#profile-export-behavior}
 

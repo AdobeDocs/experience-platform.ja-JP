@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 44%
+source-wordcount: '733'
+ht-degree: 43%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 44%
       * [Azure BLOB 接続](./catalog/cloud-storage/azure-blob.md)
       * [（ベータ版）Azure Event Hubs 接続](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [IP アドレスの許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [クラウドストレ許可リストージの宛先の IP アドレス](./catalog/cloud-storage/ip-address-allow-list.md)
    * データ管理プラットフォームの宛先 {#data-management}
       * [データ管理プラットフォーム (DMP) の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
@@ -138,6 +138,7 @@ ht-degree: 44%
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミング先 {#streaming}
       * [ （ベータ版）HTTP API 接続](./catalog/streaming/http-destination.md)
+      * [ストリーミング許可リスト先の IP アドレス](./catalog/streaming/ip-address-allow-list.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese 拡張機能の宛先](./catalog/survey/foresee.md)
