@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
+source-git-commit: 004835ab8af8f187c3e6af036429072e8de19024
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 31%
@@ -125,7 +125,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | B2B を使用する際に新しいソースが利用できるようになりました | B2B の使用例に対して、Platform で利用可能なすべてのソースを使用できるようになりました。 詳しくは、 [ソースカタログ](../../sources/home.md) を参照してください。 |
-| 新しいの一般リリース [!DNL Oracle Eloqua] ソース | これで、 [!DNL Oracle Eloqua] データをシームレスに取り込むためのソース [!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）を Platform に送信します。 詳しくは、 [作成 [!DNL Oracle Eloqua] ソース接続](../../sources/connectors/oracle-eloqua.md) を参照してください。 |
+| 新しいの一般リリース [!DNL Oracle Eloqua] ソース | これで、 [!DNL Oracle Eloqua] データをシームレスに取り込むためのソース [!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）を Platform に送信します。 詳しくは、 [作成 [!DNL Oracle Eloqua] ソース接続](../../sources/connectors/marketing-automation/oracle-eloqua.md) を参照してください。 |
 | の API 強化 [!DNL Data Landing Zone] | この [!DNL Data Landing Zone] ソースで、 [!DNL Flow Service] API 詳しくは、 [作成 [!DNL Data Landing Zone] ソース接続](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
