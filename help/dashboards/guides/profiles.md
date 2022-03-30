@@ -4,10 +4,10 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 5%
+source-wordcount: '2572'
+ht-degree: 4%
 
 ---
 
@@ -102,6 +102,10 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL プロファイル数のトレンド]](#profiles-count-trend)
 * [[!UICONTROL ID 別プロファイル]](#profiles-by-identity)
 * [[!UICONTROL ID の重複]](#identity-overlap)
+* [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
+* [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
+* [[!UICONTROL 非セグメント化プロファイル] トレンド](#unsegmented-profiles-trend)
+* [[!UICONTROL ID 別の非セグメント化プロファイル]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL プロファイル数] {#profile-count}
 
@@ -135,7 +139,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 
 この **[!UICONTROL プロファイル数のトレンド]** ウィジェットは、ウィジェットの右上に「キャプション」ボタンを表示します。 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。
 
-![キャプションボタンがハイライト表示された「プロファイル数」トレンドウィジェットを表示する「プロファイルの概要」タブ。](../images/profiles/profile-count-trend-captions.png)
+![「プロファイルの概要」タブに、キャプションボタンがハイライト表示された「プロファイル数」トレンドウィジェットが表示されます。](../images/profiles/profile-count-trend-captions.png)
 
 機械学習モデルは、グラフとデータを分析することで、主要なトレンドと重要なイベントを記述するキャプションを自動的に生成します。
 
@@ -162,6 +166,30 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL 単一の ID プロファイル] {#single-identity-profiles}
+
+この [!UICONTROL 単一の ID プロファイル] ウィジェットは、id を作成する 1 つのタイプの ID のみを持つ組織のプロファイルの数を提供します。 この ID タイプは、電子メールまたは ECID のどちらかです。 プロファイル数は、最新のスナップショットに含まれるデータから生成されます。
+
+![単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL 非セグメント化プロファイル] {#unsegmented-profiles}
+
+この [!UICONTROL 非セグメント化プロファイル] ウィジェットは、どのセグメントにも添付されていないすべてのプロファイルの合計数を提供します。 生成された数は、最後のスナップショット時点での正確さで、組織全体でのプロファイルのアクティベーションの機会を表します。 また、十分な ROI を提供しないプロファイルを拡張する機会も示します。
+
+![非セグメント化プロファイルウィジェット。](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL 非セグメント化プロファイルトレンド] {#unsegmented-profiles-trend}
+
+この [!UICONTROL 非セグメント化プロファイルトレンド] ウィジェットには、特定の期間にどのセグメントにも添付されていないプロファイルの数を示す線グラフの図が表示されます。 どのセグメントにも関連付けられていないプロファイルのトレンドを、30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 プロファイル数は、x 軸の y 軸と時間に反映されます。
+
+![非セグメント化プロファイルトレンドウィジェット。](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL ID 別の非セグメント化プロファイル] (#unsegmented-profiles-by-identity)
+
+この [!UICONTROL ID 別の非セグメント化プロファイル] ウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データを棒グラフで視覚化し、比較しやすくします。
+
+![ID 別の非セグメント化プロファイルウィジェット。](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## （ベータ版）プロファイル有効性ウィジェット {#profile-efficacy-widgets}
 
