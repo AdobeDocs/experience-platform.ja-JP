@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL ID によるマッピングされていないセグメント]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID によるマッピングされたセグメント]](#mapped-segments-by-identity)
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
+* [[!UICONTROL 宛先数]](#destinations-count)
 
 ### [!UICONTROL 最も使用されている宛先] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 セグメントが [!UICONTROL マッピングされたオーディエンスのヘルス] ウィジェットが広い余白でずらされている場合は、オーディエンスサイズのトレンドグラフを参照して、異常なセグメントを見つける必要があります。 トレンドを参照すると、セグメントの正常性に関する詳細なインサイトを得ることができます。
 
 ![Mapped audience ヘルスウィジェット。](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL 宛先数] (#destinations-count)
+
+この [!UICONTROL 宛先数] ウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。
+
+合計数の下で、「 」を選択します。 **[!UICONTROL 宛先]** をクリックして、宛先の「参照」タブに移動します。 このページには、これまでに接続を確立したすべての宛先が一覧表示されます。
+
+![宛先数ウィジェット。](../images/destinations/destinations-count.png)
 
 ## 次の手順
 
