@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 30%
+source-wordcount: '882'
+ht-degree: 31%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [アラート](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [ソース](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## 監査ログ {#audit-logs}
 
@@ -70,6 +70,8 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 | ID ウィジェットによる非セグメント化プロファイル | このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データは棒グラフで表示されます。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
 | 単一の ID プロファイルウィジェット | このウィジェットは、電子メールまたは ECID のいずれかの ID を作成する 1 種類の ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 プロファイルダッシュボードについて詳しくは、 [プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md).
 
 ### 宛先ダッシュボード
@@ -82,19 +84,21 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 | --- | --- |
 | 宛先数ウィジェット | ウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。 詳しくは、 [destinations standard ウィジェットドキュメント](../../dashboards/guides/destinations.md#standard-widgets) を参照してください。 |
 
-Platform での宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
-
-## エクスペリエンスデータモデル（XDM） {#xdm}
-
-エクスペリエンスデータモデル (XDM) は、Adobe Experience Platformに取り込まれるデータの共通の構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
-
-| 機能 | 説明 |
-| --- | --- |
-| スキーマの個々の標準フィールドを追加または削除する | スキーマエディターの UI で、標準フィールドグループの一部をスキーマに追加できるようになり、カスタムリソースを最初から作成しなくても、含めるように選択したフィールドの柔軟性が向上しました。<br><br>また、スキーマ構造内で直接アドホックカスタムフィールドを定義し、事前にフィールドグループを作成または編集しなくても、新しいカスタムフィールドグループまたは既存のカスタムフィールドグループに割り当てることができるようになりました。<br><br>詳しくは、 [UI でのスキーマの作成と編集](../../xdm/ui/resources/schemas.md) を参照してください。 |
-
 {style=&quot;table-layout:auto&quot;}
 
-Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md).
+Platform での宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## クエリサービス {#query-service}
 
@@ -105,6 +109,8 @@ Platform での XDM について詳しくは、 [XDM システムの概要](../.
 | 機能 | 説明 |
 | --- | --- |
 | `table_exists` | 新しいフィーチャコマンドは、現在システムにテーブルが存在するかどうかを確認するために使用されます。 このコマンドは、次のブール値を返します。 `true` ( テーブルが **は** 存在し、 `false` テーブルが **not** 存在する。 詳しくは、 [SQL 構文ドキュメント](../../query-service/sql/syntax.md) を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 使用可能な機能について詳しくは、 [クエリサービスの概要](../../query-service/home.md).
 
