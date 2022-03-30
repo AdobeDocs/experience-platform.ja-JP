@@ -4,9 +4,9 @@ description: 既存のフィールドグループからエクスペリエンス�
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c1b1a3b18a9950d71fb84e463adc973ab45ba563
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->このベータ版ドキュメントで説明しているワークフローは、Adobe Experience Platformで一般に利用できるようになりました。 スキーマエディターでのフィールドベースのワークフローに関する最新のガイダンスについては、 [スキーマ UI ガイド](./resources/schemas.md) 代わりに、 このガイドは間もなく削除されます。
+>このドキュメントで説明されているワークフローは現在ベータ版で、お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
 
 Adobe Experience Platformは、堅牢な標準化された [フィールドグループ](../schema/composition.md#field-group) エクスペリエンスデータモデル (XDM) スキーマで使用する場合。 これらのフィールドグループの構造とセマンティクスは、Platform の様々なセグメント化の使用例や他のダウンストリームアプリケーションに対応するように、慎重に調整されています。 また、独自のカスタムフィールドグループを定義して、独自のビジネスニーズに対応することもできます。
 

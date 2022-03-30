@@ -5,9 +5,9 @@ title: UI でのスキーマフィールドグループの作成と編集
 description: スキーマユーザーインターフェイスでスキーマフィールドグループを作成および編集するExperience Platformを説明します。
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -53,10 +53,6 @@ Adobe Experience Platformには、様々なマーケティングの使用例に�
 エディターでスキーマを開いたら、を起動できます。 [フィールドグループへのフィールドの追加](#add-fields).
 
 ## フィールドグループにフィールドを追加する {#add-fields}
-
->[!NOTE]
->
->ここでは、カスタムフィールドグループへのフィールドの追加に焦点を当てます。 標準フィールドグループにカスタムフィールドを追加する方法について詳しくは、 [スキーマ UI ガイド](./schemas.md#custom-fields-for-standard-groups).
 
 フィールドを [!DNL Schema Editor]を選択し、最初に左側のパネルでフィールドグループの名前を選択して、次に **プラス (+)** キャンバスでスキーマの名前の横にあるアイコン。
 
