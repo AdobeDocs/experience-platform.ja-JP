@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
+source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 31%
+source-wordcount: '1059'
+ht-degree: 25%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 31%
 Adobe Experience Platform の新機能：
 
 - [監査ログ](#audit-logs)
+- [Real-Time CDP B2B Edition の関連アカウント](#related-accounts)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -39,6 +40,22 @@ Experience Platformを使用すると、様々なサービスや機能のユー�
 {style=&quot;table-layout:auto&quot;}
 
 Platform での監査ログについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Real-Time CDP B2B Edition の関連アカウント {#related-accounts}
+
+>[!NOTE]
+>
+>関連アカウント機能は、Real-Time CDP B2B Edition のお客様のみが利用できます。
+
+B2B 企業は、多くの場合、同じ実世界のビジネスエンティティに対する部分的または競合するデータのみを含め、顧客情報を複数のシステムに保存します。 これにより、顧客の正確な見地に到達するという大きな課題が生じ、B2B マーケティングと販売の取り組みの効率と効果が低下します。 関連アカウントのリリースに伴い、 [!DNL Real-time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。 セグメント定義に関連するアカウントを含めて、リーチを広げたり、セグメントに幅広い条件を適用したりできます。
+
+この機能の詳細については、次のドキュメントページを参照してください。
+
+- [Real-Time CDP B2B Edition の関連アカウントの概要](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [アカウントプロファイル UI ガイドの「関連アカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [セグメント定義での関連アカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-account)
+
+Real-time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
 
 ## アラート {#alerts}
 
