@@ -3,10 +3,10 @@ audience: user
 user-guide-title: データフローガイド
 user-guide-description: データフローは、Platform 間でデータを移動するデータジョブを表します。
 feature: Dataflows
-source-git-commit: 257c3f7cd93df6d63f4bc6e2836280427be1cbae
+source-git-commit: 485bddc488f98357fcf2ac33097b450541042602
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 100%
+source-wordcount: '51'
+ht-degree: 86%
 
 ---
 
@@ -20,4 +20,6 @@ ht-degree: 100%
 - UI ガイド {#ui}
    - [宛先のデータフローの監視](./ui/monitor-destinations.md)
    - [ソースのデータフローの監視](./ui/monitor-sources.md)
+   - B2B 監視 {#b2b}
+      - [プロファイルエンリッチメントジョブの監視](./ui/b2b/monitor-profile-enrichment.md)
 - [フローサービス API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

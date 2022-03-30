@@ -2,10 +2,10 @@
 title: リアルタイム CDP B2B エディションのセグメント化の使用例
 description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 2%
+source-wordcount: '1247'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >これらのセグメント化の使用例に必要な属性は、 Real-time Customer Data Platform B2B Edition のお客様のみが使用できます。 Real-time Customer Data Platform B2B Edition を使用していない場合は、 [セグメントの概要](./segmentation-overview.md) 代わりに、
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 B2B クラスのセグメント化属性を使用する前に、次の手順を実行する必要があります。
 
@@ -28,7 +28,7 @@ B2B クラスのセグメント化属性を使用する前に、次の手順を�
 
 これらの要件が満たされたら、B2B の一般的な使用例でこれらの属性を組み合わせることができます。
 
-## はじめに
+## はじめに {#getting-started}
 
 B2B クラスの和集合スキーマに関係が確立され、データの取り込みに使用されると、その属性がセグメントビルダーの左側のパネルで使用できるようになります。
 
@@ -54,52 +54,58 @@ B2B の使用例のセグメントを効果的に作成するには、スキー�
 
 以下の使用例では、これらの結果を達成するために異なるスキーマ間の関係を確立するために使用されるクラスに関する情報を提供します。 これらの例を使用すると、独自のセグメントを作成できます。
 
-## 様々な使用例の例
+## 様々なセグメントの使用例 {#use-cases}
 
 B2B エディションでのセグメント化の使用例を次に示します。 各例では、セグメントの動作の説明と、セグメントの作成に使用されるクラスの説明を示します。 提供された画像は、 [!UICONTROL 属性] スキーマの構造を反映するサイドレール。 この [!UICONTROL セグメントのプロパティ] セクションの右側には、セグメントの属性が書き込まれた分類が表示されます。
 
-### 例 1
+### 例 1:B2B のオポチュニティに関する「意思決定者」を見つける {#find-decision-maker}
 
 任意のオポチュニティの「意思決定者」であるすべての人を検索します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラスと [!UICONTROL XDM ビジネスオポチュニティ人物関係] クラス。
 
 ![例 1 の設定を表示する UI](../assets/segmentation/example-1.png)
 
-### 例 2
+### 例 2:特定のドル額で商談に割り当てられた B2B プロファイルを見つける {#find-opportunities-amount}
 
 商談額が指定の金額（$100 万）を超える商談に直接割り当てられているすべての人を検索します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスオポチュニティ人物関係] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
 
 ![UI の例 2 の設定を表示](../assets/segmentation/example-2.png)
 
-### 例 3
+### 例 3:事業所別に商談に割り当てられた B2B プロファイルを検索 {#find-opportunities-location}
 
 特定の場所（カナダ）にアカウントがある商談に直接割り当てられているすべての担当者を検索します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスオポチュニティ人物関係] クラス [!UICONTROL XDM ビジネスオポチュニティ] クラスおよび [!UICONTROL XDM ビジネスアカウント] クラス。
 
 ![UI 表示の例 3 の設定](../assets/segmentation/example-3.png)
 
-### 例 4
+### 例 4:業界別および閲覧行動別のオポチュニティに関して「意思決定者」を見つける {#find-industry-browsing-behavior}
 
 アカウントが「金融」業界に存在する任意のオポチュニティの「意思決定者」であるすべての人を見つけ、過去 3 日間に価格ページを訪問しました。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスオポチュニティ人物関係] クラス [!UICONTROL XDM ビジネスオポチュニティ] クラスおよび [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ExperienceEvent] クラス。
 
 ![UI 表示の例 4 の設定](../assets/segmentation/example-4.png)
 
-### 例 5
+### 例 5:部門名と商談額別に商談の B2B プロファイルを検索 {#find-department-opportunity-amount}
 
 人事 (HR) 部門で働くすべての人を検索し、1 つ以上のオープン商談がある特定の金額（100 万ドル）以上のアカウントに関連します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
 
 ![UI 表示の例 5 の設定](../assets/segmentation/example-5.png)
 
-### 例 6
+### 例 6:役職および年間アカウント売上高別に B2B プロファイルを検索 {#find-by-job-title-and-revenue}
 
 役職が副社長で、指定した金額（$1 億）以上の年間売上高を持つ任意のアカウントに関連するすべての人を検索し、先月に少なくとも 3 回価格ページを訪問しました。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ExperienceEvent] クラス。
 
 ![UI の例 6 の設定を表示](../assets/segmentation/example-6.png)
 
-### 例 7
+### 例 7:商談のステータスと閲覧行動別に「意思決定者」を見つける {#find-by-opportunity-status-and-browsing-behavior}
 
 クローズしたオポチュニティの「意思決定者」であるすべての人を見つけ、先週の価格ページを訪問しました。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスオポチュニティ人物関係] クラス [!UICONTROL XDM ビジネスオポチュニティ] クラスおよび [!UICONTROL XDM ExperienceEvent] クラス。
 
 ![UI 表示の例 7 設定](../assets/segmentation/example-7.png)
 
-## 次の手順
+### 例 8:関連アカウントを使用してセグメント化のリーチを拡大する {#related-accounts}
+
+人事 (HR) 部門で働くすべての人を検索し、任意のアカウントに関連する *またはアカウントの関連アカウントのいずれか* 1 つ以上のオープンな商談が、指定された金額（100 万ドル）以上に相当します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
+
+![関連アカウントのセグメントを表示する UI](../assets/segmentation/segmentation-related-accounts.png)
+
+## 次の手順 {#next-steps}
 
 この概要を読むと、Real-time CDP、B2B Edition を使用して利用できるセグメント化の可能性について理解できます。 セグメント化サービスの詳細については、[セグメント化に関するドキュメント](../../segmentation/home.md)を参照してください。

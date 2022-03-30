@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: c0ea64691ad5f901bca9729ff6d742ffd423f1e5
+source-git-commit: a3b0c8b8acfac2f80fa630938ec9aa4a04d76175
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 100%
+source-wordcount: '184'
+ht-degree: 94%
 
 ---
 
@@ -45,6 +45,8 @@ ht-degree: 100%
 * プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
    * [プロファイルの参照](profile/profile-browse.md)
+* リアルタイム CDP B2B エディション AI/ML サービス {#b2b-cdp-ai-ml}
+   * [関連するアカウント](b2b-ai-ml-services/related-accounts.md)
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)
    * [Real-time CDP B2B Edition のスキーマ](schemas/b2b.md)

@@ -3,10 +3,10 @@ keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結
 title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: ht
-source-wordcount: '1193'
-ht-degree: 100%
+source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+workflow-type: tm+mt
+source-wordcount: '1426'
+ht-degree: 84%
 
 ---
 
@@ -20,21 +20,21 @@ ht-degree: 100%
 
 B2B ワークフローの一部としてアカウントプロファイルを作成する方法について詳しくは、[エンドツーエンドのチュートリアル](../b2b-tutorial.md)を参照してください。
 
-## アカウントプロファイルの参照
+## アカウントプロファイルの参照 {#browse-account-profiles}
 
 アカウントプロファイルを参照するには、まず左のナビゲーションで「[!UICONTROL アカウント] 」の下の「**[!UICONTROL プロファイル]**」を選択します。
 
-![](images/b2b-account-browse.png)
+![左側のナビゲーションでプロファイルを選択](images/b2b-account-browse.png)
 
 「**[!UICONTROL 参照]**」タブでは、接続されたエンタープライズソースのアカウント ID を使用して、またはソースの詳細を直接入力して、アカウントプロファイルを調べることができます。
 
-![](images/b2b-account-browse-by.png)
+![アカウント ID を使用したプロファイルの調査](images/b2b-account-browse-by.png)
 
-### [!UICONTROL 接続されたエンタープライズソース]で参照
+### [!UICONTROL 接続されたエンタープライズソース]で参照 {#browse-by-connected-enterprise-source}
 
 接続しているエンタープライズソース別にアカウントプロファイルを参照するには、「**[!UICONTROL 参照]**」ドロップダウンから「**[!UICONTROL 接続しているエンタープライズソース]**」を選択し、「**[!UICONTROL ソース]**」フィールドの横のセレクターボタンを使用して接続しているソースを選択します。
 
-![](images/b2b-account-browse.png)
+![接続されたエンタープライズソース別のアカウントプロファイルの参照](images/b2b-account-browse.png)
 
 これにより、「**[!UICONTROL ソースを選択]**」ダイアログが開き、組織が確立した接続に基づいてソースを選択できます。
 
@@ -44,7 +44,7 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 エンタープライズソースの接続について詳しくは、[ソースの概要](../sources/sources-overview.md)を参照してください。
 
-![](images/b2b-account-select-source.png)
+![ソースワークフローを選択](images/b2b-account-select-source.png)
 
 接続名の横のラジオボタンを選択してソースを選び、「**[!UICONTROL 選択]**」を使用して「[!UICONTROL 参照]」タブに戻ることができます。
 
@@ -56,9 +56,9 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 >
 >最も一般的な標準構文は、`.mkto_org` が付加された Marketo アカウント ID です（例：`1234567.mkto_org`）。Marketo アカウントベースのマーケティングのお客様は、`.mkto_account` が付加された Marketo アカウント ID を使用して見つけることができる追加の値を持っている場合があります。使用する構文がわからない場合は、Marketo 管理者に確認してください。
 
-![](images/b2b-account-browse-id.png)
+![アカウント ID の選択](images/b2b-account-browse-id.png)
 
-### [!UICONTROL その他]で参照
+### [!UICONTROL その他]で参照 {#browse-by-others}
 
 Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力できるようにすることで、直接検索を実行する機能をサポートしています。ソース名とインスタンスを直接入力することで、Experience Platform が正しいアカウントプロファイルデータを検索して表示するのに必要なコンテキストを提供します。
 
@@ -68,9 +68,9 @@ Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**
 
 直接検索を開始するには、「**[!UICONTROL 参照方法]**」ドロップダウンから「**[!UICONTROL その他]**」を選択し、表示するアカウントの&#x200B;**[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力します。
 
-![](images/b2b-account-browse-adhoc.png)
+![他のユーザーによる参照](images/b2b-account-browse-adhoc.png)
 
-## アカウントプロファイルの詳細の表示
+## アカウントプロファイルの詳細の表示 {#view-account-profile-details}
 
 「**[!UICONTROL 参照]**」タブを使用してアカウントプロファイルを検索した後、「**[!UICONTROL プロファイル ID]**」を選択すると、アカウントプロファイルの「**[!UICONTROL 詳細]**」タブが開きます。「**[!UICONTROL 詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々のアカウントの単一のビューを形成したものです。これには、基本属性やソーシャルメディアデータなどのアカウントの詳細が含まれます。
 
@@ -80,19 +80,19 @@ Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**
 >
 >同様の機能が顧客プロファイルで利用可能で、属性の追加と削除、パネルのサイズ変更などの手順が記載されたステップバイステップガイドが作成されています。詳しくは、[プロファイルの詳細カスタマイズガイド](../../profile/ui/profile-customization.md)を参照してください。
 
-![](images/b2b-account-details.png)
+![アカウントプロファイルの詳細の表示](images/b2b-account-details.png)
 
 使用可能な別のタブを選択すると、アカウントに関連する追加の詳細を表示できます。これらのタブには、属性、人物、企業システム全体でそのアカウントに関連するオープンな機会とクローズされた機会を表示する機会タブが含まれます。各タブについて詳しくは、次の節を参照してください。
 
-## 「属性」タブ
+## 「属性」タブ {#attributes-tab}
 
 「**[!UICONTROL 属性]**」タブには、アカウントに関連するすべてのレコード情報が一覧表示されます。これには、アカウントの単一のビューを形成するために結合された複数のソースからの属性データが含まれます。
 
 リスト内のデータを表示できることに加えて、検索バーを使用して特定の属性を検索したり、レコードデータを JSON 形式で表示したりできます。
 
-![](images/b2b-account-attributes.png)
+![「属性」タブ](images/b2b-account-attributes.png)
 
-## 「人物」タブ
+## 「人物」タブ {#people-tab}
 
 「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個人のリストが表示されます。これらの人物は、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-time CDP B2B Edition では、単一のリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
 
@@ -102,9 +102,9 @@ Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**
 
 連絡先の情報のスナップショットを表示するほか、リストされている各ユーザーには&#x200B;**[!UICONTROL プロファイル ID]** も含まれています。これは、その個人のリアルタイム顧客プロファイルを参照できるクリック可能なリンクです。アカウントに関連する個々の顧客プロファイルの表示について詳しくは、[Real-time CDP B2B Edition でのプロファイルの参照](../profile/profile-browse.md)に関するガイドを参照してください。
 
-![](images/b2b-account-people.png)
+![「人物」タブ](images/b2b-account-people.png)
 
-## 「機会」タブ
+## 「機会」タブ {#opportunities-tab}
 
 「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する情報が表示されます。これらの機会は複数のソースからExperience Platform に取り込むことができますが、Real-time CDP B2B エディションを使用すると、マーケティング担当者は、これらの機会をすべて 1 か所で簡単に確認できます。
 
@@ -114,4 +114,20 @@ Real-time CDP、B2B Edition では、表示したいアカウントの&#x200B;**
 
 各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 
-![](images/b2b-account-opportunities.png)
+![「アカウント商談」タブ](images/b2b-account-opportunities.png)
+
+## 「関連アカウント」タブ {#related-accounts-tab}
+
+この **[!UICONTROL 関連するアカウント]** 「 」タブには、閲覧中のアカウントに関連する他のアカウントに関する情報が表示されます。 この機能の詳細については、 [関連アカウントの概要](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+
+>[!NOTE]
+>
+>* 関連アカウントグループには、最大 30 個のアカウントプロファイルを含めることができます。 関連するアカウントプロファイルが 30 件を超える場合、それらは任意に複数のグループに分割され、それぞれのグループのメンバーは 30 人以下になります。 アカウントプロファイルの関連アカウントグループには、常にそれ自体が含まれます。
+>* この [!UICONTROL 関連するアカウント] 現在、「 」タブには、参照しているアカウントに関連する最大 25 件のアカウントの一覧が表示されます。 これは、今後のアップデートで対処される予定の制限です。 この UI の制限にもかかわらず、セグメント定義で関連アカウントを使用する場合、30 件の関連アカウントプロファイルのグループに対して、すべてのプロファイルがターゲティングに使用されます。
+
+
+各関連アカウントには、アカウントプロファイル ID や名前、アカウントのソースキーなどの情報のほか、ホームページ、住所、親アカウント、電話、業界、年間売上高に関する情報が含まれます。
+
+![「関連アカウント」タブ](images/b2b-account-related-accounts.png)
+
+このリスト内の関連するアカウントをセグメント化に使用できます。 参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-account) を参照してください。
