@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 7145867795bcd8e1093c09df3fefdee518f9578a
+source-git-commit: 9117fffc58786f05e8741d9695ddb551344b6cc7
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 50%
+source-wordcount: '652'
+ht-degree: 44%
 
 ---
 
@@ -14,14 +14,15 @@ ht-degree: 50%
 
 Adobe Experience Platform の新機能：
 
-- [[!DNL Audit Logs]](#audit-logs)
+- [監査ログ](#audit-logs)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [アラート](#alerts)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ソース](#sources)
 
-## [!DNL Audit Logs] {#audit-logs}
+## 監査ログ {#audit-logs}
 
 Experience Platformを使用すると、様々なサービスや機能のユーザーアクティビティを監査できます。 監査ログは、誰がいつ何を実行したかに関する情報を提供します。
 
@@ -31,6 +32,8 @@ Experience Platformを使用すると、様々なサービスや機能のユー�
 | --- | --- |
 | データセット、スキーマ、クラス、フィールドグループ、データタイプ、サンドボックス、宛先、セグメント、結合ポリシー、計算済み属性、製品プロファイルおよびアカウント (Adobe) の監査ログ | これらは、監査ログで記録されるリソースです。 この機能を有効にすると、アクティビティの発生時に監査ログが自動的に収集されます。 手動でログの収集を有効にする必要はありません。 |
 | 監査ログの書き出し | 監査ログは、 `CSV` または `JSON` ファイル。 生成されたファイルは、直接お使いのマシンに保存されます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 Platform での監査ログについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -44,7 +47,23 @@ Experience Platform では、様々な Platform アクティビティに関す�
 | --- | --- |
 | 新しいアラートルール | データの取り込みに関連するソースで、2 つの新しいアラートルールを使用できるようになりました。 更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 Platform のアラートについて詳しくは、[アラートの概要](../../observability/alerts/overview.md)を参照してください。
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+エクスペリエンスデータモデル (XDM) は、Adobe Experience Platformに取り込まれるデータの共通の構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| スキーマの個々の標準フィールドを追加または削除する | スキーマエディターの UI で、標準フィールドグループの一部をスキーマに追加できるようになり、カスタムリソースを最初から作成しなくても、含めるように選択したフィールドの柔軟性が向上しました。<br><br>また、スキーマ構造内で直接アドホックカスタムフィールドを定義し、事前にフィールドグループを作成または編集しなくても、新しいカスタムフィールドグループまたは既存のカスタムフィールドグループに割り当てることができるようになりました。<br><br>詳しくは、 [UI でのスキーマの作成と編集](../../xdm/ui/resources/schemas.md) を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md).
 
 ## ソース {#sources}
 
@@ -59,5 +78,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | B2B を使用する際に新しいソースが利用できるようになりました | B2B の使用例に対して、Platform で利用可能なすべてのソースを使用できるようになりました。 詳しくは、 [ソースカタログ](../../sources/home.md) を参照してください。 |
 | 新しいの一般リリース [!DNL Oracle Eloqua] ソース | これで、 [!DNL Oracle Eloqua] データをシームレスに取り込むためのソース [!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）を Platform に送信します。 詳しくは、 [作成 [!DNL Oracle Eloqua] ソース接続](../../sources/connectors/oracle-eloqua.md) を参照してください。 |
 | の API 強化 [!DNL Data Landing Zone] | この [!DNL Data Landing Zone] ソースで、 [!DNL Flow Service] API 詳しくは、 [作成 [!DNL Data Landing Zone] ソース接続](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
