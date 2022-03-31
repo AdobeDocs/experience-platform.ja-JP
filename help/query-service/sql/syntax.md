@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 10%
+source-wordcount: '2596'
+ht-degree: 9%
 
 ---
 
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | これを指定した場合、テーブルが **not** 存在する。 |
 
+## データベースを作成
+
+この `CREATE DATABASE` コマンドは ADLS データベースを作成します。
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## データベースを削除
 
-この `DROP DATABASE` コマンドは、既存のデータベースを削除します。
+この `DROP DATABASE` コマンドは、インスタンスからデータベースを削除します。
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 この `ALTER TABLE` コマンドを使用すると、プライマリキーまたは外部キーの制約を追加または削除したり、テーブルに列を追加したりできます。
 
+
 #### 制約を追加または削除
 
 次の SQL クエリは、テーブルに制約を追加または削除する例を示しています。
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### スキーマを追加
+
+次の SQL クエリは、データベース/スキーマにテーブルを追加する例を示しています。
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> ADLS テーブルとビューは、DWH データベース/スキーマに追加できません。
+
+
+#### スキーマを削除
+
+次の SQL クエリは、データベースまたはスキーマからテーブルを削除する例を示しています。
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> DWH テーブルとビューは、物理的にリンクされた DWH データベース/スキーマからは削除できません。
+
+
+**パラメーター**
+
 | パラメーター | 説明 |
 | ------ | ------ |
 | `table_name` | 編集するテーブルの名前。 |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### データグループを表示
+
+この `SHOW DATAGROUPS` コマンドは、関連するすべてのデータベースのテーブルを返します。 各データベースについて、テーブルにはスキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### テーブルのデータグループを表示
+
+この `SHOW DATAGROUPS FOR` &#39;table_name&#39;コマンドは、パラメータを子として含むすべての関連データベースのテーブルを返します。 各データベースについて、テーブルにはスキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**パラメーター**
+
+- `table_name`:関連するデータベースを検索するテーブルの名前。
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
