@@ -2,7 +2,8 @@
 title: Real-Time CDP B2B Edition の関連アカウント
 type: Documentation
 description: Experience Platformのリアルタイム CDP B2B の関連アカウント機能の概要と詳細。
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 7%
@@ -53,4 +54,4 @@ Experience PlatformUI で参照しているアカウントの関連アカウン�
 
 アカウントと関連するアカウントをセグメント化で使用できます。 セグメント定義で関連アカウントを使用するかどうかの決定は、マーケティングの使用例によって異なります。 例えば、電子メールマーケティングや広告キャンペーンに関連するアカウントを使用し、より広い範囲のリーチと引き換えに、より低い精度を受け入れることができます。
 
-参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-account) 関連するアカウントを使用する
+参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-accounts) 関連するアカウントを使用する

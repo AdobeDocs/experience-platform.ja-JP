@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 95c0aa2861952c1468d5ef43aa370d31d2c8a2ef
+exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 25%
@@ -52,7 +53,7 @@ B2B 企業は、多くの場合、同じ実世界のビジネスエンティテ�
 
 - [Real-Time CDP B2B Edition の関連アカウントの概要](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [アカウントプロファイル UI ガイドの「関連アカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [セグメント定義での関連アカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-account)
+- [セグメント定義での関連アカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Real-time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
 
