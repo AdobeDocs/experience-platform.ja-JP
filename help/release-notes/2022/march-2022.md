@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 25%
+source-wordcount: '1156'
+ht-degree: 24%
 
 ---
 
@@ -91,6 +91,18 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 {style=&quot;table-layout:auto&quot;}
 
 プロファイルダッシュボードについて詳しくは、 [プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md).
+
+## データの収集 {#data-collection}
+
+Platform は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、Adobeや非Adobeの宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| グローバルデータストリーム設定 | データストリームを設定する際に、次の新しいグローバル設定をいくつか設定できるようになりました。地域、ファーストパーティ ID cookie およびサードパーティ ID 同期。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md#configure) （データストリーム UI ガイド）を参照してください。 |
+
+Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
 
 ### 宛先ダッシュボード
 
