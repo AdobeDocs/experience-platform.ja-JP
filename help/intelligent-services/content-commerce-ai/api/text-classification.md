@@ -1,11 +1,11 @@
 ---
 keywords: テキスト分類；テキスト分類
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI API のテキスト分類
 topic-legacy: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定すると、それを 1 つ以上のラベルに分類できます。 分類は、単一ラベル、複数ラベルまたは階層にすることができます。
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 5%

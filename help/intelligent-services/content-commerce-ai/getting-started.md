@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに；content ai;commerce ai;content and commerce ai
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI の概要
 topic-legacy: Getting started
 description: Content and Commerce AI はAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%

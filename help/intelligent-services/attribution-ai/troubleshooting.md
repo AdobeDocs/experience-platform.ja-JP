@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；はじめに；attribution ai；人気の高いトピック；attribution ai 入力；attribution ai 出力；attribution ai トラブルシューティング；attribution ai エラー
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Attribution AI
 title: Attribution AIエラーのトラブルシューティング
 description: Attribution AIの一般的なエラーに対する回答を見つけます。
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%

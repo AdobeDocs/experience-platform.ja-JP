@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに； content ai; commerce ai; content and commerce ai；キーワード抽出；キーワード抽出
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI API でのキーワード抽出
 topic-legacy: Developer guide
 description: キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの件名を最もよく表すキーワードまたはキーボードを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識 (NER) と未監視キーワード抽出アルゴリズムの組み合わせを使用する。
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%

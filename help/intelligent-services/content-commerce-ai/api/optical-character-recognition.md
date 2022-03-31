@@ -1,11 +1,11 @@
 ---
 keywords: OCR；テキストの有無；光学式文字認識
-solution: Intelligent Services
+solution: Experience Platform
 title: テキストの有無と光学式文字認識
 topic-legacy: Developer guide
 description: Content and Commerce AI API では、テキストの有無/光学式文字認識 (OCR) サービスで、特定の画像にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCR はテキストを返すことができます。
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに； content ai; commerce ai; content and commerce ai；色抽出；色抽出
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI API での色抽出
 topic-legacy: Developer guide
 description: カラー抽出サービスは、画像を与えると、ピクセルカラーのヒストグラムを計算し、主要な色でバケットに並べ替えることができます。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
