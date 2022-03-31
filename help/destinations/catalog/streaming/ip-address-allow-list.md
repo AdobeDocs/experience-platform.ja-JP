@@ -1,11 +1,12 @@
 ---
 keywords: IP アドレス、IP 範囲、許可リスト宛先、許可リスト、ストリーミング宛先の許可リスト
-title: 'ストリーミング先の IP アドレス許可リスト '
+title: ストリーミング許可リスト先の IP アドレス
 type: Documentation
-description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformから HTTP REST API エンドポイントにデータを安全に書き出すことができます。
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すことができます。
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
