@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 24%
@@ -94,18 +94,6 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 プロファイルダッシュボードについて詳しくは、 [プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md).
 
-## データの収集 {#data-collection}
-
-Platform は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、Adobeや非Adobeの宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| グローバルデータストリーム設定 | データストリームを設定する際に、次の新しいグローバル設定をいくつか設定できるようになりました。地域、ファーストパーティ ID cookie およびサードパーティ ID 同期。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md#configure) （データストリーム UI ガイド）を参照してください。 |
-
-Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
-
 ### 宛先ダッシュボード
 
 「宛先」ダッシュボードには、組織が宛先内で有効にした宛先のスナップショットがExperience Platformされます。
@@ -119,6 +107,18 @@ Platform でのデータ収集について詳しくは、 [データ収集の概
 {style=&quot;table-layout:auto&quot;}
 
 Platform での宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
+
+## データの収集 {#data-collection}
+
+Platform は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、Adobeや非Adobeの宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| グローバルデータストリーム設定 | データストリームを設定する際に、次の新しいグローバル設定をいくつか設定できるようになりました。地域、ファーストパーティ ID cookie およびサードパーティ ID 同期。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md#configure) （データストリーム UI ガイド）を参照してください。 |
+
+Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
