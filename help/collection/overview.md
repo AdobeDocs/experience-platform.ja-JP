@@ -3,9 +3,9 @@ title: Edge Network Server API
 description: Adobe Experience Platform Edge Network Server API の概要と使用方法について説明します。
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: データ収集；収集；Adobe Experience Platform Edge Network;server api;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform Edge Network は、Adobe Experience CloudまたはAdob
 1. インタラクティブエンドポイントは、高度なセグメント化、パーソナライゼーション、その他のマーケティングの使用例をサポートする、Adobe Experience PlatformおよびAdobe Experience Cloudのサービスとの通信をサポートします。
 2. バッチエンドポイントを使用すると、呼び出されるアプリケーションからの応答を受信せずにデータをオンボードする必要がある場合に、リクエストをバッチで送信できます。
 
-この [!DNL Server API] は、次のタイプのリクエストをサポートします。この [!DNL Server API] は、 [Adobe I/O](https://developer.adobe.com/)、新しい `server.adobedc.net` endpoint.
+この [!DNL Server API] は、次のタイプのリクエストをサポートします。
 
 * 認証済みリクエスト（経由） [Adobe I/O](https://developer.adobe.com/)、新しい `server.adobedc.net` endpoint.
 * を介した未認証のリクエスト `edge.adobedc.net` endpoint.
