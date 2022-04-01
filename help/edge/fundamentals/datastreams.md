@@ -1,18 +1,18 @@
 ---
-title: Experience PlatformWeb SDK 用の Datastream の設定
-description: 'データストリームの設定方法を説明します。 '
-keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Cookie 宛先；Analytics 設定ブロックスイート ID;
+title: データストリームの設定
+description: クライアント側のExperience PlatformSDK 統合を、Adobe製品およびサードパーティの宛先と接続します。
+keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Analytics 設定ブロックスイート ID；データデータ収集の準備；データ準備；マッパー；XDM マッパー；エッジでのマッパー；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
 
 # データストリームの設定
 
-datastream は、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバー側の設定を表します。 また、 [設定コマンド](configuring-the-sdk.md) は、クライアントで処理する必要のあるものを制御します ( 例えば、 `edgeDomain`)、データストリームは、SDK のその他すべての設定を処理します。 リクエストがAdobe Experience Platform Edge Network に送信されると、 `edgeConfigId` は、データストリームを参照するために使用されます。 これにより、Web サイトでコードを変更しなくても、サーバー側の設定を更新できます。
+datastream は、Adobe Experience Platform Web およびMobile SDK を実装する際のサーバー側の設定を表します。 また、 [設定コマンド](configuring-the-sdk.md) は、クライアントで処理する必要のあるものを制御します ( 例えば、 `edgeDomain`)、データストリームは、SDK のその他すべての設定を処理します。 リクエストがAdobe Experience Platform Edge Network に送信されると、 `edgeConfigId` は、データストリームを参照するために使用されます。 これにより、Web サイトでコードを変更しなくても、サーバー側の設定を更新できます。
 
 このドキュメントでは、データ収集 UI でデータストリームを設定する手順を説明します。
 
@@ -78,13 +78,78 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 
 #### [!UICONTROL データを選択]
 
-選択 **[!UICONTROL マッピングの保存と追加]** 完了後 [基本設定手順](#configure)、および **[!UICONTROL データを選択]** 手順が表示されます。 ここから、Platform に送信する予定のデータの構造を表すサンプル JSON オブジェクトを提供する必要があります。 このオプションを選択して、オブジェクトをファイルとしてアップロードするか、生のオブジェクトを指定されたテキストボックスに貼り付けることができます。
+選択 **[!UICONTROL マッピングの保存と追加]** 完了後 [基本設定手順](#configure)、および **[!UICONTROL データを選択]** 手順が表示されます。 ここから、Platform に送信する予定のデータの構造を表すサンプル JSON オブジェクトを提供する必要があります。
+
+この JSON オブジェクトを構築して、取得するデータレイヤーのプロパティにマッピングできるようにする必要があります。 以下のセクションを選択して、適切に書式設定された JSON オブジェクトの例を表示します。
+
++++サンプル JSON ファイル
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >JSON オブジェクトには 1 つのルートノードが必要です `data` 検証に合格するために。
 
-JSON が有効な場合は、右側のパネルにプレビュースキーマが表示されます。 「**[!UICONTROL 次へ]**」をクリックして続行します。
+このオプションを選択して、オブジェクトをファイルとしてアップロードするか、生のオブジェクトを指定されたテキストボックスに貼り付けることができます。 JSON が有効な場合は、右側のパネルにプレビュースキーマが表示されます。 「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 ![予想される受信データの JSON サンプル](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ JSON が有効な場合は、右側のパネルにプレビュースキーマが
 マッピングページが再び表示され、完了したフィールドマッピングが表示されます。 この **[!UICONTROL マッピングの進行状況]** 「 」セクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
 
 ![フィールドが正常にマッピングされ、進行状況が反映されました](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>（ソースフィールド内の）オブジェクトの配列を（ターゲットフィールド内の）異なるオブジェクトの配列にマッピングする場合は、 `[*]` の後に追加します。
+>
+>![配列オブジェクトのマッピング](../images/datastreams/array-object-mapping.png)
 
 上記の手順に従って、残りのフィールドをターゲットスキーマにマッピングします。 使用可能なすべてのソースフィールドをマッピングする必要はありませんが、この手順を完了するには、必要に応じて設定されたターゲットスキーマ内のフィールドをマッピングする必要があります。 この **[!UICONTROL 必須フィールド]** カウンターは、現在の設定でまだマッピングされていない必須フィールドの数を示します。
 
