@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform Edge Network Server API のヘルプ
 breadcrumb-title: Adobe Experience Platform Edge Network Server API ガイド
 user-guide-description: 'Edge Network Server API を使用したExperience Cloudサービスの操作 '
 feature: Data Collection
-source-git-commit: a8a6681e878932c03ed9a2e59527e2adc565a28e
+source-git-commit: 8ea9877fd7dc00b4f5e7b1c974bb3743ce4e1356
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 10%
@@ -13,9 +13,9 @@ ht-degree: 10%
 ---
 
 
-# Edge Network Server API {#server-api}
+# Edge Network Server API {#edge-network-server-api}
 
-* Edge Network Server API {#server-api}
+* Edge Network Server API {#edge-network-server-api}
    * [概要](overview.md)
    * [認証](authentication.md)
    * データ収集 {#server-api-data-collection}
