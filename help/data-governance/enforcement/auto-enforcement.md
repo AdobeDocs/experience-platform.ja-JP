@@ -5,10 +5,10 @@ title: ポリシーの自動適用
 topic-legacy: guide
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1231'
-ht-degree: 100%
+source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
+workflow-type: tm+mt
+source-wordcount: '1232'
+ht-degree: 91%
 
 ---
 
@@ -31,10 +31,11 @@ ht-degree: 100%
 
 ![](../images/enforcement/enforcement-flow.png)
 
-セグメントが初めてアクティブ化されると、[!DNL Policy Service] は、次の要因に基づいてポリシー違反をチェックします。
+セグメントが最初にアクティブ化されたとき、 [!DNL Policy Service] は、次の要因に基づいて、該当するポリシーをチェックします。
 
 * アクティブ化するセグメント内のフィールドおよびデータセットに適用される、データ使用ラベル。
 * 宛先のマーケティングの目的。
+<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
 
 >[!NOTE]
 >
@@ -62,9 +63,10 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 | データ系列のステージ | ポリシー適用における役割 |
 | --- | --- |
 | データセット | データセットには、データセット全体または特定のフィールドをどのユースケースに使用できるかを定義するデータ使用量ラベル（データセットレベルまたはフィールドレベルで適用）が含まれます。ポリシー違反は、ポリシーが制限する目的で特定のラベルを含むデータセットまたはフィールドを使用した場合に発生します。 |
-| 結合ポリシー | 結合ポリシーは、複数のデータセットからフラグメントを結合する際に、データの優先順位付け方法を決定するために Platform で使用されるルールです。制限付きラベルを含むデータセットが宛先に対してアクティブ化されるように結合ポリシーが設定されている場合、ポリシー違反が発生します。詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。 |
-| セグメント | セグメントルールは、顧客プロファイルから含める属性を定義します。セグメント定義に含まれるフィールドに応じて、セグメントは、これらのフィールドに適用された使用ラベルを継承します。ポリシー違反は、継承ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントを、そのマーケティングユースケースに基づいてアクティブ化すると発生します。 |
-| 宛先 | 宛先を設定する際に、マーケティングアクション（マーケティングユースケースとも呼ばれます）を定義できます。このユースケースは、データ使用ポリシーで定義されているように、マーケティングアクションに関連しています。つまり、宛先に対して定義したマーケティングユースケースによって、その宛先に適用されるデータ使用ポリシーが決まります。ポリシー違反は、使用ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントをアクティブ化すると発生します。 |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+|結合ポリシー |結合ポリシーは、複数のデータセットからフラグメントを結合する際に、データの優先順位付け方法を決定するために Platform が使用するルールです。 制限付きラベルを含むデータセットが宛先に対してアクティブ化されるように結合ポリシーが設定されている場合、ポリシー違反が発生します。詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。| |セグメント |セグメントルールは、顧客プロファイルから含める属性を定義します。 セグメント定義に含まれるフィールドに応じて、セグメントは、これらのフィールドに適用された使用ラベルを継承します。ポリシー違反は、継承ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントを、そのマーケティングユースケースに基づいてアクティブ化すると発生します。 |
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+|宛先 |宛先を設定する際に、マーケティングアクション（マーケティングの使用例とも呼ばれます）を定義できます。 この使用例は、ポリシーで定義されたマーケティングアクションと相関関係があります。 つまり、宛先に対して定義したマーケティングの使用例によって、その宛先に適用できるデータ使用ポリシーおよび同意ポリシーが決まります。 ポリシー違反は、使用ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントをアクティブ化すると発生します。|
 
 >[!IMPORTANT]
 >
@@ -75,6 +77,14 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 ポリシー違反が発生した場合、UI に表示される結果のメッセージには、違反の要因になったデータ系列を調べて問題を解決するためのツールが提示されます。詳しくは、次の節を参照してください。
 
 ## ポリシー違反メッセージ {#enforcement}
+
+<!-- (TO INCLUDE FOR PHASE 2)
+The sections below outline the different policy enforcement messages that appear in the Platform UI:
+
+* [Data usage policy violation](#data-usage-violation)
+* [Consent policy evaluation](#consent-policy-evaluation)
+
+### Data usage policy violation {#data-usage-violation} -->
 
 セグメントをアクティブ化（または[既にアクティブ化されたセグメントを編集](#policy-enforcement-for-activated-segments)）しようとするとポリシー違反が発生した場合、アクションは実行されず、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。違反がトリガーされると、適切なコンポーネントを更新してデータ使用ポリシーに準拠するようになるまで、「**[!UICONTROL 保存]**」ボタンは、変更するエンティティに対して無効になります。
 
@@ -97,6 +107,20 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 「**[!UICONTROL リスト表示]**」を選択し、データ系列をリストとして表示します。ビジュアルグラフに戻すには、「**[!UICONTROL パス表示]**」を選択します。
 
 ![](../images/enforcement/list-view.png)
+
+<!-- (TO INCLUDE FOR PHASE 2)
+### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+
+Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+ -->
 
 ## アクティブ化されたセグメントに対するポリシー施行 {#policy-enforcement-for-activated-segments}
 

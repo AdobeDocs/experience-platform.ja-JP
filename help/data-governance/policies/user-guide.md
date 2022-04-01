@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;データガバナ
 solution: Experience Platform
 title: UI でのデータ使用ポリシーの管理
 topic-legacy: policies
-description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platform ユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要について説明します。
+description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、ポリシーユーザーインターフェイスのポリシーワークスペースで実行できるExperience Platformの概要を説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '776'
-ht-degree: 100%
+source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+workflow-type: tm+mt
+source-wordcount: '1295'
+ht-degree: 53%
 
 ---
 
 # UI でのデータ使用ポリシーの管理
 
-Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、[!DNL Experience Platform] ユーザーインターフェイスの&#x200B;**ポリシー**&#x200B;ワークスペースで実行できるアクションの概要について説明します。
+Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、 **ポリシー** ワークスペース [!DNL Experience Platform] ユーザーインターフェイス。
 
 >[!IMPORTANT]
 >
@@ -24,14 +24,18 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 このガイドでは、次の [!DNL Experience Platform] の概念に関する十分な知識が必要です。
 
-- [データガバナンス](../home.md)
-- [データ使用ポリシー](./overview.md)
+* [データガバナンス](../home.md)
+* [データ使用ポリシー](./overview.md)
 
 ## 既存のポリシーの表示 {#view-policies}
 
 [!DNL Experience Platform] UI で、「**[!UICONTROL ポリシー]**」を選択して、「**[!UICONTROL ポリシー]**」ワークスペースを開きます。「**[!UICONTROL 参照]**」タブには、使用可能なポリシー（関連するラベル、マーケティングアクション、ステータスなど）が一覧表示されます。
 
 ![](../images/policies/browse-policies.png)
+
+同意ポリシー（現在はベータ版）にアクセスできる場合は、 **[!UICONTROL 同意ポリシー]** 切り替えて [!UICONTROL 参照] タブをクリックします。
+
+![](../images/policies/consent-policy-toggle.png)
 
 リストされているポリシーを選択すると、説明と種類が表示されます。カスタムポリシーを選択すると、ポリシーを編集、削除、[有効／無効にする](#enable)ための追加のコントロールが表示されます。
 
@@ -42,6 +46,14 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 新しいカスタムデータ使用ポリシーを作成するには、「**[!UICONTROL ポリシー]**」ワークスペースの「 **[!UICONTROL 参照]**」タブの右上にある「**[!UICONTROL ポリシーの作成]**」をクリックします。
 
 ![](../images/policies/create-policy-button.png)
+
+同意ポリシーに関するベータ版に含まれているかどうかに応じて、次のいずれかが発生します。
+
+* ベータ版に参加していない場合は、すぐに [データガバナンスポリシーの作成](#create-governance-policy).
+* ベータ版のユーザーには、次のような追加のオプションが用意されています。 [同意ポリシーを作成する](#consent-policy).
+   ![](../images/policies/choose-policy-type.png)
+
+### データガバナンスポリシーの作成 {#create-governance-policy}
 
 **[!UICONTROL ポリシーの作成]**&#x200B;ワークフローが表示されます。まず、新しいポリシーの名前と説明を指定します。
 
@@ -67,9 +79,62 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 ![](../images/policies/created-policy.png)
 
+### 同意ポリシーの作成（ベータ版） {#consent-policy}
+
+>[!IMPORTANT]
+>
+>同意ポリシーは現在ベータ版で、お客様の組織はまだアクセスできない可能性があります。
+
+同意ポリシーの作成を選択すると、新しい画面が表示され、新しいポリシーを設定できます。
+
+![](../images/policies/consent-policy-dialog.png)
+
+同意ポリシーを利用するには、プロファイルデータに同意属性が存在する必要があります。 詳しくは、 [Experience Platformでの同意処理](../../landing/governance-privacy-security/consent/adobe/overview.md) を参照してください。
+
+同意ポリシーは、次の 2 つの論理コンポーネントで構成されます。
+
+* **[!UICONTROL If]**:ポリシーチェックをトリガーにする条件。 これは、実行される特定のマーケティングアクション、特定のデータ使用ラベルの有無、またはこれら 2 つの組み合わせに基づくことができます。
+* **[!UICONTROL 次に、]**:プロファイルをポリシーをトリガーしたアクションに含めるために存在する必要がある同意属性。
+
+#### 条件の設定
+
+以下 **[!UICONTROL If]** 「 」セクションで、このポリシーをトリガーするマーケティングアクションやデータ使用ラベルを選択します。 選択 **[!UICONTROL すべて表示]** および **[!UICONTROL ラベルを選択]** をクリックすると、使用可能なマーケティングアクションとラベルの完全なリストがそれぞれ表示されます。
+
+1 つ以上の条件を追加したら、「 **[!UICONTROL 条件を追加]** 必要に応じて条件の追加を続けるには、ドロップダウンから適切な条件タイプを選択します。
+
+![](../images/policies/add-condition.png)
+
+複数の条件を選択する場合は、条件間に表示されるアイコンを使用して、「AND」と「OR」の条件付き関係を切り替えることができます。
+
+![](../images/policies/and-or-selection.png)
+
+#### 同意属性を選択
+
+以下 **[!UICONTROL 次に、]** 「 」セクションで、和集合スキーマから少なくとも 1 つの同意属性を選択します。 これは、このポリシーで管理されるアクションにプロファイルを含めるために存在する必要がある属性です。 リストから提供されたオプションの 1 つを選択するか、「 」を選択します。 **[!UICONTROL すべて表示]** ：和集合スキーマから直接属性を選択します。
+
+同意属性を選択する場合、このポリシーで確認する属性の値を選択します。
+
+![](../images/policies/select-schema-field.png)
+
+1 つ以上の同意属性を選択した後、 **[!UICONTROL ポリシーのプロパティ]** パネルが更新され、このポリシーで許可されるプロファイルの推定数（合計プロファイルストアに対する割合を含む）が表示されます。 この見積もりは、ポリシー設定を調整すると自動的に更新されます。
+
+![](../images/policies/audience-preview.png)
+
+ポリシーに同意属性を追加するには、 **[!UICONTROL 結果を追加]**.
+
+![](../images/policies/add-result.png)
+
+必要に応じて、ポリシーに条件と同意属性を引き続き追加および調整できます。 設定が完了したら、ポリシーの名前と説明（オプション）を入力してから、「 」を選択します **[!UICONTROL 保存]**.
+
+![](../images/policies/name-and-save.png)
+
+同意ポリシーが作成され、そのステータスが「 」に設定されます。 [!UICONTROL 無効] デフォルトでは。 すぐにポリシーを有効にするには、 **[!UICONTROL ステータス]** 右側のパネルを切り替えます。
+
+![](../images/policies/enable-consent-policy.png)
+
 ## ポリシーの有効化または無効化 {#enable}
 
-すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。個々のポリシーの適用が考慮されるようにするには、API または UI を使用して手動でそのポリシーを有効にする必要があります。
+すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。個々のポリシーを適用対象として考慮するには、API または UI を使用して、そのポリシーを手動で有効にする必要があります。
 
 「**[!UICONTROL ポリシー]**」ワークスペースの「**[!UICONTROL 参照]**」タブで、ポリシーを有効または無効にできます。リストからカスタムポリシーを選択して、右側に詳細を表示します。「**[!UICONTROL ステータス]**」で、ポリシーを有効または無効にする切り替えボタンを選択します。
 
