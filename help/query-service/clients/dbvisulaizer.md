@@ -4,20 +4,20 @@ solution: Experience Platform
 title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # 接続 [!DNL DbVisualizer] から [!DNL Query Service] {#connect-dbvisualizer}
 
-このドキュメントでは、 [!DNL DbVisualizer] Adobe Experience Platformを使用したデスクトップ [!DNL Query Service].
+このドキュメントでは、 [!DNL DbVisualizer] Adobe Experience Platformのデータベースツール [!DNL Query Service].
 
 ## はじめに
 
-このガイドでは、 [!DNL DbVisualizer] デスクトップアプリケーションのインターフェイスの操作方法を理解しているユーザーです。 次の手順で [!DNL DbVisualizer] デスクトップアプリケーションについて詳しくは、 [公式 [!DNL DbVisualizer] ドキュメント](https://www.dbvis.com/download/).
+このガイドでは、 [!DNL DbVisualizer] デスクトップアプリケーションのインターフェイスの操作方法を理解しているユーザーです。 次の手順で [!DNL DbVisualizer] デスクトップアプリケーションまたは詳しくは、 [公式 [!DNL DbVisualizer] ドキュメント](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ ht-degree: 1%
 
 ## 次の手順
 
-これで、 [!DNL DbVisualizer] と [!DNL Query Service]を使用する場合、 [!DNL DbVisualizer] クエリを書き込みます。 クエリの書き込みと実行の方法について詳しくは、クエリ実行に関するガイドを参照してください。
+これで、 [!DNL DbVisualizer] と [!DNL Query Service]を使用する場合、 [!DNL DbVisualizer] クエリを書き込みます。 クエリの書き込みと実行の方法について詳しくは、 [クエリ実行のガイド](../best-practices/writing-queries.md).
