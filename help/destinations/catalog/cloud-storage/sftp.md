@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
+source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
@@ -61,7 +61,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 * **[!UICONTROL ユーザー名]**:SFTP ストレージの場所にログインするユーザー名。
 * **[!UICONTROL パスワード]**:SFTP ストレージの場所にログインするためのパスワード。
 * **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64] エンコードされた文字列。
-   * 例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * 例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 簡潔にするために中央部を短くした、正しくフォーマットされた PGP キーの例を以下に示します。
 
       ![PGP キー](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -75,7 +75,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 * **[!UICONTROL ユーザー名]**:SFTP ストレージの場所にログインするユーザー名。
 * **[!UICONTROL SSH キー]**:SFTP ストレージの場所にログインするための SSH キー。
 * **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64] エンコードされた文字列。
-   * 例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * 例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 簡潔にするために中央部を短くした、正しくフォーマットされた PGP キーの例を以下に示します。
 
       ![PGP キー](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
