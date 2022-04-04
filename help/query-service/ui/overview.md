@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリ；クエリ；クエリエディター；クエリエディター；クエリエディター；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ；クエリエディター；クエリエディター；クエリエディター；
 solution: Experience Platform
 title: クエリサービス UI ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
+source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 40%
@@ -14,29 +14,29 @@ ht-degree: 40%
 
 # [!DNL Query Service] ガイド
 
-Adobe Experience Platform [!DNL Query Service] は、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。 [Adobe Experience Platform](https://platform.adobe.com) 内の UI にアクセスするには、左側のナビゲーションで「**[!UICONTROL クエリ]**」を選択します。
+ザAdobe Experience Platform [!DNL Query Service] は、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。 [Adobe Experience Platform](https://platform.adobe.com) 内の UI にアクセスするには、左側のナビゲーションで「**[!UICONTROL クエリ]**」を選択します。
 
 ## [!DNL Query Editor]
 
-[!DNL Query Editor] を使用すると、外部クライアントを使用せずにクエリを書き込み、実行できます。 「**[!UICONTROL クエリを作成]**」を選択して [!DNL Query Editor] を開き、新しいクエリを作成します。 「**[!UICONTROL ログ]**」タブまたは「**[!UICONTROL 参照]**」タブからクエリを選択して、[!DNL Query Editor] にアクセスすることもできます。 以前に実行または保存したクエリを選択すると、[!DNL Query Editor] が開き、選択したクエリの SQL が表示されます。
+この [!DNL Query Editor] を使用すると、外部クライアントを使用せずにクエリを書き込んだり、実行したりできます。 選択 **[!UICONTROL クエリを作成]** 開く [!DNL Query Editor] をクリックし、新しいクエリを作成します。 また、 [!DNL Query Editor] クエリを **[!UICONTROL ログ]** または **[!UICONTROL 参照]** タブ 以前に実行または保存したクエリを選択すると、 [!DNL Query Editor] 選択したクエリの SQL を表示します。
 
 ![画像](../images/ui/overview/overview.png)
 
-[!DNL Query Editor] は、クエリの入力を開始できる編集スペースを提供します。入力すると、エディタは、テーブル内の SQL 予約語、テーブル、およびフィールド名を自動的に補完します。 クエリの記述が完了したら、「**再生**」ボタンを選択してクエリを実行します。 エディターの下の **[!UICONTROL コンソール]** タブには、[!DNL Query Service] が現在何を行っているか、クエリがいつ返されたかが表示されます。 コンソールの横にある「**[!UICONTROL 結果]**」タブには、クエリ結果が表示されます。[!DNL Query Editor] の使用について詳しくは、[ クエリエディターのガイド ](./user-guide.md) を参照してください。
+[!DNL Query Editor] は、クエリの入力を開始できる編集スペースを提供します。 入力すると、エディターは、テーブル内の SQL 予約語、テーブル、およびフィールド名を自動的に完了します。 クエリの作成が完了したら、 **再生** ボタンを使用してクエリを実行します。 この **[!UICONTROL コンソール]** エディターの下のタブに、次の内容が表示されます。 [!DNL Query Service] は現在実行中で、クエリがいつ返されたかを示します。 コンソールの横にある「**[!UICONTROL 結果]**」タブには、クエリ結果が表示されます。詳しくは、 [クエリエディターガイド](./user-guide.md) を参照してください。 [!DNL Query Editor].
 
 ![画像](../images/ui/overview/query-editor.png)
 
-## 参照
+## 参照 {#browse}
 
-「**[!UICONTROL 参照]**」タブには、組織のユーザーによって保存されたクエリが表示されます。これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。「**[!UICONTROL 参照]**」タブに表示されるクエリは、「**[!UICONTROL ログ]**」タブに実行クエリとしても表示されます（以前に [!DNL Query Service] によって実行されている場合）。
+「**[!UICONTROL 参照]**」タブには、組織のユーザーによって保存されたクエリが表示されます。これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。に表示されるクエリ **[!UICONTROL 参照]** 「 」タブは「実行クエリ」としても表示されます **[!UICONTROL ログ]** タブ ( 以前に [!DNL Query Service].
 
 ![画像](../images/ui/overview/browse.png)
 
 | 列 | 説明 |
 | --- | --- |
-| 名前 | ユーザーが作成したクエリ名。名前を選択して、[!DNL Query Editor] でクエリを開くことができます。 検索バーを使用して、クエリの名前で検索することもできます。検索では大文字と小文字が区別されます。 |
+| 名前 | ユーザーが作成したクエリ名。名前を選択して、 [!DNL Query Editor]. 検索バーを使用して、クエリの名前で検索することもできます。検索では大文字と小文字が区別されます。 |
 | SQL | SQL クエリの最初の数文字。コードの上にカーソルを置くと、完全なクエリが表示されます。 |
-| 変更者 | 最後にクエリを変更したユーザー。[!DNL Query Service] へのアクセス権を持つ組織内のすべてのユーザーが、クエリを変更できます。 |
+| 変更者 | 最後にクエリを変更したユーザー。組織内でへのアクセス権を持つユーザー [!DNL Query Service] でクエリを変更できます。 |
 | 最終変更日 | ブラウザーのタイムゾーンでの、クエリが最後に編集された日付と時間。 |
 
 ## ログ
@@ -47,7 +47,7 @@ Adobe Experience Platform [!DNL Query Service] は、クエリの書き込みと
 
 | 列 | 説明 |
 | --- | --- |
-| **[!UICONTROL 名前]** | クエリ名。SQL クエリの最初の数文字で構成されます。名前を選択すると [!DNL Query Editor] が開き、クエリを編集できます。 検索バーを使用して、クエリの名前で検索できます。検索では大文字と小文字が区別されます。 |
+| **[!UICONTROL 名前]** | クエリ名。SQL クエリの最初の数文字で構成されます。名前を選択すると、 [!DNL Query Editor]をクリックし、クエリを編集できます。 検索バーを使用して、クエリの名前で検索できます。検索では大文字と小文字が区別されます。 |
 | **[!UICONTROL 作成者]** | クエリを作成した人物の名前。 |
 | **[!UICONTROL クライアント]** | クエリに使用されるクライアント。 |
 | **[!UICONTROL データセット]** | クエリが使用する入力データセット。データセットを選択して、入力データセットの詳細画面に移動します。 |
@@ -57,10 +57,10 @@ Adobe Experience Platform [!DNL Query Service] は、クエリの書き込みと
 
 ## 資格情報
 
-「**[!UICONTROL 資格情報]**」タブには、期限切れの資格情報と期限切れにならない資格情報の両方が表示されます。 これらの資格情報を使用して外部クライアントと接続する方法の詳細については、[ 資格情報ガイド ](../clients/overview.md) を参照してください。
+この **[!UICONTROL 資格情報]** 「 」タブには、有効期限切れの資格情報と有効期限切れでない資格情報の両方が表示されます。 これらの資格情報を使用して外部クライアントと接続する方法の詳細については、 [資格情報ガイド](../clients/overview.md).
 
 ![画像](../images/ui/overview/credentials.png)
 
 ## 次の手順
 
-これで [!DNL Platform] の [!DNL Query Service] ユーザーインターフェイスに慣れたので、[!DNL Query Editor] にアクセスして独自のクエリプロジェクトの作成を開始し、組織内の他のユーザーと共有できます。 [!DNL Query Editor] でのクエリの作成と実行について詳しくは、[ クエリエディターのユーザーガイド ](./user-guide.md) を参照してください。
+これで [!DNL Query Service] のユーザーインターフェイス [!DNL Platform]、 [!DNL Query Editor] ：独自のクエリプロジェクトの作成を開始し、組織内の他のユーザーと共有します。 でのクエリの作成と実行に関する詳細 [!DNL Query Editor]を参照し、 [クエリエディターユーザーガイド](./user-guide.md).
