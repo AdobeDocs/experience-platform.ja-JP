@@ -5,7 +5,7 @@ title: クエリサービス UI ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 87ec2ab37105aefc52abe102d45fd124492ac79f
+source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 - **[!UICONTROL PSQL コマンド]**:コマンドラインで PSQL を使用してクエリサービスに接続するために、すべての関連情報を自動的に挿入したコマンドです。
 - **[!UICONTROL 有効期限]**:有効期限が切れる資格情報の有効期限。 資格情報は、生成されてから 24 時間後に期限切れになります。
 
-## 期限切れでない資格情報
+## 期限切れでない資格情報 {#non-expiring-credentials}
 
 有効期限のない資格情報を使用して、外部クライアントへのより永続的な接続を設定できます。
 
