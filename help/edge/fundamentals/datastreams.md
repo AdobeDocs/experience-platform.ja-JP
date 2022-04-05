@@ -3,9 +3,9 @@ title: データストリームの設定
 description: クライアント側のExperience PlatformSDK 統合を、Adobe製品およびサードパーティの宛先と接続します。
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Analytics 設定ブロックスイート ID；データデータ収集の準備；データ準備；マッパー；XDM マッパー；エッジでのマッパー；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
@@ -70,11 +70,18 @@ datastream は、Adobe Experience Platform Web およびMobile SDK を実装す�
 
 データ準備は、Experience Data Model(XDM) との間でデータのマッピング、変換、検証をおこなえるExperience Platformサービスです。 Platform が有効なデータストリームを設定する場合、Data Prep 機能を使用して、Platform Edge ネットワークに送信する際にソースデータを XDM にマッピングできます。
 
-以下のサブセクションでは、データ収集 UI 内でデータをマッピングするための基本的な手順について説明します。 計算フィールドの変換関数を含む、すべての Data Prep 機能に関する包括的なガイダンスについては、次のドキュメントを参照してください。
+>[!NOTE]
+>
+>計算フィールドの変換関数を含む、すべての Data Prep 機能に関する包括的なガイダンスについては、次のドキュメントを参照してください。
+>
+>* [データ準備の概要](../../data-prep/home.md)
+>* [データ準備マッピング関数](../../data-prep/functions.md)
+>* [Data Prep でのデータ形式の取り扱い](../../data-prep/data-handling.md)
 
-* [データ準備の概要](../../data-prep/home.md)
-* [データ準備マッピング関数](../../data-prep/functions.md)
-* [Data Prep でのデータ形式の取り扱い](../../data-prep/data-handling.md)
+
+以下のサブセクションでは、データ収集 UI 内でデータをマッピングするための基本的な手順について説明します。 これらの手順の簡単なデモについては、次のビデオを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL データを選択]
 
@@ -251,7 +258,7 @@ datastream は、Adobe Experience Platform Web およびMobile SDK を実装す�
 | [!UICONTROL イベントデータセット] | **（必須）** 顧客イベントデータのストリーミング先の Platform データセットを選択します。 このスキーマでは [XDM ExperienceEvent クラス](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先の Platform データセットを選択します。 このスキーマでは [XDM Individual Profile クラス](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Platform Web SDK 実装のOffer decisioningを有効にするには、このチェックボックスを選択します。 詳しくは、 [Platform Web SDK でのOffer decisioningの使用](../personalization/offer-decisioning/offer-decisioning-overview.md) を参照してください。 offer decisioning機能について詳しくは、 [Adobe Journey Optimizerドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja). |
-| [!UICONTROL エッジセグメント化] | 有効にするには、このチェックボックスを選択します [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームを介してデータを送信すると、該当するプロファイルの更新済みのセグメントメンバーシップが応答に返されます。<br><br>このオプションは、 [!UICONTROL パーソナライズ機能の宛先] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL エッジセグメント化] | 有効にするには、このチェックボックスを選択します [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームを介してデータを送信すると、該当するプロファイルの更新済みのセグメントメンバーシップが応答に返されます。<br><br>このオプションは、 [!UICONTROL Personalization Destinations] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL パーソナライズ機能の宛先] | を [!UICONTROL エッジセグメント化] 「 」チェックボックスにチェックを入れると、データストリームがAdobe Targetなどのパーソナライゼーションエンジンに接続できるようになります。 の具体的な手順については、宛先のドキュメントを参照してください。 [パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Adobe Target設定
