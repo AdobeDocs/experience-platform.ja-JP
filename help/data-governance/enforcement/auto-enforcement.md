@@ -5,10 +5,10 @@ title: ポリシーの自動適用
 topic-legacy: guide
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
+source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
 workflow-type: tm+mt
 source-wordcount: '1232'
-ht-degree: 91%
+ht-degree: 95%
 
 ---
 
@@ -63,10 +63,11 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 | データ系列のステージ | ポリシー適用における役割 |
 | --- | --- |
 | データセット | データセットには、データセット全体または特定のフィールドをどのユースケースに使用できるかを定義するデータ使用量ラベル（データセットレベルまたはフィールドレベルで適用）が含まれます。ポリシー違反は、ポリシーが制限する目的で特定のラベルを含むデータセットまたはフィールドを使用した場合に発生します。 |
+| 結合ポリシー | 結合ポリシーは、複数のデータセットからフラグメントを結合する際に、データの優先順位付け方法を決定するために Platform で使用されるルールです。制限付きラベルを含むデータセットが宛先に対してアクティブ化されるように結合ポリシーが設定されている場合、ポリシー違反が発生します。詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。 |
+| セグメント | セグメントルールは、顧客プロファイルから含める属性を定義します。セグメント定義に含まれるフィールドに応じて、セグメントは、これらのフィールドに適用された使用ラベルを継承します。ポリシー違反は、継承ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントを、そのマーケティングユースケースに基づいてアクティブ化すると発生します。 |
+| 宛先 | 宛先を設定する際に、マーケティングアクション（マーケティングユースケースとも呼ばれます）を定義できます。この使用例は、ポリシーで定義されたマーケティングアクションと相関関係があります。 つまり、宛先に対して定義したマーケティングの使用例によって、その宛先に適用できるデータ使用ポリシーおよび同意ポリシーが決まります。 ポリシー違反は、使用ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントをアクティブ化すると発生します。 |
 <!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-|結合ポリシー |結合ポリシーは、複数のデータセットからフラグメントを結合する際に、データの優先順位付け方法を決定するために Platform が使用するルールです。 制限付きラベルを含むデータセットが宛先に対してアクティブ化されるように結合ポリシーが設定されている場合、ポリシー違反が発生します。詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。| |セグメント |セグメントルールは、顧客プロファイルから含める属性を定義します。 セグメント定義に含まれるフィールドに応じて、セグメントは、これらのフィールドに適用された使用ラベルを継承します。ポリシー違反は、継承ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントを、そのマーケティングユースケースに基づいてアクティブ化すると発生します。 |
 <!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
-|宛先 |宛先を設定する際に、マーケティングアクション（マーケティングの使用例とも呼ばれます）を定義できます。 この使用例は、ポリシーで定義されたマーケティングアクションと相関関係があります。 つまり、宛先に対して定義したマーケティングの使用例によって、その宛先に適用できるデータ使用ポリシーおよび同意ポリシーが決まります。 ポリシー違反は、使用ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントをアクティブ化すると発生します。|
 
 >[!IMPORTANT]
 >
