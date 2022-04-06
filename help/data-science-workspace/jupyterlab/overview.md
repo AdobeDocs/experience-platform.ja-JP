@@ -5,7 +5,7 @@ title: JupyterLab UI の概要
 topic-legacy: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コード、データを操作するための、インタラクティブな開発環境を提供します。 このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: aa81dfd3d52b17984a0e9fb3f8863dabc4fa44ef
+source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 56%
@@ -29,7 +29,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | **カーネル** | カーネルはノートブックなどを提供します [!DNL JupyterLab] フロントエンドは、異なるプログラミング言語でコードを実行および内観する機能をエンドにします。 [!DNL Experience Platform] での開発をサポートする追加のカーネルを提供します。 [!DNL Python]、R、PySpark、 [!DNL Spark]. 詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 | **データアクセス** | 内から直接既存のデータセットにアクセス [!DNL JupyterLab] 読み取り/書き込み機能を完全にサポート |
 | **[!DNL Platform]サービス統合** | 組み込みの統合により、他の [!DNL Platform] 内から直接サービスを提供 [!DNL JupyterLab]. サポートされる統合の完全なリストは、「[他の Platform サービスとの統合](#service-integration)」の節に記載されています。 |
-| **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル</a>に加えて、Platform のサービス間通信を含む、アプリケーションと Experience Platform の間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]（IMS）</a>を通じて暗号化され、認証されます。 |
+| **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル</a>に加えて、Platform のサービス間通信を含む、アプリケーションと Experience Platform の間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]（IMS）</a>を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** | In [!DNL Experience Platform], [!DNL JupyterLab] は、次の用に事前にインストールされたライブラリを提供します。 [!DNL Python]、R および PySpark。 サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
 | **ライブラリコントローラー** | プリインストールされたライブラリがニーズに合わない場合は、Python と R 用に追加のライブラリをインストールし、の整合性を維持するために、一時的に分離されたコンテナに保存します。 [!DNL Platform] データを安全に保ちます。 詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 
