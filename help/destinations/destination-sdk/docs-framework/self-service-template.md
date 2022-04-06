@@ -2,10 +2,10 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 4%
+source-wordcount: '1201'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,23 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->このドキュメントページは、 *宛先* チーム。 お問い合わせや更新のご依頼は、直接 *更新用にアクセスできるリンクまたは電子メールアドレスを挿入します*
+>このドキュメントページは、 *宛先* チーム。 お問い合わせや更新のご依頼は、直接 *更新用にアクセスできるリンクや電子メールアドレスを挿入します。例： `support@yourdestination.com`.*
+
+## ユースケース {#use-cases}
+
+をいつどのように使用するかをより深く理解するのに役立ちます。 *宛先* の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+
+### 使用例#1
+
+*モバイルメッセージプラットフォームの場合：*
+
+*レンタルや販売用プラットフォームは、顧客の Android やiOSのデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みの 100 件のリストがあることを知らせたいと考えています。*
+
+### 使用例#2
+
+*ソーシャルネットワークプラットフォームの場合：*
+
+*スポーツアパレルブランドは、ソーシャルメディアアカウントを通じて既存の顧客にリーチしたいと考えています。 アパレルブランドは、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成し、それらのセグメントを宛先に送信して、顧客のソーシャルメディアフィードに広告を表示できます。*
 
 ## 前提条件 {#prerequisites}
 
@@ -38,13 +54,13 @@ ht-degree: 4%
 
 *宛先でサポートされている ID に関する情報をこの節に追加します。 テーブルには、いくつかの標準値が事前入力されています。 宛先に適用しない値と、事前入力されていない値を削除します。*
 
-*宛先* では、以下の表で説明する id のアクティブ化をサポートしています。 詳細情報： [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started).
+*宛先* では、以下の表で説明する id のアクティブ化をサポートしています。 詳細情報： [id](/help/identity-service/namespaces.md).
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、次のエイリアスからも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 次のドキュメントを参照してください： [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) を参照してください。 |
+| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、次のエイリアスからも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
 | phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
@@ -66,31 +82,27 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## ユースケース {#use-cases}
-
-をいつどのように使用するかをより深く理解するのに役立ちます。 *宛先* の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
-
-### 使用例#1
-
-*モバイルメッセージプラットフォームの場合：*
-
-*レンタルや販売用プラットフォームは、顧客の Android やiOSのデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みの 100 件のリストがあることを知らせたいと考えています。*
-
-### 使用例#2
-
-*ソーシャルネットワークプラットフォームの場合：*
-
-*スポーツアパレルブランドは、ソーシャルメディアアカウントを通じて既存の顧客にリーチしたいと考えています。 アパレルブランドは、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成し、それらのセグメントを宛先に送信して、顧客のソーシャルメディアフィードに広告を表示できます。*
-
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+この宛先に接続するには、 [宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
-### 接続パラメーター {#parameters}
+### 宛先に対する認証 {#authenticate}
 
-While [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) この宛先には、次の情報を指定する必要があります。
+*宛先の認証時に入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有で、Destination SDKの設定に応じて異なります。 宛先のフィールドが次に示すフィールドと異なる場合があります。 また、以下のサンプルのスクリーンショットに似たスクリーンショットを含めてください。*
 
-*新しい宛先を設定する際に顧客が入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有で、Destination SDKの設定に応じて異なります。 宛先のフィールドが次に示すフィールドと異なる場合があります。*
+宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
+
+![宛先への認証方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL Bearer トークン]**:宛先への認証をおこなうために bearer トークンを入力します。
+
+### 宛先の詳細を入力 {#destination-details}
+
+*新しい宛先を設定する際に顧客が入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有で、Destination SDKの設定に応じて異なります。 宛先のフィールドが次に示すフィールドと異なる場合があります。 また、以下のサンプルのスクリーンショットに似たスクリーンショットを含めてください。*
+
+宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
+
+![宛先の詳細を入力する方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
@@ -161,9 +173,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## 書き出されたデータ {#exported-data}
+## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
 
-*宛先へのデータの書き出し方法に関する注意を追加します。 これにより、顧客が宛先と正しく統合されていることを確認できます。 例えば、以下のような JSON のサンプルを指定できます。*
+*宛先へのデータの書き出し方法に関する段落を追加します。 これにより、顧客が宛先と正しく統合されていることを確認できます。 例えば、以下のような JSON のサンプルを指定できます。 または、宛先プラットフォームでのセグメントの生成を顧客が期待する方法を示すスクリーンショットと情報を、宛先のインターフェイスから提供できます。*
 
 ```
 {
@@ -205,7 +217,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制し、 [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja).
+すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制し、 [データガバナンスの概要](/help/data-governance/home.md).
 
 ## その他のリソース {#additional-resources}
 
