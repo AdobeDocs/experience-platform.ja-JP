@@ -2,14 +2,14 @@
 keywords: プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;ガードレール;ガイドライン;上限;エンティティ;プライマリエンティティ;ディメンションエンティティ;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
 title: Real-time Customer Data Platform B2B Edition のデフォルトガードレール
 type: Documentation
-description: 'Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、Real-time Customer Data Platform B2B Edition を使用して最適なシステムパフォーマンスを得るためにデータをモデル化する際に役立つ、デフォルトの使用方法とレートの上限について説明します。 '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
-workflow-type: ht
+description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、Real-time Customer Data Platform B2B Edition を使用して最適なシステムパフォーマンスを得るためにデータをモデル化する際に役立つ、デフォルトの使用方法とレートの上限について説明します。
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 100%
 
 ---
-
 
 # Real-time Customer Data Platform B2B Edition のデフォルトガードレール
 
@@ -87,7 +87,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、リアルタ�
 
 >[!NOTE]
 >
->この節で説明するデータサイズの上限は、Real-time Customer Data Platform B2B Edition で有効になった変更を表しています。 Real-time CDP B2B Edition のデフォルト制限の完全なリストについては、これらの制限を、[リアルタイム顧客プロファイルデータドキュメントのガードレール](../profile/guardrails.md)に概説されている Adobe Experience Platform の一般的な制限と組み合わせます。 
+>この節で説明するデータサイズの上限は、Real-time Customer Data Platform B2B Edition で有効になった変更を表しています。 Real-time CDP B2B Edition のデフォルト制限の完全なリストについては、これらの制限を、[リアルタイム顧客プロファイルデータドキュメントのガードレール](../profile/guardrails.md)に概説されている Adobe Experience Platform の一般的な制限と組み合わせます。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --- | --- | --- | --- |

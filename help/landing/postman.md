@@ -5,7 +5,7 @@ title: Adobe Experience PlatformのPostman
 topic-legacy: api guide
 description: このドキュメントでは、Postman環境の設定方法、Postmanコレクションの読み込み方法、および各 Platform サービスで使用可能なコレクションのリストの概要を説明する手順について説明します。
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 1%
@@ -32,7 +32,7 @@ Postmanコレクションをダウンロードするには、 **[!DNL Raw]** Git
 
 ## Postmanコレクションの読み込み {#import}
 
-を利用するために [Postmanコレクション](#collections)を設定するには、環境を設定する必要があります。 環境の設定が完了したら、 **[!DNL Manage Environments]** セレクターを使用できます。
+を利用するために [Postman コレクション](#collections)を設定するには、環境を設定する必要があります。 環境の設定が完了したら、 **[!DNL Manage Environments]** セレクターを使用できます。
 
 ![環境セレクターを管理](./images/api-guide/environment-selector.png)
 
