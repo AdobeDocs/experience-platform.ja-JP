@@ -5,10 +5,10 @@ title: PSQL をクエリサービスに接続
 topic-legacy: connect
 description: PSQL は、PostgreSQL をマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
+source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 12%
+source-wordcount: '294'
+ht-degree: 11%
 
 ---
 
@@ -22,9 +22,11 @@ PSQL は、をインストールする際にインストールされるコマン
 
 コンピューターに PSQL をインストールした後、PSQL をクエリサービスに接続する準備が整いました。 に戻る [!DNL Platform] UI を選択し、 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
-![画像](../images/clients/psql/connect-bi.png)
+以下 **[!UICONTROL PSQL コマンド]** セクションで、 **[!UICONTROL クリップボードにコピー]** アイコン (![コピーアイコン](../images/clients/psql/copy-icon.png)) をクリックして、コマンド文字列をコピーします。
 
-アイコンを選択して、ラベル付きのセクションをコピーします **[!UICONTROL PSQL コマンド]**&#x200B;をクリックし、コマンド文字列をターミナルまたはコマンドラインウィンドウに貼り付けてから、enter キーを押します。
+![コピーアイコンがハイライトされた「クエリ」ダッシュボードの「資格情報」タブ](../images/clients/psql/connect-bi.png)
+
+コマンド文字列をターミナルまたはコマンドラインウィンドウに貼り付け、 **入力** キーボードで
 
 >[!IMPORTANT]
 >
