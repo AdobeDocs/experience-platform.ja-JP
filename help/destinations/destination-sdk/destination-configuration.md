@@ -2,9 +2,9 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK用のストリーミング宛先設定オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1787'
 ht-degree: 5%
 
 ---
@@ -98,8 +98,8 @@ ht-degree: 5%
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ ID 名前空間では、 [!DNL Platform] および宛先
    * Segment ID;
    * セグメントのステータス。
    * ID または ID のグループ。
+
+>[!NOTE]
+>
+>宛先に設定可能な集計オプションを使用する場合は、2 つのパラメーターに使用できる最小値と最大値に注意してください `maxBatchAgeInSecs` （1.800 以上 3.600 以下） `maxNumEventsInBatch` （最小 1.000、最大 10.000）。
 
 集計パラメータの詳細については、 [宛先 API エンドポイントの操作](./destination-configuration-api.md) 参照ページ。各パラメータについて説明します。
 
