@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データフローの監視；フローサービス api；フローサービス
+keywords: Experience Platform;ホーム;人気のトピック;データフローのモニター;フローサービス API;フローサービス
 solution: Experience Platform
-title: フローサービス API を使用したデータフローの監視
+title: Flow Service API を使用したデータフローのモニター
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、フローサービス API を使用して、完全性、エラーおよび指標のフロー実行データを監視する手順を説明します。
+description: このチュートリアルでは、Flow Service API を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '410'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# フローサービス API を使用したデータフローの監視
+# Flow Service API を使用したデータフローのモニター
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 
 >[!NOTE]
 >
->このチュートリアルでは、有効なデータフローの ID 値が必要です。 有効なデータフロー ID がない場合は、選択したコネクタを [ソースの概要](../../home.md) およびこのチュートリアルを試す前に、データフローの作成について説明されている手順に従ってください。
+>このチュートリアルでは、有効なデータフローの ID 値が必要です。有効なデータフロー ID がない場合は、このチュートリアルを試す前に、[ソースの概要](../../home.md)からコネクタを選び、データフローの作成手順に従ってください。
 
 ## はじめに
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
-* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../landing/api-guide.md).
+Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)を参照してください。
 
-## データフローの監視
+## データフローのモニタリング
 
-データフローのステータスを確認するには、に対してGETリクエストを実行します。 [!DNL Flow Service] API を使用してデータフローの対応するフロー ID を指定します。
+データフローのステータスを確認するには、[!DNL Flow Service] API に GET リクエストを実行し、データフローの対応するフロー ID を指定します。
 
 **API 形式**
 
@@ -44,7 +44,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 一意の `id` 監視するデータフローの値。 |
+| `{FLOW_ID}` | モニターしたいデータフローの一意の `id` 値。 |
 
 **リクエスト**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、フロー実行に関する詳細 ( 作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子 (`id`) をクリックします。
+リクエストが成功した場合は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の ID（`id`）を含め、フロー実行に関する詳細が返されします。
 
 ```json
 {
@@ -236,4 +236,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Flow Service] API これで、取り込みスケジュールに応じて、データフローを引き続き監視し、そのステータスと取り込み率を追跡できるようになりました。 ユーザーインターフェイスを使用して同じタスクを実行する方法について詳しくは、 [ユーザーインターフェイスを使用したデータフローの監視](../ui/monitor.md)
+このチュートリアルでは、[!DNL Flow Service] API を使用して、データフローの指標とエラー情報を取得しました。これで、取り込みスケジュールに応じて、データフローを引き続きモニターし、そのステータスと取り込み率をトラックできるようになります。ユーザーインターフェイスを使用して同じタスクを実行する方法について詳しくは、[ユーザーインターフェイスを使用したデータフローのモニタリング](../ui/monitor.md)を参照してください。
