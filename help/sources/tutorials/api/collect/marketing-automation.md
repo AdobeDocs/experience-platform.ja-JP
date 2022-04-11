@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；マーケティング自動化システム；マーケティング自動化データの収集
+keywords: Experience Platform;ホーム;人気の高いトピック;マーケティング自動化システム;マーケティング自動化データの収集
 solution: Experience Platform
-title: フローサービス API を使用したマーケティング自動化ソースのデータフローの作成
+title: Flow Service API を使用したマーケティング自動化ソースのデータフローの作成
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタと API を使用してAdobe Experience Platformに取り込む手順を説明します。
+description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタと API を使用して Adobe Experience Platform に取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1289'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# を使用して、マーケティング自動化ソースのデータフローを作成します。 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したマーケティング自動化ソースのデータフロー作成
 
-このチュートリアルでは、マーケティング自動化ソースからデータを取得し、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、マーケティング自動化ソースからデータを取得し、Platform に取り込む手順について説明します。
 
 >[!NOTE]
 >
->データフローを作成するには、Platform 上で次のマーケティングオートメーションソースのいずれかと有効なベース接続 ID が必要です。<ul><li>[[!DNL HubSpot]](../create/marketing-automation/hubspot.md)</li><li>[[!DNL Mailchimp Campaigns]](../create/marketing-automation/mailchimp-campaign.md)</li><li>[[!DNL Mailchimp Members]](../create/marketing-automation/mailchimp-members.md)</li><li>[[!DNL Salesforce Marketing Cloud]](../create/marketing-automation/salesforce-marketing-cloud.md)</li></ul>
+>データフローを作成するには、Platform 上で次のマーケティング自動化ソースのいずれかと有効なベース接続 ID が既にある必要があります。<ul><li>[[!DNL HubSpot]](../create/marketing-automation/hubspot.md)</li><li>[[!DNL Mailchimp Campaigns]](../create/marketing-automation/mailchimp-campaign.md)</li><li>[[!DNL Mailchimp Members]](../create/marketing-automation/mailchimp-members.md)</li><li>[[!DNL Salesforce Marketing Cloud]](../create/marketing-automation/salesforce-marketing-cloud.md)</li></ul>
 
 ## はじめに
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md):Schema Registry API への呼び出しを正しく実行するために知っておく必要がある重要な情報が含まれています。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、データの場所とリネージのExperience Platformです。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得 API を使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
+   * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
+* [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../landing/api-guide.md).
+Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
-## ソース接続の作成 {#source}
+##  ソース接続の作成 {#source}
 
-ソース接続を作成するには、 [!DNL Flow Service] API ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID で構成されます。
+[!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
-ソース接続を作成するには、 data format 属性の enum 値も定義する必要があります。
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
 ファイルベースのコネクタには、次の列挙値を使用します。
 
-| データフォーマット | 列挙値 |
+| データ形式 | 列挙値 |
 | ----------- | ---------- |
 | 区切り | `delimited` |
 | JSON | `json` |
-| Parquet | `parquet` |
+| PARQUET | `parquet` |
 
-すべてのテーブルベースのコネクタで、値をに設定します。 `tabular`.
+すべてのテーブルベースのコネクタで、値を`tabular`に設定します。 
 
 **API 形式**
 
@@ -89,11 +89,11 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | アクセスするサードパーティのマーケティング自動化システムの一意の接続 ID。 |
 | `params.path` | アクセスするソースファイルのパス。 |
-| `connectionSpec.id` | マーケティングオートメーションシステムの接続仕様 ID。 |
+| `connectionSpec.id` | マーケティング自動化システムの接続仕様 ID。 |
 
 **応答**
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この値は、後の手順でターゲット接続を作成する際に必要になるので保存します。
+応答が成功すると、新しく作成されたソース接続の一意の識別子（`id`）が返されます。この値は、後の手順でターゲット接続を作成する際に必要になるので保存しておいてください。
 
 ```json
 {
@@ -104,23 +104,23 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成し、ソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを行うことで、ターゲット XDM スキーマを作成することができます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../xdm/api/schemas.md).
+ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../xdm/api/schemas.md)のチュートリアルを参照してください。
 
 ## ターゲットデータセットの作成 {#target-dataset}
 
-ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
+ターゲットデータセットは、[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを行い、ペイロードにターゲットスキーマの ID を指定することで作成することができます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md).
+ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md)を参照してください。
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが格納される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を提供する必要があります。この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。 の使用 [!DNL Flow Service] API では、受信ソースデータを格納するデータセットと共にこれらの識別子を指定することで、ターゲット接続を作成できます。
+これで、ターゲットスキーマとターゲットデータセットの一意の識別子、およびデータレイクに対する接続仕様 ID が得られました。 [!DNL Flow Service] API を使用すると、受信ソースデータを格納するデータセットと共にこれらの識別子を指定することで、ターゲット接続を作成できます。
 
 **API 形式**
 
@@ -159,10 +159,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.schema.id` | この `$id` ターゲット XDM スキーマの。 |
-| `data.schema.version` | スキーマのバージョン。 この値を設定する必要があります `application/vnd.adobe.xed-full+json;version=1`：スキーマの最新のマイナーバージョンを返します。 |
+| `data.schema.id` |  ターゲット XDM スキーマの `$id`。 |
+| `data.schema.version` | スキーマのバージョン番号。この値は、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` を設定する必要があります。 |
 | `params.dataSetId` | ターゲットデータセットの ID。 |
-| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 ```json
 {
@@ -175,7 +175,7 @@ curl -X POST \
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
 
-マッピングセットを作成するには、 `mappingSets` エンドポイント [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) （ターゲット XDM スキーマを提供する際） `$id` 作成するマッピングセットの詳細。
+マッピングセットを作成するには、ターゲット XDM スキーマ `$id` と作成するマッピングセットの詳細を指定すると同時に、[[!DNL Data Prep]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを行います。
 
 **API 形式**
 
@@ -233,7 +233,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) をクリックします。 この値は、後の手順でデータフローを作成する際に必要になるので保存します。
+応答が成功すると、一意の識別子（`id`）を含む、新しく作成されたマッピングの詳細が返されます。この値は、後の手順でデータフローを作成する際に必要になるので保存します。
 
 ```json
 {
@@ -248,7 +248,7 @@ curl -X POST \
 
 ## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、それらを Platform に取り込む役割を果たします。 データフローを作成するには、まずマーケティング自動化データの収集を担当するデータフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、それらを Platform に取り込む役割を果たします。 データフローを作成するには、まずマーケティング自動化データの収集を行うデータフロー仕様を取得する必要があります。
 
 **API 形式**
 
@@ -268,7 +268,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細を返します。 応答には、一意のフロー仕様が含まれます `id` 新しいデータフローを作成するために必要です。
+応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には、新しいデータフローを作成するために必要な一意のフロー仕様 `id` が含まれています。
 
 ```json
 {
@@ -499,16 +499,16 @@ curl -X GET \
 
 ## データフローの作成
 
-マーケティング自動化データを収集するための最後の手順は、データフローを作成することです。 現時点では、次の必要な値が準備されています。
+マーケティング自動化データを収集するための最後の手順は、データフローを作成することです。現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source)
 * [ターゲット接続 ID](#target)
 * [マッピング ID](#mapping)
 * [データフロー仕様 ID](#specs)
 
-データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、前述の値をPOST内に指定しながらペイロードリクエストを実行します。
+データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。 `once`, `minute`, `hour`, `day`または `week`. 間隔値は、2 つの連続した取り込みから 1 回限りの取り込みを作成するまでの間隔を指定し、間隔を設定する必要はありません。 その他のすべての頻度では、間隔の値を次の値以上に設定する必要があります `15`.
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を `once`、`minute`、`hour`、`day`、`week` の 5 つのいずれかに設定する必要があります。インターバルの値には、連続した 2 回の取り込みの間の期間を指定します。1 回限りの取り込みを作成する場合は、インターバルを設定する必要はありません。その他のすべての頻度では、インターバルの値を次の値以上に設定する必要があります `15`
 
 **API 形式**
 
@@ -567,19 +567,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `flowSpec.id` | この [フロー仕様 ID](#specs) 前の手順で取得しました。 |
-| `sourceConnectionIds` | この [ソース接続 ID](#source) 前の手順で取得した。 |
-| `targetConnectionIds` | この [ターゲット接続 ID](#target-connection) 前の手順で取得した。 |
-| `transformations.params.mappingId` | この [マッピング ID](#mapping) 前の手順で取得した。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために使用される指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 でサポートされている日付形式 `deltaColumn` が `yyyy-MM-dd HH:mm:ss`. |
+| `flowSpec.id` | 前の手順で取得した[フロー仕様 ID](#specs)。 |
+| `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target-connection)。 |
+| `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために使用する、指定の列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn` でサポートされる日付形式は `yyyy-MM-dd HH:mm:ss` です。 |
 | `transformations.params.mappingId` | データベースに関連付けられたマッピング ID。 |
-| `scheduleParams.startTime` | エポックタイムでのデータフローの開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`, `minute`, `hour`, `day`または `week`. |
-| `scheduleParams.interval` | 間隔は、2 つの連続したフロー実行の間隔を示します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が `once` およびは次よりも大きいか等しい必要があります `15` を使用します。 |
+| `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は `once`、`minute`、`hour`、`day`、`week` です。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。インターバルは、頻度が `once` に設定されている場合は不要で、それ以外の頻度の場合は `15` 以上にする必要があります。 |
 
 **応答**
 
-成功すると、ID(`id`) を含める必要があります。
+応答に成功すると、新しく作成したデータフローの ID（`id`）が返されます。
 
 ```json
 {
@@ -590,11 +590,11 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、 [API でのデータフローの監視 ](../monitor.md)
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローの監視方法の詳細については、チュートリアル [API でのデータフローの監視](../monitor.md)を参照してください。
 
 ## 次の手順
 
-このチュートリアルでは、マーケティングオートメーションシステムからデータをスケジュールに従って収集するソースコネクタを作成しました。 受信データは、次のようなダウンストリームの Platform サービスで使用できるようになりました。 [!DNL Real-time Customer Profile] および [!DNL Data Science Workspace]. 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、マーケティング自動化システムからスケジュールに従ってデータを収集するソースコネクタを作成できます。[!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを利用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)
