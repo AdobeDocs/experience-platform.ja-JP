@@ -1,48 +1,48 @@
 ---
-description: このページでは、Destination SDKを使用して作成した宛先のレビュー用に送信する必要があるすべての情報を提供します。
-title: 送信してレビュー用に、Destination SDKで作成した宛先を送信
+description: このページでは、Destination SDK を使用して作成した宛先のレビュー用に提出する必要があるすべての情報が提供されます。
+title: Destination SDK で作成した宛先のレビュー用に送信する
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '580'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# 送信してレビュー用に、Destination SDKで作成した宛先を送信
+# Destination SDK で作成した宛先のレビュー用に送信する
 
 ## 概要 {#overview}
 
-宛先をに公開する前に [Experience Platform先カタログ](/help/destinations/catalog/overview.md)を使用する場合は、Adobeに宛先とテストに関する特定の情報を提供し、プラットフォームにデータをアクティブ化する際に、ユーザーが可能な限り最高のエクスペリエンスを享受できるようにする必要があります。
+[Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に宛先を公開する前に、プラットフォームにデータをアクティベートする際にアドビに宛先とテストに関する特定の情報を提供し、ユーザーが可能な限り最高のエクスペリエンスを享受できるようにする必要があります。
 
-このページには、Adobe Experience Platform Destination SDKを使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 Adobe Experience Platformで宛先を正常に送信するには、に電子メールを送信します。 <aepdestsdk@adobe.com> 次を含みます。
+このページには、Adobe Experience Platform Destination SDK を使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 Adobe Experience Platform で宛先を正常に送信するには、<aepdestsdk@adobe.com> にメールを送信します。これには以下が含まれます。
 
-* 宛先が解決する使用例の説明です。 既存の宛先設定を更新する場合は、これは必要ありません。
-* 宛先への HTTP 呼び出しを実行するためにテスト宛先 API エンドポイントを使用した後の結果のテスト。 Adobe:
-   * 宛先エンドポイントに対しておこなわれる API 呼び出し。
+* 宛先が解決するユースケースの説明。 既存の宛先設定を更新する場合は、これは必須ではありません。
+* 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。アドビと共有してください。
+   * 宛先エンドポイントへの API 呼び出し。
    * 宛先エンドポイントから受け取った API 応答。
-* 宛先に対して、 [宛先公開 API](./destination-publish-api.md).
-* （製品化された統合のみ）ドキュメントの PR（プル要求）。 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md).
-* 画像の宛先カタログ内の宛先カードのロゴとして表示されるExperience Platformファイル。
+* [destination publishing API](./destination-publish-api.md) を使用して、宛先の公開リクエストを提出したことの証明。 
+* （製品化された統合の場合のみ）[セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md)に記載されている手順に従った、ドキュメント PR（プル要求）。
+* Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 >[!NOTE]
 >
->Adobeの宛先の公開要求を確認するための標準的な応答時間は、5 営業日です。
+>宛先の公開要求のレビューに要するアドビの標準的な応答時間は 5 営業日です。
 
 各項目の詳細については、以下の節を参照してください。
 
-## 使用例の説明
+## ユースケースの説明
 
-宛先がExperience Platformのお客様に解決する使用例の説明を入力します。 説明は、既存のパートナーの使用例に似ています。
+Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md):顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
-* [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにしたい広告主は、VMG のほぼリアルタイム API を使用して、新しいセグメントをすばやく作成し、目的のオーディエンスグループをプッシュできます。
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：顧客リスト、サイトを訪問した人、または Pinterest でコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：Verizon Media（VMG）のメールアドレスをキーに特定の視聴者グループをターゲットにしたい広告主が、VMG のほぼリアルタイムの API を使用して新しいセグメントをすばやく作成し、希望する視聴者グループをプッシュする際には、DataX API を使用できます。
 
-## テスト宛先 API を使用した後の結果のテスト
+## テスト宛先 API を使用した後のテスト結果
 
-を使用した後にテスト結果を提供する [宛先 API のテスト](./test-destination.md) エンドポイントを使用して、宛先への HTTP 呼び出しを実行します。 これには以下が含まれます。
+[テスト宛先 API](./test-destination.md) エンドポイントを使用して、宛先への HTTP 呼び出しを実行した後のテスト結果を提供します。 これには以下が含まれます。
 
-* テスト API を使用して宛先エンドポイントに対しておこなわれた完全な API リクエスト（ヘッダーと本文）。
+* テスト API を使用して、宛先のエンドポイントに送信された完全な API リクエスト（ヘッダーと本文）。
 * 宛先エンドポイントから受け取った API 応答。
 
 例えば、リクエストと応答は以下のサンプルのようになります。
@@ -208,24 +208,24 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## 宛先の公開リクエストを送信した配達確認
+## 宛先の公開リクエストを提出したことの証明
 
-宛先を正常にテストした後は、 [宛先公開 API](./destination-publish-api.md) をクリックして、レビューおよび公開用にAdobeに宛先を送信します。
+宛先を正常にテストした後、[Destination Publishing API](./destination-publish-api.md) を使用してアドビに送信し、レビューと公開を行う必要があります。
 
-宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、 [宛先の公開リクエストのリスト](./destination-publish-api.md#retrieve-list).
+宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[宛先公開リクエストのリスト](./destination-publish-api.md#retrieve-list)を参照してください。
 
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト）
 
-独立系ソフトウェアベンダー (ISV) またはシステムインテグレータ (SI) の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md) をクリックして、目的の宛先に関する製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト (PR) を提供します。
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md) をクリックして、宛先用に製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ
 
-宛先カタログには、各宛先カードのロゴが含まれます。 送信メールに、宛先のロゴを含む画像を含めます。
+宛先カタログには、各宛先カードのロゴが含まれます。 提出するメールに、宛先のロゴを含む画像を含めます。
 
 画像の要件は次のとおりです。
-* **形式**: `SVG`
-* **サイズ**:2 MB 未満
+* **形式**：`SVG`
+* **サイズ**：2 MB 未満
 
 ## サンプルメールをダウンロード
 
-[ダウンロード](./assets/sample-email-submit-destination.rtf) サンプル電子メールと、Adobeに提供する必要のあるすべての情報。
+サンプルメールと、アドビに提供する必要のあるすべての情報を[ダウンロード](./assets/sample-email-submit-destination.rtf)します。
