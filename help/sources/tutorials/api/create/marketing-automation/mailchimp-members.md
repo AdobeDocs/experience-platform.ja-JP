@@ -325,7 +325,7 @@ curl -X GET \
 }
 ```
 
-##  ソース接続の作成 {#source-connection}
+## ソース接続の作成 {#source-connection}
 
 [!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
