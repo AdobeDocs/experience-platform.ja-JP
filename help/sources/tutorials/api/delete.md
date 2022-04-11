@@ -1,44 +1,44 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの削除；削除；API
+keywords: Experience Platform;ホーム;人気の高いトピック;フローサービス;アカウントの削除;削除;API
 solution: Experience Platform
-title: フローサービス API を使用したアカウントの削除
+title: Flow Service API を使用したアカウントの削除
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してアカウントを削除する方法を説明します。
+description: Flow Service API を使用してアカウントを削除する方法を説明します。
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '339'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# フローサービス API を使用したアカウントの削除
+# Flow Service API を使用したアカウントの削除
 
-エラーを含むまたは古くなったソースアカウントは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+エラーを含むソースアカウントや古くなったソースアカウントは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して削除できます。
 
 API を使用してアカウントを削除する手順については、次のチュートリアルを参照してください。
 
 ## はじめに
 
-このチュートリアルでは、有効な接続 ID が必要です。 有効な接続 ID がない場合は、選択したコネクタを [ソースの概要](../../home.md) このチュートリアルを試す前に、概要を説明した手順に従ってください。
+このチュートリアルでは、有効な接続 ID が必要です。有効な接続 ID がない場合は、このチュートリアルを試す前に、[ソースの概要](../../home.md)からコネクタを選択して、説明した手順に従ってください。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
-* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../landing/api-guide.md).
+Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)を参照してください。
 
-## アカウントを削除
+## アカウントの削除
 
 >[!TIP]
 >
->ソースアカウントを削除する前に、まず、ソースアカウントに関連付けられている既存のデータフローを削除する必要があります。 既存のデータフローを削除するには、 [ソースデータフローの削除](./delete-dataflows.md).
+>ソースアカウントを削除する前に、まず、ソースアカウントに関連付けられている既存のデータフローを削除する必要があります。既存のデータフローを削除するには、[ソースデータフローの削除](./delete-dataflows.md)のチュートリアルを参照してください。
 
-アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントに対応するベース接続 ID を提供する際の API。
+アカウントを削除するには、[!DNL Flow Service] API に DELETE リクエストを行い、削除するアカウントに対応するベース接続 ID を指定します。
 
 **API 形式**
 
@@ -63,12 +63,12 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-接続に対して検索 (GET) リクエストを試みて、削除を確認できます。
+接続先へのルックアップ（GET）リクエストを試みることで、削除を確認できます。
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Flow Service] 既存のアカウントを削除する API。
+このチュートリアルでは、既存のアカウントを削除する [!DNL Flow Service] API を正常に使用しました。
 
-ユーザーインターフェイスを使用してこれらの操作を実行する手順については、 [UI でのアカウントの削除](../../tutorials/ui/delete-accounts.md).
+ユーザーインターフェイスを使用してこれらの操作を実行する手順については、[UI でのアカウントの削除](../../tutorials/ui/delete-accounts.md)のチュートリアルを参照してください。
