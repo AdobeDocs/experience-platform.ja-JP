@@ -5,13 +5,13 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
 workflow-type: tm+mt
 source-wordcount: '1018'
-ht-degree: 26%
+ht-degree: 54%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 3 月 7 日（PT）**
+**リリース日：2022年3月7日（PT）**
 
 >[!NOTE]
 >
@@ -37,19 +37,19 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
-## データの収集 {#data-collection}
+## データ収集 {#data-collection}
 
-Platform は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、Adobeや非Adobeの宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリーム設定の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが更新されました。 データストリームにサービスを追加する場合、アクセス権のあるサービスのみがオプションのリストに含まれます。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md) を参照してください。 |
-| データ収集用のデータ準備 | Adobe Experience Platform Web SDK を使用している場合、 Data Prep 機能を利用して、サーバー側の Experience Data Model(XDM) にデータをマッピングできるようになりました。 詳しくは、 [データ収集用のデータ準備](../../edge/fundamentals/datastreams.md#data-prep) （「データストリーム」ガイド）を参照してください。 |
-| ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を提供できます。 詳しくは、 [ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) を参照してください。 |
+| データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが新しくなりました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../edge/fundamentals/datastreams.md)のガイドを参照してください。 |
+| データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバー側の Experience Data Model（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/fundamentals/datastreams.md#data-prep)に関する節を参照してください。 |
+| ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。詳しくは、[ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
 
-Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
+Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -65,13 +65,13 @@ Platform でのデータ収集について詳しくは、 [データ収集の概
 
 関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
 
-Adobe Experience Platform [!DNL Identity Service] を使用すると、デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握でき、効果的な個人のデジタルエクスペリエンスをリアルタイムで提供できます。
+Adobe Experience Platform [!DNL Identity Service] を利用すると、デバイスやシステム間のアイデンティティを橋渡しすることで、顧客と顧客の行動をより把握し、インパクトのあるパーソナルなデジタル体験をリアルタイムで提供できます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しい権限： `view-identity-graph` | これで、 `view-identity-graph` 組織内のユーザーが id グラフデータを表示できるかどうかを制御する権限。 この権限を持たないユーザーは、UI で ID グラフビューアにアクセスすることは禁止されます [!DNL Identity Service] ID を返す API。 詳しくは、 [アクセス制御の概要](../../access-control/home.md) 権限の詳細を参照してください。 |
+| `view-identity-graph` の新しい権限 | `view-identity-graph` 権限を使って、組織内のユーザーが ID グラフデータを表示できるかどうかを制御できるようになりました。この権限を持たないユーザーは、UI で ID グラフビューアにアクセスすることや、ID を返す [!DNL Identity Service] API にアクセスすることが禁止されます。権限について詳しくは、[アクセス制御の概要](../../access-control/home.md)を参照してください。 |
 
 [!DNL Identity Service] の一般的な情報について詳しくは、[ID サービスの概要](../../identity-service/home.md)を参照してください。
 
