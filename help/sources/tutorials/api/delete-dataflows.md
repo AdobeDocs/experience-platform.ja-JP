@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform、ホーム、人気の高いトピック、フローサービス、API、API、削除、データフローの削除
+keywords: Experience Platform;ホーム;人気のトピック;フローサービス;API;api;削除;データフローの削除
 solution: Experience Platform
-title: フローサービス API を使用したデータフローの削除
+title: Flow Service API を使用したデータフローの削除
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用してバッチおよびストリーミングのデータフローを削除する方法について説明します。
+description: Flow Service API を使用してバッチおよびストリーミングのデータフローを削除する方法について説明します。
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# フローサービス API を使用したデータフローの削除
+# Flow Service API を使用したデータフローの削除
 
-エラーを含む、または古くなったバッチおよびストリーミングのデータフローは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+エラーが含まれていたり古くなったりしたバッチやストリーミングのデータフローは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して削除できます。
 
-このチュートリアルでは、を使用して、バッチソースとストリーミングソースの両方でおこなったデータフローを削除する手順を説明します。 [!DNL Flow Service].
+このチュートリアルでは、バッチソースとストリーミングソースの両方で作成されたデータフローを、[!DNL Flow Service] を使用して削除する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、選択したコネクタを [ソースの概要](../../home.md) このチュートリアルを試す前に、概要を説明した手順に従ってください。
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフロー ID がない場合は、このチュートリアルの内容を試す前に、[ソースの概要](../../home.md)でコネクタを選択し、説明されている手順に従ってください。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
-* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../home.md)： [!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)： [!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../landing/api-guide.md).
+Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
 
 ## データフローの削除
 
-既存のフロー ID を使用すると、 [!DNL Flow Service] API
+既存のフロー ID を使用して、[!DNL Flow Service] API に DELETE リクエストを実行することでデータフローを削除できます。
 
 **API 形式**
 
@@ -44,7 +44,7 @@ DELETE /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 一意の `id` の値を指定します。 |
+| `{FLOW_ID}` | 削除したいデータフローの一意の `id` の値。 |
 
 **リクエスト**
 
@@ -59,10 +59,10 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行することで、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。データフローに対してルックアップ（GET）リクエストを試みることで、削除を確認することができます。API はデータフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Flow Service] 既存のデータフローを削除する API。
+このチュートリアルでは、[!DNL Flow Service] API を使用して既存のデータフローを正常に削除しました。
 
-ユーザーインターフェイスを使用してこれらの操作を実行する手順については、 [UI でのデータフローの削除](../../tutorials/ui/delete.md)
+これらの操作をユーザーインターフェイスを使用して実行する手順については、[UI でのデータフローの削除](../../tutorials/ui/delete.md)に関するチュートリアルを参照してください。
