@@ -36,7 +36,7 @@ ht-degree: 100%
 
 Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
-##  ソース接続の作成 {#source}
+## ソース接続の作成 {#source}
 
 [!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
