@@ -1,11 +1,11 @@
 ---
-description: このページでは、「/authoring/audience-templates」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
+description: このページでは、API エンドポイント /authoring/audience-templates を使用して実行できるすべての API 操作について説明します。
 title: オーディエンスメタデータエンドポイント API の操作
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
 source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '879'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**API エンドポイント**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-このページでは、 `/authoring/audience-templates` API エンドポイント。 このエンドポイントを使用するタイミングについては、 [audience metadata management](./audience-metadata-management.md).
+このページでは、`/authoring/audience-templates` API エンドポイントを使用して実行できるすべての API の操作について説明します。このエンドポイントを使用するタイミングについては、[オーディエンスメタデータ管理](./audience-metadata-management.md)を参照してください。
 
 ## オーディエンステンプレート API 操作の概要 {#get-started}
 
-続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+続ける前に「[はじめる前に](./getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
-## 新しいオーディエンステンプレートを作成します {#create}
+## 新しいオーディエンステンプレートの作成 {#create}
 
-新しいオーディエンステンプレートを作成するには、 `/authoring/audience-templates` endpoint.
+エンドポイント `/authoring/audience-templates` に POST リクエストを実行することで、新しいオーディエンステンプレートを作成できます。
 
 **API 形式**
 
@@ -33,7 +33,7 @@ POST /authoring/audience-templates
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された、新しいオーディエンスメタデータテンプレートを作成します。 以下のペイロードには、 `/authoring/audience-templates` endpoint. API 要件に従って、呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートをカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しいオーディエンスメタデータテンプレートを作成します。以下のペイロードには、エンドポイント `/authoring/audience-templates` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -183,28 +183,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | プロパティ | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。 この名前は、Experience Platformユーザーインターフェイス内のパートナー固有のエラーメッセージに表示され、その後に解析されたエラーメッセージが続きます。 `metadataTemplate.create.errorSchemaMap`. |
-| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンス/セグメントを作成、更新、削除または検証するために使用します。 次の 2 つの業界の例があります。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | 文字列 | 宛先のセグメント/オーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。 例： `POST`, `PUT`, `DELETE` |
-| `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。 例：`"Content-Type"`。 |
-| `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。 例：`"application/x-www-form-urlencoded"`。 |
-| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。 に追加する必要があるパラメーター `requestBody` オブジェクトは、API が受け入れるフィールドに応じて異なります。 例については、 [最初のテンプレートの例](./audience-metadata-management.md#example-1) （オーディエンスメタデータ機能ドキュメント内） |
-| `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。 例については、 [テンプレートの例](./audience-metadata-management.md#examples) （オーディエンスメタデータ機能ドキュメント内） |
-| `responseFields.value` | 文字列 | API が呼び出されたときに返される応答フィールドの値を指定します。 |
-| `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。 例については、 [ テンプレートの例](./audience-metadata-management.md#examples) （オーディエンスメタデータ機能ドキュメント内） |
-| `responseErrorFields.value` | 文字列 | 宛先からの API 呼び出し応答で返されたエラーメッセージを解析します。 これらのエラーメッセージは、ユーザーユーザーインターフェイスでExperience Platformに表示されます。 |
-| `validations.field` | 文字列 | 宛先に対する API 呼び出しがおこなわれる前に、検証をすべてのフィールドに対して実行する必要があるかどうかを示します。 例えば、 `{{validations.accountId}}` ユーザーのアカウント ID を検証する場合。 |
-| `validations.regex` | 文字列 | 検証が合格するための、フィールドの構造化方法を示します。 |
+| `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。 この名前は、Adobe Experience Platform のユーザーインターフェイスであらゆるパートナー固有のエラーメッセージに表示され、その後に `metadataTemplate.create.errorSchemaMap` から解析されたエラーメッセージが続きます。 |
+| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスやセグメントを作成、更新、削除、検証するために使用します。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
+| `httpMethod` | 文字列 | 宛先のセグメントやオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
+| `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
+| `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。 例：`"application/x-www-form-urlencoded"` |
+| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。 `requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。例については、オーディエンスメタデータ機能ドキュメントの[最初のテンプレートの例](./audience-metadata-management.md#example-1)を参照してください。 |
+| `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](./audience-metadata-management.md#examples)を参照してください。 |
+| `responseFields.value` | 文字列 | 呼び出し時に API が返す応答フィールドの値を指定します。 |
+| `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](./audience-metadata-management.md#examples)を参照してください。 |
+| `responseErrorFields.value` | 文字列 | API 呼び出しに対する宛先からの応答で返されたエラーメッセージを解析します。これらのエラーメッセージは、Adobe Experience Platform のユーザーインターフェイスでユーザーに表示されます。 |
+| `validations.field` | 文字列 | 宛先に対する API 呼び出しが実行される前に、いずれかのフィールドに対して検証を実行する必要があるかどうかを示します。例えば、ユーザーのアカウント ID の検証に `{{validations.accountId}}` を使用できます。 |
+| `validations.regex` | 文字列 | 検証に合格するために、フィールドをどのように構成するべきかを示します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく作成されたオーディエンステンプレートの詳細を返します。
+リクエストが成功した場合は、HTTP ステータス 200と新しく作成されたオーディエンステンプレートの詳細が返されます。
 
-## オーディエンステンプレートを更新 {#update}
+## オーディエンステンプレートの更新 {#update}
 
-既存のオーディエンステンプレートを更新するには、 `/authoring/audience-templates` エンドポイントを作成し、更新するオーディエンステンプレートのインスタンス ID を指定します。 呼び出しの本文で、更新したテンプレートを指定します。
+エンドポイント `/authoring/audience-templates` に PUT リクエストを実行し、更新するオーディエンステンプレートのインスタンス ID を指定することで、既存のオーディエンステンプレートを更新できます。呼び出しの本文で、更新したテンプレートを指定します。
 
 **API 形式**
 
@@ -218,7 +218,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された、既存のオーディエンスメタデータテンプレートを更新します。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、既存のオーディエンスメタデータテンプレートを更新します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## オーディエンステンプレートのリストの取得 {#retrieve-list}
 
-IMS 組織のすべてのオーディエンステンプレートのリストを取得するには、 `/authoring/audience-templates` endpoint.
+エンドポイント `/authoring/audience-templates` に GET リクエストを実行することで、IMS 組織のすべてのオーディエンステンプレートのリストを取得できます。
 
 **API 形式**
 
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のあるオーディエンスメタデータテンプレートのリストを返します。 1 `instanceId` は、1 つの宛先のテンプレートに対応します。 簡潔にするために、応答は切り捨てられます。
+次の応答では、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のあるオーディエンスメタデータテンプレートのリストが返されます。 1 つの `instanceId` が 1 つの宛先のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
 
 ```json
 {
@@ -449,7 +449,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## 特定のオーディエンステンプレートの取得 {#get}
 
-特定のオーディエンステンプレートに関する詳細な情報を取得するには、 `/authoring/audience-templates` エンドポイントを作成し、取得するオーディエンステンプレートのインスタンス ID を指定します。
+エンドポイント `/authoring/audience-templates` に GET リクエストを実行し、取得するオーディエンステンプレートのインスタンス ID を指定することで、特定のオーディエンステンプレートに関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -473,7 +473,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定されたオーディエンステンプレートに関する詳細情報を返します。
+リクエストが成功した場合は、指定されたオーディエンステンプレートの詳細情報とともに HTTP ステータス 200 が返されます。
 
 ```json
 {
@@ -585,7 +585,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## 特定のオーディエンステンプレートの削除 {#delete}
 
-DELETEリクエストを `/authoring/audience-templates` エンドポイントを作成し、削除するオーディエンステンプレートの ID をリクエストパスに指定します。
+エンドポイント `/authoring/audience-templates` に DELETE リクエストを実行し、リクエストパスで削除するオーディエンステンプレートの ID を指定することで、指定したオーディエンステンプレートを削除できます。
 
 **API 形式**
 
@@ -595,7 +595,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | この `id` 」です。 |
+| `{INSTANCE_ID}` | 削除するオーディエンステンプレートの `id`。 |
 
 **リクエスト**
 
@@ -609,12 +609,12 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と空の HTTP 応答を返します。
+リクエストが成功した場合は、空の HTTP 応答とともに HTTP ステータス 200 が返されます。
 
 ## API エラー処理
 
-Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、オーディエンスメタデータテンプレートを使用するタイミングと、 `/authoring/audience-templates` API エンドポイント。 読み取り [宛先の設定にDestination SDKを使用する方法](./configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
+このドキュメントでは、オーディエンスメタデータテンプレートを使用するタイミングと、`/authoring/audience-templates` API エンドポイントを使用してオーディエンスメタデータテンプレートを設定する方法について確認しました。[Destination SDK を使用して宛先を設定する方法](./configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスの中でどのように位置づけられるかを把握します。
