@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；crm;CRM
+keywords: Experience Platform;ホーム;人気のトピック;crm;CRM
 solution: Experience Platform
-title: フローサービス API を使用した CRM ソース用のデータフローの作成
+title: Flow Service API を使用した CRM ソースのデータフローの作成
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、サードパーティの CRM システムからデータを取得し、ソースコネクタと API を使用してそれらを Platform に取り込む手順について説明します。
+description: このチュートリアルでは、サードパーティの CRM システムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# を使用して、CRM ソースのデータフローを作成します。 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した CRM ソースのデータフローの作成
 
-このチュートリアルでは、CRM ソースからデータを取得し、を使用して Platform に取り込む手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、CRM ソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して Platform に取り込む手順を説明します。
 
 >[!NOTE]
 >
->データフローを作成するには、Platform 上の次の CRM ソースのいずれかと有効なベース接続 ID が必要です。<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>データフローを作成するには、Platform 上の次の CRM ソースのいずれかとの有効なベース接続 ID が必要です。<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
 
 ## はじめに
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md):Schema Registry API への呼び出しを正しく実行するために知っておく必要がある重要な情報が含まれています。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、データの場所とリネージのExperience Platformです。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得 API を使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
+   * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
+* [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../landing/api-guide.md).
+Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
-## ソース接続の作成 {#source}
+##  ソース接続の作成 {#source}
 
-ソース接続を作成するには、 [!DNL Flow Service] API ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID で構成されます。
+[!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
-ソース接続を作成するには、 data format 属性の enum 値も定義する必要があります。
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
 ファイルベースのコネクタには、次の列挙値を使用します。
 
-| データフォーマット | 列挙値 |
+| データ形式 | 列挙値 |
 | ----------- | ---------- |
 | 区切り | `delimited` |
 | JSON | `json` |
-| Parquet | `parquet` |
+| PARQUET | `parquet` |
 
-すべてのテーブルベースのコネクタで、値をに設定します。 `tabular`.
+すべてのテーブルベースのコネクタで、値を`tabular`に設定します。 
 
 **API 形式**
 
@@ -110,13 +110,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | アクセスするサードパーティ CRM システムの一意の接続 ID。 |
+| `baseConnectionId` | アクセスするサードパーティの CRM システムの一意の接続 ID。 |
 | `params.path` | ソースファイルのパス。 |
-| `connectionSpec.id` | 特定のサードパーティ CRM システムに関連付けられた接続仕様 ID。 詳しくは、 [付録](#appendix) 接続仕様 ID のリスト。 |
+| `connectionSpec.id` | 特定のサードパーティの CRM システムに関連付けられた接続仕様 ID。接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
 **応答**
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、後の手順でデータフローを作成する際に必要になります。
+リクエストが成功した場合は、新しく作成したソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -127,23 +127,23 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成し、ソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../xdm/api/schemas.md).
+ターゲット XDM スキーマの作成方法に関する詳細な手順については、[API を使用したスキーマの作成](../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
 
 ## ターゲットデータセットの作成 {#target-dataset}
 
-ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
+[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md).
+ターゲットデータセットの作成方法に関する詳細な手順については、[API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
 
 ## ターゲット接続の作成
 
-ターゲット接続は、取り込まれたデータが格納される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を提供する必要があります。この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。 の使用 [!DNL Flow Service] API では、受信ソースデータを格納するデータセットと共にこれらの識別子を指定することで、ターゲット接続を作成できます。
+これで、ターゲットスキーマとターゲットデータセットの一意の識別子、およびデータレイクに対する接続仕様 ID が得られました。 [!DNL Flow Service] API を使用すると、受信ソースデータを格納するデータセットと共にこれらの識別子を指定することで、ターゲット接続を作成できます。
 
 **API 形式**
 
@@ -182,10 +182,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.schema.id` | この `$id` ターゲット XDM スキーマの。 |
-| `data.schema.version` | スキーマのバージョン。 この値を設定する必要があります `application/vnd.adobe.xed-full+json;version=1`：スキーマの最新のマイナーバージョンを返します。 |
+| `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
+| `data.schema.version` | スキーマのバージョン番号。この値は `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。この設定によりスキーマの最新のマイナーバージョンが返されます。 |
 | `params.dataSetId` | ターゲットデータセットの ID。 |
-| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 ```json
 {
@@ -198,7 +198,7 @@ curl -X POST \
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
 
-マッピングセットを作成するには、 `mappingSets` エンドポイント [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) （ターゲット XDM スキーマを提供する際） `$id` 作成するマッピングセットの詳細。
+マッピングセットを作成するには、[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを実行し、その際にターゲット XDM スキーマ `$id` および作成するマッピングセットの詳細を指定します。
 
 **API 形式**
 
@@ -256,7 +256,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) をクリックします。 この値は、後の手順でデータフローを作成する際に必要です。
+リクエストが成功した場合は、一意の ID（`id`）など、新しく作成したマッピングの詳細が返されます。この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -271,7 +271,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、それらを Platform に取り込む役割を果たします。 データフローを作成するには、まず CRM データの収集を担当するデータフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、それらを Platform に取り込む役割を果たします。 データフローを作成するには、まずは CRM データの収集を担うデータフロー仕様を取得する必要があります。
 
 **API 形式**
 
@@ -291,7 +291,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細を返します。 応答には、一意のフロー仕様が含まれます `id` 新しいデータフローを作成するために必要です。
+応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には一意のフロー仕様 `id` が含まれており、これは新しいデータフローの作成に必要です。
 
 ```json
 {
@@ -522,16 +522,16 @@ curl -X GET \
 
 ## データフローの作成
 
-CRM データを収集するための最後の手順は、データフローを作成することです。 現時点では、次の必要な値が準備されています。
+CRM データを収集するための最後の手順は、データフローを作成することです。現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source)
 * [ターゲット接続 ID](#target)
 * [マッピング ID](#mapping)
 * [データフロー仕様 ID](#specs)
 
-データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、前述の値をPOST内に指定しながらペイロードリクエストを実行します。
+データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。 `once`, `minute`, `hour`, `day`または `week`. 間隔値は、2 つの連続した取り込みから 1 回限りの取り込みを作成するまでの間隔を指定し、間隔を設定する必要はありません。 その他のすべての頻度では、間隔の値を次の値以上に設定する必要があります `15`.
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を `once`、`minute`、`hour`、`day`、`week` の 5 つのオプションのいずれかに設定する必要があります。インターバルの値には、連続した 2 回の取り込みの間の期間を指定します。1 回限りの取り込みを作成する場合は、インターバルを設定する必要はありません。その他の頻度はすべて、間隔の値を `15` 以上に設定する必要があります。
 
 **API 形式**
 
@@ -589,19 +589,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `flowSpec.id` | この [フロー仕様 ID](#specs) 前の手順で取得しました。 |
-| `sourceConnectionIds` | この [ソース接続 ID](#source) 前の手順で取得した。 |
-| `targetConnectionIds` | この [ターゲット接続 ID](#target-connection) 前の手順で取得した。 |
-| `transformations.params.mappingId` | この [マッピング ID](#mapping) 前の手順で取得した。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために使用される指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 次の場合にサポートされる形式： `deltaColumn` が `yyyy-MM-dd HH:mm:ss`. Microsoft Dynamics を使用している場合、 `deltaColumn` が `yyyy-MM-ddTHH:mm:ssZ`. |
+| `flowSpec.id` | 直前の手順で取得した[フロー仕様 ID](#specs)。 |
+| `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target-connection)。 |
+| `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために使用する、指定の列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn` でサポートされている形式は `yyyy-MM-dd HH:mm:ss` です。Microsoft Dynamics を使用している場合、 `deltaColumn` でサポートされている形式は `yyyy-MM-ddTHH:mm:ssZ` です。 |
 | `transformations.params.mappingId` | データベースに関連付けられたマッピング ID。 |
-| `scheduleParams.startTime` | エポックタイムでのデータフローの開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`, `minute`, `hour`, `day`または `week`. |
-| `scheduleParams.interval` | 間隔は、2 つの連続したフロー実行の間隔を示します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が `once` およびは次よりも大きいか等しい必要があります `15` を使用します。 |
+| `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必要ありません。その他の頻度の値では、間隔は `15` 以上にする必要があります。 |
 
 **応答**
 
-成功すると、ID(`id`) を含める必要があります。
+リクエストが成功した場合は、新しく作成したデータフローの ID `id` が返されます。
 
 ```json
 {
@@ -613,20 +613,20 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、 [API でのデータフローの監視 ](../monitor.md)
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローのモニタリング方法について詳しくは、[API でのデータフローのモニタリング](../monitor.md)に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このチュートリアルでは、CRM システムからデータを収集するソースコネクタをスケジュールに従って作成しました。 受信データは、次のようなダウンストリームの Platform サービスで使用できるようになりました。 [!DNL Real-time Customer Profile] および [!DNL Data Science Workspace]. 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、設定したスケジュールに従って CRM システムからデータを収集するソースコネクタを作成しました。 [!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)
 
 ## 付録
 
-次の節では、様々な CRM ソースコネクタとその接続仕様を示します。
+次の節では、様々な CRM ソースコネクタとその接続仕様をリストに示します。
 
-### 接続の仕様
+### 接続仕様
 
 | コネクタ名 | 接続仕様 |
 | -------------- | --------------- |
