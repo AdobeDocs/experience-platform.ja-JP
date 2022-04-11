@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 3%
 
 ---
@@ -153,7 +153,7 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ![Mapped audience ヘルスウィジェット。](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL 宛先数] (#destinations-count)
+### [!UICONTROL 宛先数] {#destinations-count}
 
 この [!UICONTROL 宛先数] ウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。
 
