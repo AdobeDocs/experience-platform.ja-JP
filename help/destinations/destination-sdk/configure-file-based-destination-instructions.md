@@ -1,36 +1,36 @@
 ---
-description: このページでは、Destination SDKを使用してファイルベースの宛先を設定する手順について説明します。
-title: （ベータ版）Destination SDKを使用してファイルベースの宛先を設定する
+description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
+title: （ベータ版）Destination SDK を使用したファイルベースの宛先の設定
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '477'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# （ベータ版）Destination SDKを使用してファイルベースの宛先を設定する
+# （ベータ版）Destination SDK を使用したファイルベースの宛先の設定
 
 ## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Destination SDKを使用してファイルベースの宛先を設定および送信する機能は、現在、ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Adobe Experience Platform Destination SDK を使用して、ファイルベースの宛先を構成および提出する機能は、現在ベータ版となっています。ドキュメントと機能は変更される場合があります。
 
-このページでは、 [宛先 SDK の設定オプション](./configuration-options.md) を設定するには、他のDestination SDK機能と API リファレンスドキュメントで [ファイルベースの宛先](../../destinations/destination-types.md#file-based). 手順は、次の順に並べられます。
+このページでは、[Destinations SDK の設定オプション](./configuration-options.md)および他の Destination SDK 機能と API リファレンスドキュメントに記載された情報を使用して[ファイルベースの宛先](../../destinations/destination-types.md#file-based)を設定する方法を説明します。以下にその手順を、順を追って説明します。
 
 ## 前提条件 {#prerequisites}
 
-以下に示す手順に進む前に、 [Destination SDKの概要](./getting-started.md) ページを参照してください。Adobe I/O認証に必要な資格情報や、Destination SDKAPI を使用するためのその他の前提条件が取得されます。
+以下に示す手順に進む前に、[Destination SDK の概要](./getting-started.md)ページを参照して、Adobe I/O 認証に必要な認証情報や、Destination SDK API を使用するためのその他の前提条件について確認してください。
 
-## Destination SDKの設定オプションを使用して宛先を設定する手順 {#steps}
+## Destination SDK の構成オプションを使用して宛先を設定する手順 {#steps}
 
-![Destination SDKエンドポイントの使用手順の説明](./assets/destination-sdk-steps-batch.png)
+![Destination SDK エンドポイントの使用手順の図解](./assets/destination-sdk-steps-batch.png)
 
-## 手順 1:サーバーとファイル設定の作成 {#create-server-file-configuration}
+## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、 `/destinations-server` endpoint （読み取り） [API リファレンス](./destination-server-api.md)) をクリックします。
+`/destinations-server` エンドポイントを使用して、サーバーおよびファイル設定を作成することから開始します（[API リファレンス](./destination-server-api.md)をお読みください）。
 
-次に、 [!DNL Amazon S3] 宛先。 他のタイプのファイルベースの宛先を設定するには、 [サーバーの設定](server-and-file-configuration.md).
+次に [!DNL Amazon S3] 宛先の設定例を示します。他のタイプのファイルベースの宛先を設定するには、対応する[サーバーの設定](server-and-file-configuration.md)を参照してください。
 
 **API 形式**
 
@@ -119,11 +119,11 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 }
 ```
 
-## 手順 2:宛先設定の作成 {#create-destination-configuration}
+## 手順 2：宛先の構成の作成 {#create-destination-configuration}
 
-以下に、 `/destinations` API エンドポイント。 この設定について詳しくは、 [宛先の設定](./file-based-destination-configuration.md).
+次に、`/destinations` API エンドポイントを使用して作成された宛先の設定例を示します。この設定について詳しくは、[宛先の設定](./file-based-destination-configuration.md)を参照してください。
 
-手順 1 のサーバーとファイル設定をこの宛先設定に接続するには、サーバーのインスタンス ID とテンプレート設定を、 `destinationServerId` こちら。
+手順 1 のサーバーとファイル設定をこの宛先設定に接続するには、サーバーのインスタンス ID とテンプレート設定を `destinationServerId` のように追加します。
 
 **API 形式**
 
@@ -246,17 +246,17 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## 手順 3:オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
+## 手順 3：オーディエンスメタデータ設定の作成 {#create-audience-metadata-configuration}
 
-一部の宛先では、Destination SDKは、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを設定する必要があります。 参照： [Audience metadata management](./audience-metadata-management.md) を参照してください。
+一部の宛先では、Destination SDK は、宛先のオーディエンスをプログラムで作成、更新、削除するように、オーディエンスメタデータを構成する必要があります。 この設定をセットアップする必要がある場合やその方法について詳しくは、[オーディエンスメタデータ管理](./audience-metadata-management.md)を参照してください。
 
-オーディエンスメタデータ設定を使用する場合は、手順 2 で作成した宛先設定に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を、 `audienceTemplateId`.
+オーディエンスメタデータの構成を使用する場合は、手順 2 で作成した宛先構成に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を `audienceTemplateId` のように宛先設定に追加します。
 
-## 手順 4:認証の設定 {#set-up-authentication}
+## 手順 4：認証の設定 {#set-up-authentication}
 
-次の項目を指定するかどうかに応じて、 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` または `"authenticationRule": "PLATFORM_AUTHENTICATION"` 上記の宛先設定で、 `/destination` または `/credentials` endpoint.
+前述した宛先設定で、`"authenticationRule": "CUSTOMER_AUTHENTICATION"` または `"authenticationRule": "PLATFORM_AUTHENTICATION"` を指定するかどうかに応じて、`/destination` または `/credentials` エンドポイントを使用して宛先の認証を設定できます。
 
-* 選択した場合 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 宛先の設定で、ファイルベースの宛先の認証でサポートされる認証のDestination SDKについて、次の節を参照してください。
+* 宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択した場合、ファイルベースの宛先で Destination SDK によってサポートされる認証タイプについては、次の節を参照してください。
 
    * [Amazon S3 認証](authentication-configuration.md#s3)
    * [Azure 接続文字列](authentication-configuration.md#blob)
@@ -264,7 +264,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [SSH キーを使用した SFTP 認証](authentication-configuration.md#sftp-ssh)
    * [パスワードを使用した SFTP 認証](authentication-configuration.md#sftp-password)
 
-* 選択した場合 `"authenticationRule": "PLATFORM_AUTHENTICATION"`（を参照） [認証設定](./authentication-configuration.md#when-to-use).
+* `"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合、[認証設定](./authentication-configuration.md#when-to-use)を参照してください。
 
 
 <!-- ## Step 5: Test your destination {#test-destination}
@@ -276,10 +276,10 @@ As part of the process to test your destination, you must use the Experience Pla
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
 
-## 手順 5:宛先を公開 {#publish-destination}
+## 手順 5：宛先を公開する {#publish-destination}
 
-宛先を設定およびテストした後、 [宛先公開 API](./destination-publish-api.md) 設定をレビュー用にAdobeに送信します。
+宛先を設定およびテストした後、[宛先を公開する API](./destination-publish-api.md) を使用して設定をレビュー用にアドビに送信します。
 
-## 手順 6:宛先のドキュメント化 {#document-destination}
+## 手順 6：宛先のドキュメント化 {#document-destination}
 
-独立系ソフトウェアベンダー (ISV) またはシステムインテグレータ (SI) の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md) 宛先の製品ドキュメントページを [Experience Platform先カタログ](/help/destinations/catalog/overview.md).
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](./overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。
