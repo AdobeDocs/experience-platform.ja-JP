@@ -1,10 +1,10 @@
 ---
-description: この設定を使用すると、宛先名、カテゴリ、説明、ロゴなどの基本情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
-title: （ベータ版）Destination SDKのファイルベースの宛先設定オプション
+description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
+title: （ベータ版）Destination SDK のファイルベースの宛先設定オプション
 source-git-commit: 5186e90b850f1e75ec358fa01bfb8a5edac29277
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1899'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。 また、この設定では、Experience Platformユーザーが宛先に対して認証する方法、Experience Platformユーザーインターフェイスでの表示方法、宛先に書き出すことができる ID も決定します。
+この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 
-また、この設定は、宛先サーバーとオーディエンスメタデータの機能に必要な他の設定も、この設定に接続します。 2 つの設定を [下のセクション](./destination-configuration.md#connecting-all-configurations).
+宛先サーバーが動作するために必須である他の構成（宛先サーバーとオーディエンスメタデータ）も、この構成に接続されます。この 2 つの構成を参照する方法については、[下記の節](./destination-configuration.md#connecting-all-configurations)をお読みください。
 
-このドキュメントで説明する機能は、 `/authoring/destinations` API エンドポイント。 読み取り [宛先 API エンドポイントの操作](./destination-configuration-api.md) エンドポイントで実行できる操作の完全なリストについては、を参照してください。
+このドキュメントで説明する機能は、`/authoring/destinations` API エンドポイントを用いて構成することができます。エンドポイントで実行できる操作の完全なリストには、[宛先 API エンドポイントの操作](./destination-configuration-api.md)をお読みください。
 
 ## Amazon S3 の宛先の設定例 {#batch-example-configuration}
 
@@ -302,17 +302,17 @@ ht-degree: 6%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `name` | 文字列 | 宛先カタログ内の宛先のタイトルをExperience Platformします。 |
-| `description` | 文字列 | 宛先カタログで宛先カードの説明をExperience Platformします。 4～5 文以下を目指します。 |
-| `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。用途 `TEST` を設定します。 |
-| `maxProfileAttributes` | 文字列 | 顧客が宛先に書き出すことができるプロファイル属性の最大数を示します。 デフォルト値は `2000` です。 |
-| `maxIdentityAttributes` | 文字列 | 顧客が宛先に書き出すことができる ID 名前空間の最大数を示します。 デフォルト値は `10` です。 |
+| `name` | 文字列 | Experience Platform カタログ内の宛先のタイトルを示します。 |
+| `description` | 文字列 | Experience Platform 宛先カタログで、宛先カードの説明を提供します。4 ～ 5 文以下を目指します。 |
+| `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。最初に宛先を設定するときは、`TEST` を使用します。 |
+| `maxProfileAttributes` | 文字列 | 顧客が宛先にエクスポートできるプロファイル属性の最大数を示します。デフォルト値は `2000` です。 |
+| `maxIdentityAttributes` | 文字列 | 顧客が宛先にエクスポートできる ID 名前空間の最大数を示します。デフォルト値は `10` です。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 顧客認証設定 {#customer-authentication-configurations}
+## 顧客認証の構成 {#customer-authentication-configurations}
 
-宛先設定のこのセクションは、 [新しい宛先の設定](/help/destinations/ui/connect-destination.md) ページを開きます。このページでは、Experience Platformが、宛先のアカウントにExperience Platformを接続できます。
+宛先設定のこのセクションは、Experience Platform ユーザーインターフェイスで[新しい宛先の設定](/help/destinations/ui/connect-destination.md)ページを生成し、ユーザーが持つ宛先のアカウントに Experience Platform を接続します。
 
 ```json
 "customerAuthenticationConfigurations": [
@@ -322,37 +322,37 @@ ht-degree: 6%
     ],
 ```
 
-対象に応じて [認証オプション](authentication-configuration.md##supported-authentication-types) 次に示す `authType` 」フィールドに値を入力すると、Experience Platformページが次のように生成されます。
+`authType` フィールドに指定する[認証オプション](authentication-configuration.md##supported-authentication-types)に応じて、ユーザーに対して Experience Platform ページが次のように生成されます。
 
 ### Amazon S3 認証
 
-Amazon S3 認証タイプを設定する場合、ユーザーは S3 資格情報を入力する必要があります。
+Amazon S3 認証タイプを設定する際に、ユーザーは S3 資格情報を入力する必要があります。
 
 ![S3 認証を使用した UI レンダリング](assets/s3-authentication-ui.png)
 
 ### Azure Blob 認証  {#blob}
 
-Azure BLOB 認証タイプを設定する場合、ユーザーは接続文字列を入力する必要があります。
+Azure Blob 認証タイプを設定する際に、ユーザーは接続文字列を入力する必要があります。
 
-![BLOB 認証を使用した UI レンダリング](assets/blob-authentication-ui.png)
+![Blob 認証を使用した UI レンダリング](assets/blob-authentication-ui.png)
 
-### パスワード認証付き SFTP
+### パスワード認証を使用した SFTP
 
-パスワード認証タイプで SFTP を設定する場合、ユーザーは SFTP のユーザー名とパスワード、SFTP ドメインとポート（デフォルトポートは 22）を入力する必要があります。
+パスワード認証タイプで SFTP を設定する際に、ユーザーは SFTP のユーザー名とパスワード、SFTP ドメインとポート（デフォルトポートは 22）を入力する必要があります。
 
-![SFTP での UI レンダリング（パスワード認証）](assets/sftp-password-authentication-ui.png)
+![パスワード認証を使用した SFTP での UI レンダリング](assets/sftp-password-authentication-ui.png)
 
 ### SSH キー認証を使用した SFTP
 
-SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP ユーザー名と SSH キー、および SFTP ドメインとポート（デフォルトポートは 22）を入力する必要があります。
+SSH キー認証タイプで SFTP を設定する際に、ユーザーは SFTP のユーザー名と SSH キー、および SFTP ドメインとポート（デフォルトポートは 22）を入力する必要があります。
 
 ![SSH キー認証を使用した SFTP での UI レンダリング](assets/sftp-key-authentication-ui.png)
 
 ## 顧客データフィールド {#customer-data-fields}
 
-このセクションを使用して、Experience PlatformUI で宛先に接続する際に、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。
+Experience Platform UI で宛先に接続する際に、このセクションを使用して、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。
 
-次の例では、 `customerDataFields` ユーザーは、宛先の名前を入力し、 [!DNL Amazon S3] バケット名とフォルダーパス、および圧縮タイプとファイル形式。
+次の例では、宛先の名前を入力し、[!DNL Amazon S3] バケット名とフォルダーパス、そして圧縮タイプとファイル形式を指定するように `customerDataFields` でユーザーに求めます。
 
 ```json
  "customerDataFields":[
@@ -542,20 +542,20 @@ SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `name` | 文字列 | 紹介するカスタムフィールドの名前を指定します。 |
-| `title` | 文字列 | ユーザーインターフェイスのユーザーに表示されるフィールドの名前をExperience Platformします。 |
+| `name` | 文字列 | 導入するカスタムフィールドの名前を記入します。 |
+| `title` | 文字列 | Experience Platform のユーザーインターフェースで顧客に表示される、フィールドの名前を示します。 |
 | `description` | 文字列 | カスタムフィールドの説明を入力します。 |
-| `type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は次のとおりです。 `string`, `object`, `integer`. |
+| `type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は、`string`、`object`、`integer` です。 |
 | `isRequired` | ブール値 | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
-| `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。 正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、 `^[A-Za-z]+$` を選択します。 |
+| `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに `^[A-Za-z]+$` を入力します。 |
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
-| `default` | 文字列 | デフォルト値を `enum` リスト。 |
+| `default` | 文字列 | デフォルト値を `enum` リストから定義します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## UI 属性 {#ui-attributes}
 
-この節では、Adobe Experience Platformユーザーインターフェイスの宛先にAdobeが使用する必要がある、上記の設定の UI 要素について説明します。
+この節では、Adobe Experience Platform ユーザーインターフェイスで宛先に対してアドビが使用する、上記の設定の UI 要素について説明します。
 
 ```json
 "uiAttributes":{
@@ -571,17 +571,17 @@ SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `documentationLink` | 文字列 | ページの [宛先カタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) を設定します。 用途 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`で、 `YOURDESTINATION` は、宛先の名前です。 Moviestar という宛先の場合、 `http://www.adobe.com/go/destinations-moviestar-en` |
-| `category` | 文字列 | Adobe Experience Platformで宛先に割り当てられたカテゴリを指します。 詳しくは、 [宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 次のいずれかの値を使用します。 `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | 文字列 | 宛先カタログカードに表示するアイコンをホストした URL。 |
-| `connectionType` | 文字列 | 宛先に応じた接続のタイプ。 サポートされている値： <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
-| `flowRunsSupported` | ブール値 | 宛先接続が [フロー実行 UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). これを `true`: <ul><li>この **[!UICONTROL 前回のデータフロー実行日]** および **[!UICONTROL 前回のデータフロー実行ステータス]** がリンク先の参照ページに表示されます。</li><li>この **[!UICONTROL データフローの実行]** および **[!UICONTROL アクティベーションデータ]** タブが宛先ビューページに表示されます。</li></ul> |
-| `monitoringSupported` | ブール値 | 宛先接続が [UI の監視](../ui/destinations-workspace.md#browse). これを `true`、 **[!UICONTROL 監視で表示]** オプションが表示されます。 |
-| `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 に設定 `Batch` （ファイルベースの宛先の場合） |
+| `documentationLink` | 文字列 | 宛先については、[宛先カタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=ja#catalog)にあるドキュメントページを参照してください。`http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合は、`http://www.adobe.com/go/destinations-moviestar-en` となります。 |
+| `category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=ja)を参照してください。次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `iconUrl` | 文字列 | 宛先カタログのカードに表示するアイコンをホストした URL。 |
+| `connectionType` | 文字列 | 宛先に応じた接続のタイプ。サポートされている値。 <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
+| `flowRunsSupported` | ブール値 | 宛先接続を[フロー実行 UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) に含めるかどうかを示します。この項目を `true` に設定すると、次のように動作します。 <ul><li>**[!UICONTROL 前回のデータフロー実行日]**&#x200B;および&#x200B;**[!UICONTROL 前回のデータフロー実行ステータス]**&#x200B;が宛先の参照ページに表示されます。</li><li>「**[!UICONTROL データフローの実行]**」タブおよび「**[!UICONTROL アクティベーションデータ]**」タブが宛先ビューページに表示されます。</li></ul> |
+| `monitoringSupported` | ブール値 | 宛先接続を[モニタリング UI](../ui/destinations-workspace.md#browse) に含めるかどうかを示します。この項目を `true` に設定すると、「**[!UICONTROL モニタリングで表示]**」オプションが宛先の参照ページに表示されます。 |
+| `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 ファイルベースの宛先は `Batch` に設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 宛先の配信 {#destination-delivery}
+## 宛先配信 {#destination-delivery}
 
 ```json
  "destinationDelivery":[
@@ -602,16 +602,16 @@ SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | 方法を示します [!DNL Platform] のお客様が宛先に接続します。 指定できる値は次のとおりです。 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>用途 `CUSTOMER_AUTHENTICATION` Platform のお客様が、次のいずれかの方法でシステムにログインする場合。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 用途 `PLATFORM_AUTHENTICATION` Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 [資格情報](./credentials-configuration-api.md) 設定。 </li><li>用途 `NONE` 宛先プラットフォームにデータを送信するために認証が必要ない場合に使用します。 </li></ul> |
-| `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./destination-server-api.md) この宛先に使用されます。 |
+| `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Adobe と宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)設定を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
+| `destinationServerId` | 文字列 | この宛先に使用した[宛先サーバー設定](./destination-server-api.md)の `instanceId`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## セグメントマッピングの設定 {#segment-mapping}
+## セグメントマッピングの構成 {#segment-mapping}
 
-宛先設定のこのセクションは、セグメント名や ID などのセグメントメタデータをExperience Platformと宛先の間で共有する方法に関連しています。
+宛先設定の当該セクションは、セグメント名や ID などのセグメントメタデータを Experience Platform と宛先間で共有する方法に関する内容です。
 
-を通じて `audienceTemplateId`の場合、この節では、この設定を [オーディエンスメタデータ設定](./audience-metadata-management.md).
+このセクションでは、`audienceTemplateId` を通じて、この設定と[オーディエンスメタデータ設定](./audience-metadata-management.md)を結び付けています。
 
 ```json
    "segmentMappingConfig":{
@@ -624,14 +624,14 @@ SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | ブール値 | 宛先アクティベーションワークフローのセグメントマッピング ID がExperience Platformセグメント名かどうかを制御します。 |
-| `mapExperiencePlatformSegmentId` | ブール値 | 宛先のアクティベーションワークフローのセグメントマッピング ID がExperience Platformセグメント ID かどうかを制御します。 |
+| `mapExperiencePlatformSegmentName` | ブール値 | 宛先のアクティベーションワークフローのセグメントマッピング ID が Adobe Experience Platform のセグメント名かどうかを制御します。 |
+| `mapExperiencePlatformSegmentId` | ブール値 | 宛先のアクティベーションワークフローのセグメントマッピング ID が Adobe Experience Platform のセグメント ID かどうかを制御します。 |
 | `mapUserInput` | ブール値 | 宛先のアクティベーションワークフローのセグメントマッピング ID をユーザーが入力するかどうかを制御します。 |
-| `audienceTemplateId` | ブール値 | この `instanceId` の [オーディエンスメタデータテンプレート](./audience-metadata-management.md) この宛先に使用されます。 オーディエンスメタデータテンプレートを設定するには、 [オーディエンスメタデータ API リファレンス](./audience-metadata-api.md). |
+| `audienceTemplateId` | ブール値 | この宛先に使用した[オーディエンスメタデータテンプレート](./audience-metadata-management.md)の `instanceId`。オーディエンスメタデータテンプレートを設定するには、[オーディエンスメタデータ API リファレンス](./audience-metadata-api.md)を参照してください。 |
 
-## マッピング手順のスキーマ設定 {#schema-configuration}
+## マッピングステップのスキーマ構成 {#schema-configuration}
 
-のパラメーターを使用します。 `schemaConfig` ：宛先のアクティベーションワークフローのマッピング手順を有効にします。 以下に説明するパラメーターを使用すると、Experience Platformユーザーがプロファイル属性や ID をファイルベースの宛先にマッピングできるかどうかを判断できます。
+`schemaConfig` のパラメーターを使用して、宛先の有効化ワークフローのマッピング手順を有効にします。次に説明するパラメーターを使用すると、Experience Platform ユーザーがプロファイル属性や ID をファイルベースの宛先にマッピングできるかどうかを決定できます。
 
 ```json
 "schemaConfig":{
@@ -653,18 +653,18 @@ SFTP（SSH キー認証タイプ）を設定する場合、ユーザーは SFTP 
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `profileFields` | 配列 | 定義済みの `profileFields`の場合、Experience Platformユーザーは、Platform 属性を宛先の事前定義済み属性にマッピングするオプションがあります。 |
-| `profileRequired` | ブール値 | 用途 `true` 上記の設定例に示すように、ユーザーがExperience Platformから宛先側のカスタム属性にプロファイル属性をマッピングできる場合。 |
-| `segmentRequired` | ブール値 | 常に使用 `segmentRequired:true`. |
-| `identityRequired` | ブール値 | 用途 `true` ( ユーザーが、id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合 )。 |
+| `profileFields` | 配列 | 定義済みの `profileFields` を追加すると、Experience Platform ユーザーは、Platform 属性を宛先の事前定義済み属性にマッピングするオプションを選択できます。 |
+| `profileRequired` | ブール値 | 前述の設定例に示すように、ユーザーが Experience Platform のプロファイル属性を宛先側のカスタム属性にマッピングできる場合は、`true` を使用します。 |
+| `segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
+| `identityRequired` | ブール値 | ユーザーが Experience Platform の ID 名前空間を目的のスキーマにマッピングできる場合は、`true` を使用します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### マッピング手順での動的スキーマ設定 {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDKは、パートナー定義のスキーマをサポートします。 パートナー定義のスキーマを使用すると、プロファイル属性と ID を、 [ストリーミング先](destination-configuration.md#schema-configuration) ワークフロー。
+Adobe Experience Platform Destination SDK は、パートナー定義のスキーマをサポートします。パートナー定義のスキーマを使用すると、[ストリーミング宛先](destination-configuration.md#schema-configuration)ワークフローと同様に、ユーザーはプロファイル属性と ID を宛先のパートナーが定義したカスタムスキーマにマッピングできます。
 
-のパラメーターを使用します。  `dynamicSchemaConfig` を使用して、Platform プロファイル属性や id のマッピング先となる独自のスキーマを定義します。
+`dynamicSchemaConfig` のパラメーターを使用して、Platform プロファイル属性や ID のマッピング先となる独自のスキーマを定義します。
 
 ```json
 "schemaConfig":{
@@ -684,19 +684,19 @@ Adobe Experience Platform Destination SDKは、パートナー定義のスキー
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `profileRequired` | ブール値 | 用途 `true` 上記の設定例に示すように、ユーザーがExperience Platformから宛先側のカスタム属性にプロファイル属性をマッピングできる場合。 |
-| `segmentRequired` | ブール値 | 常に使用 `segmentRequired:true`. |
-| `identityRequired` | ブール値 | 用途 `true` ( ユーザーが、id 名前空間をExperience Platformから目的のスキーマにマッピングできる場合 )。 |
-| `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./destination-server-api.md) この宛先に使用されます。 |
-| `authenticationRule` | 文字列 | 方法を示します [!DNL Platform] のお客様が宛先に接続します。 指定できる値は次のとおりです。 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>用途 `CUSTOMER_AUTHENTICATION` Platform のお客様が、次のいずれかの方法でシステムにログインする場合。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 用途 `PLATFORM_AUTHENTICATION` Adobeと宛先の間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 [資格情報](./credentials-configuration-api.md) 設定。 </li><li>用途 `NONE` 宛先プラットフォームにデータを送信するために認証が必要ない場合に使用します。 </li></ul> |
-| `value` | 文字列 | マッピング手順のExperience Platformユーザーインターフェイスに表示されるスキーマの名前。 |
-| `responseFormat` | 文字列 | 常にに設定 `SCHEMA` カスタムスキーマを定義する際に使用します。 |
+| `profileRequired` | ブール値 | 前述の設定例に示すように、ユーザーが Experience Platform のプロファイル属性を宛先のカスタム属性にマッピングできる場合は、`true` を使用します。 |
+| `segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
+| `identityRequired` | ブール値 | ユーザーが Experience Platform の ID 名前空間を目的のスキーマにマッピングできる場合は、`true` を使用します。 |
+| `destinationServerId` | 文字列 | この宛先に使用した[宛先サーバー設定](./destination-server-api.md)の `instanceId`。 |
+| `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> アドビと宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)設定を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
+| `value` | 文字列 | マッピング手順で、Experience Platform ユーザーインターフェイスに表示されるスキーマの名前。 |
+| `responseFormat` | 文字列 | カスタムスキーマを定義する際は、常に `SCHEMA` に設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## ID と属性 {#identities-and-attributes}
 
-この節のパラメーターは、宛先が受け入れる ID を決定します。 また、この設定により、 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) を使用します。
+このセクションのパラメーターは、宛先がどの ID を受け入れるかを決定します。この設定では、Experience Platform ユーザーインターフェースの[マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)で、ユーザーが XDM スキーマから宛先のスキーマに ID や属性をマッピングする際に、ターゲットの ID や属性も入力されます。
 
 
 ```json
@@ -712,14 +712,14 @@ Adobe Experience Platform Destination SDKは、パートナー定義のスキー
     },
 ```
 
-どちらを指定するかを指定する必要があります [!DNL Platform] id 顧客は、を宛先に書き出すことができます。 以下に例を示します。 [!DNL Experience Cloud ID]，ハッシュ化された電子メール，デバイス ID ([!DNL IDFA], [!DNL GAID]) をクリックします。 これらの値は次のとおりです。 [!DNL Platform] ユーザーが宛先の id 名前空間にマッピングできる id 名前空間。 また、顧客が宛先でサポートされている ID にカスタム名前空間をマッピングできるかどうかを指定することもできます。
+顧客がどの [!DNL Platform] ID を宛先にエクスポートできるかを指定する必要があります。例としては、[!DNL Experience Cloud ID]、ハッシュ化されたメール，デバイス ID（[!DNL IDFA]、[!DNL GAID]）があります。これらの値は、[!DNL Platform] ID 名前空間であり、顧客が宛先から ID 名前空間にマッピングできます。また、宛先でサポートされている ID に顧客がカスタム名前空間をマッピングできるかどうかを指定することもできます。
 
-ID 名前空間では、 [!DNL Platform] および宛先
-例えば、お客様は [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL IDFA] 名前空間を宛先から作成するか、同じ名前空間をマッピングできます。 [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL Customer ID] 名前空間を使用します。
+ID 名前空間は、[!DNL Platform] と宛先の間で 1 対 1 の応答を必要としません。
+例えば、顧客は [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL IDFA] 名前空間に宛先からマッピングできます。または、同じ [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL Customer ID] 名前空間に宛先でマッピングできます。
 
 ## バッチ設定 {#batch-configuration}
 
-この節では、Adobe Experience Platformユーザーインターフェイスの宛先でAdobeが使用する必要がある、上記の設定のファイル書き出し設定について説明します。
+この節では、Adobe Experience Platform ユーザーインターフェイスの宛先に対してアドビが使用する、上記の設定のファイルのエクスポート設定について説明します。
 
 ```json
  "batchConfig":{
@@ -746,17 +746,17 @@ ID 名前空間では、 [!DNL Platform] および宛先
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `allowMandatoryFieldSelection` | ブール値 | に設定 `true` を使用すると、顧客は必須のプロファイル属性を指定できます。 デフォルト値は `false` です。詳しくは、 [必須の属性](../ui/activate-batch-profile-destinations.md#mandatory-attributes) を参照してください。 |
-| `allowDedupeKeyFieldSelection` | ブール値 | に設定 `true` ：顧客が重複排除キーを指定できるようにします。 デフォルト値は `false` です。詳しくは、 [重複排除キー](../ui/activate-batch-profile-destinations.md#deduplication-keys) を参照してください。 |
-| `defaultExportMode` | Enum | デフォルトのファイル書き出しモードを定義します。 サポートされている値：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br>デフォルト値は `DAILY_FULL_EXPORT` です。詳しくは、 [バッチアクティベーションドキュメント](../ui/activate-batch-profile-destinations.md#scheduling) を参照してください。 |
-| `allowedExportModes` | リスト | のお客様が使用できるファイルエクスポートモードを定義します。 サポートされている値：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
-| `allowedScheduleFrequency` | リスト | 顧客が使用できるファイル書き出し頻度を定義します。 サポートされている値：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | Enum | デフォルトのファイル書き出し頻度を定義します。サポートされている値は次のとおりです。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br>デフォルト値は `DAILY` です。 |
-| `defaultStartTime` | 文字列 | ファイルエクスポートのデフォルトの開始時間を定義します。 24 時間形式のファイルを使用します。 デフォルト値は「00:00」です。 |
+| `allowMandatoryFieldSelection` | ブール値 | `true` に設定すると、顧客は必須のプロファイル属性を指定できます。デフォルト値は `false` です。詳しくは、[必須の属性](../ui/activate-batch-profile-destinations.md#mandatory-attributes)を参照してください。 |
+| `allowDedupeKeyFieldSelection` | ブール値 | `true` に設定すると、顧客は重複排除キーを指定できます。デフォルト値は `false` です。詳しくは、[重複排除キー](../ui/activate-batch-profile-destinations.md#deduplication-keys)を参照してください。 |
+| `defaultExportMode` | 列挙 | デフォルトのファイルのエクスポートモードを定義します。サポートされている値。<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> デフォルト値は `DAILY_FULL_EXPORT` です。ファイルエクスポートのスケジューリングについて詳しくは、[バッチ有効化ドキュメント](../ui/activate-batch-profile-destinations.md#scheduling)を参照してください。 |
+| `allowedExportModes` | リスト | 顧客が使用できるファイルのエクスポートモードを定義します。サポートされている値。<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
+| `allowedScheduleFrequency` | リスト | 顧客が使用できるファイルエクスポートの頻度を定義します。サポートされている値。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
+| `defaultFrequency` | 列挙 | デフォルトのファイルエクスポートの頻度を定義します。サポートされている値は次のとおりです。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> デフォルト値は `DAILY` です。 |
+| `defaultStartTime` | 文字列 | ファイルエクスポートのデフォルトの開始時間を定義します。24 時間のファイル形式を使用します。デフォルト値は「00:00」です。 |
 
-## 過去のプロファイルの選定 {#profile-backfill}
+## プロファイル選定履歴 {#profile-backfill}
 
-以下を使用して、 `backfillHistoricalProfileData` パラメーターを使用して、過去のプロファイル選定を宛先に書き出す必要があるかどうかを指定します。
+宛先の設定で `backfillHistoricalProfileData` パラメーターを使用すると、過去のプロファイル資格を宛先にエクスポートする必要があるかどうかを指定できます。
 
 ```json
    "backfillHistoricalProfileData":true
@@ -764,11 +764,11 @@ ID 名前空間では、 [!DNL Platform] および宛先
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。 <br> <ul><li> `true`: [!DNL Platform] は、セグメントがアクティブ化される前に、そのセグメントの対象として認定された過去のユーザープロファイルを送信します。 </li><li> `false`: [!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
+| `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントを有効化する際に、過去のプロファイルデータをエクスポートするかどうかを制御します。<br> <ul><li> `true`：[!DNL Platform] は、セグメントが有効化される前に、そのセグメントに資格のある過去のユーザープロファイルを送信します。 </li><li> `false`：[!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適合するユーザープロファイルのみが含まれます。 </li></ul> |
 
-## この設定により、宛先に必要なすべての情報が接続される仕組み {#connecting-all-configurations}
+## この構成が宛先に必要なすべての情報をどのように接続するか {#connecting-all-configurations}
 
-一部の宛先設定は、 [宛先サーバー](./server-and-file-configuration.md) または [オーディエンスメタデータ設定](./audience-metadata-management.md). ここで説明する宛先設定では、次のように、他の 2 つの設定を参照することで、これらの設定をすべて接続します。
+一部の宛先設定は、[宛先サーバー](./server-and-file-configuration.md)または[オーディエンスメタデータ設定](./audience-metadata-management.md)を介して設定する必要があります。ここで説明する宛先の構成は、以下のように他の 2 つの構成を参照することで、これらの設定をすべて接続するものです。
 
-* 以下を使用： `destinationServerId` を使用して、目的の宛先に対して設定された宛先サーバーおよびテンプレート設定を参照します。
-* 以下を使用： `audienceMetadataId` を使用して、目的の宛先に対して設定されたオーディエンスメタデータを参照します。
+* `destinationServerId` を使用して、目的の宛先に対して設定された宛先サーバーおよびテンプレート設定を参照します。
+* `audienceMetadataId` を使用して、目的の宛先に対して設定されたオーディエンスメタデータを参照します。
