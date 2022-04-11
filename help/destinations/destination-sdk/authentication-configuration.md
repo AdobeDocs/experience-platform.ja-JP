@@ -1,44 +1,44 @@
 ---
-description: ユーザーを認証し、宛先エンドポイントに対してAdobe Experience Platform Destination SDKをアクティブ化するには、データでサポートされている認証設定を使用します。
+description: Adobe Experience Platform Destination SDK でサポートされている認証設定を使用してユーザーを認証し、宛先エンドポイントに対してデータを有効化します。
 title: 認証設定
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '564'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # 認証設定 {#credentials}
 
-## サポートされる認証タイプ {#supported-authentication-types}
+## サポートしている認証タイプ {#supported-authentication-types}
 
-選択する認証設定によって、Platform UI での宛先に対するExperience Platformの認証方法が決まります。
+選択する認証設定によって、Platform の UI での宛先に対する Experience Platform の認証方法が決まります。
 
-Adobe Experience Platform Destination SDKは、次の複数の認証タイプをサポートします。
+Adobe Experience Platform Destination SDK は、次の複数の認証タイプをサポートしています。
 
-* Bearer 認証
+* ベアラー認証
 * （ベータ版）Amazon S3 認証
 * （ベータ版）Azure 接続文字列
 * （ベータ版）Azure サービスプリンシパル
 * （ベータ版）SSH キーを使用した SFTP
-* （ベータ版）SFTP とパスワード
-* 認証コードを含む OAuth 2
-* OAUth 2（パスワード付き）
-* クライアント資格情報付きの OAuth 2 が付与されました
+* （ベータ版）パスワードを使用した SFTP
+* 認証コードを使用した OAuth 2
+* パスワード付与を使用した OAuth 2
+* クライアント資格情報の付与を使用した OAuth 2
 
-宛先の認証情報は、 `customerAuthenticationConfigurations` のパラメーター `/destinations` endpoint.
+宛先の認証情報は、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを介して設定できます。
 
 各タイプの宛先の認証設定の詳細については、次の節を参照してください。
 
 * [ストリーミング宛先の認証設定](destination-configuration.md#customer-authentication-configurations)
 * [ファイルベースの宛先の認証設定](file-based-destination-configuration.md#customer-authentication-configurations)
 
-## Bearer 認証 {#bearer}
+## ベアラー認証 {#bearer}
 
-Bearer 認証は、Bearer でのストリーミング先に対してサポートされます。Experience Platform。
+Experience Platform では、ストリーミング宛先に対してベアラー認証をサポートしています。
 
-宛先に bearer タイプの認証を設定するには、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+宛先にベアラータイプの認証を設定するには、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -48,15 +48,15 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
    ]
 ```
 
-## （ベータ版） [!DNL Amazon S3] 認証 {#s3}
+## （ベータ版）[!DNL Amazon S3] 認証 {#s3}
 
-[!DNL Amazon S3] 認証は、認証でのファイルベースの宛先に対してサポートされます。Experience Platform
+Experience Platform では、[!DNL Amazon S3] 認証がファイルベースの宛先に対してサポートされています。
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-宛先のAmazon S3 認証を設定するには、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+宛先に Amazon S3 認証を設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -66,15 +66,15 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
    ]
 ```
 
-## (ベータ) [!DNL Azure Blob Storage] {#blob}
+## （ベータ版）[!DNL Azure Blob Storage] {#blob}
 
-[!DNL Azure Blob Storage] 認証は、認証でのファイルベースの宛先に対してサポートされます。Experience Platform
+Experience Platform では、[!DNL Azure Blob Storage] 認証がファイルベースの宛先に対してサポートされています。
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-次の手順でを設定します。 [!DNL Azure Blob] 宛先の認証について、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+[!DNL Azure Blob] 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -84,15 +84,15 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
   ]
 ```
 
-## (ベータ) [!DNL Azure Data Lake Storage] {#adls}
+## （ベータ版）[!DNL Azure Data Lake Storage] {#adls}
 
-[!DNL Azure Data Lake Storage] 認証は、認証でのファイルベースの宛先に対してサポートされます。Experience Platform
+Experience Platform では、[!DNL Azure Data Lake Storage] 認証がファイルベースの宛先に対してサポートされています。
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-次の手順でを設定します。 [!DNL Azure Data Lake Storage] (ADLS) 認証を宛先に対しておこない、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+[!DNL Azure Data Lake Storage]（ADLS）認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -102,15 +102,15 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
   ]
 ```
 
-## （ベータ版） [!DNL SFTP] 認証 [!DNL SSH] key {#sftp-ssh}
+## （ベータ版）[!DNL SSH] キーを使用した [!DNL SFTP] 認証 {#sftp-ssh}
 
-[!DNL SFTP] 認証 [!DNL SSH] キーは、Experience Platformでのファイルベースの宛先でサポートされます。
+Experience Platform では、[!DNL SSH] キーを使用した [!DNL SFTP] 認証がファイルベースの宛先に対してサポートされています。
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-宛先の SSH キーを使用した SFTP 認証を設定するには、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+SSH キーを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -120,15 +120,15 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
    ]
 ```
 
-## （ベータ版） [!DNL SFTP] パスワードによる認証 {#sftp-password}
+## （ベータ版）パスワードを使用した [!DNL SFTP] 認証 {#sftp-password}
 
-[!DNL SFTP] パスワードによる認証は、Experience Platformのファイルベースの宛先でサポートされます。
+Experience Platform では、パスワードを使用した [!DNL SFTP] 認証がファイルベースの宛先に対してサポートされています。
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platform Destination SDKでのファイルベースの宛先のサポートはベータ版です。 ドキュメントと機能は変更される場合があります。
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
-宛先のパスワードを使用した SFTP 認証を設定するには、 `customerAuthenticationConfigurations` パラメーター `/destinations` エンドポイントに次のように表示されます。
+パスワードを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -140,17 +140,17 @@ Bearer 認証は、Bearer でのストリーミング先に対してサポート
 
 ## [!DNL OAuth 2] 認証 {#oauth2}
 
-[!DNL OAuth 2] 認証は、認証でのストリーミング宛先に対してExperience Platformされます。
+Experience Platform では、[!DNL OAuth 2] 認証がストリーミング宛先に対してサポートされています。
 
-様々なサポートされる OAuth 2 フローの設定方法とカスタム OAuth 2 サポートの詳細については、次のDestination SDKドキュメントを参照してください。 [OAuth 2 認証](./oauth2-authentication.md).
+サポートしている様々な OAuth 2 フローの設定方法とカスタム OAuth 2 のサポートについて詳しくは、[OAuth 2 認証](./oauth2-authentication.md)の Destination SDK ドキュメントを参照してください。
 
 
-## 使用するタイミング `/credentials` API エンドポイント {#when-to-use}
+## `/credentials` API エンドポイントを使用するタイミング {#when-to-use}
 
 >[!IMPORTANT]
 >
->ほとんどの場合、 *しない* 使用する必要がある `/credentials` API エンドポイント。 代わりに、 `customerAuthenticationConfigurations` のパラメーター `/destinations` endpoint.
+>ほとんどの場合、`/credentials` API エンドポイントを使用する必要は&#x200B;*ありません*。代わりに、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを介して宛先の認証情報を設定できます。
 
-この `/credentials` Adobeと宛先の間にグローバル認証システムがある場合、および [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。
+アドビと宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`/credentials` API エンドポイントが宛先デベロッパーに対して提供されています。
 
-この場合、 `/credentials` API エンドポイント。 また、 `PLATFORM_AUTHENTICATION` 内 [宛先設定](./destination-configuration.md#destination-delivery). 読み取り [資格情報 API エンドポイントの操作](./credentials-configuration-api.md) : `/credentials` endpoint.
+この場合、`/credentials` API エンドポイントを使用して、資格情報オブジェクトを作成する必要があります。また、[宛先設定](./destination-configuration.md#destination-delivery)で `PLATFORM_AUTHENTICATION` を選択する必要があります。`/credentials` エンドポイントで実行できる操作の完全な一覧については、[資格情報 API エンドポイントの操作](./credentials-configuration-api.md)を参照してください。
