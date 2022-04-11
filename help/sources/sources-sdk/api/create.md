@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
-title: フローサービス API（ベータ版）を使用して新しい接続仕様を作成します
+title: Flow Service API（ベータ版）を使用して新しい接続仕様を作成
 topic-legacy: tutorial
-description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、ソース SDK を使用して新しいソースを統合する手順を説明します。
+description: 次のドキュメントでは、Flow Service API を使用して接続仕様を作成し、Sources SDK を通じて新しいソースを統合する手順を説明します。
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: d84af88bc1bfe2bfb1bbf2bf36cdb43894975288
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '524'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# を使用して新しい接続仕様を作成します。 [!DNL Flow Service] API（ベータ版）
+# [!DNL Flow Service] API（ベータ版）を使用して、新しい接続仕様を作成します。
 
 >[!IMPORTANT]
 >
->ソース SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
+>Sources SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。このドキュメントで説明されている機能は変更されることがあります。
 
-接続仕様は、ソースの構造を表します。 ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。 この `/connectionSpecs` エンドポイント [!DNL Flow Service] API を使用すると、組織内の接続仕様をプログラムで管理できます。
+接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 
-次のドキュメントでは、 [!DNL Flow Service] API を使用し、Sources SDK を使用して新しいソースを統合します。
+次のドキュメントでは、[!DNL Flow Service] APIを使用して接続仕様を作成し、Sources SDK を通じて新しいソースを統合する手順を説明します。
 
 ## はじめに
 
-続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のExperience PlatformAPI を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
+先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## アーティファクトを収集
 
-を通じて新しいソースを作成する最初の手順 [!DNL Sources SDK] は、Adobeの担当者と調整し、ソースの対応する値を特定するために使用します **アイコン**, **説明**, **ラベル**、および **カテゴリ**.
+[!DNL Sources SDK] を通じて新しいソースを作成する最初の手順は、アドビ担当者と調整し、ソースの対応する&#x200B;**アイコン**、**説明**、**ラベル**&#x200B;および&#x200B;**カテゴリ**&#x200B;の値を特定することです。
 
 | アーティファクト | 説明 | 例 |
 | --- | --- | --- |
 | ラベル | ソースの名前。 | [!DNL MailChimp Members] |
-| 説明 | ソースの簡単な説明。 | へのライブインバウンド接続を作成します [!DNL Mailchimp Members] インスタンスを使用して、履歴データとスケジュールされたデータの両方をExperience Platformに取り込みます。 |
-| アイコン | ソースを表す画像またはロゴ。 このアイコンは、ソースの Platform UI レンダリングに表示されます。 | `mailchimp-members-icon.svg` |
+| 説明 | ソースの簡単な説明。 | [!DNL Mailchimp Members] インスタンスへのライブインバウンド接続を作成して、履歴データとスケジュールされたデータの両方を Experience Platform に取り込みます。 |
+| アイコン | ソースを表す画像またはロゴ。このアイコンは、ソースの Platform UI レンダリングに表示されます。 | `mailchimp-members-icon.svg` |
 | カテゴリ | ソースのカテゴリ。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 接続仕様テンプレートをコピー
 
-必要なアーティファクトを収集したら、次の接続仕様テンプレートをコピーして任意のテキストエディターに貼り付け、ブラケットで属性を更新します `{}` 特定のソースに関連する情報を含む。
+必要なアーティファクトを収集したら、以下の接続仕様テンプレートを選択したテキストエディターにコピー＆ペーストし、括弧内の属性 `{}` を特定のソースに関連する情報で更新します。
 
 ```json
 {
@@ -426,19 +426,19 @@ ht-degree: 3%
 }
 ```
 
-## 接続仕様の作成 {#create}
+## 接続仕様を作成 {#create}
 
-接続仕様テンプレートを取得したら、ソースに対応する適切な値を入力して、新しい接続仕様の作成を開始できます。
+接続仕様テンプレートを取得したら、ソースに対応する適切な値を入力して、新しい接続仕様のオーサリングを開始できます。
 
-接続仕様は、次の 3 つの個別の部分に分割できます。認証仕様、ソース仕様、およびエクスプローラ仕様。
+接続仕様は、認証仕様、ソース仕様および参照仕様の 3 つの異なる部分に分けることができます。
 
 接続仕様の各部分の値を入力する手順については、次のドキュメントを参照してください。
 
-* [認証仕様の設定](../config/authspec.md)
-* [ソースの指定を構成します。](../config/sourcespec.md)
-* [エクスプローラの仕様を設定する](../config/explorespec.md)
+* [認証仕様を設定](../config/authspec.md)
+* [ソース仕様を設定](../config/sourcespec.md)
+* [参照仕様を設定](../config/explorespec.md)
 
-仕様情報を更新したら、に対してPOST・リクエストを実行して、新しい接続仕様を発行できます。 `/connectionSpecs` エンドポイント [!DNL Flow Service] API
+仕様情報が更新されたら、[!DNL Flow Service] API の `/connectionSpecs` エンドポイントに POST リクエストを行うことで、新しい接続仕様を送信できます。
 
 **API 形式**
 
@@ -448,7 +448,7 @@ POST /connectionSpecs
 
 **リクエスト**
 
-次のリクエストは、 [!DNL MailChimp] ソース：
+次のリクエストは、[!DNL MailChimp] ソースに対する完全オーサリングされた接続仕様の例です。
 
 ```shell
 curl -X POST \
@@ -623,7 +623,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続仕様 ( 一意の `id`.
+正常に応答すると、一意の `id` を含む新しく作成された接続仕様が返されます。
 
 ```json
 {
@@ -808,6 +808,6 @@ curl -X POST \
 
 ## 次の手順
 
-新しい接続仕様を作成したら、対応する接続仕様 ID を既存のフロー仕様に追加する必要があります。 に関するチュートリアルを参照してください。 [フロー仕様の更新](./update-flow-specs.md) を参照してください。
+新しい接続仕様を作成したら、既存のフロー仕様に対応する接続仕様 ID を追加する必要があります。 詳しくは、[フロー仕様の更新](./update-flow-specs.md)に関するチュートリアルを参照してください。
 
-作成した接続仕様を変更するには、次のチュートリアルを参照してください。 [接続仕様の更新](./update-connection-specs.md).
+作成した接続仕様を変更するには、[接続仕様の更新](./update-connection-specs.md)に関するチュートリアルを参照してください。 
