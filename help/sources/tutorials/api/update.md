@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの更新
+keywords: Experience Platform;ホーム;人気の高いトピック;フローサービス;アカウントの更新
 solution: Experience Platform
-title: フローサービス API を使用したアカウントの更新
+title: Flow Service API を使用したアカウントの更新
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、フローサービス API を使用してアカウントの詳細と資格情報を更新する手順を説明します。
+description: このチュートリアルでは、Flow Service API を使用してアカウントの詳細と資格情報を更新する手順を説明します。
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '523'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
-# フローサービス API を使用したアカウントの更新
+# Flow Service API を使用したアカウントの更新
 
-状況によっては、既存のソース接続の詳細を更新する必要が生じる場合があります。 [!DNL Flow Service] には、既存のバッチ接続またはストリーミング接続（名前、説明、資格情報など）の詳細を追加、編集および削除する機能が用意されています。
+状況によっては、既存のソース接続の詳細を更新する必要が生じる場合があります。[!DNL Flow Service] には、既存のバッチまたはストリーミング接続（名前、説明、資格情報など）の詳細を追加、編集および削除する機能が用意されています。
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、接続の詳細と資格情報を更新する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、既存の接続と有効な接続 ID が必要です。 既存の接続がない場合は、 [ソースの概要](../../home.md) このチュートリアルを試す前に、概要を説明した手順に従ってください。
+このチュートリアルでは、既存の接続と有効な接続 ID が必要です。既存の接続がない場合は、このチュートリアルを試す前に、[ソースの概要](../../home.md)からソースを選択し、説明されている手順に従ってください。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../landing/api-guide.md).
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)を参照してください。
 
 ## 接続の詳細を検索
 
-接続を更新する最初の手順は、接続 ID を使用して詳細を取得することです。 接続の現在の詳細を取得するには、次に対してGETリクエストを実行します： [!DNL Flow Service] 更新する接続の接続 ID を指定する際の API。
+接続を更新する最初の手順は、接続 ID を使用して詳細を取得することです。接続の現在の詳細を取得するには、[!DNL Flow Service] API に GET リクエストを実行して、更新したい接続の接続 ID を指定します。
 
 **API 形式**
 
@@ -44,7 +44,7 @@ GET /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 一意の `id` 取得する接続の値。 |
+| `{CONNECTION_ID}` | 取得したい接続の一意の `id` 値。 |
 
 **リクエスト**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、接続の現在の詳細 ( 資格情報や一意の識別子 (`id`)、およびバージョン。 接続を更新するには、version 値が必要です。
+リクエストが成功した場合は、資格情報や一意の ID（`id`）、およびバージョンを含む接続の現在の詳細が返されます。接続を更新するには、バージョンの値が必要です。
 
 ```json
 {
@@ -99,11 +99,11 @@ curl -X GET \
 
 ## 接続を更新
 
-接続の名前、説明、および資格情報を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] 接続 ID、バージョンおよび使用する新しい情報を提供する際の API。
+接続の名前、説明および資格情報を更新するには、[!DNL Flow Service] API に対して PATCH リクエストを実行し、接続 ID、バージョンおよび使用する新しい情報を提供します。
 
 >[!IMPORTANT]
 >
->この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -113,11 +113,11 @@ PATCH /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 一意の `id` 更新する接続の値。 |
+| `{CONNECTION_ID}` | 更新したい接続の一意の `id` 値。 |
 
 **リクエスト**
 
-次のリクエストでは、接続を更新するための新しい名前と説明、および新しい資格情報のセットを提供します。
+次のリクエストでは、新しい名前と説明、一連の新しい資格情報を提供して接続を更新します。
 
 ```shell
 curl -X PATCH \
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、接続 ID と更新された etag を返します。 更新を検証するには、 [!DNL Flow Service] 接続 ID を指定する際の API。
+リクエストが成功した場合は、接続 ID と更新された etag が返されます。更新を検証するには、接続 ID を指定する際に [!DNL Flow Service] API へ GET リクエストを行います。
 
 ```json
 {
@@ -169,4 +169,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このチュートリアルに従って、接続に関連付けられた資格情報と情報を、 [!DNL Flow Service] API ソースコネクタの使用について詳しくは、 [ソースの概要](../../home.md).
+このチュートリアルでは、接続に関連付けられた資格情報と情報を、[!DNL Flow Service] API を使用して更新しました。ソースコネクタの使用について詳しくは、[ソースの概要](../../home.md)を参照してください。
