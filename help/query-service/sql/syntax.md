@@ -5,9 +5,9 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 9%
 
 ---
@@ -420,6 +420,27 @@ EXCEPTION
 WHEN other THEN SELECT 'ERROR';
 
 END $$; 
+```
+
+## インライン {#inline}
+
+インライン関数は、構造体の配列の要素を分離し、値をテーブルに生成します。 これは、 `SELECT` リストまたは `LATERAL VIEW`.
+
+インライン関数 **できません** 他のジェネレータ関数がある選択リストに配置します。
+
+デフォルトでは、生成される列の名前は「col1」、「col2」などです。 式が `NULL` その場合、行は生成されません。
+
+**例**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+この例では、次の値が返されます。
+
+```text
+1  a Spark SQL
+2  b Spark SQL
 ```
 
 ## [!DNL Spark] SQL コマンド
