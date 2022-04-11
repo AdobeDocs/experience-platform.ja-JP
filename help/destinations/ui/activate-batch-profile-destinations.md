@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
+source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2237'
 ht-degree: 96%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 96%
 >id="platform_destinations_activate_exportoptions"
 >title="ファイルの書き出しオプション"
 >abstract="「**完全ファイルを書き出し**」を選択して、セグメントに該当するすべてのプロファイルの完全なスナップショットを書き出します。「**増分ファイルの書き出し**」を選択して、前回の書き出し以降にセグメントの対象として認定されたプロファイルのみを書き出します。<br> 最初の増分ファイルの書き出しには、セグメントに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。今後の増分ファイルには、最初の増分ファイル書き出し以降にセグメントで認定されたプロファイルのみが含まれます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#export-incremental-files" text="増分ファイルの書き出し"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="増分ファイルの書き出し"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"

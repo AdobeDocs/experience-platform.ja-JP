@@ -1,19 +1,19 @@
 ---
 keywords: セグメントストリーミング先のアクティブ化；セグメントストリーミング先のアクティブ化；データのアクティブ化
-title: ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化
+title: ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化
 type: Tutorial
 seo-title: Activate audience data to streaming segment export destinations
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 8%
+source-wordcount: '799'
+ht-degree: 38%
 
 ---
 
-# ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化
+# ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化
 
 ## 概要 {#overview}
 
@@ -21,27 +21,27 @@ ht-degree: 8%
 
 ## 前提条件 {#prerequisites}
 
-宛先に対してデータをアクティブ化するには、次の条件を満たしている必要があります。 [宛先に接続されている](./connect-destination.md). まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。
+宛先へのデータをアクティベートするには、正常に[宛先に接続する](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
 ## 宛先を選択 {#select-destination}
 
-1. に移動します。 **[!UICONTROL 接続/宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。
+1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
    ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
+1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
 
    ![ボタンの有効化](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
 
-1. セグメントのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. セグメントをアクティベートするために使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
 
    ![宛先を選択](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. 次のセクションに移動： [セグメントを選択](#select-segments).
+1. 次のセクションの「[セグメントを選択](#select-segments)」に移動します。
 
 ## セグメントを選択 {#select-segments}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
 
 ![セグメントを選択](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
@@ -81,19 +81,19 @@ ht-degree: 8%
 >id="platform_destinations_activate_applytransformation"
 >title="変換を適用"
 >abstract="このオプションは、ハッシュ化されていないソースフィールドを使用する場合に、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するように、オンにします。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="詳しくは、ドキュメントを参照してください。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="詳しくは、ドキュメントを参照してください"
 
 ハッシュ化されていないソース属性を、宛先でハッシュ化される必要があるターゲット属性にマッピングする場合 ( 例： `email_lc_sha256` または `phone_sha256`)、 **変換を適用** アクティブ化時にAdobe Experience Platformがソース属性を自動的にハッシュ化するオプションが追加されました。
 
 ![ID マッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## セグメントの書き出しをスケジュール {#scheduling}
+## セグメントの書き出しをスケジュールする {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="終了日"
 >abstract="セグメントスケジュールの終了日の追加は使用できません。"
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="詳しくは、ドキュメントを参照してください。"
+>additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="詳しくは、ドキュメントを参照してください"
 
 デフォルトでは、 [!UICONTROL セグメントスケジュール] ページには、現在のアクティベーションフローで選択した新しく選択されたセグメントのみが表示されます。
 
@@ -127,11 +127,11 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反した場合の例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
+>このステップでは、Adobe Experience Platform はデータ使用ポリシーの違反がないかを確認します。ポリシーに違反した場合の例を次に示します。違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。ポリシー違反の解決方法については、データガバナンスに関するドキュメントの[ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement)を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されていない場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
+ポリシー違反が検出されていない場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確定し、宛先へのデータの送信を開始します。
 
 ![レビュー](../assets/ui/activate-segment-streaming-destinations/review.png)
 
