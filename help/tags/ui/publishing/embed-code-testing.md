@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Debugger を使用した埋め込みコードのテスト
 description: Platform Debugger を使用して、Web サイト上で Adobe Experience Platform の様々な埋め込みコードをローカルでテストする方法について説明します。
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '510'
 ht-degree: 100%
 
 ---
@@ -58,4 +58,4 @@ Platform Debugger がサイトに接続したら、左側のナビゲーショ�
 
 ## 次の手順
 
-このチュートリアルでは、Platform Debugger を使用して、テスト用に埋め込みコードをローカルで切り替える方法を説明します。 各機能の詳細情報については、[Platform Debugger のドキュメント](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=ja) を参照してください。
+このチュートリアルでは、Platform Debugger を使用して、テスト用に埋め込みコードをローカルで切り替える方法を説明します。 各機能の詳細情報については、[Platform Debugger のドキュメント](../../../debugger/home.md) を参照してください。

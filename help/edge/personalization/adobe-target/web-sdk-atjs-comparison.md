@@ -2,9 +2,10 @@
 title: at.js とExperience PlatformWeb SDK の比較
 description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
-source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
+exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2269'
 ht-degree: 7%
 
 ---
@@ -1224,5 +1225,5 @@ Web SDK を使用する場合、次の複数のデバッグ機能があります
 * 使用 [グリフォン](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [Web SDK のデバッグが有効](../../../edge/fundamentals/debugging.md)
 * 用途 [Web SDK 監視フック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 用途 [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* 用途 [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * ターゲットトレース
