@@ -5,14 +5,14 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 3397e0ef79b585b828e794ca5f5d9e4c8ae470aa
+source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
 workflow-type: tm+mt
-source-wordcount: '3850'
-ht-degree: 28%
+source-wordcount: '3838'
+ht-degree: 27%
 
 ---
 
-# スキーマ合成の基本
+# スキーマ構成の基本
 
 このドキュメントでは、 [!DNL Experience Data Model] (XDM) スキーマと、Adobe Experience Platformで使用するスキーマを構成するための構成要素、原則およびベストプラクティス。 XDM と内での使用方法に関する一般情報 [!DNL Platform]を参照し、 [XDM システムの概要](../home.md).
 
@@ -230,7 +230,7 @@ Adobeは、いくつかの標準（「コア」）XDM クラスを提供しま�
 
 >[!NOTE]
 >
->「マップ」フィールドタイプでは、1 つのキーの複数の値を含む、キーと値のペアのデータを使用できます。マップは、システムレベルでのみ定義できます。つまり、業界またはベンダー定義のスキーマでマップが見つかる場合がありますが、定義したフィールドでは使用できません。フィールドの種類の定義について詳しくは、『[スキーマレジストリ API 開発者ガイド](../api/getting-started.md)』を参照してください。
+>「マップ」フィールドタイプでは、1 つのキーの複数の値を含む、キーと値のペアのデータを使用できます。マップは、標準の XDM クラスとフィールドグループで見つけることができますが、スキーマレジストリ API を使用してカスタムマップを定義することもできます。 に関するチュートリアルを参照してください。 [カスタムフィールドの定義](../tutorials/custom-fields-api.md#maps) を参照してください。
 
 ## 合成の例
 
