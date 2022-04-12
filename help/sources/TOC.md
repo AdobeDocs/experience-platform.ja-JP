@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
+source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 98%
+source-wordcount: '773'
+ht-degree: 96%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 98%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP コネクタ](connectors/cloud-storage/sftp.md)
       - [Amazon S3 および Azure Blob コネクタ](connectors/cloud-storage/blob-s3.md)
+   - 同意と環境設定 {#consent}
+      - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforce コネクタ](connectors/crm/salesforce.md)
@@ -109,6 +111,8 @@ ht-degree: 98%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracleオブジェクトストレージ](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+      - 同意と環境設定 {#consent}
+         - [OneTrust 統合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -178,7 +182,7 @@ ht-degree: 98%
    - [アカウントの削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UI チュートリアル {#ui-tutorials}
-   -  ソース接続の作成 {#create}
+   - ソース接続の作成 {#create}
       - アドビアプリケーション {#adobe-applications}
          - [Adobe Analytics（レポートスイートデータ）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（データの分類）](tutorials/ui/create/adobe-applications/classifications.md)
@@ -203,6 +207,8 @@ ht-degree: 98%
          - [Oracleオブジェクトストレージ](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 と Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - 同意と環境設定 {#consent}
+         - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -250,6 +256,7 @@ ht-degree: 98%
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [ストリーミングクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [同意および環境設定の接続データフロー](tutorials/ui/dataflow/consent-and-preferences.md)
       - [CRM 接続のデータフロー](tutorials/ui/dataflow/crm.md)
       - [カスタマーサクセス接続のデータフロー](tutorials/ui/dataflow/customer-success.md)
       - [データベース接続のデータフロー](tutorials/ui/dataflow/databases.md)

@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 100%
+source-wordcount: '1032'
+ht-degree: 98%
 
 ---
 
@@ -61,6 +61,13 @@ Adobe Experience Platform には、サードパーティの広告システムか
 - [[!DNL Google PubSub] コネクタ](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage] コネクタ](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] コネクタ](connectors/cloud-storage/sftp.md)
+
+### 同意と環境設定 {#consent}
+
+Experience Platformは、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を提供しています。 詳しくは、次の関連ドキュメントを参照してください。
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### 顧客関係管理（CRM） {#crm}
 
