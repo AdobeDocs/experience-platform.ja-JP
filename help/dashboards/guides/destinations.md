@@ -4,7 +4,7 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 3%
@@ -51,7 +51,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL 最近作成した宛先]](#recently-created-destinations)
 * [[!UICONTROL 最近アクティブ化されたセグメント]](#recently-activated-segments)
 * [[!UICONTROL 最近アクティブ化したセグメント（宛先別）]](#recently-activated-segments-by-destination)
-* [[!UICONTROL オーディエンスサイズのトレンド]](#audience-size-trends)
+* [[!UICONTROL オーディエンスサイズのトレンド]](#audience-size-trend)
 * [[!UICONTROL ID によるマッピングされていないセグメント]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID によるマッピングされたセグメント]](#mapped-segments-by-identity)
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
