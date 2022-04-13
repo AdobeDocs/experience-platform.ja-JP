@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 3%
 
 ---
@@ -112,6 +112,10 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 2 番目のドロップダウンメニューには、ダッシュボードの上部で選択した宛先アカウントに送信できる、使用可能なすべてのセグメントが一覧表示されます。
 
 ![オーディエンスサイズのトレンドウィジェット。](../images/destinations/audience-size-trend.png)
+
+この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットは [!UICONTROL キャプション] ボタンを使用して、ウィジェットの右上に表示できます。 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。 機械学習モデルは、グラフとセグメントデータを分析することで、主要なトレンドと重要なイベントを説明するキャプションを自動的に生成します。
+
+![オーディエンスサイズトレンドウィジェット用の自動キャプションダイアログ。](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL ID によるマッピングされていないセグメント] {#unmapped-segments-by-identity}
 
