@@ -1,25 +1,25 @@
 ---
-title: スキーマレジストリ API での XDM フィールドの定義
-description: スキーマレジストリ API でカスタムの Experience Data Model(XDM) リソースを作成する際に、異なるフィールドを定義する方法を説明します。
+title: Define XDM Fields in the Schema Registry API
+description: Learn how to define different fields when creating custom Experience Data Model (XDM) resources in the Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 13%
 
 ---
 
-# スキーマレジストリ API での XDM フィールドの定義
+# Define XDM fields in the Schema Registry API
 
-すべてのエクスペリエンスデータモデル (XDM) フィールドは、標準の [JSON スキーマ](https://json-schema.org/) フィールドタイプに適用される制約と、Adobe Experience Platformで適用されるフィールド名に対する追加の制約が含まれます。 スキーマレジストリ API を使用すると、形式とオプションの制約を使用して、スキーマ内のカスタムフィールドを定義できます。 XDM フィールドタイプは、フィールドレベルの属性で公開されます。 `meta:xdmType`.
+[](https://json-schema.org/)The Schema Registry API allows you to define custom fields in your schemas through the use of formats and optional constraints. `meta:xdmType`
 
 >[!NOTE]
 >
->`meta:xdmType` はシステムで生成される値なので、API を使用する場合 ( [カスタムマップタイプの作成](#maps)) をクリックします。 ベストプラクティスは、JSON スキーマのタイプ ( `string` および `integer`) に適切な最小/最大制約を設定します。
+>`meta:xdmType`[](#maps)`string``integer`
 
-次の表に、オプションのプロパティを含む、様々なフィールドタイプを定義するための適切な書式の概要を示します。 オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
+The following table outlines the appropriate formatting to define different field types, including those with optional properties. オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-最初に、目的のフィールドタイプを見つけ、提供されたサンプルコードを使用して、の API リクエストを作成します。 [フィールドグループの作成](../api/field-groups.md#create) または [データ型の作成](../api/data-types.md#create).
+[](../api/field-groups.md#create)[](../api/data-types.md#create)
 
 <table style="table-layout:auto">
   <tr>
@@ -28,7 +28,7 @@ ht-degree: 13%
     <th>例</th>
   </tr>
   <tr>
-    <td>[!UICONTROL 文字列 ]</td>
+    <td>[!UICONTROL String]</td>
     <td>
       <ul>
         <li><code>pattern</code></li>
@@ -64,7 +64,7 @@ ht-degree: 13%
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>制約付き列挙値は、 <code>enum</code> 配列を使用する場合、各値のオプションの顧客向けラベルを <code>meta:enum</code>:
+    <td><code>enum</code><code>meta:enum</code>
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "string",
@@ -80,11 +80,11 @@ ht-degree: 13%
           },
           "default": "value1"
 }</pre>
-    <br>なお、 <code>meta:enum</code> 値が <strong>not</strong> 列挙を宣言するか、データの検証を独自に実行します。 ほとんどの場合、文字列は <code>meta:enum</code> また、 <code>enum</code> データが制約を受けるようにする ただし、次のような場合に使用できます。 <code>meta:enum</code> 対応する <code>enum</code> 配列。 に関するチュートリアルを参照してください。 <a href="../tutorials/extend-soft-enum.md">ソフトエナムの拡張</a> を参照してください。
+    <br><code>meta:enum</code><strong></strong><code>meta:enum</code><code>enum</code><code>meta:enum</code><code>enum</code><a href="../tutorials/suggested-values.md"></a>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL 数値 ]</td>
+    <td>[!UICONTROL Number]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -130,7 +130,7 @@ ht-degree: 13%
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL バイト ]</td>
+    <td>[!UICONTROL Byte]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -157,7 +157,7 @@ ht-degree: 13%
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL 日付 ]</td>
+    <td>[!UICONTROL Date]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -173,13 +173,13 @@ ht-degree: 13%
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField":{ "type":"string", "format":"date-time", "examples":["2004-10-23T12:00:00-06:00"] }</pre>
+:00:</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL 配列 ]</td>
+    <td>[!UICONTROL Array]</td>
     <td></td>
-    <td>基本的なスカラー型（例：文字列）の配列：
+    <td>An array of basic scalar types (e.g. strings):
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "array",
@@ -187,15 +187,20 @@ ht-degree: 13%
             "type": "string"
   }
 }</pre>
-      別のスキーマで定義されたオブジェクトの配列：<br/>
+      <br/>
       <pre class="JSON language-JSON hljs">
-"sampleField":{ "type":"array", "items":{ "$ref":"https://ns.adobe.com/xdm/data/paymentitem" } }</pre>
+"sampleField": {
+  "type": "array",
+  "items": {
+    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
+  }
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL オブジェクト ]</td>
+    <td>[!UICONTROL Object]</td>
     <td></td>
-    <td>この <code>type</code> 以下で定義された各サブフィールドの属性 <code>properties</code> 任意のスカラー型を使用して定義できます。
+    <td><code>type</code><code>properties</code>
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -208,39 +213,48 @@ ht-degree: 13%
     }
   }
 }</pre>
-      オブジェクトタイプのフィールドは、 <code>$id</code> データ型：
+      <code>$id</code>
       <pre class="JSON language-JSON hljs">
-"sampleField":{ "type":"object", "$ref":"https://ns.adobe.com/xdm/common/phoneinteraction" }</pre>
+"sampleField": {
+  "type": "object",
+  "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction"
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL マップ ]</td>
+    <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>マップタイプフィールドは、基本的には、制限のないキーのセットを持つオブジェクトタイプのフィールドです。 オブジェクトと同様に、マップには <code>type</code> 値 <code>object</code>ですが、 <code>meta:xdmType</code> が明示的にに設定されている <code>map</code>.<br><br>地図 <strong>次の値を指定する</strong> プロパティを定義します。 It <strong>必須</strong> 単一の <code>additionalProperties</code> マップ内に含まれる値のタイプを記述するスキーマ（各マップには 1 つのデータ型のみを含めることができます）。 この <code>type</code> 値は次のいずれかでなければなりません <code>string</code> または <code>integer</code>.<br/><br/>string-type 値を持つ map フィールド：
+    <td>A map-type field is essentially an object-type field with an unconstrained set of keys. <code>type</code><code>object</code><code>meta:xdmType</code><code>map</code><br><br><strong></strong><strong></strong><code>additionalProperties</code><code>type</code><code>string</code><code>integer</code><br/><br/>
       <pre class="JSON language-JSON hljs">
-"sampleField":{ "type":"object", "meta:xdmType":"map", "additionalProperties":{ "type":"string" } }</pre>
-    XDM でのカスタムマップタイプの作成について詳しくは、以下の節を参照してください。
+"sampleField": {
+  "type": "object",
+  "meta:xdmType": "map",
+  "additionalProperties":{
+    "type": "string"
+  }
+}</pre>
+    See the section below for more information on creating custom map types in XDM.
     </td>
   </tr>
 </table>
 
-## カスタムマップタイプの作成 {#maps}
+## Creating custom map types {#maps}
 
-XDM で「マップに似た」データを効率的にサポートするために、オブジェクトに `meta:xdmType` に設定 `map` これは、キーセットが制約されていないかのようにオブジェクトを管理する必要があることを明確にするためです。 マップフィールドに取り込まれるデータは、文字列キーと、文字列値または整数値 ( `additionalProperties.type`) をクリックします。
+`meta:xdmType``map``additionalProperties.type`
 
-XDM では、このストレージヒントの使用に次の制限を設けます。
+XDM places the following restrictions on the use of this storage hint:
 
-* マップタイプはタイプである必要があります `object`.
-* マップタイプには、プロパティを定義することはできません（つまり、「空の」オブジェクトを定義します）。
-* マップタイプには `additionalProperties.type` マップ内に配置される値を示すフィールド。 `string` または `integer`.
+* `object`
+* Map types MUST NOT have properties defined (in other words, they define &quot;empty&quot; objects).
+* `additionalProperties.type``string``integer`
 
-必要に応じて、次のパフォーマンス上の欠点があるので、マップタイプのフィールドのみを使用していることを確認します。
+Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
-* Adobe Experience Platformクエリサービスの応答時間は、1 億件のレコードに対して 3 秒から 10 秒に短縮されます。
-* マップのキー数は 16 個未満にする必要があります。16 個未満にすると、さらに低下する可能性があります。
+* Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records.
+* Maps must have fewer than 16 keys or else risk further degradation.
 
-また、Platform のユーザーインターフェイスでは、マップタイプフィールドのキーを抽出する方法に制限があります。 オブジェクトタイプのフィールドは展開できますが、マップは代わりに 1 つのフィールドとして表示されます。
+The Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
 
 ## 次の手順
 
-このガイドでは、API で様々なフィールドタイプを定義する方法について説明しました。 XDM フィールドタイプの形式について詳しくは、 [XDM フィールドタイプ制約](../schema/field-constraints.md).
+This guide covered how to define different field types in the API. [](../schema/field-constraints.md)
