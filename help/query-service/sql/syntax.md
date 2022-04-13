@@ -5,9 +5,9 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
+source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2741'
 ht-degree: 9%
 
 ---
@@ -424,11 +424,15 @@ END $$;
 
 ## インライン {#inline}
 
-インライン関数は、構造体の配列の要素を分離し、値をテーブルに生成します。 これは、 `SELECT` リストまたは `LATERAL VIEW`.
+この `inline` 関数は、構造体の配列の要素を分割し、値をテーブルに生成します。 これは、 `SELECT` リストまたは `LATERAL VIEW`.
 
-インライン関数 **できません** 他のジェネレータ関数がある選択リストに配置します。
+この `inline` 関数 **できません** 他のジェネレータ関数がある選択リストに配置します。
 
 デフォルトでは、生成される列の名前は「col1」、「col2」などです。 式が `NULL` その場合、行は生成されません。
+
+>[!TIP]
+>
+>列名は `RENAME` コマンドを使用します。
 
 **例**
 
@@ -442,6 +446,20 @@ END $$;
 1  a Spark SQL
 2  b Spark SQL
 ```
+
+この 2 つ目の例では、 `inline` 関数に置き換えます。 この例のデータモデルを次の画像に示します。
+
+![productListItems のスキーマ図](../images/sql/productListItems.png)
+
+**例**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+値は `source_dataset` を使用してターゲットテーブルに入力します。
+
+| SKU |_experience |数量 | priceTotal | |—+—+—+—| | product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot; | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;)&quot; | | | | product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;)&quot; | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;)&quot; | 3 | 12 |
 
 ## [!DNL Spark] SQL コマンド
 
