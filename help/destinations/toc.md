@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '736'
 ht-degree: 97%
 
 ---
@@ -52,6 +52,7 @@ ht-degree: 97%
       * [Awin Advertiser Mastertag 拡張機能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads Universal Event Tracking（UET）拡張機能](./catalog/advertising/bing-ads.md)
       * [Branch 拡張機能](./catalog/advertising/branch.md)
+      * [（ベータ版）Criteo 接続](./catalog/advertising/criteo.md)
       * [DoubleClick Floodlight（ベータ版）拡張機能](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel 拡張機能](./catalog/advertising/facebook-pixel.md)
       * [Flashtalking OneTag 拡張機能](./catalog/advertising/flashtalking.md)
