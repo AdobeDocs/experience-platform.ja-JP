@@ -1,15 +1,15 @@
 ---
 description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
-title: メッセージのフォーマット
+title: メッセージの形式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 2%
+source-wordcount: '2266'
+ht-degree: 3%
 
 ---
 
-# メッセージのフォーマット
+# メッセージの形式
 
 ## 前提条件 — Adobe Experience Platformの概念 {#prerequisites}
 
@@ -17,7 +17,7 @@ Adobe側のメッセージ形式、プロファイル設定および変換プロ
 
 * **エクスペリエンスデータモデル (XDM)**. [XDM の概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) および  [Adobe Experience Platformで XDM スキーマを作成する方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **クラス**. [UI でのクラスの作成と編集](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **IdentityMap**. ID マップは、Adobe Experience Platformのすべてのエンドユーザー ID のマップを表します。 参照： `xdm:identityMap` 内 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+* **identityMap**. ID マップは、Adobe Experience Platformのすべてのエンドユーザー ID のマップを表します。 参照： `xdm:identityMap` 内 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. この [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。 の `status` フィールドには、 [セグメントメンバーシップの詳細スキーマフィールドグループ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 ## 概要 {#overview}
@@ -41,18 +41,15 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**ソース XDM スキーマ (1)**:この項目は、顧客がスキーマで使用するExperience Platformを指します。 Experience Platform内、 [マッピング手順](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) 「宛先のアクティブ化」ワークフローで、ユーザーは、ソーススキーマのフィールドを宛先のターゲットスキーマにマッピングします (2)。
+**ソース XDM スキーマ (1)**:この項目は、顧客がスキーマで使用するExperience Platformを指します。 Experience Platform内、 [マッピング手順](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) 宛先のアクティブ化ワークフローで、お客様は XDM スキーマのフィールドを宛先のターゲットスキーマにマッピングします (2)。
 
-**Target XDM スキーマ (2)**:宛先で想定されている形式の JSON 標準スキーマ (3) に基づいて、ターゲット XDM スキーマでプロファイル属性と ID を定義できます。 これは、の宛先設定でおこなえます。 [schemaConfig](./destination-configuration.md#schema-configuration) および [identityNamespaces](./destination-configuration.md#identities-and-attributes) オブジェクト。
+**Target XDM スキーマ (2)**:宛先の想定される形式の JSON 標準スキーマ (3) と宛先で解釈できる属性に基づいて、ターゲット XDM スキーマでプロファイル属性と ID を定義できます。 これは、の宛先設定でおこなえます。 [schemaConfig](./destination-configuration.md#schema-configuration) および [identityNamespaces](./destination-configuration.md#identities-and-attributes) オブジェクト。
 
-**宛先プロファイル属性の JSON 標準スキーマ (3)**:この項目は、 [JSON スキーマ](https://json-schema.org/learn/miscellaneous-examples.html) プラットフォームがサポートするすべてのプロファイル属性とそのタイプ ( 例：オブジェクト、文字列、配列 ) の形式を使用します。 例えば、宛先でサポートされるフィールドは次のようになります。 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`など。 次が必要です： [メッセージ変換テンプレート](./message-format.md#using-templating) を使用して、Experience Platformから書き出されたデータを、目的の形式に合わせて調整します。
+**宛先プロファイル属性の JSON 標準スキーマ (3)**:この例は、 [JSON スキーマ](https://json-schema.org/learn/miscellaneous-examples.html) プラットフォームがサポートするすべてのプロファイル属性とそのタイプ ( 例：オブジェクト、文字列、配列 ) の形式を使用します。 例えば、宛先でサポートされるフィールドは次のようになります。 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`など。 次が必要です： [メッセージ変換テンプレート](./message-format.md#using-templating) を使用して、Experience Platformから書き出されたデータを、目的の形式に合わせて調整します。
 
 上記のスキーマ変換に基づいて、ソース XDM スキーマとパートナー側のサンプルスキーマの間でプロファイル設定がどのように変化するかを次に示します。
 
 ![変換メッセージの例](./assets/transformations-with-examples.png)
-
-<br> 
-
 
 ## はじめに — 3 つの基本的な属性の変換 {#getting-started}
 
@@ -87,9 +84,79 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-## ID、属性、セグメントメンバーシップの変換にテンプレート言語を使用する {#using-templating}
+## Experience Platform内のプロファイル構造 {#profile-structure}
 
-Adobeでは、 [神社](https://jinja.palletsprojects.com/en/2.11.x/) を使用して、XDM スキーマのフィールドを、宛先でサポートされている形式に変換します。
+ページの後半に示す例を理解するには、Experience Platformでプロファイルの構造を把握することが重要です。
+
+プロファイルには次の 3 つのセクションがあります。
+
+* `segmentMembership` （常にプロファイルに存在）
+   * このセクションには、プロファイルに存在するすべてのセグメントが含まれます。 セグメントには、次の 3 つのステータスのいずれかを設定できます。 `realized`, `existing`, `exited`.
+* `identityMap` （常にプロファイルに存在）
+   * このセクションには、プロファイルに存在する (e メール、Google GAID、Apple IDFA など ) と、アクティベーションワークフローでユーザーが書き出し用にマッピングしたすべての id が含まれます。
+* 属性（宛先の設定に応じて、プロファイルに存在する場合があります） また、事前定義済みの属性とフリーフォーム属性の間には、若干の違いがあります。
+   * 対象 *フリーフォーム属性*&#x200B;に値を指定しない場合、 `.value` プロファイルに属性が存在する場合のパス ( `lastName` 属性の値を指定します )。 プロファイルに存在しない場合、 `.value` パス ( `firstName` 属性の値を指定します )。
+   * 対象 *定義済み属性*&#x200B;の場合、これらには `.value` パス。 プロファイルに存在する、マッピングされたすべての属性は、属性マップに存在します。 存在しないものは存在しません ( 例 2 - `firstName` 属性がプロファイルに存在しない )。
+
+以下の 2 つのプロファイルの例をExperience Platform:
+
+### 例 1 と `segmentMembership`, `identityMap` およびフリーフォーム属性の属性 {#example-1}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "firstName": {
+    },
+    "lastName": {
+      "value": "lastName"
+    }
+  }
+}
+```
+
+### 例 2 と `segmentMembership`, `identityMap` および定義済み属性の属性 {#example-2}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "lastName": "lastName"
+  }
+}
+```
+
+## テンプレート言語を使用して ID、属性、セグメントメンバーシップを変換 {#using-templating}
+
+Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似たテンプレート言語） [神社](https://jinja.palletsprojects.com/en/2.11.x/)を使用して、宛先の XDM スキーマのフィールドを、Experience Platformでサポートされる形式に変換します。
 
 この節では、これらの変換の方法の例をいくつか示します。入力 XDM スキーマから、テンプレートを介して、宛先で受け入れられるペイロード形式に出力する方法です。 以下の例は、次のように複雑さを増すことで示しています。
 
@@ -1129,12 +1196,10 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `addedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `realized` または `existing`. |
 | `removedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `exited`. |
 
-<!--
+## 次の手順 {#next-steps}
 
-## What Adobe needs from you to set up your destination {#what-adobe-needs}
+このドキュメントを読んだ後、Experience Platformから書き出されたデータが変換される方法を理解できます。 次に、以下のページを読んで、宛先のメッセージ変換テンプレートの作成に関する知識を習得します。
 
-Based on the transformations outlined in the sections above, Adobe needs the following information to set up your destination:
-
-* Considering *all* the fields that your platform can receive, Adobe needs the standard JSON schema that corresponds to your expected message format. Having the template allows Adobe to define transformations and to create a custom XDM schema for your company, which customers would use to export data to your destination.
-
--->
+* [メッセージ変換テンプレートの作成とテスト](/help/destinations/destination-sdk/create-template.md)
+* [テンプレートレンダリング API の操作](/help/destinations/destination-sdk/render-template-api.md)
+* [Destination SDKでサポートされる変換関数](/help/destinations/destination-sdk/supported-functions.md)

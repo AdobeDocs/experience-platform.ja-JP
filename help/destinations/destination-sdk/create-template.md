@@ -1,11 +1,11 @@
 ---
-description: Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。
+description: Adobeは、Destination SDKの一環として、宛先の設定とテストを支援する開発者ツールを提供します。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 0%
+source-wordcount: '960'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。 宛先のテスト方法について詳しくは、 [宛先設定のテスト](./test-destination.md).
+Adobeは、Destination SDKの一環として、宛先の設定とテストを支援する開発者ツールを提供します。 ここでは、メッセージ変換テンプレートの作成およびテスト方法について説明します。 宛先のテスト方法について詳しくは、 [宛先設定のテスト](./test-destination.md).
 
 宛先 **メッセージ変換テンプレートの作成とテスト** Adobe Experience Platformのターゲットスキーマと、宛先でサポートされるメッセージ形式の間で、 *テンプレートオーサリングツール* 以下で詳しく説明します。  詳しくは、 [メッセージ形式ドキュメント](./message-format.md#using-templating).
 
@@ -23,7 +23,7 @@ Adobeは、Destination SDKの一部として、宛先の設定とテストを支
 
 ## メッセージ変換テンプレートの作成とテストが必要な理由 {#why-create-message-transformation-template}
 
-Destination SDKで宛先を作成する最初の手順の 1 つは、セグメントメンバーシップ、ID、プロファイル属性のデータ形式がAdobe Experience Platformから宛先に書き出される際にどのように変換されるかを考えることです。 で宛先スキーマ XDMAdobeとの変換に関する情報を見つけます。 [メッセージ形式ドキュメント](./message-format.md#using-templating).
+Destination SDKでの宛先を作成する最初の手順の 1 つは、セグメントメンバーシップ、ID、プロファイル属性のデータ形式がAdobe Experience Platformから宛先に書き出される際にどのように変換されるかを考えることです。 で宛先スキーマ XDMAdobeとの変換に関する情報を見つけます。 [メッセージ形式ドキュメント](./message-format.md#using-templating).
 
 変換を正常に実行するには、次の例のような変換テンプレートを指定する必要があります。 [セグメント、ID およびプロファイル属性を送信するテンプレートの作成](./message-format.md#segments-identities-attributes).
 
@@ -40,12 +40,13 @@ Adobeは、AdobeXDM 形式のデータを、宛先でサポートされる形式
    * 用途 `maxUsersPerRequest` 宛先への API 呼び出しに複数のプロファイルと、そのセグメント認定、ID、プロファイル属性を含める場合は、値が 1 より大きい。
 2. [宛先設定の作成](./destination-configuration-api.md#create) をクリックし、 `destinationDelivery.destinationServerId`.
 3. [宛先設定の ID を取得する](./destination-configuration-api.md#retrieve-list) 作成したばかりのテンプレートを、テンプレート作成ツールで使用できます。
+4. 理解 [使用できる関数とフィルター](./supported-functions.md) 」と入力します。
 
 ## サンプルテンプレート API とレンダリングテンプレート API を使用して、宛先のテンプレートを作成する方法 {#iterative-process}
 
 >[!TIP]
 >
->メッセージ変換テンプレートを作成および編集する前に、まず [レンダリングテンプレート API エンドポイント](./render-template-api.md#render-exported-data) 変換を適用せずに生のプロファイルを書き出す単純なテンプレートを使用します。 シンプルなテンプレートの構文は次のとおりです。 <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+>メッセージ変換テンプレートを作成および編集する前に、まず [レンダリングテンプレート API エンドポイント](./render-template-api.md#render-exported-data) 変換を適用せずに生のプロファイルを書き出す単純なテンプレートを使用します。 シンプルなテンプレートの構文は次のとおりです。<br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 テンプレートを取得してテストするプロセスは反復的です。 書き出されたプロファイルが宛先の想定されるデータ形式に一致するまで、以下の手順を繰り返します。
 
