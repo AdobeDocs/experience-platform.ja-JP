@@ -2,16 +2,16 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 24%
+source-wordcount: '1193'
+ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 3 月 30 日（PT）**
+**リリース日：2022年3月30日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -22,7 +22,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [アラート](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [データの収集](#data-collection)
+- [データ収集](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [ソース](#sources)
 
@@ -108,17 +108,18 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 Platform での宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
 
-## データの収集 {#data-collection}
+## データ収集 {#data-collection}
 
-Platform は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、Adobeや非Adobeの宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
 | グローバルデータストリーム設定 | データストリームを設定する際に、次の新しいグローバル設定をいくつか設定できるようになりました。地域、ファーストパーティ ID cookie およびサードパーティ ID 同期。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md#configure) （データストリーム UI ガイド）を参照してください。 |
+| [Edge Network Server API](../../server-api/overview.md) | Server API を使用すると、新しい認証済みエンドポイントを使用してExperience PlatformEdge ネットワークとやり取りし、様々なデータ収集、パーソナライズ、広告、マーケティングの使用例を実現できます。 |
 
-Platform でのデータ収集について詳しくは、 [データ収集の概要](../../collection/home.md).
+Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
