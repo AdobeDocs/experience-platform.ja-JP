@@ -2,9 +2,10 @@
 keywords: Experience Platform;ID;ID サービス；トラブルシューティング；ガードレール；ガイドライン；制限；
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 13%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 13%
 
 | ガードレール | 上限 | 備考 |
 | --- | --- | --- |
-| グラフ内の ID 数 | 150 | ID グラフは、制限に達すると更新されません。 |
+| グラフ内の ID 数 | 150 | 制限は、サンドボックスレベルで適用されます。 ID グラフは、制限に達すると更新されません。 |
 | XDM レコード内の ID の数 | 20 | 必要な XDM レコードの最小数は 2 です。 |
 | カスタム名前空間の数 | なし | 作成できるカスタム名前空間の数に制限はありません。 |
 | グラフの数 | なし | 作成できる ID グラフの数に制限はありません。 |
@@ -49,5 +50,5 @@ ht-degree: 13%
 
 詳しくは、次のドキュメントを参照してください。 [!DNL Identity Service]:
 
-* [[!DNL Identity Service] の概要](home.md)
+* [[!DNL Identity Service] 概要](home.md)
 * [ID グラフビューア](ui/identity-graph-viewer.md)
