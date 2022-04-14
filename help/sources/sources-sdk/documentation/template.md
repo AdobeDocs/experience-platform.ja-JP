@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: ドキュメントのセルフサービステンプレート
 topic-legacy: tutorial
@@ -7,10 +7,10 @@ description: フローサービス API を使用してAdobe Experience Platform�
 hide: true
 hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2300'
-ht-degree: 7%
+source-wordcount: '2296'
+ht-degree: 75%
 
 ---
 
@@ -41,9 +41,9 @@ ht-degree: 7%
 
 次のチュートリアルでは、 *YOURSOURCE* ソース接続と、 *YOURSOURCE* を使用して Platform にデータを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### ベース接続を作成する {#base-connection}
+### ベース接続の作成 {#base-connection}
 
-ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 ベース接続 ID を作成するには、 `/connections` エンドポイントを *YOURSOURCE* 認証資格情報をリクエスト本文の一部として使用します。
 
@@ -85,15 +85,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ベース接続の名前。 ベース接続の情報を検索する際に使用できるので、ベース接続の名前がわかりやすい名前になっていることを確認します。 |
+| `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | ベース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
-| `connectionSpec.id` | ソースの接続仕様 ID。 この ID は、ソースが登録され、で承認された後に、 [!DNL Flow Service] API |
+| `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
 | `auth.params.` | ソースの認証に必要な資格情報が含まれます。 |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続を返します。この中には、一意の接続識別子 (`id`) をクリックします。 この ID は、次の手順でソースのファイル構造とコンテンツを調べるために必要です。
+リクエストが成功した場合は、一意の接続識別子（`id`）を含む、新しく作成されたベース接続が返されます。この ID は、次の手順でソースのファイル構造と内容を調べるために必要です。
 
 ```json
 {
@@ -104,8 +104,7 @@ curl -X POST \
 
 ### ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用して、GETリクエストを実行することで、ファイルとディレクトリを調べることができます。
-次の呼び出しを使用して、に取り込むファイルのパスを見つけます。 [!DNL Platform]:
+前の手順で生成したベース接続 ID を使用することで、GET リクエストを実行してファイルとディレクトリを調べることができます。次の呼び出しを使用して、に取り込むファイルのパスを見つけます。 [!DNL Platform]:
 
 **API 形式**
 
@@ -113,17 +112,17 @@ curl -X POST \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-ソースのファイル構造とコンテンツを調べるためのGETリクエストを実行する場合は、次の表に示すクエリーパラメーターを含める必要があります。
+ソースのファイル構造とコンテンツを調べるために GET リクエストを実行する場合、次の表に示すクエリのパラメーターを含める必要があります。
 
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
 | `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常にに設定されています。 `rest`. |
-| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 その値は、参照するディレクトリのパスを表します。 |
+| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
 | `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
-| `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義する boolean 値です。 |
-| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`を使用する場合は、 `list_id` 文字列を base64 に格納します。 次の例では、 `"list_id": "10c097ca71"` base64 でエンコードされた値は、次の値と等しくなります。 `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
+| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`list_id` 文字列全体を base64 にエンコードする必要があります。次の例では、 `"list_id": "10c097ca71"` base64 でエンコードされた値は、次の値と等しくなります。 `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
 
 
 **リクエスト**
@@ -139,7 +138,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、クエリされたファイルの構造を返します。
+応答が成功すると、クエリされたファイルの構造を返します。
 
 ```json
 {
@@ -228,7 +227,7 @@ curl -X GET \
 
 ### ソース接続の作成 {#source-connection}
 
-ソース接続を作成するには、 [!DNL Flow Service] API ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID で構成されます。
+[!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
 **API 形式**
 
@@ -268,15 +267,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
-| `description` | ソース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
+| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前はわかりやすいものにしてください。 |
+| `description` | 含めることでソース接続に関する詳細情報を提供できるオプションの値です。 |
 | `baseConnectionId` | のベース接続 ID *YOURSOURCE*. この ID は、前の手順で生成されました。 |
-| `connectionSpec.id` | ソースに対応する接続仕様 ID。 |
-| `data.format` | の形式 *YOURSOURCE* 取り込むデータ。 現在、サポートされているデータ形式は次のみです。 `json`. |
+| `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
+| `data.format` | の形式 *YOURSOURCE* 取り込むデータ。 現在、サポートされているデータ形式は `json` のみです。 |
 
 **応答**
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、後の手順でデータフローを作成する際に必要になります。
+リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -287,23 +286,23 @@ curl -X POST \
 
 ### ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成し、ソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
+[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en)に関するチュートリアルを参照してください。
 
 ### ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込んだデータの保存先への接続を表します。 ターゲット接続を作成するには、 [!DNL Data Lake]. この ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込んだデータの保存先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、ターゲットスキーマとターゲットデータセットに一意の識別子、および [!DNL Data Lake]. これらの識別子を使用すると、 [!DNL Flow Service] 受信ソースデータを格納するデータセットを指定する API。
+これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、および [!DNL Data Lake] の接続仕様 ID が用意できました。これらの識別子を使用することで、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
 **API 形式**
 
@@ -341,16 +340,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | ターゲット接続の名前。 ターゲット接続の名前がわかりやすい名前であることを確認します。これを使用して、ターゲット接続に関する情報を検索できます。 |
+| `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
-| `connectionSpec.id` | に対応する接続仕様 ID [!DNL Data Lake]. この修正済み ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 | `data.format` | の形式 *YOURSOURCE* Platform に取り込むデータです。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
 **応答**
 
-正常な応答は、新しいターゲット接続の一意の識別子 (`id`) をクリックします。 この ID は、後の手順で必要になります。
+リクエストが成功した場合は、新しいターゲット接続の一意の ID（`id`）が返されます。この ID は、後の手順で必要になります。
 
 ```json
 {
@@ -361,7 +360,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -415,14 +414,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `xdmSchema` | の ID [target XDM スキーマ](#target-schema) が以前の手順で生成された場合に発生します。 |
-| `mappings.destinationXdmPath` | ソース属性のマッピング先の XDM パス。 |
-| `mappings.sourceAttribute` | 宛先 XDM パスにマッピングする必要があるソース属性です。 |
-| `mappings.identity` | マッピングセットを [!DNL Identity Service]. |
+| `xdmSchema` | 以前の手順で生成された[ターゲット XDM スキーマ](#target-schema)の ID。 |
+| `mappings.destinationXdmPath` | ソース属性がマッピングされている宛先 XDM パス。 |
+| `mappings.sourceAttribute` | 宛先 XDM パスにマッピングする必要があるソース属性。 |
+| `mappings.identity` | マッピングセットに [!DNL Identity Service] のマークを付けるかどうかを指定するブール値。 |
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) をクリックします。 この値は、後の手順でデータフローを作成する際に必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成されたマッピングの詳細が返されます。この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -437,15 +436,15 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-データを取り込むための最後の手順 *YOURSOURCE* を Platform に送信する場合、データフローを作成します。 現時点では、次の必要な値が準備されています。
+データを取り込むための最後の手順 *YOURSOURCE* を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
 * [マッピング ID](#mapping)
 
-データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、前述の値をPOST内に指定しながらペイロードリクエストを実行します。
+データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。 次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。 `once`, `minute`, `hour`, `day`または `week`. 間隔の値は、2 つの連続した取り込み間隔を指定します。ただし、1 回限りの取り込みを作成する場合は、間隔を設定する必要はありません。 その他のすべての頻度では、間隔の値を次の値以上に設定する必要があります `15`.
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。間隔の値は、2 つの連続した取り込み間隔を指定します。ただし、1 回限りの取り込みを作成する場合は、間隔を設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
 
 
 **API 形式**
@@ -495,23 +494,23 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | データフローの名前。 データフローの情報を検索する際に使用できるので、データフローの名前が説明的であることを確認します。 |
+| `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
 | `description` | データフローの詳細を指定するために含めることができるオプションの値です。 |
-| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。 この修正済み ID は次のとおりです。 `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | フロー仕様 ID の対応するバージョン。 この値のデフォルトはです。 `1.0`. |
-| `sourceConnectionIds` | この [ソース接続 ID](#source-connection) が以前の手順で生成された場合に発生します。 |
-| `targetConnectionIds` | この [ターゲット接続 ID](#target-connection) が以前の手順で生成された場合に発生します。 |
-| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。 このプロパティは、XDM に準拠していないデータを Platform に取り込む場合に必要です。 |
+| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
+| `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
+| `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
+| `targetConnectionIds` | 以前の手順で生成された[ターゲット接続 ID](#target-connection)。 |
+| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。このプロパティは、XDM に準拠していないデータを Platform に取り込む場合に必要です。 |
 | `transformations.name` | 変換に割り当てられた名前。 |
-| `transformations.params.mappingId` | この [マッピング ID](#mapping) が以前の手順で生成された場合に発生します。 |
-| `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。 この値のデフォルトはです。 `0`. |
+| `transformations.params.mappingId` | 以前の手順で生成された[マッピング ID](#mapping)。 |
+| `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。この値のデフォルトは `0` です。 |
 | `scheduleParams.startTime` | このプロパティには、データフローの取り込みスケジュールに関する情報が含まれています。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`, `minute`, `hour`, `day`または `week`. |
-| `scheduleParams.interval` | 間隔は、2 つの連続したフロー実行の間隔を示します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が `once` およびは次よりも大きいか等しい必要があります `15` を使用します。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
 
 **応答**
 
-成功すると、ID(`id`) を含める必要があります。 この ID を使用して、データフローを監視、更新または削除できます。
+正常な応答は、新しく作成したデータフローの ID（`id`）を返します。この ID を使用して、データフローを監視、更新または削除できます。
 
 ```json
 {
@@ -522,7 +521,7 @@ curl -X POST \
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。
 
 **API 形式**
 
@@ -545,7 +544,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、フロー実行に関する詳細 ( 作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子 (`id`) をクリックします。
+正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子（`id`）など、フロー実行に関する詳細を返します。
 
 ```json
 {
@@ -718,13 +717,13 @@ curl -X GET \
 | `fileSummary` | データのファイル数を定義します。 |
 | `statusSummary` | フロー実行が成功か失敗かを定義します。 |
 
-### データフローを更新する
+### データフローの更新
 
-データフローの実行スケジュール、名前、説明を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] 使用するフロー ID、バージョンおよび新しいスケジュールを指定する際の API。
+データフローの実行スケジュール、名前、説明を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にフロー ID、バージョン、使用する新しいスケジュールを指定します。
 
 >[!IMPORTANT]
 >
->この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新するデータフローの一意の ETag です。
+>`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するデータフローの一意の ETag です。
 
 **API 形式**
 
@@ -765,13 +764,13 @@ curl -X PATCH \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際にフロー ID を指定することで、更新を検証できます。
 
 ```json
 {
@@ -780,9 +779,9 @@ curl -X PATCH \
 }
 ```
 
-### データフローを削除
+### データフローの削除
 
-既存のフロー ID を使用すると、 [!DNL Flow Service] API
+既存のフロー ID を使用すると、[!DNL Flow Service] API に DELETE リクエストを実行することでデータフローを削除できます。
 
 **API 形式**
 
@@ -792,7 +791,7 @@ DELETE /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 一意の `id` の値を指定します。 |
+| `{FLOW_ID}` | 削除するデータフローの一意の `id` の値。 |
 
 **リクエスト**
 
@@ -807,15 +806,15 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。データフローに対して検索 (GET) リクエストを試行することで、削除を確認できます。 API は、データフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。データフローに対してルックアップ（GET）リクエストを試みることで、削除を確認することができます。API はデータフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
 
 ### 接続を更新
 
-接続の名前、説明、および資格情報を更新するには、に対してPATCHリクエストを実行します。 [!DNL Flow Service] ベース接続 ID、バージョンおよび使用する新しい情報を提供する際の API。
+接続の名前、説明、資格情報を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい情報を指定します。
 
 >[!IMPORTANT]
 >
->この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新する接続の一意のバージョンです。
+>PATCH リクエストを実行する際は、`If-Match` ヘッダーが必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -825,11 +824,11 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 一意の `id` 更新する接続の値。 |
+| `{BASE_CONNECTION_ID}` | 更新したい接続の一意の `id` 値。 |
 
 **リクエスト**
 
-次のリクエストでは、接続を更新するための新しい名前と説明、および新しい資格情報のセットを提供します。
+次のリクエストでは、新しい名前と説明、一連の新しい資格情報を提供して接続を更新します。
 
 ```shell
 curl -X PATCH \
@@ -870,7 +869,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ベース接続 ID と更新された etag を返します。 更新を検証するには、 [!DNL Flow Service] 接続 ID を指定する際の API。
+正常な応答では、ベース接続 ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際に接続 ID を指定することで、更新を検証できます。
 
 ```json
 {
@@ -879,9 +878,9 @@ curl -X PATCH \
 }
 ```
 
-### 接続を削除
+### 接続の削除
 
-既存のベース接続 ID がある場合は、 [!DNL Flow Service] API
+既存のベース接続 ID が用意できたら、[!DNL Flow Service] API に DELETE リクエストを実行します。
 
 **API 形式**
 
@@ -891,7 +890,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 一意の `id` 削除するベース接続の値。 |
+| `{BASE_CONNECTION_ID}` | 削除するベース接続の一意の `id` の値。 |
 
 **リクエスト**
 
@@ -906,6 +905,6 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-接続に対して検索 (GET) リクエストを試みて、削除を確認できます。
+接続先へのルックアップ（GET）リクエストを試みることで、削除を確認できます。

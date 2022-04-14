@@ -3,9 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；OneTru
 solution: Experience Platform
 title: （ベータ版）フローサービス API を使用して、OneTrust 統合ソースのデータフローを作成する
 description: フローサービス API を使用してAdobe Experience Platformを OneTrust 統合に接続する方法を説明します。
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 75%
 
 ---
@@ -6794,7 +6795,7 @@ curl -X POST \
 
 ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-[Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
+[Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
 ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
 
@@ -7786,4 +7787,3 @@ curl -X DELETE \
 リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
 接続先へのルックアップ（GET）リクエストを試みることで、削除を確認できます。
-
