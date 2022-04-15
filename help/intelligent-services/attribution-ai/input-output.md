@@ -5,10 +5,10 @@ title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
 workflow-type: tm+mt
-source-wordcount: '2268'
-ht-degree: 14%
+source-wordcount: '2392'
+ht-degree: 13%
 
 ---
 
@@ -21,10 +21,14 @@ ht-degree: 14%
 Attribution AIは、次のデータセットを分析してアルゴリズムスコアを計算することで機能します。
 
 - Adobe Analyticsデータセット（を使用） [Analytics ソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- エクスペリエンスイベント (EE) データセット
+- Adobe Experience Platformスキーマの一般的なエクスペリエンスイベント (EE) データセット
 - 消費者エクスペリエンスイベント (CEE) データセット
 
-各データセットが ECID などの同じ ID タイプ（名前空間）を共有する場合は、異なるソースから複数のデータセットを追加できます。 複数のデータセットの追加について詳しくは、 [Attribution AIユーザーガイド](./user-guide.md#identity).
+これで、 **id マップ** （フィールド）。各データセットが ECID などの同じ ID タイプ（名前空間）を共有する場合に使用します。 ID と名前空間を選択すると、ID 列の完全性指標が表示され、結び付けられるデータの量が示されます。 複数のデータセットの追加について詳しくは、 [Attribution AIユーザーガイド](./user-guide.md#identity).
+
+チャネル情報は、デフォルトではマッピングされない場合があります。 場合によっては、 mediaChannel （フィールド）が空白の場合、必須の列なので、フィールドを mediaChannel にマッピングするまで「続行」できません。 データセットでチャネルが検出された場合、デフォルトで mediaChannel にマッピングされます。 その他の列は、 **メディアタイプ** および **メディアアクション** はオプションです。
+
+チャネルフィールドのマッピング後、「イベントの定義」の手順に進み、コンバージョンイベントとタッチポイントイベントを選択して、個々のデータセットから特定のフィールドを選択できます。
 
 >[!IMPORTANT]
 >
@@ -34,11 +38,9 @@ Attribution AIは、次のデータセットを分析してアルゴリズムス
 
 すべての列が [!DNL Consumer Experience Event] (CEE) スキーマはAttribution AIに必須です。
 
->[!NOTE]
->
-> 次の 9 列は必須です。追加の列はオプションですが、同じデータを他のAdobeソリューション ( [!DNL Customer AI] および [!DNL Journey AI].
+タッチポイントは、スキーマ内または選択したデータセット内で以下に推奨されるフィールドを使用して設定できます。
 
-| 必須の列 | 必要な条件： |
+| 推奨列 | 必要な条件： |
 | --- | --- |
 | プライマリID フィールド | タッチポイント/コンバージョン |
 | タイムスタンプ | タッチポイント/コンバージョン |
@@ -48,21 +50,15 @@ Attribution AIは、次のデータセットを分析してアルゴリズムス
 | Marketing.trackingCode | タッチポイント |
 | Marketing.campaignname | タッチポイント |
 | Marketing.campaigngroup | タッチポイント |
-| Commerce | 変換 |
+| コマース | 変換 |
 
 通常、アトリビューションは、「コマース」下の注文、購入、チェックアウトなどのコンバージョン列で実行されます。 「チャネル」および「マーケティング」の列は、Attribution AIのタッチポイント ( 例： `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`) をクリックします。 最適な結果とインサイトを得るには、できる限り多くのコンバージョン列とタッチポイント列を含めることを強くお勧めします。 また、上記の列に限定されるわけではありません。 その他の推奨列またはカスタム列をコンバージョンまたはタッチポイント定義として含めることができます。
+
+タッチポイントの設定に関連するチャネルまたはキャンペーン情報がいずれかの Mixin に存在するか、フィールドを通過する場合、エクスペリエンスイベント (EE) データセットには、チャネルとマーケティングの Mixin を明示的に含める必要はありません。
 
 >[!TIP]
 >
 >CEE スキーマでAdobe Analyticsデータを使用している場合、通常、Analytics のタッチポイント情報は `channel.typeAtSource` ( 例： `channel.typeAtSource = 'email'`) をクリックします。
-
-以下の列は必須ではありませんが、情報がある場合は CEE スキーマに含めることをお勧めします。
-
-**その他の推奨列：**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## 履歴データ {#data-requirements}
 
@@ -158,7 +154,6 @@ Attribution AIは、任意のスコア列でスコアをスライスしてディ
 次に、 **[!UICONTROL 構造]** UI のウィンドウ、 **[!UICONTROL フィールドプロパティ]** タブが開きます。 内 **[!UICONTROL フィールドプロパティ]** は、未加工のスコアにマッピングされるパスフィールドです。
 
 ![スキーマを選択](./images/input-output/field_properties.png)
-
 
 ### 集計されたアトリビューションスコア {#aggregated-attribution-scores}
 

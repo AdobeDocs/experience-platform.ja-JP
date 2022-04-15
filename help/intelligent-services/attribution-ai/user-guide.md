@@ -5,10 +5,10 @@ title: Attribution AIUI ガイド
 topic-legacy: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
-ht-degree: 41%
+source-wordcount: '2331'
+ht-degree: 40%
 
 ---
 
@@ -54,7 +54,7 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 ![インスタンス名の設定](./images/user-guide/naming_instance.png)
 
-## データを選択 {#select-data}
+## データの選択 {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -84,7 +84,7 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 ### ID を選択 {#identity}
 
-複数のデータセットを相互に結合するには、ID タイプ（「ID 名前空間」とも呼ばれます）と、その名前空間内の ID 値を選択する必要があります。 同じ名前空間の下で、スキーマ内の ID として複数のフィールドを割り当てた場合、割り当てた ID 値はすべて、名前空間の前に追加された ID ドロップダウンに表示されます（例： ）。 `EMAIL (personalEmail.address)` または `EMAIL (workEmail.address)`.
+ID マップ（フィールド）に基づいて、複数のデータセットを相互に結合できるようになりました。 ID タイプ（「ID 名前空間」とも呼ばれます）と、その名前空間内の ID 値を選択する必要があります。 同じ名前空間の下で、スキーマ内の ID として複数のフィールドを割り当てた場合、割り当てた ID 値はすべて、名前空間の前に追加された ID ドロップダウンに表示されます（例： ）。 `EMAIL (personalEmail.address)` または `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 ID を選択するには、ID 列にある下線付きの値を選択します。 「 ID の選択」ポップオーバーが表示されます。
 
-![同じ名前空間を選択](./images/user-guide/identity-type.png)
+![同じ名前空間を選択](./images/user-guide/aai-identity-map.png)
 
 1 つの名前空間内で複数の ID を使用できる場合は、使用例に合った正しい ID フィールドを選択するようにしてください。 例えば、電子メール名前空間内では、仕事用と個人用の 2 つの電子メール ID を使用できます。 ユースケースによっては、個人の電子メールが入力される可能性が高く、個々の予測でより役に立つようになります。 これは、「 `EMAIL (personalEmail.address)` ID として。
 
-![データセットキーが選択されていません](./images/user-guide/select-identity.png)
+![データセットキーが選択されていません](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 ### コンバージョンイベントの定義 {#define-conversion-events}
 
-コンバージョンイベントを定義するには、イベントに名前を付け、イベントタイプを選択するために、 **フィールド名を入力** ドロップダウンメニュー。
+コンバージョンイベントを定義するには、イベントに名前を付け、 **データセットとフィールドを選択** ドロップダウンメニュー。
 
-![ドロップダウンあり](./images/user-guide/conversion_event_2.png)
+![ドロップダウンあり](./images/user-guide/define-conversion-events.png)
 
 イベントを選択すると、新しいドロップダウンが右側に表示されます。2 番目のドロップダウンは、操作を通じてイベントの詳細なコンテキストを指定するために使用します。図中のコンバージョンイベントには、デフォルトの操作 *exists* が使用されています。
 
@@ -133,6 +133,8 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 > *コンバージョン名*&#x200B;の下の文字列は、イベントの定義に応じて更新されます。
 
 ![ドロップダウンなし](./images/user-guide/conversion_event_1.png)
+
+次に、前の手順で入力データセットをすべて組み合わせて生成する組み合わせデータセットを選択できます。 または、 **データセットとフィールドを選択** ドロップダウンメニュー。
 
 コンバージョンをさらに詳しく定義するには、「**[!UICONTROL Add event]**」ボタンと「**[!UICONTROL Add Group]**」ボタンを使用します。定義するコンバージョンに応じて、場合によっては、「**[!UICONTROL Add event]**」ボタンと「**[!UICONTROL Add Group]**」ボタンを使用して詳細なコンテキストを指定する必要があります。
 
