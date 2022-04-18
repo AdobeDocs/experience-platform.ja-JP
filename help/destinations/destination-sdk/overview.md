@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK は、選択したデータと認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントに配信する、Experience Platform の宛先統合パターンを設定するための設定 API のセットです。設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: ht
-source-wordcount: '702'
-ht-degree: 100%
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 98%
 
 ---
 
@@ -72,11 +72,11 @@ Destination SDK へのアクセスは、パートナーであるか Experience P
 
 Experience Platform で宛先を設定するプロセスの概要を次に示します。
 
-1. ISV または SI の場合は、前述の節に記載されているアクセス情報の取得を参照してください。[Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html)をご利用のお客様は、この手順を省略できます。
+1. ISV または SI の場合は、前述の節に記載されているアクセス情報の取得を参照してください。[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)をご利用のお客様は、この手順を省略できます。
 2. [Experience Platform サンドボックスのプロビジョニングをリクエスト](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support)し、宛先オーサリング権限を有効にします。
 3. 製品ドキュメントに従って、[統合を構築](./configure-destination-instructions.md)します。
 4. 製品のドキュメントに従って、[統合をテスト](./test-destination.md)します。
-5. アドビによるレビュー（標準的な応答時間は 5 営業日）のために、[統合を送信](./submit-destination.md)します。
+5. [統合の送信](./submit-destination.md) Adobeのレビュー用（標準応答時間は 5 営業日）。
 6. [製品化された統合](./overview.md#productized-custom-integrations)を作成する ISV または SI の場合は、[セルフサービスのドキュメントプロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを Experience League に作成します。
 7. アドビが承認すると、[Experience Platform カタログ](/help/destinations/catalog/overview.md)に統合が表示されるようになります。
 8. 統合を更新する場合は、同じ手順に従います。
