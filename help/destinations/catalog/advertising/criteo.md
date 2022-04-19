@@ -1,14 +1,14 @@
 ---
-keywords: '広告；criteo '
+keywords: 広告；criteo
 title: 条件の接続
 description: Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 9%
 
 ---
-
 
 # （ベータ版）Criteo 接続
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->このドキュメントページは Criteo が作成しました。 これは現在ベータ版製品です。 お問い合わせや更新のご依頼については、Criteo に直接お問い合わせください [ここ](mailto:criteoTechnicalPartnerships@criteo.com).
+>このドキュメントページは Criteo が作成しました。 現在はベータ版の製品であり、機能は変更される場合があります。 お問い合わせや更新のご依頼については、Criteo に直接お問い合わせください [ここ](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
 
@@ -24,7 +24,11 @@ Criteo は、信頼できる効果的な広告を提供し、オープンイン�
 
 * の管理者ユーザーアカウントが必要です [Criteo 管理センター](https://marketing.criteo.com).
 * Criteo 広告主 ID が必要です（この ID を持っていない場合は、Criteo の連絡先にお問い合わせください）。
-* Criteo は SHA-256 とプレーンテキストの E メールのみを受け取ります（送信前に SHA-256 に変換できます）。 PII（個人の名前や電話番号など、個人を特定できる情報）は送信しないでください。
+
+## 制限事項 {#limitations}
+
+* 現在、Criteo はオーディエンスからのユーザーの削除をサポートしていません。
+* 条件は次のみを受け入れます [!DNL SHA-256] — ハッシュ化されたテキスト形式の E メール ( 変換後： [!DNL SHA-256] （送信前）。 PII（個人の名前や電話番号など、個人を特定できる情報）は送信しないでください。
 
 ![前提条件](../../assets/catalog/advertising/criteo/prerequisites.png)
 
