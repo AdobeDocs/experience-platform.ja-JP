@@ -5,10 +5,10 @@ title: Aqua Data Studio をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 11%
+source-wordcount: '493'
+ht-degree: 10%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 11%
 
 この **[!DNL Register Server]** ダイアログが表示されます。 以下 **[!DNL General]** タブ、選択 **[!DNL PostgreSQL]** を選択します。 表示されるダイアログで、サーバー設定の次の詳細を指定します。
 
-- **[!DNL Name]**：接続の名前。接続を認識するわかりやすい名前を付けることをお勧めします。
+- **[!DNL Name]**:接続の名前。 接続を認識するわかりやすい名前を付けることをお勧めします。
 - **[!DNL Login Name]**:ログイン名は、Platform 組織 ID です。 次の形式を取ります。 `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**:これは、 [!DNL Query Service] 認証情報ダッシュボード。
 - **[!DNL Host and Port]**:ホストエンドポイントと、そののポート [!DNL Query Service]. 接続には、ポート 80 を使用する必要があります [!DNL Query Service].
@@ -51,6 +51,10 @@ ht-degree: 11%
 ### SSL モードの設定
 
 次に、 **[!DNL Driver]** タブをクリックします。 の下 **[!DNL Parameters]**、値を `?sslmode=require`
+
+>[!IMPORTANT]
+>
+>詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
 ![[ パラメータ ] フィールドがハイライト表示された Aqua Data Studio Driver タブ](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 

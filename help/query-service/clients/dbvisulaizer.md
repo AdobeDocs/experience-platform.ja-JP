@@ -4,10 +4,11 @@ solution: Experience Platform
 title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
-source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
+exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 0%
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +48,10 @@ ht-degree: 0%
 | `SSL` | SSL 要件の使用を制御します。 あなた **必須** 値「1」を使用して、この要件を有効にします。 |
 | `user` | データベースに接続されているユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@adobe.org` |
 
+>[!IMPORTANT]
+>
+>詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+
 ### [!DNL Query Service] 資格情報
 
 この `PGHOST` および `user` の値はAdobe Experience Platformの資格情報から取得されます。 資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md).
@@ -71,7 +76,7 @@ ht-degree: 0%
 
 ![「 Userid 」チェックボックスと「 Password 」チェックボックスがハイライトされた「 Connection Authentication 」パネル。](../images/clients/dbvisualizer/connection-authentication.png)
 
-## Platform に接続
+##  を Platform に接続
 
 接続するには、 **[!DNL Connection]** 」タブをクリックし、次の設定のExperience Platform資格情報を入力します。
 

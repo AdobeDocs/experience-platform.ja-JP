@@ -5,10 +5,10 @@ title: RStudio をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 12%
+source-wordcount: '387'
+ht-degree: 11%
 
 ---
 
@@ -48,9 +48,11 @@ pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
 
->[!NOTE]
+>[!IMPORTANT]
 >
->データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
+>詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+
+データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
