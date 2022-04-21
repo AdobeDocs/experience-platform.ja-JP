@@ -3,14 +3,19 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
 
 # リリースノート
+
+## バージョン2.10.0 - 2022 年 4 月 23 日
+
+* すべての ID 同期およびセグメント宛先に永続的な iframe を使用する。
+* 結合された指標の提案が `sendEvent` 結果。
 
 ## バージョン 2.9.0 - 2022 年 3 月 10 日
 

@@ -2,16 +2,23 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 48%
+source-wordcount: '1313'
+ht-degree: 47%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン2.11.0 - 2022 年 4 月 23 日
+
+* タグ UI のパフォーマンスが向上しました。
+* サンドボックスセレクターを datastreams 拡張機能の設定に追加します。
+
+Adobe Experience Platform Web SDK ライブラリのバージョン2.10.0が含まれています。
 
 ## バージョン2.10.0 - 2022 年 3 月 10 日
 
