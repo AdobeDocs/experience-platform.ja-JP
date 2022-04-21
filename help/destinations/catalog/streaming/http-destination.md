@@ -3,10 +3,10 @@ title: （ベータ版）HTTP API 接続
 keywords: ストリーミング；
 description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 3%
+source-wordcount: '1560'
+ht-degree: 6%
 
 ---
 
@@ -67,13 +67,43 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 
 お客様のセキュリティおよびコンプライアンス要件を満たすために、Experience Platformは HTTP API 宛先に対してできる静的 IP のリストを提供しま許可リストす。 参照： [ストリーミング先の IP アドレス許可リスト](/help/destinations/catalog/streaming/ip-address-allow-list.md) ：する IP の完全なリストを表示しま許可リストす。
 
-## 宛先に接続 {#connect-destination}
+## 宛先への接続 {#connect-destination}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="クライアント資格情報のタイプ"
+>abstract="選択 **本文のエンコード** を呼び出します。 **基本認証** 認証ヘッダーにクライアント ID とクライアント秘密鍵を含める。 ドキュメントの例を参照してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="ヘッダー"
+>abstract="宛先の呼び出しに含めるカスタムヘッダーを、次の形式で入力します。 `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="HTTP エンドポイント"
+>abstract="プロファイルデータの送信先の HTTP エンドポイントの URL。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="セグメント名を含める"
+>abstract="データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="セグメントのタイムスタンプを含める"
+>abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="クエリのパラメーター"
+>abstract="オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを次のように書式設定します。 `parameter1=value&parameter2=value`."
+
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL httpEndpoint]**:の [!DNL URL] プロファイルデータを送信する HTTP エンドポイントのパスを指定します。
    * 必要に応じて、 [!UICONTROL httpEndpoint] [!DNL URL].
@@ -93,7 +123,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
    >
    >現在の実装には、少なくとも 1 つのカスタムヘッダーが必要です。 この制限は、今後のアップデートで解決されます。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
 
 詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
@@ -131,7 +161,7 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 
 プロファイル属性の観点から、上でマッピングした 4 つの属性に対する変更によって、書き出し先が決まり、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 エクスポート済み [!DNL Experience Platform] データは、 [!DNL HTTP] の宛先を JSON 形式で指定します。 例えば、以下のエクスポートには、特定のセグメントに適合し、別の 2 つのセグメントのメンバーであり、別のセグメントから離脱したプロファイルが含まれています。 書き出しには、プロファイル属性の名、姓、生年月日、個人の電子メールアドレスも含まれます。 このプロファイルの ID は、ECID と電子メールです。
 
