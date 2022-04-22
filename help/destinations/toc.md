@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 96%
 
 ---
@@ -194,5 +194,6 @@ ht-degree: 96%
       * [GitHub web インターフェイスを使用した宛先ドキュメントページの作成](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [ローカル環境でのテキストエディターを使用した宛先ドキュメントページの作成](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
+      * [オーサリングのベストプラクティス](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [よくある質問](./destinations-faq.md)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

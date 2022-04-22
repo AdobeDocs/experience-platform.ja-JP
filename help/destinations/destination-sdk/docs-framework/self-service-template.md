@@ -2,18 +2,24 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 2%
+source-wordcount: '1250'
+ht-degree: 6%
 
 ---
 
-# 宛先 {#your-destination}
+# 宛先接続 {#your-destination}
 
 *このテンプレートの操作中に、斜体のすべての段落を置き換えるか削除します（この段落から始まります）。*
 
 *まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページの UICONTROL のすべてのインスタンスを無視してください。 これは、機械翻訳プロセスがページをサポートする複数の言語に正しく翻訳するのに役立つタグです。 提出後、ドキュメントにタグを追加します。*
+
+>[!IMPORTANT]
+>
+>* このテンプレートのすべてのセクションを、テンプレートで説明されている順序で入力します。
+>* このテンプレートは、パートナーからのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+
 
 ## 概要 {#overview}
 
@@ -21,23 +27,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->このドキュメントページは、 *宛先* チーム。 お問い合わせや更新のご依頼は、直接 *更新用にアクセスできるリンクや電子メールアドレスを挿入します。例： `support@yourdestination.com`.*
+>このドキュメントページは、 *宛先* チーム。 お問い合わせや更新のご依頼は、直接 *更新用にアクセスできるリンクや電子メールアドレスを挿入します。例： `support@YourDestination.com`.*
 
 ## ユースケース {#use-cases}
 
 をいつどのように使用するかをより深く理解するのに役立ちます。 *宛先* の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
-### 使用例#1
+### 使用例#1 {#use-case-1}
 
 *モバイルメッセージプラットフォームの場合：*
 
 *レンタルや販売用プラットフォームは、顧客の Android やiOSのデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みの 100 件のリストがあることを知らせたいと考えています。*
 
-### 使用例#2
+### 使用例#2 {#use-case-2}
 
 *ソーシャルネットワークプラットフォームの場合：*
 
-*スポーツアパレルブランドは、ソーシャルメディアアカウントを通じて既存の顧客にリーチしたいと考えています。 アパレルブランドは、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成し、それらのセグメントを宛先に送信して、顧客のソーシャルメディアフィードに広告を表示できます。*
+*スポーツアパレルブランドは、ソーシャルメディアアカウントを通じて既存の顧客にリーチしたいと考えています。 アパレルブランドは、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成し、これらのセグメントを YourDestination に送信して、顧客のソーシャルメディアフィードに広告を表示できます。*
 
 ## 前提条件 {#prerequisites}
 
@@ -82,9 +88,9 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -108,70 +114,9 @@ ht-degree: 2%
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**:お使いの *宛先* アカウント ID。
 
-
-<!--
-
-*Replace YOURDESTINATION with your destination name and TOBEFILLEDIN with the category that your destination belongs to.*
-
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the ***TOBEFILLEDIN*** category. Select ***YOURDESTINATION***, then select **[!UICONTROL Configure]**.
-
-
-    >[!NOTE]
-    >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destinations-workspace.html#catalog) section of the destination workspace documentation.  
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination1.png)
-
-2. In the **Account** step, if you had previously set up a connection to your *YOURDESTINATION* destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to *YOURDESTINATION*. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your *YOURDESTINATION* account.
-
-    >[!NOTE]
-    >
-    >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your ***YOURDESTINATION*** account. This ensures that you don't complete the workflow with incorrect credentials.
-
-3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your ***YOURDESTINATION*** account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
-
-4. In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill your account ID. <br> Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html).
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination2.png)
-
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
-
--->
-
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
 
 読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。
-
-<!--
-
-To activate segments to *YOURDESTINATION*, follow the steps below: 
-
-1. In **[!UICONTROL Destinations > Browse]**, select the *YOURDESTINATION* destination where you want to activate your segments.
-
-2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](./assets/yourdestination3.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *YOURDESTINATION*.
-    ![segments-to-destination](./assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the source XDM schema to map to the target schema. Select **[!UICONTROL Add new mapping]** and browse your schema, select identity namespaces and map them to the corresponding target identity.  
-![identity mapping initial screen](./assets/gcm-identity-mapping.png) <br>&nbsp;
-   *Plain text email address as primary identity*: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below. Set up a mapping between any other attributes you plan to use.
-   ![identity mapping step](./assets/ssd-template-identity.png) <br>&nbsp;
-6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#enforcement) in the data governance documentation section.
- 
-![confirm-selection](./assets/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![confirm-selection](./assets/gcm-review.png)
-
--->
 
 ## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
 
@@ -217,7 +162,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制し、 [データガバナンスの概要](/help/data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
 
 ## その他のリソース {#additional-resources}
 
