@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
-title: Marketo Engageコネクタ
+title: Marketo Engage コネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 12%
+source-wordcount: '521'
+ht-degree: 15%
 
 ---
 
 # [!DNL Marketo Engage] コネクタ
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) （以下「」という。）[!DNL Marketo]&quot;) は、複雑な購入ジャーニーの各ステージを通じてエンゲージメントをおこなうことで顧客体験を変えようとしているリード管理や B2B マーケター向けの完全なソリューションです。
 
@@ -28,9 +28,9 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 詳しくは、 [Marketoソースコネクタの認証](./marketo-auth.md) ドキュメントを使用して認証情報を取得します。
 
-## Adobe Experience Cloudオーディエンス共有を設定する
+## 組織マッピングAdobeの設定
 
-のマッピングセットを確立する前に [!DNL Marketo]の場合は、まずAdobe Experience Cloudオーディエンス共有を設定する必要があります。 これを完了する方法について詳しくは、 [用のAdobe Experience Cloudオーディエンス共有の設定 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+のマッピングセットを確立する前に [!DNL Marketo]を設定する場合は、まず組織マッピングをAdobeする必要があります。 これを完了する方法について詳しくは、 [のAdobe組織マッピングの設定 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## エクスペリエンスデータモデル（XDM）
 
@@ -52,26 +52,26 @@ XDM と Platform での役割について詳しくは、 [XDM システムの概
 * [会社](../mapping/marketo.md#companies)
 * [静的リスト](../mapping/marketo.md#static-lists)
 * [静的リストのメンバーシップ](../mapping/marketo.md#static-list-memberships)
-* [特定顧客](../mapping/marketo.md#named-accounts)
+* [指定顧客](../mapping/marketo.md#named-accounts)
 * [商談](../mapping/marketo.md#opportunities)
-* [オポチュニティ連絡先の役割](../mapping/marketo.md#opportunity-contact-roles)
+* [商談連絡先の役割](../mapping/marketo.md#opportunity-contact-roles)
 * [人物](../mapping/marketo.md#persons)
 
 ## の予想遅延 [!DNL Marketo] Platform のデータ
 
-次の表に、 [!DNL Marketo] 取り込みの特性と目的の宛先に基づいて、Platform にデータを取り込みます。
+The following table outlines the expected latency for bringing [!DNL Marketo] data into Platform, based on the nature of ingestion and the desired destination:
 
 | 宛先 | 予想される遅延 |
 | ----------- | ---------------- |
 | [!DNL Real-time Customer Profile] | &lt; 1 分 |
 | データレイク | &lt; 60 分 |
 
-## 次の手順とその他のリソース
+## 次の手順と追加のリソース
 
 次のドキュメントでは、 [!DNL Marketo] ソース接続：
 
 * 接続方法に関する情報 [!DNL Marketo] データを Platform に送信する場合は、 [UI でのMarketoソースコネクタの作成](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* B2B 名前空間と、で使用されるスキーマの基になる設定について説明します。 [!DNL Marketo]詳しくは、 [B2B 名前空間とスキーマ](./marketo-namespaces.md).
+* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
 * の検索に関する情報 [!DNL Marketo] munchkin ID と資格情報の生成については、 [[!DNL Marketo] 認証ガイド](./marketo-auth.md).
 * に適用される特定のマッピングルールの詳細 [!DNL Marketo] データセットについては、 [[!DNL Marketo] フィールドマッピング](../mapping/marketo.md).
-* に関する一般情報 [!DNL Real-time Customer Data Platform B2B Edition] およびその機能については、 [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* For general information on [!DNL Real-time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
