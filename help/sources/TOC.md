@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 96%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 96%
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
+      - [正方形コネクタ](connectors/payments/square.md)
    - プロトコル {#protocols}
       - [汎用 OData コネクタ](connectors/protocols/odata.md)
       - [汎用 REST API コネクタ](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 96%
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
+         - [四角形](tutorials/api/create/payments/square.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/api/create/protocols/odata.md)
          - [汎用 REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 96%
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
+         - [四角形](tutorials/ui/create/payments/square.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/ui/create/protocols/odata.md)
       - ストリーミング {#streaming}
