@@ -5,10 +5,10 @@ title: Experience PlatformUI の概要
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1809'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -164,7 +164,7 @@ Offer Decisioning は、Adobe Experience Platform と統合されたアプリケ
 
 ### [!UICONTROL 管理]
 
-Platform のユーザーインターフェイス (UI) には、毎日のスナップショットで取り込まれた、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 「 」を選択して、このダッシュボードにアクセスします **[!UICONTROL ライセンスの使用]** をクリックします。 ライセンス使用状況ダッシュボードの詳細については、 [ライセンス使用状況ダッシュボードガイド](license-usage-dashboard.md).
+Platform のユーザーインターフェイス (UI) には、毎日のスナップショットで取り込まれた、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 「 」を選択して、このダッシュボードにアクセスします **[!UICONTROL ライセンスの使用]** をクリックします。 ライセンス使用状況ダッシュボードの詳細については、 [ライセンス使用状況ダッシュボードガイド](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
