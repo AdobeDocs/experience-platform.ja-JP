@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
+source-git-commit: a4c70c00bf2c44abc292d189de013eb1a243bdb0
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 96%
+source-wordcount: '2209'
+ht-degree: 97%
 
 ---
 
@@ -77,12 +77,12 @@ ht-degree: 96%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="セグメント評価後にアクティブ化"
->abstract="アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。 正しいリンクを行うには、このポップオーバーを新しいアクティベーションチェーニングセクションに移動する必要があります。"
+>abstract="アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="予定されているアクティベーション"
->abstract="アクティベーションは、特定の時刻に実行されます。 正しいリンクを行うには、このポップオーバーを新しいアクティベーションチェーニングセクションに移動する必要があります。"
+>abstract="アクティベーションは、特定の時刻に実行されます。"
 
 「**[!UICONTROL 完全ファイルを書き出し]**」を選択して、選択したセグメントに対する、すべてのプロファイル選定の完全なスナップショットを含むファイルの書き出しをトリガーします。
 
