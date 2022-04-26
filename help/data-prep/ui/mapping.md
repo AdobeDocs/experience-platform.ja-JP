@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;CSV のマッピ�
 title: データ準備 UI ガイド
 description: このドキュメントでは、Platform UI でデータ準備関数を使用して CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
-workflow-type: ht
-source-wordcount: '1665'
-ht-degree: 100%
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
+workflow-type: tm+mt
+source-wordcount: '1837'
+ht-degree: 90%
 
 ---
 
@@ -168,6 +168,34 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 中央にある式エディターを使用して、フィールド、関数、演算子を手動で追加できます。 式の作成を開始するには、エディターを選択します。完了したら、「**[!UICONTROL 保存]**」を選択して続行します。
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### マッピングを読み込み {#import}
+
+既存のデータフローのマッピングを再利用して、データ取り込みの手動設定時間を短縮し、誤りを制限できます。 選択 **[!UICONTROL マッピングを読み込み]** 既存のマッピングを再利用する。
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+この [!UICONTROL マッピングを読み込み] ウィンドウが表示され、選択するデータフローのリストが表示されます。
+
+プレビューアイコンを選択して、選択したデータフローのマッピングをプレビューします。
+
+![list-mapping](../images/ui/mapping/list-mapping.png)
+
+プレビューウィンドウを使用すると、データフローにインポートする前に既存のマッピングを調べることができます。 マッピングを確認したら、 **[!UICONTROL 戻る]** データフローのリストに戻って別のマッピングセットを調べるには、以下を選択します。 **[!UICONTROL 選択]** をクリックして続行します。
+
+![preview-mapping](../images/ui/mapping/preview-mapping.png)
+
+または、データフローのリストウィンドウから、インポートするマッピングを選択できます。 インポートするマッピングを含むデータフローを選択し、「 」を選択します。 **[!UICONTROL 選択]** をクリックして続行します。
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+インターフェイスは、読み込んだマッピングで更新されます。
+
+>[!NOTE]
+>
+>既存のマッピングセット（または ML マッピングの推奨）は、既存のデータフローからインポートしたマッピングに置き換えられます。
+
+![mapping-imported](../images/ui/mapping/mapping-imported.png)
 
 「**[!UICONTROL データをプレビュー]**」をクリックし、選択したデータセットから最大 100 行のサンプルデータのマッピング結果を確認します。
 
