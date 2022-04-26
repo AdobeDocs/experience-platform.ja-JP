@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 4 月
 description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 12%
+source-wordcount: '1045'
+ht-degree: 20%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 12%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [データフロー](#dataflows)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
+
+## データフロー {#dataflows}
+
+Platformでは、データは様々なソースから取り込まれ、システム内で分析され、様々な宛先に対してアクティブ化されます。 Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+
+データフローは、Platform 間でデータを移動するジョブを表します。これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。このデータは、最終的に宛先に対してアクティブ化される前に、ID サービスとリアルタイム顧客プロファイルによって利用されます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| セグメントダッシュボード | これで、監視ダッシュボードを使用して、セグメントのデータフローを監視できるようになりました。 詳しくは、 [UI でのセグメントの監視](../../dataflows/ui/monitor-segments.md) |
+
+データフローの一般的な情報については、 [データフローの概要](../../dataflows/home.md) を参照してください。セグメント化について詳しくは、 [セグメントの概要](../../segmentation/home.md).
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -70,3 +85,4 @@ XDM は、Adobe Experience Platformに取り込まれるデータの共通の構
 {style=&quot;table-layout:auto&quot;}
 
 Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md).
+

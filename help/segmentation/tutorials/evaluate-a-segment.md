@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 61%
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-time Customer Profile] データ。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。 セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必須ヘッダー
 
@@ -46,7 +46,7 @@ ht-degree: 61%
 
 - Content-Type: application/json
 
-## セグメントの評価
+## セグメントの評価 {#evaluate-a-segment}
 
 セグメント定義を開発、テスト、保存したら、スケジュールされた評価またはオンデマンド評価を通じてセグメントを評価できます。
 

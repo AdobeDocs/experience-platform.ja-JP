@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 2%
 
 ---
@@ -164,29 +164,6 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 詳細ページには、失敗した ID と除外された ID のリストも表示されます。 エラーコードや説明を含む、失敗した ID と除外された ID の両方に関する情報が表示されます。 デフォルトでは、リストには失敗した ID が表示されます。 除外された ID を表示するには、 **[!UICONTROL 除外された ID]** 切り替え
 
 ![バッチ保存先のデータフローレコード](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## セグメントジョブダッシュボードの監視 {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="セグメントジョブ"
->abstract="セグメントジョブビューには、すべてのセグメントの評価ジョブと書き出しジョブに関する情報が含まれています。"
-
-次の手順で [!UICONTROL セグメントジョブ] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL セグメントジョブ]. この [!UICONTROL 監視] ダッシュボードには、セグメント評価ジョブと書き出しジョブに関する指標と情報が含まれています。
-
-![セグメントジョブ監視ダッシュボード](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-以下を使用： [!UICONTROL セグメントジョブ] ダッシュボードを使用すると、プロファイルの評価と書き出しが時間通りに例外なく実行されるかどうかを把握でき、宛先のアクティベーション用のダウンストリームサービスで最新の評価済みプロファイルデータを使用できます。
-
-セグメントジョブでは、次の指標を使用できます。
-
-| 指標 | 説明 |
----------|----------|
-| **[!UICONTROL セグメントジョブ]** | セグメントジョブの名前を示します。 |
-| **[!UICONTROL タイプ]** | セグメントジョブのタイプ（エクスポートまたは評価）を示します。 どちらの場合も、セグメントジョブは評価または書き出しをおこないます *すべて* 組織に属するセグメント。 |
-| **[!UICONTROL ジョブ開始]** | セグメントジョブが開始された日時。 |
-| **[!UICONTROL ジョブ終了]** | セグメントジョブが完了した日時。 |
-| **[!UICONTROL ステータス]** | 完了したジョブのステータス（成功または失敗）。 |
 
 ## 「宛先の監視」ダッシュボード {#monitoring-destinations-dashboard}
 
