@@ -5,7 +5,7 @@ title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
 description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 10%
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 >[!TIP]
 >
->すべて [!DNL Marketo] 次のデータセット `Activities` 現在のサポート `isDeleted`. 既存のデータフローには、次が自動的に含まれます `isDeleted`が取り込まれるのに対し、は新しく取り込んだデータのフラグのみを取り込みます。 すべての履歴データにフラグを適用する場合は、既存のデータフローを停止し、新しいマッピングで再作成する必要があります。 を削除する場合は、 `isDeleted`を含めないと、機能にアクセスできなくなります。 マッピングは、自動入力後も保持することが重要です。
+>すべて [!DNL Marketo] 次のデータセット `Activities` 現在のサポート `isDeleted`. 既存のデータフローには、次が自動的に含まれます `isDeleted`が取り込まれるのは、新しく取り込んだデータ用のフラグのみです。 すべての履歴データにフラグを適用する場合は、既存のデータフローを停止し、新しいマッピングで再作成する必要があります。 を削除する場合は、 `isDeleted`を含めないと、機能にアクセスできなくなります。 マッピングは、自動入力後も保持することが重要です。
 
 ## アクティビティ {#activities}
 
