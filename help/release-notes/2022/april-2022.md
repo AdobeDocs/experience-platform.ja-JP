@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 4 月
 description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 20%
+source-wordcount: '1473'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 20%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データフロー](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
+- [Real-time Customer Data Platform B2B エディション](#B2B)
+- [ソース](#sources)
 
 ## データフロー {#dataflows}
 
@@ -30,6 +33,19 @@ Platformでは、データは様々なソースから取り込まれ、システ
 | セグメントダッシュボード | これで、監視ダッシュボードを使用して、セグメントのデータフローを監視できるようになりました。 詳しくは、 [UI でのセグメントの監視](../../dataflows/ui/monitor-segments.md) |
 
 データフローの一般的な情報については、 [データフローの概要](../../dataflows/home.md) を参照してください。セグメント化について詳しくは、 [セグメントの概要](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| Adobe Analyticsソースのサポート | Adobe Analyticsソースで Data Prep 機能がサポートされ、データフローの作成時に Analytics レポートスイートのデータをターゲット XDM スキーマにマッピングできるようになりました。 に関するチュートリアルを参照してください。 [Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を参照してください。 |
+| 既存のマッピングルールのインポートのサポート | 既存のデータフローからマッピングルールをインポートして、データフロー設定を高速化し、エラーを制限できるようになりました。 に関するチュートリアルを参照してください。 [既存のマッピング・ルールのインポート](../../data-prep/ui/mapping.md) を参照してください。 |
+
+[!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -86,3 +102,30 @@ XDM は、Adobe Experience Platformに取り込まれるデータの共通の構
 
 Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md).
 
+### Real-time Customer Data Platform B2B エディション {#B2B}
+
+Real-time Customer Data Platform（Real-time CDP）上に構築された Real-time CDP B2B Edition は、B2B サービスを行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| のサポート `isDeleted` 機能 | すべて [!DNL Marketo] 次のデータセット `Activities` 今は支持する `isDeleted` マッピング。 新しいマッピングは、既存の B2B データフローに自動的に追加されます。 以下を使用して、 `isDeleted` 削除されたレコードを除外してデータを [!DNL Data Lake] は、ソースデータと一致します。 詳しくは、 [[!DNL Marketo] マッピングフィールドガイド](../../sources/connectors/adobe-applications/mapping/marketo.md) 詳しくは、 `isDeleted`. |
+
+Real-time Customer Data Platform B2B Edition の詳細については、 [B2B の概要](../../rtcdp/b2b-overview.md).
+
+## ソース {#sources}
+
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| サポート対象 [!DNL OneTrust Integration] | これで、 [!DNL OneTrust Integration] のソースから同意および環境設定データを取り込む [!DNL OneTrust] アカウントを Platform に送信します。 詳しくは、 [作成 [!DNL OneTrust Integration] ソース接続](../../sources/connectors/consent-and-preferences/onetrust.md) を参照してください。 |
+| サポート対象 [!DNL Square] | これで、 [!DNL Square] お客様からの支払いデータの取り込み元 [!DNL Square] アカウントを Platform に送信します。 |
+| 顧客属性データフローの削除のサポート | 顧客属性ソースコネクタを使用して作成したデータフローを削除できるようになりました。 |
+
+ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
