@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
-title: プロファイルシステムジョブ API エンドポイント
+title: Profile System Jobs API Endpoint
 topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformでは、不要になった、またはエラーで追加されたリアルタイム顧客プロファイルデータを削除するために、プロファイルストアからデータセットまたはバッチを削除できます。 これには、プロファイル API を使用してプロファイルシステムジョブを作成するか、削除リクエストを作成する必要があります。
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
 workflow-type: tm+mt
 source-wordcount: '1316'
-ht-degree: 64%
+ht-degree: 67%
 
 ---
 
 # プロファイルシステムジョブエンドポイント（削除リクエスト）
 
-Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Platform] に取り込まれたデータは [!DNL Data Lake] に保存され、データセットのプロファイルが有効になっている場合は [!DNL Real-time Customer Profile] データストアにも保存されます。 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、[!DNL Real-time Customer Profile] API を使用して [!DNL Profile] システムジョブ (`delete request`) を作成する必要があります。このジョブは、必要に応じて変更、監視または削除することもできます。
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-time Customer Profile] data store as well. 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、 [!DNL Real-time Customer Profile] を作成する API [!DNL Profile] システムジョブ `delete request`（必要に応じて変更、監視または削除も可能）
 
 >[!NOTE]
 >
->[!DNL Data Lake] からデータセットまたはバッチを削除する場合は、「[ カタログサービスの概要 ](../../catalog/home.md)」を参照してください。
+>からデータセットまたはバッチを削除する場合 [!DNL Data Lake]、次を参照してください： [カタログサービスの概要](../../catalog/home.md) を参照してください。
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](getting-started.md) を参照してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 削除リクエストの表示
 
 削除リクエストは長時間実行される非同期プロセスです。つまり、組織が複数の削除リクエストを一度に実行している場合があります。組織で現在実行中のすべての削除リクエストを表示するには、`/system/jobs` エンドポイントに対して GET リクエストを実行できます。
 
-また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。複数のパラメーターを使用するには、各パラメーターをアンパサンド (`&`) で区切ります。
+また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。To use multiple parameters, separate each parameter using an ampersand (`&`).
 
 **API 形式**
 
@@ -93,10 +93,10 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `_page.count` | リクエストの合計数。この応答はスペースを節約するために切り捨てられています。 |
-| `_page.next` | 結果の追加ページが存在する場合は、[ ルックアップリクエスト ](#view-a-specific-delete-request) の ID 値を指定された `"next"` 値に置き換えて、次の結果ページを表示します。 |
-| `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` が返されます。 |
-| `status` | 削除リクエストのステータス。指定できる値は `"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"` です。 |
-| `metrics` | 処理されたレコードの数 (`"recordsProcessed"`) とリクエストの処理秒数、またはリクエストの完了に要した時間 (`"timeTakenInSec"`) を含むオブジェクト。 |
+| `_page.next` | 結果の追加ページが存在する場合は、 [ルックアップリクエスト](#view-a-specific-delete-request) と `"next"` 値を指定します。 |
+| `jobType` | 作成されるジョブのタイプ。この場合、常にが返されます。 `"DELETE"`. |
+| `status` | 削除リクエストのステータス。指定できる値は次のとおりです。 `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
 
 ## 削除リクエストの作成 {#create-a-delete-request}
 
@@ -104,7 +104,7 @@ curl -X GET \
 
 ### データセットの削除
 
-データセットをプロファイルストアから削除するには、データセット ID をデータセットリクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。[!DNL Experience Platform] では、レコードスキーマと時系列スキーマの両方に基づいたデータセットを削除できます。
+プロファイルストアからデータセットを削除するには、データセット ID をPOSTリクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。[!DNL Experience Platform] では、レコードスキーマと時系列スキーマの両方に基づいたデータセットを削除できます。
 
 **API 形式**
 
@@ -158,9 +158,9 @@ curl -X POST \
 
 >[!NOTE]
 >
-> レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードスキーマに基づくデータセットの誤ったバッチの影響を取り除く唯一の方法は、誤ったレコードを上書きするために、正しいデータでバッチを再取得することです。
+> レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードスキーマに基づくデータセットの誤ったバッチの影響を取り除く唯一の方法は、誤ったレコードを上書きするために、正しいデータでバッチを再取り込みすることです。
 
-レコードと時系列の動作の詳細については、「[!DNL XDM System] の概要」の「XDM データの動作 ](../../xdm/home.md#data-behaviors)」の節を参照してください。[
+レコードと時系列の動作の詳細については、 [XDM のデータ動作に関する節](../../xdm/home.md#data-behaviors) 内 [!DNL XDM System] 概要。
 
 **API 形式**
 
@@ -189,7 +189,7 @@ curl -X POST \
 
 **応答** 
 
-正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。応答の `"batchId"` 値は、リクエストで送信された `"batchId"` 値と一致する必要があります。
+正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。この `"batchId"` 応答の値が `"batchId"` リクエストで送信された値。
 
 ```json
 {
@@ -241,7 +241,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 **リクエスト**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -251,7 +251,7 @@ curl -X POST \
 
 **応答** 
 
-応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答内の削除リクエストの ID（値 `"id"`）は、リクエストパスで送信された ID と一致する必要があります。
+応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答の削除リクエストの ID ( `"id"` の値 ) は、リクエストパスで送信された ID と一致する必要があります。
 
 ```json
 {
@@ -268,11 +268,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` が返されます。 |
-| `status` | 削除リクエストのステータス。可能な値：`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"`。 |
-| `metrics` | 処理されたレコードの数 (`"recordsProcessed"`) とリクエストの処理秒数、またはリクエストの完了に要した時間 (`"timeTakenInSec"`) を含む配列。 |
+| `jobType` | 作成中のジョブのタイプ。この場合、常に返されます `"DELETE"`. |
+| `status` | 削除リクエストのステータス。可能な値： `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
 
-削除リクエストのステータスが `"COMPLETED"` になったら、データアクセス API を使用して削除されたデータにアクセスしようとすることで、データが削除されたことを確認できます。 データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
+Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
 
 ## 削除リクエストの削除
 
@@ -305,4 +305,4 @@ curl -X POST \
 
 ## 次の手順
 
-[!DNL Experience Platform] 内の [!DNL Profile Store] からデータセットやバッチを削除する手順がわかったので、誤って追加されたデータや組織で不要になったデータを安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
+これで、からデータセットとバッチを削除する手順がわかりました。 [!DNL Profile Store] 範囲 [!DNL Experience Platform]を使用すると、誤って追加されたデータや組織で不要になったデータを安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
