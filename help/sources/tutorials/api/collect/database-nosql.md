@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 43e7ee264cd436c8c430760e50d5067c8c9ef535
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 98%
@@ -36,7 +36,7 @@ ht-degree: 98%
 
 Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
-##  ソース接続の作成 {#source}
+## ソース接続の作成 {#source}
 
 [!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
@@ -582,7 +582,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "0b090130b58b4819afc78b6dc98b484d",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

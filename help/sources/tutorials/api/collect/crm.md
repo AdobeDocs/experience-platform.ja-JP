@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの CRM システムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: ht
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 100%
 
@@ -116,7 +116,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
+リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -131,13 +131,13 @@ curl -X POST \
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、[API を使用したスキーマの作成](../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
 
 ## ターゲットデータセットの作成 {#target-dataset}
 
 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成方法に関する詳細な手順については、[API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
 
 ## ターゲット接続の作成
 
@@ -183,7 +183,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
-| `data.schema.version` | スキーマのバージョン番号。この値は `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。この設定によりスキーマの最新のマイナーバージョンが返されます。 |
+| `data.schema.version` | スキーマのバージョン番号。この値を、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。 |
 | `params.dataSetId` | ターゲットデータセットの ID。 |
 | `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
@@ -198,7 +198,7 @@ curl -X POST \
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
 
-マッピングセットを作成するには、[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを実行し、その際にターゲット XDM スキーマ `$id` および作成するマッピングセットの詳細を指定します。
+マッピングセットを作成するには、[[!DNL Data Prep]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを実行し、その際にターゲット XDM スキーマ `$id` および作成するマッピングセットの詳細を指定します。
 
 **API 形式**
 
@@ -256,7 +256,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、一意の ID（`id`）など、新しく作成したマッピングの詳細が返されます。この値は、後の手順でデータフローを作成する際に必要になります。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成されたマッピングの詳細が返されます。この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -291,7 +291,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には一意のフロー仕様 `id` が含まれており、これは新しいデータフローの作成に必要です。
+応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
 
 ```json
 {
@@ -531,7 +531,7 @@ CRM データを収集するための最後の手順は、データフローを�
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を `once`、`minute`、`hour`、`day`、`week` の 5 つのオプションのいずれかに設定する必要があります。インターバルの値には、連続した 2 回の取り込みの間の期間を指定します。1 回限りの取り込みを作成する場合は、インターバルを設定する必要はありません。その他の頻度はすべて、間隔の値を `15` 以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。インターバルの値には、連続した 2 回の取り込みの間の期間を指定します。1 回限りの取り込みを作成する場合は、インターバルを設定する必要はありません。それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
 
 **API 形式**
 
@@ -575,7 +575,8 @@ curl -X POST \
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "500a9b747fcf4908a21917d49bd61780"
+                    "mappingId": "500a9b747fcf4908a21917d49bd61780",
+                    "mappingVersion": 0
                 }
             }
         ],
@@ -589,7 +590,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `flowSpec.id` | 直前の手順で取得した[フロー仕様 ID](#specs)。 |
+| `flowSpec.id` | 前の手順で取得した[フロー仕様 ID](#specs)。 |
 | `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
 | `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target-connection)。 |
 | `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
@@ -597,11 +598,11 @@ curl -X POST \
 | `transformations.params.mappingId` | データベースに関連付けられたマッピング ID。 |
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必要ありません。その他の頻度の値では、間隔は `15` 以上にする必要があります。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したデータフローの ID `id` が返されます。
+リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）が返されます。
 
 ```json
 {
@@ -613,7 +614,7 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローのモニタリング方法について詳しくは、[API でのデータフローのモニタリング](../monitor.md)に関するチュートリアルを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローの監視方法について詳しくは、[API でのデータフローの監視](../monitor.md)に関するチュートリアルを参照してください。
 
 ## 次の手順
 
