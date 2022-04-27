@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ管理ライセンス権限のベストプラクティス
 description: このドキュメントでは、Adobe Experience Platformでのライセンス使用権限をより適切に管理するために使用できる、従うベストプラクティスとツールの概要を説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
-source-wordcount: '2586'
-ht-degree: 1%
+source-wordcount: '2531'
+ht-degree: 2%
 
 ---
 
@@ -130,7 +130,8 @@ Adobe Experience Platform UI には、組織の Platform のライセンス関�
 
 * **データセット重複レポート API**:アドレス可能なオーディエンスに最も貢献するデータセットを公開します。 このレポートを使用して、どのレポートを特定できるかを確認できます [!DNL ExperienceEvent] の TTL を設定するデータセット。 に関するチュートリアルを参照してください。 [データセットの重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md) を参照してください。
 * **ID 重複レポート API**:アドレス可能なオーディエンスに最も貢献する ID 名前空間を公開します。 に関するチュートリアルを参照してください。 [id 重複レポートの生成](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) を参照してください。
-* **不明なプロファイルレポート API**:異なる時間しきい値に偽名の TTL を適用する影響を公開します。 このレポートを使用して、適用する偽名の TTL しきい値を識別できます。 に関するチュートリアルを参照してください。 [不明なプロファイルレポートの生成](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) を参照してください。
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+-->
 
 #### [!DNL ExperienceEvent] データセットの TTL {#dataset-ttl}
 
@@ -197,7 +198,6 @@ TTL をプロファイルデータに適用する方法について詳しくは�
 | [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバー側の適用 [!DNL Kafka] フィルターを使用して、不要なデータを取り込みから除外します。  詳しくは、 [タグルール](../../tags/ui/managing-resources/rules.md) を参照してください。 |
 | [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platformのライセンス関連データのスナップショットを表示 |
 | [データセット重複レポート API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します |
-| [不明なプロファイルレポート API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 異なる時間しきい値に対する偽名 TTL の適用の影響を出力します |
 | [ID 重複レポート API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | アドレス可能なオーディエンスに最も貢献する ID 名前空間を出力します |
 
 {style=&quot;table-layout:auto&quot;}
