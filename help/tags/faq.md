@@ -2,9 +2,9 @@
 title: タグのトラブルシューティングガイド
 description: Adobe Experience Platform のタグに関するよくある質問への回答を示します。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
+source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1049'
 ht-degree: 97%
 
 ---
@@ -106,4 +106,4 @@ Adobe Admin Console で製品プロファイルを設定して「プロパティ
 
 ## 他に質問がある場合
 
-他に質問がある場合は、 [Adobe Experience Platform Data Collection コミュニティページ](https://adobe.com/go/launchme) Experience Leagueで、または [タグ開発者向けの公式Slackグループ](http://join.connectionsdevs.chat).
+他に質問がある場合は、 [Adobe Experience Platform Data Collection コミュニティページ](https://adobe.com/go/launchme) Experience Leagueで、または [タグ開発者向けの公式Slackグループ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
