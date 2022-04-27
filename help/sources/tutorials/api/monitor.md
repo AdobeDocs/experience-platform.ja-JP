@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;データフローのモニター;フローサービス API;フローサービス
 solution: Experience Platform
-title: Flow Service API を使用したデータフローのモニター
+title: フローサービス API を使用したソースデータフローの監視
 topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: ht
-source-wordcount: '410'
-ht-degree: 100%
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 96%
 
 ---
 
-# Flow Service API を使用したデータフローのモニター
+# フローサービス API を使用したソースデータフローの監視
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
 * [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功した場合は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の ID（`id`）を含め、フロー実行に関する詳細が返されします。
+正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子（`id`）など、フロー実行に関する詳細を返します。
 
 ```json
 {

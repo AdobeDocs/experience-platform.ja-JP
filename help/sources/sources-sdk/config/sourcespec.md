@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: Sources SDK の認証仕様の設定
+title: ソース SDK のソース仕様の設定
 topic-legacy: overview
 description: このドキュメントでは、Sources SDK を使用するために準備が必要な設定の概要を説明します。
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
-workflow-type: ht
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
+workflow-type: tm+mt
 source-wordcount: '861'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
