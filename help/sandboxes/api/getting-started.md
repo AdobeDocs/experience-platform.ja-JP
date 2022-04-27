@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
-title: サンドボックス API ガイド
+title: サンドボックス API - はじめに
 topic-legacy: developer guide
-description: サンドボックス API を使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: サンドボックス API を使用すると、開発者はAdobe Experience Platformでサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 87%
+source-wordcount: '376'
+ht-degree: 89%
 
 ---
 
-# サンドボックス API ガイド
+# サンドボックス API - はじめに
 
 Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 
 この開発者ガイドでは、サンドボックス API を使用して Experience Platform のサンドボックスを管理する手順を説明し、様々な操作を実行するための API 呼び出し例を含んでいます。
 
-## サンドボックス API - はじめに
+## 前提条件
 
-IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[ 使用可能なサンドボックスエンドポイント ](./available.md) を使用して、現在のユーザーのアクティブなサンドボックスを一覧表示することのみできます。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、 [使用可能なサンドボックスエンドポイント](./available.md) 現在のユーザーのアクティブなサンドボックスの一覧を表示します。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -28,7 +28,7 @@ IMS 組織のサンドボックスを管理するには「サンドボックス�
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
