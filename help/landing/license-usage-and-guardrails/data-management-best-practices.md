@@ -2,9 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ管理；ライセンス権限；ライセンス；ベストプラクティス
 title: データ管理ライセンス権限のベストプラクティス
 description: このドキュメントでは、Adobe Experience Platformでのライセンス使用権限をより適切に管理するために使用できる、従うベストプラクティスとツールの概要を説明します。
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 1%
 
 ---
@@ -193,7 +194,7 @@ TTL をプロファイルデータに適用する方法について詳しくは�
 | [Adobe Analytics Data Prep フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 適用 [!DNL Kafka] フィルターを使用して不要なデータを取り込みから除外 |
 | [Adobe Audience Managerソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Managerソース接続フィルターを適用して、取り込みから不要なデータを除外する |
 | [Alloy SDK のデータフィルター](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 取り込みから不要なデータを除外するための Alloy フィルターの適用 |
-| [サーバーサイドのデータフィルター](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | 適用 [!DNL Kafka] フィルターを使用して、不要なデータを取り込みから除外します。  詳しくは、 [イベントと条件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) を参照してください。 |
+| [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバー側の適用 [!DNL Kafka] フィルターを使用して、不要なデータを取り込みから除外します。  詳しくは、 [タグルール](../../tags/ui/managing-resources/rules.md) を参照してください。 |
 | [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platformのライセンス関連データのスナップショットを表示 |
 | [データセット重複レポート API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します |
 | [不明なプロファイルレポート API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 異なる時間しきい値に対する偽名 TTL の適用の影響を出力します |

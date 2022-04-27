@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform、ユーザーインターフェイス、UI、カスタマイズ、ライセンス使用ダッシュボード、ダッシュボード、ライセンス使用、使用権限、消費
-title: ライセンス使用状況ダッシュボード
+title: ライセンス使用状況ダッシュボードガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '838'
+ht-degree: 6%
 
 ---
 
@@ -72,26 +72,26 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 ## 使用可能な指標
 
-ライセンス使用状況ダッシュボードは、4 つの主要指標に関するレポートを作成し、以降のリリースではさらに指標を追加する必要があります。 使用可能な指標は次のとおりです。
+ライセンス使用状況ダッシュボードは、4 つの主要指標に関するレポートを作成し、その後のリリースで追加される指標が増えます。 使用可能な指標は次のとおりです。
 
 * [!UICONTROL アドレス可能なオーディエンス]
 * [!UICONTROL 平均プロファイル充実度]
 * [!UICONTROL セグメント化率ごとにスキャンされたデータ]
 * [!UICONTROL 合計消費済みストレージ]
 
-これらの指標の使用可否と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、該当する製品説明ドキュメントを参照してください。
+これらの指標の使用可否と各指標の定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、該当する製品説明ドキュメントを参照してください。
 
 | ライセンス | 製品の説明 |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform、アプリサービスおよびインテリジェントサービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT 顧客データプラットフォーム：OD</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [リアルタイム顧客データプラットフォーム](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD のアクティベーション</li><li>AEP:OD アクティベーション PRFL から 10M</li><li>AEP:OD アクティベーション（最大 50M）</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>RT 顧客データプラットフォーム：OD</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:OD のアクティベーション</li><li>AEP:OD アクティベーション PRFL から 10M</li><li>AEP:OD アクティベーション（最大 50M）</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 >[!WARNING]
 >
->ライセンス使用状況ダッシュボードは、組織用にプロビジョニングされた最新のライセンスに関するレポートのみ表示されます。 お客様の組織でプロビジョニングされた最新のライセンスが上記の表に表示されない場合、ライセンス使用状況ダッシュボードが正しく表示されないことがあります。 1 つの組織で追加のライセンスと複数のライセンスをサポートする予定は、今後のリリースです。
+>ライセンス使用状況ダッシュボードは、組織用にプロビジョニングされた最新のライセンスに関するレポートのみ表示されます。 お客様の組織でプロビジョニングされた最新のライセンスが上記の表に表示されない場合は、ライセンス使用状況ダッシュボードが正しく表示されないことがあります。 1 つの組織で追加のライセンスと複数のライセンスをサポートする予定は、今後のリリースです。
 
 ## 次の手順
 

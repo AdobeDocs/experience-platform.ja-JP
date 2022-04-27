@@ -1,15 +1,15 @@
 ---
-title: リリースノート
+title: タグのリリースノート
 description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
-workflow-type: ht
-source-wordcount: '658'
-ht-degree: 100%
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 98%
 
 ---
 
-# リリースノート
+# Adobe Experience Platformのタグのリリースノート
 
 >[!NOTE]
 >
