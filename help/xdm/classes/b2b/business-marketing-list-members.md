@@ -2,10 +2,10 @@
 title: XDM ビジネスマーケティングリストメンバークラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスマーケティングリストメンバークラスの概要を説明します。
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 4%
+source-wordcount: '338'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL XDM ビジネスマーケティングリストメンバー] は、マーケティングリストに関連付けられたメンバー、個人、または連絡先を記述する標準 Experience Data Model(XDM) クラスです。
 
-![](../../images/classes/b2b/business-marketing-list-members.png)
+![UI に表示される XDM Business Marketing List Members クラスの構造](../../images/classes/b2b/business-marketing-list-members.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 4%
 | `marketingListMemberKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | マーケティングリストメンバーシップエンティティの複合識別子。 |
 | `personKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | マーケティングリストのメンバーである人物の複合識別子。 |
 | `_id` | 文字列 | レコードの一意の ID。 これは、 `marketingListMemberID`. |
+| `isDeleted` | ブール値 | このマーケティングリストメンバーエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `marketingListID` | 文字列 | マーケティングリストの一意の ID。 |
 | `marketingListMemberID` | 文字列 | マーケティングリストメンバーシップエンティティの一意の ID。 |
 | `personId` | 文字列 | 人物の一意の ID。 |

@@ -2,10 +2,10 @@
 title: XDM ビジネスアカウント人物関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスアカウント人物関係クラスの概要を説明します。
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 5%
+source-wordcount: '444'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL XDM ビジネスアカウント人物関係] は、ビジネスアカウントに関連付けられている個人の最小限必要なプロパティを取得する、標準 Experience Data Model(XDM) クラスです。
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![UI に表示される XDM ビジネスアカウント人物関係クラスの構造](../../images/classes/b2b/business-account-person-relation.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -29,13 +29,15 @@ ht-degree: 5%
 | `accountID` | 文字列 | アカウントと人物の関係におけるアカウントの一意の識別子。 |
 | `accountPersonID` | 文字列 | アカウントと人物の関係エンティティの一意の ID。 |
 | `currencyCode` | 文字列 | アカウントと人物の間の関係に使用される ISO 4217 通貨コード。 |
-| `isActive` | Boolean | アカウントと人物の間の関係がアクティブかどうかを示します。 |
+| `isActive` | ブール値 | アカウントと人物の間の関係がアクティブかどうかを示します。 |
+| `isDeleted` | ブール値 | このアカウントと人物の関係がMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `isDirect` | ブール値 | これがアカウントと人物の間の直接の関係であるかどうかを示します。 |
 | `isPrimary` | ブール値 | 人物がこのアカウントの主要連絡先かどうかを示します。 |
 | `personID` | 文字列 | アカウントと人物の関係における人物の一意の識別子。 |
-| `personRole` | 文字列 | アカウントと人物の関係における人物の役割。 |
-| `relationEndDate` | DateTime | アカウントと人物の間の関係が終了した日付。 |
-| `relationStartDate` | DateTime | アカウントと人物の間の関係が開始した日付。 |
+| `personRoles` | 文字列の配列 | アカウントと人物の関係における人物の役割のリストが表示されます。 |
+| `relationEndDate` | 日時 | アカウントと人物の間の関係が終了した日付。 |
+| `relationStartDate` | 日時 | アカウントと人物の間の関係が開始した日付。 |
+| `relationshipSource` | 文字列 | アカウントと人物の関係のソース。 |
 
 {style=&quot;table-layout:auto&quot;}
 

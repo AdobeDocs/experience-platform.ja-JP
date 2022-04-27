@@ -2,10 +2,10 @@
 title: XDM ビジネスアカウントクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスアカウントクラスの概要を説明します。
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 4%
+source-wordcount: '263'
+ht-degree: 6%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 4%
 
 [!UICONTROL XDM ビジネスアカウント] は、ビジネスアカウントに最低限必要なプロパティを取り込む、標準の Experience Data Model(XDM) クラスです。
 
-![](../../images/classes/b2b/business-account.png)
+![UI に表示される XDM Business Account クラスの構造](../../images/classes/b2b/business-account.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | アカウントエンティティの複合識別子。 |
 | `extSourceSystemAudit` | [[!UICONTROL 外部ソースシステム監査属性]](../../data-types/external-source-system-audit-attributes.md) | アカウントが外部ソースシステムから取得された場合、このオブジェクトはそのシステムの監査属性をキャプチャします。 |
-| `_id` | 文字列 | レコードの一意の ID。 これは、 `accountID`. |
-| `accountID` | 文字列 | アカウントエンティティの一意の ID。 |
+| `_id` | 文字列 | レコードの一意の ID。 これは、 `accountKey` 識別子。 |
+| `isDeleted` | ブール値 | このアカウントエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

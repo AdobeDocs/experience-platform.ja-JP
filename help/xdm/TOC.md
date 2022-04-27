@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
+source-git-commit: fab182dc868990ddd5fbc45f0f50dc87258f98bc
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 92%
+source-wordcount: '458'
+ht-degree: 91%
 
 ---
 
@@ -58,12 +58,12 @@ ht-degree: 92%
       * [XDM ビジネスパーソンの詳細](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
-      * [Balance Transfers](./field-groups/event/balance-transfers.md)
+      * [残高移動](./field-groups/event/balance-transfers.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
-      * [Card Actions](./field-groups/event/card-actions.md)
+      * [カードアクション](./field-groups/event/card-actions.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
-      * [Deposit Details](./field-groups/event/deposit-details.md)
+      * [預金の詳細](./field-groups/event/deposit-details.md)
       * [デバイスの下取りの詳細](./field-groups/event/device-trade-in-details.md)
       * [食事の予約](./field-groups/event/dining-reservation.md)
       * [エンドユーザー ID の詳細](./field-groups/event/enduserids.md)
@@ -71,15 +71,19 @@ ht-degree: 92%
       * [フライトの予約](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 同意](./field-groups/event/iab.md)
       * [宿泊施設の予約](./field-groups/event/lodging-reservation.md)
-      * [Quote Request Details](./field-groups/event/quote-request-details.md)
+      * [見積依頼の詳細](./field-groups/event/quote-request-details.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
-      * [Support Site Search](./field-groups/event/support-site-search.md)
+      * [サポートサイト検索](./field-groups/event/support-site-search.md)
       * [アップグレードの詳細](./field-groups/event/upgrade-details.md)
       * [アップセルの詳細](./field-groups/event/upsell-details.md)
       * [Web の詳細](./field-groups/event/web-details.md)
+   * XDM Business Campaign {#b2b-campaign}
+      * [XDM ビジネスキャンペーンの詳細](./field-groups/b2b-campaign/details.md)
+   * XDM Business Campaign Members {#b2b-campaign-members}
+      * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
    * 製品 {#product}
       * [製品カタログ](./field-groups/product/product-catalog.md)
-      * [Product Category](./field-groups/product/product-category.md)
+      * [製品カテゴリ](./field-groups/product/product-category.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アプリケーション](./data-types/application.md)
@@ -95,7 +99,7 @@ ht-degree: 92%
    * [環境](./data-types/environment.md)
    * [エクスペリエンスチャネル](./data-types/experience-channel.md)
    * [外部ソースシステム監査属性](./data-types/external-source-system-audit-attributes.md)
-   * [Financial Account](./data-types/financial-account.md)
+   * [金融口座](./data-types/financial-account.md)
    * [汎用同意フィールド](./data-types/consent-field.md)
    * [汎用マーケティング環境設定フィールド](./data-types/marketing-field.md)
    * [サブスクリプション付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
@@ -107,7 +111,7 @@ ht-degree: 92%
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [印象](./data-types/impressions.md)
-   * [Internal site search](./data-types/internal-site-search.md)
+   * [内部サイト検索](./data-types/internal-site-search.md)
    * [キーと値のペア](./data-types/key-value-pair.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
@@ -166,12 +170,12 @@ ht-degree: 92%
 * チュートリアル {#tutorials}
    * [UI でのスキーマの作成](tutorials/create-schema-ui.md)
    * [API でのスキーマの作成](tutorials/create-schema-api.md)
-   * [Define custom fields in the API](./tutorials/custom-fields-api.md)
+   * [API でカスタムフィールドを定義する](./tutorials/custom-fields-api.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でのスキーマ関係の定義](tutorials/relationship-api.md)
    * [Real-time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
    * [アドホックスキーマ（API）の作成](tutorials/ad-hoc.md)
-   * [Add suggested values to a field (API)](tutorials/suggested-values.md)
+   * [フィールドへの推奨値の追加 (API)](tutorials/suggested-values.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

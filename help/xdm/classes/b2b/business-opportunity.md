@@ -2,10 +2,10 @@
 title: XDM ビジネスオポチュニティクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM Business Opportunity クラスの概要を説明します。
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL XDM ビジネスオポチュニティ] は、ビジネスオポチュニティに最低限必要なプロパティを取り込む、標準 Experience Data Model(XDM) クラスです。
 
-![](../../images/classes/b2b/business-opportunity.png)
+![UI に表示される XDM Business Opportunity クラスの構造](../../images/classes/b2b/business-opportunity.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 5%
 | `opportunityKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | オポチュニティエンティティの複合識別子。 |
 | `_id` | 文字列 | レコードの一意の ID。 これは、 `opportunityID`. |
 | `accountID` | 文字列 | このオポチュニティが関連付けられているアカウントの一意の ID。 |
+| `isDeleted` | ブール値 | このマーケティングリストエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `opportunityDescription` | 文字列 | オポチュニティの説明。 |
 | `opportunityID` | 文字列 | オポチュニティエンティティの一意の ID。 |
 | `opportunityName` | 文字列 | オポチュニティの名前。 |

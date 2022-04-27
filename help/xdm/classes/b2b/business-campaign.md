@@ -2,10 +2,10 @@
 title: XDM ビジネスキャンペーンクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンクラスの概要を説明します。
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 5%
+source-wordcount: '239'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL XDM ビジネスキャンペーン] は、ビジネスキャンペーンで最低限必要なプロパティを取り込む、標準エクスペリエンスデータモデル (XDM) クラスです。
 
-![](../../images/classes/b2b/business-campaign.png)
+![UI に表示される XDM ビジネスキャンペーンクラスの構造](../../images/classes/b2b/business-campaign.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -31,4 +31,6 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-詳しくは、 [リアルタイム CDP B2B エディションのスキーマの関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。
+このクラスが概念上他の B2B クラスとどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法については、 [リアルタイム CDP B2B エディションのスキーマの関係](../../tutorials/relationship-b2b.md)
+
+このクラスと互換性のある追加のフィールドについては、 [[!UICONTROL XDM ビジネスキャンペーンの詳細]](../../field-groups/b2b-campaign/details.md).

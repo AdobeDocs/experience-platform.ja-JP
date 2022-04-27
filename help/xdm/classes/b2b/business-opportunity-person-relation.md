@@ -2,10 +2,10 @@
 title: XDM ビジネスオポチュニティ人物関係クラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスオポチュニティ人物関係クラスの概要を説明します。
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 4%
+source-wordcount: '367'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL XDM ビジネスオポチュニティ人物関係] は、ビジネスオポチュニティに関連付けられている個人の最小限必要なプロパティをキャプチャする、標準 Experience Data Model(XDM) クラスです。
 
-![](../../images/classes/b2b/business-opportunity-person-relation.png)
+![UI に表示される XDM Business Opportunity Person クラスの構造](../../images/classes/b2b/business-opportunity-person-relation.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -26,9 +26,10 @@ ht-degree: 4%
 | `opportunityPersonKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | オポチュニティと人物の関係エンティティの複合識別子。 |
 | `personKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | オポチュニティと人物の関係にある人物の複合識別子。 |
 | `_id` | 文字列 | レコードの一意の ID。 これは、クラスで取り込まれる他の ID フィールドとは別の、システムで生成される値です。 |
+| `isDeleted` | ブール値 | このマーケティングリストエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
+| `isPrimary` | ブール値 | 人物がこのオポチュニティの主要連絡先かどうかを示します。 |
 | `opportunityID` | 文字列 | オポチュニティと人物の関係におけるオポチュニティの一意の識別子。 |
 | `opportunityPersonID` | 文字列 | オポチュニティと人物の関係エンティティの一意の識別子 |
-| `isPrimary` | Boolean | 人物がこのオポチュニティの主要連絡先かどうかを示します。 |
 | `personID` | 文字列 | オポチュニティと人物の関係にある人物の一意の識別子。 |
 | `personRole` | 文字列 | オポチュニティと人物の関係における人物の役割。 |
 
