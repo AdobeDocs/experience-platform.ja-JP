@@ -4,10 +4,10 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。 以下の節で説明します。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 20%
+source-wordcount: '1156'
+ht-degree: 19%
 
 ---
 
@@ -94,6 +94,7 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 > * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
 > * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destinations.md) 宛先への既存の接続。
 > * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![監視ボタンで表示](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視で表示&#x200B;]**ボタンをクリックして、この宛先のアクティベーション情報を表示します。 [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![アラートを購読 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL アラートを購読&#x200B;]**ボタンをクリックして、宛先のデータフローアラートに登録します。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 詳しくは、 [コンテキスト内宛先アラートを購読](alerts.md) 宛先のデータフローアラートの詳細については、を参照してください。
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
@@ -108,7 +109,7 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されるセグメントの数を示します。 このコントロールを選択して、アクティブ化されたセグメントの詳細を確認します。 参照： [アクティベーションデータ](/help/destinations/ui/destination-details-page.md#activation-data) 宛先の詳細ページで、アクティブ化されたセグメントに関する詳細を参照してください。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。アクティベーションフローを新しい順または古い順に並べ替えるには、上向き/下向き矢印記号を選択します。 |
-| [!UICONTROL ステータス] | `Enabled` または `Disabled`.データがこの宛先に対してアクティブ化されているかどうかを示します。 |
+| [!UICONTROL ステータス] | `Enabled` または `Disabled`。データがこの宛先に対してアクティブ化されているかどうかを示します。 |
 
 目的の行をクリックすると、目的の行に関する詳細情報が右側のレールに表示されます。
 
