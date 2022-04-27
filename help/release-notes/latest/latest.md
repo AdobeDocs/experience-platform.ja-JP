@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+source-git-commit: 7b12a4094be3eed9b562fff2d0274a1e169913f3
 workflow-type: tm+mt
-source-wordcount: '2259'
-ht-degree: 25%
+source-wordcount: '2378'
+ht-degree: 26%
 
 ---
 
@@ -19,6 +19,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Dashboards]](#dashboards)
 - [データフロー](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [Real-time Customer Data Platform B2B エディション](#B2B)
 - [ソース](#sources)
@@ -89,6 +90,23 @@ Platformでは、データは様々なソースから取り込まれ、システ
 | 既存のマッピングルールのインポートのサポート | 既存のデータフローからマッピングルールをインポートして、データフロー設定を高速化し、エラーを制限できるようになりました。 に関するチュートリアルを参照してください。 [既存のマッピング・ルールのインポート](../../data-prep/ui/mapping.md) を参照してください。 |
 
 [!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| [宛先データフローのコンテキスト内アラート](../../destinations/ui/alerts.md) | 宛先データフローを作成する際にアラートをサブスクライブして、データフローの実行のステータス、成功、失敗に関するアラートメッセージを受け取れるようになりました。 アラートを受信するには、Experience PlatformUI で、または E メールで選択します。 |
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | データを接続し、Criteo 広告プラットフォームにアクティブ化します。 |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | トランザクション E メールとマーケティング E メール用に、Sendgrid プラットフォームにデータを接続し、アクティブ化します。 |
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
