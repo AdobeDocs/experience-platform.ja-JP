@@ -2,10 +2,10 @@
 description: このページでは、API エンドポイント /authoring/destination-servers を使用して実行できる API 操作をすべて一覧化して説明します。宛先のサーバーとテンプレートの仕様は、共通のエンドポイント /authoring/destination-servers を介して Adobe Experience Platform Destination SDK で設定できます。
 title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
-workflow-type: ht
-source-wordcount: '1454'
-ht-degree: 100%
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
+workflow-type: tm+mt
+source-wordcount: '1382'
+ht-degree: 95%
 
 ---
 
@@ -65,14 +65,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `name` | 文字列 | *必須。* サーバーのわかりやすい名前を表し、アドビにのみ表示されます。この名前は、パートナーや顧客には表示されません。例ば `Moviestar destination server` です。 |
-| `destinationServerType` | 文字列 | *必須。*&#x200B;ストリーミング宛先の `URL_BASED` に設定されます。 |
+| `name` | 文字列 | *必須。* サーバーのわかりやすい名前を表し、アドビにのみ表示されます。この名前は、パートナーや顧客には表示されません。例えば `Moviestar destination server` です。 |
+| `destinationServerType` | 文字列 | *必須。* ストリーミング宛先の場合は `URL_BASED` に設定します。 |
 | `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須。* <ul><li>以下の `value` フィールドの URL をアドビが変換する必要がある場合は、`PEBBLE_V1` を使用します。次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> アドビ側での変換が不要な場合は、`NONE` を使用します。例えば、次のようなエンドポイントがある場合です。`https://api.moviestar.com/data/items`</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。オプションは、`GET`、`PUT`、`POST`、`DELETE`、`PATCH` です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `httpTemplate.requestBody.value` | 文字列 | *必須。* この文字列は、Platform 顧客のデータをサービスが想定する形式に変換する、文字エスケープバージョンです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](./message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[プロファイル属性](./message-format.md#attributes)の変換を参照してください。 </li></ul> |
-| `httpTemplate.contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値で最も可能性が高いのは `application/json` です。 |
+| `httpTemplate.contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -82,11 +82,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## ファイルベース宛先サーバーの設定の作成 {#create-file-based}
 
-### 例：SFTP 宛先サーバーの設定の作成
-
 >[!IMPORTANT]
 >
 >現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
+
+### SFTP 宛先サーバーの設定例 {#sftp-server-sample}
+
++++ [!DNL SFTP] 宛先サーバーの設定
 
 エンドポイント `/authoring/destination-servers` に POST リクエストを実行することで、新しい SFTP 宛先サーバー設定を作成できます。
 
@@ -98,7 +100,7 @@ POST /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け入れるすべてのパラメーターが含まれています。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 
 ```shell
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 リクエストが成功した場合は、新しく作成した宛先サーバー設定の詳細を含む HTTP ステータス 200 が返されます。
 +++
 
-+++例：Amazon S3 宛先サーバーの設定の作成
+### [!DNL Amazon S3] 宛先サーバーのサンプル設定 {#s3-server-sample}
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
++++ [!DNL Amazon S3] 宛先サーバーの設定
 
 エンドポイント `/authoring/destination-servers` に POST リクエストを実行することで、新しい Amazon S3 宛先サーバー設定を作成できます。
 
@@ -208,7 +208,7 @@ POST /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け入れるすべてのパラメーターが含まれています。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 リクエストが成功した場合は、新しく作成した宛先サーバー設定の詳細を含む HTTP ステータス 200 が返されます。
 +++
 
-+++例：Azure Blob 宛先サーバーの設定の作成
+### [!DNL Azure Blob] 宛先サーバーのサンプル設定 {#blob-server-sample}
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
++++ [!DNL Azure Blob] 宛先サーバーの設定
 
 エンドポイント `/authoring/destination-servers` に POST リクエストを実行することで、新しい Azure Blob 宛先サーバー設定を作成できます。
 
 **API 形式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -320,7 +317,7 @@ POST /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け入れるすべてのパラメーターが含まれています。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 リクエストが成功した場合は、新しく作成した宛先サーバー設定の詳細を含む HTTP ステータス 200 が返されます。
 +++
 
-+++例：Azure Data Lake Storage（ADLS）宛先サーバーの設定の作成
+### [!DNL Azure Data Lake Storage] 宛先サーバーのサンプル設定 {#adls-server-sample}
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
++++ [!DNL Azure Data Lake Storage (ADLS)] 宛先サーバーの設定
 
 エンドポイント `/authoring/destination-servers` に POST リクエストを実行することで、新しい ADLS 宛先サーバー設定を作成できます。
 
 **API 形式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -432,7 +426,7 @@ POST /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け入れるすべてのパラメーターが含まれています。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 リクエストが成功した場合は、新しく作成した宛先サーバー設定の詳細を含む HTTP ステータス 200 が返されます。
 +++
 
-+++例：Data Landing Zone（DLZ）宛先サーバーの設定の作成
+### [!DNL Data Landing Zone] (DLZ) 宛先サーバの構成例 {#dlz-server-sample}
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
++++ [!DNL Data Landing Zone (DLZ)] 宛先サーバーの設定
 
-[!DNL Data Landing Zone]（[!DNL DLZ]）は Adobe Experience Platform によってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスです。安全なクラウドベースのファイルストレージ機能にアクセスして、ファイルを Platform に取り込むことができます。 
+[!DNL Data Landing Zone]（[!DNL DLZ]）は Adobe Experience Platform によってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスです。安全なクラウドベースのファイルストレージ機能にアクセスして、ファイルを Platform に取り込むことができます。
 
 エンドポイント `/authoring/destination-servers` に POST リクエストを実行することで、新しい DLZ 宛先サーバー設定を作成できます。
 
 **API 形式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -542,7 +533,7 @@ POST /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け入れるすべてのパラメーターが含まれています。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、エンドポイント `/authoring/destination-servers` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -639,7 +630,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 IMS 組織のすべての宛先サーバー設定のリストを取得するには、エンドポイント `/authoring/destination-servers` に GET リクエストを行います。
 
 **API 形式**
-
 
 ```http
 GET /authoring/destination-servers
@@ -741,7 +731,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API 形式**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API 形式**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -831,7 +819,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
 
 ## 特定の宛先サーバー設定の削除 {#delete}
 
