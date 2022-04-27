@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2022 年 4 月
 description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
+source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
 workflow-type: tm+mt
-source-wordcount: '2379'
-ht-degree: 25%
+source-wordcount: '2493'
+ht-degree: 24%
 
 ---
 
@@ -84,14 +84,31 @@ Platformでは、データは様々なソースから取り込まれ、システ
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| [宛先データフローのコンテキスト内アラート](../../destinations/ui/alerts.md) | 宛先データフローを作成する際にアラートをサブスクライブして、データフローの実行のステータス、成功、失敗に関するアラートメッセージを受け取れるようになりました。 アラートを受信するには、Experience PlatformUI で、または E メールで選択します。 |
+| 高度なエンタープライズ宛先コネクタ | 3 つのエンタープライズ宛先コネクタを一般に使用できるようになりました。 [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)、および [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> エンタープライズ宛先コネクタの一般リリースには、ベータ段階で提供されていたすべての機能などが含まれます。 <ul><li>次の新しい認証機能が追加されました。 [Azure Event Hubs での共有アクセス署名](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) その他 [認証タイプ](../../destinations/catalog/streaming/http-destination.md#authentication-information) HTTP API 宛先の（bearer トークン、OAuth 2）。</li><li>[履歴プロファイルデータのバックフィル](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) （最初にアクティブ化されたときにセグメントの対象として認定された過去のプロファイルを送信）。</li><li>データフローの実行指標がこれらの宛先でサポートされるようになりました。</li><li>[追加のセグメントメタデータ](../../destinations/catalog/streaming/http-destination.md#destination-details) セグメント名とセグメントタイムスタンプを含め、データペイロードに含まれます。</li><li>のサポート [静的 IP アドレス](/help/destinations/catalog/streaming/ip-address-allow-list.md) Experience Platformを設定する必要があるお許可リスト客様向け</li></ul> |
+| 宛先データフローのコンテキスト内アラート | 次の操作を実行できます。 [アラートを購読する](../../destinations/ui/alerts.md) 宛先のデータフローを作成する際に、データフローの実行のステータス、成功、失敗に関するアラートメッセージを受け取る。 アラートを受信するには、Experience PlatformUI で、または E メールで選択します。 |
+
+<!--
+
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
+-->
 
 **新しい宛先**
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | データを接続し、Criteo 広告プラットフォームにアクティブ化します。 |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | トランザクション E メールとマーケティング E メール用に、Sendgrid プラットフォームにデータを接続し、アクティブ化します。 |
+| [!DNL Criteo] | へのデータの接続とアクティブ化 [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 広告プラットフォーム。 |
+| [!DNL Sendgrid] | へのデータの接続とアクティブ化 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) トランザクションメールおよびマーケティングメール用のプラットフォーム。 |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
