@@ -6,9 +6,9 @@ title: 顧客 AI インスタンスの設定
 topic-legacy: Instance creation
 description: インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 必要な値を入力し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
-## データを選択 {#select-data}
+## データの選択 {#select-data}
 
-設計上、顧客 AI は、Adobe Analytics、Adobe Audience Manager、エクスペリエンスイベントおよび消費者エクスペリエンスイベントのデータを使用して、傾向スコアを計算します。 データセットを選択すると、顧客 AI と互換性のあるデータセットのみが表示されます。 データセットを選択するには、**+**) 記号をクリックするか、チェックボックスを選択して複数のデータセットを一度に追加します。 検索オプションを使用して、目的のデータセットをすばやく見つけます。
+設計により、顧客 AI は、Adobe Analytics、Adobe Audience Manager、一般的なエクスペリエンスイベントおよび消費者エクスペリエンスイベントのデータを使用して、傾向スコアを計算します。 データセットを選択すると、顧客 AI と互換性のあるデータセットのみが表示されます。 データセットを選択するには、**+**) 記号をクリックするか、チェックボックスを選択して複数のデータセットを一度に追加します。 検索オプションを使用して、目的のデータセットをすばやく見つけます。
 
 ![データセットを選択して検索します。](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 ### ID を選択 {#identity}
 
-複数のデータセットを相互に結合するには、ID タイプ（「ID 名前空間」とも呼ばれます）と、その名前空間内の ID 値を選択する必要があります。 同じ名前空間の下で、スキーマ内の ID として複数のフィールドを割り当てた場合、割り当てた ID 値はすべて、名前空間の前に追加された ID ドロップダウンに表示されます（例： ）。 `EMAIL (personalEmail.address)` または `EMAIL (workEmail.address)`.
+ID マップ（フィールド）に基づいて、複数のデータセットを相互に結合できるようになりました。 ID タイプ（「ID 名前空間」とも呼ばれます）と、その名前空間内の ID 値を選択する必要があります。 同じ名前空間の下で、スキーマ内の ID として複数のフィールドを割り当てた場合、割り当てた ID 値はすべて、名前空間の前に追加された ID ドロップダウンに表示されます（例： ）。 `EMAIL (personalEmail.address)` または `EMAIL (workEmail.address)`.
+
+[同じ名前空間を選択](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 ID を選択するには、ID 列にある下線付きの値を選択します。 「 ID の選択」ポップオーバーが表示されます。
 
-![同じ名前空間を選択](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[同じ名前空間を選択](../images/user-guide/cai-identity-namespace.png)
 
 1 つの名前空間内で複数の ID を使用できる場合は、使用例に合った正しい ID フィールドを選択するようにしてください。 例えば、電子メール名前空間内では、仕事用と個人用の 2 つの電子メール ID を使用できます。 ユースケースによっては、個人の電子メールが入力される可能性が高く、個々の予測でより役に立つようになります。 つまり、 `EMAIL (personalEmail.address)` が id として選択されます。
 
@@ -116,7 +119,8 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 目標を作成するには、 **[!UICONTROL フィールド名を入力]** とドロップダウンリストのフィールドが続きます。 2 つ目の入力であるイベントの条件句を選択し、必要に応じてイベントを完了するためのターゲット値を指定します。 追加のイベントは、「 **[!UICONTROL イベントを追加]**. 最後に、予測期間を日数で適用して目標を完了し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### 発生し、発生しない
 
@@ -124,7 +128,8 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 例えば、顧客が購入するかどうかを予測するアプリを設定する場合、 **[!UICONTROL 発生]** 続いて **[!UICONTROL すべて]** 次に、 **commerce.purchases.id** （または類似のフィールド）および **[!UICONTROL 存在する]** を演算子として使用します。
 
-![発生する](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![発生する](../images/user-guide/cai-will-occur.png)
 
 ただし、特定の期間に何らかのイベントが発生しないかを予測したい場合があります。 このオプションを使用して目標を設定するには、「 **[!UICONTROL 発生しない]** を選択します。
 
