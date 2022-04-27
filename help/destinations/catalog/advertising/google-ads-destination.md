@@ -3,10 +3,10 @@ keywords: Google広告；google 広告；google adwords;Google AdWords;Google Ad
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 19%
+source-wordcount: '835'
+ht-degree: 23%
 
 ---
 
@@ -75,24 +75,32 @@ ht-degree: 19%
 * アカウントのタイプ：**AdWords**
 * **Google AdWords ID**:これは ID です。 [!DNL Google]. 通常、ID の形式は 123-456-7890 です。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL 名前]**：この宛先の名前を入力します。
+* **[!UICONTROL 名前]**：この宛先に任意の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
 * **[!UICONTROL アカウント ID]**:アカウント ID に [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## 書き出されたデータ
+## 書き出したデータ
 
 データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Ads] 宛先、 [!DNL Google Ads] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
 

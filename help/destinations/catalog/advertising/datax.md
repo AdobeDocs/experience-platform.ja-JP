@@ -2,10 +2,10 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 17%
+source-wordcount: '712'
+ht-degree: 22%
 
 ---
 
@@ -90,25 +90,33 @@ Verizon Media(VMG) の電子メールアドレスをキーにした特定のオ�
 
 ## 宛先に接続 {#connect}
 
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
 ![Platform UI での Yahoo DataX 宛先カード](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL MDM ID]**:これは Yahoo DataX での一意の識別子で、この宛先へのデータエクスポートを設定するための必須フィールドです。 この ID が不明な場合は、Yahoo Data X アカウントマネージャーにお問い合わせください。  MDM ID を使用すると、データは特定の排他的ユーザー（広告主のファーストパーティデータなど）とのみ使用するように制限できます。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 読み取り [宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-segment-streaming-destinations.md) 宛先に対してオーディエンスセグメントをアクティブ化する手順については、を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja).
 
 ## その他のリソース {#additional-resources}
 

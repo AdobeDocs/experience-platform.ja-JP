@@ -6,18 +6,26 @@ description: このドキュメントでは、Adobe Experience Platform API を�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2067'
 ht-degree: 53%
 
 ---
 
-# フローサービス API を使用して、ストリーミング宛先に接続し、データをアクティブ化する
+# Flow Service API でストリーミング宛先に接続してデータを有効化する
 
 >[!NOTE]
 >
 >この [!DNL Amazon Kinesis] および [!DNL Azure Event Hubs] Platform の宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>
+>詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 このチュートリアルでは、API 呼び出しを使用してAdobe Experience Platformデータに接続する方法、ストリーミングクラウドストレージの宛先 ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) または [Azure イベントハブ](../catalog/cloud-storage/azure-event-hubs.md))、新しく作成した宛先へのデータフローを作成し、新しく作成した宛先へのデータをアクティブ化します。
 
@@ -31,9 +39,9 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードのシステムです。
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、Platform でストリーミング宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報を示します。
 
@@ -50,7 +58,7 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values}
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -74,7 +82,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ## 使用可能なストリーミング先のリストを取得する {#get-the-list-of-available-streaming-destinations}
 
-![宛先の指定手順の概要 - 手順 1](../assets/api/streaming-destination/step1.png)
+![宛先手順の概要 - 手順 1](../assets/api/streaming-destination/step1.png)
 
 最初の手順として、データをアクティブ化するストリーミング先を決定する必要があります。 最初に、接続してセグメントをアクティブ化できる、使用可能な宛先のリストを要求する呼び出しを実行します。`connectionSpecs` エンドポイントに次の GET リクエストを実行すると、使用可能な宛先のリストが返されます。
 
@@ -214,7 +222,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ストリーミング先に接続 {#connect-to-streaming-destination}
 
-![宛先の指定手順の概要 - 手順 3](../assets/api/streaming-destination/step3.png)
+![宛先手順の概要 - 手順 3](../assets/api/streaming-destination/step3.png)
 
 この手順では、目的のストリーミング宛先への接続を設定します。 そのためには、以下に示す 2 つの手順を実行します。
 
@@ -593,7 +601,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## Postman コレクションを使用したストリーミング宛先への接続  {#collections}
+## Postmanコレクションを使用したストリーミング宛先への接続  {#collections}
 
 このチュートリアルで説明するストリーミング先により効率的に接続するには、 [[!DNL Postman]](https://www.postman.com/).
 
@@ -608,15 +616,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 各コレクションには、 [!DNL AWS Kinesis]、および [!DNL Azure Event Hub]、それぞれ。
 
-### Postman コレクションの使用方法
+### Postmanコレクションの使用方法
 
 接続されたを使用して宛先に正常に接続するには [!DNL Postman] コレクションを使用するには、次の手順に従います。
 
 * ダウンロードとインストール [!DNL Postman];
 * [ダウンロード](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 添付されたコレクションを解凍します。
-* 対応するフォルダーから Postman にコレクションを読み込む。
+* 対応するフォルダーからPostmanにコレクションを読み込む。
 * この記事の手順に従って、環境変数を入力します。
-* を実行します。 [!DNL API] この記事の手順に基づいて、Postman からのリクエスト。
+* を実行します。 [!DNL API] この記事の手順に基づいて、Postmanからのリクエストを送信します。
 
 ## 次の手順
 

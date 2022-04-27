@@ -1,12 +1,12 @@
 ---
 keywords: 飛行船の属性；飛行船の宛先
-title: 航空船属性の接続
+title: Airship Attributes 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンス属性として Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 1%
+source-wordcount: '863'
+ht-degree: 7%
 
 ---
 
@@ -74,20 +74,28 @@ Adobe Experience Platform内で収集されたプロファイルデータを活�
 
 Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] プロファイルを作成し、SDK または [!DNL Airship] 予測データ。 例えば、小売業者は、ロイヤリティステータスと場所のデータ（Platform の属性）を含むセグメントを作成し、 [!DNL Airship] では、強いターゲットを絞ったメッセージを、ネバダ州ラスベガスに住む、チャーンの確率が高いゴールドロイヤリティステータスのユーザーに送信するようにデータをチャーン化する予測がおこなわれていました。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
+
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL Bearer トークン]**:から生成した bearer トークン [!DNL Airship] ダッシュボード。
 * **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL ドメイン]**:米国または EU のデータセンターを選択します（どちらかに応じて選択します）。 [!DNL Airship] データセンターがこの宛先に適用されます。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
@@ -108,7 +116,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 
 **ID をマッピング**
 
-ソースフィールドを選択：
+ソースフィールドを選択:
 
 ![飛行船属性に接続](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 
@@ -133,4 +141,4 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](../../../data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](../../../data-governance/home.md).

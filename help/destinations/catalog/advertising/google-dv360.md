@@ -1,12 +1,12 @@
 ---
 keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Display 360;display 360;display and video
-title: Google Display と Video 360 の接続
+title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3154020d5be029c738c3a5bfe52ae975a15be2ec
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 40%
+source-wordcount: '830'
+ht-degree: 42%
 
 ---
 
@@ -64,15 +64,19 @@ ht-degree: 40%
 * **顧客 ID**:Adobeの顧客アカウント ID とGoogle。 顧客 ID :89690775.
 * **アカウントの種類**：**[!DNL Invite advertiser]** を使用して、Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するか、**[!DNL Invite partner]** を使用して Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有します。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL 名前]**：この宛先の名前を入力します。
+* **[!UICONTROL 名前]**：この宛先に任意の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントの種類]**：Google のアカウントに応じて、次のオプションを選択します。
    * Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するには、`Invite Advertiser` を使用します。
@@ -83,11 +87,15 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 >
 >の設定時に [!DNL Google Display & Video 360] の宛先については、 [!DNL Google Account Manager] またはAdobe担当者を参照して、お持ちのアカウントの種類を確認してください。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## 書き出されたデータ
+## 書き出したデータ
 
 データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Display & Video 360] 宛先、 [!DNL Google Display & Video 360] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
 

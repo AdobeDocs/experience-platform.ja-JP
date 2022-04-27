@@ -1,19 +1,23 @@
 ---
 keywords: プロファイルリクエストの宛先のアクティブ化、データのアクティブ化、プロファイルリクエストの宛先
-title: プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化
+title: プロファイルリクエスト宛先に対するオーディエンスデータの有効化
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 9%
+source-wordcount: '467'
+ht-degree: 56%
 
 ---
 
-# プロファイルリクエストの宛先に対するオーディエンスデータのアクティブ化
+# プロファイルリクエスト宛先に対するオーディエンスデータの有効化
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 9%
 
 ## 前提条件 {#prerequisites}
 
-宛先に対してデータをアクティブ化するには、次の条件を満たしている必要があります。 [宛先に接続されている](./connect-destination.md). まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。
+宛先へのデータをアクティベートするには、正常に[宛先に接続する](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
 ### セグメント結合ポリシー {#merge-policy}
 
@@ -29,27 +33,27 @@ ht-degree: 9%
 
 ## 宛先を選択 {#select-destination}
 
-1. に移動します。 **[!UICONTROL 接続/宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。
+1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
    ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
+1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
 
    ![ボタンの有効化](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
-1. セグメントのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. セグメントをアクティベートするために使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
 
    ![宛先を選択](../assets/ui/activate-profile-request-destinations/select-destination.png)
 
-1. 次のセクションに移動： [セグメントを選択](#select-segments).
+1. 次のセクションの「[セグメントを選択](#select-segments)」に移動します。
 
 ## セグメントを選択 {#select-segments}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
 
 ![セグメントを選択](../assets/ui/activate-profile-request-destinations/select-segments.png)
 
-## セグメントの書き出しをスケジュール {#scheduling}
+## セグメントの書き出しをスケジュールする {#scheduling}
 
 デフォルトでは、 [!UICONTROL セグメントスケジュール] ページには、現在のアクティベーションフローで選択した新しく選択されたセグメントのみが表示されます。
 
@@ -71,11 +75,11 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反した場合の例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement) （データガバナンスに関するドキュメントの節）。
+>このステップでは、Adobe Experience Platform はデータ使用ポリシーの違反がないかを確認します。ポリシーに違反した場合の例を次に示します。違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。ポリシー違反の解決方法については、データガバナンスに関するドキュメントの[ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement)を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されていない場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
+ポリシー違反が検出されていない場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確定し、宛先へのデータの送信を開始します。
 
 ![レビュー](../assets/ui/activate-profile-request-destinations/review.png)
 

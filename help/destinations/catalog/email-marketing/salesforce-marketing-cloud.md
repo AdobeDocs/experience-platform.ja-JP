@@ -1,12 +1,12 @@
 ---
 keywords: 電子メール；電子メール；電子メールの宛先；Salesforce;Salesforce の宛先
-title: SalesforceMarketing Cloud接続
+title: Salesforce Marketing Cloud 接続
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 18%
+source-wordcount: '567'
+ht-degree: 24%
 
 ---
 
@@ -29,15 +29,19 @@ ht-degree: 18%
 
 {style=&quot;table-layout:auto&quot;}
 
-## IP アドレスの許可リスト {#allow-list}
+## IP アドレス許可リスト {#allow-list}
 
 SFTP ストレージを使用した電子メールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
 
 参照： [クラウドストレージの宛先の IP アドレス許可リスト](../cloud-storage/ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 この宛先では、次の接続タイプをサポートしています。
 
@@ -46,7 +50,7 @@ SFTP ストレージを使用した電子メールマーケティングの宛先
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * の場合 **[!UICONTROL パスワード付き SFTP]** 接続には、次を指定する必要があります。
    * [!UICONTROL ドメイン]
@@ -73,7 +77,11 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
@@ -81,7 +89,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 この宛先に対してセグメントをアクティブ化する場合は、Adobeでは、 [和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas). 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、 [電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス](overview.md#best-practices).
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 の場合 [!DNL Salesforce Marketing Cloud] 宛先、Platform は、 `.csv` ファイルを指定したストレージの場所に保存します。 ファイルの詳細については、 [セグメントのアクティベーションを検証](../../ui/activate-batch-profile-destinations.md#verify) （セグメントのアクティベーションに関するチュートリアル）。
 

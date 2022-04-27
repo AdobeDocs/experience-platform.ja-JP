@@ -1,12 +1,12 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager;DFP
-title: Google Ad Manager 接続
+title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 27%
+source-wordcount: '779'
+ht-degree: 31%
 
 ---
 
@@ -68,15 +68,19 @@ ht-degree: 27%
 * **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * アカウントの種類。Google DFP または AdX 購入者。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL 名前]**：この宛先の名前を入力します。
+* **[!UICONTROL 名前]**：この宛先に任意の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントの種類]**：Google のアカウントに応じて、次のオプションを選択します。
    *  for Publishers - `DFP by Google` を使用[!DNL DoubleClick]
@@ -87,10 +91,14 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 >
 >の設定時に [!DNL Google Ad Manager] の宛先については、 [!DNL Google Account Manager] またはAdobe担当者を参照して、お持ちのアカウントの種類を確認してください。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Ad Manager] 宛先、 [!DNL Google Ad Manager] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。

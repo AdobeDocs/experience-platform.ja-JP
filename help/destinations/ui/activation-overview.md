@@ -1,19 +1,23 @@
 ---
 keywords: 宛先のアクティブ化；データのアクティブ化
-title: Activation の概要
+title: 有効化の概要
 type: Tutorial
 seo-title: Activation overview
 description: Adobe Experience Platformで様々なタイプの宛先に対してオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: f4ae6831569e8a5b458c42f76810212174f04811
+source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 9%
+source-wordcount: '327'
+ht-degree: 24%
 
 ---
 
-# Activation の概要
+# 有効化の概要
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 Adobe Experience Platformは様々な宛先をサポートしています。 オーディエンスのアクティベーションワークフローは、サポートするオーディエンスデータのタイプとデータの書き出し頻度に基づいて、宛先によって異なります。
 
@@ -25,9 +29,9 @@ Adobe Experience Platformは様々な宛先をサポートしています。 オ
 
 宛先カタログから宛先に対してオーディエンスをアクティブ化する方法について詳しくは、次のガイドを参照してください。
 
-* [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](activate-segment-streaming-destinations.md)
-* [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](activate-streaming-profile-destinations.md)
-* [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](activate-batch-profile-destinations.md)
+* [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](activate-segment-streaming-destinations.md)
+* [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](activate-streaming-profile-destinations.md)
+* [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](activate-batch-profile-destinations.md)
 
 ### 以下からオーディエンスをアクティブ化 [!UICONTROL 参照] ページ
 
@@ -39,13 +43,13 @@ Adobe Experience Platformは様々な宛先をサポートしています。 オ
 
 1. セグメントのアクティブ化に使用する宛先接続を見つけ、 [!UICONTROL 名前] 列、「 **[!UICONTROL セグメントのアクティブ化]**.
 
-   ![「セグメントをアクティブ化」ボタン](../assets/ui/activation-overview/activate-segments.png)
+   ![セグメントをアクティベートボタン](../assets/ui/activation-overview/activate-segments.png)
 
 1. 選択した宛先に応じて、以下の記事で説明されている手順に従い、最初に **[!UICONTROL セグメントを選択]** ステップ（アクティベーションワークフローを終了するには： ）:
 
-   * [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](activate-segment-streaming-destinations.md)
-   * [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](activate-streaming-profile-destinations.md)
-   * [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](activate-batch-profile-destinations.md)
+   * [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](activate-segment-streaming-destinations.md)
+   * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](activate-streaming-profile-destinations.md)
+   * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](activate-batch-profile-destinations.md)
 
 ### セグメントの詳細ページからのオーディエンスのアクティブ化 {#activate-segment-details}
 
@@ -53,6 +57,6 @@ Adobe Experience Platformは様々な宛先をサポートしています。 オ
 
 選択した宛先に応じて、以下の記事で説明されている手順に従って、アクティベーションワークフローを完了します。
 
-* [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](activate-segment-streaming-destinations.md)
-* [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](activate-streaming-profile-destinations.md)
-* [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](activate-batch-profile-destinations.md)
+* [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](activate-segment-streaming-destinations.md)
+* [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](activate-streaming-profile-destinations.md)
+* [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](activate-batch-profile-destinations.md)

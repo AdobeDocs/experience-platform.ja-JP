@@ -2,10 +2,10 @@
 title: Twitter Custom Audiences 接続
 description: twitterで既存のフォロワーや顧客をターゲットに設定し、Adobe Experience Platform内で作成したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 17%
+source-wordcount: '669'
+ht-degree: 23%
 
 ---
 
@@ -21,7 +21,6 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 1. [!DNL Twitter Ads] アカウントは広告を利用する資格を持っている必要があります。新規 [!DNL Twitter Ads] アカウントは、作成後最初の 2 週間は、広告を利用する資格がありません。
 2. でアクセスを承認したTwitterユーザーアカウント [!DNL Twitter Audience Manager] は、 *[!DNL Partner Audience Manager]* 権限が有効です。
-
 
 ## サポートされる ID {#supported-identities}
 
@@ -55,23 +54,31 @@ twitterで既存のフォロワーや顧客をターゲットに設定し、Adob
 
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**:お使いの [!DNL Twitter Ads] アカウント ID。 これは、 [!DNL Twitter Ads] 設定。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja).
 
 ## その他のリソース {#additional-resources}
 

@@ -4,14 +4,18 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformで宛先に接続する手順を示します
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '411'
 ht-degree: 6%
 
 ---
 
 # 新しい宛先接続の作成
+
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 

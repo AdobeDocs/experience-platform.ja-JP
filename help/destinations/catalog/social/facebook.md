@@ -1,12 +1,12 @@
 ---
 keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagram;messenger;facebook messenger
-title: Facebook接続
+title: Facebook 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 12%
+source-wordcount: '1713'
+ht-degree: 15%
 
 ---
 
@@ -118,9 +118,13 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 使用する前に `Extern_ID` にデータを送信する名前空間 [!DNL Facebook]を使用する場合は、次を使用して独自の ID を必ず同期してください： [!DNL Facebook Pixel]. 詳しくは、 [Facebook公式ドキュメント](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) を参照してください。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 次のビデオでは、 [!DNL Facebook] の宛先に移動して、セグメントをアクティブ化します。
 
@@ -128,23 +132,23 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 >[!NOTE]
 >
->Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**:あなたの [!DNL Facebook Ad Account ID]. この ID は、 [!DNL Facebook Ads Manager] アカウント この ID を入力する場合、常にというプレフィックスを付けます。 `act_`.
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="オーディエンスの起源"
 >abstract="セグメント内の顧客データが最初に収集された方法を選択します。 ユーザーがセグメントのターゲットになっている場合、データはFacebookに表示されます"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="詳しくは、ドキュメントを参照してください。"
+>additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="詳しくは、ドキュメントを参照してください"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -160,6 +164,10 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="オーディエンスの起源"
 >abstract="広告主は、顧客やパートナーから直接データを収集します。"
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
@@ -196,7 +204,7 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 
 ![ID マッピング](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 の場合 [!DNL Facebook]が成功した場合、アクティベーションは [!DNL Facebook] カスタムオーディエンスは、 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 

@@ -6,14 +6,22 @@ description: Flow Service API を使用して、Experience Platform でクラウ
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
-workflow-type: ht
-source-wordcount: '3083'
-ht-degree: 100%
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+workflow-type: tm+mt
+source-wordcount: '3129'
+ht-degree: 98%
 
 ---
 
 # Flow Service API を使用したバッチ宛先への接続とデータの有効化
+
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>
+>詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 このチュートリアルでは、Flow Service API を使用して、[クラウドストレージ](../catalog/cloud-storage/overview.md)または[メールマーケティングのバッチ宛先](../catalog/email-marketing/overview.md)を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを使用してデータを書き出す方法を実演します。
 

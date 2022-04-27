@@ -1,12 +1,12 @@
 ---
 keywords: モバイル；勇気づけメッセージ；
-title: 接続をブレーズ
+title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 2%
+source-wordcount: '885'
+ht-degree: 9%
 
 ---
 
@@ -55,20 +55,28 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL アカウントトークンをブレーズ]**:これがあなたの [!DNL Braze] [!DNL API] キー。 詳細な手順については、 [!DNL API] キー： [REST API キーの概要](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前を入力します。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明を入力します。
 * **[!UICONTROL エンドポイントインスタンス]**:に尋ねる [!DNL Braze] 使用する必要のあるエンドポイントインスタンスを表します。
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
@@ -130,10 +138,10 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスには、�
 
 ![宛先マッピングのブレーズの例](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Braze] 宛先、 [!DNL Braze] アカウント [!DNL Adobe Experience Platform] セグメントは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-すべて [!DNL Adobe Experience Platform] の宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 詳しくは、 [!DNL Adobe Experience Platform] では、データガバナンスを強制します。詳しくは、 [データガバナンスの概要](../../../data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] では、データガバナンスを強制します。詳しくは、 [データガバナンスの概要](../../../data-governance/home.md).

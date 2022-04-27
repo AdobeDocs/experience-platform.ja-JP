@@ -2,13 +2,13 @@
 keywords: 電子メール；電子メール；電子メールの宛先；送信グリッド；送信グリッドの宛先
 title: SendGrid 接続
 description: SendGrid の宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1475'
 ht-degree: 7%
 
 ---
-
 
 # [!DNL SendGrid] 接続
 
@@ -74,6 +74,11 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 ## 宛先に接続 {#connect}
 
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に固有の手順を次に示します。
 
 1. 内 [!DNL Adobe Experience Platform] コンソール、に移動します。 **宛先**.
@@ -101,6 +106,10 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 

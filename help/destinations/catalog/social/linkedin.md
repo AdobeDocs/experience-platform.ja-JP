@@ -3,10 +3,10 @@ keywords: linkedin 接続；linkedin 接続；linkedin 宛先；linkedin;linkedi
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 11%
+source-wordcount: '895'
+ht-degree: 16%
 
 ---
 
@@ -85,9 +85,13 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 ![ID マッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 次のビデオでは、 [!DNL LinkedIn Matched Audiences] の宛先に移動して、セグメントをアクティブ化します。
 
@@ -95,21 +99,25 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 >[!NOTE]
 >
->Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:この宛先を将来認識するための名前。
 * **[!UICONTROL 説明]**:この宛先を将来識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**:あなたの [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 アクティベーションが成功した場合、 [!DNL LinkedIn] カスタムオーディエンスは、 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 

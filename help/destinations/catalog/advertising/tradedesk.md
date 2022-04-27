@@ -1,12 +1,12 @@
 ---
 keywords: 広告；トレードデスク広告販売店
-title: トレードデスクの連携
+title: Trade Desk 接続
 description: トレードデスクは、広告バイヤーがディスプレイ、ビデオ、モバイルの在庫ソースをまたいで再ターゲティングを実行し、オーディエンスにターゲットを絞ったデジタルキャンペーンを実施するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 5%
+source-wordcount: '613'
+ht-degree: 12%
 
 ---
 
@@ -53,13 +53,17 @@ ht-degree: 5%
 >
 >を使用して最初の宛先を作成する場合は、 [!DNL The Trade Desk] 有効にしていない [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Adobe Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてください。 以前に [!DNL The Trade Desk] Audience Manager内の統合、設定した ID 同期は Platform に引き継がれます。
 
-## 宛先に接続 {#connect}
+## 宛先への接続 {#connect}
 
-この宛先に接続するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 ### 接続パラメーター {#parameters}
 
-While [設定](../../ui/connect-destination.md) この宛先には、次の情報を指定する必要があります。
+この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
@@ -72,7 +76,11 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
    * **[!UICONTROL 北米西部]**
    * **[!UICONTROL ラテンアメリカ]**
 
-## この宛先へのセグメントのアクティブ化 {#activate}
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
@@ -84,6 +92,6 @@ While [設定](../../ui/connect-destination.md) この宛先には、次の情�
 
 ![Segment Mapping ID](../../assets/common/segment-mapping-id.png)
 
-## 書き出されたデータ {#exported-data}
+## 書き出したデータ {#exported-data}
 
 データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL The Trade Desk] 宛先、 [!DNL Trade Desk] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
