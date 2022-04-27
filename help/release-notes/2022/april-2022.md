@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 4 月
 description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2260'
 ht-degree: 24%
 
 ---
@@ -14,12 +14,28 @@ ht-degree: 24%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [データフロー](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [Real-time Customer Data Platform B2B エディション](#B2B)
 - [ソース](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+インテリジェントサービスは、マーケティングアナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。
+
+Attribution AIAI と顧客 AI を使用すると、顧客はマーケティング属性と顧客傾向に対して高度な AI/ML モデルを設定できます。 マルチデータセット機能を使用すると、事前にデータをステッチして準備しなくても、モデル設定時に複数のデータセットを取り込むことができます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 複数データセットのサポート | マルチデータセット機能で、すべてのエクスペリエンスイベントデータセットと、ID としての ID マップの選択がサポートされるようになりました。 データセット間で共通の ID 名前空間がある限り、顧客は ID マップと関連する ID を選択できます。 Attribution AIは、次のスキーマをサポートします。Adobe Analytics、エクスペリエンスイベント、消費者エクスペリエンスイベント。 顧客 AI は、これらすべてのスキーマとAdobe Audience Managerスキーマをサポートしています。 Attribution AIAI と顧客 AI でのマルチデータセットのサポートについて詳しくは、 [Attribution AIユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md) および [顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| 顧客 AI の新しいモデル評価指標 | 顧客 AI の新しい利益のグラフを使用すると、マーケターは予算と ROI の目標に基づいて、ターゲットにするグループサイズを決定できます。 新しいリフトチャートは、モデルの品質を測定し、ランダムターゲティングを超えて得られるリフトをより明確に把握できます。 詳しくは、 [顧客 AI でインサイトを見つける](../../intelligent-services/customer-ai/user-guide/discover-insights.md) 文書。 |
+
+[!DNL Intelligent Services] について詳しくは、[[!DNL Intelligent Services] 概要](../../intelligent-services/home.md)を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
