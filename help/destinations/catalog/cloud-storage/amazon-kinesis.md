@@ -1,22 +1,22 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: （ベータ版）Amazon Kinesis 接続
+title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 4%
+source-wordcount: '1809'
+ht-degree: 2%
 
 ---
 
-# （ベータ版） [!DNL Amazon Kinesis] 接続
+# [!DNL Amazon Kinesis] 接続
 
 ## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Kinesis] の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+> この宛先は次の場所でのみ使用できます： [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
 
 この [!DNL Kinesis Data Streams] サービス [!DNL Amazon Web Services] を使用すると、大量のデータレコードをリアルタイムで収集して処理できます。
 
@@ -90,9 +90,13 @@ ht-degree: 4%
 
 ## 宛先への接続 {#connect}
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-### 接続パラメーター {#parameters}
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
+
+### 認証情報 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -104,13 +108,24 @@ ht-degree: 4%
 >title="セグメントのタイムスタンプを含める"
 >abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
 
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
+以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
+
+![Amazon Kinesis認証の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:In [!DNL Amazon Web Services]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon Kinesis] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **地域**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
-* **名前**:接続先の名前を指定してください [!DNL Amazon Kinesis]
-* **説明**:接続先の説明を入力してください [!DNL Amazon Kinesis].
-* **ストリーム**:の既存のデータストリームの名前を指定します。 [!DNL Amazon Kinesis] アカウント Platform はこのストリームにデータを書き出します。
+* **[!UICONTROL 地域]**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
+
+### 宛先の詳細 {#destination-details}
+
+Amazon Kinesisの宛先への認証接続を確立したら、宛先に次の情報を指定します。
+
+![Amazon Kinesisの宛先の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+
+* **[!UICONTROL 名前]**:接続先の名前を指定してください [!DNL Amazon Kinesis]
+* **[!UICONTROL 説明]**:接続先の説明を入力してください [!DNL Amazon Kinesis].
+* **[!UICONTROL ストリーム]**:の既存のデータストリームの名前を指定します。 [!DNL Amazon Kinesis] アカウント Platform はこのストリームにデータを書き出します。
+* **[!UICONTROL セグメント名を含める]**:データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
+* **[!UICONTROL セグメントのタイムスタンプを含める]**:セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
 
 <!--
 
@@ -121,6 +136,10 @@ ht-degree: 4%
 -->
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
@@ -153,6 +172,10 @@ Experience Platformにより、 [!DNL Amazon Kinesis] 宛先：セグメント�
 宛先へのプロファイルエクスポートは、いずれかの *3 つのマッピングされたセグメント*. ただし、データエクスポートでは、 `segmentMembership` オブジェクト ( [書き出されたデータ](#exported-data) の節を参照 )、その特定のプロファイルがそのメンバーの場合は、その他のマッピングされていないセグメントが表示されることがあります。 プロファイルが DeLorean Cars セグメントで顧客の資格を得ている一方で、「Back to the Future」映画や SF ファンセグメントのメンバーでもある場合、他の 2 つのセグメントも `segmentMembership` データエクスポートのオブジェクト（データフローでマッピングされていない場合）。
 
 プロファイル属性の観点から、上でマッピングした 4 つの属性に対する変更によって、書き出し先が決まり、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
+
+## 履歴データのバックフィル {#historical-data-backfill}
+
+新しいセグメントを既存の宛先に追加する場合、または新しい宛先を作成してセグメントをマッピングする場合、Experience Platformは宛先にセグメントの資格情報の履歴データをエクスポートします。 セグメントに適合するプロファイル *前* セグメントが宛先に追加され、約 1 時間以内に宛先に書き出されます。
 
 ## 書き出したデータ {#exported-data}
 
@@ -210,6 +233,53 @@ Experience Platformにより、 [!DNL Amazon Kinesis] 宛先：セグメント�
   }
 }
 ```
+
+次に、 **[!UICONTROL セグメント名を含める]** および **[!UICONTROL セグメントのタイムスタンプを含める]** options:
+
++++ 以下のデータエクスポートのサンプルでは、 `segmentMembership` セクション
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ 以下のデータエクスポートの例では、 `segmentMembership` セクション
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## 制限および再試行ポリシー {#limits-retry-policy}
+
+95%の確率で、Experience Platformは、各データフローの HTTP 宛先への 1 秒あたり 10.000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
+
+HTTP API 宛先へのリクエストが失敗した場合、Experience Platformは失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。
 
 >[!MORELIKETHIS]
 >

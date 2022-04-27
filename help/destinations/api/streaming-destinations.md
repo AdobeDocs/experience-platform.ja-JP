@@ -6,18 +6,14 @@ description: このドキュメントでは、Adobe Experience Platform API を�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 1b9b2476047b78c67a8c9950e28b0812642c7941
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2049'
 ht-degree: 53%
 
 ---
 
 # Flow Service API でストリーミング宛先に接続してデータを有効化する
-
->[!NOTE]
->
->この [!DNL Amazon Kinesis] および [!DNL Azure Event Hubs] Platform の宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 >[!IMPORTANT]
 > 

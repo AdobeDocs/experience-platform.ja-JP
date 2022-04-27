@@ -4,10 +4,10 @@ title: 宛先の詳細を表示
 description: '個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションを編集し、データフローを有効/無効にするためのコントロールが含まれます。 '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
+source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 6%
+source-wordcount: '718'
+ht-degree: 7%
 
 ---
 
@@ -79,7 +79,9 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 
 >[!NOTE]
 >
->宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)、および [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) 宛先。
+>* 宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) および [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) 宛先。
+>* の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id は、現在、表示されません。
+
 
 ![データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)
 

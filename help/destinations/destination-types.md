@@ -4,10 +4,10 @@ title: 宛先のタイプとカテゴリ
 seo-title: Destination types and categories
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 45%
+source-wordcount: '596'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 
 Adobe Experience Platformの宛先の様々なタイプとカテゴリについては、このページを参照してください。
 
-## 宛先のタイプ
+## 宛先のタイプ {#destination-types}
 
 Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの宛先を区別します。 接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
 
@@ -25,16 +25,28 @@ Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの�
 
 **[!UICONTROL プロファイルの書き出し]** および **[!UICONTROL ストリーミングセグメントの書き出し]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化の適用、セグメントおよび絞り込まれたプロファイルの書き出しをおこないます。
 
-## プロファイルの書き出し先
+## プロファイルの書き出し先 {#profile-export}
 
 プロファイルの書き出し先は生データを受け取り、多くの場合、電子メールアドレスをプライマリキーとして使用します。 Experience Platformは、現在、次の 2 種類のプロファイル書き出し先をサポートしています。
 
-* [ストリーミングプロファイルの書き出し先](#streaming-profile-export)
+* [ストリーミングプロファイルの書き出し先（エンタープライズの宛先）](#streaming-profile-export)
 * [バッチ（ファイルベース）の宛先](#file-based)
 
-### ストリーミングプロファイルの書き出し先 {#streaming-profile-export}
+### ストリーミングプロファイルの書き出し先（エンタープライズの宛先） {#streaming-profile-export}
 
-ストリーミングプロファイルの書き出し先は、セグメントデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。 [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) および [Azure イベントハブ](catalog/cloud-storage/azure-event-hubs.md) は、このような宛先の例です。
+>[!IMPORTANT]
+>
+>エンタープライズの宛先（ストリーミングプロファイルの書き出し先）は、次の用途で使用できます。 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみ。
+
+企業の宛先 Data Connectors を使用して、Real-time Customer Data Platformプロファイルをほぼリアルタイムで内部システムや他のサードパーティシステムに配信し、データ同期、分析、さらにプロファイルエンリッチメントの使用例をおこないます。
+
+これらの宛先は、セグメントデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。
+
+企業の宛先には、次のものが含まれます。
+
+* [HTTP API の宛先](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
 
 ### バッチ（ファイルベース）の宛先 {#file-based}
 
@@ -42,7 +54,7 @@ Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの�
 
 ## ストリーミングセグメントの書き出し先 {#streaming-destinations}
 
-セグメントの書き出し先は、Experience Platformセグメントデータを受け取ります。 これらの宛先では、セグメント ID またはユーザー ID を使用します。 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)、などは、このような宛先の一例です。
+セグメントの書き出し先は、Experience Platformセグメントデータを受け取ります。 これらの宛先では、セグメント ID またはユーザー ID を使用します。 広告およびソーシャルの宛先（など） [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)または [Facebook](catalog/social/facebook.md) は、このような宛先の例です。
 
 ## プロファイルの書き出しとセグメントの書き出し先 — ビデオの概要 {#video}
 

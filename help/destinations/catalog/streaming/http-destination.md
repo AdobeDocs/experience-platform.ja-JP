@@ -1,22 +1,22 @@
 ---
-title: （ベータ版）HTTP API 接続
+title: HTTP API 接続
 keywords: ストリーミング；
-description: Adobe Experience Platformの HTTP API の宛先を使用すると、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。
+description: Adobe Experience Platformの HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信し、独自の分析を実行したり、Experience Platform外に書き出されたプロファイルデータに対して必要なその他の操作を実行したりします。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 6%
+source-wordcount: '2296'
+ht-degree: 3%
 
 ---
 
-# （ベータ版）HTTP API 接続
+# HTTP API 接続
+
+## 概要 {#overview}
 
 >[!IMPORTANT]
 >
->Platform の HTTP API の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
+> この宛先は次の場所でのみ使用できます： [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
 
 HTTP API の宛先は [!DNL Adobe Experience Platform] プロファイルデータをサードパーティの HTTP エンドポイントに送信する際に役立つストリーミングの宛先です。
 
@@ -24,7 +24,7 @@ HTTP API の宛先は [!DNL Adobe Experience Platform] プロファイルデー�
 
 ## ユースケース {#use-cases}
 
-HTTP 宛先は、XDM プロファイルデータとオーディエンスセグメントを汎用の HTTP エンドポイントに書き出す必要があるお客様をターゲットにしています。
+HTTP API の宛先を使用すると、XDM プロファイルデータとオーディエンスセグメントを汎用の HTTP エンドポイントに書き出すことができます。 ここでは、独自の分析を実行したり、Experience Platformからエクスポートされたプロファイルデータに対して必要なその他の操作を実行したりできます。
 
 HTTP エンドポイントは、お客様独自のシステムまたはサードパーティのソリューションのいずれかになります。
 
@@ -34,24 +34,34 @@ HTTP エンドポイントは、お客様独自のシステムまたはサード
 
 | 項目 | タイプ | 備考 |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：電子メールアドレス、電話番号、姓 )。 [宛先のアクティベーションワークフロー](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 
->[!IMPORTANT]
->
->会社で HTTP API 宛先ベータ版機能を有効にする場合は、Adobe担当者またはAdobeカスタマーケアにお問い合わせください。
-
 HTTP API の宛先を使用してExperience Platformからデータを書き出すには、次の前提条件を満たす必要があります。
 
 * REST API をサポートする HTTP エンドポイントが必要です。
 * HTTP エンドポイントは、Experience Platformプロファイルスキーマをサポートする必要があります。 HTTP API の宛先では、サードパーティのペイロードスキーマへの変換はサポートされていません。 詳しくは、 [書き出されたデータ](#exported-data) 「 」セクションに、Experience Platform出力スキーマの例を示します。
 * HTTP エンドポイントはヘッダーをサポートする必要があります。
-* HTTP エンドポイントはをサポートしている必要があります [OAuth 2.0 クライアント資格情報](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 認証。 この要件は、HTTP API の宛先がベータ段階にある間に有効です。
-* 次の例に示すように、クライアント資格情報をエンドポイントへのPOSTリクエストの本文に含める必要があります。
+
+>[!TIP]
+>
+> また、 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) ：統合を設定し、HTTP エンドポイントにExperience Platformプロファイルデータを送信します。
+
+## IP アドレスの許可リスト {#ip-address-allowlist}
+
+お客様のセキュリティおよびコンプライアンス要件を満たすために、Experience Platformは HTTP API 宛先に対してできる静的 IP のリストを提供しま許可リストす。 参照： [ストリーミング先の IP アドレス許可リスト](/help/destinations/catalog/streaming/ip-address-allow-list.md) ：する IP の完全なリストを表示しま許可リストす。
+
+## サポートしている認証タイプ {#supported-authentication-types}
+
+HTTP API の宛先は、HTTP エンドポイントに対して複数の認証タイプをサポートします。
+
+* 認証のない HTTP エンドポイント。
+* Bearer トークン認証
+* [OAuth 2.0 クライアント資格情報](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 本文形式での認証 [!DNL client ID], [!DNL client secret] および [!DNL grant type] を HTTP リクエストの本文に追加します。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -61,22 +71,74 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-また、 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) ：統合を設定し、HTTP エンドポイントにExperience Platformプロファイルデータを送信します。
+* [OAuth 2.0 クライアント資格情報](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 基本認証付きで、URL エンコードされた [!DNL client ID] および [!DNL client secret].
 
-## IP アドレスの許可リスト {#ip-address-allowlist}
+```shell
+curl --location --request POST 'https://some-api.com/token' \
+--header 'Authorization: Basic base64(clientId:clientSecret)' \
+--header 'Content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+--data-urlencode 'grant_type=client_credentials'
+```
 
-お客様のセキュリティおよびコンプライアンス要件を満たすために、Experience Platformは HTTP API 宛先に対してできる静的 IP のリストを提供しま許可リストす。 参照： [ストリーミング先の IP アドレス許可リスト](/help/destinations/catalog/streaming/ip-address-allow-list.md) ：する IP の完全なリストを表示しま許可リストす。
+* [OAuth 2.0 パスワードの付与](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## 宛先への接続 {#connect-destination}
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-### 接続パラメーター {#parameters}
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
+
+### 認証情報 {#authentication-information}
+
+#### Bearer トークン認証 {#bearer-token-authentication}
+
+次を選択した場合、 **[!UICONTROL Bearer トークン]** HTTP エンドポイントに接続するための認証タイプ。以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
+
+![bearer トークン認証を使用して HTTP API の宛先に接続できる UI 画面の画像](../../assets/catalog/http/http-api-authentication-bearer.png)
+
+* **[!UICONTROL Bearer トークン]**:bearer トークンを挿入して、HTTP ロケーションに対する認証をおこないます。
+
+#### 認証なし {#no-authentication}
+
+次を選択した場合、 **[!UICONTROL なし]** HTTP エンドポイントに接続するための認証タイプ：
+
+![認証なしで HTTP API の宛先に接続できる UI 画面の画像](../../assets/catalog/http/http-api-authentication-none.png)
+
+この認証を開いた状態で選択する場合は、 **[!UICONTROL 宛先に接続]** およびは、エンドポイントへの接続を確立します。
+
+#### OAuth 2 パスワード認証 {#oauth-2-password-authentication}
+
+次を選択した場合、 **[!UICONTROL OAuth 2 パスワード]** HTTP エンドポイントに接続するための認証タイプ。以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
+
+![パスワード認証を使用して OAuth 2 を使用し、HTTP API の宛先に接続できる UI 画面の画像](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+
+* **[!UICONTROL トークン URL にアクセス]**:ユーザー側の URL で、トークンにアクセスし、必要に応じて更新トークンを発行します。
+* **[!UICONTROL クライアント ID]**:この [!DNL client ID] システムがAdobe Experience Platformに割り当てる
+* **[!UICONTROL クライアント秘密鍵]**:この [!DNL client secret] システムがAdobe Experience Platformに割り当てる
+* **[!UICONTROL ユーザー名]**:HTTP エンドポイントにアクセスするユーザー名。
+* **[!UICONTROL パスワード]**:HTTP エンドポイントにアクセスするためのパスワード。
+
+#### OAuth 2 クライアント資格情報認証 {#oauth-2-client-credentials-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="クライアント資格情報のタイプ"
 >abstract="選択 **本文のエンコード** を呼び出します。 **基本認証** 認証ヘッダーにクライアント ID とクライアント秘密鍵を含める。 ドキュメントの例を参照してください。"
+
+次を選択した場合、 **[!UICONTROL OAuth 2 クライアント資格情報]** HTTP エンドポイントに接続するための認証タイプ。以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
+
+![クライアント資格情報認証で OAuth 2 を使用して HTTP API 宛先に接続できる UI 画面の画像](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+* **[!UICONTROL トークン URL にアクセス]**:ユーザー側の URL で、トークンにアクセスし、必要に応じて更新トークンを発行します。
+* **[!UICONTROL クライアント ID]**:この [!DNL client ID] システムがAdobe Experience Platformに割り当てる
+* **[!UICONTROL クライアント秘密鍵]**:この [!DNL client secret] システムがAdobe Experience Platformに割り当てる
+* **[!UICONTROL クライアント資格情報の種類]**:お使いのエンドポイントでサポートされる OAuth2 クライアント資格情報付与のタイプを選択します。
+   * **[!UICONTROL 本文のエンコード]**:この場合、 [!DNL client ID] および [!DNL client secret] 含まれる *リクエストの本文内* を宛先に送信しました。 例については、 [サポートされる認証タイプ](#supported-authentication-types) 」セクションに入力します。
+   * **[!UICONTROL 基本認証]**:この場合、 [!DNL client ID] および [!DNL client secret] 含まれる *内 `Authorization` ヘッダー* base64 エンコードされ、宛先に送信された後。 例については、 [サポートされる認証タイプ](#supported-authentication-types) 」セクションに入力します。
+
+### 宛先の詳細 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -103,27 +165,23 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 >title="クエリのパラメーター"
 >abstract="オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを次のように書式設定します。 `parameter1=value&parameter2=value`."
 
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
+HTTP エンドポイントへの認証接続を確立したら、宛先に次の情報を指定します。
 
-* **[!UICONTROL httpEndpoint]**:の [!DNL URL] プロファイルデータを送信する HTTP エンドポイントのパスを指定します。
-   * 必要に応じて、 [!UICONTROL httpEndpoint] [!DNL URL].
-* **[!UICONTROL authEndpoint]**:の [!DNL URL] に使用される HTTP エンドポイントの [!DNL OAuth2] 認証。
-* **[!UICONTROL クライアント ID]**:の [!DNL clientID] パラメーター [!DNL OAuth2] クライアント資格情報。
-* **[!UICONTROL クライアント秘密鍵]**:の [!DNL clientSecret] パラメーター [!DNL OAuth2] クライアント資格情報。
-
-   >[!NOTE]
-   >
-   >のみ [!DNL OAuth2] クライアント資格情報は現在サポートされています。
+![HTTP 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前を入力します。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明を入力します。
-* **[!UICONTROL カスタムヘッダー]**:宛先の呼び出しに含めるカスタムヘッダーを、次の形式で入力します。 `header1:value1,header2:value2,...headerN:valueN`.
-
-   >[!IMPORTANT]
-   >
-   >現在の実装には、少なくとも 1 つのカスタムヘッダーが必要です。 この制限は、今後のアップデートで解決されます。
+* **[!UICONTROL ヘッダー]**:宛先の呼び出しに含めるカスタムヘッダーを、次の形式で入力します。 `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP エンドポイント]**:プロファイルデータの送信先の HTTP エンドポイントの URL。
+* **[!UICONTROL クエリパラメーター]**:オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを次のように書式設定します。 `parameter1=value&parameter2=value`.
+* **[!UICONTROL セグメント名を含める]**:データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
+* **[!UICONTROL セグメントのタイムスタンプを含める]**:セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
@@ -160,6 +218,10 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 宛先へのプロファイルエクスポートは、いずれかの *3 つのマッピングされたセグメント*. ただし、データエクスポートでは、 `segmentMembership` オブジェクト ( [書き出されたデータ](#exported-data) の節を参照 )、その特定のプロファイルがそのメンバーの場合は、その他のマッピングされていないセグメントが表示されることがあります。 プロファイルが DeLorean Cars セグメントで顧客の資格を得ている一方で、「Back to the Future」映画や SF ファンセグメントのメンバーでもある場合、他の 2 つのセグメントも `segmentMembership` データエクスポートのオブジェクト（データフローでマッピングされていない場合）。
 
 プロファイル属性の観点から、上でマッピングした 4 つの属性に対する変更によって、書き出し先が決まり、プロファイルに存在する 4 つのマッピング済み属性のいずれかがデータ書き出しに表示されます。
+
+## 履歴データのバックフィル {#historical-data-backfill}
+
+新しいセグメントを既存の宛先に追加する場合、または新しい宛先を作成してセグメントをマッピングする場合、Experience Platformは宛先にセグメントの資格情報の履歴データをエクスポートします。 セグメントに適合するプロファイル *前* セグメントが宛先に追加され、約 1 時間以内に宛先に書き出されます。
 
 ## 書き出したデータ {#exported-data}
 
@@ -217,3 +279,50 @@ Experience Platformは、セグメント認定または他の重要なイベン�
   }
 }
 ```
+
+次に、 **[!UICONTROL セグメント名を含める]** および **[!UICONTROL セグメントのタイムスタンプを含める]** options:
+
++++ 以下のデータエクスポートのサンプルでは、 `segmentMembership` セクション
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ 以下のデータエクスポートの例では、 `segmentMembership` セクション
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## 制限および再試行ポリシー {#limits-retry-policy}
+
+95%の確率で、Experience Platformは、各データフローの HTTP 宛先への 1 秒あたり 10.000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
+
+HTTP API 宛先へのリクエストが失敗した場合、Experience Platformは失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。

@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 95%
+source-wordcount: '755'
+ht-degree: 93%
 
 ---
 
@@ -93,10 +93,10 @@ ht-degree: 95%
       * [Yext Conversion Tracking 拡張機能](./catalog/analytics/yext.md)
    * クラウドストレージの宛先 {#cloud-storage}
       * [クラウドストレージの宛先の概要](./catalog/cloud-storage/overview.md)
-      * [（ベータ版）Amazon Kinesis 接続](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon Kinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 接続](./catalog/cloud-storage/azure-blob.md)
-      * [（ベータ版）Azure Event Hubs 接続](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure Event Hubs 接続](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
       * [クラウドストレ許可リストージの宛先の IP アドレス](./catalog/cloud-storage/ip-address-allow-list.md)
    * データ管理プラットフォームの宛先 {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 95%
       * [linkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミングの宛先 {#streaming}
-      * [ （ベータ版）HTTP API 接続](./catalog/streaming/http-destination.md)
+      * [HTTP API 接続](./catalog/streaming/http-destination.md)
       * [ストリーミング許可リスト先の IP アドレス](./catalog/streaming/ip-address-allow-list.md)
    * サーベイの宛先 {#survey}
       * [サーベイの宛先の概要](./catalog/survey/overview.md)
