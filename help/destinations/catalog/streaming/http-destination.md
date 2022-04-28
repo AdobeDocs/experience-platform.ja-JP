@@ -3,7 +3,7 @@ title: HTTP API 接続
 keywords: ストリーミング；
 description: Adobe Experience Platformの HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信し、独自の分析を実行したり、Experience Platform外に書き出されたプロファイルデータに対して必要なその他の操作を実行したりします。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 3%
@@ -92,6 +92,11 @@ curl --location --request POST 'https://some-api.com/token' \
 
 ### 認証情報 {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="クライアント資格情報のタイプ"
+>abstract="選択 **本文のエンコード** を呼び出します。 **基本認証** 認証ヘッダーにクライアント ID とクライアント秘密鍵を含める。 ドキュメントの例を参照してください。"
+
 #### Bearer トークン認証 {#bearer-token-authentication}
 
 次を選択した場合、 **[!UICONTROL Bearer トークン]** HTTP エンドポイントに接続するための認証タイプ。以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
@@ -121,11 +126,6 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL パスワード]**:HTTP エンドポイントにアクセスするためのパスワード。
 
 #### OAuth 2 クライアント資格情報認証 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="クライアント資格情報のタイプ"
->abstract="選択 **本文のエンコード** を呼び出します。 **基本認証** 認証ヘッダーにクライアント ID とクライアント秘密鍵を含める。 ドキュメントの例を参照してください。"
 
 次を選択した場合、 **[!UICONTROL OAuth 2 クライアント資格情報]** HTTP エンドポイントに接続するための認証タイプ。以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
 
