@@ -3,7 +3,7 @@ title: コアイベント転送拡張機能の概要
 description: Adobe Experience Platform のコアイベント拡張機能について説明します。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: d41779c5897b748130b88d3886472c7908347389
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
@@ -47,7 +47,7 @@ arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` は、アクションモジュールからすべての結果を収集するオブジェクトです。
