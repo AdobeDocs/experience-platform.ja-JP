@@ -2,7 +2,7 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 98%
@@ -220,7 +220,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 |---------|----------|------|
 | `acceptsAttributes` | ブール値 | 宛先が標準のプロファイル属性を受け入れるかどうかを示します。 通常、これらの属性はパートナーのドキュメントで強調表示されています。 |
 | `acceptsCustomNamespaces` | ブール値 | 顧客が宛先でカスタム名前空間を設定できるかどうかを示します。 |
-| `allowedAttributesTransformation` | 文字列 | *サンプル設定には表示されません*。例えば、[!DNL Platform] の顧客が属性としてプレーンなメールアドレスを持っており、プラットフォームがハッシュ化されたメールのみを受け取る場合に使用します。 このオブジェクトでは、適用する必要のある変換（例えば、メールを小文字に変換してからハッシュ化する）を実施できます。 例については、`requiredTransformation` を参照してください（[宛先設定 API リファレンス](./destination-configuration-api.md#update)内）。 |
+| `transformation` | 文字列 | *サンプル設定には表示されません*。例えば、[!DNL Platform] の顧客が属性としてプレーンなメールアドレスを持っており、プラットフォームがハッシュ化されたメールのみを受け取る場合に使用します。 このオブジェクトでは、適用する必要のある変換（例えば、メールを小文字に変換してからハッシュ化する）を実施できます。 例については、`requiredTransformation` を参照してください（[宛先設定 API リファレンス](./destination-configuration-api.md#update)内）。 |
 | `acceptedGlobalNamespaces` | - | プラットフォームが[標準 ID 名前空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#standard-namespaces)（例えば IDFA）を使用して、Platform ユーザーがこれらの ID 名前空間のみを選択するように制限できます。 |
 
 {style=&quot;table-layout:auto&quot;}
