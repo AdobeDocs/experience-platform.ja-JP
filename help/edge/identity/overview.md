@@ -3,10 +3,10 @@ title: Platform Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得および管理する方法について説明します。
 keywords: ID；ファーストパーティ ID;ID サービス；サードパーティ ID;ID の移行；訪問者 ID；サードパーティ ID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期 ID;sendEvent;identityMap；プライマリ；ID 名前空間；id；認証状態 hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 1%
+source-wordcount: '1334'
+ht-degree: 2%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](../..
 
 Platform Web SDK は、Cookie を使用して ECID を割り当て、追跡します。これらの Cookie の生成方法を設定するために利用可能な複数のメソッドが用意されています。
 
-新しいユーザーが Web サイトに到達すると、Adobe Experience Cloud Identity Service は、そのユーザーに対してデバイス ID Cookie の設定を試みます。 初回訪問者の場合、ECID が生成され、Adobe Experience Platform Edge Network からの最初の応答で返されます。 リピート訪問者の場合、ECID は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie に保存され、ペイロードに追加されました。
+新しいユーザーが Web サイトに到達すると、Adobe Experience Cloud Identity Service は、そのユーザーに対してデバイス ID Cookie の設定を試みます。 初回訪問者の場合、ECID が生成され、Adobe Experience Platform Edge Network からの最初の応答で返されます。 リピート訪問者の場合、ECID は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie に保存され、Edge ネットワークによってペイロードに追加されました。
 
-ECID を含む Cookie を設定した後は、Platform Web SDK によって生成される各後続のリクエストに、ECID が含まれます。
+ECID を含む Cookie を設定した後、Web SDK によって生成される各リクエストでは、エンコードされた ECID が `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
 デバイスを識別するために Cookie を使用する場合、Edge ネットワークとやり取りする方法は 2 つあります。
 
@@ -55,7 +55,7 @@ ECID を含む Cookie を設定した後は、Platform Web SDK によって生�
 
 ### ファーストパーティデバイス ID
 
-上記の cookie の寿命の影響を考慮するには、代わりに独自のデバイス識別子を設定および管理することを選択できます。 詳しくは、 [ファーストパーティデバイス ID](./first-party-device-ids.md) を参照してください。
+上記の cookie の寿命の影響を考慮するには、代わりに独自のデバイス識別子を設定および管理することを選択できます。 詳しくは、[ファーストパーティデバイス ID](./first-party-device-ids.md) に関するガイドを参照してください。
 
 ## 現在のユーザーの ECID および地域の取得
 
