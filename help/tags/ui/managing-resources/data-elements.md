@@ -2,10 +2,10 @@
 title: データ要素
 description: データ要素は、データディクショナリ（またはデータマップ）の構築ブロックです。データ要素を使用して、マーケティングおよび広告テクノロジー全体でデータを収集、整理、配信します。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -132,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 `_satellite` オブジェクト構文を使うと、この値をカスタムスクリプトで使用できます。
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-`%..%` 表記を使用する場合は、データ要素名を指定するだけで済みます。`event` を指定する必要はありません。
+パーセント (`%`) 構文を使用する場合、データ要素名のみを指定する必要があります。 `event` を指定する必要はありません。
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### DOM 属性
 
