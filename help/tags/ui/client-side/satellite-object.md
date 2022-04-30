@@ -2,10 +2,10 @@
 title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 100%
+source-wordcount: '1291'
+ht-degree: 95%
 
 ---
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 この例では、名前が一致するデータ要素が存在する場合、そのデータ要素の値が返されます。一致するデータ要素が存在しない場合は、一致する名前のカスタム変数が、以前に `_satellite.setVar()` を使用して設定されているかどうかを確認します。一致するカスタム変数が見つかると、その値が返されます。
 
-データ収集ユーザーインターフェイスの多くのフォームフィールドでは、`%%` 構文を使用して変数を参照できるため、`_satellite.getVar()` の呼び出しを減らすことができます。たとえば、%product% を使用すると、製品データ要素またはカスタム変数の値にアクセスします。
+>[!NOTE]
+>
+>パーセント (`%`) 構文を使用して、データ収集 UI の多くのフォームフィールドの変数を参照し、の呼び出しを減らします。 `_satellite.getVar()`. 例えば、 `%product%` は、製品データ要素またはカスタム変数の値にアクセスします。
+
+イベントがルールをトリガーする際に、ルールの対応する `event` ～に向かう `_satellite.getVar()` 次のようにします。
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
