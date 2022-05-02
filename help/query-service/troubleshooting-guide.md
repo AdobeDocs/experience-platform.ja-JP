@@ -5,9 +5,9 @@ title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 5%
 
 ---
@@ -38,9 +38,9 @@ ht-degree: 5%
 +++回答 1 つの潜在的な原因はオートコンプリート機能です。 この機能は、特定のメタデータコマンドを処理し、クエリの編集中にエディターの速度が低下する場合があります。
 +++
 
-### Postmanをクエリサービス API に使用できますか？
+### クエリサービス API に Postman を使用できますか？
 
-+++回答はい。Postman( 無料のサードパーティ製Adobe) を使用すれば、すべてのアプリケーション API サービスを視覚化し、操作できます。 次を監視： [Postman セットアップガイド](https://video.tv.adobe.com/v/28832) Adobe開発者コンソールでプロジェクトを設定し、Postmanで使用するために必要な資格情報をすべて取得する手順については、を参照してください。 以下の公式ドキュメントを参照してください。 [Postman コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++回答はい。Postman( 無料のサードパーティ製Adobe) を使用すれば、すべてのアプリケーション API サービスを視覚化し、操作できます。 次を監視： [Postmanセットアップガイド](https://video.tv.adobe.com/v/28832) を参照してください。 以下の公式ドキュメントを参照してください。 [Postmanコレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI を使用してクエリから返される最大行数に制限はありますか？
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++回答まず、ログを調べてエラーの詳細を確認します。 に関する FAQ の節 [ログ内のエラーの検索](#error-logs) この方法の詳細については、を参照してください。
 
 また、の実行方法に関するガイダンスについては、ドキュメントを参照してください [UI でのスケジュール済みクエリ](./ui/user-guide.md#scheduled-queries) そして [API](./api/scheduled-queries.md).
+
+次に、 [!DNL Query Editor]. これらは、 [!DNL Query Service] API:<br/>既に作成、保存、実行されたクエリにのみスケジュールを追加できます。<br/>あなた **できません** パラメータ化クエリにスケジュールを追加します。<br/>スケジュールクエリ **できません** には、匿名ブロックが含まれています。<br/>スケジュールできるのは **1 つ** UI を使用したクエリテンプレート。 クエリテンプレートにスケジュールを追加する場合は、API を使用する必要があります。 API を使用してスケジュールが既に追加されている場合、UI を使用してスケジュールを追加することはできません。
 +++
 
 ### 「セッション制限に達しました」エラーとは何ですか？

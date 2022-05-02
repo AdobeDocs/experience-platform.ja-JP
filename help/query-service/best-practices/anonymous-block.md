@@ -2,9 +2,9 @@
 title: クエリサービスの匿名ブロック
 description: 匿名ブロックは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文で、一連のクエリを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 1%
 Adobe Experience Platformクエリサービスは、匿名ブロックをサポートします。 匿名ブロック機能を使用すると、順に実行される 1 つ以上の SQL 文を連結できます。 また、例外処理のオプションも使用できます。
 
 匿名ブロック機能は、一連の操作やクエリを効率的に実行する方法です。 ブロック内のクエリの連鎖は、テンプレートとして保存し、特定の時間または間隔で実行するようにスケジュール設定できます。 これらのクエリは、データの書き込みと追加を使用して新しいデータセットを作成するために使用でき、通常は依存関係がある場合に使用されます。
+
+>[!IMPORTANT]
+>
+>匿名ブロックを使用したクエリのスケジュールは、現在、 [!DNL Query Service] API 詳しくは、 [API を介したクエリのスケジュールに関する手順を完了します。](../api/scheduled-queries.md).
 
 次の表に、ブロックの主要セクションの分類を示します。実行および例外処理に関する情報です。 セクションは、キーワードによって定義されます `BEGIN`, `END`、および `EXCEPTION`.
 
