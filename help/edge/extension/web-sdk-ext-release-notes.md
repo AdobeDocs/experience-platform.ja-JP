@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54211c6166552ac86382d08da80fde3d9dad1257
+source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1343'
 ht-degree: 46%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 46%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン2.11.2 - 2022 年 5 月 3 日
+
+Adobe Experience Platform Web SDK ライブラリのバージョン2.10.1が含まれています。
 
 ## バージョン2.11.1 - 2022 年 4 月 23 日
 
