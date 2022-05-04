@@ -4,10 +4,10 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 3%
+source-wordcount: '1962'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,9 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL ID によるマッピングされたセグメント]](#mapped-segments-by-identity)
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
 * [[!UICONTROL 宛先数]](#destinations-count)
+* [[!UICONTROL 宛先のステータス]](#destination-status)
+* [[!UICONTROL 宛先プラットフォーム別のアクティブな宛先]](#active-destinations-by-destination-platform)
+* [[!UICONTROL すべての宛先でアクティブ化されたオーディエンス]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL 最も使用されている宛先] {#most-used-destinations}
 
@@ -129,7 +132,7 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ### [!UICONTROL ID によるマッピングされたセグメント] {#mapped-segments-by-identity}
 
-このウィジェットには、 **マップ** セグメント。 リストの順番は、セグメント内に含まれるソース ID の数に応じて、高い順に並べられます。 カウントする宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットのドロップダウンから使用できる宛先 ID は、概要ダッシュボードの上部で選択した宛先アカウントフィルターに応じて変更されます。
+このウィジェットには、 **マップ** セグメント。 リストの順番は、セグメント内に含まれるソース ID の数に応じて、高い順に並べられます。 カウントする宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットのドロップダウンから使用できる宛先 ID は、概要ダッシュボードの上部で選択した宛先アカウントフィルターに応じて変わります。
 
 ![ID による Mapped セグメントウィジェット](../images/destinations/mapped-segments-by-identity.png)
 
@@ -164,6 +167,28 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 合計数の下で、「 」を選択します。 **[!UICONTROL 宛先]** をクリックして、宛先の「参照」タブに移動します。 このページには、これまでに接続を確立したすべての宛先が一覧表示されます。
 
 ![宛先数ウィジェット。](../images/destinations/destinations-count.png)
+
+### [!UICONTROL 宛先のステータス] {#destination-status}
+
+この [!UICONTROL 宛先のステータス] ウィジェットは、有効な宛先の合計数を 1 つの指標として表示し、ドーナツグラフを使用して、有効な宛先と無効な宛先の比例的な違いを示します。
+
+有効または無効の宛先の個々のカウントは、ドーナツグラフの各セクションにカーソルを置くと、ダイアログに表示されます。
+
+![宛先ステータスウィジェット](../images/destinations/destination-status.png)
+
+### [!UICONTROL 宛先プラットフォーム別のアクティブな宛先] {#active-destinations-by-destination-platform}
+
+このウィジェットには、アクティブな宛先プラットフォームのリストと、各宛先プラットフォームのアクティブな宛先の合計数を表示する 2 つの列のテーブルが表示されます。 宛先プラットフォームのリストは、上位から下位に並べられます。
+
+![宛先プラットフォーム別のアクティブな宛先ウィジェット。](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] {#activated-audiences-across-all-destinations}
+
+この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。 この数は、最新のスナップショットに対して正確です。
+
+![すべての宛先ウィジェットでアクティブ化されたオーディエンス。](../images/destinations/activated-audiences-across-all-destinations.png)
+
+選択 **[!UICONTROL オーディエンス]** 宛先に移動するには [!UICONTROL 参照] タブをクリックします。 このページには、有効なすべての宛先のリストと、様々な関連指標が表示されます。 詳しくは、 [詳細情報 [!UICONTROL 参照] タブ](../../destinations/ui/destinations-workspace.md#browse).
 
 ## 次の手順
 

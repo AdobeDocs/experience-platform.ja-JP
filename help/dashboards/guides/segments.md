@@ -4,10 +4,10 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 6%
+source-wordcount: '1232'
+ht-degree: 5%
 
 ---
 
@@ -57,7 +57,7 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 
 セグメントダッシュボードはウィジェットで構成されています。ウィジェットは、選択したセグメントに関する重要な情報を提供する読み取り専用の指標です。
 
-ウィジェットの「最終更新日」の日時は、データの最後のスナップショットが取られた日時を示します。 スナップショットの日時は UTC で指定します。個々のユーザーまたは IMS 組織のタイムゾーンに含まれていません。
+ウィジェットの「最終更新日」の日時は、データの最後のスナップショットが取られた日時を示します。 スナップショットの日時は UTC で提供されます。個々のユーザーまたは IMS 組織のタイムゾーンに含まれていません。
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -68,9 +68,12 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
 * [[!UICONTROL オーディエンスサイズ]](#audience-size)
-* [[!UICONTROL オーディエンスサイズのトレンド]](#audience-size-trend)
 * [[!UICONTROL ID の重複]](#identity-overlap)
 * [[!UICONTROL ID 別プロファイル]](#profiles-by-identity)
+* [[!UICONTROL オーディエンスのアクティベーションの順序]](#audience-activation-order)
+* [[!UICONTROL オーディエンスサイズのトレンド]](#audience-size-trend)
+* [[!UICONTROL オーディエンスサイズの変更の傾向]](#audience-size-change-trend)
+* [[!UICONTROL ID 別のオーディエンスサイズのトレンド]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL オーディエンスサイズ] {#audience-size}
 
@@ -79,18 +82,6 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 フラグメントと結合されたプロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
-
-この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットは、過去 30 日、90 日、12 ヶ月間における、毎日のスナップショットでキャプチャされた、セグメント内のプロファイルの総数に関する情報を提供します。 このウィジェットは、新しいプロファイルがセグメントに適合するか、セグメントから離脱するにつれて、セグメントのサイズが時間の経過と共にどのようにシフトしたかを表示します。
-
-セグメント評価と、プロファイルがセグメントからどのように適合および出るかについて詳しくは、 [セグメント化サービスのドキュメント](../../segmentation/home.md).
-
-![セグメントの概要には、オーディエンスサイズのトレンドウィジェットが表示されます。](../images/segments/audience-size-trend-captions.png)
-
-この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットは [!UICONTROL キャプション] ボタンを使用して、ウィジェットの右上に表示できます。 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。 機械学習モデルは、グラフとセグメントデータを分析することで、主要なトレンドと重要なイベントを説明するキャプションを自動的に生成します。
-
-![オーディエンスサイズトレンドウィジェット用の自動キャプションダイアログ。](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL ID の重複] {#identity-overlap}
 
@@ -108,9 +99,37 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 この **[!UICONTROL ID 別プロファイル]** ウィジェットは、選択したセグメント内のすべての結合済みプロファイルにわたる id の分類を表示します。 1 つのプロファイルが複数の ID を関連付けている可能性があるので、ID 別のプロファイルの合計数は、セグメント内のプロファイルの合計数より多くなる場合があります。 つまり、顧客が複数のチャネルでブランドとやり取りする場合、複数の ID が個々の顧客に関連付けられる可能性があるので、各 ID に表示される値を合計すると、セグメントの合計オーディエンスサイズよりも大きくなる場合があります。
 
+選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。
+
+![ID キャプション別のプロファイルダイアログ。](../images/segments/profiles-by-identity.png)
+
+機械学習モデルは、データの全体的な分布と主要なディメンションを分析することで、データインサイトを自動的に生成します。
+
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL オーディエンスのアクティベーションの順序] {#audience-activation-order}
+
+この [!UICONTROL オーディエンスのアクティベーションの順序] ウィジェットには、 [!UICONTROL 宛先名]、 [!UICONTROL platform]、およびアクティベーション [!UICONTROL 日付] オーディエンスの リストは、最新性に応じて高い順から低い順に並べられ、最大 10 行まで収容できます。
+
+![オーディエンスのアクティベーションの順序ウィジェット。](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
+
+この [!UICONTROL オーディエンスサイズのトレンド] ウィジェットには、次の条件を満たすプロファイルの総数を示す線グラフの図が表示されます： **任意** 特定の期間のセグメント定義。 オーディエンスサイズのトレンドを 30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
+
+![オーディエンスサイズトレンドウィジェット](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL オーディエンスサイズの変更の傾向] {#audience-size-change-trend}
+
+このウィジェットは、最新の日別スナップショット間の特定のセグメントについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 分析の対象として選択したセグメントは、概要ドロップダウンから選択されます。 トレンド分析の期間は、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
+
+![オーディエンスサイズ変更トレンドウィジェット。](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL ID 別のオーディエンスサイズのトレンド] {#audience-size-trend-by-identity}
+
+このウィジェットは、ウィジェットドロップダウンメニューから選択した ID タイプに基づいて、特定のセグメントに関するオーディエンスサイズのトレンドを示します。 分析に使用されるセグメントは、概要ドロップダウンから選択します。 トレンド分析の期間は、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
+
+![ID ウィジェット別のオーディエンスサイズのトレンド。](../images/segments/audience-size-trend-by-identity.png)
 
 ## 次の手順
 
