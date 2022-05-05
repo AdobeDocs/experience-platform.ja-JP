@@ -5,20 +5,20 @@ title: SalesforceMarketing Cloudソースの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して SalesforceMarketing CloudをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 13%
+source-wordcount: '351'
+ht-degree: 28%
 
 ---
 
-# (ベータ) [!DNL Salesforce Marketing Cloud]
+# （ベータ版）[!DNL Salesforce Marketing Cloud]
 
 >[!NOTE]
 >
 >この [!DNL Salesforce Marketing Cloud] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取り込む機能を備えています。 マーケティング自動化プロバイダーのサポートは次のとおりです。 [!DNL Salesforce Marketing Cloud].
 
@@ -33,16 +33,16 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 スコープの関連する権限と動作の一覧を含むスコープの詳細については、次を参照してください [[!DNL Salesforce Marketing Cloud] REST API ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
 
-## IP アドレスの許可リスト
+## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、 [IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
 ## 接続 [!DNL Salesforce Marketing Cloud] API を使用して Platform に接続
 
 以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Salesforce Marketing Cloud] API を使用して Platform に接続するには：
 
 * [フローサービス API を使用して SalesforceMarketing Cloudベース接続を作成する](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [フローサービス API を使用したマーケティング自動化ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/marketing-automation.md)
+* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## 接続 [!DNL Salesforce Marketing Cloud] UI を使用して Platform に接続

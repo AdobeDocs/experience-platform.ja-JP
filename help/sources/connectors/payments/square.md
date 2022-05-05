@@ -3,10 +3,11 @@ keywords: Experience Platform；ホーム；人気の高いトピック；四角
 solution: Experience Platform
 title: 正方形ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Square をAdobe Experience Platformに接続する方法を説明します。
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 51%
+source-wordcount: '218'
+ht-degree: 53%
 
 ---
 
@@ -25,7 +26,7 @@ Experience Platformは、サードパーティの支払い申請からデータ�
 ## 接続 [!DNL Square] API を使用して Platform に接続
 
 * [フローサービス API を使用して Square ベース接続を作成する](../../tutorials/api/create/payments/square.md)
-* [フローサービス API を使用して支払いソースのデータ構造と内容を調べる](../../tutorials/api/explore/payments.md)
+* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用して、支払いソースのデータフローを作成します](../../tutorials/api/collect/payments.md)
 
 ## 接続 [!DNL Square] UI を使用して Platform に接続

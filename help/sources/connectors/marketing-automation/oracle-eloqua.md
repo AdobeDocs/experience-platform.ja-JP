@@ -4,29 +4,30 @@ solution: Experience Platform
 title: OracleEloqua コネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してOracleEloqua をAdobe Experience Platformに接続する方法を説明します。
-source-git-commit: a0c7ba20926d9f55a1f7818374fc6d2b5320820f
+exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 13%
+source-wordcount: '227'
+ht-degree: 59%
 
 ---
 
 # [!DNL Oracle Eloqua] コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込みながら、 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。マーケティング自動化プロバイダーのサポートには、以下が含まれます。 [!DNL Oracle Eloqua].
+Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。マーケティング自動化プロバイダーのサポートには、[!DNL Oracle Eloqua] が含まれます。
 
-## IP アドレスの許可リスト
+## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、 [IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Oracle Eloqua] API またはユーザーインターフェイスを使用して Platform に接続するには、次の手順を実行します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle Eloqua] と Platform を接続する方法について説明します。
 
 ## 接続 [!DNL Oracle Eloqua] API を使用して Platform に接続
 
 * [フローサービス API を使用したOracleEloqua ベース接続の作成](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
-* [フローサービス API を使用したマーケティング自動化ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/marketing-automation.md)
+* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## 接続 [!DNL Oracle Eloqua] UI を使用して Platform に接続

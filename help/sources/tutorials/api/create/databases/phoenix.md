@@ -6,14 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して Phoenix データベースをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 8%
+source-wordcount: '568'
+ht-degree: 43%
 
 ---
 
-# の作成 [!DNL Phoenix] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Phoenix] ベース接続の作成
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ ht-degree: 8%
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Phoenix] の使用 [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL Phoenix]を使用する場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL Phoenix] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| 認証情報 | 説明 |
 | ---------- | ----------- |
 | `host` | の IP アドレスまたはホスト名 [!DNL Phoenix] サーバー。 |
 | `username` | アクセスに使用するユーザー名 [!DNL Phoenix] サーバー。 |
@@ -44,19 +44,19 @@ ht-degree: 8%
 | `port` | TCP ポート [!DNL Phoenix] サーバーは、を使用してクライアント接続をリッスンします。 次に接続する場合： [!DNL Azure] HDInsights、ポートを 443 に指定します。 |
 | `httpPath` | URL の一部 [!DNL Phoenix] サーバー。 使用する場合は/hbasephoenix0 を指定します。 [!DNL Azure] HDInsights クラスター。 |
 | `enableSsl` | ブール値。 サーバーへの接続が SSL を使用して暗号化されるかどうかを指定します。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL Phoenix] 次に該当： `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Phoenix] 次に該当： `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
 の導入について詳しくは、 [この Phoenix ドキュメント](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../../landing/api-guide.md).
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
-## ベース接続を作成する
+## ベース接続の作成
 
-ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Phoenix] 認証資格情報をリクエストパラメーターの一部として使用します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Phoenix] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -66,7 +66,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL Phoenix]:
+次のリクエストは、[!DNL Phoenix] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -109,7 +109,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -120,4 +120,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Phoenix] を使用した接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用したデータベースの調査](../../explore/database-nosql.md).
+このチュートリアルに従って、 [!DNL Phoenix] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+
+* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

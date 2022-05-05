@@ -5,22 +5,22 @@ title: Salesforce ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Salesforce をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 6%
+source-wordcount: '897'
+ht-degree: 17%
 
 ---
 
 # [!DNL Salesforce] コネクタ
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、サードパーティの CRM システムからデータを取り込む機能を提供しています。 CRM プロバイダーのサポートには以下が含まれます。 [!DNL Salesforce].
+Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Salesforce] を含みます。
 
-## IP アドレスの許可リスト
+## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、 [IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
 ## 次のフィールドマッピング [!DNL Salesforce] XDM に
 
@@ -29,10 +29,10 @@ Experience Platformは、サードパーティの CRM システムからデー�
 次の間のフィールドマッピングルールの詳細については、 [!DNL Salesforce] データセットとプラットフォーム：
 
 - [連絡先](../adobe-applications/mapping/salesforce.md#contact)
-- [リード](../adobe-applications/mapping/salesforce.md#lead)
+- [リード数](../adobe-applications/mapping/salesforce.md#lead)
 - [アカウント](../adobe-applications/mapping/salesforce.md#account)
 - [商談](../adobe-applications/mapping/salesforce.md#opportunity)
-- [オポチュニティ連絡先の役割](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
+- [商談連絡先の役割](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [キャンペーン](../adobe-applications/mapping/salesforce.md#campaign)
 - [キャンペーンメンバー](../adobe-applications/mapping/salesforce.md#campaign-member)
 
@@ -87,11 +87,11 @@ Platform デベロッパーコンソールと [!DNL Postman] を設定すると�
 
 ## 接続 [!DNL Salesforce] API を使用して Platform に接続
 
-以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Salesforce] API またはユーザーインターフェイスを使用して Platform に接続するには、次の手順を実行します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] と Platform を接続する方法について説明します。
 
 - [フローサービス API を使用した Salesforce ベース接続の作成](../../tutorials/api/create/crm/salesforce.md)
-- [フローサービス API を使用した CRM ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/crm.md)
-- [フローサービス API を使用して、CRM ソースのデータフローを作成します](../../tutorials/api/collect/crm.md)
+- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
 ## 接続 [!DNL Salesforce] UI を使用して Platform に接続
 

@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Synapse;synapse;Azure synapse分析
+keywords: Experience Platform；ホーム；人気の高いトピック；Synapse;synapse;Azure synapse分析
 solution: Experience Platform
-title: フローサービス API を使用したAzure synapse分析ベース接続の作成
+title: フローサービス API を使用したAzure synapseAnalytics ベース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAzure synapseAnalytics をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 11%
+source-wordcount: '473'
+ht-degree: 56%
 
 ---
 
-# [!DNL Flow Service] API を使用して [!DNL Azure Synapse Analytics] ベース接続を作成する
+# の作成 [!DNL Azure Synapse Analytics] を使用したベース接続 [!DNL Flow Service] API
 
-ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
+ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Synapse Analytics]（以下「[!DNL Synapse]」と呼ばれます）の基本接続を作成する手順を説明します。
+このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Azure Synapse Analytics] （以下「」という。）[!DNL Synapse]」) [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL Synapse] に正常に接続するために知っておく必要がある追加情報を示します。
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Synapse] の使用 [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-[!DNL Flow Service] が [!DNL Synapse] と接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL Synapse] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| 認証情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | [!DNL Synapse] への接続に使用する接続文字列。 [!DNL Synapse] 接続文字列パターンは `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30` です。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Synapse] の接続仕様 ID は次のとおりです。`a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| `connectionString` | 接続に使用する接続文字列 [!DNL Synapse]. この [!DNL Synapse] 接続文字列のパターンは次のとおりです。 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Synapse] 次に該当： `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-接続文字列の取得について詳しくは、[ この Synapse ドキュメント ](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell) を参照してください。
+接続文字列の取得について詳しくは、 [この Synapse ドキュメント](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 
 ### Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../../landing/api-guide.md) を参照してください。
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
-## ベース接続を作成する
+## ベース接続の作成
 
-ベース接続は、ソースと Platform の間の情報を保持します。これには、ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID などが含まれます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベースPOSTID を作成するには、要求パラメーターの一部として [!DNL Synapse] 認証資格情報を指定しながら、`/connections` エンドポイントに接続要求を行います。
+ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Synapse] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -85,12 +85,12 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | [!DNL Synapse] への接続に使用する接続文字列。 [!DNL Synapse] 接続文字列パターンは `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30` です。 |
-| `connectionSpec.id` | [!DNL Synapse] 接続仕様 ID は次のとおりです。`a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | 接続に使用する接続文字列 [!DNL Synapse]. この [!DNL Synapse] 接続文字列のパターンは次のとおりです。 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | [!DNL Synapse] 接続仕様 ID は `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` です。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続の詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、次のチュートリアルでデータベースを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでデータベースを調べるために必要です。
 
 ```json
 {
@@ -101,4 +101,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Synapse] 接続を作成し、接続の一意の ID 値を取得しました。 この ID は、次のチュートリアルでフローサービス API](../../explore/database-nosql.md) を使用してデータベースを調べる方法を学ぶ際に使用できます。[
+このチュートリアルに従って、 [!DNL Synapse] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+
+* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

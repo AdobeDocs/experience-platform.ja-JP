@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
+keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Microsoft Dynamics ソースコネクタの概要
+title: Microsoft Dynamics Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してMicrosoft Dynamics をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 9%
+source-wordcount: '222'
+ht-degree: 68%
 
 ---
 
 # Microsoft Dynamics コネクタ
 
-Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] は、サードパーティの CRM システムからデータを取り込む機能を備えています。CRM プロバイダーのサポートは [!DNL Microsoft Dynamics] です。
+[!DNL Experience Platform] は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Microsoft Dynamics] を含みます。
 
 ## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Microsoft Dynamics] を [!DNL Platform] に接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Microsoft Dynamics] と を接続する方法について説明します。[!DNL Platform]
 
-## API を使用して [!DNL Microsoft Dynamics] を [!DNL Platform] に接続
+## API を使用して [!DNL Microsoft Dynamics] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用したMicrosoft Dynamics ベース接続の作成](../../tutorials/api/create/crm/ms-dynamics.md)
-- [フローサービス API を使用した CRM ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/crm.md)
-- [フローサービス API を使用した CRM ソースのデータフローの作成](../../tutorials/api/collect/crm.md)
+- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
-## UI を使用して [!DNL Microsoft Dynamics] を [!DNL Platform] に接続します
+## UIを使用して [!DNL Microsoft Dynamics] と [!DNL Platform] を接続する
 
 - [UI でのMicrosoft Dynamics ソース接続の作成](../../tutorials/ui/create/crm/dynamics.md)
 - [UI での CRM 接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

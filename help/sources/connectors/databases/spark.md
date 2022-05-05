@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Apache Spark;Apache spark;Azure HDInsights;azure hdinsights
+keywords: Experience Platform；ホーム；人気のトピック；Apache Spark;Apache Spark;Azure HDInsights;azure hdinsights
 solution: Experience Platform
-title: Azure HDInsights ソースコネクタの Apache Spark の概要
+title: Azure HDInsights での Apache Spark ソースコネクタの概要
 topic-legacy: overview
-description: API またはユーザーインターフェイスを使用して Azure HDInsights の Apache Spark をAdobe Experience Platformに接続する方法を説明します。
+description: API またはユーザーインターフェイスを使用して、Azure HDInsights 上の Apache Spark をAdobe Experience Platformに接続する方法を説明します。
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 10%
+source-wordcount: '271'
+ht-degree: 39%
 
 ---
 
-# （ベータ版） [!DNL Azure HDInsights] コネクタの [!DNL Apache Spark]
+# （ベータ版） [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタ
 
 >[!NOTE]
 >
->[!DNL Azure HDInsights] コネクタの [!DNL Apache Spark] はベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ ソースの概要 ](../../home.md#terms-and-conditions)」を参照してください。
+>この [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
-Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、強化を行うことができ、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダのサポートは [!DNL Azure HDInsights] に [!DNL Apache Spark] が含まれます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Apache Spark] オン [!DNL Azure HDInsights].
 
 ## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Azure HDInsights] の [!DNL Apache Spark] を [!DNL Platform] に接続する方法について説明します。
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Apache Spark] オン [!DNL Azure HDInsights] から [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
 
-## API を使用して [!DNL Azure HDInsights] の [!DNL Apache Spark] を [!DNL Platform] に接続
+## 接続 [!DNL Apache Spark] オン [!DNL Azure HDInsights] から [!DNL Platform] API の使用
 
-- [フローサービス API を使用した Azure HDInsights ベース接続での Apache Spark の作成](../../tutorials/api/create/databases/spark.md)
-- [フローサービス API を使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
-- [フローサービス API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
+- [フローサービス API を使用して、Azure HDInsights ベースの接続に Apache Spark を作成する](../../tutorials/api/create/databases/spark.md)
+- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
-## UI を使用して [!DNL Azure HDInsights] の [!DNL Apache Spark] を [!DNL Platform] に接続します
+## 接続 [!DNL Apache Spark] オン [!DNL Azure HDInsights] から [!DNL Platform] UI の使用
 
 - [UI での Azure HDInsights ソース接続での Apache Spark の作成](../../tutorials/ui/create/databases/spark.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 96%
+source-wordcount: '780'
+ht-degree: 95%
 
 ---
 
@@ -167,6 +167,7 @@ ht-degree: 96%
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払いデータの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
+      - [データテーブルの調査](tutorials/api/explore/tabular.md)
    - データを収集 {#collect}
       - [広告データを収集](tutorials/api/collect/advertising.md)
       - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)

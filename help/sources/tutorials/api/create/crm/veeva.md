@@ -6,51 +6,51 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Veeva CRM に接続する方法を説明します。
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 10%
+source-wordcount: '504'
+ht-degree: 71%
 
 ---
 
-# の作成 [!DNL Veeva CRM] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Veeva CRM] ベース接続の作成
 
-ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
+ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Veeva CRM] の使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Veeva CRM] のベース接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Veeva CRM] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して [!DNL Veeva CRM] に正常に接続するために必要な追加情報を示しています。
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL Veeva CRM]を使用する場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL Veeva CRM] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| 認証情報 | 説明 |
 | ---------- | ----------- |
 | `environmentUrl` | の URL [!DNL Veeva CRM] インスタンス。 |
 | `username` | ユーザー名の値 [!DNL Veeva CRM] アカウント |
 | `password` | パスワードの値 [!DNL Veeva CRM] アカウント |
 | `securityToken` | のセキュリティトークン [!DNL Veeva CRM] インスタンス。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL Veeva CRM] 次に該当： `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
 これらの値について詳しくは、 [[!DNL Veeva CRM] 文書](https://developer.veevacrm.com/api/#order-management-rest-api).
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、 [Platform API の概要](../../../../../landing/api-guide.md).
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
-## ベース接続を作成する
+## ベース接続の作成
 
-ベース接続では、ソースと Platform の間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続 ID など）が保持されます。 ベース接続 ID を使用すると、ソース内からファイルを参照および移動し、取り込む特定の項目（データのタイプや形式に関する情報を含む）を識別できます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Veeva CRM] 認証資格情報をリクエストパラメーターの一部として使用します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Veeva CRM] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL Veeva CRM]:
+次のリクエストは、[!DNL Veeva CRM] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -91,18 +91,18 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `name` | お客様の [!DNL Veeva CRM] ベース接続。 この名前を使用して、 [!DNL Veeva CRM] ベース接続。 |
-| `description` | （オプション） [!DNL Veeva CRM] ベース接続。 |
+| `name` | [!DNL Veeva CRM] ベース接続名。この名前を使用して、[!DNL Veeva CRM] ベース接続を検索できます。 |
+| `description` | [!DNL Veeva CRM] ベース接続のオプション説明。 |
 | `auth.specName` | 接続に使用する認証タイプ。 |
 | `auth.params.environmentUrl` | の URL [!DNL Veeva CRM] インスタンス。 |
 | `auth.params.username` | ユーザー名の値 [!DNL Veeva CRM] アカウント |
 | `auth.params.password` | パスワードの値 [!DNL Veeva CRM] アカウント |
 | `auth.params.securityToken` | のセキュリティトークン [!DNL Veeva CRM] インスタンス。 |
-| `connectionSpec.id` | の接続仕様 ID [!DNL Veeva CRM]: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `connectionSpec.id` | [!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
 **応答**
 
-正常な応答は、新しく作成されたベース接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、次の手順でソース接続を作成する際に必要になります。
+リクエストが成功した場合は、一意の ID（`id`）を含め、新しく作成されたベース接続の詳細が返されます。この ID は、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
@@ -113,4 +113,9 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Veeva CRM] を使用したベース接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用した CRM システムの調査](../../explore/crm.md).
+## 次の手順
+
+このチュートリアルに従って、 [!DNL Veeva CRM] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+
+* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を Zoho CRM に接続する方法を説明します。
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: ht
-source-wordcount: '649'
-ht-degree: 100%
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 92%
 
 ---
 
@@ -106,7 +106,7 @@ curl -X POST \
 | `auth.params.accountsUrl` | アカウント URL は、アクセストークンと更新トークンの生成に使用されます。URL は、ドメイン固有である必要があります。 |
 | `auth.params.clientId` | [!DNL Zoho CRM] ユーザーアカウントに対応するクライアント ID。 |
 | `auth.params.clientSecret` | [!DNL Zoho CRM] ユーザーアカウントに対応するクライアントの秘密鍵。 |
-| `auth.params.accessToken` | アクセストークンは、[!DNL Zoho CRM] アカウントへの安全で一時的なアクセスを許可します。 |
+| `auth.params.accessToken` | アクセストークンは、[!DNL Zoho CRM] アカウントへの安全かつ一時的なアクセスを許可します。 |
 | `auth.params.refreshToken` | 更新トークンは、アクセストークンの有効期限が切れた後に、新しいアクセストークンの生成に使用されるトークンです。 |
 | `connectionSpec.id` | [!DNL Zoho CRM] の接続仕様 ID は `929e4450-0237-4ed2-9404-b7e1e0a00309` です。 |
 
@@ -123,4 +123,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Zoho CRM] ベース接続を作成し、接続の一意の ID 値を取得しました。次のチュートリアルでは、この ID を使用した、[Flow Service API を使用した CRM システムの調査](../../explore/crm.md)方法を説明します。
+このチュートリアルに従って、 [!DNL Zoho] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+
+* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)
