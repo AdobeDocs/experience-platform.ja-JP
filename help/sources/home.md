@@ -7,8 +7,8 @@ description: Adobe Experience Platform を使用すると、外部ソースか�
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 100%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理を行うことができます。
 
-Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業をおこなうことができます。
+Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業を行うことができます。
 
 ## ソースのタイプ
 
@@ -36,7 +36,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
-- [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 広告 {#advertising}
 
@@ -46,7 +46,7 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 ### クラウドストレージ {#cloud-storage}
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
@@ -62,9 +62,9 @@ Adobe Experience Platform には、サードパーティの広告システムか
 - [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
 
-### 同意と環境設定 {#consent}
+### 同意および環境設定 {#consent}
 
-Experience Platformは、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を提供しています。 詳しくは、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
