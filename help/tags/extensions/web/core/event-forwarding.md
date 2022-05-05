@@ -3,7 +3,7 @@ title: コアイベント転送拡張機能の概要
 description: Adobe Experience Platform のコアイベント拡張機能について説明します。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 カスタムコードでは、`ruleStash` オブジェクトも使用できます。
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` は、アクションモジュールからすべての結果を収集するオブジェクトです。
 
 各拡張機能には独自の名前空間があります。例えば、拡張機能の名前が `send-beacon` である場合、`send-beacon` アクションの結果はすべて `ruleStash['send-beacon']` 名前空間に保存されます。
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 名前空間は拡張機能ごとに一意で、初めは `undefined` 値が含まれています。
 
