@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの e コマースシステムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->データフローを作成するには、有効な [!DNL Shopify] ベース接続 ID が必要となります。 この ID を保有していない場合は、このチュートリアルの内容を実行する前に、[ [!DNL Shopify] ベースの接続の作成](../create/ecommerce/shopify.md)方法の手順を参照してください。
+>データフローを作成するには、E コマースソースを含む有効なベース接続 ID が既に存在している必要があります。 この ID がない場合、 [ソースの概要](../../../home.md#ecommerce) を参照してください。
 
 ## はじめに
 

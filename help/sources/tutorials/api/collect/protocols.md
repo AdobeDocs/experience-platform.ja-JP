@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->データフローを作成するには、次のプロトコルソースのいずれかとの有効なベース接続 ID が、すでに Platform 上にある必要があります。<ul><li>[汎用 OData](../create/protocols/odata.md)</li><li>[汎用 REST](../create/protocols/generic-rest.md)</li></ul>
+>データフローを作成するには、プロトコルソースを持つ有効なベース接続 ID が既に存在する必要があります。 この ID がない場合、 [ソースの概要](../../../home.md#protocols) を参照してください。
 
 ## はじめに
 

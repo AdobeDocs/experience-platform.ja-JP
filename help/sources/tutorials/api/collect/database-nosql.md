@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->データフローを作成するには、Platform 上の次のいずれかのデータベースソースを持つ有効なベース接続 ID が必要です。<ul><li>[[!DNL Amazon Redshift]](../create/databases/redshift.md)</li><li>[[!DNL Apache Hive on Azure HDInsights]](../create/databases/hive.md)</li><li>[[!DNL Apache Spark on Azure HDInsights]](../create/databases/spark.md)</li><li>[[!DNL Azure Data Explorer]](../create/databases/data-explorer.md)</li><li>[[!DNL Azure Synapse Analytics]](../create/databases/synapse-analytics.md)</li><li>[[!DNL Azure Table Storage]](../create/databases/ats.md)</li><li>[[!DNL Couchbase]](../create/databases/couchbase.md)</li><li>[[!DNL Google BigQuery]](../create/databases/bigquery.md)</li><li>[[!DNL Greenplum]](../create/databases/greenplum.md)</li><li>[[!DNL HP Vertica]](../create/databases/hp-vertica.md)</li><li>[[!DNL IBM DB2]](../create/databases/ibm-db2.md)</li><li>[[!DNL MariaDB]](../create/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../create/databases/sql-server.md)</li><li>[[!DNL MySQL]](../create/databases/mysql.md)</li><li>[[!DNL Oracle]](../create/databases/oracle.md)</li><li>[[!DNL Phoenix]](../create/databases/phoenix.md)</li><li>[[!DNL PostgreSQL]](../create/databases/postgres.md)</li><li>[[!DNL Snowflake]](../create/databases/snowflake.md)</li></ul>
+>データフローを作成するには、データベースソースと共に有効なベース接続 ID が必要です。 この ID がない場合、 [ソースの概要](../../../home.md#database) を参照してください。
 
 ## はじめに
 

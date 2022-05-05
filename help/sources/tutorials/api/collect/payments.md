@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、支払い申請からデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 98%
+source-wordcount: '1325'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->データフローを作成するには、Platform 上で次のいずれかの支払いソースを持つ有効なベース接続 ID が必要です。<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>データフローを作成するには、支払いソースを含む有効なベース接続 ID が既に存在する必要があります。 この ID がない場合、 [ソースの概要](../../../home.md#payments) を参照してください。
 
 ## はじめに
 
