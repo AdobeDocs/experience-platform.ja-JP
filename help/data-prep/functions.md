@@ -5,7 +5,7 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5b40476051ceb20cd4d43f6a49b0ee984c17abc3
+source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
 workflow-type: tm+mt
 source-wordcount: '4164'
 ht-degree: 17%
@@ -136,7 +136,6 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** サイズを探しているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力： **必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力： **必須** キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | サンプルが必要 | サンプルが必要 |
 | to_object | 指定されたフラットなキーと値のペアに基づいてオブジェクトを作成します。 | <ul><li>入力： **必須** キーと値のペアのフラットなリスト。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
@@ -164,6 +163,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | add_to_array | 配列の末尾に要素を追加します。 | <ul><li>配列： **必須** 要素を追加する配列。</li><li>値：配列に追加する要素です。</li></ul> | add_to_array(ARRAY, VALUES&#x200B;) | add_to_array( &#x200B;[&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_arrays | 配列を相互に結合します。 | <ul><li>配列： **必須** 要素を追加する配列。</li><li>値：親配列に追加する配列。</li></ul> | join_arrays(&#x200B;ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 入力のリストを取得し、配列に変換します。 | <ul><li>INCLUDE_NULLS: **必須** 応答配列に NULL を含めるかどうかを示す boolean 値です。</li><li>値： **必須** 配列に変換する要素。</li></ul> | to_array(&#x200B;INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** サイズを探しているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style=&quot;table-layout:auto&quot;}
 
