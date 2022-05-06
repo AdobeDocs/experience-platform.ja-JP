@@ -3,7 +3,7 @@ title: Platform Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -74,7 +74,7 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 次の場合： [!DNL Target] アクティビティが事前に定義されたオーディエンスでカスタムパラメーターまたはユーザープロファイルを使用する場合、SDK を介して正しく配信されません。 カスタムパラメーターやユーザープロファイルを使用する代わりに、XDM を使用する必要があります。 ただし、 [!DNL Platform Web SDK] XDM を必要としない これらのフィールドは、 [!DNL Target] XDM を必要としない UI:
 
 * ターゲットライブラリ
-* 地域
+* ジオ
 * ネットワーク
 * Operating System
 * サイトのページ
@@ -88,7 +88,7 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 
 レスポンストークンは主に、Google、Facebookなどのサードパーティにメタデータを送信するために使用されます。 レスポンストークンは `meta` ～の中のフィールド `propositions` -> `items`. 次に例を示します。
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 レスポンストークンを収集するには、サブスクライブする必要があります。 `alloy.sendEvent` 約束、反復する `propositions`
 詳細を抽出する `items` -> `meta`. 毎 `proposition` には、 `renderAttempted` ブール型フィールドで、 `proposition` がレンダリングされたかどうか。 以下のサンプルを参照してください。
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ alloy("sendEvent",
 
 **`sendEvent`プロファイルデータを使用**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **プロファイル属性をAdobe Targetに送信する方法：**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ alloy("sendEvent", {
 
 **Recommendations属性をAdobe Targetに送信する方法：**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
