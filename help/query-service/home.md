@@ -5,10 +5,10 @@ title: クエリサービスの概要
 topic-legacy: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36710ced69cc951c27869e5491344a5f38935324
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 100%
+source-wordcount: '722'
+ht-degree: 87%
 
 ---
 
@@ -36,7 +36,15 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人
 
 Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのセグメントを評価して、[!DNL Real-time Customer Profile] のデータをより詳細に分析できます。[!DNL Query Service] を使用して、[!DNL Data Lake] 内でこのセグメントデータに対してクエリを実行することにより、この分析を提供できます。セグメント化の詳細については [!DNL Segmentation Service] の概要を、セグメントの分析方法の詳細については [!DNL Profile Query Language]（PQL）ガイドを参照してください。
 
-### Looker BI のユースケース
+## ユースケース
+
+[!DNL Query Service] では、様々な目的に対応する柔軟なデータ処理アプローチを提供しています。 特に、マーケターによるセグメント化の負担を軽減し、実用的なオーディエンスや意味のあるビジネスインサイトを生み出すのに役立ちます。 以下の使用例では、の強みのより詳細な例を示しています。 [!DNL Query Service].
+
+### Adobe Analytics閲覧中断
+
+この [Adobeの使用を中心とした放棄のサンプルを参照 [!DNL Analytics]](./get-started/use-case.md) 特定のアクションにつながるオーディエンスを作成するためのデータ。 [!DNL Query Service] は、セグメント化の複雑なロジックに対応して、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりします。
+
+### Looker BI ダッシュボード
 
 Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。次のビデオでは、[!DNL Query Service] を使用して Business Intelligence（BI）ツールでダッシュボードを構築する意味を紹介します。
 
