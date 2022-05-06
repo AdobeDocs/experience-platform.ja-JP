@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；トレーニングと評価；Data Science Workspace；人気の高いトピック；Sensei Machine Learning API
+keywords: Experience Platform、トレーニングと評価、Data Science Workspace、人気の高いトピック、Sensei Machine Learning API
 solution: Experience Platform
 title: Sensei Machine Learning API を使用したモデルのトレーニングと評価
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 92%
 
 ---
 
-# [!DNL Sensei Machine Learning] API を使用したモデルのトレーニングと評価
+# を使用したモデルのトレーニングと評価 [!DNL Sensei Machine Learning] API
 
 
 このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
@@ -22,12 +22,12 @@ ht-degree: 92%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-[Experience PlatformAPI 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis) に従って、API 呼び出しの開始を行います。
+フォロー： [Experience PlatformAPI 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) をクリックして、API 呼び出しの開始を試みます。
 
 このチュートリアルから、次の値を入手できます。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
-- `{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+- `{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 - `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 - インテリジェントサービスの Docker イメージへのリンク
@@ -40,7 +40,7 @@ API を使用したモデルのトレーニングと評価に必要なエンジ�
 
 >[!NOTE]
 >
->「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UI から使用する場合、次の表に違いを示します。
+>「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UI からアクセスする場合、次の表に違いを示します。
 
 | UI 用語 | API 用語 |
 | --- | --- |
@@ -61,12 +61,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：MLInstance の設定。次に、このチュートリアルで使用する例を示します。
 
@@ -125,7 +125,7 @@ curl -X POST \
 >
 >`{JSON_PAYLOAD}` では、トレーニングとスコアリングに使用するパラメーターを `tasks` 配列で定義します。`{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
 
-応答には、作成された MLInstance を表す `{INSTANCE_ID}` が含まれます。 設定が異なる複数のモデル MLInstance を作成できます。
+応答には `{INSTANCE_ID}` 作成される MLInstance を表す 設定が異なる複数のモデル MLInstance を作成できます。
 
 **応答** 
 
@@ -172,12 +172,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：作成する Experiment オブジェクト。次に、このチュートリアルで使用する例を示します。
@@ -227,12 +227,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：使用するデータセット。次に、このチュートリアルで使用する例を示します。
@@ -314,13 +314,13 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
 `{EXPERIMENT_ID}`：目的の Experiment に対応する ID。これは、Experiment を作成した際のレスポンスに含まれています。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：トレーニング Run を作成するには、本文に次の内容を含める必要があります。
@@ -384,14 +384,14 @@ Experiment Run のステータスを照会するには、`{EXPERIMENT_RUN_ID}` �
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
 `{EXPERIMENT_ID}`：Experiment を表す ID。\
 `{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 **応答** 
@@ -449,12 +449,12 @@ GET 呼び出しを実行すると、次に示すように、`state` にス テ�
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_RUN_ID}`：目的の Experiment Run に対応する ID。これは、Experiment Run を作成した際のレスポンスに含まれています。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
 レスポンスは、作成されたトレーニング済みモデルを表します。
 
@@ -496,12 +496,12 @@ curl -X GET \
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`：Experiment に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
 >[!NOTE]
 >

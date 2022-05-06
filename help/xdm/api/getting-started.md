@@ -5,10 +5,10 @@ title: スキーマレジストリ API の概要
 description: このドキュメントでは、スキーマレジストリ API を呼び出す前に知っておく必要があるコア概念の概要を示します。
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1342'
+ht-degree: 48%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一を分割する仮想サンドボックスを提供します [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立てます。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 XDM では、JSON スキーマの形式を使用して、取り込んだ顧客体験データの構造を記述し、検証します。 したがって、 [公式の JSON スキーマドキュメント](https://json-schema.org/) この基盤となる技術をより深く理解するために
 
@@ -37,7 +37,7 @@ XDM では、JSON スキーマの形式を使用して、取り込んだ顧客�
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 のすべてのリソース [!DNL Experience Platform]( [!DNL Schema Registry]は、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
@@ -70,7 +70,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 ```JSON
 {
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,

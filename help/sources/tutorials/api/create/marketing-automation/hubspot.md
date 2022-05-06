@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；hubspot;Hubspot
 solution: Experience Platform
-title: フローサービス API を使用した HubSpot ベース接続の作成
+title: Create a HubSpot Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを HubSpot に接続する方法を説明します。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 53%
@@ -26,7 +26,7 @@ ht-degree: 53%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HubSpot] の使用 [!DNL Flow Service] API
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL HubSpot] using the [!DNL Flow Service] API.
 
 ### 必要な認証情報の収集
 
@@ -34,10 +34,10 @@ ht-degree: 53%
 
 | 認証情報 | 説明 |
 | ---------- | ----------- |
-| `clientId` | 次に関連付けられたクライアント ID: [!DNL HubSpot] アプリケーション。 |
+| `clientId` | The client ID associated with your [!DNL HubSpot] application. |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL HubSpot] アプリケーション。 |
 | `accessToken` | OAuth 統合を最初に認証したときに取得されたアクセストークン。 |
-| `refreshToken` | OAuth 統合の初回認証時に取得された更新トークン。 |
+| `refreshToken` | The refresh token obtained when initially authenticating your OAuth integration. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL HubSpot] の接続仕様 ID は `cc6a4487-9e91-433e-a3a3-9cf6626c1806` です。 |
 
 導入の詳細については、 [HubSpot ドキュメント](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
@@ -67,7 +67,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -94,12 +94,12 @@ curl -X POST \
 | `auth.params.clientId` | 次に関連付けられたクライアント ID: [!DNL HubSpot] アプリケーション。 |
 | `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL HubSpot] アプリケーション。 |
 | `auth.params.accessToken` | OAuth 統合を最初に認証したときに取得されたアクセストークン。 |
-| `auth.params.refreshToken` | OAuth 統合の初回認証時に取得された更新トークン。 |
+| `auth.params.refreshToken` | The refresh token obtained when initially authenticating your OAuth integration. |
 | `connectionSpec.id` | この [!DNL HubSpot] 接続仕様 ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
 
 ```json
 {
@@ -110,7 +110,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL HubSpot] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルに従って、 [!DNL HubSpot] を使用したベース接続 [!DNL Flow Service] API You can use this base connection ID in the following tutorials:
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)

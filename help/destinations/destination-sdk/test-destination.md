@@ -1,11 +1,11 @@
 ---
-description: Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 このページでは、宛先設定のテスト方法について説明します。
+description: Adobeは、Destination SDKの一環として、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定のテスト方法について説明します。
 title: 宛先設定のテスト
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## 概要 {#overview}
 
-Adobeは、Destination SDKの一部として、宛先の設定とテストを支援する開発者ツールを提供しています。 このページでは、宛先設定のテスト方法について説明します。 メッセージ変換テンプレートの作成方法について詳しくは、 [メッセージ変換テンプレートの作成とテスト](./create-template.md).
+Adobeは、Destination SDKの一環として、宛先の設定とテストを支援する開発者ツールを提供します。 このページでは、宛先設定のテスト方法について説明します。 メッセージ変換テンプレートの作成方法について詳しくは、 [メッセージ変換テンプレートの作成とテスト](./create-template.md).
 
 宛先 **宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証します。**、 *宛先テストツール*. このツールを使用して、REST API エンドポイントにメッセージを送信することで、宛先設定をテストできます。
 
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

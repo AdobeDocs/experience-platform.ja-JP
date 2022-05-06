@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；api ガイド；クエリサービス；クエリサービス；クエリサービスアカウント；アカウント；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；API ガイド；クエリサービス；クエリサービスアカウント；アカウント；
 solution: Experience Platform
 title: アカウント API エンドポイント
 topic-legacy: connection parameters
 description: 永続的なのクエリサービスアカウントを作成できます。
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 391b1943f1c941188b370e62ec86216367aa747f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # アカウントエンドポイント
 
-Adobe Experience Platformクエリサービスでは、外部の SQL クライアントで使用できる、期限が切れない資格情報を作成するためにアカウントが使用されます。 クエリサービス API の `/accounts` エンドポイントを使用すると、クエリサービス統合アカウント（テクニカルアカウントとも呼ばれます）をプログラムで作成、取得、編集および削除できます。
+Adobe Experience Platformクエリサービスでは、外部 SQL クライアントで使用できる、有効期限の切れない資格情報を作成するためにアカウントが使用されます。 以下を使用して、 `/accounts` エンドポイント（クエリサービス API 内）。クエリサービス統合アカウント（テクニカルアカウントとも呼ばれます）を、プログラムによって作成、取得、編集および削除できます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、クエリサービス API の一部です。 続行する前に、[ はじめに ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しを含む API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
+このガイドで使用されるエンドポイントは、クエリサービス API の一部です。 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## アカウントの作成
 
-`/accounts` エンドポイントにPOSTリクエストを送信して、クエリサービス統合アカウントを作成できます。
+クエリサービス統合アカウントを作成するには、 `/accounts` endpoint.
 
 **API 形式**
 
@@ -32,13 +32,13 @@ POST /accounts
 
 **リクエスト**
 
-次のリクエストでは、IMS 組織の新しいクエリサービス統合アカウントが作成されます。
+次のリクエストを実行すると、IMS 組織の新しいクエリサービス統合アカウントが作成されます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
@@ -52,14 +52,14 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `accountName` | **** 必須クエリサービス統合アカウントの名前。 |
-| `assignedToUser` | **** 必須：クエリサービス統合アカウントを作成するAdobe ID。 |
-| `credential` | *（オプション）* クエリサービスの統合に使用する秘密鍵証明書。指定しない場合は、システムによって自動的に資格情報が生成されます。 |
-| `description` | *（オプション）* クエリサービス統合アカウントの説明。 |
+| `accountName` | **必須** クエリサービス統合アカウントの名前。 |
+| `assignedToUser` | **必須** クエリサービス統合アカウントを作成するAdobe ID。 |
+| `credential` | *（オプション）* クエリサービスの統合に使用する資格情報。 指定しなかった場合は、システムによって自動的に証明書が生成されます。 |
+| `description` | *（オプション）* クエリサービス統合アカウントの説明です。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく作成したクエリサービス統合アカウントの詳細を返します。 これらのアカウントの詳細を使用して、クエリサービスを外部クライアントに接続できます。
+正常な応答は、HTTP ステータス 200 と、新しく作成したクエリサービス統合アカウントの詳細を返します。 これらのアカウントの詳細を使用して、クエリサービスを外部クライアントと接続できます。
 
 ```json
 {
@@ -72,12 +72,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `technicalAccountName` | クエリサービス統合アカウントの名前。 |
-| `technicalAccountId` | クエリサービス統合アカウントの ID。 これは `credential` と共に、アカウントのパスワードを構成します。 |
-| `credential` | クエリサービス統合アカウントの資格情報。 これは `technicalAccountId` と共に、アカウントのパスワードを構成します。 |
+| `technicalAccountId` | クエリサービス統合アカウントの ID。 これは、 `credential`は、アカウントのパスワードを作成します。 |
+| `credential` | クエリサービス統合アカウントの資格情報。 これは、 `technicalAccountId`は、アカウントのパスワードを作成します。 |
 
 ## アカウントの更新
 
-`/accounts` エンドポイントにPUTリクエストを実行することで、クエリサービス統合アカウントを更新できます。
+クエリサービス統合アカウントを更新するには、 `/accounts` endpoint.
 
 **API 形式**
 
@@ -95,7 +95,7 @@ POST /accounts/{ACCOUNT_ID}
 curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -133,9 +133,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 }
 ```
 
-## すべてのアカウントのリスト
+## すべてのアカウントをリスト
 
-`/accounts` エンドポイントに対してGETリクエストを実行することで、すべてのクエリサービス統合アカウントのリストを取得できます。
+に対してGETリクエストをおこなうことで、すべてのクエリサービス統合アカウントのリストを取得できます `/accounts` endpoint.
 
 **API 形式**
 
@@ -148,7 +148,7 @@ GET /accounts
 ```shell
 curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -206,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## アカウントの削除
 
-`/accounts` エンドポイントにDELETEリクエストを実行すると、クエリサービス統合アカウントを削除できます。
+クエリサービス統合アカウントを削除するには、 `/accounts` endpoint.
 
 **API 形式**
 
@@ -223,7 +223,7 @@ DELETE /accounts/{ACCOUNT_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

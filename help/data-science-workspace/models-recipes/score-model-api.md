@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API を活用して Experiment と Experiment Run を作成する方法を示します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 87%
@@ -30,12 +30,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
 `{JSON_PAYLOAD}`：送信する実験実行オブジェクト。このチュートリアルで使用する例を次に示します。
@@ -118,12 +118,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
 `{EXPERIMENT_ID}`：ターゲットする実験に対応する ID。これは、実験を作成する際の応答に含まれています。\
@@ -183,12 +183,12 @@ curl -X POST \
 curl -X GET \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`：実行する実験に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合での IMS 組織の資格情報。
+`{ORG_ID}`：固有の Adobe Experience Platform 統合での IMS 組織の資格情報。
 
 特定のテストに対して複数の実験実行があるので、返される応答には実行 ID の配列が含まれます。
 
@@ -226,12 +226,12 @@ curl -X GET \
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`：Experiment に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
 >[!NOTE]
 >

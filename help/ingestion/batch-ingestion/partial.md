@@ -5,7 +5,7 @@ title: 部分バッチ取り込みの概要
 topic-legacy: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 636d6dcbe8eb73b7898fc3794f6b4567956e5618
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 44%
@@ -23,7 +23,7 @@ ht-degree: 44%
 このチュートリアルでは、部分バッチ取得に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [バッチ取得](./overview.md):メソッド [!DNL Platform] CSV や Parquet などのデータファイルからデータを取得して保存します。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
 
 以下の節では、への呼び出しを正しくおこなうために知っておく必要がある追加情報を示します。 [!DNL Platform] API
 
@@ -33,15 +33,15 @@ ht-degree: 44%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >

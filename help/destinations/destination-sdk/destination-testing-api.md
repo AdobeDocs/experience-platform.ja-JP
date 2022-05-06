@@ -1,19 +1,19 @@
 ---
 description: このページでは、「/authoring/testing/destinationInstance/」 API エンドポイントを使用して実行できる、宛先が正しく設定されているかどうかのテストおよび設定した宛先へのデータフローの整合性の検証をおこなうための API 操作の一覧と説明を示します。
-title: 宛先テスト API 操作
+title: 宛先テスト API の操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '646'
-ht-degree: 2%
+ht-degree: 14%
 
 ---
 
-# 宛先テスト API 操作 {#template-api-operations}
+# 宛先テスト API の操作 {#template-api-operations}
 
 >[!IMPORTANT]
 >
->**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**API エンドポイント**：`https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
 このページでは、 `/authoring/testing/destinationInstance/` API エンドポイント：宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証します。 このエンドポイントでサポートされる機能については、 [宛先設定のテスト](./test-destination.md).
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ## 宛先テスト API 操作の概要 {#get-started}
 
-続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+続ける前に「[はじめる前に](./getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 呼び出しにプロファイルを追加せずに、宛先設定をテストする {#test-without-adding-profiles}
 
@@ -58,7 +58,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -187,7 +187,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -321,7 +321,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順
 

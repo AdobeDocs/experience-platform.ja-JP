@@ -5,10 +5,10 @@ title: クラス API エンドポイント
 description: スキーマレジストリ API の/classes エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM クラスをプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1532'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 22%
 
 すべてのエクスペリエンスデータモデル (XDM) スキーマは、クラスに基づいている必要があります。 クラスは、そのクラスに基づくすべてのスキーマに含める必要がある共通プロパティのベース構造と、それらのスキーマで使用する資格のあるスキーマフィールドグループを決定します。 さらに、スキーマのクラスは、スキーマに含まれるデータの動作の側面を決定します。そのうち、次の 2 つのタイプがあります。
 
-* **[!UICONTROL レコード]**:件名の属性に関する情報を提供します。 主体は、組織または個人にすることができます。
-* **[!UICONTROL 時系列]**:レコードの主体によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
+* **[!UICONTROL レコード]**：主体の属性に関する情報を提供します。主体は、組織または個人にすることができます。
+* **[!UICONTROL 時系列]**：レコードの主体によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -140,7 +140,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -225,7 +225,7 @@ curl -X GET \
       "meta:xdmType":"object"
     }
   ],
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "meta:extensible":true,
   "meta:abstract":true,
   "meta:extends":[
@@ -275,7 +275,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Property",
@@ -374,7 +374,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -421,7 +421,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title": "Property",
@@ -513,7 +513,7 @@ curl -X PUT \
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -559,7 +559,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes/_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -619,7 +619,7 @@ curl -X PATCH \
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -657,7 +657,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes/_{TENANT_ID}.classes.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

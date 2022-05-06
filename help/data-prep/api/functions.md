@@ -5,7 +5,7 @@ title: スキーマ API エンドポイント
 topic-legacy: schemas
 description: Adobe Experience Platform API で「/functions」エンドポイントを使用して、マッピング式を検証し、使用可能なマッピングセット関数をリストできます。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 100%
@@ -33,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -68,7 +68,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -133,7 +133,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

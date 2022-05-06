@@ -1,33 +1,33 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題; segment;セグメント、セグメントの作成、セグメンテーション、segment。セグメンテーションサービス。
+keywords: Experience Platform；ホーム；人気の高いトピック；セグメント；セグメント；セグメントの作成；セグメントの作成；セグメントの作成；セグメント化サービス；
 solution: Experience Platform
-title: セグメンテーションサービス API を使用したセグメントの作成
+title: セグメント化サービス API を使用したセグメントの作成
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Adobe エクスペリエンスプラットフォームセグメンテーションサービス API を使用してセグメント定義を開発、テスト、プレビューおよび保存する方法について説明します。
+description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメント定義を開発、テスト、プレビュー、保存する方法について説明します。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 63%
 
 ---
 
-# セグメンテーションサービス API を使用したセグメントの作成
+# セグメント化サービス API を使用してセグメントを作成する
 
-このドキュメントでは、を使用してセグメント定義の開発、テスト、プレビューおよび保存を行う方法についてのチュートリアルを提供して [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md) います。
+このドキュメントでは、 [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
 ユーザーインターフェイスを使用したセグメントの作成方法について詳しくは、[セグメントビルダーガイド](../ui/overview.md)を参照してください。
 
 ## はじめに
 
-このチュートリアルでは、対象となるセグメントを作成するための様々なサービスについて、十分に理解しておく必要があり [!DNL Adobe Experience Platform] ます。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): リアルタイムのカスタマープロファイルデータから参加者を作成することができます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。セグメンテーションを最大限に活用するには、データモデリングのベストプラクティスに従い、データをプロファイルとイベントとして ingested にしておく必要が [ ](../../xdm/schema/best-practices.md) あります。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 
-以下の各セクションでは、api を正常に呼び出すために必要な追加情報を示し [!DNL Platform] ます。
+以下の節では、 [!DNL Platform] API
 
 ### API 呼び出し例の読み取り
 
@@ -35,15 +35,15 @@ ht-degree: 63%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -55,15 +55,15 @@ ht-degree: 63%
 
 ## セグメント定義の作成
 
-セグメント化の最初の手順は、セグメントを定義することです。セグメントは、セグメント定義と呼ばれる構成体で表されます。セグメント定義は、(pql) に記述されているクエリーをカプセル化するオブジェクトです [!DNL Profile Query Language] 。 このオブジェクトは PQL 述語とも呼ばれます。PQL 述語は、指定したすべてのレコードまたはタイムシリーズのデータに関連する条件に基づいて、セグメントのルールを定義 [!DNL Real-time Customer Profile] します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
+セグメント化の最初の手順は、セグメントを定義することです。セグメントは、セグメント定義と呼ばれる構成体で表されます。セグメント定義は、 [!DNL Profile Query Language] (PQL) を参照してください。 このオブジェクトは PQL 述語とも呼ばれます。PQL 述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメントのルールを定義します [!DNL Real-time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
-API のエンドポイントに POST 要求を行うことにより、新しいセグメント定義を作成することができ `/segment/definitions` [!DNL Segmentation] ます。 次の例では、セグメントを正しく定義するために必要な情報など、定義リクエストの形式について説明します。
+新しいセグメント定義を作成するには、 `/segment/definitions` エンドポイント [!DNL Segmentation] API 次の例では、セグメントを正しく定義するために必要な情報など、定義リクエストの形式について説明します。
 
-セグメントの定義方法について詳しくは、『 [ segment definition developer guide 』を参照してください ](../api/segment-definitions.md#create) 。
+セグメントの定義方法について詳しくは、 [セグメント定義開発者ガイド](../api/segment-definitions.md#create).
 
 ## オーディエンスの推定とプレビュー {#estimate-and-preview-an-audience}
 
-セグメントの定義を作成する際に、内の見積とプレビューツールを使用して [!DNL Real-time Customer Profile] 要約レベルの情報を表示し、予想される視聴ユーザーを絞り込むことができます。 推定を通じて、予想されるオーディエンスサイズや信頼区間など、セグメント定義の統計情報が得られます。プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。
+セグメント定義を作成する際に、内の推定ツールとプレビューツールを使用できます [!DNL Real-time Customer Profile] を参照して、期待されるオーディエンスを確実に特定するのに役立つ概要レベルの情報を表示します。 推定を通じて、予想されるオーディエンスサイズや信頼区間など、セグメント定義の統計情報が得られます。プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。
 
 オーディエンスの推定とプレビューにより、望ましい結果が得られるまで PQL 述語をテストし最適化することができます。最終的な PQL 述語は更新したセグメント定義で使用できます。
 
@@ -90,15 +90,15 @@ API のエンドポイントに POST 要求を行うことにより、新しい�
 
 新しいプレビュージョブを作成するには、`/preview` エンドポイントに POST リクエストを送信します。
 
-プレビュージョブを作成する手順の詳細については、プレビューおよび見積もりの終了ガイドを参照して [ ](../api/previews-and-estimates.md#create-preview) ください。
+プレビュージョブの作成に関する詳しい手順については、 [プレビューおよび予測エンドポイントガイド](../api/previews-and-estimates.md#create-preview).
 
 ### 推定またはプレビューの表示
 
 クエリが異なると完了するまでの時間が異なる可能性があるので、推定プロセスとプレビュープロセスは非同期で実行されます。クエリが開始されたら、API 呼び出しを使用して、推定またはプレビューの現在の状態を進行に応じて取得できます（GET リクエストを使用）。
 
-この API を使用して [!DNL Segmentation Service] 、プレビュージョブの現在の状態を ID によって検索できます。 状態が「RESULT_READY」の場合は、結果を表示できます。プレビュージョブの現在の状態を確認するには、プレビュー [ および見積もりの設定ガイドの「プレビュージョブ」セクションを参照してください ](../api/previews-and-estimates.md#get-preview) 。 見積ジョブの現在の状態を確認するには、 [ ](../api/previews-and-estimates.md#get-estimate) プレビューおよび見積もりのエンドポイントガイドの見積ジョブの取得に関するセクションを参照してください。
+の使用 [!DNL Segmentation Service] API では、ID でプレビュージョブの現在の状態を検索できます。 状態が「RESULT_READY」の場合は、結果を表示できます。プレビュージョブの現在の状態を検索するには、 [プレビュージョブセクションの取得](../api/previews-and-estimates.md#get-preview) を参照してください。 見積ジョブの現在の状態を検索するには、 [見積ジョブの取得](../api/previews-and-estimates.md#get-estimate) を参照してください。
 
 
 ## 次の手順
 
-セグメントの定義を開発してテストし、保存した後で、この API を使用して対象ユーザーを構築するためのセグメントジョブを作成でき [!DNL Segmentation Service] ます。 その詳しい手順については、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルを参照してください。
+セグメント定義を開発、テスト、保存したら、セグメントジョブを作成して、 [!DNL Segmentation Service] API その詳しい手順については、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルを参照してください。

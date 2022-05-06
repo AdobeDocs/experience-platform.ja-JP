@@ -2,8 +2,8 @@
 description: このページでは、メッセージ変換テンプレートに基づいて、宛先に対して書き出したデータをレンダリングするために、「/authoring/testing/template/render」API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: テンプレートレンダリング API の操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 100%
 
@@ -72,7 +72,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '
 {
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
     "destinationId": "c2bc84c5-589c-43a1-96ea-becfa941f5be",

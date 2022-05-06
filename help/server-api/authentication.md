@@ -4,7 +4,7 @@ description: Adobe Experience Platform Edge Network Server API の認証を設�
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: データ収集；認証；Adobe Experience Platform Edge Network api;認証
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 19%
@@ -44,7 +44,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Experience Platform のリソースは、特定の仮想サンドボックスに分離することができます。Platform API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
 

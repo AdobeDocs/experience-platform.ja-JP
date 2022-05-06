@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；リストサンドボックス
+keywords: Experience Platform；ホーム；人気の高いトピック；リストサンドボックス
 solution: Experience Platform
 title: サンドボックスタイプ API エンドポイント
 topic-legacy: developer guide
 description: /sandboxTypes エンドポイントに対してGETリクエストを実行することで、組織でサポートされているサンドボックスタイプのリストを取得できます。
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '162'
-ht-degree: 45%
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 45%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
+このガイドで使用する API エンドポイントは、[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## サポートされるサンドボックスタイプのリストの取得
 
@@ -37,7 +37,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxTypes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **応答**

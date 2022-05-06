@@ -1,53 +1,53 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題。Google Cloud storage; google cloud storage; google;Google
+keywords: Experience Platform；ホーム；人気の高いトピック；Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
-title: フローサービス API を使用した Google Cloud ストレージの基礎接続の作成
+title: フローサービス API を使用したGoogle Cloud Storage Base 接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用して、Adobe 体験プラットフォームを Google Cloud ストレージアカウントに接続する方法について説明します。
+description: フローサービス API を使用してAdobe Experience PlatformをGoogleクラウドストレージアカウントに接続する方法を説明します。
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 11%
+ht-degree: 52%
 
 ---
 
-# [!DNL Google Cloud Storage]API を使用したベース接続の作成 [!DNL Flow Service]
+# [!DNL Flow Service] API を使用した [!DNL Google Cloud Storage] ベース接続の作成
 
-ベース接続は、ソースと Adobe エクスペリエンスプラットフォームとの間の認証された接続を表します。
+ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、API を使用するための基本的な接続を作成する手順について説明し [!DNL Google Cloud Storage] [[!DNL Flow Service]  ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ます。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Google Cloud Storage] のベース接続を作成する手順を説明します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース ](../../../../home.md) : [!DNL Experience Platform] 多種多様なソースからのデータの ingested を可能にするとともに、サービスを使用した受信データを構造化、ラベル付け、拡張するための機能を提供し [!DNL Platform] ます。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の各セクションでは、API を使用して Google Cloud ストレージアカウントに問題なく接続するために必要な追加情報を示し [!DNL Flow Service] ます。
+以下の節では、 [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-アカウントを使用して [!DNL Flow Service] 接続するには [!DNL Google Cloud Storage] 、次の接続プロパティの値を入力する必要があります。
+次のために [!DNL Flow Service] を [!DNL Google Cloud Storage] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
-| Chap | 説明 |
+| 認証情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | プラットフォームに対してアカウントを認証するために使用される61文字の英数字のストリング [!DNL Google Cloud Storage] 。 |
-| `secretAccessKey` | プラットフォームへのアカウントの認証に使用される 40-character、base-64 エンコードされたストリング [!DNL Google Cloud Storage] です。 |
+| `accessKeyId` | 61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
+| `secretAccessKey` | ユーザーの認証に使用される 40 文字のベース 64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
 
-これらの値について詳しくは、 [ Google Cloud STORAGE HMAC キーガイドを参照してください ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 。 独自のアクセスキー ID とシークレットアクセスキーを作成する手順については、 [[!DNL Google Cloud Storage]  「概要」を参照してください ](../../../../connectors/cloud-storage/google-cloud-storage.md) 。
+これらの値について詳しくは、 [Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) ガイド。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] 概要](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-### プラットフォーム Api の使用
+### Platform API の使用
 
-プラットフォーム Api の呼び出しを適切に行う方法については、Platform Api の概要を参照してください [ ](../../../../../landing/api-guide.md) 。
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
 ## ベース接続の作成
 
-ベース接続を行うと、ソースとプラットフォームの間の情報が保持されます。ソースの認証の資格情報、接続の現在の状態、および一意の基本接続 ID が含まれています。 ベース接続 ID を使用して、ソース内でファイルを検索してナビゲートし、データの種類とフォーマットに関する情報も含めて、取り込む特定のアイテムを指定することができます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、そのエンドポイントに POST 要求を行います。この場合は、 `/connections` [!DNL Google Cloud Storage] 要求パラメーターの一部として認証資格情報を指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Google Cloud Storage] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 **API 形式**
 
@@ -57,14 +57,14 @@ POST /connections
 
 **リクエスト**
 
-次の要求によって、次のような基本的な接続が作成され [!DNL Google Cloud Storage] ます。
+次のリクエストは、[!DNL Google Cloud Storage] のベース接続を作成します。
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -86,13 +86,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | アカウントに関連付けられたアクセスキー ID [!DNL Google Cloud Storage] 。 |
-| `auth.params.secretAccessKey` | アカウントに関連付けられた秘密のアクセスキー [!DNL Google Cloud Storage] です。 |
-| `connectionSpec.id` | [!DNL Google Cloud Storage]コネクション仕様 ID。`32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | に関連付けられたアクセスキー ID [!DNL Google Cloud Storage] アカウント |
+| `auth.params.secretAccessKey` | に関連付けられた秘密アクセスキー [!DNL Google Cloud Storage] アカウント |
+| `connectionSpec.id` | この [!DNL Google Cloud Storage] 接続仕様 ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **応答**
 
-応答が成功した場合は、一意の識別子 () を含む、新しく作成された接続の詳細が返さ `id` れます。 この ID は、次のチュートリアルでクラウドストレージデータを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
 ```json
 {
@@ -103,4 +103,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、Api を使用して接続を作成し、 [!DNL Google Cloud Storage] 応答本体の一部として一意の ID を取得しました。 この接続 ID を使用し [ て、フローサービス API を使用してクラウドストレージを探すことができ ](../../explore/cloud-storage.md) ます。
+このチュートリアルに従って、 [!DNL Google Cloud Storage] 応答本文の一部として、API と一意の ID を使用した接続を取得しました。 この接続 ID を [フローサービス API を使用したクラウドストレージの調査](../../explore/cloud-storage.md).

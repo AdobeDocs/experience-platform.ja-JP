@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
+keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング取り込み；取り込み；時系列データ；時系列データ；ストリーム；
 solution: Experience Platform
-title: Stream Time-Series Data Using Streaming Ingestion APIs
+title: ストリーミング取得 API を使用した時系列データのストリーミング
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: d6b16f09dc4e97135f42ddadd8e34b0f7db93327
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 66%
 
 ---
 
-# Stream time-series data using Streaming Ingestion APIs
+# ストリーミング取得 API を使用した時系列データのストリーミング
 
-[!DNL Data Ingestion Service]
+このチュートリアルは、Adobe Experience Platformに含まれるストリーミング取得 API の使用を開始する際に役立ちます [!DNL Data Ingestion Service] API
 
 ## はじめに
 
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)[!DNL Platform]
-- [[!DNL Real-time Customer Profile]](../../profile/home.md)
-- [](../../xdm/api/getting-started.md)[!DNL Schema Registry]これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):の使用可能な各エンドポイントをカバーする包括的なガイド [!DNL Schema Registry] API と呼び出し方法を参照してください。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
@@ -39,7 +39,7 @@ ht-degree: 66%
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
@@ -55,7 +55,7 @@ ht-degree: 66%
 
 ## XDM ExperienceEvent クラスベースのスキーマの作成
 
-[!DNL XDM ExperienceEvent]スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データセットを作成するには、まず、 [!DNL XDM ExperienceEvent] クラス。 スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 **API 形式**
 
@@ -70,7 +70,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマ名。この名前は一意である必要があります。 |
 | `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | `union`[[!DNL Real-time Customer Profile]](../../profile/home.md) |
+| `meta:immutableTags` | この例では、 `union` タグは、データを [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **応答** 
 
@@ -143,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
         "https://ns.adobe.com/xdm/context/experienceevent-environment-details",
         "https://ns.adobe.com/xdm/context/experienceevent"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
         "https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/experienceevent",
     "meta:registryMetadata": {
@@ -188,7 +188,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 仕事用電子メールアドレスは必須フィールドになります。つまり、このフィールドなしで送信されたメッセージは検証に失敗し、取得されません。
 
-2. [!DNL Real-time Customer Profile]
+2. [!DNL Real-time Customer Profile] は、仕事用電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
 
 ### リクエスト
 
@@ -197,7 +197,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
     "@id": "ec31c09e0906561861be5a71fcd964e29ebe7923b8eb0d1e",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -248,7 +248,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->**[!DNL Real-time Customer Profile]****[!DNL Identity]**
+>このデータセットは、次に対して有効になります： **[!DNL Real-time Customer Profile]** および **[!DNL Identity]** 適切なタグを設定して、
 
 **API 形式**
 
@@ -263,7 +263,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "{DATASET_NAME}",
@@ -292,13 +292,13 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## ストリーミング接続の作成
 
-After creating your schema and dataset, you will need to create a streaming connection to ingest your data.
+スキーマとデータセットを作成したら、データを取り込むためのストリーミング接続を作成する必要があります。
 
 ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
 ## 時系列データのストリーミング接続への取得
 
-[!DNL Platform]
+データセット、ストリーミング接続、データフローを作成したら、XDM 形式の JSON レコードを取り込んで、内の時系列データを取り込むことができます [!DNL Platform].
 
 **API 形式**
 
@@ -309,17 +309,17 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 新しく作成されたストリーミング接続の `id` 値。 |
-| `syncValidation` | 開発目的のクエリーパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。`true``CONNECTION_ID` |
+| `syncValidation` | 開発目的のクエリーパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。このクエリパラメーターを `true` リクエストのレートは 1 分あたり 60 回に制限されます。 `CONNECTION_ID`. |
 
 **リクエスト**
 
-Ingesting time series data to a streaming connection can be done either with or without the source name.
+時系列データのストリーミング接続への取り込みは、ソース名を使用しておこなうことも、使用しないこともできます。
 
-The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+次のリクエストの例では、ソース名がない時系列データを Platform に取り込みます。 データにソース名がない場合は、ストリーミング接続定義からソース ID が追加されます。
 
-`xdmEntity._id``xdmEntity.timestamp``xdmEntity._id`****
+両方 `xdmEntity._id` および `xdmEntity.timestamp` は、時系列データの必須フィールドです。 この `xdmEntity._id` 属性は、レコード自体の一意の識別子を表します。 **not** レコードを持つ人物またはデバイスの一意の ID。
 
-`xdmEntity._id``xdmEntity.timestamp`Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
+独自の `xdmEntity._id` および `xdmEntity.timestamp` レコードを再取り込みする必要がある場合に一貫性を保つ方法で使用する場合に使用します。 ソースシステムには、これらの値が含まれるのが理想的です。 ID が使用できない場合は、レコード内の他のフィールドの値を連結して一意の値を作成し、再取り込み時にレコードから一貫して再生成できるようにします。
 
 >[!NOTE]
 >
@@ -388,7 +388,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 }'
 ```
 
-If you want to include a source name, the following example shows how you would include it.
+ソース名を含める場合、次の例は、ソース名を含める方法を示しています。
 
 ```json
     "header": {
@@ -396,7 +396,7 @@ If you want to include a source name, the following example shows how you would 
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -406,7 +406,7 @@ If you want to include a source name, the following example shows how you would 
 
 **応答**
 
-[!DNL Profile]
+正常な応答は、HTTP ステータス 200 と、新しくストリーミングされた [!DNL Profile].
 
 ```json
 {
@@ -421,18 +421,18 @@ If you want to include a source name, the following example shows how you would 
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | `inletId` |
+| `{CONNECTION_ID}` | この `inletId` 以前に作成したストリーミング接続の |
 | `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この ID は、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
 | `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
 | `syncValidation.status` | クエリーパラメーター `syncValidation=true` が追加されたので、この値が表示されます。検証が成功した場合、ステータスは `pass` になります。 |
 
 ## 新しく取得した時系列データの取得
 
-[[!DNL Profile Access API]](../../profile/api/entities.md)これは、`/access/entities` エンドポイントへの GET リクエストとオプションのクエリーパラメーターを使用しておこなうことができます。複数のパラメーターを使用でき、アンパサンド（&amp;）で区切ります。
+以前に取り込んだレコードを検証するには、 [[!DNL Profile Access API]](../../profile/api/entities.md) 時系列データを取得します。 これは、`/access/entities` エンドポイントへの GET リクエストとオプションのクエリーパラメーターを使用しておこなうことができます。複数のパラメーターを使用でき、アンパサンド（&amp;）で区切ります。
 
 >[!NOTE]
 >
->`schema.name``relatedSchema.name``_xdm.context.profile`[!DNL Profile Access]****
+>結合ポリシー ID が定義されておらず、 `schema.name` または `relatedSchema.name` が `_xdm.context.profile`, [!DNL Profile Access] 取得 **すべて** 関連する id。
 
 **API 形式**
 
@@ -456,7 +456,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -530,6 +530,6 @@ curl -X GET \
 
 ## 次の手順
 
-[!DNL Platform]異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。[!DNL Platform]詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
+このドキュメントを読むと、レコードデータをに取り込む方法を理解できます。 [!DNL Platform] ストリーミング接続の使用 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、取得したデータの監視は、 [!DNL Platform] UI 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
 
 一般的なストリーミング取得の詳細については、『[ストリーミング取得の概要](../streaming-ingestion/overview.md)』を参照してください。

@@ -2,7 +2,7 @@
 title: Reactor API での応答のフィルタリング
 description: Reactor API でリソースをリストする際に結果をフィルタリングする方法を説明します。
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 100%
@@ -55,7 +55,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR906238a59bbf4262bcedba248f483600/libraries?filter%5Bstate%5D=EQ%20published \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 ## 複数の値でのフィルタリング {#multiple-values}

@@ -2,8 +2,8 @@
 title: Reactor API の概要
 description: 必要なアクセス認証情報を生成する手順など、Reactor API の使用を開始する方法について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 このガイドでは、Adobe Developer Console を使用してこれらの各ヘッダーの値を収集し、Reactor API の呼び出しを開始する方法について説明します。
 
@@ -27,11 +27,11 @@ Reactor API の認証値を生成する前に、開発者が Experience Platform
 
 Adobe Developer Console を使用して、次の 3 つのアクセス認証情報を生成する必要があります。
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-IMS 組織の ID（`{IMS_ORG}`）と API キー（`{API_KEY}`）は、最初に生成された後、今後の API 呼び出しで再利用できます。ただし、アクセストークン（`{ACCESS_TOKEN}`）は一時的なもので、24 時間ごとに再生成する必要があります。
+IMS 組織の ID（`{ORG_ID}`）と API キー（`{API_KEY}`）は、最初に生成された後、今後の API 呼び出しで再利用できます。ただし、アクセストークン（`{ACCESS_TOKEN}`）は一時的なもので、24 時間ごとに再生成する必要があります。
 
 これらの値を生成する手順については、以下で詳しく説明します。
 
@@ -70,13 +70,13 @@ IMS 組織の ID（`{IMS_ORG}`）と API キー（`{API_KEY}`）は、最初に�
 API をプロジェクトに追加すると、プロジェクトページが Experience Platform Reactor API のページに再び表示されます。ここから、「**サービスアカウント（JWT）**」セクションまでスクロールします。このセクションには、Reactor API へのすべての呼び出しで必要な次のアクセス資格情報が表示されます。
 
 * **クライアント ID**：クライアント ID は必須の `{API_KEY}` で、`x-api-key` ヘッダーで指定する必要があります。
-* **組織 ID**：組織 ID は、`x-gw-ims-org-id` ヘッダーで使用する必要がある `{IMS_ORG}` 値です。
+* **組織 ID**：組織 ID は、`x-gw-ims-org-id` ヘッダーで使用する必要がある `{ORG_ID}` 値です。
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### 各セッションの認証
 
-これで、`{API_KEY}` と `{IMS_ORG}` の値が揃ったので、最後の手順として `{ACCESS_TOKEN}` の値を生成します。
+これで、`{API_KEY}` と `{ORG_ID}` の値が揃ったので、最後の手順として `{ACCESS_TOKEN}` の値を生成します。
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルの手順に従うことで、`{IMS_ORG}`、`{API_KEY}`、および `{ACCESS_TOKEN}` に有効な値を指定できます。 これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
+このチュートリアルの手順に従うことで、`{ORG_ID}`、`{API_KEY}`、および `{ACCESS_TOKEN}` に有効な値を指定できます。 これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
 
 まず、[すべての会社をリスト](./endpoints/companies.md#list)する API 呼び出しを試みます。
 

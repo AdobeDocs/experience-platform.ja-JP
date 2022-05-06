@@ -5,7 +5,7 @@ title: ポリシー評価 API エンドポイント
 topic-legacy: developer guide
 description: マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service API を使用して、特定のアクションによってポリシーが違反したかどうかを評価できます。返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 100%
@@ -57,7 +57,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -70,7 +70,7 @@ curl -X GET \
     "timestamp": 1551134846737,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io/marketingActions/custom/sampleMarketingAction",
     "duleLabels": [
         "C1",
@@ -103,7 +103,7 @@ curl -X GET \
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550703519823,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -145,7 +145,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -178,7 +178,7 @@ curl -X POST \
     "timestamp": 1556324277895,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C1",
@@ -324,7 +324,7 @@ curl -X POST \
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1551141210463,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -377,7 +377,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {
@@ -429,7 +429,7 @@ curl -X POST \
     "timestamp": 1556325503038,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C2",
@@ -545,7 +545,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -598,7 +598,7 @@ curl -X POST \
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -615,7 +615,7 @@ curl -X POST \
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -663,7 +663,7 @@ curl -X POST \
             ]
           },
           "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
-          "imsOrg": "{IMS_ORG}",
+          "imsOrg": "{ORG_ID}",
           "created": 1529696681413,
           "createdClient": "{CLIENT_ID}",
           "createdUser": "{USER_ID}",

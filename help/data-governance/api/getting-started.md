@@ -5,8 +5,8 @@ title: Policy Service API の概要
 topic-legacy: developer guide
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 データガバナンスに属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 

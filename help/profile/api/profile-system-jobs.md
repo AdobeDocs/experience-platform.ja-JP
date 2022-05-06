@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
-title: Profile System Jobs API Endpoint
+title: プロファイルシステムジョブ API エンドポイント
 topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformでは、不要になった、またはエラーで追加されたリアルタイム顧客プロファイルデータを削除するために、プロファイルストアからデータセットまたはバッチを削除できます。 これには、プロファイル API を使用してプロファイルシステムジョブを作成するか、削除リクエストを作成する必要があります。
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 67%
@@ -14,7 +14,7 @@ ht-degree: 67%
 
 # プロファイルシステムジョブエンドポイント（削除リクエスト）
 
-Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-time Customer Profile] data store as well. 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、 [!DNL Real-time Customer Profile] を作成する API [!DNL Profile] システムジョブ `delete request`（必要に応じて変更、監視または削除も可能）
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。に取り込まれたデータ [!DNL Platform] が [!DNL Data Lake]に保存され、データセットがプロファイルで有効になっている場合、そのデータは [!DNL Real-time Customer Profile] データストアにも存在します。 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、 [!DNL Real-time Customer Profile] を作成する API [!DNL Profile] システムジョブ `delete request`（必要に応じて変更、監視または削除も可能）
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 削除リクエストは長時間実行される非同期プロセスです。つまり、組織が複数の削除リクエストを一度に実行している場合があります。組織で現在実行中のすべての削除リクエストを表示するには、`/system/jobs` エンドポイントに対して GET リクエストを実行できます。
 
-また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。To use multiple parameters, separate each parameter using an ampersand (`&`).
+また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。複数のパラメーターを使用する場合は、各パラメーターをアンパサンド (`&`) をクリックします。
 
 **API 形式**
 
@@ -51,7 +51,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -68,7 +68,7 @@ curl -X GET \
   "children": [
     {
       "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "batchId": "8d075b5a178e48389126b9289dcfd0ac",
       "jobType": "DELETE",
       "status": "COMPLETED",
@@ -78,7 +78,7 @@ curl -X GET \
     },
     {
       "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "dataSetId": "5c802d3cd83fc114b741c4b5",
       "jobType": "DELETE",
       "status": "PROCESSING",
@@ -96,7 +96,7 @@ curl -X GET \
 | `_page.next` | 結果の追加ページが存在する場合は、 [ルックアップリクエスト](#view-a-specific-delete-request) と `"next"` 値を指定します。 |
 | `jobType` | 作成されるジョブのタイプ。この場合、常にが返されます。 `"DELETE"`. |
 | `status` | 削除リクエストのステータス。指定できる値は次のとおりです。 `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `metrics` | 処理されたレコード数 (`"recordsProcessed"`) と、リクエストが処理された秒数、またはリクエストが完了するまでに要した時間 (`"timeTakenInSec"`) をクリックします。 |
 
 ## 削除リクエストの作成 {#create-a-delete-request}
 
@@ -120,7 +120,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "dataSetId": "5c802d3cd83fc114b741c4b5"
@@ -138,7 +138,7 @@ curl -X POST \
 ```json
 {
     "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "dataSetId": "5c802d3cd83fc114b741c4b5",
     "jobType": "DELETE",
     "status": "NEW",
@@ -176,7 +176,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
@@ -194,7 +194,7 @@ curl -X POST \
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "NEW",
@@ -245,7 +245,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -256,7 +256,7 @@ curl -X GET \
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "COMPLETED",
@@ -270,9 +270,9 @@ curl -X GET \
 |---|---|
 | `jobType` | 作成中のジョブのタイプ。この場合、常に返されます `"DELETE"`. |
 | `status` | 削除リクエストのステータス。可能な値： `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `metrics` | 処理されたレコード数 (`"recordsProcessed"`) と、リクエストが処理された秒数、またはリクエストが完了するまでに要した時間 (`"timeTakenInSec"`) をクリックします。 |
 
-Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
+削除リクエストのステータスが `"COMPLETED"` データアクセス API を使用して削除されたデータにアクセスしようとすると、データが削除されたことを確認できます。 データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
 
 ## 削除リクエストの削除
 
@@ -295,7 +295,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

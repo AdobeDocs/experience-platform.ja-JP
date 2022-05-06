@@ -3,28 +3,28 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: 計算済み属性フィールドの設定方法
 topic-legacy: guide
 type: Documentation
-description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリ API を使用して、計算済み属性フィールドを保持するスキーマとカスタムフィールドグループを定義できます。
+description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリ API を使用して作成し、計算済み属性フィールドを保持するスキーマとカスタムフィールドグループを定義できます。
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 16%
 
 ---
 
-# （アルファ）スキーマレジストリ API を使用した計算済み属性フィールドの設定
+# （アルファ）スキーマレジストリ API を使用して計算済み属性フィールドを設定する
 
 >[!IMPORTANT]
 >
 >計算済み属性機能は現在アルファ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
-計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリ API を使用して、計算済み属性フィールドを保持するスキーマとカスタムスキーマフィールドグループを定義できます。 「計算済み属性」スキーマとフィールドグループを個別に作成し、計算済み属性として使用する属性を組織で追加することをお勧めします。 これにより、計算済み属性スキーマを、データ取得に使用されている他のスキーマから明確に分離できます。
+計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリ API を使用して作成し、計算済み属性フィールドを保持するスキーマとカスタムスキーマフィールドグループを定義できます。 別の「計算済み属性」スキーマとフィールドグループを作成し、組織が計算済み属性として使用する属性を追加できることをお勧めします。 これにより、計算済み属性スキーマを、データ取得に使用されている他のスキーマから明確に分離できます。
 
-このドキュメントのワークフローでは、スキーマレジストリ API を使用して、カスタムフィールドグループを参照する、プロファイルが有効な「計算済み属性」スキーマを作成する方法について説明します。 このドキュメントには、計算済み属性に固有のサンプルコードが含まれています。API を使用したフィールドグループとスキーマの定義の詳細については、『[ スキーマレジストリ API ガイド ](../../xdm/api/overview.md)』を参照してください。
+このドキュメントのワークフローでは、スキーマレジストリ API を使用して、カスタムフィールドグループを参照する、プロファイルが有効な「計算済み属性」スキーマを作成する方法について説明します。 このドキュメントには、計算済み属性に固有のサンプルコードが含まれていますが、 [スキーマレジストリ API ガイド](../../xdm/api/overview.md) を参照してください。
 
 ## 計算済み属性フィールドグループの作成
 
-スキーマレジストリ API を使用してフィールドグループを作成するには、まず `/tenant/fieldgroups` エンドポイントにPOSTリクエストを送信し、フィールドグループの詳細をリクエスト本文に指定します。 スキーマレジストリ API を使用したフィールドグループの操作について詳しくは、『[ フィールドグループ API エンドポイントガイド ](../../xdm/api/field-groups.md)』を参照してください。
+スキーマレジストリ API を使用してフィールドグループを作成するには、まず `/tenant/fieldgroups` エンドポイントを作成し、リクエスト本文にフィールドグループの詳細を指定します。 スキーマレジストリ API を使用したフィールドグループの操作に関する詳細は、 [フィールドグループ API エンドポイントガイド](../../xdm/api/field-groups.md).
 
 **API 形式**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、`version` を含む新しく作成されたフィールドグループの詳細が含まれています。 これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
+リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に、新しく作成されたフィールドグループの詳細 ( `$id`, `meta:altIt`、および `version`. これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
 
 ```json
 {
@@ -120,7 +120,7 @@ curl -X POST \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ curl -X POST \
 
 ## 追加の計算済み属性でフィールドグループを更新
 
-計算済み属性がさらに必要になったら、`/tenant/fieldgroups` エンドポイントにPUTリクエストを実行して、計算済み属性フィールドグループを追加の属性で更新できます。 このリクエストでは、パスで作成したフィールドグループの一意の ID と、本文に追加するすべての新しいフィールドを含める必要があります。
+追加の計算済み属性が必要な場合は、に対してPUTリクエストを実行することで、計算済み属性フィールドグループを追加の属性で更新できます `/tenant/fieldgroups` endpoint. このリクエストでは、パスで作成したフィールドグループの一意の ID と、本文に追加するすべての新しいフィールドを含める必要があります。
 
-スキーマレジストリ API を使用したフィールドグループの更新について詳しくは、『[ フィールドグループ API エンドポイントガイド ](../../xdm/api/field-groups.md)』を参照してください。
+スキーマレジストリ API を使用したフィールドグループの更新について詳しくは、 [フィールドグループ API エンドポイントガイド](../../xdm/api/field-groups.md).
 
 **API 形式**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **リクエスト**
 
-このリクエストは、`purchaseSummary` 情報に関連する新しいフィールドを追加します。
+このリクエストでは、 `purchaseSummary` 情報。
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ curl -X PUT \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ curl -X PUT \
 
 ## プロファイル対応スキーマの作成
 
-スキーマレジストリ API を使用してスキーマを作成するには、まず `/tenant/schemas` エンドポイントにPOSTリクエストを送信し、リクエスト本文にスキーマの詳細を指定します。 このスキーマは、[!DNL Profile] に対しても有効で、スキーマクラスの和集合スキーマの一部として表示される必要があります。
+スキーマレジストリ API を使用してスキーマを作成するには、まず `/tenant/schemas` エンドポイントを作成し、リクエスト本文にスキーマの詳細を指定します。 スキーマを有効にする必要もあります。 [!DNL Profile] とは、スキーマクラスの和集合スキーマの一部として表示されます。
 
-[!DNL Profile] が有効なスキーマと和集合スキーマの詳細については、[[!DNL Schema Registry] API ガイド ](../../xdm/api/overview.md) および [ スキーマ構成の基本に関するドキュメント ](../../xdm/schema/composition.md) を参照してください。
+詳しくは、 [!DNL Profile] — 有効なスキーマと和集合スキーマです。確認してください [[!DNL Schema Registry] API ガイド](../../xdm/api/overview.md) そして [スキーマ構成の基本ドキュメント](../../xdm/schema/composition.md).
 
 **API 形式**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **リクエスト**
 
-次のリクエストは、このドキュメントで先ほど作成した `computedAttributesFieldGroup` を（一意の ID を使用して）参照し、（`meta:immutableTags` 配列を使用して）プロファイルの和集合スキーマに対して有効にする新しいスキーマを作成します。 スキーマレジストリ API を使用してスキーマを作成する方法について詳しくは、『[ スキーマ API エンドポイントガイド ](../../xdm/api/schemas.md)』を参照してください。
+follow リクエストは、 `computedAttributesFieldGroup` は、このドキュメントで既に作成されており（一意の ID を使用）、( `meta:immutableTags` 配列 ) を参照してください。 スキーマレジストリ API を使用してスキーマを作成する方法について詳しくは、 [schemas API エンドポイントガイド](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -400,7 +400,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ curl -X POST \
 
 ## 次の手順
 
-これで、計算済み属性の格納先となるスキーマおよびフィールドグループを作成しました。`/computedattributes` API エンドポイントを使用して、計算済み属性を作成できます。 API で計算済み属性を作成する詳細な手順については、『[ 計算済み属性 API エンドポイントガイド ](ca-api.md)』の手順に従ってください。
+計算済み属性の保存先となるスキーマおよびフィールドグループを作成したので、 `/computedattributes` API エンドポイント。 API で計算済み属性を作成する詳細な手順については、 [計算済み属性 API エンドポイントガイド](ca-api.md).

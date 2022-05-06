@@ -1,19 +1,19 @@
 ---
-title: Add Suggested Values to a Field
-description: Learn how to add suggested values to a string field in the Schema Registry API.
+title: フィールドへの推奨値の追加
+description: スキーマレジストリ API の文字列フィールドに推奨値を追加する方法を説明します。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '542'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Add suggested values to a field
+# フィールドに推奨値を追加する
 
-In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values. However, you can also also define a set of suggested values for a string field without enforcing them as constraints.
+エクスペリエンスデータモデル (XDM) では、列挙フィールドは、値の事前定義サブセットに制限される文字列フィールドを表します。 列挙フィールドでは、取り込んだデータが一連の受け入れられた値に準拠していることを確認する検証を提供できます。 ただし、制約として強制せずに、文字列フィールドの推奨値のセットを定義することもできます。
 
-[](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)`enum``meta:enum`
+内 [スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)列挙フィールドの制約された値は、 `enum` 配列、 `meta:enum` オブジェクトは、これらの値にわかりやすい表示名を提供します。
 
 ```json
 "exampleStringField": {
@@ -32,9 +32,9 @@ In Experience Data Model (XDM), an enum field represents a string field that is 
 }
 ```
 
-`meta:enum``enum`
+列挙フィールドの場合、スキーマレジストリでは許可されていません `meta:enum` 以下に規定される値を超えて拡張される `enum`の代わりに、これらの制約の外部で文字列値を取り込もうとしても検証に合格しません。
 
-`enum``meta:enum`
+または、 `enum` 配列で、 `meta:enum` オブジェクトは、推奨値を示します。
 
 ```json
 "exampleStringField": {
@@ -48,31 +48,31 @@ In Experience Data Model (XDM), an enum field represents a string field that is 
 }
 ```
 
-`enum``meta:enum`This tutorial covers how to add suggested values to standard and custom string fields in the Schema Registry API.
+文字列には `enum` 制約を定義する配列 `meta:enum` プロパティを拡張して、新しい値を含めることができます。 このチュートリアルでは、スキーマレジストリ API で標準およびカスタム文字列フィールドに推奨値を追加する方法について説明します。
 
 ## 前提条件
 
-This guide assumes you are familiar with the elements of schema composition in XDM and how to use the Schema Registry API to create and edit XDM resources. Please refer to the following documentation if you require an introduction:
+このガイドは、XDM のスキーマ構成の要素と、スキーマレジストリ API を使用して XDM リソースを作成および編集する方法について詳しいことを前提としています。 紹介が必要な場合は、次のドキュメントを参照してください。
 
 * [スキーマ構成の基本](../schema/composition.md)
-* [Schema Registry API guide](../api/overview.md)
+* [Schema Registry API ガイド](../api/overview.md)
 
-## Add suggested values to a standard field
+## 標準フィールドに推奨値を追加する
 
-`meta:enum`[](../api/descriptors.md#friendly-name)
+を拡張するには、以下を実行します。 `meta:enum` 標準の文字列フィールドの [わかりやすい名前記述子](../api/descriptors.md#friendly-name) 特定のスキーマの問題になっているフィールドに対して。
 
 >[!NOTE]
 >
->Suggested values for string fields can only be added at the schema level. `meta:enum`
+>文字列フィールドの推奨値は、スキーマレベルでのみ追加できます。 つまり、 `meta:enum` あるスキーマ内の標準フィールドのは、同じ標準フィールドを使用する他のスキーマには影響しません。
 
-`eventType`[](../classes/experienceevent.md)`sourceSchema`
+次のリクエストでは、標準の `eventType` フィールド ( [XDM ExperienceEvent クラス](../classes/experienceevent.md)) で指定されたスキーマの `sourceSchema`:
 
 ```curl
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -96,7 +96,7 @@ curl -X POST \
       }'
 ```
 
-After applying the descriptor, the Schema Registry responds with the following when retrieving the schema (response truncated for space):
+記述子を適用した後、スキーマを取得する際に、スキーマレジストリは次の応答を返します（領域を節約するために切り捨てられた応答）。
 
 ```json
 {
@@ -118,7 +118,7 @@ After applying the descriptor, the Schema Registry responds with the following w
 
 >[!NOTE]
 >
->`meta:enum`
+>標準フィールドに、既に `meta:enum`の場合、記述子の新しい値は既存のフィールドを上書きせず、代わりにに追加されます。
 >
 >
 ```json
@@ -135,27 +135,27 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-## Add suggested values to a custom field
+## カスタムフィールドに推奨値を追加する
 
-`meta:enum`
+を拡張するには、以下を実行します。 `meta:enum` カスタムフィールドの場合は、PATCHリクエストを通じて、フィールドの親クラス、フィールドグループ、またはデータ型を更新できます。
 
 >[!WARNING]
 >
->`meta:enum`If you do not want changes to propagate across schemas, consider creating a new custom resource instead:
+>標準フィールドとは異なり、 `meta:enum` カスタムフィールドのは、そのフィールドを使用する他のすべてのスキーマに影響します。 変更をスキーマ間で反映しない場合は、代わりに新しいカスタムリソースを作成することを検討してください。
 >
->* [](../api/classes.md#create)
->* [](../api/field-groups.md#create)
->* [](../api/data-types.md#create)
+>* [カスタムクラスの作成](../api/classes.md#create)
+>* [カスタムフィールドグループの作成](../api/field-groups.md#create)
+>* [カスタムデータタイプの作成](../api/data-types.md#create)
 
 
-`meta:enum`
+次のリクエストは、 `meta:enum` の値は、カスタムデータ型で提供される「ロイヤルティレベル」フィールドです。
 
 ```curl
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes/_{TENANT_ID}.datatypes.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -173,7 +173,7 @@ curl -X PATCH \
       ]'
 ```
 
-After applying the change, the Schema Registry responds with the following when retrieving the schema (response truncated for space):
+変更を適用した後、スキーマの取得時に、スキーマレジストリは次の応答を返します（スペースを節約するために切り捨てられた応答）。
 
 ```json
 {
@@ -198,4 +198,4 @@ After applying the change, the Schema Registry responds with the following when 
 
 ## 次の手順
 
-This guide covered how to add suggested values to string fields in the Schema Registry API. [](./custom-fields-api.md)
+このガイドでは、スキーマレジストリ API で文字列フィールドに推奨値を追加する方法について説明しました。 詳しくは、 [API でのカスタムフィールドの定義](./custom-fields-api.md) 様々なフィールドタイプの作成方法の詳細については、を参照してください。

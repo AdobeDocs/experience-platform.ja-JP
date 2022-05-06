@@ -2,7 +2,7 @@
 description: このページでは、Destination SDK を使用して作成した宛先のレビュー用に提出する必要があるすべての情報が提供されます。
 title: Destination SDK で作成した宛先のレビュー用に送信する
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 87%
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[

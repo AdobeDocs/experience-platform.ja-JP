@@ -2,7 +2,7 @@
 title: コールバックエンドポイント
 description: Reactor API で /callbacks エンドポイントを呼び出す方法を説明します。
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 100%
@@ -64,7 +64,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -139,7 +139,7 @@ curl -X GET \
   https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -203,7 +203,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -285,7 +285,7 @@ curl -X PUT \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -369,7 +369,7 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **応答**

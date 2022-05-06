@@ -4,7 +4,7 @@ description: Adobe Experience Platform で顧客の保存した個人データ�
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 100%
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -60,13 +60,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/hygiene/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "companyContexts": [
           {
             "namespace": "imsOrgID",
-            "value": "{IMS_ORG}"
+            "value": "{ORG_ID}"
           }
         ],
         "users": [

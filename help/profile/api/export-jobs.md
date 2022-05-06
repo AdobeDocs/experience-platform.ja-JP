@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合することで、Adobe Experience Platform内の個々の顧客を一目で把握できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 66%
@@ -58,7 +58,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Profile Data Export",
@@ -104,7 +104,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields": "identities.id,personalEmail.address",
@@ -174,7 +174,7 @@ curl -X POST \
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -204,7 +204,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -254,7 +254,7 @@ curl -X GET \
           "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
       },
       "updateTime": 1538616233239,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538615973895
     },
     {
@@ -309,7 +309,7 @@ curl -X GET \
           "batchId": ""
       },
       "updateTime": 1538573922551,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538573416687
     }
   ],
@@ -346,7 +346,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -393,7 +393,7 @@ curl -X GET \
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -423,7 +423,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 5829b50a81741cc4883dfa8f4d7d7891b791caf5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1223'
-ht-degree: 11%
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 11%
 
 ## はじめに
 
-このガイドでは、 Experience Platform の次のコンポーネントに関する十分な知識が必要です。
+このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Adobe Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、 [!DNL Data Landing Zone] を使用したソース接続 [!DNL Flow Service] API
 
@@ -53,7 +53,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/connectors/landingzone?type=user_drop_zone' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' 
 ```
@@ -93,7 +93,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
 ```
@@ -142,7 +142,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
 ```
@@ -172,7 +172,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONNECTION_SPEC_ID}` | に対応する接続仕様 ID [!DNL Data Landing Zone]. この修正済み ID は次のとおりです。 `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
 
 **リクエスト**
 
@@ -181,7 +181,7 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -227,7 +227,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | に対応する接続仕様 ID [!DNL Data Landing Zone]. この修正済み ID は次のとおりです。 `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
 | `{OBJECT_TYPE}` | アクセスするオブジェクトのタイプ。 | `file` |
 | `{OBJECT}` | アクセスするオブジェクトのパスと名前。 | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | ファイルのタイプ。 | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -240,7 +240,7 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/data8.csv&fileType=delimited&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -341,7 +341,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/garageWeek/file1&preview=true&determineProperties=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -444,14 +444,14 @@ curl -X GET \
 | --- | --- |
 | `properties.fileType` | クエリされたファイルの対応するファイルタイプ。 次のファイルタイプがサポートされています。 `delimited`, `json`、および `parquet`. |
 | `properties.compressionType` | 問い合わせたファイルに使用される、対応する圧縮タイプ。 サポートされている圧縮タイプは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字。 任意の 1 文字の値は、列の区切り文字として使用できます。 デフォルト値はコンマです。 `(,)`. |
+| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字。 あらゆる単一の文字の値を、列の区切り文字として使用できます。デフォルト値はコンマです。 `(,)`. |
 
 
 ## ソース接続の作成
 
-ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。 ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと IMS 組織に固有です。
+ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと IMS 組織に固有です。
 
-ソース接続を作成するには、 `/sourceConnections` エンドポイント [!DNL Flow Service] API
+ソース接続を作成するには、[!DNL Flow Service] API の `/sourceConnections` エンドポイントに POST リクエストを実行します。
 
 
 **API 形式**
@@ -467,7 +467,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -490,11 +490,11 @@ curl -X POST \
 | `name` | お客様の [!DNL Data Landing Zone] ソース接続。 |
 | `data.format` | Platform に取り込むデータの形式。 |
 | `params.path` | Platform に取り込むファイルへのパス。 |
-| `connectionSpec.id` | に対応する接続仕様 ID [!DNL Data Landing Zone]. この修正済み ID は次のとおりです。 `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `connectionSpec.id` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
 
 **応答**
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、次のチュートリアルでデータフローを作成する際に必要です。
+リクエストが成功した場合は、新しく作成されたソース接続の一意の ID（`id`）が返されます。この ID は、次のチュートリアルでデータフローを作成する際に必要です。
 
 ```json
 {

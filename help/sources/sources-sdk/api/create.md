@@ -7,8 +7,8 @@ description: 次のドキュメントでは、Flow Service API を使用して�
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: d84af88bc1bfe2bfb1bbf2bf36cdb43894975288
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 100%
 
@@ -455,7 +455,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -636,7 +636,7 @@ curl -X POST \
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "MailChimp Members source",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

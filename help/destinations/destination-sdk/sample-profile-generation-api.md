@@ -1,21 +1,21 @@
 ---
 description: このページでは、「/authoring/sample-profiles」 API エンドポイントを使用して、宛先テストで使用するサンプルプロファイルを生成するために実行できるすべての API 操作について説明します。
-title: プロファイル生成 API 操作の例
+title: サンプルプロファイル生成 API の操作
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
-# プロファイル生成 API 操作の例 {#sample-profile-api-operations}
+# サンプルプロファイル生成 API の操作 {#sample-profile-api-operations}
 
 >[!IMPORTANT]
 >
->**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+>**API エンドポイント**：`https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-このページでは、 `/authoring/sample-profiles` API エンドポイント。
+このページでは、`/authoring/sample-profiles` API エンドポイントを使用して実行できるすべての API の操作について説明します。
 
 ## 様々な API に対して異なるプロファイルタイプを生成する {#different-profiles-different-apis}
 
@@ -32,7 +32,7 @@ Adobeの XDM ソーススキーマ（宛先のテスト時に使用）または�
 
 ## サンプルプロファイル生成 API 操作の概要 {#get-started}
 
-続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+続ける前に「[はじめる前に](./getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## 宛先のテスト時に使用するソーススキーマに基づいてサンプルプロファイルを生成します {#generate-sample-profiles-source-schema}
 
@@ -60,7 +60,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | クエリパラメータ | 説明 |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する際に基づく宛先インスタンスの ID。 |
-| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
+| `{COUNT}` | *オプション*。生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,7 +75,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -198,7 +198,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 >[!TIP]
 >
->* ここで使用する必要がある宛先 ID は、です。 `instanceId` を使用して作成された、宛先の設定に対応する `/destinations` endpoint. 詳しくは、 [宛先設定 API リファレンス](./destination-configuration-api.md#retrieve-list).
+>* ここで使用する必要がある宛先 ID は `instanceId` で、`/destinations` エンドポイントを使用して作成された、宛先の設定に対応します。詳しくは、 [宛先設定 API リファレンス](./destination-configuration-api.md#retrieve-list).
 
 
 **API 形式**
@@ -211,7 +211,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | クエリパラメータ | 説明 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | サンプルプロファイルを生成する場所に基づく宛先設定の ID。 |
-| `{COUNT}` | *オプション*. 生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
+| `{COUNT}` | *オプション*。生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -225,7 +225,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -375,7 +375,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順
 

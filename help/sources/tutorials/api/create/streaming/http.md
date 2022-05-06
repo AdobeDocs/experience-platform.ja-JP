@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 31%
+ht-degree: 54%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 31%
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
@@ -37,15 +37,15 @@ ht-degree: 31%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name： `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -53,9 +53,9 @@ ht-degree: 31%
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
-- Content-Type： application/json
+- Content-Type：application/json
 
-## ベース接続を作成する
+## ベース接続の作成
 
 ベース接続ではソースを指定します。また、ベース接続には、フローをストリーミング取得 API と互換性のあるものにするために必要な情報が含まれています。 ベース接続を作成する場合、非認証接続と認証済み接続を作成するオプションがあります。
 
@@ -77,7 +77,7 @@ POST /flowservice/connections
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -139,7 +139,7 @@ POST /flowservice/connections
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -205,7 +205,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -267,7 +267,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Sample source connection",
@@ -293,23 +293,23 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成し、ソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-ターゲット XDM スキーマは、 [スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、 [API を使用したスキーマの作成](../../../../../xdm/api/schemas.md).
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-ターゲットデータセットは、 [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)：ペイロード内にターゲットスキーマの ID を指定します。
+[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
 
 ## ターゲット接続の作成 {#target}
 
-ターゲット接続は、取り込まれたデータが格納される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を提供する必要があります。この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。 これらの識別子を使用すると、 [!DNL Flow Service] 受信ソースデータを格納するデータセットを指定する API。
+これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
 
 **API 形式**
 
@@ -325,7 +325,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Sample target connection",
@@ -358,7 +358,7 @@ curl -X POST \
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
 
-マッピングセットを作成するには、 `mappingSets` エンドポイント [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) （ターゲット XDM スキーマを提供する際） `$id` 作成するマッピングセットの詳細。
+マッピングセットを作成するには、[[!DNL Data Prep]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを実行し、その際にターゲット XDM スキーマ `$id` および作成するマッピングセットの詳細を指定します。
 
 **API 形式**
 
@@ -373,7 +373,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -399,11 +399,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `xdmSchema` | この `$id` ターゲット XDM スキーマの。 |
+| `xdmSchema` | ターゲット XDM スキーマの `$id`。 |
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、後の手順でデータフローを作成する際に必要になります。
+応答が成功すると、一意の ID（`id`）など、新しく作成されたマッピングの詳細が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -434,7 +434,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "HTTP API streaming dataflow",
@@ -463,10 +463,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | のフロー仕様 ID [!DNL HTTP API]. この ID は次のとおりです。 `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
-| `sourceConnectionIds` | この [ソース接続 ID](#source) 前の手順で取得した。 |
-| `targetConnectionIds` | この [ターゲット接続 ID](#target) 前の手順で取得した。 |
-| `transformations.params.mappingId` | この [マッピング ID](#mapping) 前の手順で取得した。 |
+| `flowSpec.id` | のフロー仕様 ID [!DNL HTTP API]. この ID は `c1a19761-d2c7-4702-b9fa-fe91f0613e81` です。 |
+| `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target)。 |
+| `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
 
 **応答**
 

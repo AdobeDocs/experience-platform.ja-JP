@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；フィルター；フィルター；データのフィルター；データのフィルター；日付範囲
+keywords: Experience Platform；ホーム；人気のトピック；フィルター；フィルター；データのフィルター；データのフィルター；日付範囲
 solution: Experience Platform
-title: クエリー・パラメータを使用したカタログ・データのフィルタ
+title: クエリパラメータを使用したカタログデータのフィルタリング
 topic-legacy: developer guide
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 85%
 
 ---
 
-# クエリパラメーターを使用して [!DNL Catalog] データをフィルター
+# フィルター [!DNL Catalog] クエリーパラメーターを使用したデータ
 
-[!DNL Catalog Service] API を使用すると、応答データをリクエストクエリパラメーターを使用してフィルタリングできます。 [!DNL Catalog] のベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを向上させるのに役立ちます。
+この [!DNL Catalog Service] API を使用すると、応答データをリクエストクエリパラメーターを使用してフィルタリングできます。 のベストプラクティスの一部 [!DNL Catalog] は、すべての API 呼び出しでフィルターを使用します。API の負荷を軽減し、全体的なパフォーマンスを向上させるのに役立ちます。
 
-このドキュメントでは、API で [!DNL Catalog] オブジェクトをフィルタリングする最も一般的な方法について説明します。 [!DNL Catalog] API とのやり取り方法の詳細については、『[ カタログ開発者ガイド ](getting-started.md)』を読みながら、このドキュメントを参照することをお勧めします。 [!DNL Catalog Service] に関する一般的な情報については、[[!DNL Catalog]  概要 ](../home.md) を参照してください。
+このドキュメントでは、最も一般的なフィルタリング方法の概要を説明します [!DNL Catalog] オブジェクトを含める必要があります。 このドキュメントを参照しながら、 [カタログ開発者ガイド](getting-started.md) を使用して [!DNL Catalog] API 詳しくは、 [!DNL Catalog Service]を参照し、 [[!DNL Catalog] 概要](../home.md).
 
 ## 返されるオブジェクトの制限
 
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
@@ -48,7 +48,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | 取得する特定の [!DNL Catalog] オブジェクトの一意の識別子。 |
+| `{OBJECT_ID}` | 特定の [!DNL Catalog] オブジェクトを取得中です。 |
 
 **リクエスト**
 
@@ -117,13 +117,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=4&properties=name,schemaRef' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答** 
 
-正常な応答は、[!DNL Catalog] オブジェクトのリストと、リクエストされたプロパティのみが表示されたを返します。
+正常な応答は、 [!DNL Catalog] 要求されたプロパティのみを持つオブジェクトが表示されます。
 
 ```json
 {
@@ -157,7 +157,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->各データセットの `schemaRef` プロパティで、バージョン番号はスキーマの最新のマイナーバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
+>内 `schemaRef` プロパティのバージョン番号は、各データセットの最新のマイナーバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
 
 ## 応答リストのオフセット開始インデックス
 
@@ -185,7 +185,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?start=4&limit=2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,16 +209,16 @@ curl -X GET \
 * 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
-* 次のタグ名は、[!DNL Experience Platform] 全体で使用するために予約されているので、組織のタグ名として宣言することはできません。
-   * `unifiedProfile`:このタグ名は、で取り込まれるデータセット用に予約されていま [[!DNL Real-time Customer Profile]](../../profile/home.md)す。
-   * `unifiedIdentity`:このタグ名は、で取り込まれるデータセット用に予約されていま [[!DNL Identity Service]](../../identity-service/home.md)す。
+* 次のタグ名は、で使用するために予約されています [!DNL Experience Platform]のタグ名として宣言することはできません。
+   * `unifiedProfile`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Identity Service]](../../identity-service/home.md).
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
 ```json
 {
     "5be1f2ecc73c1714ceba66e2": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "sampleTag": [
                 "123456"
@@ -265,7 +265,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
 | `{TAG_VALUE}` | フィルターに使用するタグの値。ワイルドカード文字（`*`）をサポートします。 |
 
@@ -278,7 +278,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?tags=sampleTag:123456,secondTag:* \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -290,7 +290,7 @@ curl -X GET \
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -310,7 +310,7 @@ curl -X GET \
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -336,7 +336,7 @@ curl -X GET \
 
 ## 日付範囲によるフィルター
 
-[!DNL Catalog] API の一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付が使用されます。
+の一部のエンドポイント [!DNL Catalog] API には、幅のあるクエリを許可するクエリパラメーターがあり、ほとんどの場合は日付が使用されます。
 
 **API 形式**
 
@@ -357,19 +357,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1554076800000&createdBefore=1556668799000' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答** 
 
-正常な応答は、指定した日付範囲に該当する [!DNL Catalog] オブジェクトのリストを含みます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+正常な応答は、 [!DNL Catalog] 指定した日付範囲に該当するオブジェクト。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -381,7 +381,7 @@ curl -X GET \
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -425,19 +425,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?orderBy=name,desc:updated' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答** 
 
-正常な応答は、`orderBy` パラメーターに従って並べ替えられた [!DNL Catalog] オブジェクトのリストを含みます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+正常な応答は、 [!DNL Catalog] 次に従って並べ替えられるオブジェクト `orderBy` パラメーター。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "0405",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -449,7 +449,7 @@ curl -X GET \
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -461,7 +461,7 @@ curl -X GET \
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554028394852,
             "updated": 1554130582960,
@@ -476,7 +476,7 @@ curl -X GET \
 
 ## プロパティによるフィルター
 
-[!DNL Catalog] には、プロパティでフィルタリングする 2 つの方法があります。この方法については、以下の節で詳しく説明します。
+[!DNL Catalog] には、プロパティでフィルタリングする 2 つの方法があります。この方法については、以降の節で詳しく説明します。
 
 * [単純なフィルターの使用](#using-simple-filters)：特定のプロパティが特定の値と一致するかどうかでフィルタリングします。
 * [プロパティパラメーターの使用](#using-the-property-parameter)：条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
@@ -500,7 +500,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
@@ -513,7 +513,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?name=exampleName,anotherName' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -525,7 +525,7 @@ curl -X GET \
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleName",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -537,7 +537,7 @@ curl -X GET \
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherName",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -576,7 +576,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
 `property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。
@@ -606,7 +606,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -618,7 +618,7 @@ curl -X GET \
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.1.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "sampleDataset",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -630,7 +630,7 @@ curl -X GET \
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleDataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -642,7 +642,7 @@ curl -X GET \
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherDataset",
             "created": 1554028394852,
             "updated": 1554130582960,

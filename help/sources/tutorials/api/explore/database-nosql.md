@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；サードパーティのデータベース；データベースフローサービス
+keywords: Experience Platform；ホーム；人気の高いトピック；サードパーティのデータベース；データベースフローサービス
 solution: Experience Platform
 title: フローサービス API を使用したデータベースの調査
 topic-legacy: overview
 description: このチュートリアルでは、フローサービス API を使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 33%
+ht-degree: 38%
 
 ---
 
-# [!DNL Flow Service] API を使用したデータベースの調査
+# を使用してデータベースを調査 [!DNL Flow Service] API
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
+このチュートリアルでは、 [!DNL Flow Service] サードパーティのデータベースのコンテンツとファイル構造を調べるための API。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、[!DNL Flow Service] API を使用してサードパーティのデータベースに正しく接続するために知っておく必要がある追加情報を示します。
+以下の節では、 [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティのデータベースとの有効な接続が必要です。 有効な接続には、データベースの接続仕様 ID と接続 ID が含まれます。 データベース接続の作成とこれらの値の取得について詳しくは、[ ソースコネクタの概要 ](./../../../home.md#database) を参照してください。
+このチュートリアルでは、データを取り込むサードパーティのデータベースとの有効な接続が必要です。 有効な接続は、データベースの接続仕様 ID と接続 ID に関係します。 データベース接続の作成とこれらの値の取得について詳しくは、 [ソースコネクタの概要](./../../../home.md#database).
 
 ### API 呼び出し例の読み取り
 
@@ -35,11 +35,11 @@ ht-degree: 33%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、以下のように、すべての E[!DNL xperience Platform] API 呼び出しで必要な各ヘッダーの値が提供されます。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての E の必要な各ヘッダーの値がわかります。[!DNL xperience Platform] API 呼び出し（下図を参照）
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 [!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
@@ -51,7 +51,7 @@ ht-degree: 33%
 
 ## データテーブルの調査
 
-データベースの接続 ID を使用して、データリクエストを実行することでGETテーブルを調べることができます。 次の呼び出しを使用して、[!DNL Platform] に検査または取り込むテーブルのパスを見つけます。
+データベースの接続 ID を使用して、データリクエストを実行することでGETテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
 
 **API 形式**
 
@@ -70,13 +70,13 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connections/6990abad-977d-41b9-a85d-17ea8cf1c0e4/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、データベースからテーブルの配列を返します。 [!DNL Platform] に取り込むテーブルを探し、その `path` プロパティをメモしておきます。次の手順でその構造を調べるために指定する必要があります。
+正常な応答は、データベースからテーブルの配列を返します。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
 
 ```json
 [
@@ -119,13 +119,13 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connections/6990abad-977d-41b9-a85d-17ea8cf1c0e4/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、指定したテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns` 配列の要素内にあります。
+正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
 
 ```json
 {
@@ -153,4 +153,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、データベースを調べ、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を得ました。 この情報は、次のチュートリアルで [ データベースからデータを収集し、Platform](../collect/database-nosql.md) に取り込む際に使用できます。
+このチュートリアルに従って、データベースを調べ、に取り込むテーブルのパスを見つけました [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [データベースからデータを収集し、Platform に取り込む](../collect/database-nosql.md).

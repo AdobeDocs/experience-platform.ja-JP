@@ -5,31 +5,31 @@ title: フローサービス API を使用したマーケティング自動化�
 topic-legacy: overview
 description: このチュートリアルでは、フローサービス API を使用してマーケティング自動化システムを調べます。
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 34%
+ht-degree: 38%
 
 ---
 
-# [!DNL Flow Service] API を使用したマーケティング自動化システムの調査
+# を使用したマーケティング自動化システムの調査 [!DNL Flow Service] API
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースから接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
 
-このチュートリアルでは、[!DNL Flow Service] API を使用してマーケティング自動化システムを調べます。
+このチュートリアルでは、 [!DNL Flow Service] マーケティング自動化システムを調査する API。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して、受信データの構造化、ラベル付け、強化をおこなうことがで [!DNL Platform] きます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、[!DNL Flow Service] API を使用してマーケティング自動化システムに正しく接続するために知っておく必要がある追加情報を示します。
+以下の節では、 [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティのマーケティング自動化アプリケーションとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 マーケティング自動化接続の作成とこれらの値の取得について詳しくは、 [ マーケティング自動化ソースの Platform への接続のチュートリアルを参照してください。](../../api/create/marketing-automation/hubspot.md)
+このチュートリアルでは、データを取り込むサードパーティのマーケティングオートメーションアプリケーションとの有効な接続が必要です。 有効な接続は、アプリケーションの接続仕様 ID と接続 ID に関係します。 マーケティングオートメーション接続の作成とこれらの値の取得について詳しくは、 [マーケティングオートメーションソースの Platform への接続](../../api/create/marketing-automation/hubspot.md) チュートリアル
 
 ### API 呼び出し例の読み取り
 
@@ -37,15 +37,15 @@ ht-degree: 34%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
-* x-gw-ims-org-id： `{IMS_ORG}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name： `{SANDBOX_NAME}`
+* x-sandbox-name：`{SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
@@ -53,7 +53,7 @@ ht-degree: 34%
 
 ## データテーブルの調査
 
-マーケティング自動化システムのベース接続を使用して、GETリクエストを実行してデータテーブルを調べることができます。 次の呼び出しを使用して、[!DNL Platform] に検査または取り込むテーブルのパスを見つけます。
+マーケティングオートメーションシステムのベース接続を使用して、GETリクエストを実行し、データテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
 
 **API 形式**
 
@@ -72,13 +72,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/2fce94c1-9a93-4971-8e94-c19a93097129/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、からマーケティング自動化システムへのテーブルの配列です。 [!DNL Platform] に取り込むテーブルを探し、その `path` プロパティをメモしておきます。次の手順でその構造を調べるために指定する必要があります。
+正常な応答は、からマーケティング自動化システムへのテーブルの配列です。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
 
 ```json
 [
@@ -115,7 +115,7 @@ curl -X GET \
 
 ## Inspectテーブルの構造
 
-マーケティング自動化システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定しながら、GETリクエストを実行します。
+マーケティングオートメーションシステムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定し、GETリクエストを実行します。
 
 **API 形式**
 
@@ -135,13 +135,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/2fce94c1-9a93-4971-8e94-c19a93097129/explore?objectType=table&object=Hubspot.Contacts' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、テーブルの構造を返します。 各テーブルの列に関する詳細は、`columns` 配列の要素内にあります。
+正常な応答は、テーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
 
 ```json
 {
@@ -185,4 +185,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、マーケティング自動化システムを調べ、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、マーケティング自動化システムからデータを収集し、Platform](../collect/marketing-automation.md) に取り込むことができます。[
+このチュートリアルに従って、マーケティングオートメーションシステムを調査し、に取り込むテーブルのパスを見つけました。 [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [マーケティングオートメーションシステムからデータを収集し、Platform に取り込む](../collect/marketing-automation.md).

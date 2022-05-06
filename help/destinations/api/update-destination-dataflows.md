@@ -1,33 +1,34 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；宛先データフローの更新
 solution: Experience Platform
-title: フローサービス API を使用した宛先データフローの更新
+title: Flow Service API を使用した宛先データフローの更新
 topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、宛先データフローを更新する手順を説明します。 フローサービス API を使用して、データフローを有効または無効にし、基本情報を更新する方法、またはセグメントと属性を追加および削除する方法について説明します。
-source-git-commit: 829c3516ff5e823d96281bf6d3c773f598218750
+exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2136'
-ht-degree: 14%
+ht-degree: 45%
 
 ---
 
-# フローサービス API を使用した宛先データフローの更新
+# Flow Service API を使用した宛先データフローの更新
 
 このチュートリアルでは、宛先データフローを更新する手順を説明します。 を使用して、データフローを有効または無効にしたり、基本情報を更新したり、セグメントと属性を追加および削除したりする方法を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Experience PlatformUI を使用した宛先データフローの編集について詳しくは、 [アクティベーションフローを編集](/help/destinations/ui/edit-activation.md).
 
 ## はじめに {#get-started}
 
-このチュートリアルでは、有効なフロー ID が必要です。 有効なフロー ID がない場合は、 [宛先カタログ](../catalog/overview.md) そして、以下に示す手順に従います。 [宛先に接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に
+このチュートリアルは、有効なフロー ID を保有しているユーザーを対象としています。有効なフロー ID がない場合は、 [宛先カタログ](../catalog/overview.md) そして、以下に示す手順に従います。 [宛先に接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に
 
 >[!NOTE]
 >
 > 用語 *流れ* および *データフロー* このチュートリアルでは、同じ意味で使用されます。 このチュートリアルのコンテキストでは、は同じ意味を持ちます。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
 * [宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。](../home.md)[!DNL Destinations]宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、 [!DNL Flow Service] API
 
@@ -41,7 +42,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
@@ -57,7 +58,7 @@ Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特
 
 ## データフローの詳細の検索 {#look-up-dataflow-details}
 
-宛先データフローを更新する最初の手順は、フロー ID を使用してデータフローの詳細を取得することです。 に対してGETリクエストを実行することで、既存のデータフローの現在の詳細を表示できます `/flows` endpoint.
+宛先データフローを更新する最初の手順は、フロー ID を使用してデータフローの詳細を取得することです。 `/flows` エンドポイントに対して GET リクエストを実行することで、既存のデータフローの現在の詳細を表示できます。
 
 **API 形式**
 
@@ -78,7 +79,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -99,7 +100,7 @@ curl -X GET \
          "updatedClient":"{UPDATED_CLIENT}",
          "sandboxId":"{SANDBOX_ID}",
          "sandboxName":"prod",
-         "imsOrgId":"{IMS_ORG}",
+         "imsOrgId":"{ORG_ID}",
          "name":"2021 winter campaign",
          "description":"ACME company holiday campaign for high fidelity customers",
          "flowSpec":{
@@ -349,7 +350,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->この `If-Match` ヘッダーは、ヘッダーリクエストをおこなう際にPATCHする必要があります。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフローが正常に更新されるたびに更新されます。
+>`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するデータフローの一意のバージョンです。 ETag の値は、データフローが正常に更新されるたびに更新されます。
 
 **API 形式**
 
@@ -366,7 +367,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -385,13 +386,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
 | `path` | 更新するフローの部分を定義します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -421,7 +422,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -432,13 +433,13 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -466,7 +467,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -494,21 +495,21 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、 `add` 操作。 |
-| `path` | 更新するフローの部分を定義します。 セグメントをデータフローに追加する場合は、例で指定したパスを使用します。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、`add` 操作を使用します。 |
+| `path` | 更新するフローの部分を定義します。セグメントをデータフローに追加する場合は、例で指定したパスを使用します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 | `id` | 宛先データフローに追加するセグメントの ID を指定します。 |
-| `name` | **(オプション)**. 宛先データフローに追加するセグメントの名前を指定します。 このフィールドは必須ではなく、名前を指定せずにセグメントを宛先データフローに正常に追加できることに注意してください。 |
-| `filenameTemplate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。 <br> 次のオプションを使用できます。 <br> <ul><li>`%DESTINATION_NAME%`: 必須. 書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`: 必須. 書き出されたファイルには、書き出されたセグメントの ID が含まれます。</li><li>`%SEGMENT_NAME%`: **(オプション)**. 書き出されたファイルには、書き出されたセグメントの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`: **（オプション）**. ファイルがExperience Platformで生成された時刻を含めるには、次の 2 つのオプションのいずれかを選択します。</li><li>`custom-text`: **(オプション)**. ファイル名の末尾に追加するカスタムテキストで、このプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、 [ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) の節を参照してください。 |
-| `exportMode` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> 必須. `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、 [完全なファイルをエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [増分ファイルの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) （バッチ保存先のアクティベーションに関するチュートリアル）。 |
+| `name` | **(オプション)**. 宛先データフローに追加するセグメントの名前を指定します。このフィールドは必須ではなく、名前を指定しなくてもセグメントを宛先データフローに正常に追加できます。 |
+| `filenameTemplate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。<br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されるファイルには、書き出されたセグメントの ID が含まれます。</li><li>`%SEGMENT_NAME%`: **(オプション)**. 書き出されるファイルには、書き出されたセグメントの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`: **（オプション）**. ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`: **(オプション)**. ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)」の節を参照してください。 |
+| `exportMode` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | セグメントが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
-| `frequency` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> 必須. <br> <ul><li>の `"DAILY_FULL_EXPORT"` エクスポートモード： `ONCE` または `DAILY`.</li><li>の `"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモード： `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> 選択時には適用されません `"exportMode":"DAILY_FULL_EXPORT"` および `"frequency":"ONCE"`. <br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
-| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> 必須. セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
+| `frequency` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
+| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
+| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -536,7 +537,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -563,13 +564,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。データフローからセグメントを削除するには、 `remove` 操作。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローからセグメントを削除するには、 `remove` 操作。 |
 | `path` | セグメントセレクターのインデックスに基づいて、宛先データフローから削除する既存のセグメントを指定します。 データフローでのセグメントの順序を取得するには、に対してGET呼び出しを実行します。 `/flows` エンドポイントと検査 `transformations.segmentSelectors` プロパティ。 データフローの最初のセグメントを削除するには、を使用します。 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -597,7 +598,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -630,7 +631,7 @@ curl -X PATCH \
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -658,7 +659,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -677,13 +678,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。プロファイル属性をデータフローに追加するには、 `add` 操作。 |
-| `path` | 更新するフローの部分を定義します。 プロファイル属性をデータフローに追加する場合は、例で指定したパスを使用します。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。プロファイル属性をデータフローに追加するには、 `add` 操作。 |
+| `path` | 更新するフローの部分を定義します。プロファイル属性をデータフローに追加する場合は、例で指定したパスを使用します。 |
 | `value.path` | データフローに追加するプロファイル属性の値。 |
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -712,7 +713,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -731,13 +732,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。データフローからセグメントを削除するには、 `remove` 操作。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローからセグメントを削除するには、 `remove` 操作。 |
 | `path` | セグメントセレクターのインデックスに基づいて、宛先データフローから削除する既存のプロファイル属性を指定します。 データフローでプロファイル属性の順序を取得するには、に対してGET呼び出しを実行します。 `/flows` エンドポイントと検査 `transformations.profileSelectors` プロパティ。 データフローの最初のセグメントを削除するには、を使用します。 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。 更新を検証するには、 [!DNL Flow Service] フロー ID を指定する際の API。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。更新を検証するには、[!DNL Flow Service] API へ GET リクエストを行い、その際にフロー ID を指定します。
 
 ```json
 {
@@ -748,7 +749,7 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) および [リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)および[リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)を参照してください。
 
 ## 次の手順
 

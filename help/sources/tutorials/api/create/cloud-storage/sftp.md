@@ -1,64 +1,64 @@
 ---
-keywords: エクスペリエンス Platform、home、人気のある話題。SFTP、sftp、およびセキュリティで保護されたファイル転送プロトコル。セキュリティで保護されたファイル転送プロトコル
+keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;sftp；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
 title: フローサービス API を使用した SFTP ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: フローサービス API を使用して Adobe エクスペリエンスプラットフォームを SFTP (セキュアファイル転送プロトコル) サーバーに接続する方法について説明します。
+description: フローサービス API を使用して、Adobe Experience Platformを SFTP(Secure File Transfer Protocol) サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '800'
-ht-degree: 7%
+ht-degree: 32%
 
 ---
 
-# API を使用した SFTP ベース接続の作成 [!DNL Flow Service]
+# を使用した SFTP ベース接続の作成 [!DNL Flow Service] API
 
-ベース接続は、ソースと Adobe エクスペリエンスプラットフォームとの間の認証された接続を表します。
+ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、 [!DNL SFTP] API を使用した (セキュアなファイル転送プロトコル) の基本的な接続を作成する手順について説明し [[!DNL Flow Service]  ](https://www.adobe.io/experience-platform-apis/references/flow-service/) ます。
+このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL SFTP] （セキュアファイル転送プロトコル） [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース: エクスペリエンスプラットフォームを使用すると、 ](../../../../home.md) 多種多様なソースからデータを ingested することができます。また、プラットフォームサービスを使用して、着信データを構造化、ラベル付け、拡張する機能が提供されます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 >[!IMPORTANT]
 >
->JSON オブジェクトを ingesting 接続で使用する場合は、改行文字または改行文字を使用しないようにすることをお勧め [!DNL SFTP] します。 この制限を回避するには、1行に1つの JSON オブジェクトを使用し、後続ファイルには複数行を使用します。
+>JSON オブジェクトを [!DNL SFTP] ソース接続。 この制限を回避するには、1 行に 1 つの JSON オブジェクトを使用し、その後のファイルに複数行を使用します。
 
-以下の各セクションでは、 [!DNL SFTP] API を使用してサーバーに接続するために必要な追加情報を記載して [!DNL Flow Service] います。
+以下の節では、 [!DNL SFTP] サーバー [!DNL Flow Service] API
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-に接続するには [!DNL Flow Service] [!DNL SFTP] 、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL SFTP] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| Chap | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | サーバーに関連付けられた名前または IP アドレスを指定し [!DNL SFTP] ます。 |
-| `port` | 接続する SFTP サーバーポートを指定します。 指定されていない場合は、デフォルト値の「」が表示され `22` ます。 |
-| `username` | サーバーへのアクセスを許可するユーザー名 [!DNL SFTP] です。 |
-| `password` | サーバーのパスワードを指定 [!DNL SFTP] します。 |
-| `privateKeyContent` | Base64 でエンコードされた SSH 秘密キーの内容。 OpenSSH キーの種類は、RSA または DSA に分類されていなければなりません。 |
-| `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に、秘密キーを復号化するためのパスフレーズまたはパスワード。 がパスワードで保護されている場合は、 `privateKeyContent` 値として秘密キーのコンテンツのパスフレーズを使用する必要があります。 |
-| `connectionSpec.id` | コネクション仕様は、ベースおよびソース接続の作成に関連付けられた認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID [!DNL SFTP] は、次のとおりです `b7bf2577-4520-42c9-bae9-cad01560f7bc` 。 |
+| `host` | に関連付けられている名前または IP アドレス [!DNL SFTP] サーバー。 |
+| `port` | 接続先の SFTP サーバーポート。 指定しない場合、値はデフォルトでになります。 `22`. |
+| `username` | ユーザー名 ( [!DNL SFTP] サーバー。 |
+| `password` | ユーザーのパスワード [!DNL SFTP] サーバー。 |
+| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
+| `passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 この `privateKeyContent` はパスワードで保護されているので、このパラメーターは秘密鍵コンテンツのパスフレーズを値として使用する必要があります。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
 
-### プラットフォーム Api の使用
+### Platform API の使用
 
-プラットフォーム Api の呼び出しを適切に行う方法については、Platform Api の概要を参照してください [ ](../../../../../landing/api-guide.md) 。
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
 ## ベース接続の作成
 
-ベース接続を行うと、ソースとプラットフォームの間の情報が保持されます。ソースの認証の資格情報、接続の現在の状態、および一意の基本接続 ID が含まれています。 ベース接続 ID を使用して、ソース内でファイルを検索してナビゲートし、データの種類とフォーマットに関する情報も含めて、取り込む特定のアイテムを指定することができます。
+ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、そのエンドポイントに POST 要求を行います。この場合は、 `/connections` [!DNL SFTP] 要求パラメーターの一部として認証資格情報を指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL SFTP] 認証資格情報をリクエストパラメーターの一部として使用します。
 
-### [!DNL SFTP]基本認証を使用したベース接続の作成
+### の作成 [!DNL SFTP] 基本認証を使用したベース接続
 
-[!DNL SFTP]基本認証を使用して基本的な接続を作成するには、API に対して POST 要求を行い、 [!DNL Flow Service] 接続の、、およびに値を指定 `host` `userName` `password` します。
+次の手順で [!DNL SFTP] 基本認証を使用したベース接続、 [!DNL Flow Service] 接続の `host`, `userName`、および `password`.
 
 **API 形式**
 
@@ -68,14 +68,14 @@ POST /connections
 
 **リクエスト**
 
-次の要求は、基本認証を使用するための基本的な接続を作成し [!DNL SFTP] ます。
+次のリクエストは、 [!DNL SFTP] 基本認証を使用：
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
@@ -99,13 +99,13 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.host` | SFTP サーバーのホスト名。 |
-| `auth.params.username` | SFTP サーバーに関連付けられたユーザー名です。 |
-| `auth.params.password` | SFTP サーバーに関連付けられたパスワードを指定します。 |
-| `connectionSpec.id` | SFTP サーバーの接続条件 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.username` | SFTP サーバーに関連付けられたユーザー名。 |
+| `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
+| `connectionSpec.id` | SFTP サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **応答**
 
-応答が成功した場合は、新しく作成された接続の一意の識別子 () が返され `id` ます。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
+正常な応答は、一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
 
 ```json
 {
@@ -114,13 +114,13 @@ curl -X POST \
 }
 ```
 
-### [!DNL SFTP]SSH 公開鍵認証を使用したベース接続の作成
+### の作成 [!DNL SFTP] SSH 公開鍵認証を使用したベース接続
 
-[!DNL SFTP]SSH 公開鍵認証を使用したベース接続を作成するには、API への POST 要求を行い、接続の、、、 [!DNL Flow Service] およびに値を指定 `host` `userName` `privateKeyContent` `passPhrase` します。
+次の手順で [!DNL SFTP] SSH 公開鍵認証を使用したベース接続、 [!DNL Flow Service] 接続の `host`, `userName`, `privateKeyContent`、および `passPhrase`.
 
 >[!IMPORTANT]
 >
->コネクタは、 [!DNL SFTP] RSA または DSA タイプ OpenSSH キーをサポートします。 キーファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、で終わることを確認してください `"-----END [RSA/DSA] PRIVATE KEY-----"` 。 秘密キーファイルが PPK フォーマットのファイルである場合は、PuTTY ツールを使用して PPK フォーマットから OpenSSH フォーマットに変換する必要があります。
+>この [!DNL SFTP] コネクタは、RSA または DSA タイプの OpenSSH キーをサポートします。 鍵となるファイルコンテンツが `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で終わる `"-----END [RSA/DSA] PRIVATE KEY-----"`. 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して PPK から OpenSSH 形式に変換します。
 
 **API 形式**
 
@@ -130,14 +130,14 @@ POST /connections
 
 **リクエスト**
 
-次の要求によっ [!DNL SFTP] て、SSH 公開鍵認証を使用するための基本的な接続が作成されます。
+次のリクエストは、 [!DNL SFTP] SSH 公開鍵認証を使用する場合：
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -161,15 +161,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.host` | サーバーのホスト名を指定 [!DNL SFTP] します。 |
-| `auth.params.username` | サーバーに関連付けられたユーザー名 [!DNL SFTP] 。 |
-| `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密キーの内容。 OpenSSH キーの種類は、RSA または DSA に分類されていなければなりません。 |
-| `auth.params.passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に、秘密キーを復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合は、値として PrivateKeyContent のパスフレーズを使用する必要があります。 |
-| `connectionSpec.id` | [!DNL SFTP]サーバーの接続条件 ID。`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.host` | のホスト名 [!DNL SFTP] サーバー。 |
+| `auth.params.username` | ユーザー名 [!DNL SFTP] サーバー。 |
+| `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
+| `auth.params.passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |
+| `connectionSpec.id` | この [!DNL SFTP] サーバ接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **応答**
 
-応答が成功した場合は、新しく作成された接続の一意の識別子 () が返され `id` ます。 この ID は [!DNL SFTP] 、次のチュートリアルでサーバーを表示するために必要です。
+正常な応答は、一意の識別子 (`id`) をクリックします。 この ID は、 [!DNL SFTP] 次のチュートリアルのサーバー
 
 ```json
 {
@@ -180,4 +180,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL SFTP] API を使用して接続を作成 [!DNL Flow Service] し、接続の一意の ID 値を取得しました。 この接続 ID を使用し [ て、フローサービス API を使用してクラウドストレージを探すことができ ](../../explore/cloud-storage.md) ます。
+このチュートリアルに従って、 [!DNL SFTP] を使用した接続 [!DNL Flow Service] API で、接続の一意の ID 値を取得している。 この接続 ID を [フローサービス API を使用したクラウドストレージの調査](../../explore/cloud-storage.md).

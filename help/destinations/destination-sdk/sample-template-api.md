@@ -1,25 +1,25 @@
 ---
 description: このページでは、宛先のテストメッセージ変換テンプレートを取得するために、「/authoring/testing/template/sample」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
-title: 「Get sample template API」操作
+title: サンプルテンプレート取得 API の操作
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 2%
+ht-degree: 31%
 
 ---
 
-# 「Get sample template API」操作 {#get=sample-template-api-operations}
+# サンプルテンプレート取得 API の操作 {#get=sample-template-api-operations}
 
 >[!IMPORTANT]
 >
->**API エンドポイント**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
+>**API エンドポイント**：`https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-このページでは、 `/authoring/testing/template/sample` API エンドポイント（を生成するため） [メッセージ変換テンプレート](./message-format.md#using-templating) を設定します。 このエンドポイントでサポートされる機能については、 [テンプレートを作成](./create-template.md).
+このページでは、 `/authoring/testing/template/sample` API エンドポイント（を生成するため） [メッセージ変換テンプレート](./message-format.md#using-templating) を設定します。 このエンドポイントでサポートされる機能についての説明は、[テンプレートを作成](./create-template.md)をお読みください。
 
 ## サンプルテンプレート API 操作の概要 {#get-started}
 
-続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+続ける前に「[はじめる前に](./getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
 
 ## サンプルテンプレートの取得 {#generate-sample-template}
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->* ここで使用する必要がある宛先 ID は、です。 `instanceId` を使用して作成された、宛先の設定に対応する `/destinations` endpoint. 詳しくは、 [宛先設定 API リファレンス](./destination-configuration-api.md#retrieve-list).
+>* ここで使用する必要がある宛先 ID は `instanceId` で、`/destinations` エンドポイントを使用して作成された、宛先の設定に対応します。詳しくは、 [宛先設定 API リファレンス](./destination-configuration-api.md#retrieve-list).
 
 
 **API 形式**
@@ -51,7 +51,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -133,7 +133,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDKAPI エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従います。 参照： [API ステータスコード](../../landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors) （Platform トラブルシューティングガイド）を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
 
 ## 次の手順 {#next-steps}
 

@@ -5,7 +5,7 @@ title: 接続パラメーター API エンドポイント
 topic-legacy: connection parameters
 description: /connection_parameters エンドポイントに対してGETリクエストを実行することで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: cff95575530e0db00d34ff1ea4c90e5422b6562d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 28%
@@ -33,7 +33,7 @@ GET /connection_parameters
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameters
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；データモデル；データレジストリ；データタイプ；データタイプ；データタイプ；データタイプ；作成
+keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；データモデル；データレジストリ；データ型；データ型；データ型；データ型；作成
 solution: Experience Platform
 title: データタイプ API エンドポイント
-description: スキーマレジストリ API の/datatypes エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM データ型をプログラムで管理できます。
+description: スキーマレジストリ API の/datatypes エンドポイントを使用すると、エクスペリエンスアプリケーション内で XDM データ型をプログラムで管理できます。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1168'
-ht-degree: 15%
+ht-degree: 19%
 
 ---
 
 # データタイプエンドポイント
 
-データ型は、基本リテラルフィールドと同じ方法で、クラスやスキーマフィールドグループの参照型フィールドとして使用されます。重要な違いは、データ型が複数のサブフィールドを定義できる点です。 複数フィールド構造を一貫して使用できるという点ではフィールドグループと同様ですが、データ型はスキーマ構造の任意の場所に含めることができるのに対し、フィールドグループはルートレベルでのみ追加できるので、より柔軟です。 [!DNL Schema Registry] API の `/datatypes` エンドポイントを使用すると、エクスペリエンスアプリケーション内のデータ型をプログラムで管理できます。
+データ型は、クラスまたはスキーマフィールドグループの参照型フィールドとして、基本リテラルフィールドと同じ方法で使用されます。主な違いは、データ型が複数のサブフィールドを定義できる点です。 複数フィールド構造を一貫して使用できるという点でフィールドグループと同様ですが、データ型はスキーマ構造の任意の場所に含めることができるのに対して、ルートレベルでのみ追加できるので、より柔軟です。 この `/datatypes` エンドポイント [!DNL Schema Registry] API を使用すると、エクスペリエンスアプリケーション内のデータタイプをプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-## データ型のリストの取得 {#list}
+## データタイプのリストの取得 {#list}
 
-`/global/datatypes` または `/tenant/datatypes` に対してGETリクエストを実行すると、 `global` コンテナまたは `tenant` コンテナの下にあるすべてのデータ型をリストできます。
+すべてのデータタイプを `global` または `tenant` コンテナを作成するには、次に対してGETリクエストを実行します。 `/global/datatypes` または `/tenant/datatypes`、それぞれ。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが 300 項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、付録のドキュメントの [ クエリパラメータ ](./appendix.md#query) の節を参照してください。
+>リソースをリストする場合、スキーマレジストリでは結果セットを 300 項目に制限します。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、 [クエリパラメーター](./appendix.md#query) 詳しくは、付録のドキュメントを参照してください。
 
 **API 形式**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | データ型の取得元のコンテナ：`global` はAdobeが作成したデータ型の場合、`tenant` は組織が所有するデータ型の場合です。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。使用可能なパラメータのリストについては、付録の [ ドキュメント ](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | データタイプの取得元のコンテナ： `global` (Adobe作成データタイプの場合 ) または `tenant` 組織が所有するデータタイプの場合。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストでは、`tenant` コンテナからデータ型のリストを取得し、`orderby` クエリパラメーターを使用して `title` 属性でデータ型を並べ替えます。
+次のリクエストでは、 `tenant` コンテナ、使用 `orderby` クエリパラメーターを使用して、データタイプを `title` 属性。
 
 ```shell
 curl -X GET \
@@ -50,22 +50,22 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 データ型の一覧には、次の `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` ヘッダーは、次のデータタイプをリストするために使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する際に推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 元の `$ref` と `allOf` を含む、各リソースの完全な JSON データ型を返します。 ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON データ型を元の値と共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-上記のリクエストでは `application/vnd.adobe.xed-id+json` `Accept` ヘッダーが使用されていたので、応答には各データ型の `title`、`$id`、`meta:altId` および `version` 属性のみが含まれています。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) を使用すると、各データ型のすべての属性が返されます。 応答で必要な情報に応じて、適切な `Accept` ヘッダーを選択します。
+上記のリクエストでは、 `application/vnd.adobe.xed-id+json` `Accept` したがって、応答には `title`, `$id`, `meta:altId`、および `version` 属性を設定できます。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) は、各データタイプのすべての属性を返します。 適切な `Accept` ヘッダーを作成します。
 
 ```json
 {
@@ -109,14 +109,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するデータ型を格納するコンテナ：`global`(Adobeが作成したデータ型の場合 ) または `tenant`（組織が所有するデータ型の場合）。 |
-| `{DATA_TYPE_ID}` | 検索するデータ型の `meta:altId` または URL エンコードされた `$id`。 |
+| `{CONTAINER_ID}` | 取得するデータ型を格納するコンテナ： `global` (Adobeが作成したデータ型の場合 ) または `tenant` 組織が所有するデータ型の場合。 |
+| `{DATA_TYPE_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索するデータ型の値です。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストでは、パスで指定された `meta:altId` 値でデータ型を取得します。
+次のリクエストでは、データタイプを `meta:altId` の値がパスに指定されました。
 
 ```shell
 curl -X GET \
@@ -124,11 +124,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 すべての検索リクエストでは、`version` を `Accept` ヘッダーに含める必要があります。 次の `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 すべての検索リクエストには `version` 含まれる `Accept` ヘッダー。 以下 `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -142,7 +142,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、データ型の詳細を返します。 返されるフィールドは、リクエストで送信される `Accept` ヘッダーによって異なります。 異なる `Accept` ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
+正常な応答は、データタイプの詳細を返します。 返されるフィールドは、 `Accept` ヘッダーがリクエストで送信されました。 異なるを使用した実験 `Accept` ヘッダーを使用して、応答を比較し、使用事例に最適なヘッダーを決定します。
 
 ```json
 {
@@ -203,7 +203,7 @@ curl -X GET \
       "$ref": "#/definitions/customFields"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:xdmType": "object",
@@ -223,7 +223,7 @@ curl -X GET \
 
 ## データタイプの作成 {#create}
 
-POSTリクエストを実行することで、`tenant` コンテナの下にカスタムデータ型を定義できます。
+カスタムデータタイプは、 `tenant` コンテナを含める必要があります。POSTリクエストを実行します。
 
 **API 形式**
 
@@ -241,7 +241,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Property Construction",
@@ -274,7 +274,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたデータタイプの詳細（`$id`、`meta:altId`、`version`を含む）を含むペイロードを返します。これらの 3 つの値は読み取り専用で、[!DNL Schema Registry] によって割り当てられます。
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたデータタイプの詳細（`$id`、`meta:altId`、`version`を含む）を含むペイロードを返します。これらの 3 つの値は読み取り専用で、 [!DNL Schema Registry].
 
 ```JSON
 {
@@ -310,7 +310,7 @@ curl -X POST \
     }
   },
   "refs": [],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:xdmType": "object",
@@ -331,15 +331,15 @@ curl -X POST \
 }
 ```
 
-テナントコンテナ内の [ すべてのGET型 ](#list) に対してGETリクエストを実行すると、Property Details データ型が含まれます。または、URL エンコードされた `$id` URI を使用して [ 検索（データ）リクエスト ](#lookup) を実行し、新しいデータ型を直接表示できます。
+へのGETリクエストの実行 [すべてのデータタイプのリスト](#list) テナントコンテナにプロパティの詳細データ型が含まれるようになります。または、 [ルックアップ (GET) リクエストの実行](#lookup) URL エンコードされたを使用 `$id` 新しいデータ型を直接表示する URI。
 
 ## データタイプの更新 {#put}
 
-データ型全体を置き換えるには、リソース操作を使用し、PUTを再書き込みします。 PUTリクエストを通じてデータ型を更新する場合、本文には、POSTリクエストで [ 新しいデータ型 ](#create) を作成する際に必要となるすべてのフィールドを含める必要があります。
+データ型全体を置き換えるには、PUT操作を使用します。つまり、リソースを書き直す必要があります。 PUTリクエストを通じてデータ型を更新する場合、本文には、 [新しいデータ型の作成](#create) POST。
 
 >[!NOTE]
 >
->データ型全体を置き換えるのではなく、データ型の一部のみを更新する場合は、[ データ型の一部を更新する ](#patch) の節を参照してください。
+>データ型全体を置き換えるのではなく、データ型の一部のみを更新する場合は、 [データ型の一部の更新](#patch).
 
 **API 形式**
 
@@ -349,13 +349,13 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 書き直すデータ型の `meta:altId` または URL エンコードされた `$id`。 |
+| `{DATA_TYPE_ID}` | この `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、既存のデータ型を書き換え、新しい `floorSize` フィールドを追加します。
+次のリクエストは、新しい `floorSize` フィールドに入力します。
 
 ```SHELL
 curl -X PUT \
@@ -363,7 +363,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title": "Property Construction",
@@ -401,7 +401,7 @@ curl -X PUT \
 
 **応答**
 
-正常な応答は、更新されたデータ型の詳細を返します。
+正常な応答は、更新されたデータタイプの詳細を返します。
 
 ```JSON
 {
@@ -443,7 +443,7 @@ curl -X PUT \
     }
   },
   "refs": [],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:xdmType": "object",
@@ -464,13 +464,13 @@ curl -X PUT \
 }
 ```
 
-## データ型の一部の更新 {#patch}
+## データタイプの一部を更新する {#patch}
 
-データ型の一部を更新するには、PATCHリクエストを使用します。 [!DNL Schema Registry] は、`add`、`remove`、`replace` を含む、すべての標準的な JSON パッチ操作をサポートしています。 JSON パッチの詳細については、[API の基本ガイド ](../../landing/api-fundamentals.md#json-patch) を参照してください。
+データ型の一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、[PUT操作 ](#put) を使用したデータ型の置き換えの節を参照してください。
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、 [「置換」操作を使用したデータ型のPUT](#put).
 
 **API 形式**
 
@@ -480,22 +480,22 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 更新するデータ型の URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次の例のリクエストでは、既存のデータ型の `description` が更新され、新しい `floorSize` フィールドが追加されます。
+以下のリクエスト例は、 `description` を追加し、 `floorSize` フィールドに入力します。
 
-リクエスト本文は配列の形式をとり、リストされた各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作 (`op`)、操作を実行するフィールド (`path`)、およびその操作に含める情報 (`value`) を含む。
+リクエスト本文は配列の形式をとり、リストに表示される各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトには、実行される操作 (`op`) を呼び出し、操作を実行する必要があるフィールド (`path`) と、その操作に含める必要のある情報 (`value`) をクリックします。
 
 ```SHELL
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes/_{TENANT_ID}.datatypes.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -518,7 +518,7 @@ curl -X PATCH \
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。`description` が更新され、`floorSize` が `definitions` に追加されました。
+応答には、両方の操作が正常に実行されたことが示されます。この `description` が更新され、 `floorSize` は以下に追加されています： `definitions`.
 
 ```JSON
 {
@@ -585,7 +585,7 @@ curl -X PATCH \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -607,7 +607,7 @@ curl -X PATCH \
 }
 ```
 
-## データ型の削除 {#delete}
+## データタイプの削除 {#delete}
 
 スキーマレジストリからデータ型を削除する必要が生じる場合があります。 これは、パスで指定されたDELETEタイプ ID を使用してデータリクエストを実行することでおこなわれます。
 
@@ -619,7 +619,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 削除するデータ型の URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -630,12 +630,12 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes/_{TENANT_ID}.datatypes.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-[ ルックアップ (GET) リクエスト ](#lookup) をデータ型に対して試行すると、削除を確認できます。 リクエストに `Accept` ヘッダーを含める必要がありますが、データ型がスキーマレジストリから削除されたので、HTTP ステータス 404（見つかりません）を受け取る必要があります。
+削除を確認するには、 [参照 (GET) リクエスト](#lookup) をデータ型に追加します。 次を含める必要があります： `Accept` ヘッダーを使用しますが、データ型がスキーマレジストリから削除されたので、HTTP ステータス 404(Not Found) を受け取る必要があります。

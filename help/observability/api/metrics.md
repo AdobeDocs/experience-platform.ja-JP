@@ -5,7 +5,7 @@ title: 指標 API エンドポイント
 topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 42%
@@ -41,7 +41,7 @@ curl -X POST \
   https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
@@ -306,7 +306,7 @@ curl -X POST \
         "tenantInfo": {
             "sandboxName": "prod",
             "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
-            "imsOrgId": "{IMS_ORG}"
+            "imsOrgId": "{ORG_ID}"
         },
         "additionalContext": null
     },

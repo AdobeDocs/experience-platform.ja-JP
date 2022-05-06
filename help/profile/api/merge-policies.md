@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 70%
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。結合ポリシーとは、データを統合する場合のデータの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するために [!DNL Platform] が使用するルールです。
 
-例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りをおこなう場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントが Platform に取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。複数のソースからのデータが競合する場合（例えば、1 つのフラグメントリストが顧客について「独身」、他のリストが「既婚」としている場合）、結合ポリシーが、個人のプロファイルに含める情報を決定します。
+例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントが Platform に取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。複数のソースからのデータが競合する場合（例えば、1 つのフラグメントリストが顧客について「独身」、他のリストが「既婚」としている場合）、結合ポリシーが、個人のプロファイルに含める情報を決定します。
 
 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、API を使用して結合ポリシーを操作する手順を説明します。
 
@@ -50,7 +50,7 @@ UI を使用して結合ポリシーを操作するには、 [結合ポリシー
     {
         "id": "{MERGE_POLICY_ID}",
         "name": "{NAME}",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "{SCHEMA_CLASS_NAME}"
         },
@@ -86,7 +86,7 @@ UI を使用して結合ポリシーを操作するには、 [結合ポリシー
     {
         "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
         "name": "profile-default",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -217,7 +217,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies/10648288-cda5-11e8-a8d5-f2801f1b9fd1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
@@ -228,7 +228,7 @@ curl -X GET \
 ```json
 {
     "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "schema": {
         "name": "_xdm.context.profile"
     },
@@ -266,7 +266,7 @@ curl -X POST \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -291,7 +291,7 @@ curl -X POST \
         "0bf16e61-90e9-4204-b8fa-ad250360957b": {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
             "name": "Profile Default Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -315,7 +315,7 @@ curl -X POST \
         "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
             "name": "Dataset Precedence Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -380,7 +380,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies?schema.name=_xdm.context.profile' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
@@ -398,7 +398,7 @@ curl -X GET \
         {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
             "name": "Profile Default Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -422,7 +422,7 @@ curl -X GET \
         {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
             "name": "Dataset Precedence Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -478,7 +478,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/config/mergePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -520,7 +520,7 @@ curl -X POST \
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -576,7 +576,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -603,7 +603,7 @@ curl -X PATCH \
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -653,12 +653,12 @@ curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
         "name": "Loyalty members ordered by ID",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -698,7 +698,7 @@ curl -X PUT \
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -752,7 +752,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

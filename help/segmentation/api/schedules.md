@@ -5,7 +5,7 @@ title: Schedules API エンドポイント
 topic-legacy: developer guide
 description: スケジュールは、1 日 1 回バッチセグメント化ジョブを自動的に実行するために使用できるツールです。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: a4f5602365d5db28ba375db0794b80670229fa75
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2013'
 ht-degree: 24%
@@ -46,7 +46,7 @@ GET /config/schedules?limit={LIMIT}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -68,7 +68,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
     "children": [
         {
             "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -119,7 +119,7 @@ POST /config/schedules
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -152,7 +152,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 ```json
 {
     "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -192,7 +192,7 @@ GET /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -204,7 +204,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 ```json
 {
     "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -242,7 +242,7 @@ PATCHリクエストでは、 [state](#update-state) または [cron スケジ�
 
 ### スケジュール状態の更新 {#update-state}
 
-JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティ `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
+JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティとして `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
 
 **API 形式**
 
@@ -259,7 +259,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -300,7 +300,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -341,7 +341,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

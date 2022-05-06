@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；複数のオブジェクト参照；api
+keywords: Experience Platform；ホーム；人気の高いトピック；カタログ；複数のオブジェクト参照；api
 solution: Experience Platform
 title: 複数のカタログオブジェクトの検索
 topic-legacy: developer guide
 description: オブジェクトごとに 1 つのリクエストを実行する代わりに、複数のオブジェクトを表示する場合、カタログには同じ種類のオブジェクトを複数リクエストするためのシンプルなショートカットが用意されています。1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 49%
@@ -14,11 +14,11 @@ ht-degree: 49%
 
 # 複数のカタログオブジェクトの検索
 
-1 つのオブジェクトにつき 1 回のリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合、[!DNL Catalog] は同じ型の複数のオブジェクトをリクエストするためのシンプルなショートカットを提供します。 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
+オブジェクトごとに 1 回のリクエストを行うのではなく、複数の特定のオブジェクトを表示する場合は、 [!DNL Catalog] には、同じタイプの複数のオブジェクトをリクエストするためのシンプルなショートカットが用意されています。 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 
 >[!NOTE]
 >
->特定の [!DNL Catalog] オブジェクトを要求する場合でも、必要なプロパティのみを返すように `properties` クエリパラメーターを設定することをお勧めします。
+>特定の [!DNL Catalog] オブジェクトの場合は、 `properties` クエリパラメーターを使用して、必要なプロパティのみを返します。
 
 **API 形式**
 
@@ -29,8 +29,8 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` | 取得する特定のオブジェクトの 1 つの識別子。 |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 取得するいずれかの特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5bde21511dd27b0000d24e95,5bda3a4228babc0000126377,5bceaa4c26c115000039b24b,5bb276b03a14440000971552,5ba9452f7de80400007fc52a?properties=name,description,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->返されたオブジェクトに、`properties` クエリで指定された 1 つ以上のリクエストされたプロパティが含まれていない場合、次の ***`Sample Dataset 3`*** と ***`Sample Dataset 4`*** に示すように、応答は、含まれているリクエストされたプロパティのみを返します。
+>返されるオブジェクトに、 `properties` クエリを指定した場合、応答は、に示すように、含まれるリクエストされたプロパティのみを返します。 ***`Sample Dataset 3`*** および ***`Sample Dataset 4`*** 下
 
 ```json
 {

@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クラウドストレージデータ；ストリーミングデータ；ストリーミング
+keywords: Experience Platform;ホーム;人気のトピック;クラウドストレージデータ；ストリーミングデータ；ストリーミング
 solution: Experience Platform
 title: フローサービス API を使用した生データのストリーミングデータフローの作成
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
+description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1099'
-ht-degree: 16%
+ht-degree: 55%
 
 ---
 
-# [!DNL Flow Service] API を使用した生データのストリーミングデータフローの作成
+# を使用して、生データのストリーミングデータフローを作成します。 [!DNL Flow Service] API
 
-このチュートリアルでは、ストリーミングソースコネクタから生データを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformに送信する手順を説明します。
+このチュートリアルでは、ストリーミングソースコネクタから生データを取得し、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):顧客体験データを整理する際に使用する標準化されたExperience Platformフレームワーク。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリ API への呼び出しを正しく実行するために知っておく必要がある重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-- [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、データの場所とリネージのExperience Platformです。
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
+   - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
+- [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):Platform のストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
-- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の使用の手引き ](../../../../landing/api-guide.md) を参照してください。
+Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
 ### ソース接続の作成 {#source}
 
@@ -42,9 +42,9 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。 このターゲット XDM スキーマは、XDM [!DNL Individual Profile] クラスも拡張します。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。このターゲット XDM スキーマは、XDM も拡張します [!DNL Individual Profile] クラス。
 
-ターゲット XDM スキーマを作成するには、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の `/schemas` エンドポイントにPOSTリクエストを送信します。
+ターゲット XDM スキーマを作成するには、 `/schemas` エンドポイント [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API 形式**
 
@@ -54,14 +54,14 @@ POST /tenant/schemas
 
 **リクエスト**
 
-次のリクエスト例は、XDM [!DNL Individual Profile] クラスを拡張する XDM スキーマを作成します。
+次のリクエスト例では、XDM を拡張する XDM スキーマを作成します [!DNL Individual Profile] クラス。
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -88,7 +88,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたスキーマの一意の識別子 (`$id`) を含む詳細を返します。 この ID は、後の手順で、ターゲットデータセット、マッピング、データフローを作成するために必要です。
+正常な応答は、新しく作成されたスキーマの一意の識別子 (`$id`) をクリックします。 この ID は、後の手順で、ターゲットデータセット、マッピング、データフローを作成するために必要になります。
 
 ```json
 {
@@ -121,7 +121,7 @@ curl -X POST \
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -152,7 +152,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-ターゲット XDM スキーマが作成され、その一意の `$id` を使用して、ソースデータを格納するターゲットデータセットを作成できます。 ターゲットデータセットを作成するには、[ カタログサービス API](https://www.adobe.io/experience-platform-apis/references/catalog/) の `dataSets` エンドポイントに対してPOSTリクエストを実行し、ペイロード内でターゲットスキーマの ID を指定します。
+ターゲット XDM スキーマが作成され、その一意の `$id` これで、ソースデータを含むターゲットデータセットを作成できます。 ターゲットデータセットを作成するには、 `dataSets` エンドポイント [カタログサービス API](https://www.adobe.io/experience-platform-apis/references/catalog/)ペイロード内でターゲットスキーマの ID を指定する際に使用します。
 
 **API 形式**
 
@@ -167,7 +167,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -190,12 +190,12 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
-| `schemaRef.id` | データセットの基になる XDM スキーマの URI `$id`。 |
-| `schemaRef.contentType` | スキーマのバージョン。 この値は `application/vnd.adobe.xed-full-notext+json;version=1` に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
+| `schemaRef.id` | URI `$id` XDM スキーマの場合、データセットの基になる。 |
+| `schemaRef.contentType` | スキーマのバージョン番号。この値はに設定する必要があります。 `application/vnd.adobe.xed-full-notext+json;version=1`：スキーマの最新のマイナーバージョンを返します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
 **応答**
 
-正常な応答は、新しく作成されたデータセットの ID を `"@/datasets/{DATASET_ID}"` の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。ターゲットデータセット ID は、後の手順で、ターゲット接続とデータフローを作成する際に必要になります。
+正常な応答は、新しく作成されたデータセットの ID をの形式で含む配列を返します `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順で、ターゲット接続とデータフローを作成するには、ターゲットデータセット ID が必要です。
 
 ```json
 [
@@ -205,9 +205,9 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、Platform への宛先接続、または転送されたデータが送られる任意の場所を作成および管理します。 ターゲット接続には、データの宛先、データ形式、データフローの作成に必要なターゲット接続 ID に関する情報が含まれます。 ターゲット接続インスタンスは、テナントと IMS 組織に固有です。
+ターゲット接続は、Platform への宛先接続、または転送されたデータが送信される場所を作成および管理します。 ターゲット接続には、データ宛先、データ形式、およびデータフローの作成に必要なターゲット接続 ID に関する情報が含まれます。 Target 接続インスタンスは、テナントと IMS 組織に固有です。
 
-ターゲット接続を作成するには、[!DNL Flow Service] API の `/targetConnections` エンドポイントにPOSTリクエストを送信します。 リクエストの一部として、データフォーマット、前の手順で取得した `dataSetId`、および [!DNL Data Lake] に関連付けられた固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続を作成するには、 `/targetConnections` エンドポイント [!DNL Flow Service] API リクエストの一環として、データ形式、 `dataSetId` 前の手順で取得され、 [!DNL Data Lake]. この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API 形式**
 
@@ -222,7 +222,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -247,13 +247,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `connectionSpec.id` | [!DNL Data Lake] への接続に使用する接続仕様 ID。 この ID は次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | [!DNL Data Lake] に送信するデータの指定された形式。 |
+| `connectionSpec.id` | に接続するために使用する接続仕様 ID [!DNL Data Lake]. この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
+| `data.format` | に取り込むデータの指定された形式 [!DNL Data Lake]. |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセットの ID。 |
 
 **応答**
 
-正常な応答は、新しいターゲット接続の一意の識別子 (`id`) を返します。 この ID は後の手順で必要になります。
+リクエストが成功した場合は、新しいターゲット接続の一意の ID（`id`）が返されます。この ID は、後の手順で必要になります。
 
 ```json
 {
@@ -266,7 +266,7 @@ curl -X POST \
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。
 
-マッピングセットを作成するには、ターゲット XDM スキーマ `$id` と、作成するマッピングセットの詳細を指定しながら、[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントにPOSTリクエストを送信します。
+マッピングセットを作成するには、[[!DNL Data Prep]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) の `mappingSets` エンドポイントに POST リクエストを実行し、その際にターゲット XDM スキーマ `$id` および作成するマッピングセットの詳細を指定します。
 
 **API 形式**
 
@@ -281,7 +281,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -311,7 +311,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたマッピングの詳細 ( 一意の識別子 (`id`) を含む ) を返します。 この ID は、後の手順でデータフローを作成する際に必要です。
+応答が成功すると、一意の ID（`id`）など、新しく作成されたマッピングの詳細が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -326,7 +326,7 @@ curl -X POST \
 
 ## データフロー仕様のリストの取得 {#specs}
 
-データフローは、ソースからデータを収集し、Platform に取り込みます。 GETフローを作成するには、まず [!DNL Flow Service] API に対してデータリクエストを実行して、データフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、Platform に取り込む役割を担っています。データフローを作成するにはまず、[!DNL Flow Service] API に対して GET リクエストを実行し、データフローの仕様を取得する必要があります。
 
 **API 形式**
 
@@ -340,13 +340,13 @@ GET /flowSpecs
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、データフロー仕様のリストを返します。 [!DNL Amazon Kinesis]、[!DNL Azure Event Hubs] または [!DNL Google PubSub] のいずれかを使用してデータフローを作成するために取得する必要があるデータフロー仕様 ID は、`d69717ba-71b4-4313-b654-49f9cf126d7a` です。
+正常な応答は、データフロー仕様のリストを返します。 任意の [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]または  [!DNL Google PubSub]、 `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -416,14 +416,14 @@ curl -X GET \
 
 ## データフローの作成
 
-ストリーミングデータを収集する最後の手順は、データフローを作成することです。 現時点では、次の必須値が用意されています。
+ストリーミングデータを収集するための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 - [ソース接続 ID](#source)
 - [ターゲット接続 ID](#target)
 - [マッピング ID](#mapping)
 - [データフロー仕様 ID](#specs)
 
-データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 データフローを作成するには、前述の値をPOST内に指定しながらペイロードリクエストを実行します。
+データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
 **API 形式**
 
@@ -437,7 +437,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -467,14 +467,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | 前の手順で取得した [ フロー仕様 ID](#specs)。 |
-| `sourceConnectionIds` | 前の手順で取得した [ ソース接続 ID](#source)。 |
-| `targetConnectionIds` | 前の手順で取得した [ ターゲット接続 ID](#target-connection)。 |
-| `transformations.params.mappingId` | 前の手順で取得した [ マッピング ID](#mapping)。 |
+| `flowSpec.id` | 前の手順で取得した[フロー仕様 ID](#specs)。 |
+| `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target-connection)。 |
+| `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
 
 **応答**
 
-リクエストが成功した場合は、新しく作成したデータフローの ID(`id`) が返されます。
+リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）が返されます。
 
 ```json
 {
@@ -485,7 +485,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、ストリーミングコネクタからストリーミングデータを収集するデータフローを作成しました。 受信データは、[!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、ストリーミングコネクタからストリーミングデータを収集するデータフローを作成しました。 受信データは、[!DNL Real-time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

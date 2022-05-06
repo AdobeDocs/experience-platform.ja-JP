@@ -3,9 +3,9 @@ keywords: Experience Platform：ホーム;人気のトピック;データアク�
 solution: Experience Platform
 title: データアクセス API ガイド
 topic-legacy: developer guide
-description: データアクセス API は、Experience Platform内で取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
+description: データアクセス API は、Adobe Experience Platformをサポートし、Experience Platform内に取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供します。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 85%
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 # データアクセス API ガイド
 
-データアクセス API は、[!DNL Experience Platform] 内で取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
+データアクセス API は、Adobe Experience Platformをサポートし、内に取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供します [!DNL Experience Platform].
 
 ![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
@@ -51,7 +51,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -123,7 +123,7 @@ GET /files/{FILE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## ファイルのコンテンツへのアクセス
 
-[!DNL Data Access] API を使用して、ファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
+この [!DNL Data Access] API は、ファイルのコンテンツにアクセスする場合にも使用できます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
 
 **API 形式**
 
@@ -221,7 +221,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

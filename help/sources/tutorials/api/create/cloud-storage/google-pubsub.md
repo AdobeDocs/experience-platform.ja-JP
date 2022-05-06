@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 100%
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)に関するガイドを参照してください。
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
 ## ベース接続の作成
 
@@ -65,7 +65,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -122,7 +122,7 @@ curl -X POST \
     -H 'authorization: Bearer {ACCESS_TOKEN}' \
     -H 'content-type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -d '{
         "name": "Google PubSub source connection",

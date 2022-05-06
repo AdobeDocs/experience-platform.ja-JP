@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをMicrosoft SQL Server に接続する方法について説明します。
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 57%
@@ -64,7 +64,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

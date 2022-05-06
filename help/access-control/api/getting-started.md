@@ -5,7 +5,7 @@ title: アクセス制御 API ガイド
 topic-legacy: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。次の節では、Schema Registry API を正しく呼び出すために、開発者が知っておく必要がある追加情報を示します。
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: b1edea734f58762cfa895f768ea8e2969fdd5c02
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{IMS_ORG}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 

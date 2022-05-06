@@ -3,7 +3,7 @@ title: 他のパーソナライゼーションソリューションからAdobe�
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法を説明します
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: パーソナライゼーション；server api;Adobe Experience Platform Edge Network;パーソナライゼーションを取得
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 10%
@@ -26,7 +26,7 @@ Adobeのパーソナライゼーションソリューションを使用する前
    * Adobe Targetでは、 [!DNL mbox]. この [!DNL global mbox] が `__view__` 範囲
    * の場合 [!DNL Offer Decisioning]これらは、offer decisioningサービスがオファーの提案に使用するアクティビティ ID と配置 ID を含む、Base64 でエンコードされた JSON の文字列です。
 
-## `query` オブジェクト {#query}
+## `query` object {#query}
 
 パーソナライズされたコンテンツを取得するには、リクエスト例の明示的なリクエストクエリオブジェクトが必要です。 クエリオブジェクトの形式は次のとおりです。
 
@@ -53,8 +53,8 @@ Adobeのパーソナライゼーションソリューションを使用する前
 
 | 属性 | タイプ | 説明 |
 | --- | --- | --- |
-| `schemas` | `String[]` | *オプション*. 返されるオファーのタイプを選択するための、決定で使用されるスキーマのリスト。 |
-| `scopes` | `String[]` | *オプション*. 決定範囲のリスト。 リクエストあたり最大 30 件。 |
+| `schemas` | `String[]` | *オプション*。返されるオファーのタイプを選択するための、決定で使用されるスキーマのリスト。 |
+| `scopes` | `String[]` | *オプション*。決定範囲のリスト。 リクエストあたり最大 30 件。 |
 
 ## 取り扱い {#handle}
 
@@ -140,7 +140,7 @@ POST /ee/v2/interact
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{
@@ -261,7 +261,7 @@ POST /v2/collect
 ```shell
 url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

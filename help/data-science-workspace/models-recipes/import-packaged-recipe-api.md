@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform；パッケージ化されたレシピのインポート；Data Science Workspace；人気のあるトピック；レシピ；api;sensei 機械学習；エンジンの作成
+keywords: Experience Platform；パッケージ化されたレシピのインポート；Data Science Workspace；人気の高いトピック；レシピ；api;sensei 機械学習；エンジンの作成
 solution: Experience Platform
 title: パッケージ化されたレシピの読み込み (Sensei Machine Learning API を使用 )
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 62%
 
 ---
 
-# パッケージ化されたレシピの読み込み (Sensei Machine Learning API を使用 )
+# パッケージ化されたレシピの読み込み (Sensei Machine Learning API)
 
-このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を使用して、ユーザーインターフェイスの「レシピ」とも呼ばれる [ エンジン ](../api/engines.md) を作成します。
+このチュートリアルでは、 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を作成するには、 [エンジン](../api/engines.md)ユーザーインターフェイスの「レシピ」とも呼ばれます。
 
-開始する前に、Adobe Experience Platform [!DNL Data Science Workspace] は API と UI 内の類似した要素を参照するために異なる用語を使用することに注意する必要があります。 API の用語はこのチュートリアル全体で使用され、次の表に、関連する用語の概要を示します。
+使い始める前に、Adobe Experience Platform [!DNL Data Science Workspace] は、API と UI 内の類似した要素を示すために異なる用語を使用します。 API の用語はこのチュートリアル全体で使用され、次の表に、関連する用語の概要を示します。
 
 | UI の用語 | API 用語 |
 | ---- | ---- |
@@ -26,7 +26,7 @@ ht-degree: 62%
 | トレーニングと評価 | [実験](../api/experiments.md) |
 | サービス | [MLService](../api/mlservices.md) |
 
-エンジンには、特定の問題を解決するための機械学習アルゴリズムとロジックが含まれています。次の図は、[!DNL Data Science Workspace] の API ワークフローを示すビジュアライゼーションを示しています。 このチュートリアルでは、機械学習モデルの頭脳であるエンジンの作成に焦点を当てます。
+エンジンには、特定の問題を解決するための機械学習アルゴリズムとロジックが含まれています。次の図は、 [!DNL Data Science Workspace]. このチュートリアルでは、機械学習モデルの頭脳であるエンジンの作成に焦点を当てます。
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -36,10 +36,10 @@ ht-degree: 62%
 
 - `{DOCKER_URL}`：インテリジェントサービスの Docker イメージへの URL アドレス。
 
-このチュートリアルでは、 API への呼び出しをおこなうために、[Adobe Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+このチュートリアルでは、 API への呼び出しをおこなうために、[Adobe Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
-- `{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+- `{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 - `{API_KEY}`：固有の Adobe Experience Platform 統合で見つかった特定の API キーの値。
 
 ## エンジンの作成
@@ -52,7 +52,7 @@ ht-degree: 62%
 
 >[!CAUTION]
 >
-> [!DNL Python] または R を使用している場合は、以下のリクエストを使用します。 PySpark または Scala を使用している場合は、Python/R の例の下にある PySpark/Scala リクエストの例を使用します。
+> 次を使用する場合： [!DNL Python] または R は以下のリクエストを使用します。 PySpark または Scala を使用している場合は、Python/R の例の下にある PySpark/Scala リクエストの例を使用します。
 
 **API 形式**
 
@@ -68,7 +68,7 @@ curl -X POST \
     -H 'Authorization: {ACCESS_TOKEN}' \
     -H 'X-API-KEY: {API_KEY}' \
     -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H `x-sandbox-name: {SANDBOX_NAME}` \
     -F 'engine={
         "name": "Retail Sales Engine Python",
@@ -88,12 +88,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------  | ----------- |
-| `engine.name` | エンジンの名前。このエンジンに対応するレシピは、[!DNL Data Science Workspace] ユーザーインターフェイスに表示されるこの値をレシピ名として継承します。 |
-| `engine.description` | エンジンのオプションの説明。このエンジンに対応するレシピは、[!DNL Data Science Workspace] ユーザーインターフェイスに表示されるこの値をレシピの説明として継承します。 このプロパティを削除しないでください。説明を指定しない場合は、この値を空白の文字列にします。 |
-| `engine.type` | エンジンの実行タイプ。この値は、Docker 画像の開発言語に対応します。エンジンを作成するための Docker URL が指定された場合、`type` は `Python`、`R`、`PySpark`、`Spark`(Scala)、`Tensorflow` のいずれかです。 |
-| `artifacts.default.image.location` | `{DOCKER_URL}` はここに入ります。 完全な Docker URL は次の構造を持ちます。`your_docker_host.azurecr.io/docker_image_file:version` |
+| `engine.name` | エンジンの名前。このエンジンに対応するレシピは、に表示されるこの値を継承します [!DNL Data Science Workspace] レシピ名としてのユーザーインターフェイス。 |
+| `engine.description` | エンジンのオプションの説明。このエンジンに対応するレシピは、に表示されるこの値を継承します [!DNL Data Science Workspace] ユーザーインターフェイスをレシピの説明として使用します。 このプロパティを削除しないでください。説明を指定しない場合は、この値を空白の文字列にします。 |
+| `engine.type` | エンジンの実行タイプ。この値は、Docker 画像の開発言語に対応します。エンジンを作成するための Docker URL が提供された場合、 `type` 次のいずれか `Python`, `R`, `PySpark`, `Spark` (Scala) または `Tensorflow`. |
+| `artifacts.default.image.location` | お使いの `{DOCKER_URL}` ここに行く 完全な Docker URL の構造は次のとおりです。 `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Docker イメージファイルの追加名。 このプロパティを削除しないでください。Docker 画像ファイル名を指定しない場合は、この値を空白の文字列にします。 |
-| `artifacts.default.image.executionType` | このエンジンの実行タイプ。 この値は、Docker 画像の開発言語に対応します。エンジンを作成するための Docker URL が指定された場合、`executionType` は `Python`、`R`、`PySpark`、`Spark`(Scala)、`Tensorflow` のいずれかです。 |
+| `artifacts.default.image.executionType` | このエンジンの実行タイプ。 この値は、Docker 画像の開発言語に対応します。エンジンを作成するための Docker URL が提供された場合、 `executionType` 次のいずれか `Python`, `R`, `PySpark`, `Spark` (Scala) または `Tensorflow`. |
 
 **PySpark をリクエスト**
 
@@ -102,7 +102,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -127,19 +127,19 @@ curl -X POST \
 | --- | --- |
 | `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `type` | エンジンの実行タイプ。この値は、「PySpark」を基に Docker イメージが構築される言語に対応します。 |
-| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 |
+| `type` | エンジンの実行タイプ。この値は、Docker イメージが「PySpark」を基に構築される言語に対応します。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールド。 |
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、「Spark」を基に Docker イメージが構築される言語に対応します。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージが「Spark」を基に構築される言語に対応します。 |
 
-**リクエスト Scala**
+**Request Scala**
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -164,14 +164,14 @@ curl -X POST \
 | --- | --- |
 | `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `type` | エンジンの実行タイプ。この値は、「Spark」を基に Docker イメージが構築される言語に対応します。 |
-| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 |
+| `type` | エンジンの実行タイプ。この値は、Docker イメージが「Spark」を基に構築される言語に対応します。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールド。 |
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、「Spark」を基に Docker イメージが構築される言語に対応します。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージが「Spark」を基に構築される言語に対応します。 |
 
 **応答**
 
-正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次のレスポンスの例は、[!DNL Python] エンジン用です。 `executionType` キーと `type` キーは、指定されたPOSTに基づいて変更されます。
+正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次のレスポンスの例は、 [!DNL Python] エンジン。 この `executionType` および `type` キーは、指定されたPOSTに基づいて変更されます。
 
 ```json
 {

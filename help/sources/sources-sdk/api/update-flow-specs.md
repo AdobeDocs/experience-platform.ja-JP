@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: フローサービス API（ベータ版）を使用したフロー仕様の更新
 topic-legacy: developer guide
 description: 次のドキュメントでは、ソース SDK 用の Flow Service API を使用して、フロー仕様を取得および更新する手順を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 2%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->ソース SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
+>Sources SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。このドキュメントで説明されている機能は変更されることがあります。
 
 新しい接続仕様 ID を生成したら、データフローを作成するために、フロー仕様にこの ID を追加する必要があります。
 
@@ -26,7 +27,7 @@ ht-degree: 2%
 
 ## はじめに
 
-続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のExperience PlatformAPI を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
+先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## フロー仕様の検索 {#lookup}
 
@@ -48,7 +49,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -69,7 +70,7 @@ curl -X GET \
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
@@ -261,7 +262,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
 `     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
@@ -445,7 +446,7 @@ PUT -X GET \
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

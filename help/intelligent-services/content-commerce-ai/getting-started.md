@@ -5,7 +5,7 @@ title: Content and Commerce AI の概要
 topic-legacy: Getting started
 description: Content and Commerce AI はAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%
@@ -28,11 +28,11 @@ ht-degree: 14%
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Postman環境の作成（オプション）
 
-Adobe開発者コンソール内でプロジェクトと API を設定したら、Postman用の環境ファイルをダウンロードするオプションがあります。 の下 **[!UICONTROL API]** プロジェクトの左側のパネルで、「 **[!UICONTROL Content and Commerce AI]**. 新しいタブが開き、「[!DNL Try it out]&quot;. 選択 **Postman用のダウンロード** をクリックして、postman 環境の設定に使用する JSON ファイルをダウンロードします。
+Adobe開発者コンソール内でプロジェクトと API を設定したら、Postman用の環境ファイルをダウンロードするオプションがあります。 の下 **[!UICONTROL API]** プロジェクトの左側のパネルで、「 **[!UICONTROL Content and Commerce AI]**. 新しいタブが開き、「[!DNL Try it out]&quot;. 選択 **Postman 用にダウンロード** をクリックして、postman 環境の設定に使用する JSON ファイルをダウンロードします。
 
 ![postman 用にダウンロード](./images/add-to-postman.png)
 

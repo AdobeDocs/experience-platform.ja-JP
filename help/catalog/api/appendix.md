@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ api；付録
+keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログ api；付録
 solution: Experience Platform
 title: カタログサービス API ガイドの付録
 topic-legacy: developer guide
 description: このドキュメントには、Adobe Experience Platformでカタログ API を使用する際に役立つ追加情報が含まれています。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 75%
@@ -14,11 +14,11 @@ ht-degree: 75%
 
 # [!DNL Catalog Service] API ガイドの付録
 
-このドキュメントには、[!DNL Catalog] API を使用する際に役立つ追加情報が含まれています。
+このドキュメントでは、 [!DNL Catalog] API
 
 ## 相互に関連するオブジェクトの表示 {#view-interrelated-objects}
 
-一部の [!DNL Catalog] オブジェクトは、他の [!DNL Catalog] オブジェクトと相互に関連付けることができます。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
+一部 [!DNL Catalog] オブジェクトは他のオブジェクトと相互に関連付けることができます [!DNL Catalog] オブジェクト。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
 
 [特定のデータセットの検索](look-up-object.md)時にドキュメントに返されるデータセットの例には、URI 値 `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"` を持つ `files` フィールドが含まれています。この URI を新しい GET リクエストのパスとして使用すると、`files` フィールドの内容を表示できます。
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -55,7 +55,7 @@ curl -X GET \
         "id": "7d501090-0280-11ea-a6bb-f18323b7005c-1",
         "batchId": "7d501090-0280-11ea-a6bb-f18323b7005c",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -67,7 +67,7 @@ curl -X GET \
         "id": "148ac690-0280-11ea-8d23-8571a35dce49-1",
         "batchId": "148ac690-0280-11ea-8d23-8571a35dce49",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -79,7 +79,7 @@ curl -X GET \
         "id": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb-1",
         "batchId": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -92,9 +92,9 @@ curl -X GET \
 
 ## 1 回の呼び出しでの複数リクエスト
 
-[!DNL Catalog] API のルートエンドポイントを使用すると、1 回の呼び出しで複数のリクエストを実行できます。 リクエストのペイロードには、通常は個々のリクエストを表すオブジェクトの配列が含まれており、順番に実行されます。
+のルートエンドポイント [!DNL Catalog] API を使用すると、1 回の呼び出しで複数のリクエストを実行できます。 リクエストのペイロードには、通常は個々のリクエストを表すオブジェクトの配列が含まれており、順番に実行されます。
 
-これらのリクエストが [!DNL Catalog] に対する変更または追加で、いずれかの変更が失敗した場合、すべての変更が元に戻ります。
+これらのリクエストが [!DNL Catalog] どの変更も失敗し、すべての変更が元に戻ります。
 
 **API 形式**
 
@@ -117,7 +117,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/catalog \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -144,14 +144,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 応答にリクエストを照合できるように、応答オブジェクトに添付されるユーザー指定の ID。[!DNL Catalog] はこの値を格納せず、単に参照用に応答で返します。 |
-| `resource` | [!DNL Catalog] API のルートに対する相対リソースパス。 プロトコルとドメインはこの値の一部ではなく、「/」というプリフィックスを付ける必要があります。<br/><br/> サブリクエストの `method` として PATCH または DELETE を使用する場合は、リソースパスにオブジェクト ID を含めます。ユーザーが指定した `id` と混同しないように、リソースパスは [!DNL Catalog] オブジェクト自体の ID（例えば `resource: "/dataSets/1234567890"`）を使用します。 |
+| `id` | 応答にリクエストを照合できるように、応答オブジェクトに添付されるユーザー指定の ID。[!DNL Catalog] はこの値を格納せず、参照用に応答で返します。 |
+| `resource` | リソースのルートを基準としたリソースパス [!DNL Catalog] API プロトコルとドメインはこの値の一部ではなく、「/」というプリフィックスを付ける必要があります。<br/><br/> サブリクエストの `method` として PATCH または DELETE を使用する場合は、リソースパスにオブジェクト ID を含めます。ユーザーが指定した `id`の場合、リソースパスは [!DNL Catalog] オブジェクト自体 ( 例： `resource: "/dataSets/1234567890"`) をクリックします。 |
 | `method` | リクエストでとられるアクションに関連するメソッド（GET、PUT、POST、PATCH、DELETE）の名前。 |
 | `body` | 通常、POST、PUT、PATCH リクエストのペイロードとして渡される JSON ドキュメント。このプロパティは、GET または DELETE リクエストには必要ありません。 |
 
 **応答**
 
-成功した応答は、各リクエストに割り当てた `id`、個々のリクエストの HTTP ステータスコード、および応答 `body` を含むオブジェクトの配列を返します。3 つのリクエスト例はすべて新しいオブジェクトを作成するものなので、各オブジェクトの `body` は、新しく作成されたオブジェクトの ID のみを含む配列であり、[!DNL Catalog] でのPOST応答で最も成功した標準です。
+成功した応答は、各リクエストに割り当てた `id`、個々のリクエストの HTTP ステータスコード、および応答 `body` を含むオブジェクトの配列を返します。3 つのリクエスト例はすべて新しいオブジェクトを作成するため、 `body` 各オブジェクトのは、新しく作成されたオブジェクトの ID のみを含む配列で、は、成功したPOST応答で最も多い [!DNL Catalog].
 
 ```json
 [
@@ -192,6 +192,6 @@ curl -X POST \
 
 ## データの圧縮
 
-圧縮は、データを変更せずに小さなファイルのデータを大きなファイルに結合する [!DNL Experience Platform] サービスです。 パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
+圧縮は [!DNL Experience Platform] データを変更せずに小さいファイルのデータを大きいファイルに結合するサービス。 パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
 
-取り込まれたバッチ内のファイルが圧縮されると、関連する [!DNL Catalog] オブジェクトが監視目的で更新されます。
+取り込まれたバッチ内のファイルが圧縮されると、関連付けられた [!DNL Catalog] オブジェクトが、監視目的で更新されます。

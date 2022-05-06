@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；Mixin レジストリ；スキーマレジストリ；Mixin;Mixin;Mixin；作成
+keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；Mixin レジストリ；Mixin;Mixin;Mixin;Mixin；作成
 solution: Experience Platform
-title: Mixin API エンドポイント
-description: スキーマレジストリ API の/mixin エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM Mixin をプログラムで管理できます。
+title: Mixins API エンドポイント
+description: スキーマレジストリ API の/mixins エンドポイントを使用すると、エクスペリエンスアプリケーション内で XDM Mixin をプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1210'
-ht-degree: 14%
+ht-degree: 18%
 
 ---
 
 
-# Mixin エンドポイント（非推奨）
+# Mixin エンドポイント（廃止）
 
 >[!IMPORTANT]
 >
->Mixin の名前がスキーマフィールドグループに変更されたので、`/mixins` エンドポイントは廃止され、`/fieldgroups` エンドポイントに置き換えられました。
+>Mixin の名前は、スキーマフィールドグループに変更されたので、 `/mixins` エンドポイントは非推奨 ( 代わりに `/fieldgroups` endpoint.
 >
->`/mixins` は引き続きレガシーエンドポイントとして維持されますが、エクスペリエンスアプリケーションでスキーマレジストリ API の新しい実装には `/fieldgroups` を使用することを強くお勧めします。 詳しくは、[ フィールドグループエンドポイントガイド ](./field-groups.md) を参照してください。
+>While `/mixins` は従来のエンドポイントとして引き続き維持されます。を使用することを強くお勧めします。 `/fieldgroups` を参照してください。 詳しくは、 [フィールドグループエンドポイントガイド](./field-groups.md) を参照してください。
 
-Mixin は、個人、郵送先住所、Web ブラウザー環境など、特定の概念を表す 1 つ以上のフィールドを定義する再利用可能なコンポーネントです。 Mixin は、表すデータ（レコードまたは時系列）の動作に応じて、互換性のあるクラスを実装するスキーマの一部として含まれることを意図しています。 [!DNL Schema Registry] API の `/mixins` エンドポイントを使用すると、エクスペリエンスアプリケーション内の Mixin をプログラムで管理できます。
+Mixin は、個人、郵送先住所、Web ブラウザー環境など、特定の概念を表す 1 つ以上のフィールドを定義する再利用可能なコンポーネントです。 Mixin は、表すデータ（レコードまたは時系列）の動作に応じて、互換性のあるクラスを実装するスキーマの一部として含まれることを意図しています。 この `/mixins` エンドポイント [!DNL Schema Registry] API を使用すると、エクスペリエンスアプリケーション内の Mixin をプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## Mixin のリストの取得 {#list}
 
-`/global/mixins` または `/tenant/mixins` に対してGETリクエストを実行することで、 `global` コンテナまたは `tenant` コンテナの下にあるすべての mixin をリストできます。
+すべての mixin は、 `global` または `tenant` コンテナを作成するには、次に対してGETリクエストを実行します。 `/global/mixins` または `/tenant/mixins`、それぞれ。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが 300 項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、付録のドキュメントの [ クエリパラメータ ](./appendix.md#query) の節を参照してください。
+>リソースをリストする場合、スキーマレジストリでは結果セットを 300 項目に制限します。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、 [クエリパラメーター](./appendix.md#query) 詳しくは、付録のドキュメントを参照してください。
 
 **API 形式**
 
@@ -43,14 +43,14 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | Mixin の取得元のコンテナ：`global` はAdobeが作成した mixin の場合、`tenant` は組織が所有する mixin の場合です。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。使用可能なパラメータのリストについては、付録の [ ドキュメント ](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | Mixin を取得するコンテナ： `global` (Adobeで作成された mixin またはの ) `tenant` 組織が所有する mixin の場合。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストでは、`tenant` コンテナから mixin のリストを取得し、`orderby` クエリパラメーターを使用して mixin を `title` 属性で並べ替えます。
+次のリクエストは、 `tenant` コンテナ、使用 `orderby` mixin を `title` 属性。
 
 ```shell
 curl -X GET \
@@ -58,22 +58,22 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 Mixin のリストには、次の `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` ヘッダーを mixin のリストに使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する際に推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON mixin を返し、元の `$ref` と `allOf` が含まれます。 ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON mixin を元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-上記のリクエストでは `application/vnd.adobe.xed-id+json` `Accept` ヘッダーが使用されていたので、応答には各 mixin の `title`、`$id`、`meta:altId` および `version` 属性のみが含まれています。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) を使用すると、各 mixin のすべての属性が返されます。 応答で必要な情報に応じて、適切な `Accept` ヘッダーを選択します。
+上記のリクエストでは、 `application/vnd.adobe.xed-id+json` `Accept` したがって、応答には `title`, `$id`, `meta:altId`、および `version` 各 mixin の属性。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) は各 mixin のすべての属性を返します。 適切な `Accept` ヘッダーを作成します。
 
 ```json
 {
@@ -129,14 +129,14 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得する mixin を格納するコンテナ：`global` はAdobeが作成した mixin の場合、または `tenant` は組織が所有する mixin の場合です。 |
-| `{MIXIN_ID}` | 検索する mixin の `meta:altId` または URL エンコードされた `$id`。 |
+| `{CONTAINER_ID}` | 取得する mixin を格納するコンテナ： `global` Adobeが作成した mixin または `tenant` 組織が所有する Mixin の場合。 |
+| `{MIXIN_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索する mixin の数を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、パスで指定された `meta:altId` 値で mixin を取得します。
+次のリクエストでは、 `meta:altId` の値がパスに指定されました。
 
 ```shell
 curl -X GET \
@@ -144,11 +144,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 すべての検索リクエストでは、`version` を `Accept` ヘッダーに含める必要があります。 次の `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 すべての検索リクエストには `version` 含まれる `Accept` ヘッダー。 以下 `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -162,7 +162,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、mixin の詳細を返します。 返されるフィールドは、リクエストで送信される `Accept` ヘッダーによって異なります。 異なる `Accept` ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
+正常な応答は、mixin の詳細を返します。 返されるフィールドは、 `Accept` ヘッダーがリクエストで送信されました。 異なるを使用した実験 `Accept` ヘッダーを使用して、応答を比較し、使用事例に最適なヘッダーを決定します。
 
 ```json
 {
@@ -201,7 +201,7 @@ curl -X GET \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -225,7 +225,7 @@ curl -X GET \
 
 ## Mixin の作成 {#create}
 
-POSTリクエストを実行することで、 `tenant` コンテナの下にカスタム mixin を定義できます。
+カスタム mixin は、 `tenant` コンテナを含める必要があります。POSTリクエストを実行します。
 
 **API 形式**
 
@@ -235,11 +235,11 @@ POST /tenant/mixins
 
 **リクエスト**
 
-新しい mixin を定義する場合は、`meta:intendedToExtend` 属性を含めて、その mixin と互換性があるクラスの `$id` をリストする必要があります。この例では、mixin は、以前に定義した `Property` クラスと互換性があります。 クラスや他の mixin によって提供される同様のフィールドとの競合を避けるために、カスタムフィールドは `_{TENANT_ID}` の下にネストする必要があります（例で示すように）。
+新しい mixin を定義する場合は、`meta:intendedToExtend` 属性を含めて、その mixin と互換性があるクラスの `$id` をリストする必要があります。この例では、mixin は `Property` 以前に定義されたクラス。 カスタムフィールドはの下にネストする必要があります `_{TENANT_ID}` （例で示すように）を使用して、クラスや他の mixin によって提供される類似のフィールドとの競合を回避します。
 
 >[!NOTE]
 >
->Mixin に含める様々なフィールドタイプの定義方法について詳しくは、『[ フィールド制約ガイド ](../schema/field-constraints.md#define-fields)』を参照してください。
+>mixin に含める様々なフィールドタイプを定義する方法について詳しくは、 [フィールド制約ガイド](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -247,7 +247,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Property Details",
@@ -308,7 +308,7 @@ curl -X POST \
 
 **応答**
 
-成功した応答は、HTTP ステータス 201 （Created）と、新しく作成された mixin の詳細（`$id`、`meta:altId`、`version` など）を含むペイロードを返します。これらの値は読み取り専用で、[!DNL Schema Registry] によって割り当てられます。
+成功した応答は、HTTP ステータス 201 （Created）と、新しく作成された mixin の詳細（`$id`、`meta:altId`、`version` など）を含むペイロードを返します。これらの値は読み取り専用で、 [!DNL Schema Registry].
 
 ```JSON
 {
@@ -370,7 +370,7 @@ curl -X POST \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -392,15 +392,15 @@ curl -X POST \
 }
 ```
 
-テナントコンテナ内の [ すべての mixin](#list) に対してGETリクエストを実行すると、プロパティの詳細 mixin が含まれます。または、URL エンコードされた `$id` URI を使用して [ 検索 (GET) リクエスト ](#lookup) を実行し、新しい mixin を直接表示できます。
+へのGETリクエストの実行 [すべての mixin のリスト](#list) テナントコンテナにプロパティの詳細の mixin が含まれるようになります。または、 [ルックアップ (GET) リクエストの実行](#lookup) URL エンコードされたを使用 `$id` 新しい mixin を直接表示する URI。
 
 ## Mixin の更新 {#put}
 
-Mixin 全体を置き換えるには、PUT操作を使用し、基本的にリソースを書き直します。 PUTリクエストを通じて mixin を更新する場合、本文には、POSTリクエストで [ 新しい mixin](#create) を作成する際に必要となるすべてのフィールドを含める必要があります。
+mixin 全体をPUT操作で置き換え、基本的にリソースを書き直すことができます。 PUTリクエストを通じて mixin を更新する場合、本文には、 [新しい mixin の作成](#create) POST。
 
 >[!NOTE]
 >
->完全に置き換える代わりに mixin の一部のみを更新する場合は、[mixin](#patch) の一部の更新に関する節を参照してください。
+>完全に置き換えるのではなく、mixin の一部のみを更新する場合は、 [mixin の一部の更新](#patch).
 
 **API 形式**
 
@@ -410,13 +410,13 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MIXIN_ID}` | 書き直す mixin の `meta:altId` または URL エンコードされた `$id`。 |
+| `{MIXIN_ID}` | この `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、新しい `propertyCountry` フィールドを追加して、既存の mixin を書き換えます。
+次のリクエストは、新しい `propertyCountry` フィールドに入力します。
 
 ```SHELL
 curl -X PUT \
@@ -424,7 +424,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title": "Property Details",
@@ -557,7 +557,7 @@ curl -X PUT \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -581,11 +581,11 @@ curl -X PUT \
 
 ## Mixin の一部の更新 {#patch}
 
-Mixin の一部を更新するには、PATCHリクエストを使用します。 [!DNL Schema Registry] は、`add`、`remove`、`replace` を含む、すべての標準的な JSON パッチ操作をサポートしています。 JSON パッチの詳細については、[API の基本ガイド ](../../landing/api-fundamentals.md#json-patch) を参照してください。
+mixin の一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、「PUT」操作 ](#put) を使用した mixin の置き換えに関する節を参照してください。[
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、 [PUT操作を使用した mixin の置き換え](#put).
 
 **API 形式**
 
@@ -595,22 +595,22 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MIXIN_ID}` | 更新する mixin の URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{MIXIN_ID}` | URL エンコードされた `$id` URI or `meta:altId` 更新する mixin の。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次の例のリクエストは、既存の mixin の `description` を更新し、新しい `propertyCity` フィールドを追加します。
+以下のリクエスト例は、 `description` を追加し、新しい `propertyCity` フィールドに入力します。
 
-リクエスト本文は配列の形式をとり、リストされた各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作 (`op`)、操作を実行するフィールド (`path`)、およびその操作に含める情報 (`value`) を含む。
+リクエスト本文は配列の形式をとり、リストに表示される各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトには、実行される操作 (`op`) を呼び出し、操作を実行する必要があるフィールド (`path`) と、その操作に含める必要のある情報 (`value`) をクリックします。
 
 ```SHELL
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -633,7 +633,7 @@ curl -X PATCH \
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。`description` が更新され、`propertyCountry` が `definitions` に追加されました。
+応答には、両方の操作が正常に実行されたことが示されます。この `description` が更新され、 `propertyCountry` は以下に追加されています： `definitions`.
 
 ```JSON
 {
@@ -700,7 +700,7 @@ curl -X PATCH \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -734,7 +734,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MIXIN_ID}` | 削除する mixin の URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{MIXIN_ID}` | URL エンコードされた `$id` URI or `meta:altId` 削除する mixin の数を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -745,12 +745,12 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-[ ルックアップ (GET) リクエスト ](#lookup) を mixin に対して試行することで、削除を確認できます。 リクエストに `Accept` ヘッダーを含める必要がありますが、Mixin がスキーマレジストリから削除されたので、HTTP ステータス 404(Not Found) を受け取る必要があります。
+削除を確認するには、 [参照 (GET) リクエスト](#lookup) を mixin に追加します。 次を含める必要があります： `Accept` ヘッダーを使用しますが、mixin がスキーマレジストリから削除されているので、HTTP ステータス 404(Not Found) を受け取る必要があります。

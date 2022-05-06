@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；オブジェクトの削除；カタログサービス；api
+keywords: Experience Platform；ホーム；人気の高いトピック；オブジェクトの削除；カタログサービス；API
 solution: Experience Platform
 title: API でのオブジェクトの削除
 topic-legacy: developer guide
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 47%
@@ -14,11 +14,11 @@ ht-degree: 47%
 
 # API でのオブジェクトの削除
 
-[!DNL Catalog] オブジェクトを削除するには、削除リクエストのパスに ID を指定します。DELETE
+次の項目を削除できます。 [!DNL Catalog] オブジェクト内に含める必要があります。
 
 >[!WARNING]
 >
->オブジェクトの削除は元に戻せず、[!DNL Experience Platform] の他の場所で破壊的な変更が生じる可能性があるので、特に注意が必要です。
+>オブジェクトの削除は元に戻せず、内の他の場所で破壊的な変更が生じる可能性があるので、特に注意が必要です。 [!DNL Experience Platform].
 
 **API 形式**
 
@@ -28,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->`DELETE /batches/{ID}` エンドポイントは非推奨です。 バッチを削除するには、[ バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) を使用する必要があります。
+>この `DELETE /batches/{ID}` エンドポイントは非推奨になりました。 バッチを削除するには、 [バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 削除する [!DNL Catalog] オブジェクトの種類。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -44,7 +44,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -60,4 +60,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->リクエストで指定した ID に一致する [!DNL Catalog] オブジェクトがない場合でも、HTTP ステータスコード 200 が表示される可能性がありますが、応答配列は空になります。
+>指定しない場合 [!DNL Catalog] オブジェクトはリクエストで指定された ID に一致します。HTTP ステータスコード 200 が表示される場合がありますが、応答配列は空になります。

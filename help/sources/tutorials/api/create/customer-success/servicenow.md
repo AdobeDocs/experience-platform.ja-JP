@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを ServiceNow サーバーに接続する方法を説明します。
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 57%
@@ -66,7 +66,7 @@ curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

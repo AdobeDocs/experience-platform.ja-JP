@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；プレビュー；予測；プレビューと予測；予測と予測；予測とプレビュー；api;API;
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；プレビュー；予測；プレビューと予測；予測とプレビュー；API;
 solution: Experience Platform
-title: API エンドポイントのプレビューと予測
+title: プレビューと推定 API エンドポイント
 topic-legacy: developer guide
-description: セグメント定義の作成時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待されるオーディエンスを確実に特定することができます。
+description: セグメント定義の開発時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待されるオーディエンスを確実に特定することができます。
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 21%
 
 ---
 
-# プレビューとエンドポイントの予測
+# プレビューと推定エンドポイント
 
-セグメント定義の作成時に、Adobe Experience Platformの推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待するオーディエンスを確実に特定することができます。
+セグメント定義の作成時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待するオーディエンスを確実に特定することができます。
 
 * **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。**
 
-* **** 推定値は、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報を提供します。
+* **見積** は、推定オーディエンスサイズ、信頼区間、エラーの標準偏差など、セグメント定義の統計情報を提供します。
 
 >[!NOTE]
 >
->特定の名前空間内のプロファイルフラグメントと結合されたプロファイルの合計数、またはプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する同様の指標にアクセスするには、プロファイル API 開発者ガイドの [ プロファイルプレビュー（サンプルステータス）エンドポイントガイド ](../../profile/api/preview-sample-status.md) を参照してください。
+>特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数、またはプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する類似の指標にアクセスするには、 [プロファイルプレビュー（サンプルステータスのプレビュー）エンドポイントガイド](../../profile/api/preview-sample-status.md)（プロファイル API 開発者ガイドの一部）
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、[ はじめに ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しを含む API を正しく呼び出すために知っておく必要がある重要な情報を確認してください。
+このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## 推定の生成方法
 
-レコードのプロファイルストアへの取り込みで、プロファイルの合計数が 5%以上増減すると、サンプリングジョブがトリガーされ、カウントが更新されます。 データサンプリングのトリガー方法は、取り込み方法によって異なります。
+レコードのプロファイルストアへの取り込みがプロファイルの合計数の 5%以上増加または減少すると、サンプリングジョブがトリガーされ、カウントが更新されます。 データサンプリングがトリガーされる方法は、取り込み方法に応じて異なります。
 
-* **バッチ取得：** バッチ取得の場合、プロファイルストアへのバッチの取り込みが成功してから 15 分以内に、5%の増減しきい値に達すると、ジョブが実行されてカウントが更新されます。
-* **ストリーミングの取り込み：** ストリーミングデータワークフローの場合、5%の増減しきい値を満たしているかどうかを判断するために、1 時間ごとにチェックがおこなわれます。ある場合は、ジョブが自動的にトリガーされ、カウントが更新されます。
+* **バッチ取り込み：** バッチ取り込みの場合、バッチをプロファイルストアに正常に取り込んでから 15 分以内に、5%の増減しきい値に達した場合は、ジョブが実行されてカウントが更新されます。
+* **ストリーミング取り込み：** ストリーミングデータワークフローの場合は、5%の増減しきい値を満たしているかどうかを判断するために、1 時間ごとにチェックが行われます。 存在する場合は、ジョブが自動的にトリガーされ、カウントが更新されます。
 
-スキャンのサンプルサイズは、プロファイルストア内のエンティティの全体数によって異なります。 これらのサンプルサイズを次の表に示します。
+スキャンのサンプルサイズは、プロファイルストア内のエンティティの総数によって異なります。 これらのサンプルサイズを次の表に示します。
 
 | プロファイルストア内のエンティティ数 | サンプルサイズ |
 | ------------------------- | ----------- |
@@ -45,7 +45,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->通常、推定の実行には 10～15 秒かかります。最初は大まかな見積もりで、読み取るレコードが増えるにつれて精度が向上します。
+>推定の実行には通常、10 ～ 15 秒かかります。最初は大まかな推定で、読み取るレコードが増えるにつれて精度が向上します。
 
 ## プレビューの新規作成 {#create-preview}
 
@@ -53,7 +53,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->プレビュージョブの作成時に、推定ジョブが自動的に作成されます。 この 2 つのジョブは同じ ID を共有します。
+>プレビュージョブの作成時に、見積ジョブが自動的に作成されます。 これらの 2 つのジョブは同じ ID を共有します。
 
 **API 形式**
 
@@ -67,7 +67,7 @@ POST /preview
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -82,9 +82,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `predicateExpression` | データのクエリに使用する PQL 式です。 |
-| `predicateType` | `predicateExpression` の下のクエリ式の述語の種類。 現在、このプロパティで使用できる値は `pql/text` のみです。 |
-| `predicateModel` | プロファイルデータの基になる [!DNL Experience Data Model] (XDM) スキーマクラスの名前。 |
-| `graphType` | クラスターの取得元のグラフタイプ。 サポートされている値は `none`（ID ステッチを実行しない）および `pdg`（プライベートの ID グラフに基づいて ID ステッチを実行）です。 |
+| `predicateType` | の下にあるクエリ式の述語タイプ。 `predicateExpression`. 現在、このプロパティに使用できる値は次のみです： `pql/text`. |
+| `predicateModel` | の名前 [!DNL Experience Data Model] (XDM) プロファイルデータの基になるスキーマクラス。 |
+| `graphType` | クラスターの取得元のグラフタイプです。 サポートされている値は次のとおりです。 `none` （ID のステッチを実行しない）および `pdg` （は、プライベートの ID グラフに基づいて ID ステッチを実行します）。 |
 
 **応答**
 
@@ -103,11 +103,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `state` | プレビュージョブの現在の状態です。最初に作成した場合は、「NEW」状態になります。 その後、処理が完了するまで「RUNNING」状態になり、完了した時点で「RESULT_READY」または「FAILED」になります。 |
-| `previewId` | 次の節で説明するように、推定またはプレビューを表示する際に参照目的で使用される、プレビュージョブの ID。 |
+| `previewId` | プレビュージョブの ID。推定またはプレビューを表示する際に参照目的で使用されます（次の節を参照）。 |
 
 ## 特定のプレビューの結果の取得 {#get-preview}
 
-`/preview` エンドポイントにGETリクエストを送信し、リクエストパスにプレビュー ID を指定することで、特定のプレビューに関する詳細な情報を取得できます。
+特定のプレビューに関する詳細な情報を取得するには、GETリクエストを `/preview` エンドポイントを作成し、リクエストパスにプレビュー ID を指定する。
 
 **API 形式**
 
@@ -117,14 +117,14 @@ GET /preview/{PREVIEW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 取得するプレビューの `previewId` 値。 |
+| `{PREVIEW_ID}` | この `previewId` 取得するプレビューの値。 |
 
 **リクエスト**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -180,11 +180,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティ ID と関連 ID のリスト。 提供されたリンクは、[ プロファイルアクセス API エンドポイント ](../../profile/api/entities.md) を使用して、指定されたエンティティを検索するために使用できます。 |
+| `results` | エンティティ ID のリストと、その関連 ID。 提供されたリンクは、 [プロファイルアクセス API エンドポイント](../../profile/api/entities.md). |
 
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
-プレビュージョブを作成したら、 `/estimate` エンドポイントへのGETリクエストのパスでその `previewId` を使用して、予測されるオーディエンスサイズ、信頼区間、エラーの標準偏差など、セグメント定義の統計情報を表示できます。
+プレビュージョブを作成したら、そのジョブを使用できます `previewId` を `/estimate` endpoint ：推定オーディエンスサイズ、信頼区間、エラーの標準偏差など、セグメント定義に関する統計情報を表示します。
 
 **API 形式**
 
@@ -194,7 +194,7 @@ GET /estimate/{PREVIEW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 推定ジョブは、プレビュージョブが作成された場合にのみトリガーされ、2 つのジョブは参照用に同じ ID 値を共有します。 特に、プレビュージョブの作成時に返される `previewId` 値です。 |
+| `{PREVIEW_ID}` | 見積ジョブは、プレビュージョブが作成された場合にのみトリガーされ、2 つのジョブは参照用に同じ ID 値を共有します。 特に、 `previewId` プレビュージョブの作成時に返される値。 |
 
 **リクエスト**
 
@@ -203,7 +203,7 @@ GET /estimate/{PREVIEW_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -246,8 +246,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 | -------- | ----------- |
 | `estimatedNamespaceDistribution` | ID 名前空間で分類された、セグメント内のプロファイル数を示すオブジェクトの配列。 1 つのプロファイルが複数の名前空間に関連付けられている可能性があるので、名前空間別のプロファイルの合計数（名前空間ごとに表示される値を加算）は、プロファイル数指標より多くなる場合があります。 例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。 |
 | `state` | プレビュージョブの現在の状態です。処理が完了するまで、状態は「RUNNING」になり、完了した時点で「RESULT_READY」または「FAILED」になります。 |
-| `_links.preview` | `state` が「RESULT_READY」の場合、このフィールドには推定を表示する URL が表示されます。 |
+| `_links.preview` | 次の場合に `state` が「RESULT_READY」の場合、このフィールドには推定を表示する URL が表示されます。 |
 
 ## 次の手順
 
-このガイドを読んだ後、Segmentation API を使用してプレビューと推定を操作する方法をより深く理解する必要があります。 特定の名前空間内のプロファイルフラグメントと結合されたプロファイルの合計数、またはプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する指標にアクセスする方法については、[ プロファイルのプレビュー (`/previewsamplestatus`) エンドポイントガイド ](../../profile/api/preview-sample-status.md) を参照してください。
+このガイドを読んだ後、Segmentation API を使用してプレビューと推定を操作する方法をより深く理解する必要があります。 特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数、またはプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する指標にアクセスする方法については、 [プロファイルプレビュー (`/previewsamplestatus`) エンドポイントガイド](../../profile/api/preview-sample-status.md).

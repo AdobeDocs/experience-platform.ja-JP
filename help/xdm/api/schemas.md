@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；スキーマ；スキーマ；作成
+keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；スキーマ；作成
 solution: Experience Platform
 title: スキーマ API エンドポイント
-description: スキーマレジストリ API の/schemas エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM スキーマをプログラムで管理できます。
+description: Schema Registry API の/schemas エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM スキーマをプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1454'
-ht-degree: 18%
+ht-degree: 21%
 
 ---
 
 # スキーマエンドポイント
 
-スキーマは、Adobe Experience Platformに取り込むデータのブループリントと見なすことができます。 各スキーマは、クラスと 0 個以上のスキーマフィールドグループで構成されます。 [!DNL Schema Registry] API の `/schemas` エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
+スキーマは、Adobe Experience Platformに取り込むデータのブループリントと考えることができます。 各スキーマは、クラスと、0 個以上のスキーマフィールドグループで構成されます。 この `/schemas` エンドポイント [!DNL Schema Registry] API を使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方、およびExperience PlatformAPI を正しく呼び出すために必要なヘッダーに関する重要な情報については、[ はじめに ](./getting-started.md) を参照してください。
+このガイドで使用する API エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## スキーマのリストの取得 {#list}
 
-`/global/schemas` または `/tenant/schemas` に対してGETリクエストを実行すると、 `global` コンテナまたは `tenant` コンテナの下にあるすべてのスキーマをリストできます。
+すべてのスキーマを `global` または `tenant` コンテナを作成するには、次に対してGETリクエストを実行します。 `/global/schemas` または `/tenant/schemas`、それぞれ。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが 300 項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、付録のドキュメントの [ クエリパラメータ ](./appendix.md#query) の節を参照してください。
+>リソースをリストする場合、スキーマレジストリでは結果セットを 300 項目に制限します。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、追加のクエリパラメーターを使用して結果をフィルタリングし、返されるリソースの数を減らすことをお勧めします。 詳しくは、 [クエリパラメーター](./appendix.md#query) 詳しくは、付録のドキュメントを参照してください。
 
 **API 形式**
 
@@ -36,14 +36,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：`global` はAdobeが作成したスキーマの場合、`tenant` は組織が所有するスキーマの場合です。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。使用可能なパラメータのリストについては、付録の [ ドキュメント ](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ： `global` (Adobe作成スキーマの場合 ) または `tenant` ：組織が所有するスキーマの場合。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストでは、`tenant` コンテナからスキーマのリストを取得し、`orderby` クエリパラメーターを使用して `title` 属性で結果を並べ替えます。
+次のリクエストは、 `tenant` コンテナ、使用 `orderby` クエリパラメーターを使用して結果を並べ替える `title` 属性。
 
 ```shell
 curl -X GET \
@@ -51,22 +51,22 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 次の `Accept` ヘッダーを使用して、スキーマを一覧表示できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` ヘッダーを使用してスキーマをリストできます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する際に推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 元の `$ref` と `allOf` を含む、各リソースの完全な JSON スキーマを返します。 ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-上記のリクエストでは `application/vnd.adobe.xed-id+json` `Accept` ヘッダーが使用されていたので、応答には各スキーマの `title`、`$id`、`meta:altId` および `version` 属性のみが含まれています。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) を使用すると、各スキーマのすべての属性が返されます。 応答で必要な情報に応じて、適切な `Accept` ヘッダーを選択します。
+上記のリクエストでは、 `application/vnd.adobe.xed-id+json` `Accept` したがって、応答には `title`, `$id`, `meta:altId`、および `version` 属性を指定します。 他の `Accept` ヘッダー (`application/vnd.adobe.xed+json`) は、各スキーマのすべての属性を返します。 適切な `Accept` ヘッダーを作成します。
 
 ```json
 {
@@ -110,14 +110,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：`global`(Adobeが作成したスキーマの場合 ) または `tenant`（組織が所有するスキーマの場合）。 |
-| `{SCHEMA_ID}` | 検索するスキーマの `meta:altId` または URL エンコードされた `$id`。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。 `global` (Adobe作成のスキーマの場合 ) または `tenant` ：組織が所有するスキーマの場合。 |
+| `{SCHEMA_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索するスキーマの数を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、パス内の `meta:altId` 値で指定されたスキーマを取得します。
+次のリクエストは、で指定されたスキーマを取得します。 `meta:altId` パスの値。
 
 ```shell
 curl -X GET \
@@ -125,11 +125,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 すべての検索リクエストでは、`version` を `Accept` ヘッダーに含める必要があります。 次の `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 すべての検索リクエストには `version` 含まれる `Accept` ヘッダー。 以下 `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -143,7 +143,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、スキーマの詳細を返します。 返されるフィールドは、リクエストで送信される `Accept` ヘッダーによって異なります。 異なる `Accept` ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
+正常な応答は、スキーマの詳細を返します。 返されるフィールドは、 `Accept` ヘッダーがリクエストで送信されました。 異なるを使用した実験 `Accept` ヘッダーを使用して、応答を比較し、使用事例に最適なヘッダーを決定します。
 
 ```json
 {
@@ -166,7 +166,7 @@ curl -X GET \
           "meta:xdmType": "object"
       }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -200,7 +200,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->次の呼び出しの例は、API でスキーマを作成する方法のベースライン例です。クラスの構成要件は最小限で、フィールドグループはありません。 フィールドグループとデータ型を使用してフィールドを割り当てる方法など、API でスキーマを作成する方法に関する完全な手順については、[ スキーマ作成に関するチュートリアル ](../tutorials/create-schema-api.md) を参照してください。
+>以下の呼び出しの例は、API でスキーマを作成する方法のベースライン例です。クラスの構成要件は最小限で、フィールドグループは必要ありません。 フィールドグループとデータ型を使用してフィールドを割り当てる方法など、API でスキーマを作成する方法に関する完全な手順については、 [スキーマ作成チュートリアル](../tutorials/create-schema-api.md).
 
 **API 形式**
 
@@ -218,7 +218,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Property Information",
@@ -234,13 +234,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `allOf` | 各オブジェクトが、スキーマがフィールドを実装するクラスまたはフィールドグループを参照する、オブジェクトの配列。 各オブジェクトには、1 つのプロパティ (`$ref`) が含まれます。このプロパティの値は、新しいスキーマが実装するクラスまたはフィールドグループの `$id` を表します。 1 つのクラスに、0 個以上の追加のフィールドグループを指定する必要があります。 上記の例では、`allOf` 配列内の 1 つのオブジェクトがスキーマのクラスです。 |
+| `allOf` | 各オブジェクトが、スキーマが実装するフィールドを持つクラスまたはフィールドグループを参照する、オブジェクトの配列。 各オブジェクトには、1 つのプロパティ (`$ref`) の値が `$id` 新しいスキーマが実装するクラスまたはフィールドグループの。 1 つのクラスを、0 個以上の追加のフィールドグループと共に指定する必要があります。 上記の例では、 `allOf` array はスキーマのクラスです。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたスキーマの詳細（`$id`、`meta:altId`、`version`など）を含むペイロードを返します。これらの値は読み取り専用で、[!DNL Schema Registry] によって割り当てられます。
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたスキーマの詳細（`$id`、`meta:altId`、`version`など）を含むペイロードを返します。これらの値は読み取り専用で、 [!DNL Schema Registry].
 
 ```JSON
 {
@@ -260,7 +260,7 @@ curl -X POST \
         "https://ns.adobe.com/xdm/data/record"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
@@ -275,17 +275,17 @@ curl -X POST \
 }
 ```
 
-[ に対してGETリクエストを実行すると、テナントコンテナ内のすべてのスキーマ ](#list) に新しいスキーマが含まれるようになります。 URL エンコードされた `$id` URI を使用して [ 検索 (GET) リクエスト ](#lookup) を実行し、新しいスキーマを直接表示できます。
+へのGETリクエストの実行 [すべてのスキーマのリスト](#list) これで、テナントコンテナに新しいスキーマが含まれます。 次の操作を実行できます。 [参照 (GET) リクエスト](#lookup) URL エンコードされたを使用 `$id` 新しいスキーマを直接表示する URI。
 
-スキーマにフィールドを追加するには、[PATCH操作 ](#patch) を実行して、スキーマの `allOf` 配列と `meta:extends` 配列にフィールドグループを追加します。
+スキーマにフィールドを追加するには、 [PATCH操作](#patch) スキーマの `allOf` および `meta:extends` 配列
 
 ## スキーマの更新 {#put}
 
-スキーマ操作を使用してPUT全体を置き換え、基本的にリソースを書き直すことができます。 PUTリクエストを通じてスキーマを更新する場合、本文には、POSTリクエストで [ 新しいスキーマ ](#create) を作成する際に必要となるすべてのフィールドを含める必要があります。
+スキーマ全体を置き換えるには、PUT操作を使用します。つまり、リソースを書き直す必要があります。 スキーマリクエストを通じてPUTを更新する場合、本文には、 [新しいスキーマの作成](#create) POST。
 
 >[!NOTE]
 >
->スキーマ全体を置き換えるのではなく、スキーマの一部のみを更新する場合は、[ スキーマ ](#patch) の一部の更新の節を参照してください。
+>スキーマ全体を置き換えるのではなく、スキーマの一部のみを更新する場合は、 [スキーマの一部の更新](#patch).
 
 **API 形式**
 
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 書き直すスキーマの `meta:altId` または URL エンコードされた `$id`。 |
+| `{SCHEMA_ID}` | この `meta:altId` または URL エンコード済み `$id` 」で指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、既存のスキーマを置き換え、`title`、`description` および `allOf` 属性を変更します。
+次のリクエストは、既存のスキーマを置き換え、変更します `title`, `description`、および `allOf` 属性。
 
 ```SHELL
 curl -X PUT \
@@ -309,7 +309,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Commercial Property Information",
@@ -345,7 +345,7 @@ curl -X PUT \
         "https://ns.adobe.com/xdm/data/record"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
@@ -360,13 +360,13 @@ curl -X PUT \
 }
 ```
 
-## スキーマの一部の更新 {#patch}
+## スキーマの一部を更新 {#patch}
 
-スキーマリクエストを使用して、スキーマの一部をPATCHできます。 [!DNL Schema Registry] は、`add`、`remove`、`replace` を含む、すべての標準的な JSON パッチ操作をサポートしています。 JSON パッチの詳細については、[API の基本ガイド ](../../landing/api-fundamentals.md#json-patch) を参照してください。
+スキーマリクエストを使用して、スキーマの一部を更新することがPATCHできます。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、「PUT」操作 ](#put) を使用したスキーマの置き換え [ の節を参照してください。
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、 [スキーマ操作を使用したPUTの置き換え](#put).
 
 最も一般的なPATCH操作の 1 つは、次の例に示すように、以前に定義したフィールドグループをスキーマに追加することです。
 
@@ -378,22 +378,22 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 更新するスキーマの URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次の例のリクエストでは、フィールドグループの `$id` 値を `meta:extends` 配列と `allOf` 配列の両方に追加して、新しいフィールドグループをスキーマに追加します。
+以下のリクエスト例では、新しいフィールドグループをスキーマに追加する際に、そのフィールドグループの `$id` 値を `meta:extends` および `allOf` 配列
 
-リクエスト本文は配列の形式をとり、リストされた各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作 (`op`)、操作を実行するフィールド (`path`)、およびその操作に含める情報 (`value`) を含む。
+リクエスト本文は配列の形式をとり、リストに表示される各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトには、実行される操作 (`op`) を呼び出し、操作を実行する必要があるフィールド (`path`) と、その操作に含める必要のある情報 (`value`) をクリックします。
 
 ```SHELL
 curl -X PATCH\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。フィールドグループ `$id` が `meta:extends` 配列に追加され、フィールドグループ `$id` への参照 (`$ref`) が `allOf` 配列に表示されます。
+応答には、両方の操作が正常に実行されたことが示されます。フィールドグループ `$id` が `meta:extends` 配列と参照 (`$ref`) をフィールドグループに追加します。 `$id` が `allOf` 配列。
 
 ```JSON
 {
@@ -438,7 +438,7 @@ curl -X PATCH\
         "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
@@ -455,7 +455,7 @@ curl -X PATCH\
 
 ## リアルタイム顧客プロファイルでのスキーマ使用の有効化 {#union}
 
-スキーマを [ リアルタイム顧客プロファイル ](../../profile/home.md) に参加するには、スキーマの `meta:immutableTags` 配列に `union` タグを追加する必要があります。 これは、対象のスキーマに対してPATCHリクエストを実行することで実現できます。
+スキーマが参加するために [リアルタイム顧客プロファイル](../../profile/home.md)を追加する場合は、 `union` タグをスキーマの `meta:immutableTags` 配列。 これは、対象のスキーマに対してPATCHリクエストを実行することで実現できます。
 
 >[!IMPORTANT]
 >
@@ -469,20 +469,20 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 有効にするスキーマの URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次の例のリクエストでは、既存のスキーマに `meta:immutableTags` 配列を追加し、配列に `union` という単一の文字列値を渡して、プロファイルでの使用を有効にします。
+以下のリクエスト例では、 `meta:immutableTags` 配列を既存のスキーマに割り当て、配列に次の単一の文字列値を渡す `union` をクリックして、プロファイルでの使用を有効にします。
 
 ```SHELL
 curl -X PATCH\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **応答**
 
-正常な応答は、更新されたスキーマの詳細を返し、`meta:immutableTags` 配列が追加されたことを示します。
+正常な応答は、更新されたスキーマの詳細を返し、 `meta:immutableTags` 配列が追加されました。
 
 ```JSON
 {
@@ -520,7 +520,7 @@ curl -X PATCH\
         "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
     "meta:xdmType": "object",
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
@@ -538,7 +538,7 @@ curl -X PATCH\
 }
 ```
 
-これで、このスキーマのクラスの和集合を表示して、スキーマのフィールドが表されていることを確認できます。 詳しくは、[ 和集合エンドポイントガイド ](./unions.md) を参照してください。
+これで、このスキーマのクラスの和集合を表示して、スキーマのフィールドが表されていることを確認できます。 詳しくは、 [unions endpoint guide](./unions.md) を参照してください。
 
 ## スキーマの削除 {#delete}
 
@@ -552,7 +552,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 削除するスキーマの URL エンコードされた `$id` URI または `meta:altId`。 |
+| `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -563,12 +563,12 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
-スキーマに対して検索 (GET) リクエストを試行すると、削除を確認できます。 リクエストに `Accept` ヘッダーを含める必要がありますが、スキーマがスキーマレジストリから削除されたので、HTTP ステータス 404(Not Found) を受け取る必要があります。
+スキーマに対して検索 (GET) リクエストを試行して、削除を確認できます。 次を含める必要があります： `Accept` ヘッダーを使用しますが、スキーマレジストリからスキーマが削除されたので、HTTP ステータス 404(Not Found) を受け取る必要があります。

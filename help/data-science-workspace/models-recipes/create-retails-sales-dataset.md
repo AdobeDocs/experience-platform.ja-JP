@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 64%
@@ -22,10 +22,10 @@ ht-degree: 64%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 - アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
-- 作成の認証 [!DNL Experience Platform] API 呼び出し。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)』チュートリアルを完了して次の値を取得してください。
+- 作成の認証 [!DNL Experience Platform] API 呼び出し。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - クライアント秘密鍵：`{CLIENT_SECRET}`
    - クライアント証明書：`{PRIVATE_KEY}`
 - [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。この他に必要なアセットをダウンロードする [!DNL Data Science Workspace] からのチュートリアル [Adobeのパブリック Git リポジトリ](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -36,7 +36,7 @@ ht-degree: 64%
    - [JWT](https://pypi.org/project/jwt/)
 - 次の概念に関する十分な知識（このチュートリアルで使用）：
    - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
-   - [スキーマ合成の基本](../../xdm/schema/field-dictionary.md)
+   - [スキーマ構成の基本](../../xdm/schema/field-dictionary.md)
 
 ## 小売販売スキーマとデータセットの作成
 
@@ -50,7 +50,7 @@ ht-degree: 64%
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

@@ -5,8 +5,8 @@ title: Flow Service API を使用して、Mailchimp キャンペーンのデー�
 topic-legacy: tutorial
 description: Flow Service API を使用して Adobe Experience Platform を MailChimp Campaign に接続する方法を説明します。
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Flow Service API を使用して [!DNL Mailchimp Campaign] のデータフローを作成する
 
-以下のチュートリアルでは、ソース接続とデータフローを作成し、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Mailchimp Campaign] のデータを Platform に取り込む手順を詳しく説明します。
+以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Mailchimp Campaign] のデータを Platform に取り込む手順を詳しく説明します。
 
 ## 前提条件
 
@@ -48,7 +48,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with basic authentication",
@@ -111,7 +111,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with OAuth 2 refresh code",
@@ -159,7 +159,7 @@ curl -X POST \
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
-| `{OBJECT_TYPE}` | 参照するオブジェクトのタイプ。 REST ソースの場合、この値のデフォルトは `rest` です。 |
+| `{OBJECT_TYPE}` | 参照するオブジェクトのタイプ。 REST ソースの場合、この値はデフォルトで `rest` になります。 |
 | `{OBJECT}` | 参照するオブジェクト。 |
 | `{FILE_TYPE}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
@@ -167,7 +167,7 @@ curl -X POST \
 
 >[!TIP]
 >
->`{SOURCE_PARAMS}` に使用できるフォーマットのタイプを取得するには、`campaignId` の文字列全体を base64 でエンコードする必要があります。例えば、`{"campaignId": "c66a200cda"}` base64 でエンコードされた値は、`eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9` の値と等しくなります。
+>`{SOURCE_PARAMS}` に使用できるフォーマットのタイプを取得するには、`campaignId` の文字列全体を base64 でエンコードする必要があります。例えば、base64 にエンコードされた `{"campaignId": "c66a200cda"}` は、`eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9` と等しくなります。
 
 **API 形式**
 
@@ -182,7 +182,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -287,7 +287,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source connection to ingest campaign ID",
@@ -317,7 +317,7 @@ curl -X POST \
 
 **応答**
 
-応答が成功すると、新しく作成されたソース接続の一意の識別子（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
+リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -330,21 +330,21 @@ curl -X POST \
 
 ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
 
-[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを行うことで、ターゲット XDM スキーマを作成できます。
+[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成方法に関する詳細な手順については、[ API を使用したスキーマの作成](../../../../../xdm/api/schemas.md)のチュートリアルを参照してください。
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-ターゲットデータセットは、[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを行い、ペイロードにターゲットスキーマの ID を指定することで作成することができます。
+[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、[API を使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)を参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様の ID を指定する必要があります。この ID は、`c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、[!DNL Data Lake]に一意の識別子、ターゲットスキーマ、ターゲットデータセット、接続仕様 ID を設定できました。これらの識別子を使用すると、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信元データを含むデータセットを指定することができます。
+これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、および [!DNL Data Lake] の接続仕様 ID が用意できました。これらの識別子を使用することで、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
 **API 形式**
 
@@ -362,7 +362,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp target connection",
@@ -388,14 +388,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
-| `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この固定IDは `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
-| `data.format` | Platform に取り込む [!DNL Mailchimp] データの形式を指定します。 |
+| `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
+| `data.format` | Platform に取り込む [!DNL Mailchimp] データの形式。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
 **応答**
 
-正常な応答では、新しいターゲット接続の一意な識別子（`id`）が返されます。この ID は、後の手順で必要になります。
+リクエストが成功した場合は、新しいターゲット接続の一意の ID（`id`）が返されます。この ID は、後の手順で必要になります。
 
 ```json
 {
@@ -426,7 +426,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -500,7 +500,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp Campaign dataflow",
@@ -527,17 +527,17 @@ curl -X POST \
 | --- | --- |
 | `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
 | `description` | （オプション）データフローの詳細を提供するために含めることができるプロパティ。 |
-| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この固定 ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
+| `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
-| `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)です。 |
+| `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
 | `targetConnectionIds` | 以前の手順で生成された[ターゲット接続 ID](#target-connection)です。 |
 | `scheduleParams.startTime` | データの最初の取り込みが開始される、指定された開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は `once`、`minute`、`hour`、`day`、`week` です。 |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` の場合はインターバルは不要で、それ以外の頻度の場合は `15` 以上にします。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
 
 **応答**
 
-リクエストが成功した場合は、新しく作成されたデータフローの ID（`id`）が返されます。この ID を使用して、データフローを監視、更新または削除できます。
+正常な応答は、新しく作成したデータフローの ID（`id`）を返します。この ID を使用して、データフローを監視、更新または削除できます。
 
 ```json
 {
@@ -565,13 +565,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
 
-正常な応答では、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子（`id`）などのフロー実行に関する詳細が返されます。
+正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子（`id`）など、フロー実行に関する詳細を返します。
 
 ```json
 {
@@ -586,7 +586,7 @@ curl -X GET \
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "MailChimp Campaign dataflow",
             "description": "MailChimp Campaign dataflow",
             "flowSpec": {
@@ -663,11 +663,11 @@ curl -X GET \
 
 ## データフローの更新
 
-データフローの実行スケジュール、名前、説明を更新するには、フロー ID、バージョンおよび新しいスケジュールを指定して、[!DNL Flow Service] API に PATCH リクエストを実行します。
+データフローの実行スケジュール、名前、説明を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にフロー ID、バージョン、使用する新しいスケジュールを指定します。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
+>PATCH リクエストを実行する際は、`If-Match` ヘッダーが必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -684,7 +684,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
   -d '[
@@ -714,7 +714,7 @@ curl -X PATCH \
 
 **応答**
 
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。フロー ID を指定しながら [!DNL Flow Service] API に GET リクエストを実施することで、更新を確認することができます。
+リクエストが成功した場合は、フロー ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際にフロー ID を指定することで、更新を検証できます。
 
 ```json
 {
@@ -725,7 +725,7 @@ curl -X PATCH \
 
 ## データフローの削除
 
-既存のフロー ID で、[!DNL Flow Service] API に DELETE リクエストを行うことで、データフローを削除することができます。
+既存のフロー ID を使用すると、[!DNL Flow Service] API に DELETE リクエストを実行することでデータフローを削除できます。
 
 **API 形式**
 
@@ -735,7 +735,7 @@ DELETE /flows/{FLOW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 削除したいデータフローの一意の `id` 値。 |
+| `{FLOW_ID}` | 削除するデータフローの一意の `id` の値。 |
 
 **リクエスト**
 
@@ -744,7 +744,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -754,11 +754,11 @@ curl -X DELETE \
 
 ## 接続を更新
 
-接続名、説明、認証情報を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、ベース接続 ID、バージョン、使用したい新しい情報を指定します。
+接続の名前、説明、資格情報を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい情報を指定します。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
+>PATCH リクエストを実行する際は、`If-Match` ヘッダーが必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
 
 **API 形式**
 
@@ -768,7 +768,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` |  更新する接続の一意の `id` 値です。 |
+| `{BASE_CONNECTION_ID}` | 更新したい接続の一意の `id` 値。 |
 
 **リクエスト**
 
@@ -779,7 +779,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
   -d '[
@@ -812,7 +812,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。接続 ID を指定した状態で [!DNL Flow Service] API に GET リクエストをすることで、更新を確認することができます。
+正常な応答では、ベース接続 ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際に接続 ID を指定することで、更新を検証できます。
 
 ```json
 {
@@ -823,7 +823,7 @@ curl -X PATCH \
 
 ## 接続の削除
 
-既存のベース接続 ID を取得したら、[!DNL Flow Service] API に対して DELETE リクエストを実行します。
+既存のベース接続 ID が用意できたら、[!DNL Flow Service] API に DELETE リクエストを実行します。
 
 **API 形式**
 
@@ -833,7 +833,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 削除するベース接続の一意の `id` 値です。 |
+| `{BASE_CONNECTION_ID}` | 削除するベース接続の一意の `id` の値。 |
 
 **リクエスト**
 
@@ -842,7 +842,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

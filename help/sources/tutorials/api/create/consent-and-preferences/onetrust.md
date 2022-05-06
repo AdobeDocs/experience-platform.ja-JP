@@ -2,9 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；OneTrust
 solution: Experience Platform
 title: （ベータ版）フローサービス API を使用して、OneTrust 統合ソースのデータフローを作成する
-description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
+description: フローサービス API を使用してAdobe Experience Platformを OneTrust 統合に接続する方法を説明します。
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2313'
 ht-degree: 75%
@@ -25,7 +25,7 @@ ht-degree: 75%
 >
 >この [!DNL OneTrust Integration] ソースコネクタとドキュメントは [!DNL OneTrust Integration] チーム。 お問い合わせや更新のご依頼については、 [[!DNL OneTrust] チーム](https://my.onetrust.com/s/contactsupport?language=en_US) 直接
 
-Before you can connect [!DNL OneTrust Integration] to Platform, you must first retrieve your access token. アクセストークンの検索方法について詳しくは、 [[!DNL OneTrust Integration] OAuth 2 ガイド](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+接続する前に [!DNL OneTrust Integration] Platform に接続する場合は、最初にアクセストークンを取得する必要があります。 アクセストークンの検索方法について詳しくは、 [[!DNL OneTrust Integration] OAuth 2 ガイド](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 システム間の更新トークンはではサポートされていないので、有効期限が切れた後、アクセストークンは自動的に更新されません。 [!DNL OneTrust]. したがって、アクセストークンの有効期限が切れる前に、接続でアクセストークンを必ず更新しておく必要があります。 アクセストークンの設定可能な最大有効期間は 1 年です。 アクセストークンの更新について詳しくは、 [[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理に関するドキュメント](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
@@ -41,7 +41,7 @@ Before you can connect [!DNL OneTrust Integration] to Platform, you must first r
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL OneTrust Integration] authentication credentials as part of the request body.
+ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL OneTrust Integration] 認証資格情報をリクエスト本文の一部として使用します。
 
 **API 形式**
 
@@ -58,7 +58,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -84,8 +84,8 @@ curl -X POST \
 | `description` | ベース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.` | Contains the credentials required to authenticate your source. API に接続するためのルートホストとアクセストークン。 |
-| `auth.params.host` | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. |
+| `auth.params.` | ソースの認証に必要な資格情報が含まれます。 API に接続するためのルートホストとアクセストークン。 |
+| `auth.params.host` | 環境 [!DNL OneTrust Integration] からデータを取り込む必要があります。 |
 | `auth.params.accessToken` | に対応するアクセストークン [!DNL OneTrust Integration] アカウント |
 
 **応答**
@@ -119,7 +119,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
 | `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常にに設定されています。 `rest`. |
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
-| `fileType=json` | The file type of the file you want to bring to Platform. 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
+| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
 
 **リクエスト**
@@ -129,7 +129,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connections/622124ca-6d18-47f7-999c-66f599955309/explore?objectType=rest&object=json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -6754,7 +6754,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -6826,7 +6826,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -6882,7 +6882,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -6980,7 +6980,7 @@ POST /flows
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -7059,7 +7059,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==70045189-42f0-493d-9b9e-be1045a9f4fa' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -7069,7 +7069,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->The JSON response payload below is hidden for brevity. 「このアイコンをクリックして、応答ペイロードを表示」を選択します。
+>以下の JSON 応答ペイロードは、簡潔にするために非表示になっています。 「このアイコンをクリックして、応答ペイロードを表示」を選択します。
 
 +++クリック
 
@@ -7619,7 +7619,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/70045189-42f0-493d-9b9e-be1045a9f4fa' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -7679,7 +7679,7 @@ curl -X DELETE \
     'https://platform-int.adobe.io/data/foundation/flowservice/flows/70045189-42f0-493d-9b9e-be1045a9f4fa' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -7714,7 +7714,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/connections/622124ca-6d18-47f7-999c-66f599955309' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: 3402ba40-0000-0200-0000-621f3a470000' \
     -d '[
@@ -7778,7 +7778,7 @@ curl -X DELETE \
     'https://platform-int.adobe.io/data/foundation/flowservice/connections/622124ca-6d18-47f7-999c-66f599955309' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

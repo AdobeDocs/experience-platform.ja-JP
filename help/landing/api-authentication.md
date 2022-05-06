@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 18%
@@ -20,7 +20,7 @@ ht-degree: 18%
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 アプリケーションとユーザーのセキュリティを維持するには、Adobe I/O API へのすべてのリクエストが、OAuth や JSON Web Tokens（JWT）などの標準を使用して認証され、承認される必要があります。JWT は、個人用アクセストークンを生成するために、クライアント固有の情報と共に使用されます。
 
@@ -43,7 +43,7 @@ Experience PlatformAPI を正しく呼び出すには、次が必要です。
 
 ## Experience Platform用の開発者とユーザーアクセスの獲得
 
-Adobe開発者コンソールで統合を作成する前に、Adobe Admin ConsoleのExperience Platform製品プロファイルの開発者とユーザー権限がアカウントに必要です。
+Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのExperience Platform製品プロファイルに対する開発者権限とユーザー権限を持つアカウントが必要です。
 
 ### 開発者アクセスの獲得
 
@@ -61,7 +61,7 @@ Adobe開発者コンソールで統合を作成する前に、Adobe Admin Consol
 >
 >このドキュメントを [Privacy ServiceAPI ガイド](../privacy-service/api/getting-started.md)に戻り、固有のアクセス資格情報を生成できるようになりました。 [!DNL Privacy Service].
 
-を通じて Platform への開発者およびユーザーアクセス権を付与されたら、 [!DNL Admin Console]次の手順は、 `{IMS_ORG}` および `{API_KEY}` Adobe開発者コンソールの資格情報。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
+を通じて Platform への開発者およびユーザーアクセス権を付与されたら、 [!DNL Admin Console]次の手順は、 `{ORG_ID}` および `{API_KEY}` Adobe開発者コンソールの資格情報。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
 
 ### プロジェクトにExperience Platformを追加する
 
@@ -86,7 +86,7 @@ Adobe開発者コンソールで統合を作成する前に、Adobe Admin Consol
 API がプロジェクトに追加されると、 **[!UICONTROL Experience PlatformAPI]** プロジェクトのページには、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` ([!UICONTROL クライアント ID])
-* `{IMS_ORG}` ([!UICONTROL Organization ID])
+* `{ORG_ID}` ([!UICONTROL Organization ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -102,7 +102,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Experience Platf
 >
 >このチュートリアルの目的上、以下の手順では、開発者コンソール内で JWT を生成する方法の概要を説明します。 ただし、この生成方法は、テストおよび評価の目的でのみ使用する必要があります。
 >
->通常の使用では、JWT を自動的に生成する必要があります。 プログラムによる JWT の生成方法について詳しくは、 [サービスアカウント認証ガイド](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe開発者。
+>通常の使用では、JWT を自動的に生成する必要があります。 プログラムによる JWT の生成方法について詳しくは、 [サービスアカウント認証ガイド](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe Developer
 
 選択 **[!UICONTROL サービスアカウント (JWT)]** 左側のナビゲーションで、「 **[!UICONTROL JWT を生成]**.
 
@@ -118,7 +118,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Experience Platf
 
 ## アクセストークンの生成
 
-JWT を生成したら、API 呼び出しで使用して、 `{ACCESS_TOKEN}`. の値とは異なる `{API_KEY}` および `{IMS_ORG}`に設定する場合、Platform API を使用し続けるには、24 時間ごとに新しいトークンを生成する必要があります。
+JWT を生成したら、API 呼び出しで使用して、 `{ACCESS_TOKEN}`. の値とは異なる `{API_KEY}` および `{ORG_ID}`に設定する場合、Platform API を使用し続けるには、24 時間ごとに新しいトークンを生成する必要があります。
 
 **リクエスト**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **応答**
@@ -195,9 +195,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 }
 ```
 
-## Postman を使用した API 呼び出しの認証とテスト
+## Postmanを使用した API 呼び出しの認証とテスト
 
-[Postman](https://www.postman.com/) は、開発者が RESTful API を調べてテストできる一般的なツールです。 この [投稿（中）](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 認証を自動的に実行し、それを使用して Platform API を使用するように Postman を設定する方法について説明します。
+[Postman](https://www.postman.com/) は、開発者が RESTful API を調べてテストできる一般的なツールです。 この [投稿（中）](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 認証を自動的に実行し、それを使用して Platform API を使用するようにPostmanを設定する方法について説明します。
 
 ## 次の手順
 

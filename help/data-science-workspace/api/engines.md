@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；よく読まれるトピック；エンジン；sensei 機械学習 api
+keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、エンジン、sensei 機械学習 api
 solution: Experience Platform
 title: エンジン API エンドポイント
 topic-legacy: Developer guide
 description: エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 69%
@@ -20,7 +20,7 @@ ht-degree: 69%
 
 >[!TIP]
 >
->Docker URL がない場合は、『[ ソースファイルをレシピにパッケージ化 ](../models-recipes/package-source-files-recipe.md)』チュートリアルを参照して、Docker ホスト URL の作成手順を確認してください。
+>Docker URL がない場合は、 [ソースファイルのレシピへのパッケージ化](../models-recipes/package-source-files-recipe.md) Docker ホスト URL の作成手順を示すチュートリアルです。
 
 パッケージ化されたレシピファイル（Docker ホストの URL、ユーザー名、パスワードなど）をアップロードするには、Docker レジストリ資格情報が必要です。この情報は、次の GET リクエストを実行することで調べることができます。
 
@@ -36,7 +36,7 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -73,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -102,16 +102,16 @@ curl -X POST \
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
 
-**PySpark/Scala をリクエスト**
+**PySpark/Scala のリクエスト**
 
-PySpark レシピをリクエストする場合、 `executionType` と `type` は「PySpark」になります。 Scala レシピをリクエストする場合、`executionType` と `type` は「Spark」になります。 次の Scala レシピの例では、Spark を使用しています。
+PySpark レシピをリクエストする場合、 `executionType` および `type` は「PySpark」です。 Scala のレシピをリクエストする場合、 `executionType` および `type` は「Spark」です。 次の Scala レシピの例では、Spark を使用しています。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -137,9 +137,9 @@ curl -X POST \
 | `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
 | `type` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 値は Spark または PySpark に設定できます。 |
-| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 このフィールドは `databricks-spark` に設定する必要があります。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールド。 このフィールドはに設定する必要があります `databricks-spark`. |
 | `artifacts.default.image.location` | Docker イメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhub のみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 「Spark」または「PySpark」を指定できます。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 これは、「Spark」または「PySpark」です。 |
 
 **応答**
 
@@ -170,7 +170,7 @@ curl -X POST \
 }
 ```
 
-## Docker URL を使用した機能パイプラインエンジンの作成 {#feature-pipeline-docker}
+## Docker URL を使用して機能パイプラインエンジンを作成する {#feature-pipeline-docker}
 
 機能パイプラインエンジンを作成するには、メタデータと Docker 画像を参照する Docker URL を提供しながらPOSTリクエストを実行します。
 
@@ -214,18 +214,18 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 値は Spark または PySpark に設定できます。 |
-| `algorithm` | 使用するアルゴリズムで、この値を `fp`（機能パイプライン）に設定します。 |
-| `name` | 機能パイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
+| `algorithm` | 使用するアルゴリズムで、この値をに設定します。 `fp` （機能パイプライン）。 |
+| `name` | フィーチャパイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールドです。 このフィールドは `databricks-spark` に設定する必要があります。 |
+| `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールド。 このフィールドはに設定する必要があります `databricks-spark`. |
 | `artifacts.default.image.location` | Docker イメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhub のみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 「Spark」または「PySpark」を指定できます。 |
-| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は `docker` に設定する必要があります。 |
-| `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json` 構成ファイルのパラメータ。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応します。 これは、「Spark」または「PySpark」です。 |
+| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | お使いの `pipeline.json` 設定ファイルのパラメーター。 |
 
 **応答**
 
-正常な応答は、新しく作成された機能パイプラインエンジンの一意の識別子 (`id`) を含む詳細を含むペイロードを返します。 次のレスポンスは、PySpark 機能パイプラインエンジンの場合のものです。
+正常な応答は、新しく作成された機能パイプラインエンジンの一意の識別子 (`id`) をクリックします。 次に、PySpark 機能パイプラインエンジンのレスポンスの例を示します。
 
 ```json
 {
@@ -271,7 +271,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -348,7 +348,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -425,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -493,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -5,7 +5,7 @@ title: Salesforce ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Salesforce をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 17%
@@ -60,7 +60,7 @@ Platform デベロッパーコンソールと [!DNL Postman] を設定すると�
 | `PRIVATE_KEY` | 認証に使用する資格情報 [!DNL Postman] インスタンスからExperience PlatformAPI へ 開発者コンソールの設定に関するチュートリアルと [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md) を参照してください。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System(IMS) は、Adobe サービスに対する認証のフレームワークを提供します。 次に関して： [!DNL Marketo]の場合、この値は固定で、常に次の値に設定されます。 `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 製品やサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる企業エンティティ。 に関するチュートリアルを参照してください。 [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md) を参照してください。 `{IMS_ORG}` 情報。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 製品やサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる企業エンティティ。 に関するチュートリアルを参照してください。 [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md) を参照してください。 `{ORG_ID}` 情報。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 使用している仮想サンドボックスパーティションの名前です。 | `prod` |
 | `TENANT_ID` | 作成するリソースの名前空間が適切に付けられ、IMS 組織内に含まれるようにするために使用される ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 呼び出しをおこなう URL エンドポイント。 この値は固定で、常に次の値に設定されます。 `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

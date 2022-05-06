@@ -2,7 +2,7 @@
 title: プロファイルエンドポイント
 description: Reactor API で /profiles エンドポイントを呼び出す方法を説明します。
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 100%
@@ -36,7 +36,7 @@ curl -X GET \
   https://reactor.adobe.io/profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

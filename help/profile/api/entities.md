@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 90%
@@ -14,7 +14,7 @@ ht-degree: 90%
 
 # エンティティエンドポイント（プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して [!DNL Real-time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UI を使用したプロファイルへのアクセスについて詳しくは、『[ プロファイルユーザーガイド ](../ui/user-guide.md)』を参照してください。
+Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## はじめに
 
@@ -22,7 +22,7 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 
 ## ID によるプロファイルデータへのアクセス
 
-[!DNL Profile] エンティティにアクセスするには、`/access/entities` エンドポイントにGETリクエストを送信し、一連のクエリパラメーターとしてエンティティの ID を指定します。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
+次の項目にアクセスすると、 [!DNL Profile] エンティティに対してGETリクエストを実行する `/access/entities` エンドポイントを作成し、一連のクエリパラメーターとしてエンティティの id を指定することができます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
 クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -138,7 +138,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "schema":{
@@ -352,7 +352,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -438,7 +438,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -513,7 +513,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -777,7 +777,7 @@ curl -X POST \
 
 ## 複数スキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、『[!DNL Schema Registry] API 開発者ガイド [ 記述子エンドポイントガイド ](../../xdm/api/descriptors.md)』を参照してください。
+関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、 [!DNL Schema Registry] API 開発者ガイド [記述子エンドポイントガイド](../../xdm/api/descriptors.md).
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -797,7 +797,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **応答** 
@@ -887,11 +887,11 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドに従うことで、[!DNL Real-time Customer Profile] データフィールド、プロファイル、時系列データに正常にアクセスできました。 [!DNL Platform] に格納されている他のデータリソースにアクセスする方法については、「[ データアクセスの概要 ](../../data-access/home.md)」を参照してください。
+このガイドに従うことで、次にアクセスできました： [!DNL Real-time Customer Profile] データフィールド、プロファイル、時系列データ。 に保存されている他のデータリソースにアクセスする方法を学ぶには [!DNL Platform]を参照し、 [データアクセスの概要](../../data-access/home.md).
 
 ## 付録 {#appendix}
 
-次の節では、API を使用した [!DNL Profile] データへのアクセスに関する補足情報を示します。
+次の節では、へのアクセスに関する補足情報を示します [!DNL Profile] データを取得することができます。
 
 ### クエリパラメーター {#query-parameters}
 
@@ -911,5 +911,5 @@ curl -X GET \
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティ値でフィルターします。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | プロパティの値でフィルターします。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |

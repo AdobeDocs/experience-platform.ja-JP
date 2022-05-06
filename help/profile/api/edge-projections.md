@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: エッジ投影 API エンドポイント
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platformでは、変更が発生した際に適切なデータを容易に利用でき、継続的に更新することで、複数のチャネルにわたって顧客に対して調整され、一貫性があり、パーソナライズされたエクスペリエンスをリアルタイムで提供できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバであるエッジを使用しておこなわれます。
+description: Adobe Experience Platformでは、複数のチャネルをまたいで顧客に対して、調整され、一貫性とパーソナライズされたエクスペリエンスをリアルタイムで提供できます。これにより、変更が発生したときに適切なデータを容易に利用でき、継続的に更新できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーであるエッジを使用しておこなわれます。
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 86%
@@ -14,7 +14,7 @@ ht-degree: 86%
 
 # エッジ投影設定と宛先エンドポイント
 
-複数のチャネルにわたって調整され、パーソナライズされた、一貫性のあるエクスペリエンスをリアルタイムで顧客に提供するには、適切なデータを容易に利用できるようにするとともに、変更が発生した際にデータを継続的に更新する必要があります。Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。たとえば、Adobe Target や Adobe Campaign などの Adobe アプリケーションは、エッジを使用して、パーソナライズされた顧客体験をリアルタイムで提供します。データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。このガイドでは、[!DNL Real-time Customer Profile] API を使用して、宛先や設定などのエッジ投影を操作する手順を詳しく説明します。
+複数のチャネルにわたって調整され、パーソナライズされた、一貫性のあるエクスペリエンスをリアルタイムで顧客に提供するには、適切なデータを容易に利用できるようにするとともに、変更が発生した際にデータを継続的に更新する必要があります。Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。たとえば、Adobe Target や Adobe Campaign などの Adobe アプリケーションは、エッジを使用して、パーソナライズされた顧客体験をリアルタイムで提供します。データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。このガイドでは、 [!DNL Real-time Customer Profile] 宛先や設定など、エッジ投影を操作する API です。
 
 ## はじめに
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->ペイロード (POST、PUT、PATCH) を含むリクエストには `Content-Type` ヘッダーが必要です。 このドキュメントでは、複数の `Content-Type` が使用されています。 サンプル呼び出しのヘッダーに特に注意して、各要求で正しい `Content-Type` を使用していることを確認してください。
+>ペイロード (POST、PUT、PATCH) を含むリクエストには、 `Content-Type` ヘッダー。 複数 `Content-Type` はこのドキュメントで使用されます。 サンプル呼び出しのヘッダーに特に注意して、正しい `Content-Type` リクエストごとに
 
 ## 投影先
 
@@ -45,7 +45,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -132,7 +132,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json; version=1' \
   -d '{
@@ -150,7 +150,7 @@ curl -X POST \
 | `type` **(必須)** | 作成する宛先のタイプ。 受け入れられる唯一の値「EDGE」は、エッジの宛先を作成します。 |
 | `dataCenters` **(必須)** | 投影の方向をリストする文字列配列。 次の値を 1 つ以上含むことができます。「OR1」- 米国西部、「VA5」- 米国東部、「NLD1」- EMEA。 |
 | `ttl` **(必須)** | 投影の有効期限を指定します。 許容値の範囲：600～604800。デフォルト値：3600。 |
-| `replicationPolicy` **(必須)** | ハブからエッジへのデータレプリケーションの動作を定義します。  サポートされる値：PROACTIVE、REACTIVE。デフォルト値：反応性。 |
+| `replicationPolicy` **(必須)** | ハブからエッジへのデータレプリケーションの動作を定義します。  サポートされる値：PROACTIVE、REACTIVE。デフォルト値：反応。 |
 
 **応答** 
 
@@ -201,7 +201,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations/9d66c06e-c745-480c-b64c-1d5234d25f4b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -256,7 +256,7 @@ curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json' \
   -d '{
@@ -321,7 +321,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -331,7 +331,7 @@ curl -X DELETE \
 
 ## 投影設定
 
-投影設定は、各エッジで使用可能なデータに関する情報を提供します。完全な [!DNL Experience Data Model] (XDM) スキーマをエッジに投影するのではなく、投影はスキーマから特定のデータ（フィールド）のみを提供します。 組織は、各 XDM スキーマに複数の投影設定を定義できます。
+投影設定は、各エッジで使用可能なデータに関する情報を提供します。完全な [!DNL Experience Data Model] (XDM) スキーマからエッジへ、投影はスキーマから特定のデータ（フィールド）のみを提供します。 組織は、各 XDM スキーマに複数の投影設定を定義できます。
 
 ### すべての投影設定のリスト
 
@@ -356,14 +356,14 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **リクエスト**
 
-次のリクエストは、[!DNL Experience Data Model] スキーマクラス [!DNL XDM Individual Profile] に関連付けられているすべての投影設定をリストします。 XDM と [!DNL Platform] 内での役割について詳しくは、まず [XDM システムの概要 ](../../xdm/home.md) をお読みください。
+次のリクエストでは、 [!DNL Experience Data Model] スキーマクラス [!DNL XDM Individual Profile]. XDM と内での XDM の役割について詳しくは、 [!DNL Platform]を読んでください。まず、 [XDM システムの概要](../../xdm/home.md).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -437,14 +437,14 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->設定を作成するPOSTリクエストには、次に示すように、特定の `Content-Type` ヘッダーが必要です。 正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
+>設定を作成するPOSTリクエストには、特定の `Content-Type` ヘッダーに含めることができます。 正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
@@ -649,4 +649,4 @@ curl -X POST \
 
 ## 次の手順
 
-このガイドでは、`selector` パラメーターを適切にフォーマットする方法など、投影と宛先を設定する手順を示しました。 組織のニーズに合った新しい投影先や設定を作成できるようになりました。
+このガイドでは、投影と宛先を適切にフォーマットする方法など、設定する手順を示しました `selector` パラメーター。 組織のニーズに合わせて、新しい投影先や設定を作成できるようになりました。
