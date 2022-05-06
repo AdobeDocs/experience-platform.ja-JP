@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 97%
+source-wordcount: '1549'
+ht-degree: 82%
 
 ---
 
@@ -38,9 +38,9 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 
 ## ソース接続の作成 {#source}
 
-[!DNL Flow Service] API に対して POST リクエストを実行することで、ソース接続を作成することができます。ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
+ソース接続を作成するには、 `sourceConnections` エンドポイント [!DNL Flow Service] API は、ベース接続 ID、取り込むソースファイルへのパス、およびソースの対応する接続仕様 ID を提供します。
 
-ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+ソース接続を作成する場合は、データ形式属性の enum 値も定義する必要があります。
 
 ファイルベースのソースには、次の列挙値を使用します。
 
@@ -50,10 +50,7 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 | JSON | `json` |
 | PARQUET | `parquet` |
 
-すべてのテーブル形式のソースで、値を `tabular` に設定します。
-
-- [カスタムの区切り文字付きファイルを使用したソース接続の作成](#using-custom-delimited-files)
-- [圧縮ファイルを使用したソース接続の作成](#using-compressed-files)
+すべてのテーブルベースのソースで、値を `tabular` に設定します。
 
 **API 形式**
 
@@ -61,13 +58,7 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 POST /sourceConnections
 ```
 
-### カスタムの区切り文字付きファイルを使用したソース接続の作成 {#using-custom-delimited-files}
-
 **リクエスト**
-
-カスタムの区切り文字が使用されている区切り文字付きのファイルは、`columnDelimiter` をプロパティとして指定することで取り込むことができます。あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合は、デフォルト値としてコンマ `(,)` が使用されます。
-
-次のリクエスト例では、タブ区切りの値を使用して、区切り文字付きのファイルタイプのソース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | アクセスする先のサードパーティのクラウドストレージシステムの一意の接続 ID。 |
-| `data.format` | データ形式属性を定義する列挙値です。 |
-| `data.columnDelimiter` | 任意の単一の文字の列の区切り文字を使用して、フラットファイルを収集できます。このプロパティは、CSV ファイルまたは TSV ファイルを取り込む場合にのみ必要です。 |
+| `baseConnectionId` | クラウドストレージソースのベース接続 ID。 |
+| `data.format` | Platform に取り込むデータの形式。 次の値がサポートされています。 `delimited`, `JSON`、および `parquet`. |
+| `data.properties` | （オプション）ソース接続の作成時にデータに適用できるプロパティのセット。 |
+| `data.properties.columnDelimiter` | （オプション）フラットファイルを収集する際に指定できる 1 文字の列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合、コンマ (`,`) がデフォルト値として使用されます。 **注意**:この `columnDelimiter` プロパティは、区切り文字付きファイルを取り込む場合にのみ使用できます。 |
+| `data.properties.encoding` | （オプション）データを Platform に取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**:この `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
+| `data.properties.compressionType` | （オプション）取り込み用に圧縮ファイルタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは次のとおりです。 `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`、および `tar`. **注意**:この `compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
 | `params.path` | アクセスするソースファイルのパス。 |
-| `connectionSpec.id` | 特定のサードパーティのクラウドストレージシステムに関連付けられた接続仕様 ID。接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
-
-**応答**
-
-リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。この ID は、後の手順でデータフローを作成する際に必要になります。
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### 圧縮ファイルを使用したソース接続の作成 {#using-compressed-files}
-
-**リクエスト**
-
-`compressionType` をプロパティとして指定することで、圧縮された JSON ファイルや区切り文字付きのファイルを取り込むこともできます。サポートされる圧縮ファイルのタイプのリストを次に示します。
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-次のリクエスト例では、`gzip` ファイルタイプを使用して、圧縮された区切り文字付きファイルのソース接続を作成します。
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `data.properties.compressionType` | 取り込む圧縮ファイルのタイプを決定します。このプロパティは、圧縮された JSON ファイルまたは区切り文字付きファイルを取り込む場合にのみ必要です。 |
+| `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられている接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
 **応答**
 
