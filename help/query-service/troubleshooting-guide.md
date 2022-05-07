@@ -5,7 +5,7 @@ title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 5%
@@ -38,9 +38,9 @@ ht-degree: 5%
 +++回答 1 つの潜在的な原因はオートコンプリート機能です。 この機能は、特定のメタデータコマンドを処理し、クエリの編集中にエディターの速度が低下する場合があります。
 +++
 
-### クエリサービス API に Postman を使用できますか？
+### Postmanをクエリサービス API に使用できますか？
 
-+++回答はい。Postman( 無料のサードパーティ製Adobe) を使用すれば、すべてのアプリケーション API サービスを視覚化し、操作できます。 次を監視： [Postmanセットアップガイド](https://video.tv.adobe.com/v/28832) を参照してください。 以下の公式ドキュメントを参照してください。 [Postmanコレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++回答はい。Postman( 無料のサードパーティ製Adobe) を使用すれば、すべてのアプリケーション API サービスを視覚化し、操作できます。 次を監視： [Postmanセットアップガイド](https://video.tv.adobe.com/v/28832) Adobe Developer Console でプロジェクトを設定し、Postmanで使用するために必要な資格情報をすべて取得する手順を説明します。 以下の公式ドキュメントを参照してください。 [Postmanコレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI を使用してクエリから返される最大行数に制限はありますか？
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 この節では、データのエクスポートと制限について説明します。
 
-### クエリの処理後にクエリサービスからデータを抽出し、結果を CSV ファイルに保存する方法はありますか。
+### クエリの処理後にクエリサービスからデータを抽出し、結果を CSV ファイルに保存する方法はありますか。 {#export-csv}
 
 +++答えはい。 データはクエリサービスから抽出でき、SQL コマンドを使用して結果を CSV 形式で保存するオプションもあります。
 
