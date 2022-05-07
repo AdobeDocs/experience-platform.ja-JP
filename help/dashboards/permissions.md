@@ -4,70 +4,71 @@ title: Experience Platform ダッシュボードのアクセス権限の取得�
 type: Documentation
 description: Adobe Admin Console を使用して Experience Platform ダッシュボードの表示、編集、更新の機能をユーザーに付与します。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 100%
+source-wordcount: '645'
+ht-degree: 32%
 
 ---
 
 # ダッシュボードのアクセス権限
 
-ダッシュボードの表示、編集、更新の機能をユーザーに付与するには、まず権限を有効にする必要があります。Adobe Experience Platform では、アクセス制御は Adobe Admin Console を通じて提供されます。この機能は、[!DNL Admin Console] の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
+ダッシュボードの表示、編集、更新の機能をユーザーに付与するには、まず権限を有効にする必要があります。Adobe Experience Platformでは、 [Adobe Admin Console](https://adminconsole.adobe.com/). ユーザーは、 [!DNL Admin Console].
 
-このドキュメントでは、Admin Console 内の特定のダッシュボード権限へのアクセスを提供する方法の概要を説明します。アクセス権限の取得と割り当てについて詳しくは[アクセス制御の概要](../access-control/home.md)を参照してください。
+このドキュメントでは、ダッシュボードで使用できる権限の概要を示します。これには、ダッシュボードがアクセスできる機能や、ダッシュボードで有効にするユーザー機能などが含まれます。 アクセス権限の取得と割り当てについて詳しくは[アクセス制御の概要](../access-control/home.md)を参照してください。
 
->[!NOTE]
+## 前提条件
+
+[!DNL Experience Platform] 用にアクセス制御を設定するには、[!DNL Experience Platform] 製品統合を持つ組織の管理者権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
+
+## 使用可能なダッシュボードの権限 {#available-permissions}
+
+この [!DNL Dashboards] サービスは、組み合わせると、へのフルアクセスを提供する 3 つの権限を提供します。 [!UICONTROL プロファイル], [!UICONTROL セグメント], [!UICONTROL 宛先]、および [!UICONTROL ライセンスの使用状況] Adobe Experience Platform内のダッシュボード。 その権限は次の通りです。
+
+| 権限 | 説明 |
+|---|---|
+| **標準ダッシュボードの管理** | この権限は、 **グローバルな読み取り/書き込み権限**. 次の操作が可能です。 [カスタムウィジェットを作成](./customize/custom-widgets.md) および [ウィジェットスキーマを編集](./customize/edit-schema.md) から [!UICONTROL Widget ライブラリ]. |
+| **標準ダッシュボードの表示** | これにより、 **読み取り専用** 機能 [!UICONTROL プロファイル], [!UICONTROL 宛先]、および [!UICONTROL セグメント] ダッシュボードにアクセスし、Platform の左側のナビゲーションからダッシュボードにアクセスできます。 また、 [!UICONTROL ダッシュボード] をクリックし、 [!UICONTROL ダッシュボード] 「在庫と統合」タブ |
+| **ライセンス使用状況ダッシュボードの表示** | この権限を持つユーザーは、 **読み取り専用** ～へのアクセス [ライセンス使用状況ダッシュボード](./guides/license-usage.md) Experience PlatformUI 内 |
+
+には 5 つの権限が含まれていません [!DNL Dashboard] 必要に応じて必要になる可能性のあるカテゴリ。 次の表に、カテゴリ内のカテゴリの位置の概要を示します。
+
+>[!IMPORTANT]
 >
->[!DNL Experience Platform] 用にアクセス制御を設定するには、[!DNL Experience Platform] 製品統合を持つ組織の管理者権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
+>両方の **[!DNL Manage Standard Dashboards]** そして **[!DNL View Standard Dashboards]** 権限 **必要** からの「表示」または「管理」権限 [!DNL Profile Management] または [!DNL Destinations] カテゴリを使用して、Platform UI 内の関連するセクションをアクティブ化します。
 
-## 使用可能な権限 {#available-permissions}
+| 権限 | Admin Consoleカテゴリの場所 |
+|---|---|
+| [!DNL View Profiles] | [!DNL Profile Management] |
+| [!DNL View Segments] | [!DNL Profile Management] |
+| [!DNL View Destinations] | [!DNL Destinations] |
+| [!DNL Manage Queries] | [!DNL Query Service] |
+| [!DNL Manage Sandboxes] | [!DNL Sandbox Administration] |
 
-Experience Platform 内でダッシュボードにアクセスするために必要な権限は主に 2 つあります。その権限は次の通りです。
+## アクセス制御マトリックス
 
-* **ライセンス使用状況ダッシュボードの表示**：この権限を持つユーザーは Experience Platform UI 内のライセンス使用状況ダッシュボードに読み取り専用でアクセスできます。
-* **標準ダッシュボードの管理**：この権限を持つユーザーは、Data Warehouse にないカスタム属性を追加できます。
+次のアクセス制御マトリックスは、必要な権限の分類と、様々なダッシュボード機能へのアクセスに関して提供される機能を示しています。 権限は上の水平行に表示され、Platform UI ワークスペースは左の列に表示されます。
 
-以下の手順は、Admin Console を使用してこれらの権限を追加する方法を示しています。
+|  | [!UICONTROL 標準ダッシュボードを表示] または [!UICONTROL 標準ダッシュボードを管理] | [!UICONTROL プロファイルの表示],<br/>[!UICONTROL セグメントを表示],<br/> [!UICONTROL 宛先の表示] | [!UICONTROL クエリの管理] &amp; [!UICONTROL サンドボックスの管理] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] |
+|---|---|---|---|---|
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] をクリックします。 | N/A | **「表示」または「管理」権限が必要です** 各ダッシュボードに対して | なし | なし |
+| [!DNL Dashboards] をクリックします。 | 有効 | **少なくとも 1 つの必須**. | なし | なし |
+| [!DNL Dashboards] [!DNL Inventory] <br/>（「参照」タブ） | 有効 | なし | なし | なし |
+| [!DNL Dashboards] [!DNL Integrations] タブ <br/>(Power BIのインストールに使用 ) | 有効 | **少なくとも 1 つの必須** | なし | なし |
+| Power BIインストールボタンとワークフロー | 有効 | 該当なし | **必須** | 該当なし |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] ダッシュボード<br/>ウィジェットスキーマを編集し、ウィジェットのカスタマイズ用に新しい属性を追加する機能 | **管理 — 標準 — ダッシュボードが必要** | **必須（各ダッシュボード）** | なし | なし |
+| [!DNL License Usage Dashboard] | なし | なし | なし | 有効 |
 
-## 製品プロファイルの選択
+{style=&quot;table-layout:auto&quot;}
 
-Experience Platform でダッシュボードへのアクセス権をユーザーに付与するには、[Adobe Admin Console](https://adminconsole.adobe.com) にログインし、上部のナビゲーションから「**製品**」を選択します。
+## 製品プロファイルへの権限の追加
 
-![](images/admin-console/admin-console-overview.png)
-
-左側のナビゲーションにある「Experience Cloud」ドロップダウンから、または「*すべての製品とサービス*」の下に表示されるカードから、**Adobe Experience Platform**&#x200B;を選択します。Adobe Experience Platform 製品ページで、ダッシュボードの権限を追加する製品プロファイルを選択するか、「**新しいプロファイル**」を選択して新しい製品プロファイルを作成します。
-
-![](images/admin-console/products.png)
-
-選択した製品プロファイルが開き、その製品プロファイルに関連付けられているユーザーが表示されます。製品プロファイルの権限を管理するには、「**権限**」を選択します。
-
-![](images/admin-console/product-users.png)
-
-## 権限の追加/編集
-
-「**権限**」タブには、製品プロファイルに使用可能なすべての権限が表示されます。「**ダッシュボード**」の行を特定し、現在「0/2 が含まれています」と表示されていることか確認してください。これは製品プロファイルに対して有効なダッシュボード権限がないことを意味します。
-
-ダッシュボードの権限を編集するには、ダッシュボードの行で「**編集**」を選択します。
-
-![](images/admin-console/product-permissions.png)
-
-**権限を編集**&#x200B;ダイアログが開き、使用可能な権限項目と含まれる権限項目が表示されます。権限の横にあるプラス記号（`+`）を選択して追加するか、「**+すべてを追加**」を選択してすべての権限を一度に追加します。
+上記の情報を使用して、製品プロファイルに適切な権限を追加します。 詳しい手順については、ドキュメントを参照してください。 [アクセス制御 UI を使用して権限を追加する方法](../access-control/ui/permissions.md).
 
 権限の説明については、このドキュメントの前の節[使用可能な権限](#available-permissions)を参照してください。
 
 >[!NOTE]
 >
->すべてのユーザーに対してすべての権限を有効にする必要はありません。組織の構造に応じて、特定のユーザーに対して個別の製品プロファイルを作成し、制限付きアクセス（読み取り専用など）を許可することができます。
+>すべてのユーザーに対してすべての権限を有効にする必要はありません。組織の構造に応じて、特定のユーザーに対して個別の製品プロファイルを作成し、制限付きアクセス（読み取り専用など）を許可することができます。詳しくは、製品プロファイルのユーザー管理に関するドキュメントを参照してください [特定のユーザーに権限を割り当てる方法](../access-control/ui/users.md).
 
-権限が追加されたら、「**保存**」を選択して製品プロファイルに戻ります。
-
-![](images/admin-console/dashboard-permissions.png)
-
-製品プロファイルに戻ると、**ダッシュボード**&#x200B;の行に「2/2 が含まれています」と表示されていることを確認し、権限が追加されたことを確認できます。
-
-![](images/admin-console/product-permissions-included.png)
-
-## 次の手順
-
-ダッシュボードへのアクセス権限を追加したので、組織内のユーザーは Experience Platform UI 内でダッシュボードの表示を開始し、割り当てた権限に基づいて他の操作を実行できます。
+必要なアクセス権限を追加すると、組織内のユーザーはExperience PlatformUI 内でダッシュボードの表示を開始し、割り当てた権限に基づいて他のアクションを実行できます。
