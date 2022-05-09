@@ -1,11 +1,11 @@
 ---
 title: 監査ログの概要
-description: 監査ログを使用して、Adobe Experience Platformで誰が何のアクションを実行したかを確認する方法を説明します。
+description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 8%
+source-wordcount: '767'
+ht-degree: 13%
 
 ---
 
@@ -35,10 +35,12 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [製品プロファイル](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [アカウント (Adobe)](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [クエリテンプレート](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [スケジュール済みクエリ](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 
 ## 監査ログへのアクセス
 
-組織でこの機能を有効にすると、アクティビティの発生に応じて監査ログが自動的に収集されます。 手動でログの収集を有効にする必要はありません。
+組織でこの機能を有効にすると、アクティビティの発生に応じて監査ログが自動的に収集されます。 ログ収集を手動で有効にする必要はありません。
 
 監査ログを表示および書き出すには、 **[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限が付与されている ( [!UICONTROL データガバナンス] カテゴリ ) です。 Platform 機能の個々の権限を管理する方法については、 [アクセス制御ドキュメント](../../../access-control/home.md).
 
@@ -97,7 +99,7 @@ UI で実行できるすべてのアクションは、API 呼び出しを使用�
 
 Adobe Admin Consoleでアクティビティの監査ログを管理する方法については、次を参照してください。 [文書](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## 次の手順とその他のリソース
+## 次の手順と追加のリソース
 
 このガイドでは、監査ログをExperience Platformで管理する方法を説明します。 Platform アクティビティの監視方法について詳しくは、 [Observability Insights](../../../observability/home.md) および [データ取得の監視](../../../ingestion/quality/monitor-data-ingestion.md).
 
