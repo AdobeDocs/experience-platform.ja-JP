@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Experience Platform のダッシュボードの概要
+title: ダッシュボードの概要
 type: Documentation
 description: Adobe Experience Platform の複数のダッシュボードを調べ、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
-workflow-type: ht
-source-wordcount: '309'
-ht-degree: 100%
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 99%
 
 ---
 

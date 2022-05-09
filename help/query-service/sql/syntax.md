@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '2741'
-ht-degree: 9%
+source-wordcount: '2747'
+ht-degree: 10%
 
 ---
 
@@ -392,7 +392,7 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 ## テーブルが存在します。
 
-この `table_exists` SQL コマンドは、現在システムにテーブルが存在するかどうかを確認するために使用します。 このコマンドは、次のブール値を返します。 `true` ( テーブルが **は** 存在し、 `false` テーブルが **not** 存在する。
+この `table_exists` SQL コマンドは、現在システムにテーブルが存在するかどうかを確認するために使用します。 このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。
 
 文を実行する前にテーブルが存在するかどうかを検証すると、 `table_exists` 機能を使用すると、匿名ブロックを書き込んで、 `CREATE` および `INSERT INTO` ユースケース。
 
@@ -459,7 +459,12 @@ select inline(productListItems) from source_dataset limit 10;
 
 値は `source_dataset` を使用してターゲットテーブルに入力します。
 
-| SKU |_experience |数量 | priceTotal | |—+—+—+—| | product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot; | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;)&quot; | | | | product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;)&quot; | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;)&quot; | 3 | 12 |
+| SKU | _experience | quantity | priceTotal |
+|---------------------|-----------------------------------|----------|--------------|
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot; | 5 | 10.5 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;)&quot; |  |  |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;)&quot; | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;)&quot; | 3 | 12 |
 
 ## [!DNL Spark] SQL コマンド
 

@@ -4,7 +4,7 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
 source-wordcount: '2976'
 ht-degree: 4%
@@ -104,7 +104,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL ID の重複]](#identity-overlap)
 * [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
 * [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
-* [[!UICONTROL 非セグメント化プロファイルトレンド]](#unsegmented-profiles-trend)
+* [[!UICONTROL 非セグメント化プロファイルのトレンド]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID 別の非セグメント化プロファイル]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL オーディエンスのサイズ]](#audiences-size)
@@ -185,11 +185,11 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL 非セグメント化プロファイル] {#unsegmented-profiles}
 
-この [!UICONTROL 非セグメント化プロファイル] ウィジェットは、どのセグメントにも添付されていないすべてのプロファイルの合計数を提供します。 生成された数は、最後のスナップショット時点での正確さで、組織全体でのプロファイルのアクティベーションの機会を表します。 また、十分な ROI を提供しないプロファイルを拡張する機会も示します。
+この [!UICONTROL 非セグメント化プロファイル] ウィジェットは、どのセグメントにも添付されていないすべてのプロファイルの合計数を提供します。 生成される数は、最後のスナップショット時点のもので、組織全体のプロファイルアクティブ化の機会を表しています。また、十分な ROI を提供しないプロファイルを拡張する機会も示します。
 
 ![非セグメント化プロファイルウィジェット。](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL 非セグメント化プロファイルトレンド] {#unsegmented-profiles-trend}
+### [!UICONTROL 非セグメント化プロファイルのトレンド] {#unsegmented-profiles-trend}
 
 この [!UICONTROL 非セグメント化プロファイルトレンド] ウィジェットには、特定の期間にどのセグメントにも添付されていないプロファイルの数を示す線グラフの図が表示されます。 どのセグメントにも関連付けられていないプロファイルのトレンドを、30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 プロファイル数は、x 軸の y 軸と時間に反映されます。
 

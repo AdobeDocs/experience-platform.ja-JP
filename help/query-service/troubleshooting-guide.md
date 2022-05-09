@@ -3,11 +3,11 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
-description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
+description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。 トピックには、データのエクスポート、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3522'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 5%
 +++回答 1 つの潜在的な原因はオートコンプリート機能です。 この機能は、特定のメタデータコマンドを処理し、クエリの編集中にエディターの速度が低下する場合があります。
 +++
 
-### Postmanをクエリサービス API に使用できますか？
+### クエリサービス API に Postman を使用できますか？
 
 +++回答はい。Postman( 無料のサードパーティ製Adobe) を使用すれば、すべてのアプリケーション API サービスを視覚化し、操作できます。 次を監視： [Postmanセットアップガイド](https://video.tv.adobe.com/v/28832) Adobe Developer Console でプロジェクトを設定し、Postmanで使用するために必要な資格情報をすべて取得する手順を説明します。 以下の公式ドキュメントを参照してください。 [Postmanコレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
