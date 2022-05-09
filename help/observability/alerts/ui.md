@@ -4,10 +4,10 @@ title: アラート UI ガイド
 description: Experience Platform のユーザーインターフェイスでアラートを管理する方法を説明します。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: ed18ecea98497e0c20d44617436a013bf83b69d2
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 100%
+source-wordcount: '345'
+ht-degree: 69%
 
 ---
 
@@ -36,6 +36,24 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 ルール名の横にある省略記号（**...**）を選択すると、ドロップダウンにアラートの有効／無効（現在のステータスに応じて異なる）と、アラートのメール通知の登録／登録解除を切り替えるためのコントロールが表示されます。
 
 ![](../images/alerts/ui/disable-subscribe.png)
+
+## E メールアラートを有効にする
+
+アラート通知は、電子メールに直接配信できます。
+
+ベルアイコン (![ベルアイコン](../images/alerts/ui/bell-icon.png)) をクリックします。 表示されるドロップダウンで、コグアイコン (![コグアイコン](../images/alerts/ui/cog-icon.png)) をクリックして、Experience Cloud環境設定ページにアクセスします。
+
+![](../images/alerts/ui/edit-preferences.png)
+
+この **プロファイル** 」タブが表示されます。 を選択します。 **[!UICONTROL 通知]** （左側のナビゲーション）をクリックして、e メールアラートの環境設定にアクセスします。
+
+![](../images/alerts/ui/profile.png)
+
+スクロールして **電子メール** 」セクションをクリックし、 **[!UICONTROL インスタント通知]**
+
+![](../images/alerts/ui/notifications.png)
+
+これで、Adobe IDアカウントに接続されている電子メールアドレスに、購読しているすべてのアラートが配信されます。
 
 ## アラート履歴の表示
 
