@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；Salesforce;Salesforce；フィールドマッピング；フィールドマッピング；マッピング；marketo;B2B;b2b
 title: Salesforce マッピングフィールド
 description: 以下の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
-source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
+exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
+source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 9%
+ht-degree: 13%
 
 ---
 
@@ -180,7 +181,7 @@ ht-degree: 9%
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID` |
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
-| `CloseDate` | `actualCloseDate` または `expectedCloseDate` |
+| `CloseDate` | `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
 | `ExpectedRevenue` | `expectedRevenue.amount` |
@@ -279,4 +280,4 @@ ht-degree: 9%
 
 ## 次の手順
 
-このドキュメントを読むと、 [!DNL Salesforce] ソースフィールドおよび対応する XDM フィールド。 詳しくは、 [作成 [!DNL Salesforce] ソース接続](../../../connectors/crm/salesforce.md) を参照してください。
+このドキュメントを読むと、 [!DNL Salesforce] ソースフィールドおよび対応する XDM フィールド。 詳しくは、[ [!DNL Salesforce]  ソース接続の作成](../../../connectors/crm/salesforce.md)のドキュメントを参照してください。
