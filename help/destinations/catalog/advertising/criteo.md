@@ -3,9 +3,9 @@ keywords: 広告；criteo
 title: 条件の接続
 description: Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 8%
 
 ---
@@ -138,4 +138,4 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 ## その他のリソース
 
 * [Criteo ヘルプセンター](https://help.criteo.com/kb/en)
-* [Criteo 開発者ポータル](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Criteo 開発者ポータル](https://developers.criteo.com)
