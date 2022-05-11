@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 100%
+source-wordcount: '594'
+ht-degree: 92%
 
 ---
 
@@ -50,6 +50,10 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 ## データ形式の取り扱い
 
 Data Prep は、Platform に取り込まれる様々な形式のデータを確実に処理できます。Data Prep で様々なデータタイプがどのように処理されるかについて詳しくは、[データ形式の取り扱いの概要](./data-handling.md)を参照してください。
+
+## 次を使用して行の一部の更新を送信 [!DNL Data Prep]
+
+でのアップサートのストリーミング [!DNL Data Prep] 部分行の更新を次の項目に送信できます。 [!DNL Profile Service] データを作成し、単一の API リクエストで新しい id リンクを確立することもできます。 でアップサートをストリーミングする方法の詳細を学ぶには、以下を実行します。 [!DNL Data Prep]を参照し、 [部分行の更新の送信](./upserts.md).
 
 ## 次の手順
 

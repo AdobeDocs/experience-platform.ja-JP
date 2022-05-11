@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Data Prep ガイド
 user-guide-description: Adobe Experience Platform に取り込むデータを準備します。
 feature: Data Prep
-source-git-commit: d8d49bc904664f2950dd6ea2bf022584c2737709
-workflow-type: ht
-source-wordcount: '46'
-ht-degree: 100%
+source-git-commit: 752c662876df012dbcb44db6168705be2a5375ce
+workflow-type: tm+mt
+source-wordcount: '48'
+ht-degree: 95%
 
 ---
 
@@ -24,4 +24,5 @@ ht-degree: 100%
    - [データ準備 UI ガイド](./ui/mapping.md)
 - [データ形式の取り扱い](./data-handling.md)
 - [マッピングセット](mapping-set.md)
+- [ストリームアップサート](upserts.md)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
