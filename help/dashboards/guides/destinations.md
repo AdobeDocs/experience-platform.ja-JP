@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2538'
 ht-degree: 2%
 
 ---
@@ -55,12 +55,19 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL ID によるマッピングされていないセグメント]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID によるマッピングされたセグメント]](#mapped-segments-by-identity)
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
+* [[!UICONTROL マッピングされたオーディエンスのヘルス]](#mapped-audience-health)
 * [[!UICONTROL 宛先数]](#destinations-count)
 * [[!UICONTROL 宛先のステータス]](#destination-status)
 * [[!UICONTROL 宛先プラットフォーム別のアクティブな宛先]](#active-destinations-by-destination-platform)
 * [[!UICONTROL すべての宛先でアクティブ化されたオーディエンス]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL 最も使用されている宛先] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="最も使用されている宛先"
+>abstract="このウィジェットは、マッピングされたセグメントの数別に、組織の最もアクティブな宛先を表示します。 これらの数値は、最後のスナップショットの時点で正確です。 このランキングは、使用率が低い可能性のある宛先を強調表示しながら、現在どの宛先が最も使用されているかに関するインサイトを提供します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL 最も使用されている宛先]** ウィジェットには、最後のスナップショットに関して、マッピングされたセグメント数別に組織の上位の宛先が表示されます。 このランキングは、どの宛先が利用されているかに関するインサイトを提供すると共に、利用率が低い可能性のある宛先も示します。
 
@@ -74,6 +81,12 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 ### [!UICONTROL 最近作成した宛先] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="最近作成した宛先"
+>abstract="このウィジェットには、組織内で最も最近設定された宛先のリストが表示されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="詳しくは、ドキュメントを参照してください。"
+
 この **[!UICONTROL 最近作成した宛先]** ウィジェットを使用すると、組織の最近設定した宛先のリストを表示できます。
 
 表示される作成日は、最後の 1 日のスナップショットに正確です。 つまり、新しい宛先を作成した場合、次のスナップショットが作成されるまでリストに表示されません。
@@ -86,7 +99,13 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 ### [!UICONTROL 最近アクティブ化されたセグメント] {#recently-activated-segments}
 
-この **[!UICONTROL 最近アクティブ化されたセグメント]** widget は、宛先に最近マッピングされたセグメントのリストを提供します。 このリストは、システムでアクティブに使用されているセグメントと宛先のスナップショットを提供し、誤ったマッピングのトラブルシューティングに役立ちます。
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="最近アクティブ化されたセグメント"
+>abstract="このウィジェットは、宛先に最近マッピングされたセグメントのリストを提供します。 このリストには、システムでアクティブに使用されているセグメントと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="詳しくは、ドキュメントを参照してください。"
+
+この **[!UICONTROL 最近アクティブ化されたセグメント]** widget は、宛先に最近マッピングされたセグメントのリストを提供します。 このリストには、システムでアクティブに使用されているセグメントと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。
 
 表示される更新日は、セグメントが宛先に対して最後にアクティブ化された日時を示し、最後の日別スナップショットに対する正確性を示します。 つまり、宛先に対してセグメントをアクティブ化した場合、更新された日付は、次のスナップショットが作成されるまで変更されません。
 
@@ -98,6 +117,12 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 
 ### [!UICONTROL 最近アクティブ化したセグメント（宛先別）] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="最近アクティブ化したセグメント（宛先別）"
+>abstract="このウィジェットには、概要ドロップダウンで選択した宛先に応じて、最近アクティブになった上位 5 つのセグメントが降順で表示されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="詳しくは、ドキュメントを参照してください。"
+
 この **[!UICONTROL 最近アクティブ化したセグメント（宛先別）]** ウィジェットは、概要ドロップダウンで選択した宛先に応じて、最近アクティブになった上位 5 つのセグメントを降順で表示します。 これは、 [!UICONTROL 最近アクティブ化されたセグメント] ウィジェットを使用するが、表示されるデータは使用しない **のみ** は、選択した宛先に適用されます。
 
 このウィジェットには 2 つの指標が含まれています。セグメント名と、セグメントが宛先に対して最後にアクティブ化された日付。 表示されるデータは、最後の 1 日のスナップショットの時点で正しいです。
@@ -107,6 +132,12 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 ![宛先ウィジェットで最近アクティブ化したセグメント。](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="オーディエンスサイズのトレンド"
+>abstract="このウィジェットは、セグメントに含まれ、1 日に宛先アカウントに送信されるプロファイルの数を示します。 最初のドロップダウンメニューでは、オーディエンスのトレンドの期間を調整します。 2 つ目のウィジェットドロップダウンメニューでは、分析するセグメントを選択します。 宛先は概要ドロップダウンから選択します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットは、対象のアカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。 ウィジェットは折れ線グラフを使用して、1 日に宛先アカウントに送信される、セグメントに含まれるプロファイルの数を示します。
 
@@ -122,6 +153,12 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 
 ### [!UICONTROL ID によるマッピングされていないセグメント] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="ID によるマッピングされていないセグメント"
+>abstract="このウィジェットには上位 5 つの **マッピングされていない** 特定の宛先と ID に対する降順の ID カウントでランク付けされたセグメント。 ウィジェットドロップダウンに表示されるフィルター ID は、概要ページの上部で選択した宛先アカウントに応じて変わります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="詳しくは、ドキュメントを参照してください。"
+
 この **[!UICONTROL ID によるマッピングされていないセグメント]** ウィジェットに上位 5 件のリストが表示されます **マッピングされていない** 特定の宛先と ID に対する降順の ID カウントでランク付けされたセグメント。 選択した ID に基づいて選択した宛先アカウントにマッピングするのに最も役立つセグメントが強調表示されます。
 
 宛先 ID ドロップダウンで、使用可能なセグメントをフィルタリングします。 ドロップダウンに表示されるフィルター ID は、概要ページの上部で選択した宛先アカウントに応じて変わります。
@@ -132,13 +169,25 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ### [!UICONTROL ID によるマッピングされたセグメント] {#mapped-segments-by-identity}
 
-このウィジェットには、 **マップ** セグメント。 リストの順番は、セグメント内に含まれるソース ID の数に応じて、高い順に並べられます。 カウントする宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットのドロップダウンから使用できる宛先 ID は、概要ダッシュボードの上部で選択した宛先アカウントフィルターに応じて変わります。
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="ID によるマッピングされたセグメント"
+>abstract="このウィジェットには、 **マップ** セグメント。 リストの順番は、セグメント内に含まれるソース ID の数に応じて、高い順に並べられます。 カウントする宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットドロップダウンから使用できる宛先 ID は、概要ダッシュボードの上部で選択した宛先に応じて異なります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="詳しくは、ドキュメントを参照してください。"
+
+このウィジェットには、 **マップ** セグメント。 リストの順番は、セグメント内に含まれるソース ID の数に応じて、高い順に並べられます。 カウントする宛先 ID は、ウィジェットタイトルの下にあるドロップダウンメニューから選択します。 ウィジェットのドロップダウンから使用できる宛先 ID は、概要ダッシュボードの上部で選択した宛先アカウントフィルターに応じて変更されます。
 
 ![ID による Mapped セグメントウィジェット](../images/destinations/mapped-segments-by-identity.png)
 
 この **[!UICONTROL ID によるマッピングされたセグメント]** ウィジェットは、選択した宛先内のキャンペーンに対して、プロファイルの商談のターゲティングが成功する可能性を一目で強調表示します。 効率的なターゲットキャンペーンは、宛先に送信されるプロファイルの数に依存せず、宛先 ID と照合して有用で実用的なデータを提供すると考えられるソース ID の数に依存します。
 
-### 一般的なオーディエンス
+### 一般的なオーディエンス {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="一般的なオーディエンス"
+>abstract="このウィジェットには、ページ上部で選択された宛先アカウントでアクティブ化された上位 5 つのセグメントと、ウィジェットドロップダウンで選択された宛先のリストが表示されます。 セグメントのリストは、セグメントがアクティブ化された最近の方法に従って並べられます。 最も最近アクティブ化されたセグメントが上部に表示されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL 一般的なオーディエンス]** ウィジェットは、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントのリストと、ウィジェットドロップダウンで選択された宛先を提供します。 セグメントのリストは、セグメントがアクティブ化された最近の方法に従って並べられます。 最も最近アクティブ化されたセグメントが上部に表示されます。
 
@@ -146,7 +195,13 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ![共通オーディエンスウィジェット](../images/destinations/common-audiences.png)
 
-### マッピングされたオーディエンスのヘルス
+### マッピングされたオーディエンスのヘルス {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="マッピングされたオーディエンスのヘルス"
+>abstract="このウィジェットは、合計プロファイル数が、その宛先にマッピングされた 30 日間の平均オーディエンスサイズから少なくとも 1 つの標準偏差の係数でずれた、最大 20 個のマッピングされたセグメントのリストを提供します。 この指標は、過去 30 日間の平均からのオーディエンスサイズの分散に対する計算指標を提供します。 オーディエンスサイズは、高い順に並べ替えられます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="詳しくは、ドキュメントを参照してください。"
 
 ウィジェットには、最後の日別スナップショットに関して、その宛先にマッピングされた平均オーディエンスサイズの 30 日間から少なくとも 1 つの標準偏差の要因とずれた、最大 20 個のマッピングされたセグメントのリストが表示されます。
 
@@ -161,6 +216,12 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 ![Mapped audience ヘルスウィジェット。](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL 宛先数] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="宛先数"
+>abstract="このウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 宛先数] ウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。
 

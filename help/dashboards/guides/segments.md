@@ -4,10 +4,10 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 5%
+source-wordcount: '1491'
+ht-degree: 4%
 
 ---
 
@@ -77,6 +77,12 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 
 ### [!UICONTROL オーディエンスサイズ] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="オーディエンスサイズ"
+>abstract="このウィジェットには、選択したセグメント内の結合プロファイルの合計数が表示されます。 この数は、データに適用される結合ポリシーによって異なり、最新のスナップショットの時点で正しくなります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="詳しくは、ドキュメントを参照してください。"
+
 この **[!UICONTROL オーディエンスサイズ]** ウィジェットには、スナップショットが作成された時点での、選択したセグメント内の結合プロファイルの合計数が表示されます。 この数は、プロファイルフラグメントを結合してセグメント内の個々のプロファイルを 1 つ形成するために、セグメント結合ポリシーをプロファイルデータに適用した結果です。
 
 フラグメントと結合されたプロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
@@ -85,9 +91,15 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 
 ### [!UICONTROL ID の重複] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="ID の重複"
+>abstract="このウィジェットは、選択された ID の両方を含むセグメント内のプロファイルの重複を表示します。 円には、各 ID の相対サイズが表示されます。 両方の名前空間を含むプロファイルの数は、円の間の重複で表されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="詳しくは、ドキュメントを参照してください。"
+
 この **[!UICONTROL ID の重複]** ウィジェットには、複数の ID を含むセグメント内のプロファイルの重複を示す、ベン図（セット図）が表示されます。
 
-比較する ID をウィジェットのドロップダウンメニューで選択すると、円が表示され、各 ID の相対サイズと共に、両方の名前空間を含むプロファイルの数が円間の重複のサイズで表されます。
+ウィジェットのドロップダウンメニューを使用して、比較する ID を選択します。 円には、選択した各 ID の相対サイズが表示され、両方の名前空間を含むプロファイルの数は、円間の重複のサイズで表されます。
 
 顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその顧客に関連付けられるので、組織は複数の ID のフラグメントを含む複数のプロファイルを持つ可能性が高くなります。
 
@@ -97,7 +109,13 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL ID 別プロファイル] {#profiles-by-identity}
 
-この **[!UICONTROL ID 別プロファイル]** ウィジェットは、選択したセグメント内のすべての結合済みプロファイルにわたる id の分類を表示します。 1 つのプロファイルが複数の ID を関連付けている可能性があるので、ID 別のプロファイルの合計数は、セグメント内のプロファイルの合計数より多くなる場合があります。 つまり、顧客が複数のチャネルでブランドとやり取りする場合、複数の ID が個々の顧客に関連付けられる可能性があるので、各 ID に表示される値を合計すると、セグメントの合計オーディエンスサイズよりも大きくなる場合があります。
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="ID 別プロファイル"
+>abstract="このウィジェットは、選択したセグメント内のすべての結合プロファイルで ID の分類を表示します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="詳しくは、ドキュメントを参照してください。"
+
+この **[!UICONTROL ID 別プロファイル]** ウィジェットは、選択したセグメント内のすべての結合プロファイルで id の分類を表示します。 1 つのプロファイルが複数の ID を関連付けている可能性があるので、ID 別のプロファイルの合計数は、セグメント内のプロファイルの合計数より多くなる場合があります。 つまり、顧客が複数のチャネルでブランドとやり取りする場合、複数の ID が個々の顧客に関連付けられる可能性があるので、各 ID に表示される値を合計すると、セグメントの合計オーディエンスサイズよりも大きくなる場合があります。
 
 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。
 
@@ -115,9 +133,23 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
-この [!UICONTROL オーディエンスサイズのトレンド] ウィジェットには、次の条件を満たすプロファイルの総数を示す線グラフの図が表示されます： **任意** 特定の期間のセグメント定義。 オーディエンスサイズのトレンドを 30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="オーディエンスサイズのトレンド"
+>abstract="このウィジェットは、 **任意** 日別のスナップショット中に、過去 30 日間、90 日間、12 ヶ月間にキャプチャされたセグメント定義。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="詳しくは、ドキュメントを参照してください。"
 
-![オーディエンスサイズトレンドウィジェット](../images/segments/audience-size-trend.png)
+この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットには、次の条件を満たすプロファイルの総数を示す線グラフの図が表示されます： **任意** 特定の期間のセグメント定義。 オーディエンスサイズのトレンドを 30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
+
+このウィジェットには、自動 [!UICONTROL キャプション] 機械学習モデルがグラフとセグメントのデータを分析し、主要な傾向と重要なイベントを説明するキャプションを自動的に生成する機能。 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。
+
+![セグメントの概要には、オーディエンスサイズのトレンドウィジェットが表示されます。](../images/segments/audience-size-trend-captions.png)
+
+自動キャプションダイアログが開き、データに関するインサイトが表示されます。
+
+![オーディエンスサイズトレンドウィジェット用の自動キャプションダイアログ。](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+セグメント評価と、プロファイルがセグメントからどのように適合および出るかについて詳しくは、 [セグメント化サービスのドキュメント](../../segmentation/home.md).
 
 ### [!UICONTROL オーディエンスサイズの変更の傾向] {#audience-size-change-trend}
 
