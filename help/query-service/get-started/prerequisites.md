@@ -3,7 +3,8 @@ keywords: Experience Platform；クエリサービス；クエリサービス；
 title: Adobe Experience Platform Query Service の概要
 topic-legacy: tutorial
 description: Adobe Experience Platform Query Service を最大限に活用するために必要な手順の分類
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
+source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 8%
@@ -20,7 +21,7 @@ ht-degree: 8%
 
 ## 次の手順
 
-このドキュメントでは、 [!DNL Query Service] Experience Platformの機能 詳しくは、 [!DNL Query Service] のメリットデータ処理について詳しくは、 [使用例のプレゼンテーション](../use-cases/abandoned-cart.md).
+このドキュメントでは、 [!DNL Query Service] Experience Platformの機能 詳しくは、 [!DNL Query Service] のメリットデータ処理について詳しくは、 [使用例のプレゼンテーション](../use-cases/abandoned-browse.md).
 
 次のリソースは、 [!DNL Query Service]:
 

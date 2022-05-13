@@ -2,9 +2,9 @@
 title: クエリサービス監査ログの統合
 description: クエリサービスの監査ログは、様々なユーザー操作の記録を保持し、問題のトラブルシューティングや、企業データ管理ポリシーおよび規制要件への準拠に関する監査証跡を形成します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 |---|---|
 | [!UICONTROL スケジュール済みクエリ] | このカテゴリでは、内で作成、更新または削除されたスケジュールを監査できます [!DNL Query Service]. |
 | [!UICONTROL クエリテンプレート] | このカテゴリでは、クエリテンプレートで実行される様々なアクション（作成、更新、削除）を監査できます。 |
-| [!UICONTROL クエリ] | このカテゴリでは、クエリの実行を監査できます。 |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## の実行 [!DNL Query Service] 監査ログ {#perform-an-audit-log}
 

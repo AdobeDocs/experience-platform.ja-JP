@@ -5,7 +5,7 @@ title: クエリサービスの概要
 topic-legacy: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 87%
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユ�
 
 ### Adobe Analytics閲覧中断
 
-この [Adobeの使用を中心とした放棄のサンプルを参照 [!DNL Analytics]](./use-cases/abandoned-cart.md) 特定のアクションにつながるオーディエンスを作成するためのデータ。 [!DNL Query Service] は、セグメント化の複雑なロジックに対応して、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりします。
+この [Adobeの使用を中心とした放棄のサンプルを参照 [!DNL Analytics]](./use-cases/abandoned-browse.md) 特定のアクションにつながるオーディエンスを作成するためのデータ。 [!DNL Query Service] は、セグメント化の複雑なロジックに対応して、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりします。
 
 ### Looker BI ダッシュボード
 
