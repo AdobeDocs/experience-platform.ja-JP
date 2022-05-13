@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
+source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
 workflow-type: tm+mt
-source-wordcount: '4164'
+source-wordcount: '4175'
 ht-degree: 17%
 
 ---
@@ -100,7 +100,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_host | 指定された URL のホストを返します。 入力が無効な場合は、null を返します。 | <ul><li>URL: **必須** ホストの抽出元の URL。</li></ul> | get_url_host(&#x200B;URL) | get_url_host(&quot;&#x200B;https://platform .adobe.com/home&#x200B;&quot;) | platform.adobe.com |
 | get_url_port | 指定された URL のポートを返します。 入力が無効な場合は、null を返します。 | <ul><li>URL: **必須** ポートの抽出元の URL。</li></ul> | get_url_port(URL) | get_url_port(&quot;&#x200B;sftp://example.com//home/ joe/employee.csv&#x200B;&quot;) | 22 |
 | get_url_path | 指定された URL のパスを返します。 デフォルトでは、完全なパスが返されます。 | <ul><li>URL: **必須** パスの抽出元の URL。</li><li>フルパス： *オプション* フルパスが返されるかどうかを決定する boolean 値です。 false に設定した場合は、パスの終わりのみが返されます。</li></ul> | get_url_path(&#x200B;URL, FULL_PATH) | get_url_path(&quot;&#x200B;sftp://example.com// home/joe/employee.csv&#x200B;&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
-| get_url_query_str | 指定された URL のクエリ文字列を返します。 | <ul><li>URL: **必須** クエリ文字列を取得しようとしている URL です。</li><li>アンカー： **必須** クエリ文字列内のアンカーに対して何がおこなわれるかを決定します。 次の 3 つの値のいずれかを指定できます。&quot;retain&quot;、&quot;remove&quot;、または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーがアタッチされます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_query_str(&#x200B;URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;&#x200B;foo://example.com:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | 指定された URL のクエリ文字列を、クエリ文字列名とクエリ文字列値のマップとして返します。 | <ul><li>URL: **必須** クエリ文字列を取得しようとしている URL です。</li><li>アンカー： **必須** クエリ文字列内のアンカーに対して何がおこなわれるかを決定します。 次の 3 つの値のいずれかを指定できます。&quot;retain&quot;、&quot;remove&quot;、または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーがアタッチされます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_query_str(&#x200B;URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;&#x200B;foo://example.com:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style=&quot;table-layout:auto&quot;}
 
