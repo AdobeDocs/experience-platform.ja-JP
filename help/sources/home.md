@@ -36,11 +36,11 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
-- [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 広告 {#advertising}
 
-Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) コネクタ
 
@@ -87,7 +87,7 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 ### データベース {#database}
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
@@ -110,19 +110,19 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### e コマース {#ecommerce}
 
-Adobe Experience Platform には、サードパーティの e コマースシステムからデータを取り込む機能が用意されています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、サードパーティの e コマースシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### ローカルシステム {#local-system}
 
-Adobe Experience Platform には、ローカルシステムからデータを取り込む機能が用意されています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、ローカルシステムからデータを取り込む機能が用意されています。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md)
 
 ### マーケティングの自動処理 {#marketing-automation}
 
-Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
@@ -131,20 +131,20 @@ Experience Platform は、サードパーティのマーケティング自動化
 
 ### 支払い {#payments}
 
-Adobe Experience Platform には、サードパーティの支払いシステムからデータを取り込む機能が用意されています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、サードパーティの支払いシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL PayPal]](connectors/payments/paypal.md)
 - [[!DNL Square]](connectors/payments/square.md)
 
 ### ストリーミング {#streaming}
 
-Adobe Experience Platform には、ストリーミングソースからデータを取り込む機能が用意されています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、ストリーミングソースからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
 ### プロトコル {#protocols}
 
-Adobe Experience Platform には、サードパーティのプロトコルシステムからデータを取り込む機能が用意されています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Adobe Experience Platform には、サードパーティのプロトコルシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
@@ -161,7 +161,7 @@ Adobe Experience Platform には、サードパーティのプロトコルシス
 | **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
 | 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
-Admin Console から付与される使用可能な権限（これら 4 つのソースを含む）の詳細については、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
+Admin Console から付与される使用可能な権限（これら 4 つのソースを含む）について詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
 ## 利用条件 {#terms-and-conditions}
 
