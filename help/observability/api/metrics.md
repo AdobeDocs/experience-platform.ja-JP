@@ -5,10 +5,10 @@ title: 指標 API エンドポイント
 topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 42%
+source-wordcount: '1409'
+ht-degree: 27%
 
 ---
 
@@ -201,23 +201,12 @@ curl -X POST \
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | 作成されたデータセットの合計数。 | なし |
 | timeseries.ingestion.dataset.size | 1 つまたはすべてのデータセット用に取得されたすべてのデータの累積サイズ。 | データセット ID |
 | timeseries.ingestion.dataset.dailysize | 1 つのデータセットまたはすべてのデータセットに対して毎日の使用量ベースで取得されるデータのサイズ。 | データセット ID |
 | timeseries.ingestion.dataset.batchfailed.count | 1 つのデータセットまたはすべてのデータセットで失敗したバッチの数。 | データセット ID |
 | timeseries.ingestion.dataset.batchsuccess.count | 1 つのデータセットまたはすべてのデータセットに対して取得されたバッチの数。 | データセット ID |
 | timeseries.ingestion.dataset.recordsuccess.count | 1 つのデータセットまたはすべてのデータセットに対して取得されたレコードの数。 | データセット ID |
-| **timeseries.data.collection.validation.total.messages.rate** | 1 つのデータセットまたはすべてのデータセットのメッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.valid.messages.rate** | 1 つのデータセットまたはすべてのデータセットに対する有効なメッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.invalid.messages.rate** | 1 つのデータセットまたはすべてのデータセットに対する無効なメッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.type.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「タイプ」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.range.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「範囲」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.format.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「形式」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.pattern.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「パターン」メッセージの合計数。 | データセット ID |
 | **timeseries.data.collection.validation.category.presence.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「存在」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.enum.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「enum」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.unclassified.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「未分類」メッセージの合計数。 | データセット ID |
-| **timeseries.data.collection.validation.category.unknown.count** | 1 つのデータセットまたはすべてのデータセットに対する無効な「不明」メッセージの合計数。 | データセット ID |
 | **timeseries.data.collection.inlet.total.messages.received** | 1 つのデータインレットまたはすべてのデータインレットに対して受信したメッセージの合計数。 | インレット ID |
 | **timeseries.data.collection.inlet.total.messages.size.received** | 1 つのデータインレットまたはすべてのデータインレットに対して受信したデータの合計サイズ。 | インレット ID |
 | **timeseries.data.collection.inlet.success** | 1 つのデータインレットまたはすべてのデータインレットに対する成功した HTTP 呼び出しの合計数。 | インレット ID |
@@ -233,40 +222,11 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | データソースに書き込まれたレコードの数 [!DNL Identity Service]、1 つのデータセットまたはすべてのデータセット用。 | データセット ID |
 | timeseries.identity.dataset.recordfailed.count | 失敗したレコードの数（次の場合） [!DNL Identity Service]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | ユーザーが正常に取得した ID レコードの名前空間数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 名前空間が失敗した ID レコードの数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 名前空間がスキップした ID レコードの数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | IMS 組織の ID グラフに保存される一意の ID の数。 | なし |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 名前空間の ID グラフに保存される一意の ID の数。 | 名前空間 ID（**必須**） |
-| timeseries.identity.graph.imsorg.numidgraphs.count | IMS 組織 の ID グラフに保存される一意のグラフ ID の数。 | なし |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 特定のグラフの強さ（「不明」、「弱」または「強」）の IMS 組織の ID グラフに保存される一意の ID の数。 | グラフの強さ（**必須**） |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Privacy Service] {#privacy}
-
-次の表に、Adobe Experience Platform指標の概要を示します [!DNL Privacy Service].
-
-| インサイト指標 | 説明 | ID クエリーパラメーター |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | GDPR から作成されたジョブの合計数。 | ENV(必&#x200B;**須**) |
-| timeseries.gdpr.jobs.completedjobs.count | GDPR から完了したジョブの合計数。 | ENV(必&#x200B;**須**) |
-| timeseries.gdpr.jobs.errorjobs.count | GDPR からのエラージョブの合計数。 | ENV(必&#x200B;**須**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Query Service] {#query}
-
-次の表に、Adobe Experience Platform指標の概要を示します [!DNL Query Service].
-
-| インサイト指標 | 説明 | ID クエリーパラメーター |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | 定期的でないスケジュール済みクエリの合計数。 | なし |
-| timeseries.queryservice.query.scheduledrecurring.count | 定期的なスケジュール済みクエリの合計数。 | なし |
-| timeseries.queryservice.query.batchquery.count | 実行されたバッチクエリの合計数。 | なし |
-| timeseries.queryservice.query.scheduledquery.count | 実行されたスケジュール済みクエリの合計数。 | なし |
-| timeseries.queryservice.query.interactivequery.count | 実行されたインタラクティブクエリの合計数。 | なし |
-| timeseries.queryservice.query.batchfrompsqlquery.count | PSQL から実行されたバッチクエリの合計数。 | なし |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -278,18 +238,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | から読み取られたレコードの数 [!DNL Data Lake] 作成者 [!DNL Profile]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
 | timeseries.profiles.dataset.recordsuccess.count | データソースに書き込まれたレコードの数 [!DNL Profile]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
-| timeseries.profiles.dataset.recordfailed.count | 失敗したレコードの数（次の場合） [!DNL Profile]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
 | timeseries.profiles.dataset.batchsuccess.count | 数 [!DNL Profile] データセットまたはすべてのデータセットに対して取り込まれるバッチ。 | データセット ID |
-| timeseries.profiles.dataset.batchfailed.count | 数 [!DNL Profile] 1 つのデータセットまたはすべてのデータセットでバッチが失敗しました。 | データセット ID |
-| platform.ups.ingest.streaming.request.m1_rate | 受信要求の速度。 | IMS 組織 (**必須**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | 取得成功率。 | IMS 組織 (**必須**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | データセットに対して取得された新しいレコードの割合。 | データセット ID (**必須**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | データセットの作成要求のタイムスタンプが正しくないレコードの割合。 | データセット ID (**必須**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | データセットに対する最後のレコード作成要求のタイムスタンプ。 | データセット ID (**必須**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | データセットの更新要求のタイムスタンプが正しくないレコードの割合。 | データセット ID (**必須**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | データセットに対する最後のレコード更新要求のタイムスタンプ。 | データセット ID (**必須**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | 平均レコードサイズ。 | IMS 組織 (**必須**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | データセットに対して取得された更新要求の割合。 | データセット ID (**必須**) |
 
 {style=&quot;table-layout:auto&quot;}
 
