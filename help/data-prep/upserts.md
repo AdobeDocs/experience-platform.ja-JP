@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；データ準備；ストリーミング；アップサート；ストリーミングアップサート
 title: データ準備を使用して、プロファイル・サービスに部分的な行更新を送信
 description: このドキュメントでは、Data Prep を使用して、プロファイル・サービスに部分的な行更新を送信する方法に関する情報を提供します。
-source-git-commit: 26059af9f899b4ccf5701899c9ac8111d56488e8
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 6%
+source-wordcount: '1155'
+ht-degree: 5%
 
 ---
 
@@ -241,6 +242,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
   }
  }'
 ```
+
+## 既知の制限事項と主な考慮事項
+
+次に、 [!DNL Data Prep]:
+
+* ストリーミングアップサートメソッドは、部分行の更新をに送信する場合にのみ使用してください。 [!DNL Profile Service]. 行の一部の更新は、 **not** データレイクによって消費されます。
+* ストリーミングアップサートメソッドでは、ID の更新、置換、削除はサポートされていません。 ID は、 `identity: create` 操作。
+* 現在、ストリーミングアップサートメソッドでは、プリミティブな単一値の属性（整数、日付、タイムスタンプ、文字列など）とオブジェクトのみをサポートしています。 ストリーミングアップサートメソッドは、配列属性と特定の配列インデックスの置換、追加、上書きをサポートしません。
 
 ## 次の手順
 
