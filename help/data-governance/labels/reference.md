@@ -5,10 +5,10 @@ title: データ使用ラベルの用語集
 topic-legacy: labels
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1984'
-ht-degree: 100%
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+workflow-type: tm+mt
+source-wordcount: '2053'
+ht-degree: 96%
 
 ---
 
@@ -55,6 +55,8 @@ ht-degree: 100%
 | --- | --- |
 | **S1** | デバイスの正確な位置の特定に使用できる緯度と経度を指定するデータです。 |
 | **S2** | 広義のジオフェンスエリアの特定に使用できるデータです。 |
+| **PSPD** | PSPD(Permitted Sensitive Personal Data) とは、Adobeが「機密性」、「特殊なデータカテゴリ」または適用法で使用される類似の用語をアップロードすることを契約上許可されているデータを指します。 特に、保護されたヘルス情報 (PHI) やその他の規制対象のヘルスデータは除外されます。 |
+| **RHD** | Protected Health Information(PHI) を参照するデータ、またはAdobeがアップロードを契約上許可している患者に関する情報。 |
 
 ## 付録
 
