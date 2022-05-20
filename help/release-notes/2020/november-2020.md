@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート 2020 年 11 月 11 日
+title: Adobe Experience Platformリリースノート 2020 年 11 月
+description: Adobe Experience Platform の 2020年11月 のリリースノート。
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '2180'
-ht-degree: 26%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 11 月 11 日**
+**リリース日：2020 年 11 月 11 日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -139,7 +139,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 詳しくは、 [データセットへの id フィールドの追加](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) 」を参照してください。
 
-### Attribution AI
+### アトリビューション AI
 
 Attribution AI はインテリジェントサービスの一部で、顧客とのやり取りの影響と増分的な効果を指定した成果に照らして計算する、マルチチャネルのアルゴリズムアトリビューションサービスです。
 
@@ -196,7 +196,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新しいソース**
 
@@ -216,4 +216,4 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 | Adobe Audience Managerコネクタのサンドボックスサポート | Audience Managerコネクタは、サンドボックス対応になりました。 コネクタを有効にして、選択したサンドボックス ( 非実稼動用Audience Managerを含む ) にデータセットをルーティングできます。 設定は、IMS 組織ごとに 1 つのサンドボックスに制限されています。 |
 | UX の改善 | ファイルベースの取り込みが、ソースカタログからアクセスできるようになりました。 |
 
-ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

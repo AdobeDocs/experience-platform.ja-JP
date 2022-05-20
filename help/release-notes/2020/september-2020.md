@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート 2020 年 9 月 9 日
+title: Adobe Experience Platformリリースノート 2020 年 9 月
+description: Adobe Experience Platformの 2020 年 9 月のリリースノート。
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 36%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 36%
 
 **リリース日：2020 年 9 月 9 日（PT）**
 
-Adobe Experience Platform の既存の機能のアップデート：
+Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データガバナンス](#governance)
 - [[!DNL Destinations]](#destinations)
@@ -103,7 +103,7 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 
 Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新機能**
 
@@ -112,4 +112,4 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 | 自動マッピング | [!DNL Platform] は、ユーザーが選択したターゲットスキーマまたはデータセットに基づいて、データ取り込みワークフロー中の自動マッピングに関するインテリジェントな推奨事項を提供します。 柔軟な自動マッピングルールは、使用例に合わせて手動で調整できます。 |
 | UX の改善 | インラインテーブルのアクションにアクセスして、データの追加、スケジュール設定の編集、セグメントの追加などの主要なアクションに容易にアクセスできます。 詳しくは、 [データフローの監視](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
 
-ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

@@ -1,21 +1,21 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート（2020 年 4 月 9 日）
+title: Adobe Experience Platformリリースノート 2020 年 4 月
+description: Adobe Experience Platformの 2020 年 4 月のリリースノート。
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: リリースノート;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 64%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 4 月 8 日（PT）**
+**リリース日：2020年4月8日（PT）**
 
 Adobe Experience Platform の新機能：
 * [[!DNL Intelligent Services]](#intelligent)
@@ -124,7 +124,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新機能**
 

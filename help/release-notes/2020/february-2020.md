@@ -1,40 +1,40 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート（2020 年 2 月 12 日）
+title: Adobe Experience Platformリリースノート 2020 年 2 月
+description: Adobe Experience Platformの 2020 年 2 月のリリースノート。
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 70%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 2 月 12 日（PT）**
+**リリース日：2020年2月12日（PT）**
 
-Adobe Experience Platform の既存の機能のアップデート：
+Adobe Experience Platform の既存の機能に対するアップデート：
 
 * [ソース](#sources)
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込みながら、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| SaaS 用 API のサポート — サービスシステム | [!DNL Salesforce Service Cloud] API と [!DNL ServiceNow] API 用の新しいソースコネクタ。 |
-| SaaS 用 API のサポート — マーケティングシステム | [!DNL HubSpot] API 用の新しいソースコネクタ。 |
-| [!DNL NoSQL] データベースシステムの API のサポート | [!DNL AWS Redshift]、[!DNL Google BigQuery]、[!DNL MariaDB]、[!DNL MySQL]、[!DNL PostgreSQL]、および [!DNL SQL Server] API 用の新しいソースコネクタ。 |
-| クラウドストレージシステム用 API のサポート | [!DNL Azure Data Lake Service Gen 2] API と [!DNL Google Cloud Storage] API 用の新しいソースコネクタ。 |
-| クラウドストレージシステムの UI のサポート | UI の [!DNL Google Cloud Storage] の新しいソースコネクタ。 |
+| SaaS 用 API のサポート — サービスシステム | 用の新しいソースコネクタ [!DNL Salesforce Service Cloud] API および [!DNL ServiceNow] API |
+| SaaS 用 API のサポート — マーケティングシステム | 用の新しいソースコネクタ [!DNL HubSpot] API |
+| の API サポート [!DNL NoSQL] データベースシステム | 用の新しいソースコネクタ [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL], [!DNL PostgreSQL]、および [!DNL SQL Server] API |
+| クラウドストレージシステム用 API のサポート | 用の新しいソースコネクタ [!DNL Azure Data Lake Service Gen 2] API および [!DNL Google Cloud Storage] API |
+| クラウドストレージシステムの UI のサポート | 用の新しいソースコネクタ [!DNL Google Cloud Storage] を使用します。 |
 
 **既知の問題**
 

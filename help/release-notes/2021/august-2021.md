@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: 2021年8月25日の Experience Platform リリースノート。
+title: Adobe Experience Platformリリースノート 2021 年 8 月
+description: Adobe Experience Platformの 2021 年 8 月のリリースノート。
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 100%
+source-wordcount: '712'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
-## 観察性インサイト {#observability}
+## Observability Insights {#observability}
 
 Observability Insights では、統計的な指標とイベント通知を使用して Platform アクティビティを監視できます。
 
@@ -71,9 +71,9 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 | 機能 | 説明 |
 | ------- | ----------- |

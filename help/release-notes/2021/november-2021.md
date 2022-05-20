@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の最新のリリースノートです。
+title: Adobe Experience Platformリリースノート 2021 年 11 月
+description: Adobe Experience Platform の 2021年11月 のリリースノート。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c02f6ace461e6964b0005d07caee9026dca47e63
-workflow-type: ht
-source-wordcount: '798'
-ht-degree: 100%
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

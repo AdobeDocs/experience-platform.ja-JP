@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の最新のリリースノートです。
+title: Adobe Experience Platformリリースノート 2022 年 1 月
+description: Adobe Experience Platformの 2022 年 1 月のリリースノート。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +59,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | --- | --- |
 | 統合マッピングエクスペリエンス | Platform UI の新しいマッピングインターフェイスでは、一貫したマッピングエクスペリエンスを利用して、インテリジェントマッピングレコメンデーションの活用、マッピングルールの手動設定、マッピングセットに発生したエラーのデバッグができます。詳しくは、[[!DNL Data Prep]  UI ガイド](../../data-prep/ui/mapping.md) を参照してください。 |
 
-[!DNL Data Prep] について詳しくは、[[!DNL Data Prep]  の概要](../../data-prep/home.md)を参照してください。
+[!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -122,9 +122,9 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 | 機能 | 説明 |
 | --- | --- |

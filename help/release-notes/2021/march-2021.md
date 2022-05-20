@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: 2021 年 3 月 31 日（PT）の Experience Platform リリースノート。
+title: Adobe Experience Platformリリースノート 2021 年 3 月
+description: Adobe Experience Platformの 2021 年 3 月のリリースノート。
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 exl-id: 027cd7b1-1651-4939-bc97-968a41824117
-source-git-commit: 0cbd5a933f8c67b26051012e9a5aa78cb06b055d
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -50,9 +50,9 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 | 機能 | 説明 |
 | ------- | ----------- |

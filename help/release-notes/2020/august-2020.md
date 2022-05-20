@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート 2020 年 8 月 10 日
+title: Adobe Experience Platformリリースノート 2020 年 8 月
+description: Adobe Experience Platformの 2020 年 8 月のリリースノート。
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 29%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 **リリース日：2020年8月12日**
 
-Adobe Experience Platform の既存の機能のアップデート：
+Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
@@ -31,13 +31,13 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| [!DNL JupyterLab] の VM の改善 | 長時間実行される [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
+| の VM の改善点 [!DNL JupyterLab] | 長時間実行の安定性を向上 [!DNL JupyterLab notebook] 仮想マシン。 |
 
-[!DNL JupyterLab] の詳細については、[[!DNL JupyterLab]  ユーザーガイド ](../../data-science-workspace/jupyterlab/overview.md) を参照してください。
+詳しくは、 [!DNL JupyterLab]詳しくは、 [[!DNL JupyterLab] ユーザーガイド](../../data-science-workspace/jupyterlab/overview.md).
 
 ## 宛先 {#destinations}
 
-[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
 
 **新しい宛先**
 
@@ -45,39 +45,39 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 | 宛先 | 説明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match を使用すると、オンラインおよびオフラインのデータを使用して、Googleが所有および操作する次のようなプロパティをまたいで、顧客にリーチし、再び関与させることができます。[!DNL Search]、[!DNL Shopping]、Gmail、YouTube。 <br><br> 宛先の詳 [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) 細とリアルタイム CDP での設定方法については、宛先カタログのページを参照してください。 |
+| [!DNL Google Customer Match] | Google Customer Match を使用すると、オンラインとオフラインのデータを使用して、次のようなGoogleの所有および運用するプロパティをまたいで、顧客にリーチし、再び関与させることができます。 [!DNL Search], [!DNL Shopping]、Gmail、YouTube。 <br><br> 次にアクセス： [!DNL Google Customer Match] [ページ](../../destinations/catalog/advertising/google-customer-match.md) 宛先カタログのを参照して、宛先の詳細と、リアルタイム CDP での設定方法を確認してください。 |
 
 **新機能**
 
 | 機能 | 説明 |
 |------- | -----------|
-| カスタムファイル名エディター | 書き出されたファイルの名前を編集できる、電子メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順 ](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
-| 推奨属性 | 書き出されたファイルに追加する推奨属性を表示する、電子メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 属性の選択の手順 ](../../destinations/ui/activate-batch-profile-destinations.md) を参照してください。 |
+| カスタムファイル名エディター | 書き出されたファイルの名前を編集できる、電子メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローに対して更新します。 詳しくは、 [ ステップの設定](../../destinations/ui/activate-batch-profile-destinations.md) （アクティベーションワークフロー内） |
+| 推奨属性 | 書き出されたファイルに追加するための推奨属性を表示する、電子メールマーケティングの宛先およびクラウドストレージの宛先のデータアクティベーションワークフローに更新します。 詳しくは、 [属性を選択ステップ](../../destinations/ui/activate-batch-profile-destinations.md) （アクティベーションワークフロー内） |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Real-time Customer Data Platform([!DNL Real-time CDP]) は、Experience Platformを基に構築され、既知および不明なデータを統合して、カスタマージャーニー全体を通じてインテリジェントな判定をおこない、顧客プロファイルをアクティブ化します。 [!DNL Real-time CDP] は、複数の企業データソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。次に、これらのプロファイルから作成したセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスで 1 対 1 でパーソナライズされた顧客体験を提供できます。
+Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-time CDP]) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 [!DNL Real-time CDP] は、複数の企業データソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。 その後、これらのプロファイルから作成されたセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスにわたって 1 対 1 でパーソナライズされた顧客体験を提供できます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| IAB TCF 2.0 のサポート | [!DNL Real-time CDP] は、(IAB) で概要を説明しているように、(TCF) の 2.0 バ [!DNL Transparency & Consent Framework] ージョンの登録ベンダーに [!DNL Interactive Advertising Bureau] なりました。CMP で生成される顧客の同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリームの宛先に対してセグメントをアクティブ化する際に、顧客の同意設定を適用できます。 |
+| IAB TCF 2.0 のサポート | [!DNL Real-time CDP] は、現在は、2.0 バージョンの [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) を参照してください。 CMP で生成される顧客の同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリームの宛先に対してセグメントをアクティブ化する際に、顧客の同意設定を適用できます。 |
 
-[!DNL Real-time CDP] について詳しくは、[[!DNL Real-time CDP]  概要 ](../../rtcdp/overview.md) を参照してください。
+詳しくは、 [!DNL Real-time CDP]を参照し、 [[!DNL Real-time CDP] 概要](../../rtcdp/overview.md).
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込みながら、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| フロー実行の監視 | すべてのフロー実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細を確認できます。 詳しくは、[ データフローの監視 ](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
+| フロー実行の監視 | すべてのフロー実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細ビューを確認できます。 詳しくは、 [データフローの監視](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
 | フロー実行通知 | イベントをサブスクライブし、Web フックを登録して、フロー実行に関するステータス、指標、エラーに関するリアルタイム通知を受け取ることができます。 |
-| UI カタログの改善 | ソースカタログ画面を更新し、選択したオブジェクトの主なアクションに容易にアクセスできるようにしました。 |
+| UI カタログの改善 | ソースカタログ画面を更新して、選択したオブジェクトの主なアクションに簡単にアクセスできるようにしました。 |
 
-ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

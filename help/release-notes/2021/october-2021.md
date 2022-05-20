@@ -1,10 +1,11 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
-workflow-type: ht
-source-wordcount: '454'
-ht-degree: 100%
+title: Adobe Experience Platformリリースノート 2021 年 10 月
+description: Adobe Experience Platformの 2021 年 10 月のリリースノート。
+exl-id: 8f8bcb24-6478-4281-9362-9559158384af
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -50,9 +51,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ### ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 | 機能 | 説明 |
 | --- | --- |

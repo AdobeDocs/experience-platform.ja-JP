@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の最新のリリースノートです。
+title: Adobe Experience Platformリリースノート 2022 年 3 月
+description: Adobe Experience Platformの 2022 年 3 月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
+source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 27%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 27%
 Adobe Experience Platform の新機能：
 
 - [監査ログ](#audit-logs)
-- [Real-Time CDP B2B Edition の関連アカウント](#related-accounts)
+- [Real-Time CDP B2B Edition の関連するアカウント](#related-accounts)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -26,38 +26,36 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Query Service]](#query-service)
 - [ソース](#sources)
 
-<!-- - [Experience Data Model (XDM)](#xdm) -->
-
 ## 監査ログ {#audit-logs}
 
-Experience Platformを使用すると、様々なサービスや機能のユーザーアクティビティを監査できます。 監査ログは、誰がいつ何を実行したかに関する情報を提供します。
+Experience Platform を使用すると、様々なサービスおよび機能についてユーザーアクティビティを監査できます。監査ログは、誰がいつ何をしたかに関する情報を提供します。
 
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| データセット、スキーマ、クラス、フィールドグループ、データタイプ、サンドボックス、宛先、セグメント、結合ポリシー、計算済み属性、製品プロファイルおよびアカウント (Adobe) の監査ログ | これらは、監査ログで記録されるリソースです。 この機能を有効にすると、アクティビティの発生時に監査ログが自動的に収集されます。 手動でログの収集を有効にする必要はありません。 |
-| 監査ログの書き出し | 監査ログは、 `CSV` または `JSON` ファイル。 生成されたファイルは、直接お使いのマシンに保存されます。 |
+| データセット、スキーマ、クラス、フィールドグループ、データタイプ、サンドボックス、宛先、セグメント、結合ポリシー、計算属性、製品プロファイルおよびアカウント（アドビ）に関する監査ログ | これらは、監査ログで記録されるリソースです。この機能を有効にすると、アクティビティが発生したときに監査ログが自動的に収集されます。ログ収集を手動で有効にする必要はありません。 |
+| 監査ログの書き出し | 監査ログは、`CSV` または `JSON` ファイルとしてダウンロードできます。生成されるファイルは、マシンに直接保存されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform での監査ログについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
+Platform の監査ログについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
 
-## Real-Time CDP B2B Edition の関連アカウント {#related-accounts}
+## Real-Time CDP B2B Edition の関連するアカウント {#related-accounts}
 
 >[!NOTE]
 >
->関連アカウント機能は、Real-Time CDP B2B Edition のお客様のみが利用できます。
+>関連するアカウント機能は、Real-Time CDP B2B Edition のお客様のみ使用できます。
 
-B2B 企業は、多くの場合、同じ実世界のビジネスエンティティに対する部分的または競合するデータのみを含め、顧客情報を複数のシステムに保存します。 これにより、顧客の正確な見地に到達するという大きな課題が生じ、B2B マーケティングと販売の取り組みの効率と効果が低下します。 関連アカウントのリリースに伴い、 [!DNL Real-time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。 セグメント定義に関連するアカウントを含めて、リーチを広げたり、セグメントに幅広い条件を適用したりできます。
+B2B 企業では、多くの場合、顧客情報が複数のシステムに保存されており、それぞれのシステムには、同じ実世界のビジネスエンティティに関するデータの一部のみ、または矛盾するデータが含まれています。そのため、顧客を正確に把握することが難しく、B2B マーケティングや営業活動の効率や効果を低下させるという大きな課題を抱えています。関連するアカウントのリリースにより、[!DNL Real-time CDP B2B] では、参照中のアカウントに類似したアカウントのリストを表示するようになりました。関連するアカウントをセグメント定義に含めることができるので、リーチを広げたり、セグメントでより広い条件を適用したりできます。
 
-この機能の詳細については、次のドキュメントページを参照してください。
+この機能について詳しくは、次のドキュメントページを参照してください。
 
-- [Real-Time CDP B2B Edition の関連アカウントの概要](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [アカウントプロファイル UI ガイドの「関連アカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [セグメント定義での関連アカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-accounts)
+- [Real-Time CDP B2B Edition の関連するアカウントの概要](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [アカウントプロファイル UI ガイドの「関連するアカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [セグメント定義での関連するアカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Real-time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
+Real-Time CDP B2B Edition について詳しくは、[概要](../../rtcdp/overview.md)を参照してください。
 
 ## アラート {#alerts}
 
@@ -67,7 +65,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しいアラートルール | データの取り込みに関連するソースで、2 つの新しいアラートルールを使用できるようになりました。 更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
+| 新しいアラートルール | データ取り込みに関連するソースに対して、2 つの新しいアラートルールが使用できるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,38 +73,38 @@ Platform のアラートについて詳しくは、[アラートの概要](../..
 
 ## ダッシュボード {#dashboards}
 
-Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
+Adobe Experience Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数の [!DNL dashboards] を提供しています。
 
 ### プロファイルダッシュボード
 
-プロファイルダッシュボードには、組織がExperience Platform内のプロファイルストアに保持している属性（レコード）データのスナップショットが表示されます。
+プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 非セグメント化プロファイルウィジェット | ウィジェットは、どのセグメントにも関連付けられていないすべてのプロファイルの合計数を提供します。 生成された数は、最後のスナップショット時点での正確さで、組織全体でのプロファイルのアクティベーションの機会を表します。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
-| 非セグメント化プロファイルトレンドウィジェット | このウィジェットには、特定の期間にどのセグメントにも接続されていないプロファイルの数を示す線グラフの図が表示されます。 トレンドは、30 日、90 日、12 か月の期間で視覚化できます。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
-| ID ウィジェットによる非セグメント化プロファイル | このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データは棒グラフで表示されます。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
-| 単一の ID プロファイルウィジェット | このウィジェットは、電子メールまたは ECID のいずれかの ID を作成する 1 種類の ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、 [profiles standard widgets に関するドキュメント](../../dashboards/guides/profiles.md#standard-widgets) を参照してください。 |
+| セグメント化されていないプロファイルウィジェット | このウィジェットには、どのセグメントにも属していないすべてのプロファイルの合計数が表示されます。生成される数は、最後のスナップショット時点のもので、組織全体のプロファイルアクティブ化の機会を表しています。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
+| セグメント化されていないプロファイルのトレンドウィジェット | このウィジェットには、一定期間内にどのセグメントにも属していないプロファイルの数が折れ線グラフで表示されます。30 日、90 日および 12 か月の期間のトレンドを可視化できます。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
+| セグメント化されていないプロファイル（ID 別）ウィジェット | このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。データは、棒グラフで可視化されます。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
+| 単一の ID プロファイルウィジェット | このウィジェットは、ID を作成する ID タイプが電子メールか ECID のどちらかのみである組織のプロファイルの数を提供します。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-プロファイルダッシュボードについて詳しくは、 [プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md).
+プロファイルダッシュボードについて詳しくは、[プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md)を参照してください。
 
 ### 宛先ダッシュボード
 
-「宛先」ダッシュボードには、組織が宛先内で有効にした宛先のスナップショットがExperience Platformされます。
+宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先数ウィジェット | ウィジェットは、オーディエンスをアクティブ化し、システム内で配信できる、使用可能なエンドポイントの合計数を提供します。 この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。 詳しくは、 [destinations standard ウィジェットドキュメント](../../dashboards/guides/destinations.md#standard-widgets) を参照してください。 |
+| 宛先数ウィジェット | このウィジェットには、システム内でオーディエンスをアクティブにして配信できる、利用可能なエンドポイントの合計数が表示されます。この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。詳しくは、[宛先標準ウィジェットのドキュメント](../../dashboards/guides/destinations.md#standard-widgets)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform での宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
+Platform の宛先ダッシュボードについて詳しくは[宛先ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -116,22 +114,10 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 
 | 機能 | 説明 |
 | --- | --- |
-| グローバルデータストリーム設定 | データストリームを設定する際に、次の新しいグローバル設定をいくつか設定できるようになりました。地域、ファーストパーティ ID cookie およびサードパーティ ID 同期。 詳しくは、 [データストリームの設定](../../edge/fundamentals/datastreams.md#configure) （データストリーム UI ガイド）を参照してください。 |
-| [Edge Network Server API](../../server-api/overview.md) | Server API を使用すると、新しい認証済みエンドポイントを使用してExperience PlatformEdge ネットワークとやり取りし、様々なデータ収集、パーソナライズ、広告、マーケティングの使用例を実現できます。 |
+| グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../edge/fundamentals/datastreams.md#configure)の節を参照してください。 |
+| [Edge Network Server API](../../server-api/overview.md) | この Server API を使用すると、お客様は、新しい認証済みエンドポイントを使用して Experience Platform Edge Network を操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
 
 Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
-
-<!-- ## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## クエリサービス {#query-service}
 
@@ -141,26 +127,26 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 | 機能 | 説明 |
 | --- | --- |
-| `table_exists` | 新しいフィーチャコマンドは、現在システムにテーブルが存在するかどうかを確認するために使用されます。 このコマンドは、次のブール値を返します。 `true` ( テーブルが **は** 存在し、 `false` テーブルが **not** 存在する。 詳しくは、 [SQL 構文ドキュメント](../../query-service/sql/syntax.md) を参照してください。 |
+| `table_exists` | この新機能コマンドは、現在、システム内にテーブルが存在するかどうかを確認するために使用されます。このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。詳しくは、[SQL 構文ドキュメント](../../query-service/sql/syntax.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-使用可能な機能について詳しくは、 [クエリサービスの概要](../../query-service/home.md).
+使用できる機能について詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムと CRM サービスの認証と接続、取り込みの実行時間の設定、全体でのデータ取り込みの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得の実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| B2B を使用する際に新しいソースが利用できるようになりました | B2B の使用例に対して、Platform で利用可能なすべてのソースを使用できるようになりました。 詳しくは、 [ソースカタログ](../../sources/home.md) を参照してください。 |
-| 新しいの一般リリース [!DNL Oracle Eloqua] ソース | これで、 [!DNL Oracle Eloqua] データをシームレスに取り込むためのソース [!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）を Platform に送信します。 詳しくは、 [作成 [!DNL Oracle Eloqua] ソース接続](../../sources/connectors/marketing-automation/oracle-eloqua.md) を参照してください。 |
-| の API 強化 [!DNL Data Landing Zone] | この [!DNL Data Landing Zone] ソースで、 [!DNL Flow Service] API 詳しくは、 [作成 [!DNL Data Landing Zone] ソース接続](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) を参照してください。 |
+| B2B で使用できる新しいソースを提供開始 | B2B ユースケースで、Platform で使用できるすべてのソースを使用できるようになりました。使用できるソースの完全なリストについては、[ソースカタログ](../../sources/home.md)を参照してください。 |
+| 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）から Platform にシームレスにデータを取り込むことができるようになりました。詳しくは、[ [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
+| [!DNL Data Landing Zone] の API の強化 | [!DNL Data Landing Zone] ソースは、[!DNL Flow Service] API 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

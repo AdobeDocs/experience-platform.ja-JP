@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート（2019 年 12 月 12 日）
+title: Adobe Experience Platformリリースノート 2019 年 12 月
+description: Adobe Experience Platformの 2019 年 12 月リリースノート。
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 73%
+source-wordcount: '661'
+ht-degree: 71%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 73%
 
 **リリース日：2019 年 12 月 12 日**
 
-Adobe Experience Platform の既存の機能のアップデート：
+Adobe Experience Platform の既存の機能に対するアップデート：
 
 * [[!DNL Segmentation Service]](#segmentation)
 * [[!DNL Decisioning Service]](#decisioning)
@@ -33,8 +33,8 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 
 | 機能 | 説明 |
 |--- | ---|
-| [!DNL Segment Builder] の「オーディエンス」タブを結合 | [!DNL Segment Builder] の「[!UICONTROL  セグメント ]」タブと「[!UICONTROL  オーディエンス ]」タブは、1 つの「[!UICONTROL  オーディエンス ]」タブに結合されました。 このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
-| 結合ポリシーセレクターの新しい場所 | [!DNL Segment Builder] 内の結合ポリシーセレクターの場所が変更されました。 セグメント定義の結合ポリシーを選択するには、「**[!UICONTROL フィールド]**」タブの歯車アイコンを選択し、「**[!UICONTROL 結合ポリシー]**」ドロップダウンメニューを使用して、使用する結合ポリシーを選択します。 |
+| 「オーディエンス」タブ ( [!DNL Segment Builder] | この [!UICONTROL セグメント] および [!UICONTROL オーディエンス] タブ [!DNL Segment Builder] 単一のものに組み合わされた [!UICONTROL オーディエンス] タブをクリックします。 このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
+| 結合ポリシーセレクターの新しい場所 | での結合ポリシーセレクターの場所 [!DNL Segment Builder] が変更されました。 セグメント定義の結合ポリシーを選択するには、 **[!UICONTROL フィールド]** 」タブをクリックし、 **[!UICONTROL 結合ポリシー]** 使用する結合ポリシーを選択するドロップダウンメニュー。 |
 
 **既知の問題**
 
@@ -44,7 +44,7 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-Adobe Experience Platform [!DNL Decisioning Service] は、特定の個人に利用可能な一連のオプションから「次に最適なエクスペリエンス」をプログラム的かつインテリジェントに選択し、任意のチャネルまたはアプリケーションに提供し、レポートと分析を実行する機能を提供します。
+Adobe Experience Platform [!DNL Decisioning Service] は、特定の個人に利用可能な一連のオプションから「次に最適なエクスペリエンス」をプログラム的かつインテリジェントに選択し、それらを任意のチャネルまたはアプリケーションに配信し、レポートと分析を実行する機能を提供します。
 
 **新機能**
 
@@ -58,7 +58,7 @@ Adobe Experience Platform [!DNL Decisioning Service] は、特定の個人に利
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込みながら、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、ストレージシステムと CRM サービスに対する認証、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -66,8 +66,8 @@ Adobe Experience Platformでは、外部ソースからデータを取り込み�
 
 | 機能 | 説明 |
 | ---------- | ------------ |
-| ストリーミング接続 | ストリーミング取り込みを使用すると、クライアントサイドおよびサーバーサイドのデバイスから [!DNL Experience Platform] にリアルタイムでデータを送信できます。 リリースには、新しいストリーミング接続のユーザーインターフェイスが含まれています。 |
-| [!DNL Google Cloud Store] のコネクタサポート | [!DNL Google Cloud Store] からのデータ収集のサポート。 |
+| ストリーミング接続 | ストリーミング取り込みを使用すると、クライアントサイドおよびサーバーサイドのデバイスからにデータを送信できます。 [!DNL Experience Platform] リアルタイムで。 リリースには、新しいストリーミング接続のユーザーインターフェイスが含まれています。 |
+| コネクタのサポート： [!DNL Google Cloud Store] | からのデータ収集のサポート [!DNL Google Cloud Store]. |
 
 **既知の問題**
 
@@ -90,10 +90,10 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 **バグの修正**
 
 * アクセス制御とサンドボックスに関連するメンテナンスと改善。
-* [!DNL Schema Registry] API の `/descriptors` エンドポイントで `eTag` がサポートされました。
+* のサポート `eTag` の `/descriptors` エンドポイント [!DNL Schema Registry] API
 
 **既知の問題**
 
 * なし
 
-[!DNL Schema Registry] API と [!DNL Schema Editor] ユーザーインターフェイスを使用した XDM の操作について詳しくは、[XDM システムのドキュメント ](../../xdm/home.md) を参照してください。
+を使用した XDM の操作について詳しくは、以下を参照してください。 [!DNL Schema Registry] API および [!DNL Schema Editor] ユーザーインターフェイス、 [XDM システムドキュメント](../../xdm/home.md).
