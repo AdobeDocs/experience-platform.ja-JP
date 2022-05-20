@@ -5,10 +5,10 @@ title: ID サービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
-ht-degree: 78%
+source-wordcount: '2180'
+ht-degree: 75%
 
 ---
 
@@ -90,13 +90,7 @@ ID は、API 呼び出しで複合 ID または XID によって参照されま�
 
 ## ID サービスが個人を特定できる情報（PII）をどのように処理するのか教えてください。
 
-ID サービスは、値を永続化する前に、PII の強力で一方向の暗号化ハッシュを作成します。「Phone」名前空間と「Email」名前空間の ID データは、SHA-256 を使用して自動的にハッシュ化され、「Email」値はハッシュ前に自動的に小文字に変換されます。
-
-## Platform に送信する前に、すべての PII を暗号化する必要がありますか。
-
-Platform に取得する前に、PII データを手動で暗号化する必要はありません。Platform は、`I1` データ使用ラベルを適用可能なすべてのデータフィールドに適用することで、取得時にこれらのフィールドをハッシュ ID 値に自動的に変換します。
-
-データ使用ラベルを適用および管理する手順については、『[データ使用ラベルのチュートリアル](../data-governance/labels/user-guide.md)』を参照してください。
+ID サービスには、電話番号と電子メールのハッシュ化された ID 値の取り込みをサポートする標準名前空間があります。 ただし、値のハッシュはユーザー自身がおこないます。 Platform に取り込まれたデータのハッシュ化について詳しくは、 [[!DNL Data Prep] マッピング関数ガイド](../data-prep/functions.md#hashing).
 
 ## PII ベースの ID をハッシュする際に考慮すべき点はありますか。
 
