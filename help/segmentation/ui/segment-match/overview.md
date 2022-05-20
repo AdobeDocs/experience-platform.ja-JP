@@ -5,16 +5,16 @@ title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2 人以上の Platform ユーザーが安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 6%
+source-wordcount: '1994'
+ht-degree: 7%
 
 ---
 
 # [!DNL Segment Match] の概要
 
-Adobe Experience Platform Segment Match は、2 人以上の Platform ユーザーが、安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、セグメント共有サービスです。 [!DNL Segment Match] は、ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など、Platform のプライバシー標準と個人識別子を使用します。
+Adobe Experience Platform Segment Match は、2 人以上の Platform ユーザーが、安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、セグメント共有サービスです。 [!DNL Segment Match] は、Platform のプライバシー基準と個人識別子（ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。
 
 [!DNL Segment Match] では、以下のことが可能です。
 
@@ -114,7 +114,13 @@ Platform UI で、「 **[!UICONTROL セグメント]** 左側のナビゲーシ�
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### フィードを作成
+### フィードを作成 {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="制限付きマーケティングの使用例"
+>abstract="制限付きマーケティングの使用例は、共有セグメントがデータガバナンス制限に従って適切に使用されるよう、パートナーにガイダンスを提供します。"
+>text="Learn more in documentation"
 
 A **フィード** は、データ（セグメント）のグループ、そのデータの公開方法や使用方法のルール、およびデータとパートナーのデータとの照合方法を決定する設定です。 フィードは、を通じて個別に管理し、他の Platform ユーザーと交換できます [!DNL Segment Match].
 
