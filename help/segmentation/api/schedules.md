@@ -5,7 +5,7 @@ title: Schedules API エンドポイント
 topic-legacy: developer guide
 description: スケジュールは、1 日 1 回バッチセグメント化ジョブを自動的に実行するために使用できるツールです。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
 workflow-type: tm+mt
 source-wordcount: '2013'
 ht-degree: 24%
@@ -242,7 +242,7 @@ PATCHリクエストでは、 [state](#update-state) または [cron スケジ�
 
 ### スケジュール状態の更新 {#update-state}
 
-JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティとして `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
+JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティ `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
 
 **API 形式**
 
@@ -257,7 +257,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 **リクエスト**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
