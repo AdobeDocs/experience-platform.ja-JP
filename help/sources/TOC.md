@@ -4,23 +4,24 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 95%
+source-wordcount: '777'
+ht-degree: 93%
 
 ---
 
 
-# ソースコネクタ {#sources}
+# ソース {#sources}
 
-- [ソースコネクタの概要](home.md)
+- [ソースの概要](home.md)
 - 使用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
-      - [Analytics Classifications ソースコネクタ](connectors/adobe-applications/classifications.md)
-      - [Analytics ソースコネクタ](connectors/adobe-applications/analytics.md)
-      - [Audience Manager ソースコネクタ](connectors/adobe-applications/audience-manager.md)
-      - [顧客属性ソースコネクタ](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics 分類ソース](connectors/adobe-applications/classifications.md)
+      - [Analytics ソース](connectors/adobe-applications/analytics.md)
+      - [Audience Manager源](connectors/adobe-applications/audience-manager.md)
+      - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
+      - [データ収集ソース](connectors/adobe-applications/data-collection.md)
       - フィールドマッピング {#mapping}
          - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager フィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
