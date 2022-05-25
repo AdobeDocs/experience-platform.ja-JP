@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2242'
-ht-degree: 95%
+source-wordcount: '2411'
+ht-degree: 88%
 
 ---
 
@@ -97,7 +97,20 @@ ht-degree: 95%
    * **[!UICONTROL 1 回]**：オンデマンドによる 1 回限りの完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎日]**：指定した時刻に、毎日 1 回、完全ファイルの書き出しをスケジュールします。
 
-1. 「**[!UICONTROL 時間]**」セレクターを使用して、ファイルが書き出される時刻を [!DNL UTC] 形式を指定します。
+1. 以下を使用： **[!UICONTROL 時間]** 書き出しをセグメント評価の直後に実行するか、スケジュールに沿って、指定した時間に実行するかを切り替えます。 選択時に、 **[!UICONTROL 予定]** オプションを選択すると、セレクターを使用して時刻 ( [!DNL UTC] 形式を指定します。
+
+   >[!NOTE]
+   >
+   >この **[!UICONTROL セグメント評価後]** 以下に説明するオプションは、現在、一部のベータ版のお客様のみが利用できます。
+
+   以下を使用： **[!UICONTROL セグメント評価後]** 毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するオプション。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。
+
+   <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
+
+   ![バッチ保存先のアクティベーションフローの「セグメント評価後」オプションをハイライトした画像です。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+以下を使用： **[!UICONTROL 予定]** オプションを使用して、特定の時間にアクティベーションジョブを実行することができます。 これにより、Experience Platformプロファイルデータは毎日同時に書き出されますが、アクティベーションジョブが開始される前にバッチセグメントジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。
+
+   ![バッチ保存先のアクティベーションフローの「スケジュール済み」オプションをハイライトし、時間セレクターを表示する画像です。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
    >[!IMPORTANT]
    >
@@ -110,7 +123,6 @@ ht-degree: 95%
    > 書き出し間隔を選択する場合、その間隔の最終日は書き出しに含まれません。例えば、1月4日から 11日までの間隔を選択した場合、最後のファイルエクスポートは 1月10日に実行されます。
 
 1. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
-
 
 ### 増分ファイルの書き出し {#export-incremental-files}
 

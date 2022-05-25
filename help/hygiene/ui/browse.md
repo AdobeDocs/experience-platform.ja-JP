@@ -1,7 +1,8 @@
 ---
 title: データ衛生作業指示の参照
 description: Adobe Experience Platformユーザーインターフェイスで既存のデータ衛生作業指示を表示および管理する方法について説明します。
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
+source-git-commit: 18ef55a084ced8c26e583598f9016dd9f4741153
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -29,7 +30,7 @@ ht-degree: 2%
 
 ![を示す画像 [!UICONTROL データの衛生状態] Platform UI のワークスペース](../images/ui/browse/work-order-list.png)
 
-リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。選択 **[!UICONTROL 消費者]** 消費者削除タスクのリストを表示するには、次の手順に従います。 **[!UICONTROL データセット]** ：データセットの有効期間 (TTL) スケジュールのリストを表示します。
+リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。 選択 **[!UICONTROL 消費者]** 消費者削除タスクのリストを表示するには、次の手順に従います。 **[!UICONTROL データセット]** ：データセットの有効期間 (TTL) スケジュールのリストを表示します。
 
 ![を示す画像 [!UICONTROL データセット] タブ](../images/ui/browse/dataset-tab.png)
 

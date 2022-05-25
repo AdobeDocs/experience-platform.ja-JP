@@ -3,7 +3,7 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Analytics 設定ブロックスイート ID；データデータ収集の準備；データ準備；マッパー；XDM マッパー；エッジでのマッパー；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 4ad80d8198f86010291532a9e6b9cd564abf6d15
+source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
 workflow-type: tm+mt
 source-wordcount: '1686'
 ht-degree: 3%
@@ -22,7 +22,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 
 ## 次にアクセス： [!UICONTROL データストリーム] workspace
 
-データ収集 UI でデータストリームを作成および管理するには、次を選択します。 **[!UICONTROL データストリーム]** をクリックします。
+データ収集 UI でデータストリームを作成および管理するには、 **[!UICONTROL データストリーム]** をクリックします。
 
 ![データ収集 UI の「データストリーム」タブ](../images/datastreams/overview/datastreams-tab.png)
 
@@ -84,7 +84,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 >
 >各サービス設定には、 **[!UICONTROL 有効]** サービスが選択されたときに自動的にアクティブ化される切り替え。 このデータストリームに対して選択したサービスを無効にするには、 **[!UICONTROL 有効]** もう一度切り替えます。
 
-### Adobe Analytics設定
+### Adobe Analytics設定 {#analytics}
 
 このサービスは、データをAdobe Analyticsに送信するかどうかと方法を制御します。 詳しくは、 [Analytics にデータを送信する](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -94,7 +94,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 | --- | --- |
 | [!UICONTROL レポートスイート ID] | **（必須）** データの送信先の Analytics レポートスイートの ID。 この ID は、Adobe Analytics UI の下にあります。 [!UICONTROL 管理者] > [!UICONTROL レポートスイート]. 複数のレポートスイートが指定されている場合、データは各レポートスイートにコピーされます。 |
 
-### Adobe Audience Manager設定
+### Adobe Audience Manager設定 {#audience-manager}
 
 このサービスは、データをAdobe Audience Managerに送信するかどうかと方法を制御します。 データをAudience Managerに送信するために必要なのは、このセクションを有効にすることだけです。 その他の設定はオプションですが、推奨されます。
 
@@ -105,7 +105,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 | [!UICONTROL Cookie の宛先が有効になっています] | SDK が [cookie の宛先](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) から [!DNL Audience Manager]. |
 | [!UICONTROL URL の宛先が有効になっています] | SDK が [URL の宛先](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) から [!DNL Audience Manager]. |
 
-### Adobe Experience Platform 設定
+### Adobe Experience Platform 設定 {#aep}
 
 >[!IMPORTANT]
 >
@@ -127,7 +127,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 | [!UICONTROL エッジセグメント化] | 有効にするには、このチェックボックスを選択します [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームを介してデータを送信すると、該当するプロファイルの更新済みのセグメントメンバーシップが応答に返されます。<br><br>このオプションは、 [!UICONTROL パーソナライズ機能の宛先] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL パーソナライズ機能の宛先] | を [!UICONTROL エッジセグメント化] 「 」チェックボックスにチェックを入れると、データストリームがAdobe Targetなどのパーソナライゼーションエンジンに接続できるようになります。 の具体的な手順については、宛先のドキュメントを参照してください。 [パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md). |
 
-### Adobe Target設定
+### Adobe Target設定 {#target}
 
 このサービスは、データをAdobe Targetに送信するかどうかと方法を制御します。
 

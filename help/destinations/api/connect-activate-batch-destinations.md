@@ -6,10 +6,10 @@ description: Flow Service API を使用して、Experience Platform でクラウ
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '3129'
-ht-degree: 98%
+source-wordcount: '3334'
+ht-degree: 92%
 
 ---
 
@@ -1003,6 +1003,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "SCHEDULED",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
@@ -1037,10 +1038,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | セグメントが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
 | `frequency` | 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
-| `endDate` | `"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
-| `startTime` | 必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
+| `triggerType` | の場合 *バッチ宛先* のみ。 このフィールドは、 `"DAILY_FULL_EXPORT"` モード `frequency` セレクター。 <br>必須。<br> <ul><li>選択 `"AFTER_SEGMENT_EVAL"` ：毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行する場合。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>選択 `"SCHEDULED"` を追加して、特定の時間にアクティベーションジョブを実行する必要があります。 これにより、Experience Platformプロファイルデータは毎日同時に書き出されますが、アクティベーションジョブの開始前にバッチセグメントジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、 `startTime` を使用して、毎日の書き出しが発生する時刻 (UTC) を指定します。</li></ul> |
+| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
+| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+> 詳しくは、 [データフローのセグメントのコンポーネントを更新](/help/destinations/api/update-destination-dataflows.md#update-segment) 書き出したセグメントの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法を説明します。
 
 **応答**
 

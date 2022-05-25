@@ -6,14 +6,20 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定する方法について説明します。
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 100%
+source-wordcount: '435'
+ht-degree: 95%
 
 ---
 
 # 同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定
+
+## 概要 {#overview}
+
+>[!NOTE]
+>
+>条件 [Adobe Target接続の設定](../catalog/personalization/adobe-target-connection.md) datastream ID を使用しない場合、この記事で説明する使用例はサポートされません。
 
 顧客が大規模かつリアルタイムで、オーディエンスセグメントを作成およびターゲット設定できるよう、Adobe Experience Platform では[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を使用しています。
 

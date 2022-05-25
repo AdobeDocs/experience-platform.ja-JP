@@ -2,16 +2,16 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 100%
+source-wordcount: '2613'
+ht-degree: 96%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年4月27日（PT）**
+**リリース日：2022 年 5 月 25 日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -19,7 +19,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Dashboards]](#dashboards)
 - [データフロー](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [宛先](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [Real-time Customer Data Platform B2B エディション](#B2B)
 - [ソース](#sources)
@@ -94,27 +94,9 @@ Platformでは、データは様々なソースから取り込まれ、システ
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 高度なエンタープライズ宛先コネクタ | [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)、[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)、[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md) の 3 つのエンタープライズ宛先コネクタが一般入手可能になりました。<br> 一般入手可能なエンタープライズ宛先コネクタには、ベータ段階で以前提供されていたすべての機能に加えて、次の機能が含まれます。 <ul><li>[Azure Event Hubs の共有アクセス署名](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication)や HTTP API 宛先のその他の[認証タイプ](../../destinations/catalog/streaming/http-destination.md#authentication-information)（ベアラートークン、OAuth 2）を含む、新しい認証機能。</li><li>[履歴プロファイルデータのバックフィル](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill)（最初にアクティブ化される際にセグメントに対して選定された履歴プロファイルを送信）。</li><li>データフローの実行指標で、これらの宛先をサポート。</li><li>データペイロードに含まれる[追加のセグメントメタデータ](../../destinations/catalog/streaming/http-destination.md#destination-details)（セグメント名およびセグメントタイムスタンプなど）。</li><li>Experience Platform を許可リストに記載する必要があるお客様向けの[静的 IP アドレス](/help/destinations/catalog/streaming/ip-address-allow-list.md)のサポート。</li></ul> |
-| 宛先データフローのコンテキスト内アラート | 宛先データフローを作成する際に、[アラートを登録](../../destinations/ui/alerts.md)して、データフローの実行のステータス、成功、失敗に関するアラートメッセージを受信できるようになりました。Experience Platform UI またはメールでアラートを受信することを選択できます。 |
+| 最新のプロファイル選定を書き出し [毎日のセグメント評価の後](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | 毎日のセグメント評価が完了した後、最新のプロファイル認定を使用して、1 回または 1 日に完全なファイル書き出しをスケジュールできるようになりました。 |
+| のオプションのデータストリーム ID [Adobe Targetの宛先](../../destinations/catalog/personalization/adobe-target-connection.md) | Experience Platformの Web SDK を実装できないユーザーに対してAdobe Targetのパーソナライゼーションを有効にするために、Adobe Targetの宛先を設定する際のデータストリーム ID の選択はオプションになりました。 データストリームを使用しない場合、Experience Platformから Target に書き出されたセグメントは、次回のセッションのパーソナライゼーションのみをサポートしますが、エッジのセグメント化は、すべて [使用例](../../destinations/ui/configure-personalization-destinations.md) エッジのセグメント化に依存します。 |
 
-### 高度なエンタープライズ宛先コネクタのリリースプロセス {#release-process-enterprise-destinations}
-
-Amazon Kinesis、Azure Event Hubs および HTTP API 宛先について、リリースプロセス（4月27日開始）の間、以前のベータ版の宛先カードと新しい一般入手可能（GA）な宛先カードの両方が宛先カタログに表示されます。ベータ版の宛先を使用してお客様が設定したデータフローは、今後 2 ～ 3 日のうちに、同じ宛先の GA バージョンに移行されます。この移行は、最終的に4月29日金曜日（PT）の終わりまでに完了されます。ベータ版の宛先は、この短い期間の間、引き続き表示され、**非推奨**&#x200B;としてラベル付けされます。
-
-ベータ段階のこれらの宛先を使用している場合は、次の点に注意してください。
-
-- 過去に 3 つの宛先でベータ版を使用したことがある場合は、何もする必要はありません。ベータ版の一部として設定されたすべてのデータフローは、引き続き機能し、GA バージョンに移行されます。
-- 4月27日以降にこれらの宛先を設定する場合は、新しい GA バージョンの宛先で行ってください。
-- 非推奨とマークされたベータ版のカードは、リリース作業が完了（4月29日金曜日（PT）の終わりを予定）すると、削除されます。Experience Platform エンジニアリングチームは、リリース作業が成功するよう注意深く監視しています。
-
-**新しい宛先**
-
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [!DNL Criteo] | [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 広告プラットフォームにデータを接続してアクティブ化します。 |
-| [!DNL Sendgrid] | トランザクションメールおよびマーケティングメール用 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) プラットフォームにデータを接続してアクティブ化します。 |
-
-宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
