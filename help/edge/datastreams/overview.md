@@ -22,7 +22,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 
 ## 次にアクセス： [!UICONTROL データストリーム] workspace
 
-データ収集 UI でデータストリームを作成および管理するには、 **[!UICONTROL データストリーム]** をクリックします。
+データ収集 UI でデータストリームを作成および管理するには、次を選択します。 **[!UICONTROL データストリーム]** をクリックします。
 
 ![データ収集 UI の「データストリーム」タブ](../images/datastreams/overview/datastreams-tab.png)
 
