@@ -5,9 +5,9 @@ title: ポリシーの自動適用
 topic-legacy: guide
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1700'
 ht-degree: 66%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 66%
 
 ![](../images/enforcement/enforcement-flow.png)
 
-[!DNL Policy Service]
+セグメントが最初にアクティブ化されたとき、 [!DNL Policy Service] は、次の要因に基づいて、該当するポリシーをチェックします。
 
 * アクティブ化するセグメント内のフィールドおよびデータセットに適用される、データ使用ラベル。
 * 宛先のマーケティングの目的。
-* (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies.
+* （ベータ版）設定した同意ポリシーに基づいて、セグメントのアクティベーションに含めることに同意したプロファイル。
 
 >[!NOTE]
 >
@@ -58,14 +58,14 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 1. プロファイルのグループは、共通の属性に基づいて&#x200B;**セグメント**&#x200B;に分けられます。
 1. セグメントは、ダウンストリームの&#x200B;**宛先**&#x200B;に対してアクティブ化されます。
 
-Each stage in the above timeline represents an entity that may contribute to policy enforcement, as outlined in the table below:
+上記のタイムラインの各ステージは、次の表に示すように、ポリシーの実施に貢献する可能性のあるエンティティを表します。
 
 | データ系列のステージ | ポリシー適用における役割 |
 | --- | --- |
-| データセット | データセットには、データセット全体または特定のフィールドをどのユースケースに使用できるかを定義するデータ使用量ラベル（データセットレベルまたはフィールドレベルで適用）が含まれます。ポリシー違反は、ポリシーが制限する目的で特定のラベルを含むデータセットまたはフィールドを使用した場合に発生します。<br><br>If you have access to consent policies (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. |
+| データセット | データセットには、データセット全体または特定のフィールドをどのユースケースに使用できるかを定義するデータ使用量ラベル（データセットレベルまたはフィールドレベルで適用）が含まれます。ポリシー違反は、ポリシーが制限する目的で特定のラベルを含むデータセットまたはフィールドを使用した場合に発生します。<br><br>顧客から収集された同意属性も、データセットに保存されます。 同意ポリシー（現在はベータ版）へのアクセス権を持っている場合、ポリシーの同意属性要件を満たさないプロファイルは、宛先に対してアクティブ化されたセグメントから除外されます。 |
 | 結合ポリシー | 結合ポリシーは、複数のデータセットからフラグメントを結合する際に、データの優先順位付け方法を決定するために Platform で使用されるルールです。制限付きラベルを含むデータセットが宛先に対してアクティブ化されるように結合ポリシーが設定されている場合、ポリシー違反が発生します。詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。 |
 | セグメント | セグメントルールは、顧客プロファイルから含める属性を定義します。セグメント定義に含まれるフィールドに応じて、セグメントは、これらのフィールドに適用された使用ラベルを継承します。ポリシー違反は、継承ラベルがターゲット先の適用可能なポリシーによって制限されているセグメントを、そのマーケティングユースケースに基づいてアクティブ化すると発生します。 |
-| 宛先 | 宛先を設定する際に、マーケティングアクション（マーケティングユースケースとも呼ばれます）を定義できます。This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br><br><br> |
+| 宛先 | 宛先を設定する際に、マーケティングアクション（マーケティングユースケースとも呼ばれます）を定義できます。この使用例は、ポリシーで定義されたマーケティングアクションと相関関係があります。 つまり、宛先に対して定義するマーケティングアクションによって、その宛先に適用できるデータ使用ポリシーおよび同意ポリシーが決まります。<br><br>ターゲットの宛先のマーケティングアクションに対して使用ラベルが制限されているセグメントをアクティブ化すると、データ使用ポリシーの違反が発生します。<br><br>（ベータ版）セグメントがアクティブ化されると、（同意ポリシーによって定義された）マーケティングアクションに必要な同意属性を含まないプロファイルは、アクティブ化されたオーディエンスから除外されます。 |
 
 >[!IMPORTANT]
 >
@@ -75,14 +75,14 @@ Each stage in the above timeline represents an entity that may contribute to pol
 
 ポリシー違反が発生した場合、UI に表示される結果のメッセージには、違反の要因になったデータ系列を調べて問題を解決するためのツールが提示されます。詳しくは、次の節を参照してください。
 
-## Policy enforcement messages {#enforcement}
+## ポリシー適用メッセージ {#enforcement}
 
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+以下の節では、Platform UI に表示される様々なポリシー適用メッセージの概要を説明します。
 
-* [Data usage policy violation](#data-usage-violation)
-* [Consent policy evaluation](#consent-policy-evaluation)
+* [データ使用ポリシー違反](#data-usage-violation)
+* [同意ポリシーの評価](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation}
+### データ使用ポリシー違反 {#data-usage-violation}
 
 セグメントをアクティブ化（または[既にアクティブ化されたセグメントを編集](#policy-enforcement-for-activated-segments)）しようとするとポリシー違反が発生した場合、アクションは実行されず、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。違反がトリガーされると、適切なコンポーネントを更新してデータ使用ポリシーに準拠するようになるまで、「**[!UICONTROL 保存]**」ボタンは、変更するエンティティに対して無効になります。
 
@@ -106,55 +106,55 @@ The sections below outline the different policy enforcement messages that appear
 
 ![](../images/enforcement/list-view.png)
 
-### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+### 同意ポリシーの評価 {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>同意ポリシーは、現在、医療用Adobeシールドを購入した組織でのみ使用できます。
 
-[](../policies/user-guide.md#consent-policy)
+次の場合： [同意ポリシーを作成しました](../policies/user-guide.md#consent-policy) 宛先に対してセグメントをアクティブ化しているときに、同意ポリシーがアクティベーションに含まれるプロファイルの割合にどのように影響するかを確認できます。
 
-#### Pre-activation evaluation
+#### アクティベーション前の評価
 
-****[](../../destinations/ui/activation-overview.md)****
+次に **[!UICONTROL レビュー]** 次の場合にステップ： [宛先のアクティブ化](../../destinations/ui/activation-overview.md)を選択します。 **[!UICONTROL 適用されたポリシーの表示]**.
 
-![](../images/enforcement/view-applied-policies.png)
+![宛先のアクティブ化ワークフローで適用されたポリシーを表示ボタン](../images/enforcement/view-applied-policies.png)
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the activated segments.
+ポリシーチェックダイアログが表示され、アクティブ化されたセグメントの同意対象オーディエンスに対する同意ポリシーの影響を示すプレビューが表示されます。
 
-![](../images/enforcement/consent-policy-check.png)
+![Platform UI の同意ポリシーチェックダイアログ](../images/enforcement/consent-policy-check.png)
 
-The dialog shows the consented audience for one segment at a time. To view the policy evaluation for a different segment, use the dropdown menu above the diagram to select one from the list.
+ダイアログには、一度に 1 つのセグメントの同意済みオーディエンスが表示されます。 別のセグメントのポリシー評価を表示するには、ダイアグラムの上にあるドロップダウンメニューを使用して、リストから選択します。
 
-![](../images/enforcement/segment-switcher.png)
+![ポリシーチェックダイアログのセグメントスイッチャー](../images/enforcement/segment-switcher.png)
 
-Use the left rail to switch between the applicable consent policies for the selected segment. 
+左側のレールを使用して、選択したセグメントの適用可能な同意ポリシーを切り替えます。 選択されていないポリシーは、「[!UICONTROL その他のポリシー]」セクションに表示されます。
 
-![](../images/enforcement/policy-switcher.png)
+![ポリシーチェックダイアログのポリシー切り替えボタン](../images/enforcement/policy-switcher.png)
 
-The diagram displays the overlap between three groups of profiles:
+この図は、次の 3 つのプロファイルグループ間の重複を示しています。
 
-1. Profiles that qualify for the selected segment
-1. Profiles that qualify for the selected consent policy
-1. 
+1. 選択したセグメントに適合するプロファイル
+1. 選択した同意ポリシーの対象となるプロファイル
+1. セグメントに適用されるその他の同意ポリシー ([!UICONTROL その他のポリシー]」と表示されます。
 
-The profiles that qualify for all three of the above groups represent the consented audience for the selected segment, summarized in the right rail.
+上記の 3 つのグループすべてに該当するプロファイルは、選択したセグメントの同意されたオーディエンスを表し、右側のパネルに要約されます。
 
-![](../images/enforcement/summary.png)
+![ポリシーチェックダイアログの「概要」セクション](../images/enforcement/summary.png)
 
-Hover over one of the audiences in the diagram to show the number of profiles it contains.
+ダイアグラム内の 1 つのオーディエンスの上にマウスポインターを置くと、その中に含まれるプロファイルの数が表示されます。
 
-![](../images/enforcement/highlight-segment.png)
+![ポリシーチェックダイアログでのダイアグラムセクションのハイライト表示](../images/enforcement/highlight-segment.png)
 
-The consented audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
+同意対象のオーディエンスは、図の中央の重複で表され、他のセクションと同様にハイライト表示できます。
 
-![](../images/enforcement/consented-audience.png)
+![ダイアグラム内の同意済みオーディエンスのハイライト](../images/enforcement/consented-audience.png)
 
-#### Flow run enforcement
+#### フロー実行の強制
 
-When data is activated to a destination, the flow run details show the number of identities that were excluded due to active consent policies.
+データが宛先に対してアクティブ化されると、フロー実行の詳細には、アクティブな同意ポリシーによって除外された ID の数が示されます。
 
-![](../images/enforcement/dataflow-run-enforcement.png)
+![データフロー実行の除外 ID 指標](../images/enforcement/dataflow-run-enforcement.png)
 
 ## アクティブ化されたセグメントに対するポリシー施行 {#policy-enforcement-for-activated-segments}
 

@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;データガバナ
 solution: Experience Platform
 title: UI でのデータ使用ポリシーの管理
 topic-legacy: policies
-description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
+description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、ポリシーユーザーインターフェイスのポリシーワークスペースで実行できるExperience Platformの概要を説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1329'
 ht-degree: 51%
 
 ---
 
 # UI でのデータ使用ポリシーの管理
 
-Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。****[!DNL Experience Platform]
+Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、 **ポリシー** ワークスペース [!DNL Experience Platform] ユーザーインターフェイス。
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 ![](../images/policies/browse-policies.png)
 
-****
+同意ポリシー（現在はベータ版）にアクセスできる場合は、 **[!UICONTROL 同意ポリシー]** 切り替えて [!UICONTROL 参照] タブをクリックします。
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -47,13 +47,13 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 ![](../images/policies/create-policy-button.png)
 
-Depending on whether you are part of the beta for consent policies, one of the following occurs:
+同意ポリシーに関するベータ版に含まれているかどうかに応じて、次のいずれかが発生します。
 
-* [](#create-governance-policy)
-* [](#consent-policy)
+* ベータ版に参加していない場合は、すぐに [データガバナンスポリシーの作成](#create-governance-policy).
+* ベータ版のユーザーには、次のような追加のオプションが用意されています。 [同意ポリシーを作成する](#consent-policy).
    ![](../images/policies/choose-policy-type.png)
 
-### Create a data governance policy {#create-governance-policy}
+### データガバナンスポリシーの作成 {#create-governance-policy}
 
 **[!UICONTROL ポリシーの作成]**&#x200B;ワークフローが表示されます。まず、新しいポリシーの名前と説明を指定します。
 
@@ -79,66 +79,66 @@ Depending on whether you are part of the beta for consent policies, one of the f
 
 ![](../images/policies/created-policy.png)
 
-### Create a consent policy (Beta) {#consent-policy}
+### 同意ポリシーの作成 {#consent-policy}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>同意ポリシーは、現在、医療用Adobeシールドを購入した組織でのみ使用できます。
 
-If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
+同意ポリシーの作成を選択すると、新しい画面が表示され、新しいポリシーを設定できます。
 
 ![](../images/policies/consent-policy-dialog.png)
 
-In order to make use of consent policies, you must have consent attributes present in your profile data. [](../../landing/governance-privacy-security/consent/adobe/overview.md)
+同意ポリシーを利用するには、プロファイルデータに同意属性が存在する必要があります。 詳しくは、 [Experience Platformでの同意処理](../../landing/governance-privacy-security/consent/adobe/overview.md) を参照してください。
 
-Consent policies are comprised of two logical components:
+同意ポリシーは、次の 2 つの論理コンポーネントで構成されます。
 
-* **** This can be based on a certain marketing action being performed, the presence of certain data usage labels, or a combination of the two.
-* ****
+* **[!UICONTROL If]**:ポリシーチェックをトリガーにする条件。 これは、実行される特定のマーケティングアクション、特定のデータ使用ラベルの有無、またはこれら 2 つの組み合わせに基づくことができます。
+* **[!UICONTROL 次に、]**:プロファイルをポリシーをトリガーしたアクションに含めるために存在する必要がある同意属性。
 
-#### Configure conditions
+#### 条件の設定
 
-************
+以下 **[!UICONTROL If]** 「 」セクションで、このポリシーをトリガーするマーケティングアクションやデータ使用ラベルを選択します。 選択 **[!UICONTROL すべて表示]** および **[!UICONTROL ラベルを選択]** をクリックすると、使用可能なマーケティングアクションとラベルの完全なリストがそれぞれ表示されます。
 
-****
+1 つ以上の条件を追加したら、「 **[!UICONTROL 条件を追加]** 必要に応じて条件の追加を続けるには、ドロップダウンから適切な条件タイプを選択します。
 
 ![](../images/policies/add-condition.png)
 
-If you select more than one condition, you can use the icon that appears between them to switch the conditional relationship between &quot;AND&quot; and &quot;OR&quot;.
+複数の条件を選択する場合は、条件間に表示されるアイコンを使用して、「AND」と「OR」の条件付き関係を切り替えることができます。
 
 ![](../images/policies/and-or-selection.png)
 
-#### Select consent attributes
+#### 同意属性を選択
 
-**** This is the attribute that must be present in order for profiles to be included in the action governed by this policy. ****
+以下 **[!UICONTROL 次に、]** 「 」セクションで、和集合スキーマから少なくとも 1 つの同意属性を選択します。 これは、このポリシーで管理されるアクションにプロファイルを含めるために存在する必要がある属性です。 リストから提供されたオプションの 1 つを選択するか、「 」を選択します。 **[!UICONTROL すべて表示]** ：和集合スキーマから直接属性を選択します。
 
-When selecting the consent attribute, choose the values for the attribute that you want this policy to check for.
+同意属性を選択する場合、このポリシーで確認する属性の値を選択します。
 
 ![](../images/policies/select-schema-field.png)
 
-**** This estimation automatically updates as you adjust the policy configuration.
+1 つ以上の同意属性を選択した後、 **[!UICONTROL ポリシーのプロパティ]** パネルが更新され、このポリシーで許可されるプロファイルの推定数（合計プロファイルストアに対する割合を含む）が表示されます。 この見積もりは、ポリシー設定を調整すると自動的に更新されます。
 
 ![](../images/policies/audience-preview.png)
 
-****
+ポリシーに同意属性を追加するには、 **[!UICONTROL 結果を追加]**.
 
 ![](../images/policies/add-result.png)
 
-You can continue adding and adjusting conditions and consent attributes to the policy as needed. ****
+必要に応じて、ポリシーに条件と同意属性を引き続き追加および調整できます。 設定が完了したら、ポリシーの名前と説明（オプション）を入力してから、「 」を選択します **[!UICONTROL 保存]**.
 
 ![](../images/policies/name-and-save.png)
 
-****
+同意ポリシーが作成され、そのステータスが「 」に設定されます。 [!UICONTROL 無効] デフォルトでは。 すぐにポリシーを有効にするには、 **[!UICONTROL ステータス]** 右側のパネルを切り替えます。
 
 ![](../images/policies/enable-consent-policy.png)
 
-#### Verify policy enforcement
+#### ポリシーの適用を検証
 
-After you have created and enabled a consent policy, you can preview how it affects your consented audiences when activating segments to destinations. [](../enforcement/auto-enforcement.md#consent-policy-evaluation)
+同意ポリシーを作成して有効にしたら、宛先に対するセグメントをアクティブ化する際に、同意したオーディエンスに与える影響をプレビューできます。 詳しくは、 [同意ポリシーの評価](../enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ## ポリシーの有効化または無効化 {#enable}
 
-すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。For an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
+すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。個々のポリシーを適用対象として考慮するには、API または UI を使用して、そのポリシーを手動で有効にする必要があります。
 
 「**[!UICONTROL ポリシー]**」ワークスペースの「**[!UICONTROL 参照]**」タブで、ポリシーを有効または無効にできます。リストからカスタムポリシーを選択して、右側に詳細を表示します。「**[!UICONTROL ステータス]**」で、ポリシーを有効または無効にする切り替えボタンを選択します。
 
@@ -178,7 +178,7 @@ After you have created and enabled a consent policy, you can preview how it affe
 
 >[!NOTE]
 >
->Attempting to delete a marketing action that is being used by an existing policy causes an error message to appear, indicating that the delete attempt failed.
+>既存のポリシーで使用されているマーケティングアクションを削除しようとすると、削除の試行に失敗したことを示すエラーメッセージが表示されます。
 
 ![](../images/policies/delete-marketing-action.png)
 
