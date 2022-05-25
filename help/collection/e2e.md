@@ -2,7 +2,7 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platform が提供するデータ収集テクノロジーを使用して、Adobe Experience Cloud ソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
@@ -101,7 +101,7 @@ Edge ネットワークにデータを送信できるようになったら、組
 
 ![データストリーム](./images/e2e/datastreams.png)
 
-データストリームの設定要件は、データの送信先の製品と機能によって異なります。 各製品の設定オプションについて詳しくは、[データストリームの概要](../edge/fundamentals/datastreams.md)を参照してください。
+データストリームの設定要件は、データの送信先の製品と機能によって異なります。 各製品の設定オプションについて詳しくは、[データストリームの概要](../edge/datastreams/overview.md)を参照してください。
 
 ## Web SDK のインストールと設定 {#install}
 

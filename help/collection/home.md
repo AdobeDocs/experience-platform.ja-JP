@@ -5,7 +5,7 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 95%
@@ -26,7 +26,7 @@ Experience Platform が提供するデータ収集テクノロジーは、取り
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=ja)
 * [タグ](../tags/home.md)
-* [データストリーム](../edge/fundamentals/datastreams.md)
+* [データストリーム](../edge/datastreams/overview.md)
 * [イベントの転送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform モバイル SDK](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ Platform Web SDK と Platform Mobile SDK には、すべてのアドビ製品ラ
 
 ## Platform Edge Network とデータストリーム {#edge}
 
-Platform Edge Network とは、世界中に分散された信頼性の高い高速サーバーネットワークであり、データを極めて大規模に受信および処理できます。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../edge/fundamentals/datastreams.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
+Platform Edge Network とは、世界中に分散された信頼性の高い高速サーバーネットワークであり、データを極めて大規模に受信および処理できます。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../edge/datastreams/overview.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
 
 ![データストリームおよびアドビのソリューション](./images/home/adobe-solutions.png)
 

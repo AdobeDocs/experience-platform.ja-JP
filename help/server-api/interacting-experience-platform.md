@@ -4,7 +4,7 @@ description: Edge Network Server API を使用してAdobe Experience Platformと
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Experience Platform
 keywords: データ収集；出口；分析；Adobe Experience Platform Edge Network api;aep
 exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 概要 {#overview}
 
-Experience Platformのデータ収集を有効にするには、まず [データストリームの設定](../edge/fundamentals/datastreams.md) イベントをExperience Platformデータセットに転送する
+Experience Platformのデータ収集を有効にするには、まず [データストリームの設定](../edge/datastreams/overview.md) イベントをExperience Platformデータセットに転送する
 
 設定が完了したら、データストリーム設定に次の設定を含める必要があります。 `com_adobe_experience_platform`を作成します。
 

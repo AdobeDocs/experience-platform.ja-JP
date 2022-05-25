@@ -4,7 +4,8 @@ description: Experience PlatformWeb SDK を使用して、Adobe Analytics for Ta
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;A4T；ログ；Web SDK;Experience;Platform;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 4%
@@ -39,7 +40,7 @@ Adobe Experience Platform Web SDK を使用すると、 [Adobe Analytics for Tar
 
 ### Analytics クライアント側ログを有効にする {#enable-analytics-client-side-logging}
 
-お使いの実装で Analytics クライアント側ログを有効にすると見なすには、 [datastream](../../../fundamentals/datastreams.md).
+お使いの実装で Analytics クライアント側ログを有効にすると見なすには、 [datastream](../../../datastreams/overview.md).
 
 ![Analytics データストリーム設定が無効です](../assets/disable-analytics-datastream.png)
 

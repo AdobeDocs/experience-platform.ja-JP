@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 2%
@@ -82,7 +82,7 @@ Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Exp
 
 ## 顧客が [!DNL Web SDK]?
 
-いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 Web SDK を使用するには、組織でこの機能をプロビジョニングする必要があります。 アクセスを希望される場合は、次の情報を入力してください [フォーム](https://adobe.ly/websdkaccess) Adobeが [データストリーム UI](fundamentals/datastreams.md) とAdobe Experience Platform UI（必要に応じて）
+いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 Web SDK を使用するには、組織でこの機能をプロビジョニングする必要があります。 アクセスを希望される場合は、次の情報を入力してください [フォーム](https://adobe.ly/websdkaccess) Adobeが [データストリーム UI](datastreams/overview.md) とAdobe Experience Platform UI（必要に応じて）
 
 を使用するお客様 [!DNL Web SDK] は、Adobe Experience Platform UI でスキーマ、データセット、ID 名前空間を作成するためのアクセス権を付与されます。
 

@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 8%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 >
 >Adobe Experience Platform Web SDK でのOffer decisioningの使用は、一部のユーザーに対して早期にアクセスできます。 この機能は、一部の IMS 組織ではご利用いただけきません。
 
-Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファーとその他の関連オブジェクトは、Offer decisioningユーザーインターフェイス (UI) または API を使用して作成できます。
+Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer Decisioning ユーザーインターフェイス（UI）または API を使用して、オファーとその他の関連オブジェクトを作成できます。
 
 ## 前提条件
 
@@ -53,7 +53,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
    ![](assets/decision-scope-copy.png)
 
-* **データストリーム：** 詳しくは、 [datastreams](../../fundamentals/datastreams.md) ドキュメント。
+* **データストリーム：** 詳しくは、 [datastreams](../../datastreams/overview.md) ドキュメント。
 
 * **ID**:詳しくは、このドキュメントを読んで、方法を説明してください [Platform Web SDK は ID サービスを使用します](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
 offer decisioningを有効にするには、次の手順を実行します。
 
-1. でAdobe Experience Platformを有効にした [datastream](../../fundamentals/datastreams.md) 「Offer decisioning」ボックスをオンにします。
+1. でAdobe Experience Platformを有効にした [datastream](../../datastreams/overview.md) 「Offer decisioning」ボックスをオンにします。
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -84,14 +84,14 @@ offer decisioningを有効にするには、次の手順を実行します。
    * タグを使用した SDK のインストール
 
       1. [タグプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
-      1. [ 埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 「データストリーム」ドロップダウンから設定を選択し、作成したデータストリームを使用して、Platform Web SDK 拡張機能をインストールして設定します。 詳しくは、 [拡張機能](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. [埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. 「データストリーム」ドロップダウンから設定を選択し、作成したデータストリームを使用して、Platform Web SDK 拡張機能をインストールして設定します。 詳しくは、[拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 必要な [データ要素](../../../tags/ui/managing-resources/data-elements.md). 少なくとも、Platform Web SDK Identity Map と Platform Web SDK XDM オブジェクトデータ要素を作成する必要があります。
+      1. 必要な[データ要素](../../../tags/ui/managing-resources/data-elements.md)を作成します。少なくとも、Platform Web SDK ID マップおよび Platform Web SDK XDM オブジェクトデータ要素を作成する必要があります。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -139,7 +139,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`に対する質問に回答します。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
+| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **応答** 
@@ -236,7 +236,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`に対する質問に回答します。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
+| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **応答** 
@@ -332,4 +332,4 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 ## 制限事項
 
-一部のオファー制約は、現在、Capping などのモバイル Experience Edge ワークフローではサポートされていません。 「キャッピング」フィールドの値は、すべてのユーザーに対して 1 つのオファーを提示できる回数を指定します。 詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
+キャッピングなど、一部のオファー制約は現在、モバイル Experience Edge ワークフローではサポートされていません。キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。

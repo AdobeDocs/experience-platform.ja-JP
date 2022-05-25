@@ -2,7 +2,7 @@
 title: Adobe Experience Platformリリースノート 2022 年 2 月
 description: Adobe Experience Platformの 2022 年 2 月のリリースノート。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 53%
@@ -45,8 +45,8 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが新しくなりました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../edge/fundamentals/datastreams.md)のガイドを参照してください。 |
-| データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバー側の Experience Data Model（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/fundamentals/datastreams.md#data-prep)に関する節を参照してください。 |
+| データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが新しくなりました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../edge/datastreams/overview.md)のガイドを参照してください。 |
+| データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバー側の Experience Data Model（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/datastreams/data-prep.md)に関する節を参照してください。 |
 | ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。詳しくは、[ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
 
 Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
@@ -59,7 +59,7 @@ Platform のデータ収集について詳しくは、[データ収集概要](..
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （ベータ版）ファイルベースの宛先のDestination SDKのサポート | [Destination SDKによるファイルベースの宛先のサポート](../../destinations/destination-sdk/file-based-destination-configuration.md) は現在非公開ベータ版で、一部の数のパートナーや顧客のみが利用できます。 機能と関連ドキュメントは、一般リリースの前に変更される場合があります。<br><br>この機能へのアクセス方法については、Adobeのアカウント担当者にお問い合わせください。 Adobe内部のアカウント担当者は、Experience Platformの宛先の製品およびエンジニアリングチームに連絡して、サポートされる使用例について話し合う必要があります。 <br><br> ファイルベースの宛先のDestination SDKサポートのベータ段階では、ベータパートナーおよびお客様は、 [Experience PlatformDestination SDK](/help/destinations/destination-sdk/overview.md) 非公開の宛先を構築して、次の機能を活用します。 <ul><li>Amazon S3、SFTP サーバー、Azure Blob、Azure Data Lake Storage、Data Landing Zone ストレージを使用して、ファイルベース（バッチ）の宛先を作成します。</li><li>デフォルトのファイル書き出しスケジュールおよび頻度オプションを設定および設定します。</li><li>書き出した CSV ファイルの形式（区切り文字、エスケープ文字、その他のオプション）を設定するオプションを設定および設定します。</li><li>カスタムファイルヘッダーを設定および編集する機能。</li><li>ファイルとセグメントの書き出しに関するイベント通知を受け取る機能。</li><li>CSV、TSV、JSON、Parquet など、追加のファイルタイプを書き出す機能。</li></ul>  <br>新機能の使用を開始するには、以下をお読みください。 [（ベータ版）Destination SDKを使用してファイルベースの宛先を設定する](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> 非公開または製品化されたを作成する機能 *ストリーミング* Destination SDKを使用して宛先を設定する方法は、すべてのExperience Platformの顧客およびパートナーが既に利用できます。 方法に関するガイドを読む [Destination SDKを使用したストリーミング先の設定](/help/destinations/destination-sdk/configure-destination-instructions.md) 」を参照してください。 |
+| （ベータ版）ファイルベースの宛先のDestination SDKのサポート | [Destination SDKによるファイルベースの宛先のサポート](../../destinations/destination-sdk/file-based-destination-configuration.md) は現在非公開ベータ版で、一部の数のパートナーや顧客のみが利用できます。 機能と関連ドキュメントは、一般リリースの前に変更される場合があります。<br><br>この機能へのアクセス方法については、Adobeのアカウント担当者にお問い合わせください。 Adobe内部のアカウント担当者は、Experience Platformの宛先の製品およびエンジニアリングチームに連絡して、サポートされる使用例について話し合う必要があります。 <br><br> ファイルベースの宛先のDestination SDKサポートのベータ段階では、ベータパートナーおよびお客様は、 [Experience PlatformDestination SDK](/help/destinations/destination-sdk/overview.md) 非公開の宛先を構築して、次の機能を活用します。 <ul><li>Amazon S3、SFTP サーバー、Azure Blob、Azure Data Lake Storage、Data Landing Zone ストレージを使用して、ファイルベース（バッチ）の宛先を作成します。</li><li>デフォルトのファイル書き出しスケジュールおよび頻度オプションを設定および設定します。</li><li>書き出した CSV ファイルの形式（区切り文字、エスケープ文字、その他のオプション）を設定するオプションを設定および設定します。</li><li>カスタムファイルヘッダーを設定および編集する機能。</li><li>ファイルとセグメントの書き出しに関するイベント通知を受け取る機能。</li><li>CSV、TSV、JSON、Parquet など、追加のファイルタイプを書き出す機能。</li></ul>  <br>新機能の使用を開始するには、 [（ベータ版）Destination SDKを使用してファイルベースの宛先を設定する](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> 非公開または製品化されたを作成する機能 *ストリーミング* Destination SDKを使用して宛先を設定する方法は、すべてのExperience Platformの顧客およびパートナーが既に利用できます。 方法に関するガイドを読む [Destination SDKを使用したストリーミング先の設定](/help/destinations/destination-sdk/configure-destination-instructions.md) 」を参照してください。 |
 
 ## [!DNL Identity Service] {#identity}
 

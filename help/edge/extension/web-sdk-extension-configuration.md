@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK 拡張機能の設定
 description: データ収集 UI でのAdobe Experience Platform Web SDK タグ拡張の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -51,7 +51,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 リクエストがAdobe Experience Platform Edge ネットワークに送信されると、データストリーム ID がサーバー側設定の参照に使用されます。 Web サイト上でコードを変更しなくても、設定を更新できます。
 
-詳しくは、 [datastreams](../fundamentals/datastreams.md) を参照してください。
+詳しくは、 [datastreams](../datastreams/overview.md) を参照してください。
 
 
 ## [!UICONTROL プライバシー]
