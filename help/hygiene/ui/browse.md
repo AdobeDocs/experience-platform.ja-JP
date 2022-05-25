@@ -2,7 +2,9 @@
 title: データ衛生作業指示の参照
 description: Adobe Experience Platformユーザーインターフェイスで既存のデータ衛生作業指示を表示および管理する方法について説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 18ef55a084ced8c26e583598f9016dd9f4741153
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%

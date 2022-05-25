@@ -1,7 +1,10 @@
 ---
 title: 消費者レコードの削除
 description: Adobe Experience Platform UI で消費者レコードを削除する方法を説明します。
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 3%

@@ -1,7 +1,10 @@
 ---
 title: データ衛生 UI ガイド
 description: Adobe Experience Platformユーザーインターフェイスでデータの衛生タスクを管理する方法を説明します。
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
