@@ -6,7 +6,7 @@ title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 16%
@@ -265,7 +265,7 @@ Adobe Audience Managerの特性を使用するには、 [Audience Managerソー�
 
 顧客 AI は、適格と見なされる個々のプロファイルの属性を生成します。スコア（出力）を、プロビジョニングした内容に基づいて使用する方法は 2 つあります。 リアルタイム顧客プロファイル対応のデータセットがある場合は、 [セグメントビルダー](../../segmentation/ui/segment-builder.md). プロファイルが有効なデータセットがない場合、次の操作を実行できます。 [顧客 AI 出力のダウンロード](./user-guide/download-scores.md) データレイクで使用可能なデータセット。
 
-出力データセットは、以下にあります。 **データセット** Platform 内。 すべての顧客 AI 出力データセットは、名前で始まります **顧客 AI スコア — アプリ名** 一方、顧客 AI の出力スキーマはすべて **顧客 AI スキーマ — アプリ名**.
+出力データセットは、以下にあります。 **データセット** Platform 内。 すべての顧客 AI 出力データセットは、名前で始まります **顧客 AI スコア — アプリ名**. 同様に、すべての顧客 AI 出力スキーマは、 **顧客 AI スキーマ — アプリ名**.
 
 ![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
