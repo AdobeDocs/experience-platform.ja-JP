@@ -4,10 +4,10 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
-ht-degree: 4%
+source-wordcount: '1576'
+ht-degree: 9%
 
 ---
 
@@ -70,10 +70,11 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 * [[!UICONTROL オーディエンスサイズ]](#audience-size)
 * [[!UICONTROL ID の重複]](#identity-overlap)
 * [[!UICONTROL ID 別プロファイル]](#profiles-by-identity)
-* [[!UICONTROL オーディエンスのアクティベーションの順序]](#audience-activation-order)
+* [[!UICONTROL Audience Activation の順序]](#audience-activation-order)
 * [[!UICONTROL オーディエンスサイズのトレンド]](#audience-size-trend)
-* [[!UICONTROL オーディエンスサイズの変更の傾向]](#audience-size-change-trend)
+* [[!UICONTROL オーディエンスサイズの変更のトレンド]](#audience-size-change-trend)
 * [[!UICONTROL ID 別のオーディエンスサイズのトレンド]](#audience-size-trend-by-identity)
+* [[!UICONTROL オーディエンスの重複]](#audience-overlap)
 
 ### [!UICONTROL オーディエンスサイズ] {#audience-size}
 
@@ -125,7 +126,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
-### [!UICONTROL オーディエンスのアクティベーションの順序] {#audience-activation-order}
+### [!UICONTROL Audience Activation の順序] {#audience-activation-order}
 
 この [!UICONTROL オーディエンスのアクティベーションの順序] ウィジェットには、 [!UICONTROL 宛先名]、 [!UICONTROL platform]、およびアクティベーション [!UICONTROL 日付] オーディエンスの リストは、最新性に応じて高い順から低い順に並べられ、最大 10 行まで収容できます。
 
@@ -151,17 +152,25 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 セグメント評価と、プロファイルがセグメントからどのように適合および出るかについて詳しくは、 [セグメント化サービスのドキュメント](../../segmentation/home.md).
 
-### [!UICONTROL オーディエンスサイズの変更の傾向] {#audience-size-change-trend}
+### [!UICONTROL オーディエンスサイズの変更のトレンド] {#audience-size-change-trend}
 
-このウィジェットは、最新の日別スナップショット間の特定のセグメントについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 分析の対象として選択したセグメントは、概要ドロップダウンから選択されます。 トレンド分析の期間は、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
+このウィジェットは、最新の日別スナップショット間の特定のセグメントに対して選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。分析の対象として選択したセグメントは、概要ドロップダウンから選択されます。 30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
 
 ![オーディエンスサイズ変更トレンドウィジェット。](../images/segments/audience-size-change-trend.png)
 
 ### [!UICONTROL ID 別のオーディエンスサイズのトレンド] {#audience-size-trend-by-identity}
 
-このウィジェットは、ウィジェットドロップダウンメニューから選択した ID タイプに基づいて、特定のセグメントに関するオーディエンスサイズのトレンドを示します。 分析に使用されるセグメントは、概要ドロップダウンから選択します。 トレンド分析の期間は、30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
+このウィジェットは、ウィジェットドロップダウンメニューから選択した ID タイプに基づいて、特定のセグメントに関するオーディエンスサイズのトレンドを示します。 分析に使用されるセグメントは、概要ドロップダウンから選択します。 30 日、90 日および 12 か月の期間のトレンド分析の期間を可視化できます。期間は、ウィジェットのドロップダウンメニューから選択します。
 
 ![ID ウィジェット別のオーディエンスサイズのトレンド。](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL オーディエンスの重複] {#audience-overlap}
+
+このウィジェットは、2 つのセグメントのうち、両方のセグメント定義の条件を満たすプロファイルの数を表します。 比較に使用するセグメントは、ウィジェットのドロップダウンメニューから選択します。 関連するセグメント定義内に含まれるプロファイルの合計数は、ベン図の円または積集合にカーソルを合わせると確認できます。
+
+このウィジェットを使用すると、セグメント定義の結果の類似点を視覚化することで、セグメント化戦略を最適化できます。
+
+![オーディエンスの重複ウィジェット。](../images/segments/audience-overlap.png)
 
 ## 次の手順
 

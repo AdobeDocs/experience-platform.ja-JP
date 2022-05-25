@@ -4,10 +4,10 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
-ht-degree: 5%
+source-wordcount: '3761'
+ht-degree: 7%
 
 ---
 
@@ -107,9 +107,11 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL 非セグメント化プロファイルのトレンド]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID 別の非セグメント化プロファイル]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
-* [[!UICONTROL オーディエンスのサイズ]](#audiences-size)
+* [[!UICONTROL オーディエンスサイズ]](#audiences-size)
 * [[!UICONTROL プロファイル数のトレンド]](#profile-count-trend)
-* [[!UICONTROL ID 別の単一の ID プロファイル]](#single-identity-profiles-by-identity)
+* [[!UICONTROL 単一の ID プロファイル (ID 別)]](#single-identity-profiles-by-identity)
+* [[!UICONTROL 結合ポリシーによるオーディエンスの重複]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL プロファイル数 ID 別の変更トレンド]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL プロファイル数] {#profile-count}
 
@@ -153,7 +155,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="追加されたプロファイルのトレンド"
+>title="プロファイル 追加傾向"
 >abstract="このウィジェットは、過去 30 日、90 日または 12 ヶ月間にプロファイルストアに毎日追加された、結合されたプロファイルの合計数を表示します。 また、この数は、選択した結合ポリシーがプロファイルデータに適用されるかどうかによって異なります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="詳しくは、ドキュメントを参照してください。"
 
@@ -265,7 +267,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ![宛先ステータスウィジェットにマッピングされたオーディエンス。](../images/profiles/audiences-mapped-to-destination-status.png)
 
-### [!UICONTROL オーディエンスのサイズ] {#audiences-size}
+### [!UICONTROL オーディエンスサイズ] {#audiences-size}
 
 この [!UICONTROL オーディエンスのサイズ] ウィジェットには 2 列の表が用意されており、この表には、最大 20 個のセグメントと、各セグメントに含まれるオーディエンスの総数が表示されます。 リストは、オーディエンスの合計数に応じて、上位から下位の順に並べられます。 合計オーディエンスサイズの数は、適用される結合ポリシーによって異なります。
 
@@ -279,17 +281,36 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL プロファイル数のトレンド] {#profile-count-trend}
 
-この [!UICONTROL プロファイル数のトレンド] ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの総数の経時的な推移を示します。 この合計数には、最後の日別スナップショット以降にシステムにインポートされたプロファイルが含まれます。 データは 30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
+この [!UICONTROL プロファイル数のトレンド] ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの総数の経時的な推移を示します。 この合計数には、最後の日別スナップショット以降にシステムにインポートされたプロファイルが含まれます。 30 日、90 日および 12 か月の期間のデータを可視化できます。期間は、ウィジェットのドロップダウンメニューから選択します。
 
 ![プロファイル数のトレンドウィジェット。](../images/profiles/profile-count-trend.png)
 
-### [!UICONTROL ID 別の単一の ID プロファイル] {#single-identity-profiles-by-identity}
+### [!UICONTROL 単一の ID プロファイル (ID 別)] {#single-identity-profiles-by-identity}
 
-このウィジェットは棒グラフを使用して、1 つの一意の識別子のみで識別されるプロファイルの合計数を示します。 ウィジェットは、最も一般的に発生する ID のうち 5 つまでをサポートします。
+このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。
 
 個々のバーの上にマウスポインターを置くと、ID のプロファイルの合計数を示すダイアログが表示されます。
 
 ![ID 別の単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL 結合ポリシーによるオーディエンスの重複] {#audience-overlap-by-merge-policy}
+
+このウィジェットは、ベン図を使用して、選択した 2 つのセグメントの重複を表示します。 結合ポリシーはページ上部の概要ドロップダウンから選択され、分析用のセグメントはウィジェット内の 2 つのドロップダウンメニューから選択されます。 関連するセグメント定義内に含まれるプロファイルの総数は、円または積集合の上にマウスポインターを置くと確認できます。
+
+ウィジェットにセグメント定義の視覚的な重複が表示されるので、セグメント定義間の類似点を調べることで、セグメント化戦略を最適化できます。
+
+![結合ポリシードロップダウンとウィジェットセグメントドロップダウンがハイライトされた Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL プロファイル数 ID 別の変更トレンド] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+このウィジェットは、選択したソース ID と結合ポリシーに基づいてプロファイル数をフィルタリングし、線グラフを使用して様々な期間の数の変化を示します。 結合ポリシーはページ上部の概要ドロップダウンから選択し、ソース ID と期間はウィジェットのドロップダウンメニューから選択します。 30 日、90 日および 12 か月の期間のトレンドを可視化できます。
+
+このウィジェットは、必要な ID でフィルタリングされたプロファイルの成長パターンを示すことで、宛先のアクティベーションニーズを管理するのに役立ちます。
+
+![プロファイル数は、ID ウィジェットごとにトレンドを変更します。](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## （ベータ版）プロファイル有効性ウィジェット {#profile-efficacy-widgets}
 

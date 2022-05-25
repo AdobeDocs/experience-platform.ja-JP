@@ -4,10 +4,10 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
-ht-degree: 2%
+source-wordcount: '2671'
+ht-degree: 3%
 
 ---
 
@@ -57,9 +57,10 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
 * [[!UICONTROL マッピングされたオーディエンスのヘルス]](#mapped-audience-health)
 * [[!UICONTROL 宛先数]](#destinations-count)
-* [[!UICONTROL 宛先のステータス]](#destination-status)
+* [[!UICONTROL 宛先ステータス]](#destination-status)
 * [[!UICONTROL 宛先プラットフォーム別のアクティブな宛先]](#active-destinations-by-destination-platform)
-* [[!UICONTROL すべての宛先でアクティブ化されたオーディエンス]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL すべての宛先にわたってアクティブ化されたオーディエンス]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL アクティブ化されたオーディエンス]](#activated-audiences)
 
 ### [!UICONTROL 最も使用されている宛先] {#most-used-destinations}
 
@@ -229,7 +230,7 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ![宛先数ウィジェット。](../images/destinations/destinations-count.png)
 
-### [!UICONTROL 宛先のステータス] {#destination-status}
+### [!UICONTROL 宛先ステータス] {#destination-status}
 
 この [!UICONTROL 宛先のステータス] ウィジェットは、有効な宛先の合計数を 1 つの指標として表示し、ドーナツグラフを使用して、有効な宛先と無効な宛先の比例的な違いを示します。
 
@@ -243,13 +244,25 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ![宛先プラットフォーム別のアクティブな宛先ウィジェット。](../images/destinations/active-destinations-by-destination-platform.png)
 
-### [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] {#activated-audiences-across-all-destinations}
+### [!UICONTROL すべての宛先にわたってアクティブ化されたオーディエンス] {#activated-audiences-across-all-destinations}
 
 この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。 この数は、最新のスナップショットに対して正確です。
 
 ![すべての宛先ウィジェットでアクティブ化されたオーディエンス。](../images/destinations/activated-audiences-across-all-destinations.png)
 
 選択 **[!UICONTROL オーディエンス]** 宛先に移動するには [!UICONTROL 参照] タブをクリックします。 このページには、有効なすべての宛先のリストと、様々な関連指標が表示されます。 詳しくは、 [詳細情報 [!UICONTROL 参照] タブ](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL アクティブ化されたオーディエンス] {#activated-audiences}
+
+このウィジェットは、宛先に対してアクティブ化されたオーディエンスの合計数を示す単一の指標を提供します。
+
+![アクティブ化されたオーディエンスウィジェット](../images/destinations/activated-audiences.png)
+
+選択 **[!UICONTROL オーディエンス]** をクリックして、宛先ダッシュボードの詳細ページに移動します。 この [!UICONTROL アクティベーションデータ] 「 」タブには、宛先にマッピングされたセグメントのリストが表示されます。これには、開始日と終了日（該当する場合）、およびデータエクスポートに関するその他の関連情報（エクスポートタイプ、スケジュール、頻度など）が含まれます。 特定のセグメントに関する詳細を表示するには、リストからそのセグメントの名前を選択します。
+
+![宛先ダッシュボードの詳細ページ（「アクティベーションデータ」タブがハイライトされています）](../images/destinations/activation-data-tab.png)
+
+このウィジェットを使用すると、一目でアクティブ化されるオーディエンスの数に基づいて宛先の価値を把握できます。 また、より詳細な情報に容易にアクセスして、さらに分析することもできます。
 
 ## 次の手順
 
