@@ -8,8 +8,8 @@ seo-description: Learn how to activate the audience data you have in Adobe Exper
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 88%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
