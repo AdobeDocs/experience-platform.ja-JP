@@ -8,8 +8,8 @@ description: このチュートリアルでは、宛先データフローを更�
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
 source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2419'
+ht-degree: 40%
 
 ---
 
