@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '781'
 ht-degree: 93%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 93%
    - カスタマーサクセス {#customer-success}
       - [Salesforce Service Cloud コネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow コネクタ](connectors/customer-success/servicenow.md)
+      - [Zendesk コネクタ](connectors/customer-success/zendesk.md)
    - データベース {#databases}
       - [Amazon Redshift コネクタ](connectors/databases/redshift.md)
       - [Azure HDInsights 上の Apache Hive コネクタ](connectors/databases/hive.md)
@@ -123,6 +124,7 @@ ht-degree: 93%
       - カスタマーサクセス {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - データベース {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/api/create/databases/hive.md)
@@ -221,6 +223,7 @@ ht-degree: 93%
       - カスタマーサクセス {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - データベース {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/ui/create/databases/hive.md)
