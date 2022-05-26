@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -71,9 +71,11 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 **更新された機能**
 
-|機能 |名前 |説明 | | — | — | — | |追加されたリソース | <ul><li> アクセス制御ポリシー </li><li> 役割 </li><li> 監査ログ </li><li> 作業指示 </li><li> ID 名前空間 </li><li> ID グラフ </li><li> クエリ </li><li> データセット </li><li> ソースデータフロー </li></ul> |監査ログのリソースは、アクティビティの発生時に自動的に記録されます。 この機能を有効にした場合、手動でログ収集を有効にする必要はありません。 |
+| 機能 | 名前 | 説明 |
+| --- | --- | --- |
+| 追加されたリソース | <ul><li> アクセス制御ポリシー </li><li> 役割 </li><li> 監査ログ </li><li> 作業指示 </li><li> ID 名前空間 </li><li> ID グラフ </li><li> クエリ </li><li> データセット </li><li> ソースデータフロー </li></ul> | 監査ログのリソースは、アクティビティの発生時に自動的に記録されます。 この機能を有効にした場合、手動でログ収集を有効にする必要はありません。 |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Platform の監査ログについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
 
