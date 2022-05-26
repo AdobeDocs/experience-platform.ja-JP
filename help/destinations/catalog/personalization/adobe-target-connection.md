@@ -3,7 +3,7 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 46%
@@ -51,7 +51,7 @@ datastream ID を使用せずにAdobe Target接続を設定する場合、Web SD
 >id="platform_destinations_target_datastream"
 >title="データストリーム ID について"
 >abstract="このオプションは、セグメントに含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、Target 設定が有効になっているデータストリームのみが表示されます。 エッジセグメント化を使用するには、データストリーム ID を選択する必要があります。 「なし」を選択すると、エッジセグメント化を使用するすべてのユースケースが無効になります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="データストリームの選択の詳細を説明します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="データストリームの選択の詳細"
 
 >[!IMPORTANT]
 > 
