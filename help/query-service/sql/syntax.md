@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
-ht-degree: 10%
+source-wordcount: '3050'
+ht-degree: 9%
 
 ---
 
@@ -714,7 +714,7 @@ COPY query
 >
 >完全な出力パスは次のようになります。 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 この `ALTER TABLE` コマンドを使用すると、プライマリキーまたは外部キーの制約を追加または削除したり、テーブルに列を追加したりできます。
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >テーブルスキーマは一意で、複数のテーブル間で共有されないようにする必要があります。 また、プライマリキーの制約には名前空間が必須です。
 
+#### プライマリ ID とセカンダリ ID の追加またはドロップ
+
+この `ALTER TABLE` コマンドを使用すると、プライマリ ID テーブル列とセカンダリ ID テーブル列の両方に対する制約を SQL を介して直接追加または削除できます。
+
+次の例では、制約を追加して、プライマリ ID とセカンダリ ID を追加します。
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+次の例に示すように、制約を削除して ID を削除することもできます。
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+詳しくは、アドホックデータセットで ID を設定する方法に関するドキュメントを参照してください。
+
 #### 列を追加
 
 次の SQL クエリは、テーブルに列を追加する例を示しています。
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### サポートされるデータタイプ
+
+次の表に、を使用して列を表に追加する際に使用できるデータ型を示します。 [!DNL Postgres SQL]、XDM、および [!DNL Accelerated Database Recovery] (ADR) を Azure SQL で使用します。
+
+| --- | PSQL クライアント | XDM | ADR | 説明 |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | -9,223,372,036,854,775,807 ～ 9,223,372,036,854,775,807 の大きな整数を 8 バイトで格納するのに使用される数値データ型です。 |
+| 2 | `integer` | `int4` | `integer` | -2,147,483,648 ～ 2,147,483,647 の整数を 4 バイトで格納するのに使用される数値データ型です。 |
+| 3 | `smallint` | `int2` | `smallint` | -32,768 ～ 215-1 32,767 の整数を 2 バイトで格納するために使用される数値データ型です。 |
+| 4 | `tinyint` | `int1` | `tinyint` | 0 ～ 255 の整数を 1 バイトに格納するために使用される数値データ型です。 |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | 可変サイズの文字データ型です。 `varchar` は、列のデータエントリのサイズが大きく異なる場合に最も適しています。 |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` および `FLOAT` は、次の同義語として有効です： `DOUBLE PRECISION`. `double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` は `double precision`.`double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
+| 8 | `date` | `date` | `date` | この `date` データタイプは、タイムスタンプ情報のない 4 バイトで保存されるカレンダー日付値です。 有効な日付の範囲は01-01-0001 ～ 12-31-9999です。 |
+| 9 | `datetime` | `datetime` | `datetime` | インスタントを時刻で保存するために使用されるデータ型で、カレンダーの日時として表されます。 `datetime` 次の修飾子が含まれます。年、月、日、時間、秒、分数 A `datetime` 宣言には、これらの時間単位のサブセットを含めることができます。この時間単位は、その順序で結合される場合も、単一の時間単位で構成される場合もあります。 |
+| 10 | `char(len)` | `string` | `char(len)` | この `char(len)` キーワードは、項目が固定長の文字であることを示すために使用されます。 |
 
 #### スキーマを追加
 
