@@ -5,10 +5,10 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
+source-git-commit: ddc1750502281bfd7432336e707a35b8139ff069
 workflow-type: tm+mt
-source-wordcount: '4175'
-ht-degree: 17%
+source-wordcount: '4298'
+ht-degree: 16%
 
 ---
 
@@ -164,6 +164,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 配列を相互に結合します。 | <ul><li>配列： **必須** 要素を追加する配列。</li><li>値：親配列に追加する配列。</li></ul> | join_arrays(&#x200B;ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 入力のリストを取得し、配列に変換します。 | <ul><li>INCLUDE_NULLS: **必須** 応答配列に NULL を含めるかどうかを示す boolean 値です。</li><li>値： **必須** 配列に変換する要素。</li></ul> | to_array(&#x200B;INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** サイズを探しているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | この関数は、入力配列全体のすべての要素を、プロファイルの配列の末尾に追加するために使用します。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイルに配列を追加する配列です。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイル内の配列を置き換える配列。</li><li>インデックス： **オプション** 置き換えを実行する必要がある位置。</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
 
