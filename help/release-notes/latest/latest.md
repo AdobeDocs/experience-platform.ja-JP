@@ -2,16 +2,16 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 33%
+source-wordcount: '1593'
+ht-degree: 32%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 5 月 25 日（PT）**
+**リリース日：2022年5月25日（PT）**
 
 <!-- New features in Adobe Experience Platform: -->
 
@@ -136,6 +136,7 @@ Experience Platformは、クライアント側の顧客体験データを収集�
 | データストリームマッピングルールのインポート | Data Prep for Data Collection を設定する場合は、次の操作を実行できます。 [既存のデータストリームのマッピング・ルールをインポートします。](../../edge/datastreams/data-prep.md#import-mapping) すべてのフィールドマッピングを手動で設定する代わりに、を使用します。 |
 | Mobile SDK のデータチームマッピングのサポート | Experience PlatformMobile SDK で使用するデータストリームに対して、Data Prep for Data Collection を設定できるようになりました。 |
 | XDM オブジェクトのデータチームマッピングのサポート | 次の場合に、データレイヤーオブジェクトに加えて XDM オブジェクトをマッピングします。 [データ収集用のデータ準備の構成](../../edge/datastreams/data-prep.md#select-data). |
+| データフローとの統合 | Platform のソースカタログを使用して、Data Prep for Data Collection や Data Prep の警告のサポートの強化など、Platform Edge Network 上のデータにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
 
 Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
 
@@ -238,7 +239,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | のベータリリース [!DNL Zendesk] ソース | 以下を使用： [!DNL Zendesk] ユーザー、エージェント、組織のデータを取り込むソース [!DNL Zendesk] 例 [!DNL Profile] エンリッチメント。 詳しくは、 [[!DNL Zendesk] ソースの概要](../../sources/connectors/customer-success/zendesk.md) を参照してください。 |
-| Adobeデータ収集のサポート | ソースカタログを使用して、Data Prep for Data Collection や Data Prep によるデータ警告のサポートの強化など、Data Collection Experience Edge データにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
+| Adobeデータ収集のサポート | Platform のソースカタログを使用して、Data Prep for Data Collection や Data Prep の警告のサポートの強化など、Platform Edge Network 上のデータにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
 | でのファイルの取り込みのサポート `ISO-8859-1` エンコード | 以下を使用： `encoding` 取り込みパラメータ `ISO-8859-1` を使用して、クラウドストレージソースを含むエンコードされたファイルを Platform に [!DNL Flow Service] API 詳しくは、 [クラウドストレージソース接続の作成](../../sources/tutorials/api/collect/cloud-storage.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
