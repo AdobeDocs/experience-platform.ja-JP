@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
+source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 32%
+source-wordcount: '1685'
+ht-degree: 34%
 
 ---
 
@@ -20,16 +20,29 @@ ht-degree: 32%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [アラート](#alerts)
 - [監査ログ](#audit-logs)
 - [ダッシュボード](#dashbaords)
 - [データ収集](#data-collection)
-
 <!-- - [Data Governance](#data-governance) -->
 - [データ準備](#data-prep)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
+
+## アラート {#alerts}
+
+Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+
+**更新された機能**
+
+| 機能 | アラートルール | 説明 |
+| --- | --- | --- |
+| 新しいアラートルール | スキップ率がしきい値を超えています | これで、アラートを使用して、ソースのデータフローが ID のしきい値を超えた場合に通知を受け取ることができるようになりました。 更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
 
 <!-- ## Attribute-based access control {#abac}
 
