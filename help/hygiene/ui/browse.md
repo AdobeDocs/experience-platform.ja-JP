@@ -4,9 +4,9 @@ description: Adobe Experience Platformユーザーインターフェイスで既
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
+source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >id="platform_hygiene_workorders"
 >title="作業指示 ID"
 >abstract="データの衛生要求がシステムに送信されると、要求されたタスクを実行する作業指示が作成されます。 つまり、作業指示は、特定のデータの衛生処理を表し、現在のステータスやその他の関連する詳細が含まれます。 各作業指示は、作成時に自動的に固有の ID を割り当てます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="詳しくは、データの衛生に関する UI ガイドを参照してください。"
+>text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
