@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
 title: 属性ベースのアクセス制御サンドボックス
-description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
-hide: true
-hidefromtoc: true
+description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用したサンドボックスの管理について説明します
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 20%
 
 ---

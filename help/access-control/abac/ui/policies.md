@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
 title: 属性ベースのアクセス制御ポリシーの作成
-description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
-hide: true
-hidefromtoc: true
+description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してポリシーを管理する方法について説明します
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---

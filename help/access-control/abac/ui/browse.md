@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
 title: 属性ベースのアクセス制御の参照
-description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
-hide: true
-hidefromtoc: true
+description: このドキュメントでは、Adobe Experience Cloudでの権限インターフェイスの使用に関する情報を提供します
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 20%
 
 ---

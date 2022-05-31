@@ -1,14 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
 title: 属性ベースのアクセス制御ラベルの管理
-description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
-hide: true
-hidefromtoc: true
+description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してラベルを管理する方法について説明します
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '168'
+ht-degree: 23%
 
 ---
 

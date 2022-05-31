@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
 title: 属性ベースのアクセス制御ロールの権限の管理
-description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
-hide: true
-hidefromtoc: true
+description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してロールの権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
