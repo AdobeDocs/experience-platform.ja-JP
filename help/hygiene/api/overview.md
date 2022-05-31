@@ -2,12 +2,10 @@
 title: データ衛生 API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 29%
+source-wordcount: '309'
+ht-degree: 33%
 
 ---
 
@@ -41,9 +39,9 @@ ht-degree: 29%
 
 このドキュメントでは、リクエストの形式を示すために、API 呼び出しの例を提供しています。サンプル API 呼び出しのドキュメントで使用されている規則については、Experience Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
 
-## 作業指示
+<!-- ## Work orders
 
-作業順序は、特定のデータセットまたはすべてのデータセットから消費者 ID を削除するデータ衛生タスクを表します。 詳しくは、 [作業順序エンドポイントガイド](./workorder.md) を参照してください。
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## データセットの有効期間 (TTL)
 

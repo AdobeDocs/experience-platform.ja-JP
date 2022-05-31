@@ -2,16 +2,14 @@
 title: データ衛生作業指示の参照
 description: Adobe Experience Platformユーザーインターフェイスで既存のデータ衛生作業指示を表示および管理する方法について説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-hide: true
-hidefromtoc: true
-source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
+source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 2%
+source-wordcount: '413'
+ht-degree: 1%
 
 ---
 
-# データの衛生作業指示を参照
+# データの衛生作業指示を参照 {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
@@ -23,7 +21,7 @@ ht-degree: 2%
 >
 >現在、Adobe Experience Platformのデータ衛生機能は、医療用Adobeシールドを購入した組織でのみ使用できます。
 
-データの衛生要求がシステムに送信されると、要求されたタスクを実行する作業指示が作成されます。 作業指示は、特定のデータの衛生処理（消費者データの削除など）を表し、現在のステータスやその他の関連する詳細が含まれます。
+データの衛生要求がシステムに送信されると、要求されたタスクを実行する作業指示が作成されます。 作業指示は、データセットの有効期限 (TTL) など、特定のデータの衛生処理を表します。この中には、現在のステータスやその他の関連する詳細が含まれます。
 
 このガイドでは、Adobe Experience Platform UI で既存の作業指示を表示および管理する方法について説明します。
 
@@ -33,23 +31,20 @@ ht-degree: 2%
 
 ![を示す画像 [!UICONTROL データの衛生状態] Platform UI のワークスペース](../images/ui/browse/work-order-list.png)
 
-リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。 選択 **[!UICONTROL 消費者]** 消費者削除タスクのリストを表示するには、次の手順に従います。 **[!UICONTROL データセット]** ：データセットの有効期間 (TTL) スケジュールのリストを表示します。
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
 
-![を示す画像 [!UICONTROL データセット] タブ](../images/ui/browse/dataset-tab.png)
+![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
 ファネルアイコン (![ファネルアイコンの画像](../images/ui/browse/funnel-icon.png)) をクリックして、表示されている作業指示のフィルタのリストを表示します。
 
 ![表示された作業指示フィルターの画像](../images/ui/browse/filters.png)
 
-表示しているタブに応じて、様々なフィルターを使用できます。
-
-| Filter | カテゴリ | 説明 |
-| --- | --- | --- |
-| [!UICONTROL ステータス] | [!UICONTROL 消費者] &amp; [!UICONTROL データセット] | 作業指示の現在のステータスに基づいてフィルタリングします。 |
-| [!UICONTROL 作成日] | [!UICONTROL 消費者] | 消費者の削除リクエストがおこなわれた日時に基づいてフィルターします。 |
-| [!UICONTROL 作成日] | [!UICONTROL データセット] | 消費者の削除リクエストがおこなわれた日時に基づいてフィルターします。 |
-| [!UICONTROL 削除日] | [!UICONTROL データセット] | TTL がスケジュールした削除日に基づいてフィルタリングします。 |
-| [!UICONTROL 更新日] | [!UICONTROL データセット] | データセットの TTL が最後に更新された日時に基づいてフィルタリングします。 TTL の作成と有効期限は更新としてカウントされます。 |
+| Filter | 説明 |
+| --- | --- |
+| [!UICONTROL ステータス] | 作業指示の現在のステータスに基づいてフィルタリングします。 |
+| [!UICONTROL 作成日] | データセットの TTL リクエストがおこなわれた日時に基づいてフィルタリングします。 |
+| [!UICONTROL 削除日] | TTL がスケジュールした削除日に基づいてフィルタリングします。 |
+| [!UICONTROL 更新日] | データセットの TTL が最後に更新された日時に基づいてフィルタリングします。 TTL の作成と有効期限は更新としてカウントされます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -59,22 +54,21 @@ ht-degree: 2%
 
 ![選択されている作業指示 ID を示す画像](../images/ui/browse/select-work-order.png)
 
-選択した作業指示のタイプに応じて、異なる情報とコントロールが表示されます。 これらは以下の節で説明します。
+<!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### 消費者削除の詳細
+### Consumer delete details
 
-<!-- (Not available for initial release)
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Consumer delete response"
 >abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
--->
 
-消費者の削除リクエストの詳細は読み取り専用で、現在のステータスやリクエストがおこなわれてから経過した時間などの基本属性が表示されます。
 
-![消費者削除作業指示の詳細ページを示す画像](../images/ui/browse/consumer-delete-details.png)
+The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
-### データセットの TTL の詳細
+![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
+
+### Dataset TTL details -->
 
 データセット TTL の詳細ページには、削除が発生する前の日数の予定有効期限など、基本属性に関する情報が表示されます。 右側のレールでは、コントロールを使用して TTL を編集またはキャンセルできます。
 
@@ -82,7 +76,4 @@ ht-degree: 2%
 
 ## 次の手順
 
-このガイドでは、Platform UI で既存のデータ衛生作業指示を表示および管理する方法について説明します。 独自の作業指示の作成について詳しくは、次のドキュメントを参照してください。
-
-* [消費者の削除](./delete-consumer.md)
-* [データセットの TTL のスケジュール設定](./ttl.md)
+このガイドでは、Platform UI で既存のデータ衛生作業指示を表示および管理する方法について説明します。 独自の作業指示の作成について詳しくは、 [データセットの TTL のスケジュール設定](./ttl.md).

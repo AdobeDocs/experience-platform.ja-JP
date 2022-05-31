@@ -2,11 +2,9 @@
 title: データの衛生状態の概要
 description: Adobe Experience Platform Data Whealthy を使用すると、古いレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 0%
 
 Adobe Experience Platformは、消費者エクスペリエンスを調整するために、大規模で複雑なデータ操作を管理する堅牢なツールセットを提供します。 データが時間の経過と共にシステムに取り込まれると、データが期待どおりに使用されるようにデータストアを管理し、誤ったデータを修正する必要がある場合は更新し、組織のポリシーで必要と判断される場合は削除することが重要になります。
 
-Platform のデータ衛生機能を使用すると、消費者レコードとデータセットをプログラムで削除することで、保存した消費者データを管理できます。
+Platform のデータ衛生機能を使用すると、プログラム的なデータセット削除を通じて、保存された消費者データを管理できます。
 
 ## [!UICONTROL データの衛生状態] UI ワークスペース
 
-この [!UICONTROL データの衛生状態] Platform UI のワークスペースを使用すると、データの衛生操作を設定およびスケジュールし、レコードが期待どおりに保持されていることを確認できます。
+この [!UICONTROL データの衛生状態] Platform UI のワークスペースを使用すると、データの衛生操作を設定およびスケジュールでき、レコードが期待どおりに維持されるようになります。
 
 UI でデータの衛生タスクを管理する手順について詳しくは、 [データ衛生 UI ガイド](./ui/overview.md).
 

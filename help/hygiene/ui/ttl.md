@@ -2,11 +2,9 @@
 title: データセット TTL の管理
 description: Adobe Experience Platform UI でデータセットの有効期間 (TTL) をスケジュールする方法について説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -27,13 +25,11 @@ ht-degree: 0%
 
 ![を示す画像 [!UICONTROL リクエストを作成] ボタンが選択されています](../images/ui/ttl/create-request-button.png)
 
-リクエスト作成ダイアログが表示されます。 以下 **[!UICONTROL アクション]** セクション、選択 **[!UICONTROL データセット]** :TTL スケジュール設定に使用可能なコントロールを更新します。
-
-![を示す画像 [!UICONTROL データセット] 選択したオプション](../images/ui/ttl/create-request-button.png)
+<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
 ### 日付とデータセットを選択
 
-以下 **[!UICONTROL アクション]** 「 」セクションで、データセットを削除する日付を選択します。 日付は手動で（形式で）入力できます `mm/dd/yyyy`) またはカレンダーアイコン (![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)) をクリックして、ダイアログから日付を選択します。
+リクエスト作成ダイアログが表示されます。 以下 **[!UICONTROL アクション]** 「 」セクションで、データセットを削除する日付を選択します。 日付は手動で（形式で）入力できます `mm/dd/yyyy`) またはカレンダーアイコン (![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)) をクリックして、ダイアログから日付を選択します。
 
 ![TTL に設定されている有効期限を示す画像](../images/ui/ttl/select-date.png)
 
@@ -49,11 +45,11 @@ ht-degree: 0%
 
 データセットと TTL 日を選択したら、 **[!UICONTROL 送信]**.
 
-![を示す画像 [!UICONTROL 送信] ボタンが選択されています](../images/ui/ttl/select-dataset.png)
+![を示す画像 [!UICONTROL 送信] ボタンが選択されています](../images/ui/ttl/submit.png)
 
 データセットの削除日を確認するメッセージが表示されます。 選択 **[!UICONTROL 送信]** をクリックして続行します。
 
-リクエストが送信されると、作業指示が作成され、 [!UICONTROL 消費者] タブ [!UICONTROL データの衛生状態] ワークスペース。 ここから、作業指示のステータスを監視して、要求を処理できます。
+リクエストが送信されると、作業指示が作成され、 [!UICONTROL データの衛生状態] ワークスペース。 ここから、作業指示のステータスを監視して、要求を処理できます。
 
 ## TTL を編集またはキャンセルする
 
@@ -63,6 +59,4 @@ TTL の詳細ページの右側のレールに、スケジュールされた削�
 
 ## 次の手順
 
-このドキュメントでは、Experience PlatformUI でデータセットの TTL をスケジュールする方法について説明しました。 UI でのその他のデータ衛生タスクの実行方法について詳しくは、 [データ衛生 UI の概要](./overview.md).
-
-データ衛生 API を使用してデータセットの TTL をスケジュールする方法については、 [データセット TTL エンドポイントガイド](../api/ttl.md).
+このドキュメントでは、Experience PlatformUI でデータセットの TTL をスケジュールする方法について説明しました。 データ衛生 API を使用してデータセットの TTL をスケジュールする方法については、 [データセット TTL エンドポイントガイド](../api/ttl.md).

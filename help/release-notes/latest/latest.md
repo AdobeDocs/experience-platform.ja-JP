@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 27%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 Adobe Experience Platform の新機能：
 
-- [属性ベースのアクセス制御](#abac) —>
+- [属性ベースのアクセス制御](#abac)
 - [データの衛生状態](#hygiene)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
@@ -60,8 +60,9 @@ Experience Platformは、消費者レコードとデータセットをプログ�
 
 | 機能 | 説明 |
 | --- | --- |
-| 消費者の削除 | [消費者レコードの削除](../../hygiene/ui/delete-consumer.md) プライマリ id データに基づいて、データレイクとプロファイルストアから。 |
 | データセットの有効期間 (TTL) | [スケジュール TTL](../../hygiene/ui/ttl.md) （Platform データセット用） |
+
+{style=&quot;table-layout:auto&quot;}
 
 Platform での監査ログについて詳しくは、 [データの衛生状態の概要](../../hygiene/home.md).
 
