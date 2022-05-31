@@ -5,10 +5,10 @@ description: このドキュメントでは、Adobe Experience Platformの属性
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 20%
 
 ---
 
@@ -17,6 +17,17 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+
+権限はAdobe Experience Cloudの領域で、管理者がユーザーの役割とアクセスポリシーを定義して、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できます。
+
+権限を使用して、次の項目を設定できます。
+
+* [ラベル](./labels.md)
+* [権限](./permissions.md)
+* [ポリシー](./permissions.md)
+* [ロール](./roles.md)
+* [サンドボックス](./sandboxes.md)
+* [ユーザー](./users.md)
 
 の属性ベースのアクセス制御権限にアクセスするには [!DNL Experience Cloud]のサブスクリプションを購入している組織の管理者である必要があります。 [!DNL Experience Cloud]. Adobeは組織に対して柔軟な管理者階層を提供していますが、権限を設定するにはAdobe Experience Platformの製品管理者である必要があります。 詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
 

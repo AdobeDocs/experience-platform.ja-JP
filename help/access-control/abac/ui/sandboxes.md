@@ -5,10 +5,10 @@ description: このドキュメントでは、Adobe Experience Platformの属性
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '245'
+ht-degree: 20%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+
+サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションで、デジタルエクスペリエンスアプリケーションの開発プロセスとシームレスに統合できます。サンドボックス内で実行されるすべてのコンテンツとアクションは、そのサンドボックスのみに限定され、他のサンドボックスには影響しません。サンドボックスについて詳しくは、 [サンドボックスの概要](../../../sandboxes/home.md).
+
+## サンドボックスの設定
 
 サンドボックスが割り当てられている（または割り当てられている）詳細と役割を表示するには、 **[!UICONTROL サンドボックス]** タブをクリックします。
 

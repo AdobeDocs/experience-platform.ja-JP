@@ -5,9 +5,9 @@ description: このドキュメントでは、Adobe Experience Platformの属性
 hide: true
 hidefromtoc: true
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+
+権限は、管理者がExperience Cloudの領域で、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理するためのユーザーの役割およびアクセスポリシーを定義できます。
+
+権限を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
 
 直後 [新しいロールの作成](#create-a-new-role)を含めない場合、 **[!UICONTROL 役割]** タブをクリックします。 既存のロールの権限を編集する場合は、 **[!UICONTROL 役割]** タブをクリックします。 または、「フィルター」オプションを使用して結果をフィルターし、役割を検索します。
 
