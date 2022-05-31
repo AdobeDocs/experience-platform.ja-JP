@@ -5,10 +5,10 @@ title: Data Prep でのデータ形式の取り扱い
 topic-legacy: overview
 description: このドキュメントでは、Data Prep における様々なデータ型の処理方法の概要について説明します。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
-workflow-type: ht
-source-wordcount: '568'
-ht-degree: 100%
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 98%
 
 ---
 
@@ -106,3 +106,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | V | タイムゾーン ID | テキスト | アメリカ / ロサンゼルス |
 | O | タイムゾーンのオフセット | テキスト | GMT+8 |
 | Q/q | 四半期 | 数値 / テキスト | 3;03;第3四半期;第3四半期 |
+
+## マップ {#maps}
+
+現在、ではマップはサポートされていません。 [!DNL Data Prep].
