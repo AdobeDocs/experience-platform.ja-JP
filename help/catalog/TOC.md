@@ -3,9 +3,9 @@ audience: user
 user-guide-title: カタログおよびデータセットガイド
 user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
 feature: Catalog
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '111'
 ht-degree: 100%
 
 ---
@@ -34,6 +34,5 @@ ht-degree: 100%
    * [プロファイルと ID のデータセットの有効化](datasets/enable-for-profile.md)
    * [プロファイル更新 (upsert) のデータセットの有効化](datasets/enable-upsert.md)
 * [データレイクでのプライバシーリクエストの処理](privacy.md)
-* [Experience Platform でのデータ保護](data-protection.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
