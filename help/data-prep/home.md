@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 92%
+source-wordcount: '715'
+ht-degree: 76%
 
 ---
 
@@ -54,6 +54,14 @@ Data Prep は、Platform に取り込まれる様々な形式のデータを確�
 ## 次を使用して行の一部の更新を送信 [!DNL Data Prep]
 
 でのアップサートのストリーミング [!DNL Data Prep] 部分行の更新を次の項目に送信できます。 [!DNL Profile Service] データを作成し、単一の API リクエストで新しい id リンクを確立することもできます。 でアップサートをストリーミングする方法の詳細を学ぶには、以下を実行します。 [!DNL Data Prep]を参照し、 [部分行の更新の送信](./upserts.md).
+
+## の属性ベースのアクセス制御 [!DNL Data Prep]
+
+Adobe Experience Platformの属性ベースのアクセス制御を使用すると、管理者は、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
+
+属性ベースのアクセス制御を使用すると、アクセス権のある属性のみをマッピングできます。 アクセス権のない属性は、パススルーマッピングおよび計算フィールドでは使用できません。 したがって、必須フィールドへのアクセス権がない場合、マッピングを正常に保存できません。 また、どの子属性にもアクセスできない場合は、オブジェクトやオブジェクト配列をマッピングできません。 ただし、オブジェクトまたはオブジェクト配列内の他の要素を個別にマッピングすることはできます。
+
+詳しくは、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md) を参照してください。
 
 ## 次の手順
 
