@@ -3,7 +3,7 @@ keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure E
 title: Azure Event Hubs 接続
 description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 2%
@@ -71,16 +71,6 @@ ht-degree: 2%
 
 #### 共有アクセス署名 (SAS) 認証 {#sas-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="セグメント名を含める"
->abstract="データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="セグメントのタイムスタンプを含める"
->abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
-
 ![Azure Event Hubs 標準認証の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 次を選択した場合、 **[!UICONTROL 標準認証]** HTTP エンドポイントに接続するには、以下のフィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
@@ -91,6 +81,16 @@ ht-degree: 2%
 * **[!UICONTROL 名前空間]**:次の項目を入力します。 [!DNL Azure Event Hubs] 名前空間。 詳細 [!DNL Azure Event Hubs] 名前空間 [Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### 宛先の詳細 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="セグメント名を含める"
+>abstract="データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="セグメントのタイムスタンプを含める"
+>abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
 
 Azure Event Hubs の宛先への認証接続を確立したら、宛先に次の情報を提供します。
 

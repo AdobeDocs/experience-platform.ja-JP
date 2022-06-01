@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 88%
+source-wordcount: '2544'
+ht-degree: 81%
 
 ---
 
@@ -31,15 +31,15 @@ ht-degree: 88%
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先カタログ」タブ](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![宛先カタログタブへのアクセス方法をハイライトした画像](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
 
-   ![セグメントをアクティベートボタン](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+   ![「セグメントをアクティブ化」ボタンをハイライトした画像](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. セグメントをアクティベートするために使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
 
-   ![宛先を選択](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![セグメントをアクティブ化する 1 つまたは複数の宛先の選択方法をハイライトした画像](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 次のセクションの「[セグメントを選択](#select-segments)」に移動します。
 
@@ -47,7 +47,7 @@ ht-degree: 88%
 
 セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
 
-![セグメントを選択](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![アクティブ化する 1 つまたは複数のセグメントの選択方法をハイライトした画像](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## セグメントの書き出しをスケジュールする {#scheduling}
@@ -68,7 +68,7 @@ ht-degree: 88%
 
 宛先に送信するセグメントに対応する&#x200B;**[!UICONTROL スケジュールを作成]**&#x200B;ボタンを選択します。
 
-![スケジュールを作成ボタン](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![「スケジュールを作成」ボタンをハイライトした画像](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 完全ファイルを書き出し {#export-full-files}
 
@@ -90,7 +90,7 @@ ht-degree: 88%
 
 「**[!UICONTROL 完全ファイルを書き出し]**」を選択して、選択したセグメントに対する、すべてのプロファイル選定の完全なスナップショットを含むファイルの書き出しをトリガーします。
 
-![完全ファイルを書き出し](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![「完全なファイルを書き出し」切り替えを選択した UI の画像。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 「**[!UICONTROL 頻度]**」セレクターを使用して、書き出しの頻度を選択します。
 
@@ -132,7 +132,7 @@ ht-degree: 88%
 >
 >最初にエクスポートされた増分ファイルには、セグメントの対象となるすべてのプロファイルが含まれ、バックフィルとして機能します。
 
-![増分ファイルのエクスポート](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![「増分ファイルを書き出し」切り替えを選択した UI の画像。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. **[!UICONTROL 頻度]**&#x200B;セレクターを使用して、エクスポートする頻度を選択します。
 
@@ -164,11 +164,15 @@ ht-degree: 88%
 
 鉛筆アイコンを選択してモーダルウィンドウを開き、ファイル名を編集します。ファイル名は 255 文字までに制限されています。
 
-![ファイル名を設定](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>次の画像は、Amazon S3 の宛先でファイル名を編集する方法を示していますが、プロセスはすべてのバッチ宛先（SFTP や Azure Blob ストレージなど）で同じです。
+
+![ファイル名の設定に使用される鉛筆アイコンをハイライトする画像。](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 ファイル名エディターで、別のコンポーネントを選択してファイル名に追加できます。
 
-![ファイル名のオプションを編集](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![使用可能なすべてのファイル名オプションを示す画像。](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 宛先名とセグメント ID をファイル名から削除することはできません。これらに加えて、次を追加できます。
 
@@ -191,15 +195,15 @@ ht-degree: 88%
 
 1. **[!UICONTROL 属性を選択]**&#x200B;ページで「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
 
-   ![新しいマッピングを追加](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![「新しいフィールドを追加」ボタンをハイライトした画像。](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. 「**[!UICONTROL スキーマフィールド]**」エントリの右側の矢印を選択します。
 
-   ![ソースフィールドを選択](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![ソースフィールドの選択方法をハイライトした画像。](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. **[!UICONTROL フィールドを選択]**&#x200B;ページで、宛先に送信する XDM 属性を選択してから「**[!UICONTROL 選択]**」を選択します。
 
-   ![ソースフィールドページを選択](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![ソースフィールドとして使用可能な様々なフィールドを示す画像。](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
 1. さらにマッピングを追加するには、手順 1 ～ 3 を繰り返します。
 
@@ -211,7 +215,7 @@ ht-degree: 88%
 * `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
 * `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
-![推奨される属性](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
+![セグメントアクティベーションワークフローのマッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
 ### 必須の属性 {#mandatory-attributes}
 
@@ -384,11 +388,11 @@ ht-degree: 88%
 >
 >このステップでは、Adobe Experience Platform はデータ使用ポリシーの違反がないかを確認します。ポリシーに違反した場合の例を次に示します。違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。ポリシー違反の解決方法については、データガバナンスに関するドキュメントの[ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement)を参照してください。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![データポリシー違反の例を示す画像です。](../assets/common/data-policy-violation.png)
 
 ポリシー違反が検出されていない場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確定し、宛先へのデータの送信を開始します。
 
-![レビュー](../assets/ui/activate-batch-profile-destinations/review.png)
+![セグメントアクティベーションワークフローのレビュー画面を示す画像。](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## セグメントのアクティベーションを検証 {#verify}
 

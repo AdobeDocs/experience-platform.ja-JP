@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -98,6 +98,15 @@ ht-degree: 2%
 
 ### 認証情報 {#authentication-information}
 
+以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
+
+![Amazon Kinesis認証の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:In [!DNL Amazon Web Services]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon Kinesis] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL 地域]**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
+
+### 宛先の詳細 {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="セグメント名を含める"
@@ -107,15 +116,6 @@ ht-degree: 2%
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="セグメントのタイムスタンプを含める"
 >abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択したデータエクスポートの例に関するドキュメントを表示します。"
-
-以下のフィールドを入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**:
-
-![Amazon Kinesis認証の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:In [!DNL Amazon Web Services]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon Kinesis] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 地域]**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
-
-### 宛先の詳細 {#destination-details}
 
 Amazon Kinesisの宛先への認証接続を確立したら、宛先に次の情報を指定します。
 
