@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
+source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
 workflow-type: tm+mt
-source-wordcount: '2375'
-ht-degree: 27%
+source-wordcount: '2409'
+ht-degree: 26%
 
 ---
 
@@ -254,6 +254,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | --- | --- |
 | ソース内の属性ベースのアクセス制御 | 取り込み中に個々のソースフィールドおよび属性へのアクセスを管理および制御できるようになりました。 **注意**:現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。 |
 | のベータリリース [!DNL Zendesk] ソース | 以下を使用： [!DNL Zendesk] ユーザー、エージェント、組織のデータを取り込むソース [!DNL Zendesk] 例 [!DNL Profile] エンリッチメント。 詳しくは、 [[!DNL Zendesk] ソースの概要](../../sources/connectors/customer-success/zendesk.md) を参照してください。 |
+| B2B の一般提供 [!DNL Microsoft Dynamics] ソース | これで、 [!DNL Microsoft Dynamics] アカウント、商談、キャンペーン、マーケティングリスト、マーケティングリストメンバーなどの B2B オブジェクトを取り込むソース。 詳しくは、 [[!DNL Microsoft Dynamics] ソースの概要](../../sources/connectors/crm/ms-dynamics.md) を参照してください。 |
 | Adobeデータ収集のサポート | Platform のソースカタログを使用して、Data Prep for Data Collection や Data Prep の警告のサポートの強化など、Platform Edge Network 上のデータにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
 | でのファイルの取り込みのサポート `ISO-8859-1` エンコード | 以下を使用： `encoding` 取り込みパラメータ `ISO-8859-1` を使用して、クラウドストレージソースを含むエンコードされたファイルを Platform に [!DNL Flow Service] API 詳しくは、 [クラウドストレージソース接続の作成](../../sources/tutorials/api/collect/cloud-storage.md) を参照してください。 |
 
