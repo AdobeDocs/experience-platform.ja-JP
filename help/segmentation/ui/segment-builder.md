@@ -5,10 +5,10 @@ title: セグメントビルダー UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform UI のセグメントビルダーのワークスペースは、プロファイルデータ要素を操作できる豊富な機能を備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
-ht-degree: 36%
+source-wordcount: '2612'
+ht-degree: 34%
 
 ---
 
@@ -18,9 +18,14 @@ ht-degree: 36%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## セグメント定義の構成要素
+## セグメント定義の構成要素 {#building-blocks}
 
-セグメント定義の基本的な構成要素は、属性とイベントです。 また、既存のオーディエンスに含まれる属性とイベントも、新しい定義のコンポーネントとして使用できます。
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="フィールド"
+>abstract="セグメントを構成する 3 つのフィールドタイプは、属性、イベントおよびオーディエンスです。 属性では、XDM Individual Profile クラスに属するプロファイル属性を使用でき、イベントでは XDM ExperienceEvent データ要素を使用して実行されるアクションやイベントに基づいてオーディエンスを作成でき、オーディエンスでは外部ソースからインポートされたオーディエンスを使用できます。"
+
+セグメント定義の基本的な構成要素は、属性とイベントです。 また、既存のオーディエンスに含まれる属性とイベントを、新しい定義のコンポーネントとして使用できます。
 
 これらの構築要素は、 **[!UICONTROL フィールド]** の左側のセクション [!DNL Segment Builder] ワークスペース。 **[!UICONTROL フィールド]** には、主要な構築ブロックの各タブが含まれます。&quot;[!UICONTROL 属性]&quot;, &quot;[!UICONTROL イベント]&quot;および&quot;[!UICONTROL オーディエンス]&quot;.
 
@@ -210,7 +215,19 @@ ht-degree: 36%
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## セグメントのプロパティ
+## セグメントのプロパティ {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="セグメントのプロパティ"
+>abstract="「セグメントのプロパティ」セクションには、結果のセグメントのサイズの推定値が表示され、プロファイルの合計数に対する認定済みプロファイルの数が表示されます。 これにより、オーディエンス自体を作成する前に、必要に応じてセグメント定義を調整できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="見積もりを更新"
+>abstract="セグメントの予測を更新すると、提案したセグメントに適合するプロファイル数のプレビューをすぐに確認できます。 オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="詳しくは、ドキュメントを参照してください。"
+
 
 セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「**[!UICONTROL セグメントのプロパティ]**」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
 

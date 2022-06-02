@@ -5,10 +5,10 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 21%
+source-wordcount: '1746'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 21%
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):に取り込まれる様々なデータソースの ID を関連付けることで、顧客プロファイルの作成を可能にします。 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
 - **セグメント定義**：ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。
@@ -37,7 +37,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 >
 >組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL セグメント] ダッシュボードが表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、セグメントの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
-### [!UICONTROL セグメント] dashboard {#segments-dashboard}
+### [!UICONTROL セグメントダッシュボード] {#segments-dashboard}
 
 この **[!UICONTROL セグメント]** ダッシュボードでは、組織のセグメントデータに関連する主要指標の概要を説明します。
 
@@ -46,6 +46,16 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 参照 {#browse}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="チャーン"
+>abstract="チャーンは、セグメントジョブが最後に実行された時点と比較して、セグメント定義内で変更されているプロファイルの割合を表します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="評価方法"
+>abstract="セグメントの評価方法には、バッチ、ストリーミング、エッジが含まれます。"
 
 を選択します。 **[!UICONTROL 参照]** タブをクリックして、IMS 組織のすべてのセグメント定義のリストを表示します。
 
@@ -65,7 +75,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 チャーンは、セグメントジョブが最後に実行された時点と比較して、セグメント定義内で変更されているプロファイルの割合を表し、プロファイル数は、セグメントに適合するプロファイルの合計数を表します。
 
-評価方法は、ストリーミングまたはバッチのいずれかです。ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。
+評価方法は、ストリーミング、バッチ、エッジのいずれかです。 ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。Edge セグメントはリアルタイムに評価され、同じページや次のページのパーソナライゼーションの使用例に使用できます。
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
@@ -151,7 +161,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 ![](../images/ui/overview/segment-browse-create.png)
 
-### [!DNL Segment Builder] ワークスペース
+### [!DNL Segment Builder] workspace
 
 [!DNL Segment Builder] は、操作できる豊富なワークスペースを提供します。 [!DNL Profile] データ要素。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 
@@ -187,7 +197,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 >
 >ストリーミングセグメント化を機能させるには、組織でスケジュールに沿ったセグメント化を有効にする必要があります。 スケジュールに沿ったセグメント化を有効にする方法について詳しくは、 [このユーザガイドの「ストリーミングのセグメント化」の節](#scheduled-segmentation).
 
-## エッジセグメント化 {#edge-segmentation}
+## エッジのセグメント化 {#edge-segmentation}
 
 エッジのセグメント化は、Platform 内のセグメントを即座にエッジ上で評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
 
@@ -203,7 +213,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
-## 次の手順とその他のリソース {#next-steps}
+## 次の手順と追加のリソース {#next-steps}
 
 この [!DNL Segmentation Service] UI には、マーケティング可能なオーディエンスを次の場所から分離できる豊富なワークフローが用意されています。 [!DNL Real-time Customer Profile] データ。
 
