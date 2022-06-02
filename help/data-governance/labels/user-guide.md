@@ -5,10 +5,10 @@ title: UI でのデータ使用ラベルの管理
 topic-legacy: labels
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1140'
-ht-degree: 100%
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+workflow-type: tm+mt
+source-wordcount: '1186'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 100%
 
 ![継承されたラベルを非表示にする](../images/labels/inherited-labels.png)
 
-## フィールドレベルでのラベルの管理
+## データセットフィールドレベルでのラベルの管理
 
 [データセットレベルでのデータ使用状況ラベルの追加と編集](#add-labels)のワークフローを継続して、そのデータセットの「**[!UICONTROL データガバナンス]**」ワークフロー内のフィールドレベルのラベルを管理することもできます。
 
@@ -99,6 +99,12 @@ ht-degree: 100%
 ![複数のフィールドを選択して、フィールドレベルのラベルを同時に適用します。](../images/labels/multiple-fields.png)
 
 継承は最上位レベルから下のレベル（データセットからフィールド）のみに移動するため、フィールドレベルで適用されたラベルは他のフィールドやデータセットには反映されないことに注意する必要があります。
+
+## スキーマレベルでのラベルの管理
+
+スキーマまたはそのスキーマ内のフィールドに直接ラベルを追加できます。 スキーマレベルで適用されたフィールドは、そのスキーマに基づくすべてのデータセットに反映されます。
+
+に関するチュートリアルを参照してください。 [スキーマレベルのラベルの管理](../../xdm/tutorials/labels.md) を参照してください。
 
 ## カスタムラベルの管理
 

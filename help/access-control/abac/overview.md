@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 24%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 24%
 
 ## Adobe Experience Platformの属性ベースのアクセス制御
 
-以下の節では、属性ベースのアクセス制御が Platform の他のコンポーネントに統合される方法について説明します。
+次の節では、属性ベースのアクセス制御が Platform の他のコンポーネントに統合される方法について説明します。
 
 ### アクセス制御
 
@@ -113,7 +113,7 @@ Adobe Experience Platform [!DNL Identity Service] を利用すると、デバイ
 
 属性ベースのアクセス制御を使用すると、次のことができます。
 
-* フィールドグループまたはクラスに属性を適用します。 これにより、同じフィールドグループまたはクラスを持つ複数のスキーマで、フィールドグループまたはクラスレベルの設定に応じて、同じ属性でタグ付けされたフィールドを使用できます。
+* [フィールドグループとクラスにデータ使用ラベルを適用する](../../xdm/tutorials/labels.md). これにより、同じフィールドグループまたはクラスを持つ複数のスキーマで、フィールドグループまたはクラスレベルの設定に応じて、同じ属性でタグ付けされたフィールドを使用できます。
 * ユーザーに割り当てられた役割に適用される権限セットに応じて、特定の XDM スキーマフィールドへのユーザーアクセスを設定します。
 
 XDM について詳しくは、 [XDM の概要](../../xdm/home.md).
