@@ -1,19 +1,17 @@
 ---
-title: 他のパーソナライゼーションソリューションからAdobeコンテンツを取得
+title: パーソナライゼーションの概要
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法を説明します
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: パーソナライゼーション；server api;Adobe Experience Platform Edge Network;パーソナライゼーションを取得
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 9%
 
 ---
 
 
-# パーソナライゼーションソリューションからAdobeコンテンツを取得
-
-## 概要 {#overview}
+# パーソナライゼーションの概要
 
 を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -138,7 +136,7 @@ Adobeのパーソナライゼーションソリューションを使用する前
 **API 形式**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### リクエスト {#request}
