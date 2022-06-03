@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '392'
 ht-degree: 98%
 
 ---
@@ -119,6 +119,9 @@ ht-degree: 98%
       * [!DNL BrightCove] ビデオトラッキング {#brightcove}
          * [概要](./extensions/web/brightcove/overview.md)
          * [リリースノート](./extensions/web/brightcove/release-notes.md)
+      * Google Data Layer {#google-data-layer}
+         * [概要](./extensions/web/google-data-layer/overview.md)
+         * [リリースノート](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL YouTube] ビデオトラッキング拡張機能 {#youtube}
          * [概要](./extensions/web/youtube/overview.md)
          * [リリースノート](./extensions/web/youtube/release-notes.md)
