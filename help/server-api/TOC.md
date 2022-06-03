@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API ドキュメント
 breadcrumb-title: Edge Network Server API ドキュメント
 user-guide-description: Edge Network Server API の概要と使用方法について説明します。
 feature: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: c6ecd493bd8366d49ca0b9dd851c92c5ce732d18
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 11%
+source-wordcount: '67'
+ht-degree: 55%
 
 ---
 
@@ -16,14 +16,16 @@ ht-degree: 11%
 # Edge Network Server API ドキュメント {#edge-network-server-api}
 
 
-- [概要](overview.md)
-- [認証](authentication.md)
-- データ収集 {#data-collection}
-   - [単一イベントのデータ収集](interactive-data-collection.md)
-   - [バッチイベントのデータ収集](non-interactive-data-collection.md)
-- 他のAdobeソリューション {#interacting-other-adobe-solutions}
-   - [Adobe Analyticsの操作](interacting-adobe-analytics.md)
-   - [Adobe Experience Platformの操作](interacting-experience-platform.md)
-- [サードパーティソリューションとのやり取り](interacting-third-party-solutions.md)
-- [エラー処理](error-handling.md)
-- [トラブルシューティング](troubleshooting.md)
+* [概要](overview.md)
+* [認証](authentication.md)
+* データ収集 {#data-collection}
+   * [単一イベントのデータ収集](interactive-data-collection.md)
+   * [バッチイベントのデータ収集](non-interactive-data-collection.md)
+* 他のAdobeソリューション {#interacting-other-adobe-solutions}
+   * [Adobe Analyticsの操作](interacting-adobe-analytics.md)
+* パーソナライズ機能 {#personalization}
+   * [パーソナライゼーションソリューションからAdobeコンテンツを取得](personalization-overview.md)
+   * [offer decisioning](personalization-offer-decisioning.md)
+   * [Adobe Targetを使用したパーソナライゼーション](personalization-target.md)
+* [エラー処理](error-handling.md)
+* [トラブルシューティング](troubleshooting.md)
