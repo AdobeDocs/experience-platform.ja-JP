@@ -6,10 +6,10 @@ description: この記事では、アクティベーションの前におこな�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 20%
+source-wordcount: '1102'
+ht-degree: 19%
 
 ---
 
@@ -65,7 +65,7 @@ Adobe Experience Platform API を呼び出す前に、次の前提条件を満�
 
 * Adobe Experience Platformへのアクセス権を持つ IMS 組織アカウントがある。
 * Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること お問い合わせ [Admin Console](../../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
-* あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe開発者コンソール](https://developer.adobe.com/console) 新しいアカウントを作成します。
+* あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
 ## 手順 2:資格情報の収集 {#credentials}
 
@@ -91,9 +91,10 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 アドホックアクティベーション API を使用してセグメントをアクティブ化する前に、まず、選択した宛先に対して、Platform UI でアクティベーションフローを設定する必要があります。
 
-これには、アクティベーションワークフロー、セグメントの選択、スケジュールの設定、アクティブ化が含まれます。
+これには、アクティベーションワークフロー、セグメントの選択、スケジュールの設定、アクティブ化が含まれます。 UI または API を使用して、アクティベーションフローを作成できます。
 
-バッチ保存先のアクティベーションフローを設定する方法の詳細については、次のチュートリアルを参照してください。 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../ui/activate-batch-profile-destinations.md).
+* [Platform UI を使用して、プロファイル書き出しの宛先をバッチ処理するためのアクティベーションフローを作成します](../ui/activate-batch-profile-destinations.md)
+* [フローサービス API を使用して、バッチプロファイル書き出しの宛先に接続し、データをアクティブ化します](../api/connect-activate-batch-destinations.md)
 
 ## 手順 4:最新のセグメント書き出しジョブ ID を取得する {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | セグメントをアクティブ化する宛先インスタンスの ID。 |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | セグメントをアクティブ化する宛先インスタンスの ID。 これらの ID は、 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** 」タブに移動し、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、 [宛先 workspace に関するドキュメント](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するセグメントの ID。 |
 | <ul><li>`exportId1`</li></ul> | ID が [セグメントの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 詳しくは、 [手順 4:最新のセグメント書き出しジョブ ID を取得する](#segment-export-id) を参照してください。 |
 
