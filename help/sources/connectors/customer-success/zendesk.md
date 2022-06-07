@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zendesk Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Zendesk をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 34%
@@ -33,7 +33,7 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 この節では、を認証するために完了する必要がある前提条件の手順について説明します。 [!DNL Zendesk] アカウント
 
-* の認証の最初の手順 [!DNL Zendesk] アカウントは、 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk]登録ページ](https://www.zendesk.com/register/) 登録して Zendesk アカウントを作成します。
+* の認証の最初の手順 [!DNL Zendesk] アカウントは、 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk] 登録ページ](https://www.zendesk.com/register/) 登録して Zendesk アカウントを作成します。
 * 登録が完了したら、 [[!DNL Zendesk] web サイト](https://www.zendesk.com/login/) の **サブドメイン**.
 * 次に、 **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * 最後に、 **[!DNL API token]** 」セクションに入力します。
