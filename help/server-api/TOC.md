@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API ドキュメント
 breadcrumb-title: Edge Network Server API ドキュメント
 user-guide-description: Edge Network Server API の概要と使用方法について説明します。
 feature: Data Collection
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+source-git-commit: 6fb2b4ab47e9964e64fd94c49623f4c60689094c
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 56%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 56%
    * [Adobe Analyticsの操作](interacting-adobe-analytics.md)
 * パーソナライズ機能 {#personalization}
    * [パーソナライゼーションの概要](personalization-overview.md)
-   * [offer decisioning](personalization-offer-decisioning.md)
    * [Adobe Targetを使用したパーソナライゼーション](personalization-target.md)
+   * [offer decisioning](personalization-offer-decisioning.md)
 * [エラー処理](error-handling.md)
 * [トラブルシューティング](troubleshooting.md)
