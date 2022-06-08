@@ -4,9 +4,9 @@ description: Adobe Experience Platform UI で消費者レコードを削除す�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 3%
 
 ---
@@ -62,12 +62,12 @@ Platform での ID について詳しくは、次のドキュメントを参照�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="プライマリID"
->abstract="プライマリ ID は、レコードをExperience Platform内の消費者のプロファイルに結び付ける属性です。 データセットのプライマリ ID フィールドは、データセットの基になるスキーマによって定義されます。 この列では、消費者のプライマリ ID のタイプ（または名前空間）を指定する必要があります。例えば、電子メールアドレスには「電子メール」、Experience CloudID には「ecid」と入力します。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
+>abstract="プライマリ ID は、レコードをExperience Platform内の消費者のプロファイルに結び付ける属性です。 データセットのプライマリ ID フィールドは、データセットの基になるスキーマによって定義されます。 この列では、消費者のプライマリ ID のタイプ（または名前空間）を指定する必要があります ( 例： `email` （電子メールアドレスの場合） `ecid` (Experience CloudID)。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 値"
->abstract="この列では、消費者のプライマリ ID の値を指定する必要があります。この値は、左の列で指定された ID タイプに対応している必要があります。 プライマリ ID タイプが「email」の場合、値は消費者の電子メールアドレスにする必要があります。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
+>abstract="この列では、消費者のプライマリ ID の値を指定する必要があります。この値は、左の列で指定された ID タイプに対応している必要があります。 プライマリ ID タイプが `email`の場合、値は消費者の電子メールアドレスにする必要があります。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
 
 消費者データを削除する場合は、削除する必要のあるレコードをシステムが判断できるように、ID 情報を指定する必要があります。 Platform のデータセットの場合、レコードは **プライマリ ID** データセットのスキーマで定義されるフィールド。
 
