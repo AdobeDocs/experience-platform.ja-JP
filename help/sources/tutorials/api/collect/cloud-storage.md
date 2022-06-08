@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
+source-git-commit: 313d80603f54b7e79316b01790fb4f258851858e
 workflow-type: tm+mt
-source-wordcount: '1586'
-ht-degree: 80%
+source-wordcount: '1613'
+ht-degree: 79%
 
 ---
 
@@ -99,7 +99,7 @@ curl -X POST \
 | `data.properties.columnDelimiter` | （オプション）フラットファイルを収集する際に指定できる 1 文字の列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合、コンマ (`,`) がデフォルト値として使用されます。 **注意**:この `columnDelimiter` プロパティは、区切り文字付きファイルを取り込む場合にのみ使用できます。 |
 | `data.properties.encoding` | （オプション）データを Platform に取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**:この `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
 | `data.properties.compressionType` | （オプション）取り込み用に圧縮ファイルタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは次のとおりです。 `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`、および `tar`. **注意**:この `compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
-| `params.path` | アクセスするソースファイルのパス。このパラメーターは、個々のファイルまたはフォルダー全体を指します。 |
+| `params.path` | アクセスするソースファイルのパス。このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**:ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例： `/acme/summerCampaign/*.csv` は、 `/acme/summerCampaign/` フォルダー。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプを使用 `file` 個々のファイルを取り込んでタイプを使用するには `folder` フォルダー全体を取り込みます。 |
 | `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられている接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
