@@ -5,9 +5,9 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
 workflow-type: tm+mt
-source-wordcount: '3050'
+source-wordcount: '3042'
 ht-degree: 9%
 
 ---
@@ -724,28 +724,34 @@ COPY query
 次の SQL クエリは、テーブルに制約を追加または削除する例を示しています。
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | パラメーター | 説明 |
 | ------ | ------ |
 | `table_name` | 編集するテーブルの名前。 |
-| `constraint_name` | 追加または削除する制約の名前。 |
 | `column_name` | 制約を追加する列の名前。 |
 | `referenced_table_name` | 外部キーによって参照されるテーブルの名前。 |
 | `primary_column_name` | 外部キーによって参照される列の名前。 |
 
+
 >[!NOTE]
 >
->テーブルスキーマは一意で、複数のテーブル間で共有されないようにする必要があります。 また、プライマリキーの制約には名前空間が必須です。
+>テーブルスキーマは一意で、複数のテーブル間で共有されないようにする必要があります。 また、名前空間は、プライマリキー、プライマリ ID、ID の制約に必須です。
 
 #### プライマリ ID とセカンダリ ID の追加またはドロップ
 
