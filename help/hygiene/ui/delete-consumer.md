@@ -4,9 +4,9 @@ description: Adobe Experience Platform UI で消費者レコードを削除す�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 3%
 
 ---
@@ -144,4 +144,10 @@ ID を追加するには、プラスアイコン (![プラスアイコンの画�
 
 このドキュメントでは、消費者 UI で消費者レコードを削除する方法についてExperience Platformしました。 UI でのその他のデータ衛生タスクの実行方法について詳しくは、 [データ衛生 UI の概要](./overview.md).
 
-データ衛生 API を使用して消費者レコードを削除する方法については、 [作業順序エンドポイントガイド](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
