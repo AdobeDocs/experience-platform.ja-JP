@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI で消費者レコードを削除す�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Platform での ID について詳しくは、次のドキュメントを参照�
 >
 >の選択 **[!UICONTROL すべてのデータセット]** オプションを使用すると、削除操作に時間がかかり、正確なレコードの削除がおこなわれない場合があります。
 
-## 消費者 ID の提供 {#identities}
+## 消費者 ID の提供 {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
