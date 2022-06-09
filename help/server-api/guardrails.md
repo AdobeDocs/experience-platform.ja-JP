@@ -2,13 +2,13 @@
 title: パフォーマンスガードレール
 description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します
 keywords: データ収集；コレクション；エッジネットワーク；api;sla;slt；サービスレベル
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # パフォーマンスガードレール
 
@@ -20,12 +20,12 @@ Adobeは、使用制限を超えたことによるパフォーマンスの低下
 
 ## 定義
 
-* **使用可否** は、エラーで失敗せず、プロビジョニングされたAdobe Experience Platform Edge Network API にのみ関連する、Experience Adobe Experience Platform Edge Network によって処理されたリクエストの割合として、5 分ごとに計算されます。 テナントが 5 分間隔で要求を行わなかった場合、その間隔は 100%使用可能と見なされます。
+* **使用可否** は、エラーで失敗せず、プロビジョニングされた Edge Network API にのみ関連する、Experience PlatformEdge Network によって処理されたリクエストの割合として、5 分ごとに計算されます。 テナントが 5 分間隔で要求を行わなかった場合、その間隔は 100%使用可能と見なされます。
 * **月間稼動率** 特定の地域のは、1 か月の 5 分間隔のすべての可用性の平均として計算されます。
-* An **upstream** は、Adobe Edge Network の背後にあるサービスで、Adobeサーバー側転送、Adobe Edgeセグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
+* An **upstream** は、Edge Network の背後にあるサービスで、Adobeサーバー側転送、Adobe Edgeセグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
 * A **リクエストユニット** は、リクエストの 8 KB のフラグメントと、データストリーム用に設定された 1 つのアップストリームに対応します。
 * A **リクエスト** は、顧客が所有するアプリケーションから [!DNL Server API]. リクエストには、1 つ以上のリクエスト単位を含めることができます。
-* An **エラー** は、Adobe Experience Platform Edge Network が原因で失敗したリクエストです [内部サービスエラー](error-handling.md).
+* An **エラー** は、Edge ネットワークのために失敗したリクエストです [内部サービスエラー](error-handling.md).
 
 ## サービス制限
 
