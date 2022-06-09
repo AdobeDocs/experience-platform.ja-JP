@@ -4,10 +4,10 @@ description: Adobe Experience Platform Edge Network Server API の認証を設�
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: データ収集；認証；Adobe Experience Platform Edge Network api;認証
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 19%
+source-wordcount: '648'
+ht-degree: 18%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 19%
 
 ## 概要
 
-この [!DNL Adobe Experience Platform Edge Network Server API] は、イベントのソースと API 収集ドメインに応じて、認証済みと未認証の両方のデータ収集を処理します。
+この [!DNL Edge Network Server API] は、イベントのソースと API 収集ドメインに応じて、認証済みと未認証の両方のデータ収集を処理します。
 
-リクエストごとに、 [!DNL Server API] データストリームを検証します。 `access_type` 設定。
+リクエストごとに、 [!DNL Server API] データストリームを検証します。 [!DNL access type] 設定。 この設定を使用すると、お客様は認証済みデータを受け入れるか、認証済みデータと未認証データの両方を受け入れるようにデータストリームを設定できます。 デフォルトでは、両方のタイプのデータが受け入れられます。
 
-この設定を使用すると、お客様は認証済みデータを受け入れるか、認証済みデータと未認証データの両方を受け入れるようにデータストリームを設定できます。 デフォルトでは、両方のタイプのデータが受け入れられます。
+データストリームアクセスタイプの設定について詳しくは、 [データストリームの作成と設定](../edge/datastreams/overview.md#create).
 
-以下は、 `access_type` 設定およびリクエストを受信したエンドポイント。
+以下に、データストリームに基づく動作の概要を示します [!DNL Access Type] 設定およびリクエストを受信したエンドポイント。
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | mixed （デフォルト） | リクエストを認証しません | 要求を認証します |
 | 認証済み | 要求を認証します | 要求を認証します |
@@ -36,7 +36,7 @@ ht-degree: 19%
 
 * Adobe Experience Platformへのアクセス権を持つ IMS 組織アカウントがある。
 * Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること お問い合わせ [Admin Console](../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
-* あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe開発者コンソール](https://developer.adobe.com/console) 新しいアカウントを作成します。
+* あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
 ## 資格情報の収集 {#credentials}
 
