@@ -3,9 +3,9 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID 同期有効；ID 同期コンテナ ID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Cookie 宛先；Analytics 設定ブロックスイート ID；データデータ収集の準備；データ準備；マッパー；XDM マッパー；エッジでのマッパー；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
+source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1774'
 ht-degree: 3%
 
 ---
@@ -53,6 +53,7 @@ datastream は、Adobe Experience Platform Web および Mobile SDK を実装す
 | [!UICONTROL 地域] | ユーザーの IP アドレスに基づいて GPS 検索を行うかどうかを指定します。 デフォルト設定 **[!UICONTROL なし]** GPS 検索を無効にし、 **[!UICONTROL 市区町村]** を設定すると、小数点以下 2 桁までの GPS 座標が表示されます。 |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定が有効な場合、 [ファーストパーティデバイス ID](../identity/first-party-device-ids.md)を使用します。<br><br>この設定を有効にする場合、ID の保存先となる Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID の同期] | ID 同期をコンテナにグループ化して、ID 同期を異なる時間に実行できるようにします。 この設定を有効にすると、このデータストリームに対して実行する ID 同期のコンテナを指定できます。 |
+| [!UICONTROL アクセスタイプ] | 認証タイプを定義します。 [!DNL Edge Network] はデータストリームを受け入れます。 <ul><li>**[!UICONTROL 混在認証]**:このオプションを選択した場合、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。 Web SDK または [モバイル SDK](https://aep-sdks.gitbook.io/docs/)、 [サーバー API](../../server-api/overview.md). </li><li>**[!UICONTROL 認証済みのみ]**:このオプションを選択した場合、Edge Network は認証済みのリクエストのみを受け入れます。 Server API のみを使用する予定で、認証されていないリクエストが [!DNL Edge Network]. </li></ul> |
 
 ここから、Experience Platform用にデータストリームを設定する場合は、 [データ収集用のデータ準備](./data-prep.md) を使用して、このガイドに戻る前に、データを Platform イベントスキーマにマッピングしてください。 それ以外の場合は、「 **[!UICONTROL 保存]** 次のセクションに進みます。
 
