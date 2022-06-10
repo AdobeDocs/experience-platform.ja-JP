@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '671'
 ht-degree: 7%
 
 ---
@@ -50,8 +50,8 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH キー"
->abstract="SSH キーには Base64 文字列が必要です。"
+>title="SSH 秘密鍵"
+>abstract="SSH 秘密鍵は、Base64 エンコードされた文字列形式にする必要があり、パスワードで保護しないでください。 "
 
 条件 [接続](../../ui/connect-destination.md) をこの宛先に追加するには、次の情報を指定する必要があります。
 
@@ -59,7 +59,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 
 次を選択した場合、 **[!UICONTROL 基本認証]** SFTP の場所に接続するには、次のように入力します。
 
-![SFTP 宛先の基本認証](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP 宛先の基本認証](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL ホスト]**:SFTP ストレージの場所のアドレス。
 * **[!UICONTROL ユーザー名]**:SFTP ストレージの場所にログインするユーザー名。
@@ -77,11 +77,11 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 * **[!UICONTROL ドメイン]**:SFTP アカウントの IP アドレスまたはドメイン名を入力します
 * **[!UICONTROL ポート]**:SFTP ストレージの場所で使用されるポート。
 * **[!UICONTROL ユーザー名]**:SFTP ストレージの場所にログインするユーザー名。
-* **[!UICONTROL SSH キー]**:SFTP ストレージの場所にログインするための SSH キー。
+* **[!UICONTROL SSH キー]**:SFTP ストレージの場所へのログインに使用する秘密鍵。 秘密鍵は、Base64 エンコードされた文字列形式にする必要があり、パスワードで保護してはなりません。
 * **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64] エンコードされた文字列。
    * 例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 簡潔にするために中央部を短くした、正しくフォーマットされた PGP キーの例を以下に示します。
 
-      ![PGP キー](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![PGP キー](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### 宛先の詳細 {#destination-details}
 
