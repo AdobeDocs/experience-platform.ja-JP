@@ -2,13 +2,13 @@
 title: モバイルから Web への ID とクロスドメイン ID の共有
 description: モバイルから Web プロパティ、およびドメイン間で訪問者 ID を保持する方法を説明します。
 keywords: ID；モバイル；ID；共有；ドメイン；クロスドメイン；sdk；プラットフォーム；
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
-
 
 # モバイルから Web への ID とクロスドメイン ID の共有
 
@@ -32,9 +32,11 @@ Adobe Experience Platform Web SDK は、訪問者 ID 共有機能をサポート
 
 ## 前提条件 {#prerequisites}
 
-モバイルから Web への ID とクロスドメイン ID の共有を使用するには、を更新する必要があります。 [!DNL Web SDK] バージョン2.11.0以降。
+モバイルから Web への ID とクロスドメイン ID の共有を使用するには、 [!DNL Web SDK] バージョン2.11.0以降。
 
 Edge Network モバイル実装の場合、この機能は [Edge ネットワークの ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) バージョン 1.1.0(iOSおよび Android) 以降の拡張機能。
+
+この機能は、 [!DNL VisitorAPI.js] バージョン 1.7.0 以降。
 
 ## モバイルから Web への ID の共有 {#mobile-to-web}
 
