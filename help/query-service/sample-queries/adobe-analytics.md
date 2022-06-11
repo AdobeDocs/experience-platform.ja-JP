@@ -5,10 +5,10 @@ title: Adobe Analytics Data のクエリ例
 topic-legacy: queries
 description: 選択したAdobe Analyticsレポートスイートのデータは XDM ExperienceEvents に変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、クエリサービスがこのデータを利用する多くの使用例の概要を説明し、Adobe Analyticsデータセットと連携するように設計されたサンプルクエリを示します。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 46%
+source-wordcount: '975'
+ht-degree: 41%
 
 ---
 
@@ -16,107 +16,9 @@ ht-degree: 46%
 
 選択したAdobe Analyticsレポートスイートのデータは、 [!DNL XDM ExperienceEvent] クラスを使用し、Adobe Experience Platformにデータセットとして取り込みました。
 
-このドキュメントでは、Adobe Experience Platformの様々な使用例の概要を説明します [!DNL Query Service] は、Adobe Analyticsデータセットと連携するように設計されたサンプルクエリを含め、このデータを使用します。 詳しくは、 [Analytics フィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md) マッピングの詳細 [!DNL Experience Events].
+このドキュメントでは、Adobe Experience Platformの様々な使用例の概要を説明します [!DNL Query Service] はこのデータを利用します。 詳しくは、 [Analytics フィールドマッピング](../../sources/connectors/adobe-applications/mapping/analytics.md) マッピングの詳細 [!DNL Experience Events].
 
-## はじめに
-
-このドキュメント全体の SQL の例では、SQL を編集し、評価するデータセット、eVar、イベントまたは期間に基づいて、クエリに対して期待されるパラメーターを入力する必要があります。後述の SQL の例では、`{ }` では常に任意のパラメータを指定します。
-
-## よく使用される SQL の例
-
-次の例は、Adobe Analyticsデータを分析する一般的な使用例に関する SQL クエリを示しています。
-
-### 特定の日の時間別訪問者数
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### 特定の日に閲覧された上位 10 ページ
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### 最もアクティブな上位 10 人のユーザ
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 上位 10 都市（ユーザ－アクティビティ別）
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 閲覧された製品の上位 10 件
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### 上位 10 件の注文売上高
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### イベント数（日別）
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+詳しくは、 [analytics の使用例ドキュメント](../use-cases/analytics-insights.md) を参照して、取り込んだAdobe Analyticsデータから実用的なインサイトを作成するクエリサービスの使用方法を確認してください。
 
 ## 重複の除外
 
