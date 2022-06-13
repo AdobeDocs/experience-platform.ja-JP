@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1924'
 ht-degree: 2%
 
 ---
@@ -160,6 +160,10 @@ CNAME について詳しくは、 [Adobe文書](https://experienceleague.adobe.c
 **kndctr_orgid_personalization:** この cookie には、Adobe Targetが Web ページをパーソナライズするために使用するセッション情報が含まれます。
 
 **kndctr_orgid_consentcheck:** このセッションベースの Cookie は、サーバーが同意設定サーバー側を検索するように通知します。
+
+Web SDK を使用する場合、Edge ネットワークは上記の cookie を 1 つ以上設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
+
+現在、Web サイトにセキュリティで保護されたセクションとセキュリティで保護されていないセクションの両方がある場合、これがユーザーの識別を妨げる可能性があります。 ユーザーがサイトのセキュリティで保護されたセクションからセキュリティで保護されていないセクションに移動すると、Edge ネットワークは新しい `ECID` リクエストに置き換えます。
 
 ## Adobe Experience Platform Web SDK はどのブラウザーをサポートしていますか？
 
