@@ -3,14 +3,32 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # リリースノート
+
+このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
+Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+
+## バージョン2.11.0 - 2022 年 6 月 13 日
+
+**新機能**
+
+* モバイルアプリとモバイル Web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に配信できるようになりました。 詳しくは、 [専用ドキュメント](identity/id-sharing.md) を参照してください。
+* 提案の配列を [!DNL Adobe Target] analytics 指標を増分せずに、単一ページアプリケーションに追加できます。 これにより、レポートのエラーが減り、分析の精度が向上します。 詳しくは、 [専用ドキュメント](personalization/rendering-personalization-content.md#applypropositions) を参照してください。
+* 追加情報を `getLibraryInfo` コマンドには、使用可能なコマンドと、インスタンスの最終設定が含まれます。
+
+**修正点および改善点**
+
+* 使用する Cookie 設定を更新しました `sameSite="none"` および `secure` 旗を掲げる [!DNL HTTPS] ページ。
+* パーソナライズされたコンテンツが `eq` 疑似セレクター
+* 問題を修正しました。 `localTimezoneOffset` Experience Platformの検証に失敗しました。
 
 ## バージョン2.10.1 - 2022 年 5 月 3 日
 

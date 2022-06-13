@@ -2,16 +2,27 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 46%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
+
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン2.12.0 - 2022 年 6 月 13 日
+
+* 更新された `identityMap` 拡張機能の設定で定義されたサンドボックスに基づいて名前空間オプションに入力するデータ要素。
+* 追加済み **[!UICONTROL ID でリダイレクト]** クロスドメイン id 共有を許可するアクション。
+* 次に示すドキュメントへのリンクを追加しました： `sendEvent` アクション。
+* React Spectrum UI ライブラリがアップグレードされました。
+* 複数のユーザーインターフェイスの強化。
+
+Adobe Experience Platform Web SDK ライブラリのバージョン2.11.0が含まれています。
 
 ## バージョン2.11.2 - 2022 年 5 月 3 日
 
