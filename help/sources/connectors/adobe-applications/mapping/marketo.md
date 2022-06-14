@@ -5,10 +5,10 @@ title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
 description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 9%
+source-wordcount: '713'
+ht-degree: 8%
 
 ---
 
@@ -21,6 +21,8 @@ ht-degree: 9%
 >すべて [!DNL Marketo] 次のデータセット `Activities` 現在のサポート `isDeleted`. 既存のデータフローには、次が自動的に含まれます `isDeleted`が取り込まれるのは、新しく取り込んだデータ用のフラグのみです。 すべての履歴データにフラグを適用する場合は、既存のデータフローを停止し、新しいマッピングで再作成する必要があります。 を削除する場合は、 `isDeleted`を含めないと、機能にアクセスできなくなります。 マッピングは、自動入力後も保持することが重要です。
 
 ## アクティビティ {#activities}
+
+この [!DNL Marketo] ソースが、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、 [スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md) 新しい `activities` スキーマを更新せずにデータフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートは失敗します。 スキーマの更新を選択しない場合でも、新しいデータフローを作成し、エラーを解除できます。 ただし、新しいフィールドや更新されたフィールドは、Platform に取り込まれません。
 
 | ソースデータセット | XDM ターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
