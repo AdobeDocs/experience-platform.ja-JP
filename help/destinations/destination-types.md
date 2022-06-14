@@ -4,10 +4,10 @@ title: 宛先のタイプとカテゴリ
 seo-title: Destination types and categories
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 41%
+source-wordcount: '642'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの�
 
 ## 接続 {#connections}
 
-**[!UICONTROL プロファイルの書き出し]** および **[!UICONTROL ストリーミングセグメントの書き出し]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化の適用、セグメントおよび絞り込まれたプロファイルの書き出しをおこないます。
+**[!UICONTROL プロファイルの書き出し]**, **[!UICONTROL ストリーミングセグメントの書き出し]**、および **[!DNL Edge Personalization]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化の適用、セグメントおよび絞り込まれたプロファイルの書き出しをおこないます。
 
 ## プロファイルの書き出し先 {#profile-export}
 
@@ -55,6 +55,12 @@ Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの�
 ## ストリーミングセグメントの書き出し先 {#streaming-destinations}
 
 セグメントの書き出し先は、Experience Platformセグメントデータを受け取ります。 これらの宛先では、セグメント ID またはユーザー ID を使用します。 広告およびソーシャルの宛先（など） [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)または [Facebook](catalog/social/facebook.md) は、このような宛先の例です。
+
+## Edge パーソナライゼーションの宛先 {#edge-personalization-destinations}
+
+Experience Platform内のエッジパーソナライゼーションの宛先には、以下が含まれます [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーションの宛先](/help/destinations/catalog/personalization/custom-personalization.md). これらの宛先を使用すると、顧客に対して同じページおよび次のページのパーソナライゼーションの使用例を有効にできます。
+
+詳しくは、 [同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## プロファイルの書き出しとセグメントの書き出し先 — ビデオの概要 {#video}
 
