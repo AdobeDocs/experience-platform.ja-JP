@@ -5,9 +5,9 @@ title: データ使用ポリシーの概要
 topic-legacy: policies
 description: データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 92%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 92%
 次の 2 種類のポリシーを使用できます。
 
 * **[!UICONTROL データガバナンスポリシー]**:実行されるマーケティングアクションと、該当するデータが実行するデータ使用ラベルに基づいて、データのアクティベーションを制限します。
-* **[!UICONTROL 同意ポリシー] （ベータ版）**:アクティブ化可能なプロファイルのフィルター [宛先](../../destinations/home.md) お客様の同意または好みに基づいて
+* **[!UICONTROL 同意ポリシー]**:アクティブ化可能なプロファイルのフィルター [宛先](../../destinations/home.md) お客様の同意または好みに基づいて
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 

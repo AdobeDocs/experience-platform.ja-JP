@@ -5,9 +5,9 @@ title: データガバナンスの概要
 topic-legacy: overview
 description: Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保できます。カタログ化、データ系列、データ使用ラベル、データ使用ポリシー、マーケティングアクションのデータに関する制御の使用など、Experience Platform 内の様々なレベルで重要な役割を果たします。
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 92%
 
 ---
@@ -81,7 +81,7 @@ Adobe Experience Platform データガバナンスを使用すると、顧客デ
 次の 2 種類のポリシーを使用できます。
 
 * **[!UICONTROL データガバナンスポリシー]**:実行されるマーケティングアクションと、該当するデータが実行するデータ使用ラベルに基づいて、データのアクティベーションを制限します。
-* **[!UICONTROL 同意ポリシー] （ベータ版）**:アクティブ化可能なプロファイルのフィルター [宛先](../destinations/home.md) お客様の同意または設定に基づいておこないます。
+* **[!UICONTROL 同意ポリシー]**:アクティブ化可能なプロファイルのフィルター [宛先](../destinations/home.md) お客様の同意または設定に基づいておこないます。
 
 データ使用ラベルが適用されると、データスチュワードは [!DNL Policy Service] API または [!DNL Experience Platform] ユーザーインターフェイスを使用してポリシーを作成することができます。データ使用ポリシーとマーケティングアクションについて詳しくは、[ポリシーの概要](./policies/overview.md)を参照してください。
 
