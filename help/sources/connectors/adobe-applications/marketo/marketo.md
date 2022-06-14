@@ -5,10 +5,10 @@ title: Marketo Engage コネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 15%
+source-wordcount: '578'
+ht-degree: 14%
 
 ---
 
@@ -31,6 +31,10 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 ## 組織マッピングAdobeの設定
 
 のマッピングセットを確立する前に [!DNL Marketo]を設定する場合は、まず組織マッピングをAdobeする必要があります。 これを完了する方法について詳しくは、 [のAdobe組織マッピングの設定 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## B2B 名前空間とスキーマ自動生成ユーティリティの設定
+
+次に、B2B 名前空間とスキーマ自動生成ユーティリティを使用して、Platform 開発者コンソールとPostman環境を設定します。 これにより、B2B 名前空間とスキーマを自動入力できます。 詳しい手順については、 [B2B 名前空間とスキーマ自動生成ユーティリティの設定](./marketo-namespaces.md)
 
 ## エクスペリエンスデータモデル（XDM）
 
@@ -59,7 +63,7 @@ XDM と Platform での役割について詳しくは、 [XDM システムの概
 
 ## の予想遅延 [!DNL Marketo] Platform のデータ
 
-The following table outlines the expected latency for bringing [!DNL Marketo] data into Platform, based on the nature of ingestion and the desired destination:
+次の表に、 [!DNL Marketo] 取り込みの特性と目的の宛先に基づいて、Platform にデータを取り込みます。
 
 | 宛先 | 予想される遅延 |
 | ----------- | ---------------- |
@@ -71,7 +75,7 @@ The following table outlines the expected latency for bringing [!DNL Marketo] da
 次のドキュメントでは、 [!DNL Marketo] ソース接続：
 
 * 接続方法に関する情報 [!DNL Marketo] データを Platform に送信する場合は、 [UI でのMarketoソースコネクタの作成](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
+* B2B 名前空間と、で使用されるスキーマの基になる設定について説明します。 [!DNL Marketo]詳しくは、 [B2B 名前空間とスキーマ](./marketo-namespaces.md).
 * の検索に関する情報 [!DNL Marketo] munchkin ID と資格情報の生成については、 [[!DNL Marketo] 認証ガイド](./marketo-auth.md).
 * に適用される特定のマッピングルールの詳細 [!DNL Marketo] データセットについては、 [[!DNL Marketo] フィールドマッピング](../mapping/marketo.md).
-* For general information on [!DNL Real-time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* に関する一般情報 [!DNL Real-time Customer Data Platform B2B Edition] およびその機能については、 [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
