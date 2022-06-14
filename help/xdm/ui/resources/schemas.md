@@ -5,9 +5,9 @@ title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2895'
 ht-degree: 0%
 
 ---
@@ -221,6 +221,12 @@ ht-degree: 0%
 ![標準オブジェクトに追加されたフィールド](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## リアルタイム顧客プロファイルのスキーマの有効化 {#profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_enableforprofile"
+>title="プロファイルのスキーマの有効化"
+>abstract="プロファイルに対してスキーマを有効にすると、このスキーマから作成されたデータセットはリアルタイム顧客プロファイルに参加し、異なるソースのデータを結合して、各顧客の完全なビューを構築します。 スキーマを使用してデータをプロファイルに取り込むと、無効にできません。"
+>text="See the documentation for more information on enabling a schema for Profile."
 
 [リアルタイム顧客プロファイル](../../../profile/home.md) 異なるソースのデータを結合して、各顧客の完全なビューを構築します。 スキーマによって取得されたデータをこのプロセスに参加させる場合は、で使用するスキーマを有効にする必要があります。 [!DNL Profile].
 

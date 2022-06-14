@@ -5,9 +5,9 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3881'
 ht-degree: 27%
 
 ---
@@ -50,6 +50,12 @@ XDM スキーマは、大量の複雑なデータを自己完結型形式で保�
 レコードと時系列の両方のスキーマには、ID のマップ（`xdm:identityMap`）が含まれます。このフィールドには、次の節で説明する「ID」とマークされたフィールドから作成された、主体の ID 表現が含まれます。
 
 ### [!UICONTROL ID] {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="スキーマの ID"
+>abstract="ID は、電子メールアドレスやマーケティング ID など、件名の識別に使用できるスキーマ内の主要なフィールドです。 これらのフィールドは、各個人の ID グラフを作成し、顧客プロファイルを作成するために使用されます。"
+>text="See the documentation for more information on identities in schemas."
 
 スキーマは、データをに取り込むために使用されます [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、スキーマについて考える際には、顧客の ID と、データの送信元に関係なく、対象を識別するために使用できるフィールドについて考えることが重要です。
 

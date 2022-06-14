@@ -5,14 +5,20 @@ title: データ使用ラベルの用語集
 topic-legacy: labels
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 96%
+source-wordcount: '2083'
+ht-degree: 95%
 
 ---
 
 # データ使用ラベルの用語集
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="ラベルのタイプ"
+>abstract="データ使用ラベルには、いくつかのカテゴリがあります。 Adobe定義のラベルには、契約ラベル、ID ラベル、機密ラベルが含まれます。 組織で定義されたラベルは、カスタムラベルとして分類されます。"
+>text="See the data usage labels glossary for more information on these label types."
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Adobe Experience Platform データガバナンスでは、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
 
