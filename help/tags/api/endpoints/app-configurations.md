@@ -2,10 +2,10 @@
 title: アプリ設定エンドポイント
 description: Reactor API で /app_configurations エンドポイントを呼び出す方法を説明します。
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -189,6 +189,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -257,12 +258,12 @@ curl -X POST \
 
 ## アプリ設定の更新
 
-PUT リクエストのパスに ID を含めることで、アプリの設定を更新できます。
+アプリ設定を更新するには、アプリリクエストのパスに ID を含めます。PATCH
 
 **API 形式**
 
 ```http
-PUT /app_configurations/{APP_CONFIGURATION_ID}
+PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
 | パラメーター | 説明 |
@@ -276,12 +277,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 次のリクエストは、既存のアプリ設定の `app_id` を更新します。
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -361,7 +363,9 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **応答**
