@@ -3,9 +3,9 @@ keywords: Google カスタマーマッチ；Googleカスタマーマッチ；Goo
 title: Google Customer Match 接続
 description: Google Customer Match を使用すると、Search、Shopping、Gmail、YouTubeなど、Googleが所有および運用するプロパティをまたいで、オンラインデータとオフラインデータを使用して顧客にリーチし、再び関与することができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 8%
 
 ---
@@ -135,7 +135,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 * **[!UICONTROL 名前]**:この宛先接続の名前を指定
 * **[!UICONTROL 説明]**:この宛先接続の説明を入力
-* **[!UICONTROL アカウント ID]**:Google顧客クライアント ID。 ID の形式は、xxx-xxx-xxxx です。
+* **[!UICONTROL アカウント ID]**:あなたの [Google Ads 顧客 ID](https://support.google.com/google-ads/answer/1704344?hl=en). ID の形式は、xxx-xxx-xxxx です。 を使用している場合、 [!DNL Google Ads Manager Account (My Client Center)]の場合は、Manager アカウント ID を使用しないでください。 以下を使用： [Google Ads 顧客 ID](https://support.google.com/google-ads/answer/1704344?hl=en) 代わりに、
 
 >[!IMPORTANT]
 >
