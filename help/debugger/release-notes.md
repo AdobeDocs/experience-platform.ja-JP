@@ -1,17 +1,29 @@
 ---
 title: Adobe Experience Platform Debugger リリースノート
-description: Adobe Experience Platform Debugger の最新のリリースノートです。
+description: Adobe Experience Platform デバッガーの最新のリリースノートです。
 keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.3.2 - 2022 年 6 月 9 日
+
+* ユーザーがログインしたときのデフォルトのアバターを追加しました。
+* ログの JSON オブジェクトに構文のハイライトを追加しました。
+
+## バージョン 1.3.1 - 2022 年 5 月 24 日
+
+* 依存関係を更新しました。
+* 後処理のヒットを有効にできない Analytics の問題を修正しました。
+* デバッガーがログインウィンドウにアタッチされるAdobeの問題を修正しました。
+* Debugger でログメッセージが表示されない AT.js の問題を修正しました。
 
 ## バージョン 1.3.0 - 2022 年 1 月 28 日
 
