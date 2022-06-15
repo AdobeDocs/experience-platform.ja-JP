@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Veeva CRM に接続する方法を説明します。
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 71%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 71%
 | `securityToken` | のセキュリティトークン [!DNL Veeva CRM] インスタンス。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
-これらの値について詳しくは、 [[!DNL Veeva CRM] 文書](https://developer.veevacrm.com/api/#order-management-rest-api).
+これらの値について詳しくは、 [[!DNL Veeva CRM] 文書](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ### Platform API の使用
 
