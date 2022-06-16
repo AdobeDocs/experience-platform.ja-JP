@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services(AWS)S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: f3f713848c7796c95d5326eba8a2e75f36704fd0
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 8%
+source-wordcount: '682'
+ht-degree: 5%
 
 ---
 
@@ -31,9 +31,30 @@ ht-degree: 8%
 
 ## 宛先への接続 {#connect}
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-### 接続パラメーター {#parameters}
+この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
+
+### 宛先に対する認証 {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="RSA 公開鍵"
+>abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 以下のドキュメントリンクで、正しく書式設定されたキーの例を確認してください。"
+
+宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
+
+* **[!DNL Amazon S3]アクセスキー** および **[!DNL Amazon S3]秘密鍵**:In [!DNL Amazon S3]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon S3] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。
+   * 例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 簡潔にするために中央部を短くした、正しくフォーマットされた PGP キーの例を以下に示します。
+
+      ![PGP キー](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+### 宛先の詳細を入力 {#destination-details}
+
+宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -43,27 +64,13 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="フォルダーパス"
->abstract="A ～ Z、a ～ z、0 ～ 9 の文字のみを含める必要があります。また、次の特殊文字を含めることができます。 `/!-_.'()"^[]+$%.*"`. セグメントファイルごとにフォルダーを作成するには、/%SEGMENT_NAME%または/%SEGMENT_ID%または/%SEGMENT_NAME%/%SEGMENT_ID%マクロをテキストフィールドに挿入します。 マクロは、フォルダーパスの最後にのみ挿入できます。 マクロの例をドキュメントに表示します。"
+>abstract="A ～ Z、a ～ z、0 ～ 9 の文字のみを含める必要があります。また、次の特殊文字を含めることができます。 `/!-_.'()"^[]+$%.*"`. セグメントファイルごとにフォルダーを作成するには、マクロを挿入します。 `/%SEGMENT_NAME%` または `/%SEGMENT_ID%` または `/%SEGMENT_NAME%/%SEGMENT_ID%` をテキストフィールドに挿入します。 マクロは、フォルダーパスの最後にのみ挿入できます。 マクロの例をドキュメントに表示します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="マクロを使用して、ストレージの場所にフォルダーを作成する"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_s3_rsa"
->title="RSA 公開鍵"
->abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、Base64 エンコードされた文字列として書き込む必要があります。"
-
->[!IMPORTANT]
-> 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
-
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
-
-* **[!DNL Amazon S3]アクセスキー** および **[!DNL Amazon S3]秘密鍵**:In [!DNL Amazon S3]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon S3] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**:名前を入力 [!DNL Amazon S3] この宛先で使用するバケット。
 * **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
-
-必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64] エンコードされた文字列。
 
 >[!TIP]
 >
