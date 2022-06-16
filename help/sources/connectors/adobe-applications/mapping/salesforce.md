@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；Salesforce;S
 title: Salesforce マッピングフィールド
 description: 以下の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
+source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 13%
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
@@ -34,6 +34,7 @@ ht-degree: 13%
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `b2b.personKey.sourceID` |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
@@ -83,10 +84,11 @@ ht-degree: 13%
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
+| `isDeleted` | `isDeleted` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
 | `Id` | `personComponents.sourcePersonKey.sourceID` |
@@ -144,8 +146,9 @@ ht-degree: 13%
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | data.com の機能 |
 | `Fax` | `accountFax.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -183,7 +186,7 @@ ht-degree: 13%
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | 関係. |
 | `Amount` | `opportunityAmount.amount` |
@@ -199,6 +202,7 @@ ht-degree: 13%
 | `ForecastCategoryName` | `forecastCategoryName` |
 | `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
+| `isDeleted` | `isDeleted` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -227,7 +231,8 @@ ht-degree: 13%
 | `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -244,8 +249,9 @@ ht-degree: 13%
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `Name` | `campaignName` |
 | `ParentId` | `parentCampaignKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
@@ -272,8 +278,9 @@ ht-degree: 13%
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | プライマリID。 の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
 | `CampaignId` | `campaignKey.sourceID` |
