@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 92%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 92%
          - [B2B 名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 広告 {#advertising}
       - [Google AdWords コネクタ](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [Mixpanel コネクタ](connectors/analytics/mixpanel.md)
    - クラウドストレージ {#cloud-storage}
       - [Amazon Kinesis コネクタ](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 コネクタ](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 92%
    - ベース接続を作成する {#create}
       - 広告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 92%
          - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - 広告 {#create}
+      - 広告 {#advertising}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 92%
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - データフローの設定 {#dataflow}
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
+      - [Analytics 接続のデータフロー](tutorials/ui/dataflow/analytics.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [ストリーミングクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [同意および環境設定の接続データフロー](tutorials/ui/dataflow/consent-and-preferences.md)

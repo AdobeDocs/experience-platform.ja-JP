@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
+source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
 workflow-type: tm+mt
 source-wordcount: '1001'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 
 Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。詳しくは、次の関連ドキュメントを参照してください。
 
-- [Adobe Audience Managerソースの概要](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager ソースの概要](connectors/adobe-applications/audience-manager.md)
 - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications Data ソース接続の概要](connectors/adobe-applications/classifications.md)
 - [UI での Adobe Analytics Classifications Data ソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics Report Suite Data ソース接続の概要](connectors/adobe-applications/analytics.md)
 - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobeデータ収集ソースの概要](connectors/adobe-applications/data-collection.md)
+- [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
 - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
 - [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
@@ -44,6 +44,12 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
+
+<!-- ### Analytics {#analytics}
+
+Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
 
 ### クラウドストレージ {#cloud-storage}
 
@@ -68,7 +74,6 @@ Adobe Experience Platform には、サードパーティの広告システムか
 Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
-
 
 ### 顧客関係管理（CRM） {#customer-relationship-management}
 
