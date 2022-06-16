@@ -4,9 +4,9 @@ title: （ベータ版）UI での Mixpanel ソース接続の作成
 description: Adobe Experience Platform UI を使用して Mixpanel ソース接続を作成する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 33%
 
 ---
@@ -72,7 +72,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 取り込みのタイムゾーンの設定"
 >abstract="Platform は、指定されたプロジェクトタイムゾーンを使用して Mixpanel から関連データを取り込むので、タイムゾーンは Mixpanel プロファイルタイムゾーン設定と同じにする必要があります。 Mixpanel は、イベントを Mixpanel データストアに記録する前に、プロジェクトのタイムゾーンと調整するようにタイムゾーンを調整します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="詳しくは、ドキュメントを参照してください"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="詳しくは、ドキュメントを参照してください"
 
 ソースが認証されたら、プロジェクト ID とタイムゾーンを指定してから、「 」を選択します **[!UICONTROL 選択]**.
 
