@@ -6,8 +6,8 @@ topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
-workflow-type: tm+mt
-source-wordcount: '1001'
+workflow-type: ht
+source-wordcount: '0'
 ht-degree: 100%
 
 ---
