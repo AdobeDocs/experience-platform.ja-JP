@@ -3,8 +3,8 @@ title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '309'
 ht-degree: 100%
 
 ---

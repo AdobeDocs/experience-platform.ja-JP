@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
 workflow-type: tm+mt
 source-wordcount: '2409'
-ht-degree: 26%
+ht-degree: 73%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 Adobe Experience Platform の新機能：
 
 - [属性ベースのアクセス制御](#abac)
-- [データの衛生状態](#hygiene)
+- [データハイジーン](#hygiene)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -48,7 +48,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 属性ベースのアクセス制御の詳細については、 [属性ベースのアクセス制御の概要](../../access-control/abac/overview.md).
 
-## データの衛生状態 {#hygiene}
+## データハイジーン {#hygiene}
 
 Experience Platformは、消費者レコードとデータセットをプログラム的に削除することで、保存されたデータを管理できる、一連のデータ衛生機能を提供します。 次のいずれかを使用： [!UICONTROL データの衛生状態] UI のワークスペースまたはデータ衛生 API の呼び出しを通じて、データストアを管理して、情報が期待どおりに使用され、不適切なデータ修正が必要な場合には更新され、組織のポリシーで必要と判断される場合は削除されます。
 
@@ -60,7 +60,7 @@ Experience Platformは、消費者レコードとデータセットをプログ�
 
 | 機能 | 説明 |
 | --- | --- |
-| データセットの有効期間 (TTL) | [スケジュール TTL](../../hygiene/ui/ttl.md) （Platform データセット用） |
+| データセットの Time to Live（TTL） | [スケジュール TTL](../../hygiene/ui/ttl.md) （Platform データセット用） |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -74,7 +74,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 
 | 機能 | アラートルール | 説明 |
 | --- | --- | --- |
-| 新しいアラートルール | スキップ率がしきい値を超えています | これで、アラートを使用して、ソースのデータフローが ID のしきい値を超えた場合に通知を受け取ることができるようになりました。 更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
+| 新しいアラートルール | スキップ率がしきい値を超えています | アラートを使用して、ソースデータフローが ID しきい値を超えた場合に通知を受け取ることができるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -88,7 +88,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 | 機能 | 名前 | 説明 |
 | --- | --- | --- |
-| 追加されたリソース | <ul><li> アクセス制御ポリシー </li><li> 役割 </li><li> 監査ログ </li><li> 作業指示 </li><li> ID 名前空間 </li><li> ID グラフ </li><li> クエリ </li><li> データセット </li><li> ソースデータフロー </li></ul> | 監査ログのリソースは、アクティビティの発生時に自動的に記録されます。 この機能を有効にした場合、手動でログ収集を有効にする必要はありません。 |
+| 追加されたリソース | <ul><li> アクセス制御ポリシー </li><li> 役割 </li><li> 監査ログ </li><li> 作業指示 </li><li> ID 名前空間 </li><li> ID グラフ </li><li> クエリ </li><li> データセット </li><li> ソースデータフロー </li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -100,58 +100,58 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 
 ### プロファイルダッシュボード
 
-プロファイルダッシュボードには、組織がExperience Platform内のプロファイルストアに保持している属性（レコード）データのスナップショットが表示されます。
+プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 結合ポリシーウィジェットによるオーディエンスの重複 | このウィジェットは、セグメント定義の視覚的な重複を表示し、セグメント定義間の類似点を調べることで、セグメント化戦略を最適化できます。 |
-| ID ウィジェット別のプロファイル数の変更トレンド | このウィジェットは、必要な ID でフィルタリングされたプロファイルの成長パターンを示すことで、宛先のアクティベーションニーズを管理するのに役立ちます。 |
+| オーディエンスの重複（結合ポリシー別）ウィジェット | このウィジェットは、セグメント定義のクロスオーバーを視覚的に表示し、セグメント定義間の類似性を調査することで、セグメント化戦略を最適化できます。 |
+| プロファイル数の変化のトレンド（ID 別）ウィジェット | このウィジェットは、必要な ID でフィルタリングされたプロファイルの成長パターンを示すことで、宛先アクティベーションのニーズを管理するのに役立ちます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-プロファイルについて詳しくは、 [profiles ダッシュボードドキュメント](../../dashboards/guides/profiles.md).
+プロファイルについて詳しくは、[プロファイルダッシュボードのドキュメント](../../dashboards/guides/profiles.md)を参照してください。
 
 ### 宛先ダッシュボード
 
-宛先ダッシュボードには、組織がExperience Platform内で有効にした宛先のスナップショットが表示されます。
+宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先ウィジェットによってアクティブ化されたオーディエンス | このウィジェットを使用すると、アクティブ化されたオーディエンスの数に基づく宛先の価値を一目で把握できます。 また、宛先にマッピングされたセグメントの詳細情報に容易にアクセスできます。 |
+| 宛先ウィジェットによってアクティブ化されたオーディエンス | このウィジェットを使用すると、アクティブ化されたオーディエンスの数に基づいて、宛先の価値を一目で把握できます。また、宛先にマッピングされたセグメントのより詳細な情報にも簡単にアクセスできます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-宛先について詳しくは、 [宛先ダッシュボードドキュメント](../../dashboards/guides/destinations.md).
+宛先について詳しくは、[宛先ダッシュボードのドキュメント](../../dashboards/guides/destinations.md)を参照してください。
 
 ### セグメントダッシュボード
 
-セグメントダッシュボードは、毎日のスナップショットでキャプチャされた、セグメントに関する重要な情報を表示できるユーザーインターフェイスを提供します。
+セグメントダッシュボードには、毎日のスナップショット中に取り込まれた、セグメントに関する重要な情報を表示できるユーザーインターフェイスが用意されています。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| オーディエンス重複ウィジェット | このウィジェットを使用すると、セグメント定義の結果の類似点を視覚化することで、セグメント化戦略を最適化できます。 |
+| オーディエンスの重複ウィジェット | このウィジェットを使用すると、セグメント定義の結果の類似性を視覚化することで、セグメント化戦略を最適化できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-セグメントについて詳しくは、 [セグメントダッシュボードドキュメント](../../dashboards/guides/segments.md).
+セグメントについて詳しくは、[セグメントダッシュボードのドキュメント](../../dashboards/guides/segments.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
-Experience Platformは、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信して、強化したり、変換したり、アドビまたはアドビ以外の宛先に配信したりできるようにする一連のテクノロジーを提供します。
 
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリームのコピー | [既存のデータストリームのコピーの作成](../../edge/datastreams/overview.md#copy) 必要に応じて設定を調整し、最初から始める必要がなくなります。 |
-| データストリームマッピングルールのインポート | Data Prep for Data Collection を設定する場合は、次の操作を実行できます。 [既存のデータストリームのマッピング・ルールをインポートします。](../../edge/datastreams/data-prep.md#import-mapping) すべてのフィールドマッピングを手動で設定する代わりに、を使用します。 |
-| Mobile SDK のデータチームマッピングのサポート | Experience PlatformMobile SDK で使用するデータストリームに対して、Data Prep for Data Collection を設定できるようになりました。 |
-| XDM オブジェクトのデータチームマッピングのサポート | 次の場合に、データレイヤーオブジェクトに加えて XDM オブジェクトをマッピングします。 [データ収集用のデータ準備の構成](../../edge/datastreams/data-prep.md#select-data). |
-| データフローとの統合 | Platform のソースカタログを使用して、Data Prep for Data Collection や Data Prep の警告のサポートの強化など、Platform Edge Network 上のデータにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
+| データストリームをコピー | 最初から開始するのを避けるために、[既存のデータストリームのコピーを作成](../../edge/datastreams/overview.md#copy)して、必要に応じてその設定を調整します。 |
+| データストリームマッピングルールを読み込む | データ収集のためのデータ準備を設定する際に、すべてのフィールドマッピングを手動で設定する代わりに、[既存のデータストリームのマッピングルールを読み込む](../../edge/datastreams/data-prep.md#import-mapping)ことができます。 |
+| Mobile SDK のデータストリームマッピングのサポート | Experience Platform Mobile SDK での使用を目的としたデータストリームに対して、データ収集のためのデータ準備を設定できるようになりました。 |
+| XDM オブジェクトのデータストリームマッピングのサポート | [データ収集のためのデータ準備を設定](../../edge/datastreams/data-prep.md#select-data)する際に、データレイヤーオブジェクトに加えて、XDM オブジェクトをマッピングします。 |
+| データフローとの統合 | Platform のソースカタログを使用して、Platform Edge Network 上のデータにアクセスできます（データ収集のためのデータ準備やデータ準備警告の強化されたサポートなど）。詳しくは、[Adobe Data Collection ソースの概要](../../sources/connectors/adobe-applications/data-collection.md)を参照してください。 |
 
 Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
 
@@ -178,8 +178,8 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 | 機能 | 説明 |
 | ------- | ----------- |
 | の属性ベースのアクセス制御 [!DNL Data Prep] | これで、アクセス権のある属性のみをマッピングできるようになります。 アクセス権のない属性は、パススルーマッピングおよび計算フィールドでは使用できません。 詳しくは、 [での属性ベースのアクセス制御 [!DNL Data Prep]](../../data-prep/home.md). **注意**:現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。 |
-| ローカライズされたデータエラー | [!DNL Data Prep] すべての変換エラーを属性レベル（以前は行レベル）にローカライズします。 データフローで、変換エラーのない列で入力された部分行が取り込まれるようになりました。すべての行を無視する必要はありません。 |
-| へのアップサートのストリーミング [!DNL Profile Service] | アップサートのストリーミング [!DNL Data Prep] を使用して、行の一部の更新をプロファイルサービスに送信するには、 [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md)または [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) ソース。 詳しくは、 [ストリーミングアップサート](../../data-prep/upserts.md) を参照してください。 |
+| ローカライズされたデータエラー | [!DNL Data Prep] は、すべての変換エラーを属性レベルにローカライズするようになりました（以前は行レベル）。データフローは、完全な行を無視するのではなく、変換エラーがない列で入力された行の一部を取り込むようになりました。 |
+| [!DNL Profile Service] へのアップサートのストリーミング | [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md) または [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) ソースを使用して、プロファイルサービスに行の一部の更新を送信するために、[!DNL Data Prep] でアップサートをストリーミングします。詳しくは、[アップサートのストリーミング](../../data-prep/upserts.md)に関するガイドを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -193,21 +193,21 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 最新のプロファイル選定を書き出し [毎日のセグメント評価の後](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | 毎日のセグメント評価が完了した後、最新のプロファイル認定を使用して、1 回または 1 日に完全なファイル書き出しをスケジュールできるようになりました。 |
-| のオプションのデータストリーム ID [Adobe Targetの宛先](../../destinations/catalog/personalization/adobe-target-connection.md) | Experience Platformの Web SDK を実装できないユーザーに対してAdobe Targetのパーソナライゼーションを有効にするために、Adobe Targetの宛先を設定する際のデータストリーム ID の選択はオプションになりました。 データストリームを使用しない場合、Experience Platformから Target に書き出されたセグメントは、次回のセッションのパーソナライゼーションのみをサポートしますが、エッジのセグメント化は、すべて [使用例](../../destinations/ui/configure-personalization-destinations.md) エッジのセグメント化に依存します。 |
+| [毎日のセグメント評価の後](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)の最新のプロファイル選定の書き出し | 毎日のセグメント評価が完了した後に、1 回または毎日、最新のプロファイル選定を含む完全なファイル書き出しをスケジュール設定できるようになりました。 |
+| [Adobe Target 宛先](../../destinations/catalog/personalization/adobe-target-connection.md)のオプションのデータストリーム ID | Experience Platform Web SDK を実装できないユーザーに対して Adobe Target パーソナライゼーションを有効にするために、Adobe Target 宛先を設定する際に、データストリーム ID 選択がオプションになりました。データストリームを使用しない場合、Experience Platform から Target に書き出されるセグメントは、次のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になり、エッジのセグメント化に依存するすべての[ユースケース](../../destinations/ui/configure-personalization-destinations.md)も無効になります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
 
 **新しい XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [[!UICONTROL 変更セット]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | データセットに対する行レベルの変更をキャプチャし、データセットから変更を取り込みます。 このフィールドグループは、どのクラスでも使用できます。 |
-| フィールドグループ | [[!UICONTROL 参照キー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | ExperienceEvent スキーマの参照キーをキャプチャし、他のクラスに基づいてスキーマとの関係を構築できるようにします。 |
+| フィールドグループ | [[!UICONTROL 変更セット]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | データセットへの、およびデータセットからの行レベルの変更を取得します。このフィールドグループは、どのクラスでも使用できます。 |
+| フィールドグループ | [[!UICONTROL 参照キー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | ExperienceEvent スキーマの参照キーを取得し、他のクラスに基づいてスキーマとの関係を構築できるようにします。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -215,13 +215,13 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | 更新済み `eventType` Adobe Journey Optimizerのメディアに関連する新しいイベントタイプや web チャネルインバウンドの使用例をいくつか含める場合。 |
-| グローバルスキーマ | [[!UICONTROL 宛先]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | 次の列挙値を削除しました： `xdm:destinationCategory`. |
-| フィールドグループ | [[!UICONTROL レコードステータス]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | フィールドグループのステータスを次の日から更新しました `experimental` から `stable`. |
-| フィールドグループ | （複数） | 複数の B2B フィールドグループが更新され、特定の ID フィールドは、 [[!UICONTROL B2B ソース]](../../xdm/data-types/b2b-source.md) データタイプ。 以前の ID フィールドは、今後の更新で非推奨となります。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1) 影響を受けるフィールドグループの変更の完全なリスト |
-| データタイプ | [[!UICONTROL ブラウザーの詳細]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | 新しいフィールドを追加しました `xdm:userAgentClientHints` ブラウザーとのやり取りに関するユーザーエージェントに関するコンテキスト情報を取り込む |
-| データタイプ | [[!UICONTROL メディア情報]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | 追加された `xdm:playhead` フィールドを使用して、メディアコンテンツの再生ヘッド時間をキャプチャします。 次の固定パターン検証： `xdm:videoSegment`. |
-| データタイプ | [[!UICONTROL レーティング]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` は必須フィールドではなくなりました。 |
+| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | `eventType` が更新され、Adobe Adobe Journey Optimizer のメディアおよび web チャネルインバウンドユースケースに関連するいくつかの新しいイベントタイプが含まれるようになりました。 |
+| グローバルスキーマ | [[!UICONTROL 宛先]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | `xdm:destinationCategory` から列挙値が削除されました。 |
+| フィールドグループ | [[!UICONTROL レコードステータス]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | フィールドグループのステータスを `experimental` から `stable` に更新しました。 |
+| フィールドグループ | （複数） | いくつかの B2B フィールドグループが更新され、特定の ID フィールドが非推奨となり、[[!UICONTROL B2B ソース]](../../xdm/data-types/b2b-source.md)データタイプを使用するキータイプのフィールドが使用されるようになりました。以前の ID フィールドは、将来のアップデートで非推奨となる予定です。影響を受けるフィールドグループの変更点の完全なリストについては、[プルリクエスト](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1)を参照してください。 |
+| データタイプ | [[!UICONTROL ブラウザーの詳細]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | ブラウザーとやり取りするユーザーエージェントに関するコンテキスト情報を取得する新しいフィールド `xdm:userAgentClientHints` が追加されました。 |
+| データタイプ | [[!UICONTROL メディア情報]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | メディアコンテンツの再生ヘッド時間を取得するための `xdm:playhead` フィールドが追加されました。`xdm:videoSegment` のパターン検証を修正しました。 |
+| データタイプ | [[!UICONTROL レーティング]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` は、必須フィールドではなくなりました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -229,18 +229,18 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用してAdobe Experience Platformでデータのクエリを実行できます [!DNL data lake]. 任意のデータセットを [!DNL data lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL data lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL data lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| クエリサービス監査ログの統合 | クエリサービス監査ログの統合により、企業データ管理ポリシーや規制要件のトラブルシューティングや遵守を目的とした、クエリ関連のユーザーアクションの記録が提供されます。 詳しくは、 [監査ログ統合ドキュメント](../../query-service/data-governance/audit-log-guide.md) 包括的な情報 |
-| ALTER TABLE SQL コンストラクト | SQL を使用して、アドホックデータセットにプライマリ ID を設定します。 クエリサービスを使用すると、 `ALTER TABLE` コマンドを使用します。 |
+| クエリサービス監査ログ統合 | クエリサービス監査ログ統合は、トラブルシューティングや企業のデータ管理ポリシーや規制要件の遵守を目的として、クエリ関連のユーザーアクションのレコードを提供します。包括的な情報については、[監査ログ統合のドキュメント](../../query-service/data-governance/audit-log-guide.md)を参照してください |
+| ALTER TABLE SQL コンストラクト | SQL を使用して、アドホックデータセットにプライマリ ID を設定します。クエリーサービスでは、直接 SQL で `ALTER TABLE` コマンドを使用して、データセット列をプライマリまたはセカンダリ ID としてマークできます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-クエリサービスの機能について詳しくは、 [クエリサービスの概要](../../query-service/home.md)
+クエリサービス機能について詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください
 
 <!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
 
@@ -253,10 +253,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | ソース内の属性ベースのアクセス制御 | 取り込み中に個々のソースフィールドおよび属性へのアクセスを管理および制御できるようになりました。 **注意**:現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。 |
-| のベータリリース [!DNL Zendesk] ソース | 以下を使用： [!DNL Zendesk] ユーザー、エージェント、組織のデータを取り込むソース [!DNL Zendesk] 例 [!DNL Profile] エンリッチメント。 詳しくは、 [[!DNL Zendesk] ソースの概要](../../sources/connectors/customer-success/zendesk.md) を参照してください。 |
-| B2B の一般提供 [!DNL Microsoft Dynamics] ソース | これで、 [!DNL Microsoft Dynamics] アカウント、商談、キャンペーン、マーケティングリスト、マーケティングリストメンバーなどの B2B オブジェクトを取り込むソース。 詳しくは、 [[!DNL Microsoft Dynamics] ソースの概要](../../sources/connectors/crm/ms-dynamics.md) を参照してください。 |
-| Adobeデータ収集のサポート | Platform のソースカタログを使用して、Data Prep for Data Collection や Data Prep の警告のサポートの強化など、Platform Edge Network 上のデータにアクセスします。 詳しくは、 [Adobeデータ収集ソースの概要](../../sources/connectors/adobe-applications/data-collection.md) を参照してください。 |
-| でのファイルの取り込みのサポート `ISO-8859-1` エンコード | 以下を使用： `encoding` 取り込みパラメータ `ISO-8859-1` を使用して、クラウドストレージソースを含むエンコードされたファイルを Platform に [!DNL Flow Service] API 詳しくは、 [クラウドストレージソース接続の作成](../../sources/tutorials/api/collect/cloud-storage.md) を参照してください。 |
+| [!DNL Zendesk] ソースのベータ版リリース | [!DNL Zendesk] ソースを使用して、[!DNL Zendesk] インスタンスからユーザー、エージェント、組織のデータを取り込み、[!DNL Profile] を充実させます。詳しくは、[[!DNL Zendesk] ソースの概要](../../sources/connectors/customer-success/zendesk.md)を参照してください。 |
+| B2B の一般提供 [!DNL Microsoft Dynamics] ソース | これで、 [!DNL Microsoft Dynamics] アカウント、商談、キャンペーン、マーケティングリスト、マーケティングリストメンバーなどの B2B オブジェクトを取り込むソース。 詳しくは、[[!DNL Microsoft Dynamics] ソースの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
+| Adobe Data Collection のサポート | Platform のソースカタログを使用して、Platform Edge Network 上のデータにアクセスできます（データ収集のためのデータ準備やデータ準備警告の強化されたサポートなど）。詳しくは、[Adobe Data Collection ソースの概要](../../sources/connectors/adobe-applications/data-collection.md)を参照してください。 |
+| `ISO-8859-1` エンコーディングのファイルの取り込みのサポート | [!DNL Flow Service] API を使用して、クラウドストレージソースの `ISO-8859-1` エンコードされたファイルを Platform に取り込むには、`encoding` パラメーターを使用します。詳しくは、[クラウドストレージソース接続の作成](../../sources/tutorials/api/collect/cloud-storage.md)に関するガイドを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
