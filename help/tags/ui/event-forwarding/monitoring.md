@@ -2,10 +2,11 @@
 title: イベント転送でのアクティビティの監視
 description: イベント転送プロパティでの使用状況、エラー、および時間の計算方法を説明します。
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ ht-degree: 0%
 ## 前提条件
 
 このガイドは、イベントの転送を購入済みであり、イベントの転送の仕組みに関する十分な理解を得ていることを前提としています。 詳しくは、 [イベント転送の概要](./overview.md) を参照してください。
+
+## ビデオの概要
+
+監視機能の概要については、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## プロパティと環境の選択
 
