@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform、ユーザーインターフェイス、UI、カスタマイズ、ライセンス使用ダッシュボード、ダッシュボード、ライセンス使用、使用権限、消費
-title: ライセンス使用状況ダッシュボードガイド
+keywords: Experience Platform;ユーザーインターフェイス;UI;カスタマイズ;ライセンス使用状況ダッシュボード;ダッシュボード;ライセンス使用状況;使用権限;使用
+title: ライセンス使用状況ダッシュボード ガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 6%
+source-wordcount: '873'
+ht-degree: 17%
 
 ---
 
 # ライセンス使用状況ダッシュボード {#license-usage-dashboard}
 
-Adobe Experience Platformのユーザーインターフェイス (UI) には、毎日のスナップショットで取り込まれた、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセスと操作の方法を説明し、ダッシュボードに表示されるビジュアライゼーションに関する詳細を提供します。
+Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセスと操作の方法を説明し、ダッシュボードに表示されるビジュアライゼーションに関する詳細を提供します。
 
 Platform UI の一般的な概要については、 [Experience PlatformUI ガイド](../../landing/ui-guide.md).
 
 ## ライセンス使用状況ダッシュボードデータ
 
-ライセンス使用状況ダッシュボードには、Experience Platformに関する組織のライセンス関連データのスナップショットが表示されます。 スナップショットが作成された特定の時点で表示されたとおりに、ダッシュボードのデータが表示されます。 つまり、スナップショットはデータの近似やサンプルではなく、ダッシュボードはリアルタイムで更新されません。
+ライセンス使用状況ダッシュボードには、Experience Platformに関する組織のライセンス関連データのスナップショットが表示されます。 ダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じ内容を表示します。つまり、スナップショットはデータの近似やサンプルではなく、ダッシュボードはリアルタイムで更新されません。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 * [!UICONTROL セグメント化率ごとにスキャンされたデータ]
 * [!UICONTROL 合計消費済みストレージ]
 
-これらの指標の使用可否と各指標の定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、該当する製品説明ドキュメントを参照してください。
+これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。各指標の詳細な定義については、該当する製品説明ドキュメントを参照してください。
 
 | ライセンス | 製品の説明 |
 |---|---|
@@ -88,6 +88,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | <ul><li>RT 顧客データプラットフォーム：OD</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD のアクティベーション</li><li>AEP:OD アクティベーション PRFL から 10M</li><li>AEP:OD アクティベーション（最大 50M）</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP RTCDP:OD プロファイルオーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
