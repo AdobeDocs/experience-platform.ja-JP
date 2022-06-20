@@ -5,9 +5,9 @@ title: Salesforce ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Salesforce をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 17%
 
 ---
@@ -35,6 +35,7 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 - [商談連絡先の役割](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [キャンペーン](../adobe-applications/mapping/salesforce.md#campaign)
 - [キャンペーンメンバー](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [アカウント連絡先関係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## 設定 [!DNL Salesforce] 名前空間とスキーマ自動生成ユーティリティ
 
