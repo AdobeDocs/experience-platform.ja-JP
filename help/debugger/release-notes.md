@@ -4,14 +4,19 @@ description: Adobe Experience Platform デバッガーの最新のリリース�
 keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
+source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.3.3 - 2022 年 6 月 21 日
+
+* ネットワークイベントテーブルからポップアップを開けない問題を修正しました。
+* ページ上の Alloy 情報を読み込めない問題を修正しました。
 
 ## バージョン 1.3.2 - 2022 年 6 月 9 日
 
