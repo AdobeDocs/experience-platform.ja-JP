@@ -5,9 +5,9 @@ title: スキーマレジストリ API の概要
 description: このドキュメントでは、スキーマレジストリ API を呼び出す前に知っておく必要があるコア概念の概要を示します。
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 48%
 
 ---
@@ -211,6 +211,7 @@ URI をより REST に適したものにするために、スキーマでは、`
 | `application/vnd.adobe.xed-notext+json; version=1` | `$ref` と `allOf` を含む未処理の XDM です。タイトルや説明はありません。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 属性と解決された `allOf`。タイトルや説明はありません。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 属性と解決された `allOf`。記述子が含まれます。 |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` および `allOf` を解決、タイトルと説明を含む非推奨のフィールドは、 `meta:status` 属性 `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

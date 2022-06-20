@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 89%
+source-wordcount: '469'
+ht-degree: 87%
 
 ---
 
@@ -171,12 +171,13 @@ ht-degree: 89%
    * [UI でのスキーマの作成](tutorials/create-schema-ui.md)
    * [API でのスキーマの作成](tutorials/create-schema-api.md)
    * [API でカスタムフィールドを定義する](./tutorials/custom-fields-api.md)
+   * [フィールドへの推奨値の追加 (API)](tutorials/suggested-values.md)
+   * [XDM フィールドの廃止](tutorials/field-deprecation.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でのスキーマ関係の定義](tutorials/relationship-api.md)
    * [Real-time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
    * [スキーマのデータ使用ラベルの管理](tutorials/labels.md)
-   * [アドホックスキーマ（API）の作成](tutorials/ad-hoc.md)
-   * [フィールドへの推奨値の追加 (API)](tutorials/suggested-values.md)
+   * [アドホックスキーマの作成](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

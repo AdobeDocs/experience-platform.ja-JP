@@ -5,10 +5,10 @@ title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 59%
+source-wordcount: '1836'
+ht-degree: 53%
 
 ---
 
@@ -311,7 +311,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 |
+| `@type` | 定義する記述子のタイプ。ID 記述子の場合、この値はに設定する必要があります。 `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
@@ -347,7 +347,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 |
+| `@type` | 定義する記述子のタイプ。わかりやすい名前記述子の場合、この値をに設定する必要があります。 `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
@@ -377,7 +377,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 |
+| `@type` | 定義する記述子のタイプ。関係記述子の場合、この値をに設定する必要があります。 `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
@@ -386,7 +386,6 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:destinationProperty` | 宛先スキーマ内のターゲットフィールドへの最適パス。このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### 参照 ID 記述子
 
@@ -404,8 +403,32 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 |
+| `@type` | 定義する記述子のタイプ。参照 ID 記述子の場合、この値をに設定する必要があります。 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | 記述子を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
 | `xdm:identityNamespace` | ソースプロパティの ID 名前空間コード。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### 廃止されたフィールド記述子
+
+以下が可能です。 [カスタム XDM リソース内のフィールドを廃止する](../tutorials/field-deprecation.md#custom) を `meta:status` 属性を `deprecated` 問題のフィールドに ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨にする場合は、非推奨のフィールド記述子を対象のスキーマに割り当てても、同じ効果を得ることができます。 の使用 [正しい `Accept` ヘッダー](../tutorials/field-deprecation.md#verify-deprecation)の場合は、API でスキーマを検索する際に、非推奨となった標準フィールドを表示できます。
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `@type` | 記述子のタイプ。 フィールド廃止記述子の場合、この値をに設定する必要があります。 `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` 記述子を適用するスキーマの。 |
+| `xdm:sourceVersion` | 記述子を適用するスキーマのバージョン。 をに設定する必要があります。 `1`. |
+| `xdm:sourceProperty` | 記述子を適用するスキーマ内のプロパティへのパス。 記述子を複数のプロパティに適用する場合は、パスのリストを配列 ( 例えば、 `["/firstName", "/lastName"]`) をクリックします。 |
+
+{style=&quot;table-layout:auto&quot;}
