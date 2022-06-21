@@ -1,16 +1,18 @@
 ---
 title: XDM フィールドの廃止
 description: スキーマレジストリ API で Experience Data Model(XDM) フィールドを廃止する方法について説明します。
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 11%
+source-wordcount: '554'
+ht-degree: 10%
 
 ---
 
 # XDM フィールドの廃止
 
-エクスペリエンスデータモデル (XDM) では、 [スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). このドキュメントでは、様々な XDM リソースのフィールドを非推奨にする方法について説明します。
+エクスペリエンスデータモデル (XDM) では、 [スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). フィールドの廃止により、フィールドが [!UICONTROL プロファイル] ワークスペースとCustomer Journey Analyticsに影響しますが、それ以外の場合は、改行しない変更であり、既存のデータフローに悪影響を与えません。
+
+このドキュメントでは、様々な XDM リソースのフィールドを非推奨にする方法について説明します。
 
 ## はじめに
 
