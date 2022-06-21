@@ -2,9 +2,8 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: （ベータ版）フローサービス API を使用して、Mixpanel のソース接続とデータフローを作成する
 description: フローサービス API を使用してAdobe Experience Platformを Mixpanel に接続する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 0a21280aaeb62374437c208da83cd4b42569ee91
+exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 76%

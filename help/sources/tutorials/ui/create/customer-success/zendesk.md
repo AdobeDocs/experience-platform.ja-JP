@@ -3,9 +3,9 @@ keywords: Experience Platform;Zendesk；ソース；コネクタ；ソースコ�
 title: UI での Zendesk Source 接続の作成
 description: Adobe Experience Platform UI を使用して Zendesk ソース接続を作成する方法を説明します。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 017f074a325b5ca1921128f6d3d9759612a8a398
+source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '797'
 ht-degree: 32%
 
 ---
@@ -97,10 +97,6 @@ Platform UI で、「 **[!UICONTROL データセット]** 左側のナビゲー�
 次に、表示するデータフローのデータフロー実行 ID を選択して、そのデータフロー実行に関する具体的な詳細を確認します。
 
 ![データフローページ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-スキーマに関する詳細を確認するには、「 **[!UICONTROL データガバナンス]**.
-
-![Zendesk スキーマ](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 最後に、 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを表示します。
 

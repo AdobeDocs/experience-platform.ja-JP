@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 100%
+source-wordcount: '1022'
+ht-degree: 98%
 
 ---
 
@@ -45,11 +45,11 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
-<!-- ### Analytics {#analytics}
+### Analytics {#analytics}
 
-Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+Experience Platformは、サードパーティの分析プラットフォームからデータを取り込む機能を提供しています。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
 ### クラウドストレージ {#cloud-storage}
 

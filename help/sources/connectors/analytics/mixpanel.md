@@ -2,9 +2,8 @@
 keywords: Experience Platform;ホーム;人気のトピック;
 title: （ベータ版）Mixpanel Source Connector の概要
 description: API またはユーザーインターフェイスを使用して Mixpanel をAdobe Experience Platformに接続する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: e7a5e20721f5826ca1f4520b4a27d261eed1e4df
+exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 27%
@@ -61,4 +60,3 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 * [UI での [!DNL Mixpanel] ソース接続の作成](../../tutorials/ui/create/analytics/mixpanel.md)
 * [UI での顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/analytics.md)
-
