@@ -2,247 +2,52 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
+source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
 workflow-type: tm+mt
-source-wordcount: '2409'
-ht-degree: 73%
+source-wordcount: '562'
+ht-degree: 49%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年5月25日（PT）**
-
-Adobe Experience Platform の新機能：
-
-- [属性ベースのアクセス制御](#abac)
-- [データハイジーン](#hygiene)
+**リリース日：2022 年 6 月 22 日**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [アラート](#alerts)
-- [監査ログ](#audit-logs)
-- [ダッシュボード](#dashbaords)
-- [データ収集](#data-collection)
-- [データガバナンス](#data-governance)
-- [データ準備](#data-prep)
-- [宛先](#destinations)
-- [エクスペリエンスデータモデル（XDM）](#xdm)
+- [[!DNL Data Science Workspace]](#dsw)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
 
-## 属性ベースのアクセス制御 {#abac}
+## [!DNL Data Science Workspace] {#dsw}
 
->[!IMPORTANT]
->
->現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
-
-属性ベースのアクセス制御は、Adobe Experience Platformの機能で、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにします。 属性は、スキーマフィールドやセグメントに追加されるラベルなど、オブジェクトに追加されるメタデータにすることができます。 管理者は、ユーザーアクセス権限を管理する属性を含むアクセスポリシーを定義します。
-
-属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ (SPD) と個人情報 (PII) の両方に対するユーザーのアクセスを制御できます。 管理者は、特定のフィールドおよびそれらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+ Data Science Workspace は、機械学習と人工知能を使用して、データからインサイトを引き出します。Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。Data Science Workspace がこれを実現する方法の 1 つは、JupyterLab を使用することです。 JupyterLab は、<a href="https://jupyter.org/" target="_blank">プロジェクト Jupyter</a> の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
 
 | 機能 | 説明 |
 | --- | --- |
-| 属性ベースのアクセス制御 | 属性ベースのアクセス制御を使用すると、エクスペリエンスデータモデル (XDM) スキーマフィールドに、組織またはデータの使用範囲を定義するラベルを付けることができます。 同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドをカバーするアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、またはサードパーティのユーザー）に与えるアクセスをより管理できます。 また、属性ベースのアクセス制御により、管理者は特定のセグメントへのアクセスを管理できます。 詳しくは、 [属性ベースのアクセス制御の概要](../../access-control/abac/overview.md). |
-| 権限 | 権限は、管理者がExperience Cloudの領域で、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理するためのユーザーの役割およびアクセスポリシーを定義できます。 権限を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。 詳しくは、 [権限 UI ガイド](../../access-control/abac/ui/browse.md). |
-
-属性ベースのアクセス制御の詳細については、 [属性ベースのアクセス制御の概要](../../access-control/abac/overview.md).
-
-## データハイジーン {#hygiene}
-
-Experience Platformは、消費者レコードとデータセットをプログラム的に削除することで、保存されたデータを管理できる、一連のデータ衛生機能を提供します。 次のいずれかを使用： [!UICONTROL データの衛生状態] UI のワークスペースまたはデータ衛生 API の呼び出しを通じて、データストアを管理して、情報が期待どおりに使用され、不適切なデータ修正が必要な場合には更新され、組織のポリシーで必要と判断される場合は削除されます。
-
->[!IMPORTANT]
->
->現在、データ衛生機能は、医療用Adobeシールドのアドオン機能を購入した組織でのみ利用できます。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| データセットの Time to Live（TTL） | [スケジュール TTL](../../hygiene/ui/ttl.md) （Platform データセット用） |
+| JupyterLab ランチャー | JupyterLab Launcher に Spark 3.2 ノートブックのスターターが含まれるようになりました。 Spark 2.4 ノートブックスタートは、Spark 3.2 ノートブックに置き換えられ、このリリースに含まれる予定です。 |
+| Spark 3.2 | 新しい Scala(Spark) と PySpark のレシピで Spark 3.2 が使用されるようになりました。 |
+| カーネル | Scala(Spark) ノートブックは、Scala カーネルを介して作成されるようになりました。 PySpark ノートブックは、Python カーネルを介して作成されるようになりました。 Spark と PySpark カーネルは廃止され、今後のリリースで削除される予定です。 |
+| レシピ | 新しい PySpark と Spark のレシピは、Python と R のレシピと同様の Docker ワークフローに従うようになりました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform での監査ログについて詳しくは、 [データの衛生状態の概要](../../hygiene/home.md).
-
-## アラート {#alerts}
-
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
-
-**更新された機能**
-
-| 機能 | アラートルール | 説明 |
-| --- | --- | --- |
-| 新しいアラートルール | スキップ率がしきい値を超えています | アラートを使用して、ソースデータフローが ID しきい値を超えた場合に通知を受け取ることができるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-アラートの詳細については、 [[!DNL Observability Insights] 概要](../../observability/home.md).
-
-## 監査ログ {#audit-logs}
-
-Experience Platform を使用すると、様々なサービスおよび機能についてユーザーアクティビティを監査できます。監査ログは、誰がいつ何をしたかに関する情報を提供します。
-
-**更新された機能**
-
-| 機能 | 名前 | 説明 |
-| --- | --- | --- |
-| 追加されたリソース | <ul><li> アクセス制御ポリシー </li><li> 役割 </li><li> 監査ログ </li><li> 作業指示 </li><li> ID 名前空間 </li><li> ID グラフ </li><li> クエリ </li><li> データセット </li><li> ソースデータフロー </li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform の監査ログについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
-
-## ダッシュボード {#dashboards}
-
-Adobe Experience Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。
-
-### プロファイルダッシュボード
-
-プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| オーディエンスの重複（結合ポリシー別）ウィジェット | このウィジェットは、セグメント定義のクロスオーバーを視覚的に表示し、セグメント定義間の類似性を調査することで、セグメント化戦略を最適化できます。 |
-| プロファイル数の変化のトレンド（ID 別）ウィジェット | このウィジェットは、必要な ID でフィルタリングされたプロファイルの成長パターンを示すことで、宛先アクティベーションのニーズを管理するのに役立ちます。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-プロファイルについて詳しくは、[プロファイルダッシュボードのドキュメント](../../dashboards/guides/profiles.md)を参照してください。
-
-### 宛先ダッシュボード
-
-宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。
-
-| 機能 | 説明 |
-| --- | --- |
-| 宛先ウィジェットによってアクティブ化されたオーディエンス | このウィジェットを使用すると、アクティブ化されたオーディエンスの数に基づいて、宛先の価値を一目で把握できます。また、宛先にマッピングされたセグメントのより詳細な情報にも簡単にアクセスできます。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-宛先について詳しくは、[宛先ダッシュボードのドキュメント](../../dashboards/guides/destinations.md)を参照してください。
-
-### セグメントダッシュボード
-
-セグメントダッシュボードには、毎日のスナップショット中に取り込まれた、セグメントに関する重要な情報を表示できるユーザーインターフェイスが用意されています。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| オーディエンスの重複ウィジェット | このウィジェットを使用すると、セグメント定義の結果の類似性を視覚化することで、セグメント化戦略を最適化できます。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-セグメントについて詳しくは、[セグメントダッシュボードのドキュメント](../../dashboards/guides/segments.md)を参照してください。
-
-## データ収集 {#data-collection}
-
-Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信して、強化したり、変換したり、アドビまたはアドビ以外の宛先に配信したりできるようにする一連のテクノロジーを提供します。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| データストリームをコピー | 最初から開始するのを避けるために、[既存のデータストリームのコピーを作成](../../edge/datastreams/overview.md#copy)して、必要に応じてその設定を調整します。 |
-| データストリームマッピングルールを読み込む | データ収集のためのデータ準備を設定する際に、すべてのフィールドマッピングを手動で設定する代わりに、[既存のデータストリームのマッピングルールを読み込む](../../edge/datastreams/data-prep.md#import-mapping)ことができます。 |
-| Mobile SDK のデータストリームマッピングのサポート | Experience Platform Mobile SDK での使用を目的としたデータストリームに対して、データ収集のためのデータ準備を設定できるようになりました。 |
-| XDM オブジェクトのデータストリームマッピングのサポート | [データ収集のためのデータ準備を設定](../../edge/datastreams/data-prep.md#select-data)する際に、データレイヤーオブジェクトに加えて、XDM オブジェクトをマッピングします。 |
-| データフローとの統合 | Platform のソースカタログを使用して、Platform Edge Network 上のデータにアクセスできます（データ収集のためのデータ準備やデータ準備警告の強化されたサポートなど）。詳しくは、[Adobe Data Collection ソースの概要](../../sources/connectors/adobe-applications/data-collection.md)を参照してください。 |
-
-Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
-
-## データガバナンス {#governance}
-
-Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。内で重要な役割を果たします [!DNL Experience Platform] 様々なレベル（カタログ化、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに対するアクセス制御など）で使用できます。
-
-**新機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| 同意ポリシーの適用（使用が制限される） | 組織がAdobeシールドのヘルスケアアドオン機能を購入している場合は、次の操作を実行できます。 [同意ポリシーの作成](../../data-governance/policies/user-guide.md#consent-policy) 自動的に [セグメントパーティシペーションにおける顧客の同意および好みの適用](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation). |
-
-{style=&quot;table-layout:auto&quot;}
-
-このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| の属性ベースのアクセス制御 [!DNL Data Prep] | これで、アクセス権のある属性のみをマッピングできるようになります。 アクセス権のない属性は、パススルーマッピングおよび計算フィールドでは使用できません。 詳しくは、 [での属性ベースのアクセス制御 [!DNL Data Prep]](../../data-prep/home.md). **注意**:現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。 |
-| ローカライズされたデータエラー | [!DNL Data Prep] は、すべての変換エラーを属性レベルにローカライズするようになりました（以前は行レベル）。データフローは、完全な行を無視するのではなく、変換エラーがない列で入力された行の一部を取り込むようになりました。 |
-| [!DNL Profile Service] へのアップサートのストリーミング | [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md) または [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) ソースを使用して、プロファイルサービスに行の一部の更新を送信するために、[!DNL Data Prep] でアップサートをストリーミングします。詳しくは、[アップサートのストリーミング](../../data-prep/upserts.md)に関するガイドを参照してください。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-[!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| ----------- | ----------- |
-| [毎日のセグメント評価の後](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)の最新のプロファイル選定の書き出し | 毎日のセグメント評価が完了した後に、1 回または毎日、最新のプロファイル選定を含む完全なファイル書き出しをスケジュール設定できるようになりました。 |
-| [Adobe Target 宛先](../../destinations/catalog/personalization/adobe-target-connection.md)のオプションのデータストリーム ID | Experience Platform Web SDK を実装できないユーザーに対して Adobe Target パーソナライゼーションを有効にするために、Adobe Target 宛先を設定する際に、データストリーム ID 選択がオプションになりました。データストリームを使用しない場合、Experience Platform から Target に書き出されるセグメントは、次のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になり、エッジのセグメント化に依存するすべての[ユースケース](../../destinations/ui/configure-personalization-destinations.md)も無効になります。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-## エクスペリエンスデータモデル（XDM） {#xdm}
-
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
-
-**新しい XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明 |
-| --- | --- | --- |
-| フィールドグループ | [[!UICONTROL 変更セット]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | データセットへの、およびデータセットからの行レベルの変更を取得します。このフィールドグループは、どのクラスでも使用できます。 |
-| フィールドグループ | [[!UICONTROL 参照キー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | ExperienceEvent スキーマの参照キーを取得し、他のクラスに基づいてスキーマとの関係を構築できるようにします。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-**更新された XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明のアップデート |
-| --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | `eventType` が更新され、Adobe Adobe Journey Optimizer のメディアおよび web チャネルインバウンドユースケースに関連するいくつかの新しいイベントタイプが含まれるようになりました。 |
-| グローバルスキーマ | [[!UICONTROL 宛先]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | `xdm:destinationCategory` から列挙値が削除されました。 |
-| フィールドグループ | [[!UICONTROL レコードステータス]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | フィールドグループのステータスを `experimental` から `stable` に更新しました。 |
-| フィールドグループ | （複数） | いくつかの B2B フィールドグループが更新され、特定の ID フィールドが非推奨となり、[[!UICONTROL B2B ソース]](../../xdm/data-types/b2b-source.md)データタイプを使用するキータイプのフィールドが使用されるようになりました。以前の ID フィールドは、将来のアップデートで非推奨となる予定です。影響を受けるフィールドグループの変更点の完全なリストについては、[プルリクエスト](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1)を参照してください。 |
-| データタイプ | [[!UICONTROL ブラウザーの詳細]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | ブラウザーとやり取りするユーザーエージェントに関するコンテキスト情報を取得する新しいフィールド `xdm:userAgentClientHints` が追加されました。 |
-| データタイプ | [[!UICONTROL メディア情報]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | メディアコンテンツの再生ヘッド時間を取得するための `xdm:playhead` フィールドが追加されました。`xdm:videoSegment` のパターン検証を修正しました。 |
-| データタイプ | [[!UICONTROL レーティング]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` は、必須フィールドではなくなりました。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Data Science Workspace の一般情報について詳しくは、 [概要ドキュメント](../../data-science-workspace/home.md).
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL data lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL data lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| クエリサービス監査ログ統合 | クエリサービス監査ログ統合は、トラブルシューティングや企業のデータ管理ポリシーや規制要件の遵守を目的として、クエリ関連のユーザーアクションのレコードを提供します。包括的な情報については、[監査ログ統合のドキュメント](../../query-service/data-governance/audit-log-guide.md)を参照してください |
-| ALTER TABLE SQL コンストラクト | SQL を使用して、アドホックデータセットにプライマリ ID を設定します。クエリーサービスでは、直接 SQL で `ALTER TABLE` コマンドを使用して、データセット列をプライマリまたはセカンダリ ID としてマークできます。 |
+| アドホックスキーマのラベル付け | クエリサービス CTAS クエリを通じて自動的に生成されるアドホックスキーマのデータフィールドにラベルを適用して、機密データへのアクセスを管理します。 アドホックスキーマの特定のフィールド（データセット）の使用を制限して、機密性の高い個人データと個人を特定できる情報の両方へのアクセスを制御できます。 属性ベースのアクセス制御機能を使用すると、Platform UI を通じてアドホックスキーマフィールドにラベルを付けることができます。 |
+| `FLATTEN` 設定 | サードパーティの BI ツールを使用してデータベースに接続する場合、 `FLATTEN` を設定すると、ネストされたデータ構造が別々の列に統合され、属性名が行値を保持する列名になります。 これにより、アドホックスキーマの使いやすさが向上し、ネストされたデータ構造をサポートしない BI ツールでデータを取得、分析、変換およびレポートするために必要なワークロードが削減されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-クエリサービス機能について詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください
-
-<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
+クエリサービスの詳細については、 [クエリサービスの概要](../../query-service/home.md).
 
 ## ソース {#sources}
 
@@ -252,11 +57,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| ソース内の属性ベースのアクセス制御 | 取り込み中に個々のソースフィールドおよび属性へのアクセスを管理および制御できるようになりました。 **注意**:現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。 |
-| [!DNL Zendesk] ソースのベータ版リリース | [!DNL Zendesk] ソースを使用して、[!DNL Zendesk] インスタンスからユーザー、エージェント、組織のデータを取り込み、[!DNL Profile] を充実させます。詳しくは、[[!DNL Zendesk] ソースの概要](../../sources/connectors/customer-success/zendesk.md)を参照してください。 |
-| B2B の一般提供 [!DNL Microsoft Dynamics] ソース | これで、 [!DNL Microsoft Dynamics] アカウント、商談、キャンペーン、マーケティングリスト、マーケティングリストメンバーなどの B2B オブジェクトを取り込むソース。 詳しくは、[[!DNL Microsoft Dynamics] ソースの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
-| Adobe Data Collection のサポート | Platform のソースカタログを使用して、Platform Edge Network 上のデータにアクセスできます（データ収集のためのデータ準備やデータ準備警告の強化されたサポートなど）。詳しくは、[Adobe Data Collection ソースの概要](../../sources/connectors/adobe-applications/data-collection.md)を参照してください。 |
-| `ISO-8859-1` エンコーディングのファイルの取り込みのサポート | [!DNL Flow Service] API を使用して、クラウドストレージソースの `ISO-8859-1` エンコードされたファイルを Platform に取り込むには、`encoding` パラメーターを使用します。詳しくは、[クラウドストレージソース接続の作成](../../sources/tutorials/api/collect/cloud-storage.md)に関するガイドを参照してください。 |
+| [!DNL Mixpanel] ソースのベータ版リリース | これで、 [!DNL Mixpanel] 分析データを取り込むソース [!DNL Mixpanel] アカウントからExperience Platformへ。 詳しくは、 [[!DNL Mixpanel] ソースドキュメント](../../sources/connectors/analytics/mixpanel.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
