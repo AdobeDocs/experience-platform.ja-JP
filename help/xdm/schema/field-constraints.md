@@ -5,10 +5,10 @@ title: XDM フィールドタイプ制約
 topic-legacy: overview
 description: Experience Data Model(XDM) のフィールドタイプ制約の参照です。これには、マッピングできる他のシリアル化形式や、API で独自のフィールドタイプを定義する方法が含まれます。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '668'
+ht-degree: 13%
 
 ---
 
@@ -22,7 +22,7 @@ Experience Data Model(XDM) スキーマでは、フィールドのタイプに�
 
 API で独自のフィールドタイプを定義する予定がある場合は、まず [スキーマレジストリ開発者ガイド](../api/getting-started.md) を参照して、カスタムフィールドを含めるフィールドグループとデータ型を作成する方法を確認してください。 Experience PlatformUI を使用してスキーマを作成する場合は、 [UI でのフィールドの定義](../ui/fields/overview.md) を参照して、カスタムフィールドグループおよびデータ型内で定義するフィールドに制約を実装する方法を確認してください。
 
-## 基本構造と例
+## 基本構造と例 {#basic-types}
 
 XDM は JSON スキーマの上に構築されているので、XDM フィールドの型を定義する際に、同様の構文を継承します。 JSON スキーマで異なるフィールドタイプがどのように表されるかを理解すると、各タイプの基本制約を示すのに役立ちます。
 
@@ -134,7 +134,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 
 ### Parquet、Spark SQL、Java {#parquet}
 
-| XDM タイプ | Parquet | Spark SQL | Java |
+| XDM タイプ | PARQUET | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | タイプ： `BYTE_ARRAY`<br>注釈： `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Double] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |

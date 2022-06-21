@@ -4,9 +4,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 87%
 
 ---
@@ -161,7 +161,9 @@ ht-degree: 87%
    * [データタイプ](api/data-types.md)
    * [記述子](api/descriptors.md)
    * [和集合](api/unions.md)
-   * [エクスポート／インポート](api/export-import.md)
+   * [CSV からスキーマへの変換](api/csv-to-schema.md)
+   * [エクスポート](api/export.md)
+   * [インポート](api/import.md)
    * [サンプルデータ](api/sample-data.md)
    * [監査ログ](api/audit-log.md)
    * [アドホックスキーマ](api/ad-hoc.md)
