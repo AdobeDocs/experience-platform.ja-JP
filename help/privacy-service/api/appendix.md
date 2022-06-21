@@ -5,7 +5,7 @@ title: Privacy ServiceAPI ガイドの付録
 topic-legacy: developer guide
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 532c9c9d07c112944ff26b1e48545d2b4777b06c
+source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 69%
@@ -73,7 +73,7 @@ ht-degree: 69%
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 顧客属性 (CRS) | `CRS` |
-| ID サービス | `Identity` |
+| ID サービス | `identity` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
