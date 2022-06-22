@@ -5,8 +5,8 @@ title: Data Science Workspace の概要
 topic-legacy: overview
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
-workflow-type: ht
+source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%
 
@@ -154,7 +154,7 @@ Adobe Experience Platform のすべてのデータは標準化された XDM ス�
 必要なデータがすぐに見つからず、Adobe Experience Platform の外部に存在する場合でも、追加のデータセットを取り込むのは比較的単純なタスクです。これらのデータも標準化された XDM スキーマに変換されます。\
  [!DNL Jupyter Notebook] を使用して、データの前処理を簡単に実行できます。場合によっては、ノートブックテンプレートから開始したり、以前に使用したノートブックから開始して購入傾向を特定したりできます。
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### レシピの作成
 

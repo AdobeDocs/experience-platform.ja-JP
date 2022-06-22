@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、JupyterLab ノートブックレシピビルダーテンプレートを使用してレシピを作成するために必要な手順について説明します。
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 34%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 34%
 >
 >この [!UICONTROL レシピビルダー] ノートブックは、すべてのファイル形式の操作をサポートしていますが、現在、レシピの作成機能は、のみをサポートしています [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 を選択し、 [!UICONTROL レシピビルダー] ランチャーからノートブックが開き、新しいタブに表示されます。
 
