@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: f501a93786a726c5aa74e19903ac3b2564e72a91
+source-git-commit: 401d6f9e7ff4e30ff5b0efb35254e8863476425c
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 79%
+source-wordcount: '187'
+ht-degree: 75%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 79%
 - データガバナンス {#data-governance}
    - [監査ログガイド](data-governance/audit-log-guide.md)
    - [アドホックスキーマデータセット内の ID](data-governance/ad-hoc-schema-identities.md)
+   - [アドホックスキーマの属性ベースのアクセス制御のサポート](./data-governance/ad-hoc-schema-labels.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
