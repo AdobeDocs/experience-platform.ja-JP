@@ -5,10 +5,10 @@ title: データセット UI ガイド
 topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 44%
+source-wordcount: '1208'
+ht-degree: 46%
 
 ---
 
@@ -21,19 +21,25 @@ ht-degree: 44%
 このユーザガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。 
 
 * [データセット](overview.md):のデータ永続化のためのストレージと管理の構成 [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
    * [スキーマエディター](../../xdm/tutorials/create-schema-ui.md):を使用して独自のカスタム XDM スキーマを構築する方法を説明します。 [!DNL Schema Editor] 内 [!DNL Platform] ユーザーインターフェイス。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
-## データセットの表示
+## データセットの表示 {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="データセットアクティビティの負の数"
+>abstract="取り込まれたレコードの負の数は、ユーザーが選択した期間で特定のバッチを削除したことを意味します。"
+>text="Learn more in documentation"
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで **[!UICONTROL データセット]** ダッシュボード。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 
 ![](../images/datasets/user-guide/browse-datasets.png)
 
-デフォルトでは、に取り込んだデータセットのみが表示されます。 システム生成データセットを表示する場合は、 **[!UICONTROL システムデータセットを表示]** 切り替え システム生成データセットは、他のコンポーネントの処理にのみ使用されます。 例えば、システム生成のプロファイル書き出しデータセットを使用して、プロファイルダッシュボードが処理されます。
+デフォルトでは、取り込んだデータセットのみが表示されます。システム生成データセットを表示する場合は、 **[!UICONTROL システムデータセットを表示]** 切り替え システム生成データセットは、他のコンポーネントの処理にのみ使用されます。 例えば、システム生成のプロファイル書き出しデータセットを使用して、プロファイルダッシュボードが処理されます。
 
 ![](../images/datasets/user-guide/system-datasets.png)
 
@@ -59,7 +65,7 @@ ht-degree: 44%
 
 ## データセットの作成 {#create}
 
-新しいデータセットを作成するには、まず「 」を選択します。 **[!UICONTROL データセットを作成]** 内 **[!UICONTROL データセット]** ダッシュボード。
+新しいデータセットを作成するには、まず、データセットダッシュボードの「**[!UICONTROL データセットを作成]**」を選択します。****
 
 ![](../images/datasets/user-guide/select-create.png)
 
