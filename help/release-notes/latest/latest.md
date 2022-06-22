@@ -1,11 +1,10 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の最新のリリースノートです。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
+title: Adobe Experience Platformリリースノート（2022 年 6 月）
+description: Adobe Experience Platformの 2022 年 6 月のリリースノート。
+source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 49%
+source-wordcount: '639'
+ht-degree: 50%
 
 ---
 
@@ -16,6 +15,7 @@ ht-degree: 49%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
 
@@ -33,6 +33,20 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 {style=&quot;table-layout:auto&quot;}
 
 Data Science Workspace の一般情報について詳しくは、 [概要ドキュメント](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
