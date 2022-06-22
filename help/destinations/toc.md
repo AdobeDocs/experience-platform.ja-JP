@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 93%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 93%
       * [お客様の声の宛先の概要](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback 拡張機能](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags 拡張機能](./catalog/voice/invoca.md)
+      * [Medallia 接続](./catalog/voice/medallia-connector.md)
       * [Medallia 拡張機能](./catalog/voice/medallia.md)
       * [Talk URL Inbox 拡張機能](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}

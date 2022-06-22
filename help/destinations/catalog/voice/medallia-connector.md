@@ -1,0 +1,146 @@
+---
+title: Medallia 接続
+description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。
+source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+workflow-type: tm+mt
+source-wordcount: '1031'
+ht-degree: 6%
+
+---
+
+
+# Medallia 接続
+
+## 概要 {#overview}
+
+ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。
+
+>[!IMPORTANT]
+>
+>このドキュメントページは Medallia チームが作成したものです。 お問い合わせや更新のご依頼は、adobe-integrations@medallia.comから直接お問い合わせください。
+
+## ユースケース {#use-cases}
+
+Medalia の宛先をいつどのように使用するかを理解しやすくするために、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+
+### 使用例#1
+
+ある B2B ブランドは、オンボーディングプログラムを評価し、合理化したいと考えています。 オンボーディングプロセスを完了したばかりの顧客に、パーソナライズされた調査をリアルタイムで送信したいと考えています。
+
+### 使用例#2
+
+ある小売業者は、注文の受け渡しに関する顧客の好みをより深く理解したいと考えています。 過去 1 か月間にオンラインおよび店頭での購入をおこなった顧客に、短い 1 問の SMS 調査を送信したいと考えています。
+
+## 前提条件 {#prerequisites}
+
+Medalia 接続を確立するには、次の情報が必要です。
+* **OAuth トークンエンドポイント URL**
+* **クライアント ID**
+* **クライアント秘密鍵**
+* **API ゲートウェイ URL**
+* **インポート API 名**
+
+これらの詳細は、Medalia 配信チームと連携して入手してください。
+
+## サポートされる ID {#supported-identities}
+
+Medalia では、以下の表で説明する ID のアクティベーションをサポートしています。 詳細情報： [id](/help/identity-service/namespaces.md).
+
+| ターゲット ID | 説明 | 注意点 |
+|---|---|---|
+| 電子メール | メールアドレス | 電子メールの招待状の調査を送信する場合は、電子メールのターゲット ID を選択します。 プロファイルが複数の電子メールアドレスに関連付けられている場合、Medalia は最初の電子メールにのみ招待をトリガーします。 |
+| phone | E.164 形式でハッシュ化された電話番号 | SMS ベースの調査を送信する場合は、電話のターゲット ID を選択します。 電話番号は E.164 形式である必要があります。この形式には、プラス記号 (+)、国際電話番号、市外局番、電話番号などが含まれます。 例：(+)（国コード）（市外局番）（電話番号）。 プロファイルが複数の電話番号に関連付けられている場合、Medalia は最初の電話番号への招待のみをトリガーにします。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## エクスポートのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+
+| 項目 | タイプ | 備考 |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントの新しく認定されたすべてのメンバーを、目的のスキーマフィールドと共に書き出します ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## 宛先への接続 {#connect}
+
+>[!IMPORTANT]
+> 
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
+
+### 宛先に対する認証 {#authenticate}
+
+宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
+
+* **[!UICONTROL OAuth トークンエンドポイント URL]**:通常はhttps://instance.medallia.tld/oauth/tenant/tokenの形式を取ります。
+* **[!UICONTROL クライアント ID]**:Medalia 配信チームから入手します。
+* **[!UICONTROL クライアント秘密鍵]**:Medalia 配信チームから入手します。
+
+![この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+
+### 宛先の詳細を入力 {#destination-details}
+
+宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
+
+* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
+* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL API ゲートウェイ URL]**:Medalia 配信チームから入手します。 通常はhttps://instance-tenant.apis.medallia.comの形式を取ります。
+* **[!UICONTROL インポート API 名]**:Medalia 配信チームから入手します。 この接続で使用する Medalia 読み込み API（Web フィードとも呼ばれます）の名前。 様々なセグメントを様々な読み込み API に対してアクティブ化し、様々な調査プログラムをトリガーにすることができます。
+
+![この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+## この宛先に対してセグメントをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+
+読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+
+### 属性と ID のマッピング {#map}
+
+使用例に応じて、次のターゲット ID 名前空間をマッピングする必要があります。
+* 電子メールベースの調査の場合、 **電子メール** は、 **ターゲットフィールド** > **ID 名前空間を選択** > **電子メール**
+* SMS ベースの調査の場合、 **phone** は、 **ターゲットフィールド** > **ID 名前空間を選択** > **phone**. 電話番号は E.164 形式である必要があります。この形式には、プラス記号 (+)、国際電話番号、市外局番、電話番号が含まれます
+
+追加のターゲットカスタム属性をマッピングして、パーソナライズされた調査を作成し、顧客に関する追加情報を調査レコードに追加することを強くお勧めします。
+
+* パーソナライズされた調査は通常、顧客の名前別に処理されます
+   * 顧客の名を **ターゲットフィールド** > **カスタム属性を選択** > **属性名** > **名**
+   * 顧客の姓を **ターゲットフィールド** > **カスタム属性を選択** > **属性名** > **姓**
+* 必要に応じて、他のターゲットカスタム属性のマッピングを追加します。
+
+![ID と属性のサンプルマッピングを示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+
+>[!IMPORTANT]
+> 
+> 正確な情報を Medalia 配信チームと共有します **属性名** を使用してマッピングするすべてのターゲットカスタム属性に対して **ターゲットフィールド** > **カスタム属性を選択** > **属性名**. 直接共有するマッピングページのスクリーンショットを撮ることができます。
+
+## 書き出したデータ {#exported-data}
+
+宛先に対してセグメントをアクティブ化したら、Medalia 配信チームに通知します。このチームは、Adobe Experience Platformから Medalia に書き出されたデータを検証できるようになります。 調査は、データの検証が成功した後に Medalia 内でのみアクティブ化できます。これより前、データは Medalia に書き出されますが、お客様にはトリガー調査は送信されません。
+
+書き出されたデータのサンプル JSON を以下に示します。これは、上記のスクリーンショットのマッピング例を使用しています ( **属性と ID のマッピング** セクション：
+
+```json
+[
+    {
+        "profile_raw_encoded": "eyJhdHRyaWJ1dGVzIjp7ImZpcnN",
+        "email": "johnsmith@example.com",
+        "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
+        "aep_segments_existing": [],
+        "aep_segments_removed": [],
+        "firstname":  “John” ,
+        "lastname":  “Smith”,
+        "contactId": "jsmith120002",
+    }
+]
+```
+
+## データの使用とガバナンス {#data-usage-governance}
+
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](/help/data-governance/home.md).
