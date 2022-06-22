@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1177'
 ht-degree: 32%
 
 ---
@@ -218,14 +218,6 @@ alloy("sendEvent", {
 >[!WARNING]
 >
 >`destinations` は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-**推論**:リアルタイムの機械学習のインサイト。 [リアルタイムの機械学習の詳細を説明します。](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-
 
 ## イベントのグローバルな変更 {#modifying-events-globally}
 
