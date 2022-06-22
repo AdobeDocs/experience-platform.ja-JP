@@ -1,7 +1,9 @@
 ---
 title: 派生属性
 description: 派生属性を使用すると、通常のケイデンスで属性を計算でき、必要に応じて、これらの派生属性をプロファイル属性としてリアルタイム顧客プロファイルに公開できます。 このドキュメントでは、クエリサービスを使用して、プロファイルデータで使用する派生属性を作成する方法の概要を説明します。
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 7%

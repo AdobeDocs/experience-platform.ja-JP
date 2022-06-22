@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 73%
@@ -47,10 +47,6 @@ ht-degree: 73%
 - サンプルクエリ {#sample-queries}
    - [エクスペリエンスイベントクエリの例](sample-queries/experience-event.md)
    - [Adobe Analytics クエリの例](sample-queries/adobe-analytics.md)
-- データガバナンス {#data-governance}
-   - [監査ログガイド](data-governance/audit-log-guide.md)
-   - [アドホックスキーマデータセット内の ID](data-governance/ad-hoc-schema-identities.md)
-   - [アドホックスキーマの属性ベースのアクセス制御のサポート](./data-governance/ad-hoc-schema-labels.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 73%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- データガバナンス {#data-governance}
+   - [監査ログガイド](data-governance/audit-log-guide.md)
+   - [アドホックスキーマデータセット内の ID](data-governance/ad-hoc-schema-identities.md)
+   - [アドホックスキーマの属性ベースのアクセス制御のサポート](./data-governance/ad-hoc-schema-labels.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
