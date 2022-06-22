@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: f6faaddb43c006948b16849456305c0a5468ecce
+source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 75%
+source-wordcount: '193'
+ht-degree: 73%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 75%
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)
    - [データアセット組織のガイダンス](./best-practices/organize-data-assets.md)
    - [ネストされたデータ構造の使用](best-practices/nested-data-structures.md)
+   - [ネストされたデータ構造の統合](best-practices/flatten-nested-data.md)
    - [匿名ブロック](best-practices/anonymous-block.md)
    - [増分読み込み](best-practices/incremental-load.md)
    - [データ重複排除](best-practices/deduplication.md)

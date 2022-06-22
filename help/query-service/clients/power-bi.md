@@ -5,9 +5,9 @@ title: Power BI をクエリサービスに接続します。
 topic-legacy: connect
 description: このドキュメントでは、Adobe Experience Platformクエリサービスを使用してPower BIを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1014'
 ht-degree: 3%
 
 ---
@@ -53,6 +53,10 @@ PostgreSQl データベースダイアログが表示され、サーバとデー
 の **[!DNL Server]** 「Power BI」フィールドに、「クエリサービス資格情報」セクションにあるホストの値を入力します。 本番用に、ポートを追加 `:80` をホスト文字列の末尾に追加します。 例：`made-up.platform-query.adobe.io:80`。
 
 この **[!DNL Database]** フィールドには、「すべて」またはデータセットテーブル名を指定できます。 例：`prod:all`。
+
+>[!IMPORTANT]
+>
+>サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../best-practices/flatten-nested-data.md) を参照してください。
 
 ![サーバーおよびPower BIベースの入力フィールドがハイライト表示されたデータダッシュボード。](../images/clients/power-bi/postgresql-database-dialog.png)
 

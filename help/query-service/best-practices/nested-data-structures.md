@@ -1,32 +1,34 @@
 ---
-title: Working with nested data structures in Query Service
+keywords: Experience Platform；クエリサービス；クエリサービス；ネストされたデータ構造；ネストされたデータ；
+title: クエリサービスでのネストされたデータ構造の使用
 description: このドキュメントでは、CTAS および INSERT INTO 文を使用してネストされたデータフィールドを処理および変換する作業例を示します。
-source-git-commit: 838ee939a8438c2f09ff64044c129e20c37ea01a
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
+source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 2%
 
 ---
 
 # クエリサービスでのネストされたデータ構造の使用
 
-Adobe Experience Platform Query Service supports the use of nested data fields. The complexity of enterprise data structures can make transforming or processing this data complicated. このドキュメントでは、ネストされたデータ構造を含む複雑なデータ型のデータセットを作成、処理、変換する方法の例を示します。
+Adobe Experience Platformクエリサービスでは、ネストされたデータフィールドの使用がサポートされています。 エンタープライズデータ構造の複雑さにより、このデータの変換や処理が複雑になる場合があります。 このドキュメントでは、ネストされたデータ構造を含む複雑なデータ型のデータセットを作成、処理、変換する方法の例を示します。
 
-クエリサービスは、PostgreSQL インターフェイスを提供し、Experience Platformが管理するすべてのデータセットに対して SQL クエリを実行します。 Platform では、構造体、配列、マップ、深くネストされた構造体、配列、マップなどのテーブル列で、プリミティブデータ型または複雑なデータ型の使用がサポートされています。 Datasets can also contain nested structures where the column data type can be as complex as an array of nested structures, or a map of maps wherein the value of a key-value pair can be a structure with multiple levels of nesting.
+クエリサービスは、PostgreSQL インターフェイスを提供し、Experience Platformが管理するすべてのデータセットに対して SQL クエリを実行します。 Platform では、構造体、配列、マップ、深くネストされた構造体、配列、マップなどのテーブル列で、プリミティブデータ型または複雑なデータ型の使用がサポートされています。 データセットには、列のデータ型がネストされた構造体の配列と同じくらい複雑な構造を含めることも、キーと値のペアの値が複数レベルのネストを持つ構造体になるマップのマップを含めることもできます。
 
 ## はじめに
 
-このチュートリアルでは、サードパーティの PSQL クライアントまたはクエリエディターツールを使用して、Experience Platformユーザーインターフェイス (UI) 内でクエリの書き込み、検証、実行をおこなう必要があります。 Full details on how to run queries through the UI can be found in the [Query Editor UI guide](../ui/user-guide.md). サードパーティのデスクトップクライアントがクエリサービスに接続できる詳細なリストについては、 [クライアント接続の概要](../clients/overview.md).
+このチュートリアルでは、サードパーティの PSQL クライアントまたはクエリエディターツールを使用して、Experience Platformユーザーインターフェイス (UI) 内でクエリの書き込み、検証、実行をおこなう必要があります。 UI を使用してクエリを実行する方法の詳細については、 [クエリエディター UI ガイド](../ui/user-guide.md). サードパーティのデスクトップクライアントがクエリサービスに接続できる詳細なリストについては、 [クライアント接続の概要](../clients/overview.md).
 
-You should also have a good understanding of the `INSERT INTO` and `CTAS` syntax. 使用に関する具体的な情報については、 [`INSERT INTO`](../sql/syntax.md#insert-into) および [`CTAS`](../sql/syntax.md#create-table-as-select) セクション [SQL 構文リファレンスドキュメント](../sql/syntax.md).
+また、 `INSERT INTO` および `CTAS` 構文と同じです。 使用に関する具体的な情報については、 [`INSERT INTO`](../sql/syntax.md#insert-into) および [`CTAS`](../sql/syntax.md#create-table-as-select) セクション [SQL 構文リファレンスドキュメント](../sql/syntax.md).
 
 ## データセットの作成
 
-クエリサービスは、「テーブルを選択として作成」(`CTAS`) 機能を使用して、 `SELECT` 文、またはこの場合と同様に、Adobe Experience Platformの既存の XDM スキーマへの参照を使用します。 Displayed below is the XDM schema for `Final_subscription` created for this example.
+クエリサービスは、「テーブルを選択として作成」(`CTAS`) 機能を使用して、 `SELECT` 文、またはこの場合と同様に、Adobe Experience Platformの既存の XDM スキーマへの参照を使用します。 以下に、の XDM スキーマを示します。 `Final_subscription` を作成しました。
 
 ![final_subscription スキーマの図。](../images/best-practices/final-subscription-schema.png)
 
-The following example demonstrates the SQL used to create the `final_subscription_test2` dataset. `final_subscription_test2` は `Final_subscription` スキーマ。 Data is extracted from the source using a `SELECT` clause to populate some rows.
+次の例は、 `final_subscription_test2` データセット。 `final_subscription_test2` は `Final_subscription` スキーマ。 データは、 `SELECT` 句を使用して、一部の行を設定します。
 
 ```sql
 CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
@@ -64,7 +66,7 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
 
 ## INSERT INTO を使用して、ネストされたデータフィールドを更新します
 
-After the `final_subscription_test2` dataset has been created, the `INSERT INTO` statement is used to append additional data to the table. When copying data, the data types in source and target must match. または、ソースデータタイプが `CAST` をターゲットデータ型に追加します。 次に、次の SQL を使用して、増分データをターゲットデータセットに追加します。
+次の期間の後 `final_subscription_test2` データセットが作成されている場合、 `INSERT INTO` ステートメントは、テーブルに追加のデータを追加するために使用されます。 データをコピーする場合、ソースとターゲットのデータタイプが一致する必要があります。 または、ソースデータタイプが `CAST` をターゲットデータ型に追加します。 次に、次の SQL を使用して、増分データをターゲットデータセットに追加します。
 
 ```sql
 INSERT INTO final_subscription_test
@@ -99,9 +101,9 @@ INSERT INTO final_subscription_test
 
 ## ネストされたデータセットからデータを処理する
 
-To find out the list of a user&#39;s active subscriptions from a dataset, you must write a query that separates the elements of an array into multiple rows and columns. これをおこなうには、まず、サブスクリプション情報がデータセット内にネストされた配列内に保持されるので、データモデルの形状を理解する必要があります。
+ユーザーのアクティブなサブスクリプションのリストをデータセットから調べるには、配列の要素を複数の行と列に分割するクエリを記述する必要があります。 これをおこなうには、まず、サブスクリプション情報がデータセット内にネストされた配列内に保持されるので、データモデルの形状を理解する必要があります。
 
-PSQL `\d` コマンドを使用して、必要なサブスクリプションデータにレベルごとに移動します。 次の表に、 `final_subscription_test2` データセット。 Complex data types can be recognized at a glance because they are not typical type values such as text, boolean, timestamp, etc.
+PSQL `\d` コマンドを使用して、必要なサブスクリプションデータにレベルごとに移動します。 次の表に、 `final_subscription_test2` データセット。 複雑なデータ型は、テキスト、ブール値、タイムスタンプなどの一般的な型の値ではないので、一目で認識できます。
 
 | 列 | タイプ |
 |--------|-------|
@@ -114,7 +116,7 @@ PSQL `\d` コマンドを使用して、必要なサブスクリプションデ�
 | `userid` | テキスト |
 | `subscription` | _lumaservices3_subscription_e[] |
 
-`subscription` is an array of struct elements. フィールドは、 `\d _lumaservices3_subscription_e[]` コマンドを使用します。
+`subscription` は構造体要素の配列です。 フィールドは、 `\d _lumaservices3_subscription_e[]` コマンドを使用します。
 
 | 列 | タイプ |
 |---------|-------|
@@ -133,7 +135,7 @@ SELECT userid, subs AS active_subscription FROM (
 WHERE subs.last_status='Active';
 ```
 
-このシンプル化されたサンプルソリューションでは、1 人のアクティブなユーザーサブスクリプションのみを使用できます。 現実的には、1 人のユーザーに対して多数のアクティブな購読が存在する可能性があります。 The following example modifies the previous query to allow for multiple simultaneous active subscriptions.
+このシンプル化されたサンプルソリューションでは、1 人のアクティブなユーザーサブスクリプションのみを使用できます。 現実的には、1 人のユーザーに対して多数のアクティブな購読が存在する可能性があります。 次の使用例は、複数の同時アクティブなサブスクリプションを許可するように前のクエリを変更します。
 
 ```sql
 SELECT userid, collect_list(subs) AS active_subscriptions FROM (
@@ -150,4 +152,4 @@ GROUP BY userid ;
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformクエリサービスで複雑なデータ型を使用するデータセットを処理または変換する方法について説明します。 Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake.
+このドキュメントでは、Adobe Experience Platformクエリサービスで複雑なデータ型を使用するデータセットを処理または変換する方法について説明します。 詳しくは、 [クエリの実行ガイダンス](./writing-queries.md) を参照してください。

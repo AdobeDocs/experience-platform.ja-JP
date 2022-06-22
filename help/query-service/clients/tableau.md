@@ -5,10 +5,10 @@ title: Tableau のクエリーサービスへの接続
 topic-legacy: connect
 description: このドキュメントでは、Tableau とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '278'
+ht-degree: 2%
 
 ---
 
@@ -32,9 +32,13 @@ ht-degree: 3%
 >
 >詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
-すべての資格情報を入力したら、「 」を選択します。 **[!DNL Sign In]** をクリックして続行します。
-
 ![](../images/clients/tableau/sign-in.png)
+
+>[!IMPORTANT]
+>
+>サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../best-practices/flatten-nested-data.md) を参照してください。
+
+すべての資格情報を入力したら、「 」を選択します。 **[!DNL Sign In]** をクリックして続行します。
 
 これで、Adobe Experience Platformと接続し、テーブルのリストが横に表示されます。
 
