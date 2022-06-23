@@ -3,9 +3,9 @@ title: at.js とExperience PlatformWeb SDK の比較
 description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
+source-git-commit: 7bdf4c01ad3b361b3bc53574d4da1096757c815c
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2286'
 ht-degree: 7%
 
 ---
@@ -462,11 +462,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+詳しくは、 `applyOffers` 命令 [専用ドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Web SDK の使用
 
-この機能は、現在 Web SDK ではサポートされていません。
+Target アクティビティを適用するには、 `applyPropositions` コマンドを使用します。
+
+例：
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+詳しくは、 `applyPropositions` 命令 [専用ドキュメント](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## イベントの追跡方法
 
