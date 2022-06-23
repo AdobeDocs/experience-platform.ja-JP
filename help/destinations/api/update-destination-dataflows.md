@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、宛先データフローを更新する手順を説明します。 フローサービス API を使用して、データフローを有効または無効にし、基本情報を更新する方法、またはセグメントと属性を追加および削除する方法について説明します。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2408'
 ht-degree: 40%
 
 ---
@@ -856,8 +856,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)および[リクエストヘッダーエラー](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)を参照してください。
+このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、を使用したセグメントやプロファイル属性の追加または削除など、宛先データフローの様々なコンポーネントの更新方法を学びました [!DNL Flow Service] API 宛先について詳しくは、 [宛先の概要](../home.md).

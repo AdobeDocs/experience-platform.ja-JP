@@ -7,10 +7,10 @@ landing-page-description: よくある質問への回答、および Experience 
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 68%
+source-wordcount: '1851'
+ht-degree: 64%
 
 ---
 
@@ -34,11 +34,11 @@ API リクエストの形式について詳しくは、『Platform API 入門ガ
 
 ## IMS 組織とは何ですか。  {#what-is-my-ims-organization}
 
-IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。IMS 組織が次の権限を持つ場合 [!DNL Experience Platform]を使用すると、開発者にアクセスを割り当てることができます。 IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。この ID は、 [Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui):内 **統合** タブで、 **概要** のセクションを使用して、 **クライアント資格情報**. への認証方法の詳しい手順については、 [!DNL Platform]を参照し、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis).
+IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。IMS 組織が次の権限を持つ場合 [!DNL Experience Platform]を使用すると、開発者にアクセスを割り当てることができます。 IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。この ID は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui):内 **統合** タブで、 **概要** のセクションを使用して、 **クライアント資格情報**. への認証方法の詳しい手順については、 [!DNL Platform]を参照し、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja).
 
 ## API キーはどこで入手できますか？  {#where-can-i-find-my-api-key}
 
-API キーは、すべての API リクエストのヘッダーとして必要です。これは、 [Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。への認証方法の詳しい手順 [!DNL Platform]を参照し、 [認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en).
+API キーは、すべての API リクエストのヘッダーとして必要です。これは、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。への認証方法の詳しい手順 [!DNL Platform]を参照し、 [認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## アクセストークンはどのように入手できますか？  {#how-do-i-get-an-access-token}
 
@@ -62,9 +62,9 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 での多くのPATCH操作 [!DNL Platform] 使用する API [JSON ポインター](https://tools.ietf.org/html/rfc6901) 更新する JSON プロパティを示す文字列。 これらは通常、[JSON パッチ](https://tools.ietf.org/html/rfc6902) 形式を使用してリクエストペイロードに含まれます。これらのテクノロジーに必要な構文について詳しくは、[API の基本原則ガイド](api-fundamentals.md)を参照してください。
 
-## Postman を使用して [!DNL Platform] API は？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Postmanを使用して [!DNL Platform] API は？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman は](https://www.postman.com/)、RESTful API への呼び出しを視覚化する便利なツールです。この [Platform API 入門ガイド](api-guide.md) には、Postman コレクションを読み込むためのビデオと手順が含まれています。 また、各サービスの Postman コレクションのリストも提供されます。
+[Postman は](https://www.postman.com/)、RESTful API への呼び出しを視覚化する便利なツールです。この [Platform API 入門ガイド](api-guide.md) には、Postmanコレクションを読み込むためのビデオと手順が含まれています。 また、各サービスのPostmanコレクションのリストも表示されます。
 
 ## の必要システム構成 [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -109,7 +109,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、API リクエストに `Authorization` ヘッダーがない場合に表示されます。再試行する前に、Authorization ヘッダーが有効なアクセストークンに含まれていることを確認してください。
 
-### OAuth token is not valid
+### OAuth token is not valid {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、`Authorization` ヘッダーに指定されたアクセストークンが無効な場合に表示されます。トークンが正しく入力されていることを確認するか、Adobe I/O コンソールで[新しいトークンを生成](https://www.adobe.com/go/platform-api-authentication-en)します。
 
-### API key is required
+### API key is required {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、API リクエストに API キーヘッダー（`x-api-key`）がない場合に表示されます。再試行する前に、ヘッダーが有効な API キーに含まれていることを確認してください。
 
-### API key is invalid
+### API key is invalid {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、指定された API キーヘッダー（`x-api-key`）の値が無効な場合に表示されます。再試行する前に、キーが正しく入力されていることを確認してください。API キーがわからない場合は、[Adobe I/O コンソール](https://console.adobe.io)で確認できます。「**統合**」タブで 、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下に API キーが表示されます。
 
-
-### Missing header
+### Missing header {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、IMS 組織ヘッダー（`x-gw-ims-org-id`）が API リクエストに存在しない場合に表示されます。再試行する前に、IMS 組織の ID を含むヘッダーが含まれていることを確認してください。
 
-### Profile is not valid
+### Profile is not valid {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、ユーザーまたは Adobe I/O 統合（[](#how-do-i-get-an-access-token) ヘッダーの`Authorization`アクセストークン[!DNL Experience Platform]によって識別）が、`x-gw-ims-org-id` ヘッダーで提供された IMS 組織に対して API を呼び出す権利がない場合に表示されます。再試行する前に、ヘッダーに IMS 組織の正しい ID が指定されていることを確認してください。組織 ID が不明な場合は、[Adobe I/O コンソール](https://console.adobe.io)で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下に ID が表示されます。
 
-### Valid content-type not specified
+### ETAG 更新エラー {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+フロー、接続、ソースコネクタ、またはターゲット接続など、別の API 呼び出し元がソースまたは宛先エンティティに対して変更を加えた場合、etag エラーが発生することがあります。 バージョンの不一致により、行おうとしている変更はエンティティの最新バージョンには適用されません。
+
+これを解決するには、エンティティを再度取得し、変更がエンティティの新しいバージョンと互換性があることを確認して、新しい etag を `If-Match` ヘッダーを呼び出し、最後に API 呼び出しをおこないます。
+
+### Valid content-type not specified {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、POST、PUT、PATCH リクエストの `Content-Type` ヘッダーが無効か、見つからない場合に表示されます。ヘッダーがリクエストに含まれ、その値が `application/json` であることを確認します。
 
-### ユーザー領域がありません
+### ユーザー領域がありません {#user-region-is-missing}
 
 ```json
 {

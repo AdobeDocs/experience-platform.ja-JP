@@ -6,10 +6,10 @@ description: Flow Service API を使用して、Experience Platform でクラウ
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 67f1ba46a9d570d3d494b126a83e6ca3ace1c727
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '3334'
-ht-degree: 92%
+source-wordcount: '3420'
+ht-degree: 90%
 
 ---
 
@@ -1026,7 +1026,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
-| `{ETAG}` | 前の手順で取得した etag を使用します。 |
+| `{ETAG}` | を取得 `{ETAG}` 前の手順の応答から、 [データフローの作成](#create-dataflow). 前の手順の応答形式は、エスケープ引用符で囲まれています。 リクエストのヘッダーでは、エスケープされていない値を使用する必要があります。 次の例を参照してください。 <br> <ul><li>応答の例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br>ETag の値は、データフローが正常に更新されるたびに更新されます。 |
 | `{SEGMENT_ID}` | この宛先に書き出すセグメント ID を指定します。有効化したいセグメントのセグメント ID の取得方法については、Adobe Experience Platform API リファレンスの[セグメント定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、`add` 操作を使用します。 |
@@ -1236,7 +1236,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-## 次の手順
+## API エラー処理 {#api-error-handling}
+
+このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
+
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、目的のクラウドストレージまたはメールマーケティングのバッチ宛先の 1 つに Platform を正常に接続し、データファイルをエクスポートする各宛先へのデータフローを設定しました。これで、メールキャンペーン、ターゲット広告、その他の多くのユースケースで、発信データを宛先で使用できるようになりました。次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
 

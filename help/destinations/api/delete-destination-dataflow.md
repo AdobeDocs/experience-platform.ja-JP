@@ -5,10 +5,10 @@ title: フローサービス API を使用した宛先のデータフローの�
 type: Tutorial
 description: フローサービス API を使用して、バッチ宛先およびストリーミング宛先にデータフローを削除する方法について説明します。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 56%
+source-wordcount: '572'
+ht-degree: 53%
 
 ---
 
@@ -84,7 +84,7 @@ curl -X DELETE \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
 
 ## 次の手順 {#next-steps}
 

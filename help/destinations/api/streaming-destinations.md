@@ -6,10 +6,10 @@ description: このドキュメントでは、Adobe Experience Platform API を�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
-ht-degree: 53%
+source-wordcount: '2241'
+ht-degree: 55%
 
 ---
 
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`：前述の手順で取得したデータフローを使用します。
-* `{ETAG}`：前述の手順で取得した ETag を使用します。
-* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメント ID の取得方法については、を参照してください。 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;を選択します。 **[!UICONTROL セグメント化サービス API]** 左側のナビゲーションメニューで、 `GET /segment/definitions` 操作 **[!UICONTROL セグメント定義]**.
-* `{PROFILE_ATTRIBUTE}`:例： `personalEmail.address` または `person.lastName`
+| プロパティ | 説明 |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
+| `{ETAG}` | を取得 `{ETAG}` 前の手順の応答から、 [データフローの作成](#create-dataflow). 前の手順の応答形式は、エスケープ引用符で囲まれています。 リクエストのヘッダーでは、エスケープされていない値を使用する必要があります。 次の例を参照してください。 <br> <ul><li>応答の例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br>ETag の値は、データフローが正常に更新されるたびに更新されます。 |
+| `{SEGMENT_ID}` | この宛先に書き出すセグメント ID を指定します。有効化したいセグメントのセグメント ID の取得方法については、Adobe Experience Platform API リファレンスの[セグメント定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
+| `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、`add` 操作を使用します。 |
+| `path` | 更新するフローの部分を定義します。セグメントをデータフローに追加する場合は、例で指定したパスを使用します。 |
+| `value` | パラメーターの更新に使用する新しい値。 |
+| `id` | 宛先データフローに追加するセグメントの ID を指定します。 |
+| `name` | *オプション*。宛先データフローに追加するセグメントの名前を指定します。このフィールドは必須ではなく、名前を指定しなくてもセグメントを宛先データフローに正常に追加できます。 |
 
 **応答** 
 
@@ -597,7 +604,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## Postmanコレクションを使用したストリーミング宛先への接続  {#collections}
+## 使用 [!DNL Postman] ストリーミング宛先に接続するためのコレクション  {#collections}
 
 このチュートリアルで説明するストリーミング先により効率的に接続するには、 [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 各コレクションには、 [!DNL AWS Kinesis]、および [!DNL Azure Event Hub]、それぞれ。
 
-### Postmanコレクションの使用方法
+### の使用方法 [!DNL Postman] コレクション {#how-to-use-postman-collections}
 
 接続されたを使用して宛先に正常に接続するには [!DNL Postman] コレクションを使用するには、次の手順に従います。
 
 * ダウンロードとインストール [!DNL Postman];
 * [ダウンロード](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 添付されたコレクションを解凍します。
-* 対応するフォルダーからPostmanにコレクションを読み込む。
+* 対応するフォルダーからにコレクションを読み込む [!DNL Postman];
 * この記事の手順に従って、環境変数を入力します。
-* を実行します。 [!DNL API] この記事の手順に基づいて、Postmanからのリクエストを送信します。
+* を実行します。 [!DNL API] からのリクエスト [!DNL Postman]（この記事の手順に基づく）
 
-## 次の手順
+## API エラー処理 {#api-error-handling}
+
+このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
+
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、Platform を目的のストリーミング宛先の 1 つに接続し、それぞれの宛先へのデータフローを設定しました。 これで、送信データを、顧客分析や他の実行が必要なデータ操作の宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
 
