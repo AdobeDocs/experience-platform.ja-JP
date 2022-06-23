@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート（2022 年 6 月）
 description: Adobe Experience Platformの 2022 年 6 月のリリースノート。
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 46%
+source-wordcount: '860'
+ht-degree: 44%
 
 ---
 
@@ -58,6 +58,7 @@ Data Science Workspace の一般情報について詳しくは、 [概要ドキ�
 | 機能 | 説明 |
 | ----------- | ----------- |
 | （ベータ版）のDestination SDKサポート [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) ファイルベースの宛先と [設定可能なファイル名](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Destination SDKを使用して、Google Cloud Storage の宛先を作成し、ファイル名マクロを使用して、書き出したファイルのカスタムファイル名を定義できるようになりました。 <br><br>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。 |
+| データフローのセグメント列をバッチ保存先に対して実行 | データフローをバッチ宛先に対して実行する場合、UI に各データフローの実行に関連付けられたセグメントの名前が表示されるようになりました。 詳細を表示 [データフローは、バッチ宛先に対して実行されます](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
