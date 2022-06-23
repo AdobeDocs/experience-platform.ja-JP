@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 91%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 91%
       * [Google Ads 接続](./catalog/advertising/google-ads-destination.md)
       * [Google Ads 拡張機能](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager の接続](./catalog/advertising/google-ad-manager.md)
-      * [Google Ad Manager 360 接続](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [（ベータ版）Google Ad Manager 360 接続](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 接続](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
