@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート（2022 年 6 月）
 description: Adobe Experience Platformの 2022 年 6 月のリリースノート。
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 51%
+source-wordcount: '802'
+ht-degree: 47%
 
 ---
 
@@ -52,6 +52,15 @@ Data Science Workspace の一般情報について詳しくは、 [概要ドキ�
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| [（ベータ版）Google Ad Manager 360 接続](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | この [!DNL Google Ad Manager 360] 接続では、バッチアップロードが有効になります [!DNL publisher provided identifiers] (PPID) を次に移動： [!DNL Google Ad Manager 360]，経由 [!DNL Google Cloud Storage] <br><br>この宛先は現在ベータ版で、限られた数のお客様のみが利用できます。 へのアクセスをリクエストするには、以下を実行します。 [!DNL Google Ad Manager 360] 接続する場合は、Adobe担当者に連絡し、 [!DNL IMS Organization ID]. |
+| （ベータ版）のDestination SDKサポート [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) ファイルベースの宛先と [設定可能なファイル名](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Destination SDKを使用して、Google Cloud Storage の宛先を作成し、ファイル名マクロを使用して、書き出したファイルのカスタムファイル名を定義できるようになりました。 <br><br>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **新しい宛先**
 
