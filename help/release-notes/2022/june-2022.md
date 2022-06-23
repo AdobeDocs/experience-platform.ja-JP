@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート（2022 年 6 月）
 description: Adobe Experience Platformの 2022 年 6 月のリリースノート。
-source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
+source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 50%
+source-wordcount: '693'
+ht-degree: 51%
 
 ---
 
@@ -14,10 +14,25 @@ ht-degree: 50%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| の機能強化 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendationsは今、より賢く、より速くなっています。 新しい検証チェックを使用すると、最も一般的なマッピングエラーが大幅に減り、値への時間が短縮されます。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+[!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Data Science Workspace] {#dsw}
 
