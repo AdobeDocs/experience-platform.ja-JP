@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
+source-git-commit: 8c2ce6936eea5c90319a03e35f697ebcdb89e1e5
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 93%
+source-wordcount: '773'
+ht-degree: 91%
 
 ---
 
@@ -33,6 +33,7 @@ ht-degree: 93%
       * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md)
       * [プロファイルリクエスト宛先に対するオーディエンスデータの有効化](./ui/activate-profile-request-destinations.md)
       * [同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](./ui/configure-personalization-destinations.md)
+      * [（ベータ版）Experience PlatformUI を使用して、オンデマンドでバッチ保存先にファイルを書き出す](./ui/export-file-now.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
