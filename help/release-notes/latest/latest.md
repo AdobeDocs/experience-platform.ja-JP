@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート（2022 年 6 月）
 description: Adobe Experience Platformの 2022 年 6 月のリリースノート。
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 47%
+source-wordcount: '824'
+ht-degree: 46%
 
 ---
 
@@ -67,6 +67,7 @@ Data Science Workspace の一般情報について詳しくは、 [概要ドキ�
 | ----------- | ----------- |
 | [（ベータ版）Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | この [!DNL Google Ad Manager 360] 接続では、バッチアップロードが有効になります [!DNL publisher provided identifiers] (PPID) を次に移動： [!DNL Google Ad Manager 360]，経由 [!DNL Google Cloud Storage] <br><br>この宛先は現在ベータ版で、限られた数のお客様のみが利用できます。 へのアクセスをリクエストするには、以下を実行します。 [!DNL Google Ad Manager 360] 接続する場合は、Adobe担当者に連絡し、 [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。 |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | ザAdobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) の宛先を使用すると、認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有し、DSPとキャンペーンのアクティベーション用に共有できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
