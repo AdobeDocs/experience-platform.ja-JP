@@ -1,10 +1,11 @@
 ---
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: （ベータ版）Destination SDK を使用したファイルベースの宛先の設定
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
-source-wordcount: '477'
-ht-degree: 100%
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 99%
 
 ---
 
@@ -259,8 +260,9 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * 宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択した場合、ファイルベースの宛先で Destination SDK によってサポートされる認証タイプについては、次の節を参照してください。
 
    * [Amazon S3 認証](authentication-configuration.md#s3)
-   * [Azure 接続文字列](authentication-configuration.md#blob)
-   * [Azure サービスプリンシパル](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Azure Data Lake Storage](authentication-configuration.md#adls)
+   * [Google Cloud Storage](authentication-configuration.md#gcs)
    * [SSH キーを使用した SFTP 認証](authentication-configuration.md#sftp-ssh)
    * [パスワードを使用した SFTP 認証](authentication-configuration.md#sftp-password)
 

@@ -2,7 +2,7 @@
 description: このページでは、API エンドポイント /authoring/destinations を使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 97%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しいストリーミング宛先設定を作成します。以下のペイロードには、`/authoring/destinations` エンドポイントで使用可能なストリーミング宛先のすべてのパラメーターが含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 次のリクエストは、ペイロードで指定されたパラメーターによって設定された、新しい [!DNL Amazon S3] ファイルベースの宛先を作成します。以下のペイロードには、`/authoring/destinations` エンドポイントで利用可能なファイルベースの宛先のパラメーターをすべて含みます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",

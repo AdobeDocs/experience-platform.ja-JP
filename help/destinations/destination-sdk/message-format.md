@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 title: メッセージの形式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
+source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
 workflow-type: tm+mt
 source-wordcount: '2266'
 ht-degree: 3%
@@ -61,7 +61,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 プラットフォームが次のようなメッセージ形式を受信できるとします。
 
-```curl
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -173,7 +173,7 @@ Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似�
 >Adobe Experience Platformで使用可能なすべてのプロファイル属性の一覧については、 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 
@@ -252,7 +252,7 @@ Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似�
 この [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。
 の `status` フィールドには、 [セグメントメンバーシップの詳細スキーマフィールドグループ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 
@@ -366,7 +366,7 @@ Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似�
 
 Experience Platformの ID について詳しくは、 [ID 名前空間の概要](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja).
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 
@@ -475,13 +475,12 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
 }
 ```
 
-
 ### セグメントと ID を送信するテンプレートの作成 {#segments-and-identities}
 
 この節では、AdobeXDM スキーマとパートナー宛先スキーマの間でよく使用される変換の例を示します。
 次の例では、セグメントのメンバーシップと ID の形式を変換し、宛先に出力する方法を示します。
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 
@@ -649,7 +648,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
 
 もう 1 つの一般的な使用例は、セグメントメンバーシップ ID（例： ）を含むデータを書き出す場合です。電子メールアドレス、電話番号、広告 ID) およびプロファイル属性。 この方法でデータをエクスポートするには、以下の例を参照してください。
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 
@@ -853,7 +852,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
 
 次を使用する場合、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) および設定 `includeSegmentId` を true に設定すると、宛先に書き出される HTTP メッセージ内のプロファイルは、セグメント ID でグループ化されます。 以下で、テンプレートのセグメント ID へのアクセス方法を参照してください。
 
-**入力**
+**必要情報**
 
 以下の 4 つのプロファイルについて考えてみましょう。
 * 最初の 2 つは、セグメント ID を持つセグメントの一部です `788d8874-8007-4253-92b7-ee6b6c20c6f3`
@@ -1030,7 +1029,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 以下は、 [設定可能な集計](./destination-configuration.md#configurable-aggregation) の宛先設定は、書き出されたプロファイルを id 名前空間別に集計するように、フォーム内で集計するように設定されます。 `"namespaces": ["email", "phone"]` および `"namespaces": ["GAID", "IDFA"]`. 詳しくは、 `groups` パラメーター [宛先設定 API リファレンス](./destination-configuration-api.md) を参照してください。
 
-**入力**
+**必要情報**
 
 プロファイル 1:
 

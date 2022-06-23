@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK でサポートされている認証設定を使用してユーザーを認証し、宛先エンドポイントに対してデータを有効化します。
 title: 認証設定
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
-source-wordcount: '564'
-ht-degree: 100%
+source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 97%
 
 ---
 
@@ -17,15 +17,16 @@ ht-degree: 100%
 
 Adobe Experience Platform Destination SDK は、次の複数の認証タイプをサポートしています。
 
-* ベアラー認証
-* （ベータ版）Amazon S3 認証
-* （ベータ版）Azure 接続文字列
-* （ベータ版）Azure サービスプリンシパル
-* （ベータ版）SSH キーを使用した SFTP
-* （ベータ版）パスワードを使用した SFTP
-* 認証コードを使用した OAuth 2
-* パスワード付与を使用した OAuth 2
-* クライアント資格情報の付与を使用した OAuth 2
+* [ベアラー認証](#bearer)
+* [（ベータ版）Amazon S3 認証](#s3)
+* [（ベータ版）Azure Blob ストレージ](#blob)
+* [（ベータ版）Azure Data Lake Storage](#adls)
+* [（ベータ版）Google Cloud Storage](#gcs)
+* [（ベータ版）SSH キーを使用した SFTP](#sftp-ssh)
+* [（ベータ版）パスワードを使用した SFTP](#sftp-password)
+* [認証コードを使用した OAuth 2](#oauth2)
+* [パスワード付与を使用した OAuth 2](#oauth2)
+* [クライアント資格情報の付与を使用した OAuth 2](#oauth2)
 
 宛先の認証情報は、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを介して設定できます。
 
@@ -41,11 +42,11 @@ Experience Platform では、ストリーミング宛先に対してベアラー
 宛先にベアラータイプの認証を設定するには、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"BEARER"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BEARER"
+   }
+]
 ```
 
 ## （ベータ版）[!DNL Amazon S3] 認証 {#s3}
@@ -59,11 +60,11 @@ Experience Platform では、[!DNL Amazon S3] 認証がファイルベースの�
 宛先に Amazon S3 認証を設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"S3"
+   }
+]
 ```
 
 ## （ベータ版）[!DNL Azure Blob Storage] {#blob}
@@ -77,11 +78,11 @@ Experience Platform では、[!DNL Azure Blob Storage] 認証がファイルベ�
 [!DNL Azure Blob] 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_CONNECTION_STRING"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_CONNECTION_STRING"
+   }
+]
 ```
 
 ## （ベータ版）[!DNL Azure Data Lake Storage] {#adls}
@@ -95,12 +96,29 @@ Experience Platform では、[!DNL Azure Data Lake Storage] 認証がファイ�
 [!DNL Azure Data Lake Storage]（ADLS）認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_SERVICE_PRINCIPAL"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_SERVICE_PRINCIPAL"
+   }
+]
 ```
+
+## （ベータ版）[!DNL Google Cloud Storage] {#gcs}
+
+Experience Platform では、[!DNL Google Cloud Storage] 認証がファイルベースの宛先に対してサポートされています。
+
+>[!IMPORTANT]
+>
+>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"GOOGLE_CLOUD_STORAGE"
+   }
+]
+```
+
 
 ## （ベータ版）[!DNL SSH] キーを使用した [!DNL SFTP] 認証 {#sftp-ssh}
 
@@ -113,11 +131,11 @@ Experience Platform では、[!DNL SSH] キーを使用した [!DNL SFTP] 認証
 SSH キーを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_SSH_KEY"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_SSH_KEY"
+   }
+]
 ```
 
 ## （ベータ版）パスワードを使用した [!DNL SFTP] 認証 {#sftp-password}
@@ -131,11 +149,11 @@ Experience Platform では、パスワードを使用した [!DNL SFTP] 認証�
 パスワードを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_PASSWORD"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_PASSWORD"
+   }
+]
 ```
 
 ## [!DNL OAuth 2] 認証 {#oauth2}
