@@ -6,9 +6,9 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 2%
 
 ---
@@ -141,6 +141,7 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 個々のデータフローの実行ごとに、次の詳細が表示されます。
 
 - **[!UICONTROL データフローの実行開始]**:データフローの実行が開始された時刻。
+- **[!UICONTROL セグメント]**:各データフローの実行に関連付けられたセグメントの名前。
 - **[!UICONTROL 処理時間]**:データフローの実行が処理されるまでに要した時間。
 - **[!UICONTROL 受信したプロファイル]**:データフローで受信したプロファイルの合計数。 この値は 60 分ごとに更新されます。
 - **[!UICONTROL アクティブ化された ID]**:データフローの実行の一環として選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数。 この指標には、書き出されたセグメントで作成、更新、削除された ID が含まれます。
