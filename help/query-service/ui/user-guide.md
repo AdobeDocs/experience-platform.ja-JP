@@ -5,9 +5,9 @@ title: クエリエディター UI ガイド
 topic-legacy: query editor
 description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールで、Experience Platformのユーザーインターフェイス内で顧客体験データのクエリの書き込み、検証、実行をおこなうことができます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1625'
 ht-degree: 29%
 
 ---
@@ -135,6 +135,10 @@ ht-degree: 29%
 ### クエリの保存 {#saving-queries}
 
 [!DNL Query Editor] には、クエリを保存し、後で操作できる保存関数が用意されています。 クエリを保存するには、「 **[!UICONTROL 保存]** ～の右上隅に [!DNL Query Editor]. クエリを保存する前に、**[!UICONTROL クエリの詳細]**&#x200B;パネルを使用してクエリに名前を付ける必要があります。
+
+>[!NOTE]
+>
+>クエリエディターを使用してで名前付けおよび保存したクエリは、クエリダッシュボード内でテンプレートとして使用できます [!UICONTROL 参照] タブをクリックします。 詳しくは、 [テンプレートドキュメント](./query-templates.md) を参照してください。
 
 ### 以前のクエリを検索する方法 {#previous-queries}
 

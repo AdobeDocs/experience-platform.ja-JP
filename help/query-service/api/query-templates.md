@@ -3,11 +3,11 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: クエリテンプレート API エンドポイント
 topic-legacy: query templates
-description: 以下のドキュメントでは、クエリサービス API のクエリテンプレートを使用して実行できる様々な API 呼び出しについて説明します。
+description: このガイドでは、クエリサービス API を使用して実行できる様々なクエリテンプレート API 呼び出しの詳細を説明します。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 89%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 89%
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーを理解できたので、 [!DNL Query Service] API 以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+
+詳しくは、 [UI クエリテンプレートドキュメント](../ui/query-templates.md) テンプレート UI を使用したExperience Platform作成の詳細。
 
 ### クエリテンプレートのリストの取得
 
