@@ -1,10 +1,11 @@
 ---
 title: CSV テンプレートからスキーマ変換 API エンドポイント
 description: スキーマレジストリ API の/rpc/csv2schema エンドポイントを使用すると、CSV テンプレートを使用して Experience Data Model(XDM) スキーマを自動的に作成できます。
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 11%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 11%
 
 ## はじめに
 
-この `/rpc/csv2schema` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+この `/rpc/csv2schema` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のAdobe Experience Platform API を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
 
 この `/rpc/csv2schema` endpoint は、 [!DNL Schema Registry]. の他のエンドポイントとは異なり、 [!DNL Schema Registry] API、RPC エンドポイントは、 `Accept` または `Content-Type`、およびを使用しない `CONTAINER_ID`. 代わりに、 `/rpc` 名前空間と呼ばれます。
 
