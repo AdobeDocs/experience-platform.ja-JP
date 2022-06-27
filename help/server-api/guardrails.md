@@ -1,16 +1,16 @@
 ---
-title: パフォーマンスガードレール
-description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します
+title: Edge Network Server API のパフォーマンスガードレール
+description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します。
 keywords: データ収集；コレクション；エッジネットワーク；api;sla;slt；サービスレベル
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
 
-# パフォーマンスガードレール
+# Edge Network Server API のパフォーマンスガードレール
 
 ## 概要 {#overview}
 

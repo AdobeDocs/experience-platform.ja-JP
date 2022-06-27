@@ -1,12 +1,10 @@
 ---
 title: Adobe Analyticsの操作
-description: Edge Network Server API を使用してAdobe Analyticsとやり取りする方法を説明します
-seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
-keywords: データ収集；出口；分析；Adobe Experience Platform Edge Network api;analytics
+description: Edge Network Server API を使用してAdobe Analyticsとやり取りする方法について説明します。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---

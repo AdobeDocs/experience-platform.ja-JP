@@ -1,14 +1,13 @@
 ---
 title: Adobe Targetを使用したパーソナライゼーション
-description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを配信およびレンダリングする方法を説明します
-keywords: パーソナライゼーション；server api;Adobe Experience Platform Edge Network;パーソナライゼーションの取得；target;adobe target
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '702'
 ht-degree: 3%
 
 ---
-
 
 # Adobe Targetを使用したパーソナライゼーション
 

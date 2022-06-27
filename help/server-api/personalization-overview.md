@@ -1,15 +1,13 @@
 ---
 title: パーソナライゼーションの概要
-description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法を説明します
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: パーソナライゼーション；server api;Adobe Experience Platform Edge Network;パーソナライゼーションを取得
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法について説明します。
+exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '741'
 ht-degree: 9%
 
 ---
-
 
 # パーソナライゼーションの概要
 

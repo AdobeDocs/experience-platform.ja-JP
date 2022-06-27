@@ -1,24 +1,22 @@
 ---
-title: データの収集
-description: Adobe Experience Platform Edge Network Server API が収集したデータを構造化する方法を説明します
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: データ収集；コレクション；Adobe Experience Platform Edge Network;API；構造
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+title: データ収集
+description: Adobe Experience Platform Edge Network Server API が収集したデータを構造化する方法について説明します。
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '131'
 ht-degree: 8%
 
 ---
 
 
-# データの収集
+# データ収集
 
 この [!DNL Server API] は、次の 2 種類のデータ収集エンドポイントを提供します。
 
 * [インタラクティブデータ収集エンドポイント](interactive-data-collection.md)：クライアントがサーバーから応答が返されることを想定する場合に使用されます。 また、これらのエンドポイントは、データ収集を実行中に、他の Edge ネットワークサービスからコンテンツを返すこともできます。
 * [非インタラクティブイベントデータ収集](non-interactive-data-collection.md)：サーバーからの応答が期待されない場合に使用します。 これらのエンドポイントは、データ収集にのみ使用されます。
 
-## `Event` オブジェクト {#event-object}
+## `Event` object {#event-object}
 
 で収集されたデータ [!DNL Server API] が `Event` オブジェクト。 このオブジェクトの構造を以下に示します。
 
@@ -59,5 +57,5 @@ ht-degree: 8%
 | 属性 | タイプ | 説明 |
 | --- | --- | --- |
 | `xdm` | オブジェクト | *必須*。データセットスキーマに対応する XDM 形式のデータを含む JSON オブジェクト。 |
-| `data` | オブジェクト | *オプション*. フリーフォームデータを含む JSON オブジェクト。Edge ネットワークによって XDM にマッピングできます。 |
+| `data` | オブジェクト | *オプション*。フリーフォームデータを含む JSON オブジェクト。Edge ネットワークによって XDM にマッピングできます。 |
 

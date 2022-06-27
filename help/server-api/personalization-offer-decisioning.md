@@ -1,14 +1,13 @@
 ---
 title: offer decisioning
-description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します
-keywords: パーソナライゼーション；server api;Adobe Experience Platform Edge Network;パーソナライゼーションの取得；target;offer decisioning;
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
-
 
 # offer decisioning
 
@@ -260,4 +259,3 @@ Edge ネットワークは、次のような応答を返します。
 | `content` | 提案されたオファーに関連付けられた、文字列の形式のコンテンツ。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | 提案されたオファーに関連付けられた画像コンテンツ（URL 形式）。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 提案されたオファーに関連付けられた特性を含む JSON オブジェクト。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
-

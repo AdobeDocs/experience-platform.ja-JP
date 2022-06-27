@@ -1,12 +1,10 @@
 ---
 title: 認証
-description: Adobe Experience Platform Edge Network Server API の認証を設定する方法を説明します
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: データ収集；認証；Adobe Experience Platform Edge Network api;認証
+description: Adobe Experience Platform Edge Network Server API の認証を設定する方法について説明します。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '638'
 ht-degree: 18%
 
 ---
