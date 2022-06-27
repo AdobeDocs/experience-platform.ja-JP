@@ -2,9 +2,9 @@
 description: ファイルベースの宛先のサーバーとファイル構成スペックは、Adobe Experience Platform Destination SDK で /destination-servers エンドポイントを介して構成できます。
 title: （ベータ版）ファイルベースの宛先サーバーの仕様の構成オプション
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '916'
 ht-degree: 90%
 
 ---
@@ -53,6 +53,8 @@ ht-degree: 90%
 | `fileBasedS3Destination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## ファイルベースの SFTP 宛先サーバー仕様 {#sftp-example}
 
 ```json
@@ -89,6 +91,8 @@ ht-degree: 90%
 | `encryptionMode` | 文字列 | ファイルの暗号化を使用するかどうかを示します。 サポートされている値。 <ul><li>PGP</li><li>なし</li></ul> |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## ファイルベースの [!DNL Azure Data Lake Storage]（[!DNL ADLS]）宛先サーバーの仕様 {#adls-example}
 
 ```json
@@ -114,6 +118,8 @@ ht-degree: 90%
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedAdlsGen2Destination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ファイルベースの [!DNL Azure Blob Storage] 宛先サーバーの仕様 {#blob-example}
 
@@ -147,6 +153,8 @@ ht-degree: 90%
 | `fileBasedAzureBlobDestination.container.value` | 文字列 | この宛先で使用される [!DNL Azure Blob Storage] コンテナ名。 |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## ファイルベースの [!DNL Data Landing Zone]（[!DNL DLZ]）宛先サーバーの仕様 {#dlz-example}
 
 ```json
@@ -173,6 +181,8 @@ ht-degree: 90%
 | `fileBasedDlzDestination.path.templatingStrategy` | 文字列 | *必須。*`PEBBLE_V1` を使用します。 |
 | `fileBasedDlzDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ファイルベースの [!DNL Google Cloud Storage] 宛先サーバーの仕様 {#gcs-example}
 
@@ -205,6 +215,8 @@ ht-degree: 90%
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
 | `fileConfigurations` | オブジェクト | 詳しくは、 [ファイルフォーマット設定](#file-configuration) この節の詳しい説明は、を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ファイル形式設定 {#file-configuration}
 
@@ -299,4 +311,6 @@ ht-degree: 90%
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。 エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` |
 | `csvOptions.lineSep.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。書き込みに使用する行区切り記号を定義します。 最大長は 1 文字です。 | `\n` |
-| `maxFileRowCount` | オプション | エクスポートするファイルに含めることができる最大行数。 宛先プラットフォームのファイルサイズの要件に基づいて、これを設定します。 | N/A |
+| `maxFileRowCount` | オプション | エクスポートするファイルに含めることができる最大行数。 宛先プラットフォームのファイルサイズの要件に基づいて、これを設定します。 | なし |
+
+{style=&quot;table-layout:auto&quot;}

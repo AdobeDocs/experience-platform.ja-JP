@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 title: メッセージの形式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2272'
 ht-degree: 3%
 
 ---
@@ -83,6 +83,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Experience Platform内のプロファイル構造 {#profile-structure}
 
@@ -1194,6 +1196,8 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `destination.segmentNames` | Adobe Experience Platform名前空間内のセグメント名からパートナーのシステム内のセグメント名にマッピングします。 |
 | `addedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `realized` または `existing`. |
 | `removedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `exited`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 次の手順 {#next-steps}
 
