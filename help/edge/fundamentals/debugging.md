@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Platform Web SDK でのデバッグ
-description: Web SDK でデバッグ機能を切り替える方法についてExperience Platformします。
-keywords: デバッグ Web SDK；デバッグ；設定；設定；コマンドの設定；debug コマンド；edgeConfigId;setDebug;debugEnabled;debug;
+description: Experience PlatformWeb SDK でデバッグ機能を切り替える方法を説明します。
+keywords: Web SDK のデバッグ；デバッグ；設定；コマンドの設定；debug コマンド；edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
+source-git-commit: c1e6b1519bc40e7d36bd83dc49e442d3d5583fed
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 65%
+source-wordcount: '515'
+ht-degree: 61%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 65%
 * `configure` コマンド
 * `setDebug` コマンド
 * クエリ文字列パラメーター
-* Adobe Experience Platform Debugger で「デバッグを有効にする」をオンに切り替える。 Adobe Experience Platformは、Web ページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debugger は、[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) および [Firefox](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/) の両方の拡張機能として使用できます。 デバッグは、AEP Web SDK セクションの「設定」タブで有効にできます。
+* Adobe Experience Platform Debugger でのデバッグの有効化をオンに切り替える Adobe Experience Platformは、Web ページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debugger は、 [クロム](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) および [Firefox](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/) 拡張子。 デバッグは、AEP Web SDK セクションの「設定」タブで有効にできます。
 
 ![](../images/enable-debugging.png)
 
@@ -76,9 +76,13 @@ http://example.com/?alloy_debug=true
 ```js
 alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.version);
+  console.log(result.libraryInfo.commands);
+  console.log(result.libraryInfo.configs);
 });
 ```
 
 現在、指定された `libraryInfo` オブジェクトには次のプロパティが含まれています。
 
-* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリをタグ拡張（「AEP Web SDK」という名前）内で実行すると、バージョンはライブラリバージョンになり、タグ拡張バージョンは「+」記号で結合されます。 例えば、ライブラリのバージョンが 1.0.0 で、タグ拡張のバージョンが 1.2.0 の場合、値は `1.0.0+1.2.0` になります。
+* `version`:読み込まれたライブラリのバージョンです。 例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリをタグ拡張 (「AEP Web SDK」) 内で実行する場合、バージョンはライブラリバージョンで、タグ拡張バージョンは「+」記号で結合されたバージョンです。 例えば、ライブラリのバージョンが 1.0.0 で、タグ拡張のバージョンが 1.2.0 の場合、値はになります。 `1.0.0+1.2.0`.
+* `commands`:これらは、読み込まれたライブラリでサポートされている使用可能なコマンドのすべてです。
+* `configs`:これらは、読み込まれたライブラリ内の現在の設定すべてです。
