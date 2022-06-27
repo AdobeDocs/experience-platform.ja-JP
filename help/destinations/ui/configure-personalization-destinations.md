@@ -2,11 +2,9 @@
 keywords: パーソナライゼーション; ターゲット; 宛先; パーソナライゼーションの宛先; パーソナライゼーションの宛先の設定; 同じページ; 次のページ;
 title: 同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: 同じページと次のページのパーソナライゼーション用にパーソナライゼーションの宛先を設定する方法について説明します。
-seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 95%

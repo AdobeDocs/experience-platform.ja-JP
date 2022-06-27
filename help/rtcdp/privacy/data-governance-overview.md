@@ -1,11 +1,9 @@
 ---
 keywords: データガバナンス rtcdp、rtcdp データガバナンス、リアルタイム顧客データプロファイルデータガバナンス
 title: データガバナンスの概要
-seo-title: Data Governance in Real-time Customer Data Platform
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
-seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 51%
@@ -14,7 +12,7 @@ ht-degree: 51%
 
 # リアルタイム CDP におけるデータガバナンス
 
-[!DNL Real-time Customer Data Platform] （リアルタイム CDP）を使用すると、マーケターは、複数の大規模法人システムからのデータを統合し、顧客の識別、理解、関与を促進できます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、リアルタイム CDP が使用ポリシーに準拠していることを確認し、データを処理することが重要です。
+[!DNL Real-time Customer Data Platform] （リアルタイム CDP）を使用すると、マーケターは、複数の大規模法人システムからのデータを統合し、顧客の特定、理解、関与を促進できます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、リアルタイム CDP が使用ポリシーに準拠していることを確認し、データを処理することが重要です。
 
 Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。データガバナンスは リアルタイム CDP 内で重要な役割を果たし、使用ポリシーの定義、それらのポリシーに基づくデータの分類、特定のマーケティングアクションの実行時のポリシー違反を確認できるようになります。
 

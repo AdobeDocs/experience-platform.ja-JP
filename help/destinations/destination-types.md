@@ -1,10 +1,9 @@
 ---
 keywords: 宛先；宛先；宛先のタイプ
 title: 宛先のタイプとカテゴリ
-seo-title: Destination types and categories
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '642'
 ht-degree: 38%

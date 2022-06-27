@@ -1,12 +1,10 @@
 ---
 keywords: RTCDP;CDP;リアルタイムの顧客データプラットフォーム;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;cdp;顧客 AI
 title: リアルタイムの顧客データプラットフォームの概要
-seo-title: Real-time Customer Data Platform Overview
 description: リアルタイム顧客データプラットフォームの概要
-seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: ht
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 100%
 

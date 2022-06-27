@@ -1,14 +1,12 @@
 ---
 keywords: 宛先；adobe experience platform；プラットフォーム；宛先の概要；データのアクティブ化；アクティブ化；
-title: Destinations overview
-seo-title: Destinations overview
-description: クロスチャネルマーケティングキャンペーン、電子メール、ターゲット広告などの宛先に対してAdobe Experience Platformデータをアクティブ化する方法を説明します。
-seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+title: 宛先の概要
+description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 42%
+source-wordcount: '489'
+ht-degree: 47%
 
 ---
 
@@ -64,10 +62,10 @@ Platform の宛先機能は、Adobe Experience Platformのアクセス制御権�
 * [広告の宛先 — Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [クラウドストレージの宛先](./catalog/cloud-storage/overview.md)
 * [電子メールマーケティングの宛先](./catalog/email-marketing/overview.md)
-* [ソーシャルの宛先](./catalog/social/overview.md)
+* [ソーシャルの宛先 ](./catalog/social/overview.md)
 
 セグメントのアクティベーションワークフローでのデータポリシー違反について詳しくは、次のガイドの「確認」の手順を参照してください。
 
-* [ストリーミングセグメント書き出しの宛先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md#review)
-* [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-streaming-profile-destinations.md#review)
-* [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-batch-profile-destinations.md#review)
+* [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md#review)
+* [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md#review)
+* [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md#review)
