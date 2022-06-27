@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 97%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 97%
       * Adobe Target v2 {#target-v2}
          * [概要](./extensions/web/target-v2/overview.md)
          * [リリースノート](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] ビデオトラッキング {#brightcove}
+         * [概要](./extensions/web/brightcove/overview.md)
+         * [リリースノート](./extensions/web/brightcove/release-notes.md)
       * Common Analytics Plugins {#plugins}
          * [概要](./extensions/web/plugins/overview.md)
          * [リリースノート](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 97%
          * [概要](./extensions/web/core/overview.md)
          * [イベントの転送](./extensions/web/core/event-forwarding.md)
          * [リリースノート](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [概要](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [概要](./extensions/web/marketo/overview.md)
          * [リリースノート](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] ビデオトラッキング {#brightcove}
-         * [概要](./extensions/web/brightcove/overview.md)
-         * [リリースノート](./extensions/web/brightcove/release-notes.md)
       * Google Data Layer {#google-data-layer}
          * [概要](./extensions/web/google-data-layer/overview.md)
          * [リリースノート](./extensions/web/google-data-layer/release-notes.md)

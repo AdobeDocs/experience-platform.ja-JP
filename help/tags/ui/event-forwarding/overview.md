@@ -3,7 +3,7 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -67,7 +67,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 イベント転送では、データ要素自体はタグと同じように作成および設定されますが、Platform Edge Network からのデータを参照する方法については、いくつかの重要な構文上の違いがあります。
 
-#### Platform Edge Network からのデータの参照 {#edge}
+#### Platform Edge Network からのデータの参照 {#data-element-path}
 
 Platform Edge Network からデータを参照するには、そのデータへの有効なパスを提供するデータ要素を作成する必要があります。UI でデータ要素を作成するときは、拡張機能として&#x200B;**[!UICONTROL コア]**&#x200B;を選択し、タイプとして&#x200B;**[!UICONTROL パス]**&#x200B;を選択します。
 
