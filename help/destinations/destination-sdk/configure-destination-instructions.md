@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 100%
+source-wordcount: '752'
+ht-degree: 91%
 
 ---
 
@@ -174,8 +174,16 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 7：宛先を公開する {#publish-destination}
 
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
 宛先を設定してテストした後、[Destination Publishing API](./destination-publish-api.md) を使用して、構成をレビュー用にアドビに送信します。
 
 ## 手順 8：宛先のドキュメント化 {#document-destination}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）が[製品化統合](./overview.md#productized-custom-integrations)を作成する場合は、 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、[Experience Platform の宛先カタログ](/help/destinations/catalog/overview.md)に宛先の製品ドキュメントページを作成します。
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](./overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。

@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: （ベータ版）Destination SDK を使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 99%
+source-wordcount: '544'
+ht-degree: 87%
 
 ---
 
@@ -280,8 +280,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## 手順 5：宛先を公開する {#publish-destination}
 
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
 宛先を設定およびテストした後、[宛先を公開する API](./destination-publish-api.md) を使用して設定をレビュー用にアドビに送信します。
 
 ## 手順 6：宛先のドキュメント化 {#document-destination}
+
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
 独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](./overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。

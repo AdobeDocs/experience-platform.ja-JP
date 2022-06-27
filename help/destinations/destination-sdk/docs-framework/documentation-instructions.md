@@ -2,14 +2,18 @@
 title: Adobe Experience Platform の宛先のドキュメント化
 description: Adobe Experience Platformで宛先のドキュメントページを作成する手順を説明します。
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 8%
 
 ---
 
 # Adobe Experience Platform の宛先のドキュメント化
+
+>[!IMPORTANT]
+>
+>ここで説明するプロセスは、製品化された（公開）宛先をパートナーに送信する場合にのみ必要です。 独自の用途で非公開の宛先を作成する場合は、宛先のドキュメントを作成して公開する必要はありません。
 
 ## 概要 {#overview}
 

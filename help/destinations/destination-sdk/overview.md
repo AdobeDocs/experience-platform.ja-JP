@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK は、選択したデータと認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントに配信する、Experience Platform の宛先統合パターンを設定するための設定 API のセットです。設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 98%
+source-wordcount: '704'
+ht-degree: 96%
 
 ---
 
@@ -64,7 +64,7 @@ Destination SDK へのアクセスは、パートナーであるか Experience P
 | 独立系ソフトウェアベンダー（ISV） | [Adobe Exchange プログラム](https://partners.adobe.com/exchangeprogram/experiencecloud.html)に参加し、Destination SDK にアクセスできるようプロビジョニングされた Experience Platform サンドボックスの取得をリクエストします。 |
 | システムインテグレーター（SI） | [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) で Gold レベルまたは Platinum レベルであれば、プロビジョニングされた Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
 | [有効化パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html)の Experience Platform 顧客 | デフォルトで、Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
-| [Real-time CDP パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)の Experience Platform 顧客 | Destination SDK にはアクセスできませんが、Destination SDK を使用して他の企業が設定し、Experience Platform 組織全体に公開された、製品化されたすべての宛先にアクセスできます。 |
+| Experience Platform顧客 [リアルタイム CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | Destination SDK にはアクセスできませんが、Destination SDK を使用して他の企業が設定し、Experience Platform 組織全体に公開された、製品化されたすべての宛先にアクセスできます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

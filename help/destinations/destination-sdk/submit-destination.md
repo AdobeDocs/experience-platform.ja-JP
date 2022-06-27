@@ -1,17 +1,21 @@
 ---
-description: このページでは、Destination SDK を使用して作成した宛先のレビュー用に提出する必要があるすべての情報が提供されます。
-title: Destination SDK で作成した宛先のレビュー用に送信する
+description: このページでは、Destination SDKを使用して作成された、製品化された宛先のレビュー用に送信する必要があるすべての情報を提供します。
+title: 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 87%
+source-wordcount: '683'
+ht-degree: 75%
 
 ---
 
-# Destination SDK で作成した宛先のレビュー用に送信する
+# 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 
 ## 概要 {#overview}
+
+>[!IMPORTANT]
+>
+>ここで説明するプロセスは、製品化された（公開）宛先をパートナーに送信する場合にのみ必要です。 独自の用途でプライベートな宛先を作成する場合は、これらの資料を作成してAdobeで共有する必要はありません。
 
 [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に宛先を公開する前に、プラットフォームにデータをアクティベートする際にアドビに宛先とテストに関する特定の情報を提供し、ユーザーが可能な限り最高のエクスペリエンスを享受できるようにする必要があります。
 
@@ -22,7 +26,7 @@ ht-degree: 87%
    * 宛先エンドポイントへの API 呼び出し。
    * 宛先エンドポイントから受け取った API 応答。
 * [destination publishing API](./destination-publish-api.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* （製品化された統合の場合のみ）[セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md)に記載されている手順に従った、ドキュメント PR（プル要求）。
+* ドキュメント PR（プル要求）。 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md).
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 >[!IMPORTANT]
