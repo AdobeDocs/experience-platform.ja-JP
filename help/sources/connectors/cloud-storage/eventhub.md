@@ -5,10 +5,10 @@ title: Azure Event Hubs ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
+source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 4%
+ht-degree: 19%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムのデータを Platform に取り込むことができます。
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順が、ソースワークフローに統合されます。 Platform では、次の場所からデータを取り込むことができます： [!DNL Event Hubs] リアルタイムで。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。Platform では、[!DNL Event Hubs] からリアルタイムにデータを取り込むことができます。
 
 ## 拡大/縮小 [!DNL Event Hubs]
 
@@ -59,7 +59,7 @@ Platform 側での取り込み速度を上げるには、Platform で、ソー�
 
 Platform サブネットの様々な地域については、以下のリストを参照してください。
 
-### VA7:北米
+### VA7：北米
 
 ```json
 {
@@ -78,7 +78,7 @@ Platform サブネットの様々な地域については、以下のリスト�
 }
 ```
 
-### NLD2:ヨーロッパ
+### NLD2：ヨーロッパ
 
 ```json
 {
@@ -87,8 +87,8 @@ Platform サブネットの様々な地域については、以下のリスト�
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
-        },
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
     ],
@@ -97,7 +97,7 @@ Platform サブネットの様々な地域については、以下のリスト�
 }
 ```
 
-### AUS5:オーストラリア
+### AUS5：オーストラリア
 
 ```json
 {
@@ -118,14 +118,14 @@ Platform サブネットの様々な地域については、以下のリスト�
 
 次を参照してください。 [[!DNL Event Hubs] 文書](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) を参照してください。
 
-## 接続 [!DNL Event Hubs] Platform へ
+## [!DNL Event Hubs] を Platform に接続
 
-以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Event Hubs] API またはユーザーインターフェイスを使用して Platform に接続するには、次の手順を実行します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Event Hubs] と Platform を接続する方法について説明します。
 
 ### API の使用
 
 * [フローサービス API を使用したイベントハブソース接続の作成](../../tutorials/api/create/cloud-storage/eventhub.md)
-* [フローサービス API を使用したストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
+* [Flow Service API を用いたストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
