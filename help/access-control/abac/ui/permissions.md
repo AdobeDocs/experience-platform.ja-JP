@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ロールの権限の管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してロールの権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+
+>[!IMPORTANT]
+>
+>アクセス制御は、権限の付与にユーザー ID（ユーザーに割り当てられた内部の一意の ID）を使用します。 組織をAdobe IDから Business ID に移行すると、ユーザー ID が変更され、アクセス制御で新しく生成されたユーザー ID が使用されるので、ユーザーに設定されたすべての権限は失われます。 組織が Business ID に移行されている場合、Adobe担当者に連絡して、Adobe IDから Business ID にユーザー ID を移行してください。
 
 権限は、管理者がExperience Cloudの領域で、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理するためのユーザーの役割およびアクセスポリシーを定義できます。
 
@@ -30,7 +34,7 @@ ht-degree: 0%
 
 UI の役割では、次のフィルターを使用できます。
 
-| Filter | 説明 |
+| フィルター | 説明 |
 | --- | --- |
 | [!UICONTROL 作成期間] | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 |
 | [!UICONTROL 作成者] | ドロップダウンからユーザーを選択し、役割の作成者でフィルタリングします。 |

@@ -5,10 +5,10 @@ title: アクセス制御トラブルシューティングガイド
 topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: ht
-source-wordcount: '321'
-ht-degree: 100%
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+workflow-type: tm+mt
+source-wordcount: '408'
+ht-degree: 78%
 
 ---
 
@@ -33,3 +33,7 @@ IMS 組織のシステム管理者、製品管理者、製品プロファイル�
 権限は、適用対象の [!DNL Platform] 機能（[!DNL Data Management] や [!DNL Profile Management] など）別にグループ化され、分類されています。使用可能な権限とその属するグループの完全なリストについては、「アクセス制御の概要」の「[権限](home.md#permissions)」の節を参照してください。
 
 役割ベースのアクセス制御の提供について詳しくは、「[アクセス制御の概要](home.md)」を参照してください。
+
+## AdobeI/O から Business ID に移行した後、権限はどうなりますか。
+
+アクセス制御は、権限の付与にユーザー ID（ユーザーに割り当てられた内部の一意の ID）を使用します。 組織をAdobe IDから Business ID に移行すると、ユーザー ID が変更され、アクセス制御で新しく生成されたユーザー ID が使用されるので、ユーザーに設定されたすべての権限は失われます。 組織が Business ID に移行されている場合、Adobe担当者に連絡して、Adobe IDから Business ID にユーザー ID を移行してください。
