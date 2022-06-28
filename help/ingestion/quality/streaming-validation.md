@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 85%
+source-wordcount: '917'
+ht-degree: 83%
 
 ---
 
@@ -59,6 +59,10 @@ ht-degree: 85%
 - 形式
 
 ## 同期検証
+
+>[!WARNING]
+>
+>この `syncValidation` クエリパラメーターは、単一のメッセージエンドポイントに対してのみ使用でき、バッチエンドポイントには使用できません。
 
 同期検証は、取り込みが失敗した理由に関するフィードバックを即座に提供する検証方法です。ただし、検証に失敗すると、検証に失敗したレコードは破棄され、ダウンストリームに送信されなくなります。そのため、同期検証は開発プロセス中にのみ使用する必要があります。同期検証をおこなうと、呼び出し元には、XDM 検証の結果が通知され、失敗した場合はさらに失敗の理由も通知されます。
 
