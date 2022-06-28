@@ -3,18 +3,23 @@ title: データ衛生 API を使用した消費者レコードの削除
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 92%
+source-wordcount: '505'
+ht-degree: 85%
 
 ---
 
 # データ衛生 API を使用した消費者レコードの削除
 
+>[!IMPORTANT]
+>
+>データ衛生 API は現在ベータ版です。 このドキュメントで概要を説明している機能は、変更される場合があります。
+
 データ衛生 API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
-この API には、次のルートパスからアクセスできます。`https://platform.adobe.io/data/core/hygiene/`
+API には、 [Privacy ServiceAPI](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## はじめに
 
@@ -28,7 +33,7 @@ ht-degree: 92%
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 * `Content-Type: application/json`
 
@@ -52,7 +57,7 @@ POST /jobs
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
