@@ -2,14 +2,18 @@
 description: このページでは、`/authoring/destinations/publish` API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先を公開 API エンドポイントの操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 72%
+source-wordcount: '779'
+ht-degree: 67%
 
 ---
 
 # 宛先を公開エンドポイント API の操作 {#publish-destination}
+
+>[!IMPORTANT]
+>
+>この API エンドポイントを使用する必要があるのは、製品化された（公開）宛先を送信し、他のExperience Platformのお客様が使用できるようにする場合のみです。 独自の用途で非公開の宛先を作成する場合は、公開 API を使用して正式に宛先を送信する必要はありません。
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ ht-degree: 72%
 公開リクエストを送信するには、次の場合に Publish Destinations API エンドポイントを使用します。
 
 * Destination SDK パートナーとして、すべての Experience Platform 組織をまたいですべての Experience Platform の顧客がすべての Experience Platform の顧客が製品化された宛先を利用できるようにする場合。
-* すべてのサンドボックスをまたいで、独自の Experience Platform 組織でカスタムの宛先を使用できるようにする場合。
 * あなたは *更新の有無* を設定に追加します。 設定の更新は、新しい公開リクエストを送信した後にのみ、宛先に反映されます。このリクエストはExperience Platformチームが承認します。
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## 宛先公開 API 操作の概要 {#get-started}
 
