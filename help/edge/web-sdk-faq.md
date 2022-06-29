@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
+source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1955'
 ht-degree: 2%
 
 ---
@@ -157,9 +157,7 @@ CNAME について詳しくは、 [Adobe文書](https://experienceleague.adobe.c
 
 **kndctr_orgid_consent:** この cookie は、Web サイトに対するユーザーの同意設定を保存します。
 
-**kndctr_orgid_personalization:** この cookie には、Adobe Targetが Web ページをパーソナライズするために使用するセッション情報が含まれます。
-
-**kndctr_orgid_consentcheck:** このセッションベースの Cookie は、サーバーが同意設定サーバー側を検索するように通知します。
+**kndctr_orgid_cluster:** この Cookie は、現在のユーザーのリクエストを処理する Experience Edge 地域を保存します。 Experience Edge がリクエストを正しい地域にルーティングできるように、地域は、URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。
 
 Web SDK を使用する場合、Edge ネットワークは上記の cookie を 1 つ以上設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
 
