@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
+source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 44%
+source-wordcount: '1426'
+ht-degree: 43%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 44%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## バージョン2.13.0 - 2022 年 6 月 30 日
+
+* eVar などの XDM オブジェクトデータ要素における数値プロパティの並べ替え順を修正しました。
+
+Adobe Experience Platform Web SDK ライブラリのバージョン2.12.0が含まれています。
 
 ## バージョン2.12.0 - 2022 年 6 月 13 日
 

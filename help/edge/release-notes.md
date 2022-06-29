@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
 Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+
+## バージョン2.12.0 - 2022 年 6 月 30 日
+
+* リクエストを Edge ネットワークに変更し、 `cluster` URL の一部としての Cookie の場所のヒント。 これにより、セッション中に場所を変更したユーザー（VPN 経由やモバイルデバイスでの運転など）が同じエッジに到達し、同じパーソナライゼーションプロファイルを持つようになります。
+* getLibraryInfo コマンド応答で設定済み関数を文字列化します。
 
 ## バージョン2.11.0 - 2022 年 6 月 13 日
 
