@@ -3,7 +3,7 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 100%
@@ -179,4 +179,4 @@ Experience Platform で使用するためにこのデータストリームを設
 
 ## 次の手順
 
-このガイドでは、データ収集 UI でのデータストリームの管理方法について説明しました。データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../collection/e2e.md#install)を参照してください。
+このガイドでは、データ収集 UI でのデータストリームの管理方法について説明しました。データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../rtcdp-connections/e2e.md#install)を参照してください。

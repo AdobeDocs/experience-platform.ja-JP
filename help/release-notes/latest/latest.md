@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 37%
+source-wordcount: '1794'
+ht-degree: 33%
 
 ---
 
@@ -15,26 +15,12 @@ ht-degree: 37%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
+- [Real-time Customer Data Platform Connections](#data-collection)
 - [ソース](#sources)
-
-## データ収集 {#data-collection}
-
-Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| [データストリームのアクセスタイプの設定](../../edge/datastreams/overview.md#create) | 新しいデータストリームを作成する際に、Edge ネットワークで受け入れるリクエストの種類を選択できるようになりました。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
-| [提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions) 指標を増分せずに単一ページアプリケーションで使用する場合。 | 新しく追加された `applyPropositions` コマンドを使用すると、次の提案の配列をレンダリングまたは実行できます： [!DNL Target] を単一ページのアプリケーションに追加するときに、 [!DNL Analytics] および [!DNL Target] 指標。 これにより、レポートの精度が向上します。 |
-| [モバイルから Web への ID とクロスドメイン ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル Web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
-
-Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -130,6 +116,20 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 {style=&quot;table-layout:auto&quot;}
 
 クエリサービスの詳細については、 [クエリサービスの概要](../../query-service/home.md).
+
+## Real-time Customer Data Platform Connections {#data-collection}
+
+Real-time Customer Data Platform Connections は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジーのスイートを提供します。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [データストリームのアクセスタイプの設定](../../edge/datastreams/overview.md#create) | 新しいデータストリームを作成する際に、Edge ネットワークで受け入れるリクエストの種類を選択できるようになりました。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
+| [提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions) 指標を増分せずに単一ページアプリケーションで使用する場合。 | 新しく追加された `applyPropositions` コマンドを使用すると、次の提案の配列をレンダリングまたは実行できます： [!DNL Target] を単一ページのアプリケーションに追加するときに、 [!DNL Analytics] および [!DNL Target] 指標。 これにより、レポートの精度が向上します。 |
+| [モバイルから Web への ID とクロスドメイン ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル Web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
+
+詳しくは、 [Real-Time CDP接続の概要](../../rtcdp-connections/home.md).
 
 ## ソース {#sources}
 
