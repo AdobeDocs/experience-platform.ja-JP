@@ -1,5 +1,5 @@
 ---
-title: データ衛生 API を使用した消費者レコードの削除
+title: ' Data Hygiene API を使用して消費者レコードを削除'
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
@@ -7,17 +7,17 @@ exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 85%
+ht-degree: 93%
 
 ---
 
-# データ衛生 API を使用した消費者レコードの削除
+#  Data Hygiene API を使用して消費者レコードを削除
 
 >[!IMPORTANT]
 >
 >データ衛生 API は現在ベータ版です。 このドキュメントで概要を説明している機能は、変更される場合があります。
 
-データ衛生 API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
+Data Hygiene API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
 API には、 [Privacy ServiceAPI](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
@@ -27,7 +27,7 @@ API には、 [Privacy ServiceAPI](../../privacy-service/api/overview.md): `http
 
 ### 必須ヘッダーの値の収集
 
-データ衛生 API を呼び出すには、まず認証資格情報を収集する必要があります。これらは、Privacy Service API へのアクセスに使用される資格情報と同じです。詳しくは、 [API の概要](./overview.md#getting-started) 次に示すように、データ衛生 API に必要な各ヘッダーの値を生成します。
+データ衛生 API を呼び出すには、まず認証資格情報を収集する必要があります。これらは、Privacy Service API へのアクセスに使用される資格情報と同じです。以下に示すように、[API の概要](./overview.md#getting-started)を参照して、Data Hygiene API に必要な各ヘッダーの値を生成します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

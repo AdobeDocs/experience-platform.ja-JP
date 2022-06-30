@@ -6,7 +6,7 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Platform で使用するためにこのデータストリームを設
 | [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて GPS ルックアップが発生するかどうかを決定します。デフォルト設定&#x200B;**[!UICONTROL なし]**&#x200B;は、すべての GPS ルックアップを無効にするのに対して、**[!UICONTROL 市区町村]**&#x200B;設定は、GPS 座標を小数第 2 位で提供します。 |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
-| [!UICONTROL アクセスタイプ] | 認証タイプを定義します。 [!DNL Edge Network] はデータストリームを受け入れます。 <ul><li>**[!UICONTROL 混在認証]**:このオプションを選択した場合、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。 Web SDK または [モバイル SDK](https://aep-sdks.gitbook.io/docs/)、 [サーバー API](../../server-api/overview.md). </li><li>**[!UICONTROL 認証済みのみ]**:このオプションを選択した場合、Edge Network は認証済みのリクエストのみを受け入れます。 Server API のみを使用する予定で、認証されていないリクエストが [!DNL Edge Network]. </li></ul> |
+| [!UICONTROL アクセスタイプ] | [!DNL Edge Network] がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
 
 ここから、Experience Platform のデータストリームを設定している場合は、[データ収集のためのデータ準備](./data-prep.md)に関するチュートリアルに従って、Platform イベントスキーマにデータをマッピングしてから、このガイドに戻ってください。それ以外の場合は、「**[!UICONTROL 保存]**」を選択して、次の節を続行します。
 

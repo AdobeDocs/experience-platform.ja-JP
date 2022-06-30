@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform UI の&#x200B;**[!UICONTROL データハイジーン]*
 
 ![Platform UI の[!UICONTROL データハイジーン]ワークスペースを示す画像](../images/ui/overview/home.png)
 
-ここから、既存の作業指示を参照し、新しいデータの衛生操作を設定できます。 詳しくは、このガイドの次の節を参照してください。
+ここから、既存の作業指示を参照したり、新しいデータハイジーン操作を設定したりできます。詳しくは、このガイドの次の節を参照してください。
 
 * [既存の作業指示を参照](./browse.md)
-* [データセットの Time to Live（TTL）を管理](./ttl.md)
+* [データセットの有効期間（TTL）を管理](./ttl.md)
