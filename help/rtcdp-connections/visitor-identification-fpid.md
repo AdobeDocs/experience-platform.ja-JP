@@ -4,16 +4,14 @@ description: FPID を使用して、Server API を通じて訪問者を一貫し
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: エッジネットワーク；ゲートウェイ；API；訪問者；識別；FPID
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # FPID による訪問者の識別
-
-## 概要
 
 [!DNL First-party IDs] (`FPIDs`) は、顧客が生成、管理、保存するデバイス ID です。 これにより、ユーザーデバイスの識別をユーザーが制御できるようになります。 送信別 `FPIDs`Edge Network が新しい `ECID` リクエストに含まれていない。
 
@@ -35,7 +33,7 @@ An `FPID` 決定論的に～に変換することができる `ECID` を Edge �
 }
 ```
 
-リクエストに `FPID` および `ECID`、 `ECID` リクエストに既に存在するが、 `FPID`. したがって、Edge ネットワークは `ECID` 既に提供されており、指定された `FPID`.
+リクエストに `FPID` および `ECID`、 `ECID` リクエストに既に存在するが、 `FPID`. つまり、Edge ネットワークでは `ECID` 既に提供され、 `FPID` は無視されます。 新しい `ECID` は、 `FPID` は単独で提供されます。
 
 デバイス ID の場合、 `server` データストリームは、 `FPID` をデバイス ID として設定します。 その他の ID( 例： `EMAIL`) は、リクエスト本文内でも指定できますが、Edge ネットワークでは、プライマリ ID が明示的に指定されている必要があります。 プライマリID は、プロファイルデータの格納先となるベース ID です。
 

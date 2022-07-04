@@ -4,18 +4,16 @@ description: Adobe Experience Platform Edge Network Server API で訪問者を�
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: エッジネットワーク；ゲートウェイ；API；訪問者；識別
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '151'
 ht-degree: 5%
 
 ---
 
 # 訪問者の識別
 
-## 概要 {#overview}
-
-Edge Network Server API は、 [ファーストパーティ ID([!DNL FPID])](visitor-identification-fpid.md)
+Edge Network Server API は、 [ファーストパーティ ID([!DNL FPID])](visitor-identification-fpid.md).
 
 すべてのユーザー ID は、 `identityMap` フィールドグループを使用します。 このフィールドグループは AEP Web SDK に含まれています `ExperienceEvent` mixin.
 
