@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B エディションのソース
 description: Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 8%
+source-wordcount: '247'
+ht-degree: 7%
 
 ---
 
@@ -20,6 +20,10 @@ Real-time Customer Data Platform B2B Edition を使用すると、 [[!DNL Market
 ソースが B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 詳しくは、 [ソースコネクタの概要](../../sources/home.md) Adobe Experience Platformで使用できるソースのタイプについて詳しくは、を参照してください。
+
+>[!IMPORTANT]
+>
+>次へのアクセス権が必要です： [Real-time Customer Data Platform B2B エディション](../../rctcdp/../rtcdp/b2b-overview.md) B2B スキーマがに参加するために [リアルタイム顧客プロファイル](../proile/../../profile/home.md).
 
 次のドキュメントでは、 [!DNL Marketo] B2B データを Platform に取り込むには：
 

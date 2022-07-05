@@ -5,10 +5,10 @@ title: Marketo Engage コネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 14%
+source-wordcount: '601'
+ht-degree: 13%
 
 ---
 
@@ -19,6 +19,10 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) （以下「」という。）[!DNL Marketo]&quot;) は、複雑な購入ジャーニーの各ステージを通じてエンゲージメントをおこなうことで顧客体験を変えようとしているリード管理や B2B マーケター向けの完全なソリューションです。
 
 を使用 [!DNL Marketo] ソースコネクタを使用すると、B2B データを [!DNL Marketo] Platform に接続されたアプリケーションを使用して、このデータを Platform に保存し、最新の状態に保ちます。
+
+>[!IMPORTANT]
+>
+>次へのアクセス権が必要です： [Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) Marketo Engageが参加するために [リアルタイム顧客プロファイル](../../../../profile/home.md).
 
 このドキュメントでは、 [!DNL Marketo] ソースコネクタ（コネクタの認証方法、マッピング方法に関する情報を含む） [!DNL Marketo] Experience Data Model(XDM) に対するフィールドと、コネクタのデータ待ち時間。
 
