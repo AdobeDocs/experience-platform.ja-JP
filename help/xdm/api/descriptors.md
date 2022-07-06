@@ -5,10 +5,10 @@ title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 53%
+source-wordcount: '1839'
+ht-degree: 50%
 
 ---
 
@@ -389,7 +389,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 #### 参照 ID 記述子
 
-参照 ID 記述子は、スキーマフィールドのプライマリ ID への参照コンテキストを提供し、他のスキーマのフィールドで参照できるようにします。 参照記述子を適用する前に、フィールドに ID 記述子のラベルを付けておく必要があります。
+参照 ID 記述子は、スキーマフィールドのプライマリ ID への参照コンテキストを提供し、他のスキーマのフィールドで参照できるようにします。 宛先スキーマは、この記述子を介して他のスキーマから参照できるように、事前にプライマリ ID フィールドが定義されている必要があります。
 
 ```json
 {
@@ -406,7 +406,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `@type` | 定義する記述子のタイプ。参照 ID 記述子の場合、この値をに設定する必要があります。 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
-| `xdm:sourceProperty` | 記述子を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
+| `xdm:sourceProperty` | 宛先スキーマを参照するために使用されるソーススキーマ内のフィールドのパス。 「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めない ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
 | `xdm:identityNamespace` | ソースプロパティの ID 名前空間コード。 |
 
 {style=&quot;table-layout:auto&quot;}
