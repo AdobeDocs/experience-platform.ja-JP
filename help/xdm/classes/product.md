@@ -1,16 +1,17 @@
 ---
 title: 製品クラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の Product クラスの概要を説明します。
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 15%
+source-wordcount: '215'
+ht-degree: 21%
 
 ---
 
 # [!UICONTROL 製品] クラス
 
-エクスペリエンスデータモデル (XDM) では、 [!UICONTROL 製品] クラスは、製品を定義するプロパティの最小セットをキャプチャします。
+エクスペリエンスデータモデル (XDM) では、 [!UICONTROL 製品] クラスは、小売商品を定義するプロパティの最小セットをキャプチャします。
 
 ![](../images/classes/product.png)
 
@@ -29,7 +30,7 @@ ht-degree: 15%
 
 ## 互換性のあるフィールドグループ {#field-groups}
 
-Adobeには、 [!DNL XDM Individual Profile] クラス。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
+Adobeには、 [!UICONTROL 製品] クラス。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
 * [[!UICONTROL 製品カタログ]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL 製品カテゴリ]](../field-groups/product/product-category.md)

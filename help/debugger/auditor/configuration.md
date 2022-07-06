@@ -2,10 +2,10 @@
 title: 設定テストリファレンス
 description: Adobe Experience Platform Debugger での設定に対する Auditor の機能テストの方法を説明します。
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
-source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
+source-git-commit: 797d4f305b4a6884ada4e0619beadff6a45ab42d
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 65%
+source-wordcount: '740'
+ht-degree: 66%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 65%
 | Launch - DOM Ready 後、サードパーティタグが非同期で読み込まれる | 3 | 優れたユーザーエクスペリエンスと正確なデータ収集のバランスを取るには、DOM Ready 時にサードパーティタグをトリガーする必要があります。 これにより、サイトの機能に影響を与えずに、これらのトラッキングスクリプトを確実に実行することができます。 | DOM Ready 時に実行されるサードパーティのピクセルを実行するすべてのルールを調整して、この問題を解決します。<br><br>[追加情報](../../tags/ui/managing-resources/rules.md) |
 | Experience Cloud ID サービス - 最新バージョン | 2 | 訪問者 ID サービスコードライブラリ（ visitorAPI.js）の最新バージョンがページで実行されていません。Experience Cloud テクノロジーの土台となるコードライブラリは、パフォーマンスの向上を活用し、最新の機能を提供できるよう、常に更新および調整されています。 | 最新バージョンの訪問者 ID サービスライブラリをインストールしてください。<br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/library.html) |
 | Launch - 最新バージョン | 2 | これらのページで、タグコードライブラリ (Turbine) の最新バージョンが実行されていません。 Experience Cloud テクノロジーの土台となるコードライブラリは、パフォーマンスの向上を活用し、最新の機能を提供できるよう、常に更新および調整されています。 | タグライブラリを再構築して公開します。<br><br>[追加情報](../../tags/quick-start/quick-start.md) |
-| Target - 最新バージョン | 2 | Target コードライブラリの最新バージョンがページで実行されていません。Experience Cloud テクノロジーの土台となるコードライブラリは、パフォーマンスの向上を活用し、最新の機能を提供できるよう、常に更新および調整されています。 | 最新バージョンの Target ライブラリをインストールしてください。<br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - mboxDefault は mboxCreate よりも優先される | 5 |  mboxCreate の適切な使用方法は次のようになります。<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 必ず  `<div class="mboxDefault"></div>` タグを使用して、mboxCreate() を呼び出す前に貼り付けます。 at.js による追加はおこなわれません。<br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - 有効な DOCTYPE | 5 | 無効な DOCTYPE が検出されました。このシナリオでは、mbox は起動されません。at.js の場合、DOCTYPE は標準モードである必要があります。そうしないと、Target は動作しません。 | ページ上の DOCTYPE を更新します。<br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/faq-at-js/target-atjs-faq.html) |
+| Target - 最新バージョン | 2 | Target コードライブラリの最新バージョンがページで実行されていません。Experience Cloud テクノロジーの土台となるコードライブラリは、パフォーマンスの向上を活用し、最新の機能を提供できるよう、常に更新および調整されています。 | 最新バージョンの Target ライブラリをインストールしてください。<br><br>[追加情報](https://developer.adobe.com/target/implement/client-side/) |
+| Target - mboxDefault は mboxCreate よりも優先される | 5 |  mboxCreate の適切な使用方法は次のようになります。<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 必ず  `<div class="mboxDefault"></div>` タグを使用して、mboxCreate() を呼び出す前に貼り付けます。 at.js による追加はおこなわれません。<br><br>[追加情報](https://developer.adobe.com/target/implement/client-side/) |
+| Target - 有効な DOCTYPE | 5 | 無効な DOCTYPE が検出されました。このシナリオでは、mbox は起動されません。at.js の場合、DOCTYPE は標準モードである必要があります。そうしないと、Target は動作しません。 | ページ上の DOCTYPE を更新します。<br><br>[追加情報](https://developer.adobe.com/target/implement/client-side/atjs/target-atjs-faq/) |
 
 {style=&quot;table-layout:auto&quot;}
