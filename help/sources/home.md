@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1022'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 ### Analytics {#analytics}
 
-Experience Platformは、サードパーティの分析プラットフォームからデータを取り込む機能を提供しています。 詳しくは、次の関連ドキュメントを参照してください。
+Experience Platform には、サードパーティの分析プラットフォームからデータを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
