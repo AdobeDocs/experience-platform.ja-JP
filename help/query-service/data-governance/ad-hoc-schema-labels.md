@@ -1,10 +1,11 @@
 ---
 title: アドホックスキーマの属性ベースのアクセス制御サポート
 description: Adobe Experience Platformクエリサービスで生成されたアドホックスキーマのデータフィールドへのアクセスを制限するためのガイドです。
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -27,7 +28,7 @@ Adobe Experience Platformに取り込まれるデータは、Experience Data Mod
 * [エクスペリエンスデータモデルl（XDM）システム](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
    * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=ja):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
 * [[!DNL Data Governance]](../../data-governance/home.md):方法 [!DNL Data Governance] では、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。
-* [属性ベースのアクセス制御](../../access-control/abac/overview.md):属性ベースのアクセス制御は、Adobe Experience Platformの機能で、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにします。 属性は、アドホックや通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータにすることができます。 管理者は、ユーザーアクセス権限を管理する属性を含むアクセスポリシーを定義します。
+* [属性ベースのアクセス制御](../../access-control/abac/overview.md):属性ベースのアクセス制御は、Adobe Experience Platformの機能で、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにします。 属性は、アドホックや通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータにすることができます。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
 
 ## アドホックスキーマの作成
 
@@ -41,7 +42,7 @@ Adobe Experience Platformに取り込まれるデータは、Experience Data Mod
 
 ## Platform UI のスキーマインベントリでアドホックスキーマを検出する
 
-Platform UI でアドホックスキーマを表示できるようにするには、検索フィールドの左側にあるフィルターアイコン (../images/data-governance/filter.png) を選択し、「**」を選択します[!UICONTROL アドホックスキーマを表示] が表示される左側のレール。
+Platform UI でアドホックスキーマを表示できるようにするには、フィルターアイコン (![フィルターアイコン。](../images/data-governance/filter.png)) をクリックし、「**」を選択します[!UICONTROL アドホックスキーマを表示] が表示される左側のレール。
 
 ![「アドホックスキーマを表示」切り替えを有効にした「スキーマダッシュボード」のフィルターオプションの左パネル。](../images/data-governance/adhoc-schema-toggle.png)
 
