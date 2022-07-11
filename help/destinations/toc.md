@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 91%
+source-wordcount: '814'
+ht-degree: 86%
 
 ---
 
@@ -184,10 +184,17 @@ ht-degree: 91%
       * [資格情報エンドポイント API の操作](./destination-sdk/credentials-configuration-api.md)
       * [公開エンドポイント API の操作](./destination-sdk/destination-publish-api.md)
       * デベロッパーツールリファレンス {#developer-tools-reference}
-         * [サンプルテンプレート取得 API の操作](./destination-sdk/sample-template-api.md)
-         * [テンプレートレンダリング API の操作](./destination-sdk/render-template-api.md)
-         * [宛先テスト API の操作](./destination-sdk/destination-testing-api.md)
-         * [サンプルプロファイル生成 API の操作](./destination-sdk/sample-profile-generation-api.md)
+         * ストリーミング宛先テスト API {#streaming-destination-testing-api}
+            * [サンプルテンプレート取得 API の操作](./destination-sdk/sample-template-api.md)
+            * [テンプレートレンダリング API の操作](./destination-sdk/render-template-api.md)
+            * [宛先テスト API の操作](./destination-sdk/destination-testing-api.md)
+            * [サンプルプロファイル生成 API の操作](./destination-sdk/sample-profile-generation-api.md)
+         * ファイルベースの宛先テスト API {#file-based-destination-testing-api}
+            * [ファイルベースの宛先テスト API の概要](./destination-sdk/file-based-destination-testing-overview.md)
+            * [ソーススキーマに基づくサンプルプロファイルの生成](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [サンプルプロファイルを使用してファイルベースの宛先をテストする](./destination-sdk/file-based-destination-testing-api.md)
+            * [詳細なアクティベーション結果の表示](./destination-sdk/file-based-destination-results-api.md)
+            * [テンプレート化された顧客フィールドの検証](./destination-sdk/file-based-render-template-api.md)
    * ガイド {#guides}
       * [Destination SDK を使用したストリーミングの宛先の設定](./destination-sdk/configure-destination-instructions.md)
       * [（ベータ版）Destination SDK を使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
