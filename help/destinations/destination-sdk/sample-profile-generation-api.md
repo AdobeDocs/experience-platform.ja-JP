@@ -2,9 +2,9 @@
 description: このページでは、「/authoring/sample-profiles」 API エンドポイントを使用して、宛先テストで使用するサンプルプロファイルを生成するために実行できるすべての API 操作について説明します。
 title: サンプルプロファイル生成 API の操作
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '975'
 ht-degree: 15%
 
 ---
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | -------- | ----------- |
 | `segmentMembership` | 個人のセグメントメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [セグメントメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
+| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
 | `identityMap` | 個々の ID の様々な値と、関連する名前空間を説明する map-type フィールドです。 詳しくは、 `identityMap`，読み取り [スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
