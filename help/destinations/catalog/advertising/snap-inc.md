@@ -1,10 +1,10 @@
 ---
 title: （ベータ版）Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスセグメントを書き出す方法を説明します。
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 5%
+source-wordcount: '1012'
+ht-degree: 6%
 
 ---
 
@@ -103,6 +103,12 @@ ht-degree: 5%
 >[!IMPORTANT]
 > 
 >不正なまたは無効な Snapchat 広告アカウント ID を入力すると、セグメントのアクティベーションが失敗します。 正しい広告アカウント ID を入力したことを再確認してください。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

@@ -1,9 +1,9 @@
 ---
 description: ファイルベースの宛先テスト API は、Destination SDKを通じて構築されたファイルベースの宛先の設定を検証するために使用できるエンドポイントの集まりです。
 title: ファイルベースの宛先テスト API
-source-git-commit: d2d362f4b61e04fc2fa4d9cd9db70ed94a850642
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -23,34 +23,34 @@ ht-degree: 0%
 
 各エンドポイントで実行できる操作の概要については、以下の節を参照してください。
 
-## サンプル生成エンドポイント {#sample-generation-endpoint}
+## サンプルプロファイルを生成 {#generate-sample-profiles}
 
-このエンドポイントは、既存のソーススキーマに基づいてサンプルプロファイルを生成するのに役立ちます。
+以下を使用： `/sample-profiles` 既存のソーススキーマに基づいてサンプルプロファイルを生成する API エンドポイント。
 
-サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。 さらに、独自のプロファイルデータでカスタマイズして、さらに宛先のテストをおこなうためのバックボーンも提供されます。
+サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。 さらに、独自のプロファイルデータを使用してをカスタマイズし、宛先テストを実施するためのデフォルトが提供されます。
 
 詳しくは、 [専用ドキュメント](file-based-sample-profile-generation-api.md) を参照してください。
 
-## 宛先設定テストエンドポイント {#destination-configuration-testing-endpoint}
+## 宛先設定のテスト {#test-destination-configuration}
 
-このエンドポイントを使用すると、ファイルベースの宛先が正しく設定されているかどうかをテストし、設定された宛先へのデータフローの整合性を検証できます。
+以下を使用： `/testing/destinationInstance` ファイルベースの宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証するための API エンドポイント。
 
 テストエンドポイントには、を追加するかどうかに関わらず、リクエストをおこなうことができます。 [サンプルプロファイル](file-based-sample-profile-generation-api.md) を呼び出しに追加します。 リクエストでプロファイルを送信しない場合、API はサンプルプロファイルを自動的に生成し、リクエストに追加します。
 
 詳しくは、 [専用ドキュメント](file-based-destination-testing-api.md) を参照してください。
 
-## アクティブ化結果のエンドポイント {#activation-results}
+## 詳細なアクティベーション結果の表示 {#view-detailed-activation-results}
 
-このエンドポイントを使用すると、ファイルベースの宛先テスト結果の完全な詳細を表示できます。
+以下を使用： `/testing/destinationInstance` ファイルベースの宛先テスト結果の完全な詳細を表示する API エンドポイント。
 
 この API エンドポイントは、 [フローサービス API](../api/update-destination-dataflows.md) データフローを監視する。
 
 詳しくは、 [専用ドキュメント](file-based-destination-results-api.md) を参照してください。
 
-## 顧客フィールドレンダリングエンドポイント {#customer-fields-rendering-endpoint}
+## 顧客データフィールドをレンダリング {#render-customer-data-fields}
 
-このエンドポイントを使用すると、テンプレート化されている方法を視覚化できます [顧客データフィールド](file-based-destination-configuration.md#customer-data-fields) の宛先設定で定義されたは次のようになります。
+以下を使用： `/authoring/testing/template/render` テンプレート化の仕組みを視覚化する API エンドポイント [顧客データフィールド](file-based-destination-configuration.md#customer-data-fields) の宛先設定で定義されたは次のようになります。
 
-エンドポイントは、顧客データフィールドのランダムな値を生成し、応答で返します。 これにより、バケット名やフォルダーパスなど、顧客データフィールドのセマンティック構造を検証できます。
+API エンドポイントは、顧客データフィールドにランダムな値を生成し、応答で返します。 これにより、バケット名やフォルダーパスなどの顧客データフィールドのセマンティック構造を検証できます。
 
-詳しくは、 [専用ドキュメント](file-based-render-template-api.md) を参照してください。
+詳しくは、 [専用ドキュメント](file-based-render-template-api.md) 顧客データフィールドの値を生成および視覚化する方法を学ぶには、以下を参照してください。

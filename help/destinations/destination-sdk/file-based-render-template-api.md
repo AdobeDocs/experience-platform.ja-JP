@@ -1,9 +1,9 @@
 ---
 description: このページでは、 /authoring/testing/template/render エンドポイントを使用して、宛先設定で定義されたテンプレート化された顧客データフィールドがどのように表示されるかを視覚化する方法について説明します。
 title: テンプレート化された顧客フィールドの検証
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 20%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 成功すると、 `HTTP 200 OK` ステータスの場合、本文には、テンプレート化されたフィールドに対してランダムに生成された値が含まれます。
 
-この応答は、顧客データフィールドの正しい構造（バケット名やフォルダーパスなど）を検証するのに役立ちます。
+この応答は、バケット名やフォルダーパスなど、顧客データフィールドの正しい構造を検証するのに役立ちます。
 
 
 ```json

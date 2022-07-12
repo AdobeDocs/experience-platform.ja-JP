@@ -1,9 +1,9 @@
 ---
 description: このページでは、Destination SDKの/sample-profiles API エンドポイントを使用して、ソーススキーマに基づくサンプルプロファイルを生成する方法について説明します。 これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 ファイルベースの宛先をテストする最初の手順は、 `/sample-profiles` エンドポイント：既存のソーススキーマに基づいてサンプルプロファイルを生成します。
 
-サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。 さらに、独自のプロファイルデータでカスタマイズして、さらに宛先のテストをおこなうためのバックボーンも提供されます。
+サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。 さらに、独自のプロファイルデータを使用してをカスタマイズし、宛先テストを実施するためのデフォルトが提供されます。
 
 ## はじめに {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 次のリクエストでは、対応する `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

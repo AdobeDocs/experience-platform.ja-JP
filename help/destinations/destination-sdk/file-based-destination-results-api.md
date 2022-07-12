@@ -1,7 +1,7 @@
 ---
 description: このページでは、/testing/destinationInstance API エンドポイントを使用してテスト結果の完全な詳細を表示する方法について説明します。 この API エンドポイントは、フローサービス API を使用してデータフローを監視する場合と同じ結果を返します。
 title: 詳細なアクティベーション結果の表示
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 15%
@@ -42,7 +42,7 @@ ht-degree: 15%
 
 一度 [宛先設定を検証しました](file-based-destination-testing-api.md)に値を入力すると、詳細なアクティベーション結果を表示できます。それには、 `authoring/testing/destinationInstance/` エンドポイントを作成し、テストする宛先の宛先インスタンス ID と、アクティブ化されたセグメントのフロー実行 ID を指定します。
 
-使用する必要がある完全な API URL は、 `results` プロパティが [宛先テスト呼び出しの応答](file-based-destination-testing-api.md).
+使用する必要のある完全な API URL は、 `results` プロパティが [宛先テスト呼び出しの応答](file-based-destination-testing-api.md).
 
 **API 形式**
 
