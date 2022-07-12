@@ -6,14 +6,14 @@ description: このドキュメントでは、スキーマユーザーインタ�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 24%
+source-wordcount: '1145'
+ht-degree: 22%
 
 ---
 
-# を使用して 2 つのスキーマ間の関係を定義 [!DNL Schema Editor]
+# 2 つのスキーマ間で 1 対 1 の関係を定義するには、 [!DNL Schema Editor]
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -21,9 +21,21 @@ ht-degree: 24%
 >abstract="異なるクラスに属するスキーマは、関係フィールドを通じてコンテキスト上でリンクでき、より複雑なセグメント化ルールを作成できます。"
 >text="See the documentation for more information on schema relationships."
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="参照スキーマ"
+>abstract="関係を確立するスキーマを選択します。 このスキーマは、現在のスキーマとは異なるクラスにすることができます。"
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="参照 ID 名前空間"
+>abstract="参照スキーマのプライマリ ID フィールドの名前空間（タイプ）。 関係に参加するには、参照スキーマに確立されたプライマリ ID フィールドが必要です。"
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition を使用している場合は、 [B2B 関係の作成](./relationship-b2b.md) 代わりに、
+>Real-time Customer Data Platform B2B Edition で多対 1 の関係を作成する手順については、 [B2B 関係の作成](./relationship-b2b.md).
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。の構造内でこれらの関係を定義する [!DNL Experience Data Model] (XDM) スキーマを使用すると、顧客データに関する複雑なインサイトを得ることができます。
 
@@ -110,6 +122,10 @@ ht-degree: 24%
 ## ソーススキーマでの関係フィールドの定義 {#relationship-field}
 
 ソーススキーマに専用の参照フィールドが定義されたら、それを関係フィールドとして指定できます。
+
+>[!NOTE]
+>
+>以下の手順では、キャンバスの右側のパネルコントロールを使用して関係フィールドを定義する方法を説明します。 Real-Time CDP B2B Edition にアクセスできる場合は、 [同じ対話](./relationship-b2b.md#relationship-field) 多対 1 の関係を作成する場合と同様です。
 
 を選択します。 `favoriteHotel` キャンバスの「 」フィールドを選択し、下にスクロールします。 **[!UICONTROL フィールドプロパティ]** まで **[!UICONTROL 関係]** チェックボックスが表示されます。 このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
 

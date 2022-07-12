@@ -2,18 +2,24 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1351'
 ht-degree: 6%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
+# Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_reference_schema"
+>title="参照スキーマ"
+>abstract="関係を確立するスキーマを選択します。 スキーマのクラスに応じて、B2B コンテキスト内の他のエンティティとの既存の関係も存在する場合があります。"
+>text="See the documentation to learn how B2B schema classes relate to each other."
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition を使用していない場合は、 [B2B 以外の関係の作成](./relationship-ui.md) 代わりに、
+>Real-time Customer Data Platform B2B Edition を使用していない場合や、1 対 1 の関係を作成する場合は、 [1 対 1 の関係の作成](./relationship-ui.md) 代わりに、
 
 Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B データエンティティをキャプチャする、複数の Experience Data Model(XDM) クラスを提供します [アカウント](../classes/b2b/business-account.md), [商談](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md)など。 これらのクラスに基づいてスキーマを構築し、で使用できるようにする。 [リアルタイム顧客プロファイル](../../profile/home.md)を使用すると、異なるソースのデータを、和集合スキーマと呼ばれる統合表現に結合できます。
 
@@ -45,7 +51,13 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 
 ### B2B の関係で ID を理解する
 
-関係を確立するには、両方のスキーマでプライマリ ID が定義され、 [!DNL Real-time Customer Profile]. B2B エンティティのプライマリ ID を設定する場合、文字列ベースのエンティティ ID が異なるシステムや場所で収集されると、Platform 内のデータの競合を引き起こす可能性があるので、重複する可能性があることに注意してください。
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_identity_namespace"
+>title="参照 ID 名前空間"
+>abstract="参照スキーマのプライマリ ID フィールドの名前空間（タイプ）。 関係に参加するには、参照スキーマに確立されたプライマリ ID フィールドが必要です。"
+>text="See the documentation to learn more about identities in B2B relationships."
+
+関係を確立するには、宛先スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合、文字列ベースのエンティティ ID が異なるシステムや場所で収集されると、Platform 内のデータの競合を引き起こす可能性があるので、重複する可能性があることに注意してください。
 
 これを考慮するために、すべての標準 B2B クラスには、 [[!UICONTROL B2B ソース] データタイプ](../data-types/b2b-source.md). このデータ型は、B2B エンティティの文字列識別子のフィールドと、識別子のソースに関するその他のコンテキスト情報を提供します。 この一つのフィールドは `sourceKey`がデータ型の他のフィールドの値を連結して、エンティティの完全に一意の識別子を生成します。 このフィールドは、常に B2B エンティティスキーマのプライマリ ID として使用する必要があります。
 
@@ -60,6 +72,7 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 ### [!DNL Opportunities] schema
 
 ソーススキーマ「 」[!DNL Opportunities]」が [!UICONTROL XDM ビジネスオポチュニティ] クラス。 クラスが提供するフィールドの 1 つ。 `opportunityKey`は、スキーマの識別子として機能します。 特に、 `sourceKey` 下のフィールド `opportunityKey` オブジェクトは、 [!DNL B2B Opportunity].
+
 以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-time Customer Profile].
 
 ![商談スキーマ](../images/tutorials/relationship-b2b/opportunities.png)
@@ -72,11 +85,23 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 
 ## ソーススキーマでの関係フィールドの定義 {#relationship-field}
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_current"
+>title="現在のスキーマからの関係名"
+>abstract="現在のスキーマから参照スキーマへの関係を示すラベル（「関連アカウント」など）。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。"
+>text="See the documentation to learn more about building B2B schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_reference"
+>title="参照スキーマからの関係名"
+>abstract="参照スキーマから現在のスキーマへの関係（「関連オポチュニティ」など）を示すラベル。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。"
+>text="See the documentation to learn more about building B2B schema relationships."
+
 2 つのスキーマ間の関係を定義するには、ソーススキーマに、宛先スキーマのプライマリ ID を参照する専用のフィールドが必要です。 標準 B2B クラスには、一般的に関連するビジネスエンティティ用の専用のソースキーフィールドが含まれています。 例えば、 [!UICONTROL XDM ビジネスオポチュニティ] クラスには、関連するアカウントのソースキーフィールドが含まれます (`accountKey`) および関連するキャンペーン (`campaignKey`) をクリックします。 ただし、他の [!UICONTROL B2B ソース] デフォルトのコンポーネント以外が必要な場合は、カスタムフィールドグループを使用してスキーマにフィールドを追加します。
 
 >[!NOTE]
 >
->現在、ソーススキーマから宛先スキーマへは、多対 1 の関係のみを定義できます。 1 対多の関係の場合、「多数」を表すスキーマで関係フィールドを定義する必要があります。
+>現在、ソーススキーマから宛先スキーマへの多対 1 および 1 対 1 の関係のみを定義できます。 1 対多の関係の場合、「多数」を表すスキーマで関係フィールドを定義する必要があります。
 
 関係フィールドを設定するには、矢印アイコン (![矢印アイコン](../images/tutorials/relationship-b2b/arrow.png)) をクリックします。 の場合、 [!DNL Opportunities] スキーマ、これは `accountKey.sourceKey` フィールドを変更する必要があります。
 
