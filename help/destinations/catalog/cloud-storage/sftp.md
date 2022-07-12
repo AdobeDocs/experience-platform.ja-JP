@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 715533352e84573f60f012504988595af6146e2f
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 7%
+source-wordcount: '673'
+ht-degree: 6%
 
 ---
 
@@ -39,9 +39,9 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
-### 接続パラメーター {#parameters}
+### 認証情報 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -51,11 +51,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="SSH 秘密鍵"
->abstract="SSH 秘密鍵は、Base64 エンコードされた文字列形式にする必要があり、パスワードで保護しないでください。 "
-
-条件 [接続](../../ui/connect-destination.md) をこの宛先に追加するには、次の情報を指定する必要があります。
-
-#### 認証情報 {#authentication-information}
+>abstract="SSH 秘密鍵は、Base64 エンコードされた文字列形式にする必要があり、パスワードで保護しないでください。"
 
 次を選択した場合、 **[!UICONTROL 基本認証]** SFTP の場所に接続するには、次のように入力します。
 
@@ -83,7 +79,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 
       ![PGP キー](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 宛先の詳細 {#destination-details}
+### 宛先の詳細 {#destination-details}
 
 SFTP の場所への認証接続を確立したら、宛先に次の情報を指定します。
 

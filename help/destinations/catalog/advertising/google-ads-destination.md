@@ -3,10 +3,10 @@ keywords: Google広告；google 広告；google adwords;Google AdWords;Google Ad
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 23%
+source-wordcount: '898'
+ht-degree: 24%
 
 ---
 
@@ -91,6 +91,12 @@ ht-degree: 23%
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
 * **[!UICONTROL アカウント ID]**:アカウント ID に [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

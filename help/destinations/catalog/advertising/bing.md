@@ -3,10 +3,10 @@ keywords: '広告；ビング '
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
+source-git-commit: 812688043a7da943832b5798de0f433928634998
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 12%
+source-wordcount: '633'
+ht-degree: 14%
 
 ---
 
@@ -70,6 +70,12 @@ ht-degree: 12%
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**:お使いの [!DNL Bing Ads CID].
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

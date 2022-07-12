@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メールの宛先；送信�
 title: SendGrid 接続
 description: SendGrid の宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 7%
+source-wordcount: '1548'
+ht-degree: 8%
 
 ---
 
@@ -78,8 +78,9 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に固有の手順を次に示します。
+### 宛先に対する認証 {#authenticate}
 
 1. 内 [!DNL Adobe Experience Platform] コンソール、に移動します。 **宛先**.
 
@@ -96,7 +97,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### 接続パラメーター {#parameters}
+### 宛先の詳細を入力 {#destination-details}
 
 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en)するとき、次の情報を指定する必要があります。
 
@@ -104,6 +105,12 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 * **[!UICONTROL 説明]**:将来この宛先を識別するのに役立つオプションの説明です。
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

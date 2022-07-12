@@ -3,10 +3,10 @@ keywords: モバイル；勇気づけメッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 9%
+source-wordcount: '1001'
+ht-degree: 8%
 
 ---
 
@@ -61,16 +61,27 @@ ht-degree: 9%
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
-### 接続パラメーター {#parameters}
+### 宛先に対する認証 {#authenticate}
 
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
+宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
 * **[!UICONTROL アカウントトークンをブレーズ]**:これがあなたの [!DNL Braze] [!DNL API] キー。 詳細な手順については、 [!DNL API] キー： [REST API キーの概要](https://www.braze.com/docs/api/api_key/).
+
+### 宛先の詳細を入力 {#destination-details}
+
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前を入力します。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明を入力します。
 * **[!UICONTROL エンドポイントインスタンス]**:に尋ねる [!DNL Braze] 使用する必要のあるエンドポイントインスタンスを表します。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

@@ -3,10 +3,10 @@ keywords: 広告；criteo
 title: 条件の接続
 description: Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 7%
+source-wordcount: '1005'
+ht-degree: 8%
 
 ---
 
@@ -102,6 +102,12 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 | API バージョン | Criteo API バージョン。 [ プレビュー ] を選択してください。 | ○ |
 | 広告主 ID | 組織の Criteo 広告主 ID。 この情報を入手するには、Criteo のアカウントマネージャーにお問い合わせください。 | ○ |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] 組織内の 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 [!DNL GUM] 同期（必要に応じて） | はい、いつでも [!DNL GUM ID] は識別子として指定されます |
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate-segments}
 

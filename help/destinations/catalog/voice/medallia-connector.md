@@ -1,19 +1,19 @@
 ---
 title: Medallia 接続
-description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。
+exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 6%
+source-wordcount: '1102'
+ht-degree: 10%
 
 ---
-
 
 # Medallia 接続
 
 ## 概要 {#overview}
 
-ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルをアクティブ化して、顧客のニーズと期待をより深く理解します。
+ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -84,7 +84,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
@@ -92,6 +92,12 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 * **[!UICONTROL インポート API 名]**:Medalia 配信チームから入手します。 この接続で使用する Medalia 読み込み API（Web フィードとも呼ばれます）の名前。 様々なセグメントを様々な読み込み API に対してアクティブ化し、様々な調査プログラムをトリガーにすることができます。
 
 ![この宛先の宛先の詳細画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

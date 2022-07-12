@@ -3,9 +3,9 @@ keywords: E メール；E メール；E メールの宛先；Adobe Campaign;Camp
 title: Adobe Campaign 接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '888'
 ht-degree: 22%
 
 ---
@@ -67,6 +67,12 @@ Adobe Campaignは、次の接続タイプをサポートしています。
 * **[!UICONTROL フォルダーパス]**:ストレージの場所に次のパスを指定します。 [!DNL Platform] は、書き出しデータを CSV ファイルとして保存します。
 * **[!UICONTROL コンテナ]**: *BLOB 接続の場合*. フォルダーパスが含まれる BLOB を格納するコンテナです。
 * **[!UICONTROL ファイル形式]**:選択 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

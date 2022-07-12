@@ -3,10 +3,10 @@ title: HTTP API 接続
 keywords: ストリーミング；
 description: Adobe Experience Platformの HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信し、独自の分析を実行したり、Experience Platform外に書き出されたプロファイルデータに対して必要なその他の操作を実行したりします。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 3%
+source-wordcount: '2374'
+ht-degree: 4%
 
 ---
 
@@ -138,7 +138,7 @@ curl --location --request POST 'https://some-api.com/token' \
    * **[!UICONTROL 本文のエンコード]**:この場合、 [!DNL client ID] および [!DNL client secret] 含まれる *リクエストの本文内* を宛先に送信しました。 例については、 [サポートされる認証タイプ](#supported-authentication-types) 」セクションに入力します。
    * **[!UICONTROL 基本認証]**:この場合、 [!DNL client ID] および [!DNL client secret] 含まれる *内 `Authorization` ヘッダー* base64 エンコードされ、宛先に送信された後。 例については、 [サポートされる認証タイプ](#supported-authentication-types) 」セクションに入力します。
 
-### 宛先の詳細 {#destination-details}
+### 宛先の詳細を入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >title="クエリのパラメーター"
 >abstract="オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを次のように書式設定します。 `parameter1=value&parameter2=value`."
 
-HTTP エンドポイントへの認証接続を確立したら、宛先に次の情報を指定します。
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 
 ![HTTP 宛先の詳細に関する入力済みフィールドを示す UI 画面の画像](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ HTTP エンドポイントへの認証接続を確立したら、宛先に次の
 * **[!UICONTROL クエリパラメーター]**:オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを次のように書式設定します。 `parameter1=value&parameter2=value`.
 * **[!UICONTROL セグメント名を含める]**:データの書き出しで、書き出すセグメントの名前を含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
 * **[!UICONTROL セグメントのタイムスタンプを含める]**:セグメントが作成および更新された際の UNIX タイムスタンプと、セグメントがアクティベーションのために宛先にマッピングされた際の UNIX タイムスタンプをデータエクスポートに含めるかどうかを切り替えます。 このオプションを選択した場合のデータエクスポートの例については、 [書き出されたデータ](#exported-data) の節を参照してください。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

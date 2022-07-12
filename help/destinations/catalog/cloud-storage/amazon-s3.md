@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services(AWS)S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f3f713848c7796c95d5326eba8a2e75f36704fd0
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 5%
+source-wordcount: '753'
+ht-degree: 7%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -54,8 +54,6 @@ ht-degree: 5%
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
-
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="バケット名"
@@ -67,6 +65,8 @@ ht-degree: 5%
 >abstract="A ～ Z、a ～ z、0 ～ 9 の文字のみを含める必要があります。また、次の特殊文字を含めることができます。 `/!-_.'()"^[]+$%.*"`. セグメントファイルごとにフォルダーを作成するには、マクロを挿入します。 `/%SEGMENT_NAME%` または `/%SEGMENT_ID%` または `/%SEGMENT_NAME%/%SEGMENT_ID%` をテキストフィールドに挿入します。 マクロは、フォルダーパスの最後にのみ挿入できます。 マクロの例をドキュメントに表示します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="マクロを使用して、ストレージの場所にフォルダーを作成する"
 
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+
 * **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**:名前を入力 [!DNL Amazon S3] この宛先で使用するバケット。
@@ -75,6 +75,12 @@ ht-degree: 5%
 >[!TIP]
 >
 >「宛先の接続」ワークフローでは、書き出したセグメントファイルごとにAmazon S3 ストレージにカスタムフォルダーを作成できます。 読み取り [マクロを使用して、ストレージの場所にフォルダーを作成する](overview.md#use-macros) 」を参照してください。
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ### 必須 [!DNL Amazon S3] 権限 {#required-s3-permission}
 

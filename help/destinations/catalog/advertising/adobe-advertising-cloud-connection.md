@@ -2,10 +2,10 @@
 title: Adobe Advertising Cloud DSP接続
 description: Adobe Advertising Cloud DSPは、 [!DNL Adobe Real-time Customer Data Profile]：認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有して、キャンペーンをアクティベートできます。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 4%
+source-wordcount: '1026'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## 概要 {#overview}
 
-ザAdobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) の宛先を使用すると、認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有し、DSPとキャンペーンのアクティベーション用に共有できます。 DSPとのReal-Time CDP統合について詳しくは、 [オーディエンスソースからの認証済みセグメントのアクティブ化について](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+Adobe Advertising Cloud [!DNL Demand-Side Platform]（DSP）の宛先を使用すると、DSP とキャンペーンのアクティベーション用に、認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有できます。DSPとのReal-Time CDP統合について詳しくは、 [オーディエンスソースからの認証済みセグメントのアクティブ化について](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -78,12 +78,18 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、 [!UICONTROL 宛先の詳細] セクションで、 **[!UICONTROL 次へ]**.
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
 
 ![宛先の詳細フィールド](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

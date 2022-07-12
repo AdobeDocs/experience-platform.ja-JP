@@ -3,10 +3,10 @@ keywords: linkedin 接続；linkedin 接続；linkedin 宛先；linkedin;linkedi
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 16%
+source-wordcount: '1041'
+ht-degree: 15%
 
 ---
 
@@ -91,7 +91,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 > 
 >宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
 
 次のビデオでは、 [!DNL LinkedIn Matched Audiences] の宛先に移動して、セグメントをアクティブ化します。
 
@@ -101,13 +101,31 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 >
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
 
-### 接続パラメーター {#parameters}
+### 宛先に対する認証 {#authenticate}
 
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
+1. 次を検索： [!DNL LinkedIn Matched Audiences] 宛先カタログの宛先および「 」を選択します。 **[!UICONTROL 設定]**.
+2. 選択 **[!UICONTROL 宛先に接続]**.
+   ![LinkedInへの認証](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. LinkedIn資格情報を入力し、「 」を選択します。 **ログイン**.
 
-* **[!UICONTROL 名前]**:この宛先を将来認識するための名前。
-* **[!UICONTROL 説明]**:この宛先を将来識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:あなたの [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント
+### 宛先の詳細を入力 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="アカウント ID"
+>abstract="LinkedIn Campaign Manager アカウント ID。 この ID は、LinkedIn Campaign Manager アカウントで確認できます。"
+
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+
+* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
+* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL アカウント ID]**:お使いの [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント
+
+### アラートの有効化 {#enable-alerts}
+
+アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+
+宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

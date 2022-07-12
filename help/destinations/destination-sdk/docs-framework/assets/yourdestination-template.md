@@ -1,25 +1,19 @@
 ---
-title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
+title: セルフサービステンプレート//宛先の名前に置き換える
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 7%
+source-wordcount: '1341'
+ht-degree: 6%
 
 ---
+
 
 # 宛先接続 {#your-destination}
 
 *このテンプレートの操作中に、斜体のすべての段落を置き換えるか削除します（この段落から始まります）。*
 
 *まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページの UICONTROL のすべてのインスタンスを無視してください。 これは、機械翻訳プロセスがページをサポートする複数の言語に正しく翻訳するのに役立つタグです。 提出後、ドキュメントにタグを追加します。*
-
->[!IMPORTANT]
->
->* このテンプレートのすべてのセクションを、テンプレートで説明されている順序で入力します。
->* このテンプレートは、パートナーからのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## 概要 {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 7%
 
 をいつどのように使用するかをより深く理解するのに役立ちます。 *宛先* の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
-### 使用例#1 {#use-case-1}
+### 使用例#1
 
 *モバイルメッセージプラットフォームの場合：*
 
 *レンタルや販売用プラットフォームは、顧客の Android やiOSのデバイスにモバイル通知をプッシュして、以前にレンタルを検索した地域に更新済みの 100 件のリストがあることを知らせたいと考えています。*
 
-### 使用例#2 {#use-case-2}
+### 使用例#2
 
 *ソーシャルネットワークプラットフォームの場合：*
 
@@ -102,7 +96,7 @@ ht-degree: 7%
 
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
-![宛先への認証方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![宛先への認証方法をユーザーに示す 1 つ以上のサンプルスクリーンショットへのリンクをここに追加します](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Bearer トークン]**:宛先への認証をおこなうために bearer トークンを入力します。
 
@@ -112,7 +106,7 @@ ht-degree: 7%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 
-![宛先の詳細を入力する方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![ここに、宛先の詳細を入力する方法を示す 1 つ以上のサンプルスクリーンショットへのリンクを追加します](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
@@ -130,7 +124,7 @@ ht-degree: 7%
 > 
 >データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。
+読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](../../ui/activate/activate-segment-streaming-destinations.md) を参照してください。
 
 ## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
 
@@ -176,7 +170,7 @@ ht-degree: 7%
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](/help/data-governance/home.md).
 
 ## その他のリソース {#additional-resources}
 
