@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '818'
 ht-degree: 86%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 86%
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
+      * [（ベータ版）Snapchat 広告接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag 拡張機能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 接続](./catalog/advertising/datax.md)
