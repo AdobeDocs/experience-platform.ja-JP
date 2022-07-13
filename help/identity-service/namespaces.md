@@ -5,9 +5,9 @@ title: ID 名前空間の概要
 topic-legacy: overview
 description: ID 名前空間 は、ID の関連先コンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1627'
 ht-degree: 19%
 
 ---
@@ -32,7 +32,13 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 
 ![](images/identity-service-stitching.png)
 
-### ID タイプ
+### ID タイプ {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="ID タイプを指定"
+>abstract="ID タイプは、データを ID グラフに保存するかどうかを制御します。 人以外の識別子は保存されず、その他の ID タイプはすべて保存されます。"
+>text="Learn more in documentation"
 
 データは、複数の異なる ID タイプで識別できます。ID タイプは、ID 名前空間の作成時に指定されます。この ID タイプによって、データを ID グラフに保持するかどうか、およびそのデータの処理方法の手順が決まります。を除くすべての ID タイプ **人以外の識別子** 同じ動作に従って、名前空間とそれに対応する ID 値を id グラフクラスターにステッチします。 を使用する際に、データは結合されません **人以外の識別子**.
 
@@ -43,7 +49,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | cookie ID | cookie ID は Web ブラウザーを識別します。 この ID は拡張に不可欠で、ID グラフの大部分を占めます。ただし、cookie は、その性質上急速に劣化し、時間の経過と共にその価値が失われます。 |
 | クロスデバイス ID | クロスデバイス ID は個人を識別し、通常は他の ID を結び付けます。 例えば、ログイン ID、CRM ID、ロイヤルティ ID などがあります。 これは～を示すものだ [!DNL Identity Service] を使用して、値を慎重に処理します。 |
 | デバイス ID | デバイス ID は、IDFA(iPhoneとiPad)、GAID(Android)、RIDA(Roku) などのハードウェアデバイスを識別し、家庭内の複数のユーザーが共有できます。 |
-| 電子メールアドレス | 電子メールアドレスは多くの場合、1 人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には、個人を特定できる情報（PII）が含まれています。これは～を示すものだ [!DNL Identity Service] を使用して、値を慎重に処理します。 |
+| メールアドレス | 電子メールアドレスは多くの場合、1 人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には、個人を特定できる情報（PII）が含まれています。これは～を示すものだ [!DNL Identity Service] を使用して、値を慎重に処理します。 |
 | 人以外の識別子 | 人以外の ID は、名前空間を必要とするが、人物クラスターに接続されていない ID の保存に使用されます。 例えば、製品 SKU、製品、組織、店舗に関連するデータなどです。 |
 | 電話番号 | 電話番号は多くの場合、1 人の人物に関連付けられているので、様々なチャネルをまたいでその人物を識別するために使用できます。 このタイプの ID には PII が含まれます。これは～を示している [!DNL Identity Service] を使用して、値を慎重に処理します。 |
 
@@ -70,14 +76,14 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | 電話 (E.164) | E.164 形式でハッシュ化する必要がある生の電話番号を表す名前空間。 E.164 形式には、プラス記号 (`+`)、国際電話番号、市外局番、電話番号。 例：`(+)(country code)(area code)(phone number)`。 |
 | 電話 (SHA256) | SHA256 を使用してハッシュ化する必要がある電話番号を表す名前空間。 記号、文字、および先頭のゼロを削除する必要があります。 また、国呼び出しコードをプレフィックスとして追加する必要があります。 |
 | 電話 (SHA256_E.164) | SHA256 形式と E.164 形式の両方を使用してハッシュ化する必要がある生の電話番号を表す名前空間です。 |
-| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [ターゲット](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 詳細情報を参照してください。 |
+| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [ターゲット](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) 詳細情報を参照してください。 |
 | Windows AID | Windows 広告 ID を表す名前空間。 次のドキュメントを参照してください： [Windows 広告 ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) を参照してください。 |
 
 ### ID 名前空間の表示
 
 UI で ID 名前空間を表示するには、「 **[!UICONTROL ID]** 左側のナビゲーションで「 」を選択し、 **[!UICONTROL 参照]**.
 
-![参照](./images/browse.png)
+![閲覧](./images/browse.png)
 
 ID 名前空間のリストがページのメインインターフェイスに表示され、名前、ID 記号、最終更新日、および標準名前空間かカスタム名前空間かに関する情報が表示されます。 右側のレールには、 [!UICONTROL ID グラフの強さ].
 

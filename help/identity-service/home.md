@@ -5,10 +5,10 @@ title: ID サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
-ht-degree: 100%
+source-wordcount: '1839'
+ht-degree: 96%
 
 ---
 
@@ -63,10 +63,21 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 - 銀行では、支店トランザクションなど、オフラインのデータセットで「口座番号」を使用する場合があります。ほとんどの訪問者は訪問中に認証されるので、オンラインデータセットの「ログイン ID」に依存する場合があります。
 - また、GUID やその他のユニバーサル固有識別子（UUID）など、顧客固有の専用 ID を持つ場合もあります。
 
-## ID 名前空間
+## ID 名前空間 {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="ID 名前空間"
+>abstract="ID 名前空間は、ID のコンテキストまたはタイプを区別するのに役立ちます。例えば、ある ID は、「name<span>@email.com」をメールアドレスとして、「443522」を数値 CRM ID として区別します。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="ID 値"
+>abstract="ID 値は、一意の個人、組織またはアセットを表す識別子です。 値が表す ID のコンテキストまたはタイプは、対応する ID 名前空間によって定義されます。 プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値は一致する必要があります。プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。"
+>text="Learn more in documentation"
 
 「ID は何ですか」と聞いた場合、それ以上の文脈がなければ、役に立つ答えを出すのは難しいものです。同じ論理で、ID 値を表す文字列値は、システム生成の ID であるかメールアドレスであるかにかかわらず、文字列値のコンテキストを与える修飾子（ID 名前空間）が提供されたときにのみ完成します
-
 
 顧客は、オンラインチャネルとオフラインチャネルを組み合わせてブランドとやり取りを行う場合があります。その結果、それらの断片化されたインタラクションをどのようにして単一の顧客 ID にまとめるかという課題が生じます。
 
