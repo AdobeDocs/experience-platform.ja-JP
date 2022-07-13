@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 30%
+source-wordcount: '873'
+ht-degree: 28%
 
 ---
 
@@ -64,8 +64,8 @@ ht-degree: 30%
 
 * **アカウント ID**:AdobeのGoogleアカウント ID。 アカウント ID :87933855.
 * **顧客 ID**:Adobeの顧客アカウント ID とGoogle。 顧客 ID :89690775.
-* **ネットワーク ID**：これは のアカウントです。[!DNL Google Ad Manager]
-* **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
+* **ネットワークコード**:これがあなたの [!DNL Google Ad Manager] ネットワーク識別子（の下） **[!UICONTROL 管理者/グローバル設定]** (Googleインターフェイスの ) または（URL の）を参照してください。
+* **オーディエンスリンク ID**:これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) は、の下にもあります。 **[!UICONTROL 管理者/グローバル設定]** Googleインターフェイスの
 * アカウントの種類。Google DFP または AdX 購入者。
 
 ## 宛先への接続 {#connect}
