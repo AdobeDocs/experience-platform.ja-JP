@@ -1,9 +1,9 @@
 ---
 description: このページでは、Destination SDKの/sample-profiles API エンドポイントを使用して、ソーススキーマに基づくサンプルプロファイルを生成する方法について説明します。 これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 13%
 
 ---
@@ -108,7 +108,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 | -------- | ----------- |
 | `segmentMembership` | 個人のセグメントメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [セグメントメンバーシップの詳細](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
+| `status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
 | `identityMap` | 個々の ID の様々な値と、関連する名前空間を説明する map-type フィールドです。 詳しくは、 `identityMap`を参照してください。 [スキーマ構成の基盤](../../xdm/schema/composition.md#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
