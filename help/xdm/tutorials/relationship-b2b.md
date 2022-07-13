@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 6%
+source-wordcount: '1401'
+ht-degree: 5%
 
 ---
 
@@ -14,12 +14,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="参照スキーマ"
->abstract="関係を確立するスキーマを選択します。 スキーマのクラスに応じて、B2B コンテキスト内の他のエンティティとの既存の関係も存在する場合があります。"
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Real-time Customer Data Platform B2B Edition を使用していない場合や、1 対 1 の関係を作成する場合は、 [1 対 1 の関係の作成](./relationship-ui.md) 代わりに、
+>abstract="関係を確立するスキーマを選択します。 スキーマのクラスに応じて、B2B コンテキスト内の他のエンティティとの既存の関係も存在する場合があります。 B2B スキーマクラスが相互にどのように関係しているかについては、ドキュメントを参照してください。"
 
 Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B データエンティティをキャプチャする、複数の Experience Data Model(XDM) クラスを提供します [アカウント](../classes/b2b/business-account.md), [商談](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md)など。 これらのクラスに基づいてスキーマを構築し、で使用できるようにする。 [リアルタイム顧客プロファイル](../../profile/home.md)を使用すると、異なるソースのデータを、和集合スキーマと呼ばれる統合表現に結合できます。
 
@@ -32,6 +27,8 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 このチュートリアルでは、Real-time CDP B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する手順を説明します。
 
 >[!NOTE]
+>
+>Real-time Customer Data Platform B2B Edition を使用していない場合や、1 対 1 の関係を作成する場合は、 [1 対 1 の関係の作成](./relationship-ui.md) 代わりに、
 >
 >このチュートリアルでは、Platform UI で B2B スキーマ間の関係を手動で確立する方法に焦点を当てます。 B2B ソース接続からデータを取り込む場合は、自動生成ユーティリティを使用して、必要なスキーマ、ID、関係を代わりに作成できます。 詳しくは、B2B 名前空間とスキーマに関するソースのドキュメントを参照してください。 [自動生成ユーティリティの使用](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -54,8 +51,7 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="参照 ID 名前空間"
->abstract="参照スキーマのプライマリ ID フィールドの名前空間（タイプ）。 関係に参加するには、参照スキーマに確立されたプライマリ ID フィールドが必要です。"
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="参照スキーマのプライマリ ID フィールドの名前空間（タイプ）。 関係に参加するには、参照スキーマに確立されたプライマリ ID フィールドが必要です。 B2B の関係で ID について詳しくは、ドキュメントを参照してください。"
 
 関係を確立するには、宛先スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合、文字列ベースのエンティティ ID が異なるシステムや場所で収集されると、Platform 内のデータの競合を引き起こす可能性があるので、重複する可能性があることに注意してください。
 
@@ -88,14 +84,12 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="現在のスキーマからの関係名"
->abstract="現在のスキーマから参照スキーマへの関係を示すラベル（「関連アカウント」など）。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。"
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="現在のスキーマから参照スキーマへの関係を示すラベル（「関連アカウント」など）。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。 B2B スキーマの関係の構築について詳しくは、ドキュメントを参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="参照スキーマからの関係名"
->abstract="参照スキーマから現在のスキーマへの関係（「関連オポチュニティ」など）を示すラベル。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。"
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="参照スキーマから現在のスキーマへの関係（「関連オポチュニティ」など）を示すラベル。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。 B2B スキーマの関係の構築について詳しくは、ドキュメントを参照してください。"
 
 2 つのスキーマ間の関係を定義するには、ソーススキーマに、宛先スキーマのプライマリ ID を参照する専用のフィールドが必要です。 標準 B2B クラスには、一般的に関連するビジネスエンティティ用の専用のソースキーフィールドが含まれています。 例えば、 [!UICONTROL XDM ビジネスオポチュニティ] クラスには、関連するアカウントのソースキーフィールドが含まれます (`accountKey`) および関連するキャンペーン (`campaignKey`) をクリックします。 ただし、他の [!UICONTROL B2B ソース] デフォルトのコンポーネント以外が必要な場合は、カスタムフィールドグループを使用してスキーマにフィールドを追加します。
 

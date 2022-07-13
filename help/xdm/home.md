@@ -5,10 +5,10 @@ title: XDM システムの概要
 topic-legacy: overview
 description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
-workflow-type: ht
-source-wordcount: '2076'
-ht-degree: 100%
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+workflow-type: tm+mt
+source-wordcount: '2087'
+ht-degree: 99%
 
 ---
 
@@ -54,8 +54,7 @@ Platform のスキーマを管理および操作する方法について詳し�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="データの動作"
->abstract="Experience Platform での使用を意図したデータは、レコード、時系列およびアドホックの 3 つの動作タイプに分けられます。レコードスキーマは、サブジェクトの属性に関する情報を提供し、時系列スキーマは、アクションが実行された時点でのシステムのスナップショットをキャプチャします。アドホックスキーマは、単一のデータセットでのみ使用する名前空間であるフィールドをキャプチャします。"
->text="See the documentation for more information on data behaviors in Platform."
+>abstract="Experience Platform での使用を意図したデータは、レコード、時系列およびアドホックの 3 つの動作タイプに分けられます。レコードスキーマは、サブジェクトの属性に関する情報を提供し、時系列スキーマは、アクションが実行された時点でのシステムのスナップショットをキャプチャします。アドホックスキーマは、単一のデータセットでのみ使用する名前空間であるフィールドをキャプチャします。Platform でのデータ動作について詳しくは、ドキュメントを参照してください。"
 
 Experience Platform 用のデータは、次の 3 つの動作タイプに分類されます。
 
