@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;データ収集;launch;web sdk
 solution: Experience Platform
-title: Real-time Customer Data Platform接続の概要
+title: Real-Time Customer Data Platform Connections の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '472'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
-# Real-time Customer Data Platform接続の概要
+# Real-Time Customer Data Platform Connections の概要
 
-Real-time Customer Data Platform(RTCDP)Connections は、クライアント側のソースから顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先に数秒でエンリッチメント、変換、配布できるテクノロジーのスイートを提供します。
+Real-Time Customer Data Platform（RTCDP）Connections は、クライアントサイドのソースからカスタマーエクスペリエンスのデータを収集して Adobe Experience Platform の Edge Network に送信し、そのデータを強化および変換して、アドビやアドビ以外の宛先に数秒で配信できるようにする一連のテクノロジーを提供します。
 
-RTCDP 接続は、次のクライアント側ソースでサポートされています。
+RTCDP Connections は、以下のクライアント側のソースに対応しています。
 
 * Web ベースのアプリケーション
 * ネイティブモバイルアプリケーション
 * オーバーザトップ（OTT）アプリケーション
 
-RTCDP 接続では、取り込んだデータセットの検出性とアクセシビリティに重点を置いて、次の項目を取り上げます。
+RTCDP Connections では、取り込んだデータセットの検出性とアクセス性に重点を置いており、以下を含んでいます。
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=ja)
 * [タグ](../tags/home.md)
@@ -34,7 +34,7 @@ RTCDP 接続では、取り込んだデータセットの検出性とアクセ�
 * [エクスペリエンスデータモデル（XDM）](../xdm/home.md)
 * [Adobe Experience Platform ID サービス](../identity-service/home.md)
 
-このガイドでは、RTCDP 接続の概要と、Platform Edge Network を通じてAdobe Experience Cloud製品およびAdobe以外のアプリケーションにデータを送信する方法について説明します。
+このガイドでは、RTCDP Connections の概要と、Platform Edge Network を介して Adobe Experience Cloud 製品やアドビ以外のアプリケーションにデータを送信する仕組みについて説明しています。
 
 ## タグ、Web SDK および Mobile SDK
 
@@ -62,12 +62,12 @@ Platform Edge Network とは、世界中に分散された信頼性の高い高�
 
 >[!NOTE]
 >
->イベント転送は、Real-time Customer Data Platform Connections の機能の一部としてのみ含まれる有料機能です。
+>イベント転送は、Real-time Customer Data Platform Connections の一部としてのみ提供される有料機能です。
 
 ## 次の手順
 
-このドキュメントでは、収集した顧客体験データをAdobe製品やサードパーティの宛先に送信するプロセスを自動化する RTCDP 接続の仕組みの概要を説明しました。
+このドキュメントでは、収集したカスタマーエクスペリエンスのデータをアドビ製品やサードパーティ製品に送信するプロセスを自動化する、RTCDP Connections のしくみについて概要を説明しました。
 
 ![データ収集フレームワーク](./images/home/collection.png)
 
-Edge ネットワークを介したイベントデータの送信に関する一般的なワークフローについて詳しくは、 [エンドツーエンドの概要](./e2e.md).
+Edge Network を介したイベントデータの送信に関する一般的なワークフローについて詳しくは、[エンドツーエンドの概要](./e2e.md)を参照してください。
