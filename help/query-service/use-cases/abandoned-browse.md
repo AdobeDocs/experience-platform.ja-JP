@@ -4,7 +4,7 @@ title: Adobe Experience Platformクエリサービスの使用例
 topic-legacy: tutorial
 description: Adobe Experience Platform Query Service の汎用性とメリットを示すエンドツーエンドの例です。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 このドキュメントと付属のビデオプレゼンテーションは、Adobe Experience Platformがどのように機能するかを示す高レベルのエンドツーエンドのワークフローを提供します [!DNL Query Service] は、組織の戦略的ビジネスインサイトを活用します。 閲覧中断の使用例を例として使用したこのガイドでは、次の主要概念を説明します。
 
-* Adobe Experience Platformの潜在能力を最大限に引き出すためのデータ処理の重要性
+* Adobe Experience Platformの潜在能力を最大限に引き出すための、データ処理の重要な重要性。
 * 既存のデータアーキテクチャに基づいてクエリを作成する方法。
 * ニーズを満たすデータ品質、および不足を軽減する方法を確保する。
 * パーソナライゼーションのためのセグメント化と宛先で、設定された頻度でクエリを実行するようにスケジュールするプロセスです。

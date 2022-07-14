@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: b93221a9611de719d5194c387d582e77a162a1fd
+source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 73%
+source-wordcount: '199'
+ht-degree: 72%
 
 ---
 
@@ -44,7 +44,9 @@ ht-degree: 73%
    - [匿名ブロック](best-practices/anonymous-block.md)
    - [増分読み込み](best-practices/incremental-load.md)
    - [データ重複排除](best-practices/deduplication.md)
-- [派生属性](derived-attributes.md)
+- 派生属性 {#derived-attributes}
+   - [概要](derived-attributes/overview.md)
+   - [デシルのユースケース](derived-attributes/deciles-use-case.md)
 - サンプルクエリ {#sample-queries}
    - [エクスペリエンスイベントクエリの例](sample-queries/experience-event.md)
    - [Adobe Analytics クエリの例](sample-queries/adobe-analytics.md)
