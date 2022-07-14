@@ -1,19 +1,19 @@
 ---
-title: Real-time Customer Data Platform Connections エンドツーエンドの概要
-description: Real-time Customer Data Platform接続を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
+title: Real-Time Customer Data Platform Connections のエンドツーエンドの概要
+description: Real-Time Customer Data Platform Connections を使用して Adobe Experience Cloud ソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2612'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # Real-time Customer Data Platform Connections のエンドツーエンドの概要
 
-Real-time Customer Data Platform(RTCDP) 接続は、データを収集し、他のAdobe製品やサードパーティの宛先に転送します。 アプリケーションから Adobe Experience Platform Edge ネットワークにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先へとデータを配信するように設定する方法を理解することが重要です。
+Real-time Customer Data Platform（RTCDP）Connections は、データを収集し、他の Adobe 製品やサードパーティの宛先に転送します。アプリケーションから Adobe Experience Platform Edge Network にイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先へとデータを配信するように設定する方法を理解することが重要です。
 
-このガイドでは、RTCDP 接続を使用して Edge ネットワークを通じてイベントを送信する方法に関する概要のチュートリアルを提供します。 具体的には、チュートリアルでは、データ収集 UI（旧 Adobe Experience Platform Launch）内で Adobe Experience Platform Web SDK タグ拡張機能をインストールおよび設定する手順について説明します。
+このガイドでは、RTCDP Connections を使用し、Edge Network を通じてイベントを送信する方法について、大まかなチュートリアルを提供します。具体的には、チュートリアルでは、データ収集 UI（旧 Adobe Experience Platform Launch）内で Adobe Experience Platform Web SDK タグ拡張機能をインストールおよび設定する手順について説明します。
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Real-time Customer Data Platform(RTCDP) 接続は、データを収集し、他�
 
 ## プロセスの概要
 
-Web サイトの RTCDP 接続を設定するプロセスの概要は次のとおりです。
+Web サイトに RTCDP 接続を設定するプロセスは、要約すると次のようになります。
 
 1. [スキーマを作成](#schema)し、Edge ネットワークに送信する際にデータをどのように構造化するかを決定します。
 1. [データストリームを作成](#datastream)し、データの送信先を設定します。
