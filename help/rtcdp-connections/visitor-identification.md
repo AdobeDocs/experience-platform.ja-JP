@@ -2,20 +2,20 @@
 title: 訪問者の識別
 description: Adobe Experience Platform Edge Network Server API で訪問者を識別する方法について説明します
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
-keywords: エッジネットワーク；ゲートウェイ；API；訪問者；識別
+keywords: エッジネットワーク;ゲートウェイ;API;訪問者;識別
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '151'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # 訪問者の識別
 
-Edge Network Server API は、 [ファーストパーティ ID([!DNL FPID])](visitor-identification-fpid.md).
+Edge Network Server API は、[ファーストパーティ ID ([!DNL FPID]) を使用した訪問者の識別](visitor-identification-fpid.md)をサポートしています。
 
-すべてのユーザー ID は、 `identityMap` フィールドグループを使用します。 このフィールドグループは AEP Web SDK に含まれています `ExperienceEvent` mixin.
+すべてのユーザーの ID を、`identityMap` フィールドグループで提供する必要があります。このフィールドグループは AEP Web SDK `ExperienceEvent` mixin に含まれています。
 
 ```json
 {
@@ -38,12 +38,12 @@ Edge Network Server API は、 [ファーストパーティ ID([!DNL FPID])](vis
 
 ## デバイス識別子 {#identifiers}
 
-Edge ネットワーク内でデバイスを識別する方法は複数あります。 次の表に、サポートされる ID の概要を示します。
+Edge Network 内でデバイスを識別する方法は複数あります。次の表に、サポートされる ID の概要を示します。
 
 | ID 名前空間 | 管理者 | 説明 |
 | --- | --- | --- |
-| `FPID` | 顧客 | `FPID` は、 `ECID` を Edge Network によって設定することで、 `ECID` 同様に機能します。  <br><br> デバイスを一貫して識別するには、これらの ID をデバイス上で保持し、リクエストのたびに提供する必要があります。 Web インタラクションの場合、ブラウザー Cookie として保存する必要があります。 |
-| `IDFA`/`GAID` | Experience Platform | 複数のアプリケーションをまたいでユーザーを識別できるので、これらの ID は `ECID` を Edge Network に送信します。 |
+| `FPID` | 顧客 | `FPID` は、Edge Network によって自動的に `ECID` にエンコードされるため、`ECID` を必要とするソリューションも同様に機能します。<br><br> デバイスを一貫して識別するには、これらの ID がデバイス上で保持され、各リクエストに応じて提供される必要があります。Web インタラクションでは、ブラウザー Cookie として保存する必要があります。 |
+| `IDFA`/`GAID` | Experience Platform | 複数のアプリケーションをまたいでユーザーを識別できるので、これらの ID は Edge Network によって `ECID` にエンコードされません。 |
 
 <!--
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |
