@@ -1,10 +1,8 @@
 ---
 title: 派生属性
 description: 派生属性は、任意の定期的なサイクルで更新でき、オプションでリアルタイム顧客プロファイルデータに公開できる、任意の属性を生成する便利な手段です。 このドキュメントでは、クエリサービスを使用して、プロファイルデータで使用する派生属性を作成する方法の概要を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%

@@ -1,9 +1,7 @@
 ---
 title: 'デシルベースの派生属性の使用例 '
 description: このガイドでは、クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生属性を作成するために必要な手順を示します。
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
