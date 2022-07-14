@@ -1,7 +1,8 @@
 ---
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
-source-git-commit: d81ef9b9b6fdf7612d2afead13e925c8a9daf902
+feature: Data Governance
+source-git-commit: ec063a0f5600729d3575f98898ade04443f29f2a
 workflow-type: tm+mt
 source-wordcount: '2667'
 ht-degree: 2%
