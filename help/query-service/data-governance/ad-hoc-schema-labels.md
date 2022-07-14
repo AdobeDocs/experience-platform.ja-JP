@@ -2,7 +2,7 @@
 title: アドホックスキーマの属性ベースのアクセス制御サポート
 description: Adobe Experience Platformクエリサービスで生成されたアドホックスキーマのデータフィールドへのアクセスを制限するためのガイドです。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Adobe Experience Platformに取り込まれるデータは、Experience Data Mod
 >
 >アドホックスキーマは、デフォルトではスキーマインベントリに表示されません。
 
-## Platform UI のスキーマインベントリでアドホックスキーマを検出する
+## Platform UI のスキーマインベントリでアドホックスキーマを検出する {#discover-ad-hoc-schemas}
 
 Platform UI でアドホックスキーマを表示できるようにするには、フィルターアイコン (![フィルターアイコン。](../images/data-governance/filter.png)) をクリックし、「**」を選択します[!UICONTROL アドホックスキーマを表示] が表示される左側のレール。
 
