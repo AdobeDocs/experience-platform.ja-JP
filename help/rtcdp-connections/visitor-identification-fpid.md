@@ -1,25 +1,25 @@
 ---
 title: FPID による訪問者の識別
-description: FPID を使用して、Server API を通じて訪問者を一貫して識別する方法を学ぶ
+description: FPID を使用することにより、サーバー API を通じて一貫性を持って訪問者を識別する方法を説明します
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-keywords: エッジネットワーク；ゲートウェイ；API；訪問者；識別；FPID
+keywords: エッジネットワーク;ゲートウェイ;API;訪問者;識別;FPID
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '348'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # FPID による訪問者の識別
 
-[!DNL First-party IDs] (`FPIDs`) は、顧客が生成、管理、保存するデバイス ID です。 これにより、ユーザーデバイスの識別をユーザーが制御できるようになります。 送信別 `FPIDs`Edge Network が新しい `ECID` リクエストに含まれていない。
+[!DNL First-party IDs]（`FPIDs`）は、顧客が生成、管理、保存するデバイス ID です。これにより、ユーザーデバイスの識別を顧客が制御できるようになります。Edge Network は、`FPIDs` を送信することにより、`ECID` がリクエストに含まれていなくても新たに生成しません。
 
-この `FPID` は、 `identityMap` または、cookie として送信できます。
+`FPID` は、`identityMap` の一部として API リクエスト本文に含むか、または、cookie として送信することができます。
 
-An `FPID` 決定論的に～に変換することができる `ECID` を Edge ネットワークで設定し、 `FPID` id は、Experience Cloudソリューションと完全に互換性があります。 の取得 `ECID` 特定の `FPID` は常に同じ結果を得るので、ユーザーは一貫したエクスペリエンスを得ることができます。
+`FPID` は Edge Network によって `ECID` に確定的に変換できるため、`FPID` の ID は Experience Cloud ソリューションと完全に互換性があります。特定の `FPID` から `ECID` を取得することで常に同じ結果が得られるので、ユーザーは一貫したエクスペリエンスを得ることができます。
 
-この `ECID` この方法は、 `identity.fetch` クエリ：
+このようにして得られた `ECID` は、`identity.fetch` クエリで取得することができます。
 
 ```json
 {
@@ -33,15 +33,15 @@ An `FPID` 決定論的に～に変換することができる `ECID` を Edge �
 }
 ```
 
-リクエストに `FPID` および `ECID`、 `ECID` リクエストに既に存在するが、 `FPID`. つまり、Edge ネットワークでは `ECID` 既に提供され、 `FPID` は無視されます。 新しい `ECID` は、 `FPID` は単独で提供されます。
+`FPID` と `ECID` の両方を含むリクエストの場合、リクエストに既に存在する `ECID` の方が、`FPID` から生成されるものよりも優先されます。つまり、Edge Network では、既に提供されている `ECID` を使用し、`FPID` は無視されます。新しい `ECID` は、 `FPID` が単独で提供された場合にのみ生成されます。
 
-デバイス ID の場合、 `server` データストリームは、 `FPID` をデバイス ID として設定します。 その他の ID( 例： `EMAIL`) は、リクエスト本文内でも指定できますが、Edge ネットワークでは、プライマリ ID が明示的に指定されている必要があります。 プライマリID は、プロファイルデータの格納先となるベース ID です。
+デバイス ID に関しては、`server` データストリームはデバイス ID として `FPID` を使用する必要があります。それ以外の ID（例えば `EMAIL`）もリクエスト本文内で指定できますが、Edge Network では、プライマリ ID が明示的に指定されている必要があります。プライマリ ID は、プロファイルデータが格納されるベース ID です。
 
 >[!NOTE]
 >
 >ID を持たないリクエスト（リクエスト本文内で明示的に設定されたプライマリ ID を持たないリクエスト）は、失敗します。
 
-以下 `identityMap` フィールドグループが正しく形成されている `server` データストリームリクエスト：
+以下の `identityMap` フィールドグループは、`server` データストリームのリクエストに対して正しく設定されています。
 
 ```json
 {
@@ -63,7 +63,7 @@ An `FPID` 決定論的に～に変換することができる `ECID` を Edge �
 }
 ```
 
-以下 `identityMap` フィールドグループを `server` データストリームリクエスト：
+以下の `identityMap` フィールドグループは、`server` データストリームのリクエストに対して設定すると、結果としてエラー応答が返ります。
 
 ```json
 {
@@ -84,7 +84,7 @@ An `FPID` 決定論的に～に変換することができる `ECID` を Edge �
 }
 ```
 
-この場合、Edge ネットワークから返されるエラー応答は、次のようになります。
+この場合、Edge Network から返されるエラー応答は次のようになります。
 
 ```json
 {
@@ -100,9 +100,9 @@ An `FPID` 決定論的に～に変換することができる `ECID` を Edge �
 }
 ```
 
-## を使用した訪問者の識別 `FPID`
+## `FPID` を使用した訪問者の識別
 
-を介してユーザーを識別するには `FPID`で、 `FPID` Edge ネットワークにリクエストを送信する前に、Cookie が送信されていること。 この `FPID` は、cookie で渡すことも、 `identityMap` をリクエストの本文に追加します。
+`FPID` でユーザーを識別するには、Edge Network にリクエストを行う前に、`FPID` cookie が送信されていることが必要です。`FPID` は、cookie で渡すことも、リクエスト本文の `identityMap` の一部として渡すこともできます。
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## 次を使用してリクエスト `FPID` に渡される `identityMap` フィールド
+## `identityMap` フィールドとして `FPID` が渡されたリクエスト
 
-以下の例では、 [!DNL FPID] as a `identityMap` パラメーター。
+以下の例では、[!DNL FPID] を `identityMap` パラメーターとして渡しています。
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
