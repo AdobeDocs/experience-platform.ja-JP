@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Analytics マッピングフィールド；分析マッピング
+keywords: Experience Platform；ホーム；人気の高いトピック；Analytics マッピングフィールド；Analytics マッピング
 solution: Experience Platform
 title: Adobe Analytics Source Connector のフィールドのマッピング
 topic-legacy: overview
-description: Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
+description: Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyticsデータを取り込むことができます。 ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
-ht-degree: 99%
+source-wordcount: '3401'
+ht-degree: 98%
 
 ---
 
 # Analytics フィールドのマッピング
 
-Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
+Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyticsデータを取り込むことができます。 ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -58,7 +58,7 @@ Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）
 | user_agent | environment.browserDetails.userAgent | 文字列 | HTTP ヘッダーで送信されるユーザーエージェント文字列。 |
 | mobileappid | application.</span>name | 文字列 | モバイルアプリ ID。次の形式で保存されます。`[AppName][BundleVersion]` |
 | mobiledevice | device.model | 文字列 | モバイルデバイスの名前。iOS の場合は、コンマ区切りの 2 桁の文字列として格納されます。最初の数字はデバイスの世代を表し、2 番目の数字はデバイスファミリーを表します。 |
-| pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | 文字列 | モバイルサービスで使用されます。目標地点を表します。 |
+| pointofinterest | placeContext.POIinteraction.POIDetail.</span>名前 | 文字列 | モバイルサービスで使用されます。目標地点を表します。 |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | 数値 | モバイルサービスで使用されます。目標地点の距離を表します。 |
 | mobileplaceaccuracy | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | 数値 | コンテキストデータ変数 a.loc.acc から収集します。収集時の GPS の精度をメートル単位で示します。 |
 | mobileplacecategory | placeContext.POIinteraction.POIDetail.category | 文字列 | コンテキストデータ変数 a.loc.category から収集します。特定の場所のカテゴリを示します。 |
@@ -174,11 +174,11 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_cust_hit_time_gmt | timestamp | 文字列 | タイムスタンプが有効なデータセットでのみ使用されます。Unix 時間に基づいて送信されるタイムスタンプです。 |
 | post_cust_visid | identityMap | オブジェクト | 顧客訪問者 ID。 |
 | post_cust_visid | endUserIDs._experience.aacustomid.primary | ブール値 | 顧客訪問者 ID。 |
-| post_cust_visid | endUserIDs_experience.aacustomid.namespace.code | 文字列 | 顧客訪問者 ID。 |
+| post_cust_visid | endUserIDs._experience.aacustomid.namespace.code | 文字列 | 顧客訪問者 ID。 |
 | post_visid_high + visid_low | identityMap | オブジェクト | 訪問の一意の ID。 |
-| post_visid_high + visid_low | endUserIDs_experience.aaid.id | 文字列 | 訪問の一意の ID。 |
-| post_visid_high | endUserIDs_experience.aaid.primary | ブール値 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
-| post_visid_high | endUserIDs_experience.aaid.namespace.code | 文字列 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
+| post_visid_high + visid_low | endUserIDs._experience.aaid.id | 文字列 | 訪問の一意の ID。 |
+| post_visid_high | endUserIDs._experience.aaid.primary | ブール値 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
+| post_visid_high | endUserIDs._experience.aaid.namespace.code | 文字列 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
 | post_visid_low | identityMap | オブジェクト | visid_high と組み合わせて使用し、訪問を一意に識別します。 |
 | hit_time_gmt | receivedTimestamp | 文字列 | ヒットのタイムスタンプ（UNIX 時間）。 |
 | hitid_high + hitid_low | _id | 文字列 | ヒットを識別する一意の ID。 |
@@ -186,9 +186,9 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | ip | environment.ipV4 | 文字列 | イメージリクエストの HTTP ヘッダーに基づく IP アドレス。 |
 | j_jscript | environment.browserDetails.javaScriptEnabled | ブール値 | 使用する JavaScript のバージョン。 |
 | mcvisid_high + mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
-| mcvisid_high + mcvisid_low | endUserIDs_experience.mcid.id | 文字列 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs_experience.mcid.primary | ブール値 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs_experience.mcid.namespace.code | 文字列 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | 文字列 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high | endUserIDs._experience.mcid.primary | ブール値 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | 文字列 | Experience Cloud 訪問者 ID。 |
 | mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | 文字列 | ヒットステッチ ID。解析フィールド sdid_high と sdid_low は、2 つ以上の受信ヒットを結合するために使用される補足的なデータ ID です。 |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | 文字列 | Mobile Services ビーコンの近接性. |
@@ -217,7 +217,7 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_browser_width | environment.browserDetails.viewportWidth | 整数 | ブラウザーの幅（ピクセル単位）。 |
 | post_campaign | marketing.trackingCode | 文字列 | トラッキングコードディメンションで使用される変数。 |
 | post_channel | web.webPageDetails.siteSection | 文字列 | 「サイトセクション」ディメンションで使用される変数。 |
-| post_cust_visid | endUserIDs_experience.aacustomid.id | 文字列 | カスタム訪問者 ID（設定されている場合）。 |
+| post_cust_visid | endUserIDs._experience.aacustomid.id | 文字列 | カスタム訪問者 ID（設定されている場合）。 |
 | post_first_hit_page_url | _experience.analytics.endUser.firstWeb.webPageDetails.URL | 文字列 | 訪問者が最初に到達するページの URL。 |
 | post_first_hit_pagename | _experience.analytics.endUser.firstWeb.webPageDetails.name | 文字列 | 「オリジナルの入口ページ」ディメンションで使用される変数。訪問者の入口ページのページ名。 |
 | post_keywords | search.keywords | 文字列 | ヒット用に収集されたキーワード。 |

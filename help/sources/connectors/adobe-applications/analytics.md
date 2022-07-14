@@ -1,32 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Analytics ソースコネクタ；analytics;Analytics
-solution: Experience Platform
+keywords: Experience Platform；ホーム；人気の高いトピック；Analytics Source Connector;Analytics;Analytics;AAID;
 title: レポートスイートデータ用のAdobe Analytics Source Connector
-topic-legacy: overview
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
+source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 27%
+source-wordcount: '1043'
+ht-degree: 16%
 
 ---
 
 # レポートスイートデータ用のAdobe Analyticsソースコネクタ
 
-Adobe Experience Platformでは、Adobe Analyticsデータを Analytics ソースコネクタを通じて取り込むことができます。 [!DNL Analytics] ソースコネクタは、[!DNL Analytics] が収集したデータをリアルタイムで Platform にストリーミングし、SCDS 形式の [!DNL Analytics] データを [!DNL Experience Data Model](XDM) フィールドに変換して、Platform で使用します。
+Adobe Experience Platformでは、Analytics ソースコネクタを使用してAdobe Analyticsデータを取り込むことができます。 この [!DNL Analytics] ソースコネクタは、収集されたデータをストリーミングします [!DNL Analytics] をリアルタイムで Platform に変換し、SCDS 形式に変換 [!DNL Analytics] データを [!DNL Experience Data Model] (XDM)Platform で使用するフィールド。
 
-このドキュメントでは、[!DNL Analytics] の概要と [!DNL Analytics] データの使用例を説明します。
+このドキュメントでは、 [!DNL Analytics] およびで、の使用例について説明します。 [!DNL Analytics] データ。
 
 ## Adobe Analytics と Analytics データ
 
-[!DNL Analytics] は、顧客に関する詳細情報、顧客が Web プロパティとどのようにやり取りするか、デジタルマーケティングの支出が効果的かを確認し、改善点を特定するのに役立つ強力なエンジンです。[!DNL Analytics] は 1 年に数兆件もの Web トランザクションを処理し、ソースコネクタを使用する [!DNL Analytics] と、この豊富な行動データを簡単にタップして、数分でをエンリッチメントできま [!DNL Real-time Customer Profile] す。
+[!DNL Analytics] は、顧客に関する詳細情報や顧客が Web プロパティとどのようにやり取りするかを学び、デジタルマーケティングの費用が効果的かを確認し、改善点を特定するのに役立つ強力なエンジンです。 [!DNL Analytics] は 1 年に数兆件もの web トランザクションを処理し、 [!DNL Analytics] ソースコネクタを使用すると、この豊富な行動データを簡単にタップして、 [!DNL Real-time Customer Profile] 数分で
 
 ![](./images/analytics-data-experience-platform.png)
 
-[!DNL Analytics] は、大まかに、様々なデジタルチャネルや世界中の複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) ルール、処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、[!DNL Real-time Customer Profile] によって消費可能と見なされます。 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、[!DNL Data Science Workspace]、[!DNL Query Service] および他のデータ検出アプリケーションでの使用のために Platform データセットに取り込まれます。
+高いレベルで [!DNL Analytics] は、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) のルールと処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、次の方法で消費可能と見なされます。 [!DNL Real-time Customer Profile]. 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、で使用するために Platform データセットに取り込まれます。 [!DNL Data Science Workspace], [!DNL Query Service]、およびその他のデータ検出アプリケーション。
 
-処理ルールの詳細については、[ 処理ルールの概要 ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) を参照してください。
+詳しくは、 [処理ルールの概要](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM）
 
@@ -38,9 +36,9 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 
 ## Adobe Analytics から XDM へのフィールドのマッピング方法
 
-Platform ユーザーインターフェイスを使用して [!DNL Analytics] データをExperience Platformに取り込むためのソース接続が確立されると、データフィールドは自動的にマッピングされ、数分以内に [!DNL Real-time Customer Profile] に取り込まれます。 Platform UI を使用して [!DNL Analytics] とのソース接続を作成する手順については、[Analytics ソースコネクタのチュートリアル ](../../tutorials/ui/create/adobe-applications/analytics.md) を参照してください。
+ソース接続が確立され、 [!DNL Analytics] Platform ユーザーインターフェイスを使用してデータをExperience Platformに変換すると、データフィールドは自動的にマッピングされ、 [!DNL Real-time Customer Profile] 分以内に とのソース接続の作成手順 [!DNL Analytics] Platform UI を使用して、 [Analytics ソースコネクタのチュートリアル](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-[!DNL Analytics] とExperience Platformの間で発生するフィールドマッピングについて詳しくは、『[Adobe Analyticsフィールドマッピング ](./mapping/analytics.md)』ガイドを参照してください。
+の間に発生するフィールドマッピングに関する詳細 [!DNL Analytics] とExperience Platform: [Adobe Analyticsフィールドマッピング](./mapping/analytics.md) ガイド。
 
 ## Platform の Analytics データで予想される遅延はどのくらいですか。
 
@@ -48,15 +46,43 @@ Platform ユーザーインターフェイスを使用して [!DNL Analytics] �
 
 | Analytics データ | 予想される遅延 |
 | -------------- | ---------------- |
-| [!DNL Real-time Customer Profile] への新しいデータ（A4T **not** 有効） | &lt; 2 分 |
-| [!DNL Real-time Customer Profile] への新しいデータ（A4T **is** 有効） | &lt; 15 分 |
+| 新しいデータ [!DNL Real-time Customer Profile] (A4T) **not** 有効 ) | &lt; 2 分 |
+| 新しいデータ [!DNL Real-time Customer Profile] (A4T) **が** 有効 ) | &lt; 15 分 |
 | データレイクの新しいデータ | &lt; 90 分 |
 | データのバックフィル（13 か月分のデータまたは 100 億イベントのデータのいずれか低い方） | &lt; 4 週間 |
 
 >[!NOTE]
 >
->Analytics のバックフィルデータは [!DNL Profile] に取り込まれないので、ライセンスプロファイルには反映されません。
+>Analytics バックフィルデータが [!DNL Profile] したがって、はライセンスプロファイルでは考慮されません。
 
-## [!DNL Analytics] データのプライマリ識別子
+## プライマリ識別子 [!DNL Analytics] データ
 
-[!DNL Analytics] ソースコネクタからのすべてのヒットには、ECID と AAID のどちらが存在するかに応じたプライマリ識別子が含まれます。 ECID がある場合は、ECID が主識別子として指定されます。 AAID がある場合、AAID がプライマリとして指定されます。
+次の [!DNL Analytics] ソースコネクタには、ECID または AAID のどちらが存在するかに依存するプライマリ識別子が含まれます。 ECID がある場合、その ECID がプライマリ識別子として指定されます。 AAID がある場合、AAID がプライマリとして指定されます。
+
+次の表に、 [!DNL Analytics] データ。
+
+| ID フィールド | 説明 |
+| --- | --- |
+| AAID | AAID はAdobe Analyticsの主なデバイス識別子で、 [!DNL Analytics] ソース。 AAID は、 *従来の Analytics ID* または `s_vi` cookie ID。 これにもかかわらず、AAID は `s_vi` cookie が存在しません。 AAID は、 `post_visid_high` および `post_visid_low` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ja). 任意のイベントで、 AAID フィールドには単一の ID が含まれます。これは、 [～の操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **注意**:レポートスイート全体で、AAID に複数のイベントタイプが混在している場合があります。 |
+| ECID | ECID(Experience CloudID) は、別のデバイス識別子フィールドで、Adobe Analyticsで [!DNL Analytics] は、Experience CloudID サービスを使用して実装されます。 ECID は、MCID(Marketing CloudID) とも呼ばれます。 イベントに ECID が存在する場合、AAID は、Analytics が [猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) が設定されている。 ECID は、 `mcvisid` Analytics データフィード内で使用されます。 ECID について詳しくは、 [ECID の概要](../../../identity-service/ecid.md). ECID がと連携する方法について詳しくは、 [!DNL Analytics]を参照し、 [Analytics およびExperience CloudID のリクエスト](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=en). |
+| AACUSTOMID | AACUSTOMID は、 `s.VisitorID` 変数の [!DNL Analytics] 実装。 AACUSTOMID は、 `cust_visid` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). AACUSTOMID が存在する場合、AAID は AACUSTOMID に基づきます。これは、AACUSTOMID が [～の操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
+
+### 方法 [!DNL Analytics] ソースで ID を扱う
+
+この [!DNL Analytics] ソースは、これらの ID を次のように XDM 形式のExperience Platformに渡します。
+
+* `endUserIDs._experience.aaid.id`
+* `endUserIDs._experience.mcid.id`
+* `endUserIDs._experience.aacustomid.id`
+
+これらのフィールドは ID としてマークされません。 代わりに、同じ ID が XDM の `identityMap` をキーと値のペアとして使用します。
+
+* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
+* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
+* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+
+ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID はイベントのプライマリ ID としてマークされます。 AACUSTOMID はイベントのプライマリID とはしません。 ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
+
+### Customer Journey AnalyticsとプライマリID
+
+Customer Journey Analyticsの場合、プライマリID の定義は、プライマリID をユーザー ID として使用する場合にのみ重要です。 ただし、これは必須ではありません。 ユーザー ID として他の ID 列を選択できます。
