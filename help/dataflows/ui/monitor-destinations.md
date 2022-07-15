@@ -6,7 +6,7 @@ title: UI での宛先のデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
+source-git-commit: 4a9511f055854ab574aca46f44acf155b0c16af6
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 2%
@@ -173,13 +173,13 @@ ID は、プロファイルの様々なファセットを表します。 例え�
 >title="Activation"
 >abstract="宛先のアクティベーション表示には、セグメントのアクティベーションステータスに関する情報と、一意の ID を生成するためにリアルタイム顧客プロファイルから取得された指標が含まれます。"
 
-次の手順で [!UICONTROL 監視] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL 宛先]. この [!UICONTROL 監視] ダッシュボードには、宛先の実行ジョブに関する指標と情報が含まれています。
-
 >[!NOTE]
 >
 >- 宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) および [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) 宛先。
 >- の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id は、現在、表示されません。
 
+
+次の手順で [!UICONTROL 監視] ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 [!UICONTROL 宛先]. この [!UICONTROL 監視] ダッシュボードには、宛先の実行ジョブに関する指標と情報が含まれています。
 
 以下を使用： [!UICONTROL 宛先] ダッシュボードを使用して、アクティベーションフローの正常性を全体的に把握できます。 まず、すべてのバッチおよびストリーミング宛先の集計レベルでインサイトを取得し、データフロー、データフローの実行、アクティブ化されたセグメントの詳細ビューを掘り下げて、アクティブ化データを詳細に調べます。 画面 [!UICONTROL 監視] ダッシュボードは、指標やエラーの説明を通じて実用的なインサイトを提供し、アクティベーションシナリオで発生する可能性のある問題のトラブルシューティングに役立ちます。
 
