@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 74%
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
-   - [エッジセグメント化](api/edge-segmentation.md)
+   - [エッジのセグメント化](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
    - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
@@ -31,7 +31,7 @@ ht-degree: 74%
    - [概要](ui/overview.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
-   - [エッジセグメント化](ui/edge-segmentation.md)
+   - [エッジのセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
    - [ストリーミングセグメント化 (ビデオ)](video/streaming-segmentation-overview.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)

@@ -4,8 +4,8 @@ description: 監査ログを使用して、Adobe Experience Platform で誰が�
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '847'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 このドキュメントでは、UI や API での表示および管理方法など、Platform の監査ログについて説明します。
 
-## 監査ログによってキャプチャされるイベントタイプ {#category}
+## 監査ログで記録されるイベントタイプ {#category}
 
 次の表に、監査ログによって記録されるリソースに対するアクションの概要を示します。
 
@@ -77,7 +77,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 UI の監査イベントには、次のフィルターを使用できます。
 
-| Filter | 説明 |
+| フィルター | 説明 |
 | --- | --- |
 | [!UICONTROL カテゴリ] | ドロップダウンメニューを使用して、表示される結果を次の項目でフィルタリングします。 [カテゴリ](#category). |
 | [!UICONTROL アクション] | アクションでフィルターします。 現在のみ [!UICONTROL 作成] および [!UICONTROL 削除] アクションはフィルタリングできます。 |

@@ -38,10 +38,10 @@ ht-degree: 100%
    * [概要](merge-policies/overview.md)
    * [結合ポリシー API](api/merge-policies.md)
    * [結合ポリシー UI ガイド](merge-policies/ui-guide.md)
-   * [結合ポリシーの作成（動画）](video/create-merge-policies.md)
+   * [結合ポリシーの作成（ビデオ）](video/create-merge-policies.md)
 * 結合スキーマ {#union-schemas}
    * [結合スキーマ UI ガイド](ui/union-schema.md)
-   * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
+   * [結合スキーマの概要（ビデオ）](video/union-schemas-overview.md)
 * チュートリアル {#tutorials}
    * [リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)
    * [プロファイルデータセットの設定](tutorials/dataset-configuration.md)

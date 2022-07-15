@@ -19,10 +19,10 @@ ht-degree: 69%
    - [API 応答の並べ替えとフィルタリング](./api/sort-and-filter.md)
 - UI ガイド {#ui}
    - [ソースのデータフローの監視](./ui/monitor-sources.md)
-   - [Monitor dataflows in identities](./ui/monitor-identities.md)
-   - [Monitor dataflows in Profiles](./ui/monitor-profiles.md)
+   - [ID のデータフローの監視](./ui/monitor-identities.md)
+   - [プロファイルのデータフローの監視](./ui/monitor-profiles.md)
    - [セグメントのデータフローの監視](./ui/monitor-segments.md)
    - [宛先のデータフローの監視](./ui/monitor-destinations.md)
    - B2B 監視 {#b2b}
-      - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)
+      - [プロファイルエンリッチメントジョブの監視](./ui/b2b/monitor-profile-enrichment.md)
 - [フローサービス API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
