@@ -2,14 +2,14 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 5%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する
+# Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
