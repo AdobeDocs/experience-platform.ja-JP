@@ -3,10 +3,10 @@ keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム (DSP、広告ネットワーク、SSP など ) に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 51%
+source-wordcount: '248'
+ht-degree: 50%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformを、デマンドサイドプラットフォーム (DSP)、サプライサイドプラットフォーム (SSP)、広告ネットワークなどのサードパーティの広告プラットフォームに接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
+Adobe Experience Platformを、デマンドサイドプラットフォーム (DSP)、サプライサイドプラットフォーム (SSP)、アドネットワークなどの広告プラットフォームに接続して、既知の偽名のオーディエンスをこれらのプラットフォームと共有します。
 
 広告の宛先に接続すると、オーディエンスは ID として宛先プラットフォームに送信され、宛先プラットフォームで知られている ID にマッピングされます。
 
@@ -26,6 +26,7 @@ Adobe Experience Platformを、デマンドサイドプラットフォーム (DS
 
 ### 接続
 
+* [Adobe Advertising Cloud接続](adobe-advertising-cloud-connection.md)
 * [（ベータ版）Criteo 接続](criteo.md)
 * [Google Display &amp; Video 360 接続](google-dv360.md)
 * [Google Ads 接続](google-ads-destination.md)
