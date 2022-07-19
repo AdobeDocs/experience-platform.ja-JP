@@ -1,7 +1,8 @@
 ---
-title: 'デシルベースの派生属性の使用例 '
+title: デシルベースの派生属性の使用例
 description: このガイドでは、クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生属性を作成するために必要な手順を示します。
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -59,7 +60,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->簡潔にすると、テスト ID `_profilefoundationreportingstg` は、列タイトルの名前空間の開始と、ドキュメント全体での後続のメンションから除外されています。
+>簡潔にするには、テナント ID `_profilefoundationreportingstg` は、列タイトルの名前空間の開始と、ドキュメント全体での後続のメンションから除外されています。
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ GROUP BY rankings.membershipNumber
 ## 次の手順
 
 上記の使用例では、デシル属性をリアルタイム顧客プロファイルで使用できるようにする手順を重点的に説明しています。 これにより、ユーザーインターフェイスまたは RESTful API を介してセグメント化サービスを使用して、これらのデシルバケットに基づいてオーディエンスを生成できます。 詳しくは、 [セグメント化サービスの概要](../../segmentation/home.md) を参照してください。
-
