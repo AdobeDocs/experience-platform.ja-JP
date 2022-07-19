@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1794'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
-- [Real-time Customer Data Platform Connections](#data-collection)
+- [Real-Time Customer Data Platform Connections](#data-collection)
 - [ソース](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -28,7 +28,7 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 
 | 機能 | 説明 |
 | --- | --- |
-| JupyterLab ランチャー | JupyterLab Launcher に Spark 3.2 ノートブックのスターターが含まれるようになりました。 Spark 2.4 ノートブックスターターは、Spark 3.2 ノートブックに置き換えられ、このリリースに含まれる予定です。 |
+| JupyterLab ランチャー | JupyterLab ランチャー に Spark 3.2 ノートブックのスターターが含まれるようになりました。 Spark 2.4 ノートブックスターターは、Spark 3.2 ノートブックに置き換えられ、このリリースに含まれる予定です。 |
 | Spark 3.2 | 新しい Scala（Spark）と PySpark のレシピで Spark 3.2 が使用されるようになりました |
 | カーネル | Scala（Spark）ノートブックは、Scala カーネルを介して作成されるようになりました。 PySpark ノートブックは、Python カーネルを介して作成されるようになりました。Spark と PySpark カーネルは非推奨（廃止予定）で、今後のリリースで削除される予定です。 |
 | レシピ | 新しい PySpark と Spark のレシピは、Python と R のレシピと同様の Docker ワークフローに従うようになりました。 |
@@ -70,21 +70,21 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL 薬]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | 医療用治療、特に薬剤や薬剤に使用される物質の詳細をキャプチャする医療業界クラス。 |
-| クラス | [[!UICONTROL プラン]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | 医療プランや保険プランなど、医療プランの詳細を取り込む医療業界クラス。 |
+| クラス | [[!UICONTROL 医薬品]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | 薬物治療、特に投薬に使用される薬剤の詳細を収集する医療業界クラス。 |
+| クラス | [[!UICONTROL プラン]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | 健康保険や保険制度など、医療プランの詳細を収集する医療業界クラス。 |
 | クラス | [[!UICONTROL プロバイダー]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | 医療機関に関する詳細を収集する医療業界クラス。 |
-| クラス | [[!UICONTROL 支払者]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | 保険会社の詳細をキャプチャする医療業界クラス。 |
-| クラス | [[!UICONTROL ライブイベントスケジュール]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | 旅行コンサートのスケジュールやスポーツチームのスケジュールなど、ライブイベントのスケジュールに関する詳細をキャプチャするスポーツ&amp;エンターテイメント業界クラス。 |
-| クラス | [[!UICONTROL ロケーション ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | コンサートホールやスポーツアリーナなど、ライブイベントの場所をキャプチャするスポーツ&amp;エンターテイメント業界クラス。 |
-| フィールドグループ | [[!UICONTROL 医療薬]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | のフィールドグループ [!UICONTROL 薬] ブランド名、ロット番号、数量など、薬物に関する詳細をキャプチャするクラス。 |
-| フィールドグループ | [[!UICONTROL 医療プランの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | のフィールドグループ [!UICONTROL プラン] ネットワーク、タイプ、アクティブステータスなどの詳細を取得するクラス。 |
-| フィールドグループ | [[!UICONTROL 医療機関]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | のフィールドグループ [!UICONTROL プロバイダー] 医療の診断と治療のサービスを提供するための免許を受けた個人の医療専門家または医療施設組織の詳細をキャプチャするクラス。 |
-| フィールドグループ | [[!UICONTROL 医療メンバーの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | のフィールドグループ [!UICONTROL XDM 個人プロファイル] 連絡先情報、プライマリケア医師、プラン情報など、サービスまたはケアを受ける人の詳細をキャプチャするクラス。 |
-| フィールドグループ | [[!UICONTROL サイトツールの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] chatbot、survey などのサイトツールで収集された情報をキャプチャするクラス。 |
-| フィールドグループ | [[!UICONTROL ライブイベントチケットの購入]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] ライブイベントのチケットの購入履歴をキャプチャするクラス（コンサートやスポーツゲームなど）。 |
-| フィールドグループ | [[!UICONTROL スポーツ&amp;エンターテイメントイベントのスケジュール]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | のフィールドグループ [!UICONTROL ライブイベントスケジュール] 引き付け名、ドア開け時間など、スケジュールの詳細をキャプチャするクラス。 |
-| フィールドグループ | [[!UICONTROL スポーツエンターテイメントイベント会場]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | のフィールドグループ [!UICONTROL 場所] 座席数や指定販売地域 (DMA) など、イベント会場に関する詳細をキャプチャするクラス。 |
-| グローバルスキーマ | （複数） | RTCDP インサイトの宛先指標に対して、新しいグローバルスキーマを使用できます。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1560) を参照してください。 |
+| クラス | [[!UICONTROL 支払者]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | 保険会社の詳細を収集する医療業界クラス。 |
+| クラス | [[!UICONTROL ライブイベントスケジュール]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | 巡業コンサートのスケジュールやスポーツチームのスケジュールなど、ライブイベントのスケジュールに関する詳細を収集するスポーツエンターテインメント業界クラス。 |
+| クラス | [[!UICONTROL ロケーション]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | コンサートホールや競技場など、ライブイベントの場所を収集するスポーツエンターテインメント業界クラス。 |
+| フィールドグループ | [[!UICONTROL 医療薬]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | ブランド名、ロット番号、数量など、投薬に関する詳細を収集する[!UICONTROL 医薬品]クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL 医療プランの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | ネットワーク、タイプ、アクティブステータスなどの詳細を収集する[!UICONTROL プラン]クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL 医療機関]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | 診断や治療の医療サービスを提供するための免許を持つ医療従事者個人または医療施設組織の詳細を収集する[!UICONTROL プロバイダー]クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL ヘルスケア会員の詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | [!UICONTROL XDM 個人プロファイル]クラスのフィールドグループ。連絡先情報、主治医、医療保険情報など、サービスまたはケアを受ける人の詳細を収集します。 |
+| フィールドグループ | [[!UICONTROL サイトツールの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | チャットボットやアンケートなどのサイトツールで受け取った情報を収集する、[!UICONTROL XDM ExperienceEvent] クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL ライブイベントチケットの購入]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | コンサートやスポーツの試合などのライブイベントのチケットの購入履歴を収集する、[!UICONTROL XDM ExperienceEvent] クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL スポーツとエンターテインメントイベントのスケジュール]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | アトラクション名、開場時刻など、スケジュールの詳細を収集する、[!UICONTROL ライブイベントスケジュール]クラスのフィールドグループ。 |
+| フィールドグループ | [[!UICONTROL スポーツとエンターテインメントイベントの会場]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | 座席数や指定販売地域（DMA）など、イベント会場に関する詳細を収集する[!UICONTROL 場所]クラスのフィールドグループ。 |
+| グローバルスキーマ | （複数） | RTCDP インサイトの目的地指標として、新しいグローバルスキーマを使用できます。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1560)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -92,11 +92,11 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | メディア states-update イベントタイプが追加されました。 |
+| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | メディア states-update イベントタイプを追加しました。 |
 | フィールドグループ | [[!UICONTROL 宿泊施設の予約]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | 宿泊施設のチェックアウトプロパティを追加しました。 |
 | データタイプ | [[!UICONTROL メディア情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | states-start フィールドと states-end フィールドを追加しました。 |
-| 拡張子 | [[!UICONTROL Workfront 変更イベント]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 作成イベントのユーザーと時刻を識別するのに役立つ、属性の保存に使用する 2 つのフィールドを追加しました。 |
-| 拡張子 | [[!UICONTROL AdobeCJM ExperienceEvent — メッセージインタラクションの詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | ランディングページオブジェクトに、購読、同意、カスタム E メールおよび追加のデータ情報を追加しました。 |
+| 拡張機能 | [[!UICONTROL Workfront 変更イベント]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 作成イベントのユーザーと時刻を識別できるように、属性の保存に使用する 2 つのフィールドを追加しました。 |
+| 拡張機能 | [[!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | ランディングページオブジェクトに、購読、同意、カスタムメール、追加データ情報を追加しました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -119,7 +119,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## Real-time Customer Data Platform Connections {#data-collection}
 
-Real-time Customer Data Platform Connections は、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジーのスイートを提供します。
+Real-Time Customer Data Platform Connections は、クライアントサイドのカスタマーエクスペリエンスに関するデータを収集して Adobe Experience Platform Edge Network に送信し、データを強化したり、変換したり、アドビまたはアドビ以外の宛先に配信したりできるようにする一連のテクノロジーを提供します。
 
 **新機能**
 
@@ -129,7 +129,7 @@ Real-time Customer Data Platform Connections は、クライアント側の顧�
 | 単一ページアプリケーションで、指標を増分することなく、[提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions)します。 | 新しく追加された `applyPropositions` コマンドを使用すると、[!DNL Analytics] および [!DNL Target] 指標を増分せずに、[!DNL Target] から単一ページアプリケーションに提案の配列をレンダリングまたは実行できます。これにより、レポートの精度が向上します。 |
 | [モバイルから web およびクロスドメイン での ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
 
-詳しくは、 [Real-Time CDP接続の概要](../../rtcdp-connections/home.md).
+詳しくは、[Real-Time CDP Connections の概要](../../rtcdp-connections/home.md) を参照してください。
 
 ## ソース {#sources}
 
