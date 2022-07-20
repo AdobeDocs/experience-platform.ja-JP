@@ -5,9 +5,9 @@ title: Adobe Experience PlatformのPostman
 topic-legacy: api guide
 description: このドキュメントでは、Postman環境の設定方法、Postmanコレクションの読み込み方法、および各 Platform サービスで使用可能なコレクションのリストの概要を説明する手順について説明します。
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 Postmanは、API 開発のコラボレーションプラットフォームで、プリセット変数を使用して環境を設定し、API コレクションを共有し、CRUD リクエストを合理化するなどのことができます。 ほとんどの Platform API サービスにはPostmanコレクションがあり、API 呼び出しの実行に役立ちます。
 
-## Experience Platform用の Postman 環境の設定方法
+## Experience Platform用のPostman環境の設定方法
 
 次のビデオガイドでは、Postman環境の作成と設定の概要を説明します。 Postman環境には、以下に示す様々なコレクションに対して API 呼び出しをおこなう必要のあるすべてのヘッダーが含まれています。 設定後は、値の有効期限が切れるたびに ( `ACCESS_TOKEN`) 環境内の現在の値を更新できます。この新しい値は、すべてのコレクションで使用されます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Postman コレクション {#collections}
+## Postmanコレクション {#collections}
 
 使用可能なすべてのPostmanコレクションを含むフォルダーは、次の URL にアクセスすることで、 [Experience PlatformPostmanサンプル GitHub リポジトリ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). または、Postmanのコレクションリンクは、個々の Swagger ファイル ( [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O
 
@@ -32,7 +32,7 @@ Postmanコレクションをダウンロードするには、 **[!DNL Raw]** Git
 
 ## Postmanコレクションの読み込み {#import}
 
-を利用するために [Postman コレクション](#collections)を設定するには、環境を設定する必要があります。 環境の設定が完了したら、 **[!DNL Manage Environments]** セレクターを使用できます。
+を利用するために [Postmanコレクション](#collections)を設定するには、環境を設定する必要があります。 環境の設定が完了したら、 **[!DNL Manage Environments]** セレクターを使用できます。
 
 ![環境セレクターを管理](./images/api-guide/environment-selector.png)
 
@@ -52,9 +52,9 @@ Postman UI と使用可能な機能について詳しくは、 [Postmanドキュ
 
 >[!WARNING]
 >
->Adobe I/Oアクセストークン生成のPostmanコレクションで述べたように、指定された生成方法が **非実稼動用**. ローカル署名は、サードパーティのホストから JavaScript ライブラリを読み込み、リモート署名は、Adobeが所有および操作する Web サービスに秘密鍵を送信します。 Adobeはこの秘密鍵を保存しませんが、実稼働鍵は誰とも共有しないでください。
+>Identity Managementサービス (IMS)Postmanコレクションで述べたように、指定された生成方法がに適しています。 **非実稼動用**. ローカル署名は、サードパーティのホストから JavaScript ライブラリを読み込み、リモート署名は、Adobeが所有および操作する Web サービスに秘密鍵を送信します。 Adobeはこの秘密鍵を保存しませんが、実稼働鍵は誰とも共有しないでください。
 
-以下のビデオでは、 [Adobe I/Oアクセストークン生成コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) 公開 GitHub リポジトリからダウンロードできます。
+以下のビデオでは、 [Identity Managementサービス (IMS)Postmanコレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 公開 GitHub リポジトリからダウンロードできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
