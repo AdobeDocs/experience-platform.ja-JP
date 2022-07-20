@@ -3,10 +3,10 @@ title: Adobe Analyticsと Platform Web SDK の使用
 description: Adobe Experience Platform Web SDK を使用してAdobe Analyticsにデータを送信する方法について説明します。
 keywords: adobe analytics;analytics；マッピングされたデータ；マッピングされた var;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 51%
+source-wordcount: '235'
+ht-degree: 45%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 51%
 
 ## 手動でマッピングされたデータ
 
-エッジネットワークによって収集されたすべてのデータへは、処理ルールを介してアクセスできます。データはドット表記を使用して統合され、contextData として使用できます。
+エッジネットワークによって自動的にマッピングされないデータには、処理ルールを介してアクセスできます。 データはドット表記を使用して統合され、contextData として使用できます。
 
 次のようなスキーマがある場合。
 
