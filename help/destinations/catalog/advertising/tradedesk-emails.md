@@ -1,9 +1,9 @@
 ---
 title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 10%
 
 セグメントをアクティブ化する前に [!DNL The Trade Desk]を使用する場合、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
 
-## ID 一致要件 (#id-matching-requirements)
+## ID 一致の要件 {#id-matching-requirements}
 
 Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件を満たす必要があります。 詳しくは、 [ID 名前空間の概要](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja) を参照してください。
 
@@ -50,7 +50,7 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 {style=&quot;table-layout:auto&quot;}
 
-## 電子メールのハッシュ要件 (#hashing-requirements)
+## 電子メールのハッシュ要件 {#hashing-requirements}
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、生の電子メールアドレスを使用したりできます。
 
@@ -77,11 +77,11 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 ## 宛先への接続 {#connect}
 
-### 宛先への認証 (#authenticate)
+### 宛先に対する認証 {#authenticate}
 
 [!DNL The Trade Desk] CRM 宛先は毎日のバッチファイルアップロードで、ユーザーによる認証は必要ありません。
 
-### 宛先の詳細を入力 (#fill-in-details)
+### 宛先の詳細を入力 {#fill-in-details}
 
 オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en)するとき、次の情報を指定する必要があります。
 
@@ -120,7 +120,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 * を選択します。 `Email` ソースの名前空間または属性がターゲット ID としての名前空間 `Email`.
 * を選択します。 `Email_LC_SHA256` ソースの名前空間または属性がターゲット ID としての名前空間 `Email_LC_SHA256`.
 
-## データ書き出しの検証 (#validate)
+## データ書き出しの検証 {#validate}
 
 データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]の下のAdobe1PD データタイルの下にセグメントがあります。 [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、 [!DNL Trade Desk] UI:
 
