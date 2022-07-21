@@ -3,10 +3,10 @@ keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム (DSP、広告ネットワーク、SSP など ) に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
+source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 50%
+source-wordcount: '253'
+ht-degree: 49%
 
 ---
 
@@ -37,6 +37,7 @@ Adobe Experience Platformを、デマンドサイドプラットフォーム (DS
 * [Pinterest Customer List 接続](pinterest.md)
 * [（ベータ版）Snapchat 広告接続](snap-inc.md)
 * [Trade Desk 接続](tradedesk.md)
+* [トレードデスク CRM 接続](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 拡張機能
