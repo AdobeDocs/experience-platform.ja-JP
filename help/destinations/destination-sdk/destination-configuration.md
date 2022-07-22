@@ -2,10 +2,10 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '1807'
-ht-degree: 97%
+source-wordcount: '1888'
+ht-degree: 92%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 97%
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -158,9 +158,13 @@ ht-degree: 97%
 
 ## 顧客データフィールド {#customer-data-fields}
 
-Experience Platform UI で宛先に接続する際に、このセクションを使用して、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。次に示すように、構成内容は認証フローに反映されます。
+Experience Platform UI で宛先に接続する際に、このセクションを使用して、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。次に示すように、設定は認証フローに反映されます。
 
 ![カスタムフィールド認証フロー](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>顧客入力にアクセスし、テンプレートで顧客データフィールドから顧客入力を使用できます。 マクロを使用する `{{customerData.name}}`. 例えば、ユーザーに対し、 `userId`を使用すると、マクロを使用してテンプレートにアクセスできます `{{customerData.userId}}`. の API エンドポイントの URL で顧客データフィールドがどのように使用されているかの例を表示します [宛先サーバーの設定](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
@@ -178,10 +182,12 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 
 この節では、Adobe Experience Platform ユーザーインターフェイスで宛先に対してアドビが使用する、上記の設定の UI 要素について説明します。次を参照してください。
 
+![UI 属性設定の画像。](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=ja#catalog)にあるドキュメントページを参照します。`http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、`http://www.adobe.com/go/destinations-moviestar-en` を使用します。。このリンクは、Adobeが宛先をライブに設定し、ドキュメントが公開された後にのみ機能します。 |
-| `category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=ja)をお読みください。次のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=ja)をお読みください。次のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`<br> 現在、宛先ごとに 1 つのカテゴリのみを選択できます。 |
 | `connectionType` | 文字列 | `Server-to-server` は現在利用可能な唯一のオプションです。 |
 | `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 サポートされている値。 <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
@@ -201,7 +207,6 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `identityRequired` | ブール値 | ユーザーが、Experience Platform から希望のスキーマに ID 名前空間をマッピングできるようにする場合、`true` を使用します。 |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 ## ID と属性 {#identities-and-attributes}
 

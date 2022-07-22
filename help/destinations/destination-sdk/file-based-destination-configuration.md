@@ -2,10 +2,10 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: （ベータ版）Destination SDK のファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
-ht-degree: 81%
+source-wordcount: '2389'
+ht-degree: 79%
 
 ---
 
@@ -369,6 +369,8 @@ SSH キー認証タイプで SFTP を設定する際に、ユーザーは SFTP �
 Experience Platform UI で宛先に接続する際に、このセクションを使用して、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。
 
 次の例では、 `customerDataFields` ユーザーは、宛先の名前を入力し、 [!DNL Amazon S3] バケット名とフォルダーパス、および圧縮タイプ、ファイル形式、その他のいくつかのファイル書き出しオプション。
+
+顧客入力にアクセスし、テンプレートで顧客データフィールドから顧客入力を使用できます。 マクロを使用する `{{customerData.name}}`. 例えば、ユーザーに対し、という名前のAmazon S3 バケットのフィールドの入力を求める場合、 `bucket`を使用すると、マクロを使用してテンプレートにアクセスできます `{{customerData.bucket}}`. 顧客データフィールドが [宛先サーバーの設定](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[

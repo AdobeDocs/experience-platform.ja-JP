@@ -2,8 +2,8 @@
 description: サーバーとテンプレートの仕様は、共通のエンドポイント /authoring/destination-servers を介して Adobe Experience Platform Destination SDK で設定できます。
 title: Destination SDK のサーバーとテンプレートの仕様の設定オプション
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
+source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
+workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ ht-degree: 100%
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
       }
    },
    "httpTemplate":{
