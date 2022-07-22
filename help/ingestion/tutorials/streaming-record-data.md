@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 71%
+source-wordcount: '1025'
+ht-degree: 66%
 
 ---
 
@@ -26,31 +26,9 @@ ht-degree: 71%
    - [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):の使用可能な各エンドポイントをカバーする包括的なガイド [!DNL Schema Registry] API と呼び出し方法を参照してください。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
-以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
+### Platform API の使用
 
-### API 呼び出し例の読み取り
-
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
-
-### 必須ヘッダーの値の収集
-
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
-
-- Authorization： Bearer `{ACCESS_TOKEN}`
-- x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{ORG_ID}`
-
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-- x-sandbox-name：`{SANDBOX_NAME}`
-
->[!NOTE]
->
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
-
-- Content-Type：application/json
+Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../landing/api-guide.md)のガイドを参照してください。
 
 ## 次に基づいてスキーマを作成 [!DNL XDM Individual Profile] クラス
 
@@ -304,7 +282,8 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}"
+        "datasetId": "{DATASET_ID}",
+        "flowId": "{FLOW_ID}",
     },
     "body": {
         "xdmMeta": {
