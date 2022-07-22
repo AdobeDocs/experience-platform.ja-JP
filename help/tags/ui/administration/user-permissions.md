@@ -2,10 +2,10 @@
 title: タグのユーザー権限
 description: タグに使用できる様々なタイプの権限と、様々なビジネスユースケース向けの基本的な実装戦略について説明します。
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 100%
+source-wordcount: '1311'
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Consol
 
 >[!NOTE]
 >
->Admin Console を使用してユーザーの権限を設定する手順については、 [タグの権限の管理](./manage-permissions.md) に関するチュートリアルを参照してください。
+>Admin Consoleを使用してユーザーの権限を設定する手順については、 [データ収集に関する権限の管理](../../../rtcdp-connections/permissions.md).
 
 ## 権限タイプ
 
@@ -121,4 +121,4 @@ Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Consol
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform のタグで使用できる権限の概要を説明しました。Adobe Admin Console でタグ用の製品プロファイルを設定する手順については、 [ユーザー権限の管理](./manage-permissions.md) に関するガイドを参照してください。
+このドキュメントでは、Experience Platform のタグで使用できる権限の概要を説明しました。Adobe Admin Consoleでタグ用の製品プロファイルを設定する手順については、 [データ収集に関するユーザー権限の管理](../../../rtcdp-connections/permissions.md).
