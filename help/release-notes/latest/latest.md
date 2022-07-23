@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 100%
+source-wordcount: '1864'
+ht-degree: 93%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[データ収集]](#data-collection)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
-- [Real-Time Customer Data Platform Connections](#data-collection)
 - [ソース](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -61,6 +61,23 @@ Data Science Workspace の一般情報について詳しくは、[概要ドキ�
 {style=&quot;table-layout:auto&quot;}
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platformは、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [データストリームのアクセスタイプの設定](../../edge/datastreams/overview.md#create) | 新しいデータストリームを作成する際に、Edge ネットワークで受け入れるリクエストのタイプを選択できるようになりました。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
+| 単一ページアプリケーションで、指標を増分することなく、[提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions)します。 | 新しく追加された `applyPropositions` コマンドを使用すると、[!DNL Analytics] および [!DNL Target] 指標を増分せずに、[!DNL Target] から単一ページアプリケーションに提案の配列をレンダリングまたは実行できます。これにより、レポートの精度が向上します。 |
+| [モバイルから web およびクロスドメイン での ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
+| [Google Data Layer タグ拡張機能](../../tags/extensions/web/google-data-layer/overview.md) | Google Data Layer 拡張機能を使用すると、タグ実装でGoogleデータレイヤーを使用できます。 |
+| [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google Ads 拡張コンバージョン拡張機能を使用すると、Google Ads のコンバージョンをリアルタイムで強化できます。 |
+| [Mailchimp イベント転送拡張機能](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp イベント転送拡張機能は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーできる Mailchimp マーケティング API にイベントを送信します。 |
+
+詳しくは、 [データ収集の概要](../../rtcdp-connections/home.md).
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -116,20 +133,6 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 {style=&quot;table-layout:auto&quot;}
 
 クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
-
-## Real-time Customer Data Platform Connections {#data-collection}
-
-Real-Time Customer Data Platform Connections は、クライアントサイドのカスタマーエクスペリエンスに関するデータを収集して Adobe Experience Platform Edge Network に送信し、データを強化したり、変換したり、アドビまたはアドビ以外の宛先に配信したりできるようにする一連のテクノロジーを提供します。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| [データストリームのアクセスタイプの設定](../../edge/datastreams/overview.md#create) | 新しいデータストリームを作成する際に、Edge ネットワークで受け入れるリクエストのタイプを選択できるようになりました。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
-| 単一ページアプリケーションで、指標を増分することなく、[提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions)します。 | 新しく追加された `applyPropositions` コマンドを使用すると、[!DNL Analytics] および [!DNL Target] 指標を増分せずに、[!DNL Target] から単一ページアプリケーションに提案の配列をレンダリングまたは実行できます。これにより、レポートの精度が向上します。 |
-| [モバイルから web およびクロスドメイン での ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
-
-詳しくは、[Real-Time CDP Connections の概要](../../rtcdp-connections/home.md) を参照してください。
 
 ## ソース {#sources}
 
