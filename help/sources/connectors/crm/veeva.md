@@ -5,7 +5,7 @@ title: Veeva CRM ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Veeva CRM をAdobe Experience Platformに接続する方法を説明します。
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 72%
@@ -32,5 +32,5 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 
 ## UIを使用して [!DNL Veeva CRM] と [!DNL Platform] を接続する
 
-- [UI でのMicrosoft Dynamics ソース接続の作成](../../tutorials/ui/create/crm/veeva.md)
+- [UI での Veeva CRM ソース接続の作成](../../tutorials/ui/create/crm/veeva.md)
 - [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)
