@@ -3,7 +3,7 @@ title: Adobe Experience Platformでのデータ暗号化
 topic-legacy: data protection
 description: 送信時およびAdobe Experience Platformでの保存時にデータを暗号化する方法を説明します。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Platform と外部コンポーネントとの間で転送されるすべての�
 
 一般に、データは次の 3 つの方法で Platform に取り込まれます。
 
-* [データ収集](../../rtcdp-connections/home.md) の機能を使用すると、Web サイトやモバイルアプリケーションは、取得のステージングと準備のために Platform Edge Network にデータを送信できます。
+* [データ収集](../../collection/home.md) の機能を使用すると、Web サイトやモバイルアプリケーションは、取得のステージングと準備のために Platform Edge Network にデータを送信できます。
 * [ソースコネクタ](../../sources/home.md) Adobe Experience Cloudアプリケーションやその他のエンタープライズデータソースから Platform に直接データをストリーミングします。
 * 非AdobeETL（抽出、変換、読み込み）ツールは、 [バッチ取得 API](../../ingestion/batch-ingestion/overview.md) 消費に関して
 

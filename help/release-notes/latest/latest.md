@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 93%
@@ -77,7 +77,7 @@ Adobe Experience Platformは、クライアント側の顧客体験データを�
 | [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google Ads 拡張コンバージョン拡張機能を使用すると、Google Ads のコンバージョンをリアルタイムで強化できます。 |
 | [Mailchimp イベント転送拡張機能](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp イベント転送拡張機能は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーできる Mailchimp マーケティング API にイベントを送信します。 |
 
-詳しくは、 [データ収集の概要](../../rtcdp-connections/home.md).
+詳しくは、 [データ収集の概要](../../collection/home.md).
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 

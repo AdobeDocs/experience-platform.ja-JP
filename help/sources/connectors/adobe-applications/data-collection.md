@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気の高いトピック；ソー
 title: Adobeデータ収集
 description: このドキュメントでは、Adobeのデータ収集ソースの概要を説明します。
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 52%
@@ -32,8 +32,8 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-データ収集 UI の使用方法に関する包括的な手順については、 [データ収集のエンドツーエンドの概要](../../../rtcdp-connections/e2e.md).
+データ収集 UI の使用方法に関する包括的な手順については、 [データ収集のエンドツーエンドの概要](../../../collection/e2e.md).
 
 ## 次の手順
 
-このドキュメントでは、ソースワークスペースを使用してデータ収集 UI にアクセスする方法を学びました。 データ収集について詳しくは、 [データ収集の概要](../../../rtcdp-connections/e2e.md).
+このドキュメントでは、ソースワークスペースを使用してデータ収集 UI にアクセスする方法を学びました。 データ収集について詳しくは、 [データ収集の概要](../../../collection/e2e.md).

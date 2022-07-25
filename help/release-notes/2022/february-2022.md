@@ -2,7 +2,7 @@
 title: Adobe Experience Platformリリースノート 2022 年 2 月
 description: Adobe Experience Platformの 2022 年 2 月のリリースノート。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 53%
@@ -49,7 +49,7 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 | データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバー側の Experience Data Model（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/datastreams/data-prep.md)に関する節を参照してください。 |
 | ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。詳しくは、[ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
 
-Platform のデータ収集について詳しくは、[データ収集概要](../../rtcdp-connections/home.md)を参照してください。
+Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 

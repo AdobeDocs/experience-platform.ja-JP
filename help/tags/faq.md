@@ -2,7 +2,7 @@
 title: タグのトラブルシューティングガイド
 description: Adobe Experience Platform のタグに関するよくある質問への回答を示します。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 97%
@@ -96,13 +96,13 @@ ht-degree: 97%
 
 ## マイアカウントの読み込み中に UI でエラーが発生したのはなぜですか？
 
-アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Console で製品プロファイルを設定してデータ収集 UI へのアクセスを許可する方法については、 [権限の管理](../rtcdp-connections/permissions.md) に関するガイドを参照してください。
+アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Console で製品プロファイルを設定してデータ収集 UI へのアクセスを許可する方法については、 [権限の管理](../collection/permissions.md) に関するガイドを参照してください。
 
 ## UI でプロパティを追加できないのはなぜですか？
 
 データ収集 UI にログインしたときに新しいプロパティを作成できない場合は、アカウントが「プロパティの管理」権限を持つ製品プロファイルに属していません。
 
-Adobe Admin Console で製品プロファイルを設定して「プロパティの管理」権限を付与する方法については、 [権限の管理](../rtcdp-connections/permissions.md) に関するガイドを参照してください。タグの様々な権限について詳しくは、 [タグのユーザー権限](./ui/administration/user-permissions.md) の概要を参照してください。
+Adobe Admin Console で製品プロファイルを設定して「プロパティの管理」権限を付与する方法については、 [権限の管理](../collection/permissions.md) に関するガイドを参照してください。タグの様々な権限について詳しくは、 [タグのユーザー権限](./ui/administration/user-permissions.md) の概要を参照してください。
 
 ## 他に質問がある場合
 
