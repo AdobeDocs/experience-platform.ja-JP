@@ -1,7 +1,8 @@
 ---
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 4%
@@ -42,7 +43,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) には、�
 
 を選択します。 [!UICONTROL プロファイル ID] を [!UICONTROL 参照] タブをクリックして、 [!UICONTROL 詳細] タブをクリックします。
 
-![「アカウントプロファイル」参照タブに結果が表示され、「プロファイル ID 」がハイライト表示されます。](../images/account-profiles/account-profiles-browse-tab.png) —>
+![「アカウントプロファイル」参照タブに結果が表示され、「プロファイル ID 」がハイライト表示されます。](../images/account-profiles/account-profiles-browse-tab.png)
 
 次に表示されるアカウントプロファイル情報： [!UICONTROL 詳細] タブは、複数のプロファイルフラグメントから結合され、個々のアカウントの単一の表示を形成します。 詳しくは、 [Real-time Customer Data Platformでのアカウントプロファイルの参照](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) を参照して、Platform UI でのアカウントプロファイル表示機能について確認してください。
 

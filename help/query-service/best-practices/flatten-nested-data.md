@@ -2,7 +2,8 @@
 keywords: Experience Platform；クエリサービス；クエリサービス；ネストされたデータ構造；ネストされたデータ；統合；ネストされたデータの統合；
 title: BI ツールで使用するネストされたデータ構造の統合
 description: このドキュメントでは、サードパーティの BI ツールをクエリサービスで使用する際に、セッション中にすべてのテーブルとビューの XDM スキーマを統合する方法を説明します。
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 1%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 このガイドで使用されるスキーマの例では、標準フィールドグループを使用しています [!UICONTROL コマースの詳細]を利用した `commerce` オブジェクト構造と `productListItems` 配列。 詳しくは、 XDM のドキュメントを参照してください。 [詳細情報 [!UICONTROL コマースの詳細] フィールドグループ](../../xdm/field-groups/event/commerce-details.md). スキーマ構造の表現は、次の画像で確認できます。
 
-![コマースの詳細フィールドグループのスキーマ図。 `commerce` および `productListItems` 構造。](../images/best-practices/final-subscription-schema.png)
+![コマースの詳細フィールドグループのスキーマ図。 `commerce` および `productListItems` 構造。](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 BI ツールでネストされたデータ構造がサポートされていない場合、シリアル化された値 ( `commerce` および `productListItems` を参照 )。 これらの値は、1 つのエンコード済みの `commerce` 文字列フィールドとは現実的に使用できないものです。
 
