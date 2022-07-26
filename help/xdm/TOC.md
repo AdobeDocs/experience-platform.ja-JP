@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
-source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
+source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 87%
+source-wordcount: '503'
+ht-degree: 85%
 
 ---
 
@@ -25,14 +25,19 @@ ht-degree: 87%
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
       * [金融機関](./schema/industries/financial.md)
+      * [医療](./schema/industries/healthcare.md)
       * [通信業](./schema/industries/telecom.md)
       * [旅行およびホスピタリティ](./schema/industries/travel-hospitality.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [薬](./classes/medication.md)
+   * [支払者](./classes/payer.md)
+   * [プラン](./classes/plan.md)
    * [ポリシー](./classes/policy.md)
    * [製品](./classes/product.md)
+   * [プロバイダー](./classes/provider.md)
    * [セグメント定義](./classes/segment-definition.md)
    * B2B クラス {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -45,12 +50,13 @@ ht-degree: 87%
       * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * フィールドグループ {#field-groups}
    * XDM 個人プロファイル {#profile}
+      * [同意および環境設定](./field-groups/profile/consents.md)
       * [デモグラフィックの詳細](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
       * [identityMap](./field-groups/profile/identitymap.md)
+      * [ヘルスケア会員の詳細](./field-groups/profile/healthcare-member-details.md)
       * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
-      * [同意および環境設定](./field-groups/profile/consents.md)
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
       * [通信サブスクリプション](./field-groups/profile/telecom-subscription.md)
       * [仕事用連絡先の詳細](./field-groups/profile/work-contact-details.md)
@@ -58,6 +64,8 @@ ht-degree: 87%
       * [XDM ビジネスパーソンの詳細](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
+      * [広告の詳細](./field-groups/event/advertising-details.md)
+      * [アプリの詳細](./field-groups/event/application-details.md)
       * [残高移動](./field-groups/event/balance-transfers.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [カードアクション](./field-groups/event/card-actions.md)
@@ -73,6 +81,7 @@ ht-degree: 87%
       * [宿泊施設の予約](./field-groups/event/lodging-reservation.md)
       * [見積依頼の詳細](./field-groups/event/quote-request-details.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
+      * [サイトツールの詳細](./field-groups/event/sitetool-details.md)
       * [サポートサイト検索](./field-groups/event/support-site-search.md)
       * [アップグレードの詳細](./field-groups/event/upgrade-details.md)
       * [アップセルの詳細](./field-groups/event/upsell-details.md)
@@ -81,11 +90,19 @@ ht-degree: 87%
       * [XDM ビジネスキャンペーンの詳細](./field-groups/b2b-campaign/details.md)
    * XDM Business Campaign Members {#b2b-campaign-members}
       * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
+   * 医薬品 {#medication}
+      * [医療薬](./field-groups/medication/healthcare-medication.md)
+   * プラン {#plan}
+      * [医療プランの詳細](./field-groups/plan/healthcare-plan-details.md)
    * 製品 {#product}
       * [製品カタログ](./field-groups/product/product-catalog.md)
       * [製品カテゴリ](./field-groups/product/product-category.md)
+   * プロバイダー {#provider}
+      * [医療機関](./field-groups/provider/healthcare-provider.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
+   * [アカウントの詳細](./data-types/account-details.md)
+   * [広告ブレーク](./data-types/ad-break.md)
    * [アプリケーション](./data-types/application.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
@@ -111,6 +128,7 @@ ht-degree: 87%
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [印象](./data-types/impressions.md)
+   * [実装の詳細](./data-types/implementation-details.md)
    * [内部サイト検索](./data-types/internal-site-search.md)
    * [キーと値のペア](./data-types/key-value-pair.md)
    * [マーケティング](./data-types/marketing.md)
