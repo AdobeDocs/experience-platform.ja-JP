@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1222'
 ht-degree: 20%
 
 ---
 
 # 接続 [!DNL Data Landing Zone] フローサービス API を使用してAdobe Experience Platformに送信
 
-[!DNL Data Landing Zone] は、Adobe Experience Platformでプロビジョニングされた一時ファイルストレージのクラウドベースのデータストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
+[!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込む、クラウドベースの安全なファイルストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
 
 このチュートリアルでは、 [!DNL Data Landing Zone] を使用したソース接続 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). このチュートリアルでは、 [!DNL Data Landing Zone]を更新し、資格情報を表示および更新します。
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 正常な応答は、クエリされたファイルの構造と、ファイル名、データ型、および `properties` キー、次の情報を含む `fileType`, `compressionType`、および `columnDelimiter`.
 
-+++クリック
++++ここをクリック
 
 ```json
 {
