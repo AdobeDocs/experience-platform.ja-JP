@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 61%
+source-wordcount: '433'
+ht-degree: 63%
 
 ---
 
 # [!DNL Flow Service] API を使用した [!DNL Generic OData] ベース接続の作成
-
->[!NOTE]
->
->この [!DNL Generic OData] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
