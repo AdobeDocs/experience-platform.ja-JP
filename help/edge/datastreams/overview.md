@@ -4,8 +4,8 @@ description: クライアントサイドの Experience Platform SDK 統合を、
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
-workflow-type: tm+mt
-source-wordcount: '1774'
+workflow-type: ht
+source-wordcount: '0'
 ht-degree: 100%
 
 ---
