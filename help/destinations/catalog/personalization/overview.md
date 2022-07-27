@@ -3,10 +3,10 @@ keywords: パーソナライゼーション;パーソナライゼーション
 title: パーソナライゼーションの宛先の概要
 description: パーソナライズ機能プラットフォームは、個々の行動からデータとインサイトを収集します。これらのプラットフォームは、マーケターが匿名データをナビゲートし、以前のアクティビティに基づいてオファーや広告を見込み客に提供したり、類似した習慣を持つオーディエンスセグメントの一部として提供する際に役立ちます。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
-workflow-type: ht
-source-wordcount: '143'
-ht-degree: 100%
+source-git-commit: 26fb80a2a09b8374ddec8e164817855169fa0a81
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 96%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 100%
 
 * [Adobe Target](adobe-target-connection.md)
 * [カスタムパーソナライゼーション接続](custom-personalization.md)
+* [Pega Customer Decision Hub 接続](pega.md)
 
 **拡張機能**
 
