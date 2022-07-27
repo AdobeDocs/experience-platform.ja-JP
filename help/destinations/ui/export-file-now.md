@@ -2,11 +2,10 @@
 title: （ベータ版）Experience PlatformUI を使用して、オンデマンドでバッチ保存先にファイルを書き出す
 type: Tutorial
 description: Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先に書き出す方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: ff0fe836b2bb181ae4395f1d04c04b8e51a5bac6
+exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
+source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '745'
 ht-degree: 6%
 
 ---
@@ -16,6 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >この **[!UICONTROL ファイルを今すぐ書き出し]** 」オプションを使用するAdobe Experience Platform Destination SDKは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>この機能へのアクセスについては、Adobe担当者にお問い合わせください。
 
 >[!IMPORTANT]
 > 
