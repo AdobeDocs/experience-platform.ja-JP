@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;A4T；ログ；Web SDK;Experience;Platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 4%
 
 ---
@@ -136,7 +136,7 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 }
 ```
 
-フォームベースの Experience Composer アクティビティの提案には、同じ提案の下に、コンテンツとクリック指標項目の両方を含めることができます。 したがって、コンテンツの分析トークンを単一でで表示する代わりに、 `scopeDetails.characteristics.analyticsToken` プロパティの代わりに、ディスプレイとクリック分析トークンの両方を `scopeDetails.characteristics.analyticsTokens` オブジェクト、内 `display` および `click` 対応するプロパティ。
+フォームベースの Experience Composer アクティビティの提案には、同じ提案の下に、コンテンツとクリック指標項目の両方を含めることができます。 したがって、コンテンツの分析トークンを単一でで表示する代わりに、 `scopeDetails.characteristics.analyticsToken` プロパティの代わりに、 `scopeDetails.characteristics.analyticsDisplayToken` および `scopeDetails.characteristics.analyticsClickToken` 対応するプロパティ。
 
 ```json
 {
@@ -162,14 +162,10 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 }
 ```
 
-次の値すべて： `scopeDetails.characteristics.analyticsToken`、および `scopeDetails.characteristics.analyticsTokens.display` （表示されたコンテンツの場合）および `scopeDetails.characteristics.analyticsTokens.click` （クリック指標の場合）は、収集され、 `tnta` タグを [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼び出し。
+次の値すべて： `scopeDetails.characteristics.analyticsToken`、および `scopeDetails.characteristics.analyticsDisplayToken` （表示されたコンテンツの場合）および `scopeDetails.characteristics.analyticsClickToken` （クリック指標の場合）は、収集され、 `tnta` タグを [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼び出し。
 
 >[!IMPORTANT]
 >
->注意： `analyticsToken`/`analyticsTokens` プロパティには、複数のトークンを含めることができます。複数のトークンは、コンマで区切られた 1 つの文字列として連結されます。
+>この `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` プロパティには、複数のトークンを含めることができます。複数のトークンは、コンマで区切られた 1 つの文字列として連結されます。
 >
 >次の節で示す実装例では、複数の Analytics トークンが反復的に収集されています。 Analytics トークンの配列を連結するには、次のような関数を使用します。
 >
@@ -344,13 +340,10 @@ alloy("sendEvent", {
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
