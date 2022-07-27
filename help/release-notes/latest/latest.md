@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
+source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 30%
+source-wordcount: '1913'
+ht-degree: 31%
 
 ---
 
@@ -18,7 +18,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [ダッシュボード](#dashboards)
 - [データ収集](#collection)
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
+
 <!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
 - [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
@@ -98,6 +100,29 @@ Adobe Experience Platformは、クライアント側の顧客体験データを�
 {style=&quot;table-layout:auto&quot;}
 
 詳しくは、以下を参照してください。 [!DNL Data Prep]を参照し、 [[!DNL Data Prep] 概要](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| [今すぐファイルを書き出す（ベータ版）](../../destinations/ui/export-file-now.md) | 以前にスケジュールされたセグメントの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出す。 このエクスポートは、以前にスケジュールされたエクスポートに加えておこなわれ、セグメントのエクスポート頻度は変更されません。 <br> ファイルのエクスポートが直ちにトリガーされ、Experience Platformのセグメント化の実行から最新の結果が取得されます。 <br> <br>この機能へのアクセスについては、Adobe担当者にお問い合わせください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [（ベータ版） [!DNL Trade Desk] - CRM 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | 用途 [!DNL The Trade Desk] 自分のに対してプロファイルをアクティブ化するための CRM 宛先 [!DNL Trade Desk] CRM データに基づくオーディエンスのターゲティングおよび抑制のアカウント。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
+| [(ベータ) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | この宛先を使用すると、マーケターは、Experience Platformで作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
