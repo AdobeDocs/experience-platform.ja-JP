@@ -2,16 +2,16 @@
 title: 設定済みのダッシュボードを表示
 description: 組織の設定済みダッシュボードを Experience Platform UI に一覧表示します。
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
-workflow-type: ht
-source-wordcount: '154'
-ht-degree: 100%
+source-git-commit: edad0352ffcbc8d5e520e6cccb7062af7a138629
+workflow-type: tm+mt
+source-wordcount: '218'
+ht-degree: 61%
 
 ---
 
 # 設定済みのダッシュボードを表示
 
-組織が Adobe Experience Platform 内で複数のダッシュボードを使用できる場合、ユーザーインターフェイス（UI）内でこれらのダッシュボードを確認できます。
+組織がAdobe Experience Platform内で複数のダッシュボードを使用できる場合、ユーザーインターフェイス (UI) 内でダッシュボードの在庫を確認できます。
 
 組織で設定したダッシュボードを表示するには、左側のナビゲーションで&#x200B;**[!UICONTROL ダッシュボード]**&#x200B;を選択し、「**[!UICONTROL 参照]**」タブを選択します。
 
@@ -24,3 +24,11 @@ Platform インスタンスで使用可能なすべてのダッシュボード�
 ![ダッシュボード名がハイライト表示された「参照」タブ。](./images/inventory/dashboard-name.png)
 
 選択すると、Platform UI または完全に統合されたアプリケーションワークスペースでダッシュボードが開きます。ユーザーは必要な資格情報を使用してログインする必要があります。
+
+## カスタムダッシュボードの作成（ベータ版）
+
+>[!IMPORTANT]
+>
+>ユーザー定義のダッシュボード機能はベータ版です。 機能とドキュメントは変更される場合があります。
+
+Adobe Experience Platformダッシュボードを使用すると、カスタムダッシュボードを作成および管理できます。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。 詳しくは、 [ユーザー定義ダッシュボードガイド](./user-defined-dashboards.md) カスタムダッシュボードの作成と設定の手順については、を参照してください。

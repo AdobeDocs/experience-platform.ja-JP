@@ -4,7 +4,7 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
 source-wordcount: '2726'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UIC
 
 詳しくは、 [ダッシュボードの変更](../customize/modify.md) および [ウィジェットライブラリの概要](../customize/widget-library.md) ドキュメントを参照してください。
 
-## 標準ウィジェット
+## 標準ウィジェット {#standard-widgets}
 
 Adobeには、宛先に関連する様々な指標を視覚化し、データ分析に使用できるセグメントの完全性を評価するために使用できる、複数の標準ウィジェットが用意されています。 また、 [!UICONTROL Widget ライブラリ]. カスタムウィジェットの作成の詳細については、まず [ウィジェットライブラリの概要](../customize/widget-library.md).
 

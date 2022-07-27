@@ -4,9 +4,9 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 11%
 
 ---
@@ -57,11 +57,11 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 
 セグメントダッシュボードはウィジェットで構成されています。ウィジェットは、選択したセグメントに関する重要な情報を提供する読み取り専用の指標です。
 
-ウィジェットの「最終更新日」の日時は、データの最後のスナップショットが取られた日時を示します。 スナップショットの日時は UTC で提供されます。個々のユーザーまたは IMS 組織のタイムゾーンに含まれていません。
+ウィジェットの「最終更新日」の日時は、データの最後のスナップショットが取られた日時を示します。 スナップショットの日時は UTC で提供されます。個々のユーザーや組織のタイムゾーンに含まれていません。
 
 ![](../images/segments/widget-timestamp.png)
 
-## 標準ウィジェット
+## 標準ウィジェット {#standard-widgets}
 
 Adobeには、セグメントに関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットが用意されています。 また、 [!UICONTROL Widget ライブラリ]. カスタムウィジェットの作成の詳細については、まず [ウィジェットライブラリの概要](../customize/widget-library.md).
 
