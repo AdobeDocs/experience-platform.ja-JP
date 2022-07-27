@@ -4,9 +4,9 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3816'
 ht-degree: 7%
 
 ---
@@ -81,7 +81,7 @@ Platform UI で提供されるプロファイル表示機能について詳し�
 
 この [!UICONTROL 和集合スキーマ] 「ダッシュボード」には、特定の XDM クラスの和集合スキーマが表示されます。 次を選択すると、 **[!UICONTROL クラス]** ドロップダウンで、様々な XDM クラスの和集合スキーマを表示できます。
 
-和集合スキーマは、同じクラスを共有し、プロファイルに対して有効にされた複数のスキーマで構成されます。 これにより、同じクラスを共有する各スキーマ内に含まれるすべてのフィールドを 1 つのビューで統合して表示できます。
+結合スキーマは、同じクラスを共有し、プロファイルが有効になっている複数のスキーマで構成されています。これにより、同じクラスを共有する各スキーマ内に含まれるすべてのフィールドを 1 つのビューで統合して表示できます。
 
 詳しくは、和集合スキーマの UI ガイドを参照してください。 [Platform UI 内での和集合スキーマの表示](../../profile/ui/union-schema.md#view-union-schemas).
 
@@ -106,6 +106,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
 * [[!UICONTROL 非セグメント化プロファイルのトレンド]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID 別の非セグメント化プロファイル]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL オーディエンス]](#audiences)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL オーディエンスサイズ]](#audiences-size)
 * [[!UICONTROL プロファイル数のトレンド]](#profile-count-trend)
@@ -258,6 +259,32 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 この [!UICONTROL ID 別の非セグメント化プロファイル] ウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データを棒グラフで視覚化し、比較しやすくします。
 
 ![ID 別の非セグメント化プロファイルウィジェット。](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL オーディエンス] {#audiences}
+
+このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができたセグメントの合計数を提供します。
+
+選択 **[!UICONTROL オーディエンス]** をクリックして、 [!UICONTROL セグメント] dashboard [!UICONTROL 参照] タブをクリックします。 ここから、組織のすべてのセグメント定義のリストが表示されます。
+
+![オーディエンスウィジェット](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL 宛先ステータスにマッピングされたオーディエンス] {#audiences-mapped-to-destination-status}
 

@@ -4,10 +4,10 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
+source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
 workflow-type: tm+mt
 source-wordcount: '1576'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -168,9 +168,18 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 このウィジェットは、2 つのセグメントのうち、両方のセグメント定義の条件を満たすプロファイルの数を表します。 比較に使用するセグメントは、ウィジェットのドロップダウンメニューから選択します。 関連するセグメント定義内に含まれるプロファイルの合計数は、ベン図の円または積集合にカーソルを合わせると確認できます。
 
-このウィジェットを使用すると、セグメント定義の結果の類似点を視覚化することで、セグメント化戦略を最適化できます。
+このウィジェットを使用すると、セグメント定義の結果の類似性を視覚化することで、セグメント化戦略を最適化できます。
 
 ![オーディエンスの重複ウィジェット。](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## 次の手順
 

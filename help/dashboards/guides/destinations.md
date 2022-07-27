@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 * [[!UICONTROL ID によるマッピングされていないセグメント]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID によるマッピングされたセグメント]](#mapped-segments-by-identity)
 * [[!UICONTROL 一般的なオーディエンス]](#common-audiences)
+* [[!UICONTROL マッピングされたオーディエンス]](#mapped-audiences)
 * [[!UICONTROL マッピングされたオーディエンスのヘルス]](#mapped-audience-health)
 * [[!UICONTROL 宛先数]](#destinations-count)
 * [[!UICONTROL 宛先ステータス]](#destination-status)
@@ -195,6 +196,14 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 この [!UICONTROL オーディエンスサイズ] 列には、リストされた各セグメントの合計プロファイル数が表示されます。
 
 ![共通オーディエンスウィジェット](../images/destinations/common-audiences.png)
+
+### マッピングされたオーディエンス {#mapped-audiences}
+
+この [!UICONTROL マッピングされたオーディエンス] widget は、ページ上部で選択した宛先に対してアクティブ化できる、マッピングされたオーディエンスの合計数を表示します。
+
+選択 **[!UICONTROL セグメント]** セグメントダッシュボードに移動するには [!UICONTROL 参照] タブをクリックします。 このワークスペースには、組織のすべてのセグメント定義のリストが表示されます。
+
+![Mapped audiences ウィジェット](../images/destinations/mapped-audiences.png)
 
 ### マッピングされたオーディエンスのヘルス {#mapped-audience-health}
 
