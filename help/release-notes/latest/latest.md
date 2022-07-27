@@ -2,67 +2,75 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4addf64a819cd302b514334ce9cd949e96d0e698
+source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 93%
+source-wordcount: '1706'
+ht-degree: 30%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年6月22日（PT）**
+**リリース日：2022 年 7 月 27 日**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinations]](#destinations)
-- [データ収集](#data-collection)
+- [ダッシュボード](#dashboards)
+- [データ収集](#collection)
+- [[!DNL Data Prep]](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
-- [クエリサービス](#query-service)
+<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
+- [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## ダッシュボード {#dashboards}
 
-Data Science Workspace は、機械学習と人工知能を使用して、データからインサイトを引き出します。Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測を行うことを支援します。Data Science Workspace がこれを実現する方法の 1 つは、JupyterLab を使用することです。JupyterLab は、<a href="https://jupyter.org/" target="_blank">プロジェクト Jupyter</a> の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
+Adobe Experience Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数の [!DNL dashboards] を提供しています。
+
+### アカウントプロファイルダッシュボード
+
+アカウントプロファイルダッシュボードには、マーケティングチャネル全体の複数のソースおよび顧客アカウント情報の保存に現在使用している様々なシステムからの統合アカウント情報のスナップショットが表示されます。
+
+**更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| JupyterLab ランチャー | JupyterLab ランチャー に Spark 3.2 ノートブックのスターターが含まれるようになりました。 Spark 2.4 ノートブックスターターは、Spark 3.2 ノートブックに置き換えられ、このリリースに含まれる予定です。 |
-| Spark 3.2 | 新しい Scala（Spark）と PySpark のレシピで Spark 3.2 が使用されるようになりました |
-| カーネル | Scala（Spark）ノートブックは、Scala カーネルを介して作成されるようになりました。 PySpark ノートブックは、Python カーネルを介して作成されるようになりました。Spark と PySpark カーネルは非推奨（廃止予定）で、今後のリリースで削除される予定です。 |
-| レシピ | 新しい PySpark と Spark のレシピは、Python と R のレシピと同様の Docker ワークフローに従うようになりました。 |
+| 業界ウィジェット別の合計アカウント数 | このウィジェットは、1 つの指標のアカウントの合計数を表示し、ドーナツグラフを使用して、全体の数を構成する業種の数の比例サイズを示します。 |
+| アカウントプロファイル追加ウィジェット | このウィジェットは、色分けされた棒グラフを使用して、特定の期間にアカウントに追加されたプロファイルの数と、追加されたプロファイルを構成する様々な業界の割合を示します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-Data Science Workspace の一般情報について詳しくは、[概要ドキュメント](../../data-science-workspace/home.md)を参照してください。
+詳しくは、 [リアルタイム CDP、B2B エディションの概要](../../rtcdp/b2b-overview.md) 使用可能な B2B 機能の詳細、または [エンドツーエンドのチュートリアル](../../rtcdp/b2b-tutorial.md) B2B ワークフローの一部としてアカウントプロファイルを作成する方法の詳細を説明します。
 
-## [!DNL Destinations] {#destinations}
+アカウントプロファイル関連指標を視覚化するために使用できるウィジェットについて詳しくは、 [アカウントプロファイルウィジェットドキュメント](../../dashboards/guides/account-profiles.md#standard-widgets).
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+### プロファイルダッシュボード
 
-**新機能または更新された機能**
+プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
+
+**更新された機能**
 
 | 機能 | 説明 |
-| ----------- | ----------- |
-| （ベータ版）[[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) ファイルベースの宛先と[設定可能なファイル名](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration)の Destination SDK サポート。 | Destination SDK を使用して、Google Cloud Storage の宛先を作成し、ファイル名マクロを使用して、書き出したファイルのカスタムファイル名を定義できるようになりました。<br><br>現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。 |
-| データフローのセグメント列をバッチ宛先に対して実行 | データフローをバッチ宛先に対して実行する場合、UI に各データフローの実行に関連付けられたセグメントの名前が表示されるようになりました。詳しくは、[データフローのバッチ宛先への実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)を参照してください。 |
+| --- | --- |
+| マッピングされたオーディエンスウィジェット | このウィジェットには、プロファイルダッシュボードドロップダウンで選択した宛先に対してアクティブ化できる、マッピングされたオーディエンスの合計数が表示されます。 |
+
+プロファイルダッシュボードについて詳しくは、 [プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md).
+
+### 宛先ダッシュボード
+
+宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| オーディエンスウィジェット | このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができたセグメントの合計数を提供します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-**新しい宛先**
+宛先ダッシュボードについて詳しくは、 [宛先ダッシュボードの概要](../../dashboards/guides/destinations.md).
 
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [（ベータ版）Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | [!DNL Google Ad Manager 360] 接続により、[!DNL Google Cloud Storage] <br><br> 経由で [!DNL publisher provided identifiers]（PPID）を [!DNL Google Ad Manager 360] にバッチでアップロードすることが可能になりました。この宛先は現在ベータ版で、限られた数のお客様のみが利用できます。[!DNL Google Ad Manager 360] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL IMS Organization ID] を提供します。 |
-| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。 |
-| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Adobe Advertising Cloud [!DNL Demand-Side Platform]（DSP）の宛先を使用すると、DSP とキャンペーンのアクティベーション用に、認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有できます。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
-
-## データ収集 {#data-collection}
+## データ収集 {#collection}
 
 Adobe Experience Platformは、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
 
@@ -70,69 +78,91 @@ Adobe Experience Platformは、クライアント側の顧客体験データを�
 
 | 機能 | 説明 |
 | --- | --- |
-| [データストリームのアクセスタイプの設定](../../edge/datastreams/overview.md#create) | 新しいデータストリームを作成する際に、Edge ネットワークで受け入れるリクエストのタイプを選択できるようになりました。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが [!DNL Edge Network] で処理されないようにする場合は、このオプションを選択します。 </li></ul> |
-| 単一ページアプリケーションで、指標を増分することなく、[提案をレンダリング](../../edge/personalization/rendering-personalization-content.md#applypropositions)します。 | 新しく追加された `applyPropositions` コマンドを使用すると、[!DNL Analytics] および [!DNL Target] 指標を増分せずに、[!DNL Target] から単一ページアプリケーションに提案の配列をレンダリングまたは実行できます。これにより、レポートの精度が向上します。 |
-| [モバイルから web およびクロスドメイン での ID の共有](../../edge/identity/id-sharing.md) | Adobe Experience Platform Web SDK で訪問者 ID 共有機能がサポートされ、モバイルアプリとモバイル web コンテンツの間、およびドメイン間で、より正確にパーソナライズされたエクスペリエンスを配信できるようになりました。 |
-| [Google Data Layer タグ拡張機能](../../tags/extensions/web/google-data-layer/overview.md) | Google Data Layer 拡張機能を使用すると、タグ実装でGoogleデータレイヤーを使用できます。 |
-| [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google Ads 拡張コンバージョン拡張機能を使用すると、Google Ads のコンバージョンをリアルタイムで強化できます。 |
-| [Mailchimp イベント転送拡張機能](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp イベント転送拡張機能は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーできる Mailchimp マーケティング API にイベントを送信します。 |
+| Adobe Admin Consoleによる権限管理 | データ収集機能へのアクセスは、Adobe Experience Platformデータ収集用カードのAdobe Admin Consoleで管理されるようになりました。 詳しくは、 [データ収集権限](../../collection/permissions.md) を参照してください。<br><br>また、Adobe Experience Platformのカードの下のAdmin Consoleでもデータストリームの権限を管理できるようになり、以前の方法で各ユーザーに対して手動でこれらの権限を設定した場合のセキュリティが向上しました。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 詳しくは、 [データ収集の概要](../../collection/home.md).
 
-## エクスペリエンスデータモデル（XDM） {#xdm}
+## [!DNL Data Prep] {#data-prep}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
-
-**新しい XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明 |
-| --- | --- | --- |
-| クラス | [[!UICONTROL 医薬品]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | 薬物治療、特に投薬に使用される薬剤の詳細を収集する医療業界クラス。 |
-| クラス | [[!UICONTROL プラン]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | 健康保険や保険制度など、医療プランの詳細を収集する医療業界クラス。 |
-| クラス | [[!UICONTROL プロバイダー]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | 医療機関に関する詳細を収集する医療業界クラス。 |
-| クラス | [[!UICONTROL 支払者]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | 保険会社の詳細を収集する医療業界クラス。 |
-| クラス | [[!UICONTROL ライブイベントスケジュール]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | 巡業コンサートのスケジュールやスポーツチームのスケジュールなど、ライブイベントのスケジュールに関する詳細を収集するスポーツエンターテインメント業界クラス。 |
-| クラス | [[!UICONTROL ロケーション]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | コンサートホールや競技場など、ライブイベントの場所を収集するスポーツエンターテインメント業界クラス。 |
-| フィールドグループ | [[!UICONTROL 医療薬]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | ブランド名、ロット番号、数量など、投薬に関する詳細を収集する[!UICONTROL 医薬品]クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL 医療プランの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | ネットワーク、タイプ、アクティブステータスなどの詳細を収集する[!UICONTROL プラン]クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL 医療機関]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | 診断や治療の医療サービスを提供するための免許を持つ医療従事者個人または医療施設組織の詳細を収集する[!UICONTROL プロバイダー]クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL ヘルスケア会員の詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | [!UICONTROL XDM 個人プロファイル]クラスのフィールドグループ。連絡先情報、主治医、医療保険情報など、サービスまたはケアを受ける人の詳細を収集します。 |
-| フィールドグループ | [[!UICONTROL サイトツールの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | チャットボットやアンケートなどのサイトツールで受け取った情報を収集する、[!UICONTROL XDM ExperienceEvent] クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL ライブイベントチケットの購入]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | コンサートやスポーツの試合などのライブイベントのチケットの購入履歴を収集する、[!UICONTROL XDM ExperienceEvent] クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL スポーツとエンターテインメントイベントのスケジュール]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | アトラクション名、開場時刻など、スケジュールの詳細を収集する、[!UICONTROL ライブイベントスケジュール]クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL スポーツとエンターテインメントイベントの会場]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | 座席数や指定販売地域（DMA）など、イベント会場に関する詳細を収集する[!UICONTROL 場所]クラスのフィールドグループ。 |
-| グローバルスキーマ | （複数） | RTCDP インサイトの目的地指標として、新しいグローバルスキーマを使用できます。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1560)を参照してください。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-**更新された XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明のアップデート |
-| --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列スキーマ]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | メディア states-update イベントタイプを追加しました。 |
-| フィールドグループ | [[!UICONTROL 宿泊施設の予約]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | 宿泊施設のチェックアウトプロパティを追加しました。 |
-| データタイプ | [[!UICONTROL メディア情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | states-start フィールドと states-end フィールドを追加しました。 |
-| 拡張機能 | [[!UICONTROL Workfront 変更イベント]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 作成イベントのユーザーと時刻を識別できるように、属性の保存に使用する 2 つのフィールドを追加しました。 |
-| 拡張機能 | [[!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | ランディングページオブジェクトに、購読、同意、カスタムメール、追加データ情報を追加しました。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
-
-## クエリサービス {#query-service}
-
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータをマッピング、変換および検証できます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| アドホックスキーマのラベル付け | クエリサービス CTAS クエリを通じて、自動的に生成されるアドホックスキーマのデータフィールドにラベルを適用し、機密データへのアクセスを管理します。アドホックスキーマの特定のフィールドもしくはデータセットの使用を制限して、機密性の高い個人データと個人を特定できる情報の両方へのアクセスを制御できます。属性ベースのアクセス制御機能を使用すると、Platform UI を通じてアドホックスキーマフィールドにラベルを付けることができます。 |
-| `FLATTEN` 設定 | サードパーティの BI ツールを使用してデータベースに接続する場合、`FLATTEN` を設定すると、ネストされたデータ構造が別々の列に統合され、属性名が行値を保持する列名になります。これにより、アドホックスキーマの使いやすさが向上し、ネストされたデータ構造をサポートしない BI ツールでデータを取得、分析、変換およびレポートするために必要なワークロードが削減されます。 |
+| の機能強化 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendationsは今、より賢く、より速くなっています。 新しい検証チェックにより、最も一般的なマッピングエラーが大幅に減少し、価値創出までの時間が大幅に短縮されます。 |
+| ストリーミングアップセットの階層サポート | 関数を使用できるようになりました `upsert_array_append` および `upsert_array_replace` を使用して、アップサートをプロファイルにストリーミングする際に配列とオブジェクトを更新する。 詳しくは、 [[!DNL Data Prep] マッピング関数ガイド](../../data-prep/functions.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
+詳しくは、以下を参照してください。 [!DNL Data Prep]を参照し、 [[!DNL Data Prep] 概要](../../data-prep/home.md).
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 医療業界のデータモデル | 標準的な医療データモデルを導入し、デジタル獲得の増加、プログラム登録の向上、薬剤情報の促進に関連する 5 つの一般的な業界ユースケースをサポートしました。 概要については、 [医療データモデル](../../xdm/schema/industries/healthcare.md) これらの使用例と、それらをサポートする標準の XDM コンポーネントについて詳しくは、を参照してください。<br><br>新しい業界フィルターが [!UICONTROL スキーマ] カスタムスキーマを構築する際に、医療関連のコンポーネントを参照するのに役立つ UI。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新しい XDM コンポーネント**
+
+>[!WARNING]
+>
+>次の表に示す新しい XDM コンポーネントは、試行用で、現在テスト中です。 これらのコンポーネントは、安定化する前に、（必要に応じて）大幅な変更で更新されることが予想されます。 それに応じて開発作業を計画してください。
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| クラス | [[!UICONTROL 天気]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | 気象データのキャプチャに使用されるレコードベースのクラス。 |
+| フィールドグループ | [[!UICONTROL 現在の天気]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] 郵便番号の現在の天気条件を取得するクラスです。 |
+| フィールドグループ | [[!UICONTROL 予測天気]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] 郵便番号の予測気象条件をキャプチャするために使用するクラスです。 |
+| フィールドグループ | [[!UICONTROL 製品トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] クラス。消費者の行動を促す気象条件を活用する、製品固有のトリガーをキャプチャするために使用します。 |
+| フィールドグループ | [[!UICONTROL 相対トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] クラス。消費者の行動を促すという既知の気象トリガーを活用する相対的な環境をキャプチャするために使用します。 |
+| フィールドグループ | [[!UICONTROL 重大なトリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] クラス。消費者の行動を促すと知られている厳しい気象条件を活用するトリガーをキャプチャするために使用します。 |
+| フィールドグループ | [[!UICONTROL 気象トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気] クラス。消費者の行動を促すと知られている気象条件を活用する一般的なトリガーをキャプチャするために使用します。 |
+| フィールドグループ | [[!UICONTROL MediaCollection インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] メディアインタラクションに関する詳細をキャプチャするクラス。 |
+| フィールドグループ | [[!UICONTROL MediaReporting インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | のフィールドグループ [!UICONTROL XDM ExperienceEvent] メディアレポートとのインタラクションに関する詳細をキャプチャするクラス。 |
+| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | 広告アセットに関する詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL 広告ポッドの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | 単一の広告ブレーク内で再生される複数の広告のシーケンスである、広告ポッドに関する詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL チャプターの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | ビデオコンテンツのチャプターまたはセグメントに関する詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | ビデオ再生エラーに関する詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL プレーヤーイベントの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | 再生ヘッドの位置やセッション ID など、ビデオプレーヤーに関するイベント関連の詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL プレーヤーステートデータ情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | ビデオプレーヤーの状態関連の詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL データの詳細情報の問い合わせ]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | ビデオ再生イベントに関する Quality-of-Experience(QoE) の詳細をキャプチャします。 |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | ビデオ再生イベントに関するセッションの詳細をキャプチャします。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
+<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+| Feature | Description |
+| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+
+{style="table-layout:auto"}
+
+To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 孤立したプロファイルエッジ属性のクリーンアップ（限られたリリース） | 組織がこの機能にアクセスできる場合、プロファイルサービスは、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表示できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、が含まれるデータセットから結合されるプロファイルに影響を与えます `com_adobe_aep_profile_region_dataset` が true とマークされている。 このリリース以前の残りのエッジ属性フラグメントがこれらの指標に含まれていたので、ライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標にドロップが表示されたり、プロファイルダッシュボードの「プロファイル数」指標にドロップが表示されたりします。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
 ## ソース {#sources}
 
@@ -140,9 +170,13 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
+**新機能**
+
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Mixpanel] ソースのベータ版リリース | [!DNL Mixpanel] ソースを使用して、分析データを [!DNL Mixpanel] アカウントから Experience Platform に取り込むことができるようになりました。詳しくは、[[!DNL Mixpanel] ソースドキュメント](../../sources/connectors/analytics/mixpanel.md)を参照してください。 |
+| の一般リリース [!DNL Azure Data Explorer] ソース | AzureData Explorerソースを使用して、 [!DNL Azure] インスタンスからExperience Platformへ。 詳しくは、[[!DNL Azure Data Explorer] ソースの概要](../../sources/connectors/databases/data-explorer.md)を参照してください。 |
+| の一般公開 [!DNL Generic OData] ソース | 以下を使用： [!DNL Generic OData] ソース：オープンデータプロトコルをサポートするシステムからExperience Platformにリソースを取り込みます。 詳しくは、[[!DNL Generic OData] ソースの概要](../../sources/connectors/protocols/odata.md)を参照してください。 |
+| のソースファイルプロパティの自動検出のサポート [!DNL Data Landing Zone] Experience PlatformUI | この [!DNL Data Landing Zone] ソースで、Experience PlatformUI を使用する際のファイルプロパティの自動検出がサポートされるようになりました。 詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
