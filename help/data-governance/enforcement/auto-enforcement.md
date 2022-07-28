@@ -5,9 +5,9 @@ title: ポリシーの自動適用
 topic-legacy: guide
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1694'
 ht-degree: 66%
 
 ---
@@ -110,7 +110,7 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 >[!IMPORTANT]
 >
->同意ポリシーは、現在、医療用Adobeシールドを購入した組織でのみ使用できます。
+>同意ポリシーは、現在、Healthcare Shield を購入した組織でのみ使用できます。
 
 次の場合： [同意ポリシーを作成しました](../policies/user-guide.md#consent-policy) 宛先に対してセグメントをアクティブ化しているときに、同意ポリシーがアクティベーションに含まれるプロファイルの割合にどのように影響するかを確認できます。
 

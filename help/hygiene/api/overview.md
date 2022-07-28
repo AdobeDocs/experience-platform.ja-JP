@@ -2,10 +2,10 @@
 title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 100%
+source-wordcount: '307'
+ht-degree: 94%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Shield for Healthcare を購入した組織でのみ利用できます。
+>現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存された顧客の個人データをプログラムで修正または削除したり、データセットの Time-to-Live（TTL）プロトコルをスケジュール設定したりできます。このガイドでは、API を使用するための前提条件の手順を説明し、よりエンドポイントに特化したドキュメントへのリンクを提供します。
 

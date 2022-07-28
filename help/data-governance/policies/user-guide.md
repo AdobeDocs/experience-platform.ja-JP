@@ -5,9 +5,9 @@ title: UI でのデータ使用ポリシーの管理
 topic-legacy: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、ポリシーユーザーインターフェイスのポリシーワークスペースで実行できるExperience Platformの概要を説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1324'
 ht-degree: 51%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 >[!IMPORTANT]
 >
->同意ポリシーは、現在、医療用Adobeシールドを購入した組織でのみ使用できます。
+>同意ポリシーは、現在、Healthcare Shield を購入した組織でのみ使用できます。
 
 同意ポリシーの作成を選択すると、新しい画面が表示され、新しいポリシーを設定できます。
 

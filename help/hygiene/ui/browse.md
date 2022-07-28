@@ -2,10 +2,10 @@
 title: データハイジーン作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスでの既存のデータハイジーン作業指示の表示および管理方法を説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 100%
+source-wordcount: '411'
+ht-degree: 95%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Shield for Healthcare を購入した組織でのみ利用できます。
+>現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
 
 データハイジーンリクエストがシステムに送信されると、リクエストされたタスクを実行するための作業指示が作成されます。作業指示は、データセットのスケジュールされた有効期間（TTL）など、特定のデータハイジーンプロセスを表します。これには、現在のステータスやその他の関連する詳細が含まれます。
 

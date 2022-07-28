@@ -2,10 +2,10 @@
 title: データセット Time-to-Live（TTL）API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット TTL をプログラムでスケジュール設定できます。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 100%
+source-wordcount: '1313'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Shield for Healthcare を購入した組織でのみ利用できます。
+>現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
 
 Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Experience Platform のデータセットの Time-to-Live（TTL）プロトコルをスケジュール設定できます。
 
