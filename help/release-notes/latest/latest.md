@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 4876df90e7e715c89e0614a9e1e81c3e7091bccb
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 32%
+source-wordcount: '2085'
+ht-degree: 29%
 
 ---
 
@@ -120,8 +120,12 @@ Adobe Experience Platformは、クライアント側の顧客体験データを�
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [（ベータ版） [!DNL Trade Desk] - CRM 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | 用途 [!DNL The Trade Desk] 自分のに対してプロファイルをアクティブ化するための CRM 宛先 [!DNL Trade Desk] CRM データに基づくオーディエンスのターゲティングおよび抑制のアカウント。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Marketo Engage先を更新すると、自動化を使用して静的リストの作成プロセスを合理化し、ユーザーがリードに追加のフィールドを取り込めるようになります。 以下のMarketo V2 の機能強化の詳細を参照してください。 <br><ul><li>内 **[!UICONTROL セグメントをスケジュール]** アクティベーションワークフローの手順のMarketo V1 では、手動で **マッピング ID** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。</li><li>内 **[!UICONTROL マッピング]** アクティベーションワークフローの手順で、Marketo V1 で、Marketoで XDM フィールドを 3 つのターゲットフィールドにのみマッピングできました。 `firstName`, `lastName`、および `companyName`. Marketo V2 リリースで、Marketoで XDM フィールドを他の多数のフィールドにマッピングできるようになりました。 詳しくは、 [Marketo V2 でサポートされる属性](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
+| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md) | Pega Customer Decision Hub のAdobe Experience Platformのプロファイル属性とセグメントメンバーシップ情報を、アダプティブモデルの述語として使用し、次に最適な判定を行うのに役立ちます。 |
+| [(API)SalesforceMarketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | この宛先を使用すると、マーケターは、Experience Platformで作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。 |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | SalesforceMarketing Cloudの連絡先情報を更新し、Experience Platformのプロファイルとセグメント情報を表示 |
 | [(ベータ) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | この宛先を使用すると、マーケターは、Experience Platformで作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
+| [（ベータ版） [!DNL Trade Desk] - CRM 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | 用途 [!DNL The Trade Desk] 自分のに対してプロファイルをアクティブ化するための CRM 宛先 [!DNL Trade Desk] CRM データに基づくオーディエンスのターゲティングおよび抑制のアカウント。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
