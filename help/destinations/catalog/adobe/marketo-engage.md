@@ -2,22 +2,44 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 16%
+source-wordcount: '740'
+ht-degree: 11%
 
 ---
 
 # Marketo Engage先 {#beta-marketo-engage-destination}
 
+## 宛先の変更ログ {#changelog}
+
+>[!IMPORTANT]
+>
+>のリリースに伴い、 [Marketo V2 宛先コネクタの機能強化](/help/release-notes/2022/july-2022.md#destinations)に設定すると、宛先カタログに 2 つのMarketoカードが表示されます。
+>* 既に **[!UICONTROL Marketo V1]** 宛先：新しいデータフローを **[!UICONTROL Marketo V2]** 宛先への既存のデータフローの削除 **[!UICONTROL Marketo V1]** 2023 年 2 月までに宛先に追加されました。 この日付以降、 **[!UICONTROL Marketo V1]** 宛先カードが削除されます。
+>* まだ **[!UICONTROL Marketo V1]** 宛先、新しい **[!UICONTROL Marketo V2]** Marketoに接続してデータを書き出すためのカード。
+
+
+![2 つのMarketo宛先カードの横並び表示の画像。](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+
+Marketo V2 の宛先の改善点を次に示します。
+
+* 内 **[!UICONTROL セグメントをスケジュール]** アクティベーションワークフローの手順のMarketo V1 では、手動で **マッピング ID** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。
+* 内 **[!UICONTROL マッピング]** アクティベーションワークフローの手順で、Marketo V1 で、Marketoで XDM フィールドを 3 つのターゲットフィールドにのみマッピングできました。 `firstName`, `lastName`、および `companyName`. Marketo V2 リリースで、Marketoで XDM フィールドを他の多数のフィールドにマッピングできるようになりました。 詳しくは、 [サポートされている属性](#supported-attributes) の節を参照してください。
+
 ## 概要 {#overview}
 
-Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
+[!DNL Marketo Engage] は、マーケティング、広告、分析、コマースに対応する、唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 
  の宛先を利用することで、マーケターは、Adobe Experience Platform で作成したセグメントを Marketo にプッシュできます。それらのセグメントは静的リストとして表示されます。
 
-## サポートされる ID {#supported-identities}
+## サポートされる ID と属性 {#supported-identities-attributes}
+
+>[!NOTE]
+>
+>内 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 「宛先のアクティブ化」ワークフローの「 *必須* ID をマッピングするには、および *オプション* 属性をマッピングします。 「 ID 名前空間」タブから電子メールや ECID をマッピングすることは、Marketoで人物が一致するようにするために最も重要な作業です。 「E メールのマッピング」を選択すると、最も高い一致率が確保されます。
+
+### サポートされる ID {#supported-identities}
 
 | ターゲット ID | 説明 |
 |---|---|
@@ -26,9 +48,9 @@ Marketo Engageは、マーケティング、広告、分析、コマースに対
 
 {style=&quot;table-layout:auto&quot;}
 
->[!NOTE]
->
->内 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 「宛先のアクティブ化」ワークフローの「 *必須* ID をマッピングするには、および *オプション* 属性をマッピングします。 「 ID 名前空間」タブから電子メールや ECID をマッピングすることは、Marketoで人物が一致するようにするために最も重要な作業です。 「E メールのマッピング」を選択すると、最も高い一致率が確保されます。
+### サポートされている属性 {#supported-attributes}
+
+Experience Platformの属性を、組織がMarketoでアクセスできる任意の属性にマッピングできます。 Marketoでは、 [API リクエストの説明](https://developers.marketo.com/rest-api/lead-database/leads/#describe) ：組織がアクセス権を持つ属性フィールドを取得します。
 
 ## エクスポートのタイプと頻度 {#export-type-frequency}
 
@@ -36,7 +58,7 @@ Marketo Engageは、マーケティング、広告、分析、コマースに対
 
 | 項目 | タイプ | 備考 |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメントの宛先で使用されている識別子（E メール、ECID）を使用して、セグメント（オーディエンス）のすべてのMarketo Engageを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Marketo Engage] 宛先。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
