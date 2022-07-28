@@ -5,10 +5,10 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
-source-wordcount: '4175'
-ht-degree: 17%
+source-wordcount: '4286'
+ht-degree: 16%
 
 ---
 
@@ -164,13 +164,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 配列を相互に結合します。 | <ul><li>配列： **必須** 要素を追加する配列。</li><li>値：親配列に追加する配列。</li></ul> | join_arrays(&#x200B;ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 入力のリストを取得し、配列に変換します。 | <ul><li>INCLUDE_NULLS: **必須** 応答配列に NULL を含めるかどうかを示す boolean 値です。</li><li>値： **必須** 配列に変換する要素。</li></ul> | to_array(&#x200B;INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** サイズを探しているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | この関数は、入力配列全体のすべての要素を、プロファイルの配列の末尾に追加するために使用します。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイルに配列を追加する配列です。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
-
-<!--
-| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
--->
 
 ### 論理演算子 {#logical-operators}
 
