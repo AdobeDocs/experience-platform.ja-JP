@@ -3,9 +3,9 @@ keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結
 title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: e94753236623343dcd739ff65c18248c1112f361
+source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1476'
 ht-degree: 81%
 
 ---
@@ -22,11 +22,11 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 ## アカウントプロファイルの概要 {#account-profiles-overview}
 
-選択 **[!UICONTROL プロファイル]** under [!UICONTROL アカウント] の左側のナビゲーションに、アカウントプロファイルの概要が表示されます。 以下 [!UICONTROL 概要] 」タブをクリックすると、ダッシュボードに、1 つのエントリポイントにウィジェットを表示するグラフィックまたはグラフが表示されます。
+選択 **[!UICONTROL プロファイル]** under [!UICONTROL アカウント] （左側のナビゲーション）アカウントプロファイルの概要を表示します。 以下 [!UICONTROL 概要] 」タブをクリックすると、ダッシュボードに、1 つのエントリポイントにウィジェットを表示するグラフィックまたはグラフが表示されます。
 
 ![ウィジェットを表示する「概要」タブ](images/b2b-account-profile-overview.png)
 
-[[!UICONTROL アカウントプロファイル]] ((../../dashboards/guides/account-profiles.md) ダッシュボードを参照してください。
+詳しくは、 [[!UICONTROL アカウントプロファイル]](../../dashboards/guides/account-profiles.md) ダッシュボードを参照してください。
 
 ## アカウントプロファイルの参照 {#browse-account-profiles}
 
