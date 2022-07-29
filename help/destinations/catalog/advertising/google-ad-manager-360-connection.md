@@ -2,9 +2,9 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、Googleの広告サービングプラットフォームで、パブリッシャーがビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理する手段を提供します。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '914'
 ht-degree: 13%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 13%
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL バケット名]**:名前を入力 [!DNL Google Cloud Storage] この宛先で使用するバケット。
 * **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
-* **[!UICONTROL アカウント ID]**:アカウント ID に [!DNL Google]. これは、ネットワークコードまたはオーディエンスリンク ID です。 通常、これは 8 桁の ID です。
+* **[!UICONTROL アカウント ID]**:オーディエンスリンク ID にを入力します。 [!DNL Google].
 * **[!UICONTROL アカウントの種類]**：Google のアカウントに応じて、次のオプションを選択します。
    *  for Publishers - `DFP by Google` を使用[!DNL DoubleClick]
    * 用途 `AdX buyer` 対象 [!DNL Google AdX]
