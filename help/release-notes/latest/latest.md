@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
 source-wordcount: '2114'
-ht-degree: 28%
+ht-degree: 31%
 
 ---
 
@@ -74,7 +74,7 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 
 ## データ収集 {#collection}
 
-Adobe Experience Platformは、クライアント側の顧客体験データを収集し、Adobe Experience Platform Edge Network に送信して、AdobeやAdobe以外の宛先にエンリッチメント、変換、配布できるテクノロジースイートを提供します。
+Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
 **新機能**
 
@@ -84,7 +84,7 @@ Adobe Experience Platformは、クライアント側の顧客体験データを�
 
 {style=&quot;table-layout:auto&quot;}
 
-詳しくは、 [データ収集の概要](../../collection/home.md).
+詳しくは、「[データ収集の概要](../../collection/home.md)」を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
