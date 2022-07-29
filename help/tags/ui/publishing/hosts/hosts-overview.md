@@ -2,10 +2,10 @@
 title: ホストの概要
 description: Adobe Experience Platform で利用可能な各種ホスティングオプションについて説明します。
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
@@ -26,4 +26,4 @@ ht-degree: 100%
 
 同じホストをプロパティ内の複数の環境で使用できます。
 
-自己ホストと、アドビによるホスティングの管理のどちらを使用するかを判断する際に役立つ情報については、「[自己ホストガイド](./self-hosting-libraries.md)」を参照してください。
+自己ホストと、Adobeによるホスティングの管理のどちらを使用するかを判断する際に役立つ情報については、 [自己ホストガイド](./self-hosting-libraries.md).
