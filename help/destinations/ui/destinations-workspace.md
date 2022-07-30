@@ -3,9 +3,9 @@ keywords: プラットフォーム；宛先；宛先ワークスペース；ワ�
 title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 >
 >組織がExperience Platformを初めて使用し、まだアクティブな宛先がない場合、 [!UICONTROL 宛先] ダッシュボードと [!UICONTROL 概要] タブが表示されません。 代わりに、「 [!UICONTROL 宛先] 左のナビゲーションから、 [[!UICONTROL カタログ] タブ](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![「宛先ダッシュボードの概要」タブ](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL カタログ] {#catalog}
 

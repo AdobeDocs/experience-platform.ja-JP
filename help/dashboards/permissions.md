@@ -4,7 +4,7 @@ title: Experience Platform ダッシュボードのアクセス権限の取得�
 type: Documentation
 description: Adobe Admin Console を使用して Experience Platform ダッシュボードの表示、編集、更新の機能をユーザーに付与します。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 32%
@@ -56,7 +56,7 @@ ht-degree: 32%
 | [!DNL Dashboards] [!DNL Inventory] <br/>（「参照」タブ） | 有効 | なし | なし | なし |
 | [!DNL Dashboards] [!DNL Integrations] タブ <br/>(Power BIのインストールに使用 ) | 有効 | **少なくとも 1 つの必須** | なし | なし |
 | Power BIインストールボタンとワークフロー | 有効 | 該当なし | **必須** | 該当なし |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] ダッシュボード<br/>ウィジェットスキーマを編集し、ウィジェットのカスタマイズ用に新しい属性を追加する機能 | **管理 — 標準 — ダッシュボードが必要** | **必須（各ダッシュボード）** | なし | なし |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] ダッシュボード。<br/>ウィジェットスキーマを編集し、ウィジェットのカスタマイズ用に新しい属性を追加する機能 | **管理 — 標準 — ダッシュボードが必要** | **必須（各ダッシュボード）** | なし | なし |
 | [!DNL License Usage Dashboard] | なし | なし | なし | 有効 |
 
 {style=&quot;table-layout:auto&quot;}

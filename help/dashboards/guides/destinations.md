@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 3%
 
 ---
@@ -29,11 +29,13 @@ Adobe Experience Platformのユーザーインターフェイス (UI) は、毎�
 
 Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UICONTROL 宛先]** 左側のレールで、 **[!UICONTROL 概要]** タブをクリックして、ダッシュボードを表示します。
 
+最新のスナップショットの日時が [!UICONTROL 概要] をクリックします。 すべてのウィジェットデータは、その日時時点で正確です。 スナップショットのタイムスタンプは UTC で提供されます。個々のユーザーや組織のタイムゾーンに含まれていません。
+
 >[!NOTE]
 >
 >組織がExperience Platformを初めて使用し、まだアクティブな宛先がない場合、 [!UICONTROL 宛先] ダッシュボードと [!UICONTROL 概要] タブが表示されません。 代わりに、「 [!UICONTROL 宛先] 左のナビゲーションから、 [!UICONTROL カタログ] タブをクリックします。 詳しくは、 [!UICONTROL カタログ] タブ ( [[!UICONTROL 宛先] workspace ガイド](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![最新のスナップショットが強調表示された「 Platform UI の宛先の概要」。](../images/destinations/snapshot-timestamp.png)
 
 ### 宛先ダッシュボードの変更
 

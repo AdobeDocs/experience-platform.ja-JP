@@ -4,9 +4,9 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
+source-wordcount: '3901'
 ht-degree: 7%
 
 ---
@@ -89,7 +89,9 @@ Platform UI で提供されるプロファイル表示機能について詳し�
 
 ダッシュボードはウィジェットで構成されています。ウィジェットは読み取り専用の指標で、プロファイルデータに関する重要な情報を提供します。
 
-ウィジェットの「最終更新日」の日時は、データの最後のスナップショットが取られた日時を示します。 スナップショットの日時は UTC で提供されます。個々のユーザーや組織のタイムゾーンに含まれていません。
+最新のスナップショットの日時が [!UICONTROL 概要] タブが表示されます。 すべてのウィジェットデータは、その日時時点で正確です。 スナップショットのタイムスタンプは UTC で提供されます。個々のユーザーや組織のタイムゾーンに含まれていません。
+
+![プロファイルダッシュボードの「概要」タブでは、最新のスナップショットタイムスタンプが強調表示されます。](../images/profiles/snapshot-timestamp.png)
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -105,13 +107,13 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL ID 別プロファイル]](#profiles-by-identity)
 * [[!UICONTROL ID の重複]](#identity-overlap)
 * [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
+* [[!UICONTROL 単一の ID プロファイル (ID 別)]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
 * [[!UICONTROL 非セグメント化プロファイルのトレンド]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID 別の非セグメント化プロファイル]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL オーディエンス]](#audiences)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL オーディエンスサイズ]](#audiences-size)
-* [[!UICONTROL 単一の ID プロファイル (ID 別)]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 結合ポリシーによるオーディエンスの重複]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL プロファイル数] {#profile-count}
@@ -238,6 +240,14 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ![単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL 単一の ID プロファイル (ID 別)] {#single-identity-profiles-by-identity}
+
+このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。
+
+個々のバーの上にマウスポインターを置くと、ID のプロファイルの合計数を示すダイアログが表示されます。
+
+![ID 別の単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL 非セグメント化プロファイル] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ The visualization allows you to monitor the overall health of audiences within A
 ![セグメント名が付いたオーディエンスサイズウィジェットでは、すべてのセグメントテキストがハイライト表示されます。](../images/profiles/audiences-size-view-all-segments.png)
 
 詳しくは、ドキュメントを参照してください。 [[!UICONTROL セグメント] [!UICONTROL  参照] タブ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL 単一の ID プロファイル (ID 別)] {#single-identity-profiles-by-identity}
-
-このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。
-
-個々のバーの上にマウスポインターを置くと、ID のプロファイルの合計数を示すダイアログが表示されます。
-
-![ID 別の単一の ID プロファイルウィジェット。](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL 結合ポリシーによるオーディエンスの重複] {#audience-overlap-by-merge-policy}
 
