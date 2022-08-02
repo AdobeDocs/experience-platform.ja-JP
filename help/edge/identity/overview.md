@@ -3,9 +3,9 @@ title: Platform Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得および管理する方法について説明します。
 keywords: ID；ファーストパーティ ID;ID サービス；サードパーティ ID;ID の移行；訪問者 ID；サードパーティ ID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期 ID;sendEvent;identityMap；プライマリ；ID 名前空間；id；認証状態 hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
+source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 2%
 
 ---
@@ -101,6 +101,10 @@ alloy("sendEvent", {
 ```
 
 内の各プロパティ `identityMap` は、特定のに属する ID を表します [id 名前空間](../../identity-service/namespaces.md). プロパティ名は、ID 名前空間シンボルである必要があります。このシンボルは、Adobe Experience Platformユーザーインターフェイスの「[!UICONTROL ID]&quot;. プロパティ値は、その ID 名前空間に関する ID の配列である必要があります。
+
+>[!IMPORTANT]
+>
+>で渡された名前空間 ID `identityMap` は大文字と小文字を区別します。 不完全なデータ収集を避けるために、正しい名前空間 ID を使用するようにしてください。
 
 ID 配列内の各 ID オブジェクトには、次のプロパティが含まれます。
 
