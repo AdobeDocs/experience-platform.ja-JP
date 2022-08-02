@@ -5,10 +5,10 @@ title: データレイクでのプライバシーリクエストの処理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 100%
+source-wordcount: '1388'
+ht-degree: 97%
 
 ---
 
@@ -148,9 +148,9 @@ curl -X POST \
 
 ### UI の使用
 
-UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品]**」の下の「**[!UICONTROL AEP Data Lake]**」または「**[!UICONTROL プロファイル]**」を必ず選択し、[!DNL Data Lake]または[!DNL Real-time Customer Profile]に保存されたデータのジョブを処理します。
+UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL AEP データレイク]** under **[!UICONTROL 製品]** に保存されたデータのジョブを処理するために [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![プライバシーリクエスト作成ダイアログで選択されたデータレイク製品を示す画像](./images/privacy/product-value.png)
 
 ### API の使用
 

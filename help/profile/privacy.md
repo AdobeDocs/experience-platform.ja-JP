@@ -5,10 +5,10 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 41%
+source-wordcount: '1312'
+ht-degree: 40%
 
 ---
 
@@ -46,9 +46,7 @@ ID サービスは、グローバルに定義された（標準）ID および�
 
 >[!IMPORTANT]
 >
->Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、「[!DNL None]」 [!UICONTROL ID のステッチ] タイプ。 つまり、 [!UICONTROL ID のステッチ] が&quot;に設定されている[!UICONTROL プライベートグラフ]&quot;.
->
->![結合ポリシーの ID の組み合わせは「なし」に設定されます](./images/privacy/no-id-stitch.png)
+>Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 詳しくは、 [結合ポリシーの制限](#merge-policy-limitations) を参照してください。
 >
 >また、プライバシーリクエストの完了に要する時間は保証できないことに注意する必要があります。 変更が [!DNL Profile] リクエストの処理中にデータを保証することはできません。
 
@@ -60,7 +58,11 @@ API でジョブリクエストを作成する際は、`userIDs` 内で指定す
 >
 >ID グラフと、プロファイルフラグメントを Platform データセットでどのように配布するかに応じて、各顧客に対して複数の ID を指定する必要が生じる場合があります。 次の節を参照してください [プロファイルフラグメント](#fragments) を参照してください。
 
-さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。リクエストを [!DNL Data Lake]の場合、配列には「ProfileService」という値を含める必要があります。
+さらに、リクエストペイロードの `include` 配列には、リクエスト対象である別のデータストアの製品値を含める必要があります。ID に関連付けられたプロファイルデータを削除するには、配列に `ProfileService`. 顧客の ID グラフの関連付けを削除するには、配列に `identity`.
+
+>[!NOTE]
+>
+>詳しくは、 [プロファイルリクエストと id リクエスト](#profile-v-identity) このドキュメントの後半で、 `ProfileService` および `identity` 内 `include` 配列。
 
 次のリクエストは、 [!DNL Profile] ストア。 顧客に対して、 `userIDs` 配列；標準を使ったもの `Email` ID 名前空間と、カスタムを使用する他の `Customer_ID` 名前空間。 また、 [!DNL Profile] (`ProfileService`) を `include` 配列：
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ UI でジョブリクエストを作成する場合は、「**[!UICONTROL 製品
 
 プライバシーリクエストがすべての関連する顧客属性を確実に処理するには、該当するすべてのデータセットに対して、それらの属性を保存できるプライマリ ID 値を指定する必要があります（1 人の顧客につき最大 9 つの ID）。 詳しくは、 [スキーマ構成の基本](../xdm/schema/composition.md#identity) id として一般的にマークされるフィールドについて詳しくは、を参照してください。
 
-## リクエスト処理の削除
+## リクエスト処理の削除 {#delete}
 
 [!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、レコードが [!DNL Data Lake] または [!DNL Profile] プライバシージョブが完了したら、を保存します。 削除ジョブが処理中の間、データはソフト削除されるので、誰もアクセスできません [!DNL Platform] サービス。 詳しくは、 [[!DNL Privacy Service] ドキュメント](../privacy-service/home.md#monitor) を参照してください。
 
->[!IMPORTANT]
->
->プロファイルに対して削除リクエストがおこなわれた場合 (`ProfileService`) ではなく、ID サービス (`identity`) の場合、結果のジョブは、顧客（または顧客のセット）に対して収集された属性データを削除しますが、ID グラフで確立された関連付けは削除しません。
->
->例えば、顧客の `email_id` および `customer_id` は、これらの ID の下に保存されているすべての属性データを削除します。 ただし、その後、同じ `customer_id` が適切な `email_id`と呼ばれ、関連付けはまだ存在するので、
->
->また、Privacy Serviceは [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、「[!DNL None]」 [!UICONTROL ID のステッチ] タイプ。 つまり、 [!UICONTROL ID のステッチ] が&quot;に設定されている[!UICONTROL プライベートグラフ]&quot;.
->
->![結合ポリシーの ID の組み合わせは「なし」に設定されます](./images/privacy/no-id-stitch.png)
-
 今後のリリースでは、データが物理的に削除された後、[!DNL Platform] は [!DNL Privacy Service] へと確認を送信します。
 
+### プロファイルリクエストと ID リクエスト {#profile-v-identity}
+
+プロファイルに対して削除リクエストがおこなわれた場合 (`ProfileService`) ではなく、ID サービス (`identity`) の場合、結果のジョブは、顧客（または顧客のセット）に対して収集された属性データを削除しますが、ID グラフで確立された関連付けは削除しません。
+
+例えば、顧客の `email_id` および `customer_id` は、これらの ID の下に保存されているすべての属性データを削除します。 ただし、その後、同じ `customer_id` が適切な `email_id`と呼ばれ、関連付けはまだ存在するので、
+
+特定の顧客のプロファイルとすべての ID 関連付けを削除するには、削除リクエストにプロファイルと ID サービスの両方をターゲット製品として含めてください。
+
+### 結合ポリシーの制限 {#merge-policy-limitations}
+
+Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、 **[!DNL None]** その [!UICONTROL ID のステッチ] タイプ。 つまり、 [!UICONTROL ID のステッチ] が [!UICONTROL プライベートグラフ].
+>![結合ポリシーの ID の組み合わせは「なし」に設定されます](./images/privacy/no-id-stitch.png)
+>
 ## 次の手順
 
 このドキュメントでは、[!DNL Experience Platform] におけるプライバシーリクエストの処理に関する重要な概念について説明します。ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
