@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 内 [Platform UI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションから [!UICONTROL 監視] ダッシュボード。 表示セレクターで、 **B2B フロー** 特有のダッシュボード要素を表示するには [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  この [!UICONTROL 監視] ダッシュボードには、最新の成功した実行の基本指標と、日別のジョブステータス（過去 90 日間）が含まれます。
 
-## 関連するアカウントプロファイルエンリッチメント (#related-accounts)
+## 関連するアカウントのプロファイルエンリッチメント {#related-accounts}
 
 この [!UICONTROL 関連するアカウント] ダッシュボードには、基本指標と、 [関連アカウント](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメント。
 
