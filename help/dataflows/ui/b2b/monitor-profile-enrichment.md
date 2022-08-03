@@ -4,14 +4,14 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 4%
 
 ---
 
-# UI でのプロファイルエンリッチメントジョブの監視 (#monitor-profile-enrichment)
+# UI でのプロファイルエンリッチメントジョブの監視 {#monitor-profile-enrichment}
 
 以下を使用： [!UICONTROL プロファイルエンリッチメント] ダッシュボードを使用して、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの効果を測定するための基本指標を表示できます。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 | **[!UICONTROL ステータス]** | 関連するアカウントジョブのステータス（成功、失敗または処理）を示します。 |
 | **[!UICONTROL メッセージ]** | 特定のジョブ実行のエラーまたは警告メッセージを示します。 |
 
-## プロファイルエンリッチメントに一致するリード — アカウントへ (#lead-to-account-matching)
+## プロファイルエンリッチメントと一致するリード — アカウント {#lead-to-account-matching}
 
 この [!UICONTROL リード — アカウントマッチング] ダッシュボードには、 [リード — アカウントマッチング](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) プロファイルエンリッチメント。
 
