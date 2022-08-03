@@ -3,10 +3,10 @@ keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結
 title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 81%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,26 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 ![ウィジェットを表示する「概要」タブ](images/b2b-account-profile-overview.png)
 
 詳しくは、 [[!UICONTROL アカウントプロファイル]](../../dashboards/guides/account-profiles.md) ダッシュボードを参照してください。
+
+## リードとアカウントの照合の設定 {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> リードとアカウントのマッチングサービスの有効化、無効化および設定を行えるのは、B2B AI 管理者だけです。 サービスを無効にすると、一致する結果は 24 時間以内に削除されます。
+
+リードとアカウントの照合を設定するには、 **[!UICONTROL プロファイル]** under [!UICONTROL アカウント] をクリックします。 の **[!UICONTROL 概要]** タブ、選択 **[!UICONTROL 設定]** をクリックします。
+
+![設定を選択](images/b2b-configuring-accounts-profile.png)
+
+この **[!UICONTROL アカウント設定]** ダイアログが開きます。 ここから、 **[!UICONTROL リード — アカウントマッチングの有効化]** 切り替えて機能を有効にします。 ドロップダウンメニューを使用して **[!UICONTROL 毎日]** の **[!UICONTROL 一致するケイデンス]** 設定。 最後に、関連する **[!UICONTROL 一致条件]** オプションの後に続く **[!UICONTROL 保存]** 設定を確認して、に戻るには、以下の手順に従います。 **[!UICONTROL アカウントプロファイル]** 画面
+
+>[!NOTE]
+>
+> アドレスは、一致する唯一の条件として使用できません。 他の一致条件の 1 つ以上を選択する必要があります。
+
+![アカウント設定の指定](images/b2b-configuring-account-settings.png)
+
+リードトゥアカウントマッチングの詳細については、 [リアルタイム CDP B2B の概要でのアカウントマッチングにつながる](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## アカウントプロファイルの参照 {#browse-account-profiles}
 
