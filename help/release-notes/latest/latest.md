@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
+source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2325'
 ht-degree: 31%
 
 ---
@@ -15,15 +15,14 @@ ht-degree: 31%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
-   - [ダッシュボード](#dashboards)
-   - [データ収集](#data-collection)
-   - [[!DNL Data Prep]](#data-prep)
-   - [[!DNL Destinations]](#destinations)
-   - [エクスペリエンスデータモデル（XDM）](#xdm)
-   - [Real-time Customer Data Platform B2B エディション](#b2b)
-   - [リアルタイム顧客プロファイル](#profile)
-   - [ソース](#sources)
+- [ダッシュボード](#dashboards)
+- [データ収集](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
+- [Real-time Customer Data Platform B2B エディション](#b2b)
+- [リアルタイム顧客プロファイル](#profile)
+- [ソース](#sources)
 
 ## ダッシュボード {#dashboards}
 
