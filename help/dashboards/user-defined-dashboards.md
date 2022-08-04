@@ -2,9 +2,9 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 1%
 
 Adobe Experience Platformダッシュボードを使用すると、ユーザー定義のダッシュボード機能でインサイトを迅速に処理し、ビジュアライゼーションをカスタマイズできます。 この機能を使用すると、カスタムダッシュボードを作成および管理できます。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。
 
-## はじめに
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Adobe Experience Platformでダッシュボードを表示するには、適切な権限が有効になっている必要があります。 詳しくは、 [ダッシュボード権限ドキュメント](./permissions.md#available-permissions) Adobe Admin Consoleを使用して、Experience Platformダッシュボードの表示、編集、更新を行う権限をユーザーに付与する方法を説明します。 組織の管理者権限がない場合は、製品管理者に問い合わせて、必要な権限を取得してください。
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## カスタムダッシュボードの作成
 
 カスタムダッシュボードを作成するには、まずダッシュボードインベントリに移動します。 選択 **[!UICONTROL ダッシュボード]** Platform UI の左側のナビゲーションから、 **[!UICONTROL ダッシュボードを作成]**.
 
-使用可能な事前設定済みダッシュボードについて詳しくは、 [ダッシュボード在庫の概要](./inventory.md).
+![左側のナビゲーションにダッシュボードが表示され、「ダッシュボードを作成」がハイライトされたダッシュボードインベントリ。](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->カスタムダッシュボードを追加すると、事前設定済みのダッシュボードのリストがダッシュボードインベントリから削除されます。 代わりに、ダッシュボードの在庫は、ユーザー定義のダッシュボードのみで構成されます。
-
-![「ダッシュボードの作成」がハイライト表示されたダッシュボードインベントリ。](./images/user-defined-dashboards/create-dashboard.png)
+カスタムダッシュボードを追加する前に、ダッシュボードの在庫が空になり、「ダッシュボードが見つかりません」と表示されます。 」という内容のメッセージが表示されます。作成後、ユーザー定義のすべてのダッシュボードがダッシュボードインベントリに表示されます。
 
 この [!UICONTROL ダッシュボードを作成] ダイアログが表示されます。 作成するウィジェットのコレクションのわかりやすいわかりやすい名前を入力し、「 」を選択します。 **[!UICONTROL 保存]**.
 
@@ -85,9 +83,9 @@ Widget Composer のワークスペースが表示されます。 次に、 **[!U
 >
 >鉛筆アイコン (![鉛筆アイコン。](./images/user-defined-dashboards/edit-icon.png)) をクリックします。
 
-省略記号 (`...`) をクリックし、X 軸または Y 軸に属性を追加します。
+追加アイコン (./images/user-defined-dashboards/add-icon.png) をクリックし、X 軸または Y 軸に属性を追加します。
 
-![ウィジェット軸に属性を追加するためにハイライト表示された省略記号ドロップダウンを持つウィジェットコンポーザー。](./images/user-defined-dashboards/attributes-dropdown.png)
+![ウィジェットコンポーザーでは、追加アイコンドロップダウンがハイライト表示され、ウィジェット軸に属性を追加します。](./images/user-defined-dashboards/attributes-dropdown.png)
 
 次に、 [!UICONTROL トンボ] ドロップダウンを使用して、ウィジェットの現在の設定のプレビュービジュアライゼーションを生成します。 内 [!UICONTROL プロパティ] 画面の右側にあるパネルで、 [!UICONTROL ウィジェットのタイトル] テキストフィールド。
 
