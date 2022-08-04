@@ -3,10 +3,11 @@ keywords: Experience Platform;ホーム;人気のトピック;
 title: Data Prep トラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Prep に関するよくある質問に対する回答を示します。
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 3%
+source-wordcount: '326'
+ht-degree: 2%
 
 ---
 
@@ -25,3 +26,7 @@ ht-degree: 3%
 列が **必須** は、変換の問題により無効にされた場合、行は取り込まれません。 部分的なデータ取り込みが有効な場合、フロー全体が失敗する前に、このような却下のしきい値を設定できます。 指定されていない属性がスキーマレベルの検証に影響を与えなかった場合、行は引き続き取り込まれます。
 
 変換エラーが発生しなくても無効な行も拒否されます。 例えば、データ取り込みフローでは、必須フィールドへのマッピング（変換ロジックなし）がパススルーされ、その属性に対して受け取る値がない場合があります。 この行は却下されます。
+
+### フィールド内の特殊文字をエスケープするにはどうすればよいですか？
+
+フィールド内の特殊文字は、 `${...}`. ただし、ピリオド (`.`) は、このメカニズムではサポートされていません。 階層を操作する際に、子属性にピリオド (`.`) の場合は、バックスラッシュ (`\`) をクリックして、特殊文字をエスケープします。 例： `address` は、属性を含むオブジェクトです。 `street.name`を使用する場合は、 `address.street\.name` の代わりに `address.street.name`.
