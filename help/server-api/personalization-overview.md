@@ -2,7 +2,7 @@
 title: パーソナライゼーションの概要
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法について説明します。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 9%
@@ -261,7 +261,7 @@ POST /ee/v2/collect
 ### リクエスト {#notifications-request}
 
 ```shell
-url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
