@@ -2,10 +2,10 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 10%
+source-wordcount: '1311'
+ht-degree: 9%
 
 ---
 
@@ -70,19 +70,36 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 >
 >これらの権限がタグの機能に与える影響について詳しくは、一般的なシナリオの管理戦略を含め、 [ユーザー権限](../tags/ui/administration/user-permissions.md).
 
-## Adobe Experience Platform Data Collection の権限の管理 {#manage}
+## 権限の管理 {#manage}
 
->[!IMPORTANT]
->
->この節では、Admin ConsoleでのAdobe Experience Platform Data Collection 製品の権限の管理方法についてのみ説明します。 ただし、 Adobe Experience Platform製品で権限を管理する手順は似ています。
->
->詳しくは、 [アクセス制御 UI ガイド](../access-control/ui/overview.md) を参照してください。 組織がアクセスできる製品 SKU によっては、利用できる権限がない場合があります。
+前の節で説明したように、データ収集の権限は、Admin Consoleの 2 つの製品指定を通じて管理されます。 **Adobe Experience Platform** および **Adobe Experience Platform Data Collection**.
 
-データ収集の権限を管理するには、にログインします。 [Admin Console](https://adminconsole.adobe.com/) を選択し、 **[!UICONTROL 製品]** 上部ナビゲーションから。 ここから、のカードを選択します。 **[!UICONTROL Adobe Experience Platform Data Collection]**.
+これらの権限を管理するには、にログインします。 [Admin Console](https://adminconsole.adobe.com/) を選択し、 **[!UICONTROL 製品]** 上部ナビゲーションから。 ここから、設定する権限の製品カードを選択します。 Admin Consoleの各製品で関連する権限を管理する手順については、以下のサブセクションを参照してください。
+
+* [Adobe Experience Platform権限](#manage-platform)
+* [Adobe Experience Platformのデータ収集権限](#manage-collection)
+
+### Adobe Experience Platformでの権限の管理 {#manage-platform}
+
+次の **[!UICONTROL 製品]** 「表示」Admin Consoleで、「 **[!UICONTROL Adobe Experience Platform Data Collection]**. 権限を編集する製品プロファイルを選択し、 **[!UICONTROL 権限]** タブをクリックします。
+
+データ収集機能にアクセスするには、 **[!UICONTROL サンドボックス]**, **[!UICONTROL データモデリング]**, **[!UICONTROL Identity Management]**、および **[!UICONTROL データ収集]** カテゴリ。
+
+![Admin Consoleのデータ収集製品カードを示す画像](./images/permissions/platform-permission-card.png)
+
+詳しくは、 [アクセス制御 UI ガイド](../access-control/ui/overview.md) を参照してください。
+
+>[!NOTE]
+>
+>組織がアクセスできる製品 SKU によっては、利用できるすべての Platform 権限がない場合があります。
+
+### Adobe Experience Platform Data Collection での権限の管理 {#manage-collection}
+
+次の **[!UICONTROL 製品]** 「表示」Admin Consoleで、「 **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
 ![Admin Consoleのデータ収集製品カードを示す画像](./images/permissions/data-collection-card.png)
 
-### 製品プロファイルを選択または作成
+#### 製品プロファイルを選択または作成
 
 次の画面には、組織でデータ収集に使用可能な製品プロファイル（デフォルトのプロファイルはです）のリストが表示されます **[!DNL Default Data Collection All Access]**. 必要に応じて、デフォルトの製品プロファイルを編集することも、 **[!UICONTROL 新しいプロファイル]** をクリックして、1 つを作成します。 組織内に異なるレベルのアクセスを必要とする複数の役割またはユーザーグループがある場合、各ユーザーに対して個別の製品プロファイルを作成する必要があります。
 
@@ -92,7 +109,7 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 
 ![製品プロファイルAdmin Consoleの「権限」タブを示す画像](./images/permissions/edit-permission-categories.png)
 
-### 製品プロファイルの権限の編集 {#edit-permissions}
+#### 製品プロファイルの権限の編集 {#edit-permissions}
 
 プロファイルに対する権限を編集する場合、使用可能な権限は左の列に、プロファイルに含まれる権限は右の列に表示されます。 リストに表示された権限を選択して、どちらかの列に移動します。
 
@@ -110,7 +127,7 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 
 ![製品プロファイルに追加された権限を示す画像](./images/permissions/permissions-added.png)
 
-### 製品プロファイルへのユーザーの割り当て {#assign-users}
+#### 製品プロファイルへのユーザーの割り当て {#assign-users}
 
 製品プロファイルにユーザーを割り当て ( およびユーザーにプロファイルで設定された権限を付与するには、 **[!UICONTROL ユーザー]** タブ、続いて **[!UICONTROL ユーザーを追加]**.
 
