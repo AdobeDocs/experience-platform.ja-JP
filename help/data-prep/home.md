@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 71%
+source-wordcount: '788'
+ht-degree: 70%
 
 ---
 
@@ -37,7 +37,7 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 ### 計算フィールド
 
-計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。
+計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。計算フィールドの長さの上限は 4096 文字です。
 
 計算フィールドの詳細については、 [計算フィールドガイド](./functions.md#calculated-fields).
 

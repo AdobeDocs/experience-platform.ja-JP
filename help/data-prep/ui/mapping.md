@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気のトピック;CSV のマッピ�
 title: データ準備 UI ガイド
 description: このドキュメントでは、Platform UI でデータ準備関数を使用して CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 90%
 
 ---
@@ -149,7 +149,7 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 
 #### 計算フィールド {#calculated-fields}
 
-計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。
+計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。計算フィールドの長さの上限は 4096 文字です。
 
 計算フィールドを作成するには、「**[!UICONTROL 新しいフィールドタイプ]**」を選択し、次に、「**[!UICONTROL 計算フィールドを追加]**」を選択します。
 

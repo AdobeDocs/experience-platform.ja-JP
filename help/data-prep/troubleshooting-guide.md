@@ -4,9 +4,9 @@ title: Data Prep トラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Prep に関するよくある質問に対する回答を示します。
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 2%
 
 ---
@@ -30,3 +30,7 @@ ht-degree: 2%
 ### フィールド内の特殊文字をエスケープするにはどうすればよいですか？
 
 フィールド内の特殊文字は、 `${...}`. ただし、ピリオド (`.`) は、このメカニズムではサポートされていません。 階層を操作する際に、子属性にピリオド (`.`) の場合は、バックスラッシュ (`\`) をクリックして、特殊文字をエスケープします。 例： `address` は、属性を含むオブジェクトです。 `street.name`を使用する場合は、 `address.street\.name` の代わりに `address.street.name`.
+
+### 計算フィールドの最大長はどれくらいですか？
+
+計算フィールドの長さの上限は 4096 文字です。
