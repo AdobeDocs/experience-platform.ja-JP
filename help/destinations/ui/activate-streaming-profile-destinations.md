@@ -4,10 +4,10 @@ title: ストリーミングプロファイル書き出し宛先に対するオ�
 type: Tutorial
 description: ストリーミングプロファイルベースの宛先にセグメントを送信して、Adobe Experience Platformでオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 74%
+source-wordcount: '645'
+ht-degree: 60%
 
 ---
 
@@ -29,15 +29,15 @@ ht-degree: 74%
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先カタログ」タブ](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![宛先カタログタブを示す画像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
 
-   ![セグメントをアクティベートボタン](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![「宛先カタログ」タブの「セグメントをアクティブ化」コントロールをハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. セグメントをアクティベートするために使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
 
-   ![宛先を選択](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![接続できる 2 つの宛先の選択を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 次のセクションの「[セグメントを選択](#select-segments)」に移動します。
 
@@ -45,11 +45,11 @@ ht-degree: 74%
 
 セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
 
-![セグメントを選択](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![アクティベーションワークフローのセグメントを選択ステップでのチェックボックス選択をハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## プロファイル属性の選択 {#select-attributes}
 
-ターゲットの宛先に送信するプロファイル属性を選択します。
+内 **[!UICONTROL マッピング]** 手順：ターゲットの宛先に送信するプロファイル属性を選択します。
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ ht-degree: 74%
 * `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
 * `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
-![推奨される属性](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![マッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. **[!UICONTROL 属性を選択]**&#x200B;ページで「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
 
-   ![新しいマッピングを追加](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![マッピング手順の新しいフィールドの追加コントロールをハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. 「**[!UICONTROL スキーマフィールド]**」エントリの右側の矢印を選択します。
 
-   ![ソースフィールドを選択](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![マッピング手順でソースフィールドを選択する方法をハイライトした画像です。](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. **[!UICONTROL フィールドを選択]**&#x200B;ページで、宛先に送信する XDM 属性を選択してから「**[!UICONTROL 選択]**」を選択します。
 
-   ![ソースフィールドページを選択](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![ソースフィールドとして選択できる XDM フィールドの選択を示す画像です。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. さらにマッピングを追加するには、手順 1 ～ 3 を繰り返して、「 」を選択します。 **[!UICONTROL 次へ]**.
@@ -84,11 +84,11 @@ ht-degree: 74%
 >
 >このステップでは、Adobe Experience Platform はデータ使用ポリシーの違反がないかを確認します。ポリシーに違反した場合の例を次に示します。違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。ポリシー違反の解決方法については、データガバナンスに関するドキュメントの[ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement)を参照してください。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![レビューステップでのデータポリシー違反を示す画像。](../assets/common/data-policy-violation.png)
 
 ポリシー違反が検出されていない場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確定し、宛先へのデータの送信を開始します。
 
-![レビュー](../assets/ui/activate-streaming-profile-destinations/review.png)
+![アクティベーションワークフローのレビューステップを示す画像です。](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## セグメントのアクティベーションを検証 {#verify}
 
