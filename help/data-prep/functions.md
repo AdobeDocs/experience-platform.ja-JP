@@ -5,7 +5,7 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 16%
@@ -25,7 +25,7 @@ ht-degree: 16%
 また、フィールド名が **任意** 次の予約済みキーワードのうち、ラップする必要があります。 `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 サブフィールド内のデータには、ドット表記を使用してアクセスできます。 例えば、 `name` オブジェクト、 `firstName` フィールド、使用 `name.firstName`.
