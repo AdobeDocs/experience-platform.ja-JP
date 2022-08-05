@@ -1,10 +1,11 @@
 ---
 title: オーサリングのベストプラクティス
 description: 宛先のドキュメントページをオーサリングする際に従う必要があるルールとヒントを説明します。これにより、Adobe Experience Platformのドキュメント品質標準を確実に満たすことができます。
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 2%
+source-wordcount: '565'
+ht-degree: 1%
 
 ---
 
@@ -21,9 +22,18 @@ ht-degree: 2%
 * Experience Platformドキュメントでは、Adobeライターは **太字書式** 次のように、ユーザーインターフェイスコントロールを参照するには、次の手順を実行します。
    * に移動します。 **[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。 ユーザーインターフェイスコントロールが [宛先のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
+## 書き方
+
+>[!IMPORTANT]
+>
+>読み取り [Adobe文書の記述ガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) 宛先ドキュメントページのオーサリングを開始する前に、
+
+* 文章を短くして、早く要点にたどり着きましょう。 文の長さが 20 語を超える場合や、複数のコンマを使用する場合は、文を別々の文に分割することを検討してください。 20 語を超える文は、読者にとって特に難しい文章です。
+* 過度に礼儀正しくするな。 「please」や「dyndly do ...」を使用しないでください。 （技術ドキュメント）。
+
 ## リンク {#linking}
 
-提供されているドキュメントテンプレートに従ってください。テンプレート内の既存のリンクは編集しないでください。 新しいリンクを含める場合は、 [ドキュメント内でのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) （コントリビューターガイド）。
+提供されたドキュメントテンプレートに従い、テンプレート内の既存のリンクを編集しないでください。 新しいリンクを含める場合は、 [ドキュメント内でのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) （コントリビューターガイド）。
 
 ## ブランディングのガイドライン {#branding}
 
