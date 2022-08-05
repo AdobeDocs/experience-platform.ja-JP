@@ -3,9 +3,9 @@ keywords: 広告；criteo
 title: 条件の接続
 description: Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1007'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,6 @@ Criteo は、信頼できる効果的な広告を提供し、オープンイン�
 
 ## 制限事項 {#limitations}
 
-* 現在、Criteo はオーディエンスからのユーザーの削除をサポートしていません。
 * 条件は次のみを受け入れます [!DNL SHA-256] — ハッシュ化されたテキスト形式の E メール ( 変換後： [!DNL SHA-256] （送信前）。 PII（個人の名前や電話番号など、個人を特定できる情報）は送信しないでください。
 * Criteo は、クライアントから提供される識別子を少なくとも 1 つ必要とします。 優先順位付け [!DNL GUM ID] を、ハッシュ化された電子メールを介した識別子として使用することで、一致率が向上します。
 
@@ -41,7 +40,7 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
 | `email_sha256` | SHA-256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA-256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 [!UICONTROL 変換を適用] オプションを使用し、アクティベーション時に Platform が自動的にデータをハッシュ化する必要があります。 |
-| `gum_id` | Criteo [!DNL GUM] cookie 識別子 | [!DNL GUM IDs] 顧客がユーザー識別システムと Criteo のユーザー ID([!DNL UID]) をクリックします。 識別子のタイプが `GUM`、追加のパラメーター、 [!DNL GUM Caller ID]、も含める必要があります。 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 `GUM` 同期（必要に応じて） |
+| `gum_id` | Criteo [!DNL GUM] cookie 識別子 | [!DNL GUM IDs] 顧客がユーザー識別システムと Criteo のユーザー ID([!DNL UID]) をクリックします。 識別子のタイプが `gum_id`、追加のパラメーター、 [!DNL GUM Caller ID]、も含める必要があります。 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 [!DNL GUM ID] 同期（必要に応じて） |
 
 ## エクスポートのタイプと頻度 {#export-type-frequency}
 
@@ -99,7 +98,6 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 | --- | --- | --- |
 | 名前 | 将来この宛先を認識するのに役立つ名前です。 ここで選択する名前は、 [!DNL Audience] Criteo Management Center での名前。後の段階では変更できません。 | ○ |
 | 説明 | 将来この宛先を識別するのに役立つ説明。 | × |
-| API バージョン | Criteo API バージョン。 [ プレビュー ] を選択してください。 | ○ |
 | 広告主 ID | 組織の Criteo 広告主 ID。 この情報を入手するには、Criteo のアカウントマネージャーにお問い合わせください。 | ○ |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] 組織内の 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 [!DNL GUM] 同期（必要に応じて） | はい、いつでも [!DNL GUM ID] は識別子として指定されます |
 
@@ -121,7 +119,7 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 
 書き出されたセグメントは、 [条件管理センター](https://marketing.criteo.com/audience-manager/dashboard).
 
-が受け取ったリクエスト本文 [!DNL Criteo] 接続は次のようになります。
+ユーザープロファイルを追加する要求本文で、 [!DNL Criteo] 接続は次のようになります。
 
 ```json
 {
@@ -129,6 +127,34 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
     "type": "ContactlistWithUserAttributesAmendment",
     "attributes": {
       "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+で受け取ったユーザープロファイルを削除するリクエスト本文 [!DNL Criteo] 接続は次のようになります。
+
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
       "identifierType": "gum",
       "gumCallerId": "123",
       "identifiers": [
