@@ -3,9 +3,9 @@ title: データハイジーン UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータハイジーンタスクを管理する方法を説明します。
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '158'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
 Adobe Experience Platform UI の&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワークスペースを使用すると、様々なデータハイジーンタスク（消費者 ID の削除やデータセットの Time-to-Live（TTL）プロトコルのスケジュール設定など）を作成および監視できます。
 
