@@ -5,9 +5,9 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1089'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)を使用すると、ID サービスおよびリアルタイム顧客プロファイルに参加している消費者レコードを削除できます。
 
