@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、プロファイル・サービスに部分的な行更新を送信
 description: このドキュメントでは、Data Prep を使用して、プロファイル・サービスに部分的な行更新を送信する方法に関する情報を提供します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
+source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1169'
 ht-degree: 6%
 
 ---
@@ -249,7 +249,6 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * ストリーミングアップサートメソッドは、部分行の更新をに送信する場合にのみ使用してください。 [!DNL Profile Service]. 行の一部の更新は、 **not** データレイクによって消費されます。
 * ストリーミングアップサートメソッドでは、ID の更新、置換、削除はサポートされていません。 存在しない場合は新しい ID が作成されます。 したがって、 `identity` 操作は常に作成するように設定する必要があります。 ID が既に存在する場合、操作は何も実行されません。
-* 現在、ストリーミングアップサートメソッドでは、プリミティブな単一値の属性（整数、日付、タイムスタンプ、文字列など）とオブジェクトのみをサポートしています。
 * 現在、ストリーミングアップサートメソッドはをサポートしていません [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) および [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## 次の手順
