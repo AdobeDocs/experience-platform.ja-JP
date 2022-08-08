@@ -3,9 +3,9 @@ title: データハイジーンの概要
 description: Adobe Experience Platform のデータハイジーンを使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '218'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
 Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
 
