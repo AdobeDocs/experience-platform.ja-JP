@@ -3,9 +3,9 @@ title: データセット TTL の管理
 description: Adobe Experience Platform UI でデータセットの Time to Live（TTL）をスケジュール設定する方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '370'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)を使用すると、データセットの Time to Live（TTL）をスケジュール設定できます。
 
