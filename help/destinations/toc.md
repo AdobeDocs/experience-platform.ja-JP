@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 76%
+source-wordcount: '943'
+ht-degree: 74%
 
 ---
 
@@ -210,6 +210,7 @@ ht-degree: 76%
          * [（ベータ版）カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [（ベータ版）カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して Azure Blob ストレージの宛先を設定する](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [（ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して Azure Data Lake Storage の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [（ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [（ベータ版）事前に定義されたファイル形式オプションとカスタムのファイル名設定を使用して SFTP の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * リファレンス {#reference}
       * [ストリーミング宛先のレート制限および再試行ポリシー](./destination-sdk/rate-limiting-retry-policy.md)
