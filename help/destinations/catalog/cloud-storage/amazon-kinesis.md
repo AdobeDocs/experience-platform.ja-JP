@@ -3,10 +3,10 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis接続
 description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '1889'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -285,7 +285,7 @@ Experience Platformにより、 [!DNL Amazon Kinesis] 宛先：セグメント�
 
 ## 制限および再試行ポリシー {#limits-retry-policy}
 
-95%の確率で、Experience Platformは、各データフローの HTTP 宛先への 1 秒あたり 10.000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
+95%の確率で、Experience Platformは、各データフローから HTTP 宛先への各リクエストの 1 秒あたり 10,000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
 
 HTTP API 宛先へのリクエストが失敗した場合、Experience Platformは失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。
 

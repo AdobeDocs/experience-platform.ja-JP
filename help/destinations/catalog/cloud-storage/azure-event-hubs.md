@@ -3,10 +3,10 @@ keywords: Azure イベントハブの宛先；Azure イベントハブ；Azure E
 title: Azure Event Hubs 接続
 description: へのリアルタイムアウトバウンド接続を作成する [!DNL Azure Event Hubs] ストレージからExperience Platformからデータをストリーミングします。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2002'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -250,7 +250,7 @@ Experience Platformにより、 [!DNL Azure Event Hubs] 宛先：セグメント
 
 ## 制限および再試行ポリシー {#limits-retry-policy}
 
-95%の確率で、Experience Platformは、各データフローの HTTP 宛先への 1 秒あたり 10.000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
+95%の確率で、Experience Platformは、各データフローから HTTP 宛先への各リクエストの 1 秒あたり 10,000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
 
 HTTP API 宛先へのリクエストが失敗した場合、Experience Platformは失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。
 

@@ -2,10 +2,10 @@
 description: このページでは、API エンドポイント /authoring/destinations を使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 96%
+source-wordcount: '2572'
+ht-degree: 95%
 
 ---
 
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整数 | Adobe Experience Platformは、1 回の HTTP 呼び出しで書き出された複数のプロファイルを集計できます。 1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を指定します。 これはベストエフォートの集計であることに注意してください。例えば、値 100 を指定した場合、Platform が 1 回の呼び出しで送信するプロファイルの数は、100 未満の任意の数になります。<br> サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を 1 に設定します。 |
 | `aggregation.bestEffortAggregation.splitUserById` | ブール値 | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、特定の名前空間に対してこのフラグを `true` に設定します。 |
 | `aggregation.configurableAggregation.splitUserById` | ブール値 | [こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが呼び出しごとに 1 つの ID しか受け入れない場合、特定の名前空間に対してこのフラグを `true` に設定します。 |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | <ul><li>*最小値：1800*</li><li>*最大値：3600*</li><li>[こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。使用可能な最小値と最大値の間の値を設定します。 と `maxNumEventsInBatch`の値が 0 の場合、このパラメーターは、Experience Platformがエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は 3600 秒待機するか認定済みプロファイルが 10.000 個になるまで（いずれか早い方）待ってから、API 呼び出しを行います。 </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整数 | <ul><li>*最小値：1800*</li><li>*最大値：3600*</li><li>[こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。使用可能な最小値と最大値の間の値を設定します。 と `maxNumEventsInBatch`の値が 0 の場合、このパラメーターは、Experience Platformがエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <br> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platformは 3600 秒または 1 万件の認定済みプロファイルが存在するまで待ってから API 呼び出しをおこないます（いずれか最初におこなわれます）。 </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | 整数 | <ul><li>*最小値：1000*</li><li>*最大値：10000*</li><li>[こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。使用可能な最小値と最大値の間の値を設定します。 このパラメーターの詳細については、 `maxBatchAgeInSecs` ちょうど上に</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | ブール値 | [こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。以下のパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。<br> <ul><li>セグメント ID</li><li> セグメントのステータス </li><li> ID 名前空間 </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | [こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。グループプロファイルをセグメント ID でご使用の宛先に書き出す場合、これを `true` に設定します。 |

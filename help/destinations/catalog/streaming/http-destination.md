@@ -3,10 +3,10 @@ title: HTTP API 接続
 keywords: ストリーミング；
 description: Adobe Experience Platformの HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信し、独自の分析を実行したり、Experience Platform外に書き出されたプロファイルデータに対して必要なその他の操作を実行したりします。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2374'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -329,6 +329,6 @@ Experience Platformは、セグメント認定または他の重要なイベン�
 
 ## 制限および再試行ポリシー {#limits-retry-policy}
 
-95%の確率で、Experience Platformは、各データフローの HTTP 宛先への 1 秒あたり 10.000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
+95%の確率で、Experience Platformは、各データフローから HTTP 宛先への各リクエストの 1 秒あたり 10,000 リクエスト未満の割合で正常に送信されたメッセージに対して、10 分未満のスループット遅延を提供しようとします。
 
 HTTP API 宛先へのリクエストが失敗した場合、Experience Platformは失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。

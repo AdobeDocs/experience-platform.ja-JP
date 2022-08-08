@@ -2,10 +2,10 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 92%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -285,7 +285,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 
 >[!NOTE]
 >
->宛先に設定可能な集計オプションを使用する場合は、2 つのパラメーターに使用できる最小値と最大値に注意してください `maxBatchAgeInSecs` （1.800 以上 3.600 以下） `maxNumEventsInBatch` （最小 1.000、最大 10.000）。
+>宛先に設定可能な集計オプションを使用する場合は、2 つのパラメーターに使用できる最小値と最大値に注意してください `maxBatchAgeInSecs` （1,800 以上 3,600 以下） `maxNumEventsInBatch` （最小 1,000、最大 10,000）。
 
 集計パラメータの詳細な説明は、[Destinations API エンドポイントの操作](./destination-configuration-api.md)のリファレンスページで各パラメータの説明を参照してください。
 
