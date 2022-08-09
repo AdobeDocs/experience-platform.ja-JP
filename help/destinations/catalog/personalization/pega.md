@@ -2,9 +2,9 @@
 title: Pega Customer Decision Hub 接続
 description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とセグメントメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適な判定をおこないます。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
+source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1013'
 ht-degree: 7%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 7%
 
 この宛先を使用してAdobe Experience Platformからデータを書き出す前に、次の前提条件を満たしていることを確認してください。 [!DNL Pega Customer Decision Hub]:
 
-* Adobeセグメントメンバーシップコンポーネントを [!DNL Pega Customer Decision Hub] インスタンス。
+* の設定 [Adobe Experience Platformプロファイルとセグメントメンバーシップの統合コンポーネント](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) の [!DNL Pega Customer Decision Hub] インスタンス。
 * OAuth 2.0 の設定 [クライアント資格情報を使用したクライアント登録](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 付与タイプを [!DNL Pega Customer Decision Hub] インスタンス。
 * 設定 [リアルタイム実行データフロー](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) (Adobeセグメントメンバーシップデータフロー ) [!DNL Pega Customer Decision Hub] インスタンス。
 
