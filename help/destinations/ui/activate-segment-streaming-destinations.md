@@ -4,9 +4,9 @@ title: ストリーミングセグメント書き出し宛先に対するオー�
 type: Tutorial
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 36%
 
 ---
@@ -83,7 +83,6 @@ ht-degree: 36%
 >id="platform_destinations_activate_applytransformation"
 >title="変換を適用"
 >abstract="このオプションは、ハッシュ化されていないソースフィールドを使用する場合に、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するように、オンにします。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="詳しくは、ドキュメントを参照してください"
 
 ハッシュ化されていないソース属性を、宛先でハッシュ化される必要があるターゲット属性にマッピングする場合 ( 例： `email_lc_sha256` または `phone_sha256`)、 **変換を適用** アクティブ化時にAdobe Experience Platformがソース属性を自動的にハッシュ化するオプションが追加されました。
 
@@ -95,7 +94,6 @@ ht-degree: 36%
 >id="platform_destinations_activate_enddate"
 >title="終了日"
 >abstract="セグメントスケジュールの終了日の追加は使用できません。"
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="詳しくは、ドキュメントを参照してください"
 
 デフォルトでは、 [!UICONTROL セグメントスケジュール] ページには、現在のアクティベーションフローで選択した新しく選択されたセグメントのみが表示されます。
 

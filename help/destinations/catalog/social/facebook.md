@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 14%
 
 ---
@@ -165,7 +165,6 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="オーディエンスの起源"
 >abstract="セグメント内の顧客データが最初に収集された方法を選択します。 ユーザーがセグメントのターゲットになっている場合、データはFacebookに表示されます"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="詳しくは、ドキュメントを参照してください"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
