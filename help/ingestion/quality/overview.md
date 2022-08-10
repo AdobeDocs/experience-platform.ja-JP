@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データ品質；品質；品質；サポートされる検証；検証；サポートされる検証；
+keywords: Experience Platform；ホーム；人気の高いトピック；データ品質；品質；品質；サポートされる検証；検証；サポートされる検証；
 solution: Experience Platform
 title: データ品質
 topic-legacy: overview
-description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミングの取り込みでサポートされるチェックと検証動作の概要を示します。
+description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミングの取り込みでサポートされるチェックと検証ビヘイビアーの概要を示します。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 70%
+source-wordcount: '425'
+ht-degree: 52%
 
 ---
 
 # Adobe Experience Platform のデータ品質
 
-Adobe Experience Platform では、バッチまたはストリーミングの取り込みによりアップロードされたすべてのデータの完全性、正確性、一貫性が保証されています。次のドキュメントでは、[!DNL Experience Platform] でのバッチおよびストリーミングの取り込みでサポートされるチェックと検証動作の概要を示します。
+Adobe Experience Platform では、バッチまたはストリーミングの取り込みによりアップロードされたすべてのデータの完全性、正確性、一貫性が保証されています。次のドキュメントでは、でのバッチおよびストリーミングの取り込みでサポートされるチェックと検証動作の概要を示します。 [!DNL Experience Platform].
 
 ## サポートされるチェック
 
@@ -29,7 +29,7 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 
 ## サポートされる検証ビヘイビアー
 
-バッチとストリーミングの両方の取り込みでは、[!DNL Data Lake] での取得と分析に不正なデータが移動され、失敗したデータがダウンストリームに移動するのを防ぎます。 バッチおよびストリーミングの取り込みでは、データに対して次の検証が実行されます。
+バッチとストリーミングの両方の取り込みで、での取得と分析のために不正なデータを移動することで、失敗したデータがダウンストリームに送られるのを防ぎます。 [!DNL Data Lake]. バッチおよびストリーミングの取り込みでは、データに対して次の検証が実行されます。
 
 ### バッチの取り込み
 
@@ -55,4 +55,15 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-[!DNL Platform] がデータを監視および検証する方法について詳しくは、[ データフローの監視に関するドキュメント ](./monitor-data-ingestion.md) を参照してください。
+詳しくは、 [!DNL Platform] を監視し、データが [データフローの監視ドキュメント](./monitor-data-ingestion.md).
+
+## ID 値の検証
+
+次の表に、ID 値の検証を成功させるために従う必要がある既存のルールの概要を示します。
+
+| 名前空間 | 検証ルール | ルール違反時のシステム動作 |
+| --- | --- | --- |
+| ECID | <ul><li>ECID の ID 値は 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li></ul> | <ul><li>ECID の ID 値が 38 文字以外の場合、レコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、レコードはスキップされます。</li></ul> |
+| 非 ECID | ID 値は 1024 文字を超えることはできません。 | ID 値が 1024 文字を超える場合、レコードはスキップされます。 |
+
+詳しくは、 [!DNL Identity Service] ガードレール (「 [[!DNL Identity Service] guardrail の概要](../../identity-service/guardrails.md).
