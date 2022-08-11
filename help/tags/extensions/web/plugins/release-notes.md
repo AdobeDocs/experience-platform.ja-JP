@@ -2,14 +2,22 @@
 title: Common Analytics Plugins 拡張機能のリリースノート
 description: Adobe Experience Platform の Common Analytics Plugins タグ拡張機能に関する最新のリリースノートです。
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 100%
+source-wordcount: '329'
+ht-degree: 97%
 
 ---
 
 # Common Analytics Plugins のリリースノート
+
+## 2022年6月03日（PT）
+
+### Common Analytics Plugins 拡張機能 3.0.7
+
+#### 機能
+
+cookie を設定するプラグインで secure フラグが使用されるようになりました。
 
 ## 2021 年 6 月 23 日（PT）
 
