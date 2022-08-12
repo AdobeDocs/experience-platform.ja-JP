@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK を使用するための前提条件
 description: Adobe Experience Platform Web SDK を使用するための前提条件について説明します。
 keywords: ファーストパーティドメイン；CNAME；スキーマ；スキーマの作成；launch;aep web sdk 拡張機能；拡張機能；設定 id；設定ツール；データ要素；データ要素の作成；XDM オブジェクト；sendEvent；イベントの送信；
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
+source-git-commit: 853c0a662592939c280c7e7ede8235d1b6155b2f
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 2%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
@@ -25,14 +25,4 @@ Adobe Experience Platform Web SDK を使用するには、まず以下をおこ�
 
 ## Adobe Experience Platform Web SDK の権限の管理
 
-Adobe Experience Platformの使用を開始するには、権限が必要です [権限](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=ja) を使用して、スキーマを作成し、id を管理します。 必要な最小限の権限は、「データモデリングと ID」カテゴリにあります。
-
-![](../images/AEP-permission-categories.png)
-
-データモデリングカテゴリ内で、ユーザーに「スキーマの管理」および「スキーマの表示」権限を付与します。
-
-![](../images/data-modeling-permissions.png)
-
-Identity Managementカテゴリ内で、ユーザーに ID 名前空間の管理権限と ID 名前空間の表示権限を付与します。
-
-![](../images/identity-management-permissions.png)
+Adobe Experience Platform Web SDK の使用を開始するには、適切な権限を設定する必要があります。 設定方法の詳細については、 [データ収集権限の管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
