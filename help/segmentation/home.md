@@ -5,10 +5,10 @@ title: セグメント化サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
-workflow-type: ht
-source-wordcount: '1507'
-ht-degree: 100%
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+workflow-type: tm+mt
+source-wordcount: '1630'
+ht-degree: 94%
 
 ---
 
@@ -46,25 +46,47 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >
 >さらに、データセットで time-to-live（TTL）が有効になっている場合、これは、作成したセグメントのメンバーシップに影響を与える可能性があります。TTL とそれがセグメント化に与える影響について詳しくは、[プロファイルサービス TTL ガイド](../profile/apply-ttl.md)を参照してください。
 
-## セグメントの評価
+## セグメントの評価 {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="評価方法"
+>abstract="Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。"
 
 Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。
 
-### ストリーミングセグメント化
+### ストリーミングセグメント化 {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="ストリーミング評価"
+>abstract="Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価"
 
 ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。セグメントを作成して保存すると、受信データに対してセグメント定義が [!DNL Real-time Customer Profile] に適用されます。セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスの関連性が維持されます。
 
 ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化のドキュメント](./api/streaming-segmentation.md)を参照してください。
 
-### バッチセグメント化
+### バッチセグメント化 {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="バッチ評価"
+>abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存され、使用するために書き出すことができます。"
 
 継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存されて、使用時にエクスポートできるようになります。
 
 バッチセグメントは、24 時間ごとに自動的に評価されます。オンデマンドでバッチセグメント評価する場合は、セグメントジョブを使用できます。セグメントジョブについて詳しくは、[セグメントジョブのドキュメント](./api/segment-jobs.md)を参照してください。
 
-### エッジのセグメント化
+### エッジのセグメント化 {#edge}
 
-エッジのセグメント化は、Platform のセグメントを Experience Edge 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="エッジ評価"
+>abstract="エッジのセグメント化は、Experience Edge 上で瞬時に Platform のセグメントを評価する機能で、同じページで次のページでパーソナライゼーションをおこなう使用例を可能にします。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="エッジセグメント化 UI ガイド"
+
+エッジのセグメント化は、Platform でのセグメントを瞬時に評価する機能です [Experience Edge 上](../edge/home.md)を使用して、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。
 
 エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
 
