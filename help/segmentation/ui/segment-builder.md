@@ -5,10 +5,10 @@ title: セグメントビルダー UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform UI のセグメントビルダーのワークスペースは、プロファイルデータ要素を操作できる豊富な機能を備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
 workflow-type: tm+mt
-source-wordcount: '2612'
-ht-degree: 34%
+source-wordcount: '3081'
+ht-degree: 29%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 34%
 
 [!DNL Segment Builder] は、操作できる豊富なワークスペースを提供します。 [!DNL Profile] データ要素。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 
-![](../images/ui/segment-builder/segment-builder.png)
+![セグメントビルダー UI が表示されます。](../images/ui/segment-builder/segment-builder.png)
 
 ## セグメント定義の構成要素 {#building-blocks}
 
@@ -29,13 +29,13 @@ ht-degree: 34%
 
 これらの構築要素は、 **[!UICONTROL フィールド]** の左側のセクション [!DNL Segment Builder] ワークスペース。 **[!UICONTROL フィールド]** には、主要な構築ブロックの各タブが含まれます。&quot;[!UICONTROL 属性]&quot;, &quot;[!UICONTROL イベント]&quot;および&quot;[!UICONTROL オーディエンス]&quot;.
 
-![](../images/ui/segment-builder/segment-fields.png)
+![セグメントビルダーの「フィールド」セクションがハイライト表示されています。](../images/ui/segment-builder/segment-fields.png)
 
 ### 属性
 
 この **[!UICONTROL 属性]** 「 」タブで、 [!DNL Profile] 属する属性 [!DNL XDM Individual Profile] クラス。 各フォルダーを展開して、追加の属性を表示できます。各属性はタイルで表されており、ワークスペースの中央にあるルールビルダーキャンバスにドラッグすることができます。[ルールビルダーキャンバス](#rule-builder-canvas)の詳細については、このガイドで後述します。
 
-![](../images/ui/segment-builder/attributes.png)
+![セグメントビルダーフィールドの属性セクションがハイライト表示されています。](../images/ui/segment-builder/attributes.png)
 
 ### イベント
 
@@ -51,7 +51,7 @@ ht-degree: 34%
 
 その後、簡単にドラッグ&amp;ドロップできます [!DNL ExperienceEvents] および」[!UICONTROL イベントタイプ]」をセグメント定義に追加します。
 
-![](../images/ui/segment-builder/events-eventTypes.png)
+![セグメントビルダー UI のイベントセクションが強調表示されています。](../images/ui/segment-builder/events.png)
 
 デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。これには、「[!UICONTROL イベントタイプ]&quot;. この[!UICONTROL イベントタイプ]&quot;リストが表示されないか、選択できるのは&quot;[!UICONTROL 任意]&quot;[!UICONTROL イベントタイプ]&quot;、 **歯車アイコン** 次の **[!UICONTROL フィールド]**&#x200B;を選択し、「 **[!UICONTROL 完全な XDM スキーマを表示]** under **[!UICONTROL 使用可能フィールド]**. を選択します。 **歯車アイコン** 再び **[!UICONTROL フィールド]** 」タブに移動し、複数の「[!UICONTROL イベントタイプ]「 」およびスキーマフィールド（データが含まれているかどうかに関係なく）。
 
@@ -103,7 +103,7 @@ ht-degree: 34%
 
 オーディエンス横の ⓘ にカーソルを置くと、そのオーディエンスに関する情報が表示されます。例えば、ID、説明、そのオーディエンスが存在するフォルダーの階層などです。
 
-![](../images/ui/segment-builder/audience-folder-structure.png)
+![フォルダー階層がオーディエンスに対してどのように機能するかを示す画像です。](../images/ui/segment-builder/audience-folder-structure.png)
 
 また、検索バーを使用してオーディエンスを検索することもできます。このツールでは、 [Lucene の検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 「**[!UICONTROL オーディエンス]**」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。例えば、 `Online Shoppers`検索バーに「Online」と入力します。 「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
 
@@ -113,7 +113,7 @@ ht-degree: 34%
 
 セグメント定義に新しいルールを追加するには、タイルを「**[!UICONTROL フィールド]**」タブからルールビルダーキャンバスにドラッグ＆ドロップします。追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。使用できるデータタイプは次のとおりです。文字列、日付、 [!DNL ExperienceEvents], &quot;[!UICONTROL イベントタイプ]」、およびオーディエンス。
 
-![](../images/ui/segment-builder/rule-builder-canvas.png)
+![空のルールビルダーキャンバス。](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -121,11 +121,11 @@ ht-degree: 34%
 
 属性の値を選択すると、その属性に使用できる列挙値のリストが表示されます。
 
-![](../images/ui/segment-builder/enum-list.png)
+![属性に指定できる列挙値のリストを示す画像。](../images/ui/segment-builder/enum-list.png)
 
 この列挙のリストから値を選択すると、値は実線の境界線で囲まれます。 ただし、 `meta:enum` （ソフト）列挙の場合は、値を選択することもできます。 **not** 列挙のリストから 独自の値を作成する場合、その値は点線の境界線で囲まれ、その値が列挙リストに含まれていないことを示す警告が表示されます。
 
-![](../images/ui/segment-builder/enum-warning.png)
+![列挙リストに含まれていない値を挿入する場合に表示される警告です。](../images/ui/segment-builder/enum-warning.png)
 
 ### オーディエンスの追加
 
@@ -137,7 +137,7 @@ ht-degree: 34%
 >
 >外部ソースからオーディエンスを追加した場合、オーディエンスのメンバーシップのみが参照されます。このオーディエンスをルールに変換することはできません。このため、元のオーディエンスの作成に使用されたルールを新しいセグメント定義で変更することはできません。
 
-![](../images/ui/segment-builder/add-audience-to-segment.png)
+![この図は、オーディエンス属性をルールに変換する方法を示しています。](../images/ui/segment-builder/add-audience-to-segment.png)
 
 オーディエンスをルールに変換する際に競合が発生した場合は、 [!DNL Segment Builder] 既存のオプションをその能力を最大限に引き出そうと試みます。
 
@@ -145,11 +145,11 @@ ht-degree: 34%
 
 または、 [!DNL Segment Builder]. ルールビルダーキャンバス内でルールを作成したら、「 **[!UICONTROL コードビュー]** セグメントを PQL として確認する。
 
-![](../images/ui/segment-builder/code-view.png)
+![コードビューボタンがハイライト表示され、セグメントを PQL として確認できます。](../images/ui/segment-builder/code-view.png)
 
 コードビューには、API 呼び出しで使用するセグメントの値をコピーできるボタンが用意されています。 セグメントの最新バージョンを取得するには、セグメントに対する最新の変更を保存していることを確認してください。
 
-![](../images/ui/segment-builder/copy-code.png)
+![コードをコピーボタンがハイライト表示され、次の操作が可能になります。 ](../images/ui/segment-builder/copy-code.png)
 
 ### 集計関数
 
@@ -157,15 +157,15 @@ ht-degree: 34%
 
 集計関数を作成するには、左側のレールからイベントを選択し、 [!UICONTROL イベント] コンテナ。
 
-![](../images/ui/segment-builder/select-event.png)
+![「イベント」セクションがハイライト表示されます。](../images/ui/segment-builder/events.png)
 
 イベントコンテナ内にイベントを配置した後、省略記号アイコン (...) を選択し、次のアイコンを選択します。 **[!UICONTROL 集計]**.
 
-![](../images/ui/segment-builder/add-aggregation.png)
+![集約テキストがハイライト表示されます。 これを選択すると、集計関数を選択できます。](../images/ui/segment-builder/add-aggregation.png)
 
 これで、集計が追加されます。 集計関数を選択し、集計する属性、等価関数、値を選択できるようになりました。 次の例では、このセグメントは、各購入が 100 ドル未満の場合でも、購入した値の合計が 100 ドルを超えるプロファイルを認定します。
 
-![](../images/ui/segment-builder/filled-aggregation.png)
+![イベントルール。集計関数を表示します。](../images/ui/segment-builder/filled-aggregation.png)
 
 ### カウント関数 {#count-functions}
 
@@ -173,15 +173,15 @@ ht-degree: 34%
 
 カウント関数を作成するには、左側のパネルからイベントを選択し、 [!UICONTROL イベント] コンテナ。
 
-![](../images/ui/segment-builder/add-event.png)
+![イベントのフィールドがハイライト表示されます。](../images/ui/segment-builder/events.png)
 
 イベントコンテナ内にイベントを配置した後、 [!UICONTROL 少なくとも 1 つ] 」ボタンをクリックします。
 
-![](../images/ui/segment-builder/add-count.png)
+![「少なくとも」がハイライト表示され、カウント関数の完全なリストを表示するために選択する領域が表示されます。](../images/ui/segment-builder/add-count.png)
 
 これで、count 関数が追加されました。 これで、カウント関数と関数の値を選択できるようになりました。 次の例では、少なくとも 1 回のクリックを持つイベントを含めます。
 
-![](../images/ui/segment-builder/select-count.png)
+![カウント関数のリストが表示され、ハイライト表示されます。](../images/ui/segment-builder/select-count.png)
 
 ## コンテナ
 
@@ -189,13 +189,13 @@ ht-degree: 34%
 
 ルールビルダーキャンバスにタイルを 1 つ以上追加したら、コンテナの追加を開始できます。新しいコンテナを作成するには、タイルの右上隅にある省略記号 (...) を選択し、「 **[!UICONTROL コンテナを追加]**.
 
-![](../images/ui/segment-builder/add-container.png)
+![「コンテナを追加」ボタンがハイライト表示され、最初のコンテナの子としてコンテナを追加できます。](../images/ui/segment-builder/add-container.png)
 
 新しいコンテナが最初のコンテナの子として表示されますが、コンテナをドラッグして移動することで、階層を調整することができます。コンテナのデフォルトの動作は、[!UICONTROL 次を含む]「指定された属性、イベントまたはオーディエンス。 ルールを「[!UICONTROL 除外]「 」を選択して、コンテナ条件に一致するプロファイルを除外 **[!UICONTROL 次を含む]** をクリックし、「[!UICONTROL 除外]&quot;.
 
 子コンテナを抽出し、親コンテナにインラインで追加することもできます。そのためには、子コンテナで「コンテナを展開」を選択します。 このオプションにアクセスするには、子コンテナの右上隅にある省略記号 (...) を選択します。
 
-![](../images/ui/segment-builder/include-exclude.png)
+![コンテナを展開または削除できるオプションは、ハイライト表示されます。](../images/ui/segment-builder/include-exclude.png)
 
 次を選択したら、 **[!UICONTROL コンテナを展開]** 子コンテナが削除され、条件がインラインで表示されます。
 
@@ -203,7 +203,7 @@ ht-degree: 34%
 >
 >コンテナを展開する場合には、ロジックが引き続き目的のセグメント定義を満たすようにしてください。
 
-![](../images/ui/segment-builder/unwrapped-container-inline.png)
+![コンテナは、アンラップされた後に表示されます。](../images/ui/segment-builder/unwrapped-container.png)
 
 ## 結合ポリシー
 
@@ -213,7 +213,7 @@ ht-degree: 34%
 
 セグメント定義の結合ポリシーを選択するには、 **[!UICONTROL フィールド]** 」タブをクリックし、 **[!UICONTROL 結合ポリシー]** 使用する結合ポリシーを選択するドロップダウンメニュー。
 
-![](../images/ui/segment-builder/merge-policy-selector.png)
+![結合ポリシーセレクターがハイライト表示されます。 これにより、セグメント定義に対して選択する結合ポリシーを選択できます。](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## セグメントのプロパティ {#segment-properties}
 
@@ -228,18 +228,29 @@ ht-degree: 34%
 >abstract="セグメントの予測を更新すると、提案したセグメントに適合するプロファイル数のプレビューをすぐに確認できます。 オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="詳しくは、ドキュメントを参照してください。"
 
-
 セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「**[!UICONTROL セグメントのプロパティ]**」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
 
-この **[!UICONTROL セグメントのプロパティ]** セクションでは、セグメント定義の名前や説明など、セグメント定義に関する重要な情報を指定することもできます。 セグメント定義名は、組織で定義されたものの中から目的のセグメントを識別する際に使用されます。このため、セグメント定義名は、内容がわかりやすく簡潔、かつ一意である必要があります。
+この **[!UICONTROL セグメントのプロパティ]** 「 」セクションでは、セグメント定義の名前、説明、評価タイプなど、セグメント定義に関する重要な情報を指定することもできます。 セグメント定義名は、組織で定義されたものの中から目的のセグメントを識別する際に使用されます。このため、セグメント定義名は、内容がわかりやすく簡潔、かつ一意である必要があります。
 
 セグメント定義の作成中、「**[!UICONTROL プロファイルを表示]**」を選択することで、オーディエンスのプレビューをページ別に表示できます。
 
-![](../images/ui/segment-builder/segment-properties.png)
+![セグメント定義のプロパティセクションがハイライト表示されます。 セグメントのプロパティには、セグメント名、説明、評価方法などがありますが、これらに限定されません。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
 >オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合は、データセット全体が使用されます。100 万個から 2,000 万個のエンティティがある場合は、100 万個のエンティティが使用されます。2,000 万個を超えるエンティティがある場合は、合計エンティティ数の 5％が使用されます。セグメントの推定サイズを生成する方法について詳しくは、セグメントの作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
+
+また、評価方法を選択することもできます。 使用する評価方法がわかっている場合は、ドロップダウンリストを使用して、目的の評価方法を選択できます。 このセグメントが適合する評価のタイプを知りたい場合、「参照」アイコンを選択できます ![拡大鏡付きのフォルダーアイコン](../images/ui/segment-builder/segment-evaluation-select-icon.png) をクリックして、使用可能なセグメント評価方法の一覧を確認してください。
+
+この [!UICONTROL 評価方法の実施要件] ポップオーバーが表示されます。 このポップオーバーには、バッチ、ストリーミング、エッジなど、使用可能な評価方法が表示されます。 ポップオーバーには、どの評価メソッドが適格で不適格かが表示されます。 セグメント定義で使用したパラメーターによっては、特定の評価方法に適合しない場合があります。 各評価方法の要件の詳細については、 [ストリーミングセグメント化](./streaming-segmentation.md#query-types) または [エッジセグメント化](./edge-segmentation.md#query-types) 概要。
+
+![評価方法の実施要件のポップアップが表示されます。 これにより、どのセグメント評価方法がセグメントに適格で、適格ではないかが表示されます。](../images/ui/segment-builder/select-evaluation-method.png)
+
+無効な評価方法を選択すると、セグメント定義ルールを変更するか、評価方法を変更するかを尋ねるプロンプトが表示されます。
+
+![評価方法がポップアップ表示されます。 不適格なセグメント評価方法が選択されている場合、ポップアップでそのセグメントが不適格な理由が示されます。](../images/ui/segment-builder/ineligible-evaluation-method.png)
+
+様々なセグメント定義評価方法の詳細については、 [セグメントの概要](../home.md#evaluate-segments).
 
 ## 次の手順 {#next-steps}
 
