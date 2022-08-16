@@ -2,9 +2,9 @@
 description: ファイルベースの宛先のサーバーとファイル構成スペックは、Adobe Experience Platform Destination SDK で /destination-servers エンドポイントを介して構成できます。
 title: （ベータ版）ファイルベースの宛先サーバーの仕様の構成オプション
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 90%
 
 ---
@@ -284,10 +284,6 @@ ht-degree: 90%
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ ht-degree: 90%
 | `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。 エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` |
-| `csvOptions.lineSep.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。書き込みに使用する行区切り記号を定義します。 最大長は 1 文字です。 | `\n` |
 | `maxFileRowCount` | オプション | エクスポートするファイルに含めることができる最大行数。 宛先プラットフォームのファイルサイズの要件に基づいて、これを設定します。 | なし |
 
 {style=&quot;table-layout:auto&quot;}

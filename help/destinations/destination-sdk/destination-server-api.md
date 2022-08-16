@@ -2,7 +2,7 @@
 description: このページでは、API エンドポイント /authoring/destination-servers を使用して実行できる API 操作をすべて一覧化して説明します。宛先のサーバーとテンプレートの仕様は、共通のエンドポイント /authoring/destination-servers を介して Adobe Experience Platform Destination SDK で設定できます。
 title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '1382'
 ht-degree: 95%
@@ -179,10 +179,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -288,10 +284,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -397,10 +389,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -502,10 +490,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -610,10 +594,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
