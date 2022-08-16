@@ -2,10 +2,10 @@
 title: Adobe Target 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target タグ拡張機能に関する最新のリリースノートです。
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 100%
+source-wordcount: '520'
+ht-degree: 98%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021 年 9 月 16 日（PT）
+
+### Adobe Target Extension 0.11.4
+
+* at.js v1.8.3 に更新しました。
+* 追加済み `SameSite=None` および `Secure` 属性， cookie の設定時に
 
 ## 2020 年 7 月 24 日（PT）
 
