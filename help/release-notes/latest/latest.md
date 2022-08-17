@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
 source-wordcount: '2327'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -177,15 +177,15 @@ Real-time Customer Data Platform（Real-time CDP）上に構築された Real-ti
 
 | 機能 | 説明 |
 | --- | --- |
-| リード — アカウントマッチング | リード — アカウントの照合により、既知の担当者プロファイルをアカウントプロファイルに参加させることができます。 その後、アカウントやオポチュニティなどの B2B コンテキストでデータをセグメント化し、ターゲットに設定できます。 毎日実行されるジョブは、決定論的および確率論的要因の両方を使用して、どのアカウントにもまだ関連付けられていないユーザープロファイルを最も一致したアカウントに一致させます。 その後、セグメント定義にそのような一致を含めるかどうかを決定できます |
+| リードとアカウントのマッチング | リードとアカウントのマッチングにより、既知のユーザープロファイルをアカウントプロファイルに結合できます。次に、アカウントやオポチュニティなどの B2B コンテキストでデータをセグメント化し、ターゲットに設定できます。 毎日実行されるジョブでは、決定論的要因と確率論的要因の両方を使用して、どのアカウントにもまだ関連付けられていないユーザープロファイルを、最も一致するアカウントに一致させます。 その後、セグメント定義にそのような一致を含めるかどうかを決定できます |
 
-詳しくは、 [アカウントマッチングにつながる](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+詳しくは、[リードとアカウントのマッチング](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)のドキュメントを参照してください。
 
-プロファイルエンリッチメントの監視方法に関するガイドについては、 [UI でのプロファイルエンリッチメントの監視](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+プロファイルエンリッチメントの監視方法については、[UI でのプロファイルエンリッチメントの監視](../../dataflows/ui/b2b/monitor-profile-enrichment.md)を参照してください。
 
-リードとアカウントのマッチングの設定方法については、 [アカウントプロファイル UI ガイド](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
+リードとアカウントのマッチングの設定方法については、[アカウントプロファイル UI ガイド](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching)を参照してください。
 
-Real-time CDP B2B Edition の詳細については、 [リアルタイム CDP B2B の概要](../../rtcdp/overview.md).
+Real-Time CDP B2B Edition について詳しくは、[Real-time Customer Data Platform の概要](../../rtcdp/overview.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
