@@ -3,10 +3,10 @@ keywords: Google広告；google 広告；google adwords;Google AdWords;Google Ad
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 24%
+source-wordcount: '945'
+ht-degree: 23%
 
 ---
 
@@ -66,7 +66,8 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->許可リストは、最初の [!DNL Google Ads] の宛先を設定します。 以下に説明する許可リストプロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
+>許可リストへの登録は、最初の [!DNL Google Ads] の宛先を設定します。 以下に説明する許可リスト登録プロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
+>このルールの例外は次の場合です。 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 このGoogleの宛先への接続をAudience Managerで既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進むことができます。
 
 を作成する前に [!DNL Google Ads] の宛先に設定する場合は、 [!DNL Google] Adobeを許可されたデータプロバイダーのリストに追加し、お使いのアカウントを許可リストに追加する場合。 連絡先 [!DNL Google] 次の情報を入力します。
 

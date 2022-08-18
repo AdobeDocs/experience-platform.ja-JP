@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 41%
+source-wordcount: '942'
+ht-degree: 40%
 
 ---
 
@@ -56,7 +56,8 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->許可リストへの登録は、最初の [!DNL Google Display & Video 360] の宛先を設定します。 宛先を作成する前に、Googleが以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>許可リストへの登録は、最初の [!DNL Google Display & Video 360] の宛先を設定します。 以下に説明する許可リスト登録プロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
+>このルールの例外は次の場合です。 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 このGoogleの宛先への接続をAudience Managerで既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進むことができます。
 
 を作成する前に [!DNL Google Display & Video 360] の宛先に設定する場合は、Googleに問い合わせて、許可されたデータプロバイダーのリストにAdobeを追加する方法と、お使いのアカウントを許可リストに追加する方法を依頼する必要があります。 Google に連絡し、次の情報を提供します。
 

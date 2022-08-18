@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 26%
+source-wordcount: '903'
+ht-degree: 25%
 
 ---
 
@@ -58,7 +58,8 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->許可リストは、最初の [!DNL Google Ad Manager] の宛先を設定します。 以下に説明する許可リストプロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
+>許可リストへの登録は、最初の [!DNL Google Ad Manager] の宛先を設定します。 以下に説明する許可リスト登録プロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
+>このルールの例外は次の場合です。 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 このGoogleの宛先への接続をAudience Managerで既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進むことができます。
 
 を作成する前に [!DNL Google Ad Manager] の宛先に設定する場合は、 [!DNL Google] Adobeを許可されたデータプロバイダーのリストに追加し、お使いのアカウントを許可リストに追加する場合。 連絡先 [!DNL Google] 次の情報を入力します。
 
