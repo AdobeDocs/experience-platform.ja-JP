@@ -2,10 +2,10 @@
 title: データハイジーン作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスでの既存のデータハイジーン作業指示の表示および管理方法を説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 75%
+source-wordcount: '481'
+ht-degree: 54%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 75%
 >
 >Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
-データハイジーンリクエストがシステムに送信されると、リクエストされたタスクを実行するための作業指示が作成されます。作業指示は、データセットのスケジュールされた有効期間（TTL）など、特定のデータハイジーンプロセスを表します。これには、現在のステータスやその他の関連する詳細が含まれます。
+データハイジーンリクエストがシステムに送信されると、リクエストされたタスクを実行するための作業指示が作成されます。作業指示は、特定のデータの衛生処理（スケジュール済みのデータセット有効期限など）を表します。このプロセスには、現在のステータスやその他の関連する詳細が含まれます。
 
 このガイドでは、Adobe Experience Platform UI での既存の作業指示の表示および管理方法を説明します。
 
@@ -31,7 +31,7 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 
 ![Platform UI の[!UICONTROL データハイジーン]ワークスペースを示す画像](../images/ui/browse/work-order-list.png)
 
-<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
@@ -41,10 +41,10 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 
 | フィルター | 説明 |
 | --- | --- |
-| [!UICONTROL ステータス] | 作業指示の現在のステータスに基づいてフィルタリングします。<ul><li>**[!UICONTROL 完了]**:ジョブが完了しました。</li><li>**[!UICONTROL 保留中]**:ジョブは作成されましたが、まだ実行されていません。 A [データセット有効期間 (TTL) リクエスト](./ttl.md) は、このステータスが、予定されている削除日より前にあると仮定します。 削除日に達すると、ステータスは [!UICONTROL 実行中] 事前にジョブがキャンセルされている場合を除きます。</li><li>**[!UICONTROL 実行中]**:TTL リクエストが開始され、現在処理中です。</li><li>**[!UICONTROL キャンセル]**:ジョブは、手動のユーザーリクエストの一環としてキャンセルされました。</li></ul> |
+| [!UICONTROL ステータス] | 作業指示の現在のステータスに基づいてフィルタリングします。<ul><li>**[!UICONTROL 完了]**:ジョブが完了しました。</li><li>**[!UICONTROL 保留中]**:ジョブは作成されましたが、まだ実行されていません。 A [データセット有効期限リクエスト](./dataset-expiration.md) は、このステータスが、予定されている削除日より前にあると仮定します。 削除日に達すると、ステータスは [!UICONTROL 実行中] 事前にジョブがキャンセルされている場合を除きます。</li><li>**[!UICONTROL 実行中]**:データセット有効期限のリクエストが開始され、現在処理中です。</li><li>**[!UICONTROL キャンセル]**:ジョブは、手動のユーザーリクエストの一環としてキャンセルされました。</li></ul> |
 | [!UICONTROL 作成日] | 作業指示が行われた日時に基づいてフィルタリングします。 |
-| [!UICONTROL 有効期限] | 対象のデータセットに対して予定されている削除日に基づいて TTL リクエストをフィルタリングします。 |
-| [!UICONTROL 更新日] | 作業指示が最後に更新された日時に基づいて TTL 要求をフィルタリングします。 TTL の作成と有効期限切れは、更新としてカウントされます。 |
+| [!UICONTROL 有効期限] | 対象のデータセットに対してスケジュールされた削除日に基づいて、データセットの有効期限リクエストをフィルタリングします。 |
+| [!UICONTROL 更新日] | 作業指示が最後に更新された日時に基づいて、データセットの有効期限リクエストをフィルタリングします。 作成と有効期限は更新としてカウントされます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -68,12 +68,12 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset TTL details -->
+### Dataset expiration details -->
 
-データセット TTL の詳細ページは、その基本属性に関する情報を提供します（削除が発生するまでの残り日数に対してスケジュール設定された有効期限など）。右側のパネルで、TTL を編集またはキャンセルするためのコントロールを使用できます。
+データセットの有効期限の詳細ページには、削除がおこなわれる前の日数の予定有効期限など、基本属性に関する情報が表示されます。 右側のレールでは、コントロールを使用して、有効期限を編集またはキャンセルできます。
 
-![データセット TTL 作業指示の詳細ページを示す画像](../images/ui/browse/ttl-details.png)
+![データセットの有効期限の作業順序の詳細ページを示す画像](../images/ui/browse/ttl-details.png)
 
 ## 次の手順
 
-このガイドでは、Platform UI での既存のデータハイジーン作業指示の表示および管理方法について説明しました。独自の作業指示の作成について詳しくは、[データセット TTL のスケジュール設定](./ttl.md)を参照してください。
+このガイドでは、Platform UI での既存のデータハイジーン作業指示の表示および管理方法について説明しました。独自の作業指示の作成について詳しくは、 [データセットの有効期限のスケジュール設定](./dataset-expiration.md).
