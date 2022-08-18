@@ -5,9 +5,9 @@ title: セグメント化サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 94%
 
 ---
@@ -53,15 +53,15 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >title="評価方法"
 >abstract="Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。"
 
-Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。
-
-### ストリーミングセグメント化 {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="ストリーミング評価"
->abstract="Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。"
+>abstract="ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価"
+
+Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。
+
+### ストリーミングセグメント化 {#streaming}
 
 ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。セグメントを作成して保存すると、受信データに対してセグメント定義が [!DNL Real-time Customer Profile] に適用されます。セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスの関連性が維持されます。
 
