@@ -2,9 +2,9 @@
 title: リアルタイム CDP B2B エディションのセグメント化の使用例
 description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1275'
 ht-degree: 1%
 
 ---
@@ -105,6 +105,12 @@ B2B エディションでのセグメント化の使用例を次に示します�
 人事 (HR) 部門で働くすべての人を検索し、任意のアカウントに関連する *またはアカウントの関連アカウントのいずれか* 1 つ以上のオープンな商談が、指定された金額（100 万ドル）以上に相当します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
 
 ![関連アカウントのセグメントを表示する UI](../assets/segmentation/segmentation-related-accounts.png)
+
+### 例 9:リードスコアやアカウントスコアを使用してプロファイルを評価する {#account-scoring}
+
+リードスコアが 80 を超えるすべてのプロファイルを見つけます。
+
+![予測リードとアカウントスコアリングのセグメント化を表示する UI](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## 次の手順 {#next-steps}
 

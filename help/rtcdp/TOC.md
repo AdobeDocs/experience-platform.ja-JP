@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: 375f0c8a221540553b05aa1d5fb188a31e43f3e8
+source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 86%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 0%
    * [プロファイルの参照](profile/profile-browse.md)
 * リアルタイム CDP B2B エディション AI/ML サービス {#b2b-cdp-ai-ml}
    * [関連するアカウント](b2b-ai-ml-services/related-accounts.md)
-   * [リード — アカウントマッチング](b2b-ai-ml-services/lead-to-account-matching.md)
+   * [リードとアカウントのマッチング](b2b-ai-ml-services/lead-to-account-matching.md)
+   * 予測リードとアカウントスコアリング {#predictive-lead-and-account-scoring-intro}
+      * [予測リードとアカウントスコアリングの概要](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [予測リードとアカウントスコアの管理](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)
    * [Real-time CDP B2B Edition のスキーマ](schemas/b2b.md)

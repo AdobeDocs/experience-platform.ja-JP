@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '768'
 ht-degree: 4%
 
 ---
@@ -56,6 +56,23 @@ ht-degree: 4%
 | **[!UICONTROL 前回の成功した実行]** | 最後に成功したリードからアカウント照合ジョブの実行の日時を示します。 |
 | **[!UICONTROL ステータス]** | リードのアカウントマッチングジョブのステータス（成功、失敗、または処理）を示します。 |
 
+## 予測リードおよびアカウントスコアリングプロファイルエンリッチメント {#predictive-lead-to-account-scoring}
+
+この [!UICONTROL 予測リードとアカウントスコアリング] ダッシュボードには、 [予測リードとアカウントスコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) プロファイルエンリッチメント。
+
+![予測リードおよびアカウントスコアリングプロファイルエンリッチメント](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+予測リードおよびアカウントスコアリングプロファイルエンリッチメントジョブでは、次の指標を使用できます。
+
+| 指標 | 説明 |
+| --------- | ---------- |
+| **[!UICONTROL ジョブ開始]** | 予測リードおよびアカウントスコアリングジョブの実行の開始日時を示します。 |
+| **[!UICONTROL 処理時間]** | ジョブが完了するまでに要した合計時間です。 |
+| **[!UICONTROL スコア名]** | ジョブのスコア名。 |
+| **[!UICONTROL プロファイルタイプ]** | スコアのタイプ： <ul><li>人物</li><li>アカウント</li></ul>。 |
+| **[!UICONTROL ジョブタイプ]** | ジョブのタイプ：<ul><li>スコアリング</li><li>トレーニング</li>。 |
+| **[!UICONTROL ステータス]** | 予測リードおよびアカウントスコアリングジョブのステータス（成功、失敗または処理）を示します。 |
+
 ## UI コントロール {#ui-controls}
 
 この節では、監視インターフェイスの様々なユーザーインターフェイス (UI) オプションについて説明します。このオプションを使用すると、ページに表示する指標をフィルタリングできます。
@@ -79,3 +96,4 @@ ht-degree: 4%
 * [リアルタイム CDP B2B の関連アカウント](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [アカウントプロファイル UI ガイドの「関連するアカウント」タブ](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [リアルタイム CDP B2B でのアカウントマッチングにつながる](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [リアルタイム CDP B2B での予測リードおよびアカウントスコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
