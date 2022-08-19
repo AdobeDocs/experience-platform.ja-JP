@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；Salesforce;S
 title: Salesforce マッピングフィールド
 description: 以下の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d77bee173791843997985cfdae15959350fd9ab2
+source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 18%
+ht-degree: 24%
 
 ---
 
@@ -114,15 +114,10 @@ ht-degree: 18%
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
 | `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
-| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.convertedContactKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `"Lead"` | `b2b.personType` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
-| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
