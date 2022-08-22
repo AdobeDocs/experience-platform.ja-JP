@@ -2,7 +2,7 @@
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 96%
@@ -221,7 +221,7 @@ Adobe Analytics 拡張機能のデプロイに使用する Cookie のグロー�
 
 オンラインとオフラインの両方のシステムに存在する顧客を表す一意の値。
 
-[visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=ja) を参照してください。
+[visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=ja) を参照してください。
 
 ### 訪問者名前空間
 
