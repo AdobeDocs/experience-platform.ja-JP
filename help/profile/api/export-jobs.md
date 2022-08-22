@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
-title: 書き出しジョブ API エンドポイント
+title: プロファイル書き出しジョブ API エンドポイント
 topic-legacy: guide
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合することで、Adobe Experience Platform内の個々の顧客を一目で把握できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1519'
 ht-degree: 66%
 
 ---
 
-# 書き出しジョブエンドポイント
+# プロファイル書き出しジョブエンドポイント
 
 [!DNL Real-time Customer Profile] を使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合し、個々の顧客の単一のビューを構築できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。 例えば、 [!DNL Profile] データはアクティベーション用に書き出すことができ、プロファイル属性はレポート用に書き出すことができます。
 
@@ -350,7 +350,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 ```json
 {

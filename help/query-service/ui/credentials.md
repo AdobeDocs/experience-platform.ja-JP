@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ；クエリエディター；クエリエディター；クエリエディター；
 solution: Experience Platform
-title: クエリサービス UI ガイド
+title: クエリサービス資格情報ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 
 権限の割り当て方法の詳細については、 [アクセス制御](../../access-control/home.md).
 
-必要な権限がすべてAdobe開発者コンソールで設定され、ユーザーが期限切れの資格情報機能を使用できるようになりました。
+必要な権限がすべてAdobe Developerコンソールで設定され、ユーザーが資格情報の期限切れ機能を使用できるようになりました。
 
 ### 資格情報を生成
 

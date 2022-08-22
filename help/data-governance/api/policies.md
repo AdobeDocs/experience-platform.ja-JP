@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;ポリシーの適用;API ベースの適用;データガバナンス
 solution: Experience Platform
-title: ポリシー API エンドポイント
+title: データ使用ポリシー API エンドポイント
 topic-legacy: developer guide
 description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。データ使用ポリシーの表示、作成、更新、削除に関する API 呼び出しには、すべて /policies エンドポイントを使用します。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 100%
+source-wordcount: '1840'
+ht-degree: 98%
 
 ---
 
-# ポリシーエンドポイント
+# データ使用ポリシーエンドポイント
 
 データ使用ポリシーは、[!DNL Experience Platform] 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです。[!DNL Policy Service API] の `/policies` エンドポイントを使用すると、組織のデータ使用ポリシーをプログラムによって管理できます。
+
+>[!IMPORTANT]
+>
+>このエンドポイントは、 `/policies` エンドポイント [アクセス制御 API](../../access-control/abac/api/policies.md)：アクセス制御ポリシーの管理に使用します。
 
 ## はじめに
 

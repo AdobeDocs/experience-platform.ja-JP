@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、ユーザーインターフェイス、UI、カスタマイズ、プロファイルダッシュボード、ダッシュボード
-title: プロファイルダッシュボード
+title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '3901'
-ht-degree: 7%
+source-wordcount: '3902'
+ht-degree: 8%
 
 ---
 
@@ -286,7 +286,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL オーディエンス] {#audiences}
 
-このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができたセグメントの合計数を提供します。
+このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができているセグメントの合計数を提供します。
 
 選択 **[!UICONTROL オーディエンス]** をクリックして、 [!UICONTROL セグメント] dashboard [!UICONTROL 参照] タブをクリックします。 ここから、組織のすべてのセグメント定義のリストが表示されます。
 
