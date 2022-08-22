@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
+source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
 workflow-type: tm+mt
-source-wordcount: '2327'
-ht-degree: 100%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -177,15 +177,10 @@ Real-time Customer Data Platform（Real-time CDP）上に構築された Real-ti
 
 | 機能 | 説明 |
 | --- | --- |
-| リードとアカウントのマッチング | リードとアカウントのマッチングにより、既知のユーザープロファイルをアカウントプロファイルに結合できます。次に、アカウントやオポチュニティなどの B2B コンテキストでデータをセグメント化し、ターゲットに設定できます。 毎日実行されるジョブでは、決定論的要因と確率論的要因の両方を使用して、どのアカウントにもまだ関連付けられていないユーザープロファイルを、最も一致するアカウントに一致させます。 その後、セグメント定義にそのような一致を含めるかどうかを決定できます |
+| リードとアカウントのマッチング | リードとアカウントのマッチングにより、既知のユーザープロファイルをアカウントプロファイルに結合できます。次に、アカウントやオポチュニティなどの B2B コンテキストでデータをセグメント化し、ターゲットに設定できます。 毎日実行されるジョブでは、決定論的要因と確率論的要因の両方を使用して、どのアカウントにもまだ関連付けられていないユーザープロファイルを、最も一致するアカウントに一致させます。 その後、セグメント定義にそのような一致を含めるかどうかを決定できます。<br><br>詳しくは、[リードとアカウントのマッチング](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)のドキュメントを参照してください。リードとアカウントのマッチングの設定方法については、[アカウントプロファイル UI ガイド](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching)を参照してください。</li> |
+| 予測リードとアカウントスコアリング | 予測リードとアカウントスコアリングでは、ツリーベースの（ランダムフォレスト/グラデーションブースト）機械学習手法を使用します。この手法では、オポチュニティステージのコンバージョンイベントの学習と予測、アカウントレベルでの個人アクティビティの集計が行われます。 また、最も影響力のある要因は、集計と単位レベルの両方で利用でき、B2B マーケターがスコアの原因となった要素をより深く理解できるようになります。 <br><br>詳しくは、 [予測リードとアカウントスコアリング](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). スコアの管理方法について詳しくは、 [Real-time Customer Data Platform, B2B Edition での予測リードとアカウントスコアリングの管理](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
 
-詳しくは、[リードとアカウントのマッチング](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)のドキュメントを参照してください。
-
-プロファイルエンリッチメントの監視方法については、[UI でのプロファイルエンリッチメントの監視](../../dataflows/ui/b2b/monitor-profile-enrichment.md)を参照してください。
-
-リードとアカウントのマッチングの設定方法については、[アカウントプロファイル UI ガイド](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching)を参照してください。
-
-Real-Time CDP B2B Edition について詳しくは、[Real-time Customer Data Platform の概要](../../rtcdp/overview.md)を参照してください。
+プロファイルエンリッチメントの監視方法については、[UI でのプロファイルエンリッチメントの監視](../../dataflows/ui/b2b/monitor-profile-enrichment.md)を参照してください。Real-Time CDP B2B Edition について詳しくは、[Real-time Customer Data Platform の概要](../../rtcdp/overview.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
