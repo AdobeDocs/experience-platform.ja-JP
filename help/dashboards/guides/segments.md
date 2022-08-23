@@ -4,9 +4,9 @@ title: セグメントダッシュボードガイド
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 11%
 
 ---
@@ -82,7 +82,6 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 >id="platform_dashboards_segments_audiencesize"
 >title="オーディエンスサイズ"
 >abstract="このウィジェットには、選択したセグメント内の結合プロファイルの合計数が表示されます。 この数は、データに適用される結合ポリシーによって異なり、最新のスナップショットの時点で正しくなります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL オーディエンスサイズ]** ウィジェットには、スナップショットが作成された時点での、選択したセグメント内の結合プロファイルの合計数が表示されます。 この数は、プロファイルフラグメントを結合してセグメント内の個々のプロファイルを 1 つ形成するために、セグメント結合ポリシーをプロファイルデータに適用した結果です。
 
@@ -96,7 +95,6 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="オーディエンスサイズのトレンド"
 >abstract="このウィジェットは、 **任意** 日別のスナップショット中に、過去 30 日間、90 日間、12 ヶ月間にキャプチャされたセグメント定義。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットには、次の条件を満たすプロファイルの総数を示す線グラフの図が表示されます： **任意** 特定の期間のセグメント定義。 オーディエンスサイズのトレンドを 30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 オーディエンスサイズは、x 軸の y 軸と時間に反映されます。
 
@@ -151,7 +149,6 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 >id="platform_dashboards_segments_identityoverlap"
 >title="ID の重複"
 >abstract="このウィジェットは、選択された ID の両方を含むセグメント内のプロファイルの重複を表示します。 円には、各 ID の相対サイズが表示されます。 両方の名前空間を含むプロファイルの数は、円の間の重複で表されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL ID の重複]** ウィジェットには、複数の ID を含むセグメント内のプロファイルの重複を示す、ベン図（セット図）が表示されます。
 
@@ -169,7 +166,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="ID 別プロファイル"
 >abstract="このウィジェットは、選択したセグメント内のすべての結合プロファイルで ID の分類を表示します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL ID 別プロファイル]** ウィジェットは、選択したセグメント内のすべての結合プロファイルで id の分類を表示します。 1 つのプロファイルが複数の ID を関連付けている可能性があるので、ID 別のプロファイルの合計数は、セグメント内のプロファイルの合計数より多くなる場合があります。 つまり、顧客が複数のチャネルでブランドとやり取りする場合、複数の ID が個々の顧客に関連付けられる可能性があるので、各 ID に表示される値を合計すると、セグメントの合計オーディエンスサイズよりも大きくなる場合があります。
 

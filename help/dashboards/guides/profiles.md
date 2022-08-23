@@ -4,9 +4,9 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '3902'
+source-wordcount: '3769'
 ht-degree: 8%
 
 ---
@@ -122,7 +122,6 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 >id="platform_dashboards_profiles_profilecount"
 >title="プロファイル数"
 >abstract="このウィジェットは、スナップショットが作成された時点でのプロファイルストア内の結合済みプロファイルの合計数を表示します。 この数は、選択した結合ポリシーがプロファイルデータに適用されているかどうかによって異なります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL プロファイル数]** ウィジェットは、スナップショットが作成された時点でのプロファイルストア内の結合済みプロファイルの合計数を表示します。 この数値は、選択した結合ポリシーをプロファイルデータに適用して、プロファイルフラグメントを結合し、個々のプロファイルごとに 1 つのプロファイルを形成することによって生じます。
 
@@ -148,7 +147,6 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 >id="platform_dashboards_profiles_profilescountchange"
 >title="プロファイル数の変更"
 >abstract="このウィジェットには、結合されたプロファイルの合計数が表示されます **追加済み** を最後のスナップショットの時点のプロファイルストアに追加します。 この数は、選択した結合ポリシーがプロファイルデータに適用されているかどうかによって異なります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL プロファイル数の変更]** ウィジェットは、前のスナップショット以降にプロファイルストアに追加された結合プロファイルの数を表示します。 この数値は、選択した結合ポリシーをプロファイルデータに適用して、プロファイルフラグメントを結合し、個々のプロファイルごとに 1 つのプロファイルを形成することによって生じます。 ドロップダウンセレクターを使用して、過去 30 日間、90 日間、12 ヶ月間に追加されたプロファイルの数を表示できます。
 
@@ -164,7 +162,6 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="プロファイル数の変化の傾向"
 >abstract="このウィジェットは、過去 30 日、90 日、12 ヶ月間にプロファイルストアに毎日追加された、結合されたプロファイルの数を表示します。 また、この数は、選択した結合ポリシーがプロファイルデータに適用されるかどうかによって異なります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL プロファイル数の変化の傾向]** ウィジェットには、過去 30 日、90 日、12 ヶ月間にプロファイルストアに毎日追加された、結合されたプロファイルの合計数が表示されます。 この数は、スナップショットが作成されるたびに更新されます。そのため、プロファイルを Platform に取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されるプロファイルの数は、選択した結合ポリシーがプロファイルデータに適用され、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成する結果です。
 
@@ -194,7 +191,6 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="ID 別プロファイル"
 >abstract="このウィジェットは、プロファイルストア内のすべての結合済みプロファイルの分類を ID 別に表示します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL ID 別プロファイル]** ウィジェットは、プロファイルストア内のすべての結合済みプロファイルで id の分類を表示します。 1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
 
@@ -216,7 +212,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_profiles_identityoverlap"
 >title="ID の重複"
 >abstract="このウィジェットは、ベン図を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この **[!UICONTROL ID の重複]** ウィジェットは、ベン図（セット図）を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。
 
@@ -234,7 +229,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="単一の ID プロファイル"
 >abstract="このウィジェットは、ID を作成する 1 つのタイプの ID のみを持つ組織のプロファイルの数を提供します。 この ID タイプは、電子メールまたは ECID のどちらかです。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 単一の ID プロファイル] ウィジェットは、id を作成する 1 つのタイプの ID のみを持つ組織のプロファイルの数を提供します。 この ID タイプは、電子メールまたは ECID のどちらかです。 プロファイル数は、最新のスナップショットに含まれるデータから生成されます。
 
@@ -254,7 +248,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="非セグメント化プロファイル"
 >abstract="このウィジェットは、どのセグメントにも添付されていないすべてのプロファイルの合計数を提供し、組織全体でのプロファイルのアクティベーションの機会を表します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 非セグメント化プロファイル] ウィジェットは、どのセグメントにも添付されていないすべてのプロファイルの合計数を提供します。 生成される数は、最後のスナップショット時点のもので、組織全体のプロファイルアクティブ化の機会を表しています。また、十分な ROI を提供しないプロファイルを拡張する機会も示します。
 
@@ -266,7 +259,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="非セグメント化プロファイルのトレンド"
 >abstract="このウィジェットには、一定期間内にどのセグメントにも属していないプロファイルの数が折れ線グラフで表示されます。どのセグメントにも関連付けられていないプロファイルのトレンドを、30 日、90 日、12 ヶ月の期間で視覚化できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 非セグメント化プロファイルトレンド] ウィジェットには、特定の期間にどのセグメントにも添付されていないプロファイルの数を示す線グラフの図が表示されます。 どのセグメントにも関連付けられていないプロファイルのトレンドを、30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。 プロファイル数は、x 軸の y 軸と時間に反映されます。
 
@@ -278,7 +270,6 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="ID 別の非セグメント化プロファイル"
 >abstract="このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL ID 別の非セグメント化プロファイル] ウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データを棒グラフで視覚化し、比較しやすくします。
 
@@ -359,7 +350,6 @@ Adobeには、データ分析に使用できる取り込まれたプロファイ
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="属性の品質評価"
 >abstract="このウィジェットは、属性に従ってすべてのプロファイルの完全性と基数を表示します。 各行は 1 つの属性を表します。 この **プロファイル** 列には、この属性を持ち、null 以外の値で入力されたプロファイルの数が表示されます。 この **完全性** 割合は、この属性を持ち、null 以外の値で埋められるプロファイルの合計数を、その属性のプロファイル内の空でない値の合計数で割った値です。 **基数** は、すべての属性に対してこの属性の一意で null でない値の合計数を提供します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 属性品質評価] ウィジェットは、属性に従ってすべてのプロファイルの完全性と基数を表示します。 データは最後の処理日に正確です。 この情報は、4 つの列を持つテーブルとして表され、テーブルの各行は 1 つの属性を表します。
 
@@ -378,7 +368,6 @@ Adobeには、データ分析に使用できる取り込まれたプロファイ
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="完全性別プロファイル"
 >abstract="ドーナツグラフには、観測されたすべての属性の中で null 以外の値で埋められたプロファイル属性の割合が表示されます。 完全性が高い、中程度の、完全性が低いプロファイルの割合を示します。 完全性の高いプロファイルでは、その属性の 70%以上が塗りつぶされます。 完全性が中程度のプロファイルでは、属性の 30%～70%が入力されます。 完全性の低いプロファイルでは、その属性の 30%未満が塗りつぶされます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 この [!UICONTROL 完全性別プロファイル] ウィジェットは、最後の処理日以降のプロファイルの完全性を示すドーナツグラフを作成します。 プロファイルの完全性は、観測されたすべての属性の中で null 以外の値で埋められた属性の割合で測定されます。
 
@@ -396,7 +385,6 @@ Adobeには、データ分析に使用できる取り込まれたプロファイ
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="プロファイルの完全性のトレンド"
 >abstract="このウィジェットは、プロファイルの完全性の傾向を時間の経過と共に表す積み重ね面グラフを作成します。 完全性は、観測されたすべての属性の中で null 以外の値が設定された属性の割合で測定されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="詳しくは、ドキュメントを参照してください。"
 
 このウィジェットは、プロファイルの完全性の傾向を時間の経過と共に表す積み重ね面グラフを作成します。 完全性は、観測されたすべての属性の中で null 以外の値で埋められた属性の割合で測定されます。 このコードでは、最後の処理日以降の、プロファイルの完全性が高、中、または低と分類されます。
 
