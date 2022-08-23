@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 86%
+source-wordcount: '2182'
+ht-degree: 69%
 
 ---
 
@@ -151,6 +151,82 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 * [データ準備の概要](../../../../../data-prep/home.md)
 * [データ準備のマッピング機能](../../../../../data-prep/functions.md)
 * [計算フィールドを追加](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### フィルター [!DNL Profile Service] （ベータ版）
+
+>[!IMPORTANT]
+>
+>フィルタリングのサポート [!DNL Analytics] データは現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+
+マッピングを完了したら、 [!DNL Analytics] レポートスイートのデータを使用する場合、フィルタールールと条件を適用して、取り込むデータを選択的に含めたり、取り込まないデータを除外したりできます [!DNL Profile Service]. フィルタリングのサポートは、次の場合にのみ使用できます。 [!DNL Analytics] データとデータは、 [!DNL Profile.] すべてのデータがデータレイクに取り込まれます。
+
+#### 行レベルのフィルター
+
+データをフィルターできます [!DNL Profile] 行レベルおよび列レベルでの取り込み。 行レベルのフィルタリングでは、文字列の含む、等しい、始まる、次で終わるなどの条件を定義できます。 また、行レベルのフィルターを使用して、 `AND` 同様に `OR`を使用して、条件を無効にする `NOT`.
+
+次の手順で [!DNL Analytics] 行レベルのデータで、 **[!UICONTROL 行フィルター]**.
+
+![行フィルター](../../../../images/tutorials/create/analytics/row-filter.png)
+
+左側のレールを使用してスキーマ階層間を移動し、選択したスキーマ属性を選択して、特定のスキーマをさらに詳しく掘り下げます。
+
+![左レール](../../../../images/tutorials/create/analytics/left-rail.png)
+
+設定する属性を特定したら、左側のパネルから属性を選択し、フィルタリングパネルにドラッグします。
+
+![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+異なる条件を設定するには、「 **[!UICONTROL 次と等しい]** 次に、表示されるドロップダウンウィンドウから条件を選択します。
+
+設定可能な条件のリストは次のとおりです。
+
+* [!UICONTROL 次と等しい]
+* [!UICONTROL 次と等しくない]
+* [!UICONTROL 次の語句で始まる]
+* [!UICONTROL 次の語句で終わる]
+* [!UICONTROL 次の語句で終わらない]
+* [!UICONTROL 次を含む]
+* [!UICONTROL 次を含まない]
+* [!UICONTROL 存在する]
+* [!UICONTROL 存在しない]
+
+![条件](../../../../images/tutorials/create/analytics/conditions.png)
+
+次に、選択した属性に基づいて、含める値を入力します。 次の例では、 [!DNL Apple] および [!DNL Google] は、 **[!UICONTROL 製造元]** 属性。
+
+![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+フィルター条件をさらに指定するには、スキーマから別の属性を追加してから、その属性に基づく値を追加します。 次の例では、 **[!UICONTROL モデル]** 属性が追加され、 [!DNL iPhone 13] および [!DNL Google Pixel 6] は、取り込み用にフィルタリングされます。
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+新しいコンテナを追加するには、省略記号 (`...`) をクリックし、「 **[!UICONTROL コンテナを追加]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+新しいコンテナを追加したら、「 」を選択します。 **[!UICONTROL 次を含む]** 次に、 **[!UICONTROL 除外]** をクリックします。
+
+![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+
+次に、スキーマ属性をドラッグし、フィルタリングから除外する値を追加して、同じ手順を完了します。 次の例では、 [!DNL iPhone 12], [!DNL iPhone 12 mini]、および [!DNL Google Pixel 5] はすべて、 **[!UICONTROL モデル]** 属性、横長は **[!UICONTROL 画面の向き]**、およびモデル番号 [!DNL A1633] 次から除外： **[!UICONTROL モデル番号]**.
+
+終了したら、「**[!UICONTROL 次へ]**」を選択します。
+
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### 列レベルのフィルター
+
+選択 **[!UICONTROL 列フィルター]** 列レベルのフィルターを適用するには、ヘッダーからを選択します。
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+ページがインタラクティブスキーマツリーに更新され、列レベルでスキーマ属性が表示されます。 ここから、除外するデータの列を選択できます [!DNL Profile] 取り込み。 または、列を展開して、除外する特定の属性を選択することもできます。
+
+デフォルトでは、すべて [!DNL Analytics] に移動します。 [!DNL Profile] このプロセスにより、XDM データのブランチをから除外できます。 [!DNL Profile] 取り込み。
+
+終了したら、「**[!UICONTROL 次へ]**」を選択します。
+
+![列 — 選択](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### データフローの詳細を入力
 
