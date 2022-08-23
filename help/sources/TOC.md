@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 92%
+source-wordcount: '802'
+ht-degree: 91%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 92%
       - [Phoenix コネクタ](connectors/databases/phoenix.md)
       - [PostgreSQL コネクタ](connectors/databases/postgres.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
+      - [TeradataVantage コネクタ](connectors/databases/teradata-vantage.md)
    - e コマース {#ecommerce}
       - [Shopify コネクタ](connectors/ecommerce/shopify.md)
    - ローカルシステム {#local-system}
@@ -148,6 +149,7 @@ ht-degree: 92%
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
+         - [Teradata利益](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -250,6 +252,7 @@ ht-degree: 92%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Teradata利益](tutorials/ui/create/databases/teradata-vantage.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - ローカルシステム {#local-system}

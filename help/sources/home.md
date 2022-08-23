@@ -5,8 +5,8 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
-workflow-type: ht
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 100%
 
@@ -114,6 +114,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
 ### e コマース {#ecommerce}
 
