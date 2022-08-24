@@ -2,13 +2,13 @@
 keywords: 電子メール；電子メール；電子メールの宛先；salesforce;api salesforce marketing cloud の宛先
 title: (API)SalesforceMarketing Cloud接続
 description: SalesforceMarketing Cloud（旧称 ExactTarget）の宛先を使用すると、アカウントデータを書き出し、SalesforceMarketing Cloud内でビジネスニーズに合わせてアクティブ化できます。
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1906'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] 接続
 
@@ -48,7 +48,7 @@ Salesforce に移動 [裁判](https://www.salesforce.com/in/form/signup/freetria
 
 #### Salesforce 内にカスタムフィールドを作成 {#prerequisites-custom-field}
 
-タイプのカスタム属性を作成 `Text Area Long` どのExperience Platformが SalesforceMarketing Cloud内でセグメントのステータスを更新する際に使用するか。
+タイプのカスタム属性を作成する必要があります `Text Area Long`：このExperience Platformは、SalesforceMarketing Cloud内でセグメントステータスを更新するために使用します。 宛先に対してセグメントをアクティブ化するワークフローで、 **[セグメントスケジュール](#schedule-segment-export-example)** 手順では、アクティブ化した各セグメントのマッピング ID としてカスタム属性を使用します。
 
 SalesforceMarketing Cloudドキュメントを参照： [カスタムフィールドの作成](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 追加のガイダンスが必要な場合は、を参照してください。
 
@@ -72,6 +72,8 @@ Salesforce の宛先に対する認証を行う前に、以下の項目をメモ
 | --- | --- | --- |
 | <ul><li>SalesforceMarketing Cloudプレフィックス</li></ul> | 詳しくは、 [SalesforceMarketing Cloudドメインプレフィックス](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) を参照してください。 | <ul><li>ドメインが以下の場合は、強調表示された値が必要です。<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>クライアント ID</li><li>クライアント秘密鍵</li></ul> | 詳しくは、 [Salesforce ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) 追加のガイダンスが必要な場合は、を参照してください。 | <ul><li>r23kxxxxxxxxx0z05xxxxxxx</li><li>ipxxxxxxxxT4xxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## サポートされる ID {#supported-identities}
 
@@ -140,15 +142,15 @@ SalesforceMarketing Cloudは、以下の表で説明する ID のアクティベ
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platformから Salesforce のMarketing Cloud先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。 XDM フィールドを Salesforce 宛先フィールドに正しくマッピングするには、次の手順に従います。Marketing Cloud
+Adobe Experience Platformから Salesforce のMarketing Cloud先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。 XDM フィールドを Salesforce 宛先フィールドに正しくマッピングするには、次の手順に従いますMarketing Cloud。
 
-属性マッピングのリスト。 [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) は以下に示されます。 宛先は、 [Salesforce 検索属性セット定義 REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) ：連絡先の Salesforce 内で定義され、お使いのアカウントに固有の属性を取得します。
+次に対して設定可能な属性マッピングのリスト： [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) は以下に示されます。 宛先は、 [Salesforce 検索属性セット定義 REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) ：連絡先の Salesforce 内で定義され、お使いのアカウントに固有の属性を取得します。
 
 >[!IMPORTANT]
 > 
 > 属性名は Salesforce アカウントに従いますが、 `contactKey` および `personalEmail.address` は必須です。
 
-1. マッピングの手順で、 **[!UICONTROL 新しいマッピングを追加]**に値を指定しない場合、新しいマッピング行が画面に表示されます。
+1. マッピングの手順で、 **[!UICONTROL 新しいマッピングを追加]**. これで、新しいマッピング行が画面に表示されます。
    ![新しいマッピングを追加](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. ソースフィールドを選択ウィンドウで、ソースフィールドを選択する際に、 **[!UICONTROL 属性を選択]** 」カテゴリに追加し、必要なマッピングを追加します。
@@ -172,7 +174,7 @@ Adobe Experience Platformから Salesforce のMarketing Cloud先にオーディ�
 
 ### セグメントのエクスポートと例をスケジュール {#schedule-segment-export-example}
 
-実行時に [セグメントの書き出しをスケジュール](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順 Platform セグメントを Salesforce のカスタム属性に手動でマッピングする必要があります。
+実行時に [セグメントの書き出しをスケジュール](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順を実行する場合は、Salesforce のカスタム属性に Platform セグメントを手動でマッピングする必要があります。
 
 これをおこなうには、各セグメントを選択し、Salesforce から対応するカスタム属性を **[!UICONTROL マッピング ID]** フィールドに入力します。
 
@@ -233,4 +235,3 @@ Adobe Experience Platformから Salesforce のMarketing Cloud先にオーディ�
 * 詳しくは、 [SalesforceMarketing Cloudエンゲージメント価格](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) ページ *Full Edition 比較グラフのダウンロード* プランで課せられた制限の詳細を示す pdf 形式
 * この [API の概要](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) ページの詳細に関する追加の制限。
 * これらの詳細を照合する KB 項目が利用可能です [ここ](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20been%20added%20in,interacting%20with%20the%20REST%2DAPI).
-
