@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
-title: Flow Service API（ベータ版）を使用して新しい接続仕様を作成
+title: フローサービス API を使用して新しい接続仕様を作成します
 topic-legacy: tutorial
-description: 次のドキュメントでは、Flow Service API を使用して接続仕様を作成し、Sources SDK を通じて新しいソースを統合する手順を説明します。
-hide: true
-hidefromtoc: true
+description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、セルフサービスソースを使用して新しいソースを統合する手順を説明します。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 100%
+source-wordcount: '800'
+ht-degree: 46%
 
 ---
 
-# [!DNL Flow Service] API（ベータ版）を使用して、新しい接続仕様を作成します。
-
->[!IMPORTANT]
->
->Sources SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。このドキュメントで説明されている機能は変更されることがあります。
+# を使用して新しい接続仕様を作成します。 [!DNL Flow Service] API
 
 接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 
-次のドキュメントでは、[!DNL Flow Service] APIを使用して接続仕様を作成し、Sources SDK を通じて新しいソースを統合する手順を説明します。
+次のドキュメントでは、 [!DNL Flow Service] API を使用し、セルフサービスソース（バッチ SDK）を使用して新しいソースを統合します。
 
 ## はじめに
 
@@ -30,16 +24,37 @@ ht-degree: 100%
 
 ## アーティファクトを収集
 
-[!DNL Sources SDK] を通じて新しいソースを作成する最初の手順は、アドビ担当者と調整し、ソースの対応する&#x200B;**アイコン**、**説明**、**ラベル**&#x200B;および&#x200B;**カテゴリ**&#x200B;の値を特定することです。
+セルフサービスソースを使用して新しいバッチソースを作成するには、まずAdobeと調整し、プライベート Git リポジトリをリクエストし、ソースのラベル、説明、カテゴリ、アイコンに関する詳細に関するAdobeに合わせる必要があります。
 
-| アーティファクト | 説明 | 例 |
+指定が完了したら、次のようにプライベート Git リポジトリを構築する必要があります。
+
+* ソース
+   * {your_source}
+      * アーティファクト
+         * {your_source}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
-| ラベル | ソースの名前。 | [!DNL MailChimp Members] |
-| 説明 | ソースの簡単な説明。 | [!DNL Mailchimp Members] インスタンスへのライブインバウンド接続を作成して、履歴データとスケジュールされたデータの両方を Experience Platform に取り込みます。 |
-| アイコン | ソースを表す画像またはロゴ。このアイコンは、ソースの Platform UI レンダリングに表示されます。 | `mailchimp-members-icon.svg` |
-| カテゴリ | ソースのカテゴリ。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | ソースの名前。このフォルダーには、ソースに関連するすべてのアーティファクトを、プライベート Git リポジトリ内に含める必要があります。 | `mailchimp-members` |
+| {your_source}-category.txt | ソースが属するカテゴリ。テキストファイル形式で指定します。 セルフサービスソース（バッチ SDK）でサポートされる使用可能なソースカテゴリのリストは、次のとおりです。 <ul><li>広告</li><li>Analytics</li><li>同意および環境設定</li><li>CRM</li><li>カスタマーサクセス</li><li>データベース</li><li>e コマース</li><li>マーケティングの自動処理</li><li>支払い</li><li>プロトコル</li></ul> **注意**:ソースが上記のカテゴリのいずれにも適合しないと思われる場合は、Adobe担当者にお問い合わせください。 | `mailchimp-members-category.txt` ファイル内で、次のようにソースのカテゴリを指定します。 `marketingAutomation`. |
+| {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Mailchimp Members] は、 [!DNL Mailchimp Members] データをExperience Platformに送信します。 |
+| {your_source}-icon.svg | 画像ソースカタログでソースを表すために使用するExperience Platform。 このアイコンは、SVGファイルです。 |
+| {your_source}-label.txt | ソースの名前。ソースカタログに表示されるExperience Platformです。 | Mailchimp メンバー |
+| {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このガイドを完了すると、接続仕様に入力されるので、このファイルは最初は必要ありません。 | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>接続仕様のテスト期間中に、キー値の代わりに、 `text` （接続仕様）
+
+プライベート Git リポジトリに必要なファイルを追加したら、Adobeが確認できるプルリクエスト (PR) を作成する必要があります。 PR が承認され、マージされると、接続仕様でソースのラベル、説明、アイコンを参照できる ID が提供されます。
+
+次に、次に示す手順に従って、接続仕様を設定します。 高度なスケジュール設定、カスタムスキーマ、異なるページネーションタイプなど、ソースに追加できる様々な機能に関する追加のガイダンスについては、 [ソース仕様の構成](../config/sourcespec.md).
 
 ## 接続仕様テンプレートをコピー
 
@@ -68,10 +83,6 @@ ht-degree: 100%
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ ht-degree: 100%
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",

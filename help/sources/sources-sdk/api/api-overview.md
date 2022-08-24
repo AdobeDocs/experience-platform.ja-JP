@@ -1,28 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
-title: ソース SDK API ガイド（ベータ版）
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
+title: セルフサービスソース（バッチ SDK）API ガイド
 topic-legacy: overview
 description: このドキュメントでは、フローサービス API を使用して新しい接続仕様を取得、書き込み、送信する手順など、新しいソースの作成プロセスの概要を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 5%
+source-wordcount: '488'
+ht-degree: 11%
 
 ---
 
-# ソース SDK API ガイド（ベータ版）
-
->[!IMPORTANT]
->
->ソース SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
+# セルフサービスソース（バッチ SDK）API ガイド
 
 このドキュメントでは、新しいソースを作成するプロセスの概要を示します。このプロセスには、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] は、Platform 内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスおよび RESTful API を提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスおよび RESTful API を提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理を行うことができます。
 
-この [!DNL Flow Service] API には、Sources SDK を使用して統合する新しいソースの接続仕様とフロー仕様をプログラムで管理できるエンドポイントがいくつか用意されています。
+この [!DNL Flow Service] API には、セルフサービスソース（バッチ SDK）を使用して統合する新しいソースの接続仕様とフロー仕様をプログラムで管理できるエンドポイントがいくつか用意されています。
 
 ## 新しい接続仕様を作成します
 
@@ -44,10 +39,10 @@ ht-degree: 5%
 
 接続仕様を更新するには、 [!DNL Flow Service] API 詳しくは、 [接続仕様の更新](./update-connection-specs.md) を参照してください。
 
-## ソースを送信
+## ソースの送信
 
 Experience Platformに統合するソースを送信するには、まず [!DNL Flow Service] ソースが正常に機能するようにするソースの API ワークフロー。 ソースが正常に実行された場合は、続行し、検証とプロモーションについてAdobe担当者に問い合わせることができます。 詳しくは、 [ソースのテストと送信](./submit.md) 詳細情報
 
 ## 次の手順
 
-を使用し始めるには、以下を実行します。 [!DNL Flow Service] API を使用し、Sources SDK を使用して新しいソースを作成する場合は、 [入門ガイド](./getting-started.md) 次に、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を学びます。
+を使用し始めるには、以下を実行します。 [!DNL Flow Service] API を使用し、セルフサービスソース（バッチ SDK）を使用して新しいソースを作成する場合は、 [入門ガイド](./getting-started.md) 次に、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を学びます。

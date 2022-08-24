@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: フローサービス API（ベータ版）を使用した接続仕様の更新
+title: フローサービス API を使用した接続仕様の更新
 topic-legacy: developer guide
 description: 接続操作を通じて、接続仕様のプロパティを更新することがPUTできます。
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 14%
 
 ---
 
-# フローサービス API（ベータ版）を使用した接続仕様の更新
+# フローサービス API を使用した接続仕様の更新
 
 接続操作を通じて、接続仕様のプロパティを更新することがPUTできます。 PUTリクエストを通じてPOST仕様を更新する場合、本文には、接続リクエストで新しい接続仕様を作成する際に必要となるすべてのフィールドを含める必要があります。
 

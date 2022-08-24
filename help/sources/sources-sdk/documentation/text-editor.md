@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: ローカル環境でテキストエディターを使用してソースドキュメントページを作成する
 topic-legacy: tutorial
 description: このドキュメントでは、ローカル環境を使用して、ソースに関するドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 3%
+source-wordcount: '650'
+ht-degree: 8%
 
 ---
 
-# ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。
+# ローカル環境でのテキストエディターを使用したソースドキュメントページの作成
 
 このドキュメントでは、ローカル環境を使用して、ソースに関するドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 
@@ -69,9 +68,9 @@ Adobeでは、 [Visual Studio Code](https://code.visualstudio.com/) Markdown Aut
 
 次に、 `Adobe Markdown Authoring` を検索バーに追加し、 **インストール** 表示されるページから。
 
-![install](../assets/install.png)
+![インストール](../assets/install.png)
 
-ローカルマシンの準備が整ったら、 [ソースドキュメントテンプレート](../assets/template.zip) を選択し、 `experience-platform.en/help/sources/tutorials/api/create/...` と [`...`] 選択したカテゴリを表します。 例えば、クラウドストレージソースを作成する場合は、クラウドストレージフォルダーを選択します。
+ローカルマシンの準備が整ったら、 [ソースドキュメントテンプレート](../assets/template.zip) を選択し、 `experience-platform.en/help/sources/tutorials/api/create/...` と [`...`] 選択したカテゴリを表します。 例えば、データベースソースを作成する場合は、データベースフォルダを選択します。
 
 最後に、テンプレートに記載されている手順に従い、ソースに関する関連情報を使用してテンプレートを編集します。
 

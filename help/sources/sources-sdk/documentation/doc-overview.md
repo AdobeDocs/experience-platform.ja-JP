@@ -1,24 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: ソースのドキュメント化
 topic-legacy: overview
 description: Adobe Experience Platformで新しいソースをライブにする前の最後の手順は、新しいソースをドキュメント化することです。
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 0%
+source-wordcount: '411'
+ht-degree: 3%
 
 ---
 
 # ソースをドキュメント化
-
->[!IMPORTANT]
->
->ソース SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントで説明する機能は、変更される場合があります。
 
 Adobe Experience Platformで新しいソースをライブに設定する前の最後の手順は、新しいソースをドキュメント化することです。
 

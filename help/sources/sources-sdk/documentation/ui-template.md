@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: UI 用のセルフサービスドキュメントテンプレート
 description: Adobe Experience Platform UI を使用して YOURSOURCE ソース接続を作成する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,11 +35,11 @@ ht-degree: 1%
 * *お客様側のアカウントの詳細*
 * *プラットフォームに接続するための認証資格情報の取得方法*
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
 接続するには *YOURSOURCE* を Platform に対して、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 | 例 |
+| 認証情報 | 説明 | 例 |
 | --- | --- | --- |
 | *資格情報* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
 | *資格情報 2* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
@@ -50,9 +49,9 @@ ht-degree: 1%
 
 ## 接続 *YOURSOURCE* アカウント
 
-Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから [!UICONTROL ソース] ワークスペース。 この [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、使用する特定のソースを検索オプションを使用して探すこともできます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 以下 *ソースのカテゴリ* カテゴリ、選択 *YOURSOURCE*&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
@@ -72,7 +71,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、名前、オプションの説明および資格情報を入力します。 終了したら、「 」を選択します。 **[!UICONTROL ソースに接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の認証情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../assets/ui/new.png)
 
@@ -80,7 +79,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 *データフローの作成の残りの手順のワークフローはモジュール化されます。 ソースに関する特定のコールアウトが必要な場合は、以下の追加のリソースの節を参照してください。*
 
-このチュートリアルに従うことで、 *YOURSOURCE* アカウント 次のチュートリアルに進み、 [データを Platform に取り込むためのデータフローの設定](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+このチュートリアルに従うことで、 *YOURSOURCE* アカウント 次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)を行いましょう。
 
 ## その他のリソース
 

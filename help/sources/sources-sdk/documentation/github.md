@@ -1,16 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: GitHub Web インターフェイスを使用したソースドキュメントページの作成
 topic-legacy: tutorial
 description: このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -36,19 +34,19 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ![create-branch](../assets/create-branch.png)
 
-フォークされたリポジトリの GitHub フォルダー構造で、に移動します。 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 次に、ソースに適したカテゴリをリストから選択します。 例えば、新しいクラウドストレージソースのドキュメントを作成する場合は、 **クラウドストレージ**.
+フォークされたリポジトリの GitHub フォルダー構造で、に移動します。 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 次に、ソースに適したカテゴリをリストから選択します。 例えば、新しい CRM ソースのドキュメントを作成する場合は、 **crm**.
 
 >[!TIP]
 >
 >UI 用のドキュメントを作成している場合は、に移動します。 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) をクリックし、ソースに適したカテゴリを選択します。 画像を追加するには、以下に移動します。 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) 次に、 `sdk` フォルダー。
 
-![クラウドストレージ](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-既存のクラウドストレージソースのフォルダが表示されます。 新しいソースのドキュメントを追加するには、 **ファイルを追加** 次に、 **新しいファイルを作成** を選択します。
+既存の CRM ソースのフォルダが表示されます。 新しいソースのドキュメントを追加するには、 **ファイルを追加** 次に、 **新しいファイルを作成** を選択します。
 
 ![create-new-file](../assets/create-new-file.png)
 
-ソースファイルに名前を付ける `YOURSOURCE.md` ここで、YOURSOURCE は、Platform でのソースの名前です。 例えば、会社が [!DNL Mailchimp]の場合、ファイル名は `mailchimp.md`.
+ソースファイルに名前を付ける `YOURSOURCE.md` ここで、YOURSOURCE は、Platform でのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

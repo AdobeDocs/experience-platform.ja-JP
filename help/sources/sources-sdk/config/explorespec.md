@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；ソースコネクタ；ソース sdk;SDK;SDK
-title: ソース SDK の調査仕様の設定
+keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
+title: セルフサービスソース（バッチ SDK）の仕様の設定
 topic-legacy: overview
-description: このドキュメントでは、ソース SDK を使用するために準備が必要な設定の概要を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '258'
+ht-degree: 7%
 
 ---
 
-
-# ソース SDK の調査仕様の設定
+# セルフサービスソース（バッチ SDK）の仕様の設定
 
 エクスプローラ仕様は、ソースに含まれるオブジェクトの調査と検査に必要なパラメータを定義します。 また、エクスプローラの仕様では、オブジェクトの調査と検査時に返される応答形式も定義します。
 
@@ -87,4 +85,4 @@ ht-degree: 2%
 
 ## 次の手順
 
-エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API 詳しくは、 [[!DNL Sources SDK] API ガイド](../api/api-overview.md) を参照してください。
+エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API 詳しくは、 [セルフサービスソース（バッチ SDK）API ガイド](../api/api-overview.md) を参照してください。

@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: フローサービス API（ベータ版）を使用したフロー仕様の更新
+title: フローサービス API を使用してフロー仕様を更新します
 topic-legacy: developer guide
-description: 次のドキュメントでは、ソース SDK 用の Flow Service API を使用して、フロー仕様を取得および更新する手順を説明します。
-hide: true
-hidefromtoc: true
+description: 次のドキュメントでは、セルフサービスソース用フローサービス API（バッチ SDK）を使用してフロー仕様を取得および更新する手順を説明します。
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 22%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# を使用してフロー仕様を更新する [!DNL Flow Service] API（ベータ版）
-
->[!IMPORTANT]
->
->Sources SDK は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。このドキュメントで説明されている機能は変更されることがあります。
+# を使用してフロー仕様を更新する [!DNL Flow Service] API
 
 新しい接続仕様 ID を生成したら、データフローを作成するために、フロー仕様にこの ID を追加する必要があります。
 
 フロー仕様には、フローを定義する情報が含まれます。フローがサポートするソース接続 ID とターゲット接続 ID、データに適用する必要がある変換仕様、フローの生成に必要なスケジューリングパラメータなどです。 フローの仕様は、 `/flowSpecs` endpoint.
 
-次のドキュメントでは、 [!DNL Flow Service] ソース SDK 用の API。
+次のドキュメントでは、 [!DNL Flow Service] セルフサービスソース用の API（バッチ SDK）。
 
 ## はじめに
 
