@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 91%
+source-wordcount: '820'
+ht-degree: 88%
 
 ---
 
@@ -292,23 +292,26 @@ ht-degree: 91%
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
    - [ソースアラートの購読](tutorials/ui/alerts.md)
-- Sources SDK {#sdk}
+- セルフサービスソース（バッチ SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
-   - [設定オプション](sources-sdk/config/config.md)
-   - [認証仕様の設定](sources-sdk/config/authspec.md)
-   - [ソース仕様の設定](sources-sdk/config/sourcespec.md)
-   - [探索仕様の設定](sources-sdk/config/explorespec.md)
-   - [Sources SDK API の概要](sources-sdk/api/api-overview.md)
-   - [はじめに](sources-sdk/api/getting-started.md)
-   - [接続仕様を作成](sources-sdk/api/create.md)
-   - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
-   - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
-   - [ソースの送信](sources-sdk/api/submit.md)
-   - [Adobe Experience Platform でのソースのドキュメント化](sources-sdk/documentation/doc-overview.md)
-   - [GitHub web インターフェイスを使用したソースドキュメントページの作成](sources-sdk/documentation/github.md)
-   - [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](sources-sdk/documentation/text-editor.md)
-   - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
-   - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
+   - 接続仕様を設定する {#config}
+      - [設定オプション](sources-sdk/config/config.md)
+      - [認証仕様の設定](sources-sdk/config/authspec.md)
+      - [ソース仕様の設定](sources-sdk/config/sourcespec.md)
+      - [探索仕様の設定](sources-sdk/config/explorespec.md)
+   - セルフサービスソース（バッチ SDK）API ガイド {#self-serve-api}
+      - [セルフサービスソース（バッチ SDK）API の概要](sources-sdk/api/api-overview.md)
+      - [はじめに](sources-sdk/api/getting-started.md)
+      - [接続仕様を作成](sources-sdk/api/create.md)
+      - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
+      - [フロー仕様の更新](sources-sdk/api/update-flow-specs.md)
+      - [ソースの送信](sources-sdk/api/submit.md)
+   - ドキュメントガイド {#documentation}
+      - [Adobe Experience Platform でのソースのドキュメント化](sources-sdk/documentation/doc-overview.md)
+      - [GitHub web インターフェイスを使用したソースドキュメントページの作成](sources-sdk/documentation/github.md)
+      - [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](sources-sdk/documentation/text-editor.md)
+      - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
+      - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
