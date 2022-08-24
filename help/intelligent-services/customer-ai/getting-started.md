@@ -6,10 +6,10 @@ title: 顧客 AI の概要
 topic-legacy: Getting started
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 71%
+source-wordcount: '650'
+ht-degree: 62%
 
 ---
 
@@ -46,7 +46,13 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。API 呼び出し例のドキュメントで使用される表記について詳しくは、『Experience Platform トラブルシューティングガイド』の [API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。
+
+## 権限
+
+アクセス制御を使用する場合、 **顧客 AI を表示** および **顧客 AI を管理** 権限は顧客 AI の様々な機能へのアクセスを許可します。 この **顧客 AI を管理** 権限を使用して **作成**,**更新**, **削除**, **有効**&#x200B;または **無効** 例 **顧客 AI を表示** を使用して、リストを読み取ったり、表示したりできます。 この **作成**, **更新** および **削除** アクションは監査ログで記録されます。
+
+詳しくは、ドキュメントを参照してください [アクセス制御の権限の割り当て](../../../help/access-control/home.md) または方法 [監査ログを使用して、アクセスとアクティビティを監視する](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 次の手順
 

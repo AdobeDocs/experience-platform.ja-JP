@@ -6,10 +6,10 @@ topic-legacy: Attribution AI
 description: Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。タッチポイントの例としては、ディスプレイ広告インプレッション、E メールの送信、E メールの開封、有料検索のクリックなどがあります。
 landing-page-description: アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 90%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ Attribution AI を使用すると、以下のサンプルユースケースで�
 
 ### その他の機能
 
-Attribution AIは、他のAdobeソリューション ( [!DNL Adobe Analytics]. これにより、これらのソリューションで、カスタマイズ可能なアルゴリズムモデルを利用して、メディアのパフォーマンスを評価したり、分析インサイトを提供したりできます。
+Attribution AIは、他のAdobeソリューション ( [!DNL Customer Journey Analytics]. これにより、これらのソリューションで、カスタマイズ可能なアルゴリズムモデルを利用して、メディアのパフォーマンスを評価したり、分析インサイトを提供したりできます。
 
 ## 次の手順
 

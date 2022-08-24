@@ -6,10 +6,10 @@ title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '3096'
-ht-degree: 16%
+source-wordcount: '3180'
+ht-degree: 15%
 
 ---
 
@@ -283,6 +283,13 @@ Adobe Audience Managerの特性を使用するには、 [Audience Managerソー�
 | 傾向タイプ | 選択された傾向タイプ |
 | スコア日 | スコアリングが発生した日付 |
 | 影響を与える要因 | プロファイルが変換またはチャーンする可能性が高い理由の予測された理由。要素は、次の属性で構成されます。<ul><li>コード：プロファイルの予測スコアにプラスの影響を与えるプロファイルまたは行動属性 </li><li>値：プロファイルまたは行動属性の値</li><li>重要度：予測スコアに対するプロファイルまたは行動属性の重み（低、中、高）</li></ul> |
+
+>[!NOTE]
+>
+> - 顧客 AI は、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこないます。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
+> - 顧客 AI の GDPR コンプライアンスを容易にするために、Adobe Experience Platform Privacy Serviceを使用して、顧客のリクエストに応じて、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータにアクセスし削除するプロトコルを設定できます。
+> - すべてのデータは送信時および保存時に暗号化されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
+
 
 ## 次の手順 {#next-steps}
 

@@ -5,10 +5,10 @@ title: はじめに —Attribution AI
 topic-legacy: Getting started
 description: 以下のガイドでは、Attribution AI の使用に関連する様々な Adobe Experience Platform サービスについて理解している必要があります。このチュートリアルを始める前に、次のドキュメントを確認してください。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 70%
+source-wordcount: '618'
+ht-degree: 61%
 
 ---
 
@@ -50,7 +50,13 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。API 呼び出し例のドキュメントで使用される表記について詳しくは、『Experience Platform トラブルシューティングガイド』の [API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。
+
+## 権限 {#permissions}
+
+ロールベースのアクセス制御を使用する場合、 **表示Attribution AI** および **Attribution AIの管理** 権限は、Attribution AIの様々な機能へのアクセスを許可します。 この **Attribution AIの管理** 次の **作成**, **複製**, **編集**, **削除**, **有効**&#x200B;または **無効** 例 **表示Attribution AI** 次の **読み取り** または **表示** それは。 この **作成**, **編集** および **削除** アクションは監査ログで記録されます。
+
+詳しくは、ドキュメントを参照してください [アクセス制御の権限の割り当て](../../../help/access-control/home.md) または方法 [監査ログを使用して、アクセスとアクティビティを監視する](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 次の手順 {#next-steps}
 
