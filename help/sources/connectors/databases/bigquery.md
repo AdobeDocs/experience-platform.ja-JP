@@ -5,18 +5,14 @@ title: Google BigQuery Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してGoogle BigQuery をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '387'
 ht-degree: 34%
 
 ---
 
-# （ベータ版） [!DNL Google BigQuery] コネクタ
-
->[!NOTE]
->
->この [!DNL Google BigQuery] はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -40,6 +36,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 | `clientID` | クライアント ID は、 [!DNL Google BigQuery] OAuth 2.0 資格情報。 |
 | `clientSecret` | クライアントの秘密は、 [!DNL Google BigQuery] OAuth 2.0 資格情報。 |
 | `refreshToken` | 更新トークンを使用すると、API の新しいアクセストークンを取得できます。 アクセストークンの有効期間は制限され、プロジェクトの期間中に期限切れになる場合があります。 更新トークンを使用して、必要に応じて、プロジェクトの後続のアクセストークンを認証し、リクエストできます。 |
+| `largeResultsDataSetId` | 事前作成済み  [!DNL Google BigQuery] 大きな結果セットのサポートを有効にするために必要なデータセット ID。 |
 
 の OAuth 2.0 資格情報の生成方法に関する詳細な手順 [!DNL Google] API については、以下を参照してください。 [[!DNL Google] OAuth 2.0 認証ガイド](https://developers.google.com/identity/protocols/oauth2).
 

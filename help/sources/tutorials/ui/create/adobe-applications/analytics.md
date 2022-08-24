@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 69%
+source-wordcount: '2211'
+ht-degree: 66%
 
 ---
 
 # UI での Adobe Analytics ソースコネクタの作成
 
-このチュートリアルでは、[!DNL Analytics] レポートスイートのデータを Adobe Experience Platform に取り込むために、UI で Adobe Analytics のソース接続を作成する手順を説明します。
+このチュートリアルでは、UI でAdobe Analyticsソース接続を作成してAdobe AnalyticsレポートスイートデータをAdobe Experience Platformに取り込む手順を説明します。
 
 ## はじめに
 
-このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [エクスペリエンスデータモデル（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワーク。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムのプロファイルを顧客に提供します。
@@ -30,7 +30,7 @@ ht-degree: 69%
 このドキュメントで使用される以下の主な用語を理解することが重要です。
 
 * **標準属性**：標準属性は、アドビで事前定義された任意の属性です。 これらはすべての顧客に対して同じ意味を持ち、[!DNL Analytics] ソースデータと [!DNL Analytics] スキーマフィールドグループで利用可能です。
-* **カスタム属性**：カスタム属性とは、[!DNL Analytics] のカスタム変数階層にある任意の属性のことです。カスタム属性は、Adobe Analytics の実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVars の詳細については、以下の[[!DNL Analytics] コンバージョン変数に関するドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja)を参照してください。
+* **カスタム属性**：カスタム属性とは、[!DNL Analytics] のカスタム変数階層にある任意の属性のことです。カスタム属性は、Adobe Analytics実装内で特定の情報をレポートスイートに取り込むために使用され、レポートスイートごとに使用方法が異なる場合があります。 カスタム属性には、eVar、prop およびリストが含まれます。eVars の詳細については、以下の[[!DNL Analytics] コンバージョン変数に関するドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ja)を参照してください。
 * **カスタムフィールドグループ内の任意の属性**：顧客が作成したフィールドグループから派生する属性はすべてユーザー定義であり、標準属性でもカスタム属性でもないとみなされます。
 * **フレンドリ名**：フレンドリ名は、[!DNL Analytics] 実装のカスタム変数用に、人間がつけたラベルです。フレンドリ名の詳細については、以下の[[!DNL Analytics] コンバージョン変数に関するドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)を参照してください。
 
@@ -48,13 +48,17 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL ソース
 
 この **[!UICONTROL Analytics ソースデータの追加]** 手順に従って、 [!DNL Analytics] ソース接続を作成するレポートスイートデータ。
 
-レポートスイートは、1 つのアクティブなデータフローのみを使用して取り込むことができます。 複数のデータフローで使用することはできません。 さらに、レポートスイートは、ソース接続が作成される Platform サンドボックスインスタンスと同じ地域に属している必要があります。 選択できないレポートスイートは、このサンドボックスまたは別のサンドボックスで既に取り込まれています。
+レポートスイートは、 [!DNL Analytics] レポート。 組織は、様々なデータセットを含む多数のレポートスイートを持つことができます。
+
+ソース接続が作成されているExperience Platformサンドボックスインスタンスと同じ組織にマッピングされている限り、任意の地域（米国、英国、シンガポール）からレポートスイートを取り込むことができます。 レポートスイートは、1 つのアクティブなデータフローのみを使用して取り込むことができます。 選択できないレポートスイートは、使用しているサンドボックスまたは別のサンドボックスで、既に取り込まれています。
 
 複数のインバウンド接続を作成して、複数のレポートスイートを同じサンドボックスに取り込むことができます。 レポートスイートの変数（eVar やイベントなど）のスキーマが異なる場合は、カスタムフィールドグループの特定のフィールドにマッピングし、 [データ準備](../../../../../data-prep/ui/mapping.md). レポートスイートは 1 つのサンドボックスにのみ追加できます。
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->複数のレポートスイートのデータをリアルタイム顧客データプロファイルに対して有効にできるのは、意味が異なる 2 つのカスタムプロパティ（eVar、リスト、prop）などのデータの競合がなく、XDM で同じ属性にマッピングできない場合のみです。
+>複数のレポートスイートのデータをリアルタイム顧客データプロファイルに対して有効にできるのは、意味が異なる 2 つのカスタムプロパティ（eVar、リストおよび prop）など、データの競合がない場合のみです。
 
 次の手順で [!DNL Analytics] ソース接続を選択し、レポートスイートを選択して、 **[!UICONTROL 次へ]** をクリックして続行します。
 
