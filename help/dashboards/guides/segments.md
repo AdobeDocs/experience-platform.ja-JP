@@ -4,10 +4,10 @@ title: セグメントダッシュボードガイド
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 11%
+source-wordcount: '1665'
+ht-degree: 10%
 
 ---
 
@@ -75,6 +75,7 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 * [[!UICONTROL オーディエンスの重複]](#audience-overlap)
 * [[!UICONTROL ID の重複]](#identity-overlap)
 * [[!UICONTROL ID 別プロファイル]](#profiles-by-identity)
+* [[!UICONTROL 予定されているアクティベーション]](#scheduled-activations)
 
 ### [!UICONTROL オーディエンスサイズ] {#audience-size}
 
@@ -176,6 +177,14 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 機械学習モデルは、データの全体的な分布と主要なディメンションを分析することで、データインサイトを自動的に生成します。
 
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
+
+### 予定されているアクティベーション {#scheduled-activations}
+
+この [!UICONTROL 予定されているアクティベーション] ウィジェットは、最近アクティブ化された宛先を表形式で表示します。 この表には、宛先プラットフォーム、この宛先へのアクティベーションフローの名前、選択したセグメントのアクティベーション開始日と終了日が含まれます。 アクティベーションの終了日が指定されていない場合は、「 」と表示されます。 [!UICONTROL 進行中]. 分析用のセグメントは、ページ上部のドロップダウンから選択します。
+
+ウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透明にすることができます。 この累積情報は、アクティベーションが中断された場所も示します。
+
+![スケジュールされたアクティベーションウィジェット。](../images/segments/scheduled-activations.png)
 
 ## 次の手順
 
