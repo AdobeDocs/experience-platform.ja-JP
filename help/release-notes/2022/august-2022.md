@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 8 月
 description: Adobe Experience Platformの 2022 年 8 月リリースノート。
-source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
+source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 43%
+source-wordcount: '1348'
+ht-degree: 41%
 
 ---
 
@@ -14,11 +14,24 @@ ht-degree: 43%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Dashboards]](#dashboards)
 - [データ準備](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [リアルタイム顧客プロファイル](#profile)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットでキャプチャされた、組織のデータに関する重要なインサイトを表示できます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| スケジュールされたアクティベーションウィジェット | この [!UICONTROL 予定されているアクティベーション] ウィジェットは、最近アクティブ化された宛先を表形式で表示します。 セグメントごとに、名前、宛先プラットフォーム、アクティベーションの開始日と終了日が含まれます。 このウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透明にすることができます。 この累積情報は、アクティベーションが中断された場所も示します。 |
+
+[!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
