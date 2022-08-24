@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 8 月
 description: Adobe Experience Platformの 2022 年 8 月リリースノート。
-source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
+source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
 workflow-type: tm+mt
-source-wordcount: '1348'
-ht-degree: 41%
+source-wordcount: '1861'
+ht-degree: 36%
 
 ---
 
@@ -14,12 +14,50 @@ ht-degree: 41%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [データ準備](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [リアルタイム顧客プロファイル](#profile)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML サービスは、マーケティングアナリストや従事者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに特化したモデルを設定できます。
+
+### アトリビューション AI
+
+アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プライバシーのサポート | <li> Attribution AIは、ユーザーの役割の定義と、管理するアクセスポリシーの定義をサポートするようになりました。 [権限](../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li> <li> ～ [属性ベースのアクセス制御](../../access-control/abac/overview.md)管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加できます。管理者は、これらのフィールドに対応する特定のフィールドやデータにのみアクセスできるユーザーの役割を定義できます。</li> <li>[データの衛生状態](../../help/hygiene/home.md) Attribution AI内の機能では、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこなうことができます。 同様に、Attribution AIの削除をリクエストした場合、データは削除されたデータを使用しなくなります。</li><li>Attribution AIは Platform データセットを活用します。 GDPR への準拠を容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセスおよび削除要求に従うプロトコルを設定できます。 すべてのデータは送信時および保存時に暗号化されます。</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**注意**:Attribution AIは、2022 年第 4 四半期まで、Healthcare Shield のお客様にはご利用いただけません。
+
+Attribution AIの詳細については、 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概要。
+
+### 顧客 AI
+
+Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プライバシーのサポート | <li> 顧客 AI で、管理するユーザーの役割とアクセスポリシーの定義がサポートされるようになりました [権限](../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li> <li> ～ [属性ベースのアクセス制御](../../access-control/abac/overview.md)の管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、ラベルなど、オブジェクトに追加されるメタデータにすることができます。 また、管理者は、特定のフィールドおよびそれらのフィールドに対応するデータのみにアクセスできるユーザーの役割を定義できます。</li> <li>[データの衛生状態](../../help/hygiene/home.md) 顧客 AI 内のの機能では、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこなうことができます。 同様に、データの削除をリクエストした場合、顧客 AI は削除されたデータを使用しません。</li><li>顧客 AI は Platform データセットを活用します。 GDPR への準拠を容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセスおよび削除要求に従うプロトコルを設定できます。 すべてのデータは送信時および保存時に暗号化されます。</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**注意**:2022 年第 4 四半期まで、Healthcare Shield のお客様は、お客様の AI をご利用いただけません。
+
+顧客 AI について詳しくは、 [顧客 AI](../../intelligent-services/customer-ai/overview.md) 概要。
 
 ## [!DNL Dashboards] {#dashboards}
 

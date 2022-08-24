@@ -2,88 +2,74 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
+source-git-commit: 0e23475fd120858b59794742860b7afececfece2
 workflow-type: tm+mt
-source-wordcount: '2436'
-ht-degree: 95%
+source-wordcount: '1860'
+ht-degree: 36%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年7月27日（PT）**
+**リリース日：2022年8月24日**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [ダッシュボード](#dashboards)
-- [データ収集](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [[!DNL Dashboards]](#dashboards)
+- [データ準備](#data-prep)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
-- [Real-time Customer Data Platform B2B エディション](#b2b)
 - [リアルタイム顧客プロファイル](#profile)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
-## ダッシュボード {#dashboards}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-Adobe Experience Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数の [!DNL dashboards] を提供しています。
+AI/ML サービスは、マーケティングアナリストや従事者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに特化したモデルを設定できます。
 
-### アカウントプロファイルダッシュボード
+### アトリビューション AI
 
-アカウントプロファイルダッシュボードには、マーケティングチャネル全体の複数のソースおよび顧客アカウント情報の保存に現在使用されている様々なシステムからの統合アカウント情報のスナップショットが表示されます。
+アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プライバシーのサポート | <li>Attribution AIは、ユーザーの役割の定義と、管理するアクセスポリシーの定義をサポートするようになりました。 [権限](../../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。</li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li>～ [属性ベースのアクセス制御](../../../help/access-control/abac/overview.md)管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加できます。管理者は、これらのフィールドに対応する特定のフィールドやデータにのみアクセスできるユーザーの役割を定義できます。</li><li>[データの衛生状態](../../../help/hygiene/home.md) Attribution AI内の機能では、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこなうことができます。 同様に、Attribution AIの削除をリクエストした場合、データは削除されたデータを使用しなくなります。</li><li>Attribution AIは Platform データセットを活用します。 GDPR への準拠を容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセスおよび削除要求に従うプロトコルを設定できます。 すべてのデータは送信時および保存時に暗号化されます。</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**注意**:Attribution AIは、2022 年第 4 四半期まで、Healthcare Shield のお客様にはご利用いただけません。
+
+Attribution AIの詳細については、 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概要。
+
+### 顧客 AI
+
+Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プライバシーのサポート | <li>顧客 AI で、管理するユーザーの役割とアクセスポリシーの定義がサポートされるようになりました [権限](../../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。</li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> ～ [属性ベースのアクセス制御](../../access-control/abac/overview.md)の管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、ラベルなど、オブジェクトに追加されるメタデータにすることができます。 また、管理者は、特定のフィールドおよびそれらのフィールドに対応するデータのみにアクセスできるユーザーの役割を定義できます。</li><li>[データの衛生状態](../../../help/hygiene/home.md) 顧客 AI 内のの機能では、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこなうことができます。 同様に、データの削除をリクエストした場合、顧客 AI は削除されたデータを使用しません。</li><li>顧客 AI は Platform データセットを活用します。 GDPR への準拠を容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセスおよび削除要求に従うプロトコルを設定できます。 すべてのデータは送信時および保存時に暗号化されます。</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**注意**:2022 年第 4 四半期まで、Healthcare Shield のお客様は、お客様の AI をご利用いただけません。
+
+顧客 AI について詳しくは、 [顧客 AI](../../intelligent-services/customer-ai/overview.md) 概要。
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットでキャプチャされた、組織のデータに関する重要なインサイトを表示できます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 業界ウィジェット別のアカウント総数 | このウィジェットは、アカウントの合計数を 1 つの指標で表示し、ドーナツグラフを使用して、全体の数に占める各業種の割合を、数に比例したサイズで示します。 |
-| アカウントプロファイル追加ウィジェット | このウィジェットは、色分けされた棒グラフを使用して、特定の期間にアカウントに追加されたプロファイルの数と、追加されたプロファイルを構成する様々な業界の割合を示します。 |
+| スケジュールされたアクティベーションウィジェット | この [!UICONTROL 予定されているアクティベーション] ウィジェットは、最近アクティブ化された宛先を表形式で表示します。 セグメントごとに、名前、宛先プラットフォーム、アクティベーションの開始日と終了日が含まれます。 このウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透明にすることができます。 この累積情報は、アクティベーションが中断された場所も示します。 |
 
-{style=&quot;table-layout:auto&quot;}
-
-利用可能な B2B 機能の詳細については、[Real-Time CDP、B2B エディションの概要](../../rtcdp/b2b-overview.md)、または B2B ワークフローの一部としてアカウントプロファイルを作成する方法の詳細については、[エンドツーエンドのチュートリアル](../../rtcdp/b2b-tutorial.md)を参照してください。
-
-アカウントプロファイル関連指標を視覚化するために使用できるウィジェットについて詳しくは、[アカウントプロファイルウィジェットのドキュメント](../../dashboards/guides/account-profiles.md#standard-widgets)を参照してください。
-
-### プロファイルダッシュボード
-
-プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| マッピングされたオーディエンスウィジェット | このウィジェットには、プロファイルダッシュボードのドロップダウンで選択した宛先に対してアクティブ化できる、マッピングされたオーディエンスの合計数が表示されます。 |
-
-プロファイルダッシュボードについて詳しくは、[プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md)を参照してください。
-
-### 宛先ダッシュボード
-
-宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| オーディエンスウィジェット | このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができているセグメントの合計数を提供します。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-宛先ダッシュボードについて詳しくは、[宛先ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
-
-## データ収集 {#collection}
-
-Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| Adobe Admin Console による権限管理 | データ収集機能へのアクセスは、Adobe Experience Platform データ収集用カードの Adobe Admin Console で管理されるようになりました。 詳しくは、[データ収集の権限](../../collection/permissions.md)に関するガイドを参照してください。<br><br>また、データストリームの権限も、Adobe Experience Platform のカードの下の Admin Console で管理できるようになり、各ユーザーに対してこれらの権限を手動で設定する以前の方法よりもセキュリティが向上しています。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-詳しくは、「[データ収集の概要](../../collection/home.md)」を参照してください。
+[!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -93,94 +79,43 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Data Prep] レコメンデーションに対する機能強化 | [!DNL Data Prep] レコメンデーションが、より賢く、より高速になりました。新しい検証チェックにより、最も一般的なマッピングエラーを大幅に削減し、価値創出までの時間をさらに短縮します。 |
-| ストリーミングアップセットの階層サポート | アップサートをプロファイルにストリーミングする際に、関数 `upsert_array_append` および `upsert_array_replace` を使用して配列とオブジェクトを更新できるようになりました。詳しくは、[[!DNL Data Prep] マッピング関数ガイド](../../data-prep/functions.md)を参照してください。 |
+| 警告を含むレコードの取り込みのサポート | Data Prep は、警告（重要でないエラー）をフィールドにローカライズし、残りの行を取り込めるようになりました。 すべてのマッパー変換エラーが、警告と共に、部分的に取り込まれた行が成功したと見なされ、警告と共にレポートされるようになりました。  監視は、警告および診断の詳細を含むレコードに対してもサポートされます。 警告を含むレコードの部分取り込みは、現在、データのストリーミングでのみ使用できます。 次のドキュメントを確認します。 [警告を含むレコードの取り込み](../../sources/tutorials/ui/monitor-streaming.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 [!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| ----------- | ----------- |
-| [今すぐファイルを書き出す（ベータ版）](../../destinations/ui/export-file-now.md) | 以前にスケジュールされたセグメントの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出します。 この書き出しは、以前にスケジュールされた書き出しに加えて行われ、セグメントの書き出し頻度は変更されません。 <br> ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。<br> <br>この機能へのアクセス権については、アドビ担当者にお問い合わせください。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-**新しい宛先**
-
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Marketo Engage の宛先を更新すると、自動化を使用して静的リストの作成プロセスを合理化し、ユーザーがリードに追加のフィールドを取り込めるようになります。 以下の Marketo V2 の機能強化の詳細を参照してください。<br><ul><li>Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL セグメントをスケジュール]**&#x200B;手順で、**マッピング ID** を手動で追加して、Marketo にデータを正常に書き出す必要がありました。この手動の手順は、Marketo V2 では不要になりました。</li><li>Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL マッピング]**&#x200B;手順で、XDM フィールドを Marketo の 3 つのターゲットフィールド（`firstName`、`lastName`、および `companyName`）にのみマッピングできました。  Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、[Marketo V2 でサポートされる属性](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes)をご覧ください。  </li></ul> |
-| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md) | Pega Customer Decision Hub の Adobe Experience Platform のプロファイル属性とセグメントメンバーシップ情報を適応モデルの予測因子として使用し、次善のアクションの意思決定に役立てます。 |
-| [（API）Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | この宛先を使用すると、マーケターは、Experience Platform で作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。 |
-| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Experience Platform のプロファイルとセグメント情報を使用して、Salesforce Marketing Cloud の連絡先情報を更新する |
-| [（ベータ版） [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | この宛先を使用すると、マーケターは、Experience Platform で作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。 <br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
-| [（ベータ版） [!DNL Trade Desk] - CRM 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | [!DNL The Trade Desk] CRM 宛先を使用して、CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを [!DNL Trade Desk] アカウントにアクティベートします。<br><br>この宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
-
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
 XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
 
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| 医療業界のデータモデル | 標準的な医療データモデルを導入し、デジタル獲得の増加、プログラム登録の向上、薬剤情報の促進に関連する 5 つの一般的な業界ユースケースをサポートします。 これらの使用例とそれらをサポートする標準 XDM コンポーネントの詳細については、[医療データモデル](../../xdm/schema/industries/healthcare.md)の概要を参照してください。<br><br>[!UICONTROL スキーマ] UI に新しい業界フィルターが追加され、カスタムスキーマを構築するときに医療関連のコンポーネントを参照できるようになりました。 |
-
-{style=&quot;table-layout:auto&quot;}
-
 **新しい XDM コンポーネント**
-
->[!WARNING]
->
->次の表に示す新しい XDM コンポーネントは、試行用で、現在テスト中です。 これらのコンポーネントは、安定化するまで、（必要に応じて）大幅な変更で更新されることが予想されます。 それに応じて開発作業を計画してください。
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL 天気]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | 気象データのキャプチャに使用されるレコードベースのクラス。 |
-| フィールドグループ | [[!UICONTROL 現在の天気]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | [!UICONTROL XDM ExperienceEvent] および[!UICONTROL 天気]クラスのフィールドグループで、郵便番号の現在の気象条件をキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL 予測された天気]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | [!UICONTROL XDM ExperienceEvent] および[!UICONTROL 天気]クラスのフィールドグループで、 郵便番号の予測気象条件をキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL 製品トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | [!UICONTROL XDM ExperienceEvent] および[!UICONTROL 天気]クラスのフィールドグループで、消費者の行動を促すという既知の気象条件を活用する、製品固有のトリガーをキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL 相対トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | [!UICONTROL XDM ExperienceEvent] および[!UICONTROL 天気]クラスのフィールドグループで、消費者の行動を促すという既知の気象条件を活用する、相対トリガーをキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL 重大なトリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | [!UICONTROL XDM ExperienceEvent] および[!UICONTROL 天気]クラスのフィールドグループ。消費者の行動を促すことがわかっている厳しい気象条件を活用するトリガーをキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL 気象トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | [!UICONTROL XDM ExperienceEvent] および [!UICONTROL 天気]クラスのフィールドグループ。消費者の行動を促すことがわかっている既知の気象条件を活用する一、般的なトリガーをキャプチャするために使用します。 |
-| フィールドグループ | [[!UICONTROL MediaCollection インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | メディアインタラクションに関する詳細をキャプチャする [!UICONTROL XDM ExperienceEvent] クラスのフィールドグループ。 |
-| フィールドグループ | [[!UICONTROL MediaReporting インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | [!UICONTROL XDM ExperienceEvent] クラスのフィールドグループで、メディアレポートとのインタラクションに関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | 広告アセットに関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL 広告ポッドの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | 単一の広告ブレーク内で連続再生される複数の広告のシーケンスである、広告ポッドに関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL チャプターの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | ビデオコンテンツのチャプターまたはセグメントに関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | ビデオ再生エラーに関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL プレーヤーイベントの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | 再生ヘッドの位置やセッション ID など、ビデオプレーヤーに関するイベント関連の詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL プレーヤーの状態データ情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | ビデオプレーヤーの状態に関する詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | ビデオ再生イベントに関する品質エクスペリエンス（QoE）の詳細をキャプチャします。 |
-| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | ビデオ再生イベントに関するセッションの詳細をキャプチャします。 |
+| グローバルスキーマ | [[!UICONTROL AJO エンティティスキーマ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizerの非正規化エンティティを表します。 |
+| クラス | [[!UICONTROL AJO 実行エンティティ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | セグメント化で使用するAdobe Journey Optimizer実行エンティティを表します。 |
+| フィールドグループ | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfrontのすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | [[!UICONTROL Journey Orchestrationステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 2 つの新しいプロパティが追加されました。 `origTimeStamp` および `experienceID`. |
+| フィールドグループ | [[!UICONTROL セグメントメンバーシップの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | に加えて [!UICONTROL XDM 個人プロファイル]の場合、このフィールドグループは、XDM ビジネスアカウントクラスに基づくスキーマでも使用できるようになりました。 |
+| フィールドグループ | （複数） | Marketo B2B アクティビティに関連するいくつかのフィールドグループが、安定したステータスに更新されました。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1593/files) 」を参照してください。 |
+| フィールドグループ | （複数） | 発生していたエラーを修正するために、複数の天気関連フィールドグループが更新されました。 `uvIndex` および `sunsetTime`. 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1602/files) 」を参照してください。 |
+| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 新しいプロパティ `productImageUrl` が追加されました。 |
+| データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新しいプロパティ `framesPerSecond` が追加されました。 |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` の名前は `appVersion` に変更されました。`meta:enum` および `description` フィールドも更新されました。 |
+| データタイプとフィールドグループ | （複数） | 複数のメディアデータタイプとフィールドグループに、新しいフィールドと説明が更新されました。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1582/files) 」を参照してください。 |
+| (すべて) | （複数） | を含むすべてのスキーマオブジェクト `enum` フィールドに、対応する `meta:enum` 各制約の表示値を示すフィールド。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1601/files) 」を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
-
-## Real-time Customer Data Platform B2B エディション {#b2b}
-
-Real-time Customer Data Platform（Real-time CDP）上に構築された Real-time CDP B2B Edition は、B2B サービスを行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| リードとアカウントのマッチング | リードとアカウントのマッチングにより、既知のユーザープロファイルをアカウントプロファイルに結合できます。次に、アカウントやオポチュニティなどの B2B コンテキストでデータをセグメント化し、ターゲットに設定できます。 毎日実行されるジョブでは、決定論的要因と確率論的要因の両方を使用して、どのアカウントにもまだ関連付けられていないユーザープロファイルを、最も一致するアカウントに一致させます。 その後、セグメント定義にそのような一致を含めるかどうかを決定できます。<br><br>詳しくは、[リードとアカウントのマッチング](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)のドキュメントを参照してください。リードとアカウントのマッチングの設定方法については、[アカウントプロファイル UI ガイド](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching)を参照してください。</li> |
-| 予測リードとアカウントスコアリング | 予測リードとアカウントスコアリングでは、ツリーベースの（ランダムフォレスト/グラデーションブースト）機械学習手法を使用します。この手法では、オポチュニティステージのコンバージョンイベントの学習と予測、アカウントレベルでの個人アクティビティの集計が行われます。 また、最も影響力のある要因は、集計と単位レベルの両方で利用でき、B2B マーケターがスコアの原因となった要素をより深く理解できるようになります。 <br><br>詳しくは、 [予測リードとアカウントスコアリング](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). スコアの管理方法について詳しくは、 [Real-time Customer Data Platform, B2B Edition での予測リードとアカウントスコアリングの管理](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
-
-プロファイルエンリッチメントの監視方法については、[UI でのプロファイルエンリッチメントの監視](../../dataflows/ui/b2b/monitor-profile-enrichment.md)を参照してください。Real-Time CDP B2B Edition について詳しくは、[Real-time Customer Data Platform の概要](../../rtcdp/overview.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -188,11 +123,23 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 孤立したプロファイルエッジ属性のクリーンアップ（限定リリース） | 組織がこの機能にアクセスできる場合、プロファイルサービスは、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表示できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、`com_adobe_aep_profile_region_dataset` が true とマークされているデータセットから結合されるプロファイルに影響を与えます。このリリース以前の残りのエッジ属性フラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
+| 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスが、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表現できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、が存在するデータセットから結合されるプロファイルに影響を与えます `com_adobe_aep_profile_region_dataset` は `true`. このリリース以前の残りのエッジ属性フラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 4000 セグメントのサポート | Platform を持つすべての組織は、最大 4,000 個のセグメント定義をサポートできるようになりました。 この変更がセグメントジョブ API に与える影響について詳しくは、 [セグメントジョブエンドポイントガイド](../../segmentation/api/segment-jobs.md) |
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
@@ -204,9 +151,11 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Azure Data Explorer] ソースの一般提供 | Azure Data Explorer ソースを使用して、[!DNL Azure] インスタンスから Experience Platform にデータを取り込みます。詳しくは、[[!DNL Azure Data Explorer] ソースの概要](../../sources/connectors/databases/data-explorer.md)を参照してください。 |
-| [!DNL Generic OData] ソースの一般提供 | [!DNL Generic OData] ソースを使用して、オープンデータプロトコルをサポートするシステムから Experience Platform にリソースを取り込みます。 詳しくは、[[!DNL Generic OData] ソースの概要](../../sources/connectors/protocols/odata.md)を参照してください。 |
-| Experience Platform UI での [!DNL Data Landing Zone] のソースファイルプロパティの自動検出のサポート | [!DNL Data Landing Zone] ソースは、Experience Platform UI 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
+| セルフサービスソース（バッチ SDK）の一般リリース | REST API ベースのデータソースを開発、テスト、統合し、簡単にソース仕様を設定できる方法で、バッチデータをExperience Platformに取り込みます。 ソース SDK を使用すると、次のことができます。 <ul><li>新しいソースをExperience Platformカタログに設定します。</li><li>サポートされる認証タイプ、スケジュール、リソースデータの取得方法など、ソースの仕様を定義します。</li><li>新しいソースに関するユーザー向けドキュメントを作成します。</li></ul> 詳しくは、 [セルフサービスソース（バッチ SDK）](../../sources/sources-sdk/overview.md). |
+| [!DNL Google BigQuery] ソースの一般提供 | 以下を使用： [!DNL Google BigQuery] データを取り込むソース [!DNL Google BigQuery] data warehouse からExperience Platformへ。 詳しくは、 [[!DNL Google BigQuery] ソース](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] ソース（ベータ版） | 以下を使用： [!DNL Teradata Vantage] ハイブリッドマルチクラウド環境からExperience Platformにデータを取り込むソース。 詳しくは、 [[!DNL Teradata Vantage] ソース](../../sources/connectors/databases/teradata-vantage.md). |
+| Adobe Analyticsソースのクロスリージョンサポート | 任意の地域（米国、英国、シンガポール）からレポートスイートを取り込めるようになりました。 レポートスイートは、ソース接続が作成されるExperience Platformサンドボックスインスタンスと同じ組織にマッピングする必要があります。 詳しくは、 [UI でのAdobe Analyticsソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| オンデマンド取り込み用の API のサポート | オンデマンド取り込みを使用して、 [!DNL Flow Service] API 作成されたフロー実行は、1 回の取り込みに設定する必要があります。 詳しくは、 [API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
