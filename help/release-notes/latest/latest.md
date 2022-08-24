@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0e23475fd120858b59794742860b7afececfece2
+source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 36%
+source-wordcount: '1810'
+ht-degree: 35%
 
 ---
 
@@ -123,7 +123,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスが、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表現できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、が存在するデータセットから結合されるプロファイルに影響を与えます `com_adobe_aep_profile_region_dataset` は `true`. このリリース以前の残りのエッジ属性フラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
+| 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスが、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表現できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、が存在するデータセットから結合されるプロファイルに影響を与えます `com_adobe_aep_profile_region_dataset` は `true`. このリリース以前の残りのエッジ属性フラグメントがこれらの指標に含まれていたので、ライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標にドロップが表示されたり、プロファイルダッシュボードの「プロファイル数」指標にドロップが表示されたりします。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -155,7 +155,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | [!DNL Google BigQuery] ソースの一般提供 | 以下を使用： [!DNL Google BigQuery] データを取り込むソース [!DNL Google BigQuery] data warehouse からExperience Platformへ。 詳しくは、 [[!DNL Google BigQuery] ソース](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] ソース（ベータ版） | 以下を使用： [!DNL Teradata Vantage] ハイブリッドマルチクラウド環境からExperience Platformにデータを取り込むソース。 詳しくは、 [[!DNL Teradata Vantage] ソース](../../sources/connectors/databases/teradata-vantage.md). |
 | Adobe Analyticsソースのクロスリージョンサポート | 任意の地域（米国、英国、シンガポール）からレポートスイートを取り込めるようになりました。 レポートスイートは、ソース接続が作成されるExperience Platformサンドボックスインスタンスと同じ組織にマッピングする必要があります。 詳しくは、 [UI でのAdobe Analyticsソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| オンデマンド取り込み用の API のサポート | オンデマンド取り込みを使用して、 [!DNL Flow Service] API 作成されたフロー実行は、1 回の取り込みに設定する必要があります。 詳しくは、 [API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
