@@ -5,10 +5,10 @@ title: 'API を使用したエッジのセグメント化 '
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 6%
+source-wordcount: '1098'
+ht-degree: 5%
 
 ---
 
@@ -42,19 +42,22 @@ ht-degree: 6%
 
 エッジセグメント化を使用してセグメントを評価するには、クエリを次のガイドラインに従う必要があります。
 
-| クエリタイプ | 詳細 | 例 |
-| ---------- | ------- | ------- |
-| 単一イベント | 時間制限のない単一の受信イベントを参照するセグメント定義。 | 買い物かごに項目を追加した担当者。 |
-| プロファイルを参照する単一イベント | 時間制限のない 1 つ以上のプロファイル属性と 1 つの受信イベントを参照するセグメント定義。 | ホームページを訪問した米国在住の人。 |
-| プロファイル属性を持つ否定された単一イベント | 否定された単一の受信イベントと 1 つ以上のプロファイル属性を参照するセグメント定義 | 米国に住み、 **not** ホームページにアクセスしました。 |
-| 24 時間以内の単一イベント | 24 時間以内の単一の受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した人。 |
-| 24 時間以内のプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性と 24 時間以内の 1 つの受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した米国に住む人。 |
-| 24 時間以内のプロファイル属性を持つ、無効化された単一イベント | 1 つ以上のプロファイル属性と、24 時間以内の無効にされた単一の受信イベントを参照するセグメント定義。 | 米国に住み、 **not** 過去 24 時間にホームページにアクセスした。 |
-| 24 時間以内の頻度イベント | 24 時間の期間内に特定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した人 **少なくとも** 過去 24 時間で 5 回 |
-| 24 時間の時間枠内にプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に一定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **少なくとも** 過去 24 時間で 5 回 |
-| 24 時間以内のプロファイルを含む無効な頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に特定の回数だけ発生する無効なイベントを参照するセグメント定義。 | ホームページを訪問していない人 **詳細** 過去 24 時間で 5 回以上 |
-| 24 時間以内に複数の受信ヒット | 24 時間以内に発生した複数のイベントを参照するセグメント定義。 | ホームページを訪問した人 **または** 過去 24 時間以内にチェックアウトページにアクセスしました。 |
-| 24 時間の期間内にプロファイルを持つ複数のイベント | 24 時間以内に発生する 1 つ以上のプロファイル属性と複数のイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **および** 過去 24 時間以内にチェックアウトページにアクセスしました。 |
+| クエリタイプ | 詳細 | 例 | PQL の例 |
+| ---------- | ------- | ------- | ----------- |
+| 単一イベント | 時間制限のない単一の受信イベントを参照するセグメント定義。 | 買い物かごに項目を追加した担当者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 単一のプロファイル | 単一のプロファイルのみの属性を参照するセグメント定義 | 米国に住む人々。 | `homeAddress.countryCode = "US"` |
+| プロファイルを参照する単一イベント | 時間制限のない 1 つ以上のプロファイル属性と 1 つの受信イベントを参照するセグメント定義。 | ホームページを訪問した米国在住の人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| プロファイル属性を持つ否定された単一イベント | 否定された単一の受信イベントと 1 つ以上のプロファイル属性を参照するセグメント定義 | 米国に住み、 **not** ホームページにアクセスしました。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| 1 つの時間枠内の単一イベント | 設定された期間内の単一の受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 時間枠内のプロファイル属性を持つ単一イベント | 1 つ以上のプロファイル属性と、設定された期間内の単一の受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した米国に住む人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 時間枠内のプロファイル属性を持つ 1 つのイベントを無効化 | 1 つ以上のプロファイル属性と、一定期間内の無効な単一の受信イベントを参照するセグメント定義。 | 米国に住み、 **not** 過去 24 時間にホームページにアクセスした。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 24 時間以内の頻度イベント | 24 時間の期間内に特定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した人 **少なくとも** 過去 24 時間で 5 回 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 24 時間の時間枠内にプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に一定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **少なくとも** 過去 24 時間で 5 回 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 24 時間以内のプロファイルを含む無効な頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に特定の回数だけ発生する無効なイベントを参照するセグメント定義。 | ホームページを訪問していない人 **詳細** 過去 24 時間で 5 回以上 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| 24 時間以内に複数の受信ヒット | 24 時間以内に発生した複数のイベントを参照するセグメント定義。 | ホームページを訪問した人 **または** 過去 24 時間以内にチェックアウトページにアクセスしました。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 24 時間の期間内にプロファイルを持つ複数のイベント | 24 時間以内に発生する 1 つ以上のプロファイル属性と複数のイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **および** 過去 24 時間以内にチェックアウトページにアクセスしました。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国に住んでいて、セグメント「既存のセグメント」に属している人。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加した人。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 また、 **必須** エッジ上でアクティブな結合ポリシーに結び付けられている。 結合ポリシーの詳細については、 [結合ポリシーガイド](../../profile/api/merge-policies.md).
 
