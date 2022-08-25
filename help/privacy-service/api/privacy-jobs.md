@@ -5,10 +5,10 @@ title: プライバシージョブ API エンドポイント
 topic-legacy: developer guide
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 68%
+source-wordcount: '1429'
+ht-degree: 65%
 
 ---
 
@@ -143,10 +143,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -159,6 +160,7 @@ curl -X POST \
 | `expandIDs` | に設定した場合のオプションのプロパティです。 `true`は、アプリケーションで ID を処理するための最適化を表します ( 現在、は [!DNL Analytics]) をクリックします。 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
+| `mergePolicyId` | リアルタイム顧客プロファイル (`profileService`) を使用する場合は、必要に応じて特定の [結合ポリシー](../../profile/merge-policies/overview.md) ID ステッチに使用する 結合ポリシーを指定すると、プライバシーリクエストには、顧客のデータを返す際にセグメント情報を含めることができます。 1 回のリクエストにつき、1 つの結合ポリシーのみ指定できます。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
 | `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`gdpr` （欧州連合）</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` (ブラジル)</li><li>`nzpa_nzl` (ニュージーランド)</li><li>`pdpa_tha` (タイ)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
