@@ -5,9 +5,9 @@ title: Attribution AIUI ガイド
 topic-legacy: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2705'
 ht-degree: 37%
 
 ---
@@ -262,7 +262,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![設定完了](./images/user-guide/instance_setup_complete.png)
 
-### 属性ベースのアクセス制御
+## 属性ベースのアクセス制御
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 Attribution AIワークスペースの上部 **インサイトページ**&#x200B;の場合、サイドバーに表示される詳細はアクセスが制限されています。
 
-![スキーマの制限されたフィールドが強調表示されたAttribution AIワークスペース。](./images/user-guide/access-restricted.png)
+![制限されたAttribution AIフィールドが強調表示されたスキーマワークスペース。](./images/user-guide/access-restricted.png)
 
 で制限されたスキーマのデータセットを選択した場合 **[!UICONTROL インスタンスワークフローを作成]** ページの場合、データセット名の横に次のメッセージの警告記号が表示されます。 [!UICONTROL 制限された情報は除外されます].
 
-![制限されたスキーマを持つ選択したAttribution AIセットの制限されたフィールドを持つデータワークスペースの結果がハイライト表示されました。](./images/user-guide/restricted-info-excluded.png)
+![制限されたAttribution AIセットフィールドが強調表示されたデータワークスペース。](./images/user-guide/restricted-info-excluded.png)
 
 制限されたスキーマを持つデータセットをでプレビューする場合 **[!UICONTROL インスタンスワークフローを作成]** ページに表示される場合、次のことを知らせる警告が表示されます。 [!UICONTROL アクセス制限により、一部の情報はデータセットのプレビューに表示されません。]
 
-![プレビューするAttribution AIの結果が制限されたフィールドを含むスキーマワークスペースがハイライト表示されています。](./images/user-guide/restricted-dataset-preview.png)
+![プレビューできるAttribution AIフィールドが制限されたデータワークスペースの結果がハイライト表示されました。](./images/user-guide/restricted-dataset-preview.png)
 
 制限された情報を含むインスタンスを作成し、 **[!UICONTROL 目標を定義]** 手順の場合、上部に警告が表示されます。 [!UICONTROL アクセス制限により、特定の情報は設定に表示されません。]
 

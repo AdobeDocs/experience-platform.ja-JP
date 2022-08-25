@@ -5,10 +5,10 @@ title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '2476'
-ht-degree: 12%
+source-wordcount: '2450'
+ht-degree: 13%
 
 ---
 
@@ -237,7 +237,6 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 
 >[!IMPORTANT]
 >
-> - Attribution AIは、更なるトレーニングとスコアリングに、更新されたデータのみを使用します。 同様に、Attribution AIの削除をリクエストした場合、データは削除されたデータを使用しなくなります。
 > - Attribution AIの GDPR コンプライアンスを容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセス要求と削除要求に応えるプロトコルを設定できます。
 > - すべてのデータは送信時および保存時に暗号化されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 

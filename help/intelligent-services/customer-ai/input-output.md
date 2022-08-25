@@ -6,9 +6,9 @@ title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '3180'
+source-wordcount: '3154'
 ht-degree: 15%
 
 ---
@@ -286,7 +286,6 @@ Adobe Audience Managerの特性を使用するには、 [Audience Managerソー�
 
 >[!NOTE]
 >
-> - 顧客 AI は、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこないます。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
 > - 顧客 AI の GDPR コンプライアンスを容易にするために、Adobe Experience Platform Privacy Serviceを使用して、顧客のリクエストに応じて、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータにアクセスし削除するプロトコルを設定できます。
 > - すべてのデータは送信時および保存時に暗号化されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
