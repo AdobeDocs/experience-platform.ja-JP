@@ -8,7 +8,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
 source-wordcount: '1632'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >id="platform_segments_evaluation_streaming"
 >title="ストリーミング評価"
 >abstract="ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ja" text="ストリーミングセグメント化を使用したほぼリアルタイムのイベント評価"
 
 Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのセグメント評価方法をサポートしています。
 
@@ -72,7 +72,7 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="バッチ評価"
->abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存され、使用するために書き出すことができます。"
+>abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存されるので、使用時にエクスポートできます。"
 
 継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存されて、使用時にエクスポートできるようになります。
 
@@ -83,10 +83,10 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
->abstract="エッジのセグメント化は、Experience Edge 上で瞬時に Platform のセグメントを評価する機能で、同じページで次のページでパーソナライゼーションをおこなう使用例を可能にします。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="エッジセグメント化 UI ガイド"
+>abstract="エッジのセグメント化は、Platform のセグメントを Experience Edge 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
-エッジのセグメント化は、Platform でのセグメントを瞬時に評価する機能です [Experience Edge 上](../edge/home.md)を使用して、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。
+エッジセグメント化は、Platform のセグメントを [Experience Edge 上](../edge/home.md)で瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 
 エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
 
