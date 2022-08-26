@@ -5,7 +5,7 @@ title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 1%
@@ -45,7 +45,7 @@ ht-degree: 1%
 | プロパティ | 説明 |
 | ------ | ------ |
 | `PGHOST` | のホスト名 [!DNL PostgreSQL] サーバー。 この値はExperience Platform [!UICONTROL ホスト] 資格情報。 |
-| `SSL` | SSL 要件の使用を制御します。 あなた **必須** 値「1」を使用して、この要件を有効にします。 |
+| `SSL` | SSL 要件の使用を制御します。 あなた **必須** 値を使用 `require` をクリックして、この要件を有効にします。 |
 | `user` | データベースに接続されているユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@adobe.org` |
 
 >[!IMPORTANT]
