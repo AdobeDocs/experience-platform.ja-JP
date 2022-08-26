@@ -3,10 +3,10 @@ title: Adobe Analyticsと Platform Web SDK の使用
 description: Adobe Experience Platform Web SDK を使用してAdobe Analyticsにデータを送信する方法について説明します。
 keywords: adobe analytics;analytics；マッピングされたデータ；マッピングされた var;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 45%
+source-wordcount: '306'
+ht-degree: 34%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 45%
 
 ## 手動でマッピングされたデータ
 
-エッジネットワークによって自動的にマッピングされないデータには、処理ルールを介してアクセスできます。 データはドット表記を使用して統合され、contextData として使用できます。
+が [!DNL Edge Network] は、処理ルールを使用してアクセスできます。 データはドット表記を使用して統合され、contextData として使用できます。
 
 次のようなスキーマがある場合。
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 次に、このデータを使用する処理ルールの例を示します。
 
 ![処理ルールインターフェイス](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Experience Edge コレクションを使用すると、すべてのイベントが Analytics に加えて、お客様のデータストリームに設定した他のサービスに送信されます。 例えば、Analytics と Target の両方をサービスとして設定し、パーソナライゼーションと Analytics に対して別々に呼び出す場合、両方のイベントが Analytics および Target に送信されます。 これらのイベントは、Analytics レポートに記録され、バウンス率などの指標に影響を与える可能性があります。
