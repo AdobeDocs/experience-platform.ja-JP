@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2022 年 8 月
 description: Adobe Experience Platformの 2022 年 8 月リリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 37%
+source-wordcount: '2095'
+ht-degree: 34%
 
 ---
 
@@ -90,17 +90,13 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-<!--
+**新機能または更新された機能**
 
-**New or updated features**
-
-| Feature | Description |
+| 機能 | 説明 |
 | ----------- | ----------- |
-|  ||
+| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータリリースでは、 [宛先カタログ](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**:このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。 Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、 [マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加します。これにより、プロファイル属性をAdobe Targetにマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**:このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。 また、 **[!UICONTROL カスタムパーソナライゼーション]**、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタはオプションのを追加します [マッピング手順](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加すると、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) データ収集用。 さらに、すべての Server API 呼び出しは、 [認証コンテキスト](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **新しい宛先**
 
