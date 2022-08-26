@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Azure Blob に接続する方法を説明します。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0d891acd4e33eb7080da44e204672dc3601cf166
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 42%
+ht-degree: 40%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 42%
 | ---------- | ----------- |
 | `connectionString` | 認証に必要な認証情報を含む文字列 [!DNL Blob] Experience Platformに この [!DNL Blob] 接続文字列のパターン： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 接続文字列について詳しくは、 [!DNL Blob] 文書 [接続文字列の設定](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | 代替の認証タイプとして使用して、 [!DNL Blob] アカウント この [!DNL Blob] SAS URI パターンは次のとおりです。 `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 詳しくは、 [!DNL Blob] 文書 [共有アクセス署名 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Blob] の接続仕様 ID は `d771e9c1-4f26-40dc-8617-ce58c4b53702` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Blob] の接続仕様 ID は `d771e9c1-4f26-40dc-8617-ce58c4b53702` です。 |
 
 ### Platform API の使用
 
@@ -130,7 +130,7 @@ curl -X POST \
         "name": "Azure Blob source connection using SAS URI",
         "description": "Azure Blob source connection using SAS URI",
         "auth": {
-            "specName": "SasURIAuthentication",
+            "specName": "SAS URI Authentication",
             "params": {
                 "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>"
             }

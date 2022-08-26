@@ -5,7 +5,7 @@ title: ソースのドキュメント化
 topic-legacy: overview
 description: Adobe Experience Platformで新しいソースをライブにする前の最後の手順は、新しいソースをドキュメント化することです。
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Adobe Experience Platformで新しいソースをライブに設定する前の�
 
 また、以下のドキュメントテンプレートをダウンロードすることもできます。
 
-* [API ドキュメントのテンプレート](../assets/template.zip)
+* [API ドキュメントのテンプレート](../assets/api-template.zip)
 * [UI ドキュメントテンプレート](../assets/ui-template.zip)
 
 ## 新しいソースページを作成します

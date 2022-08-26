@@ -5,7 +5,7 @@ title: GitHub Web インターフェイスを使用したソースドキュメ�
 topic-legacy: tutorial
 description: このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -52,7 +52,7 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ## ソースに関するドキュメントページの作成
 
-新しいソースのドキュメント化を開始するには、 [ソースドキュメントテンプレート](./template.md) を GitHub Web エディターに追加します。 また、テンプレートをダウンロードすることもできます [ここ](../assets/template.zip).
+新しいソースのドキュメント化を開始するには、 [ソースドキュメントテンプレート](./template.md) を GitHub Web エディターに追加します。 また、テンプレートをダウンロードすることもできます [ここ](../assets/api-template.zip).
 
 テンプレートを GitHub Web エディターインターフェイスにコピーした状態で、テンプレートに記載されている手順に従い、ソースに関連する情報を含む値を編集します。
 

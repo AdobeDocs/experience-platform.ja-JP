@@ -5,7 +5,7 @@ title: ローカル環境でテキストエディターを使用してソース�
 topic-legacy: tutorial
 description: このドキュメントでは、ローカル環境を使用して、ソースに関するドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 8%
@@ -70,7 +70,7 @@ Adobeでは、 [Visual Studio Code](https://code.visualstudio.com/) Markdown Aut
 
 ![インストール](../assets/install.png)
 
-ローカルマシンの準備が整ったら、 [ソースドキュメントテンプレート](../assets/template.zip) を選択し、 `experience-platform.en/help/sources/tutorials/api/create/...` と [`...`] 選択したカテゴリを表します。 例えば、データベースソースを作成する場合は、データベースフォルダを選択します。
+ローカルマシンの準備が整ったら、 [ソースドキュメントテンプレート](../assets/api-template.zip) を選択し、 `experience-platform.en/help/sources/tutorials/api/create/...` と [`...`] 選択したカテゴリを表します。 例えば、データベースソースを作成する場合は、データベースフォルダを選択します。
 
 最後に、テンプレートに記載されている手順に従い、ソースに関する関連情報を使用してテンプレートを編集します。
 
