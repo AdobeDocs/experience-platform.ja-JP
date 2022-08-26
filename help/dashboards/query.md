@@ -4,10 +4,10 @@ title: クエリサービスを使用したダッシュボードデータセッ�
 type: Documentation
 description: クエリサービスを使用して、Experience Platform でプロファイル、セグメント、宛先ダッシュボードを機能させる未加工データセットを調査し、処理する方法を説明します。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 56%
+source-wordcount: '951'
+ht-degree: 50%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 56%
 
 Adobe Experience Platform は、Experience Platform UI 内で使用可能なダッシュボードを通じて、組織のプロファイル、セグメント、宛先データに関する重要な情報を提供します。その後、Adobe Experience Platform [!DNL Query Service] データレイクでこれらのダッシュボードを動作させる未加工データセットを調べ、検証し、処理する。
 
-## 入門 [!DNL Query Service]
+## [!DNL Query Service] 入門
 
 Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用してデータレイクのデータに対してクエリを実行できるようにし、マーケターがデータからインサイトを得るのをサポートします。 [!DNL Query Service] は、データレイク内の任意のデータセットを結合し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、リアルタイム顧客プロファイルへの取り込みに使用できるユーザーインターフェイスと API を提供します。
 
@@ -83,6 +83,16 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 DIM の宛先データセットの完全なスキーマを理解するには、Experience Platform UI の[データセットビューアを使用して、](../catalog/datasets/user-guide.md)データセット をプレビューし、調査します。
 
 ![](images/query/destinations-metadata.png)
+
+## （ベータ版）顧客データプラットフォーム (CDP) のインサイトレポート
+
+>[!IMPORTANT]
+>
+>CDP インサイトデータモデル機能はベータ版です。 機能とドキュメントは変更される場合があります。
+
+CDP インサイトデータモデル機能は、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化する SQL を公開します。 これらの SQl クエリテンプレートをカスタマイズして、マーケティングおよび KPI の使用例に応じて CDP レポートを作成できます。
+
+CDP レポートは、プロファイルデータと、セグメントおよび宛先との関係に関するインサイトを提供します。 の方法の詳細については、 CDP インサイトデータモデルのドキュメントを参照してください。 [特定の KPI 使用例に対する CDP インサイトデータモデルの適用](./cdp-insights-data-model.md).
 
 ## クエリの例
 
