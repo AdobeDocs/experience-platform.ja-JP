@@ -3,14 +3,33 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platform からセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 55%
+source-wordcount: '1305'
+ht-degree: 43%
 
 ---
 
 # カスタムパーソナライゼーション接続 {#custom-personalization-connection}
+
+## 宛先の変更ログ {#changelog}
+
+拡張された **[!UICONTROL カスタムパーソナライゼーション]** 宛先コネクタ、2 つが表示されている可能性があります **[!UICONTROL カスタムパーソナライゼーション]** カードを含める必要があります。
+
+この **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタは現在ベータ版で、限られた数のお客様のみご利用いただけます。 また、 **[!UICONTROL カスタムパーソナライゼーション]**、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタはオプションのを追加します [マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加すると、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。
+
+>[!IMPORTANT]
+>
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](/help/server-api/overview.md) データ収集用。 さらに、すべての Server API 呼び出しは、 [認証コンテキスト](../../../server-api/authentication.md).
+>
+>既に統合に Web SDK または Mobile SDK を使用している場合は、Server API を使用して属性を取得する方法は 2 つあります。
+>
+> * Server API を使用して属性を取得するサーバー側の統合を追加します。
+> * カスタム JavaScript コードを使用してクライアント側の設定を更新し、Server API を介して属性を取得します。
+>
+> 上記の要件に従わない場合、パーソナライゼーションはセグメントメンバーシップのみに基づき、 **[!UICONTROL カスタムパーソナライゼーション]** コネクタ。
+
+![2 つのカスタムパーソナライゼーションの宛先カードを並べて表示した画像。](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## 概要 {#overview}
 
@@ -30,7 +49,7 @@ ht-degree: 55%
 
 ## ユースケース {#use-cases}
 
-この [!DNL Custom personalization connection] では、独自のパーソナライゼーションパートナープラットフォーム ( [!DNL Optimizely], [!DNL Pega]) を活用し、Experience PlatformEdge ネットワークのデータ収集およびセグメント化機能も活用して、より深い顧客パーソナライゼーションエクスペリエンスを強化します。
+この [!DNL Custom Personalization Connection] では、独自のパーソナライゼーションパートナープラットフォーム ( [!DNL Optimizely], [!DNL Pega]) に加えて、独自のシステム（社内 CMS など）も、Experience Platformエッジネットワークのデータ収集およびセグメント化機能を活用して、より深い顧客パーソナライゼーションエクスペリエンスを強化します。
 
 以下に説明する使用例には、サイトのパーソナライゼーションとターゲット化されたオンサイト広告の両方が含まれます。
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### 応答の例： [!UICONTROL 属性を含むカスタムパーソナライゼーション]
+
+を使用する場合 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;に設定した場合、API 応答は以下の例のようになります。
+
+違いは **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** および **[!UICONTROL カスタムパーソナライゼーション]** は `attributes` 」の節を参照してください。
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## データの使用とガバナンス {#data-usage-governance}
 

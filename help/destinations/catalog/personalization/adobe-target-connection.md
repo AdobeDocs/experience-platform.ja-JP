@@ -3,14 +3,23 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 39%
+source-wordcount: '1005'
+ht-degree: 35%
 
 ---
 
 # Adobe Target 接続 {#adobe-target-connection}
+
+## 宛先の変更ログ {#changelog}
+
+>[!IMPORTANT]
+>
+>拡張Adobe Target V2 宛先コネクタのベータリリースにより、宛先カタログに 2 つのAdobe Targetカードが表示される場合がありました。
+>Adobe Target V2 宛先コネクタは現在ベータ版で、一部のお客様のみが利用できます。 AdobeV1 カードが提供する機能に加えて、Target V2 コネクタは、 [マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加します。これにより、プロファイル属性をAdobe Targetにマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。
+
+![2 つのAdobe Target宛先カードの横並び表示の画像。](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
 ## 概要 {#overview}
 

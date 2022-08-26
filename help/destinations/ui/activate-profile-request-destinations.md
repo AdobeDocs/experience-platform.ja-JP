@@ -4,10 +4,10 @@ title: プロファイルリクエスト宛先に対するオーディエンス�
 type: Tutorial
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 56%
+source-wordcount: '678'
+ht-degree: 32%
 
 ---
 
@@ -19,11 +19,13 @@ ht-degree: 56%
 
 ## 概要 {#overview}
 
-この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 プロファイルリクエストの宛先の例は、 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。
+この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md)を使用すると、これらの宛先によって、Web プロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。 詳細を表示 [同じページおよび次のページのパーソナライゼーションの使用例の有効化](/help/destinations/ui/configure-personalization-destinations.md).
+
+プロファイルリクエストの宛先の例は、 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。
 
 ## 前提条件 {#prerequisites}
 
-宛先へのデータをアクティベートするには、正常に[宛先に接続する](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+宛先へのデータをアクティベートするには、正常に[宛先に接続する](./connect-destination.md)必要があります。まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされるパーソナライゼーションの宛先を参照し、使用する宛先を設定します。
 
 ### セグメント結合ポリシー {#merge-policy}
 
@@ -35,7 +37,7 @@ ht-degree: 56%
 
    ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
+1. 選択 **[!UICONTROL セグメントのアクティブ化]** を選択します。
 
    ![ボタンの有効化](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ ht-degree: 56%
 セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
 
 ![セグメントを選択](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## （ベータ版）属性のマッピング {#map-attributes}
+
+>[!IMPORTANT]
+>
+>マッピング手順。 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) および [汎用パーソナライゼーションの宛先](/help/destinations/catalog/personalization/custom-personalization.md)は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 このドキュメントは変更される場合があります。
+
+ユーザーのパーソナライゼーションユースケースを有効にする属性を選択します。 つまり、属性の値が変更された場合、または属性がプロファイルに追加された場合、そのプロファイルはセグメントのメンバーになり、パーソナライゼーションの宛先に対してアクティブ化されます。
+
+属性の追加はオプションで、属性を選択せずに次の手順に進み、同じページと次のページのパーソナライゼーションを有効にすることができます。 この手順で属性を追加しない場合、パーソナライゼーションは、プロファイルのセグメントメンバーシップと ID マップの認定に基づいておこなわれます。
+
+![属性が選択されたマッピング手順を示す画像](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** 次に示すように、を制御して、目的の XDM 属性フィールドを検索するか、移動します。
+
+![マッピング手順で XDM 属性を選択する方法を示す画面の記録](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## セグメントの書き出しをスケジュールする {#scheduling}
 
