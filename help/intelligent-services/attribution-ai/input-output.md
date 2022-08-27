@@ -5,10 +5,10 @@ title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2450'
-ht-degree: 13%
+source-wordcount: '2491'
+ht-degree: 12%
 
 ---
 
@@ -237,8 +237,9 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 
 >[!IMPORTANT]
 >
-> - Attribution AIの GDPR コンプライアンスを容易にするために、Adobe Experience Platform Privacy Serviceを使用して、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいで、顧客のデータへのアクセス要求と削除要求に応えるプロトコルを設定できます。
-> - すべてのデータは送信時および保存時に暗号化されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AIは、更なるトレーニングとスコアリングに、更新されたデータのみを使用します。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
+> - Attribution AIは Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。
+> - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## 次の手順 {#next-steps}
