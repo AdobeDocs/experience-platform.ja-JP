@@ -2,10 +2,10 @@
 title: データハイジーン作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスでの既存のデータハイジーン作業指示の表示および管理方法を説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 68%
+source-wordcount: '517'
+ht-degree: 64%
 
 ---
 
@@ -49,6 +49,11 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 {style=&quot;table-layout:auto&quot;}
 
 ## 作業指示の詳細の表示
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="サービス別ステータス"
+>abstract="データの衛生要求は、複数のExperience Platform・サービスで独立して処理されます。 この節では、各サービスに関するリクエストの現在の処理ステータスについて説明します。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
 
 リストされた作業指示の ID を選択して、そのの詳細を表示します。
 
