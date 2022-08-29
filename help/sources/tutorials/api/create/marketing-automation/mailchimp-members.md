@@ -5,10 +5,10 @@ title: Flow Service API を使用した Mailchimp Members のデータフロー�
 topic-legacy: tutorial
 description: Flow Service API を使用して Adobe Experience Platform を MailChimp Members に接続する方法を説明します。
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2500'
-ht-degree: 100%
+source-wordcount: '2123'
+ht-degree: 86%
 
 ---
 
@@ -30,7 +30,7 @@ OAuth 2 のリフレッシュコードを使用して Adobe Experience Platform 
 
 ### 基本認証を使用した [!DNL Mailchimp] ベース接続の作成
 
-基本認証を使用した [!DNL Mailchimp] ベース接続を作成するには、[!DNL Flow Service] API の `/connections` エンドポイントに POST リクエストを行います。その際、`host`、`authorizationTestUrl`、`username`、および `password` の資格情報を提供を提供します。
+を作成するには、以下を実行します。 [!DNL Mailchimp] 基本認証を使用したベース接続、 `/connections` エンドポイント [!DNL Flow Service] の資格情報を指定する際の API `authorizationTestUrl`, `username`、および `password`.
 
 **API 形式**
 
@@ -60,7 +60,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -75,7 +74,6 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
-| `auth.params.host` | [!DNL Mailchimp] API への接続に使用されるルート URL。ルート URL のフォーマットは `https://{DC}.api.mailchimp.com` です。ここで、`{DC}` はアカウントに対応するデータセンターを表します。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.username` | [!DNL Mailchimp] アカウントに対応するユーザー名。これは、基本認証に必要です。 |
 | `auth.params.password` | [!DNL Mailchimp] アカウントに対応するパスワード。これは、基本認証に必要です。 |
@@ -93,7 +91,7 @@ curl -X POST \
 
 ### OAuth 2 更新コードコードを使って [!DNL Mailchimp] ベース接続を作成します
 
-OAuth 2 更新コードを使用して [!DNL Mailchimp] ベース接続を作成するには、`/connections` エンドポイントに POST リクエストを送信し、その際、`host`、`authorizationTestUrl`、`accessToken` の資格情報を提供します。
+を作成するには、以下を実行します。 [!DNL Mailchimp] OAuth 2 更新コードを使用したベース接続。 `/connections` が `authorizationTestUrl`、および `accessToken`.
 
 **API 形式**
 
@@ -123,7 +121,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -137,7 +134,6 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、[!DNL Flow Service] API を使用してソースを登録した後に取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.host` | [!DNL Mailchimp] API への接続に使用するルート URL。ルート URL のフォーマットは `https://{DC}.api.mailchimp.com` です。ここで、`{DC}` はアカウントに対応するデータセンターを表します。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
@@ -623,311 +619,26 @@ curl -X POST \
 }
 ```
 
-## データフローの監視
+## 付録
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。
+次の節では、データフローを監視、更新、削除する手順について説明します。
 
-**API 形式**
+### データフローの監視
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。API の完全な例については、 [API を使用したソースデータフローの監視](../../monitor.md).
 
-**リクエスト**
+### データフローの更新
 
-次のリクエストは、既存のデータフローの仕様を取得します。
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### アカウントを更新
 
-**応答**
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
 
-正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、フロー実行の一意の識別子（`id`）など、フロー実行に関する詳細を返します。
+### データフローの削除
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Members dataflow",
-            "description": "MailChimp Members dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "sourceConnectionIds": [
-                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
-            ],
-            "targetConnectionIds": [
-                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
-                        "connectionSpec": {
-                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
-                            "connectionSpec": {
-                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633044818",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "transformations": [
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
-                        "mappingVersion": 0
-                    }
-                }
-            ],
-            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
-            "lastOperation": {
-                "started": 1633044829988,
-                "updated": 0,
-                "operation": "create"
-            }
-        }
-    ]
-}
-```
+に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
 
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `items` | 特定のフロー実行に関連付けられたメタデータの単一のペイロードが含まれます。 |
-| `id` | データフローに対応する ID が表示されます。 |
-| `state` | データフローの現在の状態を表示します。 |
-| `inheritedAttributes` | 対応するベース、ソース、ターゲット接続の ID など、フローを定義する属性が含まれます。 |
-| `scheduleParams` | 開始時間（エポック時間）、頻度、間隔など、データフローの取り込みスケジュールに関する情報が含まれます。 |
-| `transformations` | データフローに適用される変換プロパティに関する情報が含まれます。 |
-| `runs` | フローの対応する実行 ID を表示します。この ID を使用して、特定のフロー実行を監視できます。 |
+### アカウントを削除
 
-## データフローの更新
-
-データフローの実行スケジュール、名前、説明を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にフロー ID、バージョン、使用する新しいスケジュールを指定します。
-
->[!IMPORTANT]
->
->PATCH リクエストを実行する際は、`If-Match` ヘッダーが必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
-
-**API 形式**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**リクエスト**
-
-次のリクエストは、フロー実行スケジュールと、データフローの名前および説明を更新します。
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Members Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Members Dataflow Updated"
-          }
-      ]'
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
-| `path` | 更新するパラメーターのパス。 |
-| `value` | パラメーターの更新に使用する新しい値。 |
-
-**応答**
-
-リクエストが成功した場合は、フロー ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際にフロー ID を指定することで、更新を検証できます。
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## データフローの削除
-
-既存のフロー ID を使用すると、[!DNL Flow Service] API に DELETE リクエストを実行することでデータフローを削除できます。
-
-**API 形式**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{FLOW_ID}` | 削除するデータフローの一意の `id` の値。 |
-
-**リクエスト**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答**
-
-リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。データフローに対してルックアップ（GET）リクエストを試みることで、削除を確認することができます。API はデータフローが削除されたことを示す HTTP 404（見つかりません）エラーを返します。
-
-## 接続を更新
-
-接続の名前、説明、資格情報を更新するには、[!DNL Flow Service] API に PATCH リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい情報を指定します。
-
->[!IMPORTANT]
->
->PATCH リクエストを実行する際は、`If-Match` ヘッダーが必要です。このヘッダーの値は、更新する接続の一意のバージョンです。
-
-**API 形式**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 更新したい接続の一意の `id` 値。 |
-
-**リクエスト**
-
-次のリクエストでは、新しい名前と説明、一連の新しい資格情報を提供して接続を更新します。
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Members Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Members Connection"
-      }
-  ]'
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `op` | 接続の更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
-| `path` | 更新するパラメーターのパス。 |
-| `value` | パラメーターの更新に使用する新しい値。 |
-
-**応答**
-
-正常な応答では、ベース接続 ID と更新された etag が返されます。[!DNL Flow Service] API に GET リクエストを実行し、その際に接続 ID を指定することで、更新を検証できます。
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## 接続の削除
-
-既存のベース接続 ID が用意できたら、[!DNL Flow Service] API に DELETE リクエストを実行します。
-
-**API 形式**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 削除するベース接続の一意の `id` の値。 |
-
-**リクエスト**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答**
-
-リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
-
-接続先へのルックアップ（GET）リクエストを試みることで、削除を確認できます。
+アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントのベース接続 ID を指定する際の API。 API の完全な例については、 [API を使用したソースアカウントの削除](../../delete.md).

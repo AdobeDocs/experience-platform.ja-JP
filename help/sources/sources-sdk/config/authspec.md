@@ -4,9 +4,9 @@ title: セルフサービスソース（バッチ SDK）の認証仕様の設定
 topic-legacy: overview
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 5%
 
 ---
@@ -105,7 +105,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 
 ### 基本認証
 
-基本認証は、アプリケーションのホスト URL、アカウントユーザー名、アカウントパスワードを組み合わせて使用し、アプリケーションにアクセスできる認証タイプです。
+基本認証は、アカウントのユーザー名とアカウントのパスワードを組み合わせて使用し、アプリケーションにアクセスできる認証タイプです。
 
 ```json
 {
@@ -148,10 +147,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 | `authSpec.spec.type` | スキーマのデータ型を定義します。 | `object` |
 | `authSpec.spec.description` | 認証タイプに特有の詳細情報が表示されます。 |
 | `authSpec.spec.properties` | 認証に使用される資格情報に関する情報が含まれます。 |
-| `authSpec.spec.properties.host` | アプリケーションのホスト URL。 |
 | `authSpec.spec.properties.username` | アプリケーションに関連付けられたアカウントのユーザー名。 |
 | `authSpec.spec.properties.password` | アプリケーションに関連付けられたアカウントのパスワード。 |
-| `authSpec.spec.required` | Platform で入力する必須の値として必要なフィールドを指定します。 | `host` |
+| `authSpec.spec.required` | Platform で入力する必須の値として必要なフィールドを指定します。 | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]
