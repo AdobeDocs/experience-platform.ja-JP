@@ -4,10 +4,10 @@ title: プロファイルリクエスト宛先に対するオーディエンス�
 type: Tutorial
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 32%
+source-wordcount: '772'
+ht-degree: 28%
 
 ---
 
@@ -65,9 +65,23 @@ ht-degree: 32%
 
 ![属性が選択されたマッピング手順を示す画像](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** 次に示すように、を制御して、目的の XDM 属性フィールドを検索するか、移動します。
+### ソース属性を選択 {#select-source-attributes}
 
-![マッピング手順で XDM 属性を選択する方法を示す画面の記録](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する支配 **[!UICONTROL ソースフィールド]** 列を検索し、以下に示すように、目的の XDM 属性フィールドに移動します。
+
+![マッピング手順でターゲット属性を選択する方法を示す画面記録](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### ターゲット属性を選択 {#select-target-attributes}
+
+>[!NOTE]
+>
+>ソース属性の選択のみが必要な宛先と、ソース属性とターゲット属性の両方が必要な宛先があります。
+>
+>現在、 [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) 宛先にはソース属性のみが必要ですが、 [属性を含むカスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) には、source 属性と target 属性の両方が必要です。
+
+ターゲット属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する支配 **[!UICONTROL ターゲットフィールド]** 列を開き、ソース属性をマッピングするカスタム属性名を入力します。
+
+![マッピング手順で XDM 属性を選択する方法を示す画面の記録](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## セグメントの書き出しをスケジュールする {#scheduling}
 
