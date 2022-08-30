@@ -4,9 +4,9 @@ title: セグメントダッシュボードガイド
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 10%
 
 ---
@@ -48,6 +48,10 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 ダッシュボードは表示するセグメントを自動的に選択しますが、ドロップダウンメニューまたはセグメントセレクターを使用してセグメントを変更できます。
 
 別のセグメントを選択するには、セグメント名の横にあるドロップダウンを選択するか、セグメントセレクターを使用して、セグメント選択ダイアログを開きます。
+
+>[!IMPORTANT]
+>
+>選択可能なセグメントのリストには、プロファイル数が 0 を超えるセグメントのみが表示されます。
 
 ![](../images/segments/change-segment.png)
 
