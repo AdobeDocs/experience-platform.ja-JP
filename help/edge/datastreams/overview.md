@@ -3,9 +3,9 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1728'
 ht-degree: 100%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 100%
 データストリームは、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバーサイド設定を表します。SDK の [configure コマンド](../fundamentals/configuring-the-sdk.md)がクライアント上で処理される必要があるもの（`edgeDomain` など）を制御するのに対して、データストリームは、SDK のその他すべての設定を処理します。リクエストが Adobe Experience Platform Edge Network に送付されると、データストリームを参照するために `edgeConfigId` が使用されます。これにより、web サイト上でコードを変更することなく、サーバーサイド設定を更新できます。
 
 このドキュメントでは、データ収集 UI でデータストリームを設定する手順を説明します。
-
->[!NOTE]
->
->組織は、UI でこの機能にアクセスするために、この機能に対してプロビジョニングされている必要があります。必要なアクセス権をリクエストするには、[こちらのフォーム](https://adobe.ly/websdkaccess)に入力してください。データストリームを管理するには、[!DNL Adobe Experience Platform] のタグの製品プロファイルにユーザーアカウントが追加されている必要があります。
 
 ## [!UICONTROL データストリーム]ワークスペースへのアクセス
 
