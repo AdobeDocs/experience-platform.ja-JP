@@ -5,9 +5,9 @@ title: クエリエディター UI ガイド
 topic-legacy: query editor
 description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールで、Experience Platformのユーザーインターフェイス内で顧客体験データのクエリの書き込み、検証、実行をおこなうことができます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
+source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1865'
 ht-degree: 25%
 
 ---
@@ -64,11 +64,7 @@ ht-degree: 25%
 
 ![ドロップダウン候補が表示されるクエリエディターのコマンドラインインターフェイス。](../images/ui/query-editor/tables-auto.png)
 
-### （ベータ版）オートコンプリート UI 設定切り替え {#auto-complete}
-
->[!IMPORTANT]
->
->オートコンプリート UI の設定切り替えは、ベータ版です。 機能とドキュメントは変更される場合があります。
+### オートコンプリート UI 設定切り替え {#auto-complete}
 
 この [!DNL Query Editor] は、クエリの記述時に、SQL のキーワードの候補と、テーブルまたは列の詳細を自動的に示します。 オートコンプリート機能はデフォルトで有効になっており、いつでも [!UICONTROL 構文のオートコンプリート] クエリエディターの右上に切り替えます。
 

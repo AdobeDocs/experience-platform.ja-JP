@@ -5,9 +5,9 @@ title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
+source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '743'
 ht-degree: 1%
 
 ---
@@ -40,12 +40,13 @@ ht-degree: 1%
 
 ![「プロパティ」タブがハイライト表示された「データベース接続」ワークスペース。](../images/clients/dbvisualizer/driver-properties.png)
 
-次の表に、3 つの必要なドライバのプロパティを示します。
+DBVisualizer で SSL を使用できるようにするには、以下の表に示すドライバのプロパティを使用することをお勧めします。
 
 | プロパティ | 説明 |
 | ------ | ------ |
 | `PGHOST` | のホスト名 [!DNL PostgreSQL] サーバー。 この値はExperience Platform [!UICONTROL ホスト] 資格情報。 |
-| `SSL` | SSL 要件の使用を制御します。 あなた **必須** 値を使用 `require` をクリックして、この要件を有効にします。 |
+| `ssl` | SSL 値の定義 `1` をクリックして、SSL を使用できるようにします。 |
+| `sslmode` | SSL 要件の使用を制御します。 あなた **必須** 値を使用 `require` をクリックして、この要件を有効にします。 |
 | `user` | データベースに接続されているユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@adobe.org` |
 
 >[!IMPORTANT]
