@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '248'
 ht-degree: 96%
 
 ---
@@ -40,11 +40,11 @@ ht-degree: 96%
    * [言語サポート](documentation/language-support.md)
 * Platform {#ecosystem} に構築されたアプリケーションサービス
    * [概要](application-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
-   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=ja)
    * [Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
    * [Platform と Experience Cloud の統合（ビデオ）](video/experience-cloud-integrations.md)
 * ガバナンス、プライバシー、セキュリティ {#governance-privacy-security}
    * [概要](./governance-privacy-security/overview.md)
