@@ -5,10 +5,10 @@ title: UI でのデータ使用ラベルの管理
 topic-legacy: labels
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 95%
+source-wordcount: '1229'
+ht-degree: 92%
 
 ---
 
@@ -106,7 +106,12 @@ ht-degree: 95%
 
 に関するチュートリアルを参照してください。 [スキーマレベルのラベルの管理](../../xdm/tutorials/labels.md) を参照してください。
 
-## カスタムラベルの管理
+## カスタムラベルの管理 {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="ラベルの作成"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 Platform では、使用できる標準的なラベルセットが提供されますが、組織に固有のカスタムラベルを作成することもできます。"
 
 [!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペース内に、独自のカスタム使用ラベルを作成できます。左側のナビゲーションで&#x200B;**[!UICONTROL ポリシー]**&#x200B;を選択し、**[!UICONTROL ラベル]**&#x200B;を選択して、既存のラベルのリストを表示します。ここから、**[!UICONTROL ラベルを作成]**&#x200B;を選択します。
 

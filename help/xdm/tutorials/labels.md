@@ -2,10 +2,10 @@
 title: スキーマのデータ使用状況ラベルの管理
 description: Adobe Experience Platform UI でデータ使用ラベルをエクスペリエンスデータモデル (XDM) スキーマフィールドに追加する方法を説明します。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 6%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->スキーマベースのラベル付けは、 [属性ベースのアクセス制御](../../access-control/abac/overview.md)：現在、米国を拠点とする医療関連のお客様向けの限定リリースで利用できます。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+>スキーマベースのラベル付けは、 [属性ベースのアクセス制御](../../access-control/abac/overview.md)：現在、米国を拠点とする医療関連のお客様向けの限定リリースで利用できます。 この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 Adobe Experience Platformに取り込まれるすべてのデータは、Experience Data Model(XDM) スキーマによって制限されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これを考慮するには、プラットフォームでは、 [データ使用ラベル](../../data-governance/labels/overview.md).
 
@@ -33,7 +33,12 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
    * [スキーマエディター](../ui/overview.md):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):ラベル付きのデータに対して実行できるマーケティングアクション（または実行できない）を定義するポリシーを使用して、Platform の操作に対してデータ使用制限を適用するためのインフラストラクチャを提供します。
 
-## ラベルを追加するスキーマまたはフィールドを選択
+## ラベルを追加するスキーマまたはフィールドを選択 {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="ガバナンスラベルを編集"
+>abstract="スキーマフィールドにラベルを適用して、その特定のフィールドに含まれるデータに適用される使用ポリシーを示します。"
 
 ラベルの追加を開始するには、まず [編集する既存のスキーマを選択](../ui/resources/schemas.md#edit) または [新しいスキーマの作成](../ui/resources/schemas.md#create) をクリックして、スキーマエディターで構造を表示します。
 

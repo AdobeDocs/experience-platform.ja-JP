@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ラベルの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してラベルを管理する方法について説明します
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 3d7b3471c363c036c41171789b7dcbed5489f2ee
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 38%
+source-wordcount: '202'
+ht-degree: 35%
 
 ---
 
@@ -18,7 +18,12 @@ ht-degree: 38%
 
 ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが Platform に取得されるとすぐに、またはデータが Platform で使用できるようになるとすぐに、データのラベル付けが推奨されます。
 
-## 新しいラベルを作成
+## 新しいラベルを作成 {#create-new-label}
+
+>[!CONTEXTUALHELP]
+>id="platform_abac_labelusage"
+>title="ラベルの使用"
+>abstract="カスタムラベルを使用して、データガバナンスとアクセス制御の設定をデータに適用できます。"
 
 >[!NOTE]
 >
