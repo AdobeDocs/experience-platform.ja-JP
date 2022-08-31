@@ -2,10 +2,10 @@
 title: データハイジーン作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスでの既存のデータハイジーン作業指示の表示および管理方法を説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 64%
+source-wordcount: '616'
+ht-degree: 55%
 
 ---
 
@@ -55,25 +55,29 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 >title="サービス別ステータス"
 >abstract="データの衛生要求は、複数のExperience Platform・サービスで独立して処理されます。 この節では、各サービスに関するリクエストの現在の処理ステータスについて説明します。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="ID 数"
+>abstract="この作業指示の一部として削除をリクエストされた ID の数。 カウントに含まれる ID は、影響を受けるデータセットに存在しない場合があります。 詳しくは、『データ衛生 UI ガイド』を参照してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="消費者の削除応答"
+>abstract="消費者削除プロセスがシステムから応答を受け取ると、これらのメッセージは **[!UICONTROL 結果]** 」セクションに入力します。 作業指示の処理中に問題が発生した場合は、問題のトラブルシューティングに役立つ関連するエラーメッセージがこのセクションに表示されます。 詳しくは、データハイジーン UI ガイドを参照してください。"
+
 リストされた作業指示の ID を選択して、そのの詳細を表示します。
 
 ![作業指示 ID が選択されていることを示す画像](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 データセットの有効期限の詳細ページには、削除がおこなわれる前の日数の予定有効期限など、基本属性に関する情報が表示されます。 右側のレールでは、コントロールを使用して、有効期限を編集またはキャンセルできます。
 
