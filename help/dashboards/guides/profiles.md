@@ -4,9 +4,9 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 8%
 
 ---
@@ -171,9 +171,9 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 
 ![プロファイル数の変更トレンドウィジェットを表示する「プロファイルの概要」タブで、キャプションボタンがハイライト表示されています。](../images/profiles/profiles-count-change-trend-captions.png)
 
-機械学習モデルは、グラフとデータを分析することで、主要なトレンドと重要なイベントを記述するキャプションを自動的に生成します。
+機械学習モデルは、グラフとデータを分析することで、主要なトレンドと重要なイベントを記述するキャプションを自動的に生成します。 注釈は、キャプションに基づいてグラフに追加されます。 対応する注釈にフォーカスするキャプションを選択します。
 
-![プロファイル数の自動キャプションダイアログのトレンドウィジェットの変更。](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![プロファイル数の自動キャプションダイアログのトレンドウィジェットの変更。](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL プロファイル数 ID 別の変更トレンド] {#profiles-count-change-trend-by-identity}
 
