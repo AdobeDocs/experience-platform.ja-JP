@@ -3,9 +3,9 @@ title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '303'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 75%
 >
 >Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
-データ衛生 API を使用すると、Adobe Experience Platformに保存された顧客の個人データをプログラムで修正または削除したり、データセットの有効期限をスケジュールしたりできます。 このガイドでは、API を使用するための前提条件の手順を説明し、よりエンドポイントに特化したドキュメントへのリンクを提供します。
+Data Hygiene API を使用すると、Adobe Experience Platform に保存された顧客の個人データをプログラムで修正または削除したり、データセットの有効期限をスケジュール設定したりできます。このガイドでは、API を使用するための前提条件の手順を説明し、よりエンドポイントに特化したドキュメントへのリンクを提供します。
 
 ## はじめに
 
@@ -43,9 +43,9 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## データセットの有効期限
+## データセット有効期限
 
-データセットの有効期限は、時間的に遅延する「データセットの削除」アクションです。 データセットの有効期限を作成することで、そのデータセットを削除する将来の時間を指定します。 詳しくは、 [データセット有効期限エンドポイントガイド](./dataset-expiration.md) を参照してください。
+データセットの有効期限は、時間差の「データセットの削除」アクションです。データセットの有効期限を作成すると、そのデータセットが削除されるべき将来の時間を指定することになります。API でのデータセット有効期限のスケジュール設定について詳しくは、[データセット有効期限のエンドポイントガイド](./dataset-expiration.md)を参照してください。
 
 ## 次の手順
 
