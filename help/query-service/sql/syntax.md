@@ -5,10 +5,10 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
-ht-degree: 9%
+source-wordcount: '3033'
+ht-degree: 8%
 
 ---
 
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 この `EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画では、文で参照されるテーブルがスキャンされる方法が示されます。  複数のテーブルが参照されている場合は、各入力テーブルから必要な行を組み合わせるために使用される結合アルゴリズムが表示されます。
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-ここで、 `option` は、次のいずれかに該当します。
+以下を使用： `FORMAT` キーワードを `EXPLAIN` コマンドを使用して、応答の形式を定義します。
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `ANALYZE` | この `option` 次を含む `ANALYZE`に値を指定しない場合は、実行時間やその他の統計情報が表示されます。 |
-| `FORMAT` | この `option` 次を含む `FORMAT`を指定する場合は、出力形式を指定します。 `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
+| `FORMAT` | 以下を使用： `FORMAT` コマンドを使用して出力形式を指定します。 使用可能なオプションは次のとおりです。 `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
 | `statement` | 任意 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`または `CREATE MATERIALIZED VIEW AS` ステートメントに含まれ、その実行プランを表示します。 |
 
 >[!IMPORTANT]
 >
-> `ANALYZE` オプションを使用すると、実際に文が実行されることに注意してください。`EXPLAIN` は、`SELECT` が返す出力を破棄しますが、文の他の副作用は通常どおり発生します。
+>出力 `SELECT` を `EXPLAIN` キーワード。 この文の他の副作用は、通常どおり発生します。
 
 **例**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
