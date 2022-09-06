@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK は、選択したデータと認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントに配信する、Experience Platform の宛先統合パターンを設定するための設定 API のセットです。設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2e2ed880650ad6823b60819e36081540a35ab727
+source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 83%
+source-wordcount: '708'
+ht-degree: 80%
 
 ---
 
@@ -62,7 +62,7 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 ---------|----------|
 | 独立系ソフトウェアベンダー（ISV） | [Adobe Exchange プログラム](https://partners.adobe.com/exchangeprogram/experiencecloud.html)に参加し、Destination SDK にアクセスできるようプロビジョニングされた Experience Platform サンドボックスの取得をリクエストします。 |
 | システムインテグレーター（SI） | [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) で Gold レベルまたは Platinum レベルであれば、プロビジョニングされた Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
-| [有効化パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html)の Experience Platform 顧客 または [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
+| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -70,7 +70,7 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 
 Experience Platform で宛先を設定するプロセスの概要を次に示します。
 
-1. ISV または SI の場合は、前述の節に記載されているアクセス情報の取得を参照してください。[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)をご利用のお客様は、この手順を省略できます。
+1. ISV または SI の場合は、前述の節に記載されているアクセス情報の取得を参照してください。[Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html)をご利用のお客様は、この手順を省略できます。
 2. [Experience Platform サンドボックスのプロビジョニングをリクエスト](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support)し、宛先オーサリング権限を有効にします。
 3. 統合を構築します。 製品ドキュメントの手順に従って、を設定します。 [ストリーミング先](./configure-destination-instructions.md) または [ファイルベースの宛先（ベータ版）](./configure-file-based-destination-instructions.md).
 4. 統合をテストします。 製品ドキュメントの手順に従って、をテストします。 [ストリーミング先](./test-destination.md) または [ファイルベースの宛先（ベータ版）](./file-based-destination-testing-overview.md).
