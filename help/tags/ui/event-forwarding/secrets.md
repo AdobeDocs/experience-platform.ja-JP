@@ -2,10 +2,10 @@
 title: イベント転送での秘密鍵の設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために、データ収集 UI で秘密鍵を設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1447'
-ht-degree: 98%
+source-wordcount: '1637'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,8 @@ ht-degree: 98%
 | --- | --- |
 | [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
-| [!UICONTROL OAuth2] | [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートする複数の属性を含んでいます。必要な情報を入力すると、指定した間隔でトークンの更新を行います。現在、OAuth2 の[クライアント認証情報](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)バージョンのみがサポートされています。 |
+| [!UICONTROL OAuth2] | 次をサポートする属性が複数含まれます： [クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) の [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様。 必要な情報を入力すると、指定した間隔でトークンの更新を行います。 |
+| [!UICONTROL Google OAuth 2] | 次をサポートする属性が複数含まれます： [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) で使用する認証仕様 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 必要な情報を入力すると、指定した間隔でトークンの更新を行います。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,6 +67,7 @@ ht-degree: 98%
 * [[!UICONTROL トークン]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL トークン] {#token}
 
@@ -85,7 +87,7 @@ HTTP シークレットを作成するには、「**[!UICONTROL タイプ]**」�
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドに、[[!UICONTROL クライアント ID]、[!UICONTROL クライアントシークレット]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)および OAuth 統合の[認証 URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) を入力します。データ収集 UI の[!UICONTROL 認証 URL] フィールドは、認証サーバーホストとトークンパスを連結したものです。
+OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドで、 [[!UICONTROL クライアント ID] および [!UICONTROL クライアント秘密鍵]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] データ収集 UI のフィールドは、認証サーバーホストとトークンパスを連結したものです。
 
 ![OAuth2 シークレット](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -108,6 +110,23 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
 
 ![OAuth2 オフセットの保存](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+Google OAuth 2 シークレットを作成するには、「 **[!UICONTROL Google OAuth 2]** から **[!UICONTROL タイプ]** ドロップダウン。 の下 **[!UICONTROL スコープ]**」で、この暗号鍵を使用してアクセスを許可するGoogle API を選択します。 現在、次の製品がサポートされています。
+
+* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+終了したら、「 」を選択します。 **[!UICONTROL 秘密鍵を作成]**.
+
+![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+シークレットをGoogleで手動で認証する必要があることを示すポップオーバーが表示されます。 選択 **[!UICONTROL 作成して認証]** をクリックして続行します。
+
+![Google認証ポップオーバー](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+Googleアカウントの資格情報を入力するためのダイアログが表示されます。 画面の指示に従って、選択したスコープでのデータへのイベント転送のアクセスを許可します。 認証プロセスが完了すると、シークレットが作成されます。
 
 ## 秘密鍵の編集
 
