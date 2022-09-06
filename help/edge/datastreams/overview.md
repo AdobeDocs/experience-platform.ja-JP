@@ -3,10 +3,10 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
-workflow-type: ht
-source-wordcount: '0'
-ht-degree: 100%
+source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
+workflow-type: tm+mt
+source-wordcount: '1729'
+ht-degree: 98%
 
 ---
 
@@ -117,12 +117,12 @@ Experience Platform で使用するためにこのデータストリームを設
 ![Adobe Experience Platform 設定ブロック](../images/datastreams/overview/platform-config.png)
 
 | 設定 | 説明 |
-| --- | --- |
+|---| --- |
 | [!UICONTROL イベントデータセット] | **（必須）**&#x200B;顧客イベントデータのストリーミング先となる Platform データセットを選択します。このスキーマは、[XDM ExperienceEvent クラス](../../xdm/classes/experienceevent.md)を使用する必要があります。 |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となる Platform データセットを選択します。このスキーマは、[XDM Individual Profile クラス](../../xdm/classes/individual-profile.md)を使用する必要があります。 |
 | [!UICONTROL Offer Decisioning] | このチェックボックスを選択して、Platform Web SDK 実装用の Offer Decisioning を有効にします。実装について詳しくは、[Platform Web SDK での Offer Decisioning の使用](../personalization/offer-decisioning/offer-decisioning-overview.md)に関するガイドを参照してください。Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja)を参照してください。 |
 | [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、[次のページパーソナライゼーションのユースケース](../../destinations/ui/configure-personalization-destinations.md)の[!UICONTROL パーソナライゼーションの宛先]と組み合わせて使用できます。 |
-| [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジのセグメント化]」チェックボックスと組み合わせて使用する場合、このオプションを使用すると、データストリームを Adobe Target のようなパーソナライゼーションエンジンに接続できます。[パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
+| [!UICONTROL パーソナライゼーションの宛先] | を有効にした後でこれを有効にする場合 [!UICONTROL エッジセグメント化] 「 」チェックボックスをオンにすると、データストリームがパーソナライゼーションの宛先（例： ）に接続できるようになります。 [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md). [パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
 
 ### Adobe Target 設定 {#target}
 
