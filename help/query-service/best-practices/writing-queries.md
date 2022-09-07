@@ -6,10 +6,10 @@ topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 46%
+source-wordcount: '1048'
+ht-degree: 45%
 
 ---
 
@@ -48,6 +48,10 @@ Adobe Experience Platform [!DNL Query Service] には、次の 2 つのモデル
 ## オブジェクト内の特定のフィールドへのアクセス
 
 クエリ内のオブジェクト内のフィールドにアクセスするには、ドット表記（`.`）または角括弧表記（`[]`）を使用します。次の SQL 文は、ドット表記を使用し、`endUserIds` オブジェクトを下に移動して `mcid` オブジェクトを表示します。
+
+>[!NOTE]
+>
+>Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 ```sql
 SELECT endUserIds._experience.mcid

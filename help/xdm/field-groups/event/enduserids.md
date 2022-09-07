@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；enduserids；エンドユーザー；エンドユーザー；ids;
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；スキーマグループ；フィールドグループ；enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: エンドユーザー ID 詳細スキーマフィールドグループ
 topic-legacy: overview
-description: このドキュメントでは、「エンドユーザー ID 詳細」スキーマフィールドグループの概要を説明します。
+description: このドキュメントでは、「 End User ID Details 」スキーマフィールドグループの概要を説明します。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 7%
+source-wordcount: '226'
+ht-degree: 11%
 
 ---
 
 
-# [!UICONTROL エンドユーザー ID 詳細スキ] ーマフィールドグループ
+# [!UICONTROL エンドユーザー ID の詳細] スキーマフィールドグループ
 
 >[!NOTE]
 >
->複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[ フィールドグループ名の更新 ](../name-updates.md) のドキュメントを参照してください。
+>複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL エンドAdobeID ] クラスの標準スキーマフィールドグループを説明しま [[!DNL XDM ExperienceEvent] す](../../classes/experienceevent.md)。複数のユーザーアプリケーションにわたる個人の ID 情報を記述するのに使用されます。フィールドグループにはルートレベルの `endUserIDs` オブジェクトが用意されており、このオブジェクト自体には読み取り専用の `_experience` フィールドが含まれています。このフィールドの値はデータの取り込み時に自動的に更新されます。
+[!UICONTROL エンドユーザー ID の詳細] は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md)：複数のアプリケーションをまたいだ個人の id 情報を表すために使用されるAdobeです。 フィールドグループは、ルートレベルを提供します `endUserIDs` オブジェクト自体に読み取り専用が含まれています。 `_experience` フィールドの値は、データの取り込み時に自動的に更新されます。
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 | `acid` | [ID](../../data-types/identity.md) | Adobe Campaignのエンドユーザー ID。 |
 | `adcloud` | [ID](../../data-types/identity.md) | Adobe Advertising Cloudのエンドユーザー ID。 |
 | `emailid` | [ID](../../data-types/identity.md) | 電子メールアドレス ID。 |
-| `mcid` | [ID](../../data-types/identity.md) | Adobe Marketing Cloud ID。 |
+| `mcid` | [ID](../../data-types/identity.md) | Adobe Marketing Cloud ID(MCID)。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
 | `phonenumberid` | [ID](../../data-types/identity.md) | 電話番号 ID。 |
 | `tntid` | [ID](../../data-types/identity.md) | Adobe Targetのエンドユーザー ID。 |
 
@@ -38,5 +38,5 @@ ht-degree: 7%
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [入力例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

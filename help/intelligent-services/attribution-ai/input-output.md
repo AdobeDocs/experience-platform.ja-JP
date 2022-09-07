@@ -5,10 +5,10 @@ title: Attribution AIの入出力
 topic-legacy: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
-ht-degree: 12%
+source-wordcount: '2504'
+ht-degree: 13%
 
 ---
 
@@ -138,7 +138,7 @@ Attribution AIは、任意のスコア列でスコアをスライスしてディ
 | commerce_order_purchaseCity （文字列） | True | 追加のスコアデータセット列。 <br> **例：** 市区町村：サンノゼ |
 | customerProfile (Object) | False | モデルの構築に使用されたユーザーの ID 詳細。 |
 | id (Object) | False | モデルの構築に使用されるユーザーの詳細が含まれます。例： `id` および `namespace`. |
-| id （文字列） | True | ユーザーの ID ID（Cookie ID、AAID、MCID など） <br> **例：** 17348762725408656344688320891369597404 |
+| id （文字列） | True | ユーザーの ID ID(Cookie ID、Adobe Analytics ID(AAID)、Experience CloudID（ECID、MCID、訪問者 ID とも呼ばれます）など。 <br> **例：** 17348762725408656344688320891369597404 |
 | namespace (String) | True | パスを構築し、それによってモデルを構築するために使用される ID 名前空間。 <br> **例：** aaid |
 | touchpointsDetail (Object Array) | True | 次の順で並べ替えられたコンバージョンにつながるタッチポイントの詳細のリスト | タッチポイントの発生またはタイムスタンプ。 |
 | touchpointName (String) | True | セットアップ中に設定されたタッチポイントの名前。 <br> **例：** PAID_SEARCH_CLICK |
@@ -238,7 +238,7 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 >[!IMPORTANT]
 >
 > - Attribution AIは、更なるトレーニングとスコアリングに、更新されたデータのみを使用します。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
-> - Attribution AIは Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。
+> - アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。
 > - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
 

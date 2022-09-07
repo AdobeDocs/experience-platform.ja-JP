@@ -5,10 +5,10 @@ title: クエリサービスのAdobe定義 SQL 関数
 topic-legacy: functions
 description: このドキュメントでは、Adobe Experience Platform Query Service で使用できるAdobe定義関数について説明します。
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 19%
+source-wordcount: '1486'
+ht-degree: 18%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 19%
 Adobe定義関数（ここで ADF と呼ばれる）は、Adobe Experience Platformクエリサービスの事前に作成された関数で、に関する一般的なビジネス関連タスクを実行するのに役立ちます。 [!DNL Experience Event] データ。 これには、 [セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) および [帰属](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja) Adobe Analyticsで見つかったのと同じように
 
 このドキュメントでは、 [!DNL Query Service].
+
+>[!NOTE]
+>
+>Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 ## 窓関数 {#window-functions}
 

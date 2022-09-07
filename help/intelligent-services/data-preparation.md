@@ -5,10 +5,10 @@ title: インテリジェントサービスで使用するデータの準備
 topic-legacy: Intelligent Services
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを検出するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するために Experience Data Model(XDM) スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2919'
-ht-degree: 1%
+source-wordcount: '2936'
+ht-degree: 2%
 
 ---
 
@@ -111,11 +111,15 @@ CEE フィールドグループ内には、次の目的で使用する必要の�
 * [xdm:timestamp](#timestamp)
 * [xdm:channel](#channel) (Attribution AIのみ必須 )
 
-#### プライマリID {#identity}
+#### プライマリ ID {#identity}
 
 スキーマ内のフィールドの 1 つをプライマリ ID フィールドとして設定する必要があります。これにより、 [!DNL Intelligent Services] 時系列データの各インスタンスを個人にリンクする
 
 データのソースと特性に基づいて、プライマリ ID として使用する最適なフィールドを決定する必要があります。 ID フィールドには、 **id 名前空間** これは、フィールドが値として想定する id データのタイプを示します。 有効な名前空間の値には次のものが含まれます。
+
+>[!NOTE]
+>
+>Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 * &quot;電子メール&quot;
 * &quot;phone&quot;

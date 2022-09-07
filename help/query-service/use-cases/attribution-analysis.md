@@ -1,9 +1,10 @@
 ---
 title: 属性分析
 description: このドキュメントでは、クエリサービスを使用して、ファーストタッチとラストタッチのマーケティング属性モデルに基づいて、マーケティングの効果を測定する手法を作成する方法を説明します。
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 13%
 
 ---
@@ -68,6 +69,10 @@ ht-degree: 13%
 ファーストタッチ属性は、消費者が遭遇した最初のチャネルへの成功の結果に対する責任の 100%を占めます。 この SQL の例を使用して、後続の一連の顧客アクションにつながったインタラクションを強調表示します。
 
 以下のクエリは、ファーストタッチ属性値と、ターゲット内のチャネルの詳細を返します [!DNL Experience Event] データセット。 また、 `struct` 各行のファーストタッチ値、タイムスタンプおよび属性を持つ、選択したチャネルのオブジェクト。
+
+>[!NOTE]
+>
+>Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 **クエリ構文**
 

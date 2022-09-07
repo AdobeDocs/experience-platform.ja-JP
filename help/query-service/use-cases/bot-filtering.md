@@ -2,9 +2,9 @@
 title: 機械学習を使用したクエリサービスでのボットフィルタリング
 description: このドキュメントでは、クエリサービスと機械学習を使用してボットのアクティビティを決定し、純粋なオンライン Web サイト訪問者トラフィックからそのアクションをフィルタリングする方法の概要を説明します。
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 6%
 
 ---
@@ -29,8 +29,12 @@ ht-degree: 6%
 
 ボット検出用にデータを抽出する際に使用する属性は次の 2 つです。
 
-* Marketing CloudID (MCID):これにより、すべてのAdobeソリューションにわたって訪問者を識別する、永続的な汎用 ID が提供されます。
+* Experience Cloud訪問者 ID（ECID、MCID とも呼ばれます）:これにより、すべてのAdobeソリューションにわたって訪問者を識別する、永続的な汎用 ID が提供されます。
 * タイムスタンプ：Web サイト上でアクティビティが発生した日時を UTC 形式で表示します。
+
+>[!NOTE]
+>
+>の使用 `mcid` は、以下の例に示すように、名前空間ではExperience Cloud訪問者 ID への参照で見つかります。
 
 次の SQL 文は、ボットアクティビティを識別するための最初の例を示しています。 この文は、訪問者が 1 分以内に 50 回のクリックを実行した場合、そのユーザーがボットであると想定しています。
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-式は、しきい値を満たすすべての訪問者の MCID をフィルタリングしますが、他の間隔からのトラフィックのスパイクには対処しません。
+式は、ECID (`mcid`) の値を超えるが、他の間隔からのトラフィックのスパイクに対処していないすべての訪問者の。
 
 ## 機械学習によるボット検出の改善
 
@@ -53,7 +57,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
 
 この例の文は、1 分から 60 回までのクリック数で展開され、5 分と 30 分の期間が含まれ、それぞれ 300、1800 のクリック数が含まれます。
 
-この例の文は、様々な期間における各 MCID の最大クリック数を収集します。 最初の文が、1 分（60 秒）、5 分（300 秒）、1 時間（1800 秒）の期間を含むように拡張されました。
+この文例では、各 ECID(`mcid`) を様々な期間にわたって使用することができます。 最初の文が、1 分（60 秒）、5 分（300 秒）、1 時間（1800 秒）の期間を含むように拡張されました。
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 

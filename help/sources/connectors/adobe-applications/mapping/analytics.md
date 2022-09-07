@@ -5,10 +5,10 @@ title: Adobe Analytics Source Connector のフィールドのマッピング
 topic-legacy: overview
 description: Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyticsデータを取り込むことができます。 ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
-ht-degree: 98%
+source-wordcount: '3431'
+ht-degree: 97%
 
 ---
 
@@ -186,9 +186,9 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | ip | environment.ipV4 | 文字列 | イメージリクエストの HTTP ヘッダーに基づく IP アドレス。 |
 | j_jscript | environment.browserDetails.javaScriptEnabled | ブール値 | 使用する JavaScript のバージョン。 |
 | mcvisid_high + mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | 文字列 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs._experience.mcid.primary | ブール値 | Experience Cloud 訪問者 ID。 |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | 文字列 | Experience Cloud 訪問者 ID。 |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | 文字列 | Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で使用されることがあります。 |
+| mcvisid_high | endUserIDs._experience.mcid.primary | ブール値 | Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で使用されることがあります。 |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | 文字列 | Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で使用されることがあります。 |
 | mcvisid_low | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | 文字列 | ヒットステッチ ID。解析フィールド sdid_high と sdid_low は、2 つ以上の受信ヒットを結合するために使用される補足的なデータ ID です。 |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | 文字列 | Mobile Services ビーコンの近接性. |
