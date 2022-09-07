@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 88%
@@ -34,7 +34,7 @@ ht-degree: 88%
          - [Marketo Engage 認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 広告 {#advertising}
-      - [Google AdWords コネクタ](connectors/advertising/ads.md)
+      - [Google Ads コネクタ](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel コネクタ](connectors/analytics/mixpanel.md)
    - クラウドストレージ {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 88%
 - API チュートリアル {#api-tutorials}
    - ベース接続を作成する {#create}
       - 広告 {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google 広告](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - クラウドストレージ {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 88%
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 広告 {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Google 広告](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - クラウドストレージ {#cloud-storage}
