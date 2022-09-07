@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；文字列関数；文字列；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；文字列関数；文字列；
 solution: Experience Platform
 title: PQL 文字列関数
 topic-legacy: developer guide
 description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 94%
+source-wordcount: '840'
+ht-degree: 88%
 
 ---
 
 # 文字列関数
 
-[!DNL Profile Query Language] (PQL) は、文字列の操作を簡単にする関数を提供します。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+[!DNL Profile Query Language] (PQL) は、文字列とのやり取りが簡単になる関数を提供します。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
-## like
+## 類似
 
 `like` 関数は、文字列が指定のパターンと一致するかどうかを判定するために使用されます。
 
@@ -247,6 +247,10 @@ person.name.notEqualTo("John")
 person.name.matches("(?i)^John")
 ```
 
+>[!NOTE]
+>
+>次のような正規表現関数を使用する場合： `\w`、 **必須** バックスラッシュ文字をエスケープします。 だから、ただ書く代わりに `\w`の場合は、余分なバックスラッシュを含め、 `\\w`.
+
 ## 正規表現グループ
 
 `regexGroup` 関数は、指定された正規表現に基づいて特定の情報を抽出するために使用されます。
@@ -262,8 +266,12 @@ person.name.matches("(?i)^John")
 次の PQL クエリは、E メールアドレスからドメイン名を抽出するために使用します。
 
 ```sql
-emailAddress.regexGroup("@(\w+)", 1)
+emailAddress.regexGroup("@(\\w+)", 1)
 ```
+
+>[!NOTE]
+>
+>次のような正規表現関数を使用する場合： `\w`、 **必須** バックスラッシュ文字をエスケープします。 だから、ただ書く代わりに `\w`の場合は、余分なバックスラッシュを含め、 `\\w`.
 
 ## 次の手順
 
