@@ -4,9 +4,9 @@ title: API を使用したプロファイル更新のデータセットの有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '994'
 ht-degree: 32%
 
 ---
@@ -64,7 +64,7 @@ POST /dataSets
 
 **リクエスト**
 
-次を含めることで： `unifiedProfile` under `tags` リクエスト本文では、データセットは [!DNL Profile] 作成時に 内 `unifiedProfile` 配列、追加 `isUpsert:true` は、更新をサポートするデータセットの機能を追加します。
+次の両方を含めることで、 `unifiedIdentity` そして `unifiedProfile` under `tags` リクエスト本文では、データセットは [!DNL Profile] 作成時に 内 `unifiedProfile` 配列、追加 `isUpsert:true` は、更新をサポートするデータセットの機能を追加します。
 
 ```shell
 curl -X POST \
@@ -75,24 +75,27 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
 | プロパティ | 説明 |
-|---|---|
+| -------- | ----------- |
 | `schemaRef.id` | の ID [!DNL Profile] — データセットの基となる有効なスキーマ。 |
-| `{TENANT_ID}` | 内の名前空間 [!DNL Schema Registry] :IMS 組織に属するリソースを含みます。 詳しくは、 [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) セクション [!DNL Schema Registry] 開発者ガイドを参照してください。 |
+| `{TENANT_ID}` | 内の名前空間 [!DNL Schema Registry] 組織に属するリソースを含む 詳しくは、 [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) セクション [!DNL Schema Registry] 開発者ガイドを参照してください。 |
 
 **応答**
 
@@ -147,6 +150,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
