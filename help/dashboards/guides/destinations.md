@@ -4,9 +4,9 @@ title: 宛先ダッシュボードガイド
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) は、毎�
 >
 >スナップショットが作成された後にデータに加えられた変更や更新は、次のスナップショットが作成されるまでダッシュボードに反映されません。
 
-## 宛先ダッシュボードの詳細
+## 関連トピック [!UICONTROL 宛先] dashboard {#explore}
 
 Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UICONTROL 宛先]** 左側のレールで、 **[!UICONTROL 概要]** タブをクリックして、ダッシュボードを表示します。
 
@@ -37,11 +37,19 @@ Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UIC
 
 ![最新のスナップショットが強調表示された「 Platform UI の宛先の概要」。](../images/destinations/snapshot-timestamp.png)
 
-### 宛先ダッシュボードの変更
+### を変更します。 [!UICONTROL 宛先] dashboard {#modify}
 
-宛先ダッシュボードの外観を変更するには、「 **[!UICONTROL ダッシュボードを変更]**. これにより、ダッシュボードからウィジェットを移動、追加、削除したり、 **[!UICONTROL Widget ライブラリ]** 使用可能なウィジェットを参照し、組織のカスタムウィジェットを作成するには。
+選択 **[!UICONTROL ダッシュボードを変更]** をクリックして、宛先ダッシュボードの表示を変更します。 これにより、ダッシュボードからウィジェットを移動、追加、削除したり、ウィジェットライブラリにアクセスしたりできます。 ウィジェットライブラリから、使用可能なウィジェットを参照し、組織のカスタムウィジェットを作成できます。
 
 詳しくは、 [ダッシュボードの変更](../customize/modify.md) および [ウィジェットライブラリの概要](../customize/widget-library.md) ドキュメントを参照してください。
+
+### ウィジェットを追加 {#add-widget}
+
+選択 **[!UICONTROL ウィジェットを追加]** をクリックしてウィジェットライブラリに移動し、ダッシュボードに追加できるウィジェットのリストを確認します。
+
+![「追加」ウィジェットがハイライト表示された「宛先」ダッシュボードの概要。](../images/destinations/destinations-overview-add-widget.png)
+
+ウィジェットライブラリから、標準およびカスタムセグメントウィジェットの選択を参照できます。 ウィジェットの追加方法について詳しくは、ウィジェットライブラリのドキュメントを参照してください。 [ウィジェットを追加](../customize/widget-library.md#add-widgets).
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -80,7 +88,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 ウィジェットに表示されるリストから宛先の名前を選択すると、 **[!UICONTROL 参照]** タブをクリックします。 また、 **[!UICONTROL すべて表示]** をクリックして、 **[!UICONTROL 参照]** タブをクリックし、詳細を表示する宛先の名前を選択します。
 
-![](../images/destinations/most-used-destinations.png)
+![最も使用された宛先ウィジェットがハイライトされた宛先ダッシュボードの「概要」タブ。](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL 最近作成した宛先] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 特定のタイプの宛先の設定方法について詳しくは、 [宛先ドキュメント](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![宛先ダッシュボードの「概要」タブで、最近作成した宛先ウィジェットがハイライト表示されている。](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL 最近アクティブ化されたセグメント] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 Experience Platformでのセグメントの操作の詳細については、まず [セグメント化サービスの概要](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![最近アクティブ化されたセグメントウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL 最近アクティブ化したセグメント（宛先別）] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 
 セグメントの詳細を表示するには、表示されるリストからセグメントの名前を選択します。
 
-![宛先ウィジェットで最近アクティブ化したセグメント。](../images/destinations/recently-activated-segments-by-destination.png)
+![宛先別の最近アクティブ化されたセグメントウィジェット](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
@@ -144,7 +152,7 @@ Experience Platformでのセグメントの操作の詳細については、ま�
 
 2 番目のドロップダウンメニューには、ダッシュボードの上部で選択した宛先アカウントに送信できる、使用可能なすべてのセグメントが一覧表示されます。
 
-![オーディエンスサイズのトレンドウィジェット。](../images/destinations/audience-size-trend.png)
+![オーディエンスサイズトレンドウィジェット](../images/destinations/audience-size-trend.png)
 
 この **[!UICONTROL オーディエンスサイズのトレンド]** ウィジェットは [!UICONTROL キャプション] ボタンを使用して、ウィジェットの右上に表示できます。 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。 機械学習モデルは、グラフとセグメントデータを分析することで、主要なトレンドと重要なイベントを説明するキャプションを自動的に生成します。
 

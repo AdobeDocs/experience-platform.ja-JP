@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシュボード;ダッシュボード;プロファイル;セグメント;宛先;ライセンスの使用
 title: ダッシュボードのウィジェットライブラリの概要
-description: 'このガイドでは、Adobe Experience Platform のウィジェットライブラリにアクセスする手順を説明します。 '
+description: このガイドでは、Adobe Experience Platform のウィジェットライブラリにアクセスする手順を説明します。
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 100%
+source-wordcount: '458'
+ht-degree: 63%
 
 ---
 
@@ -22,24 +22,36 @@ Adobe Experience Platform のユーザーインターフェイスでは、複数
 >
 >「[!UICONTROL ライセンスの使用]」ダッシュボードに表示されているウィジェットはカスタマイズできません。ライセンスの使用に特有のダッシュボードについて詳しくは、 [ライセンス使用状況ダッシュボードのドキュメント](../guides/license-usage.md) を参照してください。
 
-## ウィジェットライブラリへのアクセス
+## ウィジェットライブラリへのアクセス {#access}
 
-プロファイルダッシュボードなどの任意のダッシュボードから、「**[!UICONTROL ダッシュボードを変更]**」を選択して「**[!UICONTROL ウィジェットライブラリ]**」ボタンを表示します。
+任意のダッシュボード（例えば、プロファイルダッシュボード）から、「 **[!UICONTROL ウィジェットを追加]** は、次の場所にあるウィジェットライブラリに直接移動します。 [ウィジェットを追加](#add-widgets) をダッシュボードに追加します。
 
-![](../images/customization/modify-dashboard.png)
+![「ウィジェットを追加」ボタンがハイライト表示された「プロファイルダッシュボードの概要」タブ](../images/customization/profiles-overview-add-widget.png)
 
-「**[!UICONTROL ウィジェットライブラリ]**」を選択してウィジェットライブラリを開き、利用できるすべての標準指標を表示するか、カスタムウィジェットの作成を開始します。
+選択 **[!UICONTROL ダッシュボードを変更]** をクリックして、ダッシュボードからウィジェットを移動、サイズ変更、削除します。 この表示から、 **[!UICONTROL Widget ライブラリ]** 参照して [ウィジェットを追加](#add-widgets). ウィジェットのサイズとレイアウトの編集方法については、 [ダッシュボードドキュメントの変更](./modify.md).
 
-![](../images/customization/widget-library-button.png)
+![変更ダッシュボードがハイライト表示されたプロファイルダッシュボードの概要。](../images/customization/modify-dashboard.png)
 
-## 標準ウィジェットとカスタムウィジェット
+**[!UICONTROL ウィジェットライブラリ]** を選択してウィジェットライブラリを開き、使用可能なすべての標準指標を表示するか、カスタムウィジェットの作成を開始します。
+
+![ウィジェットライブラリがハイライト表示された変更ダッシュボードビュー。](../images/customization/widget-library-button.png)
+
+## ウィジェットを追加 {#add-widgets}
+
+次の [!UICONTROL Widget ライブラリ]をクリックし、使用可能な標準またはカスタムウィジェットのリストから任意のウィジェットを選択します。 ウィジェットの隅にあるチェックマークは、選択内容を示します。
+
+![選択したウィジェットとチェックマークがハイライト表示されたウィジェットライブラリ。](../images/customization/confirm-selected-widget-to-add.png)
+
+必要なウィジェットをすべて選択したら、 **[!UICONTROL ウィジェットを追加]** をクリックして選択内容を確認し、ダッシュボードにウィジェットを追加します。
+
+## 標準ウィジェットとカスタムウィジェット {#standard-and-custom}
 
 [!UICONTROL ウィジェットライブラリ] には、次の 2 つのタブがあります。
 
 * **[!UICONTROL 標準]：** 「標準」タブには、Adobe が提供するウィジェットが含まれています。これらの標準指標のいずれかを使用して、ダッシュボードを更新できます。 ダッシュボードへの標準ウィジェットの追加について詳しくは、 [ダッシュボードでの標準ウィジェットの使用](standard-widgets.md) に関するガイドを参照してください。
 * **[!UICONTROL カスタム]：** 「カスタム」タブを使用すると、ウィジェットを作成して組織内で共有できます。独自のウィジェットを作成する手順について詳しくは、 [ダッシュボードのカスタムウィジェットガイド](custom-widgets.md) を参照してください。
 
-![](../images/customization/widget-library.png)
+![標準タブとカスタムタブがハイライトされたウィジェットライブラリ。](../images/customization/widget-library.png)
 
 ## 次の手順
 

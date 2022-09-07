@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform、プロファイル、セグメント、セグメント、セグメント化、ユーザーインターフェイス、UI、カスタマイズ、セグメントダッシュボード、ダッシュボード
 title: セグメントダッシュボードガイド
-description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
+description: Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 10%
+source-wordcount: '1791'
+ht-degree: 11%
 
 ---
 
-# セグメントダッシュボード {#segment-dashboard}
+# [!UICONTROL セグメントダッシュボード] {#segment-dashboard}
 
 Adobe Experience Platformのユーザーインターフェイス (UI) には、毎日のスナップショットでキャプチャされた、セグメントに関する重要な情報を表示できるダッシュボードが用意されています。 このガイドでは、UI でのセグメントダッシュボードへのアクセスと操作の方法を説明し、ダッシュボードに表示されるビジュアライゼーションに関する詳細を提供します。
 
 Platform ユーザーインターフェイス内のAdobe Experience Platform Segmentation Service のすべての機能の概要については、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md).
 
-## セグメントダッシュボードデータ
+## [!UICONTROL セグメント] ダッシュボードデータ
 
 セグメントダッシュボードには、組織がExperience Platform内のプロファイルストアに保持している属性（レコード）データのスナップショットが表示されます。 スナップショットには、イベント（時系列）データは含まれていません。
 
@@ -27,7 +27,7 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 >
 >スナップショットが作成された後にデータに加えられた変更や更新は、次のスナップショットが作成されるまでダッシュボードに反映されません。
 
-## セグメントダッシュボードの詳細
+## 関連トピック [!UICONTROL セグメント] dashboard {#explore}
 
 次に移動するには： [!UICONTROL セグメント] Platform UI 内のダッシュボードで、「 **[!UICONTROL セグメント]** 左側のレールで、 **[!UICONTROL 概要]** タブをクリックして、ダッシュボードを表示します。
 
@@ -35,13 +35,21 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 >
 >組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL セグメント] ダッシュボードが表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
 
-![](../images/segments/dashboard-overview.png)
+![セグメントダッシュボードの「概要」タブ](../images/segments/dashboard-overview.png)
 
-### の変更 [!UICONTROL セグメント] dashboard
+### を変更します。 [!UICONTROL セグメント] dashboard {#modify}
 
 次の外観を変更できます： [!UICONTROL セグメント] 選択してダッシュボード **[!UICONTROL ダッシュボードを変更]**. これにより、ダッシュボードからウィジェットを移動、追加、削除したり、 **[!UICONTROL Widget ライブラリ]** 使用可能なウィジェットを参照し、組織のカスタムウィジェットを作成するには。
 
 詳しくは、 [ダッシュボードの変更](../customize/modify.md) および [ウィジェットライブラリの概要](../customize/widget-library.md) ドキュメントを参照してください。
+
+### ウィジェットを追加 {#add-widget}
+
+選択 **[!UICONTROL ウィジェットを追加]** をクリックしてウィジェットライブラリに移動し、ダッシュボードに追加できるウィジェットのリストを確認します。
+
+![追加ウィジェットがハイライト表示された「セグメント」ダッシュボードの概要。](../images/segments/segments-overview-add-widget.png)
+
+ウィジェットライブラリから、標準およびカスタムセグメントウィジェットの選択を参照できます。ウィジェットの追加方法については、ウィジェットライブラリのドキュメントを参照してください。 [ウィジェットを追加](../customize/widget-library.md#add-widgets).
 
 ## セグメントを選択
 
@@ -53,9 +61,9 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 >
 >選択可能なセグメントのリストには、プロファイル数が 0 を超えるセグメントのみが表示されます。
 
-![](../images/segments/change-segment.png)
+![グローバルセグメントドロップダウンメニューがハイライト表示された「セグメント」ダッシュボードの概要。](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![使用可能なすべてのセグメントが表示されるセグメントを選択ダイアログ。](../images/segments/select-segment-dialog.png)
 
 ## ウィジェットと指標
 
@@ -92,7 +100,7 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 
 フラグメントと結合されたプロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![オーディエンスサイズウィジェットがハイライト表示されたセグメントダッシュボードの概要。](../images/segments/audience-size.png)
 
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
@@ -163,7 +171,7 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![ID 重複ウィジェットがハイライト表示された「セグメント」ダッシュボードの概要。](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL ID 別プロファイル] {#profiles-by-identity}
 
@@ -184,7 +192,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### 予定されているアクティベーション {#scheduled-activations}
 
-この [!UICONTROL 予定されているアクティベーション] ウィジェットは、最近アクティブ化された宛先を表形式で表示します。 この表には、宛先プラットフォーム、この宛先へのアクティベーションフローの名前、選択したセグメントのアクティベーション開始日と終了日が含まれます。 アクティベーションの終了日が指定されていない場合は、「 」と表示されます。 [!UICONTROL 進行中]. 分析用のセグメントは、ページ上部のドロップダウンから選択します。
+[!UICONTROL 予定されているアクティベーション]ウィジェットは、最近アクティブ化された宛先を表形式で表示します。この表には、宛先プラットフォーム、この宛先へのアクティベーションフローの名前、選択したセグメントのアクティベーション開始日と終了日が含まれます。 アクティベーションの終了日が指定されていない場合は、「 」と表示されます。 [!UICONTROL 進行中]. 分析用のセグメントは、ページ上部のドロップダウンから選択します。
 
 ウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透明にすることができます。 この累積情報は、アクティベーションが中断された場所も示します。
 

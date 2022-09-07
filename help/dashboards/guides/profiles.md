@@ -4,9 +4,9 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 8%
 
 ---
@@ -43,6 +43,14 @@ Experience Platformユーザーインターフェイス内のすべてのプロ�
 
 詳しくは、 [ダッシュボードの変更](../customize/modify.md) および [ウィジェットライブラリの概要](../customize/widget-library.md) ドキュメントを参照してください。
 
+### ウィジェットを追加 {#add-widget}
+
+選択 **[!UICONTROL ウィジェットを追加]** をクリックしてウィジェットライブラリに移動し、ダッシュボードに追加できるウィジェットのリストを確認します。
+
+![追加ウィジェットがハイライト表示されたプロファイルダッシュボードの概要。](../images/profiles/profiles-overview-add-widget.png)
+
+ウィジェットライブラリから、標準およびカスタムセグメントウィジェットの選択を参照できます。ウィジェットの追加方法については、ウィジェットライブラリのドキュメントを参照してください。 [ウィジェットを追加](../customize/widget-library.md#add-widgets).
+
 ## （ベータ版）プロファイルの有効性に関するインサイト {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Platform UI で提供されるプロファイル表示機能について詳し�
 
 >[!NOTE]
 >
->ドロップダウンメニューには、XDM Individual Profile クラスに関連する結合ポリシーのみが表示されます。 ただし、組織が複数の結合ポリシーを作成している場合は、使用可能な結合ポリシーの完全なリストを表示するには、スクロールする必要がある可能性があります。
+>ドロップダウンメニューには、 `_xdm.context.profile` スキーマ。 ただし、組織が複数の結合ポリシーを作成している場合は、使用可能な結合ポリシーの完全なリストを表示するには、スクロールする必要がある可能性があります。
 
-![](../images/profiles/select-merge-policy.png)
+![結合ポリシードロップダウンが強調表示された「プロファイルの概要」タブ。](../images/profiles/select-merge-policy.png)
 
 ## 結合スキーマ
 
