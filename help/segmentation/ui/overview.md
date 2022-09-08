@@ -5,9 +5,9 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 20%
 
 ---
@@ -56,6 +56,11 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="評価方法"
 >abstract="セグメントの評価方法には、バッチ、ストリーミング、エッジが含まれます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="すべてのセグメントをスケジュールに追加"
+>abstract="このオプションを有効にすると、すべてのバッチ評価セグメントが、UTC の午後 3 時 30 分にスケジュールされた日次更新に含まれます。 「無効」を選択すると、スケジュールされた更新からすべてのセグメントが削除されます。"
 
 を選択します。 **[!UICONTROL 参照]** タブをクリックして、IMS 組織のすべてのセグメント定義のリストを表示します。
 

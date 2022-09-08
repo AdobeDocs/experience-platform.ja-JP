@@ -5,10 +5,10 @@ title: セグメントビルダー UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform UI のセグメントビルダーのワークスペースは、プロファイルデータ要素を操作できる豊富な機能を備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
-ht-degree: 29%
+source-wordcount: '3082'
+ht-degree: 28%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 29%
 
 次を参照できるほか、 [!DNL ExperienceEvent] 要素を使用する場合は、イベントタイプも検索できます。 イベントタイプは、 [!DNL ExperienceEvents]を検索する必要がなくなりました。 [!DNL XDM ExperienceEvent] 正しいイベントを探しているクラス。 例えば、検索バーを使用して「cart」を検索すると、イベントタイプ「[!UICONTROL AddCart]&quot;および&quot;[!UICONTROL RemoveCart]」と呼ばれ、セグメント定義を作成する際によく使用される買い物かごアクションの 2 つです。
 
-任意のタイプのコンポーネントを検索するには、[Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)を使用して、検索バーにその名前を入力します。単語を完全に入力すると、検索結果が表示され始めます。例えば、XDM フィールド `ExperienceEvent.commerce.productViews` に基づくルールを作成するには、検索フィールドに「product views」と入力します。「product」という単語の入力が終わると同時に、検索結果が表示され始めます。検索結果には、それが属するオブジェクト階層も表示されます。
+任意のタイプのコンポーネントを検索するには、[Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)を使用して、検索バーにその名前を入力します。単語を完全に入力すると、検索結果が表示され始めます。例えば、XDM フィールドに基づいてルールを作成するには、次のように記述します。 `ExperienceEvent.commerce.productViews`をクリックして、検索フィールドに「product views」と入力します。 「product」という単語の入力が終わると同時に、検索結果が表示され始めます。検索結果には、それが属するオブジェクト階層も表示されます。
 
 >[!NOTE]
 >
@@ -226,7 +226,7 @@ ht-degree: 29%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="見積もりを更新"
 >abstract="セグメントの予測を更新すると、提案したセグメントに適合するプロファイル数のプレビューをすぐに確認できます。 オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="詳しくは、ドキュメントを参照してください。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="オーディエンスの推定とプレビュー"
 
 セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「**[!UICONTROL セグメントのプロパティ]**」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
 
