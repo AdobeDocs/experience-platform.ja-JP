@@ -5,7 +5,7 @@ title: RStudio をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 11%
@@ -20,7 +20,7 @@ ht-degree: 11%
 >
 > このガイドは、ユーザーが既に [!DNL RStudio] そしてその使い方に精通している 詳細情報： [!DNL RStudio] は [公式 [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/).
 > 
-> また、クエリサービスで RStudio を使用するには、PostgreSQL JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、 [PostgreSQL 公式サイト](https://jdbc.postgresql.org/download.html).
+> また、クエリサービスで RStudio を使用するには、PostgreSQL JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、 [PostgreSQL 公式サイト](https://jdbc.postgresql.org/download/).
 
 ## の作成 [!DNL Query Service] 接続 [!DNL RStudio] インターフェイス
 
