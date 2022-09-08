@@ -2,7 +2,7 @@
 title: Reactor API の秘密鍵
 description: イベント転送で使用する Reactor API の秘密鍵を設定する方法の基本について説明します。
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -107,11 +107,11 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 | --- | --- | --- |
 | `scopes` | 配列 | 認証用のGoogle製品範囲を一覧表示します。 次のスコープがサポートされています。<ul><li>[Google 広告](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-作成後 `oauth2-google` シークレット。応答には `meta.token_url` プロパティ。 Google認証フローを完了するには、この URL をコピーしてブラウザーに貼り付ける必要があります。
+作成後 `oauth2-google` シークレット。応答には `meta.authorization_url` プロパティ。 Google認証フローを完了するには、この URL をコピーしてブラウザーに貼り付ける必要があります。
 
 #### 再認証： `oauth2-google` 秘密鍵
 
-の認証 URL `oauth2-google` シークレットは、シークレットの作成後 1 時間で有効期限が切れます ( `meta.token_url_expires_at`) をクリックします。 この時間が過ぎると、認証プロセスを更新するために秘密鍵を再認証する必要があります。
+の認証 URL `oauth2-google` シークレットは、シークレットの作成後 1 時間で有効期限が切れます ( `meta.authorization_url_expires_at`) をクリックします。 この時間が過ぎると、認証プロセスを更新するために秘密鍵を再認証する必要があります。
 
 詳しくは、 [secrets エンドポイントガイド](../endpoints/secrets.md#reauthorize) 再認証方法の詳細 `oauth2-google` シークレットを保持する必要があります。
 
