@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: 1fe657ac698dd4fcce84902d85b582a9ed7fd4ac
+source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 71%
+source-wordcount: '206'
+ht-degree: 70%
 
 ---
 
@@ -63,6 +63,7 @@ ht-degree: 71%
    - [SSL モード](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Db ビジュアライザー](./clients/dbvisulaizer.md)
+   - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [ポスティコ](clients/postico.md)
    - [Power BI](clients/power-bi.md)
