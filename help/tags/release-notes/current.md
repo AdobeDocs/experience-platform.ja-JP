@@ -1,75 +1,25 @@
 ---
-title: タグのリリースノート
-description: Adobe Experience Platform のタグに関する最新のリリースノートです。
+title: タグとイベント転送のリリースノート
+description: Adobe Experience Platformでのタグとイベントの転送に関する最新のリリースノートです。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 98%
+source-wordcount: '138'
+ht-degree: 13%
 
 ---
 
-# Adobe Experience Platformのタグのリリースノート
+# タグとイベント転送のリリースノート
 
->[!NOTE]
->
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+## 2022年7月27日（PT）
 
-## 2021年11月15日（PT）
+* タグおよびイベント転送機能へのアクセスは、Adobe Experience Platformデータ収集用カードのAdobe Admin Consoleで管理されるようになりました。 詳しくは、[データ収集の権限](../../collection/permissions.md)に関するガイドを参照してください。
+* Internet Explorer 10 および 11 のサポートが追加されました。 [非推奨](../ie-deprecation.md).
 
-**タグでの ES6 コードの受け入れ** - ES6 コードを含む拡張機能とカスタムコードをタグで使用できるようになりました。拡張機能カタログでは、ES6 コードを含む各拡張機能のカード内に ES6+ ラベルが表示されます。IE10 および IE11 は、ES6 コードをサポートしていません。タグライブラリで ES6 コードを使用する前に、デューデリジェンスを行います。
+## 2022年6月22日（PT）
 
-**Terser を JavaScript 圧縮形式として使用** - Uglifier を Terser に置き換えました。このリリース以降、すべてのタグライブラリは Terser によって縮小されています。
+新しい拡張機能がリリースされました。
 
-## 2021年10月21日（PT）
-
-**イベント転送での認証済みエンドポイントへのデータ送信** - 秘密鍵を使用して、次の認証プロトコルを必要とするエンドポイントにデータを送信できます。
-
-* **[!UICONTROL トークン]**：認証トークンの値を表す単一の文字列。
-* **[!UICONTROL シンプルな HTTP]**：ユーザー名とパスワードの 2 つの文字列属性が含まれます。
-* **[!UICONTROL OAuth2]**：[OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) 仕様をサポートする複数の属性が含まれます。
-
-詳しくは、[データ収集 UI での秘密鍵の管理](../ui/event-forwarding/secrets.md)または [Reactor API での秘密鍵の管理](../api/guides/secrets.md)に関するガイドを参照してください。
-
-## 2021年7月19日（PT）
-
-**「プロパティの管理」権限の調整** - プロパティの管理権限で、ユーザーが新しいプロパティを作成する権限を持っているにもかかわらず、作成後に表示できない問題というが発生しました（[こちら](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=ja) のコミュニティスレッドで説明しています）。記事で説明されているように、修正が有効になり、権限が適用されるようになりました。
-
->[!NOTE]
->
->新しい「プロパティを編集」権限をユーザーグループに割り当てても、UI は更新されず、プロパティ設定画面のフィールドが有効になりません。 この問題の修正は、今後のリリースで実装される予定です。
-
-## 2021年5月17日（PT）
-
-**未保存の変更の処理を改善** - 設定の表示（拡張機能、データ要素、ルールコンポーネント）から移動するたびに、変更を破棄するかどうか尋ねるプロンプトが表示されていました。 しかし、判断するためのロジックが適切ではなかったため、ほとんどの場合、変更がないにもかかわらず、変更を保存するように促されました。  この問題は修正されました。  今後、実際に変更を加えた場合にのみ、このプロンプトが表示されます。
-
-## 2021年5月10日（PT）
-
-**公開のシンプル化** - ステージング環境へのビルドは不要になりました。適切な権限があり、ビルドが成功してアップストリームに他のライブラリがない場合に限り、「送信済み」状態を完全にスキップして、開発環境から直接公開できます。
-
-## 2021年4月22日（PT）
-
-**Adobe Experience Platform でのデータ収集** - アドビへのデータ送信は、タグをサイトにデプロイしたり、アプリに設定したりすることだけではありません。Experience Platform SDK と Edge Network を使用するには、他の Platform 機能にアクセスする必要があります。以前はこのために、いくつかの異なるツールにログインする必要がありましたが、現在では、ツールが 1 か所にまとめられています。
-
-Platform のデータ収集は 6 つの機能で構成され、新しく合理化されたナビゲーションには、会社およびユーザーアカウントがアクセスできる項目のみが含まれます。機能名の一部は、Experience Platform の命名パターンに合わせて更新されています。
-
-* クライアント（以前はクライアントサイドとしてアクセス）
-* データストリーム（以前はエッジ設定としてアクセス）
-* サーバー（以前はサーバーサイドとしてアクセス）
-* アプリ設定
-* スキーマ
-* ID
-
-Experience Platform とデータ収集の進化にともない、さらに多くのアップデートが想定されています。
-
-## 2021年2月18日（PT）
-
-* データ収集 UI を react-spectrum v3 に更新
-* 最新の Spectrum パターンに適合するように拡張機能カードを更新しました
-* アプリ全体で名前フィールドのサイズを大きくしました
-
-## 2021年1月13日（PT）
-
-**一般提供：イベント転送** - Adobe Experience Platform Edge Network にイベントレベルのデータを送信し、イベント転送を使用してデータを変換、強化し、クライアントではなくアドビのサーバーを使用してアドビ以外のエンドポイントにそのデータを低遅延で送信します。
-
-詳しくは、[イベント転送の概要](../ui/event-forwarding/overview.md)および[はじめる前に](../ui/event-forwarding/getting-started.md)を参照してください。
+* [Google Data Layer タグ拡張機能](../extensions/web/google-data-layer/overview.md):タグ実装でGoogleデータレイヤーを使用できます。
+* [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html):Google Ads のコンバージョンをリアルタイムで強化できます。
+* [Mailchimp イベント転送拡張機能](../extensions/web/mailchimp/overview.md):Mailchimp マーケティング API にイベントを送信します。この API は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーにすることができます。

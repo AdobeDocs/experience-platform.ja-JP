@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '402'
 ht-degree: 96%
 
 ---
@@ -199,6 +199,7 @@ ht-degree: 96%
 * [Internet Explorer 10 および 11 のサポートの廃止](./ie-deprecation.md)
 * リリースノート {#release-notes}
    * [最新](./release-notes/current.md)
+   * [2021年リリースノート](./release-notes/2021.md)
    * [2020 年リリースノート](./release-notes/2020.md)
    * [2019 年リリースノート](./release-notes/2019.md)
    * [2018 年リリースノート](./release-notes/2018.md)
