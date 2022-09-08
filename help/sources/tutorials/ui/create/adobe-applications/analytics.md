@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
+source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
 workflow-type: tm+mt
-source-wordcount: '2211'
-ht-degree: 66%
+source-wordcount: '2243'
+ht-degree: 65%
 
 ---
 
@@ -165,6 +165,10 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 マッピングを完了したら、 [!DNL Analytics] レポートスイートのデータを使用する場合、フィルタールールと条件を適用して、取り込むデータを選択的に含めたり、取り込まないデータを除外したりできます [!DNL Profile Service]. フィルタリングのサポートは、次の場合にのみ使用できます。 [!DNL Analytics] データとデータは、 [!DNL Profile.] すべてのデータがデータレイクに取り込まれます。
 
 #### 行レベルのフィルター
+
+>[!IMPORTANT]
+>
+>行レベルのフィルターを使用して、条件を適用し、適用するデータを指定します **プロファイル取り込み用に含める**. 列レベルのフィルターを使用して、データの列を選択します **プロファイル取り込み用に除外**.
 
 データをフィルターできます [!DNL Profile] 行レベルおよび列レベルでの取り込み。 行レベルのフィルタリングでは、文字列の含む、等しい、始まる、次で終わるなどの条件を定義できます。 また、行レベルのフィルターを使用して、 `AND` 同様に `OR`を使用して、条件を無効にする `NOT`.
 
