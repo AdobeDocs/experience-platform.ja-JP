@@ -2,10 +2,10 @@
 title: Dataset Expirations API のエンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: ht
-source-wordcount: '1375'
-ht-degree: 100%
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+workflow-type: tm+mt
+source-wordcount: '1405'
+ht-degree: 97%
 
 ---
 
@@ -26,6 +26,10 @@ Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Expe
 データセット削除が実際に開始される前であれば、いつでも有効期限をキャンセルしたり、そのトリガー時間を変更したりできます。データセット有効期限のキャンセル後は、新しい有効期限を設定することで再開できます。
 
 データセット削除が開始されると、その有効期限ジョブは `executing` とマークされ、それ以上変更できなくなります。データセット自体は、最大 7 日間復元できる可能性がありますが、それにはアドビのサービスリクエストを通じて手動のプロセスを開始する必要があります。リクエストの実行時に、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限は `executed` とマークされます。
+
+>[!WARNING]
+>
+>データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないように、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
 
 ## はじめに
 
