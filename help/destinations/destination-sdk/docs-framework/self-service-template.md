@@ -2,9 +2,9 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 7%
 
 ---
@@ -131,6 +131,13 @@ ht-degree: 7%
 >データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
 
 読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。
+
+### 属性と ID のマッピング {#map}
+
+*アクティベーションワークフローの「マッピング」手順で、サポートされるマッピングに関する情報をソースフィールドとターゲットフィールドの間に追加します。 宛先で、プロファイル属性、ID 名前空間、またはその両方の書き出しがサポートされている場合があります。 一部のフィールドは必須の場合があります。 ターゲット属性は、事前定義済みのものも、カスタムのものもあります。 重要な注意事項を呼び出し、好ましくはスクリーンショットと共に例を使用します。 参照用として使用できる宛先ページの 2 つの例を次に示します。*
+
+* *[ペガ](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[メダリア](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
 

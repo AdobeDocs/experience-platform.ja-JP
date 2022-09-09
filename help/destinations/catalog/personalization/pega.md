@@ -2,7 +2,7 @@
 title: Pega Customer Decision Hub 接続
 description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とセグメントメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適な判定をおこないます。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
+source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 7%
@@ -102,7 +102,7 @@ ht-degree: 7%
 
 内 [[!UICONTROL 属性を選択]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 手順に従い、Adobeでは、 [和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas). 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
-### マッピングの例：プロファイル更新のアクティブ化 [!DNL Pega Customer Decision Hub]
+### マッピングの例：プロファイル更新のアクティブ化 [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 プロファイルをに書き出す際の正しい ID マッピングの例を以下に示します。 [!DNL Pega Customer Decision Hub].
 
