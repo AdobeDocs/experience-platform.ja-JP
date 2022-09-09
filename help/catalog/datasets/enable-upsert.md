@@ -4,10 +4,10 @@ title: API を使用したプロファイル更新のデータセットの有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 32%
+source-wordcount: '1015'
+ht-degree: 28%
 
 ---
 
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | パラメーター | 説明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 調査するデータセットの ID。 |
 
 **リクエスト**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ curl -X GET \
 
 ### プロファイルのデータセットを無効にする
 
-プロファイル対応のデータセットを更新用に設定するには、まず `unifiedProfile` タグ付けし、同時に再度有効にする `isUpsert` タグを使用します。 これは、2 つのPATCHリクエストを使用しておこなわれます。1 回は無効にし、もう 1 回は再度有効にします。
+プロファイル対応のデータセットを更新用に設定するには、まず `unifiedProfile` および `unifiedIdentity` タグを付け、同時に再度有効にします。 `isUpsert` タグを使用します。 これは、2 つのPATCHリクエストを使用しておこなわれます。1 回は無効にし、もう 1 回は再度有効にします。
 
 >[!WARNING]
 >
->無効になっている間にデータセットに取り込まれたデータは、プロファイルストアに取り込まれません。 プロファイルに対して再度有効になるまで、データセットにデータを取り込まないようにすることをお勧めします。
+>無効になっている間にデータセットに取り込まれたデータは、プロファイルストアに取り込まれません。 プロファイルで再度有効になるまでは、データセットにデータを取り込まないようにする必要があります。
 
 **API 形式**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | パラメーター | 説明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 更新するデータセットの ID。 |
 
 **リクエスト**
 
-最初のPATCHリクエスト本文には、 `path` から `unifiedProfile` 設定 `value` から `enabled:false` タグを無効にするために使用します。
+最初のPATCHリクエスト本文には、 `path` から `unifiedProfile` および `path` から `unifiedIdentity`、 `value` から `enabled:false` の両方のパスを使用して、タグを無効にします。
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **応答**
 
-正常なPATCHリクエストは、HTTP ステータス 200(OK) と、更新されたデータセットの ID を含む配列を返します。 この ID は、PATCH リクエストで送信された ID と一致する必要があります。この `unifiedProfile` タグが無効になりました。
+正常なPATCHリクエストは、HTTP ステータス 200(OK) と、更新されたデータセットの ID を含む配列を返します。 この ID は、PATCH リクエストで送信された ID と一致する必要があります。この `unifiedProfile` および `unifiedIdentity` タグが無効になりました。
 
 ```json
 [
@@ -250,27 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | パラメーター | 説明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 更新するデータセットの ID。 |
 
 **リクエスト**
 
-リクエスト本文には、 `path` から `unifiedProfile` 設定 `value` を含めるには `enabled` および `isUpsert` タグ、両方ともに設定 `true`.
+リクエスト本文には、 `path` から `unifiedProfile` 設定 `value` を含めるには `enabled` および `isUpsert` タグ、両方ともに設定 `true`、および `path` から `unifiedIdentity` 設定 `value` を含めるには `enabled` タグを `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
-**応答** PATCH リクエストが成功すると、HTTP ステータス 200（OK）と、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致する必要があります。この `unifiedProfile` タグが有効になり、属性の更新用に設定されました。
+**応答**
+
+正常なPATCHリクエストは、HTTP ステータス 200(OK) と、更新されたデータセットの ID を含む配列を返します。 この ID は、PATCH リクエストで送信された ID と一致する必要があります。この `unifiedProfile` タグと `unifiedIdentity` タグが有効になり、属性の更新用に設定されました。
 
 ```json
 [
