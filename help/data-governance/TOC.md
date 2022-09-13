@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
 breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ポリシーを使用して、データ使用に関する制限を実施します。
 feature: Data Governance
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: c84926fe88ab02503220ca377170521077dc517e
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 100%
+source-wordcount: '96'
+ht-degree: 97%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 100%
 # Adobe Experience Platform のデータガバナンス {#data-governance}
 
 * [データガバナンスの概要](home.md)
+* [エンドツーエンドガイド](./e2e.md)
 * データ使用ラベル {#labels}
    * [概要](labels/overview.md)
    * [ラベルの用語集](labels/reference.md)
