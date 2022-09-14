@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
+keywords: Experience Platform；ホーム；人気の高いトピック；Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Azure Data Lake Storage Gen2 ソースコネクタの概要
+title: Azure Data Lake Storage Gen2 Source Connector の概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure Data Lake Storage Gen2 をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 72c3000022db68284836cc7f2248154493100913
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 3%
+source-wordcount: '476'
+ht-degree: 72%
 
 ---
 
 # Azure Data Lake Storage Gen2 コネクタ
 
-Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供し、これらのシステムからデータを取り込むことができます。
+Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
-クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] では、(ADLS-Gen2) からバ [!DNL Azure Data Lake Storage Gen2] ッチを使用してデータを取り込むことができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] を使用すると、次のデータを取り込むことができます： [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) をバッチで使用します。
 
 ## IP アドレス許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する可能性があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md) ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
 >[!IMPORTANT]
 >
->[!DNL Azure Data Lake Storage Gen2] ソースコネクタは、現在、Platform への同じ領域接続をサポートしていません。 つまり、Azure インスタンスが Platform と同じネットワーク領域を使用している場合、Platform ソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、担当のAdobeアカウントマネージャーにお問い合わせください。
+>この [!DNL Azure Data Lake Storage Gen2] ソースは、Experience Platformへの同じ地域の接続をサポートしていません。 Azure インスタンスがExperience Platformと同じネットワーク地域を使用している場合、Experience Platformソースへの接続を確立できません。 Azure East US 2、Azure West Europe、Azure Australia East リージョンは、 [!DNL Azure Data Lake Storage Gen2] ソース。 現在、地域間の接続のみがサポートされています。
 
 ## ファイルとディレクトリの命名制約
 
-以下は、クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストです。
+クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストを次に示します。
 
-- ディレクトリとファイルコンポーネントの名前は 255 文字以下にする必要があります。
-- ディレクトリ名とファイル名の末尾にスラッシュ (`/`) を付けることはできません。 指定した場合、自動的に削除されます。
+- ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
+- ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
 - 次の予約 URL 文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
-- 次の文字は使用できません。`" \ / : | < > * ?`.
-- 無効な URL パス文字は使用できません。 `\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。 また、制御文字（0x00 ～ 0x1F、\u0081 など）など、ASCII 文字や Unicode 文字の一部も使用できません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、Section 2.2 を参照してください。基本規則 ](https://www.ietf.org/rfc/rfc2616.txt) と [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
-- 次のファイル名は使用できません。LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM8, COM9,prn、AUX、NUL、CON、CLOCK$、ドット文字 (.)、2 つのドット文字 (..)。
+- 次の文字は使用できません。`" \ / : | < > * ?`
+- 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
+- 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## [!DNL Azure Data Lake Storage Gen2] を [!DNL Platform] に接続
+## 接続 [!DNL Azure Data Lake Storage Gen2] から [!DNL Platform]
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して [!DNL Azure Data Lake Storage Gen2] を [!DNL Platform] に接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Azure Data Lake Storage Gen2] と を接続する方法について説明します。[!DNL Platform]
 
 ### API の使用
 
 - [フローサービス API を使用した ADLS-Gen2 ベース接続の作成](../../tutorials/api/create/cloud-storage/adls-gen2.md)
-- [フローサービス API を使用したクラウドストレージソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/cloud-storage.md)
-- [フローサービス API を使用したクラウドストレージソースのデータフローの作成](../../tutorials/api/collect/cloud-storage.md)
+- [Flow Service API を使用して、クラウドストレージソースのデータ構造とコンテンツを探索](../../tutorials/api/explore/cloud-storage.md)
+- [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
 - [UI での ADLS-Gen2 ソース接続の作成](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [UI でのクラウドストレージ接続のデータフローの作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
