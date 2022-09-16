@@ -25,7 +25,7 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 
 詳しくは、 [データストリームへのサービスの追加に関するガイド](../edge/datastreams/overview.md#adobe-target-settings)(Adobe Targetを有効にする方法について詳しくは、を参照 )。
 
-データストリームを設定する際に、 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
+データストリームを設定する際に、次の値を（オプションで）指定できます。 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
 
 ![Adobe Targetを選択した状態で、データストリームサービス設定画面を示す UI 画像](assets/target-datastream.png)
 

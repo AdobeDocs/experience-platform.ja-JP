@@ -42,7 +42,7 @@ ht-degree: 3%
 
 次に、 [!DNL PostgreSQL] のデータベースアダプタ [!DNL Python]. 値を入力： `import psycopg2`を選択し、 **[!DNL Run]**. このプロセスに関する成功メッセージはありません。 エラーメッセージが表示されない場合は、次の手順に進みます。
 
-![この [!DNL Notebook] インポートデータベースドライバーコードがハイライト表示された UI](../images/clients/jupyter-notebook/import-dbdriver.png)
+![この [!DNL Notebook] インポートデータベースドライバーコードが強調表示された UI](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 次に、値を入力して、Adobe Experience Platformの資格情報を指定する必要があります。 `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. 接続資格情報は、 [!UICONTROL クエリ] セクションの [!UICONTROL 資格情報] 」タブを使用します。 方法に関するドキュメントを参照してください。 [組織の資格情報を検索](../ui/credentials.md) を参照してください。
 

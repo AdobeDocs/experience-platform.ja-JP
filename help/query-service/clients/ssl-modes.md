@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；接続；クエリサービスへの接続；SSL;ssl;sslmode;
 title: クエリサービス SSL オプション
 description: Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、verify-full SSL モードを使用した接続方法について説明します。
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 1%

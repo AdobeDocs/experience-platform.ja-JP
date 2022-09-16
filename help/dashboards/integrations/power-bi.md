@@ -3,7 +3,7 @@ title: Platform ダッシュボードの Power BI レポートテンプレート
 description: Power BI を使用した Experience Platform データを、レポートテンプレートを使用して調べます。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 100%
 

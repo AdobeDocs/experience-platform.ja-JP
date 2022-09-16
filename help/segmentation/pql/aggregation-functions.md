@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；集計関数；集計；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；集計関数；集計；
 solution: Experience Platform
 title: PQL 集計関数
 topic-legacy: developer guide
@@ -14,9 +14,9 @@ ht-degree: 86%
 
 # 集計関数
 
-集計関数は、[!DNL Profile Query Language]（PQL）配列内の複数の値をグループ化して、単一の要約値を形成するために使用されます。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+集計関数は、[!DNL Profile Query Language]（PQL）配列内の複数の値をグループ化して、単一の要約値を形成するために使用されます。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
-## Count
+## カウント
 
 `count` 関数は、渡された配列内の要素数を返します。
 

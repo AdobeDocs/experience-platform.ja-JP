@@ -1,25 +1,26 @@
 ---
-title: Deposit Details Schema Field Group
-description: This document provides an overview of the Deposit Details schema field group.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: 預金詳細スキーマフィールドグループ
+description: このドキュメントでは、「預金詳細」スキーマフィールドグループの概要を説明します。
+exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 8%
 
 ---
 
-# 
+# [!UICONTROL 預金の詳細] スキーマフィールドグループ
 
-[[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md)`personalFinances.deposits`
+[!UICONTROL 預金の詳細] は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). フィールドグループには、 `personalFinances.deposits` フィールドをスキーマに追加します。
 
 ![](../../images/field-groups/deposit-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `account` | [](../../data-types/financial-account.md) | Describes the financial account associated with the deposit. |
-| `transaction` | [[!UICONTROL トランザクション]](../../data-types/transaction.md) | Describes the financial transaction associated with the deposit. |
-| `mobileDeposit` | [!UICONTROL ブール値] | Indicates whether the deposit was done through a mobile platform. |
+| `account` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 預金に関連付けられた金融口座を表します。 |
+| `transaction` | [[!UICONTROL トランザクション]](../../data-types/transaction.md) | 預金に関連する金融トランザクションを記述します。 |
+| `mobileDeposit` | [!UICONTROL ブール値] | 預金がモバイルプラットフォームを通じて行われたかどうかを示します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-[](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json)
+フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

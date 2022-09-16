@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；api ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取得；
+keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング接続；ストリーミング接続の作成；API ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取り込み；
 solution: Experience Platform
 title: API を使用したストリーミング接続の作成
 topic-legacy: tutorial
@@ -19,4 +19,4 @@ Adobe Experience Platform へのデータストリーミングを開始するに
 
 ストリーミング接続の登録後、データ製作者には、Platform へのデータストリーミングに使用できる一意の URL が作成されます。
 
-認証済みのストリーミング接続を作成する方法については、『[HTTP API ソース API ガイド ](../../sources/tutorials/api/create/streaming/http.md)』を参照してください。
+認証済みのストリーミング接続を作成する方法については、 [HTTP API ソース API ガイド](../../sources/tutorials/api/create/streaming/http.md).

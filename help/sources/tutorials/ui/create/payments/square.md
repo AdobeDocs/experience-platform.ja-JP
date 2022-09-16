@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；正方形；四角形
 title: UI での正方形ソース接続の作成
 description: Adobe Experience Platform UI を使用して Square ソース接続を作成する方法を説明します。
-source-git-commit: e905b11040c8de33aa757bd5743605bb36a8009b
+exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
+source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 51%

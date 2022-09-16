@@ -1,7 +1,8 @@
 ---
 title: 顧客データプラットフォーム (CDP) インサイトデータモデル
 description: CDP インサイトデータモデルの SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自の CDP レポートをカスタマイズする方法について説明します。
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 5009dd0b48090530736c711a34e3bcb8b6cde2b6
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%

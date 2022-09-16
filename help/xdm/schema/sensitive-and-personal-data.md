@@ -1,7 +1,8 @@
 ---
 title: XDM における機密情報と個人情報
 description: Experience Data Model(XDM) の機密性の高い個人情報 (SPI) および個人情報 (PII) に関する主な考慮事項について説明します。
-source-git-commit: 76815389a1c87fbf908e499c50594a4b356a11a9
+exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
+source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%

@@ -32,7 +32,7 @@ ht-degree: 14%
 
 ## Postman環境の作成（オプション）
 
-Adobe開発者コンソール内でプロジェクトと API を設定したら、Postman用の環境ファイルをダウンロードするオプションがあります。 の下 **[!UICONTROL API]** プロジェクトの左側のパネルで、「 **[!UICONTROL Content and Commerce AI]**. 新しいタブが開き、「[!DNL Try it out]&quot;. 選択 **Postman 用にダウンロード** をクリックして、postman 環境の設定に使用する JSON ファイルをダウンロードします。
+Adobe Developerコンソール内でプロジェクトと API を設定したら、Postmanの環境ファイルをダウンロードするオプションがあります。 の下 **[!UICONTROL API]** プロジェクトの左側のパネルで、「 **[!UICONTROL Content and Commerce AI]**. 新しいタブが開き、「[!DNL Try it out]&quot;. 選択 **Postman用のダウンロード** をクリックして、postman 環境の設定に使用する JSON ファイルをダウンロードします。
 
 ![postman 用にダウンロード](./images/add-to-postman.png)
 

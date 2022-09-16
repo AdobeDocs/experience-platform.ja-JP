@@ -8,7 +8,7 @@ exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 1%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
-クラウドストレージソースは、独自のデータを [!DNL Platform] をダウンロード、フォーマット、アップロードする必要はありません。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順が、ソースワークフローに統合されます。 [!DNL Platform] を使用すると、次のデータを取り込むことができます： [!DNL Amazon Kinesis] リアルタイムで。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] では、[!DNL Amazon Kinesis] からリアルタイムにデータを取り込むことができます。
 
 >[!NOTE]
 >
@@ -86,12 +86,12 @@ A [!DNL Kinesis] UI ソースは現在、 `TRIM_HORIZON`API は `TRIM_HORIZON` �
 
 ## 接続 [!DNL Amazon Kinesis] から [!DNL Platform]
 
-以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Amazon Kinesis] から [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Kinesis] と を接続する方法について説明します。[!DNL Platform]
 
 ### API の使用
 
 - [フローサービス API を使用したAmazon Kinesisソース接続の作成](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [フローサービス API を使用したストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
+- [Flow Service API を用いたストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 

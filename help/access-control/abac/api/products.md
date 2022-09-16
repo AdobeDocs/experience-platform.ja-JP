@@ -7,7 +7,7 @@ exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 16%
+ht-degree: 22%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+>属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 この `/products` 属性ベースのアクセス制御 API のエンドポイントを使用すると、製品、および組織内の製品に関連する権限カテゴリや権限セットをプログラムで管理できます。
 

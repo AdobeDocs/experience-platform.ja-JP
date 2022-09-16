@@ -8,7 +8,7 @@ exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 8df601af88295eba10c23f455807c7d5faf644f3
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 >
 >の設定 [!DNL Shared Device Detection] は、データセットのプロファイルを有効にする前に設定を完了する必要があります。これは、でグラフを生成すると、設定を変更できなくなるからです。 [!DNL Identity Service].
 
-## 入門 [!DNL Shared Device Detection]
+## [!DNL Shared Device Detection] 入門
 
 の操作 [!DNL Shared Device Detection] には、関連する様々な Platform サービスに関する理解が必要です。 操作を開始する前に [!DNL Shared Device Detection]次のサービスのドキュメントを確認してください。
 
@@ -86,13 +86,13 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 ### 方法 [!DNL Profile Service] プロファイルフラグメントを [!DNL Shared Device Detection] 有効
 
-[!DNL Profile Service] は、プロファイルフラグメントと結合されたプロファイルを書き留めます。 個々の顧客プロファイルは、その顧客に対する単一のビューを形成する複数のプロファイルフラグメントで構成されます。例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りをおこなう場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントが Platform に取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。
+[!DNL Profile Service] は、プロファイルフラグメントと結合されたプロファイルを書き留めます。 個々の顧客プロファイルは、その顧客に対する単一のビューを形成する複数のプロファイルフラグメントで構成されます。例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントが Platform に取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。
 
 条件 [!DNL Shared Device Detection] が有効になっている場合は、 [!DNL Profile] エクスペリエンスイベントが認証済みか未認証かに基づいて、プロファイルフラグメントのプライマリ ID を定義します
 
 An **認証済みエクスペリエンスイベント** は、デバイスにログインした際にユーザーが完了したアクションです。 認証済みのエクスペリエンスイベントの場合、プライマリ ID は **ユーザー ID 名前空間** （ログイン ID）。 An **未認証エクスペリエンスイベント** は、デバイスにログインしていないユーザーが完了したアクションです。 未認証のエクスペリエンスイベントの場合、プライマリ ID は **共有 ID 名前空間** (ECID) を使用します。
 
-詳しくは、  [[!DNL Real-time Customer Profile] 概要](../../profile/home.md).
+詳しくは、[[!DNL Real-time Customer Profile] 概要](../../profile/home.md)を参照してください。
 
 ## 共有デバイス UI
 

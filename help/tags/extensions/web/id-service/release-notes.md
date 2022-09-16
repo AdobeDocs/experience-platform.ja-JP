@@ -17,7 +17,7 @@ ht-degree: 86%
 
 Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud ID サービス自体のリリースノートについては、[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
-## 2022 年 3 月 10 日
+## 2022 年 3 月 9 日（PT）
 
 ### Experience Cloud ID Extension 5.4.0
 
@@ -28,7 +28,7 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
    * ライフタイムの設定機能 `s_ecid` cookieLifetime 設定を使用した cookie
    * ページが子 iFrame に読み込まれる際に発生する Firefox ブラウザーの問題に対する更新
 
-## 2021 年 10 月 11 日
+## 2021年10月10日
 
 ### Experience Cloud ID Extension 5.3.1
 

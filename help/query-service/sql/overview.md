@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリサービス；sql;sql 参照；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL;SQL 参照；
 solution: Experience Platform
 title: クエリサービス SQL リファレンス
 topic-legacy: reference
@@ -14,4 +14,4 @@ ht-degree: 0%
 
 # クエリサービス SQL リファレンス
 
-[!DNL Query Service] は、標準の ANSI SQL を文やその他の制限付きコマ `SELECT` ンドに使用する機能を提供します。[!DNL Query Service] には、データ定義言語やデータ操作言語の機能は含まれていません。このサービスを介してクエリされるデータは、主に不変のデータセットが含まれる [!DNL Experience Data Lake] から取得されます。
+[!DNL Query Service] には、標準の ANSI SQL を `SELECT` ステートメントおよびその他の制限付きコマンド [!DNL Query Service] には、データ定義言語やデータ操作言語の機能は含まれていません。 サービスを通じてクエリされるデータは、 [!DNL Experience Data Lake]：主に不変データセットを含みます。

@@ -3,7 +3,7 @@ title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 100%
 

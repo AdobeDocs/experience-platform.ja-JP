@@ -6,7 +6,7 @@ exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 20%
+ht-degree: 28%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+>属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 権限はAdobe Experience Cloudの領域で、管理者がユーザーの役割とアクセスポリシーを定義して、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できます。
 

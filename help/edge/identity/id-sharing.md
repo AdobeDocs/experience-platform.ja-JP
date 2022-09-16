@@ -1,16 +1,16 @@
 ---
-title: モバイルから Web への ID とクロスドメイン ID の共有
+title: モバイルから web およびクロスドメイン での ID の共有
 description: モバイルから Web プロパティ、およびドメイン間で訪問者 ID を保持する方法を説明します。
 keywords: ID；モバイル；ID；共有；ドメイン；クロスドメイン；sdk；プラットフォーム；
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
 source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# モバイルから Web への ID とクロスドメイン ID の共有
+# モバイルから web およびクロスドメイン での ID の共有
 
 ## 概要
 

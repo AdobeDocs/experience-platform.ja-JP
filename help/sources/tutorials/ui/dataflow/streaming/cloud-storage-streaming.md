@@ -9,7 +9,7 @@ exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 10%
+ht-degree: 20%
 
 ---
 
@@ -29,9 +29,9 @@ ht-degree: 10%
 
 - [データフロー](../../../../../dataflows/home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは、ソースからに至るまで、様々なサービスをまたいで設定されます。 [!DNL Identity Service]、 [!DNL Profile]、および [!DNL Destinations].
 - [Data Prep](../../../../../data-prep/home.md)：Data Prep を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。Data Prep は、CSV 取得ワークフローなどのデータ取得プロセスで「マッピング」手順として表示されます。
-- [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Experience Platform] は顧客体験データを整理します。
+- [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
+   - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## データの追加
@@ -105,7 +105,7 @@ ht-degree: 10%
 >
 >Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、使用例に合わせて手動で調整できます。
 
-必要に応じて、フィールドを直接マッピングするか、データ準備関数を使用してソースデータを変換し、計算値または計算値を導出できます。 マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
+必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
 ソースデータをマッピングしたら、 **[!UICONTROL 次へ]**.
 
@@ -117,11 +117,11 @@ ht-degree: 10%
 
 データフローの値を指定し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![データフローの詳細](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
+![dataflow-detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
 ### レビュー
 
-この **[!UICONTROL レビュー]** 手順が表示され、新しいデータフローを作成する前に確認できます。 詳細は、次のカテゴリに分類されます。
+**[!UICONTROL レビュー]**&#x200B;手順が表示され、新しいデータフローを作成する前に確認できます。詳細は、次のカテゴリに分類されます。
 
 - **[!UICONTROL 接続]**:アカウント名、ソースのタイプ、および使用しているストリーミングクラウドストレージソースに固有のその他の情報が表示されます。
 - **[!UICONTROL データセットの割り当てとフィールドのマッピング]**:データフローに使用するターゲットデータセットとスキーマが表示されます。
@@ -136,7 +136,7 @@ ht-degree: 10%
 
 ## 次の手順
 
-このチュートリアルでは、データフローを作成し、クラウドストレージソースからデータをストリーミングしました。 受信データは、次のようなダウンストリームの Platform サービスで使用できるようになりました。 [!DNL Real-time Customer Profile] および [!DNL Data Science Workspace]. 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、データフローを作成し、クラウドストレージソースからデータをストリーミングしました。 受信データは、[!DNL Real-time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
-- [[!DNL Real-time Customer Profile] の概要](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] の概要](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] 概要](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] 概要](../../../../../data-science-workspace/home.md)

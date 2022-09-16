@@ -1,7 +1,8 @@
 ---
 title: 医療業界のデータモデル ERD
 description: 医療業界の標準化されたデータモデルを示す ERD（エンティティ関係図）を表示します。 このデータモデルは、Adobe Experience Platformで使用する Experience Data Model(XDM) と互換性があります。
-source-git-commit: 721059a87347e371228d00edeac141afa894af47
+exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 19%

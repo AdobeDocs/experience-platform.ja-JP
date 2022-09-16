@@ -3,10 +3,11 @@ keywords: 宛先アカウント、宛先アカウント、アカウントの削�
 title: 宛先アカウントの削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で宛先アカウントを削除する手順を示します
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
+source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 

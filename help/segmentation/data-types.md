@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データタイプ；データタイプ；データタイプ；データタイプ；データタイプ；セグメント化データタイプ；セグメント化；セグメント化；セグメント化サービス；セグメント化サービスデータタイプ；
+keywords: Experience Platform；ホーム；人気のトピック；データタイプ；データタイプ；データタイプ；データタイプ；データタイプ；セグメント化データタイプ；セグメント化；セグメント化サービス；セグメント化サービスデータタイプ；
 solution: Experience Platform
 title: セグメント化サービスでサポートされるデータタイプ
 topic-legacy: overview
-description: エクスペリエンスデータモデル (XDM) のすべてのデータタイプは、エクスペリエンスセグメント化サービス内でAdobeされます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+description: Experience Data Model(XDM) のすべてのデータタイプは、Segmentation Service 内でサポートされています。Adobe セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 62%
 
 # セグメント化サービスでサポートされるデータタイプ
 
-すべてのエクスペリエンスデータモデル (XDM) データタイプは、Adobe Experience Platform Segmentation Service 内でサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+すべての Experience Data Model(XDM) データタイプがAdobe Experience Platform Segmentation Service 内でサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
 ## 文字列データ
 
@@ -25,7 +25,7 @@ ht-degree: 62%
 | ステートメントのタイプ | 例 |
 | -------------- | -------- |
 | 論理 | `and`、`or`、`not` |
-| 包含／排他 | `include`,  `must` `exist`,  `exclude`,  `must not exist` |
+| 包含／排他 | `include`, `must` `exist`, `exclude`, `must not exist` |
 | 比較 | `equals`、`does not equal`、`contains`、`starts with` |
 
 ## 日付データ
@@ -39,7 +39,7 @@ ht-degree: 62%
 
 ## エクスペリエンスイベント
 
-Adobe Experience Platformスキーマとして、[!DNL XDM ExperienceEvents] は、顧客と [!DNL Platform] 統合されたアプリケーションとの明示的かつ暗黙的なやり取りを記録します。これには、やり取りがおこなわれた時点のシステムのスナップショットが含まれます。 [!DNL ExperienceEvents] はファクトレコードです。したがって、セグメント定義時に使用できるデータソースになります。
+Adobe Experience Platformスキーマとして、 [!DNL XDM ExperienceEvents] 明示的かつ暗黙的な顧客インタラクションを記録する [!DNL Platform] — 統合アプリケーション（インタラクションが発生した時点のシステムのスナップショットを含む）。 [!DNL ExperienceEvents] は事実記録です。 したがって、セグメント定義時に使用できるデータソースになります。
 
 次の表に示すように、イベントデータは、イベント動作の絞り込みやイベント属性の指定に役立つキーワードを使用して表現されます。
 
@@ -54,15 +54,15 @@ Adobe Experience Platformスキーマとして、[!DNL XDM ExperienceEvents] は
 
 外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
 
-現在、外部オーディエンスとしてはAdobe Audience Managerのみがサポートされ、今後追加のソースが有効になります。 Adobe Audience Managerオーディエンスを Platform で使用する方法について詳しくは、Adobe Audience Managerドキュメントの ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja) にある「[ オーディエンス共有ガイド」を参照してください。
+現在、外部オーディエンスとしてはAdobe Audience Managerのみがサポートされており、今後、追加のソースが有効になる予定です。 Platform でのAdobe Audience Managerオーディエンスの使用について詳しくは、 [Adobe Audience Managerドキュメント内のオーディエンス共有ガイド](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja).
 
 ### セグメントの共有
 
-Platform で作成されたセグメントは、他の [Adobe Experience Cloudコアサービス ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
+Platform で作成されたセグメントは、他の [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja). この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
 
 ## その他のデータタイプ
 
-上記のデータタイプに加えて、サポートされるデータタイプのリストには次のものも含まれます。
+サポートされるデータタイプには、上記のデータタイプに加えて、次のデータタイプも含まれます。
 
 - URI(Uniform Resource Identifier)
 - 列挙

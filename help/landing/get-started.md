@@ -14,6 +14,6 @@ ht-degree: 55%
 
 # Adobe Experience Platform はじめに
 
-このビデオでは、[!DNL Experience Platform] の概要と、解決するビジネス上の課題の概要を簡単に説明します。
+このビデオでは、 [!DNL Experience Platform] 解決するビジネス上の課題の概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

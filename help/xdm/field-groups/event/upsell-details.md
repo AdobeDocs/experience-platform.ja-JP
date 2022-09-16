@@ -1,6 +1,6 @@
 ---
 title: アップセル詳細スキーマフィールドグループ
-description: このドキュメントでは、「アップセル詳細」スキーマフィールドグループの概要を説明します。
+description: このドキュメントでは、アップセル詳細スキーマフィールドグループの概要を説明します。
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
@@ -9,22 +9,22 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL アップセル詳細] スキーマフィールドグループ
+# [!UICONTROL アップセルの詳細] スキーマフィールドグループ
 
-[!UICONTROL アップセ]  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) ルトランザクションの詳細や、オファーを顧客に表示する様々な方法など、アップセルマーケティングイベントに関する情報を取得するために使用される、クラスの標準スキーマフィールドグループです。
+[!UICONTROL アップセルの詳細] は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md) アップセルマーケティングイベントに関する情報（トランザクションに関する詳細や、オファーが顧客に表示された様々な方法など）を取得するために使用します。
 
-フィールドグループには、1 つのオブジェクトタイプのフィールド `upsells` が用意されています。 このオブジェクトに含まれるプロパティについて、以下で説明します。
+フィールドグループには、単一のオブジェクトタイプのフィールドが用意されています。 `upsells`. このオブジェクトに含まれるプロパティについて、以下で説明します。
 
 ![アップセルの詳細構造](../../images/field-groups/upsell-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `upsellImpressions` | [ インプレッション ](../../data-types/impressions.md) の配列 | 顧客に対して記録されたインプレッション（デジタルビュー、アップセルオファーとのエンゲージメント）をリストする配列。 |
-| `upsellTransaction` | [トランザクション](../../data-types/transaction.md) | アップセルの通貨トランザクションを示します。 |
+| `upsellImpressions` | の配列 [Impressions](../../data-types/impressions.md) | 顧客に記録されたインプレッション（デジタルビュー、アップセルオファーを含むエンゲージメント）をリストする配列。 |
+| `upsellTransaction` | [トランザクション](../../data-types/transaction.md) | アップセルの通貨トランザクションを記述します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [入力例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.example.1.json)
+* [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.schema.json)

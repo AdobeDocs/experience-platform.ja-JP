@@ -3,7 +3,8 @@ keywords: Experience Platform；ホーム；人気の高いトピック；analyt
 solution: Experience Platform
 title: UI で Analytics ソースを使用したデータフローの作成
 description: このチュートリアルでは、Platform UI を使用して分析ソースのデータフローを作成する手順を説明します。
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: a3343f170c9ab922964a3dbbd54cd722b44e1b1f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 49%

@@ -1,7 +1,8 @@
 ---
 title: プロバイダークラス
 description: このドキュメントでは、Experience Data Model(XDM) の Provider クラスの概要を説明します。
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 7%

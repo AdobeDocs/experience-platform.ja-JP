@@ -7,7 +7,7 @@ exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。顧客成功プロバイダーのサポートには以下が含まれます。 [!DNL Zendesk].
 
-このAdobe Experience Platform [ソース](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) は [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) これにより、Zendesk からExperience Platformにユーザー情報が返され、さらに処理が行われます。
+このAdobe Experience Platform [ソース](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) これにより、Zendesk からExperience Platformにユーザー情報が返され、さらに処理が行われます。
 
 ## IP アドレス許可リスト
 

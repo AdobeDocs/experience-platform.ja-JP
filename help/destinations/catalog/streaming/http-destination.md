@@ -5,8 +5,8 @@ description: Adobe Experience Platformの HTTP API 宛先を使用して、プ�
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 4%
 
 ---
 

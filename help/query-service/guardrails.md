@@ -2,7 +2,8 @@
 keywords: Experience Platform；クエリ；クエリサービス；トラブルシューティング；ガードレール；ガイドライン；制限；
 title: クエリサービスのガードレール
 description: このドキュメントでは、クエリの使用を最適化するのに役立つ、クエリサービスデータの使用制限に関する情報を提供します。
-source-git-commit: 8ae8efae04e299302cca42f9c92827d374883cd9
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+source-git-commit: 78cbf9aea4be044b73ae32ea5920c821dacafaa2
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 13%

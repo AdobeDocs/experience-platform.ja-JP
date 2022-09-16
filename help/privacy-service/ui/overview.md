@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: プライバシーサービス UI の概要
+title: Privacy ServiceUI の概要
 topic-legacy: UI guide
-description: プライバシーサービスユーザーインターフェイスの使用を開始して、様々なエクスペリエンスクラウドアプリケーション間でプライバシー要求を調整および監視します。
+description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視します。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
@@ -14,23 +14,23 @@ ht-degree: 18%
 
 # [!DNL Privacy Service] UI の概要
 
-Adobe エクスペリエンスプラットフォームに [!DNL Privacy Service] は RESTFUL API およびユーザーインターフェイスが用意されています。これにより、様々なソリューション間でプライバシー要求やコンプライアンス要求を調整することができます。 このドキュメントでは、UI について説明 [!DNL Privacy Service] します。 この API の使用について詳しくは、プライバシーに関するサービスの API ガイドを参照してください [ ](../api/overview.md) 。
+Adobe Experience Platform [!DNL Privacy Service] は、様々なソリューション間でプライバシーとコンプライアンスのリクエストを調整できる RESTful API およびユーザーインターフェイスを提供します。 このドキュメントでは、 [!DNL Privacy Service] UI API の使用について詳しくは、 [Privacy ServiceAPI ガイド](../api/overview.md).
 
-## UI へのログイン [!DNL Privacy Service]
+## にログインします。 [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->UI を認証するには、Adobe ID が必要 [!DNL Privacy Service] です。 さらに、IMS 組織内のシステム管理者権限を持っている必要があります。
+>への認証をおこなうには、Adobe IDが必要です [!DNL Privacy Service] UI さらに、IMS 組織内でのシステム管理者権限が必要です。
 
-**[!UICONTROL ADOBE id でサインインし]** 、メッセージが表示されたら、adobe id の資格情報を入力します。
+選択 **[!UICONTROL Adobe IDを使用してログイン]** プロンプトが表示されたら、Adobe IDの資格情報を入力します。
 
-サインインしたら、「プライバシーの作成」を選択し **** ます。
+サインインしたら、 **[!UICONTROL プライバシー UI]**.
 
 ![](../images/ui-overview/quick-access.png)
 
-### ログイン元 [!DNL Experience Platform]
+### からのログイン [!DNL Experience Platform]
 
-Adobe エクスペリエンスプラットフォームの UI にアクセスできる場合は、左側のナビゲーションの「 [!DNL Privacy Service] 要求」タブを使用して ui にアクセスすることもでき **** ます。
+Adobe Experience Platform UI にアクセスできる場合は、 [!DNL Privacy Service] UI( **[!UICONTROL リクエスト]** 」タブをクリックします。
 
 ![](../images/ui-overview/platform.png)
 

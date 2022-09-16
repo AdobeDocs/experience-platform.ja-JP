@@ -3,7 +3,7 @@ title: Reactor API における関係
 description: 各リソースの関係要件など、Reactor API でリソースの関係が確立される方法を説明します。
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 100%
 

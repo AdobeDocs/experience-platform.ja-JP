@@ -3,7 +3,7 @@ title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5492'
 ht-degree: 100%
 
@@ -524,7 +524,7 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 条件が true を返す最大回数を指定します。選択できる項目は次のとおりです。
 
 * Page view
-* Sessions
+* セッション
 * Visitor
 * Seconds
 * Minutes
@@ -592,7 +592,7 @@ Core 拡張機能は、すべての Adobe Experience Platform ユーザーが使
 
 *JavaScript*
 
-JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
+JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
 
 >[!NOTE]
 >
@@ -799,7 +799,7 @@ CSS セレクターチェーン：
 * URL
 * Hostname
 * Pathname
-* Protocol
+* プロトコル
 * リファラー
 * Title
 

@@ -4,13 +4,13 @@ title: Platform UI を使用して Adobe Campaign Managed Services ソース接�
 description: Platform の UI を使用して Adobe Experience Platform を Adobe Campaign Managed Services に接続する方法について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
-workflow-type: ht
+exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 100%
 
 ---
-
 
 # Platform UI を使用して Adobe Campaign Managed Services ソース接続を作成
 

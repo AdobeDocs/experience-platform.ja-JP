@@ -7,13 +7,13 @@ exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 11%
+ht-degree: 27%
 
 ---
 
 # [!DNL HTTP API] コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込みながら、 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 以下を使用して、 [!DNL HTTP API] ソースコネクタを使用して、データを Platform にストリーミングします。 この [!DNL HTTP API] ソースは次の条件でサポートされています： [!DNL Data Prep] 関数を使用して、XDM 準拠でないデータを XDM 準拠のデータセットにマッピングできます。
 

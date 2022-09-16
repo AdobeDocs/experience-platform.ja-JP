@@ -5,7 +5,7 @@ breadcrumb-title: データハイジーンガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、消費者データリクエストを管理します。
 feature: Data Hygiene
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%
 

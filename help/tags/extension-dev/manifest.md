@@ -3,7 +3,7 @@ title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 100%
 
@@ -134,20 +134,7 @@ ht-degree: 100%
       <td><code>schema</code></td>
       <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクト対して実行されるライブラリモジュールと互換性のある形式であることを、Platform が適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "delay": {
-      "type": "number",
-      "minimum": 1
-    }
-  },
-  "required": [
-    "delay"
-  ],
-  "additionalProperties": false
-}
+{ "$schema":"http://json-schema.org/draft-04/schema#", "type":"object", "properties":{ "delay":{ "type":"number", "minimum":1 } }, "required":[ "delay" ], "additionalProperties":false }
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>

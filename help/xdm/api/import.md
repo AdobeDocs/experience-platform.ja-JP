@@ -1,7 +1,8 @@
 ---
 title: 読み込み API エンドポイント
 description: Schema Registry API の/import エンドポイントを使用すると、IMS 組織とサンドボックスの間で XDM リソースを共有できます。
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 18%

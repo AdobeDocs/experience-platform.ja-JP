@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platformの概要ビデオ
-description: このビデオでは、Adobe Experience Platformの概要と、解決するビジネス上の課題について簡単に説明します。
+description: このビデオでは、Adobe Experience Platformの概要と、が解決するビジネス上の課題について簡単に説明します。
 kt: 4804
 audience: all
 doc-type: video
@@ -18,6 +18,6 @@ ht-degree: 7%
 
 このビデオでは、Experience Platformの概要と、解決するビジネス上の課題の概要を簡単に説明します。
 
-詳しくは、まず [Experience Platformの概要 ](../home.md) を読んでください。
+詳しくは、まず [Experience Platformの概要](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

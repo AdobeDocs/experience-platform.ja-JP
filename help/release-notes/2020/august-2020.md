@@ -7,14 +7,14 @@ author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '572'
+ht-degree: 29%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020年8月12日**
+**リリース日：2020年8月12日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 

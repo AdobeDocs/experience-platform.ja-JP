@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；場所コンテキスト；placeContext；データ型；データ型；
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；場所のコンテキスト；placeContext；データ型；データ型；
 solution: Experience Platform
-title: コンテキストデータタイプを配置
+title: 場所コンテキストデータタイプ
 topic-legacy: overview
 description: このドキュメントでは、Place Context XDM データタイプの概要を説明します。
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
@@ -12,23 +12,23 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Place contextdata ] type
+# [!UICONTROL 場所のコンテキスト] データタイプ
 
-[!UICONTROL 場所コ] ンテキストは、目標地点情報や地理的座標など、観測されたイベントの場所を示す標準の XDM データ型です。
+[!UICONTROL 場所のコンテキスト] は、目標地点情報や地理的座標など、観測されたイベントの場所を示す標準的な XDM データ型です。
 
 <img src="../images/data-types/place-context.png" width="500" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `POIinteraction` | [[!UICONTROL 目標地点の相互作用]](./poi-interaction.md) | 目標地点 (POI) インタラクションの詳細について説明します。 |
-| `activePOIs` | [[!UICONTROL  目標地点の詳細 ]](./poi-details.md) の配列 | イベントの原因となった POI を示します。 |
-| `geo` | [[!UICONTROL 地域]](./geo.md) | エクスペリエンスが配信された地域を示します。 |
-| `localTime` | DateTime | [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式のタイムスタンプ。指定されたタイムゾーンオフセットでを使用するローカル時間を示します。 書式設定パターンは `yyyy-MM-dd'T'HH:mm:ssXXX` です（例：`2001-07-04T12:08:56-07:00`）。 |
-| `localTimezoneOffset` | 整数 | `localTime` 値に対する UTC からの現在のローカルタイムゾーンのオフセット（分）。 該当する場合は、現在の DST オフセットを含める必要があります。 |
+| `POIinteraction` | [[!UICONTROL 目標点インタラクション]](./poi-interaction.md) | 目標点 (POI) インタラクションに関する詳細を説明します。 |
+| `activePOIs` | の配列 [[!UICONTROL 目標地点の詳細]](./poi-details.md) | イベントの原因となった POI を示します。 |
+| `geo` | [[!UICONTROL ジオ]](./geo.md) | エクスペリエンスが配信された地域を示します。 |
+| `localTime` | 日時 | のタイムスタンプ [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式。指定したタイムゾーンオフセットを使用してローカル時間を示します。 書式設定パターンは次のとおりです。 `yyyy-MM-dd'T'HH:mm:ssXXX` ( 例： `2001-07-04T12:08:56-07:00`) をクリックします。 |
+| `localTimezoneOffset` | 整数 | の UTC からの現在のローカルタイムゾーンのオフセット（分） `localTime` の値です。 該当する場合は、現在の DST オフセットを含める必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
-* [入力例](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
+* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)

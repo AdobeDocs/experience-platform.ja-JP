@@ -63,7 +63,7 @@ Adobe Experience Platform でのタグの実装は、それぞれ大きく異な
 
 例えば、すべてのサイトまたはアプリケーションをまたいで [!DNL Adobe Analytics]、[!DNL Target]、および同じサードパーティ拡張機能をデプロイしている場合は、それがグループ化の理由になります。
 
-### People
+### 人
 
 Adobe Experience Platform で作業中の個人、チーム、組織は、すべての Web サイトやアプリケーション、もしくはその一部、または 1 つのみにアクセスする必要がありますか？
 

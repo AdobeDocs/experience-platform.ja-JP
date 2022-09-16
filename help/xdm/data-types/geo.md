@@ -8,7 +8,7 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 36%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL 地域座標]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
+| `_schema` | [[!UICONTROL 地理座標]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
 | `_id` | 文字列 | システムで生成された、座標の一意の ID。 |
 | `city` | 文字列 | 市区町村の名前。 |
 | `countryCode` | 文字列 | 国の 2 文字の <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> コード。 |

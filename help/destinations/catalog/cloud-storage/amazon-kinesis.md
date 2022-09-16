@@ -5,8 +5,8 @@ description: Amazon Kinesisストレージへのリアルタイムアウトバ�
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1890'
+ht-degree: 3%
 
 ---
 

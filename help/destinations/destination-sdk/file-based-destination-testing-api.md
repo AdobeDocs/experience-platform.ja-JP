@@ -1,13 +1,13 @@
 ---
 description: このページでは、/testing/destinationInstance API エンドポイントを使用して、ファイルベースの宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証する方法について説明します。
 title: サンプルプロファイルを使用してファイルベースの宛先をテストする
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%
 
 ---
-
 
 # サンプルプロファイルを使用してファイルベースの宛先をテストする
 

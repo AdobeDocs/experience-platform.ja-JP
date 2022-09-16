@@ -8,8 +8,8 @@ landing-page-description: アトリビューション AI は、コンバージ�
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 90%
 
 ---
 

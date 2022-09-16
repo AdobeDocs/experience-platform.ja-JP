@@ -1,6 +1,6 @@
 ---
-title: Experience Platformを活用した顧客体験
-description: このビデオでは、Adobe Experience Platformで構築された仮想的なエクスペリエンスに従い、顧客の観点から見てみましょう。 Experience Platformがリッチで関連性の高いリアルタイムエクスペリエンスを作成する方法を確認します。
+title: Experience Platformを活用したカスタマーエクスペリエンス
+description: このビデオでは、お客様の観点から見たように、Adobe Experience Platformで構築された仮想的なエクスペリエンスに従います。 Experience Platformがリッチで関連性の高いリアルタイムエクスペリエンスを作成する方法をご覧ください。
 kt: 4339
 audience: all
 doc-type: video
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# Experience Platformによる顧客体験
+# Experience Platformを活用した顧客体験
 
-Experience Platformが顧客の視点から見たように、Platform で構築された仮想的なエクスペリエンスに従ったこのビデオを見て、顧客に対してリッチで関連性の高いリアルタイムエクスペリエンスを作成する方法を確認します。
+顧客の視点から見たように、Platform で構築された仮想的なエクスペリエンスに従ったこのビデオを見ることで、Experience Platformが顧客に対してリッチで関連性の高いリアルタイムエクスペリエンスを作成する方法を確認できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)

@@ -1,13 +1,13 @@
 ---
 title: 製品カテゴリスキーマフィールドグループ
 description: このドキュメントでは、「製品カテゴリ」スキーマフィールドグループの概要を説明します。
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL 製品カテゴリ] スキーマフィールドグループ
 

@@ -5,7 +5,7 @@ title: Real-time Customer Data Platform B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のサンプルシナリオを使用します。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 100%
 

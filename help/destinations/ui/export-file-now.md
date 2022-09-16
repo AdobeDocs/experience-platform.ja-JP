@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
 source-wordcount: '745'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >この **[!UICONTROL ファイルを今すぐ書き出し]** 」オプションを使用するAdobe Experience Platform Destination SDKは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
->この機能へのアクセスについては、Adobe担当者にお問い合わせください。
+>この機能へのアクセス権については、アドビ担当者にお問い合わせください。
 
 >[!IMPORTANT]
 > 
@@ -26,11 +26,11 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="ファイルを今すぐ書き出し"
->abstract="以前にスケジュールされたエクスポートに加えて、フルファイルエクスポートも配信する場合は、このコントロールを選択します。 ファイルのエクスポートが直ちにトリガーされ、Experience Platformのセグメント化の実行から最新の結果が取得されます。"
+>abstract="以前にスケジュールされたエクスポートに加えて、フルファイルエクスポートも配信する場合は、このコントロールを選択します。  ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。"
 
 この記事では、Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先 ( 例： [クラウドストレージ](/help/destinations/catalog/cloud-storage/overview.md) および [電子メールマーケティング](/help/destinations/catalog/email-marketing/overview.md) 宛先。
 
-この **[!UICONTROL ファイルを今すぐ書き出し]** 「 」コントロールを使用すると、以前にスケジュールされたセグメントの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 このエクスポートは、以前にスケジュールされたエクスポートに加えておこなわれ、セグメントのエクスポート頻度は変更されません。 ファイルのエクスポートが直ちにトリガーされ、Experience Platformのセグメント化の実行から最新の結果が取得されます。
+この **[!UICONTROL ファイルを今すぐ書き出し]** 「 」コントロールを使用すると、以前にスケジュールされたセグメントの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 この書き出しは、以前にスケジュールされた書き出しに加えて行われ、セグメントの書き出し頻度は変更されません。  ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。
 
 この目的でExperience PlatformAPI を使用することもできます。 方法を読む [アドホックアクティベーション API を使用して、バッチ保存先に対してオンデマンドでオーディエンスセグメントをアクティブ化します](/help/destinations/api/ad-hoc-activation-api.md).
 

@@ -5,13 +5,13 @@ exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
 workflow-type: tm+mt
 source-wordcount: '2137'
-ht-degree: 33%
+ht-degree: 99%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年8月24日**
+**リリース日：2022年8月24日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -26,7 +26,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-AI/ML サービスは、マーケティングアナリストや従事者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに特化したモデルを設定できます。
+AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有のモデルを設定できます。
 
 ### アトリビューション AI
 
@@ -36,13 +36,13 @@ AI/ML サービスは、マーケティングアナリストや従事者に対�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プライバシーのサポート | <ul><li> Attribution AIは、ユーザーの役割の定義と、管理するアクセスポリシーの定義をサポートするようになりました。 [権限](../../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> ～ [属性ベースのアクセス制御](../../access-control/abac/overview.md)管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加できます。管理者は、これらのフィールドに対応する特定のフィールドやデータにのみアクセスできるユーザーの役割を定義できます。</li><li>Attribution AIは Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。  </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| プライバシーのサポート | <ul><li> アトリビューション AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割およびアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加されるメタデータにすることができます。管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。  </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注意**:Attribution AIは、既存のヘルスケアシールドまたはプライバシーシールドのお客様が追加の通知を受けるまで利用できません。
+**メモ**：既存のヘルスケアシールドまたはプライバシーシールドのお客様は、追加の通知が届くまでアトリビューション AI を利用できません。
 
-Attribution AIの詳細については、 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概要。
+アトリビューション AI について詳しくは、[アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) の概要を参照してください。
 
 ### 顧客 AI
 
@@ -52,23 +52,23 @@ Real-time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プライバシーのサポート | <ul><li> 顧客 AI で、管理するユーザーの役割とアクセスポリシーの定義がサポートされるようになりました [権限](../../../help/access-control/abac/ui/permissions.md) 製品アプリケーション内のフィーチャとオブジェクトの場合。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> ～ [属性ベースのアクセス制御](../../access-control/abac/overview.md)の管理者は、特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、ラベルなど、オブジェクトに追加されるメタデータにすることができます。 また、管理者は、特定のフィールドおよびそれらのフィールドに対応するデータのみにアクセスできるユーザーの役割を定義できます。</li><li>顧客 AI は Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。 </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| プライバシーのサポート | <ul><li> 顧客 AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割とアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、オブジェクトに追加されるメタデータ（ラベルなど）にすることができます。 管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>顧客 AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。 </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注意**:顧客 AI は、追加の通知を受けるまで、既存のヘルスケアシールドまたはプライバシーシールドのお客様では利用できません。
+**メモ**：既存のヘルスケアシールドまたはプライバシーシールドのお客様は、追加の通知が届くまで顧客 AI を利用できません。
 
-顧客 AI について詳しくは、 [顧客 AI](../../intelligent-services/customer-ai/overview.md) 概要。
+顧客 AI について詳しくは、[顧客 AI](../../intelligent-services/customer-ai/overview.md) の概要を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットでキャプチャされた、組織のデータに関する重要なインサイトを表示できます。
+Adobe Experience Platform では、複数の [!DNL dashboards] を提供しており、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| スケジュールされたアクティベーションウィジェット | この [!UICONTROL 予定されているアクティベーション] ウィジェットは、最近アクティブ化された宛先を表形式で表示します。 セグメントごとに、名前、宛先プラットフォーム、アクティベーションの開始日と終了日が含まれます。 このウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透明にすることができます。 この累積情報は、アクティベーションが中断された場所も示します。 |
+| 予定されているアクティベーションウィジェット | [!UICONTROL 予定されているアクティベーション]ウィジェットは、最近アクティブ化された宛先を表形式で表示します。セグメントごとに、名前、宛先プラットフォーム、アクティベーションの開始日と終了日が含まれます。このウィジェットを使用すると、オーディエンスがアクティブ化されている場所とタイミングを一目で見つけ、重複したアクティベーションや不要なアクティベーションをより透過的にすることができます。この累積情報は、アクティベーションが中断された場所も示します。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -80,7 +80,7 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 | 機能 | 説明 |
 | --- | --- |
-| 警告を含むレコードの取り込みのサポート | Data Prep は、警告（重要でないエラー）をフィールドにローカライズし、残りの行を取り込めるようになりました。 すべてのマッパー変換エラーが、警告と共に、部分的に取り込まれた行が成功したと見なされ、警告と共にレポートされるようになりました。  監視は、警告および診断の詳細を含むレコードに対してもサポートされます。 警告を含むレコードの部分取り込みは、現在、データのストリーミングでのみ使用できます。 次のドキュメントを確認します。 [警告を含むレコードの取り込み](../../sources/tutorials/ui/monitor-streaming.md) を参照してください。 |
+| 警告を含むレコードの取り込みのサポート | Data Prep では、警告（重要でないエラー）をフィールドにローカライズし、残りの行を取り込めるようになりました。すべてのマッパー変換エラーが警告としてレポートされるようになりました。また、部分的に取り込んだ行は成功と見なされ、警告が表示されるようになりました。モニタリングは、警告および診断の詳細を含むレコードに対してもサポートされます。警告を含むレコードの部分的な取り込みは、現在、ストリーミングデータでのみ使用できます。詳しくは、[警告を含むレコードの取り込み](../../sources/tutorials/ui/monitor-streaming.md)に関するドキュメントを確認してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -94,7 +94,7 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータリリースでは、 [宛先カタログ](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**:このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。 Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、 [マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加します。これにより、プロファイル属性をAdobe Targetにマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**:このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。 また、 **[!UICONTROL カスタムパーソナライゼーション]**、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタはオプションのを追加します [マッピング手順](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加すると、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) データ収集用。 さらに、すべての Server API 呼び出しは、 [認証コンテキスト](../../server-api/authentication.md). |
+| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;の宛先では、データ収集に [Edge Network Server API](../../server-api/overview.md) を使用する必要があります。さらに、すべての Server API 呼び出しは、[認証済みコンテキスト](../../server-api/authentication.md)で行う必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL dashboards] 毎日のスナップショットで
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。 [!DNL Outreach] は、組織がセールスエンゲージメントを自動化し、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。 |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。[!DNL Outreach] は、組織がセールスエンゲージメントを自動化、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -116,9 +116,9 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| グローバルスキーマ | [[!UICONTROL AJO エンティティスキーマ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizerの非正規化エンティティを表します。 |
-| クラス | [[!UICONTROL AJO 実行エンティティ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | セグメント化で使用するAdobe Journey Optimizer実行エンティティを表します。 |
-| フィールドグループ | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfrontのすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
+| グローバルスキーマ | [[!UICONTROL AJO エンティティスキーマ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer の非正規化エンティティを表します。 |
+| クラス | [[!UICONTROL AJO 実行エンティティ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | セグメント化で使用する Adobe Journey Optimizer 実行エンティティを表します。 |
+| フィールドグループ | [[!UICONTROL Workfront 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront のすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -126,15 +126,15 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [[!UICONTROL Journey Orchestrationステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 2 つの新しいプロパティが追加されました。 `origTimeStamp` および `experienceID`. |
-| フィールドグループ | [[!UICONTROL セグメントメンバーシップの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | に加えて [!UICONTROL XDM 個人プロファイル]の場合、このフィールドグループは、XDM ビジネスアカウントクラスに基づくスキーマでも使用できるようになりました。 |
-| フィールドグループ | （複数） | Marketo B2B アクティビティに関連するいくつかのフィールドグループが、安定したステータスに更新されました。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1593/files) 」を参照してください。 |
-| フィールドグループ | （複数） | 発生していたエラーを修正するために、複数の天気関連フィールドグループが更新されました。 `uvIndex` および `sunsetTime`. 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1602/files) 」を参照してください。 |
+| フィールドグループ | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | `origTimeStamp` および `experienceID` の 2 つの新しいプロパティが追加されました。 |
+| フィールドグループ | [[!UICONTROL セグメントメンバーシップの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | [!UICONTROL XDM 個人プロファイル]に加えて、このフィールドグループは、XDM ビジネスアカウントクラスに基づくスキーマでも使用できるようになりました。 |
+| フィールドグループ | （複数） | Marketo B2B アクティビティに関連するいくつかのフィールドグループが、安定したステータスに更新されました。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1593/files)を参照してください。 |
+| フィールドグループ | （複数） | `uvIndex` および `sunsetTime` で発生していたエラーを修正するために、複数の天候関連のフィールドグループが更新されました。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1602/files)を参照してください。 |
 | データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 新しいプロパティ `productImageUrl` が追加されました。 |
 | データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新しいプロパティ `framesPerSecond` が追加されました。 |
 | データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` の名前は `appVersion` に変更されました。`meta:enum` および `description` フィールドも更新されました。 |
-| データタイプとフィールドグループ | （複数） | 複数のメディアデータタイプとフィールドグループに、新しいフィールドと説明が更新されました。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1582/files) 」を参照してください。 |
-| (すべて) | （複数） | を含むすべてのスキーマオブジェクト `enum` フィールドに、対応する `meta:enum` 各制約の表示値を示すフィールド。 次を参照してください。 [プルリクエスト](https://github.com/adobe/xdm/pull/1601/files) 」を参照してください。 |
+| データタイプとフィールドグループ | （複数） | 複数のメディアデータタイプとフィールドグループに、新しいフィールドと説明が更新されました。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1582/files)を参照してください。 |
+| (すべて) | （複数） | `enum` フィールドを含むすべてのスキーマオブジェクトには、対応する `meta:enum` フィールドも含まれるようになり、各制約の表示値を示します。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1601/files)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -146,8 +146,8 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 結合ポリシーのハード制限 | Platform は、次のハード制限を適用するようになりました： **5** サンドボックスごとのポリシーの結合 現在、サンドボックスに結合ポリシーが 6 つ以上ある場合、 **not** サンドボックスに結合ポリシーが 5 つ未満になるまで、新しい結合ポリシーを作成できます。 |
-| 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスが、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表現できるようになりました。 このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、が存在するデータセットから結合されるプロファイルに影響を与えます `com_adobe_aep_profile_region_dataset` は `true`. このリリース以前の残りのエッジ属性フラグメントがこれらの指標に含まれていたので、ライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標にドロップが表示されたり、プロファイルダッシュボードの「プロファイル数」指標にドロップが表示されたりします。 |
+| 結合ポリシーのハード制限 | Platform は、サンドボックスごとに **5** つの結合ポリシーのハード制限を適用するようになりました。サンドボックスに現在 5 つを超える結合ポリシーがある場合、サンドボックスの結合ポリシーが 5 つ未満になるまで、新しい結合ポリシーを作成できま&#x200B;**せん**。 |
+| 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスは、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表示できるようになりました。このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、`com_adobe_aep_profile_region_dataset` が `true` とマークされているデータセットから結合されるプロファイルに影響を与えます。このリリース以前の残りのエッジ属性フラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -161,7 +161,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 4000 セグメントのサポート | Platform を持つすべての組織は、最大 4,000 個のセグメント定義をサポートできるようになりました。 この変更がセグメントジョブ API に与える影響について詳しくは、 [セグメントジョブエンドポイントガイド](../../segmentation/api/segment-jobs.md) |
+| 4000 セグメントのサポート | Platform を持つすべての組織は、最大 4,000 個のセグメント定義をサポートできるようになりました。 この変更がセグメントジョブ API に与える影響について詳しくは、[セグメントジョブエンドポイントガイド](../../segmentation/api/segment-jobs.md)を参照してください。 |
 
 [!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
@@ -175,10 +175,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| セルフサービスソース（バッチ SDK）の一般リリース | REST API ベースのデータソースを開発、テスト、統合し、簡単にソース仕様を設定できる方法で、バッチデータをExperience Platformに取り込みます。 ソース SDK を使用すると、次のことができます。 <ul><li>新しいソースをExperience Platformカタログに設定します。</li><li>サポートされる認証タイプ、スケジュール、リソースデータの取得方法など、ソースの仕様を定義します。</li><li>新しいソースに関するユーザー向けドキュメントを作成します。</li></ul> 詳しくは、 [セルフサービスソース（バッチ SDK）](../../sources/sources-sdk/overview.md). |
-| [!DNL Google BigQuery] ソースの一般提供 | 以下を使用： [!DNL Google BigQuery] データを取り込むソース [!DNL Google BigQuery] data warehouse からExperience Platformへ。 詳しくは、 [[!DNL Google BigQuery] ソース](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] ソース（ベータ版） | 以下を使用： [!DNL Teradata Vantage] ハイブリッドマルチクラウド環境からExperience Platformにデータを取り込むソース。 詳しくは、 [[!DNL Teradata Vantage] ソース](../../sources/connectors/databases/teradata-vantage.md). |
-| Adobe Analyticsソースのクロスリージョンサポート | 任意の地域（米国、英国またはシンガポール）からレポートスイートを取り込めるようになりました。レポートスイートは、ソース接続が作成されるExperience Platformサンドボックスインスタンスと同じ組織にマッピングする必要があります。 詳しくは、 [UI でのAdobe Analyticsソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| セルフサービスソース（Batch SDK）の一般提供 | REST API ベースのデータソースを開発、テスト、統合し、簡単にソース仕様を設定できる方法で、バッチデータを Experience Platform に取り込みます。Sources SDK を使用すると、次のことができます。 <ul><li>新しいソースを Experience Platform カタログに設定する。</li><li>サポートされる認証タイプ、スケジュール、リソースデータの取得方法など、ソースの仕様を定義する。</li><li>新しいソースに関するユーザー向けドキュメントを作成する。</li></ul> 詳しくは、[セルフサービスソース（Batch SDK）](../../sources/sources-sdk/overview.md)に関するドキュメントを参照してください。 |
+| [!DNL Google BigQuery] ソースの一般提供 | [!DNL Google BigQuery] ソースを使用すると、[!DNL Google BigQuery] データウェアハウスから Experience Platform にデータを取り込むことができます。詳しくは、[[!DNL Google BigQuery]  ソース](../../sources/connectors/databases/bigquery.md)に関するドキュメントを参照してください。 |
+| [!DNL Teradata Vantage] ソース（ベータ版） | [!DNL Teradata Vantage] ソースを使用すると、ハイブリッドマルチクラウド環境から Experience Platform にデータを取り込むことができます。詳しくは、[[!DNL Teradata Vantage]  ソース](../../sources/connectors/databases/teradata-vantage.md)に関するドキュメントを参照してください。 |
+| Adobe Analytics ソースのクロスリージョンサポート | 任意の地域（米国、英国またはシンガポール）からレポートスイートを取り込めるようになりました。レポートスイートは、ソース接続が作成されている Experience Platform サンドボックスインスタンスと同じ組織にマッピングする必要があります。詳しくは、[UI での Adobe Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 

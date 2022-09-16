@@ -2,19 +2,19 @@
 keywords: CRM;CRM;CRM の宛先；Outreach;Outreach crm の宛先
 title: アウトリーチ接続
 description: Outreach の宛先を使用すると、アカウントデータを書き出し、Outreach 内でビジネスニーズに合わせてアクティブ化できます。
-source-git-commit: 27da0f8d7896fd32e8a1b828630db7e5e08185c2
+exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
+source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
 workflow-type: tm+mt
 source-wordcount: '1714'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
-
 
 # [!DNL Outreach] 接続
 
 ## 概要 {#overview}
 
-[[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。 [!DNL Outreach] は、組織がセールスエンゲージメントを自動化し、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。
+[[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。[!DNL Outreach] は、組織がセールスエンゲージメントを自動化、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。
 
 この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [リソース更新 API のアウトリーチ](https://api.outreach.io/api/v2/docs#update-an-existing-resource): [!DNL Outreach].
 

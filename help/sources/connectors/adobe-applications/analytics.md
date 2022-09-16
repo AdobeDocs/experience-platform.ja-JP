@@ -6,7 +6,7 @@ exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
 workflow-type: tm+mt
 source-wordcount: '1043'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -64,7 +64,7 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | ID フィールド | 説明 |
 | --- | --- |
 | AAID | AAID はAdobe Analyticsの主なデバイス識別子で、 [!DNL Analytics] ソース。 AAID は、 *従来の Analytics ID* または `s_vi` cookie ID。 これにもかかわらず、AAID は `s_vi` cookie が存在しません。 AAID は、 `post_visid_high` および `post_visid_low` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ja). 任意のイベントで、 AAID フィールドには単一の ID が含まれます。これは、 [～の操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **注意**:レポートスイート全体で、AAID に複数のイベントタイプが混在している場合があります。 |
-| ECID | ECID(Experience CloudID) は、別のデバイス識別子フィールドで、Adobe Analyticsで [!DNL Analytics] は、Experience CloudID サービスを使用して実装されます。 ECID は、MCID(Marketing CloudID) とも呼ばれます。 イベントに ECID が存在する場合、AAID は、Analytics が [猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) が設定されている。 ECID は、 `mcvisid` Analytics データフィード内で使用されます。 ECID について詳しくは、 [ECID の概要](../../../identity-service/ecid.md). ECID がと連携する方法について詳しくは、 [!DNL Analytics]を参照し、 [Analytics およびExperience CloudID のリクエスト](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=en). |
+| ECID | ECID(Experience CloudID) は、別のデバイス識別子フィールドで、Adobe Analyticsで [!DNL Analytics] は、Experience CloudID サービスを使用して実装されます。 ECID は、MCID(Marketing CloudID) とも呼ばれます。 イベントに ECID が存在する場合、AAID は、Analytics が [猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) が設定されている。 ECID は、 `mcvisid` Analytics データフィード内で使用されます。 ECID について詳しくは、 [ECID の概要](../../../identity-service/ecid.md). ECID がと連携する方法について詳しくは、 [!DNL Analytics]を参照し、 [Analytics およびExperience CloudID のリクエスト](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=ja). |
 | AACUSTOMID | AACUSTOMID は、 `s.VisitorID` 変数の [!DNL Analytics] 実装。 AACUSTOMID は、 `cust_visid` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). AACUSTOMID が存在する場合、AAID は AACUSTOMID に基づきます。これは、AACUSTOMID が [～の操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### 方法 [!DNL Analytics] ソースで ID を扱う
@@ -75,14 +75,14 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-これらのフィールドは ID としてマークされません。 代わりに、同じ ID が XDM の `identityMap` をキーと値のペアとして使用します。
+これらのフィールドは、ID としてマークされません。代わりに、同じ ID が XDM の `identityMap` をキーと値のペアとして使用します。
 
 * `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
 * `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
-ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID はイベントのプライマリ ID としてマークされます。 AACUSTOMID はイベントのプライマリID とはしません。 ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
+ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID は、イベントのプライマリ ID としてマークされます。AACUSTOMID は、イベントのプライマリ ID としてマークされることはありません。ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
 
 ### Customer Journey AnalyticsとプライマリID
 
-Customer Journey Analyticsの場合、プライマリID の定義は、プライマリID をユーザー ID として使用する場合にのみ重要です。 ただし、これは必須ではありません。 ユーザー ID として他の ID 列を選択できます。
+Customer Journey Analyticsの場合、プライマリID の定義は、プライマリID をユーザー ID として使用する場合にのみ重要です。 ただし、これは必須ではありません。 一部の他の ID 列を人物 ID として選択することできます。

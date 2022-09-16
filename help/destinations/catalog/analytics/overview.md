@@ -18,7 +18,7 @@ Analytics の宛先は、訪問者がサイト上のコンテンツとどのよ�
 
 ## サポートされる Analytics の宛先 {#supported-destinations}
 
-現在、Adobe Experience Platformは、以下に示す Analytics の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Adobe Experience Platformでは、以下に示す Analytics の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Adform Website Tracking 拡張機能](adform.md)
 * [Adobe Analytics 拡張機能](adobe-analytics.md)
@@ -38,4 +38,4 @@ Analytics の宛先は、訪問者がサイト上のコンテンツとどのよ�
 * [Quantum Metric 拡張機能](quantum-metric.md)
 * [SessionCam 拡張機能](sessioncam.md)
 * [TMMData 拡張機能](tmmdata.md)
-* [Yext コンバージョントラッキング拡張機能](yext.md)
+* [Yext Conversion Tracking 拡張機能](yext.md)

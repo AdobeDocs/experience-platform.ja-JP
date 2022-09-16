@@ -1,7 +1,8 @@
 ---
 title: 実装の詳細データタイプ
 description: このドキュメントでは、実装の詳細なエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 7%

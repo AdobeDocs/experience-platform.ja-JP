@@ -50,5 +50,5 @@ ht-degree: 13%
 
 詳しくは、次のドキュメントを参照してください。 [!DNL Identity Service]:
 
-* [[!DNL Identity Service] 概要](home.md)
+* [[!DNL Identity Service] の概要](home.md)
 * [ID グラフビューア](ui/identity-graph-viewer.md)

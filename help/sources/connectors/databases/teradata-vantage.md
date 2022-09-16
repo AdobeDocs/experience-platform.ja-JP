@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；teradata;teradata利益
 title: TeradataVantage Source Connector の概要
 description: API またはユーザーインターフェイスを使用してTeradataVantage をAdobe Experience Platformに接続する方法を説明します。
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 49%

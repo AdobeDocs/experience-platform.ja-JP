@@ -18,7 +18,7 @@ ht-degree: 56%
 
 このドキュメントでは、 [!DNL JupyterLab] とその機能、および一般的なアクションを実行するための手順を説明します。
 
-## [!DNL JupyterLab] on [!DNL Experience Platform]
+## [!DNL Experience Platform] 上の [!DNL JupyterLab]
 
 Experience Platform の JupyterLab 統合には、アーキテクチャの変更、デザイン上の考慮事項、カスタマイズされたノートブック拡張機能、プリインストールされたライブラリ、アドビをテーマにしたインターフェイスが付属しています。
 

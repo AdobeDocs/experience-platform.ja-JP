@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
+* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [Observability では、統計的な指標とイベント通知を使用して Platform アクティビティを監視できます。](../../../observability/home.md)[!DNL Observability Insights]
    * [アラート](../../../observability/alerts/overview.md):Platform 操作で特定の条件セットに達すると（システムがしきい値に達した場合に問題が発生する可能性があるなど）、Platform は、組織内でその条件を購読したユーザーにアラートメッセージを配信できます。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
->title="ソースアラートを購読"
+>title="ソースアラートの購読"
 >abstract="アラートを使用すると、ソースのデータフローのステータスに基づいて通知を受け取ることができます。 アラート通知を設定して、データフローが開始した、成功した、失敗した、またはデータを取り込まなかった場合に更新を取得できます。"
 >text="Learn more in documentation"
 
@@ -40,7 +40,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 データフローに関するアラートは、 [!UICONTROL データフローの詳細] 「ソース」ワークスペース内のソースワークフローのステップ。
 
-![データフローの詳細](../../images/tutorials/alerts/dataflow-detail.png)
+![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
 ソースデータフローで使用可能なアラートは次のとおりです。
 
@@ -57,13 +57,13 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 UI でソースデータフローを作成する詳細な手順については、次のガイドを参照してください。
 
-* [Advertising](./dataflow/advertising.md)
+* [広告](./dataflow/advertising.md)
 * [クラウドストレージ](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [データベース](./dataflow/databases.md)
 * [E コマース](./dataflow/ecommerce.md)
 * [ローカルファイル](./create/local-system/local-file-upload.md)
-* [マーケティングの自動化](./dataflow/marketing-automation.md)
+* [マーケティングの自動処理](./dataflow/marketing-automation.md)
 * [支払い](./dataflow/payments.md)
 * [プロトコル](./dataflow/protocols.md)
 

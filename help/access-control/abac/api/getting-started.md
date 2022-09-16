@@ -6,7 +6,7 @@ exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 64%
+ht-degree: 73%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->現在、米国ベースの医療関連のお客様向けに、属性ベースのアクセス制御が限定的なリリースで提供されています。 この機能は、完全にリリースされると、すべてのReal-time Customer Data Platformのお客様が利用できるようになります。
+>属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 この開発者ガイドは、属性ベースのアクセス制御を使用してAdobe Experience Platformの役割、製品、権限カテゴリおよび権限セットを管理する手順を提供し、様々な操作を実行するための API 呼び出し例を含んでいます。
 

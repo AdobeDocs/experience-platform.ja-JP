@@ -7,7 +7,7 @@ exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![「アカウント」タブ](../assets/ui/update-accounts/destination-accounts.png)
 
-## アカウントを更新 {#update}
+## アカウントの更新 {#update}
 
 既存の宛先への接続の詳細を更新するには、以下の手順に従います。
 

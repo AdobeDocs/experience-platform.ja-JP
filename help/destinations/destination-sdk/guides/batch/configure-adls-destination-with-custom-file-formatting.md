@@ -1,7 +1,8 @@
 ---
 description: Destination SDKを使用して、カスタムファイルフォーマットオプションとカスタムファイル名設定を使用して Azure Data Lake Storage の宛先を設定する方法について説明します。
 title: （ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、Azure Data Lake Storage の宛先を設定します。
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
+source-git-commit: 6a666c9850a4a55bfa93a54111a597f690eb8431
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 10%

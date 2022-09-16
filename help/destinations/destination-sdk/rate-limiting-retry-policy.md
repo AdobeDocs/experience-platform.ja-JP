@@ -1,7 +1,8 @@
 ---
 description: Experience Platformがストリーミング宛先で返される様々なタイプのエラーを処理する方法と、宛先プラットフォームへのデータの送信を再試行する方法について説明します。
 title: Destination SDKで構築されたストリーミング宛先のレート制限および再試行ポリシー
-source-git-commit: ec50608f6454dd619c30b6337f454561844183ba
+exl-id: 7a4edf8d-f905-4d55-a25d-4b9c6063ff88
+source-git-commit: 61b8d40d6ecade10b0793bf7ad7c3e83974a0f02
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%

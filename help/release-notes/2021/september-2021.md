@@ -4,8 +4,8 @@ description: Adobe Experience Platformの 2021 年 9 月のリリースノート
 exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '377'
+ht-degree: 96%
 
 ---
 

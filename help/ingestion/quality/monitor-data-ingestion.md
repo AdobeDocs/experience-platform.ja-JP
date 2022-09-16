@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；監視；監視；監視；データフロー；取得の監視；データ取得；データ取得；レコードの表示；バッチの表示；
+keywords: Experience Platform；ホーム；人気の高いトピック；監視；監視；データフロー；取得の監視；データ取得；データ取得；レコードの表示；バッチの表示；
 solution: Experience Platform
 title: データ取得の監視
 topic-legacy: overview
@@ -14,31 +14,31 @@ ht-degree: 36%
 
 # データ取得の監視
 
-データ取得を使用すると、Adobe Experience Platform でデータを取得できます。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）を使用してデータを挿入できます。また、ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して [!DNL Platform] にデータを取り込むことができます。
+データ取得を使用すると、Adobe Experience Platform でデータを取得できます。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）を使用してデータを挿入できます。また、ストリーミング取り込みを使用すると、データをに取り込むことができます。 [!DNL Platform] リアルタイムでのストリーミングエンドポイントの使用
 
 このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータを監視する手順を説明します。 このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 
 ## ストリーミングエンドツーエンドデータの取得の監視
 
-[Experience PlatformUI](https://platform.adobe.com) で、左側のナビゲーションメニューで「**[!UICONTROL 監視]**」を選択し、次に「**[!UICONTROL ストリーミングエンドツーエンド]**」を選択します。
+内 [Experience PlatformUI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションメニューで、 **[!UICONTROL エンドツーエンドのストリーミング]**.
 
-「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースは、[!DNL Platform] が受信したストリーミングイベントの割合を示すグラフ、[[!DNL Real-time Customer Profile]](../../profile/home.md) が正常に処理したストリーミングイベントの割合を示すグラフ、および受信データの詳細なリストを提供します。
+「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、が受信したストリーミングイベントの割合を示すグラフが表示されます。 [!DNL Platform]：で正常に処理されたストリーミングイベントの割合を示すグラフ。 [[!DNL Real-time Customer Profile]](../../profile/home.md)、および受信データの詳細なリスト。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-デフォルトでは、上部のグラフには過去 7 日間の取り込み率が表示されます。 この日付範囲は、ハイライト表示されたボタンを選択して、様々な期間を表示するように調整できます。
+デフォルトでは、上部のグラフには、過去 7 日間の取り込み率が表示されます。 ハイライト表示されたボタンを選択して、この日付範囲を調整し、様々な期間を表示できます。
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-下のグラフは、過去 7 日間で [!DNL Profile] によって正常に処理されたストリーミングイベントの割合を示しています。 この日付範囲は、ハイライト表示されたボタンを選択して、様々な期間を表示するように調整できます。
+下部のグラフには、が正常に処理したストリーミングイベントの割合が次の値で表示されます： [!DNL Profile] 過去 7 日間 ハイライト表示されたボタンを選択して、この日付範囲を調整し、様々な期間を表示できます。
 
 >[!NOTE]
 >
->このグラフにデータを表示するには、**明示的に** を [!DNL Profile] に対して有効にする必要があります。 [!DNL Profile] のストリーミングデータを有効にする方法については、『[ データセットユーザガイド ](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)』を参照してください。
+>データをこのグラフに表示するには、次の条件を満たす必要があります。 **明示的に** 有効 [!DNL Profile]. のストリーミングデータを有効にする方法を学ぶには [!DNL Profile]、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
-グラフの下に、上に示した日付範囲に対応するすべてのストリーミング取得レコードのリストが表示されます。 リストの各バッチには、ID、データセット名、最終アップデート日時、バッチ内のレコード数、エラー数（エラーがある場合）が表示されます。任意のレコードを選択して、そのレコードに関する詳細情報を表示できます。
+グラフの下には、上に示した日付範囲に対応するすべてのストリーミング取り込みレコードのリストが表示されます。 リストの各バッチには、ID、データセット名、最終アップデート日時、バッチ内のレコード数、エラー数（エラーがある場合）が表示されます。任意のレコードを選択して、そのレコードに関する詳細情報を表示できます。
 
 ![](../images/quality/monitor-data-flows/streams.png)
 
@@ -52,17 +52,17 @@ ht-degree: 36%
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-また、失敗したレコードは、バッチの処理中に発生したエラーの詳細を提供します。 以下の例では、データの変換または検証中に解析エラーが発生していました。
+また、失敗したレコードは、バッチの処理中に発生したエラーの詳細を提供します。 次の例では、データの変換または検証時に解析エラーが発生していました。
 
 >[!NOTE]
 >
->取り込まれた行にエラーがある場合、結果のメッセージで XDM が無効にならない限り、これらの行は **削除されません**。
+>取り込まれた行にエラーがある場合、それらの行は **not** 結果として生成されるメッセージが無効な XDM にならない限り、は削除されます。
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## バッチエンドツーエンドデータの取得の監視
 
-[[!DNL Experience Platform UI]](https://platform.adobe.com) で、左側のナビゲーションメニューの「**[!UICONTROL 監視]**」を選択します。
+内 [[!DNL Experience Platform UI]](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** をクリックします。
 
 「**[!UICONTROL バッチエンドツーエンド]**」の監視ページが開き、以前に取得したバッチのリストが表示されます。任意のバッチを選択して、そのレコードに関する詳細情報を表示できます。
 
@@ -82,6 +82,6 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->取り込まれた行にエラーがある場合、結果のメッセージで XDM が無効にならない限り、これらの行は **削除されません**。
+>取り込まれた行にエラーがある場合、それらの行は **not** 結果として生成されるメッセージが無効な XDM にならない限り、は削除されます。
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

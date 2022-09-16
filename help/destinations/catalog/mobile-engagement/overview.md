@@ -6,7 +6,7 @@ exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
 source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 34%
 
 ---
 
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] は、現在、次のモバイルエンゲージメントの宛先をサポートしています。
 
-* [航空船属性の接続](airship-attributes.md)
-* [航空船タグ接続](airship-tags.md)
-* [接続をブレーズ](braze.md)
+* [Airship Attributes 接続](airship-attributes.md)
+* [Airship Tags 接続](airship-tags.md)
+* [Braze 接続](braze.md)

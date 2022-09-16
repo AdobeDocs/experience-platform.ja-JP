@@ -1,7 +1,8 @@
 ---
 title: サポートサイト検索スキーマフィールドグループ
 description: このドキュメントでは、「サポートサイト検索」スキーマフィールドグループの概要を説明します。
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 10%

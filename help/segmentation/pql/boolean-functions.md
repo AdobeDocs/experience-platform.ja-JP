@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；ブール関数；ブール関数；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；ブール関数；ブール関数；
 solution: Experience Platform
 title: PQL ブール関数
 topic-legacy: developer guide
@@ -14,9 +14,9 @@ ht-degree: 83%
 
 # ブール関数
 
-ブール関数 は、[!DNL Profile Query Language](PQL) 内の異なる要素に対してブール論理を実行するために使用されます。  その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+ブール関数 は、 [!DNL Profile Query Language] (PQL) を参照してください。  その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
-## And
+## および
 
 `and` 関数は、論理積を作成するために使用されます。
 

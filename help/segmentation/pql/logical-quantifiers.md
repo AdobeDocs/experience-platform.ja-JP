@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；論理量指定子；論理量指定子；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；論理量指定子；論理量指定子；
 solution: Experience Platform
 title: PQL 論理量指定子
 topic-legacy: developer guide
@@ -14,7 +14,7 @@ ht-degree: 79%
 
 # 論理量指定子関数
 
-論理量指定子は、[!DNL Profile Query Language] (PQL) 内の配列に条件をアサートするために使用できます。 その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+論理量指定子を使用して、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
 ## exists
 

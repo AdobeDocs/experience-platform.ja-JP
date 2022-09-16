@@ -1,7 +1,8 @@
 ---
 title: クエリテンプレート
 description: クエリテンプレートは再利用可能な保存済みの SQL クエリで、他のユーザーが再利用して時間と労力を節約できます。 クエリエディターまたはクエリサービス API を使用して作成でき、すべてのExperience Platformデータセットで使用できます。
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: b6aaa3baaf8b3ff139ba6ebc7f14ac283ad52241
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%

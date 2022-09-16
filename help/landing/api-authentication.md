@@ -37,7 +37,7 @@ Experience PlatformAPI を正しく呼び出すには、次が必要です。
 
 また、このチュートリアルを完了するには、Adobe IDが必要です。 Adobe ID をお持ちでない場合は、次の手順で作成できます。
 
-1. に移動します。 [Adobe開発者コンソール](https://console.adobe.io).
+1. に移動します。 [Adobe Developer Console](https://console.adobe.io).
 2. 選択 **[!UICONTROL 新しいアカウントを作成]**.
 3. サインアッププロセスを完了します。
 
@@ -49,7 +49,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 
 連絡先： [!DNL Admin Console] 組織の管理者に問い合わせて、 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 詳しくは、 [!DNL Admin Console] 方法に関する具体的な手順に関するドキュメント [製品プロファイルの開発者アクセスの管理](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-開発者として割り当てられたら、で統合の作成を開始できます。 [Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui). これらの統合は、外部のアプリやサービスからAdobeAPI へのパイプラインです。
+開発者として割り当てられたら、で統合の作成を開始できます。 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). これらの統合は、外部のアプリやサービスからAdobeAPI へのパイプラインです。
 
 ### ユーザーアクセスの取得
 
@@ -61,7 +61,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 >
 >このドキュメントを [Privacy ServiceAPI ガイド](../privacy-service/api/getting-started.md)に戻り、固有のアクセス資格情報を生成できるようになりました。 [!DNL Privacy Service].
 
-を通じて Platform への開発者およびユーザーアクセス権を付与されたら、 [!DNL Admin Console]次の手順は、 `{ORG_ID}` および `{API_KEY}` Adobe開発者コンソールの資格情報。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
+を通じて Platform への開発者およびユーザーアクセス権を付与されたら、 [!DNL Admin Console]次の手順は、 `{ORG_ID}` および `{API_KEY}` Adobe Developer Console の資格情報 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
 
 ### プロジェクトにExperience Platformを追加する
 
@@ -86,7 +86,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 API がプロジェクトに追加されると、 **[!UICONTROL Experience PlatformAPI]** プロジェクトのページには、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` ([!UICONTROL クライアント ID])
-* `{ORG_ID}` ([!UICONTROL Organization ID])
+* `{ORG_ID}` ([!UICONTROL 組織 ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -142,7 +142,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 >
 >同じ API キー、クライアントの秘密鍵、JWT を使用して、各セッションに対して新しいアクセストークンを生成できます。 これにより、アプリケーションでのアクセストークンの生成を自動化できます。
 
-**応答** 
+**応答**
 
 ```json
 {

@@ -8,7 +8,7 @@ exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
 source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Self-Serve Sources(Batch SDK) は、 [[!DNL Flow Servi
 
 * を使用した新しいソースのExperience Platformカタログへの統合 [!DNL Flow Service] API
 * サポートされる認証タイプに関する情報やリソースデータの取得方法など、ソースの仕様を定義します。
-* 新しいソースに関するユーザー向けドキュメントを作成します。
+* 新しいソースに関するユーザー向けドキュメントを作成する。
 
 セルフサービスソースのドキュメントでは、Experience Platformとの REST API ベースのソース統合を設定、テスト、リリースする手順を説明し、ソースを増え続けるソースカタログに含めるようにします。
 

@@ -61,7 +61,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 拡張機能は、プラットフォームでは次のカテゴリに分類されます。
 
-- [Advertising](../advertising/overview.md)
+- [広告](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [データ管理プラットフォーム](../data-management/overview.md)
 - [電子メールマーケティングの宛先](../email-marketing/overview.md)

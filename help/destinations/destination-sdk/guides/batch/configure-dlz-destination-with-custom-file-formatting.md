@@ -1,7 +1,8 @@
 ---
 description: Destination SDKを使用して、カスタムのファイル形式オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する方法を説明します。
 title: （ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成します。
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+source-git-commit: a9eae6b798be40bfdc51a8523a0818f364c7cb76
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 10%

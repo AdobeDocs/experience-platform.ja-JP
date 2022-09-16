@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；オブジェクト関数；オブジェクト；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；オブジェクト関数；オブジェクト；
 solution: Experience Platform
 title: PQL オブジェクト関数
 topic-legacy: developer guide
@@ -14,9 +14,9 @@ ht-degree: 70%
 
 # オブジェクト関数
 
-[!DNL Profile Query Language] (PQL) は、オブジェクトとのやり取りをより簡単にする関数を提供します。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+[!DNL Profile Query Language] (PQL) は、オブジェクトとのやり取りをより簡単にする機能を提供します。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
-## Is null
+## null である
 
 `isNull` 関数は、オブジェクト参照が存在しないかどうかを判定します。
 

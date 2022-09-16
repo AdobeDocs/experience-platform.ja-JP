@@ -4,8 +4,8 @@ description: Adobe Experience Platformの 2021 年 10 月のリリースノー�
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '455'
+ht-degree: 96%
 
 ---
 

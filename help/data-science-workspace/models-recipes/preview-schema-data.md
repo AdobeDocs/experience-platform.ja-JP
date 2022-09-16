@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；スキーマデータのプレビュー；Data Science Workspace；よく読まれるトピック
+keywords: Experience Platform；スキーマデータのプレビュー；Data Science Workspace；人気の高いトピック
 solution: Experience Platform
 title: 小売販売スキーマとデータセットのプレビュー
 topic-legacy: tutorial
@@ -15,26 +15,26 @@ ht-degree: 22%
 
 # 小売販売スキーマとデータセットのプレビュー
 
-[ 小売販売スキーマとデータセット ](./create-retails-sales-dataset.md) のチュートリアルのブートストラップスクリプトが正常に完了したら、 出力スキーマとデータセットは [!DNL Experience Platform] で表示できます。 スキーマとデータセットを表示するには、次の手順に従います。
+が正常に完了すると、 [小売販売スキーマとデータセット](./create-retails-sales-dataset.md) チュートリアル 出力スキーマとデータセットは、で表示できます。 [!DNL Experience Platform]. スキーマとデータセットを表示するには、次の手順に従います。
 
-左側のナビゲーションにある「**[!UICONTROL スキーマ]**」タブを選択し、ブートストラップスクリプトで作成された入力スキーマを探します。 スキーマの名前は、前の手順の `config.yaml` で定義した名前に対応します。スキーマをクリックし、スキーマの詳細とその構成を表示します。
+を選択します。 **[!UICONTROL スキーマ]** タブが左側のナビゲーションに配置され、ブートストラップスクリプトで作成された入力スキーマを探します。 スキーマの名前は、前の手順の `config.yaml` で定義した名前に対応します。スキーマをクリックし、スキーマの詳細とその構成を表示します。
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-左側のナビゲーションにある「**[!UICONTROL データセット]**」タブを選択し、データセットの名前を選択して作成した入力データセットを開きます。 データセットの名前は、前の手順の `config.yaml` で定義した名前に対応します。
+を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションにある「 」タブで、データセットの名前を選択して作成した入力データセットを開きます。 データセットの名前は、 `config.yaml` 前の手順から。
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-右上にある **[!UICONTROL プレビューデータセット]** を選択して、データセットのサブセットをプレビューします。
+選択 **[!UICONTROL データセットをプレビュー]** 右上にあり、データセットのサブセットをプレビューします。
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
 ## 次の手順
 
-これで、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータを [!DNL Experience Platform] に取り込みました。
+小売販売のサンプルデータをに正常に取り込みました [!DNL Experience Platform] 提供されたブートストラップスクリプトを使用する。
 
 取得したデータを引き続き使用するには、以下を実行します。
-- [Jupyter ノートブックを使用したデータ分析](../jupyterlab/analyze-your-data.md)
-   - [!DNL Data Science Workspace] の Jupyter ノートブックを使用して、データにアクセスし、調査、視覚化、理解します。
+- [Jupyter Notebook を使用したデータ分析](../jupyterlab/analyze-your-data.md)
+   - での Jupyter Notebook の使用 [!DNL Data Science Workspace] データへのアクセス、調査、視覚化、理解
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
-   - このチュートリアルでは、インポート可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルを [!DNL Data Science Workspace] に取り込む方法を説明します。
+   - このチュートリアルでは、独自のモデルをに取り込む方法を説明します。 [!DNL Data Science Workspace] インポート可能なレシピファイルにソースファイルをパッケージ化する。

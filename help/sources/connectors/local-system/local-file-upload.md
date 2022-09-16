@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ローカル；ローカルファイルのアップロード；ローカルシステム
+keywords: Experience Platform；ホーム；人気の高いトピック；ローカル；ローカルファイルのアップロード；ローカルシステム
 solution: Experience Platform
 title: ローカルファイルアップロードソースコネクタの概要
 topic-legacy: overview
@@ -8,18 +8,18 @@ exl-id: 4b3cf486-7aff-4ffb-920c-10af04000083
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 13%
+ht-degree: 15%
 
 ---
 
 # ローカルファイルアップロードコネクタ
 
-Adobe Experience Platformを使用すると、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、拡張を行う機能を提供しながら、外部ソースやローカルシステムからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、外部ソースやローカルシステムからデータを取り込みながら、読み込むデータの構造化、ラベル付け、拡張を行うことができます。 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、ローカルシステムからデータを取り込む機能を提供し、ソースコネクタを使用してローカルファイルをExperience Platformに引き渡すことができます。
+Experience Platformは、ローカルシステムからデータを取り込む機能を提供し、ソースコネクタを使用してローカルファイルをExperience Platformに取り込むことができます。
 
 以下のドキュメントでは、ユーザーインターフェイスを使用してローカルシステムを Platform に接続する方法について説明します。
 
-## UI を使用したローカルファイルのアップロード [!DNL Platform] の接続
+## ローカルファイルのアップロードに接続 [!DNL Platform] UI の使用
 
 - [UI でのローカルファイルアップロードソース接続の作成](../../tutorials/ui/create/local-system/local-file-upload.md)

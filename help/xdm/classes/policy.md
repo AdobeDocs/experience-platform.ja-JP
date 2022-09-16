@@ -1,7 +1,8 @@
 ---
 title: ポリシークラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の Policy クラスの概要を説明します。
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 11%
@@ -24,7 +25,7 @@ ht-degree: 11%
 | `owner.homeAddress` | [[!UICONTROL 住所]](../data-types/postal-address.md) | 所有者の自宅住所。 |
 | `owner.homePhone` | [[!UICONTROL 電話番号]](../data-types/phone-number.md) | 所有者の自宅の電話番号。 |
 | `owner.mobilePhone` | [[!UICONTROL 電話番号]](../data-types/phone-number.md) | 所有者の携帯電話番号。 |
-| `owner.personalEmail` | [[!UICONTROL 電子メールアドレス]](../data-types/email-address.md) | 所有者の個人の電子メールアドレス。 |
+| `owner.personalEmail` | [[!UICONTROL メールアドレス]](../data-types/email-address.md) | 所有者の個人の電子メールアドレス。 |
 | `ID` | [!UICONTROL 文字列] | 保険証券の識別子。 |
 | `_id` | [!UICONTROL 文字列] | レコードの、システムで生成される一意の文字列識別子。 このフィールドは、個々のレコードの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのレコードを検索するために使用します。<br><br>このフィールドはシステムで生成されるので、データの取り込み中に明示的な値は指定されません。 ただし、必要に応じて独自の一意の ID 値を指定することもできます。 |
 | `endDate` | [!UICONTROL 日時] | 保険証券の補償範囲が終了（または終了）する日付。 |

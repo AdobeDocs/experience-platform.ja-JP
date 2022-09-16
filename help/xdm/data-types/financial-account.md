@@ -1,7 +1,8 @@
 ---
 title: 金融口座データタイプ
 description: このドキュメントでは、金融口座 XDM データ型の概要を説明します。
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 10%

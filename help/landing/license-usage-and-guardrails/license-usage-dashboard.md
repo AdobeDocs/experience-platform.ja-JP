@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;ユーザーインターフェイス;UI;カスタマイズ;ライセンス使用状況ダッシュボード;ダッシュボード;ライセンス使用状況;使用権限;使用
 title: ライセンス使用状況ダッシュボード
-description: 'Adobe Experience Platform UI には、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 '
+description: Adobe Experience Platform UI には、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
 source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 100%
 

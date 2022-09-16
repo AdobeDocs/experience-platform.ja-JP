@@ -7,13 +7,13 @@ exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
 # Edge Network Server API の概要 {#overview}
 
-Adobe Experience Platform Edge Network は、Adobe Experience CloudまたはAdobe Experience Platform Edge サービスを顧客が操作できるように最適化された方法を提供します。
+Adobe Experience Platform Edge Network は、Adobe Experience Cloud または Adobe Experience Platform Edge サービスの最適な利用方法をお客様に提供します。
 
 この [!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に使用できます。 この [!DNL Server API] はサーバーで使用できます。 [!DNL IoT] デバイス、セットトップボックス、およびその他の様々なデバイス。
 

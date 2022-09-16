@@ -4,7 +4,8 @@ description: セグメント化を使用すると、リアルタイム顧客プ�
 title: UI でのセグメントのデータフローの監視
 topic-legacy: overview
 type: Tutorial
-source-git-commit: cec27197d47d2dd979bdf29f16fef77e8ff855e3
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 5%

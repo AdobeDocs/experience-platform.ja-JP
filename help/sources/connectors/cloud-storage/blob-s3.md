@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Azure Blob;Amazon S3;blob;Blob;S3;s3
+keywords: Experience Platform；ホーム；人気の高いトピック；Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure Blob とAmazon S3 ソースコネクタの概要
 topic-legacy: overview
@@ -8,16 +8,16 @@ exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '140'
-ht-degree: 0%
+ht-degree: 28%
 
 ---
 
 # Azure Blob およびAmazon S3 コネクタ
 
-Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーにネイティブ接続を提供します。 これらのシステムのデータを [!DNL Platform] に取り込むことができます。
+Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
-クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] では、および S3 からバッチを使 [!DNL Azure Blob] 用してデータを取り込みます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] を使用すると、次のデータを取り込むことができます： [!DNL Azure Blob] および S3 からバッチを使用します。
 
-[!DNL Azure Blob] コネクタの詳細については、[[!DNL Azure Blob]  コネクタの概要 ](./blob.md) を参照してください。
+詳しくは、 [!DNL Azure Blob] コネクタ、お読みください [[!DNL Azure Blob] コネクタの概要](./blob.md).
 
-[!DNL Amazon S3] コネクタの詳細については、[[!DNL Amazon S3]  コネクタの概要 ](./s3.md) を参照してください。
+詳しくは、 [!DNL Amazon S3] コネクタ、お読みください [[!DNL Amazon S3] コネクタの概要](./s3.md).

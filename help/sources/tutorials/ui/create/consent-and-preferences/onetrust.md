@@ -5,7 +5,8 @@ title: （ベータ版）UI での OneTrust Source 接続の作成
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して OneTrust ソース接続を作成する方法を説明します。
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 37%

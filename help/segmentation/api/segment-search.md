@@ -100,7 +100,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** ここで、{NAMESPACE} には、検索する名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} には、のMicrosoft実装に準拠するクエリが含まれます [Lucene の検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} には、 [Lucene の検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
 | `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID} で指定された指定フォルダー内に検索を制限します。 |
 | `limit={LIMIT}` | *（オプション）* {LIMIT} は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
 | `page={PAGE}` | *（オプション）* ここで、{PAGE} は、検索したクエリの結果に使用されるページ番号を表します。 ページ番号は **0**. |

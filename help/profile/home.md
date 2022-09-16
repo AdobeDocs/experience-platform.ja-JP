@@ -5,7 +5,7 @@ topic-legacy: guide
 description: リアルタイム顧客プロファイルは、様々なソースのデータを統合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 100%
 

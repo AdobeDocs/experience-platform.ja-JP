@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、ホーム、人気のあるトピック、アカウントの監視、データフローの監視、データフロー、宛先
+keywords: Experience Platform、ホーム、人気の高いトピック、アカウントの監視、データフローの監視、データフロー、宛先
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 solution: Experience Platform
 title: データフローの監視
@@ -13,10 +13,10 @@ ht-degree: 34%
 
 ---
 
-# データフローの監視
+# データフローのモニタリング
 
- 宛先：Adobe Experience Platformから数え切れないほどの外部パートナーに対して、データをアクティブ化できます。
+[!UICONTROL 宛先] では、Adobe Experience Platformから数え切れないほどの外部パートナーに対して、データをアクティブ化できます。
 
-データフローは、[!DNL Platform] 間でデータを移動するデータジョブを表します。 これらのデータフローは様々なサービスで設定され、ソースコネクタからターゲットデータセットにデータを移動し、[!DNL Identity Service] と [!DNL Real-time Customer Profile] でそのデータを使用してから、最終的に宛先にアクティブ化されます。
+データフローは、データを移動するデータジョブを表します [!DNL Platform]. これらのデータフローは、異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセットにデータを移動し、で利用するのに役立ちます。 [!DNL Identity Service] および[!DNL Real-time Customer Profile] を追加します。
 
-宛先のデータフローの監視の詳細については、『 UI での宛先のデータフローの監視 [』チュートリアルを参照してください。](../../dataflows/ui/monitor-destinations.md)
+宛先のデータフローの監視の詳細については、 [UI での宛先のデータフローの監視](../../dataflows/ui/monitor-destinations.md) チュートリアル

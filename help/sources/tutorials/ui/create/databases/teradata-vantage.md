@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；TeradataVantage
 title: UI でのTeradataVantage ソース接続の作成
 description: Adobe Experience Platform UI を使用してTeradataVantage ソース接続を作成する方法を説明します。
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 36%

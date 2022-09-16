@@ -1,7 +1,8 @@
 ---
 title: XDM フィールドの廃止
 description: スキーマレジストリ API で Experience Data Model(XDM) フィールドを廃止する方法について説明します。
-source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
+exl-id: e49517c4-608d-4e05-8466-75724ca984a8
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 10%

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Audience Managerマッピング；audience manager マッピング
+keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerマッピング；audience manager マッピング
 solution: Experience Platform
 title: Adobe Audience Manager Source Connector のフィールドのマッピング
 topic-legacy: overview
@@ -8,11 +8,11 @@ exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 71%
+ht-degree: 73%
 
 ---
 
-# Audience Managerフィールドのマッピング
+# Audience Manager フィールドのマッピング
 
 次の表には、Adobe Audience Manager データのフィールド（リアルタイム、オンボード、プロファイルデータ）と対応する XDM フィールド間のマッピングが含まれています。
 

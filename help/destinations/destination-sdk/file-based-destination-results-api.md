@@ -1,13 +1,13 @@
 ---
 description: このページでは、/testing/destinationInstance API エンドポイントを使用してテスト結果の完全な詳細を表示する方法について説明します。 この API エンドポイントは、フローサービス API を使用してデータフローを監視する場合と同じ結果を返します。
 title: 詳細なアクティベーション結果の表示
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 15%
 
 ---
-
 
 # 詳細なアクティベーション結果の表示 {#view-test-results}
 

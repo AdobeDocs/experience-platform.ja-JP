@@ -218,7 +218,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 ```json
 {

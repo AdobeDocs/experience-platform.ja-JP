@@ -5,7 +5,7 @@ description: このドキュメントでは、Adobe Experience Platform サー�
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: 29b1942e4009770d4f9d346a760b6e78cef23969
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 100%
 

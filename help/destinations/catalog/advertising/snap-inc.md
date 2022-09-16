@@ -1,13 +1,13 @@
 ---
 title: （ベータ版）Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスセグメントを書き出す方法を説明します。
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '1012'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
-
 
 # （ベータ版）Snap Inc
 
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 ## ユースケース {#use-cases}
 
-この宛先を使用すると、マーケターは、Experience Platformで作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。
+この宛先を使用すると、マーケターは、Experience Platform で作成したユーザーセグメントを Snapchat 広告にインポートし、広告のターゲティングに使用できます。
 
 ## 前提条件 {#prerequisites}
 

@@ -9,31 +9,31 @@ exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 11%
+ht-degree: 39%
 
 ---
 
 
 # の作成 [!DNL Azure Event Hubs] UI のソース接続
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、 [!DNL Azure Event Hubs] （以下「」という。）[!DNL Event Hubs]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Azure Event Hubs] （以下「」という。）[!DNL Event Hubs]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Experience Platform] は顧客体験データを整理します。
+- [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
+   - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Event Hubs] 接続する場合は、このドキュメントの残りの部分をスキップして、 [データフローの設定](../../dataflow/streaming/cloud-storage-streaming.md).
+既に有効な [!DNL Event Hubs] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/streaming/cloud-storage-streaming.md)に関するチュートリアルに進むことができます。
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
 を認証するために [!DNL Event Hubs] ソースコネクタの場合、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| 認証情報 | 説明 |
 | ---------- | ----------- |
 | `sasKeyName` | 認証規則の名前。SAS キー名とも呼ばれます。 |
 | `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` この `sasKey` 必ず～に対応する `manage` 次に対して設定された権限： [!DNL Event Hubs] リストに値を入力します。 |
@@ -41,13 +41,13 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 これらの値について詳しくは、 [この [!DNL Event Hubs] 文書](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-## 接続 [!DNL Event Hubs] アカウント
+## [!DNL Event Hubs] アカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って、 [!DNL Event Hubs] アカウント [!DNL Platform].
+必要な認証情報が揃ったら、次の手順に従って、[!DNL Event Hubs] アカウントを [!DNL Platform] にリンクします。
 
 にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 この **[!UICONTROL カタログ]** 「 」タブには、アカウントを作成するための様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、使用する特定のソースを検索オプションを使用して探すこともできます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 以下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Azure イベントハブ]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい Event Hubs コネクタを作成するには、以下を実行します。
 

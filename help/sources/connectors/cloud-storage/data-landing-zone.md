@@ -8,7 +8,7 @@ exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 source-git-commit: 2a403be9a90d919aba2114f14c3cf64707b814b9
 workflow-type: tm+mt
 source-wordcount: '817'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 2%
 以下は、クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストです。
 
 - ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
-- ディレクトリ名とファイル名の末尾をスラッシュ (`/`) をクリックします。 指定した場合、自動的に削除されます。
-- 以下の予約 URL 文字は、適切にエスケープする必要があります。 `! ' ( ) ; @ & = + $ , % # [ ]`
-- 次の文字は使用できません。 `" \ / : | < > * ?`.
-- 無効な URL パス文字は使用できません。 次のようなコードポイント `\uE000`は NTFS ファイル名で有効ですが、有効な Unicode 文字ではありません。 また、制御文字 ( `0x00` から `0x1F`, `\u0081`など ) は許可されていません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、 [RFC 2616、セクション 2.2:基本ルール](https://www.ietf.org/rfc/rfc2616.txt) および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- 次のファイル名は使用できません。LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM8, COM9,prn、AUX、NUL、CON、CLOCK$、ドット文字 (.)、2 つのドット文字 (...)。
+- ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
+- 次の予約 URL 文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
+- 次の文字は使用できません。`" \ / : | < > * ?`
+- 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、制御文字 ( `0x00` から `0x1F`, `\u0081`など ) は許可されていません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
+- 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
 ## コンテンツを管理 [!DNL Data Landing Zone]
 
@@ -153,9 +153,9 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ### API の使用
 
 - [の作成 [!DNL Data Landing Zone] フローサービス API を使用したソース接続](../../tutorials/api/create/cloud-storage/data-landing-zone.md)
-- [フローサービス API を使用して、クラウドストレージソースのデータフローを作成する](../../tutorials/api/collect/cloud-storage.md)
+- [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
 - [接続 [!DNL Data Landing Zone] UI を使用して Platform に接続](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
-- [UI でのクラウドストレージ接続のデータフローの作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)

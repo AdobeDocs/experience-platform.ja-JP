@@ -8,7 +8,7 @@ exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 8%
 | `"Marketo"` | `personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -136,7 +136,7 @@ ht-degree: 8%
 | `"Marketo"` | `campaignKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | この  `extSourceSystemAudit.externalKey` はセカンダリ ID です。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
@@ -165,7 +165,7 @@ ht-degree: 8%
 | `"Marketo"` | `campaignMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 関係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -196,7 +196,7 @@ ht-degree: 8%
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | この `extSourceSystemAudit.externalKey` はセカンダリ ID です。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -226,7 +226,7 @@ ht-degree: 8%
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -242,7 +242,7 @@ ht-degree: 8%
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 関係 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -261,7 +261,7 @@ ht-degree: 8%
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | この `extSourceSystemAudit.externalKey` はセカンダリ ID です。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -287,7 +287,7 @@ ht-degree: 8%
 | `"Marketo"` | `opportunityKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリID。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 関係 |
 | `description` | `opportunityDescription` |
@@ -322,7 +322,7 @@ ht-degree: 8%
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
 | `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | この `extSourceSystemAudit.externalKey` はセカンダリ ID です。 次の値： `{CRM_ORG_ID}` および `{CRM_TYPE}` が自動的に置き換えられます。 |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | 関係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 関係 |
@@ -341,7 +341,7 @@ ht-degree: 8%
 | `"Marketo"` | `b2b.personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | プライマリID。 の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | プライマリ ID. の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
 | `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 配信停止済みが `true` ( 例：value = `1`) を選択し、 `consents.marketing.email.val` (`n`) をクリックします。 配信停止済みが `false` ( 例：value = `0`) を選択し、 `consents.marketing.email.val` as `null`. |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |

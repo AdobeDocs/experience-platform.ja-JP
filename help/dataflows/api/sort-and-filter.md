@@ -1,6 +1,6 @@
 ---
 title: フローサービス API での応答の並べ替えとフィルタリング
-description: このチュートリアルでは、フローサービス API のクエリパラメーターを使用した並べ替えとフィルタリングの構文について説明します。これには、高度な使用例が含まれます。
+description: このチュートリアルでは、フローサービス API のクエリパラメーターを使用した並べ替えとフィルタリングの構文について説明します。高度な使用例もいくつかあります。
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 7%
 
 # フローサービス API での応答の並べ替えとフィルタリング
 
-[ フローサービス API](https://www.adobe.io/experience-platform-apis/references/flow-service/) でリスト (GET) リクエストを実行する場合、クエリパラメーターを使用して応答を並べ替えたり、フィルターしたりできます。 このガイドでは、様々な使用例でこれらのパラメーターを使用する方法について説明します。
+リスト (GET) リクエストを [フローサービス API](https://www.adobe.io/experience-platform-apis/references/flow-service/)に値を入力する場合は、クエリーパラメーターを使用して応答を並べ替えたり、フィルター処理したりできます。 このガイドでは、様々な使用例でこれらのパラメーターを使用する方法について説明します。
 
 ## 並べ替え
 
-`orderby` クエリパラメーターを使用して、回答を並べ替えることができます。 API では、次のリソースを並べ替えることができます。
+回答は、 `orderby` クエリパラメーター。 API では、次のリソースを並べ替えることができます。
 
 * [接続](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
 * [ソース接続](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
@@ -23,30 +23,30 @@ ht-degree: 7%
 * [流れ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [実行](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-パラメーターを使用するには、並べ替えの基準とする特定のプロパティに値を設定する必要があります（例：`?orderby=name`）。 値の前に、昇順の場合はプラス記号 (`+`)、降順の場合はマイナス記号 (`-`) を付けることができます。 並べ替えプレフィックスが指定されない場合、リストはデフォルトで昇順で並べ替えられます。
+パラメーターを使用するには、並べ替えの基準となる特定のプロパティにその値を設定する必要があります ( 例： `?orderby=name`) をクリックします。 値の前にプラス記号 (`+`) を使用します。`-`) を降順に表示します。 並べ替えプレフィックスが指定されない場合、リストはデフォルトで昇順で並べ替えられます。
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-並べ替えパラメーターとフィルタリングパラメーターを組み合わせるには、「and」記号 (`&`) を使用します。
+並べ替えパラメーターとフィルタリングパラメーターを組み合わせるには、「and」記号 (`&`) をクリックします。
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
 ```
 
-## フィルタリング
+## フィルター
 
-キーと値の式で `property` パラメーターを使用して、応答をフィルタリングできます。 例えば、`?property=id==12345` は、`id` プロパティが `12345` と完全に等しいリソースのみを返します。
+回答は、 `property` パラメーターにキーと値の式を含める必要があります。 例： `?property=id==12345` が返すリソースのみが `id` プロパティが完全に等しい `12345`.
 
 フィルタリングは、そのプロパティの有効なパスがわかっている限り、エンティティ内の任意のプロパティに一般的に適用できます。
 
 >[!NOTE]
 >
->プロパティが配列項目内にネストされている場合は、パス内の配列に角括弧 (`[]`) を追加する必要があります。 例については、[ 配列のプロパティ ](#arrays) のフィルタリングの節を参照してください。
+>プロパティが配列項目内にネストされている場合は、角括弧 (`[]`) をパス内の配列に追加します。 詳しくは、 [配列プロパティのフィルタリング](#arrays) 例：
 
-**ソース・テーブル名が次の場合に、すべてのソース接続を返し `lead`ます：**
+**ソース・テーブル名が次の値であるすべてのソース接続を返す `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
@@ -60,9 +60,9 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### フィルターの組み合わせ
 
-クエリで「および」文字 (`&`) で区切られている場合は、1 つのクエリに複数の `property` フィルターを含めることができます。 フィルターを組み合わせる場合は、AND 関係が想定されます。つまり、エンティティが応答に含めるには、すべてのフィルターを満たす必要があります。
+複数 `property` フィルターは、「および」文字 (`&`) をクリックします。 フィルターを組み合わせる際には AND 関係が想定されます。つまり、応答に含めるには、エンティティがすべてのフィルターを満たす必要があります。
 
-**セグメント ID の有効なすべてのフローを返す：**
+**セグメント ID の有効なフローをすべて返す：**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -70,7 +70,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### 配列プロパティのフィルタリング {#arrays}
 
-配列プロパティの名前に `[]` を付けると、配列内の項目のプロパティに基づいてフィルタリングできます。
+配列内の項目のプロパティに基づいてフィルタリングするには、次を追加します。 `[]` を配列プロパティの名前に追加します。
 
 **特定のソース接続に関連付けられたフローを返す：**
 
@@ -78,13 +78,13 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 GET /flows?property=sourceConnectionIds[]==9874984,6980696
 ```
 
-**特定のセレクター値 ID を含む変換を含む戻りフロー。**
+**特定のセレクター値 ID を含む変換を持つ戻りフローを返します。**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**特定の値を持つ列を持つソース接続を返 `name` します。**
+**特定の `name` 値：**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
@@ -98,9 +98,9 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-フィルタリングクエリに `count` クエリパラメーターを付け、値 `true` を付けて結果の数を返すことができます。 API 応答には `count` プロパティが含まれ、その値はフィルターされた項目の合計数を表します。 この呼び出しでは、実際にフィルターされた項目は返されません。
+任意のフィルタークエリを `count` 値がのクエリパラメーター `true` 結果の数を返します。 API 応答には `count` プロパティの値は、フィルターされた項目の合計数を表します。 この呼び出しでは、実際にフィルターされた項目は返されません。
 
-**システム内の有効なフローの数を返す：**
+**システム内の有効なフローの数を返します。**
 
 ```http
 GET /flows?property=state==enabled&count=true
@@ -116,7 +116,7 @@ GET /flows?property=state==enabled&count=true
 
 ### リソース別のフィルタリング可能なプロパティ
 
-取得するフローサービスエンティティに応じて、様々なプロパティを使用してフィルタリングできます。 以下の表では、フィルタリングの使用例で一般的に使用される各リソースのルートレベルのフィールドを分類します。
+取得するフローサービスエンティティに応じて、様々なプロパティを使用してフィルタリングをおこなうことができます。 以下の表では、使用例のフィルタリングで一般的に使用される各リソースのルートレベルのフィールドを分類します。
 
 **`connectionSpec`**
 
@@ -197,4 +197,4 @@ GET /flows?property=state==enabled&count=true
 
 ## 次の手順
 
-このガイドでは、`orderby` および `property` クエリパラメーターを使用して、フローサービス API で応答を並べ替えたり、フィルタリングしたりする方法について説明しました。 Platform の一般的なワークフローに API を使用する手順のガイドについては、[sources](../../sources/home.md) および [destinations](../../destinations/home.md) のドキュメントに含まれる API チュートリアルを参照してください。
+このガイドでは、 `orderby` および `property` フローサービス API で応答を並べ替えたり、フィルタリングしたりするクエリパラメーター。 Platform の一般的なワークフローで API を使用する手順に関するガイドについては、 [ソース](../../sources/home.md) および [宛先](../../destinations/home.md) ドキュメント。

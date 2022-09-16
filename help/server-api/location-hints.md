@@ -1,13 +1,13 @@
 ---
 title: 場所のヒント
 description: この記事では、エンドユーザーリクエストを常に同じサーバーにルーティングできるように、Edge Network Server API でロケーションヒントがどのように機能するかを説明します。
-source-git-commit: 7f1d8fba34c5478f0d6e727a5a52af642852c9dd
+exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
+source-git-commit: 80c527ab3c82e01fe19e5003e224d63e79b23bdc
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
 
 ---
-
 
 # 場所のヒント
 

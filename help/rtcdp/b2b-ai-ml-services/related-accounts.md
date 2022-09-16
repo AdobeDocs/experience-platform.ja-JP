@@ -1,20 +1,20 @@
 ---
-title: Real-Time CDP B2B Edition の関連アカウント
+title: Real-Time CDP B2B Edition の関連するアカウント
 type: Documentation
 description: Experience Platformのリアルタイム CDP B2B の関連アカウント機能の概要と詳細。
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 7%
+ht-degree: 25%
 
 ---
 
-# Real-Time CDP B2B Edition の関連アカウント
+# Real-Time CDP B2B Edition の関連するアカウント
 
 ## 概要 {#overview}
 
-B2B 企業は、多くの場合、同じ実世界のビジネスエンティティに対する部分的または競合するデータのみを含め、顧客情報を複数のシステムに保存します。 これにより、顧客の正確な見地に到達するという大きな課題が生じ、B2B マーケティングと販売の取り組みの効率と効果が低下します。
+B2B 企業では、多くの場合、顧客情報が複数のシステムに保存されており、それぞれのシステムには、同じ実世界のビジネスエンティティに関するデータの一部のみ、または矛盾するデータが含まれています。そのため、顧客を正確に把握することが難しく、B2B マーケティングや営業活動の効率や効果を低下させるという大きな課題を抱えています。
 
 | ID | 名前 | Web サイト | 業界 | 都道府県 | Phone | 数量 > のオープン商談あり `$1 million` |
 |---|---|---|---|---|---|---|

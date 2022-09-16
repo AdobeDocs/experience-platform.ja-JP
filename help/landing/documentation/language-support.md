@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform：ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
+keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 solution: Experience Platform
 title: Experience Platformドキュメントの言語サポート
 topic-legacy: getting started
@@ -16,7 +16,7 @@ ht-degree: 48%
 
 Adobe Experience Platformのドキュメントは複数の言語で利用できます。
 
-ドキュメントの表示言語を変更するには、上部のナビゲーションで言語アイコンを選択します。
+ドキュメントの言語を変更するには、上部のナビゲーションで言語アイコンを選択します。
 
 ![](../images/overview/documentation-language.png)
 

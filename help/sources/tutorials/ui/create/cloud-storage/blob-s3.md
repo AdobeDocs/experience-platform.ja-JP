@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Amazon S3;Azure Blob
+keywords: Experience Platform；ホーム；人気の高いトピック；Amazon S3;Azure Blob
 solution: Experience Platform
 title: UI での Azure Blob またはAmazon S3 ソース接続の作成
 topic-legacy: overview
@@ -9,16 +9,16 @@ exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 0%
+ht-degree: 40%
 
 ---
 
-# UI で [!DNL Azure Blob] または [!DNL Amazon] S3 ソース接続を作成する
+# の作成 [!DNL Azure Blob] または [!DNL Amazon] UI での S3 ソース接続
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。
+Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 
 
-クラウドストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを [!DNL Platform] に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で指定できます。 プロセスの各ステップは、ソースワークフローに統合されます。 [!DNL Platform] では、バッチからデータを取り込んだり、バッチを使 [!DNL Azure Blob] 用してデ [!DNL Amazon S3] ータを取り込んだりできます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] を使用すると、次のデータを取り込むことができます： [!DNL Azure Blob] および [!DNL Amazon S3] バッチを使用します。
 
-[!DNL Azure Blob] ソースコネクタの使用に関する詳細な手順については、『[[!DNL Azure Blob]  ソースコネクタガイド ](./blob.md)』を参照してください。
+詳しい手順については、 [!DNL Azure Blob] ソースコネクタ、お読みください [[!DNL Azure Blob] ソースコネクタガイド](./blob.md).
 
-[!DNL Amazon S3] ソースコネクタの使用に関する詳細な手順については、『[[!DNL Amazon S3]  ソースコネクタガイド ](./blob.md)』を参照してください。
+詳しい手順については、 [!DNL Amazon S3] ソースコネクタ、お読みください [[!DNL Amazon S3] ソースコネクタガイド](./blob.md).

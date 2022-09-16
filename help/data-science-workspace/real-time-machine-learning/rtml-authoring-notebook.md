@@ -409,7 +409,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## スコアリング {#scoring}
 
-に公開した後 [!DNL Edge]の場合、スコアリングはクライアントからのPOSTリクエストによっておこなわれます。 通常、これは、ML スコアを必要とするクライアントアプリケーションから実行できます。 Postman からも実行できます。 この **[!UICONTROL リアルタイム ML]** template は、EdgeUtils を使用してこのプロセスを示しています。
+に公開した後 [!DNL Edge]の場合、スコアリングはクライアントからのPOSTリクエストによっておこなわれます。 通常、これは、ML スコアを必要とするクライアントアプリケーションから実行できます。 また、Postmanからも実行できます。 この **[!UICONTROL リアルタイム ML]** template は、EdgeUtils を使用してこのプロセスを示しています。
 
 >[!NOTE]
 >

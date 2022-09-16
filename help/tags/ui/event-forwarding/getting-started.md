@@ -6,7 +6,7 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 設定後、新しいプロパティの環境 ID をメモします。
 
-## Platform Web SDK 拡張機能を設定して、前に作成したデータストリームにデータを送信する
+## Platform Web SDK 拡張機能を設定して、以前作成したデータストリームにデータを送信します。
 
 データ収集 UI でプロパティを作成し、Adobe Experience Platform Web SDK 拡張機能を使用して設定します。
 

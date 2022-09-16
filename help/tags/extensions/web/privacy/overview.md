@@ -3,7 +3,7 @@ title: Adobe Privacy 拡張機能の概要
 description: Adobe Experience Platform の Adobe Privacy タグ拡張機能について説明します。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 100%
 

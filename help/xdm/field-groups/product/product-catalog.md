@@ -1,13 +1,13 @@
 ---
 title: 商品カタログスキーマフィールドグループ
 description: このドキュメントでは、製品カタログスキーマフィールドグループの概要を説明します。
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL 商品カタログ] スキーマフィールドグループ
 

@@ -6,7 +6,7 @@ title: ソース接続の IP アドレス許可リスト
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: a93b14c0e8390ba1a6c486851900a5933fb26a6d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 100%
 

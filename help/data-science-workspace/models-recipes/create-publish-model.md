@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；機械学習モデル；Data Science Workspace；人気の高いトピック；モデルの作成と公開
 solution: Experience Platform
-title: Create and Publish a Machine Learning Model
+title: 機械学習モデルの作成と公開
 topic-legacy: tutorial
 type: Tutorial
 description: 次のガイドでは、機械学習モデルの作成と公開に必要な手順を説明します。
@@ -22,29 +22,29 @@ ht-degree: 15%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- アクセス先 [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+- アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 
-- All Data Science Workspace tutorials use the Luma propensity model. 続行するには、 [Luma 傾向モデルのスキーマとデータセット](./create-luma-data.md).
+- すべての Data Science Workspace チュートリアルでは、Luma 傾向モデルを使用します。 続行するには、 [Luma 傾向モデルのスキーマとデータセット](./create-luma-data.md).
 
 ### データを調べてスキーマを理解する
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com/) を選択し、 **[!UICONTROL データセット]** をクリックして、既存のすべてのデータセットをリストし、調査するデータセットを選択します。 In this case, you should select the **Luma web data** dataset.
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com/) を選択し、 **[!UICONTROL データセット]** をクリックして、既存のすべてのデータセットをリストし、調査するデータセットを選択します。 この場合、 **Luma の Web データ** データセット。
 
 ![Luma web データセットを選択します。](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-データセットアクティビティページが開き、データセットに関する情報が表示されます。 次を選択できます。 **[!UICONTROL データセットをプレビュー]** 右上付近にあるサンプルレコードを確認します。 You can also view the schema for the selected dataset.
+データセットアクティビティページが開き、データセットに関する情報が表示されます。 次を選択できます。 **[!UICONTROL データセットをプレビュー]** 右上付近にあるサンプルレコードを確認します。 また、選択したデータセットのスキーマを表示することもできます。
 
-![perview Luma web data](../images/models-recipes/model-walkthrough/preview-dataset.png)
+![Luma Web データのプレビュー](../images/models-recipes/model-walkthrough/preview-dataset.png)
 
-右側のパネルでスキーマリンクを選択します。 A popover appears, selecting the link under **[!UICONTROL schema name]** opens the schema in a new tab.
+右側のパネルでスキーマリンクを選択します。 ポップオーバーが表示され、以下のリンクを選択します。 **[!UICONTROL スキーマ名]** スキーマを新しいタブで開きます。
 
 ![luma web データスキーマのプレビュー](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-You can further explore the data using the provided Exploratory Data Analysis (EDA) notebook. このノートブックは、Luma データのパターンを理解し、データの整合性を確認し、予測傾向モデルに関連するデータを要約するのに役立ちます。 Exploratory Data Analysis の詳細については、 [EDA ドキュメント](../jupyterlab/eda-notebook.md).
+提供された Exploratory Data Analysis(EDA) ノートブックを使用して、データをさらに調査できます。 このノートブックは、Luma データのパターンを理解し、データの整合性を確認し、予測傾向モデルに関連するデータを要約するのに役立ちます。 Exploratory Data Analysis の詳細については、 [EDA ドキュメント](../jupyterlab/eda-notebook.md).
 
 ## Luma 傾向レシピの作成 {#author-your-model}
 
-A main component of the [!DNL Data Science Workspace] lifecycle involves authoring Recipes and Models. Luma 傾向モデルは、顧客が Luma から製品を購入する傾向が高いかどうかに関する予測を生成するように設計されています。
+の主要なコンポーネント [!DNL Data Science Workspace] ライフサイクルには、レシピとモデルの作成が含まれます。 Luma 傾向モデルは、顧客が Luma から製品を購入する傾向が高いかどうかに関する予測を生成するように設計されています。
 
 Luma の傾向モデルを作成するには、レシピビルダーテンプレートが使用されます。 レシピは、特定の問題を解決するために設計された機械学習アルゴリズムとロジックを含むので、モデルの基礎となります。 さらに重要な点は、レシピを使用すると、組織全体の機械学習を民主化でき、他のユーザーはコードを書かなくても様々な用途のモデルにアクセスできるようになることです。
 
@@ -52,13 +52,13 @@ Luma の傾向モデルを作成するには、レシピビルダーテンプレ
 
 ## 外部ソース (*オプション*)
 
-Data Science Workspace で使用するレシピをインポートおよびパッケージ化する場合は、ソースファイルをアーカイブファイルにパッケージ化する必要があります。 Follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. このチュートリアルでは、ソースファイルをレシピにパッケージ化する方法を示します。これは、レシピを Data Science Workspace にインポートするための前提条件の手順です。 チュートリアルが完了したら、Azure Container Registry に Docker イメージと、対応するイメージ URL（つまりアーカイブファイル）が提供されます。
+Data Science Workspace で使用するレシピをインポートおよびパッケージ化する場合は、ソースファイルをアーカイブファイルにパッケージ化する必要があります。 フォロー： [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md) チュートリアル このチュートリアルでは、ソースファイルをレシピにパッケージ化する方法を示します。これは、レシピを Data Science Workspace にインポートするための前提条件の手順です。 チュートリアルが完了したら、Azure Container Registry に Docker イメージと、対応するイメージ URL（つまりアーカイブファイル）が提供されます。
 
 このアーカイブファイルを使用して、Data Science Workspace でレシピを作成できます。それには、 [UI ワークフロー](./import-packaged-recipe-ui.md) または [API ワークフロー](./import-packaged-recipe-api.md).
 
 ## モデルのトレーニングと評価 {#train-and-evaluate-your-model}
 
-Now that your data is prepared and a recipe is ready, you have the ability to create, train, and evaluate your machine learning model further. While using the Recipe Builder, you should have already trained, scored, and evaluated your model before packaging it into a recipe.
+データの準備が完了し、レシピの準備が整ったので、機械学習モデルをさらに作成、トレーニング、評価できます。 Recipe Builder を使用する場合は、モデルをレシピにパッケージ化する前に、既にトレーニング、スコアリング、評価をおこなっている必要があります。
 
 Data Science Workspace の UI と API を使用すると、レシピをモデルとして公開できます。 さらに、ハイパーパラメーターの追加、削除、変更など、モデルの特定の側面をさらに微調整できます。
 
@@ -86,7 +86,7 @@ Data Science Workspace を使用すると、トレーニング済みモデルを
 
 ### サービスの自動トレーニングのスケジュール設定
 
-モデルをサービスとして公開したら、機械学習サービスのスコアリングおよびトレーニング実行のスケジュールを設定できます。 Automating the training and scoring process can help maintain and improve a service&#39;s efficiency through time by keeping up with patterns within your data. Visit the [schedule a model in the Data Science Workspace UI](./schedule-models-ui.md) tutorial.
+モデルをサービスとして公開したら、機械学習サービスのスコアリングおよびトレーニング実行のスケジュールを設定できます。 トレーニングとスコアリングのプロセスを自動化すると、データ内のパターンに追いつくことで、サービスの効率を時間をかけて維持および改善できます。 次にアクセス： [Data Science Workspace UI でのモデルのスケジュール](./schedule-models-ui.md) チュートリアル
 
 >[!NOTE]
 >
@@ -94,8 +94,8 @@ Data Science Workspace を使用すると、トレーニング済みモデルを
 
 ## 次の手順 {#next-steps}
 
-Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. 機械学習のインサイトが [!DNL Profile]-enabled データセット。同じデータも [!DNL Profile] 次を使用してセグメント化できるレコード： [!DNL Adobe Experience Platform Segmentation Service].
+Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習のインサイトが [!DNL Profile]-enabled データセット。同じデータも [!DNL Profile] 次を使用してセグメント化できるレコード： [!DNL Adobe Experience Platform Segmentation Service].
 
-プロファイルと時系列データが取得されると、リアルタイム顧客プロファイルは、既存のデータと結合して和集合表示を更新する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをセグメントに含めるか除外するかを自動的に決定します。その結果、顧客がブランドとやり取りする際に、瞬時に計算をおこない、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定をおこなうことができます。
+プロファイルと時系列データが取得されると、リアルタイム顧客プロファイルは、既存のデータと結合して和集合表示を更新する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをセグメントに含めるか除外するかを自動的に決定します。その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。
 
 のチュートリアルを参照してください。 [機械学習のインサイトを使用したリアルタイム顧客プロファイルの強化](./enrich-profile.md) を参照して、機械学習のインサイトを利用する方法の詳細を確認してください。

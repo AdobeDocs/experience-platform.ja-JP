@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ソース；API；参照；フローサービス
 title: フローサービス API を使用した表形式のソースの調査
 description: このチュートリアルでは、フローサービス API を使用して、テーブルベースのソースのコンテンツと構造を調べます。
-source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
+exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
+source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 23%

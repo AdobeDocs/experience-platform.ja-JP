@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；その他の関数；その他
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；その他の関数；その他
 solution: Experience Platform
 title: PQL その他の関数
 topic-legacy: developer guide
@@ -14,7 +14,7 @@ ht-degree: 68%
 
 # その他の関数
 
-次の関数は、[!DNL Profile Query Language] (PQL) のその他の関数です。 その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+次の関数は、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
 ## Let
 

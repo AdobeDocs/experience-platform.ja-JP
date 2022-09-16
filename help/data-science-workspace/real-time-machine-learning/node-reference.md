@@ -123,14 +123,14 @@ msg6 = model_train.process(msg5)
 | 値 | 説明 |
 | --- | --- |
 | features | モデルにフィーチャを入力します（文字列のリスト）。 <br> 例： `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| ラベル | ターゲット列名（文字列）。 |
+| label | ターゲット列名（文字列）。 |
 | mode | トレーニング/テスト（文字列）。 |
 | model_path | 保存モデルのパスをローカルで onnx 形式で指定します。 |
 | params.model | モデルへの絶対インポートパス（文字列）例： `sklearn.linear_model.LogisticRegression`. |
 | params.model_params | モデルハイパーパラメーター (「 [sklearn API(map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) ドキュメントを参照してください。 |
 | node_instance.process(data_message_from_previous_node) | メソッド `process()` 前のノードから DataMsg を取得し、変換を適用します。 これは、現在使用されているノードによって異なります。 |
 
-### Split
+### 分割
 
 次のノードを使用して、を渡すことで、データフレームをトレーニングとテストに分割します。 `train_size` または `test_size`. これにより、複数インデックスを持つデータフレームが返されます。 次の例を使用して、トレーニングとテストのデータフレームにアクセスできます。 `msg5.data.xs(“train”)`.
 

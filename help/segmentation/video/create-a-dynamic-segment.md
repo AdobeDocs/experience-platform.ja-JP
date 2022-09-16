@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platformでの動的セグメントの作成
-description: このビデオでは、Platform UI を使用して動的なセグメントを作成する方法の基本を説明します。
+description: このビデオでは、Platform UI を使用して動的なセグメントを作成する方法の基本的な知識を提供します。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -13,18 +13,18 @@ exl-id: 62345f9d-11fe-4659-a513-ee15938f0c85
 source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 0%
+ht-degree: 13%
 
 ---
 
 # Experience PlatformUI での動的セグメントの作成
 
-次のビデオは、動的セグメントの作成に関する理解を深めるためのものです。 これは、顧客体験の例を示し、その後に [!DNL Platform] インターフェイスの主な機能のクイックツアーが続きます。 セグメント化と UI でのセグメントの作成方法について詳しくは、『[ セグメントビルダーガイド ](../ui/segment-builder.md)』を参照してください。
+次のビデオでは、動的セグメントの作成について理解を深めることを目的としています。 この例では、顧客体験の後に、 [!DNL Platform] インターフェイス。 セグメント化と UI でのセグメントの作成方法について詳しくは、 [セグメントビルダーガイド](../ui/segment-builder.md).
 
-セグメント化 API を使用したセグメントの作成に関心がある場合は、『[ セグメント API の作成ガイド ](../tutorials/create-a-segment.md)』を参照してください。
+セグメント化 API を使用したセグメントの作成について詳しくは、 [セグメント API ガイドの作成](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、[ セグメントビルダーガイド ](../ui/segment-builder.md) を参照してください。
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、 [セグメントビルダーガイド](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

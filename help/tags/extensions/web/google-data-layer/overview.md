@@ -1,10 +1,11 @@
 ---
 title: Google Data Layer 拡張機能
 description: Adobe Experience PlatformのGoogle Client Data Layer タグ拡張機能について説明します。
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
+source-git-commit: 51a263dc2f42fe3538f15f32c7573c69a2e2adc4
 workflow-type: tm+mt
 source-wordcount: '819'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 6%
 >
 >この拡張機能は現在ベータ版で、実稼動環境では完全にテストされていません。
 
-Google Data Layer 拡張機能を使用すると、タグ実装でGoogleデータレイヤーを使用できます。 この拡張機能は、単独で、またはGoogleソリューションと同時に、Googleのオープンソースと共に使用できます [データレイヤーヘルパーライブラリ](https://github.com/google/data-layer-helper).
+Google データレイヤー拡張機能を使用すると、タグ実装で Google データレイヤーを使用できます。この拡張機能は、単独で、またはGoogleソリューションと同時に、Googleのオープンソースと共に使用できます [データレイヤーヘルパーライブラリ](https://github.com/google/data-layer-helper).
 
 ヘルパーライブラリは、イベントクライアントデータデイヤー (ACDL) と同様のAdobe駆動型機能を提供します。 Google Data Layer 拡張機能のデータ要素、ルールおよびアクションは、 [ACDL 拡張機能](../client-data-layer/overview.md).
 

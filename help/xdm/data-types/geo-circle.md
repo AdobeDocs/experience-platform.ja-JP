@@ -8,7 +8,7 @@ exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 20%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_schema.coordinates` | [[!UICONTROL 地域座標]](./geo-coordinates.md) | 円の中心の地理的座標を表します。 |
+| `_schema.coordinates` | [[!UICONTROL 地理座標]](./geo-coordinates.md) | 円の中心の地理的座標を表します。 |
 | `_schema.description` | 文字列 | 円に何が含まれているかの説明。 |
 | `_schema.radius` | Double | 円の半径の長さ。この値は [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) データムに準拠し、メートル単位で測定されます。 |
 | `_id` | 文字列 | システムで生成された、サークルの一意の ID。 |

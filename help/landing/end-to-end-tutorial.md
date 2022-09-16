@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform：ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
+keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 title: Adobe Experience Platformのエンドツーエンドのサンプルワークフロー
 topic-legacy: getting started
 description: Adobe Experience Platformの基本的なエンドツーエンドのワークフローを大まかに説明します。
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: c9ebccb6584c687a9cc3fe693b9303c9392a1114
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -22,9 +23,9 @@ RESTful API を基に構築された Platform は、システムの全機能を�
 
 このエンドツーエンドのワークフローは、複数のAdobe Experience Platformサービスを使用します。 以下は、このワークフローで使用されるサービスの概要へのリンクのリストです。
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動を包括的に把握できます。
-- [ソース](../sources/home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
+- [ソース](../sources/home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
 - [[!DNL Real-time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [データセット](../catalog/datasets/overview.md):のデータ永続化のためのストレージと管理の構成 [!DNL Experience Platform].

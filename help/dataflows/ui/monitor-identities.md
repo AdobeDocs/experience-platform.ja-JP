@@ -4,13 +4,13 @@ description: Adobe Experience Platform ID サービスを利用すると、デ�
 title: UI での ID のデータフローの監視
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
+source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
-
 
 # UI での ID のデータフローの監視
 

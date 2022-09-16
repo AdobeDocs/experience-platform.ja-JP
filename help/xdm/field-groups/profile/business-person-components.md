@@ -5,7 +5,7 @@ exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->取り込みパターンに従う必要があります ( [ソースドキュメント](../../../rtcdp/sources/b2b.md). その他のフィールドマッピングメソッドは、必ずしも機能するとは限りません。
+>取り込みパターンに従う必要があります ( [ソースドキュメント](../../../rtcdp/sources/b2b.md). その他のフィールドマッピングメソッドは、動作を保証するものではありません。
 >
 >例えば、 `personComponents` 配列は、標準の取り込みパターンで個別に送信され、Platform によって配列に追加されます。 オブジェクトの配列を Business Person コンポーネントに手動で追加すると、エラーが返されます。
 >B2B データのスキーマを作成する場合は、自動生成ユーティリティを使用する必要があります。 の使用方法については、ドキュメントを参照してください [B2B 名前空間とスキーマ自動生成ユーティリティ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 自動生成ユーティリティを使用せず、データモデルを手動でマッピングする場合は、 [Real-time Customer Data Platform B2B Edition Experience Data Model(XDM) クラス](../../../rtcdp/schemas/b2b.md) を参照してください。
@@ -34,7 +34,7 @@ ht-degree: 3%
 | `sourceConvertedContactKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | このリードがコンバートされた場合の、関連する連絡先の複合識別子。 |
 | `sourceExternalKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 個人のデータの元となったソースシステムの複合識別子。 |
 | `sourcePersonKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 人物の複合識別子。 |
-| `workEmail` | [[!UICONTROL 電子メールアドレス]](../../data-types/b2b-source.md) | 人物の仕事用電子メール ID。 |
+| `workEmail` | [[!UICONTROL メールアドレス]](../../data-types/b2b-source.md) | 人物の仕事用電子メール ID。 |
 | `personGroupID` | 文字列 | 人物のグループ識別子。 |
 | `personScore` | 文字列 | CRM システムによって個人に対して生成されたスコア。 |
 | `personSource` | 文字列 | 個人のデータの送信元のソースシステムの一意の文字列ベースの識別子。 |

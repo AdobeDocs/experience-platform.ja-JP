@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ストリーミングセグメント化；ストリーミングセグメント化；継続的評価；
 solution: Experience Platform
-title: 'ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価 '
+title: ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
-# ストリーミングセグメント化を使用したほぼリアルタイムでのイベント評価
+# ストリーミングセグメント化を使用したほぼリアルタイムのイベント評価
 
 >[!NOTE]
 >

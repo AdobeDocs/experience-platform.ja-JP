@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；よく読まれるトピック；ETL;etl;etl ワークフロー；ETL ワークフロー
+keywords: Experience Platform；ホーム；人気の高いトピック；ETL;etl;etl ワークフロー；ETL ワークフロー
 solution: Experience Platform
 title: ETL ワークフロー
 topic-legacy: overview
@@ -26,7 +26,7 @@ ht-degree: 84%
 
 ![](images/image2.png)
 
-### 図 2 - [!DNL Experience Platform] アクティブ化されたコネクタ：
+### 図 2 - [!DNL Experience Platform] 有効化されたコネクタ：
 
 ![](images/image3.png)
 
@@ -34,11 +34,11 @@ ht-degree: 84%
 
 ![](images/image4.png)
 
-### 図 4 — 新しい変換 UI、[!DNL Experience Platform] 接続を選択：
+### 図 4 — 新しい変換 UI、選択 [!DNL Experience Platform] 接続：
 
 ![](images/image5.png)
 
-### 図 5 — ソース [!DNL Experience Platform] データセットの参照：
+### 図 5 — ソースの参照 [!DNL Experience Platform] データセット：
 
 ![](images/image6.png)
 
@@ -58,7 +58,7 @@ ht-degree: 84%
 
 ![](images/image10.png)
 
-### 図 10 - [!DNL Experience Data Model] (XDM) ターゲットデータセットの定義：
+### 図 10 — の定義 [!DNL Experience Data Model] (XDM) ターゲットデータセット：
 
 ![](images/image11.png)
 

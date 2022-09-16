@@ -4,7 +4,7 @@ description: Adobe Experience Platform Web SDK を使用して、Platform 機能
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;エッジ;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 100%
 

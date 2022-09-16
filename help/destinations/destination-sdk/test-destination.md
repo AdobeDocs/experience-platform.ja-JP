@@ -5,7 +5,7 @@ exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ Adobeは、Destination SDKの一環として、宛先の設定とテストを支
 
 宛先テスト API エンドポイントへの呼び出しは、リクエストにプロファイルを追加する場合も、追加しない場合もおこなえます。
 
-リクエストにプロファイルを追加しない場合、Adobeは内部的にプロファイルを生成し、リクエストに追加します。 このリクエストで使用するプロファイルを生成する場合は、 [サンプルのプロファイル生成 API リファレンス](./sample-profile-generation-api.md). ソース XDM スキーマに基づいてプロファイルを生成する必要があります ( [API リファレンス](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). ソーススキーマは [和集合スキーマ](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) 使用するサンドボックスの。
+リクエストにプロファイルを追加しない場合、Adobeは内部的にプロファイルを生成し、リクエストに追加します。 このリクエストで使用するプロファイルを生成する場合は、 [サンプルのプロファイル生成 API リファレンス](./sample-profile-generation-api.md). ソース XDM スキーマに基づいてプロファイルを生成する必要があります ( [API リファレンス](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). ソーススキーマは [和集合スキーマ](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=ja) 使用するサンドボックスの。
 
 応答には、宛先リクエストの処理結果が含まれます。 リクエストには、次の 3 つの主なセクションが含まれます。
 * 宛先のAdobeで生成されたリクエスト。

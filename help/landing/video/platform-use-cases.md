@@ -1,6 +1,6 @@
 ---
-title: 主なExperience Platform事例
-description: このビデオでは、Adobe Experience Platform&amp、mdash、リアルタイム顧客データプラットフォーム、カスタマージャーニーインテリジェンス、配信とクロスチャネルエクスペリエンス、顧客体験アプリケーション開発の 4 つの主な使用例の概要を説明します。
+title: Experience Platformの主な使用例
+description: このビデオでは、Adobe Experience Platform&mdash、リアルタイム顧客データプラットフォーム、カスタマージャーニーインテリジェンス、配信およびクロスチャネルエクスペリエンス、顧客体験アプリケーション開発の 4 つの主な使用例の概要を説明します。
 kt: 4337
 audience: all
 doc-type: video

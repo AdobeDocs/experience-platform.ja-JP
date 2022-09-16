@@ -1,7 +1,8 @@
 ---
 title: Adobe Targetでのアクティビティ分析
 description: このドキュメントでは、クエリサービスを使用して、Adobe Targetデータを使用して作成されたデータセットから実用的なインサイトを作成する方法を説明します。
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: a5181ee2-1e1c-405d-8dfe-5a32c28ac9f1
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 12%

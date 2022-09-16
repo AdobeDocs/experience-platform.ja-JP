@@ -1,15 +1,15 @@
 ---
 title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: a761ab634dce31bd0a06297f703d9d815c2f0ea2
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-
-# （ベータ版） [!DNL Trade Desk] - CRM 接続
+# （ベータ版）[!DNL Trade Desk]- CRM 接続
 
 >[!IMPORTANT]
 >

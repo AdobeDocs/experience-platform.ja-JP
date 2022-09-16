@@ -1,6 +1,6 @@
 ---
-title: 舞台裏&#58;Adobe Experience Platformを活用した顧客体験
-description: 前のビデオでは、サンプルブランド Luma が、豊かでやりがいのある、関連性の高い顧客エクスペリエンスを作成する方法を見てきました。 このビデオでは、Adobe Experience Platformがこのジャーニーを達成するためにどのように使用されているかを説明します。
+title: バックグラウンド：Adobe Experience Platformを活用したカスタマーエクスペリエンス
+description: 前のビデオでは、サンプルブランド Luma が、豊かでやりがいのある、関連性の高い顧客エクスペリエンスを作成する方法を見てきました。 このビデオでは、Adobe Experience Platformを使用してこのジャーニーを達成する方法を説明します。
 kt: 4340
 audience: all
 doc-type: video
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Experience Platformを活用した顧客体験の背後
 
-[Platform](customer-experience.md) による顧客体験を示すビデオを視聴した後、背後に移動して、Adobe Experience Platformがこのエクスペリエンスを強化するためにどのように使用されたかを確認します。
+次を示すビデオを見た後 [Platform を活用した顧客体験](customer-experience.md)を参照して、Adobe Experience Platformがこのエクスペリエンスを強化するためにどのように使用されたかを確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

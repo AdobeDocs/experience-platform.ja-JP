@@ -1,13 +1,13 @@
 ---
 keywords: IP アドレス、IP 範囲、許可リスト先、許可リスト
-title: 'クラウドストレージの宛先の IP アドレス許可リスト '
+title: クラウドストレージの宛先の IP アドレス許可リスト
 type: Documentation
 description: このページには、許可リストに追加でき、Experience Platformから SFTP サーバー、Amazon S3 または Azure Blob ストレージにデータを安全に書き出すための IP 範囲が含まれています。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 

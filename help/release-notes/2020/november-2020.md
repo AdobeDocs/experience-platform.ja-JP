@@ -7,8 +7,8 @@ author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2184'
+ht-degree: 26%
 
 ---
 
@@ -94,7 +94,7 @@ Adobeがデータレイクを Gen1 から Gen2 に移行している間、ユー
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspace は、機械学習と人工知能を使用して、データからインサイトを作成します。Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。Data Science Workspace がこれを実現する方法の 1 つは、 [!DNL JupyterLab]. [!DNL JupyterLab] は、 [[!DNL Project Jupyter]](https://jupyter.org/) とはAdobe Experience Platformと緊密に統合されています。 データサイエンティストが連携できる、インタラクティブな開発環境を提供します。 [!DNL Jupyter] ノートブック、コード、データ。
+Data Science Workspace は、機械学習と人工知能を使用して、データからインサイトを作成します。Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測を行うことを支援します。Data Science Workspace がこれを実現する方法の 1 つは、 [!DNL JupyterLab]. [!DNL JupyterLab] は、 [[!DNL Project Jupyter]](https://jupyter.org/) とはAdobe Experience Platformと緊密に統合されています。 データサイエンティストが連携できる、インタラクティブな開発環境を提供します。 [!DNL Jupyter] ノートブック、コード、データ。
 
 **主な特長**
 

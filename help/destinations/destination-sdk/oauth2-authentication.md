@@ -52,9 +52,9 @@ Experience Platformでは、次の表に示す 3 つの OAuth 2 付与タイプ�
 
 | OAuth 2 付与 | 入力 | 出力 |
 |---------|----------|---------|
-| 認証コード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| 認証コード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -73,7 +73,7 @@ Adobeが OAuth 2 認証用に設計したシステム：
 
 | OAuth 2 付与 | 入力 | 出力 |
 |---------|----------|---------|
-| 認証コード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| 認証コード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -100,14 +100,14 @@ Adobeが OAuth 2 認証用に設計したシステム：
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authType` | 文字列 | 「OAUTH2」を使用します。 |
+| `authType` | String | 「OAUTH2」を使用します。 |
 | `grant` | 文字列 | &quot;OAUTH2_AUTHORIZATION_CODE&quot;を使用します。 |
 | `accessTokenUrl` | 文字列 | ユーザー側の URL。トークンにアクセスし、必要に応じて更新トークンを発行します。 |
 | `authorizationUrl` | 文字列 | ユーザーをリダイレクトしてアプリケーションにログインするための認証サーバーの URL。 |
 | `refreshTokenUrl` | 文字列 | *オプション。* 側の URL。更新トークンを発行します。 多くの場合、 `refreshTokenUrl` は `accessTokenUrl`. |
 | `clientId` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント ID。 |
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
-| `scope` | 文字列のリスト | *オプション*. リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
+| `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -118,7 +118,7 @@ Adobeは、以下の標準入力を利用して、値を上書きできるので
 
 | OAuth 2 付与 | 入力 | 出力 |
 |---------|----------|---------|
-| パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -150,7 +150,7 @@ Adobeは、以下の標準入力を利用して、値を上書きできるので
 | `accessTokenUrl` | 文字列 | ユーザー側の URL。トークンにアクセスし、必要に応じて更新トークンを発行します。 |
 | `clientId` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント ID。 |
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
-| `scope` | 文字列のリスト | *オプション*. リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
+| `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -160,7 +160,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 
 | OAuth 2 付与 | 入力 | 出力 |
 |---------|----------|---------|
-| クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,7 +192,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 | `refreshTokenUrl` | 文字列 | *オプション。* 側の URL。更新トークンを発行します。 多くの場合、 `refreshTokenUrl` は `accessTokenUrl`. |
 | `clientId` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント ID。 |
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
-| `scope` | 文字列のリスト | *オプション*. リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
+| `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
 {style=&quot;table-layout:auto&quot;}
 

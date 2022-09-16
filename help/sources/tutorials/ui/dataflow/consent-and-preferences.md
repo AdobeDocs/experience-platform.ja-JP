@@ -5,7 +5,8 @@ title: UI での同意および環境設定ソースを使用したデータフ�
 topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して同意および環境設定ソースのデータフローを作成する手順を説明します。
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 44%

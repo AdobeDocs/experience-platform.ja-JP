@@ -4,8 +4,8 @@ title: リアルタイムの顧客データプラットフォームの概要
 description: リアルタイム顧客データプラットフォームの概要
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '420'
 ht-degree: 100%
 
 ---

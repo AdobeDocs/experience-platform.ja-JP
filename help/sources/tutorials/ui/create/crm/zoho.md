@@ -7,7 +7,7 @@ type: Tutorial
 description: Adobe Experience Platform の UI を使用して Zoho CRM ソース接続を作成する方法を説明します。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 100%
 
@@ -59,9 +59,9 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 既存のアカウント
 
-既存のアカウントを使用するには、 新しいデータフローの作成に使用する [!DNL Zoho CRM] アカウントを選択してから、「**[!UICONTROL 次へ]**」をクリックして続行します。
+既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Zoho CRM] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![existing](../../../../images/tutorials/create/zoho/existing.png)
+![既存](../../../../images/tutorials/create/zoho/existing.png)
 
 ### 新しいアカウント
 

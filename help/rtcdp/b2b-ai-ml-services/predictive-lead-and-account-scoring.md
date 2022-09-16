@@ -2,7 +2,8 @@
 title: リアルタイム CDP B2B での予測リードおよびアカウントスコアリング
 type: Documentation
 description: Experience PlatformCDP B2B の予測リードおよびアカウントスコアリング機能の概要と詳細。
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: d3afbabb-005d-4537-831a-857c88043759
+source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 9%

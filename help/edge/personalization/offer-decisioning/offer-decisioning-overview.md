@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理さ�
 
 offer decisioningを扱う際は、次の用語を理解することが重要です。 詳細および追加のキーワードを表示するには、 [offer decisioning用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **コンテナ：** コンテナとは、異なる懸念を切り離すための分離メカニズムです。 コンテナ ID は、すべてのリポジトリー API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
+* **コンテナ：** コンテナとは、異なる懸念を切り離すための分離メカニズムです。 コンテナ ID は、すべてのリポジトリ API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
 * **決定範囲：** offer decisioningの場合、決定範囲は、offer decisioningサービスがオファーの提案に使用するアクティビティと配置 ID を含む、Base64 でエンコードされた JSON の文字列です。
 
@@ -142,7 +142,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 | `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
-**応答** 
+**応答**
 
 ```json
 {
@@ -239,7 +239,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 | `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
 | `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
-**応答** 
+**応答**
 
 ```json
 {

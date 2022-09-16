@@ -22,7 +22,7 @@ Adobe Experience Platform でデータを取得するプロセスは、複数の
 
 ## データ取得通知用の Webhook の登録
 
-データ取得通知を受け取るには、 [Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui) をクリックして、webhook をExperience Platform統合に登録します。
+データ取得通知を受け取るには、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) をクリックして、webhook をExperience Platform統合に登録します。
 
 次のチュートリアルに従います。 [購読者 [!DNL Adobe I/O Event] 通知](../../observability/alerts/subscribe.md) を参照してください。
 

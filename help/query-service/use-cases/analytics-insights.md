@@ -1,7 +1,8 @@
 ---
-title: 'Web およびモバイルでのインタラクションに関する Analytics インサイト '
+title: Web およびモバイルでのインタラクションに関する Analytics インサイト
 description: このドキュメントでは、取り込んだAdobe Analyticsデータから実用的なインサイトを作成するクエリサービスの使用方法を説明します。
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%

@@ -116,7 +116,7 @@ Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] 
 
 ![特定ユーザーマッピング](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-チャネルにマッピングする必要がある識別子（デバイスなど）については、ソースに基づいて適切なチャネルにマッピングされます。 次の画像は、2 つのマッピングの作成方法を示しています。
+チャネルにマッピングする必要がある識別子（デバイスなど）について、ソースに基づいて適切なチャネルにマッピングします。 次の画像は、2 つのマッピングの作成方法を示しています。
 
 * IDFA iOS Advertising ID を [!DNL Airship] iOSチャネル
 * Adobe `fullName` 属性 [!DNL Airship] 「フルネーム」属性

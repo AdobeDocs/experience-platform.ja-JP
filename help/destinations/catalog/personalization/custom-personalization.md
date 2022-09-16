@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 43%
+ht-degree: 50%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 43%
 
 拡張された **[!UICONTROL カスタムパーソナライゼーション]** 宛先コネクタ、2 つが表示されている可能性があります **[!UICONTROL カスタムパーソナライゼーション]** カードを含める必要があります。
 
-この **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタは現在ベータ版で、限られた数のお客様のみご利用いただけます。 また、 **[!UICONTROL カスタムパーソナライゼーション]**、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタはオプションのを追加します [マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) をアクティベーションワークフローに追加すると、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。
+この **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** コネクタは現在ベータ版で、限られた数のお客様のみご利用いただけます。 **[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](/help/server-api/overview.md) データ収集用。 さらに、すべての Server API 呼び出しは、 [認証コンテキスト](../../../server-api/authentication.md).
+> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;の宛先では、データ収集に [Edge Network Server API](/help/server-api/overview.md) を使用する必要があります。さらに、すべての Server API 呼び出しは、[認証済みコンテキスト](../../../server-api/authentication.md)で行う必要があります。
 >
 >既に統合に Web SDK または Mobile SDK を使用している場合は、Server API を使用して属性を取得する方法は 2 つあります。
 >

@@ -1,13 +1,13 @@
 ---
 description: このページでは、Destination SDKの/sample-profiles API エンドポイントを使用して、ソーススキーマに基づくサンプルプロファイルを生成する方法について説明します。 これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
-source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 13%
 
 ---
-
 
 # ソーススキーマに基づくサンプルプロファイルの生成
 

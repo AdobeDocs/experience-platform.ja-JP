@@ -1,6 +1,6 @@
 ---
 title: Experience Platformアーキテクチャの概要
-description: このビデオでは、概要図を順を追って説明し、Adobe Experience Platformの主な構成要素を説明します。
+description: このビデオでは、概要図を使用し、Adobe Experience Platformの主な要素について説明します。
 kt: 4336
 audience: all
 doc-type: video
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Experience Platformアーキテクチャの概要
 
-このビデオでは、Experience Platformの主な要素を説明する、アーキテクチャの概要図について説明します。
+このビデオでは、Experience Platformの主な要素を説明するアーキテクチャの概要図について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

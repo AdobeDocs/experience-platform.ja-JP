@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp 管理の概要；管理の概要
 title: Real-time Customer Data Platform管理の概要
-description: 'このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。 '
+description: このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt

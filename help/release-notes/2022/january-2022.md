@@ -4,8 +4,8 @@ description: Adobe Experience Platformの 2022 年 1 月のリリースノート
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1342'
+ht-degree: 98%
 
 ---
 

@@ -5,8 +5,8 @@ description: Real-time Customer Data Platform B2B Edition では、アカウン�
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1629'
+ht-degree: 73%
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;api ガイド；platform api ガイド；platform の概要；開発者ガイド
 solution: Experience Platform
-title: Getting started with Adobe Experience Platform APIs
+title: Adobe Experience Platform API の概要
 topic-legacy: api guide
 description: Adobe Experience Platformは、相互に密接にリンクされた API サービスを提供します。 このガイドには、使用可能なサービス、CRUD 操作に必要なヘッダー、エラーメッセージ、Postmanコレクション、サンプル API 呼び出しに関する情報が含まれています。
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
@@ -16,11 +16,11 @@ ht-degree: 30%
 
 Adobe Experience Platformは、「API ファースト」の理念の下で開発されています。 Platform API を使用すると、計算済み属性の設定、データ/エンティティへのアクセス、データのエクスポート、不要なデータやバッチの削除など、データに対する基本的な CRUD（作成、読み取り、更新、削除）操作をプログラムで実行できます。
 
-The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. 以下のガイドでは、Platform API の使用を開始するために必要な手順の概要を説明します。
+各認証サービスの API は、すべて同じExperience Platformヘッダーのセットを共有し、CRUD 操作に同様の構文を使用します。 以下のガイドでは、Platform API の使用を開始するために必要な手順の概要を説明します。
 
 ## 認証とヘッダー
 
-In order to successfully make calls to Platform endpoints, you are required to complete the [authentication tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
+Platform エンドポイントを正しく呼び出すには、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -36,7 +36,7 @@ Platform のサンドボックスについて詳しくは、[サンドボック�
 
 ### Content-type ヘッダー
 
-リクエスト本文にペイロードを持つすべてのリクエスト（POST、PUT、PATCH 呼び出しなど）には、`Content-Type` ヘッダーが含まれている必要があります。指定できる値は、各 API エンドポイントに固有です。 If a specific `Content-Type` value is needed for an endpoint, its value will be shown in the example API requests provided by the [API guides for individual Platform services](#api-guides).
+リクエスト本文にペイロードを持つすべてのリクエスト（POST、PUT、PATCH 呼び出しなど）には、`Content-Type` ヘッダーが含まれている必要があります。指定できる値は、各 API エンドポイントに固有です。 特定の `Content-Type` の値がエンドポイントに必要な場合、その値は [個々の Platform サービスの API ガイド](#api-guides).
 
 ## Experience Platform API の基本
 
@@ -44,9 +44,9 @@ Adobe Experience Platform API は、Platform リソースを効果的に管理�
 
 JSON スキーマオブジェクトの例など、Platform が利用する基になる API テクノロジーの詳細については、 [Experience PlatformAPI の基本](api-fundamentals.md) ガイド。
 
-## Postman collections for Experience Platform APIs
+## Experience PlatformAPI 用のPostmanコレクション
 
-Postmanは、API 開発のコラボレーションプラットフォームで、プリセット変数を使用して環境を設定し、API コレクションを共有し、CRUD リクエストを合理化するなどのことができます。 Most Platform API services have Postman collections which can be used to assist with making API calls.
+Postmanは、API 開発のコラボレーションプラットフォームで、プリセット変数を使用して環境を設定し、API コレクションを共有し、CRUD リクエストを合理化するなどのことができます。 ほとんどの Platform API サービスにはPostmanコレクションがあり、API 呼び出しの実行に役立ちます。
 
 環境の設定方法、使用可能なコレクションのリスト、コレクションの読み込み方法など、Postmanについて詳しくは、 [Platform Postman documentation](postman.md).
 
@@ -116,27 +116,27 @@ curl -X GET \
 
 必要なヘッダーやリクエスト本文を含む、Platform API の特定のエンドポイントについて詳しくは、 [Platform API ガイド](#api-guides).
 
-## Platform API guides {#api-guides}
+## Platform API ガイド {#api-guides}
 
 | API ガイド | 説明 |
 | --- | --- |
 | [[!DNL Access Control] API ガイド](.././access-control/api/getting-started.md) | この [!DNL Access Control] API エンドポイントは、指定されたサンドボックス内の特定のリソースに関して、ユーザーに対して有効な現在のポリシーを取得できます。 その他のすべてのアクセス制御機能は、 [Adobe Admin Console](https://adminconsole.adobe.com/). |
 | [バッチ取得 API ガイド](.././ingestion/batch-ingestion/api-overview.md) | ザAdobe Experience Platform [!DNL Data Ingestion] API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、またはスキーマレジストリ (XDM) の既知のスキーマに適合するデータを取り込むことができます。 |
-| [[!DNL Catalog Service] API ガイド](.././catalog/api/getting-started.md) | The [!DNL Catalog Service] API allows developers to manage dataset metadata in Adobe Experience Platform. This includes data locations, processing stages, errors that occurred during processing, and data reports. |
-| [[!DNL Data Access] API ガイド](.././data-access/api.md) | The [!DNL Data Access] API allows developers to retrieve information on ingested datasets within Experience Platform. これには、データセットファイルのアクセスとダウンロード、ヘッダー情報の取得、失敗したバッチと成功したバッチのリスト表示、CSV プレビュー/Parquet ファイルのダウンロードが含まれます。 |
+| [[!DNL Catalog Service] API ガイド](.././catalog/api/getting-started.md) | この [!DNL Catalog Service] API を使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 これには、データの場所、処理ステージ、処理中に発生したエラー、データレポートが含まれます。 |
+| [[!DNL Data Access] API ガイド](.././data-access/api.md) | この [!DNL Data Access] API を使用すると、開発者は、取り込んだデータセットに関する情報をExperience Platform内で取得できます。 これには、データセットファイルのアクセスとダウンロード、ヘッダー情報の取得、失敗したバッチと成功したバッチのリスト表示、CSV プレビュー/Parquet ファイルのダウンロードが含まれます。 |
 | [[!DNL Dataset Service] API ガイド](.././data-governance/labels/dataset-api.md) | Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。 |
 | [[!DNL Identity Service] API ガイド](.././identity-service/api/getting-started.md) | この [!DNL Identity Service] API を使用すると、開発者は、Adobe Experience Platformの ID グラフを使用して、デバイス間、チャネル間、ほぼリアルタイムでの顧客の識別を管理できます。 |
 | [[!DNL Observability Insights] API ガイド](.././observability/api/overview.md) | [!DNL Observability Insights] は、開発者がAdobe Experience Platformで主要な観察性指標を公開できる RESTful API です。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。 |
-| [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) <br> (Data Governance) | この [!DNL Policy Service] API を使用すると、データ使用ラベルとポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 データセットとフィールドにラベルを適用するには、 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) ガイド |
-| [[!DNL Privacy Service] API ガイド](.././privacy-service/api/getting-started.md) | The [!DNL Privacy Service] API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. |
+| [[!DNL Policy Service] API ガイド](.././data-governance/api/overview.md) <br> （データガバナンス） | この [!DNL Policy Service] API を使用すると、データ使用ラベルとポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 データセットとフィールドにラベルを適用するには、 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) ガイド |
+| [[!DNL Privacy Service] API ガイド](.././privacy-service/api/getting-started.md) | この [!DNL Privacy Service] API を使用すると、開発者は、法的プライバシー規制に準拠して、Experience Cloudアプリケーションをまたいで自分の個人データにアクセスしたり削除したりする顧客リクエストを作成および管理できます。 |
 | [[!DNL Query Service] API ガイド](.././query-service/api/getting-started.md) | この [!DNL Query Service] 開発者は、API を使用して、標準の SQL を使用してAdobe Experience Platformデータに対してクエリを実行できます。 |
 | [[!DNL Real-time Customer Profile] API ガイド](.././profile/api/overview.md) | リアルタイム顧客プロファイル API を使用すると、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、不要になったまたはエラーで追加されたプロファイルデータの削除など、プロファイルデータの調査と操作ができます。 |
 | [サンドボックス API ガイド](.././sandboxes/api/getting-started.md) | サンドボックス API を使用すると、開発者は、Adobe Experience Platformで分離された仮想サンドボックス環境をプログラムで管理できます。 |
-| [[!DNL Schema Registry] API guide](.././xdm/api/overview.md) <br> (XDM) | この [!DNL Schema Registry] API を使用すると、開発者はAdobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 |
-| [[!DNL Segmentation Service] API ガイド](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
+| [[!DNL Schema Registry] API ガイド](.././xdm/api/overview.md) <br> (XDM) | この [!DNL Schema Registry] API を使用すると、開発者はAdobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 |
+| [[!DNL Segmentation Service] API ガイド](.././segmentation/api/overview.md) | この [!DNL Segmentation Service] API を使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラムで管理できます。 これには、セグメントの作成や、リアルタイム顧客プロファイルデータからのオーディエンスの生成が含まれます。 |
 | [[!DNL Sensei Machine Learning] API ガイド](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | この [!DNL Sensei Machine Learning] API は、データサイエンティストが、アルゴリズムのオンボーディング、実験、サービスのデプロイメントに至るまで、機械学習 (ML) サービスを整理および管理するメカニズムを提供します。 |
 
-For more information on specific endpoints and operations available for each service, please see the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+各サービスで使用できる特定のエンドポイントと操作について詳しくは、 [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O
 
 ## 次の手順
 

@@ -5,8 +5,8 @@ description: Adobe Experience Platform UI を使用して YOURSOURCE ソース�
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
 source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '722'
+ht-degree: 22%
 
 ---
 

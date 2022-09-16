@@ -4,13 +4,13 @@ description: リアルタイム顧客プロファイルを使用すると、オ�
 title: UI でのプロファイルのデータフローの監視
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
+source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
-
 
 # UI でのプロファイルのデータフローの監視
 

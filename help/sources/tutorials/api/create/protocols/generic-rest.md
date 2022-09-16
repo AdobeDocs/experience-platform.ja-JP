@@ -17,7 +17,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->この [!DNL Generic REST API] ソースはベータ版です。 See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>この [!DNL Generic REST API] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -34,13 +34,13 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ### 必要な認証情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL Generic REST API]を使用する場合は、選択した認証タイプに有効な資格情報を指定する必要があります。 [!DNL Generic REST API] supports both OAuth 2 refresh code and basic authentication. サポートされる 2 つの認証タイプの資格情報については、次の表を参照してください。
+次のために [!DNL Flow Service] ～とつながる [!DNL Generic REST API]を使用する場合は、選択した認証タイプに有効な資格情報を指定する必要があります。 [!DNL Generic REST API] は、OAuth 2 更新コードと基本認証の両方をサポートしています。 サポートされる 2 つの認証タイプの資格情報については、次の表を参照してください。
 
-#### OAuth 2 refresh code
+#### OAuth 2 更新コード
 
 | 認証情報 | 説明 |
 | --- | --- |
-| `host` | The host URL of the source that you are making your request to. この値は必須で、 `requestParameterOverride`. |
+| `host` | リクエスト先のソースのホスト URL。 この値は必須で、 `requestParameterOverride`. |
 | `authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `clientId` | （オプション）ユーザーアカウントに関連付けられたクライアント ID。 |
 | `clientSecret` | （オプション）ユーザーアカウントに関連付けられたクライアント秘密鍵。 |
@@ -109,9 +109,9 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
-| `connectionSpec.id` | The connection specification ID associated with [!DNL Generic REST API]. この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
+| `connectionSpec.id` | 次に関連付けられた接続仕様 ID [!DNL Generic REST API]. この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.host` | The root URL used to connect to your [!DNL Generic REST API] source. |
+| `auth.params.host` | の [!DNL Generic REST API] ソース。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
 **応答**
@@ -169,7 +169,7 @@ curl -X POST \
 | --- | --- |
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
-| `connectionSpec.id` | The connection specification ID associated with [!DNL Generic REST API]. この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
+| `connectionSpec.id` | 次に関連付けられた接続仕様 ID [!DNL Generic REST API]. この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
 | `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
 | `auth.params.host` | の [!DNL Generic REST API] ソース。 |
 | `auth.params.username` | に対応するユーザー名 [!DNL Generic REST API] ソース。 これは、基本認証に必要です。 |

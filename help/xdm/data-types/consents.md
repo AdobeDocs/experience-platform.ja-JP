@@ -7,7 +7,7 @@ exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
 source-wordcount: '2058'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -275,7 +275,7 @@ ht-degree: 2%
 
 以下の節では、 [!UICONTROL 同意および環境設定] データタイプ。
 
-### 指定できる値： `val` {#choice-values}
+### `val` の許容値 {#choice-values}
 
 次の表に、 `val`:
 
@@ -295,7 +295,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-### 指定できる値： `preferred` {#preferred-values}
+### `preferred` の許容値 {#preferred-values}
 
 次の表に、 `preferred`:
 

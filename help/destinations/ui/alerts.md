@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；アラート；宛先
 description: データフローの作成時にアラートをサブスクライブして、フロー実行のステータス、成功または失敗に関するアラートメッセージを受け取ることができます。
 title: コンテキスト内宛先アラートを購読
-source-git-commit: 56f1d5a6a1e90910cedb21fafb6b2ecf16d5b6d7
+exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
+source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 12%

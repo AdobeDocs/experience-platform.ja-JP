@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；アカウントを削除
-description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、「ソース」ワークスペースからアカウントを削除する手順を説明します。
+description: Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、「ソース」ワークスペースからアカウントを削除する手順を説明します。
 solution: Experience Platform
 title: UI でのソース接続アカウントの削除
 topic-legacy: overview
@@ -9,28 +9,28 @@ exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 11%
+ht-degree: 27%
 
 ---
 
 # ソース接続アカウントを削除
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、 **[!UICONTROL ソース]** ワークスペース。
+Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 **[!UICONTROL ソース]** ワークスペース。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md):標準化されたフレームワーク [!DNL Experience Platform] は顧客体験データを整理します。
+- [[!DNL Experience Data Model (XDM)]  システム](../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
+   - [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## UI を使用したアカウントの削除
 
 >[!TIP]
 >
->ソースアカウントを削除する前に、まず、ソースアカウントに関連付けられている既存のデータフローを削除する必要があります。 既存のデータフローを削除するには、 [UI でのソースデータフローの削除](./delete.md).
+>ソースアカウントを削除する前に、まず、ソースアカウントに関連付けられている既存のデータフローを削除する必要があります。既存のデータフローを削除するには、 [UI でのソースデータフローの削除](./delete.md).
 
 にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 この **[!UICONTROL カタログ]** 画面には、アカウントおよびデータフローを作成できる様々なソースが表示されます。 各ソースには、関連付けられている既存のアカウントとデータフローの数が表示されます。
 
@@ -58,7 +58,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 最終確認ダイアログボックスが表示されます。次の項目を選択します。 **[!UICONTROL 削除]** をクリックしてプロセスを完了します。
 
-![次を削除します。](../../images/tutorials/delete-accounts/confirm.png)
+![削除](../../images/tutorials/delete-accounts/confirm.png)
 
 ## 次の手順
 

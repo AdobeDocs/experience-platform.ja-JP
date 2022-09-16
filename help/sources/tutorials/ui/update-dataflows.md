@@ -9,7 +9,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 11%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../home.md)：Adobe Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## データフローを更新
+## データフローの更新
 
-Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] ワークスペース。 選択 **[!UICONTROL データフロー]** をクリックして、既存のデータフローのリストを表示します。
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。選択 **[!UICONTROL データフロー]** をクリックして、既存のデータフローのリストを表示します。
 
 ![カタログ](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -60,7 +60,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 更新した値を指定したら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![データフローの詳細](../../images/tutorials/update-dataflows/dataflow-detail.png)
+![dataflow-detail](../../images/tutorials/update-dataflows/dataflow-detail.png)
 
 ### マッピング
 

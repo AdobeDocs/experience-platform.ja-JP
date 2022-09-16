@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；PSQL;psql；クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
+keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql；クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
 title: クエリサービスでのメタデータ PostgreSQL コマンド
 topic-legacy: metadata
@@ -43,4 +43,4 @@ ht-degree: 77%
 
 `\d` で開始するすべてのコマンドを組み合わせることができます。例えば、すべてのテーブル、シーケンスおよびリストの `\dtsn` スキーマを表示できます。`\d` を使用すると、すべての表示可能な表、表示、マテリアライズドビュー、シーケンスが表示されます。
 
-上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、PostgreSQL のドキュメントに記載されているすべてのオプションが [!DNL Experience Platform] でサポートされているわけではありません。
+上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、PostgreSQL のドキュメントに示すすべてのオプションが [!DNL Experience Platform].

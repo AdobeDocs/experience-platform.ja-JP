@@ -3,7 +3,7 @@ title: Real-time Customer Data Platform B2B Edition のスキーマ
 description: Real-time Customer Data Platform B2B Edition におけるエクスペリエンスデータモデル（XDM）スキーマの役割の概要です。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 100%
 

@@ -1,6 +1,6 @@
 ---
-keywords: 調査の宛先；調査；予測；インモーメント；Web 切片調査；Qualtrics
-title: 調査先の概要
+keywords: 調査の宛先；調査；予測；inmoment;Web インターセプト調査；qualtrics
+title: サーベイの宛先の概要
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Experience Platformとデータを共有します。
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
@@ -10,7 +10,7 @@ ht-degree: 34%
 
 ---
 
-# 調査先の概要 {#survey-destinations}
+# サーベイの宛先の概要 {#survey-destinations}
 
 ## 概要 {#overview}
 

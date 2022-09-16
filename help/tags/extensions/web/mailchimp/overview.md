@@ -6,7 +6,8 @@ feature: Data Collection, Event Forwarding
 level: Beginner
 role: User, Developer, Admin
 topic: Integrations
-source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
+exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 7%

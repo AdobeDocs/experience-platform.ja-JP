@@ -9,32 +9,32 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 source-git-commit: 531d5619e0643b6195abaa53d1708e0368d45871
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 11%
+ht-degree: 44%
 
 ---
 
-# の作成 [!DNL Salesforce Marketing Cloud] UI のソース接続
+# UI での [!DNL Salesforce Marketing Cloud] ソース接続の作成
 
 >[!NOTE]
 >
 > この [!DNL Salesforce Marketing Cloud] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、 [!DNL Salesforce Marketing Cloud] Platform ユーザーインターフェイスを使用したソースコネクタ
+Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Salesforce Marketing Cloud] Platform ユーザーインターフェイスを使用したソースコネクタ
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Experience Platform] は顧客体験データを整理します。
+* [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に [!DNL Salesforce Marketing Cloud] 接続する場合は、このドキュメントの残りの部分をスキップして、 [データフローの設定](../../dataflow/marketing-automation.md).
 
-### 必要な資格情報の収集
+### 必要な認証情報の収集
 
-次の項目にアクセスするには、 [!DNL Salesforce Marketing Cloud] プラットフォームのアカウントでは、次の値を指定する必要があります。
+Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -44,13 +44,13 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 導入の詳細については、 [[!DNL Salesforce Marketing Cloud] 文書](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
-## 接続 [!DNL Salesforce Marketing Cloud] アカウント
+## [!DNL Salesforce Marketing Cloud] アカウントを接続
 
-必要な資格情報を収集したら、次の手順に従って、 [!DNL Salesforce Marketing Cloud] アカウントを Platform に送信します。
+必要な資格情報を収集したら、以下の手順に従って [!DNL Salesforce Marketing Cloud] アカウントを Platform にリンクできます。
 
-Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] ワークスペース。 この [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 検索バーを使用して、表示されるコネクタを絞り込むこともできます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。検索バーを使用して、表示されるコネクタを絞り込むこともできます。
 
 以下 [!UICONTROL マーケティングの自動化] カテゴリ、選択 **[!UICONTROL SalesforceMarketing Cloud]** 次に、 **[!UICONTROL 設定]**.
 
@@ -72,4 +72,4 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Salesforce Marketing Cloud] アカウント 次のチュートリアルに進み、 [マーケティング自動化システムデータを Platform に取り込むためのデータフローの設定](../../dataflow/marketing-automation.md).
+このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントとの接続を確立しました。次のチュートリアルに進み、 [マーケティング自動化システムデータを Platform に取り込むためのデータフローの設定](../../dataflow/marketing-automation.md).

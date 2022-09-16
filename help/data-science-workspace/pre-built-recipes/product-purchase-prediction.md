@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、製品購入レシピ、Data Science Workspace、人気のあるトピック、レシピ、作成前のレシピ
+keywords: Experience Platform、製品購入レシピ、Data Science Workspace、人気の高いトピック、レシピ、事前作成レシピ
 solution: Experience Platform
 title: 製品購入予測レシピ
 topic-legacy: overview

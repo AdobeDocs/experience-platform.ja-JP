@@ -1,7 +1,8 @@
 ---
 description: Experience PlatformDestination SDKでは、ペブルテンプレートを使用するので、Experience Platformから書き出されたデータを、宛先で必要な形式に変換できます。
 title: Destination SDKでサポートされる変換関数
-source-git-commit: 840404741da06ba1593b227c7d6ba459b5f43110
+exl-id: 79bed9e4-5897-4c69-a4e9-a325a408302d
+source-git-commit: d18b662ba8a8415dd71ed89a806e770f3cfbe72a
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 6%
@@ -56,7 +57,7 @@ Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実�
 
 ### 例
 
-#### 入力
+#### 必要情報
 
 ```json
 {
@@ -90,7 +91,7 @@ Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実�
 
 #### 例
 
-##### 入力
+##### 必要情報
 
 ```json
 {

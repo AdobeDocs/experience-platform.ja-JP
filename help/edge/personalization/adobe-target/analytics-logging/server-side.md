@@ -4,7 +4,8 @@ description: Experience PlatformWeb SDK を使用して、Adobe Analytics for Ta
 seo-title: Server-side logging for A4T data in Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: a4t;target;web;sdk；プラットフォーム；ログ；
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 26c25f58-e43c-4147-8595-69ea85af561f
+source-git-commit: 38d54b2c793c9dcb1a45ec4acbb9016d1e927d23
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%

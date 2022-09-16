@@ -5,7 +5,7 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 11%
+ht-degree: 21%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 11%
 
 Marketo V2 の宛先の改善点を次に示します。
 
-* 内 **[!UICONTROL セグメントをスケジュール]** アクティベーションワークフローの手順のMarketo V1 では、手動で **マッピング ID** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。
-* 内 **[!UICONTROL マッピング]** アクティベーションワークフローの手順で、Marketo V1 で、Marketoで XDM フィールドを 3 つのターゲットフィールドにのみマッピングできました。 `firstName`, `lastName`、および `companyName`. Marketo V2 リリースで、Marketoで XDM フィールドを他の多数のフィールドにマッピングできるようになりました。 詳しくは、 [サポートされている属性](#supported-attributes) の節を参照してください。
+* Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL セグメントをスケジュール]**&#x200B;手順で、**マッピング ID** を手動で追加して、Marketo にデータを正常に書き出す必要がありました。この手動の手順は、Marketo V2 では不要になりました。
+* Marketo V1 では、アクティベーションワークフローの&#x200B;**[!UICONTROL マッピング]**&#x200B;手順で、XDM フィールドを Marketo の 3 つのターゲットフィールド（`firstName`、`lastName`、および `companyName`）にのみマッピングできました。  Marketo V2 リリースで、XDM フィールドを Marketo の多数のフィールドにマッピングできるようになりました。 詳しくは、 [サポートされている属性](#supported-attributes) の節を参照してください。
 
 ## 概要 {#overview}
 

@@ -12,39 +12,39 @@ ht-degree: 1%
 
 # イベントタイプ
 
-このページでは、 Adobe Experience Platform Web SDK タグ拡張機能が提供するAdobe Experience Platformイベントタイプについて説明します。 これらは [ ルール ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) の作成に使用され、XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja) の [`eventType` フィールドと混同しないでください。
+このページでは、 Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platformイベントタイプについて説明します。 これらは、 [ルールの作成](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) そして、 [`eventType` XDM のフィールド](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja).
 
-## [!UICONTROL イベントの送信完了]
+## [!UICONTROL イベント送信完了]
 
-通常、プロパティには、[[!UICONTROL  イベント ] を送信 ](action-types.md#send-event) アクションを使用して、Adobe Experience Platform Edge ネットワークにイベントを送信する 1 つ以上のルールがあります。 イベントが Edge ネットワークに送信されるたびに、応答が役立つデータと共にブラウザーに返されます。 [!UICONTROL Send event complete] イベントタイプがないと、返されたこのデータにアクセスできません。
+通常、プロパティには、 [[!UICONTROL イベントを送信] アクション](action-types.md#send-event) イベントをAdobe Experience Platform Edge Network に送信する場合。 イベントが Edge ネットワークに送信されるたびに、応答が役立つデータと共にブラウザーに返されます。 を使用しない [!UICONTROL イベント送信完了] イベントタイプの場合、この戻り値のデータに対するアクセス権はありません。
 
-返されたデータにアクセスするには、別のルールを作成し、[!UICONTROL Send event complete] イベントをルールに追加します。 このルールは、[!UICONTROL 「Send event]」アクションの結果、成功した応答がサーバーから受信されるたびにトリガーされます。
+返されるデータにアクセスするには、別のルールを作成し、 [!UICONTROL イベント送信完了] イベントをルールに追加します。 このルールは、 [!UICONTROL イベントを送信] アクション。
 
-[!UICONTROL Send event complete] イベントがルールをトリガーすると、サーバーから返されるデータが提供され、特定のタスクを実行するのに役立つ場合があります。 通常は、[!UICONTROL Send event complete] イベントを含む同じルールに（[!UICONTROL Core] 拡張子から）[!UICONTROL Custom code] アクションを追加します。 [!UICONTROL  カスタムコード ] アクションでは、カスタムコードは `event` という名前の変数にアクセスできます。 この `event` 変数には、サーバーから返されたデータが格納されます。
+When a [!UICONTROL イベント送信完了] イベントトリガールールを使用すると、サーバーから返されるデータを提供します。このデータは、特定のタスクを実行するのに役立つ場合があります。 通常、 [!UICONTROL カスタムコード] アクション ( [!UICONTROL コア] ) を [!UICONTROL イベント送信完了] イベント。 内 [!UICONTROL カスタムコード] アクションを使用すると、カスタムコードは `event`. この `event` 変数には、サーバーから返されたデータが含まれます。
 
-Edge ネットワークから返されたデータを処理するルールは、次のようになります。
+Edge Network から返されたデータを処理するルールは、次のようになります。
 
 ![](./assets/send-event-complete.png)
 
-以下は、このルールの [!UICONTROL Custom code] アクションを使用して特定のタスクを実行する方法の例です。
+以下に、 [!UICONTROL カスタムコード] アクションを設定してください。
 
-### パーソナライズされたコンテンツの手動レンダリング
+### パーソナライズされたコンテンツを手動でレンダリング
 
-応答データの処理ルールに含まれる「Custom Code」アクションで、サーバーから返されたパーソナライゼーション提案にアクセスできます。 これをおこなうには、次のカスタムコードを入力します。
+応答データの処理ルールに含まれる「 Custom Code 」アクションで、サーバーから返されたパーソナライゼーションの提案にアクセスできます。 これをおこなうには、次のカスタムコードを入力します。
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-`event.propositions` が存在する場合は、パーソナライゼーション提案オブジェクトを含む配列です。 配列に含まれる提案は、大部分、イベントがサーバーに送信された方法によって決定されます。
+If `event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 配列に含まれる提案は、大部分、イベントがサーバーに送信された方法によって決定されます。
 
-最初のシナリオでは、「 [!UICONTROL  決定をレンダリング ] 」チェックボックスをオフにし、イベントを送信する [!UICONTROL  イベントを送信 ] アクション内に [!UICONTROL  決定範囲 ] を指定していないとします。
+この最初のシナリオでは、 [!UICONTROL 決定をレンダリング] チェックボックスをオンにし、何も指定していない [!UICONTROL 決定範囲] 内側 [!UICONTROL イベントを送信] イベントの送信を担当するアクション。
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
-この例では、 `propositions` 配列には、自動レンダリングの資格があるイベントに関連する提案のみが含まれます。
+この例では、 `propositions` 配列には、自動レンダリングの対象となるイベントに関連する提案のみが含まれます。
 
-`propositions` 配列は次の例のようになります。
+この `propositions` 配列は次の例のようになります。
 
 ```json
 [
@@ -85,17 +85,17 @@ var propositions = event.propositions;
 ]
 ```
 
-イベントを送信する際に、「 [!UICONTROL  レンダリングの決定 ] 」チェックボックスはオフになっているので、SDK はコンテンツの自動レンダリングを試みませんでした。 ただし、SDK は、自動レンダリングの対象となるコンテンツを自動的に取得し、必要に応じて手動でレンダリングするようユーザーに提供します。 各提案オブジェクトの `renderAttempted` プロパティが `false` に設定されていることに注意してください。
+イベントを送信する際に、 [!UICONTROL 決定をレンダリング] のチェックボックスがオフになっていたので、SDK はコンテンツの自動レンダリングを試みませんでした。 ただし、SDK は、自動レンダリングの対象となるコンテンツを自動的に取得し、自動レンダリングをおこなう場合は手動でレンダリングするように指定しました。 各提案オブジェクトには、 `renderAttempted` プロパティを `false`.
 
-代わりに、イベントの送信時に「 [!UICONTROL  レンダリングの決定 ] 」チェックボックスをオンにした場合、SDK は、自動レンダリングの対象となる提案をレンダリングしようとしていました。 その結果、各提案オブジェクトの `renderAttempted` プロパティが `true` に設定されます。 この場合、これらの提案を手動でレンダリングする必要はありません。
+代わりに [!UICONTROL 決定をレンダリング] 「 」チェックボックスをオンにすると、SDK は、イベントを送信する際に、自動レンダリングの対象となる提案をレンダリングしようとしました。 その結果、各提案オブジェクトには、 `renderAttempted` プロパティを `true`. この場合、これらの提案を手動でレンダリングする必要はありません。
 
-これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ ( 例えば、Adobe Target Visual Experience Composer を使用して作成されたコンテンツ ) のみを確認してきました。 自動レンダリングの対象とならないパーソナライゼーションコンテンツ __ を取得するには、[!UICONTROL  イベント ] を送信アクションの [!UICONTROL  判定範囲 ] フィールドを使用して判定範囲を指定し、コンテンツを要求します。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
+これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ ( 例えば、Adobe Targetの Visual Experience Composer で作成されたコンテンツ ) のみを確認してきました。 パーソナライゼーションコンテンツを取得するには _not_ 自動レンダリングの対象となる場合は、 [!UICONTROL 決定範囲] フィールド [!UICONTROL イベントを送信] アクション。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
 
-[!UICONTROL Send event] アクションは次のようになります。
+この [!UICONTROL イベントを送信] アクションは次のようになります。
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-この例では、提案が `salutation` スコープまたは `discount` スコープに一致するサーバー上で見つかった場合、提案は返され、`propositions` 配列に含まれます。 [!UICONTROL  イベント ] を送信アクションの [!UICONTROL  レンダリングの決定 ] フィールドまたは [!UICONTROL  決定範囲 ] フィールドの設定方法に関係なく、自動レンダリングの条件を満たす提案は、引き続き `propositions` 配列に含まれます。 `propositions` 配列は、この例のようになります。
+この例では、提案が `salutation` または `discount` スコープ、返され、 `propositions` 配列。 自動レンダリングの条件を満たす提案は、引き続き `propositions` 配列を作成します。 [!UICONTROL 決定をレンダリング] または [!UICONTROL 決定範囲] フィールド [!UICONTROL イベントを送信] アクション。 この `propositions` 配列の場合、この例は次のようになります。
 
 ```json
 [
@@ -169,14 +169,14 @@ var propositions = event.propositions;
 ]
 ```
 
-この時点で、適切な位置に提案コンテンツをレンダリングできます。 この例では、`discount` 範囲に一致する提案は、Adobe Targetのフォームベースの Experience Composer を使用して構築されたHTML提案です。 ページ上に ID が `daily-special` の要素があり、`discount` 提案から `daily-special` 要素にコンテンツをレンダリングするとします。 以下の操作を実行します。
+この時点で、適切に提案コンテンツをレンダリングできます。 この例では、 `discount` 範囲は、Adobe Targetのフォームベースの Experience Composer を使用して構築されたHTMLの提案です。 ページ上に、という ID を持つ要素があるとします。 `daily-special` 次の場所からコンテンツをレンダリングしたい場合、 `discount` 提案 `daily-special` 要素。 次の手順を実行します。
 
-1. `event` オブジェクトから提案を抽出します。
-1. 各提案をループし、`discount` の範囲を持つ提案を探します。
-1. 提案が見つかった場合は、提案内の各項目をループし、HTMLコンテンツの項目を探します。 （確かめる方がよい）
-1. HTMLコンテンツを含むHTMLが見つかった場合は、ページ上の `daily-special` 要素を探し、その項目をパーソナライズされたコンテンツに置き換えます。
+1. 提案を `event` オブジェクト。
+1. 各提案をループし、範囲を持つ提案を探します。 `discount`.
+1. 提案が見つかった場合は、提案内の各項目をループし、HTMLコンテンツの項目を探します。 （想定するよりも確認する方が良い）。
+1. HTMLコンテンツを含む項目が見つかった場合は、 `daily-special` 要素を作成し、その要素をパーソナライズされたコンテンツにHTMLで置き換えます。
 
-[!UICONTROL Custom code] アクション内のカスタムコードは、次のようになります。
+カスタムコードを [!UICONTROL カスタムコード] アクションは次のように表示されます。
 
 ```javascript
 var propositions = event.propositions;
@@ -217,23 +217,23 @@ if (discountHtml) {
 
 ### Adobe Targetレスポンストークンへのアクセス
 
-Adobe Targetから返されるパーソナライゼーションコンテンツには、[ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。これは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細です。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Targetユーザーインターフェイスで設定できます。
+Adobe Targetから返されるパーソナライゼーションコンテンツには次が含まれます [レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)：アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細です。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンはAdobe Targetユーザーインターフェイスで設定できます。
 
-応答データの処理ルールに含まれる「Custom Code」アクションで、サーバーから返されたパーソナライゼーション提案にアクセスできます。 これをおこなうには、次のカスタムコードを入力します。
+応答データの処理ルールに含まれる「 Custom Code 」アクションで、サーバーから返されたパーソナライゼーションの提案にアクセスできます。 これをおこなうには、次のカスタムコードを入力します。
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-`event.propositions` が存在する場合は、パーソナライゼーション提案オブジェクトを含む配列です。 `result.propositions` のコンテンツについて詳しくは、[ パーソナライズされたコンテンツを手動でレンダリング ](#manually-render-personalized-content) を参照してください。
+If `event.propositions` が存在する場合、パーソナライゼーションの提案オブジェクトを含む配列です。 詳しくは、 [パーソナライズされたコンテンツを手動でレンダリング](#manually-render-personalized-content) 内容の詳細 `result.propositions`.
 
-Web SDK によって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、1 つの配列にプッシュするとします。 その後、単一のアレイをサードパーティに送信できます。 この場合、[!UICONTROL  カスタムコード ] アクション内にカスタムコードを記述して、次の操作を行います。
+Web SDK によって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、単一の配列にプッシュするとします。 その後、単一の配列をサードパーティに送信できます。 この場合、 [!UICONTROL カスタムコード] アクション：
 
-1. `event` オブジェクトから提案を抽出します。
+1. 提案を `event` オブジェクト。
 1. 各提案をループします。
-1. SDK が提案をレンダリングしたかどうかを特定します。
-1. その場合は、提案内の各項目をループします。
-1. レスポンストークンを含むオブジェクトの `meta` プロパティからアクティビティ名を取得します。
+1. SDK が提案をレンダリングしたかどうかを判断します。
+1. その場合は、提案の各項目をループします。
+1. からアクティビティ名を取得します。 `meta` プロパティ。レスポンストークンを含むオブジェクトです。
 1. アクティビティ名を配列にプッシュします。
 1. アクティビティ名をサードパーティに送信します。
 

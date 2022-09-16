@@ -96,11 +96,11 @@ Adobe Experience Platformクエリサービスには、SQL 機能を拡張する
 | 演算子/関数 | 説明 |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) または [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 論理否定（not） |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | より小さい |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 次よりも小さいか等しい |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 次より小さい |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 同じかそれ以下 |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 次と等しい |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 以上 |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 次より大きい |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 同じかそれ以上 |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | ビット単位 XOR |
 | [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | ビット OR |
 | [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | ビット単位の否定 |

@@ -1,9 +1,9 @@
 ---
-keywords: エクスペリエンス Platform、home、ポピュラーなトピック、書き出し、出す
+keywords: Experience Platform；ホーム；人気の高いトピック；書き出し；書き出し
 solution: Experience Platform
-title: プライバシーサービス UI でのプライバシージョブの管理
+title: プライバシー UI でのPrivacy Serviceジョブの管理
 topic-legacy: UI guide
-description: プライバシーサービスユーザーインターフェイスを使用して、様々なエクスペリエンスクラウドアプリケーション間でプライバシー要求を調整および監視する方法について説明します。
+description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
@@ -12,27 +12,27 @@ ht-degree: 60%
 
 ---
 
-# プライバシーサービス UI でのプライバシージョブの管理
+# プライバシー UI でのPrivacy Serviceジョブの管理
 
-このドキュメントでは、ユーザーインターフェイスを使用してプライバシー要求を作成および管理するための手順を説明し [!DNL Privacy Service] ます。
+このドキュメントでは、 [!DNL Privacy Service] ユーザーインターフェイス。
 
-## [!DNL Privacy Service]UI ダッシュボードの参照
+## 次を参照： [!DNL Privacy Service] UI ダッシュボード
 
-UI のダッシュボードには、 [!DNL Privacy Service] プライバシージョブの状態を表示するための2つの widget が用意されています。「 [!UICONTROL  ステータスレポート ] 」と「 [!UICONTROL  ジョブ要求」が表示されます ] 。 また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
+のダッシュボード [!DNL Privacy Service] UI には、プライバシージョブのステータスを表示できる 2 つのウィジェットが用意されています。&quot;[!UICONTROL ステータスレポート]&quot;および&quot;[!UICONTROL ジョブリクエスト]&quot;. また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
 
 ![UI ダッシュボード](../images/user-guide/dashboard.png)
 
 ### 規則の種類
 
-[!DNL Privacy Service] いくつかのプライバシー規制について、ジョブ要求をサポートします。
+[!DNL Privacy Service] は、いくつかのプライバシー規制に対するジョブリクエストをサポートしています。
 
-* [!DNL California Consumer Privacy Act]( [!UICONTROL  Ccpa ] )
-* 欧州連合 [!DNL General Data Protection Regulation] ( [!UICONTROL  GDPR ] )
-* タイ [!DNL Personal Data Protection Act] ( [!UICONTROL  PDPA_THA ] )
-* ブラジル [!DNL Lei Geral de Proteção de Dados] ( [!UICONTROL  LGPD_BRA ] )
-* ニュージーランド [!DNL Privacy Act] ( [!UICONTROL  NZPA_NZL ] )
+* この [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* 欧州連合 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* タイ [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
+* ブラジル [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* ニュージーランド [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
 
-それぞれの規制タイプのジョブは、別々に追跡されます。種類を調整するには、 **[!UICONTROL 「規制タイプ」ドロップダウンメニューを選択し、]** リストから必要な規則を選択します。
+それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、 **[!UICONTROL 規制のタイプ]** ドロップダウンメニューを開き、リストから目的の規制を選択します。
 
 ![Regulation Type ドロップダウン](../images/user-guide/regulation.png)
 
@@ -44,7 +44,7 @@ UI のダッシュボードには、 [!DNL Privacy Service] プライバシー�
 
 ステータスレポートウィジェットの左側のグラフは、エラーが発生してレポートが返された可能性のあるジョブについて、送信されたジョブを追跡します。右側のグラフは、30 日間のコンプライアンス期間の終わり近くにあるジョブを追跡します。
 
-グラフ上の2つのトグルボタンのうちの1つを選択して、それぞれの測定基準を表示または非表示にします。
+グラフの上にある 2 つの切り替えボタンの 1 つを選択して、それぞれの指標の表示/非表示を切り替えます。
 
 ![](../images/user-guide/hide-errors.png)
 
@@ -52,13 +52,13 @@ UI のダッシュボードには、 [!DNL Privacy Service] プライバシー�
 
 ![データポイント上へのマウス移動](../images/user-guide/mouse-over.png)
 
-特定のデータポイントについてさらに詳しい情報を表示するには、該当するデータポイントを選択して、ジョブ要求 widget に関連ジョブを表示します。 ジョブリストのすぐ上に適用されるフィルターをメモしておきます。
+特定のデータポイントに関する詳細を表示するには、該当するデータポイントを選択して、関連するジョブをジョブリクエストウィジェットに表示します。 ジョブリストのすぐ上に適用されるフィルターをメモしておきます。
 
 ![ウィジェットでのフィルターの適用](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->ジョブ要求 widget にフィルターが適用されている場合、フィルターを削除するには、「filter pill」で「X」を選択し **** ます。 そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
+>フィルターがジョブリクエストウィジェットに適用されている場合は、 **X** フィルターピルで そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
 
 ### ジョブリクエスト
 
@@ -72,15 +72,15 @@ UI のダッシュボードには、 [!DNL Privacy Service] プライバシー�
 
 ![ジョブリクエストの検索オプション](../images/user-guide/job-search.png)
 
-特定のジョブ要求の詳細を表示するには、リストから要求のジョブ ID を選択して、 **[!UICONTROL ジョブ詳細ページを開き]** ます。
+特定のジョブリクエストの詳細を表示するには、リストからリクエストのジョブ ID を選択して、 **[!UICONTROL ジョブの詳細]** ページ。
 
 ![GDPR UI のジョブ詳細](../images/user-guide/job-details.png)
 
-このダイアログには、各ソリューションに関するステータス情報と、ジョブ全体に対する現在の状態が表示され [!DNL Experience Cloud] ます。 プライバシージョブが非同期の場合は、各ソリューションの最新の通信日時（GMT）がページに表示されます。これは、リクエストの処理に他のソリューションより多くの時間が必要な場合があるからです。
+このダイアログには、各 [!DNL Experience Cloud] ソリューションと、ジョブ全体に関する現在の状態。 プライバシージョブが非同期の場合は、各ソリューションの最新の通信日時（GMT）がページに表示されます。これは、リクエストの処理に他のソリューションより多くの時間が必要な場合があるからです。
 
-ソリューションから追加のデータが提供された場合は、このダイアログで表示できます。このデータを表示するには、「製品の行」を個別に選択します。
+ソリューションから追加のデータが提供された場合は、このダイアログで表示できます。このデータを表示するには、個々の製品行を選択します。
 
-ジョブデータ全体を CSV ファイルとしてダウンロードするには、 **** ダイアログボックスの右上にある「csv に書き出し」を選択します。
+完全なジョブデータを CSV ファイルとしてダウンロードするには、「 」を選択します **[!UICONTROL CSV に書き出し]** をクリックします。
 
 ## プライバシージョブリクエストの新規作成
 
@@ -88,7 +88,7 @@ UI のダッシュボードには、 [!DNL Privacy Service] プライバシー�
 >
 > プライバシージョブリクエストを作成するには、アクセスまたは削除するデータの所有者である特定の顧客の ID 情報を指定する必要があります。この節を続行する前に、[プライバシーリクエストの ID データ](../identity-data.md)に関するドキュメントを確認してください。
 
-[!DNL Privacy Service]UI を使用すると、次の2つの方法で新しいジョブ要求を作成することが可能です。
+この [!DNL Privacy Service] UI には、新しいジョブリクエストを作成する次の 2 つの方法が用意されています。
 
 * [リクエストビルダーの使用](#request-builder)
 * [JSON ファイルのアップロード](#json)
@@ -99,19 +99,19 @@ UI のダッシュボードには、 [!DNL Privacy Service] プライバシー�
 
 リクエストビルダーを使用すると、ユーザーインターフェイスで新しいプライバシージョブリクエストを手動で作成できます。リクエストビルダーは、リクエストをユーザーごとに 1 つの ID タイプに制限するので、よりシンプルでより小さなリクエストセットに最適です。より複雑なリクエストについては、代わりに [JSON ファイルをアップロード](#json)する方がよい場合があります。
 
-リクエストビルダーを起動するには、 **** 画面の右側にある、状態レポート widget の下にある「リクエストを作成」を選択します。
+リクエストビルダーの使用を開始するには、「 **[!UICONTROL リクエストを作成]** をクリックします。
 
-![作成要求の選択](../images/user-guide/create-request.png)
+![「リクエストを作成」を選択します。](../images/user-guide/create-request.png)
 
 **[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-**[!UICONTROL 要求の種類として、]** 「Delete」または「Access」を選択し、リストから1つ以上の利用可能な製品を選択します。
+を選択します。 **[!UICONTROL ジョブタイプ]** リクエストの（「削除」または「アクセス」）と 1 つ以上の使用可能な製品のリスト。
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-「 **[!UICONTROL 名前空間タイプ」で]** 、送信されるカスタマー id に適切な名前空間タイプを選択し [!DNL Privacy Service] ます。
+の下 **[!UICONTROL 名前空間のタイプ]**、送信先の顧客 ID に適した名前空間タイプを選択します [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -133,7 +133,7 @@ custom タイプの名前空間を使用する場合は、名前空間を手動�
 
 処理するデータサブジェクトごとに複数の ID タイプを使用するリクエストなど、より複雑なリクエストを作成する場合は、JSON ファイルをアップロードしてリクエストを作成できます。
 
-**** 画面の右側にある「状態レポート」 widget の下にある「作成要求」の横にある矢印を選択します。表示されるオプションリストから、「**[!UICONTROL Upload JSON]**」を選択します。
+の横の矢印を選択します。 **[!UICONTROL リクエストを作成]**&#x200B;をクリックします。 表示されるオプションリストから、「**[!UICONTROL Upload JSON]**」を選択します。
 
 ![リクエスト作成オプション](../images/user-guide/create-options.png)
 
@@ -141,7 +141,7 @@ custom タイプの名前空間を使用する場合は、名前空間を手動�
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-アップロードする JSON ファイルが存在しない場合は、「Adobe-GDPR をダウンロード」を選択して、 **** データの主題から収集した値に従って設定できるテンプレートをダウンロードします。
+アップロードする JSON ファイルがない場合は、 **[!UICONTROL Adobe-GDPR-Request.json をダウンロード]** をクリックして、データ主体から収集した値に応じて入力できるテンプレートをダウンロードします。
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
@@ -153,6 +153,6 @@ custom タイプの名前空間を使用する場合は、名前空間を手動�
 
 ### 次の手順
 
-このドキュメントでは、ユーザーインターフェイスを使用して、 [!DNL Privacy Service] プライバシージョブの作成、ジョブの詳細情報の表示、処理状態の監視、完了した後の結果のダウンロードを行う方法について学習しました。
+このドキュメントでは、 [!DNL Privacy Service] プライバシージョブの作成、ジョブの詳細の表示、処理ステータスの監視、完了後の結果のダウンロードをおこなうための UI。
 
-このような操作をプログラムによって api を使用して実行する手順については、 [!DNL Privacy Service] 「 [ api ガイド」を参照してください ](../api/overview.md) 。
+を使用してこれらの操作をプログラムで実行する手順については、 [!DNL Privacy Service] API（を参照） [API ガイド](../api/overview.md).

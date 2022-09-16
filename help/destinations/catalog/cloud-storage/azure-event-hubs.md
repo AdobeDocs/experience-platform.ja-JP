@@ -5,8 +5,8 @@ description: へのリアルタイムアウトバウンド接続を作成する 
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2003'
+ht-degree: 3%
 
 ---
 

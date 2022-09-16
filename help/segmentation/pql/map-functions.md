@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；マップ関数；マップ；
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；マップ関数；マップ；
 solution: Experience Platform
 title: PQL マップ関数
 topic-legacy: developer guide
@@ -14,9 +14,9 @@ ht-degree: 81%
 
 # マップ関数
 
-[!DNL Profile Query Language]（PQL）の機能を使用すると、マップの操作が容易になります。その他の PQL 関数の詳細については、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
+[!DNL Profile Query Language]（PQL）の機能を使用すると、マップの操作が容易になります。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
-## get
+## 取得
 
 `get` 関数は、特定のキーのマップの値を取得するために使用されます。
 

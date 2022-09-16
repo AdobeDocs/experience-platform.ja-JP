@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;データガバナンス;データ使用ラベル API;Policy Service API
 solution: Experience Platform
-title: 'API を使用したデータ使用ラベルの管理 '
+title: API を使用したデータ使用ラベルの管理
 topic-legacy: developer guide
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c

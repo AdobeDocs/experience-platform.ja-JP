@@ -9,7 +9,7 @@ exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -287,8 +287,8 @@ Adobe Audience Managerの特性を使用するには、 [Audience Managerソー�
 >[!NOTE]
 >
 > - 顧客 AI は、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこないます。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
-> - 顧客 AI は Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルでデータを削除する必要があります。
-> - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。 詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
+> - 顧客 AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
+> - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## 次の手順 {#next-steps}

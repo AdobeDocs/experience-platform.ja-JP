@@ -14,32 +14,32 @@ ht-degree: 2%
 
 # CSP の設定
 
-[ コンテンツセキュリティポリシー ](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy)(CSP) は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP は、スクリプトおよびスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDK には CSP は必要ありませんが、CSP を追加すると攻撃の対象面が減り、悪意のある攻撃を防ぐことができます。
+A [コンテンツセキュリティポリシー](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトおよびスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDK には CSP は必要ありませんが、CSP を追加すると、悪意のある攻撃に対する攻撃の対象が減少し、
 
-CSP は、[!DNL Platform Web SDK] のデプロイ方法と設定方法を反映する必要があります。 次の CSP は、SDK が正しく機能するために必要な変更を示しています。 特定の環境に応じて、追加の CSP 設定が必要になる場合があります。
+CSP は、 [!DNL Platform Web SDK] がデプロイされ、設定されている。 次の CSP は、SDK が正しく機能するために必要となる可能性のある変更を示しています。 特定の環境に応じて、追加の CSP 設定が必要になる場合があります。
 
 ## コンテンツセキュリティポリシーの例
 
 次の例は、CSP の設定方法を示しています。
 
-### エッジドメインへのアクセスを許可
+### Edge ドメインへのアクセスを許可
 
 ```
 default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-上記の例では、`EDGE-DOMAIN` をファーストパーティドメインに置き換える必要があります。 ファーストパーティドメインは、[edgeDomain](configuring-the-sdk.md#edge-domain) 設定用に設定されます。 ファーストパーティドメインが設定されていない場合は、`EDGE-DOMAIN` を `*.adobedc.net` に置き換える必要があります。 [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled) を使用して訪問者の移行を有効にする場合は、`connect-src` ディレクティブにも `*.demdex.net` を含める必要があります。
+上記の例では、 `EDGE-DOMAIN` はファーストパーティドメインに置き換える必要があります。 ファーストパーティドメインは、 [edgeDomain](configuring-the-sdk.md#edge-domain) 設定。 ファーストパーティドメインが設定されていない場合、 `EDGE-DOMAIN` は、 `*.adobedc.net`. 訪問者の移行が [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled)、 `connect-src` 指令も含める必要があります `*.demdex.net`.
 
-### NONCE を使用してインラインスクリプトおよびスタイル要素を許可する
+### NONCE を使用してインラインスクリプトおよびスタイル要素を許可します
 
-[!DNL Platform Web SDK] ではページコンテンツを変更でき、インラインスクリプトおよびスタイルタグの作成には承認が必要です。これを実現するために、Adobeでは、[default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP ディレクティブに nonce を使用することをお勧めします。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号的に強いランダムトークンです。
+[!DNL Platform Web SDK] でページコンテンツを変更できるので、インラインスクリプトおよびスタイルタグの作成を承認する必要があります。 これを実現するために、Adobeでは、に nonce を使用することをお勧めします。 [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP ディレクティブ。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号として強固なランダムトークンです。
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-さらに、CSP nonce を [!DNL Platform Web SDK] [ ベースコード ](installing-the-sdk.md#adding-the-code) スクリプトタグの属性として追加する必要があります。 [!DNL Platform Web SDK] 次に、ページにインラインスクリプトまたはスタイルタグを追加する際に、そのナンスを使用します。
+さらに、CSP nonce を属性として [!DNL Platform Web SDK] [ベースコード](installing-the-sdk.md#adding-the-code) スクリプトタグ。 [!DNL Platform Web SDK] その後、ページにインラインスクリプトまたはスタイルタグを追加する際に、そのナンスを使用します。
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ default-src 'nonce-SERVER-GENERATED-NONCE'
 </script>
 ```
 
-nonce を使用しない場合、もう 1 つのオプションは `unsafe-inline` を `script-src` および `style-src` CSP ディレクティブに追加することです。
+nonce を使用しない場合、他のオプションは `unsafe-inline` から `script-src` および `style-src` CSP ディレクティブ：
 
 ```
 script-src 'unsafe-inline'
@@ -59,4 +59,4 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobeは **** を指定しないことをお勧めします。これは、ページ上で任意のスクリプトを実行できるので、CSP のメリットが少ないからです。`unsafe-inline`
+>Adobeが実行 **not** ～を指定する `unsafe-inline` これは、CSP のメリットが制限されるページ上で任意のスクリプトを実行できるためです。

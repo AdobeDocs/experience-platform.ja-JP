@@ -1,5 +1,5 @@
 ---
-title: ' Data Hygiene API を使用して消費者レコードを削除'
+title: Data Hygiene API を使用して消費者レコードを削除
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 hide: true
 hidefromtoc: true
@@ -7,7 +7,7 @@ exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->データ衛生 API は現在ベータ版です。 このドキュメントで概要を説明している機能は、変更される場合があります。
+>Data Hygiene API は現在ベータ版です。このドキュメントで説明されている機能は変更されることがあります。
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
-API には、 [Privacy ServiceAPI](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
+API には、[Privacy Service API](../../privacy-service/api/overview.md) と同じルートパスを通してアクセスすることができます：`https://platform.adobe.io/data/core/privacy/`
 
 ## はじめに
 

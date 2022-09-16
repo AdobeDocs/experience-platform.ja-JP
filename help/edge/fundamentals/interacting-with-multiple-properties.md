@@ -18,7 +18,7 @@ ht-degree: 69%
 * 複数の企業間でのデータ共有関係
 * 新しい Adobe ソリューションをテストしていて、既存の実装を中断したくないお客様
 
-SDK では、ベースコード内の配列に別の名前を追加することで、各プロパティに個別のインスタンスを作成できます。次の例は、`mycustomname1` と `mycustomname2` の 2 つの名前を示しています。
+SDK では、ベースコード内の配列に別の名前を追加することで、各プロパティに個別のインスタンスを作成できます。次の例では、2 つの名前が示されています。 `mycustomname1` および `mycustomname2`.
 
 ```markup
 <script>
@@ -32,7 +32,7 @@ SDK では、ベースコード内の配列に別の名前を追加すること�
 
 その結果、スクリプトは 2 つの SDK インスタンスを作成します。最初のインスタンスと対話するためのグローバル関数に `mycustomname1`、2 番目のインスタンスと対話するためのグローバル関数が `mycustomname2` という名前が付けられます。
 
-2 つの異なるインスタンスを作成すると、異なるプロパティに対してそれぞれを設定できます。`mycustomname1` との対話によって生じる通信やデータの持続性は、`mycustomname2` から切り離されます。
+2 つの異なるインスタンスを作成すると、異なるプロパティに対してそれぞれを設定できます。とのやり取りによって生じる通信やデータの持続性 `mycustomname1` は次の場所から切り離されます： `mycustomname2`.
 
 上の例に続き、次のように各インスタンスを使用してコマンドを実行できます。
 
@@ -64,4 +64,4 @@ mycustomname2("sendEvent", {
 
 ## 制限事項
 
-Cookie との競合を避けるために、1 つのページ内のAdobe Experience Platform [!DNL Web SDK] のインスタンスのうち、1 つだけ特定の `edgeConfigId` を持つことができます。 同様に、Adobe Experience Platform [!DNL Web SDK] の 1 つのインスタンスだけが特定の `orgId` を持つことができます。
+Cookie との競合を避けるには、Adobe Experience Platformのインスタンスを 1 つだけにします [!DNL Web SDK] ページ内で、特定の `edgeConfigId`. 同様に、Adobe Experience Platformのインスタンスは 1 つだけです [!DNL Web SDK] 特定の `orgId`.

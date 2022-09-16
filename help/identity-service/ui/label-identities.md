@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ラベル ID
 title: UI でフィールドを ID としてラベル付けする
 description: 個人を特定できる情報（PII）を含むフィールドは、ID フィールドとしてラベル付けできます。ID フィールドに指定された値は、ID サービスによって ID として解釈されます。ID の名前空間は、フィールドのラベル付けの一部として指定されます。
-source-git-commit: ae51c9bd07944f26be2809a6d15f9d9e8c2fd5a1
+exl-id: c3097030-0242-404f-9e4c-72a7fa574011
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 67%
