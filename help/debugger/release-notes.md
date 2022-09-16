@@ -4,20 +4,20 @@ description: Adobe Experience Platform デバッガーの最新のリリース�
 keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f2733cca00f98e85cd1b3944c5127f5c1c89594e
+source-git-commit: 28e54656fcd85fc56e72d4fdd3d079cf8590302f
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
 
-## バージョン 1.4.0 - 2022 年 8 月 24 日
+<!-- ## Version 1.4.0 - August 24, 2022
 
-* Web SDK ハイブリッド実装のサポートを追加しました。
-* Target Trace の有効化に失敗した場合のエラーメッセージを追加しました。
-* 依存関係を更新しました。
+* Added support for Web SDK hybrid implementation.
+* Added error message when enabling Target Trace fails.
+* Updated dependencies. -->
 
 ## バージョン 1.3.3 - 2022 年 6 月 21 日
 

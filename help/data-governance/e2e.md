@@ -1,9 +1,9 @@
 ---
 title: データガバナンスエンドツーエンドガイド
 description: Adobe Experience Platformのフィールドとデータセットに対してデータ使用制約を適用する完全なプロセスに従います。
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 2%
 
 ---
@@ -111,7 +111,7 @@ Adobe Experience Platformの特定のデータセットおよびフィールド�
 
 ![UI でポリシーに割り当てられているマーケティングアクションを示す画像](./images/e2e/select-marketing-action.png)
 
-最後の画面には、ポリシーの詳細と、ポリシーがどのラベルに対して制限するアクションの概要が表示されます。 選択 **[!UICONTROL 完了]** ：ポリシーを作成して有効にします。
+最後の画面には、ポリシーの詳細と、ポリシーがどのラベルに対して制限するアクションの概要が表示されます。 選択 **[!UICONTROL 完了]** ポリシーを作成します。
 
 ![UI で確認されるポリシー設定を示す画像](./images/e2e/confirm-policy.png)
 
