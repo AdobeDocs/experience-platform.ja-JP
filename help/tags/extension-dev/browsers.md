@@ -2,9 +2,9 @@
 title: サポートされているブラウザー
 description: Adobe Experience Platform タグのランタイムと互換性のある複数のブラウザーのリスト。
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,6 @@ Adobe Experience Platform のタグのランタイム（クライアントの We
 - Chrome（最新）
 -  Safari（最新）
 - Firefox（最新）
-- IE（10 以降）
 - Edge（最新）
 - iOS Safari（最新）
 - Android Chrome（最新）
