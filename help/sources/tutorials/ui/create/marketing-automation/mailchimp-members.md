@@ -5,10 +5,10 @@ title: Platform UI を使用して MailChimp メンバーのソース接続を�
 topic-legacy: tutorial
 description: Platform UI を使用してAdobe Experience Platformを MailChimp メンバーに接続する方法を説明します。
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 | 認証情報 | 説明 |
 | --- | --- |
-| ホスト | MailChimp API への接続に使用するルート URL です。 ルート URL の形式は `https://{DC}.api.mailchimp.com` で、 `{DC}` はお使いのアカウントに対応するデータセンターを表します。 |
+| ドメイン | MailChimp API への接続に使用するルート URL です。 ルート URL の形式は `https://{DC}.api.mailchimp.com` で、 `{DC}` はお使いのアカウントに対応するデータセンターを表します。 |
 | 認証テスト URL | 認証テスト URL は、[!DNL Mailchimp] を Platform に接続する際に認証情報を検証するために使用されます。 これを指定しない場合、代わりにソース接続の作成手順の間に認証情報が自動的にチェックされます。 |
 | アクセストークン | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
@@ -43,7 +43,7 @@ OAuth 2 を使用した Platform への [!DNL Mailchimp] アカウント認証�
 
 | 認証情報 | 説明 |
 | --- | --- |
-| ホスト | MailChimp API への接続に使用するルート URL です。 ルート URL の形式は `https://{DC}.api.mailchimp.com` で、`{DC}` はお使いのアカウントに対応するデータセンターを表します。 |
+| ドメイン | MailChimp API への接続に使用するルート URL です。 ルート URL の形式は `https://{DC}.api.mailchimp.com` で、`{DC}` はお使いのアカウントに対応するデータセンターを表します。 |
 | ユーザー名 | MailChimp アカウントに対応するユーザー名。 これは、基本認証に必要です。 |
 | パスワード | MailChimp アカウントに対応するパスワードです。 これは、基本認証に必要です。 |
 
@@ -74,13 +74,13 @@ Platform UI で、左側のナビゲーションバーから「**[!UICONTROL ソ
 
 #### OAuth 2 を使用した認証
 
-OAuth 2 を使用するには、「[!UICONTROL OAuth 2 更新コード]」を選択し、ホスト、認証テストURL、アクセストークンの値を入力して「**[!UICONTROL ソースに接続]**」を選択します。認証情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」を選択して続行します。
+OAuth 2 を使用するには、 [!UICONTROL OAuth 2 更新コード]で、ドメイン、認証テスト URL、アクセストークンの値を指定して、 **[!UICONTROL ソースに接続]**. 認証情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### 基本認証を使用した認証
 
-基本認証を使用する場合は、「[!UICONTROL 基本認証]」を選択し、ホスト、ユーザー名、パスワードに値を入力して「**[!UICONTROL ソースに接続]**」を選択します。認証情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」をクリックして続行します。
+基本認証を使用する場合は、 [!UICONTROL 基本認証]で、ドメイン、ユーザー名およびパスワードの値を入力し、「 」を選択します。 **[!UICONTROL ソースに接続]**. 認証情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 ![基本](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

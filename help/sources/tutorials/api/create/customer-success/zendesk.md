@@ -5,10 +5,10 @@ title: フローサービス API を使用した Zendesk のデータフロー�
 topic-legacy: tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Zendesk に接続する方法を説明します。
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 65%
+source-wordcount: '1996'
+ht-degree: 64%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 65%
 
 | 認証情報 | 説明 | 例 |
 | --- | --- | --- |
+| `subdomain` | アカウントに関連付けられた一意のドメイン。 | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 認証の詳細については、 [!DNL Zendesk] ソース、 [[!DNL Zendesk] ソースの概要](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
 | `auth.params.` | ソースの認証に必要な資格情報が含まれます。 |
+| `auth.params.subdomain` | アカウントに関連付けられた一意のドメイン。 サブドメインの形式は次のとおりです。 `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
 **応答**

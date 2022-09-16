@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して OneTrust ソース接続を作成する方法を説明します。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
+source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 37%
+source-wordcount: '527'
+ht-degree: 36%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 37%
 
 | 認証情報 | 説明 | 例 |
 | --- | --- | --- |
-| ホスト | 環境 [!DNL OneTrust Integration] からデータを取り込む必要があります。 | `https://uat.onetrust.com/` |
+| ホスト名 | 環境 [!DNL OneTrust Integration] からデータを取り込む必要があります。 | `https://uat.onetrust.com/` |
 | 認証テスト URL | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |  |
 | アクセストークン | に対応するアクセストークン [!DNL OneTrust Integration] アカウント | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 

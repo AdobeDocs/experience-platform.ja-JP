@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: （ベータ版）UI での Mixpanel ソース接続の作成
 description: Adobe Experience Platform UI を使用して Mixpanel ソース接続を作成する方法を説明します。
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 33%
+source-wordcount: '874'
+ht-degree: 34%
 
 ---
 
@@ -33,7 +33,6 @@ ht-degree: 33%
 
 | 認証情報 | 説明 | 例 |
 | --- | --- | --- |
-| ホスト | この [!DNL Mixpanel] 生データ書き出し API エンドポイント。 詳しくは、 [!DNL Raw Data Export API] セクション [Mixpanel API リファレンスドキュメント](https://developer.mixpanel.com/reference/overview) を参照してください。 | `https://data.mixpanel.com` |
 | ユーザー名 | に対応するサービスアカウントユーザー名 [!DNL Mixpanel] アカウント 詳しくは、 [[!DNL Mixpanel] サービスアカウントドキュメント](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
 | パスワード | お使いの [!DNL Mixpanel] アカウント | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | プロジェクト ID | お使いの [!DNL Mixpanel] プロジェクト ID。 この ID は、ソース接続を作成するために必要です。 詳しくは、 [[!DNL Mixpanel] プロジェクト設定ドキュメント](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) そして [[!DNL Mixpanel] プロジェクトの作成と管理に関するガイド](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) を参照してください。 | `2384945` |
