@@ -4,10 +4,10 @@ title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドのガイドを提供します
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2218'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,35 @@ ht-degree: 0%
 Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役割]** ページ。
 
 ## ロールへのラベルの適用 {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="ラベルとは"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 Platform には、Adobeが定義する「コア」データ使用ラベルがいくつか用意されています。これは、データガバナンスに適用できる様々な一般的な制限に対応しています。 例えば、RHD(Regulated Health Data) などの機密性の高い「S」ラベルを使用すると、PHI(Protected Health Information) を参照するデータを分類できます。 また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="データ使用ラベルの概要"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="新しいラベルを作成"
+>abstract="組織のニーズに合わせて独自のカスタムラベルを作成できます。 カスタムラベルは、データガバナンスとアクセス制御の両方の設定をデータに適用するために使用できます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="カスタムラベルの管理"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="役割とは"
+>abstract="役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素になります。 ロールには、特定の権限のセットがあり、組織のメンバーは、必要な表示または書き込みアクセスの範囲に応じて、1 つ以上のロールに割り当てることができます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="役割の管理"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="新しいロールを作成"
+>abstract="Platform インスタンスにアクセスするユーザーをより分類しやすくするための新しい役割を作成できます。 例えば、社内マーケティングチームの役割を作成し、その役割に RHD ラベルを適用すると、社内マーケティングチームが Protected Health Information(PHI) にアクセスできるようになります。 または、外部エージェンシーのロールを作成し、そのロールに RHD ラベルを適用しないことで、そのロールの PHI データへのアクセスを拒否することもできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="新しいロールを作成"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="ロールの概要"
+>abstract="役割の概要ダイアログには、特定の役割がアクセスできるリソースとサンドボックスが表示されます。"
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 ロールには特定の権限のセットがあり、組織のメンバーは、必要なアクセスの範囲に応じて、1 つ以上のロールに割り当てることができます。
 
@@ -117,6 +146,34 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 上記の手順を **[!UICONTROL インスリン &lt;50]**.
 
 ## アクセス制御ポリシーの作成 {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="ポリシーとは"
+>abstract="ポリシーとは、属性を統合して、許容される許容されるアクションと許容されないアクションを確立するステートメントです。 すべての組織にはデフォルトのポリシーが用意されています。このポリシーをアクティブ化して、セグメントやスキーマフィールドなどのリソースのルールを定義する必要があります。 デフォルトのポリシーは、編集も削除もできません。 ただし、デフォルトのポリシーをアクティブ化または非アクティブ化することはできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="ポリシーの管理"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="ポリシーを作成する"
+>abstract="ポリシーを作成して、セグメントおよびスキーマフィールドに対してユーザーが実行できるアクションと実行できないアクションを定義します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="ポリシーを作成する"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="ポリシーに対して許容されるアクションと許容されないアクションを構成する"
+>abstract="ユーザーがリソースに対して許容できる操作を設定するには、「次へのアクセスを許可」を選択します。 ユーザーがリソースに対して実行できない不可欠なアクションを設定するには、「次にアクセスを拒否」を選択します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="ポリシーの編集"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="リソースの権限の設定"
+>abstract="リソースとは、ユーザーがアクセスできるアセットまたはオブジェクトです。 リソースには、セグメントまたはスキーマを使用できます。 セグメントおよびスキーマフィールドに対する書き込み、読み取り、削除の権限を設定できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="条件を編集"
+>abstract="ポリシーに条件文を適用して、特定のリソースへのユーザーアクセスを設定します。 アクセスを許可するために、ユーザーがリソースとまったく同じラベルを持つロールを持つ必要がある場合は、「すべて一致」を選択します。 リソースに一致する 1 つのラベルのみを持つ役割のみをユーザーに要求する場合は、「一致する任意」を選択します。 ラベルは、コアまたはカスタムのラベルとして定義できます。コアラベルは、Adobeが作成および提供するラベルを表し、カスタムラベルは組織が作成したラベルを表します。"
 
 アクセス制御ポリシーでは、ラベルを使用して、特定の Platform リソースにアクセスできるユーザーの役割を定義します。 ポリシーは、ローカルまたはグローバルに設定でき、他のポリシーを上書きできます。 この例では、スキーマフィールドに対応するラベルを持たないユーザーの場合、すべてのサンドボックスで、スキーマフィールドおよびセグメントへのアクセスが拒否されます。
 
