@@ -11,7 +11,7 @@ ht-degree: 100%
 
 ---
 
-#  Data Hygiene API を使用して消費者レコードを削除
+# Data Hygiene API を使用して消費者レコードを削除
 
 >[!IMPORTANT]
 >
