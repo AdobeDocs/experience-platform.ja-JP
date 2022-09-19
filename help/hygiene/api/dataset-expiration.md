@@ -4,8 +4,8 @@ description: Data Hygiene API の /ttl エンドポイントを使用すると�
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Expe
 
 >[!WARNING]
 >
->データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないように、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
+>データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないよう、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
 
 ## はじめに
 
