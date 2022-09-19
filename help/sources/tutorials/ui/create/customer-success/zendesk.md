@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk；ソース；コネクタ；ソースコ�
 title: UI での Zendesk Source 接続の作成
 description: Adobe Experience Platform UI を使用して Zendesk ソース接続を作成する方法を説明します。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 32%
@@ -33,7 +33,7 @@ ht-degree: 32%
 
 | 認証情報 | 説明 | 例 |
 | --- | --- | --- |
-| サブドメイン | 登録プロセス中に作成されたアカウントに固有の一意のドメイン。 | `https://yoursubdomain.zendesk.com` |
+| サブドメイン | 登録プロセス中に作成されたアカウントに固有の一意のドメイン。 | `yoursubdomain` |
 | アクセストークン | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 認証の詳細については、 [!DNL Zendesk] ソース、 [[!DNL Zendesk] ソースの概要](../../../../connectors/customer-success/zendesk.md).
