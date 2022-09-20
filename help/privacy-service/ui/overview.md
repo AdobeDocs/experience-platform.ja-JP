@@ -5,14 +5,19 @@ title: Privacy ServiceUI の概要
 topic-legacy: UI guide
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視します。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 18%
+source-wordcount: '212'
+ht-degree: 15%
 
 ---
 
-# [!DNL Privacy Service] UI の概要
+# [!DNL Privacy Service] UI の概要 {#privacy-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacy_privacyconsole_requests"
+>title="データ主体のリクエスト"
+>abstract="このウィジェットは、特定の日にPrivacy Serviceが処理した、送信済みおよび完了済みのデータ主体要求の数を表示します。 プロセスの詳細については、「Privacy Service」を選択します。 **リクエスト** をクリックします。"
 
 Adobe Experience Platform [!DNL Privacy Service] は、様々なソリューション間でプライバシーとコンプライアンスのリクエストを調整できる RESTful API およびユーザーインターフェイスを提供します。 このドキュメントでは、 [!DNL Privacy Service] UI API の使用について詳しくは、 [Privacy ServiceAPI ガイド](../api/overview.md).
 

@@ -2,14 +2,24 @@
 title: データハイジーン UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータハイジーンタスクを管理する方法を説明します。
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 100%
+source-wordcount: '228'
+ht-degree: 66%
 
 ---
 
-# データハイジーン UI ガイド
+# データハイジーン UI ガイド {#hygiene-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_consumer"
+>title="データ衛生ホイール"
+>abstract="このウィジェットは、選択した期間のデータ衛生消費者削除ジョブのステータスを表示します。 データの衛生プロセスの詳細については、 **データの衛生状態** をクリックします。"
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_privacyconsole_recents"
+>title="最近のデータ衛生作業指示"
+>abstract="このウィジェットは、右上で選択したオプションに応じて、最近作成または更新された 5 つのデータ衛生作業指示を表示します。 データの衛生プロセスの詳細については、 **データの衛生状態** をクリックします。"
 
 >[!IMPORTANT]
 >
