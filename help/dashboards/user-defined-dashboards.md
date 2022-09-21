@@ -2,9 +2,9 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -37,9 +37,18 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 新しく作成された空のダッシュボードが、選択した名前で表示されます。
 
-## ウィジェットの作成
+## ウィジェットの作成 {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="ウィジェットの最大数"
+>abstract="ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。 ダッシュボードに 10 個のウィジェットを追加した後、 [!UICONTROL 新しいウィジェットを追加] オプションは無効で、グレーで表示されます。"
 
 新しいダッシュボードビューで、「 」を選択します。 **[!UICONTROL 新しいウィジェットを追加]** をクリックして、ウィジェットの作成プロセスを開始します。
+
+>[!IMPORTANT]
+>
+>ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。 ダッシュボードに 10 個のウィジェットを追加した後、 [!UICONTROL 新しいウィジェットを追加] オプションは無効で、グレーで表示されます。
 
 ![新しいウィジェットの追加がハイライトされた新しい空のダッシュボード。](./images/user-defined-dashboards/add-new-widget.png)
 
