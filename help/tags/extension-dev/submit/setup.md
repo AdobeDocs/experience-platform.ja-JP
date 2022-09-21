@@ -2,10 +2,10 @@
 title: Experience Cloud 組織の設定
 description: Adobe Experience Platform の拡張機能の開発を開始するために Adobe Experience Cloud 組織を登録する方法について説明します。
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 100%
+source-wordcount: '595'
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,9 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 >
 >現在、会社の電子メールは一度に 1 つのパートナープログラムでのみ使用できるので、各プログラムの登録連絡先には、それぞれ別の電子メールを使用する必要があります。
 
-会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト](https://partners.adobe.com/exchangeprogram/experiencecloud)にサインインし、次の手順に従うことで、アドビソリューションへのアクセスを要求できます。既に Experience Cloud アカウントを持ち、ソリューションにアクセスできる一方で、Adobe Experience Platform のデータ収集 UI にアクセスできない場合は、[グループとユーザーの設定手順](../../ui/administration/user-permissions.md)を参照してください。
+会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト](https://partners.adobe.com/exchangeprogram/experiencecloud)にサインインし、次の手順に従うことで、アドビソリューションへのアクセスを要求できます。
+
+データ収集 UI とExperience CloudUI にアクセスする必要があるExperience Platformアカウントがある場合は、 [データ収集権限ガイド](../../../collection/permissions.md).
 
 ## 個人の開発者
 

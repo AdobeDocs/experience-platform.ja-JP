@@ -1,11 +1,11 @@
 ---
 title: イベント転送での秘密鍵の設定
-description: イベント転送のプロパティで使用されるエンドポイントを認証するために、データ収集 UI で秘密鍵を設定する方法について説明します。
+description: イベント転送プロパティで使用されるエンドポイントに対して認証するための UI のシークレットの設定方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 84%
+source-wordcount: '1633'
+ht-degree: 78%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 84%
 
 {style=&quot;table-layout:auto&quot;}
 
-このガイドでは、データ収集 UI でイベント転送（[!UICONTROL Edge]）プロパティのシークレットを設定する方法の概要を説明します。
+このガイドでは、イベント転送 ([!UICONTROL Edge]) プロパティを使用して、Experience PlatformUI またはデータ収集 UI に表示できます。
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ ht-degree: 84%
 
 ## 前提条件
 
-このガイドは、データ収集 UI でタグやイベント転送のリソースを管理する方法（データ要素やイベント転送ルールの作成方法など）を既に理解していることを前提としています。概要については、[リソースの管理](../managing-resources/overview.md)に関するガイドを参照してください。
+このガイドは、データ要素の作成方法やイベント転送ルールの作成方法など、UI でのタグとイベント転送のリソースの管理方法について既に詳しいことを前提としています。 概要については、[リソースの管理](../managing-resources/overview.md)に関するガイドを参照してください。
 
 また、タグとイベント転送の公開フロー（ライブラリにリソースを追加する方法や、テスト用に web サイトにビルドをインストールする方法など）についての実用的な理解が必要です。詳しくは、[公開の概要](../publishing/overview.md)を参照してください。
 
 ## 秘密鍵の作成 {#create}
 
-シークレットを作成するには、データ収集 UI にログインし、シークレットを追加するイベント転送プロパティを開きます。次に、左側のナビゲーションで「**[!UICONTROL シークレット]**」 を選択し、「**[!UICONTROL 新しいシークレットの作成]**」を選択します。
+シークレットを作成するには、「 」を選択します。 **[!UICONTROL イベント転送]** 左側のナビゲーションで、秘密鍵を追加するイベント転送プロパティを開きます。 次に、左側のナビゲーションで「**[!UICONTROL シークレット]**」 を選択し、「**[!UICONTROL 新しいシークレットの作成]**」を選択します。
 
 ![新しいシークレットの作成](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ HTTP シークレットを作成するには、「**[!UICONTROL タイプ]**」�
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドで、 [[!UICONTROL クライアント ID] および [!UICONTROL クライアント秘密鍵]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] データ収集 UI のフィールドは、認証サーバーホストとトークンパスを連結したものです。
+OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドで、 [[!UICONTROL クライアント ID] および [!UICONTROL クライアント秘密鍵]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] UI のフィールドは、認証サーバーホストとトークンパスを連結したものです。
 
 ![OAuth2 シークレット](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Googleアカウントの資格情報を入力するためのダイアログが�
 
 ## 次の手順
 
-このガイドでは、データ収集 UI での秘密鍵の管理方法について説明しました。Reactor API を使用して秘密鍵を操作する方法については、[秘密鍵エンドポイントガイド](../../api/endpoints/secrets.md)を参照してください。
+このガイドでは、UI でシークレットを管理する方法を説明しました。 Reactor API を使用して秘密鍵を操作する方法については、[秘密鍵エンドポイントガイド](../../api/endpoints/secrets.md)を参照してください。

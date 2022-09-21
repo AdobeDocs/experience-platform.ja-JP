@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 100%
+source-wordcount: '872'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 1. スキーマに名前を付け、簡単な説明を追加します。
 
-1. 「**[!UICONTROL フィールドグループ]**」の横にある「**[!UICONTROL 追加]**」を選択して、「ExperienceEvent web details」フィールドグループを追加できます。
+1. 「ExperienceEvent Web 詳細」フィールドグループを追加するには、 **[!UICONTROL 追加]** 次の **[!UICONTROL フィールドグループ]**.
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 ## イベント転送プロパティの作成
 
-データ収集 UI で、「Edge」タイプのプロパティを作成します。
+内 **[!UICONTROL タグ]** ワークスペース、タイプのプロパティを作成 **[!UICONTROL Edge]**.
 
 1. 「**[!UICONTROL 新しいプロパティ]**」を選択します。
 
@@ -71,22 +71,18 @@ Adobe Experience Platform で、スキーマを作成します。
 
 Adobe Experience Platform でデータストリームを作成するには、イベント転送プロパティの作成時に生成された環境 ID を使用します。
 
-1. データ収集 UI の左側のレールにあるリンクを使用して、データストリームインターフェイスを開きます。
-
-1. 「**[!UICONTROL データストリーム]**」を選択します。
+1. 選択 **[!UICONTROL データストリーム]** をクリックします。
 
 1. 設定に名前を付け、必要に応じて説明を入力します。
 この説明は、複数の設定を含むリストで目的の設定を識別するのに役立ちます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 
-
-
 ## イベント転送の有効化
 
 次に、Edge ネットワークを設定して、イベント転送や他のアドビ製品にデータを送信します。
 
-1. データストリーム UI で、作成したプロパティを選択します。
+1. 内 **[!UICONTROL データストリーム]** ワークスペースで、作成したプロパティを選択します。
 
 1. 「開発」、「実稼働」、または「ステージング」環境を選択します。
 
@@ -102,17 +98,9 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 ## Platform Web SDK 拡張機能を設定して、以前作成したデータストリームにデータを送信します。
 
-データ収集 UI でプロパティを作成し、Adobe Experience Platform Web SDK 拡張機能を使用して設定します。
+プロパティを **[!UICONTROL タグ]** workspace に移動して、に移動します。 **[!UICONTROL 拡張機能]** をクリックし、カタログからExperience PlatformWeb SDK 拡張機能を選択して、設定およびインストールします。
 
-1. プロパティに名前を付けます。
-
-   Alloy の複数のインスタンスを使用することができます。例えば、ペイウォール前とペイウォール後のトラッキングプロパティが異なる場合があります。
-
-1. 組織 ID を選択します。
-
-1. Edge ドメインを選択します。
-
-設定オプションについて詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md) を参照してください。
+詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md) 設定オプションの詳細については、を参照してください。
 
 ## Platform Web SDK にデータを送信するタグルールを作成する
 

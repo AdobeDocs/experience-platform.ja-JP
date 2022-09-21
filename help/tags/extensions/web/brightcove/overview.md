@@ -2,10 +2,10 @@
 title: BrightCove ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の BrightCove ビデオトラッキングタグ拡張機能について説明します。
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 100%
+source-wordcount: '908'
+ht-degree: 97%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Platform の各タグプロパティには、拡張機能画面
 
 >[!TIP]
 >
->ビデオ要素ごとに複数の eVar または prop をプロビジョニングしたくない場合には、別の方法があります。 データ要素の値は、データ収集 UI 内で連結できます。次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。詳しくは、 [分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) のドキュメントを参照してください。最終的には、Analysis Workspace のセグメントとして適用されます。
+>各ビデオ要素に対して複数の eVar や prop をプロビジョニングしたくない場合は、代替方法としてデータ要素の値が連結されます。 次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。詳しくは、 [分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) のドキュメントを参照してください。最終的には、Analysis Workspace のセグメントとして適用されます。
 >
 >これをおこなうには、「ビデオメタデータ」のような新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素をプルし、連結するようにプログラミングします。
 

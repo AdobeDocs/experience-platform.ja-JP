@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1934'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Exp
 
 ## 顧客が [!DNL Web SDK]?
 
-いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 を使用するお客様 [!DNL Web SDK] は、Adobe Experience Platformデータ収集 UI でスキーマ、データセット、ID 名前空間およびデータストリームを作成するために、適切な権限を設定する必要があります。
+いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 を使用するお客様 [!DNL Web SDK] は、データ収集 UI またはExperience PlatformUI でスキーマ、データセット、ID 名前空間、データストリームを作成するために、適切な権限を設定する必要があります。
 
 これらの権限の設定について詳しくは、 [データ収集権限の管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Web SDK は急速に進化しています。 現在、さらに多くの使用�
 
 ただし、
 
-* Adobe Experience Platform Web SDK には、エッジネットワークがストリームを識別し、データの処理方法を決定できるように、Datastream ID と呼ばれるものが必要です。 この ID はExperience Platform内で作成されます。 これは、データ収集 UI を使用してプロパティを作成したり JavaScript コードをデプロイしたりする必要があるわけではありませんが、タグを使用して設定 ID を作成する必要はありません。
+* Adobe Experience Platform Web SDK には、エッジネットワークがストリームを識別し、データの処理方法を決定できるように、Datastream ID と呼ばれるものが必要です。 この ID はExperience Platform内で作成されます。 これは、UI を使用してプロパティを作成したり JavaScript コードをデプロイしたりする必要があるわけではありませんが、タグを使用して設定 ID を作成する必要はありません。
 
 * タグは、最適な利用可能なタグと SDK Manager であるだけでなく、簡単にデプロイできます `alloy.js` XDM スキーマにデータをマッピングします。 タグを使用しない場合は、デプロイの管理が必要になります `alloy.js`、イベンティングをおこない、データを XDM にマッピングしてから、送信します。 これは、 _多い_ タグを使用するよりプロセスが難しい。
 

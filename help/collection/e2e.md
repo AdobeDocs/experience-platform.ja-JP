@@ -2,10 +2,10 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 97%
+source-wordcount: '2619'
+ht-degree: 95%
 
 ---
 
@@ -18,6 +18,8 @@ Adobe Experience Platformは、データを収集して、他のAdobe製品や�
 >[!NOTE]
 >
 >タグを使用しない場合は、SDK を手動でインストールして設定することもできますが、以下に示すように、その前後の手順は完了しておく必要があります。
+>
+>データ収集 UI に関するすべての手順は、Experience PlatformUI でも実行できます。
 
 ## 前提条件
 
@@ -57,7 +59,7 @@ Edge ネットワークにデータを送信できるようになったら、組
 >
 >XDM スキーマはカスタマイズ可能です。 以下に概説する手順は、過度に規範的なものではなく、特に web SDK のスキーマ要件に焦点を当てています。これらのパラメーター以外では、データの残りの構造を自由に定義できます。
 
-データ収集 UI で、左側のナビゲーションから「**[!UICONTROL スキーマ]**」を選択します。ここから、組織に属する以前に作成したスキーマのリストを表示できます。続行するには、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンメニューから「**[!UICONTROL XDM ExperienceEvent]**」を選択します。
+UI で、「 」を選択します。 **[!UICONTROL スキーマ]** をクリックします。 ここから、組織に属する以前に作成したスキーマのリストを表示できます。続行するには、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンメニューから「**[!UICONTROL XDM ExperienceEvent]**」を選択します。
 
 ![スキーマワークスペース](./images/e2e/schemas.png)
 
@@ -97,7 +99,7 @@ Edge ネットワークにデータを送信できるようになったら、組
 >
 >[イベント転送](../tags/ui/event-forwarding/overview.md)を使用する場合（組織が機能のライセンスを取得している場合）、アドビ製品を有効にするのと同じ方法でデータストリームに対してイベント転送を有効にする必要があります。このプロセスについて詳しくは、[後の節](#event-forwarding)で説明します。
 
-データ収集 UI で、「**[!UICONTROL データストリーム]**」を選択します。ここから、編集する既存のデータストリームをリストから選択したり、「**[!UICONTROL 新規データストリーム]**」を選択して新しい設定を作成したりできます。
+選択 **[!UICONTROL データストリーム]** をクリックします。 ここから、編集する既存のデータストリームをリストから選択したり、「**[!UICONTROL 新規データストリーム]**」を選択して新しい設定を作成したりできます。
 
 ![データストリーム](./images/e2e/datastreams.png)
 

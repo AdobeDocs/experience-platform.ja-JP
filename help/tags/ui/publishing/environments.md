@@ -2,10 +2,10 @@
 title: 環境
 description: タグ環境の概念と Adobe Experience Platform 内でタグ環境がどのように機能するかについて説明します。
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 100%
+source-wordcount: '1464'
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Web プロパティを使用する場合は、ドキュメントの `<head>` タ
 
 ![](./images/environments/select-host.png)
 
-ビルドが作成されると、そのビルドは割り当てられたホストに指定した場所に配信されます。データ収集 UI でのホストの作成および設定方法について詳しくは、 [ホストの概要](./hosts/hosts-overview.md) を参照してください。
+ビルドが作成されると、そのビルドは割り当てられたホストに指定した場所に配信されます。タグホストの作成および設定方法について詳しくは、 [ホストの概要](./hosts/hosts-overview.md).
 
 ### アーカイブ設定 {#archive}
 
