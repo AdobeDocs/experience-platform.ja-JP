@@ -2,7 +2,7 @@
 title: Web 拡張機能のライブラリモジュール
 description: Adobe Experience Platform で Web 拡張機能のライブラリモジュールを書式設定する方法について説明します。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
+source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%
@@ -47,7 +47,7 @@ cookie.set('foo', 'bar');
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 `exports` という名前の自由変数を使用できます。この変数を使って、モジュールの API をエクスポートできます。
 
