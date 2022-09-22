@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Debugger を使用した埋め込みコードのテスト
 description: Platform Debugger を使用して、Web サイト上で Adobe Experience Platform の様々な埋め込みコードをローカルでテストする方法について説明します。
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 96%
+source-wordcount: '510'
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 ## 前提条件
 
-このチュートリアルでは、タグの環境と埋め込みコードの使用に関する十分な知識が必要です。 「[環境の概要](./environments.md) 」で詳細情報を参照してください。
+このチュートリアルでは、データ収集 UI での環境と埋め込みコードの使用に関する十分な知識が必要です。「[環境の概要](./environments.md) 」で詳細情報を参照してください。
 
 また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、クロムおよび Firefox ブラウザーでのみ使用できます。 チュートリアルを開始する前に、次のリンクのいずれかを使用して、拡張機能をインストールしてください。
 

@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK 拡張機能の設定
-description: UI でのAdobe Experience Platform Web SDK タグ拡張機能の設定方法。
+description: データ収集 UI でのAdobe Experience Platform Web SDK タグ拡張の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1047'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDK タグ拡張機能は、Adobe Experience Platform Edge Network を通じて、Web プロパティからAdobe Experience Cloudにデータを送信します。 拡張機能を使用すると、データを Platform にストリーミングし、ID を同期し、顧客の同意シグナルを処理して、コンテキストデータを自動的に収集できます。
 
-このドキュメントでは、UI で拡張機能を設定する方法について説明します。
+このドキュメントでは、データ収集 UI で拡張機能を設定する方法について説明します。
 
 ## はじめに
 
-Platform Web SDK 拡張機能が既にプロパティ用にインストールされている場合は、UI でプロパティを開き、 **[!UICONTROL 拡張機能]** タブをクリックします。 Platform Web SDK で、を選択します。 **[!UICONTROL 設定]**.
+Platform Web SDK 拡張機能が既にプロパティ用にインストールされている場合は、データ収集 UI でプロパティを開き、 **[!UICONTROL 拡張機能]** タブをクリックします。 Platform Web SDK で、を選択します。 **[!UICONTROL 設定]**.
 
 ![](../images/extension/overview/configure.png)
 

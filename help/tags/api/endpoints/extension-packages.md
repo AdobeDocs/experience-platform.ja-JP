@@ -2,10 +2,10 @@
 title: 拡張パッケージエンドポイント
 description: Reactor API で /extension_packages エンドポイントを呼び出す方法を説明します。
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 97%
+source-wordcount: '951'
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 拡張機能パッケージは、拡張機能開発者が作成した[拡張機能](./extensions.md)を表します。 拡張機能パッケージは、ユーザーにタグ付けできる追加機能を定義します。 通常、これらの機能は、[ルールコンポーネント](./rule-components.md)（イベント、条件、アクション）および[データ要素](./data-elements.md)の形式で提供されますが、メインモジュールや共有モジュールを含めることもできます。
 
-拡張機能パッケージは、ユーザーがインストールできるよう、データ収集 UI とAdobe Experience Platform UI 内の拡張機能カタログに表示されます。 プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
+拡張機能パッケージは、ユーザーがインストールできるよう、データ収集 UI 内の拡張機能カタログに表示されます。 プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
 
 拡張パッケージは、そのパッケージを作成した開発者の[会社](./companies.md)に属しています。
 

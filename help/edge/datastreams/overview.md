@@ -3,10 +3,10 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 95%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 95%
 
 データストリームは、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバーサイド設定を表します。SDK の [configure コマンド](../fundamentals/configuring-the-sdk.md)がクライアント上で処理される必要があるもの（`edgeDomain` など）を制御するのに対して、データストリームは、SDK のその他すべての設定を処理します。リクエストが Adobe Experience Platform Edge Network に送付されると、データストリームを参照するために `edgeConfigId` が使用されます。これにより、web サイト上でコードを変更することなく、サーバーサイド設定を更新できます。
 
-このドキュメントでは、UI でデータストリームを設定する手順を説明します。
+このドキュメントでは、データ収集 UI でデータストリームを設定する手順を説明します。
 
 ## [!UICONTROL データストリーム]ワークスペースへのアクセス
 
-データ収集 UI またはExperience PlatformUI で、データストリームを作成および管理するには、 **[!UICONTROL データストリーム]** をクリックします。
+左側のナビゲーションで&#x200B;**[!UICONTROL データストリーム]**&#x200B;を選択することで、データ収集 UI でデータストリームを作成および管理できます。
 
-![UI の「データストリーム」タブ](../images/datastreams/overview/datastreams-tab.png)
+![データ収集 UI の「データストリーム」タブ](../images/datastreams/overview/datastreams-tab.png)
 
 「[!UICONTROL データストリーム]」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
 
@@ -106,7 +106,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 >[!IMPORTANT]
 >
->Platform のデータストリームを有効にする場合は、UI の上部のリボンに表示されるように、現在使用している Platform サンドボックスをメモしておきます。
+>Platform のデータストリームを有効にする場合、データ収集 UI の上部リボンに表示されている、現在使用している Platform サンドボックスに注意してください。
 >
 >![選択されたサンドボックス](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ Experience Platform で使用するためにこのデータストリームを設
 
 ## 次の手順
 
-このガイドでは、UI でのデータストリームの管理方法を説明しました。 データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../collection/e2e.md#install)を参照してください。
+このガイドでは、データ収集 UI でのデータストリームの管理方法について説明しました。データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../collection/e2e.md#install)を参照してください。

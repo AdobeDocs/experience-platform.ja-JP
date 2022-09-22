@@ -2,10 +2,10 @@
 title: Common Analytics 拡張機能の概要
 description: Adobe Experience Platform の Common Analytics タグ拡張機能について説明します。
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 90%
+source-wordcount: '549'
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ Common Analytics Plugins 拡張機能は、次のアクションを提供しま�
 >
 >このアクションの実装は簡単ですが、プラグインの重み付けが高まるので、アドビコンサルティングではこのアクションの使用をお勧めしません。
 
-このアクションでは、実装に含める各プラグインを選択し、変更を保存できます。実装時に使用する数だけ、または必要な数だけ選択します。
+このアクションでは、実装に含める各プラグインを選択し、変更を保存できます。実装時に使用する数だけ、または必要な数だけ選択します。各プラグインの使用方法に関するドキュメントへのリンクと簡単な説明が、Analytics [プラグインの概要](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja)に記載されています。
 
 ### プラグインの初期化
 
@@ -58,17 +58,36 @@ Common Analytics Plugins 拡張機能は、次のアクションを提供しま�
 
 ## 共通の Analytics プラグイン拡張データ要素
 
-次のデータ要素は、Common Analytics Plugins 拡張機能で使用できます。この拡張機能は、タグ機能を利用して、Analytics で対応するプラグインを設定および設定します。
+このセクションでは、共通 Analytics プラグイン拡張機能で使用できるデータ要素について説明します。
 
-* `getGeoCoordinates`
-* `getNewRepeat`
-* `getPageName`
-* `getResponsiveLayout`
-* `getTimeParting`
-* `getTimeSinceLastVisit`
-* `getVisitDuration`
-* `getVisitNum`
+### getGeoCoordinates
 
->[!NOTE]
->
->上記のプラグインについて詳しくは、 [Analytics ドキュメント](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ja).
+Adobe Experience Platform のネイティブのデータ収集 UI を利用して、getGeoCoordinates プラグインをセットアップおよび設定できます。
+
+### getNewRepeat
+
+ネイティブのデータ収集 UI を利用して、getNewRepeat プラグインをセットアップおよび設定できます。
+
+### getPageName
+
+ネイティブのデータ収集 UI を利用して、getPageName プラグインをセットアップおよび設定できます。
+
+### getResponsiveLayout
+
+ネイティブのデータ収集 UI を利用して、getResponsiveLayout プラグインをセットアップおよび設定できます。
+
+### getTimeParting
+
+ネイティブのデータ収集 UI を利用して、getTimeParting プラグインをセットアップおよび設定できます。
+
+### getTimeSinceLastVisit
+
+ネイティブのデータ収集 UI を利用して、getTimeSinceLastVisit プラグインをセットアップおよび設定できます。
+
+### getVisitDuration
+
+ネイティブのデータ収集 UI を利用して、getVisitDuration プラグインをセットアップおよび設定できます。
+
+### getVisitNum
+
+ネイティブのデータ収集 UI を利用して、getVisitNum プラグインをセットアップおよび設定できます。

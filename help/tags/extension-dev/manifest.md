@@ -2,9 +2,9 @@
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2645'
+source-wordcount: '2647'
 ht-degree: 100%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 100%
     </tr>
     <tr>
       <td><code>categoryName</code> <em>（オプション）</em></td>
-      <td>指定された場合、<code>displayName</code> が UI 内の <code>categoryName</code> の下に一覧表示されます。 同じ <code>categoryName</code> を持つすべてのタイプが同じカテゴリに一覧表示されます。例えば、拡張機能で <code>keyUp</code> イベントタイプと <code>keyDown</code> イベントタイプが指定され、どちらのタイプも <code>Keyboard</code> の <code>categoryName</code> を持つ場合、ユーザーがルールを作成する際に使用可能なイベントタイプのリストから選択するときに、両方のイベントタイプが Keyboard カテゴリに表示されます。 <code>categoryName</code> の値は人間が判読できる必要があります。</td>
+      <td>指定した場合、<code>displayName</code> がデータ収集 UI 内の <code>categoryName</code> の下に一覧表示されます。同じ <code>categoryName</code> を持つすべてのタイプが同じカテゴリに一覧表示されます。例えば、拡張機能で <code>keyUp</code> イベントタイプと <code>keyDown</code> イベントタイプが指定され、どちらのタイプも <code>Keyboard</code> の <code>categoryName</code> を持つ場合、ユーザーがルールを作成する際に使用可能なイベントタイプのリストから選択するときに、両方のイベントタイプが Keyboard カテゴリに表示されます。 <code>categoryName</code> の値は人間が判読できる必要があります。</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

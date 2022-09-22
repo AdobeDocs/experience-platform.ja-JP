@@ -2,9 +2,9 @@
 title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1291'
 ht-degree: 95%
 
 ---
@@ -51,7 +51,7 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->パーセント (`%`) 構文を使用して、タグ実装内の多くのフォームフィールドの変数を参照し、を呼び出す必要がなくなります。 `_satellite.getVar()`. 例えば、 `%product%` は、製品データ要素またはカスタム変数の値にアクセスします。
+>パーセント (`%`) 構文を使用して、データ収集 UI の多くのフォームフィールドの変数を参照し、の呼び出しを減らします。 `_satellite.getVar()`. 例えば、 `%product%` は、製品データ要素またはカスタム変数の値にアクセスします。
 
 イベントがルールをトリガーする際に、ルールの対応する `event` ～に向かう `_satellite.getVar()` 次のようにします。
 

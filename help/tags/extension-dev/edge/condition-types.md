@@ -2,10 +2,10 @@
 title: Edge 拡張機能の条件のタイプ
 description: Adobe Experience Platform のエッジ拡張機能の条件タイプライブラリモジュールを定義する方法について説明します。
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 94%
+source-wordcount: '408'
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 94%
 
 通常、条件タイプは次の要素で構成されます。
 
-1. Experience PlatformUI とデータ収集 UI 内に表示されるビューで、条件の設定を変更できます。
+1. データ収集 UI に表示されるビュー。条件の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、条件を評価します。
 
 例えば、ユーザーがホスト `example.com` にいるかどうかを評価したい場合、モジュールは次のようになります。

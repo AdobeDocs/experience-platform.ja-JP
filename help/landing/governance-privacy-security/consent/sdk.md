@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK を使用した顧客の同意データ
 topic-legacy: getting started
 description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDK を使用すると、同意管理プラット�
 * [Adobe標準を使用したデータセットの作成](./adobe/dataset.md)
 * [TCF 2.0 標準を使用したデータセットの作成](./iab/dataset.md)
 
-このガイドでは、UI のタグ拡張を使用した SDK のセットアップワークフローに従います。 拡張機能を使用しない場合で、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく、次のドキュメントを参照してください。
+このガイドでは、データ収集 UI のタグ拡張機能を使用した SDK のセットアップワークフローに従います。 拡張機能を使用しない場合で、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく、次のドキュメントを参照してください。
 
 * [データストリームの設定](../../../edge/datastreams/overview.md)
 * [SDK のインストール](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Adobe Experience Platform Web SDK を使用すると、同意管理プラット�
 
 ## データストリームの設定
 
-SDK がデータをExperience Platformに送信するには、まずデータストリームを設定する必要があります。 データ収集 UI またはExperience PlatformUI で、 **[!UICONTROL データストリーム]** をクリックします。
+SDK がデータをExperience Platformに送信するには、まずデータストリームを設定する必要があります。 データ収集 UI で、「 」を選択します。 **[!UICONTROL データストリーム]** をクリックします。
 
 新しいデータストリームを作成するか、編集する既存のデータストリームを選択した後、の横にある切り替えボタンを選択します。 **[!UICONTROL Adobe Experience Platform]**. 次に、以下に示す値を使用して、フォームに入力します。
 
@@ -80,7 +80,7 @@ SDK 拡張機能がインストールされている場合、デフォルトの�
 1. イベントハンドラで、 `adobeDefaultConsent` 変数を読み込み、JavaScript を使用してタグライブラリスクリプトを読み込みます。
 1. を使用するデータ要素を設定する `adobeDefaultConsent` JavaScript 変数を使用し、このデータ要素をユーザーのデフォルトの同意値として使用します。
 
-UI でデータ要素を作成するには、「 **[!UICONTROL データ要素]** 左側のナビゲーションで、「 **[!UICONTROL データ要素を追加]** をクリックして、データ要素作成ダイアログに移動します。
+データ収集 UI でデータ要素を作成するには、「 **[!UICONTROL データ要素]** 左側のナビゲーションで、「 **[!UICONTROL データ要素を追加]** をクリックして、データ要素作成ダイアログに移動します。
 
 ここから、 [!UICONTROL JavaScript 変数] に基づくデータ要素 `adobeDefaultConsent`. 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 

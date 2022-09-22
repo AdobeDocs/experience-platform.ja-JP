@@ -3,9 +3,9 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '870'
 ht-degree: 18%
 
 ---
@@ -65,7 +65,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 手順に従って、 [SDK のインストール](../../fundamentals/installing-the-sdk.md) (SDK は、スタンドアロンでインストールすることも、UI を通じてインストールすることもできます。 詳しくは、 [タグクイックスタートガイド](../../../tags/quick-start/quick-start.md)) を参照してください。
+1. 手順に従って、 [SDK のインストール](../../fundamentals/installing-the-sdk.md) (SDK は、スタンドアロンでインストールすることも、 [データ収集 UI](https://experience.adobe.com/#/data-collection/). 詳しくは、 [タグクイックスタートガイド](../../../tags/quick-start/quick-start.md)) を参照してください。
 1. [SDK の設定](../../fundamentals/configuring-the-sdk.md) offer decisioning その他のOffer decisioning固有の手順を以下に示します。
 
    * スタンドアロン SDK のインストール

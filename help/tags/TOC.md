@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 96%
 * はじめに {#get-started}
    * [クイックスタートガイド](./quick-start/quick-start.md)
    * [実装ガイド](./quick-start/implementation-guides.md)
-* UI ガイド {#ui}
+* データ収集 UI {#ui}
    * [概要](./ui/managing-resources/overview.md)
    * 拡張機能 {#extensions}
       * [概要](./ui/managing-resources/extensions/overview.md)

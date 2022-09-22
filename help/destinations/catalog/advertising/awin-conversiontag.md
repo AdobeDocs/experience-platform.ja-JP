@@ -3,9 +3,9 @@ keywords: Awin Advertiser コンバージョンタグ拡張；コンバージョ
 title: Awin Advertiser Conversion Tag 拡張機能
 description: Awin Advertiser コンバージョンタグの拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 30%
 
 ---
@@ -26,7 +26,7 @@ Awin Advertiser コンバージョンタグは、Adobe Experience Platformの広
 
 この拡張機能は、Platform を購入したすべての顧客が、宛先カタログで使用できます。
 
-この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせて、UI のデータ収集機能にアクセスし、 **[!UICONTROL manage_properties]** 権限を持つユーザーが拡張機能をインストールできるようにする。
+この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてデータ収集 UI へのアクセス権を取得し、 **[!UICONTROL manage_properties]** 権限を持つユーザーが拡張機能をインストールできるようにする。
 
 ## 拡張機能のインストール {#install-extension}
 

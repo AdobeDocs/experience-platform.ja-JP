@@ -2,10 +2,10 @@
 title: 拡張機能の開発の概要
 description: 様々なタグ拡張タイプの主要コンポーネントと、Adobe Experience Platform での拡張開発プロセスについて説明します。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 95%
+source-wordcount: '949'
+ht-degree: 100%
 
 ---
 
@@ -37,11 +37,11 @@ Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエ
 
 ### 件数
 
-ビューは、HTMLファイルで、 [`iframe` 要素](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) タグアプリケーション内、特に Platform UI とデータ収集 UI を通じて。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
+ビューは、データ収集 UI を通じてタグアプリケーションの [`iframe` 要素](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) に読み込むことができる HTML ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
 
 拡張機能で最も重要なビューファイルは、設定です。 詳しくは、 [拡張機能の設定](#configuration) の節を参照してください。
 
-ビュー内で使用するライブラリに関して制限はありません。 つまり、jQuery、Underscore、React、Angular、Bootstrap などを使用できます。ただし、拡張機能のルックアンドフィールを UI と同じにすることをお勧めします。
+ビュー内で使用するライブラリに関して制限はありません。 つまり、jQuery、Underscore、React、Angular、Bootstrap などを使用できます。ただし、拡張機能のルックアンドフィールをデータ収集 UI と同じにすることをお勧めします。
 
 すべての表示関連ファイル（HTML、CSS、JavaScript）は、ライブラリモジュールファイルから分離された 1 つのサブディレクトリ内に配置することをお勧めします。 `extension.json` に、このビューのサブディレクトリの場所を記述します。その後、Platform は、web サーバーからこのサブディレクトリ（このサブディレクトリのみ）を提供します。
 

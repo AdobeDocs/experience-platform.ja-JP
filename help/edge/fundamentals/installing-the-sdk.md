@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: web sdk のインストール；web sdk のインストール；internet explorer;promise;npm パッケージ
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 31%
+source-wordcount: '920'
+ht-degree: 32%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 Adobe Experience Platform Web SDK の使用方法は 3 つあります。
 
-1. Adobe Experience Platform Web SDK を使用する推奨される方法は、データ収集 UI またはExperience PlatformUI を使用することです。
+1. Adobe Experience Platform Web SDK を使用する推奨される方法は、データ収集 UI を使用することです。
 1. Adobe Experience Platform Web SDK は、コンテンツ配信ネットワーク (CDN) でも使用でき、
 1. EcmaScript 5 モジュールと EcmaScript 2015(ES6) モジュールを書き出す NPM ライブラリを使用します。
 

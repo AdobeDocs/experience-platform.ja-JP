@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；ソー
 title: Adobeデータ収集
 description: このドキュメントでは、Adobeのデータ収集ソースの概要を説明します。
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 52%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 52%
 
 Adobe Experience Platform は、クライアントサイドのソースから顧客体験データを収集して Adobe Experience Platform Edge Network に送信し、そのデータを強化および変換して、アドビやアドビ以外の宛先に数秒で配信できるようにするテクノロジースイートを提供します。
 
-Adobe Experience Platform Data Collection のソース統合により、ソースカタログを使用して、Data Prep for Data Collection を含む Edge ネットワーク上のデータにアクセスできるほか、警告のサポートを強化できます。
+Adobeのデータ収集のソース統合を使用すると、ソースカタログを通じて、Data Prep for Data Collection を含む Data Collection Experience Edge データにアクセスできるほか、警告のサポートを強化できます。
 
-## ソースワークスペースを使用したデータ収集へのアクセス
+## ソースワークスペースを使用したAdobeデータ収集
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -32,7 +32,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-UI でデータ収集を設定する方法に関する包括的な手順については、 [データ収集のエンドツーエンドの概要](../../../collection/e2e.md).
+データ収集 UI の使用方法に関する包括的な手順については、 [データ収集のエンドツーエンドの概要](../../../collection/e2e.md).
 
 ## 次の手順
 
