@@ -5,7 +5,7 @@ title: UI での列挙フィールドの定義
 description: Experience Platformユーザーインターフェイスで列挙フィールドを定義する方法を説明します。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 # UI での列挙フィールドの定義 {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="列挙と推奨値"
 >abstract="列挙は、文字列フィールドを制限し、事前定義された値のセットと一致するデータのみを取り込めるようにします。 または、取り込みを制限せずに、セグメント化で選択できる属性を定義して、フィールドに提案される値のセットを定義することもできます。 詳しくは、ドキュメントを参照してください。"
 
