@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Analyt
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
+source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '997'
 ht-degree: 20%
 
 ---
@@ -82,7 +82,3 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
 ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID は、イベントのプライマリ ID としてマークされます。AACUSTOMID は、イベントのプライマリ ID としてマークされることはありません。ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
-
-### Customer Journey AnalyticsとプライマリID
-
-Customer Journey Analyticsの場合、プライマリID の定義は、プライマリID をユーザー ID として使用する場合にのみ重要です。 ただし、これは必須ではありません。 一部の他の ID 列を人物 ID として選択することできます。
