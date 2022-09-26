@@ -5,10 +5,10 @@ title: データセット UI ガイド
 topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
+source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 46%
+source-wordcount: '1209'
+ht-degree: 45%
 
 ---
 
@@ -143,7 +143,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ## プロファイル対応データセットの削除
 
-データセットが [!DNL Profile]を削除した場合、UI からそのデータセットを削除すると、Platform 内のデータレイクとプロファイルストアの両方から削除されます。
+データセットのプロファイルが有効になっている場合、UI を通じてそのデータセットを削除すると、データレイク、ID サービス、Platform 内のプロファイルストアからそのデータセットが削除されます。
 
 データセットは、 [!DNL Profile] は、（データレイクにデータを残す）リアルタイム顧客プロファイル API を使用してのみ保存します。 詳しくは、 [プロファイルシステムジョブ API エンドポイントのガイド](../../profile/api/profile-system-jobs.md) を参照してください。
 
