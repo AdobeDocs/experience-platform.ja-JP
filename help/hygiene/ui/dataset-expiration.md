@@ -2,20 +2,16 @@
 title: データセット有効期限の管理
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 100%
+source-wordcount: '511'
+ht-degree: 79%
 
 ---
 
 # データセット有効期限の管理
 
->[!IMPORTANT]
->
->Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
-
-Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)では、データセットの有効期限をスケジュールできます。データセットが有効期限に達すると、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
+この [[!UICONTROL データの衛生状態] workspace](./overview.md) Adobe Experience Platform UI では、データセットの有効期限をスケジュールできます。 データセットが有効期限に達すると、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
 
 >[!WARNING]
 >
@@ -29,11 +25,13 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 
 ![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/ttl/create-request-button.png)
 
-<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for dataset expiration scheduling-->
+リクエスト作成ダイアログが表示されます。以下 **[!UICONTROL 要求されたアクション]** セクション、選択 **[!UICONTROL データセットを削除]** をクリックして、データセットの有効期限のスケジュール設定に使用できるコントロールを更新します。
+
+![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/ttl/dataset-selected.png)
 
 ### 日付およびデータセットの選択
 
-リクエスト作成ダイアログが表示されます。「**[!UICONTROL アクション]**」セクションで、データセットを削除する日付を選択します。手動で日付を入力（`mm/dd/yyyy` 形式）するか、カレンダーアイコン（![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)）を選択して、ダイアログから日付を選択します。
+リクエスト作成ダイアログが表示されます。以下 **[!UICONTROL 要求されたアクション]** 「 」セクションで、データセットを削除する日付を選択します。 手動で日付を入力（`mm/dd/yyyy` 形式）するか、カレンダーアイコン（![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)）を選択して、ダイアログから日付を選択します。
 
 ![データセットの有効期限が設定されていることを示す画像](../images/ui/ttl/select-date.png)
 
@@ -47,13 +45,17 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 
 ### リクエストの送信
 
-データセットと有効期限を選択したら、「**[!UICONTROL 送信]**」を選択します。
+この [!UICONTROL データセットの詳細] 「 」セクションには、選択したデータセットのプライマリ id とスキーマが入力されます。 の下 **[!UICONTROL リクエスト設定]**、リクエストの名前とオプションの説明を入力し、その後に **[!UICONTROL 送信]**.
 
 ![「[!UICONTROL 送信]」ボタンが選択されていることを示す画像](../images/ui/ttl/submit.png)
 
 データセットが削除される日付を確認するよう求められます。「**[!UICONTROL 送信]**」をクリックして続行します。
 
 リクエストが送信されると、作業指示が作成され、[!UICONTROL データハイジーン]ワークスペースのメインタブに表示されます。ここから、リクエストを処理する作業指示のステータスを監視できます。
+
+>[!NOTE]
+>
+>概要に関する節 ( [タイムラインと透明性](../home.md#dataset-expiration-transparency) を参照してください。
 
 ## データセット有効期限の編集またはキャンセル
 
@@ -63,4 +65,6 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform UI でデータセットの有効期限をスケジュール設定する方法について説明しました。Data Hygiene API を使用したデータセット有効期限のスケジュール設定方法については、[データセット有効期限のエンドポイントガイド](../api/dataset-expiration.md)を参照してください。
+このドキュメントでは、Experience Platform UI でデータセットの有効期限をスケジュール設定する方法について説明しました。UI で他のデータハイジーンタスクを実行する方法について詳しくは、[データハイジーン UI の概要](./overview.md)を参照してください。
+
+Data Hygiene API を使用したデータセット有効期限のスケジュール設定方法については、[データセット有効期限のエンドポイントガイド](../api/dataset-expiration.md)を参照してください。

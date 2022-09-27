@@ -2,12 +2,10 @@
 title: 消費者レコードの削除
 description: Adobe Experience Platform で消費者レコードを削除する方法を説明します。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 100%
+source-wordcount: '1131'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
+>消費者の削除要求は、Adobeのヘルスケアシールドまたはプライバシーシールドを購入した組織でのみ使用できます。
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)を使用すると、ID サービスおよびリアルタイム顧客プロファイルに参加している消費者レコードを削除できます。
 
@@ -37,7 +35,7 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 
 ![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/delete-consumer/create-request-button.png)
 
-リクエスト作成ダイアログが表示されます。デフォルトでは、「**[!UICONTROL アクション]**」セクションで「**[!UICONTROL 消費者]**」オプションが選択されています。このオプションを選択されたままにします。
+リクエスト作成ダイアログが表示されます。デフォルトでは、 **[!UICONTROL 消費者]** オプションが **[!UICONTROL 要求されたアクション]** 」セクションに入力します。 このオプションを選択されたままにします。
 
 ![作成ダイアログで「消費者」オプションが選択されていることを示す画像](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択
 
 ## リクエストの送信（#submit）
 
-リクエストへの ID の追加が完了したら、「**[!UICONTROL 送信]**」を選択します。
+リクエストへの ID の追加が完了したら、 **[!UICONTROL リクエスト設定]**&#x200B;を選択する前に、リクエストの名前と説明（オプション）を入力します。 **[!UICONTROL 送信]**.
 
 ![「[!UICONTROL 送信]」ボタンが選択されていることを示す画像](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択
 
 ![確認ダイアログを示す画像](../images/ui/delete-consumer/confirm-request.png)
 
-リクエストが送信されると、作業指示が作成され、[!UICONTROL データハイジーン]ワークスペースの「[!UICONTROL 消費者]」タブに表示されます。ここから、リクエストを処理する作業指示のステータスを監視できます。ほとんどの消費者削除の作業指示は、完了するまで数日かかります。
+リクエストが送信されると、作業指示が作成され、[!UICONTROL データハイジーン]ワークスペースの「[!UICONTROL 消費者]」タブに表示されます。ここから、リクエストを処理する作業指示のステータスを監視できます。
+
+>[!NOTE]
+>
+>概要に関する節 ( [タイムラインと透明性](../home.md#consumer-delete-transparency) ：実行後の消費者の削除の処理方法の詳細。
 
 ## 次の手順
 
 このドキュメントでは、Experience Platform UI で消費者レコードを削除する方法について説明しました。UI で他のデータハイジーンタスクを実行する方法について詳しくは、[データハイジーン UI の概要](./overview.md)を参照してください。
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Data Hygiene API を使用した消費者レコードの削除方法については、[作業指示エンドポイントガイド](../api/workorder.md)を参照してください。
