@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Audience Manager ソースコネクタ；Audience Manager;Audience Manager コネクタ
-solution: Experience Platform
 title: UI でのAdobe Audience Managerソース接続の作成
-topic-legacy: overview
-type: Tutorial
-description: このチュートリアルでは、ユーザーインターフェイスを使用して消費者エクスペリエンスイベントデータを Platform に取り込むための、Adobe Audience Manager用のソースコネクタを作成する手順を説明します。
+description: このチュートリアルでは、ユーザーインターフェイスを使用してAdobe Audience Managerで消費者エクスペリエンスイベントデータを Platform に取り込むためのソース接続を作成する手順について説明します。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 11%
+source-wordcount: '523'
+ht-degree: 18%
 
 ---
 
@@ -19,11 +16,19 @@ ht-degree: 11%
 
 ## Adobe Audience Managerでのソース接続の作成
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから [!UICONTROL ソース] ワークスペース。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
-以下 [!UICONTROL Adobe] カテゴリ、選択 **[!UICONTROL Adobe Audience Manager]** 次に、 **[!UICONTROL 設定]**.
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
+
+の下 [!UICONTROL Adobe]を選択します。 **[!UICONTROL Adobe Audience Manager]** 次に、 **[!UICONTROL 設定]**.
 
 ![カタログ](../../../../images/tutorials/create/aam/catalog.png)
+
+### 特性とセグメントの選択
+
+>[!NOTE]
+>
+>地域データを地域ソースからAudience Managerに取り込むことはできません。 地域データを必要とする Analytics の使用例がある場合は、 [Analytics ソースコネクタ](../adobe-applications/analytics.md).
 
 この [!UICONTROL 特性とセグメントの選択] 手順が表示され、特性、セグメントおよびデータを調査および選択するためのインタラクティブなインターフェイスが提供されます。
 

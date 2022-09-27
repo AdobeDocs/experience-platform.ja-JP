@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerコネクタ；Audience Manager;Audience Manager
 solution: Experience Platform
-title: Audience Managerソースコネクタの概要
+title: Audience Managerソースの概要
 topic-legacy: overview
-description: Adobe Audience Managerソースコネクタは、Audience Managerで収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。
+description: Adobe Audience Managerソースは、Audience Managerで収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: d0b6885b6e8606692cfe1173b75c7d3537800a5f
+source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 43%
+source-wordcount: '1059'
+ht-degree: 22%
 
 ---
 
-# Audience Manager コネクタ
+# Audience Manager源
 
-Adobe Audience Manager Data Connector は、Adobe Audience Managerで収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。 Audience Managerコネクタは、次の 2 つのカテゴリのデータを Platform に取り込みます。
+Adobe Audience Managerソースは、Adobe Audience Managerでアクティベーション用に収集されたファーストパーティデータをAdobe Experience Platformでストリーミングします。 Audience Managerソースは、次の 2 種類のデータを Platform に取り込みます。
 
-- **リアルタイムデータ：** データ収集サーバーでリアルタイムにAudience Managerされるデータ。 このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
+- **リアルタイムデータ：** データ収集サーバーでリアルタイムにAudience Managerされるデータ。 このデータは、Audience Managerでルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
 - **プロファイルデータ：** Audience Managerは、リアルタイムのオンボードデータを使用して、顧客プロファイルを導き出します。 これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
 
-Audience Manager コネクタは、これらのデータカテゴリをエクスペリエンスデータモデル（XDM）スキーマにマッピングし、プラットフォームに送信します。リアルタイムデータは XDM ExperienceEvent データとして送信され、プロファイルデータは XDM 個別プロファイルとして送信されます。
+Audience Managerソースは、これらのデータタイプを Experience Data Model(XDM) スキーマにマッピングし、Platform に送信します。 リアルタイムデータは XDM ExperienceEvent データとして送信され、プロファイルデータは XDM 個別プロファイルデータとして送信されます。
 
-Platform UI を使用して Adobe Platform Manager との接続を作成する手順については、[Audience Manager コネクタのチュートリアル](../../tutorials/ui/create/adobe-applications/audience-manager.md)を参照してください。
+詳しくは、 [UI でのAudience Managerソース接続の作成](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## エクスペリエンスデータモデル（XDM）とは
 
@@ -29,7 +29,7 @@ XDM は公式に文書化された仕様で、Platform がカスタマーエク�
 
 XDM 標準に準拠することで、カスタマーエクスペリエンスデータを一律に取り込むことができ、データの配信と情報の収集が容易になります。
 
-XDM の使用方法について詳しくは、Experience Platformで [XDM システムの概要](../../../xdm/home.md). プロファイルや ExperienceEvent などの XDM スキーマの構造について詳しくは、[スキーマ構成の基礎](../../../xdm/schema/composition.md)を参照してください。
+XDM のExperience Platformでの使用方法について詳しくは、 [XDM システムの概要](../../../xdm/home.md). プロファイルとイベントの間で XDM スキーマが構造化されている方法について詳しくは、 [スキーマ構成の基本](../../../xdm/schema/composition.md).
 
 ## XDM スキーマの例
 
@@ -39,25 +39,23 @@ Platform で XDM ExperienceEvent および XDM 個別プロファイルにマッ
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
-### XDM 個別プロファイル - プロファイルデータの場合
+### XDM 個別プロファイル — プロファイルデータ用
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-## フィールドは Adobe Audience Manager から XDM にどのようにマッピングされますか？
-
-詳しくは、[Audience Manager のフィールドマッピング](./mapping/audience-manager.md)のドキュメントを参照してください。
+フィールドがAudience Managerから XDM にマッピングされる方法について詳しくは、 [Audience Managerマッピングフィールド](./mapping/audience-manager.md).
 
 ## Platform でのデータ管理
 
 ### データセット
 
-データセットは、スキーマ（列）とフィールド（行）を含み、データ接続で使用できるデータのコレクション（通常はテーブル）のストレージと管理の構成体です。Audience Managerデータは、リアルタイムデータ、受信データ、プロファイルデータで構成されます。 Audience Manager のデータセットを検索するには、UI の検索機能を使用し、各データタイプの命名規則を指定します。
+データセットは、スキーマ（列）とフィールド（行）を含み、データ接続で使用できるデータの集まり（通常はテーブル）のストレージと管理の構成体です。 Audience Managerデータは、リアルタイムデータ、受信データ、プロファイルデータで構成されます。 Audience Manager のデータセットを検索するには、UI の検索機能を使用し、各データタイプの命名規則を指定します。
 
 Audience Managerデータセットは、プロファイルに対してデフォルトで無効になっており、ユーザーは、使用例に基づいてデータセットを有効または無効にできます。 プロファイルのセグメントメンバーシップに使用されるデータセットを無効にすることはお勧めしません。
 
 >[!NOTE]
 >
->AAM Real-time は、 [!DNL Data Lake]. その他のすべてのAudience Managerデータセットは、 [!DNL Profile]を有効にした場合は、 [!DNL Profile]. これらが [!DNL Profile]を含めないと、データを受け取らず、空として表示されます。
+>AAMリアルタイムは、データレイクに送信される唯一のデータセットです。 その他のすべてのAudience Managerデータセットは、 [!DNL Profile]を有効にした場合は、 [!DNL Profile]. これらが [!DNL Profile]を含めないと、データを受け取らず、空として表示されます。
 
 | データセット名 | 説明 | クラス |
 | --- | --- | --- |
@@ -72,11 +70,18 @@ Audience Managerデータセットは、プロファイルに対してデフォ�
 
 ### 接続
 
-Adobe Audience Manager では、Audience Manager 接続という 1 つの接続をカタログに作成します。カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、コネクタの顧客固有のインスタンスであるカタログオブジェクトです。カタログ、接続、コネクタについて詳しくは、[カタログサービスの概要](../../../catalog/home.md)を参照してください。
+Adobe Audience Manager では、Audience Manager 接続という 1 つの接続をカタログに作成します。カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、コネクタの顧客固有のインスタンスであるカタログオブジェクトです。 詳しくは、 [カタログサービスの概要](../../../catalog/home.md) カタログ、接続、コネクタについて詳しくは、を参照してください。
+
+### セグメント母集団からプロファイルへの影響
+
+セグメントの母集団のサイズは、最初にプラットフォームにセグメントを送信する際に、プロファイルの数に直接影響を与えるAudience Managerセグメントです。 つまり、すべてのセグメントを選択すると、プロファイルが使用権限を超過する可能性があります。 また、Platform は、新しいデータとプロファイル取り込みの履歴データを区別します。 100 個のファーストパーティベースの ID を持つセグメントは、100 個のプロファイルを作成します。 ただし、同じセグメントの母集団が 150 に増え、Platform に取り込まれた場合、新しいプロファイルは 50 個しかないので、プロファイルの数は 50 個しか増えません。
+
+また、 [ライセンス使用状況ダッシュボード](../../../dashboards/guides/license-usage.md).
 
 ## Platform 上で Audience Manager データに予想される遅延はどの程度ですか？
 
-| Audience Manager データ | 遅延 | 備考 |
-| --- | --- | --- |
-| リアルタイムデータ | 35 分未満 | Audience ManagerEdge ノードでキャプチャされてから Platform データレイクに表示されるまでの時間です。 |
-| プロファイルデータ | 2 日未満 | DCS/PCS Edge データおよびオンボーディングされたデータが取得されてから、ユーザープロファイルに対して処理されてから、プロファイルに表示されるまでの時間です。 このデータは、今日、Platform データレイクに直接送信されるわけではありません。 プロファイルの切り替えを有効にして、Audience Managerプロファイルデータセットでこのデータをプロファイルに直接取り込むことができます。 |
+| Audience Manager データ | タイプ | 遅延 | 備考 |
+| --- | --- | --- | --- |
+| リアルタイムデータ | イベント | &lt;25 分 | Audience Managerエッジノードでキャプチャされてからデータレイクに表示されるまでの時間です。 |
+| リアルタイムデータ | プロファイルの更新 | &lt;10 分 | リアルタイム顧客プロファイルへの到達時間。 |
+| リアルタイムデータとオンボードデータ | プロファイルの更新 | 24 ～ 36 時間 | DCS/PCS Edge データおよびオンボードデータを介して取得されてから、ユーザープロファイルに処理されてから、リアルタイム顧客プロファイルに表示されるまでの時間です。 現在、このデータは、データレイクに直接取り込まれるわけではありません。 プロファイルの切り替えを有効にして、Audience Managerプロファイルデータセットでこのデータをリアルタイム顧客プロファイルに直接取り込むことができます。 |
