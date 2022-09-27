@@ -1,13 +1,12 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 1890bd9dbce6a217951c28fc2fb3fec2634e714d
+source-git-commit: 5335c77b4636d10064e8786525c9f8f893371b9b
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '927'
 ht-degree: 38%
 
 ---
-
 
 # Adobe Experience Platform リリースノート
 
@@ -15,8 +14,54 @@ ht-degree: 38%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [ソース](#sources)
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 列挙と推奨値の UI のサポート | データの検証を有効にする列挙に加えて、次の操作を実行できます。 [推奨値を追加または削除](../../xdm/ui/fields/enum.md) 標準またはカスタム文字列フィールドの場合は、Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるようにします。 |
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 提案イベントがトリガーされる原因となった、操作された特定の要素のプロパティ。 |
+| フィールドグループ | [[!UICONTROL MediaAnalytics インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 時間の経過と共にメディアの操作を追跡します。 |
+| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報をトラッキングします。 |
+| フィールドグループ | [[!UICONTROL AdobeCJM ExperienceEvent — サーフェス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizerのエクスペリエンスイベントの表面を表します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| 動作 | [[!UICONTROL 時系列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>次の値を追加しました： `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>次の値を削除しました： `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| フィールドグループ | （複数） | [いくつかのフィールドの説明を更新しました](https://github.com/adobe/xdm/pull/1628/files) 複数のJourney Orchestrationコンポーネント |
+| フィールドグループ | （複数） | [いくつかのAdobe Workfrontコンポーネントのタイトルを更新しました](https://github.com/adobe/xdm/pull/1634/files) 一貫性を保つために。 |
+| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 複数のフィールドの名前空間をに更新しました。 `xdm`. |
+| フィールドグループ | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新しいフィールド、 `isReadSegmentTriggerStartEvent`. |
+| フィールドグループ | [[!UICONTROL 気晴らし]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 変更された `xdm:uvIndex` フィールドを整数型に変更し、 `xdm` 名前空間が見つからない複数のフィールドに対して追加されました。 |
+| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` および `xdm:implementationDetails` がフィールドグループから削除されました。 |
+| データタイプ | （複数） | [複数のメディアプロパティ名を更新しました](https://github.com/adobe/xdm/pull/1626/files) 一貫性を保つために複数のデータタイプにまたがって |
+| データタイプ | [[!UICONTROL 実装の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | フラッター用の既知の名前を追加しました。 |
+| データタイプ | [[!UICONTROL 目標地点の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | データタイプで、目標地点に関連付けられたメタデータのキーと値のペアのリストを受け取れるようになりました。 |
+| データタイプ | [[!UICONTROL 提案アクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] は、 [!UICONTROL 提案アクション]. |
+| データタイプ | [[!UICONTROL 提案イベントタイプ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] の名前はに変更されました。 [!UICONTROL 提案アクション]. |
+| （複数） | （複数） | 実験的特性がある [すべての B2B 成分に対して安定化](https://github.com/adobe/xdm/pull/1617/files). |
+| （複数） | （複数） | Adobe Journey Optimizerエンティティが [安定化](https://github.com/adobe/xdm/pull/1625/files). |
+| （複数） | （複数） | いくつかの実験的コンポーネントをまたいだ特定のフィールドの名前空間が、 [整合性を考慮して更新](https://github.com/adobe/xdm/pull/1626/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
