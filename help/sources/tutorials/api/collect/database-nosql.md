@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8068ce7a3589666fa029b86942c348e282a67ad0
+source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 95%
@@ -313,6 +313,7 @@ curl -X GET \
   "version": "1.0",
   "attributes": {
     "isSourceFlow": true,
+    "flacValidationSupported": true,
     "frequency": "batch",
     "notification": {
       "category": "sources",
@@ -356,7 +357,8 @@ curl -X GET \
     "ba5126ec-c9ac-11eb-b8bc-0242ac130003",
     "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
     "929e4450-0237-4ed2-9404-b7e1e0a00309",
-    "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5"
+    "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5",
+    "2fa8af9c-2d1a-43ea-a253-f00a00c74412"
   ],
   "targetConnectionSpecIds": [
     "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
@@ -542,17 +544,21 @@ curl -X GET \
         "type": "object",
         "description": "defines various params required for creating flow run.",
         "properties": {
+          "startTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+          },
           "windowStartTime": {
             "type": "integer",
-            "description": "The start time for the dataflow in epoch time."
+            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "windowEndTime": {
             "type": "integer",
-            "description": "The end time for the dataflow in epoch time."
+            "description": "An integer that defines the end time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "deltaColumn": {
             "type": "object",
-            "description": "The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column.",
+            "description": "The delta column is required to partition the data and separate newly ingested data from historic data.",
             "properties": {
               "name": {
                 "type": "string"
@@ -570,6 +576,7 @@ curl -X GET \
           }
         },
         "required": [
+          "startTime",
           "windowStartTime",
           "windowEndTime",
           "deltaColumn"
@@ -578,6 +585,8 @@ curl -X GET \
     }
 }
 ```
+
++++
 
 ## データフローの作成
 

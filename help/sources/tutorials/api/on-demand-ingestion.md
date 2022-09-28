@@ -2,10 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；
 title: （ベータ版）フローサービス API を使用したオンデマンド取り込み用のフロー実行の作成
 description: このチュートリアルでは、フローサービス API を使用して、オンデマンド取り込みのフロー実行を作成する手順を説明します
-hide: true
-hidefromtoc: true
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 10%
