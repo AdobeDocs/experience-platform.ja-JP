@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 3%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
 Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+
+## バージョン2.13.0 - 2022 年 9 月 28 日
+
+**新機能**
+
+* ページ全体の移行によるページのサポートが追加されました。 Adobe Targetプロファイルは、訪問者が at.js ページと Web SDK ページの間を移動しても保持されるようになりました。
+* の設定可能なサポートを追加しました。 [高エントロピーのユーザーエージェントクライアントヒント](fundamentals/user-agent-client-hints.md#high-entropy).
+* 新しい `applyResponse` コマンドを使用します。 これにより、 [Edge Network Server API](../server-api/overview.md).
+* QA モードのリンクが複数のページで機能するようになりました。
+
+**修正点および改善点**
+
+* リンクトラッキングが無効になっている場合に、パーソナライゼーションのクリック追跡指標が更新されなかった問題を修正しました。
+* 不明なオプションが指定された場合に検証エラーをスローするようにコマンドを更新しました。
+* この `_experience.decisioning.propositionEventType` プロパティが、表示およびインタラクションのパーソナライゼーションイベントを自動的に送信する際に設定されるようになりました。
+* 次の重複した名前空間検証が追加されました： `getIdentity` コマンドを使用します。
+* の重複した決定範囲の検証を追加しました。 `sendEvent` コマンドを使用します。
 
 ## バージョン2.12.0 - 2022 年 6 月 30 日
 
