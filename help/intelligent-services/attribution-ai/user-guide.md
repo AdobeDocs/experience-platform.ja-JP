@@ -5,10 +5,10 @@ title: Attribution AIUI ガイド
 topic-legacy: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
-ht-degree: 35%
+source-wordcount: '2960'
+ht-degree: 34%
 
 ---
 
@@ -70,6 +70,10 @@ UI の右側にあるコントロールを使用して、サービスインス�
 
 データセットのプレビューには、最終更新時間、ソーススキーマ、最初の 10 列のプレビューなどのデータが含まれます。
 
+選択 **[!UICONTROL 保存]** をクリックして、ワークフローに沿って移動するときに下書きを保存します。 また、ドラフトモデル設定を保存して、ワークフローの次のステップに移動することもできます。 用途 **[!UICONTROL 保存して続行]** をクリックして、モデル設定時にドラフトを作成し、保存します。 この機能を使用すると、モデル設定のドラフトを作成および保存でき、設定ワークフローで多数のフィールドを定義する必要がある場合に特に便利です。
+
+![「保存して保存」がハイライト表示された状態で「Attribution AIサイエンスサービスデータ」タブの「作成」ワークフロー。](./images/user-guide/aai-save-save-&-exit.png)
+
 ### データセットの完全性 {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ ID マップ（フィールド）に基づいて、複数のデータセット�
 
 ID を選択するには、ID 列にある下線付きの値を選択します。 「 ID の選択」ポップオーバーが表示されます。
 
-![同じ名前空間を選択](./images/user-guide/aai-identity-map.png)
+![同じ名前空間を選択](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 1 つの名前空間内で複数の ID を使用できる場合は、使用例に合った正しい ID フィールドを選択するようにしてください。 例えば、電子メール名前空間内では、仕事用と個人用の 2 つの電子メール ID を使用できます。 ユースケースによっては、個人の電子メールが入力される可能性が高く、個々の予測でより役に立つようになります。 これは、「 `EMAIL (personalEmail.address)` ID として。
 
@@ -108,7 +112,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 データセットの選択と追加が完了したら、 **マップ** 設定手順が表示されます。 Attribution AIは、前の手順で選択した各データセットのメディアチャネルフィールドをマッピングする必要があります。 これは、Attribution AIセット間でメディアチャネルマッピングがおこなわれないと、データから得られたインサイトが適切に表示されず、インサイトページが解釈しにくくなる可能性があるからです。 メディアチャネルのみが必要ですが、「メディアアクション」、「キャンペーン名」、「キャンペーングループ」、「キャンペーンタグ」など、オプションのフィールドの一部をマッピングすることを強くお勧めします。 これにより、Attribution AIはより明確なインサイトと最適な結果を提供できます。
 
-![マッピング](./images/user-guide/mapping.png)
+![マッピング](./images/user-guide/mapping-save-&-exit.png)
 
 ## イベントの定義 {#define-events}
 
@@ -198,13 +202,13 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 必要なタッチポイントの定義がすべて完了したら、上にスクロールして「 」を選択します。 **次へ** をクリックして、最後の手順に進みます。
 
-![定義の完了](./images/user-guide/define_event_next.png)
+![定義の完了](./images/user-guide/define_event_save_and_exit.png)
 
 ## 高度なトレーニングとスコアリングの設定
 
 Attribution AI の最後のページは、トレーニングとスコアリングの設定に使用する **[!UICONTROL Advanced]** ページです。
 
-![新規ページ：Advanced](./images/user-guide/advanced_settings.png)
+![新しいページセットオプション](./images/user-guide/advanced_settings_set_options.png)
 
 ### トレーニングのスケジュール設定
 
@@ -298,7 +302,7 @@ Attribution AIワークスペースの上部 **インサイトページ**&#x200B
 
 制限された情報を含むインスタンスを作成し、 **[!UICONTROL 目標を定義]** 手順の場合、上部に警告が表示されます。 [!UICONTROL アクセス制限により、特定の情報は設定に表示されません。]
 
-![インスタンスの制限されたフィールドを含むAttribution AIワークスペースの結果がハイライト表示されます。](./images/user-guide/information-not-displayed.png)
+![インスタンスの制限されたフィールドを含むAttribution AIワークスペースの結果がハイライト表示されます。](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 次の手順
 
