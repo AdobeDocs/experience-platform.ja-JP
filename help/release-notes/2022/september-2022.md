@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 33%
 
 ---
@@ -24,6 +24,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [監査ログ](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [クエリサービス](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 
 Adobe Experience Platformのデータ衛生機能を使用すると、自動データセット有効期限をスケジュールし、ID に基づいて消費者データをプログラムで削除することで、データをクレンジングできます。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->消費者削除機能は、Adobeのヘルスケアシールドまたはプライバシーシールドを購入した組織でのみ使用できます。
+>データ衛生機能は、Adobe・ヘルスケア・シールドまたはプライバシー・シールドを購入した組織でのみ利用できます。
 
 データの衛生状態に関する基礎知識を習得するには、次のドキュメントを参照してください。
 
@@ -127,10 +128,39 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | 機能 | 説明 |
 | --- | --- |
 | Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）も、Experience Platformの左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
+| タグとイベント転送のユーザー属性 | 使用可能なリストを表示する場合 [!UICONTROL プロパティ] タグとイベント転送で、リストされた各プロパティが最終更新日時と、更新をおこなったユーザーが表示されるようになりました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| Destination SDK | Destination SDKは、製品化されたバッチ（またはファイルベース）の宛先やプライベートの宛先を作成する、パートナーやお客様に対して完全なサポートを提供するようになりました。 詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDKの概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新しい宛先または更新された宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新規または更新されたドキュメント**
+
+| ドキュメント | 説明 |
+| ----------- | ----------- |
+| 宛先フローサービス API ドキュメント | この [宛先 API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、ファイルベースの宛先での操作の実行方法に関するガイダンスを含むように更新されました。 ストリーミング先の操作は、後で追加されます。 |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
