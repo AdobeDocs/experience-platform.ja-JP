@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 36%
+source-wordcount: '2326'
+ht-degree: 33%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 36%
 
 Adobe Experience Platform の新機能：
 
+- [属性ベースのアクセス制御](#abac)
 - [データハイジーン](#data-hygiene)
 - [[!UICONTROL プライバシーコンソール]](#privacy-console)
 
@@ -25,6 +26,23 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [ソース](#sources)
+
+## 属性ベースのアクセス制御 {#abac}
+
+>[!IMPORTANT]
+>
+>属性ベースのアクセス制御は、2022 年 10 月から有効になります。 アーリーアダプターになりたい場合は、Adobe担当者にお問い合わせください。
+
+属性ベースのアクセス制御は、Adobe Experience Platformの機能で、プライバシーを意識するブランドがユーザーアクセスを柔軟に管理できるようにします。 スキーマフィールドやセグメントなどの個々のオブジェクトを、ユーザーの役割に割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+
+属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、ユーザーのアクセス、機密性の高い個人データ (SPD)、個人情報 (PII)、その他のカスタマイズされた種類のデータを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+
+| 機能 | 説明 |
+| --- | --- |
+| 属性ベースのアクセス制御 | 属性ベースのアクセス制御を使用すると、エクスペリエンスデータモデル (XDM) スキーマフィールドとセグメントに、組織またはデータの使用範囲を定義するラベルを付けることができます。 同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドとセグメントに関するアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、サードパーティのユーザー）に与えるアクセスを管理できます。 詳しくは、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。 |
+| 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を使用すると、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ラベルを活用し、特定の Platform リソースにアクセスできるユーザーの役割を定義するポリシーを作成できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
+
+属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、 [属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md).
 
 ## データハイジーン {#data-hygiene}
 
@@ -172,5 +190,9 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | Audience Managerセグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きいAudience Managerセグメント母集団の取り込みは、Audience Managerソースを使用して初めてプラットフォームにAudience Managerセグメントを送信する際に、合計プロファイル数に直接影響します。 つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えてプロファイル数がカウントされる可能性があります。 詳しくは、 [Audience Managerソースの概要](../../sources/connectors/adobe-applications/audience-manager.md). ライセンスの使用方法については、 [ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md). |
+| Adobe Campaign ManagedCloud Serviceのサポート | Adobe Campaign ManagedCloud Serviceソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータをExperience Platformに取り込みます。 次のガイドを読む： [UI でのAdobe Campaign ManagedCloud Serviceソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md) を参照してください。 |
+| バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、 [!DNL Flow Service] API 作成されたフロー実行は、1 回の取り込みに設定する必要があります。 詳しくは、 [API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md) を参照してください。 |
+| バッチソースの失敗したデータフロー実行の再試行に対する API のサポート | 以下を使用： `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行する必要があります。 次のガイドを読む： [API を使用した、失敗したデータフローの実行の再試行](../../sources/tutorials/api/retry-flows.md) を参照してください。 |
+| の行レベルのデータをフィルタリングするための API のサポート [!DNL Google BigQuery] および [!DNL Snowflake] ソース | 論理演算子と比較演算子を使用して、 [!DNL Google BigQuery] および [!DNL Snowflake] ソース。 詳しくは、 API を使用したソースのデータのフィルタリングに関するガイドを参照してください。 |
 
 ソースの詳細については、 [ソースの概要](../../sources/home.md).
