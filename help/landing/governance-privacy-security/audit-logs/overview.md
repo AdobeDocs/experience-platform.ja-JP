@@ -2,10 +2,10 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 15%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -35,9 +35,11 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | --- | --- |
 | [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li>選択からの    </li><li>更新</li><li>Delete</li></ul> |
 | [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [Attribution AIインスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>エクスポート</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
+| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [データセット](../../../catalog/datasets/overview.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
 | [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li>選択からの    </li><li>更新</li><li>削除</li></ul> |
 | [宛先](../../../destinations/home.md) | <ul><li>選択からの    </li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
