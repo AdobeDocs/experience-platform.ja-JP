@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 34%
+source-wordcount: '1827'
+ht-degree: 36%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 34%
 
 **リリース日：2022 年 9 月 28 日（PT）**
 
+Adobe Experience Platform の新機能：
+
+- [データハイジーン](#data-hygiene)
+- [[!UICONTROL プライバシーコンソール]](#privacy-console)
+
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [監査ログ](#audit-logs)
+- [データ収集](#data-collection)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [ソース](#sources)
+
+## データハイジーン {#data-hygiene}
+
+Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
+
+Adobe Experience Platformのデータ衛生機能を使用すると、自動データセット有効期限をスケジュールし、ID に基づいて消費者データをプログラムで削除することで、データをクレンジングできます。
+
+>[!NOTE]
+>
+>消費者削除機能は、Adobeのヘルスケアシールドまたはプライバシーシールドを購入した組織でのみ使用できます。
+
+データの衛生状態に関する基礎知識を習得するには、次のドキュメントを参照してください。
+
+- [データの衛生状態の概要](../../hygiene/home.md):Platform のデータ衛生機能の基本について説明します。
+- [[!UICONTROL データの衛生状態] UI ガイド](../../hygiene/ui/overview.md):Platform ユーザーインターフェイス内でデータセットの有効期限と消費者の削除リクエストをスケジュールする方法について説明します。
+- [データ衛生 API ガイド](../../hygiene/api/overview.md):UI で実行できるすべてのデータ衛生アクティビティは、プログラムによっても実行できます
+
+## [!UICONTROL プライバシーコンソール] {#privacy-console}
+
+この [!UICONTROL プライバシーコンソール] 「 」タブを使用すると、Experience PlatformUI に表示される、プライバシー関連の機能 ( [Privacy Serviceからのデータ主体のリクエスト], [データ衛生作業指示]、および [監査ログ]. また、コンソールには、一般的なプライバシーワークフローの手順をガイドする、製品内の使用例ガイドも用意されています。
+
+詳しくは、 [プライバシーコンソールの概要](../../landing/governance-privacy-security/privacy-console.md) を参照してください。
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有のモデルを設定できます。
+
+### アトリビューション AI
+
+アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+
+| 機能 | 説明 |
+| --- | --- |
+| ドラフトインスタンスを保存 | この新機能により、マーケティングアナリストは、設定時にモデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまでドラフトの編集を続行できます。 この機能が役立つシナリオには、設定ワークフローに複数のフィールドを定義して 1 回で完了できない場合や、データセットの統計（列の完全性など）が 1 つ以上使用可能になる前に処理に時間がかかる場合がありますが、これに限定されません。 詳しくは、 [Attribution AIユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md) を参照してください。 |
+| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
+
+Attribution AI [Attribution AIの概要](../../intelligent-services/attribution-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
+
+### 顧客 AI
+
+Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
+
+| 機能 | 説明 |
+| --- | --- |
+| ドラフトインスタンスを保存 | この新機能により、マーケティングアナリストは、設定時にモデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまでドラフトの編集を続行できます。 この機能が役立つシナリオには、設定ワークフローに複数のフィールドを定義して 1 回で完了できない場合や、データセットの統計（列の完全性など）が 1 つ以上使用可能になる前に処理に時間がかかる場合がありますが、これに限定されません。 詳しくは、 [顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md) を参照してください。 |
+| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
+
+顧客 AI について詳しくは、 [顧客 AI の概要](../../intelligent-services/customer-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
+
+## 監査ログ {#audit-logs}
+
+Experience Platform を使用すると、様々なサービスおよび機能についてユーザーアクティビティを監査できます。監査ログは、誰がいつ何をしたかに関する情報を提供します。
+
+**更新された機能**
+
+| 機能 | 名前 | 説明 |
+| --- | --- | --- |
+| 追加されたリソース | <ul><li>Attribution AIインスタンス</li><li>顧客 AI インスタンス</li><li>Datastream</li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## データ収集
+
+Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）も、Experience Platformの左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -77,32 +160,6 @@ Adobe Experience Platform ID サービスは、デバイスやシステム間で
 | データセット削除のサポート | ID サービスで、 [カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI、またはデータの衛生状態。 次のガイドを読む： [UI でのデータセットの削除](../../catalog/datasets/user-guide.md#delete-a-dataset) を参照してください。 |
 
 ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有のモデルを設定できます。
-
-### アトリビューション AI
-
-アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
-
-| 機能 | 説明 |
-| --- | --- |
-| ドラフトインスタンスを保存 | この新機能により、マーケティングアナリストは、設定時にモデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまでドラフトの編集を続行できます。 この機能が役立つシナリオには、設定ワークフローに複数のフィールドを定義して 1 回で完了できない場合や、データセットの統計（列の完全性など）が 1 つ以上使用可能になる前に処理に時間がかかる場合がありますが、これに限定されません。 詳しくは、 [Attribution AIユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md) を参照してください。 |
-| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
-
-Attribution AI [Attribution AIの概要](../../intelligent-services/attribution-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
-
-### 顧客 AI
-
-Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
-
-| 機能 | 説明 |
-| --- | --- |
-| ドラフトインスタンスを保存 | この新機能により、マーケティングアナリストは、設定時にモデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまでドラフトの編集を続行できます。 この機能が役立つシナリオには、設定ワークフローに複数のフィールドを定義して 1 回で完了できない場合や、データセットの統計（列の完全性など）が 1 つ以上使用可能になる前に処理に時間がかかる場合がありますが、これに限定されません。 詳しくは、 [顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md) を参照してください。 |
-| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
-
-顧客 AI について詳しくは、 [顧客 AI の概要](../../intelligent-services/customer-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
 
 ## ソース {#sources}
 
