@@ -4,10 +4,10 @@ title: 標準アラートルール
 description: このドキュメントでは、Experience Platform が提供する事前定義済みのアラートルールについて説明します。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 79%
 
 ---
 
@@ -92,6 +92,18 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 | 宛先フロー実行の遅延、失敗、エラー | スキップ率がしきい値を超えています | このアラートは、スキップされた ID の合計 ID に対する割合がしきい値を超えた場合にトリガーします。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## クエリサービス
+
+次のアラートルールは、 [クエリサービス](../../query-service/home.md):
+
+| I/O イベントの登録 | アラートルール | 説明 |
+| --- | --- | --- |
+| クエリサービスアドホック情報 | クエリサービスアドホック成功 | このアラートは、アドホックスキーマジョブが正常に完了した場合にトリガーします。 |
+| クエリサービスアドホック遅延、エラーおよびエラー | クエリサービスアドホックエラー | このアラートは、アドホックスキーマジョブが失敗した場合にトリガーします。 |
+| クエリサービスのスケジュール済みクエリ情報 | クエリサービスのスケジュール済みクエリ開始 | このアラートは、スケジュール済みクエリの実行が開始したときにトリガーします。 |
+| クエリサービスのスケジュール済みクエリ情報 | クエリサービスのスケジュール済みクエリ成功 | このアラートは、スケジュール済みクエリジョブが正常に完了した場合にトリガーします。 |
+| クエリサービススケジュール済みクエリの遅延、失敗、エラー | クエリサービスのスケジュール済みクエリ失敗 | このアラートは、スケジュール済みクエリトリガーが失敗した場合に発生します。 |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
