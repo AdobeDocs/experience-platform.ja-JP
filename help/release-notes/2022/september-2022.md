@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 33%
 
 ---
@@ -22,9 +22,11 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [監査ログ](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [データ収集](#data-collection)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
+- [クエリサービス](#query-service)
 - [ソース](#sources)
 
 ## 属性ベースのアクセス制御 {#abac}
@@ -35,7 +37,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 属性ベースのアクセス制御は、Adobe Experience Platformの機能で、プライバシーを意識するブランドがユーザーアクセスを柔軟に管理できるようにします。 スキーマフィールドやセグメントなどの個々のオブジェクトを、ユーザーの役割に割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
 
-属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、ユーザーのアクセス、機密性の高い個人データ (SPD)、個人情報 (PII)、その他のカスタマイズされた種類のデータを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、ユーザーのアクセス、機密個人データ (SPD)、個人識別情報 (PII)、その他のカスタマイズされた種類のデータを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 | 機能 | 説明 |
 | --- | --- |
@@ -62,7 +64,7 @@ Adobe Experience Platformのデータ衛生機能を使用すると、自動デ�
 
 ## [!UICONTROL プライバシーコンソール] {#privacy-console}
 
-この [!UICONTROL プライバシーコンソール] 「 」タブを使用すると、Experience PlatformUI に表示される、プライバシー関連の機能 ( [Privacy Serviceからのデータ主体のリクエスト], [データ衛生作業指示]、および [監査ログ]. また、コンソールには、一般的なプライバシーワークフローの手順をガイドする、製品内の使用例ガイドも用意されています。
+この [!UICONTROL プライバシーコンソール] 「 」タブを使用すると、Experience PlatformUI に表示される、プライバシー関連の機能 ( [Privacy Serviceからのデータ主体のリクエスト](../../privacy-service/home.md), [データ衛生作業指示](../../hygiene/home.md)、および [監査ログ](../../landing/governance-privacy-security/audit-logs/overview.md). また、コンソールには、一般的なプライバシーワークフローの手順をガイドする、製品内の使用例ガイドも用意されています。
 
 詳しくは、 [プライバシーコンソールの概要](../../landing/governance-privacy-security/privacy-console.md) を参照してください。
 
@@ -106,7 +108,17 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## データ収集
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platformは、毎日のスナップショットで取得した、組織のデータに関する重要なインサイトを表示できる、複数のダッシュボードを提供します。
+
+| 機能 | 説明 |
+| --- | --- |
+| 使用中のラベル | 使用中のラベルをウィジェットライブラリで表示すると、ダッシュボードに既存のウィジェットが存在するかを簡単に識別できます。 これにより、同じウィジェットを複数回追加することができますが、重複を避けるのが簡単です。 |
+
+[!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
+
+## データ収集 {#data-collection}
 
 Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
@@ -179,6 +191,19 @@ Adobe Experience Platform ID サービスは、デバイスやシステム間で
 
 ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md).
 
+## クエリサービス {#query-service}
+
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| アラート購読 API | Adobe Experience Platformクエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを購読できます。 アラートは、E メール、Platform UI 内、またはその両方で受け取ることができます。 現在、クエリアラートは、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にして、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。 |
+
+[!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
+
 ## ソース {#sources}
 
 Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
@@ -193,6 +218,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | Adobe Campaign ManagedCloud Serviceのサポート | Adobe Campaign ManagedCloud Serviceソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータをExperience Platformに取り込みます。 次のガイドを読む： [UI でのAdobe Campaign ManagedCloud Serviceソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md) を参照してください。 |
 | バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、 [!DNL Flow Service] API 作成されたフロー実行は、1 回の取り込みに設定する必要があります。 詳しくは、 [API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md) を参照してください。 |
 | バッチソースの失敗したデータフロー実行の再試行に対する API のサポート | 以下を使用： `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行する必要があります。 次のガイドを読む： [API を使用した、失敗したデータフローの実行の再試行](../../sources/tutorials/api/retry-flows.md) を参照してください。 |
-| の行レベルのデータをフィルタリングするための API のサポート [!DNL Google BigQuery] および [!DNL Snowflake] ソース | 論理演算子と比較演算子を使用して、 [!DNL Google BigQuery] および [!DNL Snowflake] ソース。 詳しくは、 API を使用したソースのデータのフィルタリングに関するガイドを参照してください。 |
+| の行レベルのデータをフィルタリングするための API のサポート [!DNL Google BigQuery] および [!DNL Snowflake] ソース | 論理演算子と比較演算子を使用して、 [!DNL Google BigQuery] および [!DNL Snowflake] ソース。 次のガイドを読む： [API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md) を参照してください。 |
 
 ソースの詳細については、 [ソースの概要](../../sources/home.md).

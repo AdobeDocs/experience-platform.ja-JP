@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 100%
+source-wordcount: '612'
+ht-degree: 98%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 * 宛先のタイプに応じて、以下の設定ガイドをお読みください。
 
    * [Destination SDK を使用したストリーミングの宛先の設定](./configure-destination-instructions.md)
-   * [（ベータ版）Destination SDK を使用したファイルベースの宛先の設定](./configure-file-based-destination-instructions.md)
+   * [Destination SDKを使用したファイルベースの宛先の設定](./configure-file-based-destination-instructions.md)
 
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
 * Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832)を参照してください。

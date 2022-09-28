@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK でサポートされている認証設定を使用してユーザーを認証し、宛先エンドポイントに対してデータを有効化します。
 title: 認証設定
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
+source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 97%
+source-wordcount: '446'
+ht-degree: 91%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 97%
 Adobe Experience Platform Destination SDK は、次の複数の認証タイプをサポートしています。
 
 * [ベアラー認証](#bearer)
-* [（ベータ版）Amazon S3 認証](#s3)
-* [（ベータ版）Azure Blob ストレージ](#blob)
-* [（ベータ版）Azure Data Lake Storage](#adls)
-* [（ベータ版）Google Cloud Storage](#gcs)
-* [（ベータ版）SSH キーを使用した SFTP](#sftp-ssh)
-* [（ベータ版）パスワードを使用した SFTP](#sftp-password)
+* [[!DNL Amazon S3] 認証](#s3)
+* [[!DNL Azure Blob] ストレージ](#blob)
+* [[!DNL Azure Data Lake Storage]](#adls)
+* [[!DNL Google Cloud Storage]](#gcs)
+* [SSH キーを使用した SFTP](#sftp-ssh)
+* [パスワード付き SFTP](#sftp-password)
 * [認証コードを使用した OAuth 2](#oauth2)
 * [パスワード付与を使用した OAuth 2](#oauth2)
 * [クライアント資格情報の付与を使用した OAuth 2](#oauth2)
@@ -49,15 +49,11 @@ Experience Platform では、ストリーミング宛先に対してベアラー
 ]
 ```
 
-## （ベータ版）[!DNL Amazon S3] 認証 {#s3}
+## [!DNL Amazon S3] 認証 {#s3}
 
 Experience Platform では、[!DNL Amazon S3] 認証がファイルベースの宛先に対してサポートされています。
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
-
-宛先に Amazon S3 認証を設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
+[!DNL Amazon S3] 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -67,13 +63,9 @@ Experience Platform では、[!DNL Amazon S3] 認証がファイルベースの�
 ]
 ```
 
-## （ベータ版）[!DNL Azure Blob Storage] {#blob}
+## [!DNL Azure Blob Storage] {#blob}
 
 Experience Platform では、[!DNL Azure Blob Storage] 認証がファイルベースの宛先に対してサポートされています。
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 [!DNL Azure Blob] 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
@@ -85,13 +77,9 @@ Experience Platform では、[!DNL Azure Blob Storage] 認証がファイルベ�
 ]
 ```
 
-## （ベータ版）[!DNL Azure Data Lake Storage] {#adls}
+## [!DNL Azure Data Lake Storage] {#adls}
 
 Experience Platform では、[!DNL Azure Data Lake Storage] 認証がファイルベースの宛先に対してサポートされています。
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 [!DNL Azure Data Lake Storage]（ADLS）認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
@@ -103,13 +91,9 @@ Experience Platform では、[!DNL Azure Data Lake Storage] 認証がファイ�
 ]
 ```
 
-## （ベータ版）[!DNL Google Cloud Storage] {#gcs}
+## [!DNL Google Cloud Storage] {#gcs}
 
 Experience Platform では、[!DNL Google Cloud Storage] 認証がファイルベースの宛先に対してサポートされています。
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -120,13 +104,9 @@ Experience Platform では、[!DNL Google Cloud Storage] 認証がファイル�
 ```
 
 
-## （ベータ版）[!DNL SSH] キーを使用した [!DNL SFTP] 認証 {#sftp-ssh}
+## [!DNL SFTP] 認証 [!DNL SSH] key {#sftp-ssh}
 
 Experience Platform では、[!DNL SSH] キーを使用した [!DNL SFTP] 認証がファイルベースの宛先に対してサポートされています。
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 SSH キーを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
@@ -138,13 +118,9 @@ SSH キーを使用した SFTP 認証を宛先に設定するには、エンド�
 ]
 ```
 
-## （ベータ版）パスワードを使用した [!DNL SFTP] 認証 {#sftp-password}
+## [!DNL SFTP] パスワードによる認証 {#sftp-password}
 
 Experience Platform では、パスワードを使用した [!DNL SFTP] 認証がファイルベースの宛先に対してサポートされています。
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 パスワードを使用した SFTP 認証を宛先に設定するには、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを次のように設定します。
 
@@ -160,7 +136,7 @@ Experience Platform では、パスワードを使用した [!DNL SFTP] 認証�
 
 Experience Platform では、[!DNL OAuth 2] 認証がストリーミング宛先に対してサポートされています。
 
-サポートしている様々な OAuth 2 フローの設定方法とカスタム OAuth 2 のサポートについて詳しくは、[OAuth 2 認証](./oauth2-authentication.md)の Destination SDK ドキュメントを参照してください。
+サポートされる各種の [!DNL OAuth 2] フロー、およびカスタム [!DNL OAuth 2] サポート、次のDestination SDKドキュメントを読む [[!DNL OAuth 2] 認証](./oauth2-authentication.md).
 
 
 ## `/credentials` API エンドポイントを使用するタイミング {#when-to-use}

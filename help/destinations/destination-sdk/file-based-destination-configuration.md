@@ -1,29 +1,27 @@
 ---
-description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
-title: （ベータ版）Destination SDK のファイルベースの宛先設定オプション
+description: この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
+title: Destination SDKのファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2389'
-ht-degree: 79%
+source-wordcount: '2664'
+ht-degree: 66%
 
 ---
 
-# （ベータ版）ファイルベースの宛先設定 {#destination-configuration}
+# ファイルベースの宛先設定 {#destination-configuration}
 
 ## 概要 {#overview}
 
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
+この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。この設定を使用して、書き出したファイルのファイルタイプ、ファイル形式、または圧縮設定に関連するオプションを表示することもできます。
 
-この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
-
-宛先サーバーが動作するために必須である他の構成（宛先サーバーとオーディエンスメタデータ）も、この構成に接続されます。この 2 つの構成を参照する方法については、[下記の節](./destination-configuration.md#connecting-all-configurations)をお読みください。
+宛先サーバーが動作するために必須である他の構成（宛先サーバーとオーディエンスメタデータ）も、この構成に接続されます。この 2 つの構成を参照する方法については、[下記の節](./file-based-destination-configuration.md#connecting-all-configurations)をお読みください。
 
 このドキュメントで説明する機能は、`/authoring/destinations` API エンドポイントを用いて構成することができます。エンドポイントで実行できる操作の完全なリストには、[宛先 API エンドポイントの操作](./destination-configuration-api.md)をお読みください。
 
 ## Amazon S3 の宛先の設定例 {#batch-example-configuration}
+
+以下に、 `/destinations` 設定エンドポイント。
 
 ```json
 {
@@ -368,9 +366,9 @@ SSH キー認証タイプで SFTP を設定する際に、ユーザーは SFTP �
 
 Experience Platform UI で宛先に接続する際に、このセクションを使用して、宛先に固有のカスタムフィールドに入力するようユーザーに求めます。
 
-次の例では、 `customerDataFields` ユーザーは、宛先の名前を入力し、 [!DNL Amazon S3] バケット名とフォルダーパス、および圧縮タイプ、ファイル形式、その他のいくつかのファイル書き出しオプション。
+次の例では、 `customerDataFields` ユーザーは、宛先の名前を入力し、 [!DNL Amazon S3] バケット名とフォルダーパス、および圧縮タイプ、ファイル形式、その他のいくつかのファイル形式オプション。
 
-顧客入力にアクセスし、テンプレートで顧客データフィールドから顧客入力を使用できます。 マクロを使用する `{{customerData.name}}`. 例えば、ユーザーに対し、という名前のAmazon S3 バケットのフィールドの入力を求める場合、 `bucket`を使用すると、マクロを使用してテンプレートにアクセスできます `{{customerData.bucket}}`. 顧客データフィールドが [宛先サーバーの設定](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+顧客入力にアクセスし、テンプレートで顧客データフィールドから顧客入力を使用できます。 マクロを使用する `{{customerData.exampleName}}`. 例えば、ユーザーに対し、という名前のAmazon S3 バケットのフィールドの入力を求める場合、 `bucket`を使用すると、マクロを使用してテンプレートにアクセスできます `{{customerData.bucket}}`. 顧客データフィールドが [宛先サーバーの設定](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,6 +556,10 @@ Experience Platform UI で宛先に接続する際に、このセクションを
       }
 ```
 
+>[!TIP]
+>
+>上記の例に記載されているすべてのファイルフォーマット設定について、詳しくは [ファイルフォーマット設定](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) 」セクションに入力します。
+
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `name` | 文字列 | 導入するカスタムフィールドの名前を記入します。 |
@@ -578,7 +580,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -591,7 +593,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 |---------|----------|------|
 | `documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=ja#catalog)にあるドキュメントページを参照します。`http://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、`http://www.adobe.com/go/destinations-moviestar-en` を使用します。。このリンクは、Adobeが宛先をライブに設定し、ドキュメントが公開された後にのみ機能します。 |
 | `category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=ja)をお読みください。次のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
-| `iconUrl` | 文字列 | 宛先カタログのカードに表示するアイコンをホストした URL。 |
+| `iconUrl` | 文字列 | 宛先カタログのカードに表示するアイコンをホストした URL。非公開のカスタム統合の場合、これは不要です。 製品化された設定の場合、次の時点でアイコンをAdobeチームと共有する必要があります [レビュー用に宛先を送信](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | 文字列 | 宛先に応じた接続のタイプ。サポートされている値。 <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | ブール値 | 宛先接続を[フロー実行 UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) に含めるかどうかを示します。この項目を `true` に設定すると、次のように動作します。 <ul><li>**[!UICONTROL 前回のデータフロー実行日]**&#x200B;および&#x200B;**[!UICONTROL 前回のデータフロー実行ステータス]**&#x200B;が宛先の参照ページに表示されます。</li><li>「**[!UICONTROL データフローの実行]**」タブおよび「**[!UICONTROL アクティベーションデータ]**」タブが宛先ビューページに表示されます。</li></ul> |
 | `monitoringSupported` | ブール値 | 宛先接続を[モニタリング UI](../ui/destinations-workspace.md#browse) に含めるかどうかを示します。この項目を `true` に設定すると、「**[!UICONTROL モニタリングで表示]**」オプションが宛先の参照ページに表示されます。 |
@@ -600,6 +602,10 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 {style=&quot;table-layout:auto&quot;}
 
 ## 宛先配信 {#destination-delivery}
+
+宛先配信セクションは、エクスポートされたデータの送信先と、データの送信先で使用される認証ルールを示します。 1 つ以上を指定する必要があります `destinationServerId`データが配信される場所、および認証ルール。 ほとんどの場合、使用する必要がある認証ルールは次のとおりです。 `CUSTOMER_AUTHENTICATION`.
+
+この `deliveryMatchers` セクションはオプションで、複数の `destinationServerId`s.その場合、 `deliveryMatchers` 「 」セクションでは、エクスポートしたデータを様々な宛先サーバー間で分割する方法を示します。
 
 ```json
  "destinationDelivery":[
@@ -621,7 +627,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Adobe と宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)の構成を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
-| `destinationServerId` | 文字列 | `instanceId`：この宛先に使用される[宛先サーバー構成](./destination-server-api.md)。 |
+| `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./server-and-file-configuration.md) あなたは [作成済み](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,7 +655,15 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 
 ## マッピングステップのスキーマ構成 {#schema-configuration}
 
+Adobe Experience Platform Destination SDK は、パートナー定義のスキーマをサポートします。パートナー定義のスキーマを使用すると、[ストリーミング宛先](destination-configuration.md#schema-configuration)ワークフローと同様に、ユーザーはプロファイル属性と ID を宛先のパートナーが定義したカスタムスキーマにマッピングできます。
+
 `schemaConfig` のパラメーターを使用して、宛先の有効化ワークフローのマッピング手順を有効にします。次に説明するパラメーターを使用すると、Experience Platform ユーザーがプロファイル属性や ID をファイルベースの宛先にマッピングできるかどうかを決定できます。
+
+静的な、ハードコードされたExperience Platformフィールドを作成するか、マッピングワークフローのターゲットスキーマのフィールドを動的に取得および設定するためにスキーマが接続する動的スキーマを指定できます。 ターゲットスキーマは、以下のスクリーンショットに示されます。
+
+![アクティベーションワークフローのマッピング手順で、ターゲットスキーマフィールドをハイライトしたスクリーンショット。](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### 静的ハードコードされたスキーマフィールドの設定
 
 ```json
 "schemaConfig":{
@@ -681,16 +695,14 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 
 ### マッピング手順での動的スキーマ設定 {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK は、パートナー定義のスキーマをサポートします。パートナー定義のスキーマを使用すると、[ストリーミング宛先](destination-configuration.md#schema-configuration)ワークフローと同様に、ユーザーはプロファイル属性と ID を宛先のパートナーが定義したカスタムスキーマにマッピングできます。
-
-`dynamicSchemaConfig` のパラメーターを使用して、Platform プロファイル属性や ID のマッピング先となる独自のスキーマを定義します。
+のパラメーターを使用します。  `dynamicSchemaConfig` :Platform プロファイル属性や id のマッピング先となる独自のスキーマを動的に取得します。
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -706,7 +718,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `profileRequired` | ブール値 | 上記の設定例に示すように、ユーザーが Experience Platform から宛先側のカスタム属性にプロファイル属性をマッピングできる場合、`true` を使用します。 |
 | `segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
 | `identityRequired` | ブール値 | ユーザーが Experience Platform の ID 名前空間を目的のスキーマにマッピングできる場合は、`true` を使用します。 |
-| `destinationServerId` | 文字列 | この宛先に使用した[宛先サーバー設定](./destination-server-api.md)の `instanceId`。 |
+| `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./destination-server-api.md) 動的スキーマ用に作成した この宛先サーバーには、ターゲットフィールドの入力に使用される動的Experience Platformを取得するために呼び出される HTTP エンドポイントが含まれています。 |
 | `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Adobe と宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)の構成を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `value` | 文字列 | マッピング手順で、Experience Platform ユーザーインターフェイスに表示されるスキーマの名前。 |
 | `responseFormat` | 文字列 | カスタムスキーマを定義する際は、常に `SCHEMA` に設定します。 |
@@ -720,7 +732,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -734,11 +746,11 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 どの [!DNL Platform] ID の顧客が宛先に書き出すことができるかを示す必要があります。例として、[!DNL Experience Cloud ID]、ハッシュ化されたメール、デバイス ID（[!DNL IDFA]、[!DNL GAID]）などがあります。これらの値は、[!DNL Platform] ID 名前空間であり、宛先から顧客が ID 名前空間にマッピングできます。また、宛先でサポートされている ID に顧客がカスタム名前空間をマッピングできるかどうかを指定することもできます。
 
 ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している必要はありません。
-例えば、顧客は [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL IDFA] 名前空間に宛先からマッピングできます。または、同じ [!DNL Platform] [!DNL IDFA] 名前空間を [!DNL Customer ID] 名前空間に宛先でマッピングできます。
+例えば、顧客は [!DNL Platform] [!DNL IDFA] 名前空間を宛先からの [!DNL IDFA] 名前空間にマッピングすることができ、また顧客は同じ [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL Customer ID] 名前空間にマッピングすることもできます。
 
-## バッチ設定 {#batch-configuration}
+## バッチ設定 — ファイルの命名と書き出しのスケジュール設定 {#batch-configuration}
 
-この節では、Adobe Experience Platform ユーザーインターフェイスの宛先に対してアドビが使用する、上記の設定のファイルのエクスポート設定について説明します。
+この節では、Adobe Experience Platformユーザーインターフェイスで宛先に対して表示されるファイルの命名および書き出しスケジュール設定について説明します。 ここで設定した値は、 [セグメントの書き出しをスケジュール](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) ファイルベースの宛先のアクティベーションワークフローの手順です。
 
 ```json
 "batchConfig":{
@@ -796,7 +808,10 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 
 ファイル名設定マクロを使用して、書き出すファイル名を定義します。 次の表のマクロは、 [ファイル名設定](../ui/activate-batch-profile-destinations.md#file-names) 画面
 
-ベストプラクティスとして、常に `SEGMENT_ID` マクロを書き出すファイル名に含めます。 セグメント ID は一意なので、ファイル名に含めるのが最適な方法で、ファイル名も一意にすることができます。
+
+>[!TIP]
+> 
+>ベストプラクティスとして、常に `SEGMENT_ID` マクロを書き出すファイル名に含めます。 セグメント ID は一意なので、ファイル名に含めるのが最適な方法で、ファイル名も一意にすることができます。
 
 | マクロ | UI ラベル | 説明 | 例 |
 |---|---|---|---|
@@ -849,7 +864,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 
 ## この構成が宛先に必要なすべての情報をどのように接続するか {#connecting-all-configurations}
 
-宛先設定の一部は、[宛先サーバー](./server-and-file-configuration.md)または[オーディエンスメタデータの構成](./audience-metadata-management.md)で構成する必要があります。ここで説明する宛先の構成は、以下のように他の 2 つの構成を参照することで、これらの設定をすべて接続するものです。
+一部の宛先設定は、 [宛先サーバー](./server-and-file-configuration.md) または [オーディエンスメタデータ設定](./audience-metadata-management.md) エンドポイント。 ここで説明する宛先の構成は、以下のように他の 2 つの構成を参照することで、これらの設定をすべて接続するものです。
 
-* `destinationServerId` を使用して、宛先サーバーと宛先に設定されたテンプレート構成を参照します。
+* 以下を使用： `destinationServerId` をクリックして、目的の宛先に対して設定された宛先サーバーおよびファイルテンプレート設定を参照します。
 * `audienceMetadataId` を使用して、宛先に設定されたオーディエンスメタデータの構成を参照します。

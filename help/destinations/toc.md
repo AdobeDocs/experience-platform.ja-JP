@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 74%
+source-wordcount: '945'
+ht-degree: 72%
 
 ---
 
@@ -173,9 +173,9 @@ ht-degree: 74%
    * Destination SDK の機能 {#functionality}
       * [設定オプション](./destination-sdk/configuration-options.md)
       * [ストリーミング先の構成](./destination-sdk/destination-configuration.md)
-      * [（ベータ版）ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
+      * [ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
       * [ストリーミング宛先のサーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
-      * [（ベータ版）ファイルベースの宛先のサーバーとファイルの仕様](./destination-sdk/server-and-file-configuration.md)
+      * [ファイルベースの宛先サーバーとファイル仕様](./destination-sdk/server-and-file-configuration.md)
       * [メッセージの形式](./destination-sdk/message-format.md)
       * [オーディエンスメタデータの管理](./destination-sdk/audience-metadata-management.md)
       * 認証 {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 74%
             * [テンプレート化された顧客フィールドの検証](./destination-sdk/file-based-render-template-api.md)
    * ガイド {#guides}
       * [Destination SDK を使用したストリーミングの宛先の設定](./destination-sdk/configure-destination-instructions.md)
-      * [（ベータ版）Destination SDK を使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Destination SDKを使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK で作成した宛先のレビュー用に送信する](./destination-sdk/submit-destination.md)
       * ファイルベースの宛先の設定 {#configure-file-based-destinations}
-         * [（ベータ版）事前に定義されたファイル形式オプションとカスタムファイル名設定を使用して、Amazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [（ベータ版）カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [（ベータ版）カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して Azure Blob ストレージの宛先を設定する](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [（ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して Azure Data Lake Storage の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [（ベータ版）カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [（ベータ版）事前に定義されたファイル形式オプションとカスタムのファイル名設定を使用して SFTP の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [ファイル形式設定オプションの設定](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [事前定義済みのファイル形式オプションとカスタムファイル名設定を使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して、Azure Blob ストレージの宛先を構成します](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して Azure Data Lake Storage の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [事前に定義されたファイルフォーマットオプションとカスタムファイル名設定を使用して SFTP の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * リファレンス {#reference}
       * [ストリーミング宛先のレート制限および再試行ポリシー](./destination-sdk/rate-limiting-retry-policy.md)
       * [サポートされる変換関数](./destination-sdk/supported-functions.md)

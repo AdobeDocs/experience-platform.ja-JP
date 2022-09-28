@@ -1,15 +1,15 @@
 ---
 description: ファイルベースの宛先のサーバーとファイル構成スペックは、Adobe Experience Platform Destination SDK で /destination-servers エンドポイントを介して構成できます。
-title: （ベータ版）ファイルベースの宛先サーバーの仕様の構成オプション
+title: ファイルベースの宛先サーバー仕様の構成オプション
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 90%
+source-wordcount: '1274'
+ht-degree: 56%
 
 ---
 
-# （ベータ版）ファイルベースの宛先サーバーの仕様に応じたサーバーとファイルの構成
+# ファイルベースの宛先サーバー仕様のサーバーとファイルの構成
 
 ## 概要 {#overview}
 
@@ -17,11 +17,15 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Destination SDK を使用して、ファイルベースの宛先を構成および提出する機能は、現在ベータ版となっています。ドキュメントと機能は変更される場合があります。
 
-このページでは、ファイルベースの宛先サーバーのすべてのサーバー構成オプションの詳細を説明し、Experience Platform から宛先にファイルを書き出すユーザー向けの様々なファイル構成オプションの設定方法について説明します。
+このページでは、ファイルベースの宛先サーバーのすべてのサーバー設定オプションの詳細を説明し、Experience Platformから宛先にファイルを書き出すユーザー向けの様々なファイル設定オプションの設定方法を示します。
 
 ファイルベースの宛先のサーバーおよびファイル構成の仕様は、`/destination-servers` エンドポイントを介して Adobe Experience Platform Destination SDK で構成できます。エンドポイントで実行できる操作の完全なリストについては、[宛先サーバー API エンドポイントの操作](./destination-server-api.md)をお読みください。
 
+以下の節では、Destination SDKでサポートされる各バッチ宛先タイプに固有の宛先サーバー仕様について説明します。
+
 ## ファイルベースの Amazon S3 宛先サーバー仕様 {#s3-example}
+
+以下のサンプルは、Amazon S3 の宛先に適した宛先サーバー設定を示しています。
 
 ```json
 {
@@ -56,6 +60,8 @@ ht-degree: 90%
 {style=&quot;table-layout:auto&quot;}
 
 ## ファイルベースの SFTP 宛先サーバー仕様 {#sftp-example}
+
+以下のサンプルは、SFTP の宛先に適した宛先サーバー設定を示しています。
 
 ```json
 {
@@ -95,6 +101,8 @@ ht-degree: 90%
 
 ## ファイルベースの [!DNL Azure Data Lake Storage]（[!DNL ADLS]）宛先サーバーの仕様 {#adls-example}
 
+以下のサンプルは、 [!DNL Azure Data Lake Storage] 宛先。
+
 ```json
 {
    "name":"ADLS destination server",
@@ -122,6 +130,8 @@ ht-degree: 90%
 {style=&quot;table-layout:auto&quot;}
 
 ## ファイルベースの [!DNL Azure Blob Storage] 宛先サーバーの仕様 {#blob-example}
+
+以下のサンプルは、 [!DNL Azure Blob Storage] 宛先。
 
 ```json
 {
@@ -157,6 +167,8 @@ ht-degree: 90%
 
 ## ファイルベースの [!DNL Data Landing Zone]（[!DNL DLZ]）宛先サーバーの仕様 {#dlz-example}
 
+以下のサンプルは、 [!DNL Data Landing Zone] ([!DNL DLZ]) の宛先に貼り付けます。
+
 ```json
 {
    "name":"DLZ destination server",
@@ -185,6 +197,8 @@ ht-degree: 90%
 {style=&quot;table-layout:auto&quot;}
 
 ## ファイルベースの [!DNL Google Cloud Storage] 宛先サーバーの仕様 {#gcs-example}
+
+以下のサンプルは、 [!DNL Google Cloud Storage] 宛先。
 
 ```json
 {
@@ -224,7 +238,11 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->CSV オプションは、CSV ファイルの書き出し時にのみサポートされます。 新しい宛先サーバーを設定する際、`fileConfigurations` セクションは必須ではありません。CSV オプションの API 呼び出しで値を渡さない場合、以下の表のデフォルト値が使用されます。
+>CSV オプションは、CSV ファイルの書き出し時にのみサポートされます。 新しい宛先サーバーを設定する際、`fileConfigurations` セクションは必須ではありません。CSV オプションの API 呼び出しに値を渡さない場合、 [下の参照表](#file-formatting-reference-and-example) が使用されます。
+
+### CSV オプションを使用したファイル設定と `templatingStrategy` に設定 `NONE` {#file-configuration-templating-none}
+
+以下の設定例では、すべての CSV オプションが修正されています。 各 `csvOptions` パラメータは最終的なもので、ユーザーは変更できません。
 
 ```json
 "fileConfigurations": {
@@ -290,22 +308,70 @@ ht-degree: 90%
     }
 ```
 
-| フィールド | 必須／オプション | 説明 | デフォルト値 |
-|---|---|---|---|
-| `compression.value` | オプション | データをファイルに保存する際に使用する圧縮コーデック。 サポートされている値：`none`、`bzip2`、`gzip`、`lz4`、`snappy`。 | `none` |
-| `fileType.value` | オプション | 出力ファイル形式を指定します。 サポートされている値： `csv`、`parquet`、`json`。 | `csv` |
-| `csvOptions.quote.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用された値をエスケープするために使用する 1 文字を設定します。区切り記号を値の一部として使用することもできます。 | `null` |
-| `csvOptions.quoteAll.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。すべての値を常に引用符で囲む必要があるかどうかを示します。 デフォルトでは、引用符文字を含む値のみをエスケープします。 | `false` |
-| `csvOptions.escape.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。 既に引用されている値の内部で引用符をエスケープするために使用する 1 文字を設定します。 | `\` |
-| `csvOptions.escapeQuotes.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符を含む値を、常に引用符で囲む必要があるかどうかを示します。 デフォルトでは、引用符文字を含むすべての値をエスケープします。 | `true` |
-| `csvOptions.header.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。列の名前を最初の行として書き込むかどうかを示します。 | `true` |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。値から先頭の空白をトリミングするかどうかを示します。 | `true` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。値から末尾の空白をトリミングするかどうかを示します。 | `true` |
-| `csvOptions.nullValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。null 値の文字列表現を設定します。 | `""` |
-| `csvOptions.dateFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。日付の形式を示します。 | `yyyy-MM-dd` |
-| `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
-| `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。 エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 |
-| `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` |
-| `maxFileRowCount` | オプション | エクスポートするファイルに含めることができる最大行数。 宛先プラットフォームのファイルサイズの要件に基づいて、これを設定します。 | なし |
+### CSV オプションを使用したファイル設定と `templatingStrategy` に設定 `PEBBLE_V1` {#file-configuration-templating-pebble}
+
+以下の設定例では、CSV オプションは修正されていません。 この `value` それぞれの `csvOptions` パラメーターは、 `/destinations` エンドポイント ( 例： `customerData.quote` の `quote` ファイルフォーマットオプションを参照 ) およびユーザーは、Experience PlatformUI を使用して、対応する顧客データフィールドで設定した様々なオプションの中から選択できます。
+
+```json
+  "fileConfigurations": {
+    "compression": {
+      "templatingStrategy": "PEBBLE_V1",
+      "value": "{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
+    },
+    "fileType": {
+      "templatingStrategy": "PEBBLE_V1",
+      "value": "{{customerData.fileType}}"
+    },
+    "csvOptions": {
+      "sep": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
+      },
+      "quote": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
+      },
+      "escape": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
+      },
+      "nullValue": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
+      },
+      "emptyValue": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
+      }
+    }
+  }
+```
+
+### サポートされているファイル形式のオプションに関する完全なリファレンスと例 {#file-formatting-reference-and-example}
+
+>[!TIP]
+>
+>以下に説明する CSV ファイル形式設定オプションも、 [CSV ファイル用 Apache Spark ガイド](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). 以下で使用する説明は、Apache Spark ガイドから取得したものです。
+
+以下に、Destination SDKで使用可能なすべてのファイル形式設定オプションと、各オプションの出力例を示します。
+
+| フィールド | 必須／オプション | 説明 | デフォルト値 | 出力例 1 | 出力例 2 |
+|---|---|---|---|---|---|
+| `templatingStrategy` | 必須 | 設定する各ファイルフォーマットオプションに対して、パラメーターを追加する必要があります `templatingStrategy`:2 つの値を持つことができます。 <br><ul><li>`NONE`:ユーザーが設定に対して異なる値を選択できない場合は、この値を使用します。 詳しくは、 [この設定](#file-configuration-templating-none) 例えば、ファイル形式設定オプションが修正されている場合などです。</li><li>`PEBBLE_V1`:ユーザーが設定に対して異なる値から選択できるようにする場合は、この値を使用します。 この場合、 `/destination` エンドポイントの設定を使用して、UI の様々なオプションをユーザーに表示します。 詳しくは、 [この設定](#file-configuration-templating-pebble) 例えば、ユーザーがファイル形式設定オプションの異なる値から選択できる場合です。</li></ul> | - | - | - |
+| `compression.value` | オプション | データをファイルに保存する際に使用する圧縮コーデック。 サポートされている値：`none`、`bzip2`、`gzip`、`lz4`、`snappy`。 | `none` | - | - |
+| `fileType.value` | オプション | 出力ファイル形式を指定します。 サポートされている値： `csv`、`parquet`、`json`。 | `csv` | - | - |
+| `csvOptions.quote.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用された値をエスケープするために使用する 1 文字を設定します。区切り記号を値の一部として使用することもできます。 | `null` | - | - |
+| `csvOptions.quoteAll.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。すべての値を常に引用符で囲む必要があるかどうかを示します。 デフォルトでは、引用符文字を含む値のみをエスケープします。 | `false` | `quoteAll`:`false` —> `male,John,"TestLastName"` | `quoteAll`:`true` —>`"male","John","TestLastName"` |
+| `csvOptions.delimiter.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。各フィールドと値の区切り文字を設定します。 この区切り文字には、1 つ以上の文字を使用できます。 | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
+| `csvOptions.escape.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。 既に引用されている値の内部で引用符をエスケープするために使用する 1 文字を設定します。 | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.escapeQuotes.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符を含む値を、常に引用符で囲む必要があるかどうかを示します。 デフォルトでは、引用符文字を含むすべての値をエスケープします。 | `true` | - | - |
+| `csvOptions.header.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。エクスポートされたファイルの最初の行として列の名前を書き込むかどうかを示します。 | `true` | - | - |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。値から先頭の空白をトリミングするかどうかを示します。 | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`—> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。値から末尾の空白をトリミングするかどうかを示します。 | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。null 値の文字列表現を設定します。 | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。日付の形式を示します。 | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
+| `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。 エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
+| `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
 
 {style=&quot;table-layout:auto&quot;}

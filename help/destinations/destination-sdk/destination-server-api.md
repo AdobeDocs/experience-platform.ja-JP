@@ -2,9 +2,9 @@
 description: このページでは、API エンドポイント /authoring/destination-servers を使用して実行できる API 操作をすべて一覧化して説明します。宛先のサーバーとテンプレートの仕様は、共通のエンドポイント /authoring/destination-servers を介して Adobe Experience Platform Destination SDK で設定できます。
 title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1361'
 ht-degree: 95%
 
 ---
@@ -81,10 +81,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 リクエストが成功した場合は、新しく作成した宛先サーバー設定の詳細を含む HTTP ステータス 200 が返されます。
 
 ## ファイルベース宛先サーバーの設定の作成 {#create-file-based}
-
->[!IMPORTANT]
->
->現在、Adobe Experience Platform Destination SDK でのファイルベースの宛先のサポートはベータ版です。ドキュメントと機能は変更される場合があります。
 
 ### SFTP 宛先サーバーの設定例 {#sftp-server-sample}
 

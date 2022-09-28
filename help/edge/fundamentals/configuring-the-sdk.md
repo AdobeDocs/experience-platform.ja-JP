@@ -4,10 +4,10 @@ description: Adobe Experience Platform Web SDK の設定方法について説明
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web；デバイス；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk 設定；prehidingStyle;cookieDestinationsEnabled;DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
+source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 39%
+source-wordcount: '999'
+ht-degree: 34%
 
 ---
 
@@ -44,15 +44,26 @@ alloy("configure", {
 
 割り当てられた設定 ID。SDK を適切なアカウントと設定にリンクします。1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `edgeConfigId` を設定する必要があります。
 
-### `context`
+### `context` {#context}
 
 | **タイプ** | **必須** | **デフォルト値** |
 | ---------------- | ------------ | -------------------------------------------------- |
-| 文字列の配列 | × | `["web", "device", "environment", "placeContext"]` |
+| 文字列の配列 | × | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
 {style=&quot;table-layout:auto&quot;}
 
 「[自動情報](../data-collection/automatic-information.md)」の説明に従って、自動的に収集するコンテキストカテゴリを示します。この設定を指定しない場合、すべてのカテゴリがデフォルトで使用されます。
+
+>[!IMPORTANT]
+>
+>次を除くすべてのコンテキストプロパティ `highEntropyUserAgentHints`に設定され、デフォルトで有効になっています。 Web SDK 設定でコンテキストプロパティを手動で指定した場合、必要な情報を引き続き収集するには、すべてのコンテキストプロパティを有効にする必要があります。
+
+有効にするには [高エントロピークライアントのヒント](user-agent-client-hints.md#enabling-high-entropy-client-hints) Web SDK のデプロイメントで、 `highEntropyUserAgentHints` コンテキストオプションを既存の設定と一緒に使用します。
+
+例えば、Web プロパティから高エントロピーのクライアントヒントを取得する場合、設定は次のようになります。
+
+`context: ["highEntropyUserAgentHints", "web"]`
+
 
 ### `debugEnabled`
 
@@ -134,9 +145,9 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 * `"out"`:この設定を指定すると、ユーザーが同意設定を指定するまで作業は破棄されます。
 ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](../consent/supporting-consent.md)を参照してください。
 
-## パーソナライゼーションオプション
+## パーソナライゼーションオプション {#personalization}
 
-### `prehidingStyle`
+### `prehidingStyle` {#prehidingStyle}
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
@@ -151,6 +162,16 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
+
+### `targetMigrationEnabled` {#targetMigrationEnabled}
+
+このオプションは、 [!DNL at.js] を Web SDK に追加します。
+
+Web SDK がレガシーの `mbox` および `mboxEdgeCluster` Cookie [!DNL at.js]. これにより、Web SDK を使用するページから、 [!DNL at.js] ライブラリとその逆。
+
+| **タイプ** | **必須** | **デフォルト値** |
+| -------- | ------------ | ----------------- |
+| ブール値 | × | `false` |
 
 ## オーディエンスのオプション
 
@@ -184,7 +205,9 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 
 {style=&quot;table-layout:auto&quot;}
 
-true の場合、SDK は古い AMCV Cookie を読み取って設定します。 このオプションは、サイトの一部で引き続き Visitor.js を使用している間に、Adobe Experience Platform Web SDK の使用に移行する際に役立ちます。 訪問者 API がページで定義されている場合、SDK は訪問者 API に対して ECID に対してクエリを実行します。 このオプションを使用すると、Adobe Experience Platform Web SDK を使用し、同じ ECID を持つページをデュアルタグ付けできます。
+true の場合、SDK は古い AMCV Cookie を読み取って設定します。 このオプションは、サイトの一部で引き続き Visitor.js を使用している間に、Adobe Experience Platform Web SDK の使用に移行する際に役立ちます。
+
+訪問者 API がページで定義されている場合、SDK は訪問者 API に対して ECID に対してクエリを実行します。 このオプションを使用すると、Adobe Experience Platform Web SDK を使用し、同じ ECID を持つページをデュアルタグ付けできます。
 
 ### `thirdPartyCookiesEnabled`
 

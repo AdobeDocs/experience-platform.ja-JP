@@ -1,15 +1,15 @@
 ---
 description: Destination SDKを使用して、カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する方法について説明します。
-title: （ベータ版）カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定します。
+title: カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定します。
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 6a666c9850a4a55bfa93a54111a597f690eb8431
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 11%
 
 ---
 
-# （ベータ版）カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する
+# カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する
 
 ## 概要 {#overview}
 

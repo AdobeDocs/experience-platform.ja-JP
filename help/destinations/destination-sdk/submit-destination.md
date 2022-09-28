@@ -2,10 +2,10 @@
 description: このページでは、Destination SDKを使用して作成された、製品化された宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 75%
+ht-degree: 65%
 
 ---
 
@@ -42,8 +42,8 @@ ht-degree: 75%
 
 Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：顧客リスト、サイトを訪問した人、または Pinterest でコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：Verizon Media（VMG）のメールアドレスをキーに特定の視聴者グループをターゲットにしたい広告主が、VMG のほぼリアルタイムの API を使用して新しいセグメントをすばやく作成し、希望する視聴者グループをプッシュする際には、DataX API を使用できます。
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md):顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
+* [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにしたい広告主は、VMG のほぼリアルタイム API を使用して、新しいセグメントをすばやく作成し、目的のオーディエンスグループをプッシュできます。
 
 ## テスト宛先 API を使用した後のテスト結果
 
@@ -225,7 +225,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md) をクリックして、宛先用に製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
-## 宛先のロゴ
+## 宛先のロゴ {#logo}
 
 宛先カタログには、各宛先カードのロゴが含まれます。 提出するメールに、宛先のロゴを含む画像を含めます。
 
