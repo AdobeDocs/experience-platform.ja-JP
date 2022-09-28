@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: Sources
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 87%
+source-wordcount: '831'
+ht-degree: 86%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 87%
       - [Analytics 分類ソース](connectors/adobe-applications/classifications.md)
       - [Analytics ソース](connectors/adobe-applications/analytics.md)
       - [Audience Manager源](connectors/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Cloud Servicesソース](connectors/adobe-applications/campaign.md)
       - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
       - [データ収集ソース](connectors/adobe-applications/data-collection.md)
       - フィールドマッピング {#mapping}
@@ -202,7 +203,7 @@ ht-degree: 87%
          - [Adobe Analytics（レポートスイートデータ）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（データの分類）](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+         - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 広告 {#advertising}
