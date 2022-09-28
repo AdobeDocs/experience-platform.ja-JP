@@ -1,15 +1,15 @@
 ---
-title: Dataset Expirations API のエンドポイント
+title: データセット有効期限 API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1450'
+ht-degree: 72%
 
 ---
 
-# データセット有効期限のエンドポイント
+# データセットの有効期限エンドポイント
 
 >[!IMPORTANT]
 >
@@ -55,7 +55,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?page=1&size=50 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -68,38 +68,43 @@ curl -X GET \
 
 ```json
 {
-  "results": [
+  "totalRecords": 3,
+  "ttlDetails": [
     {
-      "ttlId": "SDfba908e9fb2e427ab4275d20465631d7",
-      "datasetId": "62799c3e1151781b63ccaa28",
-      "imsOrg": "{ORG_ID}",
-      "status": "cancelled",
-      "expiry": "2022-05-09T22:57:05.531024Z",
-      "updatedAt": "2022-05-09T22:57:05.531025Z",
-      "updatedBy": "{USER_ID}"
+      "status": "completed",
+      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "f440ac301c414bf1b6ba419162866346",
+      "expiry": "2021-07-07T13:14:15Z",
+      "updatedAt": "2021-07-07T13:14:15Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
-      "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-      "datasetId": "62759f2ede9e601b63a2ee14",
-      "imsOrg": "{ORG_ID}",
       "status": "pending",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "expiry": "2099-02-02T00:00:00Z",
+      "updatedAt": "2021-02-02T13:00:00Z",
+      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
+    },
+    {
+      "status": "pending",
+      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "expiry": "2099-01-01T00:00:00Z",
+      "updatedAt": "2021-01-01T13:00:00Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     }
-  ],
-  "current_page": 1,
-  "total_pages": 36,
-  "total_count": 886
+  ]
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `results` | 返されるデータセット有効期限の詳細が含まれます。データセット有効期限のプロパティについて詳しくは、[ルックアップ呼び出し](#lookup)を行うための応答の節を参照してください。 |
-| `current_page` | リストされた結果の現在のページ。 |
-| `total_pages` | 応答内のページの合計数。 |
-| `total_count` | 応答内にあるデータセット有効期限の合計数。 |
+| `totalRecords` | リスト呼び出しのパラメーターに一致したデータセット有効期限の数。 |
+| `ttlDetails` | 返されるデータセット有効期限の詳細が含まれます。データセット有効期限のプロパティについて詳しくは、[ルックアップ呼び出し](#lookup)を行うための応答の節を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,20 +115,22 @@ GET リクエストを通じて、データセットの有効期限を参照で�
 **API 形式**
 
 ```http
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{TTL_ID}` | 検索するデータセット有効期限の ID。 |
+| `{DATASET_ID}` | 有効期限を検索するデータセットの ID。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
+次のリクエストでは、データセットの有効期限の詳細を調べます。 `62759f2ede9e601b63a2ee14`:
+
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -136,110 +143,71 @@ curl -X GET \
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
     "datasetId": "62759f2ede9e601b63a2ee14",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
     "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Dataset Expiration Request",
+    "description": "A dataset expiration request that will execute at the end of 2023"
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
+| `workorderId` | データセット有効期限の ID。 |
 | `datasetId` | この有効期限が適用されるデータセットの ID。 |
 | `imsOrg` | 組織の ID。 |
 | `status` | データセット有効期限の現在のステータス。 |
 | `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
 | `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
 | `updatedBy` | 有効期限を最後に更新したユーザー。 |
+| `displayName` | 有効期限リクエストの表示名。 |
+| `description` | 有効期限リクエストの説明。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## データセット有効期限の作成 {#create}
+### カタログの有効期限タグ
 
-POST リクエストを通じて、データセットの有効期限を作成できます。
+を使用する場合、 [カタログ API](../../catalog/api/getting-started.md) データセットの詳細を検索するには、データセットに有効期限がある場合は、そのデータセットがの下に表示されます。 `tags.adobe/hygiene/ttl`.
 
-**API 形式**
-
-```http
-POST /ttl
-```
-
-**リクエスト**
-
-次のリクエストは、データセット `5b020a27e7040801dedbf46e` の削除を 2022年末（グリニッジ標準時）にスケジュール設定します。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ttl \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "datasetId": "5b020a27e7040801dedbf46e",
-        "expiry": "2022-12-31T23:59:59Z"
-      }'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `datasetId` | 有効期限をスケジュール設定するデータセットの ID。 |
-| `expiry` | データセットが削除される日時の ISO 8601 タイムスタンプ。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-**応答**
-
-応答が成功すると、データセット有効期限の詳細が、HTTP ステータス（既存の有効期限が更新されていた場合は 200（OK）、既存の有効期限がなかった場合は 201（作成済み））と共に返されます。
+次の JSON は、カタログのデータセットの詳細に対する切り捨てられた応答を表しています。この応答の有効期限は、 `32503680000000`. このタグの値は、Unix エポック開始以降の整数ミリ秒数で有効期限をエンコードします。
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
-    "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}"
+  "63212313c308d51b997858ba": {
+    "name": "TTL Test Dataset",
+    "description": "A piecrust promise, made to be broken",
+    "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
+    "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
+    "tags": {
+      "adobe/hygiene/ttl": [ "32503680000000" ],
+      ...
+    },
+    ...
+  }
 }
 ```
 
-| プロパティ | 説明 |
-| --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
-| `datasetId` | この有効期限が適用されるデータセットの ID。 |
-| `imsOrg` | 組織の ID。 |
-| `status` | データセット有効期限の現在のステータス。 |
-| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
-| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
-| `updatedBy` | 有効期限を最後に更新したユーザー。 |
+## データセットの有効期限の作成または更新 {#create-or-update}
 
-{style=&quot;table-layout:auto&quot;}
-
-## データセット有効期限の更新 {#update}
-
-PUT リクエストを使用して、データセットの有効期限を更新できます。
+データセットの有効期限は、PUTリクエストを通じて作成または更新できます。
 
 **API 形式**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{TTL_ID}` | 変更するデータセット有効期限の ID。 |
-
-{style=&quot;table-layout:auto&quot;}
+| `{DATASET_ID}` | 有効期限をスケジュールするデータセットの ID。 |
 
 **リクエスト**
 
-次のリクエストは、データセット `5b020a27e7040801dedbf46e` の有効期限を更新し、2023年末（グリニッジ標準時）に期限が切れるようにします。
+次のリクエストは、データセット `5b020a27e7040801dedbf46e` の削除を 2022年末（グリニッジ標準時）にスケジュール設定します。データセットの既存の有効期限が見つからない場合は、新しい有効期限が作成されます。 データセットに既に保留中の有効期限がある場合、その有効期限は新しい `expiry` の値です。
 
 ```shell
 curl -X PUT \
@@ -250,35 +218,41 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2023-12-31T23:59:59Z"
+        "expiry": "2022-12-31T23:59:59Z",
+        "displayName": "Example Expiration Request",
+        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
       }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
 | `expiry` | データセットが削除される日時の ISO 8601 タイムスタンプ。 |
+| `displayName` | 有効期限のリクエストの表示名。 |
+| `description` | 有効期限リクエストの説明（オプション）。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-応答が成功すると、更新された有効期限の詳細が返されます。
+応答が成功すると、データセット有効期限の詳細が、HTTP ステータス（既存の有効期限が更新されていた場合は 200（OK）、既存の有効期限がなかった場合は 201（作成済み））と共に返されます。
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "expiry": "2032-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T22:38:40.393115Z",
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Expiration Request",
+    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
+| `workorderId` | データセット有効期限の ID。 |
 | `datasetId` | この有効期限が適用されるデータセットの ID。 |
 | `imsOrg` | 組織の ID。 |
 | `status` | データセット有効期限の現在のステータス。 |
@@ -292,25 +266,29 @@ curl -X PUT \
 
 DELETE リクエストを行うことでデータセット有効期限をキャンセルできます。
 
+>[!NOTE]
+>
+>ステータスが「 」のデータセット有効期限のみ `pending` をキャンセルできます。 実行された有効期限または既にキャンセルされた有効期限をキャンセルしようとすると、HTTP 404 エラーが返されます。
+
 **API 形式**
 
 ```http
-DELETE /ttl/{TTL_ID}
+DELETE /ttl/{EXPIRATION_ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{TTL_ID}` | キャンセルするデータセット有効期限の ID。 |
+| `{EXPIRATION_ID}` | この `workorderId` を設定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、データセット `5b020a27e7040801dedbf46e` の有効期限を更新し、2023年末（グリニッジ標準時）に有効期限が切れるようにします。
+次のリクエストでは、ID を持つデータセットの有効期限がキャンセルされます `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -319,45 +297,21 @@ curl -X DELETE \
 
 **応答**
 
-応答が成功すると、`status` 属性が `cancelled` に設定されたデータセットの有効期限の詳細が返されます。
+正常な応答は、HTTP ステータス 204（コンテンツなし）と、有効期限の `status` 属性が `cancelled`.
 
-```json
-{
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
-    "status": "cancelled",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T23:47:30.071186Z",
-    "updatedBy": "{USER_ID}"
-}
-```
+## データセットの有効期限ステータス履歴の取得
 
-| プロパティ | 説明 |
-| --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
-| `datasetId` | この有効期限が適用されるデータセットの ID。 |
-| `imsOrg` | 組織の ID。 |
-| `status` | データセット有効期限の現在のステータス。 |
-| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
-| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
-| `updatedBy` | 有効期限を最後に更新したユーザー。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-## データセットの有効期限の履歴の取得
-
-ルックアップリクエストでクエリパラメーター `include=history` を使用することで、特定のデータセットの有効期限の履歴を参照できます。結果には、データセットの有効期限の作成、適用された更新、およびそのキャンセルまたは実行（該当する場合）に関する情報が含まれます。
+クエリパラメーターを使用して、特定のデータセットの有効期限ステータス履歴を調べることができます `include=history` 参照リクエストに含まれます。 結果には、データセットの有効期限の作成、適用された更新、およびそのキャンセルまたは実行（該当する場合）に関する情報が含まれます。
 
 **API 形式**
 
 ```http
-GET /ttl/{TTL_ID}?include=history
+GET /ttl/{DATASET_ID}?include=history
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{TTL_ID}` | 履歴を参照したいデータセットの有効期限の ID。 |
+| `{DATASET_ID}` | 検索する有効期限の履歴を持つデータセットの ID。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +319,7 @@ GET /ttl/{TTL_ID}?include=history
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -378,8 +332,12 @@ curl -X GET \
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
+  "datasetName": "Example Dataset",
+  "sandboxName": "prod",
+  "displayName": "Expiration Request 123",
+  "description": "Expiration Request 123 Description",
   "imsOrg": "{ORG_ID}",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
@@ -410,8 +368,12 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
+| `workorderId` | データセット有効期限の ID。 |
 | `datasetId` | この有効期限が適用されるデータセットの ID。 |
+| `datasetName` | この有効期限が適用されるデータセットの表示名。 |
+| `sandboxName` | ターゲットデータセットが配置されているサンドボックスの名前。 |
+| `displayName` | 有効期限リクエストの表示名。 |
+| `description` | 有効期限リクエストの説明。 |
 | `imsOrg` | 組織の ID。 |
 | `history` | 有効期限の更新の履歴をオブジェクトの配列としてリスト表示し、各オブジェクトには、更新時の有効期限の `status`、`expiry`、`updatedAt` および `updatedBy` 属性が含まれます。 |
 
@@ -427,8 +389,11 @@ curl -X GET \
 | --- | --- | --- |
 | `size` | 返される有効期限の最大数を示す 1～100 の整数。デフォルトは 25 です。 | `size=50` |
 | `page` | 返される有効期限のページを示す整数。 | `page=3` |
+| `orgId` | 組織 ID がパラメーターのものと一致するデータセットの有効期限に一致します。 この値はデフォルトで `x-gw-ims-org-id` ヘッダー。要求にサービストークンが指定されていない場合は無視されます。 | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | ステータスのコンマ区切りリスト。含める場合、応答は、現在のステータスがリストに含まれるデータセットの有効期限に一致します。 | `status=pending,cancelled` |
 | `author` | `created_by` が検索文字列と一致する有効期限に一致します。検索文字列が `LIKE` または `NOT LIKE` で始まる場合、残りは SQL 検索パターンとして扱われます。それ以外の場合は、検索文字列全体が、`created_by` フィールドのコンテンツ全体に完全に一致する必要があるリテラル文字列として扱われます。 | `author=LIKE %john%` |
+| `sandboxName` | サンドボックス名が引数と完全に一致するデータセット有効期限に一致します。 デフォルトでは、リクエストの `x-sandbox-name` ヘッダー。 用途 `sandboxName=*` を追加して、すべてのサンドボックスのデータセット有効期限を含めます。 | `sandboxName=dev1` |
+| `datasetId` | 特定のデータセットに適用される有効期限に一致します。 | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | 指定した時間から 24 時間以内に作成された有効期限に一致します。<br><br>時刻を含まない日付（`2021-12-07` など）は、その日の始まりの日時を表していることに注意してください。したがって、`createdDate=2021-12-07` は、2021年12月7日の `00:00:00`～`23:59:59.999999999`（UTC）に作成されたすべての有効期限を参照します。 | `createdDate=2021-12-07` |
 | `createdFromDate` | 示された時間以降に作成された有効期限に一致します。 | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | 示された時間以前に作成された有効期限に一致します。 | `createdToDate=2021-12-07T23:59:59.999999999Z` |

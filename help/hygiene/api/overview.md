@@ -2,10 +2,10 @@
 title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 87%
+source-wordcount: '415'
+ht-degree: 73%
 
 ---
 
@@ -39,13 +39,17 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 
 このドキュメントでは、リクエストの形式を示すために、API 呼び出しの例を提供しています。サンプル API 呼び出しのドキュメントで使用されている規則については、Experience Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## データセット有効期限
 
 データセットの有効期限は、時間差の「データセットの削除」アクションです。データセットの有効期限を作成すると、そのデータセットが削除されるべき将来の時間を指定することになります。API でのデータセット有効期限のスケジュール設定について詳しくは、[データセット有効期限のエンドポイントガイド](./dataset-expiration.md)を参照してください。
+
+## 消費者の削除
+
+>[!NOTE]
+>
+>消費者の削除は、Privacy Shield または Privacy Shield を購入したAdobeでのみ利用できます。
+
+データ衛生 API を使用すると、1 つまたはすべてのデータセットにわたって、消費者 ID に関連付けられたすべてのレコードを削除できます。 消費者 ID を削除するすべてのデータ衛生タスクは、作業順序と呼ばれる構成体によって表されます。 詳しくは、 [作業順序エンドポイントガイド](./workorder.md) を参照してください。
 
 ## クォータ
 

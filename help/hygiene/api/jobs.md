@@ -4,10 +4,10 @@ description: Adobe Experience Platform で顧客の保存した個人データ�
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 100%
+source-wordcount: '504'
+ht-degree: 96%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Data Hygiene API は現在ベータ版です。このドキュメントで説明されている機能は変更されることがあります。
+>このエンドポイントは、消費者による削除を行うベータ版機能を表します。 最新の機能については、 [`/workorder` endpoint](./workorder.md) 代わりに、
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
