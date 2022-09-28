@@ -5,9 +5,9 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 8%
 
 ---
@@ -488,6 +488,30 @@ SET property_key = property_value
 ## PostgreSQL コマンド
 
 以下のサブ節では、クエリサービスでサポートされる PostgreSQL コマンドについて説明します。
+
+### テーブルを分析
+
+この `ANALYZE TABLE` コマンドは、高速ストア上のテーブルの統計を計算します。 統計は、高速ストアの特定のテーブルに対して実行された CTAS または ITAS クエリに対して計算されます。
+
+**例**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+以下は、 `ANALYZE TABLE` command:-
+
+| 計算値 | 説明 |
+|---|---|
+| `field` | テーブルの列の名前。 |
+| `data-type` | 各列に指定できるデータのタイプ。 |
+| `count` | このフィールドに null 以外の値を含む行の数。 |
+| `distinct-count` | このフィールドのユニーク値またはユニーク値の数。 |
+| `missing` | このフィールドに null 値を持つ行の数。 |
+| `max` | 分析されたテーブルの最大値。 |
+| `min` | 分析されたテーブルの最小値。 |
+| `mean` | 分析されたテーブルの平均値。 |
+| `stdev` | 分析されたテーブルの標準偏差です。 |
 
 ### BEGIN
 
