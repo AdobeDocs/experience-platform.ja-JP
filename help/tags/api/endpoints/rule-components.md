@@ -2,10 +2,10 @@
 title: ルールコンポーネントエンドポイント
 description: Reactor API で /rule_components エンドポイントを呼び出す方法を説明します。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1205'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API のルールコンポーネントを管理する方法について説明します。 データ収集 UI でのルールおよびルールコンポーネントの操作方法について詳しくは、 [UI ガイド](../../ui/managing-resources/rules.md) を参照してください。
+>このドキュメントでは、Reactor API のルールコンポーネントを管理する方法について説明します。 UI でルールやルールコンポーネントを操作する方法について詳しくは、 [UI ガイド](../../ui/managing-resources/rules.md).
 
 ルールコンポーネントには、次の 3 つの基本的なタイプがあります。
 

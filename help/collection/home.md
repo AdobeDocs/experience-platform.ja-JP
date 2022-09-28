@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 84%
+source-wordcount: '469'
+ht-degree: 80%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform は、クライアントサイドのソースから顧
 
 ## タグ、Web SDK および Mobile SDK
 
-Platform Web SDK と Platform Mobile SDK には、すべてのアドビ製品ライブラリが、それぞれ web とモバイルのプラットフォーム用開発キットとしてまとめられています。 これらは、ローコードを使用するか、データ収集 UI から[タグ](../tags/home.md)を使用して実装できます。
+Platform Web SDK と Platform Mobile SDK には、すべてのアドビ製品ライブラリが、それぞれ web とモバイルのプラットフォーム用開発キットとしてまとめられています。 これらは、生のコードを使用して、または [タグ](../tags/home.md) データ収集 UI またはAdobe Experience Platform UI を使用する。
 
 これらのライブラリを圧縮すると、データ収集が高速化され、クライアントサイドデバイスから Platform Edge Network へという単一のストリームに複数の処理が統合されます。
 

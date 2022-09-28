@@ -2,10 +2,10 @@
 title: 公開フロー
 description: Adobe Experience Platform でライブラリを作成、ビルドをテストし、実稼動環境用に承認するプロセスについて説明します。
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 100%
+source-wordcount: '1490'
+ht-degree: 97%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-これらの 4 つの状態は、データ収集 UI の「**[!UICONTROL 公開フロー]**」タブ内に列として表示されます。
+これらの 4 つの状態は、 **[!UICONTROL 公開フロー]** タブをクリックします。
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 ![](./images/approval-workflow/upstream.png)
 
-データ収集 UI でライブラリを編集する際、アップストリームから継承されたすべてのリソースが「**[!UICONTROL リソースのアップストリーム]**」セクションに表示されます。これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
+UI でライブラリを編集する場合、アップストリームから継承されるすべてのリソースは、 **[!UICONTROL リソースのアップストリーム]** 」セクションに入力します。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

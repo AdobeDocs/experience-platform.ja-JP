@@ -2,10 +2,10 @@
 title: リソースのコピー
 description: Adobe Experience Platform で既存のタグリソースの設定を使用して新しいリソースを作成する方法について説明します。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '780'
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->データ収集 UI では、あるプロパティが拡張機能の開発用に設定され、他のプロパティがそうでない場合は、リソースを別のプロパティにコピーすることはできません。
+>あるプロパティを拡張機能の開発用に設定し、他のプロパティがそうでない場合は、リソースを別のプロパティにコピーすることはできません。
 
 目的の動作を設定したら、「**[!UICONTROL コピー]**」を選択します。
 

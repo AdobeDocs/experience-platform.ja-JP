@@ -3,9 +3,9 @@ keywords: Advertising Cloud;advertising cloud 拡張機能；advertising cloud �
 title: Adobe Advertising Cloud 拡張機能
 description: Adobe Advertising Cloud拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 17%
 
 ---
@@ -26,7 +26,7 @@ Adobe Advertising Cloudは、Adobe Experience Platformの広告拡張機能で�
 
 この拡張機能は、Platform を購入したすべての顧客が、宛先カタログで使用できます。
 
-この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてデータ収集 UI へのアクセス権を取得し、 **[!UICONTROL manage_properties]** 権限を持つユーザーが拡張機能をインストールできるようにする。
+この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせて、UI のデータ収集機能にアクセスし、 **[!UICONTROL manage_properties]** 権限を持つユーザーが拡張機能をインストールできるようにする。
 
 ## 拡張機能のインストール {#install-extension}
 

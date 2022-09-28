@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 100%
+source-wordcount: '959'
+ht-degree: 96%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 ### プロパティ {#properties}
 
-イベント転送は、タグとは別に独自のプロパティのストアを保持しており、左側のナビゲーションから「**[!UICONTROL イベント転送]**」を選択してデータ収集 UI に表示できます。
+イベント転送は、タグとは別に独自のプロパティストアを維持します。このプロパティは、Experience PlatformUI またはデータ収集 UI で、 **[!UICONTROL イベント転送]** をクリックします。
 
 ![データ収集 UI のイベント転送プロパティ](../../images/ui/event-forwarding/overview/properties.png)
 

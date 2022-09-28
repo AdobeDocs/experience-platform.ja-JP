@@ -2,10 +2,10 @@
 title: Web 拡張機能のアクションの種類
 description: Web プロパティでタグ拡張機能のアクションタイプライブラリモジュールを定義する方法について説明します。
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '412'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 通常、アクションタイプは次の要素で構成されます。
 
-1. データ収集 UI に表示される [ビュー](./views.md)。アクションの設定を変更できます。
+1. A [表示](./views.md) ユーザーがExperience Platformの設定を変更できるアクション UI およびデータ収集 UI 内に表示されます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、アクションを実行します。
 
 ```js

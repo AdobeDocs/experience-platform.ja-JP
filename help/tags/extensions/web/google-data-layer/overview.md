@@ -2,9 +2,9 @@
 title: Google Data Layer 拡張機能
 description: Adobe Experience PlatformのGoogle Client Data Layer タグ拡張機能について説明します。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Google データレイヤー拡張機能を使用すると、タグ実装で Goo
 
 ## インストール
 
-拡張機能をインストールするには、データ収集 UI の拡張機能カタログに移動し、「 」を選択します。 **Google Data Layer**.
+拡張機能をインストールするには、Experience PlatformUI またはデータ収集 UI の拡張機能カタログに移動し、「 」を選択します。 **Google Data Layer**.
 
 インストールすると、Web サイトでタグライブラリが読み込まれるたびに、拡張機能がデータレイヤーを作成するか、データレイヤーにアクセスします。
 

@@ -2,9 +2,9 @@
 title: Premium でのタグの CDN サポート
 description: タグのプレミアム CDN 機能、およびタグを使用して複数の地域にコンテンツを配信する方法について説明します。
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 これを考慮して、Experience Platformのタグはプレミアム CDN 機能を提供し、これらの特別な地域にコンテンツを配信できます。
 
-プレミアム CDN サポートは有料機能で、有効にして使用するには、組織が購入する必要があります。 このガイドでは、購入後にデータ収集 UI でこの機能を設定して使用する方法について説明します。
+プレミアム CDN サポートは有料機能で、有効にして使用するには、組織が購入する必要があります。 このガイドでは、購入後に、Experience PlatformUI またはデータ収集 UI でこの機能を設定して使用する方法について説明します。
 
 ## 組織のプレミアム CDN の有効化
 
-Premium CDN は、会社レベルで有効になります。 組織がプレミアム CDN 機能を購入すると、Adobe管理者がデータ収集 UI で会社に対して有効にします。
+Premium CDN は、会社レベルで有効になります。 組織がプレミアム CDN 機能を購入すると、Adobe管理者が会社の UI でこの機能を有効にします。
 
 ## 更新された埋め込みコードでタグライブラリを再構築し、インストールする
 

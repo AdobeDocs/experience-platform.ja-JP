@@ -2,10 +2,10 @@
 title: Web 拡張機能の条件のタイプ
 description: Web プロパティでタグ拡張機能の条件タイプライブラリモジュールを定義する方法について説明します。
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '502'
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 通常、条件タイプは次の要素で構成されます。
 
-1. データ収集 UI に表示される [ビュー](./views.md)。条件の設定を変更できます。
+1. A [表示](./views.md) をExperience PlatformUI とデータ収集 UI 内に表示し、条件の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、条件を評価します。
 
 条件タイプのライブラリモジュールの目的は、対象が true と false のどちらであるかを評価することです。何を評価するかは、自由に設定できます。

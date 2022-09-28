@@ -2,10 +2,10 @@
 title: エッジ拡張機能のデータ要素のタイプ
 description: エッジプロパティでタグ拡張機能のデータ要素タイプライブラリモジュールを定義する方法について説明します。
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 100%
+source-wordcount: '439'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 
 通常、データ要素タイプは次の要素で構成されます。
 
-1. データ収集 UI に表示されるビュー。データ要素の設定を変更できます。
+1. Experience PlatformUI とデータ収集 UI 内に表示されるビューで、ユーザーはデータ要素の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、データを取得します。
 
 ユーザーがカスタムデータレイヤーからデータを取得できるようにする場合、モジュールは次の例のようになります。

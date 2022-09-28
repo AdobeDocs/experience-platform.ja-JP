@@ -1,11 +1,11 @@
 ---
 title: 拡張機能の設定
-description: Adobe Experience Platform のデータ収集 UI で、ユーザーからグローバル設定を収集するようにタグ拡張を設定する方法について説明します。
+description: Adobe Experience Platform UI またはデータ収集 UI で、ユーザーからグローバル設定を収集するようにタグ拡張を設定する方法について説明します。
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 100%
+source-wordcount: '274'
+ht-degree: 91%
 
 ---
 

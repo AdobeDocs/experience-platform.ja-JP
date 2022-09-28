@@ -2,10 +2,10 @@
 title: ルールエンドポイント
 description: Reactor API で /rules エンドポイントを呼び出す方法を説明します。
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 100%
+source-wordcount: '931'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API でルールを管理する方法について説明します。 データ収集 UI でルールを操作する方法について詳しくは、[UI ガイド](../../ui/managing-resources/rules.md)を参照してください。
+>このドキュメントでは、Reactor API でルールを管理する方法について説明します。 UI でルールを操作する方法について詳しくは、 [UI ガイド](../../ui/managing-resources/rules.md).
 
 ルールは、1 つの[プロパティ](./properties.md)のみに属します。 プロパティには多くのルールを設定できます。
 

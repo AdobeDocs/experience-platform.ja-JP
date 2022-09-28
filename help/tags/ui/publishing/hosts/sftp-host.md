@@ -2,9 +2,9 @@
 title: SFTP ホスト
 description: セキュリティで保護された自己ホスト SFTP サーバーにライブラリビルドを配信するように Adobe Experience Platform にタグを設定する方法について説明します。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 40%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 40%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Adobe Experience Platformでは、タグライブラリビルドをホストする保護された SFTP サーバーに配信し、ビルドの保存方法と管理方法をより詳細に制御できます。 このガイドでは、データ収集 UI でタグプロパティの SFTP ホストを設定する方法について説明します。
+Adobe Experience Platformでは、タグライブラリビルドをホストする保護された SFTP サーバーに配信し、ビルドの保存方法と管理方法をより詳細に制御できます。 このガイドでは、Experience PlatformUI またはデータ収集 UI でタグプロパティの SFTP ホストを設定する方法について説明します。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Platform が SFTP サーバーに到達して接続できるよう、会社の�
 
 ## SFTP ホストの作成 {#create}
 
-データ収集 UI で、「 」を選択します。 **[!UICONTROL ホスト]** 左のナビゲーションで、その後に **[!UICONTROL ホストを追加]**.
+選択 **[!UICONTROL ホスト]** 左のナビゲーションで、その後に **[!UICONTROL ホストを追加]**.
 
 ![UI で「ホストを追加」ボタンが選択されていることを示す画像](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

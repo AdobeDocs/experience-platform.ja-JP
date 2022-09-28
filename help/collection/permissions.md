@@ -2,9 +2,9 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 ## はじめに
 
-データ収集用にアクセス制御を設定するには、Adobe Experience Platformデータ収集との統合を持つ組織の管理者権限が必要です。 権限を付与または取り消すことができる最小の役割は、製品プロファイル管理者です。 権限を管理できる他の管理者の役割は、 製品管理者（製品内のすべてのプロファイルを管理）とシステム管理者（制限なし）です。次の記事を参照してください： [管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) (『Adobeエンタープライズ管理ガイド』内 ) を参照してください。
+データ収集用にアクセス制御を設定するには、Adobe Experience Platformデータ収集との統合を持つ組織の管理者権限が必要です。 権限を付与または取り消すことができる最小の役割は、 **製品プロファイル管理者**. 権限を管理できる他の管理者の役割は、 **製品管理者**（製品内のすべてのプロファイルを管理）と&#x200B;**システム管理者**（制限なし）です。次の記事を参照してください： [管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) (『Adobeエンタープライズ管理ガイド』内 ) を参照してください。
 
 このガイドは、ユーザーが製品プロファイルなどの基本的なAdmin Console概念と、製品が個々のユーザーおよびグループに製品権限を付与する方法に詳しいことを前提としています。 詳しくは、 [Admin Consoleユーザーガイド](https://helpx.adobe.com/jp/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 
 ## 次の手順
 
-このガイドでは、データ収集 UI で使用可能な権限と、Admin Consoleを通じた管理方法について説明しました。 その他のAdobe Experience Platform機能に関する権限の管理について詳しくは、 [アクセス制御ドキュメント](../access-control/home.md).
+このガイドでは、データ収集に使用できる権限と、Admin Consoleを通じた管理方法について説明しました。 その他のAdobe Experience Platform機能に関する権限の管理について詳しくは、 [アクセス制御ドキュメント](../access-control/home.md).
