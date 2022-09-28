@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 100%
+source-wordcount: '1094'
+ht-degree: 91%
 
 ---
 
@@ -169,7 +169,15 @@ Adobe Experience Platform には、サードパーティのプロトコルシス
 | **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
 | 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
-Admin Console から付与される使用可能な権限（これら 4 つのソースを含む）について詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
+Adobe権限を通じて付与される使用可能な権限の詳細については、 [アクセス制御の概要](../access-control/home.md).
+
+### ソースの属性ベースのアクセス制御
+
+Adobe Experience Platformの属性ベースのアクセス制御を使用すると、管理者は、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
+
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。 さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
+
+属性ベースのアクセス制御の詳細については、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md).
 
 ## 利用条件 {#terms-and-conditions}
 
