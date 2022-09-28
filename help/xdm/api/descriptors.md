@@ -5,10 +5,10 @@ title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
+source-git-commit: e8ad829ac4ea89c0d0167e6b414db577c9ecf094
 workflow-type: tm+mt
-source-wordcount: '1839'
-ht-degree: 50%
+source-wordcount: '1900'
+ht-degree: 47%
 
 ---
 
@@ -341,6 +341,10 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
@@ -350,10 +354,11 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `@type` | 定義する記述子のタイプ。わかりやすい名前記述子の場合、この値をに設定する必要があります。 `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
-| `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
+| `xdm:sourceProperty` | 詳細を変更する特定のプロパティへのパス。パスはスラッシュ (`/`) で終わらず、1 で終わる。 次を含めない `properties` パス内 ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
 | `xdm:title` | このフィールドに表示する新しいタイトル（タイトルケースで記述）。 |
 | `xdm:description` | オプションで、タイトルに説明を追加できます。 |
-| `meta:enum` | 次に示すフィールド `xdm:sourceProperty` は文字列フィールドです。 `meta:enum` は、 [!DNL Experience Platform] UI 注意すべき点は `meta:enum` は列挙を宣言しないか、XDM フィールドのデータ検証を提供しません。<br><br>これは、Adobeで定義されたコア XDM フィールドにのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合、代わりに、フィールドの `meta:enum` プロパティを直接、PATCHリクエストを介してフィールドの親リソースに渡します。 |
+| `meta:enum` | 次に示すフィールド `xdm:sourceProperty` は文字列フィールドです。 `meta:enum` を使用して、セグメント化 UI の「 」フィールドに推奨値を追加できます。 注意すべき点は `meta:enum` は列挙を宣言しないか、XDM フィールドのデータ検証を提供しません。<br><br>これは、Adobeで定義されたコア XDM フィールドにのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合、代わりに、フィールドの `meta:enum` プロパティを直接、PATCHリクエストを介してフィールドの親リソースに渡します。 |
+| `meta:excludeMetaEnum` | 次に示すフィールド `xdm:sourceProperty` は、 `meta:enum` フィールドに値を入力する場合、このオブジェクトをわかりやすい名前記述子に含めて、これらの値の一部またはすべてをセグメント化から除外できます。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 

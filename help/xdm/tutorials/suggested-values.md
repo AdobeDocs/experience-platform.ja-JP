@@ -1,19 +1,38 @@
 ---
-title: フィールドへの推奨値の追加
+title: API での推奨値の管理
 description: スキーマレジストリ API の文字列フィールドに推奨値を追加する方法を説明します。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 2%
+source-wordcount: '883'
+ht-degree: 6%
 
 ---
 
-# フィールドに推奨値を追加する
+# API での推奨値の管理
 
-エクスペリエンスデータモデル (XDM) では、列挙フィールドは、値の事前定義サブセットに制限される文字列フィールドを表します。 列挙フィールドでは、取り込んだデータが一連の受け入れられた値に準拠していることを確認する検証を提供できます。 ただし、制約として強制せずに、文字列フィールドの推奨値のセットを定義することもできます。
+エクスペリエンスデータモデル (XDM) の任意の文字列フィールドに対して、 **enum** フィールドが取り込むことができる値を事前定義済みのセットに制限する データを列挙フィールドに取り込もうとしたが、その値が設定で定義された値と一致しない場合、取り込みは拒否されます。
 
-内 [スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)列挙フィールドの制約された値は、 `enum` 配列、 `meta:enum` オブジェクトは、これらの値にわかりやすい表示名を提供します。
+列挙とは異なり、 **推奨値** 文字列フィールドに取り込み可能な値が制限されていない。 代わりに、推奨値は、 [セグメント化 UI](../../segmentation/ui/overview.md) 文字列フィールドを属性として含める場合。
+
+>[!NOTE]
+>
+>フィールドの更新された推奨値がセグメント化 UI に反映されるまでに、およそ 5 分の遅延があります。
+
+このガイドでは、 [スキーマレジストリ API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Adobe Experience Platformユーザーインターフェイスでこれをおこなう手順については、 [列挙と推奨値に関する UI ガイド](../ui/fields/enum.md).
+
+## 前提条件
+
+このガイドは、XDM のスキーマ構成の要素と、スキーマレジストリ API を使用して XDM リソースを作成および編集する方法について詳しいことを前提としています。 紹介が必要な場合は、次のドキュメントを参照してください。
+
+* [スキーマ構成の基本](../schema/composition.md)
+* [Schema Registry API ガイド](../api/overview.md)
+
+また、 [列挙と推奨値の進化ルール](../ui/fields/enum.md#evolution) 既存のフィールドを更新する場合。 和集合に参加するスキーマの推奨値を管理している場合は、 [列挙と推奨値の結合ルール](../ui/fields/enum.md#merging).
+
+## 構成
+
+API では、 **enum** フィールドは、 `enum` 配列、 `meta:enum` オブジェクトは、これらの値にわかりやすい表示名を提供します。
 
 ```json
 "exampleStringField": {
@@ -34,7 +53,7 @@ ht-degree: 2%
 
 列挙フィールドの場合、スキーマレジストリでは許可されていません `meta:enum` 以下に規定される値を超えて拡張される `enum`の代わりに、これらの制約の外部で文字列値を取り込もうとしても検証に合格しません。
 
-または、 `enum` 配列で、 `meta:enum` オブジェクトは、推奨値を示します。
+または、 `enum` 配列で、 `meta:enum` 示すオブジェクト **推奨値**:
 
 ```json
 "exampleStringField": {
@@ -48,16 +67,13 @@ ht-degree: 2%
 }
 ```
 
-文字列には `enum` 制約を定義する配列 `meta:enum` プロパティを拡張して、新しい値を含めることができます。 このチュートリアルでは、スキーマレジストリ API で標準およびカスタム文字列フィールドに推奨値を追加する方法について説明します。
+文字列には `enum` 制約を定義する配列 `meta:enum` プロパティを拡張して、新しい値を含めることができます。
 
-## 前提条件
+## 標準フィールドの推奨値の管理
 
-このガイドは、XDM のスキーマ構成の要素と、スキーマレジストリ API を使用して XDM リソースを作成および編集する方法について詳しいことを前提としています。 紹介が必要な場合は、次のドキュメントを参照してください。
+既存の標準フィールドに対して、次の操作を実行できます。 [推奨値を追加](#add-suggested-standard) または [推奨値を削除](#remove-suggested-standard).
 
-* [スキーマ構成の基本](../schema/composition.md)
-* [Schema Registry API ガイド](../api/overview.md)
-
-## 標準フィールドに推奨値を追加する
+### 推奨値を追加 {#add-suggested-standard}
 
 を拡張するには、以下を実行します。 `meta:enum` 標準の文字列フィールドの [わかりやすい名前記述子](../api/descriptors.md#friendly-name) 特定のスキーマの問題になっているフィールドに対して。
 
@@ -135,9 +151,71 @@ curl -X POST \
 >}
 >```
 
-## カスタムフィールドに推奨値を追加する
+### 推奨値を削除 {#remove-suggested-standard}
 
-を拡張するには、以下を実行します。 `meta:enum` カスタムフィールドの場合は、PATCHリクエストを通じて、フィールドの親クラス、フィールドグループ、またはデータ型を更新できます。
+標準の文字列フィールドに事前定義された推奨値がある場合、セグメント化で表示したくない値を削除できます。 これは、 [わかりやすい名前記述子](../api/descriptors.md#friendly-name) ( `xdm:excludeMetaEnum` プロパティ。
+
+**API 形式**
+
+```http
+POST /tenant/descriptors
+```
+
+**リクエスト**
+
+次のリクエストでは、推奨値&quot;[!DNL Web Form Filled Out]&quot;および&quot;[!DNL Media ping]」 `eventType` を [XDM ExperienceEvent クラス](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `@type` | 定義する記述子のタイプ。わかりやすい名前記述子の場合、この値をに設定する必要があります。 `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
+| `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
+| `xdm:sourceProperty` | 推奨値を管理する特定のプロパティへのパス。 パスはスラッシュ (`/`) で終わらず、1 で終わる。 次を含めない `properties` パス内 ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
+| `meta:excludeMetaEnum` | セグメント化のフィールドに対して除外する必要がある推奨値を示すオブジェクト。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**応答**
+
+応答が成功すると、HTTP ステータス 201（作成済み）と、新しく作成された記述子の詳細が返されます。以下に含まれる推奨値 `xdm:excludeMetaEnum` がセグメント化 UI で非表示になるようになりました。
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## カスタムフィールドの推奨値の管理 {#suggested-custom}
+
+次の手順で `meta:enum` カスタムフィールドの場合は、PATCHリクエストを通じて、フィールドの親クラス、フィールドグループ、またはデータ型を更新できます。
 
 >[!WARNING]
 >
@@ -198,4 +276,4 @@ curl -X PATCH \
 
 ## 次の手順
 
-このガイドでは、スキーマレジストリ API で文字列フィールドに推奨値を追加する方法について説明しました。 詳しくは、 [API でのカスタムフィールドの定義](./custom-fields-api.md) 様々なフィールドタイプの作成方法の詳細については、を参照してください。
+このガイドでは、スキーマレジストリ API で文字列フィールドの推奨値を管理する方法について説明しました。 詳しくは、 [API でのカスタムフィールドの定義](./custom-fields-api.md) 様々なフィールドタイプの作成方法の詳細については、を参照してください。
