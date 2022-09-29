@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
+source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
 workflow-type: tm+mt
-source-wordcount: '3106'
-ht-degree: 30%
+source-wordcount: '3124'
+ht-degree: 29%
 
 ---
 
@@ -158,7 +158,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [Campaign の概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [Campaign の概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). この統合は、Adobe Campaignバージョン 8.4 以降で機能します。 バージョン 8.4 のリリースは 2022 年 9 月 30 日 (PT) に予定されています。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
 
 {style=&quot;table-layout:auto&quot;}
