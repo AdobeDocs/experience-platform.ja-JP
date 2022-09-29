@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform ユーザーインターフェイス内のカスタムアクセシビリティソリューションについて詳しく説明します。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 97%
+source-wordcount: '1615'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,10 @@ Experience Platform ユーザーインターフェイス内のすべてのテー
 * セグメントビルダー UI には、キーボードナビゲーションでアクセスできます。
 * スクリーンリーダーは、見出しのマークアップタグを認識し、見出しとそのレベルを音声で知らせることができます。
 * その他の支援テクノロジーでは、適切にコード化された見出しを使用してページの視覚的表示を変更し、アウトライン表示や代替表示を行うことができます。
+
+セグメントビルダーキャンバスの左右のレールを折りたたんだり展開したりして、より多くの画面領域を得られるようになりました。 この機能は、200%ズームで完全な機能を提供するので、特に便利です。
+
+![左右のレール開示ウィジェットがハイライトされたセグメントビルダーキャンバス。](images/left-right-rail-expandables.png)
 
 ## クエリサービスエディター
 
