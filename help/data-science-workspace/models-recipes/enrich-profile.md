@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、リアルタイム顧客プロファイルと機械学習のインサイトを強化する方法に関するガイドを提供します。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 24%
+source-wordcount: '577'
+ht-degree: 15%
 
 ---
 
 # 強化 [!DNL Real-time Customer Profile] 機械学習のインサイト
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習のインサイトが [!DNL Profile]-enabled データセット。同じデータも [!DNL Profile] 次を使用してセグメント化できるレコード： [!DNL Adobe Experience Platform Segmentation Service]. プロファイルと時系列データが取得されると、リアルタイム顧客プロファイルは、既存のデータと結合して和集合表示を更新する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをセグメントに含めるか除外するかを自動的に決定します。その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。
+Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習のインサイトが [!DNL Profile]-enabled データセット。同じデータも [!DNL Profile] 次を使用してセグメント化できるレコード： [!DNL Adobe Experience Platform Segmentation Service].
 
 このドキュメントでは、 [!DNL Real-time Customer Profile] を機械学習のインサイトと共に使用します。
 
