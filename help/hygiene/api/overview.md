@@ -2,10 +2,10 @@
 title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 73%
+source-wordcount: '403'
+ht-degree: 70%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
+>現在、Adobe Experience Platformのデータ衛生機能は、Adobeヘルスケアシールドまたはプライバシーシールドを購入した組織でのみ使用できます。
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存された顧客の個人データをプログラムで修正または削除したり、データセットの有効期限をスケジュール設定したりできます。このガイドでは、API を使用するための前提条件の手順を説明し、よりエンドポイントに特化したドキュメントへのリンクを提供します。
 
@@ -44,10 +44,6 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 データセットの有効期限は、時間差の「データセットの削除」アクションです。データセットの有効期限を作成すると、そのデータセットが削除されるべき将来の時間を指定することになります。API でのデータセット有効期限のスケジュール設定について詳しくは、[データセット有効期限のエンドポイントガイド](./dataset-expiration.md)を参照してください。
 
 ## 消費者の削除
-
->[!NOTE]
->
->消費者の削除は、Privacy Shield または Privacy Shield を購入したAdobeでのみ利用できます。
 
 データ衛生 API を使用すると、1 つまたはすべてのデータセットにわたって、消費者 ID に関連付けられたすべてのレコードを削除できます。 消費者 ID を削除するすべてのデータ衛生タスクは、作業順序と呼ばれる構成体によって表されます。 詳しくは、 [作業順序エンドポイントガイド](./workorder.md) を参照してください。
 
