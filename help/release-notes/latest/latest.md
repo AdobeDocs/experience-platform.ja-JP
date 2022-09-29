@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2776'
-ht-degree: 30%
+source-wordcount: '2959'
+ht-degree: 31%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [監査ログ](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [クエリサービス](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 {style=&quot;table-layout:auto&quot;}
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| Destination SDK | Destination SDKは、製品化されたバッチ（またはファイルベース）の宛先やプライベートの宛先を作成する、パートナーやお客様に対して完全なサポートを提供するようになりました。 詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDKの概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新しい宛先または更新された宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新規または更新されたドキュメント**
+
+| ドキュメント | 説明 |
+| ----------- | ----------- |
+| 宛先フローサービス API ドキュメント | この [宛先 API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、ファイルベースの宛先での操作の実行方法に関するガイダンスを含むように更新されました。 ストリーミング先の操作は、後で追加されます。 |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
