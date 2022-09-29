@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
-ht-degree: 8%
+source-wordcount: '4154'
+ht-degree: 7%
 
 ---
 
@@ -123,6 +123,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL オーディエンスサイズ]](#audiences-size)
 * [[!UICONTROL 結合ポリシーによるオーディエンスの重複]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL オーディエンスの重複レポート]](#audience-overlap-report)
 
 ### [!UICONTROL プロファイル数] {#profile-count}
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL オーディエンスの重複レポート] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+このウィジェットは、結合ポリシーでフィルタリングされたすべての使用可能なセグメントから、オーディエンスの重複データを表にします。 画面上部のドロップダウンメニューで選択した結合ポリシーに対して、重複の高い順にランク付けされた 5 つのオーディエンスのリストが表示されます。 分析された 2 つのセグメントが、 [!UICONTROL セグメント名] および [!UICONTROL セグメント B 名] 列。 重複率は、3 番目の列の小数点以下 12 桁までの精度で表示されます。
+
+オーディエンスの重複レポートは、新しい高パフォーマンスのセグメントを作成するのに役立ちます。 重複率が高いを観察することで、オーディエンスを抑制し、同じオーディエンスが異なる宛先に送信されるのを防ぐことができます。 また、セグメント化の改善に役立つ隠れたインサイトを特定するのに役立ちます。 重複率が低いと、追跡する固有のプロファイルを見つけるのに役立ちます。
+
+選択 **[!UICONTROL さらに表示]** をクリックすると、オーディエンスの重複データが多いフルスクリーンダイアログが開きます。
+
+![「オーディエンスの重複」レポートウィジェットの、「表示」のハイライトがさらに強調表示されます。](../images/profiles/profiles-audience-overlap-report.png)
+
+この [!UICONTROL オーディエンスの重複レポート] ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。 設定アイコン (![設定アイコン。](../images/profiles/settings-icon.png)) をクリックして、テーブルから列を削除または追加します。
+
+![オーディエンスの重複レポートダイアログ。](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>を選択します。 **[!UICONTROL 重複]** 列ヘッダーを使用して、結果のランクを最も高い順または最も低い順に変更できます。
+
+レポート全体をオプション形式でPDFするには、オプションメニュー (**`...`**) に続いて **[!UICONTROL ダウンロード]**.
+
+![省略記号と「ダウンロード」オプションがハイライトされたオーディエンス重複レポートダイアログ。](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+レポートから行を選択して、重複分析のベン図を開きます。 ベン図のセクションの上にマウスポインターを置くと、ダイアログでプロファイル数が表示されます。
+
+![オーディエンスの重複レポートダイアログに、ベン図と行がハイライト表示されています。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+選択 **[!UICONTROL 閉じる]** に戻る [!UICONTROL プロファイル] ダッシュボード。
 
 ### [!UICONTROL 宛先ステータスにマッピングされたオーディエンス] {#audiences-mapped-to-destination-status}
 
