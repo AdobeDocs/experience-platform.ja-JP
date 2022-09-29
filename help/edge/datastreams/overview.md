@@ -3,10 +3,10 @@ title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 95%
+source-wordcount: '1789'
+ht-degree: 92%
 
 ---
 
@@ -20,29 +20,29 @@ ht-degree: 95%
 
 データ収集 UI またはExperience PlatformUI で、データストリームを作成および管理するには、 **[!UICONTROL データストリーム]** をクリックします。
 
-![UI の「データストリーム」タブ](../images/datastreams/overview/datastreams-tab.png)
+![UI の「データストリーム」タブ](../assets/datastreams/overview/datastreams-tab.png)
 
 「[!UICONTROL データストリーム]」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
 
 特定のデータストリームの「その他」アイコン（**...**）を選択して、その他のオプションを表示します。データストリームの[基本設定](#configure)を更新するには&#x200B;**[!UICONTROL 編集]**&#x200B;を選択し、データストリームを削除するには&#x200B;**[!UICONTROL 削除]**&#x200B;を選択します。
 
-![既存のデータストリームを編集または削除するためのオプション](../images/datastreams/overview/edit-datastream.png)
+![既存のデータストリームを編集または削除するためのオプション](../assets/datastreams/overview/edit-datastream.png)
 
 ## 新しいデータストリームの作成 {#create}
 
 データストリームを作成するには、最初に「**[!UICONTROL 新規データストリーム]**」を選択します。
 
-![新しいデータストリームを選択](../images/datastreams/overview/new-datastream-button.png)
+![新しいデータストリームを選択](../assets/datastreams/overview/new-datastream-button.png)
 
 設定手順から始まる、データストリーム作成ワークフローが表示されます。ここから、データストリームの名前およびオプションで説明を指定する必要があります。
 
 Experience Platform で使用するためにこのデータストリームを設定していて、Platform Web SDK を使用している場合、取り込みを予定しているデータを表すために、[イベントベースのエクスペリエンスデータモデル（XDM）スキーマ](../../xdm/classes/experienceevent.md)も選択する必要があります。
 
-![データストリームの基本設定](../images/datastreams/overview/configure.png)
+![データストリームの基本設定](../assets/datastreams/overview/configure.png)
 
 「**[!UICONTROL 詳細オプション]**」を選択して、データストリームを設定するための追加のコントロールを表示します。
 
-![詳細設定オプション](../images/datastreams/overview/advanced-options.png)
+![詳細設定オプション](../assets/datastreams/overview/advanced-options.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -57,7 +57,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 新しいデータストリームを設定したり、表示するために既存のデータストリームを選択したりすると、そのデータストリームの詳細ページが表示されます。ここでは、データストリームの詳細情報（ID など）を確認できます。
 
-![作成されたデータストリームの詳細ページ](../images/datastreams/overview/view-details.png)
+![作成されたデータストリームの詳細ページ](../assets/datastreams/overview/view-details.png)
 
 データストリームの詳細画面から、[サービスを追加](#add-services)して、アクセス権のある Adobe Experience Cloud 製品の機能を有効にできます。また、データストリームの[基本設定](#create)を編集したり、その[マッピングルール](./data-prep.md)を更新したり、[データストリームをコピー](#copy)したり、完全に削除したりできます。
 
@@ -65,15 +65,15 @@ Experience Platform で使用するためにこのデータストリームを設
 
 データストリームの詳細ページで、「**[!UICONTROL サービスを追加]**」を選択して、そのデータストリームで使用可能なサービスの追加を開始します。
 
-![「サービスを追加」を選択して続行](../images/datastreams/overview/add-service.png)
+![「サービスを追加」を選択して続行](../assets/datastreams/overview/add-service.png)
 
 次の画面で、ドロップダウンメニューを使用して、このデータストリームで設定するサービスを選択します。アクセス権のあるサービスのみが、このリストに表示されます。
 
-![リストからサービスを選択](../images/datastreams/overview/service-selection.png)
+![リストからサービスを選択](../assets/datastreams/overview/service-selection.png)
 
 目的のサービスを選択し、表示される設定オプションに入力してから、「**[!UICONTROL 保存]**」を選択してデータストリームにサービスを追加します。データストリームの詳細表示に、追加されたすべてのサービスが表示されます。
 
-![データストリームに追加されたサービス](../images/datastreams/overview/services-added.png)
+![データストリームに追加されたサービス](../assets/datastreams/overview/services-added.png)
 
 次の項では、各サービスの設定オプションを説明します。
 
@@ -85,7 +85,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 このサービスは、Adobe Analytics にデータを送信するかどうかと、どのように送信するかを制御します。追加情報については、[Analytics へのデータの送信](../data-collection/adobe-analytics/analytics-overview.md)に関するガイドを参照してください。
 
-![Adobe Analytics 設定ブロック](../images/datastreams/overview/analytics-config.png)
+![Adobe Analytics 設定ブロック](../assets/datastreams/overview/analytics-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -95,7 +95,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 このサービスは、Adobe Audience Manager にデータを送信するかどうかと、どのように送信するかを制御します。Audience Manager にデータを送信するために必要なのは、このセクションを有効にすることだけです。その他の設定は、オプションですが推奨されます。
 
-![Adobe Audience Manage 設定ブロック](../images/datastreams/overview/audience-manager-config.png)
+![Adobe Audience Manage 設定ブロック](../assets/datastreams/overview/audience-manager-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -108,27 +108,28 @@ Experience Platform で使用するためにこのデータストリームを設
 >
 >Platform のデータストリームを有効にする場合は、UI の上部のリボンに表示されるように、現在使用している Platform サンドボックスをメモしておきます。
 >
->![選択されたサンドボックス](../images/datastreams/overview/platform-sandbox.png)
+>![選択されたサンドボックス](../assets/datastreams/overview/platform-sandbox.png)
 >
 >サンドボックスは、Adobe Experience Platform の仮想パーティションで、組織内の他のユーザーからデータおよび実装を分離できます。一旦データストリームが作成されると、そのサンドボックスは変更できません。Experience Platform のサンドボックスの役割について詳しくは、[サンドボックスのドキュメント](../../sandboxes/home.md)を参照してください。
 
 このサービスは、Adobe Experience Platform にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![Adobe Experience Platform 設定ブロック](../images/datastreams/overview/platform-config.png)
+![Adobe Experience Platform 設定ブロック](../assets/datastreams/overview/platform-config.png)
 
 | 設定 | 説明 |
 |---| --- |
 | [!UICONTROL イベントデータセット] | **（必須）**&#x200B;顧客イベントデータのストリーミング先となる Platform データセットを選択します。このスキーマは、[XDM ExperienceEvent クラス](../../xdm/classes/experienceevent.md)を使用する必要があります。 |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となる Platform データセットを選択します。このスキーマは、[XDM Individual Profile クラス](../../xdm/classes/individual-profile.md)を使用する必要があります。 |
-| [!UICONTROL Offer Decisioning] | このチェックボックスを選択して、Platform Web SDK 実装用の Offer Decisioning を有効にします。実装について詳しくは、[Platform Web SDK での Offer Decisioning の使用](../personalization/offer-decisioning/offer-decisioning-overview.md)に関するガイドを参照してください。Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja)を参照してください。 |
-| [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、[次のページパーソナライゼーションのユースケース](../../destinations/ui/configure-personalization-destinations.md)の[!UICONTROL パーソナライゼーションの宛先]と組み合わせて使用できます。 |
-| [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジセグメント化]」チェックボックスを有効にした後でこの項目を有効にすると、[カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)などのパーソナライゼーションの宛先にデータストリームが接続できるようになります。[パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
+| [!UICONTROL Offer Decisioning] | このチェックボックスを選択して、Platform Web SDK 実装用の Offer Decisioning を有効にします。実装について詳しくは、[Platform Web SDK での Offer Decisioning の使用](../personalization/offer-decisioning/offer-decisioning-overview.md)に関するガイドを参照してください。<br><br>Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja)を参照してください。 |
+| [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、 [!UICONTROL パーソナライズ機能の宛先] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md)または [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジセグメント化]」チェックボックスを有効にした後でこの項目を有効にすると、[カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)などのパーソナライゼーションの宛先にデータストリームが接続できるようになります。<br><br>[パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
+| [!UICONTROL Adobe Journey Optimizer] | 有効にするには、このチェックボックスを選択します [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) このデータストリーム用。 <br><br> このオプションを有効にすると、データストリームが [!DNL Adobe Journey Optimizer]. このオプションを使用するには、 [!UICONTROL エッジセグメント化] をアクティブにします。 If [!UICONTROL エッジセグメント化] がオフの場合、このオプションはグレー表示されます。 |
 
 ### Adobe Target 設定 {#target}
 
 このサービスは、Adobe Target にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![Adobe Target 設定ブロック](../images/datastreams/overview/target-config.png)
+![Adobe Target 設定ブロック](../assets/datastreams/overview/target-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -140,7 +141,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 このサービスは、[イベント転送](../../tags/ui/event-forwarding/overview.md)にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![設定 UI の「イベント転送」セクション](../images/datastreams/overview/event-forwarding-config.png)
+![設定 UI の「イベント転送」セクション](../assets/datastreams/overview/event-forwarding-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -161,15 +162,15 @@ Experience Platform で使用するためにこのデータストリームを設
 
 [!UICONTROL データストリーム]ワークスペースのメインページから、当該データストリームの省略記号（**...**）を選択してから、「**[!UICONTROL コピー]**」を選択します。
 
-![データストリームリスト表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](../images/datastreams/overview/copy-datastream-list.png)
+![データストリームリスト表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](../assets/datastreams/overview/copy-datastream-list.png)
 
 または、指定されたデータストリームの詳細表示から「**[!UICONTROL データストリームをコピー]**」を選択することもできます。
 
-![データストリームの詳細表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](../images/datastreams/overview/copy-datastream-details.png)
+![データストリームの詳細表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](../assets/datastreams/overview/copy-datastream-details.png)
 
 作成する新しいデータストリームの一意の名前を指定するよう促す確認ダイアログが表示され、上書きされる設定オプションに関する詳細が表示されます。準備ができたら、「**[!UICONTROL コピー]**」を選択します。
 
-![データストリームのコピーに関する確認ダイアログの画像](../images/datastreams/overview/copy-datastream-confirm.png)
+![データストリームのコピーに関する確認ダイアログの画像](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 [!UICONTROL データストリーム]ワークスペースのメインページが再表示され、新しいデータストリームがリスト表示されます。
 

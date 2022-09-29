@@ -2,7 +2,7 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 96%
@@ -132,7 +132,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 オブジェクトをファイルとしてアップロードするオプションを選択するか、提供されたテキストボックスに生のオブジェクトを代わりに貼り付けることができます。JSON が有効な場合、右側のパネルにプレビュースキーマが表示されます。「**[!UICONTROL 次へ]**」をクリックして続行します。
 
-![期待される受信データの JSON サンプル](../images/datastreams/data-prep/select-data.png)
+![期待される受信データの JSON サンプル](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL マッピング]
 
@@ -145,25 +145,25 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 開始するには、「**[!UICONTROL 新しいマッピングを追加]**」を選択して、新しいマッピング行を作成します。
 
-![新しいマッピングの追加](../images/datastreams/data-prep/add-new-mapping.png)
+![新しいマッピングの追加](../assets/datastreams/data-prep/add-new-mapping.png)
 
-ソースアイコン（![ソースアイコン](../images/datastreams/data-prep/source-icon.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL 選択]**」ボタンを使用して続行します。
+ソースアイコン（![ソースアイコン](../assets/datastreams/data-prep/source-icon.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL 選択]**」ボタンを使用して続行します。
 
-![ソーススキーマのマッピングされるフィールドを選択](../images/datastreams/data-prep/source-mapping.png)
+![ソーススキーマのマッピングされるフィールドを選択](../assets/datastreams/data-prep/source-mapping.png)
 
-次に、スキーマアイコン（![スキーマアイコン](../images/datastreams/data-prep/schema-icon.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、「**[!UICONTROL 選択]**」で確定します。
+次に、スキーマアイコン（![スキーマアイコン](../assets/datastreams/data-prep/schema-icon.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、「**[!UICONTROL 選択]**」で確定します。
 
-![ターゲットスキーマのマッピングされるフィールドを選択](../images/datastreams/data-prep/target-mapping.png)
+![ターゲットスキーマのマッピングされるフィールドを選択](../assets/datastreams/data-prep/target-mapping.png)
 
 マッピングページが再表示され、完成したフィールドマッピングが表示されます。「**[!UICONTROL マッピングの進行状況]**」セクションが更新され、正常にマッピングされたフィールドの合計数が反映されます。
 
-![フィールドが正常にマッピングされ、進行状況が反映された](../images/datastreams/data-prep/field-mapped.png)
+![フィールドが正常にマッピングされ、進行状況が反映された](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >オブジェクトの配列（ソースフィールド）を異なるオブジェクトの配列（ターゲットフィールド）にマッピングする場合は、次に示すように、ソースフィールドとターゲットフィールドのパスの配列名の後に `[*]` を追加します。
 >
->![配列オブジェクトのマッピング](../images/datastreams/data-prep/array-object-mapping.png)
+>![配列オブジェクトのマッピング](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### 既存のマッピングルールを読み込む {#import-mapping}
 
@@ -175,11 +175,11 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 開始するには、「**[!UICONTROL マッピングをインポート]**」を選択します。
 
-![「[!UICONTROL マッピングをインポート]」ボタンが選択されていることを示す画像](../images/datastreams/data-prep/import-mapping-button.png)
+![「[!UICONTROL マッピングをインポート]」ボタンが選択されていることを示す画像](../assets/datastreams/data-prep/import-mapping-button.png)
 
 表示されるダイアログで、マッピングルールを読み込むデータストリームを選択します。データストリームを選択したら、「**[!UICONTROL プレビュー]**」を選択します。
 
-![既存のデータストリームが選択されていることを示す画像](../images/datastreams/data-prep/select-mapping-rules.png)
+![既存のデータストリームが選択されていることを示す画像](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 次の画面に、選択したデータストリームの保存されたマッピングルールのプレビューを示します。表示されたマッピングが期待どおりのものであることを確認してから、「**[!UICONTROL インポート]**」を選択して確定すると、新しいデータストリームにマッピングが追加されます。
 
-![読み込まれるマッピングルールを示す画像](../images/datastreams/data-prep/import-mapping-rules.png)
+![読み込まれるマッピングルールを示す画像](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 必須フィールドのカウントがゼロになって、マッピングに満足したら、「**[!UICONTROL 保存]**」を選択して変更を確定します。
 
-![マッピング完了](../images/datastreams/data-prep/mapping-complete.png)
+![マッピング完了](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## 次の手順
 

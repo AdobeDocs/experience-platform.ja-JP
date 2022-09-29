@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK 拡張機能の設定
 description: UI でのAdobe Experience Platform Web SDK タグ拡張機能の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ Adobe Experience Platform Web SDK タグ拡張機能は、Adobe Experience Platf
 
 Platform Web SDK 拡張機能が既にプロパティ用にインストールされている場合は、UI でプロパティを開き、 **[!UICONTROL 拡張機能]** タブをクリックします。 Platform Web SDK で、を選択します。 **[!UICONTROL 設定]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 拡張機能をまだインストールしていない場合は、「 **[!UICONTROL カタログ]** タブをクリックします。 使用可能な拡張機能のリストから、Platform Web SDK 拡張機能を探し、「 」を選択します。 **[!UICONTROL インストール]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 どちらの場合も、Platform Web SDK の設定ページに到達します。 以下の節では、拡張機能の設定オプションについて説明します。
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## 一般的な設定オプション
 
@@ -56,7 +56,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 ## [!UICONTROL プライバシー]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 この [!UICONTROL プライバシー] 「 」セクションでは、SDK による Web サイトからのユーザー同意シグナルの処理方法を設定できます。 特に、他の明示的な同意の環境設定が指定されていない場合に、ユーザーが想定するデフォルトの同意レベルを選択できます。 デフォルトの同意レベルは、ユーザーのプロファイルに保存されません。 次の表に、各オプションの詳細を示します。
 
@@ -71,7 +71,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 ## [!UICONTROL ID]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL VisitorAPI から ECID を移行する]
 
@@ -83,13 +83,13 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 ## [!UICONTROL パーソナライゼーション]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 パーソナライズされたコンテンツが読み込まれる際に、サイトで特定のパーツを非表示にする場合は、事前非表示のスタイルエディターで非表示にする要素を指定できます。 次に、提供されたデフォルトの事前非表示スニペットをコピーし、 `<head>`HTMLサイトの要素。
 
 ## [!UICONTROL データ収集]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL コールバック関数]
 
@@ -105,7 +105,7 @@ SDK は、自動的にリンククリック情報を収集できます。 デフ
 
 ## [!UICONTROL 詳細設定]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL エッジの基本パス]
 

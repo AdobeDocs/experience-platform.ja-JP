@@ -2,7 +2,7 @@
 title: タグと Platform Web SDK 拡張機能を使用した IAB TCF 2.0 の統合
 description: タグとAdobe Experience Platform Web SDK 拡張機能を使用して IAB TCF 2.0 同意を設定する方法について説明します。
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -64,7 +64,7 @@ addEventListener();
 * 値：&quot;%IAB TCF Consent String%&quot;
 * GDPR が適用される：&quot;%IAB TCF Consent GDPR%&quot;
 
-![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![IAB Set Consent Action](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
