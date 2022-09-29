@@ -5,9 +5,9 @@ title: UI で列挙フィールドと推奨値を定義する
 description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法を説明します。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ An **enum** 文字列フィールドに取り込める値を事前定義済み�
 
 ![UI で「推奨値」オプションが選択されている画像](../../images/ui/fields/enum/suggested-add-row.png)
 
-以下 **[!UICONTROL 表示名]** 列に、セグメント化 UI に表示する値のわかりやすい名前を指定します。 その他の推奨値を追加するには、「 **[!UICONTROL 行を追加]** 必要に応じて、この手順を繰り返します。 以前に追加した行を削除するには、削除アイコン (![削除アイコンの画像](../../images/ui/fields/enum/remove-icon.png)) をクリックします。
+以下 **[!UICONTROL 表示名]** 列に、セグメント化 UI に表示する値のわかりやすい名前を指定します。 その他の推奨値を追加するには、「 **[!UICONTROL 行を追加]** 必要に応じて、この手順を繰り返します。 以前に追加した行を削除するには、 ![削除アイコン](../../images/ui/fields/enum/remove-icon.png) 問題の行の横に表示されます。
 
 終了したら、「 」を選択します。 **[!UICONTROL 適用]** をクリックして、変更をスキーマに適用します。
 
@@ -61,25 +61,25 @@ An **enum** 文字列フィールドに取り込める値を事前定義済み�
 
 ### 標準フィールドの推奨値の管理
 
-標準 XDM コンポーネントの一部のフィールドには、独自の推奨値 ( 例： `eventType` から [[!UICONTROL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). スキーマでこれらのフィールドを使用する場合、使用可能なトグルを使用して、使用する既存の推奨値を制御できます。
+標準 XDM コンポーネントの一部のフィールドには、独自の推奨値 ( 例： `eventType` から [[!UICONTROL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). 標準フィールドの推奨値を追加で作成することはできますが、組織で定義されていない推奨値を変更または削除することはできません。 UI で標準フィールドを表示すると、推奨値は表示されますが、読み取り専用です。
 
 ![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-standard.png)
 
-カスタムフィールドと同様に、 **[!UICONTROL 行を追加]** をクリックして、標準フィールドに独自の推奨値を追加します。
+標準フィールドに新しい推奨値を追加するには、 **[!UICONTROL 行を追加]**. 組織で以前に追加された推奨値を削除するには、「 ![削除アイコン](../../images/ui/fields/enum/remove-icon.png) 問題の行の横に表示されます。
 
-![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-standard.png)
+![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### 標準フィールドの推奨値の削除
+<!-- ### Removing suggested values for standard fields
 
-標準フィールドから削除できるのは、定義した推奨値のみです。 既存の推奨値を無効にして、セグメント化ドロップダウンに表示されなくすることができますが、単に削除することはできません。
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-例えば、標準の `person.gender` フィールドは無効です：
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-この例では、「[!UICONTROL 非特定]「 」がセグメント化ドロップダウンリストに表示されなくなりました。 ただし、値 `non_specific` は、列挙フィールドのリストの一部なので、取り込み時にも使用できます。 つまり、標準フィールドの実際の列挙値は、フィールドの制限を緩和する変更のみを許可するという原則に反するので、無効にすることはできません。
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-詳しくは、 [以下の節](#evolution) ：列挙を更新するルールと、既存のスキーマフィールドに推奨される値について詳しくは、を参照してください。
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## 列挙と推奨値の変化ルール {#evolution}
 
@@ -109,6 +109,13 @@ An **enum** 文字列フィールドに取り込める値を事前定義済み�
 
 * その他の推奨値は次のとおりです。 **追加** 組合内で
 * 複数のスキーマで同じ追加の推奨値が定義されている場合、それらの値は次のようになります **マージ済み** 組合内で つまり、マージ後に同じ推奨値が 2 回表示されることはありません。
+
+## 検証の制限
+
+現在のシステムの制限により、取り込み中に列挙がシステムによって検証されない場合は 2 つあります。
+
+1. 列挙は [配列フィールド](./array.md).
+1. 列挙は、スキーマ階層内で複数のレベルで定義されています。
 
 ## 次の手順
 

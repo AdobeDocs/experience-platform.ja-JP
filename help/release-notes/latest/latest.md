@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 9 月
-description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
+title: Adobe Experience Platform リリースノート
+description: Adobe Experience Platform の最新のリリースノートです。
+source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
 workflow-type: tm+mt
-source-wordcount: '3080'
-ht-degree: 29%
+source-wordcount: '3079'
+ht-degree: 30%
 
 ---
 

@@ -2,10 +2,10 @@
 title: API での推奨値の管理
 description: スキーマレジストリ API の文字列フィールドに推奨値を追加する方法を説明します。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
+source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 6%
+source-wordcount: '658'
+ht-degree: 1%
 
 ---
 
@@ -69,11 +69,11 @@ API では、 **enum** フィールドは、 `enum` 配列、 `meta:enum` オブ
 
 文字列には `enum` 制約を定義する配列 `meta:enum` プロパティを拡張して、新しい値を含めることができます。
 
-## 標準フィールドの推奨値の管理
+<!-- ## Manage suggested values for standard fields
 
-既存の標準フィールドに対して、次の操作を実行できます。 [推奨値を追加](#add-suggested-standard) または [推奨値を削除](#remove-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### 推奨値を追加 {#add-suggested-standard}
+## 標準フィールドに推奨値を追加する {#add-suggested-standard}
 
 を拡張するには、以下を実行します。 `meta:enum` 標準の文字列フィールドの [わかりやすい名前記述子](../api/descriptors.md#friendly-name) 特定のスキーマの問題になっているフィールドに対して。
 
@@ -151,19 +151,19 @@ curl -X POST \
 >}
 >```
 
-### 推奨値を削除 {#remove-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-標準の文字列フィールドに事前定義された推奨値がある場合、セグメント化で表示したくない値を削除できます。 これは、 [わかりやすい名前記述子](../api/descriptors.md#friendly-name) ( `xdm:excludeMetaEnum` プロパティ。
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
-**API 形式**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**リクエスト**
+**Request**
 
-次のリクエストでは、推奨値&quot;[!DNL Web Form Filled Out]&quot;および&quot;[!DNL Media ping]」 `eventType` を [XDM ExperienceEvent クラス](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| プロパティ | 説明 |
+| Property | Description |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。わかりやすい名前記述子の場合、この値をに設定する必要があります。 `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
-| `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
-| `xdm:sourceProperty` | 推奨値を管理する特定のプロパティへのパス。 パスはスラッシュ (`/`) で終わらず、1 で終わる。 次を含めない `properties` パス内 ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
-| `meta:excludeMetaEnum` | セグメント化のフィールドに対して除外する必要がある推奨値を示すオブジェクト。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。 |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**応答**
+**Response**
 
-応答が成功すると、HTTP ステータス 201（作成済み）と、新しく作成された記述子の詳細が返されます。以下に含まれる推奨値 `xdm:excludeMetaEnum` がセグメント化 UI で非表示になるようになりました。
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -211,7 +211,7 @@ curl -X POST \
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## カスタムフィールドの推奨値の管理 {#suggested-custom}
 
