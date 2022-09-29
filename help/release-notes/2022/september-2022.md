@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: ec2e57d99da7ae34f2b210fcaff00097707edb2b
+source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
 workflow-type: tm+mt
-source-wordcount: '2959'
-ht-degree: 31%
+source-wordcount: '3042'
+ht-degree: 30%
 
 ---
 
@@ -126,14 +126,19 @@ Adobe Experience Platformは、毎日のスナップショットで取得した�
 
 Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
-**更新された機能**
+**新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
 | Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）も、Experience Platformの左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
 | タグとイベント転送のユーザー属性 | 使用可能なリストを表示する場合 [!UICONTROL プロパティ] タグとイベント転送で、リストされた各プロパティが最終更新日時と、更新をおこなったユーザーが表示されるようになりました。 |
+| [[!DNL User-Agent Client Hints] Web SDK の](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). クライアントヒントを使用すると、Web サイトの所有者は、 [!DNL User-Agent] 文字列に基づいて書き込まれますが、よりプライバシーを保持する方法で書き込まれます。 |
+| [ページ別の Web SDK の移行](../../edge/home.md#migrating-to-web-sdk) | 既存の Web プロパティを、次のような他のExperience Cloudライブラリから移行できるようになりました。 [!DNL at.js]を Web SDK に、一度に 1 ページずつ追加します。 これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
