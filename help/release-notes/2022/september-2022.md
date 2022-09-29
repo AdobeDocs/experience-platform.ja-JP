@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
+source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
 workflow-type: tm+mt
-source-wordcount: '3042'
-ht-degree: 30%
+source-wordcount: '3080'
+ht-degree: 29%
 
 ---
 
@@ -158,7 +158,8 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [Campaign の概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
