@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのウィジェットライブラリの概要
 description: このガイドでは、Adobe Experience Platform のウィジェットライブラリにアクセスする手順を説明します。
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 63%
+source-wordcount: '516'
+ht-degree: 56%
 
 ---
 
@@ -41,6 +41,12 @@ Adobe Experience Platform のユーザーインターフェイスでは、複数
 次の [!UICONTROL Widget ライブラリ]をクリックし、使用可能な標準またはカスタムウィジェットのリストから任意のウィジェットを選択します。 ウィジェットの隅にあるチェックマークは、選択内容を示します。
 
 ![選択したウィジェットとチェックマークがハイライト表示されたウィジェットライブラリ。](../images/customization/confirm-selected-widget-to-add.png)
+
+### 使用中のラベル {#in-use-label}
+
+ウィジェットが既にダッシュボードに追加されている場合、ウィジェットには [!UICONTROL 使用中] ウィジェットライブラリで表示した際に添付されるラベル。 このラベルは、重複を避けるために、ダッシュボードに既に追加されているウィジェットをハイライトします。 ただし、同じウィジェットを複数回追加することもできます。
+
+![使用中のラベルがハイライトされたウィジェットライブラリ。](../images/customization/in-use-label.png)
 
 必要なウィジェットをすべて選択したら、 **[!UICONTROL ウィジェットを追加]** をクリックして選択内容を確認し、ダッシュボードにウィジェットを追加します。
 
