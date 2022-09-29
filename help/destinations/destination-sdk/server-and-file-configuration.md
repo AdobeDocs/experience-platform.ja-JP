@@ -2,20 +2,16 @@
 description: ファイルベースの宛先のサーバーとファイル構成スペックは、Adobe Experience Platform Destination SDK で /destination-servers エンドポイントを介して構成できます。
 title: ファイルベースの宛先サーバー仕様の構成オプション
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 56%
+source-wordcount: '1248'
+ht-degree: 55%
 
 ---
 
 # ファイルベースの宛先サーバー仕様のサーバーとファイルの構成
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK を使用して、ファイルベースの宛先を構成および提出する機能は、現在ベータ版となっています。ドキュメントと機能は変更される場合があります。
 
 このページでは、ファイルベースの宛先サーバーのすべてのサーバー設定オプションの詳細を説明し、Experience Platformから宛先にファイルを書き出すユーザー向けの様々なファイル設定オプションの設定方法を示します。
 

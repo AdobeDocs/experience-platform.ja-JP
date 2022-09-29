@@ -2,9 +2,9 @@
 description: Destination SDKを使用して、事前に定義されたファイル形式オプションとカスタムファイル名設定を使用してAmazon S3 の宛先を設定する方法について説明します。
 title: 事前に定義されたファイル形式オプションとカスタムファイル名設定を使用して、Amazon S3 の宛先を設定します。
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '746'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # の設定 [!DNL Amazon S3] 定義済みのファイル形式オプションとカスタムファイル名設定を使用した宛先
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->現在、データを使用してファイルベースの宛先を設定する機能は、ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 このページでは、Destination SDKを使用して、事前に定義されたデフォルトのAmazon S3 の宛先を設定する方法について説明します [ファイル形式オプション](../../server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](../../file-based-destination-configuration.md#file-name-configuration).
 

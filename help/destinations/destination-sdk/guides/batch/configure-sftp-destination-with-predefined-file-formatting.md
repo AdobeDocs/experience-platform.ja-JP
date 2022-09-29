@@ -2,9 +2,9 @@
 description: Destination SDKを使用して、事前に定義されたファイル形式オプションとカスタムファイル名設定を使用して SFTP の宛先を設定する方法について説明します。
 title: 事前に定義されたファイル形式オプションとカスタムファイル名設定を使用して、SFTP の宛先を設定します。
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '740'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # 事前に定義されたファイルフォーマットオプションとカスタムファイル名設定を使用して SFTP の宛先を設定する
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->現在、データを使用してファイルベースの宛先を設定する機能は、ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 このページでは、Destination SDKを使用して、事前に定義されたデフォルトの SFTP の宛先を設定する方法について説明します [ファイル形式オプション](../../server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](../../file-based-destination-configuration.md#file-name-configuration).
 

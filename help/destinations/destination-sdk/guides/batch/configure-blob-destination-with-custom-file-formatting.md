@@ -2,9 +2,9 @@
 description: Destination SDKを使用して、カスタムファイルフォーマットオプションとカスタムファイル名設定を使用して Azure BLOB ストレージの宛先を設定する方法を説明します。
 title: カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して、Azure Blob ストレージの宛先を構成します。
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '742'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # の設定 [!DNL Azure Blob Storage] カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用した宛先
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->現在、データを使用してファイルベースの宛先を設定する機能は、ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 このページでは、Destination SDKを使用して [!DNL Azure Blob Storage] カスタムの宛先 [ファイル形式オプション](../../server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](../../file-based-destination-configuration.md#file-name-configuration).
 

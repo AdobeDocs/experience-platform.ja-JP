@@ -2,20 +2,16 @@
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: Destination SDKを使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 84%
+source-wordcount: '516'
+ht-degree: 83%
 
 ---
 
 # Destination SDKを使用したファイルベースの宛先の設定
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK を使用して、ファイルベースの宛先を構成および提出する機能は、現在ベータ版となっています。ドキュメントと機能は変更される場合があります。
 
 このページでは、[Destinations SDK の設定オプション](./configuration-options.md)および他の Destination SDK 機能と API リファレンスドキュメントに記載された情報を使用して[ファイルベースの宛先](../../destinations/destination-types.md#file-based)を設定する方法を説明します。以下にその手順を、順を追って説明します。
 

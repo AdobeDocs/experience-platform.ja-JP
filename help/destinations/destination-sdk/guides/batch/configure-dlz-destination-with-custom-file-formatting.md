@@ -2,20 +2,16 @@
 description: Destination SDKを使用して、カスタムのファイル形式オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する方法を説明します。
 title: カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成します。
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 11%
+source-wordcount: '739'
+ht-degree: 10%
 
 ---
 
 # の設定 [!DNL Data Landing Zone (DLZ)] カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用した宛先
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->現在、データを使用してファイルベースの宛先を設定する機能は、ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 このページでは、Destination SDKを使用して [!DNL Data Landing Zone] カスタムの宛先 [ファイル形式オプション](../../server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](../../file-based-destination-configuration.md#file-name-configuration).
 
