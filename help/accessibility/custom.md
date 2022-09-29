@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform ユーザーインターフェイス内のカスタムアクセシビリティソリューションについて詳しく説明します。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: e30e04453bd814de103cceb14e3580992436923d
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 100%
+source-wordcount: '1568'
+ht-degree: 97%
 
 ---
 
@@ -96,6 +96,9 @@ Experience Platform ユーザーインターフェイス内のすべてのテー
 * 行が選択されているかフォーカスされているときに、その行で **Enter** キーを押すと、右側のパネルに詳細が表示されます。
 * 行が選択されているかフォーカスされているときは、 **矢印キー** を使用して行内の各項目間を移動できます。
 * **Enter** キーを押すと、行内の項目を選択できます。スクリーンリーダーを使用しているユーザーは、新しいウィンドウを開く必要がある場合に警告を受けます。
+* 200%以上にズームすると、 **鉄道検査官** アイコンが折りたたまれて、テーブルの表示スペースが広がります。
+
+![ユーザーが 200%にズームしたときにフォーカスされたレールインスペクターアイコン。](images/rail-inspector.png)
 
 ### テーブルのキーボードアクセシビリティの参照
 
