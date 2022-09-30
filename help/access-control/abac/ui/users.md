@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ユーザーの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してユーザーとユーザーグループを管理する方法について説明します
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 18%
+source-wordcount: '160'
+ht-degree: 2%
 
 ---
 
 # ユーザー管理
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 ユーザーの詳細と割り当てられているロールを表示する場合は、 **[!UICONTROL ユーザー]** タブをクリックします。
 

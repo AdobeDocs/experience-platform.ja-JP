@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ロールの権限の管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してロールの権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 10%
+source-wordcount: '899'
+ht-degree: 7%
 
 ---
 
 # ロールの権限の管理
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 >[!IMPORTANT]
 >

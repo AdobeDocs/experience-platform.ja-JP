@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ロールの作成
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用した役割の管理について説明します
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 6%
+source-wordcount: '511'
+ht-degree: 0%
 
 ---
 
 # 役割の管理
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 役割は、管理者、スペシャリスト、またはエンドユーザーが組織のリソースに対して持つアクセス権を定義します。 役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責務とニーズを通じてグループ化されます。 ロールには、特定の権限のセットがあり、組織のメンバーは、必要な表示または書き込みアクセスの範囲に応じて、1 つ以上のロールに割り当てることができます。
 

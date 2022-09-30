@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ポリシーの作成
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してポリシーを管理する方法について説明します
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 5%
+source-wordcount: '661'
+ht-degree: 0%
 
 ---
 
 # ポリシーの管理
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 ポリシーとは、属性を統合して、許容される許容されるアクションと許容されないアクションを確立するステートメントです。 ポリシーは、ローカルまたはグローバルに設定でき、他のポリシーを上書きできます。
 

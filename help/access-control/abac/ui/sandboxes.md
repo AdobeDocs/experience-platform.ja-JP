@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御サンドボックス
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用したサンドボックスの管理について説明します
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 32%
+source-wordcount: '217'
+ht-degree: 23%
 
 ---
 
 # サンドボックスの管理
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションで、デジタルエクスペリエンスアプリケーションの開発プロセスとシームレスに統合できます。サンドボックス内で実行されるすべてのコンテンツとアクションは、そのサンドボックスのみに限定され、他のサンドボックスには影響しません。サンドボックスについて詳しくは、 [サンドボックスの概要](../../../sandboxes/home.md).
 

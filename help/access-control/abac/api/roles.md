@@ -4,18 +4,14 @@ solution: Experience Platform
 title: 役割 API エンドポイント
 description: 属性ベースのアクセス制御 API の/roles エンドポイントを使用すると、Adobe Experience Platformの役割をプログラムで管理できます。
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 11%
+source-wordcount: '1583'
+ht-degree: 10%
 
 ---
 
 # 役割エンドポイント
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、米国を拠点とするヘルスケア関連のお客様向けの限定リリースで利用できます。この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
 
 役割は、管理者、スペシャリスト、またはエンドユーザーが組織のリソースに対して持つアクセス権を定義します。 役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責務とニーズを通じてグループ化されます。 ロールには、特定の権限のセットがあり、組織のメンバーは、必要な表示または書き込みアクセスの範囲に応じて、1 つ以上のロールに割り当てることができます。
 
