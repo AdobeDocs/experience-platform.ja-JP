@@ -2,9 +2,9 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDKのファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
+source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '2989'
 ht-degree: 59%
 
 ---
@@ -727,30 +727,33 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 
 ### 必須マッピング {#required-mappings}
 
-スキーマ設定内で、必要な（または定義済みの）マッピングを追加するオプションがあります。 これらは、ユーザーが表示できるが、宛先への接続を設定した際に変更できないマッピングです。 例えば、電子メールアドレスフィールドを強制的に適用して、エクスポートされたファイル内の宛先に常に送信することができます。 以下に、必要なマッピングを含むスキーマ設定の例と、 [バッチ保存先へのデータのアクティブ化ワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md).
+スキーマ設定内で、必要な（または定義済みの）マッピングを追加するオプションがあります。 これらは、ユーザーが表示できるが、宛先への接続を設定した際に変更できないマッピングです。 例えば、電子メールアドレスフィールドを強制的に適用して、エクスポートされたファイル内の宛先に常に送信することができます。 必要なマッピングを含むスキーマ設定の例と、 [バッチ保存先へのデータのアクティブ化ワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ```json
-    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
-      },
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      },
-      {
-        "sourceType": "text/x.aep-xl",
-        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
-        "destination": "delete"
       }
     ] 
 ```
 
-![UI アクティベーションフローの必要なマッピングの画像。](/help/destinations/destination-sdk/assets/required-mappings.png)
+![UI アクティベーションフローの必要なマッピングの画像。](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+```
+
+![UI アクティベーションフローの必要なマッピングの画像。](/help/destinations/destination-sdk/assets/required-mappings-2.png)
 
 >[!NOTE]
 >
@@ -767,7 +770,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `requiredMappingsOnly` | ブール値 | ユーザーがアクティベーションフローで他の属性や ID をマッピングできるかどうかを示します。 *別に* 定義する必要なマッピング。 |
 | `requiredMappings.mandatoryRequired` | ブール値 | このフィールドを、宛先へのファイルエクスポートに常に存在する必須属性にする必要がある場合は、true に設定します。 詳細を表示 [必須属性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `requiredMappings.primaryKeyRequired` | ブール値 | このフィールドを、宛先へのファイルエクスポートで重複排除キーとして使用する必要がある場合は、true に設定します。 詳細を表示 [重複排除キー](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `requiredMappings.sourceType` | 文字列 | 必要に応じてソースフィールドを設定する場合に使用します。 ソースフィールドの種類を示します。 利用可能なオプションは次のとおりです。 <ul><li>`"text/x.schema-path"` （ソースフィールドが事前定義された XDM 属性の場合）</li><li>`"text/x.aep-xl"` ソースフィールドが関数の場合（ソースフィールド側で条件を満たす必要がある場合など）。 サポートされる関数について詳しくは、 [データ準備](/help/data-prep/api/functions.md) ドキュメント。</li></ul> |
+| `requiredMappings.sourceType` | 文字列 | 必要に応じてソースフィールドを設定する場合に使用します。 用途 `"text/x.schema-path"`：ソースフィールドが事前に定義された XDM 属性であることを示します。 |
 | `requiredMappings.source` | 文字列 | 必須のソースフィールドを指定します。 |
 | `requiredMappings.destination` | 文字列 | 必須の宛先フィールドを示します。 |
 
