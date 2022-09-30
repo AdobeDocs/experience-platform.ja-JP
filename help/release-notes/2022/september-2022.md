@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3060'
 ht-degree: 30%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 30%
 Adobe Experience Platform の新機能：
 
 - [属性ベースのアクセス制御](#abac)
-- [データハイジーン](#data-hygiene)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -23,6 +22,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [監査ログ](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [データ収集](#data-collection)
+- [データハイジーン](#data-hygiene)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
@@ -45,22 +45,6 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 | 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を使用すると、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ラベルを活用し、特定の Platform リソースにアクセスできるユーザーの役割を定義するポリシーを作成できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、 [属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md).
-
-## データハイジーン {#data-hygiene}
-
-Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
-
-Adobe Experience Platformのデータ衛生機能を使用すると、自動データセット有効期限をスケジュールし、ID に基づいて消費者データをプログラムで削除することで、データをクレンジングできます。
-
->[!IMPORTANT]
->
->データ衛生機能は、Adobe・ヘルスケア・シールドを購入した組織でのみ利用できます。
-
-データの衛生状態に関する基礎知識を習得するには、次のドキュメントを参照してください。
-
-- [データの衛生状態の概要](../../hygiene/home.md):Platform のデータ衛生機能の基本について説明します。
-- [[!UICONTROL データの衛生状態] UI ガイド](../../hygiene/ui/overview.md):Platform ユーザーインターフェイス内でデータセットの有効期限と消費者の削除リクエストをスケジュールする方法について説明します。
-- [データ衛生 API ガイド](../../hygiene/api/overview.md):UI で実行できるすべてのデータ衛生アクティビティは、プログラムによっても実行できます
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -134,6 +118,27 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 -->
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
+
+## データハイジーン {#data-hygiene}
+
+Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
+
+Adobe Experience Platformのデータ衛生機能を使用すると、自動データセット有効期限をスケジュールし、ID に基づいて消費者データをプログラムで削除することで、データをクレンジングできます。
+
+>[!IMPORTANT]
+>
+>データ衛生機能は、Adobe・ヘルスケア・シールドを購入した組織でのみ利用できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 更新された UI ワークフロー | ワークフロー [スケジュール設定の有効期限](../../hygiene/ui/dataset-expiration.md) および [消費者データの削除](../../hygiene/ui/delete-consumer.md) の UI が合理化されました。 |
+| クォータ API エンドポイント | これで、 [`/quota` endpoint](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform のデータ衛生機能について詳しくは、 [データの衛生状態の概要](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
