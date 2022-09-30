@@ -2,10 +2,10 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDKのファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 66%
+source-wordcount: '3021'
+ht-degree: 59%
 
 ---
 
@@ -722,6 +722,54 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Adobe と宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)の構成を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `value` | 文字列 | マッピング手順で、Experience Platform ユーザーインターフェイスに表示されるスキーマの名前。 |
 | `responseFormat` | 文字列 | カスタムスキーマを定義する際は、常に `SCHEMA` に設定します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 必須マッピング {#required-mappings}
+
+スキーマ設定内で、必要な（または定義済みの）マッピングを追加するオプションがあります。 これらは、ユーザーが表示できるが、宛先への接続を設定した際に変更できないマッピングです。 例えば、電子メールアドレスフィールドを強制的に適用して、エクスポートされたファイル内の宛先に常に送信することができます。 以下に、必要なマッピングを含むスキーマ設定の例と、 [バッチ保存先へのデータのアクティブ化ワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![UI アクティベーションフローの必要なマッピングの画像。](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>現在サポートされている必須マッピングの組み合わせは次のとおりです。
+>* 必須のソースフィールドと必須の宛先フィールドを設定できます。 この場合、ユーザーは 2 つのフィールドのいずれかを編集または選択できず、選択した項目のみを表示できます。
+>* 必須の宛先フィールドのみを設定できます。 この場合、ユーザーは、宛先にマッピングするためのソースフィールドを選択できます。
+>
+> 現在、必須のソースフィールドのみを設定しています *not* サポート対象。
+
+宛先のアクティベーションワークフローに必要なマッピングを追加する場合は、次の表で説明するパラメーターを使用します。
+
+| パラメーター | タイプ | 説明 |
+|---------|----------|------|
+| `requiredMappingsOnly` | ブール値 | ユーザーがアクティベーションフローで他の属性や ID をマッピングできるかどうかを示します。 *別に* 定義する必要なマッピング。 |
+| `requiredMappings.mandatoryRequired` | ブール値 | このフィールドを、宛先へのファイルエクスポートに常に存在する必須属性にする必要がある場合は、true に設定します。 詳細を表示 [必須属性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | ブール値 | このフィールドを、宛先へのファイルエクスポートで重複排除キーとして使用する必要がある場合は、true に設定します。 詳細を表示 [重複排除キー](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | 文字列 | 必要に応じてソースフィールドを設定する場合に使用します。 ソースフィールドの種類を示します。 利用可能なオプションは次のとおりです。 <ul><li>`"text/x.schema-path"` （ソースフィールドが事前定義された XDM 属性の場合）</li><li>`"text/x.aep-xl"` ソースフィールドが関数の場合（ソースフィールド側で条件を満たす必要がある場合など）。 サポートされる関数について詳しくは、 [データ準備](/help/data-prep/api/functions.md) ドキュメント。</li></ul> |
+| `requiredMappings.source` | 文字列 | 必須のソースフィールドを指定します。 |
+| `requiredMappings.destination` | 文字列 | 必須の宛先フィールドを示します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
