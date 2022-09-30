@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 29%
+source-wordcount: '3059'
+ht-degree: 30%
 
 ---
 
@@ -16,7 +16,6 @@ Adobe Experience Platform の新機能：
 
 - [属性ベースのアクセス制御](#abac)
 - [データハイジーン](#data-hygiene)
-- [[!UICONTROL プライバシーコンソール]](#privacy-console)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -55,19 +54,13 @@ Adobe Experience Platformのデータ衛生機能を使用すると、自動デ�
 
 >[!IMPORTANT]
 >
->データ衛生機能は、Adobe・ヘルスケア・シールドまたはプライバシー・シールドを購入した組織でのみ利用できます。
+>データ衛生機能は、Adobe・ヘルスケア・シールドを購入した組織でのみ利用できます。
 
 データの衛生状態に関する基礎知識を習得するには、次のドキュメントを参照してください。
 
 - [データの衛生状態の概要](../../hygiene/home.md):Platform のデータ衛生機能の基本について説明します。
 - [[!UICONTROL データの衛生状態] UI ガイド](../../hygiene/ui/overview.md):Platform ユーザーインターフェイス内でデータセットの有効期限と消費者の削除リクエストをスケジュールする方法について説明します。
 - [データ衛生 API ガイド](../../hygiene/api/overview.md):UI で実行できるすべてのデータ衛生アクティビティは、プログラムによっても実行できます
-
-## [!UICONTROL プライバシーコンソール] {#privacy-console}
-
-この [!UICONTROL プライバシーコンソール] 「 」タブを使用すると、Experience PlatformUI に表示される、プライバシー関連の機能 ( [Privacy Serviceからのデータ主体のリクエスト](../../privacy-service/home.md), [データ衛生作業指示](../../hygiene/home.md)、および [監査ログ](../../landing/governance-privacy-security/audit-logs/overview.md). また、コンソールには、一般的なプライバシーワークフローの手順をガイドする、製品内の使用例ガイドも用意されています。
-
-詳しくは、 [プライバシーコンソールの概要](../../landing/governance-privacy-security/privacy-console.md) を参照してください。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 

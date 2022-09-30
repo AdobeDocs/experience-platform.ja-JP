@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2022 年 8 月
 description: Adobe Experience Platformの 2022 年 8 月リリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 99%
+source-wordcount: '2131'
+ht-degree: 97%
 
 ---
 
@@ -40,7 +40,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 {style=&quot;table-layout:auto&quot;}
 
-**メモ**：既存のヘルスケアシールドまたはプライバシーシールドのお客様は、追加の通知が届くまでアトリビューション AI を利用できません。
+**注意**:Attribution AIは、追加の通知を受けるまで、既存の Healthcare Shield のお客様では利用できません。
 
 アトリビューション AI について詳しくは、[アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) の概要を参照してください。
 
@@ -56,7 +56,7 @@ Real-time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 {style=&quot;table-layout:auto&quot;}
 
-**メモ**：既存のヘルスケアシールドまたはプライバシーシールドのお客様は、追加の通知が届くまで顧客 AI を利用できません。
+**注意**:顧客 AI は、追加の通知を受けるまで、既存の Healthcare Shield のお客様では利用できません。
 
 顧客 AI について詳しくは、[顧客 AI](../../intelligent-services/customer-ai/overview.md) の概要を参照してください。
 
