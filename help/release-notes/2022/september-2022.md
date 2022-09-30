@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3060'
-ht-degree: 30%
+source-wordcount: '2895'
+ht-degree: 29%
 
 ---
 
@@ -22,7 +22,6 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [監査ログ](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [データ収集](#data-collection)
-- [データハイジーン](#data-hygiene)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 -->
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
-
-## データハイジーン {#data-hygiene}
-
-Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
-
-Adobe Experience Platformのデータ衛生機能を使用すると、自動データセット有効期限をスケジュールし、ID に基づいて消費者データをプログラムで削除することで、データをクレンジングできます。
-
->[!IMPORTANT]
->
->データ衛生機能は、Adobe・ヘルスケア・シールドを購入した組織でのみ利用できます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| 更新された UI ワークフロー | ワークフロー [スケジュール設定の有効期限](../../hygiene/ui/dataset-expiration.md) および [消費者データの削除](../../hygiene/ui/delete-consumer.md) の UI が合理化されました。 |
-| クォータ API エンドポイント | これで、 [`/quota` endpoint](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform のデータ衛生機能について詳しくは、 [データの衛生状態の概要](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
