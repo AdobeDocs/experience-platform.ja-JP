@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アラート；
 title: アラート購読 API エンドポイント
 description: このガイドは、クエリサービス API を使用してアラート購読エンドポイントに対して実行できる様々な API 呼び出しに対する HTTP リクエストの例と応答を提供します。
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 5%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **応答**
 
-正常な応答は、200 のHTMLステータスと、購読しているすべてのアラートを返します。 これには、アラート ID、アラートのタイプ、購読者のAdobe登録電子メール ID、優先通知チャネルが含まれます。
+正常な応答は、200 の HTTP ステータスと、購読しているすべてのアラートを返します。 これには、アラート ID、アラートのタイプ、購読者のAdobe登録電子メール ID、優先通知チャネルが含まれます。
 
 ```json
 {

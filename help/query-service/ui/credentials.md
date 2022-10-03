@@ -5,9 +5,9 @@ title: クエリサービス資格情報ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -109,6 +109,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 >[!NOTE]
 >
 >有効期限のない資格情報を使用してホストに接続する場合は、 [!UICONTROL 資格情報の期限が切れています] セクションには、パスワードとユーザー名を除きます。
+>ユーザー名とパスワードを入力する形式は、この例に示すように、コロンで区切られた値を使用します `username:{your_username}` および `password:{password_string}`.
 
 | パラメーター | 説明 |
 |---|---|
