@@ -5,9 +5,9 @@ title: XDM フィールドタイプ制約
 topic-legacy: overview
 description: Experience Data Model(XDM) のフィールドタイプ制約の参照です。これには、マッピングできる他のシリアル化形式や、API で独自のフィールドタイプを定義する方法が含まれます。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '663'
 ht-degree: 13%
 
 ---
@@ -126,11 +126,11 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 * [Scala、.NET、CosmosDB](#scala)
 * [MongoDB、Aerospike、および Protobuf 2](#mongo)
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >次の表に示す標準 XDM タイプの中で、 [!UICONTROL マップ] タイプも含まれます。 マップは、特定の値にマッピングされるキーとしてデータが表される場合、またはキーを静的スキーマに合理的に含めることができず、データ値として処理する必要がある場合に、標準スキーマで使用されます。
 >
->マップタイプフィールドは、業界およびベンダースキーマでの使用のために予約されているので、定義したカスタムリソースでは使用できません。 以下の表に含まれるマップタイプの組み込みは、既存のデータが以下に示す形式のいずれかで格納されている場合に、そのデータを XDM にマッピングする方法を判断するのに役立つように作成されています。
+>多くの標準 XDM コンポーネントはマップタイプを使用します。また、 [カスタムマップフィールドの定義](../tutorials/custom-fields-api.md#maps) 必要に応じて。 以下の表に含まれるマップタイプの組み込みは、既存のデータが以下に示す形式のいずれかで格納されている場合に、そのデータを XDM にマッピングする方法を判断するのに役立つように作成されています。
 
 ### Parquet、Spark SQL、Java {#parquet}
 
