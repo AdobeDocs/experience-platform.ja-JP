@@ -2,14 +2,19 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
+source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 22%
+source-wordcount: '224'
+ht-degree: 14%
 
 ---
 
 # タグとイベント転送のリリースノート
+
+## 2022年9月28日（PT）
+
+* **Adobe Experience Platform左ナビゲーション統合**:以前はデータ収集 UI にのみ使用できたすべての機能（タグやイベントの転送を含む）も、Experience PlatformUI の左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。
+* **タグとイベント転送のユーザー属性**:タグおよびイベント転送で使用可能なプロパティをリストする場合、リストされた各プロパティが最後に更新された日時と更新者を表示するようになりました。
 
 ## 2022年7月27日（PT）
 
