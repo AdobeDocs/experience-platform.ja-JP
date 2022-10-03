@@ -2,9 +2,9 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '938'
 ht-degree: 1%
 
 ---
@@ -12,6 +12,11 @@ ht-degree: 1%
 # ユーザー定義ダッシュボード
 
 Adobe Experience Platformダッシュボードを使用すると、ユーザー定義のダッシュボード機能でインサイトを迅速に処理し、ビジュアライゼーションをカスタマイズできます。 この機能を使用すると、カスタムダッシュボードを作成および管理できます。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform Insights ダッシュボードの各クエリが効率的に実行するのに十分なリソースを確保するために、API は、各クエリに同時実行スロットを割り当てて、リソースの使用状況を追跡します。 システムは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは、同時実行スロットに基づいてキューに入れられ、十分な同時実行スロットが使用可能になるまでキューで待ちます。
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
