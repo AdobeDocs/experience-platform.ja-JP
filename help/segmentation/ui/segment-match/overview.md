@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント一致；セグメント一致
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント一致；セグメント一致
 solution: Experience Platform
 title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2 人以上の Platform ユーザーが安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
+source-git-commit: 2329065b938d97f48a23be5250fec535355db770
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1998'
 ht-degree: 7%
 
 ---
@@ -45,7 +45,7 @@ ID 名前空間は、 [Adobe Experience Platform Identity Service](../../../iden
 
 | 名前空間 | 説明 |
 | --------- | ----------- |
-| 電子メール（SHA256、小文字） | 事前にハッシュ化された電子メールアドレス用の名前空間。 この名前空間で指定された値は、SHA256 でハッシュする前に小文字に変換されます。 E メールアドレスを正規化する前に、先頭と末尾のスペースをトリミングする必要があります。 この設定を遡って変更することはできません。 次のドキュメントを参照してください： [SHA256 ハッシュサポート](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) を参照してください。 |
+| 電子メール（SHA256、小文字） | 事前にハッシュ化された電子メールアドレス用の名前空間。 この名前空間で指定された値は、SHA256 でハッシュする前に小文字に変換されます。 E メールアドレスを正規化する前に、先頭と末尾のスペースをトリミングする必要があります。 この設定を遡って変更することはできません。 Platform では、次の 2 つの方法で、データ収集時のハッシュ化をサポートしています。 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) そして [データ準備](../../../data-prep/functions.md#hashing). |
 | 電話 (SHA256_E.164) | SHA256 形式と E.164 形式の両方を使用してハッシュ化する必要がある生の電話番号を表す名前空間です。 |
 | ECID | Experience CloudID(ECID) 値を表す namespace。 この名前空間は、次のエイリアスからも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 詳しくは、[ECID の概要](../../../identity-service/ecid.md)を参照してください。 |
 | Apple IDFA （広告主の ID） | 広告主のApple ID を表す名前空間。 次のドキュメントを参照してください： [興味ベースの広告](https://support.apple.com/ja-jp/HT202074) を参照してください。 |
