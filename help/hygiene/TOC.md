@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -24,4 +24,4 @@ ht-degree: 93%
    * [概要](./api/overview.md)
    * [データセット有効期限](./api/dataset-expiration.md)
    * [消費者の削除](./api/workorder.md)
-   * [クォータ](./api/quota.md)
+   * [割り当て量](./api/quota.md)
