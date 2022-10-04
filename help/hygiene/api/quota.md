@@ -1,37 +1,37 @@
 ---
-title: クォータ API エンドポイント
-description: データ衛生 API の/quota エンドポイントを使用すると、組織の各ジョブタイプの月別クォータ制限に対するデータ衛生状態の使用状況を監視できます。
+title: Quota API エンドポイント
+description: Data Hygiene API の /quota エンドポイントを使用すると、各ジョブタイプの組織の月間割り当て量制限に対するデータハイジーンの使用状況を監視できます。
 source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '346'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# クォータエンドポイント
+# Quota エンドポイント
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
 
-この `/quota` Data Whealthy API のエンドポイントを使用すると、組織の各ジョブタイプの割り当て制限に対するデータ衛生状態の使用状況を監視できます。
+Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対するデータハイジーンの使用状況を監視できます。
 
-クォータは、次の方法で、各データの衛生ジョブの種類に対して適用されます。
+割り当て量は、次の方法でデータハイジーンの各ジョブタイプに適用されます。
 
-* 消費者による削除およびフィールドの更新は、1 ヶ月あたりのリクエストの数に制限されます。
-* データセット有効期限には、有効期限が実行されるタイミングに関係なく、同時にアクティブなジョブの数に対して一定の制限があります。
+* 消費者の削除とフィールドの更新は、1 か月あたり一定数のリクエストに制限されています。
+* データセットの有効期限には、有効期限が実行されるタイミングに関係なく、同時にアクティブなジョブの数に対して一定の制限があります。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、Data Hygiene API の一部です。続行する前に、 [概要](./overview.md) を参照してください。
+このガイドで使用するエンドポイントは、Data Hygiene API の一部です。続行する前に、[概要](./overview.md)で以下の情報を確認してください。
 
 * 関連ドキュメントへのリンク
-* このドキュメントのサンプル API 呼び出しに関する読み方のガイド
-* 任意のヘッダー API を正しく呼び出すために必要な必須Experience Platformに関する重要な情報
+* このドキュメントのサンプル API 呼び出しの読み方に関するガイド
+* Experience Platform API を正常に呼び出すために必要な必須ヘッダーに関する重要な情報
 
-## 割り当てのリスト {#list}
+## 割り当て量のリスト {#list}
 
-組織のクォータ情報を表示するには、 `/quota` endpoint.
+`/quota` エンドポイントに対して GET リクエストを実行することで、組織の割り当て量の情報を表示できます。
 
 **API 形式**
 
@@ -42,7 +42,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUOTA_TYPE}` | 取得するクォータの種類を指定するオプションのクエリパラメータです。 指定しない場合 `quotaType` パラメーターが指定された場合、すべてのクォータ値が API 応答で返されます。 使用できるタイプ値は次のとおりです。<ul><li>`expirationDatasetQuota`: データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`:消費者の削除</li><li>`fieldUpdateWorkOrderDatasetQuota`:フィールドの更新</li></ul> |
+| `{QUOTA_TYPE}` | 取得する割り当て量のタイプを指定するオプションのクエリパラメーター。`quotaType` パラメーターが指定されていない場合、すべての割り当て量の値が API 応答で返されます。使用できるタイプの値は次のとおりです。<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`：消費者の削除</li><li>`fieldUpdateWorkOrderDatasetQuota`：フィールドのアップデート</li></ul> |
 
 **リクエスト**
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、データの衛生上の割り当ての詳細を返します。
+応答が成功すると、データハイジーンの割り当て量の詳細が返されます。
 
 ```json
 {
@@ -80,6 +80,6 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `quotas` | 各データ衛生ジョブタイプのクォータ情報をリストします。 各クォータオブジェクトには、次のプロパティが含まれます。<ul><li>`name`:データ衛生ジョブのタイプ：<ul><li>`expirationDatasetQuota`: データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`:消費者の削除</li></ul></li><li>`description`:データ衛生ジョブタイプの説明。</li><li>`consumed`:現在の月次期間に実行された、このタイプのジョブの数。</li><li>`quota`:このジョブタイプのクォータ制限。 消費者の削除およびフィールドの更新の場合、これは各月に実行できるジョブの数を表します。 データセット有効期限の場合、これは、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
+| `quotas` | データハイジーンの各ジョブタイプに対する割り当て量の情報をリストします。各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`：データハイジーンのジョブタイプ：<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`：消費者の削除</li></ul></li><li>`description`：データハイジーンのジョブタイプの説明。</li><li>`consumed`：今月実行されたこのタイプのジョブの数。</li><li>`quota`：このジョブタイプの割り当て量の制限。消費者の削除とフィールドのアップデートの場合は、1 か月に実行できるジョブの数を表します。データセットの有効期限の場合は、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
