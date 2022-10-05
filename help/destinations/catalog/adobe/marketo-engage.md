@@ -2,10 +2,10 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 21%
+source-wordcount: '870'
+ht-degree: 20%
 
 ---
 
@@ -75,9 +75,15 @@ Experience Platformの属性を、組織がMarketoでアクセスできる任意
 
 次のビデオでは、Marketoの宛先を設定し、セグメントをアクティブ化する手順についても説明します。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、上記にリンクされたガイドを参照してください。
+>このビデオは、現在の機能を完全に反映しているわけではありません。 最新情報については、上記にリンクされたガイドを参照してください。 ビデオの次の部分は古くなっています。
+> 
+>* Experience PlatformUI で使用する必要がある宛先カードは、 **[!UICONTROL Marketo V2]**.
+>* ビデオに新しい **[!UICONTROL 担当者の作成]** 宛先への接続ワークフローの「セレクター」フィールド
+>* このビデオで呼び出された 2 つの制限は、現在は適用されません。 ビデオの録画時にサポートされていたセグメントメンバーシップ情報に加えて、他の多数のプロファイル属性フィールドをマッピングできるようになりました。 また、Marketo静的リストにまだ存在しないセグメントメンバーをMarketoに書き出して、リストに追加することもできます。
+>* Marketo V1 では、アクティベーションワークフローの&#x200B;****&#x200B;セグメントをスケジュール手順で、**[!UICONTROL マッピング ID]** を手動で追加して、Marketo にデータを正常に書き出す必要がありました。この手動の手順は、Marketo V2 では不要になりました。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
