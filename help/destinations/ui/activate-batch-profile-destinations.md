@@ -4,10 +4,10 @@ title: プロファイル書き出しのバッチ宛先に対するオーディ�
 type: Tutorial
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
 workflow-type: tm+mt
-source-wordcount: '2520'
-ht-degree: 81%
+source-wordcount: '2577'
+ht-degree: 79%
 
 ---
 
@@ -122,6 +122,11 @@ ht-degree: 81%
 1. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
 ### 増分ファイルの書き出し {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="データセットのファイル書き出しオプション"
+>abstract="選択 **増分ファイルの書き出し** ：最後のエクスポート以降にデータセットに追加されたデータのみをエクスポートします。 <br> 最初の増分ファイル書き出しでは、データセット内のすべてのデータが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初のエクスポート以降にデータセットに追加されたデータのみが含まれます。"
 
 「**[!UICONTROL 増分ファイルのエクスポート]**」を選択して、エクスポートをトリガーします。最初のファイルは、選択したセグメントに対するすべてのプロファイル資格の完全なスナップショットであり、それ以降のファイルは、前回のエクスポート以降の増分プロファイル資格です。
 
