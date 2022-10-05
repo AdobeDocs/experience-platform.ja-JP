@@ -2,10 +2,10 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 14%
+source-wordcount: '263'
+ht-degree: 12%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 14%
 
 * **Adobe Experience Platform左ナビゲーション統合**:以前はデータ収集 UI にのみ使用できたすべての機能（タグやイベントの転送を含む）も、Experience PlatformUI の左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。
 * **タグとイベント転送のユーザー属性**:タグおよびイベント転送で使用可能なプロパティをリストする場合、リストされた各プロパティが最後に更新された日時と更新者を表示するようになりました。
+* **[[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合**:これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 API を認証および使用する方法について詳しくは、 [[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 2022年7月27日（PT）
 

@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '2894'
+source-wordcount: '2933'
 ht-degree: 29%
 
 ---
@@ -108,6 +108,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | --- | --- |
 | Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）も、Experience Platformの左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
 | タグとイベント転送のユーザー属性 | 使用可能なリストを表示する場合 [!UICONTROL プロパティ] タグとイベント転送で、リストされた各プロパティが最終更新日時と、更新をおこなったユーザーが表示されるようになりました。 |
+| [[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合 | これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 API を認証および使用する方法について詳しくは、 [[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] Web SDK の](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). クライアントヒントを使用すると、Web サイトの所有者は、 [!DNL User-Agent] 文字列に基づいて書き込まれますが、よりプライバシーを保持する方法で書き込まれます。 |
 | [ページ別の Web SDK の移行](../../edge/home.md#migrating-to-web-sdk) | 既存の Web プロパティを、次のような他のExperience Cloudライブラリから移行できるようになりました。 [!DNL at.js]を Web SDK に、一度に 1 ページずつ追加します。 これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 
