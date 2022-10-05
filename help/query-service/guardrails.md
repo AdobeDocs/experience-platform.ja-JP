@@ -3,9 +3,9 @@ keywords: Experience Platform；クエリ；クエリサービス；トラブル
 title: クエリサービスのガードレール
 description: このドキュメントでは、クエリの使用を最適化するのに役立つ、クエリサービスデータの使用制限に関する情報を提供します。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 11%
 
 ---
@@ -67,6 +67,8 @@ ht-degree: 11%
 | 次を介して返された結果： | データセット | 該当なし | これは、結果をユーザーに提供する方法を定義します。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## クエリで生成されたダッシュボードインサイト {#dashboard-insights}
 
 Real-time Customer Data Platform Insights ダッシュボードの各クエリが効率的に実行するのに十分なリソースを確保するために、API は、各クエリに同時実行スロットを割り当てて、リソースの使用状況を追跡します。 システムは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは、同時実行スロットに基づいてキューに入れられ、十分な同時実行スロットが使用可能になるまでキューで待ちます。
 
