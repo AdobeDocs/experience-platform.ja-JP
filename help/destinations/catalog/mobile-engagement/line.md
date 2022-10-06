@@ -2,9 +2,9 @@
 keywords: モバイル；モバイルエンゲージメントの宛先；LINE;LINE モバイルエンゲージメントの宛先
 title: LINE 接続
 description: LINE の宛先を使用すると、Platform セグメントにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを配信できます。
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1183'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,10 @@ ht-degree: 6%
 
 #### 次の条件を満たすには、 [!DNL LINE] アカウント {#prerequisites-account}
 
-次に移動： [!DNL LINE] [登録](https://account.line.biz/signup) アカウントを登録および作成するページ（まだ存在しない場合）。
+を登録して、 [!DNL LINE] アカウントを作成します。 アカウントを作成するには：
+
+1. 次に移動： [!DNL LINE] [アカウントログイン](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) ページ
+2. 選択 **[!UICONTROL アカウントの作成]**.
 
 #### の収集 [!DNL LINE channel access token (long-lived)] から [!DNL LINE] 開発者コンソール {#gather-credentials}
 
