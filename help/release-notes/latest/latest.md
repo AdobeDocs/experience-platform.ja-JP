@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2933'
+source-wordcount: '2925'
 ht-degree: 29%
 
 ---
@@ -215,10 +215,12 @@ ID サービスの詳細については、 [ID サービスの概要](../../iden
 
 | 機能 | 説明 |
 | --- | --- |
-| アラート購読 API | Adobe Experience Platformクエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを購読できます。 アラートは、E メール、Platform UI 内、またはその両方で受け取ることができます。 現在、クエリアラートは、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 詳しくは、 [クエリアラートドキュメント](../../query-service/api/alert-subscriptions.md) を参照してください。 |
+| アラート購読 API | Adobe Experience Platformクエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを購読できます。 アラートは、E メール、Platform UI 内、またはその両方で受け取ることができます。 現在、クエリアラートは、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にして、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。 詳しくは、 [データセットサンプルガイド](../../query-service/sql/dataset-samples.md) を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## ソース {#sources}
 

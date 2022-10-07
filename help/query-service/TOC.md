@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 feature: Queries
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 67%
+source-wordcount: '214'
+ht-degree: 68%
 
 ---
 
@@ -33,7 +33,6 @@ ht-degree: 67%
    - [接続パラメーター](api/connection-parameters.md)
    - [スケジュール済みクエリ](api/scheduled-queries.md)
    - [スケジュールされたクエリの実行](api/runs-scheduled-queries.md)
-   - [アラートをクエリ](api/alert-subscriptions.md)
    - [クエリテンプレート](api/query-templates.md)
 - クエリサービス UI {#ui}
    - [UI の概要](ui/overview.md)

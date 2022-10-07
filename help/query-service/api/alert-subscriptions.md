@@ -2,7 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アラート；
 title: アラート購読 API エンドポイント
 description: このガイドは、クエリサービス API を使用してアラート購読エンドポイントに対して実行できる様々な API 呼び出しに対する HTTP リクエストの例と応答を提供します。
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 5%
