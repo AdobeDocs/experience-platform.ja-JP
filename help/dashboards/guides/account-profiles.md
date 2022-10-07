@@ -2,10 +2,10 @@
 title: アカウントプロファイルダッシュボードガイド
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 8%
+source-wordcount: '1050'
+ht-degree: 6%
 
 ---
 
@@ -63,6 +63,8 @@ Adobeは、アカウントプロファイルに関連する様々な指標を視
 
 * [業種別の合計アカウント数](#total-accounts-by-industry)
 * [追加されたアカウントプロファイル](#account-profiles-added)
+* [予測スコア配分](#predictive-scoring-distribution)
+* [予測スコアリングの上位の影響要因](#predictive-scoring-top-influential-factors)
 
 ### 業種別の合計アカウント数 {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Adobeは、アカウントプロファイルに関連する様々な指標を視
 
 ![アカウントプロファイル追加ウィジェット。](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### 予測スコア配分 {#predictive-scoring-distribution}
+
+この [!UICONTROL 予測スコア配分] ウィジェットには、すべてのアカウントプロファイルのスコア配分が表示され、セールスパイプラインの正常性を一目で把握するのに役立ちます。 スコアリングデータは、ドーナツグラフと列グラフを使用して伝達されます。
+
+ドーナツグラフは、バケットを購入する傾向の高い、中程度、低い各アカウントプロファイルの合計数の割合を示します。 キーは、スコアリングバケットの範囲や、その範囲のアカウントプロファイルの数など、色分けされたセクションに関する詳細を提供します。
+
+列のグラフは、より詳細なスコアリング分類を提供します。 各列には、20 個の 5 ポイント増分グループの各アカウントプロファイルの数が表示されます。
+
+ウィジェット内のドロップダウンメニューを使用すると、アカウントスコアリングモデルを選択できます。
+
+![予測スコア配分ウィジェット。](../images/account-profiles/predictive-scoring-distribution.png)
+
+### 予測スコアリングの上位の影響要因 {#predictive-scoring-top-influential-factors}
+
+この [!UICONTROL 予測スコアリングの上位の影響要因] ウィジェットを使用すると、各傾向バケットのスコアを算出する最も重要な要因を把握できます。
+
+このウィジェットは、傾向の高いバケット、中程度のバケット、低いバケットのそれぞれについて、最も影響力のある要因を表示します。 影響を与える要因ごとの棒は、その傾向バケット内で、特定の影響を与える要因を含むアカウントプロファイルの割合を示します。
+
+ウィジェット内のドロップダウンメニューを使用すると、アカウントスコアリングモデルを選択できます。
+
+![予測スコアの上位影響要因ウィジェット。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## 次の手順
 
-このドキュメントに従うと、 [!UICONTROL アカウントプロファイル] ダッシュボード。 また、使用可能なウィジェットに表示される指標も理解する必要があります。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、 [アカウントプロファイルの概要](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B Edition の場合
+このドキュメントに従えば、 [!UICONTROL アカウントプロファイル] ダッシュボード。 また、使用可能なウィジェットに表示される指標も理解する必要があります。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、 [アカウントプロファイルの概要](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B Edition の場合
