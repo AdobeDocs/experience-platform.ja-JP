@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；フロ
 title: （ベータ版）フローサービス API を使用したオンデマンド取り込み用のフロー実行の作成
 description: このチュートリアルでは、フローサービス API を使用して、オンデマンド取り込みのフロー実行を作成する手順を説明します
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 10%
+source-wordcount: '856'
+ht-degree: 13%
 
 ---
 
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | パラメーター | 説明 |
 | --- | --- |
 | `flowId` | フロー実行が作成されるフローの ID。 |
+| `params.startTime` | 実行の開始時間を定義する整数。 値は UNIX エポック時間で表されます。 |
 | `params.windowStartTime` | データを取り込む期間のウィンドウの開始時間を定義する整数。 値は UNIX 時間で表されます。 |
 | `params.windowEndTime` | データを取り込む期間の終了時間を定義する整数。 値は UNIX 時間で表されます。 |
-| `params.deltaColumn` | デルタ列は、データをパーティション化し、新しく取り込んだデータを履歴データから分離するために必要です。 |
+| `params.deltaColumn` | デルタ列は、データをパーティション化し、新しく取り込んだデータを履歴データから分離するために必要です。 **注意**:この `deltaColumn` は、最初のフロー実行を作成する場合にのみ必要です。 |
 | `params.deltaColumn.name` | デルタ列の名前。 |
 
 **応答**
@@ -93,53 +95,36 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
 | `id` | 新しく作成されたフロー実行の ID。 詳しくは、 [フロー仕様の検索](../api/collect/database-nosql.md#specs) を参照してください。 |
-| `createdAt` | フロー実行が作成された日時を指定する unix タイムスタンプ。 |
-| `updatedAt` | フロー実行が最後に更新された日時を示す unix タイムスタンプ。 |
-| `createdBy` | フロー実行を作成したユーザーの組織 ID。 |
-| `updatedBy` | フロー実行を最後に更新したユーザーの組織 ID。 |
-| `createdClient` | フロー実行を作成したアプリケーションクライアント。 |
-| `updatedClient` | フローの実行を最後に更新したアプリケーションクライアント。 |
-| `sandboxId` | フロー実行を含むサンドボックスの ID。 |
-| `sandboxName` | フロー実行を含むサンドボックスの名前。 |
-| `imsOrgId` | 組織 ID。 |
-| `flowId` | フロー実行が作成されるフローの ID。 |
-| `params.windowStartTime` | データを取り込む期間のウィンドウの開始時間を定義する整数。 値は UNIX 時間で表されます。 |
-| `params.windowEndTime` | データを取り込む期間の終了時間を定義する整数。 値は UNIX 時間で表されます。 |
-| `params.deltaColumn` | デルタ列は、データをパーティション化し、新しく取り込んだデータを履歴データから分離するために必要です。 **注意**:この `deltaColumn` は、最初のフロー実行を作成する場合にのみ必要です。 |
-| `params.deltaColumn.name` | デルタ列の名前。 |
 | `etag` | フロー実行のリソースのバージョン。 |
-| `metrics` | このプロパティは、フロー実行のステータスの概要を表示します。 |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## ファイルベースのソースに対するフロー実行の作成
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | パラメーター | 説明 |
 | --- | --- |
 | `flowId` | フロー実行が作成されるフローの ID。 |
+| `params.startTime` | 実行の開始時間を定義する整数。 値は UNIX エポック時間で表されます。 |
 | `params.windowStartTime` | データを取り込む期間のウィンドウの開始時間を定義する整数。 値は UNIX 時間で表されます。 |
 | `params.windowEndTime` | データを取り込む期間の終了時間を定義する整数。 値は UNIX 時間で表されます。 |
 
@@ -189,49 +176,19 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | 新しく作成されたフロー実行の ID。 詳しくは、 [フロー仕様の検索](../api/collect/cloud-storage.md#specs) ファイルベースの実行仕様の詳細については、を参照してください。 |
-| `createdAt` | フロー実行が作成された日時を指定する unix タイムスタンプ。 |
-| `updatedAt` | フロー実行が最後に更新された日時を示す unix タイムスタンプ。 |
-| `createdBy` | フロー実行を作成したユーザーの組織 ID。 |
-| `updatedBy` | フロー実行を最後に更新したユーザーの組織 ID。 |
-| `createdClient` | フロー実行を作成したアプリケーションクライアント。 |
-| `updatedClient` | フローの実行を最後に更新したアプリケーションクライアント。 |
-| `sandboxId` | フロー実行を含むサンドボックスの ID。 |
-| `sandboxName` | フロー実行を含むサンドボックスの名前。 |
-| `imsOrgId` | 組織 ID。 |
-| `flowId` | フロー実行が作成されるフローの ID。 |
-| `params.windowStartTime` | データを取り込む期間のウィンドウの開始時間を定義する整数。 値は UNIX 時間で表されます。 |
-| `params.windowEndTime` | データを取り込む期間の終了時間を定義する整数。 値は UNIX 時間で表されます。 |
+| `id` | 新しく作成されたフロー実行の ID。 詳しくは、 [フロー仕様の検索](../api/collect/database-nosql.md#specs) を参照してください。 |
 | `etag` | フロー実行のリソースのバージョン。 |
-| `metrics` | このプロパティは、フロー実行のステータスの概要を表示します。 |
-
 
 ## フロー実行の監視
 
