@@ -4,10 +4,10 @@ title: プロファイル書き出しのバッチ宛先に対するオーディ�
 type: Tutorial
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 79%
+source-wordcount: '2626'
+ht-degree: 78%
 
 ---
 
@@ -212,6 +212,12 @@ ht-degree: 79%
 >[!NOTE]
 >
 > Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
+
+>[!IMPORTANT]
+>
+>既知の制限により、現在、 **[!UICONTROL フィールドを選択]** 追加するウィンドウ `segmentMembership.status` をファイルエクスポートに追加します。 代わりに、手動で値を貼り付ける必要があります `xdm: segmentMembership.status` をスキーマフィールドに追加します（下図を参照）。
+>
+>![アクティベーションワークフローのマッピング手順でセグメントメンバーシップの回避策を示す画面記録。](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 ファイルのエクスポートは、`segmentMembership.status` が選択されているかどうかによって、次のように異なります。
 * `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
