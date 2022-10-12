@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
+source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 13%
+source-wordcount: '445'
+ht-degree: 11%
 
 ---
 
@@ -45,6 +45,10 @@ ht-degree: 13%
 | --- | --- | --- |
 | ECID | <ul><li>ECID の ID 値は 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li></ul> | <ul><li>ECID の ID 値が 38 文字以外の場合、レコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、レコードはスキップされます。</li></ul> |
 | 非 ECID | ID 値は 1024 文字を超えることはできません。 | ID 値が 1024 文字を超える場合、レコードはスキップされます。 |
+
+### ID 名前空間の取り込み
+
+2023 年 1 月 31 日以降、ID サービスは、新規のお客様向けにAdobe Analytics ID(AAID) の取り込みをブロックします。 この ID は、通常、 [Adobe Analyticsソース](../sources/connectors/adobe-applications/analytics.md) そして [Adobe Audience Managerソース](../sources//connectors/adobe-applications/audience-manager.md) とは冗長です。ECID は同じ Web ブラウザーを表しているからです。 このデフォルト設定を変更する場合は、アカウントマネージャーにお問い合わせください。
 
 ## 次の手順
 

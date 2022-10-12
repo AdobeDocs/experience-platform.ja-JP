@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 96%
+source-wordcount: '408'
+ht-degree: 95%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 96%
       * Common Analytics Plugins {#plugins}
          * [概要](./extensions/web/plugins/overview.md)
          * [リリースノート](./extensions/web/plugins/release-notes.md)
+      * 共通の Web SDK プラグイン {#web-sdk-plugins}
+         * [概要](./extensions/web/web-sdk-plugins/overview.md)
+         * [リリースノート](./extensions/web/web-sdk-plugins/release-notes.md)
       * コア {#core}
          * [概要](./extensions/web/core/overview.md)
          * [イベントの転送](./extensions/web/core/event-forwarding.md)

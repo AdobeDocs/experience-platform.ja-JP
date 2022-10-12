@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Web SDK タグ拡張機能の最新のリリースノートについて詳しく
 
 **新機能**
 
-* ページ全体の移行によるページのサポートが追加されました。 Adobe Targetプロファイルは、訪問者が at.js ページと Web SDK ページの間を移動しても保持されるようになりました。
+* のサポートを追加しました。 [ページごとの完全移行](home.md#migrating-to-web-sdk). Adobe Targetプロファイルは、訪問者が at.js ページと Web SDK ページの間を移動しても保持されるようになりました。
 * の設定可能なサポートを追加しました。 [高エントロピーのユーザーエージェントクライアントヒント](fundamentals/user-agent-client-hints.md#high-entropy).
 * 新しい `applyResponse` コマンドを使用します。 これにより、 [Edge Network Server API](../server-api/overview.md).
 * QA モードのリンクが複数のページで機能するようになりました。

@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDKは、選択したデータおよび認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントまたはストレージの場所に配信するExperience Platformの宛先統合パターンを設定できる設定 API のセットです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
+source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 60%
+source-wordcount: '838'
+ht-degree: 57%
 
 ---
 
@@ -17,9 +17,13 @@ Adobe Experience Platform Destination SDKは、選択したデータおよび認
 
 Destination SDK ドキュメントでは、Adobe Experience Platform Destination SDK を使用して Adobe Experience Platform との製品化された宛先統合を設定、テスト、リリースし、増え続ける宛先カタログに宛先を含める手順を説明しています。Destination SDKを使用すると、必要に応じてカスタマイズされたデータを書き出す独自のカスタムプライベート宛先を作成することもできます。
 
-![宛先カタログの概要](./assets/destinations-catalog-overview.png)
+![Experience PlatformUI のスクリーンショット、宛先カタログの表示](./assets/destinations-catalog-overview.png)
 
 ## 製品化されたカスタム統合 {#productized-custom-integrations}
+
+>[!IMPORTANT]
+>
+> 非公開のカスタムの宛先を作成するこの機能は、次の場合にのみ使用できます。 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
 
 Destination SDK のパートナーは、製品化された宛先を [Experience Platform カタログ](/help/destinations/catalog/overview.md)に追加することで、次のメリットを得ることができます。
 1. 事前設定済みのパラメーターを使用して顧客全体で統合設定を標準化し、顧客の設定エクスペリエンスを簡素化できます。
@@ -28,19 +32,7 @@ Destination SDK のパートナーは、製品化された宛先を [Experience 
 
 Experience Platformのお客様は、アクティベーションのニーズに最適な、独自の非公開カスタムの宛先を作成することもできます。
 
-![Destination SDK の視覚図](./assets/destination-sdk-visual.png)
-
-<!--
-
-## Types of destinations in Adobe Experience Platform {#types-of-destinations}
-
-In Adobe Experience Platform, we distinguish between two destination types - *connections* and *extensions*. In the user interface, customers can choose between two types of connection destinations, Profile Export destinations and Segment Export destinations. For more details around the difference between the different destination types, read [Destination Types and Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en).
-
-![Destination types](./assets/types-of-destinations.png)
-
-This documentation set provides you with all the necessary information to add your destination to Adobe Experience Platform, as a *connection*, either Profile Export or Segment Export. To set up an extension, visit the [Experience Platform Launch developer portal](https://developer.adobelaunch.com/extensions/).
-
--->
+![宛先開発者がDestination SDKとやり取りする方法、および製品化された宛先とプライベートの宛先からリアルタイム CDP のお客様が得るメリットを示す概要図です。](./assets/destination-sdk-visual.png)
 
 ## サポートされる統合のタイプ {#supported-integration-types}
 
@@ -66,7 +58,7 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 ---------|----------|
 | 独立系ソフトウェアベンダー（ISV） | [Adobe Exchange プログラム](https://partners.adobe.com/exchangeprogram/experiencecloud.html)に参加し、Destination SDK にアクセスできるようプロビジョニングされた Experience Platform サンドボックスの取得をリクエストします。 |
 | システムインテグレーター（SI） | [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) で Gold レベルまたは Platinum レベルであれば、プロビジョニングされた Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
-| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
+| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
