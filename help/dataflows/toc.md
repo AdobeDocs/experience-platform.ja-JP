@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: データフローガイド
-user-guide-description: データフローは、Platform 間でデータを移動するデータジョブを表します。
+user-guide-description: データフローと、異なるサービスをまたいでそれらを設定する方法について説明します。
 feature: Dataflows
-source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 69%
+source-wordcount: '62'
+ht-degree: 51%
 
 ---
 

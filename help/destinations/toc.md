@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 宛先ガイド
-user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告など、多くのユースケースで既知および未知のデータを有効化します。
+user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などの既知および不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 72%
+source-wordcount: '945'
+ht-degree: 70%
 
 ---
 

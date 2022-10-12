@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
-user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
+user-guide-description: 標準 SQL を使用して、データレイク内のデータをExperience Platformでクエリします。
 feature: Queries
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 68%
+source-wordcount: '217'
+ht-degree: 62%
 
 ---
 

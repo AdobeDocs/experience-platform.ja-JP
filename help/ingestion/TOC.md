@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
-user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Platform に取り込みます。
+user-guide-description: バッチまたはストリーミングの取り込みを通じて、Experience Platformにデータを取り込みます。
 feature: Data Ingestion
-source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 96%
+source-wordcount: '129'
+ht-degree: 88%
 
 ---
 

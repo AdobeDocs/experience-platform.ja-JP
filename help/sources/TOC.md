@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
-user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
+user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付け、拡張方法について説明します。
 feature: Sources
-source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 85%
+source-wordcount: '832'
+ht-degree: 83%
 
 ---
 
