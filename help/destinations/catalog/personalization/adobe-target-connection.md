@@ -3,9 +3,9 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 39%
 
 ---
@@ -92,7 +92,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 | データストリームが選択されていません | データストリームが選択されました |
 |---|---|
-| <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされていません。</li><li>セグメントをAdobe Target接続に共有できるのは、実稼働用サンドボックス用のみです。</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、セグメントの共有がサポートされています。</li></ul> |
+| <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされていません。</li><li>セグメントをAdobe Target接続に共有できるのは、 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、セグメントの共有がサポートされています。</li></ul> |
 
 ### アラートの有効化 {#enable-alerts}
 
