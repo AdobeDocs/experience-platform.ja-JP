@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 2%
+source-wordcount: '2101'
+ht-degree: 3%
 
 ---
 
@@ -151,13 +151,17 @@ CNAME について詳しくは、 [Adobe文書](https://experienceleague.adobe.c
 
 ## Adobe Experience Platform Web SDK は Cookie を使用しますか？ その場合、どのような cookie が使用されますか。
 
-はい。現在、Web SDK は、実装に応じて、1 ～ 4 個の Cookie を使用します。 以下に、Web SDK で表示される 4 つの Cookie と、その使用方法の一覧を示します。
+はい。現在、Web SDK は、実装に応じて、1 ～ 7 個の Cookie を使用します。 Web SDK で使用される Cookie と、その使用方法の一覧を以下に示します。
 
-**kndct_orgid_identity:** ID Cookie は、ECID および ECID に関連するその他の情報を保存するために使用されます。
-
-**kndctr_orgid_consent:** この cookie は、Web サイトに対するユーザーの同意設定を保存します。
-
-**kndctr_orgid_cluster:** この Cookie は、現在のユーザーのリクエストを処理する Experience Edge 地域を保存します。 Experience Edge がリクエストを正しい地域にルーティングできるように、地域は、URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。
+| **名前** | **maxAge** | **親しみやすい時代** | **説明** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395 日 | ID Cookie には、ECID と、ECID に関連するその他の情報が格納されます。 |
+| **kndctr_orgid_consent_check** | 7200 | 2 時間 | この cookie は、Web サイトに対するユーザーの同意設定を保存します。 |
+| **kndctr_orgid_consent** | 15552000 | 180 日 | このセッションベースの Cookie は、サーバーが同意設定サーバー側を検索するように通知します。 |
+| **kndctr_orgid_cluster** | 1800 | 30 分 | この Cookie は、現在のユーザーのリクエストを処理する Experience Edge 地域を保存します。 Experience Edge がリクエストを正しい地域にルーティングできるように、地域は、URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
+| **mbox** | 63072000 | 2 年。 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 これにより、Target が許可されます [mbox の Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を Web SDK で設定します。 |
+| **mboxEdgeCluster** | 1800 | 30 分 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 Web SDK はこの cookie を使用して正しいエッジクラスターを at.js に通信し、ユーザーがサイト内を移動する際に Target プロファイルの同期を維持できます。 |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この Cookie は、Adobe Experience Platform Web SDK での ID の移行が有効になっている場合にのみ表示されます。 この cookie は、サイトの一部で visitor.js をまだ使用している間に Web SDK に移行する際に役立ちます。 詳しくは、 [idMigrationEnabled ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) を参照してください。 |
 
 Web SDK を使用する場合、Edge ネットワークは上記の cookie を 1 つ以上設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
 
