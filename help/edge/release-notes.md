@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
+source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1388'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
 Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+
+## バージョン2.13.1 - 2022 年 10 月 13 日
+
+* 設定後に Visitor が定義されると、window.Visitor が機能しない問題を修正しました。 これは、Adobeタグを使用してを実行する場合に特に問題となります。
+* 問題を修正しました。 `device.screenWidth` および `device.screenHeight` が一部の環境で文字列として設定されていた問題を修正しました。
 
 ## バージョン2.13.0 - 2022 年 9 月 28 日
 
