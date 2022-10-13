@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;ホーム;人気のあるトピック;データ管理;ライセンス使用権限;ライセンス;ベストプラクティス
 title: データ管理ライセンス使用権限のベストプラクティス
-description: このドキュメントでは、Adobe Experience Platform でのライセンス使用権限をより適切に管理するために、従うべきベストプラクティスと使用できるツールの概要を説明します。
+description: Adobe Experience Platformでライセンスの使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 100%
+source-wordcount: '2528'
+ht-degree: 98%
 
 ---
 
@@ -54,7 +54,7 @@ Experience Platform のライセンスを取得すると、SKU によって異�
 
 ## ライセンス使用状況ダッシュボード
 
-Adobe Experience Platform UI には、Platform に関する組織のライセンス関連データのスナップショットを表示できるダッシュボードが用意されています。ダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じ内容を表示します。スナップショットは、データの近似値でもサンプルでもなく、ダッシュボードは、リアルタイムに更新されていません。
+Adobe Experience Platform UI には、組織の Platform のライセンス関連データのスナップショットを表示できるダッシュボードが用意されています。 ダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じ内容を表示します。スナップショットは、データの近似値でもサンプルでもなく、ダッシュボードは、リアルタイムに更新されていません。
 
 詳しくは、[Platform UI でのライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md#license-usage-dashboard-data)に関するガイドを参照してください。
 
