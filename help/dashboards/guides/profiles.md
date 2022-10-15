@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
 workflow-type: tm+mt
-source-wordcount: '4154'
-ht-degree: 7%
+source-wordcount: '3387'
+ht-degree: 8%
 
 ---
 
@@ -51,19 +51,19 @@ Experience Platformユーザーインターフェイス内のすべてのプロ�
 
 ウィジェットライブラリから、標準およびカスタムセグメントウィジェットの選択を参照できます。ウィジェットの追加方法については、ウィジェットライブラリのドキュメントを参照してください。 [ウィジェットを追加](../customize/widget-library.md#add-widgets).
 
-## （ベータ版）プロファイルの有効性に関するインサイト {#profile-efficacy-insights}
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->プロファイル有効性インサイト機能は、現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-この [!UICONTROL 有効性] 「 」タブでは、プロファイル有効性ウィジェットを使用して、プロファイルデータの品質と完全性に関する指標を表示します。 これらのウィジェットは、プロファイルの構成、完全性の経時的な傾向、およびプロファイルデータの品質に関する評価を一目で示します。
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
-![プロファイルの有効性ダッシュボード。](../images/profiles/attributes-quality-assessment.png)
+![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
-詳しくは、 [プロファイル有効性ウィジェットセクション](#profile-efficacy-widgets) 現在利用可能なウィジェットの詳細については、を参照してください。
+See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-このダッシュボードのレイアウトは、「 [**[!UICONTROL ダッシュボードを変更]**](../customize/modify.md) から [!UICONTROL 概要] タブをクリックします。
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## プロファイルを参照 {#browse-profiles}
 
@@ -360,73 +360,73 @@ The visualization allows you to monitor the overall health of audiences within A
 ![結合ポリシードロップダウンとウィジェットセグメントドロップダウンがハイライトされた Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## （ベータ版）プロファイル有効性ウィジェット {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
->プロファイル有効性ウィジェットは、現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobeには、データ分析に使用できる取り込まれたプロファイルの完全性を評価するための複数のウィジェットが用意されています。 各プロファイル有効性ウィジェットは、結合ポリシーでフィルタリングできます。 結合ポリシーフィルターを変更するには、[!UICONTROL 結合ポリシーを使用するプロファイル] ドロップダウンを選択し、使用可能なリストから適切なポリシーを選択します。
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by the merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
-各プロファイル有効性ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
+To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL 属性品質評価]](#attributes-quality-assessment)
-* [[!UICONTROL 完全性別プロファイル]](#profiles-by-completeness)
-* [[!UICONTROL プロファイルの完全性のトレンド]](#profiles-completeness-trend)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### （ベータ版） [!UICONTROL 属性の品質評価] {#attributes-quality-assessment}
+### (Beta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_attributesqualityassessment"
->title="属性の品質評価"
->abstract="このウィジェットは、属性に従ってすべてのプロファイルの完全性と基数を表示します。 各行は 1 つの属性を表します。 この **プロファイル** 列には、この属性を持ち、null 以外の値で入力されたプロファイルの数が表示されます。 この **完全性** 割合は、この属性を持ち、null 以外の値で埋められるプロファイルの合計数を、その属性のプロファイル内の空でない値の合計数で割った値です。 **基数** は、すべての属性に対してこの属性の一意で null でない値の合計数を提供します。"
+>title="Attributes quality assessment"
+>abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. Each row describes one attribute. The **Profiles** column provides the number of profiles that have this attribute and are filled with non-null values. The **Completeness** percentage is determined by the total number of profiles that have this attribute and are filled with non-null values divided by the total number of non-empty values in the profiles for that attribute. **Cardinality** provides the total number of unique non-null values of this attribute across all attributes."
 
-この [!UICONTROL 属性品質評価] ウィジェットは、属性に従ってすべてのプロファイルの完全性と基数を表示します。 データは最後の処理日に正確です。 この情報は、4 つの列を持つテーブルとして表され、テーブルの各行は 1 つの属性を表します。
+The [!UICONTROL Attribute quality assessment] widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
-| 列 | 説明 |
+| Column  | Description  |
 |---|---|
-| 属性 | 属性の名前。 |
-| プロファイル | この属性を持ち、null 以外の値で入力されるプロファイルの数。 |
-| 完全性 | この割合は、この属性を持ち、null 以外の値で入力されるプロファイルの合計数によって決定されます。 数は、プロファイルの合計数を、その属性のプロファイル内の空でない値の合計数で割って計算されます。 |
-| カーディナリティ | 合計数 **ユニーク** この属性の null でない値。 すべてのプロファイルで測定されます。 |
+| Attribute  | The name of the attribute.  |
+| Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
-![属性品質評価ウィジェット](../images/profiles/attributes-quality-assessment.png)
+![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### （ベータ版） [!UICONTROL 完全性別プロファイル] {#profiles-by-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbycompleteness"
->title="完全性別プロファイル"
->abstract="ドーナツグラフには、観測されたすべての属性の中で null 以外の値で埋められたプロファイル属性の割合が表示されます。 完全性が高い、中程度の、完全性が低いプロファイルの割合を示します。 完全性の高いプロファイルでは、その属性の 70%以上が塗りつぶされます。 完全性が中程度のプロファイルでは、属性の 30%～70%が入力されます。 完全性の低いプロファイルでは、その属性の 30%未満が塗りつぶされます。"
+>title="Profiles by completeness"
+>abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of their attributes filled. Medium completeness profiles have between 30% and 70% of their attributes filled. Low completeness profiles have less than 30% of their attributes filled."
 
-この [!UICONTROL 完全性別プロファイル] ウィジェットは、最後の処理日以降のプロファイルの完全性を示すドーナツグラフを作成します。 プロファイルの完全性は、観測されたすべての属性の中で null 以外の値で埋められた属性の割合で測定されます。
+The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-このウィジェットは、完全性が高い、中程度の、または低いプロファイルの割合を示します。 デフォルトでは、次の 3 つのレベルの完全性が設定されています。
+This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* 完全性の高さ：プロファイルの属性の 70%以上が入力されています。
-* 中程度の完全性：プロファイルの属性は 30%～70%が満たされます。
-* 完全性が低い：プロファイルの属性が 30%未満で満たされています。
+* High completeness: Profiles have more than 70% of their attributes filled. 
+* Medium completeness: Profiles have between 30% and 70% of their attributes filled. 
+* Low completeness: Profiles have less than 30% of their attributes filled. 
 
-![完全性別プロファイルウィジェット](../images/profiles/profiles-by-completeness.png)
+![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### （ベータ版） [!UICONTROL プロファイルの完全性のトレンド] {#profiles-completeness-trend}
+### (Beta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescompletenesstrend"
->title="プロファイルの完全性のトレンド"
->abstract="このウィジェットは、プロファイルの完全性の傾向を時間の経過と共に表す積み重ね面グラフを作成します。 完全性は、観測されたすべての属性の中で null 以外の値が設定された属性の割合で測定されます。"
+>title="Profiles completeness trend"
+>abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes that are filled with non-null values among all observed attributes."
 
-このウィジェットは、プロファイルの完全性の傾向を時間の経過と共に表す積み重ね面グラフを作成します。 完全性は、観測されたすべての属性の中で null 以外の値で埋められた属性の割合で測定されます。 このコードでは、最後の処理日以降の、プロファイルの完全性が高、中、または低と分類されます。
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
-x 軸は時間を表し、y 軸はプロファイルの数を表し、色は 3 つのレベルのプロファイルの完全性を表します。
+The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
-完全性の 3 つのレベルは次のとおりです。
+The three levels of completeness are:
 
-* 完全性の高さ：プロファイルには、70%以上の属性が入力されています。
-* 中程度の完全性：プロファイルが 70%未満で、属性の 30%以上が入力されている。
-* 完全性が低い：プロファイルでは、属性の 30%未満が入力されています。
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
-![プロファイルの完全性トレンドウィジェット](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## 次の手順
 
