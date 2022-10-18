@@ -3,9 +3,9 @@ title: 作業指示 API エンドポイント
 description: Data Hygiene API の /workorder エンドポイントを使用すると、消費者 ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '986'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ使用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
 
-この `/workorder` Data Whealthy API のエンドポイントを使用すると、Adobe Experience Platformで消費者の削除要求をプログラムで管理できます。
+Data Hygiene API の `/workorder` エンドポイントを使用すると、Adobe Experience Platform の消費者データ削除リクエストをプログラムで管理できます。
 
 ## はじめに
 
 このガイドで使用するエンドポイントは、Data Hygiene API の一部です。先に進む前に、[概要](./overview.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-## 消費者削除リクエストの作成 {#delete-consumers}
+## 消費者データ削除リクエストの作成 {#delete-consumers}
 
 `/workorder` エンドポイントに POST リクエストを行うことで、単一のデータセットまたはすべてのデータセットから 1 つまたは複数の消費者 ID を削除できます。
 
@@ -73,17 +73,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `action` | 実行するアクション。値はに設定する必要があります `delete_identity` （消費者の削除用） |
+| `action` | 実行するアクション。消費者データ削除の場合は、値を `delete_identity` に設定する必要があります。 |
 | `datasetId` | 単一のデータセットから削除する場合、この値は、当該データセットの ID である必要があります。すべてのデータセットから削除する場合、値を `ALL` に設定します。<br><br>単一のデータセットを指定する場合、データセットの関連するエクスペリエンスデータモデル（XDM）スキーマには、プライマリ ID が定義されている必要があります。 |
-| `displayName` | 消費者削除要求の表示名。 |
-| `description` | 消費者削除要求の説明。 |
+| `displayName` | 消費者データ削除リクエストの表示名。 |
+| `description` | 消費者データ削除リクエストの説明。 |
 | `identities` | 削除する情報を持つ少なくとも 1 人のユーザーの ID を含む配列。各 ID は、[ID 名前空間](../../identity-service/namespaces.md)および値で構成されます。<ul><li>`namespace`：ID 名前空間を表す、単一の文字列プロパティ `code` が含まれます。 </li><li>`id`：ID 値。</ul>`datasetId` が単一のデータセットを指定している場合、`identities` 以下の各エンティティは、スキーマのプライマリ ID と同じ ID 名前空間を使用する必要があります。<br><br>`datasetId` が `ALL` に設定されている場合、`identities` 配列は、各データセットが異なる可能性があるので、単一の名前空間に制限されません。ただし、[ID サービス](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)でレポートされるように、リクエストは、依然として組織で使用できる名前空間の制約を受けます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、消費者削除の詳細を返します。
+正常な応答では、消費者データ削除の詳細が返されます。
 
 ```json
 {
@@ -105,19 +105,19 @@ curl -X POST \
 | --- | --- |
 | `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
 | `orgId` | 組織 ID。 |
-| `bundleId` | この削除順序が関連付けられているバンドルの ID。デバッグ目的で使用されます。 複数の削除オーダーはまとめてバンドルされ、ダウンストリームサービスによって処理されます。 |
-| `action` | 作業指示によって実行されるアクション。 消費者による削除の場合、値は `identity-delete`. |
-| `createdAt` | 削除指示が作成された際のタイムスタンプ。 |
-| `updatedAt` | 削除順序が最後に更新された日時のタイムスタンプ。 |
+| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
+| `action` | 作業指示によって実行されるアクション。消費者データ削除の場合、値は `identity-delete` です。 |
+| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
 | `status` | 削除指示の現在のステータス。 |
 | `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。 リクエストがすべてのデータセットに対しての場合、値はに設定されます。 `ALL`. |
+| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 消費者削除のステータスの取得 (#lookup)
+## 消費者データ削除のステータスの取得（#lookup）
 
-後 [消費者削除リクエストの作成](#delete-consumers)の場合は、データリクエストを使用して、ステータスをGETで確認できます。
+[消費者データ削除リクエストを作成](#delete-consumers)した後は、GET リクエストを使用して、そのステータスを確認できます。
 
 **API 形式**
 
@@ -127,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | この `workorderId` 検索している消費者の削除数を示します。 |
+| `{WORK_ORDER_ID}` | 参照している消費者データ削除リクエストの `workorderId`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -183,18 +183,18 @@ curl -X GET \
 | --- | --- |
 | `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
 | `orgId` | 組織 ID。 |
-| `bundleId` | この削除順序が関連付けられているバンドルの ID。デバッグ目的で使用されます。 複数の削除オーダーはまとめてバンドルされ、ダウンストリームサービスによって処理されます。 |
-| `action` | 作業指示によって実行されるアクション。 消費者による削除の場合、値は `identity-delete`. |
-| `createdAt` | 削除指示が作成された際のタイムスタンプ。 |
-| `updatedAt` | 削除順序が最後に更新された日時のタイムスタンプ。 |
+| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
+| `action` | 作業指示によって実行されるアクション。消費者データ削除の場合、値は `identity-delete` です。 |
+| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
 | `status` | 削除指示の現在のステータス。 |
 | `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。 リクエストがすべてのデータセットに対しての場合、値はに設定されます。 `ALL`. |
-| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれます。<ul><li>`productName`:ダウンストリームサービスの名前。</li><li>`productStatus`:ダウンストリームサービスからのリクエストの現在の処理ステータス。</li><li>`createdAt`:サービスが最新のステータスを投稿した日時のタイムスタンプ。</li></ul> |
+| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
+| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスでのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスからポストされたときのタイムスタンプ。</li></ul> |
 
-## 消費者削除要求の更新
+## 消費者データ削除リクエストの更新
 
-次の項目を更新し、 `displayName` および `description` 消費者の削除を行うために、PUTリクエストを実行します。
+消費者データ削除の `displayName` および `description` を更新するには、PUT リクエストを実行します。
 
 **API 形式**
 
@@ -204,7 +204,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | この `workorderId` 検索している消費者の削除数を示します。 |
+| `{WORK_ORDER_ID}` | 参照している消費者による削除の `workorderId`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -225,14 +225,14 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `displayName` | 消費者削除要求の更新された表示名。 |
-| `description` | 消費者削除要求の更新された説明。 |
+| `displayName` | 消費者による削除リクエストの、更新された表示名。 |
+| `description` | 消費者による削除リクエストの、更新された説明。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、消費者削除の詳細を返します。
+正常な応答では、消費者データ削除の詳細が返されます。
 
 ```json
 {
@@ -271,13 +271,13 @@ curl -X GET \
 | --- | --- |
 | `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
 | `orgId` | 組織 ID。 |
-| `bundleId` | この削除順序が関連付けられているバンドルの ID。デバッグ目的で使用されます。 複数の削除オーダーはまとめてバンドルされ、ダウンストリームサービスによって処理されます。 |
-| `action` | 作業指示によって実行されるアクション。 消費者による削除の場合、値は `identity-delete`. |
-| `createdAt` | 削除指示が作成された際のタイムスタンプ。 |
-| `updatedAt` | 削除順序が最後に更新された日時のタイムスタンプ。 |
+| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
+| `action` | 作業指示によって実行されるアクション。消費者による削除の場合、値は `identity-delete` です。 |
+| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
 | `status` | 削除指示の現在のステータス。 |
 | `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。 リクエストがすべてのデータセットに対しての場合、値はに設定されます。 `ALL`. |
-| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれます。<ul><li>`productName`:ダウンストリームサービスの名前。</li><li>`productStatus`:ダウンストリームサービスからのリクエストの現在の処理ステータス。</li><li>`createdAt`:サービスが最新のステータスを投稿した日時のタイムスタンプ。</li></ul> |
+| `datasetId` | リクエストの対象となるデータセットの ID。リクエストがすべてのデータセットに対しての場合、値は `ALL` に設定されます。 |
+| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスからのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスによって投稿された際のタイムスタンプ。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
