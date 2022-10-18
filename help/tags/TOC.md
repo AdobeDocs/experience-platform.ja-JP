@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 95%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 95%
       * Google Data Layer {#google-data-layer}
          * [概要](./extensions/web/google-data-layer/overview.md)
          * [リリースノート](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [概要](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] ビデオトラッキング拡張機能 {#youtube}
          * [概要](./extensions/web/youtube/overview.md)
          * [リリースノート](./extensions/web/youtube/release-notes.md)
