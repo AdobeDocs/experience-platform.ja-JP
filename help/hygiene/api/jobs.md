@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->このエンドポイントは、消費者による削除を行うベータ版機能を表します。 最新の機能については、 [`/workorder` endpoint](./workorder.md) 代わりに、
+>このエンドポイントは、消費者による削除のベータ版機能を表します。最新の機能については、[`/workorder` エンドポイント](./workorder.md)を代わりに使用してください。
 
 Data Hygiene API を使用すると、Adobe Experience Platform に保存されている顧客の個人データをプログラムで修正または削除できます。
 
@@ -27,7 +27,7 @@ API には、[Privacy Service API](../../privacy-service/api/overview.md) と同
 
 ### 必須ヘッダーの値の収集
 
-データ衛生 API を呼び出すには、まず認証資格情報を収集する必要があります。これらは、Privacy Service API へのアクセスに使用される資格情報と同じです。以下に示すように、[API の概要](./overview.md#getting-started)を参照して、Data Hygiene API に必要な各ヘッダーの値を生成します。
+Data Hygiene API を呼び出すには、まず認証資格情報を収集する必要があります。これらは、Privacy Service API へのアクセスに使用される資格情報と同じです。以下に示すように、[API の概要](./overview.md#getting-started)を参照して、Data Hygiene API に必要な各ヘッダーの値を生成します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -53,7 +53,7 @@ POST /jobs
 
 **リクエスト**
 
-リクエストペイロードは、](../../privacy-service/api/privacy-jobs.md#access-delete)Privacy Service API の削除リクエスト[と同様の構造になっています。これには、データが削除されるユーザーをオブジェクトが表す `users` 配列が含まれています。
+リクエストペイロードは、[Privacy Service API の削除リクエスト](../../privacy-service/api/privacy-jobs.md#access-delete)と同様の構造になっています。これには、データが削除されるユーザーをオブジェクトが表す `users` 配列が含まれています。
 
 ```shell
 curl -X POST \
