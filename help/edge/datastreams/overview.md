@@ -1,12 +1,12 @@
 ---
 title: データストリームの概要
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
-keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;ターゲット;クライアントコード;プロパティトークン;ターゲット環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
+keywords: 設定;データストリーム;datastreamId;エッジ;データストリーム id;環境設定;edgeConfigId;ID;id 同期有効;ID 同期コンテナ ID;サンドボックス;ストリーミングインレット;イベントデータセット;Target;クライアントコード;プロパティトークン;Target 環境 ID;Cookie 宛先;url 宛先;Analytics 設定ブロック;レポートスイート id;データ収集のためのデータ準備;データ準備;マッパー;XDM マッパー;エッジ上のマッパー;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1789'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 92%
 
 ## [!UICONTROL データストリーム]ワークスペースへのアクセス
 
-データ収集 UI またはExperience PlatformUI で、データストリームを作成および管理するには、 **[!UICONTROL データストリーム]** をクリックします。
+左側のナビゲーションで&#x200B;**[!UICONTROL データストリーム]**&#x200B;を選択することで、データ収集 UI または Experience Platform UI でデータストリームを作成および管理できます。
 
 ![UI の「データストリーム」タブ](../assets/datastreams/overview/datastreams-tab.png)
 
@@ -106,7 +106,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 >[!IMPORTANT]
 >
->Platform のデータストリームを有効にする場合は、UI の上部のリボンに表示されるように、現在使用している Platform サンドボックスをメモしておきます。
+>Platform のデータストリームを有効にする場合、UI の上部リボンに表示されている、現在使用中の Platform サンドボックスに注意してください。
 >
 >![選択されたサンドボックス](../assets/datastreams/overview/platform-sandbox.png)
 >
@@ -121,9 +121,9 @@ Experience Platform で使用するためにこのデータストリームを設
 | [!UICONTROL イベントデータセット] | **（必須）**&#x200B;顧客イベントデータのストリーミング先となる Platform データセットを選択します。このスキーマは、[XDM ExperienceEvent クラス](../../xdm/classes/experienceevent.md)を使用する必要があります。 |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となる Platform データセットを選択します。このスキーマは、[XDM Individual Profile クラス](../../xdm/classes/individual-profile.md)を使用する必要があります。 |
 | [!UICONTROL Offer Decisioning] | このチェックボックスを選択して、Platform Web SDK 実装用の Offer Decisioning を有効にします。実装について詳しくは、[Platform Web SDK での Offer Decisioning の使用](../personalization/offer-decisioning/offer-decisioning-overview.md)に関するガイドを参照してください。<br><br>Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja)を参照してください。 |
-| [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、 [!UICONTROL パーソナライズ機能の宛先] 対象 [次のページのパーソナライゼーションの使用例](../../destinations/ui/configure-personalization-destinations.md)または [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、[!UICONTROL パーソナライゼーションの宛先]と組み合わせて[次のページのパーソナライゼーションのユースケース](../../destinations/ui/configure-personalization-destinations.md)に使用したり、[!UICONTROL Adobe Journey Optimizer] と組み合わせて使用することができます。 |
 | [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジセグメント化]」チェックボックスを有効にした後でこの項目を有効にすると、[カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)などのパーソナライゼーションの宛先にデータストリームが接続できるようになります。<br><br>[パーソナライゼーションの宛先の設定](../../destinations/ui/configure-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
-| [!UICONTROL Adobe Journey Optimizer] | 有効にするには、このチェックボックスを選択します [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) このデータストリーム用。 <br><br> このオプションを有効にすると、データストリームが [!DNL Adobe Journey Optimizer]. このオプションを使用するには、 [!UICONTROL エッジセグメント化] をアクティブにします。 If [!UICONTROL エッジセグメント化] がオフの場合、このオプションはグレー表示されます。 |
+| [!UICONTROL Adobe Journey Optimizer] | このチェックボックスを選択すると、このデータストリームに対して [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) を有効にすることができます。<br><br> このオプションを有効にすると、データストリームは [!DNL Adobe Journey Optimizer] の web およびアプリベースのインバウンドキャンペーンからパーソナライズされたコンテンツを返すことができるようになります。このオプションを使用するには、[!UICONTROL エッジセグメント化]をアクティブにする必要があります。[!UICONTROL エッジセグメント化]がオフの場合、このオプションはグレー表示されます。 |
 
 ### Adobe Target 設定 {#target}
 
@@ -176,4 +176,4 @@ Experience Platform で使用するためにこのデータストリームを設
 
 ## 次の手順
 
-このガイドでは、UI でのデータストリームの管理方法を説明しました。 データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../collection/e2e.md#install)を参照してください。
+このガイドでは、UI でのデータストリームの管理方法について説明しました。データストリーム設定後の Web SDK のインストールおよび設定方法について詳しくは、[データ収集 E2E ガイド](../../collection/e2e.md#install)を参照してください。
