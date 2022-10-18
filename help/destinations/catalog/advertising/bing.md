@@ -3,9 +3,9 @@ keywords: 広告；ビング
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 812688043a7da943832b5798de0f433928634998
+source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '622'
 ht-degree: 14%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 14%
 
 * **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:お使いの [!DNL Bing Ads CID].
+* **[!UICONTROL アカウント ID]**:お使いの [!DNL Bing Ads Customer ID] (CID) を使用します。 CID は整数で、にログインする際に URL に含まれます。 [!DNL Microsoft Advertising].
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -90,11 +90,9 @@ ht-degree: 14%
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-内 [セグメントスケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) の手順では、セグメントを、対応する数値セグメント ID( [!DNL Bing] 宛先。 次の数値セグメント ID を入力します。 [!DNL Bing] 内 [!UICONTROL マッピング ID] フィールドに入力します。
+内 [セグメントスケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順を実行する場合は、 [!UICONTROL マッピング ID] フィールドに入力します。 これにより、セグメントメタデータがに正しく渡されます。 [!DNL Bing].
 
-![Bing マッピング ID の例を含むセグメントマッピング画面を示す UI 画像](../../assets/catalog/advertising/bing/mapping-id.png)
-
-指定した [!UICONTROL マッピング ID] が Bing の宛先のセグメント ID に対応していない場合、Bing アカウントには期待されたオーディエンスデータが表示されません。
+![セグメント名を Bing マッピング ID にマッピングする方法の例を示す、セグメントスケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 書き出したデータ {#exported-data}
 
