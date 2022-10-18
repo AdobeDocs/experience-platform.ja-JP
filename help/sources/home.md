@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1111'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [Adobe Audience Manager ソースの概要](connectors/adobe-applications/audience-manager.md)
 - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications データソースの概要](connectors/adobe-applications/classifications.md)
-- [UI での Adobe Analytics Classifications Data ソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics Report Suite データソースの概要](connectors/adobe-applications/analytics.md)
+- [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Adobe Analytics レポートスイートデータソースの概要](connectors/adobe-applications/analytics.md)
 - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Servicesソースの概要](connectors/adobe-applications/campaign.md)
-- [UI でのAdobe Campaign Managed Cloud Servicesソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services ソースの概要](connectors/adobe-applications/campaign.md)
+- [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
 - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
@@ -171,15 +171,15 @@ Adobe Experience Platform には、サードパーティのプロトコルシス
 | **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「**[!UICONTROL カタログ]**」の「**[!UICONTROL ソースの接続]**」オプションおよび「**[!UICONTROL 参照]**」の「**[!UICONTROL データを選択]**」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、**[!UICONTROL データフロー]**&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
 | 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
-Adobe権限を通じて付与される使用可能な権限の詳細については、 [アクセス制御の概要](../access-control/home.md).
+Adobe Permissions を通じて付与される使用可能な権限の詳細については、[アクセス制御の概要](../access-control/home.md)を参照してください。
 
 ### ソースの属性ベースのアクセス制御
 
-Adobe Experience Platformの属性ベースのアクセス制御を使用すると、管理者は、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
+Adobe Experience Platform での属性ベースのアクセス制御では、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
-属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。 さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
 
-属性ベースのアクセス制御の詳細については、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md).
+属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
 ## 利用条件 {#terms-and-conditions}
 
