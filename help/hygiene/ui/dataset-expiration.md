@@ -3,9 +3,9 @@ title: データセット有効期限の管理
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 76%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ使用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
 
-この [[!UICONTROL データの衛生状態] workspace](./overview.md) Adobe Experience Platform UI では、データセットの有効期限をスケジュールできます。 データセットが有効期限に達すると、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
+Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)では、データセットの有効期限をスケジュールできます。データセットが有効期限に達すると、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
 
 >[!WARNING]
 >
@@ -29,13 +29,13 @@ ht-degree: 76%
 
 ![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/ttl/create-request-button.png)
 
-リクエスト作成ダイアログが表示されます。以下 **[!UICONTROL 要求されたアクション]** セクション、選択 **[!UICONTROL データセットを削除]** をクリックして、データセットの有効期限のスケジュール設定に使用できるコントロールを更新します。
+リクエスト作成ダイアログが表示されます。「**[!UICONTROL リクエストされたアクション]**」セクションで、**[!UICONTROL データセットを削除]**&#x200B;を選択して、 データセットの有効期限スケジュール設定で使用可能なコントロールを更新します。
 
 ![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/ttl/dataset-selected.png)
 
 ### 日付およびデータセットの選択
 
-リクエスト作成ダイアログが表示されます。以下 **[!UICONTROL 要求されたアクション]** 「 」セクションで、データセットを削除する日付を選択します。 手動で日付を入力（`mm/dd/yyyy` 形式）するか、カレンダーアイコン（![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)）を選択して、ダイアログから日付を選択します。
+リクエスト作成ダイアログが表示されます。「**[!UICONTROL リクエストされたアクション]**」セクションで、データセットを削除する日付を選択します。手動で日付を入力（`mm/dd/yyyy` 形式）するか、カレンダーアイコン（![カレンダーアイコンの画像](../images/ui/ttl/calendar-icon.png)）を選択して、ダイアログから日付を選択します。
 
 ![データセットの有効期限が設定されていることを示す画像](../images/ui/ttl/select-date.png)
 
@@ -49,7 +49,7 @@ ht-degree: 76%
 
 ### リクエストの送信
 
-この [!UICONTROL データセットの詳細] 「 」セクションには、選択したデータセットのプライマリ id とスキーマが入力されます。 の下 **[!UICONTROL リクエスト設定]**、リクエストの名前とオプションの説明を入力し、その後に **[!UICONTROL 送信]**.
+「[!UICONTROL データセットの詳細]」セクションには、選択したデータセットのプライマリ ID とスキーマが表示されます。**[!UICONTROL リクエスト設定]**&#x200B;で、リクエストの名前とオプションの説明を入力し、「**[!UICONTROL 送信]**」を続行します。
 
 ![「[!UICONTROL 送信]」ボタンが選択されていることを示す画像](../images/ui/ttl/submit.png)
 
@@ -59,7 +59,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->概要に関する節 ( [タイムラインと透明性](../home.md#dataset-expiration-transparency) を参照してください。
+>データセットの有効期限が実行されるとどのように処理されるかの詳細については、[タイムラインと透明性](../home.md#dataset-expiration-transparency)の概要に関する節を参照してください。
 
 ## データセット有効期限の編集またはキャンセル
 
