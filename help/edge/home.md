@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK を使用して、Platform 機能
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;エッジ;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '803'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 Adobe Experience Platform Web SDK は、Adobe Experience Cloud のお客様が Adobe Experience Platform Edge Network を通じて [!DNL Experience Cloud] の様々なサービスを操作できるようにする、クライアントサイド JavaScript ライブラリです。JavaScript ライブラリに加えて、Web SDK 設定に役立つ[タグ拡張](./extension/web-sdk-extension-configuration.md)があります。
 
-タグを使用した Web SDK の設定とソリューションへのデータの送信に関する詳しい手順については、 [Web SDK を使用したAdobe Experience Cloudの実装のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja).
+タグを使用して Web SDK を設定し、ソリューションにデータを送信するためのステップごとのガイドについては、[Web SDK を使用した Adobe Experience Cloud の実装チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -22,10 +22,10 @@ Adobe Experience Platform Web SDK は、Adobe Experience Cloud のお客様が A
 
 ## Adobe Experience Edge
 
-[!DNL Adobe Experience Platform Web SDK] は、 [!DNL Adobe Experience Edge]. [!DNL Experience Edge] は、次のテクノロジーで構成されます。
+[!DNL Adobe Experience Platform Web SDK] は、[!DNL Adobe Experience Edge] を構成するコレクションの一部です。[!DNL Experience Edge] は、次のテクノロジーで構成されます。
 
-* **[[!DNL Adobe Experience Platform Web SDK]](#overview):** JavaScript SDK およびタグ拡張により、の導入を大幅に簡略化 [!DNL Adobe] テクノロジー。
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** v5 モバイル SDK の拡張機能で、顧客が新しいデプロイメント手法を使用できるようになります。
+* **[[!DNL Adobe Experience Platform Web SDK]](#overview)：**[!DNL Adobe] テクノロジーのデプロイを大幅に簡素化するための JavaScript SDK およびタグ拡張
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview)：**&#x200B;お客様が新しいデプロイメント手法を使用できるようにするための v5 モバイル SDK の拡張機能
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md)：**[!DNL Adobe] 製品の新しいデプロイ手法を可能にする、サーバーのグローバル分散ネットワーク
 
 [!DNL Adobe Experience Edge] は、すべてのアドレス可能なチャネルにわたる、低遅延のデータ収集、プラグ可能なコンピューティング、迅速なデータアクティブ化のための新しいフレームワークです。
@@ -51,9 +51,9 @@ Adobe Experience Platform Web SDK は、Adobe Experience Cloud のお客様が A
 
 ## Web SDK に置き換わるライブラリ {#sdks}
 
-Web SDK は、既存のライブラリの単なるラッパーではありません。 これは完全に新しいライブラリで、既存のライブラリの機能を組み込むために一から書かれています。 その目的は、正しい順序で実行する必要があるタグ、ライブラリのバージョン管理との不整合、依存関係の管理などの課題を解決することです。[!DNL Experience Cloud] を実装するための新しい方法であり、[オープンソース](https://github.com/adobe/alloy)です。
+Web SDK は、既存のライブラリの単なるラッパーではありません。既存のライブラリの機能を取り込んで新たに書き上げた、全く新しいライブラリです。その目的は、正しい順序で実行する必要があるタグ、ライブラリのバージョン管理との不整合、依存関係の管理などの課題を解決することです。[!DNL Experience Cloud] を実装するための新しい方法であり、[オープンソース](https://github.com/adobe/alloy)です。
 
-Web SDK は、次の SDK に代わるものです。
+Web SDK は、次の SDK を置き換えます。
 
 * Visitor.js
 * AppMeasurement.js
@@ -68,26 +68,26 @@ Web SDK は、次の SDK に代わるものです。
 
 ## 既存のライブラリから Web SDK への移行 {#migrating-to-web-sdk}
 
-次のいずれかから簡単に移行できます。 [既存のライブラリ](#sdks) Web SDK へのAdobeでは、合理化されたアップグレードパスを提供し、web サイト全体を一度に移行する必要なく、web サイトの各ページを Web SDK に移行できます。
+[既存のライブラリ](#sdks)から Web SDK への移行を簡素化するため、アドビでは、合理化されたアップグレードパスを提供し、web サイト全体を一度に移行する必要なく、web サイトのページごとに Web SDK に移行できます。
 
-つまり、Web SDK をページで使用し、既存のライブラリを他のページに残して、移行できるようになります。
+つまり、あるページで Web SDK を使用し、他のページには既存のライブラリを残して、移行できるようになります。
 
 ### at.js から Web SDK への移行に関する考慮事項 {#considerations}
 
-を使用してページを移行する前に [!DNL at.js] Web SDK を有効にするには、次の Web SDK 設定オプションを必ず有効にします。 これにより、 [!DNL at.js ] を Web SDK を使用してページに追加します。
+[!DNL at.js] を使用するページを Web SDK に移行する前に、次の Web SDK 設定オプションを必ず有効にします。これにより、[!DNL at.js ] を含むページから Web SDK を使用するページに移動する間、訪問者プロファイルが保持されます。
 
-* [&#39;idMigrationEnabled&#39;](fundamentals/configuring-the-sdk.md#id-migration-enabled)
-* [&#39;targetMigrationEnabled&#39;](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
+* [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
+* [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
 
 
 >[!IMPORTANT]
 >
 >次の Target 機能は、at.js から Web SDK に移行する際にはサポートされません。
-> * [リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
-> * [CNAME とクロスドメインサポート](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
+> * [リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=ja)
+> * [CNAME とクロスドメインサポート](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=jp)
 
 
-at.js から Web SDK に移行した後、 `targetMigrationEnabled` 」オプションを選択します。
+at.js から Web SDK に移行した後、設定から `targetMigrationEnabled` オプションを削除する必要があります。
 
 
 
