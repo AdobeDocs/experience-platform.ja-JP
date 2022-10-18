@@ -3,9 +3,9 @@ title: 消費者レコードの削除
 description: Adobe Experience Platform で消費者レコードを削除する方法を説明します。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1133'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->現在、Adobe Experience Platformのデータ衛生機能は、Healthcare Shield を購入した組織でのみ使用できます。
+>Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)を使用すると、ID サービスおよびリアルタイム顧客プロファイルに参加している消費者レコードを削除できます。
 
@@ -35,7 +35,7 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 
 ![「[!UICONTROL リクエストを作成]」ボタンが選択されていることを示す画像](../images/ui/delete-consumer/create-request-button.png)
 
-リクエスト作成ダイアログが表示されます。デフォルトでは、 **[!UICONTROL 消費者]** オプションが **[!UICONTROL 要求されたアクション]** 」セクションに入力します。 このオプションを選択されたままにします。
+リクエスト作成ダイアログが表示されます。デフォルトでは、「**[!UICONTROL リクエストされたアクション]**」セクションで「**[!UICONTROL 消費者]**」オプションが選択されています。このオプションを選択されたままにします。
 
 ![作成ダイアログで「消費者」オプションが選択されていることを示す画像](../images/ui/delete-consumer/consumer-action.png)
 
@@ -128,7 +128,7 @@ ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択
 
 ## リクエストの送信（#submit）
 
-リクエストへの ID の追加が完了したら、 **[!UICONTROL リクエスト設定]**&#x200B;を選択する前に、リクエストの名前と説明（オプション）を入力します。 **[!UICONTROL 送信]**.
+リクエストへの ID の追加が完了したら、「**[!UICONTROL 送信]**」を選択する前に&#x200B;**[!UICONTROL リクエスト設定]**&#x200B;でリクエストの名前とオプションの説明を入力します。
 
 ![「[!UICONTROL 送信]」ボタンが選択されていることを示す画像](../images/ui/delete-consumer/submit.png)
 
@@ -140,7 +140,7 @@ ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択
 
 >[!NOTE]
 >
->概要に関する節 ( [タイムラインと透明性](../home.md#consumer-delete-transparency) ：実行後の消費者の削除の処理方法の詳細。
+>消費者の削除が実行されるとどのように処理されるかの詳細については、[タイムラインと透明性](../home.md#consumer-delete-transparency)の概要に関する節を参照してください。
 
 ## 次の手順
 
