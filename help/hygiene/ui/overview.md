@@ -3,9 +3,9 @@ title: データハイジーン UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータハイジーンタスクを管理する方法を説明します。
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '217'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -33,4 +33,4 @@ Adobe Experience Platform UI の&#x200B;**[!UICONTROL データハイジーン]*
 
 * [既存の作業指示を参照](./browse.md)
 * [データセット有効期限リクエストの作成](./dataset-expiration.md)
-* [消費者削除リクエストの作成](./delete-consumer.md)
+* [消費者データ削除リクエストの作成](./delete-consumer.md)
