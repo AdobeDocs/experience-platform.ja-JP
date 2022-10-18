@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
+source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 95%
+source-wordcount: '413'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,8 @@ ht-degree: 95%
       * [!DNL YouTube] ビデオトラッキング拡張機能 {#youtube}
          * [概要](./extensions/web/youtube/overview.md)
          * [リリースノート](./extensions/web/youtube/release-notes.md)
+      * [!DNL Zendesk] イベント API 拡張機能 {#zendesk}
+         * [概要](./extensions/web/zendesk/overview.md)
    * [サードパーティの拡張機能](./extensions/3rd-party-extensions.md)
 * 拡張機能の開発 {#extension-dev}
    * [概要](./extension-dev/overview.md)
