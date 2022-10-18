@@ -3,10 +3,10 @@ keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結
 title: アカウントプロファイル UI ガイド
 description: Real-time Customer Data Platform B2B Edition では、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。 このガイドでは、Adobe Experience Platform ユーザーインターフェイスでアカウントプロファイルを操作する際の詳細を説明します。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '1629'
-ht-degree: 73%
+source-wordcount: '1624'
+ht-degree: 74%
 
 ---
 
@@ -52,8 +52,6 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 アカウントプロファイルを参照するには、まず左のナビゲーションで「[!UICONTROL アカウント] 」の下の「**[!UICONTROL プロファイル]**」を選択します。
 
-![左側のナビゲーションでプロファイルを選択](images/b2b-account-browse.png)
-
 「**[!UICONTROL 参照]**」タブでは、接続されたエンタープライズソースのアカウント ID を使用して、またはソースの詳細を直接入力して、アカウントプロファイルを調べることができます。
 
 ![アカウント ID を使用したプロファイルの調査](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 エンタープライズソースの接続について詳しくは、[ソースの概要](../sources/sources-overview.md)を参照してください。
 
-![ソースワークフローを選択](images/b2b-account-select-source.png)
-
 接続名の横のラジオボタンを選択してソースを選び、「**[!UICONTROL 選択]**」を使用して「[!UICONTROL 参照]」タブに戻ることができます。
+
+![ソースワークフローを選択](images/b2b-account-select-source.png)
 
 ソースを選択した状態で、ソースに関連する&#x200B;**[!UICONTROL アカウント ID]** を入力する必要があります。例えば、Salesforce ソースを選択すると、その ID に関連付けられたアカウントプロファイルを表示するために、Salesforce インスタンスからアカウント ID を入力する必要があります。
 
