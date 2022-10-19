@@ -6,9 +6,9 @@ description: この記事では、アクティベーションの前におこな�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 13%
 
 ---
@@ -124,6 +124,10 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 ## 手順 5:アドホックアクティベーションジョブの実行 {#activation-job}
 
 Adobe Experience Platformは、24 時間に 1 回、スケジュールされたセグメント化ジョブを実行します。 アドホックアクティベーション API は、最新のセグメント化結果に基づいて実行されます。
+
+>[!IMPORTANT]
+>
+>次の 1 回限りの制約に注意してください。アドホックアクティベーションジョブを実行する前に、で設定したスケジュールに従ってセグメントが最初にアクティブ化された時点から 20 分以上経過していることを確認してください [手順 3 - Platform UI でアクティベーションフローを作成する](#activation-flow).
 
 アドホックアクティベーションジョブを実行する前に、セグメントのスケジュール済みセグメントの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフロー監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。終了するのを待ってから、アドホックアクティベーションジョブを実行します。
 
