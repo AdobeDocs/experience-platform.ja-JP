@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 80%
+source-wordcount: '513'
+ht-degree: 73%
 
 ---
 
@@ -47,6 +47,8 @@ Platform Web SDK と Platform Mobile SDK には、すべてのアドビ製品ラ
 ## Platform Edge Network とデータストリーム {#edge}
 
 Platform Edge Network とは、世界中に分散された信頼性の高い高速サーバーネットワークであり、データを極めて大規模に受信および処理できます。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../edge/datastreams/overview.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
+
+また、データストリームは、組織のポリシーや法規制に関して、送信する機密データが適切に処理されるようにするのに役立つ、複数の Platform 機能と統合されています。 詳しくは、 [機密データの処理](../edge/datastreams/overview.md#sensitive) 詳しくは、データストリームに関するドキュメントを参照してください。
 
 ![データストリームおよびアドビのソリューション](./images/home/adobe-solutions.png)
 
