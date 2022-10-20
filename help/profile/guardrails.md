@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、最適なシステムパフォーマンスを得るためにプロファイルデータをモデル化する際に役立つ、デフォルトの使用方法とレートの制限について説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 48%
+source-wordcount: '1902'
+ht-degree: 50%
 
 ---
 
@@ -144,6 +144,4 @@ Adobe Experience Platformでは、行動インサイトと顧客属性に基づ�
 
 ### Platform のAdobe Analyticsレポートスイートデータセット {#aa-datasets}
 
-プロファイルに対して最大 1 つのAdobe Analyticsレポートスイートデータセットを有効にする必要があります。 これはソフトリミットです。つまり、プロファイルに対して複数の Analytics データセットを有効にできますが、データに予期しない結果が生じる可能性があるので、お勧めしません。 これは、Experience Platformのデータのセマンティック構造を提供し、データ解釈の一貫性を保ち、Adobe Analyticsの eVar とコンバージョン変数のカスタマイズ可能な特性を可能にする、Experience Data Model(XDM) スキーマの違いが原因です。
-
-例えば、Adobe Analyticsでは、1 つの組織に複数のレポートスイートがある場合があります。 レポートスイート A がeVar4 を「内部検索語句」と指定し、レポートスイート B がeVar4 を「参照ドメイン」と指定した場合、これらの値は共にプロファイルの同じフィールドに取り込まれ、混乱とデータ品質の低下を招きます。
+すべてのデータの競合が解決されている限り、プロファイルに対して複数のレポートスイートを有効にできます。 データ準備機能を使用して、eVar、リストおよび Prop 間でのデータの競合を解決できます。 データ準備機能の使用方法の詳細については、 [Adobe Analytics Connector UI ガイド](../sources/tutorials/ui/create/adobe-applications/analytics.md).
