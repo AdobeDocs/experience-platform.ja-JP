@@ -1,7 +1,7 @@
 ---
 title: Splunk 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送用の Splunk 拡張機能について説明します。
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 2%
@@ -79,7 +79,7 @@ UI に Splunk イベントコレクター拡張機能をインストールする
 | [!UICONTROL ソース] | イベントデータに割り当てるソース値。 例えば、開発中のアプリからデータを送信する場合は、このキーをアプリの名前に設定します。 |
 | [!UICONTROL 索引] | イベントデータのインデックスの名前。 トークンに indexes パラメーターが設定されている場合、ここで指定するインデックスは、許可されたインデックスのリスト内にある必要があります。 |
 | [!UICONTROL 時間] | イベント時刻。 デフォルトの時刻形式は UNIX 時刻（形式）です。 `<sec>.<ms>`) およびは、ローカルタイムゾーンに依存します。 例： `1433188255.500` は、エポックの1433188255秒後 500 ミリ秒、または 2015 年 6 月 1 日（月）の 7:50:午後 55 時 (GMT)。 |
-| [!UICONTROL フィールド] | インデックス時に定義する明示的なカスタムフィールドを含む、生の JSON オブジェクトまたはキーと値のペアのセットを指定します。  この `fields` キーは、生データには適用されません。<br><br>を含むリクエスト `fields` プロパティを `/collector/event` エンドポイント、またはインデックスが作成されない場合は、インデックスが作成されません。 詳しくは、 [インデックス付きフィールド抽出](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL フィールド] | インデックス時に定義する明示的なカスタムフィールドを含む、生の JSON オブジェクトまたはキーと値のペアのセットを指定します。  この `fields` キーは、生データには適用されません。<br><br>を含むリクエスト `fields` プロパティを `/collector/event` エンドポイント、またはインデックスが作成されない場合は、インデックスが作成されません。 詳しくは、 [インデックス付きフィールド抽出](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Splunk 内のデータの検証 {#validate}
 
