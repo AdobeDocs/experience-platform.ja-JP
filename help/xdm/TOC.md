@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 85%
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
       * [広告の詳細](./field-groups/event/advertising-details.md)
-      * [アプリの詳細](./field-groups/event/application-details.md)
+      * [アプリケーションの詳細](./field-groups/event/application-details.md)
       * [残高移動](./field-groups/event/balance-transfers.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [カードアクション](./field-groups/event/card-actions.md)

@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: データフローガイド
-user-guide-description: データフローと、異なるサービスをまたいでそれらを設定する方法について説明します。
+user-guide-description: データフローと、様々なサービス間でデータフローを設定する方法について説明します。
 feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 51%
+ht-degree: 69%
 
 ---
 

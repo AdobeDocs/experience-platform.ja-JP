@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Edge Network Server API ドキュメント
 breadcrumb-title: Edge Network Server API ドキュメント
-user-guide-description: Experience CloudまたはExperience PlatformEdge サービスを使用したデータ収集、パーソナライズ、広告、マーケティングの使用例には、Edge Network Server API を使用します。
+user-guide-description: Experience Cloud サービスまたは Experience Platform Edge サービスを使用したデータ収集、パーソナライズ、広告およびマーケティングのユースケースには、Edge Network Server API を使用します。
 feature: Data Collection
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 25%
+ht-degree: 52%
 
 ---
 

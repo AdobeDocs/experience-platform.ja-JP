@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのアクセス制御
 breadcrumb-title: アクセス制御ガイド
-user-guide-description: Adobe Admin Consoleの製品プロファイルを使用して、ユーザー権限を管理します。 ユーザーを製品およびサンドボックスに割り当てる方法について説明します。
+user-guide-description: Adobe Admin Console の製品プロファイルを使用して、ユーザー権限を管理します。ユーザーを製品とサンドボックスに割り当てる方法について説明します。
 feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 79%
+ht-degree: 95%
 
 ---
 

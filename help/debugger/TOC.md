@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Debugger ヘルプ
-breadcrumb-title: Adobe Experience Platform Debugger ガイド
+user-guide-title: Adobe Experience Platform デバッガーのヘルプ
+breadcrumb-title: Adobe Experience Platform デバッガーガイド
 user-guide-description: Web ページで、Experience Platform の実装に関する問題を調べます。
 feature: Debugger
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
 source-wordcount: '58'
-ht-degree: 43%
+ht-degree: 60%
 
 ---
 

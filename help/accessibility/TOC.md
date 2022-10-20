@@ -1,11 +1,11 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform のアクセシビリティ
-user-guide-description: すべての個人に対して、Experience Platformがアクセシブルで包括的な機能を提供する取り組みについて説明します。
+user-guide-description: すべての個人にアクセシブルで包括的な機能を提供する Experience Platform の取り組みについて説明します。
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 

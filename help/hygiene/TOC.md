@@ -6,8 +6,8 @@ user-guide-description: GDPR や CCPA などの法的プライバシー規制に
 feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '48'
+ht-degree: 100%
 
 ---
 
