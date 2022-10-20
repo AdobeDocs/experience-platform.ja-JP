@@ -5,10 +5,10 @@ title: ストリーミングセグメント化を使用したほぼリアルタ�
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 33%
+source-wordcount: '1915'
+ht-degree: 32%
 
 ---
 
@@ -429,6 +429,8 @@ Adobe Experience Platform ユーザーインターフェイスを使用して同
 ### セグメントはバッチセグメント化またはストリーミングセグメント化としてどのように定義されますか。
 
 セグメントは、クエリタイプとイベント履歴期間の組み合わせに基づいて、バッチまたはストリーミングによるセグメント化として定義されます。 ストリーミングセグメントとして評価されるセグメントのリストは、 [ストリーミングセグメント化のクエリタイプの節](#query-types).
+
+セグメントに **両方** an `inSegment` 式と直接単一イベントチェーンを使用する場合、ストリーミングセグメント化の対象にはなりません。 このセグメントをストリーミングセグメント化の対象として認定する場合は、直接の単一イベントチェーンを独自のセグメントにする必要があります。
 
 ### セグメントの詳細セクション内で、「過去 X 日間」の下の数がゼロのままの間、「合計認定済み」セグメントの数が増加し続けるのはなぜですか？
 
