@@ -2,10 +2,10 @@
 title: イベント転送での秘密鍵の設定
 description: イベント転送プロパティで使用されるエンドポイントに対して認証するための UI のシークレットの設定方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
-ht-degree: 78%
+source-wordcount: '1715'
+ht-degree: 74%
 
 ---
 
@@ -127,6 +127,12 @@ Google OAuth 2 シークレットを作成するには、「 **[!UICONTROL Googl
 ![Google認証ポップオーバー](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Googleアカウントの資格情報を入力するためのダイアログが表示されます。 画面の指示に従って、選択したスコープでのデータへのイベント転送のアクセスを許可します。 認証プロセスが完了すると、シークレットが作成されます。
+
+>[!IMPORTANT]
+>
+>組織がGoogle Cloud アプリケーション用に再認証ポリシーを設定している場合、認証の有効期限が切れた後（ポリシー設定によっては 1 ～ 24 時間）、作成されたシークレットは正常に更新されません。
+>
+>この問題を解決するには、Google Admin Console にログインし、 **[!DNL App access control]** イベント転送アプリ (Adobe Real-Time CDPイベント転送 ) を [!DNL Trusted]. に関するGoogleのドキュメントを参照してください。 [Google Cloud Services のセッション長の設定](https://support.google.com/a/answer/9368756) を参照してください。
 
 ## 秘密鍵の編集
 
