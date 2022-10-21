@@ -1,9 +1,9 @@
 ---
 title: Accelerated Store レポートインサイトのクエリ
 description: クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法を説明します。
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 Query Accelerated Store を使用すると、データから重要なインサイトを得るのに必要な時間と処理能力を削減できます。 通常、データは、集計ビューが作成およびレポートされる一定の間隔（1 時間ごとや 1 日ごとなど）で処理されます。 集計データから生成されるこれらのレポートの分析は、ビジネスパフォーマンスを向上させるためのインサイトを導き出します。 クエリアクセラレーションストアは、キャッシュサービス、同時実行、インタラクティブなエクスペリエンス、ステートレス API を提供します。 ただし、データが事前に処理され、集計されたクエリ用に最適化されていると想定しています。生データのクエリには最適ではありません。
 
-クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存のReal-time Customer Data Platformデータモデルを拡張したりできます。 その後、レポートインサイトを任意のレポート/ビジュアライゼーションフレームワークに関与させたり、組み込んだりできます。 Adobe Experience Platformのリアルタイム CDP データモデルは、プロファイル、セグメント、宛先に関するインサイトを提供し、リアルタイム CDP インサイトダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、必要に応じてリアルタイム CDP データモデルを拡張する方法について説明します。
+クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存のReal-time Customer Data Platformデータモデルを拡張したりできます。 その後、レポートインサイトを任意のレポート/ビジュアライゼーションフレームワークに関与させたり、組み込んだりできます。 方法については、 Real-time Customer Data Platform Insights データモデルのドキュメントを参照してください [SQL クエリテンプレートをカスタマイズして、マーケティングおよび KPI（主要業績評価指標）の使用例に関するReal-Time CDPレポートを作成する](../../dashboards/cdp-insights-data-model.md).
+
+Adobe Experience PlatformのReal-Time CDPデータモデルは、プロファイル、セグメントおよび宛先に関するインサイトを提供し、Real-Time CDPインサイトダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成手順と、必要に応じてReal-Time CDPデータモデルを拡張する方法について説明します。
 
 ## 前提条件
 
@@ -20,7 +22,7 @@ Query Accelerated Store を使用すると、データから重要なインサ�
 
 ## はじめに
 
-Data Distiller SKU は、レポートに関するインサイトのカスタムデータモデルを構築し、強化された Platform データを保持する Real-time CDP データモデルを拡張するために必要です。 詳しくは、 [パッケージ](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)、および [ライセンス](../data-distiller/licence-usage.md) Data Distiller SKU に関するドキュメント。 Data Distiller SKU をお持ちでない場合、詳しくは、Adobeのカスタマーサービス担当者にお問い合わせください。
+Data Distiller SKU は、レポートに関するインサイトのカスタムデータモデルを構築し、強化された Platform データを保持するReal-Time CDPデータモデルを拡張するために必要です。 詳しくは、 [パッケージ](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)、および [ライセンス](../data-distiller/licence-usage.md) Data Distiller SKU に関するドキュメント。 Data Distiller SKU をお持ちでない場合、詳しくは、Adobeのカスタマーサービス担当者にお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## リアルタイム CDP インサイトデータモデルを使用して、データモデルを拡張する
+## Real-Time CDPインサイトデータモデルを使用してデータモデルを拡張する
 
 オーディエンスモデルを追加の詳細で拡張して、よりリッチなディメンションテーブルを作成できます。 例えば、セグメント名と宛先名を外部オーディエンスの識別子にマッピングできます。 これをおこなうには、クエリサービスを使用して、新しいデータセットを作成または更新し、セグメントと宛先を外部 ID と組み合わせるオーディエンスモデルに追加します。 次の図は、このデータモデル拡張の概念を示しています。
 
-![リアルタイム CDP インサイトデータモデルとクエリアクセラレーションストアモデルをリンクした ERD 図。](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Real-Time CDPインサイトデータモデルとクエリアクセラレーションストアモデルをリンクした ERD 図。](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## ディメンションテーブルを作成して、レポートインサイトモデルを拡張します
 
-クエリサービスを使用して、エンリッチメントされた Real-time CDP ディメンションデータセットからに主要な記述属性を追加する `audienceinsight` データモデルを作成し、ファクトテーブルと新しいディメンションテーブルの間の関係を確立します。 次の SQL は、既存のディメンションテーブルをレポートインサイトデータモデルに統合する方法を示しています。
+クエリサービスを使用して、エンリッチメントされたReal-Time CDPディメンションデータセットからに主要な記述属性を追加します。 `audienceinsight` データモデルを作成し、ファクトテーブルと新しいディメンションテーブルの間の関係を確立します。 次の SQL は、既存のディメンションテーブルをレポートインサイトデータモデルに統合する方法を示しています。
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

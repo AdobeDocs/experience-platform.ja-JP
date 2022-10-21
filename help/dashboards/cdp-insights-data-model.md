@@ -1,29 +1,29 @@
 ---
-title: 顧客データプラットフォーム (CDP) インサイトデータモデル
-description: CDP インサイトデータモデルの SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自の CDP レポートをカスタマイズする方法について説明します。
+title: Real-time Customer Data Platform Insights データモデル
+description: Real-time Customer Data Platformインサイトのデータモデルで SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自のReal-Time CDPレポートをカスタマイズする方法を説明します。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 1%
 
 ---
 
-# 顧客データプラットフォーム (CDP) インサイトデータモデル
+# Real-time Customer Data Platform Insights データモデル
 
-顧客データプラットフォーム (CDP) インサイトデータモデル機能は、データモデルと SQL を公開し、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化します。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび KPI（主要業績評価指標）の使用例に関する CDP レポートを作成できます。 これらのインサイトは、ユーザー定義のダッシュボードのカスタムウィジェットとして使用できます。
+Real-time Customer Data Platformインサイトデータモデル機能では、データモデルと SQL が公開され、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトが得られます。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標 (KPI) の使用例に関するReal-Time CDPレポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、 Query Accelerated Store reporting Insights のドキュメントを参照してください [クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 前提条件
 
 このガイドでは、 [ユーザー定義ダッシュボード機能](./user-defined-dashboards.md). このガイドを続行する前に、ドキュメントをお読みください。
 
-## CDP インサイトレポートと使用例
+## Real-Time CDP Insight レポートと使用例
 
-CDP レポートは、プロファイルデータと、セグメントおよび宛先との関係に関するインサイトを提供します。 様々なスタースキーマモデルが開発され、様々な一般的なマーケティングの使用例に回答しました。また、各データモデルは複数の使用例をサポートできます。
+Real-Time CDPレポートは、プロファイルデータと、セグメントおよび宛先との関係に関するインサイトを提供します。 様々なスタースキーマモデルが開発され、様々な一般的なマーケティングの使用例に回答しました。また、各データモデルは複数の使用例をサポートできます。
 
 >[!IMPORTANT]
 >
->CDP レポートに使用されるデータは、選択した結合ポリシーと、最新の毎日のスナップショットに対して正確です。
+>Real-Time CDPのレポートに使用されるデータは、選択した結合ポリシーに対して、また最新の毎日のスナップショットに対して正確です。
 
 ### プロファイルモデル {#profile-model}
 
