@@ -1,19 +1,19 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;real time cdp;b2b;cdp
+keywords: RTCDP;CDP;B2B エディション；Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;b2b;cdp
 solution: Experience Platform
 title: Real-time Customer Data Platform B2B Edition の概要
-description: Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のサンプルシナリオを使用します。
+description: Adobe Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 100%
+source-wordcount: '1206'
+ht-degree: 87%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition の概要
 
-このドキュメントでは、主要な概念を示すサンプルのユースケースを使用して、Real-time Customer Data Platform（CDP）B2B Edition の概要に関するおまかなエンドツーエンドのワークフローを提供します。
+このドキュメントでは、Real-time Customer Data Platform(CDP)B2B Edition を使い始めるための、主要な概念を説明する使用例を使用した、エンドツーエンドの高レベルなワークフローを示します。
 
 テクノロジー企業である Bodea 社は、メールと LinkedIn による新製品の広告キャンペーンで効果的に顧客のターゲティングを行うために、分断された様々なたデータソースの個人データとアカウントデータを組み合わせたいと考えています。Bodea は Marketo Engage をマーケティング自動化プラットフォームとして使用しており、顧客データを含む複数の CRM から B2B 固有のオーディエンスをセグメント化する必要があります。
 
@@ -56,7 +56,7 @@ Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで
 
 ## Experience Platform へのデータの取り込み
 
-次に、Bodea のマーケターは、[Marketo Engage コネクタ](../sources/connectors/adobe-applications/marketo/marketo.md)を使用して、ダウンストリームサービスで使用するデータを Platform に取り込みます。また、Real-time CDP B2B Edition 用の承認済みソースの 1 つを使用して、データを取り込むこともできます。
+次に、Bodea のマーケターは、[Marketo Engage コネクタ](../sources/connectors/adobe-applications/marketo/marketo.md)を使用して、ダウンストリームサービスで使用するデータを Platform に取り込みます。また、Real-Time CDP B2B Edition 用の承認済みソースの 1 つを使用して、データを取り込むこともできます。
 
 >[!NOTE]
 > 
@@ -84,7 +84,7 @@ Bodea のマーケターは、すべてのフィールドグループが適切�
 
 >[!NOTE]
 > 
->データを評価するセグメントを作成する方法については、[セグメントビルダー UI ガイド](../segmentation/ui/segment-builder.md)を参照してください。B2B セグメントテーションの具体的な使用例については、[Real-time CDP B2B Edition のセグメンテーションの概要](./segmentation/b2b.md)を参照してください。
+>データを評価するセグメントを作成する方法については、[セグメントビルダー UI ガイド](../segmentation/ui/segment-builder.md)を参照してください。B2B セグメント化の具体的な使用例については、 [Real-Time CDP B2B Edition のセグメント化の概要](./segmentation/b2b.md).
 
 セグメントビルダーを使用すると、リアルタイム顧客プロファイルデータからマーケティング可能なオーディエンスを作成し、定義した属性、イベントおよび既存のオーディエンスの組み合わせに基づいて、見込みオーディエンスの見積を表示できます。
 
@@ -104,4 +104,4 @@ Bodea マーケターは、セグメントを Marketo の宛先に対してア�
 
 ## 次の手順
 
-このチュートリアルに従うことで、Real-time CDP B2B Edition で使用される様々な Adobe Experience Platform サービスを正常に活用できます。その結果、様々なチャネルをまたいで関与できる実用的なオーディエンスとして、B2B データを取得、セグメント化、評価およびエクスポートする方法を学習しました。
+このチュートリアルに従うことで、Real-Time CDP B2B Edition で使用される様々なAdobe Experience Platformサービスを活用できました。 その結果、様々なチャネルをまたいで関与できる実用的なオーディエンスとして、B2B データを取得、セグメント化、評価およびエクスポートする方法を学習しました。

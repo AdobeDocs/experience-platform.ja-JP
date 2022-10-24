@@ -1,9 +1,9 @@
 ---
 title: Real-Time CDP B2B Edition の関連するアカウント
 type: Documentation
-description: Experience Platformのリアルタイム CDP B2B の関連アカウント機能の概要と詳細。
+description: Experience PlatformReal-Time CDP B2B の関連アカウント機能の概要と詳細情報です。
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 25%
@@ -26,7 +26,7 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 {style=&quot;table-layout:auto&quot;}
 
-関連するアカウントを使用する場合 [!DNL Real-time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。
+関連するアカウントを使用する場合 [!DNL Real-Time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。
 
 ![Experience PlatformUI の関連アカウントを示す画面。](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

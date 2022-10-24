@@ -1,16 +1,16 @@
 ---
 title: Real-time Customer Data Platform B2B Edition でのアクセス制御
-description: Real-time Customer Data Platform B2B Edition におけるアクセス制御の役割の概要です。
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+description: Adobe Real-time Customer Data Platform B2B Edition におけるアクセス制御の役割の概要です。
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '153'
 ht-degree: 11%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition でのアクセス制御
+# Adobe Real-time Customer Data Platform B2B Edition でのアクセス制御
 
-リアルタイム CDP B2B エディションのアクセス制御は、 [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、 [!DNL Admin Console]を使用して、権限とサンドボックスを持つユーザーをリンクできます。 この機能を使用すると、管理者は、定義されたユーザーのセットに対して、B2B UI などの特定のリアルタイム CDP 機能に対するアクセスを許可または制限できます。
+Real-Time CDP B2B Edition のアクセス制御は、 [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、 [!DNL Admin Console]を使用して、権限とサンドボックスを持つユーザーをリンクできます。 この機能を使用すると、管理者は、定義された一連のユーザーに対して、B2B UI などの特定のReal-Time CDP機能に対するアクセスを許可または制限できます。
 
 アクセス制御について詳しくは、 ドキュメントの「[アクセス制御の概要](../../access-control/home.md)」を参照してください。[!DNL Experience Platform]
 

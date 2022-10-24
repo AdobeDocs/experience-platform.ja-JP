@@ -1,12 +1,12 @@
 ---
 keywords: プロファイルの表示 rtcdp、rtcdp プロファイルビュー、rtcdp プロファイル
 title: Real-time Customer Data Platformでのプロファイルの参照
-description: Real-time Customer Data Platformを使用すると、Adobe Experience Platformユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータを参照できます。
+description: Adobe Real-time Customer Data Platformを使用すると、Adobe Experience Platformユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータを参照できます。
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 21%
+source-wordcount: '535'
+ht-degree: 15%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 21%
 
 Adobe Experience Platformユーザーインターフェイス内では、これらの読み取り専用プロファイルを表示し、環境設定、過去のイベント、インタラクション、個人が属するセグメントなど、個々の顧客に関する重要な情報を確認できます。
 
-Real-time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience PlatformUI のプロファイル表示機能を利用できます。 Platform ユーザーインターフェイス内での顧客プロファイルの表示に関する詳細なガイドについては、 [リアルタイム顧客プロファイルユーザーガイド](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience PlatformUI のプロファイル表示機能を利用できます。 Platform ユーザーインターフェイス内での顧客プロファイルの表示に関する詳細なガイドについては、 [リアルタイム顧客プロファイルユーザーガイド](../../profile/ui/user-guide.md).
 
-## リアルタイム CDP、B2B エディションのプロファイルの強化
+## Real-Time CDP, B2B Edition のプロファイルの強化
 
-B2B Edition ユーザーは、Adobe Experience Platformでサポートされるプロファイル参照機能に加えて、Real-time CDP、B2B Edition により、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定します。 B2B データは、セグメント化の実行にも使用でき、これらのセグメントは顧客の [!UICONTROL セグメントのメンバーシップ] タブを非 B2B セグメントと一緒に表示します。
+Adobe Experience Platform、Real-Time CDP、B2B Edition のユーザーは、B2B の属性とイベントに、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定します。 B2B データは、セグメント化の実行にも使用でき、これらのセグメントは顧客の [!UICONTROL セグメントのメンバーシップ] タブを非 B2B セグメントと一緒に表示します。
 
-リアルタイム CDP、B2B エディションでは、 [!UICONTROL アカウント], [!UICONTROL 商談]、および [!UICONTROL ソースレコード] 個々の顧客に関連付けられている企業ソース全体から
+Real-Time CDP, B2B Edition では、 [!UICONTROL アカウント], [!UICONTROL 商談]、および [!UICONTROL ソースレコード] 個々の顧客に関連付けられている企業ソース全体から
 
 これらの機能強化を確認するには、まず [リアルタイム顧客プロファイルユーザーガイド](../../profile/ui/user-guide.md) をクリックし、結合ポリシーまたは id 名前空間でプロファイルを参照します。
 
@@ -43,7 +43,7 @@ B2B Edition ユーザーは、Adobe Experience Platformでサポートされる�
 
 ### 「機会」タブ
 
-この **[!UICONTROL 商談]** 「 」タブには、アカウントに関連するオープン商談とクローズ済商談に関する詳細が表示されます。 これらの機会は複数のソースからExperience Platform に取り込むことができますが、Real-time CDP B2B エディションを使用すると、マーケティング担当者は、これらの機会をすべて 1 か所で簡単に確認できます。
+この **[!UICONTROL 商談]** 「 」タブには、アカウントに関連するオープン商談とクローズ済商談に関する詳細が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP, B2B Edition を使用すると、マーケターは、これらのオポチュニティを 1 か所でまとめて簡単に確認できます。
 
 各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 

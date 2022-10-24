@@ -5,9 +5,9 @@ title: Marketo Engage コネクタ
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '631'
 ht-degree: 13%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 >[!IMPORTANT]
 >
->次へのアクセス権が必要です： [Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) を使用したセグメント化にすべてのMarketoデータセットを使用するには [リアルタイム顧客プロファイル](../../../../profile/home.md). Real-time CDP B2B Edition を使用しない場合でも、 Marketoソースを使用して、ユーザーとアクティビティのデータセットからリアルタイム顧客プロファイルにデータを取り込み、セグメント化をおこなうことができます。
+>次へのアクセス権が必要です： [Adobe Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) を使用したセグメント化にすべてのMarketoデータセットを使用するには [リアルタイム顧客プロファイル](../../../../profile/home.md). Real-Time CDP B2B Edition を使用しない場合でも、Marketoソースを使用して、ユーザーやアクティビティのデータセットからリアルタイム顧客プロファイルにデータを取り込み、セグメント化をおこなうことができます。
 
 このドキュメントでは、 [!DNL Marketo] ソースコネクタ（コネクタの認証方法、マッピング方法に関する情報を含む） [!DNL Marketo] Experience Data Model(XDM) に対するフィールドと、コネクタのデータ待ち時間。
 
@@ -82,4 +82,4 @@ XDM と Platform での役割について詳しくは、 [XDM システムの概
 * B2B 名前空間と、で使用されるスキーマの基になる設定について説明します。 [!DNL Marketo]詳しくは、 [B2B 名前空間とスキーマ](./marketo-namespaces.md).
 * の検索に関する情報 [!DNL Marketo] munchkin ID と資格情報の生成については、 [[!DNL Marketo] 認証ガイド](./marketo-auth.md).
 * に適用される特定のマッピングルールの詳細 [!DNL Marketo] データセットについては、 [[!DNL Marketo] フィールドマッピング](../mapping/marketo.md).
-* に関する一般情報 [!DNL Real-time Customer Data Platform B2B Edition] およびその機能については、 [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* に関する一般情報 [!DNL Real-Time Customer Data Platform B2B Edition] およびその機能については、 [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

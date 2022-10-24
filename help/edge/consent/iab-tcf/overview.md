@@ -1,18 +1,18 @@
 ---
 title: Adobe Experience Platform Web SDK での IAB TCF 2.0 のサポート
 description: Adobe Experience Platform Web SDK を使用して、IAB TCF 2.0 の同意設定をサポートする方法について説明します。
-keywords: 同意；setConsent；プロファイルプライバシーフィールドグループ；エクスペリエンスイベントプライバシーフィールドグループ；プライバシーフィールドグループ；IAB TCF 2.0；リアルタイム CDP；リアルタイム顧客データプロファイル
+keywords: 同意；setConsent；プロファイルプライバシーフィールドグループ；Experience Event プライバシーフィールドグループ；プライバシーフィールドグループ；IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform Web SDK での IAB TCF 2.0 のサポート
 
-Adobe Experience Platform Web SDK は、Interactive Advertising Bureau の Transparency &amp; Consent Framework、バージョン 2.0(IAB TCF 2.0) をサポートしています。 このガイドでは、Real-time Customer Data Platform、Audience Manager、Experience Events、Adobe Analytics、Experience Edge との統合により、Adobe Experience Platform Web SDK で IAB TCF 2.0 をサポートするための要件を示します。
+Adobe Experience Platform Web SDK は、Interactive Advertising Bureau の Transparency &amp; Consent Framework、バージョン 2.0(IAB TCF 2.0) をサポートしています。 このガイドでは、Adobe Real-time Customer Data Platform、Audience Manager、Experience Events、Adobe Analytics、Experience Edge との統合により、Adobe Experience Platform Web SDK で IAB TCF 2.0 をサポートするための要件を示します。
 
 また、タグの有無に関わらず IAB TCF 2.0 を統合する方法を学ぶのに役立つガイドが以下に用意されています。
 
@@ -44,7 +44,7 @@ Adobe Audience Manager(AAM) には、顧客のプライバシー選択を評価�
 
 ## Experience Events とAdobe Analyticsの統合
 
-リアルタイム CDP とAudience Managerのオーディエンスは顧客の現在の同意設定を追跡するのに対して、Experience Events は、イベントが収集された際にアクティブだった顧客の同意設定を保持できます。
+Real-Time CDPおよびAudience Managerのオーディエンスは顧客の現在の同意設定を追跡しますが、エクスペリエンスイベントは、イベントが収集された際にアクティブだった顧客の同意設定を保持できます。
 
 イベントに関する同意情報を収集するには、以下が必要です。
 
@@ -59,7 +59,7 @@ XDM エクスペリエンスイベントを Analytics ヒットに変換する�
 
 >[!NOTE]
 >
->リアルタイム CDP またはAudience Managerが設定されていなくても、IAB TCF 2.0 を Web SDK と統合できます。 同意の環境設定を使用して、Experience Events の収集を制御し、ID Cookie を設定できます。
+>Real-Time CDPまたはAudience Managerが設定されていなくても、IAB TCF 2.0 を Web SDK と統合できます。 同意の環境設定を使用して、Experience Events の収集を制御し、ID Cookie を設定できます。
 
 ### デフォルトの同意
 
@@ -71,7 +71,7 @@ XDM エクスペリエンスイベントを Analytics ヒットに変換する�
 
 ### 変更時の同意の設定
 
-Adobe Experience Platform Web SDK には、 `setConsent` コマンドを使用して、IAB TCF 2.0 を使用するすべてのAdobe サービスに顧客の同意設定を伝えます。Real-time CDP と統合している場合は、顧客のプロファイルが更新されます。 Audience Managerと統合すると、顧客の情報が更新されます。 また、このを呼び出すと、今後の Experience イベントの送信を許可するかどうかを制御する、すべてまたは何も指定しない同意設定が Cookie に設定されます。 このアクションは、同意が変更されるたびに呼び出されることを意図しています。 今後のページの読み込みでは、Experience Edge の同意 Cookie が読み取られて、Experience Events を送信できるかどうか、および ID Cookie を設定できるかどうかが決定されます。
+Adobe Experience Platform Web SDK には、 `setConsent` コマンドを使用して、IAB TCF 2.0 を使用するすべてのAdobe サービスに顧客の同意設定を伝えます。Real-Time CDPと統合している場合は、顧客のプロファイルが更新されます。 Audience Managerと統合すると、顧客の情報が更新されます。 また、このを呼び出すと、今後の Experience イベントの送信を許可するかどうかを制御する、すべてまたは何も指定しない同意設定が Cookie に設定されます。 このアクションは、同意が変更されるたびに呼び出されることを意図しています。 今後のページの読み込みでは、Experience Edge の同意 Cookie が読み取られて、Experience Events を送信できるかどうか、および ID Cookie を設定できるかどうかが決定されます。
 
 Audience Managerの IAB TCF 2.0 統合と同様、Experience Edge は、顧客が次の目的に対して明示的に同意した場合に同意を提供します。
 

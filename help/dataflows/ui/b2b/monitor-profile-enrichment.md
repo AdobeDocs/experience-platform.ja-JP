@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -93,7 +93,7 @@ ht-degree: 4%
 
 このチュートリアルに従うことで、プロファイルエンリッチメントジョブの指標を正しく監視および理解できます。 詳しくは、次のドキュメントを参照してください。
 
-* [リアルタイム CDP B2B の関連アカウント](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Real-Time CDP B2B の関連するアカウント](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [アカウントプロファイル UI ガイドの「関連するアカウント」タブ](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [リアルタイム CDP B2B でのアカウントマッチングにつながる](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [リアルタイム CDP B2B での予測リードおよびアカウントスコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Real-Time CDP B2B でのアカウントマッチングのリード](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Real-Time CDP B2B の予測リードおよびアカウントスコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

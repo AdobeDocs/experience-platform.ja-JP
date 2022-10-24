@@ -1,24 +1,24 @@
 ---
 keywords: 指標の概要；rtcdp 指標の概要
-title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
+title: Real-time Customer Data Platformのホームページとダッシュボード
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 74%
+source-wordcount: '620'
+ht-degree: 63%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] ホームページとダッシュボード
+# [!DNL Real-Time Customer Data Platform] ホームページとダッシュボード
 
-リアルタイム CDP にログインすると、指標ダッシュボードを含むReal-time Customer Data Platform（リアルタイム CDP）ホームページが表示されます。
+Real-Time CDPにログインすると、Adobe Real-time Customer Data Platform(Real-Time CDP) のホームページが表示されます。このホームページには、指標ダッシュボードが含まれます。
 
-ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
+ホームページは、指標カードが表示される場所の 1 つに過ぎません。Real-Time CDPは、エクスペリエンス全体で指標カードを提供します。 これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
 ![画像](assets/home.png)
 
-リアルタイム CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
+Real-Time CDPにログインしたときにシステムにデータがない場合は、ホームページのダッシュボードは表示されません。 この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
 
 ## ホームページのダッシュボードビュー
 
@@ -37,7 +37,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![画像](assets/recent.png)
 
-追加の指標（プロファイルやセグメントなど）は、リアルタイム顧客データプラットフォームの他の部分で使用できます。
+追加の指標（プロファイルやセグメントなど）は、Real-time Customer Data Platformの他の部分で使用できます。
 
 ### データセット
 
@@ -53,7 +53,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 プロファイルの数は 24 時間ごとに更新されます。
 
-プロファイルの詳細については、「[リアルタイム CDP での顧客の統合ビュー](profile/profile-overview.md)」を参照してください。
+プロファイルについて詳しくは、 [Real-Time CDPでの顧客の統合ビュー](profile/profile-overview.md).
 
 ### セグメント
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

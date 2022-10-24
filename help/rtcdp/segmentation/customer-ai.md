@@ -3,16 +3,16 @@ keywords: rtcdp セグメント、セグメントビルダー rtcdp、rtcdp セ�
 title: Real-time Customer Data Platformの顧客 AI
 description: 顧客 AI の概要と、コンバージョンやチャーンなど特定の結果のスコア生成にどのように役立つかについて説明します。
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '305'
 ht-degree: 8%
 
 ---
 
 # Real-time Customer Data Platformの顧客 AI
 
-Real-time Customer Data Platformの埋め込み AI 機能である顧客 AI を使用すると、マーケターは、コンバージョンやチャーンなどの特定の結果に関する個々のレベルスコアを生成できます。
+Adobe Real-time Customer Data Platformの埋め込み AI 機能である顧客 AI を使用すると、マーケターは、コンバージョンやチャーンなどの特定の結果に関する個々のレベルスコアを生成できます。
 
 顧客 AI は、影響力のある要因の助けを借りて、顧客が何をする可能性があるかとその理由を知ることができます。さらに、顧客 AI の予測とインサイトを活用して、最も適切なオファーとメッセージを提供することで、顧客体験をパーソナライズできます。 顧客 AI は、次の点で役立ちます。
 

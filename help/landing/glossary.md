@@ -5,9 +5,9 @@ title: Adobe Experience Platform用語集
 topic-legacy: getting started
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 12%
 
 ---
@@ -298,7 +298,7 @@ ht-degree: 12%
 
 **入力機能**:入力機能は、機能マッピングで指定され、機械学習モデルが予測のために使用します。
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 例： [!DNL Attribution AI] および [!DNL Customer AI] は、機械学習の人工知能ベースのモデルで、Experience Platform( またはReal-time Customer Data Platformなどの Platform 上に構築されたアプリケーション ) を実行して操作する必要があります。
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 例： [!DNL Attribution AI] および [!DNL Customer AI] は、機械学習の人工知能ベースのモデルで、Experience Platform( またはAdobe Real-time Customer Data Platformなどの Platform 上に構築されたアプリケーション ) を実行して操作する必要があります。
 
 **興味ベースのターゲティングまたはパーソナライゼーション**:興味ベースのターゲティング（パーソナライゼーションとも呼ばれます）は、次の 3 つの条件を満たした場合に発生します。
 
@@ -414,7 +414,7 @@ ht-degree: 12%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] は、既知の顧客データと不明な顧客データを統合し、信頼できる顧客プロファイルを作成し、デジタルカスタマージャーニー全体でのシンプルな統合、インテリジェントなセグメント化、リアルタイムのアクティベーションを実現します。
+**Real-time Customer Data Platform**:Adobe Real-time Customer Data Platform(Real-Time CDP) は、既知の顧客データと不明な顧客データを統合し、信頼できる顧客プロファイルを作成し、デジタルカスタマージャーニー全体でのシンプルな統合、インテリジェントなセグメント化、リアルタイムのアクティベーションを実現します。
 
 **リアルタイム顧客プロファイル**:リアルタイム顧客プロファイル（プロファイルとも呼ばれます）は、オンライン、オフライン、CRM、サードパーティなど複数のチャネルのデータを組み合わせることで、各顧客の全体像を提供します。 プロファイルを使用すると、顧客データを個々のプロファイルに統合し、顧客とのやり取りごとに実用的なタイムスタンプ付きのアカウントを提供できます。
 

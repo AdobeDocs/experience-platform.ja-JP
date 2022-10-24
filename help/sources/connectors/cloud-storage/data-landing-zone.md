@@ -5,7 +5,7 @@ title: データランディングゾーンのソース
 topic-legacy: overview
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を説明します
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 2a403be9a90d919aba2114f14c3cf64707b814b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 19%
@@ -14,7 +14,7 @@ ht-degree: 19%
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 1 つに対するアクセス権があります [!DNL Data Landing Zone] サンドボックスごとのコンテナおよびすべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。 Platform とそのアプリケーションサービスのすべてのお客様 ( [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]、および [!DNL Real-time Customer Data Platform] は、1 つの [!DNL Data Landing Zone] サンドボックスごとのコンテナ を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
+[!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 1 つに対するアクセス権があります [!DNL Data Landing Zone] サンドボックスごとのコンテナおよびすべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。 Platform とそのアプリケーションサービスのすべてのお客様 ( [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]、および [!DNL Adobe Real-Time Customer Data Platform] は、1 つの [!DNL Data Landing Zone] サンドボックスごとのコンテナ を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
 
 [!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは標準で保護されています [!DNL Azure Blob] 保存時および移動時の保管セキュリティメカニズム SAS ベースの認証を使用すると、 [!DNL Data Landing Zone] コンテナを使用して、公開インターネット接続を介して接続できます。 ユーザーが [!DNL Data Landing Zone] コンテナを使用する場合は、ネットワークに対して許可リストや地域間の設定を設定する必要はありません。 Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファイルは 7 日後に削除されます。
 

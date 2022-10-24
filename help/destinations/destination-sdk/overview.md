@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDKは、選択したデータおよび認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントまたはストレージの場所に配信するExperience Platformの宛先統合パターンを設定できる設定 API のセットです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 57%
+source-wordcount: '840'
+ht-degree: 55%
 
 ---
 
@@ -23,16 +23,16 @@ Destination SDK ドキュメントでは、Adobe Experience Platform Destination
 
 >[!IMPORTANT]
 >
-> 非公開のカスタムの宛先を作成するこの機能は、次の場合にのみ使用できます。 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
+> 非公開のカスタムの宛先を作成するこの機能は、次の場合にのみ使用できます。 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
 
 Destination SDK のパートナーは、製品化された宛先を [Experience Platform カタログ](/help/destinations/catalog/overview.md)に追加することで、次のメリットを得ることができます。
 1. 事前設定済みのパラメーターを使用して顧客全体で統合設定を標準化し、顧客の設定エクスペリエンスを簡素化できます。
 2. Experience Platform の宛先カタログでブランド化した宛先カードを紹介できるため、顧客の設定の簡素化や認知の向上につながります。
-3. Adobe Experience Platform および Real-time Customer Data Platform との製品化された宛先統合として取り上げられます。
+3. Adobe Experience PlatformおよびAdobe Real-time Customer Data Platformとの製品化された宛先統合としてお勧めします。
 
 Experience Platformのお客様は、アクティベーションのニーズに最適な、独自の非公開カスタムの宛先を作成することもできます。
 
-![宛先開発者がDestination SDKとやり取りする方法、および製品化された宛先とプライベートの宛先からリアルタイム CDP のお客様が得るメリットを示す概要図です。](./assets/destination-sdk-visual.png)
+![宛先開発者がDestination SDKとやり取りする方法、およびReal-Time CDPのお客様が製品化された宛先とプライベートの宛先から得るメリットを示す概要図です。](./assets/destination-sdk-visual.png)
 
 ## サポートされる統合のタイプ {#supported-integration-types}
 

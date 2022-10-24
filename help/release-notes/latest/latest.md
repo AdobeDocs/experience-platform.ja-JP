@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
-workflow-type: ht
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+workflow-type: tm+mt
 source-wordcount: '2925'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 ### 顧客 AI
 
-Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
+Real-time Customer Data Platformで使用できる顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 
 | 機能 | 説明 |
 | --- | --- |

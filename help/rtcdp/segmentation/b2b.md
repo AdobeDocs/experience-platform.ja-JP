@@ -1,17 +1,17 @@
 ---
-title: リアルタイム CDP B2B エディションのセグメント化の使用例
-description: 利用可能な様々なリアルタイム CDP B2B エディションの使用例の概要です。
+title: Real-time Customer Data Platform B2B Edition のセグメント化の使用例
+description: 利用可能な様々なAdobe Real-time Customer Data Platform B2B Edition の使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1283'
 ht-degree: 1%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition のセグメント化の使用例
 
-このドキュメントでは、Real-time CDP B2B Edition のセグメント定義の例と、一般的な B2B の使用例で様々な種類の属性を組み合わせる方法を示します。 宛先が B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+このドキュメントでは、Adobe Real-time Customer Data Platform B2B Edition のセグメント定義の例と、一般的な B2B の使用例で様々な種類の属性を組み合わせる方法を示します。 宛先が B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ B2B クラスとその属性には、 `B2B` ラベルを使用して、Real-time
 
 B2B の使用例のセグメントを効果的に作成するには、スキーマに関する深い知識を持ち、データモデルがどのように表示されるかを理解することが重要です。 また、データがデータオブジェクト間を移動するパスを把握するのにも便利です。
 
-次の画像は、Real-time CDP B2B Edition 内で使用可能な B2B クラス間の関係を示しています。
+次の画像は、Real-Time CDP B2B Edition 内で使用可能な B2B クラス間の関係を示しています。
 
 ![B2B クラス ERD](../assets/segmentation/b2b-classes.png)
 
@@ -114,4 +114,4 @@ B2B エディションでのセグメント化の使用例を次に示します�
 
 ## 次の手順 {#next-steps}
 
-この概要を読むと、Real-time CDP、B2B Edition を使用して利用できるセグメント化の可能性について理解できます。 セグメント化サービスの詳細については、[セグメント化に関するドキュメント](../../segmentation/home.md)を参照してください。
+この概要を読み終えると、Real-Time CDP, B2B Edition を使用してセグメント化をおこなう方法について理解できるようになります。 セグメント化サービスの詳細については、[セグメント化に関するドキュメント](../../segmentation/home.md)を参照してください。

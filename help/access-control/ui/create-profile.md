@@ -5,7 +5,7 @@ title: Adobe Admin Console で新しい製品プロファイルを作成
 topic-legacy: user guide
 description: このドキュメントでは、Adobe Admin Console で新しい製品プロファイルを作成するための手順について説明します。新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 100%
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 B2B Edition または B2P Edition を利用できるお客様は、B2B UI にアクセスできます。[!UICONTROL サービスの有効化メニュー]を介して、B2B UI をユーザーにプロビジョニングできます。「[!UICONTROL B2B UI]」の横にあるトグルを選択して、特定の製品プロファイルのサービスを有効にし、「**[!UICONTROL 保存]**」を選択します。
 
-「B2B UI」切り替えを使用すると、アカウントとオポチュニティの管理に関する B2B ワークフローを表示し、B2B 関連のセグメントを作成できます。詳しくは、[[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md) のドキュメントを参照してください。
+「B2B UI」切り替えを使用すると、アカウントとオポチュニティの管理に関する B2B ワークフローを表示し、B2B 関連のセグメントを作成できます。詳しくは、[[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md) のドキュメントを参照してください。
 
 ![enable-b2b](../images/enable-b2b.png)
 

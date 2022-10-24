@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -91,13 +91,13 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 
 ## 宛先 {#destinations}
 
-In [リアルタイム CDP](../../rtcdp/overview.md)の宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
+In [Real-Time CDP](../../rtcdp/overview.md)の宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
 
 **新機能**
 
 | 機能 | 説明 |
 |--- | ---|
-| アクセス制御権限のサポート | リアルタイム CDP の宛先機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。 |
+| アクセス制御権限のサポート | Real-Time CDPの宛先機能は、Adobe Experience Platformのアクセス制御権限と連携します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。 |
 
 **アクセス制御権限**
 

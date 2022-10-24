@@ -1,16 +1,16 @@
 ---
-title: リアルタイム CDP B2B での予測リードおよびアカウントスコアリング
+title: Real-Time CDP B2B の予測リードおよびアカウントスコアリング
 type: Documentation
 description: Experience PlatformCDP B2B の予測リードおよびアカウントスコアリング機能の概要と詳細。
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 9%
 
 ---
 
-# リアルタイム CDP B2B での予測リードおよびアカウントスコアリング
+# Real-Time CDP B2B の予測リードおよびアカウントスコアリング
 
 B2B マーケターは、マーケティングファネルの最上部で複数の課題に直面します。 効果的な B2B マーケターは、多数の人々を自動認定し、価値の高い目標に集中できるようにする必要があります。 認定は、マーケティングコンバージョンだけでなく、最終的な販売結果と一致する必要があります。
 

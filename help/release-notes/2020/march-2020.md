@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: リリースノート;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 73%
+ht-degree: 68%
 
 ---
 
@@ -39,8 +39,8 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| のデータ使用ポリシーの自動適用 [!DNL Real-time Customer Data Platform] | 宛先に対してデータをアクティブ化するワークフローにデータ使用ポリシーが適用されるようになりました。また、データガバナンスは、既存のアクティベーションに影響を与える変更（データセットラベル、結合ポリシー、セグメント定義の変更など）をおこなう場合にも、組み込まれて適用されます。 |
-| データリネージの適用 | リアルタイム CDP でデータ使用ポリシーが侵された場合、UI にはデータリネージ情報を含む通知が表示されます。このため、ユーザーは、ポリシー違反の理由と、違反を解決するために必要な操作を理解できます。 |
+| のデータ使用ポリシーの自動適用 [!DNL Real-Time Customer Data Platform] | 宛先に対してデータをアクティブ化するワークフローにデータ使用ポリシーが適用されるようになりました。また、データガバナンスは、既存のアクティベーションに影響を与える変更（データセットラベル、結合ポリシー、セグメント定義の変更など）をおこなう場合にも、組み込まれて適用されます。 |
+| データリネージの適用 | Real-Time CDPでデータ使用ポリシーが違反されると、UI にはデータ系列情報を含む通知が表示され、ポリシー違反の理由と、違反を解決するためにユーザーが実行できる操作を理解するのに役立ちます。 |
 
 
 **既知の問題**
@@ -76,8 +76,8 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 | 宛先 | 説明 |
 |--- | ---|
-| クラウドストレージの宛先 | リアルタイム CDP は、セグメントをデータファイルとして [!DNL Amazon S3] または SFTP クラウドのストレージの場所。 これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
-| 広告の宛先 | この [!DNL Google] 宛先カードは、3 つの異なる [!DNL Google] 現在、リアルタイム CDP でサポートされているプラットフォーム： [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360。 |
+| クラウドストレージの宛先 | Real-Time CDPは、セグメントをデータファイルとして [!DNL Amazon S3] または SFTP クラウドのストレージの場所。 これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
+| 広告の宛先 | この [!DNL Google] 宛先カードは、3 つの異なる [!DNL Google] 現在Real-Time CDPでサポートされているプラットフォーム： [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360。 |
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 

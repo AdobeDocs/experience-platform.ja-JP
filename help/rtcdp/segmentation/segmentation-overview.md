@@ -1,20 +1,20 @@
 ---
 keywords: セグメント化；セグメント化 rtcdp；リアルタイム顧客データプラットフォームセグメント化
 title: Real-time Customer Data Platformのセグメント化サービス
-description: リアルタイム CDP は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
+description: Adobeリアルタイム顧客データプラットフォームは、Adobe Experience Platformをベースに構築され、多くのExperience Platformサービスと機能を利用しています。 セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 31%
+source-wordcount: '540'
+ht-degree: 27%
 
 ---
 
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] （リアルタイム CDP）を使用すると、複数のソースからデータを取り込み、顧客に合わせて一貫性のあるエクスペリエンスを提供できます。 関連するパーソナライズされたマーケティングキャンペーンの配信は、 [!DNL Segmentation Service](Adobe Experience Platformの一部 )
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) を使用すると、複数のソースからデータを取り込み、顧客に合わせて調整され、一貫性のあるエクスペリエンスを提供できます。 関連するパーソナライズされたマーケティングキャンペーンの配信は、 [!DNL Segmentation Service](Adobe Experience Platformの一部 )
 
-リアルタイム CDP はAdobe Experience Platformをベースに構築され、多くの [!DNL Experience Platform] サービスと機能に関する情報です。 の使用 [!DNL Segmentation Service]では、顧客を類似の特性を持つ小さなグループに分けて、独自のマーケティングを提供できます。
+Real-Time CDPはAdobe Experience Platformをベースに構築され、多くの [!DNL Experience Platform] サービスと機能に関する情報です。 の使用 [!DNL Segmentation Service]では、顧客を類似の特性を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 
 ## セグメント化
 
@@ -52,4 +52,4 @@ Real-time Customer Data Platformに含まれる顧客 AI は、顧客予測と�
 
 ## 次の手順
 
-この概要を読んだ後、リアルタイム CDP がどのように利用するかを理解する必要があります [!DNL Segmentation Service] マーケティングキャンペーンのカスタマイズとパーソナライゼーションを強化します。 詳しくは、 [!DNL Segmentation Service]を読んでください。 [セグメント化に関するドキュメント](../../segmentation/home.md).
+この概要を読んだ後、Real-Time CDPが [!DNL Segmentation Service] マーケティングキャンペーンのカスタマイズとパーソナライゼーションを強化します。 詳しくは、 [!DNL Segmentation Service]を読んでください。 [セグメント化に関するドキュメント](../../segmentation/home.md).

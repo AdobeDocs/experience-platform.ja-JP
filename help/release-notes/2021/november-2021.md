@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2021 年 11 月
 description: Adobe Experience Platform の 2021年11月 のリリースノート。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 99%
+ht-degree: 79%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 99%
 
 Adobe Experience Platform の新機能：
 
-- [Real-time Customer Data Platform B2B エディション](#B2B)
+- [Real-Time Customer Data Platform B2B エディション](#B2B)
 - [（ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します](#ad-hoc-activation)
 
 ## 既存の機能に対するアップデート
@@ -27,13 +27,13 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [アトリビューション AI](#attribution-ai)
 - [顧客 AI](#customer-ai)
 
-### Real-time Customer Data Platform B2B エディション {#B2B}
+### Real-Time Customer Data Platform B2B エディション {#B2B}
 
 **リリース日：2021年11月12日（PT）**
 
-Real-time Customer Data Platform（Real-time CDP）上に構築された Real-time CDP B2B Edition は、B2B サービスを行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
+Real-Time CDP B2B Edition は、Real-time Customer Data Platform(Real-Time CDP) をベースに構築され、B2B サービスモデルで運用するマーケター向けに設計されています。 複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 
-Real-time CDP B2B Edition と対応する B2C を区別する様々な Adobe Experience Platform 機能が改善されています。これには、B2B の使用例におけるエクスペリエンスデータモデル（XDM）の改善、ID の解決およびプロファイルのセグメンテーションのアップグレード、Marketo Engage のカスタムコネクタと宛先が含まれます。Marketo コネクタを使用すると、B2B ブランドは、業界をリードする B2B エンゲージメントデータを行動情報と結び付けて、リードを育成し、アカウントベースのマーケティングオペレーションを強化できます。
+Real-Time CDP B2B Edition と B2C 版を区別する様々なAdobe Experience Platform機能が改善されました。 これには、B2B の使用例におけるエクスペリエンスデータモデル（XDM）の改善、ID の解決およびプロファイルのセグメンテーションのアップグレード、Marketo Engage のカスタムコネクタと宛先が含まれます。Marketo コネクタを使用すると、B2B ブランドは、業界をリードする B2B エンゲージメントデータを行動情報と結び付けて、リードを育成し、アカウントベースのマーケティングオペレーションを強化できます。
 
 -[B2B と B2P の新しいエディション](#editions)
 -[新しい Marketo データソースと宛先コネクタ](#marketo)
@@ -41,9 +41,9 @@ Real-time CDP B2B Edition と対応する B2C を区別する様々な Adobe Exp
 
 ### B2B と B2P の新しいエディション {#editions}
 
-Real-time CDP とプラットフォームアクティベーションの両製品に B2B のデータと機能を追加した新しい B2B エディションおよび B2P エディションを購入できます。
+B2B のデータと機能をReal-Time CDPと Platform Activation の両方の製品に取り込む新しい B2B エディションと B2P エディションを購入できます。
 
-Real-time CDP B2B エディションについて詳しくは、[概要](../../rtcdp/overview.md)を参照してください。
+Real-Time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
 
 ### 新しい Marketo データソースおよび宛先コネクタ {#marketo}
 
@@ -60,9 +60,9 @@ Real-time CDP B2B エディションについて詳しくは、[概要](../../rt
 
 | 機能 | 説明 |
 |-----------|--------------|
-| 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition は、アカウント、機会、キャンペーンなどといった、B2B の基本的なデータエンティティに関する詳細をキャプチャする複数の標準 XDM を提供します。。 |
+| 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition は、アカウント、商談、キャンペーンなど、B2B の重要なデータエンティティに関する詳細をキャプチャする、いくつかの標準 XDM を提供します。 |
 
-B2B データエンティティのキャプチャについて詳しくは、[Real-time Customer Data Platform B2B エディションのスキーマ](../../rtcdp/schemas/b2b.md)を参照してください。
+詳しくは、 [Real-time Customer Data Platform B2B Edition のスキーマ](../../rtcdp/schemas/b2b.md) B2B データエンティティのキャプチャに関する詳細は、ドキュメントを参照してください。
 
 ### （ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
 
@@ -81,7 +81,7 @@ B2B データエンティティのキャプチャについて詳しくは、[Rea
 
 ### 顧客 AI {#customer-ai}
 
-Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。これを実現するために、ビジネスニーズを機械学習の問題に変換したり、アルゴリズムを選択したり、トレーニング、またはデプロイする必要はありません。
+Real-time Customer Data Platformで使用できる顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。 これを実現するために、ビジネスニーズを機械学習の問題に変換したり、アルゴリズムを選択したり、トレーニング、またはデプロイする必要はありません。
 
 **更新された機能**
 

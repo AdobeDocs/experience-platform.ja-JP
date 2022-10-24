@@ -5,9 +5,9 @@ title: Adobe Experience Platformでの同意処理
 topic-legacy: getting started
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platformを使用すると、顧客から収集した同意デ�
 
 >[!NOTE]
 >
->このドキュメントでは、Adobe標準を使用した同意データの処理に焦点を当てています。 IAB Transparency and Consent Framework(TCF)2.0 に準拠して同意データを処理する場合は、 [Real-time Customer Data Platformでの TCF 2.0 のサポート](../iab/overview.md).
+>このドキュメントでは、Adobe標準を使用した同意データの処理に焦点を当てています。 IAB Transparency and Consent Framework(TCF)2.0 に準拠して同意データを処理する場合は、 [Adobe Real-time Customer Data Platformでの TCF 2.0 のサポート](../iab/overview.md).
 
 ## 前提条件
 

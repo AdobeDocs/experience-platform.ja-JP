@@ -5,7 +5,7 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2375'
 ht-degree: 16%
@@ -136,7 +136,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 >[!NOTE]
 >
-> 宛先は、 [!DNL Real-time Customer Data Platform]を使用して外部プラットフォームにデータを書き出すことができます。 宛先について詳しくは、 [宛先の概要](../../destinations/home.md). 宛先に対してセグメントをアクティブ化する方法については、 [アクティベーションの概要](../../destinations/ui/activation-overview.md).
+> 宛先は、 [!DNL Adobe Real-Time Customer Data Platform]を使用して外部プラットフォームにデータを書き出すことができます。 宛先について詳しくは、 [宛先の概要](../../destinations/home.md). 宛先に対してセグメントをアクティブ化する方法については、 [アクティベーションの概要](../../destinations/ui/activation-overview.md).
 
 ### プロファイルサンプル
 

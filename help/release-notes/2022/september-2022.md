@@ -1,16 +1,16 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2926'
-ht-degree: 29%
+ht-degree: 98%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 9 月 28 日（PT）**
+**リリース日：2022年9月28日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -32,18 +32,18 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 >[!IMPORTANT]
 >
->属性ベースのアクセス制御は、2022 年 10 月から有効になります。 アーリーアダプターになりたい場合は、Adobe担当者にお問い合わせください。
+>属性ベースのアクセス制御は、2022年10月から有効になります。 早期導入をご希望の場合は、アドビ担当者にお問い合わせください。
 
-属性ベースのアクセス制御は、Adobe Experience Platformの機能で、プライバシーを意識するブランドがユーザーアクセスを柔軟に管理できるようにします。 スキーマフィールドやセグメントなどの個々のオブジェクトを、ユーザーの役割に割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
 
-属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、ユーザーのアクセス、機密個人データ (SPD)、個人識別情報 (PII)、その他のカスタマイズされた種類のデータを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+属性ベースのアクセス制御により、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 | 機能 | 説明 |
 | --- | --- |
-| 属性ベースのアクセス制御 | 属性ベースのアクセス制御を使用すると、エクスペリエンスデータモデル (XDM) スキーマフィールドとセグメントに、組織またはデータの使用範囲を定義するラベルを付けることができます。 同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドとセグメントに関するアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、サードパーティのユーザー）に与えるアクセスを管理できます。 詳しくは、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。 |
-| 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を使用すると、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ラベルを活用し、特定の Platform リソースにアクセスできるユーザーの役割を定義するポリシーを作成できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
+| 属性ベースのアクセス制御 | 属性ベースのアクセス制御を使用すると、エクスペリエンスデータモデル（XDM）スキーマフィールドやセグメントに、組織またはデータの使用範囲を定義するラベルを付けることができます。同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドやセグメントをカバーするアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、またはサードパーティのユーザー）に与えるアクセスをうまく管理できます。詳しくは、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。 |
+| 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を使用すると、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ポリシーを作成してラベルを活用し、特定の Platform リソースにアクセスできるユーザーの役割を定義できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
 
-属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、 [属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md).
+属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、[属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md)を参照してください。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -55,21 +55,21 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 | 機能 | 説明 |
 | --- | --- |
-| ドラフトインスタンスを保存 | この新機能を使用すると、マーケティングアナリストは、モデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前にモデルが完了するまで編集を続行できます。 この機能が役立つシナリオには、ユーザーがワークフローに定義する複数のフィールドを持っているが、時間の制約が原因でそれを完了できない場合などがあります。 別のシナリオとしては、1 つ以上のデータセット統計が処理され、まだ使用できない場合があります。 詳しくは、 [Attribution AIユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) を参照してください。 |
-| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
+| ドラフトインスタンスの保存 | この新機能を使用すると、マーケティングアナリストは、モデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまで編集を続行できます。この機能が役立つシナリオとして、ユーザーがワークフローに定義する複数のフィールドを持っているが、時間の制約が原因でそれを完了できない場合などが考えられます。別のシナリオとしては、1 つ以上のデータセット統計が処理中で、まだ使用できない場合があります。詳しくは、[アトリビューション AI ユーザーガイド](../../intelligent-services/attribution-ai/user-guide.md#governance-policies)を参照してください。 |
+| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンス作成を送信すると、新しいポリシー強制サービスは、データ使用に関するポリシー違反の有無を確認し、その詳細をポップオーバーに表示します。これにより、データ操作とマーケティングアクションが、Adobe Experience Platform で設定されたデータ使用ポリシーに確実に準拠するようにします。 |
 
-Attribution AI [Attribution AIの概要](../../intelligent-services/attribution-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
+アトリビューション AI について詳しくは、[アトリビューション AI の概要](../../intelligent-services/attribution-ai/overview.md)を参照してください。データガバナンスポリシーの詳細については、[ポリシーの概要](../../data-governance/policies/overview.md)を参照してください。
 
 ### 顧客 AI
 
-Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
+Real-time Customer Data Platformで使用できる顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 
 | 機能 | 説明 |
 | --- | --- |
-| ドラフトインスタンスを保存 | この新機能を使用すると、マーケティングアナリストは、モデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前にモデルが完了するまで編集を続行できます。 この機能が役立つシナリオには、ユーザーがワークフローに定義する複数のフィールドを持っているが、時間の制約が原因でそれを完了できない場合などがあります。 別のシナリオとしては、1 つ以上のデータセット統計が処理され、まだ使用できない場合があります。 詳しくは、 [顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) を参照してください。 |
-| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンスを作成するように送信すると、新しいポリシー強制サービスは、データ使用に対するポリシー違反があるかどうかを確認し、詳細をポップオーバーに表示します。 これにより、データ操作とマーケティングアクションが、Adobe Experience Platformで設定されたデータ使用ポリシーに確実に準拠するようにします。 |
+| ドラフトインスタンスの保存 | この新機能を使用すると、マーケティングアナリストは、モデル設定をドラフトインスタンスとして保存し、トレーニングとスコアリングの前に完了するまで編集を続行できます。この機能が役立つシナリオとして、ユーザーがワークフローに定義する複数のフィールドを持っているが、時間の制約が原因でそれを完了できない場合などが考えられます。別のシナリオとしては、1 つ以上のデータセット統計が処理中で、まだ使用できない場合があります。詳しくは、[顧客 AI ユーザーガイド](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies)を参照してください。 |
+| ガバナンスポリシー | ユーザーが設定ワークフローを使用してインスタンス作成を送信すると、新しいポリシー強制サービスは、データ使用に関するポリシー違反の有無を確認し、その詳細をポップオーバーに表示します。これにより、データ操作とマーケティングアクションが、Adobe Experience Platform で設定されたデータ使用ポリシーに確実に準拠するようにします。 |
 
-顧客 AI について詳しくは、 [顧客 AI の概要](../../intelligent-services/customer-ai/overview.md). データガバナンスポリシーの詳細については、 [ポリシーの概要](../../data-governance/policies/overview.md).
+顧客 AI について詳しくは、[顧客 AI の概要](../../intelligent-services/customer-ai/overview.md)を参照してください。データガバナンスポリシーの詳細については、[ポリシーの概要](../../data-governance/policies/overview.md)を参照してください。
 
 ## 監査ログ {#audit-logs}
 
@@ -79,22 +79,22 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 | 機能 | 名前 | 説明 |
 | --- | --- | --- |
-| 追加されたリソース | <ul><li>Attribution AIインスタンス</li><li>顧客 AI インスタンス</li><li>Datastream</li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
+| 追加されたリソース | <ul><li>アトリビューション AI インスタンス</li><li>顧客 AI インスタンス</li><li>データストリーム</li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、 [監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md).
+Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platformは、毎日のスナップショットで取得した、組織のデータに関する重要なインサイトを表示できる、複数のダッシュボードを提供します。
+Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを表示できる複数のダッシュボードを提供しています。
 
 | 機能 | 説明 |
 | --- | --- |
-| 使用中のラベル | 使用中のラベルをウィジェットライブラリで表示すると、ダッシュボードに既存のウィジェットが存在するかを簡単に識別できます。 これにより、同じウィジェットを複数回追加することができますが、重複を避けるのが簡単です。 |
-| ユーザー定義ダッシュボード | ユーザー定義ダッシュボードでは、カスタムダッシュボードの作成と管理を可能にして、インサイトを効率化し、ビジュアライゼーションをカスタマイズするのに役立ちます。 ユーザー定義のダッシュボードを使用すると、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。 詳しくは、 [機能ガイド](../../dashboards/user-defined-dashboards.md) を参照してください。 |
-| 顧客データプラットフォームインサイトデータモデル | 顧客データプラットフォーム (CDP) インサイトデータモデル機能は、データモデルと SQL を公開し、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化します。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標の使用例に関する CDP レポートを作成できます。 これらのインサイトは、ユーザー定義のダッシュボードのカスタムウィジェットとして使用できます。 詳しくは、 [CDP インサイトデータモデル機能ガイド](../../dashboards/cdp-insights-data-model.md) を参照してください。 |
-| オーディエンス重複レポートウィジェット | このウィジェットは両方で使用できます [!UICONTROL プロファイル] および [!UICONTROL セグメント] ダッシュボード。 レポートには、選択したセグメントの重複が最も多い、または最も少ない割合でランク付けされた、オーディエンスの順番付きリストが表示されます。 次の [!UICONTROL プロファイル] ダッシュボードは、使用可能なすべてのセグメントから、結合ポリシーに基づいてオーディエンスの重複をフィルタリングして表示できます。 この [!UICONTROL セグメント] ダッシュボードでは、特定のセグメントでオーディエンスの重複をフィルタリングできます。<br>この分析を使用して、新しい高パフォーマンスのセグメントを作成し、同じオーディエンスが異なる宛先に送信されるのを防ぎます。 また、このレポートは、隠れたインサイトを特定して、セグメント化を改善したり、追跡する固有のプロファイルを見つけたりするのに役立ちます。 各 [プロファイル](../../dashboards/guides/profiles.md#audience-overlap-report) および [セグメント](../../dashboards/guides/segments.md#audience-overlap-report) ウィジェットガイドを参照してください。 |
+| 使用中のラベル | 使用中のラベルをウィジェットライブラリで表示すると、ダッシュボード内の既存のウィジェットの存在を簡単に識別できます。これにより、重複を避けることができますが、必要に応じて同じウィジェットを複数回追加することはできます。 |
+| ユーザー定義ダッシュボード | ユーザー定義ダッシュボードでは、カスタムダッシュボードの作成と管理を可能にして、インサイトを効率化し、ビジュアライゼーションをカスタマイズするのに役立ちます。ユーザー定義のダッシュボードを使用すると、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。詳しくは、[機能ガイド](../../dashboards/user-defined-dashboards.md)を参照してください。 |
+| 顧客データプラットフォームインサイトデータモデル | 顧客データプラットフォーム（CDP）インサイトデータモデル機能は、データモデルと SQL を公開し、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化します。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標の使用例に関する CDP レポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、[CDP インサイトデータモデル機能ガイド](../../dashboards/cdp-insights-data-model.md)を参照してください。 |
+| オーディエンス重複レポートのウィジェット | このウィジェットは、[!UICONTROL プロファイル]および[!UICONTROL セグメント]ダッシュボードの両方で使用できます。 レポートには、選択したセグメントの重複率の高い順または低い順にランク付けされたオーディエンスのリストが表示されます。[!UICONTROL プロファイル]ダッシュボードから、使用可能なすべてのセグメントの結合ポリシーでオーディエンスの重複をフィルタリングして表示できます。 この[!UICONTROL セグメント]ダッシュボードでは、特定のセグメントでオーディエンスの重複をフィルタリングできます。<br>この分析を使用して、新しい高パフォーマンスのセグメントを作成し、同じオーディエンスを別の宛先に送信しないようにします。また、このレポートは、隠れたインサイトを特定して、セグメント化を改善したり、追跡する固有のプロファイルを見つけたりするのに役立ちます。 詳しくは、[プロファイル](../../dashboards/guides/profiles.md#audience-overlap-report)と[セグメント](../../dashboards/guides/segments.md#audience-overlap-report)のウィジェットガイドを参照してください。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -106,11 +106,11 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-| Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）も、Experience Platformの左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
-| タグとイベント転送のユーザー属性 | 使用可能なリストを表示する場合 [!UICONTROL プロパティ] タグとイベント転送で、リストされた各プロパティが最終更新日時と、更新をおこなったユーザーが表示されるようになりました。 |
-| [[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合 | これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 API を認証および使用する方法について詳しくは、 [[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] Web SDK の](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). クライアントヒントを使用すると、Web サイトの所有者は、 [!DNL User-Agent] 文字列に基づいて書き込まれますが、よりプライバシーを保持する方法で書き込まれます。 |
-| [ページ別の Web SDK の移行](../../edge/home.md#migrating-to-web-sdk) | 既存の Web プロパティを、次のような他のExperience Cloudライブラリから移行できるようになりました。 [!DNL at.js]を Web SDK に、一度に 1 ページずつ追加します。 これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
+| Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ&#x200B;**[!UICONTROL データ収集]**&#x200B;下の Experience Platform の左ナビゲーションからも利用できるようになりました。これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
+| タグとイベント転送におけるユーザー属性 | タグとイベント転送で使用可能な[!UICONTROL プロパティ]を一覧表示すると、一覧表示された各プロパティが最終更新日時と、更新を行ったユーザーが表示されるようになりました。 |
+| イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
+| Web SDK における [[!DNL User-Agent Client Hints] ](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、[[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) をサポートするようになりました。Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
+| [Web SDK のページごとの移行](../../edge/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -127,24 +127,24 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Destination SDK | Destination SDKは、製品化されたバッチ（またはファイルベース）の宛先やプライベートの宛先を作成する、パートナーやお客様に対して完全なサポートを提供するようになりました。 詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDKの概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK は、製品化されたバッチ（またはファイルベース）の宛先やプライベートの宛先を作成する、パートナーや顧客に対して完全なサポートを提供するようになりました。 詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDK の概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**新しい宛先または更新された宛先**
+**新規宛先または更新された宛先**
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 [Campaign の概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). この統合は、 [Adobe Campaignバージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
-| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリードの両方の更新に加え、迅速な更新を実現するパフォーマンスの向上がサポートされるようになりました。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1)で機能することに注意してください。 |
+| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリード両方の更新をサポートするようになりました。また、迅速な更新を実現するようパフォーマンスを向上しました。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-**新規または更新されたドキュメント**
+**新規ドキュメントまたは更新されたドキュメント**
 
 | ドキュメント | 説明 |
 | ----------- | ----------- |
-| 宛先フローサービス API ドキュメント | この [宛先 API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、ファイルベースの宛先での操作の実行方法に関するガイダンスを含むように更新されました。 ストリーミング先の操作は、後で追加されます。 |
+| Destinations Flow Service API ドキュメント | [Destinations API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/)は、ファイルベースの宛先での操作の実行方法に関するガイダンスを含むように更新されました。ストリーミング宛先の操作は、今後追加される予定です。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -156,16 +156,16 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 列挙と推奨値の UI のサポート | データの検証を有効にする列挙に加えて、次の操作を実行できます。 [推奨値を追加または削除](../../xdm/ui/fields/enum.md) 標準またはカスタム文字列フィールドの場合は、Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるようにします。 |
+| 列挙と推奨値の UI のサポート | Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに[推奨値を追加または削除](../../xdm/ui/fields/enum.md)ができるようになりました。 |
 
 **新しい XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
 | フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 提案イベントがトリガーされる原因となった、操作された特定の要素のプロパティ。 |
-| フィールドグループ | [[!UICONTROL MediaAnalytics インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 時間の経過と共にメディアの操作を追跡します。 |
-| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報をトラッキングします。 |
-| フィールドグループ | [[!UICONTROL AdobeCJM ExperienceEvent — サーフェス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizerのエクスペリエンスイベントの表面を表します。 |
+| フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | メディアとのインタラクションを時系列で追跡します。 |
+| フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報を追跡します。 |
+| フィールドグループ | [[!UICONTROL Adobe CJM ExperienceEvent - サーフェス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer でのエクスペリエンスイベントのサーフェスについて説明します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -173,21 +173,21 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| 動作 | [[!UICONTROL 時系列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>次の値を追加しました： `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>次の値を削除しました： `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
-| フィールドグループ | （複数） | [いくつかのフィールドの説明を更新しました](https://github.com/adobe/xdm/pull/1628/files) 複数のJourney Orchestrationコンポーネント |
-| フィールドグループ | （複数） | [いくつかのAdobe Workfrontコンポーネントのタイトルを更新しました](https://github.com/adobe/xdm/pull/1634/files) 一貫性を保つために。 |
-| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 複数のフィールドの名前空間をに更新しました。 `xdm`. |
-| フィールドグループ | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新しいフィールド、 `isReadSegmentTriggerStartEvent`. |
-| フィールドグループ | [[!UICONTROL 気晴らし]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 変更された `xdm:uvIndex` フィールドを整数型に変更し、 `xdm` 名前空間が見つからない複数のフィールドに対して追加されました。 |
+| 動作 | [[!UICONTROL 時系列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>`eventType` の値を追加しました。<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>`eventType` の値を削除しました。<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| フィールドグループ | （複数） | Journey Orchestration コンポーネント全体で[いくつかのフィールドの説明を更新しました。](https://github.com/adobe/xdm/pull/1628/files) |
+| フィールドグループ | （複数） | 一貫性を保つため、[いくつかの Adobe Workfront コンポーネントのタイトルを](https://github.com/adobe/xdm/pull/1634/files)更新しました。 |
+| フィールドグループ | [[!UICONTROL AJO 分類フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 複数のフィールドの名前空間を `xdm` に更新しました。 |
+| フィールドグループ | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールド]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新しいフィールド `isReadSegmentTriggerStartEvent` を追加しました。 |
+| フィールドグループ | [[!UICONTROL 予測された天気]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | `xdm:uvIndex` フィールドを整数タイプに変更し、欠落していたいくつかのフィールドに `xdm` 名前空間を追加しました。 |
 | フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` および `xdm:implementationDetails` がフィールドグループから削除されました。 |
-| データタイプ | （複数） | [複数のメディアプロパティ名を更新しました](https://github.com/adobe/xdm/pull/1626/files) 一貫性を保つために複数のデータタイプにまたがって |
-| データタイプ | [[!UICONTROL 実装の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | フラッター用の既知の名前を追加しました。 |
-| データタイプ | [[!UICONTROL 目標地点の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | データタイプで、目標地点に関連付けられたメタデータのキーと値のペアのリストを受け取れるようになりました。 |
-| データタイプ | [[!UICONTROL 提案アクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] は、 [!UICONTROL 提案アクション]. |
-| データタイプ | [[!UICONTROL 提案イベントタイプ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] の名前はに変更されました。 [!UICONTROL 提案アクション]. |
-| （複数） | （複数） | 実験的特性がある [すべての B2B 成分に対して安定化](https://github.com/adobe/xdm/pull/1617/files). |
-| （複数） | （複数） | Adobe Journey Optimizerエンティティが [安定化](https://github.com/adobe/xdm/pull/1625/files). |
-| （複数） | （複数） | いくつかの実験的コンポーネントをまたいだ特定のフィールドの名前空間が、 [整合性を考慮して更新](https://github.com/adobe/xdm/pull/1626/files). |
+| データタイプ | （複数） | 一貫性を保つため、複数のデータタイプをまたいで[複数のメディアプロパティ名を更新しました。](https://github.com/adobe/xdm/pull/1626/files) |
+| データタイプ | [[!UICONTROL 実装の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | フラッターの既知の名前を追加しました。 |
+| データタイプ | [[!UICONTROL POI の詳細]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | データタイプで、POI に関連付けられたメタデータのキーと値のペアのリストを受け取れるようになりました。 |
+| データタイプ | [[!UICONTROL 提案アクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] の名前は、[!UICONTROL 提案アクション]に変更されました。 |
+| データタイプ | [[!UICONTROL 提案イベントタイプ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] の名前は、[!UICONTROL 提案アクション]に変更されました。 |
+| （複数） | （複数） | 実験的なプロパティは、[B2B の全コンポーネントにおいて安定化されました](https://github.com/adobe/xdm/pull/1617/files)。 |
+| （複数） | （複数） | Adobe Journey Optimizer エンティティは、[安定化](https://github.com/adobe/xdm/pull/1625/files)されました。 |
+| （複数） | （複数） | いくつかの実験的コンポーネントをまたいだ特定のフィールドの名前空間は、[一貫性を保つために更新されました](https://github.com/adobe/xdm/pull/1626/files)。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -195,17 +195,17 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## ID サービス {#identity-service}
 
-関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。
+関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なるシステムに分散している場合、各顧客が複数の「ID」を持っているように見えるため、より困難になります。
 
-Adobe Experience Platform ID サービスは、デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握でき、効果的な個人のデジタルエクスペリエンスをリアルタイムで提供します。
+Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのあるパーソナルなデジタルエクスペリエンスをリアルタイムで提供できます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| データセット削除のサポート | ID サービスで、 [カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI、またはデータの衛生状態。 次のガイドを読む： [UI でのデータセットの削除](../../catalog/datasets/user-guide.md#delete-a-dataset) を参照してください。 |
+| データセット削除のサポート | ID サービスで、[Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI またはデータハイジーンを通じてリクエストした場合、データセットの削除をサポートするようになりました。詳しくは、[UI でのデータセットの削除](../../catalog/datasets/user-guide.md#delete-a-dataset)に関するガイドを参照してください。 |
 
-ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md).
+ID サービスの詳細については、[ID サービスの概要](../../identity-service/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -215,8 +215,8 @@ ID サービスの詳細については、 [ID サービスの概要](../../iden
 
 | 機能 | 説明 |
 | --- | --- |
-| アラート購読 API | Adobe Experience Platformクエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを購読できます。 アラートは、E メール、Platform UI 内、またはその両方で受け取ることができます。 現在、クエリアラートは、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にして、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。 詳しくは、 [データセットサンプルガイド](../../query-service/sql/dataset-samples.md) を参照してください。 |
+| アラートサブスクリプション API | Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。 |
+| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/sql/dataset-samples.md)を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
 
@@ -232,10 +232,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| Audience Managerセグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きいAudience Managerセグメント母集団の取り込みは、Audience Managerソースを使用して初めてプラットフォームにAudience Managerセグメントを送信する際に、合計プロファイル数に直接影響します。 つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えてプロファイル数がカウントされる可能性があります。 詳しくは、 [Audience Managerソースの概要](../../sources/connectors/adobe-applications/audience-manager.md). ライセンスの使用方法については、 [ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md). |
-| Adobe Campaign ManagedCloud Serviceのサポート | Adobe Campaign ManagedCloud Serviceソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータをExperience Platformに取り込みます。 次のガイドを読む： [UI でのAdobe Campaign ManagedCloud Serviceソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md) を参照してください。 |
-| バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、 [!DNL Flow Service] API 作成されたフロー実行は、1 回の取り込みに設定する必要があります。 詳しくは、 [API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md) を参照してください。 |
-| バッチソースの失敗したデータフロー実行の再試行に対する API のサポート | 以下を使用： `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行する必要があります。 次のガイドを読む： [API を使用した、失敗したデータフローの実行の再試行](../../sources/tutorials/api/retry-flows.md) を参照してください。 |
-| の行レベルのデータをフィルタリングするための API のサポート [!DNL Google BigQuery] および [!DNL Snowflake] ソース | 論理演算子と比較演算子を使用して、 [!DNL Google BigQuery] および [!DNL Snowflake] ソース。 次のガイドを読む： [API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md) を参照してください。 |
+| Audience Manager セグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きい Audience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めて Platform に Audience Manager セグメントを送信する際に、合計プロファイル数に直接影響します。つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。詳しくは、[Audience Manager ソースの概要](../../sources/connectors/adobe-applications/audience-manager.md)を参照してください。ライセンスの使用方法については、[ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md)に関するドキュメントを参照してください。 |
+| Adobe Campaign Managed Cloud Service のサポート | Adobe Campaign Managed Cloud Service ソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータを Experience Platform に取り込みます。詳しくは、[UI での Adobe Campaign Managed Cloud Service ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md)に関するガイドを参照してください。 |
+| バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、[!DNL Flow Service] API で指定されたデータフローに対してアドホックなフローの実行を作成します。作成されたフロー実行は、1 回のみの取り込みに設定する必要があります。詳しくは、[API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md)に関するガイドを参照してください。 |
+| バッチソースで失敗したデータフロー実行の再試行に対する API のサポート | `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行します。[API を使用して失敗したデータフロー実行の再試行](../../sources/tutorials/api/retry-flows.md)に関するガイドを参照してください。 |
+| [!DNL Google BigQuery] および [!DNL Snowflake] ソースの行レベルのデータをフィルタリングする API のサポート | 論理演算子と比較演算子を使用して、[!DNL Google BigQuery] および [!DNL Snowflake] ソースの行レベルのデータをフィルタリングします。[API を使用してソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
 
-ソースの詳細については、 [ソースの概要](../../sources/home.md).
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

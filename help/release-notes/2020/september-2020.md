@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 37%
@@ -14,7 +14,7 @@ ht-degree: 37%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 9 月 9 日（PT）**
+**リリース日：2020年9月9日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 

@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK を使用した IAB TCF 2.0 の統合
 description: タグを使用せずに Web サイトの IAB TCF 2.0 サポートを設定する方法を説明します。
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -108,4 +108,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 次の手順
 
-これで、IAB TCF 2.0 と Platform Web SDK 拡張機能の使用方法が学びました。これで、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションと統合することも選択できます。 詳しくは、 [IAB Transparency &amp; Consent Framework 2.0 の概要](./overview.md) を参照してください。
+これで、IAB TCF 2.0 と Platform Web SDK 拡張機能の使用方法が学びました。これで、Adobe AnalyticsやAdobe Real-time Customer Data Platformなどの他のAdobeソリューションと統合することも選択できます。 詳しくは、 [IAB Transparency &amp; Consent Framework 2.0 の概要](./overview.md) を参照してください。

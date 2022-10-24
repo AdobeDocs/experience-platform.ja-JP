@@ -1,10 +1,10 @@
 ---
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
-description: Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
+description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1403'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 >title="参照スキーマ"
 >abstract="関係を確立するスキーマを選択します。 スキーマのクラスに応じて、B2B コンテキスト内の他のエンティティとの既存の関係も存在する場合があります。 B2B スキーマクラスが相互にどのように関係しているかについては、ドキュメントを参照してください。"
 
-Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B データエンティティをキャプチャする、複数の Experience Data Model(XDM) クラスを提供します [アカウント](../classes/b2b/business-account.md), [商談](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md)など。 これらのクラスに基づいてスキーマを構築し、で使用できるようにする。 [リアルタイム顧客プロファイル](../../profile/home.md)を使用すると、異なるソースのデータを、和集合スキーマと呼ばれる統合表現に結合できます。
+Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B データエンティティをキャプチャする、複数の Experience Data Model(XDM) クラスを提供します [アカウント](../classes/b2b/business-account.md), [商談](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md)など。 これらのクラスに基づいてスキーマを構築し、で使用できるようにする。 [リアルタイム顧客プロファイル](../../profile/home.md)を使用すると、異なるソースのデータを、和集合スキーマと呼ばれる統合表現に結合できます。
 
 ただし、和集合スキーマには、同じクラスを共有するスキーマによってキャプチャされるフィールドのみを含めることができます。 スキーマの関係はここで生じます。 B2B スキーマに関係を実装することで、これらのビジネスエンティティが相互にどのように関係しているかを説明し、ダウンストリームセグメント化の使用例で複数のクラスの属性を含めることができます。
 
@@ -24,7 +24,7 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 
 ![B2B クラスの関係](../images/tutorials/relationship-b2b/classes.png)
 
-このチュートリアルでは、Real-time CDP B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する手順を説明します。
+このチュートリアルでは、Real-Time CDP B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する手順を説明します。
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Real-time Customer Data Platform B2B Edition は、を含む、基本的な B2B 
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Schema Editor]. これらのスキーマに基づくデータセットを使用してデータを取り込み、そのデータをプロファイルデータストアでアクティブ化したら、両方のスキーマの属性を複数クラスのセグメント化の使用例で使用できます。 詳しくは、「 Real-time CDP B2B Edition 」のドキュメントを参照してください。
+このチュートリアルでは、 [!DNL Schema Editor]. これらのスキーマに基づくデータセットを使用してデータを取り込み、そのデータをプロファイルデータストアでアクティブ化したら、両方のスキーマの属性を複数クラスのセグメント化の使用例で使用できます。 詳しくは、 Real-Time CDP B2B Edition のドキュメントを参照してください。

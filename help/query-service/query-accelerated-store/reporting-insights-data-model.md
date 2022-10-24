@@ -1,9 +1,9 @@
 ---
 title: Accelerated Store レポートインサイトのクエリ
 description: クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法を説明します。
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 Query Accelerated Store を使用すると、データから重要なインサイトを得るのに必要な時間と処理能力を削減できます。 通常、データは、集計ビューが作成およびレポートされる一定の間隔（1 時間ごとや 1 日ごとなど）で処理されます。 集計データから生成されるこれらのレポートの分析は、ビジネスパフォーマンスを向上させるためのインサイトを導き出します。 クエリアクセラレーションストアは、キャッシュサービス、同時実行、インタラクティブなエクスペリエンス、ステートレス API を提供します。 ただし、データが事前に処理され、集計されたクエリ用に最適化されていると想定しています。生データのクエリには最適ではありません。
 
-クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存のReal-time Customer Data Platformデータモデルを拡張したりできます。 その後、レポートインサイトを任意のレポート/ビジュアライゼーションフレームワークに関与させたり、組み込んだりできます。 方法については、 Real-time Customer Data Platform Insights データモデルのドキュメントを参照してください [SQL クエリテンプレートをカスタマイズして、マーケティングおよび KPI（主要業績評価指標）の使用例に関するReal-Time CDPレポートを作成する](../../dashboards/cdp-insights-data-model.md).
+クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存のAdobe Real-time Customer Data Platformデータモデルを拡張したりできます。 その後、レポートインサイトを任意のレポート/ビジュアライゼーションフレームワークに関与させたり、組み込んだりできます。 方法については、 Real-time Customer Data Platform Insights データモデルのドキュメントを参照してください [SQL クエリテンプレートをカスタマイズして、マーケティングおよび KPI（主要業績評価指標）の使用例に関するReal-Time CDPレポートを作成する](../../dashboards/cdp-insights-data-model.md).
 
 Adobe Experience PlatformのReal-Time CDPデータモデルは、プロファイル、セグメントおよび宛先に関するインサイトを提供し、Real-Time CDPインサイトダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成手順と、必要に応じてReal-Time CDPデータモデルを拡張する方法について説明します。
 

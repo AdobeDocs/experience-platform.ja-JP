@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud DSP接続
-description: Adobe Advertising Cloud DSPは、 [!DNL Adobe Real-time Customer Data Profile]：認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有して、キャンペーンをアクティベートできます。
+description: Adobe Advertising Cloud DSPはAdobe Real-time Customer Data Platformの統合された宛先で、認証済みのファーストパーティセグメントを承認済みの広告主やユーザーと共有して、キャンペーンをアクティベートできます。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1055'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Advertising Cloud DSPの宛先をいつどのように使用するかを理解�
 
 ### ブランド広告の使用例
 
-あるオンライン小売業者は、ターゲティングに cookie を使用せずに、ディスプレイキャンペーンを通じて価値の高い顧客を再ターゲット化したいと考えています。 小売業者は、高価値顧客のハッシュ化された電子メール ID から成るセグメントを、その [!DNL Real-Time CDP] アカウントをDSPアカウントに追加します。 DSPは、ハッシュ化された電子メール ID を認証済みに変換します [!DNL RampIDs] DSPと LiveRamp のパートナーシップを通じて 結果 [!DNL RampIDs] を使用して、オーディエンスをターゲット設定するディスプレイキャンペーンで使用できます。
+あるオンライン小売業者は、ターゲティングに cookie を使用せずに、ディスプレイキャンペーンを通じて価値の高い顧客を再ターゲット化したいと考えています。 小売業者は、Adobe Real-time Customer Data Platform(Real-Time CDP) アカウントからDSPアカウントに至る、価値の高い顧客のハッシュ化された電子メール ID から成るセグメントを共有します。 DSPは、ハッシュ化された電子メール ID を認証済みに変換します [!DNL RampIDs] DSPと LiveRamp のパートナーシップを通じて 結果 [!DNL RampIDs] を使用して、オーディエンスをターゲット設定するディスプレイキャンペーンで使用できます。
 
 ### エージェンシーの使用例
 

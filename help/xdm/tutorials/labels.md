@@ -2,10 +2,10 @@
 title: スキーマのデータ使用状況ラベルの管理
 description: Adobe Experience Platform UI でデータ使用ラベルをエクスペリエンスデータモデル (XDM) スキーマフィールドに追加する方法を説明します。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '737'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->スキーマベースのラベル付けは、 [属性ベースのアクセス制御](../../access-control/abac/overview.md)：現在、米国を拠点とする医療関連のお客様向けの限定リリースで利用できます。 この機能は、完全にリリースされると、すべての Real-time Customer Data Platform のお客様が利用できるようになります。
+>スキーマベースのラベル付けは、 [属性ベースのアクセス制御](../../access-control/abac/overview.md)：現在、米国を拠点とする医療関連のお客様向けの限定リリースで利用できます。 この機能は、完全にリリースされると、すべてのAdobe Real-time Customer Data Platformのお客様が利用できるようになります。
 
 Adobe Experience Platformに取り込まれるすべてのデータは、Experience Data Model(XDM) スキーマによって制限されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これを考慮するには、プラットフォームでは、 [データ使用ラベル](../../data-governance/labels/overview.md).
 

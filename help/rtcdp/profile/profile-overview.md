@@ -1,12 +1,12 @@
 ---
 keywords: rtcdp プロファイル；プロファイル rtcdp;rtcdp ID;rtcdp 結合ポリシー；リアルタイム顧客プロファイル
-title: リアルタイム CDP でのリアルタイム顧客プロファイルについて
-description: Real-time Customer Data Platformを使用して、顧客に対して、リアルタイム顧客プロファイルを使用して、調整され、一貫性のある、関連性の高いエクスペリエンスを提供する方法を説明します。
+title: Real-Time CDPでのリアルタイム顧客プロファイルについて
+description: Adobe Real-time Customer Data Platformを使用して、顧客に対して、リアルタイム顧客プロファイルを使用して、調整され、一貫性のある、関連性の高いエクスペリエンスを提供する方法を説明します。
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 48%
+source-wordcount: '457'
+ht-degree: 47%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 48%
 
 リアルタイムの顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。個々の顧客プロファイルを使用すると、異なる顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
-## のプロファイル [!DNL Real-time Customer Data Platform]
+## のプロファイル [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] を使用すると、顧客がいつどこでもブランドとやり取りする際に、顧客に対して調整され、一貫性のあるエクスペリエンスを提供できます。 関連性とタイムリーさを感じるようにパーソナライズされたエクスペリエンスを提供することはなかなか大変ですが、Adobe Experience Platform の一部であるリアルタイム顧客プロファイルを使用することで達成できます。
+[!DNL Adobe Real-Time Customer Data Platform] を使用すると、顧客がいつどこでもブランドとやり取りする際に、顧客に対して調整され、一貫性のあるエクスペリエンスを提供できます。 関連性とタイムリーさを感じるようにパーソナライズされたエクスペリエンスを提供することはなかなか大変ですが、Adobe Experience Platform の一部であるリアルタイム顧客プロファイルを使用することで達成できます。
 
-リアルタイム CDP はExperience Platformをベースに構築され、プロファイルの作成など、多くの主要なExperience Platform機能を利用します。 個々の顧客のこれらの集計ビューでは、様々なマーケティングチャネルや、現在顧客データの保存に使用している多様なシステムからのデータを統合します。
+Real-Time CDPはExperience Platformをベースに構築され、プロファイルの作成など、多くの主要なExperience Platform機能を利用します。 個々の顧客のこれらの集計ビューでは、様々なマーケティングチャネルや、現在顧客データの保存に使用している多様なシステムからのデータを統合します。
 
-## リアルタイム CDP、B2B エディションのプロファイルの強化
+## Real-Time CDP, B2B Edition のプロファイルの強化
 
-リアルタイム CDP がサポートするプロファイル機能に加えて、リアルタイム CDP（B2B エディション）を使用して、アカウントやオポチュニティなど、個人に関連する重要な情報を参照できます。 リアルタイム CDP、B2B エディションのプロファイル拡張の詳細については、まず [プロファイル参照ガイド](profile-browse.md).
+Real-Time CDPでサポートされるプロファイル機能に加えて、Real-Time CDP, B2B Edition を使用すると、アカウントやオポチュニティなど、個人に関連する重要な情報を参照できます。 Real-Time CDP, B2B Edition のプロファイル拡張機能の詳細については、まず [プロファイル参照ガイド](profile-browse.md).
 
 ## ID と ID 名前空間
 

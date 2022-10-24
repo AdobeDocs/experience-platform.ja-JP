@@ -1,23 +1,23 @@
 ---
 title: Real-time Customer Data Platform B2B Edition のスキーマ
-description: Real-time Customer Data Platform B2B Edition におけるエクスペリエンスデータモデル（XDM）スキーマの役割の概要です。
+description: Adobe Real-time Customer Data Platform B2B Edition の Experience Data Model(XDM) スキーマの役割の概要です。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '237'
+ht-degree: 45%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
-Real-time Customer Data Platform B2B Edition には、アカウント、機会、キャンペーンなどといった基本的な B2B データエンティティに関する詳細をキャプチャする[エクスペリエンスデータモデル (XDM) クラス](../../xdm/schema/composition.md#class)が標準で複数用意されています。さらに、Real-time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
+Adobe Real-time Customer Data Platform B2B Edition は、いくつかの標準を提供します [エクスペリエンスデータモデル (XDM) クラス](../../xdm/schema/composition.md#class) は、アカウント、商談、キャンペーンなど、重要な B2B データエンティティに関する詳細をキャプチャするためのものです。 また、Real-Time CDP B2B Edition では、これらのスキーマ間に多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
 
 >[!IMPORTANT]
 >
->B2B スキーマを[リアルタイム顧客プロファイル](../../profile/home.md)に加えるには、Real-time CDP B2B Edition へのアクセス権が必要です。
+>B2B スキーマがに参加するには、Real-Time CDP B2B Edition へのアクセス権が必要です [リアルタイム顧客プロファイル](../../profile/home.md).
 
-Real-time CDP B2B Edition には、次の標準クラスが用意されています。
+Real-Time CDP B2B Edition では、次の標準クラスが提供されます。
 
 * [XDM Business Account](../../xdm/classes/b2b/business-account.md)
 * [XDM Business Account Person Relation](../../xdm/classes/b2b/business-account-person-relation.md)

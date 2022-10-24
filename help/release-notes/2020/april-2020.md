@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: リリースノート;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 65%
@@ -93,12 +93,12 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 **新しい宛先**
 
-リアルタイム CDP で、50 を超えるへのデータのアクティベーションがサポートされるようになりました。 [!DNL Experience Cloud Launch] 拡張機能を使用して、analytics、パーソナライゼーション、その他の使用例を有効にします。 詳しくは、以下を参照してください。
+Real-Time CDPは現在、50 を超えるデータのアクティブ化をサポートしています [!DNL Experience Cloud Launch] 拡張機能を使用して、analytics、パーソナライゼーション、その他の使用例を有効にします。 詳しくは、以下を参照してください。
 
 | ドキュメント | 説明 |
 |--- | ---|
-| [宛先のタイプとカテゴリ](../../destinations/destination-types.md) | この記事では、リアルタイム CDP インターフェイスの接続と拡張機能の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
-| [Experience Platform Launch 拡張機能](../../destinations/catalog/launch-extensions/overview.md) | このページでは、 [!DNL Launch] の拡張機能、使用例のリスト、および各ドキュメントのリンクです。 [!DNL Launch] リアルタイム CDP の拡張機能。 |
+| [宛先のタイプとカテゴリ](../../destinations/destination-types.md) | この記事では、Real-Time CDPインターフェイスの接続と拡張機能の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
+| [Experience Platform Launch 拡張機能](../../destinations/catalog/launch-extensions/overview.md) | このページでは、 [!DNL Launch] の拡張機能、使用例のリスト、および各ドキュメントのリンクです。 [!DNL Launch] Real-Time CDPの拡張機能。 |
 
 詳しくは、『[宛先の概要](../../destinations/home.md)』を参照してください。
 

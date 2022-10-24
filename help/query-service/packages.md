@@ -1,9 +1,9 @@
 ---
 title: クエリサービスパッケージ
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージの概要を説明し、アドホッククエリとバッチクエリの違いについて説明します。
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 
 クエリサービス機能は、次の製品およびアドオンでパッケージ化されています。
 
-- **プラットフォームベースのアプリケーション** (Real-time Customer Data Platform、Customer Journey Analytics、Adobe Journey Optimizer):アドホッククエリを実行するクエリサービスへのアクセスは、Platform ベースのアプリケーションのバリエーションと階層ごとに、出力セットから提供されます。
+- **プラットフォームベースのアプリケーション** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics、Adobe Journey Optimizer):アドホッククエリを実行するクエリサービスへのアクセスは、Platform ベースのアプリケーションのバリエーションと階層ごとに、出力セットから提供されます。
 - **[!DNL Data Distiller]** (Adobe Real-Time CDP、Customer Journey Analytics、Adobe Journey Optimizerと共に購入できるアドオンパッケージ ):バッチクエリを実行するクエリサービスへのアクセス権は、次の式で提供されます。 [!DNL Data Distiller].
 
 次の表に、クエリサービスの主な使用権限のパッケージ化方法に基づく概要を示します。
@@ -30,7 +30,7 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 | サポートされる使用例 | <ul><li>探査&#x200B;</li><li>データ検出&#x200B;</li><li>データの検証</li><li>実験</li></ul> | <ul><li>クリーニング</li><li>形状</li><li>操作</li><li>エンリッチメント</li></ul> |
 | サポートされるセマンティクス | <ul><li>クエリを選択</li></ul> | <ul><li>CTAS および ITAS クエリ</li></ul> |
 | 最大実行時間 | 10 分 | 24 時間 |
-| ライセンス指標 | **ユーザーの同時実行をクエリ**: <ul><li>1 人の同時ユーザー ( リアルタイム CDP、Adobe Journey Optimizer)&#x200B;</li><li>5 人の同時ユーザー (Customer Journey Analytics&#x200B;)</li></ul> **クエリの同時実行**: <ul><li>1 個の同時実行クエリ ( すべてのアプリケーション&#x200B;)</li></ul> **追加のアドホッククエリユーザーパックアドオン** を購入して、お客様の認証済みアドホッククエリの使用権限を増やすことができます。 <ul><li>パックあたり+5 の同時ユーザー数</li><li>1 パックあたりの追加の同時実行クエリ数</li></ul> | **時間を計算**: <ul><li>変数（顧客のアプリケーション使用権限に基づいて範囲指定）</li></ul> **時間を計算** は、バッチクエリの実行時にクエリサービスエンジンがデータの読み取り、処理、データレイクへの書き戻しに要した時間の測定値です。 |
+| ライセンス指標 | **ユーザーの同時実行をクエリ**: <ul><li>1 人の同時ユーザー (Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5 人の同時ユーザー (Customer Journey Analytics&#x200B;)</li></ul> **クエリの同時実行**: <ul><li>1 個の同時実行クエリ ( すべてのアプリケーション&#x200B;)</li></ul> **追加のアドホッククエリユーザーパックアドオン** を購入して、お客様の認証済みアドホッククエリの使用権限を増やすことができます。 <ul><li>パックあたり+5 の同時ユーザー数</li><li>1 パックあたりの追加の同時実行クエリ数</li></ul> | **時間を計算**: <ul><li>変数（顧客のアプリケーション使用権限に基づいて範囲指定）</li></ul> **時間を計算** は、バッチクエリの実行時にクエリサービスエンジンがデータの読み取り、処理、データレイクへの書き戻しに要した時間の測定値です。 |
 | クエリ実行インターフェイス | <ul><li>クエリサービス UI</li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li></ul> | <ul><li>クエリ UI </li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li><li>REST API</li></ul> |
 | 次を介して返されたクエリ結果： | クライアント UI | データレイクに保存された派生データセット |
 | 結果の制限 | <ul><li>クエリ UI - 100 行</li><li>サードパーティクライアント — 50,000</li><li>[!DNL PostgresSQL] クライアント — 50,000</li></ul> | <ul><li>クエリ UI （行の上限なし）</li><li>サードパーティクライアント（行の上限なし）</li><li>[!DNL PostgresSQL] クライアント（行の上限なし）</li><li>REST API（行の上限なし）</li></ul> |

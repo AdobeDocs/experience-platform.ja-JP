@@ -5,9 +5,9 @@ title: Data Science Workspace のアクセスと機能
 topic-legacy: Access and features for data science workspace
 description: 次のドキュメントでは、Data Science Workspace の権限と機能へのアクセスの概要を説明します。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 18%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 18%
 
 「サービス」タブのみが表示されるのはなぜですか？
 
-- お客様の組織は、お客様の AI AI/ML サービスを含むReal-time Customer Data Platform(RTCDP) に対してのみ権利を付与される場合があります。
+- 組織は、顧客 AI AI/ML サービスを含むAdobe Real-time Customer Data Platform(Real-Time CDP) にのみ権利を付与される場合があります。
 
 以下の **データサイエンス** タブを開き、Data Science Workspace 機能の使用を希望する場合は、会社の管理者に問い合わせて、Adobe Experience Platform Intelligence のライセンスをお持ちかどうかを確認してください。
 
@@ -59,7 +59,7 @@ Experience Platform のアクセス制御は、[Adobe Admin Console](https://adm
 
 | 権限 | 有効 | 無効 |
 |---|---|---|
-| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace 内のすべてのサービスへの API および UI アクセスが無効になっています。 無効の場合、 **ノートブック**, **モデル**、および **サービス** ページが表示されなくなります。 <li>アクセス先 **サービス** は、引き続きReal-time Customer Data Platform(RTCDP) を通じて使用できます。</li> |
+| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace 内のすべてのサービスへの API および UI アクセスが無効になっています。 無効の場合、 **ノートブック**, **モデル**、および **サービス** ページが表示されなくなります。 <li>アクセス先 **サービス** は、引き続きAdobe Real-time Customer Data Platform(Real-Time CDP) を通じて使用できます。</li> |
 
 ## サンドボックスのサポート
 

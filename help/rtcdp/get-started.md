@@ -1,20 +1,20 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;リアルタイムの顧客データプラットフォーム;リアルタイム cdp;cdp;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
 title: Real-time Customer Data Platformの概要
-description: Real-time Customer Data Platform の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
+description: Adobe Real-time Customer Data Platformの実装を設定する際の例として、次のシナリオのサンプルを使用します。
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 83%
+source-wordcount: '2333'
+ht-degree: 76%
 
 ---
 
 # Real-time Customer Data Platformの概要
 
-この入門ガイドでは、Real-time Customer Data Platform（リアルタイム CDP）のサンプル実装を順を追って説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
+この入門ガイドでは、Real-time Customer Data Platform(Real-Time CDP) のサンプル実装を順を追って説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
 
-この例は、 Experience Platform が提供するアドビのリアルタイム顧客データプラットフォームの次の機能を示しています。
+この例は、Real-time Customer Data Platform(Adobe Experience Platformを利用 ) の次の機能を示しています。
 
 * 複数のソースからデータを取り込む
 * それらを単一のに結合 [!DNL real-time customer profile]
@@ -39,7 +39,7 @@ ht-degree: 83%
 
 これらの目標を満たすには、マーケティングチームが大規模な顧客データを管理できる必要があります。
 
-Adobe Experience Platform を利用した Real-time CDP を使用すると、Luma のマーケティング組織は次のことができます。
+Adobe Experience Platformを活用したReal-Time CDPを使用すると、Luma のマーケティング組織は次のことができます。
 
 1. 異なるプラットフォームからデータを収集し、他のマーケティング活動でダウンストリームで使用できることを確認する。
 1. データの発信元とは無関係に、消費者に関する単一のリアルタイムビューを作成する。
@@ -118,7 +118,7 @@ Adobe Target の Adobe Sensei によるパーソナライズ機能により、�
 
 Sarah は気が散ってサイトを離れ、セッションを終了します。Adobe Experience Platform のデータは、Sarah を Luma サイトに戻すのに役立ちます。
 
- Experience Platform によるアドビのリアルタイム顧客データプラットフォームは、顧客体験管理を目的として構築されています。これにより、組織では次のことが可能になります。
+Real-time Customer Data Platform(Adobe Experience Platformを活用 ) は、顧客体験管理を目的として構築されています。 これにより、組織では次のことが可能になります。
 
 * データの統合とアクティベーションのシンプル化
 * 既知のデータと不明なデータの使用の管理
@@ -141,7 +141,7 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
 ## データソースの設定
 
-用途 [!DNL Real-time Customer Data Platform] を使用して、新しいデータソースを Platform に取り込みます。 リアルタイム CDP には、迅速かつ容易にプロファイルに追加できるデータソースのカタログが含まれます。
+用途 [!DNL Real-Time Customer Data Platform] を使用して、新しいデータソースを Platform に取り込みます。 Real-Time CDPには、すばやく簡単にプロファイルに追加できるデータソースのカタログが含まれています。
 
 ![画像](assets/luma-source-cat.png)
 
@@ -178,7 +178,7 @@ Luma　には、収集した特定の種類の情報の使用を制限する内�
 
 ![](assets/governance-labels.png)
 
-データ使用ラベルが適用されると、Luma はデータガバナンスを使用してデータ使用ポリシーを作成できます。データ使用ポリシーは、特定のラベルを含むデータで実行可能なアクションの種類を記述するルールです。ポリシー違反を構成する Real-time CDP でアクションを実行しようとすると、アクションを実行できず、どのポリシーに違反したかとその理由を示すアラートが表示されます。
+データ使用ラベルが適用されると、Luma はデータガバナンスを使用してデータ使用ポリシーを作成できます。データ使用ポリシーは、特定のラベルを含むデータで実行可能なアクションの種類を記述するルールです。ポリシー違反を構成するReal-Time CDPでアクションを実行しようとすると、アクションは実行されず、どのポリシーに違反したかとその理由を示すアラートが表示されます。
 
 ## 特定の顧客データの統合
 
@@ -193,7 +193,7 @@ Luma が所有する Sarah に関するプロファイル情報がすべて表�
 | ID | 内でリンクされている ID を表示します [!DNL Platform] チャネルやデバイスをまたいだ Sarah の Luma とのやり取りから Web サイトから Sarah の ECID が表示されます。また、モバイルアプリの ECID、電子メール ID、最近追加されたからの CRM ID も含まれます [!DNL Microsoft Dynamics] データセットと、Luma ロイヤリティーシステムからAdobe Experience Platformに渡されるロイヤリティー ID。 |
 | イベント | Sarah の Luma ブランドとのインタラクションデータをすべて表示します。これには、Sarah が先ほど閲覧した品目、過去に閲覧したもの、受信した電子メール、コールセンターとのやりとり、またそれぞれのインタラクションが発生したチャネルとデバイスが含まれます。 |
 
-Real-time CDP プロファイルは、Luma マーケティングチームのワークフローを数週間から数分に短縮し、この 360 度の顧客ビューに基づいてパーソナライズ機能の可能性をアンロックします。このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
+Real-Time CDPプロファイルは、Luma マーケティングチームのワークフローを数週間から数分に短縮し、この 360 度の顧客ビューに基づいて、パーソナライゼーションの可能性をアンロックします。 このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
 
 マーケティングチームは、この拡張機能を使用できます。 [!DNL Real-time Customer Profile] を使用すると、Sarah のエクスペリエンスをより適切にパーソナライズし、Luma とのブランドロイヤルティを高めることができます。
 
@@ -234,7 +234,7 @@ Sarah が買い物かごにギフトと思われる品物を追加したまま�
 
 選択 **[!UICONTROL 宛先に送信]**.
 
- Real-time CDP では、Luma はオーディエンスセグメントにシームレスに対応して、パーソナライズできます。\
+Real-Time CDPでは、Luma はオーディエンスセグメントにシームレスに対応し、パーソナライズをおこなうことができます。\
 以下に、Luma がこの宛先を送信する際に使用できるすべての宛先（アドビソリューションとアドビ以外のソリューションの両方）を示します。
 
 ![画像](assets/luma-dest.png)
@@ -297,7 +297,7 @@ Sarah はトレーナーを購入し、ギフトラップを追加して、ギ�
 
 ## プロファイルの分析
 
-Luma は、Adobe Experience Platform を使用して、Real-time CDP ダッシュボード上のギフトギバーセグメントを調べます。このイニシアチブの成果を時間の経過と共に見て、成長していることがわかります。顧客はオファーに応えて、より多くのお金を費やしています。
+Luma は、Adobe Experience Platformを使用して、Real-Time CDPダッシュボード上のギフトギバーセグメントを調べます。 このイニシアチブの成果を時間の経過と共に見て、成長していることがわかります。顧客はオファーに応えて、より多くのお金を費やしています。
 
 これらの洞察により、マーケティング担当者はこの信号に対して行動を起こすことができます。これは、CDP でこのデータを利用でき、Sarah のような顧客をセグメントに追加することで加速されます。
 

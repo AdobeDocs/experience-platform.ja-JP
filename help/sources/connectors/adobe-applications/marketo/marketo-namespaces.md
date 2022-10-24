@@ -5,9 +5,9 @@ title: B2B 名前空間とスキーマ
 topic-legacy: overview
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 14%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->次へのアクセス権が必要です： [Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) B2B スキーマがに参加するために [リアルタイム顧客プロファイル](../../../../profile/home.md).
+>次へのアクセス権が必要です： [Adobe Real-time Customer Data Platform B2B エディション](../../../../rtcdp/b2b-overview.md) B2B スキーマがに参加するために [リアルタイム顧客プロファイル](../../../../profile/home.md).
 
 ## B2B 名前空間とスキーマ自動生成ユーティリティの設定
 

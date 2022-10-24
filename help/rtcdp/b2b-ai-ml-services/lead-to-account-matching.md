@@ -1,16 +1,16 @@
 ---
-title: リアルタイム CDP B2B でのアカウントマッチングにつながる
+title: Real-Time CDP B2B でのアカウントマッチングのリード
 type: Documentation
 description: Experience PlatformCDP B2B のアカウントマッチング機能へのリードの概要と詳細。
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 0b140e767dec0e703b3ab9c75b7a23c797804c66
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 5%
 
 ---
 
-# リアルタイム CDP B2B でのアカウントマッチングにつながる
+# Real-Time CDP B2B でのアカウントマッチングのリード
 
 ## 概要 {#overview}
 

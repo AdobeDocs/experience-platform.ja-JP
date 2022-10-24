@@ -5,9 +5,9 @@ title: XDM Individual Profile クラス
 topic-legacy: overview
 description: このドキュメントでは、XDM Individual Profile クラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '598'
 ht-degree: 32%
 
 ---
@@ -53,6 +53,6 @@ ht-degree: 32%
 * [[!UICONTROL XDM ビジネスパーソンのコンポーネント]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM ビジネスパーソンの詳細]](../field-groups/profile/business-person-details.md)\*
 
-*\*このフィールドグループは、Real-time Customer Data Platformの B2B エディションにアクセスできる組織でのみ使用できます。*
+*\*このフィールドグループは、Adobe Real-time Customer Data Platformの B2B エディションにアクセスできる組織でのみ使用できます。*
 
 の互換性のあるすべてのフィールドグループの完全なリスト [!DNL XDM Individual Profile]（を参照） [XDM GitHub リポジトリ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

@@ -3,7 +3,7 @@ keywords: rtcdp の宛先；宛先 rtcdp；リアルタイム顧客データプ�
 title: Real-time Customer Data Platformでの宛先
 description: このドキュメントでは、Adobe Experience Platformの宛先の概要を説明します
 exl-id: 82f4bad2-a0e7-4f49-ac2f-412b5c5c35f3
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 43%

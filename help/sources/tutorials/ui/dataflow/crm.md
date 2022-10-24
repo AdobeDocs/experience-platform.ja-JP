@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して CRM ソースのデータフローを作成する手順を説明します。
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 44%
 
 ---
@@ -89,7 +89,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 >[!NOTE]
 >
->次を使用する場合： [!DNL Salesforce] Real-time Customer Data Platform B2B Edition の一部として、 [[!DNL Salesforce] フィールドマッピングドキュメント](../../../connectors/adobe-applications/mapping/salesforce.md) マッピングに関するガイダンス [!DNL Salesforce] ソースフィールドを適切な XDM ターゲットフィールドにドラッグします。
+>次を使用する場合： [!DNL Salesforce] Adobe Real-time Customer Data Platform B2B Edition の一部として、 [[!DNL Salesforce] フィールドマッピングドキュメント](../../../connectors/adobe-applications/mapping/salesforce.md) マッピングに関するガイダンス [!DNL Salesforce] ソースフィールドを適切な XDM ターゲットフィールドにドラッグします。
 
 ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
 

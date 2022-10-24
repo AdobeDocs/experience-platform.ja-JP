@@ -6,10 +6,10 @@ title: 顧客 AI の概要
 topic-legacy: Getting started
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 62%
+source-wordcount: '652'
+ht-degree: 58%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 62%
 - [エクスペリエンスデータモデル (XDM) システムの概要](../../xdm/home.md):XDM は、次を可能にする基本的なフレームワークです [!DNL Adobe Experience Cloud]Experience Platformを活用して、適切な人に、適切なチャネル、正確なタイミングで、適切なメッセージを配信します。 Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。
 - [スキーマ構成の基本](../../xdm/schema/composition.md):このドキュメントでは、Experience Data Model(XDM) スキーマの概要と、で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを説明します [!DNL Adobe Experience Platform].
 - [スキーマの構築](../../xdm/tutorials/create-schema-ui.md)：このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
-- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md):ビルド元 [!DNL Adobe Experience Platform], Real-time Customer Data Platform（リアルタイム CDP）は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md):ビルド元 [!DNL Adobe Experience Platform], Adobe Real-time Customer Data Platform(Real-Time CDP) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 Real-Time CDPは、複数のエンタープライズデータソースを組み合わせて、統合プロファイルをリアルタイムで作成し、1 対 1 でパーソナライズされた顧客体験をあらゆるチャネルとデバイスにわたって提供できます。
 - [セグメント化サービスの概要](../../segmentation/home.md)：セグメント化とは、プロファイルストアにあるプロファイルのサブセットによって共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから選別するプロセスです。例えば、「スニーカーを購入し忘れましたか？」という電子メールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。様々なセグメントを使用すると、様々なオーディエンスに焦点を当て、よりカスタマイズされたマーケティングエクスペリエンスを提供できます。
 - [セグメントビルダーユーザガイド](../../segmentation/tutorials/create-a-segment.md)：Platform では、セグメントを簡単に作成してアクセスでき、様々な構成要素を使用してセグメントをさらに特徴付けることができます。
 

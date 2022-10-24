@@ -4,9 +4,9 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 8%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 この [!UICONTROL 参照] 「 」タブでは、組織に取り込まれた読み取り専用プロファイルを検索および表示できます。 ここから、プロファイルの環境設定、過去のイベント、インタラクションおよびセグメントに関する重要な情報を確認できます
 
-Platform UI で提供されるプロファイル表示機能について詳しくは、 [Real-time Customer Data Platformでのプロファイルの参照](../../rtcdp/profile/profile-browse.md).
+Platform UI で提供されるプロファイル表示機能について詳しくは、 [Adobe Real-time Customer Data Platformでのプロファイルの参照](../../rtcdp/profile/profile-browse.md).
 
 ## 結合ポリシー {#merge-policies}
 

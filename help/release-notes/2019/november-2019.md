@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 70%
+ht-degree: 63%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 70%
 **リリース日：2019 年 11 月 18 日（PT）**
 
 Adobe Experience Platform の新機能：
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Adobe Experience Platform の新機能：
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
- Experience Platform をベースに構築されたアドビのリアルタイム顧客データプラットフォーム（リアルタイム CDP）は、企業が既知のデータと未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな判定を行って顧客プロファイルをアクティブ化するのに役立ちます。リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+Real-time Customer Data Platform(Real-Time CDP) はAdobe Experience Platformを基に構築されており、既知のデータと不明なデータを統合して、カスタマージャーニー全体を通じてインテリジェントな判定をおこない、顧客プロファイルをアクティブ化できます。 Real-Time CDPは、複数のエンタープライズデータソースを組み合わせて、統合プロファイルをリアルタイムで作成し、1 対 1 でパーソナライズされた顧客体験をあらゆるチャネルとデバイスにわたって提供できます。
 
-[!DNL Real-time Customer Data Platform] には、データガバナンス、id 管理、高度なセグメント化、データサイエンスのツールが含まれており、プロファイルを作成してオーディエンスを定義したり、リッチなインサイトを得たり、厳密なデータガバナンスポリシーを実施したりできます。
+[!DNL Real-Time Customer Data Platform] には、データガバナンス、id 管理、高度なセグメント化、データサイエンスのツールが含まれており、プロファイルを作成してオーディエンスを定義したり、リッチなインサイトを得たり、厳密なデータガバナンスポリシーを実施したりできます。
 
 Adobe Experience Cloud とのネイティブな統合に加え、アドビはパートナーの大規模なエコシステムにリンクし、オンサイトやアプリケーション内のパーソナライズ機能から電子メール、有料メディア、コールセンター、接続されたデバイスなど、あらゆるチャネルにわたって、優れた顧客体験を提供できます。
 
-リアルタイム CDP を使用すると、次のことが可能になります。
+Real-Time CDPを使用すると、次のことができます。
 
 * 大規模法人の全体から顧客データをストリーミング収集して、顧客を一目で把握する。
 * 既知の識別子と未知の識別子に対して、信頼されたガバナンスとプライバシーコントロールを使用して、プロファイルを責任を持って管理する。
@@ -48,19 +48,19 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 
 | 機能 | 説明 |
 |---|---|
-| 宛先 | Adobeの [!DNL Real-time Customer Data Platform] を使用することで、パートナーに対してシームレスにデータをアクティブ化できます。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
-| ホームページの指標ダッシュボード | Real-time Customer Data Platform(Real-time CDP) のホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の「[リアルタイム顧客データプラットフォームの指標](#real-time-customer-data-platform-metrics)」の節を参照してください。 |
+| 宛先 | Adobeの [!DNL Real-Time Customer Data Platform] を使用することで、パートナーに対してシームレスにデータをアクティブ化できます。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
+| ホームページの指標ダッシュボード | Real-time Customer Data Platform(Real-Time CDP) のホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。詳しくは、 [Real-time Customer Data Platform指標](#real-time-customer-data-platform-metrics) 下 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
-**[!DNL Real-time Customer Data Platform]指標**
+**[!DNL Real-Time Customer Data Platform]指標**
 
-リアルタイム CDP にログインすると、指標ダッシュボードを含むReal-time Customer Data Platform（リアルタイム CDP）ホームページが表示されます。
+Real-Time CDPにログインすると、Real-time Customer Data Platform(Real-Time CDP) のホームページが表示されます。このホームページには、指標ダッシュボードが含まれます。
 
-ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
+ホームページは、指標カードが表示される場所の 1 つに過ぎません。Real-Time CDPは、エクスペリエンス全体で指標カードを提供します。 これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
-リアルタイム CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると、ダッシュボードが自動的に更新され、そのデータに関する情報が表示されます。
+Real-Time CDPにログインしたときにシステムにデータがない場合は、ホームページのダッシュボードは表示されません。 この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると、ダッシュボードが自動的に更新され、そのデータに関する情報が表示されます。
 
-詳しくは、「[リアルタイム顧客データプラットフォームの指標の概要](../../rtcdp/home-page-dashboards.md)」を参照してください。
+詳しくは、 [Real-time Customer Data Platform指標の概要](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
@@ -68,7 +68,7 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 
 **使用可能な宛先**
 
-11 月のリリースでは、アドビのリアルタイム顧客データプラットフォームは次の宛先をサポートします。
+11 月のリリースでは、AdobeのReal-time Customer Data Platformは次の宛先をサポートします。
 
 * 広告: [!DNL Google]
 * 電子メールマーケティング：Adobe Campaign [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]

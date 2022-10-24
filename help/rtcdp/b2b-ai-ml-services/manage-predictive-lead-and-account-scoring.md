@@ -1,16 +1,16 @@
 ---
-title: リアルタイム CDP B2B での予測リードおよびアカウントスコアリングの管理
+title: Real-Time CDP B2B での予測リードおよびアカウントスコアリングの管理
 type: Documentation
 description: このドキュメントでは、Experience PlatformCDP B2B の予測リードおよびアカウントスコアリング機能の管理に関する情報を提供します。
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 5%
 
 ---
 
-# Real-time Customer Data Platform, B2B Edition での予測リードとアカウントスコアリングの管理
+# Adobe Real-time Customer Data Platform, B2B Edition での予測リードとアカウントスコアリングの管理
 
 >[!NOTE]
 >

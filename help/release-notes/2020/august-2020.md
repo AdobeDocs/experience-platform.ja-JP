@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 29%
@@ -20,7 +20,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -45,7 +45,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 | 宛先 | 説明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match を使用すると、オンラインとオフラインのデータを使用して、次のようなGoogleの所有および運用するプロパティをまたいで、顧客にリーチし、再び関与させることができます。 [!DNL Search], [!DNL Shopping]、Gmail、YouTube。 <br><br> 次にアクセス： [!DNL Google Customer Match] [ページ](../../destinations/catalog/advertising/google-customer-match.md) 宛先カタログのを参照して、宛先の詳細と、リアルタイム CDP での設定方法を確認してください。 |
+| [!DNL Google Customer Match] | Google Customer Match を使用すると、オンラインとオフラインのデータを使用して、次のようなGoogleの所有および運用するプロパティをまたいで、顧客にリーチし、再び関与させることができます。 [!DNL Search], [!DNL Shopping]、Gmail、YouTube。 <br><br> 次にアクセス： [!DNL Google Customer Match] [ページ](../../destinations/catalog/advertising/google-customer-match.md) 宛先カタログのを参照してください。 |
 
 **新機能**
 
@@ -54,17 +54,17 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 | カスタムファイル名エディター | 書き出されたファイルの名前を編集できる、電子メールマーケティングの宛先とクラウドストレージの宛先のデータアクティベーションワークフローに対して更新します。 詳しくは、 [ ステップの設定](../../destinations/ui/activate-batch-profile-destinations.md) （アクティベーションワークフロー内） |
 | 推奨属性 | 書き出されたファイルに追加するための推奨属性を表示する、電子メールマーケティングの宛先およびクラウドストレージの宛先のデータアクティベーションワークフローに更新します。 詳しくは、 [属性を選択ステップ](../../destinations/ui/activate-batch-profile-destinations.md) （アクティベーションワークフロー内） |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-time CDP]) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 [!DNL Real-time CDP] は、複数の企業データソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。 その後、これらのプロファイルから作成されたセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスにわたって 1 対 1 でパーソナライズされた顧客体験を提供できます。
+Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-Time CDP]) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 [!DNL Real-Time CDP] は、複数の企業データソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。 その後、これらのプロファイルから作成されたセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスにわたって 1 対 1 でパーソナライズされた顧客体験を提供できます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| IAB TCF 2.0 のサポート | [!DNL Real-time CDP] は、現在は、2.0 バージョンの [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) を参照してください。 CMP で生成される顧客の同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリームの宛先に対してセグメントをアクティブ化する際に、顧客の同意設定を適用できます。 |
+| IAB TCF 2.0 のサポート | [!DNL Real-Time CDP] は、現在は、2.0 バージョンの [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) を参照してください。 CMP で生成される顧客の同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリームの宛先に対してセグメントをアクティブ化する際に、顧客の同意設定を適用できます。 |
 
-詳しくは、 [!DNL Real-time CDP]を参照し、 [[!DNL Real-time CDP] 概要](../../rtcdp/overview.md).
+詳しくは、 [!DNL Real-Time CDP]を参照し、 [[!DNL Real-Time CDP] 概要](../../rtcdp/overview.md).
 
 ## ソース {#sources}
 

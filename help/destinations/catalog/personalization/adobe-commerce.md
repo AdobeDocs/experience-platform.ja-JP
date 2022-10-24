@@ -1,7 +1,7 @@
 ---
 title: （ベータ版）Adobe Commerce Destination Connector
 description: Adobe CommerceとReal-Time CDPの商人が、Real-Time CDP内で作成および管理する顧客セグメントに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、買い物体験をパーソナライズする方法を説明します。
-source-git-commit: 51c5458f444220fb526eb9e82417ae6456857de6
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 24%
@@ -36,7 +36,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Real-time CDP Prime または Ultimate とAdobe Commerceを購入した一部のベータ版のお客様の宛先カタログで利用できます。
+この拡張機能は、Real-Time CDP Prime または Ultimate とAdobe Commerceを購入した一部のベータ版顧客の宛先カタログで使用できます。
 
 ベータ版のお客様は、次の項目にアクセスできます。
 
@@ -90,7 +90,7 @@ Experience Platformで、以下を作成します。
 
 ## 次の手順 ( [!DNL Adobe Commerce]
 
-これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] ：作成した Real-time CDP セグメントを読み込みます。 詳しくは、 [[!DNL Commerce] ドキュメント](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) を参照してください。
+これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPセグメントを読み込みます。 詳しくは、 [[!DNL Commerce] ドキュメント](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 

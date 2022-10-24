@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2022 年 4 月
 description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Data Prep]](#data-prep)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
-- [Real-time Customer Data Platform B2B エディション](#B2B)
+- [Real-Time Customer Data Platform B2B エディション](#B2B)
 - [ソース](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -189,7 +189,7 @@ AI/ML サービスは、マーケティングアナリストや従事者に対�
 
 ### 顧客 AI
 
-Real-time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。これを実現するために、ビジネスニーズを機械学習の問題に変換したり、アルゴリズムを選択したり、トレーニング、またはデプロイする必要はありません。
+Real-time Customer Data Platformで使用できる顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。 これを実現するために、ビジネスニーズを機械学習の問題に変換したり、アルゴリズムを選択したり、トレーニング、またはデプロイする必要はありません。
 
 **更新された機能**
 
@@ -200,9 +200,9 @@ Real-time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 [!DNL Intelligent Services] について詳しくは、[[!DNL Intelligent Services] 概要](../../intelligent-services/home.md)を参照してください。
 
-## Real-time Customer Data Platform B2B エディション {#B2B}
+## Real-Time Customer Data Platform B2B エディション {#B2B}
 
-Real-time Customer Data Platform（Real-time CDP）上に構築された Real-time CDP B2B Edition は、B2B サービスを行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
+Real-Time CDP B2B Edition は、Real-time Customer Data Platform(Real-Time CDP) をベースに構築され、B2B サービスモデルで運用するマーケター向けに設計されています。 複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 
 **更新された機能**
 
@@ -210,7 +210,7 @@ Real-time Customer Data Platform（Real-time CDP）上に構築された Real-ti
 | --- | --- |
 | `isDeleted` 機能のサポート | `Activities` を除くすべての [!DNL Marketo] データセットで、`isDeleted` マッピングをサポートするようになりました。新しいマッピングは、既存の B2B データフローに自動的に追加されます。`isDeleted` マッピングを使用して、[!DNL Data Lake] のデータがソースデータと一致するように、削除されたレコードをフィルターで除外できます。`isDeleted` について詳しくは、[[!DNL Marketo]  マッピングフィールドガイド](../../sources/connectors/adobe-applications/mapping/marketo.md)を参照してください。 |
 
-Real-time Customer Data Platform B2B Edition について詳しくは、[B2B の概要](../../rtcdp/b2b-overview.md)を参照してください。
+Real-time Customer Data Platform B2B Edition の詳細については、 [B2B の概要](../../rtcdp/b2b-overview.md).
 
 ## ソース {#sources}
 

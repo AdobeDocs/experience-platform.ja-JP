@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のあるトピック;データ管
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
-ht-degree: 100%
+source-wordcount: '2529'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Experience Platform のライセンスを取得すると、SKU によって異�
 
 [!DNL Profile Richness] 指標は、購入したライセンスによって異なります。[!DNL Profile Richness] では、2 つの計算方法を利用できます。
 
-* Real-time Customer Data Platform（つまり、プロファイルサービスと ID サービス）内に格納された任意の時点のすべての実稼動データの合計を、[!DNL Addressable Audience] で割る。
+* 任意の時点でAdobe Real-time Customer Data Platform（プロファイルサービスおよび ID サービス）に保存されるすべての実稼動データの合計を、 [!DNL Addressable Audience];
 * Platform（[!DNL Data Lake]、プロファイルサービス、ID サービスを含むがそれに限定されない）内に格納された任意の時点のすべてのデータおよび過去 12 か月間に（Platform 内に格納するのでなく）Platform でストリーミングした任意のデータの合計を、[!DNL Addressable Audience] で割る。
 
 これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。

@@ -1,21 +1,21 @@
 ---
-title: Real-time Customer Data Platform B2B エディションのソース
-description: Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
+title: Real-time Customer Data Platform B2B Edition のソース
+description: Adobe Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 7%
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B エディションのソース
+# Real-time Customer Data Platform B2B Edition のソース
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition を使用していない場合は、 [ソースの概要](./sources-overview.md) 代わりに、
+>Adobe Real-time Customer Data Platform B2B Edition を使用していない場合は、 [ソースの概要](./sources-overview.md) 代わりに、
 
-Real-time Customer Data Platform B2B Edition を使用すると、 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) ソースコネクタ、Salesforce、Amazon S3、ADLS など。 この様々なソースを使用すると、サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
+Adobe Real-time Customer Data Platform B2B Edition を使用すると、 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) ソースコネクタ、Salesforce、Amazon S3、ADLS など。 この様々なソースを使用すると、サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 
 ソースが B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

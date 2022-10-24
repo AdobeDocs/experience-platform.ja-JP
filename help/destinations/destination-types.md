@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先のタイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 36%
+source-wordcount: '642'
+ht-degree: 35%
 
 ---
 
@@ -35,9 +35,9 @@ Adobe Experience Platformでは、接続と拡張機能の 2 つのタイプの�
 
 >[!IMPORTANT]
 >
->エンタープライズの宛先（ストリーミングプロファイルの書き出し先）は、次の用途で使用できます。 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみ。
+>エンタープライズの宛先（ストリーミングプロファイルの書き出し先）は、次の用途で使用できます。 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみ。
 
-企業の宛先 Data Connectors を使用して、Real-time Customer Data Platformプロファイルをほぼリアルタイムで内部システムや他のサードパーティシステムに配信し、データ同期、分析、さらにプロファイルエンリッチメントの使用例をおこないます。
+企業の宛先 Data Connectors を使用して、Adobe Real-time Customer Data Platformプロファイルをほぼリアルタイムで内部システムや他のサードパーティシステムに配信し、データ同期、分析、さらにプロファイルエンリッチメントの使用例をおこないます。
 
 これらの宛先は、セグメントデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。
 

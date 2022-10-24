@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 63%
 
 ---
@@ -58,7 +58,7 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL ソース
 
 >[!NOTE]
 >
->複数のレポートスイートのデータをリアルタイム顧客データプロファイルに対して有効にできるのは、意味が異なる 2 つのカスタムプロパティ（eVar、リストおよび prop）など、データの競合がない場合のみです。
+>複数のレポートスイートのデータをリアルタイム顧客プロファイルに対して有効にできるのは、意味が異なる 2 つのカスタムプロパティ（eVar、リスト、prop）などのデータの競合がない場合のみです。
 
 次の手順で [!DNL Analytics] ソース接続を選択し、レポートスイートを選択して、 **[!UICONTROL 次へ]** をクリックして続行します。
 
