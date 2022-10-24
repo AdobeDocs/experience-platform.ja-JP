@@ -5,9 +5,9 @@ title: 外部オーディエンスのインポートと使用
 description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 5%
 
 ---
@@ -45,10 +45,6 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 ID 名前空間を作成するには、 [id 名前空間ガイド](../../identity-service/namespaces.md#manage-namespaces). ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その ID 名前空間をマークします [!UICONTROL タイプ] as a **[!UICONTROL 人以外の識別子]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->外部オーディエンスでカスタム名前空間を使用し始めるには、サポートチケットを作成する必要があります。 詳しくは、Adobe担当者にお問い合わせください。
 
 ## セグメントメタデータのスキーマの作成
 
