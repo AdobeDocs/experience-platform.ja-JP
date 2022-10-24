@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 63%
+source-wordcount: '2345'
+ht-degree: 62%
 
 ---
 
@@ -45,6 +45,10 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL ソース
 ![カタログ](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### データの選択
+
+>[!IMPORTANT]
+>
+>画面に表示されるレポートスイートは、様々な地域からのものです。 お客様は、データの制限事項と義務、およびAdobe Experience Platformの複数の地域でのデータの使用方法について理解する必要があります。 会社で許可されていることを確認してください。
 
 この **[!UICONTROL Analytics ソースデータの追加]** 手順に従って、 [!DNL Analytics] ソース接続を作成するレポートスイートデータ。
 
