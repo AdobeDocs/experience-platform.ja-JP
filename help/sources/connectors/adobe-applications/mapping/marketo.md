@@ -5,14 +5,19 @@ title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
 description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
+source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 11%
+source-wordcount: '746'
+ht-degree: 10%
 
 ---
 
-# [!DNL Marketo Engage] フィールドマッピング
+# [!DNL Marketo Engage] フィールドマッピング {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Marketoソースフィールドのマッピング"
+>abstract="Marketoと Platform の間でソース接続を確立するには、Marketoに取り込む前に、Platform のソースデータフィールドを適切なターゲット XDM フィールドにマッピングする必要があります。"
 
 次の表に、9 つのフィールド間のマッピングを示します [!DNL Marketo] データセットと、対応する Experience Data Model(XDM) フィールドに関する情報です。
 
