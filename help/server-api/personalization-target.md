@@ -2,9 +2,9 @@
 title: Adobe Targetを使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '735'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Edge Network Server API を使用すると、Adobe Targetで作成されたパ�
 
 >[!IMPORTANT]
 >
->を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) は、Server API ではサポートされていません。
+>を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **レンダー** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [Web SDK](../edge/home.md).
 
 ## データストリームの設定 {#configure-your-datastream}
 
@@ -25,7 +25,7 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 
 詳しくは、 [データストリームへのサービスの追加に関するガイド](../edge/datastreams/overview.md#adobe-target-settings)(Adobe Targetを有効にする方法について詳しくは、を参照 )。
 
-データストリームを設定する際に、次の値を（オプションで）指定できます。 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
+データストリームを設定する際に、 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
 
 ![Adobe Targetを選択した状態で、データストリームサービス設定画面を示す UI 画像](assets/target-datastream.png)
 
