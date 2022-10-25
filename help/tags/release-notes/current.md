@@ -2,20 +2,26 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 18%
+source-wordcount: '350'
+ht-degree: 20%
 
 ---
 
 # タグとイベント転送のリリースノート
 
+## 2022年10月26日（PT）
+
+* **データストリームの機密データ処理**:データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、 [データストリーム内の感覚的なデータの処理](../../edge/datastreams/overview.md#sensitive) を参照してください。
+* **[!DNL Splunk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Splunk] 拡張機能の概要](../extensions/web/splunk/overview.md) を参照してください。
+* **[!DNL Zendesk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Zendesk] 拡張機能の概要](../extensions/web/zendesk/overview.md) を参照してください。
+
 ## 2022年9月28日（PT）
 
 * **Adobe Experience Platform左ナビゲーション統合**:以前はデータ収集 UI にのみ使用できたすべての機能（タグやイベントの転送を含む）も、Experience PlatformUI の左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。
 * **タグとイベント転送のユーザー属性**:タグおよびイベント転送で使用可能なプロパティをリストする場合、リストされた各プロパティが最後に更新された日時と更新者を表示するようになりました。
-* **[[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合**:これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 API を認証および使用する方法について詳しくは、 [[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html).
+* **[[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合**:これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。
 
 ## 2022年7月27日（PT）
 

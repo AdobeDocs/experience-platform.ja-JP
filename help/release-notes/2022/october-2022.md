@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 10 月
 description: Adobe Experience Platformの 2022 年 10 月のリリースノート。
-source-git-commit: e9a7c0561277be21aab1c699a1bc07b793684525
+source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 52%
+source-wordcount: '609'
+ht-degree: 54%
 
 ---
 
@@ -12,9 +12,51 @@ ht-degree: 52%
 
 **リリース日：2022 年 10 月 26 日**
 
+Adobe Experience Platform の新機能：
+
+- [顧客管理キー](#cmk)
+
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [データ収集](#data-collection)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ソース](#sources)
+
+## 顧客管理キー {#cmk}
+
+Adobe Experience Platformに保存されるすべてのデータは、システムレベルのキーを使用して、保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合、代わりに独自の暗号化キーを使用するように選択できるようになり、データのセキュリティをより詳細に制御できます。
+
+概要については、 [顧客管理キー](../../landing/governance-privacy-security/customer-managed-keys.md) 」を参照してください。
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| データストリームの機密データ処理 | データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、 [データストリーム内の感覚的なデータの処理](../../edge/datastreams/overview.md#sensitive) を参照してください。 |
+|  イベント転送用 [!DNL Splunk]拡張機能 | これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Splunk] 拡張機能の概要](../../tags/extensions/web/splunk/overview.md) を参照してください。 |
+|  イベント転送用 [!DNL Zendesk]拡張機能 | これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/web/zendesk/overview.md) を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 更新された `authorized` フィールドをブール型から文字列に変換します。 `season` および `episode` は、整数から文字列に変更されました。 |
+| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` の名前はに変更されました。 `friendlyName`、および `ID` の名前はに変更されました。 `name`. |
+| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` の名前は `name` に変更されました。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## ソース {#sources}
 
