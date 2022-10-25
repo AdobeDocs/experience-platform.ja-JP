@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;
-title: Adobe Workfront Source
+title: （ベータ版）Adobe Workfront Source
 description: Adobe Workfrontは、1 か所で作業のライフサイクル全体を管理するのに役立つ、マーケティング作業管理アプリケーションです。 Workfrontには、組織での作業フローをより深く理解し、最適化するために使用できる、レポートおよび分析ツールが含まれています。
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '281'
 ht-degree: 3%
 
 ---
 
-# Adobe Workfrontソース
+# （ベータ版）Adobe Workfrontソース
+
+>[!NOTE]
+>
+>Adobe Workfrontソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Workfrontは、1 か所で作業のライフサイクル全体を管理するのに役立つ、マーケティング作業管理アプリケーションです。 Workfrontには、組織での作業フローをより深く理解し、最適化するために使用できる、レポートおよび分析ツールが含まれています。
 
