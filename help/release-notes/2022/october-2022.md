@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 10 月
 description: Adobe Experience Platformの 2022 年 10 月のリリースノート。
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 54%
+source-wordcount: '764'
+ht-degree: 52%
 
 ---
 
@@ -12,14 +12,13 @@ ht-degree: 54%
 
 **リリース日：2022 年 10 月 26 日**
 
-Adobe Experience Platform の新機能：
-
 - [顧客管理キー](#cmk)
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データ収集](#data-collection)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
+- [クエリサービス](#query-service)
 - [ソース](#sources)
 
 ## 顧客管理キー {#cmk}
@@ -57,6 +56,20 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 {style=&quot;table-layout:auto&quot;}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
+## クエリサービス {#query-service}
+
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| クエリアクセラレーターレポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るのに必要な時間と処理能力を削減できます。 Query Accelerated Store を使用すると、カスタムデータモデルを作成したり、既存のAdobe Real-time Customer Data Platformデータモデルを拡張したりして、レポートのインサイトとそのビジュアライゼーションを改善できます。 詳しくは、 [query accelerated store reporting insights ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) この機能の詳細については、を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。Adobe Experience Platform の新機能：
 
 ## ソース {#sources}
 
