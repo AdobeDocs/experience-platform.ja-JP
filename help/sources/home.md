@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: ht
-source-wordcount: '1111'
-ht-degree: 100%
+source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
+workflow-type: tm+mt
+source-wordcount: '1123'
+ht-degree: 98%
 
 ---
 
@@ -29,17 +29,19 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager ソースの概要](connectors/adobe-applications/audience-manager.md)
-- [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications データソースの概要](connectors/adobe-applications/classifications.md)
-- [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
+   - [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics レポートスイートデータソースの概要](connectors/adobe-applications/analytics.md)
-- [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
+   - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services ソースの概要](connectors/adobe-applications/campaign.md)
-- [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
-- [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+   - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
-- [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Adobe Workfrontソースの概要](connectors/adobe-applications/workfront.md)
+   - [UI でのWorkfrontソース接続の作成](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### 広告 {#advertising}
 

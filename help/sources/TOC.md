@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
+source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '844'
 ht-degree: 85%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 85%
       - [Adobe Campaign Managed Cloud Servicesソース](connectors/adobe-applications/campaign.md)
       - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
       - [データ収集ソース](connectors/adobe-applications/data-collection.md)
+      - [Workfrontソース](connectors/adobe-applications/workfront.md)
       - フィールドマッピング {#mapping}
          - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager フィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
@@ -207,6 +208,7 @@ ht-degree: 85%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - 広告 {#advertising}
          - [Google 広告](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
