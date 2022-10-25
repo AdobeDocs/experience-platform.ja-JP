@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 85%
+source-wordcount: '853'
+ht-degree: 84%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 85%
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
       - [Zoho CRM コネクタ](connectors/crm/zoho.md)
    - カスタマーサクセス {#customer-success}
+      - [Oracleサービスクラウド](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud コネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow コネクタ](connectors/customer-success/servicenow.md)
       - [Zendesk コネクタ](connectors/customer-success/zendesk.md)
@@ -130,6 +131,7 @@ ht-degree: 85%
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
+         - [Oracleサービスクラウド](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -236,6 +238,7 @@ ht-degree: 85%
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
+         - [Oracleサービスクラウド](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
