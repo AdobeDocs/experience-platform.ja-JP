@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformの顧客管理キー
 description: Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、
 
 ![キー Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Microsoftにファイアウォールの例外を許可する
+## ネットワークオプションの構成
 
 公開アクセスを特定の仮想ネットワークに制限するようにキー Vault が設定されている場合、または公開アクセスを完全に無効にする場合は、Microsoftにファイアウォール例外を許可する必要があります。
 
