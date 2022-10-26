@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Audien
 title: UI でのAdobe Audience Managerソース接続の作成
 description: このチュートリアルでは、ユーザーインターフェイスを使用してAdobe Audience Managerで消費者エクスペリエンスイベントデータを Platform に取り込むためのソース接続を作成する手順について説明します。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 18%
+source-wordcount: '583'
+ht-degree: 25%
 
 ---
 
@@ -46,6 +46,10 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 または、 **[!UICONTROL すべてのセグメントを選択]** および **[!UICONTROL すべての特性を選択]** ボックス。 すべてのセグメントを選択するとAudience Managerセグメントが Platform に取り込まれ、すべての特性を選択すると、Audience Managerからすべてのファーストパーティ特性が有効になります。
+
+>[!WARNING]
+>
+>サイズの大きい Audience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めて Platform に Audience Manager セグメントを送信する際に、合計プロファイル数に直接影響します。つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。次を確認してください： [ライセンス使用許可](../../../../../dashboards/guides/license-usage.md) 先に進む前に
 
 完了したら、「 」を選択します。 **[!UICONTROL 次へ]**
 
