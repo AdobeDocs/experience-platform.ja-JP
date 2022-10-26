@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 54%
+source-wordcount: '921'
+ht-degree: 52%
 
 ---
 
@@ -19,6 +19,7 @@ Adobe Experience Platform の新機能：
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
@@ -42,6 +43,27 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 |  イベント転送用 [!DNL Zendesk]拡張機能 | これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/web/zendesk/overview.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新規宛先または更新された宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | LINE は、人々、サービス、情報を結び付け、チャットアプリからエンターテインメント、ソーシャル、日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。 |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、企業のリソース計画 (ERP) と顧客関係管理 (CRM) を、生産性の高いアプリケーションと AI ツールと組み合わせ、エンドツーエンドのスムーズで制御可能な運用を実現し、潜在的な成長力を向上させ、コストを削減するクラウドベースのビジネスアプリケーションプラットフォームです。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新規ドキュメントまたは更新されたドキュメント**
+
+| ドキュメント | 説明 |
+| ----------- | ----------- |
+| [宛先ガードレール](../../destinations/guardrails.md) | このページでは、アクティベーション動作に関するデフォルトの使用方法とレートの制限について説明します。 |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
