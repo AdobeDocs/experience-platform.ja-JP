@@ -5,16 +5,16 @@ title: クエリサービスでのメタデータ PostgreSQL コマンド
 topic-legacy: metadata
 description: Adobe Experience Platformクエリサービスでメタデータのクエリが現在サポートされている PostgreSQL コマンドのリストです。
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 77%
+source-wordcount: '335'
+ht-degree: 78%
 
 ---
 
-# クエリサービスのメタデータ PostgreSQL コマンド
+# メタデータ [!DNL PostgreSQL] クエリサービスのコマンド
 
-データセット上のメタデータに対しては、現在、次の PostgreSQL コマンドによるクエリがサポートされています。
+データセットのメタデータの場合、次の操作を行います。 [!DNL PostgreSQL] コマンドは現在、次のクエリに対してサポートされています。
 
 >[!NOTE]
 >
@@ -43,4 +43,4 @@ ht-degree: 77%
 
 `\d` で開始するすべてのコマンドを組み合わせることができます。例えば、すべてのテーブル、シーケンスおよびリストの `\dtsn` スキーマを表示できます。`\d` を使用すると、すべての表示可能な表、表示、マテリアライズドビュー、シーケンスが表示されます。
 
-上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、PostgreSQL のドキュメントに示すすべてのオプションが [!DNL Experience Platform].
+上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、 [!DNL PostgreSQL] ドキュメントは、 [!DNL Experience Platform].

@@ -5,9 +5,9 @@ title: Experience PlatformUI の概要
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 4%
 
 ---
@@ -154,7 +154,7 @@ Platform インターフェイスの明るいテーマと暗いテーマは、�
 
 この **[!UICONTROL データセット]** 「 」セクションでは、データセットを作成および管理できます。 データセットの詳細については、 [データセットユーザーガイド](../catalog/datasets/user-guide.md).
 
-この **[!UICONTROL クエリ]** 「 」セクションでは、クエリの作成と管理、Adobe Experience Platformクエリサービスによる SQL クエリのログ記録、PostgreSQL 資格情報の表示をおこなうことができます。 クエリの詳細については、 [クエリサービスユーザーガイド](../query-service/ui/overview.md).
+この **[!UICONTROL クエリ]** 「 」セクションでは、クエリの作成と管理、Adobe Experience Platform Query Service による SQL クエリのログの記録、 [!DNL PostgreSQL] 資格情報。 クエリの詳細については、 [クエリサービスユーザーガイド](../query-service/ui/overview.md).
 
 この **[!UICONTROL 監視]** 「 」セクションでは、バッチとストリーミングの取り込みを監視できます。 監視について詳しくは、 [データ取得ユーザーガイドの監視](../ingestion/quality/monitor-data-ingestion.md).
 

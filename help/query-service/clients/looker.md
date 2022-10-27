@@ -5,10 +5,10 @@ title: Looker をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、Looker とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 12%
+source-wordcount: '313'
+ht-degree: 10%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 12%
 
 へのログイン後 [!DNL Looker]を選択します。 **[!DNL Admin]**&#x200B;に続いて **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![この [!DNL Looker] 管理者ドロップダウンメニューで強調表示された接続を含むダッシュボード。](../images/clients/looker/click-admin-connections.png)
 
 このページで、 **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![[ 新しい接続 ] がハイライト表示された [ 接続 ] ワークスペース。](../images/clients/looker/click-new-connection.png)
 
 ここから、接続設定の詳細を入力できます。
 
-![](../images/clients/looker/new-connection.png)
+![新しい接続の接続設定ページ。](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** 接続の名前。
 - **[!DNL Dialect]:** SQL データベースで使用される言語。 [!DNL Query Service] 使用する **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ ht-degree: 12%
 
 接続の詳細を入力したら、「 」を選択します。 **[!DNL Test These Settings]** 認証情報が正しく機能するようにします。 接続できる場合は、接続できることを示すメッセージが下に表示されます。 接続に成功した場合は、 **[!DNL Add Connection]** 接続を作成します。
 
-![](../images/clients/looker/click-test-connection.png)
+![[ 新しい接続 ] の [ 接続の設定 ] ページで、[ テストする ] 設定がハイライト表示されています。](../images/clients/looker/click-test-connection.png)
 
 ## 次の手順
 

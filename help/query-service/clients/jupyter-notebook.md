@@ -1,9 +1,9 @@
 ---
 title: Jupyter ノートブックをクエリサービスに接続
 description: Jupyter Notebook をAdobe Experience Platform Query Service に接続する方法を説明します。
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 新しい [!DNL Jupyter Notebook] Web アプリケーションで、 **[!DNL New]** ドロップダウンが表示されます。 **[!DNL Python 3]** をクリックして、新しいノートブックを作成します。 この [!DNL Notebook] エディタが表示されます。
 
-![この [!DNL Jupiter Notebook] 「ファイル」タブで [!DNL New dropdown] および [!DNL Python] 3 個がハイライト表示されています。](../images/clients/jupyter-notebook/new-notebook.png)
+![この [!DNL Jupiter Notebook] 「ファイル」タブで [!DNL New] ドロップダウンと [!DNL Python] 3 個がハイライト表示されています。](../images/clients/jupyter-notebook/new-notebook.png)
 
 最初の行に [!DNL Notebook] エディターで、次の値を入力します。 `pip install psycopg2-binary` を選択し、 **[!DNL Run]** コマンドバーから。 成功メッセージが入力行の下に表示されます。
 

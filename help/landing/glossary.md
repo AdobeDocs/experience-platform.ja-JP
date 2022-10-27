@@ -5,9 +5,9 @@ title: Adobe Experience Platform用語集
 topic-legacy: getting started
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
 workflow-type: tm+mt
-source-wordcount: '7436'
+source-wordcount: '7435'
 ht-degree: 12%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 12%
 
 **クラス**:エクスペリエンスデータモデル (XDM) では、クラスは、スキーマの構築に使用される最小のフィールドセットを定義し、スキーマが表すビジネスオブジェクトの基本動作を定義します。
 
-**クライアント**:クライアントは、 [!DNL Query Service] （PostgreSQL プロトコルまたは HTTP API を使用）
+**クライアント**:クライアントは、 [!DNL Query Service] 経由 [!DNL PostgreSQL] プロトコルまたは HTTP API。
 
 **コレクション**:In [!DNL Offer Decisioning]コレクションは、オファーのカテゴリなど、マーケターが定義した事前定義済みの条件に基づくオファーのサブセットです。
 

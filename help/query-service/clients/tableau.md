@@ -5,16 +5,16 @@ title: Tableau のクエリーサービスへの接続
 topic-legacy: connect
 description: このドキュメントでは、Tableau とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '302'
 ht-degree: 2%
 
 ---
 
 # 接続 [!DNL Tableau] クエリサービスへ
 
-このドキュメントでは、Tableau とAdobe Experience Platformを接続する手順を説明します [!DNL Query Service].
+このドキュメントでは、 [!DNL Tableau] Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 接続するには [!DNL Tableau] から [!DNL Query Service]，開く [!DNL Tableau]、および **[!DNL To a Server]** セクション選択 **[!DNL More]** 続いて **[!DNL PostgreSQL]**
 
-![](../images/clients/tableau/open-connection.png)
+![この [!DNL Tableau] ダッシュボードに「その他」と「 [!DNL PostgreSQL] ハイライト表示されました。](../images/clients/tableau/open-connection.png)
 
 これで、Adobe Experience Platformに接続する値を入力できるようになりました。 データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 >
 >詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
-![](../images/clients/tableau/sign-in.png)
+![この [!DNL PostgreSQL] 接続ダイアログが開き、接続の詳細が完了しました。](../images/clients/tableau/sign-in.png)
 
 >[!IMPORTANT]
 >
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 これで、Adobe Experience Platformと接続し、テーブルのリストが横に表示されます。
 
-![](../images/clients/tableau/connected.png)
+![新しい [!DNL Tableau] ダッシュボードとクエリサービステーブルが左側のパネルでハイライト表示されています。](../images/clients/tableau/connected.png)
 
 ## 次の手順
 

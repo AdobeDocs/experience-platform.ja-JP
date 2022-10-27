@@ -2,7 +2,7 @@
 title: クエリテンプレート
 description: クエリテンプレートは再利用可能な保存済みの SQL クエリで、他のユーザーが再利用して時間と労力を節約できます。 クエリエディターまたはクエリサービス API を使用して作成でき、すべてのExperience Platformデータセットで使用できます。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: b6aaa3baaf8b3ff139ba6ebc7f14ac283ad52241
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -27,9 +27,11 @@ Adobe Experience Platformクエリサービスを使用すると、SQL コード
 
 クエリエディターを使用して [書き込み](./user-guide.md#query-authoring) および [クエリを保存](./user-guide.md#saving-queries). クエリに名前を付けて保存すると、 [!UICONTROL 参照] タブをクリックします。
 
-Platform UI のクエリワークスペースから、「 **[!UICONTROL 参照]** をクリックして、使用可能な保存済みクエリのリストを表示します。
+Platform UI のクエリワークスペースから、「 **[!UICONTROL テンプレート]** をクリックして、使用可能な保存済みクエリのリストを表示します。
 
-![「参照」タブがハイライト表示されたクエリワークスペース](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![「テンプレート」タブが強調表示されたクエリワークスペース](../images/ui/query-templates/query-templates.png)
 
 関連するテンプレート情報を見つけるには、使用可能なリストから任意のクエリテンプレートを選択して、詳細パネルを開きます。
 

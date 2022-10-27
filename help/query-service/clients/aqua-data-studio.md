@@ -5,9 +5,9 @@ title: Aqua Data Studio をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 10%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 10%
 - **[!DNL Host and Port]**:ホストエンドポイントと、そののポート [!DNL Query Service]. 接続には、ポート 80 を使用する必要があります [!DNL Query Service].
 - **[!DNL Database]:** 使用するデータベース。 Platform UI の資格情報の値を使用します。 `dbname`: `prod:all`.
 
-![必須の入力フィールドがハイライトされた「 Aqua Data Studio General 」タブ。](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![この [!DNL Aqua Data Studio] 必須入力フィールドがハイライト表示された「一般」タブ](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] 資格情報
 
@@ -56,7 +56,7 @@ ht-degree: 10%
 >
 >詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
-![[ パラメータ ] フィールドがハイライト表示された Aqua Data Studio Driver タブ](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![この [!DNL Aqua Data Studio] [ パラメータ ] フィールドがハイライト表示された [ ドライバ ] タブ](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 接続の詳細を入力したら、「 」を選択します。 **[!DNL Test Connection]** 認証情報が正しく機能するようにします。 接続テストが成功した場合は、 **[!DNL Save]** サーバーを登録します。 接続を確認する確認ダイアログが表示され、接続がダッシュボードに表示されます。 これで、サーバーに接続し、そのスキーマオブジェクトを表示できます。
 

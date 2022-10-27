@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 title: クエリサービス SSL オプション
 description: Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、verify-full SSL モードを使用した接続方法について説明します。
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,8 @@ Platform は、データセキュリティのニーズに合わせて様々な S
 | `allow` | 部分的 | × | セキュリティは優先事項ではありません。処理の速度と低いオーバーヘッドがより重要です。 このモードでは、サーバーが暗号化を要求した場合にのみ、暗号化がオプトされます。 |
 | `prefer` | 部分的 | × | 暗号化は必要ありませんが、サーバーが暗号化をサポートしている場合は、通信が暗号化されます。 |
 | `require` | ○ | × | すべての通信で暗号化が必要です。 ネットワークは、正しいサーバーに接続するために信頼されています。 サーバー SSL 証明書の検証は不要です。 |
-| `verify-ca` | ○ | CA ポリシーに依存 | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 これには、PostgreSQL ホームディレクトリでルート証明書を設定する必要があります。 [詳細は以下のとおりです](#instructions) |
-| `verify-full` | ○ | ○ | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 これには、PostgreSQL ホームディレクトリでルート証明書を設定する必要があります。 [詳細は以下のとおりです](#instructions). |
+| `verify-ca` | ○ | CA ポリシーに依存 | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 これには、 [!DNL PostgreSQL] ホームディレクトリ。 [詳細は以下のとおりです](#instructions) |
+| `verify-full` | ○ | ○ | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 これには、 [!DNL PostgreSQL] ホームディレクトリ。 [詳細は以下のとおりです](#instructions). |
 
 >[!NOTE]
 >

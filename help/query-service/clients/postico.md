@@ -5,10 +5,10 @@ title: Postico をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントには、Adobe Experience Platform Query Service 用のバックアップクライアント Postico をインストールするためのリンクが含まれています。
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 7%
+source-wordcount: '291'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 接続するには [!DNL Postico] クエリサービスにアクセスするには、 [!DNL Postico] を選択し、 **[!DNL New Favorite]**.
 
-![](../images/clients/postico/open-postico.png)
+![この [!DNL Postico] 新しいお気に入りがハイライトされた UI](../images/clients/postico/open-postico.png)
 
 これで、Adobe Experience Platformに接続する値を入力できるようになりました。
 
@@ -32,25 +32,25 @@ ht-degree: 7%
 
 資格情報を挿入したら、「 」を選択します。 **[!DNL Connect]** をクリックして、クエリサービスに接続します。
 
-![](../images/clients/postico/authentication-details.png)
+![[ 新しいお気に入り ] ダイアログ（接続がハイライト表示されています）。](../images/clients/postico/authentication-details.png)
 
 Platform に接続すると、以前にクエリサービスでおこなわれたすべての関係のリストを表示できます。
 
-![](../images/clients/postico/show-queries.png)
+![内の接続のリスト [!DNL Postico] UI](../images/clients/postico/show-queries.png)
 
 ## SQL 文の作成
 
 新しい SQL クエリを作成するには、「SQL クエリ」を選択して開きます。
 
-![](../images/clients/postico/create-query.png)
+![この [!DNL Postico] 「SQL クエリ」ショートカットがハイライトされた UI](../images/clients/postico/create-query.png)
 
 ボックスが表示され、ここから、実行するクエリを入力できます。 終了したら、「 」を選択します。 **[!DNL Execute Statement]** をクリックしてクエリを実行します。
 
-![](../images/clients/postico/run-statement.png)
+![「Execute Statement」がハイライトされた SQL エディタ。](../images/clients/postico/run-statement.png)
 
 完了したクエリの実行結果を示すテーブルが表示されます。
 
-![](../images/clients/postico/query-results.png)
+![サンプルクエリの結果のテーブル。](../images/clients/postico/query-results.png)
 
 ## 次の手順
 

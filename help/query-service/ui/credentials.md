@@ -5,9 +5,9 @@ title: クエリサービス資格情報ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,9 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 
 生成した資格情報を保存したら、「 」を選択します。 **[!UICONTROL 閉じる]**. 有効期限が切れていないすべての資格情報のリストが表示されるようになりました。
 
-![「期限切れでない資格情報」セクションが展開された「クエリ」ダッシュボードの「資格情報」タブ。](../images/ui/credentials/list-credentials.png)
+![「期限切れでない資格情報」セクションがハイライト表示された「クエリ」ダッシュボードの「資格情報」タブ](../images/ui/credentials/list-credentials.png)
 
-有効期限のない資格情報は、編集または削除できます。 有効期限が切れていない秘密鍵証明書を編集するには、鉛筆アイコン (![](../images/ui/credentials/edit-icon.png)) をクリックします。 有効期限のない秘密鍵証明書を削除するには、削除アイコン (![](../images/ui/credentials/delete-icon.png)) をクリックします。
+有効期限のない資格情報は、編集または削除できます。 有効期限が切れていない秘密鍵証明書を編集するには、鉛筆アイコン (![鉛筆アイコン。](../images/ui/credentials/edit-icon.png) ）サードパーティリクエストを待機する、特別なコア Adobe JavaScript モジュールです。有効期限のない秘密鍵証明書を削除するには、削除アイコン (![ごみ箱アイコン。](../images/ui/credentials/delete-icon.png)) をクリックします。
 
 有効期限が切れていない秘密鍵証明書を編集すると、モーダルが表示されます。 更新する次の詳細を指定できます。
 
@@ -102,7 +102,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 
 この画像は、有効期限のない資格情報のパスワードを除く、UI 内の各パラメーターの場所を示しています。 有効期限のない資格情報は JSON 設定ファイルで提供されますが、有効期限の近い資格情報は、「 **資格情報** 」タブをクリックします。
 
-![](../images/ui/credentials/expiring-credentials.png)
+![「クエリ」ワークスペースの「資格情報」タブ（「期限切れの資格情報」セクションがハイライト表示）](../images/ui/credentials/expiring-credentials.png)
 
 次の表に、外部クライアントへの接続に通常必要なパラメーターの概要を示します。
 

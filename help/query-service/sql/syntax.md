@@ -5,9 +5,9 @@ title: クエリサービスの SQL 構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 8%
 
 ---
@@ -449,7 +449,7 @@ END $$;
 
 この 2 つ目の例では、 `inline` 関数に置き換えます。 この例のデータモデルを次の画像に示します。
 
-![productListItems のスキーマ図](../images/sql/productListItems.png)
+![productListItems のスキーマ図。](../images/sql/productListItems.png)
 
 **例**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 任意の設定の値を返すには、 `SET [property key]` 無しに `property_value`.
 
-## PostgreSQL コマンド
+## [!DNL PostgreSQL] コマンド
 
-以下のサブ節では、クエリサービスでサポートされる PostgreSQL コマンドについて説明します。
+以下のサブセクションでは、 [!DNL PostgreSQL] クエリサービスでサポートされるコマンド。
 
 ### テーブルを分析
 
@@ -677,7 +677,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 | パラメーター | 説明 |
 | ------ | ------ |
 | `TEMPORARY` または `TEMP` | オプションのパラメーター。 指定した場合、作成されるテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [PostgreSQL のドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [[!DNL PostgreSQL] ドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**

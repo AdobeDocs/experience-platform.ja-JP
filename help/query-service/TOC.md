@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: cc855d46d594d8a55d26873b25060367cf726926
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 67%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 67%
    - [クライアント接続の概要](clients/overview.md)
    - [SSL モード](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
-   - [Db ビジュアライザー](./clients/dbvisulaizer.md)
+   - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [ポスティコ](clients/postico.md)

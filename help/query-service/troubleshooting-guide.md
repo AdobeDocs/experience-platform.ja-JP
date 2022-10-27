@@ -5,9 +5,9 @@ title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。 トピックには、データのエクスポート、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 4%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Experience Platform **[!UICONTROL データセット]** （ UI の左側のナビゲーションでに移動） [!UICONTROL データセット] ダッシュボード。
 - データセット [!UICONTROL 参照] タブが開きます。 検索バーを使用して、使用可能なオプションを絞り込むことができます。 表示されたリストからデータセットを選択します。
 
-![Platform UI でハイライトされたデータセット。](./images/troubleshooting/dataset-selection.png)
+![Platform UI の「データセット」ダッシュボード（検索バーとデータセットがハイライトされています）](./images/troubleshooting/dataset-selection.png)
 
-- この [!UICONTROL データセットアクティビティ] 画面が表示されます。 選択 [!UICONTROL データセットをプレビュー] をクリックして、選択したデータセットから、XDM スキーマのダイアログと、フラット化されたデータの表形式表示を開きます。 詳しくは、 [データセットドキュメントのプレビュー](../catalog/datasets/user-guide.md#preview-a-dataset)
+- この [!UICONTROL データセットアクティビティ] 画面が表示されます。 選択 **[!UICONTROL データセットをプレビュー]** をクリックして、選択したデータセットから、XDM スキーマのダイアログと、フラット化されたデータの表形式表示を開きます。 詳しくは、 [データセットドキュメントのプレビュー](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![フラット化されたデータの XDM スキーマと表形式表示。](./images/troubleshooting/dataset-preview.png)
+![データセットのプレビューをハイライト表示した、データセットダッシュボードの「データセットアクティビティ」タブ。](./images/troubleshooting/dataset-preview.png)
 
 - スキーマから任意のフィールドを選択し、統合された列にその内容を表示します。 列の名前は、ページの右側のコンテンツの上に表示されます。 このデータセットのクエリに使用するには、この名前をコピーする必要があります。
 
-![UI でハイライト表示されている、ネストされたデータセットの列名。](./images/troubleshooting/column-name.png)
+![フラット化されたデータの XDM スキーマと表形式表示。 UI で、ネストされたデータセットの列名がハイライト表示されます。](./images/troubleshooting/column-name.png)
 
 以下に関する詳細なガイダンスについては、ドキュメントを参照してください。 [ネストされたデータ構造の操作方法](./best-practices/nested-data-structures.md) クエリエディターまたはサードパーティのクライアントを使用して、
 +++
@@ -119,12 +119,12 @@ SELECT * FROM customers LIMIT 0;
 - に移動します。 [https://www.adobe.com/](https://www.adobe.com/) を設定します。
 - 上部ナビゲーションバーの右側で、「 **[!UICONTROL ログイン]**.
 
-![サインインがハイライトされたAdobeWeb サイト。](./images/troubleshooting/adobe-sign-in.png)
+![「サインイン」がハイライトされたAdobeWeb サイト。](./images/troubleshooting/adobe-sign-in.png)
 
 - ご使用のAdobeライセンスに登録されているAdobe IDとパスワードを使用してください。
 - 選択 **[!UICONTROL ヘルプとサポート]** 上部ナビゲーションバーから。
 
-![ヘルプとサポートが強調表示された上部のナビゲーションバードロップダウンメニュー。](./images/troubleshooting/help-and-support.png)
+![ヘルプとサポート、エンタープライズサポート、およびお問い合わせをハイライト表示した上部ナビゲーションバードロップダウンメニュー。](./images/troubleshooting/help-and-support.png)
 
 ドロップダウンバナーが表示され、 [!UICONTROL ヘルプとサポート] 」セクションに入力します。 選択 **[!UICONTROL お問い合わせ]** をクリックして、Adobeの Customer Care Virtual Assistant を開くか、 **[!UICONTROL エンタープライズサポート]** 大規模組織向けの専用ヘルプ
 +++

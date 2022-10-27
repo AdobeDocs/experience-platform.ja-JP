@@ -5,10 +5,10 @@ title: クエリエディター UI ガイド
 topic-legacy: query editor
 description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールで、Experience Platformのユーザーインターフェイス内で顧客体験データのクエリの書き込み、検証、実行をおこなうことができます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
+source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 25%
+source-wordcount: '1993'
+ht-degree: 22%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 25%
 
 [!DNL Query Editor] 初期化と接続に数秒かかります [!DNL Query Service] をクリックします。 次に示すように、コンソールは、接続されたタイミングを示します。 エディターがクエリサービスに接続される前にクエリを実行しようとすると、接続が完了するまで実行が待機されます。
 
-![画像](../images/ui/query-editor/connect.png)
+![初回接続時のクエリエディターのコンソール出力。](../images/ui/query-editor/connect.png)
 
 ### クエリの実行元 [!DNL Query Editor] {#run-a-query}
 
@@ -40,13 +40,13 @@ ht-degree: 25%
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL クエリ]** 左側のナビゲーションメニューで、 [!DNL Query Service] ワークスペース。 次に、 **[!UICONTROL クエリを作成]** をクリックして、クエリの記述を開始します。 このリンクは、 [!DNL Query Service] ワークスペース。
 
-![画像](../images/ui/query-editor/create-query.png)
+![「クエリ」ワークスペースの概要タブで、「クエリを作成」がハイライトされています。](../images/ui/query-editor/create-query.png)
 
 ### クエリの記述 {#writing-queries}
 
-[!UICONTROL クエリエディターは、クエリをできるだけ簡単に記述できるように構成されています。]次のスクリーンショットは、UI でエディターがどのように表示されるかを示しています。ここでは、**プレイする**&#x200B;ボタンと SQL 入力フィールドがハイライトされています。
+[!UICONTROL クエリエディターは、クエリをできるだけ簡単に記述できるように構成されています。]次のスクリーンショットは、SQL 入力フィールドと **再生** ハイライト表示されました。
 
-![画像](../images/ui/query-editor/editor.png)
+![SQL 入力フィールドと「再生」がハイライト表示されたクエリエディター。](../images/ui/query-editor/editor.png)
 
 開発時間を最小限に抑えるために、返される行を制限してクエリを開発することをお勧めします。たとえば、`SELECT fields FROM table WHERE conditions LIMIT number_of_rows` のように設定します。クエリが目的どおりの出力を生成することを確認したら、制限を解除して、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行し、データセットを生成します。
 
@@ -54,15 +54,15 @@ ht-degree: 25%
 
 - **構文の自動ハイライト：** SQL の読み取りと構成が容易になります。
 
-![画像](../images/ui/query-editor/syntax-highlight.png)
+![クエリエディター内の SQL ステートメントで、構文の色の強調表示を示します。](../images/ui/query-editor/syntax-highlight.png)
 
 - **SQL キーワードのオートコンプリート：** クエリの入力を開始し、矢印キーを使用して目的の語句に移動して、 **入力**.
 
-![画像](../images/ui/query-editor/syntax-auto.png)
+![SQL の数文字と、クエリエディターのオプションを提供する自動完了ドロップダウンメニュー。](../images/ui/query-editor/syntax-auto.png)
 
 - **テーブルとフィールドのオートコンプリート**：`SELECT` 元のテーブル名の入力を開始し、矢印キーを使用して目的の表に移動して、**Enter** キーを押します。テーブルを選択すると、オートコンプリートによってそのテーブルのフィールドが認識されます。
 
-![ドロップダウン候補が表示されるクエリエディターのコマンドラインインターフェイス。](../images/ui/query-editor/tables-auto.png)
+![ドロップダウンテーブル名の候補が表示されるクエリエディター入力。](../images/ui/query-editor/tables-auto.png)
 
 ### オートコンプリート UI 設定切り替え {#auto-complete}
 
@@ -94,17 +94,17 @@ ht-degree: 25%
 
 [!DNL Query Editor] 一般的な SQL 検証と特定の実行検証を提供し、クエリの記述時にが自動的に検証されます。 以下の画像のように、クエリの下に赤い下線が表示される場合は、クエリ内にエラーがあります。
 
-![画像](../images/ui/query-editor/syntax-error-highlight.png)
+![SQL を赤で下線付きで表示するクエリエディター入力は、エラーを示します。](../images/ui/query-editor/syntax-error-highlight.png)
 
 エラーが検出された場合、SQL コードの上にカーソルを置くと、特定のエラーメッセージが表示されます。
 
-![画像](../images/ui/query-editor/linting-error.png)
+![エラーメッセージを含むダイアログ。](../images/ui/query-editor/linting-error.png)
 
 ### クエリの詳細 {#query-details}
 
-でクエリを表示しているとき [!DNL Query Editor]、 **[!UICONTROL クエリの詳細]** パネルには、選択したクエリを管理するためのツールが表示されます。
+次の場所から保存済みのテンプレートを選択します。 [!UICONTROL テンプレート] 」タブに移動して、クエリエディターで表示します。 クエリの詳細パネルには、選択したクエリを管理するための詳細情報とツールが表示されます。
 
-![画像](../images/ui/query-editor/query-details.png)
+![クエリの詳細パネルがハイライト表示されたクエリエディター。](../images/ui/query-editor/query-details.png)
 
 このパネルを使用すると、UI から直接出力データセットを生成し、表示されたクエリを削除または名前を付け、クエリにスケジュールを追加できます。
 
@@ -118,11 +118,13 @@ ht-degree: 25%
 
 クエリにスケジュールを追加するには、 **[!UICONTROL スケジュールを追加]**.
 
-![画像](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![スケジュールを追加がハイライトされたクエリエディター。](../images/ui/query-editor/add-schedule.png)
 
 この **[!UICONTROL スケジュールの詳細]** ページが表示されます。 このページでは、スケジュール済みクエリの頻度、スケジュール済みクエリが実行される日付、およびクエリのエクスポート先のデータセットを選択できます。
 
-![画像](../images/ui/query-editor/schedule-details.png)
+![スケジュールの詳細パネルがハイライト表示されます。](../images/ui/query-editor/schedule-details.png)
 
 次のオプションを選択できます。 **[!UICONTROL 頻度]**:
 
@@ -152,7 +154,9 @@ ht-degree: 25%
 
 スケジュールを削除するには、 **[!UICONTROL スケジュールの削除]**.
 
-![画像](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![「スケジュールを無効にする」と「スケジュールを削除する」がハイライトされたクエリエディター。](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -184,7 +188,7 @@ ht-degree: 25%
 
 コンソールには、 [!DNL Query Service]. コンソールには、次への接続ステータスが表示されます。 [!DNL Query Service]、実行中のクエリ操作、およびこれらのクエリによって生じるエラーメッセージ。
 
-![画像](../images/ui/query-editor/console.png)
+![クエリエディターコンソールの「コンソール」タブ](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -194,7 +198,7 @@ ht-degree: 25%
 
 クエリが完了すると、結果が **[!UICONTROL 結果]** タブ（横） **[!UICONTROL コンソール]** タブをクリックします。 このビューには、クエリの出力が表形式で出力され、最大 100 行まで表示されます。このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。詳しくは、 [データセットの生成チュートリアル](./create-datasets.md) を参照してください。 [!DNL Query Editor].
 
-![画像](../images/ui/query-editor/query-results.png)
+![クエリエディターコンソールの「結果」タブに、クエリ実行の結果が表示されます。](../images/ui/query-editor/query-results.png)
 
 ## 次を使用してクエリを実行 [!DNL Query Service] チュートリアルビデオ {#query-tutorial-video}
 

@@ -5,10 +5,10 @@ title: クエリサービス UI ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 36%
+source-wordcount: '716'
+ht-degree: 28%
 
 ---
 
@@ -26,15 +26,15 @@ ht-degree: 36%
 
 ![ズームインした [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## 参照 {#browse}
+## テンプレート {#browse}
 
-「**[!UICONTROL 参照]**」タブには、組織のユーザーによって保存されたクエリが表示されます。これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。に表示されるクエリ **[!UICONTROL 参照]** 「 」タブは「実行クエリ」としても表示されます **[!UICONTROL ログ]** タブ ( 以前に [!DNL Query Service].
+この **[!UICONTROL テンプレート]** 「 」タブには、組織内のユーザーが保存したクエリが表示されます。 これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。に表示されるクエリ **[!UICONTROL テンプレート]** 「 」タブは「実行クエリ」としても表示されます **[!UICONTROL ログ]** タブ ( 以前に [!DNL Query Service].
 
-![保存済みのクエリが表示される、クエリダッシュボードの「参照」タブのズームインビュー。](../images/ui/overview/browse.png)
+![保存済みのクエリが複数表示された「クエリダッシュボードのテンプレート」タブのズームインビュー。](../images/ui/overview/templates.png)
 
 | 列 | 説明 |
 | --- | --- |
-| **[!UICONTROL 名前]** | ユーザーが作成したクエリ名。名前を選択して、 [!DNL Query Editor]. 検索バーを使用して、クエリの名前で検索することもできます。検索では大文字と小文字が区別されます。 |
+| **[!UICONTROL 名前]** | 名前フィールドは、ユーザーが作成したクエリ名か、SQL クエリの最初の数文字のどちらかです。 クエリエディターで UI を使用して作成したクエリは、開始時にと名前が付けられます。 API を使用してクエリが作成された場合、クエリの名前は、クエリの作成に使用される最初の SQL のスニペットになります。 クエリ名を選択して、 [!DNL Query Editor]. 検索バーを使用して [!UICONTROL 名前] クエリの。 検索では大文字と小文字が区別されます。 |
 | **[!UICONTROL SQL]** | SQL クエリの最初の数文字。コードの上にカーソルを置くと、完全なクエリが表示されます。 |
 | **[!UICONTROL 変更者]** | 最後にクエリを変更したユーザー。組織内でへのアクセス権を持つユーザー [!DNL Query Service] でクエリを変更できます。 |
 | **[!UICONTROL 最終変更日]** | ブラウザーのタイムゾーンでの、クエリが最後に編集された日付と時間。 |

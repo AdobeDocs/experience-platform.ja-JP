@@ -5,10 +5,10 @@ title: PostgreSQL ソースコネクタの概要
 topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して PostgreSQL をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 58%
+source-wordcount: '225'
+ht-degree: 66%
 
 ---
 
@@ -26,11 +26,11 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 ## API を使用して [!DNL PostgreSQL] と [!DNL Platform] を接続する
 
-- [フローサービス API を使用した PostgreSQL ベース接続の作成](../../tutorials/api/create/databases/postgres.md)
+- [Flow Service API を使用した [!DNL PostgreSQL] ベース接続の作成](../../tutorials/api/create/databases/postgres.md)
 - [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL PostgreSQL] と [!DNL Platform] を接続する
 
-- [UI での PostgreSQL ソース接続の作成](../../tutorials/ui/create/databases/postgres.md)
+- [UI での [!DNL PostgreSQL] ソースコネクタの作成](../../tutorials/ui/create/databases/postgres.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

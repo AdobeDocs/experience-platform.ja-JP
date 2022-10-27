@@ -6,10 +6,10 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platformクエリサービスを使用すると、UI からデータセットを作成できます。 データセットを作成したら、データレイク内の他のデータセットと同様にアクセスし、様々な使用例に使用できます。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 12%
+source-wordcount: '493'
+ht-degree: 11%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 12%
 
 ## Adobe Experience Platformユーザーインターフェイスからデータセットを生成する
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Adobe Experience Platformユーザーインターフェイス (UI) からデータセットを作成するには、次の手順に従います。
 
 1. 接続されたクライアントを使用してクエリを作成し、出力を検証します。 を使用してクエリを記述する方法を学ぶには [!DNL Query Editor]、 [!DNL Query Editor] UI ガイド [クエリの記述時](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Adobe Experience Platformユーザーインターフェイス (UI) からデー�
 
 3. クエリの詳細パネルで、「 」を選択します。 **[!UICONTROL データセットを出力]**.
 
-   ![出力データセットを選択](../images/ui/create-datasets/output-dataset.png)
+   ![「クエリ」ワークスペースの「テンプレート」タブで、「出力データセットを選択」がハイライトされています。](../images/ui/create-datasets/output-dataset.png)
 
 4. 表示されるダイアログで、LDAP ID の前に付いたデータセット名を入力します。 データセット名は、一意である必要も、SQL セーフである必要もありません。 データセットのテーブル名は、ここで作成したデータセット名に基づいて生成されます。
 
 5. 次に、データセットの説明を [!UICONTROL 説明] フィールドと選択 **[!UICONTROL クエリを実行]**.
 
-   ![クエリを実行](../images/ui/create-datasets/run-query.png)
+   ![データセットの詳細と実行クエリが強調表示されたデータセットの出力ダイアログ](../images/ui/create-datasets/run-query.png)
 
 6. クエリの実行が完了したら、に移動します。 **[!UICONTROL データセット]** をクリックして、作成したデータセットを表示します。 Platform UI 内でデータセットを操作する際に一般的なアクションを実行する方法について詳しくは、 [データセット UI ガイド](../../catalog/datasets/user-guide.md).
 

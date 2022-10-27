@@ -2,9 +2,9 @@
 title: アドホックスキーマの属性ベースのアクセス制御サポート
 description: Adobe Experience Platformクエリサービスで生成されたアドホックスキーマのデータフィールドへのアクセスを制限するためのガイドです。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 8%
 
 ---
@@ -56,13 +56,13 @@ Platform UI でアドホックスキーマを表示できるようにするに�
 
 ## スキーマまたはフィールドのラベルを編集
 
-スキーマ全体のラベルを編集するには、鉛筆アイコン (![](../images/data-governance/edit-icon.png)) をスキーマ名の横の ( [!UICONTROL ラベル] タブをクリックします。
+スキーマ全体のラベルを編集するには、鉛筆アイコン (![鉛筆アイコン。](../images/data-governance/edit-icon.png)) をスキーマ名の横の ( [!UICONTROL ラベル] タブをクリックします。
 
 ![鉛筆アイコンが強調表示されたスキーマワークスペースのラベル表示。](../images/data-governance/edit-entire-schema-labels.png)
 
 既存のフィールドにラベルを適用するには、リストから 1 つ以上のフィールドを選択し、 [!UICONTROL ガバナンスラベルを編集] を右側のサイドバーに表示します。
 
-![権限ハンドサイドバーで「ガバナンスラベルを編集」オプションが強調表示された、スキーマワークスペースのラベル表示。](../images/data-governance/edit-governance-labels.png)
+![右側のサイドバーで「ガバナンスラベルを編集」オプションが強調表示された、スキーマワークスペースのラベル表示。](../images/data-governance/edit-governance-labels.png)
 
 ## ラベルを編集ポップオーバー
 

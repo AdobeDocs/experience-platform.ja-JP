@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 45%
 
 ---
@@ -206,7 +206,7 @@ LIMIT 10
 
 ### 標準のテーブル表示
 
-この `\d` コマンドは、テーブルを一覧表示するための標準の PostgreSQL ビューを表示します。 このコマンドの出力の例を次に示します。
+この `\d` コマンドは、標準を表示します。 [!DNL PostgreSQL] 表を一覧表示するためのビュー。 このコマンドの出力の例を次に示します。
 
 ```sql
              List of relations
@@ -310,7 +310,7 @@ LIMIT 50;
 | Windows Phone 7.5 | 11054.0 |
 | Android 4.3 | 9221.0 |
 
-## 重複の除外
+## 重複排除
 
 クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、 [クエリサービス重複排除ガイド](./deduplication.md).
 

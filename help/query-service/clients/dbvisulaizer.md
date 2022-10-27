@@ -5,9 +5,9 @@ title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 「データベース接続」ワークスペースで、 **[!DNL Properties]** タブに続いて、 **[!DNL Driver Properties]** ナビゲーションサイドバーから。
 
-![「プロパティ」タブがハイライト表示された「データベース接続」ワークスペース。](../images/clients/dbvisualizer/driver-properties.png)
+![[ プロパティ ] と [ ドライバのプロパティ ] がハイライト表示された [ データベース接続 ] ワークスペース。](../images/clients/dbvisualizer/driver-properties.png)
 
 DBVisualizer で SSL を使用できるようにするには、以下の表に示すドライバのプロパティを使用することをお勧めします。
 
@@ -57,7 +57,7 @@ DBVisualizer で SSL を使用できるようにするには、以下の表に�
 
 この `PGHOST` および `user` の値はAdobe Experience Platformの資格情報から取得されます。 資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md).
 
-![Experience Platformクエリ資格情報ダッシュボード（認証情報付き）がハイライトされています。](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![「認証情報クエリ」ワークスペースの「Experience Platform」ページ（「認証情報」と「有効期限」がハイライト表示されています）。](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] また、は、期限切れでない資格情報を提供して、サードパーティクライアントとの 1 回限りのセットアップを可能にします。 詳しくは、 [有効期限のない資格情報の生成および使用方法に関する完全な手順](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ DBVisualizer で SSL を使用できるようにするには、以下の表に�
 
 接続認証パネルで、 **[!DNL Require Userid]** および **[!DNL Require Password]** チェックボックスをオンにしてから、 **[!DNL Apply]**.
 
-![「 Userid 」チェックボックスと「 Password 」チェックボックスがハイライトされた「 Connection Authentication 」パネル。](../images/clients/dbvisualizer/connection-authentication.png)
+![の認証パネル [!DNL PostgreSQL] 「 Require Userid 」チェックボックスと「 Password 」チェックボックスがハイライトされているデータベース接続。](../images/clients/dbvisualizer/connection-authentication.png)
 
 ##  を Platform に接続
 
@@ -90,11 +90,11 @@ DBVisualizer で SSL を使用できるようにするには、以下の表に�
 
 関連するすべての資格情報を入力したら、「 」を選択します。 **[!DNL Connect]**.
 
-![[ 接続 ] タブと [ 接続 ] ボタンがハイライト表示された [ データベース接続 ] ワークスペース](../images/clients/dbvisualizer/connect.png)
+![この [!DNL PostgreSQL] 「接続」タブと「接続」ボタンがハイライト表示された「データベース接続」ワークスペース](../images/clients/dbvisualizer/connect.png)
 
 この [!DNL Connect] このセッションの最初の日にダイアログが表示されます。
 
-![データベースの userid およびデータベースのパスワードテキストフィールドを含む [ 接続 ] ダイアログがハイライト表示されます。](../images/clients/dbvisualizer/connect-dialog.png)
+![接続： [!DNL PostgreSQL] 「データベースのユーザー ID 」および「データベースのパスワード」テキスト・フィールドがハイライト表示されたダイアログ・ボックス](../images/clients/dbvisualizer/connect-dialog.png)
 
 ユーザー ID とパスワードを入力し、「 」を選択します。 **[!DNL Connect]**. 接続が成功したことを確認するメッセージがログに表示されます。
 
