@@ -5,9 +5,9 @@ title: UI で列挙フィールドと推奨値を定義する
 description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法を説明します。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 0%
 条件 [新しいフィールドの定義](./overview.md#define) (Adobe Experience Platformユーザーインターフェイス ) で、タイプをに設定します。 [!UICONTROL 文字列]に値を指定しない場合、 [enum](#enum) または [推奨値](#suggested-values) そのフィールドの
 
 ![UI の文字列フィールドに対して「列挙と推奨値」オプションが有効になっていることを示す画像](../../images/ui/fields/enum/enum-options-selected.png)
+
+このドキュメントでは、 [!UICONTROL スキーマ] UI ワークスペース。 UI での列挙の設定方法やその下流の効果など、列挙と推奨される値の概要については、次のビデオを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## 列挙を定義 {#enum}
 
@@ -83,7 +87,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## 列挙と推奨値の変化ルール {#evolution}
 
-列挙フィールドを持つスキーマを使用して、データを Platform に取り込んだ後、スキーマ定義に対してさらに変更を加える場合は、システムに既に存在するデータに従う必要があります。 一般に、既存のフィールドに対して行った変更は、そのフィールドにのみ適用されます **less** 制限的な フィールドは、既に存在するよりも制限を厳しくすることはできません。
+列挙フィールドを持つスキーマを使用して、データを Platform に取り込んだ後、スキーマ定義に対してさらに変更を加える場合は、システムに既に存在するデータに従う必要があります。 一般に、既存のフィールドに加えた変更は、そのフィールドにのみ適用されます **less** 制限的な フィールドは、既に存在するよりも制限を厳しくすることはできません。
 
 列挙と推奨値に関しては、次のルールが取り込み後に適用されます。
 
