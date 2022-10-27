@@ -1,9 +1,9 @@
 ---
 title: （ベータ版）Adobe Commerce Destination Connector
 description: Adobe CommerceとReal-Time CDPの商人が、Real-Time CDP内で作成および管理する顧客セグメントに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、買い物体験をパーソナライズする方法を説明します。
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '689'
 ht-degree: 24%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 24%
 > 
 >この **[!UICONTROL Adobe Commerce]** コネクタはベータ版で、一部のお客様のみご利用いただけます。
 
-この [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ化する 1 つ以上のExperience Platformセグメントを [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのAdobe Experience Platformセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Experience Platformセグメント用にカスタマイズされています。
+この [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ化するReal-Time CDPセグメントを 1 つ以上選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPセグメント用にカスタマイズされています。
 
 <!--## Use cases {#use-cases}
 
@@ -90,7 +90,7 @@ Experience Platformで、以下を作成します。
 
 ## 次の手順 ( [!DNL Adobe Commerce]
 
-これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPセグメントを読み込みます。 詳しくは、 [[!DNL Commerce] ドキュメント](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) を参照してください。
+これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPセグメントを読み込みます。 詳しくは、 [[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
