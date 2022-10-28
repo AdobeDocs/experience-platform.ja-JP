@@ -4,14 +4,20 @@ title: Audiences API エンドポイント
 topic-legacy: developer guide
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用すると、組織のオーディエンスをプログラムで管理できます。
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 8%
+source-wordcount: '1515'
+ht-degree: 9%
 
 ---
 
 # オーディエンスエンドポイント
+
+>[!IMPORTANT]
+>
+>オーディエンスエンドポイントは現在ベータ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
 オーディエンスとは、類似した行動や特性を共有する人々の集まりです。 これらの人々のコレクションは、Adobe Experience Platformを使用して、または外部ソースから生成できます。 以下を使用して、 `/audiences` エンドポイントを使用して、オーディエンスをプログラムで取得、作成、更新および削除できます。
 

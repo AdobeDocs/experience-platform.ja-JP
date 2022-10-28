@@ -4,10 +4,10 @@ title: セグメント化サービス API ガイド
 topic-legacy: guide
 description: Segmentation Service API を使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
+source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 6%
+source-wordcount: '497'
+ht-degree: 7%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 6%
 
 使用可能なすべてのエンドポイントと CRUD 操作を表示するには、 [セグメント化サービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## オーディエンス
+<!-- ## Audiences
 
-オーディエンスとは、類似した行動や特性を共有する人の集まりです。 これらは、Platform を使用して、または外部ソースから生成できます。 以下を使用して、 `/audiences` エンドポイント：すべてのオーディエンスの取得、新しいオーディエンスの作成、特定のオーディエンスの詳細の取得、特定のオーディエンスの更新または特定のオーディエンスの削除をおこないます。
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-このエンドポイントの使用方法の詳細については、 [audiences endpoint guide](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## ジョブの書き出し
 
