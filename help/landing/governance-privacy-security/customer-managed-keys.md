@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformの顧客管理キー
 description: Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,14 @@ CMK は、ヘルスケアシールドおよびAdobeのプライバシーとセ�
 
 プロセスは次のとおりです。
 
-1. [の作成 [!DNL Microsoft Azure] Key Vault](#create-key-vault)を、 [暗号化キーを生成](#generate-a-key) （組織のポリシーに基づいて）最終的にAdobeと共有されます。
-1. API 呼び出しを使用して [CMK アプリの登録](#register-app) を [!DNL Azure] テナント。
-1. [CMK アプリのサービスプリンシパルを割り当てる](#assign-to-role) を、キー vault に適した役割に追加します。
-1. API 呼び出しを使用して [暗号化キー ID をAdobeに送信](#send-to-adobe).
+1. [の設定 [!DNL Microsoft Azure] Key Vault](#create-key-vault) 組織のポリシーに基づいて、 [暗号化キーを生成](#generate-a-key) それは最終的にAdobeと共有される。
+1. API 呼び出しを使用して [CMK アプリのセットアップ](#register-app) を [!DNL Azure] テナント。
+1. API 呼び出しを使用して [暗号化キー ID をAdobeに送信](#send-to-adobe) 機能のイネーブルメントプロセスを開始します。
+1. [設定のステータスの確認](#check-status) :CMK が有効になっているかどうかを確認します。
 
-設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform に転送されるすべてのデータは、 [!DNL Azure] キー設定 ( [[!DNL Cosmos DB]](https://docs.microsoft.com/ja-jp/azure/cosmos-db/) および [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) リソース。 CMK を使用するには、 [!DNL Microsoft Azure] その一部となる機能 [公開プレビュープログラム](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform に転送されるすべてのデータは、 [!DNL Azure] キーの設定。 CMK を使用するには、 [!DNL Microsoft Azure] その一部となる機能 [公開プレビュープログラム](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## の作成 [!DNL Azure] Key Vault {#create-key-vault}
+## の設定 [!DNL Azure] Key Vault {#create-key-vault}
 
 CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、 [!DNL Azure] 新しいエンタープライズアカウントを作成するには、または既存のエンタープライズアカウントを使用して、以下の手順に従って Key Vault を作成します。
 
@@ -65,7 +65,7 @@ CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、
 
 ![キー Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## ネットワークオプションの構成
+### ネットワークオプションの構成
 
 公開アクセスを特定の仮想ネットワークに制限するようにキー Vault が設定されている場合、または公開アクセスを完全に無効にする場合は、Microsoftにファイアウォール例外を許可する必要があります。
 
@@ -73,7 +73,7 @@ CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、
 
 ![キー Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## キーを生成 {#generate-a-key}
+### キーを生成 {#generate-a-key}
 
 キー Vault を作成したら、新しいキーを生成できます。 次に移動： **[!DNL Keys]** 「 」タブで「 」を選択します。 **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、
 
 ![追加されたキー](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## CMK アプリの登録 {#register-app}
+## CMK アプリのセットアップ {#register-app}
 
 キー Vault を設定したら、次の手順は、にリンクする CMK アプリケーションを登録することです [!DNL Azure] テナント。
 
@@ -135,7 +135,7 @@ curl -X GET \
 
 ![許可リクエストを承認](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## CMK アプリをロールに割り当てます。 {#assign-to-role}
+### CMK アプリをロールに割り当てます。 {#assign-to-role}
 
 認証プロセスが完了したら、 [!DNL Azure] Key Vault を選択し、を選択します。 **[!DNL Access control]** をクリックします。 ここからを選択します。 **[!DNL Add]** 続いて **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ curl -X GET \
 >
 >リストにアプリケーションが見つからない場合は、サービスプリンシパルがテナントに受け入れられていません。 ご一緒に作業してください [!DNL Azure] 管理者または担当者に問い合わせて、正しい権限を持っていることを確認します。
 
-## キー URI をAdobeに送信 {#send-to-adobe}
+## Experience Platformの暗号化キー設定を有効にする {#send-to-adobe}
 
 CMK アプリを [!DNL Azure]を使用すると、暗号化キー識別子をAdobeに送信できます。 選択 **[!DNL Keys]** 左のナビゲーションで、送信するキーの名前を入力します。
 
@@ -221,7 +221,7 @@ curl -X POST \
 
 ジョブは、数分以内に処理を完了する必要があります。
 
-### 設定のステータスの確認 {#check-status}
+## 設定のステータスの確認 {#check-status}
 
 設定リクエストのステータスを確認するには、GETリクエストを実行します。
 
