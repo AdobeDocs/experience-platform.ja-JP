@@ -1,26 +1,26 @@
 ---
 title: Adobe Experience Platformの顧客管理キー
 description: Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 2%
+source-wordcount: '1501'
+ht-degree: 1%
 
 ---
 
 # Adobe Experience Platformでの顧客管理キー
 
-Adobe Experience Platformに保存されるすべてのデータは、システムレベルのキーを使用して、保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択し、データのセキュリティをより詳細に制御できます。
+Adobe Experience Platformに保存されたデータは、システムレベルのキーを使用して保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択し、データのセキュリティをより詳細に制御できます。
 
 このドキュメントでは、Platform で顧客管理キー (CMK) 機能を有効にするプロセスについて説明します。
 
 ## プロセスの概要
 
-CMK は、ヘルスケアシールドおよびAdobeのプライバシーとセキュリティのシールドサービスに含まれます。 組織がこれらの製品の 1 つを購入した後、1 回限りのプロセスで機能の設定を開始できます。
+CMK は、ヘルスケアシールドおよびAdobeのプライバシーとセキュリティのシールドサービスに含まれます。 お客様の組織がこれらの製品の 1 つに対するライセンスを購入した後、1 回限りのプロセスで機能を設定できます。
 
 >[!WARNING]
 >
->CMK を設定した後は、システム管理キーに戻すことはできません。 お客様は、内で鍵と鍵の保管庫を安全に管理する責任を負います。 [!DNL Azure] データへのアクセスが失われるのを防ぐため。
+>CMK を設定した後は、システム管理キーに戻すことはできません。 鍵を安全に管理し、内で Key Vault、Key、CMK アプリにアクセスできるようにする責任を負います [!DNL Azure] データへのアクセスが失われるのを防ぐため。
 
 プロセスは次のとおりです。
 
@@ -29,7 +29,7 @@ CMK は、ヘルスケアシールドおよびAdobeのプライバシーとセ�
 1. [CMK アプリのサービスプリンシパルを割り当てる](#assign-to-role) を、キー vault に適した役割に追加します。
 1. API 呼び出しを使用して [暗号化キー ID をAdobeに送信](#send-to-adobe).
 
-設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform に転送されるすべてのデータは、 [!DNL Azure] キー設定 ( [[!DNL Cosmos DB]](https://docs.microsoft.com/ja-jp/azure/cosmos-db/) および [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) リソース。 CMK は [!DNL Azure]&#39;s [公開プレビュープログラム](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) これを可能にする
+設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform に転送されるすべてのデータは、 [!DNL Azure] キー設定 ( [[!DNL Cosmos DB]](https://docs.microsoft.com/ja-jp/azure/cosmos-db/) および [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) リソース。 CMK を使用するには、 [!DNL Microsoft Azure] その一部となる機能 [公開プレビュープログラム](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## の作成 [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ CMK アプリを [!DNL Azure]を使用すると、暗号化キー識別子をAdo
 
 キー Vault URI を取得したら、POSTリクエストを使用して CMK 設定エンドポイントに送信できます。
 
+>[!NOTE]
+>
+>キーの Vault とキー名のみがAdobeで保存され、キーのバージョンは保存されません。
+
 **リクエスト**
 
 ```shell
@@ -265,6 +269,10 @@ curl -X GET \
 
 ## 次の手順
 
-上記の手順を完了すると、組織で CMK が正常に有効になります。 Platform に取り込まれるすべてのデータは、暗号化され、 [!DNL Azure] キー Vault。 データへの Platform アクセスを取り消す場合は、内のキー Vault から、アプリケーションに関連付けられているユーザの役割を削除できます。 [!DNL Azure].
+上記の手順を完了すると、組織で CMK が正常に有効になります。 Platform に取り込まれたデータは、暗号化され、 [!DNL Azure] キー Vault。 データへの Platform アクセスを取り消す場合は、内のキー Vault から、アプリケーションに関連付けられているユーザの役割を削除できます。 [!DNL Azure].
 
-アプリケーションへのアクセスを無効にした後、Platform でデータにアクセスできなくなるまで、2 ～ 24 時間かかります。 同じ時間範囲が、アプリケーションへのアクセスを再度有効にしたときに、データが再び使用可能になるように適用されます。
+アプリケーションへのアクセスを無効にした後、Platform でデータにアクセスできなくなるまで、数分から 24 時間かかる場合があります。 同じ時間遅延が、アプリケーションへのアクセスを再度有効にした場合に、データが再び使用可能になるのに適用されます。
+
+>[!WARNING]
+>
+>Key Vault、Key、または CMK アプリが無効になり、Platform でデータにアクセスできなくなると、そのデータに関連するダウンストリーム操作はできなくなります。 設定を変更する前に、データへの Platform アクセスを取り消すことによるダウンストリームの影響を理解しておく必要があります。
