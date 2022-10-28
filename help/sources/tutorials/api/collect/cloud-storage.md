@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
+source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
 workflow-type: tm+mt
-source-wordcount: '1692'
-ht-degree: 75%
+source-wordcount: '1736'
+ht-degree: 74%
 
 ---
 
@@ -146,6 +146,47 @@ curl -X POST \
       "params": {
           "path": "/acme/summerCampaign/*premium*.csv",
           "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+### データを再帰的に取り込むためのソース接続の設定
+
+ソース接続を作成する際に、 `recursive` 深くネストされたフォルダーからデータを取り込むためのパラメーター。
+
+**API 形式**
+
+```http
+POST /sourceConnections
+```
+
+**リクエスト**
+
+次の例では、 `recursive: true` パラメーター通知 [!DNL Flow Service] をクリックして、取り込みプロセス中にサブフォルダーをすべて再帰的に読み込みます。
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
