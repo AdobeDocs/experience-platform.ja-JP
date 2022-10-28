@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 021a0833941f250475786bb8629542c50229b238
+source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 52%
+source-wordcount: '988'
+ht-degree: 49%
 
 ---
 
@@ -54,6 +54,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | LINE は、人々、サービス、情報を結び付け、チャットアプリからエンターテインメント、ソーシャル、日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。 |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、企業のリソース計画 (ERP) と顧客関係管理 (CRM) を、生産性の高いアプリケーションと AI ツールと組み合わせ、エンドツーエンドのスムーズで制御可能な運用を実現し、潜在的な成長力を向上させ、コストを削減するクラウドベースのビジネスアプリケーションプラットフォームです。 |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | この [!DNL (Beta) Adobe Commerce] 宛先コネクタを使用すると、アクティブ化するReal-Time CDPセグメントを 1 つ以上選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPセグメント用にカスタマイズされています。 |
 
 {style=&quot;table-layout:auto&quot;}
 
