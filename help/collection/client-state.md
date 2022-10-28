@@ -4,10 +4,10 @@ description: Adobe Experience Platform Edge Network によるクライアント�
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: クライアント;状態;管理;edge;network;ゲートウェイ;API
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 100%
+source-wordcount: '850'
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ Edge Network は状態管理プロトコルを使用することで、ストレ�
 | --- | --- | --- |
 | `key` | 文字列 | **必須**。エントリ名。 |
 | `value` | 文字列 | *オプション*。エントリ値。 |
-| `maxAge` | 整数 | *オプション* エントリの有効期間（TTL）（秒単位）。ない場合、エントリを現在のセッションに対してのみ保存する必要があります。 |
+| `maxAge` | 整数 | *オプション* エントリの有効期限が切れるまでの時間（秒）です。 ない場合、エントリを現在のセッションに対してのみ保存する必要があります。 |
 | `attrs` | `Map<String, String>` | *オプション*。エントリ属性のオプションのリスト。セキュアリファラー HTTP ヘッダーを使用するセキュリティで保護されたすべての接続の場合、`SameSite` 属性を `None` に設定します。 |
 
 

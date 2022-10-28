@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のあるトピック;データ管
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
-ht-degree: 98%
+source-wordcount: '2134'
+ht-degree: 91%
 
 ---
 
@@ -88,12 +88,12 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 ### どのデータを保持するか？
 
-データ取り込みフィルターと有効期限ルール（Time-To-Live「TTL」とも呼ばれる）の両方を適用して、ユースケースに適さなくなったデータを削除できます。通常、行動データ（Analytics データなど）は、レコードデータ（CRM データなど）よりも大幅に多くのストレージを消費します。例えば、多くの Platform ユーザーは、レコードデータに比べて、行動データだけでプロファイルの最大 90％を占めています。したがって、行動データを管理することは、ライセンス使用権限の範囲内でコンプライアンスを確保するために重要です。
+データ取り込みフィルターと有効期限ルールの両方を適用して、使用事例で古くなったデータを削除できます。 通常、行動データ（Analytics データなど）は、レコードデータ（CRM データなど）よりも大幅に多くのストレージを消費します。例えば、多くの Platform ユーザーは、レコードデータに比べて、行動データだけでプロファイルの最大 90％を占めています。したがって、行動データを管理することは、ライセンス使用権限の範囲内でコンプライアンスを確保するために重要です。
 
 ライセンス使用権限の範囲内で使用するために活用できるツールが多数あります。
 
 * [取り込みフィルター](#ingestion-filters)
-* [プロファイルサービス TTL](#profile-service)
+* [プロファイルストア](#profile-service)
 
 ### 取り込みフィルター {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 {style=&quot;table-layout:auto&quot;}
 
-### プロファイルサービス {#profile-service}
-
-プロファイルサービス TTL（time-to-live）機能を使用すると、プロファイルストアのデータに TTL を適用できます。そうすることで、システムは、時間と共に価値が減少したデータを自動的に削除できます。
+### プロファイルストア {#profile-service}
 
 プロファイルストアは、次のコンポーネントで構成されます。
 
@@ -124,53 +122,20 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### プロファイルストア構成レポート
 
-プロファイルストアの構成を把握するのに役立つ、様々なレポートが用意されています。これらのレポートは、ライセンス使用状況をより最適化するために、プロファイル TTL をどこでどのように設定するかについて、情報に基づいた決定を支援します。
+プロファイルストアの構成を把握するのに役立つ、様々なレポートが用意されています。これらのレポートは、Experience Event の有効期限を設定する方法と場所に関する十分な情報に基づいた決定をおこない、ライセンスの使用状況を最適化するのに役立ちます。
 
-* **Dataset Overlap Report API**：アドレス可能なオーディエンスに最も貢献するデータセットを公開します。このレポートを使用して、どの [!DNL ExperienceEvent] データセットに TTL を設定するかを特定できます。詳しくは、[データセット重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md)に関するチュートリアルを参照してください。
+* **Dataset Overlap Report API**：アドレス可能なオーディエンスに最も貢献するデータセットを公開します。このレポートを使用して、どのレポートを特定できるかを確認できます [!DNL ExperienceEvent] の有効期限を設定するデータセット。 詳しくは、[データセット重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md)に関するチュートリアルを参照してください。
 * **Identity Overlap Report API**：アドレス可能なオーディエンスに最も貢献する ID 名前空間を公開します。詳しくは、[ID 重複レポートの生成](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report)に関するチュートリアルを参照してください。
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] データセット TTL {#dataset-ttl}
+#### エクスペリエンスイベントの有効期限 {#event-expirations}
 
-プロファイル対応データセットに TTL を適用して、ユースケースにとって価値のなくなった行動データをプロファイルストアから削除できます。TTL がプロファイル対応データセットに適用されると、Platform は、2 つのプロセスを経て、不要になったデータを自動的に削除します。
-
-* 今後、すべての新しいデータには、取り込み時に TTL の有効期限の値が適用されます。
-* すべての既存のデータには、1 回限りのバックフィルシステムジョブの一部として、TTL の有効期限の値が適用されます。
-
-各イベントの TTL 値は、イベントのタイムスタンプから予測できます。TTL の有効期限の値より古いすべてのイベントは、システムジョブの実行中に直ちに削除されます。その他のすべてのイベントは、イベントのタイムスタンプで指定された TTL の有効期限の値に近づくにつれて、削除されます。
-
-[!DNL ExperienceEvent] データセット TTL を把握するには、次の例を参照してください。
-
-5月15日に TTL 値 30 日を適用した場合：
-
-* すべての新しいイベントには、受信した時点で 30 日の TTL が適用されます。
-* 4月15日より古いタイムスタンプを持つすべての既存のイベントは、システムジョブによって直ちに削除されます。 
-* 4月15日以降のタイムスタンプを持つイベントは、そのイベントのタイムスタンプ + TTL 日で有効期限が切れます。したがって、4月18日のタイムスタンプを持つイベントは、5月15日の 3 日後に削除されます。
-
->[!IMPORTANT]
->
->TTL が適用されると、選択された TTL の日数より古いデータは&#x200B;**永続的に**&#x200B;削除され、復元できなくなります。
-
-TTL を適用する前に、TTL の境界内のセグメントのルックバックウィンドウを確保する必要があります。そうしないと、TTL 適用後にセグメント結果が正しくなくなる可能性があります。例えば、Adobe Analytics データに 30 日の TTL を適用し、店舗内トランザクションデータに 365 日の TTL を適用した場合、次のセグメントでは、正しくない結果が作成されます。
-
-* 過去 60 日以内に製品ページを表示し、その後、店舗で購入。
-* 買い物かごに追加した後、過去 60 日以内に購入がない。
-
-逆に、次の場合でも正しい結果が作成されます。
-
-* 過去 14 日以内に製品ページを表示し、その後、店舗で購入。
-* 過去 30 日以内に特定のヘルプページをオンラインで表示した。
-* 過去 120 日以内にオフラインで製品を購入した。
-* 買い物かごに追加した後、過去 14 日以内に購入。
-
->[!TIP]
->
->便宜上、すべてのデータセットで TTL を同じにしておけば、セグメント化ロジックでデータセット間の TTL について心配する必要はなくなります。
-
-プロファイルデータに対する TTL の適用について詳しくは、[プロファイルサービス TTL](../../profile/apply-ttl.md) に関するドキュメントを参照してください。
+この機能を使用すると、ユースケースにとって有用ではなくなった行動データを、プロファイル対応データセットから自動的に削除できます。 概要については、 [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) データセットに対して有効化した後のこのプロセスの動作の詳細
 
 ## ライセンス使用状況のコンプライアンスに関するベストプラクティスのまとめ {#best-practices}
 
@@ -179,7 +144,7 @@ TTL を適用する前に、TTL の境界内のセグメントのルックバッ
 * [ライセンス使用状況ダッシュボード](../../dashboards/guides/license-usage.md)を使用して、顧客の使用状況のトレンドを追跡および監視する。これにより、発生する可能性のある超過分に事前に対処できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要なイベントを特定して、[取り込みフィルター](#ingestion-filters)を設定する。これにより、ユースケースに必要な重要なイベントのみを送信できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要な[プロファイルのデータセットのみを有効](#ingestion-filters)にしていることを確認する。
-* Web データのような高頻度のデータ用に、[[!DNL ExperienceEvent]  データセット TTL](#dataset-ttl) を設定する。
+* の設定 [エクスペリエンスイベントの有効期限](#event-expirations) を使用します。
 * [プロファイル構成レポート](#profile-store-composition-reports)を定期的に確認し、プロファイルストアの構成を把握する。これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
 
 ## 機能の概要と可用性 {#feature-summary}
@@ -191,7 +156,7 @@ TTL を適用する前に、TTL の境界内のセグメントのルックバッ
 | 機能 | 説明 |
 | --- | --- |
 | [プロファイル用のデータセットを有効／無効にする](../../catalog/datasets/user-guide.md) | プロファイルサービスへのデータセット取り込みを有効または無効にします |
-| [!DNL ExperienceEvent] データセット TTL | プロファイルストアの行動データセットに TTL の有効期限を適用します。アドビサポート担当者にお問い合わせください。 |
+| [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) | プロファイル対応のデータセットに取り込まれるすべてのイベントに有効期限を適用します。 この機能を有効にするには、Adobeサポート担当者にお問い合わせください。 |
 | [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
 | [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取り込みから除外します |
 | [Alloy SDK データフィルター](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy フィルターを適用して、不要なデータを取り込みから除外します |

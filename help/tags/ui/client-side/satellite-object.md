@@ -2,10 +2,10 @@
 title: サテライトオブジェクトのリファレンス
 description: クライアントサイドの _satellite オブジェクトと、それを使用してタグで実行できる様々な関数について説明します。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 95%
+ht-degree: 91%
 
 ---
 
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->古い [`setCookie`](#setCookie) メソッドを使う cookie の設定方法では、この関数呼び出しの 3 番目（オプション）の引数は、cookie の有効期間（TTL）を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを 3 番目の引数として受け取ります。 新しいメソッドを使用して cookie の TTL を設定するには、attributes オブジェクトに `expires` プロパティを指定し、目的の値に設定する必要があります。以下に例を示します。
+>古い [`setCookie`](#setCookie) cookie を設定する方法では、この関数呼び出しの 3 番目（オプション）の引数は、cookie の有効期限を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを 3 番目の引数として受け取ります。 新しい方法で Cookie の有効期限を設定するには、 `expires` プロパティを設定し、必要な値に設定します。 以下に例を示します。
 
 **例**
 

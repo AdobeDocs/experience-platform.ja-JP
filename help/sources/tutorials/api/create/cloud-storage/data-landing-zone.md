@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `containerName` | 取得したランディングゾーンの名前。 |
-| `containerTTL` | ランディングゾーン内のデータに適用される有効期間設定。 特定のランディングゾーン内のすべては、7 日後に削除されます。 |
+| `containerTTL` | ランディングゾーン内のデータに適用される有効期限（日数）。 特定のランディングゾーン内のすべては、7 日後に削除されます。 |
 
 ## 取得 [!DNL Data Landing Zone] 資格情報
 
