@@ -4,10 +4,10 @@ title: API を使用したプロファイル更新のデータセットの有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 28%
+source-wordcount: '1050'
+ht-degree: 27%
 
 ---
 
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 ### プロファイルのデータセットを有効にしてアップサート {#enable-the-dataset}
 
 既存のデータセットは、1 回のPATCHリクエストで、プロファイルと属性の更新に対して有効にできます。
+
+>[!IMPORTANT]
+>
+>プロファイルのデータセットを有効にする場合、データセットが関連付けられているスキーマがであることを確認してください **また** プロファイルが有効です。 スキーマがプロファイル対応でない場合、データセットは **not** は、Platform UI 内でプロファイル対応として表示されます。
 
 **API 形式**
 
