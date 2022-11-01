@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: e345d43104752fe3d51ccd0d611701bd2beebe6a
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 71%
+source-wordcount: '985'
+ht-degree: 69%
 
 ---
 
@@ -35,12 +35,14 @@ ht-degree: 71%
       * [プロファイルリクエスト宛先に対するオーディエンスデータの有効化](./ui/activate-profile-request-destinations.md)
       * [同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](./ui/configure-personalization-destinations.md)
       * [（ベータ版）Experience PlatformUI を使用して、オンデマンドでバッチ保存先にファイルを書き出す](./ui/export-file-now.md)
+      * [（ベータ版）Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
    * [アクティベーションデータフローを編集](./ui/edit-activation.md)
    * [宛先の削除](./ui/delete-destinations.md)
    * [データフローのモニタリング](./ui/monitor-dataflows.md)
+   * [（ベータ版）ファイルベースの宛先のファイル形式設定オプションを設定する](./ui/batch-destinations-file-formatting-options.md)
    * [コンテキスト内宛先アラートを購読](ui/alerts.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
@@ -102,7 +104,10 @@ ht-degree: 71%
       * [Amazon Kinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 接続](./catalog/cloud-storage/azure-blob.md)
+      * [（ベータ版）Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure Event Hubs 接続](./catalog/cloud-storage/azure-event-hubs.md)
+      * [（ベータ版）データランディングゾーン](./catalog/cloud-storage/data-landing-zone.md)
+      * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
       * [クラウドストレ許可リストージの宛先の IP アドレス](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理 (CRM) の宛先 {#crm}
@@ -136,7 +141,7 @@ ht-degree: 71%
       * [回線接続](./catalog/mobile-engagement/line.md)
    * パーソナライゼーションの宛先 {#personalization}
       * [パーソナライゼーションの宛先の概要](./catalog/personalization/overview.md)
-      * [（ベータ版）Adobe Commerce接続](./catalog/personalization/adobe-commerce.md)
+      * [（ベータ版）Adobe Commerce 接続](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 接続](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 拡張機能](./catalog/personalization/adobe-target-v2.md)

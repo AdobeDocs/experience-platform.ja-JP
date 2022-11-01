@@ -3,9 +3,9 @@ keywords: クラウドストレージの宛先；クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azure Event Hubs、または SFTP クラウドのストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、オーディエンスとそのプロファイル属性を、 [!DNL Amazon S3], [!DNL Azure Blob] と SFTP に含まれます。 の場合 [!DNL Amazon Kinesis] および [!DNL Azure Event Hubs] の宛先、データはでExperience Platformからストリーミングされる [!DNL JSON] 形式
+Adobe Experience Platformは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、オーディエンスとそのプロファイル属性を、 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]、および SFTP で使用できます。 の場合 [!DNL Amazon Kinesis] および [!DNL Azure Event Hubs] の宛先、データはでExperience Platformからストリーミングされる [!DNL JSON] 形式
 
 ![Adobeクラウドストレージの宛先](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platformは、次のクラウドストレージの宛先をサ�
 * [Amazon Kinesis接続](amazon-kinesis.md)
 * [Amazon S3 接続](amazon-s3.md)
 * [Azure Blob 接続](azure-blob.md)
+* [（ベータ版）Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure Event Hubs 接続](azure-event-hubs.md)
+* [（ベータ版）データランディングゾーン](data-landing-zone.md)
+* [（ベータ版）Google Cloud Storage](google-cloud-storage.md)
 * [SFTP 接続](sftp.md)
 
 ## 新しいクラウドストレージの宛先に接続 {#connect-destination}
