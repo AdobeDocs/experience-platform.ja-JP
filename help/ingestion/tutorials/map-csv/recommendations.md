@@ -1,9 +1,9 @@
 ---
 title: AI で生成されたRecommendations（ベータ版）を使用して CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 4%
 
 ---
@@ -35,13 +35,13 @@ Experience PlatformUI で、 **[!UICONTROL ソース]** をクリックします
 
 この **[!UICONTROL CSV XDM スキーマのマッピング]** ワークフローが表示され、 **[!UICONTROL データフローの詳細]** 手順
 
-選択 **[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**&#x200B;を呼び出し、新しいコントロールを表示します。 マッピングする CSV データに適したクラスを選択します ([!UICONTROL プロファイル] または [!UICONTROL ExperienceEvent]) をクリックし、ドロップダウンメニューを使用して、ビジネスに関連する業界を選択します。 組織が [B2B(B2B)](../../../xdm/tutorials/relationship-b2b.md) モデルを選択するには、 **[!UICONTROL B2B データ]** チェックボックス。
+選択 **[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**&#x200B;を呼び出し、新しいコントロールを表示します。 マッピングする CSV データに適したクラスを選択します ([!UICONTROL プロファイル] または [!UICONTROL ExperienceEvent]) をクリックします。 必要に応じて、ドロップダウンメニューを使用して、ビジネスに関連する業界を選択できます。提供されたカテゴリが適用されない場合は、空白のままにすることもできます。 組織が [B2B(B2B)](../../../xdm/tutorials/relationship-b2b.md) モデルを選択するには、 **[!UICONTROL B2B データ]** チェックボックス。
 
 ![この [!UICONTROL データフローの詳細] 「 ML レコメンデーション」オプションを選択して手順を進めます。 [!UICONTROL プロファイル] がクラスに選択され、 [!UICONTROL 通信業] 業界に選ばれる](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 ここから、CSV データから作成されるスキーマの名前と、そのスキーマで取り込まれるデータを含む出力データセットの名前を指定します。
 
-オプションで、データフローに次の追加機能を設定できます。
+オプションで、先に進む前に、次の追加機能をデータフローに設定できます。
 
 | 入力名 | 説明 |
 | --- | --- |
@@ -50,6 +50,8 @@ Experience PlatformUI で、 **[!UICONTROL ソース]** をクリックします
 | [!UICONTROL 部分取り込み] | 有効にすると、新しいバッチデータの有効なレコードは、指定したエラーしきい値内に取り込まれます。 このしきい値を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 |
 | [!UICONTROL データフローの詳細] | CSV データを Platform に取り込むデータフローの名前と説明（オプション）を入力します。 このワークフローを開始すると、データフローにデフォルト名が自動的に割り当てられます。 名前の変更はオプションです。 |
 | [!UICONTROL アラート] | リストから選択 [製品内アラート](../../../observability/alerts/overview.md) データフローが開始された後に、データフローのステータスに関して受け取る必要がある情報です。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 データフローの設定が完了したら、「 **[!UICONTROL 次へ]**.
 
@@ -81,7 +83,7 @@ ML モデルを実行して、データフロー設定とアップロードし�
 
 ### フィールドグループを編集 {#edit-field-groups}
 
-CSV フィールドは、ML モデルを使用して既存のフィールドグループに自動的にマッピングされます。 特定の CSV フィールドのフィールドグループを変更する場合は、 **[!UICONTROL 編集]** スキーマツリーの横に表示されます。
+CSV フィールドは、ML モデルを使用して、既存の XDM フィールドグループに自動的にマッピングされます。 特定の CSV フィールドのフィールドグループを変更する場合は、 **[!UICONTROL 編集]** スキーマツリーの横に表示されます。
 
 ![この [!UICONTROL 編集] スキーマツリーの横で選択されているボタン](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
