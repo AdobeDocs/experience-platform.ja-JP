@@ -1,10 +1,10 @@
 ---
 title: （ベータ版）Adobe Commerce 宛先コネクタ
 description: Adobe Commerce と Real-Time CDP を使用して、Real-Time CDP で作成および管理される顧客セグメントに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、ショッピングエクスペリエンスをパーソナライズする方法を説明します。
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '691'
+ht-degree: 81%
 
 ---
 
@@ -92,7 +92,7 @@ Experience Platform で、以下を作成します。
 
 これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPセグメントを読み込みます。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html)を参照してください。
 
-## データの書き出しを検証する {#exported-data}
+## コマースでのオーディエンスのアクティベーションの検証 {#exported-data}
 
 [!DNL Adobe Commerce] アカウントに対して Real-Time CDP セグメントをアクティブ化すると、買い物かごの価格ルールを作成する際に [!DNL Admin] でそれらのセグメントが利用できるようになります。
 
