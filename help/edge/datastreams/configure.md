@@ -2,15 +2,15 @@
 title: データストリームの設定
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
 source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1658'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # データストリームの設定
 
-このドキュメントでは、 [datastream](./overview.md) を使用します。
+このドキュメントでは、UI で[データストリーム](./overview.md)を設定する手順を説明します。
 
 ## [!UICONTROL データストリーム]ワークスペースへのアクセス
 
@@ -18,11 +18,11 @@ ht-degree: 95%
 
 ![データ収集 UI の「データストリーム」タブ](../assets/datastreams/configure/datastreams-tab.png)
 
-「[!UICONTROL データストリーム]」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択 [詳細の表示とサービスの設定](#view-details).
+「[!UICONTROL データストリーム]」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
 
 特定のデータストリームの「その他」アイコン（**...**）を選択して、その他のオプションを表示します。データストリームの[基本設定](#configure)を更新するには&#x200B;**[!UICONTROL 編集]**&#x200B;を選択し、データストリームを削除するには&#x200B;**[!UICONTROL 削除]**&#x200B;を選択します。
 
-![既存のデータストリームを編集または削除するオプション](../assets/datastreams/configure/edit-datastream.png)
+![既存のデータストリームを編集または削除するためのオプション](../assets/datastreams/configure/edit-datastream.png)
 
 ## 新しいデータストリームの作成 {#create}
 
@@ -45,7 +45,7 @@ Experience Platform で使用するためにこのデータストリームを設
 | [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて GPS ルックアップが発生するかどうかを決定します。デフォルト設定&#x200B;**[!UICONTROL なし]**&#x200B;は、すべての GPS ルックアップを無効にするのに対して、**[!UICONTROL 市区町村]**&#x200B;設定は、GPS 座標を小数第 2 位で提供します。 |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
-| [!UICONTROL アクセスタイプ] | Edge ネットワークがデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、認証されていないリクエストが Edge ネットワークで処理されないようにする場合は、このオプションを選択します。</li></ul> |
+| [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
 
 ここから、Experience Platform のデータストリームを設定している場合は、[データ収集のためのデータ準備](./data-prep.md)に関するチュートリアルに従って、Platform イベントスキーマにデータをマッピングしてから、このガイドに戻ってください。それ以外の場合は、「**[!UICONTROL 保存]**」を選択して、次の節を続行します。
 
