@@ -2,18 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アラート；
 title: アラート購読 API エンドポイント
 description: このガイドは、クエリサービス API を使用してアラート購読エンドポイントに対して実行できる様々な API 呼び出しに対する HTTP リクエストの例と応答を提供します。
-hide: true
-hidefromtoc: true
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
 source-wordcount: '2289'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 # アラート購読 API エンドポイント
 
-Adobe Experience Platformクエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを購読できます。 アラートは、E メール、Platform UI 内、またはその両方で受け取ることができます。 通知コンテンツは、プラットフォーム内アラートと E メールアラートで同じです。 現在、クエリアラートは、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。通知コンテンツは、プラットフォーム内アラートと E メールアラートで同じです。 現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。
 
 >[!IMPORTANT]
 >

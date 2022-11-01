@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 9 月
 description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2934'
 ht-degree: 98%
 
 ---
@@ -220,7 +220,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+詳しくは、[クエリアラートのドキュメント](../../query-service/api/alert-subscriptions.md)を参照してください。
 
 ## ソース {#sources}
 
