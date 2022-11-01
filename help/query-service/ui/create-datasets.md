@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platformクエリサービスを使用すると、UI からデータセットを作成できます。 データセットを作成したら、データレイク内の他のデータセットと同様にアクセスし、様々な使用例に使用できます。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
+source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 11%
@@ -19,13 +19,11 @@ ht-degree: 11%
 
 ## Adobe Experience Platformユーザーインターフェイスからデータセットを生成する
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 Adobe Experience Platformユーザーインターフェイス (UI) からデータセットを作成するには、次の手順に従います。
 
 1. 接続されたクライアントを使用してクエリを作成し、出力を検証します。 を使用してクエリを記述する方法を学ぶには [!DNL Query Editor]、 [!DNL Query Editor] UI ガイド [クエリの記述時](./user-guide.md#writing-queries).
 
-2. Platform UI で、に移動します。 **[!UICONTROL クエリ]** 続いて **[!UICONTROL 参照]** 」タブをクリックし、作成したクエリを選択します。 Platform UI 内で組織用に作成および保存されたクエリを表示する方法の詳細については、 [[!DNL Query Service] 概要](./overview.md#browse).
+2. Platform UI で、に移動します。 **[!UICONTROL クエリ]** 続いて **[!UICONTROL テンプレート]** 」タブをクリックし、作成したクエリを選択します。 Platform UI 内で組織用に作成および保存されたクエリを表示する方法の詳細については、 [[!DNL Query Service] 概要](./overview.md#browse).
 
 3. クエリの詳細パネルで、「 」を選択します。 **[!UICONTROL データセットを出力]**.
 

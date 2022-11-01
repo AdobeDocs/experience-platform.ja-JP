@@ -5,7 +5,7 @@ title: クエリサービス UI ガイド
 topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 28%
@@ -18,7 +18,7 @@ ht-degree: 28%
 
 ## [!DNL Query Editor]
 
-この [!DNL Query Editor] を使用すると、外部クライアントを使用せずにクエリを書き込んだり、実行したりできます。 選択 **[!UICONTROL クエリを作成]** 開く [!DNL Query Editor] をクリックし、新しいクエリを作成します。 また、 [!DNL Query Editor] クエリを **[!UICONTROL ログ]** または **[!UICONTROL 参照]** タブ 以前に実行または保存したクエリを選択すると、 [!DNL Query Editor] 選択したクエリの SQL を表示します。
+この [!DNL Query Editor] を使用すると、外部クライアントを使用せずにクエリを書き込んだり、実行したりできます。 選択 **[!UICONTROL クエリを作成]** 開く [!DNL Query Editor] をクリックし、新しいクエリを作成します。 また、 [!DNL Query Editor] クエリを **[!UICONTROL ログ]** または **[!UICONTROL テンプレート]** タブ 以前に実行または保存したクエリを選択すると、 [!DNL Query Editor] 選択したクエリの SQL を表示します。
 
 ![「クエリの作成」がハイライト表示された「クエリ」ダッシュボード。](../images/ui/overview/overview.png)
 
