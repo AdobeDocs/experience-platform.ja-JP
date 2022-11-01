@@ -2,10 +2,10 @@
 title: データセット有効期限の管理
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
-workflow-type: ht
-source-wordcount: '530'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '535'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)では、データセットの有効期限をスケジュールできます。データセットが有効期限に達すると、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
 

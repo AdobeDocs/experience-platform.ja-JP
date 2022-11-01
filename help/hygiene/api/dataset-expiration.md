@@ -2,10 +2,10 @@
 title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 100%
+source-wordcount: '1456'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
 Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Experience Platform のデータセットの有効期限プロトコルをスケジュール設定できます。
 

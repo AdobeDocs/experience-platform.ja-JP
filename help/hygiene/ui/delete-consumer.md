@@ -2,10 +2,10 @@
 title: 消費者レコードの削除
 description: Adobe Experience Platform で消費者レコードを削除する方法を説明します。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '1133'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '1138'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)を使用すると、ID サービスおよびリアルタイム顧客プロファイルに参加している消費者レコードを削除できます。
 

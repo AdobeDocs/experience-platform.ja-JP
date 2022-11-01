@@ -1,10 +1,10 @@
 ---
 title: Quota API エンドポイント
 description: Data Hygiene API の /quota エンドポイントを使用すると、各ジョブタイプの組織の月間割り当て量制限に対するデータハイジーンの使用状況を監視できます。
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
-workflow-type: ht
-source-wordcount: '346'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 93%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Healthcare Shield を購入した組織のみが利用できます。
+>Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
 Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対するデータハイジーンの使用状況を監視できます。
 

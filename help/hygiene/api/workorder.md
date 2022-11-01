@@ -2,10 +2,10 @@
 title: 作業指示 API エンドポイント
 description: Data Hygiene API の /workorder エンドポイントを使用すると、消費者 ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '986'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '991'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は、現在、Adobe Healthcare Shield を購入した組織でのみ利用できます。
+>Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
 Data Hygiene API の `/workorder` エンドポイントを使用すると、Adobe Experience Platform の消費者データ削除リクエストをプログラムで管理できます。
 
@@ -204,7 +204,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | 参照している消費者による削除の `workorderId`。 |
+| `{WORK_ORDER_ID}` | 参照している消費者データ削除リクエストの `workorderId`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -272,12 +272,12 @@ curl -X GET \
 | `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
 | `orgId` | 組織 ID。 |
 | `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
-| `action` | 作業指示によって実行されるアクション。消費者による削除の場合、値は `identity-delete` です。 |
+| `action` | 作業指示によって実行されるアクション。消費者データ削除の場合、値は `identity-delete` です。 |
 | `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
 | `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
 | `status` | 削除指示の現在のステータス。 |
 | `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。リクエストがすべてのデータセットに対しての場合、値は `ALL` に設定されます。 |
-| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスからのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスによって投稿された際のタイムスタンプ。</li></ul> |
+| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
+| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスでのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスによって投稿された際のタイムスタンプ。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
