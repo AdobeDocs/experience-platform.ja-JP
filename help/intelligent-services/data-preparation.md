@@ -5,7 +5,7 @@ title: インテリジェントサービスで使用するデータの準備
 topic-legacy: Intelligent Services
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを検出するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するために Experience Data Model(XDM) スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -356,7 +356,7 @@ CEE フィールドグループをスキーマに追加した後、必要に応�
 
 #### データのマッピングと取り込み {#ingest}
 
-CEE スキーマとデータセットを作成したら、データテーブルのスキーマへのマッピングを開始し、そのデータを Platform に取り込むことができます。 に関するチュートリアルを参照してください。 [CSV ファイルの XDM スキーマへのマッピング](../ingestion/tutorials/map-a-csv-file.md) を参照してください。 以下を使用できます [サンプル JSON ファイル](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、独自のデータを使用する前に取り込みプロセスをテストします。
+CEE スキーマとデータセットを作成したら、データテーブルのスキーマへのマッピングを開始し、そのデータを Platform に取り込むことができます。 に関するチュートリアルを参照してください。 [CSV ファイルの XDM スキーマへのマッピング](../ingestion/tutorials/map-csv/overview.md) を参照してください。 以下を使用できます [サンプル JSON ファイル](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、独自のデータを使用する前に取り込みプロセスをテストします。
 
 データセットを入力した後は、同じデータセットを使用して追加のデータファイルを取り込むことができます。
 

@@ -5,7 +5,7 @@ title: ワークフロー UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platformユーザーインターフェイス内で共通の操作を実行するための複数手順のワークフローに従う方法を説明します。
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## [!UICONTROL データ取り込み]
 
-この **[!UICONTROL CSV を XDM スキーマにマッピング]** ワークフローを使用して、CSV ファイルをアップロードし、エクスペリエンスデータモデル (XDM) スキーマに変換できます。 このワークフローの詳細については、 [CSV ファイルの XDM スキーマへのマッピング](../ingestion/tutorials/map-a-csv-file.md).
+この **[!UICONTROL CSV を XDM スキーマにマッピング]** ワークフローを使用して、CSV ファイルをアップロードし、エクスペリエンスデータモデル (XDM) スキーマに変換できます。 このワークフローの詳細については、 [CSV ファイルの XDM スキーマへのマッピング](../ingestion/tutorials/map-csv/overview.md).
 
 この **[!UICONTROL スキーマからデータセットを作成]** ワークフローを使用すると、既存の XDM スキーマから新しいデータセットを作成できます。 このワークフローの詳細については、 [データセットユーザーガイド](../catalog/datasets/user-guide.md#schema).
 

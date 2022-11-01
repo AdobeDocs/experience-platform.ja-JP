@@ -5,7 +5,7 @@ title: Adobe Experience Platformでの同意処理
 topic-legacy: getting started
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Web サイト上の同意変更イベントをリッスンするように CMP �
 
 バッチ取得を使用して、XDM 準拠の同意データを CSV ファイルから取り込むことができます。 これは、以前に収集された同意データのバックログがまだ顧客プロファイルに統合されていない場合に役立ちます。
 
-次のチュートリアルに従います。 [CSV ファイルの XDM へのマッピング](../../../../ingestion/tutorials/map-a-csv-file.md) データフィールドを XDM に変換し、Platform に取り込む方法を説明します。 選択時に、 [!UICONTROL 宛先] マッピングの場合は、必ず **[!UICONTROL 既存のデータセットを使用]** オプションを選択し、 [!DNL Profile]先ほど作成した —enabled 同意データセット。
+次のチュートリアルに従います。 [CSV ファイルの XDM へのマッピング](../../../../ingestion/tutorials/map-csv/overview.md) データフィールドを XDM に変換し、Platform に取り込む方法を説明します。 選択時に、 [!UICONTROL 宛先] マッピングの場合は、必ず **[!UICONTROL 既存のデータセットを使用]** オプションを選択し、 [!DNL Profile]先ほど作成した —enabled 同意データセット。
 
 ## 実装をテストする {#test-implementation}
 

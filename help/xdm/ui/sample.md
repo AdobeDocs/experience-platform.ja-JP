@@ -4,7 +4,7 @@ title: UI での XDM スキーマのサンプルデータの生成
 description: Adobe Experience Platformユーザーインターフェイスで、既存のスキーマに基づいてサンプルの JSON データを生成する方法を説明します。
 topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -27,6 +27,6 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 
 このガイドでは、Platform UI で XDM スキーマからサンプル JSON ファイルを生成する方法について説明しました。 スキーマレジストリ API を使用してサンプルデータを生成する方法については、 [サンプルデータエンドポイントガイド](../api/sample-data.md).
 
-データの取り込みを開始する準備が整ったら、 [CSV ファイルの XDM へのマッピング](../../ingestion/tutorials/map-a-csv-file.md) フラットデータファイル（CSV など）を XDM スキーマにマッピングし、Platform に取り込む方法を説明します。 または、 [ソース接続](../../sources/home.md) を使用して、外部ソースからデータを取り込み、XDM にマッピングします。
+データの取り込みを開始する準備が整ったら、 [CSV ファイルの XDM へのマッピング](../../ingestion/tutorials/map-csv/overview.md) フラットデータファイル（CSV など）を XDM スキーマにマッピングし、Platform に取り込む方法を説明します。 または、 [ソース接続](../../sources/home.md) を使用して、外部ソースからデータを取り込み、XDM にマッピングします。
 
 の機能の詳細については、 [!UICONTROL スキーマ] UI のワークスペース： [[!UICONTROL スキーマ] workspace の概要](./overview.md).

@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;CSV のマッピ�
 title: データ準備 UI ガイド
 description: このドキュメントでは、Platform UI でデータ準備関数を使用して CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 90%
@@ -79,7 +79,7 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### マッピングインターフェイスについて
+### マッピングインターフェイスについて {#mapping-interface}
 
 マッピングインターフェイスには、取り込みワークフローのコンテキスト内のマッピングフィールドの状態に関する情報を提供するダッシュボードが含まれます。ダッシュボードには、マッピングフィールドに関する次の詳細が表示されます。
 

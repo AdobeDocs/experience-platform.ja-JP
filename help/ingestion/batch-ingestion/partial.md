@@ -5,7 +5,7 @@ title: 部分バッチ取り込みの概要
 topic-legacy: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 44%
@@ -110,7 +110,7 @@ ht-degree: 44%
 
 ### 「[!UICONTROL CSV を XDM スキーマにマッピング]`フロー {#map-flow}
 
-「[!UICONTROL CSV を XDM スキーマにマッピング]&quot;フロー、 [CSV ファイルのマッピングのチュートリアル](../tutorials/map-a-csv-file.md). 次に **[!UICONTROL データを追加]** ステップ、メモ **[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールド。
+「[!UICONTROL CSV を XDM スキーマにマッピング]&quot;フロー、 [CSV ファイルのマッピングのチュートリアル](../tutorials/map-csv/overview.md). 次に **[!UICONTROL データを追加]** ステップ、メモ **[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールド。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

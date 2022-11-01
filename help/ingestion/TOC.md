@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Experience Platform に取り込みます。
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 96%
+source-wordcount: '145'
+ht-degree: 86%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 96%
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
-   - [XDM への CSV ファイルのマッピング](tutorials/map-a-csv-file.md)
+   - XDM への CSV ファイルのマッピング {#map-csv}
+      - [概要](./tutorials/map-csv/overview.md)
+      - [CSV ファイルを既存のスキーマにマッピングする](./tutorials/map-csv/existing-schema.md)
+      - [AI で生成されたレコメンデーションを使用して CSV ファイルをマッピングする](./tutorials/map-csv/recommendations.md)
    - [UI を使用したバッチデータ取得](tutorials/ingest-batch-data.md)
    - [認証済みストリーミング接続の作成](tutorials/create-authenticated-streaming-connection.md)
    - [ストリーミング接続の作成（API）](tutorials/create-streaming-connection.md)
