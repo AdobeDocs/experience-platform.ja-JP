@@ -4,10 +4,10 @@ title: 宛先ダッシュボードガイド
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
-ht-degree: 3%
+source-wordcount: '2828'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) は、毎�
 
 ## [!UICONTROL 宛先] ダッシュボードデータ {#destinations-dashboard-data}
 
-この [!UICONTROL 宛先] 「Experience Platform」には、組織がダッシュボード内で有効にした宛先のスナップショットが表示されます。 スナップショット内のデータは、スナップショットが作成された特定の時点でのデータとまったく同じ内容を示します。つまり、スナップショットはデータの近似やサンプルではなく、宛先ダッシュボードはリアルタイムで更新されません。
+宛先ダッシュボードは、組織が Experience Platform 内で有効にしている宛先のスナップショットを表示します。スナップショット内のデータは、スナップショットが作成された特定の時点でのデータとまったく同じ内容を示します。つまり、スナップショットはデータの近似やサンプルではなく、宛先ダッシュボードはリアルタイムで更新されません。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UIC
 
 >[!NOTE]
 >
->組織がExperience Platformを初めて使用し、まだアクティブな宛先がない場合、 [!UICONTROL 宛先] ダッシュボードと [!UICONTROL 概要] タブが表示されません。 代わりに、「 [!UICONTROL 宛先] 左のナビゲーションから、 [!UICONTROL カタログ] タブをクリックします。 詳しくは、 [!UICONTROL カタログ] タブ ( [[!UICONTROL 宛先] workspace ガイド](../../destinations/ui/destinations-workspace.md).
+>組織がExperience Platformを初めて使用し、アクティブな宛先がまだない場合は、宛先ダッシュボードおよび [!UICONTROL 概要] タブが表示されません。 代わりに、「 [!UICONTROL 宛先] 左のナビゲーションから、 [!UICONTROL カタログ] タブをクリックします。 詳しくは、 [!UICONTROL カタログ] タブ ( [[!UICONTROL 宛先] workspace ガイド](../../destinations/ui/destinations-workspace.md).
 
 ![最新のスナップショットが強調表示された「 Platform UI の宛先の概要」。](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ Adobeには、宛先に関連する様々な指標を視覚化し、データ分
 
 ウィジェットに表示されるリストからセグメントの名前を選択すると、セグメントの詳細が表示されます。 また、 **[!UICONTROL すべて表示]** をクリックして「セグメントの参照」タブに移動し、セグメントの名前を選択して詳細を表示します。
 
-Experience Platformでのセグメントの操作の詳細については、まず [セグメント化サービスの概要](../../segmentation/home.md).
+Experience Platformでのセグメントの操作について詳しくは、 [セグメント化サービスの概要](../../segmentation/home.md).
 
 ![最近アクティブ化されたセグメントウィジェットがハイライト表示された、宛先ダッシュボードの「概要」タブ。](../images/destinations/recently-activated-segments.png)
 

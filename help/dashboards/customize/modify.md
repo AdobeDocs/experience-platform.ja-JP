@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: Platform のダッシュボードを UI で変更
 description: このガイドでは、組織の Adobe Experience Platform のデータをダッシュボードで表示する方法をカスタマイズする手順を説明します。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: be2c38f37dd288f5035f1688be9d56abc2cd31a7
+source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 100%
+source-wordcount: '467'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 ## ウィジェットの並べ替え
 
-ダッシュボードの変更を選択した後、ウィジェットのタイトルを選択して目的の順序にウィジェットをドラッグアンドドロップすると、ウィジェットを並べ替えることができます。この例では、 **[!UICONTROL プロファイル数トレンド]** のウィジェットを 1 行目に移動し、 [!UICONTROL プロファイル数] のウィジェットを 2 行目に表示しています。
+ダッシュボードの変更を選択した後、ウィジェットのタイトルを選択して目的の順序にウィジェットをドラッグアンドドロップすると、ウィジェットを並べ替えることができます。この例では、 **[!UICONTROL プロファイル数のトレンド]** ウィジェットが一番上の行に移動され、 **[!UICONTROL プロファイル数]** ウィジェットが 2 行目に表示されるようになりました。
 
 ![](../images/customization/move-widget.png)
 
@@ -44,7 +44,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 ## ダッシュボードの更新内容の保存
 
-ウィジェットの移動とサイズ変更が完了したら、「**[!UICONTROL 保存]**」を選択して変更内容を保存し、メインのダッシュボードビューに戻ります。変更を保存しない場合は、「**[!UICONTROL キャンセル]**」を選択してダッシュボードをリセットし、メインのダッシュボード表示に戻ります。
+ウィジェットの移動とサイズ変更が完了したら、 **[!UICONTROL 保存して終了]** 変更を保存してメインのダッシュボードビューに戻るには、次の手順に従います。 変更を保存しない場合は、「**[!UICONTROL キャンセル]**」を選択してダッシュボードをリセットし、メインのダッシュボード表示に戻ります。
 
 ![](../images/customization/save-changes.png)
 

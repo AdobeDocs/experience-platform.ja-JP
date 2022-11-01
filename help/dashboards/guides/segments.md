@@ -4,9 +4,9 @@ title: セグメントダッシュボードガイド
 description: Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 9%
 
 ---
@@ -99,7 +99,7 @@ Adobeには、セグメントに関連する様々な指標を視覚化するた
 
 この **[!UICONTROL オーディエンスサイズ]** ウィジェットには、スナップショットが作成された時点での、選択したセグメント内の結合プロファイルの合計数が表示されます。 この数は、プロファイルフラグメントを結合してセグメント内の個々のプロファイルを 1 つ形成するために、セグメント結合ポリシーをプロファイルデータに適用した結果です。
 
-フラグメントと結合されたプロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
+フラグメントと結合プロファイルについて詳しくは、 [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ![オーディエンスサイズウィジェットがハイライト表示されたセグメントダッシュボードの概要。](../images/segments/audience-size.png)
 
