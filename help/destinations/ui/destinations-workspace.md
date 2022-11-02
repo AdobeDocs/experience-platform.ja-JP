@@ -3,10 +3,10 @@ keywords: プラットフォーム；宛先；宛先ワークスペース；ワ�
 title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
+source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 19%
+source-wordcount: '1223'
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 
 この [!UICONTROL 宛先] ワークスペースは 5 つのセクションで構成されています。 [!UICONTROL 概要], [!UICONTROL カタログ], [!UICONTROL 参照], [!UICONTROL アカウント]、および [!UICONTROL システム表示]（以下の節で説明）
 
-![宛先 — 概要](../assets/ui/workspace/destinations-overview.png)
+![宛先の概要ダッシュボードに 3 つのウィジェットが表示されています。](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL 概要] {#overview}
 
@@ -37,16 +37,18 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 * ページ上の検索機能を使用して、特定の宛先を見つけます。
 * を使用した宛先のフィルタリング [!UICONTROL カテゴリ] コントロール。
 * 切り替え [!UICONTROL すべての宛先] および [!UICONTROL 宛先]. 次を選択した場合： **[!UICONTROL すべての宛先]**，すべて利用可能 [!DNL Platform] の宛先が表示されます。 次を選択した場合： **[!UICONTROL 宛先]**&#x200B;を使用すると、接続を確立した宛先のみを表示できます。
-* 選択して表示 **[!UICONTROL 接続]** および/または **[!UICONTROL 拡張機能]**. この 2 つのカテゴリの違いについては、 [宛先のタイプとカテゴリ](../destination-types.md).
+* 選択して **[!UICONTROL 接続]** および/または **[!UICONTROL 拡張機能]** タイプ。 2 つのカテゴリの違いを理解するには、 [宛先のタイプとカテゴリ](../destination-types.md).
 
-![カタログ](../assets/ui/workspace/catalog.png)
+![広告およびクラウドストレージの宛先をいくつか表示する宛先カタログ。](../assets/ui/workspace/catalog.png)
 
-宛先カードには、 **[!UICONTROL 設定]** または **[!UICONTROL セグメントのアクティブ化]** コントロールと、より多くのオプションを表示するセカンダリコントロール。 以下に、これらのコントロールについて説明します。
+デスティネーション・カードには、プライマリとセカンダリの制御オプションが含まれます。 主なコントロールは次のとおりです。 [!UICONTROL 設定], [!UICONTROL 有効化], [!UICONTROL セグメントのアクティブ化]または [!UICONTROL データセットを書き出し]. セカンダリコントロールを使用すると、オプションを表示できます。 以下に、これらのコントロールについて説明します。
 
-| 制御 | 説明 |
+| コントロール | 説明 |
 |---------|----------|
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
-| [!UICONTROL セグメントのアクティブ化] | 宛先への接続を確立したら、セグメントをアクティブ化できます。 |
+| [!UICONTROL アクティブ化] | 宛先への接続を確立したら、セグメントをアクティブ化したり、この宛先にデータセットを書き出したりできます。 |
+| [!UICONTROL セグメントのアクティブ化] | 宛先への接続を確立したら、この宛先へのセグメントをアクティブ化できます。 |
+| [!UICONTROL データセットを書き出し] | 宛先への接続を確立したら、この宛先にデータセットを書き出すことができます。 |
 | [!UICONTROL アカウントを表示] | 宛先に接続したアカウントを表示します。 |
 | [!UICONTROL データフローを表示] | 宛先に存在するデータのアクティベーションフローを表示します。 |
 | [!UICONTROL ドキュメントを表示] | その特定の宛先のドキュメントページへのリンクを開きます。詳細情報や設定に役立ちます。 |
@@ -67,9 +69,9 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 
 >[!TIP]
 >
-> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
-> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![「詳細を編集」ボタン](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 詳細を編集&#x200B;]**ボタン [更新](update-accounts.md) 既存の宛先アカウントの詳細。
-> * 次の点で 3 つの点を選択 [!UICONTROL Platform] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destination-account.md) 既存の宛先アカウント。
+> * 省略記号 (`...`) を [!UICONTROL Platform] 列を参照し、 ![コントロールを有効化](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 有効化&#x200B;]**/**[!UICONTROL &#x200B;セグメントのアクティブ化&#x200B;]**/**[!UICONTROL &#x200B;データセットを書き出し&#x200B;]**のコントロールを使用して、セグメントやデータセットをその宛先に書き出すことができます。
+> * 省略記号 (`...`) を [!UICONTROL Platform] 列を参照し、 ![詳細コントロールを編集](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 詳細を編集&#x200B;]**～を制御する [更新](update-accounts.md) 既存の宛先アカウントの詳細。
+> * 省略記号 (`...`) を [!UICONTROL Platform] 列を参照し、 ![コントロールを削除](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**～を制御する [削除](delete-destination-account.md) 既存の宛先アカウント。
 
 
 ![「アカウント」タブ](../assets/ui/workspace/destination-account-options.png)
@@ -90,10 +92,10 @@ Adobe Experience Platformで、 **[!UICONTROL 宛先]** 左側のナビゲーシ
 
 >[!TIP]
 >
-> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![「セグメントをアクティブ化」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL セグメントのアクティブ化&#x200B;]**」ボタンをクリックして、その宛先にセグメントを送信します。
-> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**ボタン [削除](delete-destinations.md) 宛先への既存の接続。
-> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![監視ボタンで表示](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視で表示&#x200B;]**ボタンをクリックして、この宛先のアクティベーション情報を表示します。 [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * 次の点で 3 つの点を選択 [!UICONTROL 名前] 列を参照し、 ![アラートを購読 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL アラートを購読&#x200B;]**ボタンをクリックして、宛先のデータフローアラートに登録します。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 詳しくは、 [コンテキスト内宛先アラートを購読](alerts.md) 宛先のデータフローアラートの詳細については、を参照してください。
+> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![セグメントコントロールのアクティブ化](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 有効化&#x200B;]**のコントロールを使用して、セグメントやデータセットをその宛先に書き出すことができます。
+> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![コントロールを削除](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**～を制御する [削除](delete-destinations.md) 宛先への既存の接続。
+> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![監視コントロールで表示](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視で表示&#x200B;]**この宛先のアクティベーション情報を表示するコントロール [監視ダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![アラートを購読 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL アラートを購読&#x200B;]**宛先のデータフローアラートをサブスクライブするための制御。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 詳しくは、 [コンテキスト内宛先アラートを購読](alerts.md) 宛先のデータフローアラートの詳細については、を参照してください。
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)

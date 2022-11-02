@@ -5,10 +5,10 @@ title: データセットの概要
 topic-legacy: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 43%
+source-wordcount: '736'
+ht-degree: 42%
 
 ---
 
@@ -61,6 +61,7 @@ Adobe Experience Platform データガバナンスを使用すると、データ
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md):セグメントを構築し、 [!DNL Real-time Customer Profile] データ。 これらのオーディエンスは、 [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md)：機械学習と人工知能を使用して、大規模なデータセットからインサイトを引き出します。
 * [Adobe Experience Platform Query Service](../../query-service/home.md):標準の SQL を使用して、でデータをクエリできます。 [!DNL Experience Platform]（内の任意のデータセットを結合） [!DNL Data Lake] クエリ結果を新しいデータセットとして取得し、レポートで使用します。 [!DNL Data Science Workspace]または [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform Destinations Service](../../destinations/home.md):以下が可能です。 [データセットを書き出し](/help/destinations/ui/export-datasets.md) を目的のクラウドストレージまたは電子メールマーケティングの宛先に追加します。
 
 ## 次の手順
 

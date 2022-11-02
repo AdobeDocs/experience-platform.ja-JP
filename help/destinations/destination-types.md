@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先のタイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 35%
+source-wordcount: '675'
+ht-degree: 34%
 
 ---
 
@@ -66,6 +66,12 @@ Experience Platform内のエッジパーソナライゼーションの宛先に�
 次のビデオでは、2 種類の宛先の詳細について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## （ベータ版）データセットの書き出し先 {#dataset-export-destinations}
+
+宛先カタログ内の一部のクラウドストレージの宛先は、データセットの書き出しをサポートします。 これらの宛先を使用して、未加工のデータセットをクラウドストレージの場所に書き出します。
+
+詳しくは、 [データセットを書き出し](/help/destinations/ui/export-datasets.md).
 
 ## 拡張機能 {#extensions}
 
