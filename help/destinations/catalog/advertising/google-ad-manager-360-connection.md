@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、Googleの広告サービングプラットフォームで、パブリッシャーがビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理する手段を提供します。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '914'
-ht-degree: 13%
+ht-degree: 31%
 
 ---
 
@@ -39,11 +39,11 @@ ht-degree: 13%
 
 {style=&quot;table-layout:auto&quot;}
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、該当するスキーマフィールド（PPID など）と共に、 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳細を表示 [バッチファイルベースの宛先](/help/destinations/destination-types.md#file-based). |
@@ -72,7 +72,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
@@ -81,13 +81,14 @@ ht-degree: 13%
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
 * **[!UICONTROL アクセスキー ID]**:61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。
-* **[!UICONTROL 秘密アクセスキー]**:ユーザーの認証に使用される 40 文字のベース 64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。
+* **[!UICONTROL 秘密アクセスキー]**:ユーザーの認証に使用される 40 文字の base64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。
 
 これらの値について詳しくは、 [Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) ガイド。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] ソースの概要](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。 UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
@@ -100,15 +101,15 @@ ht-degree: 13%
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
 

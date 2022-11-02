@@ -2,9 +2,9 @@
 title: （ベータ版）クラウドストレージの宛先へのデータセットの書き出し
 type: Tutorial
 description: Adobe Experience Platformから目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 9%
 
 ---
@@ -68,6 +68,11 @@ ht-degree: 9%
 ![書き出すデータセットを選択できる「データセットの選択」手順を示すデータセット書き出しワークフロー。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## データセットの書き出しをスケジュール {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="データセットのファイル書き出しオプション"
+>abstract="選択 **増分ファイルの書き出し** ：最後のエクスポート以降にデータセットに追加されたデータのみをエクスポートします。 <br> 最初の増分ファイル書き出しでは、データセット内のすべてのデータが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初のエクスポート以降にデータセットに追加されたデータのみが含まれます。"
 
 内 **[!UICONTROL スケジュール]** 手順では、データセットのエクスポートの開始日とエクスポートケイデンスを設定できます。
 

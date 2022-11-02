@@ -1,7 +1,7 @@
 ---
 title: （ベータ版）Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、セグメントをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 28%
@@ -58,7 +58,7 @@ Platform をに接続するため [!DNL Google Cloud Storage]を使用する場�
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
 * **[!UICONTROL アクセスキー ID]**:61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 この値の取得方法について詳しくは、 [前提条件](#prerequisites) 」の節を参照してください。
-* **[!UICONTROL 秘密アクセスキー]**:ユーザーの認証に使用される 40 文字のベース 64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 この値の取得方法について詳しくは、 [前提条件](#prerequisites) 」の節を参照してください。
+* **[!UICONTROL 秘密アクセスキー]**:ユーザーの認証に使用される 40 文字の base64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 この値の取得方法について詳しくは、 [前提条件](#prerequisites) 」の節を参照してください。
 * **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 base64 でエンコードされた正しい形式のキーの例を以下のドキュメントリンクに表示してください。 中央部分は短くなっていて簡潔です。
 
    ![UI での正しい形式と base64 で暗号化された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

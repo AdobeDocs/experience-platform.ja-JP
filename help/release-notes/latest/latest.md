@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
 workflow-type: tm+mt
 source-wordcount: '1394'
 ht-degree: 36%
@@ -53,7 +53,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | 機能 | 説明 |
 | --- | --- |
 | （ベータ版）データセットのエクスポート | この [データセットエクスポートベータ版機能](/help/destinations/ui/export-datasets.md) では、最初の世代のデータ ( [Real-time Customer Data Platform製品説明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) をAdobe Experience Platformから外部の顧客システムに（宛先ユーザーインターフェイスを介して）移動できます。 これにより、ノーコード/ローコードのワークフローを使用して、分析およびコンプライアンスの使用例に対応するために、6 つのクラウドストレージの宛先（以下の表に示す）にデータをExperience Platformから取得できます。 |
-| （ベータ版）ファイルエクスポート機能の強化 | Experience Platformからファイルを書き出す際に、カスタマイズ機能が強化されました。 <br><ul><li>追加 [ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>書き出されたファイルに、 [マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> この機能は、次の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
+| （ベータ版）ファイルエクスポート機能の強化 | Experience Platformからファイルを書き出す際に、カスタマイズ機能が強化されました。 <br><ul><li>追加 [ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>書き出されたファイルに、 [マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> この機能は、次の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -65,7 +65,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、企業のリソース計画 (ERP) と顧客関係管理 (CRM) を、生産性の高いアプリケーションと AI ツールと組み合わせ、エンドツーエンドのスムーズで制御可能な運用を実現し、潜在的な成長力を向上させ、コストを削減するクラウドベースのビジネスアプリケーションプラットフォームです。 |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | この [!DNL (Beta) Adobe Commerce] 宛先コネクタを使用すると、アクティブ化するReal-Time CDPセグメントを 1 つ以上選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPセグメント用にカスタマイズされています。 |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | へのライブアウトバウンド接続を作成する [!DNL Azure Data Lake Storage Gen2] を使用して、Adobe Experience Platformから独自のストレージの場所にデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) Azure Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。Platform からファイルをエクスポートするための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。Platform からファイルをエクスポートするための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | へのライブアウトバウンド接続を作成する [!DNL Google Cloud Storage] を使用して、Adobe Experience Platformから独自のバケットにデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | ベータ版の参加者には、現在 2 人の [!DNL Amazon S3] 宛先カードを宛先カタログ内に並べて表示します。 新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | ベータ版の参加者には、現在 2 人の [!DNL Azure Blob] 宛先カードを宛先カタログ内に並べて表示します。 新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
