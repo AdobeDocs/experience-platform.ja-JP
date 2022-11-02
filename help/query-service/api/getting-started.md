@@ -5,10 +5,10 @@ title: クエリサービス API ガイド
 topic-legacy: query templates
 description: クエリサービス API を使用すると、開発者は標準の SQL を使用してAdobe Experience Platformデータに対してクエリを実行できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 56%
+source-wordcount: '399'
+ht-degree: 55%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 56%
 - [スケジュール済みクエリ](scheduled-queries.md)
 - [スケジュールされたクエリの実行](runs-scheduled-queries.md)
 - [クエリテンプレート](query-templates.md)
+- [高速クエリ](./accelerated-queries.md)
 - [アラート購読](./alert-subscriptions.md)
 
 ## 次の手順
