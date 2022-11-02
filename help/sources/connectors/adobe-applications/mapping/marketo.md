@@ -5,10 +5,10 @@ title: マッピングソースのフィールドのMarketo Engage
 topic-legacy: overview
 description: 次の表に、Marketoデータセットのフィールドと、対応する XDM フィールド間のマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 10%
+source-wordcount: '952'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,9 @@ ht-degree: 10%
 
 この [!DNL Marketo] ソースが、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、 [スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md) 新しい `activities` スキーマを更新せずにデータフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートは失敗します。 スキーマの更新を選択しない場合でも、新しいデータフローを作成し、エラーを解除できます。 ただし、新しいフィールドや更新されたフィールドは、Platform に取り込まれません。
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM エクスペリエンスイベントクラス](../../../../xdm/classes/experienceevent.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
@@ -136,7 +138,9 @@ ht-degree: 10%
 
 ## プログラム {#programs}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスキャンペーンの概要](../../../../xdm/classes/b2b/business-campaign.md) を参照してください。 XDM フィールドグループについて詳しくは、 [「ビジネスキャンペーン詳細」スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign/details.md) ガイド。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -165,7 +169,9 @@ ht-degree: 10%
 
 ## プログラムのメンバーシップ {#program-memberships}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスキャンペーンメンバーの概要](../../../../xdm/classes/b2b/business-campaign-members.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネスキャンペーンメンバー詳細スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign-members/details.md) ガイド。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -196,7 +202,9 @@ ht-degree: 10%
 
 ## 会社 {#companies}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスアカウントの概要](../../../../xdm/classes/b2b/business-account.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -226,7 +234,9 @@ ht-degree: 10%
 
 ## 静的リスト {#static-lists}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスマーケティングリストの概要](../../../../xdm/classes/b2b/business-marketing-list.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` は、Explore API の一部として置き換えられます。 |
@@ -242,7 +252,9 @@ ht-degree: 10%
 
 ## 静的リストのメンバーシップ {#static-list-memberships}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスマーケティングリストメンバーの概要](../../../../xdm/classes/b2b/business-marketing-list-members.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -261,7 +273,9 @@ ht-degree: 10%
 >
 >重点顧客データセットは、Marketoのアカウントベースドマーケティング (ABM) 機能でのみ必要です。 ABM を使用しない場合は、重点顧客のマッピングを設定する必要はありません。
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスアカウントの概要](../../../../xdm/classes/b2b/business-account.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -287,7 +301,9 @@ ht-degree: 10%
 
 ## 商談 {#opportunities}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスオポチュニティの概要](../../../../xdm/classes/b2b/business-opportunity.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -322,7 +338,9 @@ ht-degree: 10%
 
 ## 商談連絡先の役割 {#opportunity-contact-roles}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM ビジネスオポチュニティ人物関係の概要](../../../../xdm/classes/b2b/business-account-person-relation.md) を参照してください。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
@@ -341,7 +359,9 @@ ht-degree: 10%
 
 ## 人物 {#persons}
 
-| ソースデータセット | XDM ターゲットフィールド | 備考 |
+詳しくは、 [XDM 個別プロファイルの概要](../../../../xdm/classes/individual-profile.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネス人物詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-details.md) ガイドと [XDM ビジネス人物コンポーネントスキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-components.md) ガイド。
+
+| ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | の値 `"${MUNCHKIN_ID}"` が自動的に置き換えられます。 |
