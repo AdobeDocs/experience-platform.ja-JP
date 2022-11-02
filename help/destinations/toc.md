@@ -6,8 +6,8 @@ description: このドキュメントでは、Adobe Experience Platform の宛�
 feature: Destinations
 source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 69%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
