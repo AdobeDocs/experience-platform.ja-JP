@@ -3,14 +3,18 @@ keywords: gtag;google gtag;google 拡張機能；google gtag 拡張機能；GTAG
 title: Google gtag 拡張機能
 description: Google gtag 拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '529'
 ht-degree: 28%
 
 ---
 
 # Google gtag 拡張機能 {#gtag-advertising-extension}
+
+>[!IMPORTANT]
+>
+>ここで説明するGoogle gtag 拡張は廃止され、に置き換えられました。 [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) ～が開発した拡張 [!DNL Acronym]. 次の [!DNL Google Global Site Tag (gtag)] 内の [[!UICONTROL タグ]](../../../tags/home.md) ワークスペース ( データ収集 UI またはExperience PlatformUI)
 
 ## 概要 {#overview}
 
@@ -32,7 +36,7 @@ Google gtag は、Adobe Experience Platformの広告拡張機能です。 拡張
 
 Google gtag 拡張をインストールするには：
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
