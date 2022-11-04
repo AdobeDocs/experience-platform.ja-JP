@@ -5,9 +5,9 @@ title: エッジセグメント UI ガイド
 topic-legacy: ui guide
 description: エッジのセグメント化は、Platform 内のセグメントを即座にエッジ上で評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
@@ -58,3 +58,11 @@ ht-degree: 1%
 ## 次の手順
 
 このガイドでは、Adobe Experience Platformでエッジセグメント化を使用してセグメントを評価する方法について説明します。 Experience Platformユーザーインターフェイスの使用方法の詳細については、 [セグメント化ユーザーガイド](./overview.md). Experience PlatformAPI を使用して同様のアクションを実行し、セグメントを操作する方法については、 [エッジセグメント化 API ガイド](../api/edge-segmentation.md).
+
+## 付録
+
+次の節では、エッジセグメント化に関するよくある質問を示します。
+
+### Edge ネットワーク上でセグメントが使用可能になるまで、どれくらいかかりますか？
+
+Edge ネットワーク上でセグメントが使用可能になるまで、最大 1 時間かかります。

@@ -5,9 +5,9 @@ title: API を使用したエッジのセグメント化
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -259,3 +259,11 @@ curl -X POST \
 エッジセグメント化が有効なセグメントの作成方法がわかったので、それらを使用して、同じページと次のページのパーソナライゼーションの使用例を有効にできます。
 
 Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/segment-builder.md)』を参照してください。
+
+## 付録
+
+次の節では、エッジセグメント化に関するよくある質問を示します。
+
+### Edge ネットワーク上でセグメントが使用可能になるまで、どれくらいかかりますか？
+
+Edge ネットワーク上でセグメントが使用可能になるまで、最大 1 時間かかります。

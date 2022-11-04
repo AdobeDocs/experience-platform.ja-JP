@@ -5,9 +5,9 @@ title: ストリーミングセグメント化を使用したほぼリアルタ�
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 32%
 
 ---
@@ -439,3 +439,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用して同
 「過去 X 日間」の下の数 **のみ** には、ストリーミングセグメント化の条件を満たすオーディエンスが含まれます。 **のみ** は、データをシステムにストリーミングし、そのストリーミング定義にカウントする場合に増加します。 この値は **のみ** ストリーミングセグメント用に表示されます。 その結果、この値 **may** バッチセグメントの場合は 0 と表示されます。
 
 その結果、「過去 X 日間」の下の数がゼロで、線グラフもゼロをレポートしている場合は、 **not** は、任意のプロファイルを、そのセグメントに適合するシステムにストリーミングしました。
+
+### セグメントが使用可能になるまで、どれくらいかかりますか？
+
+セグメントが使用可能になるまでに最大 1 時間かかります。
