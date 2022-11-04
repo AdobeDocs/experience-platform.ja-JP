@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ロールの権限の管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してロールの権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '966'
 ht-degree: 7%
 
 ---
@@ -147,9 +147,21 @@ UI の役割では、次のフィルターを使用できます。
 
 この **[!UICONTROL ユーザーグループを削除]** ダイアログが表示され、削除を確認するプロンプトが表示されます。
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 次の場所に戻ります： **[!UICONTROL ユーザーグループ]** タブをクリックします。
+
+## 製品プロファイルを使用したExperience Platformへのユーザーの追加
+
+製品プロファイルにユーザーを追加するには、製品にログインし、「Admin Console」を選択します。 **[!UICONTROL ユーザーを追加]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+この **[!UICONTROL チームにユーザーを追加する]** ダイアログが表示されます。 ユーザーの電子メールアドレス、名（オプション）および姓（オプション）を入力します。
+
+鉛筆アイコンを選択して、製品およびユーザーグループを選択し、「 」を選択します。 **[!UICONTROL Adobeエクスペリエンスプラットフォーム]**&#x200B;を選択し、「 **[!UICONTROL AEP-Default-All-Users]**&#x200B;を選択し、「  **[!UICONTROL 保存]**.
+
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## 次の手順
 
