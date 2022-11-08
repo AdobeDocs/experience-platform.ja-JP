@@ -1,10 +1,11 @@
 ---
 title: Zendesk イベント転送拡張機能
 description: Adobe Experience Platform の Zendesk イベント転送拡張機能。
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
-workflow-type: ht
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '1286'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -53,7 +54,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 ## イベント転送ルールの設定
 
-新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、必要に応じてその条件を設定します。ルールのアクションを選択する場合は、[!UICONTROL Splunk] 拡張機能を選択してから、[!UICONTROL イベントを作成]アクションタイプを選択します。
+新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、 必要に応じて条件を設定します。 ルールのアクションを選択する場合、 [!UICONTROL Zendesk] 拡張機能を選択して、 [!UICONTROL イベントを作成] アクションタイプ。
 
 ![ルールの定義](../../../images/extensions/zendesk/rule.png)
 

@@ -1,18 +1,15 @@
 ---
 title: クエリの監視
 description: クエリサービス UI を使用してクエリを監視する方法について説明します。
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# クエリの監視（限定リリース）
-
->[!IMPORTANT]
->
->この機能は現在、限られたリリースで、ごく少数のお客様のみご利用いただけます。
+# クエリの監視
 
 Adobe Experience Platformでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。 送信者 [!UICONTROL 予定クエリ] 「 」タブでは、ステータス、スケジュールの詳細、失敗した場合のエラーメッセージ/コードなど、クエリの実行に関する重要な情報を確認できます。 UI を使用して、クエリのステータスに基づくクエリのアラートを購読することもできます。 [!UICONTROL 予定クエリ] タブをクリックします。
 
@@ -59,7 +56,7 @@ Adobe Experience Platformでは、UI を使用して、すべてのクエリジ�
 
 ![[ テーブル設定をカスタマイズ ] ダイアログボックス。](./images/monitor-queries/customize-table-dialog.png)
 
-### アラートを購読 {#alert-subscription}
+### アラートの配信を登録 {#alert-subscription}
 
 アラートを購読するには、 [!UICONTROL 予定クエリ] タブをクリックします。 アラート通知アイコン (![アラートアイコン。](./images/monitor-queries/alerts-icon.png)) をクリックし、 [!UICONTROL アラート] ダイアログ。 この [!UICONTROL アラート] ダイアログは、UI 通知と電子メールアラートの両方を購読します。 アラートは、クエリのステータスに基づいています。 次の 3 つのオプションを使用できます。 `start`, `success`、および `failure`. 該当するボックスをオンにし、「 」を選択します。 **[!UICONTROL 保存]** 購読する
 
@@ -126,4 +123,3 @@ Adobe Experience Platformでは、UI を使用して、すべてのクエリジ�
 選択 **[!UICONTROL クエリ]** スケジュールの詳細画面に戻るには、または **[!UICONTROL 予定クエリ]** に戻る [!UICONTROL 予定クエリ] タブをクリックします。
 
 ![クエリがハイライトされた実行の詳細画面](./images/monitor-queries/return-navigation.png)
-
