@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
+source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
-source-wordcount: '853'
-ht-degree: 84%
+source-wordcount: '860'
+ht-degree: 83%
 
 ---
 
@@ -94,6 +94,7 @@ ht-degree: 84%
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
       - [OracleEloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
+      - [OracleResponsys コネクタ](connectors/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
@@ -162,6 +163,7 @@ ht-degree: 84%
          - [MailChimp キャンペーン](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -271,6 +273,7 @@ ht-degree: 84%
          - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [OracleEloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [OracleResponsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
