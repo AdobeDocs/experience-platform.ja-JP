@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
 workflow-type: tm+mt
-source-wordcount: '903'
-ht-degree: 25%
+source-wordcount: '955'
+ht-degree: 41%
 
 ---
 
@@ -22,6 +22,8 @@ ht-degree: 25%
 
 * アクティブ化されたオーディエンスは、 [!DNL Google] プラットフォーム。
 * [!DNL Platform] は、現在、アクティブ化の成功を検証するための測定指標を含んでいません。 統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
+* セグメントを [!DNL Google Ad Manager] 宛先の場合、セグメント名は [!DNL Google Ad Manager] ユーザーインターフェイス。
+* セグメント母集団の表示には 24 ～ 48 時間が必要です [!DNL Google Ad Manager]. また、で表示するには、セグメントのオーディエンスサイズが 50 以上のプロファイルにする必要があります [!DNL Google Ad Manager]. オーディエンスサイズが 50 未満のプロファイルを含むセグメントは、 [!DNL Google Ad Manager].
 
 ## サポートされる ID {#supported-identities}
 
@@ -39,14 +41,14 @@ ht-degree: 25%
 
 {style=&quot;table-layout:auto&quot;}
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -73,7 +75,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -94,15 +96,15 @@ ht-degree: 25%
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
