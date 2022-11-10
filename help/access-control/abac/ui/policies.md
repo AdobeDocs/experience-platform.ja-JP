@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御ポリシーの作成
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してポリシーを管理する方法について説明します
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-次に、ドロップダウンを使用して、 **ユーザー**.
+次に、ドロップダウンを使用して、ラベルのタイプ (**[!UICONTROL コアラベル]** または **[!UICONTROL カスタムラベル]**) をクリックして、役割のユーザーに割り当てられたラベルに一致させます。
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
