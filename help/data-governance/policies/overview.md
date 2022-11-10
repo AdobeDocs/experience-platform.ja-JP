@@ -5,14 +5,19 @@ title: データ使用ポリシーの概要
 topic-legacy: policies
 description: データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 92%
+source-wordcount: '1180'
+ht-degree: 87%
 
 ---
 
-# データ使用ポリシーの概要
+# データ使用ポリシーの概要 {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="データ使用の制限"
+>abstract="データ使用ポリシータイプは、マーケティングアクティビティのデータ使用を制限するために、データガバナンスラベルに適用される特定のマーケティングアクションを評価します。"
 
 データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、[!DNL Experience Platform] 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです。
 
@@ -20,6 +25,10 @@ ht-degree: 92%
 
 * **[!UICONTROL データガバナンスポリシー]**:実行されるマーケティングアクションと、該当するデータが実行するデータ使用ラベルに基づいて、データのアクティベーションを制限します。
 * **[!UICONTROL 同意ポリシー]**:アクティブ化可能なプロファイルのフィルター [宛先](../../destinations/home.md) お客様の同意または好みに基づいて
+
+>[!NOTE]
+>
+>データ使用ポリシーを [アクセス制御ポリシー](../../access-control/abac/end-to-end-guide.md#policy)：組織内の特定の Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、 [!UICONTROL 権限] タブをクリックします。
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 

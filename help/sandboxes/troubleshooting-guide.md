@@ -5,10 +5,10 @@ title: サンドボックストラブルシューティングガイド
 topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のサンドボックスに関するよくある質問に対して回答を示します。
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 44%
+source-wordcount: '857'
+ht-degree: 42%
 
 ---
 
@@ -22,7 +22,13 @@ ht-degree: 44%
 
 サンドボックスは、Experience Platform の単一インスタンス内の仮想パーティションです。各サンドボックスは、Platform リソース（スキーマ、データセット、プロファイルなど）の独立したライブラリを管理します。サンドボックス内で実行されるすべてのコンテンツとアクションは、そのサンドボックスのみに限定され、他のサンドボックスには影響しません。詳しくは、[サンドボックスの概要](home.md)を参照してください。
 
-## どのようなサンドボックスを使用できますか？またその違いは何ですか？
+## どのようなサンドボックスを使用できますか？またその違いは何ですか？ {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="サンドボックスタイプ"
+>abstract="サンドボックスタイプは、これが実稼動サンドボックスか開発サンドボックスかを示します。 実稼働用サンドボックスにはライブデータが含まれ、テストおよび開発用の開発用サンドボックスが使用されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="UI でのサンドボックスの作成"
 
 Experience Platform では、次の 2 つのサンドボックスタイプを使用できます。
 

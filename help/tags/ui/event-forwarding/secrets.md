@@ -2,9 +2,9 @@
 title: イベント転送での秘密鍵の設定
 description: イベント転送プロパティで使用されるエンドポイントに対して認証するための UI のシークレットの設定方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 74%
 
 ---
@@ -37,6 +37,12 @@ ht-degree: 74%
 また、タグとイベント転送の公開フロー（ライブラリにリソースを追加する方法や、テスト用に web サイトにビルドをインストールする方法など）についての実用的な理解が必要です。詳しくは、[公開の概要](../publishing/overview.md)を参照してください。
 
 ## 秘密鍵の作成 {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="シークレットの環境"
+>abstract="シークレットをイベント転送で使用できるようにするには、シークレットを既存の環境に割り当てる必要があります。イベント転送プロパティ用に環境が作成されていない場合は、先に進む前に環境を設定する必要があります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja" text="環境の概要"
 
 シークレットを作成するには、「 」を選択します。 **[!UICONTROL イベント転送]** 左側のナビゲーションで、秘密鍵を追加するイベント転送プロパティを開きます。 次に、左側のナビゲーションで「**[!UICONTROL シークレット]**」 を選択し、「**[!UICONTROL 新しいシークレットの作成]**」を選択します。
 

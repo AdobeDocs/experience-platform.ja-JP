@@ -5,10 +5,10 @@ title: サンドボックス UI ガイド
 topic-legacy: user guide
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 16%
+source-wordcount: '816'
+ht-degree: 15%
 
 ---
 
@@ -36,7 +36,17 @@ Platform UI で、「 **[!UICONTROL サンドボックス]** 左側のナビゲ�
 
 ![sandbox-switched](../images/ui/sandbox-switched.png)
 
-## 新しいサンドボックスの作成
+## 新しいサンドボックスの作成 {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="サンドボックス名"
+>abstract="サンドボックス名は、このサンドボックスの一意の ID を作成するためにバックエンドで使用されるテキストです。"
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="サンドボックスのタイトル"
+>abstract="サンドボックスタイトルは、Experience PlatformUI 全体でのメニューおよびドロップダウンのサンドボックスを表す表示名です。"
 
 >[!NOTE]
 >

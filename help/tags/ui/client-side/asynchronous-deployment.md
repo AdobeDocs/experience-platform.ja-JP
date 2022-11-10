@@ -2,14 +2,19 @@
 title: 非同期デプロイメント
 description: Web サイトで Adobe Experience Platform タブライブラリを非同期でデプロイする方法について説明します。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 100%
+source-wordcount: '1079'
+ht-degree: 94%
 
 ---
 
-# 非同期デプロイメント
+# 非同期デプロイメント {#asynchronous-deployment}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_asynchronous_deployment"
+>title="非同期デプロイメント"
+>abstract="このオプションを有効にすると、このスクリプトタグが解析されると、ブラウザーは JavaScript ファイルの読み込みを開始しますが、ライブラリの読み込みと実行を待つ代わりに、ドキュメントの残りの部分の解析とレンダリングを続行します。 これにより、Web ページのパフォーマンスが向上しますが、特定のルールの実行方法に関して、重要な影響を与えます。 詳しくは、 ドキュメント を参照してください。"
 
 >[!NOTE]
 >

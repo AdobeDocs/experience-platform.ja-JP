@@ -5,10 +5,10 @@ title: UI でのデータ使用ポリシーの管理
 topic-legacy: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、ポリシーユーザーインターフェイスのポリシーワークスペースで実行できるExperience Platformの概要を説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 51%
+source-wordcount: '1408'
+ht-degree: 48%
 
 ---
 
@@ -96,7 +96,12 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 * **[!UICONTROL If]**:ポリシーチェックをトリガーにする条件。 これは、実行される特定のマーケティングアクション、特定のデータ使用ラベルの有無、またはこれら 2 つの組み合わせに基づくことができます。
 * **[!UICONTROL 次に、]**:プロファイルをポリシーをトリガーしたアクションに含めるために存在する必要がある同意属性。
 
-#### 条件の設定
+#### 条件の設定 {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="If 条件"
+>abstract="まず、ポリシーチェックをトリガーする条件を定義します。 条件には、特定のマーケティングアクションが実行される、特定のデータガバナンスラベルが存在する、またはその両方の組み合わせが含まれます。"
 
 以下 **[!UICONTROL If]** 「 」セクションで、このポリシーをトリガーするマーケティングアクションやデータ使用ラベルを選択します。 選択 **[!UICONTROL すべて表示]** および **[!UICONTROL ラベルを選択]** をクリックすると、使用可能なマーケティングアクションとラベルの完全なリストがそれぞれ表示されます。
 
@@ -108,7 +113,12 @@ Adobe Experience Platform データガバナンスは、データ使用ポリシ
 
 ![](../images/policies/and-or-selection.png)
 
-#### 同意属性を選択
+#### 同意属性を選択 {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Then 条件"
+>abstract="「If」条件を定義したら、「Then」セクションを使用して、和集合スキーマから少なくとも 1 つの同意属性を選択します。 これは、このポリシーで管理されるアクションにプロファイルを含めるために存在する必要がある属性です。"
 
 以下 **[!UICONTROL 次に、]** 「 」セクションで、和集合スキーマから少なくとも 1 つの同意属性を選択します。 これは、このポリシーで管理されるアクションにプロファイルを含めるために存在する必要がある属性です。 リストから提供されたオプションの 1 つを選択するか、「 」を選択します。 **[!UICONTROL すべて表示]** ：和集合スキーマから直接属性を選択します。
 
