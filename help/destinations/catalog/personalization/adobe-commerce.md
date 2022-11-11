@@ -1,10 +1,11 @@
 ---
 title: （ベータ版）Adobe Commerce 宛先コネクタ
 description: Adobe Commerce と Real-Time CDP を使用して、Real-Time CDP で作成および管理される顧客セグメントに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、ショッピングエクスペリエンスをパーソナライズする方法を説明します。
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 81%
+ht-degree: 99%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 81%
 > 
 >**[!UICONTROL Adobe Commerce]** コネクタはベータ版で、一部のお客様のみご利用いただけます。
 
-この [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ化するReal-Time CDPセグメントを 1 つ以上選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPセグメント用にカスタマイズされています。
+[!DNL Adobe Commerce] 宛先コネクタを使用すると、[!DNL Adobe Commerce] アカウントにアクティブ化する 1 つ以上の Real-Time CDP セグメントを選択し、動的にパーソナライズされたエクスペリエンスを買い物客に提供できるようになります。[!DNL Adobe Commerce] 内でこれらの Real-Time CDP セグメントを選択して、「2 つ買うと 1 つ無料」などの、買い物かご内の独自のオファーをパーソナライズできます。また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべて Adobe Real-Time CDP セグメント用にカスタマイズされています。
 
 <!--## Use cases {#use-cases}
 
@@ -36,7 +37,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Real-Time CDP Prime または Ultimate とAdobe Commerceを購入した一部のベータ版顧客の宛先カタログで使用できます。
+この拡張機能は、Real-time CDP Prime または Ultimate と Adobe Commerce を購入した一部のベータ版のお客様の宛先カタログで利用できます。
 
 ベータ版のお客様は、次の項目にアクセスできます。
 
@@ -56,7 +57,7 @@ Experience Platform で、以下を作成します。
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 [!DNL Adobe Commerce] 宛先へ接続する手順は次のとおりです。
 
@@ -84,13 +85,13 @@ Experience Platform で、以下を作成します。
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 [!DNL Commerce] 宛先にオーディエンスセグメントをアクティブ化する手順は、[プロファイルリクエストの宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-profile-request-destinations.md)をお読みください。
 
 ## [!DNL Adobe Commerce] での次の手順
 
-これで、 [!DNL Commerce] Experience Platform内の宛先の場合は、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPセグメントを読み込みます。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html)を参照してください。
+Experience Platform 内の [!DNL Commerce] 宛先の設定が完了しました。次は [!DNL Commerce Admin] を設定して、作成した Real-time CDP セグメントを読み込む必要があります。詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=ja)を参照してください。
 
 ## コマースでのオーディエンスのアクティベーションの検証 {#exported-data}
 

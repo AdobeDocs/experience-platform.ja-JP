@@ -1,43 +1,44 @@
 ---
-title: AI で生成されたRecommendations（ベータ版）を使用して CSV ファイルを XDM スキーマにマッピングする
+title: AI で生成されたレコメンデーション（ベータ版）を使用して、CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
-source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
+exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1043'
-ht-degree: 4%
+ht-degree: 93%
 
 ---
 
-# AI で生成されたレコメンデーション（ベータ版）を使用して、CSV ファイルを XDM スキーマにマッピングします
+# AI で生成されたレコメンデーション（ベータ版）を使用して、CSV ファイルを XDM スキーマにマッピングする
 
 >[!IMPORTANT]
 >
->この機能は現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 ドキュメントと機能は変更される場合があります。
+>この機能は現在ベータ版で利用可能で、お客様の組織はまだアクセスできない可能性があります。ドキュメントと機能は変更される場合があります。
 >
->Platform で一般に利用可能な CSV マッピング機能について詳しくは、 [既存のスキーマへの CSV ファイルのマッピング](./existing-schema.md).
+>Platform で一般に利用可能な CSV マッピング機能について詳しくは、[既存のスキーマへの CSV ファイルのマッピング](./existing-schema.md)に関するドキュメントを参照してください。
 
-CSV データをに取り込むため [!DNL Adobe Experience Platform]の場合、データは [!DNL Experience Data Model] (XDM) スキーマ。 マッピング先を選択できます。 [既存のスキーマ](./existing-schema.md)ただし、使用するスキーマや構造が不明な場合は、代わりに、Platform UI 内の機械学習 (ML) モデルに基づく動的なレコメンデーションを使用できます。
+CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。マッピング先を[既存のスキーマ](./existing-schema.md)に選択できます。ただし、使用するスキーマや構造が不明な場合は、代わりに、Platform UI 内の機械学習（ML）モデルに基づく動的なレコメンデーションを使用できます。
 
 ## はじめに
 
-このチュートリアルでは、次のコンポーネントに関する十分な知識が必要です。 [!DNL Platform]:
+このチュートリアルでは、[!DNL Platform] の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-   * 少なくとも、 [XDM での動作](../../../xdm/home.md#data-behaviors)を使用すると、データをにマッピングするかどうかを決定できます [!UICONTROL プロファイル] クラス（レコードの動作）または [!UICONTROL ExperienceEvent] クラス（時系列の動作）を使用します。
-* [バッチ取得](../../batch-ingestion/overview.md)[!DNL Platform]： がユーザー指定のデータファイルからデータを取り込む方法。
-* [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md):取り込んだデータを XDM スキーマに準拠するようにマッピングおよび変換できる一連の機能です。 に関するドキュメント [データ準備関数](../../../data-prep/functions.md) は、スキーママッピングに特に関連します。
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+   * 少なくとも、[XDM での動作](../../../xdm/home.md#data-behaviors)の概念を理解して、データを[!UICONTROL プロファイル]クラス（レコードの動作）または [!UICONTROL ExperienceEvent] クラス（時系列の動作）にマッピングするかどうかを決定できるようになる必要があります。
+* [バッチ取得](../../batch-ingestion/overview.md)： [!DNL Platform] がユーザー指定のデータファイルからデータを取り込む方法。
+* [Adobe Experience Platform データ準備](../../batch-ingestion/overview.md)：取り込んだデータを XDM スキーマに準拠するようにマッピングおよび変換できる一連の機能。[データ準備機能](../../../data-prep/functions.md)に関するドキュメントは、スキーママッピングに特に関連します。
 
 ## データフローの詳細を入力
 
-Experience PlatformUI で、 **[!UICONTROL ソース]** をクリックします。 の **[!UICONTROL カタログ]** 表示するには、 **[!UICONTROL ローカルシステム]** カテゴリ。 の下 **[!UICONTROL ローカルファイルのアップロード]**&#x200B;を選択します。 **[!UICONTROL データを追加]**.
+Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL ソース]**」を選択します。**[!UICONTROL カタログ]**&#x200B;ビューで、**[!UICONTROL ローカルシステム]**&#x200B;カテゴリに移動します。**[!UICONTROL ローカルファイルをアップロード]**&#x200B;で、「**[!UICONTROL データを追加]**」を選択します。
 
-![この [!UICONTROL ソース] Platform UI のカタログ、を使用 [!UICONTROL データを追加] under [!UICONTROL ローカルファイルのアップロード] 選択されています](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Platform UI の[!UICONTROL ソース]カタログで、[!UICONTROL ローカルファイルのアップロード]にある「[!UICONTROL データを追加]」が選択された状態](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
-この **[!UICONTROL CSV XDM スキーマのマッピング]** ワークフローが表示され、 **[!UICONTROL データフローの詳細]** 手順
+**[!UICONTROL XDM スキーマに CSV をマッピング]**&#x200B;のワークフローが表示されるので、**[!UICONTROL データフローの詳細]**&#x200B;手順を開始します。
 
-選択 **[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**&#x200B;を呼び出し、新しいコントロールを表示します。 マッピングする CSV データに適したクラスを選択します ([!UICONTROL プロファイル] または [!UICONTROL ExperienceEvent]) をクリックします。 必要に応じて、ドロップダウンメニューを使用して、ビジネスに関連する業界を選択できます。提供されたカテゴリが適用されない場合は、空白のままにすることもできます。 組織が [B2B(B2B)](../../../xdm/tutorials/relationship-b2b.md) モデルを選択するには、 **[!UICONTROL B2B データ]** チェックボックス。
+「**[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**」を選択し、新しいコントロールを表示します。マッピングする CSV データに適したクラスを選択します ([!UICONTROL プロファイル] または [!UICONTROL ExperienceEvent]) をクリックします。 必要に応じて、ドロップダウンメニューを使用して、ビジネスに関連する業界を選択できます。提供されたカテゴリが適用されない場合は、空白のままにすることもできます。 組織が [B2B](../../../xdm/tutorials/relationship-b2b.md) モデルで運営する場合、「**[!UICONTROL B2B データ]**」チェックボックスを選択します。
 
-![この [!UICONTROL データフローの詳細] 「 ML レコメンデーション」オプションを選択して手順を進めます。 [!UICONTROL プロファイル] がクラスに選択され、 [!UICONTROL 通信業] 業界に選ばれる](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
+![ML レコメンデーションオプションが選択された場合の[!UICONTROL データフローの詳細]手順。 クラスに[!UICONTROL プロファイル]、業界に[!UICONTROL 通信業]が選択されている場合](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 ここから、CSV データから作成されるスキーマの名前と、そのスキーマで取り込まれるデータを含む出力データセットの名前を指定します。
 
@@ -45,56 +46,56 @@ Experience PlatformUI で、 **[!UICONTROL ソース]** をクリックします
 
 | 入力名 | 説明 |
 | --- | --- |
-| [!UICONTROL 説明] | データフローの説明。 |
-| [!UICONTROL エラー診断] | 有効にすると、新しく取り込んだバッチに対してエラーメッセージが生成され、 [API](../../batch-ingestion/api-overview.md). |
-| [!UICONTROL 部分取り込み] | 有効にすると、新しいバッチデータの有効なレコードは、指定したエラーしきい値内に取り込まれます。 このしきい値を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 |
-| [!UICONTROL データフローの詳細] | CSV データを Platform に取り込むデータフローの名前と説明（オプション）を入力します。 このワークフローを開始すると、データフローにデフォルト名が自動的に割り当てられます。 名前の変更はオプションです。 |
-| [!UICONTROL アラート] | リストから選択 [製品内アラート](../../../observability/alerts/overview.md) データフローが開始された後に、データフローのステータスに関して受け取る必要がある情報です。 |
+| [!UICONTROL 説明] | データフローに関する説明。 |
+| [!UICONTROL エラー診断] | 有効にすると、新しく取り込んだバッチに対してエラーメッセージが生成され、[API](../../batch-ingestion/api-overview.md) で対応するバッチを取得する際に表示できます。 |
+| [!UICONTROL 部分取り込み] | 有効にすると、新しいバッチデータの有効なレコードは、指定したエラーしきい値内で取り込まれます。このしきい値を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 |
+| [!UICONTROL データフローの詳細] | CSV データを Platform に取り込むデータフローの名前と説明（オプション）を入力します。ワークフローを開始すると、データフローにデフォルト名が自動的に割り当てられます。名前の変更はオプションです。 |
+| [!UICONTROL アラート] | データフローが開始された後に、データフローのステータスに関して受け取りを希望する[製品内アラート](../../../observability/alerts/overview.md)をリストから選択します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-データフローの設定が完了したら、「 **[!UICONTROL 次へ]**.
+データフローの設定が終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![この [!UICONTROL データフローの詳細] セクションが完了しました](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![[!UICONTROL データフローの詳細]セクションが完了しました](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## データの選択
 
-の **[!UICONTROL データを選択]** 手順の左の列を使用して、CSV ファイルをアップロードします。 次を選択できます。 **[!UICONTROL ファイルを選択]** をクリックしてエクスプローラーダイアログを開き、ファイルを選択するか、ファイルを列に直接ドラッグ&amp;ドロップします。
+**[!UICONTROL データを選択]**&#x200B;の手順で、左の列を使用して CSV ファイルをアップロードします。**[!UICONTROL ファイルを選択]**&#x200B;を選択して、ファイルを開くエクスプローラーダイアログを開いてファイルを選択するか、直接ファイルを列にドラッグ＆ドロップします。
 
-![この [!UICONTROL ファイルを選択] ボタンと、 [!UICONTROL データを選択] 手順](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![[!UICONTROL データを選択]する手順でハイライト表示された「[!UICONTROL ファイルを選択]」ボタンおよびドラッグ＆ドロップ](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
-ファイルをアップロードすると、サンプルデータセクションが表示され、受信したデータの最初の 10 行が示されます。これにより、正しくアップロードされたことを確認できます。 「**[!UICONTROL 次へ]**」をクリックして続行します。
+ファイルをアップロードすると、サンプルデータセクションが表示され、受信したデータの最初の 10 行が表示され、正しくアップロードされたことを確認できます。「**[!UICONTROL 次へ]**」をクリックして続行します。
 
-![サンプルのデータ行がワークスペース内に入力されている](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
+![ワークスペース内で入力されるサンプルデータ行](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
 
 ## スキーママッピングの設定
 
-ML モデルを実行して、データフロー設定とアップロードした CSV ファイルに基づいて新しいスキーマを生成します。 処理が完了すると、 [!UICONTROL マッピング] step は入力され、生成されたスキーマ構造の完全にナビゲーション可能なビューと共に、個々のフィールドのマッピングが表示されます。
+データフロー設定とアップロードした CSV ファイルに基づいて、ML モデルが実行され、新しいスキーマを生成します。処理が完了すると、[!UICONTROL マッピング]手順が表示され、生成されたスキーマ構造の完全にナビゲーション可能なビューと共に、個々のフィールドのマッピングが表示されます。
 
-![この [!UICONTROL マッピング] UI の手順で、マッピングされたすべての CSV フィールドと結果のスキーマ構造を表示します。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![UI の[!UICONTROL マッピング]手順で、マッピングされたすべての CSV フィールドと結果のスキーマ構造を表示する](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
-ここから、オプションでを選択できます [フィールドマッピングの編集](#edit-mappings) または [関連付けられているフィールドグループを変更する](#edit-schema) 必要に応じて。 満足したら、「 」を選択します。 **[!UICONTROL 完了]** マッピングを完了し、前に設定したデータフローを開始する場合。 この CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームの Platform サービスで利用できる状態になります。
+ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームの Platform サービスで利用できる状態になります。
 
-![この [!UICONTROL 完了] ボタンを選択し、CSV マッピングプロセスを完了しています](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![「[!UICONTROL 終了]」ボタンを選択している状態で、CSV マッピングプロセスを完了する](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### フィールドマッピングの編集 {#edit-mappings}
 
-フィールドマッピングプレビューを使用して、既存のマッピングを編集するか、完全に削除します。 UI でマッピングセットを管理する方法について詳しくは、 [データ準備マッピング用 UI ガイド](../../../data-prep/ui/mapping.md#mapping-interface).
+フィールドマッピングプレビューを使用すると、既存のマッピングを編集したり、完全に削除したりできます。 UI でマッピングセットを管理する方法について詳しくは、[データ準備マッピング用 UI ガイド](../../../data-prep/ui/mapping.md#mapping-interface)を参照してください。
 
-### フィールドグループを編集 {#edit-field-groups}
+### フィールドグループの編集 {#edit-field-groups}
 
-CSV フィールドは、ML モデルを使用して、既存の XDM フィールドグループに自動的にマッピングされます。 特定の CSV フィールドのフィールドグループを変更する場合は、 **[!UICONTROL 編集]** スキーマツリーの横に表示されます。
+CSV フィールドは、ML モデルを使用して、既存の XDM フィールドグループに自動的にマッピングされます。 特定の CSV フィールドのフィールドグループを変更する場合は、スキーマツリーの横にある「**[!UICONTROL 編集]**」を選択します。
 
-![この [!UICONTROL 編集] スキーマツリーの横で選択されているボタン](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![スキーマツリーの横で選択されている「[!UICONTROL 編集]」ボタン](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。 編集アイコン (![編集アイコン](../../images/tutorials/map-csv-recommendations/edit-icon.png)) をクリックし、選択する前に右列で詳細を編集するために、ソースフィールドの横にある **[!UICONTROL 適用]**.
+ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。ソースフィールドの横にある「編集」アイコン（![編集アイコン](../../images/tutorials/map-csv-recommendations/edit-icon.png)）を選択して、右側の列の詳細を編集してから、「**[!UICONTROL 適用]**」を選択します。
 
-![変更するソースフィールドの推奨フィールドグループ](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![変更されているソースフィールドの推奨フィールドグループ](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
-ソースフィールドのスキーマレコメンデーションの調整が完了したら、「 **[!UICONTROL 保存]** 変更を適用します。
+ソースフィールドのスキーマレコメンデーションの調整が終了したら、「**[!UICONTROL 保存]**」を選択して変更を適用します。
 
 ## 次の手順
 
-このガイドでは、AI 生成のレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータを Platform に取り込む方法について説明しました。
+このガイドでは、AI によって生成されたレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータを Platform に取り込む方法について説明しました。
 
-CSV ファイルを既存のスキーマにマッピングする手順については、 [既存のスキーママッピングワークフロー](./existing-schema.md). 事前に作成されたソース接続を使用した、リアルタイムでの Platform へのデータストリーミングについて詳しくは、 [ソースの概要](../../../sources/home.md).
+CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでの Platform へのデータストリーミングについて詳しくは、[ソースの概要](../../../sources/home.md)を参照してください。
