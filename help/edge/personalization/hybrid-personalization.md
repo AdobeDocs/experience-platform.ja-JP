@@ -1,11 +1,11 @@
 ---
 title: Web SDK と Edge Network Server API を使用したハイブリッドパーソナライゼーション
-description: この記事では、Web SDK を Server API と組み合わせて使用し、Web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
-keywords: パーソナライゼーション；ハイブリッド；server api;サーバー側；ハイブリッド実装；
+description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
+keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 source-git-commit: f280d4cbcde434ccf36df37e95f1902cfd02c96c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '830'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -14,74 +14,74 @@ ht-degree: 3%
 
 ## 概要 {#overview}
 
-ハイブリッドパーソナライゼーションでは、 [Edge Network Server API](../..//server-api/overview.md)を参照し、を使用してクライアント側でレンダリングします。 [Web SDK](../home.md).
+ハイブリッドパーソナライゼーションでは、[Edge Network Server API](../..//server-api/overview.md) を使用してパーソナライゼーションコンテンツをサーバーサイドで取得し、[Web SDK](../home.md) を使用してクライアント側でレンダリングするプロセスについて説明します。
 
-ハイブリッドパーソナライゼーションを、Adobe TargetやOffer decisioningなどのパーソナライゼーションソリューションと共に使用できます。違いは、 [!UICONTROL サーバー API] ペイロード。
+ハイブリッドパーソナライゼーションを、Adobe Target や Offer Decisioning などのパーソナライゼーションソリューションと共に使用できますが、違いは、[!UICONTROL Server API] ペイロードの内容です。
 
 ## 前提条件 {#prerequisites}
 
 Web プロパティにハイブリッドパーソナライゼーションを実装する前に、次の条件を満たしていることを確認してください。
 
-* 使用するパーソナライゼーションソリューションを決定しました。 これは、 [!UICONTROL サーバー API] ペイロード。
-* アプリケーションサーバーにアクセスでき、そのサーバーを使用して [!UICONTROL サーバー API] 呼び出し。
-* 次にアクセスできます： [Edge Network Server API](../../server-api/authentication.md).
-* 正しい [構成および導入済み](../fundamentals/configuring-the-sdk.md) パーソナライズするページ上の Web SDK。
+* 使用するパーソナライゼーションソリューションを決定しました。 これは、[!UICONTROL Server API] ペイロードの内容に影響を与えます。
+* アプリケーションサーバーにアクセスし、そのサーバーを使用して [!UICONTROL Server API] 呼び出しを行います。
+* [Edge Network Server API](../../server-api/authentication.md) にアクセスできます。
+* パーソナライズするページに Web SDK を正しく[設定しデプロイ](../fundamentals/configuring-the-sdk.md)しました。
 
 ## フロー図 {#flow-diagram}
 
-次のフロー図は、ハイブリッドパーソナライゼーションを配信するために実行される手順の順序を示しています。
+次のフロー図は、ハイブリッドパーソナライゼーションを配信するための実行ステップの順序を示しています。
 
-![ハイブリッドパーソナライゼーションを配信するために実行される手順の順序を示す視覚的なフロー図です。](assets/hybrid-personalization-diagram.png)
+![ハイブリッドパーソナライゼーションを配信するための実行ステップの順序を示す視覚的なフロー図](assets/hybrid-personalization-diagram.png)
 
-1. ブラウザーによって以前に保存された既存の Cookie。先頭に「 」が付いている `kndctr_`は、ブラウザーリクエストに含まれます。
-1. クライアントの Web ブラウザーは、アプリケーションサーバーに Web ページをリクエストします。
-1. アプリケーションサーバーは、ページリクエストを受け取ると、 `POST` にリクエスト [Server API インタラクティブデータ収集エンドポイント](../../server-api/interactive-data-collection.md) パーソナライゼーションコンテンツを取得します。 この `POST` リクエストに `event` および `query`. 前の手順で作成した Cookie がある場合は、 `meta>state>entries` 配列。
+1. ブラウザーによって以前に保存された `kndctr_` で始まる既存の Cookie は、ブラウザーリクエストに含まれます。
+1. クライアントの web ブラウザーは、アプリケーションサーバーに web ページをリクエストします。
+1. アプリケーションサーバーがページリクエストを受信すると、`POST` リクエストを [Server API インタラクティブデータ収集エンドポイント](../../server-api/interactive-data-collection.md)に送信して、パーソナライゼーションコンテンツを取得します。 この `POST` リクエストには `event` と `query` が含まれています。前のステップで作成した Cookie がある場合は、`meta>state>entries` 配列に含まれています。
 1. Server API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
-1. アプリケーションサーバーが、HTML応答を含むクライアントブラウザーに返します。 [id とクラスターの cookie](#cookies).
-1. クライアントページでは、 [!DNL Web SDK] `applyResponse` コマンドを呼び出し、 [!UICONTROL サーバー API] 前の手順の応答。
-1. この [!DNL Web SDK] ページ読み込みをレンダリング [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) は、自動的にオファーするので、 `renderDecisions` フラグが `true`.
-1. フォームベース [!DNL JSON] オファーは、 `applyPersonalization` メソッドを使用して、 [!DNL DOM] パーソナライゼーションオファーに基づいて
-1. フォームベースのアクティビティの場合、表示イベントを手動で送信して、オファーがいつ表示されたかを示す必要があります。 これは、 `sendEvent` コマンドを使用します。
+1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
+1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Server API] 応答のヘッダーと本文が渡されます。
+1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) が提供するページの読み込みを自動的にレンダリングします。
+1. フォームベースの [!DNL JSON] オファーは、`applyPersonalization` メソッドを使用して手動で適用され、パーソナライゼーション オファーに基づいて [!DNL DOM] を更新します。
+1. フォームベースのアクティビティの場合、オファーがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。これは、`sendEvent` コマンドを使用して行われます。
 
 ## Cookie {#cookies}
 
-Cookie は、ユーザー ID とクラスター情報を保持するために使用されます。  ハイブリッド実装を使用する場合、Web アプリケーションサーバーは、リクエストのライフサイクル中にこれらの Cookie の保存と送信を処理します。
+Cookie は、ユーザー ID とクラスター情報を保持するために使用されます。ハイブリッド実装を使用する場合、web アプリケーションサーバーは、リクエストのライフサイクル中にこれらの Cookie の保存と送信を処理します。
 
-| cookie | 目的 | 保存者 | 送信者 |
+| Cookie | 目的 | 保存者 | 送信者 |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | ユーザー ID の詳細が含まれます。 | アプリケーションサーバー | アプリケーションサーバー |
-| `kndctr_AdobeOrg_cluster` | 要求を満たすために使用する Edge ネットワーククラスターを示します。 | アプリケーションサーバー | アプリケーションサーバー |
+| `kndctr_AdobeOrg_cluster` | リクエストを満たすために使用する Edge Network クラスターを示します。 | アプリケーションサーバー | アプリケーションサーバー |
 
 ## リクエストの配置 {#request-placement}
 
-提案を取得し、表示通知を送信するには、サーバー API リクエストが必要です。 ハイブリッド実装を使用する場合、アプリケーションサーバーは Server API に対してこれらのリクエストをおこないます。
+提案を取得し表示通知を送信するには、Server API リクエストが必要です。 ハイブリッド実装を使用する場合、アプリケーションサーバーはこれらのリクエストを Server API に対して行います。
 
 | リクエスト | 作成者 |
 |---|---|
 | 提案を取得するためのインタラクションリクエスト | アプリケーションサーバー |
-| 表示通知を送信するインタラクションリクエスト | アプリケーションサーバー |
+| 表示通知を送信するためのインタラクションリクエスト | アプリケーションサーバー |
 
 ## Analytics への影響 {#analytics}
 
-ハイブリッドパーソナライゼーションを実装する場合、Analytics でページのヒットが複数回カウントされないように、特に注意する必要があります。
+ハイブリッドパーソナライゼーションを実装する場合、Analytics でページヒットが複数回カウントされないように、特に注意する必要があります。
 
-次の場合： [データストリームの設定](../datastreams/overview.md) Analytics では、ページのヒットが取り込まれるように、イベントが自動的に転送されます。
+Analytics 用に[データストリームを設定](../datastreams/overview.md)すると、ページヒットが取り込まれるように、イベントが自動転送されます。
 
-この実装のサンプルでは、2 つの異なるデータストリームを使用します。
+この実装のサンプルでは、次の 2 つの異なるデータストリームを使用しています。
 
-* Analytics 用に設定されたデータストリーム。 このデータストリームは、Web SDK のインタラクションで使用されます。
+* Analytics 用に設定されたデータストリーム。 このデータストリームは、Web SDK のインタラクションに使用されます。
 * Analytics 設定のない 2 つ目のデータストリーム。 このデータストリームは、Server API リクエストに使用されます。
 
-この方法では、サーバー側リクエストは Analytics イベントを登録しませんが、クライアント側リクエストは Analytics イベントを登録します。 これにより、Analytics リクエストが正確にカウントされます。
+このように、サーバーサイドのリクエストは Analytics イベントを登録しませんが、クライアントサイドのリクエストでは登録します。 これにより、Analytics リクエストが正確にカウントされます。
 
 
-## サーバー側リクエスト {#server-side-request}
+## サーバーサイドリクエスト {#server-side-request}
 
-以下のリクエスト例は、アプリケーションサーバーがパーソナライゼーションコンテンツを取得する際に使用できる Server API リクエストを示しています。
+以下のサンプルリクエストでは、アプリケーションサーバーがパーソナライゼーションコンテンツを取得するために使用できる Server API リクエストを示します。
 
 >[!IMPORTANT]
 >
->このサンプルリクエストでは、Adobe Targetをパーソナライゼーションソリューションとして使用します。 リクエストは、選択したパーソナライゼーションソリューションによって異なる場合があります。
+>このサンプルリクエストでは、Adobe Target をパーソナライゼーションソリューションとして使用します。リクエストは、選択したパーソナライゼーションソリューションによって異なる場合があります。
 
 
 **API 形式**
@@ -162,12 +162,12 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | はい。 | Edge ネットワークにインタラクションを渡す際に使用するデータストリームの ID。 詳しくは、 [データストリームの概要](../datastreams/overview.md) を参照してください。 |
-| `requestId` | `String` | × | 内部サーバーリクエストを関連付けるためのランダム ID。 何も指定されない場合、Edge ネットワークはそれらを生成し、応答で返します。 |
+| `dataStreamId` | `String` | はい。 | Edge Network にインタラクションを渡すために使用するデータストリームの ID。データストリームの設定方法については、[データストリームの概要](../datastreams/overview.md)を参照してください。 |
+| `requestId` | `String` | いいえ | 内部サーバーリクエストを関連付けるためのランダム ID。何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
 
-### サーバー側の応答 {#server-response}
+### サーバーサイド応答 {#server-response}
 
-以下のレスポンスのサンプルは、Server API の応答がどのようになるかを示しています。
+以下のサンプル応答では、Server API 応答がどのようになるかを示します。
 
 
 ```json
@@ -201,9 +201,9 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 }
 ```
 
-## クライアント側のリクエスト {#client-request}
+## クライアントサイドリクエスト {#client-request}
 
-クライアントページでは、 [!DNL Web SDK] `applyResponse` コマンドを呼び出して、サーバー側応答のヘッダーと本文を渡します。
+クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドを呼び出して、サーバーサイド応答のヘッダーと本文を渡します。
 
 ```js
    alloy("applyResponse", {
@@ -253,7 +253,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
    ).then(applyPersonalization("sample-json-offer"));
 ```
 
-フォームベース [!DNL JSON] オファーは、 `applyPersonalization` メソッドを使用して、 [!DNL DOM] パーソナライゼーションオファーに基づいて フォームベースのアクティビティの場合、表示イベントを手動で送信して、オファーがいつ表示されたかを示す必要があります。 これは、 `sendEvent` コマンドを使用します。
+フォームベースの [!DNL JSON] オファーでは、`applyPersonalization` メソッドを通じて手動で適用し、パーソナライゼーションオファーに基づいて [!DNL DOM] を更新します。フォームベースのアクティビティの場合、オファーがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。これは、`sendEvent` コマンドで実行します。
 
 ```js
 function sendDisplayEvent(decision) {
@@ -280,7 +280,7 @@ function sendDisplayEvent(decision) {
 
 ## サンプルアプリケーション {#sample-app}
 
-このタイプのパーソナライゼーションの実験や詳細の確認に役立つように、ダウンロードしてテストに使用できるサンプルアプリケーションを提供しています。 ここから、アプリケーションの使用方法に関する詳細な手順と共に、アプリケーションをダウンロードできます。 [GitHub リポジトリ](https://github.com/adobe/alloy-samples).
+このタイプのパーソナライゼーションの実験や詳細の確認に役立つように、ダウンロードしてテストに使用できるサンプルアプリケーションを提供しています。この [GitHub リポジトリ](https://github.com/adobe/alloy-samples)から、アプリケーションとその使用方法に関する詳細な手順をダウンロードできます。
 
 
 
