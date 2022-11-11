@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Oracleサービスクラウド；oracleサービスクラウド
-title: フローサービス API を使用したOracleサービスクラウドソース接続の作成
-description: フローサービス API を使用してAdobe Experience PlatformをOracleサービスクラウドに接続する方法を説明します。
+keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Service Cloud;oracle service cloud
+title: Flow Service API を使用した Oracle Service Cloud ソース接続の作成
+description: Flow Service API を使用して Adobe Experience Platform を Oracle Service Cloud に接続する方法について説明します。
 source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
-# （ベータ版） [!DNL Flow Service] API
+# （ベータ版）[!DNL Flow Service] API を使用した Oracle Service Cloud ソース接続の作成
 
 >[!NOTE]
 >
->oracleサービスクラウドソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>Oracle Service Cloud ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して Oracle Service Cloud のベース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -26,20 +26,20 @@ ht-degree: 33%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して Oracle Service Cloud に正しく接続するために必要な追加情報を示します。
 
 ### 必要な認証情報の収集
 
-次のために [!DNL Flow Service] oracleサービスクラウドに接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を Oracle Service Cloud に接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 認証情報 | 説明 |
 | ---------- | ----------- |
-| `host` | oracleサービスクラウドインスタンスのホスト URL。 |
-| `username` | Service Cloud ユーザーアカウントのOracle。 |
-| `password` | Service Cloud アカウントのOracle。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 oracleサービスクラウドの接続仕様 ID は次のとおりです。 `ba5126ec-c9ac-11eb-b8bc-0242ac130003`. |
+| `host` | Oracle Service Cloud インスタンスのホスト URL。 |
+| `username` | Oracle Service Cloud ユーザーアカウントのユーザー名。 |
+| `password` | Oracle Service Cloud アカウントのパスワード。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。Oracle Service Cloud の接続仕様 ID は `ba5126ec-c9ac-11eb-b8bc-0242ac130003` です。 |
 
-oracleサービスクラウドアカウントの認証について詳しくは、 [[!DNL Oracle] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
+Oracle Service Cloud アカウントの認証について詳しくは、[[!DNL Oracle] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)を参照してください。
 
 ### Platform API の使用
 
@@ -49,7 +49,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを使用して、Oracleサービスクラウド認証資格情報をリクエストパラメーターの一部として指定する際に使用します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に Oracle Service Cloud 認証資格情報をリクエストパラメーターの一部として指定します。
 
 **API 形式**
 
@@ -59,7 +59,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、Oracleサービスクラウドのベース接続を作成します。
+次のリクエストでは、Oracle Service Cloud のベース接続を作成しています。
 
 ```shell
 curl -X POST \
@@ -89,14 +89,14 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | oracleサービスクラウドインスタンスのホスト URL。 |
-| `auth.params.username` | Service Cloud アカウントに関連付けられたOracle。 |
-| `auth.params.password` | Service Cloud アカウントに関連付けられたOracle。 |
-| `connectionSpec.id` | oracleサービスクラウド接続仕様 ID: `ba5126ec-c9ac-11eb-b8bc-0242ac130003` |
+| `auth.params.host` | Oracle Service Cloud インスタンスのホスト URL。 |
+| `auth.params.username` | Oracle Service Cloud アカウントに関連付けられたユーザー名。 |
+| `auth.params.password` | Oracle Service Cloud アカウントに関連付けられたパスワード。 |
+| `connectionSpec.id` | Oracle Service Cloud 接続仕様 ID：`ba5126ec-c9ac-11eb-b8bc-0242ac130003` |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) をクリックします。 この ID は、次の手順で CRM システムを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
 
 ```json
 {
@@ -107,7 +107,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して Oracle Service Cloud ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/customer-success.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用した、カスタマーサクセスデータを Platform に取り込むデータフローの作成](../../collect/customer-success.md)
