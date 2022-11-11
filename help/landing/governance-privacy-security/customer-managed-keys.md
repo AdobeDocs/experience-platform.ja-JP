@@ -1,91 +1,91 @@
 ---
-title: Adobe Experience Platformの顧客管理キー
-description: Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
+title: Adobe Experience Platform の顧客管理キー
+description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1493'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Platformでの顧客管理キー
+# Adobe Experience Platform の顧客管理キー
 
-Adobe Experience Platformに保存されたデータは、システムレベルのキーを使用して保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択し、データのセキュリティをより詳細に制御できます。
+Adobe Experience Platform に保存されたデータは、システムレベルのキーを使用して保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択すると、データのセキュリティをより詳細に制御できます。
 
-このドキュメントでは、Platform で顧客管理キー (CMK) 機能を有効にするプロセスについて説明します。
+このドキュメントでは、Platform で顧客管理キー（CMK）機能を有効にするプロセスについて説明します。
 
 ## プロセスの概要
 
-CMK は、ヘルスケアシールドおよびAdobeのプライバシーとセキュリティのシールドサービスに含まれます。 お客様の組織がこれらの製品の 1 つに対するライセンスを購入した後、1 回限りのプロセスで機能を設定できます。
+CMK は、アドビの Healthcare Shield サービスおよび Privacy and Security Shield サービスに含まれています。お客様の組織がこれらの製品の 1 つに対するライセンスを購入すると、1 回限りのプロセスで機能を設定できます。
 
 >[!WARNING]
 >
->CMK を設定した後は、システム管理キーに戻すことはできません。 鍵を安全に管理し、内で Key Vault、Key、CMK アプリにアクセスできるようにする責任を負います [!DNL Azure] データへのアクセスが失われるのを防ぐため。
+>CMK を設定した後は、システム管理キーに戻すことはできません。 キーを安全に管理し、[!DNL Azure] 内で Key Vault、キー、CMK アプリへのアクセスを提供して、データへのアクセスが失われないようにする責任があります。
 
-プロセスは次のとおりです。
+プロセスは以下のようになります。
 
-1. [の設定 [!DNL Microsoft Azure] Key Vault](#create-key-vault) 組織のポリシーに基づいて、 [暗号化キーを生成](#generate-a-key) それは最終的にAdobeと共有される。
-1. API 呼び出しを使用して [CMK アプリのセットアップ](#register-app) を [!DNL Azure] テナント。
-1. API 呼び出しを使用して [暗号化キー ID をAdobeに送信](#send-to-adobe) 機能のイネーブルメントプロセスを開始します。
-1. [設定のステータスの確認](#check-status) :CMK が有効になっているかどうかを確認します。
+1. [組織のポリシーに基づく  [!DNL Microsoft Azure] Key Vault](#create-key-vault) を設定してから、最終的にアドビと共有される[暗号化キーを生成](#generate-a-key)します。
+1. API 呼び出しを使用して、[!DNL Azure] テナントで [CMK アプリを設定](#register-app)します。
+1. API 呼び出しを使用して[暗号化キー ID をアドビに送信](#send-to-adobe)し、機能のイネーブルメントプロセスを開始します。
+1. [設定のステータスの確認](#check-status)：CMK が有効になっているかどうかを確認します。
 
-設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform に転送されるすべてのデータは、 [!DNL Azure] キーの設定。 CMK を使用するには、 [!DNL Microsoft Azure] その一部となる機能 [公開プレビュープログラム](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+設定プロセスが完了すると、すべてのサンドボックスをまたいで Platform にオンボードされたデータがすべて、[!DNL Azure] キーの設定を使用して暗号化されます。CMK を使用するには、[公開プレビュープログラム](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/)の一部である [!DNL Microsoft Azure] 機能を活用します。
 
-## の設定 [!DNL Azure] Key Vault {#create-key-vault}
+## [!DNL Azure] Key Vault の設定 {#create-key-vault}
 
-CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、 [!DNL Azure] 新しいエンタープライズアカウントを作成するには、または既存のエンタープライズアカウントを使用して、以下の手順に従って Key Vault を作成します。
+CMK は、[!DNL Microsoft Azure] Key Vault からのキーのみをサポートします。作業を開始するには、[!DNL Azure] を使用して新しいエンタープライズアカウントを作成するか、既存のエンタープライズアカウントを使用して、以下の手順に従って Key Vault を作成する必要があります。
 
 >[!IMPORTANT]
 >
->の Premium 層と Standard サービス層のみ [!DNL Azure] Key Vault がサポートされています。 [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] および [!DNL Azure Payments HSM] はサポートされていません。 詳しくは、 [[!DNL Azure] ドキュメント](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) を参照してください。
+>[!DNL Azure] Key Vault の Premium と Standard のサービスレベルのみがサポートされています。[!DNL Azure Managed HSM]、[!DNL Azure Dedicated HSM] および [!DNL Azure Payments HSM] ではサポートされていません。提供されるキー管理サービスについて詳しくは、[[!DNL Azure] ドキュメント](https://learn.microsoft.com/ja-jp/azure/security/fundamentals/key-management#azure-key-management-services)を参照してください。
 
 >[!NOTE]
 >
->以下のドキュメントでは、キー Vault を作成する基本的な手順についてのみ説明します。 このガイダンス以外では、組織のポリシーに従って Key Vault を設定する必要があります。
+>以下のドキュメントでは、Key Vault を作成する基本的な手順についてのみ説明します。 このガイダンス以外では、組織のポリシーに従って Key Vault を設定する必要があります。
 
-にログインします。 [!DNL Azure] ポータルで **[!DNL Key vaults]** をクリックします。
+[!DNL Azure] ポータルにログインし、検索バーを使用してサービスのリストの下にある **[!DNL Key vaults]** を見つけます。
 
-![キーボールトを検索して選択する](../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
+![Key Vault の検索と選択](../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
 
-この **[!DNL Key vaults]** ページが表示されます。 ここからを選択します。 **[!DNL Create]**.
+サービスを選択すると、**[!DNL Key vaults]** ページが表示されます。 ここから **[!DNL Create]** を選択します。 
 
-![キー Vault を作成](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+![Key Vault の作成](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
-提供されたフォームを使用して、名前や割り当てられたリソースグループなど、キー Vault の基本的な詳細を入力します。
+提供されたフォームを使用して、名前や割り当てられたリソースグループなど、Key Vault の基本的な詳細を入力します。
 
 >[!WARNING]
 >
->ほとんどのオプションはデフォルト値のままでかまいませんが、 **必ず soft-delete および purge protection オプションを有効にしてください**. これらの機能をオンにしないと、キーボールトが削除された場合に、データへのアクセスが失われる可能性があります。
+>ほとんどのオプションはデフォルト値のままでかまいませんが、**必ずソフト削除および消去保護オプションを有効にしてください**。これらの機能を有効にしないと、Key Vault が削除された場合に、データへのアクセスが失われる可能性があります。
 >
->![パージ保護を有効にする](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
+>![消去保護を有効にする](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
-ここから、主要な Vault 作成ワークフローを続け、組織のポリシーに従って様々なオプションを設定します。
+ここから、Key Vault の作成ワークフローを続け、組織のポリシーに従って様々なオプションを設定します。
 
-いったん **[!DNL Review + create]** 手順では、検証中にキー vault の詳細を確認できます。 検証が合格したら、「 **[!DNL Create]** をクリックしてプロセスを完了します。
+**[!DNL Review + create]** 手順に達したら、検証中に Key Vault の詳細を確認できます。 検証に問題がなければ、「**[!DNL Create]**」を選択してプロセスを完了します。
 
-![キー Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+![Key Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-### ネットワークオプションの構成
+### ネットワークオプションの設定
 
-公開アクセスを特定の仮想ネットワークに制限するようにキー Vault が設定されている場合、または公開アクセスを完全に無効にする場合は、Microsoftにファイアウォール例外を許可する必要があります。
+公開アクセスを特定の仮想ネットワークに制限するように Key Vault が設定されている場合、または公開アクセスを完全に無効にする場合は、Microsoft にファイアウォールの例外を許可する必要があります。
 
-選択 **[!DNL Networking]** をクリックします。 の下 **[!DNL Firewalls and virtual networks]**、チェックボックスを選択します。 **[!DNL Allow trusted Microsoft services to bypass this firewall]**&#x200B;を選択し、「 **[!DNL Apply]**.
+左側のナビゲーションの「**[!DNL Networking]**」を選択します。 **[!DNL Firewalls and virtual networks]** の下で、「**[!DNL Allow trusted Microsoft services to bypass this firewall]**」チェックボックスを選択し、「**[!DNL Apply]**」を選択します。
 
-![キー Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/networking.png)
+![Key Vault の基本設定](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-### キーを生成 {#generate-a-key}
+### キーの生成 {#generate-a-key}
 
-キー Vault を作成したら、新しいキーを生成できます。 次に移動： **[!DNL Keys]** 「 」タブで「 」を選択します。 **[!DNL Generate/Import]**.
+Key Vault を作成したら、新しいキーを生成できます。 「**[!DNL Keys]**」タブに移動し、「**[!DNL Generate/Import]**」を選択します。
 
-![キーを生成](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
+![キーの生成](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-提供されたフォームを使用してキーの名前を指定し、「 」を選択します。 **RSA** キータイプの。 少なくとも、 **[!DNL RSA key size]** は、少なくとも **3072** 必要なビット [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
+提供されたフォームを使用してキーの名前を指定し、キータイプに「**RSA**」を選択します。最小でも、**[!DNL RSA key size]** は、[!DNL Cosmos DB] で要求されているように、少なくとも **3072** ビットである必要があります。[!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
 
 >[!NOTE]
 >
->キーに指定した名前を記憶しておきます。これは、後の手順で [キーをAdobeに送信](#send-to-adobe).
+>キーに指定した名前を覚えておきます。これは、後の手順で[キーをアドビに送信する](#send-to-adobe)ときに使用します。
 
-残りのコントロールを使用して、必要に応じて生成またはインポートするキーを設定します。 終了したら、「 」を選択します。 **[!DNL Create]**.
+残りのコントロールを使用して、必要に応じて生成または読み込むキーを設定します。終了したら「**[!DNL Create]**」を選択します。
 
 ![キーを設定](../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
@@ -95,17 +95,17 @@ CMK は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、
 
 ## CMK アプリのセットアップ {#register-app}
 
-キー Vault を設定したら、次の手順は、にリンクする CMK アプリケーションを登録することです [!DNL Azure] テナント。
+Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリンクする CMK アプリケーションを登録します 。
 
 >[!NOTE]
 >
->CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しをおこなうために必要な認証ヘッダーの収集方法について詳しくは、 [Platform API 認証ガイド](../../landing/api-authentication.md).
+>CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../landing/api-authentication.md)を参照してください。
 >
->認証ガイドでは、必要に応じて独自の一意の値を生成する方法を説明しています `x-api-key` リクエストヘッダー。このガイドのすべての API 操作では、静的な値が使用されます `acp_provisioning` 代わりに、 引き続き、 `{ACCESS_TOKEN}` および `{ORG_ID}`ただし、
+>認証ガイドでは、必要である `x-api-key` リクエストヘッダーに独自の一意の値を生成する方法を説明していますが、このガイドのすべての API 操作では、代わりに、静的な値 `acp_provisioning` が使用されます。ただし、`{ACCESS_TOKEN}` と `{ORG_ID}` には独自の値を指定する必要があります。
 
 ### 認証 URL の取得
 
-登録プロセスを開始するには、アプリ登録エンドポイントに対してGETリクエストを実行し、組織に必要な認証 URL を取得します。
+登録プロセスを開始するには、アプリ登録エンドポイントに対して GET リクエストを実行し、組織に必要な認証 URL を取得します。
 
 **リクエスト**
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 **応答**
 
-成功すると、 `applicationRedirectUrl` 認証 URL を含むプロパティ。
+成功した応答は、認証 URL を含む `applicationRedirectUrl` プロパティを返します。
 
 ```json
 {
@@ -131,43 +131,43 @@ curl -X GET \
 }
 ```
 
-をコピーして貼り付けます。 `applicationRedirectUrl` アドレスをブラウザーに送信し、認証ダイアログを開きます。 選択 **[!DNL Accept]** CMK アプリサービスプリンシパルを [!DNL Azure] テナント。
+`applicationRedirectUrl` アドレスをコピーしてブラウザーに貼り付け、認証ダイアログを開きます。**[!DNL Accept]** を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。
 
-![許可リクエストを承認](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![権限リクエストの承認](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-### CMK アプリをロールに割り当てます。 {#assign-to-role}
+### CMK アプリを役割に割り当てます。 {#assign-to-role}
 
-認証プロセスが完了したら、 [!DNL Azure] Key Vault を選択し、を選択します。 **[!DNL Access control]** をクリックします。 ここからを選択します。 **[!DNL Add]** 続いて **[!DNL Add role assignment]**.
+認証プロセスが完了したら、[!DNL Azure] Key Vault に戻り、左側のナビゲーションで **[!DNL Access control]** を選択します。 ここから **[!DNL Add]** を選択し、続けて **[!DNL Add role assignment]** を選択します。
 
-![役割の割り当てを追加](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![役割の割り当ての追加](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
-次の画面で、この割り当ての役割を選択するように求められます。 選択 **[!DNL Key Vault Crypto Service Encryption User]** 選択する前に **[!DNL Next]** をクリックして続行します。
+次の画面では、この割り当ての役割を選択するように求められます。**[!DNL Key Vault Crypto Service Encryption User]** を選択してから **[!DNL Next]** を選択し、続行します。
 
-![ロールを選択](../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![役割の選択](../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
-次の画面で、「 」を選択します。 **[!DNL Select members]** をクリックして、右側のパネルでダイアログを開きます。 検索バーを使用して CMK アプリケーションのサービスプリンシパルを探し、リストから選択します。 終了したら、「 」を選択します。 **[!DNL Save]**.
-
->[!NOTE]
->
->リストにアプリケーションが見つからない場合は、サービスプリンシパルがテナントに受け入れられていません。 ご一緒に作業してください [!DNL Azure] 管理者または担当者に問い合わせて、正しい権限を持っていることを確認します。
-
-## Experience Platformの暗号化キー設定を有効にする {#send-to-adobe}
-
-CMK アプリを [!DNL Azure]を使用すると、暗号化キー識別子をAdobeに送信できます。 選択 **[!DNL Keys]** 左のナビゲーションで、送信するキーの名前を入力します。
-
-![キーを選択](../images/governance-privacy-security/customer-managed-keys/select-key.png)
-
-キーの最新バージョンを選択すると、その詳細ページが表示されます。 ここから、オプションでキーに対して許可する操作を設定できます。 少なくとも、キーには **[!DNL Wrap Key]** および **[!DNL Unwrap Key]** 権限。
-
-この **[!UICONTROL キー識別子]** 「 」フィールドには、キーの URI 識別子が表示されます。 この URI 値をコピーして、次の手順で使用します。
-
-![キー URL をコピー](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
-
-キー Vault URI を取得したら、POSTリクエストを使用して CMK 設定エンドポイントに送信できます。
+次の画面で、「**[!DNL Select members]**」 を選択して、右側のパネルでダイアログを開きます。 検索バーを使用して CMK アプリケーションのサービスプリンシパルを見つけ、リストから選択します。 終了したら「**[!DNL Save]**」を選択します。
 
 >[!NOTE]
 >
->キーの Vault とキー名のみがAdobeで保存され、キーのバージョンは保存されません。
+>リストにアプリケーションが見つからない場合は、サービスプリンシパルがテナントに受け入れられていません。 [!DNL Azure] 管理者または担当者と協力して、適切な権限を持っていることを確認してください。
+
+## Experience Platform の暗号化キー設定を有効にする {#send-to-adobe}
+
+CMK アプリを [!DNL Azure] にインストールすると、暗号化キー識別子をアドビに送信できます。 左側のナビゲーションで「**[!DNL Keys]**」を選択し、次に送信するキーの名前を選択します。
+
+![キーの選択](../images/governance-privacy-security/customer-managed-keys/select-key.png)
+
+キーの最新バージョンを選択すると、その詳細ページが表示されます。ここから、オプションでキーに対して許可する操作を設定できます。少なくとも、キーには **[!DNL Wrap Key]** および **[!DNL Unwrap Key]** 権限が付与されている必要があります。
+
+「**[!UICONTROL キー識別子]**」フィールドには、キーの URI 識別子が表示されます。次の手順で使用するために、この URI 値をコピーします。
+
+![キー URL のコピー](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+
+Key Vault の URI を取得したら、POST リクエストを使用して CMK 設定エンドポイントに送信できます。
+
+>[!NOTE]
+>
+>Key Vault とキーの名前のみがアドビに保存され、キーのバージョンは保存されません。
 
 **リクエスト**
 
@@ -190,10 +190,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 設定の名前。 この値は、 [後の手順](#check-status). 値では大文字と小文字が区別されます。 |
+| `name` | 設定の名前。この値は、[後の手順](#check-status)で設定のステータスを確認する際に必要なため、覚えておいてください。この値は、大文字と小文字を区別します。 |
 | `type` | 設定タイプ。 `BYOK_CONFIG` に設定する必要があります。 |
-| `imsOrgId` | IMS 組織 ID。これは、 `x-gw-ims-org-id` ヘッダー。 |
-| `configData` | 設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultIdentifier`:コピーしたキーボールト URI [以前](#send-to-adobe).</li></ul> |
+| `imsOrgId` | IMS 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで指定される値と同じである必要があります。 |
+| `configData` | 設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
 
 **応答**
 
@@ -219,15 +219,15 @@ curl -X POST \
 }
 ```
 
-ジョブは、数分以内に処理を完了する必要があります。
+このジョブは、数分以内に処理を完了する必要があります。
 
 ## 設定のステータスの確認 {#check-status}
 
-設定リクエストのステータスを確認するには、GETリクエストを実行します。
+設定リクエストのステータスを確認するには、GET リクエストを実行します。
 
 **リクエスト**
 
-を追加する必要があります。 `name` パス (`config1` （以下の例では）、およびを `configType` クエリパラメーターをに設定 `BYOK_CONFIG`.
+確認する設定の `name` をパスに追加し（以下の例では `config1`）、`BYOK_CONFIG` に設定された `configType` クエリパラメーターを含める必要があります。
 
 ```shell
 curl -X GET \
@@ -260,19 +260,19 @@ curl -X GET \
 }
 ```
 
-この `status` 属性には、次の 4 つの意味の値のいずれかを指定できます。
+この `status` 属性には、次の意味を持つ 4 つの値のいずれかを指定できます。
 
-1. `RUNNING`:Platform がキーとキーの Vault にアクセスできることを検証します。
-1. `UPDATE_EXISTING_RESOURCES`:システムは、組織内のすべてのサンドボックスにわたって、キー Vault とキー名をデータストアに追加しています。
-1. `COMPLETED`:キー Vault とキー名がデータストアに追加されました。
-1. `FAILED`:主にキー、キー Vault、またはマルチテナントのアプリセットアップに関連する問題が発生しました。
+1. `RUNNING`：Platform がキーと Key Vault にアクセスできることを検証します。
+1. `UPDATE_EXISTING_RESOURCES`：システムは、組織内のすべてのサンドボックスのデータストアに Key Vault とキー名を追加しています。
+1. `COMPLETED`：Key Vault とキー名がデータストアに追加されました。
+1. `FAILED`：問題が発生しました。主にキー、Key Vault、またはマルチテナントのアプリ設定に関連しています。
 
 ## 次の手順
 
-上記の手順を完了すると、組織で CMK が正常に有効になります。 Platform に取り込まれたデータは、暗号化され、 [!DNL Azure] キー Vault。 データへの Platform アクセスを取り消す場合は、内のキー Vault から、アプリケーションに関連付けられているユーザの役割を削除できます。 [!DNL Azure].
+上記の手順を完了すると、組織で CMK が正常に有効になります。 Platform に取り込まれたデータは、[!DNL Azure] Key Vault のキーを使用して暗号化および復号化されるようになりました。データへの Platform アクセスを取り消す場合は、アプリケーションに関連付けられているユーザーの役割を [!DNL Azure] 内の Key Vault から削除できます。
 
-アプリケーションへのアクセスを無効にした後、Platform でデータにアクセスできなくなるまで、数分から 24 時間かかる場合があります。 同じ時間遅延が、アプリケーションへのアクセスを再度有効にした場合に、データが再び使用可能になるのに適用されます。
+アプリケーションへのアクセスを無効にした後、Platform でデータにアクセスできなくなるまで、数分から 24 時間かかる場合があります。アプリケーションへのアクセスを再度有効にすると、データが再び使用可能になるまで、同じように遅延時間が発生します。
 
 >[!WARNING]
 >
->Key Vault、Key、または CMK アプリが無効になり、Platform でデータにアクセスできなくなると、そのデータに関連するダウンストリーム操作はできなくなります。 設定を変更する前に、データへの Platform アクセスを取り消すことによるダウンストリームの影響を理解しておく必要があります。
+>Key Vault、キー、または CMK アプリが無効になり、Platform でデータにアクセスできなくなると、そのデータに関連するダウンストリーム操作ができなくなります。 設定を変更する前に、Platform でのデータアクセスができなくなることによるダウンストリームの影響を理解しておく必要があります。
