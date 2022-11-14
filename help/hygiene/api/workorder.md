@@ -2,20 +2,20 @@
 title: 作業指示 API エンドポイント
 description: Data Hygiene API の /workorder エンドポイントを使用すると、消費者 ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 97%
+source-wordcount: '981'
+ht-degree: 98%
 
 ---
 
 # 作業指示エンドポイント
 
+Data Hygiene API の `/workorder` エンドポイントを使用すると、Adobe Experience Platform の消費者データ削除リクエストをプログラムで管理できます。
+
 >[!IMPORTANT]
 >
->Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
-
-Data Hygiene API の `/workorder` エンドポイントを使用すると、Adobe Experience Platform の消費者データ削除リクエストをプログラムで管理できます。
+>消費者の削除リクエストは、を購入した組織でのみ使用できます **Adobeヘルスケアシールド**.
 
 ## はじめに
 
