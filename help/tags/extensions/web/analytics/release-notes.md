@@ -2,18 +2,29 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 6bb452285ea98380617afd13462b4a2b9a8e8b68
+source-git-commit: cc04a40b2fb649511950ed80af7028a19154dcdd
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 99%
+source-wordcount: '1333'
+ht-degree: 92%
 
 ---
 
 # Adobe Analytics 拡張機能のリリースノート
 
+Adobe Analyticsタグ拡張機能のリリースノートのリストを次に示します。
+
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Analytics タグ拡張 ( [AppMeasurement JavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurement リリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
+
+## 2022年9月23日（PT）
+
+**Adobe Analytics Extension 1.9.1**
+
+**機能**:
+
+* AppMeasurement v2.23.0にアップグレード。
+* 拡張機能は高エントロピーを収集できるようになった [user-agent クライアントのヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンの AppMeasurement でサポートされている
 
 ## 2022年2月28日（PT）
 
@@ -46,7 +57,7 @@ ht-degree: 99%
 
 **バグの修正**:
 
-* [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) にアップグレードしました。
+* [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) にアップグレードしました。
 * innerHTML を使用する代わりに、Activity Map ロジックを反映するように linkName のフォールバックを更新しました。
 
 ## 2020 年 8 月 6 日（PT）
@@ -161,7 +172,7 @@ ht-degree: 99%
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
 * [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
-* 現在サポートされていないので、次のチェックボックスを削除しました：「Do not attach the destination publishing IFRAME to the DOM or fire destinations」
+* 次のチェックボックスは、サポートされなくなったので、削除しました。&quot;宛先パブリッシング IFRAME を DOM に付加したり、宛先を有効にしたりしない&quot;
 
 ## 2019 年 6 月 4 日（PT）
 
