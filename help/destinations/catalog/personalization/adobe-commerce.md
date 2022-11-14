@@ -2,10 +2,10 @@
 title: （ベータ版）Adobe Commerce 宛先コネクタ
 description: Adobe Commerce と Real-Time CDP を使用して、Real-Time CDP で作成および管理される顧客セグメントに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、ショッピングエクスペリエンスをパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe 開発者コンソール](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud バージョン 2.4.3 以降](https://business.adobe.com/jp/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud バージョン 2.4.4 以降](https://business.adobe.com/jp/products/magento/magento-commerce.html)
 
 Experience Platform で、以下を作成します。
 
