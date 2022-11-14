@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 93%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 0%
       * [!DNL Marketo Munchkin] {#marketo}
          * [概要](./extensions/web/marketo/overview.md)
          * [リリースノート](./extensions/web/marketo/release-notes.md)
+      * Google Ads 拡張コンバージョン {#google-ads-enhanced-conversions}
+         * [概要](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google Data Layer {#google-data-layer}
          * [概要](./extensions/web/google-data-layer/overview.md)
          * [リリースノート](./extensions/web/google-data-layer/release-notes.md)
