@@ -2,10 +2,10 @@
 title: データハイジーンの概要
 description: Adobe Experience Platform のデータハイジーンを使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 84%
+source-wordcount: '886'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +20,11 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 Platform のデータハイジーン機能を使用すると、以下を通じて保存済みの消費者データを管理できます。
 
 * 自動化されたデータセット有効期限切れのスケジュール設定
-* 取り込んだ ID に基づく消費者データの削除
+* レコードからの個々の消費者データの削除
+
+>[!IMPORTANT]
+>
+>消費者による削除は、データのクレンジング、匿名データの削除またはデータの最小化に使用されます。 これらは **not** :EU 一般データ保護規則 (GDPR) などのプライバシー規制に関するデータ主体の権利要求（コンプライアンス）に使用されます。 すべてのコンプライアンスの使用例に対して、 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 代わりに、
 
 これらのアクティビティは、[[!UICONTROL データハイジーン] UI ワークスペース](#ui)または [Data Hygiene API](#api)を使用して実行できます。データハイジーンジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
 

@@ -2,10 +2,10 @@
 title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 90%
+source-wordcount: '471'
+ht-degree: 80%
 
 ---
 
@@ -47,7 +47,10 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 
 >[!IMPORTANT]
 >
->消費者の削除要求は、Healthcare Shield を購入したAdobeでのみ利用できます。
+>消費者の削除リクエストは、を購入した組織でのみ使用できます **Adobeヘルスケアシールド**.
+>
+>
+>消費者による削除は、データのクレンジング、匿名データの削除またはデータの最小化に使用されます。 これらは **not** :EU 一般データ保護規則 (GDPR) などのプライバシー規制に関するデータ主体の権利要求（コンプライアンス）に使用されます。 すべてのコンプライアンスの使用例に対して、 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 代わりに、
 
 Data Hygiene API を使用すると、1 つまたはすべてのデータセットにわたって、消費者 ID に関連付けられたすべてのレコードを削除できます。消費者 ID を削除するすべてのデータハイジーンタスクは、作業指示と呼ばれる構成によって表されます。API での作業指示の操作について詳しくは、[作業指示エンドポイントガイド](./workorder.md)を参照してください。
 
