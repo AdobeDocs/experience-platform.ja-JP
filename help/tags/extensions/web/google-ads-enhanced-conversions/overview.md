@@ -1,9 +1,10 @@
 ---
 title: Google Ads Enhanced Conversions 拡張機能
 description: Adobe Experience Platformでのイベント転送に関するGoogle Ads 拡張コンバージョン拡張機能について説明します。
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 2%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 2%
 >クライアント側コンバージョンイベントをイベント転送から送信されたファーストパーティデータに関連付けるには、 `transaction_ID` は、両方の呼び出しで同じである必要があります。 各サービスでこの値を指定する必要がある場所について詳しくは、 [タグ](#conversion-action-tags) および [イベント転送](#conversion-action-event-forwarding)、それぞれ。
 
 コンバージョンイベントの送信には、クライアント側とサーバー側の両方の実装が必要なので、このドキュメントでは、クライアント側の設定の前提条件となる手順について説明します [[!DNL Google Global Site Tag] (gtag) 拡張](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) に加えて [!DNL Enhanced Conversions] イベント転送用の拡張機能。
+
+次のビデオでは、 [!DNL Enhanced Conversions] 拡張機能を使用し、次の大まかな実装手順について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## タグを使用してコンバージョンを送信する
 
