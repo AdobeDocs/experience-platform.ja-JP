@@ -4,10 +4,10 @@ solution: Experience Platform
 title: バッチ取得 API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
-ht-degree: 78%
+source-wordcount: '2413'
+ht-degree: 77%
 
 ---
 
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
 
 **応答** 
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.parquet`. |
 
 **応答** 
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
 
 
 **応答** 
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.csv`. |
 
 
 **応答** 
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
 
 **応答** 
 
