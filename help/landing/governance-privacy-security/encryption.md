@@ -3,10 +3,10 @@ title: Adobe Experience Platformでのデータ暗号化
 topic-legacy: data protection
 description: 送信時およびAdobe Experience Platformでの保存時にデータを暗号化する方法を説明します。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '396'
+ht-degree: 5%
 
 ---
 
@@ -37,7 +37,7 @@ Platform と外部コンポーネントとの間で転送されるすべての�
 
 Platform で取り込まれ、使用されるデータは、接触チャネルやファイル形式に関係なく、システムで管理されるすべてのデータを含む、非常に精度の高いデータストアであるデータレイクに保存されます。 データレイクに保持されるすべてのデータは、分離された [[!DNL Microsoft Azure Data Lake] ストレージ](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 組織に固有のインスタンス。
 
-Azure Data Lake Storage および Cosmos DB での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption).
+Azure Data Lake Storage での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## 次の手順
 
