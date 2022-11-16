@@ -2,10 +2,10 @@
 description: この設定を使用すると、宛先名、カテゴリ、説明など、ファイルベースの宛先に関する重要な情報を指定できます。また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDKのファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2989'
-ht-degree: 59%
+source-wordcount: '3012'
+ht-degree: 58%
 
 ---
 
@@ -794,10 +794,13 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
     },
 ```
 
-どの [!DNL Platform] ID の顧客が宛先に書き出すことができるかを示す必要があります。例として、[!DNL Experience Cloud ID]、ハッシュ化されたメール、デバイス ID（[!DNL IDFA]、[!DNL GAID]）などがあります。これらの値は、[!DNL Platform] ID 名前空間であり、宛先から顧客が ID 名前空間にマッピングできます。また、宛先でサポートされている ID に顧客がカスタム名前空間をマッピングできるかどうかを指定することもできます。
+どの [!DNL Platform] ID の顧客が宛先に書き出すことができるかを示す必要があります。例として、[!DNL Experience Cloud ID]、ハッシュ化されたメール、デバイス ID（[!DNL IDFA]、[!DNL GAID]）などがあります。これらの値は、[!DNL Platform] ID 名前空間であり、宛先から顧客が ID 名前空間にマッピングできます。また、顧客が宛先 (`acceptsCustomNamespaces: true`) と、お客様が、標準の XDM 属性を、宛先 (`acceptsAttributes: true`) をクリックします。
 
 ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している必要はありません。
 例えば、顧客は [!DNL Platform] [!DNL IDFA] 名前空間を宛先からの [!DNL IDFA] 名前空間にマッピングすることができ、また顧客は同じ [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL Customer ID] 名前空間にマッピングすることもできます。
+
+詳しくは、 [ID 名前空間の概要](/help/identity-service/namespaces.md).
+
 
 ## バッチ設定 — ファイルの命名と書き出しのスケジュール設定 {#batch-configuration}
 
