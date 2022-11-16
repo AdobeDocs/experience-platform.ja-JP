@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
+source-wordcount: '4337'
 ht-degree: 16%
 
 ---
@@ -234,6 +234,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 {style=&quot;table-layout:auto&quot;}
 
 ### ユーザーエージェントの関数 {#user-agent}
+
+以下の表に示すユーザーエージェント関数は、次のいずれかの値を返すことができます。
+
+* 電話 — 小さい画面を持つモバイルデバイス（一般的に &lt; 7&quot;）
+* モバイル — 未識別のモバイルデバイス。 このモバイルデバイスは、eReader、タブレット、電話、時計などです。
 
 >[!NOTE]
 >
