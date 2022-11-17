@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能に関する最新のリリースノートです。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
+source-git-commit: 3ce913bea3beaaa365205dfd6724da61874de904
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 86%
+source-wordcount: '634'
+ht-degree: 77%
 
 ---
 
@@ -15,13 +15,17 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud ID サービス自体のリリースノートについては、[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
+このドキュメントでは、 Adobe Experience Cloud ID サービスタグ拡張のリリースノートについて説明します。 Experience CloudID サービス自体のリリースノートについては、 [ID サービスドキュメント](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja).
+
+## 2022 年 10 月 18 日
+
+### Experience Cloud ID Extension 5.5.0
+
+* 拡張機能で、バージョン 5.5.0 の [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). 詳しくは、 [訪問者リリースノート](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
 
 ## 2022 年 3 月 9 日（PT）
 
 ### Experience Cloud ID Extension 5.4.0
-
-#### **機能**
 
 * このバージョンには、次の更新が含まれる最新の Visitor 5.4.0 が含まれています。
 
@@ -31,8 +35,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 ## 2021年10月10日
 
 ### Experience Cloud ID Extension 5.3.1
-
-#### **機能**
 
 * このバージョンには、次の新しいアップデートが適用された最新の Visitor 5.3.0 が含まれています。
 
@@ -44,23 +46,17 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 5.2.0
 
-#### **機能**
-
 * 同意を受け取ったときに、ECID DataElement の修正を含む VisitorJS 5.2.0 パッチへのアップデートを更新できませんでした。
 
 ## 2020 年 11 月 3 日（PT）
 
 ### Experience Cloud ID Extension 5.2.1
 
-#### **機能**
-
 * このパッチには、Google Chrome ブラウザーで属性 `SameSite=None` を持つ iFrame から Cookie を書き込むための修正が含まれています。
 
 ## 2020 年 10 月 27 日（PT）
 
 ### Experience Cloud ID Extension 5.1.0
-
-#### **機能**
 
 * `AMCV` cookieの `SameSite` 属性を指定する `sameSiteCookie` 設定を追加しました。この設定では、`SameSite` 属性の次の値がサポートされます。
 
@@ -75,23 +71,17 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 5.0.1
 
-#### **機能**
-
 * VisitorJS 5.0.1 パッチに更新し、IAB 同意文字列が変更された場合の d_cf フラグの追加に関する修正を加えました。
 
 ## 2020 年 6 月 15 日（PT）
 
 ### Experience Cloud ID Extension 5.0.0
 
-#### **機能**
-
 * `IAB TCF` 透明性と同意に関するフレームワーク `Version 2.0` のサポートを追加しました。
 
 ## 2020 年 4 月 13 日（PT）
 
 ### Experience Cloud ID Extension 4.6.0
-
-#### **機能**
 
 * デフォルトで `loadSSL` フラグをオンにしました。ID サービスへのすべての呼び出しは、デフォルトにより、`https` でオンになります。非 SSL ページから http で ID サービスを呼び出す場合は、false に設定できます。
 * ESLint によって報告される問題を修正するため、Internet-Explorer（IE）のバージョン検出に使用する関数を更新しました。
@@ -101,8 +91,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 4.5.2
 
-#### **機能**
-
 * visitor.js を 4.5.2 に更新しました
 * 訪問者 4.5.1 には、Optin 用 IAB プラグインのバグ修正が含まれています
 * 送信された空の ID を拒否するよう `setCustomerIDs` メソッドを更新しました。
@@ -111,8 +99,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 4.4.2
 
-#### **機能**
-
 * visitor.js を 4.4.2 に更新しました
 * 値を素早く取得できるよう `getVisitorValues` メソッドを更新しました。
 
@@ -120,8 +106,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 ## 2019 年 9 月 19 日（PT）
 
 ### Experience Cloud ID Extension 4.4.1
-
-#### **機能**
 
 * visitor.js を 4.4.1 に更新しました
 * オプトイン preApprovals 入力の取得に関するバグを修正しました
@@ -133,8 +117,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 4.4.0
 
-#### **機能**
-
 * visitor.js を 4.4.0 に更新しました
 * setCustomerIDs の SHA256 ハッシュサポートを追加しました
 
@@ -143,8 +125,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 ## 2019 年 5 月 13 日（PT）
 
 ### Experience Cloud ID Extension 4.3.1
-
-#### **機能**
 
 * visitor.js を 4.3 に更新しました
 * タグ拡張機能の一部として、ECID にデータ要素タイプを追加しました
@@ -155,23 +135,17 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 
 ### Experience Cloud ID Extension 4.2.0
 
-#### **機能**
-
 * Audience Manager IAB TCF プラグインのサポートを含む visitor.js を 4.2 に更新しました。
 
 ## 2019 年 2 月 25 日（PT）
 
 ### Experience Cloud ID Extension 4.1.0
 
-#### **機能**
-
 * visitor.js を 4.1 に更新し、新しい API の変更に従って publishDestinations を更新しました。この更新により、必要に応じて、ID - 同期中にページのリファラー情報を表示できます。
 
 ## 2019 年 2 月 15 日（PT）
 
 ### Experience Cloud ID Extension 4.0.0
-
-#### **機能**
 
 * visitor.js を 4.0 に更新しました
 * 新しい組み込みオプトインオブジェクトの設定オプションを追加しました。オプトイン設定を使用して、GDPR などのサポート規則を改善するために、アドビソリューションの cookie やビーコン呼び出しを抑制することができます
@@ -181,8 +155,6 @@ Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud I
 ## 2018 年 3 月 20 日（PT）
 
 ### Experience Cloud ID Extension 3.1.0
-
-#### **機能**
 
 * visitor.js を 3.1 に更新しました
 * `resetBeforeVersion` と `serverState` の 2 つの設定プロパティを追加しました。
