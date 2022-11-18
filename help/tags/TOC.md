@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
+source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 93%
 
 ---
@@ -119,16 +119,18 @@ ht-degree: 93%
          * [概要](./extensions/web/core/overview.md)
          * [イベントの転送](./extensions/web/core/event-forwarding.md)
          * [リリースノート](./extensions/web/core/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [概要](./extensions/web/mailchimp/overview.md)
-      * [!DNL Marketo Munchkin] {#marketo}
-         * [概要](./extensions/web/marketo/overview.md)
-         * [リリースノート](./extensions/web/marketo/release-notes.md)
       * Google Ads 拡張コンバージョン {#google-ads-enhanced-conversions}
          * [概要](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google Data Layer {#google-data-layer}
          * [概要](./extensions/web/google-data-layer/overview.md)
          * [リリースノート](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [概要](./extensions/web/mailchimp/overview.md)
+      * [!DNL Marketo Munchkin] {#marketo}
+         * [概要](./extensions/web/marketo/overview.md)
+         * [リリースノート](./extensions/web/marketo/release-notes.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [概要](./extensions/web/azure/overview.md)
       * [!DNL Splunk] {#splunk}
          * [概要](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] ビデオトラッキング {#youtube}
