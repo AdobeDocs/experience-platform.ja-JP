@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1352'
 ht-degree: 70%
 
 ---
@@ -122,6 +122,5 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- | 
 | Adobe Workfront ソースのベータ版の提供 | [Adobe Workfront ソース](../../sources/connectors/adobe-applications/workfront.md)を使用すると、Workfront データを Experience Platform に取り込み、作業レコードとサードパーティデータの結合、作業レコードへの履歴分析と時系列分析の適用、標準 SQL を使用した作業データのクエリなどのユースケースを実行できます。詳しくは、[UI での Workfront ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/workfront.md)に関するガイドを参照してください。 |
-| Oracle Service Cloud ソースのベータ版の可用性 | Oracle Service Cloud ソースを使用すると、Oracle Service Cloud アカウントから Experience Platform にデータを取り込むことができます。詳しくは、[Oracle Service Cloud ソース](../../sources/connectors/customer-success/oracle-service-cloud.md)に関するドキュメントを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

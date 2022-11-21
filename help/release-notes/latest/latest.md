@@ -1,16 +1,17 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 36%
+source-wordcount: '1357'
+ht-degree: 70%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 10 月 26 日**
+**リリース日：2022年10月26日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -26,9 +27,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## 顧客管理キー {#cmk}
 
-Adobe Experience Platformに保存されるすべてのデータは、システムレベルのキーを使用して、保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合、代わりに独自の暗号化キーを使用するように選択できるようになり、データのセキュリティをより詳細に制御できます。
+Adobe Experience Platform に保存されるすべてのデータは、システムレベルのキーを使用して、保存時に暗号化されます。Platform 上に作成されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するように選択できるようになり、データのセキュリティをより詳細に制御できます。
 
-概要については、 [顧客管理キー](../../landing/governance-privacy-security/customer-managed-keys.md) 」を参照してください。
+機能について詳しくは、[顧客管理キー](../../landing/governance-privacy-security/customer-managed-keys.md)の概要を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -38,9 +39,9 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-| データストリームの機密データ処理 | データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、 [データストリーム内の感覚的なデータの処理](../../edge/datastreams/overview.md#sensitive) を参照してください。 |
-|  イベント転送用 [!DNL Splunk]拡張機能 | これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Splunk] 拡張機能の概要](../../tags/extensions/web/splunk/overview.md) を参照してください。 |
-|  イベント転送用 [!DNL Zendesk]拡張機能 | これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/web/zendesk/overview.md) を参照してください。 |
+| データストリームの機密データ処理 | データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制で強化される機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。 |
+|  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/web/splunk/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/web/zendesk/overview.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -61,9 +62,9 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | LINE は、人々、サービス、情報を結び付け、チャットアプリからエンターテインメント、ソーシャル、日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。 |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、企業のリソース計画 (ERP) と顧客関係管理 (CRM) を、生産性の高いアプリケーションと AI ツールと組み合わせ、エンドツーエンドのスムーズで制御可能な運用を実現し、潜在的な成長力を向上させ、コストを削減するクラウドベースのビジネスアプリケーションプラットフォームです。 |
-| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | この [!DNL (Beta) Adobe Commerce] 宛先コネクタを使用すると、アクティブ化するReal-Time CDPセグメントを 1 つ以上選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPセグメントを選択して、「buy 2 get 1 free」など、買い物かご内の個別オファーをパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPセグメント用にカスタマイズされています。 |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | LINE は、人物、サービスおよび情報をつなぎ、チャットアプリからエンターテインメント、ソーシャルおよび日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。 |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、クラウドベースのビジネスアプリケーションプラットフォームです。エンタープライズリソースプランニング（ERP）と顧客関係管理（CRM）を生産性アプリケーションおよび AI ツールと共に組み合わせて、よりスムーズで管理が強化されたエンドツーエンドの運用、成長の可能性の向上およびコスト削減を実現します。 |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | [!DNL (Beta) Adobe Commerce] 宛先コネクタを使用すると、[!DNL Adobe Commerce] アカウントに対してアクティブ化する Real-Time CDP セグメントを 1 つ以上選択して、買い物客向けにパーソナライズされた動的なエクスペリエンスを提供できます。[!DNL Adobe Commerce] 内でこれらの Real-Time CDP セグメントを選択して、「2 つ買うと 1 つ無料」などの、買い物かご内の独自のオファーをパーソナライズできます。また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべて Adobe Real-Time CDP セグメント用にカスタマイズされています。 |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | へのライブアウトバウンド接続を作成する [!DNL Azure Data Lake Storage Gen2] を使用して、Adobe Experience Platformから独自のストレージの場所にデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。Platform からファイルをエクスポートするための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | へのライブアウトバウンド接続を作成する [!DNL Google Cloud Storage] を使用して、Adobe Experience Platformから独自のバケットにデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
@@ -77,7 +78,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | ドキュメント | 説明 |
 | ----------- | ----------- |
-| [宛先ガードレール](../../destinations/guardrails.md) | このページでは、アクティベーション動作に関するデフォルトの使用方法とレートの制限について説明します。 |
+| [宛先ガードレール](../../destinations/guardrails.md) | このページでは、アクティベーション動作に関するデフォルトの使用方法とレート制限について説明します。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -89,8 +90,8 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 更新された `authorized` フィールドをブール型から文字列に変換します。 `season` および `episode` は、整数から文字列に変更されました。 |
-| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` の名前はに変更されました。 `friendlyName`、および `ID` の名前はに変更されました。 `name`. |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `authorized` フィールドをブーリアン型から文字列型に更新しました。`season` および `episode` は、整数から文字列に変更されました。 |
+| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` の名前は `friendlyName` に変更されました。`ID` の名前は `name` に変更されました。 |
 | データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` の名前は `name` に変更されました。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -106,7 +107,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 | 機能 | 説明 |
 | --- | --- |
 | Platform UI でのクエリの監視 | クエリサービス [!UICONTROL 予定クエリ] 「 」タブでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。 これで、クエリの実行状態に関する重要な情報を、次の場所から検索できるようになりました。失敗した場合のエラーメッセージやコードは含まれます。 [!UICONTROL 予定クエリ] タブをクリックします。 UI を使用して、これらのクエリのステータスに基づいてアラートを購読することもできます。 詳しくは、 [クエリドキュメントの監視](../../query-service/monitor-queries.md) この機能の詳細については、を参照してください。 |
-| クエリアクセラレーターレポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るのに必要な時間と処理能力を削減できます。 Query Accelerated Store を使用すると、カスタムデータモデルを作成したり、既存のAdobe Real-time Customer Data Platformデータモデルを拡張したりして、レポートのインサイトとそのビジュアライゼーションを改善できます。 詳しくは、 [query accelerated store reporting insights ドキュメント](../../query-service/query-accelerated-store/reporting-insights-data-model.md) この機能の詳細については、を参照してください。 |
+| クエリ高速化レポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存の Adobe Real-time Customer Data Platform データモデルを拡張したりして、レポートインサイトとそのビジュアライゼーションを改善できます。この機能について詳しくは、[クエリ高速化ストアレポートインサイトのドキュメント](../../query-service/query-accelerated-store/reporting-insights-data-model.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -122,7 +123,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- | 
-| Adobe Workfrontソースのベータ版の可用性 | 以下を使用： [Adobe Workfrontソース](../../sources/connectors/adobe-applications/workfront.md) WorkfrontデータをExperience Platformに取り込み、作業用レコードとサードパーティデータの組み合わせ、作業用レコードに対する履歴と時系列の分析の適用、標準 SQL を使用した作業用データのクエリなどの使用例を実行します。 詳しくは、 [UI でのWorkfrontソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| ベータ版のOracleサービスクラウドソースの可用性 | oracleサービスクラウドソースを使用して、OracleサービスクラウドアカウントからExperience Platformにデータを取り込みます。 詳しくは、 [Oracleサービスクラウドソース](../../sources/connectors/customer-success/oracle-service-cloud.md). |
+| Adobe Workfront ソースのベータ版の提供 | [Adobe Workfront ソース](../../sources/connectors/adobe-applications/workfront.md)を使用すると、Workfront データを Experience Platform に取り込み、作業レコードとサードパーティデータの結合、作業レコードへの履歴分析と時系列分析の適用、標準 SQL を使用した作業データのクエリなどのユースケースを実行できます。詳しくは、[UI での Workfront ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/workfront.md)に関するガイドを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
