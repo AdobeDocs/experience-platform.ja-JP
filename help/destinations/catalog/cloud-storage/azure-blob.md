@@ -3,10 +3,10 @@ keywords: Azure Blob;BLOB 宛先；s3;azure BLOB 宛先
 title: Azure Blob 接続
 description: Azure Blob ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 32%
+source-wordcount: '860'
+ht-degree: 34%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 32%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -66,7 +66,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
@@ -75,15 +75,15 @@ ht-degree: 32%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_blob_rsa"
 >title="RSA 公開鍵"
->abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 以下のドキュメントリンクで、正しく書式設定されたキーの例を確認してください。"
+>abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下のドキュメントリンクで、正しく書式設定されたキーの例を確認してください。"
 
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
 * **[!UICONTROL 接続文字列]**:接続文字列は、BLOB ストレージのデータにアクセスするために必要です。 この [!DNL Blob] 接続文字列のパターンが次の値で始まる： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * 設定に関する詳細 [!DNL Blob] 接続文字列： [Azure ストレージアカウントの接続文字列の構成](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) (Microsoftドキュメント ) を参照してください。
-* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 base64 でエンコードされた正しい形式のキーの例を以下のドキュメントリンクに表示してください。 中央部分は短くなっていて簡潔です。
+* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
 
-![UI での正しい形式と base64 で暗号化された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 

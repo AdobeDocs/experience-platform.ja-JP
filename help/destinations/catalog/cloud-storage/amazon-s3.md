@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services(AWS)S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 23%
+source-wordcount: '890'
+ht-degree: 24%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
@@ -60,14 +60,14 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA 公開鍵"
->abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 以下のドキュメントリンクで、正しく書式設定されたキーの例を確認してください。"
+>abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下のドキュメントリンクで、正しく書式設定されたキーの例を確認してください。"
 
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**.
 
 * **[!DNL Amazon S3]アクセスキー** および **[!DNL Amazon S3]秘密鍵**:In [!DNL Amazon S3]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon S3] アカウント 詳しくは、 [Amazon Web Servicesドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 base64 でエンコードされた正しい形式のキーの例を以下のドキュメントリンクに表示してください。 中央部分は短くなっていて簡潔です。
+* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
 
-![UI での正しい形式と base64 で暗号化された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 

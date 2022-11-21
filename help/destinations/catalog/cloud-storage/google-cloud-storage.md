@@ -1,10 +1,11 @@
 ---
 title: （ベータ版）Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、セグメントをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: ab274270-ae8c-4264-ba64-700b118e6435
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 28%
+source-wordcount: '867'
+ht-degree: 29%
 
 ---
 
@@ -49,7 +50,7 @@ Platform をに接続するため [!DNL Google Cloud Storage]を使用する場�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](/help/destinations/ui/connect-destination.md)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
@@ -59,9 +60,9 @@ Platform をに接続するため [!DNL Google Cloud Storage]を使用する場�
 
 * **[!UICONTROL アクセスキー ID]**:61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 この値の取得方法について詳しくは、 [前提条件](#prerequisites) 」の節を参照してください。
 * **[!UICONTROL 秘密アクセスキー]**:ユーザーの認証に使用される 40 文字の base64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 この値の取得方法について詳しくは、 [前提条件](#prerequisites) 」の節を参照してください。
-* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 base64 でエンコードされた正しい形式のキーの例を以下のドキュメントリンクに表示してください。 中央部分は短くなっていて簡潔です。
+* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
 
-   ![UI での正しい形式と base64 で暗号化された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 これらの値の詳細については、 [Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) ガイド。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] ソースの概要](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

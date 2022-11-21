@@ -1,10 +1,11 @@
 ---
 title: （ベータ版）Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 38%
+source-wordcount: '642'
+ht-degree: 39%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](/help/destinations/ui/connect-destination.md)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
 
@@ -47,9 +48,9 @@ ht-degree: 38%
 * **[!UICONTROL テナント]**:アプリケーションを含むテナント情報。
 * **[!UICONTROL サービスプリンシパル ID]**:アプリケーションのクライアント ID。
 * **[!UICONTROL サービスプリンシパルキー]**:アプリケーションのキー。
-* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、 [!DNL Base64-encoded] 文字列。 base64 でエンコードされた正しい形式のキーの例を以下のドキュメントリンクに表示してください。 中央部分は短くなっていて簡潔です。
+* **[!UICONTROL 暗号化キー]**:必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
 
-   ![UI での正しい形式と base64 で暗号化された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
