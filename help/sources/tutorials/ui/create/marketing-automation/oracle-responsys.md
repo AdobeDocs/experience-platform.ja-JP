@@ -2,11 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；oracle;
 title: （ベータ版）Platform UI を使用したOracleResponsys ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをOracleResponsys に接続する方法を説明します。
+hide: true
+hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
-source-git-commit: 6143f5f467e2de8bddb630c9517fd20a997524a5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 38%
+ht-degree: 40%
 
 ---
 
@@ -14,7 +16,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->この [!DNL Oracle Responsys] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL Oracle Responsys] ソースはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 このチュートリアルでは、 [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 

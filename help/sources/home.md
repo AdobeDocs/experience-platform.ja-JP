@@ -5,10 +5,10 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
    - [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
 - [Adobe Workfrontソースの概要](connectors/adobe-applications/workfront.md)
-   - [UI でのWorkfrontソース接続の作成](./tutorials/ui/create/adobe-applications/workfront.md)
+   - [UI での Workfront ソース接続の作成](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### 広告 {#advertising}
 
@@ -140,8 +140,8 @@ Experience Platform は、サードパーティのマーケティング自動化
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
+<!-- - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md) -->
 
 ### 支払い {#payments}
 

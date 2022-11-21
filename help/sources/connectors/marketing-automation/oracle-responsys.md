@@ -2,11 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；oracle;oracleresponsys;responsys
 title: （ベータ版）OracleResponsys ソースの概要
 description: API またはユーザーインターフェイスを使用してOracleResponsys をAdobe Experience Platformに接続する方法について説明します。
+hide: true
+hidefromtoc: true
 exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
-source-git-commit: 6143f5f467e2de8bddb630c9517fd20a997524a5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 48%
+ht-degree: 51%
 
 ---
 
@@ -31,7 +33,7 @@ Experience Platform は、サードパーティのマーケティング自動化
 ## 接続 [!DNL Oracle Responsys] API を使用して Platform に接続
 
 * [フローサービス API を使用して、OracleResponsys ベース接続を作成します](../../tutorials/api/create/marketing-automation/oracle-responsys.md)
-* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## 接続 [!DNL Oracle Responsys] UI を使用して Platform に接続

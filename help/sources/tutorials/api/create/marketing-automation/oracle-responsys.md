@@ -2,11 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；oracle;
 title: （ベータ版）フローサービス API を使用したOracleResponsys ベース接続の作成
 description: フローサービス API を使用してAdobe Experience PlatformをOracleResponsys に接続する方法を説明します。
+hide: true
+hidefromtoc: true
 exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
-source-git-commit: 6143f5f467e2de8bddb630c9517fd20a997524a5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 55%
+ht-degree: 64%
 
 ---
 
@@ -14,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->この [!DNL Oracle Responsys] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL Oracle Responsys] ソースはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -38,7 +40,7 @@ ht-degree: 55%
 | `endpoint` | の REST 認証エンドポイント URL [!DNL Oracle Responsys] インスタンス。 |
 | `clientId` | のクライアント ID [!DNL Oracle Responsys] インスタンス。 |
 | `clientSecret` | お客様のクライアント秘密鍵 [!DNL Oracle Responsys] インスタンス。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 の接続仕様 ID の値 [!DNL Oracle Responsys] ソースは次のように固定されます。 `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID の値 [!DNL Oracle Responsys] ソースは次のように固定されます。 `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
 の認証資格情報の詳細 [!DNL Oracle Responsys]を参照し、 [[!DNL Oracle Responsys] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
@@ -113,5 +115,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Oracle Responsys] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/marketing-automation.md)
