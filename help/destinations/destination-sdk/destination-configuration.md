@@ -2,7 +2,7 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
 workflow-type: tm+mt
 source-wordcount: '1894'
 ht-degree: 88%
@@ -104,7 +104,7 @@ ht-degree: 88%
             "includeSegmentId":true,
             "includeSegmentStatus":true,
             "includeIdentity":true,
-            "oneIdentityPerGroup":false,
+            "oneIdentityPerGroup":true,
             "groups":[
                {
                   "namespaces":[
