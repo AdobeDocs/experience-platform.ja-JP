@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
-workflow-type: ht
-source-wordcount: '1493'
-ht-degree: 100%
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+workflow-type: tm+mt
+source-wordcount: '1613'
+ht-degree: 92%
 
 ---
 
@@ -13,6 +14,14 @@ ht-degree: 100%
 Adobe Experience Platform に保存されたデータは、システムレベルのキーを使用して保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択すると、データのセキュリティをより詳細に制御できます。
 
 このドキュメントでは、Platform で顧客管理キー（CMK）機能を有効にするプロセスについて説明します。
+
+## 前提条件
+
+CMK を有効にするには、 **すべて** の次の機能 [!DNL Microsoft Azure]:
+
+* [ロールベースのアクセス制御ポリシー](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (Experience Platformの同じ機能と混同しないように )
+* [Vault ソフト削除キー](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [パージ保護](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## プロセスの概要
 
@@ -24,7 +33,7 @@ CMK は、アドビの Healthcare Shield サービスおよび Privacy and Secur
 
 プロセスは以下のようになります。
 
-1. [組織のポリシーに基づく  [!DNL Microsoft Azure] Key Vault](#create-key-vault) を設定してから、最終的にアドビと共有される[暗号化キーを生成](#generate-a-key)します。
+1. [組織のポリシーに基づく  [!DNL Azure] Key Vault](#create-key-vault) を設定してから、最終的にアドビと共有される[暗号化キーを生成](#generate-a-key)します。
 1. API 呼び出しを使用して、[!DNL Azure] テナントで [CMK アプリを設定](#register-app)します。
 1. API 呼び出しを使用して[暗号化キー ID をアドビに送信](#send-to-adobe)し、機能のイネーブルメントプロセスを開始します。
 1. [設定のステータスの確認](#check-status)：CMK が有効になっているかどうかを確認します。
@@ -97,11 +106,13 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリンクする CMK アプリケーションを登録します 。
 
->[!NOTE]
->
->CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../landing/api-authentication.md)を参照してください。
->
->認証ガイドでは、必要である `x-api-key` リクエストヘッダーに独自の一意の値を生成する方法を説明していますが、このガイドのすべての API 操作では、代わりに、静的な値 `acp_provisioning` が使用されます。ただし、`{ACCESS_TOKEN}` と `{ORG_ID}` には独自の値を指定する必要があります。
+### はじめに
+
+CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../landing/api-authentication.md)を参照してください。
+
+認証ガイドでは、必要である `x-api-key` リクエストヘッダーに独自の一意の値を生成する方法を説明していますが、このガイドのすべての API 操作では、代わりに、静的な値 `acp_provisioning` が使用されます。ただし、`{ACCESS_TOKEN}` と `{ORG_ID}` には独自の値を指定する必要があります。
+
+このガイドに示すすべての API 呼び出しでは、 `platform.adobe.io` はルートパスとして使用され、デフォルトは VA7 地域です。 組織が異なる地域を使用している場合、 `platform` は、組織に割り当てられたダッシュと地域コードの後に付く必要があります。 `nld2` (NLD2 または `aus5` AUS5 の場合 ( 例： `platform-aus5.adobe.io`) をクリックします。 組織の地域が不明な場合は、システム管理者にお問い合わせください。
 
 ### 認証 URL の取得
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | 設定の名前。この値は、[後の手順](#check-status)で設定のステータスを確認する際に必要なため、覚えておいてください。この値は、大文字と小文字を区別します。 |
 | `type` | 設定タイプ。 `BYOK_CONFIG` に設定する必要があります。 |
 | `imsOrgId` | IMS 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで指定される値と同じである必要があります。 |
-| `configData` | 設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
+| `configData` | 設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultKeyIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
 
 **応答**
 
