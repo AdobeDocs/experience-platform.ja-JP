@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
-ht-degree: 92%
+source-wordcount: '1603'
+ht-degree: 93%
 
 ---
 
@@ -17,11 +17,11 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 
 ## 前提条件
 
-CMK を有効にするには、 **すべて** の次の機能 [!DNL Microsoft Azure]:
+CMK を有効にするには、 [!DNL Azure] Key Vault は、次の設定で構成する必要があります。
 
-* [ロールベースのアクセス制御ポリシー](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (Experience Platformの同じ機能と混同しないように )
-* [Vault ソフト削除キー](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [パージ保護](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [ソフトデリートを有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [次を使用してアクセスを設定 [!DNL Azure] ロールベースのアクセス制御](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## プロセスの概要
 
