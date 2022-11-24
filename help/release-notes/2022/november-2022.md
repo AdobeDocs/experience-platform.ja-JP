@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 11 月
 description: Adobe Experience Platform の 2022年11月 のリリースノート。
-source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
+source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 78%
@@ -40,7 +40,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| スキーマに直接追加する際にカスタムクラスにフィールドを割り当てる | 条件 [スキーマへの個々のフィールドの直接の追加](../../xdm/ui/resources/schemas.md#add-individual-fields)以前は、フィールドを親リソースとしてフィールドグループに割り当てることしかできませんでした。 現在は、フィールドグループに加えて、次の操作を実行できます。 [フィールドをカスタムクラスに割り当てる](../../xdm/ui/resources/schemas.md.md#add-to-class) を親リソースとして使用することをお勧めします。 |
+| スキーマに直接追加する際にカスタムクラスにフィールドを割り当てる | 条件 [スキーマへの個々のフィールドの直接の追加](../../xdm/ui/resources/schemas.md#add-individual-fields)以前は、フィールドを親リソースとしてフィールドグループに割り当てることしかできませんでした。 現在は、フィールドグループに加えて、次の操作を実行できます。 [フィールドをカスタムクラスに割り当てる](../../xdm/ui/resources/schemas.md#add-to-class) を親リソースとして使用することをお勧めします。 |
 
 {style=&quot;table-layout:auto&quot;}
 
