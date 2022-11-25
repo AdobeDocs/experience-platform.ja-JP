@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platformリリースノート 2022 年 11 月
 description: Adobe Experience Platform の 2022年11月 のリリースノート。
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 78%
@@ -26,9 +27,9 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-|  イベント転送用の [!DNL AWS] 拡張機能 | これで、次にデータを送信できます： [!DNL Amazon Web Services] ([!DNL AWS]) を [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/web/aws/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Google Ads Enhanced Conversions] 拡張機能 | これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Microsoft Azure] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/web/azure/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL AWS] 拡張機能 | これで、次にデータを送信できます： [!DNL Amazon Web Services] ([!DNL AWS]) を [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Google Ads Enhanced Conversions] 拡張機能 | これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Microsoft Azure] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。 |
 
 Platform のデータ収集機能について詳しくは、 [データ収集の概要](../../collection/home.md).
 

@@ -3,10 +3,10 @@ keywords: Analytics 拡張機能， Analytics 拡張機能，宛先 Analytics
 title: Adobe Analytics 拡張機能
 description: Adobe Analytics拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 20%
 
 Adobe Analytics は、顧客像を把握し、顧客インテリジェンスを活用してビジネスを導く力をユーザーに提供する、業界最先端のソリューションです。
 
-Adobe Analyticsは、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、 [Adobe Analytics拡張機能の概要](/help/tags/extensions/web/analytics/overview.md) （タグドキュメント）を参照してください。
+Adobe Analyticsは、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、 [Adobe Analytics拡張機能の概要](/help/tags/extensions/client/analytics/overview.md) （タグドキュメント）を参照してください。
 
 この宛先はタグ拡張です。 Platform でのタグ拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Adobe Analyticsは、Adobe Experience Platformの analytics 拡張機能です�
 
 Adobe Analytics 拡張機能をインストールするには、以下をおこないます。
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

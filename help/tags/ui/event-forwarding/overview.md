@@ -3,7 +3,7 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 96%
@@ -57,7 +57,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 ### 拡張機能 {#extensions}
 
-イベント転送には、[Core](../../extensions/web/core/event-forwarding.md) 拡張機能や [Adobe Cloud Connector](../../extensions/web/cloud-connector/overview.md) 拡張機能など、互換性のある拡張機能の独自のカタログがあります。左側のナビゲーションで「**[!UICONTROL 拡張機能]**」、「**[!UICONTROL カタログ]**」の順に選択すると、UI にイベント転送プロパティで使用可能な拡張機能を表示できます。
+イベント転送には、[Core](../../extensions/server/core/overview.md) 拡張機能や [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) 拡張機能など、互換性のある拡張機能の独自のカタログがあります。左側のナビゲーションで「**[!UICONTROL 拡張機能]**」、「**[!UICONTROL カタログ]**」の順に選択すると、UI にイベント転送プロパティで使用可能な拡張機能を表示できます。
 
 ![データ収集 UI のイベント転送拡張機能](../../images/ui/event-forwarding/overview/extensions.png)
 

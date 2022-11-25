@@ -3,10 +3,10 @@ keywords: media analytics 拡張機能；media analytics;audio and video 拡張�
 title: Adobe Media Analytics for Audio and Video 拡張機能
 description: Adobe MediumAnalytics for Audio and Video 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe MediumAnalytics for Audio and Video は、Adobe Experience Platformの分�
 
 Adobe Analytics for Video 拡張機能をインストールするには：
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,7 +42,7 @@ Adobe Analytics for Video 拡張機能をインストールするには：
 
 ワークフローに従ってデータ収集 UI が表示され、インストールが完了します。
 
-拡張機能の設定オプションについて詳しくは、 [Adobe MediumAnalytics for Audio and Video 拡張機能ページ](../../../tags/extensions/web/media-analytics/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションについて詳しくは、 [Adobe MediumAnalytics for Audio and Video 拡張機能ページ](../../../tags/extensions/client/media-analytics/overview.md) （タグドキュメント）を参照してください。
 
 拡張機能は、 [データ収集 UI](https://experience.adobe.com/#/data-collection/). 詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 

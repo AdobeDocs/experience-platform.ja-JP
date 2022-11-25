@@ -2,7 +2,7 @@
 title: 拡張機能
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 100%
@@ -53,7 +53,7 @@ ht-degree: 100%
 
 「**[!UICONTROL 拡張機能]**」を選択すると、インストールされている拡張機能がすべて表示されます。また、カタログを使用して、利用可能なすべての拡張機能のリストと、更新された拡張機能を表示することもできます。
 
-アドビが所有する拡張機能について詳しくは、 [拡張機能のリファレンス](../../../extensions/web/overview.md) を参照してください。
+アドビが所有する拡張機能について詳しくは、 [拡張機能のリファレンス](../../../extensions/client/overview.md) を参照してください。
 
 ## 新しい拡張機能を追加する {#add-a-new-extension}
 
@@ -86,4 +86,4 @@ ht-degree: 100%
 >
 > 一部の拡張機能は設定が不要で、設定オプションもありません。
 
-それぞれの設定可能な拡張機能には、固有のオプションがあります。各アドビ拡張機能で使用できるオプションについて詳しくは、[拡張機能リファレンス](../../../extensions/web/overview.md)を参照してください。
+それぞれの設定可能な拡張機能には、固有のオプションがあります。各アドビ拡張機能で使用できるオプションについて詳しくは、[拡張機能リファレンス](../../../extensions/client/overview.md)を参照してください。

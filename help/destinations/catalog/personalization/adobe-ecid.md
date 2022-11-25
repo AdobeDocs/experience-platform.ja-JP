@@ -3,10 +3,10 @@ Keywords: ECID;ecid
 title: Experience Cloud ID サービス拡張機能
 description: Experience CloudID サービス拡張は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 この拡張機能は、 [!DNL Experience Cloud] ID サービス：すべての [!DNL Experience Cloud] ソリューション
 
-[!DNL Experience Cloud] ID サービスは、Adobe Experience Platformのパーソナライズ機能の拡張機能です。 拡張機能について詳しくは、 [Experience CloudID サービス拡張ページ](../../../tags/extensions/web/id-service/overview.md) （タグドキュメント）を参照してください。
+[!DNL Experience Cloud] ID サービスは、Adobe Experience Platformのパーソナライズ機能の拡張機能です。 拡張機能について詳しくは、 [Experience CloudID サービス拡張ページ](../../../tags/extensions/client/id-service/overview.md) （タグドキュメント）を参照してください。
 
 この宛先はタグ拡張です。 Platform でのタグ拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ ht-degree: 14%
 
 をインストールするには、以下を実行します。 [!DNL Experience Cloud] ID サービス拡張機能：
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,7 +42,7 @@ ht-degree: 14%
 
 ワークフローに従ってデータ収集 UI が表示され、インストールが完了します。
 
-拡張機能の設定オプションとインストールのサポートについて詳しくは、 [Experience CloudID サービス拡張ページ](../../../tags/extensions/web/id-service/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションとインストールのサポートについて詳しくは、 [Experience CloudID サービス拡張ページ](../../../tags/extensions/client/id-service/overview.md) （タグドキュメント）を参照してください。
 
 拡張機能は、 [データ収集 UI](https://experience.adobe.com/#/data-collection/). 詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 

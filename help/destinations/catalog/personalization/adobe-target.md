@@ -3,10 +3,10 @@ keywords: target 拡張機能；target
 title: Adobe Target 拡張機能
 description: Adobe Target拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Targetは、Adobe Experience Platformのパーソナライゼーション�
 
 Adobe Target 拡張機能をインストールするには：
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,7 +42,7 @@ Adobe Target 拡張機能をインストールするには：
 
 ワークフローに従ってデータ収集 UI が表示され、インストールが完了します。
 
-拡張機能の設定オプションについて詳しくは、 [Adobe Target拡張機能ページ](../../../tags/extensions/web/target/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションについて詳しくは、 [Adobe Target拡張機能ページ](../../../tags/extensions/client/target/overview.md) （タグドキュメント）を参照してください。
 
 拡張機能は、 [データ収集 UI](https://experience.adobe.com/#/data-collection/). 詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 

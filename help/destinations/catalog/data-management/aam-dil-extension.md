@@ -3,10 +3,10 @@ keywords: Audience ManagerDIL拡張機能；宛先 audience manager;dil 拡張�
 title: Audience Manager DIL 拡張機能
 description: Audience ManagerDIL拡張機能は、Adobe Experience Platformのデータ管理プラットフォーム (DMP) の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '514'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン 8.0 以降、DILは [!DNL Experience Cloud] ID サービスのバージョン 3.3 以降。 両方を実装してください [!DNL Experience Cloud] ID サービスとDIL（完全版） [!DNL Audience Manager] データ統合機能を使用します。
 
-[!DNL Audience Manager] DILは、Adobe Experience Platformのデータ管理プラットフォーム (DMP) 拡張機能です。 拡張機能について詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/web/audience-manager/overview.md) （タグドキュメント）を参照してください。
+[!DNL Audience Manager] DILは、Adobe Experience Platformのデータ管理プラットフォーム (DMP) 拡張機能です。 拡張機能について詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/client/audience-manager/overview.md) （タグドキュメント）を参照してください。
 
 この宛先はタグ拡張です。 Platform での拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 をインストールするには、以下を実行します。 [!DNL Audience Manager] DIL拡張：
 
-内 [Platform インターフェイス](https://platform.adobe.com/)に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**.
+[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -42,7 +42,7 @@ ht-degree: 21%
 
 このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションについて詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/web/audience-manager/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションについて詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/client/audience-manager/overview.md) （タグドキュメント）を参照してください。
 
 拡張機能は、 [データ収集 UI](https://experience.adobe.com/#/data-collection/). 詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 

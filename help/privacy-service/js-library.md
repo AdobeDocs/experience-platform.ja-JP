@@ -5,7 +5,7 @@ title: Adobeプライバシー JavaScript ライブラリの概要
 topic-legacy: overview
 description: Adobeプライバシー JavaScript ライブラリを使用すると、Privacy Serviceで使用するデータ主体の ID を取得できます。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 59%
@@ -48,7 +48,7 @@ ht-degree: 59%
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
 * からをダウンロード [Experience CloudGitHub リポジトリ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-また、タグ拡張機能を使用してライブラリをインストールすることもできます。 概要については、 [Adobeプライバシータグ拡張](../tags/extensions/web/privacy/overview.md) を参照してください。
+また、タグ拡張機能を使用してライブラリをインストールすることもできます。 概要については、 [Adobeプライバシータグ拡張](../tags/extensions/client/privacy/overview.md) を参照してください。
 
 ## をインスタンス化します。 [!DNL Privacy JS Library]
 

@@ -5,7 +5,7 @@ title: ストリーミング取り込みの概要
 topic-legacy: overview
 description: Adobe Experience Platformのストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -47,7 +47,7 @@ Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] 個々の�
 
 次の表に、ストリーミング取り込みの秒数制限に関するガイダンスを示します。
 
-| RPS 制限 | 備考 |
+| RPS 制限 | メモ |
 | --- | --- |
 | 1 秒あたり 1000 リクエスト | これらは、 `/collection/batch` endpoint. |
 | 1 秒あたりの個々のメッセージ数 | メッセージは、 `/collection/batch` endpoint. |
@@ -58,4 +58,4 @@ Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] 個々の�
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。この [!DNL Experience Platform] 拡張機能では、でフォーマットされたビーコンを送信するアクションが提供されます。 [!DNL Experience Data Model] (XDM) を使用して [!DNL Experience Platform]. 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/web/sdk/overview.md)に関するドキュメントを参照してください。
+Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。この [!DNL Experience Platform] 拡張機能では、でフォーマットされたビーコンを送信するアクションが提供されます。 [!DNL Experience Data Model] (XDM) を使用して [!DNL Experience Platform]. 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/sdk/overview.md)に関するドキュメントを参照してください。

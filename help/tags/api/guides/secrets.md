@@ -2,7 +2,7 @@
 title: Reactor API の秘密鍵
 description: イベント転送で使用する Reactor API の秘密鍵を設定する方法の基本について説明します。
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -131,7 +131,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 ## 秘密鍵の参照 {#referencing-secrets}
 
-秘密鍵を参照するには、イベント転送プロパティに「[!UICONTROL 秘密鍵]」タイプのデータ要素（[[!UICONTROL コア]拡張機能](../../extensions/web/core/overview.md)によって提供される）を作成する必要があります。このデータ要素を設定する際に、各環境で使用する秘密鍵を指定するよう求められます。その後、HTTP 呼び出しのヘッダー内など、秘密鍵のデータ要素を参照するルールを作成できます。
+秘密鍵を参照するには、イベント転送プロパティに「[!UICONTROL 秘密鍵]」タイプのデータ要素（[[!UICONTROL コア]拡張機能](../../extensions/client/core/overview.md)によって提供される）を作成する必要があります。このデータ要素を設定する際に、各環境で使用する秘密鍵を指定するよう求められます。その後、HTTP 呼び出しのヘッダー内など、秘密鍵のデータ要素を参照するルールを作成できます。
 
 ![秘密鍵データ要素](../../images/api/guides/secrets/data-element.png)
 

@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: web sdk のインストール；web sdk のインストール；internet explorer;promise;npm パッケージ
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 31%
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK の使用方法は 3 つあります。
 
 ## オプション 1:タグ拡張機能のインストール
 
-タグ拡張機能に関するドキュメントについては、 [launch ドキュメント](../../tags/extensions/web/sdk/overview.md)
+タグ拡張機能に関するドキュメントについては、 [launch ドキュメント](../../tags/extensions/client/sdk/overview.md)
 
 ## オプション 2:事前にビルドされたスタンドアロンバージョンのインストール
 

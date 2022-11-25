@@ -2,10 +2,10 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 20%
+ht-degree: 30%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 20%
 
 ## 2022年10月26日（PT）
 
-* **データストリームの機密データ処理**:データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、 [データストリーム内の感覚的なデータの処理](../../edge/datastreams/overview.md#sensitive) を参照してください。
-* **[!DNL Splunk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Splunk] 拡張機能の概要](../extensions/web/splunk/overview.md) を参照してください。
-* **[!DNL Zendesk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、 [[!DNL Zendesk] 拡張機能の概要](../extensions/web/zendesk/overview.md) を参照してください。
+* **データストリームの機密データ処理**:データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。
+*  イベント転送用の **[!DNL Splunk]拡張機能**:これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
+*  イベント転送用の **[!DNL Zendesk]拡張機能**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
 
 ## 2022年9月28日（PT）
 
@@ -32,6 +32,6 @@ ht-degree: 20%
 
 新しい拡張機能がリリースされました。
 
-* [Google Data Layer タグ拡張機能](../extensions/web/google-data-layer/overview.md):タグ実装でGoogleデータレイヤーを使用できます。
+* [Google Data Layer タグ拡張機能](../extensions/client/google-data-layer/overview.md):タグ実装でGoogleデータレイヤーを使用できます。
 * [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html):Google Ads のコンバージョンをリアルタイムで強化できます。
-* [Mailchimp イベント転送拡張機能](../extensions/web/mailchimp/overview.md):Mailchimp マーケティング API にイベントを送信します。この API は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーにすることができます。
+* [Mailchimp イベント転送拡張機能](../extensions/server/mailchimp/overview.md):Mailchimp マーケティング API にイベントを送信します。この API は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーにすることができます。

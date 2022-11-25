@@ -2,7 +2,7 @@
 title: ルール
 description: Adobe Experience Platform におけるタグ拡張機能の働きについて説明します。
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 100%
@@ -41,7 +41,7 @@ Adobe Experience Platform のタグは、ルールベースのシステムに従
 
 * **条件**：イベントでルールをトリガーするために、true でなくてはならない条件を設定して、イベントを絞り込みます。例外は、NOT 条件として定義されます。複数の条件は AND で結合されます。
 
-使用できるイベントは、インストールされている拡張機能によって異なります。Core 拡張機能のイベントについて詳しくは、「[Core 拡張機能のイベントタイプ](../../extensions/web/core/overview.md#core-extension-event-types)」を参照してください。
+使用できるイベントは、インストールされている拡張機能によって異なります。Core 拡張機能のイベントについて詳しくは、「[Core 拡張機能のイベントタイプ](../../extensions/client/core/overview.md#core-extension-event-types)」を参照してください。
 
 ### アクション（then）
 

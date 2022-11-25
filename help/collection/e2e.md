@@ -2,7 +2,7 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 95%
@@ -212,7 +212,7 @@ Web サイト上で発生する可能性のあるほぼすべてのイベント�
 
 >[!NOTE]
 >
->設定方法など、アドビの web 拡張機能で提供される様々なイベントタイプについて詳しくは、タグドキュメントの[アドビ拡張機能のリファレンス](../tags/extensions/web/overview.md)を参照してください。
+>設定方法など、アドビの web 拡張機能で提供される様々なイベントタイプについて詳しくは、タグドキュメントの[アドビ拡張機能のリファレンス](../tags/extensions/client/overview.md)を参照してください。
 
 フォーム送信イベントでは、[CSS セレクター](https://www.w3schools.com/css/css_selectors.asp)を使用して、ルールを実行する特定の要素を参照できます。 以下の例では、ID `add-to-cart-form` が使用されているため、「買い物かごに追加」フォームに対してのみこのルールが実行されます。「**[!UICONTROL 変更を保持]**」を選択して、ルールにイベントを追加します。
 

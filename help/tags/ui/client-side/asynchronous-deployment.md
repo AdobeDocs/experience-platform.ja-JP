@@ -2,7 +2,7 @@
 title: 非同期デプロイメント
 description: Web サイトで Adobe Experience Platform タブライブラリを非同期でデプロイする方法について説明します。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 94%
@@ -56,7 +56,7 @@ ht-degree: 94%
 
 次に、タグライブラリは、[`DOMContentLoaded`](https://developer.mozilla.org/ja-JP/docs/Web/Events/DOMContentLoaded) ブラウザーイベント（DOM Ready）の発生前または発生後に読み込みを終了できます。
 
-これら 2 つの点により、 ライブラリを非同期的に読み込む際、コア拡張機能の [Library Loaded](../../extensions/web/core/overview.md#library-loaded-page-top)、[Page Bottom](../../extensions/web/core/overview.md#page-bottom)、[DOM Ready](../../extensions/web/core/overview.md#page-bottom) および [Window Loaded](../../extensions/web/core/overview.md#window-loaded) イベントタイプがどのように機能するかを示すとよいでしょう。
+これら 2 つの点により、 ライブラリを非同期的に読み込む際、コア拡張機能の [Library Loaded](../../extensions/client/core/overview.md#library-loaded-page-top)、[Page Bottom](../../extensions/client/core/overview.md#page-bottom)、[DOM Ready](../../extensions/client/core/overview.md#page-bottom) および [Window Loaded](../../extensions/client/core/overview.md#window-loaded) イベントタイプがどのように機能するかを示すとよいでしょう。
 
 タグプロパティに次の 4 つのルールが含まれる場合：
 

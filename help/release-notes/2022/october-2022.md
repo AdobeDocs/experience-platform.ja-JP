@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 70%
@@ -38,8 +38,8 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | 機能 | 説明 |
 | --- | --- |
 | データストリームの機密データ処理 | データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制で強化される機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。 |
-|  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/web/splunk/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/web/zendesk/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/server/splunk/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/server/zendesk/overview.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
