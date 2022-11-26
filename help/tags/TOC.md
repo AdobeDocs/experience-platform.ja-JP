@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '967'
 ht-degree: 74%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 74%
       * [差分プライバシー](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media ビューア](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL ヘルパー](https://exchange.adobe.com/apps/ec/107691)
+      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -210,6 +211,7 @@ ht-degree: 74%
          * [概要](./extensions/server/aws/overview.md)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
+      * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
       * Google Ads 拡張コンバージョン {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
