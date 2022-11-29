@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Analyt
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 20%
+source-wordcount: '1014'
+ht-degree: 19%
 
 ---
 
@@ -49,7 +49,9 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | 新しいデータ [!DNL Real-time Customer Profile] (A4T) **not** 有効 ) | &lt; 2 分 |
 | 新しいデータ [!DNL Real-time Customer Profile] (A4T) **が** 有効 ) | &lt; 15 分 |
 | データレイクの新しいデータ | &lt; 90 分 |
-| データのバックフィル（13 か月分のデータまたは 100 億イベントのデータのいずれか低い方） | &lt; 4 週間 |
+| 100 億未満のイベントのバックフィル | &lt; 4 週間 |
+
+Analytics バックフィルのデフォルト値は 13 ヶ月です。 上記の表に示した 100 億件のイベントの制限は、予想される待ち時間に厳密に関係しています。
 
 >[!NOTE]
 >
