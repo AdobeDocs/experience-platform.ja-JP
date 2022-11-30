@@ -4,10 +4,10 @@ title: 宛先ダッシュボードガイド
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
-ht-degree: 4%
+source-wordcount: '3031'
+ht-degree: 3%
 
 ---
 
@@ -54,6 +54,16 @@ Platform UI 内で宛先ダッシュボードに移動するには、「 **[!UIC
 ## 標準ウィジェット {#standard-widgets}
 
 Adobeには、宛先に関連する様々な指標を視覚化し、データ分析に使用できるセグメントの完全性を評価するために使用できる、複数の標準ウィジェットが用意されています。 また、 [!UICONTROL Widget ライブラリ]. カスタムウィジェットの作成の詳細については、まず [ウィジェットライブラリの概要](../customize/widget-library.md).
+
+### 前提条件 {#prerequisites}
+
+標準ウィジェットの説明を続ける前に、ドキュメント全体で使用される次の主要用語の定義について理解しておく必要があります。
+
+* **セグメント：** セグメントは **一連の規則** には、多数のプロファイルをオーディエンスと見なす属性とイベントデータが含まれます。
+* **対象ユーザ**:オーディエンスは **一連のプロファイル** がセグメント定義の条件を満たしている。
+* **マッピング済み/マッピング**:データマッピングは、ソースデータフィールドを宛先内の関連するターゲットフィールドにマッピングする処理です。
+* **ID**:ID は、Cookie ID、デバイス ID、電子メール ID など、個々の顧客を一意に表す識別子です。
+* **有効化**:アクティブ化とは、OracleEloqua、Google、SalesforceMarketing Cloudなどの宛先にセグメントまたはプロファイルをマッピングするためにユーザーが実行するアクションです。
 
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
@@ -139,6 +149,8 @@ Experience Platformでのセグメントの操作について詳しくは、 [�
 
 ![宛先別の最近アクティブ化されたセグメントウィジェット](../images/destinations/recently-activated-segments-by-destination.png)
 
+前提条件の節を参照してください。 [使用される用語の定義](#prerequisites) （この説明）。
+
 ### [!UICONTROL オーディエンスサイズのトレンド] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Experience Platformでのセグメントの操作について詳しくは、 [�
 ID 列は、セグメント内のソース ID のうち、ウィジェット ID ドロップダウンで選択された ID にマッピングできるものの数を数えます。
 
 ![ID によるマッピングされていないセグメントウィジェット。](../images/destinations/unmapped-segments-by-identity.png)
+
+前提条件の節を参照してください。 [使用される用語の定義](#prerequisites) （この説明）。
 
 ### [!UICONTROL ID によるマッピングされたセグメント] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ### [!UICONTROL すべての宛先にわたってアクティブ化されたオーディエンス] {#activated-audiences-across-all-destinations}
 
-この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。 この数は、最新のスナップショットに対して正確です。
+この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。 このウィジェットは、セグメントの数ではなく、オーディエンスの数を表示します。 この数は、最新のスナップショットに対して正確です。
 
 ![すべての宛先ウィジェットでアクティブ化されたオーディエンス。](../images/destinations/activated-audiences-across-all-destinations.png)
 
-選択 **[!UICONTROL オーディエンス]** 宛先に移動するには [!UICONTROL 参照] タブをクリックします。 このページには、有効なすべての宛先のリストと、様々な関連指標が表示されます。 詳しくは、 [詳細情報 [!UICONTROL 参照] タブ](../../destinations/ui/destinations-workspace.md#browse).
+選択 **[!UICONTROL オーディエンス]** 宛先に移動するには [!UICONTROL 参照] タブをクリックします。 このページには、有効なすべての宛先のリストと、様々な関連指標が表示されます。 詳しくは、ドキュメントを参照してください。 [[!UICONTROL 参照] タブ](../../destinations/ui/destinations-workspace.md#browse).
+
+前提条件の節を参照してください。 [使用される用語の定義](#prerequisites) （この説明）。
 
 ### [!UICONTROL アクティブ化されたオーディエンス] {#activated-audiences}
 
@@ -276,6 +292,8 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 ![宛先ダッシュボードの詳細ページ（「アクティベーションデータ」タブがハイライトされています）](../images/destinations/activation-data-tab.png)
 
 このウィジェットを使用すると、一目でアクティブ化されるオーディエンスの数に基づいて宛先の価値を把握できます。 また、より詳細な情報に容易にアクセスして、さらに分析することもできます。
+
+前提条件の節を参照してください。 [使用される用語の定義](#prerequisites) （この説明）。
 
 ## 次の手順
 
