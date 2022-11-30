@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング接続；ストリーミング接続の作成；API ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取り込み；
-title: API を使用した HTTP API ストリーミング接続の作成
-description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
+title: フローサービス API を使用した HTTP API ストリーミング接続の作成
+description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
+source-git-commit: 26c967418e983322cc39aa799a681d258638d769
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 44%
+source-wordcount: '1424'
+ht-degree: 42%
 
 ---
 
@@ -259,10 +259,10 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
