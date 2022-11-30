@@ -1,59 +1,34 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング接続；ストリーミング接続の作成；API ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取り込み；
-solution: Experience Platform
 title: API を使用した HTTP API ストリーミング接続の作成
-topic-legacy: tutorial
-type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 54%
+source-wordcount: '1415'
+ht-degree: 44%
 
 ---
 
 
-# の作成 [!DNL HTTP API] API を使用したストリーミング接続
+# を使用した HTTP API ストリーミング接続の作成 [!DNL Flow Service] API
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
+フローサービスは、Adobe Experience Platform内の様々なソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を参照して、Flow Service API を使用してストリーミング接続を作成する手順を説明します。
+このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してストリーミング接続を作成する手順を説明します。 [!DNL Flow Service] API
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
 さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらの作成方法については、次のチュートリアルを参照してください。 [ストリーミングレコードデータ](../../../../../ingestion/tutorials/streaming-record-data.md) または [時系列データのストリーミング](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
+### Platform API の使用
 
-### API 呼び出し例の読み取り
-
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
-
-### 必須ヘッダーの値の収集
-
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
-
-- Authorization： Bearer `{ACCESS_TOKEN}`
-- x-api-key： `{API_KEY}`
-- x-gw-ims-org-id： `{ORG_ID}`
-
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-- x-sandbox-name：`{SANDBOX_NAME}`
-
->[!NOTE]
->
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../../../../sandboxes/home.md)を参照してください。
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
-
-- Content-Type：application/json
+Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
 ## ベース接続の作成
 
@@ -63,6 +38,8 @@ ht-degree: 54%
 
 非認証接続は、データを Platform にストリーミングする際に作成できる標準のストリーミング接続です。
 
+未認証のベース接続を作成するには、 `/connections` エンドポイントを使用して、接続の名前、データ型、HTTP API 接続仕様 ID を指定します。 この ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
 **API 形式**
 
 ```http
@@ -71,7 +48,11 @@ POST /flowservice/connections
 
 **リクエスト**
 
-ストリーミング接続を作成するには、プロバイダー ID と接続仕様 ID をPOSTリクエストの一部として指定する必要があります。 プロバイダー ID はです。 `521eee4d-8cbe-4906-bb48-fb6bd4450033` 接続仕様 ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+次のリクエストは、HTTP API のベース接続を作成します。
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -81,29 +62,55 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
-     "connectionSpec": {
-         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-         "version": "1.0"
-     },
-     "auth": {
-         "specName": "Streaming Connection",
-         "params": {
-             "sourceId": "Sample connection",
-             "dataType": "xdm",
-             "name": "Sample connection"
-         }
-     }
- }'
+    "name": "ACME Streaming Connection XDM Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "xdm"
+      }
+    }
+  }'
 ```
 
+>[!TAB 生データ]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "name": "ACME Streaming Connection Raw Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "raw"
+      }
+    }
+  }'
+```
+
+>[!ENDTABS]
+
 | プロパティ | 説明 |
-| -------- | ----------- |
-| `auth.params.sourceId` | 作成するストリーミング接続の ID。 |
-| `auth.params.dataType` | ストリーミング接続のデータタイプです。 この値は、 `xdm`. |
+| --- | --- |
+| `name` | ベース接続の名前。ベース接続上の情報を検索する際に使用できるので、名前がわかりやすいものであることを確認します。 |
+| `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
+| `connectionSpec.id` | HTTP API に対応する接続仕様 ID。 この ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `auth.params.dataType` | ストリーミング接続のデータタイプです。 次の値がサポートされています。 `xdm` および `raw`. |
 | `auth.params.name` | 作成するストリーミング接続の名前。 |
-| `connectionSpec.id` | 接続の仕様 `id` （ストリーミング接続用） |
 
 **応答**
 
@@ -111,19 +118,22 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | 新しく作成した接続の `id`。ここでは、`{CONNECTION_ID}` を指します。 |
-| `etag` | 接続に割り当てられ、接続のリビジョンを指定する識別子。 |
+| `id` | この `id` 新しく作成したベース接続の |
+| `etag` | 接続に割り当てられ、ベース接続のバージョンを指定する識別子。 |
 
 ### 認証済み接続
 
 信頼できるソースと信頼できないソースからのレコードを区別する必要がある場合は、認証済みの接続を使用する必要があります。 個人情報 (PII) を含む情報を送信するユーザーは、Platform に情報をストリーミングする際に、認証済みの接続を作成する必要があります。
+
+認証済みのベース接続を作成するには、ソース ID と、に対してPOSTリクエストをおこなう際に認証が必要かどうかを指定する必要があります `/connections` endpoint.
+
 
 **API 形式**
 
@@ -133,7 +143,11 @@ POST /flowservice/connections
 
 **リクエスト**
 
-ストリーミング接続を作成するには、プロバイダー ID と接続仕様 ID をPOSTリクエストの一部として指定する必要があります。 プロバイダー ID はです。 `521eee4d-8cbe-4906-bb48-fb6bd4450033` 接続仕様 ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+次のリクエストは、HTTP API の認証済みベース接続を作成します。
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -143,8 +157,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
+     "name": "ACME Streaming Connection XDM Data Authenticated",
+     "description": "ACME streaming connection for customer data",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
          "version": "1.0"
@@ -152,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "{SOURCE_ID}",
              "dataType": "xdm",
              "name": "Sample connection",
              "authenticationRequired": true
@@ -161,14 +175,40 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+>[!TAB 生データ]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+     "name": "ACME Streaming Connection Raw Data Authenticated",
+     "description": "ACME streaming connection for customer data",
+     "connectionSpec": {
+         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+         "version": "1.0"
+     },
+     "auth": {
+         "specName": "Streaming Connection",
+         "params": {
+             "sourceId": "Sample connection",
+             "dataType": "raw",
+             "name": "Sample connection",
+             "authenticationRequired": true
+         }
+     }
+ }
+```
+
+>[!ENDTABS]
 
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 作成するストリーミング接続の ID。 |
-| `auth.params.dataType` | ストリーミング接続のデータタイプです。 この値は、 `xdm`. |
-| `auth.params.name` | 作成するストリーミング接続の名前。 |
 | `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
-| `connectionSpec.id` | 接続の仕様 `id` （ストリーミング接続用） |
 
 **応答**
 
@@ -176,15 +216,10 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `id` | 新しく作成した接続の `id`。ここでは、`{CONNECTION_ID}` を指します。 |
-| `etag` | 接続に割り当てられ、接続のリビジョンを指定する識別子。 |
 
 ## ストリーミングエンドポイント URL の取得
 
@@ -193,17 +228,17 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 **API 形式**
 
 ```http
-GET /flowservice/connections/{CONNECTION_ID}
+GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 以前に作成した接続の `id` 値。 |
+| `{BASE_CONNECTION_ID}` | 以前に作成した接続の `id` 値。 |
 
 **リクエスト**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -216,42 +251,46 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ```json
 {
-    "items": [
-        {
-            "createdAt": 1583971856947,
-            "updatedAt": 1583971856947,
-            "createdBy": "{API_KEY}",
-            "updatedBy": "{API_KEY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "id": "77a05521-91d6-451c-a055-2191d6851c34",
-            "name": "Another new sample connection (Experience Event)",
-            "description": "Sample description",
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Streaming Connection",
-                "params": {
-                    "sourceId": "Sample connection (ExperienceEvent)",
-                    "inletUrl": "https://dcs.adobedc.net/collection/a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "inletId": "a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "dataType": "xdm",
-                    "name": "Sample connection (ExperienceEvent)"
-                }
-            },
-            "version": "\"56008aee-0000-0200-0000-5e697e150000\"",
-            "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
+  "items": [
+    {
+      "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATEDD_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}}",
+      "name": "ACME Streaming Connection XDM Data",
+      "description": "ACME streaming connection for customer data",
+      "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "auth": {
+        "specName": "Streaming Connection",
+        "params": {
+          "sourceId": "ACME Streaming Connection XDM Data",
+          "inletUrl": "https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "authenticationRequired": false,
+          "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "dataType": "xdm",
+          "name": "ACME Streaming Connection XDM Data"
         }
-    ]
+      },
+      "version": "\"f50185ed-0000-0200-0000-637e8fad0000\"",
+      "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+    }
+  ]
 }
 ```
 
 ## ソース接続の作成 {#source}
 
-ベース接続を作成したら、ソース接続を作成する必要があります。 ソース接続を作成する場合、 `id` 作成したベース接続の値。
+ソース接続を作成するには、 `/sourceConnections` エンドポイントを使用してベース接続 ID を指定する必要があります。
 
 **API 形式**
 
@@ -270,14 +309,14 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample source connection",
-    "description": "Sample source connection description",
-    "baseConnectionId": "{BASE_CONNECTION_ID}",
-    "connectionSpec": {
-        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-        "version": "1.0"
-    }
-}'
+      "name": "ACME Streaming Source Connection for Customer Data",
+      "description": "A streaming source connection for ACME XDM Customer Data",
+      "baseConnectionId": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
 ```
 
 **応答**
@@ -286,8 +325,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
-    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+  "id": "34ece231-294d-416c-ad2a-5a5dfb2bc69f",
+  "etag": "\"d505125b-0000-0200-0000-637eb7790000\""
 }
 ```
 
@@ -307,9 +346,7 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target}
 
-ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を提供する必要があります。この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
-
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、次に対してPOSTリクエストを実行します。 `/targetConnections` を使用して、ターゲットデータセットとターゲット XDM スキーマの ID を提供する際に使用します。 この手順の間に、データレイク接続の仕様 ID も指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API 形式**
 
@@ -328,19 +365,22 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample target connection",
-    "description": "Sample target connection description",
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    },
-    "data": {
-        "format": "parquet_xdm"
-    },
-    "params": {
-        "dataSetId": "{DATASET_ID}"
-    }
-}'
+      "name": "ACME Streaming Target Connection",
+      "description": "ACME Streaming Target Connection",
+      "data": {
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "version": "application/vnd.adobe.xed-full+json;version=1.0"
+          }
+      },
+      "params": {
+          "dataSetId": "637eb7fadc8a211b6312b65b"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 **応答**
@@ -349,8 +389,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
-    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+  "id": "07f2f6ff-1da5-4704-916a-c615b873cba9",
+  "etag": "\"340680f7-0000-0200-0000-637eb8730000\""
 }
 ```
 
@@ -370,31 +410,31 @@ POST /mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-        "xdmVersion": "1.0",
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "firstName",
-                "identity": false,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "lastName",
-                "identity": false,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+      "xdmVersion": "1.0",
+      "mappings": [
+          {
+              "destinationXdmPath": "person.name.firstName",
+              "sourceAttribute": "firstName",
+              "identity": false,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.lastName",
+              "sourceAttribute": "lastName",
+              "identity": false,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | プロパティ | 説明 |
@@ -407,14 +447,17 @@ curl -X POST \
 
 ```json
 {
-    "id": "380b032b445a46008e77585e046efe5e",
-    "version": 0,
-    "createdDate": 1604960750613,
-    "modifiedDate": 1604960750613,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "79a623960d3f4969835c9e00dc90c8df",
+  "version": 0,
+  "createdDate": 1669249214031,
+  "modifiedDate": 1669249214031,
+  "createdBy": "acme@AdobeID",
+  "modifiedBy": "acme@AdobeID"
 }
 ```
+
+| プロパティ | 説明 |
+| --- | --- |
 
 ## データフローの作成
 
@@ -428,6 +471,10 @@ POST /flows
 
 **リクエスト**
 
+>[!BEGINTABS]
+
+>[!TAB 変換なし]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -437,33 +484,63 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "HTTP API streaming dataflow",
-        "description": "HTTP API streaming dataflow",
-        "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
-        ],
-        "targetConnectionIds": [
-            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
-        ],
-        "transformations": [
-            {
-            "name": "Mapping",
-            "params": {
-                "mappingId": "380b032b445a46008e77585e046efe5e",
-                "mappingVersion": 0
-            }
-            }
-        ]
+      "name": "ACME Streaming Dataflow",
+      "description": "ACME streaming dataflow for customer data",
+      "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ]
     }'
 ```
 
+>[!TAB 変換を使用]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ],
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingId": "79a623960d3f4969835c9e00dc90c8df",
+            "mappingVersion": 0
+          }
+        }
+      ]
+    }'
+```
+
+>[!ENDTABS]
+
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | のフロー仕様 ID [!DNL HTTP API]. この ID は `c1a19761-d2c7-4702-b9fa-fe91f0613e81` です。 |
+| `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
+| `description` | （オプション）データフローの詳細を提供するために含めることができるプロパティ。 |
+| `flowSpec.id` | のフロー仕様 ID [!DNL HTTP API]. 変換を使用してデータフローを作成するには、  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. 変換を使用せずにデータフローを作成するには、 `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | 前の手順で取得した[ソース接続 ID](#source)。 |
 | `targetConnectionIds` | 前の手順で取得した[ターゲット接続 ID](#target)。 |
 | `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
@@ -474,10 +551,113 @@ curl -X POST \
 
 ```json
 {
-    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
-    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
+  "id": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+  "etag": "\"dc0459ae-0000-0200-0000-637ebaec0000\""
 }
 ```
+
+
+## Platform に取り込む POST データ {#ingest-data}
+
+これでフローが作成され、以前に作成したストリーミングエンドポイントに JSON メッセージを送信できます。
+
+**API 形式**
+
+```http
+POST /collection/{INLET_URL}
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{INLET_URL}` | ストリーミングエンドポイント URL。 この URL を取得するには、 `/connections` エンドポイントを使用してベース接続 ID を指定する必要があります。 |
+
+**リクエスト**
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+        "header": {
+          "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+          },
+          "flowId": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+          "datasetId": "604a18a3bae67d18db6d258c"
+        },
+        "body": {
+          "xdmMeta": {
+            "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+            }
+          },
+          "xdmEntity": {
+            "_id": "http-source-connector-acme-01",
+            "person": {
+              "name": {
+                "firstName": "suman",
+                "lastName": "nolan"
+              }
+            },
+            "workEmail": {
+              "primary": true,
+              "address": "suman@acme.com",
+              "type": "work",
+              "status": "active"
+            }
+          }
+        }
+      }'
+```
+
+>[!TAB 生データ]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!ENDTABS]
+
+**応答**
+
+正常な応答は、HTTP ステータス 200 と、新しく取り込んだ情報の詳細を返します。
+
+```json
+{
+    "inletId": "{BASE_CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `{BASE_CONNECTION_ID}` | 以前に作成したストリーミング接続の ID。 |
+| `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この IDは、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
+| `receivedTimeMs` | リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポックタイム）。 |
+
 
 ## 次の手順
 
@@ -507,59 +687,3 @@ curl -X POST \
     }
 }
 ```
-
-### Platform に取り込む生データの投稿 {#ingest-data}
-
-これでフローが作成され、以前に作成したストリーミングエンドポイントに JSON メッセージを送信できます。
-
-**API 形式**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | 新しく作成されたストリーミング接続の `id` 値。 |
-
-**リクエスト**
-
-この例のリクエストは、以前に作成したストリーミングエンドポイントに生データを取り込みます。
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male",
-      "birthday": {
-          "year": 1984,
-          "month": 6,
-          "day": 9
-      }
-  }'
-```
-
-**応答**
-
-正常な応答は、HTTP ステータス 200 と、新しく取り込んだ情報の詳細を返します。
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | 以前に作成したストリーミング接続の ID。 |
-| `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この IDは、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
-| `receivedTimeMs` | リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポックタイム）。 |
