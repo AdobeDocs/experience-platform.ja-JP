@@ -2,10 +2,10 @@
 title: データハイジーンの概要
 description: Adobe Experience Platform のデータハイジーンを使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 79%
 
 Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
 
-Platform のデータハイジーン機能を使用すると、以下を通じて保存済みの消費者データを管理できます。
+Platform のデータ衛生機能を使用すると、次の方法で保存したデータを管理できます。
 
 * 自動化されたデータセット有効期限切れのスケジュール設定
-* レコードからの個々の消費者データの削除
+* 1 つまたはすべてのデータセットからの個々のレコードの削除
 
 >[!IMPORTANT]
 >
->消費者による削除は、データのクレンジング、匿名データの削除またはデータの最小化に使用されます。 これらは **not** :EU 一般データ保護規則 (GDPR) などのプライバシー規制に関するデータ主体の権利要求（コンプライアンス）に使用されます。 すべてのコンプライアンスの使用例に対して、 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 代わりに、
+>レコードの削除は、データのクレンジング、匿名データの削除、またはデータの最小化に使用するためのものです。 これらは **not** :EU 一般データ保護規則 (GDPR) などのプライバシー規制に関するデータ主体の権利要求（コンプライアンス）に使用されます。 すべてのコンプライアンスの使用例に対して、 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 代わりに、
 
 これらのアクティビティは、[[!UICONTROL データハイジーン] UI ワークスペース](#ui)または [Data Hygiene API](#api)を使用して実行できます。データハイジーンジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
 
@@ -40,7 +40,7 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 
 ## タイムラインと透明性
 
-消費者データ削除リクエストとデータセット有効期限切れリクエストには、それぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性を更新します。各ジョブタイプの詳細については、以下の節を参照してください。
+レコードの削除リクエストとデータセットの有効期限リクエストにはそれぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性の更新を提供します。 各ジョブタイプの詳細については、以下の節を参照してください。
 
 ### データセット有効期限 {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 
 {style=&quot;table-layout:auto&quot;}
 
-### 消費者データ削除 {#consumer-delete-transparency}
+### レコードの削除 {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->消費者の削除は、AdobeHealthcare Shield を購入した組織でのみ利用できます。
+>レコードの削除は、AdobeHealthcare Shield を購入した組織でのみ利用できます。
 
-[消費者データ削除リクエスト](./ui/delete-consumer.md)が作成されると、次のプロセスが実行されます。
+次の処理は、 [レコード削除リクエスト](./ui/record-delete.md) が作成されました。
 
 | 段階 | リクエスト送信後の経過時間 | 説明 |
 | --- | --- | --- |
-| リクエストが送信される | 0 時間 | データスチュワードまたはプライバシーアナリストが、消費者データ削除リクエストを送信します。 このリクエストは、送信後に[!UICONTROL データハイジーン UI] に表示されます。 |
+| リクエストが送信される | 0 時間 | データ管理者またはプライバシー分析者がレコードの削除リクエストを送信します。 このリクエストは、送信後に[!UICONTROL データハイジーン UI] に表示されます。 |
 | プロファイル参照が更新される | 3 時間 | 削除された ID によるプロファイル数の変更は、[ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |
 | セグメントが更新される | 24 時間 | プロファイルを削除すると、関連するすべての[セグメント](../segmentation/home.md)が更新され、新しいサイズが反映されます。 |
 | ジャーニーと宛先の更新 | 26 時間 | [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)および[宛先](../destinations/home.md)は、関連するセグメントの変更に従ってが更新されます。 |

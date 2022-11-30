@@ -1,10 +1,10 @@
 ---
 title: プライバシーコンソールの概要
 description: Adobe Experience Platform UI でプライバシー関連のワークフローを監視する方法について説明します。
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 | ウィジェット名 | 説明 |
 | --- | --- |
-| データ衛生作業指示ステータス | 以下の消費者削除プロセスのステータスを表示します [データの衛生状態](../../hygiene/home.md) 選択した時間枠に設定します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の期間を変更します。 |
+| データ衛生作業指示ステータス | 以下のレコード削除プロセスのステータスを表示します [データの衛生状態](../../hygiene/home.md) 選択した時間枠に設定します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の期間を変更します。 |
 | 最近のデータ衛生作業指示 | 最新の [データの衛生状態](../../hygiene/home.md) システムで処理される作業指示。 ドロップダウンを使用して、最近作成した作業指示と最近更新した作業指示を切り替えます。 |
 | 最も頻繁に実行されるアクション | でキャプチャされた、Platform で最も頻繁に実行されるアクションを表示します。 [監査ログ](./audit-logs/overview.md) 選択した時間枠に設定します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の期間を変更します。 |
 | 最もアクティブなユーザー | 組織内で最もアクティブな Platform ユーザーを、次の条件でキャプチャして表示します。 [監査ログ](./audit-logs/overview.md) 選択した時間枠に設定します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の期間を変更します。 |
@@ -53,5 +53,5 @@ ht-degree: 3%
 * [属性ベースのアクセス制御](../../access-control/abac/overview.md)
 * [監査ログ](./audit-logs/overview.md)
 * [データガバナンス](../../data-governance/home.md)
-* [データの衛生状態](../../hygiene/home.md)
+* [データハイジーン](../../hygiene/home.md)
 * [Privacy Service](../../privacy-service/home.md)
