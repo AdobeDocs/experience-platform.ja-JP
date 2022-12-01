@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 26c967418e983322cc39aa799a681d258638d769
+source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 42%
+source-wordcount: '1472'
+ht-degree: 41%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 信頼できるソースと信頼できないソースからのレコードを区別する必要がある場合は、認証済みの接続を使用する必要があります。 個人情報 (PII) を含む情報を送信するユーザーは、Platform に情報をストリーミングする際に、認証済みの接続を作成する必要があります。
 
-認証済みのベース接続を作成するには、ソース ID と、に対してPOSTリクエストをおこなう際に認証が必要かどうかを指定する必要があります `/connections` endpoint.
+認証済みのベース接続を作成するには、 `authenticationRequired` パラメーターを指定し、その値を `true`. この手順の間に、認証済みベース接続のソース ID を指定することもできます。 このパラメーターはオプションで、 `name` 属性を指定しない場合は。
 
 
 **API 形式**
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -194,9 +194,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.sourceId` | 作成するストリーミング接続の ID。 |
+| `auth.params.sourceId` | 認証済みのベース接続を作成する際に使用できる追加の識別子。 このパラメーターはオプションで、 `name` 属性を指定しない場合は。 |
 | `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
 
 **応答**
