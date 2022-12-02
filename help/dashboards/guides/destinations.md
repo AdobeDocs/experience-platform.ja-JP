@@ -4,7 +4,7 @@ title: 宛先ダッシュボードガイド
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 3%
@@ -273,7 +273,13 @@ ID 列は、セグメント内のソース ID のうち、ウィジェット ID 
 
 ### [!UICONTROL すべての宛先にわたってアクティブ化されたオーディエンス] {#activated-audiences-across-all-destinations}
 
-この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。 このウィジェットは、セグメントの数ではなく、オーディエンスの数を表示します。 この数は、最新のスナップショットに対して正確です。
+この [!UICONTROL すべての宛先でアクティブ化されたオーディエンス] ウィジェットは、1 つの指標内のすべての宛先でアクティブ化されたオーディエンスの合計数を提供します。
+
+>[!NOTE]
+>
+>このウィジェットは、セグメントの数ではなく、オーディエンスの数を表示します。
+
+この数は、最新のスナップショットに対して正確です。
 
 ![すべての宛先ウィジェットでアクティブ化されたオーディエンス。](../images/destinations/activated-audiences-across-all-destinations.png)
 
