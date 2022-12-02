@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: 標準ダッシュボードウィジェット
 description: このガイドでは、Adobe Experience Platform のダッシュボードに標準ウィジェットを追加するための手順を説明します。
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 100%
+source-wordcount: '429'
+ht-degree: 93%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 >
 >ウィジェットは、選択したカテゴリに一致するダッシュボードにのみ追加できます。例えば、 [!UICONTROL プロファイル] カテゴリのウィジェットのみを [!UICONTROL プロファイル] ダッシュボードに追加できます。
 
-![](../images/customization/standard-widgets.png)
+![「標準」タブと使用可能なカテゴリがハイライトされたウィジェットライブラリワークスペース](../images/customization/standard-widgets.png)
 
 ## ダッシュボードへの標準ウィジェットの追加
 
@@ -50,7 +50,7 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 
 「**[!UICONTROL ウィジェットを追加]**」を選択して、選択したウィジェットをダッシュボードに追加します。
 
-![](../images/customization/add-widget.png)
+![ウィジェットが選択されたウィジェットライブラリワークスペースと、ウィジェットの追加とキャンセルがハイライトされている。](../images/customization/add-widget.png)
 
 ## 次の手順
 

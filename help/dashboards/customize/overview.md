@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのカスタマイズの概要
 description: Adobe Experience Platform ダッシュボードに表示されるデータをカスタマイズする方法について詳しく説明します。
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 100%
+source-wordcount: '480'
+ht-degree: 95%
 
 ---
 
@@ -26,11 +26,11 @@ Adobe Experience Platform 内で使用できるプロファイル、セグメン
 
 Experience Platform 内のウィジェットライブラリでは、組織で使用可能な [標準](#standard-widgets) および [カスタム](#custom-widgets) ウィジェットをすべて表示できます。 ダッシュボード（プロファイルダッシュボードなど）から「**[!UICONTROL ダッシュボードを変更]**」を選択して、「**[!UICONTROL ウィジェットライブラリ]**」ボタンを表示できます。
 
-![](../images/customization/modify-dashboard.png)
+![変更ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
 
 **[!UICONTROL ウィジェットライブラリ]** を選択してウィジェットライブラリを開き、使用可能なすべての標準指標を表示するか、カスタムウィジェットの作成を開始します。
 
-![](../images/customization/widget-library-button.png)
+![ウィジェットライブラリがハイライトされたプロファイルダッシュボード。](../images/customization/widget-library-button.png)
 
 ### 標準ウィジェット {#standard-widgets}
 
@@ -44,7 +44,7 @@ Experience Platform 内のウィジェットライブラリでは、組織で使
 
 独自のウィジェットを作成する詳細な手順については、 [ダッシュボードガイドのカスタムウィジェットに関するガイド](custom-widgets.md) を参照してください。
 
-![](../images/customization/widget-library.png)
+![標準とカスタムがハイライト表示されたウィジェットライブラリワークスペース。](../images/customization/widget-library.png)
 
 #### スキーマの編集 {#edit-schema}
 

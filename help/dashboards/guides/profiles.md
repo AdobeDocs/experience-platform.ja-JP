@@ -4,9 +4,9 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 >
 >組織が Platform を初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「プロファイル」ダッシュボードは表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、リアルタイム顧客プロファイルの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
-![](../images/profiles/dashboard-overview.png)
+![プロファイルと概要がハイライトされたExperience Platformプロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
 
 ### プロファイルダッシュボードの変更
 
@@ -142,7 +142,7 @@ Adobeは、プロファイルデータに関連する様々な指標を視覚化
 >
 >もう 1 つの一般的な理由は、ダッシュボードのスナップショットを実行する時間と、サンプルジョブを実行する時間の違いです [!UICONTROL 参照] タブをクリックします。 この [!UICONTROL プロファイル数] ウィジェットが最後に更新されたのは、ウィジェットのタイムスタンプを確認することです。 サンプルジョブが [!UICONTROL 参照] タブ、「 [リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![プロファイル数Experience Platformがハイライトされた「プロファイル」ダッシュボード。](../images/profiles/profile-count.png)
 
 ### [!UICONTROL プロファイル数のトレンド] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ID の詳細については、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![ID 重複ウィジェットがハイライトされたプロファイルダッシュボードの概要。](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL 単一の ID プロファイル] {#single-identity-profiles}
 

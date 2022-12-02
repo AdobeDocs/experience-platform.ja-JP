@@ -4,10 +4,10 @@ title: クエリサービスを使用したダッシュボードデータセッ�
 type: Documentation
 description: クエリサービスを使用して、Experience Platform でプロファイル、セグメント、宛先ダッシュボードを機能させる未加工データセットを調査し、処理する方法を説明します。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 50%
+source-wordcount: '970'
+ht-degree: 49%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 各プロファイルスナップショット書き出しデータセットの完全なスキーマを理解するには、Experience Platform UI の[データセットビューアを使用](../catalog/datasets/user-guide.md)して、 データセットをプレビューし、調査します。
 
-![](images/query/profile-attribute.png)
+![Profile-Snapshot-Export データセットのプレビュー。](images/query/profile-attribute.png)
 
 #### プロファイル属性データセットと結合ポリシー ID のマッピング
 
@@ -72,7 +72,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 各セグメント定義のスナップショット書き出しデータセットの完全なスキーマを理解するには、[Experience Platform UI のデータセットビューアを使用して、 ](../catalog/datasets/user-guide.md)データセットをプレビューし、調査します。
 
-![](images/query/segment-metadata.png)
+![Segmentdefinition-Snapshot-Export データセットのプレビュー。](images/query/segment-metadata.png)
 
 ### 宛先メタデータデータセット
 
@@ -82,7 +82,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 DIM の宛先データセットの完全なスキーマを理解するには、Experience Platform UI の[データセットビューアを使用して、](../catalog/datasets/user-guide.md)データセット をプレビューし、調査します。
 
-![](images/query/destinations-metadata.png)
+![DIM_Destination データセットのプレビュー。](images/query/destinations-metadata.png)
 
 ## （ベータ版）顧客データプラットフォーム (CDP) のインサイトレポート
 

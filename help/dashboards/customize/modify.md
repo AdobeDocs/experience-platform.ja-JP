@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: Platform のダッシュボードを UI で変更
 description: このガイドでは、組織の Adobe Experience Platform のデータをダッシュボードで表示する方法をカスタマイズする手順を説明します。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 89%
+source-wordcount: '510'
+ht-degree: 82%
 
 ---
 
@@ -24,13 +24,13 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 [!UICONTROL プロファイル] ダッシュボードなどの任意のダッシュボードから、「**[!UICONTROL ダッシュボードを変更]**」を選択して、既存のウィジェットのサイズを変更し、並べ替えることができます。
 
-![](../images/customization/modify-dashboard.png)
+![変更ダッシュボードがハイライト表示されたプロファイルダッシュボード。](../images/customization/modify-dashboard.png)
 
 ## ウィジェットの並べ替え
 
 ダッシュボードの変更を選択した後、ウィジェットのタイトルを選択して目的の順序にウィジェットをドラッグアンドドロップすると、ウィジェットを並べ替えることができます。この例では、 **[!UICONTROL プロファイル数のトレンド]** ウィジェットが一番上の行に移動され、 **[!UICONTROL プロファイル数]** ウィジェットが 2 行目に表示されるようになりました。
 
-![](../images/customization/move-widget.png)
+![2 つの並べ替え済みウィジェットがハイライト表示されたプロファイルダッシュボード。](../images/customization/move-widget.png)
 
 ## ウィジェットのサイズ変更
 
@@ -40,13 +40,13 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 >
 >ウィジェットのサイズを調整すると、周囲のウィジェットは動的に再配置されます。このため、一部のウィジェットが追加の行に移動し、スクロールしなければすべてのウィジェットを表示できなくなる場合があります。
 
-![](../images/customization/resize-widget.png)
+![サイズ変更されたウィジェットがハイライト表示されたプロファイルダッシュボード。](../images/customization/resize-widget.png)
 
 ## ダッシュボードの更新内容の保存
 
 ウィジェットの移動とサイズ変更が完了したら、 **[!UICONTROL 保存して終了]** 変更を保存してメインのダッシュボードビューに戻るには、次の手順に従います。 変更を保存しない場合は、「**[!UICONTROL キャンセル]**」を選択してダッシュボードをリセットし、メインのダッシュボード表示に戻ります。
 
-![](../images/customization/save-changes.png)
+![「キャンセル」と「保存」の両方がハイライトされたプロファイルダッシュボード。](../images/customization/save-changes.png)
 
 ## ウィジェットライブラリ
 
@@ -54,7 +54,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 
 [!UICONTROL ウィジェットライブラリ] にアクセスして操作する手順については、 [ウィジェットライブラリガイド](widget-library.md) を参照してください。
 
-![](../images/customization/widget-library.png)
+![標準とカスタムがハイライト表示されたウィジェットライブラリワークスペース。](../images/customization/widget-library.png)
 
 ## 次の手順
 

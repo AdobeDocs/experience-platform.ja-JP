@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform Insights データモデル
 description: Real-time Customer Data Platformインサイトのデータモデルで SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自のReal-Time CDPレポートをカスタマイズする方法を説明します。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 名前空間モデルは、次のデータセットで構成されます。
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
@@ -149,9 +149,9 @@ GROUP BY
 セグメントモデルは、次のデータセットで構成されます。
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 名前空間セグメントモデルは、次のデータセットで構成されます。
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![セグメントモデルの ERD。](./images/cdp-insights/namespace-segment-model.png)
+![名前空間セグメントモデルの ERD。](./images/cdp-insights/namespace-segment-model.png)
 
 #### セグメントの使用例に対する ID 別プロファイル
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 重複名前空間モデルは、次のデータセットで構成されます。
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![セグメントモデルの ERD。](./images/cdp-insights/overlap-namespace-model.png)
+![重複名前空間モデルの ERD。](./images/cdp-insights/overlap-namespace-model.png)
 
 #### ID の重複（プロファイル）の使用例
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 セグメントモデル別の重複名前空間は、次のデータセットで構成されます。
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![セグメントモデルの ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![セグメントモデル別の重複名前空間の ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### ID の重複（セグメント）の使用例
 

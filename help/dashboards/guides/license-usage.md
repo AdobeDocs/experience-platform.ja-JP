@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード ガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 18%
+source-wordcount: '935'
+ht-degree: 17%
 
 ---
 
@@ -33,7 +33,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >
 >ライセンス使用状況ダッシュボードは、デフォルトでは有効になっていません。 ダッシュボードを表示するには、「ライセンス使用状況ダッシュボードの表示」権限が必要です。 ライセンス使用状況ダッシュボードを表示するためのアクセス権限の付与手順については、 [ダッシュボード権限ガイド](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/dashboard-overview.png)
 
 ### サンドボックスを選択
 
@@ -41,7 +41,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 サンドボックスの使用状況レポートは、同じタイプのすべてのサンドボックスの累積的なものです。 つまり、選択 [!UICONTROL 実稼動] または [!UICONTROL 開発] は、それぞれすべての実稼動サンドボックスまたは開発サンドボックスの使用状況レポートを提供します。
 
-![](../images/license-usage/select-sandbox.png)
+![サンドボックスセレクターがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 サンドボックスを選択した後、日付範囲ドロップダウンを使用して、ダッシュボードに表示する期間を選択できます。 過去 30 日間のデフォルト値を含む、複数のオプションを使用できます。
 
-![](../images/license-usage/select-date-range.png)
+![日付範囲ドロップダウンがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/select-date-range.png)
 
 また、 **[!UICONTROL カスタム日付]** をクリックして、表示する期間を選択します。
 
-![](../images/license-usage/select-custom-date.png)
+![カスタムの日付範囲オプションが強調表示された「ライセンス使用状況ダッシュボードの概要」タブ。](../images/license-usage/select-custom-date.png)
 
 ## ウィジェット
 
@@ -68,7 +68,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 各ウィジェットには、組織の実際の数と、組織のライセンスで使用可能な合計を比較した線グラフが表示され、合計使用量の割合が示されます。
 
-![](../images/license-usage/widgets.png)
+![サンプルライセンス使用状況指標ウィジェットの線グラフがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/widgets.png)
 
 ## 使用可能な指標
 

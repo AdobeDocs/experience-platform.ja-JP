@@ -4,9 +4,9 @@ title: セグメントダッシュボードガイド
 description: Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ Platform ユーザーインターフェイス内のAdobe Experience Platform Seg
 >
 >組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL セグメント] ダッシュボードが表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
 
-![セグメントダッシュボードの「概要」タブ](../images/segments/dashboard-overview.png)
+![セグメントと概要がハイライトされた「セグメントダッシュボードの概要」タブ](../images/segments/dashboard-overview.png)
 
 ### を変更します。 [!UICONTROL セグメント] dashboard {#modify}
 
@@ -204,7 +204,7 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 選択 **[!UICONTROL キャプション]** 自動キャプションダイアログを開く。
 
-![ID キャプション別のプロファイルダイアログ。](../images/segments/profiles-by-identity.png)
+![「 ID 別プロファイル」ウィジェットと「キャプション」オプションがハイライトされた「セグメント」ダッシュボードの概要。](../images/segments/profiles-by-identity.png)
 
 機械学習モデルは、データの全体的な分布と主要なディメンションを分析することで、データインサイトを自動的に生成します。
 

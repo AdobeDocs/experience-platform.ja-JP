@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのカスタムウィジェットの作成
 description: このガイドでは、Adobe Experience Platform ダッシュボードで使用するカスタムウィジェットの作成手順を説明します。
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 100%
+source-wordcount: '987'
+ht-degree: 91%
 
 ---
 
@@ -36,13 +36,13 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 
 「**[!UICONTROL カスタム]**」タブを選択してカスタムウィジェットの作成を開始するか、組織が既に作成したカスタムウィジェットを表示します。
 
-![](../images/customization/custom-widgets.png)
+![「カスタム」タブがハイライトされたウィジェットライブラリワークスペース](../images/customization/custom-widgets.png)
 
 ## カスタムウィジェットの作成
 
 カスタムウィジェットを作成するには、ウィジェットライブラリの右上隅にある「**[!UICONTROL ウィジェットを作成]**」を選択します。組織で最初のカスタムウィジェットの場合は、ウィジェットライブラリの中央から「**[!UICONTROL 作成]**」を選択します。
 
-![](../images/customization/create-widget.png)
+![「作成」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/create-widget.png)
 
 **[!UICONTROL ウィジェットを作成]** ダイアログで、新しいウィジェットのタイトルと説明を入力し、ウィジェットに表示する属性を選択します。
 
@@ -56,7 +56,7 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 >
 >ウィジェットごとに 1 つの属性のみを選択でき、属性ごとに 1 つのウィジェットのみを作成できます。 ある属性に対してウィジェットが既に作成されている場合は、その属性が灰色で表示されます。
 
-![](../images/customization/create-widget-dialog.png)
+![ウィジェットを作成ダイアログ。](../images/customization/create-widget-dialog.png)
 
 ## ビジュアライゼーションの選択
 
@@ -80,11 +80,11 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 
 新しいウィジェットを保存し、「[!UICONTROL カスタム]」タブに戻るには、「**[!UICONTROL 作成]**」を選択します。
 
-![](../images/customization/create-widget-select-attribute.png)
+![ビジュアライゼーションオプションと「作成」がハイライト表示されたウィジェットを作成ダイアログ。](../images/customization/create-widget-select-attribute.png)
 
 これで、ライブラリからウィジェットを選択し、「**[!UICONTROL ウィジェットを追加]**」をクリックして、新しいウィジェットをダッシュボードに追加できます。
 
-![](../images/customization/custom-widgets-new.png)
+![新しいウィジェットと追加ウィジェットがハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/custom-widgets-new.png)
 
 ## カスタムウィジェットの非表示
 
@@ -96,13 +96,13 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 >
 >ライブラリでウィジェットを非表示にしても、個々のユーザーのダッシュボードからウィジェットは削除されません。 ウィジェットを組織で使用しなくなった場合は、すべての Platform ユーザーがダッシュボードからウィジェットを削除する必要があるので、必ず直接この情報を伝えてください。
 
-![](../images/customization/hide-widget.png)
+![ウィジェットドロップダウンメニューオプションと「非表示のウィジェットを表示」がハイライトされたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/hide-widget.png)
 
 ## カスタムウィジェットの編集
 
 ウィジェットカードのエリプシス（`...`）を選択し、ドロップダウンメニューから「**[!UICONTROL 編集]**」を選択すると、ウィジェットライブラリでカスタムウィジェットを編集できます。
 
-![](../images/customization/custom-widget-edit.png)
+![省略記号と「編集」がハイライト表示されたウィジェットドロップダウンメニューオプション。](../images/customization/custom-widget-edit.png)
 
 **[!UICONTROL 編集ウィジェット]** ダイアログで、ウィジェットのタイトルと説明を編集し、様々なビジュアライゼーションをプレビューして選択できます。 編集が完了したら「**[!UICONTROL 保存]**」を選択して変更を保存し、「カスタムウィジェット」タブに戻ります。
 
@@ -110,7 +110,7 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 >
 >ライブラリでウィジェットを編集しても、個々のユーザーのウィジェットは更新されません。 ウィジェットが更新された場合は、古いウィジェットをダッシュボードから削除し、更新されたウィジェットをウィジェットライブラリから選択して追加する必要があるので、必ず Platform のすべてのユーザーに直接伝えてください。
 
-![](../images/customization/edit-widget.png)
+![ウィジェットを編集ダイアログ。](../images/customization/edit-widget.png)
 
 ## 次の手順
 

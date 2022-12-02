@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: スキーマを編集してカスタムダッシュボードウィジェットを作成する
 description: このガイドでは、Adobe Experience Platform ダッシュボードのカスタムウィジェットを作成するために、属性を選択し、組織のスキーマを設定する手順を順を追って説明します。
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 100%
+source-wordcount: '498'
+ht-degree: 89%
 
 ---
 
@@ -36,11 +36,13 @@ Adobe Experience Platform ダッシュボードのカスタムウィジェット
 >
 >組織は、最大 20 の属性を選択できます。
 
-組織でプロファイル属性を選択していない場合は、まずウィジェットライブラリの右上隅にある「**[!UICONTROL スキーマを編集]**」を選択します。
+組織でプロファイル属性が選択されていない場合は、まず「 **[!UICONTROL 設定]** をクリックします。
+
+![「設定」がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/configure-schema.png)
 
 1 つ以上のカスタム属性を作成したら、「**[!UICONTROL スキーマを編集]**」を選択して、選択した属性を表示し、さらに追加します。
 
-![](../images/customization/edit-schema.png)
+![スキーマの編集がハイライト表示されたウィジェットライブラリワークスペースの「カスタム」タブ。](../images/customization/edit-schema.png)
 
 ## 属性の選択
 
@@ -55,7 +57,7 @@ Adobe Experience Platform ダッシュボードのカスタムウィジェット
 >[!WARNING]
 >新しく選択した属性は、次回の日別スナップショット（データが更新されるタイミング）後に使用可能になります。
 
-![](../images/customization/select-attribute.png)
+![属性を持つスキーマ属性を選択し、ハイライト表示された「保存」を選択するためのダイアログ。](../images/customization/select-attribute.png)
 
 ## 次の手順
 

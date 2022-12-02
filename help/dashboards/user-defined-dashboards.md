@@ -2,9 +2,9 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -118,8 +118,12 @@ Widget Composer のワークスペースが表示されます。 次に、 **[!U
 
 Adobe Real-time Customer Data Platform Insights ダッシュボードの各クエリが効率的に実行するのに十分なリソースを確保するために、API は、各クエリに同時実行スロットを割り当てて、リソースの使用状況を追跡します。 システムは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは、同時実行スロットに基づいてキューに入れられ、十分な同時実行スロットが使用可能になるまでキューで待ちます。
 
-## 次の手順
+## 次の手順と追加のリソース
 
 このドキュメントでは、カスタムダッシュボードの作成方法と、そのダッシュボードのカスタムウィジェットの作成、編集、更新方法についてより深く理解しています。
 
 次の用途で使用可能な事前設定済みの指標とビジュアライゼーションを見つけるには： [プロファイル](./guides/profiles.md#standard-widgets), [セグメント](./guides/segments.md#standard-widgets)、および [宛先](./guides/destinations.md#standard-widgets) ダッシュボードについては、各ダッシュボードのドキュメントにある標準ウィジェットのリストを参照してください。
+
+ユーザー定義のダッシュボードのExperience Platformに関する理解を深めるには、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

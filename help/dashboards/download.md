@@ -4,10 +4,10 @@ title: Experience Platform ダッシュボードを PDF にダウンロード
 type: Documentation
 description: Experience Platform UI で使用できる PDF へのダウンロード機能を使用して、ダッシュボードのビジュアライゼーションのコピーを保存します。
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 100%
+source-wordcount: '580'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform 内のダッシュボードは、Platform ユーザー
 
 ダッシュボードのダウンロードを開始するには、ダウンロードするダッシュボード（例えば、 [!UICONTROL プロファイル] ダッシュボード）に移動し、ダッシュボードの右上隅にあるその他のオプションメニュー（**`...`**）を選択します。次に、「**[!UICONTROL ダウンロード]**」を選択します。
 
-![](images/download/download-button.png)
+![省略記号とダウンロードドロップダウンがハイライトされたExperience Platformプロファイルダッシュボード。](images/download/download-button.png)
 
 ## PDF のプレビュー
 
@@ -33,11 +33,11 @@ Adobe Experience Platform 内のダッシュボードは、Platform ユーザー
 
 印刷メニューを使用すると、保存する PDF をプレビューできます。 この PDF は、Platform UI に表示されるダッシュボードウィジェットを忠実に表現したものです。PDF のサイズは、現在表示されているすべてのダッシュボードウィジェットを単一のページに表示するように自動的に調整されます。
 
-![](images/download/download-chrome-print.png)
+![プロファイルの概要が単一ページ形式で表示され、右側に印刷オプションパネルが表示されます。](images/download/download-chrome-print.png)
 
 PDF には、Experience Platform のロゴ、ダッシュボードの名前、ユーザー名、ダッシュボードがダウンロードされた日時を含む、自動生成されたヘッダーが含まれています。 この情報は読み取り専用で、PDF では編集できません。
 
-![](images/download/download-pdf.png)
+![自動的に生成されたヘッダーがハイライト表示された印刷プレビューの閉じ方。](images/download/download-pdf.png)
 
 ## PDF として保存
 
@@ -47,7 +47,7 @@ PDF のプレビュー後、「**保存**」を選択して、PDF の保存先�
 >
 >必要に応じて、「**宛先**」ドロップダウンを使用して「**PDF として保存**」を選択できます（そのオプションが自動的に選択されていない場合）。
 
-![](images/download/download-chrome-print-destination.png)
+![単一ページ形式で表示されるプロファイルの概要で、「宛先」ドロップダウンの「PDFとして保存」印刷オプションがハイライト表示されています。](images/download/download-chrome-print-destination.png)
 
 ## ダッシュボードの PDF のカスタマイズ
 
@@ -55,11 +55,11 @@ PDF のプレビュー後、「**保存**」を選択して、PDF の保存先�
 
 例えば、プロファイルダッシュボードの外観を変更して、3 つの標準ウィジェットの上に、いくつかの全幅ウィジェットを含めることができます。
 
-![](images/download/download-modify.png)
+![長いウィジェットを表示するプロファイルダッシュボード。](images/download/download-modify.png)
 
 更新されたダッシュボードをダウンロードするように選択すると、カスタマイズされたプロファイルダッシュボードの外観に合った新しい PDF プレビューが表示されます。 また、表示されるすべてのウィジェットが 1 ページの PDF に含まれるように、PDF のサイズが自動的に調整されます。
 
-![](images/download/download-chrome-print-modified.png)
+![プロファイルの概要が単一ページ形式で表示され、右側に印刷オプションパネルが表示されます。](images/download/download-chrome-print-modified.png)
 
 ダッシュボードのカスタマイズの詳細については、まず [ダッシュボードのカスタマイズの概要](customize/overview.md) を参照してください。
 
