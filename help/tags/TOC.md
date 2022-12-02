@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 05cc1388f4b32036e1c1ba76bfc584774acb014c
+source-git-commit: 1c92860695f74173cd57ec61f8ccc6e72808012a
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '971'
 ht-degree: 74%
 
 ---
@@ -155,7 +155,6 @@ ht-degree: 74%
       * [差分プライバシー](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media ビューア](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL ヘルパー](https://exchange.adobe.com/apps/ec/107691)
-      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -173,6 +172,8 @@ ht-degree: 74%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [マスタープロパティマネージャ](https://exchange.adobe.com/apps/ec/102992)
+      * [!DNL Meta Pixel] {#meta}
+         * [概要](./extensions/client/meta/overview.md)
       * [監視](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [Cookie に対する OneTrust Consent Management](https://exchange.adobe.com/apps/ec/100340)
