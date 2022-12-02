@@ -2,9 +2,9 @@
 title: Microsoft Azure 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送に関するMicrosoft Azure 拡張機能について説明します。
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
+source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
