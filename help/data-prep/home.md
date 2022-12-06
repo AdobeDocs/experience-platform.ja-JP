@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 70%
+ht-degree: 73%
 
 ---
 
@@ -41,7 +41,7 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 計算フィールドの詳細については、 [計算フィールドガイド](./functions.md#calculated-fields).
 
-### 特殊文字のエスケープ
+### 特殊文字のエスケープ {#escape-special-characters}
 
 フィールド内の特殊文字は、 `${...}`. ただし、ピリオド (`.`) は、このメカニズムではサポートされていません。 階層を操作する際に、子属性にピリオド (`.`) の場合は、バックスラッシュ (`\`) をクリックして、特殊文字をエスケープします。 例： `address` は、属性を含むオブジェクトです。 `street.name`を使用する場合は、 `address.street\.name` の代わりに `address.street.name`.
 
@@ -61,7 +61,7 @@ Data Prep は、Platform に取り込まれる様々な形式のデータを確�
 
 ## [!DNL Data Prep] の属性ベースのアクセス制御
 
-Adobe Experience Platformの属性ベースのアクセス制御を使用すると、管理者は、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
+Adobe Experience Platform での属性ベースのアクセス制御では、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
 属性ベースのアクセス制御を使用すると、アクセス権のある属性のみをマッピングできます。 アクセス権のない属性は、パススルーマッピングおよび計算フィールドでは使用できません。したがって、必須フィールドへのアクセス権がない場合、マッピングを正常に保存できません。 また、どの子属性にもアクセスできない場合は、オブジェクトやオブジェクト配列をマッピングできません。 ただし、オブジェクトまたはオブジェクト配列内の他の要素を個別にマッピングすることはできます。
 
