@@ -4,9 +4,9 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platformで宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 4%
 
 ![トレードデスクの宛先に接続する際の必須およびオプションの入力パラメータを示す画像。](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### 書き出すファイルのファイル形式設定オプションを設定する {#file-formatting-and-compression-options}
+### （ベータ版）書き出すファイルのファイル形式設定オプションを設定する {#file-formatting-and-compression-options}
 
 ファイルベースの宛先の場合は、書き出したファイルの形式設定と圧縮の方法に関する様々な設定を指定できます。 使用可能なすべてのフォーマットおよび圧縮オプションの詳細については、 [ファイルベースの宛先に関するファイル形式オプションの設定に関するチュートリアル](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 

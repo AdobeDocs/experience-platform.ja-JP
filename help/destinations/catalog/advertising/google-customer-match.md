@@ -3,10 +3,10 @@ keywords: Google カスタマーマッチ；Googleカスタマーマッチ；Goo
 title: Google Customer Match 接続
 description: Google Customer Match を使用すると、Search、Shopping、Gmail、YouTubeなど、Googleが所有および運用するプロパティをまたいで、オンラインデータとオフラインデータを使用して顧客にリーチし、再び関与することができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
 workflow-type: tm+mt
 source-wordcount: '1778'
-ht-degree: 8%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) では、オンラインデータとオフラインデータを使用して、Googleが所有および操作する次のようなプロパティをまたいで、顧客にリーチし、再び関わることができます。 [!DNL Search], [!DNL Shopping], [!DNL Gmail]、および [!DNL YouTube].
 
-![Adobe Experience Platform UI でのGoogle Customer Match の宛先](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Adobe Experience Platform UI でのGoogle Customer Match の宛先。](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## ユースケース {#use-cases}
 
@@ -38,7 +38,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Customer Match] では、以下の表で説明する id のアクティブ化をサポートしています。 詳細情報： [id](/help/identity-service/namespaces.md).
+[!DNL Google Customer Match] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -50,14 +50,14 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 {style=&quot;table-layout:auto&quot;}
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Google Customer Match] 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -125,7 +125,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -144,15 +144,15 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 

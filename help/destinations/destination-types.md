@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先のタイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの様々なタイプおよびカテゴリの宛先について説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 34%
+source-wordcount: '680'
+ht-degree: 33%
 
 ---
 
@@ -97,4 +97,4 @@ Platform は、タグ管理の機能と柔軟性を活用し、UI でタグ拡�
 
 の接続と拡張機能 [宛先カタログ](https://platform.adobe.com/destination/catalog) は宛先カテゴリ (**広告**, **クラウドストレージ**, **調査プラットフォーム**, **電子メールマーケティング**&#x200B;など ) を、達成に役立つマーケティングアクションに応じて選択します。 各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
-![宛先カテゴリ](./assets/destination-types/destination-categories-menu.png)
+![カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png)
