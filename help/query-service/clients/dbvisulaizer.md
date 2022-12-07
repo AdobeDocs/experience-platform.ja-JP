@@ -5,9 +5,9 @@ title: DbVisualizer をクエリサービスに接続
 topic-legacy: connect
 description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
+source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -36,38 +36,44 @@ ht-degree: 1%
 
 ![ドライバ名のドロップダウンメニュー [!DNL PostgreSQL] ハイライト表示されました。](../images/clients/dbvisualizer/driver-name.png)
 
+### 接続のプロパティを設定する {#properties}
+
 「データベース接続」ワークスペースで、 **[!DNL Properties]** タブに続いて、 **[!DNL Driver Properties]** ナビゲーションサイドバーから。
 
 ![[ プロパティ ] と [ ドライバのプロパティ ] がハイライト表示された [ データベース接続 ] ワークスペース。](../images/clients/dbvisualizer/driver-properties.png)
 
-DBVisualizer で SSL を使用できるようにするには、以下の表に示すドライバのプロパティを使用することをお勧めします。
-
-| プロパティ | 説明 |
-| ------ | ------ |
-| `PGHOST` | のホスト名 [!DNL PostgreSQL] サーバー。 この値はExperience Platform [!UICONTROL ホスト] 資格情報。 |
-| `ssl` | SSL 値の定義 `1` をクリックして、SSL を使用できるようにします。 |
-| `sslmode` | SSL 保護のレベルを制御します。 次を使用することをお勧めします。 `require` サードパーティクライアントをAdobe Experience Platformに接続する際の SSL モード。 この `require` モードでは、すべての通信で暗号化が必要で、正しいサーバに接続するためにネットワークが信頼されていることを確認します。 サーバー SSL 証明書の検証は不要です。 詳しくは、 [サードパーティクライアントに接続するための SSL オプション](./ssl-modes.md) から [!DNL Query Service]. |
-| `user` | データベースに接続されているユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@adobe.org` |
+次に、以下の表に示すドライバのプロパティを入力します。
 
 >[!IMPORTANT]
 >
->詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+>DBVisualizer をAdobe Experience Platformに接続するには、SSL の使用を有効にする必要があります。 詳しくは、 [SSL モードのドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
-### [!DNL Query Service] 資格情報
-
-この `PGHOST` および `user` の値はAdobe Experience Platformの資格情報から取得されます。 資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md).
-
-![「認証情報クエリ」ワークスペースの「Experience Platform」ページ（「認証情報」と「有効期限」がハイライト表示されています）。](../images/clients/dbvisualizer/query-service-credentials-page.png)
-
-[!DNL Query Service] また、は、期限切れでない資格情報を提供して、サードパーティクライアントとの 1 回限りのセットアップを可能にします。 詳しくは、 [有効期限のない資格情報の生成および使用方法に関する完全な手順](../ui/credentials.md#non-expiring-credentials).
+| プロパティ | 説明 |
+| ------ | ------ |
+| `PGHOST` | のホスト名 [!DNL PostgreSQL] サーバー。 この値はExperience Platform **[!UICONTROL ホスト] 資格情報**. |
+| `ssl` | SSL 値の定義 `1` をクリックして、SSL を使用できるようにします。 |
+| `sslmode` | SSL 保護のレベルを制御します。 次を使用することをお勧めします。 `require` サードパーティクライアントをAdobe Experience Platformに接続する際の SSL モード。 この `require` モードでは、すべての通信で暗号化が必要で、正しいサーバに接続するためにネットワークが信頼されていることを確認します。 サーバー SSL 証明書の検証は不要です。 |
+| `user` | データベースに接続されるユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@Adobe.Org`. この値はExperience Platform **[!UICONTROL ユーザー名] 資格情報**. |
 
 検索バーを使用して各プロパティを検索し、パラメーターの値に対応するセルを選択します。 セルが青でハイライト表示されます。 「値」フィールドに Platform の資格情報を入力し、「 」を選択します。 **[!DNL Apply]** をクリックして、driver プロパティを追加します。
+
+![[DBVisulaizer Driver Properties] タブに値が入力され、[Apply] がハイライト表示されます。](../images/clients/dbvisualizer/apply-parameter-value.png)
 
 >[!NOTE]
 >
 >秒を追加するには `user` プロファイル、選択 `user` 「パラメーター」列で、青い+（プラス）アイコンを選択して、各ユーザーの資格情報を追加します。 選択 **[!DNL Apply]** をクリックして、driver プロパティを追加します。
 
 この [!DNL Edited] 列には、パラメータ値が更新されたことを示すチェックマークが表示されます。
+
+### 入力[!DNL Query Service] 資格情報
+
+BBVisualizer をクエリサービスに接続するために必要な資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. の検索方法の詳細 **ホスト**, **ポート**, **データベース**, **ユーザー名**、および **パスワード** 認証情報、お読みください [資格情報ガイド](../ui/credentials.md).
+
+![「認証情報クエリ」ワークスペースの「Experience Platform」ページ（「認証情報」と「有効期限」がハイライト表示されています）。](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+>[!IMPORTANT]
+>
+>[!DNL Query Service] また、は、期限切れでない資格情報を提供して、サードパーティクライアントとの 1 回限りのセットアップを可能にします。 詳しくは、 [有効期限のない資格情報の生成および使用方法に関する完全な手順](../ui/credentials.md#non-expiring-credentials). BDVisualizer を 1 回限りのセットアップとして接続する場合は、このプロセスを完了する必要があります。 この `credential` および `technicalAccountId` 取得した値が DBVisualizer の値を構成します `password` パラメーター。
 
 ## 認証
 
@@ -79,14 +85,20 @@ DBVisualizer で SSL を使用できるようにするには、以下の表に�
 
 ##  を Platform に接続
 
-接続するには、 **[!DNL Connection]** 」タブをクリックし、次の設定のExperience Platform資格情報を入力します。
+接続は、有効期限切れまたは期限切れでない資格情報を使用しておこなえます。 接続するには、 **[!DNL Connection]** 」タブをクリックし、次の設定のExperience Platform資格情報を入力します。
 
-- **名前**:接続を認識するわかりやすい名前を付けることをお勧めします。
-- **データベースサーバ**:これがExperience Platform [!UICONTROL ホスト] 資格情報。
-- **データベースポート**:のポート [!DNL Query Service]. 接続には、ポート 80 を使用する必要があります [!DNL Query Service].
-- **データベース**:秘密鍵証明書の使用 `dbname` 値 `prod:all`.
-- **データベースユーザ ID**:これは、Platform 組織 ID です。 ユーザー ID の形式は次のとおりです。 `ORG_ID@AdobeOrg`.
-- **データベースのパスワード**:これは、 [!DNL Query Service] 認証情報ダッシュボード。
+>[!NOTE]
+>
+>以下の表に示す BDVisualizer に必要な資格情報は、パラメーターの説明に記載されていない限り、資格情報の有効期限と有効期限が切れない場合に同じです。
+
+| 接続パラメーター | 説明 |
+|---|---|
+| **[!UICONTROL 名前]** | 接続の名前を作成します。 接続を認識する人間にわかりやすい名前を付けることをお勧めします。 |
+| **[!UICONTROL データベースサーバ]** | これがExperience Platform **[!UICONTROL ホスト]** 資格情報。 |
+| **[!UICONTROL データベースポート]** | のポート [!DNL Query Service]. ポートを使用する必要があります **80** ～とつながる [!DNL Query Service]. |
+| **[!UICONTROL データベース]** | Experience Platform **[!UICONTROL データベース]** 資格情報の値： `prod:all`. |
+| **[!UICONTROL データベースユーザ ID]** | これは Platform 組織 ID です。 Experience Platform **[!UICONTROL ユーザー名]** 資格情報の値。 ID は、 `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL データベースのパスワード]** | この英数字の文字列はExperience Platform **[!UICONTROL パスワード]** 有効期限のない資格情報を使用する場合、この値は、 `technicalAccountID` そして `credential` 設定 JSON ファイルにダウンロードされました。 パスワードの値は次の形式で指定します。{technicalAccountId}:{credential}。 有効期限のない資格情報の設定 JSON ファイルは、Adobeがのコピーを保持しない、初期化中に 1 回限りのダウンロードです。 |
 
 関連するすべての資格情報を入力したら、「 」を選択します。 **[!DNL Connect]**.
 
