@@ -5,10 +5,10 @@ title: データ取得の監視
 topic-legacy: overview
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 36%
+source-wordcount: '654'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,18 @@ ht-degree: 36%
 
 このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータを監視する手順を説明します。 このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 
-## ストリーミングエンドツーエンドデータの取得の監視
+## ストリーミングエンドツーエンドデータの取得の監視 {#monitor-streaming-end-to-end-data-ingestion}
+
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="取り込み率"
+>abstract="1 秒あたりに正常に処理されたイベント数。"
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI でのソースのデータフローの監視"
+
+>[!TIP]
+>
+>特定の日付の合計イベント数を計算するには、次の式を使用します。 `total events / day = ingestion rate * 60 * 60 * 24`.
 
 内 [Experience PlatformUI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションメニューで、 **[!UICONTROL エンドツーエンドのストリーミング]**.
 
