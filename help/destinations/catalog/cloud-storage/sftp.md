@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 17%
+source-wordcount: '873'
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 >* まだ **[!UICONTROL SFTP]** 宛先、新しい **[!UICONTROL SFTP ベータ版]** 書き出し先のカード **[!UICONTROL SFTP]**.
 
 
-![2 つの SFTP 宛先カードの画像を並べて表示します。](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![2 つの SFTP 宛先カードの画像を並べて表示します。](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 新しい [!DNL SFTP] 宛先カードの内容は次のとおりです。
 
@@ -104,6 +104,8 @@ SFTP の場所への認証接続を確立したら、宛先に次の情報を指
 * **[!UICONTROL 名前]**:Experience Platformユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
+* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

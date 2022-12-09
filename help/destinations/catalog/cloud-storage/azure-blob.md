@@ -3,10 +3,10 @@ keywords: Azure Blob;BLOB 宛先；s3;azure BLOB 宛先
 title: Azure Blob 接続
 description: Azure Blob ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 34%
+source-wordcount: '923'
+ht-degree: 32%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 34%
 >* まだ **[!UICONTROL Azure Blob]** 宛先、新しい **[!UICONTROL Azure Blob ベータ版]** 書き出し先のカード **[!UICONTROL Azure Blob]**.
 
 
-![2 つの Azure Blob 宛先カードの画像を並べて表示します。](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![2 つの Azure Blob 宛先カードの画像を並べて表示します。](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 新しい [!DNL Azure Blob] 宛先カードの内容は次のとおりです。
 
@@ -94,6 +94,8 @@ ht-degree: 34%
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
 * **[!UICONTROL コンテナ]**:名前を入力 [!DNL Azure Blob Storage] この宛先で使用するコンテナ。
+* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
 
 ### アラートの有効化 {#enable-alerts}
 

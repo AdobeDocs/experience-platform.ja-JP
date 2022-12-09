@@ -2,10 +2,10 @@
 title: （ベータ版）Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、セグメントをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 29%
+source-wordcount: '908'
+ht-degree: 27%
 
 ---
 
@@ -34,15 +34,15 @@ ht-degree: 29%
 
 Platform をに接続するため [!DNL Google Cloud Storage]を使用する場合、最初に [!DNL Google Cloud Storage] アカウント 相互運用性設定にアクセスするには、を開きます。 [!DNL Google Cloud Platform] を選択し、 **[!UICONTROL 設定]** から **[!UICONTROL クラウドストレージ]** 」オプションを使用します。
 
-![クラウドストレージと設定がハイライトされたGoogle Cloud Platform ダッシュボード。](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![クラウドストレージと設定がハイライトされたGoogle Cloud Platform ダッシュボード。](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 この **[!UICONTROL 設定]** ページが表示されます。 ここから、 [!DNL Google] プロジェクト ID と、 [!DNL Google Cloud Storage] アカウント 相互運用性の設定にアクセスするには、 **[!UICONTROL 相互運用性]** を上部のヘッダーから削除します。
 
-![「 Google Cloud Platform 」ダッシュボードでハイライト表示されている「 Interoperability 」タブ。](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![「 Google Cloud Platform 」ダッシュボードでハイライト表示されている「 Interoperability 」タブ。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 この **[!UICONTROL 相互運用性]** ページには、認証、アクセスキー、およびサービスアカウントに関連付けられたデフォルトプロジェクトに関する情報が含まれています。 サービスアカウントの新しいアクセスキー ID と秘密アクセスキーを生成するには、「 」を選択します。 **[!UICONTROL サービスアカウントのキーの作成]**.
 
-![「 Google Cloud Platform ダッシュボードで強調表示されたサービスアカウント制御のキーを作成」。](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![「 Google Cloud Platform ダッシュボードで強調表示されたサービスアカウント制御のキーを作成」。](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。
 
@@ -75,6 +75,8 @@ Platform をに接続するため [!DNL Google Cloud Storage]を使用する場�
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL バケット名]**:名前を入力 [!DNL Google Cloud Storage] この宛先で使用するバケット。
 * **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
+* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
 
 ### アラートの有効化 {#enable-alerts}
 

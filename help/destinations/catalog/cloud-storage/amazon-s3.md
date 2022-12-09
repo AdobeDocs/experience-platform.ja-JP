@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services(AWS)S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルをAdobe Experience Platformから独自の S3 バケットに定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 24%
+source-wordcount: '953'
+ht-degree: 23%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 24%
 >[!IMPORTANT]
 >
 >データセットの書き出し機能のベータ版リリースと、ファイルの書き出し機能の改善により、次の 2 つが表示されるようになりました [!DNL Amazon S3] カードを含める必要があります。
->* 既ににファイルを書き出している場合は、 **[!UICONTROL Amazon S3]** 宛先：新しいデータフローを新しいに作成してください **[!UICONTROL Amazon S3 beta]** 宛先。
+>* 既ににファイルを書き出している場合は、 **[!UICONTROL Amazon S3]** の宛先です。新しいデータフローを作成して新しいデータフローを作成してください **[!UICONTROL Amazon S3 beta]** 宛先。
 >* まだ **[!UICONTROL Amazon S3]** 宛先、新しい **[!UICONTROL Amazon S3 beta]** 書き出し先のカード **[!UICONTROL Amazon S3]**.
 
 
-![2 つのAmazon S3 宛先カードの画像を並べて表示します。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![2 つのAmazon S3 宛先カードの画像を並べて表示します。](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 新しい [!DNL Amazon S3] 宛先カードの内容は次のとおりです。
 
@@ -89,6 +89,9 @@ ht-degree: 24%
 * **[!UICONTROL 説明]**:この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**:名前を入力 [!DNL Amazon S3] この宛先で使用するバケット。
 * **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
+* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。
+
 
 >[!TIP]
 >
