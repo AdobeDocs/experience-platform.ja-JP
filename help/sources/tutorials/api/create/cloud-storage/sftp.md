@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して、Adobe Experience Platformを SFTP(Secure File Transfer Protocol) サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 32%
+source-wordcount: '837'
+ht-degree: 31%
 
 ---
 
@@ -44,7 +44,8 @@ ht-degree: 32%
 | `password` | ユーザーのパスワード [!DNL SFTP] サーバー。 |
 | `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
 | `passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 この `privateKeyContent` はパスワードで保護されているので、このパラメーターは秘密鍵コンテンツのパスフレーズを値として使用する必要があります。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP が設定した制限を下回るように設定する必要があります。 **注意**:この設定を既存の SFTP アカウントに対して有効にすると、今後のデータフローにのみ影響し、既存のデータフローには影響しません。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
 
 ### Platform API の使用
 
@@ -54,69 +55,9 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
+この [!DNL SFTP] ソースは、SSH 公開鍵を介した基本認証と認証の両方をサポートします。
+
 ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL SFTP] 認証資格情報をリクエストパラメーターの一部として使用します。
-
-### の作成 [!DNL SFTP] 基本認証を使用したベース接続
-
-次の手順で [!DNL SFTP] 基本認証を使用したベース接続、 [!DNL Flow Service] 接続の `host`, `userName`、および `password`.
-
-**API 形式**
-
-```http
-POST /connections
-```
-
-**リクエスト**
-
-次のリクエストは、 [!DNL SFTP] 基本認証を使用：
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d  '{
-        "name": "SFTP connector with password",
-        "description": "SFTP connector password",
-        "auth": {
-            "specName": "Basic Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "password": "{PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `auth.params.host` | SFTP サーバーのホスト名。 |
-| `auth.params.username` | SFTP サーバーに関連付けられたユーザー名。 |
-| `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
-| `connectionSpec.id` | SFTP サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
-
-**応答**
-
-正常な応答は、一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
-
-```json
-{
-    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
-    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
-}
-```
-
-### の作成 [!DNL SFTP] SSH 公開鍵認証を使用したベース接続
-
-次の手順で [!DNL SFTP] SSH 公開鍵認証を使用したベース接続、 [!DNL Flow Service] 接続の `host`, `userName`, `privateKeyContent`、および `passPhrase`.
 
 >[!IMPORTANT]
 >
@@ -130,46 +71,96 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、 [!DNL SFTP] SSH 公開鍵認証を使用する場合：
+次のリクエストは、[!DNL SFTP] のベース接続を作成します。
+
+>[!BEGINTABS]
+
+>[!TAB 基本認証]
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SFTP connector with SSH authentication",
-        "description": "SFTP connector with SSH authentication",
-        "auth": {
-            "specName": "SSH PublicKey Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-                "passPhrase": "{PASSPHRASE}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d  '{
+      "name": "SFTP connector with password",
+      "description": "SFTP connector password",
+      "auth": {
+          "specName": "Basic Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "maxConcurrentConnections": 1
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `auth.params.host` | SFTP サーバーのホスト名。 |
+| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルト値は 22 です。 |
+| `auth.params.username` | SFTP サーバーに関連付けられたユーザー名。 |
+| `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
+| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定された同時接続の最大数です。 有効にした場合、この値は少なくとも 1 に設定する必要があります。 |
+| `connectionSpec.id` | SFTP サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!TAB SSH 公開鍵認証]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SFTP connector with SSH authentication",
+      "description": "SFTP connector with SSH authentication",
+      "auth": {
+          "specName": "SSH PublicKey Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+              "passPhrase": "{PASSPHRASE}",
+              "maxConcurrentConnections": 1
+
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.host` | のホスト名 [!DNL SFTP] サーバー。 |
+| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルト値は 22 です。 |
 | `auth.params.username` | ユーザー名 [!DNL SFTP] サーバー。 |
 | `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
 | `auth.params.passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |
+| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定された同時接続の最大数です。 有効にした場合、この値は少なくとも 1 に設定する必要があります。 |
 | `connectionSpec.id` | この [!DNL SFTP] サーバ接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!ENDTABS]
 
 **応答**
 
-正常な応答は、一意の識別子 (`id`) をクリックします。 この ID は、 [!DNL SFTP] 次のチュートリアルのサーバー
+正常な応答は、一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
 
 ```json
 {

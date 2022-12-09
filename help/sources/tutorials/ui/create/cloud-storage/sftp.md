@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ade0da445b18108a7f8720404cc7a65139ed42b1
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 24%
+source-wordcount: '785'
+ht-degree: 22%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 24%
 
 ## はじめに
 
-このチュートリアルは、 Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、  Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -44,6 +44,7 @@ ht-degree: 24%
 | `password` | ユーザーのパスワード [!DNL SFTP] サーバー。 |
 | `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
 | `passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP が設定した制限を下回るように設定する必要があります。 **注意**:この設定を既存の SFTP アカウントに対して有効にすると、今後のデータフローにのみ影響し、既存のデータフローには影響しません。 |
 
 必要な資格情報を収集したら、次の手順に従って新しい [!DNL SFTP] Platform に接続するアカウント。
 
@@ -55,7 +56,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 以下 [!UICONTROL クラウドストレージ] カテゴリ、選択 **[!UICONTROL SFTP]** 次に、 **[!UICONTROL データを追加]**.
 
-![カタログ](../../../../images/tutorials/create/sftp/catalog.png)
+![Experience Platformソースカタログで、選択した SFTP ソースが表示されます。](../../../../images/tutorials/create/sftp/catalog.png)
 
 この **[!UICONTROL SFTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -63,17 +64,19 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントに接続するには、接続する FTP または SFTP アカウントを選択し、「 」を選択します **[!UICONTROL 次へ]** をクリックして続行します。
 
-![既存](../../../../images/tutorials/create/sftp/existing.png)
+![Experience PlatformUI の既存の SFTP アカウントの一覧。](../../../../images/tutorials/create/sftp/existing.png)
 
 ### 新しいアカウント
 
 新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;新しい [!DNL SFTP] アカウント
 
+![SFTP の新しいアカウント画面](../../../../images/tutorials/create/sftp/new.png)
+
 #### パスワードを使用した認証
 
 [!DNL SFTP] は、アクセス用に様々な認証タイプをサポートしています。 の下 **[!UICONTROL アカウント認証]** 選択 **[!UICONTROL パスワード]** 次に、接続先のホストとポートの値を、ユーザー名とパスワードと共に指定します。
 
-![connect-password](../../../../images/tutorials/create/sftp/password.png)
+![基本認証を使用した SFTP ソースの新しいアカウント画面](../../../../images/tutorials/create/sftp/password.png)
 
 #### SSH 公開鍵を使用した認証
 
@@ -83,7 +86,7 @@ SSH 公開鍵ベースの資格情報を使用するには、「 」を選択し
 >
 >SFTP では、RSA または DSA タイプの OpenSSH キーをサポートしています。 鍵となるファイルコンテンツが `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で終わる `"-----END [RSA/DSA] PRIVATE KEY-----"`. 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して PPK から OpenSSH 形式に変換します。
 
-![connect-ssh](../../../../images/tutorials/create/sftp/ssh-public-key.png)
+![SSH 公開鍵を使用した SFTP ソースの新しいアカウント画面。](../../../../images/tutorials/create/sftp/ssh.png)
 
 | 認証情報 | 説明 |
 | ---------- | ----------- |
