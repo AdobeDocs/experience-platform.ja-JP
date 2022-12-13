@@ -5,10 +5,10 @@ title: Policy Service API ガイド
 topic-legacy: developer guide
 description: Policy Service API を使用すると、開発者は Experience Platform でデータ使用ラベルとポリシーを管理できます。このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '545'
+ht-degree: 86%
 
 ---
 
@@ -30,7 +30,13 @@ Adobe Experience Platform データガバナンスを使用すると、顧客デ
 
 ## ポリシー
 
-データ使用ポリシーは、[!DNL Experience Platform] 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです。ポリシーは、以下によって定義されます。
+データガバナンスポリシーは、内のデータに対して実行を許可（/制限）するマーケティングアクションの種類を記述するルールです [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>データガバナンスポリシーは、組織内の特定の Platform ユーザーがアクセスできる特定のデータ属性を決定するアクセス制御ポリシーと混同しないでください。 詳しくは、 [属性ベースのアクセス制御](../../access-control/abac/overview.md) を参照してください。
+
+データガバナンスポリシーは、次の方法で定義します。
 
 1. 特定のマーケティングアクション
 1. アクションの実行が制限されているデータ使用ラベル

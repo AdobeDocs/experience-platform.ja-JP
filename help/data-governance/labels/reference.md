@@ -5,10 +5,10 @@ title: データ使用ラベルの用語集
 topic-legacy: labels
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 67%
+source-wordcount: '2108'
+ht-degree: 63%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 67%
 >abstract="データ使用ラベルには、いくつかのカテゴリがあります。 Adobe定義のラベルには、契約ラベル、ID ラベル、機密ラベルが含まれます。 組織で定義されたラベルは、カスタムラベルとして分類されます。"
 >text="See the data usage labels glossary for more information on these label types."
 
-データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Adobe Experience Platform データガバナンスでは、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
+データ使用ラベルを使用すると、 [ガバナンスポリシー](../policies/overview.md) および [アクセス制御ポリシー](../../access-control/abac/overview.md) そのデータに適用される Adobe Experience Platformには、データの分類を開始するために使用できる、いくつかのコアデータ使用ラベルが標準で用意されています。
 
-このドキュメントでは、[!DNL Experience Platform] が現在提供しているコアデータ使用ラベルの概要を説明します。データガバナンスについて詳しくは、[データガバナンスの概要](../home.md)を参照してください。
+このドキュメントでは、Experience Platformが現在提供しているコアデータ使用ラベルの概要を説明します。
 
 ## 契約ラベル
 
@@ -135,7 +135,7 @@ IAB：4.コンテンツの選択、配信、レポート：情報を収集し既
 
 #### C10 {#c10}
 
-一部のデータ使用ポリシーは、パーソナライゼーションのためのステッチ ID データの使用を制限します。C10 のラベルは、セグメントの結合ポリシーで「プライベートグラフ」オプションが使用されている場合に、セグメントへと自動適用されます。
+一部のデータガバナンスポリシーは、パーソナライゼーションに関連付けられた ID データの使用を制限します。 C10 のラベルは、セグメントの結合ポリシーで「プライベートグラフ」オプションが使用されている場合に、セグメントへと自動適用されます。
 
 #### C11 {#c11}
 

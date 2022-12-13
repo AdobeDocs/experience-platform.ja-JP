@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;効果的なポリ
 solution: Experience Platform
 title: 有効なポリシー API エンドポイント
 topic-legacy: developer guide
-description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Adobe Experience Platform 向けアクセス制御 API を使用して効果的なポリシーを表示する方法について説明します。
+description: Adobe Experience Platformのアクセス制御 API を使用して、効果的なアクセスポリシーを表示する方法を説明します。
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 100%
+source-wordcount: '295'
+ht-degree: 80%
 
 ---
 
 # 有効なポリシーエンドポイント
 
-現在のユーザーに有効なポリシーを表示するには、 API で `/acl/effective-policies` エンドポイントに POST リクエストを実行します。[!DNL Access Control]取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
+現在のユーザーに対して有効なアクセス制御ポリシーを表示するには、 `/acl/effective-policies` エンドポイント [!DNL Access Control] API 取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
 
 **API 形式**
 
@@ -65,7 +65,7 @@ curl -X POST \
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Access Control] API への呼び出しを実行して、アクティブな権限についての情報およびリソースタイプの関連ポリシーについての情報を返す方法について説明しました。[!DNL Experience Platform] のアクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
+このドキュメントでは、 [!DNL Access Control] アクティブな権限と、リソースの種類に関連するアクセスポリシーに関する情報を返す API。 [!DNL Experience Platform] のアクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
 
 ## 付録
 

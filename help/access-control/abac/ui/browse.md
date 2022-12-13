@@ -3,22 +3,22 @@ keywords: Experience Platform；ホーム；人気のトピック；アクセス
 title: 属性ベースのアクセス制御の参照
 description: このドキュメントでは、Adobe Experience Cloudでの権限インターフェイスの使用に関する情報を提供します
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 21%
 
 ---
 
 # 権限ガイド
 
-権限はAdobe Experience Cloudの領域で、管理者がユーザーの役割とアクセスポリシーを定義して、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できます。
+[!UICONTROL 権限] はAdobe Experience Cloudの領域です。管理者は、製品アプリケーション内の機能およびオブジェクトに対するアクセス権限を管理するためのユーザーの役割およびアクセスポリシーを定義できます。
 
-権限を使用して、次の項目を設定できます。
+を使用 [!UICONTROL 権限]に設定する必要がある場合は、次の項目を設定できます。
 
+* [アクセスポリシー](./policies.md)
 * [ラベル](./labels.md)
 * [権限](./permissions.md)
-* [ポリシー](./permissions.md)
 * [ロール](./roles.md)
 * [サンドボックス](./sandboxes.md)
 * [ユーザー](./users.md)

@@ -5,10 +5,10 @@ title: データセットの概要
 topic-legacy: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 42%
+source-wordcount: '784'
+ht-degree: 39%
 
 ---
 
@@ -41,6 +41,10 @@ Adobe Experience Platform Data Ingestion は、複数の方法を表します。
 ## データセットへの使用状況ラベルの適用
 
 Adobe Experience Platform データガバナンスを使用すると、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保するために、顧客データを管理できます。データガバナンスフレームワークを使用すると、使用状況ラベルを適用し、そのデータに適用される使用ポリシーに従ってデータを分類できます。
+
+>[!IMPORTANT]
+>
+>データセットレベルでのラベルの適用は、データガバナンスの使用例に対してのみサポートされます。 データのアクセスポリシーを作成する場合は、次の操作を行う必要があります [スキーマへのラベルの適用](../../xdm/tutorials/labels.md) の値が含まれています。 概要については、 [属性ベースのアクセス制御](../../access-control/abac/overview.md) を参照してください。
 
 データ使用状況ラベルは、データセット全体または個々のデータセットフィールドに適用できます。データセットレベルで追加されたラベルは、そのデータセット内のすべてのフィールドに継承されます。
 

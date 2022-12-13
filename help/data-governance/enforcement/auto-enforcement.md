@@ -5,10 +5,10 @@ title: ポリシーの自動適用
 topic-legacy: guide
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 66%
+source-wordcount: '1727'
+ht-degree: 64%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 66%
 >
 >自動ポリシー適用は、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
-データにラベルが付けられ、使用ポリシーが定義されたら、データ使用に対するポリシーのコンプライアンスを適用できます。宛先に対してオーディエンスセグメントをアクティブ化すると、Adobe Experience Platform は、違反が発生した場合に使用ポリシーを自動的に適用します。
+データにラベルが付けられ、データ使用ポリシーが定義されたら、データ使用に対するポリシーのコンプライアンスを実施できます。 宛先に対してオーディエンスセグメントをアクティブ化すると、Adobe Experience Platform は、違反が発生した場合に使用ポリシーを自動的に適用します。
+
+>[!NOTE]
+>
+>このドキュメントでは、データガバナンスと同意ポリシーの実施に焦点を当てます。 アクセス制御ポリシーの詳細については、 [属性ベースのアクセス制御](../../access-control/abac/overview.md).
 
 ## 前提条件
 

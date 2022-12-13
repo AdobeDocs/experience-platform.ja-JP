@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アクセス制御ポリシー API エンドポイント
 description: 属性ベースのアクセス制御 API の/policies エンドポイントを使用すると、Adobe Experience Platformでポリシーをプログラムで管理できます。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 10%
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->このエンドポイントは、 `/policies` エンドポイント [データガバナンス API](../../../data-governance/api/policies.md)：データ使用ポリシーの管理に使用されます。
+>このエンドポイントは、 `/policies` エンドポイント [ポリシーサービス API](../../../data-governance/api/policies.md)：データ使用ポリシーの管理に使用されます。
 
 ## はじめに
 

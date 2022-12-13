@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 solution: Experience Platform
 title: 参照 API エンドポイント
 topic-legacy: developer guide
-description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。Access Control API の /acl/reference エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースの種類の名前をリストできます。これらの名前は、現在のユーザーに対する有効なポリシーを表示する API 呼び出しで使用できます。
+description: アクセス制御 API の参照エンドポイントを使用すると、使用可能な権限の名前とリソースの種類を表示できます。これを使用して、現在のユーザーに対する有効なアクセス制御ポリシーを表示できます。
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 100%
+source-wordcount: '165'
+ht-degree: 67%
 
 ---
 
 # 参照エンドポイント
 
-`/acl/reference` エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースタイプの名前をリストできます。これらの名前は、現在のユーザーに対する[有効なポリシーを表示する](./effective-policies.md) API 呼び出しで使用できます。
+`/acl/reference` エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースタイプの名前をリストできます。これらの名前は、 [有効なアクセス制御ポリシーの表示](./effective-policies.md) 現在のユーザーの
 
 権限とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。リソースタイプは、特定の種類の [!DNL Platform] リソース（データセットやスキーマなど）の読み取り、書き込み、削除の機能を有効にするポリシーです。
 

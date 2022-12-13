@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;データガバナンス;データ使用ポリシー
 solution: Experience Platform
-title: API でデータ使用ポリシーを作成する
+title: API でのデータガバナンスポリシーの作成
 topic-legacy: policies
 type: Tutorial
-description: Policy Service API を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。このドキュメントでは、Policy Service API を使用してポリシーを作成する、順を追ったチュートリアルを提供します。
+description: Policy Service API を使用してデータガバナンスポリシーを作成する方法を説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 100%
+source-wordcount: '1200'
+ht-degree: 91%
 
 ---
 
-# API でデータ使用ポリシーを作成する
+# API でのデータガバナンスポリシーの作成
 
-[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+この [ポリシーサービス API](https://www.adobe.io/experience-platform-apis/references/policy-service/) では、データガバナンスポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
-このドキュメントでは、[!DNL Policy Service] API を使用してデータポリシーを作成する、順を追ったチュートリアルを提供します。API で利用可能な様々な操作についての詳しいガイドは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
+このドキュメントでは、 [!DNL Policy Service] API
+
+>[!NOTE]
+>
+>アクセス制御ポリシーを作成する手順については、 `/policies` エンドポイントガイド [アクセス制御 API](../../access-control/abac/api/policies.md). 同意ポリシーの作成方法については、 [policies UI ガイド](./user-guide.md#consent-policy).
 
 ## はじめに
 

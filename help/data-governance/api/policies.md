@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;ポリシーの適用;API ベースの適用;データガバナンス
 solution: Experience Platform
-title: データ使用ポリシー API エンドポイント
+title: データガバナンスポリシー API エンドポイント
 topic-legacy: developer guide
-description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。データ使用ポリシーの表示、作成、更新、削除に関する API 呼び出しには、すべて /policies エンドポイントを使用します。
+description: データガバナンスポリシーは組織が導入するルールで、Experience Platform内のデータに対して実行を許可（制限）するマーケティングアクションの種類を記述します。 /policies エンドポイントは、データガバナンスポリシーの表示、作成、更新、削除に関連するすべての API 呼び出しに対して使用されます。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 98%
+source-wordcount: '1865'
+ht-degree: 91%
 
 ---
 
-# データ使用ポリシーエンドポイント
+# データガバナンスポリシーエンドポイント
 
-データ使用ポリシーは、[!DNL Experience Platform] 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです。[!DNL Policy Service API] の `/policies` エンドポイントを使用すると、組織のデータ使用ポリシーをプログラムによって管理できます。
+データガバナンスポリシーは、内のデータに対して実行を許可（/制限）するマーケティングアクションの種類を記述するルールです [!DNL Experience Platform]. この `/policies` エンドポイント [!DNL Policy Service API] を使用すると、組織のデータガバナンスポリシーをプログラムで管理できます。
 
 >[!IMPORTANT]
 >
->このエンドポイントは、 `/policies` エンドポイント [アクセス制御 API](../../access-control/abac/api/policies.md)：アクセス制御ポリシーの管理に使用します。
+>ガバナンスポリシーは、組織内の特定の Platform ユーザーがアクセスできる特定のデータ属性を決定するアクセス制御ポリシーと混同しないでください。 詳しくは、 `/policies` エンドポイントガイド [アクセス制御 API](../../access-control/abac/api/policies.md) を参照してください。
 
 ## はじめに
 
@@ -611,7 +611,7 @@ curl -X DELETE \
 
 ## 有効なコアポリシーのリストを取得 {#list-enabled-core}
 
-デフォルトでは、有効なデータ使用ポリシーのみが評価に使用されます。`/enabledCorePolicies` エンドポイントに GET リクエストをおこなうことで、組織で現在有効になっているコアポリシーのリストを取得できます。
+デフォルトでは、有効なデータガバナンスポリシーのみが評価に参加します。 `/enabledCorePolicies` エンドポイントに GET リクエストをおこなうことで、組織で現在有効になっているコアポリシーのリストを取得できます。
 
 **API 形式**
 
@@ -663,7 +663,7 @@ curl -X GET \
 
 ## 有効なコアポリシーのリストの更新 {#update-enabled-core}
 
-デフォルトでは、有効なデータ使用ポリシーのみが評価に使用されます。`/enabledCorePolicies` エンドポイントに PUT リクエストを送信すると、1 回の呼び出しで、組織で有効になっているコアポリシーのリストを更新できます。
+デフォルトでは、有効なデータガバナンスポリシーのみが評価に参加します。 `/enabledCorePolicies` エンドポイントに PUT リクエストを送信すると、1 回の呼び出しで、組織で有効になっているコアポリシーのリストを更新できます。
 
 >[!NOTE]
 >

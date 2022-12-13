@@ -5,16 +5,20 @@ title: API を使用したデータセットのデータ使用ラベルの管理
 topic-legacy: developer guide
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 100%
+source-wordcount: '816'
+ht-degree: 91%
 
 ---
 
 # API を使用したデータセットのデータ使用ラベルの管理
 
 [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) では、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] API とは別のものです。
+
+>[!IMPORTANT]
+>
+>データセットレベルでのラベルの適用は、データガバナンスの使用例に対してのみサポートされます。 データのアクセスポリシーを作成する場合は、次の操作を行う必要があります [スキーマへのラベルの適用](../../xdm/tutorials/labels.md) の値が含まれています。 概要については、 [属性ベースのアクセス制御](../../access-control/abac/overview.md) を参照してください。
 
 このドキュメントでは、[!DNL Dataset Service API] を使用してデータセットとフィールドのラベルを管理する方法を説明します。API 呼び出しを使用してデータ使用ラベル自体を管理する手順については、[!DNL Policy Service API] の[ラベルエンドポイントガイド](../api/labels.md)を参照してください。
 
@@ -155,10 +159,6 @@ curl -X PUT \
 
 ## 次の手順
 
-このドキュメントを読むことで、[!DNL Dataset Service] APIを使用してデータセットとフィールドのデータ使用ラベルを管理する方法を学びました。
-
-データセットレベルとフィールドレベルでデータ使用ラベルを追加したら、データを [!DNL Experience Platform] に取り込み始めることができます。詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
-
-適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
+このドキュメントを読むことで、[!DNL Dataset Service] APIを使用してデータセットとフィールドのデータ使用ラベルを管理する方法を学びました。次に、 [データ使用ポリシー](../policies/overview.md) および [アクセス制御ポリシー](../../access-control/abac/ui/policies.md) 適用したラベルに基づいて
 
 [!DNL Experience Platform] でのデータセットの管理について詳しくは、[データセットの概要](../../catalog/datasets/overview.md)を参照してください。

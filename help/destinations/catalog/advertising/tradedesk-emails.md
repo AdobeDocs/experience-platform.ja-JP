@@ -2,10 +2,10 @@
 title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a761ab634dce31bd0a06297f703d9d815c2f0ea2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 11%
+ht-degree: 17%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL The Trade Desk] では、以下の表で説明する id のアクティブ化をサポートしています。 詳細情報： [id](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「 ID 一致要件」の節の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。
 
@@ -64,11 +64,11 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
    * ピリオド (. （ASCII コード 46）)。 例えば、normalize `jane.doe@gmail.com` から `janedoe@gmail.com`.
    * プラス記号 (+ （ASCII コード 43）) とそれ以降のすべての文字。 例えば、normalize `janedoe+home@gmail.com` から `janedoe@gmail.com`.
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーを、トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）で書き出します。 |
 | 書き出し頻度 | **[!UICONTROL 日別バッチ]** | セグメントの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示 [バッチアップロード](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based). |
@@ -86,8 +86,8 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL アカウントタイプ]**:を選択してください。 **[!UICONTROL 既存のアカウント]** オプション。
-* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
-* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
+* **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL 広告主 ID]**:あなたの [!DNL Trade Desk Advertiser ID]は、 [!DNL Trade Desk] アカウントマネージャーまたは次の場所にあります： [!DNL Advertiser Preferences] 内 [!DNL Trade Desk] UI
 
 宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 Experience Platform [データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) を参照してください。
@@ -131,4 +131,4 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](/help/data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
