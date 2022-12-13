@@ -1,9 +1,9 @@
 ---
 title: メタピクセル拡張機能の概要
 description: Adobe Experience Platformの Meta Pixel タグ拡張について説明します。
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '760'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 この [!DNL Meta Pixel] タグ拡張機能を使用すると、 [!DNL Pixel] の機能は、クライアント側のタグライブラリで使用できます。 このドキュメントでは、拡張機能をインストールし、 [ルール](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>サーバー側のイベントをに送信しようとしている場合 [!DNL Meta] クライアント側ではなく、 [[!DNL Meta Conversions API] 拡張](../../server/meta/overview.md) 代わりに、
 
 ## 前提条件
 

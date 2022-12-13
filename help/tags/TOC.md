@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 74%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 74%
       * [Google Analytics用 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
-      * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
       * Google Ads 拡張コンバージョン {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [概要](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [概要](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [概要](./extensions/server/azure/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
