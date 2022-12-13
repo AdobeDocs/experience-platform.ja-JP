@@ -2,14 +2,20 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 30%
+source-wordcount: '418'
+ht-degree: 32%
 
 ---
 
 # タグとイベント転送のリリースノート
+
+## 2022年11月23日（PT）
+
+* **[!DNL AWS]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Amazon Web Services] ([!DNL AWS]) を [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。
+*  イベント転送用の **[!DNL Google Ads Enhanced Conversions]拡張機能**:これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。
+*  イベント転送用の **[!DNL Microsoft Azure]拡張機能**:これで、次にデータを送信できます： [!DNL Microsoft Azure] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。
 
 ## 2022年10月26日（PT）
 
