@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 96%
+source-wordcount: '996'
+ht-degree: 91%
 
 ---
 
@@ -89,7 +89,7 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 
 #### ルールアクションのシーケンス {#action-sequencing}
 
-イベント転送ルールの[!UICONTROL アクション]セクションは常に順番に実行されます。ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグの場合のように非同期で実行することはできません。
+イベント転送ルールの[!UICONTROL アクション]セクションは常に順番に実行されます。例えば、ルールに 2 つのアクションがある場合、2 つ目のアクションは、前のアクションが完了するまで（また、エンドポイントからの応答が期待される場合は、そのエンドポイントが応答するまで）実行を開始しません。 ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグルールで実行できるのと同様に、非同期で実行することはできません。
 
 ## 秘密鍵 {#secrets}
 
