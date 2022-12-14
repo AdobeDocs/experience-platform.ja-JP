@@ -5,9 +5,9 @@ title: API を使用したエッジのセグメント化
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 - [[!DNL Segmentation]](../home.md):セグメントやオーディエンスを [!DNL Real-time Customer Profile] データ。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 任意のExperience PlatformAPI エンドポイントを正しく呼び出すには、 [Platform API の概要](../../landing/api-guide.md) 必要なヘッダーとサンプル API 呼び出しの読み取り方法について説明します。
 
@@ -60,6 +60,11 @@ ht-degree: 5%
 | マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加した人。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 また、 **必須** エッジ上でアクティブな結合ポリシーに結び付けられている。 結合ポリシーの詳細については、 [結合ポリシーガイド](../../profile/api/merge-policies.md).
+
+セグメント定義は次のようになります。 **not** は、次のシナリオでエッジセグメント化に対して有効になっています。
+
+- セグメント定義には、単一のイベントと `inSegment` イベント。
+   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** をエッジセグメント化に対して有効にする。
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 

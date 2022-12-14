@@ -5,10 +5,10 @@ title: ストリーミングセグメント化を使用したほぼリアルタ�
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
-ht-degree: 32%
+source-wordcount: '1971'
+ht-degree: 31%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 32%
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 - [[!DNL Segmentation]](../home.md):セグメントやオーディエンスを [!DNL Real-time Customer Profile] データ。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 以下の節では、への呼び出しを正しくおこなうために知っておく必要がある追加情報を示します。 [!DNL Platform] API
 
@@ -87,6 +87,8 @@ ht-degree: 32%
 
 - セグメント定義には、Adobe Audience Manager(AAM) のセグメントまたは特性が含まれます。
 - セグメント定義には複数のエンティティ（複数エンティティクエリ）が含まれます。
+- セグメント定義には、単一のイベントと `inSegment` イベント。
+   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** を有効にすると、ストリーミングセグメント化が可能になります。
 
 ストリーミングセグメント化をおこなう場合は、次のガイドラインに従ってください。
 

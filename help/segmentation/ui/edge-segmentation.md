@@ -5,9 +5,9 @@ title: エッジセグメント UI ガイド
 topic-legacy: ui guide
 description: エッジのセグメント化は、Platform 内のセグメントを即座にエッジ上で評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -26,11 +26,9 @@ ht-degree: 1%
 >
 > さらに、エッジセグメントエンジンは、があるエッジでのリクエストにのみ従います **1 つ** エッジベース以外のプライマリ ID と一致する、プライマリマーク ID。
 
-## エッジセグメント化のクエリタイプ
+## エッジセグメント化のクエリタイプ {#query-types}
 
 現在、エッジセグメント化で評価できるクエリタイプは、選択したクエリタイプのみです。 次の節では、エッジセグメント化で評価できるクエリの種類と、現在サポートされていないクエリの種類のリストを示します。
-
-### サポートされるクエリタイプ {#query-types}
 
 次の表に示す条件のいずれかを満たす場合、クエリはエッジセグメント化を使用して評価できます。
 
@@ -54,6 +52,11 @@ ht-degree: 1%
 | 24 時間の期間内にプロファイルを持つ複数のイベント | 24 時間以内に発生する 1 つ以上のプロファイル属性と複数のイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **および** 過去 24 時間以内にチェックアウトページにアクセスしました。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国に住んでいて、セグメント「既存のセグメント」に属している人。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加した人。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+セグメント定義は次のようになります。 **not** は、次のシナリオでエッジセグメント化に対して有効になっています。
+
+- セグメント定義には、単一のイベントと `inSegment` イベント。
+   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** をエッジセグメント化に対して有効にする。
 
 ## 次の手順
 
