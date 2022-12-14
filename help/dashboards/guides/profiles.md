@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
-ht-degree: 9%
+source-wordcount: '3381'
+ht-degree: 8%
 
 ---
 
@@ -275,14 +275,19 @@ ID の詳細については、 [Adobe Experience Platform ID サービスドキ�
 
 ### [!UICONTROL ID 別の非セグメント化プロファイル] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+ID による非セグメント化プロファイルウィジェットは、2022 年 10 月に廃止され、使用できなくなりました。
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="ID 別の非セグメント化プロファイル"
->abstract="このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。"
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-この [!UICONTROL ID 別の非セグメント化プロファイル] ウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。 データを棒グラフで視覚化し、比較しやすくします。
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![ID 別の非セグメント化プロファイルウィジェット。](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL オーディエンス] {#audiences}
 
@@ -318,8 +323,7 @@ The visualization allows you to monitor the overall health of audiences within A
 ![オーディエンスの重複レポートダイアログ。](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->を選択します。 **[!UICONTROL 重複]** 列ヘッダーを使用して、結果のランクを最も高い順または最も低い順に変更できます。
+を選択します。 **[!UICONTROL 重複]** 列ヘッダーを使用して、結果のランクを最も高い順または最も低い順に変更できます。
 
 レポート全体をオプション形式でPDFするには、オプションメニュー (**`...`**) に続いて **[!UICONTROL ダウンロード]**.
 
