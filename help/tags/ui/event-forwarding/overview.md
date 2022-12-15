@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
+source-git-commit: eb9d2f9a233f4214057db5136f32fc1290ece63c
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 91%
+source-wordcount: '1043'
+ht-degree: 87%
 
 ---
 
@@ -78,6 +78,8 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 ### ルール {#rules}
 
 イベント転送プロパティでのルールの作成はタグと同様に機能しますが、重要な違いは、イベントをルールコンポーネントとして選択できないことです。代わりに、イベント転送ルールは[データストリーム](../../../edge/datastreams/overview.md)から受け取ったすべてのイベントを処理し、特定の条件を満たした場合にそれらのイベントを宛先に転送します。
+
+さらに、1 つのイベントに適用される 30 秒のタイムアウトがあります。このタイムアウトは、イベント転送プロパティ内のすべてのルール（したがってすべてのアクション）で処理されます。 つまり、1 つのイベントに対するすべてのルールとすべてのアクションは、この期間内に完了する必要があります。
 
 ![データ収集 UI のイベント転送ルール](../../images/ui/event-forwarding/overview/rules.png)
 
