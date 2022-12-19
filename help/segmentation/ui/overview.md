@@ -5,9 +5,9 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 16%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 16%
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
 - [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):に取り込まれる様々なデータソースの ID を関連付けることで、顧客プロファイルの作成を可能にします。 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
 - **セグメント定義**：ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。
@@ -66,11 +66,11 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-このビューには、セグメント定義に関する情報（分類、チャーン、プロファイル数、評価方法、作成日、最終変更日を含む）が表示されます。
+このビューには、プロファイル数、作成日、最終変更日など、セグメント定義に関する情報が表示されます。
 
-分類には、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。 [!UICONTROL 実現済み], [!UICONTROL 既存]、および [!UICONTROL 終了]. また、 [!UICONTROL 参照] タブは、セグメントのステータスの最も正確な分類です。 この数が [!UICONTROL 概要] 」タブでは、 [!UICONTROL 参照] 」タブを正しい情報源として追加します。 [!UICONTROL 概要] タブ番号は 1 日に 1 回だけ更新されます。
+「画像」を選択して、この表示にフィールドを追加できます。 これらの追加フィールドには、分類、チャーン、評価方法およびジョブ ID が含まれます。
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+分類を選択すると、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。 [!UICONTROL 実現済み], [!UICONTROL 既存]、および [!UICONTROL 終了]. また、 [!UICONTROL 参照] タブは、セグメントのステータスの最も正確な分類です。 この数が [!UICONTROL 概要] 」タブでは、 [!UICONTROL 参照] 」タブを正しい情報源として追加します。 [!UICONTROL 概要] タブ番号は 1 日に 1 回だけ更新されます。
 
 | ステータス | 説明 |
 | ------ | ----------- |

@@ -4,7 +4,7 @@ title: リアルタイム顧客プロファイル UI ガイド
 topic-legacy: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5500ba7f303fe4ebb9811d249f334d12f9fd3d66
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 10%
@@ -21,7 +21,7 @@ ht-degree: 10%
 
 * [[!DNL Real-time Customer Profile] 概要](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-time Customer Profile] に取り込む際に異なるデータソースの ID を結合することで [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 ## [!UICONTROL 概要]
 
@@ -51,7 +51,7 @@ Experience PlatformUI で、 **[!UICONTROL プロファイル]** 左側のナビ
 
 この節では、これらの指標に加えて、指標が最後に評価された日時を示す最終更新日時を示します。
 
-![](../images/user-guide/profiles-browse-metrics.png)
+![](../images/user-guide/browse-metrics.png)
 
 ### プロファイル数 {#profile-count}
 
@@ -75,7 +75,7 @@ Experience PlatformUI で、 **[!UICONTROL プロファイル]** 左側のナビ
 
 の **[!UICONTROL 参照]** 「 」タブでは、結合ポリシーを使用してサンプルプロファイルを表示したり、id 名前空間と値を使用して特定のプロファイルを検索したりできます。
 
-![](../images/user-guide/browse-by-none-selected.png)
+![](../images/user-guide/none-selected.png)
 
 ### 参照元 [!UICONTROL 結合ポリシー]
 
@@ -89,7 +89,7 @@ Experience PlatformUI で、 **[!UICONTROL プロファイル]** 左側のナビ
 
 結合ポリシーを **[!UICONTROL 結合ポリシーを選択]** ダイアログで、ポリシー名の横のラジオボタンを選択し、次に **[!UICONTROL 選択]** に戻る [!UICONTROL 参照] タブをクリックします。 次を選択できます。 **[!UICONTROL 表示]** をクリックして、サンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプリングを確認します。
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 表示されるプロファイルは、選択した結合ポリシーが適用された後に、組織のプロファイルストアから最大 20 個のプロファイルのサンプルを表します。 選択した結合ポリシーのサンプルプロファイルは、組織のプロファイルストアに新しいデータが追加されると更新されます。
 
@@ -104,17 +104,17 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 
 の **[!UICONTROL 参照]** 「 」タブでは、id 名前空間を使用して、id 値で特定のプロファイルを検索できます。 ID で参照するには、結合ポリシー、ID 名前空間、ID 値を指定する必要があります。
 
-![](../images/user-guide/browse-by-identity.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
 必要に応じて、 **[!UICONTROL 結合ポリシー]** 開くセレクター **[!UICONTROL 結合ポリシーを選択]** ダイアログを開き、使用する結合ポリシーを選択します。
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 その後、 **[!UICONTROL ID 名前空間]** 開くセレクター **[!UICONTROL ID 名前空間を選択]** ダイアログを開き、検索する名前空間を選択します。 組織に多数の名前空間がある場合は、ダイアログの検索バーを使用して、名前空間の名前を入力できます。
 
 名前空間を選択して追加の詳細を表示したり、ラジオボタンを選択して名前空間を選択したりできます。 その後、 **[!UICONTROL 選択]** をクリックして続行します。
 
-![](../images/user-guide/profiles-select-identity-namespace.png)
+![](../images/user-guide/select-identity-namespace.png)
 
 選択後 [!UICONTROL ID 名前空間] そして、 [!UICONTROL 参照] 」タブで、 **[!UICONTROL ID 値]** 選択した名前空間に関連付けられています。
 
@@ -122,11 +122,11 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 >
 >この値は個々の顧客プロファイルに固有で、指定された名前空間の有効なエントリである必要があります。 例えば、ID 名前空間「Email」を選択するには、有効な電子メールアドレスの形式の ID 値が必要です。
 
-![](../images/user-guide/browse-by-identity-values.png)
+![](../images/user-guide/filter-identity-value.png)
 
 値を入力したら、「 」を選択します。 **[!UICONTROL 表示]** 値に一致する単一のプロファイルが返されます。 を選択します。 **[!UICONTROL プロファイル ID]** をクリックして、プロファイルの詳細を表示します。
 
-![](../images/user-guide/browse-by-identity-profile.png)
+![](../images/user-guide/filtered-identity-value.png)
 
 ## プロファイルの詳細を表示 {#profile-detail}
 
@@ -134,11 +134,9 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 
 表示されるデフォルトのフィールドは、組織レベルで変更して、優先するプロファイル属性を表示することもできます。 属性の追加と削除、ダッシュボードパネルのサイズ変更の手順など、これらのフィールドのカスタマイズの詳細については、 [プロファイル詳細カスタマイズガイド](profile-customization.md).
 
-![](../images/user-guide/profiles-profile-detail.png)
+![](../images/user-guide/profile-detail.png)
 
 利用可能なタブの別の項目を選択すると、個々の顧客プロファイルに関する追加情報を表示できます。 これらのタブには、属性、イベント、およびプロファイルが現在認定されているセグメントを表示するセグメントメンバーシップタブが含まれます。
-
-![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ### 「属性」タブ
 
@@ -146,7 +144,7 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 
 これらの属性は、「 」を選択して、JSON オブジェクトとして表示することもできます。 **[!UICONTROL JSON を表示]**. これは、プロファイル属性が Platform に取り込まれる方法をより深く理解したいユーザーに役立ちます。
 
-![](../images/user-guide/profiles-attributes.png)
+![](../images/user-guide/attributes.png)
 
 ### 「イベント」タブ
 
@@ -154,7 +152,7 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 
 イベントは、JSON オブジェクトとして表示することもできます。そのためには、 **[!UICONTROL JSON を表示]**. これは、Platform でイベントがどのように取り込まれるかを理解するのに役立ちます。
 
-![](../images/user-guide/profiles-events.png)
+![](../images/user-guide/events.png)
 
 ### セグメントのメンバーシップタブ
 
@@ -162,7 +160,7 @@ Platform 内での結合ポリシーとその役割について詳しくは、 [
 
 Experience Platformでのセグメント化について詳しくは、 [AdobeExperience Platformセグメント化サービスのドキュメント](../../segmentation/home.md).
 
-![](../images/user-guide/profiles-segment-membership.png)
+![](../images/user-guide/segment-membership.png)
 
 ## 結合ポリシー
 
@@ -170,7 +168,7 @@ Experience Platformでのセグメント化について詳しくは、 [AdobeExp
 
 結合ポリシーについて詳しくは、「[結合ポリシーの概要](../merge-policies/overview.md)」を参照してください。
 
-![](../images/user-guide/profiles-merge-policies.png)
+![](../images/user-guide/merge-policies.png)
 
 ## 和集合スキーマ {#union-schema}
 
@@ -178,7 +176,7 @@ Experience Platformでのセグメント化について詳しくは、 [AdobeExp
 
 和集合スキーマについて詳しくは、 [和集合スキーマ UI ガイド](union-schema.md).
 
-![](../images/user-guide/profiles-union-schema.png)
+![](../images/user-guide/union-schema.png)
 
 ## 次の手順
 
