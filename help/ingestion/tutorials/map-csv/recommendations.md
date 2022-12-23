@@ -3,9 +3,9 @@ title: AI で生成されたレコメンデーション（ベータ版）を使�
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1043'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -36,13 +36,13 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 **[!UICONTROL XDM スキーマに CSV をマッピング]**&#x200B;のワークフローが表示されるので、**[!UICONTROL データフローの詳細]**&#x200B;手順を開始します。
 
-「**[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**」を選択し、新しいコントロールを表示します。マッピングする CSV データに適したクラスを選択します ([!UICONTROL プロファイル] または [!UICONTROL ExperienceEvent]) をクリックします。 必要に応じて、ドロップダウンメニューを使用して、ビジネスに関連する業界を選択できます。提供されたカテゴリが適用されない場合は、空白のままにすることもできます。 組織が [B2B](../../../xdm/tutorials/relationship-b2b.md) モデルで運営する場合、「**[!UICONTROL B2B データ]**」チェックボックスを選択します。
+「**[!UICONTROL ML レコメンデーションを使用して新しいスキーマを作成する]**」を選択し、新しいコントロールを表示します。マッピングする CSV データに適したクラス（[!UICONTROL Profile] または [!UICONTROL ExperienceEvent]）を選択します。 必要に応じて、ドロップダウンメニューを使用して、ご自分のビジネスに関連する業界を選択するか、提供されたカテゴリが該当しない場合は、空白のままにすることもできます。 組織が [B2B](../../../xdm/tutorials/relationship-b2b.md) モデルで運営する場合、「**[!UICONTROL B2B データ]**」チェックボックスを選択します。
 
 ![ML レコメンデーションオプションが選択された場合の[!UICONTROL データフローの詳細]手順。 クラスに[!UICONTROL プロファイル]、業界に[!UICONTROL 通信業]が選択されている場合](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 ここから、CSV データから作成されるスキーマの名前と、そのスキーマで取り込まれるデータを含む出力データセットの名前を指定します。
 
-オプションで、先に進む前に、次の追加機能をデータフローに設定できます。
+続行する前に、オプションで、データフローに次の追加機能を設定できます。
 
 | 入力名 | 説明 |
 | --- | --- |
@@ -84,7 +84,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 ### フィールドグループの編集 {#edit-field-groups}
 
-CSV フィールドは、ML モデルを使用して、既存の XDM フィールドグループに自動的にマッピングされます。 特定の CSV フィールドのフィールドグループを変更する場合は、スキーマツリーの横にある「**[!UICONTROL 編集]**」を選択します。
+ML モデルを使用すると、CSV フィールドは既存の XDM フィールドグループに自動的にマッピングされます。特定の CSV フィールドのフィールドグループを変更する場合は、スキーマツリーの横にある「**[!UICONTROL 編集]**」を選択します。
 
 ![スキーマツリーの横で選択されている「[!UICONTROL 編集]」ボタン](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
