@@ -3,15 +3,15 @@ title: 設定済みのダッシュボードを表示
 description: 組織の設定済みダッシュボードを Experience Platform UI に一覧表示します。
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '202'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # 設定済みのダッシュボードを表示
 
-組織がAdobe Experience Platform内で複数のダッシュボードを使用できる場合、ユーザーインターフェイス (UI) 内でダッシュボードの在庫を確認できます。
+組織が Adobe Experience Platform 内で複数のダッシュボードを使用できる場合、ユーザーインターフェイス（UI）内でこれらのダッシュボードインベントリを確認できます。
 
 組織で設定したダッシュボードを表示するには、左側のナビゲーションで&#x200B;**[!UICONTROL ダッシュボード]**&#x200B;を選択し、「**[!UICONTROL 参照]**」タブを選択します。
 
@@ -27,4 +27,4 @@ Platform インスタンスで使用可能なすべてのダッシュボード�
 
 ## カスタムダッシュボードの作成
 
-Adobe Experience Platformダッシュボードを使用すると、カスタムダッシュボードを作成および管理できます。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、組織に関連する主要指標を視覚化できます。 詳しくは、 [ユーザー定義ダッシュボードガイド](./user-defined-dashboards.md) カスタムダッシュボードの作成と設定の手順については、を参照してください。
+Adobe Experience Platform ダッシュボードを使用すると、カスタムダッシュボードを作成および管理できます。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、組織に関係のある主要指標を視覚化できます。 カスタムダッシュボードの作成と設定の完全な手順については、[ユーザー定義ダッシュボードガイド](./user-defined-dashboards.md)を参照してください。
