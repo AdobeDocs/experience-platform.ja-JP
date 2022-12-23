@@ -1,28 +1,29 @@
 ---
-title: Accelerated Queries Endpoint
-description: クエリ Accelerated Store にステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。 このドキュメントでは、Query Service accelerated-queries エンドポイントに対する HTTP リクエストと応答のサンプルを示します。
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
-workflow-type: tm+mt
+title: 高速クエリエンドポイント
+description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '567'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
 # 高速クエリエンドポイント
 
-Data Distiller SKU の一部として、 [クエリサービス API](https://developer.adobe.com/experience-platform-apis/references/query-service/) では、accelerated store に対してステートレスクエリを実行できます。 返される結果は、集計データに基づいています。 結果の待ち時間が短縮され、情報をよりインタラクティブに交換できるようになります。 高速クエリ API は、 [ユーザー定義ダッシュボード](../../dashboards/user-defined-dashboards.md).
+Data Distiller SKU の一部である [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) では、高速ストアに対してステートレスにクエリを実行できます。返される結果は、集計データに基づいています。結果の待ち時間が短縮され、情報をよりインタラクティブに交換できるようになります。また、高速クエリ API は[ユーザー定義ダッシュボード](../../dashboards/user-defined-dashboards.md)の強化にも使われます。
 
-このガイドを進める前に、 [クエリサービス API ガイド](./getting-started.md) クエリサービス API を正しく使用するために。
+このガイドを進める前に、Query Service API を正しく使用するために[Query Service API ガイド](./getting-started.md)を読み、内容を理解していることを確認してください。
 
 ## はじめに
 
-Data Distiller SKU は、クエリアクセラレーションストアを使用する場合に必要です。 Data Distiller SKU に関連する[パッケージ](../packages.md)、[ガードレール](../guardrails.md#query-accelerated-store)および[ライセンス](../data-distiller/licence-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKU に関連する[パッケージ](../packages.md)、[ガードレール](../guardrails.md#query-accelerated-store)および[ライセンス](../data-distiller/licence-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
-以下の節では、クエリサービス API を使用して、ステートレスな方法でクエリ高速化ストアにアクセスするために必要な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以下の節では、 Query Service API を使用して、ステートレスな方法でクエリ高速ストアにアクセスするために必要な API 呼び出しについて説明します。各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ## 高速クエリの実行 {#run-accelerated-query}
 
-へのPOSTリクエスト `/accelerated-queries` endpoint を使用して高速クエリを実行します。 クエリは、リクエストペイロードに直接含まれるか、テンプレート ID を使用して参照されます。
+`/accelerated-queries` エンドポイントへの POST リクエストを使用して高速クエリを実行します。クエリは、リクエストペイロードに直接含まれるか、テンプレート ID を使用して参照されます。
 
 **API 形式**
 
@@ -34,7 +35,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->へのリクエスト `/accelerated-queries` エンドポイントには SQL ステートメント ID かテンプレート ID のどちらか一方が必要ですが、両方は不要です。 リクエストで両方を送信すると、エラーが発生します。
+>`/accelerated-queries` エンドポイントへのリクエストには SQL 文かテンプレート ID のどちらか一方が必要ですが、両方は不要です。リクエストで両方を送信すると、エラーが発生します。
 
 次のリクエストでは、リクエスト本文の SQL クエリを高速ストアに送信します。
 
@@ -56,7 +57,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 '
 ```
 
-この代替リクエストでは、リクエスト本文のテンプレート ID を高速ストアに送信します。 対応するテンプレートの SQL を使用して、高速ストアに対するクエリを実行します。
+この代替リクエストでは、リクエスト本文のテンプレート ID を高速ストアに送信します。対応するテンプレートの SQL を使用して、高速ストアに対するクエリを実行します。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -78,19 +79,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | プロパティ | 説明 |
 |---|---|
-| `dbName` | 高速クエリを実行するデータベースの名前。 の値 `dbName` ～の形式を取るべきである `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. 指定されたデータベースは、高速ストア内に存在する必要があります。存在しない場合、リクエストがエラーになります。 また、 `x-sandbox-name` のヘッダーとサンドボックス名 `dbName` 同じサンドボックスを参照してください。 |
-| `sql` | SQL 文の文字列。 最大サイズは1000000文字です。 |
-| `templateId` | テンプレートリクエストがに対しておこなわれる際に、テンプレートとして作成および保存されたPOSTの一意の識別子 `/templates` endpoint. |
-| `name` | 高速クエリのわかりやすくわかりやすい名前（オプション）。 |
-| `description` | 他のユーザーが目的を理解するのに役立つ、クエリの目的に関するオプションのコメント。 最大サイズは 1000 バイトです。 |
+| `dbName` | 高速クエリを実行するデータベースの名前。`dbName` の値は `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` の形式を取る必要があります。指定されたデータベースは、高速ストア内に存在する必要があります。存在しない場合、リクエストがエラーになります。また、`x-sandbox-name` のヘッダーと `dbName` のサンドボックス名が同じサンドボックスを参照していることを確認する必要があります。 |
+| `sql` | SQL 文の文字列。最大サイズは 1000000 文字です。 |
+| `templateId` | `/templates` エンドポイントに対して POST リクエストが行なわれた際に、テンプレートとして作成および保存されたクエリの一意の識別子。 |
+| `name` | 人間にとってわかりやすい高速クエリの名前（オプション）。 |
+| `description` | 他のユーザーが目的を理解するのに役立つ、クエリの目的に関するコメント（オプション）。最大サイズは 1000 バイトです。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、クエリによって作成されたアドホックスキーマを返します。
+応答が成功すると、HTTP ステータス 200 と、クエリによって作成されたアドホックスキーマが返されます。
 
 >[!NOTE]
 >
->次の応答は、簡潔にするために切り捨てられました。
+>次の応答はスペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -205,9 +206,8 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 |---|---|
 | `queryId` | 作成したクエリの ID 値。 |
 | `resultsMeta` | このオブジェクトには、結果で返される各列のメタデータが含まれるので、各列の名前とタイプがユーザーにわかります。 |
-| `resultsMeta._adhoc` | 単一のデータセットでのみ使用するために名前空間が使用されたフィールドを持つアドホック Experience Data Model(XDM) スキーマ。 |
+| `resultsMeta._adhoc` | 単一のデータセットでのみ使用するために名前空間が使用されたフィールドを持つアドホックの Experience Data Model（XDM）スキーマ。 |
 | `resultsMeta._adhoc.type` | アドホックスキーマのデータタイプ。 |
-| `resultsMeta._adhoc.meta:xdmType` | これは、XDM フィールドタイプに対してシステムで生成される値です。 利用可能なタイプについて詳しくは、 [使用可能な XDM タイプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | これは、XDM フィールドタイプに対してシステムで生成される値です。利用可能なタイプについて詳しくは、[利用可能な XDM タイプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=ja)のドキュメントを参照してください。 |
 | `resultsMeta._adhoc.properties` | クエリされたデータセットの列名です。 |
-| `resultsMeta._adhoc.results` | これらは、クエリされたデータセットの行名です。 返される各列を反映します。 |
-
+| `resultsMeta._adhoc.results` | これらは、クエリされたデータセットの行名です。返される各列を反映します。 |
