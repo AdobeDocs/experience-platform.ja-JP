@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データの場所；データの場所；データの場所；データ管理；データ管理；系列；系列；データ型；データ型；データ型
+keywords: Experience Platform;ホーム;人気のトピック;データの場所;データ場所;データ管理;データの管理;系列;系列;データ型;データの型;データのタイプ;データタイプ
 solution: Experience Platform
 title: データセットの概要
 topic-legacy: datasets
@@ -8,25 +8,25 @@ exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 39%
+ht-degree: 93%
 
 ---
 
 # データセットの概要
 
-Adobe Experience Platformに正常に取り込まれたすべてのデータは、 [!DNL Data Lake] データセットとして。 データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
+Adobe Experience Platform に正常に取り込まれたすべてのデータは、[!DNL Data Lake] 内にデータセットとして保持されます。データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
 
-このドキュメントでは、 [!DNL Experience Platform].
+このドキュメントでは、[!DNL Experience Platform] のデータセットのおおまかな概要を説明します。
 
 ## データセットの作成とメタデータの追跡
 
-[!DNL Catalog Service] は、内のデータの場所と系列のレコードシステムです [!DNL Experience Platform]、およびは、データセットの作成と管理に使用されます。 [!DNL Catalog] は、各データセットのメタデータを追跡します。このメタデータには、 [!DNL Experience Data Model] (XDM) データセットが準拠するスキーマ（次の節で説明）と、そのデータセットに取り込まれるレコードの数。
+[!DNL Catalog Service] は、[!DNL Experience Platform] 内のデータの場所と系列のレコードシステムであり、データセットの作成と管理に使用されます。[!DNL Catalog] は各データセットのメタデータを追跡します。このメタデータには、データセットが準拠する [!DNL Experience Data Model]（XDM）スキーマへの参照（次の節で説明）と、そのデータセットに取り込まれるレコード数が含まれます。
 
 詳しくは、「[カタログサービスの概要](../home.md)」を参照してください。
 
 ## データセットデータに対する制限の適用
 
-[!DNL Experience Data Model] (XDM) は標準化されたフレームワークで、 [!DNL Platform] は顧客体験データを整理します。 に取り込まれるすべてのデータ [!DNL Platform] で保持するには、事前定義済みの XDM スキーマに準拠している必要があります。 [!DNL Data Lake] データセットとして。
+[!DNL Experience Data Model]（XDM）は、[!DNL Platform] が顧客体験データを整理する際に使用する標準化されたフレームワークです。[!DNL Platform] に取り込まれるすべてのデータは、[!DNL Data Lake] にデータセットとして保持する前に、事前定義済みの XDM スキーマに準拠している必要があります。
 
 すべてのデータセットには、保存できるデータの形式と構造を制限する XDM スキーマへの参照が含まれています。データセットの XDM スキーマに準拠していないデータセットにデータをアップロードしようとすると、データの取得に失敗します。
 
@@ -34,7 +34,7 @@ XDM について詳しくは、「[XDM システムの概要](../../xdm/home.md)
 
 ## データセットへのデータの取り込み
 
-Adobe Experience Platform Data Ingestion は、複数の方法を表します。 [!DNL Platform] 様々なソースからデータを取り込みます。 取得方法に関係なく、正常に取り込まれたデータはすべてバッチファイルに変換されます。バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。その後、これらのバッチファイルは専用のデータセットに追加され、 [!DNL Data Lake].
+Adobe Experience Platform のデータ取得は、[!DNL Platform] が様々なソースからデータを取り込む複数の方法を表します。取得方法に関係なく、正常に取り込まれたデータはすべてバッチファイルに変換されます。バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。その後、これらのバッチファイルは、専用のデータセットに追加され、[!DNL Data Lake] 内で保持されます。
 
 詳しくは、「[データ取得の概要](../../ingestion/home.md)」を参照してください。
 
@@ -48,27 +48,27 @@ Adobe Experience Platform データガバナンスを使用すると、データ
 
 データ使用状況ラベルは、データセット全体または個々のデータセットフィールドに適用できます。データセットレベルで追加されたラベルは、そのデータセット内のすべてのフィールドに継承されます。
 
-このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。で使用状況ラベルを使用する手順については、 [!DNL Platform]次のガイドを参照してください。
+このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。[!DNL Platform] で使用状況ラベルを使用する手順については、次のガイドを参照してください。
 
 * [UI でのラベルの管理](../../data-governance/labels/user-guide.md)
 * [API でのデータセットラベルの管理](../../data-governance/labels/dataset-api.md)
 
-## ダウンストリームのデータセット [!DNL Platform] サービス
+## ダウンストリーム [!DNL Platform] サービスのデータセット
 
-データセットを使用して取り込んだデータを保存すると、それらのデータセットがダウンストリームで使用されます [!DNL Platform] 顧客プロファイルを更新し、機械学習を通じてインサイトを得るためのサービスなど。
+データセットを使用して、取り込んだデータを保存すると、ダウンストリーム [!DNL Platform] サービスでこれらのデータセットが使用され、顧客プロファイルの更新や機械学習を通じたインサイトの取得などが行われます。
 
 様々な操作にデータセットを使用するダウンストリームサービスのリストを次に示します。詳しくは、各サービスのドキュメントを参照してください。
 
-* [[!DNL Data Access API]](../../data-access/home.md):データセット内に保存されたファイルの内容にアクセスしてダウンロードできます。
+* [[!DNL Data Access API]](../../data-access/home.md)：データセット内に保存されたファイルの内容にアクセスしてダウンロードできます。
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):活用 [!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-time Customer Profile] からデータを取り込む [!DNL Data Lake] とは、顧客プロファイルを独立したデータストアに保持します。
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md):セグメントを構築し、 [!DNL Real-time Customer Profile] データ。 これらのオーディエンスは、 [!DNL Data Lake].
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)：[!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-time Customer Profile] は [!DNL Data Lake] からデータを取り込み、顧客プロファイルを独立したデータストアに保持します。
+* [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Real-time Customer Profile] データからセグメントを作成し、オーディエンスを生成できるようにします。これらのオーディエンスは、[!DNL Data Lake] 内の独自のデータセットに書き出すことができます。
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md)：機械学習と人工知能を使用して、大規模なデータセットからインサイトを引き出します。
-* [Adobe Experience Platform Query Service](../../query-service/home.md):標準の SQL を使用して、でデータをクエリできます。 [!DNL Experience Platform]（内の任意のデータセットを結合） [!DNL Data Lake] クエリ結果を新しいデータセットとして取得し、レポートで使用します。 [!DNL Data Science Workspace]または [!DNL Real-time Customer Profile].
-* [Adobe Experience Platform Destinations Service](../../destinations/home.md):以下が可能です。 [データセットを書き出し](/help/destinations/ui/export-datasets.md) を目的のクラウドストレージまたは電子メールマーケティングの宛先に追加します。
+* [Adobe Experience Platform クエリサービス](../../query-service/home.md)：[!DNL Experience Platform] で標準の SQL を使用してデータをクエリし、[!DNL Data Lake] 内のデータセットと結合したり、[!DNL Data Science Workspace]、または [!DNL Real-time Customer Profile] で使用する新しいデータセットとしてクエリ結果を取得したりできます。
+* [Adobe Experience Platform Destinations Service](../../destinations/home.md)：レポーティングやデータサイエンスアクティビティ用に、[データセット](/help/destinations/ui/export-datasets.md)を希望のクラウドストレージやメールマーケティング宛先に書き出すことができます。
 
 ## 次の手順
 
-このドキュメントでは、でのデータセットの主な使用方法を紹介しました。 [!DNL Experience Platform]、 [!DNL Platform] データセットを利用するサービス。 でのデータセットの多くの使用方法の詳細 [!DNL Platform]の場合は、この概要でリンクされているサービスドキュメントを確認してください。
+このドキュメントでは、[!DNL Experience Platform] でデータセットを使用する主要な方法と、データセットを活用した様々な [!DNL Platform] サービスについて説明しました。[!DNL Platform] でデータセットを使用する様々な方法について詳しくは、この概要でリンクされているサービスドキュメントを参照してください。
 
-内でデータセットを操作する手順については、 [!DNL Experience Platform] UI( [データセットユーザーガイド](user-guide.md).
+[!DNL Experience Platform] UI でデータセットを操作する手順については、[データセットのユーザーガイド](user-guide.md)を参照してください。

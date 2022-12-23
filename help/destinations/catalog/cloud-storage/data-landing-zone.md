@@ -5,7 +5,7 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 25%
+ht-degree: 95%
 
 ---
 
@@ -13,16 +13,16 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->この宛先は現在ベータ版で、限られた数のお客様のみが利用できます。 [!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
+>この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
 
 
 ## 概要 {#overview}
 
-[!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。Platform からファイルをエクスポートするための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 1 つに対するアクセス権があります [!DNL Data Landing Zone] サンドボックスごとのコンテナおよびすべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。 Platform とそのアプリケーションサービスのすべてのお客様 ( [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]、および [!DNL Real-time Customer Data Platform] は、1 つの [!DNL Data Landing Zone] サンドボックスごとのコンテナ を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
+[!DNL Data Landing Zone] は Adobe Experience Platform によってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスです。安全なクラウドベースのファイルストレージ機能にアクセスして、ファイルを Platform から書き出すことができます。サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーションサービスのすべての顧客（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、および [!DNL Real-time Customer Data Platform]）は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] のコンテナを使用してプロビジョニングされます。[!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは標準で保護されています [!DNL Azure Blob] 保存時および移動時の保管セキュリティメカニズム SAS ベースの認証を使用すると、 [!DNL Data Landing Zone] コンテナを使用して、公開インターネット接続を介して接続できます。 ユーザーが [!DNL Data Landing Zone] コンテナを使用する場合は、ネットワークに対して許可リストや地域間の設定を設定する必要はありません。
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。
 
-Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファイルは 7 日後に削除されます。
+Platform では、[!DNL Data Landing Zone] コンテナへアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。すべてのファイルは 7 日後に削除されます。
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -30,44 +30,44 @@ Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファ�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、該当するスキーマフィールド（PPID など）と共に、 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳細を表示 [バッチファイルベースの宛先](/help/destinations/destination-types.md#file-based). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性の選択画面で選択したように、該当するスキーマフィールド（例：PPID）と共に、セグメントのすべてのメンバーを書き出しています。 |
+| 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## コンテンツを管理 [!DNL Data Landing Zone]
+## [!DNL Data Landing Zone] のコンテンツを管理
 
-以下を使用できます。 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) コンテンツを管理するには [!DNL Data Landing Zone] コンテナ。
+[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
-内 [!DNL Azure Storage Explorer] UI で、左側のナビゲーションバーの接続アイコンを選択します。 この **リソースを選択** ウィンドウが開き、接続するオプションが表示されます。 選択 **[!DNL Blob container]** を [!DNL Data Landing Zone] ストレージ。
+[!DNL Azure Storage Explorer] UI 内で、左側のナビゲーションバーの「接続」アイコンを選択します。**リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** を選択し、[!DNL Data Landing Zone] ストレージに接続します。
 
 ![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
-次に、 **共有アクセス署名 URL (SAS)** を選択し、「 」を選択します。 **次へ**.
+次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
 ![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-接続方法を選択した後、 **表示名** そして **[!DNL Blob]コンテナ SAS URL** は、 [!DNL Data Landing Zone] コンテナ。
+接続方法を選択した後、**表示名**&#x200B;およびお使いの [!DNL Data Landing Zone] コンテナに対応する&#x200B;**[!DNL Blob]コンテナ SAS URL** を入力します。
 
 >[!IMPORTANT]
 >
->データランディングゾーンの資格情報を取得するには、Platform API を使用する必要があります。 詳しくは、 [データランディングゾーン資格情報の取得](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials).
+>データランディングゾーンの資格情報を取得するには、Platform API を使用する必要があります。詳しくは、[データランディングゾーン資格情報の取得](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=ja#retrieve-data-landing-zone-credentials)を参照してください。
 >
-> 資格情報を取得して書き出したファイルにアクセスするには、クエリーパラメーターを置き換える必要があります `type=user_drop_zone` と `type=dlz_destination` 上記のページで説明されているすべての HTTP 呼び出し。
+> 資格情報を取得し、書き出したファイルにアクセスするには、上記のページで説明されているすべての HTTP 呼び出しでクエリパラメーター `type=user_drop_zone` を `type=dlz_destination` に置き換える必要があります。
 
-次を指定： [!DNL Data Landing Zone] SAS URL を選択し、 **次へ**.
+[!DNL Data Landing Zone] SAS URL を入力し、「**次へ**」を選択します。
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
-この **概要** ウィンドウが開き、設定の概要 ( [!DNL Blob] エンドポイントと権限。 準備が整ったら、「 」を選択します。 **接続**.
+**概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
 ![概要](/help/sources/images/tutorials/create/dlz/summary.png)
 
-接続が成功すると、次の情報が更新されます： [!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナ。
+接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-を [!DNL Data Landing Zone] ～に接続された容器 [!DNL Azure Storage Explorer]を使用して、Experience Platformから [!DNL Data Landing Zone] コンテナ。 ファイルを書き出すには、 [!DNL Data Landing Zone] の宛先を指定します（以下の節で説明）。
+[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、以下の節で説明されているように、Experience Platform UI で [!DNL Data Landing Zone] の宛先への接続を確立する必要があります。
 
 ## 宛先への接続 {#connect}
 
@@ -75,20 +75,19 @@ Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファ�
 > 
 >宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)の手順に従ってください。宛先設定ワークフローで、以下の 2 つのセクションにリストするフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-理由： [!DNL Data Landing Zone] は、Adobeがプロビジョニングしたストレージです。宛先への認証手順を実行する必要はありません。
+[!DNL Data Landing Zone] は、アドビがプロビジョニングしたストレージであるため、宛先への認証手順を実行する必要はありません。
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-
-* **[!UICONTROL 名前]**：この宛先の名前を入力します。
+* **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL フォルダーパス]**:書き出したファイルをホストする保存先フォルダーのパスを入力します。
+* **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
 
@@ -104,20 +103,20 @@ Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファ�
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先にオーディエンスセグメントを有効化する手順については、[プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### スケジュール設定
 
-内 **[!UICONTROL スケジュール]** ステップ [書き出しスケジュールの設定](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) の [!DNL Data Landing Zone] 宛先と [書き出したファイルの名前を設定する](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+**[!UICONTROL スケジュール設定]**&#x200B;手順では、[!DNL Data Landing Zone] 宛先の[書き出しスケジュールを設定](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)し、[書き出したファイルの名前を設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)することもできます。
 
 ### 属性と ID のマッピング {#map}
 
-内 **[!UICONTROL マッピング]** 手順では、プロファイルに書き出す属性および id フィールドを選択できます。 また、書き出したファイルのヘッダーを、任意のわかりやすい名前に変更するように選択することもできます。 詳しくは、 [マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) （「バッチ保存先 UI のアクティブ化」チュートリアル）。
+**[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しがサポートされます。 データセットのエクスポートを設定する方法について詳しくは、 [データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md).
+この宛先では、データセットの書き出しをサポートしています。 データセットの書き出し設定方法について詳しくは、[データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md)を参照してください。
 
-## データエクスポートの成功を検証 {#exported-data}
+## データの正常な書き出しの検証 {#exported-data}
 
-データが正常に書き出されたかどうかを確認するには、 [!DNL Data Landing Zone] ストレージに保存し、書き出したファイルに、期待されたプロファイルの母集団が含まれていることを確認します。
+データが正常に書き出されたかどうかを確認するには、[!DNL Data Landing Zone] ストレージを確認し、書き出されたファイルに想定されるプロファイル母集団が含まれていることを確認してください。

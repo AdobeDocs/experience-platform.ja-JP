@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；エッジセグメント化；エッジセグメント化；ストリーミングエッジ；
+keywords: Experience Platform;ホーム;人気のトピック;セグメント化;セグメント化;セグメント化サービス;エッジセグメント化;エッジセグメント化;ストリーミングエッジ;
 solution: Experience Platform
 title: API を使用したエッジのセグメント化
 topic-legacy: developer guide
@@ -8,7 +8,7 @@ exl-id: effce253-3d9b-43ab-b330-943fb196180f
 source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
 source-wordcount: '1187'
-ht-degree: 5%
+ht-degree: 96%
 
 ---
 
@@ -16,50 +16,50 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->次のドキュメントでは、API を使用してエッジのセグメント化を実行する方法を説明します。 UI を使用してエッジセグメント化を実行する方法については、 [エッジセグメント化 UI ガイド](../ui/edge-segmentation.md).
+>次のドキュメントでは、API を使用してエッジのセグメント化を実行する方法を説明します。 UI を使用してエッジのセグメント化を実行する方法については、[エッジセグメント化 UI ガイド](../ui/edge-segmentation.md)を参照してください。
 >
->エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。 ベータ版でエッジセグメントを作成した場合、これらのセグメントは引き続き動作します。
+>エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメントを作成した場合、これらのセグメントは引き続き動作します。
 
-エッジのセグメント化は、エッジ上でAdobe Experience Platformで瞬時にセグメントを評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
+エッジのセグメント化は、Adobe Experience Platform のセグメントを Experience Edge 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。
 
 >[!IMPORTANT]
 >
-> エッジデータは、収集された場所に最も近いエッジサーバーの場所に保存され、ハブ（またはプリンシパル）Adobe Experience Platformデータセンターとして指定された場所以外の場所に保存される場合があります。
+> エッジデータは、収集された場所に最も近いエッジサーバーの場所に保存されるので、ハブ（またはプリンシパル）Adobe Experience Platform データセンターとして指定された場所以外に保存される可能性があります。
 >
-> さらに、エッジセグメントエンジンは、があるエッジでのリクエストにのみ従います **1 つ** エッジベース以外のプライマリ ID と一致する、プライマリマーク ID。
+> さらに、エッジセグメント化エンジンは、プライマリとしてマークされた&#x200B;**単一**&#x200B;の ID（エッジベース以外のプライマリ ID と一致するもの）があるエッジ上のリクエストのみに従います。
 
 ## はじめに
 
-この開発者ガイドでは、 [!DNL Adobe Experience Platform] エッジのセグメント化に関連するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+この開発者ガイドでは、エッジのセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについての十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [[!DNL Segmentation]](../home.md):セグメントやオーディエンスを [!DNL Real-time Customer Profile] データ。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [[!DNL Segmentation]](../home.md)：[!DNL Real-time Customer Profile] データからセグメントやオーディエンスを作成できます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
-任意のExperience PlatformAPI エンドポイントを正しく呼び出すには、 [Platform API の概要](../../landing/api-guide.md) 必要なヘッダーとサンプル API 呼び出しの読み取り方法について説明します。
+Experience Platform API エンドポイントへの呼び出しを正常に行うには、[Platform API の基本を学ぶ](../../landing/api-guide.md)のガイドを読み、必要なヘッダーとサンプル API 呼び出しの読み方を確認してください。
 
 ## エッジセグメント化のクエリタイプ {#query-types}
 
-エッジセグメント化を使用してセグメントを評価するには、クエリを次のガイドラインに従う必要があります。
+エッジセグメント化を使用してセグメントを評価するには、次のガイドラインに従ってクエリを行う必要があります。
 
 | クエリタイプ | 詳細 | 例 | PQL の例 |
 | ---------- | ------- | ------- | ----------- |
-| 単一イベント | 時間制限のない単一の受信イベントを参照するセグメント定義。 | 買い物かごに項目を追加した担当者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 単一のプロファイル | 単一のプロファイルのみの属性を参照するセグメント定義 | 米国に住む人々。 | `homeAddress.countryCode = "US"` |
-| プロファイルを参照する単一イベント | 時間制限のない 1 つ以上のプロファイル属性と 1 つの受信イベントを参照するセグメント定義。 | ホームページを訪問した米国在住の人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| プロファイル属性を持つ否定された単一イベント | 否定された単一の受信イベントと 1 つ以上のプロファイル属性を参照するセグメント定義 | 米国に住み、 **not** ホームページにアクセスしました。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 1 つの時間枠内の単一イベント | 設定された期間内の単一の受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 時間枠内のプロファイル属性を持つ単一イベント | 1 つ以上のプロファイル属性と、設定された期間内の単一の受信イベントを参照するセグメント定義。 | 過去 24 時間にホームページを訪問した米国に住む人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 時間枠内のプロファイル属性を持つ 1 つのイベントを無効化 | 1 つ以上のプロファイル属性と、一定期間内の無効な単一の受信イベントを参照するセグメント定義。 | 米国に住み、 **not** 過去 24 時間にホームページにアクセスした。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
-| 24 時間以内の頻度イベント | 24 時間の期間内に特定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した人 **少なくとも** 過去 24 時間で 5 回 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24 時間の時間枠内にプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に一定の回数だけ発生したイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **少なくとも** 過去 24 時間で 5 回 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24 時間以内のプロファイルを含む無効な頻度イベント | 1 つ以上のプロファイル属性と、24 時間の期間内に特定の回数だけ発生する無効なイベントを参照するセグメント定義。 | ホームページを訪問していない人 **詳細** 過去 24 時間で 5 回以上 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| 24 時間以内に複数の受信ヒット | 24 時間以内に発生した複数のイベントを参照するセグメント定義。 | ホームページを訪問した人 **または** 過去 24 時間以内にチェックアウトページにアクセスしました。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 24 時間の期間内にプロファイルを持つ複数のイベント | 24 時間以内に発生する 1 つ以上のプロファイル属性と複数のイベントを参照するセグメント定義。 | ホームページを訪問した米国出身の人 **および** 過去 24 時間以内にチェックアウトページにアクセスしました。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国に住んでいて、セグメント「既存のセグメント」に属している人。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加した人。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| 単一イベント | 時間制限のない 1 つの受信イベントを参照するセグメント定義。 | 買い物かごにアイテムを追加した人物。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 単一プロファイル | 単一プロファイルのみの属性を参照するセグメント定義 | 米国在住の人物。 | `homeAddress.countryCode = "US"` |
+| プロファイルを参照する単一のイベント | 1 つ以上のプロファイル属性と、時間制限のない単一の受信イベントを参照する任意のセグメント定義。 | ホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| プロファイル属性を持つ単一イベントの否定 | 単一の受信イベントの否定と 1 つ以上のプロファイル属性を参照する任意のセグメント定義 | ホームページを訪問&#x200B;**したことがない**&#x200B;米国在住の人物。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| 時間枠内での単一のイベント | 設定された期間内の単一の受信イベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問した人物。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 時間枠内でのプロファイル属性を持つ単一イベント | 1 つ以上のプロファイル属性と、設定された期間内の単一の受信イベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 時間枠内でのプロファイル属性を持つ単一イベントの否定 | 1 つ以上のプロファイル属性と、期間内の単一受信イベントの否定を参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問&#x200B;**していない**&#x200B;米国在住の人物。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 24 時間の時間枠内での頻度イベント | 24 時間の時間枠内に特定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した人物。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 24 時間の時間枠内でのプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の時間枠内に一定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 24 時間の時間枠内でのプロファイルを持つ頻度イベントの否定 | 1 つ以上のプロファイル属性と、24 時間の時間枠内に特定の回数だけ発生するイベントの否定を参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを 6 回&#x200B;**以上**&#x200B;訪問していない人物。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| 24 時間のタイムプロファイル以内での複数の受信ヒット | 24 時間の時間枠内に発生する複数のイベントを参照する任意のセグメント定義。 | ホームページを訪問した人、**または**&#x200B;過去 24 時間以内にチェックアウトページを訪問した人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 24 時間の時間枠内にプロファイルを持つ複数のイベント | 1 つ以上のプロファイル属性と、24 時間以内に発生する複数のイベントを参照するセグメント定義。 | ホームページ&#x200B;**および**&#x200B;チェックアウトページにアクセスした、米国在住の人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国在住で、「既存のセグメント」のセグメントに属しているユーザー。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加したユーザー。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-また、 **必須** エッジ上でアクティブな結合ポリシーに結び付けられている。 結合ポリシーの詳細については、 [結合ポリシーガイド](../../profile/api/merge-policies.md).
+また、セグメントが、エッジ上でアクティブな結合ポリシーに結び付けられている&#x200B;**必要があります**。 結合ポリシーの詳細については、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。
 
 セグメント定義は次のようになります。 **not** は、次のシナリオでエッジセグメント化に対して有効になっています。
 
@@ -68,11 +68,11 @@ ht-degree: 5%
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
-IMS 組織内のエッジセグメント化で有効になっているすべてのセグメントのリストを取得するには、にGETリクエストを実行します。 `/segment/definitions` endpoint.
+`/segment/definitions` エンドポイントに対して GET リクエストを行うことで、IMS 組織内でエッジセグメント化が有効になっているすべてのセグメントのリストを取得できます。 
 
 **API 形式**
 
-エッジセグメント化が有効なセグメントを取得するには、クエリパラメーターを含める必要があります `evaluationInfo.synchronous.enabled=true` リクエストパス内で使用します。
+エッジセグメント化が有効になっているセグメントを取得するには、リクエストパスにクエリパラメーター `evaluationInfo.synchronous.enabled=true` を含める必要があります。
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -91,7 +91,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、エッジセグメント化が有効な IMS 組織内のセグメントの配列を返します。 返されるセグメント定義の詳細については、 [セグメント定義エンドポイントガイド](./segment-definitions.md).
+リクエストが成功すると、エッジセグメント化が有効になっている、IMS 組織内のセグメントの配列が応答として返されます。返されるセグメント定義について詳しくは、[セグメント定義エンドポイントガイド](./segment-definitions.md)を参照してください。
 
 ```json
 {
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## エッジセグメント化が有効なセグメントの作成
 
-エッジセグメント化を有効にするセグメントを作成するには、 `/segment/definitions` 次のいずれかと一致するエンドポイント [上記のエッジセグメントクエリタイプ](#query-types).
+エッジセグメント化が有効なセグメントを作成するには、[上記のエッジセグメント化クエリタイプ](#query-types)のいずれかと一致する `/segment/definitions` エンドポイントに対して POST リクエストを行います。
 
 **API 形式**
 
@@ -192,7 +192,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->次の例は、セグメントを作成するための標準的なリクエストです。 セグメント定義の作成の詳細については、 [セグメントの作成](../tutorials/create-a-segment.md).
+>次の例は、セグメントを作成するための標準的なリクエストです。 セグメント定義の作成について詳しくは、[セグメントの作成](../tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
 
 ```shell
 curl -X POST \
@@ -219,7 +219,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、エッジセグメント化に対して有効な、新しく作成されたセグメント定義の詳細を返します。
+リクエストが成功すると、エッジセグメント化が有効な新規作成のセグメント定義の詳細が応答として返されます。
 
 ```json
 {
@@ -261,14 +261,14 @@ curl -X POST \
 
 ## 次の手順
 
-エッジセグメント化が有効なセグメントの作成方法がわかったので、それらを使用して、同じページと次のページのパーソナライゼーションの使用例を有効にできます。
+これで、エッジセグメント化が有効なセグメントの作成方法がわかったので、それらを使用して、同じページと次のページのパーソナライゼーションユースケースを有効にすることができます。
 
-Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/segment-builder.md)』を参照してください。
+Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行しセグメントを操作する方法については、[セグメントビルダーユーザーガイド](../ui/segment-builder.md)を参照してください。
 
 ## 付録
 
-次の節では、エッジセグメント化に関するよくある質問を示します。
+次の節では、エッジセグメント化に関するよくある質問を一覧表示します。
 
-### Edge ネットワーク上でセグメントが使用可能になるまで、どれくらいかかりますか？
+### Edge Network 上でセグメントが使用可能になるまで、どれくらいかかりますか？
 
-Edge ネットワーク上でセグメントが使用可能になるまで、最大 1 時間かかります。
+Edge Network 上でセグメントが使用可能になるまで、最大 1 時間かかります。

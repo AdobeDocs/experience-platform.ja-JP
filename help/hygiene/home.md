@@ -5,7 +5,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 72%
+ht-degree: 84%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 >
->データの衛生状態は、現在、を購入した組織でのみ利用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
+>現在データハイジーンを利用できるのは、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織のみです。
 
 Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
 
@@ -50,8 +50,8 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 | --- | --- | --- |
 | リクエストが送信される | 0 時間 | データセットが指定の時間に有効期限切れになるように求めるリクエストをデータスチュワードまたはプライバシーアナリストが送信します。リクエストは送信後、[!UICONTROL データハイジーン UI] に表示され、スケジュールされた有効期限まで保留状態のままになり、期限後にリクエストが実行されます。 |
 | データセットがドロップされる | 1 時間 | UI の[データセットインベントリページ](../catalog/datasets/user-guide.md)からデータセットがドロップされます。データレイク内のデータはソフト削除されるだけで、プロセスの終わりまでそのまま残り、プロセスの終了後にハード削除されます。 |
-| プロファイル数が更新される | 30 時間 | 削除するデータセットの内容に応じて、一部のプロファイルのコンポーネント属性がすべてそのデータセットに結び付けられている場合は、そのプロファイルがシステムから削除されることがあります。 データセットが削除されてから 30 時間が経過すると、結果として生じるプロファイル数全体の変更が、 [ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend) その他のレポート |
-| セグメントが更新される | 48 時間 | 影響を受けるすべてのプロファイルを更新すると、 [セグメント](../segmentation/home.md) が更新され、新しいサイズが反映されます。 削除したデータセットとセグメント化している属性に応じて、削除の結果、各セグメントのサイズが増減する場合があります。 |
+| プロファイル数が更新される | 30 時間 | 削除するデータセットの内容に応じて、すべてのコンポーネント属性がそのデータセットに関連付けられている場合、一部のプロファイルがシステムから削除されることがあります。 データセットが削除されてから 30 時間が経過すると、結果として生じるプロファイル数全体の変更が、 [ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |
+| セグメントが更新される | 48 時間 | 影響を受けるすべてのプロファイルが更新されると、関連するすべての[セグメント](../segmentation/home.md)が更新され、新しいサイズが反映されます。削除したデータセットとセグメント化している属性に応じて、削除の結果として各セグメントのサイズが増減する場合があります。 |
 | ジャーニーと宛先の更新 | 50 時間 | 関連するセグメントの変更に従って、[ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=ja)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=ja)および[宛先](../destinations/home.md)が更新されます。 |
 | ハード削除が完了する | 14 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 [ハイジーンジョブのステータス](./ui/browse.md#view-details)が、データセットの削除を反映するように更新されます。 |
 
@@ -70,7 +70,7 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 | リクエストが送信される | 0 時間 | データ管理者またはプライバシー分析者がレコードの削除リクエストを送信します。 このリクエストは、送信後に[!UICONTROL データハイジーン UI] に表示されます。 |
 | プロファイル参照が更新される | 3 時間 | 削除された ID によるプロファイル数の変更は、[ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |
 | セグメントが更新される | 24 時間 | プロファイルを削除すると、関連するすべての[セグメント](../segmentation/home.md)が更新され、新しいサイズが反映されます。 |
-| ジャーニーと宛先の更新 | 26 時間 | [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)および[宛先](../destinations/home.md)は、関連するセグメントの変更に従ってが更新されます。 |
+| ジャーニーと宛先の更新 | 26 時間 | [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=ja)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=ja)および[宛先](../destinations/home.md)は、関連するセグメントの変更に従ってが更新されます。 |
 | データレイクでのレコードのソフト削除 | 7 日 | データは、データレイクからソフト削除されます。 |
 | データのバキューム処理完了 | 14 日 | [ハイジーンのジョブのステータス](./ui/browse.md#view-details)が更新され、ジョブの完了が示されます。これは、データレイク上でデータのバキューム処理が完了し、関連レコードがハード削除されたことを意味します。 |
 

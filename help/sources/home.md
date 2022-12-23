@@ -8,7 +8,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -39,8 +39,8 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
    - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
-   - [UI での [!DNL Marketo Engage] ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
-- [Adobe Workfrontソースの概要](connectors/adobe-applications/workfront.md)
+   - [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Adobe Workfront ソースの概要](connectors/adobe-applications/workfront.md)
    - [UI での Workfront ソース接続の作成](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### 広告 {#advertising}

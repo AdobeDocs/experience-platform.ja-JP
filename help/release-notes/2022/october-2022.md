@@ -5,7 +5,7 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -51,8 +51,8 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-| （ベータ版）データセットのエクスポート | この [データセットエクスポートベータ版機能](/help/destinations/ui/export-datasets.md) では、最初の世代のデータ ( [Real-time Customer Data Platform製品説明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) をAdobe Experience Platformから外部の顧客システムに（宛先ユーザーインターフェイスを介して）移動できます。 これにより、ノーコード/ローコードのワークフローを使用して、分析およびコンプライアンスの使用例に対応するために、6 つのクラウドストレージの宛先（以下の表に示す）にデータをExperience Platformから取得できます。 |
-| （ベータ版）ファイルエクスポート機能の強化 | Experience Platformからファイルを書き出す際に、カスタマイズ機能が強化されました。 <br><ul><li>追加 [ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>書き出されたファイルに、 [マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> この機能は、次の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
+| （ベータ版）データセットの書き出し | [ベータ版の機能であるデータセットの書き出し](/help/destinations/ui/export-datasets.md)を利用すると、最初に生成したデータ（[リアルタイム顧客データプラットフォームの製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義済み）を Adobe Experience Platform から宛先ユーザーインターフェイスを介して顧客独自の外部システムに書き出すことができます。これにより、ノーコード／ローコードのワークフローを使用して、6 つのクラウドストレージの宛先（以下の表に示す）に Experience Platform からデータを書き出して、分析およびコンプライアンスのユースケースを実行できます。 |
+| （ベータ版）ファイル書き出し機能の強化 | Experience Platform からファイルを書き出す際に、以下の強化されたカスタマイズ機能を利用できるようになりました。<br><ul><li>追加された[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出し対象の CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br> この機能は、以下の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -63,12 +63,12 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | LINE は、人物、サービスおよび情報をつなぎ、チャットアプリからエンターテインメント、ソーシャルおよび日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。 |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 は、クラウドベースのビジネスアプリケーションプラットフォームです。エンタープライズリソースプランニング（ERP）と顧客関係管理（CRM）を生産性アプリケーションおよび AI ツールと共に組み合わせて、よりスムーズで管理が強化されたエンドツーエンドの運用、成長の可能性の向上およびコスト削減を実現します。 |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | [!DNL (Beta) Adobe Commerce] 宛先コネクタを使用すると、[!DNL Adobe Commerce] アカウントに対してアクティブ化する Real-Time CDP セグメントを 1 つ以上選択して、買い物客向けにパーソナライズされた動的なエクスペリエンスを提供できます。[!DNL Adobe Commerce] 内でこれらの Real-Time CDP セグメントを選択して、「2 つ買うと 1 つ無料」などの、買い物かご内の独自のオファーをパーソナライズできます。また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべて Adobe Real-Time CDP セグメント用にカスタマイズされています。 |
-| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | へのライブアウトバウンド接続を作成する [!DNL Azure Data Lake Storage Gen2] を使用して、Adobe Experience Platformから独自のストレージの場所にデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。Platform からファイルをエクスポートするための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | へのライブアウトバウンド接続を作成する [!DNL Google Cloud Storage] を使用して、Adobe Experience Platformから独自のバケットにデータファイルを定期的に書き出します。 この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | ベータ版の参加者には、現在 2 人の [!DNL Amazon S3] 宛先カードを宛先カタログ内に並べて表示します。 新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | ベータ版の参加者には、現在 2 人の [!DNL Azure Blob] 宛先カードを宛先カタログ内に並べて表示します。 新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
-| [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | ベータ版の参加者には、現在 2 人の [!DNL SFTP] 宛先カードを宛先カタログ内に並べて表示します。 新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | [!DNL Azure Data Lake Storage Gen2] へのライブアウトバウンド接続を作成して、Adobe Experience Platform から独自のストレージの場所に定期的にデータファイルを書き出します。この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] は、Adobe Experience Platform によってプロビジョニングされる [!DNL Azure Blob] ストレージインターフェイスであり、Platform からファイルを書き出すための安全なクラウドベースのファイルストレージ機能へのアクセスを許可します。この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | [!DNL Google Cloud Storage] へのライブアウトバウンド接続を作成して、Adobe Experience Platform から独自のバケットに定期的にデータファイルを書き出します。この新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | ベータ版の参加者には、宛先カタログに 2 つの [!DNL Amazon S3] 宛先カードが並んで表示されるようになりました。新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | ベータ版の参加者には、宛先カタログに 2 つの [!DNL Azure Blob] 宛先カードが並んで表示されるようになりました。新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
+| [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | ベータ版の参加者には、宛先カタログに 2 つの [!DNL SFTP] 宛先カードが並んで表示されるようになりました。新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -104,7 +104,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 | 機能 | 説明 |
 | --- | --- |
-| Platform UI でのクエリの監視 | クエリサービス [!UICONTROL 予定クエリ] 「 」タブでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。 これで、クエリの実行状態に関する重要な情報を、次の場所から検索できるようになりました。失敗した場合のエラーメッセージやコードは含まれます。 [!UICONTROL 予定クエリ] タブをクリックします。 UI を使用して、これらのクエリのステータスに基づいてアラートを購読することもできます。 詳しくは、 [クエリドキュメントの監視](../../query-service/monitor-queries.md) この機能の詳細については、を参照してください。 |
+| Platform UI によるクエリの監視 | クエリサービスの「[!UICONTROL 予定クエリ]」タブでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。「[!UICONTROL 予定クエリ]」タブから、エラーメッセージや失敗した場合のコードなど、クエリ実行のステータスに関する重要な情報を確認できるようになりました。これらのクエリのステータスに基づいて、UI を使用して、アラートを購読することもできます。この機能について詳しくは、[クエリドキュメントの監視](../../query-service/monitor-queries.md)を参照してください。 |
 | クエリ高速化レポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存の Adobe Real-time Customer Data Platform データモデルを拡張したりして、レポートインサイトとそのビジュアライゼーションを改善できます。この機能について詳しくは、[クエリ高速化ストアレポートインサイトのドキュメント](../../query-service/query-accelerated-store/reporting-insights-data-model.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}

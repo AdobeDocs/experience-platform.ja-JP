@@ -5,7 +5,7 @@ exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 82%
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platformのデータ衛生機能は、現在、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
+>Adobe Experience Platform のデータハイジーン機能は現在、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみご利用いただけます。
 
 Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対するデータハイジーンの使用状況を監視できます。
 

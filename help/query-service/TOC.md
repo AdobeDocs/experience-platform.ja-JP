@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 65%
+ht-degree: 98%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 65%
 # Adobe Experience Platform クエリサービス {#query}
 
 - [クエリサービスの概要](home.md)
-- [クエリサービスのパッケージ化](packages.md)
+- [クエリサービスのパッケージング](packages.md)
 - [クエリサービスガードレール](guardrails.md)
-- データDistiller {#data-distiller}
+- Data Distiller {#data-distiller}
    - [ライセンスの使用](data-distiller/licence-usage.md)
 - はじめに {#get-started}
    - [前提条件](get-started/prerequisites.md)
 - ユースケース {#use-cases}
    - [参照を中止](use-cases/abandoned-browse.md)
-   - [Adobe Targetでのアクティビティ分析](use-cases/activity-analysis-with-adobe-target.md)
+   - [Adobe Target でのアクティビティ分析](use-cases/activity-analysis-with-adobe-target.md)
    - [属性分析](use-cases/attribution-analysis.md)
    - [ボットフィルタリング](use-cases/bot-filtering.md)
    - [Web およびモバイル分析のインサイト](use-cases/analytics-insights.md)
@@ -45,7 +45,7 @@ ht-degree: 65%
    - [クエリサービスの認証情報の使用](ui/credentials.md)
    - [クエリ結果からのデータセットの生成](ui/create-datasets.md)
 - [クエリの監視](monitor-queries.md)
-- Query accelerated store{#query-accelerated-store}
+- クエリ高速化ストア{#query-accelerated-store}
    - [レポートインサイトデータモデル](query-accelerated-store/reporting-insights-data-model.md)
 - ベストプラクティス {#best-practices}
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)
@@ -57,7 +57,7 @@ ht-degree: 65%
    - [データ重複排除](best-practices/deduplication.md)
 - 派生属性 {#derived-attributes}
    - [概要](derived-attributes/overview.md)
-   - [デシルのユースケース](derived-attributes/deciles-use-case.md)
+   - [十分位数のユースケース](derived-attributes/deciles-use-case.md)
 - サンプルクエリ {#sample-queries}
    - [エクスペリエンスイベントクエリの例](sample-queries/experience-event.md)
    - [Adobe Analytics クエリの例](sample-queries/adobe-analytics.md)
@@ -76,7 +76,7 @@ ht-degree: 65%
    - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
-   - [ポスティコ](clients/postico.md)
+   - [Postico](clients/postico.md)
    - [Power BI](clients/power-bi.md)
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
@@ -88,4 +88,4 @@ ht-degree: 65%
    - [アドホックスキーマの属性ベースのアクセス制御のサポート](./data-governance/ad-hoc-schema-labels.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)

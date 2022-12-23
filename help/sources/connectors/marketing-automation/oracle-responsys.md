@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；oracle;oracleresponsys;responsys
-title: （ベータ版）OracleResponsys ソースの概要
-description: API またはユーザーインターフェイスを使用してOracleResponsys をAdobe Experience Platformに接続する方法について説明します。
+keywords: Experience Platform;ホーム;人気の高いトピック;Oracle;Oracle Responsys;responsys
+title: （ベータ版）Oracle Responsys ソースの概要
+description: API またはユーザーインターフェイスを使用して Oracle Responsys を Adobe Experience Platform に接続する方法について説明します。
 hide: true
 hidefromtoc: true
 exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
 source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 51%
+ht-degree: 100%
 
 ---
 
-# （ベータ版） [!DNL Oracle Responsys] ソース
+# （ベータ版）[!DNL Oracle Responsys] ソース
 
 >[!NOTE]
 >
->この [!DNL Oracle Responsys] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Oracle Responsys] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -30,13 +30,13 @@ Experience Platform は、サードパーティのマーケティング自動化
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle Responsys] と Platform を接続する方法について説明します。
 
-## 接続 [!DNL Oracle Responsys] API を使用して Platform に接続
+## API を使用して [!DNL Oracle Responsys] と Platform を接続する
 
-* [フローサービス API を使用して、OracleResponsys ベース接続を作成します](../../tutorials/api/create/marketing-automation/oracle-responsys.md)
+* [Flow Service API を使用した Oracle Responsys ベース接続の作成](../../tutorials/api/create/marketing-automation/oracle-responsys.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-* [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
+* [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
-## 接続 [!DNL Oracle Responsys] UI を使用して Platform に接続
+## UI を使用した [!DNL Oracle Responsys] の Platform への接続
 
-* [UI でのOracleResponsys ソース接続の作成](../../tutorials/ui/create/marketing-automation/oracle-responsys.md)
-* [UI でのマーケティング自動化ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
+* [UI での Oracle Responsys ソース接続の作成](../../tutorials/ui/create/marketing-automation/oracle-responsys.md)
+* [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)

@@ -4,8 +4,8 @@ description: Adobe Commerce と Real-Time CDP を使用して、Real-Time CDP �
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '691'
+ht-degree: 100%
 
 ---
 
@@ -70,7 +70,7 @@ Experience Platform で、以下を作成します。
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-- **[!UICONTROL 名前]**：この宛先に任意の名前を入力します。
+- **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 - **[!UICONTROL 説明]**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 - **[!UICONTROL 統合エイリアス]**：この値は、JSON オブジェクト名として Experience Platform Web SDK に送信されます。
 - **[!UICONTROL データストリーム ID]**：これにより、ページへの応答にセグメントを含めるデータ収集データストリームが決定されます。ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。詳しくは、[データストリームの設定](../../../edge/datastreams/overview.md)を参照してください。
@@ -93,7 +93,7 @@ Experience Platform で、以下を作成します。
 
 Experience Platform 内の [!DNL Commerce] 宛先の設定が完了しました。次は [!DNL Commerce Admin] を設定して、作成した Real-time CDP セグメントを読み込む必要があります。詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=ja)を参照してください。
 
-## コマースでのオーディエンスのアクティベーションの検証 {#exported-data}
+## Commerce における Audience Activation の検証 {#exported-data}
 
 [!DNL Adobe Commerce] アカウントに対して Real-Time CDP セグメントをアクティブ化すると、買い物かごの価格ルールを作成する際に [!DNL Admin] でそれらのセグメントが利用できるようになります。
 
