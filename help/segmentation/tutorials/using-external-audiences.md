@@ -5,9 +5,9 @@ title: 外部オーディエンスのインポートと使用
 description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1621'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 
 ID 名前空間を作成するには、 [id 名前空間ガイド](../../identity-service/namespaces.md#manage-namespaces). ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その ID 名前空間をマークします [!UICONTROL タイプ] as a **[!UICONTROL 人以外の識別子]**.
 
-![](../images/tutorials/external-audiences/identity-namespace-info.png)
+![非個人識別子は、「 ID 名前空間を作成」モーダルでハイライト表示されます。](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## セグメントメタデータのスキーマの作成
 
@@ -52,19 +52,19 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 スキーマの構成を開始するには、まず「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションバーで、 **[!UICONTROL スキーマを作成]** を使用して、スキーマワークスペースの右上隅に表示します。 ここからを選択します。 **[!UICONTROL 参照]** をクリックして、使用可能なスキーマタイプの完全な選択を確認します。
 
-![](../images/tutorials/external-audiences/create-schema-browse.png)
+![「スキーマを作成」と「参照」の両方がハイライト表示されます。](../images/tutorials/external-audiences/create-schema-browse.png)
 
 事前に定義されたクラスであるセグメント定義を作成するので、「 」を選択します。 **[!UICONTROL 既存のクラスを使用]**. 次に、 **[!UICONTROL セグメント定義]** クラス、その後に **[!UICONTROL クラスを割り当て]**.
 
-![](../images/tutorials/external-audiences/assign-class.png)
+![セグメント定義クラスがハイライト表示されます。](../images/tutorials/external-audiences/assign-class.png)
 
 スキーマが作成されたので、セグメント ID を含むフィールドを指定する必要があります。 このフィールドをプライマリ ID としてマークし、以前に作成した名前空間に割り当てる必要があります。
 
-![](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![選択したフィールドをプライマリ ID としてマークするチェックボックスが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-time Customer Profile].
 
-![](../images/tutorials/external-audiences/schema-profile.png)
+![プロファイルのスキーマを有効にする切り替えが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/schema-profile.png)
 
 これで、このスキーマがプロファイルに対して有効になり、作成した個人以外の ID 名前空間にプライマリ ID が割り当てられます。 その結果、このスキーマを使用して Platform に読み込まれたセグメントメタデータは、他の人関連のプロファイルデータと結合されずに、プロファイルに取り込まれます。
 
@@ -74,11 +74,11 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![データセットのベースにするスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
 データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![プロファイルのスキーマを有効にする切り替えは、「データセット」アクティビティページで強調表示されます。](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## オーディエンスデータの設定とインポート
 
@@ -94,7 +94,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![ソースの詳細ページで、ストリーミング接続のストリーミングエンドポイントがハイライト表示されます。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## オーディエンスのメタデータ構造
 
@@ -151,7 +151,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 インポートしたオーディエンスを設定したら、セグメント化プロセスの一部として使用できます。 外部オーディエンスを検索するには、セグメントビルダーに移動して、 **[!UICONTROL オーディエンス]** 」タブをクリックします。 **[!UICONTROL フィールド]** 」セクションに入力します。
 
-![](../images/tutorials/external-audiences/external-audiences.png)
+![セグメントビルダー内の外部オーディエンスセレクターが強調表示されます。](../images/tutorials/external-audiences/external-audiences.png)
 
 ## 次の手順
 
@@ -165,15 +165,15 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 スキーマの構成を開始するには、まず「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションバーで、 **[!UICONTROL スキーマを作成]** を使用して、スキーマワークスペースの右上隅に表示します。 ここからを選択します。 **[!UICONTROL XDM 個人プロファイル]**.
 
-![](../images/tutorials/external-audiences/create-schema-profile.png)
+![「 XDM Individual Profile 」領域がハイライト表示されます。](../images/tutorials/external-audiences/create-schema-profile.png)
 
 スキーマが作成されたので、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 それには、「 [!UICONTROL セグメントメンバーシップの詳細]に続いて [!UICONTROL フィールドグループを追加].
 
-![](../images/tutorials/external-audiences/segment-membership-details.png)
+![「セグメントメンバーシップの詳細」フィールドグループがハイライト表示されます。](../images/tutorials/external-audiences/segment-membership-details.png)
 
 さらに、スキーマが **[!UICONTROL プロファイル]**. これをおこなうには、フィールドをプライマリ ID としてマークする必要があります。
 
-![](../images/tutorials/external-audiences/external-segment-profile.png)
+![プロファイルのスキーマを有効にする切り替えが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### データセットの設定
 
@@ -181,11 +181,11 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![データベースの作成に使用するスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
 データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![プロファイルのスキーマを有効にする切り替えは、データセット作成ワークフローでハイライト表示されます。](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## 外部オーディエンスメンバーシップデータの設定とインポート
 
@@ -201,7 +201,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![ソースの詳細ページで、ストリーミング接続のストリーミングエンドポイントがハイライト表示されます。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## セグメントメンバーシップ構造
 

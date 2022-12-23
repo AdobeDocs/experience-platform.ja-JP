@@ -5,10 +5,10 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 16%
+source-wordcount: '2647'
+ht-degree: 19%
 
 ---
 
@@ -35,15 +35,15 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 >[!NOTE]
 >
->組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL セグメント] ダッシュボードが表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、セグメントの使用を開始するのに役立つリンクとドキュメントが表示されます。
+>Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL セグメント]ダッシュボードは表示されません。代わりに、 [!UICONTROL 概要] 「 」タブには、セグメントの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
-### [!UICONTROL セグメントダッシュボード] {#segments-dashboard}
+### [!UICONTROL セグメント]ダッシュボード {#segments-dashboard}
 
 この **[!UICONTROL セグメント]** ダッシュボードでは、組織のセグメントデータに関連する主要指標の概要を説明します。
 
 詳しくは、 [セグメントダッシュボードガイド](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![セグメントダッシュボードが表示されます。 オーディエンスサイズ、ID 別のプロファイル、ID オーバーレイ、オーディエンスサイズの変更トレンドなど、様々なウィジェットを表示します。](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 参照 {#browse}
 
@@ -60,15 +60,15 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="すべてのセグメントをスケジュールに追加"
->abstract="このオプションを有効にすると、すべてのバッチ評価セグメントが、UTC の午後 3 時 30 分にスケジュールされた日次更新に含まれます。 「無効」を選択すると、スケジュールされた更新からすべてのセグメントが削除されます。"
+>abstract="を有効にすると、すべてのバッチ評価セグメントがスケジュールされた日次更新に含まれます。 「無効」を選択すると、スケジュールされた更新からすべてのセグメントが削除されます。"
 
 を選択します。 **[!UICONTROL 参照]** 」タブに移動して、組織のすべてのセグメント定義のリストを表示します。
 
-![](../images/ui/overview/segment-browse-all.png)
+![セグメントの参照画面が表示されます。 組織に属するすべてのセグメントのリストが表示されます。](../images/ui/overview/segment-browse-all.png)
 
 このビューには、プロファイル数、作成日、最終変更日など、セグメント定義に関する情報が表示されます。
 
-「画像」を選択して、この表示にフィールドを追加できます。 これらの追加フィールドには、分類、チャーン、評価方法およびジョブ ID が含まれます。
+この表示にフィールドを追加するには、「 ![フィルター属性アイコン](../images/ui/overview/filter-attribute.png). これらの追加フィールドには、分類、チャーン、評価方法およびジョブ ID が含まれます。
 
 分類を選択すると、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。 [!UICONTROL 実現済み], [!UICONTROL 既存]、および [!UICONTROL 終了]. また、 [!UICONTROL 参照] タブは、セグメントのステータスの最も正確な分類です。 この数が [!UICONTROL 概要] 」タブでは、 [!UICONTROL 参照] 」タブを正しい情報源として追加します。 [!UICONTROL 概要] タブ番号は 1 日に 1 回だけ更新されます。
 
@@ -82,7 +82,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 評価方法は、ストリーミング、バッチ、エッジのいずれかです。 ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。Edge セグメントはリアルタイムに評価され、同じページや次のページのパーソナライゼーションの使用例に使用できます。
 
-![](../images/ui/overview/segment-browse-segments.png)
+![セグメントの参照ページ内のセグメントが強調表示されます。](../images/ui/overview/segment-browse-segments.png)
 
 ページの上部には、すべてのセグメントをスケジュールに追加したり、新しいセグメントを作成したりするオプションがあります。
 
@@ -90,11 +90,11 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 選択 **[!UICONTROL セグメントを作成]** がセグメントビルダーに移動します。 セグメントの作成の詳細については、 [ユーザーガイドでのセグメントの作成](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![セグメント参照ページの上部のナビゲーションバーがハイライト表示されます。 このバーには、すべてのセグメントをスケジュールに追加する切り替えと、セグメントを作成するボタンが含まれています。](../images/ui/overview/segment-browse-top.png)
 
 右側のサイドバーには、組織内のすべてのセグメントに関する情報が含まれ、セグメントの合計数、最終評価日、次の評価日のほか、評価方法別のセグメントの分類が表示されます。
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![セグメント参照ページの右側のサイドバーがハイライト表示されます。 組織内のセグメントに関する情報が表示されます。 これには、セグメントの合計数、前回の評価時刻、次回の評価時刻、様々なセグメントタイプの分類などの情報が含まれます。](../images/ui/overview/segment-browse-segment-info.png)
 
 セグメント定義の行を選択すると、セグメントの編集または削除、宛先へのセグメントのアクティブ化、セグメントの対象オーディエンス、合計オーディエンスサイズに加え、セグメント名、説明、評価方法、作成日、最終変更日が表示されます。
 
@@ -102,7 +102,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 >
 > 以下をおこないます。 **not** を使用すれば、宛先のアクティベーションで使用されているセグメントを削除できます。
 
-![](../images/ui/overview/segment-browse-details.png)
+![選択したセグメントに関する詳細が表示されます。 これには、認定プロファイルの数、合計プロファイルに対する認定済みプロファイルの割合の分類、前回の評価日に関する詳細が含まれます。](../images/ui/overview/segment-browse-details.png)
 
 ## セグメント定義の詳細 {#segment-details}
 
@@ -110,7 +110,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 セグメントの詳細ページが表示されます。 上部には、セグメント定義の概要、対象オーディエンスのサイズに関する情報、およびセグメントがアクティブ化される宛先があります。
 
-![](../images/ui/overview/segment-details-summary.png)
+![セグメント定義の詳細ページが表示されます。 セグメントの概要、セグメント内の合計オーディエンス、アクティブ化された宛先カードが強調表示されます。](../images/ui/overview/segment-details-summary.png)
 
 ### セグメントの概要 {#segment-summary}
 
@@ -118,7 +118,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 また、宛先に対してセグメントをアクティブ化するか、セグメントを編集するかのどちらかのオプションが提供されます。 選択 **[!UICONTROL 宛先に対して有効化]** が宛先に対してセグメントをアクティブ化します。 宛先へのセグメントのアクティブ化について詳しくは、 [アクティベーションの概要](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![「宛先に対してアクティブ化」ボタンがハイライト表示されます。](../images/ui/overview/segment-details-activate.png)
 
 選択 **[!UICONTROL セグメントを編集]** 君を連れて行く [!DNL Segment Builder]. 詳しくは、 [!DNL Segment Builder] ワークスペース、お読みください [[!DNL Segment Builder] ユーザーガイド](./segment-builder.md).
 
@@ -158,13 +158,13 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 各 [!DNL Profile] は、 [!DNL Profile] ID。 プロファイルの詳細について詳しくは、 [[!DNL Real-time Customer Profile] ユーザーガイド](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![セグメント定義のサンプルプロファイルがハイライト表示されます。 プロファイル情報の例には、プロファイル ID、名、姓、人物の E メールが含まれます。](../images/ui/overview/segment-details-profiles.png)
 
 ## セグメントの作成 {#create-segment}
 
 選択 **[!UICONTROL セグメントを作成]** 右上隅には、 [!DNL Segment Builder] ワークスペース（セグメント定義の作成を開始できます）。
 
-![](../images/ui/overview/segment-browse-create.png)
+![セグメントの参照ページで、「セグメントを作成」ボタンがハイライト表示されます。](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace
 
@@ -172,7 +172,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 詳しくは、 [!DNL Segment Builder] ワークスペース、お読みください [[!DNL Segment Builder] ユーザーガイド](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![セグメントビルダーのワークスペースが表示されます。](../images/ui/overview/segment-builder.png)
 
 ## スケジュールされたセグメント化 {#scheduled-segmentation}
 
@@ -186,11 +186,11 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 >[!NOTE]
 >
->の結合ポリシーが最大 5 個あるサンドボックスに対して、スケジュールされた評価を有効にすることができます。 [!DNL XDM Individual Profile]. 組織に対する結合ポリシーが 6 つ以上ある場合 [!DNL XDM Individual Profile] 単一のサンドボックス環境内では、スケジュールされた評価を使用できません。
+>[!DNL XDM Individual Profile] の最大 5 つの結合ポリシーを備えたサンドボックスに対して、スケジュールされた評価を有効にできます。組織で、1 つのサンドボックス環境内に [!DNL XDM Individual Profile] の結合ポリシーが 6 つ以上ある場合は、スケジュールされた評価を使用できません。
 
 現在、スケジュールを作成するには API を使用する必要があります。API を使用してスケジュールを作成、編集および操作する手順について詳しくは、セグメント結果の評価とアクセスに関するチュートリアル（特に、[API を使用した、スケジュールに沿った評価](../tutorials/evaluate-a-segment.md#scheduled-evaluation)に関する節）を参照してください。
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![セグメントの参照ページで、「すべてのセグメントをスケジュールに追加」への切り替えがハイライト表示されます。](../images/ui/overview/segment-browse-scheduled.png)
 
 ## オーディエンス {#audiences}
 
@@ -220,7 +220,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 | [!UICONTROL ライフサイクルステータス] | オーディエンスのステータス。 このフィールドで使用できる値は次のとおりです。 `Draft`, `Published`、および `Archived`. |
 | [!UICONTROL 更新頻度] | オーディエンスのデータが更新される頻度を示す値。 このフィールドで使用できる値は次のとおりです。 `On Demand`, `Scheduled`、および `Continuous`. |
 | [!UICONTROL 最終更新者] | オーディエンスを最後に更新した人の名前。 |
-| [!UICONTROL 作成] | オーディエンスが作成された日時。 |
+| [!UICONTROL 作成日] | オーディエンスが作成された日時。 |
 | [!UICONTROL 最終更新日] | オーディエンスが最後に作成された日時。 |
 | [!UICONTROL ラベルにアクセス] | オーディエンスのアクセスラベル。 アクセスラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 これらのラベルはいつでも適用でき、柔軟にデータ管理方法を選択できます。 アクセスラベルの詳細については、 [ラベルの管理](../../access-control/abac/ui/labels.md). |
 
@@ -278,7 +278,7 @@ Platform で生成されたオーディエンスの詳細については、 [セ
 
 ## エッジのセグメント化 {#edge-segmentation}
 
-エッジのセグメント化は、Platform 内のセグメントを即座にエッジ上で評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
+エッジセグメント化は、Platform 内のセグメントをエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
 エッジのセグメント化について詳しくは、 [エッジセグメント化 UI ガイド](./edge-segmentation.md)
 
@@ -290,7 +290,7 @@ Platform で生成されたオーディエンスの詳細については、 [セ
 
 セグメントの作成が完了すると、そのセグメントがAdobe Experience Platformデータガバナンスによって分析され、セグメント内にポリシー違反がないことを確認します。 詳しくは、 [データガバナンスの概要](../../data-governance/home.md) を参照してください。
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![セグメントのポリシー違反が表示されます。](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## 次の手順と追加のリソース {#next-steps}
 

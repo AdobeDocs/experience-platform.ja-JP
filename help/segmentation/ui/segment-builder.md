@@ -5,9 +5,9 @@ title: セグメントビルダー UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform UI のセグメントビルダーのワークスペースは、プロファイルデータ要素を操作できる豊富な機能を備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 28%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 28%
 
 デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。これには、「[!UICONTROL イベントタイプ]&quot;. この[!UICONTROL イベントタイプ]&quot;リストが表示されないか、選択できるのは&quot;[!UICONTROL 任意]&quot;[!UICONTROL イベントタイプ]&quot;、 **歯車アイコン** 次の **[!UICONTROL フィールド]**&#x200B;を選択し、「 **[!UICONTROL 完全な XDM スキーマを表示]** under **[!UICONTROL 使用可能フィールド]**. を選択します。 **歯車アイコン** 再び **[!UICONTROL フィールド]** 」タブに移動し、複数の「[!UICONTROL イベントタイプ]「 」およびスキーマフィールド（データが含まれているかどうかに関係なく）。
 
-![](../images/ui/segment-builder/show-populated.png)
+![データを含むフィールドの表示のみ、またはすべての XDM フィールドの表示のみを選択できるラジオボタンがハイライト表示されます。](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analyticsレポートスイートデータセット
 
@@ -105,7 +105,7 @@ ht-degree: 28%
 
 ![フォルダー階層がオーディエンスに対してどのように機能するかを示す画像です。](../images/ui/segment-builder/audience-folder-structure.png)
 
-また、検索バーを使用してオーディエンスを検索することもできます。このツールでは、 [Lucene の検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 「**[!UICONTROL オーディエンス]**」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。例えば、 `Online Shoppers`検索バーに「Online」と入力します。 「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
+また、検索バーを使用してオーディエンスを検索することもできます。このツールでは、 [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 「**[!UICONTROL オーディエンス]**」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。例えば、 `Online Shoppers`検索バーに「Online」と入力します。 「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
 
 ## ルールビルダーキャンバス {#rule-builder-canvas}
 

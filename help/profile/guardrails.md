@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、最適なシステムパフォーマンスを得るためにプロファイルデータをモデル化する際に役立つ、デフォルトの使用方法とレートの制限について説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
-workflow-type: ht
-source-wordcount: '1905'
-ht-degree: 100%
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 98%
 
 ---
 
@@ -128,11 +128,11 @@ Adobe Experience Platform を使用すると、リアルタイム顧客プロフ
 
    時間に依存しない属性（「レコードデータ」とも呼ばれる）は、[!DNL XDM Individual Profile]、時系列データ（「イベントデータ」とも呼ばれる）は [!DNL XDM ExperienceEvent] を使用してモデル化されます。レコードと時系列データが Adobe Experience Platform に取り込まれると、[!DNL Real-time Customer Profile] がトリガーされ、使用可能なデータの取り込みが開始されます。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは正確になります。
 
-   ![](images/guardrails/profile-entity.png)
+   ![レコードデータと時系列データの違いを説明する解説図。](images/guardrails/profile-entity.png)
 
 * **ディメンションエンティティ：**&#x200B;プロファイルデータを保持しているプロファイルデータストアはリレーショナルストアではありませんが、シンプルで直感的にセグメントを作成できるようにするために、プロファイルでは小さなディメンションエンティティとの統合が可能になっています。 この統合は、[マルチエンティティセグメンテーション](../segmentation/multi-entity-segmentation.md)とも呼ばれます。組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの [!DNL XDM Individual Profile] 以外のスキーマは「ディメンションエンティティ」と呼ばれ、時系列データを含みません。 ディメンションエンティティは、複数エンティティのセグメント定義を支援および簡素化するルックアップデータを提供します。また、セグメントエンジンが、処理の最適化（高速ポイントルックアップ）のためにデータセット全体をメモリに読み込めるようディメンションエンティティのサイズは小さくする必要があります。
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![プロファイルエンティティがディメンションエンティティで構成されていることを示す解説図。](images/guardrails/profile-and-dimension-entities.png)
 
 ### プロファイルフラグメント
 

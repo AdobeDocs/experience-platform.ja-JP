@@ -5,10 +5,10 @@ title: ストリーミングセグメント化 UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform でのストリーミングセグメント化により、データの豊富さに重点を置きながら、ほぼリアルタイムでセグメント化を実行できます。ストリーミングセグメント化を使用すると、データが Platform に到着する際にセグメントの選定が行われるので、セグメント化ジョブをスケジュールして実行する必要がなくなります。この機能により、データが Platform に渡される際に、ほとんどのセグメントルールが評価されるようになりました。つまり、スケジュールに沿ったセグメント化ジョブを実行しなくても、セグメントメンバーシップが常に最新の状態に保たれます。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 97%
+source-wordcount: '1495'
+ht-degree: 89%
 
 ---
 
@@ -36,14 +36,14 @@ ht-degree: 97%
 
 | クエリタイプ | 詳細 | 例 |
 | ---------- | ------- | ------- |
-| 単一イベント | 時間制限のない 1 つの受信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| 相対時間枠内の単一のイベント | 1 つの受信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| 時間枠を含む単一イベント | 時間枠を持つ 1 つの受信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| 単一イベント | 時間制限のない 1 つの受信イベントを参照するセグメント定義。 | ![1 つのイベントの例が表示されます。](../images/ui/streaming-segmentation/incoming-hit.png) |
+| 相対時間枠内の単一のイベント | 1 つの受信イベントを参照するセグメント定義。 | ![相対時間枠内の単一イベントの例を示します。](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 時間枠を含む単一イベント | 時間枠を持つ 1 つの受信イベントを参照するセグメント定義。 | ![時間枠を持つ単一のイベントの例を示します。](../images/ui/streaming-segmentation/historic-time-window.png) |
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |  |
-| プロファイル属性を持つ単一のイベント | 時間制限のない 1 つの受信イベントを参照し、1 つ以上のプロファイル属性を参照するセグメント定義。**メモ：**&#x200B;クエリはイベントが発生すると即座に評価されます。ただし、プロファイルイベントの場合は、組み込まれるまで 24 時間待つ必要があります。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| 相対時間枠内のプロファイル属性を持つ単一のイベント | 1 つの受信イベントと 1 つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| プロファイル属性を持つ複数のイベント | **過去 24 時間以内に**&#x200B;複数のイベントを参照し、（オプションで）1 つ以上のプロファイル属性を持つ任意のセグメント定義。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| プロファイル属性を持つ単一のイベント | 時間制限のない 1 つの受信イベントを参照し、1 つ以上のプロファイル属性を参照するセグメント定義。**メモ：**&#x200B;クエリはイベントが発生すると即座に評価されます。ただし、プロファイルイベントの場合は、組み込まれるまで 24 時間待つ必要があります。 | ![プロファイル属性を持つ単一のイベントの例が示されています。](../images/ui/streaming-segmentation/profile-hit.png) |
+| 相対時間枠内のプロファイル属性を持つ単一のイベント | 1 つの受信イベントと 1 つ以上のプロファイル属性を参照するセグメント定義。 | ![相対時間枠内にプロファイル属性を持つ単一イベントの例が示されています。](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 | ![セグメントのセグメントの例を示します。](../images/ui/streaming-segmentation/two-batches.png) |
+| プロファイル属性を持つ複数のイベント | **過去 24 時間以内に**&#x200B;複数のイベントを参照し、（オプションで）1 つ以上のプロファイル属性を持つ任意のセグメント定義。 | ![プロファイル属性を持つ複数のイベントの例が示されています。](../images/ui/streaming-segmentation/event-history-success.png) |
 
 次のシナリオでは、セグメント定義はストリーミングセグメント化に対して有効に&#x200B;**なりません**。
 
@@ -67,7 +67,7 @@ ht-degree: 97%
 
 ストリーミングが有効なセグメントを作成すると、そのセグメントの詳細を表示できます。
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![セグメントの詳細ページが表示されます。](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 特に、選定オーディエンスの合計数が確認できる&#x200B;**[!UICONTROL 合計選定]**&#x200B;指標が、このセグメントのバッチおよびストリーミングの評価に基づいて表示されます。
 
@@ -79,11 +79,11 @@ ht-degree: 97%
 >
 >これらのステータスの詳細については、[セグメント化の概要](./overview.md#browse)内のステータステーブルで確認できます。
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![「時間の経過に伴うプロファイル」カードがハイライト表示され、時間の経過に伴うプロファイルの折れ線グラフが表示されます。](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 最後のセグメント評価に関する追加情報は、**[!UICONTROL 合計選定]**&#x200B;の横の情報バブルを選択して確認できます。
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![「合計認定プロファイル」の情報バブルが選択されています。 これには、最後のセグメント評価時間に関する情報が表示されます。](../images/ui/streaming-segmentation/info-bubble.png)
 
 セグメント定義について詳しくは、[セグメント定義の詳細](#segment-details)の前の節を参照してください。
 

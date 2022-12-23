@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformユーザーインターフェイス (UI) では、組織内の任意の和集合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係、貢献するスキーマをプレビューできます。 このガイドでは、Platform UI を使用して和集合スキーマを表示および調査する方法に関する詳細情報を提供します。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 6%
+source-wordcount: '1199'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platformユーザーインターフェイス (UI) では、組�
 
 * [[!DNL Real-time Customer Profile]](../home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-time Customer Profile] に取り込む際に異なるデータソースの ID を結合することで [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 ## 和集合スキーマについて
 
@@ -36,7 +36,7 @@ Adobe Experience Platformユーザーインターフェイス (UI) では、組�
 
 Platform UI 内で和集合スキーマに移動するには、「 **[!UICONTROL プロファイル]** 左のナビゲーションから、 **[!UICONTROL 和集合スキーマ]** タブをクリックします。 この [!UICONTROL 和集合スキーマ] 「 」タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
 
-![](../images/union-schema/union-schema-landing.png)
+![「和集合スキーマ」ページが表示され、「プロファイルと和集合スキーマ」タブがハイライトされます。](../images/union-schema/landing.png)
 
 ## クラスを選択
 
@@ -44,45 +44,45 @@ Platform UI 内で和集合スキーマに移動するには、「 **[!UICONTROL
 
 クラスを選択すると、表示されるスキーマが更新され、選択したクラスの和集合スキーマが反映されます。 例えば、 **[!UICONTROL XDM 個人プロファイル]** をクリックして、そのクラスの和集合スキーマを表示します。
 
-![](../images/union-schema/union-schema-class.png)
+![和集合スキーマのクラスを含むドロップダウンがハイライト表示されます。](../images/union-schema/class.png)
 
 ## 和集合スキーマを調べる
 
 上下にスクロールして完全なスキーマ構造を表示し、右山括弧 (`>`) をクリックして、ネストされたフィールドを展開します。
 
-![](../images/union-schema/union-schema-explore.png)
+![和集合スキーマ内の入れ子になったフィールドのセットが展開されます。](../images/union-schema/explore.png)
 
 表示名、データタイプ、説明、パス、作成日、最終変更日など、詳細を表示するフィールドを選択します。 また、選択したフィールドを含む、貢献するスキーマのリストを表示することもできます。
 
-![](../images/union-schema/union-schema-explore-field.png)
+![和集合スキーマフィールドがハイライト表示されます。 ハイライトされたフィールドの詳細が右側のサイドバーに表示されます。](../images/union-schema/explore-field.png)
 
 貢献するスキーマの名前を選択すると、そのスキーマに関連するデータセットの名前が表示され、選択したフィールドにデータを取り込みます。 各データセット名はリンクとして表示されます。 データセット名を選択すると、そのデータセットの「アクティビティ」タブが新しいウィンドウに開きます。
 
 データセットのアクティビティの表示や UI でのデータセットデータのプレビューなど、データセットの詳細については、 [datasets UI ガイド](../../catalog/datasets/user-guide.md).
 
-![](../images/union-schema/union-schema-field-datasets.png)
+![スキーマに関連するデータセットのリストがハイライト表示されます。](../images/union-schema/datasets.png)
 
 ## 貢献するスキーマの表示
 
 また、「 」を選択することで、和集合スキーマに影響を与えている特定のスキーマを表示できます **[!UICONTROL 貢献するすべてのスキーマ]** スキーマのリストを展開します。 選択したクラスと、組織が Platform 内で作成したスキーマの数に応じて、これは、1 つのスキーマを含む短いリストか、多くのスキーマを含む長いリストになります。
 
-![](../images/union-schema/union-schema-contributing-schemas.png)
+![和集合スキーマに貢献するスキーマのリストがハイライト表示されます。](../images/union-schema/contributing-schemas.png)
 
 特定のスキーマの名前を選択すると、選択したスキーマの一部である和集合スキーマ内のフィールドが強調表示されます。 スキーマを選択すると、和集合スキーマが灰色表示になり、貢献するスキーマの一部であるフィールドを示す黒いバーが表示されます。
 
-![](../images/union-schema/union-schema-select-schema.png)
+![選択した投稿スキーマがハイライト表示されます。 投稿スキーマの一部であるフィールドは黒色のままですが、投稿スキーマの一部でないフィールドは灰色に表示されます。](../images/union-schema/select-schema.png)
 
 ## ID を表示
 
 UI を使用し、「 」を選択して、和集合スキーマに含まれる ID のリストを表示できます **[!UICONTROL ID]** をクリックしてリストを展開します。
 
-![](../images/union-schema/union-schema-identities.png)
+![和集合スキーマに属する ID がハイライト表示されます。](../images/union-schema/identities.png)
 
 リストから個々の ID を選択すると、表示されたスキーマが、必要に応じて ID フィールドを表示するために自動的に更新されます。 ID フィールドがネストされている場合は、複数のフィールドの展開も含まれます。
 
 和集合スキーマ内で ID フィールドがハイライトされ、ID の詳細が画面の右側に表示されます。 詳細には、ID フィールドを含む貢献するスキーマのリストが含まれ、ドリルダウンして、選択した ID フィールドにデータを取り込む、そのスキーマに関連するデータセットへのリンクを検索できます。
 
-![](../images/union-schema/union-schema-select-identity.png)
+![選択した ID がハイライト表示されます。 選択した ID に関する詳細が右側のサイドバーに表示されます。](../images/union-schema/select-identity.png)
 
 ## 関係を表示
 
@@ -92,11 +92,11 @@ UI を使用し、「 」を選択して、和集合スキーマに含まれる 
 
 UI を使用してスキーマの関係を定義する方法など、スキーマの関係について詳しくは、 [スキーマの関係に関するこのドキュメント](../../xdm/tutorials/relationship-ui.md).
 
-![](../images/union-schema/union-schema-relationships.png)
+![和集合スキーマに属する関係がハイライト表示されます。](../images/union-schema/relationships.png)
 
 リストから関係フィールドを選択すると、必要に応じて、表示されたスキーマが更新され、ハイライト表示された関係フィールドが表示されます。 関係フィールドがネストされている場合は、複数のフィールドの展開も含まれます。
 
-![](../images/union-schema/union-schema-select-relationship.png)
+![選択した関係がハイライト表示されます。 関係に対応するフィールドもハイライト表示されます。](../images/union-schema/select-relationship.png)
 
 ## 次の手順
 

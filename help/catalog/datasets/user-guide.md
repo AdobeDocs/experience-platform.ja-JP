@@ -5,10 +5,10 @@ title: データセット UI ガイド
 topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 28b6944a14c07f14d8177e3f8ae1c1a83c4c9c86
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 45%
+source-wordcount: '1476'
+ht-degree: 37%
 
 ---
 
@@ -37,26 +37,26 @@ ht-degree: 45%
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで **[!UICONTROL データセット]** ダッシュボード。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 
-![](../images/datasets/user-guide/browse-datasets.png)
+![左側のナビゲーションバー内の「データセット」項目をハイライトした画像です。](../images/datasets/user-guide/browse-datasets.png)
 
 デフォルトでは、取り込んだデータセットのみが表示されます。システム生成データセットを表示する場合は、 **[!UICONTROL システムデータセットを表示]** 切り替え システム生成データセットは、他のコンポーネントの処理にのみ使用されます。 例えば、システム生成のプロファイル書き出しデータセットを使用して、プロファイルダッシュボードが処理されます。
 
-![](../images/datasets/user-guide/system-datasets.png)
+![システムデータセットを表示するかどうかを選択する切り替えがハイライト表示されます。](../images/datasets/user-guide/system-datasets.png)
 
 アクセスするデータセットの名前を選択します **[!UICONTROL データセットアクティビティ]** 画面に、選択したデータセットの詳細が表示されます。 「アクティビティ」タブには、消費されるメッセージの割合を視覚化したグラフと、成功および失敗したバッチのリストが含まれます。
 
-![](../images/datasets/user-guide/dataset-activity-1.png)
-![](../images/datasets/user-guide/dataset-activity-2.png)
+![選択したデータセットの詳細がハイライト表示されます。](../images/datasets/user-guide/dataset-activity-1.png)
+![選択したデータセットに属するサンプルバッチがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## データセットのプレビュー
 
 次の **[!UICONTROL データセットアクティビティ]** 画面、選択 **[!UICONTROL データセットをプレビュー]** 画面の右上隅付近にあり、最大 100 行のデータをプレビューできます。 データセットが空の場合、プレビューリンクは非アクティブになり、代わりにプレビューは使用できないと表示されます。
 
-![](../images/datasets/user-guide/select-preview.png)
+![「データセットをプレビュー」ボタンがハイライト表示されています。](../images/datasets/user-guide/select-preview.png)
 
 プレビューウィンドウの右側に、データセットのスキーマの階層表示が表示されます。
 
-![](../images/datasets/user-guide/preview-dataset.png)
+![データセットのプレビューが表示されます。 構造とサンプル値に関する情報が表示されます。](../images/datasets/user-guide/preview-dataset.png)
 
 より堅牢な方法でデータにアクセスするには、 [!DNL Experience Platform] は、 [!DNL Query Service] および [!DNL JupyterLab] データを参照および分析する。 詳しくは、次のドキュメントを参照してください。
 
@@ -67,7 +67,7 @@ ht-degree: 45%
 
 新しいデータセットを作成するには、まず、データセットダッシュボードの「**[!UICONTROL データセットを作成]**」を選択します。****
 
-![](../images/datasets/user-guide/select-create.png)
+![「データセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-create.png)
 
 次の画面に、新しいデータセットを作成するための次の 2 つのオプションが表示されます。
 
@@ -78,25 +78,25 @@ ht-degree: 45%
 
 内 **[!UICONTROL データセットを作成]** 画面、選択 **[!UICONTROL スキーマからデータセットを作成]** 新しい空のデータセットを作成します。
 
-![](../images/datasets/user-guide/create-dataset-schema.png)
+![「スキーマからデータセットを作成」ボタンがハイライト表示されています。](../images/datasets/user-guide/create-dataset-schema.png)
 
 「**[!UICONTROL スキーマ選択]**」手順が表示されます。選択する前に、スキーマリストを参照し、データセットの準拠先となるスキーマを選択します **[!UICONTROL 次へ]**.
 
-![](../images/datasets/user-guide/select-schema.png)
+![スキーマのリストが表示されます。 データセットの作成に使用されるスキーマがハイライト表示されます。](../images/datasets/user-guide/select-schema.png)
 
 **[!UICONTROL データセットの設定]**&#x200B;手順が表示されます。データセットの名前と説明（オプション）を入力し、「 」を選択します。 **[!UICONTROL 完了]** をクリックして、データセットを作成します。
 
-![](../images/datasets/user-guide/configure-dataset-schema.png)
+![データセットの設定の詳細が挿入されます。 これには、データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-schema.png)
 
 ### CSV ファイルを使用したデータセットの作成 {#csv}
 
 CSV ファイルを使用してデータセットを作成する場合、アドホックスキーマが作成され、指定された CSV ファイルと一致する構造のデータセットが提供されます。内 **[!UICONTROL データセットを作成]** 画面、選択 **[!UICONTROL CSV ファイルからデータセットを作成]**.
 
-![](../images/datasets/user-guide/create-dataset-csv.png)
+![「 CSV ファイルからデータセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/create-dataset-csv.png)
 
 **[!UICONTROL 設定]**&#x200B;手順が表示されます。データセットの名前と説明（オプション）を入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-![](../images/datasets/user-guide/configure-dataset-csv.png)
+![データセットの設定の詳細が挿入されます。 これには、データセット名や説明などの詳細が含まれます。](../images/datasets/user-guide/configure-dataset-csv.png)
 
 **[!UICONTROL データを追加]**&#x200B;手順が表示されます。CSV ファイルを画面の中央にドラッグ&amp;ドロップしてアップロードするか、「 **[!UICONTROL 参照]** ファイルディレクトリを表示します。 ファイルのサイズは 10 ギガバイトまでです。CSV ファイルがアップロードされたら、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、データセットを作成します。
 
@@ -104,7 +104,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 >
 > CSV の列名は英数字で始める必要があり、文字、数字、アンダースコアのみを含めることができます。
 
-![](../images/datasets/user-guide/add-csv-data.png)
+![データを追加画面が表示されます。 データセットの CSV ファイルをアップロードできる場所がハイライト表示されます。](../images/datasets/user-guide/add-csv-data.png)
 
 ## リアルタイム顧客プロファイルデータセットの有効化 {#enable-profile}
 
@@ -121,7 +121,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 >
 >データセットに既にデータが含まれ、が有効になっている場合 [!DNL Profile]に設定されている場合、既存のデータは [!DNL Profile]. データセットを有効にした後 [!DNL Profile]既存のデータを再取り込みして、顧客プロファイルに貢献させることをお勧めします。
 
-![](../images/datasets/user-guide/enable-dataset-profiles.png)
+![データセットの詳細ページ内で、「プロファイル」切り替えが強調表示されます。](../images/datasets/user-guide/enable-dataset-profiles.png)
 
 ## データセットのデータガバナンスの管理と実施
 
@@ -135,11 +135,11 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 >
 >Adobeのアプリケーションおよびサービス (Adobe Analytics、Adobe Audience Manager、 [!DNL Offer Decisioning]) は削除できません。
 
-![](../images/datasets/user-guide/delete-dataset.png)
+![データセットの詳細ページ内で、「データセットを削除」ボタンが強調表示されます。](../images/datasets/user-guide/delete-dataset.png)
 
 確認ボックスが表示されます。選択 **[!UICONTROL 削除]** をクリックして、データセットの削除を確定します。
 
-![](../images/datasets/user-guide/confirm-delete.png)
+![削除の確認モーダルが表示され、「削除」ボタンがハイライトされます。](../images/datasets/user-guide/confirm-delete.png)
 
 ## プロファイル対応データセットの削除
 
@@ -151,15 +151,15 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL 監視]** をクリックします。 「**[!UICONTROL 監視]**」ダッシュボードを使用すると 、バッチ取得またはストリーミング取得から受信データのステータスを表示できます。個々のバッチのステータスを表示するには、次のいずれかを選択します。 **[!UICONTROL エンドツーエンドのバッチ処理]** または **[!UICONTROL エンドツーエンドのストリーミング]**. ダッシュボードには、正常、失敗、または進行中のすべてのバッチ取り込みまたはストリーミング取り込みの実行が一覧表示されます。 各リストには、バッチ ID、ターゲットデータセットの名前、取得したレコード数など、バッチの詳細が表示されます。ターゲットデータセットが [!DNL Profile]に設定すると、取り込まれた id レコードとプロファイルレコードの数も表示されます。
 
-![](../images/datasets/user-guide/batch-listing.png)
+![監視バッチのエンドツーエンド画面が表示されます。 監視とバッチ間の両方がハイライト表示されます。](../images/datasets/user-guide/batch-listing.png)
 
 個人を選択できます **[!UICONTROL バッチ ID]** にアクセスするには **[!UICONTROL バッチの概要]** ダッシュボードを開き、バッチの取り込みに失敗した場合にエラーログを含むバッチの詳細を確認します。
 
-![](../images/datasets/user-guide/batch-overview.png)
+![選択したバッチの詳細が表示されます。 これには、取得されたレコード数、失敗したレコード数、バッチステータス、ファイルサイズ、取得の開始時間と終了時間、データセットとバッチ ID、組織 ID、データセット名、アクセス情報が含まれます。](../images/datasets/user-guide/batch-overview.png)
 
 バッチを削除する場合は、「 **[!UICONTROL バッチを削除]** ダッシュボードの右上付近にあります。 また、バッチの最初の取得先であるデータセットからもレコードが削除されます。
 
-![](../images/datasets/user-guide/delete-batch.png)
+![データセットの詳細ページで、「バッチを削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/delete-batch.png)
 
 ## 次の手順
 

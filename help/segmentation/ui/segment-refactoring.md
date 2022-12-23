@@ -5,10 +5,10 @@ title: リファクタリングされたセグメント化の時間制約 UI ガ
 topic-legacy: ui guide
 description: セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 13%
+source-wordcount: '297'
+ht-degree: 11%
 
 ---
 
@@ -20,12 +20,12 @@ Adobe Experience Platformの 2020 年 10 月リリースでは、Adobe Experienc
 
 以前は、個々のイベントに複数の時間制約ルールを付加していました。
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![以前の形式の時間制約は、セグメントビルダーでハイライト表示されています。](../images/ui/segment-refactoring/former-time-constraint.png)
 
 ご覧のように、このセグメントにはルールレベルで 2 つの制約があります。1 は&quot;[!UICONTROL 今日]」、もう 1 つは&quot;[!UICONTROL 昨日]&quot;.
 
 前のセグメントは次のセグメントと同じです。イベントレベルの時間制約の両方が、AND 演算子を使用して接続されています。 最初のイベントレベルの時間制約は、名前が「トレーニング」に等しく今日に発生するクリックイベントを参照し、2 番目のイベントレベルの時間制約は、名前が「ペット」に等しく昨日に発生したクリックイベントを参照します。
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![セグメントビルダーで、新しい形式の時間制限がハイライト表示されます。](../images/ui/segment-refactoring/time-constraint-1.png) ![セグメントビルダーで、新しい形式の時間制限がハイライト表示されます。](../images/ui/segment-refactoring/time-constraint-2.png)
 
 この時間制約のリファクタリングは、OR 演算子を使用して接続される時間制約にも影響します。
