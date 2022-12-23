@@ -1,10 +1,11 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 9 月
-description: Adobe Experience Platformの 2022 年 9 月のリリースノート。
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
-workflow-type: tm+mt
+title: Adobe Experience Platform リリースノート 2022年9月
+description: Adobe Experience Platform の 2022年9月のリリースノート。
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '2934'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +63,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 ### 顧客 AI
 
-Real-time Customer Data Platformで使用できる顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
+Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。
 
 | 機能 | 説明 |
 | --- | --- |
