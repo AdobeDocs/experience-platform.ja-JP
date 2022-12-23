@@ -3,9 +3,9 @@ title: 非同期デプロイメント
 description: Web サイトで Adobe Experience Platform タブライブラリを非同期でデプロイする方法について説明します。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1079'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 94%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="非同期デプロイメント"
->abstract="このオプションを有効にすると、このスクリプトタグが解析されると、ブラウザーは JavaScript ファイルの読み込みを開始しますが、ライブラリの読み込みと実行を待つ代わりに、ドキュメントの残りの部分の解析とレンダリングを続行します。 これにより、Web ページのパフォーマンスが向上しますが、特定のルールの実行方法に関して、重要な影響を与えます。 詳しくは、 ドキュメント を参照してください。"
+>abstract="このオプションを有効にすると、このスクリプトタグが解析される際に、ブラウザーは JavaScript ファイルの読み込みを開始しますが、ライブラリが読み込まれて実行されるのを待たずに、ドキュメントの残りの部分の解析とレンダリングを続行します。これにより、web ページのパフォーマンスが向上しますが、特定のルールの実行方法に関して、重要な影響を与えます。 詳しくは、 ドキュメント を参照してください。"
 
 >[!NOTE]
 >
@@ -72,8 +72,8 @@ ht-degree: 94%
 順序は常に適用されますが、ルールにはタグライブラリの読み込みが終了するとすぐに実行されるものと、後で実行されるものがあります。タグライブラリ読み込みが終了すると、次のことが発生します。
 
 1. ルール A はすぐに実行されます。
-1. `DOMContentLoaded` ブラウザーイベント（DOM Ready）が既に発生している場合は、ルール B とルール C がすぐに実行されます。それ以外の場合は、ルール B とルール C は後で [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) ブラウザーイベントが発生したときに実行されます。
-1. [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベント（Window Loaded）が既に発生している場合は、ルール D が即座に実行されます。それ以外の場合は、ルール D は後で [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) ブラウザーイベントが発生したときに実行されます。指示に従ってタグライブラリをインストールした場合、 タグライブラリでは&#x200B;*常に*、 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) ブラウザーイベントが発生する前に読み込みが完了することに注意してください。
+1. `DOMContentLoaded` ブラウザーイベント（DOM Ready）が既に発生している場合は、ルール B とルール C がすぐに実行されます。それ以外の場合は、ルール B とルール C は後で [`DOMContentLoaded`](https://developer.mozilla.org/ja-JP/docs/Web/Events/DOMContentLoaded) ブラウザーイベントが発生したときに実行されます。
+1. [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベント（Window Loaded）が既に発生している場合は、ルール D が即座に実行されます。それ以外の場合は、ルール D は後で [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベントが発生したときに実行されます。指示に従ってタグライブラリをインストールした場合、 タグライブラリでは&#x200B;*常に*、 [`load`](https://developer.mozilla.org/ja-JP/docs/Web/Events/load) ブラウザーイベントが発生する前に読み込みが完了することに注意してください。
 
 これらの原則を独自の Web サイトに適用する際には、次の点に注意してください。
 
