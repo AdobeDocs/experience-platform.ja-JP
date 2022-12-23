@@ -1,37 +1,38 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アラート；
-title: アラート購読 API エンドポイント
-description: このガイドは、クエリサービス API を使用してアラート購読エンドポイントに対して実行できる様々な API 呼び出しに対する HTTP リクエストの例と応答を提供します。
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
-workflow-type: tm+mt
+keywords: Experience Platform;ホーム;人気のトピック;クエリサービス;Query service;アラート;
+title: Alert Subscriptions API エンドポイント
+description: このガイドは、Query Service API を使用してアラート購読エンドポイントに対して実行できる、様々な API 呼び出しに対する HTTP リクエストの例と応答を提供します。
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '2289'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# アラート購読 API エンドポイント
+# Alert Subscriptions API エンドポイント
 
-Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。通知コンテンツは、プラットフォーム内アラートと E メールアラートで同じです。 現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。
+Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。通知コンテンツは、Platform 内アラートとメールアラートで同じです。 現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。
 
 >[!IMPORTANT]
 >
->電子メールアラートを受け取るには、まず UI 内でこの設定を有効にする必要があります。 詳しくは、 [メールアラートを有効にする方法の手順](../../observability/alerts/ui.md#enable-email-alerts).
+>メールアラートを受け取るには、まず UI 内でこの設定を有効にする必要があります。詳しくは、[メールアラートを有効にする手順](../../observability/alerts/ui.md#enable-email-alerts)についてのドキュメントを参照してください。
 
 次の表に、様々なタイプのクエリでサポートされるアラートのタイプを示します。
 
 | クエリタイプ | サポートされるアラートのタイプ |
 |---|---|
-| アドホッククエリ | `success` または `failed` 実行数 |
-| スケジュール済みクエリ | `start`, `success`または `failed` 実行数 |
+| アドホッククエリ | `success` または `failed` の実行。 |
+| スケジュール済みクエリ | `start`、`success` または `failed` の実行。 |
 
 >[!NOTE]
 >
->非 SELECT クエリはすべてアラート購読をサポートし、アラートを購読するには、クエリ作成者である必要はありません。 また、他のユーザーは、作成しなかったクエリに関するアラートを登録して登録することもできます。
+>非 SELECT クエリはすべてアラート購読をサポートし、クエリ作成者でなくてもアラートを購読できます。他のユーザーも、自分が作成しなかったクエリに関するアラートを登録できます。
 
 次のアラートは、アラート購読なしで適用されます。
 
 * バッチクエリジョブが終了すると、ユーザーは通知を受け取ります。
-* バッチクエリジョブの期間がしきい値を超えると、クエリをスケジュールした人に対してアラートがトリガーされます。
+* バッチクエリジョブの期間がしきい値を超えると、クエリをスケジュールしたユーザーに対してアラートがトリガーされます。
 
 >[!NOTE]
 >
@@ -43,7 +44,7 @@ Adobe Experience Platform クエリサービスを使用すると、アドホッ
 
 ## 組織およびサンドボックスのすべてのアラートのリストの取得 {#get-list-of-org-alert-subs}
 
-に対してGETリクエストを実行して、組織のサンドボックスのすべてのアラートのリストを取得する `/alert-subscriptions` endpoint.
+`/alert-subscriptions` エンドポイントに対して GET リクエストを実行して、組織のサンドボックスのすべてのアラートのリストを取得します。
 
 **API 形式**
 
@@ -65,11 +66,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **応答**
 
-正常な応答は、HTTP 200 ステータスと `alerts` ページネーションおよびバージョン情報を含む配列。 この `alerts` 配列には、組織と特定のサンドボックスに関するすべてのアラートの詳細が含まれます。 1 回の応答で最大 3 つのアラートを使用できます。応答本文には、各アラートタイプごとに 1 つのアラートが含まれます。
+応答が成功すると、HTTP 200 ステータスと、ページネーションおよびバージョン情報を含む `alerts` 配列が返されます。この `alerts` 配列には、組織と特定のサンドボックスに関するすべてのアラートの詳細が含まれます。 1 回の応答で最大 3 つのアラートを使用できます。応答本文には、各アラートタイプごとに 1 つのアラートが含まれます。
 
 >[!NOTE]
 >
->この `alerts._links` オブジェクトを `alerts` 配列は簡潔にするために切り捨てられました。 以下に、 `alerts._links` オブジェクトは [応答のPOST](#subscribe-users).
+>`alerts` 配列の `alerts._links` オブジェクトは、簡潔にするために切り捨てられました。`alerts._links` オブジェクトの完全な例は、[POST リクエスト](#subscribe-users)の応答で見ることができます。
 
 ```json
 {
@@ -135,16 +136,16 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `alerts.assetId` | アラートを特定のクエリに関連付けたクエリ ID。 |
-| `alerts.id` | アラートの名前。 この名前は、 Alerts サービスによって生成され、 Alerts ダッシュボードで使用されます。 アラート名は、アラートを保存するフォルダー ( `alertType`、フロー ID。 使用可能なアラートに関する情報は、 [Platform Alerts ダッシュボードドキュメント](../../observability/alerts/ui.md). |
-| `alerts.status` | アラートのステータス値は 4 つです。 `enabled`, `enabling`, `disabled`、および `disabling`. アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま、将来の使用のために一時停止されているか、これらの状態間を移行しています。 |
-| `alerts.alertType` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
+| `alerts.id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Platform のアラートダッシュボードドキュメント](../../observability/alerts/ui.md)を参照してください。 |
+| `alerts.status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
+| `alerts.alertType` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> |
 | `alerts._links` | このアラート ID に関連する情報の取得、更新、編集、削除に使用できる、使用可能なメソッドおよびエンドポイントに関する情報を提供します。 |
 | `_page` | このオブジェクトには、順序、サイズ、合計ページ数および現在のページを説明するプロパティが含まれています。 |
-| `_links` | オブジェクトには、次のページまたは前のページのリソースを取得するために使用できる URI 参照が含まれています。 |
+| `_links` | オブジェクトには、リソースの次のページまたは前のページを取得するために使用できる URI 参照が含まれています。 |
 
-## 特定のクエリ ID またはスケジュール ID のアラート購読情報を取得する {#retrieve-all-alert-subscriptions-by-id}
+## 特定のクエリまたはスケジュール ID のアラート購読情報を取得 {#retrieve-all-alert-subscriptions-by-id}
 
-に対してGETリクエストを実行して、特定のクエリ ID またはスケジュール ID のアラート購読情報を取得する `/alert-subscriptions/{QUERY_ID}` または `/alert-subscriptions/{SCHEDULE_ID}` endpoint.
+`/alert-subscriptions/{QUERY_ID}` または `/alert-subscriptions/{SCHEDULE_ID}` エンドポイントに対して GET リクエストを実行して、特定のクエリ ID またはスケジュール ID のアラート購読情報を取得します。
 
 **API 形式**
 
@@ -156,7 +157,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}
 | パラメーター | 説明 |
 | -------- | ----------- |
 | `{QUERY_ID}` | 購読情報を返すクエリの ID。 |
-| `{SCHEDULE_ID}` | 購読情報を返すスケジュール済みクエリの ID。 |
+| `{SCHEDULE_ID}` | 購読情報を返すスケジュールされたクエリの ID。 |
 
 **リクエスト**
 
@@ -172,7 +173,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **応答**
 
-正常な応答は、HTTP ステータス 200、 `alerts` 指定されたクエリ ID またはスケジュール ID の購読情報を含む配列。
+正常な応答は、HTTP ステータス 200 と、指定されたクエリ ID またはスケジュール ID の購読情報を含む `alerts` 配列を返します。
 
 ```json
 {
@@ -263,16 +264,16 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `assetId` | アラートはこの ID に関連付けられています。 ID は、クエリ ID またはスケジュール ID のどちらかです。 |
-| `id` | アラートの名前。 この名前は、 Alerts サービスによって生成され、 Alerts ダッシュボードで使用されます。 アラート名は、アラートを保存するフォルダー ( `alertType`、フロー ID。 使用可能なアラートに関する情報は、 [Platform Alerts ダッシュボードドキュメント](../../observability/alerts/ui.md). |
-| `status` | アラートのステータス値は 4 つです。 `enabled`, `enabling`, `disabled`、および `disabling`. アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま、将来の使用のために一時停止されているか、これらの状態間を移行しています。 |
-| `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のようになります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
-| `subscriptions.emailNotifications` | アラートのAdobeを購読したユーザーがアラートの電子メールを受信するために登録した電子メールアドレスの配列。 |
-| `subscriptions.inContextNotifications` | アラートの UI 通知をAdobeしたユーザー用に登録された電子メールアドレスの配列。 |
+| `assetId` | アラートはこの ID に関連付けられています。ID は、クエリ ID またはスケジュール ID のどちらかです。 |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー IDで構成されます。使用可能なアラートに関する情報は、[Platform アラートダッシュボードのドキュメント](../../observability/alerts/ui.md)にあります。 |
+| `status` | アラートには、4 つ（`enabled`、`enabling`、`disabled`、および `disabling`）のステータス値があります。 アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
+| `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のとおりです。 <ul><li>`start`：クエリの実行が開始されると、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合、ユーザーに通知します。</li></ul> |
+| `subscriptions.emailNotifications` | アラートのメール受信を申し込んだユーザーのアドビ登録メールアドレスの配列。 |
+| `subscriptions.inContextNotifications` | アラートの UI 通知に登録しているユーザーのアドビ登録メールアドレスの配列。 |
 
-## 特定のクエリまたはスケジュール ID とアラートタイプのアラート購読情報を取得する {#get-alert-info-by-id-and-alert-type}
+## 特定のクエリ、スケジュール ID とアラートタイプのアラート購読情報を取得する {#get-alert-info-by-id-and-alert-type}
 
-に対してGETリクエストを実行して、特定の ID およびアラートタイプのアラート購読情報を取得する `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` endpoint. これは、クエリ ID とスケジュール済みクエリ ID の両方に適用できます。
+`/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` エンドポイントに対して GET リクエストを実行して、特定の ID およびアラートタイプのアラート購読情報を取得します。これは、クエリ ID とスケジュール済みクエリ ID の両方に適用できます。
 
 **API 形式**
 
@@ -283,7 +284,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のようになります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
+| `ALERT_TYPE` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のとおりです。 <ul><li>`start`：クエリの実行が開始されると、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合、ユーザーに通知します。</li></ul> |
 | `QUERY_ID` | 更新するクエリの一意の ID。 |
 | `SCHEDULE_ID` | 更新するスケジュール済みクエリの一意の ID。 |
 
@@ -301,7 +302,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **応答**
 
-正常な応答は、200 の HTTP ステータスと、購読しているすべてのアラートを返します。 これには、アラート ID、アラートのタイプ、購読者のAdobe登録電子メール ID、優先通知チャネルが含まれます。
+応答が成功すると、HTTP ステータス 200 と、購読しているすべてのアラートが返されます。 これには、アラート ID、アラートのタイプ、購読者のアドビ登録メール ID、優先通知チャネルが含まれます。
 
 ```json
 {
@@ -352,14 +353,14 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `assetId` | アラートを特定のクエリに関連付けたクエリ ID。 |
-| `alertType` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
-| `subscriptions` | アラートに関連付けられたAdobe登録 E メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
-| `subscriptions.inContextNotifications` | アラートの UI 通知をAdobeしたユーザー用に登録された電子メールアドレスの配列。 |
-| `subscriptions.emailNotifications` | アラートのAdobeを購読したユーザーがアラートの電子メールを受信するために登録した電子メールアドレスの配列。 |
+| `alertType` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されると、ユーザーに通知します。</li><li>`success`：クエリが完了すると、ユーザーに通知します。</li><li>`failure`：クエリが失敗した場合、ユーザーに通知します。</li></ul> |
+| `subscriptions` | アラートに関連付けられたアドビ登録メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
+| `subscriptions.inContextNotifications` | アラートの UI 通知に登録しているユーザーのアドビ登録メールアドレスの配列。 |
+| `subscriptions.emailNotifications` | アラートのメール受信を申し込んだユーザーのアドビ登録メールアドレスの配列。 |
 
-## ユーザーが購読しているすべてのアラートのリストを取得する {#get-alert-subscription-list}
+## ユーザーが購読しているすべてのアラートのリストを取得 {#get-alert-subscription-list}
 
-に対してGETリクエストをおこなって、ユーザーが購読しているすべてのアラートのリストを取得します `/alert-subscriptions/user-subscriptions/{EMAIL_ID}` endpoint. 応答には、アラート名、ID、ステータス、アラートタイプ、通知チャネルが含まれます。
+`/alert-subscriptions/user-subscriptions/{EMAIL_ID}` エンドポイントに対して GET リクエストを行って、ユーザーが購読しているすべてのアラートのリストを取得します。応答には、アラート名、ID、ステータス、アラートタイプ、通知チャネルが含まれます。
 
 **API 形式**
 
@@ -369,7 +370,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{EMAIL_ID}` | アラートアカウントに登録されている電子メールアドレスは、Adobeを購読しているユーザーを識別するために使用されます。 |
+| `{EMAIL_ID}` | Adobe アカウントに登録されているメールアドレスは、アラートを購読しているユーザーを識別するために使用されます。 |
 
 **リクエスト**
 
@@ -385,7 +386,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **応答**
 
-正常な応答は、HTTP ステータス 200、および `items` が購読しているアラートの詳細を含む配列 `emailId` 提供済み
+正常な応答は、HTTP ステータス 200 と、指定した `emailId` が購読しているアラートの詳細を含む `items` 配列が返されます。
 
 ```json
 {
@@ -478,21 +479,21 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | アラートの名前。 この名前は、 Alerts サービスによって生成され、 Alerts ダッシュボードで使用されます。 アラート名は、アラートを保存するフォルダー ( `alertType`、フロー ID。 使用可能なアラートに関する情報は、 [Platform Alerts ダッシュボードドキュメント](../../observability/alerts/ui.md). |
+| `name` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID によって構成されています。 使用可能なアラートに関する情報は、[Platform のアラートダッシュボードドキュメント](../../observability/alerts/ui.md)を参照してください。 |
 | `assetId` | アラートを特定のクエリに関連付けたクエリ ID。 |
-| `status` | アラートのステータス値は 4 つです。 `enabled`, `enabling`, `disabled`、および `disabling`. アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま、将来の使用のために一時停止されているか、これらの状態間を移行しています。 |
-| `alertType` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
-| `subscriptions` | アラートに関連付けられたAdobe登録 E メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
-| `subscriptions.inContextNotifications` | ユーザーがアラート通知を受け取る方法を決定する boolean 値です。 A `true` の値によって、UI を通じてアラートを提供する必要があることを確認します。 A `false` の値を指定することで、そのチャネルを通じてユーザーに通知されなくなります。 |
-| `subscriptions.emailNotifications` | ユーザーがアラート通知を受け取る方法を決定する boolean 値です。 A `true` 値は、アラートを e メールで提供する必要があることを確認します。 A `false` の値を指定することで、そのチャネルを通じてユーザーに通知されなくなります。 |
+| `status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
+| `alertType` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了するとユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> |
+| `subscriptions` | アラートに関連付けられたアドビ登録メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
+| `subscriptions.inContextNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、UI を通じてアラートを提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
+| `subscriptions.emailNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、アラートをメールで提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
 
 ## アラートの作成とユーザーの購読 {#subscribe-users}
 
-アラートを作成し、ユーザーを購読して受信するには、 `POST` にリクエスト `/alert-subscriptions` endpoint. このリクエストは、 `assetId` プロパティを使用して、ユーザーをそのクエリに関するアラートに登録します。 `emailIds`.
+アラートを作成し、ユーザーが購読して受信するには、`/alert-subscriptions` エンドポイントに対して `POST` リクエストを行います。このリクエストは、`assetId` プロパティを使用して新しく作成されたアラートにクエリを関連付け、`emailIds` を使用してそのクエリのアラートをユーザーが購読できるようにします。
 
 >[!IMPORTANT]
 >
->1 回のリクエストで最大 5 個のAdobe登録電子メール ID を渡すことができます。 1 つのアラートに対して 5 人以上のユーザーを登録するには、後続のリクエストをおこなう必要があります。
+>1 回のリクエストで最大 5 個のアドビ登録メール ID を渡すことができます。1 つのアラートに対して 5 人以上のユーザーを登録するには、後続のリクエストを行う必要があります。
 
 **API 形式**
 
@@ -525,18 +526,18 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `assetId` | アラートはこの ID に関連付けられています。 ID は、クエリ ID またはスケジュール ID のどちらかです。 |
-| `alertType` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
-| `subscriptions` | アラートに関連付けられたAdobe登録 E メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
-| `subscriptions.emailIds` | アラートを受信する必要のあるユーザーを識別する電子メールアドレスの配列。 電子メールアドレス **必須** が登録されていることをAdobeします。 |
-| `subscriptions.inContextNotifications` | ユーザーがアラート通知を受け取る方法を決定する boolean 値です。 A `true` の値によって、UI を通じてアラートを提供する必要があることを確認します。 A `false` の値を指定することで、そのチャネルを通じてユーザーに通知されなくなります。 |
-| `subscriptions.emailNotifications` | ユーザーがアラート通知を受け取る方法を決定する boolean 値です。 A `true` 値は、アラートを e メールで提供する必要があることを確認します。 A `false` の値を指定することで、そのチャネルを通じてユーザーに通知されなくなります。 |
+| `assetId` | アラートはこの ID に関連付けられています。ID は、クエリ ID またはスケジュール ID のどちらかです。 |
+| `alertType` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了するとユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> |
+| `subscriptions` | アラートに関連付けられたアドビ登録メール ID と、ユーザーがアラートを受け取るチャネルを渡すために使用されるオブジェクト。 |
+| `subscriptions.emailIds` | アラートを受信する必要のあるユーザーを識別するメールアドレスの配列。 メールアドレスは&#x200B;**必ず** Adobe アカウントに登録されている必要があります。 |
+| `subscriptions.inContextNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、UI を通じてアラートを提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
+| `subscriptions.emailNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、アラートをメールで提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、HTTP ステータス 202（許可済み）と、新しく作成されたアラートの詳細を返します。
+正常な応答は HTTP ステータス 202（許可済み）とともに、新たに作成されたクエリの詳細を返します。
 
 ```json
 {
@@ -579,12 +580,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | アラートの名前。 この名前は、 Alerts サービスによって生成され、 Alerts ダッシュボードで使用されます。 アラート名は、アラートを保存するフォルダー ( `alertType`、フロー ID。 使用可能なアラートに関する情報は、 [Platform Alerts ダッシュボードドキュメント](../../observability/alerts/ui.md). |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。使用可能なアラートに関する情報は、[Platform のアラートダッシュボードドキュメント](../../observability/alerts/ui.md)を参照してください。 |
 | `_links` | このアラート ID に関連する情報の取得、更新、編集、削除に使用できる、使用可能なメソッドおよびエンドポイントに関する情報を提供します。 |
 
-## アラートの有効化または無効化 {#enable-or-disable-alert}
+## アラートの有効／無効を切り替える {#enable-or-disable-alert}
 
-このリクエストは、クエリ ID またはスケジュール ID とアラートタイプを使用して特定のアラートを参照し、アラートステータスを `enable` または `disable`. アラートのステータスは、 `PATCH` にリクエスト `/alert-subscriptions/{queryId}/{alertType}` または `/alert-subscriptions/{scheduleId}/{alertType}` endpoint.
+このリクエストは、クエリ ID またはスケジュール ID とアラートタイプを使用して特定のアラートを参照し、アラートステータスを `enable` または `disable` に更新します。アラートのステータスは、`/alert-subscriptions/{queryId}/{alertType}` または `/alert-subscriptions/{scheduleId}/{alertType}` エンドポイントに対して `PATCH` リクエストを行います。
 
 **API 形式**
 
@@ -595,7 +596,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul>変更するには、エンドポイントの名前空間で現在のアラートタイプを指定する必要があります。 |
+| `ALERT_TYPE` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了するとユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul>変更するには、エンドポイントの名前空間で現在のアラートタイプを指定する必要があります。 |
 | `QUERY_ID` | 更新するクエリの一意の ID。 |
 | `SCHEDULE_ID` | 更新するスケジュール済みクエリの一意の ID。 |
 
@@ -618,15 +619,15 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | 実行する 操作。現在、許可されている値は `replace` のみです。 |
-| `path` | この値は、エンドポイントの名前空間に関連します。 現在、許可されている値は `/status` のみです。 |
-| `value` | 成功したPATCHリクエストでは、 `status` アラートの値。 現在、指定できる値は次のとおりです。 `enable` または `disable`. |
+| `op` | 実行する操作。現在、許可されている値は `replace` のみです。 |
+| `path` | この値は、エンドポイントの名前空間に関連します。現在、許可されている値は `/status` のみです。 |
+| `value` | 正常に行われた PATCH リクエストでは、これはアラートの `status` 値に変更されます。現在、指定できる値は `enable` または `disable` です。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、アラートのステータス、タイプ、ID の詳細、および関連するクエリを返します。
+正常に行われた応答は、HTTP ステータス 200 と、アラートのステータス、タイプ、ID の詳細および関連するクエリを返します。
 
 ```json
 {
@@ -639,14 +640,14 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | アラートの名前。 この名前は、 Alerts サービスによって生成され、 Alerts ダッシュボードで使用されます。 アラート名は、アラートを保存するフォルダー ( `alertType`、フロー ID。 使用可能なアラートに関する情報は、 [Platform Alerts ダッシュボードドキュメント](../../observability/alerts/ui.md). |
-| `assetId` | アラートはこの ID に関連付けられています。 ID は、クエリ ID またはスケジュール ID のどちらかです。 |
-| `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のようになります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> |
-| `status` | アラートのステータス値は 4 つです。 `enabled`, `enabling`, `disabled`、および `disabling`. アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま、将来の使用のために一時停止されているか、これらの状態間を移行しています。 |
+| `id` | アラート名。この名前は、アラートサービスによって生成され、アラートダッシュボードで使用されます。アラート名は、アラートを保存するフォルダー、`alertType`、フロー ID で構成されます。 使用可能なアラートに関する情報は、[Platform のアラートダッシュボードドキュメント](../../observability/alerts/ui.md)を参照してください。 |
+| `assetId` | アラートはこの ID に関連付けられています。ID は、クエリ ID またはスケジュール ID のどちらかです。 |
+| `alertType` | 各アラートは、3 つの異なるアラートタイプを持つことができます。 次のとおりです。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了するとユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> |
+| `status` | アラートのステータス値は、`enabled`、`enabling`、`disabled`、`disabling` の 4 つです。アラートは、イベントをアクティブにリッスンしているか、関連するすべての購読者と設定を保持したまま将来利用するために一時停止されているか、または、これらのステート間を移行中です。 |
 
 ## 特定のクエリおよびアラートタイプのアラートの削除 {#delete-alert-info-by-id-and-alert-type}
 
-にDELETEリクエストを実行して、特定のクエリまたはスケジュール ID とアラートタイプのアラートを削除する `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` または `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint.
+`/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` または `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` エンドポイントに DELETE リクエストを行い、特定のクエリまたはスケジュール ID およびアラートタイプのアラートを削除できます。
 
 ```http
 DELETE /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
@@ -655,7 +656,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | アラートのタイプ。 1 つのアラートには、次の 3 つの潜在的な値があります。 <ul><li>`start`:クエリの実行が開始された場合に、ユーザーに通知します。</li><li>`success`:クエリが完了すると、ユーザーに通知します。</li><li>`failure`:クエリが失敗した場合にユーザーに通知します。</li></ul> DELETEリクエストは、指定された特定のアラートタイプにのみ適用されます。 |
+| `ALERT_TYPE` | アラートのタイプ。1 つのアラートに対して、次の 3 つの値が考えられす。 <ul><li>`start`：クエリの実行が開始されたときに、ユーザーに通知します。</li><li>`success`：クエリが完了するとユーザーに通知します。</li><li>`failure`：クエリが失敗した場合にユーザーに通知します。</li></ul> DELETE リクエストは、指定された特定のアラートタイプにのみ適用されます。 |
 | `QUERY_ID` | 更新するクエリの一意の ID。 |
 | `SCHEDULE_ID` | 更新するスケジュール済みクエリの一意の ID。 |
 
@@ -673,7 +674,7 @@ curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alert-subscripti
 
 **応答**
 
-正常な応答は、HTTP 200 ステータスと、アセット ID と削除されたアラートのアラートタイプを含む確認メッセージを返します。
+応答が成功すると、HTTP 200 ステータスと、アセット ID と削除されたアラートのアラートタイプを含む確認メッセージが返されます。
 
 ```json
 {
@@ -684,6 +685,6 @@ curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alert-subscripti
 
 ## 次の手順
 
-このガイドでは、 `/alert-subscriptions` エンドポイント（クエリサービス API 内）を使用して、 このガイドを読むと、クエリのアラートの作成、ユーザーのアラートへの登録、使用可能なアラートの種類、アラート購読情報の取得、更新、削除方法に関する理解が深まりました。
+このガイドでは、Query Service API の `/alert-subscriptions` エンドポイントの使用について説明しました。このガイドを読むことで、クエリのアラートの作成、ユーザーのアラートへの登録、使用可能なアラートのタイプ、アラート購読情報の取得、更新、削除方法に関する理解が深まりました。
 
-詳しくは、 [クエリサービス API ガイド](./getting-started.md) を参照して、他の使用可能な機能や操作の詳細を確認してください。
+詳しくは、[Query Service API ガイド](./getting-started.md)を参照して、その他の使用可能な機能や操作をご確認ください。
