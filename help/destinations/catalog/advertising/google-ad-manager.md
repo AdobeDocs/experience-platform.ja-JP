@@ -1,12 +1,12 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager;DFP
+keywords: google アドマネージャー;google 広告;ダブルクリック;DoubleClick AdX;DoubleClick;Google アドマネージャー;Google ad manager;DFP
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '955'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
 
@@ -14,29 +14,29 @@ ht-degree: 41%
 
 ## 概要 {#overview}
 
-[!DNL Google Ad Manager]( 旧称： [!DNL DoubleClick for Publishers] (DFP) または [!DNL DoubleClick AdX]は、から提供される広告サービングプラットフォームです [!DNL Google] これにより、パブリッシャーは、ビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理できます。
+[!DNL Google Ad Manager]（以前は [!DNL DoubleClick for Publishers]（DFP）または [!DNL DoubleClick AdX] と呼ばれていました）は、[!DNL Google] の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、web サイト上の広告の表示を管理できます。
 
 ## 宛先の詳細 {#specifics}
 
-次に示す詳細は、 [!DNL Google Ad Manager] 宛先：
+[!DNL Google Ad Manager] の宛先に固有な次の詳細に注意ください。
 
-* アクティブ化されたオーディエンスは、 [!DNL Google] プラットフォーム。
-* [!DNL Platform] は、現在、アクティブ化の成功を検証するための測定指標を含んでいません。 統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
-* セグメントを [!DNL Google Ad Manager] 宛先の場合、セグメント名は [!DNL Google Ad Manager] ユーザーインターフェイス。
-* セグメント母集団の表示には 24 ～ 48 時間が必要です [!DNL Google Ad Manager]. また、で表示するには、セグメントのオーディエンスサイズが 50 以上のプロファイルにする必要があります [!DNL Google Ad Manager]. オーディエンスサイズが 50 未満のプロファイルを含むセグメントは、 [!DNL Google Ad Manager].
+* アクティブ化されたオーディエンスは、[!DNL Google] プラットフォームでプログラム的に作成されます。
+* [!DNL Platform] には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
+* セグメントを [!DNL Google Ad Manager] 宛先にマッピングすると、セグメント名が即座に [!DNL Google Ad Manager] ユーザーインターフェイスに表示されます。
+* セグメント母集団が [!DNL Google Ad Manager] で表示されるまで、24～48 時間かかります。また、[!DNL Google Ad Manager] で表示するには、セグメントのオーディエンスサイズが 50 以上のプロファイルにする必要があります。オーディエンスサイズが 50 未満のプロファイルを含むセグメントは、[!DNL Google Ad Manager] に入力されません。
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Ad Manager] では、以下の表で説明する id のアクティブ化をサポートしています。
+[!DNL Google Ad Manager] では、以下の表で説明する ID のアクティベーションをサポートしています。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | [!DNL Apple ID for Advertisers] | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja)別名 [!DNL Device ID]. 数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google使用 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja) を使用してカリフォルニアのユーザーをターゲット設定し、他のすべてのユーザーのGoogle Cookie ID を使用します。 |
-| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア以外のユーザーをターゲットにします。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja)、別名 [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Google は [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ja) を使用して、カリフォルニア州のユーザーをターゲット設定し、他のすべてのユーザーに対して Google Cookie ID を使用します。 |
+| [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google] は、この ID を使用してカリフォルニア州以外のユーザーをターゲットします。 |
 | RIDA | 広告用 Roku ID。 この ID は、Roku デバイスを一意に識別します。 |  |
-| MAID | Microsoft Advertising ID。 この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
+| MAID | Microsoft Advertising ID。この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -47,35 +47,35 @@ ht-degree: 41%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。 |
+| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを Google の宛先に書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 前提条件 {#prerequisites}
 
-を使用して最初の宛先を作成する場合は、 [!DNL Google Ad Manager] 有効にしていない [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてください。 以前に [!DNL Google] Audience Manager内の統合、設定した ID 同期は Platform に引き継がれます。
+[!DNL Google Ad Manager] での最初の宛先を作成しようとしており、これまで（Audience Manager などのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしたことがない場合は、アドビのコンサルティングまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。以前に Audience Manager で [!DNL Google] 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
->許可リストへの登録は、最初の [!DNL Google Ad Manager] の宛先を設定します。 以下に説明する許可リスト登録プロセスが次の方法で完了していることを確認してください： [!DNL Google] 宛先を作成する前に、をクリックします。
->このルールの例外は次の場合です。 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 このGoogleの宛先への接続をAudience Managerで既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進むことができます。
+>Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-を作成する前に [!DNL Google Ad Manager] の宛先に設定する場合は、 [!DNL Google] Adobeを許可されたデータプロバイダーのリストに追加し、お使いのアカウントを許可リストに追加する場合。 連絡先 [!DNL Google] 次の情報を入力します。
+Platform で [!DNL Google Ad Manager] の宛先を作成する前に、[!DNL Google] に連絡して、許可されたデータプロバイダーのリストにアドビを追加し、お使いのアカウントを許可リストに追加してもらう必要があります。 [!DNL Google] に連絡し、次の情報を提供します。
 
-* **アカウント ID**:AdobeのGoogleアカウント ID。 アカウント ID :87933855.
-* **顧客 ID**:Adobeの顧客アカウント ID とGoogle。 顧客 ID :89690775.
-* **ネットワークコード**:これがあなたの [!DNL Google Ad Manager] ネットワーク識別子（の下） **[!UICONTROL 管理者/グローバル設定]** (Googleインターフェイスの ) または（URL の）を参照してください。
-* **オーディエンスリンク ID**:これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) は、の下にもあります。 **[!UICONTROL 管理者/グローバル設定]** Googleインターフェイスの
-* アカウントの種類。Google DFP または AdX 購入者。
+* **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
+* **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
+* **ネットワークコード**：Google インターフェイスの&#x200B;**[!UICONTROL 管理者／グローバル設定]**&#x200B;と URL の下にある [!DNL Google Ad Manager] ネットワーク識別子です。
+* **オーディエンスリンク ID**：[!DNL Google Ad Manager] ネットワーク（[!DNL Network code] ではない）に関連付けられた特定の識別子で、Google インターフェイスの&#x200B;**[!UICONTROL 管理者／グローバル設定]**&#x200B;にもあります。
+* お使いのアカウントのタイプ。DFP by Google または AdX Buyer です。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -83,16 +83,16 @@ ht-degree: 41%
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL 名前]**：この宛先に任意の名前を入力します。
+* **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントの種類]**：Google のアカウントに応じて、次のオプションを選択します。
-   *  for Publishers - `DFP by Google` を使用[!DNL DoubleClick]
-   * 用途 `AdX buyer` 対象 [!DNL Google AdX]
-* **[!UICONTROL アカウント ID]**:オーディエンスリンク ID にを入力します。 [!DNL Google].
+   * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
+   * [!DNL Google AdX] に `AdX buyer` を使用する
+* **[!UICONTROL アカウント ID]**：[!DNL Google] で オーディエンスリンク ID を入力します。 
 
 >[!NOTE]
 >
->の設定時に [!DNL Google Ad Manager] の宛先については、 [!DNL Google Account Manager] またはAdobe担当者を参照して、お持ちのアカウントの種類を確認してください。
+>[!DNL Google Ad Manager] の宛先を設定する際は、[!DNL Google Account Manager] またはアドビの担当者にお問い合わせの上、お持ちのアカウントの種類をご確認ください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -106,8 +106,8 @@ ht-degree: 41%
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Google Ad Manager] 宛先、 [!DNL Google Ad Manager] アカウント アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
+データがに正常に [!DNL Google Ad Manager] の宛先に書き出されたかどうかを確認するには、[!DNL Google Ad Manager] アカウントを確認します。 アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。
