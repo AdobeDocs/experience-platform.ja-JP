@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Salesforce;Salesforce；フィールドマッピング；フィールドマッピング；マッピング；marketo;B2B;b2b
+keywords: Experience Platform;ホーム;人気のトピック;Salesforce;Salesforce;フィールドマッピング;フィールドマッピング;マッピング;marketo;B2B;b2b
 title: Salesforce マッピングフィールド
-description: 以下の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
+description: 次の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '494'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 # [!DNL Salesforce] フィールドマッピング
 
-次の表に、 [!DNL Salesforce] ソースフィールドと、対応する Experience Data Model(XDM) フィールド
+次の表には、[!DNL Salesforce] ソースフィールドと、対応するエクスペリエンスデータモデル（XDM）フィールドとのマッピングが含まれています。
 
 ## 連絡先 {#contact}
 
-詳しくは、 [XDM 個別プロファイルの概要](../../../../xdm/classes/individual-profile.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネス人物詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-details.md) ガイドと [XDM ビジネス人物コンポーネントスキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-components.md) ガイド。
+XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](../../../../xdm/classes/individual-profile.md)を参照してください。 XDM フィールドグループについて詳しくは、[XDM ビジネスユーザー詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-details.md)ガイドと [XDM ビジネスユーザーコンポーネントスキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-components.md)ガイドを参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department` | `extendedWorkDetails.departments` |
-| `Email` | `workEmail.address` | セカンダリID。 |
+| `Email` | `workEmail.address` | セカンダリ ID。 |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
@@ -76,14 +76,14 @@ ht-degree: 14%
 
 ## リード {#lead}
 
-詳しくは、 [XDM 個別プロファイルの概要](../../../../xdm/classes/individual-profile.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネス人物詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-details.md) ガイドと [XDM ビジネス人物コンポーネントスキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-components.md) ガイド。
+XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](../../../../xdm/classes/individual-profile.md)を参照してください。XDM フィールドグループについて詳しくは、[XDM ビジネスユーザー詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-details.md)ガイドと [XDM ビジネスユーザーコンポーネントスキーマフィールドグループ](../../../../xdm/field-groups/profile/business-person-components.md)ガイドを参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
-| `Email` | `workEmail.address` | セカンダリID。 |
+| `Email` | `workEmail.address` | セカンダリ ID。 |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
@@ -92,7 +92,7 @@ ht-degree: 14%
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
 | `Id` | `personComponents.sourcePersonKey.sourceID` |
@@ -127,12 +127,12 @@ ht-degree: 14%
 
 ## アカウント {#account}
 
-詳しくは、 [XDM ビジネスアカウントの詳細の概要](../../../../xdm/classes/b2b/business-account.md) を参照してください。
+XDM クラスについて詳しくは、[XDM ビジネスアカウントの詳細の概要](../../../../xdm/classes/b2b/business-account.md)を参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
@@ -149,7 +149,7 @@ ht-degree: 14%
 | `Fax` | `accountFax.number` |
 | `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -181,17 +181,17 @@ ht-degree: 14%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 商談 {#opportunity}
+## Opportunity {#opportunity}
 
-詳しくは、 [XDM ビジネスオポチュニティの概要](../../../../xdm/classes/b2b/business-opportunity.md) を参照してください。
+XDM クラスについて詳しくは、[XDM Business Opportunity の概要](../../../../xdm/classes/b2b/business-opportunity.md)を参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリ ID。 `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `AccountId` | `accountKey.sourceID` |
-| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | 関係. |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | 関係。 |
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID` |
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
@@ -222,21 +222,21 @@ ht-degree: 14%
 
 {style=&quot;table-layout:auto&quot;}
 
-## オポチュニティ連絡先ロール {#opportunity-contact-role}
+## 商談連絡先の役割 {#opportunity-contact-role}
 
-詳しくは、 [XDM ビジネスオポチュニティ人物関係クラスの概要](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) を参照してください。
+XDM クラスについて詳しくは、[XDM Business Opportunity ユーザー関係クラスの概要](../../../../xdm/classes/b2b/business-opportunity-person-relation.md)を参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `"Salesforce"` | `personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
 | `ContactId` | `personKey.sourceID` |
 | `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -250,15 +250,15 @@ ht-degree: 14%
 
 ## Campaign {#campaign}
 
-詳しくは、 [XDM ビジネスキャンペーンクラスの概要](../../../../xdm/classes/b2b/business-campaign.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネスキャンペーン詳細スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign/details.md) ガイド。
+XDM クラスについて詳しくは、[XDM ビジネスキャンペーンクラスの概要](../../../../xdm/classes/b2b/business-campaign.md)を参照してください。 XDM フィールドグループについて詳しくは、[XDM ビジネスキャンペーン詳細スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign/details.md)ガイドを参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `Name` | `campaignName` |
 | `ParentId` | `parentCampaignKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
@@ -281,15 +281,15 @@ ht-degree: 14%
 
 ## キャンペーンメンバー {#campaign-member}
 
-詳しくは、 [XDM ビジネスキャンペーンメンバーの概要](../../../../xdm/classes/b2b/business-campaign-members.md) を参照してください。 XDM フィールドグループについて詳しくは、 [XDM ビジネスキャンペーンメンバー詳細スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign/details.md) 文書。
+XDM クラスについて詳しくは、[XDM ビジネスキャンペーンメンバーの概要](../../../../xdm/classes/b2b/business-campaign-members.md)を参照してください。XDM フィールドグループについて詳しくは、[XDM ビジネスキャンペーンメンバー詳細スキーマフィールドグループ](../../../../xdm/field-groups/b2b-campaign/details.md)ドキュメントを参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | プライマリ ID. の値 `"${CRM_ORG_ID}"` が自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
 | `CampaignId` | `campaignKey.sourceID` |
@@ -305,11 +305,11 @@ ht-degree: 14%
 | `FirstRespondedDate` | `firstRespondedDate` |
 | `Type` | `b2b.personType` |
 
-## アカウント連絡先関係 {#account-contact-relation}
+## アカウント連絡先の関係 {#account-contact-relation}
 
-詳しくは、 [XDM ビジネスアカウント人物関係クラス](../../../../xdm/classes/b2b/business-account-person-relation.md) を参照してください。
+XDM クラスについて詳しくは、[XDM ビジネスアカウントユーザー関係クラス](../../../../xdm/classes/b2b/business-account-person-relation.md)を参照してください。
 
-| ソースフィールド | Target XDM フィールドのパス | メモ |
+| ソースフィールド | ターゲット XDM フィールドのパス | メモ |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
@@ -322,7 +322,7 @@ ht-degree: 14%
 | `Id` | `accountPersonKey.sourceID` |
 | `"Salesforce"` | `accountPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
-| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | プライマリ ID. |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | プライマリ ID。 |
 | `IsActive` | `IsActive` |
 | `IsDirect` | `IsDirect` |
 | `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
@@ -332,4 +332,4 @@ ht-degree: 14%
 
 ## 次の手順
 
-このドキュメントを読むと、 [!DNL Salesforce] ソースフィールドおよび対応する XDM フィールド。 詳しくは、[ [!DNL Salesforce]  ソース接続の作成](../../../connectors/crm/salesforce.md)のドキュメントを参照してください。
+このドキュメントでは、[!DNL Salesforce] ソースフィールドとそれに対応する XDM フィールドとのマッピング関係について説明しました。詳しくは、[ [!DNL Salesforce] ソース接続の作成](../../../connectors/crm/salesforce.md)に関するドキュメントを参照してください。
