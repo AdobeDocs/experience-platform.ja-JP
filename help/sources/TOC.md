@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '860'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 83%
 - [ソースの概要](home.md)
 - 使用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
-      - [Analytics 分類ソース](connectors/adobe-applications/classifications.md)
+      - [Analytics Classifications ソース](connectors/adobe-applications/classifications.md)
       - [Analytics ソース](connectors/adobe-applications/analytics.md)
       - [Audience Manager ソース](connectors/adobe-applications/audience-manager.md)
-      - [Adobe Campaign Managed Cloud Servicesソース](connectors/adobe-applications/campaign.md)
+      - [Adobe Campaign Managed Cloud Services ソース](connectors/adobe-applications/campaign.md)
       - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
       - [データ収集ソース](connectors/adobe-applications/data-collection.md)
-      - [Workfrontソース](connectors/adobe-applications/workfront.md)
+      - [Workfront ソース](connectors/adobe-applications/workfront.md)
       - フィールドマッピング {#mapping}
          - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager フィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
@@ -54,7 +54,7 @@ ht-degree: 83%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP コネクタ](connectors/cloud-storage/sftp.md)
       - [Amazon S3 および Azure Blob コネクタ](connectors/cloud-storage/blob-s3.md)
-   - 同意と環境設定 {#consent}
+   - 同意および環境設定 {#consent}
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
@@ -62,7 +62,7 @@ ht-degree: 83%
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
       - [Zoho CRM コネクタ](connectors/crm/zoho.md)
    - カスタマーサクセス {#customer-success}
-      - [Oracleサービスクラウド](connectors/customer-success/oracle-service-cloud.md)
+      - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud コネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow コネクタ](connectors/customer-success/servicenow.md)
       - [Zendesk コネクタ](connectors/customer-success/zendesk.md)
@@ -85,7 +85,7 @@ ht-degree: 83%
       - [Phoenix コネクタ](connectors/databases/phoenix.md)
       - [PostgreSQL コネクタ](connectors/databases/postgres.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
-      - [TeradataVantage コネクタ](connectors/databases/teradata-vantage.md)
+      - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - e コマース {#ecommerce}
       - [Shopify コネクタ](connectors/ecommerce/shopify.md)
    - ローカルシステム {#local-system}
@@ -93,8 +93,8 @@ ht-degree: 83%
    - マーケティングの自動処理 {#marketing-automation}
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
-      - [OracleEloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
-      - [OracleResponsys コネクタ](connectors/marketing-automation/oracle-responsys.md)
+      - [Oracle Eloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle Responsys コネクタ](connectors/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
@@ -118,13 +118,13 @@ ht-degree: 83%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [データランディングゾーン](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracleオブジェクトストレージ](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
-      - 同意と環境設定 {#consent}
+      - 同意および環境設定 {#consent}
          - [OneTrust 統合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -132,7 +132,7 @@ ht-degree: 83%
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
-         - [Oracleサービスクラウド](tutorials/api/create/customer-success/oracle-service-cloud.md)
+         - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -154,7 +154,7 @@ ht-degree: 83%
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
-         - [Teradata利益](tutorials/api/create/databases/teradata-vantage.md)
+         - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -164,10 +164,10 @@ ht-degree: 83%
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
-         - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-         - [四角形](tutorials/api/create/payments/square.md)
+         - [正方形](tutorials/api/create/payments/square.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/api/create/protocols/odata.md)
          - [汎用 REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -200,7 +200,7 @@ ht-degree: 83%
    - [データフローのモニタリング](tutorials/api/monitor.md)
    - [アカウントの更新](tutorials/api/update.md)
    - [データフローの更新](tutorials/api/update-dataflows.md)
-   - [失敗したデータフローの実行を再試行](tutorials/api/retry-flows.md)
+   - [失敗したデータフロー実行の再試行](tutorials/api/retry-flows.md)
    - [アカウントの削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UI チュートリアル {#ui-tutorials}
@@ -223,16 +223,16 @@ ht-degree: 83%
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azure イベントハブ](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azure ファイルストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [データランディングゾーン](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracleオブジェクトストレージ](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 と Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
-      - 同意と環境設定 {#consent}
+      - 同意および環境設定 {#consent}
          - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -240,7 +240,7 @@ ht-degree: 83%
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
-         - [Oracleサービスクラウド](tutorials/ui/create/customer-success/oracle-service-cloud.md)
+         - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -248,11 +248,11 @@ ht-degree: 83%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights 上の Apache Spark](tutorials/ui/create/databases/spark.md)
-         - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azure テーブルストレージ](tutorials/ui/create/databases/ats.md)
+         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -263,7 +263,7 @@ ht-degree: 83%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-         - [Teradata利益](tutorials/ui/create/databases/teradata-vantage.md)
+         - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - ローカルシステム {#local-system}
@@ -272,12 +272,12 @@ ht-degree: 83%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
-         - [OracleEloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [OracleResponsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
-         - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-         - [四角形](tutorials/ui/create/payments/square.md)
+         - [正方形](tutorials/ui/create/payments/square.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/ui/create/protocols/odata.md)
       - ストリーミング {#streaming}
@@ -295,7 +295,7 @@ ht-degree: 83%
       - [マーケティング自動化接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
-   - [UI のテンプレートを使用したソースデータフローの作成](tutorials/ui/templates.md)
+   - [UI のテンプレートを使用してソースのデータフローを作成する](tutorials/ui/templates.md)
    - [バッチデータフローのモニタリング](tutorials/ui/monitor.md)
    - [ストリーミングデータフローのモニタリング](tutorials/ui/monitor-streaming.md)
    - [アカウントの更新](tutorials/ui/update.md)
@@ -303,15 +303,15 @@ ht-degree: 83%
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
    - [ソースアラートの購読](tutorials/ui/alerts.md)
-- セルフサービスソース（バッチ SDK） {#sdk}
+- セルフサービスソース（Batch SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
-   - 接続仕様を設定する {#config}
+   - 接続仕様の設定 {#config}
       - [設定オプション](sources-sdk/config/config.md)
       - [認証仕様の設定](sources-sdk/config/authspec.md)
       - [ソース仕様の設定](sources-sdk/config/sourcespec.md)
       - [探索仕様の設定](sources-sdk/config/explorespec.md)
-   - セルフサービスソース（バッチ SDK）API ガイド {#self-serve-api}
-      - [セルフサービスソース（バッチ SDK）API の概要](sources-sdk/api/api-overview.md)
+   - セルフサービスソース（Batch SDK）API ガイド {#self-serve-api}
+      - [Self-Serve Sources（バッチ SDK）API の概要](sources-sdk/api/api-overview.md)
       - [はじめに](sources-sdk/api/getting-started.md)
       - [接続仕様を作成](sources-sdk/api/create.md)
       - [接続仕様の更新](sources-sdk/api/update-connection-specs.md)
@@ -327,4 +327,4 @@ ht-degree: 83%
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
