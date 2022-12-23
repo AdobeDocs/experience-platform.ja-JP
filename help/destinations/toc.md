@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '985'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 69%
 
 * [宛先の概要](./home.md)
 * [宛先のタイプとカテゴリ](./destination-types.md)
-* [宛先（アクティブ化）ガードレール](./guardrails.md)
+* [宛先（アクティベーション）ガードレール](./guardrails.md)
 * API チュートリアル {#api}
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
@@ -34,15 +34,15 @@ ht-degree: 69%
       * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md)
       * [プロファイルリクエスト宛先に対するオーディエンスデータの有効化](./ui/activate-profile-request-destinations.md)
       * [同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](./ui/configure-personalization-destinations.md)
-      * [（ベータ版）Experience PlatformUI を使用して、オンデマンドでバッチ保存先にファイルを書き出す](./ui/export-file-now.md)
-      * [（ベータ版）Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
+      * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
+      * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
    * [アクティベーションデータフローを編集](./ui/edit-activation.md)
    * [宛先の削除](./ui/delete-destinations.md)
    * [データフローのモニタリング](./ui/monitor-dataflows.md)
-   * [（ベータ版）ファイルベースの宛先のファイル形式設定オプションを設定する](./ui/batch-destinations-file-formatting-options.md)
+   * [（ベータ版）ファイルベースの宛先のファイル形式オプションの設定](./ui/batch-destinations-file-formatting-options.md)
    * [コンテキスト内宛先アラートを購読](ui/alerts.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
@@ -52,7 +52,7 @@ ht-degree: 69%
       * [Experience Platform セグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
    * 広告の宛先 {#advertising}
       * [広告の宛先の概要](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
+      * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 拡張機能](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin Advertiser Conversion Tag 拡張機能](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag 拡張機能](./catalog/advertising/awin-mastertag.md)
@@ -75,7 +75,7 @@ ht-degree: 69%
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
       * [（ベータ版）Snapchat 広告接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
-      * [（ベータ版）トレードデスク CRM 接続](./catalog/advertising/tradedesk-emails.md)
+      * [（ベータ版）The Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag 拡張機能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 接続](./catalog/advertising/datax.md)
    * Analytics の宛先 {#analytics}
@@ -101,7 +101,7 @@ ht-degree: 69%
       * [Yext Conversion Tracking 拡張機能](./catalog/analytics/yext.md)
    * クラウドストレージの宛先 {#cloud-storage}
       * [クラウドストレージの宛先の概要](./catalog/cloud-storage/overview.md)
-      * [Amazon Kinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon Kinesis 接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 接続](./catalog/cloud-storage/azure-blob.md)
       * [（ベータ版）Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
@@ -109,8 +109,8 @@ ht-degree: 69%
       * [（ベータ版）データランディングゾーン](./catalog/cloud-storage/data-landing-zone.md)
       * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [クラウドストレ許可リストージの宛先の IP アドレス](./catalog/cloud-storage/ip-address-allow-list.md)
-   * 顧客関係管理 (CRM) の宛先 {#crm}
+      * [クラウドストレージの宛先の IP アドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
+   * 顧客関係管理（CRM）の宛先{#crm}
       * [Salesforce CRM 接続](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 接続](./catalog/crm/microsoft-dynamics-365.md)
       * [アウトリーチ接続](catalog/crm/outreach.md)
@@ -125,11 +125,11 @@ ht-degree: 69%
    * メールマーケティングの宛先 {#email-marketing}
       * [メールマーケティングの宛先の概要](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 接続](./catalog/email-marketing/adobe-campaign.md)
-      * [Adobe Campaign Managed Cloud Services接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
+      * [Adobe Campaign Managed Cloud Services 接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 接続](./catalog/email-marketing/oracle-responsys.md)
-      * [(API)SalesforceMarketing Cloud接続](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [（ファイル） SalesforceMarketing Cloud接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [（API）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [（ファイル）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [SendGrid 接続](./catalog/email-marketing/sendgrid.md)
    * タグ拡張機能 {#launch-extensions}
       * [タグ拡張機能の概要](./catalog/launch-extensions/overview.md)
@@ -157,11 +157,11 @@ ht-degree: 69%
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook 接続](./catalog/social/facebook.md)
-      * [linkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
+      * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミングの宛先 {#streaming}
       * [HTTP API 接続](./catalog/streaming/http-destination.md)
-      * [ストリーミング許可リスト先の IP アドレス](./catalog/streaming/ip-address-allow-list.md)
+      * [ストリーミングの宛先の IP アドレス許可リスト](./catalog/streaming/ip-address-allow-list.md)
    * サーベイの宛先 {#survey}
       * [サーベイの宛先の概要](./catalog/survey/overview.md)
       * [Foresee 拡張機能の宛先](./catalog/survey/foresee.md)
@@ -184,7 +184,7 @@ ht-degree: 69%
       * [ストリーミング先の構成](./destination-sdk/destination-configuration.md)
       * [ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
       * [ストリーミング宛先のサーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
-      * [ファイルベースの宛先サーバーとファイル仕様](./destination-sdk/server-and-file-configuration.md)
+      * [ファイルベースの宛先のサーバーとファイルの仕様](./destination-sdk/server-and-file-configuration.md)
       * [メッセージの形式](./destination-sdk/message-format.md)
       * [オーディエンスメタデータの管理](./destination-sdk/audience-metadata-management.md)
       * 認証 {#authentication}
@@ -201,31 +201,31 @@ ht-degree: 69%
       * [資格情報エンドポイント API の操作](./destination-sdk/credentials-configuration-api.md)
       * [公開エンドポイント API の操作](./destination-sdk/destination-publish-api.md)
       * デベロッパーツールリファレンス {#developer-tools-reference}
-         * ストリーミング宛先テスト API {#streaming-destination-testing-api}
+         * ストリーミングの宛先のテスト API {#streaming-destination-testing-api}
             * [サンプルテンプレート取得 API の操作](./destination-sdk/sample-template-api.md)
             * [テンプレートレンダリング API の操作](./destination-sdk/render-template-api.md)
             * [宛先テスト API の操作](./destination-sdk/destination-testing-api.md)
             * [サンプルプロファイル生成 API の操作](./destination-sdk/sample-profile-generation-api.md)
-         * ファイルベースの宛先テスト API {#file-based-destination-testing-api}
-            * [ファイルベースの宛先テスト API の概要](./destination-sdk/file-based-destination-testing-overview.md)
+         * ファイルベースの宛先のテスト API {#file-based-destination-testing-api}
+            * [ファイルベースの宛先のテスト API の概要](./destination-sdk/file-based-destination-testing-overview.md)
             * [ソーススキーマに基づくサンプルプロファイルの生成](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [サンプルプロファイルを使用してファイルベースの宛先をテストする](./destination-sdk/file-based-destination-testing-api.md)
+            * [サンプルプロファイルを使用したファイルベースの宛先のテスト](./destination-sdk/file-based-destination-testing-api.md)
             * [詳細なアクティベーション結果の表示](./destination-sdk/file-based-destination-results-api.md)
             * [テンプレート化された顧客フィールドの検証](./destination-sdk/file-based-render-template-api.md)
    * ガイド {#guides}
       * [Destination SDK を使用したストリーミングの宛先の設定](./destination-sdk/configure-destination-instructions.md)
-      * [Destination SDKを使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Destination SDK を使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK で作成した宛先のレビュー用に送信する](./destination-sdk/submit-destination.md)
       * ファイルベースの宛先の設定 {#configure-file-based-destinations}
          * [ファイル形式設定オプションの設定](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
-         * [事前定義済みのファイル形式オプションとカスタムファイル名設定を使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して、Azure Blob ストレージの宛先を構成します](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して Azure Data Lake Storage の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [事前に定義されたファイルフォーマットオプションとカスタムファイル名設定を使用して SFTP の宛先を設定する](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [事前定義済みのファイル形式オプションとカスタムファイル名設定を使用した Amazon S3 の宛先の設定](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [カスタムのファイル名とファイル形式オプションを使用した Amazon S3 の宛先の設定](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Blob ストレージの宛先の設定](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Data Lake Storage の宛先の設定](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用した、データランディングゾーン（DLZ）の宛先の設定](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [事前定義済みファイル形式オプションとカスタムファイル名設定を使用した、 SFTP の宛先の設定](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * リファレンス {#reference}
-      * [ストリーミング宛先のレート制限および再試行ポリシー](./destination-sdk/rate-limiting-retry-policy.md)
+      * [ストリーミングの宛先のレート制限および再試行ポリシー](./destination-sdk/rate-limiting-retry-policy.md)
       * [サポートされる変換関数](./destination-sdk/supported-functions.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platform の宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
@@ -234,4 +234,4 @@ ht-degree: 69%
       * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
       * [オーサリングのベストプラクティス](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [よくある質問](./destinations-faq.md)
-* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
