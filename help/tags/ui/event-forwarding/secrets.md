@@ -1,15 +1,15 @@
 ---
-title: イベント転送での秘密鍵の設定
-description: イベント転送プロパティで使用されるエンドポイントに対して認証するための UI のシークレットの設定方法について説明します。
+title: イベント転送でのシークレットの設定
+description: イベント転送のプロパティで使用されるエンドポイントを認証するために UI でシークレットを設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1766'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
-# イベント転送での秘密鍵の設定
+# イベント転送でのシークレットの設定
 
 イベント転送では、秘密鍵は別のシステムの認証情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
 
@@ -19,12 +19,12 @@ ht-degree: 74%
 | --- | --- |
 | [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
-| [!UICONTROL OAuth2] | 次をサポートする属性が複数含まれます： [クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) の [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様。 必要な情報を入力すると、指定した間隔でトークンの更新を行います。 |
-| [!UICONTROL Google OAuth 2] | 次をサポートする属性が複数含まれます： [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) で使用する認証仕様 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 必要な情報を入力すると、指定した間隔でトークンの更新を行います。 |
+| [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
+| [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-このガイドでは、イベント転送 ([!UICONTROL Edge]) プロパティを使用して、Experience PlatformUI またはデータ収集 UI に表示できます。
+このガイドでは、Experience Platform UI またはデータ収集 UI でイベント転送（[!UICONTROL Edge]）プロパティのシークレットを設定する方法の概要を説明します。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 74%
 
 ## 前提条件
 
-このガイドは、データ要素の作成方法やイベント転送ルールの作成方法など、UI でのタグとイベント転送のリソースの管理方法について既に詳しいことを前提としています。 概要については、[リソースの管理](../managing-resources/overview.md)に関するガイドを参照してください。
+このガイドは、UI でタグやイベント転送のリソースを管理する方法（データ要素やイベント転送ルールの作成方法など）を既に熟知していることを前提としています。概要については、[リソースの管理](../managing-resources/overview.md)に関するガイドを参照してください。
 
 また、タグとイベント転送の公開フロー（ライブラリにリソースを追加する方法や、テスト用に web サイトにビルドをインストールする方法など）についての実用的な理解が必要です。詳しくは、[公開の概要](../publishing/overview.md)を参照してください。
 
@@ -41,10 +41,10 @@ ht-degree: 74%
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
 >title="シークレットの環境"
->abstract="シークレットをイベント転送で使用できるようにするには、シークレットを既存の環境に割り当てる必要があります。イベント転送プロパティ用に環境が作成されていない場合は、先に進む前に環境を設定する必要があります。"
+>abstract="シークレットをイベント転送で使用できるようにするには、シークレットを既存の環境に割り当てる必要があります。イベント転送プロパティ用の環境が作成されていない場合は、先に進む前に環境を設定する必要があります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja" text="環境の概要"
 
-シークレットを作成するには、「 」を選択します。 **[!UICONTROL イベント転送]** 左側のナビゲーションで、秘密鍵を追加するイベント転送プロパティを開きます。 次に、左側のナビゲーションで「**[!UICONTROL シークレット]**」 を選択し、「**[!UICONTROL 新しいシークレットの作成]**」を選択します。
+シークレットを作成するには、左側のナビゲーションで「**[!UICONTROL イベント転送]**」を選択し、シークレットを追加するイベント転送プロパティを開きます。 次に、左側のナビゲーションで「**[!UICONTROL シークレット]**」 を選択し、「**[!UICONTROL 新しいシークレットの作成]**」を選択します。
 
 ![新しいシークレットの作成](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -93,7 +93,7 @@ HTTP シークレットを作成するには、「**[!UICONTROL タイプ]**」�
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドで、 [[!UICONTROL クライアント ID] および [!UICONTROL クライアント秘密鍵]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] UI のフィールドは、認証サーバーホストとトークンパスを連結したものです。
+OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから「**[!UICONTROL OAuth2]**」を選択します。 以下に表示されるフィールドに、[[!UICONTROL クライアント ID] と[!UICONTROL クライアントシークレット]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)のほか、OAuth 統合の[[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) を入力します。UI の「[!UICONTROL トークン URL]」フィールドは、認証サーバーホストとトークンパスを連結したものです。
 
 ![OAuth2 シークレット](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -117,28 +117,28 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 
 ![OAuth2 オフセットの保存](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
-### [!UICONTROL Google OAuth 2] {#google-oauth2}
+### [!UICONTROL Google OAuth2] {#google-oauth2}
 
-Google OAuth 2 シークレットを作成するには、「 **[!UICONTROL Google OAuth 2]** から **[!UICONTROL タイプ]** ドロップダウン。 の下 **[!UICONTROL スコープ]**」で、この暗号鍵を使用してアクセスを許可するGoogle API を選択します。 現在、次の製品がサポートされています。
+Google OAuth2 シークレットを作成するには、**[!UICONTROL タイプ]**&#x200B;ドロップダウンから「**[!UICONTROL Google OAuth2]**」を選択します。「**[!UICONTROL スコープ]**」で、この秘密鍵を使用してアクセスを許可する Google API を選択します。現在、次の製品がサポートされています。
 
-* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Google 広告 API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-終了したら、「 」を選択します。 **[!UICONTROL 秘密鍵を作成]**.
+完了したら、「**[!UICONTROL 秘密鍵を作成]**」を選択します。
 
-![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth.png)
+![Google OAuth2 秘密鍵](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-シークレットをGoogleで手動で認証する必要があることを示すポップオーバーが表示されます。 選択 **[!UICONTROL 作成して認証]** をクリックして続行します。
+秘密鍵を Google で手動で認証する必要があることを示すポップオーバーが表示されます。「**[!UICONTROL 作成して認証]**」を選択して続行します。
 
-![Google認証ポップオーバー](../../images/ui/event-forwarding/secrets/google-authorization.png)
+![Google 認証ポップオーバー](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
-Googleアカウントの資格情報を入力するためのダイアログが表示されます。 画面の指示に従って、選択したスコープでのデータへのイベント転送のアクセスを許可します。 認証プロセスが完了すると、シークレットが作成されます。
+Google アカウントの資格情報を入力するためのダイアログが表示されます。画面の指示に従い、選択したスコープでイベント転送にデータへのアクセスを許可します。認証プロセスが完了すると、シークレットが作成されます。
 
 >[!IMPORTANT]
 >
->組織がGoogle Cloud アプリケーション用に再認証ポリシーを設定している場合、認証の有効期限が切れた後（ポリシー設定によっては 1 ～ 24 時間）、作成されたシークレットは正常に更新されません。
+>組織が Google Cloud アプリケーション用に再認証ポリシーを設定している場合、認証の有効期限が切れた後（ポリシー設定に応じて 1～24 時間）、作成されたシークレットは正常に更新されません。
 >
->この問題を解決するには、Google Admin Console にログインし、 **[!DNL App access control]** イベント転送アプリ (Adobe Real-Time CDPイベント転送 ) を [!DNL Trusted]. に関するGoogleのドキュメントを参照してください。 [Google Cloud Services のセッション長の設定](https://support.google.com/a/answer/9368756) を参照してください。
+>この問題を解決するには、Google 管理コンソールにログインし、イベント転送アプリ（Adobe Real-Time CDP イベント転送）を [!DNL Trusted] としてマークできるように **[!DNL App access control]** ページに移動します。詳しくは、Google ドキュメントで [Google Cloud サービスのセッション継続時間を設定する](https://support.google.com/a/answer/9368756)を参照してください。
 
 ## 秘密鍵の編集
 
@@ -161,7 +161,7 @@ Googleアカウントの資格情報を入力するためのダイアログが�
 | 秘密鍵タイプ | 再試行プロトコル |
 | --- | --- |
 | [!UICONTROL トークン] | 「**[!UICONTROL 秘密鍵の交換]**」を選択し、秘密鍵の交換を再試行します。このコントロールは、秘密鍵に接続された環境がある場合にのみ使用できます。 |
-| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、認証情報を base64 に交換します。環境が添付されている場合は、「次を選択」を選択します。 **[!UICONTROL Exchange と Deploy の秘密鍵]** を使用して base64 と交換し、秘密鍵をデプロイします。 |
+| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、認証情報を base64 に交換します。環境が接続されている場合は、「**[!UICONTROL シークレットの交換とデプロイ]**」を選択して、シークレットを base64 に交換しデプロイします。 |
 | [!UICONTROL OAuth2] | 「**[!UICONTROL トークンの生成]**」を選択して認証情報を交換し、認証プロバイダーからアクセストークンを返します。 |
 
 ## 秘密鍵の削除
@@ -192,4 +192,4 @@ Googleアカウントの資格情報を入力するためのダイアログが�
 
 ## 次の手順
 
-このガイドでは、UI でシークレットを管理する方法を説明しました。 Reactor API を使用して秘密鍵を操作する方法については、[秘密鍵エンドポイントガイド](../../api/endpoints/secrets.md)を参照してください。
+このガイドでは、UI でのシークレットの管理方法について説明しました。Reactor API を使用してシークレットを操作する方法については、[シークレットエンドポイントガイド](../../api/endpoints/secrets.md)を参照してください。
