@@ -5,10 +5,10 @@ title: プライバシー UI でのPrivacy Serviceジョブの管理
 topic-legacy: UI guide
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 60%
+source-wordcount: '1151'
+ht-degree: 58%
 
 ---
 
@@ -24,13 +24,25 @@ ht-degree: 60%
 
 ### 規則の種類
 
-[!DNL Privacy Service] は、いくつかのプライバシー規制に対するジョブリクエストをサポートしています。
+[!DNL Privacy Service] は、複数のプライバシー規制に対するジョブリクエストをサポートしています。 次の表に、UI に表示される、サポートされる規制と対応するラベルを示します。
 
-* この [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* 欧州連合 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
-* タイ [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* ブラジル [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* ニュージーランド [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI ラベル | 規則 |
+| --- | --- |
+| [!UICONTROL CCPA] | 「[!DNL California Consumer Privacy Act] |
+| [!UICONTROL GDPR] | 欧州連合 [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | タイ [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | ブラジル [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | ニュージーランド [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | 「[!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | 「[!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | 「[!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | 「[!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>概要については、 [サポートされるプライバシー規制](../regulations/overview.md) を参照してください。
 
 それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、 **[!UICONTROL 規制のタイプ]** ドロップダウンメニューを開き、リストから目的の規制を選択します。
 

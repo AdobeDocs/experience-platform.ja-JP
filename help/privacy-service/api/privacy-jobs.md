@@ -5,10 +5,10 @@ title: プライバシージョブ API エンドポイント
 topic-legacy: developer guide
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 65%
+source-wordcount: '1451'
+ht-degree: 63%
 
 ---
 
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`gdpr` （欧州連合）</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` (ブラジル)</li><li>`nzpa_nzl` (ニュージーランド)</li><li>`pdpa_tha` (タイ)</li></ul> |
+| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
 | `mergePolicyId` | リアルタイム顧客プロファイル (`profileService`) を使用する場合は、必要に応じて特定の [結合ポリシー](../../profile/merge-policies/overview.md) ID ステッチに使用する 結合ポリシーを指定すると、プライバシーリクエストには、顧客のデータを返す際にセグメント情報を含めることができます。 1 回のリクエストにつき、1 つの結合ポリシーのみ指定できます。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
-| `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`gdpr` （欧州連合）</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` (ブラジル)</li><li>`nzpa_nzl` (ニュージーランド)</li><li>`pdpa_tha` (タイ)</li></ul> |
+| `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 
 {style=&quot;table-layout:auto&quot;}
 

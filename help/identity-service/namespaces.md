@@ -5,10 +5,10 @@ title: ID 名前空間の概要
 topic-legacy: overview
 description: ID 名前空間 は、ID の関連先コンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 19%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -22,7 +22,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 - [[!DNL Identity Service]](./home.md):デバイスやシステム間で ID を結び付けることで、個々の顧客とその行動をより良く把握できます。
-- [[!DNL Privacy Service]](../privacy-service/home.md)：ID 名前空間を使用して、EU 一般データ保護規則（GDPR）に準拠します。名前空間には、GDPR リクエストを実行できます。
+- [[!DNL Privacy Service]](../privacy-service/home.md):ID 名前空間は、EU 一般データ保護規則 (GDPR) などの法的プライバシー規制への準拠リクエストで使用されます。 各プライバシーリクエストは、影響を受ける消費者のデータを識別するために、名前空間に対しておこなわれます。
 
 ## ID 名前空間について
 

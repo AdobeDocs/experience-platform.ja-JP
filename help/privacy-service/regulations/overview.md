@@ -5,9 +5,9 @@ title: プライバシー規制の概要
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Cloudでサポートされる様々なプライバシー規制の概要を説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 74624291b77e586c6adeb3e08b12a1dae92d419a
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '724'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 このドキュメントでは、Adobe Experience Cloudでサポートされる様々なプライバシー規制の概要を説明します。
 
-Experience Cloudは、Adobe Experience Platform Privacy Serviceの使用を通じて、次の規制に基づいてアクセスおよび削除のリクエストをサポートします。
+を使用して [Adobe Experience Platform Privacy Service](../home.md)のExperience Cloudは、次の規制に基づくアクセスリクエストと削除リクエストをサポートします。
 
 | 規則 | 説明 |
 | --- | --- |
@@ -29,6 +29,8 @@ Experience Cloudは、Adobe Experience Platform Privacy Serviceの使用を通�
 | ニュージーランド [!DNL Privacy Act] | この [ニュージーランド [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、代理店がニュージーランドの市民および組織の個人情報を収集、使用、開示、保存、およびアクセス権を付与する方法を制御します。 2020 年に、この法律の最新バージョンでは、新しい犯罪、罰金の増加、データ侵害に対する強制通知、プライバシー担当者の権限の拡大など、プライバシーに関する法律が大幅に更新されました。 |
 | PDPA（タイ） | この [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者が個人データの違法な収集、使用、開示を受けるのを防ぐために導入されました。 EU の GDPR に影響を受け、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求したり、そのデータを削除したりする権利を付与します。 |
 | VCDPA（バージニア） | この [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) は、個人データにアクセス、削除、修正する権利など、バージニア在住者（「消費者」）に対する新しいデータプライバシー権を提供します。 また、消費者は、個人データの販売のオプトアウト、個人データに基づくプロファイルのオプトアウト、個人広告目的の処理をおこなう権利も持ちます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 次の手順
 
