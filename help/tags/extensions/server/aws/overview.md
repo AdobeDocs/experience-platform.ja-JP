@@ -2,9 +2,9 @@
 title: AWS Extension の概要
 description: Adobe Experience Platformでのイベント転送用のAWS拡張機能について説明します。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) は、分散コンピューティング、データベースストレージ、コンテンツ配信、顧客関係管理 (CRM) など、様々なサービスを提供するクラウドコンピューティングプラットフォームです。
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) は、顧客関係管理 (CRM) およびエンタープライズリソース計画 (ERP) 向けの、分散コンピューティング、データベースストレージ、コンテンツ配信、SaaS(Software-as-a-S) 統合サービスなど、幅広いサービスを提供するクラウドコンピューティングプラットフォームです。
 
 この [!DNL AWS] [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能の活用 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) を追加して、Adobe Experience Platform Edge Network からにイベントを送信します。 [!DNL AWS] を参照してください。 このガイドでは、イベント転送ルールでの拡張機能のインストール方法とその機能の使用方法について説明します。
 
