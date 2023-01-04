@@ -2,7 +2,7 @@
 title: プロパティエンドポイント
 description: Reactor API で /properties エンドポイントを呼び出す方法を説明します。
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 100%
@@ -556,7 +556,7 @@ PATCH /properties/{PROPERTY_ID}
 
 ```shell
 curl -X PATCH \
-  https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84 \
+  https://reactor.adobe.io/properties/PR541dbb24bad54dceb04710d7a9e7a740 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

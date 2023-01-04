@@ -2,7 +2,7 @@
 title: B2B ソースデータタイプ
 description: このドキュメントでは、B2B ソースエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 4%
@@ -23,7 +23,7 @@ ht-degree: 4%
 | --- | --- | --- |
 | `sourceID` | 文字列 | ソースレコードの一意の ID。 |
 | `sourceInstanceID` | 文字列 | ソースデータのインスタンスまたは組織 ID。 |
-| `sourceKey` | 文字列 | で構成される一意の識別子 `sourceId`, `sourceInstanceId`、および `sourceType` を次の形式で連結します。 `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Marketoなどの一部のソースコネクタは、特定の識別子に対してこの値を自動的に連結します。 その他は、 [データ準備 `concat` 関数](../../data-prep/functions.md#string)例： `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | 文字列 | で構成される一意の識別子 `sourceId`, `sourceInstanceId`、および `sourceType` を次の形式で連結します。 `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Marketoなどの一部のソースコネクタは、特定の識別子に対してこの値を自動的に連結します。 その他は、 [データ準備 `concat` 関数](../../data-prep/functions.md#string)例： `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | 文字列 | ソースデータを提供するプラットフォームの名前。 |
 
 {style=&quot;table-layout:auto&quot;}

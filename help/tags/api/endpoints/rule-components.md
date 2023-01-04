@@ -2,10 +2,10 @@
 title: ルールコンポーネントエンドポイント
 description: Reactor API で /rule_components エンドポイントを呼び出す方法を説明します。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 98%
+source-wordcount: '1190'
+ht-degree: 95%
 
 ---
 
@@ -305,22 +305,22 @@ POST リクエストをおこなうことで、新しいルールコンポーネ
 **API 形式**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `RULE_ID` | ルールコンポーネントを定義するルールの `id`。 |
+| `PROPERTY_ID` | この `id` ルールコンポーネントを定義するプロパティの。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、指定されたルールの新しいルールコンポーネントを作成します。 また、この呼び出しは、 `relationships` プロパティを通じてルールコンポーネントを既存の拡張機能に関連付けます。 詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
+次のリクエストは、新しいルールコンポーネントを作成します。 ペイロードでは、 `relationships` プロパティは、コンポーネントを特定のルールおよび既存の拡張機能に関連付けます。 詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | 関連付けられたルールが起動する優先度を示す整数。 |
 | `attributes.settings` | 文字列として表される設定 JSON オブジェクト。 |
 | `attributes.timeout` | 順に実行されるアクションのタイムアウトを示す整数。 |
-| `relationships` | ルールコンポーネントに必要な関係を確立するオブジェクト。次の 2 つの関係を確立する必要があります。 <ol><li>`extension`：このルールコンポーネントを定義する拡張機能。これは、`delegate_descriptor_id` で示される拡張機能のパッケージと同じにする必要があります。</li><li>`rules`：このコンポーネントが定義されているルール。リクエストパスで指定されているものと同じルール ID にする必要があります。</li></ol>関係に関する一般的な情報について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。 |
+| `relationships` | ルールコンポーネントに必要な関係を確立するオブジェクト。次の 2 つの関係を確立する必要があります。 <ol><li>`extension`：このルールコンポーネントを定義する拡張機能。これは、`delegate_descriptor_id` で示される拡張機能のパッケージと同じにする必要があります。</li><li>`rules`：このコンポーネントが定義されているルール。</li></ol>関係に関する一般的な情報について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。 |
 | `type` | 作成するリソースのタイプ。このエンドポイントの場合は、値を `rule_components` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
