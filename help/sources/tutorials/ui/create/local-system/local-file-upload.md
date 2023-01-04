@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: ローカルファイルを Platform に取り込むための、ローカルシステムのソース接続の作成方法を説明します
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 71%
+ht-degree: 74%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 71%
 
 ## はじめに
 
-このチュートリアルは、 Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、  Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Platform が顧客体験データを編成する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## Platform へのローカルファイルのアップロード
 
@@ -92,4 +92,4 @@ CSV ファイルがマッピングされ、作成されたら、監視ダッシ�
 
 ## 次の手順
 
-このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、Platform に取り込むことができます。このデータは、ダウンストリームで使用できるようになりました [!DNL Platform] 次のようなサービス： [!DNL Real-time Customer Profile]. の概要を参照してください。 [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) を参照してください。
+このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、Platform に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) の概要を参照してください。

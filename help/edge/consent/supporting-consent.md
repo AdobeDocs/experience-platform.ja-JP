@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK を使用した顧客の同意設定の
 description: Adobe Experience Platform Web SDK で同意設定をサポートする方法について説明します。
 keywords: 同意；defaultConsent；デフォルトの同意；setConsent；プロファイルのプライバシーフィールドグループ；Experience Event のプライバシーフィールドグループ；Privacy フィールドグループ；
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 31%
@@ -53,7 +53,7 @@ SDK は、Adobe Experience Platform同意標準のバージョン 1.0 および 
 
 ### Adobe標準バージョン 2.0 の使用
 
-Adobe Experience Platformを使用している場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 詳しくは、 [Adobe Experience Platformのガバナンス、プライバシー、セキュリティ](../../landing/governance-privacy-security/overview.md) Adobe標準バージョン 2.0 の詳細については、を参照してください。データは、 `consents` フィールド [!UICONTROL 同意および環境設定] プロファイルフィールドグループを使用します。
+Adobe Experience Platformを使用している場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 詳しくは、 [Adobe Experience Platformのガバナンス、プライバシー、セキュリティ](../../landing/governance-privacy-security/overview.md) Adobe標準バージョン 2.0 の詳細。データは、 `consents` フィールド [!UICONTROL 同意および環境設定] プロファイルフィールドグループを使用します。
 
 ユーザーがオプトインした場合は、 `setConsent` コマンドを使用して、collect preference をに設定します。 `y` 次のように指定します。
 

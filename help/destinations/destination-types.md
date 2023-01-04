@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 98%
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform には、接続と拡張機能という 2 種類の宛
 
 ## 接続 {#connections}
 
-Adobe Experience Platform の&#x200B;**[!UICONTROL プロファイル書き出し]**、**[!UICONTROL ストリーミングセグメント書き出し]**、および **[!DNL Edge Personalization]** の各宛先は、イベントデータを取り込み、他のデータソースと組み合わせて[リアルタイム顧客プロファイル](../profile/home.md)を作成し、セグメント化を適用したあと、セグメントと対象プロファイルを宛先に書き出します。
+**[!UICONTROL プロファイルの書き出し]**, **[!UICONTROL ストリーミングセグメントの書き出し]**、および **[!DNL Edge Personalization]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化の適用、セグメントおよび絞り込まれたプロファイルの書き出しをおこないます。
 
 ## プロファイル書き出し宛先 {#profile-export}
 

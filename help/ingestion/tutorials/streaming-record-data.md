@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 66%
@@ -24,7 +24,7 @@ ht-degree: 66%
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
    - [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):の使用可能な各エンドポイントをカバーする包括的なガイド [!DNL Schema Registry] API と呼び出し方法を参照してください。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
 ### Platform API の使用
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマ名。この名前は一意である必要があります。 |
 | `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | この例では、 `union` タグは、データを [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | この例では、 `union` タグは、データを [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **応答** 
 
@@ -139,7 +139,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 仕事用電子メールアドレスは必須フィールドになります。つまり、このフィールドなしで送信されたメッセージは検証に失敗し、取得されません。
 
-2. [!DNL Real-time Customer Profile] は、仕事用電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
+2. [!DNL Real-Time Customer Profile] は、仕事用電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
 
 ### リクエスト
 
@@ -199,7 +199,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->このデータセットは、次に対して有効になります： **[!DNL Real-time Customer Profile]** および **[!DNL Identity Service]**.
+>このデータセットは、次に対して有効になります： **[!DNL Real-Time Customer Profile]** および **[!DNL Identity Service]**.
 
 **API 形式**
 

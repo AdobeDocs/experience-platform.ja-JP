@@ -5,7 +5,7 @@ title: ストリーミング取り込みの概要
 topic-legacy: overview
 description: Adobe Experience Platformのストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -18,7 +18,7 @@ Adobe Experience Platformのストリーミング取り込みを使用すると�
 
 ## ストリームインジェストの機能
 
-Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] 個々の顧客ごとに ストリーミング取り込みは、配信を可能にすることで、これらのプロファイルの作成に重要な役割を果たします [!DNL Profile] データを [!DNL Data Lake] 待ち時間はできるだけ短く
+Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] 個々の顧客ごとに ストリーミング取り込みは、配信を可能にすることで、これらのプロファイルの作成に重要な役割を果たします [!DNL Profile] データを [!DNL Data Lake] 待ち時間はできるだけ短く
 
 次のビデオは、ストリーミング取り込みに関する理解を深めるために設計されており、上記の概念の概要を説明しています。
 
@@ -32,7 +32,7 @@ Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] 個々の�
 
 ### データセットへのストリーミング
 
-データが正しいことを確認したら、次のようにデータセットを有効にできます。 [!DNL Real-time Customer Profile] および [!DNL Identity Service].
+データが正しいことを確認したら、次のようにデータセットを有効にできます。 [!DNL Real-Time Customer Profile] および [!DNL Identity Service].
 
 のデータセットを有効にする方法について詳しくは、 [!DNL Profile] および [!DNL Identity Service]を読んでください。 [データセットガイドの設定](../../profile/tutorials/dataset-configuration.md).
 

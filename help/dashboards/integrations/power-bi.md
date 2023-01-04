@@ -2,22 +2,22 @@
 title: Platform ダッシュボードの Power BI レポートテンプレート
 description: Power BI を使用した Experience Platform データを、レポートテンプレートを使用して調べます。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # ダッシュボードの Power BI レポートテンプレート
 
-Power BI レポートテンプレート機能を使用すると、Adobe Experience Platform のデータが入った魅力的なレポートを作成できます。 合理化されたインストールプロセスにより、リアルタイム顧客プロファイル、セグメント化および宛先の標準ウィジェットが自動的にインストールされます。また、インストールの際には Power BI をデータモデルに接続するので、レポートテンプレートを簡単にカスタマイズして拡張できます。これらのレポートは、Platform 上の IMS 組織の認証情報を必要とする受信者なしで、組織全体で共有できます。
+Power BI レポートテンプレート機能を使用すると、Adobe Experience Platform のデータが入った魅力的なレポートを作成できます。 合理化されたインストールプロセスにより、リアルタイム顧客プロファイル、セグメント化、宛先の標準ウィジェットが自動的にインストールされます。 また、インストールの際には Power BI をデータモデルに接続するので、レポートテンプレートを簡単にカスタマイズして拡張できます。これらのレポートは、Platform 上の IMS 組織の認証情報を必要とする受信者なしで、組織全体で共有できます。
 
 このドキュメントでは、Adobe Experience Platform を Power BI アプリケーションと接続し、レポートテンプレートを使用して主要な Platform データインサイトを外部ユーザーと共有する方法について説明します。
 
 ## はじめに
 
-このチュートリアルを続行する前に、Experience Platform の[スキーマ構成](../../xdm/schema/composition.md)、および[和集合スキーマ](../../xdm/schema/composition.md#union)を通じてリアルタイム顧客プロファイルに属性が含まれる方法を確認することをお勧めします。
+このチュートリアルを続行する前に、 [スキーマ構成](../../xdm/schema/composition.md) Experience Platformに含まれ、 [和集合スキーマ](../../xdm/schema/composition.md#union).
 
 Power BI アプリケーション統合をインストールするには、ユーザーはまず次の Platform 権限を取得している必要があります。
 

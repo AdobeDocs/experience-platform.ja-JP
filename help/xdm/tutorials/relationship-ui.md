@@ -6,7 +6,7 @@ description: このドキュメントでは、スキーマユーザーインタ�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 21%
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。の構造内でこれらの関係を定義する [!DNL Experience Data Model] (XDM) スキーマを使用すると、顧客データに関する複雑なインサイトを得ることができます。
 
-スキーマの関係は、和集合スキーマと [!DNL Real-time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、宛先スキーマの ID を参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
+スキーマの関係は、和集合スキーマと [!DNL Real-Time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、宛先スキーマの ID を参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
 
 このドキュメントでは、 [!DNL Experience Platform] ユーザーインターフェイス。 API を使用してスキーマ関係を定義する手順については、[スキーマレジストリ API を使用した関係の定義](relationship-api.md)についてのチュートリアルを参照してください。
 
@@ -54,7 +54,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->関係を確立するには、両方のスキーマでプライマリ ID が定義され、 [!DNL Real-time Customer Profile]. 詳しくは、 [プロファイルで使用するスキーマの有効化](./create-schema-ui.md#profile) スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成のチュートリアルを参照してください。
+>関係を確立するには、両方のスキーマでプライマリ ID が定義され、 [!DNL Real-Time Customer Profile]. 詳しくは、 [プロファイルで使用するスキーマの有効化](./create-schema-ui.md#profile) スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成のチュートリアルを参照してください。
 
 スキーマの関係は、 **ソーススキーマ** は、 **宛先スキーマ**. 次の手順で、「[!DNL Loyalty Members]」がソーススキーマになり、「[!DNL Hotels]「 」が宛先スキーマとして機能します。
 
@@ -62,11 +62,11 @@ ht-degree: 21%
 
 ### [!DNL Loyalty Members] schema
 
-ソーススキーマ「 」[!DNL Loyalty Members]」が [!DNL XDM Individual Profile] クラスであり、は、 [UI でのスキーマの作成](create-schema-ui.md). これには、 `loyalty` その下にある物 `_tenantId` 名前空間。複数のロイヤルティ固有のフィールドが含まれます。 この一つのフィールドは `loyaltyId`は、の下のスキーマのプライマリ ID として機能します。 [!UICONTROL 電子メール] 名前空間。 以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-time Customer Profile].
+ソーススキーマ「 」[!DNL Loyalty Members]」が [!DNL XDM Individual Profile] クラスであり、は、 [UI でのスキーマの作成](create-schema-ui.md). これには、 `loyalty` その下にある物 `_tenantId` 名前空間。複数のロイヤルティ固有のフィールドが含まれます。 この一つのフィールドは `loyaltyId`は、の下のスキーマのプライマリ ID として機能します。 [!UICONTROL 電子メール] 名前空間。 以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### [!DNL Hotels] スキーマ
+### [!DNL Hotels] schema
 
 宛先スキーマ「 」[!DNL Hotels]&quot;はカスタム&quot;[!DNL Hotels]「 」クラスで、ホテルを説明するフィールドを含んでいます。
 
@@ -80,7 +80,7 @@ ht-degree: 21%
 >
 >カスタム ID 名前空間の作成方法については、 [ID サービスドキュメント](../../identity-service/namespaces.md#manage-namespaces).
 
-プライマリ ID が設定されたら、宛先スキーマを有効にする必要があります。 [!DNL Real-time Customer Profile].
+プライマリ ID が設定されたら、宛先スキーマを有効にする必要があります。 [!DNL Real-Time Customer Profile].
 
 ![プロファイルに対して有効にする](../images/tutorials/relationship/hotel-profile.png)
 

@@ -4,7 +4,7 @@ title: 同意および環境設定スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「同意」および「環境設定」スキーマフィールドグループの概要を説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -109,7 +109,7 @@ ht-degree: 0%
 >* チャネルレベルの同意または環境設定が設定されていない場合、または顧客がオプトインした場合、 `idSpecific` は光栄です。
 
 
-各キー `idSpecific` オブジェクトは、Adobe Experience Platform ID サービスで認識される特定の ID 名前空間を表します。 独自のカスタム名前空間を定義して異なる識別子を分類できますが、ID サービスが提供する標準名前空間の 1 つを使用して、リアルタイム顧客プロファイルのストレージサイズを減らすことをお勧めします。 ID 名前空間について詳しくは、 [id 名前空間の概要](../../../identity-service/namespaces.md) （ ID サービスドキュメント）を参照してください。
+各キー `idSpecific` オブジェクトは、Adobe Experience Platform ID サービスで認識される特定の ID 名前空間を表します。 独自のカスタム名前空間を定義して様々な識別子を分類できますが、ID サービスが提供する標準名前空間の 1 つを使用して、リアルタイム顧客プロファイルのストレージサイズを減らすことをお勧めします。 ID 名前空間について詳しくは、 [id 名前空間の概要](../../../identity-service/namespaces.md) （ ID サービスドキュメント）を参照してください。
 
 各 namespace オブジェクトのキーは、顧客が設定した一意の ID 値を表します。 各 ID 値には、 `consents`.
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->に同意データを送信する場合 [!DNL Real-time Customer Profile]の場合、 [!DNL Profile]に基づいて有効化されるスキーマ [!DNL XDM Individual Profile] を含むクラス [!UICONTROL 同意および環境設定] フィールドグループを使用します。 そのスキーマに基づいて作成するデータセットも有効にする必要があります [!DNL Profile]. 以下に関連する具体的な手順については、上記にリンクされているチュートリアルを参照してください。 [!DNL Real-time Customer Profile] スキーマとデータセットの要件。
+>に同意データを送信する場合 [!DNL Real-Time Customer Profile]の場合、 [!DNL Profile]に基づいて有効化されるスキーマ [!DNL XDM Individual Profile] を含むクラス [!UICONTROL 同意および環境設定] フィールドグループを使用します。 そのスキーマに基づいて作成するデータセットも有効にする必要があります [!DNL Profile]. 以下に関連する具体的な手順については、上記にリンクされているチュートリアルを参照してください。 [!DNL Real-Time Customer Profile] スキーマとデータセットの要件。
 >
 >また、顧客プロファイルを正しく更新するために、最新の同意データと環境設定データを含むデータセットを優先するように結合ポリシーが設定されていることを確認する必要があります。 概要については、 [結合ポリシー](../../../rtcdp/profile/merge-policies.md) を参照してください。
 

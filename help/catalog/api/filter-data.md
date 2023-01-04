@@ -5,7 +5,7 @@ title: クエリパラメータを使用したカタログデータのフィル�
 topic-legacy: developer guide
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 85%
@@ -210,7 +210,7 @@ curl -X GET \
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
 * 次のタグ名は、で使用するために予約されています [!DNL Experience Platform]のタグ名として宣言することはできません。
-   * `unifiedProfile`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Identity Service]](../../identity-service/home.md).
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。

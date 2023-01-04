@@ -5,7 +5,7 @@ title: スキーマレジストリ API ガイドの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 36%
@@ -115,7 +115,7 @@ ht-degree: 36%
 
 Adobe Experience Platform は、複数のソリューションやサービスと連携するように設計されており、各ソリューションおよびサービスには固有の技術的課題と制限（特定のテクノロジーが特殊文字を処理する方法など）があります。これらの制限を克服するために、互換モードが開発されました。
 
-最も多い [!DNL Experience Platform] 次のサービス [!DNL Catalog], [!DNL Data Lake]、および [!DNL Real-time Customer Profile] use [!DNL Compatibility Mode] 標準の XDM の代わりに使用します。 この [!DNL Schema Registry] API は [!DNL Compatibility Mode]を使用し、このドキュメントの例はすべて [!DNL Compatibility Mode].
+最も多い [!DNL Experience Platform] 次のサービス [!DNL Catalog], [!DNL Data Lake]、および [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] 標準の XDM の代わりに使用します。 この [!DNL Schema Registry] API は [!DNL Compatibility Mode]を使用し、このドキュメントの例はすべて [!DNL Compatibility Mode].
 
 標準 XDM とでの運用方法との間でマッピングがおこなわれることを知っておくことをお勧めします。 [!DNL Experience Platform]を使用している場合は、 [!DNL Platform] サービス。
 

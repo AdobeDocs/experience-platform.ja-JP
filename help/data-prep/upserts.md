@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、プロファイル・サービスに部分的な行更新を送信
 description: このドキュメントでは、Data Prep を使用して、プロファイル・サービスに部分的な行更新を送信する方法に関する情報を提供します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 6%
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] では、データエンジニアが Experience Data Model(XDM) との間で、データのマッピング、変換、検証をおこなうことができます。
 * [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、個々の顧客とその行動をより良く把握できます。
-* [リアルタイム顧客プロファイル](../profile/home.md)：複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [リアルタイム顧客プロファイル](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 * [ソース](../sources/home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 
 ## でのストリーミングアップサートの使用 [!DNL Data Prep] {#streaming-upserts-in-data-prep}

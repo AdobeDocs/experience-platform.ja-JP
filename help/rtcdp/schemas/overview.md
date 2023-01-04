@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platformのスキーマ
 description: Adobe Real-time Customer Data Platformでの Experience Data Model(XDM) スキーマの役割の概要です。
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%

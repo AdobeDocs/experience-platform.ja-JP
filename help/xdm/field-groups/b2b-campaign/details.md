@@ -2,7 +2,7 @@
 title: XDM ビジネスキャンペーン詳細スキーマフィールドグループ
 description: このドキュメントでは、「XDM ビジネスキャンペーン詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
-source-git-commit: 7805e4c45a48070adefbaba25a57140efc3e86b1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 8%

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API、プレビュー、サンプル
 title: サンプルステータスのプレビュー（プロファイルプレビュー）API エンドポイント
-description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID によるプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
+description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID 別にプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 5%
@@ -22,7 +22,7 @@ Adobe Experience Platformを使用すると、複数のソースから顧客デ�
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## プロファイルフラグメントと結合プロファイル
 

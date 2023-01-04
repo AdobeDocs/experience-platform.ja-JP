@@ -2,7 +2,7 @@
 title: Gen2 へのデータレイクの移行
 description: Adobe Experience Platformのデータレイクを Gen2 に移行することで提供される新機能について説明します。
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%

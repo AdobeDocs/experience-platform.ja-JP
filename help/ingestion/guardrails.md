@@ -3,10 +3,10 @@ keywords: Experience Platform;トラブルシューティング;ガードレー�
 title: データ取り込みのガードレール
 description: このドキュメントでは、Adobe Experience Platform でのデータ取り込みのガードレールに関するガイダンスを説明します。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -40,5 +40,5 @@ ht-degree: 100%
 
 Experience Platform でのデータやガードレールの処理について詳しくは、以下のドキュメントを参照してください。
 
-* [リアルタイム顧客プロファイルデータ用のガードレール](../profile/guardrails.md)
+* [リアルタイム顧客プロファイルデータのガードレール](../profile/guardrails.md)
 * [ID サービスデータ用のガードレール](../identity-service/guardrails.md)

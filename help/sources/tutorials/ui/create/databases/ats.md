@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure テーブルストレージソース接続を作成する方法を説明します。
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 39%
+ht-degree: 41%
 
 ---
 
@@ -24,15 +24,15 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な ATS 接続がある場合は、このドキュメントの残りの部分をスキップして、次のチュートリアルに進んでください。 [データフローの設定](../../dataflow/databases.md).
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 で ATS アカウントにアクセスするには [!DNL Platform]に値を指定する場合は、次の値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | に接続する接続文字列 [!DNL Azure Table Storage] インスタンス。 ATS インスタンスに接続するための接続文字列。 ATS の接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
@@ -54,7 +54,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および ATS 資格情報を入力します。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および ATS 資格情報を入力します。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![接続](../../../../images/tutorials/create/ats/new.png)
 

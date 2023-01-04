@@ -5,7 +5,7 @@ title: プロファイルクエリ言語 (PQL) の概要
 topic-legacy: developer guide
 description: このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 89%
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 # [!DNL Profile Query Language] (PQL) の概要
 
-[!DNL Profile Query Language] (PQL) は [!DNL Experience Data Model] (XDM) 準拠のクエリ言語。 [!DNL Real-time Customer Profile] データ。
+[!DNL Profile Query Language] (PQL) は [!DNL Experience Data Model] (XDM) 準拠のクエリ言語。 [!DNL Real-Time Customer Profile] データ。
 
 このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 

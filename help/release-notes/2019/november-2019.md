@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 63%
@@ -24,7 +24,7 @@ Adobe Experience Platform の新機能：
 既存の機能の更新：
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Real-Time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -104,7 +104,7 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、Adobeサイエンティストは機械学習モデルを構築し運用することで、データやコンテンツから、データやサードパーティのシステムをまたいでシームレスにインサイトを生み出すことができます。 [!DNL Data Science Workspace] は、と緊密に統合されています [!DNL Platform] とは、XDM データの調査と準備、次にモデルの開発と運用を含め、エンドツーエンドのデータサイエンスライフサイクルを強化し、自動的にエンリッチメントをおこなうためのモデルの開発と運用を可能にします。 [!DNL Real-time Customer Profile] と機械学習インサイト
+Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、Adobeサイエンティストは機械学習モデルを構築し運用することで、データやコンテンツから、データやサードパーティのシステムをまたいでシームレスにインサイトを生み出すことができます。 [!DNL Data Science Workspace] は、と緊密に統合されています [!DNL Platform] とは、XDM データの調査と準備、次にモデルの開発と運用を含め、エンドツーエンドのデータサイエンスライフサイクルを強化し、自動的にエンリッチメントをおこなうためのモデルの開発と運用を可能にします。 [!DNL Real-Time Customer Profile] と機械学習インサイト
 
 **新機能**
 
@@ -128,7 +128,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | 通知スキーマ | データ取得プロセス中に送信される通知データを表す新しいスキーマ。 |
 | Adobe AdCloud DSP スキーマ | Adobe Advertising Cloud ディスプレイ広告（DSP）メタデータを表すための 5 つの新しいスキーマ（配置、キャンペーン、パッケージ、広告主、アカウント）が追加されました。 |
 | ExperienceEvent 実装の詳細スキーマフィールドグループ | イベントの収集に使用するソフトウェアに関する情報を保存するための標準フィールドを追加する新しい ExperienceEvent フィールドグループ。 |
-| [!DNL Profile Privacy] フィールドグループ | の一般的なアウト/販売/共有のオプトアウトシグナルを受け入れるフィールドを追加する新しいプロファイルフィールドグループ [!DNL Real-time Customer Profile]. |
+| [!DNL Profile Privacy] フィールドグループ | の一般的なアウト/販売/共有のオプトアウトシグナルを受け入れるフィールドを追加する新しいプロファイルフィールドグループ [!DNL Real-Time Customer Profile]. |
 | `xdm:alternateDisplayInfo` の形式制限 | `xdm:alternateDisplayInfo` の「タイトル」フィールドと「説明」フィールドは、両方とも検証に合格する文字列である必要があります。 |
 | 名前の変更：XDM [!DNL Individual Profile] | 「XDM」の「タイトル」 [!DNL Profile]「 」クラスが「XDM」に更新されました [!DNL Individual Profile]&quot;. クラスの公式 `$id` は変更されていません。 |
 
@@ -138,9 +138,9 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 を使用した XDM の操作について詳しくは、以下を参照してください。 [!DNL Schema Registry] API および [!DNL Schema Editor] ユーザーインターフェイス、 [XDM システムドキュメント](../../xdm/home.md).
 
-## [!DNL Real-time Customer Profile] {#profile}
+## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 | 機能 | 説明 |
 | -----------| ---------- |
@@ -158,11 +158,11 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 * なし。
 
-詳しくは、 [!DNL Real-time Customer Profile]を操作するためのチュートリアルやベストプラクティスを含む [!DNL Profile] データを読んでください [リアルタイム顧客プロファイルの概要](../../profile/home.md).
+詳しくは、 [!DNL Real-Time Customer Profile]を操作するためのチュートリアルやベストプラクティスを含む [!DNL Profile] データを読んでください [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 

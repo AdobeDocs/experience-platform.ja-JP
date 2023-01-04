@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問に対する回答と、Adobe Experience Platformを使用してプロファイルデータを操作する際の一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問に対する回答と、一般的なエラーのトラブルシューティングガイドを提供します。 Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-[!DNL Real-time Customer Profile] では、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。これにより、マーケターは、複数のチャネルにわたって顧客に対して調整され、一貫性のある、関連性の高いエクスペリエンスを提供できます。
+[!DNL Real-Time Customer Profile] では、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。これにより、マーケターは、複数のチャネルにわたって顧客に対して調整され、一貫性のある、関連性の高いエクスペリエンスを提供できます。
 
 ## FAQ
 

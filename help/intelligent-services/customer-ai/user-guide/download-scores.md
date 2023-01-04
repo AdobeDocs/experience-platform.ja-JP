@@ -6,10 +6,10 @@ title: 顧客 AI でのスコアのダウンロード
 topic-legacy: Downloading scores
 description: 顧客 AI を使用すると、Parquet ファイル形式でスコアをダウンロードできます。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 85%
+ht-degree: 81%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 85%
 
 現在は、2 つの方法で顧客 AI スコアをダウンロードできます。
 
-1. 個々のレベルでスコアをダウンロードする場合や、リアルタイム顧客プロファイルが有効になっていない場合は、最初に[データセット ID を探します](#dataset-id)。
+1. 個々のレベルでスコアをダウンロードする場合や、リアルタイム顧客プロファイルが有効になっていない場合は、まず、 [データセット ID の検索](#dataset-id).
 2. プロファイルが有効で、顧客 AI を使用して設定したセグメントをダウンロードする場合は、[こちら](#segment)の手順を参照してください。
 
 ## データセット ID を見つける {#dataset-id}

@@ -6,7 +6,7 @@ title: 顧客 AI でインサイトを見つける
 topic-legacy: Discovering insights
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 31%

@@ -2,7 +2,7 @@
 title: XDM ビジネスマーケティングリストクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスマーケティングリストクラスの概要を説明します。
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 6%

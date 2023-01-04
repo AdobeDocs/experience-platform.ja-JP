@@ -5,7 +5,7 @@ title: Adobe Experience Platform API の概要
 topic-legacy: api guide
 description: Adobe Experience Platformは、相互に密接にリンクされた API サービスを提供します。 このガイドには、使用可能なサービス、CRUD 操作に必要なヘッダー、エラーメッセージ、Postmanコレクション、サンプル API 呼び出しに関する情報が含まれています。
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 30%
@@ -130,7 +130,7 @@ curl -X GET \
 | [[!DNL Policy Service] API ガイド](.././data-governance/api/overview.md) <br> （データガバナンス） | この [!DNL Policy Service] API を使用すると、データ使用ラベルとポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 データセットとフィールドにラベルを適用するには、 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) ガイド |
 | [[!DNL Privacy Service] API ガイド](.././privacy-service/api/getting-started.md) | この [!DNL Privacy Service] API を使用すると、開発者は、法的プライバシー規制に準拠して、Experience Cloudアプリケーションをまたいで自分の個人データにアクセスしたり削除したりする顧客リクエストを作成および管理できます。 |
 | [[!DNL Query Service] API ガイド](.././query-service/api/getting-started.md) | この [!DNL Query Service] 開発者は、API を使用して、標準の SQL を使用してAdobe Experience Platformデータに対してクエリを実行できます。 |
-| [[!DNL Real-time Customer Profile] API ガイド](.././profile/api/overview.md) | リアルタイム顧客プロファイル API を使用すると、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、不要になったまたはエラーで追加されたプロファイルデータの削除など、プロファイルデータの調査と操作ができます。 |
+| [[!DNL Real-Time Customer Profile] API ガイド](.././profile/api/overview.md) | リアルタイム顧客プロファイル API を使用すると、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、不要になったまたはエラーで追加されたプロファイルデータの削除など、プロファイルデータの調査と操作ができます。 |
 | [サンドボックス API ガイド](.././sandboxes/api/getting-started.md) | サンドボックス API を使用すると、開発者は、Adobe Experience Platformで分離された仮想サンドボックス環境をプログラムで管理できます。 |
 | [[!DNL Schema Registry] API ガイド](.././xdm/api/overview.md) <br> (XDM) | この [!DNL Schema Registry] API を使用すると、開発者はAdobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 |
 | [[!DNL Segmentation Service] API ガイド](.././segmentation/api/overview.md) | この [!DNL Segmentation Service] API を使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラムで管理できます。 これには、セグメントの作成や、リアルタイム顧客プロファイルデータからのオーディエンスの生成が含まれます。 |

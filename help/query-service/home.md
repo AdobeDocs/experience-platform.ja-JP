@@ -5,7 +5,7 @@ title: クエリサービスの概要
 topic-legacy: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 87%
@@ -14,7 +14,7 @@ ht-degree: 87%
 
 # [!DNL Query Service] の概要
 
-Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主要な課題は、このデータの意味を理解して、顧客に関するインサイトを得ることです。Adobe Experience Platform [!DNL Query Service] では、標準の SQL を使用して [!DNL Platform] のデータに対してクエリを実行することによってこれを促進します。[!DNL Query Service] を使用すると、[!DNL Data Lake] 内のデータセットを結合して、クエリ結果を新しいデータセットとして取得し、レポートやマシンラーニングで使用したり、[!DNL Real-time Customer Profile] に取り込んだりできます。このドキュメントでは、[!DNL Experience Platform] 内での[!DNL Query Service]の役割を概説します。
+Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主要な課題は、このデータの意味を理解して、顧客に関するインサイトを得ることです。Adobe Experience Platform [!DNL Query Service] では、標準の SQL を使用して [!DNL Platform] のデータに対してクエリを実行することによってこれを促進します。[!DNL Query Service] を使用すると、[!DNL Data Lake] 内のデータセットを結合して、クエリ結果を新しいデータセットとして取得し、レポートやマシンラーニングで使用したり、[!DNL Real-Time Customer Profile] に取り込んだりできます。このドキュメントでは、[!DNL Experience Platform] 内での[!DNL Query Service]の役割を概説します。
 
 [!DNL Query Service] を使用すると、企業はオンラインからオフラインへのカスタマージャーニーを結び付け、オムニチャネル属性を把握することが可能です。次のビデオでは、エクスペリエンスビジネスが [!DNL Query Service] を活用して主要なユースケースに対応する方法や[!DNL Query Service]の仕組みについて説明します。
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのセグメントを評価して、[!DNL Real-time Customer Profile] のデータをより詳細に分析できます。[!DNL Query Service] を使用して、[!DNL Data Lake] 内でこのセグメントデータに対してクエリを実行することにより、この分析を提供できます。セグメント化の詳細については [!DNL Segmentation Service] の概要を、セグメントの分析方法の詳細については [!DNL Profile Query Language]（PQL）ガイドを参照してください。
+Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのセグメントを評価して、[!DNL Real-Time Customer Profile] のデータをより詳細に分析できます。[!DNL Query Service] を使用して、[!DNL Data Lake] 内でこのセグメントデータに対してクエリを実行することにより、この分析を提供できます。セグメント化の詳細については [!DNL Segmentation Service] の概要を、セグメントの分析方法の詳細については [!DNL Profile Query Language]（PQL）ガイドを参照してください。
 
 ## ユースケース
 

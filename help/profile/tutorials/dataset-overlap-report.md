@@ -4,7 +4,7 @@ title: データセット重複レポートの生成
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイル API を使用してデータセットの重複レポートを生成するために必要な手順の概要を説明します。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 このレポートは、データに関するインサイトを提供するだけでなく、特定のデータの有効期間を設定するなど、ライセンスの使用状況を最適化するアクションを実行するのに役立ちます。
 
-このチュートリアルでは、 [!DNL Real-time Customer Profile] API を使用し、組織の結果を解釈します。
+このチュートリアルでは、 [!DNL Real-Time Customer Profile] API を使用し、組織の結果を解釈します。
 
 ## はじめに
 

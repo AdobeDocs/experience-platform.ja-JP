@@ -5,7 +5,7 @@ title: データセットの概要
 topic-legacy: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 93%
@@ -61,10 +61,10 @@ Adobe Experience Platform データガバナンスを使用すると、データ
 
 * [[!DNL Data Access API]](../../data-access/home.md)：データセット内に保存されたファイルの内容にアクセスしてダウンロードできます。
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)：[!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-time Customer Profile] は [!DNL Data Lake] からデータを取り込み、顧客プロファイルを独立したデータストアに保持します。
-* [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Real-time Customer Profile] データからセグメントを作成し、オーディエンスを生成できるようにします。これらのオーディエンスは、[!DNL Data Lake] 内の独自のデータセットに書き出すことができます。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：[!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-Time Customer Profile] は [!DNL Data Lake] からデータを取り込み、顧客プロファイルを独立したデータストアに保持します。
+* [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Real-Time Customer Profile] データからセグメントを作成し、オーディエンスを生成できるようにします。これらのオーディエンスは、[!DNL Data Lake] 内の独自のデータセットに書き出すことができます。
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md)：機械学習と人工知能を使用して、大規模なデータセットからインサイトを引き出します。
-* [Adobe Experience Platform クエリサービス](../../query-service/home.md)：[!DNL Experience Platform] で標準の SQL を使用してデータをクエリし、[!DNL Data Lake] 内のデータセットと結合したり、[!DNL Data Science Workspace]、または [!DNL Real-time Customer Profile] で使用する新しいデータセットとしてクエリ結果を取得したりできます。
+* [Adobe Experience Platform クエリサービス](../../query-service/home.md)：[!DNL Experience Platform] で標準の SQL を使用してデータをクエリし、[!DNL Data Lake] 内のデータセットと結合したり、[!DNL Data Science Workspace]、または [!DNL Real-Time Customer Profile] で使用する新しいデータセットとしてクエリ結果を取得したりできます。
 * [Adobe Experience Platform Destinations Service](../../destinations/home.md)：レポーティングやデータサイエンスアクティビティ用に、[データセット](/help/destinations/ui/export-datasets.md)を希望のクラウドストレージやメールマーケティング宛先に書き出すことができます。
 
 ## 次の手順

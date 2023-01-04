@@ -3,7 +3,7 @@ keywords: セグメント化；セグメント化 rtcdp；リアルタイム顧�
 title: Real-time Customer Data Platformのセグメント化サービス
 description: Adobeリアルタイム顧客データプラットフォームは、Adobe Experience Platformをベースに構築され、多くのExperience Platformサービスと機能を利用しています。 セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 27%

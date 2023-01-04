@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1058'
-ht-degree: 25%
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 25%
 - [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## ストリーミング接続の作成
 
@@ -74,7 +74,7 @@ HTTP API 接続を作成した後、 **[!UICONTROL データを選択]** の手�
 
 Parquet ファイルは XDM に準拠している必要があり、手動でマッピングを設定する必要はありません。また、CSV ファイルではマッピングを明示的に設定する必要がありますが、マッピングするソースデータフィールドを選択できます。 JSON ファイルは、XDM に対する苦情としてマークされている場合、手動設定は必要ありません。 ただし、XDM 準拠としてマークされていない場合は、マッピングを明示的に設定する必要があります。
 
-取り込むインバウンドデータのデータセットを選択します。 既存のデータセットを使用するか、新しく作成することができます。
+取り込むインバウンドデータのデータセットを選択します。既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
 ### 新しいデータセットの作成
 

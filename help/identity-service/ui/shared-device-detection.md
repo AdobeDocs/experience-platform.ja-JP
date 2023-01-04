@@ -5,7 +5,7 @@ description: 共有デバイス検出は、同じデバイスの異なる認証�
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 9%
@@ -92,7 +92,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 An **認証済みエクスペリエンスイベント** は、デバイスにログインした際にユーザーが完了したアクションです。 認証済みのエクスペリエンスイベントの場合、プライマリ ID は **ユーザー ID 名前空間** （ログイン ID）。 An **未認証エクスペリエンスイベント** は、デバイスにログインしていないユーザーが完了したアクションです。 未認証のエクスペリエンスイベントの場合、プライマリ ID は **共有 ID 名前空間** (ECID) を使用します。
 
-詳しくは、[[!DNL Real-time Customer Profile] 概要](../../profile/home.md)を参照してください。
+詳しくは、[[!DNL Real-Time Customer Profile] 概要](../../profile/home.md)を参照してください。
 
 ## 共有デバイス UI
 

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、UI で Marketo Engage ソースコネクタを作成し、B2B データを Adobe Experience Platform に取り込む手順について説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 92%
@@ -30,7 +30,7 @@ ht-degree: 92%
 * [Experience Data Model（XDM）](../../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)：UI でスキーマを作成および編集する方法について説明します。
 * [ID 名前空間](../../../../../identity-service/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
-* [[!DNL Real-time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
 ### 必要な認証情報の収集
@@ -171,7 +171,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Marketo] データを取り込むためのデータフローを正常に作成しました。これで、[!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、[!DNL Marketo] データを取り込むためのデータフローを正常に作成しました。これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
-* [[!DNL Real-time Customer Profile] 概要](/help/profile/home.md)
+* [[!DNL Real-Time Customer Profile] 概要](/help/profile/home.md)
 * [[!DNL Data Science Workspace] 概要](/help/data-science-workspace/home.md)

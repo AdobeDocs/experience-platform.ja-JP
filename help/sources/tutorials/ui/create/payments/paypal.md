@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して PayPal ソース接続を作成する方法を説明します。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 6b6bd67e70267e81c144c37549b0dcba20534eb6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -24,15 +24,15 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な [!DNL PayPal] 接続する場合は、このドキュメントの残りの部分をスキップして、 [データフローの設定](../../dataflow/payments.md)
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL PayPal] アカウントプラットフォームの場合は、次の値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | の URL [!DNL PayPal] インスタンス。 |
 | `clientID` | 次に関連付けられたクライアント ID: [!DNL PayPal] アプリケーション。 |
@@ -56,7 +56,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL PayPal] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL PayPal] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![接続](../../../../images/tutorials/create/paypal/connect.png)
 

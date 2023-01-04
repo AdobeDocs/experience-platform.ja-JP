@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 22%
@@ -24,7 +24,7 @@ ht-degree: 22%
 * [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 >[!IMPORTANT]
 >
@@ -36,7 +36,7 @@ ht-degree: 22%
 
 に接続するには [!DNL SFTP]を使用する場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | に関連付けられている名前または IP アドレス [!DNL SFTP] サーバー。 |
 | `port` | この [!DNL SFTP] 接続先のサーバーポート。 指定しない場合、値はデフォルトでになります。 `22`. |
@@ -66,7 +66,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![Experience PlatformUI の既存の SFTP アカウントの一覧。](../../../../images/tutorials/create/sftp/existing.png)
 
-### 新しいアカウント
+### 新規アカウント
 
 新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;新しい [!DNL SFTP] アカウント
 
@@ -88,7 +88,7 @@ SSH 公開鍵ベースの資格情報を使用するには、「 」を選択し
 
 ![SSH 公開鍵を使用した SFTP ソースの新しいアカウント画面。](../../../../images/tutorials/create/sftp/ssh.png)
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | 秘密鍵コンテンツ | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
 | パスフレーズ | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するパスフレーズまたはパスワードを指定します。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |

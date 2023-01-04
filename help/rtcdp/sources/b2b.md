@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition のソース
 description: Adobe Real-time Customer Data Platform B2B Edition でのソースの役割の概要です。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%

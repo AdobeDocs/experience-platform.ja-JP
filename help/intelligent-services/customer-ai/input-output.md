@@ -6,10 +6,10 @@ title: 顧客 AI での入力と出力
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 17%
+ht-degree: 15%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 17%
 | [フィールドグループ](../../xdm/schema/composition.md) | スキーマ内の 1 つ以上のフィールドを定義するコンポーネント。 フィールドグループは、スキーマの階層でフィールドが表示される方法を強制するので、フィールドグループは、スキーマが含まれるすべてのスキーマで同じ構造を示します。 フィールドグループは、特定のクラス ( `meta:intendedToExtend` 属性。 |
 | [データタイプ](../../xdm/schema/composition.md) | 1 つのスキーマに 1 つ以上のフィールドを提供できるコンポーネント。 ただし、フィールドグループとは異なり、データ型は特定のクラスに制限されません。 そのため、データ型は、潜在的に異なるクラスを持つ複数のスキーマで再利用可能な一般的なデータ構造を記述するためのより柔軟なオプションとなります。このドキュメントで概要を説明しているデータタイプは、CEE とAdobe Analyticsの両方のスキーマでサポートされています。 |
 | チャーン | 購読をキャンセルしたり、更新しなかったりしたアカウントの割合を示す測定。 チャーンレートが高いと、月別の定期的な売上高 (MRR) に悪影響を与える可能性があり、製品やサービスへの不満を示す場合もあります。 |
-| [リアルタイム顧客プロファイル](../../profile/home.md) | リアルタイムの顧客プロファイルは、ターゲットを絞り、パーソナライズされたエクスペリエンス管理のための一元的な顧客プロファイルを提供します。各プロファイルには、すべてのシステムをまたいで集計されたデータと、Experience Platform で使用するイベントのいずれかで発生した個人に関する、実用的なタイムスタンプの付いたアカウントが含まれます。 |
+| [リアルタイム顧客プロファイル](../../profile/home.md) | リアルタイム顧客プロファイルは、ターゲットを絞り込んでパーソナライズされたエクスペリエンス管理のための一元化された消費者プロファイルを提供します。 各プロファイルには、すべてのシステムをまたいで集計されたデータと、Experience Platform で使用するイベントのいずれかで発生した個人に関する、実用的なタイムスタンプの付いたアカウントが含まれます。 |
 
 ## 顧客 AI 入力データ
 
@@ -81,7 +81,7 @@ Platform UI でフィールドグループを表示するには、 **[!UICONTROL
 |  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
 | [!UICONTROL Web 詳細] | webVisit | web.webPageDetails.name |
 |  | webInteraction | web.webInteraction.linkClicks.value |
-| [!UICONTROL アプリの詳細] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+| [!UICONTROL アプリケーションの詳細] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
 |  | applicationCrashes | <li> application.crashes.value </li> <li> application.name </li> |
 |  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
 |  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
@@ -287,7 +287,7 @@ Adobe Audience Managerの特性を使用するには、 [Audience Managerソー�
 >[!NOTE]
 >
 > - 顧客 AI は、更新されたデータのみを使用して、さらなるトレーニングとスコアリングをおこないます。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
-> - 顧客 AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
+> - 顧客 AI では Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
 > - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
 

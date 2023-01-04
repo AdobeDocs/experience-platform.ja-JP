@@ -3,7 +3,7 @@ keywords: データガバナンス rtcdp、rtcdp データガバナンス、リ�
 title: Real-time Customer Data Platformのプライバシー
 description: Adobe Real-time Customer Data Platformを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 6%
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ## オプトアウト機能
 
-[!DNL Real-Time CDP] を使用すると、顧客は自分の個人データをセグメントの使用例に含めないようにオプトアウトできます。 顧客のオプトアウト設定は、 [!DNL Real-time Customer Profile]を適用するには、セグメントの述語でブール論理 (「AND NOT」) を使用してセグメントからオプトアウトしたユーザーを除外します。
+[!DNL Real-Time CDP] を使用すると、顧客は自分の個人データをセグメントの使用例に含めないようにオプトアウトできます。 顧客のオプトアウト設定は、 [!DNL Real-Time Customer Profile]を適用するには、セグメントの述語でブール論理 (「AND NOT」) を使用してセグメントからオプトアウトしたユーザーを除外します。
 
 次のドキュメントを参照してください： [オプトアウト要求の遵守](../../segmentation/consents.md) ( Adobe Experience Platformセグメント化サービスのドキュメント ) を参照してください。
 

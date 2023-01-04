@@ -5,7 +5,7 @@ title: Data Science Workspace の概要
 topic-legacy: overview
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%
@@ -69,7 +69,7 @@ Adobe Experience Platform の [!DNL Data Science Workspace] を使用すると�
 
 データは AI と機械学習の基礎です。
 
-[!DNL Data Science Workspace] は、Data Lake、[!DNL Real-time Customer Profile]、[!DNL Unified Edge] を含む Adobe Experience Platform と完全に統合されています。共通のビッグデータおよび [!DNL Spark] ML や [!DNL TensorFlow] などのディープラーニングライブラリと併せて、Adobe Experience Platform に保存されたすべての組織データを一度に調べることができます。必要なデータが見つからない場合は、XDM 標準スキーマを使用して独自のデータセットを取り込めます。
+[!DNL Data Science Workspace] は、Data Lake、[!DNL Real-Time Customer Profile]、[!DNL Unified Edge] を含む Adobe Experience Platform と完全に統合されています。共通のビッグデータおよび [!DNL Spark] ML や [!DNL TensorFlow] などのディープラーニングライブラリと併せて、Adobe Experience Platform に保存されたすべての組織データを一度に調べることができます。必要なデータが見つからない場合は、XDM 標準スキーマを使用して独自のデータセットを取り込めます。
 
 ### 事前に作成された機械学習レシピ
 

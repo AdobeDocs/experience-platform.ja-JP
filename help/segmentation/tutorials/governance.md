@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API を使用して、オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する方法について説明します。
+description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する手順を説明します。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 51%
@@ -15,15 +15,15 @@ ht-degree: 51%
 
 # API を使用して、オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 
-このチュートリアルでは、のデータ使用コンプライアンスを徹底する手順を説明します。 [!DNL Real-time Customer Profile] API を使用するオーディエンスセグメント
+このチュートリアルでは、のデータ使用コンプライアンスを徹底する手順を説明します。 [!DNL Real-Time Customer Profile] API を使用するオーディエンスセグメント
 
 ## はじめに
 
-このチュートリアルでは、次のコンポーネントに関する十分な知識が必要です。 [!DNL Adobe Experience Platform]:
+このチュートリアルでは、[!DNL Adobe Experience Platform] の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用参照エンティティストアで、管理に使用されます。 [!DNL Experience Data Model (XDM)] 内のデータ [!DNL Platform]. プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
-   - [結合ポリシー](../../profile/api/merge-policies.md):使用するルール [!DNL Real-time Customer Profile] 特定の条件下で統合ビューに結合できるデータを決定する。 結合ポリシーは、データガバナンスの目的で設定できます。
-- [[!DNL Segmentation]](../home.md):方法 [!DNL Real-time Customer Profile] は、プロファイルストアに含まれる大きな個人グループを、類似した特性を共有し、マーケティング戦略と同様に応答する小さな個人グループに分割します。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] は汎用参照エンティティストアで、管理に使用されます。 [!DNL Experience Data Model (XDM)] 内のデータ [!DNL Platform]. プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
+   - [結合ポリシー](../../profile/api/merge-policies.md):使用するルール [!DNL Real-Time Customer Profile] 特定の条件下で統合ビューに結合できるデータを決定する。 結合ポリシーは、データガバナンスの目的で設定できます。
+- [[!DNL Segmentation]](../home.md):方法 [!DNL Real-Time Customer Profile] は、プロファイルストアに含まれる大きな個人グループを、類似した特性を共有し、マーケティング戦略と同様に応答する小さな個人グループに分割します。
 - [データガバナンス](../../data-governance/home.md):データガバナンスは、次のコンポーネントを使用して、データ使用のラベル付けと実施のインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
@@ -34,7 +34,7 @@ ht-degree: 51%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
@@ -52,13 +52,13 @@ ht-degree: 51%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 - Content-Type：application/json
 
 ## セグメント定義の結合ポリシーの検索 {#merge-policy}
 
-このワークフローでは、最初に既知のオーディエンスセグメントにアクセスします。で使用できるセグメント [!DNL Real-time Customer Profile] セグメント定義内に結合ポリシー ID が含まれている。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。
+このワークフローでは、最初に既知のオーディエンスセグメントにアクセスします。で使用できるセグメント [!DNL Real-Time Customer Profile] セグメント定義内に結合ポリシー ID が含まれている。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。
 
 の使用 [!DNL Segmentation] API では、ID でセグメント定義を検索し、関連する結合ポリシーを見つけることができます。
 

@@ -3,22 +3,22 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル API ガイド
 description: リアルタイム顧客プロファイル API を使用すると、開発者は、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプル、不要になった、またはエラーで追加されたプロファイルデータの削除など、プロファイルデータを調査および操作できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 29%
 
 ---
 
-# [!DNL Real-time Customer Profile] API ガイド
+# [!DNL Real-Time Customer Profile] API ガイド
 
-[!DNL Real-time Customer Profile] を使用すると、Adobe Experience Platform内の各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルの異なる顧客データを統合ビューに統合し、顧客とのやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
+[!DNL Real-Time Customer Profile] を使用すると、Adobe Experience Platform内の各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルの異なる顧客データを統合ビューに統合し、顧客とのやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
 
-この [!DNL Real-time Customer Profile] API には複数のエンドポイントが含まれています（以下で概要を説明します）。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
+この [!DNL Real-Time Customer Profile] API には複数のエンドポイントが含まれています（以下で概要を説明します）。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
 
 使用可能なすべてのエンドポイントと CRUD の操作を表示するには、 [リアルタイム顧客プロファイル API リファレンス Swagger](https://www.adobe.com/go/profile-apis-jp).
 
-の操作に関するガイド [!DNL Real-time Customer Profile] データ [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
+の操作に関するガイド [!DNL Real-Time Customer Profile] データ [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## （アルファ版）計算済み属性 {#computed-attributes}
 
@@ -34,19 +34,19 @@ ht-degree: 29%
 
 ## エッジ投影 {#edge-projections}
 
-Adobe Experience Platform を使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上のデータに容易にアクセスして、顧客体験をリアルタイムでパーソナライズできます。この [!DNL Real-time Customer Profile] API は、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。エッジ投影の操作について詳しくは、 [投影設定および宛先エンドポイントガイド](edge-projections.md).
+Adobe Experience Platform を使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上のデータに容易にアクセスして、顧客体験をリアルタイムでパーソナライズできます。この [!DNL Real-Time Customer Profile] API は、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。エッジ投影の操作について詳しくは、 [投影設定および宛先エンドポイントガイド](edge-projections.md).
 
 ## エンティティ（[!DNL Profile] アクセス） {#entities}
 
-Adobe Experience Platformから、 [!DNL Real-time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 API を使用して、「プロファイル」と呼ばれるエンティティにアクセスする方法を学ぶには、 [エンティティエンドポイントガイド](entities.md). を使用してプロファイルにアクセスするには [!DNL Platform] UI( [プロファイルユーザーガイド](../ui/user-guide.md).
+Adobe Experience Platformから、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 API を使用して、「プロファイル」と呼ばれるエンティティにアクセスする方法を学ぶには、 [エンティティエンドポイントガイド](entities.md). を使用してプロファイルにアクセスするには [!DNL Platform] UI( [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## 書き出しジョブ（[!DNL Profile] 書き出し） {#profile-export}
 
-[!DNL Real-time Customer Profile] データは、アクティベーション用のオーディエンスセグメントの書き出しやレポート用のプロファイル属性の書き出しなど、さらに処理するためにデータセットに書き出すことができます。 オーディエンスセグメントの書き出しジョブは、 [!DNL Adobe Experience Platform Segmentation Service] API( [セグメント書き出しジョブエンドポイントガイド](../../profile/api/export-jobs.md) を参照してください。 プロファイル属性の書き出しジョブを作成および管理する手順については、 [書き出しジョブエンドポイントガイド](export-jobs.md).
+[!DNL Real-Time Customer Profile] データは、アクティベーション用のオーディエンスセグメントの書き出しやレポート用のプロファイル属性の書き出しなど、さらに処理するためにデータセットに書き出すことができます。 オーディエンスセグメントの書き出しジョブは、 [!DNL Adobe Experience Platform Segmentation Service] API( [セグメント書き出しジョブエンドポイントガイド](../../profile/api/export-jobs.md) を参照してください。 プロファイル属性の書き出しジョブを作成および管理する手順については、 [書き出しジョブエンドポイントガイド](export-jobs.md).
 
 ## 結合ポリシー {#merge-policies}
 
-複数のソースのデータをに取り込む場合 [!DNL Experience Platform]結合ポリシーは、 [!DNL Platform] は、データの優先順位付け方法と、個々の顧客プロファイルを作成するために組み合わされるデータを決定するためにを使用します。 の使用 [!DNL Real-time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。  を使用して結合ポリシーを使用するには、[結合ポリシー API エンドポイントガイド](merge-policies.md)を参照してください。
+複数のソースのデータをに取り込む場合 [!DNL Experience Platform]結合ポリシーは、 [!DNL Platform] は、データの優先順位付け方法と、個々の顧客プロファイルを作成するために組み合わされるデータを決定するためにを使用します。 の使用 [!DNL Real-Time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。  を使用して結合ポリシーを使用するには、[結合ポリシー API エンドポイントガイド](merge-policies.md)を参照してください。
 
 結合ポリシーと、Platform 内での役割について詳しくは、まず [結合ポリシーの概要](../merge-policies/overview.md).
 
@@ -56,7 +56,7 @@ Adobe Experience Platformから、 [!DNL Real-time Customer Profile] RESTful API
 
 ## プロファイルシステムジョブ {#profile-system-jobs}
 
-に取り込まれるプロファイル対応データ [!DNL Platform] が [!DNL Data Lake] また [!DNL Real-time Customer Profile] データストア。 場合によっては、 [!DNL Profile] ストアを使用して、不要になったデータや誤って追加されたデータを削除します。 そのためには、API を使用して [!DNL Profile System Job](「[!DNL delete request]」（必要に応じて変更、監視または削除可能） を使用して削除リクエストを操作する方法を学ぶには、以下を実行します。 `/system/jobs` エンドポイント [!DNL Real-time Customer Profile] API( [profile system jobs endpoint guide](profile-system-jobs.md).
+に取り込まれるプロファイル対応データ [!DNL Platform] が [!DNL Data Lake] また [!DNL Real-Time Customer Profile] データストア。 場合によっては、 [!DNL Profile] ストアを使用して、不要になったデータや誤って追加されたデータを削除します。 そのためには、API を使用して [!DNL Profile System Job](「[!DNL delete request]」（必要に応じて変更、監視または削除可能） を使用して削除リクエストを操作する方法を学ぶには、以下を実行します。 `/system/jobs` エンドポイント [!DNL Real-Time Customer Profile] API( [profile system jobs endpoint guide](profile-system-jobs.md).
 
 ## プロファイル属性の更新 {#update-profile}
 
@@ -64,4 +64,4 @@ Adobe Experience Platformから、 [!DNL Real-time Customer Profile] RESTful API
 
 ## 次の手順 {#next-steps}
 
-を使用して呼び出しを開始するには、以下を実行します。 [!DNL Real-time Customer Profile] API、 [入門ガイド](getting-started.md) 次に、エンドポイントガイドの 1 つを選択して、特定のの使用方法を学びます [!DNL Profile]関連するエンドポイント。 を操作するには [!DNL Profile] データを [!DNL Experience Platform] UI については、 [リアルタイム顧客プロファイルユーザーガイド](../ui/user-guide.md).
+を使用して呼び出しを開始するには、以下を実行します。 [!DNL Real-Time Customer Profile] API、 [入門ガイド](getting-started.md) 次に、エンドポイントガイドの 1 つを選択して、特定のの使用方法を学びます [!DNL Profile]関連するエンドポイント。 を操作するには [!DNL Profile] データを [!DNL Experience Platform] UI については、 [リアルタイム顧客プロファイルユーザーガイド](../ui/user-guide.md).

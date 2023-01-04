@@ -5,20 +5,20 @@ topic-legacy: guide
 type: Documentation
 description: プロファイル API の概要ガイドでは、リアルタイム顧客プロファイル API エンドポイントを使用してプロファイルデータに対して基本的な CRUD 操作を実行する際に知っておく必要がある主要な概念と基本機能の概要を説明しています。
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 51%
 
 ---
 
-# [!DNL Real-time Customer Profile] API の概要 {#getting-started}
+# [!DNL Real-Time Customer Profile] API の概要 {#getting-started}
 
 リアルタイム顧客プロファイル API エンドポイントを使用すると、計算済み属性の設定、エンティティへのアクセス、プロファイルデータの書き出し、不要なデータセットやバッチの削除など、プロファイルデータに対して基本的な CRUD 操作を実行できます。
 
-開発者ガイドを使用するには、の操作に関わる様々なAdobe Experience Platformサービスに関する十分な知識が必要です [!DNL Profile] データ。 [!DNL Real-time Customer Profile] API の使用を開始する前に、次のサービスのドキュメントを確認してください。
+開発者ガイドを使用するには、の操作に関わる様々なAdobe Experience Platformサービスに関する十分な知識が必要です [!DNL Profile] データ。 [!DNL Real-Time Customer Profile] API の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [[!DNL Real-Time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握できます。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
@@ -28,7 +28,7 @@ ht-degree: 51%
 
 ## API 呼び出し例の読み取り
 
-この [!DNL Real-time Customer Profile] API ドキュメントには、リクエストを適切に書式設定する方法を示す API 呼び出しの例が含まれています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+この [!DNL Real-Time Customer Profile] API ドキュメントには、リクエストを適切に書式設定する方法を示す API 呼び出しの例が含まれています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ## 必須ヘッダー
 
@@ -48,4 +48,4 @@ ht-degree: 51%
 
 ## 次の手順
 
-[!DNL Real-time Customer Profile] API を使用した呼び出しを開始するには、使用可能なエンドポイントガイドの 1 つを選択します。
+[!DNL Real-Time Customer Profile] API を使用した呼び出しを開始するには、使用可能なエンドポイントガイドの 1 つを選択します。

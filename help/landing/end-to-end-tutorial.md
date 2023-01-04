@@ -4,7 +4,7 @@ title: Adobe Experience Platformのエンドツーエンドのサンプルワー
 topic-legacy: getting started
 description: Adobe Experience Platformの基本的なエンドツーエンドのワークフローを大まかに説明します。
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: c9ebccb6584c687a9cc3fe693b9303c9392a1114
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 11%
@@ -23,11 +23,11 @@ RESTful API を基に構築された Platform は、システムの全機能を�
 
 このエンドツーエンドのワークフローは、複数のAdobe Experience Platformサービスを使用します。 以下は、このワークフローで使用されるサービスの概要へのリンクのリストです。
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動を包括的に把握できます。
 - [ソース](../sources/home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
-- [[!DNL Real-time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [データセット](../catalog/datasets/overview.md):のデータ永続化のためのストレージと管理の構成 [!DNL Experience Platform].
 - [宛先](../destinations/home.md):宛先は、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に対して、Platform からデータをシームレスにアクティブ化できる、一般的に使用されるアプリケーションとの事前定義済みの統合です。
 
@@ -35,7 +35,7 @@ RESTful API を基に構築された Platform は、システムの全機能を�
 
 データを Platform に取り込む前に、まず XDM スキーマを作成して、そのデータの構造を記述する必要があります。 次の手順でデータを取り込む際に、受信データをこのスキーマにマッピングします。 XDM スキーマの例を作成する方法については、 [スキーマエディターを使用したスキーマの作成](../xdm/tutorials/create-schema-ui.md).
 
-上記のチュートリアルでは、スキーマの ID フィールドの設定方法を示します。 ID フィールドは、レコードまたは時系列イベントに関連する個人を識別するために使用できるフィールドを表します。 ID フィールドは、Platform で顧客 ID グラフを構築する方法に関する重要なコンポーネントで、最終的には、異なるデータフラグメントをリアルタイム顧客プロファイルが結合して、顧客の全体像を把握する方法に影響します。 Platform で ID グラフを表示する方法について詳しくは、 [id グラフビューアの使用方法](../identity-service/ui/identity-graph-viewer.md).
+上記のチュートリアルでは、スキーマの ID フィールドの設定方法を示します。 ID フィールドは、レコードまたは時系列イベントに関連する個人を識別するために使用できるフィールドを表します。 ID フィールドは、Platform で顧客 ID グラフを構築する方法に関する重要なコンポーネントで、最終的には、異なるデータフラグメントをリアルタイム顧客プロファイルが結合して顧客の全体像を把握する方法に影響します。 Platform で ID グラフを表示する方法について詳しくは、 [id グラフビューアの使用方法](../identity-service/ui/identity-graph-viewer.md).
 
 スキーマに基づくデータから顧客プロファイルを構築できるように、リアルタイム顧客プロファイルでスキーマの使用を有効にする必要があります。 詳しくは、 [プロファイルのスキーマの有効化](../xdm/ui/resources/schemas.md#profile) （スキーマ UI ガイド）を参照してください。
 
@@ -43,7 +43,7 @@ RESTful API を基に構築された Platform は、システムの全機能を�
 
 XDM スキーマを作成したら、データのシステムへの取り込みを開始できます。
 
-Platform に取り込まれたすべてのデータは、取り込み時に個々のデータセットに保存されます。 データセットは、特定の XDM スキーマにマッピングされるデータレコードのコレクションです。 でデータを使用できるようにする前に [!DNL Real-time Customer Profile]に値を指定する場合は、該当するデータセットを具体的に設定する必要があります。 プロファイルのデータセットを有効にする方法について詳しくは、 [データセット UI ガイド](../catalog/datasets/user-guide.md#enable-profile) そして [データセット設定 API のチュートリアル](../profile/tutorials/dataset-configuration.md). データセットを設定したら、データの取り込みを開始できます。
+Platform に取り込まれたすべてのデータは、取り込み時に個々のデータセットに保存されます。 データセットは、特定の XDM スキーマにマッピングされるデータレコードのコレクションです。 でデータを使用できるようにする前に [!DNL Real-Time Customer Profile]に値を指定する場合は、該当するデータセットを具体的に設定する必要があります。 プロファイルのデータセットを有効にする方法について詳しくは、 [データセット UI ガイド](../catalog/datasets/user-guide.md#enable-profile) そして [データセット設定 API のチュートリアル](../profile/tutorials/dataset-configuration.md). データセットを設定したら、データの取り込みを開始できます。
 
 Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。例えば、 [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). 使用可能なソースの完全なリストについては、 [ソースコネクタの概要](../sources/home.md).
 
@@ -93,7 +93,7 @@ Amazon S3 をソースコネクタとして使用している場合は、『 API
 
 ## Platform データアクティビティの監視
 
-Platform では、データフロー（Platform の様々なコンポーネント間でデータを移動するジョブの表現）を使用して、データの処理方法を追跡できます。 これらのデータフローは、異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセットにデータを移動し、で利用するのに役立ちます。 [!DNL Identity Service] および [!DNL Real-time Customer Profile] を追加します。 監視ダッシュボードは、データフローのジャーニーを視覚的に表します。 Platform UI 内でデータフローを監視する方法については、 [ソースのデータフローの監視](../dataflows/ui/monitor-sources.md) および [宛先のデータフローの監視](../dataflows/ui/monitor-destinations.md).
+Platform では、データフロー（Platform の様々なコンポーネント間でデータを移動するジョブの表現）を使用して、データの処理方法を追跡できます。 これらのデータフローは、異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセットにデータを移動し、で利用するのに役立ちます。 [!DNL Identity Service] および [!DNL Real-Time Customer Profile] を追加します。 監視ダッシュボードは、データフローのジャーニーを視覚的に表します。 Platform UI 内でデータフローを監視する方法については、 [ソースのデータフローの監視](../dataflows/ui/monitor-sources.md) および [宛先のデータフローの監視](../dataflows/ui/monitor-destinations.md).
 
 また、 [!DNL Observability Insights]. Platform UI を通じてアラート通知を購読したり、設定済みの Webhook に送信したりできます。 Experience PlatformUI から使用可能なアラートを表示、有効、無効、サブスクライブする方法について詳しくは、 [[!UICONTROL アラート] UI ガイド](../observability/alerts/ui.md). Web フックを通じてアラートを受け取る方法の詳細については、 [Adobe I/Oイベント通知の購読](../observability/alerts/subscribe.md).
 

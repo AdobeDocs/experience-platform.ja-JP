@@ -4,16 +4,16 @@ title: UI でのプロファイル詳細のカスタマイズ
 description: このガイドでは、Adobe Experience Platform UI 内でリアルタイム顧客プロファイルデータを表示する方法をカスタマイズする手順を説明します。
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] 詳細なカスタマイズ {#profile-detail-customization}
+# [!DNL Real-Time Customer Profile] 詳細なカスタマイズ {#profile-detail-customization}
 
-Adobe Experience Platformユーザーインターフェイス内で、を表示し、操作できます [!DNL Real-time Customer Profile] 顧客プロファイルの形式のデータ。 UI に表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、各顧客の単一のビューを形成しています。 これには、基本属性、リンクされた ID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先するフィールドを表示することもできます [!DNL Profile] 属性。 このガイドでは、 [!DNL Profile] データは、Platform UI 内に表示されます。
+Adobe Experience Platformユーザーインターフェイス内で、を表示し、操作できます [!DNL Real-Time Customer Profile] 顧客プロファイルの形式のデータ。 UI に表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、各顧客の単一のビューを形成しています。 これには、基本属性、リンクされた ID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先するフィールドを表示することもできます [!DNL Profile] 属性。 このガイドでは、 [!DNL Profile] データは、Platform UI 内に表示されます。
 
 プロファイル UI の完全なガイドについては、 [プロファイル UI ガイド](user-guide.md).
 

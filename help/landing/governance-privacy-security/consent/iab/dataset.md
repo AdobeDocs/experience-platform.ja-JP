@@ -5,7 +5,7 @@ title: IAB TCF 2.0 同意データを取得するためのデータセットの�
 topic-legacy: privacy events
 description: このドキュメントでは、IAB TCF 2.0 同意データを収集するために必要な 2 つのデータセットを設定する手順を説明します。
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Adobe Experience Platformが IAB に従って顧客の同意データを処理�
 
 特に、TCF 2.0 同意データを取得するには、2 つのデータセットが必要です。
 
-* に基づくデータセット [!DNL XDM Individual Profile] クラス、で使用可能 [!DNL Real-time Customer Profile].
+* に基づくデータセット [!DNL XDM Individual Profile] クラス、で使用可能 [!DNL Real-Time Customer Profile].
 * に基づくデータセット [!DNL XDM ExperienceEvent] クラス。
 
 >[!IMPORTANT]
@@ -35,7 +35,7 @@ Adobe Experience Platformが IAB に従って顧客の同意データを処理�
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):デバイスやシステムをまたいで、異なるデータソースから顧客 ID を結び付けることができます。
    * [ID 名前空間](../../../../identity-service/namespaces.md):顧客 ID データは、ID サービスで認識される特定の ID 名前空間で提供される必要があります。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md):活用 [!DNL Identity Service] を使用すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
+* [リアルタイム顧客プロファイル](../../../../profile/home.md):活用 [!DNL Identity Service] を使用すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
 
 ## TCF 2.0 フィールドグループ {#field-groups}
 
@@ -45,7 +45,7 @@ Adobe Experience Platformが IAB に従って顧客の同意データを処理�
 
 ### プロファイルフィールドグループ {#profile-field-group}
 
-に基づくスキーマの場合 [!DNL XDM Individual Profile]、 [!UICONTROL IAB TCF 2.0 同意の詳細] フィールドグループには、単一のマップタイプフィールドが用意されています。 `identityPrivacyInfo`：顧客 ID を TCF の同意設定にマッピングします。 自動強制を実行するには、このフィールドグループを、リアルタイム顧客プロファイルで有効になるレコードベースのスキーマに含める必要があります。
+に基づくスキーマの場合 [!DNL XDM Individual Profile]、 [!UICONTROL IAB TCF 2.0 同意の詳細] フィールドグループには、単一のマップタイプフィールドが用意されています。 `identityPrivacyInfo`：顧客 ID を TCF の同意設定にマッピングします。 自動実施をおこなうには、このフィールドグループを、リアルタイム顧客プロファイルで有効になっているレコードベースのスキーマに含める必要があります。
 
 詳しくは、 [リファレンスガイド](../../../../xdm/field-groups/profile/iab.md) このフィールドグループの構造と使用例について詳しくは、こちらを参照してください。
 
@@ -97,11 +97,11 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-既に [!DNL Real-time Customer Profile]を選択します。 **[!UICONTROL 保存]** をクリックして変更を確定してから、 [同意スキーマに基づくデータセットの作成](#dataset). 新しいスキーマを作成する場合は、次のサブセクションで説明する手順に従います。
+既に [!DNL Real-Time Customer Profile]を選択します。 **[!UICONTROL 保存]** をクリックして変更を確定してから、 [同意スキーマに基づくデータセットの作成](#dataset). 新しいスキーマを作成する場合は、次のサブセクションで説明する手順に従います。
 
-#### でのスキーマ使用の有効化 [!DNL Real-time Customer Profile]
+#### でのスキーマ使用の有効化 [!DNL Real-Time Customer Profile]
 
-Platform が受け取った同意データを特定の顧客プロファイルに関連付けるには、での使用を同意スキーマで有効にする必要があります。 [!DNL Real-time Customer Profile].
+Platform が受け取った同意データを特定の顧客プロファイルに関連付けるには、での使用を同意スキーマで有効にする必要があります。 [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Platform が受け取った同意データを特定の顧客プロファイル�
 
 ## 同意スキーマに基づくデータセットの作成 {#datasets}
 
-上記の必要なスキーマごとに、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 レコードスキーマに基づくデータセットを有効にする必要があります [!DNL Real-time Customer Profile]（時系列スキーマに基づくデータセット） **次の値を指定しない** は [!DNL Profile]-enabled。
+上記の必要なスキーマごとに、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 レコードスキーマに基づくデータセットを有効にする必要があります [!DNL Real-Time Customer Profile]（時系列スキーマに基づくデータセット） **次の値を指定しない** は [!DNL Profile]-enabled。
 
 最初に、 **[!UICONTROL データセット]** 左側のナビゲーションで、「 **[!UICONTROL データセットを作成]** をクリックします。
 
@@ -176,7 +176,7 @@ Platform が受け取った同意データを特定の顧客プロファイル�
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
-新しく作成されたデータセットの詳細ページが表示されます。 データセットが時系列スキーマに基づいている場合、プロセスは完了です。 データセットがレコードスキーマに基づいている場合、プロセスの最後の手順は、で使用するデータセットを有効にすることです [!DNL Real-time Customer Profile].
+新しく作成されたデータセットの詳細ページが表示されます。 データセットが時系列スキーマに基づいている場合、プロセスは完了です。 データセットがレコードスキーマに基づいている場合、プロセスの最後の手順は、で使用するデータセットを有効にすることです [!DNL Real-Time Customer Profile].
 
 右側のレールで、 **[!UICONTROL プロファイル]** 切り替えて、「 **[!UICONTROL 有効にする]** 確認ポップオーバーで、次のスキーマを有効にします。 [!DNL Profile].
 

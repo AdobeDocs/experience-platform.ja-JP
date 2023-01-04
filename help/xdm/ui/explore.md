@@ -6,7 +6,7 @@ description: Experience Platformユーザーインターフェイスで既存の
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%

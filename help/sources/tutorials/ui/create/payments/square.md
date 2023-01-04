@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；正方
 title: UI での正方形ソース接続の作成
 description: Adobe Experience Platform UI を使用して Square ソース接続を作成する方法を説明します。
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
-source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 51%
+ht-degree: 55%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 51%
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Square] アカウントプラットフォームの場合は、次の値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | ホスト | の URL [!DNL Square] インスタンス。 |
 | クライアント ID | 次に関連付けられたクライアント ID: [!DNL Square] アカウント |
-| クライアント秘密鍵 | に関連付けられたクライアント秘密鍵 [!DNL Square] アカウント |
+| クライアントシークレット | に関連付けられたクライアント秘密鍵 [!DNL Square] アカウント |
 | アクセストークン | アクセストークンは、 [!DNL Square] アカウントを OAuth 2.0 認証で使用します。 アクセストークンは、 [!DNL Square]. |
 | 更新トークン | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは、 [!DNL Square]. |
 
@@ -41,7 +41,7 @@ ht-degree: 51%
 
 ## [!DNL Square] アカウントを接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -65,4 +65,4 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Square] アカウントとプラットフォーム。 次のチュートリアルに進み、 [データフローを作成して支払いデータを Platform に取り込む](../../dataflow/payments.md).
+このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、 [データフローを作成して支払いデータを Platform に取り込む](../../dataflow/payments.md).

@@ -5,22 +5,22 @@ title: セグメント化サービス API の概要
 topic-legacy: developer guide
 description: 次のドキュメントは、セグメント化 API を正しく操作するために知っておく必要がある追加情報を示しています。
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '353'
-ht-degree: 47%
+ht-degree: 56%
 
 ---
 
 # セグメント化サービス API の概要 {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] では、 [!DNL Real-time Customer Profile] データ。
+Adobe Experience Platform [!DNL Segmentation Service] では、 [!DNL Real-Time Customer Profile] データ。
 
 開発者ガイドでは、 [!DNL Experience Platform] 使用に関わるサービス [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-time Customer Profile] データ。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
-- [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Segmentation]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-Time Customer Profile] データ。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 以下の節では、 [!DNL Segmentation] API
@@ -37,13 +37,13 @@ Adobe Experience Platform [!DNL Segmentation Service] では、 [!DNL Real-time 
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。へのすべてのリクエスト [!DNL Platform] API には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->でのサンドボックスの操作について詳しくは、 [!DNL Experience Platform]を参照し、 [サンドボックスの概要ドキュメント](../../sandboxes/home.md).
+>[!DNL Experience Platform] でのサンドボックスの使用について詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ## 次の手順
 

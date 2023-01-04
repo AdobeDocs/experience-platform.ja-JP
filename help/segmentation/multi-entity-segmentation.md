@@ -5,24 +5,24 @@ title: マルチエンティティセグメント化の概要
 topic-legacy: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
 # マルチエンティティセグメント化の概要
 
-マルチエンティティのセグメント化は、Adobe Experience Platformの一部として利用できる高度な機能です [!DNL Segmentation Service]. この機能を使用すると、 [!DNL Real-time Customer Profile] 製品や店舗に関連するデータなど、組織が定義できる追加の「非人」データ（「ディメンションエンティティ」とも呼ばれます）を含むデータ。 マルチエンティティセグメント化は、独自のビジネスニーズに関連するデータに基づいてオーディエンスセグメントを定義する際に柔軟性を提供し、データベースのクエリに関する専門知識を持たずに実行できます。 複数エンティティのセグメント化を使用すると、データストリームにコストの高い変更を加えたり、バックエンドのデータ結合を待たずに、主要なデータをセグメントに追加できます。
+マルチエンティティのセグメント化は、Adobe Experience Platformの一部として利用できる高度な機能です [!DNL Segmentation Service]. この機能を使用すると、 [!DNL Real-Time Customer Profile] 製品や店舗に関連するデータなど、組織が定義できる追加の「非人」データ（「ディメンションエンティティ」とも呼ばれます）を含むデータ。 マルチエンティティセグメント化は、独自のビジネスニーズに関連するデータに基づいてオーディエンスセグメントを定義する際に柔軟性を提供し、データベースのクエリに関する専門知識を持たずに実行できます。 複数エンティティのセグメント化を使用すると、データストリームにコストの高い変更を加えたり、バックエンドのデータ結合を待たずに、主要なデータをセグメントに追加できます。
 
 ## はじめに
 
 マルチエンティティのセグメント化では、セグメント化に関連する様々なAdobe Experience Platformサービスに関する十分な知識が必要です。 このガイドを続行する前に、次のドキュメントを確認してください。
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
    * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデルの作成のベストプラクティス [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):セグメントを [!DNL Real-time Customer Profile] データ。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):セグメントを [!DNL Real-Time Customer Profile] データ。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
    * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成する際のベストプラクティスを学びます。 セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
 

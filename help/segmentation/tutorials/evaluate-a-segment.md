@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 62%
@@ -21,8 +21,8 @@ ht-degree: 62%
 
 このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-time Customer Profile] データ。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-Time Customer Profile] データ。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
@@ -60,7 +60,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 >[!NOTE]
 >
->の結合ポリシーが最大 5 個あるサンドボックスに対して、スケジュールされた評価を有効にすることができます。 [!DNL XDM Individual Profile]. 組織に対する結合ポリシーが 6 つ以上ある場合 [!DNL XDM Individual Profile] 単一のサンドボックス環境内では、スケジュールされた評価を使用できません。
+>[!DNL XDM Individual Profile] の最大 5 つの結合ポリシーを備えたサンドボックスに対して、スケジュールされた評価を有効にできます。組織で、1 つのサンドボックス環境内に [!DNL XDM Individual Profile] の結合ポリシーが 6 つ以上ある場合は、スケジュールされた評価を使用できません。
 
 ### スケジュールの作成
 
@@ -86,9 +86,9 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 ### セグメントジョブの作成
 
-セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 セグメント定義と、その方法を制御する結合ポリシーを参照します [!DNL Real-time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。セグメント定義に現在適合しているオーディエンスを更新するたびに、セグメントジョブを実行する必要があります。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 セグメント定義と、その方法を制御する結合ポリシーを参照します [!DNL Real-Time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。セグメント定義に現在適合しているオーディエンスを更新するたびに、セグメントジョブを実行する必要があります。
 
-新しいセグメントジョブを作成するには、 `/segment/jobs` エンドポイント [!DNL Real-time Customer Profile] API
+新しいセグメントジョブを作成するには、 `/segment/jobs` エンドポイント [!DNL Real-Time Customer Profile] API
 
 このエンドポイントの使用に関する詳細については、 [セグメントジョブエンドポイントガイド](../api/segment-jobs.md#create)
 
@@ -140,7 +140,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 ## プロファイルの検索
 
-アクセスする特定のプロファイルがわかっている場合は、 [!DNL Real-time Customer Profile] API 個々のプロファイルにアクセスするための完全な手順については、[プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md)のチュートリアルで説明しています。
+アクセスする特定のプロファイルがわかっている場合は、 [!DNL Real-Time Customer Profile] API 個々のプロファイルにアクセスするための完全な手順は、 [プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md) チュートリアル
 
 ## セグメントのエクスポート {#export}
 
@@ -157,7 +157,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 オーディエンスをエクスポートする場合は、まずターゲットデータセットを作成する必要があります。データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 
-重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。セグメントをエクスポートするには、データセットが [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`) をクリックします。 和集合スキーマは、システム生成された読み取り専用のスキーマであり、同じクラス（この場合は XDM 個別プロファイルクラス）を共有するスキーマのフィールドを集計します。和集合表示スキーマについて詳しくは、「スキーマレジストリ開発者ガイド」の「[リアルタイム顧客プロファイル](../../xdm/api/getting-started.md)」の節を参照してください。
+重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。セグメントをエクスポートするには、データセットが [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`) をクリックします。 和集合スキーマは、システム生成された読み取り専用のスキーマであり、同じクラス（この場合は XDM 個別プロファイルクラス）を共有するスキーマのフィールドを集計します。和集合表示スキーマについて詳しくは、 [スキーマレジストリ開発者ガイドの「リアルタイム顧客プロファイル」の節](../../xdm/api/getting-started.md).
 
 必要なデータセットを作成する方法は 2 つあります。
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 ### オーディエンスメンバーのプロファイルの生成 {#generate-profiles}
 
-和集合永続化データセットを取得したら、に対してPOSTリクエストを実行することで、オーディエンスメンバーをデータセットに保持する書き出しジョブを作成できます `/export/jobs` エンドポイント [!DNL Real-time Customer Profile] API を使用し、書き出すセグメントのデータセット ID とセグメント情報を指定します。
+和集合永続化データセットを取得したら、に対してPOSTリクエストを実行することで、オーディエンスメンバーをデータセットに保持する書き出しジョブを作成できます `/export/jobs` エンドポイント [!DNL Real-Time Customer Profile] API を使用し、書き出すセグメントのデータセット ID とセグメント情報を指定します。
 
 このエンドポイントの使用に関する詳細については、 [書き出しジョブエンドポイントガイド](../api/export-jobs.md#create)
 

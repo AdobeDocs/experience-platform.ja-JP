@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのカスタマイズの概要
 description: Adobe Experience Platform ダッシュボードに表示されるデータをカスタマイズする方法について詳しく説明します。
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 95%
+ht-degree: 89%
 
 ---
 
@@ -48,7 +48,7 @@ Experience Platform 内のウィジェットライブラリでは、組織で使
 
 #### スキーマの編集 {#edit-schema}
 
-ダッシュボード用の [カスタムウィジェット](#custom-widgets) を作成するには、まずウィジェットの基となるリアルタイム顧客プロファイル属性を特定する必要があります。
+を作成するために、 [カスタムウィジェット](#custom-widgets) ダッシュボードの場合、まずウィジェットの基となるリアルタイム顧客プロファイル属性を特定する必要があります。
 
 組織のスキーマを編集してカスタムダッシュボードウィジェットを作成する手順については、 [ダッシュボードスキーマの編集](edit-schema.md) に関するガイドを参照してください。
 

@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計する関数です。 これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 47%
@@ -26,7 +26,7 @@ ht-degree: 47%
 
 ## 計算済み属性について
 
-Adobe Experience Platformを使用すると、複数のソースからデータを簡単に読み込んで結合し、 [!DNL Real-time Customer Profiles]. 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
+Adobe Experience Platformを使用すると、複数のソースからデータを簡単に読み込んで結合し、 [!DNL Real-Time Customer Profiles]. 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
 
 プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。このデータを一目で理解しやすくするには、 [!DNL Platform] では、これらの参照と計算を自動的に実行する計算済み属性を作成し、該当するフィールドに値を返すことができます。
 

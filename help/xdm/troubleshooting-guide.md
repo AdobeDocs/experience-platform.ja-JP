@@ -5,7 +5,7 @@ title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル (XDM) に関するよくある質問への回答を見つけます。
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 30%
@@ -42,7 +42,7 @@ ht-degree: 30%
 
 ### スキーマでは重大な変更をいつ回避し始めますか？
 
-データセットの作成時に重大な変更点が使用されていないか、で重大な変更点の使用が有効になっていない限り、スキーマに重大な変更を加えることができます [[!DNL Real-time Customer Profile]](../profile/home.md). スキーマがデータセットの作成に使用されたり、での使用が有効になったりしたら、 [!DNL Real-time Customer Profile]、 [スキーマの変化](schema/composition.md#evolution) システムによって厳密に強制されます。
+データセットの作成時に重大な変更点が使用されていないか、で重大な変更点の使用が有効になっていない限り、スキーマに重大な変更を加えることができます [[!DNL Real-Time Customer Profile]](../profile/home.md). スキーマがデータセットの作成に使用されたり、での使用が有効になったりしたら、 [!DNL Real-Time Customer Profile]、 [スキーマの変化](schema/composition.md#evolution) システムによって厳密に強制されます。
 
 ### 長いフィールドタイプの最大サイズはどれくらいですか？
 
@@ -72,24 +72,24 @@ UI で ID を管理する方法について詳しくは、スキーマエディ�
 
 ### スキーマにプライマリ ID は必要ですか？
 
-プライマリID はオプションです。スキーマには 0 または 1 の ID が含まれる場合があるからです。 ただし、でスキーマを使用するには、スキーマにプライマリ ID が必要です [!DNL Real-time Customer Profile]. 詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
+プライマリID はオプションです。スキーマには 0 または 1 の ID が含まれる場合があるからです。 ただし、でスキーマを使用するには、スキーマにプライマリ ID が必要です [!DNL Real-Time Customer Profile]. 詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
 
-### でスキーマの使用を有効にする方法を教えてください。 [!DNL Real-time Customer Profile]?
+### でスキーマの使用を有効にする方法を教えてください。 [!DNL Real-Time Customer Profile]?
 
-スキーマはでの使用に対して有効になっています [[!DNL Real-time Customer Profile]](../profile/home.md) ( `meta:immutableTags` スキーマの属性。 でのスキーマの使用の有効化 [!DNL Profile] は、API またはユーザーインターフェイスを使用して実行できます。
+スキーマはでの使用に対して有効になっています [[!DNL Real-Time Customer Profile]](../profile/home.md) ( `meta:immutableTags` スキーマの属性。 でのスキーマの使用の有効化 [!DNL Profile] は、API またはユーザーインターフェイスを使用して実行できます。
 
 #### の既存のスキーマの有効化 [!DNL Profile] API の使用
 
 PATCH リクエストを作成して、スキーマを更新し、値「union」を含む配列として `meta:immutableTags` 属性を追加します。更新が成功すると、応答に更新されたスキーマが表示され、スキーマに和集合タグが含まれるようになります。
 
-API を使用してでのスキーマの使用を有効にする方法について詳しくは、 [!DNL Real-time Customer Profile]を参照し、 [和集合](./api/unions.md) ドキュメント [!DNL Schema Registry] 開発者ガイド。
+API を使用してでのスキーマの使用を有効にする方法について詳しくは、 [!DNL Real-Time Customer Profile]を参照し、 [和集合](./api/unions.md) ドキュメント [!DNL Schema Registry] 開発者ガイド。
 
 #### の既存のスキーマの有効化 [!DNL Profile] UI の使用
 
 In [!DNL Experience Platform]を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、有効にするスキーマの名前をスキーマのリストから選択します。 次に、エディターの右側の、下の **[!UICONTROL スキーマのプロパティ]**&#x200B;を選択します。 **[!UICONTROL プロファイル]** オンに切り替えるには、をクリックします。
 
 
-詳しくは、スキーマエディターのチュートリアルの[リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile)に関する節を参照してください。
+詳しくは、 [リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile) 内 [!UICONTROL スキーマエディター] チュートリアル
 
 ### 和集合スキーマを直接編集できますか？
 
@@ -230,9 +230,9 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 
 様々な API リクエストの互換性のある Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](./api/overview.md)の対応する節を参照してください。
 
-### [!DNL Real-time Customer Profile] エラー
+### [!DNL Real-Time Customer Profile] エラー
 
-次のエラーメッセージは、 [!DNL Real-time Customer Profile]. 詳しくは、 [和集合](./api/unions.md) セクション [!DNL Schema Registry] API ガイドを参照してください。
+次のエラーメッセージは、 [!DNL Real-Time Customer Profile]. 詳しくは、 [和集合](./api/unions.md) セクション [!DNL Schema Registry] API ガイドを参照してください。
 
 #### 参照 ID 記述子が必要です
 

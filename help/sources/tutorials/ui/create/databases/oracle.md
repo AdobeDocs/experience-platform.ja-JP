@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してOracleDB ソース接続を作成する方法を説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 50%
+ht-degree: 52%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な [!DNL Oracle DB] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
@@ -32,7 +32,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
  で [!DNL Oracle DB] アカウントにアクセスするには、次の値を指定する必要があります。[!DNL Platform]
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 接続に使用する接続文字列 [!DNL Oracle DB]. この [!DNL Oracle DB] 接続文字列のパターン： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 接続の作成に必要な一意の識別子。 の接続仕様 ID [!DNL Oracle DB] が `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
@@ -55,7 +55,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Oracle DB] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Oracle DB] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![接続](../../../../images/tutorials/create/oracle/new.png)
 

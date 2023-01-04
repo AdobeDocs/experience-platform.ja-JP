@@ -5,7 +5,7 @@ title: ストリーミング取得トラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 65%
@@ -46,9 +46,9 @@ Adobe Experience Platform [!DNL Data Ingestion] は、にデータを取り込�
 
 [!DNL Experience Platform] は、セキュリティで保護されたデータ収集をサポートします。 認証済みのデータ収集が有効な場合、クライアントは JSON Web トークン（JWT）と IMS 組織 ID をリクエストヘッダーとして送信する必要があります。に認証済みデータを送信する方法の詳細 [!DNL Platform]詳しくは、 [認証済みデータ収集](../tutorials/create-authenticated-streaming-connection.md).
 
-### データをにストリーミングする際の遅延とは [!DNL Real-time Customer Profile]?
+### データをにストリーミングする際の遅延とは [!DNL Real-Time Customer Profile]?
 
-ストリーミングイベントは、通常、 [!DNL Real-time Customer Profile] 60 秒未満で 実際の待機時間は、データ量、メッセージサイズ、帯域幅の制限によって異なる場合があります。
+ストリーミングイベントは、通常、 [!DNL Real-Time Customer Profile] 60 秒未満で 実際の待機時間は、データ量、メッセージサイズ、帯域幅の制限によって異なる場合があります。
 
 ### 同じ API リクエストに複数のメッセージを含めることはできますか？
 
@@ -94,9 +94,9 @@ Adobe Experience Platform [!DNL Data Ingestion] は、にデータを取り込�
 }
 ```
 
-### 送信したメッセージがに受信されないのはなぜですか？ [!DNL Real-time Customer Profile]?
+### 送信したメッセージがに受信されないのはなぜですか？ [!DNL Real-Time Customer Profile]?
 
-If [!DNL Real-time Customer Profile] メッセージを拒否します。原因としては、id 情報が正しくないことが考えられます。 これは、ID に無効な値または名前空間を指定した結果です。
+If [!DNL Real-Time Customer Profile] メッセージを拒否します。原因としては、id 情報が正しくないことが考えられます。 これは、ID に無効な値または名前空間を指定した結果です。
 
 ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。カスタム名前空間を使用する場合は、内で名前空間が登録されていることを確認します。 [!DNL Identity Service]. デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 

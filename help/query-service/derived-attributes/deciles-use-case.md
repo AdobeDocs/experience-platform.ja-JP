@@ -2,7 +2,7 @@
 title: デシルベースの派生属性の使用例
 description: このガイドでは、クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生属性を作成するために必要な手順を示します。
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -82,7 +82,7 @@ ht-degree: 3%
 
 ### リアルタイム顧客プロファイルのスキーマの有効化
 
-リアルタイム顧客プロファイルで使用するためにExperience Platformに取り込まれるデータは、次に準拠している必要があります。 [プロファイルに対して有効なエクスペリエンスデータモデル (XDM) スキーマ](../../xdm/ui/resources/schemas.md). プロファイルでスキーマを有効にするには、XDM の個別プロファイルまたは XDM ExperienceEvent クラスのいずれかを実装する必要があります。
+リアルタイム顧客プロファイルでExperience Platformに取り込まれるデータは、次に準拠している必要があります。 [プロファイルに対して有効なエクスペリエンスデータモデル (XDM) スキーマ](../../xdm/ui/resources/schemas.md). プロファイルでスキーマを有効にするには、XDM の個別プロファイルまたは XDM ExperienceEvent クラスのいずれかを実装する必要があります。
 
 [スキーマレジストリ API を使用して、リアルタイム顧客プロファイルでスキーマの使用を有効にする](../../xdm/tutorials/create-schema-api.md) または [スキーマエディターのユーザーインターフェイス](../../xdm/tutorials/create-schema-ui.md).  プロファイルのスキーマを有効にする方法に関する詳細な手順は、それぞれのドキュメントで参照できます。
 

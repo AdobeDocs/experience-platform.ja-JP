@@ -5,7 +5,7 @@ title: ストリーミングセグメント化を使用してほぼリアルタ�
 topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 98%
@@ -32,8 +32,8 @@ ht-degree: 98%
 
 この開発者ガイドでは、ストリーミングセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについて、実際に理解している必要があります。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [[!DNL Segmentation]](../home.md)：[!DNL Real-time Customer Profile] データからセグメントやオーディエンスを作成する機能を提供します。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Segmentation]](../home.md)：[!DNL Real-Time Customer Profile] データからセグメントやオーディエンスを作成する機能を提供します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 以下の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。

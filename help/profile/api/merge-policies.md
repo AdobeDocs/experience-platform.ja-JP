@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 70%
@@ -24,7 +24,7 @@ UI を使用して結合ポリシーを操作するには、 [結合ポリシー
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
@@ -194,7 +194,7 @@ XDM の詳細とExperience Platformでのスキーマの操作については、
 
 ## 結合ポリシーへのアクセス {#access-merge-policies}
 
-の使用 [!DNL Real-time Customer Profile] API、 `/config/mergePolicies` エンドポイントを使用すると、検索リクエストを実行して、ID で特定の結合ポリシーを表示したり、IMS 組織内のすべての結合ポリシーを、特定の条件でフィルターして表示したりできます。 また、 `/config/mergePolicies/bulk-get` エンドポイントを使用して、ID で複数の結合ポリシーを取得できます。 これらの各呼び出しを実行する手順について、以下の節で概要を説明します。
+の使用 [!DNL Real-Time Customer Profile] API、 `/config/mergePolicies` エンドポイントを使用すると、検索リクエストを実行して、ID で特定の結合ポリシーを表示したり、IMS 組織内のすべての結合ポリシーを、特定の条件でフィルターして表示したりできます。 また、 `/config/mergePolicies/bulk-get` エンドポイントを使用して、ID で複数の結合ポリシーを取得できます。 これらの各呼び出しを実行する手順について、以下の節で概要を説明します。
 
 ### ID による単一の結合ポリシーへのアクセス
 
@@ -762,6 +762,6 @@ curl -X DELETE \
 
 ## 次の手順
 
-組織の結合ポリシーを作成および設定する方法がわかったので、それらを使用して Platform 内の顧客プロファイルの表示を調整し、 [!DNL Real-time Customer Profile] データ。
+組織の結合ポリシーを作成および設定する方法がわかったので、それらを使用して Platform 内の顧客プロファイルの表示を調整し、 [!DNL Real-Time Customer Profile] データ。
 
 セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。

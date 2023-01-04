@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 11%
 
 次のExperience Platformサービスは、ID データのモデリングに関係します。
 
-* [ID](home.md):Platform に取り込まれる際に、異なるデータソースから ID をブリッジします。
-* [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースのデータを使用して、統合された消費者プロファイルを作成します。
+* [ID](home.md)：Platform に取り込まれる際に、異なるデータソースからの ID を結び付けます。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからのデータを使用して、統合された消費者プロファイルを作成します。
 
 ## データモデルの上限
 

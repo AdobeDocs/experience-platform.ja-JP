@@ -5,14 +5,14 @@ title: Audience Managerソースの概要
 topic-legacy: overview
 description: Adobe Audience Managerソースは、Audience Managerで収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 22%
 
 ---
 
-# Audience Manager源
+# Audience Manager ソース
 
 Adobe Audience Managerソースは、Adobe Audience Managerでアクティベーション用に収集されたファーストパーティデータをAdobe Experience Platformでストリーミングします。 Audience Managerソースは、次の 2 種類のデータを Platform に取り込みます。
 

@@ -2,7 +2,7 @@
 title: offer decisioning
 description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Server API をOffer decisioningと組み合わせて使用する前に、デー�
 
 この [!DNL Offer Decision Engine] はAdobe Experience Platformデータを使用し、 [リアルタイム顧客プロファイル](../profile/home.md)、 [!DNL Offer Library]：適切な顧客およびチャネルに適切なタイミングでオファーを配信する。
 
-詳しくは、 [!DNL Offer Decisioning Engine]、該当する [ドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
+詳しくは、 [!DNL Offer Decisioning Engine]、該当する [ドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja).
 
 後 [データストリームの設定](#configure-your-datastream)に値を入力する場合は、パーソナライゼーションキャンペーンで使用する決定範囲を定義する必要があります。
 

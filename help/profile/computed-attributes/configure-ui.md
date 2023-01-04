@@ -4,7 +4,7 @@ title: 計算済み属性フィールドの設定方法
 topic-legacy: guide
 type: Documentation
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマフィールドグループを使用して既存のスキーマにフィールドを追加するか、スキーマ内で既に定義済みのフィールドを選択することで作成できます。
-source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 42%
@@ -30,7 +30,7 @@ ht-degree: 42%
 
 ## スキーマの表示
 
-次の手順では、Adobe Experience Platformのユーザーインターフェイスを使用して、スキーマを検索し、フィールドグループを追加して、フィールドを定義します。 を使用したい場合は、 [!DNL Schema Registry] API（を参照） [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md) フィールドグループを作成し、スキーマにフィールドグループを追加して、で使用するスキーマを有効にする手順については、 [!DNL Real-time Customer Profile].
+次の手順では、Adobe Experience Platformのユーザーインターフェイスを使用して、スキーマを検索し、フィールドグループを追加して、フィールドを定義します。 を使用したい場合は、 [!DNL Schema Registry] API（を参照） [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md) フィールドグループを作成し、スキーマにフィールドグループを追加して、で使用するスキーマを有効にする手順については、 [!DNL Real-Time Customer Profile].
 
 ユーザインターフェイスで、左側のパネルの「**[!UICONTROL スキーマ]**」をクリックし、「**[!UICONTROL 参照]**」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
 

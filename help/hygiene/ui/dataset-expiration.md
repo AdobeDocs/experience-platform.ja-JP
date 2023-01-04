@@ -2,10 +2,10 @@
 title: データセット有効期限の管理
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 

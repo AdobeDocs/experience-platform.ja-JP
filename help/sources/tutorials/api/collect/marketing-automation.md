@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタと API を使用して Adobe Experience Platform に取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1329'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -656,7 +656,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、マーケティング自動化システムからスケジュールに従ってデータを収集するソースコネクタを作成できます。[!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを利用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、マーケティング自動化システムからスケジュールに従ってデータを収集するソースコネクタを作成できます。[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを利用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

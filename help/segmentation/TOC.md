@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイム顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: Segments
-source-git-commit: 0b14416cc312479c08303bf5cf610c513eaa26cb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 75%
+ht-degree: 69%
 
 ---
 
@@ -66,4 +66,4 @@ ht-degree: 75%
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントでデータ使用のコンプライアンスを徹底する](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)

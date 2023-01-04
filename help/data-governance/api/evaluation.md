@@ -5,7 +5,7 @@ title: ポリシー評価 API エンドポイント
 topic-legacy: developer guide
 description: マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service API を使用して、特定のアクションによってポリシーが違反したかどうかを評価できます。返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 98%
@@ -682,6 +682,6 @@ curl -X POST \
 ]
 ```
 
-## [!DNL Real-time Customer Profile] のポリシー評価
+## [!DNL Real-Time Customer Profile] のポリシー評価
 
-[!DNL Policy Service] APIを使用して、[!DNL Real-time Customer Profile] セグメントの使用に関連するポリシー違反をチェックすることもできます。詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
+[!DNL Policy Service] APIを使用して、[!DNL Real-Time Customer Profile] セグメントの使用に関連するポリシー違反をチェックすることもできます。詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。

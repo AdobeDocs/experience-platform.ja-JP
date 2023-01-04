@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Policy Service API を使用してデータガバナンスポリシーを作成する方法を説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 91%
@@ -423,6 +423,6 @@ curl -X PATCH \
 
 このチュートリアルでは、マーケティングアクションのデータ使用ポリシーを作成しました。[データ使用ポリシーの実施](../enforcement/api-enforcement.md)に関するチュートリアルを続けて、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-[!DNL Policy Service] API で使用可能な様々な操作について詳しくは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。[!DNL Real-time Customer Profile] データに対してポリシーを適用する方法については、オーディエンスセグメント](../../segmentation/tutorials/governance.md)に対するデータ使用コンプライアンスの適用[に関するチュートリアルを参照してください。
+[!DNL Policy Service] API で使用可能な様々な操作について詳しくは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。[!DNL Real-Time Customer Profile] データに対してポリシーを適用する方法については、オーディエンスセグメント](../../segmentation/tutorials/governance.md)に対するデータ使用コンプライアンスの適用[に関するチュートリアルを参照してください。
 
 [!DNL Experience Platform] ユーザーインターフェイスで使用ポリシーを管理する方法については、『[ポリシーユーザガイド](user-guide.md)』を参照してください。

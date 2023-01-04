@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platformでは、Parquet ファイルの形式のバッチファイル、または既知の Experience Data Model(XDM) スキーマに準拠するデータを、簡単にバッチファイルとして読み込むことができます。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%
@@ -75,23 +75,23 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 「データセット」ワークスペースの右側には、 **[!UICONTROL 情報]** タブには、新しいデータセットに関連する情報（データセット ID、名前、説明、テーブル名、スキーマ、ストリーミング、ソースなど）が含まれます。 また、「情報」タブには、データセットの作成日時と最終変更日に関する情報も含まれます。
 
-また、「情報」タブには、  **[!UICONTROL プロファイル]** でデータセットを使用するための切り替え [!DNL Real-time Customer Profile]. この切り替えを使用し、 [!DNL Real-time Customer Profile]を参照してください。詳しくは、次の節を参照してください。
+また、「情報」タブには、  **[!UICONTROL プロファイル]** でデータセットを使用するための切り替え [!DNL Real-Time Customer Profile]. この切り替えを使用し、 [!DNL Real-Time Customer Profile]を参照してください。詳しくは、次の節を参照してください。
 
 ![データセットアクティビティ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## のデータセットを有効にする [!DNL Real-time Customer Profile]
+## のデータセットを有効にする [!DNL Real-Time Customer Profile]
 
 データセットは、にデータを取り込むために使用されます [!DNL Experience Platform]に含まれるデータは、最終的には個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 この情報を組み合わせたものを、 [!DNL Real-Time Customer Profile]. 次のために [!DNL Platform] どの情報を含めるべきかを知る [!DNL Real-Time Profile]を使用すると、データセットを **[!UICONTROL プロファイル]** 切り替え
 
-デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれるすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
+デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれたすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
 
-詳しくは、以下を参照してください。 [!DNL Real-time Customer Profile] ID の使用については、 [ID サービス](../../identity-service/home.md) ドキュメント。
+詳しくは、以下を参照してください。 [!DNL Real-Time Customer Profile] ID の使用については、 [ID サービス](../../identity-service/home.md) ドキュメント。
 
-のデータセットを有効にするには [!DNL Real-time Customer Profile]、 **[!UICONTROL プロファイル]** 切り替え **[!UICONTROL 情報]** タブをクリックします。
+のデータセットを有効にするには [!DNL Real-Time Customer Profile]、 **[!UICONTROL プロファイル]** 切り替え **[!UICONTROL 情報]** タブをクリックします。
 
 ![プロファイル切り替え](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-のデータセットを有効にするかどうかを確認するダイアログが表示されます [!DNL Real-time Customer Profile].
+のデータセットを有効にするかどうかを確認するダイアログが表示されます [!DNL Real-Time Customer Profile].
 
 ![プロファイル有効ダイアログ](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

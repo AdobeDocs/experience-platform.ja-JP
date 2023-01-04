@@ -5,7 +5,7 @@ title: セグメントでの同意の遵守
 topic-legacy: overview
 description: セグメント操作での個人データの収集および共有に関する顧客の同意設定を遵守する方法を説明します。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%
@@ -23,8 +23,8 @@ ht-degree: 2%
 顧客の同意値を遵守するには、 [!DNL Adobe Experience Platform] 関連するサービス。 このチュートリアルを開始する前に、次のサービスに関する詳細を必ず理解しておく必要があります。
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
-* [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-time Customer Profile] データ。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-Time Customer Profile] データ。
 
 ## 同意スキーマフィールド
 

@@ -3,20 +3,20 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
 type: Documentation
-description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
+description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1563'
-ht-degree: 31%
+ht-degree: 30%
 
 ---
 
-# [!DNL Real-time Customer Profile] でのプライバシーリクエストの処理
+# [!DNL Real-Time Customer Profile] でのプライバシーリクエストの処理
 
 Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護規則（GDPR）や [!DNL California Consumer Privacy Act]（CCPA）などのプライバシー規制に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。
 
-このドキュメントでは、Adobe Experience Platform における [!DNL Real-time Customer Profile] のプライバシーリクエスト処理に関する基本的な概念について説明します。
+このドキュメントでは、Adobe Experience Platform における [!DNL Real-Time Customer Profile] のプライバシーリクエスト処理に関する基本的な概念について説明します。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護�
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
 * [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験データの断片化によって発生する根本的な課題を解決します。
-* [[!DNL Real-time Customer Profile]](home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## ID 名前空間について {#namespaces}
 
@@ -42,7 +42,7 @@ ID サービスは、グローバルに定義された（標準）ID および�
 
 ## リクエストの送信 {#submit}
 
-以下のセクションでは、[!DNL Privacy Service] の API または UI を使用して [!DNL Real-time Customer Profile] に対しプライバシーリクエストを行う方法について概説しています。これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) リクエストペイロードで送信されたユーザー id データを適切に書式設定する方法など、プライバシージョブを送信する手順に関する完全なドキュメントです。
+以下のセクションでは、[!DNL Privacy Service] の API または UI を使用して [!DNL Real-Time Customer Profile] に対しプライバシーリクエストを行う方法について概説しています。これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) リクエストペイロードで送信されたユーザー id データを適切に書式設定する方法など、プライバシージョブを送信する手順に関する完全なドキュメントです。
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### UI の使用
 
-UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL AEP データレイク]** および/または **[!UICONTROL プロファイル]** under **[!UICONTROL 製品]** データレイクに保存されたデータのジョブを処理するため、または [!DNL Real-time Customer Profile]、それぞれ。
+UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL AEP データレイク]** および/または **[!UICONTROL プロファイル]** under **[!UICONTROL 製品]** データレイクに保存されたデータのジョブを処理するため、または [!DNL Real-Time Customer Profile]、それぞれ。
 
 ![UI で作成されるアクセスジョブリクエストで、「製品」で「プロファイル」オプションが選択されているもの](./images/privacy/product-value.png)
 

@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform B2B Edition のデフォルトガード�
 type: Documentation
 description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、Adobe Real-time Customer Data Platform B2B Edition を使用して最適なシステムパフォーマンスを得るためにデータをモデル化する際に役立つ、デフォルトの使用方法とレート制限について説明します。
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1602'
 ht-degree: 66%
@@ -39,7 +39,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 ## データモデルの上限
 
-次のガードレールは、リアルタイム顧客プロファイルデータをモデル化する際の推奨の上限を提供します。プライマリエンティティとディメンションエンティティについて詳しくは、付録の[エンティティタイプ](#entity-types) に関する節を参照してください。
+リアルタイム顧客プロファイルデータをモデリングする際に推奨される制限は、次のガードレールにあります。 プライマリエンティティとディメンションエンティティについて詳しくは、付録の[エンティティタイプ](#entity-types) に関する節を参照してください。
 
 ### プライマリエンティティのガードレール
 
@@ -119,9 +119,9 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 この [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。
 
-* **プライマリエンティティ：**&#x200B;プライマリエンティティ、別称プロファイルエンティティは、データを結合して個人の「単一の信用できるソース」としたものです。 この統合データは、「結合ビュー」と呼ばれるものを使用して表されます。統合ビューは、同じクラスを実装するすべてのスキーマのフィールドを、1 つの結合スキーマに集約します。[!DNL Real-time Customer Profile] の結合スキーマは、すべてのプロファイル属性と行動イベントのコンテナとして機能する、非正規化されたハイブリッドデータモデルです。
+* **プライマリエンティティ：**&#x200B;プライマリエンティティ、別称プロファイルエンティティは、データを結合して個人の「単一の信用できるソース」としたものです。 この統合データは、「結合ビュー」と呼ばれるものを使用して表されます。統合ビューは、同じクラスを実装するすべてのスキーマのフィールドを、1 つの結合スキーマに集約します。[!DNL Real-Time Customer Profile] の結合スキーマは、すべてのプロファイル属性と行動イベントのコンテナとして機能する、非正規化されたハイブリッドデータモデルです。
 
-   時間に依存しない属性（「レコードデータ」とも呼ばれる）は、[!DNL XDM Individual Profile]、時系列データ（「イベントデータ」とも呼ばれる）は [!DNL XDM ExperienceEvent] を使用してモデル化されます。レコードと時系列データが Adobe Experience Platform に取り込まれると、[!DNL Real-time Customer Profile] がトリガーされ、使用可能なデータの取り込みが開始されます。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは正確になります。
+   時間に依存しない属性（「レコードデータ」とも呼ばれる）は、[!DNL XDM Individual Profile]、時系列データ（「イベントデータ」とも呼ばれる）は [!DNL XDM ExperienceEvent] を使用してモデル化されます。レコードと時系列データが Adobe Experience Platform に取り込まれると、[!DNL Real-Time Customer Profile] がトリガーされ、使用可能なデータの取り込みが開始されます。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは正確になります。
 
    ![](../profile/images/guardrails/profile-entity.png)
 

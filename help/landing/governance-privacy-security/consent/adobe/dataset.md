@@ -5,7 +5,7 @@ title: 同意データと環境設定データを取り込むためのデータ�
 topic-legacy: getting started
 description: Adobe Experience Platformで同意データと環境設定データを取り込むための Experience Data Model(XDM) スキーマとデータセットの設定方法について説明します。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 同意データと基本設定データを取り込むためのデータセットの設定
 
-Adobe Experience Platformが顧客の同意/環境設定データを処理するには、そのデータを、同意および他の権限に関連するフィールドを含むスキーマのデータセットに送信する必要があります。 特に、このデータセットは、 [!DNL XDM Individual Profile] クラスに含まれ、での使用が有効になっています。 [!DNL Real-time Customer Profile].
+Adobe Experience Platformが顧客の同意/環境設定データを処理するには、そのデータを、同意および他の権限に関連するフィールドを含むスキーマのデータセットに送信する必要があります。 特に、このデータセットは、 [!DNL XDM Individual Profile] クラスに含まれ、での使用が有効になっています。 [!DNL Real-Time Customer Profile].
 
 このドキュメントでは、Experience Platformで同意データを処理するようにデータセットを設定する手順を説明します。 Platform で同意/環境設定データを処理するための完全なワークフローの概要については、 [同意処理の概要](./overview.md).
 
@@ -133,7 +133,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ## 同意スキーマに基づくデータセットの作成 {#dataset}
 
-同意フィールドを含むスキーマを作成したら、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 このデータセットを有効にする必要があります [!DNL Real-time Customer Profile].
+同意フィールドを含むスキーマを作成したら、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 このデータセットを有効にする必要があります [!DNL Real-Time Customer Profile].
 
 最初に、 **[!UICONTROL データセット]** 左側のナビゲーションで、「 **[!UICONTROL データセットを作成]** をクリックします。
 
@@ -151,7 +151,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-新しく作成されたデータセットの詳細ページが表示されます。 データセットが時系列スキーマに基づいている場合、プロセスは完了です。 データセットがレコードスキーマに基づいている場合、プロセスの最後の手順は、で使用するデータセットを有効にすることです [!DNL Real-time Customer Profile].
+新しく作成されたデータセットの詳細ページが表示されます。 データセットが時系列スキーマに基づいている場合、プロセスは完了です。 データセットがレコードスキーマに基づいている場合、プロセスの最後の手順は、で使用するデータセットを有効にすることです [!DNL Real-Time Customer Profile].
 
 右側のレールで、 **[!UICONTROL プロファイル]** 切り替え
 

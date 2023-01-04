@@ -5,7 +5,7 @@ title: 指標 API エンドポイント
 topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 27%
@@ -230,9 +230,9 @@ curl -X POST \
 
 {style=&quot;table-layout:auto&quot;}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-次の表に、 [!DNL Real-time Customer Profile].
+次の表に、 [!DNL Real-Time Customer Profile].
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |

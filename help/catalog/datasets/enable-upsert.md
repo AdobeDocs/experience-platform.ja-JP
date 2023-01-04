@@ -2,18 +2,18 @@
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;データセットの有効化
 title: API を使用したデータセットのプロファイル更新の有効化
 type: Tutorial
-description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能によってデータセットを有効にする方法について説明します。
+description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1050'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # API を使用したデータセットのプロファイル更新の有効化
 
-このチュートリアルでは、リアルタイム顧客プロファイルデータを更新するために、「アップサート」機能によってデータセットを有効にするプロセスについて説明します。 これには、新しいデータセットを作成し、既存のデータセットを設定する手順が含まれます。
+このチュートリアルでは、リアルタイム顧客プロファイルデータを更新するために、「アップサート」機能を持つデータセットを有効にするプロセスについて説明します。 これには、新しいデータセットを作成し、既存のデータセットを設定する手順が含まれます。
 
 >[!NOTE]
 >
@@ -21,10 +21,10 @@ ht-degree: 100%
 
 ## はじめに
 
-このチュートリアルでは、プロファイル対応データセットに関連する様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、[!DNL Platform] サービスについての関連ドキュメントを確認してください。
+このチュートリアルでは、プロファイル対応データセットに関連する様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、これらの関連 [!DNL Platform] サービスに関するドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [[!DNL Catalog Service]](../../catalog/home.md)：データセットを [!DNL Real-time Customer Profile] および [!DNL Identity Service] 用に作成し、設定できる RESTful API。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Catalog Service]](../../catalog/home.md)：データセットを [!DNL Real-Time Customer Profile] および [!DNL Identity Service] 用に作成し、設定できる RESTful API。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 - [バッチ取り込み](../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用して、データをバッチファイルとして Experience Platform に取り込むことができます。
 
@@ -42,7 +42,7 @@ ht-degree: 100%
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-ペイロード（POST、PUT、PATCH）を含んだすべてのリクエストには、追加の `Content-Type` ヘッダーが必要です。必要に応じて、このヘッダーの正しい値がサンプルリクエストに表示されます。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、追加の `Content-Type` ヘッダーが必要です。必要に応じて、このヘッダーの正しい値がサンプルリクエストに表示されます。
 
 [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定する `x-sandbox-name` ヘッダーが必要です。[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
@@ -119,7 +119,7 @@ curl -X POST \
 
 ### データセットがプロファイルに対して有効かどうかを確認
 
-[!DNL Catalog] API を使用すると、既存のデータセットを調べて、そのデータセットが [!DNL Real-time Customer Profile] での使用に対して有効になっているかどうかを判断できます。 次の呼び出しは、データセットの詳細を ID によって取得します。
+[!DNL Catalog] API を使用すると、既存のデータセットを調べて、そのデータセットが [!DNL Real-Time Customer Profile] での使用に対して有効になっているかどうかを判断できます。 次の呼び出しは、データセットの詳細を ID によって取得します。
 
 **API 形式**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-`tags` プロパティの下で、`unifiedProfile` の値が `enabled:true` となっていることがわかります。したがって、[!DNL Real-time Customer Profile] はこのデータセットに対して有効になっています。
+`tags` プロパティの下で、`unifiedProfile` の値が `enabled:true` となっていることがわかります。したがって、[!DNL Real-Time Customer Profile] はこのデータセットに対して有効になっています。
 
 ### プロファイルのデータセットを無効にする
 

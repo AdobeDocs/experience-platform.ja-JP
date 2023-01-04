@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 98%
+ht-degree: 90%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -55,7 +55,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
 
 **新機能**
 
@@ -64,7 +64,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | プロファイルストアからのデータセットの削除 | Experience Platform Data Lake からデータセットを削除すると、データセットはプロファイルストアからも自動的に削除されます。プロファイルストアからデータセットを明示的に削除する削除リクエストをおこなう場合に、Profile System jobs API エンドポイントを使用する必要がなくなりました。詳しくは、 [プロファイルシステムジョブ API エンドポイントのガイド](../../profile/api/profile-system-jobs.md) を参照してください。 |
 | 特定のセグメントに対する ID 名前空間の推定数 | プロファイルの推定数について、プレビュー API が次の情報をレポートするようになりました。<ul><li>特定の名前空間のセグメントにおける推定プロファイルの合計数。</li><li>特定の名前空間のプロファイル和集合スキーマにおける推定プロファイルの合計数。</li></ul>詳しくは、 [プロファイルプレビュー API エンドポイントのガイド](../../profile/api/preview-sample-status.md) を参照してください。 |
 
-[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+リアルタイム顧客プロファイルの詳細については、の操作に関するチュートリアルやベストプラクティスを参照してください。 [!DNL Profile] データを読み込む前に、 [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

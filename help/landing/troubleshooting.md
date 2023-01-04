@@ -7,7 +7,7 @@ landing-page-description: よくある質問への回答、および Experience 
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 64%
@@ -38,11 +38,11 @@ IMS 組織は、顧客のアドビ代表です。ライセンスを取得した�
 
 ## API キーはどこで入手できますか？  {#where-can-i-find-my-api-key}
 
-API キーは、すべての API リクエストのヘッダーとして必要です。これは、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。への認証方法の詳しい手順 [!DNL Platform]を参照し、 [認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en).
+API キーは、すべての API リクエストのヘッダーとして必要です。これは、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。への認証方法の詳しい手順 [!DNL Platform]を参照し、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja).
 
 ## アクセストークンはどのように入手できますか？  {#how-do-i-get-an-access-token}
 
-アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。IMS 組織の統合にアクセスできる場合は、`curl` コマンドを使用して生成できます。アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。
+アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。IMS 組織の統合にアクセスできる場合は、`curl` コマンドを使用して生成できます。アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ## クエリーパラメーターの使用方法  {#how-do-i-user-query-parameters}
 
@@ -96,7 +96,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 ## リクエストヘッダーエラー {#request-header-errors}
 
-のすべての API 呼び出し [!DNL Platform] には特定のリクエストヘッダーが必要です。 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
+のすべての API 呼び出し [!DNL Platform] には特定のリクエストヘッダーが必要です。 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
@@ -118,7 +118,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 }
 ```
 
-このエラーメッセージは、`Authorization` ヘッダーに指定されたアクセストークンが無効な場合に表示されます。トークンが正しく入力されていることを確認するか、Adobe I/O コンソールで[新しいトークンを生成](https://www.adobe.com/go/platform-api-authentication-en)します。
+このエラーメッセージは、`Authorization` ヘッダーに指定されたアクセストークンが無効な場合に表示されます。トークンが正しく入力されていることを確認するか、Adobe I/O コンソールで[新しいトークンを生成](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)します。
 
 ### API key is required {#api-key-is-required}
 
@@ -218,5 +218,5 @@ UI と API のどちらを使用しているかによって、次の必要シス
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ とトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] および [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
 | サンドボックス | [サンドボックス API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |

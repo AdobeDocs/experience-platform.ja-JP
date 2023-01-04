@@ -5,7 +5,7 @@ title: 和集合 API エンドポイント
 description: Schema Registry API の/unions エンドポイントを使用すると、エクスペリエンスアプリケーションで XDM 和集合スキーマをプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 47%
@@ -14,7 +14,7 @@ ht-degree: 47%
 
 # 和集合エンドポイント
 
-和集合（または和集合表示）は、同じクラス ([!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile]) とが有効で、 [[!DNL Real-time Customer Profile]](../../profile/home.md).
+和集合（または和集合表示）は、同じクラス ([!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile]) とが有効で、 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、「[Basics of schema composition](../schema/composition.md#union)」の和集合に関する節を参照してください。
 

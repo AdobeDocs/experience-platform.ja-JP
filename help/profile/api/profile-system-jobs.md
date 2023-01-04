@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformでは、不要になった、またはエラーで追加されたリアルタイム顧客プロファイルデータを削除するために、プロファイルストアからデータセットまたはバッチを削除できます。 これには、プロファイル API を使用してプロファイルシステムジョブを作成するか、削除リクエストを作成する必要があります。
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 67%
@@ -14,7 +14,7 @@ ht-degree: 67%
 
 # プロファイルシステムジョブエンドポイント（削除リクエスト）
 
-Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。に取り込まれたデータ [!DNL Platform] が [!DNL Data Lake]に保存され、データセットがプロファイルで有効になっている場合、そのデータは [!DNL Real-time Customer Profile] データストアにも存在します。 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、 [!DNL Real-time Customer Profile] を作成する API [!DNL Profile] システムジョブ `delete request`（必要に応じて変更、監視または削除も可能）
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。に取り込まれたデータ [!DNL Platform] が [!DNL Data Lake]に保存され、データセットがプロファイルで有効になっている場合、そのデータは [!DNL Real-Time Customer Profile] データストアにも存在します。 不要になったデータや誤って追加されたデータを削除するために、プロファイルストアからデータセットやバッチを削除する必要が生じる場合があります。これには、 [!DNL Real-Time Customer Profile] を作成する API [!DNL Profile] システムジョブ `delete request`（必要に応じて変更、監視または削除も可能）
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 削除リクエストの表示
 

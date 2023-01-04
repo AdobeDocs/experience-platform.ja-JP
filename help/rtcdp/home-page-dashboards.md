@@ -3,7 +3,7 @@ keywords: 指標の概要；rtcdp 指標の概要
 title: Real-time Customer Data Platformのホームページとダッシュボード
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 63%
@@ -47,7 +47,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### プロファイル
 
-この **[!UICONTROL プロファイル]** 数は、 [!DNL Real-time Customer Profile]. プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
+この **[!UICONTROL プロファイル]** 数は、 [!DNL Real-Time Customer Profile]. プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
 このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 

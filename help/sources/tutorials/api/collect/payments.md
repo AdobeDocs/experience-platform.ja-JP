@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、支払い申請からデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 95%
@@ -701,7 +701,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、スケジュールに基づいて支払い申請からデータを収集するソースコネクタを作成しました。これで、[!DNL Real-time Customer Profile] および [!DNL Data Science Workspace] などのダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、スケジュールに基づいて支払い申請からデータを収集するソースコネクタを作成しました。これで、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] などのダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

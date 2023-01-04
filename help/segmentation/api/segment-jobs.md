@@ -5,7 +5,7 @@ title: セグメントジョブ API エンドポイント
 topic-legacy: developer guide
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 24%
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 これは、 [セグメント定義](./segment-definitions.md)、および [結合ポリシー](../../profile/api/merge-policies.md) 制御方法 [!DNL Real-time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
+セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 これは、 [セグメント定義](./segment-definitions.md)、および [結合ポリシー](../../profile/api/merge-policies.md) 制御方法 [!DNL Real-Time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
 このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 

@@ -6,10 +6,10 @@ title: 予測スコアを使用した顧客セグメントの作成
 topic-legacy: Create a segment
 description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 83%
 
 >[!IMPORTANT]
 >
-> この方法を利用するには、データセットに対してリアルタイムの顧客プロファイルを有効にする必要があります。
+>この方法を利用するには、データセットに対してリアルタイム顧客プロファイルを有効にする必要があります。
 
 プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメント作成]**」をクリックします。
 

@@ -5,7 +5,7 @@ title: データ取得通知
 topic-legacy: overview
 description: 取り込みプロセスの監視に役立つように、Adobe Experience Platformでは、プロセスの各手順で公開された一連のイベントをサブスクライブし、取り込んだデータのステータスと考えられるエラーを通知できます。
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 28%
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。取り込む必要のあるデータファイルを特定したら、 [!DNL Platform]を指定した場合、取り込みプロセスが開始され、データが正常に取り込まれるか失敗するまで各手順が連続して実行されます。 取得処理は、[Adobe データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
 
-に読み込まれたデータ [!DNL Platform] 目的の場所に到達するには、複数の手順を実行する必要があります。 [!DNL Data Lake] または [!DNL Real-time Customer Profile] データストア。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
+に読み込まれたデータ [!DNL Platform] 目的の場所に到達するには、複数の手順を実行する必要があります。 [!DNL Data Lake] または [!DNL Real-Time Customer Profile] データストア。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
 
 取り込みプロセスの監視に役立つように、 [!DNL Experience Platform] を使用すると、プロセスの各手順で公開された一連のイベントを購読し、取り込んだデータのステータスと考えられるエラーを通知できます。
 
@@ -86,8 +86,8 @@ Webhook の登録が完了し、新しいデータが取り込まれたら、イ
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | 成功 | バッチが [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | バッチを内のデータセットに取り込めませんでした [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | 成功 | バッチが [!DNL Profile] データストア。 |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | 失敗 | バッチをに取り込めませんでした [!DNL Profile] データストア。 |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | 成功 | バッチが [!DNL Profile] データストア。 |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | 失敗 | バッチをに取り込めませんでした [!DNL Profile] データストア。 |
 | `ig_load_success` | [!DNL Identity Service] | 成功 | データは ID グラフに正常に読み込まれました。 |
 | `ig_load_failure` | [!DNL Identity Service] | 失敗 | データを ID グラフに読み込めませんでした。 |
 

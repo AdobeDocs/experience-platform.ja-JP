@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 26%
+ht-degree: 25%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform の新機能：
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] サービス](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Adobe Experience Platform Data Lake の移行 {#migration}
@@ -60,7 +60,7 @@ Adobeがデータレイクを Gen1 から Gen2 に移行している間、ユー
 | 機能 | 説明 |
 | ------- | ----------- |
 | 一元化されたオファーライブラリ | オファーを構成する様々な要素を作成および管理し、そのルールと制約を定義するインターフェイス。 |
-| オファー決定エンジン | オファーの決定エンジンは、 [!DNL Platform] データと [!DNL Real-time Customer Profiles]をオファーライブラリと共に使用して、オファーの配信先となる適切な時刻、顧客およびチャネルを選択します。 |
+| オファー決定エンジン | オファーの決定エンジンは、 [!DNL Platform] データと [!DNL Real-Time Customer Profiles]をオファーライブラリと共に使用して、オファーの配信先となる適切な時刻、顧客およびチャネルを選択します。 |
 
 詳しくは、 [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=ja) ドキュメント。
 
@@ -181,7 +181,7 @@ Attribution AI はインテリジェントサービスの一部で、顧客と�
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 **主な特長**
 

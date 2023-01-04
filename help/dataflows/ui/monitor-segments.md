@@ -5,7 +5,7 @@ title: UI でのセグメントのデータフローの監視
 topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 5%

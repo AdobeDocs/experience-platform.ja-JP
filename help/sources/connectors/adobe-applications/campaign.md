@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
 description: ユーザーインターフェイスを使用して Campaign で管理されたCloud Servicesを Platform に接続する方法を説明します
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 8%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客エクスペリエンスを設計するManaged Servicesプラットフォームを提供し、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 次にアクセス： [Adobe Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) を参照してください。
+Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客エクスペリエンスを設計するManaged Servicesプラットフォームを提供し、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。 次にアクセス： [Adobe Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja) を参照してください。
 
 Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaign v8 の配信ログとトラッキングログデータをAdobe Experience Platformに取り込むことができます。
 
@@ -29,7 +30,7 @@ Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaig
 
 >[!IMPORTANT]
 >
->Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールへのアクセス権が必要です。 次にアクセス： [Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) クライアントコンソールをダウンロードしてインストールする方法については、を参照してください。
+>Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスできる必要があります。 次にアクセス： [Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) クライアントコンソールをダウンロードしてインストールする方法については、を参照してください。
 
 クライアントコンソールから Campaign v8 インスタンスにログインします。 以下 [!DNL Explorer] タブ、選択 [!DNL Administration] 次に、 [!DNL Configuration]. 次に、 [!DNL Data schemas] 次に、 `broadLog` 名前またはラベルのフィルター。 表示されるリストで、次の名前の受信者配信ログのソーススキーマを選択します。 `broadLogRcp`.
 
@@ -61,7 +62,7 @@ Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaig
 
 >[!NOTE]
 >
->Campaign データをに取り込むには、XDM ExperienceEvent スキーマでプロファイルを有効にする必要があります。 [!DNL Real-time Customer Profile].
+>Campaign データをに取り込むには、XDM ExperienceEvent スキーマでプロファイルを有効にする必要があります。 [!DNL Real-Time Customer Profile].
 
 スキーマの作成方法について詳しくは、 [UI での XDM スキーマの作成](../../../xdm/tutorials/create-schema-ui.md).
 

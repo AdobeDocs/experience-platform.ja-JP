@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの e コマースシステムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1284'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -647,7 +647,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、設定したスケジュールに従ってデータ eコマースを収集するソースコネクタを作成しました。 [!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、設定したスケジュールに従ってデータ eコマースを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

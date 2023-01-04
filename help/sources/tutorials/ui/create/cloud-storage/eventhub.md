@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure Event Hubs ソース接続を作成する方法を説明します。
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 39%
@@ -25,7 +25,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 - [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な [!DNL Event Hubs] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/streaming/cloud-storage-streaming.md)に関するチュートリアルに進むことができます。
 
@@ -33,7 +33,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 を認証するために [!DNL Event Hubs] ソースコネクタの場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `sasKeyName` | 認証規則の名前。SAS キー名とも呼ばれます。 |
 | `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` この `sasKey` 必ず～に対応する `manage` 次に対して設定された権限： [!DNL Event Hubs] リストに値を入力します。 |
@@ -55,7 +55,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 この **[!UICONTROL Azure イベントハブに接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
-### 新しいアカウント
+### 新規アカウント
 
 新しい資格情報を使用している場合は、「 **[!UICONTROL 新規アカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Event Hubs] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 

@@ -5,7 +5,7 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 25%
@@ -58,7 +58,7 @@ XDM スキーマは、大量の複雑なデータを自己完結型形式で保�
 
 スキーマは、データをに取り込むために使用されます [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、スキーマについて考える際には、顧客の ID と、データの送信元に関係なく、対象を識別するために使用できるフィールドについて考えることが重要です。
 
-この処理を支援するために、スキーマ内のキーフィールドを ID としてマークできます。 データの取り込み時に、これらのフィールドのデータが[!UICONTROL ID グラフ]」 その後、グラフデータには、 [[!DNL Real-time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
+この処理を支援するために、スキーマ内のキーフィールドを ID としてマークできます。 データの取り込み時に、これらのフィールドのデータが[!UICONTROL ID グラフ]」 その後、グラフデータには、 [[!DNL Real-Time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
 
 一般的に「[!UICONTROL ID]&quot;インクルード：メールアドレス、電話番号、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID またはその他の一意の ID フィールド。 また、「[!UICONTROL ID]」フィールドも同様です。
 
@@ -114,7 +114,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 >[!NOTE]
 >
->値がプライマリ ID(`primary`) は、id 値ごとに指定することもできます。 プライマリID は、 [!DNL Real-time Customer Profile]. 詳しくは、 [和集合スキーマ](#union) を参照してください。
+>値がプライマリ ID(`primary`) は、id 値ごとに指定することもできます。 プライマリID は、 [!DNL Real-Time Customer Profile]. 詳しくは、 [和集合スキーマ](#union) を参照してください。
 
 ### スキーマ進化の原理 {#evolution}
 
@@ -136,7 +136,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 ### 必須フィールド
 
-個々のスキーマフィールドは、 [必要に応じてマーク](../ui/fields/required.md)：つまり、取り込まれたレコードには、検証に合格するために、これらのフィールドのデータが含まれている必要があります。 例えば、スキーマのプライマリ ID フィールドを必要に応じて設定すると、取り込まれたすべてのレコードがリアルタイム顧客プロファイルに参加し、必要に応じてタイムスタンプフィールドを設定すると、すべての時系列イベントが時系列で保持されます。
+個々のスキーマフィールドは、 [必要に応じてマーク](../ui/fields/required.md)：つまり、取り込まれたレコードには、検証に合格するために、これらのフィールドのデータが含まれている必要があります。 例えば、スキーマのプライマリ ID フィールドを必要に応じて設定すると、取り込まれたすべてのレコードがリアルタイム顧客プロファイルに参加し、必要に応じてタイムスタンプフィールドを設定すると、すべての時系列イベントが時系列的に保持されます。
 
 >[!IMPORTANT]
 >
@@ -273,7 +273,7 @@ While [!DNL Experience Platform] では、特定の使用例に関するスキ�
 
 ![](../images/schema-composition/union.png)
 
-でスキーマの使用を有効にする [!DNL Real-time Customer Profile]の場合、そのクラスタイプの和集合に含まれます。 [!DNL Profile] 顧客属性の堅牢で一元化されたプロファイルと、と統合されたあらゆるシステム全体で顧客がおこなったすべてのイベントのタイムスタンプ付きの説明を提供 [!DNL Platform]. [!DNL Profile] は和集合表示を使用してこのデータを表し、各顧客の全体像を提供します。
+でスキーマの使用を有効にする [!DNL Real-Time Customer Profile]の場合、そのクラスタイプの和集合に含まれます。 [!DNL Profile] 顧客属性の堅牢で一元化されたプロファイルと、と統合されたあらゆるシステム全体で顧客がおこなったすべてのイベントのタイムスタンプ付きの説明を提供 [!DNL Platform]. [!DNL Profile] は和集合表示を使用してこのデータを表し、各顧客の全体像を提供します。
 
 の使用に関する詳細 [!DNL Profile]を参照し、 [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 

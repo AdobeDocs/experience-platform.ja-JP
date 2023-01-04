@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 10 月
-description: Adobe Experience Platformの 2020 年 10 月のリリースノート。
+title: Adobe Experience Platform リリースノート 2020年10月
+description: Adobe Experience Platform の 2020年10月のリリースノート。
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 10 月 14 日**
+**リリース日：2020年10月14日（PT）**
 
 - [データ準備](#data-prep)
 - [リアルタイム顧客プロファイル](#profile)
@@ -37,18 +37,18 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
 | プロファイルプレビュー API の追加 | プロファイルプレビュー API (`/previewsamplestatus`) には、IMS 組織全体での合計プロファイルフラグメントの分類を表示する機能と、id 名前空間全体でのプロファイルフラグメントの分布を表示する機能が含まれるようになりました。 |
 | 和集合スキーマビューの更新 | Experience PlatformUI では、和集合スキーマに貢献するすべてのスキーマとデータセット、および ID や関係フィールドなどの表面キー属性に関する情報を、より簡単に見つけることができます。 これらの更新により、プロファイルが正しく設定され、ID が正しく結び付けられ、データが正常に取り込まれたことをトラブルシューティングおよび検証する機能が向上しました。 |
 
-詳しくは、 [!DNL Real-time Customer Profile]を操作するためのチュートリアルやベストプラクティスを含む [!DNL Profile] データを読んでください [リアルタイム顧客プロファイルの概要](../../profile/home.md).
+詳しくは、 [!DNL Real-Time Customer Profile]を操作するためのチュートリアルやベストプラクティスを含む [!DNL Profile] データを読んでください [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platform セグメント化サービスは、セグメントを作成し、[!DNL Real-time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
+Adobe Experience Platform セグメント化サービスは、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 

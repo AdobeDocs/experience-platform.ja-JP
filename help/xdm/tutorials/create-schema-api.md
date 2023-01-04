@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 49%
@@ -25,7 +25,7 @@ ht-degree: 49%
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 このチュートリアルを開始する前に、 [開発者ガイド](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、を参照してください。 [!DNL Schema Registry] API これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
@@ -955,7 +955,7 @@ GET 要求を実行してスキーマを参照すると、次に示すように�
 
 ### ID 記述子の定義
 
-スキーマは、データをに取り込むために使用されます [!DNL Experience Platform]. このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。その後、グラフデータには、 [[!DNL Real-time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
+スキーマは、データをに取り込むために使用されます [!DNL Experience Platform]. このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。その後、グラフデータには、 [[!DNL Real-Time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
 
 一般的に「ID」とマークされるフィールドは次のとおりです。メールアドレス、電話番号、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID またはその他の一意の ID フィールド。
 
@@ -1016,9 +1016,9 @@ curl -X POST \
 }
 ```
 
-## でのスキーマ使用の有効化 [!DNL Real-time Customer Profile] {#profile}
+## でのスキーマ使用の有効化 [!DNL Real-Time Customer Profile] {#profile}
 
-「和集合」タグを `meta:immutableTags` 属性の代わりに、「ロイヤルティメンバー」スキーマを有効にし、 [!DNL Real-time Customer Profile].
+「和集合」タグを `meta:immutableTags` 属性の代わりに、「ロイヤルティメンバー」スキーマを有効にし、 [!DNL Real-Time Customer Profile].
 
 和集合表示の操作について詳しくは、 [和集合](../api/unions.md) 内 [!DNL Schema Registry] 開発者ガイド。
 

@@ -5,10 +5,10 @@ title: 外部オーディエンスのインポートと使用
 description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -20,8 +20,8 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 
 このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [ セグメント化サービス](../home.md)：リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+- [セグメント化サービス](../home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+- [リアルタイム顧客プロファイル](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
 - [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
@@ -62,7 +62,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ![選択したフィールドをプライマリ ID としてマークするチェックボックスが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-time Customer Profile].
+をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-Time Customer Profile].
 
 ![プロファイルのスキーマを有効にする切り替えが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -76,7 +76,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ![データセットのベースにするスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
-データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
+データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、リアルタイム顧客プロファイルに対してこのデータセットを有効にします。
 
 ![プロファイルのスキーマを有効にする切り替えは、「データセット」アクティビティページで強調表示されます。](../images/tutorials/external-audiences/dataset-profile.png)
 
@@ -183,7 +183,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ![データベースの作成に使用するスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
-データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、このデータセットをリアルタイム顧客プロファイルに対して有効にします。
+データセットの作成後、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-profile) をクリックして、リアルタイム顧客プロファイルに対してこのデータセットを有効にします。
 
 ![プロファイルのスキーマを有効にする切り替えは、データセット作成ワークフローでハイライト表示されます。](../images/tutorials/external-audiences/dataset-profile.png)
 

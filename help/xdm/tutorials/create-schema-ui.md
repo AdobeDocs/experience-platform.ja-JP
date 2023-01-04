@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3754'
 ht-degree: 12%
@@ -27,9 +27,9 @@ Adobe Experience Platformユーザーインターフェイスを使用すると�
 
 このチュートリアルでは、スキーマの作成に関わるAdobe Experience Platformの様々な側面に関する十分な知識が必要です。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-* [[!DNL Experience Data Model (XDM)]](../home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md):XDM スキーマとその構築ブロック（クラス、スキーマフィールドグループ、データタイプ、個々のフィールドを含む）の概要です。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## を開きます。 [!UICONTROL スキーマ] workspace {#browse}
 
@@ -201,7 +201,7 @@ Adobe Experience Platformユーザーインターフェイスを使用すると�
 | [!UICONTROL 配列] | フィールドに値の配列が含まれ、各値は指定されたデータ型を持つことを示します。 例えば、データ型が「[!UICONTROL 文字列]&quot;は、フィールドに文字列の配列を含めることを指定します。 |
 | [!UICONTROL 列挙] | このフィールドに、可能な値の列挙リストの値の 1 つを含める必要があることを示します。 |
 | [!UICONTROL ID] | このフィールドが ID フィールドであることを示します。 ID フィールドの詳細については、[このチュートリアルの後半](#identity-field)で説明します。 |
-| [!UICONTROL 関係] | スキーマの関係は、和集合スキーマと [!DNL Real-time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 この [!UICONTROL 関係] 制約は、このフィールドが、異なるクラスに基づいてスキーマのプライマリ ID を参照し、2 つのスキーマ間の関係を意味することを示します。 に関するチュートリアルを参照してください。 [関係の定義](./relationship-ui.md) を参照してください。 |
+| [!UICONTROL 関係] | スキーマの関係は、和集合スキーマと [!DNL Real-Time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 この [!UICONTROL 関係] 制約は、このフィールドが、異なるクラスに基づいてスキーマのプライマリ ID を参照し、2 つのスキーマ間の関係を意味することを示します。 に関するチュートリアルを参照してください。 [関係の定義](./relationship-ui.md) を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -291,11 +291,11 @@ Adobe Experience Platformユーザーインターフェイスを使用すると�
 
 これで、 `loyaltyId` フィールドは、その個人を識別し、その顧客の単一のビューをつなぎ合わせるのに使用されます。 での ID の使用について詳しくは、以下を参照してください。 [!DNL Experience Platform]、次を確認してください： [[!DNL Identity Service]](../../identity-service/home.md) ドキュメント。
 
-## でのスキーマ使用の有効化 [!DNL Real-time Customer Profile] {#profile}
+## でのスキーマ使用の有効化 [!DNL Real-Time Customer Profile] {#profile}
 
-[[!DNL Real-time Customer Profile]](../../profile/home.md) での id データの活用 [!DNL Experience Platform] 各顧客の全体像を提供する。 このサービスは、顧客属性の堅牢な 360°プロファイルと、と統合されたシステム全体で顧客が持つすべてのインタラクションのタイムスタンプ付きアカウントを構築します。 [!DNL Experience Platform].
+[[!DNL Real-Time Customer Profile]](../../profile/home.md) での id データの活用 [!DNL Experience Platform] 各顧客の全体像を提供する。 このサービスは、顧客属性の堅牢な 360°プロファイルと、と統合されたシステム全体で顧客が持つすべてのインタラクションのタイムスタンプ付きアカウントを構築します。 [!DNL Experience Platform].
 
-スキーマをで使用できるようにするには [!DNL Real-time Customer Profile]の場合は、プライマリ ID が定義されている必要があります。 最初にプライマリ ID を定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
+スキーマをで使用できるようにするには [!DNL Real-Time Customer Profile]の場合は、プライマリ ID が定義されている必要があります。 最初にプライマリ ID を定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
@@ -311,7 +311,7 @@ Adobe Experience Platformユーザーインターフェイスを使用すると�
 
 >[!WARNING]
 >
->スキーマが [!DNL Real-time Customer Profile] とを保存した場合、無効にすることはできません。
+>スキーマが [!DNL Real-Time Customer Profile] とを保存した場合、無効にすることはできません。
 
 選択 **[!UICONTROL 有効にする]** をクリックして選択を確定します。 次の項目を選択できます。 **[!UICONTROL プロファイル]** 必要に応じてスキーマを再度無効にします。ただし、スキーマは [!DNL Profile] が有効になっている場合は、無効にできなくなります。
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '2934'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -210,7 +210,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
@@ -233,7 +233,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| Audience Manager セグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きい Audience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めて Platform に Audience Manager セグメントを送信する際に、合計プロファイル数に直接影響します。つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。詳しくは、[Audience Manager ソースの概要](../../sources/connectors/adobe-applications/audience-manager.md)を参照してください。ライセンスの使用方法については、[ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md)に関するドキュメントを参照してください。 |
+| Audience Managerセグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きい Audience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めて Platform に Audience Manager セグメントを送信する際に、合計プロファイル数に直接影響します。つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。詳しくは、[Audience Manager ソースの概要](../../sources/connectors/adobe-applications/audience-manager.md)を参照してください。ライセンスの使用方法については、[ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md)に関するドキュメントを参照してください。 |
 | Adobe Campaign Managed Cloud Service のサポート | Adobe Campaign Managed Cloud Service ソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータを Experience Platform に取り込みます。詳しくは、[UI での Adobe Campaign Managed Cloud Service ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md)に関するガイドを参照してください。 |
 | バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、[!DNL Flow Service] API で指定されたデータフローに対してアドホックなフローの実行を作成します。作成されたフロー実行は、1 回のみの取り込みに設定する必要があります。詳しくは、[API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md)に関するガイドを参照してください。 |
 | バッチソースで失敗したデータフロー実行の再試行に対する API のサポート | `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行します。[API を使用して失敗したデータフロー実行の再試行](../../sources/tutorials/api/retry-flows.md)に関するガイドを参照してください。 |

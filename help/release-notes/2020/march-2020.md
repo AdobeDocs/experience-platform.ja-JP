@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: リリースノート;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 68%
@@ -111,7 +111,7 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 | ------- | ----------- |
 | Adobe Audience Manager コネクタの廃止された信号 | Audience Manager から信号レベルのデータは送信されなくなります。特性とセグメントのセグメントメンバーシップは、引き続き送信されることに注意してください。この変更の結果、受信データセットは生成されなくなります。 |
 | データセット名の変更 | Audience Manager コネクタで生成されたデータセットの名前と説明が更新されます。 |
-| 有効にする [!DNL Profile] Audience Manager で切り替え | [!DNL Profile] 切り替えは、有効または無効にして、データセットを次に昇格させることができます。 [!DNL Real-time Customer Profile]. デフォルトでは、切り替えが有効になっています。 |
+| 有効にする [!DNL Profile] Audience Manager で切り替え | [!DNL Profile] 切り替えは、有効または無効にして、データセットを次に昇格させることができます。 [!DNL Real-Time Customer Profile]. デフォルトでは、切り替えが有効になっています。 |
 | クラウドストレージシステムの UI のサポート | 用の新しいソースコネクタ [!DNL Azure Data Lake Storage Gen2] を使用します。 |
 | CRM システムの UI のサポート | 用の新しいソースコネクタ [!DNL HubSpot], [!DNL Salesforce Service Cloud]、および [!DNL ServiceNow] を使用します。 |
 | データベースシステムの UI のサポート | 用の新しいソースコネクタ [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]、および [!DNL MySQL] を使用します。 |

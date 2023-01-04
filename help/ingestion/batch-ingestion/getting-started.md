@@ -4,7 +4,7 @@ title: データ取得 API の使用の手引き
 type: Documentation
 description: 『データ取得 API 入門ガイド』では、API を使用してデータをExperience Platformに取り込む前に知っておく必要がある主要な概念と基本機能の概要を説明しています。
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 51%
@@ -18,7 +18,7 @@ ht-degree: 51%
 API ガイドを使用するには、データの操作に関わる複数のAdobe Experience Platformサービスに関する十分な知識が必要です。 データ取得 API を使用する前に、次のサービスのドキュメントを確認してください。
 
 * [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-* [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [[!DNL Real-Time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 

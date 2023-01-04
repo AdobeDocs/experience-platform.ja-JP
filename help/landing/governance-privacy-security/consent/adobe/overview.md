@@ -5,7 +5,7 @@ title: Adobe Experience Platformでの同意処理
 topic-legacy: getting started
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Adobe Experience Platformを使用すると、顧客から収集した同意デ�
 * [リアルタイム顧客プロファイル](../../../../profile/home.md):使用 [!DNL Identity Service] データセットから詳細な顧客プロファイルをリアルタイムで作成する機能。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md):様々な Platform サービスを顧客向け Web サイトに統合できる、クライアント側の JavaScript ライブラリ。
    * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md):このガイドに示す同意関連の SDK コマンドの使用例の概要です。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md):リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略と同様に応答する個人のグループに分割できます。
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md):リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略と同様に対応する個人のグループに分割できます。
 
 ## 同意処理フローの概要 {#summary}
 

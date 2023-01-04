@@ -2,25 +2,25 @@
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API、統合プロファイル、統合プロファイル、統合プロファイル、プロファイル、rtcp、有効プロファイル、有効プロファイル、和集合スキーマ、和集合プロファイル
 title: リアルタイム顧客プロファイル UI ガイド
 topic-legacy: guide
-description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
+description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platformユーザーインターフェイスでリアルタイム顧客プロファイルを操作する際のガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1951'
-ht-degree: 10%
+ht-degree: 7%
 
 ---
 
-# [!DNL Real-time Customer Profile] UI ガイド
+# [!DNL Real-Time Customer Profile] UI ガイド
 
-[!DNL Real-time Customer Profile] は、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、 [!DNL Real-time Customer Profile] データをAdobe Experience Platformユーザーインターフェイス (UI) に表示します。
+[!DNL Real-Time Customer Profile] は、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、 [!DNL Real-Time Customer Profile] データをAdobe Experience Platformユーザーインターフェイス (UI) に表示します。
 
 ## はじめに
 
-この UI ガイドでは、 [!DNL Experience Platform] 管理に関わるサービス [!DNL Real-time Customer Profiles]. このガイドを読む前、または UI で作業する前に、次のサービスのドキュメントを確認してください。
+この UI ガイドでは、 [!DNL Experience Platform] 管理に関わるサービス [!DNL Real-Time Customer Profiles]. このガイドを読む前、または UI で作業する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNL Real-time Customer Profile] 概要](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-time Customer Profile] に取り込む際に異なるデータソースの ID を結合することで [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] 概要](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-Time Customer Profile] に取り込む際に異なるデータソースの ID を結合することで [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 ## [!UICONTROL 概要]
@@ -29,7 +29,7 @@ Experience PlatformUI で、 **[!UICONTROL プロファイル]** 左側のナビ
 
 >[!NOTE]
 >
->組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL プロファイル] ダッシュボードが表示されません。 代わりに、「[!UICONTROL 概要]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL プロファイル] ダッシュボードが表示されません。 代わりに、 [!UICONTROL 概要] 「 」タブには、リアルタイム顧客プロファイルの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
 ### プロファイルダッシュボード {#profile-dashboard}
 
@@ -171,7 +171,7 @@ Experience Platformでのセグメント化について詳しくは、 [AdobeExp
 
 ## 和集合スキーマ {#union-schema}
 
-メインから **[!UICONTROL プロファイル]** メニューで、 **[!UICONTROL 和集合スキーマ]** 」タブに移動して、取り込んだデータに使用可能な和集合スキーマを表示します。 和集合スキーマは、すべての [!DNL Experience Data Model] (XDM) 同じクラスのフィールド（スキーマがで使用できるようになっている） [!DNL Real-time Customer Profile].
+メインから **[!UICONTROL プロファイル]** メニューで、 **[!UICONTROL 和集合スキーマ]** 」タブに移動して、取り込んだデータに使用可能な和集合スキーマを表示します。 和集合スキーマは、すべての [!DNL Experience Data Model] (XDM) 同じクラスのフィールド（スキーマがで使用できるようになっている） [!DNL Real-Time Customer Profile].
 
 和集合スキーマについて詳しくは、 [和集合スキーマ UI ガイド](union-schema.md).
 

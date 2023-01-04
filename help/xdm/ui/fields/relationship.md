@@ -5,7 +5,7 @@ title: UI での関係フィールドの定義
 description: 関係ユーザーインターフェイスで関係フィールドを定義するExperience Platformを説明します。
 topic-legacy: user guide
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

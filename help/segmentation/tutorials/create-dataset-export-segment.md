@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform UI で、オーディエンスセグメントのエクスポートに使用できるデータセットを作成する手順を説明します。
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 25%
@@ -37,7 +37,7 @@ UI に和集合スキーマを表示するには、「 **[!UICONTROL プロフ�
 
 >[!NOTE]
 >
->検索バーの横にあるフィルターアイコンを選択して、フィルタリング機能を使用し、有効なデータセットのみを表示します。 [!DNL Real-time Customer Profile].
+>検索バーの横にあるフィルターアイコンを選択して、フィルタリング機能を使用し、有効なデータセットのみを表示します。 [!DNL Real-Time Customer Profile].
 
 ![「データセット」ワークスペースが表示されます。](../images/tutorials/segment-export-dataset/browse.png)
 

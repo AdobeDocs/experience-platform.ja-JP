@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント一致；セグメント一致
+keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント一致；セグメント一致
 solution: Experience Platform
 title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2 人以上の Platform ユーザーが安全で管理された、プライバシーに優しい方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 7%
@@ -37,7 +37,7 @@ Adobe Experience Platform Segment Match は、2 人以上の Platform ユーザ�
 
 ID 名前空間は、 [Adobe Experience Platform Identity Service](../../../identity-service/home.md). 各顧客 ID には、ID のコンテキストを示す関連付けられた名前空間が含まれます。 例えば、名前空間では「name」の値を区別できます<span>@email.com」を電子メールアドレスとして、または数値 CRM ID として「443522」を指定します。
 
-完全修飾 ID には、ID 値と名前空間が含まれます。プロファイルフラグメント間でレコードデータを一致させる場合 ( [!DNL Real-time Customer Profile] プロファイルデータの結合 )、ID 値と名前空間の両方が一致する必要があります。
+完全修飾 ID には、ID 値と名前空間が含まれます。プロファイルフラグメント間でレコードデータを一致させる場合 ( [!DNL Real-Time Customer Profile] プロファイルデータの結合 )、ID 値と名前空間の両方が一致する必要があります。
 
 のコンテキストでは [!DNL Segment Match]の場合、名前空間はデータを共有する際に重複プロセスで使用されます。
 
@@ -204,4 +204,4 @@ A **フィード** は、データ（セグメント）のグループ、その�
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] の概要](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] の概要](../../../profile/home.md)

@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 5%
@@ -69,11 +69,11 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ソーススキーマ「 」[!DNL Opportunities]」が [!UICONTROL XDM ビジネスオポチュニティ] クラス。 クラスが提供するフィールドの 1 つ。 `opportunityKey`は、スキーマの識別子として機能します。 特に、 `sourceKey` 下のフィールド `opportunityKey` オブジェクトは、 [!DNL B2B Opportunity].
 
-以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-time Customer Profile].
+以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-Time Customer Profile].
 
 ![商談スキーマ](../images/tutorials/relationship-b2b/opportunities.png)
 
-### [!DNL Accounts] スキーマ
+### [!DNL Accounts] schema
 
 宛先スキーマ「 」[!DNL Accounts]」が [!UICONTROL XDM アカウント] クラス。 ルートレベル `accountKey` フィールドに `sourceKey` と呼ばれるカスタム名前空間の下でプライマリ ID として機能する [!DNL B2B Account]. このスキーマは、プロファイルでも使用できるようになっています。
 

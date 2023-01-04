@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;ユーザーインターフェイス;UI;カスタマイズ;プロファイルダッシュボード;ダッシュボード
 title: プロファイルダッシュボードガイド
-description: Adobe Experience Platform には、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードが用意されています。
+description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
-ht-degree: 98%
+ht-degree: 94%
 
 ---
 
 # [!UICONTROL プロファイル]ダッシュボード
 
-Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でプロファイルダッシュボードにアクセスし操作する方法の概要と、ダッシュボードに表示される指標に関する情報を説明します。
+Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-Time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でプロファイルダッシュボードにアクセスし操作する方法の概要と、ダッシュボードに表示される指標に関する情報を説明します。
 
-Experience Platform ユーザーインターフェイス内のすべてのプロファイル機能の概要については、[リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md)を参照してください。
+Experience Platformユーザーインターフェイス内のすべてのプロファイル機能の概要については、 [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md).
 
 ## プロファイルダッシュボードのデータ
 
@@ -33,7 +33,7 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 
 >[!NOTE]
 >
->Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。代わりに、「[!UICONTROL 概要]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。代わりに、 [!UICONTROL 概要] 「 」タブには、リアルタイム顧客プロファイルの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
 ![プロファイルと概要がハイライトされたExperience Platformプロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
 
@@ -73,7 +73,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 ## 結合ポリシー {#merge-policies}
 
-プロファイルダッシュボードに表示される指標は、リアルタイム顧客プロファイルデータに適用される結合ポリシーに基づいています。複数のソースからデータを統合して顧客プロファイルを作成している場合、データに競合する値が含まれている可能性があります。例えば、あるデータセットでは顧客を「独身」としてリストしていても、別のデータセットでは同じ顧客が「既婚」としてリストされている場合があります。どのデータを優先しプロファイルの一部として表示するかを決定するのは、結合ポリシーの役目です。
+プロファイルダッシュボードに表示される指標は、リアルタイム顧客プロファイルデータに適用される結合ポリシーに基づいています。 複数のソースからデータを統合して顧客プロファイルを作成している場合、データに競合する値が含まれている可能性があります。例えば、あるデータセットでは顧客を「独身」としてリストしていても、別のデータセットでは同じ顧客が「既婚」としてリストされている場合があります。どのデータを優先しプロファイルの一部として表示するかを決定するのは、結合ポリシーの役目です。
 
 組織のデフォルトの結合ポリシーを作成、編集、宣言する方法など、結合ポリシーについて詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。
 
@@ -140,7 +140,7 @@ Platform UI に用意されているプロファイル表示機能について�
 >
 >[!UICONTROL プロファイル数]ウィジェットは、複数の理由により、UI の「[!UICONTROL プロファイル]」セクションの「[!UICONTROL 参照]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。これが生じる最も一般的な原因は、「[!UICONTROL 参照]」タブが組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照し、[!UICONTROL プロファイル数]ウィジェットがダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照するためです。
 >
->もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。「[!UICONTROL 参照]」タブでサンプルジョブがトリガーされる方法について詳しくは、[リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ja#profile-count)を参照してください。
+>もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。サンプルジョブが [!UICONTROL 参照] タブ、「 [リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ja#profile-count).
 
 ![プロファイル数Experience Platformがハイライトされた「プロファイル」ダッシュボード。](../images/profiles/profile-count.png)
 
@@ -226,9 +226,9 @@ ID について詳しくは、[Adobe Experience Platform ID サービスドキ�
 
 ウィジェットのドロップダウンメニューを使用して、比較する ID を選択します。円には、各 ID を含むプロファイルの相対合計数が表示されます。両方の ID を含むプロファイルの数は、円の重なり部分の大きさで表されます。顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその個々の顧客に関連付けられるため、組織は複数の ID からのフラグメントを含む複数のプロファイルを持つ可能性があります。
 
-プロファイルフラグメントについて詳しくは、リアルタイム顧客プロファイルの概要の[プロファイルフラグメントと結合プロファイル](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=ja#profile-fragments-vs-merged-profiles)の節を参照してください。
+プロファイルフラグメントについて詳しくは、 [プロファイルフラグメントと結合プロファイル](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=ja#profile-fragments-vs-merged-profiles) （リアルタイム顧客プロファイルの概要）を参照してください。
 
-ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md)を参照してください。
+ID について詳しくは、[Adobe Experience Platform ID サービスのドキュメント](../../identity-service/home.md)を参照してください。
 
 ![ID 重複ウィジェットがハイライトされたプロファイルダッシュボードの概要。](../images/profiles/identity-overlap.png)
 
@@ -434,4 +434,4 @@ The three levels of completeness are:
 
 ## 次の手順
 
-このドキュメントに従うと、プロファイルダッシュボードを見つけて、使用可能なウィジェットに表示される指標を理解できます。Experience Platform UI で [!DNL Profile] データの使用に関する詳細を学ぶには、[リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md)を参照してください。
+このドキュメントに従うと、プロファイルダッシュボードを見つけて、使用可能なウィジェットに表示される指標を理解できます。の使用に関する詳細を学ぶには [!DNL Profile] Experience PlatformUI のデータについては、 [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md).

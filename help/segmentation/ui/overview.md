@@ -5,7 +5,7 @@ title: セグメント化サービス UI ガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service は、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 19%
@@ -21,7 +21,7 @@ ht-degree: 19%
 セグメントの定義を使用するには、 [!DNL Experience Platform] セグメント化に関連するサービス。 このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
-- [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):に取り込まれる様々なデータソースの ID を関連付けることで、顧客プロファイルの作成を可能にします。 [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 | 100 万～2000 万 | 100 万 |
 | 2000 万以上 | 全体の 5% |
 
-各 [!DNL Profile] は、 [!DNL Profile] ID。 プロファイルの詳細について詳しくは、 [[!DNL Real-time Customer Profile] ユーザーガイド](../../profile/ui/user-guide.md#profile-detail).
+各 [!DNL Profile] は、 [!DNL Profile] ID。 プロファイルの詳細について詳しくは、 [[!DNL Real-Time Customer Profile] ユーザーガイド](../../profile/ui/user-guide.md#profile-detail).
 
 ![セグメント定義のサンプルプロファイルがハイライト表示されます。 プロファイル情報の例には、プロファイル ID、名、姓、人物の E メールが含まれます。](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Experience PlatformUI で、 **[!UICONTROL セグメント]** 左側のナビゲ
 
 ## スケジュールされたセグメント化 {#scheduled-segmentation}
 
-セグメント定義を作成したら、オンデマンドで、またはスケジュールに沿って（継続的に）セグメント定義を評価することができます。評価手段移動 [!DNL Real-time Customer Profile] 対応するオーディエンスを生成するために、セグメント定義を介したデータ。 作成したオーディエンスは保存され、保存されて、 [!DNL Experience Platform] API
+セグメント定義を作成したら、オンデマンドで、またはスケジュールに沿って（継続的に）セグメント定義を評価することができます。評価手段移動 [!DNL Real-Time Customer Profile] 対応するオーディエンスを生成するために、セグメント定義を介したデータ。 作成したオーディエンスは保存され、保存されて、 [!DNL Experience Platform] API
 
 オンデマンド評価では、API を使用して評価を実行し、必要に応じてオーディエンスを作成します。一方、スケジュールに沿った評価（「スケジュールに沿ったセグメント化」とも言います）では、特定の時間（最大 1 日に 1 回）にセグメント定義を評価する反復スケジュールを作成できます。
 
@@ -294,6 +294,6 @@ Platform で生成されたオーディエンスの詳細については、 [セ
 
 ## 次の手順と追加のリソース {#next-steps}
 
-この [!DNL Segmentation Service] UI には、マーケティング可能なオーディエンスを次の場所から分離できる豊富なワークフローが用意されています。 [!DNL Real-time Customer Profile] データ。
+この [!DNL Segmentation Service] UI には、マーケティング可能なオーディエンスを次の場所から分離できる豊富なワークフローが用意されています。 [!DNL Real-Time Customer Profile] データ。
 
 詳しくは、以下を参照してください。 [!DNL Segmentation Service]を参照してください。ドキュメントを引き続きお読みください。 を使用する方法を学ぶには、以下を実行します。 [!DNL Segmentation Service] API( [[!DNL Segmentation Service] 開発者ガイド](../api/overview.md).

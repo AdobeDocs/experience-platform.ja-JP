@@ -5,10 +5,11 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
-workflow-type: ht
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1198'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 100%
 
 ## アクティベーションの制限 {#activation-limits}
 
-次のガードレールは、宛先にリアルタイム顧客プロファイルデータをアクティブ化する際の推奨上限を示します。
+次のガードレールは、宛先に対してリアルタイム顧客プロファイルデータをアクティブ化する際の推奨制限を提供します。
 
 ### 一般的なアクティベーションガードレール {#general-activation-guardrails}
 
@@ -121,5 +122,5 @@ ht-degree: 100%
 
 * [データ取り込み](/help/ingestion/guardrails.md)のガードレール
 * [[!DNL Identity Service] データ](/help/identity-service/guardrails.md)のガードレール
-* [[!DNL Real-time Customer Profile] データ](/help/profile/guardrails.md)のガードレール
+* [[!DNL Real-Time Customer Profile] データ](/help/profile/guardrails.md)のガードレール
 * [[!DNL Query Service] データ](/help/query-service/guardrails.md)のガードレール

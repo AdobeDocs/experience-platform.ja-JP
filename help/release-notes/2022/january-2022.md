@@ -2,10 +2,10 @@
 title: Adobe Experience Platformリリースノート 2022 年 1 月
 description: Adobe Experience Platformの 2022 年 1 月のリリースノート。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -85,7 +85,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## クエリサービス {#query-service}
 
-[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 

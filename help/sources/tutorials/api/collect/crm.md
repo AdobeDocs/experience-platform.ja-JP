@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの CRM システムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 95%
@@ -680,7 +680,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、設定したスケジュールに従って CRM システムからデータを収集するソースコネクタを作成しました。 [!DNL Real-time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、設定したスケジュールに従って CRM システムからデータを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの Platform サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

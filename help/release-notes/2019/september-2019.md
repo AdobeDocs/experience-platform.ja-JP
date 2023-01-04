@@ -1,20 +1,20 @@
 ---
 title: Adobe Experience Platform リリースノート 2019年9月
-description: Adobe Experience Platformの 2019 年 9 月のリリースノート。
+description: Adobe Experience Platform の 2019年9月のリリースノート。
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 45%
+ht-degree: 46%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2019 年 9 月 10 日（PT）**
+**リリース日：2019年9月10日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -36,7 +36,7 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、 [!DNL Experience Platform] これにより、データサイエンティストは、機械学習モデルを構築し運用することで、Adobeソリューションやサードパーティシステムをまたいで、データやコンテンツからインサイトをシームレスに生み出すことができます。 [!DNL Data Science Workspace] は、と緊密に統合されています [!DNL Platform] とは、XDM データの調査と準備、次にモデルの開発と運用を含め、エンドツーエンドのデータサイエンスライフサイクルを強化し、自動的にエンリッチメントをおこなうためのモデルの開発と運用を可能にします。 [!DNL Real-time Customer Profile] と機械学習インサイト
+Adobe Experience Platform [!DNL Data Science Workspace] は、 [!DNL Experience Platform] これにより、データサイエンティストは、機械学習モデルを構築し運用することで、Adobeソリューションやサードパーティシステムをまたいで、データやコンテンツからインサイトをシームレスに生み出すことができます。 [!DNL Data Science Workspace] は、と緊密に統合されています [!DNL Platform] とは、XDM データの調査と準備、次にモデルの開発と運用を含め、エンドツーエンドのデータサイエンスライフサイクルを強化し、自動的にエンリッチメントをおこなうためのモデルの開発と運用を可能にします。 [!DNL Real-Time Customer Profile] と機械学習インサイト
 
 **新機能**
 
@@ -56,7 +56,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、 [!DNL Experience 
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] は、標準の SQL を使用してAdobe Experience Platformでデータをクエリし、様々な分析およびデータ管理の使用例をサポートする機能を提供します。 これは、 [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートで使用します。 [!DNL Data Science Workspace]、またはへの取り込み [!DNL Real-time Customer Profile].
+[!DNL Query Service] は、標準の SQL を使用してAdobe Experience Platformでデータをクエリし、様々な分析およびデータ管理の使用例をサポートする機能を提供します。 これは、 [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートで使用します。 [!DNL Data Science Workspace]、またはへの取り込み [!DNL Real-Time Customer Profile].
 
 以下を使用できます。 [!DNL Query Service] データ分析のエコシステムを構築するために、様々なインタラクションチャネルをまたいだ顧客の全体像を作成します。 これらのチャネルには、POS（販売時点管理システム）、web、モバイル、CRM システムなどが含まれます。
 

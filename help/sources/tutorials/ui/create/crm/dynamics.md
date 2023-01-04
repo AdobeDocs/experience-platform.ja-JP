@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してMicrosoft Dynamics ソース接続を作成する方法を説明します。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 33%
+ht-degree: 37%
 
 ---
 
@@ -21,16 +21,16 @@ ht-degree: 33%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 既に有効な [!DNL Dynamics] アカウントを使用する場合は、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください： [CRM ソースのデータフローの設定](../../dataflow/crm.md).
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `serviceUri` | のサービス URL [!DNL Dynamics] インスタンス。 |
 | `username` | のユーザー名 [!DNL Dynamics] ユーザーアカウント。 |
@@ -56,7 +56,7 @@ ht-degree: 33%
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、新しい [!DNL Dynamics] アカウント
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、新しい [!DNL Dynamics] アカウント
 
 この [!DNL Dynamics] コネクタは、アクセス用に様々な認証タイプを提供します。 の下 [!UICONTROL アカウント認証] 選択 **[!UICONTROL 基本認証]** パスワードベースの資格情報を使用する場合。
 
@@ -72,7 +72,7 @@ ht-degree: 33%
 
 ![key-based-authentication](../../../../images/tutorials/create/ms-dynamics/key-based-auth.png)
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | [!UICONTROL サービスプリンシパル ID] | のクライアント ID [!DNL Dynamics] アカウント この ID は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
 | [!UICONTROL サービスプリンシパルキー] | サービスプリンシパル秘密鍵。 この資格情報は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |

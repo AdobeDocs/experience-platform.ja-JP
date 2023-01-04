@@ -5,10 +5,10 @@ title: ID サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ![Platform での ID の組み合わせ](./images/identity-service-stitching.png)
 
-基本的に、[!DNL Identity Service] を使用すれば、顧客の全体像をまとめ、異なる複数のシステムにまたがって分散している可能性のある関連データを集計できます。リアルタイム顧客プロファイルは、[!DNL Identity Service] が定義および維持する ID 関係を、顧客の全体像とブランドとのインタラクションを構築するために活用します。詳しくは、「[リアルタイム顧客プロファイルの概要](../profile/home.md)」を参照してください。
+基本的に、[!DNL Identity Service] を使用すれば、顧客の全体像をまとめ、異なる複数のシステムにまたがって分散している可能性のある関連データを集計できます。次の ID 関係。 [!DNL Identity Service] は、リアルタイム顧客プロファイルで顧客の全体像とブランドとのインタラクションを構築するために、を定義し管理します。 詳しくは、 [リアルタイム顧客プロファイルの概要](../profile/home.md).
 
 ### ユースケース
 
@@ -134,7 +134,7 @@ ID フィールドでは、共通の PII データを共有している ID を�
 
 ### [!DNL Identity Service] のデータセットの設定
 
-ストリーミング取得プロセス中、[!DNL Identity Service ]はレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、[!DNL Identity Service]を有効にする必要があります。詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md)に関するチュートリアルを参照してください。
+ストリーミング取得プロセス中、[!DNL Identity Service ]はレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、[!DNL Identity Service]を有効にする必要があります。に関するチュートリアルを参照してください。  [API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md) を参照してください。
 
 ### データを [!DNL Identity Service] に取り込む
 

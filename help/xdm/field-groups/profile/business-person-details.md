@@ -2,10 +2,10 @@
 title: XDM ビジネス担当者詳細スキーマフィールドグループ
 description: このドキュメントでは、「XDM ビジネスユーザー詳細」スキーマフィールドグループの概要を説明します。
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 21%
+ht-degree: 17%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 21%
 | `workAddress` | [住所](../../data-types/postal-address.md) | 人物の住所。 |
 | `workEmail` | [メールアドレス](../../data-types/email-address.md) | 人物の勤務先の電子メールアドレス。 |
 | `workPhone` | [電話番号](../../data-types/phone-number.md) | 人の勤務先の電話番号。 |
-| `identityMap` | マップ | 人物の名前空間付き ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するため、[リアルタイム顧客プロファイル](../../../profile/home.md)の場合は、データ操作でフィールドの内容を手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
+| `identityMap` | マップ | 人物の名前空間付き ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するために [リアルタイム顧客プロファイル](../../../profile/home.md)の場合は、データ操作でフィールドのコンテンツを手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
 | `isDeleted` | ブール値 | この人物がMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `organizations` | 文字列の配列 | 人物が働く組織名のリスト。 |
 

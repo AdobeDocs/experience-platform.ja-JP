@@ -5,10 +5,10 @@ title: データセット UI ガイド
 topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 37%
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
    * [スキーマエディター](../../xdm/tutorials/create-schema-ui.md):を使用して独自のカスタム XDM スキーマを構築する方法を説明します。 [!DNL Schema Editor] 内 [!DNL Platform] ユーザーインターフェイス。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示 {#view-datasets}
@@ -106,9 +106,9 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ![データを追加画面が表示されます。 データセットの CSV ファイルをアップロードできる場所がハイライト表示されます。](../images/datasets/user-guide/add-csv-data.png)
 
-## リアルタイム顧客プロファイルデータセットの有効化 {#enable-profile}
+## リアルタイム顧客プロファイルのデータセットの有効化 {#enable-profile}
 
-すべてのデータセットには、取得したデータによって顧客プロファイルを拡張する機能があります。これをおこなうには、データセットが準拠するスキーマが、での使用に対して互換性がある必要があります [!DNL Real-time Customer Profile]. 互換性のあるスキーマは、次の要件を満たします。
+すべてのデータセットには、取得したデータによって顧客プロファイルを拡張する機能があります。これをおこなうには、データセットが準拠するスキーマが、での使用に対して互換性がある必要があります [!DNL Real-Time Customer Profile]. 互換性のあるスキーマは、次の要件を満たします。
 
 * スキーマに、ID プロパティとして指定された属性が 1 つ以上あります。
 * スキーマに、プライマリ ID として定義された ID プロパティがあります。

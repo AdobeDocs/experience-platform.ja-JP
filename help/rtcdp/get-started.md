@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
 title: Real-time Customer Data Platformの概要
-description: Adobe Real-time Customer Data Platformの実装を設定する際の例として、次のシナリオのサンプルを使用します。
+description: Adobe Real-time Customer Data Platform の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2333'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -96,7 +96,7 @@ Luma は、訪問者の行動を Adobe Experience Platform のユーザープロ
 
 両方の ID は、 [!DNL Experience Platform]. Luma は今、この消費者を統一的に見ています。
 
-サイトのメンズセクションで匿名訪問者が閲覧した行動に基づいて、顧客が男性であると想定されていた可能性があります。ログイン後、Luma は Sarah Rose を認識します。Luma は、 [!DNL Real-time Customer Profile] 様々なチャネルに配信されるメッセージを絞り込むため。
+サイトのメンズセクションで匿名訪問者が閲覧した行動に基づいて、顧客が男性であると想定されていた可能性があります。ログイン後、Luma は Sarah Rose を認識します。Luma は、 [!DNL Real-Time Customer Profile] 様々なチャネルに配信されるメッセージを絞り込むため。
 
 ## ユーザーエクスペリエンスのパーソナライズ
 
@@ -106,7 +106,7 @@ Sarah はホームページに移動し、さらに参照します。
 
 ![画像](assets/luma-personal.png)
 
-Sarah は、自分のページに基づいて動的に配信される、パーソナライズされたホームページエクスペリエンスを受け取ります [!DNL Real-time Customer Profile] Adobe Experience Platform
+Sarah は、自分のページに基づいて動的に配信される、パーソナライズされたホームページエクスペリエンスを受け取ります [!DNL Real-Time Customer Profile] Adobe Experience Platform
 
 Adobe Target の Adobe Sensei によるパーソナライズ機能により、ランニング用のアパレルやギアに対する過去の購入とアフィニティが考慮され、関連するコンテンツが表示されます。Luma はまた、最近閲覧した男性向けのランニングギアに沿って、男性向けカタログの内容を調整します。
 
@@ -195,11 +195,11 @@ Luma が所有する Sarah に関するプロファイル情報がすべて表�
 
 Real-Time CDPプロファイルは、Luma マーケティングチームのワークフローを数週間から数分に短縮し、この 360 度の顧客ビューに基づいて、パーソナライゼーションの可能性をアンロックします。 このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
 
-マーケティングチームは、この拡張機能を使用できます。 [!DNL Real-time Customer Profile] を使用すると、Sarah のエクスペリエンスをより適切にパーソナライズし、Luma とのブランドロイヤルティを高めることができます。
+マーケティングチームは、この拡張機能を使用できます。 [!DNL Real-Time Customer Profile] を使用すると、Sarah のエクスペリエンスをより適切にパーソナライズし、Luma とのブランドロイヤルティを高めることができます。
 
 ## セグメント
 
-強力なAdobe Experience Platformのセグメント化機能を使用すると、マーケターは、 [!DNL Real-time Customer Profile].
+強力なAdobe Experience Platformのセグメント化機能を使用すると、マーケターは、 [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 

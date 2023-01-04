@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK での IAB TCF 2.0 のサポート
 description: Adobe Experience Platform Web SDK を使用して、IAB TCF 2.0 の同意設定をサポートする方法について説明します。
 keywords: 同意；setConsent；プロファイルプライバシーフィールドグループ；Experience Event プライバシーフィールドグループ；プライバシーフィールドグループ；IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -29,7 +29,7 @@ IAB TCF 2.0 を使用した Web SDK を実装するには、エクスペリエ�
 
 SDK を使用してAdobe Experience Platformに同意データを送信するには、以下が必要です。
 
-- スキーマがに基づくデータセット [!DNL XDM Individual Profile] クラスおよびには TCF 2.0 の同意フィールドが含まれ、での使用が有効になっています。 [!DNL Real-time Customer Profile].
+- スキーマがに基づくデータセット [!DNL XDM Individual Profile] クラスおよびには TCF 2.0 の同意フィールドが含まれ、での使用が有効になっています。 [!DNL Real-Time Customer Profile].
 - 上記の Platform とプロファイル対応データセットを使用して設定されたデータストリーム。
 
 詳しくは、 [TCF 2.0 への準拠](../../../landing/governance-privacy-security/consent/iab/overview.md) 必要なデータセットとデータストリームの作成手順を参照してください。

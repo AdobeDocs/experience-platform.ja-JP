@@ -3,22 +3,22 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: エンティティ（プロファイルアクセス）API エンドポイント
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
+description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1732'
-ht-degree: 90%
+ht-degree: 89%
 
 ---
 
 # エンティティエンドポイント（プロファイルアクセス）
 
-Adobe Experience Platformでは、 [!DNL Real-time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
+Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ID によるプロファイルデータへのアクセス
 
@@ -887,7 +887,7 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドに従うことで、次にアクセスできました： [!DNL Real-time Customer Profile] データフィールド、プロファイル、時系列データ。 に保存されている他のデータリソースにアクセスする方法を学ぶには [!DNL Platform]を参照し、 [データアクセスの概要](../../data-access/home.md).
+このガイドに従うことで、次にアクセスできました： [!DNL Real-Time Customer Profile] データフィールド、プロファイル、時系列データ。 に保存されている他のデータリソースにアクセスする方法を学ぶには [!DNL Platform]を参照し、 [データアクセスの概要](../../data-access/home.md).
 
 ## 付録 {#appendix}
 

@@ -6,8 +6,8 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、既存の XDM スキーマに CSV ファイルをマッピングする方法について説明します。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 100%
 
@@ -121,4 +121,4 @@ CSV ファイルがマッピングされ、作成されたら、CSV ファイル
 
 ## 次の手順
 
-このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、[!DNL Platform] に取り込むことができます。[!DNL Real-time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-time Customer Profile]](../../../profile/home.md) の概要を参照してください。
+このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、[!DNL Platform] に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../profile/home.md) の概要を参照してください。

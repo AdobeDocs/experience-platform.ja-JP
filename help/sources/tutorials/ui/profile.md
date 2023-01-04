@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: ソースコネクタからの受信データは、リアルタイム顧客プロファイルデータのエンリッチメントと生成に使用できます。
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 22%
@@ -15,7 +15,7 @@ ht-degree: 22%
 
 # 顧客プロファイルに入力するインバウンドソースデータを有効化
 
-ソースコネクタからの受信データは、 [!DNL Real-time Customer Profile] データ。
+ソースコネクタからの受信データは、 [!DNL Real-Time Customer Profile] データ。
 
 ## はじめに
 
@@ -24,13 +24,13 @@ ht-degree: 22%
 - [[!DNL Experience Data Model (XDM)]  システム](../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+- [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 さらに、このチュートリアルでは、ソースコネクタを既に作成して設定している必要があります。  UI で様々なコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../home.md).
 
-## を [!DNL Real-time Customer Profile] データ
+## を [!DNL Real-Time Customer Profile] データ
 
-顧客プロファイルを強化するには、ターゲットデータセットのソーススキーマが、 [!DNL Real-time Customer Profile]. 互換性のあるスキーマは、次の要件を満たします。
+顧客プロファイルを強化するには、ターゲットデータセットのソーススキーマが、 [!DNL Real-Time Customer Profile]. 互換性のあるスキーマは、次の要件を満たします。
 
 - スキーマに、ID プロパティとして指定された属性が 1 つ以上あります。
 - スキーマに、プライマリ ID として定義された ID プロパティがあります。
@@ -68,4 +68,4 @@ ht-degree: 22%
 
 ## 次の手順
 
-このチュートリアルに従うことで、の受信データを正常にアクティブ化できました [!DNL Profile] 母集団。 詳しくは、[[!DNL Real-time Customer Profile] 概要](../../../profile/home.md)を参照してください。
+このチュートリアルに従うことで、の受信データを正常にアクティブ化できました [!DNL Profile] 母集団。 詳しくは、[[!DNL Real-Time Customer Profile] 概要](../../../profile/home.md)を参照してください。

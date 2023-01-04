@@ -5,7 +5,7 @@ title: セグメント化サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 97%
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 # [!DNL Segmentation Service] の概要
 
-Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
 
 このドキュメントでは、[!DNL Segmentation Service] の概要と Adobe Experience Platform での役割について説明します。
 
@@ -63,7 +63,7 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 
 ### ストリーミングセグメント化 {#streaming}
 
-ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。セグメントを作成して保存すると、受信データに対してセグメント定義が [!DNL Real-time Customer Profile] に適用されます。セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスの関連性が維持されます。
+ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。セグメントを作成して保存すると、受信データに対してセグメント定義が [!DNL Real-Time Customer Profile] に適用されます。セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスの関連性が維持されます。
 
 ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化のドキュメント](./api/streaming-segmentation.md)を参照してください。
 
@@ -160,7 +160,7 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 
 ## マルチエンティティのセグメント化 {#multi-entity}
 
-高度なマルチエンティティのセグメント化機能により、製品、ストア、その他の非人物（「ディメンション」エンティティとも呼ばれる）に基づく追加データで [!DNL Real-time Customer Profile] データを拡張できます。その結果、[!DNL Segmentation Service] は、セグメント定義時に、[!DNL Profile] データストア本来の方法と同じように、追加のフィールドにアクセスできます。マルチエンティティのセグメント化は、独自のビジネスニーズに関連するデータに基づいて、オーディエンスを識別する際に、柔軟性をもたらします。ユースケースおよびワークフローを含め、詳しくは[マルチエンティティのセグメント化ガイド](multi-entity-segmentation.md)を参照してください。
+高度なマルチエンティティのセグメント化機能により、製品、ストア、その他の非人物（「ディメンション」エンティティとも呼ばれる）に基づく追加データで [!DNL Real-Time Customer Profile] データを拡張できます。その結果、[!DNL Segmentation Service] は、セグメント定義時に、[!DNL Profile] データストア本来の方法と同じように、追加のフィールドにアクセスできます。マルチエンティティのセグメント化は、独自のビジネスニーズに関連するデータに基づいて、オーディエンスを識別する際に、柔軟性をもたらします。ユースケースおよびワークフローを含め、詳しくは[マルチエンティティのセグメント化ガイド](multi-entity-segmentation.md)を参照してください。
 
 ## [!DNL Segmentation Service] データタイプ
 
@@ -168,7 +168,7 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 
 ## 次の手順
 
-[!DNL Segmentation Service] は、[!DNL Real-time Customer Profile] データからセグメントを作成するための統合ワークフローを提供します。まとめ：
+[!DNL Segmentation Service] は、[!DNL Real-Time Customer Profile] データからセグメントを作成するための統合ワークフローを提供します。まとめ：
 
 - [!DNL Segmentation] は、プロファイルストアからプロファイルのサブセットを定義するプロセスで、目的とするマーケティング可能なグループの行動や属性を特定できるようになります。[!DNL Segmentation Service] がこのプロセスを可能にします。
 - セグメントを計画する際、セグメントを他のセグメントから参照したり、他のセグメントと組み合わせたりできます。

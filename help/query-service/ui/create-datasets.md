@@ -6,16 +6,16 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform クエリサービスを使用すると、UI からデータセットを作成できます。データセットを作成したら、データレイク内の他のデータセットと同様にアクセスしたり、様々なユースケースに使用したりできます。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # [!DNL Query Service] の結果からのデータセット生成
 
-[!DNL Query Service] では、クエリを使用して [!DNL Data Lake] にデータセットを生成できます。その後、これらのデータセットをさらなるクエリの入力として使用したり、[!DNL Data Science Workspace]、リアルタイム顧客プロファイル、[!DNL Analysis Workspace] などの他のサービスで使用したりできます。
+[!DNL Query Service] では、クエリを使用して [!DNL Data Lake] にデータセットを生成できます。その後、これらのデータセットを他のクエリや他のサービス ( [!DNL Data Science Workspace]、リアルタイム顧客プロファイル、または [!DNL Analysis Workspace].
 
 ## Adobe Experience Platform ユーザーインターフェイスからのデータセットの生成
 

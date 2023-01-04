@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: （ベータ版）UI での Mixpanel ソース接続の作成
 description: Adobe Experience Platform UI を使用して Mixpanel ソース接続を作成する方法を説明します。
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 34%
+ht-degree: 35%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->この [!DNL Mixpanel] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Mixpanel] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 このチュートリアルでは、 [!DNL Mixpanel] Adobe Experience Platform Platform ユーザーインターフェイスを使用したソース接続
 
@@ -25,7 +25,7 @@ ht-degree: 34%
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ### 必要な認証情報の収集
 

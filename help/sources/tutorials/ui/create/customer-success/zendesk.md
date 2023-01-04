@@ -3,10 +3,10 @@ keywords: Experience Platform;Zendesk；ソース；コネクタ；ソースコ�
 title: UI での Zendesk Source 接続の作成
 description: Adobe Experience Platform UI を使用して Zendesk ソース接続を作成する方法を説明します。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->この [!DNL Zendesk] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Zendesk] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 このチュートリアルでは、 [!DNL Zendesk] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 
@@ -25,13 +25,13 @@ ht-degree: 32%
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Zendesk] プラットフォームのアカウントで、次の資格情報の値を指定する必要があります。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | サブドメイン | 登録プロセス中に作成されたアカウントに固有の一意のドメイン。 | `yoursubdomain` |
 | アクセストークン | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
@@ -80,7 +80,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Zendesk] アカウントとプラットフォーム。 次のチュートリアルに進み、 [データフローを作成して、顧客の成功データを Platform に取り込む](../../dataflow/customer-success.md).
+このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、 [データフローを作成して、顧客の成功データを Platform に取り込む](../../dataflow/customer-success.md).
 
 ## その他のリソース
 
@@ -120,7 +120,7 @@ Platform UI で、「 **[!UICONTROL データセット]** 左側のナビゲー�
 | `results.alias` | 文字列 |
 | `results.created_at` | 文字列 |
 | `results.custom_role_id` | 整数 |
-| `results.default_group_id` | 整数 |
+| `results.default_group_id` | Integer |
 | `results.details` | 文字列 |
 | `results.email` | 文字列 |
 | `results.external_id` | 整数 |

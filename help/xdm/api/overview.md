@@ -5,7 +5,7 @@ title: スキーマレジストリ API ガイド
 description: スキーマレジストリ API を使用すると、開発者は、Adobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 9%

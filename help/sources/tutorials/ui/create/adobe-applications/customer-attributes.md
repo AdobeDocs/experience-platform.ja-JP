@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: UI でソース接続を作成して、顧客属性プロファイルデータをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 39%
@@ -27,7 +27,7 @@ ht-degree: 39%
 >
 >顧客属性プロファイルデータのソース接続を既に確立している場合、ソースに接続するオプションは無効になります。
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。この [!UICONTROL カタログ] screen には、接続を作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。この [!UICONTROL カタログ] screen には、接続を作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
@@ -76,7 +76,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ## 次の手順
 
-接続が作成されると、ターゲットスキーマとデータセットが自動的に作成され、受信データが格納されます。初回の取り込みが完了すると、顧客属性プロファイルデータを、次のようなダウンストリームの Platform サービスで使用できます。 [!DNL Real-time Customer Profile] および [!DNL Segmentation Service]. 詳しくは、次のドキュメントを参照してください。
+接続が作成されると、ターゲットスキーマとデータセットが自動的に作成され、受信データが格納されます。初回の取り込みが完了すると、顧客属性プロファイルデータを、次のようなダウンストリームの Platform サービスで使用できます。 [!DNL Real-Time Customer Profile] および [!DNL Segmentation Service]. 詳しくは、次のドキュメントを参照してください。
 
-* [[!DNL Real-time Customer Profile] 概要](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 概要](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概要](../../../../../segmentation/home.md)

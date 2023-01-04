@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Audien
 title: UI でのAdobe Audience Managerソース接続の作成
 description: このチュートリアルでは、ユーザーインターフェイスを使用してAdobe Audience Managerで消費者エクスペリエンスイベントデータを Platform に取り込むためのソース接続を作成する手順について説明します。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
@@ -62,7 +62,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ![レビュー](../../../../images/tutorials/create/aam/review.png)
 
-データフローをレビューしたら、「 」を選択します。 **[!UICONTROL 完了]** とは、データフローが作成されるまでしばらく時間をかけます。
+データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
 ## 次の手順
 

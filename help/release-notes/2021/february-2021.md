@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1143'
-ht-degree: 98%
+ht-degree: 94%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## （ベータ版）ダッシュボード  {#dashboards}
@@ -56,7 +56,7 @@ Data Science Workspace の一般的な情報については、[Data Science Work
 
 Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
 
-データフローは、Platform 間でデータを移動するデータジョブを表します。これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service] と [!DNL Real-time Customer Profile] がデータを利用してから、最終的に [!DNL Destinations] に対してアクティブ化します。
+データフローは、Platform 間でデータを移動するデータジョブを表します。これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service] と [!DNL Real-Time Customer Profile] がデータを利用してから、最終的に [!DNL Destinations] に対してアクティブ化します。
 
 **新機能**
 
@@ -108,7 +108,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
 
 **新機能**
 
@@ -116,7 +116,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | ------- | ----------- |
 | 計算済み属性（アルファ版） | ***注意：この機能は現在アルファ版であり、一部のユーザーのみが使用できます。ドキュメントと機能は変更される場合があります。*** <br/><br/>計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。その後、集計をセグメント化、有効化、パーソナライズ機能に使用できます。これらの関数の例としては、count、sum、average、min、max、true/false があります。計算済み属性は、現在 API でのみ使用できます。詳しくは、[計算済み属性の概要](../../profile/computed-attributes/overview.md)を参照してください。 |
 
-[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+リアルタイム顧客プロファイルの詳細については、の操作に関するチュートリアルやベストプラクティスを参照してください。 [!DNL Profile] データを読み込む前に、 [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
