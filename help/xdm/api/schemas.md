@@ -5,7 +5,7 @@ title: スキーマ API エンドポイント
 description: Schema Registry API の/schemas エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM スキーマをプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 21%
@@ -374,7 +374,7 @@ curl -X PUT \
 **API 形式**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | パラメーター | 説明 |
@@ -465,7 +465,7 @@ curl -X PATCH\
 **API 形式**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | パラメーター | 説明 |
