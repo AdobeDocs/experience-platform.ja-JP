@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;DULE;dule
 solution: Experience Platform
 title: Policy Service API の概要
-topic-legacy: developer guide
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 100%

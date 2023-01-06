@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;ポリシーの適用;自動適用;API ベースの適用;データガバナンス
 solution: Experience Platform
 title: ポリシー適用の概要
-topic-legacy: guide
 description: Adobe Experience Platformでのデータ使用ポリシーの適用方法を説明します。
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
-source-git-commit: 6f79b1a03a75558d1a25f0375e8393ad56756d80
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 48%

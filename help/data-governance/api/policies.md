@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;ポリシーの適用;API ベースの適用;データガバナンス
 solution: Experience Platform
 title: データガバナンスポリシー API エンドポイント
-topic-legacy: developer guide
 description: データガバナンスポリシーは組織が導入するルールで、Experience Platform内のデータに対して実行を許可（制限）するマーケティングアクションの種類を記述します。 /policies エンドポイントは、データガバナンスポリシーの表示、作成、更新、削除に関連するすべての API 呼び出しに対して使用されます。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 91%

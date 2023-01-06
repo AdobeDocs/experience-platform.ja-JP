@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;データガバナンス;データ使用ポリシー
 solution: Experience Platform
 title: API でのデータガバナンスポリシーの作成
-topic-legacy: policies
 type: Tutorial
 description: Policy Service API を使用してデータガバナンスポリシーを作成する方法を説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 91%
