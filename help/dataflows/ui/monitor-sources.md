@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；アカ
 description: このチュートリアルでは、集計された監視ビューとクロスサービス監視の両方を使用してデータフローを監視する手順を説明します。
 solution: Experience Platform
 title: UI でのソースのデータフローの監視
-topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 16%

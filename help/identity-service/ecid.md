@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ECID;ecid
 solution: Experience Platform
 title: ECID の概要
-topic-legacy: overview
 description: Experience Cloud識別子 (ECID) は、ID 管理へのアクセスを提供するクライアントサイドモジュールで、3 つの主な機能を提供します。
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 10%

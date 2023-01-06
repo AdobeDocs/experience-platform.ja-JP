@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ID 名前空間；ID 名前空間
 solution: Experience Platform
 title: ID サービストラブルシューティングガイド
-topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 75%
@@ -229,7 +228,7 @@ Platform 管理者が、 `view-identity-graph` 権限を持っている必要が
 }
 ```
 
-このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限が切れ、引き続きを使用するには再生成する必要があります。 [!DNL Platform] API 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。
+このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限が切れ、引き続きを使用するには再生成する必要があります。 [!DNL Platform] API 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ### ユーザートークンに有効な製品コンテキストがありません
 
@@ -241,7 +240,7 @@ Platform 管理者が、 `view-identity-graph` 権限を持っている必要が
 }
 ```
 
-このエラーメッセージは、 [!DNL Experience Platform] 統合とも呼ばれます。  統合のための新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。[!DNL Experience Platform]
+このエラーメッセージは、 [!DNL Experience Platform] 統合とも呼ばれます。  統合のための新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。[!DNL Experience Platform]
 
 ### ID とネイティブ XID を取得する際の内部エラーと名前空間コード
 

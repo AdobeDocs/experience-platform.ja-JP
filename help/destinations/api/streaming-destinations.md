@@ -3,13 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API �
 solution: Experience Platform
 title: Adobe Experience Platformのフローサービス API を使用して、ストリーミング宛先に接続し、データをアクティブ化する
 description: このドキュメントでは、Adobe Experience Platform API を使用したストリーミング先の作成について説明します
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 55%
+ht-degree: 57%
 
 ---
 
@@ -17,11 +16,11 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >
->詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>[アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
 
 このチュートリアルでは、API 呼び出しを使用してAdobe Experience Platformデータに接続する方法、ストリーミングクラウドストレージの宛先 ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) または [Azure イベントハブ](../catalog/cloud-storage/azure-event-hubs.md))、新しく作成した宛先へのデータフローを作成し、新しく作成した宛先へのデータをアクティブ化します。
 
@@ -50,7 +49,7 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values}
 
@@ -613,7 +612,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 この特定のチュートリアルでは、次の手順に従います [!DNL Postman] コレクションが添付されました：
 
 * [!DNL AWS Kinesis] [!DNL Postman] collection
-* [!DNL Azure Event Hubs] [!DNL Postman] コレクション
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
 
 クリック [ここ](../assets/api/streaming-destination/DestinationPostmanCollection.zip) コレクションアーカイブをダウンロードします。
 

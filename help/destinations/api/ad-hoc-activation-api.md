@@ -3,13 +3,12 @@ keywords: Experience Platform、宛先 API、アドホックアクティベー�
 solution: Experience Platform
 title: アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスセグメントをアクティブ化します
 description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してオーディエンスセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -250,4 +249,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 ## 関連情報 {#related-information}
 
 * [Flow Service API を使用したバッチ宛先への接続とデータの有効化](/help/destinations/api/connect-activate-batch-destinations.md)
-* [（ベータ版）Experience PlatformUI を使用して、オンデマンドでバッチ保存先にファイルを書き出す](/help/destinations/ui/export-file-now.md)
+* [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](/help/destinations/ui/export-file-now.md)

@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；ID グラフビューア；ID グラフビューア；グラフビューア；グラフビューア；ID 名前空間；ID 名前空間；ID;ID サービス；ID サービス
 solution: Experience Platform
 title: ID グラフビューアの概要
-topic-legacy: tutorial
 description: ID グラフは、特定の顧客の異なる ID 間の関係のマップで、顧客が様々なチャネルを通じてブランドとどのようにやり取りするかを視覚的に示します。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 7%

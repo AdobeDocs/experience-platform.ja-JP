@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；宛先データフローの更新
 solution: Experience Platform
 title: Flow Service API を使用した宛先データフローの更新
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、宛先データフローを更新する手順を説明します。 フローサービス API を使用して、データフローを有効または無効にし、基本情報を更新する方法、またはセグメントと属性を追加および削除する方法について説明します。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 40%
@@ -34,7 +33,7 @@ ht-degree: 40%
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
@@ -503,8 +502,8 @@ curl -X PATCH \
 | `filenameTemplate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。<br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されるファイルには、書き出されたセグメントの ID が含まれます。</li><li>`%SEGMENT_NAME%`: **(オプション)**. 書き出されるファイルには、書き出されたセグメントの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`: **（オプション）**. ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`: **(オプション)**. ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)」の節を参照してください。 |
 | `exportMode` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | セグメントが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
-| `frequency` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
-| `triggerType` | の場合 *バッチ宛先* のみ。 このフィールドは、 `"DAILY_FULL_EXPORT"` モード `frequency` セレクター。 <br>必須。<br> <ul><li>選択 `"AFTER_SEGMENT_EVAL"` ：毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行する場合。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>選択 `"SCHEDULED"` を追加して、特定の時間にアクティベーションジョブを実行する必要があります。 これにより、Experience Platformプロファイルデータは毎日同時に書き出されますが、アクティベーションジョブの開始前にバッチセグメントジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、 `startTime` を使用して、毎日の書き出しが発生する時刻 (UTC) を指定します。</li></ul> |
+| `frequency` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br> 必須. <br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
+| `triggerType` | の場合 *バッチ宛先* のみ。 このフィールドは、 `"DAILY_FULL_EXPORT"` モード `frequency` セレクター。 <br> 必須. <br> <ul><li>選択 `"AFTER_SEGMENT_EVAL"` ：毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行する場合。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>選択 `"SCHEDULED"` を追加して、特定の時間にアクティベーションジョブを実行する必要があります。 これにより、Experience Platformプロファイルデータは毎日同時に書き出されますが、アクティベーションジョブの開始前にバッチセグメントジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、 `startTime` を使用して、毎日の書き出しが発生する時刻 (UTC) を指定します。</li></ul> |
 | `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
 | `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
 

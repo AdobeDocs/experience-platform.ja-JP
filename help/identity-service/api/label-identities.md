@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ラベル ID
 solution: Experience Platform
 title: フィールドの ID としてのラベル付け
-topic-legacy: api guide
 description: 個人を特定できる情報（PII）を含むフィールドは、ID フィールドとしてラベル付けできます。ID フィールドに指定された値は、ID サービスによって ID として解釈されます。ID の名前空間は、フィールドのラベル付けの一部として指定されます。
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 73%

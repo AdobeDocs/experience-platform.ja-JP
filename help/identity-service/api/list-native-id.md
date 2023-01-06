@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ID xid;XID
 solution: Experience Platform
 title: ID のネイティブ ID の取得
-topic-legacy: API guide
 description: ID データは、通常、取得される XDM データの ID 文字列値および ID 名前空間として提供され、API 呼び出しで使用する ID を指定する際に使用されます。ID が ID サービスで保持されると、ID が生成され、ネイティブ XID と呼ばれる ID に割り当てられます。集約された ID と名前空間にこのよりコンパクトなフォームを使用して ID データのサポートを必要とする Platform API。XID は base64 エンコードされた文字列です。
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 76%

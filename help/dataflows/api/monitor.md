@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;データフローのモニター;フローサービス API;フローサービス
 solution: Experience Platform
 title: Flow Service API を使用したデータフローのモニター
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 62%
@@ -35,7 +34,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 

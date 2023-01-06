@@ -2,10 +2,9 @@
 keywords: Experience Platform、ホーム、人気の高いトピック、ID の監視、データフローの監視、データフロー、ID、
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。このチュートリアルでは、Experience Platformユーザーインターフェイスを使用して ID でデータフローを監視する方法について説明します。
 title: UI での ID のデータフローの監視
-topic-legacy: overview
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 14%

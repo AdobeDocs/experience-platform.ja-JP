@@ -2,10 +2,9 @@
 keywords: Experience Platform、ホーム、人気の高いトピック、ID サービス api、ID サービス開発者ガイド、地域
 solution: Experience Platform
 title: ID サービス API ガイド
-topic-legacy: API guide
 description: ID サービス API を使用すると、開発者は、Adobe Experience Platformの ID グラフを使用して、デバイス間、チャネル間、ほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 73%

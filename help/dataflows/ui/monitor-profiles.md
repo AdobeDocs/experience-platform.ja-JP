@@ -2,10 +2,9 @@
 keywords: Experience Platform、ホーム、人気のトピック、プロファイルの監視、データフローの監視、データフロー、プロファイル、リアルタイム顧客プロファイル、
 description: リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティなど複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。 このチュートリアルでは、Experience Platformユーザーインターフェイスを使用してプロファイルでデータフローを監視する方法について説明します。
 title: UI でのプロファイルのデータフローの監視
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 9%

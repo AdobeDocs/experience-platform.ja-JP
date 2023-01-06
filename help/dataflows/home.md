@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;データフロー;データフロー;データ;監視;データフロー監視;データフロー監視;監視;データフロー監視;データフロー監視;フロー;フローサービス;
 solution: Experience Platform
 title: データフローの概要
-topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform でのデータの使い方を示すデータフローを紹介します。
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 85%
