@@ -5,7 +5,7 @@ title: データセット UI ガイド
 topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 36%
@@ -127,7 +127,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルについて詳しくは、『[データガバナンスの概要](../../data-governance/home.md)』を参照してください。また、データセットにラベルを適用する方法については、『[データ使用レベルユーザガイド](../../data-governance/labels/overview.md)』を参照してください。
 
-## データセットの削除
+## データセットの削除 {#delete}
 
 データセットを削除するには、まず&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;画面にアクセスします。次に、 **[!UICONTROL データセットを削除]** をクリックして削除します。
 
