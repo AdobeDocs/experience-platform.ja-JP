@@ -5,7 +5,7 @@ solution: Experience Platform
 title: ソース接続の IP アドレス許可リスト
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: a93b14c0e8390ba1a6c486851900a5933fb26a6d
+source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 100%
@@ -30,6 +30,7 @@ ht-degree: 100%
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
+- `52.138.119.167`
 
 ## NLD2：ヨーロッパ
 
