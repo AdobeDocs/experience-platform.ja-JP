@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；Git;Github
 solution: Experience Platform
 title: Git を使用した JupyterLab での共同作業
-topic-legacy: tutorial
 type: Tutorial
 description: Git は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は、Data Science Workspace JupyterLab 環境内に事前にインストールされています。
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 1%

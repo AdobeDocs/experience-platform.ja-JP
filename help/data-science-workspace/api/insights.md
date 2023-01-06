@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、インサイト、sensei 機械学習 API
 solution: Experience Platform
 title: Insights API エンドポイント
-topic-legacy: Developer guide
 description: インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 96%

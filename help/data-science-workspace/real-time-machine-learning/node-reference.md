@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、Data Science Workspace、人気の高いトピック、リアルタイム機械学習、ノード参照
 solution: Experience Platform
 title: リアルタイム機械学習ノードリファレンス
-topic-legacy: Nodes reference
 description: ノードは、グラフが形成される基本単位です。 各ノードは特定のタスクを実行し、リンクを使用して連結し、ML パイプラインを表すグラフを形成できます。 ノードが実行するタスクは、データやスキーマの変換、機械学習の推論などの入力データに対する操作を表します。 ノードは、変換された値または推測される値を次のノードに出力します。
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### 分割
 
-次のノードを使用して、を渡すことで、データフレームをトレーニングとテストに分割します。 `train_size` または `test_size`. これにより、複数インデックスを持つデータフレームが返されます。 次の例を使用して、トレーニングとテストのデータフレームにアクセスできます。 `msg5.data.xs(“train”)`.
+次のノードを使用して、を渡すことで、データフレームをトレーニングとテストに分割します。 `train_size` または `test_size`. これにより、複数インデックスを持つデータフレームが返されます。 次の例を使用して、トレーニングとテストのデータフレームにアクセスできます。 `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

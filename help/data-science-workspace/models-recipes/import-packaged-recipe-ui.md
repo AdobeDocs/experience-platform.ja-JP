@@ -2,11 +2,10 @@
 keywords: Experience Platform；パッケージ化されたレシピのインポート；Data Science Workspace；人気の高いトピック；レシピ；ui；エンジンの作成
 solution: Experience Platform
 title: パッケージ化されたレシピのインポート（Data Science Workspace UI 版）
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルの最後までに、Adobe Experience Platform Data Science Workspace　でモデルの作成、トレーニング、評価をおこなう準備が整います。
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 37%

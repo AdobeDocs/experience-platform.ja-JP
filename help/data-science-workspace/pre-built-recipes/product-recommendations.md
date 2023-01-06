@@ -2,10 +2,9 @@
 keywords: Experience Platform、製品の推奨レシピ、Data Science Workspace、人気の高いトピック、レシピ、事前作成レシピ
 solution: Experience Platform
 title: 製品のレコメンデーションレシピ
-topic-legacy: overview
 description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 90%

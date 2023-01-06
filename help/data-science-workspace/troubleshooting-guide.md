@@ -2,13 +2,12 @@
 keywords: Experience Platform；トラブルシューティング；Data Science Workspace；人気の高いトピック
 solution: Experience Platform
 title: Data Science Workspace トラブルシューティングガイド
-topic-legacy: Troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace に関するよくある質問に対する回答を示します。
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
@@ -50,7 +49,7 @@ JupyterLab Notebook は、セルがメモリ不足の状態で、無期限に実
 
 ![Chrome の詳細設定](./images/faq/cookies.png)
 
-最後に、「サードパーティCookieのブロック」を「オフ」に切り替えます。
+最後に、「サードパーティ Cookie のブロック」を「オフ」に切り替えます。
 
 ![Chrome の詳細設定](./images/faq/toggle-off.png)
 
@@ -58,7 +57,7 @@ JupyterLab Notebook は、セルがメモリ不足の状態で、無期限に実
 >
 >または、サードパーティ Cookie を無効にして、 [*.]ds.adobe.net を許可リストに追加します。
 
-アドレスバーの「chrome://flags/」に移動します。右側のドロップダウンメニューを使用して、「*SameSite by default cookies*」というフラグを探して無効にします。
+アドレスバーの「chrome://flags/」に移動します。 「 」というタイトルのフラグを検索して無効にします。 *&quot;SameSite by default cookies&quot;* 右側のドロップダウンメニューを使用します。
 
 ![SameSite フラグを無効化](./images/faq/samesite-flag.png)
 

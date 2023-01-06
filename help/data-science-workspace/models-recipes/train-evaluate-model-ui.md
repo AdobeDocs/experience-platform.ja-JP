@@ -2,11 +2,10 @@
 keywords: Experience Platform、トレーニングと評価、Data Science Workspace、人気の高いトピック、モデルの作成、トレーニング実行の作成
 solution: Experience Platform
 title: Data Science Workspace UI でのモデルのトレーニングと評価
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace　では、モデルの意図に適した既存のレシピを組み込むことで、機械学習モデルが作成されます。次に、モデルに関連するハイパーパラメーターを微調整することで、モデルの動作効率と有効性を最適化するようにトレーニングおよび評価します。レシピは再利用可能で、複数のモデルを作成し、単一のレシピで特定の目的に合わせてカスタマイズできます。
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 62%

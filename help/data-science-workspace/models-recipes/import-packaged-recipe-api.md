@@ -2,11 +2,10 @@
 keywords: Experience Platform；パッケージ化されたレシピのインポート；Data Science Workspace；人気の高いトピック；レシピ；api;sensei 機械学習；エンジンの作成
 solution: Experience Platform
 title: パッケージ化されたレシピの読み込み (Sensei Machine Learning API を使用 )
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 62%

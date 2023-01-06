@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、モデル、sensei 機械学習 API
 solution: Experience Platform
 title: モデル API エンドポイント
-topic-legacy: Developer guide
 description: モデルとは、履歴データと設定を使用してトレーニングされた機械学習レシピのインスタンスであり、ビジネス上の使用例について解決します。
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 65%

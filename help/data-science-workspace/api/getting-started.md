@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、Data Science Workspace、Data Science Workspace
 solution: Experience Platform
 title: Sensei Machine Learning API ガイド
-topic-legacy: Developer guide
 description: Sensei Machine Learning API を使用すると、開発者は様々な Data Science Workspace リソースに対して CRUD 操作を実行できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 74%
@@ -32,7 +31,7 @@ ht-degree: 74%
 
 [!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 * Content-Type：application/json
 

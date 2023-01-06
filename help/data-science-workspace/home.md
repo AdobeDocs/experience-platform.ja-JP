@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;Data Science Workspace;人気のトピック;data science workspace;データサイエンス
 solution: Experience Platform
 title: Data Science Workspace の概要
-topic-legacy: overview
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%

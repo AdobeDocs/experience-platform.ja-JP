@@ -2,11 +2,10 @@
 keywords: Experience Platform；モデルのスコア付け；Data Science Workspace；人気の高いトピック；ui；スコア付け実行；スコア付け結果
 solution: Experience Platform
 title: Data Science Workspace UI でのモデルのスコア付け
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace　でのスコアリングは、既存のトレーニング済みモデルに入力データを送ることで達成できます。次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 31%

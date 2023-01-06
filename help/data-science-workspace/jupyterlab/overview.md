@@ -2,10 +2,9 @@
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；jupyterlab
 solution: Experience Platform
 title: JupyterLab UI の概要
-topic-legacy: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コード、データを操作するための、インタラクティブな開発環境を提供します。 このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 56%
@@ -149,7 +148,7 @@ In [!DNL JupyterLab]を使用している場合は、セッションを終了し
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | ○ | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | ○ | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
-| **Scala** | × | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | いいえ | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### カーネルセッション {#kernel-sessions}
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；データノートブックの分析；eda；探索的データ分析；データサイエンス
 solution: Experience Platform
 title: Exploratory Data Analysis(EDA) ノートブック
-topic-legacy: overview
 type: Tutorial
 description: このガイドでは、調査データ分析 (EDA) ノートブックを使用して、Web データのパターンを検出する方法、予測目標を持つイベントを集計する方法、集計データを消去する方法、および予測者と目標の関係を理解する方法に焦点を当てます。
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；クエリサービス
 solution: Experience Platform
 title: Jupyter ノートブックでのクエリサービス
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例に対する SQL クエリの例を示します。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 58%

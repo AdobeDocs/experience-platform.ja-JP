@@ -2,11 +2,10 @@
 keywords: Experience Platform；機械学習モデル；Data Science Workspace；人気の高いトピック；モデルの作成と公開
 solution: Experience Platform
 title: 機械学習モデルの作成と公開
-topic-legacy: tutorial
 type: Tutorial
 description: 次のガイドでは、機械学習モデルの作成と公開に必要な手順を説明します。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 12%

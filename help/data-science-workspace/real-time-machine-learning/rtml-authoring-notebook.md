@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、Data Science Workspace、人気の高いトピック、リアルタイム機械学習、ノード参照、
 solution: Experience Platform
 title: リアルタイムの機械学習ノートブックを管理
-topic-legacy: Training and scoring a ML model
 description: 次のガイドでは、Adobe Experience Platform JupyterLab でリアルタイム機械学習アプリケーションを構築するために必要な手順の概要を説明します。
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%

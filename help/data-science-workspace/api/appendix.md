@@ -2,10 +2,9 @@
 keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック
 solution: Experience Platform
 title: Sensei Machine Learning API ガイドの付録
-topic-legacy: Developer guide
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 80%

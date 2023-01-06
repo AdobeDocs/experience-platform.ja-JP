@@ -2,11 +2,10 @@
 keywords: Experience Platform;Luma Web データ；Data Science Workspace；人気の高いトピック；レシピ；デモデータ；デモ Web データ；Luma データ
 solution: Experience Platform
 title: Luma Web スキーマとデータセットの作成
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Luma デモ傾向モデルに必要な前提条件とアセットについて説明します。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 2%

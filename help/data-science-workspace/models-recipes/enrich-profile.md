@@ -2,11 +2,10 @@
 keywords: Experience Platform；機械学習モデル；Data Science Workspace；リアルタイム顧客プロファイル；人気のトピック；機械学習のインサイト
 solution: Experience Platform
 title: リアルタイム顧客プロファイルと機械学習のインサイトの強化
-topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、リアルタイム顧客プロファイルと機械学習のインサイトを強化する方法に関するガイドを提供します。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 15%

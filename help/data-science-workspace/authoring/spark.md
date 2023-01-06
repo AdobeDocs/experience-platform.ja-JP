@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；データアクセス；spark sdk；データアクセス api;spark レシピ；read spark;write spark
 solution: Experience Platform
 title: Data Science Workspace の Spark を使用したデータへのアクセス
-topic-legacy: tutorial
 type: Tutorial
 description: 次のドキュメントには、Spark を使用して Data Science Workspace でデータにアクセスし、使用する方法の例が含まれています。
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
