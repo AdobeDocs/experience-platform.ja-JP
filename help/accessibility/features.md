@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;統合プロファイル;統合プロファイル;統合;プロファイル;rtcp;XDMグラフ
 title: Platform の一般的なアクセシビリティ機能
-topic-legacy: guide
 type: Documentation
 description: キーボードナビゲーション、カラーパレットとコントラスト、支援テクノロジーのサポートなど、Adobe Experience Platform でサポートされている一般的なアクセシビリティ機能について説明します。
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 100%

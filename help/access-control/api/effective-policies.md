@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;効果的なポリシー;access control api
 solution: Experience Platform
 title: 有効なポリシー API エンドポイント
-topic-legacy: developer guide
 description: Adobe Experience Platformのアクセス制御 API を使用して、効果的なアクセスポリシーを表示する方法を説明します。
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 80%

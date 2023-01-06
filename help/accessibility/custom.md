@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;統合プロファイル;統合プロファイル;統合;プロファイル;rtcp;XDMグラフ
 title: Experience Platform のカスタムアクセシビリティソリューション
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform ユーザーインターフェイス内のカスタムアクセシビリティソリューションについて詳しく説明します。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 94%

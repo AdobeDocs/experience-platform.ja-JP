@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;API;はじめに
 solution: Experience Platform
 title: アクセス制御 API ガイド
-topic-legacy: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。次の節では、Schema Registry API を正しく呼び出すために、開発者が知っておく必要がある追加情報を示します。
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 97%
@@ -45,7 +44,7 @@ ht-degree: 97%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 - Content-Type：application/json
 

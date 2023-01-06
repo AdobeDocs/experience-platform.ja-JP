@@ -2,13 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック;トラブルシューティング;アクセス制御
 solution: Experience Platform
 title: アクセス制御トラブルシューティングガイド
-topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 78%
+ht-degree: 97%
 
 ---
 
@@ -36,4 +35,4 @@ IMS 組織のシステム管理者、製品管理者、製品プロファイル�
 
 ## AdobeI/O から Business ID に移行した後、権限はどうなりますか。
 
-アクセス制御は、権限の付与にユーザー ID（ユーザーに割り当てられた内部の一意の ID）を使用します。 組織をAdobe IDから Business ID に移行すると、ユーザー ID が変更され、アクセス制御で新しく生成されたユーザー ID が使用されるので、ユーザーに設定されたすべての権限は失われます。 組織が Business ID に移行されている場合、Adobe担当者に連絡して、Adobe IDから Business ID にユーザー ID を移行してください。
+アクセス制御は、権限の付与にユーザー ID（ユーザーに割り当てられた内部の一意の ID）を使用します。組織を Adobe ID から Business ID に移行すると、ユーザー ID が変更され、新しく生成されたユーザー ID がアクセス制御で使用されるので、そのユーザーに設定されたすべての権限は失われます。組織が Business ID に移行されている場合、アドビ担当者に連絡して、Adobe IDから Business ID にユーザー ID を移行してください。

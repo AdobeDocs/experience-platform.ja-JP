@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;Adobe admin console
 solution: Experience Platform
 title: アクセス制御 UI の概要
-topic-legacy: user guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Admin Console を操作して Platform のアクセス制御を管理する方法について説明します。
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 100%

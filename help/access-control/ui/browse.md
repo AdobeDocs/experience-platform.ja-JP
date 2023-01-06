@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 製品プロファイルを選択してアクセス制御権限を編集する
-topic-legacy: user guide
 description: このドキュメントでは、アクセス制御ワークスペースを参照するために必要な手順について説明します。Adobe Admin Console を使用して Experience Platform のアクセス制御を設定するには、Experience Platform のサブスクリプションを取得している IMS 組織の管理者である必要があります。
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 8dc88f3b9aa6ea25a43427d043749c665e0e9281
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 100%
