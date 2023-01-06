@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;Data Lake のプライバシー;ID 名前空間;プライバシー;Data Lake
 solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 73%

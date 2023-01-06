@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；オブジェクトの削除；カタログサービス；API
 solution: Experience Platform
 title: API でのオブジェクトの削除
-topic-legacy: developer guide
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 47%

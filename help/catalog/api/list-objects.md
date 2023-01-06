@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；フィルター；フィルター；データのフィルター；データのフィルター
 solution: Experience Platform
 title: カタログオブジェクトのリスト
-topic-legacy: developer guide
 description: 1 回の API 呼び出しで、特定のタイプの使用可能なすべてのオブジェクトのリストを取得できます。ベストプラクティスは、応答のサイズを制限するフィルターを含めることです。
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 53%

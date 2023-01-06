@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログ api；付録
 solution: Experience Platform
 title: カタログサービス API ガイドの付録
-topic-legacy: developer guide
 description: このドキュメントには、Adobe Experience Platformでカタログ API を使用する際に役立つ追加情報が含まれています。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 75%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;データ収集;launch;web sdk
 solution: Experience Platform
 title: データ収集の概要
-topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 69%

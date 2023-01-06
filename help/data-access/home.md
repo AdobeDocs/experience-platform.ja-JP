@@ -2,10 +2,9 @@
 keywords: Experience Platform：ホーム;人気のトピック;データアクセス;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: データアクセスの概要
-topic-legacy: overview
 description: Data Access は、取り込まれた Platform データセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platform をサポートします。
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 100%

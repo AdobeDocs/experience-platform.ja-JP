@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログ；カタログサービス；カタログ
 solution: Experience Platform
 title: カタログサービス API ガイド
-topic-legacy: developer guide
 description: カタログサービス API を使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 58%
@@ -22,7 +21,7 @@ ht-degree: 58%
 
 [!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを内でトラッキングします。 [!DNL Experience Platform]. この開発者ガイドでは、 [!DNL Experience Platform] 以下のリソースの作成と管理に関わるサービス：
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
 * [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):方法 [!DNL Experience Platform] クライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存します。
 
@@ -48,7 +47,7 @@ ht-degree: 58%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 * Content-Type：application/json
 
