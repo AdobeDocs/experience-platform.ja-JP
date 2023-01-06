@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;CSV のマップ;CSV ファイルのマップ;xdm への CSV ファイルのマップ;xdm への CSV のマップ;ui ガイド;マッパー;マッピング;data prep;データ準備;データの準備;
 solution: Experience Platform
 title: Data Prep でのデータ形式の取り扱い
-topic-legacy: overview
 description: このドキュメントでは、Data Prep における様々なデータ型の処理方法の概要について説明します。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 98%

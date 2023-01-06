@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;data prep;data prep api;トラブルシューティング;API
 title: Data Prep API の概要
-topic-legacy: guide
 description: Data Prep API を使用すると、マッピングセットと関数をプログラムによって作成し、ソーススキーマと宛先スキーマの間でデータを変換できます。
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 100%

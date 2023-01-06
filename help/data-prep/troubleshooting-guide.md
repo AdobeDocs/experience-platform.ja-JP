@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;
 title: Data Prep トラブルシューティングガイド
-topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Prep に関するよくある質問に対する回答を示します。
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 2%
