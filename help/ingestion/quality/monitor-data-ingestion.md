@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；監視；監視；データフロー；取得の監視；データ取得；データ取得；レコードの表示；バッチの表示；
 solution: Experience Platform
 title: データ取得の監視
-topic-legacy: overview
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 34%

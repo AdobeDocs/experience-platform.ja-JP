@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ取得；バッチ；バッチ；データセットの有効化；バッチ取得の概要；概要；バッチ取得の概要；
 solution: Experience Platform
 title: バッチ取得 API の概要
-topic-legacy: overview
 description: Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 74%
@@ -63,16 +62,16 @@ Adobe Experience Platform Data Ingest API を使用すると、データをバ�
 
 | 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 文字列 | X | X | X | X | X | X | X | X |  |  |
+| String | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
 | Short | X | X | X | X | X | X |  |  |  |  |
-| 整数 | X | X | X | X | X | X |  |  |  |  |
+| Integer | X | X | X | X | X | X |  |  |  |  |
 | Long | X | X | X | X | X | X | X | X |  |  |
-| ダブル | X | X | X | X | X | X |  |  |  |  |
-| 日付 |  |  |  |  |  |  | X |  |  |  |
+| Double | X | X | X | X | X | X |  |  |  |  |
+| Date |  |  |  |  |  |  | X |  |  |  |
 | Date-Time |  |  |  |  |  |  |  | X |  |  |
-| オブジェクト |  |  |  |  |  |  |  |  | X | X |
-| マップ |  |  |  |  |  |  |  |  | X | X |
+| Object |  |  |  |  |  |  |  |  | X | X |
+| Map |  |  |  |  |  |  |  |  | X | X |
 
 >[!NOTE]
 >

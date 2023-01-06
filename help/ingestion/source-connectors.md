@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: ソースコネクタ
-topic-legacy: overview
 description: ソース接続を使用すると、ストレージシステムと CRM サービスの認証、取り込みの実行時間の設定、データ取り込みのスループットの管理をおこなうことができます。
 exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 82%

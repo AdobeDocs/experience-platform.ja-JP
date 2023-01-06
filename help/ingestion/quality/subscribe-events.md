@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ取り込み通知；通知；購読イベント；データ取り込みステータスイベント；ステータスイベント；購読；ステータス通知；
 solution: Experience Platform
 title: データ取得通知
-topic-legacy: overview
 description: 取り込みプロセスの監視に役立つように、Adobe Experience Platformでは、プロセスの各手順で公開された一連のイベントをサブスクライブし、取り込んだデータのステータスと考えられるエラーを通知できます。
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 28%

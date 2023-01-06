@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；取り込み；バッチデータの取り込み；チュートリアル；バッチ取り込み；チュートリアル；ui ガイド；
 solution: Experience Platform
 title: データの取り込みExperience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platformでは、Parquet ファイルの形式のバッチファイル、または既知の Experience Data Model(XDM) スキーマに準拠するデータを、簡単にバッチファイルとして読み込むことができます。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%
@@ -83,7 +82,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 データセットは、にデータを取り込むために使用されます [!DNL Experience Platform]に含まれるデータは、最終的には個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 この情報を組み合わせたものを、 [!DNL Real-Time Customer Profile]. 次のために [!DNL Platform] どの情報を含めるべきかを知る [!DNL Real-Time Profile]を使用すると、データセットを **[!UICONTROL プロファイル]** 切り替え
 
-デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれたすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
+デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれるすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
 
 詳しくは、以下を参照してください。 [!DNL Real-Time Customer Profile] ID の使用については、 [ID サービス](../../identity-service/home.md) ドキュメント。
 

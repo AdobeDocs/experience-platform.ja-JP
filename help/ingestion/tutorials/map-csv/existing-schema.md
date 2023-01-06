@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;CSV のマッピング;CSV ファイルのマッピング;xdm への CSV ファイルのマッピング;xdm への CSV のマッピング;ui ガイド;
 solution: Experience Platform
 title: 既存の XDM スキーマへの CSV ファイルのマッピング
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、既存の XDM スキーマに CSV ファイルをマッピングする方法について説明します。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 100%

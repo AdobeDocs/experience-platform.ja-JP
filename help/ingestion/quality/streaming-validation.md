@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；非同期検証；
 solution: Experience Platform
 title: ストリーミング取り込みの検証
-topic-legacy: tutorial
 type: Tutorial
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 83%
@@ -26,7 +25,7 @@ ht-degree: 83%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
@@ -44,7 +43,7 @@ ht-degree: 83%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
 - Content-Type: `application/json`
 
@@ -206,7 +205,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | ----------- | ------------- |
 | 200 | 成功です。同期検証の場合は、検証チェックに合格したことを意味します。非同期検証の場合は、メッセージが正常に受信されたことだけを意味します。最終的なメッセージのステータスは、データセットを観察することで確認できます。 |
 | 400 | エラーです。リクエストに何か間違いがあります。ストリーミング検証サービスから、詳細を含んだエラーメッセージが表示されます。 |
-| 401 | エラーです。リクエストは未承認です。ベアラトークンを使用してリクエストする必要があります。アクセスをリクエストする方法について詳しくは、[このチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)または[ブログ投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。 |
+| 401 | エラーです。リクエストは未承認です。ベアラトークンを使用してリクエストする必要があります。アクセスをリクエストする方法について詳しくは、[このチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)または[ブログ投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。 |
 | 500 | エラーです。内部システムエラーが発生しました。 |
 | 501 | エラーです。つまり、この場所では同期検証が&#x200B;**サポートされていません**。 |
 | 503 | エラーです。サービスは現在利用できません。クライアントは、指数バックオフ戦略を使用して、少なくとも 3 回再試行する必要があります。 |

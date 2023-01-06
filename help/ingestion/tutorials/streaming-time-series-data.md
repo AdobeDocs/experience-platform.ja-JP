@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング取り込み；取り込み；時系列データ；時系列データ；ストリーム；
 solution: Experience Platform
 title: ストリーミング取得 API を使用した時系列データのストリーミング
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 62%
