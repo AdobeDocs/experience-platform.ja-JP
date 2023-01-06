@@ -1,9 +1,9 @@
 ---
 title: ID サービスの削除
 description: このドキュメントでは、Experience Platformで ID データを削除するために使用できる様々なメカニズムの概要と、ID グラフがどのように影響を受けるかの明確な説明を提供します。
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 12%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform ID サービスは、個人のデバイスやシステ
 | 受け入れられた使用例 | データプライバシーリクエスト (GDPR、CCPA) のみ。 | Experience Platformに保存されたデータの管理。 |
 | 推定遅延 | 数日から数週間 | Days |
 | 影響を受けるサービス | Privacy Serviceでの単一の ID 削除を使用すると、データを ID サービス、リアルタイム顧客プロファイル、データレイクのどれから削除するかを選択できます。 | データ衛生状態で単一の ID を削除すると、ID サービス、リアルタイム顧客プロファイル、データレイクをまたいで、選択したデータが削除されます。 |
-| 削除パターン | ID サービスから ID を削除します。 | ID とそれに対応するすべてのリンクを、ID サービス、すべてのデータセット、または単一のデータセットから完全に削除します。 |
+| 削除パターン | ID サービスから ID を削除します。 | ID サービスから ID を削除します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
