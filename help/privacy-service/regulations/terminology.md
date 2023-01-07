@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；GDPR;GDPR;CCPA;CCPA;PDPA;pdpa;LGPD；概要；概要；規則；規則；規制；プライバシー；プライバシー；
 solution: Experience Platform
 title: プライバシー規制の用語
-topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Cloudでサポートされるプライバシー規制に関する主な用語の定義を示します。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 65ff39c99eee98654daee89c86d6047dc055c196
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 10%

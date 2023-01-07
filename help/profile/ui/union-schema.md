@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform，プロファイル，リアルタイム顧客プロファイル，統合プロファイル，統合プロファイル，統合，プロファイル， rtcp，プロファイルの有効化，プロファイルの有効化，和集合スキーマ， UNION プロファイル，和集合プロファイル
 title: 和集合スキーマ UI ガイド
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformユーザーインターフェイス (UI) では、組織内の任意の和集合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係、貢献するスキーマをプレビューできます。 このガイドでは、Platform UI を使用して和集合スキーマを表示および調査する方法に関する詳細情報を提供します。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 4%

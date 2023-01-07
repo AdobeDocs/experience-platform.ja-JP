@@ -2,13 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Privacy Serviceリリースノート
-topic-legacy: release notes
 description: Adobe Experience Platform Privacy Serviceの最新のリリースノートです。
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 58%
+ht-degree: 54%
 
 ---
 
@@ -62,7 +61,7 @@ ht-degree: 58%
 | 機能 | 説明 |
 | --- | --- |
 | リクエスト指標ダッシュボード | 新しい指標ダッシュボード ( [!DNL Privacy Service] UI では、送信された GDPR リクエスト、エラーが発生した GDPR リクエスト、完了した GDPR リクエストを表示できます。 |
-| リクエストビルダー | サービス組織の技術ユーザーとそれ以外のユーザーの両方が GDPR リクエストを送信する場合、UI にリクエストを作成する機能が追加されます。JSON ファイル送信機能は、引き続き [!DNL Privacy Service] 引き続き使用する組織の UI。 |
+| リクエストビルダー | GDPR リクエストを送信する技術ユーザーと非技術ユーザーの両方を持つ組織に対して、UI に「リクエストを作成」機能が追加されました。 JSON ファイル送信機能は、引き続き [!DNL Privacy Service] 引き続き使用する組織の UI。 |
 | GDPR ジョブイベントの通知 | GDPR ジョブのステータスに関するイベント通知は、多くのワークフローにとって重要な要素です。これまで、通知は個々の電子メール通知を使用して提供されていましたが、GDPR イベント通知は Adobe I/O イベントを活用するメッセージです。このメッセージは、設定済みの Webhook に送信されるので、ジョブリクエストの自動化が容易になります。[!DNL Privacy Service] UI ユーザーは、Adobe I/O GDPR イベントを登録することで、製品のジョブまたは GDPR ジョブが完了したときに更新を受け取ることができます。 |
 
 ## 2019年4月18日

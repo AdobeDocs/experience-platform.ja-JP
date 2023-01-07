@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API、統合プロファイル、統合プロファイル、統合プロファイル、プロファイル、rtcp、有効プロファイル、有効プロファイル、和集合スキーマ、和集合プロファイル
 title: リアルタイム顧客プロファイル UI ガイド
-topic-legacy: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platformユーザーインターフェイスでリアルタイム顧客プロファイルを操作する際のガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%

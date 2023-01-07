@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
 title: エッジ投影 API エンドポイント
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformでは、複数のチャネルをまたいで顧客に対して、調整され、一貫性とパーソナライズされたエクスペリエンスをリアルタイムで提供できます。これにより、変更が発生したときに適切なデータを容易に利用でき、継続的に更新できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーであるエッジを使用しておこなわれます。
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 86%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Adobeプライバシー JavaScript ライブラリの概要
-topic-legacy: overview
 description: Adobeプライバシー JavaScript ライブラリを使用すると、Privacy Serviceで使用するデータ主体の ID を取得できます。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 59%

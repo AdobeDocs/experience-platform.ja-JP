@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
 title: 計算済み属性の PQL 式の例
-topic-legacy: guide
 type: Documentation
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数では、有効なプロファイルクエリ言語 (PQL) 式を使用する必要があります。 このガイドでは、計算済み属性で最もよく使用される PQL 式の一部を説明します。
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 4%

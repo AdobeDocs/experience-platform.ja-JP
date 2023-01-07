@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Privacy Serviceイベントに登録
-topic-legacy: privacy events
 description: 事前設定済みの Webhook を使用してPrivacy Serviceイベントに登録する方法を説明します。
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 15%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；書き出し；書き出し
 solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
-topic-legacy: UI guide
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 58%
