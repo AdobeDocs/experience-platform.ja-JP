@@ -3,10 +3,9 @@ keywords: Experience Platform；インサイト；顧客 AI；人気の高いト
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 予測スコアを使用した顧客セグメントの作成
-topic-legacy: Create a segment
 description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 78%

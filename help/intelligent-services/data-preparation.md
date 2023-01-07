@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；インテリジェントサービス；人気の高いトピック；インテリジェントサービス；インテリジェントサービス
 solution: Experience Platform
 title: インテリジェントサービスで使用するデータの準備
-topic-legacy: Intelligent Services
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを検出するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するために Experience Data Model(XDM) スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -183,13 +182,13 @@ CEE フィールドグループ内には、次の目的で使用する必要の�
 | チャネル | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | 有料検索 | https:/<span>/ns.adobe.com/xdm/channel-types/search | 有料 | clicks |
-| ソーシャル — マーケティング | https:/<span>/ns.adobe.com/xdm/channel-types/social | 獲得 | クリック数 |
-| 表示 | https:/<span>/ns.adobe.com/xdm/channel-types/display | 有料 | クリック数 |
-| メール | https:/<span>/ns.adobe.com/xdm/channel-types/email | 有料 | クリック数 |
-| 内部リファラー | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 所有 | クリック数 |
+| ソーシャル — マーケティング | https:/<span>/ns.adobe.com/xdm/channel-types/social | 獲得 | clicks |
+| 表示 | https:/<span>/ns.adobe.com/xdm/channel-types/display | 有料 | clicks |
+| メール | https:/<span>/ns.adobe.com/xdm/channel-types/email | 有料 | clicks |
+| 内部リファラー | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 所有 | clicks |
 | ViewThrough を表示 | https:/<span>/ns.adobe.com/xdm/channel-types/display | 有料 | impressions |
-| QR コードのリダイレクト | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 所有 | クリック数 |
-| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | 所有 | クリック数 |
+| QR コードのリダイレクト | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 所有 | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | 所有 | clicks |
 
 ### 推奨フィールド
 

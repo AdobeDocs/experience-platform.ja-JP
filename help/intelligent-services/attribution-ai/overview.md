@@ -2,11 +2,10 @@
 keywords: Experience Platform;attribution ai の概要；人気の高いトピック；attribution ai;Attribution ai
 feature: Attribution AI
 title: Attribution AIの概要
-topic-legacy: Attribution AI
 description: Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。タッチポイントの例としては、ディスプレイ広告インプレッション、E メールの送信、E メールの開封、有料検索のクリックなどがあります。
 landing-page-description: アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 77%

@@ -3,10 +3,9 @@ keywords: Experience Platform；インサイト；顧客 ai；人気のトピッ
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI でインサイトを見つける
-topic-legacy: Discovering insights
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 31%

@@ -3,10 +3,9 @@ keywords: Experience Platform；はじめに；顧客 ai；人気の高いトピ
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI の概要
-topic-legacy: Getting started
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 58%

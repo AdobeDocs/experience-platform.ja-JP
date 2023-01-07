@@ -2,10 +2,9 @@
 keywords: Experience Platform；はじめに；content ai;commerce ai;content and commerce ai
 solution: Experience Platform
 title: Content and Commerce AI の概要
-topic-legacy: Getting started
 description: Content and Commerce AI はAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%
@@ -50,7 +49,7 @@ Adobe Developerコンソール内でプロジェクトと API を設定したら
 
 ![](./images/click-open.png)
 
-次のページにリダイレクトされます： *環境の管理* タブに新しい環境名が入力されます。 環境名を選択して、Postmanで使用可能な変数を表示および編集します。 引き続き、 `JWT_TOKEN` および `ACCESS_TOKEN`. これらの値は、 [認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en).
+次のページにリダイレクトされます： *環境の管理* タブに新しい環境名が入力されます。 環境名を選択して、Postmanで使用可能な変数を表示および編集します。 引き続き、 `JWT_TOKEN` および `ACCESS_TOKEN`. これらの値は、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja).
 
 ![](./images/re-direct.png)
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform、attribution ai、アクセススコア、人気の高いトピック、ダウンロードスコア、attribution ai スコア、書き出し、書き出し
 feature: Attribution AI
 title: スコアのダウンロード (Attribution AI)
-topic-legacy: Downloading scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 67%
