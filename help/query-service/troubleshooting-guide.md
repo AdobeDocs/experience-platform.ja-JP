@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
 solution: Experience Platform
 title: クエリサービストラブルシューティングガイド
-topic-legacy: troubleshooting
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。 トピックには、データのエクスポート、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 5%

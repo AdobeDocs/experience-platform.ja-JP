@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
 solution: Experience Platform
 title: クエリサービスでのクエリ実行に関する一般的なガイダンス
-topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 45%

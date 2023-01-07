@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
 solution: Experience Platform
 title: エクスペリエンスイベントのサンプルクエリ
-topic-legacy: queries
 type: Tutorial
 description: 次のドキュメントは、Adobe Experience Platform Query Service の Experience Events に関するクエリの例を示しています。
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 58%

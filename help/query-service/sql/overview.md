@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL;SQL 参照；
 solution: Experience Platform
 title: クエリサービス SQL リファレンス
-topic-legacy: reference
 description: Adobe Experience Platformクエリサービスは、標準の ANSI SQL を SELECT 文やその他の制限付きコマンドに使用する機能を提供します。
 exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

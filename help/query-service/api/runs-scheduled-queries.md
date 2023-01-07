@@ -2,13 +2,12 @@
 keywords: Experience Platform、ホーム、人気の高いトピック、クエリサービス、スケジュール済みクエリの実行、スケジュール済みクエリの実行、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ、
 solution: Experience Platform
 title: スケジュール済みクエリ実行 API エンドポイント
-topic-legacy: runs for scheduled queries
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリを実行するために実行できる様々な API 呼び出しについて説明します。
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 88%
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーを理解できたので、 [!DNL Query Service] API 以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+使用するヘッダーを理解できたので、[!DNL Query Service] API への呼び出しを開始できます。以下の節では、 [!DNL Query Service] API 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### 指定されたスケジュール済みクエリのすべての実行のリストを取得
 

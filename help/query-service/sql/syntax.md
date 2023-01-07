@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL 構文；SQL;CTAS;CTAS；選択としてテーブルを作成
 solution: Experience Platform
 title: クエリサービスの SQL 構文
-topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 8%

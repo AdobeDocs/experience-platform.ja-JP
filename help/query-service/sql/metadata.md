@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql；クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
 title: クエリサービスでのメタデータ PostgreSQL コマンド
-topic-legacy: metadata
 description: Adobe Experience Platformクエリサービスでメタデータのクエリが現在サポートされている PostgreSQL コマンドのリストです。
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 78%

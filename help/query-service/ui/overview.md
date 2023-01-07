@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;クエリサービス;クエリサービス;クエリ;クエリエディター;クエリエディター;クエリエディター;
 solution: Experience Platform
 title: Query Service UI ガイド
-topic-legacy: guide
 description: Adobe Experience Platform Query Service は、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 86%

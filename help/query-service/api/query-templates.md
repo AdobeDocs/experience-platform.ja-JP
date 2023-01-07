@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリテンプレート；api ガイド；テンプレート；クエリサービス；
 solution: Experience Platform
 title: クエリテンプレート API エンドポイント
-topic-legacy: query templates
 description: このガイドでは、クエリサービス API を使用して実行できる様々なクエリテンプレート API 呼び出しの詳細を説明します。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 89%

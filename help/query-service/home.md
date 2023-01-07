@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;query service;Query service;クエリ
 solution: Experience Platform
 title: クエリサービスの概要
-topic-legacy: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 87%

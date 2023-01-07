@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ例；クエリ例；クエリ例； adobe analytics;
 solution: Experience Platform
 title: Adobe Analytics Data のクエリ例
-topic-legacy: queries
 description: 選択したAdobe Analyticsレポートスイートのデータは XDM ExperienceEvents に変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、クエリサービスがこのデータを利用する多くの使用例の概要を説明し、Adobe Analyticsデータセットと連携するように設計されたサンプルクエリを示します。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 41%
@@ -20,7 +19,7 @@ ht-degree: 41%
 
 詳しくは、 [analytics の使用例ドキュメント](../use-cases/analytics-insights.md) を参照して、取り込んだAdobe Analyticsデータから実用的なインサイトを作成するクエリサービスの使用方法を確認してください。
 
-## 重複の除外
+## 重複排除
 
 [!DNL Query Service] は、データの重複排除をサポートします。 詳しくは、 [でのデータ重複排除 [!DNL Query Service] ドキュメント](../best-practices/deduplication.md) を参照してください。 [!DNL Experience Event] データセット。
 

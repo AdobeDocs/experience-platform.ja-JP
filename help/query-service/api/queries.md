@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；API ガイド；クエリ；クエリ；クエリサービス；
 solution: Experience Platform
 title: クエリ API エンドポイント
-topic-legacy: queries
 description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 92%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；データ重複排除；重複排除；
 solution: Experience Platform
 title: クエリサービスでのデータ重複排除
-topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、エクスペリエンスイベント、購入、指標の 3 つの一般的な使用例の重複を排除するための、サブ選択と完全なサンプルクエリの例について説明します。
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 15%

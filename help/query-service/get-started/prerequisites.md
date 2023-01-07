@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；クエリサービス；クエリサービス；クエリ
 title: Adobe Experience Platform Query Service の概要
-topic-legacy: tutorial
 description: Adobe Experience Platform Query Service を最大限に活用するために必要な手順の分類
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 8%

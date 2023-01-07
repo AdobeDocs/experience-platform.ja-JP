@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ；クエリエディター；クエリエディター；クエリエディター；
+keywords: Experience Platform;ホーム;人気の高いトピック;クエリサービス;クエリサービス;クエリ;クエリエディター;クエリエディター;クエリエディター;
 solution: Experience Platform
 title: クエリサービス資格情報ガイド
-topic-legacy: guide
-description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
+description: Adobe Experience Platform Query Service は、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 

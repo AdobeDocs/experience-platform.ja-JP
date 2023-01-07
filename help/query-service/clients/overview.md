@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；クエリサービス；接続；クエリサービスへの接続；Aqua Data Studio;Looker;Postico;postico;Power BI;power bi;psql;PSQL;RStudio;Tableau;Tableau;
 solution: Experience Platform
 title: クエリサービスにクライアントを接続
-topic-legacy: connect
 description: このドキュメントでは、様々なデスクトップクライアントアプリケーションからクエリサービスに接続する方法と、それらの接続を検証する方法について説明します。
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 76687d46508ea641ecb6f9b090cea228f8bbe549
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 6%

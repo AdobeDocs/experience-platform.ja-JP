@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；クエリサービス；クエリサービス；クエリ
 title: Adobe Experience Platformクエリサービスの使用例
-topic-legacy: tutorial
 description: Adobe Experience Platform Query Service の汎用性とメリットを示すエンドツーエンドの例です。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%

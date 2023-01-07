@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アドビ定義関数；sql;
 solution: Experience Platform
 title: クエリサービスのAdobe定義 SQL 関数
-topic-legacy: functions
 description: このドキュメントでは、Adobe Experience Platform Query Service で使用できるAdobe定義関数について説明します。
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1486'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -486,6 +485,6 @@ LIMIT 10
 
 ## その他のリソース
 
-次のビデオでは、Adobe Experience Platformインターフェイスおよび PSQL クライアントでクエリを実行する方法を示します。 また、このビデオでは、XDM オブジェクト内の個々のプロパティに関する例、Adobe定義関数の使用、CREATE TABLE AS SELECT(CTAS) の使用例も使用しています。
+次のビデオでは、Adobe Experience Platform インターフェイスおよび PSQL クライアントでクエリを実行する方法を説明します。 また、このビデオでは、XDM オブジェクト内の個々のプロパティに関する例、Adobe定義関数の使用、CREATE TABLE AS SELECT(CTAS) の使用例も使用しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
