@@ -1,9 +1,8 @@
 ---
 title: Adobe Experience Platformでのデータ暗号化
-topic-legacy: data protection
 description: 送信時およびAdobe Experience Platformでの保存時にデータを暗号化する方法を説明します。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 5%

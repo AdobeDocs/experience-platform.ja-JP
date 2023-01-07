@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；CJA；ジャーニー分析；customer journey analytics;campaign orchestration；オーケストレーション；customer journey;journey orchestration；機能；ワークフロー
 title: アプリケーションサービスドキュメント
-topic-legacy: overview
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントタイプについて簡単に説明します。
 exl-id: 24fdb183-f75b-40e0-828e-9dd49422a7b1
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 33%

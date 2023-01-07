@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;api ガイド；platform api ガイド；platform の概要；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience Platform API の概要
-topic-legacy: api guide
 description: Adobe Experience Platformは、相互に密接にリンクされた API サービスを提供します。 このガイドには、使用可能なサービス、CRUD 操作に必要なヘッダー、エラーメッセージ、Postmanコレクション、サンプル API 呼び出しに関する情報が含まれています。
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 30%

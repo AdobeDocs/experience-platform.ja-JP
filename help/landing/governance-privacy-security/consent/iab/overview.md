@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: Experience Platformでの IAB TCF 2.0 のサポート
-topic-legacy: privacy events
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意を伝えるデータ操作とスキーマを設定する方法について説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 3%

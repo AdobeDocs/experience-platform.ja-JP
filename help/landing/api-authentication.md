@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
-topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 18%
@@ -81,7 +80,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 >
 >上記にリンクされたプロセス中の特定の手順で、ブラウザーは、秘密鍵と関連する公開証明書を自動的にダウンロードします。 この秘密鍵は、このチュートリアルの後の手順で必要になるので、お使いのコンピューター上のどこに保存されるかをメモしておきます。
 
-### 資格情報の収集
+###  資格情報の収集
 
 API がプロジェクトに追加されると、 **[!UICONTROL Experience PlatformAPI]** プロジェクトのページには、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 

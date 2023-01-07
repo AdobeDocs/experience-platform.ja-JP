@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；ui ガイド；workflows ui ガイド；workflows;workflows ユーザーガイド；
 solution: Experience Platform
 title: ワークフロー UI ガイド
-topic-legacy: ui guide
 description: Adobe Experience Platformユーザーインターフェイス内で共通の操作を実行するための複数手順のワークフローに従う方法を説明します。
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

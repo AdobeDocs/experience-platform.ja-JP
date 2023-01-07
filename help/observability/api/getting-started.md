@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 solution: Experience Platform
 title: 観察性インサイト API の使用の手引き
-topic-legacy: developer guide
 description: 観察性インサイト API を使用すると、様々なAdobe Experience Platform機能の指標データを取得できます。 このドキュメントでは、観察性インサイト API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 52%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
-topic-legacy: getting started
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%

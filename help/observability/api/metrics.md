@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 指標 API エンドポイント
-topic-legacy: developer guide
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 27%

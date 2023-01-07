@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 solution: Experience Platform
 title: Experience PlatformUI のブラウザーと言語のサポート
-topic-legacy: getting started
 description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 40%

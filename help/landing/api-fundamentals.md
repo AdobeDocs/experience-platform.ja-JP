@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Experience Platform API の基本
-topic-legacy: getting started
 description: このドキュメントでは、Experience PlatformAPI に関連する基盤となるテクノロジーと構文の概要を説明します。
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 53%

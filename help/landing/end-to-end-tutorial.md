@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 title: Adobe Experience Platformのエンドツーエンドのサンプルワークフロー
-topic-legacy: getting started
 description: Adobe Experience Platformの基本的なエンドツーエンドのワークフローを大まかに説明します。
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 11%

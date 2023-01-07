@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 solution: Experience Platform
 title: Experience Platformドキュメントの言語サポート
-topic-legacy: getting started
 description: Adobe Experience Platform を使用すると、組織はデータサイエンスと機械学習を適用する前に顧客データを一元化および標準化して、パーソナライズされた豊かなエクスペリエンスの設計と配信を劇的に改善することができます。
 exl-id: 52acf8fb-8420-4fe3-8b8b-b7bfea465d25
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 48%

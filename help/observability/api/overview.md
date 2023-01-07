@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 solution: Experience Platform
 title: Observability Insights API ガイド
-topic-legacy: developer guide
 description: 観察性インサイトは、開発者がAdobe Experience Platformで主要な観察性指標を公開できる RESTful API です。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 30%
