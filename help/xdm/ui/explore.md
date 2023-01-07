@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；ui;UI;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；探索；クラス；フィールドグループ；データタイプ；スキーマ；
 solution: Experience Platform
-title: UI での XDM リソースの参照
+title: UI でのスキーマリソースの調査
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループ、データ型を調べる方法について説明します。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# UI での XDM リソースの参照
+# UI でのスキーマリソースの調査
 
-Adobe Experience Platformでは、すべての Experience Data Model(XDM) リソースは、 [!DNL Schema Library]：組織が定義したAdobeおよびカスタムリソースによって提供される標準リソースを含みます。 Experience PlatformUI で、 [!DNL Schema Library]. UI は、これらの XDM リソースが提供する各フィールドの期待されるデータタイプと使用例に関する情報を提供するので、データ取得の計画と準備をおこなう際に特に役立ちます。
+Adobe Experience Platformでは、すべての Experience Data Model(XDM) スキーマリソースは、 [!DNL Schema Library]：組織が定義したAdobeおよびカスタムリソースによって提供される標準リソースを含みます。 Experience PlatformUI で、 [!DNL Schema Library]. UI は、これらの XDM リソースが提供する各フィールドの期待されるデータタイプと使用例に関する情報を提供するので、データ取得の計画と準備をおこなう際に特に役立ちます。
 
 このチュートリアルでは、Experience PlatformUI の既存のスキーマ、クラス、フィールドグループ、データタイプを調べる手順を説明します。
 
-## XDM リソースの検索 {#lookup}
+## スキーマリソースの検索 {#lookup}
 
-Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 この [!UICONTROL スキーマ] workspace の **[!UICONTROL 参照]** タブをクリックして、組織内の既存のすべての XDM リソースを参照します。また、参照用の専用タブを追加します **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**、および **[!UICONTROL データタイプ]** 特に。
+Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 この [!UICONTROL スキーマ] workspace の **[!UICONTROL 参照]** タブをクリックし、組織内のすべてのスキーマを参照します。また、参照用の専用タブも追加されています。 **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**、および **[!UICONTROL データタイプ]** それぞれ
 
 ![](../images/ui/explore/tabs.png)
 
-の [!UICONTROL 参照] 」タブに値を入力すると、フィルターアイコン (![フィルターアイコン画像](../images/ui/explore/icon.png)) をクリックして、左側のレールにコントロールを表示し、リストに表示される結果を絞り込みます。
+フィルターアイコン (![フィルターアイコン画像](../images/ui/explore/icon.png)) をクリックすると、左側のレールにコントロールが表示され、リストに表示される結果を絞り込みます。 表示されるコントロールは、表示されるリソースのタイプに応じて異なります。
 
 例えば、リストをフィルターして、Adobeが提供する標準データ型のみを表示するには、「 」を選択します。 **[!UICONTROL データタイプ]** および **[!UICONTROL Adobe]** の下に **[!UICONTROL タイプ]** および **[!UICONTROL 所有者]** 各セクションに割り当てられます。
 
@@ -33,15 +33,15 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 
 ![](../images/ui/explore/filter.png)
 
-検索バーを使用して、結果をさらに絞り込むこともできます。 用語を検索する場合、上位の項目は、検索クエリに一致する名前のリソースを表します。 次の項目の下、 **[!UICONTROL 標準フィールド]**&#x200B;に設定すると、クエリに一致するフィールドを含むリソースが一覧表示されます。 これにより、リソースの名前を事前に知る必要なく、含むデータのタイプに基づいて XDM リソースを検索できます。
+リソースを **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**&#x200B;または **[!UICONTROL データタイプ]** タブ、 **[!UICONTROL Adobe]** 標準のリソースのみを表示するか、 **[!UICONTROL 顧客]** ：組織が作成したリソースのみを表示します。
+
+![](../images/ui/explore/filter-data-type.png)
+
+検索バーを使用して、結果をさらに絞り込むこともできます。
 
 ![](../images/ui/explore/search.png)
 
 検索結果に表示されるリソースは、タイトルの一致順に並べられ、次に説明の一致順に並べられます。 次に、これらのカテゴリに一致する単語が多いほど、リソースがリストに表示されます。
-
->[!NOTE]
->
->標準の XDM リソースの場合、検索機能は、 `xdm` 名前空間。 別の名前空間（テナント ID など）の下にあるフィールドは、カスタムリソースに含まれている場合にのみ返されます。
 
 参照するリソースが見つかったら、リストからその名前を選択して、キャンバスに構造を表示します。
 

@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;
 title: UI での必須フィールドの定義
 description: Experience Platformユーザーインターフェイスで必須の XDM フィールドを定義する方法を説明します。
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Experience Data Model(XDM) の必須フィールドは、データの取り込�
 
 ただし、必須フィールドが必須とマークされていないオブジェクト内にネストされている場合は、ネストされたフィールドはの下に表示されません。 **[!UICONTROL 必須フィールド]** をクリックします。
 
-次の例では、 `loyaltyId` フィールドは必須として設定されていますが、親オブジェクトです `loyalty` がではありません。 この場合、 `loyalty` は、子フィールドを除外した場合でも、データの取り込み時に除外されました `loyaltyId` が必要としてマークされています。 つまり、 `loyalty` オプションの場合は、次を含める必要があります。 `loyaltyId` フィールドに含まれるイベントのフィールド。
+次の例では、 `internalSKU` フィールドは必須として設定されていますが、親オブジェクトです `SKUs` がではありません。 この場合、 `SKUs` は、データの取り込み時に子フィールドを含めても除外されます `internalSKU` が必要としてマークされています。 つまり、 `SKUs` オプションの場合は、次を含める必要があります。 `internalSKU` フィールドに含まれるイベントのフィールド。
 
 ![入れ子の必須フィールド](../../images/ui/fields/required/nested.png)
 

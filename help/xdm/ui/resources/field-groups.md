@@ -5,9 +5,9 @@ title: UI でのスキーマフィールドグループの作成と編集
 description: スキーマユーザーインターフェイスでスキーマフィールドグループを作成および編集するExperience Platformを説明します。
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Adobe Experience Platformには、様々なマーケティングの使用例に�
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-ダイアログが開き、組織の既存のフィールドグループのリストが表示されます。 ダイアログの上部付近で、「 」を選択します。 **[!UICONTROL 新しいフィールドグループを作成]**. ここで、 **[!UICONTROL 表示名]** および **[!UICONTROL 説明]** を設定します。 終了したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
+表示されるダイアログで、「 」を選択します。 **[!UICONTROL 新しいフィールドグループを作成]**. ここで、 **[!UICONTROL 表示名]** および **[!UICONTROL 説明]** を設定します。 終了したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 この [!DNL Schema Editor] 再び表示され、左側のパネルに新しいフィールドグループが表示されます。 これはまったく新しいフィールドグループなので、現在、スキーマにフィールドを提供しないので、キャンバスは変更されません。 これで、 [フィールドグループへのフィールドの追加](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## 既存のフィールドグループの編集 {#edit}
 
@@ -58,13 +60,17 @@ Adobe Experience Platformには、様々なマーケティングの使用例に�
 >
 >ここでは、カスタムフィールドグループへのフィールドの追加に焦点を当てます。 標準フィールドグループにカスタムフィールドを追加する方法について詳しくは、 [スキーマ UI ガイド](./schemas.md#custom-fields-for-standard-groups).
 
-フィールドを [!DNL Schema Editor]を選択し、最初に左側のパネルでフィールドグループの名前を選択して、次に **プラス (+)** キャンバスでスキーマの名前の横にあるアイコン。
+カスタムフィールドグループにフィールドを追加するには、まず **プラス (+)** キャンバスでスキーマの名前の横にあるアイコン。
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL 新しいフィールド]** がキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 詳しくは、 [UI でのフィールドの定義](../fields/overview.md#define) フィールドを設定してフィールドグループに追加する手順を説明します。
+A **[!UICONTROL 新しいフィールド]** がキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 詳しくは、 [UI でのフィールドの定義](../fields/overview.md#define) を参照してください。
 
-引き続きフィールドグループに必要な数のフィールドを追加します。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマとフィールドグループの両方を保存します。
+の下 **[!UICONTROL 割り当て先]**&#x200B;を選択し、 **[!UICONTROL フィールドグループ]** 」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 結果を絞り込むには、フィールドグループの名前に入力を開始できます。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+フィールドをスキーマに追加すると、選択したフィールドグループに割り当てられます。 引き続きフィールドグループに必要な数のフィールドを追加します。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマとフィールドグループの両方を保存します。
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

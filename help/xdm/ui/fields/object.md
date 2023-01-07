@@ -5,7 +5,7 @@ title: UI でのオブジェクトフィールドの定義
 description: Experience Platformユーザーインターフェイスでオブジェクトタイプフィールドを定義する方法を説明します。
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -29,8 +29,6 @@ Adobe Experience Platformでは、カスタムの Experience Data Model(XDM) ク
 ![](../../images/ui/fields/special/object-add-field.png)
 
 サブフィールドを設定し、「 」を選択したら、 **[!UICONTROL 適用]**&#x200B;を使用すると、同じ処理を使用して引き続きフィールドをオブジェクトに追加できます。 また、オブジェクト自体であるサブフィールドを追加して、必要に応じてフィールドをネストすることもできます。
-
-![](../../images/ui/fields/special/object-nested.png)
 
 オブジェクトの作成が完了したら、別のクラスやフィールドグループでその構造を再利用する場合があります。 この場合、オブジェクトをデータ型に変換できます。 詳しくは、 [変換，オブジェクトをデータ型に](../resources/data-types.md#convert) （データタイプ UI ガイド）を参照してください。
 

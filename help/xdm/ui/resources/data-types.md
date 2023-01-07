@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: データユーザーインターフェイスでデータタイプを作成および編集するExperience Platformを説明します。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Restaurant データ型では、レストランの名前を表す文字列フィ
 
 データタイプへのフィールドの追加が完了したら、「 **[!UICONTROL 保存]** 変更を保存し、データタイプを [!DNL Schema Library].
 
-## データタイプをクラスまたはフィールドグループに追加する
+## データタイプのスキーマへの追加
 
 データ型を作成したら、スキーマで使用できます。 XDM スキーマは、クラスと 0 個以上のフィールドグループで構成されるので、データ型で提供されるフィールドを直接スキーマに追加することはできません。 代わりに、クラスまたはフィールドグループに含める必要があります。
 
-最初に、 [クラスへのフィールドの追加](./classes.md#add-fields) または [フィールドグループへのフィールドの追加](./field-groups.md#add-fields). を選択した場合、 **[!UICONTROL タイプ]** 新しいフィールドに対して、ドロップダウンメニューからデータタイプの名前を選択します。
+最初に、 [クラスへのフィールドの追加](./classes.md#add-fields) または [フィールドグループへのフィールドの追加](./field-groups.md#add-fields). または、 [スキーマへの直接のフィールドの追加](./schemas.md#add-individual-fields) そして、そこから親クラスまたはフィールドグループを選択します。 を選択した場合、 **[!UICONTROL タイプ]** 新しいフィールドに対して、ドロップダウンメニューからデータタイプの名前を選択します。
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#convert}
 
@@ -102,7 +102,7 @@ Restaurant データ型では、レストランの名前を表す文字列フィ
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-キャンバスで、「[!UICONTROL オブジェクト]」が新しいデータ型に追加されました。 サブフィールドの横には小さなロックアイコンが表示され、個々のフィールドではなく、複数フィールドのデータ型の一部であることを示します。 この構造は、 **[!UICONTROL タイプ]** ドロップダウンを使用して新しいフィールドを定義できます。
+キャンバスで、「[!UICONTROL オブジェクト]」が新しいデータ型に追加されました。 この構造は、 **[!UICONTROL タイプ]** ドロップダウンを使用して新しいフィールドを定義できます。
 
 ![](../../images/ui/resources/data-types/converted.png)
 

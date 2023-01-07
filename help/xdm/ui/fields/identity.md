@@ -5,9 +5,9 @@ title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,7 @@ ID フィールドは、Platform で顧客 ID グラフを構築する方法に�
 
 キャンバスが更新され、変更が反映されます。選択したフィールドに指紋記号 (![](../../images/ui/fields/special/identity-symbol.png)) をクリックして id として指定します。 左側のレールで、ID フィールドが、スキーマにフィールドを提供するクラスまたはスキーマフィールドグループの名前の下にリストされます。
 
-すべての ID フィールドはデフォルトで必須なので、フィールドはの下に表示されるようになりました。 **[!UICONTROL 必須フィールド]** をクリックします。 ID フィールドがスキーマ構造内にネストされている場合、すべての親フィールドも必要に応じて表示されます。
+フィールドもプライマリ ID として設定されていた場合は、その ID もの下に表示されます。 **[!UICONTROL 必須フィールド]** をクリックします。 ID フィールドがスキーマ構造内にネストされている場合、すべての親フィールドも必要に応じて表示されます。
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

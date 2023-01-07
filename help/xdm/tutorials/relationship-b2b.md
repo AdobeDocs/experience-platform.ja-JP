@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 5%
 
 ---
@@ -123,4 +123,4 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Schema Editor]. これらのスキーマに基づくデータセットを使用してデータを取り込み、そのデータをプロファイルデータストアでアクティブ化したら、両方のスキーマの属性を複数クラスのセグメント化の使用例で使用できます。 詳しくは、 Real-Time CDP B2B Edition のドキュメントを参照してください。
+このチュートリアルでは、 [!DNL Schema Editor]. これらのスキーマに基づくデータセットを使用してデータを取り込み、そのデータをプロファイルデータストアでアクティブ化したら、両方のスキーマの属性を [マルチクラスセグメント化の使用例](../../rtcdp/segmentation/b2b.md).
