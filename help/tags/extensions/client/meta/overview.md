@@ -1,9 +1,10 @@
 ---
 title: メタピクセル拡張機能の概要
 description: Adobe Experience Platformの Meta Pixel タグ拡張について説明します。
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 2%
 
 この [!DNL Meta Pixel] タグ拡張機能を使用すると、 [!DNL Pixel] の機能は、クライアント側のタグライブラリで使用できます。 このドキュメントでは、拡張機能をインストールし、 [ルール](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->サーバー側のイベントをに送信しようとしている場合 [!DNL Meta] クライアント側ではなく、 [[!DNL Meta Conversions API] 拡張](../../server/meta/overview.md) 代わりに、
-
 ## 前提条件
 
 拡張機能を使用するには、有効な [!DNL Meta] ～を利用できる口座 [!DNL Ads Manager]. 特に、 [新しい [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) をコピーします。 [!DNL Pixel ID] そのため、拡張機能はアカウントに設定できます。 既に [!DNL Meta Pixel]の場合は、代わりに ID を使用できます。
+
+次を使用することを強くお勧めします。 [!DNL Meta Pixel] ～と組み合わせて [!DNL Meta Conversions API] は、クライアント側とサーバー側からそれぞれ同じイベントを共有し、送信します。これは、が取得しなかったイベントを回復するのに役立つ場合があるからです。 [!DNL Meta Pixel]. 詳しくは、 [[!DNL Meta Conversions API] イベント転送の拡張](../../client/meta/overview.md) を参照してください。 組織は、 [イベント転送](../../../ui/event-forwarding/overview.md) を使用して、サーバー側の拡張機能を使用する場合。
 
 ## 拡張機能のインストール
 
@@ -36,7 +35,7 @@ ht-degree: 2%
 >
 >データ要素を使用すると、 [!DNL Pixel] ビルド環境など、他の要因に応じて使用される ID。 付録の [異なる [!DNL Pixel] 異なる環境の ID](#id-data-element) を参照してください。
 
-オプションで、拡張機能に関連付けるイベント ID を指定することもできます。 これは、 [!DNL Meta Pixel] そして [!DNL Meta Conversions API]. 詳しくは、 [!DNL Meta] ドキュメント [重複の処理 [!DNL Pixel] および [!DNL Conversions API] イベント](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) 」を参照してください。
+オプションで、拡張機能に関連付けるイベント ID を指定することもできます。 これは、 [!DNL Meta Pixel] そして [!DNL Meta Conversions API]. 詳しくは、 [イベントの重複排除](../../server/meta/overview.md#event-deduplication) の概要 [!DNL Conversions API] 拡張子。
 
 終了したら、「 」を選択します。 **[!UICONTROL 保存]**
 
@@ -64,7 +63,9 @@ ht-degree: 2%
 
 ## 次の手順
 
-このガイドでは、にデータを送信する方法について説明しました [!DNL Meta] の使用 [!DNL Meta Pixel] タグ拡張。 Experience Platformのタグについて詳しくは、 [タグの概要](../../../home.md).
+このガイドでは、にデータを送信する方法について説明しました [!DNL Meta] の使用 [!DNL Meta Pixel] タグ拡張。 サーバー側のイベントもに送信する予定がある場合は、 [!DNL Meta]次に、のインストールと設定に進むことができます。 [[!DNL Conversions API] イベント転送拡張機能](../../server/meta/overview.md).
+
+Experience Platformのタグについて詳しくは、 [タグの概要](../../../home.md).
 
 ## 付録：別の [!DNL Pixel] 異なる環境の ID {#id-data-element}
 
@@ -77,4 +78,3 @@ ht-degree: 2%
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
