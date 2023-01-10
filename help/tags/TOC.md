@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 

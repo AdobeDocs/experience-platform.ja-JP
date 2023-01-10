@@ -1,12 +1,12 @@
 ---
 keywords: rtcdp b2b;b2b;アカウント;アカウントプロファイル;アカウントプロファイル rtcdp;real-time customer data platform;
 title: Real-Time CDP B2B Edition のアカウントプロファイル
-description: Adobe Real-time Customer Data Platform B2B Edition を使用すると、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合できます。
+description: Real-time Customer Data Platform B2B エディションで、アカウントプロファイルを使用して、複数のソースからアカウント情報を統合する方法を説明します。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 52%
+ht-degree: 60%
 
 ---
 

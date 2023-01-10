@@ -5,7 +5,7 @@ breadcrumb-title: Adobe Experience Platform デバッガーガイド
 user-guide-description: Web ページで、Experience Platform の実装に関する問題を調べます。
 feature: Debugger
 source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 100%
 

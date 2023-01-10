@@ -67,7 +67,7 @@ URL が正規表現の場合は、正規表現を有効にします。
 
 「**[!UICONTROL 項目を選択]**」を選択して、プロパティを追加します。
 
-「i」アイコンの上にマウスポインターを置くと、各プロパティの動作がわかります。プロパティの詳細については、[Audience Manager DIL ドキュメント](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)を参照してください。
+「i」アイコンの上にマウスポインターを置くと、各プロパティの動作がわかります。プロパティの詳細については、[Audience Manager DIL ドキュメント](https://experiencecloud.adobe.com/resources/help/ja_JP/aam/r_dil_create.html)を参照してください。
 
 拡張機能の設定が完了したら、「**[!UICONTROL 保存]**」を選択します。
 

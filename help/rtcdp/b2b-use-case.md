@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B Edition の使用例
-description: このサンプルシナリオは、Adobe Real-time Customer Data Platform B2B Edition の実装の設定例を示しています。
+description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 83%
+ht-degree: 85%
 
 ---
 

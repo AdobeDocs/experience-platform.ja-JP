@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 86%
 - チュートリアル {#tutorials}
    - XDM への CSV ファイルのマッピング {#map-csv}
       - [概要](./tutorials/map-csv/overview.md)
-      - [CSV ファイルを既存のスキーマにマッピングする](./tutorials/map-csv/existing-schema.md)
+      - [既存の スキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
       - [AI で生成されたレコメンデーションを使用して CSV ファイルをマッピングする](./tutorials/map-csv/recommendations.md)
    - [UI を使用したバッチデータ取得](tutorials/ingest-batch-data.md)
    - [認証済みストリーミング接続の作成](tutorials/create-authenticated-streaming-connection.md)

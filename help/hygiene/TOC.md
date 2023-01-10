@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: データハイジーンヘルプ
 breadcrumb-title: データハイジーンガイド
-user-guide-description: データクレンジングのために個々のレコードを削除し、Experience Platformのデータセット有効期限をスケジュールします。匿名データの削除、データ最小化を行います。
+user-guide-description: データのクレンジング、匿名データの削除およびデータの最小化のために、Experience Platform で個々のレコードを削除し、データセットの有効期限をスケジュールします。
 feature: Data Hygiene
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 55%
+ht-degree: 92%
 
 ---
 

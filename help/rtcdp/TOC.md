@@ -2,19 +2,19 @@
 product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: Real-time Customer Data Platformガイド
+user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 60%
+ht-degree: 64%
 
 ---
 
 
 # リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
 
-* [Real-Time CDPの概要](overview.md)
+* [Real-time CDP の概要](overview.md)
 * [Real-Time CDP B2B Edition の概要](b2b-overview.md)
 * はじめに {#intro}
    * Real-Time CDP {#rtcdp-intro}
