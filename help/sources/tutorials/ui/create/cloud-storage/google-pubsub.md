@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;Google PubSub;google pubsub
 solution: Experience Platform
 title: UI で Google PubSub ソース接続を作成
-topic-legacy: overview
 type: Tutorial
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 100%

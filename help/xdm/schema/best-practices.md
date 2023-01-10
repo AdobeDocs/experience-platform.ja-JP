@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；列挙；プライマリ ID；プライマリ ID;XDM 個人プロファイル；エクスペリエンスイベント；XDM エクスペリエンスイベント；XDM ExperienceEvent;experienceevent;XDM Experienceevent；スキーマデザイン；ベストプラクティス
 solution: Experience Platform
 title: データモデリングのベストプラクティス
-topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 3%

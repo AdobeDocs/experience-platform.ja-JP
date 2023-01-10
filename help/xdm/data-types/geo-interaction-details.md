@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ビーコン；インタラクションの詳細；データ型；データ型；
 solution: Experience Platform
 title: ジオインタラクションの詳細データタイプ
-topic-legacy: overview
 description: このドキュメントでは、ジオインタラクションの詳細の XDM データタイプの概要を説明します。
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 6%
@@ -22,7 +21,7 @@ ht-degree: 6%
 | --- | --- | --- |
 | `geoShape` | [[!UICONTROL ジオシェイプ]](./geo-shape.md) | やり取りされる領域のジオシェイプを表します。 このフィールドは、ボックス、円、または多角形を表すことができます。 |
 | `deviceGeoAccuracy` | Double | 地域測定デバイスまたはメカニズムの精度（メートル単位で測定）。 |
-| `distanceToCenter` | ダブル | ジオサークルの場合のジオの中心までの距離（メートル単位で測定）。 |
+| `distanceToCenter` | Double | ジオサークルの場合のジオの中心までの距離（メートル単位で測定）。 |
 
 {style=&quot;table-layout:auto&quot;}
 

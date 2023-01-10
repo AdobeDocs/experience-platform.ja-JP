@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;ストリーミングのセグメント化;セグメント化;セグメント化サービス;UIガイド;
 solution: Experience Platform
 title: ストリーミングセグメント化 UI ガイド
-topic-legacy: ui guide
 description: Adobe Experience Platform でのストリーミングセグメント化により、データの豊富さに重点を置きながら、ほぼリアルタイムでセグメント化を実行できます。ストリーミングセグメント化を使用すると、データが Platform に到着する際にセグメントの選定が行われるので、セグメント化ジョブをスケジュールして実行する必要がなくなります。この機能により、データが Platform に渡される際に、ほとんどのセグメントルールが評価されるようになりました。つまり、スケジュールに沿ったセグメント化ジョブを実行しなくても、セグメントメンバーシップが常に最新の状態に保たれます。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 89%

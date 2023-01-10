@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;
 solution: Experience Platform
 title: UI で列挙フィールドと推奨値を定義する
 description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法を説明します。
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%

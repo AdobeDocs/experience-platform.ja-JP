@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Salesforce Service Cloud;Salesforce サービスクラウド
 solution: Experience Platform
 title: フローサービス API を使用した Salesforce サービスクラウドソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Salesforce Service Cloud に接続する方法を説明します。
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 56%
+ht-degree: 69%
 
 ---
 
@@ -28,16 +27,16 @@ ht-degree: 56%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Salesforce Service Cloud] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Salesforce Service Cloud] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `username` | ユーザー名 [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
 | `password` | ユーザーのパスワード [!DNL Salesforce Service Cloud] アカウント |
 | `securityToken` | のセキュリティトークン [!DNL Salesforce Service Cloud] アカウント |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Salesforce Service Cloud] の接続仕様 ID は `b66ab34-8619-49cb-96d1-39b37ede86ea` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Service Cloud] の接続仕様 ID は `b66ab34-8619-49cb-96d1-39b37ede86ea` です。 |
 
 の導入について詳しくは、 [この Salesforce Service Cloud ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -96,7 +95,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) をクリックします。 この ID は、次の手順で CRM システムを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
 
 ```json
 {
@@ -109,5 +108,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Salesforce Service Cloud] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/customer-success.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用した、カスタマーサクセスデータを Platform に取り込むデータフローの作成](../../collect/customer-success.md)

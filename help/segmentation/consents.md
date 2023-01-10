@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；オプトアウト；セグメント化；セグメント化サービス；セグメント化サービス；オプトアウトを優先；オプトアウト；オプトアウト；同意；共有；収集；
 solution: Experience Platform
 title: セグメントでの同意の遵守
-topic-legacy: overview
 description: セグメント操作での個人データの収集および共有に関する顧客の同意設定を遵守する方法を説明します。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%

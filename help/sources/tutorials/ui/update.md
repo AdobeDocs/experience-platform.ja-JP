@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；アカ
 description: 場合によっては、既存のソースアカウントの詳細を更新する必要が生じることがあります。 「ソース」ワークスペースでは、既存のバッチ接続またはストリーミング接続（名前、説明、資格情報など）の詳細を追加、編集および削除できます。
 solution: Experience Platform
 title: UI でのソース接続アカウントの詳細の更新
-topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 16%

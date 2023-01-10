@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure File Storage;azure ファイルストレージ
 solution: Experience Platform
 title: Azure ファイルストレージソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure File Storage をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 83%

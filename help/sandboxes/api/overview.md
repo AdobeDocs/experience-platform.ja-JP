@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
 title: サンドボックス API ガイド
-topic-legacy: developer guide
 description: Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 26%
+ht-degree: 36%
 
 ---
 
@@ -28,7 +27,7 @@ ht-degree: 26%
 
 ## サンドボックスタイプ
 
-現在、Experience Platformでサポートされているサンドボックスタイプは、実稼働用サンドボックスと開発用サンドボックスです。 デフォルトの Platform ライセンスでは、合計 5 つのサンドボックスが許可されます。これらは、実稼動または開発として分類できます。 追加のサンドボックス 10 個のサンドボックスのライセンスを、合計で最大 75 個まで取得できます。 詳しくは、 [サンドボックスタイプエンドポイントガイド](./types.md) を参照して、API で組織でサポートされているサンドボックスタイプを表示する方法を確認してください。
+現在、Experience Platformでサポートされているサンドボックスタイプは、実稼働用サンドボックスと開発用サンドボックスです。 デフォルトの Platform ライセンスでは合計 5 つのサンドボックスが付与され、これらを実稼動用または開発用として分類できます。 追加のサンドボックスのライセンスを 10 個 1 パック単位で（合計 75 個まで）追加で取得することができます。詳しくは、 [サンドボックスタイプエンドポイントガイド](./types.md) を参照して、API で組織でサポートされているサンドボックスタイプを表示する方法を確認してください。
 
 ## 次の手順
 

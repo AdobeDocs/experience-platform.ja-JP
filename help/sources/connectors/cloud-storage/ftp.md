@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；FTP;ftp;
 solution: Experience Platform
 title: FTP ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して FTP サーバーをAdobe Experience Platformに接続する方法について説明します。
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 73%
+ht-degree: 76%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->FTP コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>FTP コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 

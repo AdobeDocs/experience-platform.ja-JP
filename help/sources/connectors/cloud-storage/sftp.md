@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;SFTP;sftp
 solution: Experience Platform
 title: SFTP ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 100%

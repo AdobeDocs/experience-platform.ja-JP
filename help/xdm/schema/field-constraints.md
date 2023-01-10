@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；フィールドグループ；データ型；データ型；データ型；データ型；データ型；データ型；データ型；スキーマ；スキーマ；スキーマ；スキーマデザイン；マップ；
 solution: Experience Platform
 title: XDM フィールドタイプ制約
-topic-legacy: overview
 description: Experience Data Model(XDM) のフィールドタイプ制約の参照です。これには、マッピングできる他のシリアル化形式や、API で独自のフィールドタイプを定義する方法が含まれます。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 13%
@@ -154,7 +153,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `String` | `System.String` | `String` |
-| [!UICONTROL ダブル] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL 整数] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -171,7 +170,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `string` | `String` | `string` |
-| [!UICONTROL ダブル] | `double` | `Double` | `double` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL 整数] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |

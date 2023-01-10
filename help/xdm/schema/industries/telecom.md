@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 通信業界のデータモデル ERD
-topic-legacy: overview
 description: Adobe Experience Platformで使用する Experience Data Model(XDM) と互換性のある、通信業界向けの標準化されたデータモデルを示すエンティティ関係図 (ERD) を表示します。
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: 421b4a448370f9903b8bc826fd9be9e5b2e11c59
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 11%
@@ -38,7 +37,7 @@ ht-degree: 11%
 
 次の表に、通信業界の一般的な使用例で推奨されるクラスとスキーマフィールドグループの概要を示します。
 
-| 使用例 | 推奨クラスとフィールドグループ |
+| ユースケース | 推奨クラスとフィールドグループ |
 | --- | --- |
 | 現在の保有状況と閲覧行動に基づいて、アップセルまたはクロスセルの機会に適した顧客を把握します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL アップセルの詳細]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL アップグレードの詳細]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 通信サブスクリプション]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL デモグラフィックの詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 | 関連する広告と自動化されたパーソナライズされた E メールを通じて、買い物かごの放棄者をリターゲティングします。 コンバージョン時に広告を抑制します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL コマースの詳細]](../../field-groups/event/upsell-details.md) （買い物かごの放棄をキャプチャするため）</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 通信サブスクリプション]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL デモグラフィックの詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |

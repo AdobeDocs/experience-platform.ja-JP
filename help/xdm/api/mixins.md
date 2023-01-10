@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;
 solution: Experience Platform
 title: Mixins API エンドポイント
 description: スキーマレジストリ API の/mixins エンドポイントを使用すると、エクスペリエンスアプリケーション内で XDM Mixin をプログラムで管理できます。
-topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 18%

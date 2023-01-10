@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；poi；インタラクション；目標点；データ型；データ型；
 solution: Experience Platform
 title: 目標点インタラクションのデータタイプ
-topic-legacy: overview
 description: このドキュメントでは、目標地点インタラクションの XDM データタイプの概要を説明します。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -20,7 +19,7 @@ ht-degree: 4%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL 目標地点の詳細]](./poi-details.md) | イベントの原因となった POI の詳細を説明します。 |
+| `poiDetail` | [[!UICONTROL POI の詳細]](./poi-details.md) | イベントの原因となった POI の詳細を説明します。 |
 | `poiEntries` | オブジェクト | 個人が POI に入った回数を表します。 次の 2 つのプロパティが含まれます。 <ul><li>`id`:測定の一意の ID。</li><li>`value`:測定の定量化可能値。</li></ul> |
 | `poiExits` | オブジェクト | 個人が POI から出た回数を表します。 次の 2 つのプロパティが含まれます。 <ul><li>`id`:測定の一意の ID。</li><li>`value`:測定の定量化可能値。</li></ul> |
 

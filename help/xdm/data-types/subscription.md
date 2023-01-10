@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；購読；データ型；データ型；
 solution: Experience Platform
 title: 購読データタイプ
-topic-legacy: overview
 description: このドキュメントでは、Subscription Experience Data Model(XDM) データタイプの概要を説明します。
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: d99ddc65849a88350bf61977b399b07989554426
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 25%

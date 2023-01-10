@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；インバウンドデータのアクティブ化；プロファイルの入力；rtcp の入力；入力された統合プロファイル
 solution: Experience Platform
 title: インバウンドソースデータをアクティブ化して UI に顧客プロファイルを入力する
-topic-legacy: overview
 type: Tutorial
 description: ソースコネクタからの受信データは、リアルタイム顧客プロファイルデータのエンリッチメントと生成に使用できます。
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 22%

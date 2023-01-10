@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PQL;pql；プロファイルクエリ言語
 solution: Experience Platform
 title: プロファイルクエリ言語 (PQL) の概要
-topic-legacy: developer guide
 description: このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 89%

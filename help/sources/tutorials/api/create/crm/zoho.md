@@ -2,14 +2,13 @@
 keywords: Experience Platform;ホーム;人気のトピック;Zoho CRM;Zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Flow Service API を使用した Zoho CRM ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を Zoho CRM に接続する方法を説明します。
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -28,11 +27,11 @@ ht-degree: 92%
 
 次の節では、[!DNL Flow Service] API を使用して [!DNL Zoho CRM] に正常に接続するために必要な追加情報を示しています。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Zoho CRM] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `endpoint` | リクエスト先の [!DNL Zoho CRM] サーバーのエンドポイント。 |
 | `accountsUrl` | アカウント URL は、アクセスおよび更新トークンの生成に使用されます。URL は、ドメイン固有である必要があります。 |
@@ -40,7 +39,7 @@ ht-degree: 92%
 | `clientSecret` | [!DNL Zoho CRM] ユーザーアカウントに対応するクライアントの秘密鍵。 |
 | `accessToken` | アクセストークンは、[!DNL Zoho CRM] アカウントへの安全かつ一時的なアクセスを許可します。 |
 | `refreshToken` | 更新トークンは、アクセストークンの有効期限が切れた後に、新しいアクセストークンの生成に使用されるトークンです。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Zoho CRM] の接続仕様 ID は `929e4450-0237-4ed2-9404-b7e1e0a00309` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Zoho CRM] の接続仕様 ID は `929e4450-0237-4ed2-9404-b7e1e0a00309` です。 |
 
 これらの資格情報について詳しくは、[[!DNL Zoho CRM] 認証](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html)に関するドキュメントを参照してください。
 
@@ -125,5 +124,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Zoho] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)

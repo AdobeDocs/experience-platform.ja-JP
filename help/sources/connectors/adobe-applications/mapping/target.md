@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ターゲットマッピング；ターゲットマッピング
 solution: Experience Platform
 title: Adobe Targetイベントデータの XDM へのマッピング
-topic-legacy: overview
 description: Adobe Experience Platformで使用するAdobe Targetイベントフィールドを Experience Data Model(XDM) スキーマにマッピングする方法について説明します。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 87%

@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: セルフサービスソース（バッチ SDK）API ガイド
-topic-legacy: overview
 description: このドキュメントでは、フローサービス API を使用して新しい接続仕様を取得、書き込み、送信する手順など、新しいソースの作成プロセスの概要を説明します。
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 11%

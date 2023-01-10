@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；Amazon Redshift;Amazon redshift;Redshift
 solution: Experience Platform
 title: Snowflakeソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してSnowflakeをAdobe Experience Platformに接続する方法について説明します。
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '237'
-ht-degree: 53%
+ht-degree: 61%
 
 ---
 
@@ -24,13 +23,13 @@ Experience Platform は、サードパーティのデータベースからデー
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Snowflake] と Platform を接続する方法について説明します。
 
-## 接続 [!DNL Snowflake] API を使用して Platform に接続
+## API を使用して [!DNL Snowflake] と Platform を接続する
 
 - [フローサービス API を使用したSnowflakeベース接続の作成](../../tutorials/api/create/databases/snowflake.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
-## 接続 [!DNL Snowflake] UI を使用して Platform に接続
+## UI を使用した [!DNL Snowflake] の Platform への接続
 
 - [UI でのSnowflakeソース接続の作成](../../tutorials/ui/create/databases/snowflake.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

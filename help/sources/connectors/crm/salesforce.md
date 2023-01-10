@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；crm スキーマ；crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Salesforce をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
@@ -35,7 +34,7 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 - [商談連絡先の役割](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [キャンペーン](../adobe-applications/mapping/salesforce.md#campaign)
 - [キャンペーンメンバー](../adobe-applications/mapping/salesforce.md#campaign-member)
-- [アカウント連絡先関係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
+- [アカウント連絡先の関係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## 設定 [!DNL Salesforce] 名前空間とスキーマ自動生成ユーティリティ
 
@@ -86,15 +85,15 @@ Platform デベロッパーコンソールと [!DNL Postman] を設定すると�
 
 リクエストが成功すると、ベータ仕様に従って B2B 名前空間とスキーマが作成されます。
 
-## 接続 [!DNL Salesforce] API を使用して Platform に接続
+## API を使用して [!DNL Salesforce] と Platform を接続する
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] と Platform を接続する方法について説明します。
 
 - [フローサービス API を使用した Salesforce ベース接続の作成](../../tutorials/api/create/crm/salesforce.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
-## 接続 [!DNL Salesforce] UI を使用して Platform に接続
+## UI を使用した [!DNL Salesforce] の Platform への接続
 
 - [UI での Salesforce ソース接続の作成](../../tutorials/ui/create/crm/salesforce.md)
 - [UI での CRM 接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

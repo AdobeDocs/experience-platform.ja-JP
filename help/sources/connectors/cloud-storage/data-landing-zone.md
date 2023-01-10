@@ -2,21 +2,20 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: データランディングゾーンのソース
-topic-legacy: overview
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を説明します
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '817'
-ht-degree: 19%
+ht-degree: 44%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 1 つに対するアクセス権があります [!DNL Data Landing Zone] サンドボックスごとのコンテナおよびすべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。 Platform とそのアプリケーションサービスのすべてのお客様 ( [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]、および [!DNL Adobe Real-Time Customer Data Platform] は、1 つの [!DNL Data Landing Zone] サンドボックスごとのコンテナ を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
+[!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーションサービスのすべての顧客（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、および [!DNL Adobe Real-Time Customer Data Platform]）は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] のコンテナを使用してプロビジョニングされます。を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
 
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは標準で保護されています [!DNL Azure Blob] 保存時および移動時の保管セキュリティメカニズム SAS ベースの認証を使用すると、 [!DNL Data Landing Zone] コンテナを使用して、公開インターネット接続を介して接続できます。 ユーザーが [!DNL Data Landing Zone] コンテナを使用する場合は、ネットワークに対して許可リストや地域間の設定を設定する必要はありません。 Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファイルは 7 日後に削除されます。
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。Platform では、 [!DNL Data Landing Zone] コンテナ。 すべてのファイルは 7 日後に削除されます。
 
 ## ファイルとディレクトリの命名制約
 
@@ -29,15 +28,15 @@ ht-degree: 19%
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、制御文字 ( `0x00` から `0x1F`, `\u0081`など ) は許可されていません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## コンテンツを管理 [!DNL Data Landing Zone]
+## [!DNL Data Landing Zone] のコンテンツを管理
 
-以下を使用できます。 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) コンテンツを管理するには [!DNL Data Landing Zone] コンテナ。
+[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
-内 [!DNL Azure Storage Explorer] UI で、左側のナビゲーションで接続アイコンを選択します。 この **リソースを選択** ウィンドウが開き、接続するオプションが表示されます。 選択 **[!DNL Blob container]** 接続する [!DNL Data Landing Zone].
+内 [!DNL Azure Storage Explorer] UI で、左側のナビゲーションで接続アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。選択 **[!DNL Blob container]** 接続する [!DNL Data Landing Zone].
 
 ![select-resource](../../images/tutorials/create/dlz/select-resource.png)
 
-次に、 **共有アクセス署名 URL (SAS)** を選択し、「 」を選択します。 **次へ**.
+次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
 ![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
 
@@ -51,11 +50,11 @@ ht-degree: 19%
 
 ![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
 
-この **概要** ウィンドウが開き、設定の概要 ( [!DNL Blob] エンドポイントと権限。 準備が整ったら、「 」を選択します。 **接続**.
+**概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
 ![概要](../../images/tutorials/create/dlz/summary.png)
 
-接続が成功すると、次の情報が更新されます： [!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナ。
+接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
 ![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
 
@@ -157,5 +156,5 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 ### UI の使用
 
-- [接続 [!DNL Data Landing Zone] UI を使用して Platform に接続](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [UI を使用した  [!DNL Data Landing Zone]  の Platform への接続](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)

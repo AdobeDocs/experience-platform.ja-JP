@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データソース接続
 solution: Experience Platform
 title: フローサービス API を使用したサードパーティのクラウドストレージシステムからの Parquet データの取り込み
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、フローサービス API を使用して、サードパーティのクラウドストレージシステムから Apache Parquet データを取り込む手順を説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 47%

@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；OData;odata;oData；汎用 OData；汎用 OData
 solution: Experience Platform
 title: 汎用 OData ソースの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -27,7 +26,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 ## API を使用して [!DNL Generic OData] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用した汎用 OData ベース接続の作成](../../tutorials/api/create/protocols/odata.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用したプロトコルソースのデータフローの作成](../../tutorials/api/collect/protocols.md)
 
 ## UIを使用して [!DNL Generic OData] と [!DNL Platform] を接続する

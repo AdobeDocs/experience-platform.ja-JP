@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；[!DNL Azure Table Storage];[!DNL Azure Table Storage];Azure テーブルストレージ
 solution: Experience Platform
 title: フローサービス API を使用した Azure Table Storage Base Connection の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して Azure Table Storage をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 58%
+ht-degree: 68%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->この [!DNL Azure Table Storage] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL Azure Table Storage] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -32,14 +31,14 @@ ht-degree: 58%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure Table Storage] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Azure Table Storage] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 接続に使用する接続文字列 [!DNL Azure Table Storage] インスタンス。 次の接続文字列パターン： [!DNL Azure Table Storage] 次に該当： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Table Storage] が `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Table Storage] が `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 接続文字列の取得について詳しくは、 [この [!DNL Azure Table Storage] 文書](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
@@ -105,7 +104,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Azure Table Storage] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure Table Storage] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: ローカル環境でテキストエディターを使用してソースドキュメントページを作成する
-topic-legacy: tutorial
 description: このドキュメントでは、ローカル環境を使用して、ソースに関するドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 8%

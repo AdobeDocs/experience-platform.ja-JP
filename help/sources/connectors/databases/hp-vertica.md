@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；HP Vertica;hp vertica
 solution: Experience Platform
 title: HP Vertica ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して HP Vertica をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 35%
+ht-degree: 44%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->この [!DNL HP Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL HP Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
@@ -31,7 +30,7 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure].
 ## API を使用して [!DNL HP Vertica] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用して HP Vertica ソース接続を作成する](../../tutorials/api/create/databases/hp-vertica.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL HP Vertica] と [!DNL Platform] を接続する

@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;Marketo Engage;Marketo;マッピング
 solution: Experience Platform
 title: Marketo Engage ソースのマッピングフィールド
-topic-legacy: overview
 description: Marketo データセットのフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
-workflow-type: ht
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 100%
 
@@ -280,7 +279,7 @@ XDM クラスについて詳しくは、[XDM ビジネスアカウントの概�
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリ ID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリ ID。`"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
 | `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` はセカンダリ ID です。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -308,7 +307,7 @@ XDM クラスについて詳しくは、[XDM ビジネス商談の概要](../../
 | `"Marketo"` | `opportunityKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリ ID。 `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | プライマリ ID。`"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | セカンダリ ID。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 関係 |
 | `description` | `opportunityDescription` |

@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；アプリケーション；データ型；データ型；
 solution: Experience Platform
 title: アプリケーションデータタイプ
-topic-legacy: overview
 description: このドキュメントでは、Application Experience Data Model(XDM) データタイプの概要を説明します。
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 5%

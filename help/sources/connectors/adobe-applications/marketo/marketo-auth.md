@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketoソースコネクタの認証
-topic-legacy: overview
 description: このドキュメントでは、Marketo認証資格情報の生成方法に関する情報を提供します。
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -56,7 +55,7 @@ ht-degree: 0%
 
 ![invite-new-user](../images/marketo/invite-new-user.png)
 
-ポップオーバーダイアログメニューが表示されます。 電子メールに適した情報、名、姓、理由を入力します。 この手順の間に、招待する新しいユーザーアカウントのアクセスの有効期限を設定することもできます。 終了したら、「 」を選択します。 **[!DNL Next]**.
+ポップオーバーダイアログメニューが表示されます。 電子メールに適した情報、名、姓、理由を入力します。 この手順の間に、招待する新しいユーザーアカウントのアクセスの有効期限を設定することもできます。 終了したら「**[!DNL Next]**」を選択します。
 
 >[!IMPORTANT]
 >

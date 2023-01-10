@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;
 solution: Experience Platform
 title: スキーマレジストリ API ガイドの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
-topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 36%

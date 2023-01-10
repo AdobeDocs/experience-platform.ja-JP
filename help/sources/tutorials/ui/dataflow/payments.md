@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；支払いコネクタ
 solution: Experience Platform
 title: UI での支払いソースを使用したデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して支払いソースのデータフローを作成する手順を説明します。
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 50%

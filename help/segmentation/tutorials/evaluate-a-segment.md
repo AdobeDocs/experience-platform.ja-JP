@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；セグメント評価；セグメント化サービス；セグメント化；セグメント化；セグメントの評価；セグメント結果へのアクセス；セグメントの評価とアクセス；
 solution: Experience Platform
 title: セグメント結果の評価とアクセス
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 62%

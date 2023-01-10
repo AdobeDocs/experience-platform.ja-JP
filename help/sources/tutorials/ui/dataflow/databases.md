@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データベースコネクタ
 solution: Experience Platform
 title: UI でのデータベースソースを使用したデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用してデータベースソースのデータフローを作成する手順を説明します。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 49%

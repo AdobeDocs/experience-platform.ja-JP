@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；ui;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；スキーマ；作成；データ型；
 solution: Experience Platform
 title: UI を使用したデータタイプの作成と編集
-topic-legacy: tutorial
 type: Tutorial
 description: データユーザーインターフェイスでデータタイプを作成および編集するExperience Platformを説明します。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +43,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../images/ui/resources/data-types/create.png)
 
-この [!DNL Schema Editor] が表示され、キャンバスに新しいデータタイプの現在の構造が表示されます。 エディターの右側で、データタイプの表示名と説明（オプション）を指定できます。 データタイプをスキーマに追加する際には、そのデータタイプが識別される方法なので、データタイプに一意で簡潔な名前を指定してください。
+この [!DNL Schema Editor] が表示され、キャンバスに新しいデータ型の現在の構造が表示されます。 エディターの右側で、データタイプの表示名と説明（オプション）を指定できます。 データタイプをスキーマに追加する際には、そのデータタイプが識別される方法なので、データタイプに一意で簡潔な名前を指定してください。
 
 このチュートリアルでは、レストランのプロパティを説明するデータタイプを作成するので、データタイプには「Restaurant」という表示名が付けられます。
 

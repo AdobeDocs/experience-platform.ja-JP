@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ジオ；ジオシェイプ；データ型；データ型；
 solution: Experience Platform
 title: ジオシェイプデータタイプ
-topic-legacy: overview
 description: このドキュメントでは、ジオシェイプ XDM データタイプの概要を説明します。
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 34%
@@ -26,4 +25,4 @@ ht-degree: 34%
 | `_schema.description` | 文字列 | シェイプが定義している内容の説明。 |
 | `_schema.elevation` | Double | 図形の特定または最小の標高。この値は [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) データムに準拠し、メートル単位で測定されます。`ceiling` との組み合わせで、このプロパティを使用して、位置の 3 次元の境界ボックスを表すことができます。 |
 | `_id` | 文字列 | シェイプに対してシステムで生成された一意の識別子。 |
-| `ceiling` | ダブル | 図形の最大標高。このプロパティは、 `elevation`. 値は [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) データムとはメートル単位で測定されます。 `elevation` との組み合わせで、このプロパティを使用して、位置の 3 次元の境界ボックスを表すことができます。 |
+| `ceiling` | Double | 図形の最大標高。このプロパティは、 `elevation`. 値は [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) データムとはメートル単位で測定されます。 `elevation` との組み合わせで、このプロパティを使用して、位置の 3 次元の境界ボックスを表すことができます。 |

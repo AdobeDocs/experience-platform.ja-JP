@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；Oracleオブジェクトストレージ；oracleオブジェクトストレージ
 solution: Experience Platform
 title: フローサービス API を使用したOracleオブジェクトストレージベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをOracleオブジェクトストレージに接続する方法を説明します。
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 50%
@@ -39,7 +38,7 @@ ht-degree: 50%
 | `secretKey` | この [!DNL Oracle Object Storage] 認証に必要なパスワード。 |
 | `bucketName` | ユーザーがアクセスを制限している場合に必要な許可されたバケット名です。 バケット名は、3～63 文字で、先頭と末尾には文字または数字を使用し、小文字、数字、ハイフン (`-`) をクリックします。 バケット名は IP アドレスと同じ形式にできません。 |
 | `folderPath` | ユーザーがアクセスを制限している場合に許可されるフォルダーパス。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Oracle Object Storage] の接続仕様 ID は `c85f9425-fb21-426c-ad0b-405e9bd8a46c` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Oracle Object Storage] の接続仕様 ID は `c85f9425-fb21-426c-ad0b-405e9bd8a46c` です。 |
 
 これらの値の取得方法について詳しくは、 [Oracleオブジェクトストレージ認証ガイド](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 

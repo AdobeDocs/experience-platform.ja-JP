@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；servicenow;ServiceNow
 solution: Experience Platform
 title: フローサービス API を使用した ServiceNow ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを ServiceNow サーバーに接続する方法を説明します。
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 57%
+ht-degree: 70%
 
 ---
 
@@ -37,7 +36,7 @@ ht-degree: 57%
 | `endpoint` | のエンドポイント [!DNL ServiceNow] サーバー。 |
 | `username` | に接続するために使用するユーザー名 [!DNL ServiceNow] 認証用のサーバ。 |
 | `password` | に接続するパスワード [!DNL ServiceNow] 認証用のサーバ。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL ServiceNow] の接続仕様 ID は `eb13cb25-47ab-407f-ba89-c0125281c563` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL ServiceNow] の接続仕様 ID は `eb13cb25-47ab-407f-ba89-c0125281c563` です。 |
 
 の導入について詳しくは、 [この ServiceNow ドキュメント](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
@@ -96,7 +95,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) をクリックします。 この ID は、次の手順で CRM システムを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
 
 ```json
 {
@@ -109,5 +108,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL ServiceNow] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/customer-success.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用した、カスタマーサクセスデータを Platform に取り込むデータフローの作成](../../collect/customer-success.md)

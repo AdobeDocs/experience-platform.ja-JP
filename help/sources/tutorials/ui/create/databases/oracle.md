@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；OracleDB;oracleDB
 solution: Experience Platform
 title: UI でのOracleDB ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してOracleDB ソース接続を作成する方法を説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 52%

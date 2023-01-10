@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性コネクタ
 solution: Experience Platform
 title: 顧客属性ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法を説明します
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 541cc87f218a6ef3dcca37573f6d0f9cf560edfb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 19%

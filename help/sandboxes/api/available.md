@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；使用可能なサンドボックスのリスト；リストサンドボックス
 solution: Experience Platform
 title: 使用可能なサンドボックス API エンドポイント
-topic-legacy: developer guide
 description: 現在のユーザーが使用できるサンドボックスのリストを作成するには、使用可能なサンドボックスのエンドポイントに対してGETリクエストを実行します。
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 41%

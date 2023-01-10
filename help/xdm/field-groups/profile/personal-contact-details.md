@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；個人の詳細；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: 個人の連絡先詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「個人の連絡先詳細」スキーマフィールドグループの概要を説明します。
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 16%
+ht-degree: 21%
 
 ---
 

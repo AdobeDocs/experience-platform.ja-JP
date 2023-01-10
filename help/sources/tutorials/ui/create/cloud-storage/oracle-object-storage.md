@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；Oracleオブジェクトストレージ；oracleオブジェクトストレージ
 solution: Experience Platform
 title: UI でのOracleオブジェクトストレージソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してOracleオブジェクトストレージソース接続を作成する方法を説明します。
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 46%
@@ -28,7 +27,7 @@ ht-degree: 46%
 
 接続先： [!DNL Oracle Object Storage]を使用する場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `serviceUrl` | この [!DNL Oracle Object Storage] 認証に必要なエンドポイント。 エンドポイントの形式は次のとおりです。 `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
 | `accessKey` | この [!DNL Oracle Object Storage] 認証に必要なアクセスキー ID。 |

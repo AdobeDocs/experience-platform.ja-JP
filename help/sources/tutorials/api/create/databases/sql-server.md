@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: フローサービス API を使用した SQL Server ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをMicrosoft SQL Server に接続する方法について説明します。
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 57%
+ht-degree: 65%
 
 ---
 
@@ -28,14 +27,14 @@ ht-degree: 57%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Microsoft SQL Server] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 に接続するには [!DNL Microsoft SQL Server]を使用する場合は、次の接続プロパティを指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 次に示すように、 [!DNL Microsoft SQL Server] アカウント この [!DNL Microsoft SQL Server] 接続文字列のパターン： `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Microsoft SQL Server] が `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Microsoft SQL Server] が `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 接続文字列の取得について詳しくは、 [[!DNL Microsoft SQL Server] 文書](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
@@ -100,7 +99,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Microsoft SQL Server] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Microsoft SQL Server] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

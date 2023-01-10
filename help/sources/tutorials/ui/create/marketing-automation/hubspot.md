@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；hubspot;Hubspot
 solution: Experience Platform
 title: UI での HubSpot ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して HubSpot ソース接続を作成する方法を説明します。
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 51%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: UI でのIBM DB2 ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してIBM DB2 ソース接続を作成する方法を説明します。
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 38%

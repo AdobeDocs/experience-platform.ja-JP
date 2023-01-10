@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;セグメント化;セグメント化;セグメント化サービス;エッジセグメント化;エッジセグメント化;ストリーミングエッジ;
 solution: Experience Platform
 title: API を使用したエッジのセグメント化
-topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 96%

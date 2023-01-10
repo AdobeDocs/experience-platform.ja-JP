@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ファイル転送プロトコル；ファイル転送プロトコル
 solution: Experience Platform
 title: フローサービス API を使用した FTP ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを FTP（ファイル転送プロトコル）サーバーに接続する方法について説明します。
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 54%
+ht-degree: 56%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->FTP コネクタはベータ版です。 機能とドキュメントは変更される場合があります。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>FTP コネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -41,7 +40,7 @@ ht-degree: 54%
 | `host` | に関連付けられている名前または IP アドレス [!DNL FTP] サーバー。 |
 | `username` | ユーザー名 ( [!DNL FTP] サーバー。 |
 | `password` | ユーザーのパスワード [!DNL FTP] サーバー。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL FTP] の接続仕様 ID は `fb2e94c9-c031-467d-8103-6bd6e0a432f2` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL FTP] の接続仕様 ID は `fb2e94c9-c031-467d-8103-6bd6e0a432f2` です。 |
 
 ### Platform API の使用
 

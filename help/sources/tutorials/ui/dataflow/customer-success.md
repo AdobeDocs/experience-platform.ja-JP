@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データフローの設定；顧客成功コネクタ
 solution: Experience Platform
 title: UI での顧客成功ソースを使用したデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して顧客成功ソースのデータフローを作成する手順を説明します。
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 49%

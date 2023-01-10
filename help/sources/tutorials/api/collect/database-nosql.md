@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;データベースデータベース;サードパーティのデータベース
 solution: Experience Platform
 title: Flow Service API を使用したデータベースソースのデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 95%

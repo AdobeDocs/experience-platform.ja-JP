@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；セグメント化；セグメント化サービス；トラブルシューティング；API;SEG；セグメント；セグメント；検索；セグメント検索；
 title: セグメント検索 API エンドポイント
-topic-legacy: guide
 description: Adobe Experience Platform Segmentation Service API では、セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返すために使用されます。 このガイドには、セグメント検索をより深く理解するのに役立つ情報が記載されており、API を使用して基本的なアクションを実行するための API 呼び出し例が含まれています。
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 45%
@@ -100,7 +99,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** ここで、{NAMESPACE} には、検索する名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} には、 [Lucene の検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} には、 [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
 | `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID} で指定された指定フォルダー内に検索を制限します。 |
 | `limit={LIMIT}` | *（オプション）* {LIMIT} は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
 | `page={PAGE}` | *（オプション）* ここで、{PAGE} は、検索したクエリの結果に使用されるページ番号を表します。 ページ番号は **0**. |
@@ -261,4 +260,4 @@ curl -X GET \
 | &quot;hotel airport&quot;\~5 | 近接検索。このタイプの検索は、ドキュメント内で互いに近接している単語を検索するために使用されます。例えば、フレーズ `"hotel airport"~5` では、ドキュメント内で互いに 5 語以内に近接する「hotel」と「airport」という単語を見つけます。 |
 | `/a[0-9]+b$/` | 正規表現検索。このタイプの検索では、RegExp クラスで説明されているように、スラッシュ「/」の間の内容に基づいて一致を見つけます。例えば、「motel」または「hotel」を含むドキュメントを検索するには、`/[mh]otel/` と指定します。正規表現検索は、単一の単語に対して照合されます。 |
 
-クエリ構文に関する詳細なドキュメントについては、[Lucene クエリ構文のドキュメント](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)をお読みください。
+クエリ構文に関する詳細なドキュメントについては、[Lucene クエリ構文のドキュメント](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)をお読みください。

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のあるトピック;XDM;XDM システム;XDM 個人プロファイル;XDM エクスペリエンスイベント;XDM エクスペリエンスイベント;エクスペリエンスイベント;エクスペリエンスイベント;フィールドグループ;フィールドグループ;フィールドグループ;フィールドグループ;エクスペリエンスイベント;XDM エクスペリエンスイベント;XDM エクスペリエンスイベント;エクスペリエンスイベント;エクスペリエンスイベント;XDM エクスペリエンスイベント;エクスペリエンスデータモデル;エクスペリエンスデータモデル;エクスペリエンスデータモデル;データモデル;データモデル;スキーマレジストリ;スキーマレジストリ;スキーマライブラリ;スキーマライブラリ;スキーマ;レコードデータ;時系列;時系列
 solution: Experience Platform
 title: XDM システムの概要
-topic-legacy: overview
 description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 92%
@@ -108,7 +107,7 @@ Experience Platform へのデータ取り込みを開始するには、カタロ
 
 ### クエリサービス
 
-Adobe Experience Platform クエリサービスを使用すれば、クエリへの Experience Platform データに標準の SQL を使用して、様々な使用例をサポートできます。
+Adobe Experience Platform のクエリサービスを使用すれば、標準の SQL を使用して Experience Platform データに対するクエリを実行でき、様々なユースケースに利用できます。
 
 スキーマを構成し、そのスキーマを参照するデータセットを作成した後、データがデータレイクに取り込まれて保存されます。クエリサービスを使用すると、データレイク内の任意のデータセットを結合し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、リアルタイム顧客プロファイルへの取り込みに使用できます。
 
@@ -128,7 +127,7 @@ Adobe Experience Platform クエリサービスを使用すれば、クエリへ
 
 詳しくは、 [リアルタイム顧客プロファイルの概要](../profile/home.md) を参照してください。
 
-### Data Science Workspace
+### データサイエンスワークスペース
 
 Adobe Experience Platform Data Science Workspace は、機械学習と人工知能を使用して、Experience Platform 内に保存されたデータからインサイトを得ます。データサイエンティストは、Data Science Workspace を使用することで、顧客とそのアクティビティに関する [!UICONTROL XDM 個人プロファイル]と [!UICONTROL XDM エクスペリエンスイベント]データに基づいてレシピを作成し、その人物が気に入って評価する可能性が高い購入傾向や推奨オファーなどを容易に予測できるようになります。
 

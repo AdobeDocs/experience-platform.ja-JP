@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気のトピック；PayPal コネクタ；paypal;Paypal
 solution: Experience Platform
 title: フローサービス API を使用した PayPal ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して PayPal をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 53%
+ht-degree: 58%
 
 ---
 
@@ -28,16 +27,16 @@ ht-degree: 53%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL PayPal] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL PayPal] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | の URL [!DNL PayPal] インスタンス。 ( デフォルト：api.sandbox.paypal.com) を参照してください。 |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL PayPal] アプリケーション。 |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL PayPal] アプリケーション。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL PayPal] 次に該当： `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL PayPal] 次に該当： `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 の導入について詳しくは、 [この PayPal ドキュメント](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
@@ -109,5 +108,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL PayPal] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/payments.md)

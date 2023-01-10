@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；スキーマ；アドレス；xdm:address；データ型；データ型；
 solution: Experience Platform
 title: 製品リスト項目データタイプ
-topic-legacy: overview
 description: このドキュメントでは、製品リスト項目の XDM データ型の概要を説明します。
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 14%
@@ -28,7 +27,7 @@ ht-degree: 14%
 | `currencyCode` | [!UICONTROL 文字列] | この [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) 商品の価格設定に使用するアルファベットの通貨コード。 |
 | `discountAmount` | [!UICONTROL Double] | 製品が割引されている場合、これは通常価格と製品の特別価格の差を表します。 |
 | `name` | [!UICONTROL 文字列] | この製品表示のユーザーに提示された製品の表示名。 |
-| `priceTotal` | [!UICONTROL ダブル] | 製品品目の合計価格。 |
+| `priceTotal` | [!UICONTROL Double] | 製品品目の合計価格。 |
 | `product` | [!UICONTROL 文字列] (URI) | URI `$id` 製品自体を取り込む XDM スキーマのデータバインディングを作成します。 |
 | `productAddMethod` | [!UICONTROL 文字列] | 訪問者が製品項目をリストに追加するために使用した方法。 |
 | `productImageUrl` | [!UICONTROL 文字列] | 商品のメイン画像の URL。 |

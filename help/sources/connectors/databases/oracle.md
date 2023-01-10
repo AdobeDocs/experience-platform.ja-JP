@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Oracle;oracle
 solution: Experience Platform
 title: Oracleソースコネクタの概要
-topic-legacy: overview
-description: API またはユーザーインターフェイスを使用してOracleをAdobe Experience Platformに接続する方法について説明します。
+description: API またはユーザーインターフェイスを使用して Oracle を Adobe Experience Platform に接続する方法について説明します。
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 40%
+ht-degree: 61%
 
 ---
 
@@ -26,11 +25,11 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure].
 
 ## API を使用して [!DNL Oracle] と [!DNL Platform] を接続する
 
-- [フローサービス API を使用したOracleベース接続の作成](../../tutorials/api/create/databases/oracle.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用した Oracle ベース接続の作成](../../tutorials/api/create/databases/oracle.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL Oracle] と [!DNL Platform] を接続する
 
-- [UI でのOracleソース接続の作成](../../tutorials/ui/create/databases/oracle.md)
+- [UI での Oracle ソース接続の作成](../../tutorials/ui/create/databases/oracle.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

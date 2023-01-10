@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web ページの詳細；データ型；データ型；データ型；web ページ
 solution: Experience Platform
 title: Web ページの詳細データタイプ
-topic-legacy: overview
 description: このドキュメントでは、Web ページの詳細に関するエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 11%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；書き出しジョブ；api;
 solution: Experience Platform
 title: セグメント書き出しジョブ API エンドポイント
-topic-legacy: developer guide
 description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience Platform Segmentation Service API の/export/jobs エンドポイントを使用すると、書き出しジョブをプログラムで取得、作成およびキャンセルできます。
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 35%

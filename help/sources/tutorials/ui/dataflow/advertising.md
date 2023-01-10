@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データフローの設定；広告コネクタ
 solution: Experience Platform
 title: UI での広告ソースを使用したデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して広告ソースのデータフローを作成する手順を説明します。
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 49%

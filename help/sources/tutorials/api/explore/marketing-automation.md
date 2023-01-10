@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティングの自動化
 solution: Experience Platform
 title: フローサービス API を使用したマーケティング自動化システムの調査
-topic-legacy: overview
 description: このチュートリアルでは、フローサービス API を使用してマーケティング自動化システムを調べます。
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 38%
@@ -27,13 +26,13 @@ ht-degree: 38%
 
 以下の節では、 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 このチュートリアルでは、データを取り込むサードパーティのマーケティングオートメーションアプリケーションとの有効な接続が必要です。 有効な接続は、アプリケーションの接続仕様 ID と接続 ID に関係します。 マーケティングオートメーション接続の作成とこれらの値の取得について詳しくは、 [マーケティングオートメーションソースの Platform への接続](../../api/create/marketing-automation/hubspot.md) チュートリアル
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 

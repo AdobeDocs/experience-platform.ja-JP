@@ -2,11 +2,10 @@
 keywords: Experience Platform、ホーム、人気のあるトピック、データ使用コンプライアンス、実施、データ使用コンプライアンスの実施、セグメント化サービス、セグメント化、セグメント化
 solution: Experience Platform
 title: API を使用して、オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
-topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する手順を説明します。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 51%

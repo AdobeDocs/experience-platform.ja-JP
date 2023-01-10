@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: チャネル詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「チャネル詳細」スキーマフィールドグループの概要を説明します。
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 13%
+ht-degree: 19%
 
 ---
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;支払データの収集;支払データ
 solution: Experience Platform
 title: Flow Service API を使用した支払いソースのデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、支払い申請からデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 95%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性
 solution: Experience Platform
 title: UI での顧客属性ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: UI でソース接続を作成して、顧客属性プロファイルデータをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 39%

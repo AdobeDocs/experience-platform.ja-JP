@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Azure HDInsights ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して、Azure HDInsights 上の Apache Hive をAdobe Experience Platformに接続する方法を説明します。
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 38%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->Azure HDInsights コネクタの Apache Hive はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>Azure HDInsights コネクタの Apache Hive はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -31,7 +30,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 ## 接続 [!DNL Apache Hive] オン [!DNL Azure HDInsights] から [!DNL Platform] API の使用
 
 - [フローサービス API を使用して、Azure HDInsights ベース接続で Apache Hive を作成する](../../tutorials/api/create/databases/hive.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## 接続 [!DNL Apache Hive] オン [!DNL Azure HDInsights] から [!DNL Platform] UI の使用

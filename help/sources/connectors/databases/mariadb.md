@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；MariaDB;mariadb;Maria DB;maria db
 solution: Experience Platform
 title: MariaDB ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して MariaDB をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 57%
+ht-degree: 61%
 
 ---
 
@@ -27,7 +26,7 @@ Experience Platform は、サードパーティのデータベースからデー
 ## API を使用して [!DNL MariaDB] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用した MariaDB ベース接続の作成](../../tutorials/api/create/databases/mariadb.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL MariaDB] と [!DNL Platform] を接続する

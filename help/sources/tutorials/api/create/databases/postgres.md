@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: フローサービス API を使用した PostgreSQL ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを PostgreSQL に接続する方法を説明します。
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '509'
-ht-degree: 52%
+ht-degree: 56%
 
 ---
 
@@ -29,14 +28,14 @@ ht-degree: 52%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL PostgreSQL] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] ～とつながる [!DNL PostgreSQL]を使用する場合は、次の接続プロパティを指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 次に示すように、 [!DNL PostgreSQL] アカウント この [!DNL PostgreSQL] 接続文字列のパターン： `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL PostgreSQL] が `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL PostgreSQL] が `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 接続文字列の取得について詳しくは、 [[!DNL PostgreSQL] 文書](https://www.postgresql.org/docs/9.2/app-psql.html).
 
@@ -115,5 +114,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL PostgreSQL] 接続ベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 旅行および接客業のデータモデル ERD
-topic-legacy: overview
 description: Adobe Experience Platformで使用する Experience Data Model(XDM) と互換性のある、旅行業界および接客業向けの標準化されたデータモデルを示すエンティティ関係図 (ERD) を表示します。
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 17%
@@ -37,7 +36,7 @@ ht-degree: 17%
 
 次の表に、旅行業界や接客業の一般的な使用例で推奨されるクラスとスキーマフィールドグループの概要を示します。
 
-| 使用例 | 推奨クラスとフィールドグループ |
+| ユースケース | 推奨クラスとフィールドグループ |
 | --- | --- |
 | クロスセルダイニングやその他の居住者のアトラクションは、近日のホテル予約で市場内のゲストやゲストに提供されます。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[個人の連絡先の詳細](../../field-groups/profile/personal-contact-details.md)</li><li>[仕事用連絡先の詳細](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
 | アップセルダイニングやその他の居住者のアトラクションは、近日のホテル予約で市場のゲストやゲストに提供されます。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[食事予約](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[個人の連絡先の詳細](../../field-groups/profile/personal-contact-details.md)</li><li>[仕事用連絡先の詳細](../../field-groups/profile/work-contact-details.md)</li><li>[ロイヤルティの詳細](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |

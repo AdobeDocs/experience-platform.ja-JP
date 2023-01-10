@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；Azure synapse分析；azure synapse分析；Synapse;Synapse
 solution: Experience Platform
 title: azure synapseAnalytics ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してAzure synapseAnalytics をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -27,7 +26,7 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 ## API を使用して [!DNL Azure Synapse Analytics] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用して、Azure synapseAnalytics ベースの接続を作成する](../../tutorials/api/create/databases/synapse-analytics.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL Azure Synapse Analytics] と [!DNL Platform] を接続する

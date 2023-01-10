@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；汎用 REST；汎用 REST
 solution: Experience Platform
 title: 汎用 REST API ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して、汎用 REST API をAdobe Experience Platformに接続する方法を説明します。
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 44%
+ht-degree: 55%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->この [!DNL Generic REST API] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>[!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -33,5 +32,5 @@ Platform は、次のようなプロトコルアプリケーションからデ�
 ## API を使用して [!DNL Generic REST API] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用して汎用の REST API ベース接続を作成する](../../tutorials/api/create/protocols/generic-rest.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用したプロトコルソースのデータフローの作成](../../tutorials/api/collect/protocols.md)

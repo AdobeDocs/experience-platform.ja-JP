@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；支払い
 solution: Experience Platform
 title: フローサービス API を使用した支払いシステムの調査
-topic-legacy: overview
 description: このチュートリアルでは、フローサービス API を使用して支払いアプリケーションを調べます。
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 39%
@@ -27,13 +26,13 @@ ht-degree: 39%
 
 以下の節では、 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 このチュートリアルでは、データを取り込むサードパーティの支払い申請との有効な接続が必要です。 有効な接続は、アプリケーションの接続仕様 ID と接続 ID に関係します。 支払い接続の作成とこれらの値の取得について詳しくは、 [支払い元を Platform に接続する](../../api/create/payments/paypal.md) チュートリアル
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 

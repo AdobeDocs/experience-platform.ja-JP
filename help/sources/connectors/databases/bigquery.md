@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
 title: Google BigQuery Source Connector の概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してGoogle BigQuery をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
@@ -30,7 +29,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 接続するには [!DNL Google BigQuery] Platform に対して、次の資格情報の値を生成する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `project` | プロジェクトは、 [!DNL Google Cloud] リソース [!DNL Google BigQuery]. |
 | `clientID` | クライアント ID は、 [!DNL Google BigQuery] OAuth 2.0 資格情報。 |
@@ -47,7 +46,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 ### API の使用
 
 - [フローサービス API を使用してGoogle BigQuery ベース接続を作成する](../../tutorials/api/create/databases/bigquery.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ### UI の使用

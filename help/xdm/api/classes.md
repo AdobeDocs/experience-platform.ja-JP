@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;
 solution: Experience Platform
 title: クラス API エンドポイント
 description: スキーマレジストリ API の/classes エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM クラスをプログラムで管理できます。
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 24%

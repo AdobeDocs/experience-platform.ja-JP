@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のあるトピック;セグメント化;セグメンテーション;セグメントサービス;セグメント;セグメント;セグメント;セグメント
 solution: Experience Platform
 title: セグメント化サービスの概要
-topic-legacy: overview
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 97%
@@ -96,7 +95,7 @@ Platform は、現在、ストリーミングセグメント化、バッチセ�
 
 ## セグメントメタデータ
 
-セグメントメタデータを使用すると、イベント内でのインデックス作成が容易になり、セグメントの再利用や組み合わせが可能になります。
+任意のセグメントを再利用または組み合わせる場合は、セグメントメタデータを使用するとインデックス作成が便利になります。
 
 （API または [!DNL Segment Builder] を使用して）セグメントを作成するには、セグメント名および結合ポリシーを定義する必要があります。
 

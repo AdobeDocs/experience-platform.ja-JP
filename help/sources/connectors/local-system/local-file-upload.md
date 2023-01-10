@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ローカル；ローカルファイルのアップロード；ローカルシステム
 solution: Experience Platform
 title: ローカルファイルアップロードソースコネクタの概要
-topic-legacy: overview
 description: ユーザーインターフェイスを使用してローカルシステムをAdobe Experience Platformに接続する方法を説明します
 exl-id: 4b3cf486-7aff-4ffb-920c-10af04000083
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 15%

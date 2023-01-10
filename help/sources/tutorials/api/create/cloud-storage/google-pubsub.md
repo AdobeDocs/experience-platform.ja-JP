@@ -2,14 +2,13 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;Google PubSub;google pubsub
 solution: Experience Platform
 title: Flow Service API を使用した Google PubSub ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -34,7 +33,7 @@ ht-degree: 100%
 | ---------- | ----------- |
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | `credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
 これらの値について詳しくは、こちらの [[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)に関するドキュメントを参照してください。サービスアカウントベースの認証を使用するには、こちらの[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)で、資格情報の生成手順を確認してください。
 

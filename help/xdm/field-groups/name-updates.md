@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；enduserids;end-user;ids;updates;
 solution: Experience Platform
 title: スキーマフィールドグループ名の更新
-topic-legacy: overview
 description: 最近の XDM スキーマフィールドグループ名の変更のリストです。
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 12%
@@ -22,7 +21,7 @@ ht-degree: 12%
 | 以前の名前 | 更新された名前 |
 | --- | --- |
 | [!UICONTROL エクスペリエンスイベントプライバシーの Mixin] | [!UICONTROL プライバシーの詳細] |
-| [!UICONTROL ExperienceEvent アプリケーションの詳細] | [!UICONTROL アプリの詳細] |
+| [!UICONTROL ExperienceEvent アプリケーションの詳細] | [!UICONTROL アプリケーションの詳細] |
 | [!UICONTROL ExperienceEvent チャネルの詳細] | [!UICONTROL チャンネル詳細] |
 | [!UICONTROL ExperienceEvent コマースの詳細] | [!UICONTROL コマース詳細] |
 | [!UICONTROL 広告用の ExperienceEvent の詳細] | [!UICONTROL 広告の詳細] |

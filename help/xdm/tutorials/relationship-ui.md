@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；UI;XDM;XDM;X
 solution: Experience Platform
 title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
 description: このドキュメントでは、スキーマユーザーインターフェイスのスキーマエディターを使用して 2 つのスキーマ間の関係を定義するためのExperience Platformを提供します。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 15%

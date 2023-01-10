@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: Platform UI を使用した MailChimp Campaigns ソース接続の作成
-topic-legacy: tutorial
 description: Platform UI を使用して Adobe Experience Platform を MailChimp Campaigns に接続する方法を説明します。
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 93%

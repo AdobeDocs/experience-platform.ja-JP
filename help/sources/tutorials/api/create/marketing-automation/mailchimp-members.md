@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: Flow Service API を使用した Mailchimp Members のデータフローの作成
-topic-legacy: tutorial
 description: Flow Service API を使用して Adobe Experience Platform を MailChimp Members に接続する方法を説明します。
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 86%

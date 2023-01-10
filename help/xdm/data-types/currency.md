@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；デバイス；データ型；データ型；データ型；通貨；
 solution: Experience Platform
 title: 通貨データタイプ
-topic-legacy: overview
 description: このドキュメントでは、通貨 XDM データタイプの概要を説明します。
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 7%

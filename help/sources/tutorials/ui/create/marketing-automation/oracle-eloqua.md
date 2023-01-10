@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；oracle;oracleeloqua;eloqua
 solution: Experience Platform
 title: Platform UI を使用したOracleEloqua ソース接続の作成
-topic-legacy: tutorial
 description: Platform UI を使用してAdobe Experience PlatformをOracleEloqua に接続する方法を説明します。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: 4c3988ea839c1d1843529eabcb0725f5b12feccc
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 40%
+ht-degree: 66%
 
 ---
 
@@ -20,28 +19,28 @@ ht-degree: 40%
 
 このガイドは、Adobe Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md):Platform を使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
+* [ソース](../../../../home.md)：Platform を使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび強化を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-既に [!DNL Oracle Eloqua] Platform のアカウントを使用する場合は、このドキュメントの残りの部分をスキップし、 [マーケティング自動化データを Platform に取り込むためのデータフローの作成](../../dataflow/marketing-automation.md).
+認証済みの [!DNL Oracle Eloqua] アカウントが既に Platform にある場合は、このドキュメントの残りの部分をスキップし、[データフローを作成して Platform にマーケティング自動化データを取り込む](../../dataflow/marketing-automation.md)方法に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-接続するには [!DNL Oracle Eloqua] を Platform に対して、次の認証プロパティの値を指定する必要があります。
+[!DNL Oracle Eloqua] を Platform に接続するには、次の認証プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | エンドポイント | のエンドポイント [!DNL Oracle Eloqua]. |
 | ユーザー名 | ユーザー名 [!DNL Oracle Eloqua] アカウント ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `adobe\\emily`. |
 | パスワード | 次に対応するパスワード： [!DNL Oracle Eloqua] ユーザー名。 |
 
-の認証資格情報の詳細 [!DNL Oracle Eloqua]を参照し、 [[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
+[!DNL Oracle Eloqua] の認証資格情報について詳しくは、[[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)を参照してください。
 
 必要な資格情報を収集したら、以下の手順に従って [!DNL Oracle Eloqua] アカウントを Platform にリンクできます。
 
 ## [!DNL Oracle Eloqua] アカウントを接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -65,4 +64,4 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Oracle Eloqua] アカウントとプラットフォーム。 次のチュートリアルに進み、 [データフローを作成してマーケティング自動化データを Platform に取り込む](../../dataflow/marketing-automation.md).
+このチュートリアルでは、認証を行い、お使いの [!DNL Oracle Eloqua] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、[マーケティング自動化データを Platform に取り込むためのデータフローを作成](../../dataflow/marketing-automation.md)できるようになりました。

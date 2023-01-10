@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Veeva CRM;veeva
 solution: Experience Platform
 title: UI での Veeva CRM ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Veeva CRM ソース接続を作成する方法を説明します。
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 78%

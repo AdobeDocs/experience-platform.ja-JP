@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;Zoho CRM;Zoho crm;Zoho;zoho
 solution: Experience Platform
 title: UI での Zoho CRM ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform の UI を使用して Zoho CRM ソース接続を作成する方法を説明します。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 100%

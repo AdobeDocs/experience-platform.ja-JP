@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；oracle;eloqua;oracleeloqua
 solution: Experience Platform
 title: フローサービス API を使用したOracleEloqua ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをOracleEloqua に接続する方法を説明します。
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 58%
+ht-degree: 79%
 
 ---
 
@@ -24,22 +23,22 @@ ht-degree: 58%
 このガイドは、Adobe Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [ソース](../../../../home.md)：Platform を使用すると、様々なソースからデータを取り込みながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)[!DNL Platform]： には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [サンドボックス](../../../../../sandboxes/home.md)： Platform には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と進化に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して [!DNL Oracle Eloqua] に正常に接続するために必要な追加情報を示しています。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Oracle Eloqua] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `endpoint` | のエンドポイント [!DNL Oracle Eloqua]. |
 | `username` | ユーザー名 [!DNL Oracle Eloqua] アカウント ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `adobe\\emily`. |
 | `password` | 次に対応するパスワード： [!DNL Oracle Eloqua] ユーザー名。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID の値 [!DNL Oracle Eloqua] ソースは次のように固定されます。 `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Oracle Eloqua] ソースの接続仕様 ID の値は、`35d6c4d8-c9a9-11eb-b8bc-0242ac130003` に固定されています。 |
 
-の認証資格情報の詳細 [!DNL Oracle Eloqua]を参照し、 [[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
+[!DNL Oracle Eloqua] の認証資格情報について詳しくは、[[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)を参照してください。
 
 ### Platform API の使用
 
@@ -89,13 +88,13 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `name` | [!DNL Oracle Eloqua] ベース接続名。わかりやすい名前を付けることをお勧めします。この値を使用して、ベース接続を検索できます。 |
+| `name` | [!DNL Oracle Eloqua] ベース接続名。この値を使用してベース接続を検索できるので、わかりやすい名前を指定することをお勧めします。 |
 | `description` | （オプション）ベース接続に関する補足情報を提供するために含めることができるプロパティ。 |
 | `auth.specName` | 接続に使用する認証タイプ。 |
 | `auth.params.endpoint` | のエンドポイント [!DNL Oracle Eloqua] サーバー。 |
 | `auth.params.username` | の [!DNL Oracle Eloqua] アカウント |
 | `auth.params.password` | [!DNL Oracle Eloqua] アカウントに対応するパスワード。 |
-| `connectionSpec.id` | の接続仕様 ID の値 [!DNL Oracle Eloqua] ソースは次のように固定されます。 `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | [!DNL Oracle Eloqua] ソースの接続仕様 ID の値は、`35d6c4d8-c9a9-11eb-b8bc-0242ac130003` に固定されています。 |
 
 **応答**
 
@@ -110,7 +109,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Oracle Eloqua] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Oracle Eloqua] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用した、マーケティング自動化データを Platform に取り込むデータフローの作成](../../collect/marketing-automation.md)

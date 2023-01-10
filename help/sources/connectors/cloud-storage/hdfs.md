@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: Apache HDFS ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Apache HDFS をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。取り込んだデータは、JSON 形式、Parquet 形式または区切り形式で指定できます。 クラウドストレージプロバイダーのサポートは次のとおりです。 [!DNL Apache] HDFS。
 

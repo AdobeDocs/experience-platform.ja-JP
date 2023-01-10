@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Apache hive;hive;Hive
 solution: Experience Platform
 title: フローサービス API を使用して Azure HDInsights Base Connection 上に Apache Hive を作成する
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して、Azure HDInsights 上の Apache Hive をAdobe Experience Platformに接続する方法を説明します。
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 53%
+ht-degree: 60%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->この [!DNL Apache Hive] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL Apache Hive] オン [!DNL Azure HDInsights] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -32,16 +31,16 @@ ht-degree: 53%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Hive] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Hive] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | の IP アドレスまたはホスト名 [!DNL Hive] サーバー。 |
 | `username` | アクセスに使用するユーザー名 [!DNL Hive] サーバー。 |
 | `password` | ユーザーに対応するパスワード。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Hive] 次に該当： `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Hive] 次に該当： `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 の導入について詳しくは、 [この Hive ドキュメント](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
@@ -109,5 +108,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Apache Hive] オン [!DNL Azure HDInsights] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

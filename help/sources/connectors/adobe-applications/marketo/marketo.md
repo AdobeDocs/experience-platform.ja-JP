@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo Engage コネクタ
-topic-legacy: overview
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 13%

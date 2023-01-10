@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 description: このチュートリアルでは、ソースワークスペースを使用して、取得頻度や間隔率など、データフロースケジュールを更新する手順を説明します。
 solution: Experience Platform
 title: UI でのソース接続データフローの更新
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 14%
@@ -26,7 +25,7 @@ ht-degree: 14%
 
 ## データフローの更新
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。選択 **[!UICONTROL データフロー]** をクリックして、既存のデータフローのリストを表示します。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。選択 **[!UICONTROL データフロー]** をクリックして、既存のデータフローのリストを表示します。
 
 ![カタログ](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -50,7 +49,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ### データの追加
 
-「[!UICONTROL データ追加]」手順が表示されます。適切なデータ形式を選択して、選択したデータの内容を確認し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
+[!UICONTROL データを追加]手順が表示されます。適切なデータ形式を選択して、選択したデータの内容を確認し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![add-data](../../images/tutorials/update-dataflows/add-data.png)
 

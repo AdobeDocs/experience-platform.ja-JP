@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQL ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して PostgreSQL をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -27,7 +26,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 ## API を使用して [!DNL PostgreSQL] と [!DNL Platform] を接続する
 
 - [Flow Service API を使用した [!DNL PostgreSQL] ベース接続の作成](../../tutorials/api/create/databases/postgres.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL PostgreSQL] と [!DNL Platform] を接続する

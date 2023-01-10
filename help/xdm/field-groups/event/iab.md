@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；iab;tcf；同意；
 solution: Experience Platform
 title: イベントスキーマ用の IAB TCF 2.0 同意フィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEvent クラスの IAB TCF 2.0 同意スキーマフィールドグループの概要を説明します。
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 2%

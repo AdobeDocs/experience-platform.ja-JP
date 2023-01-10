@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；poi;poi 詳細；目標点の詳細；データ型；データ型；
 solution: Experience Platform
 title: 目標点の詳細データタイプ
-topic-legacy: overview
 description: このドキュメントでは、目標地点の詳細の XDM データタイプの概要を説明します。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 17%
+ht-degree: 21%
 
 ---
 

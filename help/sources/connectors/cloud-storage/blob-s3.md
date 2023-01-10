@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure Blob とAmazon S3 ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure Blob とAmazon S3 をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 28%

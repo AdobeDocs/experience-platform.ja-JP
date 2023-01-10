@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: フローサービス API を使用したMicrosoft Dynamics ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して、Platform をMicrosoft Dynamics アカウントに接続する方法を説明します。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 42%
+ht-degree: 53%
 
 ---
 
@@ -39,7 +38,7 @@ ht-degree: 42%
 | `password` | ユーザーのパスワード [!DNL Dynamics] アカウント |
 | `servicePrincipalId` | のクライアント ID [!DNL Dynamics] アカウント この ID は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
 | `servicePrincipalKey` | サービスプリンシパル秘密鍵。 この資格情報は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Dynamics] の接続仕様 ID は `38ad80fe-8b06-4938-94f4-d4ee80266b07` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Dynamics] の接続仕様 ID は `38ad80fe-8b06-4938-94f4-d4ee80266b07` です。 |
 
 使い始める方法について詳しくは、 [この [!DNL Dynamics] 文書](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
@@ -100,7 +99,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) をクリックします。 この ID は、次の手順で CRM システムを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
 
 ```json
 {
@@ -156,7 +155,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の識別子 (`id`) をクリックします。 この ID は、次の手順で CRM システムを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
 
 ```json
 {
@@ -169,5 +168,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Microsoft Dynamics] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)

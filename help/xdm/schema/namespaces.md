@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；xdm；エクスペリエンスデータモデル；名前空間；名前空間；互換性モード；xed;
 solution: Experience Platform
 title: エクスペリエンスデータモデル (XDM) での名前空間
-topic-legacy: overviews
 description: Experience Data Model(XDM) の名前空間でスキーマを拡張し、異なるスキーマコンポーネントが統合される際にフィールドの競合を防ぐ方法について説明します。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

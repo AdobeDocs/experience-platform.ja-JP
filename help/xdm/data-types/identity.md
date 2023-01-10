@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ID；データ型；データ型；
 solution: Experience Platform
 title: ID データタイプ
-topic-legacy: overview
 description: このドキュメントでは、ID XDM データタイプの概要を説明します。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 11%

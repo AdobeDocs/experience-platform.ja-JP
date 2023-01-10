@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気の高いトピック；通知
 description: Adobe I/Oイベントを購読すると、Web フックを使用して、ソース接続のフロー実行ステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功または実行の失敗に貢献したエラーに関する情報が含まれます。
 solution: Experience Platform
 title: フロー実行通知
-topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 17%

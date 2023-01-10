@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;
 solution: Experience Platform
 title: フローサービス API を使用したデータランディングゾーンとAdobe Experience Platformの接続
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 20%
@@ -320,7 +319,7 @@ curl -X GET \
 | `determineProperties` | `queryParams` | 応答 |
 | --- | --- | --- |
 | True | N/A | If `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
-| 該当なし | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
+| N/A | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
 | True | True | 両方のオプションが同時に実行された場合は、エラーが返されます。 |
 | なし | なし | 2 つのオプションのどちらも指定されていない場合は、応答のプロパティを取得する方法がないので、エラーが返されます。 |
 

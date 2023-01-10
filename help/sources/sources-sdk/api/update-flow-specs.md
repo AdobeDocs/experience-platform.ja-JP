@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: フローサービス API を使用してフロー仕様を更新します
-topic-legacy: developer guide
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（バッチ SDK）を使用してフロー仕様を取得および更新する手順を説明します。
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 17%

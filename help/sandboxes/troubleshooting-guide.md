@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;サンドボックストラブルシューティング
 solution: Experience Platform
 title: サンドボックストラブルシューティングガイド
-topic-legacy: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のサンドボックスに関するよくある質問に対して回答を示します。
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: ht
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 100%
 

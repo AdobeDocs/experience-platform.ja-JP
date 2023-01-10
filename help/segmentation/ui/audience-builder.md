@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化サービス；ユーザーガイド；ui ガイド；audiences ui ガイド；audience builder；オーディエンス；オーディエンス；オーディエンス ui ガイド；
 solution: Experience Platform
 title: Audiences UI ガイド
-topic-legacy: ui guide
 description: Adobe Experience Platform UI の Audience Builder は、プロファイルデータ要素を操作できる豊富なワークスペースを提供します。 ワークスペースには、組織のオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

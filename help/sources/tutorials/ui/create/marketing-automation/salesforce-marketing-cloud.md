@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；salesforce marketing cloud;Salesforce Marketing Cloud
 solution: Experience Platform
 title: UI での SalesforceMarketing Cloudソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して SalesforceMarketing Cloudソース接続を作成する方法を説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 49%

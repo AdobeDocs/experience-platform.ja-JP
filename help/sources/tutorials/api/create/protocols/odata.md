@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；汎用 OData；汎用 ODATA
 solution: Experience Platform
 title: フローサービス API を使用した汎用 OData ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '433'
-ht-degree: 63%
+ht-degree: 68%
 
 ---
 
@@ -28,14 +27,14 @@ ht-degree: 63%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Generic OData] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Generic OData] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `url` | のルート URL [!DNL Generic OData] サービス。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Generic Generic OData] の接続仕様 ID は `8e6b41a8-d998-4545-ad7d-c6a9fff406c3` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Generic Generic OData] の接続仕様 ID は `8e6b41a8-d998-4545-ad7d-c6a9fff406c3` です。 |
 
 の導入について詳しくは、 [この [!DNL Generic OData] 文書](https://www.odata.org/getting-started/basic-tutorial/).
 
@@ -103,5 +102,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Generic REST OData] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/protocols.md)

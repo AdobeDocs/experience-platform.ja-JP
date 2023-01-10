@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；汎用 REST；汎用 REST
 solution: Experience Platform
 title: フローサービス API を使用した汎用 REST API ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して汎用 REST API をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 54%
+ht-degree: 59%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->この [!DNL Generic REST API] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>[!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -32,13 +31,13 @@ ht-degree: 54%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] ～とつながる [!DNL Generic REST API]を使用する場合は、選択した認証タイプに有効な資格情報を指定する必要があります。 [!DNL Generic REST API] は、OAuth 2 更新コードと基本認証の両方をサポートしています。 サポートされる 2 つの認証タイプの資格情報については、次の表を参照してください。
 
 #### OAuth 2 更新コード
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `host` | リクエスト先のソースのホスト URL。 この値は必須で、 `requestParameterOverride`. |
 | `authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
@@ -49,16 +48,16 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 | `expirationDate` | （オプション）アクセストークンの有効期限を定義する hidden 値です。 |
 | `accessTokenUrl` | （オプション）アクセストークンの取得に使用する URL エンドポイント。 |
 | `requestParameterOverride` | （オプション）上書きする秘密鍵証明書のパラメーターを指定できるプロパティ。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Generic REST API] の接続仕様 ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Generic REST API] の接続仕様 ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
 
 #### 基本認証
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `host` | リクエスト先のソースのホスト URL。 |
 | `username` | ユーザーアカウントに対応するユーザー名。 |
 | `password` | ユーザーアカウントに対応するパスワード。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Generic REST API] の接続仕様 ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Generic REST API] の接続仕様 ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
 
 ## ベース接続の作成
 
@@ -190,5 +189,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Generic REST API] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/protocols.md)

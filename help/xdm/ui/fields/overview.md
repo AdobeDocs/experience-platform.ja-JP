@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;
 solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: XDM ユーザーインターフェイスで XDM フィールドを定義するExperience Platformについて説明します。
-topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 4%
@@ -93,9 +92,9 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 | [!UICONTROL 最小長] | [!UICONTROL 文字列] | 取得時に受け入れられる値の最小文字数。 |
 | [!UICONTROL 最大長] | [!UICONTROL 文字列] | 取得時に受け入れられる値のために、文字列に含める必要がある最大文字数です。 |
 | [!UICONTROL 最小値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点数の最小値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最小値]「 」制約は空白のままにする必要があります。 |
-| [!UICONTROL 最大値] | [!UICONTROL ダブル] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最大値]「 」制約は空白のままにする必要があります。 |
-| [!UICONTROL 排他的な最小値] | [!UICONTROL ダブル] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最小値]&quot; （非排他）制約は空白のままにする必要があります。 |
-| [!UICONTROL 排他的な最大値] | [!UICONTROL ダブル] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最大値]&quot; （非排他）制約は空白のままにする必要があります。 |
+| [!UICONTROL 最大値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最大値]「 」制約は空白のままにする必要があります。 |
+| [!UICONTROL 排他的な最小値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最小値]&quot; （非排他）制約は空白のままにする必要があります。 |
+| [!UICONTROL 排他的な最大値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最大値]&quot; （非排他）制約は空白のままにする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 

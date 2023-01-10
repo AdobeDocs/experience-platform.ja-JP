@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；データタイプ；データタイプ；データタイプ；データタイプ；データタイプ；セグメント化データタイプ；セグメント化；セグメント化サービス；セグメント化サービスデータタイプ；
 solution: Experience Platform
 title: セグメント化サービスでサポートされるデータタイプ
-topic-legacy: overview
 description: Experience Data Model(XDM) のすべてのデータタイプは、Segmentation Service 内でサポートされています。Adobe セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 62%

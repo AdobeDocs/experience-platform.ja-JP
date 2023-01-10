@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気のトピック；ApacheHadoop分散ファイルシステム；Apachehadoop;hdfs;HDFS
 solution: Experience Platform
 title: フローサービス API を使用した Apache HDFS ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して、ApacheHadoopの分散ファイルシステムをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 54%
+ht-degree: 56%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -32,12 +31,12 @@ ht-degree: 54%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HDFS] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `url` | この URL は、に接続するために必要な認証パラメーターを定義します。 [!DNL HDFS] 匿名で この値の取得方法について詳しくは、 [この [!DNL HDFS] 文書](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL AdWords] の接続仕様 ID は `54e221aa-d342-4707-bcff-7a4bceef0001` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL AdWords] の接続仕様 ID は `54e221aa-d342-4707-bcff-7a4bceef0001` です。 |
 
 ### Platform API の使用
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；ローカルシステム；ファイルのアップロード；csv のマッピング；csv ファイルのマッピング；xdm への csv ファイルのマッピング；xdm への csv のマッピング；ui ガイド；
 solution: Experience Platform
 title: UI でのローカルファイルアップロードソースコネクタの作成
-topic-legacy: overview
 type: Tutorial
 description: ローカルファイルを Platform に取り込むための、ローカルシステムのソース接続の作成方法を説明します
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 74%

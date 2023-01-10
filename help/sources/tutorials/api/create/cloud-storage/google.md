@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
 title: フローサービス API を使用したGoogle Cloud Storage Base 接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをGoogleクラウドストレージアカウントに接続する方法を説明します。
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 52%
+ht-degree: 57%
 
 ---
 
@@ -28,16 +27,16 @@ ht-degree: 52%
 
 以下の節では、 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] を [!DNL Google Cloud Storage] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `accessKeyId` | 61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
 | `secretAccessKey` | ユーザーの認証に使用される 40 文字のベース 64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
 
-これらの値について詳しくは、 [Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) ガイド。 独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] 概要](../../../../connectors/cloud-storage/google-cloud-storage.md).
+これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] 概要](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Platform API の使用
 

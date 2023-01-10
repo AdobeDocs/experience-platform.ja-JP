@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Synapse;synapse;Azure synapse分析
 solution: Experience Platform
 title: フローサービス API を使用したAzure synapseAnalytics ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAzure synapseAnalytics をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 56%
+ht-degree: 60%
 
 ---
 
@@ -28,14 +27,14 @@ ht-degree: 56%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Synapse] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Synapse] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 接続に使用する接続文字列 [!DNL Synapse]. この [!DNL Synapse] 接続文字列のパターンは次のとおりです。 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Synapse] 次に該当： `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Synapse] 次に該当： `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
 接続文字列の取得について詳しくは、 [この Synapse ドキュメント](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 
@@ -103,5 +102,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL Synapse] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

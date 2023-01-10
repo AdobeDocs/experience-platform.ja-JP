@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;マーケティング自動化システム;マーケティング自動化データの収集
 solution: Experience Platform
 title: Flow Service API を使用したマーケティング自動化ソースのデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタと API を使用して Adobe Experience Platform に取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 94%

@@ -2,11 +2,10 @@
 keywords: Experience Platform、ホーム、人気の高いトピック、crm スキーマ、crm、CRM、データフロー、データフロー
 solution: Experience Platform
 title: UI での CRM ソースを使用したデータフローの作成
-topic-legacy: overview
 type: Tutorial
 description: データフローは、ソースから Platform データセットにデータを取得して取り込むスケジュール済みタスクです。 このチュートリアルでは、Platform UI を使用して CRM ソースのデータフローを作成する手順を説明します。
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 48%

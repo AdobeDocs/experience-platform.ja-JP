@@ -2,11 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;データフローのモニター;フローサービス API;フローサービス
 solution: Experience Platform
 title: フローサービス API を使用したソースデータフローの監視
-topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、完全性、エラーおよび指標のフロー実行データをモニタリングする手順を説明します。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 96%

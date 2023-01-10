@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；個人；人物の詳細；プロファイル人物の詳細；人物；
 solution: Experience Platform
 title: 人口統計詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、人口統計の詳細スキーマフィールドグループの概要を説明します。
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 26%
+ht-degree: 30%
 
 ---
 

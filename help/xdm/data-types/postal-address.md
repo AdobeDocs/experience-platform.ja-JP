@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；スキーマ；アドレス；xdm:address；データ型；データ型；
 solution: Experience Platform
 title: 郵送先住所データタイプ
-topic-legacy: overview
 description: このドキュメントでは、 Postal Address XDM データタイプの概要を説明します。
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 23%

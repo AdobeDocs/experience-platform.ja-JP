@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；couchbase;Couchbase
 solution: Experience Platform
 title: Couchbase ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Couchbase をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 36%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->この [!DNL Couchbase] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>この [!DNL Couchbase] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]を使用して、これらのシステムからデータを取り込むことができます。 リレーショナル、NoSQL、データウェアハウスなど、様々な種類のサードパーティデータベースがサポートされています。 データベースプロバイダーのサポートには以下が含まれます。 [!DNL Couchbase].
 
@@ -29,7 +28,7 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]�
 ## API を使用して [!DNL Couchbase] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用した Couchbase ベース接続の作成](../../tutorials/api/create/databases/couchbase.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL Couchbase] と [!DNL Platform] を接続する

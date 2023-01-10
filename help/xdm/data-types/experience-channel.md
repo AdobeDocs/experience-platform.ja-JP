@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web ページの詳細；データ型；データ型；データ型；web ページ
 solution: Experience Platform
 title: Experience Channel データタイプ
-topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスチャネルエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 22%

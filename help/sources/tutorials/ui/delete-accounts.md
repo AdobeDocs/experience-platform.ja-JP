@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；アカ
 description: Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、「ソース」ワークスペースからアカウントを削除する手順を説明します。
 solution: Experience Platform
 title: UI でのソース接続アカウントの削除
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 27%

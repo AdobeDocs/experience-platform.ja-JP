@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；地域；データ型；データ型；データ型；
 solution: Experience Platform
 title: 地域データタイプ
-topic-legacy: overview
 description: このドキュメントでは、地域 XDM データタイプの概要を説明します。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 37%

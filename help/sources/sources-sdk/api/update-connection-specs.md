@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: フローサービス API を使用した接続仕様の更新
-topic-legacy: developer guide
 description: 接続操作を通じて、接続仕様のプロパティを更新することがPUTできます。
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 14%

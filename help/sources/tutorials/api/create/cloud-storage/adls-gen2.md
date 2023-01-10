@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
 title: フローサービス API を使用した Azure Data Lake Storage Gen2 ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Azure Data Lake Storage Gen2 に接続する方法を説明します。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -28,17 +27,17 @@ ht-degree: 40%
 
 以下の節では、 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] ADLS Gen2 に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `url` | ADLS Gen2 のエンドポイント。 エンドポイントパターンは次のとおりです。 `https://<accountname>.dfs.core.windows.net`. |
+| `url` | ADLS Gen2 のエンドポイント。 エンドポイントパターンは `https://<accountname>.dfs.core.windows.net` です。 |
 | `servicePrincipalId` | アプリケーションのクライアント ID。 |
 | `servicePrincipalKey` | アプリケーションのキー。 |
 | `tenant` | アプリケーションを含むテナント情報。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。ADLS Gen2 の接続仕様 ID は次のとおりです。 `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。ADLS Gen2 の接続仕様 ID は次のとおりです。 `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 これらの値について詳しくは、 [この ADLS Gen2 ドキュメント](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 

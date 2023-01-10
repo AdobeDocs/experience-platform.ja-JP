@@ -3,10 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；ui;UI;XDM;XD
 solution: Experience Platform
 title: UI でのスキーマリソースの調査
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループ、データ型を調べる方法について説明します。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%

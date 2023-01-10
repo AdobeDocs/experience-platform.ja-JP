@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気のトピック；hubspot;Hubspot
 solution: Experience Platform
 title: フローサービス API を使用した HubSpot ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを HubSpot に接続する方法を説明します。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 53%
+ht-degree: 60%
 
 ---
 
@@ -28,17 +27,17 @@ ht-degree: 53%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HubSpot] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] ～とつながる [!DNL HubSpot]に値を入力する場合は、次の接続プロパティを指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL HubSpot] アプリケーション。 |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL HubSpot] アプリケーション。 |
 | `accessToken` | OAuth 統合を最初に認証したときに取得されたアクセストークン。 |
 | `refreshToken` | OAuth 統合の初回認証時に取得された更新トークン。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL HubSpot] の接続仕様 ID は `cc6a4487-9e91-433e-a3a3-9cf6626c1806` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL HubSpot] の接続仕様 ID は `cc6a4487-9e91-433e-a3a3-9cf6626c1806` です。 |
 
 導入の詳細については、 [HubSpot ドキュメント](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
@@ -112,5 +111,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL HubSpot] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用した、マーケティング自動化データを Platform に取り込むデータフローの作成](../../collect/marketing-automation.md)

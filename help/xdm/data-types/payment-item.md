@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；支払い項目；データ型；データ型；
 solution: Experience Platform
 title: 支払い項目データタイプ
-topic-legacy: overview
 description: このドキュメントでは、支払い項目エクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 26%

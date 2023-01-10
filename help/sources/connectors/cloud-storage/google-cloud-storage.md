@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Google Cloud Storage;google クラウドストレージ
 solution: Experience Platform
 title: Google Cloud Storage Source Connector の概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用してGoogle Cloud Storage をAdobe Experience Platformに接続する方法について説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 60%
+ht-degree: 81%
 
 ---
 
@@ -22,21 +21,21 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-## 接続の前提条件の設定 [!DNL Google Cloud Storage] アカウント
+## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定
 
-Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウント 相互運用性設定にアクセスするには、を開きます。 [!DNL Google Cloud Platform] を選択し、 **[!UICONTROL 設定]** から **[!UICONTROL クラウドストレージ]** 」オプションを使用します。
+Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウント 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-この **[!UICONTROL 設定]** ページが表示されます。 ここから、 [!DNL Google] プロジェクト ID と、 [!DNL Google Cloud Storage] アカウント 相互運用性の設定にアクセスするには、 **[!UICONTROL 相互運用性]** を上部のヘッダーから削除します。
+**[!UICONTROL 設定]**&#x200B;ページが表示されます。ここから、[!DNL Google] プロジェクト ID に関する情報と [!DNL Google Cloud Storage] アカウントの詳細を確認できます。相互運用性設定にアクセスするには、上部のヘッダーから「**[!UICONTROL 相互運用性]**」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-この **[!UICONTROL 相互運用性]** ページには、認証、アクセスキー、およびサービスアカウントに関連付けられたデフォルトプロジェクトに関する情報が含まれています。 サービスアカウントの新しいアクセスキー ID と秘密アクセスキーを生成するには、「 」を選択します。 **[!UICONTROL サービスアカウントのキーの作成]**.
+**[!UICONTROL 相互運用性]**&#x200B;ページには、認証、アクセスキーおよびサービスアカウントに関連付けられたデフォルトプロジェクトに関する情報が含まれています。サービスアカウントの新しいアクセスキー ID と秘密アクセスキーを生成するには、「**[!UICONTROL サービスアカウントのキーを作成]**」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。
+新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントを Platform に接続できます。
 
 ## ファイルとディレクトリの命名制約
 

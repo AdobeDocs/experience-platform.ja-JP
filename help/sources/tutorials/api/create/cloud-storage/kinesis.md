@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: フローサービス API を使用したAmazon Kinesisソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをAmazon Kinesisソースに接続する方法を説明します。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 67%
+ht-degree: 68%
 
 ---
 
@@ -30,14 +29,14 @@ ht-degree: 67%
 
 次のために [!DNL Flow Service] を [!DNL Amazon Kinesis] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `accessKeyId` | アクセスキー ID は、 [!DNL Kinesis] アカウントを Platform に送信します。 |
 | `secretKey` | 秘密鍵は、 [!DNL Kinesis] アカウントを Platform に送信します。 |
 | `region` | の地域 [!DNL Kinesis] アカウント 詳しくは、 [許可リストへの IP アドレスの追加](../../../../ip-address-allow-list.md) 地域の詳細については、を参照してください。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Kinesis] 接続仕様 ID は `86043421-563b-46ec-8e6c-e23184711bf6` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Kinesis] 接続仕様 ID は `86043421-563b-46ec-8e6c-e23184711bf6` です。 |
 
-詳しくは、 [!DNL Kinesis] アクセスキーとその生成方法については、こちらを参照してください。 [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+詳しくは、 [!DNL Kinesis] アクセスキーとその生成方法については、こちらを参照してください。 [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Platform API の使用
 

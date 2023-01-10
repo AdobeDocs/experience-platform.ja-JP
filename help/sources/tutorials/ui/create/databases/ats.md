@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Table Storage;azure テーブルストレージ；ats;ATS
 solution: Experience Platform
 title: UI での Azure テーブルストレージソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure テーブルストレージソース接続を作成する方法を説明します。
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 41%

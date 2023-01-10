@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気のトピック；Amazon Redshift;Amazon Redshift;Redshift;Redshift
 solution: Experience Platform
 title: UI でのAmazon Redshift ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI を使用してAmazon Redshift ソース接続を作成する方法を説明します。
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 55%

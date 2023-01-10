@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；ロイヤルティの詳細；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: ロイヤルティ詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「ロイヤルティ詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -28,7 +27,7 @@ ht-degree: 9%
 | `joinDate` | 日時 | 人物がロイヤルティプログラムに参加した日時の ISO 8601 datetime。 |
 | `loyaltyID` | 文字列の配列 | ロイヤルティプログラムメンバーに関連付けられたロイヤルティプログラム ID を表します。 |
 | `points` | Double | ロイヤルティメンバーのロイヤルティポイントまたは賞の現在の残高。 |
-| `pointsRedeemed` | ダブル | ロイヤルティメンバーが購入に対して適用した、または引き換えたポイントの数。 |
+| `pointsRedeemed` | Double | ロイヤルティメンバーが購入に対して適用した、または引き換えたポイントの数。 |
 | `program` | 文字列 | 人物が登録されているロイヤルティプログラムの名前。 |
 | `status` | 文字列 | 人物のロイヤルティメンバーシップの現在のステータス（例： ） `active`, `disabled`または `suspended`. |
 | `tier` | 文字列 | 人物が登録されているロイヤルティプログラム層をキャプチャします。 |

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: セルフサービスソース（バッチ SDK）の概要
-topic-legacy: developer guide
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報について説明します。
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 52%

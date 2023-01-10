@@ -2,10 +2,9 @@
 keywords: Experience Platform;ホーム;人気のトピック;mailchimp;mailchimp キャンペーン;mailchimp メンバー
 solution: Experience Platform
 title: Mailchimp コネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Mailchimp を Adobe Experience Platform に接続する方法を説明します。
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 88%

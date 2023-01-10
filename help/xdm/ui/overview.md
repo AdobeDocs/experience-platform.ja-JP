@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;
 solution: Experience Platform
 title: スキーマ UI の概要
 description: この概要では、スキーマのスキーマワークスペースの主な機能についてExperience Platformします。
-topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 9%

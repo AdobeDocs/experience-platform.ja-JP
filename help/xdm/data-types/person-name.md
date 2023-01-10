@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；fullName;xdm:fullName；ユーザー名；名前；データ型；データ型；
 solution: Experience Platform
 title: 担当者名データタイプ
-topic-legacy: overview
 description: このドキュメントでは、ユーザー名 XDM データタイプの概要を説明します。
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 21%

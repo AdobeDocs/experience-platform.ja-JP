@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して HubSpot をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 61%
+ht-degree: 76%
 
 ---
 
@@ -27,10 +26,10 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 ## API を使用して [!DNL HubSpot] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用して HubSpot ベース接続を作成する](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
-- [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## UIを使用して [!DNL HubSpot] と [!DNL Platform] を接続する
 
 - [UI での HubSpot ソース接続の作成](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [UI でのマーケティング自動化ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
+- [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)

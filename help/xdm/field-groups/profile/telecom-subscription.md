@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；通信；購読；通信；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: 通信購読スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「通信購読スキーマ」フィールドグループの概要を説明します。
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 

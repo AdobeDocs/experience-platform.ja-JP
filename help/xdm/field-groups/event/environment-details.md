@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；環境；環境の詳細；
 solution: Experience Platform
 title: 環境詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「 ExperienceEvent 環境の詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 

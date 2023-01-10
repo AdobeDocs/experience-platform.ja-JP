@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Analytics マッピングフィールド；Analytics マッピング
 solution: Experience Platform
 title: Adobe Analytics Source Connector のフィールドのマッピング
-topic-legacy: overview
 description: Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyticsデータを取り込むことができます。 ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 97%
@@ -58,11 +57,11 @@ Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyt
 | user_agent | environment.browserDetails.userAgent | 文字列 | HTTP ヘッダーで送信されるユーザーエージェント文字列。 |
 | mobileappid | application.</span>name | 文字列 | モバイルアプリ ID。次の形式で保存されます。`[AppName][BundleVersion]` |
 | mobiledevice | device.model | 文字列 | モバイルデバイスの名前。iOS の場合は、コンマ区切りの 2 桁の文字列として格納されます。最初の数字はデバイスの世代を表し、2 番目の数字はデバイスファミリーを表します。 |
-| pointofinterest | placeContext.POIinteraction.POIDetail.</span>名前 | 文字列 | モバイルサービスで使用されます。目標地点を表します。 |
+| pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | 文字列 | モバイルサービスで使用されます。目標地点を表します。 |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | 数値 | モバイルサービスで使用されます。目標地点の距離を表します。 |
 | mobileplaceaccuracy | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | 数値 | コンテキストデータ変数 a.loc.acc から収集します。収集時の GPS の精度をメートル単位で示します。 |
 | mobileplacecategory | placeContext.POIinteraction.POIDetail.category | 文字列 | コンテキストデータ変数 a.loc.category から収集します。特定の場所のカテゴリを示します。 |
-| mobileplaceid | placeContext.POIinteraction.POIDetail.POIID | 文字列 | コンテキストデータ変数 a.loc.id から収集します。特定の目標地点の識別子。 |
+| mobileplaceid | placeContext.POIinteraction.POIDetail.POIID | 文字列 | コンテキストデータ変数 a.loc.id から収集します。特定の対象地点の識別子。 |
 | video | media.mediaTimed.primaryAssetReference._id | 文字列 |  ビデオの名前。 |
 | videoad | advertising.adAssetReference._id | 文字列 | 広告アセットの識別子。 |
 | videocontenttype | media.mediaTimed.primaryAssetViewDetails.broadcastContentType | 文字列 | ビデオの Content-type。すべてのビデオ視聴について、自動的に「ビデオ」に設定されます。 |
@@ -74,11 +73,11 @@ Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyt
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._id | 文字列 | ビデオチャプターの名前 |
 | videoname | media.mediaTimed.primaryAssetReference._dc.title | 文字列 | ビデオ名。 |
 | videoadname | advertising.adAssetReference._dc.title | 文字列 | ビデオ広告の名前。 |
-| videoshow | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series._iptc4xmpExt.Name | 文字列 | ビデオショー。 |
+| videoshow | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series._iptc4xmpExt.Name | 文字列 | ビデオ番組。 |
 | videoseason | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Season._iptc4xmpExt.Name | 文字列 | ビデオシーズン。 |
 | videoepisode | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Episode._iptc4xmpExt.Name | 文字列 | ビデオのエピソード。 |
 | videonetwork | media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | 文字列 | ビデオネットワーク。 |
-| videoshowtype | media.mediaTimed.primaryAssetReference.showType | 文字列 | ビデオショーのタイプ。 |
+| videoshowtype | media.mediaTimed.primaryAssetReference.showType | 文字列 | ビデオ番組のタイプ。 |
 | videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | 文字列 | ビデオ広告の読み込み。 |
 | videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | 文字列 | ビデオフィードのタイプ。 |
 | mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | 数値 | Mobile Services ビーコンのメジャー番号。 |

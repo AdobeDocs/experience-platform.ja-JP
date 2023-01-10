@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；identityMap;ID マップ；ID マップ；スキーマデザイン；マップ；和集合スキーマ；和集合
+keywords: Experience Platform;ホーム;人気のトピック;スキーマ;XDM;個人プロファイル;フィールド;identityMap;ID マップ;スキーマデザイン;マップ;結合スキーマ;和集合
 solution: Experience Platform
 title: XDM Individual Profile クラス
-topic-legacy: overview
-description: このドキュメントでは、XDM Individual Profile クラスの概要を説明します。
+description: このドキュメントでは、XDM 個人プロファイルクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 32%
+ht-degree: 38%
 
 ---
 

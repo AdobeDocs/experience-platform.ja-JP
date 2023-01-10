@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure AzureData Explorer;AzureData Explorer;AzureData Explorer
 solution: Experience Platform
 title: フローサービス API を使用した Azure AzureData Explorerベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して Azure AzureData ExplorerをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 52%
+ht-degree: 59%
 
 ---
 
@@ -29,18 +28,18 @@ ht-degree: 52%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure Data Explorer] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Azure Data Explorer] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `endpoint` | のエンドポイント [!DNL Azure Data Explorer] サーバー。 |
 | `database` | の名前 [!DNL Azure Data Explorer] データベース。 |
 | `tenant` | への接続に使用される一意のテナント ID [!DNL Azure Data Explorer] データベース。 |
 | `servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Azure Data Explorer] データベース。 |
 | `servicePrincipalKey` | への接続に使用する一意のサービスプリンシパルキー [!DNL Azure Data Explorer] データベース。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Data Explorer] が `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Data Explorer] が `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 導入の詳細については、こちらを参照してください。 [[!DNL Azure Data Explorer] 文書](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
@@ -114,7 +113,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Azure Data Explorer] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure Data Explorer] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

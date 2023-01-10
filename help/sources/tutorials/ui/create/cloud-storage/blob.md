@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Blob;Azure Blob;Azure Blob コネクタ
 solution: Experience Platform
 title: UI での Azure Blob ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: Platform ユーザーインターフェイスを使用して Azure BLOB ソースコネクタを作成する方法を説明します。
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 39%

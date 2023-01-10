@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；AzureData Explorer;Azure Data Explorer
 solution: Experience Platform
 title: AzureData Explorerソースの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して AzureData ExplorerをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 37%
+ht-degree: 41%
 
 ---
 
@@ -27,7 +26,7 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure].
 ## API を使用して [!DNL Azure Data Explorer] と [!DNL Platform] を接続する
 
 - [フローサービス API を使用して AzureData Explorerベース接続を作成する](../../tutorials/api/create/databases/data-explorer.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して [!DNL Azure Data Explorer] と [!DNL Platform] を接続する

@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；環境；データ型；データ型；
 solution: Experience Platform
 title: 環境データタイプ
-topic-legacy: overview
 description: このドキュメントでは、環境 XDM データタイプの概要を説明します。
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 15%
@@ -57,7 +56,7 @@ ht-degree: 15%
 
 | 値 | 説明 |
 | --- | --- |
-| `browser` | Browser |
+| `browser` | ブラウザー |
 | `application` | アプリケーション |
 | `iot` | 物のインターネット |
 | `external` | 外部システム |

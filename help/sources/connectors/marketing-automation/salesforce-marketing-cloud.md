@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；Salesforce Marketing Cloud;SalesforceMarketing Cloud；マーケティング自動化
 solution: Experience Platform
 title: SalesforceMarketing Cloudソースの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して SalesforceMarketing CloudをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 28%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->この [!DNL Salesforce Marketing Cloud] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Salesforce Marketing Cloud] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -37,17 +36,17 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-## 接続 [!DNL Salesforce Marketing Cloud] API を使用して Platform に接続
+## API を使用して [!DNL Salesforce Marketing Cloud] と Platform を接続する
 
 以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Salesforce Marketing Cloud] API を使用して Platform に接続するには：
 
 * [フローサービス API を使用して SalesforceMarketing Cloudベース接続を作成する](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
-* [フローサービス API を使用して、マーケティング自動化ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
-## 接続 [!DNL Salesforce Marketing Cloud] UI を使用して Platform に接続
+## UI を使用した [!DNL Salesforce Marketing Cloud] の Platform への接続
 
 以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Salesforce Marketing Cloud] ユーザーインターフェイスを使用して Platform に接続するには：
 
 * [UI での SalesforceMarketing Cloudソース接続の作成](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-* [UI でのマーケティング自動化ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
+* [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)

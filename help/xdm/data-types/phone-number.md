@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；phoneNumber;xdm:phoneNumber；データ型；データ型；
 solution: Experience Platform
 title: 電話番号データタイプ
-topic-legacy: overview
 description: このドキュメントでは、電話番号 XDM データタイプの概要を説明します。
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 10%

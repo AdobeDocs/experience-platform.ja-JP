@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気のトピック；greenplum;Greenplum
 solution: Experience Platform
 title: フローサービス API を使用した GreenPlum ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して GreenPlum をAdobe Experience Platformに接続する方法を説明します。
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
-ht-degree: 59%
+ht-degree: 65%
 
 ---
 
@@ -28,10 +27,10 @@ ht-degree: 59%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL GreenPlum] の使用 [!DNL Flow Service] API
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | の [!DNL GreenPlum] インスタンス。 次の接続文字列パターン： [!DNL GreenPlum] が `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL GreenPlum] が `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL GreenPlum] が `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 接続文字列の取得について詳しくは、 [この GreenPlum ドキュメント](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
@@ -99,5 +98,5 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL GreenPlum] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

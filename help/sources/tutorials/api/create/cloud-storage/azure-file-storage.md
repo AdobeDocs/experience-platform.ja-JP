@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure;Azure File Storage;Azure ファイルストレージ
 solution: Experience Platform
 title: フローサービス API を使用した Azure ファイルストレージベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して Azure ファイルストレージをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 62%
@@ -28,16 +27,16 @@ ht-degree: 62%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure File Storage] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Azure File Storage] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | のエンドポイント [!DNL Azure File Storag]アクセスしているインスタンス。 |
 | `userId` | 十分な [!DNL Azure File Storage] endpoint. |
 | `password` | ユーザーのパスワード [!DNL Azure File Storage] インスタンス |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Azure File Storage] の接続仕様 ID は `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure File Storage] の接続仕様 ID は `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` です。 |
 
 の導入について詳しくは、 [この Azure File Storage ドキュメント](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 

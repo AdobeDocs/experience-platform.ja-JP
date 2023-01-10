@@ -3,9 +3,8 @@ keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;
 solution: Experience Platform
 title: アドホックスキーマ
 description: 特定の状況で、1 つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ XDM スキーマを作成する必要が生じる場合があります。 これはアドホックスキーマと呼ばれます。
-topic-legacy: developer guide
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 15%

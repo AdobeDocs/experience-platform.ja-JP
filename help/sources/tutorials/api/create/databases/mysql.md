@@ -2,14 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；MySQL;mysql
 solution: Experience Platform
 title: の作成 [!DNL MySQL] フローサービス API を使用したベース接続
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを MySQL に接続する方法を説明します。
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 59%
+ht-degree: 64%
 
 ---
 
@@ -28,14 +27,14 @@ ht-degree: 59%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL MySQL] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] を [!DNL MySQL] ストレージの場合は、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | この [!DNL MySQL] アカウントに関連付けられた接続文字列。 この [!DNL MySQL] 接続文字列のパターン： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL MySQL] が `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL MySQL] が `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 接続文字列の取得について詳しくは、 [[!DNL MySQL] 文書](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
@@ -103,6 +102,6 @@ curl -X POST \
 
 このチュートリアルに従って、 [!DNL MySQL]を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
 

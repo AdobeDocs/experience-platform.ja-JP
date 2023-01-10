@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；Azure Event Hubs;Azure イベントハブ；Event Hubs；イベントハブ
 solution: Experience Platform
 title: Azure Event Hubs ソースコネクタの概要
-topic-legacy: overview
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 19%

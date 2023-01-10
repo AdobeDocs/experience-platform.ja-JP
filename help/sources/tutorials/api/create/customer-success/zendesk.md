@@ -2,13 +2,12 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: フローサービス API を使用した Zendesk のデータフローの作成
-topic-legacy: tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Zendesk に接続する方法を説明します。
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '1996'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->この [!DNL Zendesk] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Zendesk] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Zendesk] のデータを Platform に取り込む手順を詳しく説明します。
 
@@ -29,11 +28,11 @@ ht-degree: 64%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Zendesk] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Zendesk] プラットフォームのアカウントで、次の資格情報の値を指定する必要があります。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | `subdomain` | アカウントに関連付けられた一意のドメイン。 | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |

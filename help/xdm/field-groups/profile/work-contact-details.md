@@ -2,13 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；スキーマデザイン；mixin;mixin；作業の詳細；プロファイル作業；
 solution: Experience Platform
 title: 仕事用連絡先詳細スキーマフィールドグループ
-topic-legacy: overview
 description: このドキュメントでは、「仕事用連絡先詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 

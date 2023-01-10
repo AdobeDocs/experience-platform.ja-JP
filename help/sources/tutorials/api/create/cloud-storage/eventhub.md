@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；イベントハブ；Azure イベントハブ；イベントハブ
 solution: Experience Platform
 title: フローサービス API を使用した Azure Event Hubs ソース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 59%
@@ -31,12 +30,12 @@ ht-degree: 59%
 
 次のために [!DNL Flow Service] を [!DNL Event Hubs] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `sasKeyName` | 認証規則の名前。SAS キー名とも呼ばれます。 |
 | `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` この `sasKey` 必ず～に対応する `manage` 次に対して設定された権限： [!DNL Event Hubs] リストに値を入力します。 |
 | `namespace` | の名前空間 [!DNL Event Hubs] にアクセスしています。 An [!DNL Event Hubs] 名前空間は、1 つ以上のスコーピングコンテナを作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
 これらの値について詳しくは、 [この Event Hubs ドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 

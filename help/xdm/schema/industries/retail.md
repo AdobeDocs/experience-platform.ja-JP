@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 小売業界のデータモデル
-topic-legacy: overview
 description: Adobe Experience Platformで使用するエクスペリエンスデータモデル (XDM) と互換性のある、小売業界用の標準化されたデータモデルを表示します。
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 2d7314f11837ca5c5ca1411553f20f58c4cad1ec
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 16%
@@ -37,7 +36,7 @@ ht-degree: 16%
 
 次の表に、一般的な小売の使用例で推奨されるクラスとスキーマフィールドグループの概要を示します。
 
-| 使用例 | 推奨クラスとフィールドグループ |
+| ユースケース | 推奨クラスとフィールドグループ |
 | --- | --- |
 | オンラインとオフラインのデータソースを組み合わせ、クロスデバイスおよびオンライン/オフラインの ID を解決して、クロスチャネルおよびクロスデバイスの全体的なアトリビューションレポートを提供します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[コマース詳細](../../field-groups/event/commerce-details.md)</li><li>[Web 詳細](../../field-groups/event/web-details.md)</li></ul></li><li>**[製品](../../classes/product.md)**:<ul><li>[製品カタログ](../../field-groups/product/product-catalog.md)</li><li>[製品カテゴリ](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | 様々なセグメントに対してターゲットを絞り、パーソナライズされたエクスペリエンスを提供して、チャネルオーケストレーションでのプラットフォームの拡大に役立てます。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[キャンペーンマーケティング詳細](../../field-groups/event/campaign-marketing-details.md)</li><li>[チャンネル詳細](../../field-groups/event/channel-details.md)</li><li>[コマース詳細](../../field-groups/event/commerce-details.md)</li><li>[環境詳細](../../field-groups/event/environment-details.md)</li><li>[Web 詳細](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[個人の連絡先の詳細](../../field-groups/profile/personal-contact-details.md)</li><li>[仕事用連絡先の詳細](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |

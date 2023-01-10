@@ -2,10 +2,9 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Marketoソースコネクタ；名前空間；スキーマ；b2b;B2B
 solution: Experience Platform
 title: B2B 名前空間とスキーマ
-topic-legacy: overview
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 14%

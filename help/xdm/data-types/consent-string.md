@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 同意文字列データタイプ
-topic-legacy: overview
 description: このドキュメントでは、同意文字列 XDM データタイプの概要を説明します。
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 5%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;sftp；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
 title: フローサービス API を使用した SFTP ベース接続の作成
-topic-legacy: overview
 type: Tutorial
 description: フローサービス API を使用して、Adobe Experience Platformを SFTP(Secure File Transfer Protocol) サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 31%
