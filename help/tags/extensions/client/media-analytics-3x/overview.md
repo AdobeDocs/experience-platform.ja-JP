@@ -2,10 +2,10 @@
 title: Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能の概要
 description: Adobe Experience Platform の Adobe Media Analytics (3.x SDK) for Audio and Video タグ拡張機能について説明します。
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 100%
+source-wordcount: '752'
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.
 
 >[!IMPORTANT]
 >
->この拡張機能は、Media 3.x SDK でデプロイされ、Media 2.x SDK との下位互換性はありません。ページで既に Media 2.x SDK を使用している場合は、この拡張機能の代わりに [Adobe Media Analytics for Audio and Video 拡張機能](../media-analytics/overview.md)を使用します。
+>この拡張機能は、Media 3.x SDK でデプロイされ、Media 2.x SDK との下位互換性はありません。2.x は非推奨となったので、3.x に更新してください。
 
 上記の 3 つの拡張機能をすべて、タグが有効になっているプロジェクトに含めたら、次の 2 つの方法のいずれかで実行できます。
 
