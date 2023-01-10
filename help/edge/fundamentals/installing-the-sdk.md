@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: web sdk のインストール；web sdk のインストール；internet explorer;promise;npm パッケージ
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 31%
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK の使用方法は 3 つあります。
 
 ## オプション 1:タグ拡張機能のインストール
 
-タグ拡張機能に関するドキュメントについては、 [launch ドキュメント](../../tags/extensions/client/sdk/overview.md)
+タグ拡張機能に関するドキュメントについては、 [タグドキュメント](../../tags/extensions/client/sdk/overview.md)
 
 ## オプション 2:事前にビルドされたスタンドアロンバージョンのインストール
 
@@ -28,7 +28,7 @@ Adobe Experience Platform Web SDK の使用方法は 3 つあります。
 
 URL 構造：https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.js または alloy.js （非縮小版）
 
-例：
+以下に例を示します。
 
 
 * 縮小済み： [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Internet Explorer のサポート
 
-Adobe Experience Platform SDK は、非同期タスクの完了を伝える方法として promise を使用します。 この [プロミス](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) SDK で使用される実装は、次を除くすべての target ブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]. で SDK を使用するには、以下を実行します。 [!DNL Internet Explorer]を選択し、 `window.Promise` [多充填の](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Adobe Experience Platform SDK は、非同期タスクの完了を伝える方法として promise を使用します。 この [プロミス](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) SDK で使用される実装は、次を除くすべての target ブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]. で SDK を使用するには、以下を実行します。 [!DNL Internet Explorer]を選択し、 `window.Promise` [多充填の](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 promise のポリフィルに使用できるライブラリの 1 つに、promise-polyfill があります。 詳しくは、 [promise-polyfill ドキュメント](https://www.npmjs.com/package/promise-polyfill) を参照してください。
 
