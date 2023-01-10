@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリ API エンドポイント
 description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 92%
+source-wordcount: '825'
+ht-degree: 73%
 
 ---
 
@@ -42,6 +42,7 @@ GET /queries?{QUERY_PARAMETERS}
 | `property` | フィールドに基づいて結果をフィルタリングします。フィルターは HTML エスケープする&#x200B;**必要があります**。複数のフィルターのセットを組み合わせるには、コンマを使用します。サポートされているフィルターは `created`、`updated`、`state`、および `id` です。サポートされる演算子のリストは、`>`（次より大きい）、`<`（次より小さい）、`>=`（次よりも大きいか等しい）、`<=`（次よりも小さいか等しい）、`==`（等しい）、`!=`（次と等しくない）、`~`（次を含む）です。例えば、`id==6ebd9c2d-494d-425a-aa91-24033f3abeec` は指定した ID を持つすべてのクエリを返します。 |
 | `excludeSoftDeleted` | ソフト削除されたクエリを含める必要があるかどうかを示します。例えば、`excludeSoftDeleted=false` はソフト削除クエリを&#x200B;**含みます**。（*ブール値、デフォルト値：true*） |
 | `excludeHidden` | ユーザー主導でないクエリを表示するかどうかを示します。この値を false に設定すると、CURSOR 定義、FETCH、メタデータクエリなど、ユーザ主導でないクエリが&#x200B;**含まれます**。（*ブール値、デフォルト値：true*） |
+| `isPrevLink` | この `isPrevLink` ページネーションにはクエリパラメーターが使用されます。 API 呼び出しの結果は、 `created` タイムスタンプと `orderby` プロパティ。 結果のページを移動する場合、 `isPrevLink` が true に設定されている場合、逆方向にページングします。 クエリの順序を逆にします。 例として、「次へ」および「前へ」リンクを参照してください。 |
 
 **リクエスト**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定された値によって設定された新しいクエリを作成します。
+次のリクエストは、ペイロードで指定された SQL ステートメントを使用して、新しいクエリを作成します。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+次のリクエストの例では、既存のクエリテンプレート ID を使用して新しいクエリを作成します。
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | 作成する SQL クエリ。 |
 | `name` | SQL クエリの名前。 |
 | `description` | SQL クエリの説明。 |
+| `queryParameters` | SQL 文内のパラメーター化された値を置き換えるキー値の組み合わせ。 必要なのは **if** 指定した SQL 内でパラメータ置換を使用しています。 これらのキー値ペアに対しては、値タイプのチェックはおこなわれません。 |
+| `templateId` | 既存のクエリの一意の ID。 SQL 文の代わりにこの文を指定できます。 |
+| `insertIntoParameters` | （オプション）このプロパティが定義されている場合、このクエリは INSERT INTO クエリに変換されます。 |
+| `ctasParameters` | （オプション）このプロパティが定義されている場合、このクエリは CTAS クエリに変換されます。 |
 
 **応答**
 

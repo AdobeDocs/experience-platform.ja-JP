@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリテンプレート API エンドポイント
 description: このガイドでは、クエリサービス API を使用して実行できる様々なクエリテンプレート API 呼び出しの詳細を説明します。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 89%
+source-wordcount: '894'
+ht-degree: 65%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sql` | 作成する SQL クエリ。 |
+| `sql` | 作成する SQL クエリ。 標準の SQL またはパラメータの置き換えを使用できます。 SQL でパラメータの置換を使用するには、パラメータキーの前に `$`. 例： `$key`を使用し、SQL で使用されるパラメーターを JSON キーと値のペアとして `queryParameters` フィールドに入力します。 ここで渡される値は、テンプレートで使用されるデフォルトのパラメーターです。 これらのパラメーターを上書きする場合は、POSTリクエストで上書きする必要があります。 |
 | `name` | テンプレートのクエリ名。 |
+| `queryParameters` | SQL 文内のパラメーター化された値を置き換えるキー値の組み合わせ。 必要なのは **if** 指定した SQL 内でパラメータ置換を使用しています。 これらのキー値ペアに対しては、値タイプのチェックはおこなわれません。 |
 
 **応答**
 
@@ -145,7 +149,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sql` | 更新する SQL クエリ。 |
-| `name` | スケジュールされたクエリの名前。 |
+| `sql` | 作成する SQL クエリ。 標準の SQL またはパラメータの置き換えを使用できます。 SQL でパラメータの置換を使用するには、パラメータキーの前に `$`. 例： `$key`を使用し、SQL で使用されるパラメーターを JSON キーと値のペアとして `queryParameters` フィールドに入力します。 ここで渡される値は、テンプレートで使用されるデフォルトのパラメーターです。 これらのパラメーターを上書きする場合は、POSTリクエストで上書きする必要があります。 |
+| `name` | テンプレートのクエリ名。 |
+| `queryParameters` | SQL 文内のパラメーター化された値を置き換えるキー値の組み合わせ。 必要なのは **if** 指定した SQL 内でパラメータ置換を使用しています。 これらのキー値ペアに対しては、値タイプのチェックはおこなわれません。 |
 
 **応答**
 
