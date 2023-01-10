@@ -2,13 +2,13 @@
 title: User-Agent クライアントのヒント
 description: Web SDK での User-Agent Client Hints の仕組みを説明します
 keywords: user-agent;client-hints;文字列；user-agent 文字列；低エントロピー；高エントロピー
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 7%
+source-wordcount: '1065'
+ht-degree: 8%
 
 ---
-
 
 # User-Agent クライアントのヒント
 
@@ -58,7 +58,7 @@ Adobe Experience Cloudソリューションは [!DNL User-Agent] 文字列を様
 
 彼らが開発した解は、と呼ばれる [User-Agent クライアントのヒント](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). クライアントヒントを使用すると、Web サイトで必要なブラウザー、オペレーティングシステム、デバイスの情報を収集できるほか、フィンガープリントなどの変換トラッキング方法に対する保護も強化できます。
 
-クライアントヒントを使用すると、Web サイトの所有者は、 [!DNL User-Agent] 文字列に基づいて書き込まれますが、よりプライバシーを保持する方法で書き込まれます。
+Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。
 
 最新のブラウザーでは、Web サーバーにユーザーを送信すると、 [!DNL User-Agent] 文字列は、必要かどうかに関係なく、リクエストごとに送信されます。 一方、クライアントヒントは、サーバがブラウザに対して、クライアントに関して知りたい追加情報を要求する必要があるモデルを適用します。 このリクエストを受け取ると、ブラウザーは独自のポリシーまたはユーザー設定を適用して、返されるデータを決定できます。 全体を公開する代わりに、 [!DNL User-Agent] 文字列は、すべてのリクエストでデフォルトで、明示的で監査可能な方法でアクセスを管理するようになりました。
 
@@ -116,13 +116,7 @@ Adobe Experience Cloudソリューションは [!DNL User-Agent] 文字列を様
 
 ### Adobe Analyticsは、高エントロピーなクライアントヒントに頼るレポートを作成 {#analytics}
 
-次のAdobe Analyticsレポートは、高エントロピーなクライアントヒントが無効な間は機能しません。
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [ブラウザーのタイプ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [オペレーティングシステム](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [オペレーティングシステムの種類](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [モバイルディメンション](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+この [オペレーティングシステム](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットに対して、オペレーティングシステムのバージョンが不正確になる可能性があります。
 
 ### Audience Manager特性は高エントロピーのクライアントヒントに依存 {#aam}
 
