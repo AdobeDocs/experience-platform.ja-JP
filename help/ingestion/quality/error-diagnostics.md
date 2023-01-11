@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ取り込みエラー診断の取得
 description: このドキュメントでは、バッチ取得の監視、部分バッチ取得エラーの管理、および部分バッチ取得タイプの参照に関する情報を提供します。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 40%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **応答**
 
-正常な応答は、 `path` 診断が保存された場所を示すオブジェクト。 応答は `path` オブジェクト [JSON 行](https://jsonlines.org/) 形式
+正常な応答は、 `path` 診断が保存された場所を示すオブジェクト。 応答は `path` オブジェクト [JSON 行](https://jsonlines.readthedocs.io/en/latest/) 形式
 
 ```json
 {"path": "F1.json"}

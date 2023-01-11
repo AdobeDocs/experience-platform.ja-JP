@@ -2,9 +2,9 @@
 title: Adobe Experience Platformリリースノート 2022 年 8 月
 description: Adobe Experience Platformの 2022 年 8 月リリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '2131'
+source-wordcount: '2109'
 ht-degree: 91%
 
 ---
@@ -116,8 +116,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| グローバルスキーマ | [[!UICONTROL AJO エンティティスキーマ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer の非正規化エンティティを表します。 |
-| クラス | [[!UICONTROL AJO 実行エンティティ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | セグメント化で使用する Adobe Journey Optimizer 実行エンティティを表します。 |
+| クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizerのルックアップスキーマを作成するためのレコードベースのクラス。 |
 | フィールドグループ | [[!UICONTROL Workfront 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront のすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
 
 {style=&quot;table-layout:auto&quot;}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: エクスペリエンスデータモデル (XDM) での名前空間
 description: Experience Data Model(XDM) の名前空間でスキーマを拡張し、異なるスキーマコンポーネントが統合される際にフィールドの競合を防ぐ方法について説明します。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 標準の XDM 構文を使用すると、スキーマで名前空間がどのように表されているか ( [Adobe Experience Platformでの翻訳方法](#compatibility)) をクリックします。
 
-標準 XDM では [JSON-LD](https://json-ld.org/) 名前空間をフィールドに割り当てるための構文です。 この名前空間は URI の形式 ( 例： `https://ns.adobe.com/xdm` の `xdm` 名前空間 )、または `@context` スキーマの属性。
+標準 XDM では [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 名前空間をフィールドに割り当てるための構文です。 この名前空間は URI の形式 ( 例： `https://ns.adobe.com/xdm` の `xdm` 名前空間 )、または `@context` スキーマの属性。
 
 次に、標準の XDM 構文の製品のスキーマの例を示します。 を除き `@id` （JSON-LD 仕様で定義される一意の識別子）、各フィールドは、 `properties` 名前空間で始まり、フィールド名で終わります。 以下で定義された短縮形のプレフィックスを使用する場合 `@context`の場合、名前空間とフィールド名はコロン (`:`) をクリックします。 プレフィックスを使用しない場合、名前空間とフィールド名はスラッシュ (`/`) をクリックします。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 | プロパティ | 説明 |
 | --- | --- |
 | `@context` | の下の完全な名前空間 URI の代わりに使用できる短縮形のプレフィックスを定義するオブジェクト `properties`. |
-| `@id` | レコードの一意の識別子 ( [JSON-LD 仕様](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | レコードの一意の識別子 ( [JSON-LD 仕様](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | 名前空間を表す短縮形のプレフィックスを使用するフィールドの例です。 この場合、 `xdm` は名前空間 (`https://ns.adobe.com/xdm`) および `sku` はフィールド名です。 |
 | `https://ns.adobe.com/xdm/channels/application` | 完全な名前空間 URI を使用するフィールドの例。 この場合、 `https://ns.adobe.com/xdm/channels` は名前空間で、 `application` はフィールド名です。 |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | ベンダーリソースが提供するフィールドは、独自の一意の名前空間を使用します。 この例では、 `https://ns.adobe.com/vendorA/product` はベンダーの名前空間で、 `stockNumber` はフィールド名です。 |
