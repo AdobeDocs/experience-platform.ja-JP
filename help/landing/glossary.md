@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform用語集
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 12%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **ライブラリ**:タグのコンテキストでは、ライブラリとは、タグライブラリがクライアントデバイス上でどのように動作するかに関する手順を含む、ビジネスロジックのセットです。
 
-**参照エンティティ**:データモデリングのコンテキストでは、ルックアップエンティティは個々の人に関連する概念を表しますが、個々の人を識別するために直接使用することはできません。 このカテゴリに該当するエンティティは、カスタムエクスペリエンスデータモデル (XDM) クラスに基づくスキーマで表される必要があります。
+**参照エンティティ**:データモデリングのコンテキストでは、ルックアップエンティティは個々の人に関連する概念を表しますが、個々の人を識別するために直接使用することはできません。 このカテゴリに該当するエンティティは、カスタム Experience Data Model(XDM) クラスに基づくスキーマで表され、を通じてプロファイルエンティティにリンクされる必要があります [スキーマ関係](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
