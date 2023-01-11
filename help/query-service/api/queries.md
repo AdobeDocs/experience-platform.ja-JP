@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリ API エンドポイント
 description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 73%
+source-wordcount: '868'
+ht-degree: 64%
 
 ---
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 >
 > `_links.cancel` の値を使用して、[作成したクエリをキャンセル](#cancel-a-query)できます。
 
-### クエリのキャンセル
+### クエリのキャンセルまたはソフト削除
 
-`/queries` エンドポイントに PATCH リクエストを送信し、リクエストパスでクエリの `id` 値を指定することで、指定したクエリを削除するようリクエストできます。
+に対してPATCHリクエストを実行することで、指定したクエリのキャンセルまたはソフト削除をリクエストできます `/queries` エンドポイントを作成し、クエリの `id` リクエストパスの値。
 
 **API 形式**
 
@@ -305,9 +305,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 PATCH /queries/{QUERY_ID}
 ```
 
-| プロパティ | 説明 |
+| パラメーター | 説明 |
 | -------- | ----------- |
-| `{QUERY_ID}` | キャンセルするクエリの `id` 値。 |
+| `{QUERY_ID}` | この `id` 操作を実行するクエリの値。 |
 
 
 **リクエスト**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | クエリをキャンセルするには、op パラメーターに値 `cancel ` を設定する必要があります。 |
+| `op` | リソースに対して実行する操作のタイプ。 指定できる値は、`cancel` および `soft_delete` です。クエリをキャンセルするには、op パラメーターに値を設定する必要があります `cancel `. ソフト削除操作では、GETリクエストでクエリが返されるのを停止しますが、システムからは削除されません。 |
 
 **応答**
 

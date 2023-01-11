@@ -4,10 +4,10 @@ solution: Experience Platform
 title: スケジュール済みクエリ API エンドポイント
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 79%
+source-wordcount: '1139'
+ht-degree: 73%
 
 ---
 
@@ -311,7 +311,7 @@ PATCH リクエストは、`/state` と `/schedule/schedule` の 2 つのパス�
 
 ### スケジュール済みクエリの状態の更新
 
-`/state` を使用して、選択したスケジュール済みクエリの状態（ENABLED または DISABLED）を更新できます。状態を更新するには、値を `enable` または `disable` に設定する必要があります。
+選択したスケジュール済みクエリの状態は、 `path` プロパティを `/state` そして `value` プロパティは次のいずれかになります。 `enable` または `disable`.
 
 **API 形式**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
+| `op` | クエリスケジュールで実行する操作。 指定できる値は次のとおりです。 `replace`. |
 | `path` | パッチを適用する値のパス。この場合、スケジュール済みクエリの状態を更新することになるので、`path` の値を `/state` に設定する必要があります。 |
 | `value` | `/state` の更新された値。この値は、`enable` または `disable` に設定して、スケジュール済みクエリを有効または無効にすることができます。 |
 
@@ -363,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### スケジュール済みクエリスケジュールの更新
 
-`/schedule/schedule`を使用して、スケジュールされたクエリの cron スケジュールを更新できます。cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
+スケジュール済みクエリの cron スケジュールは、 `path` プロパティを `/schedule/schedule` リクエスト本文内で、 cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
 
 **API 形式**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
+| `op` | クエリスケジュールで実行する操作。 指定できる値は次のとおりです。 `replace`. |
 | `path` | パッチを適用する値のパス。この場合、スケジュール済みクエリのスケジュールを更新するので、`path` の値を `/schedule/schedule` に設定する必要があります。 |
 | `value` | `/schedule` の更新された値。この値は、cron スケジュールの形式で指定する必要があります。この例では、スケジュールされたクエリは毎時 45 分に実行されます。 |
 
