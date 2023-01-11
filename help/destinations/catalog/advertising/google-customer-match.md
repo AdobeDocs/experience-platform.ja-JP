@@ -3,10 +3,10 @@ keywords: Google カスタマーマッチ；Googleカスタマーマッチ；Goo
 title: Google Customer Match 接続
 description: Google Customer Match を使用すると、Search、Shopping、Gmail、YouTubeなど、Googleが所有および運用するプロパティをまたいで、オンラインデータとオフラインデータを使用して顧客にリーチし、再び関与することができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
+source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
 workflow-type: tm+mt
-source-wordcount: '1778'
-ht-degree: 18%
+source-wordcount: '1769'
+ht-degree: 21%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 ## 概要 {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) では、オンラインデータとオフラインデータを使用して、Googleが所有および操作する次のようなプロパティをまたいで、顧客にリーチし、再び関わることができます。 [!DNL Search], [!DNL Shopping], [!DNL Gmail]、および [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) では、オンラインデータとオフラインデータを使用して、Googleが所有および操作する次のようなプロパティをまたいで、顧客にリーチし、再び関わることができます。 [!DNL Search], [!DNL Shopping], [!DNL Gmail]、および [!DNL YouTube].
 
 ![Adobe Experience Platform UI でのGoogle Customer Match の宛先。](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -38,7 +38,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Customer Match] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Google Customer Match] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -56,7 +56,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントエクスポート]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Google Customer Match] 宛先。 |
+| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Google Customer Match] 宛先。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -69,7 +69,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 ### 許可リスト {#allowlist}
 
-を作成する前に [!DNL Google Customer Match] 宛先をExperience Platformで指定する場合は、 [!DNL Google Ads] アカウントが次に準拠 [Google Customer Match ポリシー](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+を作成する前に [!DNL Google Customer Match] 宛先をExperience Platformで指定する場合は、 [!DNL Google Ads] アカウントが次に準拠 [[!DNL Google Customer Match] ポリシー](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 準拠しているアカウントを持つお客様は、Google によってリストへの掲載が自動的に許可されます。
 
@@ -96,10 +96,10 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 Googleのハッシュ要件とアクティベーションに関するその他の制限について詳しくは、Googleのドキュメントの次の節を参照してください。
 
-* [[!DNL Customer Match] 電子メールアドレス、アドレスまたはユーザー ID を含む](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match] 考慮事項](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [電話番号との顧客一致](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [モバイルデバイス ID とのカスタマーマッチング](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] 電子メールアドレス、アドレスまたはユーザー ID を含む](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] 考慮事項](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match] 電話番号](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] モバイルデバイス ID を使用](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
 E メールアドレスの取り込みについて詳しくは、Experience Platform [バッチ取得の概要](../../../ingestion/batch-ingestion/overview.md) そして [ストリーミング取得の概要](../../../ingestion/streaming-ingestion/overview.md).
@@ -154,7 +154,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 内 **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL アプリ ID] 送信時 [!DNL IDFA] または [!DNL GAID] セグメントを [!DNL Google Customer Match].
 
@@ -209,5 +209,5 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ## その他のリソース {#additional-resources}
 
-* [Google Customer Match — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [統合 [!DNL Google Customer Match]  — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 
