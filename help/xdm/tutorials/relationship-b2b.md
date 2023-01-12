@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 5%
@@ -40,11 +40,11 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [を使用してスキーマを作成する [!DNL Schema Editor]](create-schema-ui.md):UI でスキーマを構築および編集する方法の基本を説明するチュートリアルです。
 
-## ソースと宛先のスキーマの定義
+## ソースと参照スキーマの定義
 
 この関係で定義される 2 つのスキーマが既に作成されていると想定されます。このチュートリアルでは、デモ目的で、ビジネスオポチュニティ ([!DNL Opportunities]「 」スキーマ ) および関連するビジネスアカウント（「 」で定義）[!DNL Accounts]&quot;スキーマ ) です。
 
-スキーマの関係は、 **ソーススキーマ** が **宛先スキーマ**. 次の手順で、「[!DNL Opportunities]」はソーススキーマとして機能し、「[!DNL Accounts]「 」は宛先スキーマとして機能します。
+スキーマの関係は、 **ソーススキーマ** が **参照スキーマ**. 次の手順で、「[!DNL Opportunities]」はソーススキーマとして機能し、「[!DNL Accounts]「 」は参照スキーマとして機能します。
 
 ### B2B の関係で ID を理解する
 
@@ -53,7 +53,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 >title="参照 ID 名前空間"
 >abstract="参照スキーマのプライマリ ID フィールドの名前空間（タイプ）。 関係に参加するには、参照スキーマに確立されたプライマリ ID フィールドが必要です。 B2B の関係で ID について詳しくは、ドキュメントを参照してください。"
 
-関係を確立するには、宛先スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合、文字列ベースのエンティティ ID が異なるシステムや場所で収集されると、Platform 内のデータの競合を引き起こす可能性があるので、重複する可能性があることに注意してください。
+関係を確立するには、参照スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合、文字列ベースのエンティティ ID が異なるシステムや場所で収集されると、Platform 内のデータの競合を引き起こす可能性があるので、重複する可能性があることに注意してください。
 
 これを考慮するために、すべての標準 B2B クラスには、 [[!UICONTROL B2B ソース] データタイプ](../data-types/b2b-source.md). このデータ型は、B2B エンティティの文字列識別子のフィールドと、識別子のソースに関するその他のコンテキスト情報を提供します。 この一つのフィールドは `sourceKey`がデータ型の他のフィールドの値を連結して、エンティティの完全に一意の識別子を生成します。 このフィールドは、常に B2B エンティティスキーマのプライマリ ID として使用する必要があります。
 
@@ -75,7 +75,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ### [!DNL Accounts] schema
 
-宛先スキーマ「 」[!DNL Accounts]」が [!UICONTROL XDM アカウント] クラス。 ルートレベル `accountKey` フィールドに `sourceKey` と呼ばれるカスタム名前空間の下でプライマリ ID として機能する [!DNL B2B Account]. このスキーマは、プロファイルでも使用できるようになっています。
+参照スキーマ「 」[!DNL Accounts]」が [!UICONTROL XDM アカウント] クラス。 ルートレベル `accountKey` フィールドに `sourceKey` と呼ばれるカスタム名前空間の下でプライマリ ID として機能する [!DNL B2B Account]. このスキーマは、プロファイルでも使用できるようになっています。
 
 ![アカウントスキーマ](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 >title="参照スキーマからの関係名"
 >abstract="参照スキーマから現在のスキーマへの関係（「関連オポチュニティ」など）を示すラベル。 このラベルは、関連する B2B エンティティからのデータにコンテキストを与えるために、プロファイルとセグメント化で使用されます。 B2B スキーマの関係の構築について詳しくは、ドキュメントを参照してください。"
 
-2 つのスキーマ間の関係を定義するには、ソーススキーマに、宛先スキーマのプライマリ ID を参照する専用のフィールドが必要です。 標準 B2B クラスには、一般的に関連するビジネスエンティティ用の専用のソースキーフィールドが含まれています。 例えば、 [!UICONTROL XDM ビジネスオポチュニティ] クラスには、関連するアカウントのソースキーフィールドが含まれます (`accountKey`) および関連するキャンペーン (`campaignKey`) をクリックします。 ただし、他の [!UICONTROL B2B ソース] デフォルトのコンポーネント以外が必要な場合は、カスタムフィールドグループを使用してスキーマにフィールドを追加します。
+2 つのスキーマ間の関係を定義するには、ソーススキーマに、参照スキーマのプライマリ ID を示す専用のフィールドが必要です。 標準 B2B クラスには、一般的に関連するビジネスエンティティ用の専用のソースキーフィールドが含まれています。 例えば、 [!UICONTROL XDM ビジネスオポチュニティ] クラスには、関連するアカウントのソースキーフィールドが含まれます (`accountKey`) および関連するキャンペーン (`campaignKey`) をクリックします。 ただし、他の [!UICONTROL B2B ソース] デフォルトのコンポーネント以外が必要な場合は、カスタムフィールドグループを使用してスキーマにフィールドを追加します。
 
 >[!NOTE]
 >
->現在、ソーススキーマから宛先スキーマへの多対 1 および 1 対 1 の関係のみを定義できます。 1 対多の関係の場合、「多数」を表すスキーマで関係フィールドを定義する必要があります。
+>現在、ソーススキーマから参照スキーマへの多対 1 の関係と 1 対 1 の関係のみを定義できます。 1 対多の関係の場合、「多数」を表すスキーマで関係フィールドを定義する必要があります。
 
 関係フィールドを設定するには、矢印アイコン (![矢印アイコン](../images/tutorials/relationship-b2b/arrow.png)) をクリックします。 の場合、 [!DNL Opportunities] スキーマ、これは `accountKey.sourceKey` フィールドを変更する必要があります。
 
@@ -105,11 +105,11 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ![関係ダイアログ](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-の下 **[!UICONTROL 参照スキーマ]**&#x200B;を検索する場合は、検索バーを使用して宛先スキーマの名前を検索します。 宛先スキーマの名前をハイライトすると、 **[!UICONTROL 参照 ID 名前空間]** フィールドは、スキーマのプライマリ id の名前空間に対して自動的に更新されます。
+の下 **[!UICONTROL 参照スキーマ]**&#x200B;の場合は、検索バーを使用して参照スキーマの名前を検索します。 参照スキーマの名前をハイライト表示すると、 **[!UICONTROL 参照 ID 名前空間]** フィールドは、スキーマのプライマリ id の名前空間に対して自動的に更新されます。
 
 ![参照スキーマ](../images/tutorials/relationship-b2b/reference-schema.png)
 
-の下 **[!UICONTROL 現在のスキーマからの関係名]** および **[!UICONTROL 参照スキーマからの関係名]**&#x200B;では、それぞれ、ソーススキーマと宛先スキーマのコンテキストで、関係のわかりやすい名前を指定します。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** 変更を適用し、スキーマを保存します。
+の下 **[!UICONTROL 現在のスキーマからの関係名]** および **[!UICONTROL 参照スキーマからの関係名]**&#x200B;では、ソーススキーマと参照スキーマのコンテキストで、関係のわかりやすい名前をそれぞれ指定します。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** 変更を適用し、スキーマを保存します。
 
 ![関係名](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ![適用された関係](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-宛先スキーマの構造を表示している場合、関係マーカーは、スキーマのプライマリ ID フィールドの横の、左側のパネルに表示されます。
+参照スキーマの構造を表示している場合、関係マーカーは、スキーマのプライマリ ID フィールドの横の、左側のレールに表示されます。
 
 ![宛先スキーマ関係マーカー](../images/tutorials/relationship-b2b/destination-relationship.png)
 

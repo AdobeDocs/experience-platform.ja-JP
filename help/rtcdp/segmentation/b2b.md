@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition のセグメント化の使用例
 description: 利用可能な様々なAdobe Real-time Customer Data Platform B2B Edition の使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 1%
@@ -42,7 +42,7 @@ B2B の使用例のセグメントを効果的に作成するには、スキー�
 
 データモデルは複雑になる可能性があるので、Platform UI を使用して、データモデルのより詳細な視覚的表現を表示し、使用例に関連する属性を見つけるのに役立てることができます。 開始するには、Platform UI に移動し、左のナビゲーションで「スキーマ」を選択します。
 
-使用可能なリストから適切なスキーマを選択し、 [!UICONTROL 構成] サイドレール。 以下の例では、「人」関係を選択すると、現在のスキーマのどの属性が関連する「人」スキーマを参照しているか（関係のソーススキーマの場合）、または「人」スキーマで参照されているか（関係の宛先スキーマの場合）が表示されます。
+使用可能なリストから適切なスキーマを選択し、 [!UICONTROL 構成] サイドレール。 以下の例では、「人」関係を選択すると、現在のスキーマのどの属性が関連する「人」スキーマを参照しているか（関係のソーススキーマの場合）、または「人」スキーマで参照されているか（関係の参照スキーマの場合）が表示されます。
 
 ![スキーマワークスペースで人物関係を使用するソースキーの例](../assets/segmentation/source-key-schema-relationship-example.png)
 

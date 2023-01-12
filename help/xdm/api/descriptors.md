@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
-ht-degree: 47%
+ht-degree: 45%
 
 ---
 
@@ -385,15 +385,15 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
-| `xdm:destinationSchema` | この記述子が関係を定義する宛先スキーマの `$id` URI。 |
-| `xdm:destinationVersion` | 宛先スキーマのメジャーバージョン。 |
-| `xdm:destinationProperty` | 宛先スキーマ内のターゲットフィールドへの最適パス。このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
+| `xdm:destinationSchema` | この `$id` この記述子が関係を定義する参照スキーマの URI。 |
+| `xdm:destinationVersion` | 参照スキーマのメジャーバージョン。 |
+| `xdm:destinationProperty` | 参照スキーマ内のターゲットフィールドへのオプションのパス。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### 参照 ID 記述子
 
-参照 ID 記述子は、スキーマフィールドのプライマリ ID への参照コンテキストを提供し、他のスキーマのフィールドで参照できるようにします。 宛先スキーマは、この記述子を介して他のスキーマから参照できるように、事前にプライマリ ID フィールドが定義されている必要があります。
+参照 ID 記述子は、スキーマフィールドのプライマリ ID への参照コンテキストを提供し、他のスキーマのフィールドで参照できるようにします。 参照スキーマは、この記述子を介して他のスキーマから参照できるように、事前にプライマリ ID フィールドが定義されている必要があります。
 
 ```json
 {
@@ -410,7 +410,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `@type` | 定義する記述子のタイプ。参照 ID 記述子の場合、この値をに設定する必要があります。 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
-| `xdm:sourceProperty` | 宛先スキーマを参照するために使用されるソーススキーマ内のフィールドのパス。 「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めない ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
+| `xdm:sourceProperty` | 参照スキーマを参照するために使用されるソーススキーマ内のフィールドのパス。 「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めない ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
 | `xdm:identityNamespace` | ソースプロパティの ID 名前空間コード。 |
 
 {style=&quot;table-layout:auto&quot;}

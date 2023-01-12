@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル (XDM) に関するよくある質問への回答を見つけます。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
-ht-degree: 30%
+source-wordcount: '2074'
+ht-degree: 28%
 
 ---
 
@@ -269,7 +269,13 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 }
 ```
 
-で使用する関係記述子を含むスキーマを有効にするには、次の手順を実行します。 [!DNL Profile]の場合、ソースフィールドの名前空間とターゲットフィールドのプライマリ名前空間は同じである必要があります。 このエラーメッセージは、参照 ID 記述子に対して一致しない名前空間が含まれるスキーマを有効にしようとすると表示されます。この問題を解決するには、宛先スキーマの ID フィールドの `xdm:namespace` 値が、ソースフィールドの参照 ID 記述子にある `xdm:identityNamespace` プロパティの値と一致することを確認してください。
+>[!NOTE]
+>
+>このエラーの場合、「宛先スキーマ」は関係内の参照スキーマを参照します。
+
+で使用する関係記述子を含むスキーマを有効にするには、次の手順を実行します。 [!DNL Profile]の場合、ソースフィールドの名前空間と参照フィールドのプライマリ名前空間は同じである必要があります。 このエラーメッセージは、参照 ID 記述子に対して一致しない名前空間が含まれるスキーマを有効にしようとすると表示されます。
+
+次を確認します。 `xdm:namespace` 参照スキーマの id フィールドの値が、 `xdm:identityNamespace` この問題を解決するには、ソースフィールドの参照 ID 記述子のプロパティを使用します。
 
 標準の ID 名前空間コードのリストについては、 [標準名前空間](../identity-service/namespaces.md) （「id 名前空間の概要」）。
 

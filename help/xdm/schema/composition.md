@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマ構成の基本
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 25%
@@ -76,7 +76,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 >[!NOTE]
 >
->を使用するスキーマ `identityMap` は、関係内でソーススキーマとして使用できますが、宛先スキーマとして使用することはできません。 これは、すべての宛先スキーマに、ソーススキーマ内の参照フィールドにマッピングできる、表示された ID が必要だからです。 UI ガイド ( [関係](../tutorials/relationship-ui.md) を参照してください。
+>を使用するスキーマ `identityMap` は、関係内でソーススキーマとして使用できますが、参照スキーマとして使用することはできません。 これは、すべての参照スキーマは、ソーススキーマ内の参照フィールドにマッピングできる、表示可能な ID を持つ必要があるからです。 UI ガイド ( [関係](../tutorials/relationship-ui.md) を参照してください。
 
 ただし、ID を保存するソースからデータを取り込む場合 ( 例えば、 [!DNL Airship] またはAdobe Audience Manager)、またはスキーマの ID 数が可変の場合。 また、 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
