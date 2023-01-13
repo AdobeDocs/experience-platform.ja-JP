@@ -2,9 +2,9 @@
 title: データハイジーン作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスでの既存のデータハイジーン作業指示の表示および管理方法を説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 87%
 
 ---
@@ -104,4 +104,4 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 このガイドでは、Platform UI での既存のデータハイジーン作業指示の表示および管理方法について説明しました。独自の作業指示の作成について詳しくは、次のドキュメントを参照してください。
 
 * [データセット有効期限の管理](./dataset-expiration.md)
-* [レコードの削除を管理](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->
