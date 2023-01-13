@@ -5,10 +5,10 @@ title: UI でのGoogle Cloud ストレージソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用してGoogle Cloud Storage ソース接続を作成する方法を説明します。
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 35%
+source-wordcount: '567'
+ht-degree: 37%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 [!DNL Experience Platform] は、次のファイル形式を外部ストレージから取り込むことができます。
 
-* 区切り文字区切り値 (DSV):DSV 形式のデータ・ファイルのサポートは、現在、コンマ区切りの値に制限されています。 DSV フォーマット・ファイル内のフィールド・ヘッダーの値は、英数字とアンダースコアのみで構成する必要があります。 一般的な DSV ファイルのサポートは、今後提供される予定です。
+* 区切り文字区切り値 (DSV):DSV 形式のデータ・ファイルの区切り文字として、任意の 1 文字の値を使用できます。
 * JavaScript オブジェクト表記 (JSON):JSON 形式のデータファイルは、XDM に準拠している必要があります。
 * Apache Parquet:Parquet 形式のデータファイルは、XDM に準拠している必要があります。
 
