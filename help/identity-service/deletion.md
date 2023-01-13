@@ -1,10 +1,10 @@
 ---
 title: ID サービスの削除
 description: このドキュメントでは、Experience Platformで ID データを削除するために使用できる様々なメカニズムの概要と、ID グラフがどのように影響を受けるかの明確な説明を提供します。
-source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
+source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 12%
+source-wordcount: '1207'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform ID サービスは、個人のデバイスやシステ
 
 ## 単一の ID の削除
 
-単一の ID 削除リクエストを使用すると、グラフ内の ID を削除できるので、ID 名前空間に関連付けられた単一のユーザー ID に関連付けられたリンクが削除されます。 以下を使用できます。 [データの衛生状態](../hygiene/home.md) データクレンジングの場合、匿名データの削除または収集したデータの最小化の場合。 EU 一般データ保護規則 (GDPR) などのプライバシー規制へのお客様のデータ削除要求や準拠を要求するような使用例では、 [Privacy Service](../privacy-service/home.md).
+単一の ID 削除リクエストを使用すると、グラフ内の ID を削除できるので、ID 名前空間に関連付けられた単一のユーザー ID に関連付けられたリンクが削除されます。 UOU は次のメカニズムを使用できます： [Privacy Service](../privacy-service/home.md) を参照してください。
 
 以下の節では、Experience Platformで単一の ID 削除リクエストに使用できるメカニズムの概要を説明します。
 
@@ -38,18 +38,14 @@ Adobe Experience Platform ID サービスは、個人のデバイスやシステ
 
  Privacy Service は、EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制に基づいて定義された個人データのアクセス、販売、または削除を求める顧客のリクエストを処理します。Privacy Serviceを使用すると、API または UI を使用してジョブリクエストを送信できます。 Experience Platform が Privacy Service から削除リクエストを受信すると、Platform は、Privacy Service に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、特定の組織に関連付けられているすべてのサンドボックスに対して、削除が実行されます。 詳しくは、 [ID サービスでのプライバシーリクエストの処理](privacy.md).
 
-### 単一の ID を [!UICONTROL データの衛生状態] workspace
+次の表に、Privacy Serviceでの単一の ID 削除の分類を示します。
 
-この [[!UICONTROL データの衛生状態] workspace](../hygiene/ui/overview.md) Platform UI では、ID サービスとリアルタイム顧客プロファイルに参加している消費者レコードを削除できます。 の使用に関する包括的なガイドについては、 [!UICONTROL データの衛生状態] workspace( [消費者レコードの削除](../hygiene/ui/record-delete.md).
-
-次の表に、Privacy Serviceとデータの衛生状態における単一の ID の削除の違いを示します。
-
-| 単一の ID の削除 | Privacy Service | データハイジーン |
-| --- | --- | --- |
-| 受け入れられた使用例 | データプライバシーリクエスト (GDPR、CCPA) のみ。 | Experience Platformに保存されたデータの管理。 |
-| 推定遅延 | 数日から数週間 | Days |
-| 影響を受けるサービス | Privacy Serviceでの単一の ID 削除を使用すると、データを ID サービス、リアルタイム顧客プロファイル、データレイクのどれから削除するかを選択できます。 | データ衛生状態で単一の ID を削除すると、ID サービス、リアルタイム顧客プロファイル、データレイクをまたいで、選択したデータが削除されます。 |
-| 削除パターン | ID サービスから ID を削除します。 | ID サービスから ID を削除します。 |
+| 単一の ID の削除 | Privacy Service |
+| --- | --- |
+| 受け入れられた使用例 | データプライバシーリクエスト (GDPR、CCPA) のみ。 |
+| 推定遅延 | 数日から数週間 |
+| 影響を受けるサービス | Privacy Serviceでの単一の ID 削除を使用すると、データを ID サービス、リアルタイム顧客プロファイル、データレイクのどれから削除するかを選択できます。 |
+| 削除パターン | ID サービスから ID を削除します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,3 +89,22 @@ ID グラフの状態に対して削除が及ぼす潜在的な影響の概要�
 ## 次の手順
 
 このドキュメントでは、Experience Platform上の ID とデータセットを削除するために使用できる様々なメカニズムについて説明しました。 このドキュメントでは、ID とデータセットの削除が ID グラフに与える影響についても説明しました。 ID サービスの詳細については、 [ID サービスの概要](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->
