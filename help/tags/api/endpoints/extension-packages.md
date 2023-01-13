@@ -2,9 +2,9 @@
 title: 拡張パッケージエンドポイント
 description: Reactor API で /extension_packages エンドポイントを呼び出す方法を説明します。
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '954'
 ht-degree: 97%
 
 ---
@@ -944,7 +944,7 @@ curl -X PATCH \
 
 拡張機能パッケージのテストが完了したら、その拡張機能を非公開でリリースできます。 これにより、会社内の任意のプロパティで使用できるようになります。
 
-非公開でリリースした後、[公開リリースリクエストフォーム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U)に入力して、公開リリースプロセスを開始できます。
+非公開でリリースした後、[公開リリースリクエストフォーム](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest)に入力して、公開リリースプロセスを開始できます。
 
 **API 形式**
 

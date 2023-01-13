@@ -2,10 +2,10 @@
 title: 拡張機能のリリース
 description: Adobe Experience Platform でタグ拡張機能を非公開または公開でリリースする方法について説明します。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 100%
+source-wordcount: '319'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 テストとドキュメント化が完了すると、拡張機能をリリースする準備が整います。現在、2 種類のリリースを実行できます。
 
@@ -36,4 +36,4 @@ API を直接使用して、非公開で拡張機能をリリースする場合�
 
 非公開リリースが完了したら、公開するよう Adobe に依頼できます。これにより、拡張機能が公開カタログで使用できるようになります。データ収集ユーザーは誰でも、拡張機能を任意のプロパティにインストールできます。
 
-リリースプロセスを開始するには、 [公開リリースリクエストフォーム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) に記入してください。
+リリースプロセスを開始するには、 [公開リリースリクエストフォーム](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) に記入してください。
