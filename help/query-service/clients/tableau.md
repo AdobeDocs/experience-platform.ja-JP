@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tableau のクエリーサービスへの接続
 description: このドキュメントでは、Tableau とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 2%
+source-wordcount: '447'
+ht-degree: 1%
 
 ---
 
@@ -19,29 +19,26 @@ ht-degree: 2%
 >
 > このガイドは、ユーザーが既に [!DNL Tableau] インターフェイスの操作方法を熟知している。 詳細情報： [!DNL Tableau] は [公式 [!DNL Tableau] ドキュメント](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-接続するには [!DNL Tableau] から [!DNL Query Service]，開く [!DNL Tableau]、および **[!DNL To a Server]** セクション選択 **[!DNL More]** 続いて **[!DNL PostgreSQL]**
+方法に関する説明 [Tableau を使用した PostgreSQL サーバへの接続](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) は、Tableau の公式 Web サイトから入手できます。 接続設定のダイアログが表示されたら、パラメーターフィールドに Platform の資格情報を入力して、Adobe Experience Platformに接続します。 必要な接続パラメータのリストを以下に示します。
 
-![この [!DNL Tableau] ダッシュボードに「その他」と「 [!DNL PostgreSQL] ハイライト表示されました。](../images/clients/tableau/open-connection.png)
+| 接続パラメーター | 説明 |
+|---|---|
+| **[!DNL Server]** | SFTP ストレージの場所のアドレス。 Experience Platformの値を使用 **[!UICONTROL ホスト]** 資格情報。 |
+| **[!DNL Port]:** | のポート [!DNL Query Service]. ポートを使用する必要があります **80** または **5432** ～とつながる [!DNL Query Service]. |
+| **[!DNL Database]** | アクセスするデータベース。 Experience Platformの値を使用 **[!UICONTROL データベース]** 資格情報： `prod:all`. |
+| **[!DNL Authentication]:** | ユーザー ID を証明するために選択した方法。 次を選択することをお勧めします。 [!DNL Username and Password] をクリックします。 |
+| **[!DNL Username]** | これは Platform 組織 ID です。 Experience Platformの値を使用 **[!UICONTROL ユーザー名]** 資格情報。 ID は、 `ORG_ID@AdobeOrg`. |
+| **[!DNL Password]** | この英数字の文字列はExperience Platform **[!UICONTROL パスワード]** 資格情報。 有効期限のない資格情報を使用する場合、この値は `technicalAccountID` そして `credential` 設定 JSON ファイルにダウンロードされました。 パスワードの値は次の形式で指定します。{technicalAccountId}:{credential}。 有効期限のない資格情報の設定 JSON ファイルは、Adobeがのコピーを保持しない、初期化中に 1 回限りのダウンロードです。 |
 
-これで、Adobe Experience Platformに接続する値を入力できるようになりました。 データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
+ユーザー名、パスワード、ログイン資格情報の検索について詳しくは、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
-必ず **[!UICONTROL SSL が必要]** 」ボックスをクリックして接続を試みます。
-
->[!IMPORTANT]
->
->詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
-
-![この [!DNL PostgreSQL] 接続ダイアログが開き、接続の詳細が完了しました。](../images/clients/tableau/sign-in.png)
+必ず **[!UICONTROL SSL が必要]** 」ボックスをクリックして接続を試みます。 詳しくは、 [SSL モードのドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートについて確認してください。
 
 >[!IMPORTANT]
 >
 >サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../best-practices/flatten-nested-data.md) を参照してください。
 
-すべての資格情報を入力したら、「 」を選択します。 **[!DNL Sign In]** をクリックして続行します。
-
-これで、Adobe Experience Platformと接続し、テーブルのリストが横に表示されます。
-
-![新しい [!DNL Tableau] ダッシュボードとクエリサービステーブルが左側のパネルでハイライト表示されています。](../images/clients/tableau/connected.png)
+すべての資格情報を入力した後、設定を確認して続行します。 Adobe Experience Platformとの連携が完了しました。
 
 ## 次の手順
 

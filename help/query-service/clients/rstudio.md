@@ -4,10 +4,10 @@ solution: Experience Platform
 title: RStudio をクエリサービスに接続
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 11%
+source-wordcount: '449'
+ht-degree: 10%
 
 ---
 
@@ -17,21 +17,19 @@ ht-degree: 11%
 
 >[!NOTE]
 >
+> [!DNL RStudio] は現在、 [!DNL Posit]. [!DNL RStudio] 製品名は「 [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] マネージャ [!DNL Posit Cloud]、および [!DNL Posit Academy].
+>
 > このガイドは、ユーザーが既に [!DNL RStudio] そしてその使い方に精通している 詳細情報： [!DNL RStudio] は [公式 [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/).
 > 
 > また、 [!DNL RStudio] クエリサービスを使用する場合は、 [!DNL PostgreSQL] JDBC 4.2 ドライバ。 JDBC ドライバーは、 [[!DNL PostgreSQL] 公式サイト](https://jdbc.postgresql.org/download/).
 
 ## の作成 [!DNL Query Service] 接続 [!DNL RStudio] インターフェイス
 
-インストール後 [!DNL RStudio]RJDBC パッケージをインストールする必要があります。 次に移動： **[!DNL Packages]** ウィンドウ枠で、 **[!DNL Install]**.
+インストール後 [!DNL RStudio]RJDBC パッケージをインストールする必要があります。 方法に関する説明 [コマンドラインを使用してデータベースを接続する](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) は公式の Posit ドキュメントに記載されています。
 
-![この [!DNL RStudio] ダッシュボード（「パッケージ」と「インストール」がハイライトされています）](../images/clients/rstudio/install-package.png)
+Mac OS を使用している場合は、 **[!UICONTROL ツール]** メニューバーから、 **[!UICONTROL パッケージのインストール]** をドロップダウンメニューから選択します。 または、 **[!DNL Packages]** RStudio UI の「 」タブで、「 」を選択します。 **[!DNL Install]**.
 
-ポップアップが表示され、 **[!DNL Install Packages]** 画面 以下を確認します。 **[!DNL Repository (CRAN)]** が **[!DNL Install from]** 」セクションに入力します。 の値 **[!DNL Packages]** は、 `RJDBC`. 確認 **[!DNL Install dependencies]** が選択されている。 すべての値が正しいことを確認したら、「 」を選択します。 **[!DNL Install]** をクリックして、パッケージをインストールします。
-
-![「パッケージ」フィールドに RJDBC が入力された「パッケージをインストール」ダイアログで、「インストール」がハイライト表示されています。](../images/clients/rstudio/install-jrdbc.png)
-
-RJDBC パッケージがインストールされたので、を再起動します。 [!DNL RStudio] をクリックして、インストールプロセスを完了します。
+ポップアップが表示され、 **[!DNL Install Packages]** 画面 以下を確認します。 **[!DNL Repository (CRAN)]** が **[!DNL Install from]** 」セクションに入力します。 の値 **[!DNL Packages]** は、 `RJDBC`. 確認 **[!DNL Install dependencies]** が選択されている。 すべての値が正しいことを確認したら、「 」を選択します。 **[!DNL Install]** をクリックして、パッケージをインストールします。 RJDBC パッケージがインストールされたので、を再起動します。 [!DNL RStudio] をクリックして、インストールプロセスを完了します。
 
 後 [!DNL RStudio] が再起動され、クエリサービスに接続できるようになりました。 を選択します。 **[!DNL RJDBC]** パッケージを **[!DNL Packages]** ウィンドウに移動し、コンソールに次のコマンドを入力します。
 
@@ -53,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
-![のコンソール出力 [!DNL RStudio] を使用して、クエリサービスに接続します。](../images/clients/rstudio/connection-rjdbc.png)
+コンソール出力のメッセージで、クエリサービスへの接続を確認します。
 
 ## クエリの記述
 
