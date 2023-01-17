@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
+source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 39%
+source-wordcount: '1014'
+ht-degree: 54%
 
 ---
 
@@ -48,14 +48,14 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 権限の付与の詳細を表示： [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) および [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのセグメントを要求しています。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,7 +75,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -85,9 +85,9 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **名前**：この宛先に任意の名前を入力します。
+* **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
-* **データストリーム ID**:これにより、セグメントを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target の宛先が有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/datastreams/overview.md#target) を参照してください。
+* **データストリーム ID**:これにより、セグメントを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
    * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたセグメントは、次回のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
 
 | データストリームが選択されていません | データストリームが選択されました |
@@ -96,15 +96,15 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントを有効化する手順については、[プロファイルリクエストの宛先へのプロファイルとセグメントの有効化](../../ui/activate-profile-request-destinations.md)を参照してください。
 
