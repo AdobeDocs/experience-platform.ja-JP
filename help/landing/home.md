@@ -2,10 +2,10 @@
 keywords: Experience Platform;ホーム;人気のトピック;CJA;ジャーニー分析;Customer Journey Analytics;キャンペーンオーケストレーション;オーケストレーション;カスタマージャーニー;ジャーニー;ジャーニーオーケストレーション;機能;地域
 solution: Experience Platform
 title: Adobe Experience Platform 概要
-description: Adobe Experience Platform を使用すると、組織はデータサイエンスと機械学習を適用する前に顧客データを一元化および標準化して、パーソナライズされた豊かなエクスペリエンスの設計と配信を劇的に改善することができます。
+description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 [!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
 
-特定の [!DNL Platform] サービスに関する詳細な情報を得るには、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って、適切なガイドを選択します。
+特定の [!DNL Platform] サービスに関する詳細な情報については、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って目的のガイドを選択してください。
 
 ### [!DNL Experience Platform] 上で構築されたアプリケーションサービスのドキュメント
 
@@ -45,7 +45,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
    [!DNL Platform] API の操作の基本について説明します。
 
 * [**API リファレンスドキュメント**](https://www.adobe.com/go/platform-api-reference-en)\
-   ヘッダー、パラメーター、サンプルリクエスト、応答などの [!DNL Experience Platform] API を検出します。<br/>*これらのドキュメントは Adobe I/O でホストされます。*
+   ヘッダー、パラメーター、サンプルリクエスト、応答などの [!DNL Experience Platform] API について説明しています。<br/>*これらのドキュメントは Adobe I/O でホストされます。*
 
 * [**用語集**](glossary.md)\
    Adobe Experience Platform の用語を確認します。
@@ -54,4 +54,4 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
    最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
 
 * [**トラブルシューティングガイド**](troubleshooting.md)\
-   一般的なエラーの解決策と、よくある質問への回答を見つけます。
+   一般的なエラーの解決策と、よくある質問に対する回答を紹介しています。
