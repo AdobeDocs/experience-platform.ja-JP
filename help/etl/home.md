@@ -5,7 +5,7 @@ title: Adobe Experience Platform 用 ETL 統合の開発
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4075'
 ht-degree: 100%
 
