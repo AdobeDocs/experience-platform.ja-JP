@@ -3,24 +3,24 @@ keywords: Experience Platform;ホーム;人気のトピック;データガバナ
 solution: Experience Platform
 title: API でのデータガバナンスポリシーの作成
 type: Tutorial
-description: Policy Service API を使用してデータガバナンスポリシーを作成する方法を説明します。
+description: Policy Service API を使用してデータガバナンスポリシーを作成する方法について説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 # API でのデータガバナンスポリシーの作成
 
-この [ポリシーサービス API](https://www.adobe.io/experience-platform-apis/references/policy-service/) では、データガバナンスポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用すると、データガバナンスポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
-このドキュメントでは、 [!DNL Policy Service] API
+このドキュメントでは、[!DNL Policy Service] API を使用してガバナンスポリシーを作成する、順を追ったチュートリアルを提供します。
 
 >[!NOTE]
 >
->アクセス制御ポリシーを作成する手順については、 `/policies` エンドポイントガイド [アクセス制御 API](../../access-control/abac/api/policies.md). 同意ポリシーの作成方法については、 [policies UI ガイド](./user-guide.md#consent-policy).
+>アクセス制御ポリシーを作成する手順については、[Access Control API](../../access-control/abac/api/policies.md) の `/policies` エンドポイントガイドを参照してください。同意ポリシーを作成する方法については、[ポリシー UI ガイド](./user-guide.md#consent-policy)を参照してください。
 
 ## はじめに
 
@@ -422,6 +422,6 @@ curl -X PATCH \
 
 このチュートリアルでは、マーケティングアクションのデータ使用ポリシーを作成しました。[データ使用ポリシーの実施](../enforcement/api-enforcement.md)に関するチュートリアルを続けて、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-[!DNL Policy Service] API で使用可能な様々な操作について詳しくは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。[!DNL Real-Time Customer Profile] データに対してポリシーを適用する方法については、オーディエンスセグメント](../../segmentation/tutorials/governance.md)に対するデータ使用コンプライアンスの適用[に関するチュートリアルを参照してください。
+[!DNL Policy Service] API で使用可能な様々な操作について詳しくは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。[!DNL Real-Time Customer Profile] データに対してポリシーを適用する方法については、オーディエンスセグメント[に対するデータ使用コンプライアンスの適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
 
 [!DNL Experience Platform] ユーザーインターフェイスで使用ポリシーを管理する方法については、『[ポリシーユーザガイド](user-guide.md)』を参照してください。

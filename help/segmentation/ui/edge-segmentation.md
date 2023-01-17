@@ -7,7 +7,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -52,10 +52,10 @@ ht-degree: 94%
 | セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国在住で、「既存のセグメント」のセグメントに属しているユーザー。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加したユーザー。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-セグメント定義は次のようになります。 **not** は、次のシナリオでエッジセグメント化に対して有効になっています。
+次のシナリオでは、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なりません**。
 
-- セグメント定義には、単一のイベントと `inSegment` イベント。
-   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** をエッジセグメント化に対して有効にする。
+- セグメント定義には、単一のイベントと `inSegment` イベントの組み合わせが含まれています。
+   - ただし、`inSegment` イベントに含まれるセグメントがプロファイルのみの場合、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なります**。
 
 ## 次の手順
 

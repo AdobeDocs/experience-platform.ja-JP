@@ -5,13 +5,13 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022 年 11 月 23 日（PT）**
+**リリース日：2022年11月23日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -21,17 +21,17 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## データ収集 {#data-collection}
 
-Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-|  イベント転送用の [!DNL AWS] 拡張機能 | これで、次にデータを送信できます： [!DNL Amazon Web Services] ([!DNL AWS]) を [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Google Ads Enhanced Conversions] 拡張機能 | これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Microsoft Azure] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。 |
+| イベント転送用の [!DNL AWS] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Amazon Web Services]（[!DNL AWS]）にデータを送信できるようになりました。詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Google Ads Enhanced Conversions] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、コンバージョンデータを [!DNL Google Ads] に送信できるようになりました。詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Microsoft Azure] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。 |
 
-Platform のデータ収集機能について詳しくは、 [データ収集の概要](../../collection/home.md).
+Platform のデータ収集機能について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
@@ -41,7 +41,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| スキーマに直接追加する際にカスタムクラスにフィールドを割り当てる | 条件 [スキーマへの個々のフィールドの直接の追加](../../xdm/ui/resources/schemas.md#add-individual-fields)以前は、フィールドを親リソースとしてフィールドグループに割り当てることしかできませんでした。 現在は、フィールドグループに加えて、次の操作を実行できます。 [フィールドをカスタムクラスに割り当てる](../../xdm/ui/resources/schemas.md#add-to-class) を親リソースとして使用することをお勧めします。 |
+| スキーマに直接追加する際にカスタムクラスにフィールドを割り当てる | [個々のフィールドをスキーマに直接追加](../../xdm/ui/resources/schemas.md#add-individual-fields)する際に、以前はフィールドをその親リソースとしてフィールドグループに割り当てることしかできませんでした。現在は、フィールドグループに加えて、親リソースとして[カスタムクラスにフィールドを割り当てる](../../xdm/ui/resources/schemas.md#add-to-class)ことができます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

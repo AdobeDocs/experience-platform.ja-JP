@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 96%
 >abstract="データ使用ラベルには、いくつかのカテゴリがあります。アドビが定義するラベルには、契約ラベル、ID ラベル、機密ラベルが含まれます。組織で定義されたラベルは、カスタムラベルとして分類されます。"
 >text="See the data usage labels glossary for more information on these label types."
 
-データ使用ラベルを使用すると、 [ガバナンスポリシー](../policies/overview.md) および [アクセス制御ポリシー](../../access-control/abac/overview.md) そのデータに適用される Adobe Experience Platformには、データの分類を開始するために使用できる、いくつかのコアデータ使用ラベルが標準で用意されています。
+データ使用ラベルを使用すると、そのデータに適用される[ガバナンスポリシー](../policies/overview.md)および[アクセス制御ポリシー](../../access-control/abac/overview.md)に従って、データセットとフィールドを分類できます。Adobe Experience Platform では、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
 
-このドキュメントでは、Experience Platformが現在提供しているコアデータ使用ラベルの概要を説明します。
+このドキュメントでは、Experience Platform が現在提供しているコアデータ使用ラベルの概要を説明します。
 
 ## 契約ラベル
 
@@ -134,7 +134,7 @@ DAA：オンライン行動広告には、ファーストパーティ、広告�
 
 #### C10 {#c10}
 
-一部のデータガバナンスポリシーは、パーソナライゼーションに関連付けられた ID データの使用を制限します。 C10 のラベルは、セグメントの結合ポリシーで「プライベートグラフ」オプションが使用されている場合に、セグメントへと自動適用されます。
+一部のデータガバナンスポリシーでは、ステッチ ID データをパーソナライゼーションに使用することを制限しています。C10 ラベルは、セグメントの結合ポリシーで「プライベートグラフ」オプションが使用されている場合に、セグメントに自動適用されます。
 
 #### C11 {#c11}
 

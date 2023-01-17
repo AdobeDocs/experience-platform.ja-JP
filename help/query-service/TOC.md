@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 98%
    - [クエリサービスの認証情報の使用](ui/credentials.md)
    - [クエリ結果からのデータセットの生成](ui/create-datasets.md)
 - [クエリの監視](monitor-queries.md)
-- クエリ高速化ストア{#query-accelerated-store}
+- クエリ高速化ストア {#query-accelerated-store}
    - [レポートインサイトデータモデル](query-accelerated-store/reporting-insights-data-model.md)
 - ベストプラクティス {#best-practices}
    - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)

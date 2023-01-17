@@ -7,7 +7,7 @@ feature: Privacy
 source-git-commit: 5cb229b4b7609a566298d4ed8bf630447ff62700
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 94%
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Privacy Service の概要](./home.md)
-* [Privacy Serviceの権限の管理](./permissions.md)
+* [Privacy Service の権限の管理](./permissions.md)
 * [Privacy Service と Experience Cloud アプリケーション](./experience-cloud-apps.md)
 * [プライバシーリクエストの ID データ](./identity-data.md)
 * [プライバシー JS ライブラリの概要](./js-library.md)

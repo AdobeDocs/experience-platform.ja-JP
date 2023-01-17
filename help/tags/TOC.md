@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -57,26 +57,26 @@ ht-degree: 75%
    * [概要](./ui/event-forwarding/overview.md)
    * [はじめに](./ui/event-forwarding/getting-started.md)
    * [シークレットの設定](./ui/event-forwarding/secrets.md)
-   * [監視（ベータ版）](./ui/event-forwarding/monitoring.md)
+   * [モニタリング（ベータ版）](./ui/event-forwarding/monitoring.md)
 * 管理 {#admin}
    * [概要](./ui/administration/overview.md)
    * [会社とプロパティ](./ui/administration/companies-and-properties.md)
    * [ユーザー権限](./ui/administration/user-permissions.md)
 * 拡張機能 {#extensions}
    * [概要](./extensions/overview.md)
-   * タグ拡張（クライアント側） {#client}
+   * タグ拡張機能（クライアントサイド）{#client}
       * [概要](./extensions/client/overview.md)
-      * [アクセス可能なサイト速度指標](https://exchange.adobe.com/apps/ec/103053)
-      * [Activity Mapカスタマイズ](https://exchange.adobe.com/apps/ec/101531)
-      * [アクションページの更新](https://exchange.adobe.com/apps/ec/102848)
+      * [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)
+      * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
+      * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)
       * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [概要](./extensions/client/analytics/overview.md)
          * [共有モジュール](./extensions/client/analytics/shared-modules.md)
          * [リリースノート](./extensions/client/analytics/release-notes.md)
-      * [Adobe Analytics&amp;Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
-      * [Adobe AnalyticsとMicrosoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics &amp; Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics 製品文字列 {#product-string}
          * [概要](./extensions/client/product-string/overview.md)
@@ -109,7 +109,7 @@ ht-degree: 75%
          * [リリースノート](./extensions/client/media-analytics-3x/release-notes.md)
       * アドビプライバシー {#privacy}
          * [概要](./extensions/client/privacy/overview.md)
-      * [Adobeレポートスイートセレクター](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [概要](./extensions/client/target/overview.md)
          * [リリースノート](./extensions/client/target/release-notes.md)
@@ -119,101 +119,101 @@ ht-degree: 75%
       * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
-      * [Airbrake JS 通知機](https://exchange.adobe.com/apps/ec/103342)
-      * [振幅](https://exchange.adobe.com/apps/ec/108010)
-      * [アポロカックス](https://exchange.adobe.com/apps/ec/105068)
+      * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
+      * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
+      * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
-      * [Awin コンバージョンタグ](https://exchange.adobe.com/apps/ec/103240)
-      * [Beemray 人間のコンテキスト](https://exchange.adobe.com/apps/ec/101063)
-      * [Bing Ads ユニバーサルイベントトラッキング](https://exchange.adobe.com/apps/ec/100154)
+      * [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)
+      * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+      * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
       * [ブランチ](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] ビデオトラッキング {#brightcove}
          * [概要](./extensions/client/brightcove/overview.md)
          * [リリースノート](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
-      * [チャネルソース識別子](https://exchange.adobe.com/apps/ec/101412)
-      * [Cheetah エクスペリエンス](https://exchange.adobe.com/apps/ec/102759)
+      * [Channel Source Identifier](https://exchange.adobe.com/apps/ec/101412)
+      * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Common Analytics Plugins {#plugins}
          * [概要](./extensions/client/plugins/overview.md)
          * [リリースノート](./extensions/client/plugins/release-notes.md)
-      * 共通の Web SDK プラグイン {#web-sdk-plugins}
+      * Common Web SDK Plugins {#web-sdk-plugins}
          * [概要](./extensions/client/web-sdk-plugins/overview.md)
          * [リリースノート](./extensions/client/web-sdk-plugins/release-notes.md)
       * [連結](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics による Cookie Consent Management CMP v2](https://exchange.adobe.com/apps/ec/107037)
+      * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * コア {#core}
          * [概要](./extensions/client/core/overview.md)
          * [リリースノート](./extensions/client/core/release-notes.md)
       * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)
-      * [顧客認識](https://exchange.adobe.com/apps/ec/100688)
-      * [データ要素アシスタント (DEA)](https://exchange.adobe.com/apps/ec/101413)
-      * [データレイヤーマネージャ](https://exchange.adobe.com/apps/ec/101462)
+      * [Customer Recognition](https://exchange.adobe.com/apps/ec/100688)
+      * [Data Element Assistant (DEA)](https://exchange.adobe.com/apps/ec/101413)
+      * [Data Layer Manager](https://exchange.adobe.com/apps/ec/101462)
       * [Decibel](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
-      * [差分プライバシー](https://exchange.adobe.com/apps/ec/104535)
+      * [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media ビューア](https://exchange.adobe.com/apps/ec/103048)
-      * [EDDL ヘルパー](https://exchange.adobe.com/apps/ec/107691)
+      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
-      * [Genesys 予測エンゲージメント](https://exchange.adobe.com/apps/ec/106148)
+      * [Genesys Predictive Engagement](https://exchange.adobe.com/apps/ec/106148)
       * Google Data Layer {#google-data-layer}
          * [概要](./extensions/client/google-data-layer/overview.md)
          * [リリースノート](./extensions/client/google-data-layer/release-notes.md)
       * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
-      * [JSON ヘルパー](https://exchange.adobe.com/apps/ec/106449)
+      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
       * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
-      * [マッピングテーブル](https://exchange.adobe.com/apps/ec/103136)
+      * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
-      * [マスタープロパティマネージャ](https://exchange.adobe.com/apps/ec/102992)
+      * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
-      * [監視](https://exchange.adobe.com/apps/ec/106544)
+      * [Monita](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [Cookie に対する OneTrust Consent Management](https://exchange.adobe.com/apps/ec/100340)
+      * [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest Conversion Tracking](https://exchange.adobe.com/apps/ec/100523)
-      * [ピクセルローダ](https://exchange.adobe.com/apps/ec/100152)
+      * [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)
       * [Qualtrics Website Feedback](https://exchange.adobe.com/apps/ec/101569)
       * [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)
-      * [モメンタムの解決](https://exchange.adobe.com/apps/ec/108352)
+      * [Resolve Momentum](https://exchange.adobe.com/apps/ec/108352)
       * [Rokt](https://exchange.adobe.com/apps/ec/107591)
-      * [SDI 調査](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA View Change イベント](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
-      * [ストレージスパナ](https://exchange.adobe.com/apps/ec/102990)
+      * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
-      * [収集の Tealium](https://exchange.adobe.com/apps/ec/104217)
+      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium Data Enrichment](https://exchange.adobe.com/apps/ec/104217)
-      * [TMMData Foundation プラットフォーム](https://exchange.adobe.com/apps/ec/100148)
-      * [TrustArc Cookie 同意マネージャー](https://exchange.adobe.com/apps/ec/107037)
-      * [Vimeo 再生](https://exchange.adobe.com/apps/ec/108937)
-      * [Web の概要](https://exchange.adobe.com/apps/ec/106769)
+      * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
+      * [TrustArc Cookie Consent Manager](https://exchange.adobe.com/apps/ec/107037)
+      * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
+      * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
       * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
-      * [Yext コンバージョントラッキング](https://exchange.adobe.com/apps/ec/103174)
+      * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] 再生](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] ビデオトラッキング {#youtube}
          * [概要](./extensions/client/youtube/overview.md)
          * [リリースノート](./extensions/client/youtube/release-notes.md)
-   * イベント転送拡張機能（サーバー側） {#server}
+   * イベント転送拡張機能（サーバーサイド）{#server}
       * [概要](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [概要](./extensions/server/cloud-connector/overview.md)
       * [!DNL AWS] {#aws}
          * [概要](./extensions/server/aws/overview.md)
-      * [Google Analytics用 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
-      * Google Ads 拡張コンバージョン {#google-ads-enhanced-conversions}
+      * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [概要](./extensions/server/mailchimp/overview.md)
@@ -222,10 +222,10 @@ ht-degree: 75%
       * [!UICONTROL Microsoft Azure] {#azure}
          * [概要](./extensions/server/azure/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
-      * [スナップ変換 API](https://exchange.adobe.com/apps/ec/108550)
+      * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [概要](./extensions/server/splunk/overview.md)
-      * [!DNL Zendesk] イベント API {#zendesk}
+      * [!DNL Zendesk]イベント API {#zendesk}
          * [概要](./extensions/server/zendesk/overview.md)
 * 拡張機能の開発 {#extension-dev}
    * [概要](./extension-dev/overview.md)

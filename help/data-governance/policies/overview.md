@@ -2,12 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック;dule;DULE
 solution: Experience Platform
 title: データ使用ポリシーの概要
-description: データ使用ポリシーは、Adobe Experience Platform内のデータに対して実行を許可（/制限）するマーケティングアクションの種類を記述するルールです。
+description: データ使用ポリシーは、Adobe Experience Platform 内のデータに対する実行が許可される、または制限される、マーケティングアクションの種類を記述するルールです。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 

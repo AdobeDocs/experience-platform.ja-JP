@@ -7,17 +7,17 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # UI でのデータ使用ポリシーの管理
 
-このドキュメントでは、 **[!UICONTROL ポリシー]** ワークスペース (Adobe Experience Platform UI 内 ) を使用して、データ使用ポリシーを作成および管理します。
+このドキュメントでは、Adobe Experience Platform UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースを使用して、データ使用ポリシーを作成および管理する方法について説明します。
 
 >[!NOTE]
 >
->UI でアクセス制御ポリシーを管理する方法について詳しくは、 [属性ベースのアクセス制御 UI ガイド](../../access-control/abac/ui/policies.md) 代わりに、
+>UI でアクセス制御ポリシーを管理する方法については、代わりに[属性ベースのアクセス制御 UI ガイド](../../access-control/abac/ui/policies.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -86,7 +86,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->同意ポリシーは、を購入した組織でのみ使用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
+>同意ポリシーは、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみ使用できます。
 
 同意ポリシーの作成を選択すると、新しい画面が表示され、新しいポリシーを設定できます。
 

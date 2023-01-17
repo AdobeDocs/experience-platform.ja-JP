@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 32%
+ht-degree: 88%
 
 ---
 
@@ -13,31 +13,31 @@ ht-degree: 32%
 
 ## 2022年11月23日（PT）
 
-* **[!DNL AWS]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Amazon Web Services] ([!DNL AWS]) を [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。
-*  イベント転送用の **[!DNL Google Ads Enhanced Conversions]拡張機能**:これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。
-*  イベント転送用の **[!DNL Microsoft Azure]拡張機能**:これで、次にデータを送信できます： [!DNL Microsoft Azure] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。
+* イベント転送用の **[!DNL AWS] 拡張機能**：[イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Amazon Web Services]（[!DNL AWS]）にデータを送信できるようになりました。詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。
+* **[!DNL Google Ads Enhanced Conversions]イベント転送の拡張**:これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。
+* **[!DNL Microsoft Azure]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Microsoft Azure] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。
 
 ## 2022年10月26日（PT）
 
-* **データストリームの機密データ処理**:データストリームは、複数の Platform テクノロジーを活用して、HIPAA(Health Insurance Portability and Accountability Act) などの規制によって適用される機密データを適切に処理するようになりました。 詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。
-*  イベント転送用の **[!DNL Splunk]拡張機能**:これで、次にデータを送信できます： [!DNL Splunk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
-*  イベント転送用の **[!DNL Zendesk]拡張機能**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
+* **データストリームの機密データ処理**：データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制に従って機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。
+*  イベント転送用の **[!DNL Splunk] 拡張機能**：[!DNL Splunk]イベント転送[拡張機能を使用して、](../ui/event-forwarding/overview.md) にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
+* **[!DNL Zendesk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
 
 ## 2022年9月28日（PT）
 
-* **Adobe Experience Platform左ナビゲーション統合**:以前はデータ収集 UI にのみ使用できたすべての機能（タグやイベントの転送を含む）も、Experience PlatformUI の左側のナビゲーションから「 」カテゴリで使用できるようになりました。 **[!UICONTROL データ収集]**. これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。
-* **タグとイベント転送のユーザー属性**:タグおよびイベント転送で使用可能なプロパティをリストする場合、リストされた各プロパティが最後に更新された日時と更新者を表示するようになりました。
-* **[[!DNL Snap Conversions API] 拡張](https://exchange.adobe.com/apps/ec/108550) イベント転送の場合**:これで、 [!DNL Snapchat Conversions API] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。
+* **Adobe Experience Platform 左ナビゲーション統合**：以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送など）が、 Experience Platform UI の&#x200B;**[!UICONTROL データ収集]**&#x200B;カテゴリ下の左ナビゲーションからも利用できるようになりました。これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。
+* **タグとイベント転送のユーザー属性**：タグとイベント転送で使用可能なプロパティをリストすると、リストされた各プロパティに最終更新日と更新者が表示されるようになりました。
+* イベント転送用の **[[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550)**：[イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。
 
 ## 2022年7月27日（PT）
 
-* タグおよびイベント転送機能へのアクセスは、Adobe Experience Platformデータ収集用カードのAdobe Admin Consoleで管理されるようになりました。 詳しくは、[データ収集の権限](../../collection/permissions.md)に関するガイドを参照してください。
-* Internet Explorer 10 および 11 のサポートが追加されました。 [非推奨](../ie-deprecation.md).
+* タグとイベント転送機能へのアクセスは、Adobe Admin Console の Adobe Experience Platform データ収集カードで管理されるようになりました。詳しくは、[データ収集の権限](../../collection/permissions.md)に関するガイドを参照してください。
+* Internet Explorer 10 および 11 のサポートは[非推奨（廃止予定）](../ie-deprecation.md)になりました。
 
 ## 2022年6月22日（PT）
 
-新しい拡張機能がリリースされました。
+次の新しい拡張機能がリリースされました。
 
-* [Google Data Layer タグ拡張機能](../extensions/client/google-data-layer/overview.md):タグ実装でGoogleデータレイヤーを使用できます。
-* [Google Ads 拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html):Google Ads のコンバージョンをリアルタイムで強化できます。
-* [Mailchimp イベント転送拡張機能](../extensions/server/mailchimp/overview.md):Mailchimp マーケティング API にイベントを送信します。この API は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガーにすることができます。
+* [Google データレイヤータグ拡張機能](../extensions/client/google-data-layer/overview.md)：タグ実装で Google データレイヤーを使用できます。
+* [Google 広告拡張コンバージョンイベント転送拡張機能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html)：Google 広告のコンバージョンをリアルタイムで強化できます。
+* [Mailchimp イベント転送拡張機能](../extensions/server/mailchimp/overview.md)：Mailchimp マーケティングキャンペーン、ジャーニーまたはトランザクション用のメールをトリガーできる Mailchimp Marketing API にイベントを送信します。

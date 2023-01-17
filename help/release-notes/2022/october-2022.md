@@ -31,15 +31,15 @@ Adobe Experience Platform に保存されるすべてのデータは、システ
 
 ## データ収集 {#data-collection}
 
-Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
 | データストリームの機密データ処理 | データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制で強化される機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。 |
-|  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/server/splunk/overview.md)を参照してください。 |
-|  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/server/zendesk/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/server/splunk/overview.md)を参照してください。 |
+|  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/server/zendesk/overview.md)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +51,7 @@ Adobe Experience Platform は、クライアントサイドのカスタマーエ
 
 | 機能 | 説明 |
 | --- | --- |
-| （ベータ版）データセットの書き出し | [ベータ版の機能であるデータセットの書き出し](/help/destinations/ui/export-datasets.md)を利用すると、最初に生成したデータ（[リアルタイム顧客データプラットフォームの製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義済み）を Adobe Experience Platform から宛先ユーザーインターフェイスを介して顧客独自の外部システムに書き出すことができます。これにより、ノーコード／ローコードのワークフローを使用して、6 つのクラウドストレージの宛先（以下の表に示す）に Experience Platform からデータを書き出して、分析およびコンプライアンスのユースケースを実行できます。 |
+| （ベータ版）データセットの書き出し | [ベータ版の機能であるデータセットの書き出し](/help/destinations/ui/export-datasets.md)を利用すると、最初に生成したデータ（[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義済み）を Adobe Experience Platform から宛先ユーザーインターフェイスを介して顧客独自の外部システムに書き出すことができます。これにより、ノーコード／ローコードのワークフローを使用して、6 つのクラウドストレージの宛先（以下の表に示す）に Experience Platform からデータを書き出して、分析およびコンプライアンスのユースケースを実行できます。 |
 | （ベータ版）ファイル書き出し機能の強化 | Experience Platform からファイルを書き出す際に、以下の強化されたカスタマイズ機能を利用できるようになりました。<br><ul><li>追加された[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出し対象の CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br> この機能は、以下の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -109,7 +109,8 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 {style=&quot;table-layout:auto&quot;}
 
-クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。Adobe Experience Platform の新機能：
+クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
+Adobe Experience Platform の新機能：
 
 ## ソース {#sources}
 

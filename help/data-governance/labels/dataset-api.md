@@ -7,7 +7,7 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->データセットレベルでのラベルの適用は、データガバナンスの使用例に対してのみサポートされます。 データのアクセスポリシーを作成する場合は、次の操作を行う必要があります [スキーマへのラベルの適用](../../xdm/tutorials/labels.md) の値が含まれています。 概要については、 [属性ベースのアクセス制御](../../access-control/abac/overview.md) を参照してください。
+>データセットレベルでのラベルの適用は、データガバナンスのユースケースでのみサポートされています。データのアクセスポリシーを作成しようとしている場合は、データセットが基づいている[スキーマにラベルを適用](../../xdm/tutorials/labels.md)する必要があります。詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)の概要を参照してください。
 
 このドキュメントでは、[!DNL Dataset Service API] を使用してデータセットとフィールドのラベルを管理する方法を説明します。API 呼び出しを使用してデータ使用ラベル自体を管理する手順については、[!DNL Policy Service API] の[ラベルエンドポイントガイド](../api/labels.md)を参照してください。
 
@@ -158,6 +158,6 @@ curl -X PUT \
 
 ## 次の手順
 
-このドキュメントを読むことで、[!DNL Dataset Service] APIを使用してデータセットとフィールドのデータ使用ラベルを管理する方法を学びました。次に、 [データ使用ポリシー](../policies/overview.md) および [アクセス制御ポリシー](../../access-control/abac/ui/policies.md) 適用したラベルに基づいて
+このドキュメントでは、[!DNL Dataset Service] APIを使用してデータセットとフィールドのデータ使用ラベルを管理する方法について説明しました。適用したラベルに基づいて、[データ使用ポリシー](../policies/overview.md)と[アクセス制御ポリシー](../../access-control/abac/ui/policies.md)を定義できるようになりました。
 
 [!DNL Experience Platform] でのデータセットの管理について詳しくは、[データセットの概要](../../catalog/datasets/overview.md)を参照してください。

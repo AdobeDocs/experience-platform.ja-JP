@@ -5,7 +5,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '607'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 
 ## タイムラインと透明性
 
-レコードの削除リクエストとデータセットの有効期限リクエストにはそれぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性の更新を提供します。
+レコードの削除リクエストとデータセット有効期限切れリクエストには、それぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性を更新します。
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
