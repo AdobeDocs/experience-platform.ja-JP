@@ -2,10 +2,10 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 95%
+source-wordcount: '1163'
+ht-degree: 74%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
+>* この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
+>* このドキュメントページでは、 [!DNL Data Landing Zone] *宛先*. また、 [!DNL Data Landing Zone] *ソース* ソースカタログ内。 詳しくは、 [[!DNL Data Landing Zone] ソース](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメント。
+
 
 
 ## 概要 {#overview}
@@ -35,9 +37,13 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 {style=&quot;table-layout:auto&quot;}
 
-## [!DNL Data Landing Zone] のコンテンツを管理
+## 前提条件 {#prerequisites}
 
-[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
+を使用する前に満たす必要がある前提条件は、次のとおりです。 [!DNL Data Landing Zone] 宛先。
+
+### 接続 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer]
+
+[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。を使用し始めるには [!DNL Data Landing Zone]の場合、最初に資格情報を取得し、に入力する必要があります [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
 
 [!DNL Azure Storage Explorer] UI 内で、左側のナビゲーションバーの「接続」アイコンを選択します。**リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** を選択し、[!DNL Data Landing Zone] ストレージに接続します。
 
@@ -49,13 +55,54 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 接続方法を選択した後、**表示名**&#x200B;およびお使いの [!DNL Data Landing Zone] コンテナに対応する&#x200B;**[!DNL Blob]コンテナ SAS URL** を入力します。
 
->[!IMPORTANT]
->
->データランディングゾーンの資格情報を取得するには、Platform API を使用する必要があります。詳しくは、[データランディングゾーン資格情報の取得](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=ja#retrieve-data-landing-zone-credentials)を参照してください。
->
-> 資格情報を取得し、書き出したファイルにアクセスするには、上記のページで説明されているすべての HTTP 呼び出しでクエリパラメーター `type=user_drop_zone` を `type=dlz_destination` に置き換える必要があります。
+>[!BEGINSHADEBOX]
 
-[!DNL Data Landing Zone] SAS URL を入力し、「**次へ**」を選択します。
+### の資格情報を取得します。 [!DNL Data Landing Zone]
+
+Platform API を使用して、 [!DNL Data Landing Zone] 資格情報。 資格情報を取得する API 呼び出しについては、以下で説明します。 ヘッダーに必要な値の取得について詳しくは、 [Adobe Experience Platform API の概要](/help/landing/api-guide.md) ガイド。
+
+**API 形式**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**リクエスト**
+
+次のリクエストの例では、既存のランディングゾーンの資格情報を取得します。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+次の応答は、現在の `SASToken` および `SASUri`、および `storageAccountName` ランディングゾーンコンテナに対応する
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `containerName` | ランディングゾーンの名前。 |
+| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの承認に必要な情報がすべて含まれています。 |
+| `SASUri` | ランディングゾーンの共有アクセス署名 URI です。 この文字列は、認証先のランディングゾーンへの URI と、対応する SAS トークンの組み合わせです。 |
+
+>[!ENDSHADEBOX]
+
+表示名 (`containerName`) および [!DNL Data Landing Zone] 上記の API 呼び出しで返される SAS URL で、を選択します。 **次へ**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -79,7 +126,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 ### 宛先に対する認証 {#authenticate}
 
-[!DNL Data Landing Zone] は、アドビがプロビジョニングしたストレージであるため、宛先への認証手順を実行する必要はありません。
+次のページとの間に [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer] 例えば、 [前提条件](#prerequisites) 」セクションに入力します。 理由： [!DNL Data Landing Zone] は、Adobeがプロビジョニングしたストレージです。Experience PlatformUI で追加の手順を実行して、宛先への認証をおこなう必要はありません。
 
 ### 宛先の詳細を入力 {#destination-details}
 

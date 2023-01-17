@@ -3,14 +3,18 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: UI を使用したデータランディングゾーンの Platform への接続
 description: Platform ユーザーインターフェイスを使用してデータランディングゾーンソースコネクタを作成する方法を説明します。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '631'
 ht-degree: 22%
 
 ---
 
-# 接続 [!DNL Data Landing Zone] UI を使用して Platform に接続
+# UI を使用した [!DNL Data Landing Zone] の Platform への接続
+
+>[!IMPORTANT]
+>
+>このページは、 [!DNL Data Landing Zone] *ソース* コネクタのExperience Platform に接続する方法については、 [!DNL Data Landing Zone] *宛先* コネクタ ( [[!DNL Data Landing Zone] 宛先のドキュメントページ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込む、クラウドベースの安全なファイルストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
 

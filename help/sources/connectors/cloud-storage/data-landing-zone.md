@@ -4,14 +4,18 @@ solution: Experience Platform
 title: データランディングゾーンのソース
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を説明します
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 44%
+source-wordcount: '842'
+ht-degree: 43%
 
 ---
 
 # [!DNL Data Landing Zone]
+
+>[!IMPORTANT]
+>
+>このページは、 [!DNL Data Landing Zone] *ソース* コネクタのExperience Platform に接続する方法については、 [!DNL Data Landing Zone] *宛先* コネクタ ( [[!DNL Data Landing Zone] 宛先のドキュメントページ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] は [!DNL Azure Blob] Adobe Experience Platformによってプロビジョニングされたストレージインターフェイス。ファイルを Platform に取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーションサービスのすべての顧客（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、および [!DNL Adobe Real-Time Customer Data Platform]）は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] のコンテナを使用してプロビジョニングされます。を通じて、コンテナに対してファイルの読み取りと書き込みをおこなうことができます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを使用します。
 

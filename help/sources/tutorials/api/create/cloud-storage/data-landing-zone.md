@@ -5,14 +5,18 @@ title: フローサービス API を使用したデータランディングゾ�
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b1021f985626157895d7350e941238c3197db0b6
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1249'
 ht-degree: 20%
 
 ---
 
 # 接続 [!DNL Data Landing Zone] フローサービス API を使用してAdobe Experience Platformに送信
+
+>[!IMPORTANT]
+>
+>このページは、 [!DNL Data Landing Zone] *ソース* コネクタのExperience Platform に接続する方法については、 [!DNL Data Landing Zone] *宛先* コネクタ ( [[!DNL Data Landing Zone] 宛先のドキュメントページ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込む、クラウドベースの安全なファイルストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
 
@@ -318,8 +322,8 @@ curl -X GET \
 
 | `determineProperties` | `queryParams` | 応答 |
 | --- | --- | --- |
-| True | N/A | If `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
-| N/A | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
+| True | 該当なし | If `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
+| 該当なし | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
 | True | True | 両方のオプションが同時に実行された場合は、エラーが返されます。 |
 | なし | なし | 2 つのオプションのどちらも指定されていない場合は、応答のプロパティを取得する方法がないので、エラーが返されます。 |
 
