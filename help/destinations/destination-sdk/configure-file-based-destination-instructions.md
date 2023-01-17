@@ -1,15 +1,15 @@
 ---
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
-title: Destination SDKを使用したファイルベースの宛先の設定
+title: Destination SDK を使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 83%
+source-wordcount: '694'
+ht-degree: 78%
 
 ---
 
-# Destination SDKを使用したファイルベースの宛先の設定
+# Destination SDK を使用したファイルベースの宛先の設定
 
 ## 概要 {#overview}
 
@@ -261,16 +261,16 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * `"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合、[認証設定](./authentication-configuration.md#when-to-use)を参照してください。
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## 手順 5：宛先のテスト {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+前の手順の構成エンドポイントを使用して宛先を設定した後、 [宛先テストツール](./file-based-destination-testing-overview.md)を使用して、Adobe Experience Platform と宛先の統合をテストすることができます。
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platform でセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [セグメントのドキュメントページを作成](/help/segmentation/ui/overview.md#create-segment)
+* [セグメントの作成のビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
 
-## 手順 5：宛先を公開する {#publish-destination}
+## 手順 6：宛先を公開する {#publish-destination}
 
 >[!NOTE]
 >
@@ -278,10 +278,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 宛先を設定およびテストした後、[宛先を公開する API](./destination-publish-api.md) を使用して設定をレビュー用にアドビに送信します。
 
-## 手順 6：宛先のドキュメント化 {#document-destination}
+## 手順 7：宛先のドキュメント化 {#document-destination}
 
 >[!NOTE]
 >
 >独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
 独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](./overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。
+
+## 手順 8:Adobeの確認用に宛先を送信 {#submit-for-review}
+
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
+最後に、宛先をExperience Platformカタログに公開してすべてのExperience Platformの顧客に表示できるようにするには、Adobeの確認のために宛先を正式に送信する必要があります。 次の方法に関する完全な情報を見つけます。 [送信してレビュー用に生産済みのDestination SDKで作成](/help/destinations/destination-sdk/submit-destination.md).

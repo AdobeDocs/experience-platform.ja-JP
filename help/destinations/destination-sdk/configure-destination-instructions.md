@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 91%
+source-wordcount: '825'
+ht-degree: 82%
 
 ---
 
@@ -169,7 +169,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platform でセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
 
-* [セグメントのドキュメントページを作成](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ja#create-segment)
+* [セグメントのドキュメントページを作成](/help/segmentation/ui/overview.md#create-segment)
 * [セグメントの作成のビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
 
 ## 手順 7：宛先を公開する {#publish-destination}
@@ -187,3 +187,11 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 >独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
 独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](./overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。
+
+## 手順 9:Adobeの確認用に宛先を送信 {#submit-for-review}
+
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
+最後に、宛先をExperience Platformカタログに公開してすべてのExperience Platformの顧客に表示できるようにするには、Adobeの確認のために宛先を正式に送信する必要があります。 次の方法に関する完全な情報を見つけます。 [送信してレビュー用に生産済みのDestination SDKで作成](/help/destinations/destination-sdk/submit-destination.md).
