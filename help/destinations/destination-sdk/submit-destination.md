@@ -2,10 +2,10 @@
 description: このページでは、Destination SDKを使用して作成された、製品化された宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
+source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 65%
+source-wordcount: '928'
+ht-degree: 42%
 
 ---
 
@@ -29,23 +29,25 @@ ht-degree: 65%
 このページには、Adobe Experience Platform Destination SDK を使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 Adobe Experience Platform で宛先を正常に送信するには、<aepdestsdk@adobe.com> にメールを送信します。これには以下が含まれます。
 
 * 宛先が解決するユースケースの説明。 既存の宛先設定を更新する場合は、これは必須ではありません。
-* 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。アドビと共有してください。
-   * 宛先エンドポイントへの API 呼び出し。
-   * 宛先エンドポイントから受け取った API 応答。
+* 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントに対する API 呼び出しと、Adobeエンドポイントから受け取った API 応答を宛先と共有してください。
+* ファイルベースの宛先に関するその他の要件：
+   * テスト API を使用した後、リクエストと応答サンプルを [サンプルプロファイルを使用したファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+   * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
+   * 書き出されたファイルをストレージの場所からシステムに正常に取り込んだことを示す、何らかの配達確認の形式を送信します。
 * [destination publishing API](./destination-publish-api.md) を使用して、宛先の公開リクエストを提出したことの証明。 
 * ドキュメント PR（プル要求）。 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md).
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
 
-## ユースケースの説明
+## ユースケースの説明 {#use-case-description}
 
 Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md):顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
 * [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにしたい広告主は、VMG のほぼリアルタイム API を使用して、新しいセグメントをすばやく作成し、目的のオーディエンスグループをプッシュできます。
 
-## テスト宛先 API を使用した後のテスト結果
+## テスト宛先 API を使用した後のテスト結果 {#testing-api-response}
 
 [テスト宛先 API](./test-destination.md) エンドポイントを使用して、宛先への HTTP 呼び出しを実行した後のテスト結果を提供します。 これには以下が含まれます。
 
@@ -215,15 +217,35 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## 宛先の公開リクエストを提出したことの証明
+## ファイルベースの宛先に関するその他の要件 {#additional-file-based-destination-requirements}
+
+ファイルベースの宛先の場合、宛先が正しく設定されていることを示す追加の配達確認を提供する必要があります。 次の項目を必ず含めてください。
+
+### API 応答のテスト {#testing-api-response-file-based}
+
+テスト API を使用した後に、リクエストと応答のサンプルを [サンプルプロファイルを使用したファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+
+### 書き出したファイルを添付 {#attach-exported-file}
+
+を [送信メール](#download-sample-email)、設定した宛先でストレージの場所に書き出された CSV ファイルを添付します。
+
+### 取り込み成功の証明 {#proof-of-successful-ingestion}
+
+最後に、指定したストレージの場所にデータが書き出された後、データがシステムに正常に取り込まれたことを示す何らかの形の証明を提供する必要があります。 以下の項目のいずれかを指定してください。
+
+* ストレージの場所から手動でファイルを取り出し、システムに取り込むスクリーンショットまたは短いスクリーンキャプチャビデオ。
+* システムの UI で、Experience Platformによって生成されたファイル名がシステムに正常に取り込まれたことを確認するスクリーンショットや短いスクリーンキャプチャビデオ。
+* Adobeがファイル名またはExperience Platformから生成されたデータと関連付けることのできる、システムの行をログに記録します。
+
+## 宛先の公開リクエストを提出したことの証明 {#destination-publishing-request-proof}
 
 宛先を正常にテストした後、[Destination Publishing API](./destination-publish-api.md) を使用してアドビに送信し、レビューと公開を行う必要があります。
 
 宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[宛先公開リクエストのリスト](./destination-publish-api.md#retrieve-list)を参照してください。
 
-## 製品化された統合の宛先ドキュメント PR（プルリクエスト）
+## 製品化された統合の宛先ドキュメント PR（プルリクエスト） {#documentation-pr}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、 [製品化統合](./overview.md#productized-custom-integrations)、 [セルフサービスドキュメントプロセス](./docs-framework/documentation-instructions.md) をクリックして、宛先用に製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
+独立系ソフトウェアベンダー (ISV) またはシステムインテグレータ (SI) の場合、 [製品化統合](./overview.md#productized-custom-integrations)を使用する場合、 [セルフサービスドキュメント化プロセス](./docs-framework/documentation-instructions.md) をクリックして、目的の宛先に関する製品ドキュメントページを作成します。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ {#logo}
 
@@ -233,6 +255,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 * **形式**：`SVG`
 * **サイズ**：2 MB 未満
 
-## サンプルメールをダウンロード
+## サンプルメールをダウンロード {#download-sample-email}
 
 サンプルメールと、アドビに提供する必要のあるすべての情報を[ダウンロード](./assets/sample-email-submit-destination.rtf)します。
