@@ -4,10 +4,10 @@ solution: Experience Platform
 title: スキーマレジストリ API ガイド
 description: スキーマレジストリ API を使用すると、開発者は、Adobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 9%
+source-wordcount: '1118'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,9 @@ ht-degree: 9%
 
 XDM スキーマは、Platform に取り込まれるデータの構造と形式を表し、検証します。 スキーマは、クラスと、0 個以上のスキーマフィールドグループで構成されます。 スキーマの作成、表示、編集および削除は、 `/schemas` endpoint. このエンドポイントの使用方法については、 [スキーマエンドポイントガイド](./schemas.md).
 
-フィールドグループやデータ型の作成や追加を含め、スキーマレジストリ API で完全なスキーマを作成する方法に関する詳しい手順については、 [API スキーマ作成のチュートリアル](../tutorials/create-schema-api.md).
+フィールドグループやデータ型の作成や追加を含め、スキーマレジストリ API で完全なスキーマを手動で作成する方法に関する詳しい手順については、 [API スキーマ作成のチュートリアル](../tutorials/create-schema-api.md).
+
+CSV データを取り込む場合は、 [CSV からスキーマへの変換](#csv-to-schema).
 
 ## 動作
 
@@ -62,6 +64,10 @@ Platform では特定の使用例のスキーマを作成できますが、特�
 CSV ファイルをテンプレートとして使用して XDM スキーマを自動的に生成できます。これにより、スキーマフィールドを一括で読み込むテンプレートを作成し、API や UI の手動作業を削減できます。
 
 詳しくは、 [CSV からスキーマ変換エンドポイントガイド](./export.md) を参照してください。
+
+>[!NOTE]
+>
+>UI で [AI で生成されたレコメンデーションを使用して CSV をスキーマにマッピングする](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。
 
 ## エクスポート {#export}
 

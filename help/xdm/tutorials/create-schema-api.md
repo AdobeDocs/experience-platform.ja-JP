@@ -5,9 +5,9 @@ title: スキーマレジストリ API を使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 38%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 38%
 この [!DNL Schema Registry] は、 [!DNL Schema Library] Adobe Experience Platformの この [!DNL Schema Library] には、Adobeが作成したリソースが含まれます。 [!DNL Experience Platform] パートナー、およびお客様が使用するアプリケーションのベンダー レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
 このチュートリアルでは、 [!DNL Schema Registry] 標準クラスを使用してスキーマを作成する手順を説明する API です。 のユーザーインターフェイスを使用する場合は、 [!DNL Experience Platform]、 [スキーマエディターのチュートリアル](create-schema-ui.md) には、スキーマエディターで同様の操作を実行する手順が記載されています。
+
+>[!NOTE]
+>
+>CSV データを Platform に取り込む場合は、 [AI で生成されたレコメンデーションによって作成された XDM スキーマにそのデータをマッピングします。](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。手動でスキーマを作成する必要はありません。
 
 ## はじめに
 

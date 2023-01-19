@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 0%
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) スキーマの構築方法の概要を示します。
 
 ## 新しいスキーマの作成 {#create}
+
+>[!NOTE]
+>
+>この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データを Platform に取り込む場合は、 [AI で生成されたレコメンデーションによって作成された XDM スキーマにそのデータをマッピングします。](../../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。手動でスキーマを作成する必要はありません。
 
 内 [!UICONTROL スキーマ] ワークスペース、選択 **[!UICONTROL スキーマを作成]** をクリックします。 表示されるドロップダウンで、次の中から選択できます **[!UICONTROL XDM 個人プロファイル]** および **[!UICONTROL XDM ExperienceEvent]** をスキーマの基本クラスとして使用します。 または、 **[!UICONTROL 参照]** 使用可能なクラスの完全なリストから選択する場合、または [新しいカスタムクラスの作成](./classes.md#create) 代わりに、
 

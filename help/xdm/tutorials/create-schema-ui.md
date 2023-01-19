@@ -5,9 +5,9 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 10%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 10%
 
 Adobe Experience Platformユーザーインターフェイスを使用すると、 [!DNL Experience Data Model] (XDM) スキーマ [!DNL Schema Editor]. このチュートリアルでは、 [!DNL Schema Editor].
 
+デモ用に、このチュートリアルの手順では、顧客ロイヤルティプログラムのメンバーを説明するサンプルスキーマを作成します。 これらの手順を使用して、独自の目的で別のスキーマを作成できますが、まずサンプルスキーマの作成に従って、 [!DNL Schema Editor].
+
 >[!NOTE]
 >
->デモ用に、このチュートリアルの手順では、顧客ロイヤルティプログラムのメンバーを説明するサンプルスキーマを作成します。 これらの手順を使用して、独自の目的で別のスキーマを作成できますが、まずサンプルスキーマの作成に従って、 [!DNL Schema Editor].
-
-を使用してスキーマを作成する場合は、 [!DNL Schema Registry] API を使用する場合は、まず [[!DNL Schema Registry] 開発者ガイド](../api/getting-started.md) ～に関するチュートリアルを試みる前に [API を使用したスキーマの作成](create-schema-api.md).
+>CSV データを Platform に取り込む場合は、 [AI で生成されたレコメンデーションによって作成された XDM スキーマにそのデータをマッピングします。](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。手動でスキーマを作成する必要はありません。
+>
+>を使用してスキーマを作成する場合は、 [!DNL Schema Registry] API( まず、 [[!DNL Schema Registry] 開発者ガイド](../api/getting-started.md) ～に関するチュートリアルを試みる前に [API を使用したスキーマの作成](create-schema-api.md).
 
 ## はじめに
 
