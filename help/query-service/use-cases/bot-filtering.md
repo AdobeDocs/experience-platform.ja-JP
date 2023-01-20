@@ -2,7 +2,7 @@
 title: 機械学習を使用したクエリサービスでのボットフィルタリング
 description: このドキュメントでは、クエリサービスと機械学習を使用してボットのアクティビティを決定し、純粋なオンライン Web サイト訪問者トラフィックからそのアクションをフィルタリングする方法の概要を説明します。
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 6%
@@ -169,6 +169,6 @@ Model Accuracy: 0.99935
 
 ## 次の手順
 
-このドキュメントを読むと、の使用方法をより深く理解できます [!DNL Query Service] および機械学習を使用してボットアクティビティを決定し、フィルタリングします。
+このドキュメントを読むと、の使用方法に関する理解が深まります [!DNL Query Service] および機械学習を使用してボットアクティビティを決定し、フィルタリングします。
 
 の利点を示すその他のドキュメント [!DNL Query Service] 組織の戦略的ビジネスインサイトに対して、 [廃止された参照の使用例](./abandoned-browse.md) 例：

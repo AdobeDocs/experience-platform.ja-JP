@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 98%
@@ -101,7 +101,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## データ収集 {#data-collection}
 
-Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
 
 **新機能または更新された機能**
 
@@ -128,7 +128,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Destination SDK | Destination SDK は、製品化されたバッチ（またはファイルベース）の宛先やプライベートの宛先を作成する、パートナーや顧客に対して完全なサポートを提供するようになりました。 詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDK の概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK では、パートナーや顧客が、製品化されたバッチ（またはファイルベース）宛先やプライベートの宛先を作成できるようになりました。詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDK の概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -145,7 +145,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | ドキュメント | 説明 |
 | ----------- | ----------- |
-| Destinations Flow Service API ドキュメント | [Destinations API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/)は、ファイルベースの宛先での操作の実行方法に関するガイダンスを含むように更新されました。ストリーミング宛先の操作は、今後追加される予定です。 |
+| Destinations Flow Service API ドキュメント | [Destinations API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/)が更新され、ファイルベースの宛先に関する操作方法のガイダンスが追加されました。ストリーミング宛先の操作は、今後追加される予定です。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -196,7 +196,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## ID サービス {#identity-service}
 
-関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なるシステムに分散している場合、各顧客が複数の「ID」を持っているように見えるため、より困難になります。
+適切なデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なるシステムに分散している場合、各顧客が複数の「ID」を持っているように見えるため、より困難になります。
 
 Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのあるパーソナルなデジタルエクスペリエンスをリアルタイムで提供できます。
 
@@ -217,7 +217,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 | 機能 | 説明 |
 | --- | --- |
 | アラートサブスクリプション API | Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。 |
-| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/sql/dataset-samples.md)を参照してください。 |
+| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/essential-concepts/dataset-samples.md)を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
 

@@ -2,10 +2,10 @@
 title: クエリサービス監査ログの統合
 description: クエリサービスの監査ログは、様々なユーザー操作の記録を保持し、問題のトラブルシューティングや、企業データ管理ポリシーおよび規制要件への準拠に関する監査証跡を形成します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## 前提条件
 
-次を持っている必要があります： [!DNL Data Governance] [!UICONTROL ユーザーアクティビティログを表示] 権限を有効にして、Platform UI 内で監査ログダッシュボードを表示できるようにしました。 権限は、Adobe [Admin Console](https://adminconsole.adobe.com/). この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 詳しくは、アクセス制御に関するドキュメントを参照してください。 [Admin Consoleを使用した権限の追加に関する完全な手順](../../access-control/home.md).
+次を持っている必要があります： [!DNL Data Governance] [!UICONTROL ユーザーアクティビティログを表示] 権限を有効にして、Platform UI 内で監査ログダッシュボードを表示できるようにしました。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
 ## [!DNL Query Service] 監査ログカテゴリ {#audit-log-categories}
 
@@ -83,7 +83,7 @@ ht-degree: 2%
 | アクション | 参照元が [!DNL Query Service] 監査カテゴリ、更新は **既存のフォームへの変更**、削除は **スケジュールまたはテンプレートの削除**、 **新しいスケジュールまたはテンプレートの作成**、および execute **クエリの実行**. |
 | ユーザー | ユーザーでフィルタリングするには、完全なユーザー ID( 例：johndoe@acme.com) を入力します。 |
 | ステータス | この [!UICONTROL 許可], [!UICONTROL 成功]、および [!UICONTROL 失敗] オプションでは、「ステータス」または「イベントステータス」に基づいてログをフィルタリングしますが、 [!UICONTROL 拒否] オプションは除外されます **すべて** ログ。 |
-| 日付 | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 |
+| 日付 | 結果をフィルターする日付範囲を定義する開始日および／または終了日を選択します。 |
 
 ## 次の手順
 

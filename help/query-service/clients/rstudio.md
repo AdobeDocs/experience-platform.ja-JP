@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudio をクエリサービスに接続
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 10%
@@ -57,7 +57,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 これで、 [!DNL Query Service]を使用すると、SQL 文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、 [エクスペリエンスイベント](../sample-queries/experience-event.md) およびは、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
+次のクエリでは、 [エクスペリエンスイベント](../../xdm/classes/experienceevent.md) およびは、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,

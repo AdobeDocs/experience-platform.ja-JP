@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform、ホーム、人気の高いトピック、クエリサービス、クエリサービス、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ
 solution: Experience Platform
-title: スケジュール済みクエリ API エンドポイント
+title: Schedules エンドポイント
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 73%
 
 ---
 
-# スケジュール済みクエリエンドポイント
+# Schedules エンドポイント
 
 ## サンプル API 呼び出し
 

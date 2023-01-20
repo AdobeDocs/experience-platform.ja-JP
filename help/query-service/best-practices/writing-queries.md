@@ -5,10 +5,10 @@ title: クエリサービスでのクエリ実行に関する一般的なガイ�
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 45%
+source-wordcount: '1072'
+ht-degree: 44%
 
 ---
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 重複排除
 
-クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、 [クエリサービス重複排除ガイド](./deduplication.md).
+クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、 [クエリサービス重複排除ガイド](../essential-concepts/deduplication.md).
 
 ## クエリサービスでのタイムゾーンの計算
 
@@ -325,4 +325,7 @@ LIMIT 50;
 
 - [Analytics インサイト](../use-cases/analytics-insights.md)
 - [Adobe Targetでのアクティビティ分析](../use-cases/activity-analysis-with-adobe-target.md)
-- [ExperienceEvent クエリ例](../sample-queries/experience-event.md).
+- [イベントのトレンドレポートの作成](../use-cases/trended-report-of-events.md)
+- [訪問者のロールアップレポートの表示](../use-cases/roll-up-report-of-a-visitor.md)
+- [ユーザーのページビューのリスト](../use-cases/list-visitor-sessions.md)
+- [訪問者をページビュー数別にリスト表示](../use-cases/visitors-by-number-of-page-views.md)

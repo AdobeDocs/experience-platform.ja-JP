@@ -2,16 +2,16 @@
 title: Real-time Customer Data Platform Insights データモデル
 description: Real-time Customer Data Platformインサイトのデータモデルで SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自のReal-Time CDPレポートをカスタマイズする方法を説明します。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
 # Real-time Customer Data Platform Insights データモデル
 
-Real-time Customer Data Platformインサイトデータモデル機能では、データモデルと SQL が公開され、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトが得られます。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標 (KPI) の使用例に関するReal-Time CDPレポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、 Query Accelerated Store reporting Insights のドキュメントを参照してください [クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+Real-time Customer Data Platformインサイトデータモデル機能では、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化するデータモデルと SQL が表示されます。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標 (KPI) の使用例に関するReal-Time CDPレポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、 Query Accelerated Store reporting Insights のドキュメントを参照してください [クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 前提条件
 
@@ -92,7 +92,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### ID 別プロファイルのユースケース
 
-この [!UICONTROL ID 別プロファイル] ウィジェットは、プロファイルストア内のすべての結合済みプロファイルで id の分類を表示します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/profiles.md#profiles-by-identity) を参照してください。
+[!UICONTROL ID 別プロファイル]ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/profiles.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### 最も使用されている宛先の使用例
 
-で使用されるロジック [!UICONTROL 最も使用されている宛先] ウィジェットには、マッピングされたセグメントの数に応じて、組織で最も使用されている宛先がリストされます。 このランキングは、どの宛先が利用されているかに関するインサイトを提供すると共に、利用率が低い可能性のある宛先も示します。 詳しくは、 [[!UICONTROL 最も使用されている宛先] widget](./guides/destinations.md#most-used-destinations) を参照してください。
+で使用されるロジック [!UICONTROL 最も使用されている宛先] ウィジェットには、マッピングされたセグメントの数に応じて、組織で最も使用されている宛先がリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先に関するインサイトも提供します。詳しくは、 [[!UICONTROL 最も使用されている宛先] widget](./guides/destinations.md#most-used-destinations) を参照してください。
 
 を生成する SQL [!UICONTROL 最も使用されている宛先] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -239,7 +239,7 @@ FROM
 
 #### 最近アクティブにしたセグメントの使用例
 
-のロジック [!UICONTROL 最近アクティブ化されたセグメント] widget は、宛先に最近マッピングされたセグメントのリストを提供します。 このリストには、システムでアクティブに使用されているセグメントと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、 [[!UICONTROL 最近アクティブ化されたセグメント] ウィジェットドキュメント](./guides/destinations.md#recently-activated-segments) を参照してください。
+のロジック [!UICONTROL 最近アクティブ化されたセグメント] widget は、宛先に最近マッピングされたセグメントのリストを提供します。 このリストには、システムでアクティブに使用されているセグメントと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。詳しくは、 [[!UICONTROL 最近アクティブ化されたセグメント] ウィジェットドキュメント](./guides/destinations.md#recently-activated-segments) を参照してください。
 
 を生成する SQL [!UICONTROL 最近アクティブ化されたセグメント] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tableau のクエリーサービスへの接続
 description: このドキュメントでは、Tableau とAdobe Experience Platform Query Service を接続する手順について説明します。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../best-practices/flatten-nested-data.md) を参照してください。
+>サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../essential-concepts/flatten-nested-data.md) を参照してください。
 
 すべての資格情報を入力した後、設定を確認して続行します。 Adobe Experience Platformとの連携が完了しました。
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service UI ガイド
 description: Adobe Experience Platform Query Service は、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 86%
@@ -46,7 +46,7 @@ UI を使用してクエリをスケジュールする方法については、 [
 | **[!UICONTROL 前回実行時のタイムスタンプ]** | クエリ実行時の最新のタイムスタンプ。 この列では、現在のスケジュールに従ってクエリが実行されたかどうかがハイライト表示されます。 |
 | **[!UICONTROL 前回の実行ステータス]** | 最新のクエリ実行ステータス。 ステータス値は `successful`、`failed`、`in progress` のいずれかです。 |
 
-方法の詳細については、ドキュメントを参照してください。 [クエリサービス UI を使用したクエリの監視](../monitor-queries.md).
+方法の詳細については、ドキュメントを参照してください。 [クエリサービス UI を使用したクエリの監視](./monitor-queries.md).
 
 ## テンプレート {#browse}
 

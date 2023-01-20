@@ -3,7 +3,7 @@ keywords: Experience Platform；クエリサービス；クエリサービス；
 title: Adobe Experience Platformクエリサービスの使用例
 description: Adobe Experience Platform Query Service の汎用性とメリットを示すエンドツーエンドの例です。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Adobe Experience Platformは、データリポジトリと、効率的で信頼�
 
 ## 次の手順
 
-このドキュメントを読むと、次の内容を理解できます。 [!DNL Query Service] は、データの質とセグメント化の容易さに加え、エンドツーエンドのワークフロー全体に対するデータアーキテクチャ内での重要性にも影響を与えます。 Adobe Analyticsと [!DNL Query Service]を参照し、 [Adobe Analyticsサンプルクエリドキュメント](../sample-queries/adobe-analytics.md).
+このドキュメントを読むと、次の内容を理解できます。 [!DNL Query Service] は、データの質とセグメント化の容易さに加え、エンドツーエンドのワークフロー全体に対するデータアーキテクチャ内での重要性にも影響を与えます。 Adobe Analyticsと [!DNL Query Service]を参照し、 [Adobe Analyticsマーチャンダイジング変数の使用例](./merchandising-variables.md).
 
 の利点を示すその他のドキュメント [!DNL Query Service] 組織の戦略的ビジネスインサイトに対して、 [ボットフィルタリングの使用例](./bot-filtering.md) 例：
 
-または、 [!DNL Query Service] 機能：
+また、これらのドキュメントは、 [!DNL Query Service] 機能：
 
 * [クエリ実行のガイダンス](../best-practices/writing-queries.md)
 * [データアセット組織のガイダンス](../best-practices/organize-data-assets.md).

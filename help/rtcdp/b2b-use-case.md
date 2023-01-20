@@ -3,10 +3,10 @@ keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客�
 title: Real-time Customer Data Platform B2B Edition の使用例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
@@ -42,7 +42,7 @@ Marketo 2 では、Townsend はアカウント 2 として記録されます。�
 
 ## 問題
 
-Line 1 は新しいソフトウェア製品をリリースしたばかりで、Bodea の既存の大手顧客にアップセルしたいと考えています。Bodea は、その特定のターゲットオーディエンスを念頭に置いたマーケティングキャンペーンを開始します。
+Line 1 は新しいソフトウェア製品をリリースし、Bodea の既存のトップレベルの顧客ベースにアップセルしたいと考えています。 Bodea は、その特定のターゲットオーディエンスを念頭に置いたマーケティングキャンペーンを開始します。
 
 関連する Townsend 情報は Marketo 1 のアカウント 1 および Marketo 2 のアカウント 2 として記録されているため、Bodea のマーケティングチームはサイロ化された情報を効率的に利用できません。
 
@@ -87,7 +87,7 @@ Marketo Engage と LinkedIn の宛先を使用することにより、Bodea は�
 
 ## 次の手順
 
-このドキュメントでは、Real-Time CDP B2B Edition を使用して解決できる目標と問題のタイプを紹介しました。
+このドキュメントでは、Real-Time CDP B2B Edition を使用して解決できる目標と問題の種類を紹介しました。
 
 B2B 固有の機能の理解を深めるために、次のドキュメントをお勧めします。
 

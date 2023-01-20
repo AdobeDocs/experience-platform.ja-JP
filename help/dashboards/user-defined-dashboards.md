@@ -2,7 +2,7 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 1%

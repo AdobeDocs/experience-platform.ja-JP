@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
 description: このドキュメントでは、Adobe Experience Platformクエリサービスを使用してPower BIを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Npgsql が正しくインストールされていることを確認するには�
 
 >[!IMPORTANT]
 >
->サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../best-practices/flatten-nested-data.md) を参照してください。
+>サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../essential-concepts/flatten-nested-data.md) を参照してください。
 
 ### データ接続モード {#data-connectivity-mode}
 

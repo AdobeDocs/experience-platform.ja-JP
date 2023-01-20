@@ -2,16 +2,16 @@
 title: Web およびモバイルでのインタラクションに関する Analytics インサイト
 description: このドキュメントでは、取り込んだAdobe Analyticsデータから実用的なインサイトを作成するクエリサービスの使用方法を説明します。
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
-source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 # Web およびモバイルインタラクションに関する Analytics インサイト
 
-Adobe Experience Platformでは、エクスペリエンスデータモデル (XDM) フィールドを使用して、Adobe Analyticsレポートスイートからデータを取り込み、データセットを設定できます。 その後、クエリサービスは、SQL クエリを実行して、この分析データを利用し、デジタルプラットフォームを介したユーザーの行動から有益なインサイトを生成できます。
+Adobe Experience Platformでは、エクスペリエンスデータモデル (XDM) フィールドを使用して、Adobe Analyticsレポートスイートからデータを取り込み、データセットを設定できます。 この分析データは、 [!DNL XDM ExperienceEvent] クラス。 その後、クエリサービスは、SQL クエリを実行して、デジタルプラットフォーム上でのユーザーの行動から有益なインサイトを生成することで、このデータを利用できます。
 
 このドキュメントでは、Web およびモバイルの Analytics データからインサイトを作成する際の一般的な使用例を示す、様々な SQL クエリ例を提供します。
 
