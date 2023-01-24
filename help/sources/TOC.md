@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 100%
+source-wordcount: '872'
+ht-degree: 98%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 100%
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforce コネクタ](connectors/crm/salesforce.md)
+      - [SugarCRM コネクタ](connectors/crm/sugarcrm.md)
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
       - [Zoho CRM コネクタ](connectors/crm/zoho.md)
    - カスタマーサクセス {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [SugarCRM アカウントおよび連絡先](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM イベント](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [SugarCRM アカウントおよび連絡先](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM イベント](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}

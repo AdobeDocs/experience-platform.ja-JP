@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e4fa36ebbb52ba0e5b37cda8d220e571d8afa4aa
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 100%
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理を行うことができます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
 
 Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業を行うことができます。
 
@@ -28,7 +28,7 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager ソースの概要](connectors/adobe-applications/audience-manager.md)
-   - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [UI での Adobe Audience Manager ソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications データソースの概要](connectors/adobe-applications/classifications.md)
    - [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics レポートスイートデータソースの概要](connectors/adobe-applications/analytics.md)
@@ -84,6 +84,7 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce]](connectors/crm/salesforce.md)
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
