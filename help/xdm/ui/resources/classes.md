@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: ユーザーインターフェイスでクラスを作成および編集するExperience Platformを説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 5%
 
 ---
@@ -77,7 +77,9 @@ Adobeは、次のような、いくつかの標準（「コア」）Experience D
 >
 >クラスに追加するフィールドは、そのクラスを使用するすべてのスキーマで使用されます。 したがって、すべてのスキーマの使用例で役立つフィールドを慎重に検討する必要があります。 このクラスの一部のスキーマでのみ使用される可能性のあるフィールドを追加する場合は、次の方法でそれらのスキーマに追加することを検討してください。 [フィールドグループの作成](./field-groups.md#create) 代わりに、
 
-A **[!UICONTROL 新しいフィールド]** がキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 の下 **[!UICONTROL 割り当て先]**&#x200B;を選択します。 **[!UICONTROL クラス]**.
+An **[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 の下 **[!UICONTROL 割り当て先]**&#x200B;を選択します。 **[!UICONTROL クラス]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

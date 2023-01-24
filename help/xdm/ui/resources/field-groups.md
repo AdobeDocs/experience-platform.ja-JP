@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマフィールドグループの作成と編集
 description: スキーマユーザーインターフェイスでスキーマフィールドグループを作成および編集するExperience Platformを説明します。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Adobe Experience Platformには、様々なマーケティングの使用例に�
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL 新しいフィールド]** がキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 詳しくは、 [UI でのフィールドの定義](../fields/overview.md#define) を参照してください。
+An **[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 詳しくは、 [UI でのフィールドの定義](../fields/overview.md#define) を参照してください。
+
+の下 **[!UICONTROL 割り当て先]**&#x200B;を選択し、 **[!UICONTROL フィールドグループ]** 」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 結果を絞り込むには、フィールドグループの名前に入力を開始できます。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 の下 **[!UICONTROL 割り当て先]**&#x200B;を選択し、 **[!UICONTROL フィールドグループ]** 」オプションを選択し、ドロップダウンを使用してリストから目的のフィールドグループを選択します。 結果を絞り込むには、フィールドグループの名前に入力を開始できます。
 
