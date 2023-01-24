@@ -2,7 +2,7 @@
 title: Query Accelerated Store レポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 97%
@@ -23,7 +23,7 @@ Adobe Experience Platform の Real-Time CDP データモデルは、プロファ
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。Data Distiller SKU に関連する[パッケージ](../../packages.md)、[ガードレール](../../guardrails.md#query-accelerated-store)および[ライセンス](../../data-distiller/licence-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。Data Distiller SKU に関連する[パッケージ](../../packages.md)、[ガードレール](../../guardrails.md#query-accelerated-store)および[ライセンス](../../data-distiller/license-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 

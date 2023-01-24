@@ -2,10 +2,10 @@
 title: タグのユーザー権限
 description: タグに使用できる様々なタイプの権限と、様々なビジネスユースケース向けの基本的な実装戦略について説明します。
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 93%
+ht-degree: 91%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグのユーザー権限は、Adobe Admin Console を通じてユーザーに割り当てられます。個々のユーザーに割り当てられるのではなく、異なる権限セットが製品プロファイルとして個別に設定されます。次に、製品プロファイル用に設定された権限を付与するため、これらの製品プロファイルにユーザーを割り当てます。
 
@@ -68,7 +68,7 @@ UI で作成したタグプロパティがAdmin Consoleで使用可能になり�
 | --- | --- |
 | **プロパティの管理** | 次の操作を実行できます。<ul><li>新しいプロパティの作成</li><li>プロパティレベルでのメタデータと設定の変更</li><li>プロパティの削除</li></ul>管理者は通常、この役割を実行します。詳しくは、 [プロパティのドキュメント](companies-and-properties.md) を参照してください。 |
 | **拡張機能の開発** | 会社が所有する拡張機能パッケージを作成および変更する権限を付与します。これには、非公開リリースと、公開リリースの依頼も含まれます。 |
-| **アプリ設定の管理** | Adobe Journey Optimizer のライセンス、またはモバイルのアプリ内メッセージとプッシュメッセージへのアクセス権を持つ他のソリューションのライセンスをお持ちの場合にのみ使用できます。これにより、Experience Cloud が認識しているアプリを、Firebase Cloud メッセージングサービスや Apple プッシュ通知サービスとの通信に必要なプッシュ認証情報とともに管理できます。 |
+| **アプリ設定の管理** | これは、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたはその他のソリューションのライセンスをお持ちの場合にのみ使用できます。  これにより、Experience Cloud が認識しているアプリを、Firebase Cloud メッセージングサービスや Apple プッシュ通知サービスとの通信に必要なプッシュ認証情報とともに管理できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 

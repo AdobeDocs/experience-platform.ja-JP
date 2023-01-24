@@ -1,7 +1,7 @@
 ---
 title: Data Distillerの概要
 description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージ提供です。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的な使用例に対して、取り込み後のデータの準備（クリーニング、整形、操作など）を実行できます。 Data Distillerの使用は、現在および継続中のライセンス（以下のうち少なくとも 1 つ）に依存します。Adobe Real-time Customer Data Platform、Customer Journey Analytics、Adobe Journey Optimizer。
 
-## ライセンスの使用 {#licence-usage}
+## ライセンス使用状況 {#license-usage}
 
-詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./licence-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
+詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./license-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
 
 ## スコーピングパラメーター {#scoping-parameters}
 

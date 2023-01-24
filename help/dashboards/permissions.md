@@ -4,7 +4,7 @@ title: Experience Platform ダッシュボードのアクセス権限の取得�
 type: Documentation
 description: Adobe Admin Console を使用して Experience Platform ダッシュボードの表示、編集、更新の機能をユーザーに付与します。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 32%
@@ -51,7 +51,7 @@ ht-degree: 32%
 
 |  | [!UICONTROL 標準ダッシュボードを表示] または [!UICONTROL 標準ダッシュボードを管理] | [!UICONTROL プロファイルの表示],<br/>[!UICONTROL セグメントを表示],<br/> [!UICONTROL 宛先の表示] | [!UICONTROL クエリの管理] &amp; [!UICONTROL サンドボックスの管理] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] |
 |---|---|---|---|---|
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] をクリックします。 | N/A | **「表示」または「管理」権限が必要です** 各ダッシュボードに対して | なし | なし |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] をクリックします。 | 該当なし | **「表示」または「管理」権限が必要です** 各ダッシュボードに対して | なし | なし |
 | [!DNL Dashboards] をクリックします。 | 有効 | **少なくとも 1 つの必須**. | なし | なし |
 | [!DNL Dashboards] [!DNL Inventory] <br/>（「参照」タブ） | 有効 | なし | なし | なし |
 | [!DNL Dashboards] [!DNL Integrations] タブ <br/>(Power BIのインストールに使用 ) | 有効 | **少なくとも 1 つの必須** | なし | なし |

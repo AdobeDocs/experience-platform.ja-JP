@@ -2,10 +2,10 @@
 title: Platform ダッシュボードの Power BI レポートテンプレート
 description: Power BI を使用した Experience Platform データを、レポートテンプレートを使用して調べます。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Power BI アプリケーション統合をインストールするには、ユ�
 
 >[!NOTE]
 >
->Platform UI の左側のナビゲーションに「ダッシュボード」タブを表示し、ダッシュボードインベントリビューを確認できるようにするには、Platform ライセンスの一部として、プロファイル、セグメント化、宛先のいずれかのダッシュボードにアクセスできる必要があります。
+>Platform UI の左側のナビゲーションに「ダッシュボード」タブが表示され、ダッシュボードの在庫表示を表示できるようにするには、Platform ライセンスの一部として、プロファイル、セグメント、宛先のいずれかのダッシュボードにアクセスできる必要があります。
 
 ## Power BI アプリケーション統合のインストール
 
