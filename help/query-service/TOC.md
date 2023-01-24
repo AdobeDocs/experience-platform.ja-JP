@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: a43947f87337e235eb059db6f497999bc4ede74d
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '265'
 ht-degree: 70%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 70%
 - はじめに {#get-started}
    - [前提条件](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
+   - [概要](data-distiller/overview.md)
    - [ライセンス使用状況](data-distiller/license-usage.md)
    - クエリ高速化ストア {#query-accelerated-store}
       - [高速クエリの送信](data-distiller/query-accelerated-store/send-accelerated-queries.md)
