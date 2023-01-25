@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
 description: このドキュメントでは、「セグメントメンバーシップの詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 8%
 
 ---
@@ -75,11 +75,15 @@ ht-degree: 8%
 | --- | --- |
 | `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
 | `xdm:lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 |
+| `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 外部オーディエンスの場合、このフィールドを設定しないと、セグメントのメンバーシップは、 `lastQualificationTime`. |
 | `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
 | `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、1 つのタイプのみです。 `xdm:payloadType` ペイロードのタイプを示します (`boolean`, `number`, `propensity`または `string`) の代わりに、兄弟プロパティがペイロードタイプの値を提供します。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>次に属する任意のセグメントメンバーシップ `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

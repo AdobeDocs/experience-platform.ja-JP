@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 外部オーディエンスのインポートと使用
 description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 3%
+source-wordcount: '1664'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 
 - [セグメント化サービス](../home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
 - [リアルタイム顧客プロファイル](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
 - [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
@@ -257,3 +257,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 | `xdmEntity._id` | データセット内のレコードを一意に識別するために使用される適切な ID です。 |
 | `{TENANT_NAME}.identities` | このセクションは、カスタム ID のフィールドグループを、以前読み込んだユーザーと接続するために使用します。 |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | これは、以前に作成したカスタム ID 名前空間のラベルです。 例えば、ID 名前空間を「externalAudience」と呼ぶ場合は、それを配列のキーとして使用します。 |
+
+>[!NOTE]
+>
+>デフォルトでは、外部オーディエンスのメンバーシップは 30 日間のみ保持されます。 30 日間以上保持する場合は、 `validUntil` フィールドに値を入力する必要があります。 このフィールドの詳細については、 [セグメントメンバーシップの詳細スキーマフィールドグループ](../../xdm/field-groups/profile/segmentation.md).
