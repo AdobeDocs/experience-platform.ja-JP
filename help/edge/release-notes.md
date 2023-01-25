@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
 Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+
+## バージョン2.14.0 - 2023 年 1 月 25 日
+
+**新機能**
+
+* （ベータ版）AJO の表示と提案のサポートが追加されました。
+
+**修正点および改善点**
+
+* Adobe Target VEC カスタムコードアクションで、 [!DNL at.js].
+* Edge ネットワークへのリクエストで「リファラー」ヘッダーが適切に設定されない場合がある問題を修正しました。
+* 問題を修正しました。 [ユーザーエージェントクライアントのヒント](fundamentals/user-agent-client-hints.md) プロパティが正しくないタイプに設定されている可能性があります。
+* 問題を修正しました。 `placeContext.localTime` スキーマが一致しませんでした。
 
 ## バージョン2.13.1 - 2022 年 10 月 13 日
 
