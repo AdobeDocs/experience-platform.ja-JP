@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 3fd3e96d5db6b1e63df338efe383d209690eb1f6
+source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 43%
+source-wordcount: '1316'
+ht-degree: 36%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 43%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [Assurance](#assurance)
 - [データ収集](#data-collection)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
+- [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
+
+## Assurance {#assurance}
+
+Adobe保証を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 検証エディター | 検証エディターに新しい機能強化が追加されました。 これらの機能強化には、検証列、新しいコード作成ツール、改善された表示が含まれます。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+アシュランスの詳細については、 [アシュランスドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## データ収集 {#data-collection}
 
@@ -72,6 +88,29 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 {style=&quot;table-layout:auto&quot;}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| Platform が生成したセグメントメンバーシップの有効期限 | 次に属する任意のセグメントメンバーシップ `Exited` ～に基づいて 30 日以上の州 `lastQualificationTime` フィールドは削除されます。 |
+| 外部オーディエンスのメンバーシップの有効期限 | デフォルトでは、外部オーディエンスのメンバーシップは 30 日間保持されます。 長期間保持するには、 `validUntil` フィールドに値を入力します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**今後の廃止** {#deprecation}
+
+セグメントメンバーシップのライフサイクルの冗長性を取り除くには、 `Existing` のステータスは次の場所で非推奨となります： [セグメントメンバーシップマップ](../../xdm/field-groups/profile/segmentation.md) 2023 年 3 月末。 フォローアップのお知らせには、正確な廃止日が含まれます。
+
+廃止後、セグメントで認定されたプロファイルは、次のように表示されます `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`. これにより、 `Active` および `Expired` セグメントのステータス。
+
+この変更は、 [企業の宛先](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure Event Hubs、HTTP API) を使用し、 `Existing` ステータス。 その場合は、ダウンストリーム統合を確認してください。 特定の期間を超えて新しく認定されたプロファイルを識別したい場合は、 `Realized` ステータスと `lastQualificationTime` を選択します。 詳しくは、Adobe担当者にお問い合わせください。
+
+プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
 
 ## ソース {#sources}
 
