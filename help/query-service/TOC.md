@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: a43947f87337e235eb059db6f497999bc4ede74d
+source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '267'
 ht-degree: 70%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 70%
    - [クエリエディターユーザガイド](ui/user-guide.md)
    - [クエリテンプレート](ui/query-templates.md)
    - [クエリスケジュール](ui/query-schedules.md)
+   - [クエリログ](ui/query-logs.md)
    - [スケジュールクエリの監視](ui/monitor-queries.md)
    - [資格情報ガイド](ui/credentials.md)
    - [クエリ結果から出力データセットを生成](ui/create-datasets.md)

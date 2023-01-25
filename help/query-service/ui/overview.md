@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Service UI ガイド
 description: Adobe Experience Platform Query Service は、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 79%
+source-wordcount: '1135'
+ht-degree: 78%
 
 ---
 
@@ -63,7 +63,7 @@ UI を使用してクエリをスケジュールする方法については、 [
 
 詳しくは、 [クエリテンプレート](./query-templates.md) ドキュメントを参照してください。
 
-## ログ
+## ログ {#log}
 
 「**[!UICONTROL ログ]**」タブには、以前に実行されたクエリのリストが表示されます。デフォルトでは、ログはクエリを逆年代順にリストします。
 
@@ -81,6 +81,8 @@ UI を使用してクエリをスケジュールする方法については、 [
 
 >!![Note]
 鉛筆アイコン (![鉛筆アイコン。](../images/ui/overview/edit-icon.png)) をクエリログの任意の行から [!DNL Query Editor]. 編集を容易にするために、クエリが事前に設定されています。
+
+詳しくは、 [クエリログドキュメント](./query-logs.md) を参照してください。
 
 ## 認証情報
 
