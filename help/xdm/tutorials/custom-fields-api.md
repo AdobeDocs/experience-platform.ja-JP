@@ -2,9 +2,9 @@
 title: スキーマレジストリ API での XDM フィールドの定義
 description: スキーマレジストリ API でカスタムの Experience Data Model(XDM) リソースを作成する際に、異なるフィールドを定義する方法を説明します。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->この `meta:enum` 値が **not** 列挙を宣言するか、データの検証を独自に実行します。 ほとんどの場合、文字列は `meta:enum` また、 `enum` データが制約を受けるようにする ただし、次のような場合に使用できます。 `meta:enum` 対応する `enum` 配列。 に関するチュートリアルを参照してください。 [推奨値の定義](../tutorials/suggested-values.md) を参照してください。
+>この `meta:enum` 値が **not** 列挙を宣言するか、データの検証を独自に実行します。 ほとんどの場合、文字列は `meta:enum` また、 `enum` データが制約を受けるようにする ただし、次のような場合に使用できます。 `meta:enum` 対応する `enum` 配列。 に関するチュートリアルを参照してください。 [API での推奨値の定義](../tutorials/suggested-values.md) を参照してください。
 
 オプションで、 `default` デフォルトを示すプロパティ `enum` 値を指定しない場合にフィールドで使用する値。
 
