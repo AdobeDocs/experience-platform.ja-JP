@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 38%
+source-wordcount: '1994'
+ht-degree: 30%
 
 ---
 
@@ -16,6 +16,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [Assurance](#assurance)
 - [データ収集](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [リアルタイム顧客プロファイル](#profile)
 - [セグメント化サービス](#segmentation)
@@ -47,6 +48,53 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | データ送信先 [!DNL Google Ads] イベント転送の使用 | これで、 [[!DNL Google Ads Enhanced Conversions] API 拡張機能](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) イベント転送の場合は、 [Google OAUTH 2 の秘密鍵](../../tags/ui/event-forwarding/secrets.md#google-oauth2)（サーバー側のデータをに安全に送信するため） [!DNL Google Ads] リアルタイムで。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [（ベータ版）Adobe Experience Cloud Audiences 接続](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 以下を使用： [!UICONTROL （ベータ版）Adobe Experience Cloud Audiences] Experience Platformから様々なExperience Platformソリューション (Audience Manager、Analytics、Advertising Cloud、Adobe Campaign、Target、Marketoなど ) にセグメントを共有するための接続 |
+| [Pega プロファイル接続](../../destinations/catalog/personalization/pega-profile.md) | 以下を使用： [!DNL Pega Profile Connector] Adobe Experience Platformで、 [!DNL Amazon] S3 ストレージを使用し、プロファイルデータをAdobe Experience Platformから独自の S3 バケットに定期的に CSV ファイルに書き出します。 In [!DNL Pega Customer Decision Hub]を使用すると、データジョブをスケジュールして、このプロファイルデータを S3 ストレージからインポートし、 [!DNL Pega Customer Decision Hub] プロファイル。 |
+| [（ベータ版）トレードデスク CRM EU 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | EUID（ヨーロッパの統合 ID）のリリースに伴い、次の 2 つが表示されるようになりました [!DNL The Trade Desk - CRM] の宛先 [宛先カタログ](/help/destinations/catalog/overview.md). <ul><li> EU でデータをソースする場合は、 **[!DNL The Trade Desk - CRM (EU)]** 宛先。</li><li> APAC または NAMER 地域のデータをソースにする場合は、 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 宛先。 </li></ul> |
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| ベータクラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン） `:`，パイプ `|`，セミコロン `;`) が新しいベータクラウドストレージの宛先で使用できるようになりました。 [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> サポート対象の [ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md) （ファイルベースの宛先の場合） |
+| で使用できる新しいオプションパラメーター [顧客データフィールド](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) の設定 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:このオプションは、ユーザーの組織で設定されたすべての宛先データフローで一意の値を持つ顧客データフィールドを作成する必要がある場合に使用します。 <br> 例えば、 **[!UICONTROL 統合エイリアス]** フィールド [[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) の宛先は一意である必要があります。つまり、この宛先への 2 つの異なるデータフローが、このフィールドに同じ値を持つことはできません。 |
+
+**修正点および機能強化** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>修正または機能強化</b></td>
+        <td><b>説明</b></td>
+    </tr>
+    <tr>
+        <td>必要なマッピングおよび重複マッピングの UI および API 検証 (PLAT-123316)</td>
+        <td>UI と API で、検証が次のように、 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">フィールドのマッピング</a> 「宛先のアクティブ化」ワークフローで、次の操作をおこないます。<ul><li><b>必須マッピング</b>:宛先の開発者が、必要なマッピングを使用して宛先を設定した場合 ( 例： <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 宛先 ) の場合、宛先へのデータをアクティブ化する際に、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>マッピングを複製</b>:アクティベーションワークフローのマッピング手順で、重複する値をソースフィールドに追加できますが、ターゲットフィールドには追加できません。 許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可/禁止</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>メールのエイリアス 2</li></ul></td></tr><tr><td>Forbidden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>ファイルベースの宛先への書き出し動作の更新 (PLAT-123316)</td>
+        <td>の動作の問題を修正しました <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">必須属性</a> データファイルをバッチ保存先に書き出す際に使用します。 <br> 以前は、出力ファイル内のすべてのレコードに次の両方が含まれていることを検証していました。 <ol><li>NULL 以外の <code>mandatoryField</code> 列と</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値を指定します。</li></ol> 2 つ目の条件が削除されました。 その結果、次の例に示すように、書き出されたデータファイルに、より多くの出力行が表示される場合があります。<br> <b> 2023 年 1 月リリースより前のサンプル動作 </b> <br> 必須フィールド： <code>emailAddress</code> <br> <b>アクティブ化するデータを入力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>有効化の出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023 年 1 月リリース以降のサンプル動作 </b> <br> <b>有効化の出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
