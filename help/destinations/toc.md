@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
+source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '992'
 ht-degree: 99%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 99%
    * [宛先カタログの概要](./catalog/overview.md)
    * アドビの宛先 {#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
+      * [（ベータ版）Experience Cloudオーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
       * [Experience Platform セグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
    * 広告の宛先 {#advertising}
