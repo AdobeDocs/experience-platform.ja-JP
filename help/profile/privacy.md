@@ -5,10 +5,10 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 30%
+source-wordcount: '1573'
+ht-degree: 27%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護�
 
 ## はじめに
 
-このガイドを読む前に、次の [!DNL Experience Platform] サービスに関する十分な理解を得ることをお勧めします。
+このガイドでは、次の点に関する十分な知識が必要です [!DNL Platform] コンポーネント：
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
 * [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステムをまたいで ID を結び付けることで、顧客体験データの断片化によって発生する根本的な課題を解決します。
@@ -48,7 +48,7 @@ ID サービスは、グローバルに定義された（標準）ID および�
 >
 >Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 詳しくは、 [結合ポリシーの制限](#merge-policy-limitations) を参照してください。
 >
->また、プライバシーリクエストの完了に要する時間は保証できないことに注意する必要があります。 変更が [!DNL Profile] リクエストの処理中にデータを保証することはできません。
+>プライバシーリクエストが完了するまでにかかる時間に注意してください **できません** 保証されている。 変更が [!DNL Profile] リクエストの処理中にデータを保証することはできません。
 
 ### API の使用
 
@@ -65,6 +65,8 @@ API でジョブリクエストを作成する際は、`userIDs` 内で指定す
 >詳しくは、 [プロファイルリクエストと id リクエスト](#profile-v-identity) このドキュメントの後半で、 `ProfileService` および `identity` 内 `include` 配列。
 
 次のリクエストは、 [!DNL Profile] ストア。 顧客に対して、 `userIDs` 配列；標準を使ったもの `Email` ID 名前空間と、カスタムを使用する他の `Customer_ID` 名前空間。 また、 [!DNL Profile] (`ProfileService`) を `include` 配列：
+
+**リクエスト**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform は、組織に属するすべての[サンドボックス](../sandboxes/home.md)でプライバシーリクエストを処理します。その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
+
+**製品の応答**
+
+プロファイルサービスの場合、プライバシージョブが完了すると、JSON 形式で応答が返され、リクエストされたユーザー ID に関する情報が返されます。
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### UI の使用
 
@@ -161,6 +213,6 @@ Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行し�
 >
 ## 次の手順
 
-このドキュメントでは、[!DNL Experience Platform] におけるプライバシーリクエストの処理に関する重要な概念について説明します。ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
+このドキュメントでは、[!DNL Experience Platform] におけるプライバシーリクエストの処理に関する重要な概念について説明します。ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるには、このガイド全体で提供されるドキュメントを引き続きお読みください。
 
 のプライバシーリクエストの処理に関する情報 [!DNL Platform] 使用されないリソース [!DNL Profile]を参照し、 [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md).
