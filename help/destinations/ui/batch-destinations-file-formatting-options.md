@@ -2,10 +2,10 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '565'
-ht-degree: 100%
+source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 88%
 
 ---
 
@@ -29,17 +29,25 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 ## ファイル形式設定 {#file-configuration}
 
+ファイル形式設定オプションを表示するには、 [宛先に接続](/help/destinations/ui/connect-destination.md) ワークフロー。 選択 **データタイプ：セグメント** および **ファイルタイプ：CSV** 書き出したファイルのフォーマット設定を表示するには `CSV` ファイル。
+
 >[!IMPORTANT]
 >
 >接続先には、これらのオプションの一部が使用できない場合があります。 宛先でサポートするファイル形式オプションは、宛先の開発者が決定します。 宛先の開発者は、宛先に接続する際に使用できるオプションを決定できます。 必須オプションは、Experience Platform UI でアスタリスクでマークされます。
-
-ファイル形式オプションを表示するには、[宛先への接続](/help/destinations/ui/connect-destination.md)ワークフローを開始し、「**ファイルタイプ**」としてセグメントを選択します。この節では、書き出された `CSV` ファイルで使用できるファイル形式設定について説明します。
+> 
+>新しいクラウドストレージの宛先 — [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md) ：現在、以下で強調表示されている 6 つの CSV オプションのみをサポートしています。
 
 ![使用可能なファイル形式オプションの一部を示す画像。](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### 区切り
+### 区切り {#delimiter}
 
-各フィールドと値の区切り文字を設定します。 例えば、コンマ区切り値の場合は `,`、タブ区切り値の場合は `/t` です。
+各フィールドと値の区切り文字を設定します。 利用可能なオプションは次のとおりです。
+
+* コロン `(:)`
+* コンマ `(,)`
+* パイプ `(|)`
+* セミコロン `(;)`
+* Tab `(\\t)`
 
 ### 引用符文字
 
