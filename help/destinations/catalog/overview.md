@@ -3,7 +3,7 @@ keywords: カタログ；カタログ
 title: 宛先カタログの概要
 description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。 これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 55%
@@ -15,6 +15,13 @@ ht-degree: 55%
 宛先カタログは、データを受け取る準備ができた、使用可能な宛先プラットフォームのリストを提供します。 これらの宛先プラットフォームには、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォーム、Experience Platform 拡張機能などが含まれます。
 
 カタログを参照して、広告やパーソナライズ機能の使用例に最適なターゲットプラットフォームを決定し、フローを設定して、ターゲットに対するセグメントをアクティブ化します。
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## 宛先カテゴリ
 

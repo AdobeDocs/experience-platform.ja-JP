@@ -3,10 +3,10 @@ keywords: 宛先；adobe experience platform；プラットフォーム；宛先
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 37%
+ht-degree: 43%
 
 ---
 
@@ -15,6 +15,13 @@ ht-degree: 37%
 ![宛先の概要バナー](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## 宛先とソース {#destinations-and-sources}
 
@@ -57,9 +64,9 @@ Platform の宛先機能は、Adobe Experience Platformのアクセス制御権�
 
 ### 宛先の属性ベースのアクセス制御 {#attribute-based-access}
 
-Adobe Experience Platformの属性ベースのアクセス制御を使用すると、管理者は、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
+Adobe Experience Platform での属性ベースのアクセス制御では、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
-属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。 さらに、データセット内のすべてのフィールドにアクセスできない場合は、データを宛先に書き出すことはできません。
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データを宛先に書き出すことはできません。
 
 宛先が属性ベースのアクセス制御と連携する方法について詳しくは、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations).
 
