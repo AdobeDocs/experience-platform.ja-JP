@@ -1,14 +1,18 @@
 ---
 title: クエリログ
 description: クエリログは、クエリが実行されるたびに自動的に生成され、UI を通じてトラブルシューティングに役立ちます。 このドキュメントでは、UI の「クエリサービスログ」セクションの使用方法とナビゲーション方法について説明します。
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 3%
 
 ---
 
 # クエリログ
+
+>[!IMPORTANT]
+>
+>一部のクエリログ機能は、現在、限定的なリリースになっており、すべてのお客様が利用できるわけではありません。 UI の表示が少し異なる場合がありますが、編集アイコンは表示されません。 また、クエリ名を選択するプロセスによって、 [!UICONTROL クエリログの詳細] 表示
 
 Adobe Experience Platformは、API と UI の両方を通じて発生するすべてのクエリイベントのログを保持しています。 この情報は、クエリサービスの UI の [!UICONTROL ログ] タブをクリックします。
 
@@ -39,6 +43,10 @@ A [各ログテーブル列の説明](./overview.md#log) は、「クエリサ�
 ログの詳細パネルで、新しい出力データセットを選択し、実行で使用された SQL クエリ全体を表示またはコピーできます。
 
 ![行が選択され、出力データセットと SQL クエリがハイライトされた「クエリログ」ワークスペース。](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>一部のクエリログ機能は、現在、限定的なリリースになっており、すべてのお客様が利用できるわけではありません。
 
 また、 [!UICONTROL 名前] 列を使用して、 [!UICONTROL クエリログの詳細] 表示
 
