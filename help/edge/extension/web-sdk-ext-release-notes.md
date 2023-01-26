@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK 拡張機能のリリースノート
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
+source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 このドキュメントでは、 Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。 SDK 自体の最新のリリースノートについては、 [Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## バージョン2.15.0 - 2023 年 1 月 25 日
+## バージョン2.15.1 - 2023 年 1 月 26 日
 
 * データストリームにアクセスできないユーザーが、拡張機能の設定を編集できない問題を修正しました。
 * でのサーフェスのサポートを追加しました。 `sendEvent` アクション。
