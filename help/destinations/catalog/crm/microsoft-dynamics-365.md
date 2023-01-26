@@ -2,13 +2,14 @@
 keywords: crm;CRM;crm 宛先;Microsoft Dynamics 365;Microsoft Dynamics 365 crm 宛先
 title: Microsoft Dynamics 365 接続
 description: Microsoft Dynamics 365 の宛先を使用すると、アカウントデータを書き出し、Microsoft Dynamics 365 内でビジネスニーズに合わせてアクティブ化できます。
-source-git-commit: 12af2ee40d355119104d741630654d2847df6cc5
-workflow-type: ht
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 100%
 
 ---
-
 
 # [!DNL Microsoft Dynamics 365] 接続
 
@@ -61,7 +62,7 @@ Experience Platform が [!DNL Dynamics 365] 内のセグメントステータス
 
 [!DNL Dynamics 365] CRM 宛先に対して認証を行う前に、以下の項目をメモしておきます。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | `Client ID` | お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] クライアント ID。詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in)を参照してください。 | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] クライアント秘密鍵。[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options)内のオプション #2 を使用することになります。 | 説明のための `abcde~abcdefghijklmnopqrstuvwxyz12345678`。 |
@@ -95,7 +96,7 @@ Experience Platform が [!DNL Dynamics 365] 内のセグメントステータス
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -124,7 +125,7 @@ Experience Platform が [!DNL Dynamics 365] 内のセグメントステータス
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先へのアラートの登録](../../ui/alerts.md)についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
 宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 

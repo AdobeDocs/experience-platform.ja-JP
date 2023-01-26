@@ -1,7 +1,8 @@
 ---
 title: （ベータ版）Experience CloudAudiences
 description: セグメントをExperience Platformから様々なExperience Platformソリューションに共有する方法を説明します。
-source-git-commit: 75eb72a8325c92961d9fe26f7e86d15fecf97043
+last-substantial-update: 2023-01-25T00:00:00Z
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 24%
