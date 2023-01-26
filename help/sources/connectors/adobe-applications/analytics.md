@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Analytics Source Connector;Analytics;Analytics;AAID;
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 20%
+source-wordcount: '1040'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +19,7 @@ Adobe Experience Platformでは、Analytics ソースコネクタを使用して
 
 [!DNL Analytics] は、顧客に関する詳細情報や顧客が Web プロパティとどのようにやり取りするかを学び、デジタルマーケティングの費用が効果的かを確認し、改善点を特定するのに役立つ強力なエンジンです。 [!DNL Analytics] は 1 年に数兆件もの web トランザクションを処理し、 [!DNL Analytics] ソースコネクタを使用すると、この豊富な行動データを簡単にタップして、 [!DNL Real-Time Customer Profile] 数分で
 
-![](./images/analytics-data-experience-platform.png)
+![Adobe Analyticsを含む様々なAdobeアプリケーションからのデータのジャーニーを示す図。](./images/analytics-data-experience-platform.png)
 
 高いレベルで [!DNL Analytics] は、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) のルールと処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、次の方法で消費可能と見なされます。 [!DNL Real-Time Customer Profile]. 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、で使用するために Platform データセットに取り込まれます。 [!DNL Data Science Workspace], [!DNL Query Service]、およびその他のデータ検出アプリケーション。
 
@@ -35,6 +34,10 @@ XDM 標準規格に準拠することで、データを統一的に取り込む�
 XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.md)」を参照してください。
 
 ## Adobe Analytics から XDM へのフィールドのマッピング方法
+
+>[!IMPORTANT]
+>
+>データ準備変換を実行すると、データフロー全体に遅延が生じる場合があります。 追加される待ち時間は、変換ロジックの複雑さに応じて異なります。
 
 ソース接続が確立され、 [!DNL Analytics] Platform ユーザーインターフェイスを使用してデータをExperience Platformに変換すると、データフィールドは自動的にマッピングされ、 [!DNL Real-Time Customer Profile] 分以内に とのソース接続の作成手順 [!DNL Analytics] Platform UI を使用して、 [Analytics ソースコネクタのチュートリアル](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -79,8 +82,8 @@ Analytics バックフィルのデフォルト値は 13 ヶ月です。 上記�
 
 これらのフィールドは、ID としてマークされません。代わりに、同じ ID が XDM の `identityMap` をキーと値のペアとして使用します。
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID は、イベントのプライマリ ID としてマークされます。AACUSTOMID は、イベントのプライマリ ID としてマークされることはありません。ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
