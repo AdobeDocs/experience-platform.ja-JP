@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
 workflow-type: tm+mt
-source-wordcount: '4367'
+source-wordcount: '4398'
 ht-degree: 16%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->階層を操作する際に、子属性にピリオド (`.`) の場合は、バックスラッシュ (`\`) をクリックして、特殊文字をエスケープします。 詳しくは、 [特殊文字のエスケープ](home.md#escape-special-characters).
+>階層を操作する際に、子属性にピリオド（`.`）がある場合は、バックスラッシュ（`\`）を使用して特殊文字をエスケープする必要があります。詳しくは、 [特殊文字のエスケープ](home.md#escape-special-characters).
 
 また、フィールド名が **任意** 次の予約済みキーワードのうち、ラップする必要があります。 `${}`:
 
@@ -138,10 +138,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力： **必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力： **必須** キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | サンプルが必要 | サンプルが必要 |
+| is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力： **必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力： **必須** キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;:&quot;id1&quot;, &quot;price&quot;:22.5 }、{ &quot;sku&quot;:&quot;id2&quot;, &quot;price&quot;:14.35 }] |
 | to_object | 指定されたフラットなキーと値のペアに基づいてオブジェクトを作成します。 | <ul><li>入力： **必須** キーと値のペアのフラットなリスト。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列： **必須** オブジェクトを作成するために解析される文字列。</li><li>値の区切り： *オプション* フィールドを値から区切る区切り文字。 デフォルトの区切り文字は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールド値のペアを区切る区切り文字。 デフォルトの区切り文字は `,`.</li></ul> | str_to_object(&#x200B;STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列： **必須** オブジェクトを作成するために解析される文字列。</li><li>値の区切り： *オプション* フィールドを値から区切る区切り文字。 デフォルトの区切り文字は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールド値のペアを区切る区切り文字。 デフォルトの区切り文字は `,`.</li></ul> | str_to_object(&#x200B;STRING, VALUE_DELIMITER, FIELD_DELIMITER) **注意**:以下を使用して、 `get()` ～と共に機能する `str_to_object()` を使用して、文字列内のキーの値を取得します。 | <ul><li>例#1:str_to_object(&quot;firstName - John ;lastName - ;- 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>例#2:str_to_object(&quot;firstName - John ;lastName - ;phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>例#1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>例#2:&quot;John&quot;</li></ul> |
 | contains_key | ソースデータ内にオブジェクトが存在するかどうかを確認します。 **注意：** この関数は、非推奨の `is_set()` 関数に置き換えます。 | <ul><li>入力： **必須** ソースデータ内に存在する場合に確認するパス。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | 無効にする | 属性の値をに設定します。 `null`. これは、フィールドをターゲットスキーマにコピーしない場合に使用します。 |  | nullify() | nullify() | `null` |
 | get_keys | キーと値のペアを解析し、すべてのキーを返します。 | <ul><li>オブジェクト： **必須** キーの抽出元のオブジェクト。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;:&quot;Pride and Pairaming&quot;, &quot;book2&quot;:&quot;1984&quot;}) | `["book1", "book2"]` |
