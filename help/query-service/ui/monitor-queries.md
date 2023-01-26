@@ -2,7 +2,7 @@
 title: スケジュール済みクエリの監視
 description: クエリサービス UI を使用してクエリを監視する方法について説明します。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 73%
