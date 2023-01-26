@@ -3,20 +3,20 @@ title: Adobe Experience Platform Web SDK を使用したパーソナライズさ
 description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '962'
+ht-degree: 3%
 
 ---
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDK は、次のようなパーソナライゼーションソリューションからのパーソナライズされたコンテンツのAdobeをサポートします。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja).
+Adobe Experience Platform Web SDK は、次のようなパーソナライゼーションソリューションからのパーソナライズされたコンテンツのAdobeをサポートします。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) および [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja).
 
 さらに、Web SDK を使用すると、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../../destinations/ui/configure-personalization-destinations.md).
 
-Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
+Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) とAdobe Journey Optimizer [ウェブキャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング
 
@@ -107,7 +107,7 @@ alloy("sendEvent", {
 
 代わりに `renderDecisions` 選択肢 `true` イベントを送信すると、SDK は（前述のように）自動レンダリングの対象となる提案をレンダリングしようとしました。 その結果、各提案オブジェクトには、 `renderAttempted` プロパティを `true`. この場合、これらの提案を手動でレンダリングする必要はありません。
 
-これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ (Adobe Targetの Visual Experience Composer で作成されたコンテンツ ) についてのみ説明しました。 パーソナライゼーションコンテンツを取得するには _not_ 自動レンダリングの対象となる場合は、 `decisionScopes` 」オプションを使用して設定できます。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
+これまでは、自動レンダリングの対象となるパーソナライゼーションコンテンツ (Adobe Targetの Visual Experience Composer またはAdobe Journey Optimizerの Web Campaign UI を使用して作成されたコンテンツ ) についてのみ説明しました。 パーソナライゼーションコンテンツを取得するには _not_ 自動レンダリングの対象となる場合は、 `decisionScopes` 」オプションを使用して設定できます。 スコープとは、サーバーから取得する特定の提案を識別する文字列です。
 
 次に例を示します。
 
@@ -303,7 +303,7 @@ SDK は、次の機能を提供します。 [ちらつきを制御](../personali
 
 >[!IMPORTANT]
 >
->If Propositions for the `__view__` 範囲は、ページの読み込み時にレンダリングされ、 `renderAttempted` フラグが `true`. この `applyPropositions` コマンドは再レンダリングしません `__view__` 次の条件を持つスコープの提案 `renderAttempted: true` フラグ。
+>If Propositions for the `__view__` 範囲（または Web サーフェス）は、ページ読み込み時にレンダリングされ、 `renderAttempted` フラグが `true`. この `applyPropositions` コマンドは再レンダリングしません `__view__` 次の条件を持つ範囲（または Web 表面）の提案 `renderAttempted: true` フラグ。
 
 ### 使用例 1:単一ページのアプリケーションビューの提案を再レンダリング
 

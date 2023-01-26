@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '526'
 ht-degree: 3%
 
 ---
@@ -24,11 +24,10 @@ ht-degree: 3%
 「イベントを送信」アクションタイプには、実装に応じて役立つその他のフィールドがいくつかあります。 これらのフィールドはすべてオプションです。
 
 - **タイプ：** このフィールドでは、XDM スキーマに記録されるイベントタイプを指定できます。 詳しくは、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) を参照してください。
-- **データ：** XDM スキーマと一致しないデータは、このフィールドを使用して送信できます。 このフィールドは、Adobe Targetプロファイルを更新しようとする場合や、Target Recommendations属性を送信しようとする場合に役立ちます。 例については、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
-<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **データ：** XDM スキーマと一致しないデータは、このフィールドを使用して送信できます。 このフィールドは、Adobe Targetプロファイルを更新しようとする場合や、Target Recommendations属性を送信しようとする場合に役立ちます。 例については、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **データセット ID:** データストリームで指定したデータセット以外のデータセットにデータを送信する必要がある場合は、ここでそのデータセット ID を指定できます。
 - **ドキュメントをアンロードします：** ユーザーがページから離れてもイベントがサーバーに到達することを確認するには、 **[!UICONTROL ドキュメントはアンロードされます]** チェックボックス。 これにより、イベントがサーバーに到達できますが、応答は無視されます。
-- **視覚的なパーソナライゼーションの決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、 **[!UICONTROL 視覚的なパーソナライゼーションの決定をレンダリング]** チェックボックス。 必要に応じて、決定範囲を指定することもできます。 詳しくは、 [パーソナライゼーションドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) パーソナライズされたコンテンツのレンダリングについて詳しくは、を参照してください。
+- **視覚的なパーソナライゼーションの決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、 **[!UICONTROL 視覚的なパーソナライゼーションの決定をレンダリング]** チェックボックス。 必要に応じて、決定範囲やサーフェスを指定することもできます。 詳しくは、 [パーソナライゼーションドキュメント](../personalization/rendering-personalization-content.md#automatically-rendering-content) パーソナライズされたコンテンツのレンダリングについて詳しくは、を参照してください。
 
 ## 同意の設定
 
