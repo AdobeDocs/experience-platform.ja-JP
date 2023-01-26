@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の最新のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1994'
-ht-degree: 31%
+source-wordcount: '1847'
+ht-degree: 33%
 
 ---
 
@@ -75,10 +75,6 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
     <tr>
         <td><b>修正または機能強化</b></td>
         <td><b>説明</b></td>
-    </tr>
-    <tr>
-        <td>必要なマッピングおよび重複マッピングの UI および API 検証 (PLAT-123316)</td>
-        <td>UI と API で、検証が次のように、 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">フィールドのマッピング</a> 「宛先のアクティブ化」ワークフローで、次の操作をおこないます。<ul><li><b>必須マッピング</b>:宛先の開発者が、必要なマッピングを使用して宛先を設定した場合 ( 例： <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 宛先 ) の場合、宛先へのデータをアクティブ化する際に、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>マッピングを複製</b>:アクティベーションワークフローのマッピング手順で、重複する値をソースフィールドに追加できますが、ターゲットフィールドには追加できません。 許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可/禁止</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>メールのエイリアス 2</li></ul></td></tr><tr><td>Forbidden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>ファイルベースの宛先への書き出し動作の更新 (PLAT-123316)</td>
