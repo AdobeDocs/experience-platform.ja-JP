@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
+source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 32%
+source-wordcount: '1905'
+ht-degree: 31%
 
 ---
 
@@ -65,6 +65,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | ----------- | ----------- |
+| ストリーミング宛先との統合に関する有料メディアの同意の強化 | の機能強化 [同意ポリシーの実施](/help/data-governance/enforcement/auto-enforcement.md) オン [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations) 有料メディアアクティベーションの使用例の場合 特定のエクスペリエンスから同意を取り消したプロファイルが、これらの宛先から積極的に削除されるようになりました。 <br> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. |
 | ベータクラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン） `:`，パイプ，セミコロン `;`) が新しいベータクラウドストレージの宛先で使用できるようになりました。 [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> サポート対象の [ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md) （ファイルベースの宛先の場合） |
 | で使用できる新しいオプションパラメーター [顧客データフィールド](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) の設定 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:ユーザーの組織で設定されたすべての宛先データフローで一意の値を持つ顧客データフィールドを作成する必要がある場合は、このパラメータを使用します。 <br> 例えば、 **[!UICONTROL 統合エイリアス]** フィールド [[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) の宛先は一意である必要があります。つまり、この宛先への 2 つの異なるデータフローが、このフィールドに同じ値を持つことはできません。 |
 
