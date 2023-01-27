@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
+source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -165,7 +165,7 @@ ht-degree: 100%
       * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
       * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
-      * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+      * [JW Player Analytics](https://exchange.adobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
