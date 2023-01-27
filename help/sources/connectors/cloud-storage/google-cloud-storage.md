@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Google Cloud Storage Source Connector の概要
 description: API またはユーザーインターフェイスを使用してGoogle Cloud Storage をAdobe Experience Platformに接続する方法について説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 81%
+source-wordcount: '573'
+ht-degree: 78%
 
 ---
 
@@ -36,6 +36,8 @@ Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウ
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントを Platform に接続できます。
+
+詳しくは、 [サービスアカウントキーの作成と管理](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) から [!DNL Google Cloud] ドキュメント。
 
 ## ファイルとディレクトリの命名制約
 

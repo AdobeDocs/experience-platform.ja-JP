@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;Google PubSub;google pubsub
-solution: Experience Platform
 title: UI で Google PubSub ソース接続を作成
-type: Tutorial
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 100%
+source-wordcount: '612'
+ht-degree: 79%
 
 ---
 
@@ -31,8 +28,9 @@ ht-degree: 100%
 
 | 認証情報 | 説明 |
 | ---------- | ----------- |
-| `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| `credentials` | [!DNL PubSub] の認証に必要な資格情報または秘密鍵の ID。 |
+| プロジェクト ID | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
+| 認証情報 | [!DNL PubSub] の認証に必要な資格情報または秘密鍵の ID。 |
+| トピック ID | の ID [!DNL PubSub] メッセージのフィードを表すリソース。 トピック ID を指定する必要があるのは、 [!DNL Google PubSub] ソース。 |
 
 これらの値について詳しくは、次の [PubSub 認証](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。サービスアカウントベースの認証を使用している場合、資格情報の生成手順については、次の [PubSub ガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
@@ -44,9 +42,9 @@ ht-degree: 100%
 
 ## [!DNL PubSub] アカウントを接続
 
-[Platform UI](https://platform.adobe.com) で、左側のナビゲーションバーから&#x200B;**[!UICONTROL ソース]**&#x200B;を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 [!UICONTROL クラウドストレージ]カテゴリで、**[!UICONTROL Google PubSub]** を選択し、次に&#x200B;**[!UICONTROL データを追加]**&#x200B;を選択します。
 
@@ -62,7 +60,13 @@ ht-degree: 100%
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、**[!UICONTROL 新しいアカウント]**&#x200B;を選択し、入力フォームに名前、説明（オプション）、[!DNL PubSub] 認証資格情報を入力します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、**[!UICONTROL 新しいアカウント]**&#x200B;を選択し、入力フォームに名前、説明（オプション）、[!DNL PubSub] 認証資格情報を入力します。この手順では、トピック ID を指定して、アカウントがアクセスできるデータを定義できます。 そのトピック ID に関連付けられている購読のみにアクセスできます。
+
+>[!NOTE]
+>
+>パブサブプロジェクトに割り当てられたプリンシパル（ロール）は、 [!DNL PubSub] プロジェクト。 特定のトピックに対するアクセス権を持つプリンシパル（役割）を追加する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、 [[!DNL PubSub] アクセス制御に関するドキュメント](https://cloud.google.com/pubsub/docs/access-control).
+
+終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/google-pubsub/new.png)
 
