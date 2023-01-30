@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1949'
 ht-degree: 31%
 
 ---
@@ -148,8 +148,9 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Platform が生成したセグメントメンバーシップの有効期限 | 次に属する任意のセグメントメンバーシップ `Exited` ～に基づいて 30 日以上の州 `lastQualificationTime` フィールドは削除されます。 |
+| セグメントビルダーでの一括値インポート | セグメントビルダーで、CSV または TSV ファイルをアップロードするか、コンマ区切りの値を手動で挿入することで、複数の値のインポートがサポートされるようになりました。 詳しくは、 [セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | 外部オーディエンスのメンバーシップの有効期限 | デフォルトでは、外部オーディエンスのメンバーシップは 30 日間保持されます。 長期間保持するには、 `validUntil` フィールドに値を入力します。 |
+| Platform が生成したセグメントメンバーシップの有効期限 | 次に属する任意のセグメントメンバーシップ `Exited` ～に基づいて 30 日以上の州 `lastQualificationTime` フィールドは削除されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
