@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
+source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1911'
 ht-degree: 31%
 
 ---
@@ -61,11 +61,11 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | [Pega プロファイル接続](../../destinations/catalog/personalization/pega-profile.md) | 以下を使用： [!DNL Pega Profile Connector] Adobe Experience Platformで、 [!DNL Amazon] S3 ストレージを使用し、プロファイルデータをAdobe Experience Platformから独自の S3 バケットに定期的に CSV ファイルに書き出します。 In [!DNL Pega Customer Decision Hub]を使用すると、データジョブをスケジュールして、このプロファイルデータを S3 ストレージからインポートし、 [!DNL Pega Customer Decision Hub] プロファイル。 |
 | [（ベータ版）トレードデスク CRM EU 接続](../../destinations/catalog/advertising/tradedesk-emails.md) | EUID（ヨーロッパの統合 ID）のリリースに伴い、次の 2 つが表示されるようになりました [!DNL The Trade Desk - CRM] の宛先 [宛先カタログ](/help/destinations/catalog/overview.md). <ul><li> EU でデータをソースする場合は、 **[!DNL The Trade Desk - CRM (EU)]** 宛先。</li><li> APAC または NAMER 地域のデータをソースにする場合は、 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 宛先。 </li></ul> |
 
-**新機能または更新された機能**
+**新機能または更新された機能** {#destinations-new-updated-functionality}
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| ストリーミング宛先との統合に関する有料メディアの同意の強化 | の機能強化 [同意ポリシーの実施](/help/data-governance/enforcement/auto-enforcement.md) オン [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations) 有料メディアアクティベーションの使用例の場合 特定のエクスペリエンスから同意を取り消したプロファイルが、これらの宛先から積極的に削除されるようになりました。 <br> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. |
+| ストリーミング宛先との統合に関する有料メディア同意ポリシーの強化 | の機能強化 [同意ポリシーの実施](/help/data-governance/enforcement/auto-enforcement.md) オン [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations) 有料メディアアクティベーションの使用例の場合 プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了とストリーミング先との間で積極的に通信するようになりました。 <br> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. |
 | ベータクラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン） `:`，パイプ，セミコロン `;`) が新しいベータクラウドストレージの宛先で使用できるようになりました。 [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> サポート対象の [ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md) （ファイルベースの宛先の場合） |
 | で使用できる新しいオプションパラメーター [顧客データフィールド](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) の設定 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:ユーザーの組織で設定されたすべての宛先データフローで一意の値を持つ顧客データフィールドを作成する必要がある場合は、このパラメータを使用します。 <br> 例えば、 **[!UICONTROL 統合エイリアス]** フィールド [[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) の宛先は一意である必要があります。つまり、この宛先への 2 つの異なるデータフローが、このフィールドに同じ値を持つことはできません。 |
 
@@ -164,4 +164,4 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | クラウドストレージソースのサブフォルダーへのユーザーアクセスを許可する | 新しいアカウントを作成する際に、クラウドストレージソースの特定のサブフォルダーへのアクセスを定義できるようになりました。 作成したユーザーは、許可されたサブフォルダーのデータにのみアクセスできます。 この機能は、次のクラウドストレージソースで使用できます。 [Azure Blob ストレージ](../../sources/connectors/cloud-storage/blob.md), [Google Cloud Storage](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md)、および [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
-| ベータ版の可用性 [!DNL SugarCRM] | [!DNL SugarCRM] ソースがベータ版で利用できるようになりました。 以下を使用： [!DNL SugarCRM Accounts & Contacts] そして [!DNL SugarCRM Events] ソースからデータを取り込む [!DNL SugarCRM] アカウントからExperience Platformへ。 詳しくは、 [[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md). |
+| ベータ版の可用性 [!DNL SugarCRM] | [!DNL SugarCRM] ソースは、ベータ版で利用できるようになりました。 以下を使用： [!DNL SugarCRM Accounts & Contacts] そして [!DNL SugarCRM Events] ソースからデータを取り込む [!DNL SugarCRM] アカウントからExperience Platformへ。 詳しくは、 [[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md). |
