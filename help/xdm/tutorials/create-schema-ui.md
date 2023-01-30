@@ -5,9 +5,9 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 10%
 
 ---
@@ -177,8 +177,10 @@ Adobe Experience Platformユーザーインターフェイスを使用すると�
 
 各フィールドには、次の情報が必要です。
 
-* **[!UICONTROL フィールド名]:** キャメルケースで書かれたフィールドの名前。 例：loyaltyLevel
-* **[!UICONTROL 表示名]:** フィールドの名前。タイトルケースで記述されます。 例：Loyalty Level
+* **[!UICONTROL フィールド名]:** フィールドの名前。できれば camelCase で記述します。 スペース文字は使用できません。 これは、コード内のフィールドおよび他のダウンストリームアプリケーションでフィールドを参照するために使用される名前です。
+   * 例：loyaltyLevel
+* **[!UICONTROL 表示名]:** フィールドの名前。タイトルケースで記述されます。 これは、スキーマの表示または編集時にキャンバスに表示される名前です。
+   * 例：Loyalty Level
 * **[!UICONTROL タイプ]:** フィールドのデータタイプ。 これには、基本的なスカラー型と、 [!DNL Schema Registry]. 例： [!UICONTROL 文字列], [!UICONTROL 整数], [!UICONTROL ブール値], [!UICONTROL 人物], [!UICONTROL 住所], [!UICONTROL 電話番号]など
 * **[!UICONTROL 説明]:** フィールドの説明（オプション）は、最大 200 文字で指定する必要があります。
 

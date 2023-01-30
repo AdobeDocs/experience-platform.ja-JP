@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: XDM ユーザーインターフェイスで XDM フィールドを定義するExperience Platformについて説明します。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 4%
 
 ---
@@ -44,7 +44,7 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 
 ## フィールドのプロパティを定義する {#define}
 
-選択後、 **プラス (+)** アイコン **[!UICONTROL 新しいフィールド]** がキャンバスに表示されます。この画像は、一意のテナント ID( `_tenantId` （以下の例）。 Adobeが提供するクラスやフィールドグループの他のフィールドとの競合を防ぐために、スキーマに追加されたすべてのカスタムフィールドは、自動的にこの名前空間内に配置されます。
+選択後、 **プラス (+)** アイコン、 **[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示されます。
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 
 | Field プロパティ | 説明 |
 | --- | --- |
-| [!UICONTROL フィールド名] | フィールドを説明する一意の名前。 スキーマを保存した後は、フィールドの名前を変更できません。<br><br>名前は camelCase で書くのが理想的です。 英数字、ダッシュ、アンダースコアの各文字を使用できますが、 **次の場合は不可** まず、アンダースコアを使用します。<ul><li>**正しい**: `fieldName`</li><li>**許容可能：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**誤った**: `_fieldName`</li></ul> |
-| [!UICONTROL 表示名] | フィールドのわかりやすい名前。 |
+| [!UICONTROL フィールド名] | フィールドを説明する一意の名前。 スキーマを保存した後は、フィールドの名前を変更できません。 この値は、コード内のフィールドおよび他のダウンストリームアプリケーションでのフィールドの識別および参照に使用されます<br><br>名前は camelCase で書くのが理想的です。 英数字、ダッシュ、アンダースコアの各文字を使用できますが、 **次の場合は不可** まず、アンダースコアを使用します。<ul><li>**正しい**: `fieldName`</li><li>**許容可能：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**誤った**: `_fieldName`</li></ul> |
+| [!UICONTROL 表示名] | フィールドの表示名。 これは、スキーマエディターキャンバス内のフィールドを表すために使用される名前です。 |
 | [!UICONTROL タイプ] | フィールドに格納するデータのタイプ。 このドロップダウンメニューから、 [標準スカラー型](../../schema/field-constraints.md) XDM またはマルチフィールドの 1 つでサポートされます。 [データタイプ](../resources/data-types.md) 以前に [!DNL Schema Registry].<br><br>また、 **[!UICONTROL 詳細タイプ検索]** 既存のデータ型を検索およびフィルタリングし、目的の型を見つけやすくする。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-キャンバスが更新されてフィールドの名前とタイプが表示され、右側のレールにフィールドのパスが他のプロパティと共にリストされるようになりました。
+キャンバスが更新され、新しく追加されたフィールドが、一意のテナント ID( `_tenantId` （以下の例）。 Adobeが提供するクラスやフィールドグループの他のフィールドとの競合を防ぐために、スキーマに追加されたすべてのカスタムフィールドは、自動的にこの名前空間内に配置されます。 右側のレールに、他のプロパティに加えて、フィールドのパスが表示されるようになりました。
 
 ![](../../images/ui/fields/overview/field-added.png)
 
