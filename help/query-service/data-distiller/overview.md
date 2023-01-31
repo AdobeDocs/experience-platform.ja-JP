@@ -1,24 +1,24 @@
 ---
 title: Data Distillerの概要
 description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: b3003cc62e8d3555b887a23f0614020bd2c5e81e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
 # Data Distillerの概要
 
-Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージ提供です。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的な使用例に対して、取り込み後のデータの準備（クリーニング、整形、操作など）を実行できます。 Data Distillerの使用は、現在および継続中のライセンス（以下のうち少なくとも 1 つ）に依存します。Adobe Real-time Customer Data Platform、Customer Journey Analytics、Adobe Journey Optimizer。
+Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージ提供です。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的な使用例に対して、取り込み後のデータの準備（クリーニング、整形、操作など）を実行できます。 Data Distillerの使用は、Platform ベースのアプリケーションの使用権限に応じて異なります。
 
 ## ライセンス使用状況 {#license-usage}
 
-詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./license-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
+この  [Data Distiller License Usage Dashboard](./license-usage.md) は、Data Distiller Compute 時間を購入すると利用できます。 ライセンス使用状況ダッシュボードを使用すると、使用権限を付与されたコンピューティング時間の消費状況を監視できます。 詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./license-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
 
 ## スコーピングパラメーター {#scoping-parameters}
 
-スコーピングパラメーターは、ライセンス容量で定義された、提案された使用例の範囲に関連する使用制限です。 アドオンがない場合、Data Distillerのスコープパラメーターは次のようになります。
+スコーピングパラメーターは、必要な設定の範囲に関連する使用制限で、ライセンス容量によって定義されます。 アドオンがない場合、Data Distillerのスコープパラメーターは次のようになります。
 
 * **時間を計算**:PSQL またはクエリサービス API を使用して、任意のサンドボックスで実行されるバッチクエリ（スケジュール設定またはその他）を実行し、データのスキャンと書き込みをおこなうことができます。 使用許諾契約の範囲プロセスで決定された、年間に割り当てられた計算時間を使用します。 合計計算時間は、すべてのサンドボックスに蓄積されます。
 * **取り込まれたデータ**:Data Distillerを使用してAdobe Experience Platformに取り込まれるデータに対して問い合わせをおこなうことができる制限は、現在のAdobe Real-time Customer Data Platform、Customer Journey Analytics、Adobe Journey Optimizerのライセンスで説明されている制限の影響を受けます。
@@ -38,6 +38,7 @@ Data Distillerは、Adobe Experience Platformの機能のサブセットを含�
    * データ分析および取り込み後のデータ準備（クリーニング、シェーピング、操作）に SQL クエリを実行する。
    * SQL クエリを実行して、BI ツールに直接表示するロールアップ指標を作成する。
    * Adobe Experience Platform内のデータを迅速に検査する。
+   * データから意味のあるインサイトを生成する。
 * **レポート API 呼び出し**:レポート API を使用して集計データに対してクエリを確実に実行するには、効率的に実行するのに十分なリソースが必要です。 これには、Real-time Customer Data Platformが提供するクエリなど、既存のデータモデルを強化するクエリが含まれます。 レポート API は、各クエリに同時実行スロットを割り当てることで、リソースの使用率を追跡します。 同時に使用できるレポート API 呼び出しは最大 4 つです。 BI ツールを通じてレポート API にアクセスし、より多くの同時実行スロットが必要な場合は、BI サーバーが必要です。
 
 
