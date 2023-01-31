@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
-source-wordcount: '1419'
-ht-degree: 100%
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
+workflow-type: tm+mt
+source-wordcount: '1473'
+ht-degree: 96%
 
 ---
 
@@ -79,6 +79,12 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL アラート履歴の表示] | アラート履歴の読み取り専用アクセス |
+| [!DNL Alerts] | [!UICONTROL アラートの解決] | アラートの読み取り、編集、削除にアクセスする。 |
+| [!DNL Alerts] | [!UICONTROL アラートの表示] | アラートに対する読み取り専用アクセス |
+| [!DNL Alerts] | [!UICONTROL アラートの管理] | アラート履歴の読み取り、作成、編集、削除にアクセスする。 |
+| [!DNL Data Hygiene] | [!UICONTROL データの衛生状態の表示] | データの衛生状態に対する読み取り専用アクセス |
+| [!DNL Data Hygiene] | [!UICONTROL データの衛生管理] | データの Whealty（読み取り、作成、編集、削除）へのアクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの表示] | スキーマおよび関連リソースへの読み取り専用アクセス |
 | [!DNL Data Modeling] | [!UICONTROL 関係の管理] | スキーマ関係の読み取り、作成、編集、および削除へのアクセス。 |
@@ -94,9 +100,9 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの表示] | 使用可能な結合ポリシーへの読み取り専用アクセス。 |
 | [!DNL Profile Management] | [!UICONTROL セグメントのオーディエンスの書き出し] | 評価済みのデータセットセグメントをオーディエンスセットに書き出す機能 |
 | [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
-| [!DNL Identities] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
-| [!DNL Identities] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
-| [!DNL Identities] | [!UICONTROL ID グラフの表示] | ID グラフへの読み取り専用アクセス |
+| [!DNL Identity Management] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
+| [!DNL Identity Management] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
+| [!DNL Identity Management] | [!UICONTROL ID グラフの表示] | ID グラフへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの表示] | 組織に属するサンドボックスへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスのリセット] | サンドボックスをリセットする機能 |
