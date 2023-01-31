@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
@@ -17,9 +17,11 @@ Adobe Experience Platform は、顧客体験を促進する完全なソリュー
 
 RESTful API に基づいて構築された [!DNL Experience Platform] は、システムの全機能を開発者に公開し、使い慣れたツールを使用してエンタープライズソリューションを簡単に統合できるようにサポートします。また、[!DNL Experience Platform] は、パートナーが必要に応じて独自の製品とテクノロジーを構築し、統合することもサポートします。この機能と柔軟性により、[!DNL Experience Platform] は市場での独自性を発揮します。パートナー、顧客、開発者のコミュニティに、「エクスペリエンスビジネス」を推進する革新を構築するための基盤を提供します。あらゆる角度からの顧客の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
 
-<div id="recs-overview-body-1"></div>
-<div id="recs-overview-body-2"></div>
-<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-wrapper-1">
+    <div id="recs-overview-body-1"></div>
+    <div id="recs-overview-body-2"></div>
+    <div id="recs-overview-body-3"></div>
+</div>
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
