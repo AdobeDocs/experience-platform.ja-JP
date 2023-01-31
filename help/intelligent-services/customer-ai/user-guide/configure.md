@@ -5,10 +5,10 @@ feature: Customer AI
 title: 顧客 AI インスタンスの設定
 description: AI/ML サービスは、様々な使用例に対して設定できる、使いやすいAdobe Senseiサービスとして顧客 AI を提供します。 次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
-ht-degree: 11%
+source-wordcount: '2828'
+ht-degree: 8%
 
 ---
 
@@ -250,46 +250,6 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 >入力データのサイズによっては、予測の実行が完了するまでに最大 24 時間かかる場合があります。
 
 この節では、顧客 AI のインスタンスを設定し、予測実行を実行しました。 実行が正常に完了すると、プロファイルの切り替えが有効になっている場合、スコアリングされたインサイトが予測されたスコアと共にプロファイルに自動入力されます。 このチュートリアルの次の節に進む前に、最大 24 時間お待ちください。
-
-## ガバナンスポリシー
-
-ワークフローを実行してインスタンスを作成し、モデルの設定を送信すると、 [政策執行](/help/data-governance/enforcement/auto-enforcement.md) 違反があるかどうかを確認します。 ポリシー違反が発生した場合は、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。 これは、Platform 内のデータ操作とマーケティングアクションが、データ使用ポリシーに準拠していることを確認するためです。
-
-![ポリシー違反を示すポップアップ](../images/user-guide/policy-violation-popover-cai.png)
-
-ポップオーバーは、違反に関する特定の情報を提供します。 これらの違反は、構成ワークフローに直接関係しないポリシー設定やその他の測定を通じて解決できます。 例えば、特定のフィールドをデータサイエンスの目的で使用できるようにラベルを変更できます。 また、モデル設定自体を変更して、ラベルの付いたものが使用されないようにすることもできます。 の設定方法の詳細については、ドキュメントを参照してください [ポリシー](/help/data-governance/policies/overview.md).
-
-## 属性ベースのアクセス制御
-
->[!IMPORTANT]
->
->属性ベースのアクセス制御は、現在、限られたリリースでのみ使用できます。
-
-[属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにする Adobe Experience Platform の機能です。](../../../access-control/abac/overview.md)属性は、スキーマフィールドやセグメントに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
-
-この機能を使用すると、エクスペリエンスデータモデル（XDM）スキーマフィールドに、組織またはデータの使用範囲を定義するラベルを付けることができます。同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドに関するアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、またはサードパーティのユーザー）に与えるアクセスをうまく管理できます。また、属性ベースのアクセス制御により、管理者は特定のセグメントへのアクセスを管理できます。
-
-属性ベースのアクセス制御を通じて、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ (SPD) と個人情報 (PII) の両方に対するユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
-
-属性ベースのアクセス制御により、一部のフィールドおよび機能は、アクセスが制限され、特定の顧客 AI サービスインスタンスで使用できなくなります。 例として、「ID」、「スコア定義」、「クローン」があります。
-
-![サービスインスタンスの制限されたフィールドを含む顧客 AI ワークスペースの結果がハイライト表示されました。](../images/user-guide/unavailable-functionalities.png)
-
-顧客 AI ワークスペースの上部 **インサイトページ**&#x200B;サイドバー、スコア定義、ID およびプロファイル属性の詳細には、すべて「アクセス制限」と表示されます。
-
-![スキーマの制限されたフィールドが強調表示された顧客 AI ワークスペース。](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-制限されたスキーマを持つデータセットをでプレビューする場合 **[!UICONTROL インスタンスワークフローを作成]** ページに表示される場合、次のことを知らせる警告が表示されます。 [!UICONTROL アクセス制限により、一部の情報はデータセットのプレビューに表示されません。]
-
-![スキーマ結果が制限されたプレビューデータセットの制限されたフィールドを強調表示した顧客 AI ワークスペース。](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-制限された情報を含むインスタンスを作成し、 **[!UICONTROL 目標を定義]** 手順の場合、上部に警告が表示されます。 [!UICONTROL アクセス制限により、特定の情報は設定に表示されません。]
-
-![サービスインスタンスの制限されたフィールドを含む顧客 AI ワークスペースの結果がハイライト表示されました。](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 次の手順 {#next-steps}
 

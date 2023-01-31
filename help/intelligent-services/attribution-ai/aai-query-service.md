@@ -4,7 +4,7 @@ feature: Attribution AI
 title: クエリサービスを使用したアトリビューションスコアの分析
 description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法について説明します。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Adobe Experience Platform UI で、 **[!UICONTROL データセット]** をクリックします。 この **[!UICONTROL データセット]** ページが表示されます。 次に、 **[!UICONTROL 参照]** 」タブに移動し、データスコアの出力Attribution AIセットを探します。
 
-![インスタンスへのアクセス](./images/aai-query/datasets_browse.png)
+![モデルへのアクセス](./images/aai-query/datasets_browse.png)
 
 出力データセットを選択します。 「データセットアクティビティ」ページが表示されます。
 
@@ -305,7 +305,7 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
 
 >[!TIP]
 >
-> この例では、 `{COLUMN_NAME}` に加えて `_tenantId` および `your_score_output_dataset`. この `COLUMN_NAME` 変数は、Attribution AIインスタンスの設定時に追加されたオプションのパススルー列名（レポート列）の値を取得できます。 スコアリング出力スキーマを確認し、 `{COLUMN_NAME}` このクエリの完了に必要な値。
+> この例では、 `{COLUMN_NAME}` に加えて `_tenantId` および `your_score_output_dataset`. この `COLUMN_NAME` 変数は、Attribution AIモデルの設定時に追加されたオプションのパススルー列名（レポート列）の値を取得できます。 スコアリング出力スキーマを確認し、 `{COLUMN_NAME}` このクエリの完了に必要な値。
 
 ```sql
 SELECT 
