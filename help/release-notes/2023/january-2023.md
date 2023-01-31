@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 31%
+source-wordcount: '2294'
+ht-degree: 29%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 31%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [データ収集](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [リアルタイム顧客プロファイル](#profile)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## 人工知能/機械学習サービス {#ai-ml}
+
+人工知能と機械学習サービスは、マーケティングアナリストや実践者に対して、顧客体験の使用事例で AI/ML の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、ビジネスレベルの設定を使用する会社のニーズに固有のデータサイエンスの専門知識を必要とせずに、予測を設定できます。
+
+### アトリビューション AI
+
+Attribution AIは、コンバージョンイベントにつながるタッチポイントにクレジットを関連付けるために使用されます。 これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| HIPAA 対応 | Healthcare Shield のお客様は、保護された医療情報をAttribution AIや他の特定のExperience Platform・ベースのアプリケーションで受信、使用、保守または送信できるようになりました。 ヘルスケアシールドは、HIPAA に基づく被保険者またはビジネス関連のお客様向けです。 詳しくは、 [HIPAA およびAdobe製品とサービス](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| 追加のスコアデータセット列の編集 | 既存のモデルを編集する際に、追加のスコアデータセット列（レポート列）を追加または削除できるようになりました。 これにより、アトリビューションスコアの柔軟性が拡張され、モデルが既に作成された後で、追加のディメンションに対するインサイトが得られます。 詳しくは、 [Attribution UI ガイド](../../intelligent-services/attribution-ai/user-guide.md) を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+詳しくは、 [AI/ML サービス](../../intelligent-services/attribution-ai/overview.md) の概要を参照してください。
+
+### 顧客 AI
+
+Real-time Customer Data Platformの顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用します。 これを実現するために、ビジネスニーズを機械学習の問題に変換したり、アルゴリズムを選択したり、トレーニング、またはデプロイする必要はありません。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| HIPAA 対応 | Healthcare Shield のお客様は、Real-time Customer Data Platformや他の特定のExperience Platform・ベースのアプリケーションの顧客 AI で、保護された医療情報を受信、使用、保守または送信できるようになりました。 ヘルスケアシールドは、HIPAA に基づく被保険者またはビジネス関連のお客様向けです。 詳しくは、 [HIPAA およびAdobe製品とサービス](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+詳しくは、 [AI/ML サービス](../../intelligent-services/customer-ai/overview.md) の概要を参照してください。
 
 ## Assurance {#assurance}
 
