@@ -1,11 +1,10 @@
 ---
 keywords: インサイト；顧客 ai；顧客 ai インサイト；CAI クエリサービス；顧客 ai クエリ；顧客 ai スコア
-feature: Customer AI audit logs
-title: 監査ログの概要
+title: 顧客 AI の監査ログの概要
 description: 顧客 AI で監査ログを表示および管理する方法について説明します。
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ ht-degree: 36%
 
 組織に対してこの機能が有効になっている場合、アクティビティの発生に応じて監査ログが自動的に収集されます。ログ収集を手動で有効にする必要はありません。
 
-監査ログを表示および書き出すには、Adobe コンソールで監査ログのアクセスアクセス制御権限を付与されている必要があります。顧客 AI 機能の個々の権限を管理する方法については、 [アクセス制御ドキュメント](../../customer-ai/user-guide/access-controls.md).
+監査ログを表示および書き出すには、Adobe コンソールで監査ログのアクセスアクセス制御権限を付与されている必要があります。顧客 AI 機能の個々の権限を管理する方法については、 [アクセス制御ドキュメント](../cai-data-governance/access-controls.md).

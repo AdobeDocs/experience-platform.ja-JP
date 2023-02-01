@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 100%
+source-wordcount: '149'
+ht-degree: 93%
 
 ---
 
@@ -23,6 +23,12 @@ ht-degree: 100%
    - [ユーザーインターフェイスガイド](attribution-ai/user-guide.md)
    - [インサイトの獲得](attribution-ai/discover-insights.md)
    - [スコアのダウンロード](attribution-ai/download-scores.md)
+   - データガバナンス {#aai-data-governance}
+      - [アクセス制御](attribution-ai/aai-data-governance/access-controls.md)
+      - [監査ログ](attribution-ai/aai-data-governance/audit-logs.md)
+      - [顧客管理キー](attribution-ai/aai-data-governance/customer-managed-keys.md)
+      - [データガバナンス](attribution-ai/aai-data-governance/data-governance.md)
+      - [ガバナンスポリシー](attribution-ai/aai-data-governance/governance-policies.md)
    - [クエリサービスを使用したスコアの分析](attribution-ai/aai-query-service.md)
    - [エラーのトラブルシューティング](attribution-ai/troubleshooting.md)
 - Content and Commerce AI（ベータ版） {#content-commerce-ai}
@@ -44,4 +50,10 @@ ht-degree: 100%
       - [顧客 AI スコアを使用したセグメントの作成](customer-ai/user-guide/create-segment.md)
       - [スコアのダウンロード](customer-ai/user-guide/download-scores.md)
    - [エラーのトラブルシューティング](customer-ai/troubleshooting.md)
+   - データガバナンス {#cai-data-governance}
+      - [アクセス制御](customer-ai/cai-data-governance/access-controls.md)
+      - [監査ログ](customer-ai/cai-data-governance/audit-logs.md)
+      - [顧客管理キー](customer-ai/cai-data-governance/customer-managed-keys.md)
+      - [データガバナンス](customer-ai/cai-data-governance/data-governance.md)
+      - [ガバナンスポリシー](customer-ai/cai-data-governance/governance-policies.md)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

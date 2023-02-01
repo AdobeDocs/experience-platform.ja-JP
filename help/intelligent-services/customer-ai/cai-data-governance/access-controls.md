@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: 顧客 AI のアクセス制御
 description: このドキュメントでは、顧客 AI の属性ベースのアクセス制御に関する情報を提供します。
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 37%
@@ -42,8 +42,8 @@ ht-degree: 37%
 
 アクセス制御を使用する場合、 **顧客 AI を表示** および **顧客 AI を管理** 権限は顧客 AI の様々な機能へのアクセスを許可します。 この **顧客 AI を管理** 権限を使用して **作成**,**更新**, **削除**, **有効**&#x200B;または **無効** モデル **顧客 AI を表示** を使用して、リストを読み取ったり、表示したりできます。 この **作成**, **更新** および **削除** アクションは監査ログで記録されます。
 
-詳しくは、ドキュメントを参照してください [アクセス制御の権限の割り当て](../../../help/access-control/home.md) または方法 [監査ログを使用して、アクセスとアクティビティを監視する](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+詳しくは、ドキュメントを参照してください [アクセス制御の権限の割り当て](../../../access-control/home.md) または方法 [監査ログを使用して、アクセスとアクティビティを監視する](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 次の手順
 
-このガイドを読むことで、[!DNL Experience Platform] のアクセス制御の主な原則を学びました。[!DNL Admin Console] を使用して製品プロファイルを作成して [!DNL Platform] の権限を割り当てる方法に関する詳細な手順について、引き続き『[アクセス制御ユーザーガイド](./ui/overview.md)』をご覧ください。
+このガイドを読むことで、[!DNL Experience Platform] のアクセス制御の主な原則を学びました。[!DNL Admin Console] を使用して製品プロファイルを作成して [!DNL Platform] の権限を割り当てる方法に関する詳細な手順について、引き続き『[アクセス制御ユーザーガイド](../overview.md)』をご覧ください。

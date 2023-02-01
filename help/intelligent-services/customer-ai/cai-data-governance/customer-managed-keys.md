@@ -1,12 +1,11 @@
 ---
 keywords: インサイト、顧客 ai、顧客 ai インサイト、AAI クエリサービス、顧客 ai クエリ、顧客 ai スコア、CAI での顧客管理キー
-feature: Customer-Managed Keys in Customer AI
-title: 顧客管理キー
+title: 顧客 AI の顧客管理キー。
 description: 顧客 AI の顧客管理キーの設定方法を説明します。
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 
