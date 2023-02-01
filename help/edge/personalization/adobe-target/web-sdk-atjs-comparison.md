@@ -3,7 +3,7 @@ title: at.js とExperience PlatformWeb SDK の比較
 description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
+source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 7%
@@ -28,10 +28,10 @@ ht-degree: 7%
 
 URL 構造：https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.js または alloy.js （非縮小版）
 
-例：
+以下に例を示します。
 
-* 縮小済み： [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* 縮小解除済み： [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* 縮小済み： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* 縮小解除済み： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 [詳細情報](../../fundamentals/installing-the-sdk.md)
 
@@ -75,7 +75,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en))
 
 
 ### Web SDK の設定
@@ -240,7 +240,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en))
 
 ### Web SDK の使用
 
@@ -325,7 +325,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en))
 
 
 ### Web SDK の使用
@@ -514,7 +514,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en))
 
 ### Web SDK の使用
 
@@ -645,7 +645,7 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en))
 
 
 ### Web SDK の使用
@@ -685,7 +685,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en))
 
 
 ### Web SDK の使用
@@ -694,7 +694,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Platform Web SDK バージョン 2.6.0 以降を使用していることを確認します。
 
-レスポンストークンは、 `propositions` これは、 `sendEvent` コマンドを使用します。 各提案には、 `items`に設定され、各項目には `meta` オブジェクトにレスポンストークンが設定されている場合、それらが Target 管理 UI で有効になっている。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+レスポンストークンは、 `propositions` これは、 `sendEvent` コマンドを使用します。 各提案には、 `items`に設定され、各項目には `meta` オブジェクトにレスポンストークンが設定されている場合、それらが Target 管理 UI で有効になっている。 ([詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en))
 
 **例**
 
@@ -942,7 +942,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en))
 
 ### Web SDK の使用
 
@@ -1042,7 +1042,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en))
 
 
 ### Web SDK の使用
@@ -1122,7 +1122,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+([詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en))
 
 ### Web SDK の使用
 
