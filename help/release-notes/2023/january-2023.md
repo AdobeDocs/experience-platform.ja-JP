@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 29%
+source-wordcount: '2444'
+ht-degree: 27%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 {style=&quot;table-layout:auto&quot;}
 
-## 宛先 {#destinations}
+## 宛先（更新日：2 月 2 日） {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
@@ -114,6 +114,10 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
         <td>ファイルベースの宛先への書き出し動作の更新 (PLAT-123316)</td>
         <td>の動作の問題を修正しました <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">必須属性</a> データファイルをバッチ保存先に書き出す際に使用します。 <br> 以前は、出力ファイル内のすべてのレコードに次の両方が含まれていることを検証していました。 <ol><li>NULL 以外の <code>mandatoryField</code> 列と</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値を指定します。</li></ol> 2 つ目の条件が削除されました。 その結果、次の例に示すように、書き出されたデータファイルに、より多くの出力行が表示される場合があります。<br> <b> 2023 年 1 月リリースより前のサンプル動作 </b> <br> 必須フィールド： <code>emailAddress</code> <br> <b>アクティブ化するデータを入力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>有効化の出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023 年 1 月リリース以降のサンプル動作 </b> <br> <b>有効化の出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>ジェニファー</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>必要なマッピングおよび重複マッピングの UI および API 検証 (PLAT-123316)</td>
+        <td>UI と API で、検証が次のように、 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">フィールドのマッピング</a> 「宛先のアクティブ化」ワークフローで、次の操作をおこないます。<ul><li><b>必須マッピング</b>:宛先の開発者が、必要なマッピングを使用して宛先を設定した場合 ( 例： <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 宛先 ) の場合、宛先へのデータをアクティブ化する際に、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>マッピングを複製</b>:アクティベーションワークフローのマッピング手順で、重複する値をソースフィールドに追加できますが、ターゲットフィールドには追加できません。 許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可/禁止</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>メールのエイリアス 2</li></ul></td></tr><tr><td>Forbidden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
