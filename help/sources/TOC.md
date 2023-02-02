@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 98%
+source-wordcount: '928'
+ht-degree: 92%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 98%
       - [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](sources-sdk/documentation/text-editor.md)
       - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
       - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
+   - ストリーミング SDK {#streaming-sdk}
+      - [セルフサービスソース（ストリーミング SDK）の概要](sources-sdk/streaming/getting-started.md)
+      - [ストリーミングソースの接続仕様の作成](sources-sdk/streaming/create.md)
+      - [ストリーミングソースの接続仕様の更新](sources-sdk/streaming/update-connection-specs.md)
+      - [ストリーミングフローの仕様を更新する](sources-sdk/streaming/update-flow-specs.md)
+      - [検証のために接続仕様をテストして送信します](sources-sdk/streaming/submit.md)
+      - [ソースのドキュメント化（ストリーミング SDK）](sources-sdk/streaming/document-streaming.md)
+      - [ドキュメントのセルフサービス API ストリーミングテンプレート](sources-sdk/streaming/streaming-template-api.md)
+      - [ドキュメントのセルフサービス UI ストリーミングテンプレート](sources-sdk/streaming/streaming-template-ui.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
