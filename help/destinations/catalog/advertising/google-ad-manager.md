@@ -3,10 +3,10 @@ keywords: google アドマネージャー;google 広告;ダブルクリック;Do
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
-workflow-type: ht
-source-wordcount: '955'
-ht-degree: 100%
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 87%
 
 ---
 
@@ -58,18 +58,10 @@ ht-degree: 100%
 
 ### 許可リストへの登録 {#allow-listing}
 
->[!NOTE]
->
->Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
->このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
+Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、以下に説明する許可リスト登録プロセスを完了してください。
 
-Platform で [!DNL Google Ad Manager] の宛先を作成する前に、[!DNL Google] に連絡して、許可されたデータプロバイダーのリストにアドビを追加し、お使いのアカウントを許可リストに追加してもらう必要があります。 [!DNL Google] に連絡し、次の情報を提供します。
-
-* **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
-* **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
-* **ネットワークコード**：Google インターフェイスの&#x200B;**[!UICONTROL 管理者／グローバル設定]**&#x200B;と URL の下にある [!DNL Google Ad Manager] ネットワーク識別子です。
-* **オーディエンスリンク ID**：[!DNL Google Ad Manager] ネットワーク（[!DNL Network code] ではない）に関連付けられた特定の識別子で、Google インターフェイスの&#x200B;**[!UICONTROL 管理者／グローバル設定]**&#x200B;にもあります。
-* お使いのアカウントのタイプ。DFP by Google または AdX Buyer です。
+1. 次に示す手順に従います： [Google Ad Manager ドキュメント](https://support.google.com/admanager/answer/3289669?hl=ja) Adobeをリンクされたデータ管理プラットフォーム (DMP) として追加する。
+2. 内 [!DNL Google Ad Manager] インターフェイス、に移動します。 **[!UICONTROL 管理者]** > **[!UICONTROL グローバル設定]** > **[!UICONTROL ネットワーク設定]**&#x200B;をクリックし、 **[!UICONTROL API アクセス]** スライダー。
 
 ## 宛先への接続 {#connect}
 
@@ -85,10 +77,11 @@ Platform で [!DNL Google Ad Manager] の宛先を作成する前に、[!DNL Goo
 
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL アカウントの種類]**：Google のアカウントに応じて、次のオプションを選択します。
+* **[!UICONTROL アカウント ID]**:を入力します。 [!DNL Audience Link ID] から [!DNL Google] アカウント これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) をクリックします。 これは、の下にあります。 **[!UICONTROL 管理者/グローバル設定]** 内 [!DNL Google Ad Manager] インターフェイス。
+* **[!UICONTROL アカウントタイプ]**：Google のアカウントに応じて、次のいずれかのオプションを選択します。
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
    * [!DNL Google AdX] に `AdX buyer` を使用する
-* **[!UICONTROL アカウント ID]**：[!DNL Google] で オーディエンスリンク ID を入力します。 
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ Platform で [!DNL Google Ad Manager] の宛先を作成する前に、[!DNL Goo
 ## 書き出したデータ {#exported-data}
 
 データがに正常に [!DNL Google Ad Manager] の宛先に書き出されたかどうかを確認するには、[!DNL Google Ad Manager] アカウントを確認します。 アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。
+
+## トラブルシューティング {#troubleshooting}
+
+この宛先の使用中にエラーが発生し、AdobeまたはGoogleに連絡する必要がある場合は、次の ID を手元に置いてください。
+
+AdobeのGoogleアカウント ID は次のとおりです。
+
+* **[!UICONTROL アカウント ID]**:87933855
+* **[!UICONTROL 顧客 ID]**:89690775

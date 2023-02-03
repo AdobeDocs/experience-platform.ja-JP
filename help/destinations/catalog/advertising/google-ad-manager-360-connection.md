@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+workflow-type: tm+mt
+source-wordcount: '926'
+ht-degree: 85%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 100%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメント内のすべてのメンバーを、[宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した該当するスキーマフィールド（PPID など）と共に書き出します。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性の選択画面で選択したように、該当するスキーマフィールド（例：PPID）と共に、セグメントのすべてのメンバーを書き出しています。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -54,19 +54,15 @@ ht-degree: 100%
 
 ### 許可リストへの登録 {#allow-listing}
 
+Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、以下に説明する許可リスト登録プロセスを完了してください。
+
 >[!NOTE]
 >
->Platform で最初の [!DNL Google Ad Manager] 宛先を設定する前に、許可リストへの登録が必須です。宛先を作成する前に、以下で説明する許可リスト登録プロセスが [!DNL Google] で完了していることを確認してください。
+>このルールの例外は、既存の [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
->[!IMPORTANT]
->
->Google では、外部のオーディエンス管理プラットフォームを Google Ad Manager 360 に接続するプロセスを簡略化しました。 これで、Google Ad Manager 360 にリンクするプロセスをセルフサービス方式で完了できるようになりました。詳しくは、Google ドキュメントの[データ管理プラットフォームのセグメント](https://support.google.com/admanager/answer/3289669?hl=ja)を参照してください。以下に示す ID を手元に用意してください。
+1. 次に示す手順に従います： [Google Ad Manager ドキュメント](https://support.google.com/admanager/answer/3289669?hl=ja) Adobeをリンクされたデータ管理プラットフォーム (DMP) として追加する。
+2. 内 [!DNL Google Ad Manager] インターフェイス、に移動します。 **[!UICONTROL 管理者]** > **[!UICONTROL グローバル設定]** > **[!UICONTROL ネットワーク設定]**&#x200B;をクリックし、 **[!UICONTROL API アクセス]** スライダー。
 
-* **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
-* **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
-* **ネットワークコード**：これはお使いの [!DNL Google Ad Manager] ネットワーク識別子で、Google インターフェイスの&#x200B;**[!UICONTROL 管理／グローバル設定]**&#x200B;でも、URL でも確認できます。
-* **オーディエンスリンク ID**：これは、お使いの [!DNL Google Ad Manager] ネットワーク（[!DNL Network code] ではない）に関連付けられた特定の識別子で、Google インターフェイスの&#x200B;**[!UICONTROL 管理／グローバル設定]**&#x200B;でも確認できます。
-* お使いのアカウントのタイプ。DFP by Google または AdX Buyer です。
 
 ## 宛先への接続 {#connect}
 
@@ -91,12 +87,12 @@ ht-degree: 100%
 
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL バケット名]**：この宛先で使用される [!DNL Google Cloud Storage] バケットの名前を入力します。
-* **[!UICONTROL フォルダーパス]**：書き出されたファイルをホストする宛先フォルダーのパスを入力します。
-* **[!UICONTROL アカウント ID]**：[!DNL Google] のオーディエンスリンク ID を入力します。
-* **[!UICONTROL アカウントタイプ]**：Google のアカウントに応じて、次のいずれかのオプションを選択します。
-   * `DFP by Google`（[!DNL DoubleClick] for Publishers の場合）
-   * `AdX buyer`（[!DNL Google AdX] の場合）
+* **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
+* **[!UICONTROL バケット名]**：この宛先が使用する [!DNL Google Cloud Storage] バケット名を入力します。
+* **[!UICONTROL アカウント ID]**:を入力します。 [!DNL Audience Link ID] から [!DNL Google] アカウント これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) をクリックします。 これは、の下にあります。 **[!UICONTROL 管理者/グローバル設定]** 内 [!DNL Google Ad Manager] インターフェイス。
+* **[!UICONTROL アカウントタイプ]**:次の条件に応じて、オプションを選択します。 [!DNL Google] アカウント：
+   * [!DNL Google AdX] に `AdX buyer` を使用する
+   * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -127,3 +123,12 @@ ID マッピングステップでは、次の事前入力済みマッピング�
 ## 書き出したデータ {#exported-data}
 
 データが正常に書き出されたかどうかを確認するには、[!DNL Google Cloud Storage] バケットを確認し、書き出されたファイルに想定どおりのプロファイル母集団が含まれていることを確認します。
+
+## トラブルシューティング {#troubleshooting}
+
+この宛先の使用中にエラーが発生し、AdobeまたはGoogleに連絡する必要がある場合は、次の ID を手元に置いてください。
+
+AdobeのGoogleアカウント ID は次のとおりです。
+
+* **[!UICONTROL アカウント ID]**:87933855
+* **[!UICONTROL 顧客 ID]**:89690775
