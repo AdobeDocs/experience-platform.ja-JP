@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 93%
+source-wordcount: '1865'
+ht-degree: 92%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 93%
 
 例えば、旅行業界や接客業のビジネスがフライト予約イベントをモデリングしている場合、クラスレベルの `timestamp`フィールドは、予約イベントが観測された時刻を表します。 旅行予約の開始日など、イベントに関連するその他のタイムスタンプは、標準フィールドグループまたはカスタムフィールドグループが提供する別のフィールドで取得する必要があります。
 
-![](../images/classes/experienceevent/timestamps.png)
+![フライトの予約と開始日がハイライトされたエクスペリエンスイベントスキーマのサンプルです。](../images/classes/experienceevent/timestamps.png)
 
 クラスレベルのタイムスタンプをイベントスキーマの他の関連する日時値から分離することで、エクスペリエンスアプリケーションでカスタマージャーニーをタイムスタンプで記録しながら、柔軟なセグメント化のユースケースを実装することができます。
 
