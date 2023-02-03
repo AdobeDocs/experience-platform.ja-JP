@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
+source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
 workflow-type: tm+mt
 source-wordcount: '2444'
 ht-degree: 27%
@@ -99,7 +99,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| ストリーミング宛先との統合に関する有料メディア同意ポリシーの強化 | の機能強化 [同意ポリシーの実施](/help/data-governance/enforcement/auto-enforcement.md) オン [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations) 有料メディアアクティベーションの使用例の場合 プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了とストリーミング先との間で積極的に通信するようになりました。 <br> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. |
+| ストリーミング宛先との統合に関する有料メディア同意ポリシーの強化 | An [同意政策の実施の強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) オン [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations) 有料メディアアクティベーションの使用例の場合 プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了とストリーミング先との間で積極的に通信するようになりました。 <br> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. |
 | ベータクラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン） `:`，パイプ，セミコロン `;`) が新しいベータクラウドストレージの宛先で使用できるようになりました。 [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> サポート対象の [ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md) （ファイルベースの宛先の場合） |
 | で使用できる新しいオプションパラメーター [顧客データフィールド](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) の設定 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:ユーザーの組織で設定されたすべての宛先データフローで一意の値を持つ顧客データフィールドを作成する必要がある場合は、このパラメータを使用します。 <br> 例えば、 **[!UICONTROL 統合エイリアス]** フィールド [[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) の宛先は一意である必要があります。つまり、この宛先への 2 つの異なるデータフローが、このフィールドに同じ値を持つことはできません。 |
 
