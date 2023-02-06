@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 44%
+source-wordcount: '1900'
+ht-degree: 45%
 
 ---
 
@@ -357,7 +357,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:title` | このフィールドに表示する新しいタイトル（タイトルケースで記述）。 |
 | `xdm:description` | オプションで、タイトルに説明を追加できます。 |
 | `meta:enum` | 次に示すフィールド `xdm:sourceProperty` は文字列フィールドです。 `meta:enum` を使用して、セグメント化 UI の「 」フィールドに推奨値を追加できます。 注意すべき点は `meta:enum` は列挙を宣言しないか、XDM フィールドのデータ検証を提供しません。<br><br>これは、Adobeで定義されたコア XDM フィールドにのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合、代わりに、フィールドの `meta:enum` プロパティを直接、PATCHリクエストを介してフィールドの親リソースに渡します。 |
-| `meta:excludeMetaEnum` | 次に示すフィールド `xdm:sourceProperty` は、 `meta:enum` フィールドに値を入力する場合、このオブジェクトをわかりやすい名前記述子に含めて、これらの値の一部またはすべてをセグメント化から除外できます。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。<br><br>なお、次を含む文字列フィールドの値のみを除外できることに注意してください。 **推奨値のみ**. 文字列フィールドに実際の値が含まれる場合 `enum` 制約を使用する場合、関連する推奨値は無効にできません。 `enum` 組織で定義されたカスタムリソースのフィールドは、PATCHリクエストで編集できますが、 `enum` 標準のAdobe定義リソースのフィールドは削除できません。 |
+| `meta:excludeMetaEnum` | 次に示すフィールド `xdm:sourceProperty` は、 `meta:enum` フィールドに値を入力する場合、このオブジェクトをわかりやすい名前記述子に含めて、これらの値の一部またはすべてをセグメント化から除外できます。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。 |
 
 {style=&quot;table-layout:auto&quot;}
 

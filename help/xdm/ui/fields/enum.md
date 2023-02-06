@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI で列挙フィールドと推奨値を定義する
 description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法を説明します。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f770ba8668c5154b2cf5a57ba61d771ca34ab2d8
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 条件 [新しいフィールドの定義](./overview.md#define) (Adobe Experience Platformユーザーインターフェイス ) で、タイプをに設定します。 [!UICONTROL 文字列]に値を指定しない場合、 [enum](#enum) または [推奨値](#suggested-values) そのフィールドの
 
-![「列挙と推奨値」オプションが、UI の文字列フィールドに対して有効になっています。](../../images/ui/fields/enum/enum-options-selected.png)
+![UI の文字列フィールドに対して「列挙と推奨値」オプションが有効になっていることを示す画像](../../images/ui/fields/enum/enum-options-selected.png)
 
 このドキュメントでは、 [!UICONTROL スキーマ] UI ワークスペース。 UI での列挙の設定方法やその下流の効果など、列挙と推奨される値の概要については、次のビデオを参照してください。
 
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 選択 **[!UICONTROL 列挙と推奨値]**&#x200B;を選択し、「 **[!UICONTROL 列挙]**. 追加のコントロールが表示され、列挙の値の制約を指定できます。 制約を追加するには、 **[!UICONTROL 行を追加]**.
 
-![UI で「列挙」オプションが選択されている。](../../images/ui/fields/enum/enum-add-row.png)
+![UI で選択された「列挙」オプションを示す画像](../../images/ui/fields/enum/enum-add-row.png)
 
 以下 **[!UICONTROL 値]** 」列には、フィールドを制限する正確な値を指定する必要があります。 オプションで、人間にやさしい **[!UICONTROL 表示名]** 制約についても同様です。これは、セグメント化での値の表現方法に影響します。
 
 引き続き **[!UICONTROL 行を追加]** 目的の制約とオプションのラベルを列挙に追加するには、「 」アイコン (![削除アイコンの画像](../../images/ui/fields/enum/remove-icon.png)) をクリックします。 終了したら、「 」を選択します。 **[!UICONTROL 適用]** をクリックして、変更をスキーマに適用します。
 
-![UI の文字列フィールドに入力された列挙値と表示名。](../../images/ui/fields/enum/enum-confirm.png)
+![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/enum-confirm.png)
 
 キャンバスが更新され、変更が反映されます。 このスキーマを将来調査する際は、右側のパネル内の列挙フィールドの制約を表示および編集できます。
 
@@ -50,51 +50,53 @@ ht-degree: 0%
 
 選択 **[!UICONTROL 列挙と推奨値]**&#x200B;を選択し、「 **[!UICONTROL 推奨値]** 追加のコントロールを表示します。 ここからを選択します。 **[!UICONTROL 行を追加]** をクリックして、推奨値の追加を開始します。
 
-![UI で「推奨値」オプションが選択されている状態。](../../images/ui/fields/enum/suggested-add-row.png)
+![UI で「推奨値」オプションが選択されている画像](../../images/ui/fields/enum/suggested-add-row.png)
 
 以下 **[!UICONTROL 表示名]** 列に、セグメント化 UI に表示する値のわかりやすい名前を指定します。 その他の推奨値を追加するには、「 **[!UICONTROL 行を追加]** 必要に応じて、この手順を繰り返します。 以前に追加した行を削除するには、 ![削除アイコン](../../images/ui/fields/enum/remove-icon.png) 問題の行の横に表示されます。
 
 終了したら、「 」を選択します。 **[!UICONTROL 適用]** をクリックして、変更をスキーマに適用します。
 
-![UI の文字列フィールドに入力された列挙値と表示名。](../../images/ui/fields/enum/suggested-confirm.png)
+![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
 >フィールドの更新された推奨値がセグメント化 UI に反映されるまでに、およそ 5 分の遅延があります。
 
-### 標準フィールドの推奨値の管理 {#standard-fields}
+### 標準フィールドの推奨値の管理
 
-標準 XDM コンポーネントの一部のフィールドには、独自の推奨値 ( 例： `eventType` から [[!UICONTROL XDM ExperienceEvent] クラス](../../classes/experienceevent.md) カスタムフィールドと同じ方法で、これらの標準フィールドに推奨値を追加で作成できます。 また、使用例に適さない標準的な推奨値を無効にすることもできますが、フィールド定義から完全に削除することはできません。
+標準 XDM コンポーネントの一部のフィールドには、独自の推奨値 ( 例： `eventType` から [[!UICONTROL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). 標準フィールドの推奨値を追加で作成することはできますが、組織で定義されていない推奨値を変更または削除することはできません。 UI で標準フィールドを表示すると、推奨値は表示されますが、読み取り専用です。
 
->[!IMPORTANT]
->
->対応する列挙制約を持たない標準フィールドの推奨値のみを無効にできます。 つまり、 **[!UICONTROL 列挙]** の代わりにオプションが有効になっています **[!UICONTROL 推奨値]**&#x200B;の場合、フィールドは列挙として制限され、これらの制約を無効にすることはできません。
->
->詳しくは、 [以下の節](#evolution) ：列挙を更新するルールと、既存のスキーマフィールドに推奨される値について詳しくは、を参照してください。
-
-標準の推奨値を無効にするには、該当する値の横にある切り替えを選択します。 提案された値の組み合わせ（すべてを含む）を無効にすることができます。
-
-![標準で推奨される [!UICONTROL イベントタイプ] フィールドが UI で無効になっている。](../../images/ui/fields/enum/suggested-standard.png)
+![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-standard.png)
 
 標準フィールドに新しい推奨値を追加するには、 **[!UICONTROL 行を追加]**. 組織で以前に追加された推奨値を削除するには、「 ![削除アイコン](../../images/ui/fields/enum/remove-icon.png) 問題の行の横に表示されます。
 
-![UI の標準文字列フィールドに追加されたカスタム推奨値。](../../images/ui/fields/enum/suggested-standard-add.png)
+![UI の文字列フィールドに入力された列挙値と表示名を示す画像](../../images/ui/fields/enum/suggested-standard-add.png)
+
+<!-- ### Removing suggested values for standard fields
+
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
+
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
+
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
+
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
+
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## 列挙と推奨値の変化ルール {#evolution}
 
-列挙フィールドを持つスキーマを使用して、データを Platform に取り込んだ後、スキーマ定義に対してさらに変更を加える場合は、システムに既に存在するデータに従う必要があります。 一般に、既存のフィールドに対して行った変更は、そのフィールドにのみ適用されます **less** 制限的な フィールドは、既に存在するよりも制限を厳しくすることはできません。
+列挙フィールドを持つスキーマを使用して、データを Platform に取り込んだ後、スキーマ定義に対してさらに変更を加える場合は、システムに既に存在するデータに従う必要があります。 一般に、既存のフィールドに加えた変更は、そのフィールドにのみ適用されます **less** 制限的な フィールドは、既に存在するよりも制限を厳しくすることはできません。
 
 列挙と推奨値に関しては、次のルールが取り込み後に適用されます。
 
-* あなた **可能** 推奨値を既存の推奨値と共に任意のフィールドに追加します。
-* あなた **可能** 既存の推奨値を持つフィールドからカスタム推奨値を削除します。
-* あなた **可能** 推奨値のみを含み、列挙制約を含まないフィールドから、標準の推奨値を無効にします。
+* あなた **可能** 標準フィールドとカスタムフィールドに、既存の推奨値を持つ推奨値を追加します。
+* あなた **可能** 既存の推奨値を持つカスタムフィールドから推奨値を削除します。
 * あなた **可能** 既存のカスタム列挙フィールドに新しい enum 値を追加します。
 * あなた **可能** カスタムフィールドの enum 値を推奨値のみに切り替えるか、列挙値や推奨値のない文字列に変換します。 **このスイッチは、適用後は元に戻すことができません。**
-* あなた **CANNOT** 標準フィールドから列挙制約を追加または削除します。
-* あなた **CANNOT** 標準フィールドから推奨値を削除します（無効のみ）。
-* あなた **CANNOT** 既存の列挙を持たないフィールドに、列挙制約を追加します。
-* あなた **CANNOT** カスタムフィールドの既存の enum 制約の数より少ない数の値を削除します。
+* あなた **CANNOT** 標準フィールドから列挙値または推奨値を削除します。
+* あなた **CANNOT** 既存の列挙を持たないフィールドに列挙値を追加します。
+* あなた **CANNOT** カスタムフィールドの既存の enum 値よりも少ない数の値を削除します。
 * あなた **CANNOT** 推奨値から列挙に切り替えます。
 
 ## 列挙と推奨値の結合ルール {#merging}
