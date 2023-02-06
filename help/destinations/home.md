@@ -3,10 +3,10 @@ keywords: 宛先；adobe experience platform；プラットフォーム；宛先
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 43%
+source-wordcount: '755'
+ht-degree: 34%
 
 ---
 
@@ -35,7 +35,7 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 
 ## コントロール {#controls}
 
-「[宛先](./ui/destinations-workspace.md)」ワークスペースのコントロールを使用すると、次のことができます。
+コントロール ( [宛先 workspace](./ui/destinations-workspace.md) を使用すると、次のことができます。
 
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
@@ -45,7 +45,7 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
-詳しくは、「[宛先のタイプとカテゴリ](./destination-types.md)」の概要を参照してください。
+Experience Platformを使用すると、様々なタイプの宛先に対してデータをアクティブ化し、アクティブ化の使用例を満たすことができます。 宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、 [宛先のタイプとカテゴリの概要](./destination-types.md).
 
 ## 宛先とアクセス制御 {#access-controls}
 
@@ -69,6 +69,12 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データを宛先に書き出すことはできません。
 
 宛先が属性ベースのアクセス制御と連携する方法について詳しくは、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations).
+
+## 宛先の監視 {#destinations-monitoring}
+
+宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムに書き出されるデータを監視できます。 詳しくは、 [UI での宛先へのデータフローの監視に関するガイド](/help/dataflows/ui/monitor-destinations.md) を参照してください。
+
+また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには、 *「データエクスポートの検証」セクション*：データがExperience Platformから正常に取り込まれていることを宛先プラットフォームにチェックインする方法を示します。
 
 ## 宛先へのデータのアクティブ化に関するデータガバナンス制限 {#data-governance}
 
