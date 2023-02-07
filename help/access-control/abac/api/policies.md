@@ -4,14 +4,18 @@ solution: Experience Platform
 title: アクセス制御ポリシー API エンドポイント
 description: 属性ベースのアクセス制御 API の/policies エンドポイントを使用すると、Adobe Experience Platformでポリシーをプログラムで管理できます。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1435'
 ht-degree: 10%
 
 ---
 
 # アクセス制御ポリシーエンドポイント
+
+>[!NOTE]
+>
+>ユーザートークンが渡されている場合、トークンのユーザーは、リクエストされた組織に対して「組織管理者」の役割を持つ必要があります。
 
 アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。 これらのポリシーは、ローカルまたはグローバルのどちらでもかまいません。また、他のポリシーを上書きすることもできます。 この `/policies` 属性ベースのアクセス制御 API のエンドポイントを使用すると、ポリシーを制御するルールに関する情報や、それぞれの件名条件を含むポリシーをプログラムで管理できます。
 
@@ -456,7 +460,7 @@ curl -X PATCH \
 }
 ```
 
-## ポリシーを削除する {#delete}
+## ポリシーの削除 {#delete}
 
 ポリシーを削除するには、 `/policies` エンドポイントを使用して、削除するポリシーの ID を指定します。
 
