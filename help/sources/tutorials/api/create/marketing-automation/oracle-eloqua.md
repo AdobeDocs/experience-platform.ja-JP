@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；oracle;eloqua;oracleeloqua
-solution: Experience Platform
 title: フローサービス API を使用したOracleEloqua ベース接続の作成
-type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをOracleEloqua に接続する方法を説明します。
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 79%
+source-wordcount: '558'
+ht-degree: 81%
 
 ---
 

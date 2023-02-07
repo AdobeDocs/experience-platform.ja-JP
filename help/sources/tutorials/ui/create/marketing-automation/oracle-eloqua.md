@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；コネクタ；oracle;oracleeloqua;eloqua
-solution: Experience Platform
 title: Platform UI を使用したOracleEloqua ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをOracleEloqua に接続する方法を説明します。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 66%
+source-wordcount: '521'
+ht-degree: 59%
 
 ---
 
 # の作成 [!DNL Oracle Eloqua] Platform UI を使用したソース接続
 
-このチュートリアルでは、 [!DNL Oracle Eloqua] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
+このチュートリアルでは、 [!DNL Oracle Eloqua] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 
 ## はじめに
 
@@ -30,8 +28,8 @@ ht-degree: 66%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| エンドポイント | のエンドポイント [!DNL Oracle Eloqua]. |
-| ユーザー名 | ユーザー名 [!DNL Oracle Eloqua] アカウント ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `adobe\\emily`. |
+| エンドポイント | のエンドポイント [!DNL Oracle Eloqua] サーバー。 [!DNL Oracle Eloqua] は、複数のデータセンターをサポートしています。 エンドポイントを見つけるには、 [[!DNL Oracle Eloqua] インターフェイス](https://login.eloqua.com) 資格情報を使用して、リダイレクト URL からベース URL の部分をコピーします。 URL パターンの形式は次のとおりです。 `xxx.xx.eloqua.com` そして、 `http` または `https`. |
+| ユーザー名 | ユーザー名 [!DNL Oracle Eloqua] サーバー。 ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `Eloqua\Andy`. **注意**:バックスラッシュ (`\`)Experience PlatformUI は自動的にバックスラッシュ (`\`) をクリックします。 |
 | パスワード | 次に対応するパスワード： [!DNL Oracle Eloqua] ユーザー名。 |
 
 [!DNL Oracle Eloqua] の認証資格情報について詳しくは、[[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)を参照してください。
