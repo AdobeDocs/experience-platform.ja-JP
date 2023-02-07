@@ -1,10 +1,10 @@
 ---
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能で、修正済みで、編集できない、宛先の書き出し設定について説明します。
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 3%
+source-wordcount: '845'
+ht-degree: 2%
 
 ---
 
@@ -63,5 +63,7 @@ Experience Platformの宛先への書き出し動作について考える際は�
 ## 次の手順 {#next-steps}
 
 このドキュメントを読むと、開発者が個々の宛先レベルで設定できる、アクティベーションワークフローでユーザーが編集できる、宛先タイプ間で共通の宛先の書き出し設定がわかります。
+
+次に、 [宛先タイプごとの一般的なエクスポート動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 宛先の開発者は、次の操作を実行できます。 [使い始める](/help/destinations/destination-sdk/getting-started.md) Destination SDK データのアクティブ化を検討しているユーザーは、 [カタログ](/help/destinations/catalog/overview.md).

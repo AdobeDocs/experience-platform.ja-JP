@@ -1,9 +1,9 @@
 ---
 title: プロファイルの書き出し動作
 description: Experience Platformの宛先でサポートされる様々な統合パターン間で、プロファイルの書き出し動作がどのように異なるかを説明します。
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 24%
 
 ---
@@ -87,9 +87,9 @@ Experience Platformは、セグメントの選定やその他の重要なイベ�
 
 ## ストリーミング API ベースの宛先 {#streaming-api-based-destinations}
 
-facebook、トレードデスク、その他の API ベースの統合などのストリーミング先に対するプロファイルの書き出し動作は、上記と同じです。
+facebook、トレードデスク、その他の API ベースの統合などのストリーミング先に対するプロファイルの書き出し動作は、前述の企業の宛先に対する動作と非常に似ています。
 
-宛先の例：広告、ソーシャルなど
+ストリーミング先の例としては、 [ソーシャルおよび広告のカテゴリ](/help/destinations/destination-types.md#categories) をカタログに追加します。
 
 Experience Platformは、セグメント認定または他の重要なイベントに続いてプロファイルに関連する更新が発生した場合にのみ、ストリーミング API ベースの宛先にデータを書き出すように、プロファイルの書き出し動作を最適化します。 プロファイルは、次の状況で宛先に書き出されます。
 

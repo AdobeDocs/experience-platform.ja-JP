@@ -1,9 +1,9 @@
 ---
 title: 宛先アクティベーションワークフローでの ID 処理
 description: 宛先のタイプに応じて、アクティベーションワークフローで ID の書き出しがどのように処理されるかを説明します
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -107,3 +107,5 @@ ht-degree: 3%
 このドキュメントを読むと、個々の宛先でサポートされている ID や必要な ID を見つける方法がわかります。 また、各宛先タイプに対する ID 選択の仕組みも理解できるようになりました。
 
 次に、どの [書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md) の宛先は、宛先のタイプ間で共通です。宛先のタイプは、開発者が個々の宛先レベルで設定でき、アクティベーションワークフローでユーザーが編集できる設定です。
+
+また、 [カタログ](/help/destinations/catalog/overview.md).
