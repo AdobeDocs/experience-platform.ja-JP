@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformリリースノート 2023 年 1 月
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2444'
-ht-degree: 27%
+source-wordcount: '2432'
+ht-degree: 28%
 
 ---
 
@@ -130,7 +130,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 文字列フィールドの推奨値を無効にする | 次の操作を実行できます。 [文字列フィールドの個々の推奨値を無効にする](../../xdm/ui/fields/enum.md) 内 [!UICONTROL スキーマ] ワークスペース（標準コンポーネントのワークスペースを含む） この機能は、推奨値を持つフィールドでのみ使用でき、列挙制約ではサポートされません。 |
+| スキーマツリーの表示名の改善 | 以前は、フィールド名は UI に表示されていましたが、現在は、スキーマキャンバス上のスキーマフィールドの表示名が読みやすくなっています。 |
 
 **新しい XDM コンポーネント**
 

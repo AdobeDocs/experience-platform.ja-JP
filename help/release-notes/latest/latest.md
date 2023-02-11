@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 1 月のリリースノート。
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2431'
 ht-degree: 28%
 
 ---
@@ -130,7 +130,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 文字列フィールドの推奨値を無効にする | 次の操作を実行できます。 [文字列フィールドの個々の推奨値を無効にする](../../xdm/ui/fields/enum.md) 内 [!UICONTROL スキーマ] ワークスペース（標準コンポーネントのワークスペースを含む） この機能は、推奨値を持つフィールドでのみ使用でき、列挙制約ではサポートされません。 |
+| スキーマツリーの表示名の改善 | 以前は、フィールド名は UI に表示されていましたが、現在は、スキーマキャンバス上のスキーマフィールドの表示名が読みやすくなっています。 |
 
 **新しい XDM コンポーネント**
 
@@ -203,4 +203,4 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | クラウドストレージソースのサブフォルダーへのユーザーアクセスを許可する | 新しいアカウントを作成する際に、クラウドストレージソースの特定のサブフォルダーへのアクセスを定義できるようになりました。 作成したユーザーは、許可されたサブフォルダーのデータにのみアクセスできます。 この機能は、次のクラウドストレージソースで使用できます。 [Azure Blob ストレージ](../../sources/connectors/cloud-storage/blob.md), [Google Cloud Storage](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md)、および [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
-| ベータ版の可用性 [!DNL SugarCRM] | [!DNL SugarCRM] ソースがベータ版で利用できるようになりました。 以下を使用： [!DNL SugarCRM Accounts & Contacts] そして [!DNL SugarCRM Events] ソースからデータを取り込む [!DNL SugarCRM] アカウントからExperience Platformへ。 詳しくは、 [[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md). |
+| ベータ版の可用性 [!DNL SugarCRM] | [!DNL SugarCRM] ソースは、ベータ版で利用できるようになりました。 以下を使用： [!DNL SugarCRM Accounts & Contacts] そして [!DNL SugarCRM Events] ソースからデータを取り込む [!DNL SugarCRM] アカウントからExperience Platformへ。 詳しくは、 [[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md). |
