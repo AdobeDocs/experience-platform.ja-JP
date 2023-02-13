@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；Git;Github
+keywords: Experience Platform;JupyterLab;ノートブック;データサイエンスワークスペース;人気のトピック;Git;Github
 solution: Experience Platform
 title: Git を使用した JupyterLab での共同作業
 type: Tutorial
-description: Git は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は、Data Science Workspace JupyterLab 環境内に事前にインストールされています。
+description: Git は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は、データサイエンスワークスペース JupyterLab 環境内に事前にインストールされています。
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '284'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# での共同作業 [!DNL JupyterLab] using [!DNL Git]
+# [!DNL Git] を使用した [!DNL JupyterLab] での共同作業
 
-[!DNL Git] は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は [!DNL Data Science Workspace JupyterLab] 環境。
+[!DNL Git] は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。Git は [!DNL Data Science Workspace JupyterLab] 環境内に事前にインストールされています。
 
 ## 前提条件
 
@@ -22,35 +22,35 @@ ht-degree: 1%
 >
 > 使用する Git サーバーは、インターネット経由でアクセスできる必要があります。
 
-この [!DNL Data Science Workspace JupyterLab] 環境はホストされた環境で、会社のファイアウォール内にデプロイされていないので、接続先の Git サーバーはパブリックインターネットからアクセスできる必要があります。 これは、 [GitHub](https://github.com/) または別の [!DNL Git] 自分をホストすることを決定したサーバー。
+[!DNL Data Science Workspace JupyterLab] 環境はホストされた環境であり、会社のファイアウォール内にデプロイされていないので、接続先の Git サーバーはパブリックインターネットからアクセスできる必要があります。これは、[GitHub](https://github.com/) のパブリックまたはプライベートリポジトリ、または自分でホストすることを決定した [!DNL Git] サーバーの別のインスタンスである可能性があります。
 
-## 接続 [!DNL Git] から [!DNL Data Science Workspace JupyterLab Notebooks] 環境
+## [!DNL Git] を [!DNL Data Science Workspace JupyterLab Notebooks] 環境に接続する
 
-開始 [!DNL Adobe Experience Platform] そして、 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 環境。
+まず、[!DNL Adobe Experience Platform] を起動し、[[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 環境に移動します。
 
-内 [!DNL JupyterLab]を選択します。 **[!UICONTROL ファイル]** 次に、 **[!UICONTROL 新規]**. 表示されるドロップダウンから、「 」を選択します。 **[!UICONTROL ターミナル]**.
+[!DNL JupyterLab] 内で、「**[!UICONTROL ファイル]**」を選択し、「**[!UICONTROL 新規]**」にポインタを合わせます。表示されるドロップダウンから、「**[!UICONTROL ターミナル]**」を選択します。
 
-![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
+![JupyterLab での移動](../images/jupyterlab/tutorials/open-terminal.png)
 
-次へ、内 *ターミナル* 次のコマンドを使用して、ワークスペースに移動します。 `cd my-workspace`.
+次に、*ターミナル*&#x200B;内で次のコマンドを使用してワークスペースに移動します。`cd my-workspace`。
 
 ![cd workspace](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
 >
-> 使用可能な Git コマンドのリストを表示するには、次のコマンドを発行します。 `git -help` を使用します。
+> 使用可能な git コマンドのリストを表示するには、ターミナル内でコマンド `git -help` を発行します。
 
-次に、 `git clone` コマンドを使用します。 を使用してプロジェクトを複製 `https://` ではなく URL `ssh://`.
+次に、`git clone` コマンドを使用して、使用するリポジトリのクローンを作成します。`ssh://` ではなく `https://` URL を使用してプロジェクトのクローンを作成します。
 
 **例**：
 
 `git clone https://github.com/adobe/experience-platform-dsw-reference.git`
 
-![複製](../images/jupyterlab/tutorials/git-collaboration.png)
+![クローン](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
 >
-> 書き込み操作を実行する場合 (`git push` 例えば、次の設定コマンドは、新しいセッションのたびに実行する必要があります。 また、プッシュコマンドは、ユーザ名とパスワードの入力を求めます。
+> 書き込み操作（`git push` など）を実行するには、新しいセッションごとに次の設定コマンドを実行する必要があります。また、プッシュコマンドでは、ユーザー名とパスワードの入力が求められます。
 >
 >`git config --global user.email "you@example.com"`
 >
@@ -58,4 +58,4 @@ ht-degree: 1%
 
 ## 次の手順
 
-リポジトリーのクローンを作成した後は、通常ローカルマシン上で行うのと同じように Git を使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細 [!DNL JupyterLab]を参照し、 [[!DNL JupyterLab user guide]](./overview.md).
+リポジトリのクローン作成が完了したら、ローカルマシンで通常行うように Git を使用して、ノートブックで他のユーザーと共同作業を行うことができます。[!DNL JupyterLab] 内でできることについて詳しくは、[[!DNL JupyterLab user guide]](./overview.md) を参照してください。
