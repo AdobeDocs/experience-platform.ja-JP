@@ -1,57 +1,57 @@
 ---
-keywords: Experience Platform；人気のトピック；XDM;XDM システム；XDM 個人プロファイル；XDM ExperienceEvent;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;XDM ExperienceEvent；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマ；トラブルシューティング；FAQ;FAQ；和集合スキーマ；UNION PROFILE；和集合プロファイル；http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform;人気のトピック;XDM;XDM システム;XDM 個人プロファイル;XDM ExperienceEvent;XDM エクスペリエンスイベント;ExperienceEvent;エクスペリエンスイベント;XDM エクスペリエンスイベント;XDM ExperienceEvent;エクスペリエンスデータモデル;データモデル;スキーマ;トラブルシューティング;FAQ;faq;結合スキーマ;結合プロファイル;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
 solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
-description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル (XDM) に関するよくある質問への回答を見つけます。
+description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2074'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 # XDM システムトラブルシューティングガイド
 
-このドキュメントでは、 [!DNL Experience Data Model] (XDM) およびAdobe Experience Platformの XDM システム。一般的なエラーのトラブルシューティングガイドを含みます。 他の Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他の Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-**[!DNL Experience Data Model](XDM)** は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。 方法 [!DNL Experience Platform] が構築されている **XDM システム**、操作可能 [!DNL Experience Data Model] スキーマ [!DNL Platform] サービス。 この **[!DNL Schema Registry]** は、 **[!DNL Schema Library]** 範囲 [!DNL Experience Platform]. 詳しくは、[XDM のドキュメント](home.md)を参照してください。
+**[!DNL Experience Data Model]（XDM）**&#x200B;は、カスタマーエクスペリエンス（顧客体験）管理のための標準化されたスキーマを定義するオープンソース仕様です。**XDM システム**&#x200B;は [!DNL Experience Platform] の基礎となる方法論で、[!DNL Experience Data Model] スキーマを [!DNL Platform] サービスで操作できるようにするものです。**[!DNL Schema Registry]** は、[!DNL Experience Platform] 内の **[!DNL Schema Library]** にアクセスするためのユーザーインターフェイスと RESTful API を提供します。詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
 ## FAQ
 
-次に、XDM システムとの使用に関するよくある質問に対する回答のリストを示します [!DNL Schema Registry] API
+XDM システムと [!DNL Schema Registry] API の使用に関するよくある質問への回答を以下に示します。
 
-### フィールドをスキーマに追加するには、どうすればよいですか？
+### スキーマにフィールドを追加するにはどうすればよいですか？
 
-スキーマフィールドグループを使用して、スキーマにフィールドを追加できます。 各フィールドグループは 1 つ以上のクラスと互換性があり、互換性のあるクラスの 1 つを実装する任意のスキーマでフィールドグループを使用できます。 Adobe Experience Platformは、独自の事前定義済みフィールドを持つ複数の業界フィールドグループを提供しますが、API またはユーザーインターフェイスを使用してカスタムフィールドグループを作成することで、独自のフィールドをスキーマに追加できます。
+スキーマフィールドグループを使用することで、スキーマにフィールドを追加できます。各フィールドグループは 1 つ以上のクラスに適合し、それらの適合するクラスの 1 つを実装する任意のスキーマで、そのフィールドグループを使用できます。Adobe Experience Platform は、独自の定義済みフィールドを含む複数の業界用フィールドグループを提供しますが、API またはユーザーインターフェイスを使用してカスタムフィールドグループを作成することで、スキーマに独自のフィールドを追加できます。
 
-詳しくは、 [!DNL Schema Registry] API( [フィールドグループエンドポイントガイド](api/field-groups.md#create). UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
+[!DNL Schema Registry] API でのフィールドグループの作成について詳しくは、[フィールドグループエンドポイントガイド](api/field-groups.md#create)を参照してください。UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
 
 ### フィールドグループとデータタイプの最適な用途は何ですか？
 
-[フィールドグループ](./schema/composition.md#field-group) は、スキーマ内の 1 つ以上のフィールドを定義するコンポーネントです。 フィールドグループは、スキーマの階層でフィールドが表示される方法を強制するので、フィールドグループは、スキーマが含まれるすべてのスキーマで同じ構造を示します。 フィールドグループは、特定のクラス ( `meta:intendedToExtend` 属性。
+[フィールドグループ](./schema/composition.md#field-group)は、スキーマ内の 1 つ以上のフィールドを定義するコンポーネントです。フィールドグループは、スキーマの階層にフィールドがどのように現れるかを強制するので、フィールドが含まれているすべてのスキーマで同じ構造を示します。フィールドグループは、`meta:intendedToExtend` 属性で識別される特定のクラスにのみ適合します。
 
-[データ型](./schema/composition.md#data-type)の場合も、スキーマに 1 つ以上のフィールドを提供できます。ただし、フィールドグループとは異なり、データ型は特定のクラスに制限されません。 そのため、データ型は、潜在的に異なるクラスを持つ複数のスキーマで再利用可能な一般的なデータ構造を記述するためのより柔軟なオプションとなります。
+[データタイプ](./schema/composition.md#data-type)の場合も、スキーマに 1 つ以上のフィールドを提供できます。ただし、フィールドグループとは異なり、データタイプは特定のクラスに限定されません。そのため、データ型は、潜在的に異なるクラスを持つ複数のスキーマで再利用可能な一般的なデータ構造を記述するためのより柔軟なオプションとなります。
 
 ### スキーマの一意の ID とは何ですか？
 
-すべて [!DNL Schema Registry] リソース（スキーマ、フィールドグループ、データタイプ、クラス）には、参照および検索のために一意の ID として機能する URI が含まれます。 API でスキーマを表示すると、最上位レベルの `$id` および `meta:altId` 属性でスキーマが見つかります。
+[!DNL Schema Registry] のすべてのリソース（スキーマ、フィールドグループ、データタイプ、クラス）には、参照およびルックアップ用の一意の ID として機能する URI があります。API でスキーマを表示すると、最上位レベルの `$id` および `meta:altId` 属性でスキーマが見つかります。
 
-詳しくは、 [リソース識別](api/getting-started.md#resource-identification) セクション [!DNL Schema Registry] API ガイド。
+詳しくは、[!DNL Schema Registry] API ガイドの[リソースの識別](api/getting-started.md#resource-identification)の節を参照してください。
 
-### スキーマでは重大な変更をいつ回避し始めますか？
+### スキーマでは重大な変更の防止をどのような場合に開始しますか？
 
-データセットの作成時に重大な変更点が使用されていないか、で重大な変更点の使用が有効になっていない限り、スキーマに重大な変更を加えることができます [[!DNL Real-Time Customer Profile]](../profile/home.md). スキーマがデータセットの作成に使用されたり、での使用が有効になったりしたら、 [!DNL Real-Time Customer Profile]、 [スキーマの変化](schema/composition.md#evolution) システムによって厳密に強制されます。
+データセットの作成に使用されていないか、[[!DNL Real-Time Customer Profile]](../profile/home.md) での使用が有効になっていない限り、スキーマに重大な変更を加えることができます。スキーマがデータセットの作成に使用されたり、[!DNL Real-Time Customer Profile] で使用できるようになったりすると、[スキーマ進化](schema/composition.md#evolution) のルールがシステムで厳密に適用されます。
 
 ### 長いフィールドタイプの最大サイズはどれくらいですか？
 
 長いフィールドタイプは、最大サイズが 53（+1）ビットの整数で、可能な範囲は -9007199254740992 ～ 9007199254740992 です。これは、JSON の JavaScript 実装が長整数を表す方法に制限があるためです。
 
-フィールドタイプの詳細については、 [XDM フィールドタイプ制約](./schema/field-constraints.md).
+フィールドタイプについて詳しくは、[XDM フィールドタイプの制約](./schema/field-constraints.md)に関するドキュメントを参照してください。
 
-### スキーマの ID を定義するには、どうすればよいですか？
+### スキーマの ID を定義するにはどうすればよいですか？
 
-In [!DNL Experience Platform]の場合、id は、解釈されるデータのソースに関係なく、主体（通常は個人）を識別するために使用されます。 キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。ID の一般的に使用されるフィールドには、電子メールアドレス、電話番号、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID およびその他の一意の ID フィールド。
+[!DNL Experience Platform] では、ID は、解釈されるデータのソースに関係なく、サブジェクト（通常は個人）の識別に使用されます。キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。ID によく使用されるフィールドには、メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID、その他の一意の ID フィールドなどがあります。
 
 フィールドは、API またはユーザーインターフェイスを使用して ID としてマークできます。
 
@@ -61,48 +61,48 @@ API では、ID は ID 記述子を作成することで確立されます。ID 
 
 ID 記述子は、/descriptors エンドポイントへの POST リクエストによって作成されます。作成に成功した場合は、HTTP ステータス 201（Created）と、新しい記述子の詳細を含む応答オブジェクトを受け取ります。
 
-API で ID 記述子を作成する方法について詳しくは、 [記述子](api/descriptors.md) セクション [!DNL Schema Registry] 開発者ガイド。
+API での ID 記述子の作成について詳しくは、[!DNL Schema Registry] 開発者ガイドの[記述子](api/descriptors.md)に関する節を参照してください。
 
-#### UI で ID を定義
+#### UI での ID の定義
 
-スキーマエディターでスキーマを開き、 **[!UICONTROL 構造]** ID としてマークするエディターのセクション。 の下 **[!UICONTROL フィールドプロパティ]** 右側で、 **[!UICONTROL ID]** チェックボックス。
+スキーマエディターにスキーマを開いた状態で、ID としてマークするフィールドをエディターの「**[!UICONTROL 構造]**」セクションで選択します。右側の「**[!UICONTROL フィールドプロパティ]**」で、「**[!UICONTROL ID]**」チェックボックスをオンにします。
 
 UI で ID を管理する方法について詳しくは、スキーマエディターのチュートリアルの [ID フィールドの定義](./tutorials/create-schema-ui.md#identity-field)に関する節を参照してください。
 
 ### スキーマにプライマリ ID は必要ですか？
 
-プライマリID はオプションです。スキーマには 0 または 1 の ID が含まれる場合があるからです。 ただし、でスキーマを使用するには、スキーマにプライマリ ID が必要です [!DNL Real-Time Customer Profile]. 詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
+スキーマにはプライマリ ID がないか 1 つのみ存在できるので、プライマリ ID はオプションです。ただし、スキーマを [!DNL Real-Time Customer Profile] で使用できるようにするには、スキーマにプライマリ ID が必要です。詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
 
-### でスキーマの使用を有効にする方法を教えてください。 [!DNL Real-Time Customer Profile]?
+### [!DNL Real-Time Customer Profile] でスキーマを使用できるようにするにはどうすればよいですか？
 
-スキーマはでの使用に対して有効になっています [[!DNL Real-Time Customer Profile]](../profile/home.md) ( `meta:immutableTags` スキーマの属性。 でのスキーマの使用の有効化 [!DNL Profile] は、API またはユーザーインターフェイスを使用して実行できます。
+スキーマの `meta:immutableTags` 属性内に「union」タグを追加すれば、スキーマを [[!DNL Real-Time Customer Profile]](../profile/home.md) で使用できるようになります。スキーマを [!DNL Profile] で使用できるようにするには、API またはユーザーインターフェイスを使用します。
 
-#### の既存のスキーマの有効化 [!DNL Profile] API の使用
+#### API を使用して既存のスキーマを [!DNL Profile] に有効にする方法
 
 PATCH リクエストを作成して、スキーマを更新し、値「union」を含む配列として `meta:immutableTags` 属性を追加します。更新が成功すると、応答に更新されたスキーマが表示され、スキーマに和集合タグが含まれるようになります。
 
-API を使用してでのスキーマの使用を有効にする方法について詳しくは、 [!DNL Real-Time Customer Profile]を参照し、 [和集合](./api/unions.md) ドキュメント [!DNL Schema Registry] 開発者ガイド。
+API を使用して、スキーマを [!DNL Real-Time Customer Profile] で使用できるようにする方法について詳しくは、[!DNL Schema Registry] 開発者ガイドの[結合](./api/unions.md)に関するドキュメントを参照してください。
 
-#### の既存のスキーマの有効化 [!DNL Profile] UI の使用
+#### UI を使用して既存のスキーマを [!DNL Profile] に有効にする方法
 
-In [!DNL Experience Platform]を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、有効にするスキーマの名前をスキーマのリストから選択します。 次に、エディターの右側の、下の **[!UICONTROL スキーマのプロパティ]**&#x200B;を選択します。 **[!UICONTROL プロファイル]** オンに切り替えるには、をクリックします。
+[!DNL Experience Platform] で、左側のナビゲーションにある「**[!UICONTROL スキーマ]**」を選択し、有効にするスキーマの名前をスキーマのリストから選択します。次に、エディターの右側の「**[!UICONTROL スキーマプロパティ]**」で、「**[!UICONTROL プロファイル]**」を選択してオンに切り替えます。
 
 
-詳しくは、 [リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile) 内 [!UICONTROL スキーマエディター] チュートリアル
+詳しくは、[!UICONTROL スキーマエディター]のチュートリアルの[リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile)に関する節を参照してください。
 
 ### 和集合スキーマを直接編集できますか？
 
 和集合スキーマは読み取り専用であり、システムによって自動的に生成されます。和集合スキーマを直接編集することはできません。和集合スキーマは、特定のクラスを実装するスキーマに「和集合」タグが追加されたときに、そのクラスに対して作成されます。
 
-XDM の和集合について詳しくは、 [和集合](./api/unions.md) セクション [!DNL Schema Registry] API ガイド。
+XDM での結合について詳しくは、[!DNL Schema Registry] API ガイドの[結合](./api/unions.md)の節を参照してください。
 
-### データをスキーマに取り込むには、どのようにデータファイルをフォーマットする必要がありますか？
+### スキーマにデータを取り込むには、データファイルをどのような形式にする必要がありますか？
 
-[!DNL Experience Platform] 次のいずれかの方法でデータファイルを受け入れる [!DNL Parquet] または JSON 形式を使用します。 これらのファイルの内容は、データセットが参照するスキーマに準拠している必要があります。データファイル取得に関するベストプラクティスについて詳しくは、「[バッチ取得の概要](../ingestion/home.md)」を参照してください。
+[!DNL Experience Platform] では、[!DNL Parquet] または JSON 形式のデータファイルを受け入れます。これらのファイルの内容は、データセットが参照するスキーマに準拠している必要があります。データファイル取得に関するベストプラクティスについて詳しくは、「[バッチ取得の概要](../ingestion/home.md)」を参照してください。
 
 ## エラーとトラブルシューティング
 
-以下は、 [!DNL Schema Registry] API
+[!DNL Schema Registry] API を使用する際に発生する可能性のあるエラーメッセージのリストを以下に示します。
 
 ### リソースが見つかりません
 
@@ -125,7 +125,7 @@ XDM の和集合について詳しくは、 [和集合](./api/unions.md) セク�
 
 >[!NOTE]
 >
->取得するリソースタイプに応じて、このエラーは次のいずれかを使用できます `type` URI:
+>取得するリソースタイプに応じて、このエラーは次の `type` URI のいずれかを使用できます。
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1010-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1011-404`
@@ -137,7 +137,7 @@ XDM の和集合について詳しくは、 [和集合](./api/unions.md) セク�
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 
-API で参照パスを作成する方法について詳しくは、 [コンテナ](./api/getting-started.md#container) および [リソース識別](api/getting-started.md#resource-identification) セクション [!DNL Schema Registry] 開発者ガイド。
+API での参照パスの作成について詳しくは、[!DNL Schema Registry] 開発者ガイドの[コンテナ](./api/getting-started.md#container)および[リソースの識別](api/getting-started.md#resource-identification)の節を参照してください。
 
 ### タイトルが一意ではありません
 
@@ -156,7 +156,7 @@ API で参照パスを作成する方法について詳しくは、 [コンテ�
 }
 ```
 
-このエラーメッセージは、別のリソースで既に使用されているタイトルを持つリソースを作成しようとすると表示されます。タイトルは、すべてのリソースタイプで一意である必要があります。例えば、スキーマで既に使用されているタイトルを持つフィールドグループを作成しようとすると、このエラーが表示されます。
+このエラーメッセージは、別のリソースで既に使用されているタイトルを持つリソースを作成しようとすると表示されます。タイトルは、すべてのリソースタイプで一意である必要があります。例えば、スキーマで既に使用されているタイトルのフィールドグループを作成しようとすると、このエラーが表示されます。
 
 ### 名前空間の検証エラー
 
@@ -175,13 +175,13 @@ API で参照パスを作成する方法について詳しくは、 [コンテ�
 }
 ```
 
-このエラーメッセージは、不適切に名前空間化されたフィールドを含むリソースを作成しようとした場合や、不適切に名前空間化されたフィールドを既存のリソースに追加しようとした場合に表示されます。
+このエラーメッセージが表示されるのは、名前空間の設定が適切でないフィールドを含んだリソースを作成しようとした場合や、名前空間の設定が適切でないフィールドを既存のリソースに追加しようとした場合です。
 
-IMS 組織で定義されたリソースは、他の業界やベンダーのリソースとの競合を避けるために、テナント ID の下でフィールドを名前空間化する必要があります。 標準のフィールドグループを使用してスキーマを作成する場合は、それらのフィールドグループの構造内に追加するカスタムフィールドも、テナント ID の下で名前空間化する必要があります。
+IMS 組織で定義されたリソースでは、他の業界やベンダーのリソースとの競合を避けるために、フィールドの名前空間をテナント ID の下に設定する必要があります。標準のフィールドグループを使用してスキーマを作成する場合は、それらのフィールドグループの構造内に追加するカスタムフィールドも、テナント ID の下に名前空間を設定する必要があります。
 
 >[!NOTE]
 >
->名前空間エラーの特定の特性に応じて、このエラーは次のいずれかを使用できます `type` URI と異なるメッセージの詳細：
+>このエラーでは、名前空間エラーの固有の性質に応じて、次の `type` URI のいずれかを、異なるメッセージ詳細と共に使用できます。
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
@@ -190,7 +190,7 @@ IMS 組織で定義されたリソースは、他の業界やベンダーのリ�
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 
-XDM リソースに適したデータ構造の詳細な例については、『スキーマレジストリ API ガイド』を参照してください。
+XDM リソースの適切なデータ構造の詳細な例については、スキーマレジストリ API ガイドを参照してください。
 
 * [カスタムクラスの作成](./api/classes.md#create)
 * [カスタムフィールドグループの作成](./api/field-groups.md#create)
@@ -213,13 +213,13 @@ XDM リソースに適したデータ構造の詳細な例については、『�
 }
 ```
 
-GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使用して、応答の形式を決定します。 このエラーは、必須の `Accept` ヘッダーが無効か、見つかりません。
+[!DNL Schema Registry] API の GET リクエストには、システムで応答の形式を決定するために `Accept` ヘッダーが必要です。このエラーは、必須の `Accept` ヘッダーが無効か見つからない場合に発生します。
 
-使用しているエンドポイントに応じて、 `detailed-message` プロパティは、有効な `Accept` ヘッダーは、成功応答の場合はのようになります。 正しく入力されていることを確認し、 `Accept` 再試行する前に作成しようとしている API リクエストと互換性のあるヘッダー。
+使用しているエンドポイントに応じて、正常な応答を得るための有効な `Accept` ヘッダーがどのようなものであるかを `detailed-message` プロパティが示します。実行しようとしている API リクエストに適合する `Accept` ヘッダーを正しく入力してあることを確認してから、もう一度やり直してください。
 
 >[!NOTE]
 >
->使用しているエンドポイントに応じて、このエラーは次のいずれかを使用できます `type` URI:
+>このエラーでは、使用しているエンドポイントに応じて、次の `type` URI のいずれかを使用できます。
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1006-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
@@ -227,11 +227,11 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 
-様々な API リクエストの互換性のある Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](./api/overview.md)の対応する節を参照してください。
+様々な API リクエストに適合する Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](./api/overview.md)の対応する節を参照してください。
 
-### [!DNL Real-Time Customer Profile] エラー
+### [!DNL Real-Time Customer Profile] のエラー
 
-次のエラーメッセージは、 [!DNL Real-Time Customer Profile]. 詳しくは、 [和集合](./api/unions.md) セクション [!DNL Schema Registry] API ガイドを参照してください。
+次のエラーメッセージは、スキーマを [!DNL Real-Time Customer Profile] で使用できるようにする場合の操作に関連しています。詳しくは、[!DNL Schema Registry] API 開発者ガイドの[結合](./api/unions.md)の節を参照してください。
 
 #### 参照 ID 記述子が必要です
 
@@ -250,7 +250,7 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 }
 ```
 
-このエラーメッセージは、 [!DNL Profile] およびそのプロパティの 1 つには、参照 id 記述子のない関係記述子が含まれています。 このエラーを解決するには、問題のスキーマフィールドに参照 ID 記述子を追加します。
+このエラーメッセージが表示されるのは、スキーマを [!DNL Profile] で使用できるようにしようとしたときに、そのスキーマのプロパティのいずれかに参照 ID 記述子のない関係記述子が含まれている場合です。このエラーを解決するには、問題のスキーマフィールドに参照 ID 記述子を追加します。
 
 #### 参照 ID 記述子フィールドの名前空間と宛先スキーマの名前空間が一致している必要があります
 
@@ -271,15 +271,15 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 
 >[!NOTE]
 >
->このエラーの場合、「宛先スキーマ」は関係内の参照スキーマを参照します。
+>このエラーの場合、「宛先スキーマ」は関係の参照スキーマを指します。
 
-で使用する関係記述子を含むスキーマを有効にするには、次の手順を実行します。 [!DNL Profile]の場合、ソースフィールドの名前空間と参照フィールドのプライマリ名前空間は同じである必要があります。 このエラーメッセージは、参照 ID 記述子に対して一致しない名前空間が含まれるスキーマを有効にしようとすると表示されます。
+関係記述子を含んだスキーマを [!DNL Profile] で使用できるようにするには、ソースフィールドの名前空間と参照フィールドのプライマリ名前空間を同じにする必要があります。このエラーメッセージが表示されるのは、参照 ID 記述子に一致しない名前空間を含んだスキーマを有効にしようとした場合です。
 
-次を確認します。 `xdm:namespace` 参照スキーマの id フィールドの値が、 `xdm:identityNamespace` この問題を解決するには、ソースフィールドの参照 ID 記述子のプロパティを使用します。
+この問題を解決するには、参照スキーマの ID フィールドの `xdm:namespace` 値が、ソースフィールドの参照 ID 記述子における `xdm:identityNamespace` プロパティの値と一致することを確認してください。
 
-標準の ID 名前空間コードのリストについては、 [標準名前空間](../identity-service/namespaces.md) （「id 名前空間の概要」）。
+標準の ID 名前空間コードのリストについては、「ID 名前空間の概要」の[標準の名前空間](../identity-service/namespaces.md)の節を参照してください。
 
-#### スキーマには、identityMap またはプライマリ ID を含める必要があります
+#### スキーマには identityMap またはプライマリ ID が含まれている必要があります
 
 ```json
 {
@@ -296,9 +296,9 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 }
 ```
 
-プロファイルに対してスキーマを有効にする前に、まず [プライマリ id 記述子の作成](./api/descriptors.md#create) スキーマの場合は、代わりにプライマリ id で動作する id マップフィールドを含めます。
+プロファイルのスキーマを有効にする前に、まずスキーマの[プライマリ ID 記述子を作成](./api/descriptors.md#create)するか、代わりにプライマリ ID として機能する ID マップフィールドを含める必要があります。
 
-#### 互換性のないデータタイプを結合できません
+#### 互換性のないデータタイプは結合できません
 
 ```json
 {
@@ -315,6 +315,6 @@ GETリクエスト [!DNL Schema Registry] API には `Accept` ヘッダーを使
 }
 ```
 
-同じクラスに属するすべてのプロファイル対応スキーマは、そのクラスの和集合スキーマを構築するために、結合できる必要があります。 このエラーは、パスが別のプロファイルが有効なスキーマと共有され、データタイプが元のスキーマと異なるフィールドをスキーマに追加しようとすると表示されます。 スキーマは両方ともプロファイル対応で、同じフィールドパスを含むので、プロファイルは和集合スキーマを構築する際に、これら 2 つのフィールドの結合を試みます。 異なるデータ型を結合することはできないので、結合の競合と見なされ、使用できません。
+あるクラスの結合スキーマを構成するには、その同じクラスに属するすべてのプロファイル対応スキーマを結合できる必要があります。 このエラーが表示されるのは、パスが別のプロファイル対応スキーマと共有されているスキーマにフィールドを追加しようとして、データタイプが元と異なる場合です。 これらのスキーマはどちらもプロファイル対応で、同じフィールドパスを含んでいるので、プロファイルは結合スキーマを構成する際に、これら 2 つのフィールドを 1 つに結合しようとします。 しかし、異なるデータタイプを結合することはできないので、これは結合の競合と見なされ、許可されません。
 
-この問題を解決するには、同じクラスで類似のフィールドを持つ他のプロファイル対応スキーマとの結合の競合を避けるために、フィールドに別の名前を選択するか、一意の名前空間オブジェクトの下にネストします。
+この問題を解決するには、類似のフィールドを持つ同じクラスで他のプロファイル対応スキーマとの結合の競合が発生するのを避けるために、フィールドに別の名前を選択するか、一意の名前空間に属するオブジェクトの下にフィールドをネストします。
