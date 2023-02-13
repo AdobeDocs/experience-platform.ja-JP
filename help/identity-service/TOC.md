@@ -5,9 +5,9 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 87%
 
 - [ID サービスの概要](home.md)
 - [ID 名前空間の概要](namespaces.md)
-- [ID データのガードレール](guardrails.md)
+- [ID データ用のガードレール](guardrails.md)
 - ID サービス API {#api}
    - [はじめに](api/getting-started.md)
    - [フィールドを ID としてラベル付け](api/label-identities.md)
@@ -31,7 +31,7 @@ ht-degree: 87%
    - [共有デバイスの検出](ui/shared-device-detection.md)
    - [UI での ID フィールドの定義](ui/label-identities.md)
 - [ECID の概要](ecid.md)
-- [ID サービスの削除](deletion.md)
+- [ID サービスでの削除](deletion.md)
 - [プライバシーリクエストの処理](privacy.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)
