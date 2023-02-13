@@ -5,9 +5,9 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイム顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '166'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 69%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- セグメント化 API {#api}
+- Segmentation API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
    - [オーディエンス](api/audiences.md)
-   - [エッジのセグメント化](api/edge-segmentation.md)
+   - [エッジセグメント化](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
    - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
@@ -33,12 +33,12 @@ ht-degree: 69%
    - [Audience Builder](ui/audience-builder.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
-   - [エッジのセグメント化](ui/edge-segmentation.md)
+   - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
-   - [ストリーミングセグメント化 (ビデオ)](video/streaming-segmentation-overview.md)
+   - [ストリーミングセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
-      - [セグメントマッチの概要](ui/segment-match/overview.md)
+      - [Segment Match の概要](ui/segment-match/overview.md)
       - [トラブルシューティング](ui/segment-match/troubleshooting.md)
 - [同意の遵守](consents.md)
 - [マルチエンティティのセグメント化](multi-entity-segmentation.md)
@@ -58,12 +58,12 @@ ht-degree: 69%
    - [その他の関数](pql/misc-functions.md)
 - チュートリアル {#tutorials}
    - [セグメントの作成](tutorials/create-a-segment.md)
-   - [セグメントの作成 (ビデオ)](video/create-segment.md)
+   - [セグメントの作成（ビデオ）](video/create-segment.md)
    - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
    - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
-   - [外部オーディエンスのインポートと使用](tutorials/using-external-audiences.md)
+   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
-   - [セグメントでデータ使用のコンプライアンスを徹底する](tutorials/governance.md)
+   - [セグメントでデータ使用のコンプライアンスを実施する](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
