@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 4 月
-description: Adobe Experience Platformの 2022 年 4 月のリリースノート。
+title: Adobe Experience Platform リリースノート 2022年4月
+description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2916'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ Platform は、毎日のスナップショットで取得した、組織のデ�
 
 Platformでは、データは様々なソースから取り込まれ、システム内で分析され、様々な宛先に対してアクティブ化されます。 Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
 
-データフローは、Platform 間でデータを移動するジョブを表します。これらのデータフローは、異なるサービス間で設定されるので、ソースコネクタからターゲットデータセットにデータを移動し、その後、 ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先にアクティブ化されます。
+データフローは、Platform 間でデータを移動するジョブを表します。これらのデータフローは様々なサービスを対象に設定され、ソースコネクタからターゲットデータセットにデータを移動できます。こうしたデータは、ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先に対してアクティブ化されます。
 
 **新機能**
 
@@ -173,7 +173,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML サービスは、マーケティングアナリストや従事者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。
+AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。
 
 ### アトリビューション AI
 
@@ -202,7 +202,7 @@ Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 ## Real-Time Customer Data Platform B2B エディション {#B2B}
 
-Real-Time CDP B2B Edition は、Real-time Customer Data Platform(Real-Time CDP) をベースに構築され、B2B サービスモデルで運用するマーケター向けに設計されています。 複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
+Real-Time Customer Data Platform（Real-Time CDP）上に構築された Real-Time CDP B2B エディションは、B2B サービスモデルで業務を行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 
 **更新された機能**
 
@@ -210,7 +210,7 @@ Real-Time CDP B2B Edition は、Real-time Customer Data Platform(Real-Time CDP) 
 | --- | --- |
 | `isDeleted` 機能のサポート | `Activities` を除くすべての [!DNL Marketo] データセットで、`isDeleted` マッピングをサポートするようになりました。新しいマッピングは、既存の B2B データフローに自動的に追加されます。`isDeleted` マッピングを使用して、[!DNL Data Lake] のデータがソースデータと一致するように、削除されたレコードをフィルターで除外できます。`isDeleted` について詳しくは、[[!DNL Marketo]  マッピングフィールドガイド](../../sources/connectors/adobe-applications/mapping/marketo.md)を参照してください。 |
 
-Real-time Customer Data Platform B2B Edition の詳細については、 [B2B の概要](../../rtcdp/b2b-overview.md).
+Real-Time Customer Data Platform B2B エディションについて詳しくは、[B2B の概要](../../rtcdp/b2b-overview.md)を参照してください。
 
 ## ソース {#sources}
 
