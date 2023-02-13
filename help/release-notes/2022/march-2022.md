@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 3 月
-description: Adobe Experience Platformの 2022 年 3 月のリリースノート。
+title: Adobe Experience Platform リリースノート 2022年3月
+description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1194'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 - [アカウントプロファイル UI ガイドの「関連するアカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [セグメント定義での関連するアカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Real-Time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
+Real-Time CDP B2B エディションについて詳しくは、[概要](../../rtcdp/overview.md)を参照してください。
 
 ## アラート {#alerts}
 
@@ -121,7 +121,7 @@ Platform のデータ収集について詳しくは、[データ収集概要](..
 
 ## クエリサービス {#query-service}
 
-[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。[!DNL Data Lake] の任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
