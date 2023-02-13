@@ -5,9 +5,9 @@ title: クエリサービスの概要
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '722'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -37,11 +37,11 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユ�
 
 ## ユースケース
 
-[!DNL Query Service] では、様々な目的に対応する柔軟なデータ処理アプローチを提供しています。 特に、マーケターによるセグメント化の負担を軽減し、実用的なオーディエンスや意味のあるビジネスインサイトを生み出すのに役立ちます。 以下の使用例では、の強みのより詳細な例を示しています。 [!DNL Query Service].
+[!DNL Query Service] では、多くの目的に役立つ柔軟なデータ処理アプローチを提供します。 特に、マーケターによるセグメント化の負担を軽減し、実用的なオーディエンスや意味のあるビジネスインサイトを生成するのに役立ちます。次のユースケースでは、[!DNL Query Service] の機能のさらに詳しい例を示しています。
 
-### Adobe Analytics閲覧中断
+### Adobe Analytics の閲覧放棄
 
-この [Adobeの使用を中心とした放棄のサンプルを参照 [!DNL Analytics]](./use-cases/abandoned-browse.md) 特定のアクションにつながるオーディエンスを作成するためのデータ。 [!DNL Query Service] は、セグメント化の複雑なロジックに対応して、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりします。
+この[閲覧放棄の例では、Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) データを使用して、特定の実用的なオーディエンスを作成することに重点を置いています。[!DNL Query Service] では、セグメント化の複雑なロジックを調整して、ダウンストリームで使用するためのパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりできます。
 
 ### Looker BI ダッシュボード
 
