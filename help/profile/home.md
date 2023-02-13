@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;統合プロファイル;統合プロファイル;統合;プロファイル;rtcp;XDMグラフ
 title: リアルタイム顧客プロファイルの概要
-description: リアルタイム顧客プロファイルは、様々なソースのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形式でそのデータにアクセスできるようにします。 この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
+description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2098'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # [!DNL Real-Time Customer Profile] の概要
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。[!DNL Real-Time Customer Profile] では、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。この概要は、[!DNL Experience Platform] での [!DNL Real-Time Customer Profile] の役割と使い方を理解するのに役立ちます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。[!DNL Real-Time Customer Profile] では、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。この概要は、[!DNL Experience Platform] での [!DNL Real-Time Customer Profile] の役割と使い方を理解するのに役立ちます。
 
 ## Experience Platform での [!DNL Profile]
 
-次の図では、リアルタイム顧客プロファイルと、Experience Platform内の他のサービスとの関係が強調表示されています。
+次の図では、リアルタイム顧客プロファイルと Experience Platform 内のその他のサービスとの関係がハイライト表示されています。
 
-![リアルタイム顧客プロファイルとAdobe Experience Platformの他のサービスとの関係。 次の図は、プロファイルが Adobe Experience Platform のコアコンポーネントの 1 つであることを示しています。](images/profile-overview/profile-in-platform.png)
+![リアルタイム顧客プロファイルと Adobe Experience Platform のその他のサービスとの関係。次の図は、プロファイルが Adobe Experience Platform のコアコンポーネントの 1 つであることを示しています。](images/profile-overview/profile-in-platform.png)
 
 ## プロファイルについて
 
@@ -26,7 +26,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 ### プロファイルエンティティの構成
 
-リアルタイム顧客プロファイルは、 **主要エンティティ**、および様々なサポートエンティティ。 Experience Platformの場合、通常、プライマリエンティティは **プロファイルエンティティ**：個々の人の特性、行動、セグメントメンバーシップで構成されます。 その他のエンティティには次のものがあり、セグメント化エンジンでプロファイルのプライマリエンティティ外部のデータを利用できます。
+リアルタイム顧客プロファイルは、**プライマリエンティティ**&#x200B;と呼ばれるメインエンティティと、様々なサポートエンティティで構成されます。Experience Platform のコンテキストでは、プライマリエンティティは通常&#x200B;**プロファイルエンティティ**&#x200B;であり、個人の特徴、行動およびセグメントメンバーシップで構成されます。その他のエンティティには次のものがあり、セグメント化エンジンでプロファイルのプライマリエンティティ外部のデータを利用できます。
 
 - **ディメンションエンティティ**：イベントやプロファイルレコード間で共有される情報のデータモデリングプロセスを簡略化するために使用されるエンティティ。これは、ルックアップエンティティまたは分類エンティティとも呼ばれます。
 - **B2B エンティティ**：プロファイルと B2B アカウントおよびオポチュニティとの関係を表すエンティティ。
@@ -37,10 +37,10 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 >
 >ディメンションエンティティと B2B エンティティはプライマリエンティティの外部にしか存在しないので、これらはバッチセグメント化にのみ使用されます。
 
-ディメンショナルエンティティと B2B エンティティは、 **スキーマの関係**. 詳しくは、次のドキュメントを参照してください。
+ディメンションエンティティと B2B エンティティは、**スキーマ関係**&#x200B;を介してプライマリエンティティにリンクされます。詳しくは、次のドキュメントを参照してください。
 
 - [ルックアップエンティティに対する 1 対 1 のスキーマ関係の作成](../xdm/tutorials/relationship-ui.md)
-- [B2B エンティティの多対 1 スキーマ関係の作成](../xdm/tutorials/relationship-b2b.md)
+- [B2B エンティティに対する多対 1 のスキーマ関係の作成](../xdm/tutorials/relationship-b2b.md)
 
 ### プロファイルデータストア
 
@@ -50,11 +50,11 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 ### プロファイルガードレール
 
-Experience Platformには、作成を回避するための一連のガードレールが用意されています [エクスペリエンスデータモデル (XDM) スキーマ](../xdm/home.md) リアルタイム顧客プロファイルでサポートできないもの。 これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
+Experience Platform は、リアルタイム顧客プロファイルがサポートできない[エクスペリエンスデータモデル（XDM）スキーマ](../xdm/home.md)の作成を回避するのに役立つ一連のガードレールを提供します。これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
 
 ### プロファイルダッシュボード {#profile-dashboard}
 
-Experience PlatformUI には、毎日のスナップショットで取得した、リアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードが用意されています。 UI の [!DNL Profile] ダッシュボードにアクセスして操作する方法、およびダッシュボードに表示される指標に関する詳細については、『[プロファイルダッシュボード UI ガイド](ui/profile-dashboard.md)』を参照してください。
+Experience Platform UI には、毎日のスナップショット中にキャプチャされたリアルタイム顧客プロファイルのデータに関する重要な情報を表示できるダッシュボードが用意されています。UI の [!DNL Profile] ダッシュボードにアクセスして操作する方法、およびダッシュボードに表示される指標に関する詳細については、『[プロファイルダッシュボード UI ガイド](ui/profile-dashboard.md)』を参照してください。
 
 ### プロファイルフラグメントと結合プロファイル {#profile-fragments-vs-merged-profiles}
 
@@ -112,7 +112,7 @@ Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向�
 
 ## データを [!DNL Profile] に取り込む
 
-[!DNL Platform] でレコードと時系列データを [!DNL Profile] に送信するように構成して、リアルタイムのストリーミング取得とバッチ取得をサポートできます。詳しくは、 [リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md).
+[!DNL Platform] でレコードと時系列データを [!DNL Profile] に送信するように構成して、リアルタイムのストリーミング取得とバッチ取得をサポートできます。詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向�
 
 ### プロファイル取得指標
 
-Observability Insights を使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取得の割合、取得済みレコードサイズなどを把握できます。詳しくは、まず [Observability Insights API の概要](../observability/api/overview.md)リアルタイム顧客プロファイル指標の完全なリストについては、 [利用可能な指標](../observability/api/metrics.md#available-metrics).
+Observability Insights を使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取得の割合、取得済みレコードサイズなどを把握できます。詳しくは、[Observability Insights API の概要](../observability/api/overview.md)を読み、リアルタイム顧客プロファイル指標の完全なリストについては、[利用可能な指標](../observability/api/metrics.md#available-metrics)に関するドキュメントを参照してください。
 
 ## プロファイルストアデータの更新
 
@@ -144,4 +144,4 @@ Observability Insights を使用すると、Adobe Experience Platform で主要�
 
 ## 次の手順とその他のリソース
 
-Experience PlatformUI またはプロファイル API を使用してリアルタイム顧客プロファイルデータを操作する方法について詳しくは、まず [プロファイル UI ガイド](ui/user-guide.md) または [API 開発者ガイド](api/overview.md)、それぞれ。
+Experience Platform UI または Profile API を使用したリアルタイム顧客プロファイルデータの操作について詳しくは、まず[プロファイル UI ガイド](ui/user-guide.md)または[API 開発者ガイド](api/overview.md)をお読みください。
