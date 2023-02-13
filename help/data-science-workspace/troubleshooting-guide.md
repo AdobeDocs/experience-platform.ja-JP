@@ -79,7 +79,7 @@ Safari 環境設定ウィンドウで、「**詳細**」を選択します。次
 
 ![開発メニュー](./images/faq/user-agent.png)
 
-##  [!DNL JupyterLab] でファイルをアップロードまたは削除しようとすると、「403 Forbidden」というメッセージが表示されるのはなぜですか？
+## [!DNL JupyterLab] でファイルをアップロードまたは削除しようとすると、「403 Forbidden」というメッセージが表示されるのはなぜですか？
 
 ブラウザーで [!DNL Ghostery] や [!DNL AdBlock] Plus などの広告ブロックソフトウェアが有効になっている場合、[!DNL JupyterLab] が正常に動作するには、ドメイン「\*.adobe.net」が各広告ブロックソフトウェアで許可されている必要があります。これは、[!DNL JupyterLab] 仮想マシンが [!DNL Experience Platform] ドメインとは別のドメインで実行されるからです。
 
