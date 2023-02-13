@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 1 月
-description: Adobe Experience Platformの 2022 年 1 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2022年1月）
+description: Adobe Experience Platform の 2022年1月のリリースノートです。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -85,7 +85,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## クエリサービス {#query-service}
 
-[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+[!DNL Query Service] では、標準 SQL を使用して Adobe Experience Platform でデータに対してクエリを実行できます [!DNL Data Lake]。[!DNL Data Lake] の任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
@@ -98,7 +98,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platform は、サンドボックスを提供します。サンドボックスでは、単一の Platform インスタンスを別々の仮想環境に分割することができ、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに応えるために、Experience Platform にはサンドボックスが用意されています。サンドボックスでは、単一の Platform インスタンスを別々の仮想環境に分割するので、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
 
 **更新された機能**
 

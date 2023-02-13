@@ -5,7 +5,7 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] クエリの結果を新しいデータセットとして取り込み、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 

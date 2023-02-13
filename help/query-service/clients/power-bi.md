@@ -5,7 +5,7 @@ title: Power BI をクエリサービスに接続します。
 description: このドキュメントでは、Power BI と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 100%
 

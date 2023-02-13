@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2647'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 詳しくは、[セグメントダッシュボードガイド](../../dashboards/guides/segments.md)を参照してください。
 
-![セグメントダッシュボードが表示されます。 オーディエンスサイズ、ID 別のプロファイル、ID オーバーレイ、オーディエンスサイズの変更トレンドなど、様々なウィジェットを表示します。](../../dashboards/images/segments/dashboard-overview.png)
+![セグメントダッシュボードが表示されます。オーディエンスサイズ、ID 別のプロファイル、ID オーバーレイ、オーディエンスサイズの変化のトレンドなど、様々なウィジェットが表示されます。](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 参照 {#browse}
 
@@ -59,15 +59,15 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="すべてのセグメントをスケジュールに追加"
->abstract="を有効にすると、すべてのバッチ評価セグメントがスケジュールされた日次更新に含まれます。 スケジュールされている更新からすべてのセグメントを削除するには無効にします。"
+>abstract="毎日スケジュールされている更新に、すべてのバッチ評価セグメントを含めることができるようにします。スケジュールされている更新からすべてのセグメントを削除するには無効にします。"
 
 「**[!UICONTROL 参照]**」タブを選択して、組織のすべてのセグメント定義のリストを表示します。
 
-![セグメントの参照画面が表示されます。 組織に属するすべてのセグメントのリストが表示されます。](../images/ui/overview/segment-browse-all.png)
+![セグメント参照画面が表示されます。組織に属するすべてのセグメントのリストが表示されます。](../images/ui/overview/segment-browse-all.png)
 
 この表示には、プロファイル数、作成日、最終変更日など、セグメント定義に関する情報がリストされます。
 
-この表示にフィールドを追加するには、「 ![フィルター属性アイコン](../images/ui/overview/filter-attribute.png). これらの追加フィールドには、分類、チャーン、評価方法およびジョブ ID が含まれます。
+この表示にフィールドを追加するには、「![フィルター属性アイコン](../images/ui/overview/filter-attribute.png)」を選択します。これらの追加フィールドには、分類、チャーン、評価方法およびジョブ ID が含まれます。
 
 分類を選択すると、ディスプレイには、各ステータス（[!UICONTROL 実現済み]、[!UICONTROL 既存]、[!UICONTROL 終了]）に属するプロファイルの割合を示す棒グラフが表示されます。さらに、「[!UICONTROL 参照]」タブに表示される分類は、セグメントステータスの最も正確な分類です。この数値が「[!UICONTROL 概要]」タブに表示されている数値と異なる場合は、「[!UICONTROL 概要]」タブの数値は 1 日に 1 回しか更新されないので、「[!UICONTROL 参照]」タブの数値を正しいソースとして使用する必要があります。
 
@@ -81,7 +81,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 評価方法は、ストリーミング、バッチまたはエッジのいずれかです。ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。エッジセグメントはリアルタイムで評価されるので、同じページおよび次のページのパーソナライゼーションの使用例が可能になります。
 
-![セグメントの参照ページ内のセグメントが強調表示されます。](../images/ui/overview/segment-browse-segments.png)
+![セグメント参照ページ内のセグメントがハイライト表示されます。](../images/ui/overview/segment-browse-segments.png)
 
 ページの上部には、すべてのセグメントをスケジュールに追加するオプションと、新しいセグメントを作成するオプションがあります。
 
@@ -89,11 +89,11 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 「**[!UICONTROL セグメントを作成]**」を選択すると、セグメントビルダーに移動します。セグメントの作成について詳しくは、[ユーザーガイドのセグメントの作成](#create-segment)の節を参照してください。
 
-![セグメント参照ページの上部のナビゲーションバーがハイライト表示されます。 このバーには、すべてのセグメントをスケジュールに追加する切り替えと、セグメントを作成するボタンが含まれています。](../images/ui/overview/segment-browse-top.png)
+![セグメント参照ページの上部のナビゲーションバーがハイライト表示されます。 このバーには、すべてのセグメントをスケジュールに追加するための切替スイッチと、セグメントを作成するためのボタンが含まれています。](../images/ui/overview/segment-browse-top.png)
 
 右側のサイドバーには、組織内のすべてのセグメントに関する情報が含まれており、セグメントの合計数、最後の評価日、次の評価日および評価方法によるセグメントの分類がリストされています。
 
-![セグメント参照ページの右側のサイドバーがハイライト表示されます。 組織内のセグメントに関する情報が表示されます。 これには、セグメントの合計数、前回の評価時刻、次回の評価時刻、様々なセグメントタイプの分類などの情報が含まれます。](../images/ui/overview/segment-browse-segment-info.png)
+![セグメント参照ページの右側のサイドバーがハイライト表示されます。 組織内のセグメントに関する情報が表示されます。これには、セグメントの合計数、前回の評価時刻、次回の評価時刻、様々なセグメントタイプの分類などの情報が含まれます。](../images/ui/overview/segment-browse-segment-info.png)
 
 セグメント定義の行を選択すると、セグメント定義の概要が表示されます。これには、セグメントの名前、説明、評価方法、作成日、および最終変更日に加えて、セグメントの編集または削除、宛先へのセグメントのアクティブ化、セグメントの適格オーディエンス、合計オーディエンスサイズのオプションが含まれます。
 
@@ -109,7 +109,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 セグメントの詳細ページが表示されます。上部には、セグメント定義の概要、適格なオーディエンスサイズに関する情報、セグメントがアクティブ化されている宛先があります。
 
-![セグメント定義の詳細ページが表示されます。 セグメントの概要、セグメント内の合計オーディエンス、アクティブ化された宛先カードが強調表示されます。](../images/ui/overview/segment-details-summary.png)
+![セグメント定義の詳細ページが表示されます。 セグメントの概要、セグメント内の合計オーディエンス、アクティブ化された宛先カードがハイライト表示されます。](../images/ui/overview/segment-details-summary.png)
 
 ### セグメントの概要 {#segment-summary}
 
@@ -157,7 +157,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 [!DNL Profile] ID を選択すると、各 [!DNL Profile] に関する詳細情報を確認できます。プロファイルの詳細については、[[!DNL Real-Time Customer Profile] ユーザーガイド](../../profile/ui/user-guide.md#profile-detail)を参照してください。
 
-![セグメント定義のサンプルプロファイルがハイライト表示されます。 プロファイル情報の例には、プロファイル ID、名、姓、人物の E メールが含まれます。](../images/ui/overview/segment-details-profiles.png)
+![セグメント定義のサンプルプロファイルがハイライト表示されます。サンプルプロファイル情報には、プロファイル ID、名、姓、その人物のメールが含まれています。](../images/ui/overview/segment-details-profiles.png)
 
 ## セグメントの作成 {#create-segment}
 
@@ -167,11 +167,11 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ### [!DNL Segment Builder] ワークスペース
 
-[!DNL Segment Builder] のワークスペースには、[!DNL Profile] のデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
+[!DNL Segment Builder] のワークスペースには、[!DNL Profile] のデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 
 [!DNL Segment Builder] ワークスペースの使用について詳しくは、[[!DNL Segment Builder] ユーザーガイド](./segment-builder.md)を参照してください。
 
-![セグメントビルダーのワークスペースが表示されます。](../images/ui/overview/segment-builder.png)
+![セグメントビルダーワークスペースが表示されます。](../images/ui/overview/segment-builder.png)
 
 ## スケジュールされたセグメント化 {#scheduled-segmentation}
 
@@ -189,7 +189,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 現在、スケジュールを作成するには API を使用する必要があります。API を使用してスケジュールを作成、編集および操作する手順について詳しくは、セグメント結果の評価とアクセスに関するチュートリアル（特に、[API を使用した、スケジュールに沿った評価](../tutorials/evaluate-a-segment.md#scheduled-evaluation)に関する節）を参照してください。
 
-![セグメントの参照ページで、「すべてのセグメントをスケジュールに追加」への切り替えがハイライト表示されます。](../images/ui/overview/segment-browse-scheduled.png)
+![セグメントの参照ページで、「すべてのセグメントをスケジュールに追加」の切替スイッチがハイライト表示されます。](../images/ui/overview/segment-browse-scheduled.png)
 
 ## オーディエンス {#audiences}
 
@@ -291,7 +291,7 @@ Platform で生成されたオーディエンスについて詳しくは、[セ�
 
 ![セグメントのポリシー違反が表示されます。](../images/ui/overview/segment-dule-policy-violations.png)
 
-## 次の手順と追加のリソース {#next-steps}
+## 次の手順とその他のリソース {#next-steps}
 
 [!DNL Segmentation Service] UI には機能豊富なワークフローが用意されているので、マーケティング可能なオーディエンスを [!DNL Real-Time Customer Profile] データから分離できます。
 
