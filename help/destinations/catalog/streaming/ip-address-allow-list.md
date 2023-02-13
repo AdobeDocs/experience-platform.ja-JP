@@ -1,17 +1,17 @@
 ---
 keywords: IP アドレス、IP 範囲、許可リスト宛先、許可リスト、ストリーミング宛先の許可リスト
-title: ストリーミング許可リスト先の IP アドレス
+title: ストリーミングの宛先の IP アドレス許可リスト
 type: Documentation
 description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すことができます。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
+source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 4%
+ht-degree: 9%
 
 ---
 
-# ストリーミング許可リスト先の IP アドレス {#ip-address-allowlist}
+# ストリーミングの宛先の IP アドレス許可リスト {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 ここで説明する IP 範囲は、次の宛先に適用されます。
 
-* [HTTP API の宛先](./http-destination.md)
+* [HTTP API 宛先](./http-destination.md)
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
@@ -68,6 +68,7 @@ Adobeでは、上記の宛先を操作する前に、許可リストに次の IP
 `40.74.7.208/28`
 `52.142.236.87`
 `20.50.23.153`
+`20.101.246.9`
 `40.74.4.144/28`
 `40.74.7.160/28`
 `40.74.3.176/28`
