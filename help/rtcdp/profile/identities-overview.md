@@ -1,24 +1,24 @@
 ---
-keywords: ID rtcdp;rtcdp ID；リアルタイム cdp ID
-title: Real-time Customer Data Platformの ID
-description: Adobe Experience Platform ID サービスは、デバイスとシステム間で ID を結合することで、顧客とその行動をより良く把握できるようにします。
+keywords: ID rtcdp;rtcdp ID;Real-Time CDP ID
+title: Real-time Customer Data Platform における ID
+description: Adobe Experience Platform ID サービスは、すべてのデバイスやシステム間で ID を橋渡しすることで、顧客とその行動をより確実に把握できるようにします。
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '431'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # ID の概要
 
-Adobe Experience Platform [!DNL Identity Service] は、デバイスとシステム間で id を結び付けることで、顧客とその行動をより良く把握できるようにします。 通常、顧客は複数のチャネルを通じてブランドとやり取りします。これには、Web サイトのオンライン閲覧、店頭での購入、ロイヤリティープログラムへの参加、サポートのためのヘルプデスクへの電話、他多数が含まれます。これらの複数のシステムにわたって、その顧客に対して ID が作成され、 [!DNL Identity Service] を使用すると、これらの ID を統合して全体像を確認できます。
+Adobe Experience Platform [!DNL Identity Service] を利用すると、すべてのデバイスやシステム間で ID を橋渡しできるので、顧客とその行動をより確実に把握できるようになります。通常、顧客は複数のチャネルを通じてブランドとやり取りします。例えば、web サイトのオンライン閲覧、店頭での購入、ロイヤルティプログラムへの参加、サポートを受けるためのヘルプデスクへの電話などがあります。これらの複数のシステムで、その顧客用に作成された ID がありますが、[!DNL Identity Service] を使用すると、それらの ID を統合して全体像を把握できるようになります。
 
 5 つの異なるチャネル間でブランドとやりとりする 5 人の顧客が同一人物であることが分かれば、各インタラクションを通じて一貫性のあるパーソナライズされた関連性のあるエクスペリエンスを顧客に提供することができます。顧客に関する情報がさらに多くなると（例えば、Web サイトの匿名ブラウザーがアカウントにサインアップしてログインする）、情報が結合され、顧客の姿がより明確になります。
 
 ## ID 名前空間
 
-ID 名前空間は、 [!DNL Identity Service] およびは、顧客 id に追加のコンテキストを提供する指標として機能します。 一般的に使用される ID 名前空間の例としては、「電子メール」が挙げられます。複数の Web サイトで同じ電子メールアドレスが使用されると、同じ顧客に属する複数の異なる（それぞれが一意の顧客 ID を持つ） ID を結合できます。[!DNL Experience Platform] では、ID 名前空間を使用して、ユーザーインターフェイス内の個々のプロファイルを検索できます。プロファイルの表示について詳しくは、 [プロファイル参照の概要](profile-browse.md). ID 名前空間について詳しくは、「[ID 名前空間の概要](../../identity-service/namespaces.md)」を参照してください。
+ID 名前空間は [!DNL Identity Service] のコンポーネントで、顧客 ID に追加のコンテキストを提供するインジケーターとして機能します。よく使用される ID 名前空間の例としては、「メール」が挙げられます。複数の web サイトで同じメールアドレスが使用されると、実際には同じ顧客に属する複数の異なる ID（それぞれが一意の顧客 ID を持つ）をまとめることができます。[!DNL Experience Platform] では、ID 名前空間を使用して、ユーザーインターフェイス内で個々のプロファイルを検索できます。プロファイルの表示について詳しくは、[プロファイル参照の概要](profile-browse.md)を参照してください。ID 名前空間について詳しくは、「[ID 名前空間の概要](../../identity-service/namespaces.md)」を参照してください。
 
 ## ID グラフ
 
@@ -28,4 +28,4 @@ ID グラフは、異なる ID 名前空間間の関係のマップで、顧客�
 
 ## 次の手順
 
-ID および ID 間の関係は、 [!DNL Identity Service] そして、 [!DNL Real-Time Customer Profile] を使用して、各顧客とそのインタラクションの全体像を構築します。 詳しくは、[ID サービスのドキュメント](../../identity-service/home.md)を参照してください。
+ID および ID 間の関係は [!DNL Identity Service] で定義および維持管理され、[!DNL Real-Time Customer Profile] で活用されて個々の顧客とそのインタラクションの全体像が作成されます。詳しくは、[ID サービスのドキュメント](../../identity-service/home.md)を参照してください。
