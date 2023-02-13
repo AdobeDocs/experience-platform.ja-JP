@@ -2,10 +2,10 @@
 description: このページでは、Destination SDKを使用して作成された、製品化された宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 42%
+source-wordcount: '1012'
+ht-degree: 38%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 42%
 
 このページには、Adobe Experience Platform Destination SDK を使用して作成した宛先を送信または更新する際に提供する必要があるすべての情報が一覧表示されます。 Adobe Experience Platform で宛先を正常に送信するには、<aepdestsdk@adobe.com> にメールを送信します。これには以下が含まれます。
 
-* 宛先が解決するユースケースの説明。 既存の宛先設定を更新する場合は、これは必須ではありません。
+* 宛先が解決するユースケースの説明。 これは、新しい宛先設定を送信する場合にのみ必要です。
+* 宛先の送信理由の説明。 これは、既存の宛先設定を更新する場合にのみ必要です。
 * 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントに対する API 呼び出しと、Adobeエンドポイントから受け取った API 応答を宛先と共有してください。
 * ファイルベースの宛先に関するその他の要件：
    * テスト API を使用した後、リクエストと応答サンプルを [サンプルプロファイルを使用したファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ Experience Platform の顧客用に宛先が解決するユースケースを説
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md):顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
 * [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにしたい広告主は、VMG のほぼリアルタイム API を使用して、新しいセグメントをすばやく作成し、目的のオーディエンスグループをプッシュできます。
+
+## 更新の理由 {#reason-for-update}
+
+>[!NOTE]
+>
+>このセクションは、既存の設定を更新する場合にのみ必要です。
+
+既存の宛先に対して送信で解決する問題の簡単な説明を提供します。 例えば、ベータ版から一般提供版に移行すると、送信先の名前、説明、ロゴが更新される場合があります。 または、送信によって、宛先設定で見つかったバグが修正される場合があります。
 
 ## テスト宛先 API を使用した後のテスト結果 {#testing-api-response}
 
