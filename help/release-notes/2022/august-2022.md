@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platformリリースノート 2022 年 8 月
-description: Adobe Experience Platformの 2022 年 8 月リリースノート。
+title: Adobe Experience Platform リリースノート 2022年8月
+description: Adobe Experience Platform の 2022年8月のリリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2109'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -36,11 +36,11 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プライバシーのサポート | <ul><li> アトリビューション AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割およびアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加されるメタデータにすることができます。管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。  </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
+| プライバシーのサポート | <ul><li> アトリビューション AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割およびアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加されるメタデータにすることができます。管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。  </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注意**:Attribution AIは、追加の通知を受けるまで、既存の Healthcare Shield のお客様では利用できません。
+**メモ**：既存のヘルスケアシールドのお客様は、追加の通知が届くまでアトリビューション AI を利用できません。
 
 アトリビューション AI について詳しくは、[アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) の概要を参照してください。
 
@@ -52,11 +52,11 @@ Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プライバシーのサポート | <ul><li> 顧客 AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割とアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、オブジェクトに追加されるメタデータ（ラベルなど）にすることができます。 管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>顧客 AI では Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。 </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
+| プライバシーのサポート | <ul><li> 顧客 AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割とアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、オブジェクトに追加されるメタデータ（ラベルなど）にすることができます。 管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>顧客 AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。 </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注意**:顧客 AI は、追加の通知を受けるまで、既存の Healthcare Shield のお客様では利用できません。
+**メモ**：既存の Healthcare Shield のお客様は、追加の通知が届くまで顧客 AI を利用できません。
 
 顧客 AI について詳しくは、[顧客 AI](../../intelligent-services/customer-ai/overview.md) の概要を参照してください。
 
@@ -116,7 +116,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizerのルックアップスキーマを作成するためのレコードベースのクラス。 |
+| クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer のルックアップスキーマを作成するためのレコードベースのクラス。 |
 | フィールドグループ | [[!UICONTROL Workfront 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront のすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -141,7 +141,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
@@ -150,7 +150,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 {style=&quot;table-layout:auto&quot;}
 
-プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、まず [リアルタイム顧客プロファイルの概要](../../profile/home.md).
+プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルについて詳しくは、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
