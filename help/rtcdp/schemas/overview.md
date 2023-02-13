@@ -1,18 +1,18 @@
 ---
-title: Real-time Customer Data Platformのスキーマ
-description: Adobe Real-time Customer Data Platformでの Experience Data Model(XDM) スキーマの役割の概要です。
+title: Real-Time Customer Data Platform のスキーマ
+description: Adobe Real-Time Customer Data Platform におけるエクスペリエンスデータモデル（XDM）スキーマの役割の概要です。
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '146'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Real-time Customer Data Platformのスキーマ
+# Real-Time Customer Data Platform のスキーマ
 
-Adobe Real-time Customer Data Platformに取り込まれるすべてのデータを、ダウンストリームの機能や機能によって認識および処理されるために、非正規化された標準構造に準拠する必要があります。 エクスペリエンスデータモデル (XDM) は、この構造をスキーマの形式で提供する標準フレームワークです。
+ダウンストリームの機能で認識して処理するために、Adobe Real-Time Customer Data Platform に取り込まれるすべてのデータは非正規化された標準構造に準拠する必要があります。 エクスペリエンスデータモデル（XDM）は、この構造をスキーマの形式で提供する標準フレームワークです。
 
-スキーマの作成後、データの構造を XDM にマッピングして、システムに取り込むことができます。
+スキーマを作成したら、データの構造を XDM にマッピングして、システムに取り込むことができます。
 
-XDM と UI でのスキーマの管理方法について詳しくは、 [XDM ドキュメント](../../xdm/home.md). リアルタイム顧客プラットフォーム B2B エディションを使用している場合は、 [Real-Time CDP B2B Edition のスキーマ](./b2b.md) を参照してください。
+XDM と UI でのスキーマの管理方法について詳しくは、[XDM のドキュメント](../../xdm/home.md)を参照してください。Real-Time Customer Platform B2B Edition を使用している場合、XDM の B2B 固有のアプリケーションについて詳しくは、[Real-Time CDP B2B Edition のスキーマ](./b2b.md)に関するドキュメントを参照してください。
