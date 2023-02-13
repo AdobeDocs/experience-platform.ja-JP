@@ -6,14 +6,14 @@ user-guide-description: 機械学習を利用して、Adobe Sensei と JupyterLa
 feature: Data Science Workspace
 solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '236'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# Data Science Workspace {#data-science-workspace}
+# データサイエンスワークスペース {#data-science-workspace}
 
 * [Data Science Workspace の概要](home.md)
 * [Data Science Workspace のアクセスと機能](access-features-dsw.md)
@@ -25,14 +25,14 @@ ht-degree: 96%
    * [クエリサービス](jupyterlab/query-service.md)
    * [探索的データ分析（EDA）](jupyterlab/eda-notebook.md)
    * [レシピビルダーを使用したモデルの作成](jupyterlab/create-a-model.md)
-   * [Git を使用した JupyterLab でのコラボレーション](jupyterlab/using-git-for-collaboration.md)
+   * [Git を使用した JupyterLab での共同作業](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
    * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
    * [MLInstances（レシピ）](api/mlinstances.md)
    * [実験](api/experiments.md)
    * [モデル](api/models.md)
-   * [MLService](api/mlservices.md)
+   * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [付録](api/appendix.md)
 * 事前定義済みレシピ {#pre-built-recipes}
@@ -58,7 +58,7 @@ ht-degree: 96%
    * [モデルのスコアリング（UI）](models-recipes/score-model-ui.md)
    * [モデルのスコアリング（API）](models-recipes/score-model-api.md)
    * [モデルの最適化](models-recipes/optimize-model.md)
-   * [リアルタイム顧客プロファイルと機械学習のインサイトの強化](models-recipes/enrich-profile.md)
+   * [機械学習のインサイトを使用してリアルタイム顧客プロファイルを強化](models-recipes/enrich-profile.md)
    * [サービスとしてのモデルの公開（UI）](models-recipes/publish-model-service-ui.md)
    * [サービスとしてのモデルの公開（API）](models-recipes/publish-model-service-api.md)
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
