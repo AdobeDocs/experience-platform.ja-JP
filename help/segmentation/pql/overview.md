@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；PQL;pql；プロファイルクエリ言語
+keywords: Experience Platform;ホーム;人気のトピック;PQL;pql;プロファイルクエリ言語
 solution: Experience Platform
-title: プロファイルクエリ言語 (PQL) の概要
-description: このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
+title: プロファイルクエリ言語（PQL）の概要
+description: このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '715'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# [!DNL Profile Query Language] (PQL) の概要
+# [!DNL Profile Query Language]（PQL）の概要
 
-[!DNL Profile Query Language] (PQL) は [!DNL Experience Data Model] (XDM) 準拠のクエリ言語。 [!DNL Real-Time Customer Profile] データ。
+[!DNL Profile Query Language]（PQL）は、[!DNL Experience Data Model]（XDM）準拠のクエリ言語で、[!DNL Real-Time Customer Profile] データのセグメント化クエリの定義と実行をサポートするように設計されています。
 
-このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
+このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 
 ## PQL クエリの形式
 
@@ -79,7 +79,7 @@ PQL では次のリテラル型をサポートしています。
 | 配列、リスト、セット | 配列、リスト、セットの操作に使用されます。これらの関数について詳しくは、[配列関数、リスト関数、セット関数のドキュメント](./array-functions.md)を参照してください。 |
 | マップ | マップの操作に使用します。これらの関数について詳しくは、[マップ関数のドキュメント](./map-functions.md)を参照してください。 |
 | 文字列 | 文字列の操作に使用します。これらの関数について詳しくは、[文字列関数のドキュメント](./string-functions.md)を参照してください。 |
-| オブジェクト | オブジェクトの操作に使用します。 これらの関数について詳しくは、 [オブジェクト関数ドキュメント](./object-functions.md). |
+| オブジェクト | オブジェクトの操作に使用します。これらの関数について詳しくは、[オブジェクト関数のドキュメント](./object-functions.md)を参照してください。 |
 | 算術演算 | PQL 要素に対して基本的な算術演算を実行するために使用します。これらの関数について詳しくは、[算術演算関数のドキュメント](./arithmetic-functions.md)を参照してください |
 | 集計 | 配列の結果を 1 つの結果に組み合わせるために使用します。これらの関数について詳しくは、[集計関数のドキュメント](./aggregation-functions.md)を参照してください。 |
 | 日時 | 日付、時刻、日時の各オブジェクトと組み合わせて使用します。これらの関数について詳しくは、[日付／時刻関数のドキュメント](./datetime-functions.md)を参照してください。 |
@@ -89,4 +89,4 @@ PQL では次のリテラル型をサポートしています。
 
 ## 次の手順
 
-これで、 [!DNL Profile Query Language]の場合は、セグメントを作成および変更する際に PQL を使用できます。 セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
+これで、[!DNL Profile Query Language] の使用方法を説明したので、セグメントの作成および変更時に PQL を使用できます。セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
