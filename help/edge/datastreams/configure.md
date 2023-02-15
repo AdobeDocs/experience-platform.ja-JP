@@ -1,10 +1,11 @@
 ---
 title: データストリームの設定
 description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
-workflow-type: ht
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+workflow-type: tm+mt
 source-wordcount: '1658'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -38,11 +39,11 @@ Experience Platform で使用するためにこのデータストリームを設
 
 「**[!UICONTROL 詳細オプション]**」を選択して、データストリームを設定するための追加のコントロールを表示します。
 
-![詳細設定オプション](../assets/datastreams/configure/advanced-options.png)
+![詳細設定オプション](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて GPS ルックアップが発生するかどうかを決定します。デフォルト設定&#x200B;**[!UICONTROL なし]**&#x200B;は、すべての GPS ルックアップを無効にするのに対して、**[!UICONTROL 市区町村]**&#x200B;設定は、GPS 座標を小数第 2 位で提供します。 |
+| [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて地域検索を行うかどうかを決定します。 デフォルト設定 **[!UICONTROL なし]** を指定すると、地域検索が無効になり、 **[!UICONTROL 市区町村]** を設定すると、小数点以下 2 桁までの GPS 座標が表示されます。 |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
 | [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
