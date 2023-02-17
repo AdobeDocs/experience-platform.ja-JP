@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK でサポートされている認証設定を使用してユーザーを認証し、宛先エンドポイントに対してデータを有効化します。
 title: 認証設定
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 91%
+source-wordcount: '498'
+ht-degree: 83%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 91%
 Adobe Experience Platform Destination SDK は、次の複数の認証タイプをサポートしています。
 
 * [ベアラー認証](#bearer)
+* [基本認証](#basic)
 * [[!DNL Amazon S3] 認証](#s3)
 * [[!DNL Azure Blob] ストレージ](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -34,6 +35,22 @@ Adobe Experience Platform Destination SDK は、次の複数の認証タイプ�
 
 * [ストリーミング宛先の認証設定](destination-configuration.md#customer-authentication-configurations)
 * [ファイルベースの宛先の認証設定](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## 基本認証 {#basic}
+
+基本認証は、Experience Platformのストリーミング先でサポートされます。
+
+基本認証タイプを設定する場合、ユーザーは宛先に接続するためのユーザー名とパスワードを入力する必要があります。
+
+宛先の基本認証を設定するには、 `customerAuthenticationConfigurations` セクション ( `/destinations` エンドポイントに次のように表示されます。
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## ベアラー認証 {#bearer}
 

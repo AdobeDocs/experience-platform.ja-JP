@@ -2,9 +2,9 @@
 description: この構成により、宛先名、カテゴリ、説明、ロゴなどの基本情報を示すことができます。 また、この構成での設定は、Experience Platform ユーザーが宛先に対して認証する方法、Experience Platform ユーザーインターフェイスに表示される方法、宛先に書き出すことができる ID も決定します。
 title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 88%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 88%
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 文字列 | Experience Platform の顧客をサーバーで認証するために使用される構成を示します。 使用可能な値については、下記の `authType` を参照してください。 |
-| `authType` | 文字列 | ストリーミング先として使用可能な値は、以下のとおりです。<ul><li>`BEARER`。宛先がベアラー認証をサポートしている場合、`"authType":"Bearer"` および `"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先の配信セクション](./destination-configuration.md)内に設定します。</li><li>`OAUTH2`。宛先が OAuth 2 認証をサポートしている場合は、`"authType":"OAUTH2"` を [Destination SDK OAuth 2 認証ページ](./oauth2-authentication.md)に記載されているように設定し、OAuth 2 の必須フィールドを追加します。さらに、`"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先配信セクション](./destination-configuration.md)に設定します。</li> |
+| `authType` | 文字列 | ストリーミング先として使用可能な値は、以下のとおりです。<ul><li>`BASIC`。宛先が基本認証をサポートしている場合は、 `"authType":"Basic"` および  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 内 [宛先の配信セクション](./destination-configuration.md).</li><li>`BEARER`。宛先がベアラー認証をサポートしている場合、`"authType":"Bearer"` および `"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先の配信セクション](./destination-configuration.md)内に設定します。</li><li>`OAUTH2`。宛先が OAuth 2 認証をサポートしている場合は、`"authType":"OAUTH2"` を [Destination SDK OAuth 2 認証ページ](./oauth2-authentication.md)に記載されているように設定し、OAuth 2 の必須フィールドを追加します。さらに、`"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先配信セクション](./destination-configuration.md)に設定します。</li> |
 
 {style=&quot;table-layout:auto&quot;}
 

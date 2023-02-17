@@ -2,7 +2,7 @@
 description: このページでは、API エンドポイント /authoring/destinations を使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
 source-wordcount: '2545'
 ht-degree: 91%
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | 文字列 | アドビが宛先カードの Experience Platform 宛先カタログで使用する説明を入力します。4 ～ 5 文以下を目指します。 |
 | `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。最初に宛先を設定する際は `TEST` を使用します。 |
 | `customerAuthenticationConfigurations` | 文字列 | Experience Platform の顧客をサーバーで認証するために使用される構成を示します。 使用可能な値については、下記の `authType` を参照してください。 |
-| `customerAuthenticationConfigurations.authType` | 文字列 | ストリーミング宛先でサポートしている値は次の通りです。 <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> ファイルベースの宛先でサポートしている値は次の通りです。 <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
+| `customerAuthenticationConfigurations.authType` | 文字列 | ストリーミング宛先でサポートしている値は次の通りです。 <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li></ul> ファイルベースの宛先でサポートしている値は次の通りです。 <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | 文字列 | 導入するカスタムフィールドの名前を記入します。 |
 | `customerDataFields.type` | 文字列 | 導入するカスタムフィールドのタイプを示します。 指定できる値は、`string`、`object`、`integer` です。 |
 | `customerDataFields.title` | 文字列 | Experience Platform ユーザーインターフェイスで顧客に表示されるフィールドの名前を示します |
@@ -587,8 +587,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `customerDataFields.isRequired` | ブール値 | このフィールドが宛先設定ワークフローで必須かどうかを示します。 |
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドで `^[A-Za-z]+$` を入力します。 |
-| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、`https://www.adobe.com/go/destinations-moviestar-en` を使用します。。このリンクは、Adobeが宛先をライブに設定し、ドキュメントが公開された後にのみ機能します。 |
-| `uiAttributes.category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)を参照してください。次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=ja#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、`https://www.adobe.com/go/destinations-moviestar-en` を使用します。。このリンクは、Adobeが宛先をライブに設定し、ドキュメントが公開された後にのみ機能します。 |
+| `uiAttributes.category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。 詳しくは、[宛先カテゴリ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=ja#destination-categories)を参照してください。次のいずれかの値を使用します。`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | 文字列 | `Server-to-server` は現在利用可能な唯一のオプションです。 |
 | `uiAttributes.frequency` | 文字列 | `Streaming` は現在唯一の利用可能なオプションです。 |
 | `identityNamespaces.externalId.acceptsAttributes` | ブール値 | お客様が、設定中の ID に標準プロファイル属性をマッピングできるかどうかを示します。 |
