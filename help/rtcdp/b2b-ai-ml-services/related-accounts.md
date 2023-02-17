@@ -3,10 +3,10 @@ title: Real-Time CDP B2B Edition の関連するアカウント
 type: Documentation
 description: Experience PlatformReal-Time CDP B2B の関連アカウント機能の概要と詳細情報です。
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 22%
 
 ---
 
@@ -31,6 +31,16 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 ![Experience PlatformUI の関連アカウントを示す画面。](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 この機能を使用すると、Experience PlatformUI でアカウントプロファイルの関連アカウントプロファイルを表示し、セグメント定義に関連アカウントを含めて、リーチを広げたり、セグメントにより幅広い条件を適用したりできます。
+
+## 関連アカウントサービスを有効にする {#enable}
+
+サービスを有効にするには、 **[!UICONTROL プロファイル]** サイドバーで、次の順に **[!UICONTROL 設定]**.
+
+![Experience PlatformUI でプロファイルと設定をハイライト表示します。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+の横にある切り替えを選択します。 [!UICONTROL 関連アカウントの有効化] サービスを有効にするには、「 」を選択します。 **[!UICONTROL 保存]**.
+
+![切り替えと保存をハイライトするアカウント設定画面。](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## 仕組み {#how-it-works}
 
