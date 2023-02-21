@@ -2,10 +2,10 @@
 title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 74%
+source-wordcount: '896'
+ht-degree: 71%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 74%
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | `credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
 | `topicId` | の ID [!DNL PubSub] メッセージのフィードを表すリソース。 トピック ID を指定する必要があるのは、 [!DNL Google PubSub] ソース。 |
+| `subscriptionId` | の ID [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
 これらの値について詳しくは、こちらの [[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)に関するドキュメントを参照してください。サービスアカウントベースの認証を使用するには、こちらの[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)で、資格情報の生成手順を確認してください。
@@ -79,7 +80,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -93,7 +95,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
-| `auth.params.topicID` | のトピック ID [!DNL PubSub] アクセスを提供するソース。 |
+| `auth.params.topicId` | のトピック ID [!DNL PubSub] アクセスを提供するソース。 |
+| `auth.params.subscriptionId` | に対するサブスクリプションの ID [!DNL PubSub] トピック。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
 **応答**

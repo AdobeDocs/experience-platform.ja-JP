@@ -2,10 +2,10 @@
 title: UI で Google PubSub ソース接続を作成
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 79%
+source-wordcount: '658'
+ht-degree: 73%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 79%
 | プロジェクト ID | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | 認証情報 | [!DNL PubSub] の認証に必要な資格情報または秘密鍵の ID。 |
 | トピック ID | の ID [!DNL PubSub] メッセージのフィードを表すリソース。 トピック ID を指定する必要があるのは、 [!DNL Google PubSub] ソース。 |
+| サブスクリプション ID | の ID [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
 
 これらの値について詳しくは、次の [PubSub 認証](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。サービスアカウントベースの認証を使用している場合、資格情報の生成手順については、次の [PubSub ガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
@@ -48,7 +49,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 [!UICONTROL クラウドストレージ]カテゴリで、**[!UICONTROL Google PubSub]** を選択し、次に&#x200B;**[!UICONTROL データを追加]**&#x200B;を選択します。
 
-![カタログ](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience PlatformUI のソースカタログ。](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 **[!UICONTROL Google PubSub に接続]**&#x200B;ページが表示されます。このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -56,7 +57,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL PubSub] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![既存](../../../../images/tutorials/create/google-pubsub/existing.png)
+![ソースワークフロー内の既存のアカウント選択。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### 新しいアカウント
 
@@ -68,7 +69,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![新規](../../../../images/tutorials/create/google-pubsub/new.png)
+![ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## 次の手順
 
