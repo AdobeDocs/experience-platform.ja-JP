@@ -2,7 +2,7 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 75%
@@ -11,7 +11,7 @@ ht-degree: 75%
 
 # タグとイベント転送のリリースノート
 
-## 2022年1月25日（PT）
+## 2023年1月25日
 
 * **新しいホーム画面**:データ収集 UI のホームページが更新され、生産性を向上させるための便利なオンボーディング情報やリンクが含まれるようになりました。 これには以下が含まれます。
    1. ドキュメントおよび推奨ワークフローを参照してください
