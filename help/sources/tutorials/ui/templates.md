@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;
 description: Adobe Experience Platform には、データ取り込みプロセスを高速化するために使用できる、事前設定済みのテンプレートが用意されています。テンプレートには、ソースから Experience Platform にデータを取り込む際に使用できる、スキーマ、データセット、マッピングルール、ID、ID 名前空間およびデータフローなどの自動生成アセットが含まれます。
-title: （アルファ版）UI のテンプレートを使用してソースのデータフローを作成する
+title: （ベータ版）UI のテンプレートを使用してソースのデータフローを作成する
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
-workflow-type: ht
-source-wordcount: '1184'
-ht-degree: 100%
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+workflow-type: tm+mt
+source-wordcount: '1337'
+ht-degree: 76%
 
 ---
 
-# （アルファ版）UI のテンプレートを使用してソースのデータフローを作成する
+# （ベータ版）UI のテンプレートを使用してソースのデータフローを作成する
 
 >[!IMPORTANT]
 >
->テンプレートはアルファ版で、現在、[[!DNL Marketo Engage] ソース](../../connectors/adobe-applications/marketo/marketo.md)でのみサポートされています。ドキュメントと機能は変更される場合があります。
+>テンプレートはベータ版で、次のソースでサポートされています。
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>ドキュメントと機能は変更される場合があります。
 
 Adobe Experience Platform には、データ取り込みプロセスを高速化するために使用できる、事前設定済みのテンプレートが用意されています。テンプレートには、ソースから Experience Platform にデータを取り込む際に使用できる、スキーマ、データセット、ID、マッピングルール、ID 名前空間およびデータフローなどの自動生成されたアセットが含まれます。
 
@@ -25,7 +32,7 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 * 手動データ取り込みプロセス中に発生する可能性のあるエラーを最小限に抑えます。
 * ユースケースに合わせて、自動生成されたアセットを随時更新します。
 
-次のチュートリアルでは、[[!DNL Marketo Engage] ソース](../../connectors/adobe-applications/marketo/marketo.md)を使用して、Platform UI でテンプレートを使用する方法を説明します。
+次のチュートリアルでは、Platform UI でテンプレートを使用する手順を説明します。
 
 ## はじめに
 
@@ -43,11 +50,11 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 >abstract="ユースケースに適したビジネスタイプを選択します。アクセス権は、Real-time Customer Data Platform サブスクリプションアカウントによって異なる場合があります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja" text="Real-time CDP の概要"
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントの作成に使用できる様々なソースが表示されます。
+Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
+以下を使用： *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-[!UICONTROL アドビアプリケーション]カテゴリから、「**[!UICONTROL Marketo Engage]**」、「**[!UICONTROL データを追加]**」の順に選択します。
+次に移動： [!UICONTROL Adobe] 表示するカテゴリ [!DNL Marketo Engage] ソースカードを選択し、 [!UICONTROL データを追加] をクリックして開始します。
 
 ![ソースワークスペースのカタログで、Marketo Engage ソースがハイライト表示されています。](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 認証手順が表示され、新しいアカウントを作成するか、既存のアカウントを使用するかを尋ねられます。
 
-#### 既存のアカウント
+>[!BEGINTABS]
+
+>[!TAB 既存のアカウントを使用]
 
 既存のアカウントを使用するには、「[!UICONTROL 既存のアカウント]」を選択し、表示されるリストから使用するアカウントを選択します。
 
 ![アクセス可能な既存のアカウントのリストを含む既存のアカウントの選択ページ。](../../images/tutorials/templates/existing-account.png)
 
-#### 新しいアカウント
+>[!TAB 新しいアカウントを作成]
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、ソース接続の詳細とアカウント認証資格情報を入力します。終了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![ソース接続の詳細とアカウント認証資格情報を含む新しいアカウントの認証ページ。](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### テンプレートを選択する
 
-アカウントを認証して選択すると、テンプレートのリストが表示されます。テンプレート名の横にあるプレビューアイコンを選択して、テンプレートからサンプルデータをプレビューします。
+選択したビジネスタイプに応じて、テンプレートのリストが表示されます。 プレビューアイコンを選択 ![プレビューアイコン](../../images/tutorials/templates/preview-icon.png) をクリックして、テンプレート名の横にあるサンプルデータをプレビューします。
 
 ![プレビューアイコンがハイライトされたテンプレートのリスト。](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 >既に使用されているテンプレートは、選択できなくなります。
 
 ![商談連絡先の役割テンプレートが選択されているテンプレートのリスト。](../../images/tutorials/templates/select-template.png)
+
+### スケジュールを設定
+
+この [!DNL Microsoft Dynamics] そして [!DNL Salesforce] ソースはどちらもスケジューリングデータフローをサポートしています。
+
+スケジューリングインターフェイスを使用して、データフローの取り込みスケジュールを設定します。 取り込み頻度をに設定します。 **1 回** :1 回限りの取り込みを作成します。
+
+![Dynamics および Salesforce テンプレートのスケジュールインターフェイス。](../../images/tutorials/templates/schedule.png)
+
+または、取り込み頻度を **分**, **時間**, **日**&#x200B;または **週**. データフローを複数の取り込み用にスケジュールする場合は、取り込みのたびに時間枠を設定する間隔を設定する必要があります。 例えば、取り込み頻度を **時間** 間隔は **15** は、データフローが **15 時間**.
+
+この手順の間に、 **バックフィル** およびは、データの増分取り込みの列を定義します。 バックフィルは、履歴データを取り込むために使用されます。一方、増分取り込み用に定義する列では、新しいデータを既存のデータと区別することができます。
+
+取り込みスケジュールの設定が完了したら、「 」を選択します。 **[!UICONTROL 完了]**.
+
+![バックフィルが有効な Dynamics および Salesforce テンプレートのスケジュールインターフェイス。](../../images/tutorials/templates/backfill.png)
 
 ### アセットのレビュー {#review-assets}
 

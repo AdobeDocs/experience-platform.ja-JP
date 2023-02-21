@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Marketoソースコネクタ；名前空間；スキーマ；b2b;B2B
-solution: Experience Platform
 title: B2B 名前空間とスキーマ
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 14%
 
 ---
 
 # B2B 名前空間とスキーマ
+
+>[!NOTE]
+>
+>Adobe Experience Platform UI でテンプレートを使用すると、B2B および B2C データのアセット作成を迅速におこなうことができます。 詳しくは、 [Platform UI でのテンプレートの使用](../../../tutorials/ui/templates.md).
 
 このドキュメントでは、B2B ソースで使用する名前空間とスキーマの基になる設定に関する情報を提供します。 このドキュメントでは、B2B 名前空間とスキーマの生成に必要なPostman自動化ユーティリティの設定に関する詳細も説明します。
 
@@ -66,7 +68,7 @@ Platform デベロッパーコンソールと [!DNL Postman] を設定すると�
 
 ## B2B 名前空間
 
-ID 名前空間は、 [[!DNL Identity Service]](../../../../identity-service/home.md) id のコンテキストまたはタイプを区別するために役立つ 完全修飾 ID には、ID 値と名前空間が含まれます。詳しくは、 [名前空間の概要](../../../../identity-service/namespaces.md) を参照してください。
+ID 名前空間は、 [[!DNL Identity Service]](../../../../identity-service/home.md) id のコンテキストまたはタイプを区別するために役立つ 完全修飾 ID には、ID 値と名前空間が含まれています。詳しくは、 [名前空間の概要](../../../../identity-service/namespaces.md) を参照してください。
 
 B2B 名前空間は、エンティティのプライマリ ID で使用されます。
 
