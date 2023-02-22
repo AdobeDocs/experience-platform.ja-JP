@@ -3,7 +3,7 @@ title: 新しいベータクラウドストレージの宛先で最終認定時�
 description: 新しいベータクラウドストレージの宛先で XDM 属性の最終認定時間を使用する方法を説明します
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 8%
@@ -24,7 +24,7 @@ ht-degree: 8%
 
 ## 最終認定時間 XDM 属性の使用方法 {#how-to-use}
 
-6 つの新しいクラウドストレージベータコネクタのいずれかを使用している場合は、XDM 属性の最終認定時間を [マッピング手順](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) の最新のタイムスタンプを使用して、プロファイルがセグメントの対象として認定された時点での、書き出されたファイルに列を作成するためのアクティベーションワークフローに関する情報です。 これにより、特定の測定または分析の使用例に役立ち、特定のオーディエンスをアクティブ化するタイミングをより深く把握できます。
+6 つの新しいクラウドストレージベータコネクタのいずれかを使用している場合は、XDM 属性の最終認定時間を [マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) の最新のタイムスタンプを使用して、プロファイルがセグメントの対象として認定された時点での、書き出されたファイルに列を作成するためのアクティベーションワークフローに関する情報です。 これにより、特定の測定または分析の使用例に役立ち、特定のオーディエンスをアクティブ化するタイミングをより深く把握できます。
 
 追加する `lastQualificationTime` をファイルのエクスポートに追加する場合は、現在、値を手動で挿入する必要があります `xdm: segmentMembership.ups.seg_id.lastQualificationTime` を「ソース」フィールドに挿入します。 ターゲットフィールドを `lastQualificationTime` またはこの列に名前を付ける他の値。 これはベータ版機能なので、 `xdm: segmentMembership.ups.seg_id.lastQualificationTime` 値は将来変更される可能性があります。
 
