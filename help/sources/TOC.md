@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '931'
 ht-degree: 92%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 92%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - 広告 {#advertising}
          - [Google 広告](tutorials/ui/create/advertising/ads.md)

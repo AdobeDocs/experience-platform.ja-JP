@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage コネクタ
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 13%
+source-wordcount: '658'
+ht-degree: 12%
 
 ---
 
@@ -73,12 +73,13 @@ XDM と Platform での役割について詳しくは、 [XDM システムの概
 | [!DNL Real-Time Customer Profile] | &lt; 1 分 |
 | データレイク | &lt; 60 分 |
 
-## 次の手順と追加のリソース
+## 次の手順とその他のリソース
 
 次のドキュメントでは、 [!DNL Marketo] ソース接続：
 
-* 接続方法に関する情報 [!DNL Marketo] データを Platform に送信する場合は、 [UI でのMarketoソースコネクタの作成](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* B2B 名前空間と、で使用されるスキーマの基になる設定について説明します。 [!DNL Marketo]詳しくは、 [B2B 名前空間とスキーマ](./marketo-namespaces.md).
+* 接続方法に関する情報 [!DNL Marketo] データを Platform に送信する場合は、 [作成 [!DNL Marketo] UI のソース接続](../../../tutorials/ui/create/adobe-applications/marketo.md).
+   * スキーマの設定方法とカスタムアクティビティデータの取り込み方法については、 [のソース接続とデータフローの作成 [!DNL Marketo] カスタムアクティビティデータ](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* B2B 名前空間と、で使用されるスキーマの基になる設定について説明します。 [!DNL Marketo]を参照し、 [B2B 名前空間とスキーマ](./marketo-namespaces.md).
 * の検索に関する情報 [!DNL Marketo] munchkin ID と資格情報の生成については、 [[!DNL Marketo] 認証ガイド](./marketo-auth.md).
-* に適用される特定のマッピングルールの詳細 [!DNL Marketo] データセットについては、 [[!DNL Marketo] フィールドマッピング](../mapping/marketo.md).
+* に適用される特定のマッピングルールの詳細 [!DNL Marketo] データセット、 [[!DNL Marketo] フィールドマッピング](../mapping/marketo.md).
 * に関する一般情報 [!DNL Real-Time Customer Data Platform B2B Edition] およびその機能については、 [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
