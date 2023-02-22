@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 45%
@@ -417,7 +417,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 #### 廃止されたフィールド記述子
 
-以下が可能です。 [カスタム XDM リソース内のフィールドを廃止する](../tutorials/field-deprecation.md#custom) を `meta:status` 属性を `deprecated` 問題のフィールドに ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨にする場合は、非推奨のフィールド記述子を対象のスキーマに割り当てても、同じ効果を得ることができます。 の使用 [正しい `Accept` ヘッダー](../tutorials/field-deprecation.md#verify-deprecation)の場合は、API でスキーマを検索する際に、非推奨となった標準フィールドを表示できます。
+以下が可能です。 [カスタム XDM リソース内のフィールドを廃止する](../tutorials/field-deprecation-api.md#custom) を `meta:status` 属性を `deprecated` 問題のフィールドに ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨にする場合は、非推奨のフィールド記述子を対象のスキーマに割り当てても、同じ効果を得ることができます。 の使用 [正しい `Accept` ヘッダー](../tutorials/field-deprecation-api.md#verify-deprecation)の場合は、API でスキーマを検索する際に、非推奨となった標準フィールドを表示できます。
 
 ```json
 {

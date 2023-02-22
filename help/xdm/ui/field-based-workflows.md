@@ -4,7 +4,7 @@ description: 既存のフィールドグループからエクスペリエンス�
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Adobe Experience Platformは、堅牢な標準化された [フィールドグ�
 
 このチュートリアルは、 [XDM スキーマの構成](../schema/composition.md) と、Platform UI でのスキーマエディターの使用方法について説明します。 続けるには、次の手順を開始する必要があります。 [新しいスキーマの作成](./resources/schemas.md) を標準クラスに割り当ててから、このガイドに進みます。
 
-## 標準フィールドグループから追加されたフィールドを削除
+## 標準フィールドグループから追加されたフィールドを削除 {#remove-field-group}
 
 標準フィールドグループをスキーマに追加した後、不要な標準フィールドを削除できます。
 
@@ -91,7 +91,7 @@ Adobe Experience Platformは、堅牢な標準化された [フィールドグ�
 >
 >既存のカスタムフィールドグループを選択した場合、そのフィールドグループを使用する他のスキーマも、変更を保存した後で、新しく追加されたフィールドを継承します。 このため、このタイプの伝播を行う場合は、既存のフィールド・グループを選択する必要があります。 それ以外の場合は、代わりに新しいカスタムフィールドグループを作成する必要があります。
 
-終了したら、「 」を選択します。 **[!UICONTROL 適用]**.
+完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![フィールドを適用](../images/ui/field-based-workflows/apply-field.png)
 
