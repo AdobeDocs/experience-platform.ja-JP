@@ -3,10 +3,10 @@ title: User-Agent クライアントのヒント
 description: Web SDK での User-Agent Client Hints の仕組みを説明します
 keywords: user-agent;client-hints;文字列；user-agent 文字列；低エントロピー；高エントロピー
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1132'
+ht-degree: 10%
 
 ---
 
@@ -116,16 +116,13 @@ Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利
 
 ### Adobe Analyticsは、高エントロピーなクライアントヒントに頼るレポートを作成 {#analytics}
 
-この [オペレーティングシステム](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットに対して、オペレーティングシステムのバージョンが不正確になる可能性があります。
+この [オペレーティングシステム](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ja) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットに対して、オペレーティングシステムのバージョンが不正確になる可能性があります。
 
 ### Audience Manager特性は高エントロピーのクライアントヒントに依存 {#aam}
 
-Audience Manager特性で次のいずれかのプロパティを使用する場合は、高エントロピーのクライアントヒントを有効にする必要があります。 そうしないと、特性は機能しなくなります。
+[!DNL Google] は更新済みです [!DNL Chrome] ブラウザー機能を使用して、 `User-Agent` ヘッダー。 その結果、を使用してAudience Managerをおこなうお客様は、 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) は、に基づく特性の信頼できる情報を受け取らなくなります [プラットフォームレベルのキー](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ja).
 
-* オペレーティングシステムのバージョン
-* デバイスモデル
-* デバイスの製造元
-* デバイスのベンダー
+Audience Managerのお客様がターゲティングにプラットフォームレベルのキーを使用する場合は、 [Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) の代わりに [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)、有効 [高エントロピークライアントヒント](#enabling-high-entropy-client-hints) 信頼できる特性データを引き続き受信する。
 
 ## 高エントロピーのクライアントヒントの有効化 {#enabling-high-entropy-client-hints}
 
