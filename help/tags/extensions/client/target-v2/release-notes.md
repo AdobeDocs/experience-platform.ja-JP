@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 93%
+source-wordcount: '628'
+ht-degree: 91%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## v0.19.2（2023 年 2 月 15 日）
+
+- タイムアウトをデータ要素に設定できる問題を修正しました。
 
 ## v0.19.0（2022 年 9 月 20 日）
 
@@ -104,7 +108,7 @@ ht-degree: 93%
 - adobe.target.getOffer API に Target Global Mbox サポートを追加しました。
 - パラメーターとページ読み込みパラメーターが正しく処理されない問題を修正しました。
 
-## v0.12.0（2019 年 10 月 10 日（PT））
+## v0.12.0（2019年10月10日）
 
 - `at.js` を v2.2 に更新しました。
 - Experience Cloud ID ライブラリ（ECID）v4.4 と `at.js` 2.2 間の統合のパフォーマンスを向上しました。
