@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
 workflow-type: tm+mt
 source-wordcount: '3355'
 ht-degree: 7%
@@ -342,10 +342,10 @@ DROP VIEW IF EXISTS v1
 次の例は、1 つ以上のステートメントを組み合わせて実行するブロックの作成方法を示しています。
 
 ```sql
-BEGIN
+$$BEGIN
   statementList
 [EXCEPTION exceptionHandler]
-END
+$$END
 
 exceptionHandler:
       WHEN OTHER
@@ -358,7 +358,7 @@ statementList:
 匿名ブロックの使用例を以下に示します。
 
 ```sql
-BEGIN
+$$BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_log_id = select now();
@@ -369,7 +369,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END;
+$$END;
 ```
 
 ### JSON に自動 {#auto-to-json}
