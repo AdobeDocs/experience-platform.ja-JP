@@ -3,7 +3,7 @@ title: フローサービス API を使用して、ストリーミング SDK の
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（ストリーミング SDK）を使用して接続を指定する手順を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 4254e5373586399be35f4a8b8c40c83b7d60afa4
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 4%
@@ -73,6 +73,7 @@ PUT -X GET \
         "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "sourceSpec": {
           "attributes": {
+            "authRequired": false,
             "uiAttributes": {
               "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
               "isSource": true,
@@ -128,6 +129,7 @@ PUT -X GET \
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,

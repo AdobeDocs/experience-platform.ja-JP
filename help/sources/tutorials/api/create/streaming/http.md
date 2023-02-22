@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 41%
+source-wordcount: '1496'
+ht-degree: 40%
 
 ---
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 認証済みのベース接続を作成する際に使用できる追加の識別子。 このパラメーターはオプションで、 `name` 属性を指定しない場合は。 |
-| `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
+| `auth.params.authenticationRequired` | このパラメーターは、ストリーミング接続で認証を必要とするかどうかを指定します。 If `authenticationRequired` が `true` 次に、ストリーミング接続に認証を指定する必要があります。 If `authenticationRequired` が `false` 認証は不要です。 |
 
 **応答**
 
