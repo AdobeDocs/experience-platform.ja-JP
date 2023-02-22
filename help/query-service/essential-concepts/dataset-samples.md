@@ -2,18 +2,14 @@
 title: データセットのサンプル
 description: クエリサービスのサンプルデータセットを使用すると、クエリの精度を犠牲にして、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。 このガイドでは、近似クエリ処理のためのサンプルの管理方法に関する情報を提供します
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# （限定リリース）データセットのサンプル
-
->[!IMPORTANT]
->
->データセットサンプル機能は現在、限定的なリリースになっており、すべてのお客様が利用できるわけではありません。
+# データセットのサンプル
 
 Adobe Experience Platformクエリサービスは、クエリ処理機能の一部として、サンプルデータセットを提供します。 サンプルデータセットは、既存のサンプルから均一なランダムサンプルを使用して作成されます [!DNL Azure Data Lake Storage] (ADLS) データセット。元のレコードの割合のみを使用します。 この割合は、サンプリングレートと呼ばれます。 精度と処理時間のバランスを制御するためにサンプリングレートを調整すると、クエリの精度を犠牲にして、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。
 
@@ -22,14 +18,15 @@ Adobe Experience Platformクエリサービスは、クエリ処理機能の一�
 クエリサービスでは、概算クエリ処理のためのサンプルの管理に役立つように、データセットサンプルに対して次の操作をサポートしています。
 
 - [均一なランダムデータセットのサンプルを作成します。](#create-a-sample)
+- [必要に応じてフィルタ条件を指定します](##optional-filter-criteria)
 - [ADLS テーブルのサンプルのリストを表示します。](#view-list-of-samples)
 - [サンプルデータセットを直接クエリします。](#query-sample-datasets)
 - [サンプルを削除します。](#delete-a-sample)
 - 元の ADLS テーブルが削除されたときに、関連するサンプルを削除します。
 
-## はじめに
+## はじめに {#get-started}
 
-上記の概算クエリ処理機能を使用するには、セッションフラグをに設定する必要があります。 `true`. クエリエディターまたは PSQL クライアントのコマンドラインから、 `SET aqp=true;` コマンドを使用します。
+このドキュメントで詳しく説明する概算クエリ処理機能の作成と削除をおこなうには、セッションフラグをに設定する必要があります。 `true`. クエリエディターまたは PSQL クライアントのコマンドラインから、 `SET aqp=true;` コマンドを使用します。
 
 >[!NOTE]
 >
@@ -39,7 +36,7 @@ Adobe Experience Platformクエリサービスは、クエリ処理機能の一�
 
 ## 均一なランダムデータセットのサンプルを作成する {#create-a-sample}
 
-以下を使用： `ANALYZE TABLE` コマンドにデータセット名を付けて、そのデータセットから均一なランダムサンプルを作成します。
+以下を使用： `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` コマンドにデータセット名を付けて、そのデータセットから均一なランダムサンプルを作成します。
 
 サンプルレートは、元のデータセットから取得したレコードの割合です。 サンプルレートは、 `TABLESAMPLE SAMPLERATE` キーワード。 この例では、値 5.0 はサンプルレート 50%と等しくなります。 値が 2.5 の場合は 25%と等しくなります。
 
@@ -50,6 +47,28 @@ Adobe Experience Platformクエリサービスは、クエリ処理機能の一�
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
+
+## 必要に応じてフィルタ条件を指定します {#optional-filter-criteria}
+
+均一なランダムサンプルのフィルタ条件を指定できます。 これにより、分析済みテーブルのフィルター済みサブセットに基づいてサンプルを作成できます。
+
+サンプルを作成する際、オプションのフィルターが最初に適用され、次に、サンプルがデータセットのフィルターされた表示から作成されます。 フィルターが適用されたデータセットの例を次に示します。
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
+```
+
+このタイプのフィルタリングされたサンプルデータセットの実例を次に示します。
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+この例では、テーブル名は `large_table`に設定されている場合、元のテーブルのフィルター条件は `month(to_timestamp(timestamp)) in ('8', '9')`( この場合、サンプリングレートは（フィルターされたデータの X%）です。 `10`.
 
 ## サンプルのリストの表示 {#view-list-of-samples}
 
