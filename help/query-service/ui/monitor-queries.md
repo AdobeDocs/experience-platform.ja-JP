@@ -2,10 +2,10 @@
 title: スケジュール済みクエリの監視
 description: クエリサービス UI を使用してクエリを監視する方法について説明します。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 73%
+source-wordcount: '1204'
+ht-degree: 74%
 
 ---
 
@@ -118,11 +118,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 ![「SQL コピー」アイコンが強調表示された実行詳細画面](../images/ui/monitor-queries/copy-sql.png)
 
-### （限定的なリリース）匿名ブロックを含むクエリの詳細を実行します {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->匿名ブロッククエリの実行の詳細を表示するクエリ監視機能は、現在、限定リリースになっており、すべてのお客様が利用できるわけではありません。
+### 匿名ブロックを含むクエリの詳細を実行 {#anonymous-block-queries}
 
 匿名ブロックを使用して SQL 文を構成するクエリは、個々のクエリに分割されます。 これにより、各クエリブロックの実行詳細を個別に調べることができます。
 

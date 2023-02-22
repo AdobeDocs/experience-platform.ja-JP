@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '3156'
-ht-degree: 8%
+source-wordcount: '3355'
+ht-degree: 7%
 
 ---
 
@@ -372,6 +372,85 @@ EXCEPTION
 END;
 ```
 
+### JSON に自動 {#auto-to-json}
+
+クエリサービスは、インタラクティブな SELECT クエリから最上位の複雑なフィールドを JSON 文字列として返す、オプションのセッションレベル設定をサポートしています。 この `auto_to_json` を設定すると、複雑なフィールドのデータを JSON として返し、標準ライブラリを使用して JSON オブジェクトに解析できます。
+
+機能フラグを設定 `auto_to_json` を true に設定してから、複雑なフィールドを含む SELECT クエリを実行します。
+
+```sql
+set auto_to_json=true; 
+```
+
+#### 設定する前に `auto_to_json` フラグ
+
+次の表は、 `auto_to_json` 設定が適用されます。 （以下に示すように）複雑なフィールドを持つテーブルをターゲットにするのと同じ SELECT クエリが、両方のシナリオで使用されました。
+
+```sql
+SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
+```
+
+結果は次のようになります。
+
+```console
+                _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
+-----------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE080007B35-E6CE00000000000,"(AAID)",t)")")  | ("(en-US,f,f,t,1.6,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",490,1125)",xo.net,64.3.235.13)     | [AAID -> "{(31892EE080007B35-E6CE00000000000,t)}"]  | ("("(34.01,-84.0)",lawrenceville,US,524,30043,ga)",600)                 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Search Results,"(1.0)")","(http://www.google.com/search?ie=UTF-8&q=,internal)") |
+ 31892EE15DE00000-401B92664FF48AE8 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE100007BF3-215FE00000000001,"(AAID)",t)")") | ("(en-US,f,f,t,1.5,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",768,556)",ntt.net,219.165.108.145) | [AAID -> "{(31892EE100007BF3-215FE00000000001,t)}"] | ("("(34.989999999999995,138.42)",shizuoka,JP,392005,420-0812,22)",-240) | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Home - JJEsquire,"(1.0)")","(NULL,typed_bookmarked)")                           |
+(2 rows)  
+```
+
+#### 設定後、 `auto_to_json` フラグ
+
+次の表に、 `auto_to_json` の設定が結果のデータセットに適用されます。 両方のシナリオで同じ SELECT クエリが使用されました。
+
+```console
+                _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
+-----------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE080007B35-E6CE00000000000","namespace":{"code":"AAID"},"primary":true}}}  | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.6","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":490,"viewportWidth":1125},"domain":"xo.net","ipV4":"64.3.235.13"}     | {"AAID":[{"id":"31892EE080007B35-E6CE00000000000","primary":true}]}  | {"geo":{"_schema":{"latitude":34.01,"longitude":-84.0},"city":"lawrenceville","countryCode":"US","dmaID":524,"postalCode":"30043","stateProvince":"ga"},"localTimezoneOffset":600}                 | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Search Results","pageViews":{"value":1.0}},"webReferrer":{"URL":"http://www.google.com/search?ie=UTF-8&q=","type":"internal"}} |
+ 31892EE15DE00000-401B92664FF48AE8 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE100007BF3-215FE00000000001","namespace":{"code":"AAID"},"primary":true}}} | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.5","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":768,"viewportWidth":556},"domain":"ntt.net","ipV4":"219.165.108.145"} | {"AAID":[{"id":"31892EE100007BF3-215FE00000000001","primary":true}]} | {"geo":{"_schema":{"latitude":34.989999999999995,"longitude":138.42},"city":"shizuoka","countryCode":"JP","dmaID":392005,"postalCode":"420-0812","stateProvince":"22"},"localTimezoneOffset":-240} | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Home - JJEsquire","pageViews":{"value":1.0}},"webReferrer":{"type":"typed_bookmarked"}}                                        |
+(2 rows)
+```
+
+### 失敗時のフォールバックスナップショットの解決 {#resolve-fallback-snapshot-on-failure}
+
+この `resolve_fallback_snapshot_on_failure` オプションは、期限切れのスナップショット ID の問題を解決するために使用されます。 スナップショットメタデータは 2 日後に期限切れになり、有効期限切れのスナップショットはスクリプトのロジックを無効にできます。 これは、匿名ブロックを使用する場合に問題になる可能性があります。
+
+を `resolve_fallback_snapshot_on_failure` オプションを true に設定すると、以前のスナップショット ID でスナップショットが上書きされます。
+
+```sql
+SET resolve_fallback_snapshot_on_failure=true;
+```
+
+次のコード行は、 `@from_snapshot_id` 最も早く手に入る `snapshot_id` メタデータから。
+
+```sql
+$$ BEGIN
+    SET resolve_fallback_snapshot_on_failure=true;
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                on a.process_timestamp=b.process_timestamp;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+    SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+    INSERT INTO DIM_TABLE_ABC_Incremental
+     SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
+
+Insert Into
+   checkpoint_log
+   SELECT
+       'DIM_TABLE_ABC' process_name,
+       'SUCCESSFUL' process_status,
+      cast( @to_snapshot_id AS string) last_snapshot_id,
+      cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
+EXCEPTION
+  WHEN OTHER THEN
+    SELECT 'ERROR';
+END
+$$;
+```
+
+
 ## データアセットの組織
 
 Adobe Experience Platformデータレイク内のデータアセットを、成長に合わせて論理的に整理することが重要です。 クエリサービスは、サンドボックス内のデータアセットを論理的にグループ化できる SQL 構成を拡張します。 この編成方法を使用すると、データアセットを物理的に移動する必要なく、スキーマ間でデータアセットを共有できます。
@@ -389,7 +468,7 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 詳しくは、 [データアセットの論理的な編成](../best-practices/organize-data-assets.md) を参照してください。
 
-## テーブルが存在します。
+## テーブルが存在します
 
 この `table_exists` SQL コマンドは、現在システムにテーブルが存在するかどうかを確認するために使用します。 このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。
 
