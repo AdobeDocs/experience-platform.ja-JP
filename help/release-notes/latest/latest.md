@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
-source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 35%
+source-wordcount: '987'
+ht-degree: 36%
 
 ---
 
@@ -14,10 +14,31 @@ ht-degree: 35%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
 - [Real-Time CDP B2B Edition の関連するアカウント](#related-accounts)
 - [ソース](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能** {#destinations-new-updated-features}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| [同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) （との統合用） [ファイルベース（バッチ）の宛先](/help/destinations/destination-types.md#file-based) | <p> プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了をファイルベースの宛先に積極的に通信するようになりました。 これは、 [2023 年 2 月リリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) の機能は、ストリーミング先に対しても同じです。 </p> <p> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新規ドキュメントまたは更新されたドキュメント** {#destinations-new-updated-documentation}
+
+| ドキュメント | 説明 |
+| ----------- | ----------- |
+| 宛先の仕組みドキュメント | <p>ユーザーからのよくある質問に基づき、宛先の動作に関する 3 つの新しい説明記事を公開しました。</p> <p><ul><li>[宛先での設定可能で一般的な書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[様々な宛先タイプに対するプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[宛先アクティベーションワークフローでの ID 処理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
