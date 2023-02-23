@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '952'
 ht-degree: 36%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
-- [Real-Time CDP B2B Edition の関連するアカウント](#related-accounts)
+- [Real-Time Customer Data Platform B2B エディション](#b2b)
 - [ソース](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 **更新された機能**
 &#x200B; |機能 |説明 | | — | — | | UI を通じたフィールドの廃止 |データの取り込み後に、スキーマのフィールドを非推奨にできるようになりました。 XDM フィールドの廃止により、UI ビューからフィールドを削除しながら、使用するためにフィールドを保持できます。 廃止されたフィールドを必要に応じて再度表示できます。また、そのフィールドを参照するセグメント、クエリ、ダウンストリームソリューションは、通常どおりに実行されます。 |
 
-Platform の XDM について詳しく&#x200B;は、 [XDM システムの概要](../../xdm/home.md).&#x200B;
+{style=&quot;table-layout:auto&quot;} Platform の XDM について詳しく&#x200B;は、 [XDM システムの概要](../../xdm/home.md).&#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## クエリサービス {#query-service}
@@ -57,20 +57,16 @@ Platform の XDM について詳しく&#x200B;は、 [XDM システムの概要]
 **更新された機能**
 &#x200B; |機能 |説明 | | — | — | | SQL を使用したプロファイルのデータセットの有効化 | CTAS クエリで LABEL を使用してデータセットを「プロファイルを有効にする」か、ALTER を使用して既存のデータセットを更新し、プロファイルに対して有効にします。 | |スケジュールクエリの監視 | 「スケジュール済みクエリ」タブを使用して、クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。  | |オートコンプリート機能を切り替え |クエリエディターのオートコンプリート機能を切り替えることで、特定のメタデータコマンドをなくし、処理時間を短縮します。 この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 | |データセットのサンプル |クエリでサンプリングレートを指定し、データセットサンプルを使用して均一なランダムサンプルを作成するか、特定の条件に基づいて条件付きサンプルを作成します。 |
 
-クエリサービスについ&#x200B;て詳しくは、 [クエリサービスの概要](../../query-service/home.md).&#x200B;
+{style=&quot;table-layout:auto&quot;} クエリサービスについ&#x200B;て詳しくは、 [クエリサービスの概要](../../query-service/home.md).&#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Real-Time CDP B2B Edition の関連するアカウント {#related-accounts}
+## Real-Time Customer Data Platform B2B エディション {#b2b}
 
->[!NOTE]
->
->関連するアカウント機能は、Real-Time CDP B2B Edition のお客様のみ使用できます。
-
-関連するアカウント [!DNL Real-Time CDP B2B] を使用すると、参照しているアカウントに類似したアカウントのリストを表示できます。 関連するアカウントをセグメント定義に含めることができるので、リーチを広げたり、セグメントでより広い条件を適用したりできます。
+Real-Time Customer Data Platform（Real-Time CDP）上に構築された Real-Time CDP B2B エディションは、B2B サービスモデルで業務を行っているマーケター向けに設計されています。複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 
 **更新された機能**
 
@@ -79,12 +75,6 @@ Platform の XDM について詳しく&#x200B;は、 [XDM システムの概要]
 | 関連アカウントサービスを有効にする | 新しい切り替え機能を使用すると、お使いのアカウントで関連アカウントサービスを有効にできます。 詳しくは、 [関連アカウントサービスの有効化](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-関連するアカウントの機能について詳しくは、次のドキュメントページを参照してください。
-
-- [Real-Time CDP B2B Edition の関連するアカウントの概要](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [アカウントプロファイル UI ガイドの「関連するアカウント」タブ](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [セグメント定義での関連するアカウントの使用方法](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Real-Time CDP B2B Edition の詳細については、 [Real-Time CDP B2B Edition の概要](../../rtcdp/overview.md).
 
