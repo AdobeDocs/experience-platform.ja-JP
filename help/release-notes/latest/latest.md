@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 36%
+source-wordcount: '1137'
+ht-degree: 37%
 
 ---
 
@@ -45,10 +45,31 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
 
 **更新された機能**
-&#x200B; |機能 |説明 | | — | — | | UI を通じたフィールドの廃止 |データの取り込み後に、スキーマのフィールドを非推奨にできるようになりました。 XDM フィールドの廃止により、UI ビューからフィールドを削除しながら、使用するためにフィールドを保持できます。 廃止されたフィールドを必要に応じて再度表示できます。また、そのフィールドを参照するセグメント、クエリ、ダウンストリームソリューションは、通常どおりに実行されます。 |
+&#x200B; |機能 |説明 | | — | — | | UI を通じたフィールドの廃止 |今すぐ [データの取り込み後にスキーマのフィールドを非推奨にする](../../xdm/tutorials/field-deprecation-ui.md). XDM フィールドの廃止により、UI ビューからフィールドを削除しながら、使用するためにフィールドを保持できます。 廃止されたフィールドを必要に応じて再度表示できます。また、そのフィールドを参照するセグメント、クエリ、ダウンストリームソリューションは、通常どおりに実行されます。 |
 
-{style=&quot;table-layout:auto&quot;} Platform の XDM について詳しく&#x200B;は、 [XDM システムの概要](../../xdm/home.md).&#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| クラス | [[!UICONTROL XDM 個別見込み客プロファイル]](https://github.com/adobe/xdm/pull/1669/files) | XDM Individual Prospect Profile クラスは、パートナーが提供する ID を取り込みます。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | [!UICONTROL 頻度キャップの制約] | この [!UICONTROL 頻度キャップの制約] フィールドグループが [繰り返しイベントとカスタムイベントをサポートするように更新](https://github.com/adobe/xdm/pull/1641/files). |
+| データタイプ | [!UICONTROL Web リファラー] | Web リファラープロパティが [次を含めるように更新しました： `xdm:linkName` および `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). それぞれ、前のページで選択したHTML要素の名前と領域です。 |
+| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [この [!UICONTROL トラッカー URL] フィールドが追加されました](https://github.com/adobe/xdm/pull/1665/files) から [!UICONTROL AdobeCJM ExperienceEvent]. このトラッカーは、ユーザーが選択した URL を提供します。 |
+| フィールドグループ | [!UICONTROL AdobeCJM ExperienceEvent — メッセージインタラクションの詳細] | [空の `meta:enum` プロパティが削除されました](https://github.com/adobe/xdm/pull/1668/files) URL から [!UICONTROL トラッキングタイプ] フィールドに入力します。 |
+| データタイプ | [!UICONTROL メディア情報] | [の正規表現パターン `videoSegment` プロパティ [!UICONTROL メディア情報] データ型が削除されました](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md).
 
 ## クエリサービス {#query-service}
 
