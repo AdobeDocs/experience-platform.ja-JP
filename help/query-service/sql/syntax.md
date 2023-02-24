@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
+source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
-source-wordcount: '3355'
+source-wordcount: '3406'
 ht-degree: 7%
 
 ---
@@ -173,18 +173,19 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT {#create-table-as-select}
 
 次の構文は、 `CREATE TABLE AS SELECT` (CTAS) クエリ：
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
 | パラメーター | 説明 |
 | ----- | ----- |
 | `schema` | XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。 |
 | `rowvalidation` | （オプション）新しく作成したデータセットに対して取り込まれる新しいバッチの行レベルの検証を、すべてユーザーが必要とするかどうかを指定します。 デフォルト値は `true` です。 |
+| `label` | CTAS クエリでデータセットを作成する場合、このラベルをの値と共に使用します。 `profile` をクリックし、データセットに対して「プロファイルを有効にする」というラベルを付けます。 つまり、データセットは作成時に自動的にプロファイル用にマークされます。 の使用について詳しくは、派生属性拡張機能のドキュメントを参照してください。 `label`. |
 | `select_query` | A `SELECT` 文。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
 
 **例**
@@ -192,7 +193,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
-CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```

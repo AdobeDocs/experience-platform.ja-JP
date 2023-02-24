@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
+source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 70%
+source-wordcount: '270'
+ht-degree: 69%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 70%
       - [レポートインサイトデータモデルガイド](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - 派生属性 {#derived-attributes}
       - [概要](data-distiller/derived-attributes/overview.md)
+      - [シームレスな SQL フロー](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [十分な数の派生属性の作成](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - ユースケース {#use-cases}
    - [参照を中止](use-cases/abandoned-browse.md)
