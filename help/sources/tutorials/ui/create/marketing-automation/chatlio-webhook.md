@@ -2,10 +2,10 @@
 title: UI での Chatlio ソース接続の作成
 description: Adobe Experience Platform UI を使用して Chatlio ソース接続を作成する方法を説明します。
 badge: "ベータ"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1168'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -111,7 +111,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 * **[!UICONTROL 接続]**：ソースのタイプ、選択したソースファイルの関連パスおよびそのソースファイル内の列の数を表示します。
 * **[!UICONTROL データセットの割り当てとフィールドのマッピング]**：ソースデータがどのデータセットに取り込まれるかを、そのデータセットが準拠するスキーマを含めて表示します。
 
-データフローをレビューしたら、「 」をクリックします。 **[!UICONTROL 完了]** とは、データフローが作成されるまでしばらく時間をかけます。
+データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
 ![ソースワークフローのレビューステップ。](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 

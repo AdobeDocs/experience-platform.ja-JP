@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 91%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 91%
       - [Google Ads コネクタ](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel コネクタ](connectors/analytics/mixpanel.md)
+      - [ペンド](connectors/analytics/pendo-webhook.md)
    - クラウドストレージ {#cloud-storage}
       - [Amazon Kinesis コネクタ](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 コネクタ](connectors/cloud-storage/s3.md)
@@ -113,6 +114,7 @@ ht-degree: 91%
          - [Google 広告](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+         - [ペンド](tutorials/api/create/analytics/pendo-webhook.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -226,6 +228,7 @@ ht-degree: 91%
          - [Google 広告](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+         - [ペンド](tutorials/ui/create/analytics/pendo-webhook.md)
       - クラウドストレージ {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
