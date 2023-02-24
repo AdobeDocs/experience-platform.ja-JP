@@ -2,9 +2,9 @@
 title: Adobe Targetを使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '620'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Edge Network Server API を使用すると、Adobe Targetで作成されたパ�
 
 >[!IMPORTANT]
 >
->を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **レンダー** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../edge/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
+>を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **レンダー** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../edge/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
 
 ## データストリームの設定 {#configure-your-datastream}
 
@@ -25,18 +25,9 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 
 詳しくは、 [データストリームへのサービスの追加に関するガイド](../edge/datastreams/overview.md#adobe-target-settings)(Adobe Targetを有効にする方法について詳しくは、を参照 )。
 
-データストリームを設定する際に、次の値を（オプションで）指定できます。 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
+データストリームを設定する際に、 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
 
 ![Adobe Targetを選択した状態で、データストリームサービス設定画面を示す UI 画像](assets/target-datastream.png)
-
-次のいずれかを選択できます [!DNL Analytics Logging] options:
-
-* **[!DNL Server Side]**:これは、 [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja). このオプションを選択すると、パーソナライゼーションコンテンツが Target から返されるたびに、 [!DNL A4T] データは、Target パーソナライゼーションエンジンからの応答に基づいて、Analytics に自動的に送信されます。
-* **[!DNL Client Side]**:このオプションを選択すると、パーソナライゼーションコンテンツが Target から返されるたびに、 [!DNL A4T] データが呼び出し元のアプリケーションに返されます。 このデータを Analytics に記録する場合は、 [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >選択に加えて **[!UICONTROL クライアント側]** Edge ネットワークが [!DNL A4T] 応答に戻る情報。
 
 
 ## カスタムパラメーター {#custom-parameters}
