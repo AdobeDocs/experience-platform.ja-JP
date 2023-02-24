@@ -2,9 +2,9 @@
 title: UI での Customer.io ソース接続とデータフローの作成
 description: Adobe Experience Platform UI を使用して Customer.io ソース接続を作成する方法を説明します。
 badge: "ベータ"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 20%
 
 ---
@@ -64,7 +64,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 以下を使用： *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-次に移動： [!UICONTROL マーケティングの自動化] 表示するカテゴリ [!DNL Customer.io] ソースカード。 最初に、 [!UICONTROL データを追加].
+次に移動： [!UICONTROL マーケティングの自動化] 表示するカテゴリ [!DNL Customer.io] ソースカード。 最初に、 **[!UICONTROL データを追加]**.
 
 ![Customer.io カードを含むカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 

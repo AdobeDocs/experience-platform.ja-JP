@@ -2,7 +2,7 @@
 title: Customer.io ソースの概要
 description: Web フックを活用して、API またはユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法を説明します
 badge: "ベータ"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 16%
@@ -21,7 +21,7 @@ Experience Platformは、ストリーミングアプリケーションからデ�
 
 [[!DNL Customer.io]](https://customer.io/) は、データ駆動型の E メール、プッシュ通知、アプリ内メッセージおよび SMS をより制御し柔軟に作成して送信できるようにする、マーケター向けの自動メッセージングプラットフォームです。
 
-この [!DNL Customer.io] ソースを使用すると、サポートされる Webhook イベントスキーマとその関連イベントデータを [!DNL Customer.io] の使用 [[!DNL Customer.io] ウェブフックのレポート](https://customer.io/docs/api/webhooks/).
+この [!DNL Customer.io] ソースを使用すると、サポートされる webhook イベントスキーマとその関連イベントデータを [!DNL Customer.io] の使用 [[!DNL Customer.io] ウェブフックのレポート](https://customer.io/docs/api/webhooks/).
 
 サポートされる Webhook イベントスキーマは次のとおりです。
 
