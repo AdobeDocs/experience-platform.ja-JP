@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 91%
+source-wordcount: '650'
+ht-degree: 88%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 91%
 ## v0.19.2（2023 年 2 月 15 日）
 
 - タイムアウトをデータ要素に設定できる問題を修正しました。
+
+## v0.19.1（2023 年 2 月 4 日）
+
+- `at.js` v2.10.1 をサポートするように更新しました
+- クライアントカスタム mbox パラメーターで、ドット表記を正しくサポートするようになりました。
+- VEC での配信呼び出しはおこなわれなくなりました
 
 ## v0.19.0（2022 年 9 月 20 日）
 
