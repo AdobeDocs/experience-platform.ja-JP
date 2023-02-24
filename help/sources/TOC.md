@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 92%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 92%
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - マーケティングの自動処理 {#marketing-automation}
+      - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
@@ -162,6 +163,7 @@ ht-degree: 92%
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - マーケティングの自動処理 {#marketing-automation}
+         - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp キャンペーン](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -276,6 +278,7 @@ ht-degree: 92%
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - マーケティングの自動処理 {#marketing-automation}
+         - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
