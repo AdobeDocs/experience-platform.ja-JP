@@ -3,10 +3,10 @@ title: （ベータ版）クラウドストレージ宛先へのデータセッ�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '1309'
-ht-degree: 100%
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,9 @@ ht-degree: 100%
 >* この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、アドビ担当者にお問い合わせください。
 
 
-この記事では、Adobe Experience Platform から目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など）への[データセット](/help/catalog/datasets/overview.md)の書き出しに必要なワークフローについて説明します。
+この記事では、エクスポートに必要なワークフローについて説明します [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
+
+また、Experience PlatformAPI を使用してデータセットを書き出すこともできます。 詳しくは、 [データセット API の書き出しチュートリアル](/help/destinations/api/export-datasets.md) を参照してください。
 
 ## セグメントをアクティブ化するタイミングまたはデータセットを書き出すタイミング {#when-to-activate-segments-or-activate-datasets}
 
