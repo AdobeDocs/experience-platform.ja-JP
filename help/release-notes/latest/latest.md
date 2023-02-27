@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 39%
+source-wordcount: '1171'
+ht-degree: 38%
 
 ---
 
@@ -82,20 +82,14 @@ Platform での XDM について詳しくは、 [XDM システムの概要](../.
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL を使用したプロファイルのデータセットの有効化 | CTAS クエリで LABEL を使用してデータセットを「プロファイルを有効にする」か、ALTER を使用して既存のデータセットを更新し、プロファイルで有効にします。 |
-| スケジュールクエリの監視 | 「スケジュール済みクエリ」タブを使用して、クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。 |
-| オートコンプリート機能を切り替え | クエリエディターのオートコンプリート機能を切り替えることで、特定のメタデータコマンドをなくし、処理時間を短縮します。 この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 |
-| データセットのサンプル | クエリでサンプリングレートを指定し、データセットサンプルを使用して均一なランダムサンプルを作成するか、特定の条件に基づいて条件付きサンプルを作成します。 |
+| SQL を使用したプロファイルのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセット「プロファイルが有効」にする](../../query-service/sql/syntax.md#create-table-as-select)または ALTER を使用して、既存のデータセットを更新し、プロファイルに対して有効にします。 この拡張 SQL 構成を使用して、リアルタイム顧客プロファイルビジネスの使用例に対して派生属性をシームレスにサポートできます。 詳しくは、 [派生属性ドキュメントのシームレスな SQL フロー](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) を参照してください。 |
+| スケジュールクエリの監視 | 以下を使用： [「予定クエリ」タブ](../../query-service/ui/monitor-queries.md) クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。 |
+| オートコンプリート機能を切り替え | 特定のメタデータコマンドを削除し、次の方法で処理時間を短縮 [クエリエディターのオートコンプリート機能の切り替え](../../query-service/ui/user-guide.md#auto-complete). この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 |
+| データセットのサンプル | クエリでサンプリングレートを指定し、 [データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/essential-concepts/dataset-samples.md)または、特定の条件に基づく条件付きサンプルを作成します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
-
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Real-Time Customer Data Platform B2B エディション {#b2b}
 
