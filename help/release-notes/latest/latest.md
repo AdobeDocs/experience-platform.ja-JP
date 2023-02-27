@@ -55,7 +55,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- | --- |
 | クラス | [[!UICONTROL XDM 個別見込み客プロファイル]](https://github.com/adobe/xdm/pull/1669/files) | XDM Individual Prospect Profile クラスは、パートナーが提供する ID を取り込みます。 |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 **更新された XDM コンポーネント**
 
@@ -78,7 +78,7 @@ Platform での XDM について詳しくは、 [XDM システムの概要](../.
 **更新された機能**
 &#x200B; |機能 |説明 | | — | — | | SQL を使用したプロファイルのデータセットの有効化 | CTAS クエリで LABEL を使用してデータセットを「プロファイルを有効にする」か、ALTER を使用して既存のデータセットを更新し、プロファイルに対して有効にします。 | |スケジュールクエリの監視 | 「スケジュール済みクエリ」タブを使用して、クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。  | |オートコンプリート機能を切り替え |クエリエディターのオートコンプリート機能を切り替えることで、特定のメタデータコマンドをなくし、処理時間を短縮します。 この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 | |データセットのサンプル |クエリでサンプリングレートを指定し、データセットサンプルを使用して均一なランダムサンプルを作成するか、特定の条件に基づいて条件付きサンプルを作成します。 |
 
-{style=&quot;table-layout:auto&quot;} クエリサービスについ&#x200B;て詳しくは、 [クエリサービスの概要](../../query-service/home.md).&#x200B;
+クエリサービスについ&#x200B;て詳しくは、 [クエリサービスの概要](../../query-service/home.md).&#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
