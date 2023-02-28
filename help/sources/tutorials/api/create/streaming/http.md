@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 40%
+source-wordcount: '1544'
+ht-degree: 39%
 
 ---
 
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB 変換なし]
 
+次のリクエストでは、データ変換を行わずに HTTP API のストリーミングデータフローを作成します。
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB 変換を使用]
+
+次のリクエストでは、データにマッピング変換が適用された HTTP API のストリーミングデータフローを作成します。
+
+変換を使用してデータフローを作成する場合、 `name` パラメータは変更できません。 この値は常にに設定する必要があります。 `Mapping`.
 
 ```shell
 curl -X POST \
