@@ -3,10 +3,10 @@ title: ストリーミング SDK API 用のドキュメントセルフサービ�
 description: フローサービス API を使用して、ソースからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 43%
+source-wordcount: '1699'
+ht-degree: 42%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 43%
 
 ### ソース接続の作成 {#source-connection}
 
-ストリーミングソースのソース接続を作成するには、 `/sourceConnections` エンドポイント [!DNL Flow Service] 接続の名前、ソースの接続仕様 ID、データの形式を指定する際の API。
+に対してPOSTリクエストを実行してソース接続を作成 [!DNL Flow Service] API：ソースの接続仕様 ID、名前、説明、データの形式などの詳細を指定します。
 
 **API 形式**
 
@@ -259,9 +259,6 @@ curl -X POST \
 * [マッピング ID](#mapping)
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
-
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。間隔の値は、2 つの連続した取り込み間隔を指定します。ただし、1 回限りの取り込みを作成する場合は、間隔を設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
-
 
 **API 形式**
 
