@@ -3,10 +3,10 @@ title: 暗号化されたデータ取り込み
 description: Adobe Experience Platformでは、クラウドストレージバッチソースを使用して、暗号化されたファイルを取り込むことができます。
 hide: true
 hidefromtoc: true
-source-git-commit: f0bbefcd9b4595f02c400ea0c5bb76bfa6c5e33e
+source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '967'
+ht-degree: 20%
 
 ---
 
@@ -16,11 +16,15 @@ Adobe Experience Platformでは、クラウドストレージバッチソース�
 
 暗号化されたデータ取り込みプロセスは次のとおりです。
 
-1. [Experience PlatformAPI を使用した暗号化キーペアの作成](#create-encryption-key-pair). 暗号化キーのペアは、秘密鍵と公開鍵で構成されます。 作成した公開鍵は、対応する公開鍵 ID と有効期限と共に、コピーまたはダウンロードできます。 このプロセスの間、秘密鍵はセキュリティで保護された Vault にExperience Platformによって保存されます。
+1. [Experience PlatformAPI を使用した暗号化キーペアの作成](#create-encryption-key-pair). 暗号化キーのペアは、秘密鍵と公開鍵で構成されます。 作成した公開鍵は、対応する公開鍵 ID と有効期限と共に、コピーまたはダウンロードできます。 このプロセスの間、秘密鍵はセキュリティで保護された Vault にExperience Platformによって保存されます。 **注意：** 応答の公開鍵は Base64 でエンコードされ、を使用する前に復号化する必要があります。
 2. 公開鍵を使用して、取り込むデータファイルを暗号化します。
 3. 暗号化されたファイルをクラウドストレージに配置します。
 4. 暗号化されたファイルの準備が整ったら、 [クラウドストレージソース用のソース接続とデータフローの作成](#create-a-dataflow-for-encrypted-data). フロー作成手順で、 `encryption` パラメーターを使用し、公開鍵 ID を含めます。
 5. Experience Platformは、セキュリティで保護された Vault から秘密鍵を取得し、取得時にデータを復号化します。
+
+>[!IMPORTANT]
+>
+>1 つの暗号化ファイルの最大サイズは 100 MB です。 例えば、1 回のデータフロー実行で 2 GB 分のデータを取り込むことはできますが、そのデータ内の個々のファイルは 100 MB を超えることはできません。
 
 このドキュメントでは、データを暗号化するための暗号化キーのペアを生成し、クラウドストレージソースを使用して暗号化されたデータをExperience Platformに取り込む手順を説明します。
 
@@ -73,7 +77,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、公開鍵、公開鍵 ID、および鍵の有効期限を返します。 有効期限は、キーの生成日から 180 日後に自動的に設定されます。 有効期限は現在設定できません。
+正常な応答は、Base64 でエンコードされた公開鍵、公開鍵 ID、および鍵の有効期限を返します。 有効期限は、キーの生成日から 180 日後に自動的に設定されます。 有効期限は現在設定できません。
 
 ```json
 {
