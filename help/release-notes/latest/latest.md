@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
-source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
+source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1316'
 ht-degree: 38%
 
 ---
@@ -14,11 +14,30 @@ ht-degree: 38%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [データ収集](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
 - [Real-Time Customer Data Platform B2B エディション](#b2b)
 - [ソース](#sources)
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
+
+### Assurance {#assurance}
+
+Adobe保証を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| パブリック API | Adobe保証 API が利用できるようになりました。 Assurance API は、Mobile SDK を備えたAdobe保証拡張機能を適用する際に、ユーザーが自分の Web およびモバイルアプリをテストし、デバッグできるようにする API のコレクションです。 Assurance API の詳細については、 [アシュランス API の概要](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style=&quot;table-layout:auto&quot;}
+
+アシュランスの詳細については、 [アシュランスドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
