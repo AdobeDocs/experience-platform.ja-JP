@@ -4,10 +4,10 @@ solution: Experience Platform
 title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 49%
+source-wordcount: '1261'
+ht-degree: 48%
 
 ---
 
@@ -178,6 +178,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -189,6 +200,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `name` | **必須**。セグメントを参照する際に使用される一意の名前です。 |
+| `description` | 作成するセグメント定義の説明。 |
+| `evaluationInfo` | 作成するセグメントのタイプ。 バッチセグメントを作成する場合は、 `evaluationInfo.batch.enabled` を真にする。 ストリーミングセグメントを作成する場合は、 `evaluationInfo.continuous.enabled` を真にする。 エッジセグメントを作成する場合は、 `evaluationInfo.synchronous.enabled` を真にする。 空白の場合、セグメントは **バッチ** セグメント。 |
 | `schema` | **必須**。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
 | `expression` | **必須**。セグメント定義に関するフィールド情報を含んだエンティティです。 |
 | `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
@@ -251,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | 新しく作成したセグメント定義のシステム生成 ID。 |
-| `evaluationInfo` | セグメント定義が受ける評価のタイプを示す、システム生成オブジェクト。 バッチ、連続（ストリーミングとも呼ばれます）、同期セグメント化が可能です。 |
+| `evaluationInfo` | セグメント定義が受ける評価のタイプを示すオブジェクト。 バッチ、ストリーミング（連続とも呼ばれます）、エッジ（同期）セグメント化を指定できます。 |
 
 ## 特定のセグメント定義の取得 {#get}
 
@@ -333,7 +346,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 | `description` | 人間にとってわかりやすい、定義の説明。 |
-| `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、連続（ストリーミングとも呼ばれます）、同期を指示する、システム生成オブジェクト。 |
+| `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、ストリーミング（連続）、エッジ（同期）を示すオブジェクト。 |
 
 ## セグメント定義の一括取得 {#bulk-get}
 
@@ -466,7 +479,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 | `description` | 人間にとってわかりやすい、定義の説明。 |
-| `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、連続（ストリーミングとも呼ばれます）、同期を指示する、システム生成オブジェクト。 |
+| `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、ストリーミング（連続）、エッジ（同期）を示すオブジェクト。 |
 
 ## 特定のセグメント定義の削除 {#delete}
 
@@ -474,7 +487,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 >[!NOTE]
 >
-> 以下をおこないます。 **not** を使用すれば、宛先のアクティベーションで使用されているセグメントを削除できます。
+> 宛先のアクティベーションで使用されているセグメントを削除することはでき&#x200B;**ません**。
 
 **API 形式**
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API を使用したエッジのセグメント化
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1187'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -60,10 +60,10 @@ Experience Platform API エンドポイントへの呼び出しを正常に行�
 
 また、セグメントが、エッジ上でアクティブな結合ポリシーに結び付けられている&#x200B;**必要があります**。 結合ポリシーの詳細については、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。
 
-セグメント定義は次のようになります。 **not** は、次のシナリオでエッジセグメント化に対して有効になっています。
+次のシナリオでは、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なりません**。
 
-- セグメント定義には、単一のイベントと `inSegment` イベント。
-   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** をエッジセグメント化に対して有効にする。
+- セグメント定義には、単一のイベントと `inSegment` イベントの組み合わせが含まれています。
+   - ただし、`inSegment` イベントに含まれるセグメントがプロファイルのみの場合、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なります**。
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
@@ -212,6 +212,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```

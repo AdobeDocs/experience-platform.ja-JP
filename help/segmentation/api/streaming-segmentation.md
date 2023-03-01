@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミングセグメント化を使用してほぼリアルタイムでイベントを評価する
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1971'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -86,8 +86,8 @@ ht-degree: 98%
 
 - セグメント定義には、Adobe Audience Manager（AAM）のセグメントまたは特性が含まれます。
 - セグメント定義には複数のエンティティ（複数エンティティクエリ）が含まれます。
-- セグメント定義には、単一のイベントと `inSegment` イベント。
-   - ただし、セグメントが `inSegment` イベントはプロファイルのみ、セグメント定義 **遺言** を有効にすると、ストリーミングセグメント化が可能になります。
+- セグメント定義には、単一のイベントと `inSegment` イベントの組み合わせが含まれます。
+   - ただし、`inSegment` イベントに含まれるセグメントがプロファイルのみの場合、セグメント定義はストリーミングセグメント化に対して有効に&#x200B;**なります**。
 
 ストリーミングセグメント化を行う場合は、次のガイドラインに従ってください。
 
@@ -244,6 +244,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```
