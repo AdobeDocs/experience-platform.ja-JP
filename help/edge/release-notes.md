@@ -1,165 +1,165 @@
 ---
 title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1470'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
 # リリースノート
 
-このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートについて説明します。
-Web SDK タグ拡張機能の最新のリリースノートについて詳しくは、 [Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md).
+このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
+Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン2.14.0 - 2023 年 1 月 25 日
+## バージョン 2.14.0 - 2023年1月25日（PT）
 
 **新機能**
 
-* （ベータ版）AJO の表示と提案のサポートが追加されました。
+* （ベータ版）AJO のサーフェスと提案のサポートが追加されました。
 
 **修正点および改善点**
 
-* Adobe Target VEC カスタムコードアクションで、 [!DNL at.js].
-* Edge ネットワークへのリクエストで「リファラー」ヘッダーが適切に設定されない場合がある問題を修正しました。
-* 問題を修正しました。 [ユーザーエージェントクライアントのヒント](fundamentals/user-agent-client-hints.md) プロパティが正しくないタイプに設定されている可能性があります。
-* 問題を修正しました。 `placeContext.localTime` スキーマが一致しませんでした。
+* コードが [!DNL at.js] とは別の場所に挿入される、Adobe Target VEC カスタムコードアクションの問題を修正しました。
+* 一部のエッジの場合に「リファラー」ヘッダーが Edge Network へのリクエストに適切に設定されない問題を修正しました。
+* [ユーザーエージェントクライアントヒント](fundamentals/user-agent-client-hints.md)プロパティが間違ったタイプに設定される可能性がある問題を修正しました。
+* `placeContext.localTime` がスキーマに一致しない問題を修正しました。
 
-## バージョン2.13.1 - 2022 年 10 月 13 日
+## バージョン 2.13.1 - 2022年10月13日（PT）
 
-* 設定後に Visitor が定義されると、window.Visitor が機能しない問題を修正しました。 これは、Adobeタグを使用してを実行する場合に特に問題となります。
-* 問題を修正しました。 `device.screenWidth` および `device.screenHeight` が一部の環境で文字列として設定されていた問題を修正しました。
+* 設定後に window.Visitor が定義されると訪問者の移行が機能しない問題を修正しました。 これは、Adobe タグを使用して実行する場合に特に問題になります。
+* 一部の環境で `device.screenWidth` と `device.screenHeight` が文字列として入力される問題を修正しました。
 
-## バージョン2.13.0 - 2022 年 9 月 28 日
+## バージョン 2.13.0 - 2022年9月28日（PT）
 
 **新機能**
 
-* のサポートを追加しました。 [ページごとの完全移行](home.md#migrating-to-web-sdk). Adobe Targetプロファイルは、訪問者が at.js ページと Web SDK ページの間を移動しても保持されるようになりました。
-* の設定可能なサポートを追加しました。 [高エントロピーのユーザーエージェントクライアントヒント](fundamentals/user-agent-client-hints.md#high-entropy).
-* 新しい `applyResponse` コマンドを使用します。 これにより、 [Edge Network Server API](../server-api/overview.md).
+* [ページごとの完全移行](home.md#migrating-to-web-sdk)のサポートを追加しました。訪問者が at.js ページと Web SDK ページの間を移動しても、Adobe Target プロファイルが保持されるようになりました。
+* [高エントロピーの User-Agent クライアントヒント](fundamentals/user-agent-client-hints.md#high-entropy)の設定可能なサポートを追加しました。
+* 新しい `applyResponse` コマンドのサポートを追加しました。これにより、[Edge Network Server API](../server-api/overview.md) を使用してハイブリッドパーソナライゼーションが可能になります。
 * QA モードのリンクが複数のページで機能するようになりました。
 
 **修正点および改善点**
 
-* リンクトラッキングが無効になっている場合に、パーソナライゼーションのクリック追跡指標が更新されなかった問題を修正しました。
+* リンクトラッキングが無効になっている場合に、パーソナライゼーションのクリックの追跡指標が更新されなかった問題を修正しました。
 * 不明なオプションが指定された場合に検証エラーをスローするようにコマンドを更新しました。
-* この `_experience.decisioning.propositionEventType` プロパティが、表示およびインタラクションのパーソナライゼーションイベントを自動的に送信する際に設定されるようになりました。
-* 次の重複した名前空間検証が追加されました： `getIdentity` コマンドを使用します。
-* の重複した決定範囲の検証を追加しました。 `sendEvent` コマンドを使用します。
+* 表示およびインタラクションのパーソナライゼーションイベントを自動的に送信する際に、`_experience.decisioning.propositionEventType` プロパティが入力されるようになりました。
+* `getIdentity` コマンドに重複した名前空間の検証を追加しました。
+* `sendEvent` コマンドの重複した決定範囲の検証を追加しました。
 
-## バージョン2.12.0 - 2022 年 6 月 30 日
+## バージョン 2.12.0 - 2022年6月29日（PT）
 
-* リクエストを Edge ネットワークに変更し、 `cluster` URL の一部としての Cookie の場所のヒント。 これにより、セッション中に場所を変更したユーザー（VPN 経由やモバイルデバイスでの運転など）が同じエッジに到達し、同じパーソナライゼーションプロファイルを持つようになります。
-* getLibraryInfo コマンド応答で設定済み関数を文字列化します。
+* URL の一部として `cluster` cookie の場所のヒントを使用するように、Edge Network へのリクエストを変更します。 これにより、セッション中に場所を変更したユーザー（VPN 経由やモバイルデバイスでの運転など）が同じエッジに到達し、同じパーソナライゼーションプロファイルを持つようになります。
+* getLibraryInfo コマンド応答で設定された関数を文字列化します。
 
-## バージョン2.11.0 - 2022 年 6 月 13 日
+## バージョン 2.11.0 - 2022年6月13日（PT）
 
 **新機能**
 
-* モバイルアプリとモバイル Web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に配信できるようになりました。 詳しくは、 [専用ドキュメント](identity/id-sharing.md) を参照してください。
-* 提案の配列を [!DNL Adobe Target] analytics 指標を増分せずに、単一ページアプリケーションに追加できます。 これにより、レポートのエラーが減り、分析の精度が向上します。 詳しくは、 [専用ドキュメント](personalization/rendering-personalization-content.md#applypropositions) を参照してください。
-* 追加情報を `getLibraryInfo` コマンドには、使用可能なコマンドと、インスタンスの最終設定が含まれます。
+* モバイルアプリとモバイル web コンテンツの間、およびドメイン間で訪問者 ID を共有することで、パーソナライズされたエクスペリエンスをより正確に提供できるようになりました。詳しくは、[専用のドキュメント](identity/id-sharing.md)を参照してください。
+* 分析指標を増分せずに、[!DNL Adobe Target] からシングルページアプリケーションに提案の配列をレンダリングまたは実行できるようになりました。これにより、レポートのエラーが減り、分析の精度が向上します。詳しくは、[専用のドキュメント](personalization/rendering-personalization-content.md#applypropositions)を参照してください。
+* 使用可能なコマンドやインスタンスの最終的な設定など、`getLibraryInfo` コマンドに追加情報を追加しました。
 
 **修正点および改善点**
 
-* 使用する Cookie 設定を更新しました `sameSite="none"` および `secure` 旗を掲げる [!DNL HTTPS] ページ。
-* パーソナライズされたコンテンツが `eq` 疑似セレクター
-* 問題を修正しました。 `localTimezoneOffset` Experience Platformの検証に失敗しました。
+* [!DNL HTTPS] ページで `sameSite="none"` と `secure` フラグを使用するように cookie 設定を更新しました。
+* `eq` 疑似セレクターを使用すると、パーソナライズされたコンテンツが正しく適用されない問題を修正しました。
+* `localTimezoneOffset` が Experience Platform の検証に失敗する可能性がある問題を修正しました。
 
-## バージョン2.10.1 - 2022 年 5 月 3 日
+## バージョン 2.10.1 - 2022年5月3日（PT）
 
-* ID 同期およびセグメント宛先に対して複数の永続的な iframe が作成される問題を修正しました。
+* ID 同期とセグメント宛先に対して複数の永続的な iframe が作成される問題を修正しました。
 
-## バージョン2.10.0 - 2022 年 4 月 23 日
+## バージョン 2.10.0 - 2022年4月22日（PT）
 
-* すべての ID 同期およびセグメント宛先に永続的な iframe を使用する。
-* 結合された指標の提案が `sendEvent` 結果。
+* すべての ID 同期とセグメント宛先に永続的な iframe を使用します。
+* 結合された指標の提案が `sendEvent` の結果で重複していた問題を修正しました。
 
-## バージョン 2.9.0 - 2022 年 3 月 10 日
+## バージョン 2.9.0 - 2022年3月10日（PT）
 
-* トラッキングのサポートを追加しました [!DNL control (default)] Adobe Targetエクスペリエンス。
-* 単一ページアプリケーションのビュー変更イベントを最適化しました。 パーソナライズされたエクスペリエンスがレンダリングされた際に、表示通知が変更表示イベントに含まれるようになりました。
-* 次の場合のコンソール警告を削除しました。 `eventType` が存在する。
-* 問題を修正しました。 `propositions` プロパティはからのみ返されました `sendEvent` コマンドを使用します。 この `propositions` プロパティは、常に配列として定義されるようになりました。
+* トラッキング [!DNL control (default)] Adobe Target エクスペリエンスのサポートを追加しました。
+* 単一ページアプリケーションのビュー変更イベントを最適化しました。パーソナライズされたエクスペリエンスがレンダリングされる際に、表示通知がビュー変更イベントに含まれるようになりました。
+* `eventType` が存在しない場合のコンソール警告を削除しました。
+* エクスペリエンスがリクエストされた際、またはキャッシュから取得された際に、`propositions` プロパティが `sendEvent` コマンドからのみ返される問題を修正しました。 `propositions` プロパティは、常に配列として定義されるようになりました。
 * Adobe Experience Edge からエラーが返された場合に、非表示のコンテナが表示されない問題を修正しました。
-* インタラクションイベントがAdobe Targetでカウントされない問題を修正しました。 これは、XDM の web.webPageDetails.viewName にビュー名を追加することで修正されました。
-* コンソールメッセージのドキュメントのリンク切れを修正しました。
+* 操作イベントが Adobe Target でカウントされない問題を修正しました。この問題は、web.webPageDetails.viewName でビュー名を XDM に追加することで修正しました。
+* コンソールメッセージのドキュメントのリンク切れを修正します。
 
-## バージョン 2.8.0 - 2022 年 1 月 20 日
+## バージョン 2.8.0 - 2022年1月19日（PT）
 
-* パーソナライゼーションのシャドウ DOM セレクターをサポートします。
-* パーソナライゼーションイベントタイプの名前を変更しました。 (`display` および `click` 取り込む `decisioning.propositionDisplay` および `decisioning.propositionInteract`)
-* インラインスクリプトタグを含むHTMLオファーで、スクリプトが 1 回だけ実行された場合でも、スクリプトタグが 2 回ページに追加されていた問題を修正しました。
+* パーソナライゼーション用のシャドウ DOM セレクターをサポートします。
+* パーソナライゼーションイベントタイプの名前を変更しました。（`display` と `click` は、`decisioning.propositionDisplay` と `decisioning.propositionInteract` になります）
+* スクリプトが 1 回しか実行されていないにも関わらず、インラインスクリプトタグを含む HTML オファーで、スクリプトタグがページに 2 回追加される問題を修正しました。
 
-## バージョン 2.7.0 - 2021 年 10 月 27 日
+## バージョン 2.7.0 - 2021年10月26日（PT）
 
-* Experience Edge からの追加情報を、次の戻り値に表示します。 `sendEvent`を含む `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変わる場合があります。 詳しくは、 [イベントの追跡。](fundamentals/tracking-events.md)
+* `inferences` や `destinations` など、Experience Edge からの追加情報を `sendEvent` からの戻り値で公開します。これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](fundamentals/tracking-events.md)を参照してください。
 
-## バージョン 2.6.4 - 2021 年 9 月 8 日
+## バージョン 2.6.4 - 2021年9月7日（PT）
 
-* 「HTMLAdobe Target 」アクションが `head` 要素が `head` コンテンツ。 次に、 `head` 要素が追加HTMLに変更されました。
+* `head` 要素に適用された HTML Adobe Target を設定アクションが `head` コンテンツ全体を置き換えていた問題を修正しました。 `head` 要素に適用される HTML を設定アクションを、HTML を追加するように変更しました。
 
-## バージョン 2.6.3 - 2021 年 8 月 17 日
+## バージョン 2.6.3 - 2021年8月16日（PT）
 
-* 公開を目的としていないオブジェクトが、 `configure` コマンドを使用します。
+* `configure` コマンドから解決された promise を介して、公開を目的としていないオブジェクトが公開される問題を修正しました。
 
-## バージョン 2.6.2 - 2021 年 8 月 4 日
+## バージョン 2.6.2 - 2021年8月4日（PT）
 
-* の廃止に関する警告が発生する問題を修正しました。 `result.decisions` ( `sendEvent` ) がコンソールに記録されます。 `result.decisions` プロパティにアクセスできませんでした。 次の項目にアクセスする際に警告がログに記録されない `result.decisions` プロパティを使用しますが、プロパティは非推奨です。
+* `result.decisions` プロパティがアクセスされていない場合でも、`result.decisions`（`sendEvent` コマンドによって提供される）の非推奨（廃止予定）に関する警告がコンソールに記録される問題を修正しました。`result.decisions` プロパティにアクセスしても警告はログに記録されませんが、プロパティはまだ非推奨（廃止予定）です。
 
-## バージョン 2.6.1 - 2021 年 7 月 30 日
+## バージョン 2.6.1 - 2021年7月29日（PT）
 
-* パーソナライゼーションコンテンツを持たない単一ページアプリ表示用にパーソナライゼーションをレンダリングすると、エラーが発生し、 `sendEvent` コマンドを使用して拒否します。
+* パーソナライゼーションコンテンツを持たない単一ページアプリビューのパーソナライゼーションをレンダリングすると、エラーがスローされ、`sendEvent` コマンドから返される promise が拒否される問題を修正しました。
 
-## バージョン 2.6.0 - 2021 年 7 月 27 日
+## バージョン 2.6.0 - 2021年7月27日（PT）
 
-* より多くのパーソナライゼーションコンテンツを `sendEvent` Adobe Targetのレスポンストークンを含む、解決されたプロミス。 次の場合に `sendEvent` コマンドが実行されると、promise が返され、最終的に `result` サーバーから受信した情報を含むオブジェクト。 以前は、この結果オブジェクトには `decisions`. この `decisions` プロパティは非推奨になりました。 新しいプロパティ `propositions`、が追加されました。 この新しいプロパティは、次のようなパーソナライゼーションコンテンツにアクセスできるようにします。 [レスポンストークン](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
+* Adobe Target 応答トークンなど、`sendEvent` で解決された promise でより多くのパーソナライゼーションコンテンツを提供します。`sendEvent` コマンドを実行すると、promise が返されます。これは、サーバーから受信した情報を含む `result` オブジェクトで最終的に解決されます。以前は、この結果オブジェクトには `decisions` という名前のプロパティが含まれていました。この `decisions` プロパティは、非推奨（廃止予定）です。新しいプロパティ `propositions` を追加しました。この新しいプロパティにより、顧客は[応答トークン](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=ja)など、より多くのパーソナライゼーションコンテンツにアクセスできます。
 
-## バージョン 2.5.0 - 2021 年 6 月
+## バージョン 2.5.0 - 2021年6月
 
 * リダイレクトパーソナライゼーションオファーのサポートを追加しました。
-* 自動的に収集されたビューポートの幅と高さが負の値の場合、サーバに送信されなくなります。
-* イベントが `false` から `onBeforeEventSend` コールバックの場合、メッセージがログに記録されます。
+* 自動的に収集されたビューポートの幅と高さが負の値の場合、サーバーに送信されなくなりました。
+* `onBeforeEventSend` コールバックから `false` を返すことによってイベントがキャンセルされると、メッセージがログに記録されるようになりました。
 * 単一のイベントを対象とした特定の XDM データが複数のイベントにわたって含まれていた問題を修正しました。
 
-## バージョン 2.4.0 - 2021 年 3 月
+## バージョン 2.4.0 - 2021年3月
 
-* これで、SDK は [npm パッケージとしてインストールされる](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ja).
-* のサポートを追加しました。 `out` オプション [デフォルト同意の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)：同意が得られるまですべてのイベントを破棄します ( 既存の `pending` オプションはイベントをキューに追加し、同意を受け取ったら送信します )。
-* この [onBeforeEventSend コールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) を使用して、イベントが送信されるのを防ぐことができるようになりました。
-* ではなく XDM スキーマフィールドグループを使用するようになりました。 `meta.personalization` パーソナライズされたコンテンツのレンダリングまたはクリックに関するイベントを送信する際。
-* この [getIdentity コマンド](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) では、id と共にエッジ地域 ID を返すようになりました。
-* サーバーから受け取った警告とエラーが改善され、より適切な方法で処理されました。
-* のサポートを追加しました。 [Adobeの同意 2.0 標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
-* 同意設定を受け取ると、ハッシュ化されてローカルストレージに保存され、CMP、Platform Web SDK、Platform Edge Network 間で最適化された統合がおこなわれます。 同意設定を収集している場合は、 `setConsent` は、ページ読み込みのたびに
-* 2 [フックの監視](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` および `onCommandRejected`、が追加されました。
-* バグ修正：パーソナライゼーションのインタラクション通知イベントで、ユーザーが新しい単一ページのアプリビューに移動し、元のビューに戻って、コンバージョン条件を満たす要素をクリックした場合、同じアクティビティに関する重複情報が含まれます。
-* バグ修正：SDK によって最初に送信されたイベントが `documentUnloading` に設定 `true`, [`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) がイベントの送信に使用され、id が確立されていないことに関するエラーが発生します。
+* SDK を [npm パッケージとしてインストール](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ja)できるようになりました。
+* [デフォルトの同意を設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#default-consent)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
+* [onBeforeEventSend コールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#onbeforeeventsend)を使用して、イベントが送信されないようにすることができるようになりました。
+* レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
+* [getIdentity コマンド](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=ja#retrieving-the-visitor-id)は、ID と共にエッジ地域 ID を返すようになりました。
+* サーバーから受信した警告とエラーが改善され、より適切な方法で処理されます。
+* [アドビの同意 2.0 標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=ja#communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* 同意環境設定を受信すると、CMP、Platform Web SDK および Platform Edge Network 間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
+* `onCommandResolved` と `onCommandRejected` の 2 つの[モニタリングフック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)を追加しました。
+* バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しいシングルページアプリビューに移動し、元のビューに戻り、コンバージョンの対象となる要素をクリックした際に、同じアクティビティに関する重複した情報が含まれていました。
+* バグ修正：SDK によって送信された最初のイベントで `documentUnloading` が `true` に設定されていた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) を使用してイベントが送信され、ID が確立されていないというエラーが発生していました。
 
-## バージョン 2.3.0 - 2020 年 11 月
+## バージョン 2.3.0 - 2020年11月
 
-* より厳しいコンテンツセキュリティポリシーを可能にするために、nonce のサポートを追加しました。
-* シングルページアプリケーションのパーソナライゼーションのサポートを追加しました。
-* 上書きする可能性のある他のページ上の JavaScript コードとの互換性を改善しました `window.console` API
-* バグ修正： `sendBeacon` は、 `documentUnloading` が `true` またはリンクのクリックが自動的に追跡されたタイミング。
-* バグ修正：アンカー要素にHTMLの内容が含まれている場合、リンクは自動的に追跡されません。
-* バグ修正：読み取り専用を含む特定のブラウザーエラー `message` プロパティが適切に処理されず、異なるエラーがお客様に表示されていました。
-* バグ修正：iframe 内で SDK を実行すると、iframe のHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合に、エラーが発生します。
+* より厳格なコンテンツセキュリティポリシーを可能にする nonce サポートを追加しました。
+* シシングルページアプリケーションのパーソナライゼーションサポートを追加しました。
+* `window.console` API を上書きする可能性のある他のページ上の JavaScript コードとの互換性を改善しました。
+* バグ修正： `documentUnloading` が `true` に設定されている場合や、リンクのクリックが自動的に追跡されている場合、`sendBeacon` は使用されませんでした。
+* バグ修正：アンカー要素に HTML コンテンツが含まれている場合、リンクは自動的に追跡されません。
+* バグ修正：読み取り専用の `message` プロパティを含む特定のブラウザーエラーが適切に処理されなかったので、別のエラーがお客様に公開されていました。
+* バグ修正：iframe の HTML ページが親ウィンドウの HTML ページとは異なるサブドメインにある場合、iframe 内で SDK を実行するとエラーが発生します。
 
-## バージョン 2.2.0 - 2020 年 10 月
+## バージョン 2.2.0 - 2020年10月
 
-* バグ修正：オプトインオブジェクトが、 `idMigrationEnabled` が `true`.
-* バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Alloy に認識させる。
+* バグ修正：`idMigrationEnabled` が `true` の場合、オプトインオブジェクトが Alloy の呼び出しをブロックしていました。
+* バグ修正：ちらつきの問題を防ぐために、パーソナライズオファーを返す必要があるリクエストを Alloy に認識させます。
 
-## バージョン 2.1.0 - 2020 年 8 月
+## バージョン 2.1.0 - 2020年8月
 
-* を削除します。 `syncIdentity` コマンドを実行し、 `sendEvent` コマンドを使用します。
-* IAB 2.0 Consent Standard をサポートします。
-* 追加の ID を `setConsent` コマンドを使用します。
-* の上書きのサポート `datasetId` 内 `sendEvent` コマンドを使用します。
-* 支持合金モニタ ([詳細を表示](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
-* パス `environment: browser` （実装の詳細のコンテキストデータ）。
+* `syncIdentity` コマンドを削除し、`sendEvent` コマンドでこれらの ID を渡すことをサポートします。
+* IAB 2.0 同意標準をサポートします。
+* `setConsent` コマンドで追加の ID を渡すことをサポートします。
+* `sendEvent` コマンドでの `datasetId` の上書きをサポートします。
+* Alloy モニターをサポートします（[詳細情報](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+* 実装の詳細コンテキストデータで `environment: browser` を渡します。
