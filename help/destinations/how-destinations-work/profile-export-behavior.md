@@ -1,9 +1,9 @@
 ---
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
-source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
+source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2954'
 ht-degree: 97%
 
 ---
@@ -173,7 +173,7 @@ Experience Platform の[ファイルベースの宛先](/help/destinations/desti
 
 | 宛先の書き出しを決定する要素 | 書き出されたファイルに含まれる内容 |
 |---------|----------|
-| <ul><li>UI または API で設定された書き出しスケジュールとユーザーアクション（UI で「[ファイルを今すぐ書き出し](/help/destinations/ui/export-file-now.md)」を選択するか、[アドホックアクティベーション API](/help/destinations/api/ad-hoc-activation-api.md) を使用すること）によって、宛先の書き出しの開始が決定します。</li><li>プロファイルのセグメントメンバーシップを変更しても、セグメントの選定か選定解除に関係なく、増分書き出しに含まれるプロファイルが適合されます。</li></ul> | フルファイルエクスポートでは、最新のセグメント評価に基づいて、セグメントのアクティブなプロファイル母集団全体が各ファイルエクスポートに含まれます。 書き出し用に選択された各 XDM 属性の最新の値も、各ファイルの列として含まれます。「終了」ステータスのプロファイルは、ファイルのエクスポートには含まれません。 |
+| <ul><li>UI または API で設定された書き出しスケジュールとユーザーアクション（UI で「[ファイルを今すぐ書き出し](/help/destinations/ui/export-file-now.md)」を選択するか、[アドホックアクティベーション API](/help/destinations/api/ad-hoc-activation-api.md) を使用すること）によって、宛先の書き出しの開始が決定します。</li></ul> | フルファイルエクスポートでは、最新のセグメント評価に基づいて、セグメントのアクティブなプロファイル母集団全体が各ファイルエクスポートに含まれます。 書き出し用に選択された各 XDM 属性の最新の値も、各ファイルの列として含まれます。「終了」ステータスのプロファイルは、ファイルのエクスポートには含まれません。 |
 
 {style=&quot;table-layout:fixed&quot;}
 
