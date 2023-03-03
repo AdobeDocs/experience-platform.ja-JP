@@ -1,22 +1,22 @@
 ---
-keywords: インサイト；attribution ai;attribution ai インサイト；AAI クエリサービス；アトリビューションクエリ；アトリビューションスコア；AAI での顧客管理キー
+keywords: インサイト;Attribution AI;アトリビューション AI インサイト;AAI クエリサービス;アトリビューションクエリ;アトリビューションスコア;AAI での顧客管理キー
 title: 顧客管理キー
-description: 顧客管理キーのAttribution AI設定方法を説明します。
+description: アトリビューション AI 用の顧客管理キーの設定方法について説明します。
 source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '168'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
 # 顧客管理キー
 
-Attribution AIは [医療用盾](https://www.adobe.com/trust/compliance/hipaa-ready.html) およびプライバシーとセキュリティシールドをご利用のお客様は、Attribution AIデータに適用する Azure Customer Managed Keys(CMK) を利用できます。 設定プロセスは、 [Adobe Experience Platform CMK の設定](../../../landing/governance-privacy-security/customer-managed-keys.md) また、ここで説明する手順に従うことができます。
+アトリビューション AI は、[Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) および Privacy &amp; Security Shield のお客様に、Azure 顧客管理キー（CMK）を利用してアトリビューション AI データに適用するオプションを提供します。設定プロセスは [Adobe Experience Platform CMK の設定](../../../landing/governance-privacy-security/customer-managed-keys.md)と同じであり、このリンク先で説明する手順に従うことができます。
 
-ドキュメントは [Adobe Experience Platformの顧客管理キー](../../../landing/governance-privacy-security/encryption.md) をクリックし、設定プロセスを完了するために、概要を説明する手順に従います。
+[Adobe Experience Platform の顧客管理キー](../../../landing/governance-privacy-security/encryption.md)に関するドキュメントを参照し、説明する手順に従って設定プロセスを進めることができます。
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] は、現在、 [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html%3Flang%3Den) アドオンの機能。
+>現在、[!DNL Customer Managed Keys] は、[[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=ja) のアドオン機能を購入した組織でのみ利用できます。
 
-Platform で使用されるすべてのデータは、CMK の有無にかかわらず、転送時および保管時に暗号化され、データのセキュリティを維持します。Adobe Experience Platform暗号化の詳細については、 [データの暗号化](../../../landing/governance-privacy-security/encryption.md).
+Platform で使用されるすべてのデータは、CMK の有無にかかわらず、転送時および保管時に暗号化され、データのセキュリティを維持します。Adobe Experience Platform の暗号化については、[データの暗号化](../../../landing/governance-privacy-security/encryption.md)に関するドキュメントを参照してください。
