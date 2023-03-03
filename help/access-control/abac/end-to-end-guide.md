@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドのガイドを提供します
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
+source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
-source-wordcount: '2425'
-ht-degree: 11%
+source-wordcount: '1726'
+ht-degree: 13%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 * [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Platform] 内のセグメントエンジンは、顧客の行動と属性に基づいて、顧客プロファイルからオーディエンスセグメントを作成するのに使用されます。
+* [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Platform] 内のセグメント化エンジンで、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスセグメントを作成するのに使用されます。
 
 ### 使用例の概要
 
@@ -44,7 +44,8 @@ ht-degree: 11%
 
 * [ユーザーの役割のラベル付け](#label-roles):外部の代理店と連携するマーケティンググループを持つ医療プロバイダー（ACME ビジネスグループ）の例を使用します。
 * [リソース（スキーマフィールドとセグメント）のラベル付け](#label-resources):を **[!UICONTROL PHI/規制対象の健康データ]** スキーマのリソースおよびセグメントに対するラベル
-* [両者をリンクさせるポリシーを作成する](#policy):ポリシーを作成して、リソースのラベルを役割のラベルにリンクし、スキーマフィールドおよびセグメントへのアクセスを拒否します。 これにより、一致するラベルを持つユーザーのすべてのサンドボックスのスキーマフィールドとセグメントへのアクセス権が付与されます。
+* 
+   * [リンクするポリシーをアクティブ化します。 ](#policy):デフォルトのポリシーを有効にして、リソースのラベルを役割のラベルに接続することで、スキーマフィールドやセグメントにアクセスできないようにします。 一致するラベルを持つユーザーは、すべてのサンドボックスのスキーマフィールドとセグメントにアクセスできます。
 
 ## 権限
 
@@ -152,82 +153,102 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 
 上記の手順を **[!UICONTROL インスリン &lt;50]**.
 
-## アクセス制御ポリシーの作成 {#policy}
+## アクセス制御ポリシーを有効にする {#policy}
+
+デフォルトのアクセス制御ポリシーでは、ラベルを使用して、特定の Platform リソースに対するアクセス権を持つユーザーロールを定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割を持たないユーザーの場合、すべてのサンドボックスで、スキーマフィールドとセグメントへのアクセスが拒否されます。
+
+アクセス制御ポリシーを有効にするには、 [!UICONTROL 権限] 左のナビゲーションから、 **[!UICONTROL ポリシー]**.
+
+![表示されるポリシーのリスト](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+次に、省略記号 (`...`) をクリックします。ドロップダウンに、役割を編集、アクティブ化、削除または複製するためのコントロールが表示されます。 選択 **[!UICONTROL 有効化]** をドロップダウンから選択します。
+
+![ポリシーを有効にするドロップダウン](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+
+ポリシーのアクティベートダイアログが表示され、アクティベートを確認するプロンプトが表示されます。 選択 **[!UICONTROL 確認]**.
+
+![ポリシーをアクティブ化ダイアログ](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
+ポリシーのアクティベーションの確認を受け取り、 [!UICONTROL ポリシー] ページ。
+
+![ポリシーの有効化の確認](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+
+<!-- ## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
->title="ポリシーとは"
->abstract="ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。すべての組織にはデフォルトのポリシーが用意されています。このポリシーをアクティブ化して、セグメントやスキーマフィールドなどのリソースのルールを定義する必要があります。 デフォルトのポリシーは、編集も削除もできません。 ただし、デフォルトのポリシーをアクティブ化または非アクティブ化することはできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="ポリシーの管理"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
->title="ポリシーを作成する"
->abstract="ポリシーを作成して、セグメントおよびスキーマフィールドに対してユーザーが実行できるアクションと実行できないアクションを定義します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="ポリシーを作成する"
+>title="Create a policy"
+>abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
->title="ポリシーに対して許容されるアクションと許容されないアクションを構成する"
->abstract="A <b>～へのアクセスを拒否する</b> ポリシーは、条件が満たされた場合にユーザーのアクセスを拒否します。 組み合わせ先 <b>次は false です</b>  — 一致する条件セットを満たさない限り、すべてのユーザーはアクセスを拒否されます。 このタイプのポリシーを使用すると、機密リソースを保護し、一致するラベルを持つユーザーへのアクセスのみを許可できます。 <br>A <b>～へのアクセスを許可する</b> ポリシーは、条件が満たされた場合にユーザーのアクセスを許可します。 との組み合わせの場合 <b>次のことは真です</b> ：ユーザーは、一致する条件セットを満たす場合、アクセス権を付与されます。 これにより、ユーザーへのアクセスが明示的に拒否されるわけではなく、許可アクセスが追加されます。 このタイプのポリシーでは、役割権限を持つユーザーに加えて、リソースに追加のアクセス権を付与できます。</br>
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="ポリシーの編集"
+>title="Configure permissible and impermissible actions for a policy"
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
->title="リソースの権限の設定"
->abstract="リソースとは、ユーザーがアクセスできるアセットまたはオブジェクトです。 リソースには、セグメントまたはスキーマフィールドを使用できます。 セグメントおよびスキーマフィールドに対する書き込み、読み取り、削除の権限を設定できます。"
+>title="Configure permissions for a resource"
+>abstract="A resource is the asset or object that a user can or cannot access. Resources can be segments or schemas fields. You can configure write, read, or delete permissions for segments and schema fields."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
->title="条件を編集"
->abstract="ポリシーに条件文を適用して、特定のリソースへのユーザーアクセスを設定します。 「すべて一致」を選択すると、アクセスを許可するリソースと同じラベルを持つロールをユーザーに必要とします。 「任意に一致」を選択すると、ユーザーは、リソース上のラベルに一致する 1 つのラベルのみを持つロールを持つ必要があります。 ラベルは、コアまたはカスタムのラベルとして定義できます。コアラベルは、Adobeが作成および提供するラベルを表し、カスタムラベルは組織が作成したラベルを表します。"
+>title="Edit conditions"
+>abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-アクセス制御ポリシーでは、ラベルを使用して、特定の Platform リソースにアクセスできるユーザーの役割を定義します。 ポリシーは、ローカルまたはグローバルに設定でき、他のポリシーを上書きできます。 この例では、スキーマフィールドに対応するラベルを持たないユーザーの場合、すべてのサンドボックスで、スキーマフィールドおよびセグメントへのアクセスが拒否されます。
+Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
->役割が主体に対する権限を付与するので、機密リソースへのアクセス権を付与する「拒否ポリシー」が作成されます。 この例の書き込みポリシー **拒否** 必要なラベルがない場合は、にアクセスします。
+>A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
 
-アクセス制御ポリシーを作成するには、 **[!UICONTROL 権限]** 左のナビゲーションから、 **[!UICONTROL ポリシー]**. 次に、 **[!UICONTROL ポリシーを作成]**.
+To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
-![権限で作成ポリシーが選択されていることを示す画像](../images/abac-end-to-end-user-guide/abac-create-policy.png)
+![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
-この **[!UICONTROL 新しいポリシーを作成]** ダイアログが表示され、名前とオプションの説明を入力するよう求められます。 選択 **[!UICONTROL 確認]** 終了したとき。
+The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Select **[!UICONTROL Confirm]** when finished.
 
-![新しいポリシーを作成ダイアログを表示し、「確認」を選択する画像](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
+![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-スキーマフィールドへのアクセスを拒否するには、ドロップダウンの矢印を使用して、「 」を選択します。 **[!UICONTROL へのアクセスを拒否]** 次に、 **[!UICONTROL リソースが選択されていません]**. 次に、 **[!UICONTROL スキーマフィールド]** 次に、 **[!UICONTROL すべて]**.
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Schema Field]** and then select **[!UICONTROL All]**.
 
-![拒否アクセスと選択されたリソースを示す画像](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
+![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
-次の表に、ポリシーを作成する際に使用できる条件を示します。
+The table below shows the conditions available when creating a policy:
 
-| 条件 | 説明 |
+| Conditions | Description |
 | --- | --- |
-| 次は false です | 「へのアクセスを拒否」が設定されている場合、ユーザーが選択した条件を満たさない場合、アクセスは制限されます。 |
-| 次のことは真です | 「アクセスを許可」が設定されている場合、ユーザーが選択した条件を満たす場合はアクセスが許可されます。 |
-| いずれかに一致 | ユーザーには、リソースに適用された任意のラベルに一致するラベルがあります。 |
-| すべて一致 | ユーザーには、リソースに適用されたすべてのラベルに一致するすべてのラベルがあります。 |
-| コアラベル | コアラベルは、すべてのAdobeインスタンスで使用できる、プラットフォーム定義のラベルです。 |
-| カスタムラベル | カスタムラベルは、組織が作成したラベルです。 |
+| The following being false| When 'Deny access to' is set, access will be restricted if the user does not meet the criteria selected. |
+| The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
+| Matches any| The user has a label that matches any label applied to a resource. |
+| Matches all| The user has all labels that matches all labels applied to a resource. |
+| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Custom label| A custom label is a label that has been created by your organization.|
 
-選択 **[!UICONTROL 次は false です]** 次に、 **[!UICONTROL 属性が選択されていません]**. 次に、ユーザーを選択します。 **[!UICONTROL コアラベル]**&#x200B;を選択し、「 **[!UICONTROL すべて一致]**. リソースを選択 **[!UICONTROL コアラベル]** 最後に、 **[!UICONTROL リソースを追加]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.
 
-![選択される条件を示す画像と、選択されるリソースを追加](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
+![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
 >[!TIP]
 >
->リソースとは、サブジェクトがアクセスできるまたはアクセスできないアセットやオブジェクトです。 リソースには、セグメントまたはスキーマを使用できます。
+>A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-セグメントへのアクセスを拒否するには、ドロップダウン矢印を使用して、「 」を選択します。 **[!UICONTROL へのアクセスを拒否]** 次に、 **[!UICONTROL リソースが選択されていません]**. 次に、 **[!UICONTROL セグメント]** 次に、 **[!UICONTROL すべて]**.
+To deny access to the segments, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Segment]** and then select **[!UICONTROL All]**.
 
-選択 **[!UICONTROL 次は false です]** 次に、 **[!UICONTROL 属性が選択されていません]**. 次に、ユーザーを選択します。 **[!UICONTROL コアラベル]**&#x200B;を選択し、「 **[!UICONTROL すべて一致]**. リソースを選択 **[!UICONTROL コアラベル]** 最後に、 **[!UICONTROL 保存]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Save]**.
 
-![選択した条件を示す画像と、選択中の「保存」](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
+![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
-選択 **[!UICONTROL 有効化]** ポリシーをアクティブ化すると、アクティベートを確認するダイアログが表示されます。 選択 **[!UICONTROL 確認]** 次に、 **[!UICONTROL 閉じる]**.
+Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![アクティブ化されているポリシーを示す画像 ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## 次の手順
 
