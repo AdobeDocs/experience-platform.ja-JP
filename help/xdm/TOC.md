@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 81%
+ht-degree: 98%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 81%
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-   * [薬](./classes/medication.md)
+   * [医薬品](./classes/medication.md)
    * [支払者](./classes/payer.md)
    * [プラン](./classes/plan.md)
    * [ポリシー](./classes/policy.md)
@@ -66,12 +66,12 @@ ht-degree: 81%
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
       * [広告の詳細](./field-groups/event/advertising-details.md)
       * [アプリケーションの詳細](./field-groups/event/application-details.md)
-      * [残高移動](./field-groups/event/balance-transfers.md)
+      * [残高繰り越し](./field-groups/event/balance-transfers.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
-      * [カードアクション](./field-groups/event/card-actions.md)
+      * [カードのアクション](./field-groups/event/card-actions.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
-      * [預金の詳細](./field-groups/event/deposit-details.md)
+      * [入金明細](./field-groups/event/deposit-details.md)
       * [デバイスの下取りの詳細](./field-groups/event/device-trade-in-details.md)
       * [食事の予約](./field-groups/event/dining-reservation.md)
       * [エンドユーザー ID の詳細](./field-groups/event/enduserids.md)
@@ -88,10 +88,10 @@ ht-degree: 81%
       * [Web の詳細](./field-groups/event/web-details.md)
    * XDM Business Campaign {#b2b-campaign}
       * [XDM ビジネスキャンペーンの詳細](./field-groups/b2b-campaign/details.md)
-   * XDM Business Campaign Members {#b2b-campaign-members}
+   * XDM ビジネスキャンペーンメンバー {#b2b-campaign-members}
       * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
    * 医薬品 {#medication}
-      * [医療薬](./field-groups/medication/healthcare-medication.md)
+      * [医薬品](./field-groups/medication/healthcare-medication.md)
    * プラン {#plan}
       * [医療プランの詳細](./field-groups/plan/healthcare-plan-details.md)
    * 製品 {#product}
@@ -190,14 +190,14 @@ ht-degree: 81%
 * チュートリアル {#tutorials}
    * [UI でのスキーマの作成](tutorials/create-schema-ui.md)
    * [API でのスキーマの作成](tutorials/create-schema-api.md)
-   * [スキーマに特定のフィールドを追加する (API)](./tutorials/specific-fields-api.md)
-   * [カスタムフィールドの定義 (API)](./tutorials/custom-fields-api.md)
-   * [フィールドへの推奨値の追加 (API)](tutorials/suggested-values.md)
-   * [UI での XDM フィールドの廃止](tutorials/field-deprecation-ui.md)
+   * [スキーマへの特定フィールドの追加（API）](./tutorials/specific-fields-api.md)
+   * [カスタムフィールドの定義（API）](./tutorials/custom-fields-api.md)
+   * [フィールドへの推奨値の追加（API）](tutorials/suggested-values.md)
+   * [XDM フィールドの廃止 UI 内](tutorials/field-deprecation-ui.md)
    * [API の XDM フィールドの廃止](tutorials/field-deprecation-api.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でのスキーマ関係の定義](tutorials/relationship-api.md)
-   * [Real-Time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
+   * [Real-time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
    * [スキーマのデータ使用ラベルの管理](tutorials/labels.md)
    * [アドホックスキーマの作成](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)

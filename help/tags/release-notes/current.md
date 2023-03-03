@@ -5,32 +5,32 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
 # タグとイベント転送のリリースノート
 
-## 2023年1月25日
+## 2023年1月25日（PT）
 
-* **新しいホーム画面**:データ収集 UI のホームページが更新され、生産性を向上させるための便利なオンボーディング情報やリンクが含まれるようになりました。 これには以下が含まれます。
-   1. ドキュメントおよび推奨ワークフローを参照してください
-   1. 最近使用したプロパティ、ルール、およびデータ要素
-   1. 一般的な拡張機能
-   1. クイックインストール機能による新しい拡張機能の更新
-* **データ送信先 [!DNL Google Ads] イベント転送の使用**:これで、 [[!DNL Google Ads Enhanced Conversions] API 拡張機能](../extensions/server/google-ads-enhanced-conversions/overview.md) イベント転送の場合は、 [Google OAUTH 2 の秘密鍵](../ui/event-forwarding/secrets.md#google-oauth2)（サーバー側のデータをに安全に送信するため） [!DNL Google Ads] リアルタイムで。
+* **新しいホーム画面**：データ収集 UI のホームページが更新されて、生産性を向上させるために役立つオンボーディング情報やリンクが含まれるようになりました。 これには以下が含まれます。
+   1. 基本を学ぶためのドキュメントと推奨されるワークフロー
+   1. 最近のプロパティ、ルールおよびデータ要素
+   1. 人気の高い拡張機能
+   1. クイックインストール機能を備えた新しい拡張機能のアップデート
+* **イベント転送を使用した [!DNL Google Ads] へのデータ送信**：[[!DNL Google Ads Enhanced Conversions] API 拡張機能](../extensions/server/google-ads-enhanced-conversions/overview.md)を [Google OAuth2 シークレット](../ui/event-forwarding/secrets.md#google-oauth2)と組み合わせてイベント転送に使用して、サーバーサイドデータを [!DNL Google Ads] にリアルタイムで安全に送信できるようになりました。
 
 ## 2022年11月23日（PT）
 
 * イベント転送用の **[!DNL AWS] 拡張機能**：[イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Amazon Web Services]（[!DNL AWS]）にデータを送信できるようになりました。詳しくは、[[!DNL AWS] 拡張機能の概要](../../tags/extensions/server/aws/overview.md)を参照してください。
-* **[!DNL Google Ads Enhanced Conversions]イベント転送の拡張**:これで、コンバージョンデータを [!DNL Google Ads] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。
-* **[!DNL Microsoft Azure]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Microsoft Azure] の使用 [イベント転送](../../tags/ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。
+* **[!DNL Google Ads Enhanced Conversions]のイベント転送用拡張機能**：[イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Google Ads] にコンバージョンデータを送信できるようになりました。詳しくは、[[!DNL Google Ads Enhanced Conversions] 拡張機能の概要](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を参照してください。
+* **[!DNL Microsoft Azure]のイベント転送用拡張機能**：[イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Microsoft Azure] にデータを送信できるようになりました。詳しくは、[[!DNL Microsoft Azure] 拡張機能の概要](../../tags/extensions/server/azure/overview.md)を参照してください。
 
 ## 2022年10月26日（PT）
 
 * **データストリームの機密データ処理**：データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制に従って機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。
-*  イベント転送用の **[!DNL Splunk] 拡張機能**：[!DNL Splunk]イベント転送[拡張機能を使用して、](../ui/event-forwarding/overview.md) にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
-* **[!DNL Zendesk]イベント転送の拡張**:これで、次にデータを送信できます： [!DNL Zendesk] の使用 [イベント転送](../ui/event-forwarding/overview.md) 拡張子。 詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
+* **[!DNL Splunk]のイベント転送用拡張機能**：[イベント転送](../ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
+* **[!DNL Zendesk]のイベント転送用拡張機能**：[イベント転送](../ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
 
 ## 2022年9月28日（PT）
 

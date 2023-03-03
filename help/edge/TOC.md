@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 77%
+ht-degree: 94%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 77%
    * [デバッグ](fundamentals/debugging.md)
    * [CSP の設定](fundamentals/configuring-a-csp.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
-   * [User-Agent クライアントのヒント](fundamentals/user-agent-client-hints.md)
+   * [ユーザエージェントクライアントのヒント](fundamentals/user-agent-client-hints.md)
 * データストリーム {#datastreams}
    * [概要](./datastreams/overview.md)
    * [データストリームの設定](./datastreams/configure.md)
@@ -37,13 +37,13 @@ ht-degree: 77%
 * ID {#identity}
    * [概要](identity/overview.md)
    * [ファーストパーティデバイス ID](identity/first-party-device-ids.md)
-   * [モバイルから web およびクロスドメイン での ID の共有](identity/id-sharing.md)
+   * [モバイルから web、およびクロスドメインでの ID の共有](identity/id-sharing.md)
 * データ収集 {#data-collection}
    * [自動的に収集された情報](data-collection/automatic-information.md)
    * [リンクのトラッキング](data-collection/track-links.md)
    * [コマースおよび製品データの収集](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [Adobe Analyticsと Platform Web SDK の使用](data-collection/adobe-analytics/analytics-overview.md)
+      * [Adobe Analytics と Platform Web SDK の使用](data-collection/adobe-analytics/analytics-overview.md)
       * [Analytics 変数のマッピング](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [自動的にマッピングされた変数](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Analytics へのデータの送信](data-collection/adobe-analytics/sending-data-to-analytics.md)
@@ -57,10 +57,10 @@ ht-degree: 77%
       * [レスポンストークンへのアクセス](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox サードパーティ ID の使用](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [at.js ライブラリと Web SDK の比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analytics for Target(A4T) ログ {#a4t}
+      * Analytics for Target（A4T）ログ {#a4t}
          * [概要 ](personalization/adobe-target/analytics-logging/overview.md)
-         * [クライアントサイド ログ](personalization/adobe-target/analytics-logging/client-side.md)
-         * [サーバー側ログ](personalization/adobe-target/analytics-logging/server-side.md)
+         * [クライアントサイドログ](personalization/adobe-target/analytics-logging/client-side.md)
+         * [サーバーサイドログ](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [概要](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}

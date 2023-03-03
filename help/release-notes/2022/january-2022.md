@@ -5,7 +5,7 @@ exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -72,7 +72,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | 同じページと次のページのパーソナライゼーション | この[同じページと次のページのパーソナライゼーション機能](../../destinations/ui/configure-personalization-destinations.md)は、マーケティングチャネルと顧客チャネルの一貫性を保つために、Experience Edge 上のアプリケーションのユーザーを共有し、ターゲティング可能なビューで表示します。 このパーソナライゼーションは、[Adobe Target 接続](../../destinations/catalog/personalization/adobe-target-connection.md)そして[カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md)を通じて使用することができます。同じページまたは次のページのパーソナライゼーションキャンペーンを設定するには、[専用チュートリアル](../../destinations/ui/configure-personalization-destinations.md)を参照してください。 |
 | バッチ宛先の監視とセグメントレベルの指標 | 宛先の監視機能がストリーミングの宛先から拡張され、アクティベーションデータフローのバッチ宛先とセグメントレベルの指標も含まれるようになりました。 詳しくは、[宛先ダッシュボードの監視](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)、[セグメントジョブダッシュボードの監視](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)および[セグメントレベル表示](/help/dataflows/ui/monitor-destinations.md#segment-level-view)を参照してください。 |
 | UI での既存のバッチアクティベーションデータフロー編集のスケジュール設定 | このリリースでは、既存のアクティベーションデータフローのスケジュールをバッチ保存先に編集するオプションが導入されています。 詳しくは、[プロファイルの宛先を一括でアクティブ化する](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。 |
-| Marketo 宛先の強化機能 | Marketo Engage を使用する Experience Platform ユーザーは、[Marketo 宛先コネクタ](/help/destinations/catalog/adobe/marketo-engage.md)を介して新規担当者レコードを Experience Platform から Marketo Engage にプッシュする新機能を使用して、Marketo データベースを最大化できます。<br> オーディエンスセグメントをExperience PlatformからMarketo Engageに送信する際に、Marketo Engageデータベースにまだ存在しないセグメント内のユーザーを自動的に追加できます。 詳しくは、[Adobe Experience Platform セグメントを Marketo 静的リストにプッシュ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja)を参照してください（チュートリアルの手順 9 では、新規担当者レコードを Marketo にプッシュする方法を説明します）。 |
+| Marketo 宛先の強化機能 | Marketo Engage を使用する Experience Platform ユーザーは、[Marketo 宛先コネクタ](/help/destinations/catalog/adobe/marketo-engage.md)を介して新規担当者レコードを Experience Platform から Marketo Engage にプッシュする新機能を使用して、Marketo データベースを最大化できます。<br> オーディエンスセグメントを Experience Platform から Marketo Engage に送信する際に、Marketo Engage データベースにまだ存在しないセグメント内の人物をデータベースに自動的に追加できます。 詳しくは、[Adobe Experience Platform セグメントを Marketo 静的リストにプッシュ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja)を参照してください（チュートリアルの手順 9 では、新規担当者レコードを Marketo にプッシュする方法を説明します）。 |
 
 **新しい宛先**
 

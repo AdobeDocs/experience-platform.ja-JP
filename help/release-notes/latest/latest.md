@@ -4,7 +4,7 @@ description: Adobe Experience Platformの 2023 年 2 月のリリースノート
 source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
 source-wordcount: '1316'
-ht-degree: 38%
+ht-degree: 45%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ### Assurance {#assurance}
 
-Adobe保証を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
+Adobe Assurance を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を検査、配達確認、シミュレートおよび検証できます。
 
 **新機能または更新された機能**
 
@@ -37,7 +37,7 @@ Adobe保証を使用すると、モバイルアプリでデータを収集した
 
 {style=&quot;table-layout:auto&quot;}
 
-アシュランスの詳細については、 [アシュランスドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Assurance について詳しくは、[Assurance のドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -47,7 +47,7 @@ Adobe保証を使用すると、モバイルアプリでデータを収集した
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| [同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) （との統合用） [ファイルベース（バッチ）の宛先](/help/destinations/destination-types.md#file-based) | <p> プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了をファイルベースの宛先に積極的に通信するようになりました。 これは、 [2023 年 2 月リリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) の機能は、ストリーミング先に対しても同じです。 </p> <p> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. </p> |
+| [同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) （との統合用） [ファイルベース（バッチ）の宛先](/help/destinations/destination-types.md#file-based) | <p> プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了をファイルベースの宛先に積極的に通信するようになりました。 これは、 [2023 年 2 月リリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) の機能は、ストリーミング先に対しても同じです。 </p> <p> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** および **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 </p> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -55,7 +55,7 @@ Adobe保証を使用すると、モバイルアプリでデータを収集した
 
 | ドキュメント | 説明 |
 | ----------- | ----------- |
-| 宛先の仕組みドキュメント | <p>ユーザーからのよくある質問に基づき、宛先の動作に関する 3 つの新しい説明記事を公開しました。</p> <p><ul><li>[宛先での設定可能で一般的な書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[様々な宛先タイプに対するプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[宛先アクティベーションワークフローでの ID 処理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| 宛先の仕組みドキュメント | <p>ユーザーからのよくある質問に基づき、宛先の動作に関する 3 つの新しい説明記事を公開しました。</p> <p><ul><li>[宛先での設定可能で一般的な書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[様々な宛先タイプのプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[宛先アクティブ化ワークフローでの ID の処理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -102,7 +102,7 @@ Platform での XDM について詳しくは、 [XDM システムの概要](../.
 | 機能 | 説明 |
 | --- | --- |
 | SQL を使用したプロファイルのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセット「プロファイルが有効」にする](../../query-service/sql/syntax.md#create-table-as-select)または ALTER を使用して、既存のデータセットを更新し、プロファイルに対して有効にします。 この拡張 SQL 構成を使用して、リアルタイム顧客プロファイルビジネスの使用例に対して派生属性をシームレスにサポートできます。 詳しくは、 [派生属性ドキュメントのシームレスな SQL フロー](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) を参照してください。 |
-| スケジュールクエリの監視 | 以下を使用： [「予定クエリ」タブ](../../query-service/ui/monitor-queries.md) クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。 |
+| スケジュール済みクエリの監視 | 以下を使用： [「予定クエリ」タブ](../../query-service/ui/monitor-queries.md) クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。 |
 | オートコンプリート機能を切り替え | 特定のメタデータコマンドを削除し、次の方法で処理時間を短縮 [クエリエディターのオートコンプリート機能の切り替え](../../query-service/ui/user-guide.md#auto-complete). この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 |
 | データセットのサンプル | クエリでサンプリングレートを指定し、 [データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/essential-concepts/dataset-samples.md)または、特定の条件に基づく条件付きサンプルを作成します。 |
 
@@ -126,7 +126,7 @@ Real-Time CDP B2B Edition の詳細については、 [Real-Time CDP B2B Edition
 
 ## ソース {#sources}
 
-Adobe Experience Platformは、外部ソースからデータを取り込むことができ、Platform Services を使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

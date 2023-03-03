@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -286,7 +286,7 @@ ht-degree: 91%
          - [チャトリオ](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
-         - [Mailchimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+         - [MailChimp キャンペーン](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
@@ -340,16 +340,16 @@ ht-degree: 91%
       - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
       - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
    - ストリーミング SDK {#streaming-sdk}
-      - [セルフサービスソース（ストリーミング SDK）の概要](sources-sdk/streaming/getting-started.md)
+      - [セルフサービスソース（ストリーミング SDK）の基本を学ぶ](sources-sdk/streaming/getting-started.md)
       - [ストリーミングソースの接続仕様の作成](sources-sdk/streaming/create.md)
       - [ストリーミングソースの接続仕様の更新](sources-sdk/streaming/update-connection-specs.md)
-      - [ストリーミングフローの仕様を更新する](sources-sdk/streaming/update-flow-specs.md)
-      - [検証のために接続仕様をテストして送信します](sources-sdk/streaming/submit.md)
+      - [ストリーミングフロー仕様の更新](sources-sdk/streaming/update-flow-specs.md)
+      - [検証を目的とした接続仕様のテストと送信](sources-sdk/streaming/submit.md)
       - [ソースのドキュメント化（ストリーミング SDK）](sources-sdk/streaming/document-streaming.md)
-      - [ドキュメントのセルフサービス API ストリーミングテンプレート](sources-sdk/streaming/streaming-template-api.md)
-      - [ドキュメントのセルフサービス UI ストリーミングテンプレート](sources-sdk/streaming/streaming-template-ui.md)
+      - [ドキュメントセルフサービス API のストリーミングテンプレート](sources-sdk/streaming/streaming-template-api.md)
+      - [ドキュメントセルフサービス UI のストリーミングテンプレート](sources-sdk/streaming/streaming-template-ui.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
+- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

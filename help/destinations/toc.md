@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 92000a9276d0ec379414de22f36865a04ab9a359
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 95%
 * [宛先（アクティベーション）ガードレール](./guardrails.md)
 * 宛先の仕組み {#how-destinations-work}
    * [宛先での設定可能で一般的な書き出し設定](./how-destinations-work/destinations-configurations.md)
-   * [様々な宛先タイプに対するプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
-   * [宛先アクティベーションワークフローでの ID 処理](./how-destinations-work/identity-handling.md)
+   * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
+   * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
 * API チュートリアル {#api}
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
@@ -54,7 +54,7 @@ ht-degree: 95%
    * [宛先カタログの概要](./catalog/overview.md)
    * アドビの宛先 {#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
-      * [（ベータ版）Experience Cloudオーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
       * [Experience Platform セグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
    * 広告の宛先 {#advertising}
@@ -242,4 +242,4 @@ ht-degree: 95%
       * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
       * [オーサリングのベストプラクティス](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [よくある質問](./destinations-faq.md)
-* [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

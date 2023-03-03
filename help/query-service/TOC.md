@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 69%
+ht-degree: 98%
 
 ---
 
@@ -28,20 +28,20 @@ ht-degree: 69%
    - 派生属性 {#derived-attributes}
       - [概要](data-distiller/derived-attributes/overview.md)
       - [シームレスな SQL フロー](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [十分な数の派生属性の作成](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+      - [デシルベースの派生属性の作成](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - ユースケース {#use-cases}
    - [参照を中止](use-cases/abandoned-browse.md)
-   - [Adobe Targetでのアクティビティ分析](use-cases/activity-analysis-with-adobe-target.md)
+   - [Adobe Target でのアクティビティ分析](use-cases/activity-analysis-with-adobe-target.md)
    - [属性分析](use-cases/attribution-analysis.md)
    - [ボットフィルタリング](use-cases/bot-filtering.md)
    - [イベントのトレンドレポートの作成](use-cases/trended-report-of-events.md)
    - [デシルベースの派生属性](use-cases/deciles-use-case.md)
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
-   - [訪問者をページビュー別にリスト表示](use-cases/visitors-by-number-of-page-views.md)
+   - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
    - [傾向スコア](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
-   - [分析データからマーチャンダイジング変数を返して使用する](use-cases/merchandising-variables.md)
-   - [訪問者のロールアップレポートを表示します](use-cases/roll-up-report-of-a-visitor.md)
+   - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
+   - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
    - [Web およびモバイル分析のインサイト](use-cases/analytics-insights.md)
 - クエリサービスへのクライアントの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
@@ -61,10 +61,10 @@ ht-degree: 69%
    - [クエリテンプレート](ui/query-templates.md)
    - [クエリスケジュール](ui/query-schedules.md)
    - [クエリログ](ui/query-logs.md)
-   - [スケジュールクエリの監視](ui/monitor-queries.md)
+   - [スケジュール済みクエリの監視](ui/monitor-queries.md)
    - [資格情報ガイド](ui/credentials.md)
-   - [クエリ結果から出力データセットを生成](ui/create-datasets.md)
-- クエリサービス API エンドポイント {#api}
+   - [クエリ結果からの出力データセットの生成](ui/create-datasets.md)
+- Query Service API エンドポイント {#api}
    - [はじめに](api/getting-started.md)
    - [クエリ](api/queries.md)
    - [接続パラメーター](api/connection-parameters.md)
@@ -80,8 +80,8 @@ ht-degree: 69%
    - [アドホックスキーマの属性ベースのアクセス制御のサポート](./data-governance/ad-hoc-schema-labels.md)
 - ベストプラクティス {#best-practices}
    - [クエリの実行](best-practices/writing-queries.md)
-   - [データアセットの組織](./best-practices/organize-data-assets.md)
-- 基本概念 {#essential-concepts}
+   - [データアセット組織](./best-practices/organize-data-assets.md)
+- 基本的な概念 {#essential-concepts}
    - [ネストされたデータ構造の使用](essential-concepts/nested-data-structures.md)
    - [ネストされたデータ構造の統合](essential-concepts/flatten-nested-data.md)
    - [匿名ブロック](essential-concepts/anonymous-block.md)
@@ -97,4 +97,4 @@ ht-degree: 69%
    - [準備済み文](sql/prepared-statements.md)
 - [よくある質問](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
+- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

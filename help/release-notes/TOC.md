@@ -14,7 +14,7 @@ ht-degree: 100%
 # Adobe Experience Platform リリースノート {#release-notes}
 
 * [現在の Platform リリースノート](latest/latest.md)
-* 2023年度 {#2023}
+* 2023年 {#2023}
    * [2023年2月](2023/february-2023.md)
    * [2023年1月](2023/january-2023.md)
 * 2022年 {#2022}

@@ -1,48 +1,48 @@
 ---
-title: 暗号化されたデータ取り込み
-description: Adobe Experience Platformでは、クラウドストレージバッチソースを使用して、暗号化されたファイルを取り込むことができます。
+title: 暗号化されたデータの取り込み
+description: Adobe Experience Platform では、クラウドストレージバッチソースから、暗号化されたファイルを取り込むことができます。
 hide: true
 hidefromtoc: true
 source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 20%
+ht-degree: 92%
 
 ---
 
-# 暗号化されたデータ取り込み
+# 暗号化されたデータの取り込み
 
-Adobe Experience Platformでは、クラウドストレージバッチソースを使用して、暗号化されたファイルを取り込むことができます。 暗号化されたデータ取り込みを使用すると、非対称の暗号化メカニズムを利用して、バッチデータを安全にExperience Platformに転送できます。 現在、サポートされている非対称暗号化メカニズムは PGP と GPG です。
+Adobe Experience Platform では、クラウドストレージバッチソースから、暗号化されたファイルを取り込むことができます。 暗号化されたデータの取り込みでは、非対称暗号化メカニズムを利用して、バッチデータを Experience Platform に安全に転送できます。 現在のところ、サポートされている非対称暗号化メカニズムは PGP と GPG です。
 
-暗号化されたデータ取り込みプロセスは次のとおりです。
+暗号化されたデータの取り込みプロセスは次のとおりです。
 
-1. [Experience PlatformAPI を使用した暗号化キーペアの作成](#create-encryption-key-pair). 暗号化キーのペアは、秘密鍵と公開鍵で構成されます。 作成した公開鍵は、対応する公開鍵 ID と有効期限と共に、コピーまたはダウンロードできます。 このプロセスの間、秘密鍵はセキュリティで保護された Vault にExperience Platformによって保存されます。 **注意：** 応答の公開鍵は Base64 でエンコードされ、を使用する前に復号化する必要があります。
+1. [Experience Platform API を使用して暗号化キーペアを作成](#create-encryption-key-pair)します。 暗号化キーペアは、秘密鍵と公開鍵で構成されます。 暗号化キーペアを作成したら、公開鍵を、それに対応する公開鍵 ID および有効期限と共にコピーまたはダウンロードできます。 このプロセス中に、秘密鍵は Experience Platform によってセキュアなコンテナに保存されます。**注意：** 応答の公開鍵は Base64 でエンコードされ、を使用する前に復号化する必要があります。
 2. 公開鍵を使用して、取り込むデータファイルを暗号化します。
-3. 暗号化されたファイルをクラウドストレージに配置します。
-4. 暗号化されたファイルの準備が整ったら、 [クラウドストレージソース用のソース接続とデータフローの作成](#create-a-dataflow-for-encrypted-data). フロー作成手順で、 `encryption` パラメーターを使用し、公開鍵 ID を含めます。
-5. Experience Platformは、セキュリティで保護された Vault から秘密鍵を取得し、取得時にデータを復号化します。
+3. 暗号化されたファイルをクラウドストレージに格納します。
+4. 暗号化されたファイルの準備が整ったら、[クラウドストレージソースのソース接続とデータフローを作成](#create-a-dataflow-for-encrypted-data)します。フロー作成手順で、`encryption` パラメーターを指定し、公開鍵 ID を含める必要があります。
+5. Experience Platform は、セキュアなコンテナから秘密鍵を取得して、取り込み時にデータを復号します。
 
 >[!IMPORTANT]
 >
 >1 つの暗号化ファイルの最大サイズは 100 MB です。 例えば、1 回のデータフロー実行で 2 GB 分のデータを取り込むことはできますが、そのデータ内の個々のファイルは 100 MB を超えることはできません。
 
-このドキュメントでは、データを暗号化するための暗号化キーのペアを生成し、クラウドストレージソースを使用して暗号化されたデータをExperience Platformに取り込む手順を説明します。
+このドキュメントでは、データを暗号化するための暗号化キーペアを生成し、暗号化されたデータをクラウドストレージソースを使用して Experience Platform に取り込む手順について説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-   * [クラウドストレージソース](../api/collect/cloud-storage.md):データフローを作成して、クラウドストレージソースからExperience Platformにバッチデータを取り込みます。
+   * [クラウドストレージソース](../api/collect/cloud-storage.md)：クラウドストレージソースから Experience Platform にバッチデータを取り込むためのデータフローを作成します。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
 
-## 暗号化キーペアを作成 {#create-encryption-key-pair}
+## 暗号化キーペアの作成 {#create-encryption-key-pair}
 
-暗号化されたデータをExperience Platformに取り込む最初の手順は、に対してPOSTリクエストを実行して、暗号化キーのペアを作成することです `/encryption/keys` エンドポイント [!DNL Connectors] API
+暗号化されたデータを Experience Platform に取り込む最初の手順は、[!DNL Connectors] API の `/encryption/keys` エンドポイントに対して POST リクエストを実行して暗号化キーペアを作成することです。
 
 **API 形式**
 
@@ -52,7 +52,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **リクエスト**
 
-次のリクエストは、PGP 暗号化アルゴリズムを使用して暗号化キーペアを生成します。
+次のリクエストでは、PGP 暗号化アルゴリズムを使用して暗号化キーペアを生成しています。
 
 ```shell
 curl -X POST \
@@ -72,12 +72,12 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `encryptionAlgorithm` | 使用する暗号化アルゴリズムのタイプ。 サポートされている暗号化の種類は次のとおりです `PGP` および `GPG`. |
-| `params.passPhrase` | このパスフレーズは、暗号化キーに対する保護の追加レイヤーを提供します。 作成時に、Experience Platformはパスフレーズを公開鍵とは別の安全な Vault に保存します。 パスフレーズは、空白以外の文字列を指定する必要があります。 |
+| `encryptionAlgorithm` | 使用する暗号化アルゴリズムのタイプ。 サポートされているタイプは `PGP` と `GPG` です。 |
+| `params.passPhrase` | パスフレーズは、暗号化キーにさらに保護レイヤーを追加します。 作成時に、Experience Platform は、公開鍵とは別のセキュアなコンテナにパスフレーズを保存します。 空白以外の文字列をパスフレーズとして指定する必要があります。 |
 
 **応答**
 
-正常な応答は、Base64 でエンコードされた公開鍵、公開鍵 ID、および鍵の有効期限を返します。 有効期限は、キーの生成日から 180 日後に自動的に設定されます。 有効期限は現在設定できません。
+正常な応答は、Base64 でエンコードされた公開鍵、公開鍵 ID、および鍵の有効期限を返します。 有効期限は、キーの生成日から 180 日後に自動的に設定されます。 現在、有効期限は設定変更できません。
 
 ```json
 {
@@ -87,11 +87,11 @@ curl -X POST \
 }
 ```
 
-## を使用して、クラウドストレージソースをExperience Platformに接続します。 [!DNL Flow Service] API
+## [!DNL Flow Service] API を使用した Experience Platform へのクラウドストレージソースの接続 
 
-暗号化キーペアを取得したら、続行して、クラウドストレージソース用のソース接続を作成し、暗号化されたデータを Platform に取り込むことができます。
+暗号化キーペアを取得したら、手順を進めて、クラウドストレージソースのソース接続を作成し、暗号化されたデータを Platform に取り込むことができます。
 
-まず、Platform に対してソースを認証するためのベース接続を作成する必要があります。 ベース接続を作成し、ソースを認証するには、以下のリストから、使用するソースを選択します。
+まず、Platform に対してソースを認証するためのベース接続を作成する必要があります。 ベース接続を作成しソースを認証するには、使用するソースを以下のリストから選択します。
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -104,20 +104,20 @@ curl -X POST \
 * [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-ベース接続を作成したら、次の手順に従う必要があります。 [クラウドストレージソースのソース接続の作成](../api/collect/cloud-storage.md) ソース接続、ターゲット接続、およびマッピングを作成するために使用します。
+ベース接続を作成したら、[クラウドストレージソースのソース接続の作成](../api/collect/cloud-storage.md)に関するチュートリアルで概要を説明している手順に従って、ソース接続、ターゲット接続、およびマッピングを作成する必要があります。
 
 ## 暗号化されたデータのデータフローの作成 {#create-a-dataflow-for-encrypted-data}
 
 >[!NOTE]
 >
->暗号化されたデータ取り込みのデータフローを作成するには、次が必要です。
+>暗号化されたデータの取り込みのデータフローを作成するには、次のものが必要です。
 >* [公開鍵 ID](#create-encryption-key-pair)
 >* [ソース接続 ID](../api/collect/cloud-storage.md#source)
 >* [ターゲット接続 ID](../api/collect/cloud-storage.md#target)
 >* [マッピング ID](../api/collect/cloud-storage.md#mapping)
 
 
-データフローを作成するには、 `/flows` エンドポイント [!DNL Flow Service] API 暗号化されたデータを取り込むには、 `encryption` セクションから `transformations` プロパティと `publicKeyId` これは、前の手順で作成されたものです。
+データフローを作成するには、[!DNL Flow Service] API の `/flows` エンドポイントに対して POST リクエストを実行します。暗号化されたデータを取り込むには、`transformations` プロパティに `encryption` セクションを追加し、その中に、前の手順で作成した `publicKeyId` を含める必要があります。
 
 **API 形式**
 
@@ -127,7 +127,7 @@ POST /flows
 
 **リクエスト**
 
-次のリクエストは、データフローを作成して、クラウドストレージソースの暗号化されたデータを取り込みます。
+次のリクエストでは、クラウドストレージソースの暗号化されたデータを取り込むデータフローを作成しています。
 
 ```shell
 curl -X POST \
@@ -173,19 +173,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | クラウドストレージソースに対応するフロー仕様 ID。 |
+| `flowSpec.id` | クラウドストレージソースに対応するフロー固有の ID。 |
 | `sourceConnectionIds` | ソース接続 ID。 この ID は、ソースから Platform へのデータ転送を表します。 |
-| `targetConnectionIds` | ターゲット接続 ID。 この ID は、Platform に引き継がれたデータが到着する場所を表します。 |
+| `targetConnectionIds` | ターゲット接続 ID。 この ID は、Platform に取り込まれたデータが格納される場所を表します。 |
 | `transformations[x].params.mappingId` | マッピング ID。 |
-| `transformations.name` | 暗号化されたファイルを取り込む場合、 `Encryption` をデータフローの追加の変換パラメーターとして使用する場合にのみ使用します。 |
-| `transformations[x].params.publicKeyId` | 作成した公開鍵 ID。 この ID は、クラウドストレージデータの暗号化に使用する暗号化キーペアの半分です。 |
+| `transformations.name` | 暗号化されたファイルを取り込む場合、データフローの追加の変換パラメーターとして `Encryption` を指定する必要があります。 |
+| `transformations[x].params.publicKeyId` | 作成した公開鍵 ID。 この ID は、クラウドストレージデータの暗号化に使用される暗号化キーペアの一方です。 |
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
 | `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
 
 **応答**
 
-成功すると、ID(`id`) に含まれます。
+正常な応答では、暗号化されたデータの新規作成されたデータフローの ID（`id`）が返されます。
 
 ```json
 {
@@ -196,4 +196,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、クラウドストレージデータの暗号化キーペアを作成し、 [!DNL Flow Service API]. データフローの完全性、エラー、指標に関するステータスの更新については、 [を使用したデータフローの監視 [!DNL Flow Service] API](./monitor.md).
+このチュートリアルでは、クラウドストレージデータの暗号化キーペアと、暗号化されたデータを [!DNL Flow Service API] を使用して取り込むデータフローを作成しました。データフローの完全性、エラーおよび指標に関するステータスの更新については、[ [!DNL Flow Service]  API を使用したデータフローの監視](./monitor.md)に関するガイドを参照してください。

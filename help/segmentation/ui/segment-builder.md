@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -126,19 +126,19 @@ ht-degree: 95%
 
 ![列挙リストに含まれていない値を挿入しようとした場合に表示される警告](../images/ui/segment-builder/enum-warning.png)
 
-複数の値を作成する場合は、バルクアップロードを使用して一度にすべての値を追加できます。 を選択します。 ![プラスアイコン](../images/ui/segment-builder/plus-icon.png) 見せる **[!UICONTROL 値の一括追加]** ポップオーバー
+複数の値を作成している場合は、バルクアップロードを使用して一度にすべてを追加できます。![プラスアイコン](../images/ui/segment-builder/plus-icon.png) を選択して、**[!UICONTROL 一括で値を追加]**&#x200B;ポップオーバーを表示します。
 
-![プラスアイコンがハイライト表示され、バルクアップロードポップオーバーにアクセスするためのボタンが表示されます。](../images/ui/segment-builder/add-bulk-values.png)
+![プラスアイコンがハイライト表示され、バルクアップロードポップオーバーにアクセスするために選択できるボタンが表示されます。](../images/ui/segment-builder/add-bulk-values.png)
 
-の **[!UICONTROL 値の一括追加]** のポップオーバーで、CSV または TSV ファイルをアップロードできます。
+**[!UICONTROL 一括で値を追加]**&#x200B;ポップオーバーで、CSV または TSV ファイルをアップロードできます。
 
-![「値を一括で追加」ポップオーバーが表示されます。 CSV または TSV ファイルをアップロードするために選択できるダイアログがハイライト表示されます。](../images/ui/segment-builder/bulk-values-popover.png)
+![一括で値を追加ポップオーバーが表示されます。CSV または TSV ファイルをアップロードするために選択できるダイアログがハイライト表示されます。](../images/ui/segment-builder/bulk-values-popover.png)
 
-または、コンマ区切りの値を手動で追加できます。
+または、コンマ区切りの値を手動で追加することもできます。
 
-![「値を一括で追加」ポップオーバーが表示されます。 値の挿入に使用できるダイアログと、追加された値の両方がハイライト表示されます。](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![一括で値を追加ポップオーバーが表示されます。値の挿入に使用できるダイアログと、追加された値の両方がハイライト表示されます。](../images/ui/segment-builder/bulk-values-comma-separated.png)
 
-最大 250 個の値を指定できます。 この値を超える場合は、値を削除してから追加する必要があります。
+最大 250 個の値が許可されます。この値を超える場合は、値を削除してから追加する必要があります。
 
 ![値の最大数に達したことを示す警告が表示されます。](../images/ui/segment-builder/maximum-values.png)
 
