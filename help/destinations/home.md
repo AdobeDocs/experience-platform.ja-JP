@@ -1,12 +1,12 @@
 ---
-keywords: 宛先；adobe experience platform；プラットフォーム；宛先の概要；データのアクティブ化；アクティブ化；
+keywords: 宛先;Adobe Experience Platform;Platform;宛先の概要;データのアクティブ化;アクティブ化;
 title: 宛先の概要
-description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '755'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
@@ -25,17 +25,17 @@ ht-degree: 34%
 
 ## 宛先とソース {#destinations-and-sources}
 
-Platform の主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。 用途 [ソース](../sources/home.md) を使用して、Platform と宛先にデータを取り込み、Platform からデータを書き出します。
+Platform の主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。[ソース](../sources/home.md)を使用してデータを Platform に取り込み、宛先を使用して Platform からデータを書き出します。
 
 ## 宛先の手順 {#steps}
 
-* 次から選択： [セルフサービスカタログ](./catalog/overview.md) を含む ) を含める必要があります。
-* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームに送信します。
+* Platform で使用可能なすべての宛先の[セルフサービスカタログ](./catalog/overview.md)から選択します。
+* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
 
-コントロール ( [宛先 workspace](./ui/destinations-workspace.md) を使用すると、次のことができます。
+[宛先ワークスペース](./ui/destinations-workspace.md)のコントロールを使用すると、次のことができます。
 
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
@@ -45,56 +45,56 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
-Experience Platformを使用すると、様々なタイプの宛先に対してデータをアクティブ化し、アクティブ化の使用例を満たすことができます。 宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、 [宛先のタイプとカテゴリの概要](./destination-types.md).
+Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、[宛先のタイプとカテゴリの概要](./destination-types.md)を参照してください。
 
 ## 宛先とアクセス制御 {#access-controls}
 
-Platform の宛先機能は、Adobe Experience Platformのアクセス制御権限と連携します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](../access-control/home.md)」を参照して、ページの下部まで下にスクロールします。
+Platform の宛先機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](../access-control/home.md)」を参照して、ページの下部まで下にスクロールします。
 
-次の表に、宛先で特定のアクションを実行するために必要な権限と権限の組み合わせを示します。
+宛先で特定のアクションを実行するために必要な権限と、権限の組み合わせをまとめたものを以下の表に示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL 宛先の管理]** | 宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** | 宛先に対してセグメントをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先へのセグメントをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;に対する[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-アクセス制御の詳細については、「[アクセス制御ユーザーガイド](../access-control/ui/overview.md)」を参照してください。
+アクセス制御の詳細については、[アクセス制御ユーザーガイド](../access-control/ui/overview.md)を参照してください。
 
 ### 宛先の属性ベースのアクセス制御 {#attribute-based-access}
 
 Adobe Experience Platform での属性ベースのアクセス制御では、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できます。
 
-属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データを宛先に書き出すことはできません。
+属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、宛先にデータを書き出すことはできません。
 
-宛先が属性ベースのアクセス制御と連携する方法について詳しくは、 [属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations).
+宛先が属性ベースのアクセス制御と連携する方法について詳しくは、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations)を参照してください。
 
 ## 宛先の監視 {#destinations-monitoring}
 
-宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムに書き出されるデータを監視できます。 詳しくは、 [UI での宛先へのデータフローの監視に関するガイド](/help/dataflows/ui/monitor-destinations.md) を参照してください。
+宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムへのデータの書き出しを監視できます。詳しくは、[UI での宛先へのデータフローの監視に関するガイド](/help/dataflows/ui/monitor-destinations.md)を参照してください。
 
-また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには、 *「データエクスポートの検証」セクション*：データがExperience Platformから正常に取り込まれていることを宛先プラットフォームにチェックインする方法を示します。
+また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには、*データ書き出しの検証*&#x200B;セクションがあり、Experience Platform からデータが正常に取り込まれていることを宛先プラットフォームで確認する方法を示しています。
 
 ## 宛先へのデータのアクティブ化に関するデータガバナンス制限 {#data-governance}
 
-データガバナンスは、次の方法で Platform の宛先に適用されます。
+データガバナンスは、次を通じて Platform の宛先に適用されます。
 
-* *マーケティングアクション* 宛先の作成ワークフローで選択できるもの。
-* *データ使用ポリシー* 特定の使用ラベルを含むデータを、特定のマーケティングアクションを持つ宛先に対してアクティブ化しないように制限する機能を追加しました。
+* 宛先の作成ワークフローで選択できる&#x200B;*マーケティングアクション*。
+* 特定の使用ラベルを含むデータが、特定のマーケティングアクションを持つ宛先に対してアクティブ化されることを制限する&#x200B;*データ使用ポリシー*。
 
-詳しくは、Platform のドキュメントの「データガバナンス」を参照してください。 [マーケティングアクション](../data-governance/policies/overview.md) および [データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md).
+[マーケティングアクション](../data-governance/policies/overview.md)と[データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Platform のドキュメントのデータガバナンスを参照してください。
 
-宛先の作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Platform の様々な宛先タイプについて、次のページを参照してください。
+宛先の作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Platform の様々な宛先タイプに関する次のページを参照してください。
 
-* [広告の宛先 — Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
-* [広告の宛先 — Google Ads](./catalog/advertising/google-ads-destination.md)
-* [広告の宛先 — Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [広告の宛先 - Google アド マネージャー ](./catalog/advertising/google-ad-manager.md)
+* [広告の宛先 - Google 広告](./catalog/advertising/google-ads-destination.md)
+* [広告の宛先 - Google ディスプレイ＆ビデオ 360 ](./catalog/advertising/google-dv360.md)
 * [クラウドストレージの宛先](./catalog/cloud-storage/overview.md)
-* [電子メールマーケティングの宛先](./catalog/email-marketing/overview.md)
+* [メールマーケティングの宛先](./catalog/email-marketing/overview.md)
 * [ソーシャルの宛先 ](./catalog/social/overview.md)
 
-セグメントのアクティベーションワークフローでのデータポリシー違反について詳しくは、 **[!UICONTROL レビュー]** 次のガイドの手順を実行します。
+セグメントのアクティベーションワークフローにおけるデータポリシー違反について詳しくは、次のガイドの&#x200B;**[!UICONTROL レビュー]**&#x200B;手順を参照してください。
 
 * [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md#review)
 * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md#review)
