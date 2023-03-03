@@ -5,9 +5,9 @@ user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
 source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
