@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform；クエリサービス；クエリサービス；ネストされたデータ構造；ネストされたデータ；
+keywords: Experience Platform;クエリサービス;クエリサービス;ネストされたデータ構造;ネストされたデータ;
 title: クエリサービスでのネストされたデータ構造の使用
-description: このドキュメントでは、CTAS および INSERT INTO 文を使用してネストされたデータフィールドを処理および変換する作業例を示します。
+description: このドキュメントでは、CTAS 文と INSERT INTO 文を使用して、ネストされたデータフィールドを処理および変換する実際の例について説明します。
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '795'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # クエリサービスでのネストされたデータ構造の使用
 
-Adobe Experience Platformクエリサービスでは、ネストされたデータフィールドの使用がサポートされています。 エンタープライズデータ構造の複雑さにより、このデータの変換や処理が複雑になる場合があります。 このドキュメントでは、ネストされたデータ構造を含む複雑なデータ型のデータセットを作成、処理、変換する方法の例を示します。
+Adobe Experience Platform クエリサービスでは、ネストされたデータフィールドの使用をサポートしています。エンタープライズデータ構造の複雑さにより、このデータの変換や処理が複雑になる場合があります。このドキュメントでは、ネストされたデータ構造を含む複雑なデータタイプを含むデータセットを作成、処理、変換する方法の例について説明します。
 
-クエリサービスは、 [!DNL PostgreSQL] Experience Platformが管理するすべてのデータセットに対して SQL クエリを実行するインターフェイス。 Platform では、構造体、配列、マップ、深くネストされた構造体、配列、マップなどのテーブル列で、プリミティブデータ型または複雑なデータ型の使用がサポートされています。 データセットには、列のデータ型がネストされた構造体の配列と同じくらい複雑な構造を含めることも、キーと値のペアの値が複数レベルのネストを持つ構造体になるマップのマップを含めることもできます。
+クエリサービスは、Experience Platform によって管理されるすべてのデータセットに対して SQL クエリを実行するための [!DNL PostgreSQL] インターフェイスを提供します。Platform では、構造体、配列、マップと、深くネストされた構造体、配列、マップなど、テーブル列でのプリミティブデータタイプまたは複合データタイプの使用をサポートしています。 データセットには、列のデータタイプがネストされた構造の配列と同じくらい複雑なネストされた構造や、キーと値のペアの値が複数レベルのネストを持つ構造になるマップのマップを含めることもできます。
 
 ## はじめに
 
-このチュートリアルでは、サードパーティの PSQL クライアントまたはクエリエディターツールを使用して、Experience Platformユーザーインターフェイス (UI) 内でクエリの書き込み、検証、実行をおこなう必要があります。 UI を使用してクエリを実行する方法の詳細については、 [クエリエディター UI ガイド](../ui/user-guide.md). サードパーティのデスクトップクライアントがクエリサービスに接続できる詳細なリストについては、 [クライアント接続の概要](../clients/overview.md).
+このチュートリアルでは、サードパーティの PSQL クライアントまたはクエリエディターツールを使用して、Experience Platform ユーザーインターフェイス（UI）内でクエリの書き込み、検証、実行を行う必要があります。UI を使用してクエリを実行する方法について詳しくは、[クエリエディター UI ガイド](../ui/user-guide.md)を参照してください。クエリサービスに接続できるサードパーティのデスクトップクライアントの詳細なリストについては、[クライアント接続の概要](../clients/overview.md)を参照してください。
 
-また、 `INSERT INTO` および `CTAS` 構文と同じです。 使用に関する具体的な情報については、 [`INSERT INTO`](../sql/syntax.md#insert-into) および [`CTAS`](../sql/syntax.md#create-table-as-select) セクション [SQL 構文リファレンスドキュメント](../sql/syntax.md).
+`INSERT INTO` と `CTAS` の構文についてもよく理解しておく必要があります。使用に関する具体的な情報については、[SQL 構文リファレンスドキュメント](../sql/syntax.md)の [`INSERT INTO`](../sql/syntax.md#insert-into) および [`CTAS`](../sql/syntax.md#create-table-as-select) の節を参照してください。
 
 ## データセットの作成
 
-クエリサービスは、「テーブルを選択として作成」(`CTAS`) 機能を使用して、 `SELECT` 文、またはこの場合と同様に、Adobe Experience Platformの既存の XDM スキーマへの参照を使用します。 以下に、の XDM スキーマを示します。 `Final_subscription` を作成しました。
+クエリサービスは、テーブルを選択として作成（`CTAS`）機能を提供し、`SELECT` 文の出力に基づいて、またはこの場合のように、Adobe Experience Platform の既存の XDM スキーマへの参照を使用してテーブルを作成します。 この例のために作成した `Final_subscription` の XDM スキーマを以下に示します。
 
 ![final_subscription スキーマの図。](../images/best-practices/final-subscription-schema.png)
 
-次の例は、 `final_subscription_test2` データセット。 `final_subscription_test2` は `Final_subscription` スキーマ。 データは、 `SELECT` 句を使用して、一部の行を設定します。
+次の例は、`final_subscription_test2` データセットの作成に使用する SQL を示しています。`final_subscription_test2` は、`Final_subscription` スキーマを使用して作成します。`SELECT` 句を使用してソースからデータを抽出し、いくつかの行に入力します。
 
 ```sql
 CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
@@ -62,11 +62,11 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
        ) GROUP BY userid)
 ```
 
-最初のデータセット内 `final_subscription_test2`の場合、構造体データ型は、 `subscription` フィールドと `userid` 各ユーザーに固有の この `subscription` 「 」フィールドは、ユーザーの製品購読を表します。 複数の購読を設定できますが、テーブルには 1 行につき 1 つの購読の情報のみを含めることができます。
+初期データセット `final_subscription_test2` では、構造体データタイプを使用して `subscription` フィールドと各ユーザーに固有の `userid` フィールドの両方が含まれます。`subscription` フィールドは、ユーザーの製品購読を表します。複数の購読が存在する可能性がありますが、テーブルには 1 行につき 1 つの購読の情報しか含めることができません。
 
-## INSERT INTO を使用して、ネストされたデータフィールドを更新します
+## INSERT INTO を使用してネストされたデータフィールドの更新
 
-次の期間の後 `final_subscription_test2` データセットが作成されている場合、 `INSERT INTO` ステートメントは、テーブルに追加のデータを追加するために使用されます。 データをコピーする場合、ソースとターゲットのデータタイプが一致する必要があります。 または、ソースデータタイプが `CAST` をターゲットデータ型に追加します。 次に、次の SQL を使用して、増分データをターゲットデータセットに追加します。
+`final_subscription_test2` データセットを作成した後、`INSERT INTO` 文を使用して追加データをテーブルに追加します。データをコピーする場合、ソースとターゲットのデータタイプが一致する必要があります。または、ソースデータタイプはターゲットデータタイプに対して `CAST` である必要があります。次に、次の SQL を使用して、増分データをターゲットデータセットに追加します。
 
 ```sql
 INSERT INTO final_subscription_test
@@ -99,33 +99,33 @@ INSERT INTO final_subscription_test
        ) GROUP BY userid)
 ```
 
-## ネストされたデータセットからデータを処理する
+## ネストされたデータセットからのデータの処理
 
-ユーザーのアクティブなサブスクリプションのリストをデータセットから調べるには、配列の要素を複数の行と列に分割するクエリを記述する必要があります。 これをおこなうには、まず、サブスクリプション情報がデータセット内にネストされた配列内に保持されるので、データモデルの形状を理解する必要があります。
+データセットからユーザーのアクティブな購読のリストを見つけるには、配列の要素を複数の行と列に分割するクエリを記述する必要があります。これを行うには、購読情報がデータセット内にネストされた配列内に保持されるので、最初にデータモデルの形状を理解する必要があります。
 
-PSQL `\d` コマンドを使用して、必要なサブスクリプションデータにレベルごとに移動します。 次の表に、 `final_subscription_test2` データセット。 複雑なデータ型は、テキスト、ブール値、タイムスタンプなどの一般的な型の値ではないので、一目で認識できます。
+PSQL `\d` コマンドを使用して、必要な購読データへとレベルごとに移動します。`final_subscription_test2` データセットの構造を以下の表に示します。複雑なデータタイプは、テキスト、ブール値、タイムスタンプなどの一般的なタイプの値ではないので、一目で認識できます。
 
 | 列 | タイプ |
 |--------|-------|
 | `_lumaservices3` | final_subscription_test2__lumaservices3 |
 
-次の列のフィールドは、 `\d final_subscription_test2__lumaservices3` コマンドを使用します。
+`\d final_subscription_test2__lumaservices3` コマンドを使用すると、次の列のフィールドが表示されます。
 
 | 列 | タイプ |
 |---------|-------|
 | `userid` | テキスト |
 | `subscription` | _lumaservices3_subscription_e[] |
 
-`subscription` は構造体要素の配列です。 フィールドは、 `\d _lumaservices3_subscription_e[]` コマンドを使用します。
+`subscription` は構造体要素の配列です。`\d _lumaservices3_subscription_e[]` コマンドを使用すると、そのフィールドが表示されます。
 
 | 列 | タイプ |
 |---------|-------|
-| `last_eventtime` | timestamp |
+| `last_eventtime` | タイムスタンプ |
 | `last_status` | テキスト |
 | `offer_id` | テキスト |
 | `subscription_id` | テキスト |
 
-購読のネストされたフィールドに対してクエリを実行するには、まず、 `subscription` 配列を複数の行に分割し、explode 関数を使用して結果を返します。 次の SQL の例では、ユーザーのアクティブな購読を `userid`.
+ネストされた購読フィールドをクエリするには、最初に `subscription` 配列の要素を複数の行に分割し、explode 関数を使用して結果を返す必要があります。次の SQL の例では、`userid` に基づいて、あるユーザーのアクティブな購読を返します。
 
 ```sql
 SELECT userid, subs AS active_subscription FROM (
@@ -135,7 +135,7 @@ SELECT userid, subs AS active_subscription FROM (
 WHERE subs.last_status='Active';
 ```
 
-このシンプル化されたサンプルソリューションでは、1 人のアクティブなユーザーサブスクリプションのみを使用できます。 現実的には、1 人のユーザーに対して多数のアクティブな購読が存在する可能性があります。 次の使用例は、複数の同時アクティブなサブスクリプションを許可するように前のクエリを変更します。
+このシンプル化されたサンプルソリューションでは、1 つのアクティブなユーザー購読のみが許可されます。現実的には、1 人のユーザーに対して多数のアクティブな購読が存在する可能性があります。次の例では、前のクエリを変更して、複数の同時にアクティブな購読を許可します。
 
 ```sql
 SELECT userid, collect_list(subs) AS active_subscriptions FROM (
@@ -148,8 +148,8 @@ WHERE subs.last_status='Active'
 GROUP BY userid ;
 ```
 
-この SQL の例はますます複雑になっていますが、 `collect_list` アクティブなサブスクリプションでは、出力がソースと同じ順序になるとは限りません。 ユーザーのアクティブな購読のリストを作成するには、GROUP BY を使用するか、シャッフリングを使用してリストの結果を集計する必要があります。
+この SQL の例はますます複雑になっていますが、アクティブな購読の `collect_list` は、出力がソースと同じ順序になることを保証しません。ユーザーのアクティブな購読のリストを作成するには、GROUP BY またはシャッフルを使用してリストの結果を集計する必要があります。
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformクエリサービスで複雑なデータ型を使用するデータセットを処理または変換する方法について説明します。 詳しくは、 [クエリの実行ガイダンス](../best-practices/writing-queries.md) を参照してください。
+このドキュメントを参照すると、Adobe Experience Platform クエリサービスで複雑なデータタイプを使用するデータセットを処理または変換する方法を理解できます。データレイク内のデータセットで SQL クエリを実行する方法について詳しくは、[クエリ実行のガイダンス](../best-practices/writing-queries.md)を参照してください。
