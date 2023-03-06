@@ -3,9 +3,9 @@ title: Platform Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得および管理する方法について説明します。
 keywords: ID；ファーストパーティ ID;ID サービス；サードパーティ ID;ID の移行；訪問者 ID；サードパーティ ID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期 ID;sendEvent;identityMap；プライマリ；ID 名前空間；id；認証状態 hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
+source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1404'
 ht-degree: 2%
 
 ---
@@ -113,6 +113,8 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 | `id` | 文字列 | **（必須）** 指定された名前空間に設定する ID。 |
 | `authenticationState` | 文字列 | **（必須）** ID の認証状態。 有効な値は `ambiguous`、`authenticated`、および `loggedOut` です。 |
 | `primary` | ブール値 | この ID をプロファイル内のプライマリフラグメントとして使用するかどうかを決定します。 デフォルトでは、ECID はユーザーのプライマリ識別子として設定されています。 省略した場合、この値はデフォルトで `false` になります。 |
+
+の使用 `identityMap` デバイスまたはユーザーを識別するためのフィールドは、 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) メソッド [!DNL ID Service API]. 詳しくは、 [ID サービス API ドキュメント](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) を参照してください。
 
 ## 訪問者 API から ECID への移行
 
