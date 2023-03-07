@@ -1,18 +1,18 @@
 ---
-title: Adobe Analyticsと Platform Web SDK の使用
-description: Adobe Experience Platform Web SDK を使用してAdobe Analyticsにデータを送信する方法について説明します。
-keywords: adobe analytics;analytics；マッピングされたデータ；マッピングされた var;
+title: Adobe Analytics と Platform Web SDK の使用
+description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します。
+keywords: Adobe Analytics;Analytics;マッピングされたデータ;マッピングされた var;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '306'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
-# Adobe Analyticsと Platform Web SDK の使用
+# Adobe Analytics と Platform Web SDK の使用
 
-ザAdobe Experience Platform [!DNL Web SDK] はAdobe Analyticsにデータを送信できます。 これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
+Adobe Experience Platform [!DNL Web SDK] は、Adobe Analytics にデータを送信できます。これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
 
 ## セットアップ
 
@@ -20,15 +20,15 @@ ht-degree: 34%
 
 ## XDM フィールドグループ
 
-最も一般的なAdobe Analytics指標を簡単に取り込めるように、使用できる Analytics フィールドグループを提供しています。 このスキーマについて詳しくは、 [Adobe Analytics ExperienceEvent Full Extension スキーマフィールドグループ](../../../xdm/field-groups/event/analytics-full-extension.md)
+最も一般的な Adobe Analytics 指標を簡単に取り込めるように、使用できる Analytics フィールドグループを提供しています。このスキーマについて詳しくは、[Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループ](../../../xdm/field-groups/event/analytics-full-extension.md)のドキュメントを参照してください
 
 ## 自動的にマッピングされたデータ
 
-ザAdobe Experience Platform [!DNL Edge Network] は多くの XDM 変数を自動的にマッピングします。 これらの変数の完全なリストが表示されます [ここ](automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] は、多くの XDM 変数を自動的にマッピングします。これらの変数の完全なリストについては、[こちら](automatically-mapped-vars.md)を参照してください。
 
 ## 手動でマッピングされたデータ
 
-が [!DNL Edge Network] は、処理ルールを使用してアクセスできます。 データはドット表記を使用して統合され、contextData として使用できます。
+[!DNL Edge Network] によって自動的にマッピングされていないデータは、処理ルールを使用してアクセスできます。データはドット表記を使用して統合され、contextData として使用できます。
 
 次のようなスキーマがある場合。
 
@@ -74,4 +74,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 >[!NOTE]
 >
->Experience Edge コレクションを使用すると、すべてのイベントが Analytics に加えて、お客様のデータストリームに設定した他のサービスに送信されます。 例えば、Analytics と Target の両方をサービスとして設定し、パーソナライゼーションと Analytics に対して別々に呼び出す場合、両方のイベントが Analytics および Target に送信されます。 これらのイベントは、Analytics レポートに記録され、バウンス率などの指標に影響を与える可能性があります。
+>Experience Edge コレクションを使用すると、すべてのイベントが Analytics と、データストリーム用に設定した他のサービスに送信されます。例えば、Analytics と Target の両方をサービスとして設定しており、パーソナライゼーションと Analytics に対して個別の呼び出しを行う場合、両方のイベントが Analytics と Target に送信されます。これらのイベントは、Analytics レポートに記録され、バウンス率などの指標に影響を与える可能性があります。
