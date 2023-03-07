@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 15%
 
 ---
@@ -64,7 +64,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 次と等しい | 2 つの文字列を比較し、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>文字列 1: **必須** 比較する最初の文字列です。</li><li>文字列 2: **必須** 比較する 2 番目の文字列です。</li></ul> | STRING1&#x200B;.equals( &#x200B; STRING2) | &quot;string1&quot;です&#x200B;。equals(&#x200B;&quot;STRING1&quot;) | false |
 | equalSignoreCase | 2 つの文字列を比較し、等しいかどうかを確認します。 この関数は、 **not** 大文字と小文字を区別します。 | <ul><li>文字列 1: **必須** 比較する最初の文字列です。</li><li>文字列 2: **必須** 比較する 2 番目の文字列です。</li></ul> | STRING1&#x200B;.equalsIgnoreCase(&#x200B;STRING2) | &quot;string1&quot;です&#x200B;。equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 正規表現関数
 
@@ -73,7 +73,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 正規表現に基づいて入力文字列からグループを抽出します。 | <ul><li>文字列： **必須** グループを抽出する文字列です。</li><li>正規表現： **必須** グループに一致させる正規表現です。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;, &#x200B; &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 文字列が入力された正規表現と一致するかどうかを確認します。 | <ul><li>文字列： **必須** チェックする文字列は、正規表現と一致します。</li><li>正規表現： **必須** 比較する正規表現です。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ハッシュ関数 {#hashing}
 
@@ -89,7 +89,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 入力を受け取り、MD5 を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ハッシュ化するプレーンテキスト。</li><li>文字セット： *オプション* 文字セットの名前。 UTF-8、UTF-16、ISO-8859-1、US-ASCII などの値が使用できます。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 入力では、Cyclic Redundancy Check（CRC；巡回冗長検査）アルゴリズムを使用して、32 ビットの巡回コードを生成します。 | <ul><li>入力： **必須** ハッシュ化するプレーンテキスト。</li><li>文字セット： *オプション* 文字セットの名前。 UTF-8、UTF-16、ISO-8859-1、US-ASCII などの値が使用できます。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### URL 関数 {#url}
 
@@ -104,8 +104,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 指定された URL のポートを返します。 入力が無効な場合は、null を返します。 | <ul><li>URL: **必須** ポートの抽出元の URL。</li></ul> | get_url_port(URL) | get_url_port(&quot;&#x200B;sftp://example.com//home/ joe/employee.csv&#x200B;&quot;) | 22 |
 | get_url_path | 指定された URL のパスを返します。 デフォルトでは、完全なパスが返されます。 | <ul><li>URL: **必須** パスの抽出元の URL。</li><li>フルパス： *オプション* フルパスが返されるかどうかを決定する boolean 値です。 false に設定した場合は、パスの終わりのみが返されます。</li></ul> | get_url_path(&#x200B;URL, FULL_PATH) | get_url_path(&quot;&#x200B;sftp://example.com// home/joe/employee.csv&#x200B;&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_query_str | 指定された URL のクエリ文字列を、クエリ文字列名とクエリ文字列値のマップとして返します。 | <ul><li>URL: **必須** クエリ文字列を取得しようとしている URL です。</li><li>アンカー： **必須** クエリ文字列内のアンカーに対して何がおこなわれるかを決定します。 次の 3 つの値のいずれかを指定できます。&quot;retain&quot;、&quot;remove&quot;、または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーがアタッチされます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_query_str(&#x200B;URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;&#x200B;foo://example.com:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | この関数は、URL を入力として受け取り、特殊文字を ASCII 文字に置き換えるか、エンコードします。 特殊文字の詳細については、 [特殊文字のリスト](#special-characters) 」を参照してください。 | <ul><li>URL: **必須** ASCII 文字に置き換えるかエンコードする特殊文字を含む入力 URL。</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | この関数は、URL を入力として受け取り、ASCII 文字を特殊文字にデコードします。  特殊文字の詳細については、 [特殊文字のリスト](#special-characters) 」を参照してください。 | <ul><li>URL: **必須** 特殊文字にデコードする ASCII 文字を含む入力 URL。</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 日付および時間関数 {#date-and-time}
 
@@ -128,7 +130,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | zone_date_to_utc | 任意のタイムゾーンの日付を UTC での日付に変換します。 | <ul><li>日付： **必須** 変換しようとしている日付です。</li></ul> | zone_date_to_utc(&#x200B;DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | 日付をあるタイムゾーンから別のタイムゾーンに変換します。 | <ul><li>日付： **必須** 変換しようとしている日付です。</li><li>ゾーン： **必須** 日付を変換しようとしているタイムゾーンです。</li></ul> | zone_date_to_zone(&#x200B;DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 階層 — オブジェクト {#objects}
 
@@ -147,7 +149,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_keys | キーと値のペアを解析し、すべてのキーを返します。 | <ul><li>オブジェクト： **必須** キーの抽出元のオブジェクト。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;:&quot;Pride and Pairaming&quot;, &quot;book2&quot;:&quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | キーと値のペアを解析し、指定されたキーに基づいて文字列の値を返します。 | <ul><li>文字列： **必須** 解析する文字列です。</li><li>キー： **必須** 値を抽出するキー。</li><li>値の区切り： **必須** フィールドと値を区切る区切り文字。 次のいずれかの場合、 `null` または空の文字列が指定された場合、この値は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールドと値のペアを区切る区切り文字。 次のいずれかの場合、 `null` または空の文字列が指定された場合、この値は `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 オブジェクトのコピーフィーチャーの詳細については、「 [下](#object-copy).
 
@@ -169,7 +171,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | upsert_array_append | この関数は、入力配列全体のすべての要素を、プロファイルの配列の末尾に追加するために使用します。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイルに配列を追加する配列です。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 論理演算子 {#logical-operators}
 
@@ -182,7 +184,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー： **必須** 照合するキー。</li><li>OPTIONS: **必須** キーと値のペアのフラット化された配列。 オプションで、デフォルト値を末尾に配置できます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 指定された stateCode が「ca」、「California」の場合。<br>stateCode が「pa」の場合は、「Pennsylvania」です。<br>stateCode が以下と一致しない場合は、「N/A」となります。 |
 | iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>式： **必須** 評価されるブール式。</li><li>TRUE_VALUE: **必須** 式の値が true の場合に返される値です。</li><li>FALSE_VALUE: **必須** 式の値が false の場合に返される値です。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 集計 {#aggregation}
 
@@ -195,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS: **必須** 互いに比較できる 1 つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS: **必須** 互いに比較できる 1 つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 型変換 {#type-conversions}
 
@@ -210,7 +212,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 文字列を浮動小数に変換します。 | <ul><li>文字列： **必須** 浮動小数点型 (Float) に変換する文字列を指定します。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 文字列を整数に変換します。 | <ul><li>文字列： **必須** 整数に変換する文字列を指定します。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### JSON 関数 {#json}
 
@@ -222,7 +224,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 指定された文字列から JSON コンテンツを逆シリアル化します。 | <ul><li>文字列： **必須** シリアル化を解除する JSON 文字列。</li></ul> | json_to_object(&#x200B;STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSON を表すオブジェクト。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 特別な操作 {#special-operations}
 
@@ -234,7 +236,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ユーザーエージェントの関数 {#user-agent}
 
@@ -258,7 +260,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_agent_name | ユーザーエージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_agent_name(&#x200B;USER_AGENT) | ua_agent_name(&quot;Mozilla/5.&#x200B;0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT: **必須** ユーザーエージェント文字列。</li></ul> | ua_device_class(&#x200B;USER_AGENT) | ua_device_class(&quot;&#x200B;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 (Mac OS X など ) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### オブジェクトのコピー {#object-copy}
 
@@ -302,3 +304,43 @@ address.line1 -> addr.addrLine1
 * 新しい属性には、ソーススキーマと XDM スキーマで一致する名前が必要です。
 
 いずれかの前提条件が満たされない場合は、データ準備を使用してソーススキーマを XDM スキーマに手動でマッピングする必要があります。
+
+## 付録
+
+次に、Data Prep マッピング関数の使用に関する追加情報を示します
+
+### 特殊文字 {#special-characters}
+
+次の表に、予約文字と、対応するエンコード済み文字の一覧を示します。
+
+| 予約文字 | エンコードされた文字 |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+| 」 | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| （ | %28 |
+| ） | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| ： | %3A |
+|   | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
