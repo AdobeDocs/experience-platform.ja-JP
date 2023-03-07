@@ -2,7 +2,7 @@
 title: Marketo Measure Ultimate の宛先
 description: Marketo Measure Ultimate の宛先にデータを接続し、アクティブ化する方法を説明します。
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
+source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 37%
@@ -83,7 +83,5 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 ## データの使用とガバナンス {#data-usage-governance}
 
 [!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
-
-<!--## Additional resources {#additional-resources}-->
 
 
