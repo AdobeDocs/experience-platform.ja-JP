@@ -2,10 +2,10 @@
 title: Marketo Measure Ultimate の宛先
 description: Marketo Measure Ultimate の宛先にデータを接続し、アクティブ化する方法を説明します。
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 38%
+source-wordcount: '654'
+ht-degree: 37%
 
 ---
 
@@ -60,21 +60,23 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 
+![Marketo Measureの宛先の宛先への接続ワークフロー。](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先にデータセットを書き出す {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) を参照してください。
+詳しくは、 [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) この宛先にデータセットを書き出す詳しい手順については、こちらのチュートリアルを参照してください。
 
-## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
+## データの書き出しを検証する {#exported-data}
 
 データセットの書き出しが正常におこなわれたことを検証するには、データセットが [Snowflakeデータウェアハウス](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 
 [!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
 
-## その他のリソース {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
