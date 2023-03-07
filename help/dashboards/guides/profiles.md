@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
-source-wordcount: '3381'
-ht-degree: 94%
+source-wordcount: '3385'
+ht-degree: 92%
 
 ---
 
@@ -117,7 +117,7 @@ Platform UI に用意されているプロファイル表示機能について�
 * [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
 * [[!UICONTROL 単一の ID プロファイル（ID 別）]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
-* [[!UICONTROL 非セグメント化プロファイルのトレンド]](#unsegmented-profiles-trend)
+* [[!UICONTROL 非セグメント化プロファイルの傾向の変化]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 非セグメント化プロファイル（ID 別）]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL オーディエンス]](#audiences)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
@@ -262,21 +262,22 @@ ID について詳しくは、[Adobe Experience Platform ID サービスのド�
 
 ![セグメント化されていないプロファイルのウィジェット。](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL セグメント化されていないプロファイルのトレンド] {#unsegmented-profiles-trend}
+### [!UICONTROL 非セグメント化プロファイルの傾向の変化] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="セグメント化されていないプロファイルのトレンド"
 >abstract="このウィジェットには、一定期間内にどのセグメントにも属していないプロファイルの数が折れ線グラフで表示されます。どのセグメントにも属していないプロファイルのトレンドを、30 日、90 日、12 か月の期間で視覚化できます。"
 
-[!UICONTROL セグメント化されていないプロファイルのトレンド]ウィジェットには、一定期間内にどのセグメントにも属していないプロファイルの数が折れ線グラフで表示されます。どのセグメントにも属していないプロファイルのトレンドを、30 日、90 日、12 か月の期間で視覚化できます。期間は、ウィジェットのドロップダウンメニューから選択します。プロファイル数は y 軸、時間は x 軸に反映されます。
+この [!UICONTROL 非セグメント化プロファイルの傾向の変化] ウィジェットは折れ線グラフを使用して、セグメントに付加されていない、最後の 1 日のスナップショット以降に追加されたプロファイルの数を示します。 どのセグメントにも関連付けられていないプロファイルの変化トレンドを、30 日、90 日、12 ヶ月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。プロファイル数は y 軸、時間は x 軸に反映されます。
 
-![セグメント化されていないプロファイルのトレンドウィジェット。](../images/profiles/unsegmented-profiles-trend.png)
+![非セグメント化プロファイルはトレンドウィジェットを変更します。](../images/profiles/unsegmented-profiles-change-trend.png)
 
-### [!UICONTROL セグメント化されていないプロファイル（ID 別）] {#unsegmented-profiles-by-identity}
+### [!UICONTROL 非セグメント化プロファイル（ID 別）] {#unsegmented-profiles-by-identity}
 
->!![NOTE]
-ID による非セグメント化プロファイルウィジェットは、2022 年 10 月に廃止され、使用できなくなりました。
+>[!NOTE]
+>
+>ID による非セグメント化プロファイルウィジェットは、2022 年 10 月に廃止され、使用できなくなりました。
 
 <!-- 
 
@@ -323,7 +324,8 @@ The visualization allows you to monitor the overall health of audiences within A
 ![オーディエンスの重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-「**[!UICONTROL 重複]**」列ヘッダーを選択して、結果のランキングを高い順または低い順に変更できます。
+>
+>「**[!UICONTROL 重複]**」列ヘッダーを選択して、結果のランキングを高い順または低い順に変更できます。
 
 レポート全体を PDF 形式でダウンロードするには、オプションメニュー（**`...`**）に続いて「**[!UICONTROL ダウンロード]**」を選択します。
 
