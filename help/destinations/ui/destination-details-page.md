@@ -3,9 +3,9 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションを編集し、データフローを有効/無効にするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '912'
 ht-degree: 21%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 | [!UICONTROL 作成者] | この宛先を作成したユーザーを示します。 |
 | [!UICONTROL 作成日] | この宛先が作成された時点の UTC 日時を示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL 有効]/[!UICONTROL 無効] 切り替え {#enabled-disabled-toggle}
 
@@ -79,16 +79,30 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 >[!NOTE]
 >
 >* 宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) および [Experience Cloudオーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 宛先。
->* の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id、失敗した id およびアクティブ化された id は、現在、表示されません。
+>* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md) 宛先、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 宛先および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先については、除外された ID、失敗した ID およびアクティブ化された ID は現在表示されません。
 
 
 ![データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)
 
 ### データフロー実行時間 {#dataflow-runs-duration}
 
-データフローの実行の表示期間には、既知の問題があります。 また、 **[!UICONTROL 処理時間]** ほとんどのデータフローの実行では約 4 時間です。以下の図に示すように、データフローの実際の処理時間ははるかに短くなります。 Experience Platformが宛先への呼び出しを再試行する必要がある場合、データフローの実行ウィンドウは、それ以上開いたままになります。
+ストリーミングとファイルベースの宛先の間で、データフローの実行の表示時間に違いがあります。
 
-![「処理時間」列が強調表示された、データフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### ストリーミングの宛先 {#streaming}
+
+また、 **[!UICONTROL 処理時間]** ほとんどのストリーミングデータフローの実行については、約 4 時間で示されます。以下の図に示すように、データフローの実際の処理時間は、データフローの実行に関してははるかに短くなります。 Experience Platformが宛先への呼び出しを再試行する必要がある場合に、データフローの実行ウィンドウを長時間開いたままにし、また、到着が遅れたデータを同じ時間枠で逃さないようにします。
+
+![ストリーミング宛先の「処理時間」列が強調表示された、データフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+詳しくは、 [データフローの実行をストリーミング先に](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) 監視に関するドキュメント
+
+### ファイルベースの宛先 {#file-based}
+
+データフローをファイルベースの宛先に実行する場合、 **[!UICONTROL 処理時間]** 書き出すデータのサイズとシステム負荷によって異なります。 また、データフローは、ファイルベースの宛先に対して実行され、セグメントごとに分類されます。
+
+![ファイルベースの宛先に対して「処理時間」列が強調表示された、データフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+詳しくは、 [データフローは、バッチ（ファイルベース）の宛先に対して実行されます](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 監視に関するドキュメント
 
 ## [!UICONTROL アクティベーションデータ] {#activation-data}
 
