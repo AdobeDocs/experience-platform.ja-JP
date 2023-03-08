@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition のセグメント化の使用例
 description: 利用可能な様々なAdobe Real-time Customer Data Platform B2B Edition の使用例の概要です。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b436aeb8a8628d9b481041be518c1113fb54c342
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1427'
 ht-degree: 1%
 
 ---
@@ -84,13 +84,13 @@ B2B エディションでのセグメント化の使用例を次に示します�
 
 ### 例 5:部門名と商談額別に商談の B2B プロファイルを検索 {#find-department-opportunity-amount}
 
-人事 (HR) 部門で働くすべての人を検索し、1 つ以上のオープン商談がある特定の金額（100 万ドル）以上のアカウントに関連します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
+人事 (HR) 部門で働くすべての人を検索し、1 つ以上のオープン商談を持つアカウントを所定の金額（$100 万）以上に相当します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
 
 ![UI 表示の例 5 の設定](../assets/segmentation/example-5.png)
 
 ### 例 6:役職および年間アカウント売上高別に B2B プロファイルを検索 {#find-by-job-title-and-revenue}
 
-役職が副社長で、指定した金額（$1 億）以上の年間売上高を持つ任意のアカウントに関連するすべての人を検索し、先月に少なくとも 3 回価格ページを訪問しました。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ExperienceEvent] クラス。
+役職が副社長で、所定の金額（$1 億）以上の年間売上高を持つアカウントを持つすべての人を検索し、先月 3 回以上価格ページを訪問しました。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ExperienceEvent] クラス。
 
 ![UI の例 6 の設定を表示](../assets/segmentation/example-6.png)
 
@@ -104,13 +104,37 @@ B2B エディションでのセグメント化の使用例を次に示します�
 
 人事 (HR) 部門で働くすべての人を検索し、任意のアカウントに関連する *またはアカウントの関連アカウントのいずれか* 1 つ以上のオープンな商談が、指定された金額（100 万ドル）以上に相当します。 このセグメントでは、 [!UICONTROL XDM 個人プロファイル] クラス [!UICONTROL XDM ビジネスアカウント] クラスおよび [!UICONTROL XDM ビジネスオポチュニティ] クラス。
 
-![関連アカウントのセグメントを表示する UI](../assets/segmentation/segmentation-related-accounts.png)
+![関連アカウントのセグメントを表示する UI](../assets/segmentation/example-8.png)
 
 ### 例 9:リードスコアやアカウントスコアを使用してプロファイルを評価する {#account-scoring}
 
 リードスコアが 80 を超えるすべてのプロファイルを見つけます。
 
-![予測リードとアカウントスコアリングのセグメント化を表示する UI](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![予測リードとアカウントスコアリングのセグメント化を表示する UI](../assets/segmentation/example-9.png)
+
+### 例 10:親組織が特定のドル額以上の売上高を持つアカウントに関連付けられた B2B プロファイルを検索します。 {#find-parent-org-amount}
+
+指定した金額 ($100,000,000) を超える売上高を持つアカウントに関連付けられているすべての担当者を検索します。
+
+![セグメントの親組織を表示する UI](../assets/segmentation/example-10.png)
+
+### 例 11:アクティブな関係を持つ役職およびアカウント名で B2B プロファイルを検索 {#find-by-job-title-and-account-name}
+
+アカウント「Acme」で「マネージャ」（アカウント関係が「アクティブ」）になっているすべての人を検索します。
+
+![セグメントの親組織を表示する UI](../assets/segmentation/example-11.png)
+
+### 例 12:actualCost が budgetedCost を超えるキャンペーン用にターゲット設定された B2B プロファイルを検索します {#find-actualcost-exceed-budgetcost}
+
+actualCost が budgetedCost を超えたキャンペーンのターゲットとなっているすべての人を検索します。
+
+![セグメントの親組織を表示する UI](../assets/segmentation/example-12.png)
+
+### 例 13:Marketo静的リストに属する B2B プロファイルを検索し、 isDeleted=false {#find-marketo-static-list}
+
+Marketo静的リスト「Anniversary users」(isDeleted=false) に属するすべての人を検索します。
+
+![セグメントの親組織を表示する UI](../assets/segmentation/example-13.png)
 
 ## 次の手順 {#next-steps}
 
