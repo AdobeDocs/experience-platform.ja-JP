@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 9%
+source-wordcount: '610'
+ht-degree: 10%
 
 ---
 
@@ -23,7 +23,12 @@ ID フィールドは、Platform で顧客 ID グラフを構築する方法に�
    * [ID 名前空間](../../../identity-service/namespaces.md)：ID 名前空間は、1 人の人物に関連している可能性のある様々なタイプの ID 情報を定義する、各 ID フィールドに必須のコンポーネントです。
 * [リアルタイム顧客プロファイル](../../../profile/home.md):顧客の ID グラフを活用して、ほぼリアルタイムで更新された、複数のソースからの集計データに基づいて統合された消費者プロファイルを提供します。
 
-## ID フィールドの定義
+## ID フィールドの定義 {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="プライマリ ID に対する制限"
+>abstract="このスキーマは、特定のソース接続での使用を目的としたフィールドグループを使用します。 接続では、identityMap をプライマリ ID として使用する必要があり、自動的に設定されています。"
 
 条件 [新しいフィールドの定義](./overview.md#define) UI で、 **[!UICONTROL ID]** 」チェックボックスをオンにします。
 
