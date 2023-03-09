@@ -1,8 +1,10 @@
 ---
 title: フローサービス API を使用して、Customer.io のソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを Customer.io に接続する方法を説明します。
+hide: true
+hidefromtoc: true
 badge: "ベータ"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 56%
