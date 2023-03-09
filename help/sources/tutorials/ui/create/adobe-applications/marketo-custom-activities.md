@@ -1,10 +1,10 @@
 ---
 title: UI でのMarketo Engageソース接続とカスタムアクティビティデータのデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順を説明します。
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 23%
+source-wordcount: '1481'
+ht-degree: 22%
 
 ---
 
@@ -145,9 +145,30 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![接続、データセット、マッピングの各フィールドに関する情報の概要を説明する最後の確認手順です。](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->取り込みが完了すると、取り込まれたデータセットには、標準アクティビティとカスタムアクティビティの両方を含む、すべてのアクティビティが含まれます [!DNL Marketo] インスタンス。 Platform でカスタムアクティビティレコードを選択するには、 [クエリサービス](../../../../../query-service/home.md) 適切な述語を提供します。
+### 既存のアクティビティのデータフローへのカスタムアクティビティの追加 {#add-to-existing-dataflows}
+
+カスタムアクティビティデータを既存のデータフローに追加するには、取り込むカスタムアクティビティデータを使用して、既存のアクティビティデータフローのマッピングを変更します。 これにより、カスタムアクティビティを同じ既存のアクティビティデータセットに取り込むことができます。 既存のデータフローのマッピングを更新する方法の詳細については、 [UI でのデータフローの更新](../../update-dataflows.md).
+
+### 用途 [!DNL Query Service] カスタムアクティビティをフィルターするには {#query-service-filter}
+
+データフローが完了したら、 [クエリサービス](../../../../../query-service/home.md) をクリックして、カスタムアクティビティデータのアクティビティをフィルタリングします。
+
+カスタムアクティビティが Platform に取り込まれると、カスタムアクティビティの API 名が自動的にその `eventType`. 用途 `eventType={API_NAME}` をクリックして、カスタムアクティビティデータをフィルタリングします。
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+以下を使用： `IN` 句で複数のカスタムアクティビティをフィルターします。
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+次の図は、 [クエリエディター](../../../../../query-service/ui/user-guide.md) カスタムアクティビティデータをフィルタリングする
+
+![カスタムアクティビティのクエリ例を表示する Platform UI。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## 次の手順
 
