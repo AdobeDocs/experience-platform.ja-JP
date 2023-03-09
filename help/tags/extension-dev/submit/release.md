@@ -2,7 +2,7 @@
 title: 拡張機能のリリース
 description: Adobe Experience Platform でタグ拡張機能を非公開または公開でリリースする方法について説明します。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 98%
@@ -36,4 +36,4 @@ API を直接使用して、非公開で拡張機能をリリースする場合�
 
 非公開リリースが完了したら、公開するよう Adobe に依頼できます。これにより、拡張機能が公開カタログで使用できるようになります。データ収集ユーザーは誰でも、拡張機能を任意のプロパティにインストールできます。
 
-リリースプロセスを開始するには、 [公開リリースリクエストフォーム](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) に記入してください。
+リリースプロセスを開始するには、 [公開リリースリクエストフォーム](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) に記入してください。
