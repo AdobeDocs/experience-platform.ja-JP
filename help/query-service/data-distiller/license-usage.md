@@ -2,18 +2,18 @@
 title: バッチクエリのライセンス使用状況の監視
 description: Adobe Experience Platform UI には、組織の Data Distillerライセンスの使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: a1c5b687108a9fc8729008e2b0e39ec6b1842f54
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 11%
+source-wordcount: '352'
+ht-degree: 15%
 
 ---
 
-# （ベータ版）バッチクエリのライセンス使用状況の監視 {#monitor-license-usage}
+# （アルファ）バッチクエリのライセンス使用状況の監視 {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->UI を使用してバッチクエリのライセンス使用状況を監視する機能はベータ版です。 機能とドキュメントは変更される場合があります。
+>UI を使用してバッチクエリのライセンス使用状況を監視する機能は、まだすべてのユーザーに提供されているわけではありません。 この機能はアルファ版であり、まだテスト中です。このドキュメントは変更される場合があります。
 
 Adobe Experience Platformのユーザーインターフェイス (UI) には、組織のクエリサービスライセンスの使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 
