@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションを編集し、データフローを有効/無効にするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 21%
+source-wordcount: '926'
+ht-degree: 19%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 >[!NOTE]
 >
 >* 宛先監視機能は、現在、Experience Platform内のすべての宛先でサポートされています *例外* の [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md) および [Experience Cloudオーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 宛先。
->* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md) 宛先、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 宛先および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先については、除外された ID、失敗した ID およびアクティブ化された ID は現在表示されません。
+>* の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id、失敗した id、アクティブ化された id に関連する指標は、推定されます。 アクティベーションデータの量が多いと、指標の精度が高くなります。
 
 
 ![データフロー実行ビュー](../assets/ui/details-page/dataflow-runs.png)

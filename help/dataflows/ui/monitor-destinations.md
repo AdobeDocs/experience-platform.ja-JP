@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
-workflow-type: ht
-source-wordcount: '3214'
-ht-degree: 100%
+source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+workflow-type: tm+mt
+source-wordcount: '3228'
+ht-degree: 98%
 
 ---
 
@@ -132,7 +132,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 バッチ宛先の場合、「[!UICONTROL データフロー実行]」タブには、データフロー実行に関する指標データが表示されます。個々の実行とその特定の指標のリストが、ID の下記の合計数と共に表示されます。
 
-- **[!UICONTROL アクティブ化された ID]**：選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。 この指標には、書き出されたセグメントで作成、更新および削除された ID が含まれます。
+- **[!UICONTROL アクティブ化された ID]**：選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。この指標には、書き出されたセグメントで作成、更新および削除された ID が含まれます。
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいて、選択した宛先のアクティブ化から除外された個人プロファイル ID の数です。
 
 ![バッチ宛先のデータフロー実行ビュー](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -170,7 +170,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >[!NOTE]
 >
 >- 宛先モニタリング機能は、現在、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 宛先と[カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md)宛先を&#x200B;*除く*、Experience Platform 内のすべての宛先でサポートされています。
->- [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md) 宛先、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 宛先および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先については、除外された ID、失敗した ID およびアクティブ化された ID は現在表示されません。
+>- の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id、失敗した id、アクティブ化された id に関連する指標は、推定されます。 アクティベーションデータの量が多いと、指標の精度が高くなります。
 
 
 >[!CONTEXTUALHELP]
