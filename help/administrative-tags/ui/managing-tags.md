@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；タグの管理；タグ；
-title: 管理タグの管理
-description: このドキュメントでは、Adobe Experience Cloudでの管理タグの管理について説明します
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: 統合タグの管理
+description: このドキュメントでは、Adobe Experience Cloudでの統合タグの管理に関する情報を提供します
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
