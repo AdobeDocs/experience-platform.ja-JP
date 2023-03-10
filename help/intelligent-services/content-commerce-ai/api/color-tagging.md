@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；はじめに； content ai; commerce ai；コンテンツタグ付け；カラータグ付け；色抽出；
+keywords: Experience Platform；はじめに；コンテンツ；コンテンツタグ付け；カラータグ付け；色抽出；
 solution: Experience Platform
 title: コンテンツタグ付け API のカラータグ付け
 description: カラータグ付けサービスは、画像を指定すると、ピクセルカラーのヒストグラムを計算し、主要な色でグループに並べ替えることができます。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---

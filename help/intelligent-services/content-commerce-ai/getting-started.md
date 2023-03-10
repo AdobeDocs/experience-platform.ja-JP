@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；はじめに；content ai;commerce ai;content tagging
+keywords: Experience Platform；はじめに；コンテンツ；コンテンツタグ付け
 solution: Experience Platform
 title: コンテンツタグ付けの概要
-description: コンテンツのタグ付けはAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
+description: コンテンツタグ付けはAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '564'
 ht-degree: 15%
 
 ---
