@@ -3,7 +3,7 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: サンプルステータスのプレビュー（プロファイルプレビュー）API エンドポイント
 description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID 別にプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 5%
@@ -22,7 +22,7 @@ Adobe Experience Platformを使用すると、複数のソースから顧客デ�
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## プロファイルフラグメントと結合プロファイル
 
@@ -369,7 +369,7 @@ curl -X GET \
 * データセットのデータのみから構成される 107 個のプロファイルがあります `5eeda0032af7bb19162172a7`.
 * 組織には、合計 454,642 個のプロファイルがあります。
 
-## ID 名前空間の重複レポートの生成
+## ID 名前空間の重複レポートの生成 {#identity-overlap-report}
 
 ID 名前空間重複レポートは、アドレス可能なオーディエンス（結合プロファイル）に最も貢献する ID 名前空間を公開することで、組織のプロファイルストアの構成を視覚的に確認できます。 これには、Adobeが提供する標準 ID 名前空間と、組織が定義したカスタム ID 名前空間の両方が含まれます。
 
