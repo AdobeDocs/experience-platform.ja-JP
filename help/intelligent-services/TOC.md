@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
-source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
-workflow-type: ht
-source-wordcount: '149'
-ht-degree: 100%
+source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 92%
 
 ---
 
@@ -31,15 +31,13 @@ ht-degree: 100%
       - [ガバナンスポリシー](attribution-ai/aai-data-governance/governance-policies.md)
    - [クエリサービスを使用したスコアの分析](attribution-ai/aai-query-service.md)
    - [エラーのトラブルシューティング](attribution-ai/troubleshooting.md)
-- Content and Commerce AI（ベータ版） {#content-commerce-ai}
-   - [概要](content-commerce-ai/overview.md)
-   - [はじめに](content-commerce-ai/getting-started.md)
-   - コンテンツと Commerce AI API {#api}
-      - [カラー抽出](content-commerce-ai/api/color-extraction.md)
-      - [キーワード抽出](content-commerce-ai/api/keyword-extraction.md)
-      - [テキストの分類](content-commerce-ai/api/text-classification.md)
-      - [視覚的類似性](content-commerce-ai/api/visual-similarity.md)
-      - [テキストの存在と光学式文字認識](content-commerce-ai/api/optical-character-recognition.md)
+- コンテンツのタグ付け {#content-tagging-ai}
+   - [概要](content-tagging/overview.md)
+   - [はじめに](content-tagging/getting-started.md)
+   - Content Tagging AI API{#api}
+      - [カラータグ付け](content-tagging/api/color-tagging.md)
+      - [キーワードのタグ付け](content-tagging/api/keyword-tagging.md)
+      - [テキストの存在と光学式文字認識](content-tagging/api/optical-character-recognition.md)
 - 顧客 AI {#customer-ai}
    - [概要](customer-ai/overview.md)
    - [顧客 AI を使い始める](customer-ai/getting-started.md)
