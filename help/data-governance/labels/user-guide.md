@@ -4,14 +4,19 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1308'
 ht-degree: 100%
 
 ---
 
-# UI でのデータ使用ラベルの管理
+# UI でのデータ使用ラベルの管理 {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="説明"
+>abstract=""
 
 このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 
@@ -77,7 +82,12 @@ ht-degree: 100%
 
 ![継承されたラベルを非表示にする](../images/labels/inherited-labels.png)
 
-## データセットフィールドレベルでのラベルの管理
+## データセットフィールドレベルでのラベルの管理 {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="説明"
+>abstract=""
 
 >[!IMPORTANT]
 >

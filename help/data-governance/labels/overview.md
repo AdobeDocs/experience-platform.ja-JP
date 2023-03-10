@@ -4,14 +4,19 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 description: Adobe Experience Platform でデータガバナンスのコンプライアンスを適用するために、データ使用ラベルを使用する方法について説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '682'
 ht-degree: 100%
 
 ---
 
-# データ使用ラベルの概要
+# データ使用ラベルの概要 {#overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_description"
+>title="説明"
+>abstract=""
 
 Adobe Experience Platform では、関連する[データガバナンスポリシー](../policies/overview.md)と[アクセス制御ポリシー](../../access-control/abac/ui/policies.md)に従ってそれぞれを分類し、データ使用ラベルをデータセットとフィールドに適用できます。
 
@@ -42,6 +47,11 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 特定のデータエクスポートのコントロールが [!DNL Platform] のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Manager ドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aam-data-export-control-in-aep)を参照してください。
 
 ## でのデータ使用ラベルの管理 [!DNL Experience Platform] {#manage-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_instructions"
+>title="説明"
+>abstract=""
 
 [!DNL Experience Platform] API またはユーザーインターフェイスを使用して、データ使用ラベルを管理できます。それぞれの詳細については、以下のサブセクションを参照してください。
 

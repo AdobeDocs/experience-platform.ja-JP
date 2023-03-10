@@ -4,14 +4,19 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1150'
 ht-degree: 58%
 
 ---
 
-# プライバシー UI でのPrivacy Serviceジョブの管理
+# プライバシー UI でのPrivacy Serviceジョブの管理 {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="説明"
+>abstract=""
 
 このドキュメントでは、 [!DNL Privacy Service] ユーザーインターフェイス。
 
@@ -37,7 +42,7 @@ ht-degree: 58%
 | [!UICONTROL APA_AUS] | 「[!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | 「[!DNL Health Insurance Portability and Accountability Act] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -93,7 +98,12 @@ ht-degree: 58%
 
 完全なジョブデータを CSV ファイルとしてダウンロードするには、「 」を選択します **[!UICONTROL CSV に書き出し]** をクリックします。
 
-## プライバシージョブリクエストの新規作成
+## プライバシージョブリクエストの新規作成 {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="説明"
+>abstract=""
 
 >[!NOTE]
 >
