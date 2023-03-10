@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；統合タグ；タグ；
-title: （ベータ版）統合タグの概要
+title: 統合タグの概要（ベータ版）
 description: このドキュメントでは、Adobe Experience Platformの統合タグに関する情報を提供します
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# （ベータ版）統合タグの概要
+# 統合タグの概要（ベータ版）
 
 >[!IMPORTANT]
 >
