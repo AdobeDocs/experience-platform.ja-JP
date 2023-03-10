@@ -2,9 +2,9 @@
 title: （ベータ版）Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '680'
 ht-degree: 90%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 90%
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性の選択画面で選択したように、該当するスキーマフィールド（例：PPID）と共に、セグメントのすべてのメンバーを書き出しています。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 
@@ -44,7 +44,7 @@ ht-degree: 90%
 
 宛先を認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。 
 
-* **[!UICONTROL URL]**：[!DNL Azure Data Lake Storage Gen2] のエンドポイント。エンドポイントパターンは `https://<accountname>.dfs.core.windows.net` です。
+* **[!UICONTROL URL]**：[!DNL Azure Data Lake Storage Gen2] のエンドポイント。エンドポイントパターンは `abfss://<container>@<accountname>.dfs.core.windows.net` です。
 * **[!UICONTROL テナント]**：アプリケーションを含んだテナント情報。
 * **[!UICONTROL サービスプリンシパル ID]**：アプリケーションのクライアント ID。
 * **[!UICONTROL サービスプリンシパルキー]**：アプリケーションのキー。
