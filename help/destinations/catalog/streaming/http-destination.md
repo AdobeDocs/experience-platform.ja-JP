@@ -3,10 +3,10 @@ keywords: ストリーミング; HTTP 宛先
 title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
-ht-degree: 91%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -158,7 +158,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="セグメントのタイムスタンプを含める"
->abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。<p>最初の箇条書きのコンテンツ</p><p>2 番目の箇条書きのコンテンツ</p><ul><li>項目 1 をリストします。</li><li>項目 2 をリストします。</li></ul>  — テキストの行を増やします。  — さらに多くのテキスト行。 フォーマットテストを実行して、次のことが可能かどうかを確認します。 <br>HTML書式を使用</p><p>または、段落タグを使用することもできます。これは 1 行目です。</p><p>2 行目の段落タグを追加します。</p><p>すべての段落タグ。 行 3.</p>最後に、Markdown を使用してリンクを含めるテストを行います。 [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html]（絶対リンク）とHTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=ja">リンクテキスト</a> 最後に、Markdown を含むリンクを含めるテストです。 [../overview.md]（相対リンク）とHTML <a href="../overview.md">相対リンクテキスト</a> 構文と同じです。"
+>abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
