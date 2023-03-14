@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
+source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 97%
+source-wordcount: '1044'
+ht-degree: 96%
 
 ---
 
@@ -135,7 +135,8 @@ ht-degree: 97%
       * [メールマーケティングの宛先の概要](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 接続](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
+      * [(API)OracleEloqua 接続](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [（ファイル）OracleEloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 接続](./catalog/email-marketing/oracle-responsys.md)
       * [（API）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [（ファイル）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
