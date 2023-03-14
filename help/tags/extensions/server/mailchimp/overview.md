@@ -1,6 +1,6 @@
 ---
 title: Mailchimp 拡張機能の概要
-description: Mailchimp メールへのイベント転送をトリガーします。
+description: イベント転送を使用して Mailchimp メールをトリガーにします。
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1303'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)を参照してください。
 
 Mailchimp [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガー化できるイベントを Mailchimp マーケティング API に送信します。
 
@@ -126,7 +126,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> または<br /> `arc.event.data._tenant.isSyncing` | ブール値 | で作成されたイベント `is_syncing` に設定 `true` **次の条件を満たさない** トリガー自動化 | いいえ |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> または `arc.event.data._tenant.occuredAt` | 文字列 | イベントが発生した時点の ISO 8601 タイムスタンプ。 | いいえ |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  
