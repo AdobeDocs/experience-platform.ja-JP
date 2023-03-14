@@ -3,10 +3,10 @@ keywords: ストリーミング; HTTP 宛先
 title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 92%
+source-wordcount: '2535'
+ht-degree: 91%
 
 ---
 
@@ -37,7 +37,7 @@ HTTP エンドポイントとして設定できるのは、顧客独自のシス
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、[宛先のアクティベーションワークフロー](../../ui/activate-segment-streaming-destinations.md#mapping)のマッピング画面で選択したように、必要なスキーマフィールド（例：メールアドレス、電話番号、姓）とともに書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 
@@ -158,7 +158,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="セグメントのタイムスタンプを含める"
->abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。"
+>abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。<p>最初の箇条書きのコンテンツ</p><p>2 番目の箇条書きのコンテンツ</p><ul><li>項目 1 をリストします。</li><li>項目 2 をリストします。</li></ul>  — テキストの行を増やします。  — さらに多くのテキスト行。 フォーマットテストを実行して、次のことが可能かどうかを確認します。 <br>HTML書式を使用</p><p>または、段落タグを使用することもできます。これは 1 行目です。</p><p>2 行目の段落タグを追加します。</p><p>すべての段落タグ。 行 3.</p>最後に、Markdown を使用してリンクを含めるテストを行います。 [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html]（絶対リンク）とHTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=ja">リンクテキスト</a> 最後に、Markdown を含むリンクを含めるテストです。 [../overview.md]（相対リンク）とHTML <a href="../overview.md">相対リンクテキスト</a> 構文と同じです。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -213,9 +213,9 @@ Experience Platform は、セグメントの選定または他の重要なイベ
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。 つまり、マッピングされたセグメントの状態（null から適合済みへ、適合済み／既存から離脱済みへ）が変更されたり、マッピングされた属性が更新された場合、宛先の書き出しが開始します。</li><li>ID は現在 HTTP API の宛先にマッピングできないので、特定のプロファイルの ID を変更すると、宛先の書き出しも決定されます。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>この `segmentMembership` オブジェクトには、activation データフローにマッピングされたセグメントが含まれます。このセグメントのステータスは、認定またはセグメント終了イベントの後に変更されます。 これらのセグメントが同じに属する場合、プロファイルが書き出し先のエクスポートに含めることができる、マッピングされていない他のセグメント [結合ポリシー](/help/profile/merge-policies/overview.md) を activation データフローにマッピングされたセグメントとして追加しました。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、HTTP API の宛先で ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。 つまり、マッピングされたセグメントの状態（null から適合済みへ、適合済み／既存から離脱済みへ）が変更されたり、マッピングされた属性が更新された場合、宛先の書き出しが開始します。</li><li>ID は現在 HTTP API の宛先にマッピングできないので、特定のプロファイルの ID を変更すると、宛先の書き出しも決定されます。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。 なお、これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属する場合、プロファイルが適していた他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、HTTP API の宛先で ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 例えば、HTTP 宛先に対するこのデータフローについて考えてみましょう。ここでは、3 つのセグメントがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
