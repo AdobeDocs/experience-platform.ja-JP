@@ -1,10 +1,10 @@
 ---
 title: Reactor API の概要
-description: 必要なアクセス認証情報を生成する手順など、Reactor API の使用を開始する方法について説明します。
+description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1057'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ IMS 組織の ID（`{ORG_ID}`）と API キー（`{API_KEY}`）は、最初に�
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-次の画面で、新しいキーペアを生成するか、独自の公開鍵をアップロードして JSON Web Token（JWT）認証情報を作成するよう求められます。このチュートリアルでは、「**キーペアを生成**」オプションを選択し、右下隅で「**キーペアを生成**」を選択します。
+次の画面では、JSON Web Token（JWT）認証情報の作成用に、新しいキーペアを生成するか、自身の公開鍵をアップロードするかを選択します。このチュートリアルでは、「**キーペアを生成**」オプションを選択し、右下隅で「**キーペアを生成**」を選択します。
 
 ![](../images/api/getting-started/create-jwt.png)
 
@@ -57,7 +57,7 @@ IMS 組織の ID（`{ORG_ID}`）と API キー（`{API_KEY}`）は、最初に�
 
 ![](../images/api/getting-started/keypair-generated.png)
 
-次の画面では、API 統合に関連付ける 1 つ以上の製品プロファイルを選択するように求められます。
+次の画面では、API 統合に関連付ける 1 つ以上の製品プロファイルを選択します。
 
 >[!NOTE]
 >
@@ -89,11 +89,11 @@ API をプロジェクトに追加すると、プロジェクトページが Exp
 
 #### アクセストークンの手動生成 {#manual}
 
-以前にダウンロードした秘密キーをテキストエディターまたはブラウザーで開き、その内容をコピーします。次に、Developer Console に戻り、「**トークンを生成**」を選択する前に、プロジェクトの Reactor API ページの「**アクセストークンを生成**」セクションに秘密キーを貼り付けます。
+以前にダウンロードした秘密キーをテキストエディターまたはブラウザーで開き、その内容をコピーします。次に Developer Console に戻り、プロジェクトの Reactor API ページの「**アクセストークンを生成**」セクションに秘密キーを貼り付けて、「**トークンを生成**」を選択します。
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが提供されます。 この値は、必要な `Authorization` ヘッダーに使用され、`Bearer {ACCESS_TOKEN}` の形式で指定する必要があります。
+新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが表示されます。この値は、必要な `Authorization` ヘッダーに使用され、`Bearer {ACCESS_TOKEN}` の形式で指定する必要があります。
 
 ![](../images/api/getting-started/token-generated.png)
 
@@ -149,7 +149,7 @@ curl -X POST \
 | `access_token` | 新しく生成されたアクセストークンの値。 この値は、必要な `Authorization` ヘッダーに使用され、`Bearer {ACCESS_TOKEN}` の形式で指定する必要があります。 |
 | `expires_in` | トークンの有効期限が切れるまでの残り時間（ミリ秒）。 トークンの有効期限が切れたら、新しいトークンを生成する必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

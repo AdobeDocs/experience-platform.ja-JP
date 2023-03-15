@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '819'
 ht-degree: 76%
 
 ---
@@ -85,7 +85,7 @@ curl -X POST \
 | `$ref` | 新しいクラスのデータの動作。アドホッククラスの場合、この値を `https://ns.adobe.com/xdm/data/adhoc` に設定する必要があります。 |
 | `properties._adhoc` | クラスのカスタムフィールドを含むオブジェクトで、フィールド名とデータ型のキーと値のペアとして表現されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -148,7 +148,7 @@ curl -X POST \
 | --- | --- |
 | `$id` | 読み取り専用の、新しいアドホッククラスに対してシステムによって生成された一意の ID として機能する URI。この値は、アドホックスキーマ作成の次の手順で使用されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アドホックスキーマの作成
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | アクセスするアドホックスキーマの URL エンコード `$id` URI または `meta:altId`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

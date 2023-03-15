@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 Adobe Experience Platform のタグ拡張機能の主な目的の 1 つに、既存のマーケティング技術（ライブラリ）を容易に Web サイトに実装できるようにするという点があります。拡張機能を使用すると、web サイトの HTML を手動で編集することなく、サードパーティのコンテンツ配信ネットワーク（CDN）が提供するライブラリを実装できます。
 

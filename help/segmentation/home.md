@@ -5,7 +5,7 @@ title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 100%
 

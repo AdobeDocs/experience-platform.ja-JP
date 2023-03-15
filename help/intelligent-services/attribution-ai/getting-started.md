@@ -7,7 +7,7 @@ exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 61%
+ht-degree: 64%
 
 ---
 
@@ -55,7 +55,7 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ロールベースのアクセス制御を使用する場合、 **表示Attribution AI** および **Attribution AIの管理** 権限は、Attribution AIの様々な機能へのアクセスを許可します。 この **Attribution AIの管理** 次の **作成**, **複製**, **編集**, **削除**, **有効**&#x200B;または **無効** 例 **表示Attribution AI** 次の **読み取り** または **表示** それは。 この **作成**, **編集** および **削除** アクションは監査ログで記録されます。
 
-詳しくは、ドキュメントを参照してください [アクセス制御の権限の割り当て](../../../help/access-control/home.md) または方法 [監査ログを使用して、アクセスとアクティビティを監視する](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+[アクセス制御の権限の割り当て](../../../help/access-control/home.md)または[監査ログを使用してアクセスとアクティビティを監視](../../../help/landing/governance-privacy-security/audit-logs/overview.md)する方法については、ドキュメントを参照してください。
 
 ## 次の手順 {#next-steps}
 

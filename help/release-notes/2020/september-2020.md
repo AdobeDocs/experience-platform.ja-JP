@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 39%
+ht-degree: 42%
 
 ---
 
@@ -70,13 +70,13 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| LGPD のサポート（ブラジル） | ブラジルの [!DNL Lei Geral de Proteção de Dados] (LGPD) 規制。 これらのジョブは、規制コードの下で追跡されます `lgpd_bra`. |
+| LGPD のサポート（ブラジル） | ブラジルの [!DNL Lei Geral de Proteção de Dados]（LGPD）規制の下でプライバシー関連のジョブを作成できるようになりました。これらのジョブは、規制コード `lgpd_bra` の下で追跡されます。 |
 
 詳しくは、 [Privacy Serviceの概要](../../privacy-service/home.md) 」を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 | 機能 | 説明 |
 | ------- | ----------- |

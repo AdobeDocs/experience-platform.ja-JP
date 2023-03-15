@@ -5,7 +5,7 @@ description: Adobe Target は、web サイトやモバイルアプリなど、�
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1011'
 ht-degree: 54%
 
 ---
@@ -57,7 +57,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 | 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのセグメントを要求しています。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 

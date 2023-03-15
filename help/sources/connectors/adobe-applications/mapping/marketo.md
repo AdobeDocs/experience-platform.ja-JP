@@ -6,7 +6,7 @@ description: Marketo データセットのフィールドとそれに対応す�
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '922'
 ht-degree: 100%
 
 ---
@@ -133,7 +133,7 @@ XDM クラスと XDM フィールドについて詳しくは、[XDM エクスペ
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## プログラム {#programs}
 
@@ -164,7 +164,7 @@ XDM クラスについて詳しくは、[XDM ビジネスキャンペーンの�
 | `endDate` | `campaignEndDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## プログラムのメンバーシップ {#program-memberships}
 
@@ -197,7 +197,7 @@ XDM クラスについて詳しくは、[XDM ビジネスキャンペーンメ�
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 会社 {#companies}
 
@@ -229,7 +229,7 @@ XDM クラスについて詳しくは、[XDM ビジネスアカウントの概�
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 静的リスト {#static-lists}
 
@@ -247,7 +247,7 @@ XDM クラスについて詳しくは、[XDM ビジネスマーケティング�
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 静的リストのメンバーシップ {#static-list-memberships}
 
@@ -264,7 +264,7 @@ XDM クラスについて詳しくは、[XDM ビジネスマーケティング�
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 重点顧客 {#named-accounts}
 
@@ -296,7 +296,7 @@ XDM クラスについて詳しくは、[XDM ビジネスアカウントの概�
 | `sourceType` | `accountSourceType` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 商談 {#opportunities}
 
@@ -333,7 +333,7 @@ XDM クラスについて詳しくは、[XDM ビジネス商談の概要](../../
 | `nextStep` | `nextStep` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 商談連絡先の役割 {#opportunity-contact-roles}
 
@@ -354,7 +354,7 @@ XDM クラスについて詳しくは、[XDM ビジネス商談担当者関係�
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ユーザー {#persons}
 
@@ -412,7 +412,7 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | これは計算フィールドです。 |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | これは計算フィールドです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

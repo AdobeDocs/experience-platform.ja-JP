@@ -5,7 +5,7 @@ title: Privacy Service トラブルシューティングガイド
 description: このドキュメントでは、Privacy Service に関するよくある質問への回答と、API でよく発生するエラーに関する情報を示します。
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 100%
 

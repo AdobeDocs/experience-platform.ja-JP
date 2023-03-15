@@ -1,15 +1,15 @@
 ---
-title: Adobe Campaign Managed Cloud Services接続
+title: Adobe Campaign Managed Cloud Services 接続
 description: Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 29%
+source-wordcount: '1362'
+ht-degree: 39%
 
 ---
 
-# Adobe Campaign Managed Cloud Services接続 {#adobe-campaign-managed-services}
+# Adobe Campaign Managed Cloud Services 接続 {#adobe-campaign-managed-services}
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 その結果、Adobe Experience Cloud のエコシステム全体で一貫性の高いクロスチャネルキャンペーンと、迅速な適応および学習をおこなう豊富な顧客プロファイルが実現します。
 
-[Adobe Experience PlatformとのAdobe Campaign統合の詳細](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+[Adobe Experience PlatformとのAdobe Campaign統合の詳細](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
 
 ## サポートされる ID {#supported-identities}
 
@@ -55,13 +55,13 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | external_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 この ID を使用し、顧客 (loyalty_ID、account_ID、customer_ID...) を表す Campaign インスタンス内の ID にマッピングすることをお勧めします |
-| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、次のエイリアスからも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
+| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
 | phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -69,10 +69,10 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳細を表示 [バッチファイルベースの宛先](/help/destinations/destination-types.md#file-based). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
@@ -84,15 +84,14 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL インスタンスを選択]**:お使いの **[!DNL Campaign]** マーケティングインスタンス。
-* **[!UICONTROL ターゲットマッピング]**:で使用しているターゲットマッピングを選択します。 **[!DNL Adobe Campaign]** 配信を送信します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
+* **[!UICONTROL ターゲットマッピング]**:で使用しているターゲットマッピングを選択します。 **[!DNL Adobe Campaign]** 配信を送信します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -102,9 +101,9 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 ### ガバナンスポリシーと実施アクション {#governance}
 
-宛先に書き出すデータに適用できるマーケティングアクションを選択します。 Adobe Campaignの場合、 **[!UICONTROL E メールターゲティング]** マーケティングアクション。
+宛先に書き出すデータに適用できるマーケティングアクションを選択します。Adobe Campaignの場合、 **[!UICONTROL E メールターゲティング]** マーケティングアクション。
 
-マーケティングアクションについて詳しくは、 [データ使用ポリシーの概要](/help/data-governance/policies/overview.md) ページ。
+マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](/help/data-governance/policies/overview.md)ページを参照してください。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
@@ -112,7 +111,7 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) を参照してください。
+読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 

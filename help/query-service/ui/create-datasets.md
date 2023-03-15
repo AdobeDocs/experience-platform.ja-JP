@@ -8,11 +8,11 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
-# クエリ結果から出力データセットを生成
+# クエリ結果からの出力データセットの生成
 
 [!DNL Query Service] では、クエリを使用して [!DNL Data Lake] にデータセットを生成できます。その後、これらのデータセットを他のクエリや他のサービス ( [!DNL Data Science Workspace]、リアルタイム顧客プロファイル、または [!DNL Analysis Workspace].
 

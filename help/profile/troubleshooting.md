@@ -5,7 +5,7 @@ type: Documentation
 description: このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問への回答のほか、Adobe Experience Platform を使用してプロファイルデータを操作する際に発生する一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 100%
 

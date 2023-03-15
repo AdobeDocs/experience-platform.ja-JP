@@ -4,7 +4,7 @@ title: Real-Time Customer Data Platform におけるセグメント化サービ�
 description: Adobe Real-Time Customer Data Platform は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。セグメント化サービスを使用すると、顧客を類似の特性を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 100%
 

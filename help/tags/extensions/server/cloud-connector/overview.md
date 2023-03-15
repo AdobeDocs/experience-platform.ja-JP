@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Cloud Connector イベント転送拡張機能を使用すると、宛先にデータを送信したり、宛先からデータを取得したりするためのカスタム HTTP リクエストを作成できます。Cloud Connector の拡張機能は、Postman を Adobe Experience Platform Edge ネットワークに配置する場合と似ており、専用の拡張機能を持たないエンドポイントへのデータ送信に使用できます。
 
@@ -64,13 +64,13 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | ヘッダー | 説明 |
 |---|---|
 | [A-IM](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
-| Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
-| Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
+| [Accept-Datetime](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
+| Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
+| Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
 | Authorization | サーバーでユーザーエージェントを認証するための資格情報が含まれます。 |
 | [Cache-Control](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Cache-Control) | リクエストと応答の両方のキャッシュメカニズム用のディレクティブ。 |
 | [接続](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Connection) | 現在のトランザクションが終了した後、ネットワーク接続を開いたままにするかどうかを制御します。 |
@@ -88,7 +88,7 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | [If-None-Match](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-None-Match) |  |
 | [if-Range](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Range) |  |
 | [If-Unmodified-Since](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
+| [Max-Forwards](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
 | [Origin](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Origin) |  |
 | [Pragma](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Pragma) | 実装固有のヘッダー。リクエスト応答チェーンの任意の場所で様々な効果を持つ場合があります。Cache-Control ヘッダーが存在しない HTTP/1.0 キャッシュとの下位互換性を確保するために使用されます。 |  |
 | [Proxy-Authorization](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Proxy-Authorization) |

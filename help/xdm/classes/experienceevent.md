@@ -6,8 +6,8 @@ description: このドキュメントでは、XDM ExperienceEvent クラスの�
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1842'
-ht-degree: 94%
+source-wordcount: '1836'
+ht-degree: 95%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 94%
 | `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するために [リアルタイム顧客プロファイル](../../profile/home.md)の場合は、データ操作でフィールドのコンテンツを手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
 | `timestamp`<br>**(必須)** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) を準拠した書式設定）。このタイムスタンプは過去の日付にする必要があります。このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## イベントモデリングのベストプラクティス
 
@@ -65,12 +65,12 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 アドビでは、 [!DNL XDM ExperienceEvent] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL 残高移動]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL 残高繰り越し]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティング詳細]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL カードアクション]](../field-groups/event/card-actions.md)
+* [[!UICONTROL カードのアクション]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャンネル詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマース詳細]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 預金の詳細]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL 入金明細]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイス下取り詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID 詳細]](../field-groups/event/enduserids.md)
@@ -144,7 +144,7 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `web.webinteraction.linkClicks` | あるリンクが 1 回以上選択されました。 |
 | `web.webpagedetails.pageViews` | ある web ページに対して 1 回以上のビューが発生しました。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `producedBy` の推奨値 {#producedBy}
 

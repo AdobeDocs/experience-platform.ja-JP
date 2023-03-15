@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform リリースノート 2021年4月
-description: Adobe Experience Platformの 2021 年 4 月のリリースノート。
+description: Adobe Experience Platform の 2021年4月のリリースノート。
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
@@ -8,7 +8,7 @@ exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 

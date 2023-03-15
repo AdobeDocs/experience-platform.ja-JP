@@ -7,13 +7,13 @@ exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
 # フィルター関数
 
-フィルター関数 は、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+フィルター関数は、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
 ## フィルター
 

@@ -5,7 +5,7 @@ title: Data Science Workspace の概要
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ description: このドキュメントでは、XDM 個人プロファイルクラ
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '595'
 ht-degree: 38%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 38%
 | `repositoryCreatedBy` | レコードを作成したユーザーの ID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 互換性のあるフィールドグループ {#field-groups}
 

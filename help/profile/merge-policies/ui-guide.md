@@ -7,7 +7,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2321'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 このガイドを利用するには、[!DNL Experience Platform] のいくつかの重要な機能に関する実用的な知識が必要です。このガイドに従う前に、次のサービスのドキュメントを確認してください。
 
-* [リアルタイム顧客プロファイル](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md):に取り込まれる様々なデータソースの ID を関連付けることで、リアルタイム顧客プロファイルを有効にします。 [!DNL Platform].
 * [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：[!DNL Platform] が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 

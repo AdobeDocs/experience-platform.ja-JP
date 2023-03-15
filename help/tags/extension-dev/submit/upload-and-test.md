@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platform でタグ拡張機能をテストするには、タグ API やコマンドラインツールを使用して拡張機能パッケージをアップロードします。次に、Platform UI またはデータ収集 UI を使用して、拡張機能パッケージをプロパティにインストールし、タグライブラリ内でその機能を実行してビルドします。
 

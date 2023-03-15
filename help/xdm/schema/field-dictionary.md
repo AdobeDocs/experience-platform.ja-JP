@@ -6,7 +6,7 @@ description: Experience Data Model（XDM）は、Adobe Experience Platform の�
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '25236'
+source-wordcount: '25233'
 ht-degree: 99%
 
 ---
@@ -529,4 +529,4 @@ ht-degree: 99%
 | xdm:xid | エクスペリエンス識別子 | 存在する場合、この値は、すべての名前空間内のすべての名前空間スコープ識別子全体で一意の名前空間間識別子を表します。 | 文字列 |  | 文字列 | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation |
 | xmpDM:duration | チャプターの長さ／期間 | チャプターの長さ（秒）。 | 整数 |  | int | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

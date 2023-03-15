@@ -3,7 +3,7 @@ title: 設定済みのダッシュボードを表示
 description: 組織の設定済みダッシュボードを Experience Platform UI に一覧表示します。
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
 

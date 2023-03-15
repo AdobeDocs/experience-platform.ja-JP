@@ -4,7 +4,7 @@ description: Reactor API で /search エンドポイントを呼び出す方法�
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 100%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | 結果を並べ替える順序を示すオブジェクトの配列。 各オブジェクトには、1 つのプロパティを含める必要があります。キーは並べ替えるフィールドのパスを表し、値は並べ替え順（昇順の場合は `asc`、降順の場合は `desc`）を表します。 |
 | `resource_types` | 検索する特定のリソースタイプを示す、文字列の配列。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 

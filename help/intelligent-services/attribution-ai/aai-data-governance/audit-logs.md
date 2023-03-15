@@ -3,7 +3,7 @@ keywords: インサイト;Attribution AI;アトリビューション AI イン�
 title: アトリビューション AI の監査ログの概要
 description: アトリビューション AI で監査ログを表示および管理する方法について説明します。
 source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
 

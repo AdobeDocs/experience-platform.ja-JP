@@ -4,7 +4,7 @@ title: オーディエンスメタデータの管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform ユーザーインターフェイス（UI）で宛先に対�
 | `validate` | パートナー API を呼び出す前に、テンプレート設定のすべてのフィールドの検証を実行します。例えば、ユーザーのアカウント ID が正しく入力されていることを検証できます。 |
 | `notify` | ファイルベースの宛先にのみ適用されます。API への HTTP 呼び出しに必要なすべてのコンポーネント（URL、HTTP メソッド、ヘッダー、リクエストおよび応答本文）を含めて、ファイルの書き出しが正常に行われたことを通知します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ストリーミングの例 1 {#example-1}
 
@@ -540,4 +540,4 @@ Experience Platform と API の間でセグメント ID、アクセストーク�
 | `{{body.segments[0].segment.id}}` | 作成されたオーディエンスの一意の ID をキー `externalAudienceId` の値として返します。 |
 | `{{error.message}}` | Experience Platform UI でユーザーに表示されるエラーメッセージを返します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

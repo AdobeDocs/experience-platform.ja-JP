@@ -4,7 +4,7 @@ description: Reactor API で /data_elements エンドポイントを呼び出す
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1369'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | データ要素を所有するプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | 検索するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | データ要素を定義している[プロパティ](./properties.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -364,7 +364,7 @@ curl -X POST \
 | `attributes.clean_text` | データ要素の値を保存する前に、先頭と末尾の空白を削除する必要があるかどうかを示すブール値。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `data_elements` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -482,7 +482,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | 更新するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -512,7 +512,7 @@ curl -X PATCH \
 | `id` | 更新するデータ要素の `id`。リクエストパスで指定された `{DATA_ELEMENT_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `data_elements` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -632,7 +632,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | 修正するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -664,7 +664,7 @@ curl -X PATCH \
 | `id` | 修正するデータ要素の `id`。 リクエストパスで指定された `{DATA_ELEMENT_ID}` 値と一致する必要があります。 |
 | `type` | 修正するリソースのタイプ。このエンドポイントの場合は、値を `data_elements` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -782,7 +782,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | 削除するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -822,7 +822,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | ライブラリのリストを取得するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -944,7 +944,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | リビジョンのリストを取得するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1178,7 +1178,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | 拡張機能を検索するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1298,7 +1298,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | オリジンを検索するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1428,7 +1428,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | プロパティを検索するデータ要素の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

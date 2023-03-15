@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスは、Adobe Analytics 拡張機能の設定に関する情報、およびこの拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
@@ -292,7 +292,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 #### eVar
 
-1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html) を設定します。
+1 つ以上の [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=ja) を設定します。
 
 1. ドロップダウンから eVar を選択します。
 1. eVar を値として設定（Set As）するか、別の eVar をコピー（Duplicate From）するかを指定します。

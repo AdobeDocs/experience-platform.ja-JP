@@ -4,7 +4,7 @@ description: Data Hygiene API の /ttl エンドポイントを使用すると�
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1426'
 ht-degree: 98%
 
 ---
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | --- | --- |
 | `{QUERY_PARAMETERS}` | `&` 文字で区切られた複数のパラメーターを含む、オプションのクエリパラメーターのリスト。共通のパラメーターには、ページネーション用の `size` および `page` があります。サポートされるクエリパラメーターの完全なリストについては、[付録の節](#query-params)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -106,7 +106,7 @@ curl -X GET \
 | `totalRecords` | リスト呼び出しのパラメーターに一致したデータセット有効期限の数。 |
 | `ttlDetails` | 返されるデータセット有効期限の詳細が含まれます。データセット有効期限のプロパティについて詳しくは、[ルックアップ呼び出し](#lookup)を行うための応答の節を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## データセット有効期限の検索 {#lookup}
 
@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | 有効期限を検索したいデータセットの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -167,7 +167,7 @@ curl -X GET \
 | `displayName` | 有効期限リクエストの表示名。 |
 | `description` | 有効期限リクエストの説明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### カタログの有効期限タグ
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `displayName` | 有効期限のリクエストの表示名。 |
 | `description` | 有効期限リクエストのオプション説明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -260,7 +260,7 @@ curl -X PUT \
 | `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
 | `updatedBy` | 有効期限を最後に更新したユーザー。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## データセット有効期限のキャンセル {#delete}
 
@@ -280,7 +280,7 @@ DELETE /ttl/{EXPIRATION_ID}
 | --- | --- |
 | `{EXPIRATION_ID}` | キャンセルするデータセット有効期限の `workorderId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -313,7 +313,7 @@ GET /ttl/{DATASET_ID}?include=history
 | --- | --- |
 | `{DATASET_ID}` | 有効期限履歴を検索したいデータセットの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -377,7 +377,7 @@ curl -X GET \
 | `imsOrg` | 組織の ID。 |
 | `history` | 有効期限の更新の履歴をオブジェクトの配列としてリスト表示し、各オブジェクトには、更新時の有効期限の `status`、`expiry`、`updatedAt` および `updatedBy` 属性が含まれます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 付録
 
@@ -402,4 +402,4 @@ curl -X GET \
 | `completedDate`／`completedToDate`／`completedFromDate` | 指定された期間内に完了した有効期限に一致します。 | `completedToDate=2021-11-11-06:00` |
 | `expiryDate`／`expiryToDate`／`expiryFromDate` | 指定された期間内に実行される予定の、または既に実行された有効期限に一致します。 | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

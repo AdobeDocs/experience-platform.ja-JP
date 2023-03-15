@@ -5,7 +5,7 @@ title: Privacy Service の概要
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 100%
 

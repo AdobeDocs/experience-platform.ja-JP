@@ -13,7 +13,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 の使用を開始する前に `extension_package`の場合は、チームメンバーにユーザーアカウントと権限を設定する必要があります。  それには、[Adobe Admin Console](https://adminconsole.adobe.com/) を使用します。
 

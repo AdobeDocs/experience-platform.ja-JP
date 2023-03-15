@@ -4,7 +4,7 @@ description: Google Ad Manager 360 は、媒体社がビデオやモバイルア
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '920'
 ht-degree: 85%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 85%
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | オーディエンスを [!DNL Google Ad Manager 360] に送信するには、このターゲット ID を選択します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -48,7 +48,7 @@ ht-degree: 85%
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性の選択画面で選択したように、該当するスキーマフィールド（例：PPID）と共に、セグメントのすべてのメンバーを書き出しています。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 

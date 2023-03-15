@@ -5,7 +5,7 @@ title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 100%
 

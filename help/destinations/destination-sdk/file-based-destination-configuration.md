@@ -4,8 +4,8 @@ title: Destination SDKのファイルベースの宛先設定オプション
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
-source-wordcount: '3012'
-ht-degree: 59%
+source-wordcount: '2982'
+ht-degree: 58%
 
 ---
 
@@ -323,7 +323,7 @@ ht-degree: 59%
 | `maxProfileAttributes` | 文字列 | 顧客が宛先にエクスポートできるプロファイル属性の最大数を示します。デフォルト値は `2000` です。 |
 | `maxIdentityAttributes` | 文字列 | 顧客が宛先にエクスポートできる ID 名前空間の最大数を示します。デフォルト値は `10` です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 顧客認証の構成 {#customer-authentication-configurations}
 
@@ -572,7 +572,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `default` | 文字列 | デフォルト値を `enum` リストから定義します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## UI 属性 {#ui-attributes}
 
@@ -600,7 +600,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `monitoringSupported` | ブール値 | 宛先接続を[モニタリング UI](../ui/destinations-workspace.md#browse) に含めるかどうかを示します。この項目を `true` に設定すると、「**[!UICONTROL モニタリングで表示]**」オプションが宛先の参照ページに表示されます。 |
 | `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 ファイルベースの宛先は `Batch` に設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先配信 {#destination-delivery}
 
@@ -630,7 +630,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。指定できる値は、`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`です。<br> <ul><li>Platform の顧客が次のいずれかの方法でシステムにログインする場合、`CUSTOMER_AUTHENTICATION` を使用します。 <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Adobe と宛先の間にグローバル認証システムがあり、宛先に接続するための認証資格情報を [!DNL Platform] の顧客が提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報](./credentials-configuration-api.md)の構成を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationServerId` | 文字列 | この `instanceId` の [宛先サーバーの設定](./server-and-file-configuration.md) あなたは [作成済み](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) を設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## セグメントマッピングの構成 {#segment-mapping}
 
@@ -692,7 +692,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
 | `identityRequired` | ブール値 | ユーザーが、Experience Platform から希望のスキーマに ID 名前空間をマッピングできるようにする場合、`true` を使用します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### マッピング手順での動的スキーマ設定 {#dynamic-schema-configuration}
 
@@ -724,7 +724,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `value` | 文字列 | マッピング手順で、Experience Platform ユーザーインターフェイスに表示されるスキーマの名前。 |
 | `responseFormat` | 文字列 | カスタムスキーマを定義する際は、常に `SCHEMA` に設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 必須マッピング {#required-mappings}
 
@@ -775,7 +775,7 @@ Adobe Experience Platform Destination SDK は、パートナー定義のスキ�
 | `requiredMappings.source` | 文字列 | 必須のソースフィールドを指定します。 |
 | `requiredMappings.destination` | 文字列 | 必須の宛先フィールドを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ID と属性 {#identities-and-attributes}
 
@@ -857,7 +857,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 | `filenameConfig.defaultFilenameAppendOptions` | 文字列 | *必須*。事前に選択されたデフォルトのファイル名マクロ（ユーザーがチェックを外すことができます）。<br><br> このリストのマクロは、 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 文字列 | *オプション*。書き出すファイルの既定のファイル名マクロを定義します。 これらをユーザーが上書きすることはできません。 <br><br>で定義された任意のマクロ `allowedFilenameAppendOptions` が `defaultFilename` マクロ。 <br><br>If `defaultFilename` が空の場合は、に少なくとも 1 つのマクロを定義する必要があります。 `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ファイル名設定 {#file-name-configuration}
 
@@ -881,7 +881,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 | `CUSTOM_TEXT` | [!UICONTROL カスタムテキスト] | ファイル名に含めるユーザ定義のカスタムテキスト。 では使用できません `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日時] | ファイルが生成された時刻の 10 桁のタイムスタンプ（UNIX 形式）。 | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![事前に選択されたマクロを含むファイル名設定画面を示す UI 画像](assets/file-name-configuration.png)
 
@@ -915,7 +915,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 |---------|----------|------|
 | `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。 <br> <ul><li> `true`：[!DNL Platform] は、セグメントがアクティブ化される前に、セグメントに適格となる履歴ユーザープロファイルを送信します。 </li><li> `false`：[!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適格となるユーザープロファイルのみが含まれます。 </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## この構成が宛先に必要なすべての情報をどのように接続するか {#connecting-all-configurations}
 

@@ -3,7 +3,7 @@ title: Edge Network Server API を使用したサーバーサイドパーソナ�
 description: この記事では、Edge Network Server API を使用して、web プロパティにサーバーサイドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション; server api; edge network; サーバーサイド;
 source-git-commit: 3e7084953a5e158059074c857bfce4940a83661b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 100%
 

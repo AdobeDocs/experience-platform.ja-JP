@@ -7,7 +7,7 @@ exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 16%
    * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデルの作成のベストプラクティス [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):セグメントを [!DNL Real-Time Customer Profile] データ。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
-   * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成する際のベストプラクティスを学びます。 セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
+   * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成する際のベストプラクティスを学びます。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 ## ユースケース
 

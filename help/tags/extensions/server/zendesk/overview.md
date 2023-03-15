@@ -4,8 +4,8 @@ description: Adobe Experience Platform の Zendesk イベント転送拡張機�
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 98%
+source-wordcount: '1271'
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 98%
 | サブドメイン | 登録プロセス中に、アカウントに固有の一意の&#x200B;**サブドメイン**&#x200B;が作成されます。詳しくは、[Zendesk のドキュメント](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/)を参照してください。 | `xxxxx.zendesk.com`（`xxxxx` は、アカウントの作成時に指定された値です） |
 | API トークン | Zendesk は、Zendesk API と通信するための認証メカニズムとして Bearer トークンを使用します。 Zendesk ポータルにログインした後、API トークンを生成します。 詳しくは、[Zendesk のドキュメント](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token)を参照してください。 | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 最後に、API トークンのイベント転送の秘密鍵を作成する必要があります。 秘密鍵タイプを「**[!UICONTROL トークン]**」に設定し、その値を Zendesk 設定から収集した API トークンに設定します。 秘密鍵の設定に関する詳細については、[イベント転送での秘密鍵](../../../ui/event-forwarding/secrets.md)に関するドキュメントを参照してください。 
 
@@ -54,7 +54,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 ## イベント転送ルールの設定
 
-新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、 必要に応じて条件を設定します。 ルールのアクションを選択する場合、 [!UICONTROL Zendesk] 拡張機能を選択して、 [!UICONTROL イベントを作成] アクションタイプ。
+新しいイベント転送ルールの[ルール](../../../ui/managing-resources/rules.md)の作成を開始し、 必要に応じて条件を設定します。 ルールのアクションを選択する場合は、[!UICONTROL Zendesk] 拡張機能を選択してから、「[!UICONTROL イベントを作成]」アクションタイプを選択します。
 
 ![ルールの定義](../../../images/extensions/server/zendesk/rule.png)
 
@@ -78,7 +78,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 | `created_at` | 文字列 | `arc.event.xdm.timestamp` | イベントが作成された時刻を反映した ISO-8601 タイムスタンプ。 | × | （N/A） |
 | `properties` | オブジェクト | `arc.event.xdm._extconndev.EventProperties` | イベントについての詳細を含むカスタム JSON オブジェクト。 | ○ | （N/A） |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 | `identifiers` | 配列 | `arc.event.xdm._extconndev.identifiers` | 1 つ以上の識別子を含む配列。 各識別子は、タイプと値で構成されます。 | ○ | `identifiers` 配列について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array)を参照してください。すべてのフィールドと値は一意である必要があります。 |
 | `attributes` | オブジェクト | `arc.event.xdm._extconndev.attrbutes` | 人物に関するユーザー定義のプロパティを含むオブジェクト。 | × | プロファイル属性について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Zendesk 内のデータの検証 {#validate}
 
@@ -125,7 +125,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 | [!DNL Enterprise] | 750 |
 | [!DNL Enterprise Plus] | 1000 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 これらの制限の詳細については、[Zendesk のドキュメント](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.)を参照してください。
 
@@ -141,7 +141,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 | 403 | **必要な権限がありません：**&#x200B;このエラーは、リソースにアクセスするのに十分な権限が提供されていない場合に発生します。 | 必要な権限が提供されていることを確認します。 | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
 | 429 | **リクエストが多すぎます：**&#x200B;このエラーは、エンドポイントオブジェクトのレコード制限を超えた場合に発生します。 | 制限ごとのしきい値の詳細については、[リクエスト制限](#limits)に関する上記の節を参照してください。 | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

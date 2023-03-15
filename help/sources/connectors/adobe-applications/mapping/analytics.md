@@ -6,7 +6,7 @@ description: Adobe Experience Platformでは、Analytics ソースを使用し�
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3419'
 ht-degree: 97%
 
 ---
@@ -122,7 +122,7 @@ Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyt
 | videopausetime | media.mediaTimed.pauseTime | オブジェクト | <!-- MISSING --> | {id (文字列), value (数値)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 整数 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## マッピングフィールドの分割
 
@@ -134,7 +134,7 @@ Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyt
 | mobileosversion | environment.operatingSystem、environment.operatingSystemVersion | 文字列 | モバイルオペレーティングシステムのバージョン。 |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | 整数 | ビデオ広告の長さ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 生成されたマッピングフィールド
 
@@ -194,7 +194,7 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | 整数 | ビデオの章の名前。 |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | 整数 | ビデオの長さ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 高度なマッピングフィールド
 
@@ -274,4 +274,4 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | visit_search_engine | _experience.analytics.session.search.searchEngine | 文字列 | 訪問の最初の検索エンジンを表す数値 ID。 |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | 整数 | 訪問者の最初のヒットのタイムスタンプ（Unix 時間）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

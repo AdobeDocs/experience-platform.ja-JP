@@ -17,7 +17,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 >
 >Analytics タグ拡張 ( [AppMeasurement JavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurement リリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
 
-## 2022年9月23日（PT）
+## 2022年9月23日
 
 **Adobe Analytics Extension 1.9.1**
 
@@ -34,7 +34,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 * AppMeasurement の一部のデバッグ文を削除しました。
 
-## 2021年11月29日（PT）
+## 2021年11月29日
 
 **Adobe Analytics Extension 1.8.8**
 
@@ -42,7 +42,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 * AppMeasurement を v2.22.3 にアップグレードしました。
 
-## 2021 年 09 月 16 日（PT）
+## 2021年9月16日（PT）
 
 **Adobe Analytics Extension 1.8.7**
 
@@ -57,7 +57,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **バグの修正**:
 
-* [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) にアップグレードしました。
+* [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) にアップグレードしました。
 * innerHTML を使用する代わりに、Activity Map ロジックを反映するように linkName のフォールバックを更新しました。
 
 ## 2020 年 8 月 6 日（PT）
@@ -70,7 +70,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **機能**:
 
-* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました。
+* [AppMeasurement を 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました。
 * 小さな UI が変更され、追加の設定がチェックボックスではなくアコーディオンで折りたたまれて表示されるようになりました。
 
 ## 2020 年 6 月 2 日（PT）
@@ -98,7 +98,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **機能**:
 
-* [AppMeasurement を 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました
+* [AppMeasurement を 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました
 
 ## 2020 年 3 月 2 日（PT）
 
@@ -110,7 +110,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **機能**:
 
-* [AppMeasurement を 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) に更新しました
+* [AppMeasurement を 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) に更新しました
 * Audience Manager モジュールの DIL ライブラリを 9.4 に更新しました
 * 拡張機能内の入力フィールドの長さを増やしました
 * 拡張機能およびアクション設定の eVar と prop で、Analytics のわかりやすい名前が表示されるようになりました
@@ -171,7 +171,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
-* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
+* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
 * 次のチェックボックスは、サポートされなくなったので、削除しました。&quot;宛先パブリッシング IFRAME を DOM に付加したり、宛先を有効にしたりしない&quot;
 
 ## 2019 年 6 月 4 日（PT）

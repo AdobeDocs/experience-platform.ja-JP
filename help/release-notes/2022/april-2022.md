@@ -3,8 +3,8 @@ title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '2916'
+workflow-type: tm+mt
+source-wordcount: '2904'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ Platform は、毎日のスナップショットで取得した、組織のデ�
 | ------- | --------- | ----------- |
 | 孤立したプロファイルセグメントメンバーシップのクリーンアップ | プロファイルとライセンスの使用法 | プロファイルサービスは、残りのセグメントメンバーを毎日削除して、システム内のプロファイルをより正確に表現するようになりました。このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に行われます。このリリース以前の残りのセグメントフラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [[!DNL Profiles]](../../dashboards/guides/profiles.md)、[[!DNL Destinations]](../../dashboards/guides/destinations.md) および [[!DNL Segments]](../../dashboards/guides/segments.md) ダッシュボードについて詳しくは、ドキュメントを参照してください。
 
@@ -126,7 +126,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- |
 | スキーマの個別の標準フィールドの追加と削除 | スキーマエディター UI を使用して、標準フィールドグループの一部をスキーマに追加できるようになり、最初からカスタムリソースを構築しなくても、含めるフィールドをより柔軟に選択できるようになりました。<br><br>また、スキーマ構造内で直接アドホックカスタムフィールドを定義して、新規または既存のカスタムフィールドグループに割り当てることができるようになり、フィールドグループを事前に作成または編集する必要がなくなりました。<br><br>これらの新しいワークフローについて詳しくは、[UI でのスキーマの作成および編集](../../xdm/ui/resources/schemas.md)に関するガイドを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新しい XDM コンポーネント**
 
@@ -151,7 +151,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 拡張（Workfront） | [[!UICONTROL 作業プログラム属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 作業プログラムに関する詳細を取得します。 |
 | 拡張（Workfront） | [[!UICONTROL 作業プロジェクト属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | 作業プロジェクトに関する詳細を取得します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新された XDM コンポーネント**
 
@@ -167,7 +167,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 拡張（Workfront） | [[!UICONTROL 作業タスク属性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | いくつかのフィールドが追加されました。 |
 | 拡張（Workfront） | [[!UICONTROL 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | 親オブジェクトタイプおよびカスタムフォームフィールド用の新しいフィールドです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
@@ -177,7 +177,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 ### アトリビューション AI
 
-アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが定量化する際に役立ちます。
 
 **更新された機能**
 

@@ -8,7 +8,7 @@ description: データアクティベーションのデフォルトの使用方�
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1177'
 ht-degree: 98%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 98%
 | 宛先に対してアクティブ化されるデータのタイプ | プロファイルデータ（ID および ID マップを含む） | ハード | 現在、宛先へ&#x200B;*プロファイルレコード属性*&#x200B;の書き出しのみ可能です。イベントデータを記述する XDM 属性は、現時点では書き出しでサポートされていません。 |
 | 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 使用不可 | ハード | 現時点では、*配列またはマップ属性*&#x200B;を宛先に書き出すことは&#x200B;**不可能**&#x200B;です。このルールの例外は、ストリーミングとファイルベースの両方のアクティベーションで書き出される [ID マップ](/help/xdm/field-groups/profile/identitymap.md)です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ストリーミングのアクティベーション {#streaming-activation}
 
@@ -58,7 +58,7 @@ ht-degree: 98%
 | --- | --- | --- | --- |
 | 1 秒あたりのアクティベーション数（プロファイル書き出しを含む HTTP メッセージ） | N/A | - | 現在、パートナー宛先の API エンドポイントに Experience Platform から送信される 1 秒あたりのメッセージ数に制限はありません。<br> 制限や待ち時間は、Experience Platform がデータを送信するエンドポイントによって決まります。また、データの接続とアクティベーションを行う宛先の[カタログ](/help/destinations/catalog/overview.md)ページも確認するようにします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### バッチ（ファイルベース）のアクティベーション {#batch-file-based-activation}
 
@@ -70,7 +70,7 @@ ht-degree: 98%
 | 任意の時間に書き出せるセグメントの最大数 | 100 | ソフト | バッチ宛先データフローに最大 100 個のセグメントを追加することをお勧めします。 |
 | アクティベートするファイルあたりの最大行数（レコード数） | 500 万 | ハード | Adobe Experience Platform は、書き出したファイルを、ファイルあたり 500 万件のレコード（行）で自動的に分割します。各行は 1 つのプロファイルを表します。`filename.csv`、`filename_2.csv`、`filename_3.csv` のように、分割ファイル名には、ファイルが大きな書き出しの一部であることを示す数字が付加されます。詳しくは、「バッチの宛先をアクティベート」チュートリアルの[スケジュールの節](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### アドホックアクティベーション {#ad-hoc-activation}
 
@@ -81,7 +81,7 @@ ht-degree: 98%
 | アドホックアクティベーションジョブごとにアクティベートされたセグメント | 80 | ハード | 現在、各アドホックアクティベーションジョブは、最大 80 個のセグメントをアクティベートできます。1 つのジョブにつき 80 個を超えるセグメントをアクティベートしようとすると、ジョブが失敗します。この動作は、今後のリリースで変更される可能性があります。 |
 | セグメントごとの同時アドホックアクティベーションジョブ | 1 | ハード | セグメントごとに複数の同時アドホックアクティベーションジョブを実行しないでください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### エッジパーソナライゼーションの宛先のアクティベーション {#edge-destinations-activation}
 
@@ -93,7 +93,7 @@ ht-degree: 98%
 | サンドボックスごとにパーソナライゼーションの宛先にマッピングされる属性の最大数 | 20 | ハード | サンドボックスごとに、データフローでパーソナライゼーションの宛先にマッピングできる属性は最大 20 個です。 |
 | 1 つの [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) の宛先にマッピングされるセグメントの最大数 | 50 | ソフト | 1 つの Adobe Target の宛先に対して、アクティベーションフローで最大 50 個のセグメントをアクティブ化できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Destination SDK ガードレール {#destination-sdk-guardrails}
 
@@ -104,7 +104,7 @@ ht-degree: 98%
 | [プライベートカスタム宛先](/help/destinations/destination-sdk/overview.md#productized-custom-integrations)の最大数 | 5 | ソフト | Destination SDK を使用して、最大 5 つのプライベートカスタムストリーミングまたはバッチの宛先を作成できます。宛先を 5 つ以上作成する必要がある場合は、カスタムケア担当者にお問い合わせください。 |
 | Destination SDK のプロファイル書き出しポリシー | <ul><li>`maxBatchAgeInSecs`（最小 1.800、最大 3.600）</li><li>`maxNumEventsInBatch`（最小 1.000、最大 10.000）</li></ul> | ハード | 「[設定可能な集計](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)」オプションを使用する場合は、HTTP メッセージが API ベースの宛先に送信される頻度と、メッセージに含めるプロファイル数を決定する最小値と最大値に注意してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 宛先のスロットルと再試行ポリシー {#destination-throttling-and-retry-policy}
 
@@ -114,7 +114,7 @@ ht-degree: 98%
 | --- | --- |
 | エンタープライズの宛先（HTTP API、Amazon Kinesis、Azure EventHubs） | Experience Platformは 95％の確率で、エンタープライズ宛先の各データフローにおいて、送信に成功したメッセージのスループット待ち時間を 10 分未満、リクエスト数を 1 秒あたり 10,000 件未満で提供しようと試みます。<br> エンタープライズ環境の宛先へのリクエストが失敗した場合、Experience Platform は失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## その他の Experience Platform サービス向けガードレール {#guardrails-other-services}
 

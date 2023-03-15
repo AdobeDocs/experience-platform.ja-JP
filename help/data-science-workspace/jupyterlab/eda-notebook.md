@@ -6,7 +6,7 @@ type: Tutorial
 description: このガイドでは、探索的データ分析（EDA）ノートブックを使用して、web データのパターンを検出する方法や、予測目標を持ってイベントを集計する方法、集計データをクリーンアップする方法および予測者と目標の関係を把握する方法について重点的に説明しています。
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 100%
 

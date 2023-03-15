@@ -65,9 +65,9 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 ストレージの場所から宛先にデータを読み込む方法については、個々のメールマーケティングの宛先に関する記事を参照してください。
 
 * [Adobe Campaign](adobe-campaign.md)
-* [OracleEloqua](oracle-eloqua.md)
-* [OracleResponsys](oracle-responsys.md)
-* [SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
+* [Oracle Eloqua](oracle-eloqua.md)
+* [Oracle Responsys](oracle-responsys.md)
+* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 
 ## メールマーケティングの宛先に対してセグメントをアクティブ化 {#activate}
 

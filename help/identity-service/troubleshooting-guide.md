@@ -5,7 +5,7 @@ title: ID サービストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 100%
 

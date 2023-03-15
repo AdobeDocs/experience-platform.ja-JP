@@ -3,7 +3,7 @@ title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 100%
 

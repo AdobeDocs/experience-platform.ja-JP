@@ -7,13 +7,13 @@ exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
 # 日付および時間関数
 
-日付および時間関数 は、内の値に対して日時操作を実行するために使用されます [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+日付および時間関数は、内の値に対して日付と時間の操作を実行するために使用されます [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
 ## Current month
 

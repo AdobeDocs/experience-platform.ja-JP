@@ -4,7 +4,7 @@ description: Adobe Experience Platform Web SDK を使用して Adobe Analytics �
 keywords: Adobe Analytics;Analytics;マッピングされたデータ;マッピングされた var;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 100%
 

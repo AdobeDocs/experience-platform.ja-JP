@@ -4,7 +4,7 @@ description: Reactor API で /audit_events エンドポイントを呼び出す�
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '259'
 ht-degree: 100%
 
 ---
@@ -172,7 +172,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 | --- | --- |
 | `AUDIT_EVENT_ID` | 検索する監査イベントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

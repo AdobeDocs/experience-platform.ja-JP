@@ -6,7 +6,7 @@ exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platformでは、接続、データセットの書き出し、�
 
 最後に、宛先カタログ内のすべての組織で使用可能な公開先と、Real-time CDP Ultimate のお客様が作成できる非公開の宛先を区別して、特定の書き出し使用例を満たすこともできます。
 
-![宛先図のタイプ。](./assets/destination-types/types-of-destinations-no-highlight.png)
+![宛先のタイプを示す図.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## 接続 {#connections}
 

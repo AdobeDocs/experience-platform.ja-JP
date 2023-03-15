@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 拡張機能は、独自の要件を持つ（小規模の）製品として考える必要があります。 Adobe Experience Platform のユーザーが拡張機能をどのように使用するかを把握すると、拡張機能で提供する必要があるイベント、条件、アクション、データ要素の各タイプに基づいて機能を分類しやすくなります。
 

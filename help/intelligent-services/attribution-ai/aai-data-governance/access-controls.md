@@ -5,7 +5,7 @@ feature: Attribution AI
 title: アトリビューション AI のアクセス制御
 description: このドキュメントでは、アトリビューション AI の属性ベースのアクセス制御に関する情報を提供します。
 source-git-commit: d82fd8dd5efbe314c09d32905f8ab964640cc11a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
 

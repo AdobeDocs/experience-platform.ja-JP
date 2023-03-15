@@ -4,8 +4,8 @@ description: Reactor API で /app_configurations エンドポイントを呼び�
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 97%
+source-wordcount: '565'
+ht-degree: 96%
 
 ---
 
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | アプリ設定を所有する[会社](./companies.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 検索するアプリ設定の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | アプリ設定を定義している[会社](./companies.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | プッシュサービスベンダーがサポートするプロトコルを表し、`push_credential` オブジェクトの形式を決定します。メッセージングサービスのプロトコルが進化するにつれ、更新されたプロトコルをサポートする新しい `key_type` 値が作成されます。 |
 | `push_credential` | 保存時に暗号化される、実際の秘密鍵証明書の値。このフィールドは通常、復号化されたり、API 応答に含まれたりすることはありません。 特定の Adobe サービスのみが、復号化されたプッシュ秘密鍵証明書を含む応答を取得できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 更新するアプリ設定の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` | 更新するアプリ設定の `id`。この値は、リクエストパスで指定された `{APP_CONFIGURATION_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `app_configurations` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 削除するアプリ設定の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

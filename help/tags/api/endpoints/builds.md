@@ -4,7 +4,7 @@ description: Reactor API で /builds エンドポイントを呼び出す方法�
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '803'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,7 @@ GET /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | ビルドのリストを取得するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ GET /builds/{BUILD_ID}
 | --- | --- |
 | `BUILD_ID` | 検索するビルドの `id` です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -260,7 +260,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | ビルドを定義するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -362,7 +362,7 @@ PATCH /builds/{BUILD_ID}
 | --- | --- |
 | `BUILD_ID` | 再公開するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -392,7 +392,7 @@ curl -X PATCH \
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `builds` にする必要があります。 |
 | `meta.action` | 実行する PATCH アクションのタイプ。`republish` に設定する必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -489,7 +489,7 @@ GET  /builds/{BUILD_ID}/data_elements
 | --- | --- |
 | `{BUILD_ID}` | データ要素のリストを取得するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -630,7 +630,7 @@ GET  /builds/{BUILD_ID}/extensions
 | --- | --- |
 | `{BUILD_ID}` | 拡張機能のリストを取得するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -761,7 +761,7 @@ GET  /builds/{BUILD_ID}/rules
 | --- | --- |
 | `{BUILD_ID}` | ルールのリストを取得するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -874,7 +874,7 @@ GET  /builds/{BUILD_ID}/library
 | --- | --- |
 | `{BUILD_ID}` | ライブラリを検索するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -987,7 +987,7 @@ GET  /builds/{BUILD_ID}/environment
 | --- | --- |
 | `{BUILD_ID}` | 環境を検索するビルドの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

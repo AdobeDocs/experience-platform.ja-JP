@@ -4,7 +4,7 @@ title: BI ツールで使用するネストされたデータ構造の統合
 description: このドキュメントでは、サードパーティの BI ツールをクエリサービスで使用する際に、セッション中にすべてのテーブルとビューの XDM スキーマを統合する方法について説明します。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
 source-git-commit: 1c590350c9d519dba60375b92de7bbbbd77961dc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 100%
 

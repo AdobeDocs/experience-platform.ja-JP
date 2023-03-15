@@ -5,7 +5,7 @@ exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platformでは、Analytics ソースコネクタを使用して
 
 高いレベルで [!DNL Analytics] は、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) のルールと処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、次の方法で消費可能と見なされます。 [!DNL Real-Time Customer Profile]. 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、で使用するために Platform データセットに取り込まれます。 [!DNL Data Science Workspace], [!DNL Query Service]、およびその他のデータ検出アプリケーション。
 
-詳しくは、 [処理ルールの概要](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) を参照してください。
+詳しくは、 [処理ルールの概要](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=ja) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM）
 

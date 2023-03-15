@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 100%
 

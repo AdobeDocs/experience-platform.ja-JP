@@ -4,8 +4,8 @@ title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
-workflow-type: ht
-source-wordcount: '755'
+workflow-type: tm+mt
+source-wordcount: '752'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 | **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 | **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先へのセグメントをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;に対する[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 アクセス制御の詳細については、[アクセス制御ユーザーガイド](../access-control/ui/overview.md)を参照してください。
 

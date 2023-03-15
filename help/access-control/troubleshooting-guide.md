@@ -5,7 +5,7 @@ title: アクセス制御トラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%
 

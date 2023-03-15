@@ -4,7 +4,7 @@ description: タグに使用できる様々なタイプの権限と、様々な�
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 91%
 
 ---
@@ -58,7 +58,7 @@ UI で作成したタグプロパティがAdmin Consoleで使用可能になり�
 | **拡張機能の管理** | 次の操作を実行できます。 <ul><li>プロパティへの新しい拡張機能のインストール</li><li>インストール済みの拡張機能の設定の変更</li><li>拡張機能の削除</li></ul>[拡張機能について詳しくは](../managing-resources/extensions/overview.md)、 拡張機能の概要のドキュメントを参照してください。このロールは一般的に、IT またはマーケティングに属しています（組織によって異なります）。 |
 | **環境の管理** | 環境を作成および変更できます。詳しくは、 [環境ドキュメント](../publishing/environments.md) を参照してください。この役割は通常、IT グループに属しています。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 会社権限
 
@@ -68,9 +68,9 @@ UI で作成したタグプロパティがAdmin Consoleで使用可能になり�
 | --- | --- |
 | **プロパティの管理** | 次の操作を実行できます。<ul><li>新しいプロパティの作成</li><li>プロパティレベルでのメタデータと設定の変更</li><li>プロパティの削除</li></ul>管理者は通常、この役割を実行します。詳しくは、 [プロパティのドキュメント](companies-and-properties.md) を参照してください。 |
 | **拡張機能の開発** | 会社が所有する拡張機能パッケージを作成および変更する権限を付与します。これには、非公開リリースと、公開リリースの依頼も含まれます。 |
-| **アプリ設定の管理** | これは、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたはその他のソリューションのライセンスをお持ちの場合にのみ使用できます。  これにより、Experience Cloud が認識しているアプリを、Firebase Cloud メッセージングサービスや Apple プッシュ通知サービスとの通信に必要なプッシュ認証情報とともに管理できます。 |
+| **アプリ設定の管理** | これは、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたはその他のソリューションのライセンスをお持ちの場合にのみ使用できます。  これにより、Experience Cloud が把握しているアプリを、Firebase Cloud Messaging サービスおよび Apple Push Notification Service との通信に必要なプッシュ認証情報と共に管理できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ユーザー権限の合計
 
@@ -117,7 +117,7 @@ UI で作成したタグプロパティがAdmin Consoleで使用可能になり�
 | 拡張機能の開発者 | 拡張機能を開発し、承認のために送信できますが、既存のプロパティに公開または追加することはできない。 | 自動インクルード | <ul><li>開発</li></ul> | <ul><li>プロパティの管理</li><li>拡張機能の開発</li></ul> |
 | スーパーユーザー | すべての操作を実行する。 | 自動インクルード | <ul><li>開発</li><li>承認</li><li>公開</li><li>拡張機能の管理</li><li>環境の管理</li></ul> | <ul><li>プロパティの管理</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

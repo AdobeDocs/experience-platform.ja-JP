@@ -5,7 +5,7 @@ title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 100%
 

@@ -4,7 +4,7 @@ description: 各リソースの関係要件など、Reactor API でリソース�
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | リソースが属するプロパティの ID。 |
 | `{RESOURCE_TYPE}` | 作成するリソースのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | リソースの一意の ID。 各 `id` には、問題のリソースのタイプを示す兄弟 `type` プロパティを付ける必要があります。 |
 | `type` | 兄弟 `id` フィールドによって参照されるリソースのタイプ。 許容値としては、`data_elements`、`rules`、`extensions`、`environments` などがあります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## URL による関係の作成 {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | リソースの一意の ID。 各 `id` には、問題のリソースのタイプを示す兄弟 `type` プロパティを付ける必要があります。 |
 | `type` | 兄弟 `id` フィールドによって参照されるリソースのタイプ。 許容値としては、`data_elements`、`rules`、`extensions`、`environments` などがあります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## リソース別の関係要件 {#requirements}
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ビルド
 
@@ -166,7 +166,7 @@ curl -X POST \
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### コールバック
 
@@ -174,7 +174,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 会社
 
@@ -182,7 +182,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### データ要素
 
@@ -197,7 +197,7 @@ curl -X POST \
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 環境
 
@@ -208,7 +208,7 @@ curl -X POST \
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 拡張機能
 
@@ -222,7 +222,7 @@ curl -X POST \
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ホスト
 
@@ -230,7 +230,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ライブラリ
 
@@ -246,7 +246,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 備考
 
@@ -254,7 +254,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### プロパティ
 
@@ -268,7 +268,7 @@ curl -X POST \
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ルールコンポーネント
 
@@ -283,7 +283,7 @@ curl -X POST \
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ルール
 

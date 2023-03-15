@@ -7,7 +7,7 @@ description: UI でAdobe Analytics ソース接続を作成して、消費者デ
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2384'
 ht-degree: 61%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 61%
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 主な用語
@@ -67,7 +67,7 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL ソース
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+&lt;! —Analytics レポートスイートは、一度に 1 つのサンドボックスに対して設定できます。 同じレポートスイートを別のサンドボックスに読み込むには、データセットフローを削除し、別のサンドボックスの設定を使用して再びインスタンス化する必要があります。—>
 
 ### マッピング
 
@@ -287,7 +287,7 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 
 ![削除](../../../../images/tutorials/create/analytics/delete.png)
 
-## 次の手順と追加のリソース
+## 次の手順とその他のリソース
 
 接続を作成すると、受信データを格納して選択したスキーマをデータセットに投入するデータフローが自動的に作成されます。さらに、データのバックフィルが発生し、最大 13 か月の履歴データを取り込みます。初回の取り込みが完了したら、[!DNL Analytics] データはダウンストリームの Platform サービス（[!DNL Real-Time Customer Profile]やセグメント化サービスなど）で使用されるようになります。詳しくは、次のドキュメントを参照してください。
 

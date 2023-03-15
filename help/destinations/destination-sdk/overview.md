@@ -4,7 +4,7 @@ title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '837'
 ht-degree: 55%
 
 ---
@@ -58,9 +58,9 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 ---------|----------|
 | 独立系ソフトウェアベンダー（ISV） | [Adobe Exchange プログラム](https://partners.adobe.com/exchangeprogram/experiencecloud.html)に参加し、Destination SDK にアクセスできるようプロビジョニングされた Experience Platform サンドボックスの取得をリクエストします。 |
 | システムインテグレーター（SI） | [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) で Gold レベルまたは Platinum レベルであれば、プロビジョニングされた Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
-| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
+| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## プロセスの概要 {#process}
 

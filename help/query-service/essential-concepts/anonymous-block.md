@@ -3,7 +3,7 @@ title: クエリサービスの匿名ブロック
 description: 匿名ブロックは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文であり、クエリのシーケンスを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 100%
 

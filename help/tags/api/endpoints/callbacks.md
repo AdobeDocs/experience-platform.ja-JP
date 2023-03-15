@@ -4,7 +4,7 @@ description: Reactor API で /callbacks エンドポイントを呼び出す方�
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 97%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | コールバックのリストを取得するプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | 検索するコールバックの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | コールバックを定義する[プロパティ](./properties.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | コールバックメッセージの URL 宛先。 URL は、HTTPS プロトコル拡張機能を使用する必要があります。 |
 | `subscriptions` | コールバックをトリガーする監査イベントタイプを示す、文字列の配列。 使用可能なイベントタイプのリストについては、[監査イベントエンドポイントのガイド](./audit-events.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | 更新するコールバックの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | 更新するコールバックの `id`。この値は、リクエストパスで指定された `{CALLBACK_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `callbacks` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | 削除するコールバックの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

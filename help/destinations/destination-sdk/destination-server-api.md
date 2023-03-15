@@ -4,7 +4,7 @@ title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1358'
 ht-degree: 95%
 
 ---
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.requestBody.value` | 文字列 | *必須。* この文字列は、Platform 顧客のデータをサービスが想定する形式に変換する、文字エスケープバージョンです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](./message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 </li><li> 単純な変換の例については、[プロファイル属性](./message-format.md#attributes)の変換を参照してください。 </li></ul> |
 | `httpTemplate.contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 

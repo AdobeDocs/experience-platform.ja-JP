@@ -7,11 +7,11 @@ exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
-# 接続 [!DNL Aqua Data Studio] クエリサービスへ
+# クエリサービスへの [!DNL Aqua Data Studio] の接続
 
 このドキュメントでは、 [!DNL Aqua Data Studio] Adobe Experience Platform [!DNL Query Service].
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 >
 >次のものがあります。 [!DNL Windows] および [!DNL macOS] のバージョン [!DNL Aqua Data Studio]. このガイドのスクリーンショットは、 [!DNL macOS] デスクトップアプリケーション。 UI のバージョン間で若干の相違が生じる場合があります。
 
-接続に必要な資格情報を取得するには [!DNL Aqua Data Studio] をExperience Platformするには、 [!UICONTROL クエリ] ワークスペース（Platform UI 内） 現在、 [!UICONTROL クエリ] ワークスペース。
+[!DNL Aqua Data Studio] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、 [!UICONTROL クエリ] ワークスペース。
 
 ## サーバーを登録 {#register-server}
 

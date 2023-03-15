@@ -5,7 +5,7 @@ title: JupyterLab UI の概要
 description: JupyterLab は、プロジェクト Jupyter の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要のほか、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 100%
 

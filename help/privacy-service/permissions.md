@@ -3,8 +3,8 @@ title: Privacy Service の権限の管理
 description: Adobe Admin Console を使用して Adobe Experience Platform Privacy Service のユーザー権限を管理する方法について説明します。
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
-workflow-type: ht
-source-wordcount: '964'
+workflow-type: tm+mt
+source-wordcount: '961'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ Privacy Service のアクセス制御を設定するには、Adobe Experience Pl
 | [!UICONTROL 販売のオプトアウト権限] | [!UICONTROL 読み取り権限 - 販売のオプトアウト] | ユーザーが既存の販売のオプトアウトリクエストとその詳細を表示できるかどうかを決定します。 |
 | [!UICONTROL 販売のオプトアウト権限] | [!UICONTROL 書き込み権限 - 販売のオプトアウト] | ユーザーが新しい販売のオプトアウトリクエストを作成できるかどうかを決定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 権限の管理 {#manage}
 

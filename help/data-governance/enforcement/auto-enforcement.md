@@ -6,8 +6,8 @@ description: このドキュメントでは、Experience Platform 内の宛先�
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 30d8cc73128cff444ce06a8ab913aeb8fa816ed1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1887'
+ht-degree: 97%
 
 ---
 

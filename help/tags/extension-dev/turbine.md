@@ -4,7 +4,7 @@ description: Adobe Experience Platform タグのランタイムに固有の情�
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '619'
 ht-degree: 100%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 `turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。Adobe Experience Platform タグのランタイムに固有の情報とユーティリティを提供し、`require()` を使用しなくてもライブラリモジュールでいつでも利用できます。
 
@@ -39,7 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | コンテナ内で使用されている [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) のバージョンが作成された日付（ISO 8601 形式）。 |
 | `buildDate` | 現在のライブラリが構築された日付（ISO 8601 形式）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `environment`
 
@@ -61,7 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | 環境の ID。 |
 | `stage` | このライブラリが構築された環境。有効な値は `development`、`staging`、および `production` です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `debugEnabled`
 

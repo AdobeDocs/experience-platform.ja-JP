@@ -5,7 +5,7 @@ description: このガイドは、Query Service API を使用してアラート�
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 89%
 
 ---
@@ -553,7 +553,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | `subscriptions.inContextNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、UI を通じてアラートを提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
 | `subscriptions.emailNotifications` | ユーザーがアラート通知を受け取る方法を決定するブーリアン値。`true` 値は、アラートをメールで提供する必要があることを確認します。`false` 値は、そのチャネルを通じてユーザーに通知されないことを確認します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -643,7 +643,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | `path` | この値は、エンドポイントの名前空間に関連します。現在、許可されている値は `/status` のみです。 |
 | `value` | 正常に行われた PATCH リクエストでは、これはアラートの `status` 値に変更されます。現在、指定できる値は `enable` または `disable` です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 

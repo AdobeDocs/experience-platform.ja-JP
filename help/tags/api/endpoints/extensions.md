@@ -4,7 +4,7 @@ description: Reactor API で /extensions エンドポイントを呼び出す方
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '941'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ GET properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | 拡張機能のリストを取得するプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ GET /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | 検索する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -292,7 +292,7 @@ POST /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `PROPERTY_ID` | 拡張機能をインストールするプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `attributes.enabled` | 拡張機能が有効かどうかを示すブール値。 |
 | `attributes.settings` | 文字列として表される設定 JSON オブジェクト。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -438,7 +438,7 @@ PATCH /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | 改訂する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -470,7 +470,7 @@ curl -X PATCH \
 | `attributes` | 改訂する属性。 拡張機能の場合は、 `delegate_descriptor_id`、 `enabled` および `settings` 属性を変更できます。 |
 | `meta.action` | リビジョンを作成する場合は、`revise` の値を含める必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -578,7 +578,7 @@ DELETE /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | 削除する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -618,7 +618,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 | --- | --- |
 | `{EXTENSION_ID}` | ライブラリのリストを取得する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -740,7 +740,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 | --- | --- |
 | `{EXTENSION_ID}` | リビジョンのリストを取得する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -954,7 +954,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 | --- | --- |
 | `{EXTENSION_ID}` | 検索する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1189,7 +1189,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 | --- | --- |
 | `{EXTENSION_ID}` | オリジンを検索する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1309,7 +1309,7 @@ GET  /extensions/{EXTENSION_ID}/property
 | --- | --- |
 | `{EXTENSION_ID}` | プロパティを検索する拡張機能の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

@@ -4,7 +4,7 @@ description: Reactor API でのエラーの処理方法を説明します。
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 100%
 
 ---
@@ -49,7 +49,7 @@ Reactor API を呼び出す際に問題が発生した場合は、次のいず�
 | `source` | エラーのソースへの参照を含むオブジェクトです。オプションで、次のメンバーのいずれかを含みます。<ul><li>`pointer`：要求ドキュメント内の関連エンティティを参照する [JSON ポインター（RFC6901）](https://datatracker.ietf.org/doc/html/rfc6901) 文字列（例えば、プライマリデータオブジェクトの `/data` や、特定の属性の `/data/attributes/title`）。</li></ul> |
 | `meta` | エラーに関する非標準のメタデータを含むオブジェクトです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## エラーリファレンス
 
@@ -107,4 +107,4 @@ Reactor API を呼び出す際に問題が発生した場合は、次のいず�
 | `upgraded-extension-required` | 拡張機能のアップグレードをインストールしたら、アップグレードが実稼動環境に移行するまで、そのアップグレードをすべてのライブラリに含める必要があります。唯一の例外は、拡張機能がまだ公開されていない場合です。 |
 | `upstream-build-required` | これをビルドする前に、アップストリームライブラリを正常にビルドする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

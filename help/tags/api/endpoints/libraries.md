@@ -4,7 +4,7 @@ description: Reactor API で /libraries エンドポイントを呼び出す方�
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 100%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | ライブラリを所有するプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | 検索するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | ライブラリを定義している[プロパティ](./properties.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **（必須）**&#x200B;ライブラリのわかりやすい名前。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `libraries` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | リソースを追加するライブラリの ID。 |
 | `{RESOURCE_TYPE}` | ライブラリに追加するリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | ライブラリに追加するリソースの ID。 |
 | `type` | ライブラリに追加するリソースのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | 関係を置き換えるライブラリの ID。 |
 | `{RESOURCE_TYPE}` | 置き換えるリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | ライブラリに追加するリソースの ID。 |
 | `type` | ライブラリに追加するリソースのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | リソースを削除するライブラリの ID。 |
 | `{RESOURCE_TYPE}` | 削除するリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | ライブラリから削除するリソースの ID。 |
 | `type` | ライブラリから削除するリソースのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | 割り当てるライブラリの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | ライブラリを割り当てる環境の ID。 |
 | `type` | `environments` に設定する必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | トランジションするライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | 更新するライブラリの `id`。これは、リクエストパスで指定された `{LIBRARY_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `libraries` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | 公開するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | リストを取得するデータ要素を持つライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | 拡張機能のリストを取得するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | ルールをリストするライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | 環境を検索するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | プロパティを検索するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | アップストリームライブラリを検索するライブラリの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

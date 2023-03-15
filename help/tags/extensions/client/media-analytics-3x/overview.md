@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 

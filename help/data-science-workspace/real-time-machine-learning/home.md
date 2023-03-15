@@ -5,7 +5,7 @@ title: リアルタイム機械学習の概要
 description: リアルタイム機械学習により、エンドユーザーに対するデジタルエクスペリエンスコンテンツの適切さが大幅に向上します。これは、Experience Edge でのリアルタイム推論と継続的な学習を活用することで可能になります。
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 100%
 

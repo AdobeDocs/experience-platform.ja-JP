@@ -13,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 アドビが管理するホストは、Adobe Experience Platform にタグライブラリビルドをデプロイするためのデフォルトのホスト設定です。データ収集ユーザーインターフェイスを使用して新しいプロパティを作成すると、アドビが管理するデフォルトのホストが作成されます。
 

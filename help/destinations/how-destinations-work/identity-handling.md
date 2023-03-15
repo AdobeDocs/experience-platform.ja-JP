@@ -2,7 +2,7 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 100%
 

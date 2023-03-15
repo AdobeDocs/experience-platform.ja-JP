@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ## Web プロパティ
 
@@ -63,7 +63,7 @@ Adobe Experience Platform でのタグの実装は、それぞれ大きく異な
 
 例えば、すべてのサイトまたはアプリケーションをまたいで [!DNL Adobe Analytics]、[!DNL Target]、および同じサードパーティ拡張機能をデプロイしている場合は、それがグループ化の理由になります。
 
-### 人
+### People
 
 Adobe Experience Platform で作業中の個人、チーム、組織は、すべての Web サイトやアプリケーション、もしくはその一部、または 1 つのみにアクセスする必要がありますか？
 

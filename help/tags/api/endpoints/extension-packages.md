@@ -4,7 +4,7 @@ description: Reactor API で /extension_packages エンドポイントを呼び�
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '939'
 ht-degree: 97%
 
 ---
@@ -249,7 +249,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 検索する拡張機能パッケージの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -717,7 +717,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 更新する拡張機能パッケージの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -956,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 非公開でリリースする拡張機能パッケージの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 停止する拡張機能パッケージの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -1294,7 +1294,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | バージョンのリストを取得する拡張パッケージの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

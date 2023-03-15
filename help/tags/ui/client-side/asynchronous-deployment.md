@@ -18,7 +18,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 製品で必要となる JavaScript ライブラリのパフォーマンスとノンブロッキングデプロイメントは、 Adobe Experience Cloud ユーザーにとってますます重要となっています。[[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) などのツールでは、ユーザーがサイトにアドビライブラリをデプロイする方法を変更することを推奨しています。この記事では、非同期的に Adobe JavaScript ライブラリを使用する方法について説明します。
 

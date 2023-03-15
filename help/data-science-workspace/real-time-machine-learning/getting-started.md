@@ -5,7 +5,7 @@ title: リアルタイム機械学習の基本を学ぶ
 description: 次のドキュメントでは、Adobe Experience Platform でリアルタイム機械学習モデルを作成するために必要な手順の概要について説明します。
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 100%
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: 結合ポリシー API エンドポイント
 type: Documentation
 description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
@@ -7,7 +7,7 @@ exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2472'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
@@ -23,7 +23,7 @@ UI を使用して結合ポリシーを操作するには、 [結合ポリシー
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 

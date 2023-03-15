@@ -4,7 +4,7 @@ feature: Attribution AI
 title: アトリビューション AI のガバナンスポリシー
 description: Adobe Experience Platform には、収集したエクスペリエンスデータを確信を持って制御できるいくつかのサービスおよびツールが用意されています。
 source-git-commit: 2cce166592c4d4b7f9d62bc3385fb8ccdd74c958
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

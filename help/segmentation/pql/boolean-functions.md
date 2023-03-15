@@ -7,13 +7,13 @@ exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
 # ブール関数
 
-ブール関数 は、 [!DNL Profile Query Language] (PQL) を参照してください。  その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+ブール関数は、 [!DNL Profile Query Language] (PQL) を参照してください。  その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
 
 ## および
 

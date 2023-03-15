@@ -4,7 +4,7 @@ description: Adobe Experience Platform の 2022年10月のリリースノート�
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1337'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 |  イベント転送用の [!DNL Splunk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../../tags/extensions/server/splunk/overview.md)を参照してください。 |
 |  イベント転送用の [!DNL Zendesk] 拡張機能 | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../../tags/extensions/server/zendesk/overview.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Destinations] {#destinations}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | （ベータ版）データセットの書き出し | [ベータ版の機能であるデータセットの書き出し](/help/destinations/ui/export-datasets.md)を利用すると、最初に生成したデータ（[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義済み）を Adobe Experience Platform から宛先ユーザーインターフェイスを介して顧客独自の外部システムに書き出すことができます。これにより、ノーコード／ローコードのワークフローを使用して、6 つのクラウドストレージの宛先（以下の表に示す）に Experience Platform からデータを書き出して、分析およびコンプライアンスのユースケースを実行できます。 |
 | （ベータ版）ファイル書き出し機能の強化 | Experience Platform からファイルを書き出す際に、以下の強化されたカスタマイズ機能を利用できるようになりました。<br><ul><li>追加された[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出し対象の CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br> この機能は、以下の表に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新規宛先または更新された宛先**
 
@@ -70,7 +70,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | ベータ版の参加者には、宛先カタログに 2 つの [!DNL Azure Blob] 宛先カードが並んで表示されるようになりました。新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | ベータ版の参加者には、宛先カタログに 2 つの [!DNL SFTP] 宛先カードが並んで表示されるようになりました。新しいベータ版の宛先は、拡張されたファイル書き出し機能を提供し、データセットの書き出しをサポートします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新規ドキュメントまたは更新されたドキュメント**
 
@@ -92,7 +92,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` の名前は `friendlyName` に変更されました。`ID` の名前は `name` に変更されました。 |
 | データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` の名前は `name` に変更されました。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
@@ -107,7 +107,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 | Platform UI によるクエリの監視 | クエリサービスの「[!UICONTROL 予定クエリ]」タブでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。「[!UICONTROL 予定クエリ]」タブから、エラーメッセージや失敗した場合のコードなど、クエリ実行のステータスに関する重要な情報を確認できるようになりました。これらのクエリのステータスに基づいて、UI を使用して、アラートを購読することもできます。この機能について詳しくは、[クエリドキュメントの監視](../../query-service/ui/monitor-queries.md)を参照してください。 |
 | クエリ高速化レポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存の Adobe Real-time Customer Data Platform データモデルを拡張したりして、レポートインサイトとそのビジュアライゼーションを改善できます。この機能について詳しくは、[クエリ高速化ストアレポートインサイトのドキュメント](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 Adobe Experience Platform の新機能：

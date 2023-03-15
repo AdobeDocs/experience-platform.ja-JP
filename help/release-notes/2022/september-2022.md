@@ -4,7 +4,7 @@ description: Adobe Experience Platform の 2022年9月のリリースノート�
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2916'
 ht-degree: 100%
 
 ---
@@ -82,7 +82,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 | --- | --- | --- |
 | 追加されたリソース | <ul><li>アトリビューション AI インスタンス</li><li>顧客 AI インスタンス</li><li>データストリーム</li></ul> | 監査ログのリソースは、アクティビティが発生すると自動的に記録されます。この機能が有効な場合、ログ収集を手動で有効にする必要はありません。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
 
@@ -113,7 +113,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | Web SDK における [[!DNL User-Agent Client Hints] ](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、[[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) をサポートするようになりました。Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
 | [Web SDK のページごとの移行](../../edge/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
 -->
@@ -130,7 +130,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 | ----------- | ----------- |
 | Destination SDK | Destination SDK では、パートナーや顧客が、製品化されたバッチ（またはファイルベース）宛先やプライベートの宛先を作成できるようになりました。詳しくは、次のドキュメントページを参照してください。 <ul><li>[Destination SDK の概要](/help/destinations/destination-sdk/overview.md)</li><li>[ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のファイル形式オプションの設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[ファイルベースの宛先のテスト](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新規宛先または更新された宛先**
 
@@ -139,7 +139,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1)で機能することに注意してください。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリード両方の更新をサポートするようになりました。また、迅速な更新を実現するようパフォーマンスを向上しました。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新規ドキュメントまたは更新されたドキュメント**
 
@@ -168,7 +168,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | メディアの詳細情報を追跡します。 |
 | フィールドグループ | [[!UICONTROL Adobe CJM ExperienceEvent - サーフェス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer でのエクスペリエンスイベントのサーフェスについて説明します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新された XDM コンポーネント**
 
@@ -190,7 +190,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | （複数） | （複数） | Adobe Journey Optimizer エンティティは、[安定化](https://github.com/adobe/xdm/pull/1625/files)されました。 |
 | （複数） | （複数） | いくつかの実験的コンポーネントをまたいだ特定のフィールドの名前空間は、[一貫性を保つために更新されました](https://github.com/adobe/xdm/pull/1626/files)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 

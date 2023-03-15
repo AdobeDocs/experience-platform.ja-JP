@@ -5,7 +5,7 @@ title: クエリサービスの概要
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 100%
 

@@ -5,7 +5,7 @@ title: Catalog Service の概要
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 100%
 

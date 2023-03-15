@@ -4,7 +4,7 @@ title: クエリサービスでのネストされたデータ構造の使用
 description: このドキュメントでは、CTAS 文と INSERT INTO 文を使用して、ネストされたデータフィールドを処理および変換する実際の例について説明します。
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 100%
 

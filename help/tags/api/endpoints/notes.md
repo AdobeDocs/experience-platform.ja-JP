@@ -4,7 +4,7 @@ description: Reactor API で /notes エンドポイントを呼び出す方法�
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '515'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | メモを取得するリソースのタイプ。 次の値のいずれかである必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | メモのリストを取得する特定のリソースの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | 検索するメモの `id` です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | メモを作成するリソースのタイプ。 次の値のいずれかである必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | メモを作成する特定のリソースの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **（必須）** 更新するリソースのタイプ。このエンドポイントの場合は、値を `notes` にする必要があります。 |
 | `attributes.text` | **（必須）** メモを含むテキスト。各メモは、512 文字の Unicode 文字に制限されています。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 

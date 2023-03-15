@@ -2,13 +2,13 @@
 title: Web SDK と Edge Network Server API を使用したハイブリッドパーソナライゼーション
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
-source-git-commit: f280d4cbcde434ccf36df37e95f1902cfd02c96c
-workflow-type: ht
+exl-id: 506991e8-701c-49b8-9d9d-265415779876
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 100%
 
 ---
-
 
 # Web SDK と Edge Network Server API を使用したハイブリッドパーソナライゼーション
 
@@ -281,9 +281,3 @@ function sendDisplayEvent(decision) {
 ## サンプルアプリケーション {#sample-app}
 
 このタイプのパーソナライゼーションの実験や詳細の確認に役立つように、ダウンロードしてテストに使用できるサンプルアプリケーションを提供しています。この [GitHub リポジトリ](https://github.com/adobe/alloy-samples)から、アプリケーションとその使用方法に関する詳細な手順をダウンロードできます。
-
-
-
-
-
-

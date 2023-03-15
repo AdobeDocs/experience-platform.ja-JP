@@ -4,8 +4,8 @@ description: Reactor API で /hosts エンドポイントを呼び出す方法�
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 93%
+source-wordcount: '797'
+ht-degree: 92%
 
 ---
 
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | ホストを所有するプロパティの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ GET /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | 検索するホストの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -190,7 +190,7 @@ POST /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | ホストを定義している[プロパティ](./properties.md)の `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -232,7 +232,7 @@ curl -X POST \
 | `attributes.username` | 認証用のオプションのユーザー名。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `hosts` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | 更新するホストの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -322,7 +322,7 @@ curl -X PATCH \
 | `id` | 更新するホストの `id` 。この値は、リクエストパスで指定された `{HOST_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `hosts` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -378,7 +378,7 @@ DELETE /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | 削除するホストの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -414,7 +414,7 @@ GET /hosts/{HOST_ID}/property
 | --- | --- |
 | `{HOST_ID}` | プロパティを検索するホストの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

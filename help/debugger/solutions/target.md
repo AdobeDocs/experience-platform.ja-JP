@@ -3,8 +3,8 @@ title: Adobe Experience Platform Debugger を使用した Adobe Target 実装の
 description: Adobe Experience Platform Debugger を使用して、Adobe Target が有効な web サイトのテストとデバッグを行う方法について説明します。
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
-workflow-type: ht
-source-wordcount: '1220'
+workflow-type: tm+mt
+source-wordcount: '1211'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 | グローバルリクエスト名 | Target 実装の[グローバル mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) の名前（デフォルト名は `target-global-mbox`）。 |
 | ページ読み込みイベント | [ページ読み込みイベント](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams)が発生したかどうかを示すブール値。ページ読み込みイベントは at.js 2.x でのみサポートされています。互換性のないバージョンの場合、この値はデフォルトで `None` になります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Network Requests] {#network}
 
@@ -94,7 +94,7 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 | [!DNL vst] | [Experience Cloud ID サービス API の設定](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=ja)。 |
 | [!DNL webGLRenderer] | ページで使用される WebGL レンダラーに関する情報を提供します（該当する場合）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 特定のネットワークイベントのパラメーターの詳細を表示するには、該当するテーブルセルを選択します。 ポップオーバーが表示され、説明や値など、パラメーターの詳細情報が表示されます。 値が JSON オブジェクトの場合、ダイアログには、オブジェクト構造の完全にナビゲーション可能なビューが含まれます。
 
@@ -112,4 +112,4 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 | [!DNL Target Diable] | 有効にすると、ページ上で Target のすべての機能が無効になります。 これを使用すると、Target 固有のオファーがページ上での問題の原因であるかどうかを判断できます。 |
 | [!DNL Target Trace] | **メモ**：この機能を有効にするには、ログインする必要があります。<br><br>有効にした場合、クエストのたびにトラッキングトークンが送信され、各応答でトレースオブジェクトが返されます。`at.js` は応答 `window.__targetTraces` を解析します。各トレースオブジェクトには、次の追加事項に加えて「[!DNL Network Requests]」タブと同じ情報が含まれます。<ul><li>プロファイルスナップショット（リクエストの前後で属性を確認できるようになります）。</li><li>一致した／一致しなかった[アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja)（現在のプロファイルが特定のアクティビティの対象として認定された／認定されなかった理由を示します）。<ul><li>これは、特定の時点でプロファイルの対象となるオーディエンスとその理由を特定するのに役立ちます。</li><li>様々なアクティビティタイプに関する詳細は、Target ドキュメントに記載されています</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

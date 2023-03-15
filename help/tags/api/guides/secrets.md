@@ -4,8 +4,8 @@ description: イベント転送で使用する Reactor API の秘密鍵を設定
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 87%
+source-wordcount: '1232'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 | `simple-http` | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
 | `oauth2-client_credentials` | [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートする複数の属性が含まれます。イベント転送では、必要な情報を要求され、指定された間隔でトークンの更新を処理します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 このガイドでは、イベント転送で使用する秘密鍵の設定方法の概要を説明します。秘密鍵の構造の JSON の例など、Reactor API で秘密鍵を管理する方法のガイダンスについて詳しくは、 [秘密鍵エンドポイントガイド](../endpoints/secrets.md)を参照してください。
 
@@ -42,7 +42,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 | --- | --- | --- |
 | `token` | 文字列 | 宛先システムによって認識される秘密鍵トークン。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 トークンは静的な値として保存されるため、秘密鍵の作成時に秘密鍵の `expires_at` および `refresh_at` プロパティは `null` に設定されます。
 
@@ -55,7 +55,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 | `username` | 文字列 | ユーザー名。 |
 | `password` | 文字列 | パスワード。 この値は API 応答には含まれません。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 秘密鍵が作成されると、2 つの属性は `username:password` の BASE64 エンコーディングで交換されます。交換後、秘密鍵の `expires_at` および `refresh_at` プロパティは `null` に設定されます。
 

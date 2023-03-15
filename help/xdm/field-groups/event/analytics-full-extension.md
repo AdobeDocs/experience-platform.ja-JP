@@ -4,7 +4,7 @@ description: このドキュメントでは、Adobe Analytics ExperienceEvent �
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '888'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 100%
 | `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | オブジェクト | フィールドグループには、最大 1000 個のカスタムイベントをキャプチャするためのオブジェクトフィールドが用意されています。 これらのフィールドについて詳しくは、[次のサブセクション](#events)を参照してください。 |
 | `session` | オブジェクト | イベントをトリガーしたセッションに関する情報をキャプチャします。 このオブジェクトの内容について詳しくは、[次のサブセクション](#session)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `customDimensions` {#custom-dimensions}
 
@@ -51,7 +51,7 @@ ht-degree: 100%
 | `postalCode` | 文字列 | クライアントが指定した zip コードまたは郵便番号。 |
 | `stateProvince` | 文字列 | クライアントが提供する都道府県の場所。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `endUser` {#end-user}
 

@@ -4,7 +4,7 @@ description: Adobe Experience Platform のデータハイジーンを使用す�
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '604'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ UI でのデータハイジーンタスクの管理手順については、[デ�
 | ジャーニーと宛先の更新 | 50 時間 | 関連するセグメントの変更に従って、[ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=ja)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=ja)および[宛先](../destinations/home.md)が更新されます。 |
 | ハード削除が完了する | 14 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 [ハイジーンジョブのステータス](./ui/browse.md#view-details)が、データセットの削除を反映するように更新されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- ### Record deletes {#record-delete-transparency}
 

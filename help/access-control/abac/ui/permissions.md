@@ -4,7 +4,7 @@ title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 100%
 

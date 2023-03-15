@@ -6,7 +6,7 @@ type: Tutorial
 description: Git は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は、データサイエンスワークスペース JupyterLab 環境内に事前にインストールされています。
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 100%
 

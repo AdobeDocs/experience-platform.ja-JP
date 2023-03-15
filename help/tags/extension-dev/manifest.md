@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 拡張機能の基本ディレクトリには、`extension.json` という名前のファイルを作成する必要があります。 このファイルには、Adobe Experience Platform が拡張機能を適切に使用できるようにするための重要な詳細が含まれています。 内容の一部は、[npm の`package.json`](https://docs.npmjs.com/files/package.json) の形式に従って構成されます。
 
@@ -134,7 +134,20 @@ ht-degree: 100%
       <td><code>schema</code></td>
       <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクト対して実行されるライブラリモジュールと互換性のある形式であることを、Platform が適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema":"http://json-schema.org/draft-04/schema#", "type":"object", "properties":{ "delay":{ "type":"number", "minimum":1 } }, "required":[ "delay" ], "additionalProperties":false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>

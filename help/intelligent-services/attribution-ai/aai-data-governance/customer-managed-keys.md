@@ -3,7 +3,7 @@ keywords: インサイト;Attribution AI;アトリビューション AI イン�
 title: 顧客管理キー
 description: アトリビューション AI 用の顧客管理キーの設定方法について説明します。
 source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%
 

@@ -5,7 +5,7 @@ title: リアルタイム機械学習ノードリファレンス
 description: ノードは、グラフを構成する基本単位です。 各ノードでは特定のタスクを実行し、リンクを使用してノードを連結して、ML パイプラインを表すグラフを構成できます。 ノードで実行されるタスクは、入力データに対する操作（データやスキーマの変換など）や機械学習の推論を表します。 ノードは、変換された値や推論された値を次のノード（複数の場合あり）に出力します。
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 100%
 
@@ -83,7 +83,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 次の Pandas ノードでは、 `pd.DataFrame` メソッドまたは Pandas の任意の汎用トップレベル関数を読み込むことができます。Pandas のメソッドについて詳しくは、[Pandas メソッドのドキュメント](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)を参照してください。トップレベル関数について詳しくは、[汎用関数の Pandas API リファレンスガイド](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)を参照してください。
 
-以下のノードでは、`"import": "map"` を使用して、メソッド名を文字列としてパラメーターに読み込んだあと、パラメーターをマップ関数として入力します。 以下の例では、これを行うのに `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` を使用しています。マップを用意したら、 `inplace` を `True` または `False` に設定することができます。変換をインプレースで適用するかどうかに応じて、`inplace` を `True` または `False` に設定します。`"inplace": False` の場合は、デフォルトで新しい列が作成されます。 新しい列名を指定する機能のサポートは、今後のリリースで追加される予定です。最後の行の `cols` は、単一の列名でも列のリストでも構いません。 変換を適用する列を指定します。 この例では、`device` が指定されています。
+以下のノードでは、`"import": "map"` を使用して、メソッド名を文字列としてパラメーターに読み込んだあと、パラメーターをマップ関数として入力します。 以下の例では、これを行うのに `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` を使用しています。マップを配置したら、`inplace` を `True` または `False` に設定するオプションがあります。変換をインプレースで適用するかどうかに基づいて、`inplace` を `True` または `False` に設定します。デフォルトでは、`"inplace": False` は新しい列を作成します。新しい列名を指定する機能のサポートは、今後のリリースで追加される予定です。最後の行 `cols` は、単一の列名または列のリストにすることができます。変換を適用する列を指定します。 この例では、`device` が指定されています。
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)

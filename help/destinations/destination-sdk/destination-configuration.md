@@ -4,7 +4,7 @@ title: Destination SDK のストリーミング先構成オプション
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1883'
 ht-degree: 88%
 
 ---
@@ -131,7 +131,7 @@ ht-degree: 88%
 | `description` | 文字列 | Experience Platform 宛先カタログで、宛先カードの説明を提供します。4 ～ 5 文以下を目指します。 |
 | `status` | 文字列 | 宛先カードのライフサイクルステータスを示します。 指定できる値は、`TEST`、`PUBLISHED`、`DELETED` です。最初に宛先を設定するときは、`TEST` を使用します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 顧客認証の構成 {#customer-authentication-configurations}
 
@@ -154,7 +154,7 @@ ht-degree: 88%
 | `customerAuthenticationConfigurations` | 文字列 | Experience Platform の顧客をサーバーで認証するために使用される構成を示します。 使用可能な値については、下記の `authType` を参照してください。 |
 | `authType` | 文字列 | ストリーミング先として使用可能な値は、以下のとおりです。<ul><li>`BASIC`。宛先が基本認証をサポートしている場合は、 `"authType":"Basic"` および  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 内 [宛先の配信セクション](./destination-configuration.md).</li><li>`BEARER`。宛先がベアラー認証をサポートしている場合、`"authType":"Bearer"` および `"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先の配信セクション](./destination-configuration.md)内に設定します。</li><li>`OAUTH2`。宛先が OAuth 2 認証をサポートしている場合は、`"authType":"OAUTH2"` を [Destination SDK OAuth 2 認証ページ](./oauth2-authentication.md)に記載されているように設定し、OAuth 2 の必須フィールドを追加します。さらに、`"authenticationRule":"CUSTOMER_AUTHENTICATION"` を[宛先配信セクション](./destination-configuration.md)に設定します。</li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 顧客データフィールド {#customer-data-fields}
 
@@ -176,7 +176,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。 |
 | `pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。 例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに「`^[A-Za-z]+$`」と入力します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## UI 属性 {#ui-attributes}
 
@@ -191,7 +191,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `connectionType` | 文字列 | `Server-to-server` は現在利用可能な唯一のオプションです。 |
 | `frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。 サポートされている値。 <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## マッピングステップのスキーマ構成 {#schema-configuration}
 
@@ -206,7 +206,7 @@ Experience Platform UI で宛先に接続する際に、このセクションを
 | `segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
 | `identityRequired` | ブール値 | ユーザーが、Experience Platform から希望のスキーマに ID 名前空間をマッピングできるようにする場合、`true` を使用します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ID と属性 {#identities-and-attributes}
 
@@ -228,7 +228,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 | `transformation` | 文字列 | *サンプル設定には表示されません*。例えば、[!DNL Platform] の顧客が属性としてプレーンなメールアドレスを持っており、プラットフォームがハッシュ化されたメールのみを受け取る場合に使用します。 このオブジェクトでは、適用する必要のある変換（例えば、メールを小文字に変換してからハッシュ化する）を実施できます。 例については、`requiredTransformation` を参照してください（[宛先設定 API リファレンス](./destination-configuration-api.md#update)内）。 |
 | `acceptedGlobalNamespaces` | - | どれが [標準 id 名前空間](/help/identity-service/namespaces.md#standard) （例えば、IDFA）のお客様は、設定中の ID にマッピングできます。 <br> `acceptedGlobalNamespaces` を使用する場合、`"requiredTransformation":"sha256(lower($))"` を使用すれば、メールアドレスまたは電話番号を小文字に変換してハッシュ化できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先配信 {#destination-delivery}
 
@@ -237,7 +237,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 | `authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Platform の顧客がユーザー名とパスワード、ベアラートークン、または他の認証方法を使用してシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` や `authType:BEARER` も選択した場合、このオプションを選択することになります。 </li><li> アドビと接続先との間にグローバル認証システムがあり、[!DNL Platform] の顧客が接続先に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用してください。この場合、[資格情報](./credentials-configuration-api.md)の構成を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationServerId` | 文字列 | `instanceId`：この宛先に使用される[宛先サーバー構成](./destination-server-api.md)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## セグメントマッピングの構成 {#segment-mapping}
 
@@ -297,7 +297,7 @@ ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している�
 |---------|----------|------|
 | `backfillHistoricalProfileData` | ブール値 | 宛先に対してセグメントをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。 <br> <ul><li> `true`：[!DNL Platform] は、セグメントがアクティブ化される前に、セグメントに適格となる履歴ユーザープロファイルを送信します。 </li><li> `false`：[!DNL Platform] には、セグメントがアクティブ化された後にセグメントに適格となるユーザープロファイルのみが含まれます。 </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## この構成が宛先に必要なすべての情報をどのように接続するか {#connecting-all-configurations}
 

@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '3420'
+source-wordcount: '3402'
 ht-degree: 92%
 
 ---
@@ -130,7 +130,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
 | SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Experience Platform] データへの接続 {#connect-to-your-experience-platform-data}
 
@@ -174,9 +174,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | オプションで、ベース接続の説明を指定できます。 |
 | `connectionSpec.id` | [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) の接続仕様 ID（`8a9c3494-9708-43d7-ae3f-cda01e5030e1`）を使用します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**応答**
+**応答** 
 
 リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でソース接続を作成する際に必要になるため保存します。
 
@@ -227,7 +227,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `baseConnectionId` | 前の手順で取得したベース接続 ID を使用します。 |
 | `data.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出し形式です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -529,11 +529,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | オプションで、ベース接続の説明を指定できます。 |
 | `connectionSpec.id` | 目的のバッチ宛先の接続仕様 ID を使用します。この ID は[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)手順で取得済みです。 |
 | `auth.specname` | 宛先の認証形式を示します。宛先の specName を調べるには、[接続仕様エンドポイントへの GET 呼び出し](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)を実行し、その際に目的の宛先の接続仕様を指定します。応答でパラメーター `authSpec.name` を確認します。<br> 例えば、Adobe Campaign 宛先の場合は、`S3`、`SFTP with Password` または `SFTP with SSH Key` のいずれも使用できます。 |
-| `params` | 接続する宛先に応じて、異なる必須の認証パラメーターを指定する必要があります。Amazon S3 接続の場合、Amazon S3 ストレージの場所へのアクセス ID と秘密鍵を渡す必要があります。<br> 宛先に必要なパラメーターを調べるには、[接続仕様エンドポイントへの GET 呼び出し](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)を実行し、その際に目的の宛先の接続仕様を指定します。応答でパラメーター `authSpec.spec.required` を確認します。 |
+| `params` | 接続する宛先に応じて、異なる必須の認証パラメーターを指定する必要があります。Amazon S3 接続の場合、Amazon S3 ストレージの場所へのアクセス ID と秘密鍵を渡す必要があります。<br> 宛先に必要なパラメーターを調べるには、[接続仕様エンドポイントへの GET 呼び出し](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)を実行し、その際に目的の宛先の接続仕様を指定します。応答でパラメーター `authSpec.spec.required` を探します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**応答**
+**応答** 
 
 リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でターゲット接続を作成する際に必要になるため保存します。
 
@@ -848,7 +848,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.path` | S3 接続の場合、ファイルの書き出し先となるストレージの場所のファイルパスを指定します。 |
 | `params.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出しタイプです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -1041,7 +1041,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
 | `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

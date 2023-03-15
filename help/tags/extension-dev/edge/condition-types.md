@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+> Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグのルールでは、条件はイベントの発生後に評価されます。 ルールの処理を続行するには、すべての条件が true を返す必要があります。 条件タイプは拡張機能によって提供され、対象が true と false のどちらであるかを評価します。
 

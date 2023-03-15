@@ -4,8 +4,8 @@ title: 宛先ワークスペース
 description: 宛先ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
-workflow-type: ht
-source-wordcount: '1223'
+workflow-type: tm+mt
+source-wordcount: '1217'
 ht-degree: 100%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 | [!UICONTROL データフローを表示] | 宛先に存在するデータのアクティベーションフローを表示します。 |
 | [!UICONTROL ドキュメントを表示] | その特定の宛先のドキュメントページへのリンクを開きます。詳細の確認や設定に役立ちます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![宛先カード上のコントロール](../assets/ui/workspace/destination-card-options.png)
 
@@ -84,7 +84,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 | [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意の成功した宛先データフローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL 参照] {#browse}
 

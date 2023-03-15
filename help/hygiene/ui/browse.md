@@ -4,7 +4,7 @@ description: Adobe Experience Platform ユーザーインターフェイスで�
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '862'
 ht-degree: 87%
 
 ---
@@ -62,7 +62,7 @@ UI で最初に&#x200B;**[!UICONTROL データハイジーン]**&#x200B;ワー�
 | [!UICONTROL 有効期限] | 対象のデータセットに対して予定されている削除日に基づいて、データセットの有効期限リクエストをフィルタリングします。 |
 | [!UICONTROL 更新日] | 作業指示が最後に更新された日時に基づいたフィルター。作成と有効期限は、更新としてカウントされます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 作業指示の詳細の表示 {#view-details}
 

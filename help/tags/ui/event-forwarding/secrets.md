@@ -3,8 +3,8 @@ title: イベント転送でのシークレットの設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために UI でシークレットを設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: ht
-source-wordcount: '1766'
+workflow-type: tm+mt
+source-wordcount: '1763'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 100%
 | [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 このガイドでは、Experience Platform UI またはデータ収集 UI でイベント転送（[!UICONTROL Edge]）プロパティのシークレットを設定する方法の概要を説明します。
 

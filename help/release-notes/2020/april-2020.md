@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 4 月
-description: Adobe Experience Platformの 2020 年 4 月のリリースノート。
+title: Adobe Experience Platform リリースノート 2020年4月
+description: Adobe Experience Platform の 2020年4月のリリースノート。
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
@@ -9,7 +9,7 @@ exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -111,7 +111,7 @@ Real-Time CDPは現在、50 を超えるデータのアクティブ化をサポ�
 | 機能 | 説明 |
 | --- | --- |
 | PDPA のサポート | タイの個人データ保護法（PDPA）に基づいて、プライバシーリクエストを作成し、トラックできるようになりました。API でプライバシーリクエストを実行する場合、`regulation` 配列は「pdpa_tha」の値を受け取ります。 |
-| UI の名前空間タイプ | リクエストビルダーで、異なるタイプの名前空間を [!DNL Privacy Service] UI 詳しくは、[ユーザガイド](../../privacy-service/ui/user-guide.md)を参照してください。 |
+| UI の名前空間タイプ | [!DNL Privacy Service] UI のリクエストビルダーで、様々な名前空間タイプを指定できるようになりました。詳しくは、[ユーザガイド](../../privacy-service/ui/user-guide.md)を参照してください。 |
 | 古いエンドポイントの廃止 | 古い API エンドポイント（`data/privacy/gdpr`）は廃止されました。 |
 
 既知の問題

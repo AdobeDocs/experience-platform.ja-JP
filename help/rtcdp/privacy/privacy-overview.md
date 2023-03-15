@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform のプライバシー
 description: Adobe Real-time Customer Data Platform を使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%
 

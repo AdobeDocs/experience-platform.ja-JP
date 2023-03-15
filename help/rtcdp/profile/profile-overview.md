@@ -4,7 +4,7 @@ title: Real-Time CDP のリアルタイム顧客プロファイルについて
 description: Adobe Real-time Customer Data Platform により、リアルタイム顧客プロファイルを使用して、調整された一貫性のある関連性の高いエクスペリエンスを顧客に提供する方法について説明します。
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 100%
 

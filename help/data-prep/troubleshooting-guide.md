@@ -4,7 +4,7 @@ title: データ準備トラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform データ準備に関するよくある質問に対する回答を示します。
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 100%
 
