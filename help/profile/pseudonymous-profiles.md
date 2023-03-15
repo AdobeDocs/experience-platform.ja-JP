@@ -5,9 +5,9 @@ title: 偽名プロファイルデータの有効期限
 description: このドキュメントでは、Adobe Experience Platform内で偽名プロファイルのデータの有効期限を設定する際の一般的なガイダンスを提供します。
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ Adobe Experience Platformでは、次の条件を満たす場合、偽名デー�
 - 偽名プロファイルの削除で考慮する ID 名前空間。
    - 例： `ECID` ただ `AAID` 単に、または組み合わせ `ECID` および `AAID`.
 - 偽名プロファイルを削除するまでの待機時間。 顧客に対するデフォルトのレコメンデーションは 14 日です。 ただし、この値は、使用事例によって異なる場合があります。
-- ライセンスプロファイル数と比較した現在のプロファイル数。
 
 ## よくある質問 {#faq}
 
