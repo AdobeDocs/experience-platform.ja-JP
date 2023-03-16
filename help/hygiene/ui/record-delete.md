@@ -7,11 +7,11 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 56%
+ht-degree: 61%
 
 ---
 
-# レコードを削除
+# レコードの削除
 
 この [[!UICONTROL データの衛生状態] workspace](./overview.md) Adobe Experience Platform UI では、ID サービスとリアルタイム顧客プロファイルに参加しているレコードを削除できます。 これらのレコードは、個々のコンシューマーや、ID グラフに含まれる他のエンティティに結び付けることができます。
 
@@ -20,7 +20,7 @@ ht-degree: 56%
 >レコードの削除リクエストは、を購入した組織でのみ使用できます **Adobeヘルスケアシールド**.
 >
 >
->レコードの削除は、データのクレンジング、匿名データの削除、またはデータの最小化に使用するためのものです。 これらは **not** :EU 一般データ保護規則 (GDPR) などのプライバシー規制に関するデータ主体の権利要求（コンプライアンス）に使用されます。 すべてのコンプライアンスの使用例に対して、 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 代わりに、
+>レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
 
 ## 前提条件
 

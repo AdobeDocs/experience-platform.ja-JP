@@ -5,8 +5,8 @@ description: Amazon Kinesisストレージへのリアルタイムアウトバ�
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1958'
-ht-degree: 64%
+source-wordcount: '1949'
+ht-degree: 67%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 64%
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](../../ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## IP アドレスの許可リスト {#ip-address-allowlist}
 
@@ -86,7 +86,7 @@ ht-degree: 64%
 | `kinesis:PutRecord` | 単一のデータレコードをKinesisデータストリームに書き込むアクション。 |
 | `kinesis:PutRecords` | 1 回の呼び出しで複数のデータレコードをKinesisデータストリームに書き込むアクション。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 のアクセス制御の詳細 [!DNL Kinesis] データストリーム、以下を読む [[!DNL Kinesis] 文書](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
@@ -169,9 +169,9 @@ Experience Platformにより、 [!DNL Amazon Kinesis] 宛先：セグメント�
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。 つまり、マッピングされたセグメントの状態（null から適合済みへ、適合済み／既存から離脱済みへ）が変更されたり、マッピングされた属性が更新された場合、宛先の書き出しが開始します。</li><li>ID は現在にマッピングできないので [!DNL Amazon Kinesis] 宛先、特定のプロファイル上の ID の変更によって、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>この `segmentMembership` オブジェクトには、activation データフローにマッピングされたセグメントが含まれます。このセグメントのステータスは、認定またはセグメント終了イベントの後に変更されます。 これらのセグメントが同じに属する場合、プロファイルが書き出し先のエクスポートに含めることができる、マッピングされていない他のセグメント [結合ポリシー](/help/profile/merge-policies/overview.md) を activation データフローにマッピングされたセグメントとして追加しました。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、 の宛先で ID マッピングをサポートしていません）。[!DNL Amazon Kinesis]</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。 つまり、マッピングされたセグメントの状態（null から適合済みへ、適合済み／既存から離脱済みへ）が変更されたり、マッピングされた属性が更新された場合、宛先の書き出しが開始します。</li><li>ID は現在にマッピングできないので [!DNL Amazon Kinesis] 宛先、特定のプロファイル上の ID の変更によって、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。 つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。 なお、これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属する場合、プロファイルが適していた他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platform は現在、 の宛先で ID マッピングをサポートしていません）。[!DNL Amazon Kinesis]</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 例えば、このデータフローを [!DNL Amazon Kinesis] 宛先。この宛先では、3 つのセグメントがデータフローで選択され、4 つの属性が宛先にマッピングされます。
 
