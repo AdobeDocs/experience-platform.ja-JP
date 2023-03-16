@@ -8,8 +8,8 @@ short-description: Attribution AI is used to attribute credits to touchpoints le
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 82%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

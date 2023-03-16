@@ -9,8 +9,8 @@ short-description: Customer AI is used to generate custom propensity scores such
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 65%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
