@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
 description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
 landing-page-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
+short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
-workflow-type: ht
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
+workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 100%
 
