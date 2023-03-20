@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
+source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -169,6 +169,7 @@ ht-degree: 98%
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook 接続](./catalog/social/facebook.md)
       * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
+      * [TikTok接続](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミングの宛先 {#streaming}
       * [HTTP API 接続](./catalog/streaming/http-destination.md)

@@ -3,10 +3,10 @@ keywords: ソーシャル；ソーシャルの宛先；Livefyre;facebook;Faceboo
 title: ソーシャルの宛先の概要
 description: ソーシャルの宛先を使用して、ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのキャンペーンのプロファイルをアクティブ化できます。
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 22%
+source-wordcount: '105'
+ht-degree: 23%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 22%
 
 Adobe Experience Platformは現在、次のソーシャルの宛先をサポートしています。
 
-* [Adobe [!DNL Livefyre] 拡張](adobe-livefyre.md)
 * [[!DNL Facebook] 接続](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] 接続](linkedin.md)
+* [[!DNL TikTok] 接続](tiktok.md)
 * [[!DNL Twitter Custom Audiences] 接続](twitter.md)
 
 ## 新しいソーシャルの宛先に接続 {#connect-destination}
