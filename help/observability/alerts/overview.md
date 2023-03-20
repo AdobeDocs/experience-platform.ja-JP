@@ -4,14 +4,18 @@ title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformでのアラートの概要を説明します。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
+source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 97%
+source-wordcount: '774'
+ht-degree: 94%
 
 ---
 
 # アラートの概要
+
+>[!NOTE]
+>
+>非実稼働用サンドボックスでは、アラートはサポートされていません。 アラートを購読するには、実稼動用サンドボックスを使用していることを確認する必要があります。
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
@@ -29,7 +33,7 @@ Platform アラートは、1 回だけ送信することも、解決されるま
 | 繰り返されません。 | 異常な状態が続く場合は繰り返される場合があります。 |
 | 以下に例を示します。<ul><li>データの取り込みが正常に完了しました。</li><li>クエリの実行が終了しました。</li><li>データが削除されました。</li></ul> | 以下に例を示します。<ul><li>取り込み期間がサービスレベル契約（SLA）を超えています。</li><li>過去 24 時間に、日次日の取り込みは実行されませんでした。</li><li>ストリームプロセッサのエラー率が、設定されたしきい値を超えています。</li><li>プロファイルの合計数が資格を超えています。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アラートの詳細
 
@@ -43,7 +47,7 @@ Platform アラートは、1 回だけ送信することも、解決されるま
 | **アクション** | アラートがトリガーされると、アクションが実行されます。 特に、メッセージは、事前設定済みの Webhook や Experience Platform UI などの配信チャネルを通じて、該当する受信者に送信されます。 |
 | **頻度** | （オプション）アラートは、条件が true または未解決の場合、定義された間隔でアクションを繰り返すように設定できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アラートの受信と管理
 
@@ -71,7 +75,7 @@ Platform UI でアラートを操作するには、Adobe Admin Console を通じ
 | アラートの管理* | 「[!UICONTROL アラート]」タブを使用して、アラートルールを有効／無効にできます。 |
 | アラートの解決* | トリガーされたアラートを「[!UICONTROL アラート]」タブで解決できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **「[!UICONTROL アラート]」タブにアクセスするには、他のいずれかの権限と組み合わせて「アラートの表示」権限も付与されている必要があります。*
 

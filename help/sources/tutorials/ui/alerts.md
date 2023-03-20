@@ -3,14 +3,18 @@ keywords: Experience Platform；ホーム；人気の高いトピック；アラ
 description: データフローの作成時にアラートをサブスクライブして、フロー実行のステータス、成功または失敗に関するアラートメッセージを受け取ることができます。
 title: UI でのコンテキスト内アラートへのサブスクライブ
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
+source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 17%
+source-wordcount: '868'
+ht-degree: 16%
 
 ---
 
 # UI でのソースデータフローに関するアラートのサブスクライブ
+
+>[!NOTE]
+>
+>非実稼働用サンドボックスでは、アラートはサポートされていません。 アラートを購読するには、実稼動用サンドボックスを使用していることを確認する必要があります。
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../../../observability/api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
@@ -103,7 +107,7 @@ UI でソースデータフローを作成する詳細な手順については�
 
 また、データフローのアラートは E メールで配信されます。 データフローの詳細を確認するには、E メールの本文でデータフロー名を選択します。
 
-![電子メール](../../images/tutorials/alerts/email.png)
+![メール](../../images/tutorials/alerts/email.png)
 
 UI アラートと同様に、 [!UICONTROL データフロー実行の概要] ページが表示され、データフローに関連するエラーを調査するためのインターフェイスが提供されます。
 
