@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '518'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -193,8 +193,8 @@ ht-degree: 98%
    * [スキーマへの特定フィールドの追加（API）](./tutorials/specific-fields-api.md)
    * [カスタムフィールドの定義（API）](./tutorials/custom-fields-api.md)
    * [フィールドへの推奨値の追加（API）](tutorials/suggested-values.md)
-   * [XDM フィールドの廃止 UI 内](tutorials/field-deprecation-ui.md)
-   * [API の XDM フィールドの廃止](tutorials/field-deprecation-api.md)
+   * [XDM フィールドの廃止UI 内](tutorials/field-deprecation-ui.md)
+   * [API での XDM フィールドの非推奨化](tutorials/field-deprecation-api.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でのスキーマ関係の定義](tutorials/relationship-api.md)
    * [Real-time CDP B2B Edition でのスキーマ関係の定義](tutorials/relationship-b2b.md)
