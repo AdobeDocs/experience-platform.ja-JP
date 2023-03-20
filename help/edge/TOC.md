@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -32,8 +32,8 @@ ht-degree: 94%
    * [データストリームの設定](./datastreams/configure.md)
    * [データ収集のためのデータ準備](./datastreams/data-prep.md)
    * データエンリッチメント {#data-enrichment}
-      * [気象チャネル別の気象データ](./datastreams/data-enrichment/weather.md)
-      * [天気データフィールドのマッピング](./datastreams/data-enrichment/weather-reference.md)
+      * [The Weather Channel 提供の気象データ](./datastreams/data-enrichment/weather.md)
+      * [気象データフィールドのマッピング](./datastreams/data-enrichment/weather-reference.md)
 * ID {#identity}
    * [概要](identity/overview.md)
    * [ファーストパーティデバイス ID](identity/first-party-device-ids.md)
