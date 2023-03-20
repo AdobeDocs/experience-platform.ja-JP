@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
 workflow-type: tm+mt
 source-wordcount: '1044'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 96%
       * [同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](./ui/configure-personalization-destinations.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
-      * [（ベータ版）新しいベータ版クラウドストレージの宛先で最終認定時間 XDM 属性を使用します。](./ui/activate-last-qualification-time.md)
+      * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
@@ -118,7 +118,7 @@ ht-degree: 96%
       * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
       * [クラウドストレージの宛先の IP アドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
-   * 顧客関係管理（CRM）の宛先{#crm}
+   * 顧客関係管理（CRM）の宛先 {#crm}
       * [Salesforce CRM 接続](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 接続](./catalog/crm/microsoft-dynamics-365.md)
       * [アウトリーチ接続](catalog/crm/outreach.md)

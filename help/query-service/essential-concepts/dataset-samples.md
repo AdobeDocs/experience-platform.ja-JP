@@ -5,7 +5,7 @@ exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 クエリサービスでは、近似クエリ処理のためのサンプルの管理に役立つように、データセットサンプルに対して次の操作をサポートしています。
 
 - [均一なランダムデータセットのサンプルの作成。](#create-a-sample)
-- [必要に応じてフィルタ条件を指定します](##optional-filter-criteria)
+- [フィルター条件の指定（オプション）](##optional-filter-criteria)
 - [ADLS テーブルに対するサンプルのリストの表示。](#view-list-of-samples)
 - [サンプルデータセットに対する直接クエリの実行。](#query-sample-datasets)
 - [サンプルの削除。](#delete-a-sample)
@@ -26,7 +26,7 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 
 ## はじめに {#get-started}
 
-このドキュメントで詳しく説明する概算クエリ処理機能の作成と削除をおこなうには、セッションフラグをに設定する必要があります。 `true`. クエリエディターまたは PSQL クライアントのコマンドラインから、 `SET aqp=true;` コマンドを使用します。
+このドキュメントで説明している近似クエリ処理機能の作成および削除を使用するには、セッションフラグを `true` に設定する必要があります。クエリエディターまたは PSQL クライアントのコマンドラインで `SET aqp=true;` コマンドを入力します。
 
 >[!NOTE]
 >
@@ -48,11 +48,11 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
 
-## 必要に応じてフィルタ条件を指定します {#optional-filter-criteria}
+## フィルター条件の指定（オプション） {#optional-filter-criteria}
 
-均一なランダムサンプルのフィルタ条件を指定できます。 これにより、分析済みテーブルのフィルター済みサブセットに基づいてサンプルを作成できます。
+均一なランダムサンプルのフィルター条件を指定できます。 これにより、分析済みテーブルのフィルター済みサブセットに基づいてサンプルを作成できます。
 
-サンプルを作成する際、オプションのフィルターが最初に適用され、次に、サンプルがデータセットのフィルターされた表示から作成されます。 フィルターが適用されたデータセットの例を次に示します。
+サンプルを作成する際、まずオプションのフィルターが適用され、次に、データセットのフィルター済みビューからサンプルが作成されます。 フィルターが適用されたデータセットサンプルは、次のクエリ形式に従います。
 
 ```sql
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
@@ -60,7 +60,7 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
 ```
 
-このタイプのフィルタリングされたサンプルデータセットの実例を次に示します。
+このタイプのフィルター済みサンプルデータセットの実例を次に示します。
 
 ```sql
 Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
@@ -68,7 +68,7 @@ Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-この例では、テーブル名は `large_table`に設定されている場合、元のテーブルのフィルター条件は `month(to_timestamp(timestamp)) in ('8', '9')`( この場合、サンプリングレートは（フィルターされたデータの X%）です。 `10`.
+この例では、テーブル名は `large_table`、元のテーブルに対するフィルター条件は `month(to_timestamp(timestamp)) in ('8', '9')`、サンプリングレート（フィルター済みデータの X％）は、この場合は `10` です。
 
 ## サンプルのリストの表示 {#view-list-of-samples}
 
