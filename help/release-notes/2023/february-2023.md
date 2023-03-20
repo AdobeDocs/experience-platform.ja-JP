@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platformリリースノート 2023 年 2 月
-description: Adobe Experience Platformの 2023 年 2 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2023年2月）
+description: Adobe Experience Platform の 2023年2月のリリースノートです。
 source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
-workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 37%
+workflow-type: ht
+source-wordcount: '1293'
+ht-degree: 100%
 
 ---
 
@@ -27,17 +27,17 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ### Assurance {#assurance}
 
-Adobe保証を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
+Adobe Assurance を使用すると、モバイルアプリでデータを収集したりエクスペリエンスを提供したりする方法を検査、配達確認、シミュレートおよび検証できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| パブリック API | Adobe保証 API が利用できるようになりました。 Assurance API は、Mobile SDK を備えたAdobe保証拡張機能を適用する際に、ユーザーが自分の Web およびモバイルアプリをテストし、デバッグできるようにする API のコレクションです。 Assurance API の詳細については、 [アシュランス API の概要](https://developer.adobe.com/adobe-assurance-public-apis/). |
+| 公開 API | Adobe Assurance API が利用できるようになりました。 Assurance API は、Mobile SDK で Adobe Assurance 拡張機能を実装すると、ユーザーが自分自身の web およびモバイルアプリをテストしデバッグできるようになる API のコレクションです。 Assurance API について詳しくは、[Assurance API の概要](https://developer.adobe.com/adobe-assurance-public-apis/)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-アシュランスの詳細については、 [アシュランスドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Assurance について詳しくは、[Assurance ドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -47,15 +47,15 @@ Adobe保証を使用すると、モバイルアプリでデータを収集した
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| [同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) （との統合用） [ファイルベース（バッチ）の宛先](/help/destinations/destination-types.md#file-based) | <p> プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platformはポリシーの終了をファイルベースの宛先に積極的に通信するようになりました。 これは、 [2023 年 2 月リリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) の機能は、ストリーミング先に対しても同じです。 </p> <p> <b>注意</b>:この機能は、 **[!UICONTROL プライバシーとセキュリティシールド]**、および **[!UICONTROL 医療用盾]**. </p> |
+| [ファイルベース（バッチ）宛先](/help/destinations/destination-types.md#file-based)と統合するための[同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) | <p> プロファイルが同意ポリシーの資格を失った場合、Experience Platform はポリシーの終了をファイルベース宛先にプロアクティブに通知するようになりました。これは、同じ機能がストリーミング宛先について [2023年2月にリリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality)されたのを受けたものです。 </p> <p> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** および **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新規ドキュメントまたは更新されたドキュメント** {#destinations-new-updated-documentation}
 
 | ドキュメント | 説明 |
 | ----------- | ----------- |
-| 宛先の仕組みドキュメント | <p>ユーザーからのよくある質問に基づき、宛先の動作に関する 3 つの新しい説明記事を公開しました。</p> <p><ul><li>[宛先での設定可能で一般的な書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[様々な宛先タイプに対するプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[宛先アクティベーションワークフローでの ID 処理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| 宛先の仕組みに関するドキュメント | <p>ユーザーからのよくある質問に基づいて、宛先の仕組みについて説明する次の 3 つの新しい記事を公開しました。</p> <p><ul><li>[宛先での設定可能で一般的な書き出し設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[様々な宛先タイプのプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[宛先アクティブ化ワークフローでの ID の処理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -67,46 +67,46 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| UI を通じたフィールドの廃止 | 次の操作を実行できます。 [データの取り込み後にスキーマのフィールドを非推奨にする](../../xdm/tutorials/field-deprecation-ui.md). XDM フィールドの廃止により、UI ビューからフィールドを削除しながら、使用するためにフィールドを保持できます。 廃止されたフィールドを必要に応じて再度表示できます。また、そのフィールドを参照するセグメント、クエリ、ダウンストリームソリューションは、通常どおりに実行されます。 |
+| UI を介したフィールドの非推奨化 | [データを取り込んだ後でスキーマ内のフィールドを非推奨（廃止予定）にする](../../xdm/tutorials/field-deprecation-ui.md)ことができるようになりました。 XDM フィールドの非推奨化では、フィールドを UI ビューから削除しつつ引き続き使用することができます。 必要に応じて、非推奨フィールドを再度表示できます。また、そのフィールドを参照する任意のセグメント、クエリまたはダウンストリームソリューションは、通常どおりに動作します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新しい XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL XDM 個別見込み客プロファイル]](https://github.com/adobe/xdm/pull/1669/files) | XDM Individual Prospect Profile クラスは、パートナーが提供する ID を取り込みます。 |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1669/files) | XDM 個人見込み客プロファイルクラスは、パートナー提供の ID を取り込みます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新された XDM コンポーネント**
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [!UICONTROL 頻度キャップの制約] | この [!UICONTROL 頻度キャップの制約] フィールドグループが [繰り返しイベントとカスタムイベントをサポートするように更新](https://github.com/adobe/xdm/pull/1641/files). |
-| データタイプ | [!UICONTROL Web リファラー] | Web リファラープロパティが [次を含めるように更新しました： `xdm:linkName` および `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). それぞれ、前のページで選択したHTML要素の名前と領域です。 |
-| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [この [!UICONTROL トラッカー URL] フィールドが追加されました](https://github.com/adobe/xdm/pull/1665/files) から [!UICONTROL AdobeCJM ExperienceEvent]. このトラッカーは、ユーザーが選択した URL を提供します。 |
-| フィールドグループ | [!UICONTROL AdobeCJM ExperienceEvent — メッセージインタラクションの詳細] | [空の `meta:enum` プロパティが削除されました](https://github.com/adobe/xdm/pull/1668/files) URL から [!UICONTROL トラッキングタイプ] フィールドに入力します。 |
-| データタイプ | [!UICONTROL メディア情報] | [の正規表現パターン `videoSegment` プロパティ [!UICONTROL メディア情報] データ型が削除されました](https://github.com/adobe/xdm/pull/1667/files). |
+| フィールドグループ | [!UICONTROL フリークエンシーキャップの制約] | [!UICONTROL フリークエンシーキャップの制約]フィールドグループが [繰り返しイベントとカスタムイベントをサポートするように更新](https://github.com/adobe/xdm/pull/1641/files)されました。 |
+| データタイプ | [!UICONTROL Web リファラー] | Web リファラープロパティが [`xdm:linkName` と `xdm:linkRegion` を含むように更新されました](https://github.com/adobe/xdm/pull/1666/files)。これらはそれぞれ、前のページで選択した HTML 要素の名前と領域です。 |
+| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [[!UICONTROL トラッカー URL] フィールドが ](https://github.com/adobe/xdm/pull/1665/files)[!UICONTROL Adobe CJM ExperienceEvent] に追加されました。このトラッカーは、ユーザーが選択した URL を提供します。 |
+| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [空の `meta:enum` プロパティが](https://github.com/adobe/xdm/pull/1668/files) URL [!UICONTROL トラッキングタイプ]フィールドから削除されました。 |
+| データタイプ | [!UICONTROL メディア情報] | [[!UICONTROL メディア情報]データタイプの `videoSegment` プロパティの正規表現パターンが削除されました](https://github.com/adobe/xdm/pull/1667/files)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Platform での XDM について詳しくは、 [XDM システムの概要](../../xdm/home.md). &#x200B;
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
-クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。データレイクの任意のデータセットを結合し、クエリ結果を新しいデータセットとして取り込んで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。データレイクの任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL を使用したプロファイルのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセット「プロファイルが有効」にする](../../query-service/sql/syntax.md#create-table-as-select)または ALTER を使用して、既存のデータセットを更新し、プロファイルに対して有効にします。 この拡張 SQL 構成を使用して、リアルタイム顧客プロファイルビジネスの使用例に対して派生属性をシームレスにサポートできます。 詳しくは、 [派生属性ドキュメントのシームレスな SQL フロー](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) を参照してください。 |
-| スケジュールクエリの監視 | 以下を使用： [「予定クエリ」タブ](../../query-service/ui/monitor-queries.md) クエリの実行に関する重要な情報を見つけ、アラートを購読します。 クエリを監視して、スケジュールの詳細、ステータス、エラーメッセージ/コードが失敗した場合に表示されます。 |
-| オートコンプリート機能を切り替え | 特定のメタデータコマンドを削除し、次の方法で処理時間を短縮 [クエリエディターのオートコンプリート機能の切り替え](../../query-service/ui/user-guide.md#auto-complete). この機能では、クエリの記述時に、SQL キーワードの候補と表の詳細が自動的に提示されます。 |
-| データセットのサンプル | クエリでサンプリングレートを指定し、 [データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/essential-concepts/dataset-samples.md)または、特定の条件に基づく条件付きサンプルを作成します。 |
+| SQL によるプロファイルでのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセットを「プロファイル対応」にする](../../query-service/sql/syntax.md#create-table-as-select)か、ALTER を使用して、プロファイルで有効になるように既存のデータセットを更新します。この拡張 SQL コンストラクトを使用すると、リアルタイム顧客プロファイルのビジネスユースケースに対して派生属性をシームレスにサポートできます。 詳しくは、[派生属性のシームレスな SQL フローに関するドキュメント](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md)を参照してください。 |
+| スケジュール済みクエリの監視 | [「スケジュール済みクエリ」タブ](../../query-service/ui/monitor-queries.md)を使用すると、クエリの実行に関する重要な情報を見つけたり、アラートを購読したりできます。 スケジュール詳細のクエリ、ステータス、クエリが失敗した場合のエラーメッセージ／コードを監視できます。 |
+| オートコンプリート機能の切り替え | [クエリエディターのオートコンプリート機能を切り替えると](../../query-service/ui/user-guide.md#auto-complete)、特定のメタデータコマンドが削除され、処理時間が短縮されます。この機能では、クエリの記述時に、クエリの SQL キーワード候補とテーブル詳細が自動的に提示されます。 |
+| データセットのサンプル | クエリでサンプリングレートを指定し、[データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/essential-concepts/dataset-samples.md)か、特定の条件に基づいて条件付きサンプルを作成します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 
@@ -119,15 +119,15 @@ Real-Time Customer Data Platform（Real-Time CDP）上に構築された Real-Ti
 
 | 機能 | 説明 |
 | --- | --- |
-| 関連アカウントサービスを有効にする | 新しい切り替え機能を使用すると、お使いのアカウントで関連アカウントサービスを有効にできます。 詳しくは、 [関連アカウントサービスの有効化](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
+| 関連アカウントサービスの有効化 | 新しい切り替え機能を使用すると、お使いのアカウントで関連アカウントサービスを有効にできます。 詳しくは、[関連アカウントサービスの有効化](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable)に関するガイドを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Real-Time CDP B2B Edition の詳細については、 [Real-Time CDP B2B Edition の概要](../../rtcdp/overview.md).
+Real-Time CDP B2B Edition について詳しくは、[Real-Time CDP B2B Edition の概要](../../rtcdp/overview.md)を参照してください。
 
 ## ソース {#sources}
 
-Adobe Experience Platformは、外部ソースからデータを取り込むことができ、Platform Services を使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -135,10 +135,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| 次を使用してサブスクリプションレベルのアクセスを指定 [!DNL Google PubSub] | を使用する際に、特定のトピック購読へのアクセスを定義できるようになりました。 [!DNL Google PubSub] 認証時に購読 ID を指定してソースを作成する。 詳しくは、 [!DNL Google PubSub] 認証チュートリアル [フローサービス API の使用](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| カスタムアクティビティデータの取り込み元 [!DNL Marketo] | これで、 [!DNL Marketo] インスタンスからExperience Platformへ。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマでカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには、 [!DNL Marketo] インスタンス。 その後、 [クエリサービス](../../query-service/home.md) をクリックして、Platform のカスタムアクティビティレコードにアクセスします。 詳しくは、 [カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
-| 次の場所から未要求のアカウントを除外 [!DNL Marketo] | 会社データのデータフローを作成する際に、取得から要求されていないアカウントを除外するか、取得から含めるかを設定できるようになりました。 詳しくは、 [のソース接続とデータフローの作成 [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+| [!DNL Google PubSub] を使用したサブスクリプションレベルアクセスの指定  | 認証時にサブスクリプション ID を指定して、[!DNL Google PubSub] ソースを使用する際に特定のトピックサブスクリプションへのアクセスを定義できるようになりました。詳しくは、[フローサービス API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md) を使用した [!DNL Google PubSub] 認証のチュートリアルを参照してください。 |
+| [!DNL Marketo] からのカスタムアクティビティデータの取り込み | カスタムアクティビティデータを [!DNL Marketo] インスタンスから Experience Platform に取り込めるようになりました。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマにカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには [!DNL Marketo] インスタンスからの標準アクティビティとカスタムアクティビティの両方が含まれています。 その結果、[クエリサービス](../../query-service/home.md)を使用して、Platform のカスタムアクティビティレコードにアクセスできます。 詳しくは、[カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)に関するガイドを参照してください。 |
+| [!DNL Marketo] からの未要求アカウントの除外  | 企業データのデータフローを作成する際に、未要求アカウントを取り込みから除外するか取り込みに含めるかを設定できるようになりました。詳しくは、[ソース接続とデータフローの作成： [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md) に関するガイドを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
