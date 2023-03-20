@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
