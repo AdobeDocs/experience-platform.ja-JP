@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プライバシージョブ API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 63%
+source-wordcount: '1549'
+ht-degree: 58%
 
 ---
 
@@ -40,7 +40,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -63,6 +63,12 @@ curl -X GET \
 ページ分割された応答の次の結果セットを取得するには、`page` クエリパラメーターを 1 増やして、同じエンドポイントに対して別の API 呼び出しをおこないます。
 
 ## プライバシージョブの作成 {#create-job}
+
+>[!IMPORTANT]
+>
+>Privacy Serviceは、データ主体および消費者の権利に関するリクエストに対してのみ使用されます。 データのクリーンアップやメンテナンスにPrivacy Serviceを使用する方法は、サポートされていないか、許可されていません。 Adobeは、適時にそれを果たす法的義務を負う。 したがって、Privacy Serviceの読み込みテストは実稼動環境のみであり、有効なプライバシーリクエストの不要なバックログを作成するので、許可されません。
+>
+>毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。 システムを悪用したユーザーは、サービスへのアクセスを無効にします。 その後、彼らと共に、彼らの行動に対処し、Privacy Serviceの許容可能な使用について話し合うための会合が開かれる。
 
 新しいジョブリクエストを作成する前に、まず、データにアクセス、削除、またはオプトアウトするデータ主体の識別情報を収集する必要があります。必要なデータを取得したら、そのデータを、 `/jobs` endpoint.
 
@@ -162,9 +168,9 @@ curl -X POST \
 | `mergePolicyId` | リアルタイム顧客プロファイル (`profileService`) を使用する場合は、必要に応じて特定の [結合ポリシー](../../profile/merge-policies/overview.md) ID ステッチに使用する 結合ポリシーを指定すると、プライバシーリクエストには、顧客のデータを返す際にセグメント情報を含めることができます。 1 回のリクエストにつき、1 つの結合ポリシーのみ指定できます。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
 | `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**応答**
+**応答** 
 
 正常な応答は、新しく作成されたジョブの詳細を返します。
 
@@ -214,7 +220,7 @@ curl -X POST \
 | --- | --- |
 | `jobId` | ジョブの読み取り専用の、一意のシステム生成 ID。この値は、特定のジョブを検索する次の手順で使用されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ジョブリクエストの送信が完了したら、次の、[ジョブのステータスを確認する](#check-status)手順に進むことができます。
 
@@ -236,7 +242,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | 検索するジョブの ID。 この ID は、以下で返されます。 `jobId` ( [ジョブの作成](#create-job) および [すべてのジョブのリスト](#list). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -334,7 +340,7 @@ curl -X GET \
 | `productStatusResponse.results` | 一部の製品では、特定のステータスに対して `results` 次の条件に該当しない追加情報を提供するオブジェクト `responseMsgDetail`. |
 | `downloadURL` | ジョブのステータスが `complete` の場合、この属性はジョブの結果を ZIP ファイルとしてダウンロードする URL を指定します。このファイルは、ジョブの完了後 60 日間ダウンロードできます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### ジョブステータスカテゴリ {#status-categories}
 
@@ -347,7 +353,7 @@ curl -X GET \
 | `submitted` | ジョブは、該当するすべてのアプリケーションに送信されます。 |
 | `error` | ジョブを処理できませんでした。個々のジョブの詳細を取得することで、より具体的な情報を取得できます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

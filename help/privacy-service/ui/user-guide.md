@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 58%
+source-wordcount: '1266'
+ht-degree: 53%
 
 ---
 
@@ -19,6 +19,12 @@ ht-degree: 58%
 >abstract=""
 
 このドキュメントでは、 [!DNL Privacy Service] ユーザーインターフェイス。
+
+>[!IMPORTANT]
+>
+>Privacy Serviceは、データ主体および消費者の権利に関するリクエストに対してのみ使用されます。 データのクリーンアップやメンテナンスにPrivacy Serviceを使用する方法は、サポートされていないか、許可されていません。 Adobeは、適時にそれを果たす法的義務を負う。 したがって、Privacy Serviceの読み込みテストは実稼動環境のみであり、有効なプライバシーリクエストの不要なバックログを作成するので、許可されません。
+>
+>毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。 システムを悪用したユーザーは、サービスへのアクセスを無効にします。 その後、彼らと共に、彼らの行動に対処し、Privacy Serviceの許容可能な使用について話し合うための会合が開かれる。
 
 ## 次を参照： [!DNL Privacy Service] UI ダッシュボード
 

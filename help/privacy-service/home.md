@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service の概要
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 100%
+source-wordcount: '1505'
+ht-degree: 92%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 100%
 Adobe Experience Platform [!DNL Privacy Service] は、企業による顧客の個人データの管理方法における根本的な変化に対応して開発されました。[!DNL Privacy Service] の主な目的は、データのプライバシー規制への準拠を自動化することです。この規制に違反すると、重大な罰金が科され、ビジネスのデータ運用に支障をきたす可能性があります。
 
 [!DNL Privacy Service] は、顧客データのリクエストを管理しやすくする RESTful API およびユーザーインターフェイスを提供します。[!DNL Privacy Service] を使用すると、Adobe Experience Cloud アプリケーションから個人の顧客データへのアクセスおよび削除リクエストを送信でき、法的および組織のプライバシー規制への自動コンプライアンスが容易になります。
+
+>[!IMPORTANT]
+>
+>Privacy Serviceは、データ主体および消費者の権利に関するリクエストに対してのみ使用されます。 データのクリーンアップやメンテナンスにPrivacy Serviceを使用する方法は、サポートされていないか、許可されていません。 Adobeは、適時にそれを果たす法的義務を負う。 したがって、Privacy Serviceの読み込みテストは実稼動環境のみであり、有効なプライバシーリクエストの不要なバックログを作成するので、許可されません。
+>
+>毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。 システムを悪用したユーザーは、サービスへのアクセスを無効にします。 その後、彼らと共に、彼らの行動に対処し、Privacy Serviceの許容可能な使用について話し合うための会合が開かれる。
 
 ## 入門 [!DNL Privacy Service] {#getting-started}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service トラブルシューティングガイド
 description: このドキュメントでは、Privacy Service に関するよくある質問への回答と、API でよく発生するエラーに関する情報を示します。
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 100%
+source-wordcount: '917'
+ht-degree: 92%
 
 ---
 
@@ -65,7 +65,9 @@ API で新しいプライバシージョブを作成するには、リクエス�
 
 ## [!DNL Platform] に誤って送信されたデータを、[!DNL Privacy Service] でクリーンアップすることはできますか？
 
-アドビは、誤って製品に送信されたデータのクリーンアップに対する [!DNL Privacy Service] の使用をサポートしていません。[!DNL Privacy Service] は、お客様が、データ主体（または消費者）のアクセスや削除のリクエストに対する義務を果たすのを支援するよう設計されています。これらのリクエストは時間に依存し、該当するプライバシー法に従って行われます。データ主体および消費者以外からのアクセスリクエストや削除リクエストの送信は、[!DNL Privacy Service] のすべてのユーザーや、[!DNL Privacy Service] が適切な法的日程をサポートする機能に影響します。
+アドビは、誤って製品に送信されたデータのクリーンアップに対する [!DNL Privacy Service] の使用をサポートしていません。[!DNL Privacy Service] は、お客様が、データ主体（または消費者）のアクセスや削除のリクエストに対する義務を果たすのを支援するよう設計されています。データのクリーンアップやメンテナンスにPrivacy Serviceを使用する方法は、サポートされていないか、許可されていません。
+
+プライバシーリクエストは時間に依存し、該当するプライバシー法に従っておこなわれます。 データ主体/消費者以外のアクセス要求または削除要求の送信は、すべての [!DNL Privacy Service] 顧客と～の能力 [!DNL Privacy Service] 適切な法的日程を支援する 毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。
 
 PII やデータの問題をなくすための取り組みのレベルを調整および提供するには、担当のアカウントマネージャー（CDM）にお問い合わせください。
 
