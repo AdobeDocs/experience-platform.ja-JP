@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Privacy Service の概要
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 92%
+source-wordcount: '1608'
+ht-degree: 86%
 
 ---
 
 # [!DNL Privacy Service] の概要
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Privacy Serviceの権限が改善され、精度が向上しました。 これらの変更により、組織管理者は、必要な役割と権限レベルで、より多くのユーザーにアクセス権を付与できます。 テクニカルアカウントユーザーは、Privacy Service権限を更新する必要があります。この更新が差し迫った変更と見なされるので、更新が必要になります。 この権限の変更の適用は、 **2023 年 3 月 29 日**.
+>
+>テクニカルアカウントは、エンタープライズのお客様が利用でき、Adobe開発者コンソールを通じて作成できます。 テクニカルアカウント所有者のAdobe IDは、 `@techacct.adobe.com`. テクニカルアカウント所有者かどうかが不明な場合は、組織の管理者にお問い合わせください。
 
 より良い顧客体験を提供するためには、顧客の個人データを収集し、保存する必要があります。このデータを使用する場合、顧客のプライバシーを理解し、尊重することが重要です。新しい法規制や組織の規制により、ユーザーは要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられます。
 

@@ -2,14 +2,20 @@
 title: Privacy Service の権限の管理
 description: Adobe Admin Console を使用して Adobe Experience Platform Privacy Service のユーザー権限を管理する方法について説明します。
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
+source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 100%
+source-wordcount: '1064'
+ht-degree: 90%
 
 ---
 
 # Privacy Service の権限の管理
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Privacy Serviceの権限が改善され、精度が向上しました。 これらの変更により、組織管理者は、必要な役割と権限レベルで、より多くのユーザーにアクセス権を付与できます。 テクニカルアカウントユーザーは、Privacy Service権限を更新する必要があります。この更新が差し迫った変更と見なされるので、更新が必要になります。 この権限の変更の適用は、 **2023 年 3 月 29 日**.
+>
+>テクニカルアカウントは、エンタープライズのお客様が利用でき、Adobe開発者コンソールを通じて作成できます。 テクニカルアカウント所有者のAdobe IDは、 `@techacct.adobe.com`. テクニカルアカウント所有者かどうかが不明な場合は、組織の管理者にお問い合わせください。
 
 [Adobe Experience Platform Privacy Service](./home.md) へのアクセスは、Adobe Admin Console の詳細な役割ベースの権限によって制御されます。 ユーザーのグループに権限を割り当てる製品プロファイルを作成することにより、Privacy Service の [UI](./ui/overview.md) および [API](./api/overview.md) の機能にアクセスできるユーザーを決定できます。
 
