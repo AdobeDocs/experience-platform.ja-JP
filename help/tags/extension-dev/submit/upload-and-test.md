@@ -2,10 +2,10 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 95%
+source-wordcount: '2382'
+ht-degree: 92%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Platform でタグ拡張機能をテストするには、タグ
 
 API またはコマンドラインツールを使用するには、Adobe I/O に関するテクニカルアカウントが必要です。I/O コンソールでテクニカルアカウントを作成し、アップローダツールを使用して拡張機能パッケージをアップロードする必要があります。
 
-Adobe Experience Platform でタグに使用するテクニカルアカウントの作成について詳しくは、[アクセストークン](https://developer.adobelaunch.com/api/guides/access_tokens/)のガイドを参照してください。
+Adobe Experience Platformでタグで使用するテクニカルアカウントの作成について詳しくは、 [Reactor API の概要](../../api/getting-started.md) ガイド。
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ UI にログインし、「 」を選択した後、 **[!UICONTROL タグ]** 左
 
 カタログには、使用可能な各拡張機能に対応するカードアイコンが表示されます。拡張機能がカタログに表示されない場合は、前述の Adobe 管理コンソールの設定の節と、拡張機能パッケージの作成の節の手順を完了していることを確認してください。また、Platform が初期処理を完了していない場合は、拡張機能パッケージが「保留」と表示される場合があります。
 
-前の手順に従っていて、カタログに保留中または失敗の拡張機能パッケージが表示されない場合は、API を使用して直接拡張機能パッケージのステータスを確認する必要があります。適切な API 呼び出しの実行方法について詳しくは、API ドキュメントの[ExtensionPackage の取得](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/)を参照してください。
+前の手順に従っていて、カタログに保留中または失敗の拡張機能パッケージが表示されない場合は、API を使用して直接拡張機能パッケージのステータスを確認する必要があります。 適切な API 呼び出しの実行方法について詳しくは、API ドキュメントの[ExtensionPackage の取得](../../api/endpoints/extension-packages.md#lookup)を参照してください。
 
 拡張機能パッケージの処理が完了したら、カードの下部にある「**インストール**」を選択します。
 

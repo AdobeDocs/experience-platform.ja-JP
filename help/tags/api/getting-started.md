@@ -2,10 +2,10 @@
 title: Reactor API の概要
 description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 100%
+source-wordcount: '1050'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## Adobe Experience Platform への開発者のアクセス
 
-Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)の最初の手順に従ってください。「Adobe Developer Console でアクセス認証情報を生成する」の手順に進んだら、このチュートリアルに戻って Reactor API に固有の認証情報を生成します。
+Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)の最初の手順に従ってください。「ユーザーアクセスを取得」手順が完了したら、このチュートリアルに戻り、Reactor API に固有の資格情報を生成します。
 
 ## アクセス認証情報の生成
 
@@ -37,7 +37,7 @@ IMS 組織の ID（`{ORG_ID}`）と API キー（`{API_KEY}`）は、最初に�
 
 ### 1 回限りのセットアップ
 
-[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Developer Console のドキュメントにある[空のプロジェクトを作成](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)に関するチュートリアルで説明されている手順に従います。
+[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Developer Console のドキュメントにある[空のプロジェクトを作成](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)に関するチュートリアルで説明されている手順に従います。
 
 プロジェクトを作成したら、**プロジェクトの概要**&#x200B;画面で「**API を追加**」を選択します。
 

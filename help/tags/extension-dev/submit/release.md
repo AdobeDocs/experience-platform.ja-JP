@@ -2,9 +2,9 @@
 title: 拡張機能のリリース
 description: Adobe Experience Platform でタグ拡張機能を非公開または公開でリリースする方法について説明します。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 98%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 98%
 
 非公開で拡張機能をリリースする最も簡単な方法は、[tag extension releaser](https://www.npmjs.com/package/@adobe/reactor-releaser) を使用することです。詳しい手順については、ドキュメントを参照してください。
 
-API を直接使用して、非公開で拡張機能をリリースする場合は、 [拡張機能パッケージを非公開でリリース](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) するための呼び出し例の詳細を API ドキュメントで参照してください。
+API を直接使用して、非公開で拡張機能をリリースする場合は、 [拡張機能パッケージを非公開でリリース](../../api/endpoints/extension-packages.md/#private-release) するための呼び出し例の詳細を API ドキュメントで参照してください。
 
 ## 公開リリース
 
