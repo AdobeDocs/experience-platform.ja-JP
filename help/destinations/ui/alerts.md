@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 12%
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../../observability/api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
-データフローを作成する際にアラートをサブスクライブして、フロー実行のステータス、成功または失敗に関するアラートメッセージを受け取ることができます。
+データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
 
 このドキュメントでは、宛先データフローのアラートメッセージを受信する方法をサブスクライブする手順を説明します。
 
@@ -109,7 +109,7 @@ UI アラートと同様に、 [!UICONTROL データフロー実行の概要] �
 
 ![宛先オプションを示す UI 画像](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-ポップアップウィンドウが開き、宛先アラートのリストが表示されます。 購読するアラートを選択するか、購読を解除するアラートの選択を解除します。 終了したら「**[!UICONTROL 保存]**」を選択します。
+ポップアップウィンドウが開き、宛先アラートのリストが表示されます。 購読するアラートを選択するか、購読を解除するアラートの選択を解除します。 完了したら「**[!UICONTROL 保存]**」を選択します。
 
 ![宛先アラートの購読ページを示す UI 画像](../assets/ui/alerts/destination-alerts-list.png)
 

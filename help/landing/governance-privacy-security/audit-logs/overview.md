@@ -38,31 +38,31 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 | リソース | アクション |
 | --- | --- |
-| [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>エクスポート</li></ul> |
-| [クラス](../../../xdm/schema/composition.md#class) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
-| [データセット](../../../catalog/datasets/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
-| [データストリーム](../../../edge/datastreams/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../edge/datastreams/data-prep.md)</li></ul> |
-| [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [宛先](../../../destinations/home.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
-| [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
+| [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
+| [データストリーム](../../../edge/datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [ID グラフ](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
-| [ID 名前空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>作成</li><li>更新</li></ul> |
-| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [製品プロファイル](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
+| [ID 名前空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li> の作成</li><li>更新</li></ul> |
+| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [製品プロファイル](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [クエリ](../../../query-service/ui/overview.md) | <ul><li>実行</li></ul> |
-| [クエリテンプレート](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [ロール（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
-| [サンドボックス](../../../sandboxes/home.md) | <ul><li>作成</li><li>更新</li><li>リセット</li><li>Delete</li></ul> |
-| [スケジュール済みクエリ](../../../query-service/ui/overview.md) | <ul><li>作成</li><li>更新</li><li>Delete</li></ul> |
-| [スキーマ](../../../xdm/schema/composition.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>プロファイルに対して有効にする</li></ul> |
-| [セグメント](../../../segmentation/home.md) | <ul><li>作成</li><li>Delete</li><li>セグメントの有効化</li><li>セグメント削除</li></ul> |
-| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
-| [作業指示](../../../hygiene/home.md) | <ul><li>作成</li></ul> |
+| [クエリテンプレート](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [ロール（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
+| [サンドボックス](../../../sandboxes/home.md) | <ul><li> の作成</li><li>更新</li><li>リセット</li><li>Delete</li></ul> |
+| [スケジュール済みクエリ](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [スキーマ](../../../xdm/schema/composition.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>プロファイルに対して有効にする</li></ul> |
+| [セグメント](../../../segmentation/home.md) | <ul><li> の作成</li><li>Delete</li><li>セグメントの有効化</li><li>セグメント削除</li></ul> |
+| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [作業指示](../../../hygiene/home.md) | <ul><li> の作成</li></ul> |
 
 ## 監査ログへのアクセス
 

@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 15%
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。の構造内でこれらの関係を定義する [!DNL Experience Data Model] (XDM) スキーマを使用すると、顧客データに関する複雑なインサイトを得ることができます。
 
-スキーマの関係は、和集合スキーマと [!DNL Real-Time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、他の関連するスキーマの ID を参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
+スキーマの関係は、結合スキーマと [!DNL Real-Time Customer Profile] を使用して推論できますが、同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、他の関連するスキーマの ID を参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
 
 このドキュメントでは、 [!DNL Experience Platform] ユーザーインターフェイス。 API を使用してスキーマ関係を定義する手順については、[スキーマレジストリ API を使用した関係の定義](relationship-api.md)についてのチュートリアルを参照してください。
 
@@ -91,7 +91,7 @@ ht-degree: 15%
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-終了したら、「 」を選択します。 **[!UICONTROL 適用]**.
+完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
