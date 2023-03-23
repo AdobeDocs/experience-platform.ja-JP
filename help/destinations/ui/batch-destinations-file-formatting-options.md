@@ -2,7 +2,7 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
+source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 88%
@@ -47,7 +47,7 @@ Experience Platform UI を使用して、書き出したファイルに対して
 * コンマ `(,)`
 * パイプ `(|)`
 * セミコロン `(;)`
-* Tab `(\\t)`
+* Tab `(\t)`
 
 ### 引用符文字
 
