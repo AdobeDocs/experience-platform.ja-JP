@@ -3,10 +3,10 @@ keywords: ストリーミング; HTTP 宛先
 title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
+source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
 workflow-type: tm+mt
-source-wordcount: '2436'
-ht-degree: 95%
+source-wordcount: '2648'
+ht-degree: 88%
 
 ---
 
@@ -158,12 +158,12 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="セグメントのタイムスタンプを含める"
->abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。"
+>abstract="セグメントが作成および更新された際の UNIX タイムスタンプと、アクティブ化のためにセグメントが宛先にマップされた際の UNIX タイムスタンプをデータの書き出しに含めるかどうかを切り替えます。 このオプションを選択したデータの書き出しの例に関するドキュメントを表示します。**Platform でのユーザーアクティビティの監視**<h2>説明</h2><p>監査ログの形式で、様々な Platform サービスと機能のユーザーアクティビティを監視できます。 これらのログは、 <b>who</b> 実行済み <b>what</b> アクションと <b>when</b>. 監査ログは、Platform に関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p><h2>説明</h2><ul><li>選択 <b>監査</b> をクリックします。 「監査」ワークスペースには、デフォルトで、記録されたログのリストが最新のログから最新のログへと並べ替えて表示されます。</li>   <li> 注意：監査ログは、365 日間保持され、その後システムから削除されます。 したがって、戻ることができる期間は最大 365 日までです。 365 日を超えるデータを振り返る必要がある場合は、内部ポリシー要件を満たすために、ログを定期的に書き出す必要があります。 </li><li>リストからイベントを選択すると、その詳細が右側のパネルに表示されます。 </li><li>ファネルアイコンを選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。 選択したフィルターに関係なく、最近の 1000 件のレコードのみが表示されます。 </li><li>監査ログの現在のリストを書き出すには、 **ログをダウンロード**.</li><li>この機能に関する詳しいヘルプについては、 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ja">監査ログの概要</a> Experience League</li></ul>"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_queryparameters"
->title="クエリのパラメーター"
->abstract="オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを `parameter1=value&parameter2=value` のように書式設定します。"
+[!CONTEXTUALHELP]
+id="platform_destinations_connect_http_queryparameters"
+title="クエリのパラメーター"
+abstract="オプションで、HTTP エンドポイント URL にクエリパラメーターを追加できます。 使用するクエリパラメーターを `parameter1=value&parameter2=value` のように書式設定します。"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。  UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
@@ -186,8 +186,7 @@ curl --location --request POST 'https://some-api.com/token' \
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
-> 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 詳しくは、[ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
