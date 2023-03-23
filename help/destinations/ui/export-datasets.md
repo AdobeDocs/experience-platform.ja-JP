@@ -3,10 +3,10 @@ title: （ベータ版）クラウドストレージ宛先へのデータセッ�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 96%
+source-wordcount: '1359'
+ht-degree: 94%
 
 ---
 
@@ -22,6 +22,19 @@ ht-degree: 96%
 この記事では、エクスポートに必要なワークフローについて説明します [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
 
 また、Experience PlatformAPI を使用してデータセットを書き出すこともできます。 詳しくは、 [データセット API の書き出しチュートリアル](/help/destinations/api/export-datasets.md) を参照してください。
+
+## サポートされる宛先 {#supported-destinations}
+
+現在、以下のスクリーンショットでハイライト表示されているクラウドストレージの宛先にデータセットを書き出すことができます。
+
+![データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## セグメントをアクティブ化するタイミングまたはデータセットを書き出すタイミング {#when-to-activate-segments-or-activate-datasets}
 
