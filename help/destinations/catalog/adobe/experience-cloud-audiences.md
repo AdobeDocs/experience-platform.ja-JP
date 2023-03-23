@@ -2,10 +2,10 @@
 title: （ベータ版）Experience CloudAudiences
 description: セグメントをExperience Platformから様々なExperience Platformソリューションに共有する方法を説明します。
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 24%
+source-wordcount: '1512'
+ht-degree: 25%
 
 ---
 
@@ -61,8 +61,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * この宛先は次の場所で使用できます： [Adobe Real-time Customer Data Platform Prime と Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
-> * 上記の節で説明したAudience Manager管理プラットフォームの使用例を有効にするには、データライセンスが必要です。
-> * あなた *不要* Audience Managerライセンス：Experience Platformオーディエンスの統合を通じて、Adobe Advertising Cloud、Adobe Target、Marketoおよびその他のExperience CloudソリューションとExperience Cloudセグメントを共有する場合。
+> * を有効にするにはAudience Managerライセンスが必要です [データ管理プラットフォームの使用例](#dmp-use-cases) 詳しくは、上記を参照してください。
+> * あなた *不要* Experience PlatformセグメントをAdobe Advertising Cloud、Adobe Target、Marketoおよびその他のExperience Cloudソリューション ( [上のセクション](#share-segments-with-other-solutions).
 
 
 ### レガシーセグメント共有ソリューションを使用しているお客様向け
@@ -91,12 +91,12 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、次のエイリアスからも参照できます。&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
+| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
 | GAID | Google Advertising ID | Google広告 ID(GAID) のプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
 | IDFA | Apple の広告主 ID | Apple ID for Advertisers(IDFA) のプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | ハッシュ化された電子メールアドレスのプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -107,7 +107,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 | 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | 上記の節で示した ID をキーにしたセグメント（オーディエンス）のすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
