@@ -4,22 +4,22 @@ solution: Experience Platform
 title: バッチ取得 API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 77%
+source-wordcount: '2412'
+ht-degree: 76%
 
 ---
 
 # バッチ取得開発者ガイド
 
-このドキュメントでは、 [バッチ取得 API エンドポイント](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) Adobe Experience Platform 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [バッチ取得 API の概要](overview.md).
+このドキュメントでは、 [バッチ取得 API エンドポイント](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) Adobe Experience Platform 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [バッチ取得 API の概要](overview.md).
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、 [データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
+このガイドで使用される API エンドポイントは、 [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). バッチ取り込みは、RESTful API を通じて提供されます。この API では、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
 
 続行する前に、 [バッチ取得 API の概要](overview.md) そして [入門ガイド](getting-started.md).
 

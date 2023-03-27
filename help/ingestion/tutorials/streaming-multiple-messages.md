@@ -5,9 +5,9 @@ title: 単一の HTTP リクエストでの複数メッセージの送信
 type: Tutorial
 description: このドキュメントでは、ストリーミング取り込みを使用して単一の HTTP リクエスト内で複数のメッセージをAdobe Experience Platformに送信するためのチュートリアルを提供します。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1490'
 ht-degree: 66%
 
 ---
@@ -508,7 +508,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-3 番目のメッセージは、ヘッダーで無効な IMS 組織 ID が使用されているため失敗しました。IMS 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。使用しているストリーミング接続に一致する IMS 組織 ID を特定するには、 `GET inlet` を使用してリクエスト [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
+3 番目のメッセージは、ヘッダーで無効な 組織 ID が使用されているため失敗しました。 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。使用しているストリーミング接続に一致する組織 ID を特定するには、 `GET inlet` を使用してリクエスト [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
 
 4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。メッセージのヘッダーと本文のスキーマを修正すると、DCCS 検証に合格し、に正常に送信できるようになります。 [!DNL Platform]. また、メッセージの本文を更新して、 `{DATASET_ID}` のストリーミング検証に合格するため [!DNL Platform]. Platform に正常にストリーミングされるメッセージに対する影響の詳細については、このチュートリアルの「[取得したメッセージの確認](#confirm-messages-ingested)」の節を参照してください。
 

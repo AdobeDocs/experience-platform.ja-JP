@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 用 ETL 統合の開発
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '4075'
-ht-degree: 100%
+source-wordcount: '4081'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,8 @@ ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマ�
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
-- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Experience Platform API の認証と承認](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
@@ -490,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-データは、[データ取得 API ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)を使用して [!DNL Experience Platform] に書き込まれます。  データの書き込みは非同期的なプロセスです。データが Adobe Experience Platform に書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功に指定されます。
+データの書き込み先 [!DNL Experience Platform] の使用 [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  データの書き込みは非同期的なプロセスです。データが Adobe Experience Platform に書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功に指定されます。
 
 [!DNL Experience Platform] のデータは、Parquet ファイル形式で書き込む必要があります。
 
@@ -579,7 +580,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### バッチの作成
 
-データが処理されると、ETL ツールは、[バッチ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) を使用してデータを [!DNL Experience Platform] に書き戻します。データセットにデータを追加する前に、そのデータをバッチにリンクし、後で特定のデータセットにアップロードする必要があります。
+データが処理されると、ETL ツールは、[バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) を使用してデータを [!DNL Experience Platform] に書き戻します。データセットにデータを追加する前に、そのデータをバッチにリンクし、後で特定のデータセットにアップロードする必要があります。
 
 **リクエスト**
 

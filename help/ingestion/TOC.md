@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Experience Platform に取り込みます。
 feature: Data Ingestion
-source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
+source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 95%
+source-wordcount: '156'
+ht-degree: 83%
 
 ---
 
@@ -46,5 +46,6 @@ ht-degree: 95%
    - [データ取得通知](quality/subscribe-events.md)
 - [データ取り込みのガードレール](guardrails.md)
 - [ソースコネクタ](source-connectors.md)
-- [API リファレンス](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [バッチ取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [ストリーミング取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

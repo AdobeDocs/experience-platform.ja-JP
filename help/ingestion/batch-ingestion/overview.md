@@ -2,20 +2,20 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ取得；バッチ；バッチ；データセットの有効化；バッチ取得の概要；概要；バッチ取得の概要；
 solution: Experience Platform
 title: バッチ取得 API の概要
-description: Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
+description: Adobe Experience Platform Batch Ingestion API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '1387'
-ht-degree: 74%
+ht-degree: 72%
 
 ---
 
 # バッチ取得 API の概要
 
-Adobe Experience Platform Data Ingest API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 フラットファイル（Parquet ファイルなど）のプロファイルデータ、または [!DNL Experience Data Model] (XDM) レジストリ。
+Adobe Experience Platform Batch Ingestion API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 フラットファイル（Parquet ファイルなど）のプロファイルデータ、または [!DNL Experience Data Model] (XDM) レジストリ。
 
-[データ取得 API のリファレンスは](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)では、これらの API 呼び出しに関する追加情報が提供されています。
+この [バッチ取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) は、これらの API 呼び出しに関する追加情報を提供します。
 
 次の図に、バッチインジェストプロセスの概要を示します。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform Data Ingest API を使用すると、データをバ�
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、 [データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用される API エンドポイントは、 [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ### [!DNL Data Ingestion] 前提条件
 

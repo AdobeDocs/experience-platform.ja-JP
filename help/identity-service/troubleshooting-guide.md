@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ID サービストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '2180'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -282,7 +282,7 @@ ID グラフデータを表示するには、Platform 管理者から `view-iden
 
 [!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
 
-以下は、[Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の使用時に発生する可能性のある [!DNL Identity Service] に関するエラーメッセージのリストです。
+次に、 [!DNL Identity Service] を使用する際に [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### 不明な XDM スキーマ
 
