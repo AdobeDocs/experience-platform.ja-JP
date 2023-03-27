@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1343'
 ht-degree: 100%
 
 ---
@@ -17,11 +17,13 @@ ht-degree: 100%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [データ収集](#data-collection)
-- [宛先](#destinations)
-- [エクスペリエンスデータモデル（XDM）](#xdm)
-- [クエリサービス](#query-service)
-- [ソース](#sources)
+- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
+   - [顧客管理キー {#cmk}](#customer-managed-keys-cmk)
+   - [データ収集 {#data-collection}](#data-collection-data-collection)
+   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
+   - [エクスペリエンスデータモデル（XDM）{#xdm}](#experience-data-model-xdm-xdm)
+   - [クエリサービス {#query-service}](#query-service-query-service)
+   - [ソース {#sources}](#sources-sources)
 
 ## 顧客管理キー {#cmk}
 
@@ -56,7 +58,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 {style="table-layout:auto"}
 
-**新規宛先または更新された宛先**
+**新規宛先または更新された宛先** {#new-or-updated-destinations}
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
