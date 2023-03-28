@@ -4,9 +4,9 @@ title: プロファイルリクエスト宛先に対するオーディエンス�
 type: Tutorial
 description: セグメントをプロファイルリクエストの宛先にマッピングして、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '898'
 ht-degree: 23%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 23%
 
 ## 概要 {#overview}
 
-この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md)を使用すると、これらの宛先によって、Web プロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。 詳細を表示 [同じページおよび次のページのパーソナライゼーションの使用例の有効化](/help/destinations/ui/configure-personalization-destinations.md).
+この記事では、Adobe Experience Platformプロファイルリクエストの宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md)を使用すると、これらの宛先によって、Web およびモバイルプロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。 詳細を表示 [同じページおよび次のページのパーソナライゼーションの使用例の有効化](/help/destinations/ui/configure-personalization-destinations.md).
 
 プロファイルリクエストの宛先の例は、 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。
 
