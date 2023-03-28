@@ -1,16 +1,16 @@
 ---
-title: User-Agent クライアントのヒント
-description: Web SDK での User-Agent Client Hints の仕組みを説明します
+title: ユーザエージェントクライアントのヒント
+description: Web SDK での User-Agent Client Hints の仕組みについて説明します。 クライアントヒントを使用すると、Web サイトの所有者は、User-Agent 文字列で使用可能な情報の多くにアクセスできますが、プライバシーをより保持する方法でアクセスできます。
 keywords: user-agent;client-hints;文字列；user-agent 文字列；低エントロピー；高エントロピー
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
+source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1155'
 ht-degree: 10%
 
 ---
 
-# User-Agent クライアントのヒント
+# ユーザエージェントクライアントのヒント
 
 ## 概要 {#overview}
 
