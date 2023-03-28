@@ -3,7 +3,7 @@ solution: Experience Platform
 title: フローサービス API を使用して、ファイルベースの宛先に対するセグメントをアクティブ化する
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 11%
@@ -3645,6 +3645,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 次に、書き出しの出力スキーマを設定する必要があります。 最初に、既存のパートナースキーマを見つけて調査する必要があります。
 
+>[!BEGINSHADEBOX]
+
 **リクエスト**
 
 +++出力スキーマのパートナースキーマを取得するリクエスト
@@ -3957,7 +3959,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
 
 **リクエスト**
 
-+++ 出力スキーマの作成 — リクエスト
++++出力スキーマの作成 — リクエスト
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **応答**
 
-+++ 出力スキーマの作成 — 応答
++++出力スキーマの作成 — 応答
 
 ```json
 {
@@ -4287,7 +4289,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-### マッピングセットの作成
+### マッピングセットを作成 {#create-mapping-set}
 
 次に、 [データ準備 API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) ：入力スキーマ ID、出力スキーマ ID および目的のフィールドマッピングを使用して、マッピングセットを作成します。
 
@@ -4295,7 +4297,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **リクエスト**
 
-+++ マッピングセットを作成 — リクエスト
++++マッピングセットを作成 — リクエスト
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >* 以下の例の設定ではが含まれていますが、 `Email` および `Phone_E.164`を使用する場合、データフローごとに 1 つの id 属性のみをエクスポートできます。
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
