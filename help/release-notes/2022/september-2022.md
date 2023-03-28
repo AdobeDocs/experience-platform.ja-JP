@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 100%
+source-wordcount: '2940'
+ht-degree: 99%
 
 ---
 
@@ -112,11 +112,9 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
 | Web SDK における [[!DNL User-Agent Client Hints] ](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK は、[[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) をサポートするようになりました。Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
 | [Web SDK のページごとの移行](../../edge/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
+| [[!DNL Adobe Journey Optimizer] データストリームのサポート](../../edge/datastreams/overview.md#aep) | Adobe Experience Platform for datastreams サービスで、がサポートされるようになりました。 [!DNL Adobe Journey Optimizer]. このオプションを使用すると、で Web およびアプリベースのインバウンドチャネルを使用できます。 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
-
-<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
--->
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
