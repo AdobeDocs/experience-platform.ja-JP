@@ -2,10 +2,10 @@
 title: メタコンバージョン API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送のメタコンバージョン API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
+source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '2261'
+ht-degree: 2%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 | [!UICONTROL カスタムデータ] | 広告配信の最適化に使用する追加データ。JSON オブジェクトの形式で提供されます。 詳しくは、 [[!DNL Conversions API] ドキュメント](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) を参照してください。<br><br>購入イベントを送信する場合は、このセクションを使用して必要な属性を指定する必要があります `currency` および `value`. |
 | [!UICONTROL テストイベント] | このオプションは、設定がサーバーイベントの受信を引き起こしているかどうかを検証するために使用します。 [!DNL Meta] 期待どおり この機能を使用するには、 **[!UICONTROL テストイベントとして送信]** チェックボックスに移動し、以下の入力で任意のテストイベントコードを指定します。 イベント転送ルールをデプロイすると、拡張機能とアクションを正しく設定した場合は、内にアクティビティが表示されます **[!DNL Test Events]** 表示 [!DNL Meta Events Manager]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 終了したら、「 」を選択します。 **[!UICONTROL 変更を保持]** をクリックして、ルール設定にアクションを追加します。
 
@@ -79,6 +79,113 @@ ht-degree: 3%
 2 つの間の重複のないクライアントおよびサーバーから異なるイベントタイプを送信する場合は、重複排除は必要ありません。 ただし、いずれかのイベントが両方の [!DNL Meta Pixel] そして [!DNL Conversions API]を使用する場合、レポートに悪影響を及ぼさないように、これらの冗長なイベントの重複を排除する必要があります。
 
 共有イベントを送信する場合は、クライアントとサーバーの両方から送信するすべてのイベントに、イベント ID と名前が含まれていることを確認してください。 同じ ID と名前を持つ複数のイベントを受け取った場合、 [!DNL Meta] は、複製を排除し、最も関連性の高いデータを保持するために、いくつかの戦略を自動的に採用しています。 詳しくは、 [!DNL Meta] ドキュメント [の重複排除 [!DNL Meta Pixel] および [!DNL Conversions API] イベント](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) を参照してください。
+
+## クイックスタートワークフロー：メタコンバージョン API 拡張機能（ベータ版） {#quick-start}
+
+>[!IMPORTANT]
+>
+>* クイックスタート機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
+>* この機能は新しい実装向けであり、既存のタグとイベント転送プロパティへの拡張機能と設定の自動インストールは現在サポートされていません。
+
+
+このクイックスタート機能を使用すると、メタコンバージョン API とメタピクセル拡張機能を使用して、簡単かつ効率的にセットアップできます。 このツールは、Adobeタグやイベント転送で実行される複数の手順を自動化し、設定時間を大幅に短縮します。
+
+この機能では、新しく自動生成されたタグとイベント転送プロパティに、必要なルールとデータ要素を使用して、メタコンバージョン API とメタピクセル拡張機能の両方を自動的にインストールおよび設定します。 また、Experience PlatformWeb SDK と Datastream も自動インストールおよび設定します。 最後に、クイックスタート機能は、開発環境で指定された URL にライブラリを自動公開します。これにより、イベント転送と Experience Edge を介して、クライアント側のデータ収集とサーバー側のイベント転送をリアルタイムで実行できます。
+
+次のビデオでは、クイックスタート機能の概要を説明します。
+
+>[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+
+### クイックスタート機能をインストール
+
+>[!NOTE]
+>
+>この機能は、イベント転送の実装を開始するのに役立つように設計されています。 すべての使用例に対応する完全に機能したエンドツーエンドの実装は提供されません。
+
+このセットアップでは、メタコンバージョン API とメタピクセル拡張機能の両方が自動的にインストールされます。 イベントコンバージョンサーバー側を収集して転送するには、Meta でこのハイブリッド実装をお勧めします。
+クイックセットアップ機能は、顧客がイベント転送の実装を開始するのを支援するように設計されており、すべての使用例に対応する完全に機能するエンドツーエンドの実装を提供することを目的としていません。
+
+この機能をインストールするには、「 **[!UICONTROL はじめに]** 対象 **[!DNL Send Conversions Data to Meta]** Adobe Experience Platform Data Collection 上 **[!UICONTROL ホーム]** ページ。
+
+![コンバージョンデータをメタデータに示すデータ収集ホームページ](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+
+を入力します。 **[!UICONTROL ドメイン]**&#x200B;を選択し、「 **[!UICONTROL 次へ]**. このドメインは、自動生成されたタグおよびイベント転送のプロパティ、ルール、データ要素、データストリームなどの命名規則として使用されます。
+
+![ドメイン名をリクエストするようこそ画面](../../../images/extensions/server/meta/welcome.png)
+
+内 **[!UICONTROL 初期設定]** ダイアログに **[!UICONTROL メタピクセル ID]**, **[!UICONTROL メタコンバージョン API アクセストークン]**、および **[!UICONTROL データレイヤーパス]**&#x200B;を選択し、「 **[!UICONTROL 次へ]**.
+
+![初期設定ダイアログ](../../../images/extensions/server/meta/initial-setup.png)
+
+初期設定プロセスが完了するまで数分待ってから、「 」を選択します。 **[!UICONTROL 次へ]**.
+
+![初期設定完了確認画面](../../../images/extensions/server/meta/setup-complete.png)
+
+次の **[!UICONTROL サイトにコードを追加する]** ダイアログコピーを使用して提供されたコードをコピー ![コピー](../../../images/extensions/server/meta/copy-icon.png) 関数を使用して、 `<head>` を参照してください。 実装が完了したら、「 」を選択します。 **[!UICONTROL 検証を開始]**
+
+![サイトダイアログにコードを追加](../../../images/extensions/server/meta/add-code-on-your-site.png)
+
+この [!UICONTROL 検証結果] ダイアログには、Meta 拡張機能の実装結果が表示されます。 「**[!UICONTROL 次へ]**」を選択します。また、 **[!UICONTROL アシュランス]** リンク。
+
+![実装結果を表示するテスト結果ダイアログ](../../../images/extensions/server/meta/test-results.png)
+
+この **[!UICONTROL 次の手順]** 画面表示で、設定の完了を確認します。 ここから、新しいイベントを追加して実装を最適化するオプションがあります（次の節で示します）。
+
+イベントを追加しない場合は、 **[!UICONTROL 閉じる]**.
+
+![次の手順ダイアログ](../../../images/extensions/server/meta/next-steps.png)
+
+#### イベントの追加
+
+新しいイベントを追加するには、「 **[!UICONTROL タグ Web プロパティを編集]**.
+
+![タグ Web プロパティの編集を表示する次の手順ダイアログ](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+
+編集するメタイベントに対応するルールを選択します。 例： **MetaConversion_AddToCart**.
+
+>[!NOTE]
+>
+>イベントがない場合、このルールは実行されません。 これは、すべてのルールに当てはまり、 **MetaConversion_PageView** ルールが例外である。
+
+イベントを追加するには、「 」を選択します。 **[!UICONTROL 追加]** の下に [!UICONTROL イベント] 見出し。
+
+![イベントが表示されないタグプロパティページ](../../../images/extensions/server/meta/edit-rule.png)
+
+を選択します。 [!UICONTROL イベントタイプ]. この例では、 [!UICONTROL クリック] イベントを作成し、次の時点でトリガーに設定 **.add-to-cart-button** が選択されている。 「**[!UICONTROL 変更を保持]**」を選択します。
+
+![クリックイベントを表示するイベント設定画面](../../../images/extensions/server/meta/event-configuration.png)
+
+新しいイベントが保存されました。 選択 **[!UICONTROL 作業ライブラリを選択]** をクリックし、ビルド先のライブラリを選択します。
+
+![作業ライブラリドロップダウンを選択](../../../images/extensions/server/meta/working-library.png)
+
+次に、の横のドロップダウンを選択します。 **[!UICONTROL ライブラリに保存]** を選択し、 **[!UICONTROL ライブラリに保存してビルド]**. これにより、ライブラリに変更が公開されます。
+
+![ライブラリに保存してビルドを選択](../../../images/extensions/server/meta/save-and-build.png)
+
+設定する他のメタコンバージョンイベントに対して、これらの手順を繰り返します。
+
+#### データレイヤーの設定
+
+>[!IMPORTANT]
+>
+>このグローバルデータレイヤーを更新する方法は、Web サイトのアーキテクチャによって異なります。 単一ページアプリケーションは、サーバーサイドレンダリングアプリとは異なります。 また、Tags 製品内でこのデータの作成と更新を完全に担当する可能性もあります。 すべてのインスタンスで、データレイヤーは、 `MetaConversion_* rules`. ルール間でデータを更新しない場合、最後の `MetaConversion_* rule` 現在の `MetaConversion_* rule`.
+
+設定時に、データレイヤーの場所に関する質問が表示されました。 デフォルトでは、次のようになります。 `window.dataLayer.meta`、および `meta` オブジェクトの場合、データは次のように想定されます。
+
+![データレイヤーのメタ情報](../../../images/extensions/server/meta/data-layer-meta.png)
+
+これは、 `MetaConversion_*` ルールでは、このデータ構造を使用して、関連するデータを [!DNL Meta Pixel] 拡張と [!DNL Meta Conversions API]. に関するドキュメントを参照してください。 [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) 様々なメタイベントで必要となるデータの詳細については、を参照してください。
+
+例えば、 `MetaConversion_Subscribe` ルールを更新する必要があります `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`、および `window.dataLayer.meta.value` に関するドキュメントで説明されているオブジェクトプロパティに従って [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+
+ルールを実行する前に Web サイトで実行してデータレイヤーを更新する必要がある操作の例を以下に示します。
+
+![データレイヤーのメタ情報を更新](../../../images/extensions/server/meta/update-data-layer-meta.png)
+
+デフォルトでは、 `<datalayerpath>.conversionData.eventId` は、 `MetaConversion_* rules`.
+
+データレイヤーの外観のローカルリファレンスについては、 `MetaConversion_DataLayer` データ要素をプロパティ上に配置する必要があります。
 
 ## 次の手順
 
