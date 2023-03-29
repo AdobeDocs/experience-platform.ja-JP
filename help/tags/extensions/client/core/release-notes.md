@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 100%
+source-wordcount: '1654'
+ht-degree: 95%
 
 ---
 
@@ -14,6 +14,26 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2023年3月29日（PT）
+
+v3.4.1
+
+* 新しい Web ネイティブデリゲートイベントを追加します。
+   * キーダウン
+   * キーアップ
+* 以下の代理オブジェクトに対して、多くの値（「別の値を追加」オプション）をテストする機能を追加します。
+   * イベント
+      * 変更点
+   * 条件
+      * Cookie
+      * Landing Page
+      * Query String Parameter
+      * Traffic Source
+      * Variable
+* events/EntersViewport デリゲートを変更し、 [積集合監視者 API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) ビューポートに入る要素を手動で検出する代わりに、
+* DTM Cookie を LocalStorage に移行していたコードを削除します。
+* LocalStorage API と SessionStorage API が使用できない場合に、コンソールに警告を記録します。
 
 ## 2022年1月4日（PT）
 
