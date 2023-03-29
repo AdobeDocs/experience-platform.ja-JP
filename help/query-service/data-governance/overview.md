@@ -2,10 +2,10 @@
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 2%
+source-wordcount: '2843'
+ht-degree: 3%
 
 ---
 
@@ -93,6 +93,16 @@ Adobe Experience Platformのアクセス制御を使用すると、 [Adobe Admin
 
 この `CREATE VIEW` キーワードは、クエリのビューを定義しますが、ビューが物理的に実体化されていません。 代わりに、ビューがクエリで参照されるたびにクエリが実行されます。 ユーザーがデータセットからビューを作成すると、親データセットの役割ベースと属性ベースのアクセス制御ルールは次のようになります **not** 階層的に適用される その結果、ビューの作成時に各列に明示的に権限を設定する必要があります。
 
+#### 高速データセットに対するフィールドベースのアクセス制限の作成 {#create-field-based-access-restrictions-on-accelerated-datasets}
+
+を使用 [属性ベースのアクセス制御機能](../../access-control/abac/overview.md) ファクトデータセットとディメンションデータセットに基づいて、組織またはデータの使用範囲を定義できます。 [加速貯蔵](../data-distiller/query-accelerated-store/send-accelerated-queries.md). これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに与えられるアクセスをより適切に管理できます。
+
+高速データセットに対してフィールドベースのアクセス制限を作成するには、クエリサービス CTAS クエリを使用して高速データセットを作成し、既存の XDM スキーマまたはアドホックスキーマに基づいてこれらのデータセットを構築します。 管理者が [スキーマのデータ使用状況ラベルの追加と編集](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) または [アドホックスキーマ](./ad-hoc-schema-labels.md#edit-governance-labels). スキーマに対して、 [!UICONTROL ラベル] ワークスペース [!UICONTROL スキーマ] UI
+
+データ使用ラベルは、 [データセットに直接適用または編集された](../../data-governance/labels/user-guide.md#add-labels) データセット UI を使用して、またはアクセス制御から作成した [!UICONTROL ラベル] ワークスペース。 方法に関するガイドを参照してください。 [新しいラベルを作成](../../access-control/abac/ui/labels.md) を参照してください。
+
+個々の列へのユーザーアクセスは、添付されたデータ使用ラベルと、ユーザーに割り当てられた役割に適用される権限セットによって制御できます。
+
 ### 接続 {#connectivity}
 
 クエリサービスには、Platform UI を通じてアクセスするか、外部と互換性のあるクライアントとの接続を形成することでアクセスできます。 使用可能なすべてのフロントへのアクセスは、一連の資格情報によって制御されます。
@@ -131,13 +141,13 @@ Adobe Experience Platformのアクセス制御を使用すると、 [Adobe Admin
 
 暗号化とは、データをエンコードされた読み取り不可能なテキストに変換し、情報を復号化キーなしで保護し、アクセスできないようにする、アルゴリズムプロセスの使用です。
 
-クエリサービスのデータコンプライアンスにより、データが常に暗号化されます。 送信中のデータは常に HTTPS に準拠し、保存時のデータはシステムレベルのキーを使用して Azure Data Lake ストアで暗号化されます。 詳しくは、 [Adobe Experience Platformでのデータの暗号化方法](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) を参照してください。 Azure Data Lake Storage での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption).
+クエリサービスのデータコンプライアンスにより、データが常に暗号化されます。 送信中のデータは常に HTTPS に準拠し、保存時のデータはシステムレベルのキーを使用して Azure Data Lake ストアで暗号化されます。 詳しくは、 [Adobe Experience Platformでのデータの暗号化方法](../../landing/governance-privacy-security/encryption.md) を参照してください。 Azure Data Lake Storage での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
 ## 監査 {#audit}
 
-クエリサービスは、ユーザーのアクティビティを記録し、そのアクティビティを様々なログタイプに分類します。 次の情報をログに記録します： **who** 実行済み **what** アクションおよび **when**. ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの E メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。
+クエリサービスは、ユーザーのアクティビティを記録し、そのアクティビティを様々なログタイプに分類します。 次の情報をログに記録します： **who** 実行済み **what** アクションおよび **when**. ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。
 
 任意のログカテゴリを、Platform ユーザーの希望に応じてリクエストできます。 この節では、クエリサービスに対して取り込まれる情報のタイプと、この情報にアクセスできる場所の詳細を説明します。
 
