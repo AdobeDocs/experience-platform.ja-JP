@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
+source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 42%
+source-wordcount: '1065'
+ht-degree: 35%
 
 ---
 
@@ -16,6 +16,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データ収集](#data-collection)
 - [データ準備](#data-prep)
+- [宛先](#destinations)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
@@ -45,6 +46,41 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 | URL 文字列のエンコードとデコードに関する新しい関数 | <ul><li>この `get_url_encoded` 関数は、URL を入力として受け取り、特殊文字を ASCII 文字に置き換えたり、エンコードしたりします。</li><li>この `get_url_decoded` 関数は、URL を入力として受け取り、ASCII 文字を特殊文字にデコードします。</li></ul> 詳しくは、 [データ準備関数ガイド](../../data-prep/functions.md). 予約文字とその対応するエンコード済み文字の包括的なリストについては、 [特殊文字](../../data-prep/functions.md#special-characters). |
 
 Data Prep の詳細については、 [データ準備の概要](../../data-prep/home.md).
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先** {#new-destinations}
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] 接続 GA](../../destinations/catalog/personalization/adobe-commerce.md) | この [!DNL Adobe Commerce] 宛先コネクタ（一般に提供されるようになりました）を使用すると、アクティブ化する 1 つ以上のReal-Time CDPオーディエンスを選択して、 [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 |
+| [[!DNL Snap Inc] 接続 GA](../../destinations/catalog/advertising/snap-inc.md) | この [!DNL Snap Inc] 宛先コネクタ（一般提供）を使用すると、マーケターは、Experience Platformで作成されたユーザーセグメントを [!DNL Snapchat Ads] 広告のターゲティングに使用します。 |
+| [(API)OracleEloqua 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | API ベースの接続を使用して [!DNL Oracle Eloqua] キャンペーンの計画と実行を行い、 [!DNL Oracle Eloqua]. |
+| [（ベータ版） [!DNL Amazon Ads] 接続](../../destinations/catalog/advertising/amazon-ads.md) | この [!DNL Amazon Ads] Adobe Experience Platformとの統合により、 [!DNL Amazon Ads] 製品 ( [!DNL Amazon DSP (ADSP)]. の使用 [!DNL Amazon Ads] Adobe Experience Platformの宛先では、ユーザーは、ターゲティングとアクティブ化のための広告主オーディエンスを定義できます。 [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] 接続](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] （以前の Bizible）は、マーケターに、売上高の促進と、会社の投資回収率の最大化に最も効果的なマーケティング活動に関するインサイトを提供します。 宛先により、Adobe Experience Platformから [!DNL Marketo Measure]. カードは次の場所でのみ使用できます： [!DNL Marketo Measure Ultimate] 顧客。 |
+| [TikTok接続](../../destinations/catalog/social/tiktok.md) | 広告キャンペーンでターゲティングするためのデータを使用して、TikTok上にカスタムオーディエンスを構築します。 |
+| [Zendesk 接続](../../destinations/catalog/crm/zendesk.md) | この宛先を使用して、セグメント内の ID を内の連絡先として作成および更新します [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| 宛先の新しいアクセス制御権限： [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | 新しい権限により、ユーザーは、 [マッピング手順](../../destinations/ui/activate-batch-profile-destinations.md#mapping). ユーザーは、アクティベーションワークフローでセグメントを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 |
+
+{style="table-layout:auto"}
+
+**修正および機能強化** {#destinations-fixes-and-enhancements}
+
+リアルタイム CDP のファイルベースの宛先で、PGP/GPG 暗号化のバグ修正をリリースしています。 この変更により、現在暗号化を使用している既存のファイルベースの宛先は、以前とは異なる拡張子を持つファイル名を生成します。
+
+- 暗号化を使用する場合の現在の拡張： `filename.csv`
+- 暗号化を使用する場合の将来の拡張： `filename.csv.gpg`
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
