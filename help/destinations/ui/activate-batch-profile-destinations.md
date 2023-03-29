@@ -4,10 +4,10 @@ title: プロファイル書き出しのバッチ宛先に対するオーディ�
 type: Tutorial
 description: セグメントをバッチプロファイルベースの宛先に送信して、Adobe Experience Platform でのオーディエンスデータをアクティベートする方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
-ht-degree: 92%
+source-wordcount: '3629'
+ht-degree: 91%
 
 ---
 
@@ -15,9 +15,12 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> * データをアクティブ化して [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * を経由せずにデータをアクティブ化するには [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> 
+> [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
 >
->改善されたファイル書き出し機能のベータプログラムに参加している一部のお客様には、[新しいベータ版のクラウドストレージの宛先](/help/release-notes/2022/october-2022.md#destinations)へのアクティベーションワークフローの一部として、新しい&#x200B;**[!UICONTROL マッピング]**&#x200B;手順が表示されます。また、[既知の制限事項](#known-limitations)をリリースの一部として追加しました。
+> 改善されたファイル書き出し機能のベータプログラムに参加している一部のお客様には、[新しいベータ版のクラウドストレージの宛先](/help/release-notes/2022/october-2022.md#destinations)へのアクティベーションワークフローの一部として、新しい&#x200B;**[!UICONTROL マッピング]**&#x200B;手順が表示されます。また、[既知の制限事項](#known-limitations)をリリースの一部として追加しました。
 
 ## 概要 {#overview}
 
