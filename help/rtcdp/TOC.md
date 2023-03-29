@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 64%
+ht-degree: 67%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 64%
 * はじめに {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDPの基本を学ぶ](get-started.md)
-      * [指標の概要](home-page-dashboards.md)
+      * [ホームページ](home-page-dashboards.md)
    * Real-Time CDP B2B エディション {#rtcdpb2b-intro}
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
@@ -48,7 +48,7 @@ ht-degree: 64%
 * Real-Time CDP B2B エディション AI/ML サービス {#b2b-cdp-ai-ml}
    * [関連するアカウント](b2b-ai-ml-services/related-accounts.md)
    * [リードとアカウントのマッチング](b2b-ai-ml-services/lead-to-account-matching.md)
-   * 予測リードとアカウントスコアリング {#predictive-lead-and-account-scoring-intro}
+   * リードおよびアカウントの予測スコアリング {#predictive-lead-and-account-scoring-intro}
       * [予測リードとアカウントスコアリングの概要](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [予測リードとアカウントスコアの管理](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * スキーマ {#schemas}

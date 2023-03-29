@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
+source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 36%
+source-wordcount: '1057'
+ht-degree: 35%
 
 ---
 
@@ -42,6 +42,7 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 | 機能 | 説明 |
 | --- | --- |
+| Adobe Analyticsデータのフィルタリングの一般的な可用性 | Data Prep 機能を使用して、ルールと条件を適用し、Analytics データをリアルタイム顧客プロファイルに取り込む前にフィルタリングできるようになりました。 詳しくは、 [プロファイル取り込み用の Analytics データのフィルタリング](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
 | URL 文字列のエンコードとデコードに関する新しい関数 | <ul><li>この `get_url_encoded` 関数は、URL を入力として受け取り、特殊文字を ASCII 文字に置き換えたり、エンコードしたりします。</li><li>この `get_url_decoded` 関数は、URL を入力として受け取り、ASCII 文字を特殊文字にデコードします。</li></ul> 詳しくは、 [データ準備関数ガイド](../../data-prep/functions.md). 予約文字とその対応するエンコード済み文字の包括的なリストについては、 [特殊文字](../../data-prep/functions.md#special-characters). |
 
 Data Prep の詳細については、 [データ準備の概要](../../data-prep/home.md).
