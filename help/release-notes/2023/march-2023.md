@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Platform リリースノート（2023年2月）
+title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 44075e38664c01c64e7d09f5856353bff64becb5
+source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 45%
