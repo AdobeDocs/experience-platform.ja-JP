@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
+source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '963'
 ht-degree: 100%
 
 ---
@@ -211,6 +211,8 @@ ht-degree: 100%
          * [リリースノート](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [概要](./extensions/server/aws/overview.md)
+      * [!DNL Braze] {#braze}
+         * [概要](./extensions/server/braze/overview.md)
       * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
