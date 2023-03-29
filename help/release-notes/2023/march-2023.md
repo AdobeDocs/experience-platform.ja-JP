@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 48cd7f670ab7d42d2b0c54bb549d37aa3b9ebe66
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '716'
 ht-degree: 42%
 
 ---
@@ -54,7 +54,7 @@ Data Prep の詳細については、 [データ準備の概要](../../data-prep
 
 | 機能 | 説明 |
 | --- | --- |
-| プロファイル指標 | プロファイル指標をより正確に表すために、メンバーシップの分類とチャーン指標は組み合わされ、24 時間にわたって計算されるようになりました。 詳しくは、 [セグメント化 UI ガイド](../../segmentation/ui/overview.md) |
+| プロファイル指標 | プロファイル指標をより正確に表すために、メンバーシップの分類とチャーン指標は組み合わされ、24 時間にわたって計算されるようになりました。 詳しくは、 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
