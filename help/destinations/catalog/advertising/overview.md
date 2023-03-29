@@ -3,10 +3,10 @@ keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム (DSP、広告ネットワーク、SSP など ) に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 49%
+source-wordcount: '258'
+ht-degree: 57%
 
 ---
 
@@ -26,7 +26,8 @@ Adobe Experience Platformを、デマンドサイドプラットフォーム (DS
 
 ### 接続
 
-* [Adobe Advertising Cloud接続](adobe-advertising-cloud-connection.md)
+* [Adobe Advertising Cloud 接続](adobe-advertising-cloud-connection.md)
+* [（ベータ版）Amazon Ads 接続](amazon-ads.md)
 * [（ベータ版）Criteo 接続](criteo.md)
 * [Google Display &amp; Video 360 接続](google-dv360.md)
 * [Google Ads 接続](google-ads-destination.md)
@@ -37,7 +38,7 @@ Adobe Experience Platformを、デマンドサイドプラットフォーム (DS
 * [Pinterest Customer List 接続](pinterest.md)
 * [（ベータ版）Snapchat 広告接続](snap-inc.md)
 * [Trade Desk 接続](tradedesk.md)
-* [（ベータ版）トレードデスク CRM 接続](tradedesk-emails.md)
+* [（ベータ版）The Trade Desk CRM 接続](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 拡張機能
