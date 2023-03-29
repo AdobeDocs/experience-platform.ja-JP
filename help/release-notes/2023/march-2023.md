@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: 48cd7f670ab7d42d2b0c54bb549d37aa3b9ebe66
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 45%
+source-wordcount: '715'
+ht-degree: 42%
 
 ---
 
@@ -28,6 +28,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 機能 | 説明 |
 | --- | --- |
 | メタコンバージョン API（ベータ版）の新しいクイックスタートワークフロー | データコレクションのホーム画面の「はじめに」の新しいクイックスタートワークフローにアクセスできます。 この [メタ変換 API のクイックスタートワークフロー](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) を使用すれば、わずか数回の簡単な手順で、サーバー側から Meta へと迅速にイベントデータを収集し、転送して広告コンバージョンをおこなうことができます。 |
+| Mobile SDK（ベータ版）用の新しいクイックスタートワークフロー | データコレクションのホーム画面の「はじめに」の新しいクイックスタートワークフローにアクセスできます。 この [Mobile SDK のクイックスタートワークフロー](https://developer.adobe.com/client-sdks/documentation/) を使用すると、簡単な手順で Mobile SDK をすばやく実装し、基本的なモバイルイベントを検証できます。 |
 | [!DNL Braze] イベント転送拡張機能 | この [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、に送信できます。 [!DNL Braze] を使用して、サーバー側のイベントの形式で [!DNL Braze] ユーザー追跡 API |
 | [!DNL Mixpanel] イベント転送拡張機能 | この [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network でイベント情報をキャプチャし、イベント追跡 API を使用して Mixpanel に送信できます。 |
 
