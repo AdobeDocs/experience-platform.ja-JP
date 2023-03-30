@@ -6,7 +6,7 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '963'
 ht-degree: 100%
 
