@@ -5,9 +5,9 @@ title: UI での Adobe Analytics ソースコネクタの作成
 type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
+source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2365'
 ht-degree: 61%
 
 ---
@@ -159,16 +159,12 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 * [データ準備のマッピング機能](../../../../../data-prep/functions.md)
 * [計算フィールドを追加](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### リアルタイム顧客プロファイルのフィルタリング（ベータ版） {#filtering-for-profile}
+### リアルタイム顧客プロファイルのフィルタリング {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="フィルタールールの作成"
 >abstract="リアルタイム顧客プロファイルにデータを送信する際の、行および列レベルのフィルタールールを定義します。 行レベルのフィルターを使用して、条件を適用し、適用するデータを指定します **プロファイル取り込み用に含める**. 列レベルのフィルターを使用して、データの列を選択します **プロファイル取り込み用に除外**. フィルタールールは、データレイクに送信されるデータには適用されません。"
-
->[!IMPORTANT]
->
->フィルタリングのサポート [!DNL Analytics] データは現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
 マッピングを完了したら、 [!DNL Analytics] レポートスイートのデータを使用する場合、フィルタリングルールと条件を適用して、リアルタイム顧客プロファイルへの取り込みからデータを選択的に含めたり除外したりできます。 フィルタリングのサポートは、次の場合にのみ使用できます。 [!DNL Analytics] データとデータは、 [!DNL Profile.] すべてのデータがデータレイクに取り込まれます。
 
