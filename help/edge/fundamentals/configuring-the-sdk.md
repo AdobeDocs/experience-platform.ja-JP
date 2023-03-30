@@ -4,10 +4,10 @@ description: Adobe Experience Platform Web SDK の設定方法について説明
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web；デバイス；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk 設定；prehidingStyle;cookieDestinationsEnabled;DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
+source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 34%
+source-wordcount: '1128'
+ht-degree: 27%
 
 ---
 
@@ -36,21 +36,21 @@ alloy("configure", {
 >
 >**Edge 設定は Datastreams に商標変更されました。 データストリーム ID は設定 ID と同じです。**
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 割り当てられた設定 ID。SDK を適切なアカウントと設定にリンクします。1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `edgeConfigId` を設定する必要があります。
 
 ### `context` {#context}
 
-| **タイプ** | **必須** | **デフォルト値** |
+| **タイプ** | 必須 | **デフォルト値** |
 | ---------------- | ------------ | -------------------------------------------------- |
 | 文字列の配列 | × | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 「[自動情報](../data-collection/automatic-information.md)」の説明に従って、自動的に収集するコンテキストカテゴリを示します。この設定を指定しない場合、すべてのカテゴリがデフォルトで使用されます。
 
@@ -67,11 +67,11 @@ alloy("configure", {
 
 ### `debugEnabled`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `false` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 デバッグが有効かどうかを示します。 この設定を `true` に設定すると、次の機能が有効になります。
 
@@ -79,7 +79,7 @@ alloy("configure", {
 | ---------------------- | ------------------ |
 | コンソールログ | ブラウザーの JavaScript コンソールにデバッグメッセージを表示できるようにします |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `edgeDomain` {#edge-domain}
 
@@ -91,19 +91,19 @@ alloy("configure", {
 
 Adobe サービスとの通信およびやり取りに使用される edgeDomain の後のパス。  多くの場合、これはデフォルトの実稼動環境を使用しない場合にのみ変更されます。
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | 文字列 | × | ee |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `orgId`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 割り当てられた [!DNL Experience Cloud] 組織 ID。 1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `orgId` を設定する必要があります。
 
@@ -111,33 +111,52 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 
 ### `clickCollectionEnabled` {#clickCollectionEnabled}
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 リンククリック数に関連付けられたデータを自動的に収集するかどうかを示します。 詳しくは、 [自動リンクトラッキング](../data-collection/track-links.md#automaticLinkTracking) を参照してください。 ダウンロード属性を含むリンクや、リンクがファイル拡張子で終わるリンクは、ダウンロードリンクとしてもラベル付けされます。 ダウンロードリンク修飾子は、正規表現で設定できます。 デフォルト値は です。`"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | 関数 | × | () => 未定義 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 すべてのイベントに対して呼び出されるコールバックを送信直前に設定します。 フィールド `xdm` を持つオブジェクトがコールバックに送信されます。送信内容を変更するには、 `xdm` オブジェクト。 コールバック内では、 `xdm` オブジェクトには、既にイベントコマンドに渡されたデータと、自動的に収集された情報が含まれています。 このコールバックのタイミングと例について詳しくは、[イベントのグローバルな変更](tracking-events.md#modifying-events-globally)を参照してください。
+
+### `onBeforeLinkClickSend` {#onBeforeLinkClickSend}
+
+| タイプ | 必須 | デフォルト値 |
+| -------- | ------------ | ----------------- |
+| 関数 | × | () => 未定義 |
+
+{style="table-layout:auto"}
+
+すべてのリンククリックトラッキングイベントに対して呼び出されるコールバックを、送信直前に設定します。 コールバックは、 `xdm`, `clickedElement`、および `data` フィールド。
+
+DOM 要素構造を使用してリンクトラッキングをフィルタリングする場合、 `clickElement` コマンドを使用します。 `clickedElement` は、クリックされ、親ノードツリーをカプセル化した DOM 要素ノードです。
+
+送信するデータを変更するには、 `xdm` および/または `data` オブジェクト。 コールバック内では、 `xdm` オブジェクトには、既にイベントコマンドに渡されたデータと、自動的に収集された情報が含まれています。
+
+* 次の値以外の値： `false` は、イベントの処理とコールバックの送信を許可します。
+* このコールバックが `false` の値を指定した場合、エラーなしでイベントの処理が停止し、イベントは送信されません。 このメカニズムを使用すると、イベントデータを調べて `false` を返します。
+* コールバックで例外がスローされると、イベントの処理が停止され、イベントは送信されません。
+
 
 ## プライバシーオプション
 
 ### `defaultConsent` {#default-consent}
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | オブジェクト | × | `"in"` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ユーザーのデフォルトの同意を設定します。この設定は、ユーザーの同意設定が既に保存されていない場合に使用します。 その他の有効な値は次のとおりです。 `"pending"` および `"out"`. このデフォルト値は、ユーザーのプロファイルに保持されません。 ユーザーのプロファイルは、 `setConsent` が呼び出されます。
 * `"in"`:この設定が設定されている場合、または値が指定されていない場合は、ユーザーの同意設定なしで作業が続行されます。
@@ -149,11 +168,11 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 
 ### `prehidingStyle` {#prehidingStyle}
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | 文字列 | × | なし |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 パーソナライズされたコンテンツをサーバーから読み込む際に、Web ページのコンテンツ領域を非表示にする CSS スタイル定義を作成するために使用します。このオプションを指定しない場合、SDK は、パーソナライズされたコンテンツの読み込み中に、コンテンツ領域を非表示にしようとしません。その結果、「ちらつき」が発生する可能性があります。
 
@@ -169,7 +188,7 @@ Adobe サービスとの通信およびやり取りに使用される edgeDomain
 
 Web SDK がレガシーの `mbox` および `mboxEdgeCluster` Cookie [!DNL at.js]. これにより、Web SDK を使用するページから、 [!DNL at.js] ライブラリとその逆。
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `false` |
 
@@ -177,21 +196,21 @@ Web SDK がレガシーの `mbox` および `mboxEdgeCluster` Cookie [!DNL at.js
 
 ### `cookieDestinationsEnabled`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有効 [!DNL Audience Manager] Cookie の宛先：セグメントの資格に基づいて Cookie を設定できます。
 
 ### `urlDestinationsEnabled`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有効 [!DNL Audience Manager] URL の宛先。セグメントの選定に基づいて URL を呼び出すことができます。
 
@@ -199,11 +218,11 @@ Web SDK がレガシーの `mbox` および `mboxEdgeCluster` Cookie [!DNL at.js
 
 ### `idMigrationEnabled` {#id-migration-enabled}
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 true の場合、SDK は古い AMCV Cookie を読み取って設定します。 このオプションは、サイトの一部で引き続き Visitor.js を使用している間に、Adobe Experience Platform Web SDK の使用に移行する際に役立ちます。
 
@@ -211,10 +230,10 @@ true の場合、SDK は古い AMCV Cookie を読み取って設定します。 
 
 ### `thirdPartyCookiesEnabled`
 
-| **タイプ** | **必須** | **デフォルト値** |
+| タイプ | 必須 | デフォルト値 |
 | -------- | ------------ | ----------------- |
 | ブール値 | × | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 アドビのサードパーティ Cookie の設定を有効にします。SDK は、訪問者 ID をサードパーティのコンテキストで保持し、同じ訪問者 ID をサイト全体で使用できるようにします。 複数のサイトがある場合や、データをパートナーと共有する場合は、このオプションを使用します。ただし、プライバシー上の理由から、このオプションが望ましくない場合があります。

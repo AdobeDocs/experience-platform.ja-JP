@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK を使用したリンクの追跡
 description: Experience PlatformWeb SDK を使用してAdobe Analyticsにリンクデータを送信する方法について説明します
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web インタラクション；ページビュー；リンクトラッキング；リンク；clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
+source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+バージョン2.15.0以降、Web SDK は `region` クリックされたHTML要素の これにより、 [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=ja) Adobe Analyticsのレポート機能
 
 リンクタイプは、次の 3 つの値のいずれかになります。
 
@@ -90,3 +92,23 @@ alloy("configure", {
 });
 ```
 
+Web SDK バージョン2.15.0以降では、 [onBeforeLinkClickSend コールバック関数](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+このコールバック関数は、自動リンククリックイベントが発生した場合にのみ実行されます。
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+を使用してリンクトラッキングイベントをフィルタリングする場合、 `onBeforeLinkClickSend` コマンド、Adobeは `false` 追跡すべきでないリンククリック数に対する制限を設定します。 その他の応答は、Web SDK によって Edge ネットワークにデータが送信されます。
+
+
+>[!NOTE]
+>
+>** `onBeforeEventSend` および `onBeforeLinkClickSend` コールバック関数が設定されている場合、Web SDK は `onBeforeLinkClickSend` リンククリックインタラクションイベントをフィルタリングおよび拡張し、その後に `onBeforeEventSend` コールバック関数。
