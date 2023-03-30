@@ -5,9 +5,9 @@ title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1887'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -119,7 +119,7 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 #### 有料メディアの同意ポリシーの強化 {#consent-policy-enhancement}
 
-に対する同意ポリシーの実施の強化 [バッチ](../../destinations/destination-types.md#file-based) および [ストリーミング](../../destinations/destination-types.md#streaming-destinations) 有料メディアのアクティベーションを含む宛先がおこなわれました。 この機能強化は、プライバシーとセキュリティシールドまたはヘルスケアシールドのお客様が利用でき、同意ステータスの変更に応じて、バッチおよびストリーミング先からプロファイルを積極的に削除します。 また、適切なオーディエンスが常にターゲットになるように、同意の変更が即座に反映されます。
+有料メディアのアクティベーションなど、[バッチ](../../destinations/destination-types.md#file-based)や[ストリーミング](../../destinations/destination-types.md#streaming-destinations)宛先に対する同意ポリシーの適用が強化されました。 この強化機能は、Privacy and Security Shield または Healthcare Shield のお客様が利用できるもので、同意ステータスの変更に応じて、バッチやストリーミング宛先からプロアクティブにプロファイルを削除します。 また、適切なオーディエンスが常にターゲットになるように、同意の変更が即座に反映されます。
 
 これらの改善により、マーケターがセグメント式に同意属性を手動で追加しなくてもよくなるので、マーケティング戦略に対する信頼が高まります。 これにより、同意が取り下げられたり、同意ポリシーに適さなくなったりした場合に、プロファイルが誤ってマーケティングエクスペリエンスのターゲットになることを防止できます。 様々なマーケティングワークフローで同意または環境設定データを管理する方法に関するルールを設定するマーケティング同意ポリシーが、ダウンストリームソリューションのアクティブ化ワークフローで自動的に適用されるようになりました。
 
