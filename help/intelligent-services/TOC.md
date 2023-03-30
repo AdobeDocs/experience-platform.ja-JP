@@ -5,9 +5,9 @@ user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
 source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '140'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 - コンテンツのタグ付け {#content-commerce-ai}
    - [概要](content-commerce-ai/overview.md)
    - [はじめに](content-commerce-ai/getting-started.md)
-   - コンテンツタグ付け API{#api}
+   - コンテンツのタグ付け API{#api}
       - [カラータグ付け](content-commerce-ai/api/color-tagging.md)
       - [キーワードのタグ付け](content-commerce-ai/api/keyword-tagging.md)
       - [テキストの存在と光学式文字認識](content-commerce-ai/api/optical-character-recognition.md)
