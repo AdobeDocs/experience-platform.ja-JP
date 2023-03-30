@@ -4,9 +4,9 @@ user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
 source-git-commit: 81d219116479aa71e9540e4efa636bec8dea5d23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
