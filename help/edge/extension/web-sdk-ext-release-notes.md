@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
+source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 100%
+source-wordcount: '1597'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 100%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+
+## バージョン2.16.0 - 2023 年 3 月 30 日
+
+**新機能**
+
+* （ベータ版）追加済み **[!UICONTROL 変数を更新]** アクションと **[!UICONTROL 変数]** データ要素。
+* 次の設定を追加しました： [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) コールバック関数。
+
+**修正点および改善点**
+
+* アンカータグ内の要素をクリックすると、 **[!UICONTROL ID でリダイレクト]** アクションが使用されました。
+* スキーマが 1 つだけ存在する場合に XDM オブジェクトのデータ要素が機能しない問題を修正しました。
+* Adobe Experience Platform Web SDK のバージョン 2.15.0 が含まれます。
+
 
 ## バージョン 2.15.1 - 2023年1月26日（PT）
 

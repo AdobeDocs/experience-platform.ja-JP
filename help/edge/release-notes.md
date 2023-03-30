@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
-workflow-type: ht
-source-wordcount: '1470'
-ht-degree: 100%
+source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+workflow-type: tm+mt
+source-wordcount: '1507'
+ht-degree: 97%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 100%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン 2.14.0 - 2023年1月25日（PT）
+## バージョン2.15.0 - 2023 年 3 月 30 日
 
 **新機能**
 
-* （ベータ版）AJO のサーフェスと提案のサポートが追加されました。
+* のサポートを追加しました。 [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) リンククリックコールバック。
+* Adobe Journey Optimizerのクリック追跡のサポートを追加しました。
+
+**修正点および改善点**
+
+* リンクコレクションに、リンク名と訪問者の地域が含まれるようになりました。
+* 失敗した URL 宛先のコンソールエラーを削除しました。
+
+## バージョン 2.14.0 - 2023年1月25日（PT）
+
+* （ベータ版）Adobe Journey Optimizerのサーフェスと提案のサポートが追加されました。
 
 **修正点および改善点**
 
