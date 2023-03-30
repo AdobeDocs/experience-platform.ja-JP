@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのデータ使用ポリシーの管理
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platform ユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要について説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1413'
-ht-degree: 100%
+source-wordcount: '1618'
+ht-degree: 87%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 100%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="説明"
->abstract=""
+>title="プロファイルデータに顧客の同意を統合して実施する"
+>abstract="<h2>説明</h2><p>Platform を使用すると、顧客から収集した同意データを、それぞれのプロファイルに統合できます。 その後、同意ポリシーを設定して、特定の宛先に対してアクティブ化されるセグメントにこのデータを含めることができるかどうかを決定できます。</p>"
 
 このドキュメントでは、Adobe Experience Platform UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースを使用して、データ使用ポリシーを作成および管理する方法について説明します。
 
@@ -92,7 +92,7 @@ ht-degree: 100%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="説明"
->abstract=""
+>abstract="<ul><li>OneTrust ソースコネクタまたは標準の XDM スキーマを使用して、同意を得るために環境設定データを和集合スキーマに取り込んでいることを確認します。</li><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a> 左側のナビゲーションで、「 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">ポリシーを作成</a>.</li><li>以下 <b>If</b> この節では、ポリシーチェックをトリガーする条件またはアクションについて説明します。</li><li>以下 <b>次に、</b> 「 」セクションで、ポリシーをトリガーしたアクションにプロファイルを含めるために存在する必要がある同意属性を入力します。</li><li>選択 <b>保存</b> ポリシーを作成します。 ポリシーを有効にするには、 <b>ステータス</b> 右側のパネルを切り替えます。</li><li>Experience Platformは、宛先に対してセグメントをアクティブ化する際に、有効な同意ポリシーを自動的に適用し、各ポリシーがオーディエンスサイズに与える影響の詳細を提供します。</li><li>この機能に関するヘルプの詳細については、 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">同意ポリシーの作成</a> Experience League</li></ul>"
 
 >[!IMPORTANT]
 >

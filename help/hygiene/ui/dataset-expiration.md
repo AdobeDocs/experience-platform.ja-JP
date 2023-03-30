@@ -2,10 +2,10 @@
 title: データセット有効期限の管理
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 93%
+source-wordcount: '736'
+ht-degree: 73%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 93%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="説明"
->abstract=""
+>title="不要な顧客レコードおよび期限切れの顧客データセットの削除"
+>abstract="<h2>説明</h2><p>規制への準拠に関係なく、Experience Platformデータのライフサイクルを管理するには、消費者データを削除し、データセットの有効期限をスケジュールできます。 データ主体のリクエストを作成または管理するには、「データ主体のプライバシーリクエストに従う」使用例ブロックを参照してください。</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="説明"
->abstract=""
+>abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=ja">データの衛生状態</a> 左側のナビゲーションで、「 <b>リクエストを作成</b>.</li><li>レコードを削除する場合：</li>   <li>選択 <b>レコード</b>.</li>   <li>レコードを削除する特定のデータセットを選択するか、すべてのデータセットからレコードを削除するオプションを選択します。</li>   <li>レコードを削除するコンシューマーの ID を指定します。 選択 <b>ID を追加</b> 一度に 1 つずつ id を提供するか、または <b>ファイルを選択</b> をクリックして、id の JSON ファイルをアップロードすることをお勧めします。</li>   <li>必要に応じて、「 」を選択します。 <b>テンプレート</b> をクリックして、JSON ファイルに必要な形式を表示します。</li><li>手順については、ドキュメントを参照してください <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">データセットの有効期限をスケジュール</a>.</li></ul>"
 
 新しいリクエストを作成するには、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
 
@@ -54,8 +54,7 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 ![データセットが選択されていることを示す画像](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->現在のサンドボックスに属するデータセットのみが表示されます。
+現在のサンドボックスに属するデータセットのみが表示されます。
 
 ### リクエストの送信
 
@@ -68,8 +67,7 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 リクエストが送信されると、作業指示が作成され、[!UICONTROL データハイジーン]ワークスペースのメインタブに表示されます。ここから、リクエストを処理する作業指示のステータスを監視できます。
 
 >[!NOTE]
->
->データセットの有効期限が実行されるとどのように処理されるかの詳細については、[タイムラインと透明性](../home.md#dataset-expiration-transparency)の概要に関する節を参照してください。
+データセットの有効期限が実行されるとどのように処理されるかの詳細については、[タイムラインと透明性](../home.md#dataset-expiration-transparency)の概要に関する節を参照してください。
 
 ## データセット有効期限の編集またはキャンセル
 

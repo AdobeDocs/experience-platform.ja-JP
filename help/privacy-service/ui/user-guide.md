@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 53%
+source-wordcount: '1463'
+ht-degree: 46%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 53%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="説明"
->abstract=""
+>title="データ主体のプライバシーリクエストに従う"
+>abstract="<h2>説明</h2><p>Adobe Experience Platform Privacy Serviceでは、法的プライバシー規制に従って、個人データにアクセスしたり削除したりする顧客に代わって、プライバシーリクエストを作成および管理できます。</p>"
 
 このドキュメントでは、 [!DNL Privacy Service] ユーザーインターフェイス。
 
@@ -109,7 +109,7 @@ ht-degree: 53%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="説明"
->abstract=""
+>abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">リクエスト</a> 左側のナビゲーションでプライバシー Ul を開き、を選択します。 <b>リクエストを作成</b>.</li><li>ここから、リクエストビルダーを使用するか、データ主体の JSON ファイルをアップロードできます。</li><li>リクエストビルダーを使用する場合、ジョブのタイプ（アクセスまたは削除）を選択し、提供する ID のタイプ（電子メール、ECID、AAID）を選択するか、カスタム ID 名前空間を入力します。 顧客に適した ID 値を入力し、 <b>作成</b> 終了したとき。</li><li>JSON ファイルをアップロードする場合は、「リクエストを作成」の横にある矢印を選択します。 オプションのリストから、「 」を選択します。 <b>JSON をアップロード</b> ファイルをアップロードします。 アップロードする JSON ファイルがない場合は、 <b>Adobe-GDPR-Request.json をダウンロード</b> をクリックして、入力できるテンプレートをダウンロードします。 JSON をアップロードし、「 」を選択します。 <b>作成</b> 終了したとき。</li><li>この機能に関する詳しいヘルプについては、 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ja">Privacy Serviceユーザーガイド</a> Experience League</li></ul>"
 
 >[!NOTE]
 >
