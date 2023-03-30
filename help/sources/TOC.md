@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 98%
+source-wordcount: '963'
+ht-degree: 97%
 
 ---
 
@@ -352,6 +352,9 @@ ht-degree: 98%
       - [ソースのドキュメント化（ストリーミング SDK）](sources-sdk/streaming/document-streaming.md)
       - [ドキュメントセルフサービス API のストリーミングテンプレート](sources-sdk/streaming/streaming-template-api.md)
       - [ドキュメントセルフサービス UI のストリーミングテンプレート](sources-sdk/streaming/streaming-template-ui.md)
+- エラーメッセージ {#errors}
+   - [ソースのエラーメッセージ](./errors/sources-errors.md)
+   - [フローサービスのエラーメッセージ](./errors/flow-service-errors.md)
 - [フロー実行通知](notifications.md)
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
