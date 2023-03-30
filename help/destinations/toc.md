@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: aa915c24dc6d73a5bdd3345cfb0fb7049bdd2679
 workflow-type: tm+mt
 source-wordcount: '1068'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -138,8 +138,8 @@ ht-degree: 95%
       * [メールマーケティングの宛先の概要](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 接続](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [(API)OracleEloqua 接続](./catalog/email-marketing/oracle-eloqua-api.md)
-      * [（ファイル）OracleEloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
+      * [（API）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [（ファイル）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 接続](./catalog/email-marketing/oracle-responsys.md)
       * [（API）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [（ファイル）Salesforce Marketing Cloud 接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -154,7 +154,7 @@ ht-degree: 95%
       * [回線接続](./catalog/mobile-engagement/line.md)
    * パーソナライゼーションの宛先 {#personalization}
       * [パーソナライゼーションの宛先の概要](./catalog/personalization/overview.md)
-      * [Adobe Commerce接続](./catalog/personalization/adobe-commerce.md)
+      * [Adobe Commerce 接続](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 接続](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 拡張機能](./catalog/personalization/adobe-target-v2.md)

@@ -91,7 +91,7 @@ ht-degree: 87%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
->title="説明"
+>title="手順"
 >abstract="<ul><li>OneTrust ソースコネクタまたは標準の XDM スキーマを使用して、同意を得るために環境設定データを和集合スキーマに取り込んでいることを確認します。</li><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a> 左側のナビゲーションで、「 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">ポリシーを作成</a>.</li><li>以下 <b>If</b> この節では、ポリシーチェックをトリガーする条件またはアクションについて説明します。</li><li>以下 <b>次に、</b> 「 」セクションで、ポリシーをトリガーしたアクションにプロファイルを含めるために存在する必要がある同意属性を入力します。</li><li>選択 <b>保存</b> ポリシーを作成します。 ポリシーを有効にするには、 <b>ステータス</b> 右側のパネルを切り替えます。</li><li>Experience Platformは、宛先に対してセグメントをアクティブ化する際に、有効な同意ポリシーを自動的に適用し、各ポリシーがオーディエンスサイズに与える影響の詳細を提供します。</li><li>この機能に関するヘルプの詳細については、 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">同意ポリシーの作成</a> Experience League</li></ul>"
 
 >[!IMPORTANT]

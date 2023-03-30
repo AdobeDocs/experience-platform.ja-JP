@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;タグカテゴリ;タグ;
 title: タグカテゴリ
-description: このドキュメントでは、Adobe Experience Cloudでの統合タグカテゴリの管理に関する情報を提供します
+description: このドキュメントでは、Adobe Experience Cloud での統合タグカテゴリの管理について説明します
 source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 

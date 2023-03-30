@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；統合タグ；タグ；
+keywords: Experience Platform;ホーム;人気のトピック;統合タグ;タグ;
 title: 統合タグの概要（ベータ版）
-description: このドキュメントでは、Adobe Experience Platformの統合タグに関する情報を提供します
+description: このドキュメントでは、Adobe Experience Platform の統合タグについて説明します
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->統合タグはベータ版です。 フィードバックを残したい場合は、タグ管理ページの上部にある「 」ボタンを選択してください。
+>統合タグはベータ版です。 フィードバックを残したい場合は、タグ管理ページの上部にあるボタンを選択してください。
 
 タグは、ビジネスオブジェクトを分類して検出とカテゴリ化を容易にするために管理者がメタデータの分類を管理できるようにする、Adobe Experience Platform の機能です。タグはメタデータで、セグメント、データセット、ジャーニーまたは他のオブジェクトに付加できてオブジェクトや関連するオブジェクトを検索できるようにするキーワードと考えることができます。タグは、分類済みと未分類の 2 つのタイプに分類されます。
 

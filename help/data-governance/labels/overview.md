@@ -50,7 +50,7 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
->title="説明"
+>title="手順"
 >abstract="<ul><li>「 XDM Fields 」と「 Segments 」にラベルを付け、アクセスを制限するフィールドやセグメントを分類します。</li><li>ロールのラベル付け、ロールにラベルを追加すると、このロールのメンバーが制限を受けるラベルを定義できます。</li><li>ポリシーを作成すると、ポリシーは、XDM フィールドやセグメントなどのラベル付きオブジェクトのラベルと、役割のラベルとの関係を作成します。 ラベルが一致する場合は、許可または制限アクセスを定義できます。</li></ul>"
 
 [!DNL Experience Platform] API またはユーザーインターフェイスを使用して、データ使用ラベルを管理できます。それぞれの詳細については、以下のサブセクションを参照してください。
