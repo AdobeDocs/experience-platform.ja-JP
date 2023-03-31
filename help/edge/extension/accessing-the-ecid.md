@@ -1,32 +1,33 @@
 ---
 title: ECID へのアクセス
-description: Adobe Experience Platform Web SDK 拡張機能（タグでの ECID の活用）
+description: Adobe Experience PlatformタグでExperience CloudID(ECID) にアクセスする方法を説明します
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 10%
+source-wordcount: '132'
+ht-degree: 9%
 
 ---
 
+
 # ECID へのアクセス
 
-この [!DNL Experience Cloud Identity (ECID)] は、Web サイトの訪問者の永続的な識別子です。 状況によっては、ECID にアクセスする（例えば、サードパーティに送信する）ことをお勧めします。
+この [!DNL Experience Cloud ID (ECID)] は、Web サイトのExperience Cloudを識別するのに役立つ永続的な訪問者識別子です。 識別子をサードパーティプラットフォームに送信するなど、特定の状況では、 [!DNL ECID].
 
-タグ内の ECID にアクセスするには、Adobeで次の操作をお勧めします。
+次の手順で [!DNL ECID] タグ内で、次の手順に従います。
 
 1. プロパティがで設定されていることを確認します。 [ルールコンポーネントの順番](../../tags/ui/managing-resources/rules.md#sequencing) 有効。
-1. 新しいルールを作成します。
-1. を追加します。 [!UICONTROL Library Loaded] イベントをルールに追加します。
-1. を追加します。 [!UICONTROL カスタム条件] 次のコードを使用してルールにアクションを追加します（SDK インスタンスに設定した名前がの場合）。 `alloy`):
+2. 新しいルールを作成します。
+3. を追加します。 [!UICONTROL Library Loaded] イベントをルールに追加します。
+4. を追加します。 [!UICONTROL カスタム条件] 次のコードを使用して、ルールに対するアクションを作成します（SDK インスタンスに設定した名前がの場合）。 `alloy`):
 
    ```javascript
-    return alloy("getIdentity")
-      .then(function(result) {
-        _satellite.setVar("ECID", result.identity.ECID);
-      });
+   return alloy("getIdentity")
+       .then(function(result) {
+           _satellite.setVar("ECID", result.identity.ECID);
+       });
    ```
 
-1. ルールを保存します。
+5. ルールを保存します。
 
-その後、を使用して後続のルールで ECID にアクセスできるようになります。 `%ECID%` または `_satellite.getVar("ECID")` 他のデータ要素と同様に
+これで、 [!DNL ECID] 後続のルールで、を使用 `%ECID%` または `_satellite.getVar("ECID")`（他のデータ要素にアクセスする方法と同様）
