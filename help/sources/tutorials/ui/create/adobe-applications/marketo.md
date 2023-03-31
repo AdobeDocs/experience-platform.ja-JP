@@ -2,10 +2,10 @@
 title: UI でのMarketo Engageソース接続とデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、B2B データをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 82%
+source-wordcount: '1693'
+ht-degree: 76%
 
 ---
 
@@ -183,3 +183,24 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 * [[!DNL Real-Time Customer Profile] 概要](/help/profile/home.md)
 * [[!DNL Data Science Workspace] 概要](/help/data-science-workspace/home.md)
+
+## 付録 {#appendix}
+
+以下の節では、 [!DNL Marketo] ソース。
+
+### UI のエラーメッセージ {#error-messages}
+
+Platform が設定に関する問題を検出すると、UI に次のエラーメッセージが表示されます。
+
+#### [!DNL Munchkin ID] は適切な組織にマッピングされていません
+
+次の場合、認証は拒否されます： [!DNL Munchkin ID] は、使用している Platform 組織にマッピングされていません。 次の間のマッピングを設定します： [!DNL Munchkin ID] および組織が [[!DNL Marketo] インターフェイス](https://app-sjint.marketo.com/#MM0A1).
+
+![MarketoインスタンスがAdobe組織に正しくマッピングされていないことを示すエラーメッセージ。](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+
+#### プライマリID がありません
+
+プライマリ ID が見つからない場合、データフローの保存と取り込みに失敗します。 以下を確認します。 [XDM スキーマ内にプライマリ ID が存在する](../../../../../xdm/tutorials/create-schema-ui.md)（データフローを設定する前に）を含める必要があります。
+
+![XDM スキーマにプライマリ ID がないことを示すエラーメッセージ。](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+
