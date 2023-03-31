@@ -1,7 +1,7 @@
 ---
 title: Data Distillerの概要
 description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
-source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
+source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -14,7 +14,7 @@ Data Distillerは、Adobe Experience Platformの機能のサブセットを含�
 
 ## ライセンス使用状況 {#license-usage}
 
-この  [Data Distiller License Usage Dashboard](./license-usage.md) は、Data Distiller Compute 時間を購入すると利用できます。 ライセンス使用状況ダッシュボードを使用すると、使用権限を付与されたコンピューティング時間の消費状況を監視できます。 詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./license-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
+この [Data Distiller License Usage Dashboard](./license-usage.md) は、Data Distiller Compute 時間を購入すると利用できます。 ライセンス使用状況ダッシュボードを使用すると、使用権限を付与されたコンピューティング時間の消費状況を監視できます。 詳しくは、 [Data Distillerライセンス使用状況ドキュメント](./license-usage.md) を参照して、組織のクエリサービスライセンスの使用状況に関する重要な情報を確認してください。
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
