@@ -2,12 +2,12 @@
 keywords: メール;メール;メール;メールの宛先
 title: メールマーケティングの宛先の概要
 type: Tutorial
-description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。
+description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。宛先としてサポートされる ESP をExperience Platformします。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 99%
+source-wordcount: '377'
+ht-degree: 76%
 
 ---
 
@@ -17,16 +17,17 @@ ht-degree: 99%
 
 メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。Adobe Experience Platform は、メールマーケティングの宛先に対してセグメントをアクティブ化できるようにすることで、ESP と統合されます。
 
-Platform は、セグメントを `.csv` ファイル形式で書き出し、目的の場所に配信します。[!DNL Platform] で有効になっているストレージの場所から、お使いのメールマーケティングプラットフォームでのデータの読み込みスケジュールを設定します。データを読み込むプロセスは、パートナーごとに異なります。詳しくは、個々の宛先に関する記事を参照してください。
-
 ## サポートされているメールマーケティングの宛先 {#supported-destinations}
 
 Adobe Experience Platform は、次のメールマーケティングの宛先をサポートしています。
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API)OracleEloqua](oracle-eloqua-api.md)
+* [（API）Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [（ファイル）OracleEloqua](oracle-eloqua.md)
+* [（ファイル） SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## 新しいメールマーケティングの宛先への接続 {#connect-destination}
@@ -45,7 +46,9 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 | 電話番号 | `mobilePhone.number` |
 | ロイヤリティープログラム ID | `Customer-defined XDM field` |
 
-### その他の宛先属性
+{style="table-layout:auto"}
+
+### その他の宛先属性 {#other-destination-attributes}
 
 「スキーマ」フィールドセレクターで、電子メールの送信先に書き出しする他のフィールドを選択します。次のオプションが推奨されます。
 
@@ -60,20 +63,17 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 | 誕生日 | `person.birthDayAndMonth` |
 | セグメントのメンバーシップ | `segmentMembership.status` |
 
-## ストレージの場所から宛先へのデータの読み込み {#import-data-into-destination}
-
-ストレージの場所から宛先にデータを読み込む方法については、個々のメールマーケティングの宛先に関する記事を参照してください。
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
-* [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## メールマーケティングの宛先に対してセグメントをアクティブ化 {#activate}
 
-メールマーケティングの宛先に対してセグメントをアクティブ化する方法については、[プロファイルの一括書き出しの宛先に対してオーディエンスデータをアクティブ化する](../../ui/activate-batch-profile-destinations.md)を参照してください。
+カタログの書き出しプロファイルの一部の電子メールマーケティングの宛先は、宛先との API 統合を通じて、ストリーミング方式で行われます。
 
-## その他のリソース
+クラウドストレージの場所に、その他の宛先の書き出しファイルを書き出します。 書き出しが完了したら、クラウドストレージの場所から電子メールマーケティングの宛先にデータを読み込む必要があります。
+
+リンク先の [サポートされる電子メールマーケティングの宛先](#supported-destinations) の節を参照して、各電子メールマーケティングの宛先に対してセグメントをアクティブ化する方法を確認してください。
+
+## その他のリソース {#additional-resources}
 
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../../ui/activate-batch-profile-destinations.md)
 * [Flow Service API を使用したメールマーケティングの宛先の作成とデータのアクティブ化](../../api/connect-activate-batch-destinations.md)
