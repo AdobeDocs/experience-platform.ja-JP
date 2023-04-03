@@ -2,10 +2,10 @@
 title: 高速クエリエンドポイント
 description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
+source-wordcount: '566'
+ht-degree: 97%
 
 ---
 
@@ -17,7 +17,11 @@ Data Distiller SKU の一部である [Query Service API](https://developer.adob
 
 ## はじめに
 
-Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。Data Distiller SKU に関連する[パッケージ](../packages.md)、[ガードレール](../guardrails.md#query-accelerated-store)および[ライセンス](../data-distiller/license-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+Data Distiller SKU は、クエリ高速化ストアを使用する場合に必要です。詳しくは、 [パッケージ](../packages.md) および [guardrail](../guardrails.md#query-accelerated-store) Data Distiller SKU に関するドキュメント。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+
+<!-- Document is hidden temporarily
+Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
 
 以下の節では、 Query Service API を使用して、ステートレスな方法でクエリ高速ストアにアクセスするために必要な API 呼び出しについて説明します。各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
