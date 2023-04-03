@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
+source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '2206'
 ht-degree: 38%
 
 ---
@@ -111,6 +111,38 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 機能 | 説明 |
 | --- | --- |
 | CSV からスキーマへのレコメンデーション | これで、ローカルファイルをアップロードして、機械学習で生成されたスキーマを作成し、スキーマを手動で作成する必要がなくなりました。 次の [!UICONTROL ソース] workspace、サンプル CSV ファイルのアップロード、Adobeの機械学習アルゴリズムにより、ターゲットフィールドに基づいてスキーマが提案されます。 詳しくは、 [ドキュメント](../../ingestion/tutorials/map-csv/recommendations.md) 詳細は」 |
+
+{style="table-layout:auto"}
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| クラス | [[!UICONTROL オファー項目]](https://github.com/adobe/xdm/pull/1678/files) | オファーを表すクラス。 |
+| クラス | [[!UICONTROL 決定項目]](https://github.com/adobe/xdm/pull/1678/files) | 判定の対象となる項目です。 判定プロセスの出力は、1 つ以上の判定項目です。 |
+| クラス | [[!UICONTROL メディアセッションサーバーのタイムアウト]](https://github.com/adobe/xdm/pull/1676/files) | これは、ユーザーの最後の既知のインタラクションからセッションが閉じられた瞬間までの経過時間を秒単位で示します。 |
+| フィールドグループ | [[!UICONTROL XDM プロファイルの計算済み属性]](https://github.com/adobe/xdm/pull/1686/files) | これにより、内部顧客からの計算済み属性が受信Adobe サービスデータに追加されます。 データの取り込みには、このオプションを使用しないでください。 |
+| データタイプ | [[!UICONTROL 払い戻し項目]](https://github.com/adobe/xdm/pull/1685/files) | 払い戻しが注文に関連付けられているかどうかを示し、払い戻しのタイプ、金額、および関連する通貨を定義します。 |
+| データタイプ | [[!UICONTROL カテゴリデータ]](https://github.com/adobe/xdm/pull/1677/files) | この新しいデータ型は製品のカテゴリを表します。 |
+| スキーマ | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Target 分類データセット用に新しい XDM スキーマが作成されました。 Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドが含まれています。 |
+
+{style="table-layout:auto"}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | [[!UICONTROL コンテンツコンポーネントの詳細]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` は次の場所から削除されました： [!UICONTROL コンテンツコンポーネントの詳細] |
+| フィールドグループ | [[!UICONTROL AJO エンティティタグ]](https://github.com/adobe/xdm/pull/1672/files) | AJO エンティティタグを [!UICONTROL AJO エンティティフィールド](ジャーニーまたはキャンペーンに対応 ) |
+| フィールドグループ | （複数） | の複数のフィールドを追加しました。 [[!UICONTROL Journey Orchestrationステップイベントの共通フィールド]](https://github.com/adobe/xdm/pull/1671/files) |
+| フィールドグループ | （複数） | [の複数の XDM イベントタイプを追加しました。 [!UICONTROL メディアレポート]](https://github.com/adobe/xdm/pull/1670/files). |
+| フィールドグループ | [!UICONTROL Workfront 変更イベント] | この `Full Record` および `Accessor Employee Ids` フィールドグループが追加されました。 |
+| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | この [!UICONTROL 返金額] が追加され、項目に対して払い戻しされた金額（ある場合）が示されます。 |
+| データタイプ | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 返金リスト] は、この注文の返金のリストに追加されました。 |
+| データタイプ | [[!UICONTROL 製品リスト項目 ]](https://github.com/adobe/xdm/pull/1677/files) | この製品のカテゴリデータのリストに製品カテゴリが追加されました。 |
+| データタイプ | [!UICONTROL セッションの詳細情報] | 追加された `pev3` 文字列フィールド [レポートに使用されるメディアストリームのタイプを示します](https://github.com/adobe/xdm/pull/1676/files). また、 `pccr` プロパティは、リダイレクトが発生したかどうかを示します。 |
+| データタイプ | [!UICONTROL 購買依頼リスト] | 次を提供： [購買依頼リスト・プロパティ](https://github.com/adobe/xdm/pull/1675/files). これには、名前、ID、説明が含まれます。 |
+| データタイプ | [!UICONTROL コマース] | この [コマースデータタイプが更新されました](https://github.com/adobe/xdm/pull/1675/files) 含める `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`、および `requisitionList`. |
 
 {style="table-layout:auto"}
 
