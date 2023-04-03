@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
+source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
 workflow-type: tm+mt
-source-wordcount: '1671'
-ht-degree: 40%
+source-wordcount: '1709'
+ht-degree: 39%
 
 ---
 
@@ -48,6 +48,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | --- | --- |
 | メタコンバージョン API（ベータ版）の新しいクイックスタートワークフロー | データコレクションのホーム画面の「はじめに」の新しいクイックスタートワークフローにアクセスできます。 この [メタ変換 API のクイックスタートワークフロー](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) を使用すれば、わずか数回の簡単な手順で、サーバー側から Meta へと迅速にイベントデータを収集し、転送して広告コンバージョンをおこなうことができます。 |
 | [!DNL Braze] イベント転送拡張機能 | この [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、に送信できます。 [!DNL Braze] を使用して、サーバー側のイベントの形式で [!DNL Braze] ユーザー追跡 API |
+| [!DNL Epsilon] イベント転送拡張機能 | この [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。 |
 | [!DNL Mixpanel] イベント転送拡張機能 | この [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network でイベント情報をキャプチャし、イベント追跡 API を使用して Mixpanel に送信できます。 |
 
 {style="table-layout:auto"}
@@ -75,7 +76,7 @@ Data Prep の詳細については、 [データ準備の概要](../../data-prep
 | ----------- | ----------- |
 | [[!DNL Adobe Commerce] 接続 GA](../../destinations/catalog/personalization/adobe-commerce.md) | この [!DNL Adobe Commerce] 宛先コネクタ（一般に提供されるようになりました）を使用すると、アクティブ化する 1 つ以上のReal-Time CDPオーディエンスを選択して、 [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 |
 | [[!DNL Snap Inc] 接続 GA](../../destinations/catalog/advertising/snap-inc.md) | この [!DNL Snap Inc] 宛先コネクタ（一般提供）を使用すると、マーケターは、Experience Platformで作成されたユーザーセグメントを [!DNL Snapchat Ads] 広告のターゲティングに使用します。 |
-| [(API)OracleEloqua 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | API ベースの接続を使用して [!DNL Oracle Eloqua] キャンペーンの計画と実行を行い、 [!DNL Oracle Eloqua]. |
+| [（API）Oracle Eloqua 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | API ベースの接続を使用して [!DNL Oracle Eloqua] キャンペーンの計画と実行を行い、 [!DNL Oracle Eloqua]. |
 | [（ベータ版） [!DNL Amazon Ads] 接続](../../destinations/catalog/advertising/amazon-ads.md) | この [!DNL Amazon Ads] Adobe Experience Platformとの統合により、 [!DNL Amazon Ads] 製品 ( [!DNL Amazon DSP (ADSP)]. の使用 [!DNL Amazon Ads] Adobe Experience Platformの宛先では、ユーザーは、ターゲティングとアクティブ化のための広告主オーディエンスを定義できます。 [!DNL Amazon DSP]. |
 | [[!DNL Marketo Measure Ultimate] 接続](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] （以前の Bizible）は、マーケターに、売上高の促進と、会社の投資回収率の最大化に最も効果的なマーケティング活動に関するインサイトを提供します。 宛先により、Adobe Experience Platformから [!DNL Marketo Measure]. カードは次の場所でのみ使用できます： [!DNL Marketo Measure Ultimate] 顧客。 |
 | [TikTok接続](../../destinations/catalog/social/tiktok.md) | 広告キャンペーンでターゲティングするためのデータを使用して、TikTok上にカスタムオーディエンスを構築します。 |
