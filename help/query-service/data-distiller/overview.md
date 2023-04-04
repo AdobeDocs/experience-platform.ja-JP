@@ -1,10 +1,10 @@
 ---
 title: Data Distillerの概要
 description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
-source-git-commit: e4337dcebaf313365ed9e403a5891f49decb29e9
+source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 2%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -12,13 +12,14 @@ ht-degree: 2%
 
 Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージ提供です。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的な使用例に対して、取り込み後のデータの準備（クリーニング、整形、操作など）を実行できます。 Data Distillerの使用は、Platform ベースのアプリケーションの使用権限に応じて異なります。
 
-## ライセンス使用状況 {#license-usage}
-
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
-The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
--->
+## License usage {#license-usage}
 
-Data Distillerライセンス使用状況ダッシュボードは、Data Distiller Compute の購入後に使用できます。 ライセンス使用状況ダッシュボードを使用すると、使用権限を付与されたコンピューティング時間の消費状況を監視できます。
+
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+
+The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
+-->
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
