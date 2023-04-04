@@ -5,10 +5,10 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
+source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
 workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 27%
+source-wordcount: '1612'
+ht-degree: 26%
 
 ---
 
@@ -186,6 +186,10 @@ UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL AE
 ## リクエスト処理の削除 {#delete}
 
 [!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、プライバシージョブが完了すると、レコードは削除されます。
+
+>[!IMPORTANT]
+>
+>プライバシー削除リクエストは即座にはおこなわれず、関連するサービスや、地理的な場所など、影響を受ける他の要因によって異なる場合があります。 プライバシージョブが完了するまでの期間は 15 ～ 45 日になる場合がありますが、保証されていません。
 
 ID サービス (`identity`) とデータレイク (`aepDataLake`) をプロファイルのプライバシーリクエスト (`ProfileService`) の場合、プロファイルに関連する様々なデータセットが、次のように異なるタイミングでシステムから削除されます。
 
