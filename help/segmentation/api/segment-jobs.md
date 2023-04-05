@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1498'
 ht-degree: 24%
 
 ---
@@ -130,7 +130,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -226,7 +225,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -275,7 +273,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | セグメント化評価の開始および終了時間に関する情報と、合計所要時間に関する情報を含むオブジェクト。 |
 | `metrics.segmentProfileCounter` | セグメントごとに認定されたプロファイルの数。 |
 | `metrics.segmentedProfileByNamespaceCounter` | セグメントごとに各 ID 名前空間で認定されたプロファイルの数。 |
-| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の 3 つのステータスがサポートされています。 <ul><li>「実現済み」 — セグメントに入力された新しいプロファイルの数。</li><li>「既存」 — セグメント内に引き続き存在するプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の 3 つのステータスがサポートされています。 <ul><li>「認識済み」 — セグメントに適合するプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとの結合プロファイルの合計数です。 |
 
 ## 新しいセグメントジョブの作成 {#create}
@@ -373,7 +371,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -494,7 +491,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -674,7 +670,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },

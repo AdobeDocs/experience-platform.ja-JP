@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platformから宛先に書き出されたデータのメッセージ形式とプロファイル変換について説明します。
 title: メッセージの形式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '2272'
-ht-degree: 3%
+source-wordcount: '2267'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Adobe側のメッセージ形式、プロファイル設定および変換プロセスを理解するには、次のExperience Platformの概念を把握してください。
 
-* **エクスペリエンスデータモデル (XDM)**. [XDM の概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) および  [Adobe Experience Platformで XDM スキーマを作成する方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **エクスペリエンスデータモデル (XDM)**. [XDM の概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) および  [Adobe Experience Platformで XDM スキーマを作成する方法](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=ja).
 * **クラス**. [UI でのクラスの作成と編集](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
 * **identityMap**. ID マップは、Adobe Experience Platformのすべてのエンドユーザー ID のマップを表します。 参照： `xdm:identityMap` 内 [XDM フィールドディクショナリ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. この [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM 属性は、プロファイルがどのセグメントに属しているかを知らせます。 の `status` フィールドには、 [セグメントメンバーシップの詳細スキーマフィールドグループ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Experience Platform内のプロファイル構造 {#profile-structure}
 
@@ -93,7 +93,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 プロファイルには次の 3 つのセクションがあります。
 
 * `segmentMembership` （常にプロファイルに存在）
-   * このセクションには、プロファイルに存在するすべてのセグメントが含まれます。 セグメントには、次の 3 つのステータスのいずれかを設定できます。 `realized`, `existing`, `exited`.
+   * このセクションには、プロファイルに存在するすべてのセグメントが含まれます。 セグメントには、次の 2 つのステータスのいずれかを設定できます。 `realized` または `exited`.
 * `identityMap` （常にプロファイルに存在）
    * このセクションには、プロファイルに存在する (e メール、Google GAID、Apple IDFA など ) と、アクティベーションワークフローでユーザーが書き出し用にマッピングしたすべての id が含まれます。
 * 属性（宛先の設定に応じて、プロファイルに存在する場合があります） また、事前定義済みの属性とフリーフォーム属性の間には、若干の違いがあります。
@@ -110,7 +110,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -139,7 +139,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -268,7 +268,7 @@ Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似�
       },
       "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "existing"
+        "status": "realized"
       },
       "8f812592-3f06-416b-bd50-e7831848a31a": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -291,7 +291,7 @@ Adobe使用 [ペブルテンプレート](https://pebbletemplates.io/)（と似�
       },
       "af854278-894a-4192-a96b-320fbf2623fd": {
         "lastQualificationTime": "2021-08-20T16:44:37Z",
-        "status": "existing"
+        "status": "realized"
       },
       "66505bf9-bc08-4bac-afbc-8b6706650ea4": {
         "lastQualificationTime": "2019-08-20T17:23:04Z",
@@ -511,7 +511,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -685,7 +685,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -874,7 +874,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -894,7 +894,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -914,7 +914,7 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -934,11 +934,11 @@ Experience Platformの ID について詳しくは、 [ID 名前空間の概要]
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -1194,10 +1194,10 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `input.profile` | プロファイル。 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). このページで後述するパートナー XDM スキーマに従います。 |
 | `destination.segmentAliases` | Adobe Experience Platform名前空間のセグメント ID からパートナーのシステムのセグメントエイリアスにマッピングします。 |
 | `destination.segmentNames` | Adobe Experience Platform名前空間内のセグメント名からパートナーのシステム内のセグメント名にマッピングします。 |
-| `addedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `realized` または `existing`. |
+| `addedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `realized`. |
 | `removedSegments(listOfSegments)` | ステータスを持つセグメントのみを返します `exited`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順 {#next-steps}
 

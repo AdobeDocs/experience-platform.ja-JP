@@ -1,14 +1,18 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年3月
 description: Adobe Experience Platform の 2023年3月のリリースノート。
-source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
+source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 38%
+source-wordcount: '2398'
+ht-degree: 37%
 
 ---
 
 # Adobe Experience Platform リリースノート
+
+>[!IMPORTANT]
+>
+>2023 年 4 月 5 日以降、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`. この変更の詳細については、 [セグメント化サービスセクション](#segmentation).
 
 **リリース日：2023年3月29日（PT）**
 
@@ -183,8 +187,9 @@ Real-Time CDP B2B Edition について詳しくは、[Real-Time CDP B2B Edition 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
-| --- | --- |
+| ------- | ----------- |
 | プロファイル指標 | プロファイル指標をより正確に表すために、メンバーシップの分類とチャーン指標は組み合わされ、24 時間にわたって計算されるようになりました。 詳しくは、 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#browse) |
+| セグメントメンバーシップマップ | 2023 年 2 月 5 日 (PT) に発表された前回の発表に対するフォローアップとして、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`.<br/><br/>  この変更は、 [企業の宛先](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure Event Hubs、HTTP API) の `Existing` ステータス。 このような場合は、ダウンストリームの統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
 
 {style="table-layout:auto"}
 

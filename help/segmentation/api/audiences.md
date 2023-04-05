@@ -5,7 +5,7 @@ description: Adobe Experience Platform Segmentation Service API のオーディ�
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 9%
@@ -254,7 +254,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetr
                         "crmid": 11400769
                     },
                     "totalProfilesByStatus": {
-                        "existing": 11400769
+                        "realized": 11400769
                     }
                 },
                 "createEpoch": 1653583927,
@@ -687,7 +687,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` |  |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 以下の値を指定できます。 `SegmentDefinition` および `ExternalAudience`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、 `ExternalAudience` は、Platform で生成されなかったオーディエンスを指します。 |
-| `lifecycle` | オーディエンスのステータス。 以下の値を指定できます。 `draft`, `published`, `inactive`、および `archived`. `draft` は、オーディエンスが作成される日時を表します。 `published` オーディエンスが公開された時点で、 `inactive` オーディエンスがアクティブでなくなり、 `archived` （オーディエンスが削除された場合） |
+| `lifecycle` | オーディエンスのステータス。以下の値を指定できます。 `draft`, `published`, `inactive`、および `archived`. `draft` は、オーディエンスが作成される日時を表します。 `published` オーディエンスが公開された時点で、 `inactive` オーディエンスがアクティブでなくなり、 `archived` （オーディエンスが削除された場合） |
 | `datasetId` | オーディエンスデータが見つかるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用および属性ベースのアクセス制御ラベル。 |
 

@@ -5,7 +5,7 @@ title: Adobe Experience Platformのフローサービス API を使用して、�
 description: このドキュメントでは、Adobe Experience Platform API を使用したストリーミング先の作成について説明します
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 57%
@@ -578,7 +578,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
       },
       "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
         "lastQualificationTime": "2020-03-04T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

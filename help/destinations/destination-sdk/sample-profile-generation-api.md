@@ -2,10 +2,10 @@
 description: このページでは、「/authoring/sample-profiles」 API エンドポイントを使用して、宛先テストで使用するサンプルプロファイルを生成するために実行できるすべての API 操作について説明します。
 title: サンプルプロファイル生成 API の操作
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 15%
+source-wordcount: '943'
+ht-degree: 14%
 
 ---
 
@@ -62,7 +62,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する際に基づく宛先インスタンスの ID。 |
 | `{COUNT}` | *オプション*。生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 **リクエスト**
@@ -183,10 +183,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | -------- | ----------- |
 | `segmentMembership` | 個人のセグメントメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [セグメントメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
+| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`realized`:プロファイルはセグメントの一部です。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
 | `identityMap` | 個々の ID の様々な値と、関連する名前空間を説明する map-type フィールドです。 詳しくは、 `identityMap`，読み取り [スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## メッセージ変換テンプレートの作成時に使用するターゲットスキーマに基づいて、サンプルプロファイルを生成します {#generate-sample-profiles-target-schema}
 
@@ -213,7 +213,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | `{DESTINATION_ID}` | サンプルプロファイルを生成する場所に基づく宛先設定の ID。 |
 | `{COUNT}` | *オプション*。生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. <br> count パラメーターが指定されていない場合、生成されるプロファイルのデフォルト数は、 `maxUsersPerRequest` 値を [宛先サーバーの設定](./destination-server-api.md#create). このプロパティを定義しない場合、Adobeは 1 つのサンプルプロファイルを生成します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -240,7 +240,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609326Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609328Z",
@@ -285,7 +285,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609626Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609627Z",
@@ -330,7 +330,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609823Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609824Z",

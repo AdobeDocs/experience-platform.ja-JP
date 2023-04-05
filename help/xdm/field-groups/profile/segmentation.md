@@ -4,10 +4,10 @@ solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
 description: このドキュメントでは、「セグメントメンバーシップの詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 8%
+source-wordcount: '440'
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 8%
 | --- | --- | --- |
 | `segmentMembership` | マップ | 個人のセグメントメンバーシップを表す map オブジェクト。 このオブジェクトの構造について、以下で詳しく説明します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次に例を示します `segmentMembership` 特定のプロファイルに対してシステムが入力したマップ。 セグメントメンバーシップは、名前空間で並べ替えられます。名前空間は、オブジェクトのルートレベルのキーで示されます。 次に、各名前空間の下の個々のキーは、プロファイルがメンバーとして含まれるセグメントの ID を表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供するいくつかのサブフィールドが含まれます。
 
@@ -42,7 +42,7 @@ ht-degree: 8%
         "xdm:version": "15",
         "xdm:lastQualificationTime": "2018-04-26T15:52:25+00:00",
         "xdm:validUntil": "2019-04-26T15:52:25+00:00",
-        "xdm:status": "existing",
+        "xdm:status": "realized",
         "xdm:payload": {
           "xdm:payloadBooleanValue": true,
           "xdm:payloadType": "boolean"
@@ -76,10 +76,10 @@ ht-degree: 8%
 | `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
 | `xdm:lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
 | `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 外部オーディエンスの場合、このフィールドを設定しないと、セグメントのメンバーシップは、 `lastQualificationTime`. |
-| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
+| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`realized`:プロファイルがセグメントの対象になります。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
 | `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、1 つのタイプのみです。 `xdm:payloadType` ペイロードのタイプを示します (`boolean`, `number`, `propensity`または `string`) の代わりに、兄弟プロパティがペイロードタイプの値を提供します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
