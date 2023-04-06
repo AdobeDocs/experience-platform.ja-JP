@@ -1,25 +1,26 @@
 ---
-title: (API)OracleEloqua 接続
+title: （API）Oracle Eloqua 接続
 description: (API)Oracleの Eloqua の宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてOracleEloqua 内でアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
 workflow-type: tm+mt
-source-wordcount: '1494'
-ht-degree: 41%
+source-wordcount: '1642'
+ht-degree: 38%
 
 ---
+
 
 # [!DNL (API) Oracle Eloqua] 接続
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) マーケターは、見込み客に合わせてパーソナライズされたカスタマーエクスペリエンスを提供しながら、キャンペーンを計画および実行できます。 統合されたリード管理と簡単なキャンペーン作成により、マーケターは適切なタイミングで適切なオーディエンスを購入者のジャーニーにエンゲージし、電子メール、ディスプレイ検索、ビデオ、モバイルなどの様々なチャネルでオーディエンスに到達できます。 セールスチームは、より迅速に取引を成立させ、リアルタイムのインサイトを通じてマーケティングの ROI を向上させることができます。
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [連絡先の更新](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作 [!DNL Oracle Eloqua] REST API。セグメント内の ID を [!DNL Oracle Eloqua].
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [連絡先の更新](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作 [!DNL Oracle Eloqua] REST API（次の操作を実行できます） **id を更新** ～へのセグメント内で [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [基本認証](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) 話をする [!DNL Oracle Eloqua] REST API。 [!DNL Oracle Eloqua] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからセグメントを作成し、それらのセグメントを [!DNL Oracle Eloqua] に送信して、Adobe Experience Platform でセグメントとプロファイルが更新されるとすぐにユーザーのフィードに表示することができます。
+オンラインプラットフォームのマーケティング部門は、厳選されたリードのオーディエンスに対して、電子メールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 プラットフォームのマーケティングチームは、Adobe Experience Platformを通じて既存のリード情報を更新し、独自のオフラインデータからセグメントを作成し、それらのセグメントをに送信できます。 [!DNL Oracle Eloqua]：マーケティングキャンペーンの電子メールの送信に使用できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -54,15 +55,26 @@ Platform からにデータを書き出すには、以下を実行します。 [
 * この制限を超えると、Experience Platform中にエラーが発生します。 これは、 [!DNL Oracle Eloqua] API はリクエストの検証に失敗し、 — を使用して応答します。 *400:検証エラーが発生しました*  — 問題を説明するエラーメッセージ。
 * 上記の制限に達した場合は、既存のマッピングを宛先から削除し、 [!DNL Oracle Eloqua] アカウントを使用して、さらに多くのセグメントを書き出すことができます。
 
-* 詳しくは、 [OracleEloqua 連絡先フィールドの作成](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) ページを参照してください。
+* 詳しくは、 [[!DNL Oracle Eloqua] 連絡先フィールドの作成](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) ページを参照してください。
 
 ## サポートされる ID {#supported-identities}
 
 [!DNL Oracle Eloqua] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
 
-| ターゲット ID | 例 | 説明 | 必須 |
-|---|---|---|---|
-| `EloquaId` | `111111` | 連絡先の一意の ID。 | ○ |
+| ターゲット ID | 説明 | 必須 |
+|---|---|---|
+| `EloquaId` | 連絡先の一意の ID。 | ○ |
+
+## 書き出しのタイプと頻度 {#export-type-frequency}
+
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
+
+| 項目 | タイプ | メモ |
+---------|----------|---------|
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各セグメントに対して、 [!DNL Oracle Eloqua] セグメントのステータスが、Platform からのセグメントのステータスで更新されます。</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
+
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
@@ -111,42 +123,37 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 Adobe Experience Platform から [!DNL Oracle Eloqua] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
 
-`EloquaID` は、ID に対応する属性を更新するために必要です。 この `emailAddress` がない場合も、API が以下に示すようにエラーをスローするのと同様に必要です。
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-で指定された属性 **[!UICONTROL ターゲットフィールド]** は、属性マッピングテーブルで説明されたとおりに名前を付ける必要があります。これらの属性は、リクエスト本文を形成します。
-
-で指定された属性 **[!UICONTROL ソースフィールド]** このような制限に従わないでください。 ただし、にプッシュした際にデータ形式が正しくない場合は、必要に応じてマッピングできます。 [!DNL Oracle Eloqua] これはエラーを引き起こします。
-
-例えば、 **[!UICONTROL ソースフィールド]** id 名前空間 `contact key`, `ABC ID` など から **[!UICONTROL ターゲットフィールド]** : `EloquaID` ID 値が、 [!DNL Oracle Eloqua].
-
-XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドに正しくマッピングするには、次の手順に従います。
+XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドは、次の手順に従います。
 
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. 内 **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
-1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** カテゴリを選択し、必要に応じて属性を選択します。
-   * これらの手順を繰り返して、XDM プロファイルスキーマと [!DNL Oracle Eloqua] インスタンス： |ソースフィールド|ターゲットフィールド|必須| |—|—|—| |`xdm: personalEmail.address`|`Attribute: emailAddress`|はい | |`IdentityMap: Eid`|`Identity: EloquaId`|はい |
+1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウ：選択 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** をクリックし、目的の属性名を **[!UICONTROL 属性名]** フィールドに入力します。 指定する属性名は、 [!DNL Oracle Eloqua]. 詳しくは、 [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) で使用できる正確な属性名 [!DNL Oracle Eloqua].
+   * これらの手順を繰り返して、XDM プロファイルスキーマとの間に必要な属性マッピングと必要な属性マッピングの両方を追加します。 [!DNL Oracle Eloqua]: |ソースフィールド |ターゲットフィールド |必須 | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`|はい | |`xdm: personalEmail.address`|`Attribute: emailAddress`|はい | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
-   * これらのマッピングの使用例を次に示します。
+   * 上記のマッピングの例を次に示します。
       ![属性マッピングを使用した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >両方の `emailAddress` および `EloquaId` ターゲット属性のマッピングは必須です。
+>[!IMPORTANT]
+>
+>* で指定された属性 **[!UICONTROL ターゲットフィールド]** は、 [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) これらの属性はリクエスト本文を形成するので、
+>* で指定された属性 **[!UICONTROL ソースフィールド]** このような制限に従わないでください。 ただし、にプッシュした際にデータ形式が正しくない場合は、必要に応じてマッピングできます。 [!DNL Oracle Eloqua] これはエラーを引き起こします。 例えば、 **[!UICONTROL ソースフィールド]** id 名前空間 `contact key`, `ABC ID` など から **[!UICONTROL ターゲットフィールド]** : `EloquaId` ID 値が、 [!DNL Oracle Eloqua].
+>* この `EloquaID` id に対応する属性を更新するには、マッピングが必須です。
+>* この `emailAddress` マッピングが必要です。 これがないと、API は以下のようにエラーをスローします。
+>
+>```json
+>{
+>     "type":"ObjectValidationError",
+>     "container":{
+>           "type":"ObjectKey",
+>           "objectType":"Contact"
+>     },
+>     "property":"emailAddress",
+>     "requirement":{
+>           "type":"EmailAddressRequirement"
+>     },
+>     "value":"<null>"
+>}
+>```
 
 宛先接続のマッピングの指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -182,6 +189,7 @@ XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドに正しくマ
 
 ## その他のリソース {#additional-resources}
 
-[!DNL Oracle ELoqua] ドキュメントからのその他の役に立つ情報は次のとおりです。
+詳しくは、 [!DNL Oracle Eloqua] ドキュメント：
+
 * [OracleEloqua マーケティング自動化](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [oracleEloquaMarketing Cloudサービス用 REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
