@@ -74,7 +74,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
->title="説明"
+>title="手順"
 >abstract="<ul><li>選択 <b>監査</b> をクリックします。 「監査」ワークスペースには、デフォルトで、記録されたログのリストが最新のログから最新のログへと並べ替えて表示されます。</li>   <li> 注意：監査ログは、365 日間保持され、その後システムから削除されます。 したがって、戻ることができる期間は最大 365 日までです。 365 日を超えるデータを振り返る必要がある場合は、内部ポリシー要件を満たすために、ログを定期的に書き出す必要があります。 </li><li>リストからイベントを選択すると、その詳細が右側のパネルに表示されます。 </li><li>ファネルアイコンを選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。 選択したフィルターに関係なく、最近の 1000 件のレコードのみが表示されます。 </li><li>監査ログの現在のリストを書き出すには、 **ログをダウンロード**.</li><li>この機能に関する詳しいヘルプについては、 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ja">監査ログの概要</a> Experience League</li></ul>"
 
 監査ログは、 **[!UICONTROL 監査]** ワークスペース（Platform UI 内） ワークスペースには、デフォルトで、記録されたログのリストが最新のログから最新のログへと並べ替えて表示されます。

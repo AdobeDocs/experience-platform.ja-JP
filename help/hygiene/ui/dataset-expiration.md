@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 73%
+ht-degree: 78%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform のデータハイジーン機能は現在、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみご利用いただけます。これらの機能は、近い将来に一般リリースが予定されています。 今後のリリースの詳細については、Adobe サービス担当者にお問い合わせください。 ただし、すぐに実行できます [でデータセットを削除する [!UICONTROL データセット] UI](../../catalog/datasets/user-guide.md#delete).
+>Adobe Experience Platform のデータハイジーン機能は現在、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみご利用いただけます。これらの機能は今後、一般リリースが予定されています。 今後のリリースの詳細情報については、アドビサービス担当者にお問い合わせください。 ただし、すぐに[[!UICONTROL データセット] UI でデータセットを削除できます](../../catalog/datasets/user-guide.md#delete)。
 
 Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワークスペース](./overview.md)では、データセットの有効期限をスケジュールできます。データセットが有効期限に達すると、データレイク、ID サービスおよびリアルタイム顧客プロファイルは別個のプロセスを開始して、それぞれのサービスからデータセットの内容を削除します。3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
 
@@ -32,7 +32,7 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
->title="説明"
+>title="手順"
 >abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=ja">データの衛生状態</a> 左側のナビゲーションで、「 <b>リクエストを作成</b>.</li><li>レコードを削除する場合：</li>   <li>選択 <b>レコード</b>.</li>   <li>レコードを削除する特定のデータセットを選択するか、すべてのデータセットからレコードを削除するオプションを選択します。</li>   <li>レコードを削除するコンシューマーの ID を指定します。 選択 <b>ID を追加</b> 一度に 1 つずつ id を提供するか、または <b>ファイルを選択</b> をクリックして、id の JSON ファイルをアップロードすることをお勧めします。</li>   <li>必要に応じて、「 」を選択します。 <b>テンプレート</b> をクリックして、JSON ファイルに必要な形式を表示します。</li><li>手順については、ドキュメントを参照してください <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">データセットの有効期限をスケジュール</a>.</li></ul>"
 
 新しいリクエストを作成するには、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
