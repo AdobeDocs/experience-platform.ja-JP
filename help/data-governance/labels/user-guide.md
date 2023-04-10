@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 86%
@@ -87,7 +87,7 @@ ht-degree: 86%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="手順"
->abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ja">データセット</a> 左側のナビゲーションで、データを制限するデータセットを選択します。</li><li>データセットの詳細ビューで、 <b>データガバナンス</b> タブをクリックします。</li><li>制限するデータセットフィールドを選択し、「 」を選択します。 <b>ガバナンスラベルを編集</b> を使用して、使用制限に基づいてデータにラベルを付けます。</li><li>データにラベルを付けた後、「 」を選択します。 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a> 左側のナビゲーションで、「 <b>ポリシーを作成</b>.</li><li>を選択して、 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">データガバナンスポリシー</a>次に、ポリシーをポリシーに適用するデータ使用ラベルを選択します。</li><li>これらのラベルを含むデータに対してポリシーが拒否するマーケティングアクションを選択します。 ポリシーを作成したら、リストから選択し、右側のパネルの切り替えを使用して有効にします。</li><li>Platform は、有効な各ポリシーに対して、指定されたラベルを含むデータが、定義されたマーケティングアクションに使用されるのを防ぎます。 この強制は、関連するマーケティングアクション（使用例）を使用して宛先へのラベル付きデータをアクティブ化しようとすると、自動的におこなわれます。</li></ul>"
+>abstract="<ol><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ja">データセット</a> 左側のナビゲーションで、データを制限するデータセットを選択します。</li><li>データセットの詳細ビューで、 <b>データガバナンス</b> タブをクリックします。</li><li>制限するデータセットフィールドを選択し、「 」を選択します。 <b>ガバナンスラベルを編集</b> を使用して、使用制限に基づいてデータにラベルを付けます。</li><li>データにラベルを付けた後、「 」を選択します。 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a> 左側のナビゲーションで、「 <b>ポリシーを作成</b>.</li><li>を選択して、 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">データガバナンスポリシー</a>次に、ポリシーをポリシーに適用するデータ使用ラベルを選択します。</li><li>これらのラベルを含むデータに対してポリシーが拒否するマーケティングアクションを選択します。 ポリシーを作成したら、リストから選択し、右側のパネルの切り替えを使用して有効にします。</li><li>Platform は、有効な各ポリシーに対して、指定されたラベルを含むデータが、定義されたマーケティングアクションに使用されるのを防ぎます。 この強制は、関連するマーケティングアクション（使用例）を使用して宛先へのラベル付きデータをアクティブ化しようとすると、自動的におこなわれます。</li></ol>"
 
 >[!IMPORTANT]
 >
