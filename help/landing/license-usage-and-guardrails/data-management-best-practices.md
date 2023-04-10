@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気のあるトピック;データ管
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 81%
 
 ---
@@ -156,7 +156,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | 機能 | 説明 |
 | --- | --- |
 | [プロファイル用のデータセットを有効／無効にする](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
-| [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) | プロファイル対応のデータセットに取り込まれるすべてのイベントに有効期限を適用します。 この機能を有効にするには、Adobeサポート担当者にお問い合わせください。 |
+| [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) | プロファイル対応のデータセットに取り込まれるすべてのイベントに有効期限を適用します。 この機能を有効にするには、Adobeのアカウントチームまたはカスタマーケアにお問い合わせください。 |
 | [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
 | [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取り込みから除外します |
 | [Alloy SDK データフィルター](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#fundamentals) | Alloy フィルターを適用して、不要なデータを取り込みから除外します |

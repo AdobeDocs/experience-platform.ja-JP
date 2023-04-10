@@ -2,9 +2,9 @@
 title: ユーザーアクセスの許可
 description: Adobe Experience Platform でチームメンバーのタグユーザーアカウントと権限を設定します。
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '218'
 ht-degree: 36%
 
 ---
@@ -23,4 +23,4 @@ ht-degree: 36%
 
 ## プロビジョニングの確認
 
-会社にタグへのアクセスがプロビジョニングされ、ユーザーが前述のように設定されたら、 [Adobe Experience Cloud dashboard](https://experience.adobe.com/). 上記の手順を完了してもまだどちらの UI にもアクセスできない場合は、Adobeサポート担当者にお問い合わせください。
+会社にタグへのアクセスがプロビジョニングされ、ユーザーが前述のように設定されたら、 [Adobe Experience Cloud dashboard](https://experience.adobe.com/). 上記の手順を完了してもまだどちらの UI にもアクセスできない場合は、担当のAdobeアカウントチームまたはカスタマーケアにお問い合わせください。

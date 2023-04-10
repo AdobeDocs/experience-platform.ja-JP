@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -56,7 +56,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 オプトインおよびオプトアウトの同意チェックにより、デフォルトでユーザーデータを共有することに同意して操作できるかどうかが決まります。同意設定のデフォルト値が `opt-out` に設定されている場合、ユーザーが明示的にオプトアウトしない限り、ユーザーデータを共有できます。デフォルト値が `opt-in` に設定されている場合、ユーザーが明示的にオプトインしない限り、ユーザーデータは共有できません。
 
-[!DNL Segment Match] のデフォルトの同意設定は `opt-out` に指定されています。データのオプトインモデルを適用するには、アドビ担当営業または販売店にメールでリクエストを送信してください。
+[!DNL Segment Match] のデフォルトの同意設定は `opt-out` に指定されています。データに対してオプトインモデルを実施するには、担当のオプトインアカウントチームに電子メールでAdobeリクエストを送信してください。
 
 データ共有の同意値を設定するために使用される `share` 属性について詳しくは、[プライバシーと同意フィールドグループ](../../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 

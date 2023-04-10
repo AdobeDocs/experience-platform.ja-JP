@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Adobe Experience Platform Web SDK は、以下のユーザー向けに開発さ�
 
 ## Adobe Experience Platform Web SDK にアクセスして使用を開始するには、どうすればよいですか？
 
-Web SDK は、現在、一般ユーザーが利用でき、Adobe Experience Cloud製品へのデータ送信に使用できます。 サードパーティソリューションにデータを送信する機能は、近い将来に提供される予定です。 SDK は無料で、無料でAdobeによってホストされます。また、必要に応じて独自のサーバーで無料でホストできるように、ダウンロードすることもできます。 Adobeのサーバーが SDK からの受信データを適切に処理するには、Platform Web SDK が Datastream 設定とAdobe Experience Platform XDM スキーマビルダーにアクセスする必要があります。 アクセス権を取得する場合は、カスタマーサクセスマネージャー (CSM) に問い合わせて、リクエストプロセスを開始してください。
+Web SDK は、現在、一般ユーザーが利用でき、Adobe Experience Cloud製品へのデータ送信に使用できます。 サードパーティソリューションにデータを送信する機能は、近い将来に提供される予定です。 SDK は無料で、Adobeで無料でホストされます。 必要に応じて、ダウンロードして独自のサーバーで無料でホストできます。 Adobeのサーバーが SDK からの受信データを適切に処理するには、Platform Web SDK が Datastream 設定とAdobe Experience Platform XDM スキーマビルダーにアクセスする必要があります。 アクセス権を取得する場合は、担当のAdobeアカウントチームに連絡して、リクエストプロセスを開始してください。
 
 ## Web SDK で現在サポートされている使用例を教えてください。
 

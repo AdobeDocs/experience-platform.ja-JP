@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '491'
 ht-degree: 15%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 15%
 
 ### ID 名前空間の取り込み
 
-2023 年 3 月 31 日以降、ID サービスは、新規のお客様向けにAdobe Analytics ID(AAID) の取り込みをブロックします。 この ID は、通常、 [Adobe Analyticsソース](../sources/connectors/adobe-applications/analytics.md) そして [Adobe Audience Managerソース](../sources//connectors/adobe-applications/audience-manager.md) とは冗長です。ECID は同じ Web ブラウザーを表しているからです。 このデフォルト設定を変更する場合は、アカウントマネージャーにお問い合わせください。
+2023 年 3 月 31 日以降、ID サービスは、新規のお客様向けにAdobe Analytics ID(AAID) の取り込みをブロックします。 この ID は、通常、 [Adobe Analyticsソース](../sources/connectors/adobe-applications/analytics.md) そして [Adobe Audience Managerソース](../sources//connectors/adobe-applications/audience-manager.md) とは冗長です。ECID は同じ Web ブラウザーを表しているからです。 このデフォルト設定を変更する場合は、Adobeアカウントチームにお問い合わせください。
 
 ## 次の手順
 

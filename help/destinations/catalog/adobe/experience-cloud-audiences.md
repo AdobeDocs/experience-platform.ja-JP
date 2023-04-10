@@ -2,9 +2,9 @@
 title: （ベータ版）Experience CloudAudiences
 description: セグメントをExperience Platformから様々なExperience Platformソリューションに共有する方法を説明します。
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 25%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### レガシーセグメント共有ソリューションを使用しているお客様向け
 
-既に、 [レガシーセグメント共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam)の場合は、カスタマーケアまたはカスタマーサクセスマネージャーに連絡して、従来の統合を無効にする必要があります。 カスタマーケアとカスタマーサポート管理チームは、統合を無効にするために Jira チケットを提出する必要があります ( テンプレートチケットAAM-52354を参照 )。
+既に、 [レガシーセグメント共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)従来の統合を無効にするには、カスタマーケアまたはAdobeのアカウントチームに問い合わせる必要があります。 カスタマーケアおよびAdobeのアカウントチームは、統合を無効にするために Jira チケットを提出する必要があります ( テンプレートチケットAAM-52354を参照 )。
 
 ベータ版のお客様向けのプロビジョニング解除チケットの解決にかかる所要時間は 6 営業日以下です。 既存のレガシー統合を無効にした後、次に進むことができます： [接続の作成](#connect) セルフサービスの宛先カードを使用する。
 

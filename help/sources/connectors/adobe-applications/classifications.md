@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 分類データ用のAdobe Analytics Source Connector
 description: ユーザーインターフェイスを使用して Analytics 分類を Platform に接続する方法を説明します
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 24%
+source-wordcount: '180'
+ht-degree: 25%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 [!DNL Experience Platform] では、Analytics 分類データをAdobe Experience Platformに取り込むことができます。
 
-分類を使用すると、レポートが生成される際に Analytics 変数データを様々な方法で分類および表示できます。 Analytics Classifications Data Connector では、新しい [!DNL Classifications] 使用前のAdobe Analyticsのインフラストラクチャ。 データの移行ステータスを確認するには、担当のAdobeカスタマーサクセスマネージャーにお問い合わせください。
+分類を使用すると、レポートが生成される際に Analytics 変数データを様々な方法で分類および表示できます。 Analytics Classifications Data Connector では、新しい [!DNL Classifications] 使用前のAdobe Analyticsのインフラストラクチャ。 データの移行ステータスを確認するには、Adobeアカウントチームにお問い合わせください。
 
 以下のドキュメントでは、ユーザーインターフェイスを使用して Analytics 分類を Platform に接続する方法に関する情報を提供します。
 

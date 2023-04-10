@@ -2,9 +2,9 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2621'
 ht-degree: 95%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platformは、データを収集して、他のAdobe製品や�
 
 詳しくは、 [データ収集に関する権限の管理](./permissions.md) を参照してください。
 
-このガイドに記載されている様々なデータ収集製品を使用するには、データストリームにアクセスし、スキーマを作成および管理する機能も必要です。 これらの機能のいずれかにアクセスする必要がある場合は、CSM に問い合わせて、必要なアクセス権を取得してください。 Adobe Experience Platform を購入していない場合、アドビでは、SDK を使用するために必要なアクセス権を追加料金なしで提供します。
+このガイドに記載されている様々なデータ収集製品を使用するには、データストリームにアクセスし、スキーマを作成および管理する機能も必要です。 これらの機能のいずれかにアクセスする必要がある場合は、Adobeのアカウントチームに連絡し、必要なアクセス権を取得してもらってください。 Adobe Experience Platform を購入していない場合、アドビでは、SDK を使用するために必要なアクセス権を追加料金なしで提供します。
 
 既に Platform へのアクセス権を持っている場合は、次のカテゴリですべての[権限](../access-control/home.md#permissions)が有効になっていることを確認する必要があります。
 

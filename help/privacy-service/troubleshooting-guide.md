@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service トラブルシューティングガイド
 description: このドキュメントでは、Privacy Service に関するよくある質問への回答と、API でよく発生するエラーに関する情報を示します。
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 92%
+ht-degree: 90%
 
 ---
 
@@ -69,7 +69,7 @@ API で新しいプライバシージョブを作成するには、リクエス�
 
 プライバシーリクエストは時間に依存し、該当するプライバシー法に従っておこなわれます。 データ主体/消費者以外のアクセス要求または削除要求の送信は、すべての [!DNL Privacy Service] 顧客と～の能力 [!DNL Privacy Service] 適切な法的日程を支援する 毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。
 
-PII やデータの問題をなくすための取り組みのレベルを調整および提供するには、担当のアカウントマネージャー（CDM）にお問い合わせください。
+PII やデータの問題を取り除くためのレベルの取り組みを調整および提供するには、Adobeのアカウントチームにお問い合わせください。
 
 ## プライバシーリクエストやジョブのステータスに関する情報び取得方法を教えてください。
 
