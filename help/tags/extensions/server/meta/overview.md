@@ -2,7 +2,7 @@
 title: メタコンバージョン API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送のメタコンバージョン API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2256'
 ht-degree: 2%
@@ -165,7 +165,7 @@ ht-degree: 2%
 
 設定する他のメタコンバージョンイベントに対して、これらの手順を繰り返します。
 
-#### データレイヤーの設定
+#### データレイヤーの設定 {#configuration}
 
 >[!IMPORTANT]
 >
