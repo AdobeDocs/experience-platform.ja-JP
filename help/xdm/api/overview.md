@@ -4,10 +4,10 @@ solution: Experience Platform
 title: スキーマレジストリ API ガイド
 description: スキーマレジストリ API を使用すると、開発者は、Adobe Experience Platform内のすべてのスキーマと関連する Experience Data Model(XDM) リソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 8%
+source-wordcount: '1116'
+ht-degree: 9%
 
 ---
 
@@ -71,7 +71,7 @@ CSV ファイルをテンプレートとして使用して XDM スキーマを�
 
 ## エクスポート {#export}
 
-スキーマレジストリ API を使用すると、サンドボックスと IMS 組織の間で XDM リソースを転送および共有できます。 任意のスキーマ、フィールドグループまたはデータタイプに対して、リソースの構造と依存するリソースを含む書き出しペイロードを生成できます。 このペイロードを使用して、リソースを宛先サンドボックスと IMS 組織に読み込むことができます。
+スキーマレジストリ API を使用すると、サンドボックスと組織の間で XDM リソースを転送および共有できます。 任意のスキーマ、フィールドグループまたはデータタイプに対して、リソースの構造と依存するリソースを含む書き出しペイロードを生成できます。 このペイロードは、その後、リソースを宛先サンドボックスと組織に読み込むために使用できます。
 
 詳しくは、 [書き出しエンドポイントガイド](./export.md) を参照してください。
 

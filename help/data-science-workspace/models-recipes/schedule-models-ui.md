@@ -5,9 +5,9 @@ title: Data Science Workspace UI でのモデルのスケジュール
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace を使用すると、機械学習サービスでスコアリングとトレーニングの実行をスケジュール設定できます。 トレーニングとスコアリングを自動処理すると、データ内のパターンに追いつくことで、サービスの効率を時間をかけて維持および改善できます。
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '554'
 ht-degree: 18%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] では、機械学習サ
 
 ## はじめに
 
-このチュートリアルを完了するには、 [!DNL Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、 [!DNL Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 
 このチュートリアルでは、既存のサービスが必要です。 使用するアクセス可能なサービスがない場合は、次のチュートリアルに従ってサービスを作成できます。 [サービスとしてのモデルの公開](./publish-model-service-ui.md).
 

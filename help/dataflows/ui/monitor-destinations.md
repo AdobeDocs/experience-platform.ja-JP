@@ -5,9 +5,9 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 98%
 
 ---
@@ -289,7 +289,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 データフロー実行の詳細ページには、データフロー実行リストに表示される詳細に加えて、データフローに関するより具体的な情報も表示されます。
 
 - **[!UICONTROL データフロー実行 ID]**：データフローの ID です。
-- **[!UICONTROL IMS 組織 ID]**：データフローが属する IMS 組織です。
+- **[!UICONTROL 組織 ID]**：データフローが属する IMS 組織です。
 - **[!UICONTROL 最終更新日時]**：データフロー実行が最後に更新された時刻です。
 
 詳細ページには、データフロー実行エラーとセグメントを切り替える切替スイッチもあります。このオプションは、バッチ宛先でのデータフロー実行に対してのみ使用できます。

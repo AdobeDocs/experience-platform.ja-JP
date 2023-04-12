@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 100%
+source-wordcount: '610'
+ht-degree: 95%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 100%
 
 ## 用語 {#terminology}
 
-このガイドでは、IMS 組織やサンドボックスなど、Platform 固有の概念を使用します。 これらを始めとする用語の定義については、 [Experience Platform 用語集](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)を参照してください。
+このガイドでは、組織やサンドボックスなど、Platform 固有の概念を使用します。 これらを始めとする用語の定義については、 [Experience Platform 用語集](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)を参照してください。
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 
 Destination SDK では、認証に [Adobe I/O](https://www.adobe.io/) ゲートウェイを使用します。 Destination SDK エンドポイントへの API 呼び出しを行うには、API 呼び出しで特定のヘッダーを指定する必要があります。 Adobe Exchange チームと協力して、[Adobe デベロッパーコンソール](https://developer.adobe.com/console)への認証を設定してください。
 
-Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。[API キー、IMS 組織 ID およびクライアント秘密鍵の生成](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)ステップからチュートリアルを開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。チュートリアルを「[API キー、組織 ID、クライアントの秘密鍵を生成する](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)&quot;ステップ。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {ORG_ID}`（組織 ID とも呼ばれます）

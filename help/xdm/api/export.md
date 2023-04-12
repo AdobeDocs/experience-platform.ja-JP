@@ -2,10 +2,10 @@
 title: 書き出し API エンドポイント
 description: スキーマレジストリ API の/export エンドポイントを使用すると、サンドボックス間で XDM リソースを共有できます。
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 14%
+source-wordcount: '410'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | この `meta:altId` または URL エンコード済み `$id` 書き出す XDM リソースの XDM リソース。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、オブジェクトの配列を返します。この配列は、ターゲット XDM リソースとその依存リソースをすべて表します。 この例では、配列の最初のオブジェクトはテナントが作成します `Property` データタイプ `Restaurant` フィールドグループが使用され、2 番目のオブジェクトが `Restaurant` フィールドグループ自体を使用します。 このペイロードは、 [リソースをインポート](#import) を別のサンドボックスまたは IMS 組織に追加する必要があります。
+正常な応答は、オブジェクトの配列を返します。この配列は、ターゲット XDM リソースとその依存リソースをすべて表します。 この例では、配列の最初のオブジェクトはテナントが作成します `Property` データタイプ `Restaurant` フィールドグループが使用され、2 番目のオブジェクトが `Restaurant` フィールドグループ自体を使用します。 このペイロードは、 [リソースをインポート](#import) を別のサンドボックスまたは組織に追加します。
 
 リソースのテナント ID のすべてのインスタンスが、 `<XDM_TENANTID_PLACEHOLDER>`. これにより、スキーマレジストリで、後続の読み込み呼び出しでの送信先に応じて、正しいテナント ID をリソースに自動的に適用できます。
 

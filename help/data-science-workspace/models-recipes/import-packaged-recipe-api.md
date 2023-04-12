@@ -5,10 +5,10 @@ title: パッケージ化されたレシピの読み込み (Sensei Machine Learn
 type: Tutorial
 description: このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 62%
+source-wordcount: '1006'
+ht-degree: 61%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 62%
 このチュートリアルでは、 API への呼び出しをおこなうために、[Adobe Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
-- `{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+- `{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 - `{API_KEY}`：固有の Adobe Experience Platform 統合で見つかった特定の API キーの値。
 
 ## エンジンの作成

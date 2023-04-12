@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1015'
 ht-degree: 25%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プロファイルプレビュー API の追加 | プロファイルプレビュー API (`/previewsamplestatus`) には、IMS 組織全体での合計プロファイルフラグメントの分類を表示する機能と、id 名前空間全体でのプロファイルフラグメントの分布を表示する機能が含まれるようになりました。 |
+| プロファイルプレビュー API の追加 | プロファイルプレビュー API (`/previewsamplestatus`) には、組織全体での合計プロファイルフラグメントの分類を表示する機能と、id 名前空間全体でのプロファイルフラグメントの分布を表示する機能が含まれるようになりました。 |
 | 和集合スキーマビューの更新 | Experience PlatformUI では、和集合スキーマに貢献するすべてのスキーマとデータセット、および ID や関係フィールドなどの表面キー属性に関する情報を、より簡単に見つけることができます。 これらの更新により、プロファイルが正しく設定され、ID が正しく結び付けられ、データが正常に取り込まれたことをトラブルシューティングおよび検証する機能が向上しました。 |
 
 詳しくは、 [!DNL Real-Time Customer Profile]を操作するためのチュートリアルやベストプラクティスを含む [!DNL Profile] データを読んでください [リアルタイム顧客プロファイルの概要](../../profile/home.md).

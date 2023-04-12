@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 45%
+source-wordcount: '1872'
+ht-degree: 48%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 
 スキーマは、データエンティティの静的表示を定義しますが、これらのスキーマ（データセットなど）に基づくデータが相互にどのように関連付けられるかに関する具体的な詳細は提供しません。Adobe Experience Platform では、記述子を使用して、これらの関係や、記述子に関するその他の解釈的なメタスキーマを記述できます。
 
-スキーマ記述子はテナントレベルのメタデータです。つまり、スキーマ記述子は IMS 組織に固有で、すべての記述子操作はテナントコンテナで行われます。
+スキーマ記述子はテナントレベルのメタデータです。つまり、スキーマ記述子は組織に固有で、すべての記述子操作はテナントコンテナで実行されます。
 
 各スキーマには、1 つ以上のスキーマ記述子エンティティを適用できます。各スキーマ記述子エンティティは、記述子 `@type` と、それが適用される `sourceSchema` を含みます。適用されると、これらの記述子はスキーマを使用して作成されたすべてのデータセットに適用されます。
 
@@ -60,9 +60,9 @@ curl -X GET \
 | `application/vnd.adobe.xdm+json` | 拡張された記述子オブジェクトの配列を返します。 |
 | `application/vnd.adobe.xdm-v2+json` | この `Accept` ページング機能を利用するには、ヘッダーを使用する必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**応答**
+**応答** 
 
 応答には、定義された記述子を持つ各記述子タイプの配列が含まれます。つまり、ある種の `@type` 記述子が定義されていない場合、その記述子型の空の配列は返されません。
 
@@ -98,7 +98,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | この `@id` 検索する記述子の名前を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -207,7 +207,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 更新する記述子の `@id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -264,7 +264,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 削除する記述子の `@id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -318,7 +318,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:property` | `xdm:id` または `xdm:code`（使用されている `xdm:namespace` に応じる）。 |
 | `xdm:isPrimary` | オプションのブール値。true の場合、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### わかりやすい名前記述子 {#friendly-name}
 
@@ -359,7 +359,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `meta:enum` | 次に示すフィールド `xdm:sourceProperty` は文字列フィールドです。 `meta:enum` を使用して、セグメント化 UI の「 」フィールドに推奨値を追加できます。 注意すべき点は `meta:enum` は列挙を宣言しないか、XDM フィールドのデータ検証を提供しません。<br><br>これは、Adobeで定義されたコア XDM フィールドにのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合、代わりに、フィールドの `meta:enum` プロパティを直接、PATCHリクエストを介してフィールドの親リソースに渡します。 |
 | `meta:excludeMetaEnum` | 次に示すフィールド `xdm:sourceProperty` は、 `meta:enum` フィールドに値を入力する場合、このオブジェクトをわかりやすい名前記述子に含めて、これらの値の一部またはすべてをセグメント化から除外できます。 各エントリのキーと値は、元のエントリに含まれるキーと値と一致する必要があります `meta:enum` 」フィールドの値を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 関係記述子
 
@@ -389,7 +389,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:destinationVersion` | 参照スキーマのメジャーバージョン。 |
 | `xdm:destinationProperty` | 参照スキーマ内のターゲットフィールドへのオプションのパス。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 参照 ID 記述子
 
@@ -413,7 +413,7 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 | `xdm:sourceProperty` | 参照スキーマを参照するために使用されるソーススキーマ内のフィールドのパス。 「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めない ( 例： `/personalEmail/address` の代わりに `/properties/personalEmail/properties/address`) をクリックします。 |
 | `xdm:identityNamespace` | ソースプロパティの ID 名前空間コード。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 廃止されたフィールド記述子
 
@@ -430,9 +430,9 @@ ID 記述子は、[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]&quo
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 記述子のタイプ。 フィールド廃止記述子の場合、この値をに設定する必要があります。 `xdm:descriptorDeprecated`. |
-| `xdm:sourceSchema` | URI `$id` 記述子を適用するスキーマの。 |
-| `xdm:sourceVersion` | 記述子を適用するスキーマのバージョン。 をに設定する必要があります。 `1`. |
-| `xdm:sourceProperty` | 記述子を適用するスキーマ内のプロパティへのパス。 記述子を複数のプロパティに適用する場合は、パスのリストを配列 ( 例えば、 `["/firstName", "/lastName"]`) をクリックします。 |
+| `@type` | 記述子のタイプ。フィールド非推奨化記述子の場合は、この値を `xdm:descriptorDeprecated` に設定する必要があります。 |
+| `xdm:sourceSchema` | 記述子の適用先となるスキーマの URI `$id`。 |
+| `xdm:sourceVersion` | 記述子の適用先となるスキーマのバージョン。 `1` に設定してください。 |
+| `xdm:sourceProperty` | 記述子の適用先となるスキーマ内のプロパティへのパス。 記述子を複数のプロパティに適用する場合は、パスのリストを配列の形式（例：`["/firstName", "/lastName"]`）で指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

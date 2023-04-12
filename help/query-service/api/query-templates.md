@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリテンプレート API エンドポイント
 description: このガイドでは、クエリサービス API を使用して実行できる様々なクエリテンプレート API 呼び出しの詳細を説明します。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 65%
+source-wordcount: '890'
+ht-degree: 61%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 65%
 
 ### クエリテンプレートのリストの取得
 
-`/query-templates` エンドポイントに GET リクエストを実行することで、IMS 組織のすべてのクエリテンプレートのリストを取得できます。
+組織のすべてのクエリテンプレートのリストを取得するには、 `/query-templates` endpoint.
 
 **API 形式**
 
@@ -47,7 +47,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、IMS 組織用に作成された最新のクエリテンプレートを取得します。
+次のリクエストは、 組織用に作成された最新のクエリテンプレートを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と指定された IMS 組織のクエリテンプレートのリストを返します。次の応答は、IMS 組織用に作成された最新のクエリテンプレートを返します。
+正常な応答は、HTTP ステータス 200 と、指定した組織のクエリテンプレートのリストを返します。 次の応答は、 組織用に作成された最新のクエリテンプレートを返します。
 
 ```json
 {

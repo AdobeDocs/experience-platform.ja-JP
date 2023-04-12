@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: プロファイル書き出しジョブ API エンドポイント
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合することで、Adobe Experience Platform内の個々の顧客を一目で把握できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 60%
+source-wordcount: '1517'
+ht-degree: 58%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 60%
 
 [!DNL Real-Time Customer Profile] を使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合し、個々の顧客の単一のビューを構築できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。 例えば、 [!DNL Profile] データはアクティベーション用に書き出すことができ、プロファイル属性はレポート用に書き出すことができます。
 
-このドキュメントでは、 [プロファイル API](https://www.adobe.com/go/profile-apis-jp).
+このドキュメントでは、 [プロファイル API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ curl -X POST \
 
 ## すべてのエクスポートジョブのリスト
 
-`export/jobs` エンドポイントに対して GET リクエストを実行して、特定の IMS 組織のすべてのエクスポートジョブのリストを返すことができます。リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
+特定の組織に対してすべてのエクスポートジョブのリストを返すには、 `export/jobs` endpoint. リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
 
 **API 形式**
 
@@ -207,9 +207,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答** 
+**応答**
 
-応答には、IMS 組織が作成したエクスポートジョブを含む `records` オブジェクトが含まれます。
+応答には、 `records` オブジェクトには、組織で作成されたエクスポートジョブが含まれます。
 
 ```json
 {

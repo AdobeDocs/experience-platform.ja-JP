@@ -7,10 +7,10 @@ landing-page-description: よくある質問への回答、および Experience 
 short-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
-ht-degree: 99%
+source-wordcount: '1868'
+ht-degree: 93%
 
 ---
 
@@ -32,9 +32,9 @@ ht-degree: 99%
 
 API リクエストの形式について詳しくは、『Platform API 入門ガイド』の [API 呼び出しのサンプルを参照する](./api-guide.md#sample-api)の節を参照してください。
 
-## IMS 組織とは何ですか。  {#what-is-my-ims-organization}
+##  組織とは何ですか。  {#what-is-my-ims-organization}
 
-IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。IMS 組織が [!DNL Experience Platform] の権利を付与されると、開発者にアクセスを割り当てることができます。IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。この ID は、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると「**クライアント資格情報**」の下に ID が表示されます。[!DNL Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+ 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。 組織が [!DNL Experience Platform] の権利を付与されると、開発者にアクセスを割り当てることができます。組織 ID (`x-gw-ims-org-id`) は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。 この ID は、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると「**クライアント資格情報**」の下に ID が表示されます。[!DNL Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ## API キーはどこで入手できますか？  {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ API キーは、すべての API リクエストのヘッダーとして必要�
 
 ## アクセストークンはどのように入手できますか？  {#how-do-i-get-an-access-token}
 
-アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。IMS 組織の統合にアクセスできる場合は、`curl` コマンドを使用して生成できます。アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。組織の統合にアクセスできる場合は、CURL コマンドを使用して生成できます。 アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ## クエリーパラメーターの使用方法  {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 }
 ```
 
-このエラーメッセージは、IMS 組織ヘッダー（`x-gw-ims-org-id`）が API リクエストに存在しない場合に表示されます。再試行する前に、IMS 組織の ID を含むヘッダーが含まれていることを確認してください。
+このエラーメッセージは、組織のヘッダー (`x-gw-ims-org-id`) が API リクエストに存在しない問題を修正しました。 再試行する前に、 組織の ID を含むヘッダーが含まれていることを確認してください。
 
 ### Profile is not valid {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 }
 ```
 
-このエラーメッセージは、ユーザーまたは Adobe I/O 統合（`Authorization` ヘッダーの[アクセストークン](#how-do-i-get-an-access-token)によって識別）が、`x-gw-ims-org-id` ヘッダーで提供された IMS 組織に対して [!DNL Experience Platform] API を呼び出す権利がない場合に表示されます。再試行する前に、ヘッダーに IMS 組織の正しい ID が指定されていることを確認してください。組織 ID が不明な場合は、[Adobe I/O コンソール](https://console.adobe.io)で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下に ID が表示されます。
+このエラーメッセージは、ユーザーまたはAdobe I/Oの統合 ( [アクセストークン](#how-do-i-get-an-access-token) 内 `Authorization` ヘッダー ) は、 [!DNL Experience Platform] で提供される組織の API `x-gw-ims-org-id` ヘッダー。 再試行する前に、ヘッダーに 組織の正しい ID が指定されていることを確認してください。組織 ID が不明な場合は、[Adobe I/O コンソール](https://console.adobe.io)で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下に ID が表示されます。
 
 ### etag 更新エラー {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 ```
 
 このエラーメッセージは、次の 2 つの場合のいずれかで表示されます。
-- 間違った形式または不正な形式の IMS 組織ヘッダー（`x-gw-ims-org-id`）が API リクエストで渡された場合。再試行する前に、IMS 組織の正しい ID が含まれていることを確認してください。
+- 組織 ID ヘッダー (`x-gw-ims-org-id`) は API リクエストで渡されます。 再試行する前に、組織の正しい ID が含まれていることを確認してください。
 - アカウント（指定された認証資格情報で表される）が Experience Platform の製品プロファイルに関連付けられていない場合。Platform API 認証チュートリアルの[アクセス資格情報の生成](./api-authentication.md#authentication-for-each-session)の手順に従って、Platform をアカウントに追加し、それに応じて認証資格情報を更新します。
 
 ## サービストラブルシューティングディレクトリ {#service-troubleshooting-directory}

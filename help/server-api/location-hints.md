@@ -2,9 +2,9 @@
 title: 場所のヒント
 description: この記事では、エンドユーザーリクエストを常に同じサーバーにルーティングできるように、Edge Network Server API でロケーションヒントがどのように機能するかを説明します。
 exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
-source-git-commit: 80c527ab3c82e01fe19e5003e224d63e79b23bdc
+source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -62,4 +62,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 Edge Network が返すロケーションヒントがセッション中も保持されるように、ロケーションヒントの値を、Cookie の有効期間と共に ( `ttlSeconds` フィールド（通常は 1800 秒）に入力します。
 
-ほとんどの Cookie と同様に、Edge ネットワークからの応答があるたびに、この Cookie の有効期間を延長する必要があります。 Web SDK との互換性を最大限に高めるには、cookie 名を使用します。 `kndctr_{IMSORG}_AdobeOrg_cluster`. IMS Org ID は通常、で終わります `@AdobeOrg`. この `@` cookie の形式が正しいことを確認するには、の値をアンダースコアに変換する必要があります。
+ほとんどの Cookie と同様に、Edge ネットワークからの応答があるたびに、この Cookie の有効期間を延長する必要があります。 Web SDK との互換性を最大限に高めるには、cookie 名を使用します。 `kndctr_{IMSORG}_AdobeOrg_cluster`. 通常、組織 ID はで終わります `@AdobeOrg`. この `@` cookie の形式が正しいことを確認するには、の値をアンダースコアに変換する必要があります。

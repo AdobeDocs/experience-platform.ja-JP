@@ -3,24 +3,24 @@ keywords: Experience Platform；小売販売レシピ；Data Science Workspace�
 solution: Experience Platform
 title: 小売販売スキーマとデータセットの作成
 type: Tutorial
-description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
+description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、組織のメンバーと共に、小売販売スキーマとデータセットをExperience Platformで使用できるようになります。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 64%
+source-wordcount: '551'
+ht-degree: 60%
 
 ---
 
 
 # 小売販売スキーマとデータセットの作成
 
-このチュートリアルでは、その他すべてに必要な前提条件とアセットについて説明します [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアル 完了すると、IMS 組織のメンバーと共に、小売販売スキーマとデータセットをで使用できるようになります。 [!DNL Experience Platform].
+このチュートリアルでは、その他すべてに必要な前提条件とアセットについて説明します [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアル 完了すると、組織のメンバーと共に、小売販売スキーマとデータセットを使用できるようになります。 [!DNL Experience Platform].
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
-- アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+- アクセス先 [!DNL Adobe Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 - 作成の認証 [!DNL Experience Platform] API 呼び出し。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`

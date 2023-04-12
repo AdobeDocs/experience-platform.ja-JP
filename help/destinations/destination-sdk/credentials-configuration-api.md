@@ -2,10 +2,10 @@
 description: このページでは、「/authoring/credentials」 API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 資格情報エンドポイント API の操作
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 100%
+source-wordcount: '791'
+ht-degree: 91%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `servicePrincipalKey` | 文字列 | Azure Data Lake Storage の Azure サービスプリンシパルキー |
 | `connectionString` | 文字列 | Azure Blob ストレージ接続文字列 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## 資格情報の設定リスト {#retrieve-list}
 
-エンドポイント `/authoring/credentials` に GET リクエストを送信すると、IMS 組織のすべての資格情報設定のリストを取得できます。
+組織のすべての資格情報設定のリストを取得するには、 `/authoring/credentials` endpoint.
 
 **API 形式**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **リクエスト**
 
-次のリクエストは、IMS 組織とサンドボックスの構成に基づいて、アクセス権のある資格情報設定のリストを取得します。
+次のリクエストは、組織とサンドボックスの設定に基づいて、アクセス権のある資格情報設定のリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 とアクセス権のある資格情報設定のリストを返します。1 つの `instanceId` は、1 つの資格情報設定のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
+次の応答は、使用した組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある資格情報設定のリストを返します。 1 つの `instanceId` は、1 つの資格情報設定のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
 
 ```json
 {

@@ -2,9 +2,9 @@
 title: クエリサービスでのデータアセットの組織のベストプラクティス
 description: このドキュメントでは、クエリサービスで使いやすくするためにデータを整理する論理的な方法について説明します。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ dataset3| table
 
 ## データコンテナでのデータアセットの更新または削除
 
-IMS 組織（またはサンドボックス）内のデータアセットの量が増えるにつれ、データコンテナのデータアセットを更新または削除する必要が生じます。 ドット表記を使用して適切なデータベースおよびスキーマ名を参照することで、個々のアセットを組織コンテナから削除できます。 テーブルとビュー (`t1` および `v1` ) を `databaseA.schema1` 最初の例では、次の例の構文を使用してが削除されます。
+組織（またはサンドボックス）内のデータアセットの量が増えるにつれ、データコンテナのデータアセットを更新または削除する必要が生じます。 ドット表記を使用して適切なデータベースおよびスキーマ名を参照することで、個々のアセットを組織コンテナから削除できます。 テーブルとビュー (`t1` および `v1` ) を `databaseA.schema1` 最初の例では、次の例の構文を使用してが削除されます。
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### データアセットを削除
 
-この [ドロップテーブル](../sql/syntax.md#drop-table) 関数は、 [!DNL Data Lake] は、IMS 組織内のすべてのデータベースにテーブルへの単一の参照が存在する場合です。
+この [ドロップテーブル](../sql/syntax.md#drop-table) 関数は、 [!DNL Data Lake] テーブルへの単一の参照が組織内のすべてのデータベースに存在する場合。
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

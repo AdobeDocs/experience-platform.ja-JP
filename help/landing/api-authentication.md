@@ -5,10 +5,10 @@ title: Experience Platform API の認証とアクセス
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1269'
-ht-degree: 17%
+source-wordcount: '1267'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 17%
 
 Experience PlatformAPI を正しく呼び出すには、次が必要です。
 
-* Adobe Experience Platform へのアクセス権を持つ IMS 組織.
+* Adobe Experience Platformへのアクセス権を持つ組織。
 * Admin Consoleプロファイルの開発者およびユーザーとして追加できる製品管理者。
 
 また、このチュートリアルを完了するには、Adobe IDが必要です。 Adobe ID をお持ちでない場合は、次の手順で作成できます。
@@ -54,7 +54,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 
 お使いの [!DNL Admin Console] また、管理者はユーザーを同じ製品プロファイルに追加する必要があります。 詳しくは、 [ユーザーグループの管理 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) を参照してください。
 
-## API キー、IMS Org ID およびクライアントの秘密鍵を生成します {#api-ims-secret}
+## API キー、組織 ID、クライアントの秘密鍵を生成する {#api-ims-secret}
 
 >[!NOTE]
 >
@@ -202,4 +202,4 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 このドキュメントでは、Platform API のアクセス資格情報を収集し、正常にテストしました。 これで、 [ドキュメント](../landing/documentation/overview.md).
 
-このチュートリアルで収集した認証値に加えて、多くの Platform API では有効な `{SANDBOX_NAME}` ヘッダーとして提供される。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
+このチュートリアルで収集した認証値に加えて、多くの Platform API では有効な `{SANDBOX_NAME}` ヘッダーとして提供される。 詳しくは、[サンドボックスの概要](../sandboxes/home.md)を参照してください。

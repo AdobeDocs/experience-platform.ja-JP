@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Schedules エンドポイント
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 73%
+source-wordcount: '1132'
+ht-degree: 70%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 73%
 
 ### スケジュールされたクエリのリストの取得
 
-IMS 組織に対してスケジュールされたすべてのクエリのリストを取得するには、`/schedules` エンドポイントへの GET リクエストをおこないます。
+組織に対してスケジュールされたすべてのクエリのリストを取得するには、 `/schedules` endpoint.
 
 **API 形式**
 
@@ -45,7 +45,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、IMS 組織用に作成され、最新のスケジュール済みクエリを返します。
+次のリクエストは、 組織用に作成され、最新のスケジュール済みクエリを返します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **応答**
 
-成功応答は、HTTP ステータス 200 とともに、指定した IMS 組織に対する、スケジュール済みクエリのリストを返します。次の応答は、IMS 組織用に作成され、最新のスケジュール済みクエリを返します。
+正常な応答は、HTTP ステータス 200 と、指定した組織に対してスケジュールされたクエリのリストを返します。 次の応答は、 組織用に作成され、最新のスケジュール済みクエリを返します。
 
 ```json
 {

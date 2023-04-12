@@ -5,16 +5,16 @@ title: Luma Web スキーマとデータセットの作成
 type: Tutorial
 description: このチュートリアルでは、Luma デモ傾向モデルに必要な前提条件とアセットについて説明します。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
 
 # Luma 傾向モデルのスキーマとデータセットの作成
 
-このチュートリアルでは、その他すべてに必要な前提条件とアセットについて説明します [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアル 完了したら、次のスキーマとデータセットを IMS 組織と共に使用できるようになります。
+このチュートリアルでは、その他すべてに必要な前提条件とアセットについて説明します [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] チュートリアル 完了したら、次のスキーマとデータセットを組織と共に使用できるようになります。
 
 **スキーマ:**
 
@@ -43,7 +43,7 @@ ht-degree: 2%
 
 ### Luma Web データスキーマの作成とデータの取り込み
 
-モデルを作成するには、モデルのトレーニングとスコアリングに使用される Platform のデータセットが必要です。 次の [Data Science Workspace コース](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) では、Luma スキーマの作成、および購入傾向モデルで使用されるデータの取り込みに関する手順を説明します。
+モデルを作成するには、モデルのトレーニングとスコアリングに使用される Platform のデータセットが必要です。 次の [Data Science Workspace コース](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) では、Luma スキーマの作成、および購入傾向モデルで使用されるデータの取り込みに関する手順を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

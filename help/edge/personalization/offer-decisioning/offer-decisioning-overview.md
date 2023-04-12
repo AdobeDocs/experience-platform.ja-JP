@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 18%
+source-wordcount: '863'
+ht-degree: 17%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK でのOffer decisioningの使用は、一部のユーザーに対して早期にアクセスできます。 この機能は、一部の IMS 組織ではご利用いただけきません。
+>Adobe Experience Platform Web SDK でのOffer decisioningの使用は、一部のユーザーに対して早期にアクセスできます。 この機能は、一部の組織ではご利用いただけきません。
 
 Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer Decisioning ユーザーインターフェイス（UI）または API を使用して、オファーとその他の関連オブジェクトを作成できます。
 
 ## 前提条件
 
-* IMS 組織がエッジ判定に対して有効になっています
+* 組織はエッジ判定に対して有効になっています
 * オファー、作成されたアクティビティ
 * データストリームが公開されています
 

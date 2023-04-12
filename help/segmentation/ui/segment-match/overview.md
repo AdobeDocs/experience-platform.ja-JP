@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
-ht-degree: 99%
+source-wordcount: '1997'
+ht-degree: 98%
 
 ---
 
@@ -76,7 +76,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 | 権限 | 説明 |
 | --- | --- |
-| オーディエンス共有接続の管理 | この権限を使用すると、2 つの IMS 組織を接続して [!DNL Segment Match] フローを有効にするパートナーハンドシェイクプロセスを完了できます。 |
+| オーディエンス共有接続の管理 | この権限を使用すると、2 つの組織を接続してを有効にするパートナーハンドシェイクプロセスを完了できます [!DNL Segment Match] フロー。 |
 | オーディエンス共有の管理 | この権限を使用すると、アクティブなパートナー（**[!UICONTROL オーディエンス共有接続]**&#x200B;にアクセスできる管理者ユーザーによって接続されたパートナー）と協力してフィード（[!DNL Segment Match] に使用されるデータのパッケージ）を作成、編集および公開できます。 |
 
 アクセス制御と権限について詳しくは、[アクセス制御の概要](../../../access-control/home.md)を参照してください。

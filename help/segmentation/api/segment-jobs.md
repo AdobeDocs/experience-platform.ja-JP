@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 24%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した IMS 組織のセグメントジョブのリストを JSON として返します。ただし、応答は、セグメントジョブ内のセグメントの数に応じて異なります。
+正常な応答は、HTTP ステータス 200 と、指定した 組織のセグメントジョブのリストを JSON として返します。ただし、応答は、セグメントジョブ内のセグメントの数に応じて異なります。
 
 **セグメントジョブの 1500 以下のセグメント**
 

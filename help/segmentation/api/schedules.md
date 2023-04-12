@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schedules API エンドポイント
 description: スケジュールは、1 日 1 回バッチセグメント化ジョブを自動的に実行するために使用できるツールです。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 23%
 
 ---
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **応答**
 
-正常な応答では、JSON として指定された IMS 組織のスケジュールのリストと共に HTTP ステータス 200 が返されます。
+正常な応答では、JSON として指定された 組織のスケジュールのリストと共に HTTP ステータス 200 が返されます。
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `path` | パッチを適用する値のパス。この場合、スケジュールの状態を更新するので、の値を設定する必要があります。 `path` を&quot;/state&quot;に変更します。 |
-| `value` | スケジュールの状態の更新された値。 この値は、「アクティブ」または「非アクティブ」に設定して、スケジュールをアクティブ化または非アクティブ化できます。 なお、 **できません** IMS 組織がストリーミングを有効にしている場合、スケジュールを無効にします。 |
+| `value` | スケジュールの状態の更新された値。 この値は、「アクティブ」または「非アクティブ」に設定して、スケジュールをアクティブ化または非アクティブ化できます。 なお、 **できません** 組織でストリーミングが有効になっている場合は、スケジュールを無効にします。 |
 
 **応答**
 

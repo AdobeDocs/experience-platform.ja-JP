@@ -4,10 +4,10 @@ solution: Experience Platform
 title: マッピングセット API のエンドポイント
 description: Adobe Experience Platform API で「/mappingSets」エンドポイントを使用すると、マッピングセットをプログラムにより取得、作成、更新および検証できます。
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 94%
+source-wordcount: '852'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 ## マッピングセットのリスト
 
-IMS 組織で利用可能なすべてのマッピングセットのリストを取得するには、`/mappingSets` エンドポイントに対して GET リクエストをおこないます。
+組織のすべてのマッピングセットのリストを取得するには、 `/mappingSets` endpoint.
 
 **API 形式**
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **リクエスト**
 
-次のリクエストは、IMS 組織内の最後の 2 つのマッピングセットを取得します。
+次のリクエストは、組織内の最後の 2 つのマッピングセットを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

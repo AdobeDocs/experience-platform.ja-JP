@@ -2,10 +2,10 @@
 description: このページでは、`/authoring/destinations/publish` API エンドポイントを使用して実行できるすべての API 操作について説明します。
 title: 宛先を公開 API エンドポイントの操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 67%
+source-wordcount: '770'
+ht-degree: 60%
 
 ---
 
@@ -67,7 +67,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationId` | 文字列 | 公開用に送信する宛先設定の宛先 ID。[Destination Configuration API リファレンス](./destination-configuration-api.md#retrieve-list)を使用して、宛先設定の宛先 ID を取得します。 |
 | `destinationAccess` | 文字列 | 用途 `ALL` を設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -75,7 +75,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 宛先の公開リクエストのリスト {#retrieve-list}
 
-IMS 組織のすべての宛先のリストを取得するには、`/authoring/destinations/publish` エンドポイントに GET リクエストを作成します。
+組織用に公開用に送信されたすべての宛先のリストを取得するには、に対してGETリクエストをおこないます `/authoring/destinations/publish` endpoint.
 
 **API 形式**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **リクエスト**
 
-次のリクエストは、IMS 組織とサンドボックス設定に基づいて、アクセス権のある公開用に送信された宛先のリストを取得します。
+次のリクエストは、組織とサンドボックスの設定に基づいて、アクセス権のある公開用に送信された宛先のリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、自身がアクセス権を持つ、公開用に送信された宛先のリストを返します。1 つの `configId` は、1 つの宛先の公開リクエストに対応します。
+次の応答は、使用した組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある公開用に送信された宛先のリストを返します。 1 つの `configId` は、1 つの宛先の公開リクエストに対応します。
 
 ```json
 {
@@ -125,7 +125,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `publishDetailsList.destinationType` | 文字列 | 宛先のタイプ。 値は `DEV` および `PUBLIC`. `DEV` は、Experience Platform組織の宛先に対応します。 `PUBLIC` は、公開用に送信した宛先に対応します。 Git では、これら 2 つのオプションを考えて、 `DEV` バージョンは、ローカルのオーサリングブランチを表し、 `PUBLIC` version は、リモートメインブランチを表します。 |
 | `publishDetailsList.publishedDate` | 文字列 | 宛先が公開用に送信された日付（エポック時間）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 特定の宛先の公開リクエストのステータスの取得 {#get}
 

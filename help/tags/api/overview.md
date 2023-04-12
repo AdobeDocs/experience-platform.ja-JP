@@ -2,10 +2,10 @@
 title: Reactor API ガイド
 description: Reactor API を使用すると、開発者は Adobe Experience Platform のタグのすべてのリソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 100%
+source-wordcount: '1081'
+ht-degree: 99%
 
 ---
 
@@ -19,7 +19,7 @@ Reactor API には、Adobe Experience Platform のタグのすべてのリソー
 
 ## 会社
 
-会社は、タグユーザーの組織（通常はビジネス）を表します。これらの会社は、IMS 組織 ID と 1:1 で一致します。 API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。
+会社は、タグユーザーの組織（通常はビジネス）を表します。これらの会社は、1:1 と組織 ID を一致させます。 API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。
 
 API で利用可能な会社を表示する方法については、[会社エンドポイントガイド](./endpoints/companies.md)を参照してください。
 

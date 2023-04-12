@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御トラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 100%
+source-wordcount: '407'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 ## 現在のアクセス権限はどこで確認できますか。
 
-IMS 組織のシステム管理者、製品管理者、製品プロファイル管理者は、割り当てられた製品プロファイルと提供される権限を Adobe Admin Console で表示できます。を使用して製品プロファイルの権限を表示する方法については、『[アクセス制御ユーザガイド](./ui/overview.md)』を参照してください[!DNL Admin Console]。
+組織のシステム管理者、製品管理者、製品プロファイル管理者は、割り当てられた製品プロファイルと提供される権限をAdobe Admin Consoleで表示できます。 を使用して製品プロファイルの権限を表示する方法については、『[アクセス制御ユーザガイド](./ui/overview.md)』を参照してください[!DNL Admin Console]。
 
 管理者以外の場合でも、アクセス制御 API の `/acl/effective-policies` エンドポイントにリクエストを送信することで、現在のアクセス権限を表示することができます。詳しくは、『[アクセス制御開発者ガイド](./api/effective-policies.md)』の「有効ポリシーの表示」の節を参照してください。
 

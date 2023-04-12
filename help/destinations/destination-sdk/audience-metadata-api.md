@@ -2,10 +2,10 @@
 description: このページでは、API エンドポイント /authoring/audience-templates を使用して実行できるすべての API 操作について説明します。
 title: オーディエンスメタデータエンドポイント API の操作
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 100%
+source-wordcount: '873'
+ht-degree: 91%
 
 ---
 
@@ -196,7 +196,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `validations.field` | 文字列 | 宛先に対する API 呼び出しが実行される前に、いずれかのフィールドに対して検証を実行する必要があるかどうかを示します。例えば、ユーザーのアカウント ID の検証に `{{validations.accountId}}` を使用できます。 |
 | `validations.regex` | 文字列 | 検証に合格するために、フィールドをどのように構成するべきかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## オーディエンステンプレートのリストの取得 {#retrieve-list}
 
-エンドポイント `/authoring/audience-templates` に GET リクエストを実行することで、IMS 組織のすべてのオーディエンステンプレートのリストを取得できます。
+組織のすべてのオーディエンステンプレートのリストを取得するには、 `/authoring/audience-templates` endpoint.
 
 **API 形式**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **リクエスト**
 
-次のリクエストは、IMS 組織とサンドボックス設定に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します。
+次のリクエストは、組織とサンドボックスの設定に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **応答**
 
-次の応答では、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のあるオーディエンスメタデータテンプレートのリストが返されます。 1 つの `instanceId` が 1 つの宛先のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
+次の応答は、使用した組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のあるオーディエンスメタデータテンプレートのリストを返します。 1 つの `instanceId` が 1 つの宛先のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
 
 ```json
 {

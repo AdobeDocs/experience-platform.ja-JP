@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシーリクエストの ID データ
 description: このドキュメントでは、データ操作を設定し、アドビのテクノロジーを活用して、顧客のプライバシー要求に適した ID 情報を効果的に取得する方法について、一般的なガイダンスを提供しています。
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 45%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Privacy Service] 非公開データに対する�
 
 顧客が複数の異なるチャネルを通じてブランドとやり取りできる場合、多数のインタラクションから記録される様々な識別子を調整するのは困難なことがあります。その結果、特定の個人に属するデータを特定するのが困難になる場合があります [!DNL Experience Cloud] アプリケーション。
 
-例えば、 [!DNL Privacy Service]の場合、id は、Adobeが管理するドメインの下に設定される cookie 値、サードパーティドメインの下に設定され、Adobeと共有される cookie 値、または IMS 組織内で明示的に定義したカスタム識別子を表すことができます。
+例えば、 [!DNL Privacy Service]の場合、id は、Adobeが管理するドメインの下に設定された cookie 値、サードパーティドメインの下に設定され、Adobeと共有される cookie 値、または組織内で明示的に定義したカスタム識別子を表す場合があります。
 
 したがって、各 ID はに送信する必要があります。 [!DNL Privacy Service] は、id 値を元のシステムに関連付けることでコンテキストを提供する名前空間を伴います。 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
 

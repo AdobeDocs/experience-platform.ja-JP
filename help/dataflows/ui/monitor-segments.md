@@ -4,10 +4,10 @@ description: セグメント化を使用すると、リアルタイム顧客プ�
 title: UI でのセグメントのデータフローの監視
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 5%
+source-wordcount: '1919'
+ht-degree: 7%
 
 ---
 
@@ -22,19 +22,19 @@ ht-degree: 5%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [データフロー](../home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
-   - [データフローの実行](../../sources/notifications.md):データフローの実行は、選択したデータフローの頻度設定に基づく、定期的にスケジュールされたジョブです。
+   - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
 - [セグメント化](../../segmentation/home.md):セグメント化を使用すると、リアルタイム顧客プロファイルデータからセグメントとオーディエンスを作成できます。
    - [アクティベーションジョブ](../../destinations/ui/activation-overview.md):アクティベーションジョブは、指定した宛先に対してセグメントをアクティブ化するために使用されます。
    - [評価ジョブ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment):評価ジョブは、指定されたセグメントに基づいてを実行してオーディエンスセグメントを作成する非同期プロセスです。
    - [書き出しジョブ](../../segmentation/api/export-jobs.md):書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ## セグメントダッシュボードの監視 {#monitoring-segments-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="セグメント"
->abstract="セグメント表示には、IMS 組織のすべてのセグメントに関する情報と、そのアクティベーションジョブと評価ジョブに関する詳細情報が含まれています。"
+>abstract="セグメント表示には、組織のすべてのセグメントに関する情報と、そのアクティブ化ジョブと評価ジョブの詳細情報が含まれています。"
 
 次の手順で **[!UICONTROL セグメント]** ダッシュボード、選択 **[!UICONTROL 監視]** をクリックします。 1 回 **[!UICONTROL 監視]** ページで、 **[!UICONTROL セグメント]** カード。
 
@@ -48,7 +48,7 @@ ht-degree: 5%
 >
 >現在、に対してアクティブ化されているセグメントのみ [バッチ（ファイルベース）の宛先](../../destinations/destination-types.md#file-based) は、監視セグメントダッシュボードでサポートされています。
 
-![セグメントダッシュボード。 IMS 組織とサンドボックス内の様々なセグメントに関する情報が表示されます。](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![セグメントダッシュボード。組織とサンドボックス内の様々なセグメントに関する情報が表示されます。](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 このダッシュボードビューでは、次の指標を使用できます。
 
@@ -109,7 +109,7 @@ ht-degree: 5%
 | **[!UICONTROL データフローの実行開始]** | アクティベーションジョブが開始された日時。 |
 | **[!UICONTROL データフローの実行終了]** | アクティベーションジョブが終了した日時。 |
 | **[!UICONTROL データフロー実行 ID]** | 現在のアクティベーションジョブの ID。 |
-| **[!UICONTROL IMS org ID]** | アクティベーションジョブが属する IMS 組織の ID。 |
+| **[!UICONTROL IMS org ID]** | アクティベーションジョブが属する組織の ID。 |
 | **[!UICONTROL 宛先名]** | データがアクティブ化される宛先の名前。 |
 
 指標の下に、データフロー実行エラーとセグメントの間の選択を切り替える切り替えが表示されます。
@@ -151,7 +151,7 @@ ht-degree: 5%
 | **[!UICONTROL ジョブタイプ]** | セグメントジョブのタイプ。 この場合、常にセグメント評価ジョブになります。 |
 | **[!UICONTROL 評価タイプ]** | 実行中の評価のタイプ。 これは、 **[!UICONTROL バッチ]** または **[!UICONTROL ストリーミング]**. |
 | **[!UICONTROL ジョブ ID]** | 評価ジョブの ID。 |
-| **[!UICONTROL IMS org ID]** | 評価ジョブが属する IMS 組織の ID。 |
+| **[!UICONTROL IMS org ID]** | 評価ジョブが属する組織の ID。 |
 | **[!UICONTROL セグメント名]** | 評価されるセグメントの名前。 |
 | **[!UICONTROL Segment ID]** | 評価されるセグメントの ID。 |
 

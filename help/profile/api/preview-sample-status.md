@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: サンプルステータスのプレビュー（プロファイルプレビュー）API エンドポイント
 description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID 別にプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2873'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Experience Platform内でのプロファイルとその役割の詳細につい�
 
 ## 最後のサンプルステータスを表示 {#view-last-sample-status}
 
-に対してGETリクエストを実行できます `/previewsamplestatus` エンドポイント：IMS 組織で最後に実行された成功したサンプルジョブの詳細を表示します。 これには、サンプル内のプロファイルの合計数、プロファイル数指標、またはExperience Platform内に組織が持つプロファイルの合計数が含まれます。
+に対してGETリクエストを実行できます `/previewsamplestatus` endpoint ：組織で最後に実行された成功したサンプルジョブの詳細を表示します。 これには、サンプル内のプロファイルの合計数、プロファイル数指標、またはExperience Platform内に組織が持つプロファイルの合計数が含まれます。
 
 プロファイル数は、プロファイルフラグメントを結合して個々の顧客ごとに 1 つのプロファイルを形成した後に生成されます。 つまり、プロファイルフラグメントを結合すると、すべて同じ個人に関連しているので、「1」プロファイルの数が返されます。
 

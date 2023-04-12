@@ -4,10 +4,10 @@ solution: Experience Platform
 title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1261'
-ht-degree: 48%
+source-wordcount: '1258'
+ht-degree: 46%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform を使用すると、プロファイルのグループ
 
 ## セグメント定義のリストの取得 {#list}
 
-IMS 組織の全セグメント定義のリストを取得するには、`/segment/definitions` エンドポイントへの GET リクエストを実行します。
+組織のすべてのセグメント定義のリストを取得するには、に対してGETリクエストを実行します。 `/segment/definitions` endpoint.
 
 **API 形式**
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストでは、IMS 組織内で投稿された最後の 2 つのセグメント定義を取得します。
+次のリクエストでは、組織内で投稿された最後の 2 つのセグメント定義を取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **応答**
 
-リクエストが成功した場合は、指定した IMS 組織のセグメント定義のリスト（JSON 形式）と HTTP ステータス 200 が返されます。
+リクエストが成功した場合は、指定した 組織のセグメント定義のリスト（JSON 形式）と HTTP ステータス 200 が返されます。
 
 ```json
 {

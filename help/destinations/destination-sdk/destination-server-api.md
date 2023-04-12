@@ -2,10 +2,10 @@
 description: このページでは、API エンドポイント /authoring/destination-servers を使用して実行できる API 操作をすべて一覧化して説明します。宛先のサーバーとテンプレートの仕様は、共通のエンドポイント /authoring/destination-servers を介して Adobe Experience Platform Destination SDK で設定できます。
 title: 宛先サーバーエンドポイント API の操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 95%
+source-wordcount: '1355'
+ht-degree: 90%
 
 ---
 
@@ -603,7 +603,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 宛先サーバー設定のリスト {#retrieve-list}
 
-IMS 組織のすべての宛先サーバー設定のリストを取得するには、エンドポイント `/authoring/destination-servers` に GET リクエストを行います。
+組織のすべての宛先サーバー設定のリストを取得するには、に対してGETリクエストを実行します `/authoring/destination-servers` endpoint.
 
 **API 形式**
 
@@ -613,7 +613,7 @@ GET /authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、IMS 組織とサンドボックスの設定に基づいて、アクセス権のある宛先サーバー設定のリストを取得します。
+次のリクエストは、組織とサンドボックスの設定に基づいて、アクセス権のある宛先サーバー設定のリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -625,7 +625,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **応答**
 
-次の応答では、使用した IMS 組織 ID とサンドボックス名に基づいて、アクセス権のある宛先サーバー設定のリストを含めた HTTP ステータス 200 が返されます。1 つの `instanceId` は、1 つの宛先サーバーのテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
+次の応答は、使用した組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある宛先サーバー設定のリストを返します。 1 つの `instanceId` は、1 つの宛先サーバーのテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
 
 ```json
 {

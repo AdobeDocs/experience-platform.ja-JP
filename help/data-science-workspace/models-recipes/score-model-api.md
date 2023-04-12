@@ -5,10 +5,10 @@ title: Sensei Machine Learning API を使用したモデルのスコアリング
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API を活用して Experiment と Experiment Run を作成する方法を示します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 87%
+source-wordcount: '550'
+ht-degree: 78%
 
 ---
 
@@ -34,7 +34,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
 `{JSON_PAYLOAD}`：送信する実験実行オブジェクト。このチュートリアルで使用する例を次に示します。
@@ -122,7 +122,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
 `{EXPERIMENT_ID}`：ターゲットする実験に対応する ID。これは、実験を作成する際の応答に含まれています。\
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`：実行する実験に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合での IMS 組織の資格情報。
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 
 特定のテストに対して複数の実験実行があるので、返される応答には実行 ID の配列が含まれます。
 
@@ -230,7 +230,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`：Experiment に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリパラメータを使用したカタログデータのフィルタリング
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2120'
 ht-degree: 85%
 
 ---
@@ -206,7 +206,7 @@ curl -X GET \
 タグを使用する場合は、いくつかの制限が考慮されます。
 
 * 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
-* タグ名は IMS 組織に固有です。
+* タグ名は組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
 * 次のタグ名は、で使用するために予約されています [!DNL Experience Platform]のタグ名として宣言することはできません。
    * `unifiedProfile`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Real-Time Customer Profile]](../../profile/home.md).

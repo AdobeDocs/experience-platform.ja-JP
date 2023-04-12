@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 11 月
+title: Adobe Experience Platform リリースノート 2020年11月
 description: Adobe Experience Platform の 2020年11月 のリリースノート。
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2184'
-ht-degree: 25%
+source-wordcount: '2182'
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 11 月 11 日（PT）**
+**リリース日：2020年11月11日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -34,7 +34,7 @@ Adobe Experience Platform の新機能：
 
 ## Adobe Experience Platform Data Lake の移行 {#migration}
 
-Adobeがデータレイクを Gen1 から Gen2 に移行している間、ユーザーはデータレイクから読み取ることができますが、データレイクに書き込むすべての機能に影響が及びます。 Adobeは、システム管理者に問い合わせて、移行の影響の詳細を話し合い、特定の IMS 組織の移行日時を確認します。
+Adobeがデータレイクを Gen1 から Gen2 に移行している間、ユーザーはデータレイクから読み取ることができますが、データレイクに書き込むすべての機能に影響が及びます。 Adobeはシステム管理者に連絡し、移行の影響について詳細に話し合い、特定の組織の移行日時を確認します。
 
 詳しくは、 [データレイク移行ガイド](../../landing/adls2-gen2-migration.md).
 
@@ -92,7 +92,7 @@ Adobeがデータレイクを Gen1 から Gen2 に移行している間、ユー
 
 詳しくは、 [[!DNL Data Prep]  の概要](../../data-prep/home.md) を参照してください。
 
-## Data Science Workspace {#dsw}
+## データサイエンスワークスペース {#dsw}
 
 Data Science Workspace は、機械学習と人工知能を使用して、データからインサイトを作成します。Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測を行うことを支援します。Data Science Workspace がこれを実現する方法の 1 つは、 [!DNL JupyterLab]. [!DNL JupyterLab] は、 [[!DNL Project Jupyter]](https://jupyter.org/) とはAdobe Experience Platformと緊密に統合されています。 データサイエンティストが連携できる、インタラクティブな開発環境を提供します。 [!DNL Jupyter] ノートブック、コード、データ。
 
@@ -181,7 +181,7 @@ Attribution AI はインテリジェントサービスの一部で、顧客と�
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。[!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 **主な特長**
 
@@ -213,7 +213,7 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 | 階層マッピング | データ取り込みプロセス中に、JSON や Parquet などの階層ソースファイルをプレビューできます。 次のチュートリアルを参照してください： [UI でのクラウドストレージコネクタのデータフローの設定](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) を参照してください。 |
 | ストリーミングソースでのマッピングの API サポート | API を使用して、ストリーミングソースでマッピング関数を実行できるようになりました。 |
 | クラウドストレージソースのカスタム区切り文字の API サポート | クラウドストレージソースを使用して、CSV 以外の区切りファイルを収集できるようになりました。 タブ、コンマ、パイプ、セミコロン、ハッシュなど、任意の 1 列の区切り文字を使用して、任意の形式のフラットファイルを収集できます。 |
-| Adobe Audience Managerコネクタのサンドボックスサポート | Audience Managerコネクタは、サンドボックス対応になりました。 コネクタを有効にして、選択したサンドボックス ( 非実稼動用Audience Managerを含む ) にデータセットをルーティングできます。 設定は、IMS 組織ごとに 1 つのサンドボックスに制限されています。 |
+| Adobe Audience Managerコネクタのサンドボックスサポート | Audience Managerコネクタは、サンドボックス対応になりました。 コネクタを有効にして、選択したサンドボックス ( 非実稼動用Audience Managerを含む ) にデータセットをルーティングできます。 設定は、組織ごとに 1 つのサンドボックスに制限されます。 |
 | UX の改善 | ファイルベースの取り込みが、ソースカタログからアクセスできるようになりました。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

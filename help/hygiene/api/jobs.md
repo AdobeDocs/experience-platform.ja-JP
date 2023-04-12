@@ -4,10 +4,10 @@ description: Adobe Experience Platform で顧客の保存した個人データ�
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 97%
+source-wordcount: '480'
+ht-degree: 96%
 
 ---
 
@@ -107,7 +107,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `companyContexts` | 組織の認証情報を含む配列。次のプロパティのオブジェクトを 1 つ含める必要があります。 <ul><li>`namespace`：`imsOrgID` に設定する必要があります。</li><li>`value`：IMS 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで提供される値と同じです。</li></ul> |
+| `companyContexts` | 組織の認証情報を含む配列。次のプロパティのオブジェクトを 1 つ含める必要があります。 <ul><li>`namespace`：`imsOrgID` に設定する必要があります。</li><li>`value`:組織 ID。 これは、`x-gw-ims-org-id` ヘッダーで提供される値と同じです。</li></ul> |
 | `users` | 情報を削除する 1 人以上のユーザーのコレクションを含む配列。各ユーザーオブジェクトには、次の情報が含まれます。 <ul><li>`key`：応答データ内の個別のジョブ ID を修飾するために使用されるユーザーの識別子。後で参照または検索できるように、この値には一意で簡単に識別できる文字列を選択することをお勧めします。</li><li>`action`：ユーザーのデータに対して実行する必要のあるアクションをリストする配列。単一の文字列値「`delete`」を含む必要があります。</li><li>`userIDs`：ユーザーの ID のコレクションです。1 人のユーザーが持つことのできる ID の数は 9 個に制限されます。各 ID には、次のプロパティが含まれます。 <ul><li>`namespace`：ID に関連付けられた [ID 名前空間](../../identity-service/namespaces.md)。これは、Platform で認識される[標準の名前空間](../../privacy-service/api/appendix.md#standard-namespaces)にすることも、組織で定義されるカスタム名前空間にすることもできます。使用する名前空間のタイプは、`type` プロパティに反映する必要があります。</li><li>`value`：ID 値。</li><li>`type`：グローバルに認識された名前空間を使用している場合は `standard`、組織で定義されている名前空間を使用している場合は `custom` に設定する必要があります。</li></ul></li></ul> |
 
 {style="table-layout:auto"}

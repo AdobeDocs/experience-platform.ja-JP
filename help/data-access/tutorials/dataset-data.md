@@ -5,10 +5,10 @@ title: データアクセス API を使用したデータセットデータの�
 type: Tutorial
 description: Adobe Experience Platformのデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする方法について説明します。 また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1390'
-ht-degree: 75%
+source-wordcount: '1388'
+ht-degree: 73%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 75%
 
 のエンドポイントの包括的なリスト [!DNL Catalog] API（を参照） [API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## IMS 組織内のバッチのリストを取得する
+## 組織内のバッチのリストの取得
 
 の使用 [!DNL Catalog] API を使用すると、組織内のバッチのリストを返すことができます。
 
@@ -82,9 +82,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-応答には、IMS 組織に関連するすべてのバッチのリストを含むオブジェクトが含まれ、各最上位の値はバッチを表します。個々のバッチオブジェクトには、その特定のバッチの詳細が含まれます。以下の応答は、スペースのために最小化されています。
+応答には、組織に関連するすべてのバッチのリストを含むオブジェクトが含まれ、各最上位の値はバッチを表します。 個々のバッチオブジェクトには、その特定のバッチの詳細が含まれます。以下の応答は、スペースのために最小化されています。
 
 ```json
 {

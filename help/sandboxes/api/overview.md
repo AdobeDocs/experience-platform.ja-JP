@@ -4,16 +4,16 @@ solution: Experience Platform
 title: サンドボックス API ガイド
 description: Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '329'
 ht-degree: 38%
 
 ---
 
 # [!DNL Sandbox] API ガイド
 
-この [!DNL Sandbox] API には、IMS 組織内で使用可能なすべてのサンドボックスをプログラムで管理できる複数のエンドポイントが用意されています。 これらのエンドポイントの概要を以下に示します。詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)のガイドを参照してください。
+この [!DNL Sandbox] API には、組織内で使用可能なすべてのサンドボックスをプログラムで管理できる複数のエンドポイントが用意されています。 これらのエンドポイントの概要を以下に示します。詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)のガイドを参照してください。
 
 使用可能なすべてのエンドポイントと CRUD の操作を確認するには、 [[!DNL Sandbox] API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox).
 

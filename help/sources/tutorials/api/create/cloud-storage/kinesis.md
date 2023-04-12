@@ -5,10 +5,10 @@ title: フローサービス API を使用したAmazon Kinesisソース接続の
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをAmazon Kinesisソースに接続する方法を説明します。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 68%
+source-wordcount: '729'
+ht-degree: 67%
 
 ---
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `auth.params.accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント |
 | `auth.params.secretKey` | の秘密アクセスキー [!DNL Kinesis] アカウント |
 | `auth.params.region` | の地域 [!DNL Kinesis] アカウント |
-| `connectionSpec.id` | この [!DNL Kinesis] 接続仕様 ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | [!DNL Kinesis] 接続仕様 ID：`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **応答**
 
@@ -103,7 +103,7 @@ curl -X POST \
 
 ## ソース接続の作成 {#source}
 
-ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと IMS 組織に固有です。
+ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。 ソース接続インスタンスは、テナントと組織に固有です。
 
 ソース接続を作成するには、[!DNL Flow Service] API の `/sourceConnections` エンドポイントに POST リクエストを実行します。
 

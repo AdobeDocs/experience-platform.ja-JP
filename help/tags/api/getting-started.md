@@ -2,10 +2,10 @@
 title: Reactor API の概要
 description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 97%
+source-wordcount: '1049'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス認証情�
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-IMS 組織の ID（`{ORG_ID}`）と API キー（`{API_KEY}`）は、最初に生成された後、今後の API 呼び出しで再利用できます。ただし、アクセストークン（`{ACCESS_TOKEN}`）は一時的なもので、24 時間ごとに再生成する必要があります。
+組織の ID (`{ORG_ID}`) および API キー (`{API_KEY}`) は、最初に生成された後、今後の API 呼び出しで再利用できます。 ただし、アクセストークン（`{ACCESS_TOKEN}`）は一時的なもので、24 時間ごとに再生成する必要があります。
 
 これらの値を生成する手順については、以下で詳しく説明します。
 

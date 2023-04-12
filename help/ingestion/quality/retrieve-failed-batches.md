@@ -5,10 +5,10 @@ title: データアクセス API を使用した失敗したバッチの取得
 type: Tutorial
 description: このチュートリアルでは、データ取得 API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 83%
+source-wordcount: '645'
+ht-degree: 80%
 
 ---
 
@@ -194,9 +194,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 前述の例のフローのタイムスタンプエラーと同様に、これらのエラーの原因は XDM の形式が正しくないことです。これらのエラーメッセージは、問題の性質によって異なります。その結果、特定のエラー例は表示されません。
 
-### IMS 組織 ID が見つからないか、無効です
+### 組織 ID がないか、無効です
 
-このエラーは、IMS 組織 ID がペイロードにないか、無効な場合に表示されます。
+このエラーは、組織 ID がペイロードにないか、無効な場合に表示されます。
 
 ```json
 {

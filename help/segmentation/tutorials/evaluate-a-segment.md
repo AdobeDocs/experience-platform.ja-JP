@@ -5,10 +5,10 @@ title: セグメント結果の評価とアクセス
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 62%
+source-wordcount: '1607'
+ht-degree: 61%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 62%
 
 ## スケジュールされた評価 {#scheduled-evaluation}
 
-IMS 組織では、スケジュールされた評価を通じて、エクスポートジョブを自動的に実行する定期的なスケジュールを作成できます。
+組織は、スケジュールされた評価を通じて、書き出しジョブを自動的に実行する定期的なスケジュールを作成できます。
 
 >[!NOTE]
 >

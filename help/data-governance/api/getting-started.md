@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Policy Service API の概要
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '443'
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 100%
 
 [!DNL Policy Service] API 内では、ポリシーとマーケティングアクションはすべて、`core` リソースまたは `custom` リソースと呼ばれます。
 
-`core` リソースとは、アドビが定義および保守するものです。 `custom` リソースとは、お客様の組織が作成および保守するものであり、お客様の IMS 組織のみに表示される一意のリソースです。このため、`core` リソースに対して許可される操作は、リストと参照の操作（`GET`）のみです。一方、`custom` リソースに対しては、リスト、参照、および更新の操作（`POST`、`PUT`、`PATCH`、`DELETE`）を使用できます。
+`core` リソースはAdobeが定義し、維持するものです。 `custom` リソースは、組織が作成および管理するリソースなので、組織に対してのみ表示され、一意のものです。 このため、`core` リソースに対して許可される操作は、リストと参照の操作（`GET`）のみです。一方、`custom` リソースに対しては、リスト、参照、および更新の操作（`POST`、`PUT`、`PATCH`、`DELETE`）を使用できます。
 
 ## 次の手順
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Platform SDK を使用したモデルオーサリング
 description: このチュートリアルでは、Python と R の両方で data_access_sdk_python を新しい Python platform_sdk に変換する方法について説明します。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 79%
+source-wordcount: '489'
+ht-degree: 69%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 79%
 
 ## 認証の構築 {#build-authentication}
 
-への呼び出しをおこなうには認証が必要です [!DNL Adobe Experience Platform]は、API キー、IMS 組織 ID、ユーザートークン、サービストークンで構成されます。
+への呼び出しをおこなうには認証が必要です [!DNL Adobe Experience Platform]は、API キー、組織 ID、ユーザートークン、サービストークンで構成されます。
 
 ### Python
 
@@ -31,7 +31,7 @@ Jupyter ノートブックを使用している場合は、次のコードを使
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Jupyter ノートブックを使用していない場合、または IMS 組織を変更する必要がある場合は、次のコード例を使用してください。
+Jupyter ノートブックを使用していない場合、または組織を変更する必要がある場合は、次のコード例を使用してください。
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Jupyter ノートブックを使用していない場合、または IMS 組織を変更する必要がある場合は、次のコード例を使用してください。
+Jupyter ノートブックを使用していない場合、または組織を変更する必要がある場合は、次のコード例を使用してください。
 
 ```r
 library(reticulate)
@@ -79,7 +79,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 >[!NOTE]
 >
-> IMS 組織は、`client_context` 内で設定されます 。
+>組織が `client_context`.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
-> IMS 組織は、`client_context` 内で設定されます 。
+>組織が `client_context`.
 
 Python と R でデータを書き込むには、次の例を使用します。
 

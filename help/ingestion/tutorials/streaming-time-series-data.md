@@ -5,10 +5,10 @@ title: ストリーミング取得 API を使用した時系列データのス�
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 62%
+source-wordcount: '1203'
+ht-degree: 60%
 
 ---
 
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | この ID は、作成するリソースの名前空間が適切に設定され、IMS 組織内に含まれるようにするために使用されます。テナント ID の詳細については、『[スキーマレジストリガイド](../../xdm/api/getting-started.md#know-your-tenant-id)』を参照してください。 |
+| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用されます。 テナント ID の詳細については、『[スキーマレジストリガイド](../../xdm/api/getting-started.md#know-your-tenant-id)』を参照してください。 |
 
 データセットを作成する際には、`$id` 属性と `version` 属性の両方が使用されるので、注意してください。
 

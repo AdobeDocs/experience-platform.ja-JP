@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API を使用したエッジのセグメント化
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 100%
+source-wordcount: '1185'
+ht-degree: 96%
 
 ---
 
@@ -67,7 +67,7 @@ Experience Platform API エンドポイントへの呼び出しを正常に行�
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
-`/segment/definitions` エンドポイントに対して GET リクエストを行うことで、IMS 組織内でエッジセグメント化が有効になっているすべてのセグメントのリストを取得できます。 
+組織内でエッジセグメント化に対して有効になっているすべてのセグメントのリストを取得するには、に対してGETリクエストを実行します `/segment/definitions` endpoint.
 
 **API 形式**
 
@@ -90,7 +90,7 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功すると、エッジセグメント化が有効になっている、IMS 組織内のセグメントの配列が応答として返されます。返されるセグメント定義について詳しくは、[セグメント定義エンドポイントガイド](./segment-definitions.md)を参照してください。
+正常な応答は、エッジセグメント化が有効な組織内のセグメントの配列を返します。 返されるセグメント定義について詳しくは、[セグメント定義エンドポイントガイド](./segment-definitions.md)を参照してください。
 
 ```json
 {

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アカウント API エンドポイント
 description: 永続的なのクエリサービスアカウントを作成できます。
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '494'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ POST /accounts
 
 **リクエスト**
 
-次のリクエストを実行すると、IMS 組織の新しいクエリサービス統合アカウントが作成されます。
+次のリクエストでは、組織の新しいクエリサービス統合アカウントが作成されます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \

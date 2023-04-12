@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 100%
+source-wordcount: '721'
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform は様々なソースからデータを取得します
 
 ## 使用 [!DNL Query Service]
 
-[!DNL Query Service] は、データを詳細に分析するための SQL クエリを作成できるユーザーインターフェイスと RESTful API を提供します。ユーザーインターフェイスを使用すると、クエリの記述と実行、以前に実行されたクエリの表示、IMS 組織内のユーザーによって保存されたクエリへのアクセスをおこなうことができます。ユーザーインターフェイスは、より広範なデータセットに対してクエリを実行する前に、クエリをテストするためのサンドボックスとして使用されます。[!DNL Platform] 内でのインタラクティブサービスの使用に関する詳細については、[クエリサービスのユーザーインターフェイスのガイド](ui/overview.md)を参照してください。RESTful API も同様のエクスペリエンスを提供し、クエリの記述と実行、将来の使用と繰り返しに備えたクエリのスケジュール、記述するクエリのテンプレートの作成をプログラムで行えるようにします。[!DNL Query Service] API の使用に関する詳細については、[クエリサービスデベロッパーガイド](api/getting-started.md)を参照してください。
+[!DNL Query Service] は、データを詳細に分析するための SQL クエリを作成できるユーザーインターフェイスと RESTful API を提供します。ユーザーインターフェイスを使用すると、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスを行うことができます。 ユーザーインターフェイスは、より広範なデータセットに対してクエリを実行する前に、クエリをテストするためのサンドボックスとして使用されます。[!DNL Platform] 内でのインタラクティブサービスの使用に関する詳細については、[クエリサービスのユーザーインターフェイスのガイド](ui/overview.md)を参照してください。RESTful API も同様のエクスペリエンスを提供し、クエリの記述と実行、将来の使用と繰り返しに備えたクエリのスケジュール、記述するクエリのテンプレートの作成をプログラムで行えるようにします。[!DNL Query Service] API の使用に関する詳細については、[クエリサービスデベロッパーガイド](api/getting-started.md)を参照してください。
 
 ## [!DNL Query Service] および [!DNL Experience Platform] サービス
 

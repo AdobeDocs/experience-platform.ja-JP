@@ -2,9 +2,9 @@
 title: Gen2 へのデータレイクの移行
 description: Adobe Experience Platformのデータレイクを Gen2 に移行することで提供される新機能について説明します。
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -26,4 +26,4 @@ Adobeがデータレイクを Gen1 から Gen2 に移行する際に、ユーザ
 
 ## Platform ユーザーとの通信
 
-Adobeは、システム管理者に問い合わせて、移行の影響の詳細を話し合い、特定の IMS 組織の移行日時を確認します。
+Adobeはシステム管理者に連絡し、移行の影響について詳細に話し合い、特定の組織の移行日時を確認します。

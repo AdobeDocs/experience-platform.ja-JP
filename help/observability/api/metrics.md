@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 指標 API エンドポイント
 description: 観察性インサイト API を使用して、Experience Platformで観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 27%
+source-wordcount: '1384'
+ht-degree: 24%
 
 ---
 
@@ -86,7 +86,7 @@ curl -X POST \
 | `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能な集約について詳しくは、 [OpenTSDB ドキュメント](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 | `downsample` | フィールドを間隔（「グループ」）に並べ替えることで、集計関数を指定して、指標データのサンプリング率を減らすことができるオプションのフィールドです。 ダウンサンプリングの間隔は、 `granularity` プロパティ。 ダウンサンプリングについて詳しくは、 [OpenTSDB ドキュメント](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -180,7 +180,7 @@ curl -X POST \
 | `groupBy` | 複数のデータセットが `filter` プロパティを使用して、 `groupBy` オプションがリクエストで true に設定された場合、このオブジェクトには、対応する `dps` プロパティの適用先：<br><br>このオブジェクトが応答で空の場合、 `dps` プロパティは、 `filters` 配列（またはすべてのデータセット） [!DNL Platform] （フィルターが指定されていない場合）。 |
 | `dps` | 指定された指標、フィルターおよび時間範囲に対して返されるデータ。 このオブジェクトの各キーは、指定した指標に対応する値を持つタイムスタンプを表します。 各データポイント間の期間は、 `granularity` リクエストで指定された値。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 付録
 
@@ -211,7 +211,7 @@ curl -X POST \
 | **timeseries.data.collection.inlet.success** | 1 つのデータインレットまたはすべてのデータインレットに対する成功した HTTP 呼び出しの合計数。 | インレット ID |
 | **timeseries.data.collection.inlet.failure** | 1 つのデータインレットまたはすべてのデータインレットに対する失敗した HTTP 呼び出しの合計数。 | インレット ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Identity Service] {#identity}
 
@@ -223,11 +223,11 @@ curl -X POST \
 | timeseries.identity.dataset.recordfailed.count | 失敗したレコードの数（次の場合） [!DNL Identity Service]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 名前空間が失敗した ID レコードの数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 名前空間がスキップした ID レコードの数。 | 名前空間 ID（**必須**） |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | IMS 組織の ID グラフに保存される一意の ID の数。 | なし |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | 組織の ID グラフに保存される一意の ID の数。 | なし |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 名前空間の ID グラフに保存される一意の ID の数。 | 名前空間 ID（**必須**） |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 特定のグラフの強さ（「不明」、「弱」または「強」）の IMS 組織の ID グラフに保存される一意の ID の数。 | グラフの強さ（**必須**） |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 特定のグラフの強さ（「不明」、「弱」または「強」）について、組織の ID グラフに保存される一意の ID の数。 | グラフの強さ（**必須**） |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Real-Time Customer Profile] {#profile}
 
@@ -239,7 +239,7 @@ curl -X POST \
 | timeseries.profiles.dataset.recordsuccess.count | データソースに書き込まれたレコードの数 [!DNL Profile]（1 つのデータセット、またはすべてのデータセット用）。 | データセット ID |
 | timeseries.profiles.dataset.batchsuccess.count | 数 [!DNL Profile] データセットまたはすべてのデータセットに対して取り込まれるバッチ。 | データセット ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### エラーメッセージ
 
@@ -272,9 +272,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | エラーメッセージおよびエラーメッセージが発生した可能性のある理由を含む文字列。 |
-| `report` | エラーをトリガーした操作で使用されているサンドボックスや IMS 組織など、エラーに関するコンテキスト情報が含まれます。 |
+| `report` | エラーをトリガーした操作で使用されているサンドボックスや組織を含む、エラーに関するコンテキスト情報が含まれます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次の表に、API から返される様々なエラーコードを示します。
 
@@ -284,6 +284,6 @@ curl -X POST \
 | `INSGHT-1001-400` | 指標のクエリが失敗しました | リクエストが正しくないか、クエリ自体を解析できないため、指標データベースに対してクエリを実行しようとした際にエラーが発生しました。 再試行する前に、リクエストが正しく形式設定されていることを確認してください。 |
 | `INSGHT-1001-500` | 指標のクエリが失敗しました | サーバーエラーが原因で、指標データベースに対してクエリを実行しようとした際にエラーが発生しました。 要求を再試行してください。問題が解決しない場合は、Adobeサポートにお問い合わせください。 |
 | `INSGHT-1002-500` | サービスエラー | 内部エラーが原因で、リクエストを処理できませんでした。 要求を再試行してください。問題が解決しない場合は、Adobeサポートにお問い合わせください。 |
-| `INSGHT-1003-401` | サンドボックス検証エラー | サンドボックス検証エラーが原因で、リクエストを処理できませんでした。 で指定したサンドボックス名が `x-sandbox-name` ヘッダーは、IMS 組織に対して有効な、リクエストを再試行する前に有効なサンドボックスを表します。 |
+| `INSGHT-1003-401` | サンドボックス検証エラー | サンドボックス検証エラーが原因で、リクエストを処理できませんでした。 で指定したサンドボックス名が `x-sandbox-name` ヘッダーは、組織で有効になっている、リクエストを再試行する前の有効なサンドボックスを表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

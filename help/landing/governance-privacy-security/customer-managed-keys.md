@@ -2,9 +2,9 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1617'
 ht-degree: 92%
 
 ---
@@ -207,7 +207,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 設定の名前。この値は、[後の手順](#check-status)で設定のステータスを確認する際に必要なため、覚えておいてください。この値は、大文字と小文字を区別します。 |
 | `type` | 設定タイプ。 `BYOK_CONFIG` に設定する必要があります。 |
-| `imsOrgId` | IMS 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで指定される値と同じである必要があります。 |
+| `imsOrgId` | 組織 ID。これは、`x-gw-ims-org-id` ヘッダーで指定される値と同じである必要があります。 |
 | `configData` | 設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultKeyIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
 
 **応答**

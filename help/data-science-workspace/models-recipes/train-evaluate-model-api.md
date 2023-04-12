@@ -5,10 +5,10 @@ title: Sensei Machine Learning API を使用したモデルのトレーニング
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1235'
-ht-degree: 92%
+source-wordcount: '1227'
+ht-degree: 85%
 
 ---
 
@@ -26,7 +26,7 @@ API を使用したモデルのトレーニングと評価に必要なエンジ�
 このチュートリアルから、次の値を入手できます。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
-- `{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+- `{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 - `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 - インテリジェントサービスの Docker イメージへのリンク
@@ -65,7 +65,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：MLInstance の設定。次に、このチュートリアルで使用する例を示します。
 
@@ -176,7 +176,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：作成する Experiment オブジェクト。次に、このチュートリアルで使用する例を示します。
@@ -231,7 +231,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：使用するデータセット。次に、このチュートリアルで使用する例を示します。
@@ -319,7 +319,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`：目的の Experiment に対応する ID。これは、Experiment を作成した際のレスポンスに含まれています。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：トレーニング Run を作成するには、本文に次の内容を含める必要があります。
@@ -390,7 +390,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`：Experiment を表す ID。\
 `{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 **応答** 
@@ -453,7 +453,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`：目的の Experiment Run に対応する ID。これは、Experiment Run を作成した際のレスポンスに含まれています。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 
 レスポンスは、作成されたトレーニング済みモデルを表します。
 
@@ -500,7 +500,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`：Experiment に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
 
 >[!NOTE]
 >

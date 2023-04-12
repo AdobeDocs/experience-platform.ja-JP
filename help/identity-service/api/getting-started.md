@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ID サービス API ガイド
 description: ID サービス API を使用すると、開発者は、Adobe Experience Platformの ID グラフを使用して、デバイス間、チャネル間、ほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 73%
+source-wordcount: '764'
+ht-degree: 68%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platfor
 
 ### 地域ベースのルーティング
 
-この [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一部として追加します。 IMS 組織のプロビジョニング中に、地域が決定され、IMS Org プロファイル内に保存されます。各エンドポイントで正しい地域を使用すると、 [!DNL Identity Service] API は適切な地域にルーティングされます。
+この [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一部として追加します。 組織のプロビジョニング中に、地域が決定され、組織のプロファイル内に保存されます。 各エンドポイントで正しい地域を使用すると、 [!DNL Identity Service] API は適切な地域にルーティングされます。
 
 現在、 [!DNL Identity Service] API:VA7 と NLD2。
 
@@ -66,7 +66,7 @@ Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platfor
 >
 >地域を指定しないでリクエストをおこなうと、誤った地域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
 
-IMS Org プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてください。
+組織プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてサポートを依頼してください。
 
 ## の使用 [!DNL Identity Service] API
 

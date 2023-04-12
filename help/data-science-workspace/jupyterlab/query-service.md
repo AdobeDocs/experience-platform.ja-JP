@@ -5,9 +5,9 @@ title: Jupyter ノートブックでのクエリサービス
 type: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例に対する SQL クエリの例を示します。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '821'
 ht-degree: 58%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 58%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]先に進む前に、システム管理者にお問い合わせください。
+- アクセス先 [!DNL Adobe Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]先に進む前に、システム管理者にお問い合わせください。
 
 - An [!DNL Adobe Analytics] データセット
 

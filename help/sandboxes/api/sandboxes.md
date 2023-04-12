@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス管理 API エンドポイント
 description: Sandbox API の/sandboxes エンドポイントを使用すると、Adobe Experience Platformでサンドボックスをプログラムで管理できます。
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 54%
+source-wordcount: '1488'
+ht-degree: 55%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## サンドボックスのリストの取得 {#list}
 
-に対してGETリクエストをおこなうことで、IMS 組織（アクティブまたはその他）に属するすべてのサンドボックスをリストできます `/sandboxes` endpoint.
+に対してGETリクエストをおこなうことで、組織（アクティブまたはその他）に属するすべてのサンドボックスをリスト表示できます `/sandboxes` endpoint.
 
 **API 形式**
 

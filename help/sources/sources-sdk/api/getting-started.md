@@ -4,10 +4,10 @@ solution: Experience Platform
 title: セルフサービスソース（バッチ SDK）の概要
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報について説明します。
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 52%
+source-wordcount: '386'
+ht-degree: 53%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 52%
 
 ## 前提条件
 
-セルフサービスソース（バッチ SDK）を使用するには、Adobe Experience Platform Sources でプロビジョニングされた IMS 組織サンドボックスにアクセスできることを確認する必要があります。
+セルフサービスソース（バッチ SDK）を使用するには、Adobe Experience Platform Sources でプロビジョニングされた組織 Sandbox にアクセスできることを確認する必要があります。
 
 また、このガイドでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 

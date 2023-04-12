@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Real-time Customer Data Platform B2B Edition の概要
 description: Adobe Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 83%
+source-wordcount: '1205'
+ht-degree: 82%
 
 ---
 
@@ -64,7 +64,7 @@ Adobe Experience Platform UI 内で、Bodea のマーケターは左パネルで
 
 Marketo アカウントと Platform の間の接続を作成するには、認証資格情報を取得する必要があります。詳しくは、[Marketo ソースコネクタ認証資格情報の取得に関するガイド](../sources/connectors/adobe-applications/marketo/marketo-auth.md)を参照してください。
 
-認証資格情報を取得した後、Bodea マーケター は Marketo アカウントと Platform IMS 組織の間に接続を作成します。[Platform UI を使用した Marketo アカウントの接続方法](../sources/tutorials/ui/create/adobe-applications/marketo.md)については、ドキュメントを参照してください。
+認証資格情報を取得した後、Bodea マーケターはMarketoアカウントと Platform 組織の間に接続を作成します。 [Platform UI を使用した Marketo アカウントの接続方法](../sources/tutorials/ui/create/adobe-applications/marketo.md)については、ドキュメントを参照してください。
 
 Marketo Engage ソースコネクタは、すべてのデータフィールドを新しく作成されたスキーマのデータフィールドにマッピングするプロセスをはるかに簡単にする自動マッピング機能を提供します。
 

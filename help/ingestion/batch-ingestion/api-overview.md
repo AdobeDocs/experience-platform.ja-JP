@@ -4,10 +4,10 @@ solution: Experience Platform
 title: バッチ取得 API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
-ht-degree: 76%
+source-wordcount: '2411'
+ht-degree: 75%
 
 ---
 
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TENANT_ID}` | この ID を使用すると、作成したリソースの名前空間が適切に付けられ、IMS 組織内に含まれるようになります |
+| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用されます。 |
 | `{SCHEMA_ID}` | 作成したスキーマの ID。 |
 
 ### バッチの作成

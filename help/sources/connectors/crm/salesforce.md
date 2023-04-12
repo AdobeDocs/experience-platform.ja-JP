@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Salesforce ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Salesforce をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 20%
+source-wordcount: '896'
+ht-degree: 19%
 
 ---
 
@@ -62,14 +62,14 @@ Platform デベロッパーコンソールと [!DNL Postman] を設定すると�
 | `IMS` | Identity Management System(IMS) は、Adobe サービスに対する認証のフレームワークを提供します。 次に関して： [!DNL Marketo]の場合、この値は固定で、常に次の値に設定されます。 `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 製品やサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる企業エンティティ。 に関するチュートリアルを参照してください。 [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md) を参照してください。 `{ORG_ID}` 情報。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 使用している仮想サンドボックスパーティションの名前です。 | `prod` |
-| `TENANT_ID` | 作成するリソースの名前空間が適切に付けられ、IMS 組織内に含まれるようにするために使用される ID。 | `b2bcdpproductiontest` |
+| `TENANT_ID` | 作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用される ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 呼び出しをおこなう URL エンドポイント。 この値は固定で、常に次の値に設定されます。 `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 | `munchkinId` | の一意の ID [!DNL Marketo] アカウント に関するチュートリアルを参照してください。 [認証 [!DNL Marketo] インスタンス](../adobe-applications/marketo/marketo-auth.md) 」を参照してください。 `munchkinId`. | `123-ABC-456` |
 | `sfdc_org_id` | の組織 ID [!DNL Salesforce] アカウント 次を参照してください。 [[!DNL Salesforce] ガイド](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) を参照してください。 [!DNL Salesforce] 組織 ID。 | `00D4W000000FgYJUA0` |
 | `has_abm` | 購読しているかどうかを示す boolean 値です [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | 購読しているかどうかを示す boolean 値です。 [!DNL Marketo Sales Insight]. | `false` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### スクリプトの実行
 

@@ -2,16 +2,16 @@
 title: 会社エンドポイント
 description: Reactor API で /companies エンドポイントを呼び出す方法を説明します。
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 100%
+source-wordcount: '239'
+ht-degree: 95%
 
 ---
 
 # 会社エンドポイント
 
-会社は、顧客組織（通常はビジネス）を表します。Reactor API では、これらの会社は IMS 組織 ID と 1:1 で一致します。API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。会社には、多くの [プロパティ](./properties.md) を含めることができます。プロパティは、1 つの会社のみに属します。
+会社は、顧客組織（通常はビジネス）を表します。Reactor API では、これらの会社は組織 ID を持つ 1 対 1 に一致します。 API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。会社には、多くの [プロパティ](./properties.md) を含めることができます。プロパティは、1 つの会社のみに属します。
 
 Reactor API の `/companies` エンドポイントを使用すると、エクスペリエンスアプリケーション内で自身がアクセス権を持つ会社を、プログラムによって取得できます。
 

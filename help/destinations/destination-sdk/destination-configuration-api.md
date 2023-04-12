@@ -2,10 +2,10 @@
 description: このページでは、API エンドポイント /authoring/destinations を使用して実行できるすべての API 操作について説明します。
 title: 宛先 API エンドポイントの操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2545'
-ht-degree: 91%
+source-wordcount: '2536'
+ht-degree: 88%
 
 ---
 
@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | ブール値 | [こちら](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。このパラメーターを使用して、書き出されたプロファイルを単一の ID のグループ（GAID、IDFA、電話番号、メールなど）に集計するかどうかを指定します。 |
 | `aggregation.configurableAggregation.aggregationKey.groups` | 文字列 | [ここ](./destination-configuration.md#example-configuration)で設定例のパラメーターを参照してください。宛先に書き出されたグループプロファイルを ID 名前空間のグループ別にグループ化する場合は、ID グループのリストを作成します。例えば、IDFA および GAID モバイル識別子を含むプロファイルを、例の設定を使用して、宛先への呼び出しと、別のメールへと組み合わせることができます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -443,7 +443,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 宛先設定のリスト {#retrieve-list}
 
-IMS 組織のすべての宛先設定のリストを取得するには、`/authoring/destinations` エンドポイントに GET リクエストを作成します。
+組織のすべての宛先設定のリストを取得するには、に対してGETリクエストをおこないます `/authoring/destinations` endpoint.
 
 **API 形式**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **リクエスト**
 
-次のリクエストは、IMS 組織とサンドボックス設定に基づいて、自身がアクセス権を持つ宛先設定のリストを取得します。
+次のリクエストは、組織とサンドボックスの設定に基づいて、アクセス権のある宛先設定のリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **応答**
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある宛先設定のリストを返します。1 つの `instanceId` は、1 つの宛先のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
+次の応答は、使用した組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある宛先設定のリストを返します。 1 つの `instanceId` が 1 つの宛先のテンプレートに対応します。簡潔にするために、応答は切り捨てられます。
 
 ```json
 {
@@ -604,7 +604,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | ブール値 | 宛先のアクティベーションワークフローのセグメントマッピング ID が Adobe Experience Platform のセグメント名かどうかを制御します。 |
 | `segmentMappingConfig.audienceTemplateId` | ブール値 | この宛先に使用される[オーディエンスメタデータテンプレート](./audience-metadata-management.md)の `instanceId`。オーディエンスのメタデータテンプレートを設定するには、[オーディエンスメタデータ API リファレンス](./audience-metadata-api.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 既存の宛先設定の更新 {#update}
 

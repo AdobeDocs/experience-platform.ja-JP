@@ -4,9 +4,9 @@ title: データセット重複レポートの生成
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイル API を使用してデータセットの重複レポートを生成するために必要な手順の概要を説明します。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform API を使用するには、まず [認証チュート
 
 * `Authorization: Bearer {ACCESS_TOKEN}`:この `Authorization` ヘッダーには、の前にが付いたアクセストークンが必要です `Bearer`. 新しいアクセストークンの値は、24 時間ごとに生成する必要があります。
 * `x-api-key: {API_KEY}`:この `API Key` は、 `Client ID` とは、1 回だけ生成する必要がある値です。
-* `x-gw-ims-org-id: {ORG_ID}`:この `IMS Org` は、 `Organization ID` 生成する必要があるのは 1 回のみです。
+* `x-gw-ims-org-id: {ORG_ID}`:組織 ID は 1 回だけ生成する必要があります。
 
 認証に関するチュートリアルを完了し、必要なヘッダーの値を収集したら、リアルタイム顧客 API への呼び出しを開始する準備が整いました。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリ API エンドポイント
 description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 64%
+source-wordcount: '864'
+ht-degree: 60%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 64%
 
 ### クエリのリストの取得
 
-IMS 組織に対するすべてのクエリのリストを取得するには、`/queries` エンドポイントへの GET リクエストをおこないます。
+組織に対するすべてのクエリのリストを取得するには、 `/queries` endpoint.
 
 **API 形式**
 
@@ -46,7 +46,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストで、IMS 組織用に作成された最新のクエリを取得します。
+次のリクエストで、 組織用に作成された最新のクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **応答**
 
-成功応答は、HTTP ステータス 200 とともに、JSON として指定した IMS 組織のクエリのリストを返します。次の応答は、IMS 組織用に作成された最新のクエリを返します。
+正常な応答は、HTTP ステータス 200 と、指定された組織のクエリのリストを JSON として返します。 次の応答は、 組織用に作成された最新のクエリを返します。
 
 ```json
 {

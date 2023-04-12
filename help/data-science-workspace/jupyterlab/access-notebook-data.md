@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Jupyterlab Notebooks でのデータアクセス
 description: このガイドでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータにアクセスする方法に焦点を当てます。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '3294'
-ht-degree: 23%
+source-wordcount: '3292'
+ht-degree: 30%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 23%
 
 ## はじめに
 
-このガイドを読む前に、 [[!DNL JupyterLab] ユーザーガイド](./overview.md) ～の高度な紹介のために [!DNL JupyterLab] と、Data Science Workspace 内での役割を表します。
+このガイドを読む前に、[!DNL JupyterLab] の概要およびデータサイエンスワークスペース内での役割を[[!DNL JupyterLab] ユーザーガイド](./overview.md)で確認してください。
 
 ## ノートブックのデータ制限 {#notebook-data-limits}
 
@@ -148,7 +148,7 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Python でのデータセットへの書き込み {#write-python}
 
-JupyterLab ノートブック内のデータセットに書き込むには、JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示されている）を選択します。 この **[!UICONTROL データセット]** および **[!UICONTROL スキーマ]** ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
+JupyterLab ノートブック内のデータセットに書き込むには、JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示されている）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
@@ -169,9 +169,9 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### 次を使用してデータをクエリ [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab][!DNL Platform][!DNL Python] で を使用すると、 ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html)を通じてデータにアクセスできます。を通じてデータにアクセスする [!DNL Query Service] は、実行時間が優れているので、大規模なデータセットの処理に役立ちます。 を使用してデータをクエリする場合は、 [!DNL Query Service] には、10 分の処理時間制限があります。
+[!DNL JupyterLab][!DNL Platform][!DNL Python] で を使用すると、 ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja)を通じてデータにアクセスできます。[!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
 
-事前準備 [!DNL Query Service] in [!DNL JupyterLab]を使用する場合、 [[!DNL Query Service] SQL 構文](https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
+[!DNL JupyterLab] で [!DNL Query Service] を使用する前に、[[!DNL Query Service] SQL 構文](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=ja)について実践的に理解していることを確認してください。
 
 を使用したデータのクエリ [!DNL Query Service] ターゲットデータセットの名前を指定する必要があります。 必要なコードセルを生成するには、**[!UICONTROL データエクスプローラー]**&#x200B;を使用して目的のデータセットを見つけます。データセットのリストを右クリックし、「 」をクリックします。 **[!UICONTROL ノートブックでのデータのクエリ]** ノートブックで 2 つのコードセルを生成する場合。 これら 2 つのセルの概要を以下に示します。
 
@@ -284,7 +284,7 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### R でのデータセットへの書き込み {#write-r}
 
-JupyterLab ノートブック内のデータセットに書き込むには、JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示されている）を選択します。 この **[!UICONTROL データセット]** および **[!UICONTROL スキーマ]** ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
+JupyterLab ノートブック内のデータセットに書き込むには、JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示されている）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
@@ -388,15 +388,15 @@ spark = SparkSession.builder.getOrCreate()
 >
 > を使用してデータをキャッシュする `df.cache()` データを書き込む前に、ノートブックのパフォーマンスを大幅に向上させることができます。 これは、次のエラーが発生した場合に役立ちます。
 > 
-> - ステージの失敗によりジョブが中止されました…各パーティション内の要素数が同じ RDD のみを zip で圧縮できます。
-> - リモート RPC クライアントが関連付けを解除し、その他のメモリエラーが発生しました。
-> - データセットの読み取りと書き込みの際のパフォーマンスが低下。
+> - ステージの失敗によりジョブが中止されました … 各パーティション内の要素数が同一の RDD のみを圧縮できます。
+> - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
+> - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
 > 詳しくは、 [トラブルシューティングガイド](../troubleshooting-guide.md) を参照してください。
 
 次のメソッドを使用して、JupyterLab buy で上記の例を自動生成できます。
 
-JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示）を選択します。 この **[!UICONTROL データセット]** および **[!UICONTROL スキーマ]** ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
+JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブックにデータを書き込む]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
 
 - 用途 **[!UICONTROL ノートブック内のデータの調査]** 読み取りセルを生成する。
 - 用途 **[!UICONTROL ノートブックにデータを書き込む]** 書き込みセルを生成する場合。
@@ -488,9 +488,9 @@ Scala では、 `clientContext` Platform の値を取得して返すために、
 >
 > を使用してデータをキャッシュする `df.cache()` データを書き込む前に、ノートブックのパフォーマンスを大幅に向上させることができます。 これは、次のエラーが発生した場合に役立ちます。
 > 
-> - ステージの失敗によりジョブが中止されました…各パーティション内の要素数が同じ RDD のみを zip で圧縮できます。
-> - リモート RPC クライアントが関連付けを解除し、その他のメモリエラーが発生しました。
-> - データセットの読み取りと書き込みの際のパフォーマンスが低下。
+> - ステージの失敗によりジョブが中止されました … 各パーティション内の要素数が同一の RDD のみを圧縮できます。
+> - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
+> - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
 > 詳しくは、 [トラブルシューティングガイド](../troubleshooting-guide.md) を参照してください。
 
@@ -519,7 +519,7 @@ df1.show(10)
 | df1 | データの読み取りと書き込みに使用される Pandas データフレームを表す変数。 |
 | user-token | を使用して自動的に取得されたユーザートークン `clientContext.getUserToken()`. |
 | service-token | を使用して自動的に取得されるサービストークン。 `clientContext.getServiceToken()`. |
-| ims-org | を使用して自動的に取得される IMS Org ID `clientContext.getOrgId()`. |
+| ims-org | を使用して自動的に取得される組織 ID。 `clientContext.getOrgId()`. |
 | api-key | を使用して自動的に取得される API キー `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -528,7 +528,7 @@ df1.show(10)
 
 次のメソッドを使用して、JupyterLab buy で上記の例を自動生成できます。
 
-JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示）を選択します。 この **[!UICONTROL データセット]** および **[!UICONTROL スキーマ]** ディレクトリが表示されます。 選択 **[!UICONTROL データセット]** をクリックし、右クリックして、 **[!UICONTROL ノートブック内のデータの調査]** オプションを選択します。 ノートブックの下部に、実行可能なコードエントリが表示されます。
+JupyterLab の左側のナビゲーションで、「データアイコン」タブ（下でハイライト表示）を選択します。 **[!UICONTROL データセット]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックのデータを調査]**」オプションを選択します。ノートブックの下部に、実行可能なコードエントリが表示されます。
 および
 - 用途 **[!UICONTROL ノートブック内のデータの調査]** 読み取りセルを生成する。
 - 用途 **[!UICONTROL ノートブックにデータを書き込む]** 書き込みセルを生成する場合。
@@ -543,9 +543,9 @@ Scala では、 `clientContext` Platform の値を取得して返すために、
 >
 > を使用してデータをキャッシュする `df.cache()` データを書き込む前に、ノートブックのパフォーマンスを大幅に向上させることができます。 これは、次のエラーが発生した場合に役立ちます。
 > 
-> - ステージの失敗によりジョブが中止されました…各パーティション内の要素数が同じ RDD のみを zip で圧縮できます。
-> - リモート RPC クライアントが関連付けを解除し、その他のメモリエラーが発生しました。
-> - データセットの読み取りと書き込みの際のパフォーマンスが低下。
+> - ステージの失敗によりジョブが中止されました … 各パーティション内の要素数が同一の RDD のみを圧縮できます。
+> - リモート RPC クライアントの関連付けが解除され、その他のメモリエラーが発生しました。
+> - データセットの読み取り時や書き込み時のパフォーマンスが低下しています。
 > 
 > 詳しくは、 [トラブルシューティングガイド](../troubleshooting-guide.md) を参照してください。
 
@@ -566,12 +566,12 @@ df1.write.format("com.adobe.platform.query")
   .save()
 ```
 
-| element | description |
+| element | 説明 |
 | ------- | ----------- |
 | df1 | データの読み取りと書き込みに使用される Pandas データフレームを表す変数。 |
 | user-token | を使用して自動的に取得されたユーザートークン `clientContext.getUserToken()`. |
 | service-token | を使用して自動的に取得されるサービストークン。 `clientContext.getServiceToken()`. |
-| ims-org | を使用して自動的に取得される IMS Org ID `clientContext.getOrgId()`. |
+| ims-org | を使用して自動的に取得される組織 ID。 `clientContext.getOrgId()`. |
 | api-key | を使用して自動的に取得される API キー `clientContext.getApiKey()`. |
 
 >[!TIP]

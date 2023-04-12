@@ -6,10 +6,10 @@ description: Adobe Experience Platformでは、計算済み属性は、イベン
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 65%
+source-wordcount: '2274'
+ht-degree: 64%
 
 ---
 
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | 計算済み属性フィールドの名前（文字列）。 |
 | `path` | 計算済み属性を含むフィールドへのパス。このパスは、スキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
 | `{TENANT_ID}` | テナント ID に慣れていない場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)で、テナント ID を見つける手順を参照してください。 |
-| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。IMS 組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
+| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
 | `expression.value` | 有効な [!DNL Profile Query Language] (PQL) 式を使用します。 計算済み属性は現在、次の関数をサポートしています。sum、count、min、max および boolean。 サンプル式のリストについては、 [サンプル PQL 式](expressions.md) ドキュメント。 |
 | `schema.name` | 計算済み属性フィールドを含むスキーマの基となるクラス。例：XDM ExperienceEvent クラスに基づくスキーマの場合 `_xdm.context.experienceevent`。 |
 

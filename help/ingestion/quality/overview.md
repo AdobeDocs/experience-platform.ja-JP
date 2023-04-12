@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ品質
 description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミングの取り込みでサポートされるチェックと検証ビヘイビアーの概要を示します。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 52%
+source-wordcount: '423'
+ht-degree: 50%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 | スキーマ | スキーマが空&#x200B;**ではなく**、`"meta:immutableTags": ["union"]` のように union スキーマへの参照が含まれていることを確認します。 |
 | `identityField` | 有効な ID 記述子がすべて定義されていることを確認します。 |
 | JSON | JSON が有効であることを確認します。 |
-| IMS 組織 | 表示される IMS 組織が有効な組織であることを確認します。 |
+| 組織 | 表示される組織が有効な組織であることを確認します。 |
 | ソース名 | データソースの名前が指定されていることを確認します。 |
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |

@@ -5,9 +5,9 @@ title: 機械学習モデルの作成と公開
 type: Tutorial
 description: 次のガイドでは、機械学習モデルの作成と公開に必要な手順を説明します。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1074'
 ht-degree: 12%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 12%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- アクセス先 [!DNL Adobe Experience Platform]. の IMS 組織へのアクセス権がない場合 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+- アクセス先 [!DNL Adobe Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 
 - すべての Data Science Workspace チュートリアルでは、Luma 傾向モデルを使用します。 続行するには、 [Luma 傾向モデルのスキーマとデータセット](./create-luma-data.md).
 
@@ -79,7 +79,7 @@ UI を使用したモデルの作成について詳しくは、 Data Science Wor
 
 ## スコアリング済みモデルのサービスとしての公開
 
-Data Science Workspace を使用すると、トレーニング済みモデルをサービスとして公開できます。 これにより、IMS 組織内のユーザーは、独自のモデルを作成する必要なく、データをスコアリングできます。
+Data Science Workspace を使用すると、トレーニング済みモデルをサービスとして公開できます。 これにより、組織内のユーザーは、独自のモデルを作成する必要なく、データのスコアを付けることができます。
 
 モデルをサービスとして公開する方法については、 [UI チュートリアル](./publish-model-service-ui.md) または [API チュートリアル](./publish-model-service-api.md).
 

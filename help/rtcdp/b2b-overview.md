@@ -3,10 +3,10 @@ keywords: RTCDP;CDP;B2B エディション；Real-time Customer Data Platform；
 title: Real-Time CDP B2B Edition の概要
 description: Real-time Customer Data Platform B2B エディションアカウントの概要
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 60%
+source-wordcount: '1082'
+ht-degree: 58%
 
 ---
 
@@ -57,7 +57,7 @@ Real-Time CDP B2B Edition で、人、会社、属性、行動に関連するデ
 
 ## B2B ソース
 
-Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。[!DNL Marketo] ソースを使用すると、B2B データを Platform にストリーミングし、Platform に接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。 [!DNL Marketo] のインスタンスをいくつでもサポートし（これは、複数のインスタンスを持つ大企業にとって有益です）、データが結合される単一の IMS 組織に引き込みます。
+Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。[!DNL Marketo] ソースを使用すると、B2B データを Platform にストリーミングし、Platform に接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。 これは、 [!DNL Marketo] （これは複数のインスタンスを持つ大企業にとって有益です）と、データが結合される単一の組織に取り込みます。
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Googl
 
 ## 次の手順
 
-これで、Real-Time CDP B2B Edition が提供するマーケターのメリットと、 B2B Edition とReal-Time CDPの違いについての理解を深めたので、これらの機能を独自の IMS 組織に適用する方法を学ぶことができます。
+これで、Real-Time CDP B2B Edition が提供するマーケターのメリットと、それとReal-Time CDPの違いをより深く理解できたので、これらの機能を組織に適用する方法を学ぶことができます。
 
 Real-Time CDP B2B Edition がビジネス間サービスモデルに与えるメリットを理解するには、次のドキュメントを参照して開始方法を確認してください。
 

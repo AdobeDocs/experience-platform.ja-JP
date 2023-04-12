@@ -2,16 +2,16 @@
 title: Platform ダッシュボードの Power BI レポートテンプレート
 description: Power BI を使用した Experience Platform データを、レポートテンプレートを使用して調べます。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 93%
+source-wordcount: '1471'
+ht-degree: 92%
 
 ---
 
 # ダッシュボードの Power BI レポートテンプレート
 
-Power BI レポートテンプレート機能を使用すると、Adobe Experience Platform のデータが入った魅力的なレポートを作成できます。 合理化されたインストールプロセスにより、リアルタイム顧客プロファイル、セグメント化、宛先の標準ウィジェットが自動的にインストールされます。 また、インストールの際には Power BI をデータモデルに接続するので、レポートテンプレートを簡単にカスタマイズして拡張できます。これらのレポートは、Platform 上の IMS 組織の認証情報を必要とする受信者なしで、組織全体で共有できます。
+Power BI レポートテンプレート機能を使用すると、Adobe Experience Platform のデータが入った魅力的なレポートを作成できます。 合理化されたインストールプロセスにより、リアルタイム顧客プロファイル、セグメント化、宛先の標準ウィジェットが自動的にインストールされます。 また、インストールの際には Power BI をデータモデルに接続するので、レポートテンプレートを簡単にカスタマイズして拡張できます。これらのレポートは、Platform 上の組織の資格情報を必要とする受信者なしで、組織全体で共有できます。
 
 このドキュメントでは、Adobe Experience Platform を Power BI アプリケーションと接続し、レポートテンプレートを使用して主要な Platform データインサイトを外部ユーザーと共有する方法について説明します。
 

@@ -4,9 +4,9 @@ title: API を使用したプロファイルおよび ID サービスのデー�
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルおよび ID サービスでデータセットを有効にする方法について説明します。
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 94%
 
 ---
@@ -92,8 +92,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `schemaRef.id` | データセットの基となる [!DNL Profile] 対応スキーマの ID。 |
-| `{TENANT_ID}` | [!DNL Schema Registry] 内の名前空間で、IMS 組織に属するリソースが含まれます。詳しくは、[!DNL Schema Registry] 開発者ガイドの [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) の節を参照してください。 |
+| `schemaRef.id` | データセットのベースとなる [!DNL Profile] 対応スキーマの ID。 |
+| `{TENANT_ID}` | 組織に属するリソースを含む [!DNL Schema Registry] 内の名前空間。詳しくは、[!DNL Schema Registry] 開発者ガイドの [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) の節を参照してください。 |
 
 **応答**
 
@@ -219,7 +219,9 @@ curl -X PATCH \
 
 リクエスト本文には、`path` から `unifiedProfile` と `unifiedIdentity` の 2 種類のタグが含まれます。それぞれの `value` は、文字列 `enabled:true` を含む配列です。
 
-**応答** PATCH リクエストが成功すると、HTTP ステータス 200（OK）と、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致する必要があります。`unifiedProfile` タグと `unifiedIdentity` タグが追加され、データセットがプロファイルおよび ID サービスで使用できるようになりました。
+**応答**
+
+応答 PATCH リクエストが成功すると、HTTP ステータス 200（OK）と、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致する必要があります。`unifiedProfile` タグと `unifiedIdentity` タグが追加され、データセットがプロファイルおよび ID サービスで使用できるようになりました。
 
 ```json
 [

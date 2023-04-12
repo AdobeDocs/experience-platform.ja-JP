@@ -5,10 +5,10 @@ title: アドホックアクティベーション API を使用して、バッ�
 description: この記事では、アクティベーションの前におこなわれるセグメント化ジョブなど、アドホックアクティベーション API を介してオーディエンスセグメントをアクティブ化するためのエンドツーエンドのワークフローについて説明します。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 18%
+source-wordcount: '1553'
+ht-degree: 17%
 
 ---
 
@@ -62,7 +62,7 @@ Adobe Experience Platformは、24 時間に 1 回、スケジュールされた�
 
 Adobe Experience Platform API を呼び出す前に、次の前提条件を満たしていることを確認してください。
 
-* Adobe Experience Platformへのアクセス権を持つ IMS 組織アカウントがある。
+* Adobe Experience Platformへのアクセス権を持つ組織アカウントがある。
 * Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること お問い合わせ [Admin Console](../../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
 * あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
@@ -169,7 +169,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | セグメントをアクティブ化する宛先インスタンスの ID。 これらの ID は、 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** 」タブに移動し、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、 [宛先 workspace に関するドキュメント](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するセグメントの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 書き出し ID を含むリクエスト（廃止予定） {#request-deprecated}
 
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するセグメントの ID。 |
 | <ul><li>`exportId1`</li></ul> | ID が [セグメントの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 詳しくは、 [手順 4:最新のセグメント書き出しジョブ ID を取得する](#segment-export-id) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 応答 {#response}
 
@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | `order` | セグメントがアクティブ化された宛先の ID。 |
 | `statusURL` | アクティベーションフローのステータス URL。 フローの進行状況は、 [フローサービス API](../../sources/tutorials/api/monitor.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## API エラー処理 {#api-error-handling}
 

@@ -2,10 +2,10 @@
 title: プロファイルエンドポイント
 description: Reactor API で /profiles エンドポイントを呼び出す方法を説明します。
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 100%
+source-wordcount: '169'
+ht-degree: 78%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 Reactor API では、プロファイルは Adobe Experience Platform ユーザーを表します。 Reactor API は、ユーザーと権限に関する独自のデータベースを保持せず、[アドビの Identity Management システム（IMS）](https://helpx.adobe.com/jp/enterprise/using/identity.html)によって管理される Adobe ID に依存します。
 
-プロファイルには、ログインしたユーザーに関するすべての情報（所属するすべての IMS 組織、各組織内に属する製品プロファイル、各製品プロファイルからの権限など）が含まれます。
+プロファイルには、ログインしたユーザーに関するすべての情報（ユーザーが属するすべての組織、各組織内の製品プロファイル、各製品プロファイルからの権限など）が含まれます。
 
 ## はじめに
 
@@ -51,14 +51,14 @@ curl -X GET \
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ curl -X GET \
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [
