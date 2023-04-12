@@ -2,10 +2,11 @@
 title: Microsoft Azure 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送に関するMicrosoft Azure 拡張機能について説明します。
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 7%
+source-wordcount: '931'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 In [!DNL Microsoft Azure], [[!DNL Event Hubs]](https://azure.microsoft.com/en-us/products/event-hubs/#overview) は、拡張性が高く、リアルタイムのデータ入力サービスで、接続されたデバイスやアプリケーションで生成される大量のデータを処理および分析できます。 データがイベントハブに収集されたら、任意のリアルタイム分析プロバイダーまたはバッチ/ストレージアダプターを使用して、変換および格納できます。
 
@@ -53,7 +54,7 @@ Microsoft [!DNL Azure] 拡張機能に移動し、データ収集 UI またはEx
 | [!UICONTROL SAS アクセスキー] | 全体の共有アクセス認証ルールのプライマリキー [!DNL Event Hubs] 名前空間、またはデータの送信先の特定のイベントハブインスタンス。 付録の [取得， SAS 認証値](#sas) を参照してください。 |
 | [!UICONTROL パーティション ID] | [!DNL Event Hubs] を使用すると、 [特定のパーティションに直接イベントを送信](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). この機能を利用するには、イベントを受け取るパーティションの ID を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **データ**
 
@@ -61,7 +62,7 @@ Microsoft [!DNL Azure] 拡張機能に移動し、データ収集 UI またはEx
 | --- | --- |
 | [!UICONTROL ペイロード] | このフィールドには、 [!DNL Event Hubs]. データは、JSON オブジェクト、文字列、データ要素のいずれかです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 終了したら、「 」を選択します。 **[!UICONTROL 変更を保持]** をクリックして、ルール設定にアクションを追加します。 ルールに問題がない場合は、「 」を選択します。 **[!UICONTROL ライブラリに保存]**.
 

@@ -2,9 +2,10 @@
 title: Google Ads Enhanced Conversions 拡張機能
 description: Adobe Experience Platformでのイベント転送に関するGoogle Ads 拡張コンバージョン拡張機能について説明します。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1311'
 ht-degree: 2%
 
 ---
@@ -59,7 +60,7 @@ Web サイト上からコンバージョンイベントを送信するには、�
 | アカウント ID | お使いの [!DNL Google Ads] アカウント ID。 この値を見つけるには、次にログインします。 [!DNL Google Ads] に移動します。 **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. アカウント ID の文字列は、で始まるコードスニペットウィンドウに表示されます。 `AW-` または `d`. |
 | 製品 | 選択 **[!UICONTROL Google Ads (AdWords)]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 終了したら、「 」を選択します。 **[!UICONTROL アカウントを追加]**&#x200B;を選択し、「 **[!UICONTROL 保存]**.
 
