@@ -3,9 +3,9 @@ title: （アルファ） [!DNL LiveRamp SFTP] 接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platformから LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 hidefromtoc: true
 hide: true
-source-git-commit: 875610178449ddade78462dc74ea4e3dbadb2907
+source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1738'
 ht-degree: 19%
 
 ---
@@ -224,7 +224,7 @@ Platform では各 [結合ポリシー ID](../../../profile/merge-policies/overv
 
 データが [!DNL LiveRamp - SFTP] ストレージの [!DNL LiveRamp] プラットフォーム。
 
-詳しくは、 **次の手順** セクション [LiveRamp へのデータの取得](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) ドキュメントを参照してください。
+からファイルをアップロードする方法の詳細 [!DNL LiveRamp - SFTP] ストレージ [!DNL LiveRamp] オーディエンスについては、次のドキュメントを参照してください。 [最初のファイルをオーディエンスにアップロードする際の考慮事項](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## データの使用とガバナンス {#data-usage-governance}
 
