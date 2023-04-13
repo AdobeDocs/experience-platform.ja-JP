@@ -1,9 +1,12 @@
 ---
 title: SugarCRM ソースの概要
 description: API またはユーザーインターフェイスを使用して SugarCRM をAdobe Experience Platformに接続する方法を説明します。
-source-git-commit: 666767d45ca24f1c3fbbc0265d5f5c26a904e4b2
+badge: ベータ
+last-substantial-update: 2023-01-25T00:00:00Z
+exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '403'
 ht-degree: 43%
 
 ---

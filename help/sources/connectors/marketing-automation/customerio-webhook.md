@@ -1,8 +1,10 @@
 ---
 title: Customer.io ソースの概要
 description: Web フックを活用して、API またはユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法を説明します
-badge: "ベータ"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: ベータ
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 16%
@@ -57,4 +59,3 @@ Web フックで使用できるイベントのリストについては、 [[!DNL
 ### UI を使用した [!DNL Customer.io] の Platform への接続 {#connect-to-platform-using-ui}
 
 * [ソース接続とデータフローを作成して、 [!DNL Customer.io] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-

@@ -1,8 +1,10 @@
 ---
 title: Chatlio ソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Chatlio をAdobe Experience Platformに接続する方法を説明します
-badge: "ベータ"
-source-git-commit: 2c13cb5a951a3144d0047b567194732acdc35dab
+badge: ベータ
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 21%
@@ -55,4 +57,3 @@ Experience Platformは、ストリーミングアプリケーションからデ�
 ### UI を使用した [!DNL Chatlio] の Platform への接続 {#connect-to-platform-using-ui}
 
 * [ソース接続を作成して [!DNL Chatlio] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
-

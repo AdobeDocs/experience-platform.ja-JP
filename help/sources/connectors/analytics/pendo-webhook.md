@@ -1,8 +1,10 @@
 ---
 title: ペンドソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Pendo をAdobe Experience Platformに接続する方法を説明します
-badge: "ベータ"
-source-git-commit: 24691e3ded33c3af31fd0cee107f2f3ca898585f
+badge: ベータ
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 20%
@@ -50,4 +52,3 @@ A [!DNL Pendo] アカウント まだ [[!DNL Pendo] 登録](https://app.pendo.io
 ### UI を使用した [!DNL Pendo] の Platform への接続 {#connect-to-platform-using-ui}
 
 * [ソース接続を作成して [!DNL Pendo] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/analytics/pendo-webhook.md)
-
