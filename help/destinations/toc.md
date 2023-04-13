@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 12bae2f5b3dd04eaf72e736cb1ddca4bdd0a9d52
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -22,14 +22,14 @@ ht-degree: 97%
    * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
 * API チュートリアル {#api}
-   * [クラウドストレージの宛先の API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [クラウドストレージ宛先の API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
    * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスセグメントを有効化する](./api/ad-hoc-activation-api.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
-   * [（ベータ版）フローサービス API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [（ベータ版）Flow Service API の使用によるファイルベース宛先に対するデータのアクティブ化](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [（ベータ版）データセットの書き出し](/help/destinations/api/export-datasets.md)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
@@ -85,7 +85,7 @@ ht-degree: 97%
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
-      * [Snapchat 広告接続](./catalog/advertising/snap-inc.md)
+      * [Snapchat Ads 接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
       * [（ベータ版）The Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag 拡張機能](./catalog/advertising/twitter-uwt.md)
@@ -173,7 +173,7 @@ ht-degree: 97%
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook 接続](./catalog/social/facebook.md)
       * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
-      * [TikTok接続](./catalog/social/tiktok.md)
+      * [TikTok 接続](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミングの宛先 {#streaming}
       * [HTTP API 接続](./catalog/streaming/http-destination.md)

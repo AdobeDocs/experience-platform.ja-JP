@@ -7,7 +7,7 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -106,10 +106,10 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの表示] | 組織に属するサンドボックスへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスのリセット] | サンドボックスをリセットする機能 |
-| [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先のアクティベーションフローと宛先アカウントへの読み取り、作成、削除アクセス |
+| [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先アクティブ化フローと宛先アカウントの読み取り、作成および削除へのアクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先への読み取り専用アクセス。 |
-| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | ユーザーが既存の宛先に対してセグメントをアクティブ化できるようにします。 アクティベーションワークフローでのマッピング手順を有効にします。 この権限には、次のいずれかが必要です。 [!UICONTROL 宛先の表示] または [!UICONTROL 宛先の管理] 宛先へのデータをアクティブ化するユーザーに付与する。 |
-| [!DNL Destinations] | [!UICONTROL マッピングなしでセグメントをアクティブ化] | ユーザーが、 [マッピング手順](../destinations/ui/activate-batch-profile-destinations.md#mapping). ユーザーは、アクティベーションワークフローでセグメントを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 この権限には、 [!UICONTROL 宛先のアクティブ化] 宛先へのデータをアクティブ化するユーザーに付与する権限。 |
+| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | ユーザーが既存の宛先に対してセグメントをアクティブ化できるようにします。アクティブ化ワークフローのマッピングステップを有効にします。この権限の場合は、宛先に対してデータをアクティブ化するユーザーに「[!UICONTROL 宛先の表示]」または「[!UICONTROL 宛先の管理]」のいずれかを付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [マッピングステップ](../destinations/ui/activate-batch-profile-destinations.md#mapping)が表示されない状態でユーザーがセグメントを既存の宛先に対してアクティブ化できるようにします。ユーザーは、アクティブ化ワークフローでセグメントを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。この権限の場合は、データを宛先に対してアクティブ化するユーザーに「[!UICONTROL 宛先のアクティブ化]」権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |

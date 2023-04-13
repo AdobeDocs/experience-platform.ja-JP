@@ -209,8 +209,8 @@ UI と API のどちらを使用しているかによって、次の必要シス
 | サービス | API リファレンス | トラブルシューティング |
 | --- | --- | --- |
 | アクセス制御 | [アクセス制御 API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platform でのデータ取得 | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [バッチ取得トラブルシューティングガイド](../ingestion/batch-ingestion/troubleshooting.md) |
-| Adobe Experience Platform でのデータ取得 | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [ストリーミング取得トラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform のデータ取り込み | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [バッチ取り込みのトラブルシューティングガイド](../ingestion/batch-ingestion/troubleshooting.md) |
+| Adobe Experience Platform のデータ取り込み | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [ストリーミング取り込みのトラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform データサイエンスワークスペース | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform のデータガバナンス | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform ID サービス | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] トラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |

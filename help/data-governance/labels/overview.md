@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 85%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="機密データと保護されたデータへのアクセスを制御"
->abstract="<h2>説明</h2><p>特定のデータ属性やセグメントへのアクセスを制御して、様々なペルソナやチームのオペレーティングExperience Platformの使用例に対応する柔軟なワークフローをデザインできます。</p>"
+>title="機密データと保護データへのアクセスの制御"
+>abstract="<h2>説明</h2><p>特定のデータ属性やセグメントへのアクセスを制御することで、Experience Platform のユースケースを運用する様々なペルソナやチーム向けの柔軟なワークフローを設計できます。</p>"
 
 Adobe Experience Platform では、関連する[データガバナンスポリシー](../policies/overview.md)と[アクセス制御ポリシー](../../access-control/abac/ui/policies.md)に従ってそれぞれを分類し、データ使用ラベルをデータセットとフィールドに適用できます。
 
@@ -51,7 +51,7 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="手順"
->abstract="<ul><li>「 XDM Fields 」と「 Segments 」にラベルを付け、アクセスを制限するフィールドやセグメントを分類します。</li><li>ロールのラベル付け、ロールにラベルを追加すると、このロールのメンバーが制限を受けるラベルを定義できます。</li><li>ポリシーを作成すると、ポリシーは、XDM フィールドやセグメントなどのラベル付きオブジェクトのラベルと、役割のラベルとの関係を作成します。 ラベルが一致する場合は、許可または制限アクセスを定義できます。</li></ul>"
+>abstract="<ul><li>XDM フィールドとセグメントにラベルを付けて、アクセス制限の対象となるフィールドやセグメントを分類します。</li><li>役割にラベルを付けます。役割にラベルを付加すると、その役割のメンバーが制限対象となるラベルを定義できます。</li><li>ポリシーを作成します。ポリシーを使用すると、XDM フィールドやセグメントなどのラベル付きオブジェクトのラベルと役割のラベルとの関係を作成できます。ラベルが一致する場合は、アクセスの許可または制限を定義できます。</li></ul>"
 
 [!DNL Experience Platform] API またはユーザーインターフェイスを使用して、データ使用ラベルを管理できます。それぞれの詳細については、以下のサブセクションを参照してください。
 

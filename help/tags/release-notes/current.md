@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 70%
+ht-degree: 95%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 70%
 
 ## 2023年3月29日（PT）
 
-**クイックスタークワークフロー（ベータ版）**
+**クイックスタートワークフロー（ベータ版）**
 
-データコレクションのホーム画面の「はじめに」の新しいクイックスタートワークフローにアクセスできます。 次のワークフローが、パブリックベータ版としてお客様が利用できるようになりました。
-* **[メタ変換 API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**:イベント転送のお客様は、わずか数手順で、広告コンバージョン用にサーバー側から Meta へ迅速にイベントデータを収集し、転送できます。
-* **[モバイル SDK](https://developer.adobe.com/client-sdks/documentation/)**:お客様は、わずか数の簡単な手順で、Mobile SDK を迅速に実装し、基本的なモバイルイベントを検証できます。
+データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。お客様が次のワークフローをパブリックベータ版として利用できるようになりました。
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=ja#quick-start)**：イベント転送のお客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**：お客様は Mobile SDK を迅速に実装し、基本的なモバイルイベントをわずか数回の簡単な手順で検証できます。
 
 次の新しい拡張機能がリリースされました。
 
-* **[!DNL Braze]イベント転送拡張機能**:この [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、に送信できます。 [!DNL Braze] を使用して、サーバー側のイベントの形式で [!DNL Braze] ユーザー追跡 API
-* **[Epsilon イベント API] イベント転送拡張機能**:この [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。
-* **[!DNL Mixpanel]イベント転送拡張機能**:この [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Mixpanel] イベント追跡 API を使用して、
+* **[!DNL Braze]イベント転送拡張機能**：[[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Braze] User Track API を使用してサーバーサイドイベントの形式で [!DNL Braze] に送信したりできます。
+* **[Epsilon イベント API] イベント転送拡張機能**:この [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。
+* **[!DNL Mixpanel]イベント転送拡張機能**：[[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja)[!DNL Mixpanel] 拡張機能を使用すると、イベント転送を活用して Adobe Experience Platform Edge Network でイベント情報を取得し、Track Events API を使用して に送信できます。
 
 ## 2023年1月25日（PT）
 

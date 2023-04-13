@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -282,7 +282,7 @@ ID グラフデータを表示するには、Platform 管理者から `view-iden
 
 [!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
 
-次に、 [!DNL Identity Service] を使用する際に [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
+以下は、[バッチ取り込み API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) の使用時に発生する可能性のある [!DNL Identity Service] 関連のエラーメッセージのリストです。
 
 ### 不明な XDM スキーマ
 
