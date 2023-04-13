@@ -4,7 +4,7 @@ solution: Experience Platform
 title: インテリジェントサービスで使用するデータの準備
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを検出するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するために Experience Data Model(XDM) スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 例えば、顧客 AI を使用して製品の購入傾向を予測する場合、顧客 AI のモデルには、成功した購入パスの例と失敗したパスの例の両方が必要です。 これは、モデルトレーニングの間、顧客 AI は、どのイベントやジャーニーが購入につながったかを把握しようとするからです。 これには、買い物かごへの項目の追加でジャーニーを停止した個人など、購入しなかった顧客が実行するアクションも含まれます。 ただし、これらの顧客が同様の行動を示す場合もあります。顧客 AI は、インサイトを提供し、傾向スコアの向上につながる主な違いと要因を掘り下げることができます。 同様に、Attribution AIは、タッチポイントの有効性、上位コンバージョンパス、タッチポイントの位置による分類などの指標を表示するために、両方のタイプのイベントとジャーニーが必要です。
 
-過去のデータ要件のその他の例と情報については、 [顧客 AI](./customer-ai/input-output.md#data-requirements) または [Attribution AI](./attribution-ai/input-output.md#data-requirements) 入力/出力ドキュメントの「履歴データ要件」の節を参照してください。
+過去のデータ要件のその他の例と情報については、 [顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [Attribution AI](./attribution-ai/input-output.md#data-requirements) 入力/出力ドキュメントの「履歴データ要件」の節を参照してください。
 
 ### データの結合に関するガイドライン
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 データをExperience Platform外に保存する場合は、データを [消費者の ExperienceEvent スキーマ](#cee-schema). このスキーマをカスタムフィールドグループで拡張して、顧客データをより適切に取り込むことができます。 マッピングが完了すると、Consumer ExperienceEvent スキーマを使用してデータセットを作成し、 [Platform へのデータの取り込み](../ingestion/home.md). その後、CEE データセットを選択して、 [!DNL Intelligent Service].
 
-に応じて [!DNL Intelligent Service] を使用したい場合は、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することをお勧めします。 必須フィールドの詳細については、 [Attribution AI](./attribution-ai/input-output.md) または [顧客 AI](./customer-ai/input-output.md) 入力/出力ガイド。
+に応じて [!DNL Intelligent Service] を使用したい場合は、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することをお勧めします。 必須フィールドの詳細については、 [Attribution AI](./attribution-ai/input-output.md) または [顧客 AI](./customer-ai/data-requirements.md) データ要件ガイド。
 
 ### Adobe Analyticsデータの準備 {#analytics-data}
 
@@ -65,7 +65,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Adobe Analyticsコネクタでデータをバックフィルするのに最大 4 週間かかります。 接続を最近設定した場合は、顧客またはAttribution AIに必要な最小長のデータがデータセットに含まれていることを確認する必要があります。 履歴データの節を確認してください： [顧客 AI](./customer-ai/input-output.md#data-requirements) または [Attribution AI](./attribution-ai/input-output.md#data-requirements)を確認し、予測目標に十分なデータがあることを確認します。
+>Adobe Analyticsコネクタでデータをバックフィルするのに最大 4 週間かかります。 接続を最近設定した場合は、顧客またはAttribution AIに必要な最小長のデータがデータセットに含まれていることを確認する必要があります。 履歴データの節を確認してください： [顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [Attribution AI](./attribution-ai/input-output.md#data-requirements)を確認し、予測目標に十分なデータがあることを確認します。
 
 ### Adobe Audience Managerデータの準備（顧客 AI のみ） {#AAM-data}
 
@@ -75,7 +75,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->最近コネクタを設定した場合は、データセットに必要最小限の長さのデータが含まれていることを確認する必要があります。 履歴データの節を確認してください ( [input/output ドキュメント](./customer-ai/input-output.md) 顧客 AI の場合はと入力し、予測目標に十分なデータがあることを確認します。
+>最近コネクタを設定した場合は、データセットに必要最小限の長さのデータが含まれていることを確認する必要があります。 履歴データの節を確認してください ( [input/output ドキュメント](./customer-ai/data-requirements.md) 顧客 AI の場合はと入力し、予測目標に十分なデータがあることを確認します。
 
 ### [!DNL Experience Platform] データの準備
 
@@ -120,7 +120,7 @@ CEE フィールドグループ内には、次の目的で使用する必要の�
 >
 >Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。
 
-* &quot;電子メール&quot;
+* &quot;メール&quot;
 * &quot;phone&quot;
 * 「mcid」(Adobe Audience Manager ID の場合 )
 * 「aaid」(Adobe Analytics ID の場合 )
@@ -144,7 +144,7 @@ CEE フィールドグループ内には、次の目的で使用する必要の�
 
 ![チェックボックスを選択](./images/data-preparation/set_primary_identity.png)
 
-次に、 **[!UICONTROL ID 名前空間]** 」をドロップダウンの定義済み名前空間のリストから選択します。 この例では、ECID 名前空間がAdobe Audience Manager ID 以降に選択されています `mcid.id` が使用されている。 選択 **[!UICONTROL 適用]** 更新を確定するには、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマに対する変更を保存します。
+次に、ドロップダウンの定義済み名前空間のリストから **[!UICONTROL ID 名前空間]** を指定する必要があります。この例では、ECID 名前空間がAdobe Audience Manager ID 以降に選択されています `mcid.id` が使用されている。 選択 **[!UICONTROL 適用]** 更新を確定するには、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマに対する変更を保存します。
 
 ![変更を保存します。](./images/data-preparation/select_namespace.png)
 

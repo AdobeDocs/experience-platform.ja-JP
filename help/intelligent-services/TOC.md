@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
-source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: ht
-source-wordcount: '140'
-ht-degree: 100%
+source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 - 顧客 AI {#customer-ai}
    - [概要](customer-ai/overview.md)
    - [顧客 AI を使い始める](customer-ai/getting-started.md)
-   - [入出力](customer-ai/input-output.md)
+   - [データ要件](customer-ai/data-requirements.md)
    - UI ガイド {#user-guide}
       - [インスタンスの設定](customer-ai/user-guide/configure.md)
       - [インサイトの獲得](customer-ai/user-guide/discover-insights.md)

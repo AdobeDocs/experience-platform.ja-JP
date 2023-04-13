@@ -5,7 +5,7 @@ feature: Customer AI
 title: 顧客 AI の概要
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 66%
@@ -49,4 +49,4 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ## 次の手順
 
-上記のドキュメントで説明した手順を完了したら、 [入出力](./input-output.md) ドキュメント。 このドキュメントでは、顧客 AI で使用および生成されるデータのタイプの概要を説明します。
+上記のドキュメントで説明した手順を完了したら、 [入出力](./data-requirements.md) ドキュメント。 このドキュメントでは、顧客 AI で使用および生成されるデータのタイプの概要を説明します。
