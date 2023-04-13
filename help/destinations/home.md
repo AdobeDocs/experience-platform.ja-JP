@@ -4,9 +4,9 @@ title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '805'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -56,8 +56,8 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 | 権限レベル | 説明 |
 | ---- | ----|
 | **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してセグメントをアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** | 宛先に対してセグメントをアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してセグメントをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してセグメントをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を非表示にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 
 {style="table-layout:auto"}
 
