@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
 source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 91%
    * [Platform UI ツアー（ビデオ）](video/platform-ui.md)
    * [ワークフロー UI ガイド](workflows.md)
    * [ブラウザーと言語のサポート](browser-language-support.md)
-   * [自己識別調査](self-identification.md)
+   * [自己識別サーベイ](self-identification.md)
 * Experience Platform API {#platform-apis}
    * [ Platform API の概要](api-guide.md)
    * [ Platform API の認証とアクセス](api-authentication.md)
@@ -41,7 +41,7 @@ ht-degree: 91%
    * [言語サポート](documentation/language-support.md)
 * Platform {#ecosystem} に構築されたアプリケーションサービス
    * [概要](application-services.md)
-   * [Adobe Real-time Customer Data Platform （すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
+   * [Adobe Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
@@ -63,8 +63,8 @@ ht-degree: 91%
          * [概要](./governance-privacy-security/audit-logs/api/overview.md)
          * [はじめに](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [イベント](./governance-privacy-security/audit-logs/api/events.md)
-         * [エクスポート](./governance-privacy-security/audit-logs/api/export.md)
-   * [データの暗号化](./governance-privacy-security/encryption.md)
+         * [書き出し](./governance-privacy-security/audit-logs/api/export.md)
+   * [データ暗号化](./governance-privacy-security/encryption.md)
    * [顧客管理キー](./governance-privacy-security/customer-managed-keys.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
