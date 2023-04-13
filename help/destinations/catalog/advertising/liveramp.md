@@ -3,7 +3,7 @@ title: （アルファ） [!DNL LiveRamp SFTP] 接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platformから LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 hidefromtoc: true
 hide: true
-source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
+source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 19%
@@ -91,7 +91,7 @@ LiveRamp SFTP は、PII ベースの識別子、既知の識別子、カスタ�
 >id="platform_destinations_liveramp_subkey"
 >title="暗号化サブキー ID"
 >abstract="LiveRamp 公開暗号化キーに基づく、暗号化に使用されるサブキー ID。 このフィールドは、認証手順で暗号化キーを指定した場合に必須です。"
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="サブキー ID の取得方法を説明します。"
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="サブキー ID の取得方法を説明します"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
