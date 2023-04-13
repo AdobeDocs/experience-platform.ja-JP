@@ -5,14 +5,14 @@ breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Experience Platform に取り込みます。
 feature: Data Ingestion
 source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '156'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platformでのデータ取得 {#ingestion}
+# Adobe Experience Platform のデータ取り込み {#ingestion}
 
 - [データ取り込みの概要](home.md)
 - ストリーミング取得 {#streaming}
@@ -28,8 +28,8 @@ ht-degree: 83%
 - チュートリアル {#tutorials}
    - XDM への CSV ファイルのマッピング {#map-csv}
       - [概要](./tutorials/map-csv/overview.md)
-      - [既存の スキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
-      - [AI で生成されたレコメンデーションを使用して CSV ファイルをマッピングする](./tutorials/map-csv/recommendations.md)
+      - [既存のスキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
+      - [AI で生成されたレコメンデーションを使用した CSV ファイルのマッピング](./tutorials/map-csv/recommendations.md)
    - [UI を使用したバッチデータ取得](tutorials/ingest-batch-data.md)
    - [認証済みストリーミング接続の作成](tutorials/create-authenticated-streaming-connection.md)
    - [ストリーミング接続の作成（API）](tutorials/create-streaming-connection.md)
@@ -46,6 +46,6 @@ ht-degree: 83%
    - [データ取得通知](quality/subscribe-events.md)
 - [データ取り込みのガードレール](guardrails.md)
 - [ソースコネクタ](source-connectors.md)
-- [バッチ取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [バッチ取り込み API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [ストリーミング取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
