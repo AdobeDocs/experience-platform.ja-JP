@@ -2,7 +2,7 @@
 title: イベント転送拡張機能リファレンス
 description: Adobe Experience Platformのイベント転送拡張機能に関するドキュメントを見つけます。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 50%
@@ -14,6 +14,13 @@ ht-degree: 50%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 以下は、サーバー側のイベント転送の拡張機能に関するドキュメントの一覧です。 使用可能なクライアント側の拡張機能の一覧については、 [タグ拡張機能リファレンス](../client/overview.md) 代わりに、
 
