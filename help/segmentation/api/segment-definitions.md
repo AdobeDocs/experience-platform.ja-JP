@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1216'
 ht-degree: 46%
 
 ---
@@ -209,11 +209,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 | `description` | 人間が判読できる、定義の説明。 |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->セグメント定義式は、計算済み属性も参照できます。 詳しくは、 [計算済み属性 API エンドポイントガイド](../../profile/computed-attributes/ca-api.md)
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->計算済み属性機能はアルファ版であり、一部のユーザーが使用できます。ドキュメントと機能は変更される場合があります。
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **応答**
 

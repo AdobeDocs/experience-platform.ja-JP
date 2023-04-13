@@ -3,9 +3,9 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: リアルタイム顧客プロファイルの概要
 description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '1991'
 ht-degree: 100%
 
 ---
@@ -90,13 +90,13 @@ Experience Platform UI には、毎日のスナップショット中にキャプ
 
 UI の結合スキーマへのアクセス方法など、結合スキーマについて詳しくは、『[結合スキーマ UI ガイド](ui/union-schema.md)』を参照してください。
 
-### （アルファ）計算済み属性
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
->計算済み属性の機能はアルファ版です。ドキュメントと機能は変更される場合があります。
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。これらの計算により、ライフタイム購入値、購入間隔、アプリケーションを開いた数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。Adobe Experience Platform 内での計算済み属性の役割の理解など、計算済み属性の詳細については、まず[計算属性の概要](computed-attributes/overview.md)をお読みください。
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## プロファイルとセグメント
 

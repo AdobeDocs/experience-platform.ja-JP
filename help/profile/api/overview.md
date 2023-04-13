@@ -3,10 +3,10 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル API ガイド
 description: リアルタイム顧客プロファイル API を使用すると、開発者は、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプル、不要になった、またはエラーで追加されたプロファイルデータの削除など、プロファイルデータを調査および操作できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 29%
+source-wordcount: '792'
+ht-degree: 24%
 
 ---
 
@@ -16,21 +16,21 @@ ht-degree: 29%
 
 この [!DNL Real-Time Customer Profile] API には複数のエンドポイントが含まれています（以下で概要を説明します）。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
 
-使用可能なすべてのエンドポイントと CRUD の操作を表示するには、 [リアルタイム顧客プロファイル API リファレンス Swagger](https://www.adobe.com/go/profile-apis-jp).
+使用可能なすべてのエンドポイントと CRUD の操作を表示するには、 [リアルタイム顧客プロファイル API リファレンス Swagger](https://www.adobe.com/go/profile-apis-en).
 
 の操作に関するガイド [!DNL Real-Time Customer Profile] データ [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
-## （アルファ版）計算済み属性 {#computed-attributes}
+<!-- ## (Alpha) Computed attributes {#computed-attributes}
 
 >[!IMPORTANT]
 >
->計算済み属性機能はアルファ版であり、一部のユーザーが使用できます。ドキュメントと機能は変更される場合があります。
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
-計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
-各計算済み属性には、受信データを評価し、結果の値をプロファイル属性に保存する式（「ルール」）が含まれます。 これらの計算により、ライフタイム購入値、購入間隔、アプリケーションを開いた数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。これらの計算済み属性値は、その後、プロファイルで表示したり、セグメントの作成に使用したり、様々なアクセスパターンを通じてアクセスしたりできます。
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
 
-計算済み属性の作成、表示、編集および削除は、 `config/computedAttributes` endpoint. 計算済み属性の使用方法については、 [計算済み属性の概要](../computed-attributes/overview.md). API 操作については、 [計算済み属性 API エンドポイントガイド](../computed-attributes/ca-api.md).
+You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
 
 ## エッジ投影 {#edge-projections}
 

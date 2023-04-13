@@ -2,7 +2,7 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 29%
@@ -41,9 +41,9 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
-| [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>エクスポート</li></ul> |
+| [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>書き出し</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [計算済み属性](../../../profile/computed-attributes/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| 計算済み属性 | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
 | [データストリーム](../../../edge/datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../edge/datastreams/data-prep.md)</li></ul> |
