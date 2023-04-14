@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
+source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 96%
+source-wordcount: '1620'
+ht-degree: 95%
 
 ---
 
@@ -13,6 +13,10 @@ ht-degree: 96%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+
+## バージョン2.16.1 - 2023 年 4 月 14 日
+
+* XDM オブジェクトと変数データ要素で、デフォルト以外のサンドボックスからスキーマを選択できなかった問題を修正しました。
 
 ## バージョン2.16.0 - 2023 年 3 月 30 日
 
