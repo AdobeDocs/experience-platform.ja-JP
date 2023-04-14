@@ -4,10 +4,10 @@ title: メールマーケティングの宛先の概要
 type: Tutorial
 description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。宛先としてサポートされる ESP をExperience Platformします。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
+source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 76%
+source-wordcount: '371'
+ht-degree: 77%
 
 ---
 
@@ -24,9 +24,10 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [(API)OracleEloqua](oracle-eloqua-api.md)
-* [（API）Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）OracleEloqua](oracle-eloqua.md)
-* [（ファイル） SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
+* [(ファイル) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)
 
