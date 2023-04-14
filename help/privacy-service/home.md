@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service の概要
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
-workflow-type: ht
-source-wordcount: '1608'
-ht-degree: 100%
+source-git-commit: 3296209a15a5f88ab14e16de25d554b9df712445
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Privacy Service の権限が改善されて、精度のレベルが向上しました。これらの変更により、組織管理者は、目的とする役割と権限レベルのアクセス権を、より多くのユーザーに付与できます。この近々の更新は重大な変更となるので、技術アカウントのユーザーは、Privacy Service の権限を更新する必要があります。この権限変更は、**2023年3月28日（PT）**&#x200B;に実施されます。
+>Adobe Experience Platform Privacy Service の権限が改善されて、精度のレベルが向上しました。これらの変更により、組織管理者は、目的とする役割と権限レベルのアクセス権を、より多くのユーザーに付与できます。この近々の更新は重大な変更となるので、技術アカウントのユーザーは、Privacy Service の権限を更新する必要があります。 この権限の変更の適用は、 **2023 年 4 月 14 日**. 詳しくは、 [従来の API 資格情報の移行](./permissions.md#migrate-tech-accounts) を参照してください。
 >
 >技術アカウントは、大規模法人のお客様が利用でき、Adobe Developer Console を通じて作成されます。技術アカウント所有者の Adobe ID は、末尾が `@techacct.adobe.com` になっています。自分が技術アカウントの所有者かどうか不明な場合は、組織の管理者にお問い合わせください。
 
