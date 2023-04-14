@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 98%
@@ -90,7 +90,7 @@ ht-degree: 98%
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --- | --- | --- | --- |
 | [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md)の宛先の最大数 | 10 | ソフト | データフローは、サンドボックスあたり 10 個のカスタムパーソナライゼーションの宛先に設定できます。 |
-| サンドボックスごとにパーソナライゼーションの宛先にマッピングされる属性の最大数 | 20 | ハード | サンドボックスごとに、データフローでパーソナライゼーションの宛先にマッピングできる属性は最大 20 個です。 |
+| サンドボックスごとにパーソナライゼーションの宛先にマッピングされる属性の最大数 | 30 | ハード | サンドボックスごとに、データフローでパーソナライゼーションの宛先にマッピングできる属性は最大 30 個です。 |
 | 1 つの [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) の宛先にマッピングされるセグメントの最大数 | 50 | ソフト | 1 つの Adobe Target の宛先に対して、アクティベーションフローで最大 50 個のセグメントをアクティブ化できます。 |
 
 {style="table-layout:auto"}
