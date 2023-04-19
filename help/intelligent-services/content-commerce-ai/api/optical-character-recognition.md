@@ -4,7 +4,7 @@ solution: Experience Platform
 title: テキストの有無と光学式文字認識
 description: コンテンツタグ付け API では、テキストの有無/光学式文字認識 (OCR) サービスで、特定の画像にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCR はテキストを返すことができます。
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 4%
@@ -110,7 +110,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0
