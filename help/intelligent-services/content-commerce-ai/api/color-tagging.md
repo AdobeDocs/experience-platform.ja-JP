@@ -4,9 +4,9 @@ solution: Experience Platform
 title: コンテンツタグ付け API のカラータグ付け
 description: カラータグ付けサービスは、画像を指定すると、ピクセルカラーのヒストグラムを計算し、主要な色でグループに並べ替えることができます。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 6%
 
 ---
@@ -161,7 +161,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **リクエスト — マスクされた画像のバリアント**
 
-次のリクエスト例では、色のタグ付けにマスクメソッドを使用します。 これを有効にするには、 `enable_mask` パラメータ `true` リクエストに含まれます。
+次のリクエスト例では、色のタグ付けにマスクメソッドを使用します。 これは、 `enable_mask` パラメータ `true` リクエストに含まれます。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->注意：さらに、 `retrieve_tone` パラメータ `true` 上記のリクエストの。 これにより、画像の全体領域、前景領域、背景領域で、暖かく、中立的で、冷たいトーンに対するトーン分布ヒストグラムを取り出すことができます。
+>[!NOTE]
+>
+>また、 `retrieve_tone` パラメータも `true` 上記のリクエストの。 これにより、画像の全体領域、前景領域、背景領域の暖かいトーン、中立トーン、冷たいトーンに対して、トーン分布ヒストグラムを取り出すことができます。
 
 **応答 — マスクされた画像のバリアント**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-イメージ全体の色に加えて、前景と背景の領域の色も確認できます。 以上の各領域の音調検索を可能にするので、音色ヒストグラムを検索することも可能です。
+イメージ全体の色に加えて、前景と背景の領域の色も確認できます。 上記の各領域に対してトーン検索が有効になっているので、トーンのヒストグラムを取り出すこともできます。
 
 **入力パラメーター**
 
 | 名前 | データタイプ | 必須 | デフォルト | 値 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | 配列 (Document-Object) | ○ | - | 以下を参照してください。 | リスト内の各項目が 1 つのドキュメントを表す json 要素のリスト。 |
+| `documents` | 配列 (Document-Object) | ○ | - | 以下を参照してください。 | リスト内の各項目が 1 つのドキュメントを表す JSON 要素のリスト。 |
 | `top_n` | 数値 | いいえ | 0 | 負でない整数 | 返される結果の数。 0：すべての結果を返します。 しきい値と組み合わせて使用した場合、返される結果の数は、どちらの制限よりも少なくなります。 |
 | `min_coverage` | 数値 | いいえ | 0.05 | 実数 | 結果を返す必要があるカバレッジのしきい値。 すべての結果を返すには、Exclude パラメーターを使用します。 |
-| `resize_image` | 数値 | いいえ | True | True/False | 入力イメージのサイズを変更するかどうか。 デフォルトでは、画像は色抽出が実行される前に 320*320 ピクセルにサイズ変更されます。 デバッグの目的で、フルイメージでもコードを実行できるようにします。それには、これを False に設定します。 |
+| `resize_image` | 数値 | いいえ | True | True/False | 入力イメージのサイズを変更するかどうか。 デフォルトでは、画像は色抽出が実行される前に 320*320 ピクセルにサイズ変更されます。 デバッグの目的で、をに設定して、フルイメージでもコードを実行できるようにします。 `False`. |
 | `enable_mask` | 数値 | いいえ | False | True/False | カラー抽出を有効/無効にします |
 | `retrieve_tone` | 数値 | いいえ | False | True/False | トーン抽出を有効/無効にします |
 
@@ -369,7 +371,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | 名前 | データタイプ | 必須 | デフォルト | 値 | 説明 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 文字列 | - | - | - | キーフレーズの抽出元となるドキュメントの署名済み URL。 |
-| `sensei:repoType` | 文字列 | - | - | HTTPS | ドキュメントを保存するリポジトリのタイプ。 |
-| `sensei:multipart_field_name` | 文字列 | - | - | - | ドキュメントを、署名済みの URL を使用する代わりに、マルチパート引数として渡す場合に使用します。 |
-| `dc:format` | 文字列 | ○ | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 文書のエンコーディングは、処理前に、許可されている入力エンコーディングタイプと照合されます。 |
+| `repo:path` | 文字列 | - | - | - | ドキュメントの署名済み URL。 |
+| `sensei:repoType` | 文字列 | - | - | HTTPS | 画像が保存されるリポジトリのタイプ。 |
+| `sensei:multipart_field_name` | 文字列 | - | - | - | 画像ファイルを、署名済みの URL を使用する代わりに、マルチパート引数として渡す場合に使用します。 |
+| `dc:format` | 文字列 | ○ | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | 画像のエンコーディングは、処理前に、許可されている入力エンコーディングタイプと照合されます。 |
