@@ -5,10 +5,10 @@ title: クエリサービスでのクエリ実行に関する一般的なガイ�
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 44%
+source-wordcount: '1067'
+ht-degree: 45%
 
 ---
 
@@ -324,7 +324,6 @@ LIMIT 50;
 クエリサービス内で使用できるクエリのその他のサンプルについては、次の使用例のドキュメントを参照してください。
 
 - [Analytics インサイト](../use-cases/analytics-insights.md)
-- [Adobe Targetでのアクティビティ分析](../use-cases/activity-analysis-with-adobe-target.md)
 - [イベントのトレンドレポートの作成](../use-cases/trended-report-of-events.md)
 - [訪問者のロールアップレポートの表示](../use-cases/roll-up-report-of-a-visitor.md)
 - [ユーザーのページビューのリスト](../use-cases/list-visitor-sessions.md)
