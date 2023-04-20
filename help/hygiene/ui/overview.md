@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 77%
+ht-degree: 87%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 77%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="データ衛生要求のステータス"
->abstract="このウィジェットは、作成されたジョブ、失敗したジョブ、および完了したデータ衛生レコードの削除ジョブの合計数を表示します。 データハイジーンプロセスについて詳しくは、左側のナビゲーションの「**データハイジーン**」を選択してください。"
+>title="データハイジーンリクエストのステータス"
+>abstract="このウィジェットには、作成、失敗および完了したデータハイジーンレコード削除ジョブの合計数が表示されます。データハイジーンプロセスについて詳しくは、左側のナビゲーションの「**データハイジーン**」を選択してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
