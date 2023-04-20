@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 34%
+ht-degree: 37%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 34%
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
->title="取り込み率"
->abstract="1 秒あたりに正常に処理されたイベント数。"
+>title="取り込みレート"
+>abstract="正常に処理された 1 秒間あたりのイベントの数。"
 >text="Learn more in the documentation"
 >additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI でのソースのデータフローの監視"
 
