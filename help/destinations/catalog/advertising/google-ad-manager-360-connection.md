@@ -4,8 +4,8 @@ description: Google Ad Manager 360 は、媒体社がビデオやモバイルア
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '947'
+ht-degree: 82%
 
 ---
 
