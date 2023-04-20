@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -173,7 +173,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="セグメントジョブ"
->abstract="セグメントジョブビューには、すべてのセグメントの評価ジョブと書き出しジョブに関する情報が含まれています。"
+>abstract="セグメントジョブビューには、すべてのセグメントに対する評価および書き出しジョブに関する情報が表示されます。"
 
 次の手順で **[!UICONTROL セグメントジョブ]** ダッシュボード、選択 **[!UICONTROL 監視]** (![監視アイコン](../assets/ui/monitor-destinations/monitoring-icon.png)) をクリックします。 1 回 [!UICONTROL 監視] ページ、選択 **[!UICONTROL セグメントジョブ]**. この [!UICONTROL 監視] ダッシュボードには、セグメント評価ジョブと書き出しジョブに関する指標と情報が含まれています。
 
