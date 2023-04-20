@@ -6,7 +6,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 35%
+ht-degree: 43%
 
 ---
 
@@ -69,8 +69,8 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 取り込みのタイムゾーンの設定"
->abstract="Platform は、指定されたプロジェクトタイムゾーンを使用して Mixpanel から関連データを取り込むので、タイムゾーンは Mixpanel プロファイルタイムゾーン設定と同じにする必要があります。 Mixpanel は、イベントを Mixpanel データストアに記録する前に、プロジェクトのタイムゾーンと調整するようにタイムゾーンを調整します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="詳しくは、ドキュメントを参照してください"
+>abstract="Platform は、指定されたプロジェクトのタイムゾーンを使用して Mixpanel から関連するデータを取り込むので、Platform のタイムゾーンは、Mixpanel プロファイルのタイムゾーン設定と同じである必要があります。Mixpanel は、Mixpanel データストアにイベントを記録する前に、プロジェクトのタイムゾーンに合わせて自身のタイムゾーンを調整します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=ja#project-id-and-timezone" text="詳しくは、ドキュメントを参照してください"
 
 ソースが認証されたら、プロジェクト ID とタイムゾーンを指定してから、「 」を選択します **[!UICONTROL 選択]**.
 
