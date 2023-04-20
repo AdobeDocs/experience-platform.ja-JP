@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -42,13 +42,13 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="ウィジェットの最大数"
->abstract="ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。 ダッシュボードに 10 個のウィジェットを追加した後、 [!UICONTROL 新しいウィジェットを追加] オプションは無効で、グレーで表示されます。"
+>abstract="ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。ダッシュボードに 10 個のウィジェットを追加すると、「[!UICONTROL 新しいウィジェットを追加]」オプションが無効になり、グレーで表示されます。"
 
 新しいダッシュボードビューで、「 」を選択します。 **[!UICONTROL 新しいウィジェットを追加]** をクリックして、ウィジェットの作成プロセスを開始します。
 
 >[!IMPORTANT]
 >
->ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。 ダッシュボードに 10 個のウィジェットを追加した後、 [!UICONTROL 新しいウィジェットを追加] オプションは無効で、グレーで表示されます。
+>ユーザー定義のダッシュボードは、最大 10 個のウィジェットをサポートします。ダッシュボードに 10 個のウィジェットを追加すると、「[!UICONTROL 新しいウィジェットを追加]」オプションが無効になり、グレーで表示されます。
 
 ![新しいウィジェットの追加がハイライトされた新しい空のダッシュボード。](./images/user-defined-dashboards/add-new-widget.png)
 
