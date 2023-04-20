@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 22%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
->title="ファイルを今すぐ書き出し"
->abstract="以前にスケジュールされたエクスポートに加えて、フルファイルエクスポートも配信する場合は、このコントロールを選択します。  ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。"
+>title="今すぐファイルを書き出し"
+>abstract="このコントロールを選択すると、以前にスケジュールされた書き出しに加えて完全なファイル書き出しが実行されます。 ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。"
 
 この記事では、Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先 ( 例： [クラウドストレージ](/help/destinations/catalog/cloud-storage/overview.md) および [電子メールマーケティング](/help/destinations/catalog/email-marketing/overview.md) 宛先。
 
