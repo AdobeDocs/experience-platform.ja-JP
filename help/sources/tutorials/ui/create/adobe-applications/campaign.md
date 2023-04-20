@@ -38,7 +38,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Adobe Campaign環境インスタンス"
+>title="Adobe Campaign 環境インスタンス"
 >abstract="使用する Adobe Campaign 環境の名前。"
 >text="Learn more in documentation"
 
