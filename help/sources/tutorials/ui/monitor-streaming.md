@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 25%
+ht-degree: 35%
 
 ---
 
@@ -66,25 +66,25 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"
 >title="受信したレコード"
->abstract="「Records Received」指標は、データフローで受信したレコードの合計数を示します。"
+>abstract="受信したレコードの指標は、データフローで受信したレコードの合計数を示します。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
 >title="取り込まれたレコード"
->abstract="取り込まれたレコード数指標は、データレイクに取り込まれたレコードの合計数を示します。"
+>abstract="取り込まれたレコードの指標は、データレイクに取り込まれたレコードの合計数を示します。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
 >title="失敗したレコード"
->abstract="「失敗したレコード」指標は、データにエラーがあるのでデータレイクに取り込まれなかったレコードの合計数を示します。"
+>abstract="失敗したレコードの指標は、データのエラーが原因でデータレイクに取り込まれなかったレコードの合計数を示します。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="警告のあるレコード"
->abstract="「警告を含むレコード」は、マッパー変換の警告で取り込まれたレコードの総数を示します。 すべてのマッパー変換エラーは警告として報告され、部分的に取り込まれた行は警告と共に成功したと見なされます"
+>abstract="警告のあるレコードの指標は、マッパー変換警告を伴って取り込まれたレコードの合計数を示します。マッパー変換エラーはすべて警告としてレポートされます。部分的に取り込まれた行は、警告を伴う成功と見なされます。"
 >text="Learn more in documentation"
 
 個々のデータフロー実行ごとに、次の詳細が表示されます。
