@@ -3,10 +3,10 @@ keywords: google アドマネージャー;google 広告;ダブルクリック;Do
 title: Google Ad Manager の接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 87%
+source-wordcount: '911'
+ht-degree: 84%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 87%
 | MAID | Microsoft Advertising ID。この ID は、Windows 10 を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | この ID は、Amazon Fire TV を一意に識別します。 |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -50,7 +50,7 @@ ht-degree: 87%
 | 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを Google の宛先に書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 
@@ -73,6 +73,11 @@ Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、
 
 ### 接続パラメーター {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="セグメント名にセグメント ID を追加"
+>abstract="Google Ad Manager のセグメント名に、次のようにExperience Platformのセグメント ID を含めるには、このオプションを選択します。 `Segment Name (Segment ID)`"
+
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
@@ -82,6 +87,11 @@ Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
    * [!DNL Google AdX] に `AdX buyer` を使用する
 
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 >[!NOTE]
 >
