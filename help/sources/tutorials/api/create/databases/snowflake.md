@@ -5,10 +5,10 @@ title: フローサービス API を使用したSnowflakeベース接続の作�
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをSnowflakeに接続する方法を説明します。
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 47%
+ht-degree: 50%
 
 ---
 
@@ -75,7 +75,7 @@ curl -X POST \
       "name": "Snowflake base connection",
       "description": "Snowflake base connection",
       "auth": {
-          "specName": "ConnectionString,
+          "specName": "ConnectionString",
           "params": {
               "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
           }
@@ -103,7 +103,7 @@ curl -X POST \
 }
 ```
 
-このチュートリアルに従って、 [!DNL Snowflake] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Snowflake] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
