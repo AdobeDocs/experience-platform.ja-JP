@@ -7,7 +7,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 16%
+ht-degree: 34%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
 >title="データ主体のリクエスト"
->abstract="このウィジェットは、特定の日にPrivacy Serviceが処理した、送信済みおよび完了済みのデータ主体要求の数を表示します。 プロセスの詳細については、「Privacy Service」を選択します。 **リクエスト** をクリックします。"
+>abstract="このウィジェットには、特定の日に Privacy Service によって処理された、送信され完了したデータ主体のリクエストの数が表示されます。Privacy Service の処理について詳しくは、左側のナビゲーションの&#x200B;**リクエスト**&#x200B;を選択してください。"
 
 Privacy ServiceUI [!DNL Privacy Service] では、様々なAdobe Experience Cloudアプリケーション間でプライバシーとコンプライアンスのリクエストを調整できます。
 
