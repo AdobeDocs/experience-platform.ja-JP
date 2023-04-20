@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 61%
+ht-degree: 67%
 
 ---
 
@@ -65,12 +65,12 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="プライマリ ID"
->abstract="プライマリ ID は、Experience Platform でレコードを消費者のプロファイルに結び付ける属性です。データセットのプライマリ ID フィールドは、そのデータセットが基づいているスキーマによって定義されます。この列では、レコードのプライマリ ID のタイプ（または名前空間）を指定する必要があります ( 例： `email` （電子メールアドレスの場合） `ecid` (Experience CloudID)。 詳しくは、データの衛生 UI ガイドを参照してください。"
+>abstract="プライマリ ID は、Experience Platform でレコードを消費者のプロファイルに結び付ける属性です。データセットのプライマリ ID フィールドは、そのデータセットが基づいているスキーマによって定義されます。この列では、レコードのプライマリ ID のタイプ (または名前空間) を指定する必要があります (メールアドレスの場合は `email`、Experience Cloud ID の場合は `ecid` など)。詳しくは、データハイジーン UI ガイドを参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 値"
->abstract="この列では、レコードのプライマリ ID の値を指定する必要があります。この値は、左の列で指定された ID タイプに対応している必要があります。 プライマリ ID タイプが `email`の場合、値はレコードの電子メールアドレスにする必要があります。 詳しくは、データハイジーン UI ガイドを参照してください。"
+>abstract="この列では、レコードのプライマリ ID の値を指定する必要があります (左の列で指定した ID タイプに対応している必要があります)。プライマリ ID タイプが `email` の場合、値はレコードのメールアドレスである必要があります。詳しくは、データハイジーン UI ガイドを参照してください。"
 
 レコードを削除する場合は、削除するレコードをシステムが決定できるように、ID 情報を指定する必要があります。 Platform のデータセットの場合、レコードは、データセットのスキーマによって定義された「**プライマリ ID**」フィールドに基づいて削除されます。
 
