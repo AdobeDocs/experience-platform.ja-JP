@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 29%
+ht-degree: 35%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 29%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="上位のアクション"
->abstract="このウィジェットは、選択した期間内にExperience Platformで実行された上位の種類のアクションを表示します。 Platform で記録されたアクションの完全なリストを表示するには、 **監査** をクリックします。"
+>abstract="このウィジェットには、選択した期間内に Experience Platform で実行されたアクションの上位のタイプが表示されます。Platform で記録されたアクションの完全なリストを表示するには、左側のナビゲーションの&#x200B;**監査**&#x200B;を選択します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="上位のユーザー"
->abstract="このウィジェットは、選択した期間内に、Experience Platformで最も多くのアクションを実行したユーザーを表示します。 Platform で記録されたアクションの完全なリストを表示するには、 **監査** をクリックします。"
+>abstract="このウィジェットには、選択した期間内に Experience Platform で最も多くアクションを実行したユーザーが表示されます。Platform で記録されたアクションの完全なリストを表示するには、左側のナビゲーションの&#x200B;**監査**&#x200B;を選択します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
