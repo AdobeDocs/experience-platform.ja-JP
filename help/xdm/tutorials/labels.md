@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -37,8 +37,8 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="ガバナンスラベルを編集"
->abstract="スキーマフィールドにラベルを適用して、その特定のフィールドに含まれるデータに適用される使用ポリシーを示します。"
+>title="ガバナンスラベルの編集"
+>abstract="スキーマフィールドにラベルを適用して、その特定のフィールドに含まれるデータに適用する使用ポリシーを指定します。"
 
 ラベルの追加を開始するには、まず [編集する既存のスキーマを選択](../ui/resources/schemas.md#edit) または [新しいスキーマの作成](../ui/resources/schemas.md#create) をクリックして、スキーマエディターで構造を表示します。
 
