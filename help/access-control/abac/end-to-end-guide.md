@@ -66,13 +66,13 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="ラベルとは"
->abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Platform には、アドビ定義の「コア」データ使用状況ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。例えば、RHD（規制医療データ）などの機密ラベルを意味する「S」ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Platform には、アドビ定義の「コア」データ使用状況ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。例えば、RHD (規制医療データ) などの、機密を意味する「S」ラベルを使用すると、保護された医療情報 (PHI) を参照するデータを分類できます。また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="新しいラベルの作成"
->abstract="組織のニーズに合わせて独自のカスタムラベルを作成できます。カスタムラベルを使用して、データガバナンスとアクセス制御の両方の設定をデータに適用することができます。"
+>abstract="組織のニーズに合わせて独自のカスタムラベルを作成できます。カスタムラベルを使用して、データガバナンスとアクセス制御の両方の設定をデータに適用できます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#manage-labels" text="カスタムラベルの管理"
 
 >[!CONTEXTUALHELP]
@@ -84,13 +84,13 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="新しい役割の作成"
->abstract="新しい役割を作成して、お使いの Platform インスタンスにアクセスするユーザーをより適切に分類することができます。例えば、社内マーケティングチームの役割を作成し、その役割に RHD ラベルを適用して、社内マーケティングチームが保護された医療情報（PHI）にアクセスできるようにすることができます。または、外部エージェンシーの役割を作成したうえで、その役割に RHD ラベルを適用しないことにより、その役割の PHI データへのアクセスを拒否することもできます。"
+>abstract="新しい役割を作成するいことで、Platform インスタンスにアクセスするユーザーをより適切に分類することができます。例えば、社内マーケティングチーム用の役割を作成して、その役割に RHD ラベルを適用することで、社内マーケティングチームが保護された医療情報 (PHI) にアクセスできるようになります。また、外部エージェンシー用の役割を作成して、その役割に RHD ラベルを適用しないことで、医療情報 (PHI) データにアクセスするのを拒否することもできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja#create-a-new-role" text="新しい役割の作成"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="役割の概要"
->abstract="役割の概要ダイアログには、特定の役割がアクセスできるリソースとサンドボックスが表示されます。"
+>abstract="役割の概要ダイアログには、その役割へのアクセスが許可されているリソースとサンドボックスが表示されます。"
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 ロールには特定の権限セットがあり、組織のメンバーは、必要なアクセス範囲に応じて、1 つ以上のロールに割り当てることができます。
 
