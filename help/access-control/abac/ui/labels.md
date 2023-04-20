@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
+keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;属性ベースのアクセス制御;ABAC
 title: 属性ベースのアクセス制御ラベルの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してラベルを管理する方法について説明します
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 23%
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
 >title="ラベルの使用"
->abstract="カスタムラベルを使用して、データガバナンスとアクセス制御の設定をデータに適用できます。"
+>abstract="カスタムラベルを使用すると、データにデータガバナンスとアクセス制御の設定を適用できます。"
 
 >[!NOTE]
 >
@@ -33,4 +33,4 @@ ht-degree: 23%
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-終了したら、「 」を選択します。 **[!UICONTROL 確認]**.
+終了したら、「**[!UICONTROL 確認]**」を選択します。
