@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;Analytics ソースコネクタ;Analytics コネクタ;Analytics ソース;Analytics ソース;Analytics
-solution: Experience Platform
+keywords: Experience Platform;ホーム;人気の高いトピック;Analytics ソースコネクタ;Analytics コネクタ;Analytics ソース;Analytics ソース;Analytics；フィルタリング；プロファイルのフィルタリング；リアルタイム顧客プロファイル；フィルター；プロファイルデータのフィルター；行レベルのフィルタリング；列レベルのフィルタリング
 title: UI での Adobe Analytics ソースコネクタの作成
-type: Tutorial
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2365'
-ht-degree: 65%
+source-wordcount: '2380'
+ht-degree: 64%
 
 ---
 
