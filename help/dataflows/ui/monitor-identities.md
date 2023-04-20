@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 17%
+ht-degree: 24%
 
 ---
 
@@ -29,13 +29,13 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 処理"
->abstract="ID 処理ビューには、追加された ID の数、作成されたグラフ、更新されたグラフなど、ID サービスに取り込まれたレコードに関する情報が含まれます。 指標とグラフの詳細については、指標定義ガイドを参照してください。"
+>abstract="ID 処理ビューには、ID サービスに取り込まれたレコードに関する情報 (追加された ID、作成されたグラフや更新されたグラフの数など) が表示されます。指標およびグラフについて詳しくは、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="データフロー実行の詳細"
->abstract="データフローの実行の詳細ページには、組織 ID やデータフローの実行 ID など、ID データフローの実行に関する詳細が表示されます。"
+>abstract="データフロー実行の詳細ページには、ID データフロー実行に関する詳しい情報 (組織 ID やデータフロー実行 ID など) が表示されます。"
 
 次の手順で **[!UICONTROL ID]** ダッシュボード、選択 **[!UICONTROL 監視]** をクリックします。 1 回 **[!UICONTROL 監視]** ページで、 **[!UICONTROL ID]** カード。
 
