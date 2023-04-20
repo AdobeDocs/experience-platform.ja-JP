@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 85%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +83,11 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 ### 宛先の詳細を入力 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam360_appendSegmentID"
+>title="セグメント名にセグメント ID を追加"
+>abstract="Google Ad Manager 360 のセグメント名にExperience Platformのセグメント ID を含めるには、次のように、このオプションを選択します。 `Segment Name (Segment ID)`"
+
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
@@ -93,6 +98,12 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 * **[!UICONTROL アカウントタイプ]**:次の条件に応じて、オプションを選択します。 [!DNL Google] アカウント：
    * [!DNL Google AdX] に `AdX buyer` を使用する
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
+
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 ### アラートの有効化 {#enable-alerts}
 
