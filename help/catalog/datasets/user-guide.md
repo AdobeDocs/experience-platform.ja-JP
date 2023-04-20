@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -23,15 +23,15 @@ ht-degree: 36%
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
    * [スキーマエディター](../../xdm/tutorials/create-schema-ui.md):を使用して独自のカスタム XDM スキーマを構築する方法を説明します。 [!DNL Schema Editor] 内 [!DNL Platform] ユーザーインターフェイス。
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示 {#view-datasets}
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="データセットアクティビティの負の数"
->abstract="取り込まれたレコードの負の数は、ユーザーが選択した期間で特定のバッチを削除したことを意味します。"
+>title="データセットアクティビティの負の数値"
+>abstract="取り込まれたレコードの負の数値は、選択した時間範囲でユーザーが特定のバッチを削除したことを意味します。"
 >text="Learn more in documentation"
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで **[!UICONTROL データセット]** ダッシュボード。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
