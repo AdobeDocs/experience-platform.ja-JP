@@ -3,10 +3,10 @@ title: Platform Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
 workflow-type: tm+mt
-source-wordcount: '1273'
-ht-degree: 5%
+source-wordcount: '1318'
+ht-degree: 6%
 
 ---
 
@@ -16,7 +16,10 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->この [Adobe Targetドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) には、Target の機能に関する、Platform Web SDK に固有の情報を含むトピックが含まれています。
+>を使用して Target 実装を Platform Web SDK に移行する方法について説明します。 [at.js 2.x から Platform Web SDK への Target の移行](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=ja) チュートリアル
+>
+>Target を初めて実装する際に、 [Web SDK を使用したAdobe Experience Cloudの実装](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) チュートリアル Target に固有の情報については、「 」というタイトルのチュートリアルの節を参照してください。 [Platform Web SDK での Target の設定](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+
 
 次の機能はテスト済みで、現在はでサポートされています。 [!DNL Target]:
 
@@ -76,9 +79,9 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 * ターゲットライブラリ
 * ジオ
 * ネットワーク
-* Operating System
+* オペレーティングシステム
 * サイトのページ
-* Browser
+* ブラウザー
 * トラフィックソース
 * 時間枠
 
@@ -168,9 +171,9 @@ alloy("sendEvent",
 
 を更新するには [!DNL Target] プロファイルで、プロファイルデータが次の情報と共に渡されていることを確認します。
 
-* 「`“data {“`
-* 「`“__adobe.target”`
-* プレフィックス `“profile.”` 例：以下
+* 「`"data {"`
+* 「`"__adobe.target"`
+* プレフィックス `"profile."` 例：以下
 
 | キー | タイプ | 説明 |
 | --- | --- | --- |
