@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 99%
+source-wordcount: '968'
+ht-degree: 98%
 
 ---
 
@@ -90,7 +90,8 @@ ht-degree: 99%
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - e コマース {#ecommerce}
-      - [Shopify コネクタ](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify ストリーミング](connectors/ecommerce/shopify-streaming.md)
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - マーケティングの自動処理 {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 99%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify ストリーミング](tutorials/api/create/ecommerce/shopify-streaming.md)
       - マーケティングの自動処理 {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 99%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify ストリーミング](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - マーケティングの自動処理 {#marketing-automation}
