@@ -7,7 +7,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 26%
+ht-degree: 30%
 
 ---
 
@@ -35,8 +35,8 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="ID タイプを指定"
->abstract="ID タイプは、データを ID グラフに保存するかどうかを制御します。 人以外の識別子は保存されず、その他の ID タイプはすべて保存されます。"
+>title="ID タイプの指定"
+>abstract="ID タイプは、データを ID グラフに保存するかどうかを制御します。人物ではない ID は保存されず、その他のすべての ID タイプは保存されます。"
 >text="Learn more in documentation"
 
 データは、複数の異なる ID タイプで識別できます。ID タイプは、ID 名前空間の作成時に指定されます。この ID タイプによって、データを ID グラフに保持するかどうか、およびそのデータの処理方法の手順が決まります。を除くすべての ID タイプ **人以外の識別子** 同じ動作に従って、名前空間とそれに対応する ID 値を id グラフクラスターにステッチします。 を使用する際に、データは結合されません **人以外の識別子**.
@@ -83,7 +83,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="統合 ID の表示"
->abstract="統合 ID は、他のシステムとの接続に使用される名前空間で、ID の解決や ID のステッチには使用されません。 <br> これらの ID は、デフォルトでは非表示になっています。 切り替えボタンを使用して、統合名前空間を表示します。"
+>abstract="統合 ID は、他のシステムと連携するために使用される名前空間で、ID の解決や ID のつなぎ合わせには使用されません。<br> これらの ID は、デフォルトでは非表示です。統合された名前空間を表示するには、切替スイッチを使用します。"
 
 UI で ID 名前空間を表示するには、「 **[!UICONTROL ID]** 左側のナビゲーションで「 」を選択し、 **[!UICONTROL 参照]**.
 
