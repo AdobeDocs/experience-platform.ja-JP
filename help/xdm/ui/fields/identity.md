@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -28,7 +28,7 @@ ID フィールドは、Platform で顧客 ID グラフを構築する方法に�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="プライマリ ID に対する制限"
->abstract="このスキーマは、特定のソース接続での使用を目的としたフィールドグループを使用します。 接続では、identityMap をプライマリ ID として使用する必要があり、自動的に設定されています。"
+>abstract="このスキーマは、特定のソース接続で使用するためのフィールドグループを使用します。この接続では、identityMap をプライマリ ID として使用する必要があり、自動的に設定されています。"
 
 条件 [新しいフィールドの定義](./overview.md#define) UI で、 **[!UICONTROL ID]** 」チェックボックスをオンにします。
 
