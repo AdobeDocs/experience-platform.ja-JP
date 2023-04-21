@@ -6,9 +6,9 @@ type: Tutorial
 description: Policy Service API を使用してデータガバナンスポリシーを作成する方法について説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1199'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **リクエスト**
 
-次のリクエストでは、 `marketingActions/custom` エンドポイント：組織で定義されているすべてのマーケティングアクションのリストを取得します。
+次のリクエストでは、`marketingActions/custom` エンドポイントを使用して、組織で定義されているすべてのマーケティングアクションのリストを取得しています。
 
 ```shell
 curl -X GET \
