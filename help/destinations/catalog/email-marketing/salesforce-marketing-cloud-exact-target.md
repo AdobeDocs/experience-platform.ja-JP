@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メールの宛先；salesfo
 title: （API）Salesforce Marketing Cloud 接続
 description: SalesforceMarketing Cloud（旧称 ExactTarget）の宛先を使用すると、アカウントデータを書き出し、SalesforceMarketing Cloud内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
+source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
-source-wordcount: '2619'
-ht-degree: 27%
+source-wordcount: '2911'
+ht-degree: 25%
 
 ---
 
@@ -14,11 +14,13 @@ ht-degree: 27%
 
 ## 概要 {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) ( 旧称： [!DNL ExactTarget]) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) ( 旧称： [!DNL ExactTarget]) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 
 >[!IMPORTANT]
 >
 >この接続と他の接続の違いに注意してください [[!DNL Salesforce Marketing Cloud] 接続](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 「電子メールマーケティングカタログ」セクション内に存在する 他の SalesforceMarketing Cloud接続では、指定した格納場所にファイルを書き出すことができますが、これは API ベースのストリーミング接続です。
+
+比較対象 [!DNL Salesforce Marketing Cloud Account Engagement] それはより向いている **B2B** マーケティング、 [!DNL (API) Salesforce Marketing Cloud] 目的地は次に最適です： **B2C** トランザクションの意思決定サイクルが短い使用例です。 特に外部のデータセットから連絡先を優先順位付けしてセグメント化することで、マーケティングキャンペーンを調整し改善するために、ターゲットオーディエンスの行動を表す大きなデータセットを統合できます [!DNL Salesforce]. *注意：Experience Platformには、 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
 この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [!DNL Salesforce Marketing Cloud] [連絡先を更新](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API（次の操作を実行できます） **連絡先の追加と連絡先データの更新** 新しい [!DNL Salesforce Marketing Cloud] セグメント。
 
@@ -26,7 +28,7 @@ ht-degree: 27%
 
 ## ユースケース {#use-cases}
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL (API) Salesforce Marketing Cloud] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL (API) Salesforce Marketing Cloud] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
 ### マーケティングキャンペーン用の連絡先へのメール送信 {#use-case-send-emails}
 
@@ -44,9 +46,9 @@ Platform からにデータを書き出すための次の前提条件に注意�
 
 #### [!DNL Salesforce Marketing Cloud] アカウントが必要です {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] のサブスクリプションを持つアカウント [Marketing Cloudアカウントエンゲージメント](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 続行するには、製品が必須です。
+A [!DNL Salesforce Marketing Cloud] のサブスクリプションを持つアカウント [[!DNL Marketing Cloud Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) 続行するには、製品が必須です。
 
-次の場所に移動： [[!DNL Salesforce] サポート](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) もし [!DNL Salesforce Marketing Cloud] アカウントまたはアカウントが見つかりません [!DNL Marketing Cloud Account Engagement] 製品の購読。
+次の場所に移動： [[!DNL Salesforce] サポート](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) もし [!DNL Salesforce Marketing Cloud] アカウントまたはアカウントが見つかりません [!DNL Marketing Cloud Engagement] 製品の購読。
 
 #### 内に属性を作成 [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
@@ -64,7 +66,7 @@ Platform からに対してアクティブ化した各セグメントに対し�
 のビュー [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] attribute-set は次のように表示されます。
 ![SalesforceMarketing CloudUI の電子メール人口統計属性セット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demograhics-fields.png)
 
-この [!DNL (API) Salesforce Marketing Cloud] 宛先は、 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) で定義された属性とその属性セットを動的に検索するには [!DNL Salesforce Marketing Cloud].
+この [!DNL (API) Salesforce Marketing Cloud] 宛先は [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) で定義された属性とその属性セットを動的に検索するには [!DNL Salesforce Marketing Cloud].
 
 これらは、 **[!UICONTROL ターゲットフィールド]** 選択ウィンドウ ( [マッピング](#mapping-considerations-example) を [宛先へのセグメントのアクティブ化](#activate). なお、 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 属性セットがサポートされています。
 
@@ -81,6 +83,21 @@ Platform からに対してアクティブ化した各セグメントに対し�
 >* Platform セグメントに使用する属性と、内の他の属性を区別するには [!DNL Salesforce Marketing Cloud]の場合は、Adobeセグメントに使用される属性に、認識可能なプレフィックスまたはサフィックスを含めることができます。 例えば、の代わりに `test_segment`，使用 `Adobe_test_segment` または `test_segment_Adobe`.
 >* 他の属性が既にで作成されている場合は、 [!DNL Salesforce Marketing Cloud]を使用すると、Platform セグメントと同じ名前を使用して、 [!DNL Salesforce Marketing Cloud].
 
+
+#### 内でのユーザーの役割および権限の割り当て [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+形式 [!DNL Salesforce Marketing Cloud] は、ユースケースに応じてカスタムロールをサポートします。ユーザーには、 [!DNL Salesforce Marketing Cloud] 属性セット。 ユーザーに割り当てられた役割の例を次に示します。
+![割り当てられた役割を表示する、選択したユーザーの SalesforceMarketing CloudUI。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+役割に応じて [!DNL Salesforce Marketing Cloud] ユーザーが割り当てられている場合は、 [!DNL Salesforce Marketing Cloud] 更新するフィールドを含む属性セット。
+
+この宛先では `[!DNL Email Demographics system attribute-set]`を許可するには、 `Email` を次に示します。
+![許可された権限を持つメール属性セットが表示される SalesforceMarketing CloudUI。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+アクセスレベルを制限するには、詳細な権限を使用して個々のアクセスを上書きすることもできます。
+![SalesforceMarketing CloudUI に、詳細な権限を持つ電子メール属性セットが表示されます。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+詳しくは、 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) および [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 詳細なガイダンスに関するページを参照してください。
 
 #### [!DNL Salesforce Marketing Cloud] 資格情報の収集 {#gather-credentials}
 
@@ -107,7 +124,7 @@ Platform からに対してアクティブ化した各セグメントに対し�
       * で新しい属性を追加する前に、古い属性を削除します。 [!DNL Salesforce Marketing Cloud].
       * これらの古い属性名を用いて **[!UICONTROL マッピング ID]** 期間中 [セグメントスケジュール](#schedule-segment-export-example) 手順
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 [!DNL (API) Salesforce Marketing Cloud] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -185,7 +202,7 @@ XDM フィールドを [!DNL (API) Salesforce Marketing Cloud] 宛先フィー�
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
    ![「新しいマッピングを追加」の Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. 内 **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
-1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** カテゴリを選択し、 `Email Demographics` 必要に応じて表示される属性。 この [!DNL (API) Salesforce Marketing Cloud] 宛先は [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) で定義された属性とその属性セットを動的に取得するには [!DNL Salesforce Marketing Cloud]. これらは、 **[!UICONTROL ターゲットフィールド]** 設定時のポップアップ [マッピング](#mapping-considerations-example) 内 [ワークフローでのセグメントのアクティブ化](#activate). なお、 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 属性セットがサポートされています。
+1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** カテゴリを選択し、 `Email Demographics` 必要に応じて表示される属性。 この [!DNL (API) Salesforce Marketing Cloud] 宛先は、 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) で定義された属性とその属性セットを動的に取得するには [!DNL Salesforce Marketing Cloud]. これらは、 **[!UICONTROL ターゲットフィールド]** 設定時のポップアップ [マッピング](#mapping-considerations-example) 内 [ワークフローでのセグメントのアクティブ化](#activate). なお、 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 属性セットがサポートされています。
 
    * これらの手順を繰り返して、XDM プロファイルスキーマとの間に次のマッピングを追加します。 [!DNL (API) Salesforce Marketing Cloud]: |ソースフィールド|ターゲットフィールド|必須| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
       |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
@@ -269,7 +286,8 @@ XDM フィールドを [!DNL (API) Salesforce Marketing Cloud] 宛先フィー�
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年2月 | ドキュメントの更新 | 更新： [(API)SalesforceMarketing Cloudの前提条件](#prerequisites-destination) セクションに、 [!DNL Salesforce Marketing Cloud Account Engagement] は、この宛先を使用するための必須の購読です。 |
+| 2023年4月 | ドキュメントの更新 | <ul><li>文と参照リンクを [(API)SalesforceMarketing Cloudの前提条件](#prerequisites-destination) 呼び出す部分 [!DNL Salesforce Marketing Cloud Engagement] は、この宛先を使用するための必須の購読です。 以前は、ユーザーがMarketing Cloudのサブスクリプションを必要とするという誤った呼び出しがおこなわれていました。 **アカウント** エンゲージメントを続行します。</li> <li>の下にの節を追加しました。 [前提条件](#prerequisites) 対象 [役割と権限](#prerequisites-roles-permissions) 割り当てられる [!DNL Salesforce] ユーザーを設定します。 (PLATIR-26299)</li></ul> |
+| 2023年2月 | ドキュメントの更新 | 更新： [(API)SalesforceMarketing Cloudの前提条件](#prerequisites-destination) セクションに、 [!DNL Salesforce Marketing Cloud Engagement] は、この宛先を使用するための必須の購読です。 |
 | 2023年2月 | 機能の更新 | 宛先の設定が正しくない場合に、Salesforce に不正な JSON が送信される問題を修正しました。 その結果、一部のユーザーで、アクティブ化に失敗した ID の数が多く表示されていました。 (PLATIR-26299) |
 | 2023年1月 | ドキュメントの更新 | <ul><li>更新： [の前提条件 [!DNL Salesforce]](#prerequisites-destination) セクションで属性を作成する必要があることを呼び出すには、 [!DNL Salesforce] サイド。 この節では、その方法に関する詳細な手順と、 [!DNL Salesforce]. (PLATIR-25602)</li><li>アクティブ化された各セグメントのマッピング ID を [セグメントスケジュール](#schedule-segment-export-example) 手順 (PLATIR-25602)</li></ul> |
 | 2022年10月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
