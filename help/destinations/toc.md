@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 99%
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
-      * [（アルファ）LiveRamp - SFTP 接続](./catalog/advertising/liveramp.md)
+      * [（アルファ版）LiveRamp - SFTP 接続](./catalog/advertising/liveramp.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)

@@ -7,7 +7,7 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 
 ## サンドボックスと権限
 
-非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。製品プロファイルの権限は、プロファイルがアクセス権を付与されたサンドボックス環境内の [!DNL Platform] 機能に対するユーザーのアクセスを提供します。デフォルトの Experience Platform ライセンスでは、5 つのサンドボックス（1 つの実稼動環境と 4 つの非実稼動環境）が許可されます。10 個の非実稼動用サンドボックス（合計 75 個まで）のパックを追加できます。詳しくは、組織の管理者またはAdobeの営業担当者にお問い合わせください。
+非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。製品プロファイルの権限は、プロファイルがアクセス権を付与されたサンドボックス環境内の [!DNL Platform] 機能に対するユーザーのアクセスを提供します。デフォルトの Experience Platform ライセンスでは、5 つのサンドボックス（1 つの実稼動環境と 4 つの非実稼動環境）が許可されます。10 個の非実稼動用サンドボックス（合計 75 個まで）のパックを追加できます。詳しくは、組織の管理者またはアドビのセールス担当者にお問い合わせください。
 
 [!DNL Experience Platform] のサンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
 
@@ -114,7 +114,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの組織を結び付け、を有効にするための、パートナーのハンドシェイクの作成、承認、拒否へのアクセス [!DNL Segment Match] フロー。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの 組織を接続し [!DNL Segment Match] フローを有効にするパートナーハンドシェイクを作成、承認または拒否するためのアクセス権。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーで [!DNL Segment Match] フィードを読み取り、作成、編集、公開するためのアクセス権。 |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
 | データガバナンス | [!UICONTROL データ使用ラベルの適用] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
