@@ -5,9 +5,9 @@ title: ストリーミング取り込みトラブルシューティングガイ�
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1024'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experie
 
 ### 信頼できるソースからのみデータが収集されるようにするにはどうすればよいですか？
 
-[!DNL Experience Platform] は、セキュリティで保護されたデータ収集をサポートします。認証済みのデータ収集が有効な場合、クライアントは JSON Web トークン (JWT) と組織 ID をリクエストヘッダーとして送信する必要があります。 認証済みデータを [!DNL Platform] に送信する方法について詳しくは、[認証済みデータ収集](../tutorials/create-authenticated-streaming-connection.md)に関するガイドを参照してください。
+[!DNL Experience Platform] は、セキュリティで保護されたデータ収集をサポートします。認証済みデータ収集が有効な場合、クライアントは JSON Web トークン（JWT）と組織 ID をリクエストヘッダーとして送信する必要があります。認証済みデータを [!DNL Platform] に送信する方法について詳しくは、[認証済みデータ収集](../tutorials/create-authenticated-streaming-connection.md)に関するガイドを参照してください。
 
 ### [!DNL Real-Time Customer Profile] にデータをストリーミングするための待ち時間はどれくらいですか？
 
