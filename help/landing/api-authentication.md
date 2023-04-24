@@ -5,10 +5,10 @@ title: Experience Platform API の認証とアクセス
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 16%
+source-wordcount: '1581'
+ht-degree: 14%
 
 ---
 
@@ -197,6 +197,68 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 ## Postmanを使用した API 呼び出しの認証とテスト
 
 [Postman](https://www.postman.com/) は、開発者が RESTful API を調べてテストできる一般的なツールです。 この [投稿（中）](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 認証を自動的に実行し、それを使用して Platform API を使用するようにPostmanを設定する方法について説明します。
+
+## 開発者権限と API アクセス制御Experience Platform
+
+>[!NOTE]
+>
+>権限で API 資格情報を表示および管理できるのは、システム管理者のみです。
+
+Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのExperience Platform製品プロファイルに対する開発者権限とユーザー権限を持つアカウントが必要です。
+
+### 製品プロファイルへの開発者の追加
+
+[[!DNL Admin Console]](https://adminconsole.adobe.com/) に移動し、Adobe ID でログインします。
+
+選択 **[!UICONTROL 製品]**&#x200B;を選択し、「 **[!UICONTROL Adobe Experience Platform]** を製品のリストから削除します。
+
+![Admin Consoleの製品リスト](././images/api-authentication/products.png)
+
+次の **[!UICONTROL 製品プロファイル]** タブ、選択 **[!UICONTROL AEP-Default-All-Users]**. または、検索バーを使用して名前を入力し、製品プロファイルを検索します。
+
+![製品プロファイルを検索](././images/api-authentication/select-product-profile.png)
+
+を選択します。 **[!UICONTROL 開発者]** 「 」タブで、「 **[!UICONTROL 開発者を追加]**.
+
+![「開発者」タブから開発者を追加する](././images/api-authentication/add-developer1.png)
+
+開発者の **[!UICONTROL 電子メールまたはユーザー名]**. 有効な [!UICONTROL 電子メールまたはユーザー名] 開発者の詳細が表示されます。 「**[!UICONTROL 保存]**」を選択します。
+
+![電子メールまたはユーザー名を使用して開発者を追加する](././images/api-authentication/add-developer-email.png)
+
+開発者が正常に追加され、 [!UICONTROL 開発者] タブをクリックします。
+
+![「デベロッパー」タブに表示されるデベロッパー](././images/api-authentication/developer-added.png)
+
+### API の設定
+
+開発者は、Adobe Developer Console で、プロジェクト内に API を追加して設定できます。
+
+プロジェクトを選択し、「 」を選択します。 **[!UICONTROL API を追加]**.
+
+![プロジェクトへの API の追加](././images/api-authentication/add-api-project.png)
+
+内 **[!UICONTROL API を追加]** ダイアログボックスの選択 **[!UICONTROL Adobe Experience Platform]**&#x200B;を選択し、「 **[!UICONTROL Experience PlatformAPI]**.
+
+![API をExperience Platformに追加](././images/api-authentication/add-api-platform.png)
+
+内 **[!UICONTROL API の設定]** 画面、選択 **[!UICONTROL AEP-Default-All-Users]**.
+
+### API をロールに割り当て
+
+システム管理者は、システム UI で API をロールに割り当てることができますExperience Platform。
+
+選択 **[!UICONTROL 権限]** と、API を追加するロールを定義します。 を選択します。 **[!UICONTROL API 資格情報]** 「 」タブで、「 **[!UICONTROL API 資格情報の追加]**.
+
+![選択した役割の「 API 資格情報」タブ](././images/api-authentication/api-credentials.png)
+
+ロールに追加する API を選択し、「 」を選択します。 **[!UICONTROL 保存]**.
+
+![選択可能な API のリスト](././images/api-authentication/select-api.png)
+
+次の場所に戻ります： [!UICONTROL API 資格情報] タブに追加します。新しく追加された API が表示されます。
+
+![新しく追加された API を含む「 API 資格情報」タブ](././images/api-authentication/api-credentials-with-added-api.png)
 
 ## 次の手順
 
