@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；OneTrust;onetrust；同意；同意と環境設定；コンプライアンス
 solution: Experience Platform
-title: （ベータ版）OneTrust 統合ソースコネクタの概要
+title: OneTrust 統合ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して OneTrust Integration をAdobe Experience Platformに接続する方法を説明します。
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '174'
 ht-degree: 55%
 
 ---
 
-# （ベータ版）[!DNL OneTrust Integration] ソース
+# [!DNL OneTrust Integration] ソース
 
 >[!NOTE]
 >
->[!DNL OneTrust Integration] ソースはベータ版です。機能とドキュメントは変更される場合があります。 ベータ版のラベル付きソースの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions).
+>この [!DNL OneTrust Integration] ソースは、同意および環境設定のデータの取り込みのみをサポートし、cookie はサポートしません。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

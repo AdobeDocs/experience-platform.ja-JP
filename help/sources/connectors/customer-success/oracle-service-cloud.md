@@ -2,18 +2,15 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Service Cloud;oracle service cloud
 title: Oracle Service Cloud ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Oracle Service Cloud を Adobe Experience Platform に接続する方法について説明します。
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '269'
-ht-degree: 100%
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 98%
 
 ---
 
-# （ベータ版）Oracle Service Cloud ソース
-
->[!NOTE]
->
->Oracle Service Cloud ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# Oracleサービスクラウドソース
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

@@ -2,18 +2,15 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Service Cloud;oracle service cloud
 title: Flow Service API を使用した Oracle Service Cloud ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Oracle Service Cloud に接続する方法について説明します。
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '547'
-ht-degree: 100%
+exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '527'
+ht-degree: 98%
 
 ---
 
-# （ベータ版）[!DNL Flow Service] API を使用した Oracle Service Cloud ソース接続の作成
-
->[!NOTE]
->
->Oracle Service Cloud ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+# を使用してOracleサービスクラウドのソース接続を作成する [!DNL Flow Service] API
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -32,7 +29,7 @@ ht-degree: 100%
 
 [!DNL Flow Service] を Oracle Service Cloud に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | Oracle Service Cloud インスタンスのホスト URL。 |
 | `username` | Oracle Service Cloud ユーザーアカウントのユーザー名。 |

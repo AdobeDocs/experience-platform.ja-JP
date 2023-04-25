@@ -1,10 +1,9 @@
 ---
 title: Ui での Shopify ストリーミング接続とデータフローの作成
 description: Platform ユーザーインターフェイスを使用して Shopify ストリーミングソース接続とデータフローを作成する方法を説明します。
-badge: 「ベータ版」
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: ベータ
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 35%
@@ -95,4 +94,3 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 ## 次の手順
 
 このチュートリアルに従って、 [!DNL Shopify Streaming] アカウント 接続方法 [!DNL Shopify Streaming] API を使用するアカウントについては、 [ストリーミングするソース接続とデータフローの作成 [!DNL Shopify] フローサービス API を使用したデータ](../../../api/create/ecommerce/shopify-streaming.md).
-

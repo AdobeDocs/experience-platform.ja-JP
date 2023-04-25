@@ -1,10 +1,9 @@
 ---
 title: ストリーミングソースを Shopify
 description: ソース接続とデータフローを作成して、Shopify インスタンスからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します。
-badge: 「ベータ版」
-hidefromtoc: y
-hide: y
-source-git-commit: 97e6cda8fa7a40542de5a34a9f4dfcaeb715edbf
+badge: ベータ
+exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 3%

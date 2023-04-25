@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；onetrust;OneTrust
 solution: Experience Platform
-title: （ベータ版）UI での OneTrust Source 接続の作成
+title: UI での OneTrust Source 接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して OneTrust ソース接続を作成する方法を説明します。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 35095ec8c22106ba0a8f11e0a970ed7989a7f06c
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 37%
+source-wordcount: '528'
+ht-degree: 25%
 
 ---
 
-# （ベータ版） [!DNL OneTrust Integration] UI のソース接続
+# UI での [!DNL OneTrust Integration] ソース接続の作成
 
 >[!NOTE]
 >
->[!DNL OneTrust Integration] ソースはベータ版です。機能とドキュメントは変更される場合があります。 ベータ版のラベル付きソースの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions).
+>この [!DNL OneTrust Integration] ソースは、同意および環境設定のデータの取り込みのみをサポートし、cookie はサポートしません。
 
 このチュートリアルでは、 [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) Platform ユーザーインターフェイスを使用して、履歴データとスケジュールされた同意データの両方をAdobe Experience Platformに取り込むためのソース接続。
 
@@ -36,7 +36,7 @@ ht-degree: 37%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| ホスト名 | 環境 [!DNL OneTrust Integration] からデータを取り込む必要があります。 | `https://uat.onetrust.com/` |
+| ホスト名 | 環境 [!DNL OneTrust Integration] からデータを取り込む必要があります。 | `app.onetrust.com` |
 | 認証テスト URL | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |  |
 | アクセストークン | に対応するアクセストークン [!DNL OneTrust Integration] アカウント | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
@@ -48,13 +48,13 @@ ht-degree: 37%
 >
 >この [!DNL OneTrust Integration] API の仕様は、データ取り込み用にAdobeと共有されています。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] workspace :Experience Platformで使用可能なソースのカタログ。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+以下を使用： *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-以下 *[!UICONTROL 同意と環境設定]* カテゴリ、選択 [!DNL OneTrust Integration]を選択し、 **[!UICONTROL データを追加]**.
+次に移動： [!UICONTROL 同意と環境設定] カテゴリ [!DNL OneTrust Integration] ソースカード。 最初に、 **[!UICONTROL データを追加]**.
 
-![カタログ](../../../../images/tutorials/create/onetrust/catalog.png)
+![Experience PlatformUI ソースカタログ。](../../../../images/tutorials/create/onetrust/catalog.png)
 
 この **[!UICONTROL OneTrust 統合アカウントに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -62,13 +62,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL OneTrust Integration] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![既存](../../../../images/tutorials/create/onetrust/existing.png)
+![ソースワークフローの既存のアカウント認証手順。](../../../../images/tutorials/create/onetrust/existing.png)
 
-### 新しいアカウント
+### 新規アカウント
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の認証情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![新規](../../../../images/tutorials/create/onetrust/new.png)
+![ソースワークフローの新しいアカウント認証手順。](../../../../images/tutorials/create/onetrust/new.png)
 
 ## 次の手順
 

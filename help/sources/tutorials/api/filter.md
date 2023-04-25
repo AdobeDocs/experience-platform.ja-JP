@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；フローサービス API；ソース；ソース
 title: フローサービス API を使用してソースの行レベルのデータをフィルタリングする
 description: このチュートリアルでは、フローサービス API を使用してソースレベルでデータをフィルタリングする手順を説明します
-source-git-commit: 122f6bda2fbcf72bf098b972ff7b081f4c5e3388
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 17%
@@ -13,7 +14,14 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->現在、ソースの行レベルのデータのフィルタリングは、 [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) および [[!DNL Snowflake]](../../connectors/databases/snowflake.md) ソース。
+>現在、行レベルのデータのフィルタリングのサポートは、次のソースでのみ利用できます。
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
+
 
 このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -103,7 +111,7 @@ curl -X GET \
 | `attributes.filterAtSource.columnNameEscapeChar` | 列のエスケープに使用する文字を決定します。 |
 | `attributes.filterAtSource.valueEscapeChar` | SQL クエリを書き込む際に値を取り囲む方法を決定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 比較演算子
 
@@ -118,7 +126,7 @@ curl -X GET \
 | `like` | で使用されていることによるフィルター `WHERE` 句を使用して、指定したパターンを検索します。 |
 | `in` | プロパティが指定した範囲内にあるかどうかでフィルターします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 取り込みのフィルター条件を指定
 

@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
-ht-degree: 65%
+source-wordcount: '2406'
+ht-degree: 63%
 
 ---
 
@@ -32,7 +32,15 @@ ht-degree: 65%
 
 ## Adobe Analytics でのソース接続の作成
 
-Platform UI で、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+>[!NOTE]
+>
+>実稼働用サンドボックスで Analytics ソースのデータフローを作成する場合、2 つのデータフローが作成されます。
+>
+>* 13 か月間にわたって履歴レポートスイートデータをデータレイクにバックフィルするデータフロー。 このデータフローは、バックフィルが完了すると終了します。
+>* ライブデータをデータレイクとに送信するデータフロー [!DNL Real-Time Customer Profile]. このデータフローは継続的に実行されます。
+
+
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。また、検索バーを使用して、表示されるソースを絞り込むこともできます。
 
