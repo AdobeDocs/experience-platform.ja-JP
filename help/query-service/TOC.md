@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 98%
    - [属性分析](use-cases/attribution-analysis.md)
    - [ボットフィルタリング](use-cases/bot-filtering.md)
    - [イベントのトレンドレポートの作成](use-cases/trended-report-of-events.md)
-   - [顧客のライフタイム値](use-cases/customer-lifetime-value.md)
+   - [顧客のライフタイムバリュー](use-cases/customer-lifetime-value.md)
    - [デシルベースの派生属性](use-cases/deciles-use-case.md)
    - [あいまい一致](use-cases/fuzzy-match.md)
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
