@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: XDM ユーザーインターフェイスで XDM フィールドを定義するExperience Platformについて説明します。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1414'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 UI で新しい XDM フィールドを定義するには、まず [!DNL Schema Editor]. 現在、 [!DNL Schema Library]を使用する場合、 [新しいスキーマの作成](../resources/schemas.md#create) または [編集する既存のスキーマを選択](../resources/schemas.md#edit).
 
-次に、 [!DNL Schema Editor] を開くと、フィールドを追加または編集するためのコントロールがキャンバスに表示されます。 これらのコントロールは、スキーマ名の横に表示され、選択したクラスまたはフィールドグループの下で定義されたオブジェクトタイプのフィールドも表示されます。
+次に、 [!DNL Schema Editor] を開くと、フィールドを追加するためのコントロールがキャンバスに表示されます。 これらのコントロールは、スキーマ名の横に表示され、選択したクラスまたはフィールドグループの下で定義されたオブジェクトタイプのフィールドも表示されます。
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
@@ -53,10 +53,10 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 | Field プロパティ | 説明 |
 | --- | --- |
 | [!UICONTROL フィールド名] | フィールドを説明する一意の名前。 スキーマを保存した後は、フィールドの名前を変更できません。 この値は、コード内のフィールドおよび他のダウンストリームアプリケーションでのフィールドの識別および参照に使用されます<br><br>名前は camelCase で書くのが理想的です。 英数字、ダッシュ、アンダースコアの各文字を使用できますが、 **次の場合は不可** まず、アンダースコアを使用します。<ul><li>**正しい**: `fieldName`</li><li>**許容可能：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**誤った**: `_fieldName`</li></ul> |
-| [!UICONTROL 表示名] | フィールドの表示名。 これは、スキーマエディターキャンバス内のフィールドを表すために使用される名前です。 |
+| [!UICONTROL 表示名] | フィールドの表示名。 これは、スキーマエディターキャンバス内のフィールドを表すために使用される名前です。 フィールド名は、 [表示名の切り替え](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL タイプ] | フィールドに格納するデータのタイプ。 このドロップダウンメニューから、 [標準スカラー型](../../schema/field-constraints.md) XDM またはマルチフィールドの 1 つでサポートされます。 [データタイプ](../resources/data-types.md) 以前に [!DNL Schema Registry].<br><br>また、 **[!UICONTROL 詳細タイプ検索]** 既存のデータ型を検索およびフィルタリングし、目的の型を見つけやすくする。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 オプションで人間が読み取れる **[!UICONTROL 説明]** をフィールドに追加して、フィールドの意図した使用例に関するより多くのコンテキストを提供します。
 
@@ -91,12 +91,12 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 | [!UICONTROL 形式] | [!UICONTROL 文字列] | 値が準拠する必要がある文字列に対して、事前定義済みの形式のリストから選択します。 使用可能な形式は次のとおりです。 <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子メール]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長] | [!UICONTROL 文字列] | 取得時に受け入れられる値の最小文字数。 |
 | [!UICONTROL 最大長] | [!UICONTROL 文字列] | 取得時に受け入れられる値のために、文字列に含める必要がある最大文字数です。 |
-| [!UICONTROL 最小値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点数の最小値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最小値]「 」制約は空白のままにする必要があります。 |
-| [!UICONTROL 最大値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最大値]「 」制約は空白のままにする必要があります。 |
-| [!UICONTROL 排他的な最小値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最小値]&quot; （非排他）制約は空白のままにする必要があります。 |
-| [!UICONTROL 排他的な最大値] | [!UICONTROL Double] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最大値]&quot; （非排他）制約は空白のままにする必要があります。 |
+| [!UICONTROL 最小値] | [!UICONTROL 倍精度浮動小数点] | 取り込み時に受け入れられる倍精度浮動小数点数の最小値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最小値]「 」制約は空白のままにする必要があります。 |
+| [!UICONTROL 最大値] | [!UICONTROL 倍精度浮動小数点] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合は、値が受け入れられます。 この制約を使用する場合、[!UICONTROL 排他的な最大値]「 」制約は空白のままにする必要があります。 |
+| [!UICONTROL 排他的な最小値] | [!UICONTROL 倍精度浮動小数点] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最小値]&quot; （非排他）制約は空白のままにする必要があります。 |
+| [!UICONTROL 排他的な最大値] | [!UICONTROL 倍精度浮動小数点] | 取り込み時に受け入れられる倍精度浮動小数点型 (Double) の最大値です。 取り込んだ値がここに入力した値と完全に一致する場合、値は拒否されます。 この制約を使用する場合、[!UICONTROL 最大値]&quot; （非排他）制約は空白のままにする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 特別なフィールドタイプ {#special}
 

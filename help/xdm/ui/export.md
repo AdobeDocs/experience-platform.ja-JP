@@ -4,9 +4,9 @@ title: UI での XDM スキーマの書き出し
 description: Adobe Experience Platformユーザーインターフェイスで、既存のスキーマを別のサンドボックスまたは組織に書き出す方法を説明します。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ ht-degree: 0%
 
 Platform UI では XDM リソースを書き出すことができますが、ワークフローを完了するには、スキーマレジストリ API を使用して、これらのリソースを他のサンドボックスまたは組織に読み込む必要があります。 に関するガイドを参照してください。 [スキーマレジストリ API の概要](../api/getting-started.md) を参照してください。
 
-## 書き出しペイロードの生成
+## 書き出しペイロードの生成 {#generate-export-payload}
 
-Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 内 [!UICONTROL スキーマ] ワークスペースで、エクスポートするスキーマを探し、 [!DNL Schema Editor].
+Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 内 [!UICONTROL スキーマ] ワークスペースで、書き出すスキーマの行を選択して、右側のサイドバーにスキーマの詳細を表示します。
 
 >[!TIP]
 >
 >詳しくは、 [XDM リソースの調査](./explore.md) を参照してください。
 
-スキーマを開いたら、 **[!UICONTROL JSON をコピー]** アイコン (![コピーアイコン](../images/ui/export/icon.png)) をクリックします。
+次に、 **[!UICONTROL JSON をコピー]** アイコン (![コピーアイコン](../images/ui/export/icon.png)) を使用可能なオプションから削除します。
 
-![](../images/ui/export/copy-json.png)
+![スキーマ行と [!UICONTROL JSON にコピー] ハイライト表示されました。](../images/ui/export/copy-json.png)
 
 これにより、スキーマ構造に基づいて生成された JSON ペイロードがクリップボードにコピーされます。 の[!DNL Loyalty Members]」スキーマが上に表示されている場合、次の JSON が生成されます。
 

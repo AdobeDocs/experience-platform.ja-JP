@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 3%
 
 ---
@@ -57,6 +57,18 @@ ht-degree: 3%
 
 スキーマを選択すると、 [!DNL Schema Editor] が表示され、スキーマの構造がキャンバスに表示されます。 次の操作を実行できます。 [フィールドグループを追加](#add-field-groups) スキーマ ( または [個々のフィールドを追加](#add-individual-fields) これらのグループから ) [フィールドの表示名を編集](#display-names)または [既存のカスタムフィールドグループの編集](./field-groups.md#edit) スキーマが適用する場合。
 
+## 表示名の切り替え {#display-name-toggle}
+
+スキーマエディターでは、利便性を考慮して、元のフィールド名と、人間が読み取り可能な表示名を切り替えることができます。 この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 切り替えは、スキーマエディタービューの右上にあります。
+
+>[!NOTE]
+>
+>フィールド名から表示名への変更は、純粋に美容なもので、下流のリソースは変更されません。
+
+![を使用したスキーマエディター [!UICONTROL フィールドの表示名を表示] ハイライト表示されました。](../../images/ui/resources/schemas/display-name-toggle.png)
+
+標準フィールドグループの表示名はシステムで生成されますが、カスタマイズは可能です ( [表示名](#display-names) 」セクションに入力します。 表示名は、マッピングやデータセットプレビューを含む複数の UI ビューに反映されます。 デフォルト設定はオフで、フィールド名が元の値で表示されます。
+
 ## スキーマへのフィールドグループの追加 {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ ht-degree: 3%
 
 以下の [!DNL Schema Editor]に値を入力する場合は、フィールドグループを使用してスキーマにフィールドを追加できます。 開始するには、 **[!UICONTROL 追加]** 次の **[!UICONTROL フィールドグループ]** をクリックします。
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![スキーマエディターと [!UICONTROL 追加] から [!UICONTROL フィールドグループ] セクションがハイライト表示されています。](../../images/ui/resources/schemas/add-field-group-button.png)
 
 ダイアログが開き、スキーマ用に選択できるフィールドグループのリストが表示されます。 フィールドグループは 1 つのクラスとのみ互換性があるので、スキーマの選択されたクラスに関連付けられているフィールドグループのみが表示されます。 デフォルトでは、リストに表示されるフィールドグループは、組織内での使用頻度に基づいて並べ替えられます。
 
