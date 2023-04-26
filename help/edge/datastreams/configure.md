@@ -1,11 +1,11 @@
 ---
 title: データストリームの設定
-description: クライアントサイドの Experience Platform SDK 統合を、アドビ製品およびサードパーティの宛先と接続します。
+description: クライアント側 Web SDK の統合を、他のAdobe製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+source-git-commit: 611b80f2444ea86ef008f761c5d46976c55b864d
 workflow-type: tm+mt
-source-wordcount: '1658'
-ht-degree: 98%
+source-wordcount: '2020'
+ht-degree: 80%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 ![データ収集 UI の「データストリーム」タブ](../assets/datastreams/configure/datastreams-tab.png)
 
-「[!UICONTROL データストリーム]」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
+「**[!UICONTROL データストリーム]**」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
 
 特定のデータストリームの「その他」アイコン（**...**）を選択して、その他のオプションを表示します。データストリームの[基本設定](#configure)を更新するには&#x200B;**[!UICONTROL 編集]**&#x200B;を選択し、データストリームを削除するには&#x200B;**[!UICONTROL 削除]**&#x200B;を選択します。
 
@@ -43,7 +43,8 @@ Experience Platform で使用するためにこのデータストリームを設
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて地域検索を行うかどうかを決定します。 デフォルト設定 **[!UICONTROL なし]** を指定すると、地域検索が無効になり、 **[!UICONTROL 市区町村]** を設定すると、小数点以下 2 桁までの GPS 座標が表示されます。 |
+| [!UICONTROL ジオ位置情報] | ユーザーの IP アドレスに基づいて位置情報の検索を行うかどうかを指定します。 デフォルト設定 **[!UICONTROL なし]** ジオロケーションの検索を無効にし、 **[!UICONTROL 市区町村]** を設定すると、小数点以下 2 桁までの GPS 座標が表示されます。 位置情報は [!UICONTROL IP Obfuscation（IP の不明化）] また、  [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 |
+| [!UICONTROL IP Obfuscation（IP の不明化）] | データストリームに適用する IP 難読化のタイプを示します。 顧客 IP に基づく処理は、IP の不明化設定の影響を受けます。 これには、Experience Cloudストリームからデータを受け取るすべてのデータサービスが含まれます。 <p>選択可能なオプション：</p> <ul><li>**[!UICONTROL なし]**:IP の不明化を無効にします。 完全なユーザー IP アドレスは、データストリームを介して送信されます。</li><li>**[!UICONTROL 部分的]**:IPv4 アドレスの場合、はユーザー IP アドレスの最後のオクテットを難読化します。 IPv6 アドレスの場合、はアドレスの最後の 80 ビットを不明化します。 <p>例：</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完全]**:IP アドレス全体を難読化します。 <p>例：</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `::/128`</li></ul></li></ul> 他のAdobe製品に対する IP の不明化の影響： <ul><li>**Adobe Target**:データストリームレベル [!UICONTROL IP Obfuscation（IP の不明化）] の設定は、Adobe Targetで設定される IP の難読化オプションよりも優先されます。 例えば、データストリームレベルの [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 完全]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 最終オクテットの難読化]**&#x200B;を指定した場合、Adobe Targetは完全に不明化された IP を受け取ります。 詳しくは、 Adobe Targetのドキュメントを参照してください。 [IP Obfuscation（IP の不明化）](https://developer.adobe.com/target/before-implement/privacy/privacy/) および [位置情報](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) を参照してください。</li><li>**Audience Manager**:データストリームレベルの IP 難読化設定は、Audience Managerで設定された IP 難読化オプションよりも優先され、すべての IP アドレスに適用されます。 Audience Managerが行った位置情報参照は、データストリームレベルの影響を受けます [!UICONTROL IP Obfuscation（IP の不明化）] オプション。 完全に不明化された IP に基づく、Audience Managerの位置情報参照は、不明な地域になり、結果として得られた位置情報データに基づくセグメントは認識されません。 次のドキュメントのAudience Managerを参照してください： [IP Obfuscation（IP の不明化）](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) を参照してください。</li><li>**Adobe Analytics**:Adobe Analyticsに送信されたデータは、データストリームレベルの影響を受けません [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 Adobe Analyticsは現在、不明化されていない IP アドレスを受け取ります。 不明化された IP アドレスを Analytics が受け取るには、Adobe Analyticsで、個別に IP の不明化を設定する必要があります。 この動作は、今後のリリースで更新される予定です。 Adobe Analytics [ドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) を参照してください。</li></ul> |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
 | [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://aep-sdks.gitbook.io/docs/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
