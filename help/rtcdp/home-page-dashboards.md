@@ -2,20 +2,15 @@
 keywords: 指標の概要；rtcdp 指標の概要
 title: Real-time Customer Data Platformのホームページとダッシュボード
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
-badge: "ベータ"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
+source-git-commit: 8ea657e379248616d3140bc0a7b0c25a918bc857
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '802'
 ht-degree: 17%
 
 ---
 
 # [!DNL Real-Time Customer Data Platform] ホームページ
-
->[!NOTE]
->
->この [!DNL Real-Time Customer Data Platform] ホームページはベータ版です。 機能とドキュメントは変更される場合があります。
 
 Adobe Real-time Customer Data Platform(Real-Time CDP) ホームページは、Real-Time CDPにログインした後に表示される最初のページです。
 
