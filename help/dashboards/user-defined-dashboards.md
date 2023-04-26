@@ -2,10 +2,10 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 5%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
@@ -112,6 +112,20 @@ Widget Composer のワークスペースが表示されます。 次に、 **[!U
 
 ![ウィジェットから値をフィルタリングするためのフィルターダイアログ。](./images/user-defined-dashboards/filter-dialog.png)
 
+#### 履歴データを除外 {#filter-historical-data}
+
+ウィジェットで生成されたインサイトから履歴データを除外するには、 `date_key` 属性をフィルターとして使用し、 **[!UICONTROL 最近の日付]** 続いて **[!UICONTROL 適用]**. このフィルターを使用すると、インサイトの取得に使用されるデータが最新のシステムスナップショットから取得されます。
+
+![この [!UICONTROL フィルター：date_key] ～との対話 [!UICONTROL 最近の日付] および [!UICONTROL 適用] ハイライト表示されました。](./images/user-defined-dashboards/recent-date.png)
+
+また、カスタムの期間を作成して、データをフィルタリングすることもできます。 選択 **[!UICONTROL 日付を選択]** 使用可能な日付のリストでダイアログを拡張する場合。 以下を使用： **[!UICONTROL すべて選択]** チェックボックスをオンにしてすべての利用可能なオプションを有効または無効にするか、1 日ごとに個別にチェックボックスをオンにします。 最後に、 **[!UICONTROL 適用]** をクリックして選択を確定します。
+
+>[!NOTE]
+>
+>この `date_key` 属性が既にフィルターとして追加されている場合は、省略記号の後に **[!UICONTROL 編集]** をドロップダウンオプションから選択し、フィルター期間を変更します。
+
+![この [!UICONTROL フィルター：date_key] 個々の日のチェックボックスがオンとオフの両方になっているダイアログ。](./images/user-defined-dashboards/select-dates.png)
+
 ### ウィジェットのプロパティ
 
 プロパティアイコン (![プロパティアイコン。](./images/user-defined-dashboards/properties-icon.png)) を右側のパネルでクリックして、プロパティパネルを開きます。 内 [!UICONTROL プロパティ] パネルで、 [!UICONTROL ウィジェットのタイトル] テキストフィールド。
@@ -135,6 +149,22 @@ Widget Composer に保存すると、ウィジェットがダッシュボード�
 ![カスタムウィジェットと保存ボタンがハイライト表示された、ユーザ定義のダッシュボード。](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Adobe Real-time Customer Data Platform Insights ダッシュボードの各クエリが効率的に実行するのに十分なリソースを確保するために、API は、各クエリに同時実行スロットを割り当てて、リソースの使用状況を追跡します。 システムは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは、同時実行スロットに基づいてキューに入れられ、十分な同時実行スロットが使用可能になるまでキューで待ちます。
+
+### ウィジェットを複製
+
+ウィジェットを作成したら、ウィジェット全体を複製してその属性をカスタマイズすることで、最初から始めなくても一意のウィジェットを作成できます。 ウィジェットを複製するには、まずダッシュボードの在庫に移動します。 次に、在庫リストからダッシュボード名を選択します。 カスタマイズしたダッシュボードが表示されます。
+
+![ダッシュボードとカスタムダッシュボード名がハイライトされた Platform UI。](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+鉛筆アイコン (![鉛筆アイコン。](./images/user-defined-dashboards/edit-icon.png)) をクリックして、カスタムダッシュボードの右上から編集モードに入ります。
+
+![鉛筆アイコンがハイライト表示されたカスタムダッシュボード。](./images/user-defined-dashboards/edit-mode.png)
+
+次に、コピーするウィジェットの右上にある省略記号を選択し、その後に **[!UICONTROL 複製]** を選択します。
+
+![省略記号と複製ウィジェットがハイライト表示された、ユーザー定義のダッシュボード内のウィジェット。](./images/user-defined-dashboards/duplicate.png)
+
+ユーザー定義のダッシュボードに重複したウィジェットが表示されます。 新しいウィジェットの省略記号を選択し、その後に **[!UICONTROL 編集]**、をクリックして、新しいウィジェットをカスタマイズします。
 
 ## 次の手順とその他のリソース
 
