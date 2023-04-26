@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 95%
+source-wordcount: '1654'
+ht-degree: 93%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 95%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+
+## バージョン2.17.0 - 2023 年 4 月 25 日
+
+**新機能**
+
+* データストリーム設定の上書きのサポートが追加されました。
+* 廃止の通知を `datasetId` オプションを `sendEvent` コマンドを使用します。
+
+**修正点および改善点**
+
+* Safari でスクロールすると datastream セレクターが閉じる問題を修正しました。
 
 ## バージョン2.16.1 - 2023 年 4 月 14 日
 
