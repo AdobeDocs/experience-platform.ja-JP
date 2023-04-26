@@ -2,10 +2,11 @@
 title: （API）Oracle Eloqua 接続
 description: (API)Oracleの Eloqua の宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてOracleEloqua 内でアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
+exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
+source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 38%
+source-wordcount: '2125'
+ht-degree: 30%
 
 ---
 
@@ -34,14 +35,20 @@ ht-degree: 38%
 
 Platform からにデータを書き出すには、以下を実行します。 [!DNL Oracle Eloqua] アカウントに [!DNL Oracle Eloqua] アカウント
 
+さらに、少なくとも *&quot;上級ユーザー — マーケティング権限&quot;* の [!DNL Oracle Eloqua] インスタンス。 詳しくは、 *&quot;セキュリティグループ&quot;* セクション [セキュアなユーザーアクセス](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) ガイダンスのページ プログラムを使用するには、宛先でアクセスが必要です [ベース URL を決定する](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) 呼び出し時 [!DNL Oracle Eloqua] API
+
 #### [!DNL Oracle Eloqua] 資格情報の収集 {#gather-credentials}
 
 [!DNL Oracle Eloqua] 宛先に対して認証を行う前に、以下の項目をメモしておきます。
 
 | 資格情報 | 説明 |
 | --- | --- |
+| `Company Name` | に関連付けられている会社名 [!DNL Oracle Eloqua] アカウント <br>後で `Company Name` および [!DNL Oracle Eloqua] `Username` を連結された文字列として使用し、 **[!UICONTROL ユーザー名]** when [宛先への認証](#authenticate). |
 | `Username` | ユーザー名 [!DNL Oracle Eloqua] アカウント |
 | `Password` | ユーザーのパスワード [!DNL Oracle Eloqua] アカウント |
+| `Pod` | [!DNL Oracle Eloqua] は複数のデータセンターをサポートし、それぞれが一意のドメイン名を持ちます。 [!DNL Oracle Eloqua] これらを「ポッド」と呼び、現在、p01、p02、p03、p04、p06、p07、p08 の合計が 7 つあります。 現在使用している POD を取得するには、にログインします。 [!DNL Oracle Eloqua] をクリックし、正常にログインした後、ブラウザーに URL を書き留めます。 例えば、ブラウザーの URL が `secure.p01.eloqua.com` あなたの `pod` が `p01`. 詳しくは、 [POD の決定](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) ページを参照してください。 |
+
+詳しくは、 [へのログイン [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) 指導のために
 
 ## ガードレール {#guardrails}
 
@@ -88,9 +95,14 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 ### 宛先に対する認証 {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_companyname_username"
+>title="会社名\ユーザー名"
+>abstract="フォームのOracleEloqua からの会社名とユーザー名を、このフィールドに入力します `{COMPANY_NAME}\{USERNAME}`"
+
 以下の必須のフィールドに入力します。詳しくは、[ [!DNL Oracle Eloqua]  資格情報の収集](#gather-credentials)の節を参照してください。
 * **[!UICONTROL パスワード]**:ユーザーのパスワード [!DNL Oracle Eloqua] アカウント
-* **[!UICONTROL ユーザー名]**:ユーザー名 [!DNL Oracle Eloqua] アカウント
+* **[!UICONTROL ユーザー名]**:連結された文字列で、 [!DNL Oracle Eloqua] 会社名および [!DNL Oracle Eloqua] ユーザー名。<br>連結された値は、 `{COMPANY_NAME}\{USERNAME}`.<br> なお、中括弧やスペースは使用せず、 `\`. <br>例えば、 [!DNL Oracle Eloqua] 会社名： `MyCompany` および [!DNL Oracle Eloqua] ユーザー名： `Username`( **[!UICONTROL ユーザー名]** フィールドが `MyCompany\Username`.
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
 ![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -99,11 +111,18 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 ### 宛先の詳細を入力 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_pod"
+>title="ポッド"
+>abstract="ポッド番号を見つけるには、OracleEloqua にログインします。 正常にログインした後、ブラウザーに URL を記録します。 "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracleナレッジベース — ポッド番号を見つける"
+
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 ![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL ポッド]**:取得するには `pod` ログイン先 [!DNL Oracle Eloqua] をクリックし、正常にログインした後、ブラウザーに URL を書き留めます。 例えば、ブラウザーの URL が `secure.p01.eloqua.com` の `pod` 選択する必要がある値は次のとおりです。 `p01`. 詳しくは、 [収集 [!DNL Oracle Eloqua] 資格情報](#gather-credentials) の節を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -193,3 +212,18 @@ XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドは、次の手
 
 * [OracleEloqua マーケティング自動化](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [oracleEloquaMarketing Cloudサービス用 REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+
+### 変更ログ
+
+この節では、この宛先コネクタに対する機能の概要と重要なドキュメントの更新について説明します。
+
++++ 変更ログを表示
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2023年4月 | ドキュメントの更新 | <ul><li>更新： [使用例](#use-cases) の節を参照し、この宛先を使用した方がメリットが得られるタイミングの例をより明確に示します。</li> <li>更新： [マッピング](#mapping-considerations-example) 節に、必須とオプションの両方のマッピングの明確な例を示します。</li> <li>更新： [宛先に接続](#connect) の節に、 **[!UICONTROL ユーザー名]** を使用するフィールド [!DNL Oracle Eloqua] 会社名および [!DNL Oracle Eloqua] ユーザー名。 (PLATIR-28343)</li><li>更新： [収集 [!DNL Oracle Eloqua] 資格情報](#gather-credentials) そして [宛先の詳細を入力](#destination-details) ～に関するガイダンスを含む節 [!DNL Oracle Eloqua] **[!UICONTROL ポッド]** 選択。 この *&quot;Pod&quot;* の値は、API 呼び出しのベース URL を構築するために宛先で使用されます。 この [[!DNL Oracle Eloqua] 前提条件](#prerequisites-destination) の節も更新され、割り当てに関するガイダンスが追加されました。 *&quot;上級ユーザー — マーケティング権限&quot;* 必要に応じて *&quot;セキュリティグループ&quot;* の [!DNL Oracle Eloqua] インスタンス。</li></ul> |
+| 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
+
+{style="table-layout:auto"}
+
++++
