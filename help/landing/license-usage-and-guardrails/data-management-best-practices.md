@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のあるトピック;データ管
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
-ht-degree: 81%
+source-wordcount: '2169'
+ht-degree: 79%
 
 ---
 
@@ -122,8 +122,6 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 {style="table-layout:auto"}
 
-
-
 #### プロファイルストア構成レポート
 
 プロファイルストアの構成を理解するのに役立つレポートが多数用意されています。 これらのレポートは、Experience Event の有効期限を設定する方法と場所に関する十分な情報に基づいた決定をおこない、ライセンスの使用状況を最適化するのに役立ちます。
@@ -132,6 +130,10 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * **Identity Overlap Report API**：アドレス可能なオーディエンスに最も貢献する ID 名前空間を公開します。詳しくは、[ID 重複レポートの生成](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report)に関するチュートリアルを参照してください。
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### 偽名プロファイルデータの有効期限 {#pseudonymous-profile-expirations}
+
+この機能を使用すると、古くなった偽名プロファイルをプロファイルストアから自動的に削除できます。 この機能の詳細については、 [偽名プロファイルのデータ有効期限の概要](../../profile/pseudonymous-profiles.md).
 
 #### エクスペリエンスイベントの有効期限 {#event-expirations}
 
@@ -144,7 +146,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * [ライセンス使用状況ダッシュボード](../../dashboards/guides/license-usage.md)を使用して、顧客の使用状況のトレンドを追跡および監視する。これにより、発生する可能性のある超過分に事前に対処できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要なイベントを特定して、[取り込みフィルター](#ingestion-filters)を設定する。これにより、ユースケースに必要な重要なイベントのみを送信できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要な[プロファイルのデータセットのみを有効](#ingestion-filters)にしていることを確認する。
-* の設定 [エクスペリエンスイベントの有効期限](#event-expirations) を使用します。
+* 設定 [エクスペリエンスイベントの有効期限](#event-expirations) および [偽名プロファイルデータの有効期限](#pseudonymous-profile-expirations) を使用します。
 * 定期的に [プロファイル構成レポート](#profile-store-composition-reports) を参照してください。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
 
 ## 機能の概要と可用性 {#feature-summary}
