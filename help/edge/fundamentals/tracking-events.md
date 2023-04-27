@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
+source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 32%
+source-wordcount: '1194'
+ht-degree: 31%
 
 ---
 
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-この間に時間がかかる場合があります `sendEvent` コマンドが実行され、データがサーバーに送信されたとき（例えば、Web SDK ライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）に実行されます。 の任意の部分を変更する場合 `xdm` オブジェクトの実行後 `sendEvent` コマンドを使用する場合は、 `xdm` object _前_ の実行 `sendEvent` コマンドを使用します。 例：
+この間に時間がかかる場合があります `sendEvent` コマンドが実行され、データがサーバーに送信されたとき（例えば、Web SDK ライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）に実行されます。 の任意の部分を変更する場合 `xdm` オブジェクトの実行後 `sendEvent` コマンドを使用する場合は、 `xdm` object _前_ の実行 `sendEvent` コマンドを使用します。 以下に例を示します。
 
 ```javascript
 var clone = function(value) {
@@ -138,7 +138,12 @@ alloy("sendEvent", {
 
 ### データセット ID の上書き
 
+>[!IMPORTANT]
+>
+>この `datasetId` オプション `sendEvent` コマンドは廃止されました。 データセット ID を上書きするには、 [設定の上書き](../datastreams/overrides.md) 代わりに、
+
 場合によっては、設定 UI で設定されたデータセット以外のデータセットにイベントを送信する必要があります。 そのためには、 `datasetId` オプションを `sendEvent` コマンド：
+
 
 
 ```javascript

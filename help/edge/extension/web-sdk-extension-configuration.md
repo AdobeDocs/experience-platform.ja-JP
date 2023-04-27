@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能の設定
 description: UI でのAdobe Experience Platform Web SDK タグ拡張機能の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1184'
 ht-degree: 6%
 
 ---
@@ -93,7 +93,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 ### [!UICONTROL コールバック関数]
 
-拡張機能で提供されるコールバック関数は、 [`onBeforeEventSend` 関数](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) ライブラリ内に保存されます。 この関数を使用すると、イベントがAdobe Edge Network に送信される前に、イベントをグローバルに変更できます。 この関数の使用方法の詳細については、を参照してください。 [ここ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+拡張機能で提供されるコールバック関数は、 [`onBeforeEventSend` 関数](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja) ライブラリ内に保存されます。 この関数を使用すると、イベントがAdobe Edge Network に送信される前に、イベントをグローバルに変更できます。 この関数の使用方法の詳細については、を参照してください。 [ここ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL クリックデータコレクション]
 
@@ -102,6 +102,23 @@ SDK は、自動的にリンククリック情報を収集できます。 デフ
 ### [!UICONTROL 自動的に収集されたコンテキストデータ]
 
 デフォルトでは、SDK は、デバイス、Web、環境、場所コンテキストに関する特定のコンテキストデータを収集します。 収集された情報Adobeの一覧を表示するには、次の URL を見つけます [ここ](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). このデータを収集しない場合や、特定のカテゴリのデータのみを収集する場合は、これらのオプションを変更できます。
+
+## [!UICONTROL データストリーム設定の上書き]
+
+データストリームのオーバーライドを使用すると、Web SDK を介して Edge ネットワークに渡されるデータストリームの追加設定を定義できます。
+
+これにより、新しいデータストリームを作成したり、既存の設定を変更したりすることなく、デフォルトのデータストリームとは異なるトリガーの動作を設定できます。
+
+データストリーム設定の上書きは、次の 2 つの手順で構成されます。
+
+1. まず、データストリーム設定の上書きを [datastream 設定ページ](../datastreams/configure.md).
+2. 次に、Web SDK コマンドを使用するか、Web SDK タグ拡張を使用して、オーバーライドを Edge Network に送信する必要があります。
+
+データストリームを参照 [設定の上書きドキュメント](../datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
+
+オーバーライドを Web SDK コマンドに渡す代わりに、次に示すタグ拡張画面でオーバーライドを設定できます。
+
+![Web SDK タグ拡張ページのデータストリーム設定を示す画像が上書きされます。](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL 詳細設定]
 
