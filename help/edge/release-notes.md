@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 96%
@@ -20,7 +20,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-* データストリーム設定の上書きのサポートが追加されました。
+* のサポートを追加しました。 [datastream 設定の上書き](datastreams/overrides.md).
 
 ## バージョン2.15.0 - 2023 年 3 月 30 日
 
