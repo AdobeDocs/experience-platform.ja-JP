@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1372'
-ht-degree: 39%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| ユーザー定義ダッシュボード | 次の操作を実行できます。 **履歴データをフィルター** ウィジェットのインサイトから、最近のデータまたはカスタムの分析期間を使用します。<br>また、 **既存のウィジェットを複製**. 複製をカスタマイズし、その属性を編集することで、新しい一意のウィジェットを作成する際に、最初から再起動するのを防ぐことができます。 |
+| ユーザー定義ダッシュボード | 次の操作を実行できます。 **履歴データをフィルター** ウィジェットのインサイトから、最近のデータまたはカスタムの分析期間を使用します。 詳しくは、 [ユーザー定義ダッシュボードガイド](../../dashboards/user-defined-dashboards.md#filter-historical-data) を参照してください。<br>また、 **既存のウィジェットを複製**. 複製をカスタマイズし、その属性を編集することで、新しい一意のウィジェットを作成する際に、最初から再起動するのを防ぐことができます。 詳しくは、 [ウィジェット複製ガイド](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 表示名の切り替え | スキーマエディターで、元のフィールド名と、人間が読み取り可能な表示名を切り替えることができるようになりました。 この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 標準フィールドグループの表示名はシステムで生成されますが、必要に応じて UI を使用してカスタマイズすることもできます。 |
+| 表示名の切り替え | スキーマエディターで、元のフィールド名と、人間が読み取り可能な表示名を切り替えることができるようになりました。<br>![表示名切り替えがハイライト表示されたスキーマエディター。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "スキーマエディターの表示名の切り替え"){width="100" zoomable="yes"}<br>この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 標準フィールドグループの表示名はシステムで生成されますが、必要に応じて UI を使用してカスタマイズすることもできます。 詳しくは、 [表示名の切り替えドキュメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) を参照してください。 |
 
 {style="table-layout:auto"}
 
