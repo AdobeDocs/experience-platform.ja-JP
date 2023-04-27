@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
+source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 93%
+source-wordcount: '1663'
+ht-degree: 92%
 
 ---
 
@@ -18,8 +18,10 @@ ht-degree: 93%
 
 **新機能**
 
+* Adobe Experience Platform Web SDK のバージョン2.16.0が含まれています。
 * のサポートを追加しました。 [datastream 設定の上書き](../datastreams/overrides.md).
 * 廃止の通知を `datasetId` オプションを `sendEvent` コマンドを使用します。
+
 
 **修正点および改善点**
 
