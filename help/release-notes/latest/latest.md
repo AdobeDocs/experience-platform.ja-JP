@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 42%
+source-wordcount: '1296'
+ht-degree: 41%
 
 ---
 
@@ -82,7 +82,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 機能 | 説明 |
 | ----------- | ----------- |
 | のデータフロー監視 [!DNL Custom Personalization] および [!DNL Adobe Commerce] 宛先 | <p> これで、 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) そして [属性を含むカスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。 </p> <p>![Adobe Commerce画像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce指標"){width="100" zoomable="yes"}</p>  詳しくは、 [宛先ワークスペースでのデータフローの監視](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) を参照してください。 |
-| 新規 **[!UICONTROL セグメント名にセグメント ID を追加]** フィールド [!DNL Google Ad Manager] および [!DNL Google Ad Manager 360] 宛先 | これで、セグメント名を [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) および [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 次のように、セグメントからExperience PlatformID を含めます。 `Segment Name (Segment ID)`. |
+| 新規 **[!UICONTROL セグメント名にセグメント ID を追加]** フィールド [!DNL Google Ad Manager] および [!DNL Google Ad Manager 360] 宛先 | <p>これで、セグメント名を [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) および [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 次のように、セグメントからExperience PlatformID を含めます。 `Segment Name (Segment ID)`.</p><p>![セグメント ID 画像を追加](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新しい「セグメント名フィールドにセグメント ID を追加」フィールド "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 **修正および機能強化** {#destinations-fixes-and-enhancements}
 
 - 問題を修正しました： **除外された ID** ファイルベースの宛先エクスポートのレポート指標。 お客様は、アクティブ化されたエクスポートから期待どおりに書き出されたすべての ID を受け取っていました。 ただし、 **除外された ID** UI のレポート指標で、書き出すとは思われない ID が正しくカウントされないため、除外された ID が誤って多数表示されていました。 (PLAT-149774)
-- アクティベーションワークフローのスケジュール設定手順の問題を修正しました。 マッピング ID が必要な宛先の場合、既存の宛先接続に追加されたセグメントのマッピング ID を追加できませんでした。 (PLAT-148808)
+- 問題を修正しました： **スケジュール** アクティベーションワークフローのステップ。 マッピング ID が必要な宛先の場合、既存の宛先接続に追加されたセグメントのマッピング ID を追加できませんでした。 (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
