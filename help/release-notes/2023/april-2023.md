@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1662'
 ht-degree: 36%
 
 ---
@@ -110,6 +110,26 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 機能 | 説明 |
 | --- | --- |
 | 表示名の切り替え | スキーマエディターで、元のフィールド名と、人間が読み取り可能な表示名を切り替えることができるようになりました。<br>![表示名切り替えがハイライト表示されたスキーマエディター。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "スキーマエディターの表示名の切り替え"){width="100" zoomable="yes"}<br>この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 標準フィールドグループの表示名はシステムで生成されますが、必要に応じて UI を使用してカスタマイズすることもできます。 詳しくは、 [表示名の切り替えドキュメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) を参照してください。 |
+
+{style="table-layout:auto"}
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| スキーマ | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドを含む、Target 分類データセットの新しい XDM スキーマ。 |
+
+{style="table-layout:auto"}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | [[!UICONTROL Adobe統合プロファイルサービスアカウント和集合拡張機能]](https://github.com/adobe/xdm/pull/1696/files) | リアルタイム顧客プロファイルのアカウント拡張フィールドグループが追加され、ユーザーがアカウント和集合でセグメントメンバーシップを追加できるようになりました。 |
+| スキーマ | [[!UICONTROL 計算済み属性システムスキーマ]](https://github.com/adobe/xdm/pull/1696/files) | リアルタイム顧客プロファイルで使用される「計算済み属性」フィールドグループが、システム読み取り専用のグローバルスキーマに更新されました。 |
+| フィールドグループ | 複数 | 複数のイベントを [[!UICONTROL 時系列スキーマ]](https://github.com/adobe/xdm/pull/1718/files). |
+| フィールドグループ | プロファイルの忠誠度の詳細 | [タイトルを修正しました](https://github.com/adobe/xdm/pull/1717/files) 対象 `xdm:upgradeDate` を「プログラム名」から「アップグレード日」に変更しました。 |
+| フィールドグループ | 複数 | 次の複数のフィールド： [[!UICONTROL 決定項目]](https://github.com/adobe/xdm/pull/1714/files) が更新され、ネストされた二重の階層が削除されました。 |
 
 {style="table-layout:auto"}
 
