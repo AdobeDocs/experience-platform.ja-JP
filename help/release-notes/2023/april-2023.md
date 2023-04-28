@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1422'
+ht-degree: 38%
 
 ---
 
@@ -122,6 +122,8 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 機能 | 説明 |
 | ------- | ----------- |
 | 偽名プロファイルデータの有効期限 | 偽名プロファイルデータの有効期限が一般に利用できるようになりました。 このリリースでは、有効にした後も、古い偽名プロファイルをExperience Platformインスタンスから継続的に削除します。 この機能と偽名プロファイルの詳細については、 [偽名プロファイルデータ有効期限ガイド](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## ソース {#sources}
 
