@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 38%
+source-wordcount: '1491'
+ht-degree: 36%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | --- | --- |
 | データストリームの IP アドレスの難読化 | 部分的または完全なデータストリームレベルの IP 難読化オプションを [データストリーム設定 UI](../../edge/datastreams/configure.md). <br><br>データストリームレベルの IP 難読化の設定は、Adobe TargetおよびAudience Managerで設定された IP 難読化よりも優先されます。 <br><br>Adobe Analyticsに送信されたデータは、データストリームレベルの影響を受けません [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 Adobe Analyticsは現在、不明化されていない IP アドレスを受け取ります。 不明化された IP アドレスを Analytics が受け取るには、Adobe Analyticsで、個別に IP の不明化を設定する必要があります。 この動作は、今後のリリースで更新される予定です。<br><br> IP の難読化と設定方法の詳細については、 [datastream 設定ドキュメント](../../edge/datastreams/configure.md#advanced-options). |
 | [データストリーム設定の上書き](../../edge/datastreams/overrides.md) | データストリームの追加の設定オプションを定義できるようになりました。これを使用して、イベントデータセット、Target プロパティトークン、ID 同期コンテナ、Analytics レポートスイートなど、特定の設定を上書きできます。 <br><br>データストリーム設定の上書きは、次の 2 つの手順で行います。 <ol><li>まず、データストリーム設定の上書きを [datastream 設定ページ](../../edge/datastreams/configure.md).</li><li>次に、Web SDK コマンドを使用するか、Web SDK を使用して、オーバーライドを Edge ネットワークに送信する必要があります [タグ拡張](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT 秘密鍵 | この [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) では、AdobeおよびGoogleサービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。 |
+| [!DNL Pinterest Conversions API] 拡張機能 | この [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、 [!DNL Pinterest] を使用して、サーバー側のイベントの形式で [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 

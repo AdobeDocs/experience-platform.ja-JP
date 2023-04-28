@@ -2,14 +2,22 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 95%
+source-wordcount: '798'
+ht-degree: 86%
 
 ---
 
 # タグとイベント転送のリリースノート
+
+## 2023年4月26日（PT）
+
+* **OAuth JWT 秘密鍵**:この [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) では、AdobeおよびGoogleサービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。
+
+次の新しい拡張機能がリリースされました。
+
+* **[!DNL Pinterest Conversions API]拡張**:この [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、 [!DNL Pinterest] を使用して、サーバー側のイベントの形式で [!DNL Pinterest Conversions API].
 
 ## 2023年3月29日（PT）
 
