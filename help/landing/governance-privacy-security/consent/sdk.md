@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK を使用した顧客の同意データの処理
 description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 2%
+source-wordcount: '1349'
+ht-degree: 3%
 
 ---
 
@@ -45,7 +45,6 @@ SDK がデータをExperience Platformに送信するには、まずデータス
 | データストリームフィールド | 値 |
 | --- | --- |
 | [!UICONTROL サンドボックス] | プラットフォームの名前 [サンドボックス](../../../sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
-| [!UICONTROL ストリーミングインレット] | 有効なストリーミングExperience Platform。 に関するチュートリアルを参照してください。 [ストリーミング接続の作成](../../../ingestion/tutorials/create-streaming-connection-ui.md) 既存のストリーミングインレットがない場合。 |
 | [!UICONTROL イベントデータセット] | An [!DNL XDM ExperienceEvent] SDK を使用してにイベントデータを送信する予定のデータセット。 Platform データストリームを作成するにはイベントデータセットを提供する必要がありますが、イベントを介して送信される同意データは、ダウンストリーム実施ワークフローでは受け入れられないことに注意してください。 |
 | [!UICONTROL プロファイルデータセット] | この [!DNL Profile]作成した顧客の同意フィールドを含む有効なデータセット [以前](#prerequisites). |
 
