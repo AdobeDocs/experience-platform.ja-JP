@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 46%
+ht-degree: 67%
 
 ---
 
@@ -16,15 +16,15 @@ ht-degree: 46%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
 >title="データ主体のプライバシーリクエストに従う"
->abstract="<h2>説明</h2><p>Adobe Experience Platform Privacy Serviceでは、法的プライバシー規制に従って、個人データにアクセスしたり削除したりする顧客に代わって、プライバシーリクエストを作成および管理できます。</p>"
+>abstract="<h2>説明</h2><p>Adobe Experience Platform Privacy Service では、法的プライバシー規制に従って、個人データにアクセスしたり削除したりする顧客に代わって、プライバシーリクエストを作成および管理できます。</p>"
 
 このドキュメントでは、 [!DNL Privacy Service] ユーザーインターフェイス。
 
 >[!IMPORTANT]
 >
->Privacy Serviceは、データ主体および消費者の権利に関するリクエストに対してのみ使用されます。 データのクリーンアップやメンテナンスにPrivacy Serviceを使用する方法は、サポートされていないか、許可されていません。 Adobeは、適時にそれを果たす法的義務を負う。 したがって、Privacy Serviceの読み込みテストは実稼動環境のみであり、有効なプライバシーリクエストの不要なバックログを作成するので、許可されません。
+>Privacy Service は、データ主体と消費者の権利リクエストのみを目的としています。それ以外にデータのクリーンアップやメンテナンスに Privacy Service を使用することは、サポートされておらず、許可もされていません。アドビには、それらをタイムリーに履行する法的義務があります。したがって、これが実稼動専用の環境であり、有効なプライバシーリクエストの不要なバックログが作成されるので、Privacy Service の読み込みテストは許可されていません。
 >
->毎日のハードアップロード制限が設定され、サービスの不正使用を防ぐことができるようになりました。 システムを悪用したユーザーは、サービスへのアクセスを無効にします。 その後、彼らと共に、彼らの行動に対処し、Privacy Serviceの許容可能な使用について話し合うための会合が開かれる。
+>サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーの行為に対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
 
 ## 次を参照： [!DNL Privacy Service] UI ダッシュボード
 
@@ -109,7 +109,7 @@ ht-degree: 46%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="手順"
->abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">リクエスト</a> 左側のナビゲーションでプライバシー Ul を開き、を選択します。 <b>リクエストを作成</b>.</li><li>ここから、リクエストビルダーを使用するか、データ主体の JSON ファイルをアップロードできます。</li><li>リクエストビルダーを使用する場合、ジョブのタイプ（アクセスまたは削除）を選択し、提供する ID のタイプ（電子メール、ECID、AAID）を選択するか、カスタム ID 名前空間を入力します。 顧客に適した ID 値を入力し、 <b>作成</b> 終了したとき。</li><li>JSON ファイルをアップロードする場合は、「リクエストを作成」の横にある矢印を選択します。 オプションのリストから、「 」を選択します。 <b>JSON をアップロード</b> ファイルをアップロードします。 アップロードする JSON ファイルがない場合は、 <b>Adobe-GDPR-Request.json をダウンロード</b> をクリックして、入力できるテンプレートをダウンロードします。 JSON をアップロードし、「 」を選択します。 <b>作成</b> 終了したとき。</li><li>この機能に関する詳しいヘルプについては、 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ja">Privacy Serviceユーザーガイド</a> Experience League</li></ul>"
+>abstract="<ul><li>左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=ja#logging-in-from-experience-platform">リクエスト</a>」を選択してプライバシー Ul を開き、「<b>リクエストを作成</b>」を選択します。</li><li>ここから、リクエストビルダーを使用するか、データ主体の JSON ファイルをアップロードできます。</li><li>リクエストビルダーを使用する場合、ジョブのタイプ（アクセスまたは削除）を選択し、指定する ID のタイプ（メール、ECID、AAID）を選択するか、カスタム ID 名前空間を入力します。顧客の適切な ID 値を入力し、終了したら「<b>作成</b>」を選択します。</li><li>JSON ファイルをアップロードする場合は、「リクエストを作成」の横にある矢印を選択します。オプションのリストから、「<b>JSON をアップロード</b>」を選択し、ファイルをアップロードします。アップロードする JSON ファイルがない場合は、「<b>Adobe-GDPR-Request.json をダウンロード</b>」を選択して、入力できるテンプレートをダウンロードします。JSON をアップロードし、完了したら「<b>作成</b>」を選択します。</li><li>この機能に関する詳しいヘルプについては、Experience League の <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ja">Privacy Service ユーザーガイド</a>を参照してください。</li></ul>"
 
 >[!NOTE]
 >

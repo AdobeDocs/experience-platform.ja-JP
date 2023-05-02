@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
-breadcrumb-title: アシュランスガイド
-user-guide-description: Adobe Experience Platform Assurance を使用すると、モバイルアプリケーション内でデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
+breadcrumb-title: Assurance ガイド
+user-guide-description: Adobe Experience Platform Assurance を使用すると、モバイルアプリケーションでデータを収集したりエクスペリエンスを提供したりする方法を検査、配達確認、シミュレートおよび検証できます。
 feature: Assurance
 source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 23%
+ht-degree: 72%
 
 ---
 

@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="セグメント"
->abstract="セグメント表示には、組織のすべてのセグメントに関する情報と、そのアクティブ化ジョブと評価ジョブの詳細情報が含まれています。"
+>abstract="セグメントビューには、アクティベーションおよび評価ジョブについての詳細情報を含む、すべての組織のセグメントに関する情報が表示されます。"
 
 次の手順で **[!UICONTROL セグメント]** ダッシュボード、選択 **[!UICONTROL 監視]** をクリックします。 1 回 **[!UICONTROL 監視]** ページで、 **[!UICONTROL セグメント]** カード。
 

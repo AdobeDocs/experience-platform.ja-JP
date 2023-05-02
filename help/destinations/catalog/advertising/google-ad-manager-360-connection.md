@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '974'
-ht-degree: 80%
+ht-degree: 83%
 
 ---
 
@@ -85,8 +85,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="セグメント名にセグメント ID を追加"
->abstract="Google Ad Manager 360 のセグメント名にExperience Platformのセグメント ID を含めるには、次のように、このオプションを選択します。 `Segment Name (Segment ID)`"
+>title="セグメント名へのセグメント ID の追加"
+>abstract="Google アドマネージャー 360 のセグメント名に Experience Platform のセグメント ID を含めるには、次のように、このオプションを選択します。`Segment Name (Segment ID)`"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
