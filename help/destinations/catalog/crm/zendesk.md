@@ -2,10 +2,10 @@
 title: Zendesk 接続
 description: Zendesk の宛先を使用すると、アカウントデータを書き出し、Zendesk 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 61%
+source-wordcount: '1471'
+ht-degree: 53%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 61%
 
 [[!DNL Zendesk]](https://www.zendesk.co.jp) は、カスタマーサービスソリューションおよびセールスツールです。 
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Zendesk] 連絡先 API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)、セグメント内の id を内の連絡先として作成および更新する [!DNL Zendesk].
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Zendesk] 連絡先 API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)、 **id の作成と更新** セグメント内で、 [!DNL Zendesk].
 
 [!DNL Zendesk] は、bearer トークンを認証メカニズムとして使用し、 [!DNL Zendesk] 連絡先 API [!DNL Zendesk] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからセグメントを作成し、それらのセグメントを [!DNL Zendesk] に送信して、Adobe Experience Platform でセグメントとプロファイルが更新されるとすぐにユーザーのフィードに表示することができます。
+マルチチャネル B2C プラットフォームのカスタマーサービス部門は、顧客に対してシームレスにパーソナライズされたエクスペリエンスを提供したいと考えています。 部門は、独自のオフラインデータからセグメントを作成し、新しいユーザープロファイルを作成したり、異なるインタラクション（購入、戻り値など）から既存のプロファイル情報を更新したりできます。 およびAdobe Experience Platformからにこれらのセグメントを送信します。 [!DNL Zendesk]. に更新された情報がある [!DNL Zendesk] カスタマーサービスエージェントが顧客の最新の情報をすぐに利用できるようにし、迅速な対応と解決を可能にします。
 
 ## 前提条件 {#prerequisites}
 
@@ -118,17 +118,15 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. 内 **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
-1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** カテゴリを選択し、必要に応じて属性を選択します。
-   * これらの手順を繰り返して、XDM プロファイルスキーマと [!DNL Zendesk] インスタンス： |ソースフィールド|ターゲットフィールド|必須| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>または `Attribute: name`|はい | |`IdentityMap: Email`|`Identity: email`|はい |
+1. 内 **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** カテゴリを選択してターゲット id を選択するか、 **[!UICONTROL 属性を選択]** カテゴリを選択し、サポートされているスキーマ属性の 1 つを選択します。
+   * これらの手順を繰り返して、次の必須マッピングを追加します。XDM プロファイルスキーマと [!DNL Zendesk] インスタンス： |ソースフィールド|ターゲットフィールド|必須| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`|はい | |`IdentityMap: Email`|`Identity: email`|はい | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * これらのマッピングの使用例を次に示します。
       ![属性マッピングを使用した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >ターゲットフィールドのマッピングは必須で、 [!DNL Zendesk] を有効にします。
-      >
-      >のマッピング *姓* または *名前* が必要です。それ以外の場合は [!DNL Zendesk] API はエラーで応答せず、渡された属性値は無視されます。
+>[!IMPORTANT]
+>
+>この `Attribute: last_name` および `Identity: email` この宛先では、ターゲットマッピングは必須です。 これらのマッピングが見つからない場合、他のマッピングは無視され、には送信されません [!DNL Zendesk].
 
 宛先接続のマッピングの指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -167,3 +165,18 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 [!DNL Zendesk] ドキュメントからのその他の役に立つ情報は次のとおりです。
 * [最初の呼び出し](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [カスタムフィールド](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### 変更ログ
+
+この節では、この宛先コネクタに対する機能の概要と重要なドキュメントの更新について説明します。
+
++++ 変更ログを表示
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2023年4月 | ドキュメントの更新 | <ul><li>更新： [使用例](#use-cases) の節を参照し、この宛先を使用した方がメリットが得られるタイミングの例をより明確に示します。</li> <li>更新： [マッピング](#mapping-considerations-example) 」セクションで、正しい必須マッピングを反映させる必要があります。 この `Attribute: last_name` および `Identity: email` この宛先では、ターゲットマッピングは必須です。 これらのマッピングが見つからない場合、他のマッピングは無視され、には送信されません [!DNL Zendesk].</li> <li>更新： [マッピング](#mapping-considerations-example) 節に、必須とオプションの両方のマッピングの明確な例を示します。</li></ul> |
+| 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
+
+{style="table-layout:auto"}
+
++++
