@@ -3,9 +3,9 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先接続の編集
 type: Tutorial
 description: フローサービス API を使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1565'
 ht-degree: 33%
 
 ---
@@ -196,9 +196,6 @@ curl -X GET \
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ curl -X PATCH \
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager とGoogle Ad Manager 360]
 
 **リクエスト**
 
-次のリクエストは、 [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続を使用して、新しい追加セグメント ID をセグメント名フィールドに追加します。
+次のリクエストは、 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) または [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 新しい [**[!UICONTROL セグメント名にセグメント ID を追加]**](/help/release-notes/2023/april-2023.md#destinations) フィールドに入力します。
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ curl -X PATCH \
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## 基本接続コンポーネント（認証パラメーターおよび他のコンポーネント）の編集 {#patch-base-connection}
 
 ベース接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先の場合、アクセスキーと秘密鍵を [!DNL Amazon S3] 場所。
@@ -340,11 +339,13 @@ curl -X PATCH \
 >
 >`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag 値は、データフロー、ベース接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> 最新バージョンの etag 値を取得するには、に対してGETリクエストを実行します。 `/connections/{BASE_CONNECTION_ID}` endpoint，ここで `{BASE_CONNECTION_ID}` は、更新しようとしているベース接続 ID です。
+> 最新バージョンの Etag 値を取得するには、に対してGETリクエストを実行します。 `/connections/{BASE_CONNECTION_ID}` endpoint，ここで `{BASE_CONNECTION_ID}` は、更新しようとしているベース接続 ID です。
 
 様々なタイプの宛先のベース接続仕様のパラメーターを更新する例を以下にいくつか示します。 ただし、宛先のパラメーターを更新する一般的なルールは次のとおりです。
 
 接続のデータフロー ID を取得し、ベース接続 ID を取得して、必要なパラメーターの更新された値を使用してベース接続をPATCHします。
+
+>[!BEGINSHADEBOX]
 
 **API 形式**
 
@@ -440,6 +441,8 @@ curl -X PATCH \
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## API エラー処理 {#api-error-handling}
 
