@@ -3,10 +3,11 @@ title: 暗号化されたデータの取り込み
 description: Adobe Experience Platform では、クラウドストレージバッチソースから、暗号化されたファイルを取り込むことができます。
 hide: true
 hidefromtoc: true
-source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
+source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -24,7 +25,7 @@ Adobe Experience Platform では、クラウドストレージバッチソース
 
 >[!IMPORTANT]
 >
->1 つの暗号化ファイルの最大サイズは 100 MB です。例えば、1 回のデータフロー実行で 2 GB 分のデータを取り込むことができますが、そのデータ内の個々のファイルは 100 MB を超えることはできません。
+>1 つの暗号化ファイルの最大サイズは 1 GB です。 例えば、1 回のデータフロー実行で 2 GB 分のデータを取り込むことはできますが、そのデータ内の個々のファイルは 1 GB を超えることはできません。
 
 このドキュメントでは、データを暗号化するための暗号化キーペアを生成し、暗号化されたデータをクラウドストレージソースを使用して Experience Platform に取り込む手順について説明します。
 
