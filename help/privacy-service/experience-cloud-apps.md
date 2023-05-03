@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceとExperience Cloudの適用
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 4a078a09da131260fa44b64cd5f707482afdce04
+source-git-commit: 16985d285cf181547f3692c5ed1910eebe8df210
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 36%
+source-wordcount: '901'
+ht-degree: 35%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | アプリケーション | アクセス / 削除 | 販売のオプトアウト | 削除動作 | ドキュメントおよびその他の考慮事項 |
 | --- | :---: | :---: | --- | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | データ主体の Cookie ID またはデバイス ID が、Cookie に関連付けられたすべてのコスト、クリック数および売上高データと共にシステムから削除されます。 | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA のオプトアウトオブセールに関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | Adobe Analytics では、計測データのプライバシー性と契約上の制限に従ってデータをラベルで分類するためのツールの提供を開始します。ラベルは、次の場合に重要な手順です。<ol><li>データ主体の識別</li><li>アクセスリクエストの一部として返すデータの決定。</li><li>削除リクエストの一環として削除する必要があるデータフィールドの識別。</li></ol> | <ul><li>[プライバシーワークフロー](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)</li><li>[Analytics のラベル付け](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels.html)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | Adobe Analytics では、計測データのプライバシー性と契約上の制限に従ってデータをラベルで分類するためのツールの提供を開始します。ラベルは、次の場合に重要な手順です。<ol><li>データ主体の識別</li><li>アクセスリクエストの一部として返すデータの決定。</li><li>削除リクエストの一環として削除する必要があるデータフィールドの識別。</li></ol> | <ul><li>[プライバシーワークフロー](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)</li><li>[Analytics のラベル付け](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels.html)</li><li>[Analytics オプトアウト](https://experienceleague.adobe.com/docs/analytics/components/dimensions/cm-opt-out.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | リクエストに含まれている特性識別子に関連付けられているAudience Managerとセグメントがすべて削除されます。 さらに、個人に対する各識別子は以降のデータ収集からオプトアウトされ、それぞれの ID マッピングは削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[オプトアウトに関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/consents.md)</li></ul> |
 | Adobe顧客属性 (CRS) | ✓ | なし | データ主体の属性がシステムから削除されます。 | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=ja)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=ja)</li><li>顧客属性にはデータを転送する機能がないので、販売のオプトアウトリクエストは利用できません。</li></ul> |
