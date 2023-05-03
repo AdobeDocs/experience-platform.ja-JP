@@ -4,7 +4,7 @@ title: Real-Time CDP B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 100%
 

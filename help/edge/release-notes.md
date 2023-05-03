@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 96%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン2.16.0 - 2023 年 4 月 25 日
+## バージョン 2.16.0 - 2023年4月25日（PT）
 
 **新機能**
 
 * のサポートを追加しました。 [datastream 設定の上書き](datastreams/overrides.md).
 
-## バージョン2.15.0 - 2023 年 3 月 30 日
+## バージョン 2.15.0 - 2023年3月30日（PT）
 
 **新機能**
 
-* のサポートを追加しました。 [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) リンククリックコールバック。
-* Adobe Journey Optimizerのクリック追跡のサポートを追加しました。
+* [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) リンククリックのコールバックのサポートを追加しました。
+* Adobe Journey Optimizer のクリックの追跡に対するサポートを追加しました。
 
 **修正点および改善点**
 
@@ -36,7 +36,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.14.0 - 2023年1月25日（PT）
 
-* （ベータ版）Adobe Journey Optimizerのサーフェスと提案のサポートが追加されました。
+* （ベータ版）Adobe Journey Optimizer のサーフェスと提案のサポートを追加しました。
 
 **修正点および改善点**
 
