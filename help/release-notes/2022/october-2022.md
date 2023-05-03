@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
-workflow-type: ht
-source-wordcount: '1343'
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+workflow-type: tm+mt
+source-wordcount: '1328'
 ht-degree: 100%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 100%
 **リリース日：2022年10月26日（PT）**
 
 - [顧客管理キー](#cmk)
-
-Adobe Experience Platform の既存の機能に対するアップデート：
-
-- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
-   - [顧客管理キー {#cmk}](#customer-managed-keys-cmk)
-   - [データ収集 {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [エクスペリエンスデータモデル（XDM）{#xdm}](#experience-data-model-xdm-xdm)
-   - [クエリサービス {#query-service}](#query-service-query-service)
-   - [ソース {#sources}](#sources-sources)
+- [データ収集](#data-collection)
+- [宛先](#destinations)
+- [エクスペリエンスデータモデル](#xdm)
+- [クエリサービス](#query-service)
+- [ソース](#sources-sources)
 
 ## 顧客管理キー {#cmk}
 

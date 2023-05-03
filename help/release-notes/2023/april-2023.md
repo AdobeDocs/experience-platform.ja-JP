@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 36%
+source-wordcount: '1842'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [データ収集](#data-collection)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
 
@@ -134,6 +135,19 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 {style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
+## Real-Time Customer Data Platform
+
+Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-Time CDP]) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 [!DNL Real-Time CDP] は、複数の企業データソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。 その後、これらのプロファイルから作成されたセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスにわたって 1 対 1 でパーソナライズされた顧客体験を提供できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| Real-Time CDPホームページの強化 | この [Real-Time CDPホームページ](https://experience.adobe.com) は、見た目が更新され、パフォーマンスが向上しました。 これで、ホームページが権限に応じた状態になり、アクセス権のある機能に関連するウィジェットが表示されます。 詳しくは、 [Real-Time CDP home page dashboard の概要](../../rtcdp/home-page-dashboards.md). |
+| 自己特定調査 | 自己識別サーベイは、Adobe Experience Platform UI ホームページで提供されている短いアンケートです。自己識別調査を使用して、Experience Platformの個人プロファイルを作成し、選択内容に基づいてカスタマイズされたガイドラインを受け取ります。 詳しくは、 [自己特定調査の概要](../../landing/self-identification.md). |
+
+詳しくは、 [!DNL Real-Time CDP]を参照し、 [[!DNL Real-Time CDP] 概要](../../rtcdp/overview.md).
 
 ## リアルタイム顧客プロファイル {#profile}
 
