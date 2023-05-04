@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
 source-wordcount: '1663'
-ht-degree: 92%
+ht-degree: 99%
 
 ---
 
@@ -14,34 +14,34 @@ ht-degree: 92%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
 
-## バージョン2.17.0 - 2023 年 4 月 25 日
+## バージョン 2.17.0 - 2023年4月25日（PT）
 
 **新機能**
 
 * Adobe Experience Platform Web SDK のバージョン2.16.0が含まれています。
 * のサポートを追加しました。 [datastream 設定の上書き](../datastreams/overrides.md).
-* 廃止の通知を `datasetId` オプションを `sendEvent` コマンドを使用します。
+* `sendEvent` コマンドの `datasetId` オプションに非推奨（廃止予定）通知を追加しました。
 
 
 **修正点および改善点**
 
-* Safari でスクロールすると datastream セレクターが閉じる問題を修正しました。
+* Safari でスクロールするとデータストリームセレクターが閉じてしまう問題を修正しました。
 
-## バージョン2.16.1 - 2023 年 4 月 14 日
+## バージョン 2.16.1 - 2023年4月14日（PT）
 
-* XDM オブジェクトと変数データ要素で、デフォルト以外のサンドボックスからスキーマを選択できなかった問題を修正しました。
+* デフォルト以外のサンドボックスからスキーマを選択できなかった XDM オブジェクトおよび変数データ要素の問題を修正しました。
 
-## バージョン2.16.0 - 2023 年 3 月 30 日
+## バージョン 2.16.0 - 2023年3月30日（PT）
 
 **新機能**
 
-* （ベータ版）追加済み **[!UICONTROL 変数を更新]** アクションと **[!UICONTROL 変数]** データ要素。
-* 次の設定を追加しました： [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) コールバック関数。
+* （ベータ版）**[!UICONTROL 変数を更新]**&#x200B;アクションと&#x200B;**[!UICONTROL 変数]**&#x200B;データ要素を追加しました。
+* [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) コールバック関数の設定を追加しました。
 
 **修正点および改善点**
 
-* アンカータグ内の要素をクリックすると、 **[!UICONTROL ID でリダイレクト]** アクションが使用されました。
-* スキーマが 1 つだけ存在する場合に XDM オブジェクトのデータ要素が機能しない問題を修正しました。
+* **[!UICONTROL ID でリダイレクト]**&#x200B;アクションを使用した際に、アンカータグ内の要素をクリックしても機能しない問題を修正しました。
+* スキーマが 1 つしか存在しない場合に XDM オブジェクトデータ要素が機能しない問題を修正しました。
 * Adobe Experience Platform Web SDK のバージョン 2.15.0 が含まれます。
 
 
@@ -132,7 +132,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.3 が含
 
 ## バージョン 2.6.2 - 2021年8月4日（PT）
 
-Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.4 が含まれます。
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.2 が含まれます。
 
 ## バージョン 2.6.1 - 2021年7月29日（PT）
 

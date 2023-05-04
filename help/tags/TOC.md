@@ -7,8 +7,8 @@ feature: Tags
 solution: Data Collection
 source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '984'
+ht-degree: 100%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 0%
          * [概要](./extensions/client/product-string/overview.md)
          * [リリースノート](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
-      * [Adobe Experience Platform Web SDK を使用したAdobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [Adobe Experience Platform Web SDK を使用した Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [概要](./extensions/client/audience-manager/overview.md)
       * Adobe Client Data Layer {#client-data-layer}
@@ -217,7 +217,7 @@ ht-degree: 0%
       * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
-      * [Epsilon イベント API](https://exchange.adobe.com/apps/ec/109127)
+      * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}

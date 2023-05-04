@@ -5,7 +5,7 @@ exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
 source-wordcount: '1842'
-ht-degree: 34%
+ht-degree: 53%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| ユーザー定義ダッシュボード | 次の操作を実行できます。 **履歴データをフィルター** ウィジェットのインサイトから、最近のデータまたはカスタムの分析期間を使用します。 詳しくは、 [ユーザー定義ダッシュボードガイド](../../dashboards/user-defined-dashboards.md#filter-historical-data) を参照してください。<br>また、 **既存のウィジェットを複製**. 複製をカスタマイズし、その属性を編集することで、新しい一意のウィジェットを作成する際に、最初から再起動するのを防ぐことができます。 詳しくは、 [ウィジェット複製ガイド](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) を参照してください。 |
+| ユーザー定義ダッシュボード | ウィジェットのインサイトから&#x200B;**履歴データをフィルタリング**&#x200B;し、最近のデータまたはカスタム分析期間のいずれかを使用できるようになりました。詳しくは、 [ユーザー定義ダッシュボードガイド](../../dashboards/user-defined-dashboards.md#filter-historical-data) を参照してください。<br>また、**既存のウィジェットを複製**&#x200B;できるようになりました。複製をカスタマイズしてその属性を編集することで、新しい一意のウィジェットを作成する際に最初からやり直す必要がなくなります。詳しくは、 [ウィジェット複製ガイド](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -46,8 +46,8 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 非実稼働用サンドボックスのAdobe Analyticsのバックフィル期間を更新しました | 非実稼働用サンドボックスのAdobe Analyticsのバックフィル期間が 3 か月に短縮されました。 実稼働用サンドボックスのバックフィルは、13 か月で同じままです。 この変更は新しいフローにのみ適用され、既存のフローには影響しません。 詳しくは、 [Adobe Analyticsの概要](../../sources/connectors/adobe-applications/analytics.md). |
-| FPID 文字列を ECID に変換する新しいマッパー関数 | 以下を使用： `fpid_to_ecid` 関数を使用して、FPID 文字列を ECID に変換し、Experience PlatformおよびExperience Cloudアプリケーションで使用できます。 詳しくは、[データ準備関数ガイド](../../data-prep/functions.md)を参照してください。 |
+| 非実稼動サンドボックスでの Adobe Analytics のバックフィル期間の更新 | 非実稼動サンドボックスでの Adobe Analytics のバックフィル期間が 3 か月に短縮されました。実稼動用サンドボックスのバックフィルは、13 か月で同じままです。この変更は新しいフローにのみ適用され、既存のフローには影響しません。詳しくは、[Adobe Analytics の概要](../../sources/connectors/adobe-applications/analytics.md)を参照してください。 |
+| FPID 文字列を ECID に変換する新しいマッパー関数 | `fpid_to_ecid` 関数を使用すると、FPID 文字列を ECID に変換し、Experience Platform および Experience Cloud アプリケーションで使用できるようになります。詳しくは、[データ準備関数ガイド](../../data-prep/functions.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -110,7 +110,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 表示名の切り替え | スキーマエディターで、元のフィールド名と、人間が読み取り可能な表示名を切り替えることができるようになりました。<br>![表示名切り替えがハイライト表示されたスキーマエディター。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "スキーマエディターの表示名の切り替え"){width="100" zoomable="yes"}<br>この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 標準フィールドグループの表示名はシステムで生成されますが、必要に応じて UI を使用してカスタマイズすることもできます。 詳しくは、 [表示名の切り替えドキュメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) を参照してください。 |
+| 表示名の切り替え | スキーマエディターでは、元のフィールド名と、さらに人間が読み取り可能な表示名との間で変更する切替スイッチを提供するようになりました。<br>![表示名切り替えがハイライト表示されたスキーマエディター。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "スキーマエディターの表示名の切り替え"){width="100" zoomable="yes"}<br>この柔軟性により、フィールドの検出性とスキーマの編集性を向上できます。 標準フィールドグループの表示名はシステムで生成されますが、必要に応じて UI からカスタマイズすることもできます。詳しくは、 [表示名の切り替えドキュメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -157,7 +157,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 偽名プロファイルデータの有効期限 | 偽名プロファイルデータの有効期限が一般に利用できるようになりました。 このリリースでは、有効にした後も、古い偽名プロファイルをExperience Platformインスタンスから継続的に削除します。 この機能と偽名プロファイルの詳細については、 [偽名プロファイルデータ有効期限ガイド](../../profile/pseudonymous-profiles.md). |
+| 偽名プロファイルデータの有効期限 | 偽名プロファイルデータの有効期限が一般に利用できるようになりました。このリリースでは、有効にすると、Experience Platform インスタンスから古い偽名プロファイルが継続的に削除されます。この機能と偽名プロファイルについて詳しくは、[偽名プロファイルデータの有効期限ガイド](../../profile/pseudonymous-profiles.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -171,10 +171,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| Microsoft Dynamics、Salesforce CRM、SalesforceMarketing Cloudの行レベルのデータのフィルタリング API のサポート | 論理演算子と比較演算子を使用して、Microsoft Dynamics、Salesforce CRM、SalesforceMarketing Cloudソースの行レベルのデータをフィルタリングします。 [API を使用してソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
-| Shopify ストリーミングのベータ可用性 | この [Shopify ストリーミングソース](../../sources/connectors/ecommerce/shopify-streaming.md) は、ベータ版で利用できるようになりました。 Shopify ストリーミングソースを使用して、Shopify パートナーアカウントからExperience Platformにデータをストリーミングします。 |
-| OneTrust 統合の一般提供 | この [OneTrust 統合ソース](../../sources/connectors/consent-and-preferences/onetrust.md) は現在 GA です。 OneTrust Integration ソースを使用して、OneTrust Integration アカウントから同意と環境設定のデータをExperience Platformに取り込みます。 |
-| oracleサービスクラウドの一般提供 | この [Oracleサービスクラウドソース](../../sources/connectors/customer-success/oracle-service-cloud.md) は現在 GA です。 oracleサービスクラウドソースを使用して、OracleサービスクラウドデータをExperience Platformに取り込みます。 |
+| Microsoft Dynamics、Salesforce CRM および Salesforce Marketing Cloud の行レベルデータをフィルタリングするための API サポート | 論理演算子と比較演算子を使用すると、Microsoft Dynamics、Salesforce CRM および Salesforce Marketing Cloud ソースの行レベルデータをフィルタリングできます。[API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
+| Shopify ストリーミングのベータ版の提供 | [Shopify ストリーミングソース](../../sources/connectors/ecommerce/shopify-streaming.md)のベータ版が利用可能になりました。Shopify ストリーミングソースを使用すると、Shopify パートナーアカウントから Experience Platform にデータをストリーミングできます。 |
+| OneTrust 統合の一般提供 | [OneTrust 統合ソース](../../sources/connectors/consent-and-preferences/onetrust.md)は一般提供（GA）版になりました。OneTrust 統合ソースを使用すると、OneTrust 統合アカウントから Experience Platform に同意と環境設定のデータを取り込むことができます。 |
+| Oracle Service Cloud の一般提供 | [Oracle Service Cloud ソース](../../sources/connectors/customer-success/oracle-service-cloud.md)は一般提供（GA）版になりました。Oracle Service Cloud ソースを使用すると、Oracle Service Cloud データを Experience Platform に取り込むことができます。 |
 
 {style="table-layout:auto"}
 
