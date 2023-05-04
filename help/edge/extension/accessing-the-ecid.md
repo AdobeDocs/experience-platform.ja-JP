@@ -1,33 +1,49 @@
 ---
 title: ECID へのアクセス
-description: Adobe Experience PlatformタグでExperience CloudID(ECID) にアクセスする方法を説明します
+description: データ準備またはExperience Cloudからタグ ID にアクセスする方法を説明します
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: dee04f2cdeb9057ac10e27a17f9db3f065712618
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 9%
+source-wordcount: '228'
+ht-degree: 6%
 
 ---
 
 
 # ECID へのアクセス
 
-この [!DNL Experience Cloud ID (ECID)] は、Web サイトのExperience Cloudを識別するのに役立つ永続的な訪問者識別子です。 識別子をサードパーティプラットフォームに送信するなど、特定の状況では、 [!DNL ECID].
+この [!DNL Experience Cloud Identity (ECID)] は、ユーザーが Web サイトを訪問した際にユーザーに割り当てられる永続的な識別子です。 特定の状況で、 [!DNL ECID] （サードパーティに送信する場合など）。 別の使用例として、 [!DNL ECID] カスタム XDM フィールドに追加する必要があります。
 
-次の手順で [!DNL ECID] タグ内で、次の手順に従います。
+ECID には、 [データ収集用のデータ準備](../datastreams/data-prep.md) （推奨）またはタグを使用します。
+
+## データ準備を使用した ECID へのアクセス（推奨される方法） {#accessing-ecid-data-prep}
+
+ECID をカスタム XDM フィールドに設定したい場合は、ID マップに追加で、ECID を設定することができます。それには、 `source` を次のパスに追加します。
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+次に、フィールドのタイプがの XDM パスにターゲットを設定します `string`.
+
+![](./assets/access-ecid-data-prep.png)
+
+## タグ
+
+次にアクセスする必要がある場合、 [!DNL ECID] クライアント側では、次に説明するタグアプローチを使用します。
 
 1. プロパティがで設定されていることを確認します。 [ルールコンポーネントの順番](../../tags/ui/managing-resources/rules.md#sequencing) 有効。
-2. 新しいルールを作成します。
-3. を追加します。 [!UICONTROL Library Loaded] イベントをルールに追加します。
-4. を追加します。 [!UICONTROL カスタム条件] 次のコードを使用して、ルールに対するアクションを作成します（SDK インスタンスに設定した名前がの場合）。 `alloy`):
+1. 新しいルールを作成します。
+1. を追加します。 [!UICONTROL Library Loaded] イベントをルールに追加します。
+1. を追加します。 [!UICONTROL カスタム条件] 次のコードを使用してルールにアクションを追加します（SDK インスタンスに設定した名前がの場合）。 `alloy`):
 
-   ```javascript
-   return alloy("getIdentity")
-       .then(function(result) {
-           _satellite.setVar("ECID", result.identity.ECID);
-       });
+   ```js
+    return alloy("getIdentity")
+      .then(function(result) {
+        _satellite.setVar("ECID", result.identity.ECID);
+      });
    ```
 
-5. ルールを保存します。
+1. ルールを保存します。
 
-これで、 [!DNL ECID] 後続のルールで、を使用 `%ECID%` または `_satellite.getVar("ECID")`（他のデータ要素にアクセスする方法と同様）
+次に、 [!DNL ECID] 以降のルールでは `%ECID%` または `_satellite.getVar("ECID")`他のデータ要素にアクセスする場合と同様に、
