@@ -2,9 +2,9 @@
 title: 派生属性のシームレスな SQL フロー
 description: クエリサービス SQL が拡張され、派生属性をシームレスにサポートできるようになりました。 この SQL 拡張機能を使用して、プロファイルに対して有効な派生属性を作成する方法、およびリアルタイム顧客プロファイルとセグメント化サービスに対して属性を使用する方法について説明します。
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1238'
 ht-degree: 2%
 
 ---
@@ -41,6 +41,16 @@ Create Table as Select(CTAS) クエリを使用して、データセットの作
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+次のデータタイプがサポートされています。boolean、date、datetime、text、float、bigint、integer、map、array、および struct/row
+
+以下の SQl コードブロックは、構造体/行、マップ、配列のデータ型を定義する例です。 行 1 は、行の構文を示しています。 2 行目は、マップの構文と 3 行目の配列の構文を示しています。
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 または、Platform UI を使用して、データセットをプロファイルに対して有効にすることもできます。 データセットをプロファイルで有効としてマークする方法について詳しくは、 [リアルタイム顧客プロファイルドキュメントのデータセットの有効化](../../../catalog/datasets/user-guide.md#enable-profile).
 
 次のクエリの例では、 `decile_table` データセットは `id` をプライマリ id 列として使用し、名前空間を持つ `IDFA`. また、 `decile1Month` マップデータ型の。 作成されたテーブル (`decile_table`) がプロファイルで有効になっている。
@@ -49,12 +59,6 @@ CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> prima
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
-
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
 
 クエリが正常に実行されると、次の例に示すように、データセット ID がコンソールに返されます。
 
