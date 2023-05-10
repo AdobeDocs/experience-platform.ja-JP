@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 30%
+ht-degree: 32%
 
 ---
 
@@ -98,7 +98,7 @@ Platform からにデータを書き出すには、以下を実行します。 [
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="会社名\ユーザー名"
->abstract="フォームのOracleEloqua からの会社名とユーザー名を、このフィールドに入力します `{COMPANY_NAME}\{USERNAME}`"
+>abstract="このフィールドに、会社名と Oracle Eloqua のユーザー名を `{COMPANY_NAME}\{USERNAME}` の形式で入力します"
 
 以下の必須のフィールドに入力します。詳しくは、[ [!DNL Oracle Eloqua]  資格情報の収集](#gather-credentials)の節を参照してください。
 * **[!UICONTROL パスワード]**:ユーザーのパスワード [!DNL Oracle Eloqua] アカウント
@@ -114,8 +114,8 @@ Platform からにデータを書き出すには、以下を実行します。 [
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="ポッド"
->abstract="ポッド番号を見つけるには、OracleEloqua にログインします。 正常にログインした後、ブラウザーに URL を記録します。 "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracleナレッジベース — ポッド番号を見つける"
+>abstract="ポッド番号を見つけるには、Oracle Eloqua にログインします。正常にログインしたら、ブラウザーに表示される URL をメモします。 "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle ナレッジベース - ポッド番号を確認する"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
 ![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
