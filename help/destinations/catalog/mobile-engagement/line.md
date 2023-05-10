@@ -6,8 +6,8 @@ last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 46%
+source-wordcount: '1180'
+ht-degree: 47%
 
 ---
 
@@ -52,7 +52,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 詳しくは、 [[!DNL LINE] ドキュメント](https://developers.line.biz/en/docs/messaging-api/getting-started/) チャネルの作成や、既存のチャネルへのチャネルの追加に関するガイダンス [!DNL LINE] を通じて説明する [!DNL LINE] 開発者コンソール。
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 [!DNL LINE] では、次の表で説明する id の更新と書き出しをサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -67,10 +67,10 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL LINE] 宛先。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [!DNL LINE] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 

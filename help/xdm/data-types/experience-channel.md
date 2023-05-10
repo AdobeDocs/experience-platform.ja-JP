@@ -6,7 +6,7 @@ description: このドキュメントでは、エクスペリエンスチャネ�
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '268'
 ht-degree: 22%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 22%
 | `mode` | 文字列 | このチャネルでエクスペリエンスがどのように配信されるか。 |
 | `typeAtSource` | 文字列 | チャネルのカスタム名。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

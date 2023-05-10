@@ -6,13 +6,13 @@ exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
 # Adobe Experience Platformのタグ拡張
 
-Adobe Experience Platformは、Adobeが提供する次世代タグ管理機能を提供します。 Platform は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。
+Adobe Experience Platformは、Adobeが提供する次世代タグ管理機能を提供します。 Platform は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。
 
 タグの概要については、以下のリソースを参照してください。
 
@@ -64,7 +64,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 - [広告](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [データ管理プラットフォーム](../data-management/overview.md)
-- [電子メールマーケティングの宛先](../email-marketing/overview.md)
+- [メールマーケティングの宛先](../email-marketing/overview.md)
 - [パーソナライゼーション](../personalization/overview.md)
 - [調査](../survey/overview.md)
 - [顧客の声](../voice/overview.md)

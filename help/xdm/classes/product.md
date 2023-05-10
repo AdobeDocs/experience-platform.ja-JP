@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 21%
+source-wordcount: '212'
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 21%
 | `productName` | 文字列 | 製品名。 |
 | `productRating` | 文字列 | 製品の顧客レビュー評価。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 互換性のあるフィールドグループ {#field-groups}
 

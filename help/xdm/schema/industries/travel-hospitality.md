@@ -5,7 +5,7 @@ description: Adobe Experience Platformで使用する Experience Data Model(XDM)
 exl-id: 4d454160-9066-4702-815b-9509942f709e
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 17%
 
 ---
@@ -43,4 +43,4 @@ ht-degree: 17%
 | アップセルホテルやその他のレジデントアトラクションは、近日のホテル予約で市場内のゲストやゲストに提供されます。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[宿泊予約](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[個人の連絡先の詳細](../../field-groups/profile/personal-contact-details.md)</li><li>[仕事用連絡先の詳細](../../field-groups/profile/work-contact-details.md)</li><li>[ロイヤルティの詳細](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 | アップセルフライトやその他の居住者のアトラクションは、近日のホテル予約で市場のゲストやゲストに提供されます。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[予約詳細](../../field-groups/event/reservation-details.md)</li><li>[フライト予約](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[個人の連絡先の詳細](../../field-groups/profile/personal-contact-details.md)</li><li>[仕事用連絡先の詳細](../../field-groups/profile/work-contact-details.md)</li><li>[ロイヤルティの詳細](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

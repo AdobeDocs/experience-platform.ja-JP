@@ -6,8 +6,8 @@ description: このドキュメントでは、「Web 詳細スキーマ」フィ
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 20%
+source-wordcount: '141'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 20%
 | --- | --- | --- |
 | `web` | [Web 情報](../../data-types/web-information.md) | リンククリック数、Web ページの詳細、リファラー情報およびブラウザーの詳細について説明します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -4,7 +4,7 @@ description: Reactor API で /rule_components エンドポイントを呼び出�
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1157'
 ht-degree: 95%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 95%
 | 条件 | 条件とは、アクションが実行される前に特定の条件を満たしているどうかを評価するものです。 イベントが発生すると、条件が評価されます。ルールのアクションは、すべての条件が満たされた場合にのみ実行されます。 |
 | アクション | これらは、Adobe Analytics ビーコンの送信、カスタム訪問者 ID の取得、特定の mbox の実行など、ルールで実際に実行するアクションです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
  ルールコンポーネントは、1 つのルールのみに属します。ルールには、多くのルールコンポーネントを含めることができます（含める必要があります）。
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | コンポーネントのリストを取得するルールの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 検索するルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 | --- | --- |
 | `PROPERTY_ID` | この `id` ルールコンポーネントを定義するプロパティの。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | ルールコンポーネントに必要な関係を確立するオブジェクト。次の 2 つの関係を確立する必要があります。 <ol><li>`extension`：このルールコンポーネントを定義する拡張機能。これは、`delegate_descriptor_id` で示される拡張機能のパッケージと同じにする必要があります。</li><li>`rules`：このコンポーネントが定義されているルール。</li></ol>関係に関する一般的な情報について詳しくは、 [関係に関するガイド](../guides/relationships.md) を参照してください。 |
 | `type` | 作成するリソースのタイプ。このエンドポイントの場合は、値を `rule_components` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 更新するルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | 更新するルールコンポーネントの `id`。この値は、リクエストパスで指定された `{RULE_COMPONENT_ID}` 値と一致する必要があります。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `rule_components` にする必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 削除するルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | ルールのリストを取得するルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 検索する拡張機能を持つルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 検索する起点を持つルールコンポーネントの `id`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

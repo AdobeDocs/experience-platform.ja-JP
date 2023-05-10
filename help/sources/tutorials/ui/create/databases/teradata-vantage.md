@@ -6,7 +6,7 @@ exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 36%
+ht-degree: 42%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 36%
 
 >[!NOTE]
 >
-> この [!DNL Teradata Vantage] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+> [!DNL Teradata Vantage] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 このチュートリアルでは、 [!DNL Teradata Vantage] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
 
 ## はじめに
 
-このチュートリアルは、 Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、  Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Experience Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
@@ -29,7 +29,7 @@ ht-degree: 36%
 
 次の項目にアクセスするには、 [!DNL Teradata Vantage] プラットフォームのアカウントで、次の認証値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | 接続文字列 | 接続文字列は、データソースに関する情報とその接続方法を提供する文字列です。 次の接続文字列パターン： [!DNL Teradata Vantage] が `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 
@@ -37,7 +37,7 @@ ht-degree: 36%
 
 ## [!DNL Teradata Vantage] アカウントを接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
@@ -55,7 +55,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Teradata Vantage] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Teradata Vantage] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 

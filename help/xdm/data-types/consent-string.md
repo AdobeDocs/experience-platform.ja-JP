@@ -5,8 +5,8 @@ description: このドキュメントでは、同意文字列 XDM データタ�
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 5%
+source-wordcount: '198'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 | `containsPersonalData` | ブール値 | このフィールドが true の場合、同意の実施のために、この同意文字列を処理する必要があることを意味します。 |
 | `gdprApplies` | ブール値 | このフィールドが true の場合、個人データに同意が得られることを意味します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

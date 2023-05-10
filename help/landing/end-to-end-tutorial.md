@@ -6,7 +6,7 @@ exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -22,13 +22,13 @@ RESTful API を基に構築された Platform は、システムの全機能を�
 
 このエンドツーエンドのワークフローは、複数のAdobe Experience Platformサービスを使用します。 以下は、このワークフローで使用されるサービスの概要へのリンクのリストです。
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動を包括的に把握できます。
 - [ソース](../sources/home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
+- [[!DNL Segmentation Service]](../segmentation/home.md)：[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータを細かいグループに分類できます。
 - [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [データセット](../catalog/datasets/overview.md):のデータ永続化のためのストレージと管理の構成 [!DNL Experience Platform].
-- [宛先](../destinations/home.md):宛先は、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に対して、Platform からデータをシームレスにアクティブ化できる、一般的に使用されるアプリケーションとの事前定義済みの統合です。
+- [宛先](../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Platform のデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
 
 ## XDM スキーマの作成
 
@@ -98,4 +98,4 @@ Platform では、データフロー（Platform の様々なコンポーネン�
 
 ## 次の手順
 
-このチュートリアルでは、Platform の簡単なエンドツーエンドフローの基本的な紹介を受けました。 Adobe Experience Platformの詳細については、 [Platform の概要](./home.md). Platform UI と Platform API の使用について詳しくは、 [Platform UI ガイド](./ui-guide.md) そして [Platform API ガイド](./api-guide.md) それぞれ
+このチュートリアルでは、Platform の簡単なエンドツーエンドフローの基本的な紹介を受けました。 Adobe Platform について詳しくは、[Experience Platform の概要](./home.md)を参照してください。Platform UI と Platform API の使用について詳しくは、 [Platform UI ガイド](./ui-guide.md) そして [Platform API ガイド](./api-guide.md) それぞれ

@@ -6,7 +6,7 @@ last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1787'
 ht-degree: 100%
 
 ---
@@ -90,7 +90,7 @@ Experience Platform が [!DNL Dynamics 365] 内のセグメントステータス
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Dynamics 365] の各セグメントのステータスは、[セグメントスケジュール](#schedule-segment-export-example)手順の最中に指定された&#x200B;**[!UICONTROL マッピング ID]** 値に基づいて、Platform の対応するセグメントステータスとともに更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 

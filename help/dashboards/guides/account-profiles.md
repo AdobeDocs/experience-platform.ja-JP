@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -108,4 +108,4 @@ Adobeは、アカウントプロファイルに関連する様々な指標を視
 
 ## 次の手順
 
-このドキュメントに従えば、 [!UICONTROL アカウントプロファイル] ダッシュボード。 また、使用可能なウィジェットに表示される指標も理解する必要があります。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、 [アカウントプロファイルの概要](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B Edition の場合
+このドキュメントに従えば、 [!UICONTROL アカウントプロファイル] ダッシュボード。 また、使用可能なウィジェットに表示される指標についても理解できました。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、 [アカウントプロファイルの概要](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B Edition の場合

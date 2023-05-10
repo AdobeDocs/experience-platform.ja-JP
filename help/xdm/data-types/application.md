@@ -6,8 +6,8 @@ description: このドキュメントでは、Application Experience Data Model(
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 5%
+source-wordcount: '439'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 5%
 | `userPerspective` | 文字列 | イベントが発生した時点でのユーザーとアプリまたはブランドとの間の視点または物理的な関係。 アプリに関するユーザーの視点を理解することで、セッションを正確に生成できます。これは、含めたくない多くの場合、含める必要がないからです `background` および `detached` 「アクティブ」セッションの一部としてのイベント。 このプロパティの値は、以下に示す列挙値のいずれかと等しくなければなりません。 <li> `foreground`:ユーザーとアプリが相互に直接やり取りしている。 </li> <li> `background`:アプリとユーザーは間接的に相互作用しています。 例えば、画面がロックされている間や、別のアプリがフォアグラウンドで使用されている間に、アプリは値を測定して更新できます。  </li> <li> `detached`:分離とは、イベントがアプリに関連していたが、外部システムからの電子メールの送信やプッシュ通知など、アプリから直接来ていなかったことを意味します。 |
 | `version` | 文字列 | アプリケーションのバージョン。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

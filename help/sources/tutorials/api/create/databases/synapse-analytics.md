@@ -8,7 +8,7 @@ exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
@@ -100,7 +100,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Synapse] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Synapse] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

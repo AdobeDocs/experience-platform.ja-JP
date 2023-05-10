@@ -4,13 +4,13 @@ solution: Experience Platform
 feature: Attribution AI
 title: アトリビューション AI のアクセス制御
 description: このドキュメントでは、アトリビューション AI の属性ベースのアクセス制御に関する情報を提供します。
-source-git-commit: d82fd8dd5efbe314c09d32905f8ab964640cc11a
+exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
 
 ---
-
 
 # アクセス制御
 

@@ -51,7 +51,7 @@ Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実�
 
 例を示すには [!DNL Pebble] 関数は、Destination SDKで使用されます。[Pebble ドキュメント内のリンク](https://pebbletemplates.io/wiki/filter/date/)) は、タイムスタンプの形式を変換するために使用されます。
 
-### 使用例
+### ユースケース
 
 次を変更する： `lastQualificationTime` デフォルトのタイムスタンプ [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) の値を指定します。Experience Platformが、宛先で優先される別の値に書き出します。
 
@@ -85,7 +85,7 @@ Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実�
 
 ### `addedSegments` および `removedSegments` 関数 {#addedsegments-removedsegments-functions}
 
-#### 使用例
+#### ユースケース
 
 これらの関数は、プロファイルに追加またはプロファイルから削除されたセグメントのリストを取得するために使用できます。
 

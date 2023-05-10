@@ -81,7 +81,7 @@ addEventListener();
 1. を展開します。 **[!UICONTROL consentString]** 見出しを開き、最初の項目を展開して、次の値を入力します。
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`:2.0
+* `consentStandardVersion`: 2.0
 * `consentStringValue`:%IAB TCF Consent String%
 * `gdprApplies`:%IAB TCF 同意 GDPR%
 

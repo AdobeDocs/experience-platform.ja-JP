@@ -7,11 +7,11 @@ exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
-# クラウドストレ許可リストージの宛先の IP アドレス {#ip-address-allow-list}
+# クラウドストレージの宛先の IP アドレス許可リスト {#ip-address-allow-list}
 
 >[!IMPORTANT]
 >

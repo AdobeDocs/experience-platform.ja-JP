@@ -4,8 +4,8 @@ description: このドキュメントでは、実装の詳細なエクスペリ�
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 7%
+source-wordcount: '124'
+ht-degree: 13%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 | `name` | 文字列 | SDK またはエンドポイントの識別子。 すべての SDK またはエンドポイントは、拡張機能を含め、URI を通じて識別されます。 |
 | `version` | 文字列 | API または SDK のバージョン。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

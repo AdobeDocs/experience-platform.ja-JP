@@ -4,8 +4,8 @@ description: このドキュメントでは、「XDM ビジネスキャンペー
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 8%
+source-wordcount: '363'
+ht-degree: 7%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 8%
 | `webinarSessionDescription` | [!UICONTROL 文字列] | このキャンペーンに関連付けられたウェビナーセッションの説明。 |
 | `webinarSessionName` | [!UICONTROL 文字列] | このキャンペーンに関連付けられたウェビナーセッションの名前。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

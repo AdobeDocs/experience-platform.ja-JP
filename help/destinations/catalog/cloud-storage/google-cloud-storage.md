@@ -4,8 +4,8 @@ description: Google Cloud Storage に接続し、セグメントをアクティ�
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 92%
+source-wordcount: '905'
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 92%
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性の選択画面で選択したように、セグメントのすべてのメンバーを該当するスキーマフィールドと共に書き出します。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定 {#prerequisites}
 
@@ -60,9 +60,9 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 * **[!UICONTROL アクセスキー ID]**：[!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 61 文字の英数字の文字列。この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
 * **[!UICONTROL 秘密アクセスキー]**：[!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 40 文字の base64 エンコード文字列。この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
-* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage] ソースの概要](/help/sources/connectors/cloud-storage/google-cloud-storage.md)を参照してください。
 

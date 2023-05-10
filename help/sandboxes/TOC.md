@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 81%
+ht-degree: 90%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 81%
    * [付録](api/appendix.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

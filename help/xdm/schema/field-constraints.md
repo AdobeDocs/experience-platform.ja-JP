@@ -6,8 +6,8 @@ description: Experience Data Model(XDM) のフィールドタイプ制約の参�
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 13%
+source-wordcount: '654'
+ht-degree: 12%
 
 ---
 
@@ -136,7 +136,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | PARQUET | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | タイプ： `BYTE_ARRAY`<br>注釈： `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL 倍精度浮動小数点] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | 型：`INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL 整数] | タイプ： `INT32`<br>注釈： `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | タイプ： `INT32`<br>注釈： `INT_16` | `ShortType` | `java.lang.Short` |
@@ -146,14 +146,14 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | [!UICONTROL ブール値] | 型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL マップ] | `MAP`注釈付きグループ<br><br>(`<key-type>` は、 `STRING`) | `MapType`<br><br>(`keyType` は、 `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala、.NET、CosmosDB {#scala}
 
 | XDM タイプ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL 倍精度浮動小数点] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL 整数] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -163,14 +163,14 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | [!UICONTROL ブール値] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL マップ] | `Map` | （N/A） | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB、Aerospike、および Protobuf 2 {#mongo}
 
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL 倍精度浮動小数点] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL 整数] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
@@ -180,7 +180,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | [!UICONTROL ブール値] | `bool` | `Integer`<br>（0/1 バイナリ） | `bool` |
 | [!UICONTROL マップ] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 

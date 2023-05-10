@@ -8,13 +8,13 @@ exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 34%
+ht-degree: 45%
 
 ---
 
 # データフローのモニタリング
 
-[!UICONTROL 宛先] では、Adobe Experience Platformから数え切れないほどの外部パートナーに対して、データをアクティブ化できます。
+[!UICONTROL 宛先を使用すると、Adobe Experience Platform から無数の外部パートナーに対してデータをアクティブ化できます。]
 
 データフローは、データを移動するデータジョブを表します [!DNL Platform]. これらのデータフローは、異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセットにデータを移動し、で利用するのに役立ちます。 [!DNL Identity Service] および[!DNL Real-Time Customer Profile] を追加します。
 

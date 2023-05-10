@@ -1,15 +1,15 @@
 ---
 description: このページでは、/testing/destinationInstance API エンドポイントを使用して、ファイルベースの宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証する方法について説明します。
-title: サンプルプロファイルを使用してファイルベースの宛先をテストする
+title: サンプルプロファイルを使用したファイルベースの宛先のテスト
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 10%
+source-wordcount: '827'
+ht-degree: 12%
 
 ---
 
-# サンプルプロファイルを使用してファイルベースの宛先をテストする
+# サンプルプロファイルを使用したファイルベースの宛先のテスト
 
 ## 概要 {#overview}
 
@@ -115,7 +115,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 | `results` | の呼び出しに使用できる宛先インスタンス ID とフロー実行 ID を返します [結果 API](file-based-destination-results-api.md)を追加して、統合をさらにテストします。 |
 | `inputProfiles` | API によって自動生成されたサンプルプロファイルを返します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 呼び出しに追加されたプロファイルを使用して、宛先設定をテストする {#test-with-added-profiles}
 

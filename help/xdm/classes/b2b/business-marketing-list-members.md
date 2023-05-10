@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 7%
+source-wordcount: '336'
+ht-degree: 6%
 
 ---
 
@@ -31,6 +31,6 @@ ht-degree: 7%
 | `marketingListMemberID` | 文字列 | マーケティングリストメンバーシップエンティティの一意の ID。 |
 | `personId` | 文字列 | 人物の一意の ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

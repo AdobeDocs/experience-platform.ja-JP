@@ -5,7 +5,7 @@ description: このドキュメントでは、「宿泊施設の予約スキー�
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '679'
 ht-degree: 7%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 7%
 | `smoking` | ブール値 | 部屋が喫煙を許可するかどうかを示します。 |
 | `tripType` | 文字列 | 予約が片道の旅行、往復、または複数都市の旅行のどちらであるかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

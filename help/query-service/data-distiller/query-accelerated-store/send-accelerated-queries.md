@@ -1,7 +1,8 @@
 ---
 title: 高速クエリの送信
 description: 高速クエリ API の紹介です。
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+exl-id: c6cd1182-d3a9-457f-81d5-18027e47c3f9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 14%

@@ -5,7 +5,7 @@ title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1997'
 ht-degree: 100%
 

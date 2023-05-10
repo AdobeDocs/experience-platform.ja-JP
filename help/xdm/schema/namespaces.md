@@ -6,7 +6,7 @@ description: Experience Data Model(XDM) の名前空間でスキーマを拡張�
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 1%
 | `https://ns.adobe.com/vendorA/product/stockNumber` | ベンダーリソースが提供するフィールドは、独自の一意の名前空間を使用します。 この例では、 `https://ns.adobe.com/vendorA/product` はベンダーの名前空間で、 `stockNumber` はフィールド名です。 |
 | `tenantId:internalSku` | 組織で定義されたフィールドでは、一意のテナント ID を名前空間として使用します。 この例では、 `tenantId` はテナントの名前空間 (`https://ns.adobe.com/tenantId`) および `internalSku` はフィールド名です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 互換性モード {#compatibility}
 

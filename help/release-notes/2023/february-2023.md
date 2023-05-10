@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート（2023年2月）
 description: Adobe Experience Platform の 2023年2月のリリースノートです。
-source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
-workflow-type: ht
+exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
 
@@ -18,7 +19,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [[!DNL Destinations]](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [クエリサービス](#query-service)
-- [Real-Time Customer Data Platform B2B エディション](#b2b)
+- [Real-Time Customer Data Platform B2B 版](#b2b)
 - [ソース](#sources)
 
 ## データ収集 {#data-collection}
@@ -47,7 +48,7 @@ Assurance について詳しくは、[Assurance ドキュメント](https://deve
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| [ファイルベース（バッチ）宛先](/help/destinations/destination-types.md#file-based)と統合するための[同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) | <p> プロファイルが同意ポリシーの資格を失った場合、Experience Platform はポリシーの終了をファイルベース宛先にプロアクティブに通知するようになりました。これは、同じ機能がストリーミング宛先について [2023年2月にリリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality)されたのを受けたものです。 </p> <p> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** および **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 </p> |
+| [ファイルベース（バッチ）宛先](/help/destinations/destination-types.md#file-based)と統合するための[同意ポリシーの強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) | <p> プロファイルが同意ポリシーの資格を失った場合、Experience Platform はポリシーの終了をファイルベース宛先にプロアクティブに通知するようになりました。これは、同じ機能がストリーミング宛先について [2023年2月にリリース](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality)されたのを受けたものです。 </p> <p> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** のお客様と **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 </p> |
 
 {style="table-layout:auto"}
 

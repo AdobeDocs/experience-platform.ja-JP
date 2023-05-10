@@ -5,7 +5,7 @@ title: Policy Service API の概要
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 100%
 

@@ -5,8 +5,8 @@ last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 16%
+source-wordcount: '1078'
+ht-degree: 21%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 16%
 >
 >[!DNL The Trade Desk - CRM] の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 >
->EUID（ヨーロッパの統合 ID）のリリースに伴い、次の 2 つが表示されるようになりました [!DNL The Trade Desk - CRM] の宛先 [宛先カタログ](/help/destinations/catalog/overview.md).
->* EU でデータをソースする場合は、 **[!DNL The Trade Desk - CRM (EU)]** 宛先。
->* APAC または NAMER 地域のデータをソースにする場合は、 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 宛先。
+>EUID（European Unified ID）のリリースにより、[宛先カタログ](/help/destinations/catalog/overview.md)に 2 つの [!DNL The Trade Desk - CRM] 宛先が表示されるようになりました。
+>* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。
+>* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。
 >
 >現在、Experience Platformの両方の宛先はベータ版です。 このドキュメントページは、 *[!DNL Trade Desk]* チーム。 お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
 
@@ -40,18 +40,18 @@ ht-degree: 16%
 
 Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件を満たす必要があります。 詳しくは、 [ID 名前空間の概要](/help/identity-service/namespaces.md) を参照してください。
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 [!DNL The Trade Desk] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
 
-プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「 ID 一致要件」の節の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。
+Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。「 ID 一致要件」の節の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | メール | 電子メールアドレス（クリアテキスト） | 入力 `email` ソース id が E メールの名前空間または属性の場合、をターゲット id として使用します。 |
 | Email_LC_SHA256 | 電子メールアドレスは、SHA256 を使用してハッシュ化し、小文字にする必要があります。 必ず次の手順に従ってください。 [電子メールの正規化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) ルールが必要です。 後でこの設定を変更することはできません。 | 入力 `hashed_email` ソース id が Email_LC_SHA256 名前空間または属性の場合、をターゲット id として設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 電子メールのハッシュ要件 {#hashing-requirements}
 
@@ -76,7 +76,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 | 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）で書き出します。 |
 | 書き出し頻度 | **[!UICONTROL 日別バッチ]** | セグメントの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示 [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
@@ -86,7 +86,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 ### 宛先の詳細を入力 {#fill-in-details}
 
-オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en)するとき、次の情報を指定する必要があります。
+オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL アカウントタイプ]**:を選択してください。 **[!UICONTROL 既存のアカウント]** オプション。
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。

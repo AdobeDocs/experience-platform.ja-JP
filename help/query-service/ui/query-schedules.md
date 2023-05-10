@@ -1,7 +1,8 @@
 ---
 title: クエリスケジュール
 description: スケジュールされたクエリの実行、クエリのスケジュールの削除または無効化を自動化し、Adobe Experience Platform UI で使用可能なスケジュールオプションを利用する方法について説明します。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 76%
@@ -67,5 +68,3 @@ API を使用してスケジュールを追加する方法について詳しく�
 「**[!UICONTROL スケジュールを削除]**」を選択して、無効なスケジュールを削除します。
 
 ![「スケジュールを無効にする」と「スケジュールを削除」が強調表示されたスケジュールワークスペース。](../images/ui/query-schedules/delete-schedule.png)
-
-

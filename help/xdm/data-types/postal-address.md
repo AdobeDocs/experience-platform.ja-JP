@@ -6,8 +6,8 @@ description: このドキュメントでは、 Postal Address XDM データタ�
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 23%
+source-wordcount: '338'
+ht-degree: 22%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 23%
 | `statusReason` | 現在の `status`. |
 | `street1` - `street4` | これら 4 つのフィールドは、主な番地レベルの情報、アパート番号、番地、および番地を含むように設計されています。 `street2` から `street4` はオプションです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 郵送先住所のデータタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

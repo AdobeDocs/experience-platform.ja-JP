@@ -5,7 +5,7 @@ exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 * を [テンプレート](./self-service-template.md) 宛先のドキュメントについては、『Adobe投稿者ガイド』を参照してください。 [リンク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [テーブル](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables)、 [サポートされる markdown 構文](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [記述指針](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en)など。
 * 製品ドキュメントには、観測と推定を含めないでください。
 * Experience Platformドキュメントでは、Adobeライターは **太字書式** 次のように、ユーザーインターフェイスコントロールを参照するには、次の手順を実行します。
-   * に移動します。 **[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;をクリックし、 **[!UICONTROL カタログ]** タブをクリックします。 ユーザーインターフェイスコントロールが [宛先のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+   * **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。ユーザーインターフェイスコントロールが [宛先のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
 ## 書き方
 

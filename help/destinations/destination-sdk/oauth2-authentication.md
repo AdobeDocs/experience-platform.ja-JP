@@ -4,8 +4,8 @@ title: OAuth 2 認証
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 source-git-commit: 87fb3ffa65449b61e05d94d2b56daf727ecebdea
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 6%
+source-wordcount: '2080'
+ht-degree: 5%
 
 ---
 
@@ -56,7 +56,7 @@ Experience Platformでは、次の表に示す 3 つの OAuth 2 付与タイプ�
 | パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 | クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 上記の表は、標準の OAuth 2 フローで使用されるフィールドの一覧です。 これらの標準フィールドに加えて、様々なパートナー統合に対して、追加の入力および出力が必要になる場合があります。 Adobeは、上記の標準フィールドパターンのバリエーションに対応しながら、期限切れのアクセストークンなどの無効な出力を自動的に再生成するメカニズムをサポートできる、Destination SDK用の柔軟な OAuth 2 認証/承認フレームワークを設計しました。
 
@@ -75,7 +75,7 @@ Adobeが OAuth 2 認証用に設計したシステム：
 |---------|----------|---------|
 | 認証コード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 この認証方法を宛先に設定するには、次の行を設定に追加します ( `/destinations` [endpoint](./destination-configuration.md):
 
@@ -109,7 +109,7 @@ Adobeが OAuth 2 認証用に設計したシステム：
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
 | `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## パスワード付き OAuth 2
 
@@ -120,7 +120,7 @@ Adobeは、以下の標準入力を利用して、値を上書きできるので
 |---------|----------|---------|
 | パスワード | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li><li><b>ユーザー名</b></li><li><b>パスワード</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -145,14 +145,14 @@ Adobeは、以下の標準入力を利用して、値を上書きできるので
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authType` | 文字列 | 「OAUTH2」を使用します。 |
+| `authType` | String | 「OAUTH2」を使用します。 |
 | `grant` | 文字列 | 「OAUTH2_PASSWORD」を使用します。 |
 | `accessTokenUrl` | 文字列 | ユーザー側の URL。トークンにアクセスし、必要に応じて更新トークンを発行します。 |
 | `clientId` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント ID。 |
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
 | `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## クライアント資格情報付き OAuth 2 許可
 
@@ -162,7 +162,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 |---------|----------|---------|
 | クライアント資格情報 | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>対象範囲</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 この認証方法を宛先に設定するには、次の行を設定に追加します ( `/destinations` [endpoint](./destination-configuration.md):
 
@@ -186,7 +186,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authType` | 文字列 | 「OAUTH2」を使用します。 |
+| `authType` | String | 「OAUTH2」を使用します。 |
 | `grant` | 文字列 | 「OAUTH2_CLIENT_CREDENTIALS」を使用します。 |
 | `accessTokenUrl` | 文字列 | アクセストークンとオプションの更新トークンを発行する認証サーバーの URL。 |
 | `refreshTokenUrl` | 文字列 | *オプション。* 側の URL。更新トークンを発行します。 多くの場合、 `refreshTokenUrl` は `accessTokenUrl`. |
@@ -194,7 +194,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 | `clientSecret` | 文字列 | システムがAdobe Experience Platformに割り当てるクライアント秘密鍵。 |
 | `scope` | 文字列のリスト | *オプション*。リソースに対してExperience Platformが実行できるアクセストークンの範囲を設定します。 例：&quot;read, write&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth 2 設定のカスタマイズ {#customize-configuration}
 
@@ -354,7 +354,7 @@ OAuth 2 クライアント資格情報を設定できます ( [RFC 標準仕様]
 | `authenticationDataFields.value` | 文字列. ブール値. 整数 | カスタムデータフィールドの値。 この値は、次の中から選択したタイプと一致します： `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | 文字列 | 参照する API 応答パスのフィールドを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アクセストークンの更新 {#access-token-refresh}
 
@@ -450,7 +450,7 @@ Adobeは、ユーザーがプラットフォームにログインし直す必要
 | `accessTokenRequest.validations.expectedValue.templatingStrategy` | 文字列 | <ul><li>用途 `PEBBLE_V1` テンプレートを `accessTokenRequest.validations.expectedValue.value`.</li><li> 用途 `NONE` フィールドの値が `accessTokenRequest.validations.expectedValue.value` は定数です。 </li></li> |
 | `accessTokenRequest.validations.expectedValue.value` | 文字列 | テンプレート言語を使用して、HTTP 応答のフィールドにアクセスします。 テンプレートを使用してフィールドをカスタマイズする方法について詳しくは、 [テンプレート規則](./oauth2-authentication.md#templating-conventions) 」セクションに入力します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## テンプレート規則 {#templating-conventions}
 
@@ -465,7 +465,7 @@ Adobeは、ユーザーがプラットフォームにログインし直す必要
 | response.headers | HTTP 応答ヘッダー | ``{{ response.headers.server[0] }}`` |
 | userContext | 現在の認証試行に関するアクセス情報 | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順 {#next-steps}
 

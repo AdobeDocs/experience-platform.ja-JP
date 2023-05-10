@@ -1,10 +1,11 @@
 ---
 title: フローサービス API を使用して、Pinterest Ads のソース接続とデータフローを作成する
 description: フローサービス API を使用してAdobe Experience PlatformをPinterest広告に接続する方法を説明します。
-badge: "ベータ"
+badge: ベータ
 hide: true
 hidefromtoc: true
-source-git-commit: 6a549a8c747db8e0e4b9c2feaeb8e84386c63d32
+exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 60%

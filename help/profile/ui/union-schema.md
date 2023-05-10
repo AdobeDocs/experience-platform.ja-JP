@@ -19,7 +19,7 @@ Adobe Experience Platformユーザーインターフェイス (UI) では、組�
 
 この UI ガイドでは、 [!DNL Experience Platform] リアルタイム顧客プロファイルデータの管理に関連するサービス。 このガイドを読む前、または UI で作業する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNL Real-Time Customer Profile]](../home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):有効 [!DNL Real-Time Customer Profile] に取り込む際に異なるデータソースの ID を結合することで [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 

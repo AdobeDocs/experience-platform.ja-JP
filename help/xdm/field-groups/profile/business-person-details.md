@@ -4,7 +4,7 @@ description: このドキュメントでは、「XDM ビジネスユーザー詳
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '598'
 ht-degree: 17%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 17%
 | `isDeleted` | ブール値 | この人物がMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `organizations` | 文字列の配列 | 人物が働く組織名のリスト。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

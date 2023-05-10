@@ -3,7 +3,8 @@ keywords: イベント転送拡張機能；mixpanel;mixpanel イベント転送�
 title: Mixpanel Track Events API イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能は、Adobe Experience Edge ネットワークイベントを Mixpanel に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 2%

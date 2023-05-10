@@ -6,8 +6,8 @@ description: このドキュメントでは、ID XDM データタイプの概要
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 11%
+source-wordcount: '284'
+ht-degree: 10%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 11%
 | `primary` | ブール値 | これが個人のプライマリ ID であるかどうかを示します。 各個人が持つことができるプライマリ ID は 1 つだけです。 |
 | `xid` | 文字列 | 存在する場合、この値は、すべての名前空間内のすべての名前空間スコープ識別子全体で一意の名前空間間識別子を表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

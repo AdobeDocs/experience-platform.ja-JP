@@ -9,7 +9,7 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
@@ -71,13 +71,13 @@ Experience Platform Debugger には、各ソリューションについて以下
  </tbody> 
 </table>
 
-**Adobe Experience Platformタグ**
+**Adobe Experience Platform タグ**
 
 <table id="table_E9574975444A407887E26514D1BB1601"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <p>名前 </p> </td> 
-   <td colname="col2"> <p>タグの名前 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> プロパティ</a> </p> </td> 
+   <td colname="col2"> <p>タグの名前 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=ja" format="https" scope="external"> プロパティ</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>バージョン </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger には、各ソリューションについて以下
   </tr> 
   <tr> 
    <td colname="col1"> <p>環境 </p> </td> 
-   <td colname="col2"> <p>この <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 環境</a> タグライブラリで使用されます </p> </td> 
+   <td colname="col2"> <p>この <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja" format="https" scope="external"> 環境</a> タグライブラリで使用されます </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>拡張機能 </p> </td> 
@@ -139,7 +139,7 @@ Experience Platform Debugger には、各ソリューションについて以下
   </tr> 
   <tr> 
    <td colname="col1"> <p>バージョン </p> </td> 
-   <td colname="col2"> <p><a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external">訪問者 ID</a> ライブラリのバージョン。 </p> </td> 
+   <td colname="col2"> <p><a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=ja" format="html" scope="external">訪問者 ID</a> ライブラリのバージョン。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -186,7 +186,7 @@ Experience Platform Debugger には、各ソリューションについて以下
   </tr> 
   <tr> 
    <td colname="col1"> <p>オファー     名前</p> </td> 
-   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> オファー</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
+   <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja" format="html" scope="external"> オファー</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>オファー ID </p> </td> 

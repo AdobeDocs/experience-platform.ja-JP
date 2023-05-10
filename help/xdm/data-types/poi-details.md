@@ -6,8 +6,8 @@ description: このドキュメントでは、目標地点の詳細の XDM デ�
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 21%
+source-wordcount: '201'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 21%
 | `poiID` | 文字列 | POI の一意の ID。 |
 | `type` | 文字列 | POI 定義の管理者が選択したタイピングスキーマを使用した POI の一般的なタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

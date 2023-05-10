@@ -6,7 +6,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 87%
+ht-degree: 92%
 
 ---
 
@@ -78,9 +78,9 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 * **[!UICONTROL ホスト]**：SFTP ストレージの場所のアドレス
 * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
 * **[!UICONTROL パスワード]**：SFTP ストレージの場所にログインするためのパスワード
-* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 **[!UICONTROL SSH キーを使用した SFTP]** 認証タイプを選択して SFTP ストレージの場所に接続する場合：
@@ -91,9 +91,9 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 * **[!UICONTROL ポート]**：SFTP ストレージの場所で使用されるポート
 * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
 * **[!UICONTROL SSH キー]**：SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。 秘密鍵は、Base64 でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
-* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細 {#destination-details}
 

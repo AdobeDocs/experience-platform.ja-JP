@@ -7,7 +7,7 @@ exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 53%
+ht-degree: 61%
 
 ---
 
@@ -23,13 +23,13 @@ Experience Platformは、サードパーティの支払い申請からデータ�
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Square] と Platform を接続する方法について説明します。
 
-## 接続 [!DNL Square] API を使用して Platform に接続
+## API を使用して [!DNL Square] と Platform を接続する
 
 * [フローサービス API を使用して Square ベース接続を作成する](../../tutorials/api/create/payments/square.md)
-* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用して、支払いソースのデータフローを作成します](../../tutorials/api/collect/payments.md)
 
-## 接続 [!DNL Square] UI を使用して Platform に接続
+## UI を使用した [!DNL Square] の Platform への接続
 
 * [UI での Square ソース接続の作成](../../tutorials/ui/create/payments/square.md)
 * [UI での支払いソース接続のデータフローの作成](../../tutorials/ui/dataflow/payments.md)

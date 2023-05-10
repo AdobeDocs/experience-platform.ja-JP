@@ -6,8 +6,8 @@ description: このドキュメントでは、目標地点インタラクショ�
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 6%
+source-wordcount: '185'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 | `poiEntries` | オブジェクト | 個人が POI に入った回数を表します。 次の 2 つのプロパティが含まれます。 <ul><li>`id`:測定の一意の ID。</li><li>`value`:測定の定量化可能値。</li></ul> |
 | `poiExits` | オブジェクト | 個人が POI から出た回数を表します。 次の 2 つのプロパティが含まれます。 <ul><li>`id`:測定の一意の ID。</li><li>`value`:測定の定量化可能値。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

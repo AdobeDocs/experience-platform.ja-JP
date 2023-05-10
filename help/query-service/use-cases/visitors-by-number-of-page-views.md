@@ -2,7 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
 title: 訪問者をページビュー数別にリスト表示
 description: エクスペリエンスイベントを使用して、ページビュー数別に整理された訪問者のリストを取得するクエリを記述する方法について説明します。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

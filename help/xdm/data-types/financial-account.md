@@ -4,8 +4,8 @@ description: このドキュメントでは、金融口座 XDM データ型の�
 exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 10%
+source-wordcount: '103'
+ht-degree: 7%
 
 ---
 
@@ -22,6 +22,6 @@ ht-degree: 10%
 | `financialAccountName` | [!UICONTROL 文字列] | アカウントに割り当てられた名前。 |
 | `financialAccountType` | [!UICONTROL 文字列] | 金融口座のタイプ（当座預金、貯蓄、退職金など）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

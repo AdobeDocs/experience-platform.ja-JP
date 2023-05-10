@@ -1,8 +1,9 @@
 ---
 title: UI での Chatlio ソース接続の作成
 description: Adobe Experience Platform UI を使用して Chatlio ソース接続を作成する方法を説明します。
-badge: "ベータ"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: ベータ
+exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 22%

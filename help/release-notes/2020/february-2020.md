@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 2 月
-description: Adobe Experience Platformの 2020 年 2 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2020年2月）
+description: Adobe Experience Platform の 2020年2月のリリースノートです。
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
@@ -8,7 +8,7 @@ exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 63%
+ht-degree: 70%
 
 ---
 

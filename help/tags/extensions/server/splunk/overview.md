@@ -4,7 +4,7 @@ description: Adobe Experience Platform でのイベント転送用の Splunk 拡
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1051'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ Splunk は、Splunk Event Collector API と通信するための認証メカニ�
 | 顧客行動分析 | 組織は、web サイトから顧客インタラクションイベントデータを取り込み、関連するイベントを Splunk に転送できます。その後、マーケティングチームと分析チームは、Splunk プラットフォーム内で後続の分析を実行して、主要ユーザーのインタラクションと行動を把握できます。 Splunk プラットフォームを使用して、グラフ、ダッシュボード、その他のビジュアライゼーションを生成し、ビジネス関係者に情報を提供できます。 |
 | 大規模なデータセットでの拡張性の高い検索 | 組織は、web サイトからイベントデータとしてトランザクション入力や会話入力を取り込み、イベントを Splunk に転送できます。 その後、分析チームは、Splunk の拡張性の高いインデックス付け機能を活用して、大規模なデータセットをフィルタリングおよび処理し、ビジネスインサイトを導き出し、十分な情報に基づいた意思決定を行うことができます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 

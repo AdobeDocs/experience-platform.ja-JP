@@ -6,8 +6,8 @@ description: このドキュメントでは、「個人の連絡先詳細」ス�
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 21%
+source-wordcount: '166'
+ht-degree: 20%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 21%
 | `mobilePhone` | [電話番号](../../data-types/phone-number.md) | 人物の携帯電話番号を表します。 |
 | `personalEmail` | [メールアドレス](../../data-types/email-address.md) | 人物の電子メールアドレスを表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

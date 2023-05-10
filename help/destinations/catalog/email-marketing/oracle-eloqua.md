@@ -1,6 +1,6 @@
 ---
 keywords: E メール；E メール；E メールの宛先；oracleEloqua;oracle
-title: （ファイル）OracleEloqua 接続
+title: （ファイル）Oracle Eloqua 接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b

@@ -4,8 +4,8 @@ description: このドキュメントでは、内部サイト検索 XDM デー�
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 7%
+source-wordcount: '396'
+ht-degree: 6%
 
 ---
 
@@ -37,6 +37,6 @@ ht-degree: 7%
 | `sortOrder` | [!UICONTROL 文字列] | 組み合わせ先 `sortType`は、検索結果の並べ替え順を昇順または降順で示します。 |
 | `term` | [!UICONTROL 文字列] | 訪問者が入力した内部サイト検索用語。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).

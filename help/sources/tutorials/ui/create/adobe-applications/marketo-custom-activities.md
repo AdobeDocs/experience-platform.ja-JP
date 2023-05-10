@@ -1,7 +1,8 @@
 ---
 title: UI でのMarketo Engageソース接続とカスタムアクティビティデータのデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順を説明します。
-source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
+exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 22%

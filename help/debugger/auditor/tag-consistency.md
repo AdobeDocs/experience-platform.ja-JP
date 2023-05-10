@@ -4,8 +4,8 @@ description: Adobe Experience Platform Debugger で Auditor の機能をテス�
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 44%
+source-wordcount: '123'
+ht-degree: 43%
 
 ---
 
@@ -23,4 +23,4 @@ ht-degree: 44%
 | --- | --- | --- | --- |
 | Adobe Analytics — コードバージョンが一貫している | 5 | 複数のバージョンの Analytics コードが見つかりました。 | Analytics のすべてのインスタンスを最新のバージョンに置き換えてください。<br><br>[追加情報](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ja) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

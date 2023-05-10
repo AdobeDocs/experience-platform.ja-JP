@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Web SDK] は特定の変数を自動的にマッ
 
 ## 処理ルール
 
-エッジネットワークによって収集されたすべてのデータへは、[処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)を介してアクセスできます。In [!DNL Analytics]を使用すると、処理ルールを使用してコンテキストデータを [!DNL Analytics] 変数。
+エッジネットワークによって収集されたすべてのデータへは、[処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ja)を介してアクセスできます。In [!DNL Analytics]を使用すると、処理ルールを使用してコンテキストデータを [!DNL Analytics] 変数。
 
 例えば、次のルールでは、Adobe Analyticsが **内部検索用語 (eVar2)** と **a.x._atag.search.term(Context Data)**.
 
@@ -84,4 +84,4 @@ alloy("event",{
 });
 ```
 
-Adobe Experience Platformを使用したイベントのトラッキングについて詳しくは、 [!DNL Web SDK]を参照してください。 [イベントの追跡](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+Adobe Experience Platformを使用したイベントのトラッキングについて詳しくは、 [!DNL Web SDK]を参照してください。 [イベントの追跡](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja).

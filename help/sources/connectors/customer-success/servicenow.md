@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；servicenow;ServiceNow
+keywords: Experience Platform;ホーム;人気のトピック;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Source Connector の概要
 description: API またはユーザーインターフェイスを使用して ServiceNow をAdobe Experience Platformに接続する方法を説明します。
@@ -7,7 +7,7 @@ exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 76%
+ht-degree: 80%
 
 ---
 

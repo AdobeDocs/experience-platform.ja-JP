@@ -4,8 +4,8 @@ description: スキーマレジストリ API の/rpc/csv2schema エンドポイ�
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 7%
+source-wordcount: '854'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 7%
 | 22 | `$ref` | （説明を参照） | 必須 `dataType` が `object` および `properties` が定義されていません。 これにより、 `$id` オブジェクトタイプの参照オブジェクトの ( 例： `https://ns.adobe.com/xdm/context/person`) をクリックします。 |
 | 23 | `comment` | オプション | 条件 `isIgnored` が `true`の場合、この列は、スキーマのヘッダー情報を提供するために使用されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次を参照してください。 [CSV テンプレート](../assets/sample-csv-template.csv) をクリックして、CSV ファイルのフォーマット方法を決定します。
 

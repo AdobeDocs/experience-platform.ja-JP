@@ -3,8 +3,9 @@ keywords: Experience Platform;ホーム;人気のトピック;Flow Service;
 title: Flow Service API を使用したドラフトデータフロー
 description: Flow Service API を使用してデータフローをドラフト状態に設定する方法を説明します。
 badge: label="新機能" type="Positive"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
-workflow-type: ht
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 100%
 

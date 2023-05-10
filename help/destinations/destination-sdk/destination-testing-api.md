@@ -4,8 +4,8 @@ title: 宛先テスト API の操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 14%
+source-wordcount: '643'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience PlatformUI で宛先への既存の接続が必要です。 読み取り [宛先に接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) および [宛先へのプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。 宛先への接続を確立したら、このエンドポイントへの API 呼び出しで使用する必要がある宛先インスタンス ID を、次の場合に URL から取得します。 [宛先との接続の参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* この API を使用するには、Experience PlatformUI で宛先への既存の接続が必要です。 読み取り [宛先に接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja) および [宛先へのプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。 宛先への接続を確立したら、このエンドポイントへの API 呼び出しで使用する必要がある宛先インスタンス ID を、次の場合に URL から取得します。 [宛先との接続の参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
    >![UI 画像宛先インスタンス ID の取得方法](./assets/get-destination-instance-id.png)
 
 
@@ -161,7 +161,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 | `results.httpCalls.response` | 宛先からAdobeが受け取った応答を含みます。 |
 | `inputProfiles` | 宛先への呼び出し時に書き出されたプロファイルが含まれます。 プロファイルは、ソーススキーマと一致します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 呼び出しに追加されたプロファイルを使用して、宛先設定をテストする {#test-with-added-profiles}
 

@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 1 月
-description: Adobe Experience Platformの 2020 年 1 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2020年1月）
+description: Adobe Experience Platform の 2020年1月のリリースノートです。
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
@@ -8,13 +8,13 @@ exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 66%
+ht-degree: 74%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 01 月 15 日（PT）**
+**リリース日：2020年1月15 日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -50,9 +50,9 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 | 機能 | 説明 |
 |--- | ---|
-| [!DNL Privacy Service] 再ブランディング | 以前の名称「GDPR サービス」は、 [!DNL Privacy Service] は、GDPR に加えて他の規制もサポートするようになったためです。 |
-| 新しい API エンドポイント | のベースパス [!DNL Privacy Service] API は次のように更新されました： `/data/privacy/gdpr` から `/data/core/privacy/jobs`. |
-| 新しい必須の `regulation` プロパティ | で新しいジョブを作成する場合 [!DNL Privacy Service] API, a `regulation` プロパティをリクエストペイロードで指定して、ジョブを追跡する規則を示す必要があります。 指定できる値は、`gdpr` と `ccpa` です。 |
+| [!DNL Privacy Service] のブランド変更 | 以前は「GDPR サービス」と呼ばれていましたが、サービスが GDPR に加えてその他の規制をサポートするようになったので、[!DNL Privacy Service] にブランド変更されました。 |
+| 新しい API エンドポイント | [!DNL Privacy Service] API のベースパスが `/data/privacy/gdpr` から `/data/core/privacy/jobs` に更新されました。 |
+| 新しい必須の `regulation` プロパティ | [!DNL Privacy Service] API で新しいジョブを作成する場合は、リクエストペイロードで `regulation` プロパティを指定し、ジョブを追跡する規制を示す必要があります。指定できる値は、`gdpr` と `ccpa` です。 |
 | [!DNL Adobe Primetime Authentication] のサポート | [!DNL Privacy Service] Adobeからのアクセス/削除リクエストを受け入れるようになりました [!DNL Primetime Authentication]，次を使用 `primetimeAuthentication` を製品値として設定します。 |
 | Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい「**規制タイプ**」ドロップダウン。 |
 

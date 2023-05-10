@@ -6,8 +6,8 @@ description: このドキュメントでは、スキーマレジストリ API �
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 36%
+source-wordcount: '978'
+ht-degree: 35%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 36%
 | `limit` | を `orderby` パラメータ `limit` は、特定のリクエストに対して返す項目の最大数を制限します。 このパラメーターは、 `orderby` パラメータが存在する。<br><br>この `limit` パラメータは正の整数を指定します ( `0` および `500`) *ヒント* 返す項目の最大数に関して。 例： `limit=5` は、リスト内の 5 つのリソースのみを返します。 ただし、この値は厳密に遵守されているわけではありません。 実際の応答サイズは、 `start` パラメーターを指定する場合は、その値を指定します。 |
 | `start` | を `orderby` パラメータ `start` サブセット化された項目リストの開始位置を指定します。 このパラメーターは、 `orderby` パラメータが存在する。 この値は `_page.next` リスト応答の属性で、結果の次のページへのアクセスに使用されます。 この `_page.next` の値が null の場合、追加のページは使用できません。<br><br>通常、結果の最初のページを取得するために、このパラメーターは省略されます。 その後 `start` は、 `orderby` 前のページで受け取ったフィールド。 次に、API 応答は、プライマリ並べ替えプロパティを持つエントリで始まるエントリを返します。 `orderby` 厳密により大きい（昇順の場合）か、厳密により小さい（降順の場合）。<br><br>例えば、 `orderby` パラメーターが `orderby=name,firstname`、 `start` パラメーターには `name` プロパティ。 この場合、リソースの次の 20 個のエントリを「Miller」という名前の直後に表示するには、次のように指定します。 `?orderby=name,firstname&start=Miller&limit=20`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### フィルター {#filtering}
 
@@ -50,7 +50,7 @@ ht-degree: 36%
 | `~` | プロパティが指定された正規表現と一致するかどうかでフィルターします。 | `property=title~test$` |
 | なし | プロパティ名のみを指定すると、プロパティが存在するエントリのみが返されます。 | `property=title` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

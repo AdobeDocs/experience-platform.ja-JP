@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 8%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 8%
 | `personKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 関連するキャンペーンのメンバーである人物の複合 ID。 |
 | `_id` | 文字列 | レコードの一意の ID。 これは、 `campaignMemberID`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 このクラスが概念上他の B2B クラスとどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法については、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md)
 

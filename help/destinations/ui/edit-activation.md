@@ -7,7 +7,7 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 1%
+ht-degree: 26%
 
 ---
 
@@ -19,11 +19,11 @@ Adobe Experience Platformでは、既存のアクティベーションデータ�
 
 既存のアクティベーションデータフローを編集するには、次の手順に従います。
 
-1. にログインします。 [Experience PlatformUI](https://platform.adobe.com/) を選択し、 **[!UICONTROL 宛先]** をクリックします。 選択 **[!UICONTROL 参照]** を上部のヘッダーから開き、既存の宛先データフローを表示します。
+1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。上部のヘッダーから「**[!UICONTROL 参照]**」を選択して、既存の宛先データフローを表示します。
 
    ![宛先の参照](../assets/ui/edit-activation/browse-destinations.png)
 
-2. フィルターアイコンを選択します。 ![フィルターアイコン](../assets/ui/edit-activation/filter.png) をクリックして、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたデータフローのフィルタリングされた選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/edit-activation/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![宛先のフィルタリング](../assets/ui/edit-activation/filter-destinations.png)
 

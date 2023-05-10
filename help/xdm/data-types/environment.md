@@ -6,7 +6,7 @@ description: このドキュメントでは、環境 XDM データタイプの�
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '465'
 ht-degree: 15%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 15%
 | `viewportHeight` | 整数 | エクスペリエンスが表示されたウィンドウ内の垂直方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、これはブラウザーの表示域の高さです。 |
 | `viewPortWidth` | 整数 | エクスペリエンスが表示されたウィンドウ内の水平方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、これはブラウザーの表示域の幅です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

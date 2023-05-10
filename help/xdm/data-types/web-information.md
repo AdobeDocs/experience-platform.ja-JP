@@ -6,8 +6,8 @@ description: このドキュメントでは、Web 情報エクスペリエンス
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 6%
+source-wordcount: '187'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 | `webPageDetails` | [[!UICONTROL Web ページの詳細]](./webpage-details.md) | Web インタラクションが発生した Web ページに関する詳細を説明します。 |
 | `webReferrer` | [!UICONTROL オブジェクト] | Web インタラクションのリファラーを表します。これは、現在の Web インタラクションが記録される直前に訪問者が来た URL です。 次のサブプロパティが含まれます。 <ul><li>`URL`:リファラー URL。</li><li>`type`:リファラータイプ。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

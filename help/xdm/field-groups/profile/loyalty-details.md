@@ -6,8 +6,8 @@ description: このドキュメントでは、「ロイヤルティ詳細」ス�
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 12%
+source-wordcount: '302'
+ht-degree: 11%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 12%
 | `tier` | 文字列 | 人物が登録されているロイヤルティプログラム層をキャプチャします。 |
 | `upgradeDate` | 文字列 | ロイヤルティメンバーが最新の階層レベルにアップグレードされた日付。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

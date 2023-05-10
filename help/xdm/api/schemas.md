@@ -6,7 +6,7 @@ description: Schema Registry API の/schemas エンドポイントを使用す�
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1441'
 ht-degree: 21%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ： `global` (Adobe作成スキーマの場合 ) または `tenant` ：組織が所有するスキーマの場合。 |
 | `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -61,7 +61,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。 `global` (Adobe作成のスキーマの場合 ) または `tenant` ：組織が所有するスキーマの場合。 |
 | `{SCHEMA_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索するスキーマの数を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -139,7 +139,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` および `allOf` で解決、説明を含む |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` および `allOf` を解決、タイトルと説明を含む非推奨のフィールドは、 `meta:status` 属性 `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -236,7 +236,7 @@ curl -X POST \
 | --- | --- |
 | `allOf` | 各オブジェクトが、スキーマが実装するフィールドを持つクラスまたはフィールドグループを参照する、オブジェクトの配列。 各オブジェクトには、1 つのプロパティ (`$ref`) の値が `$id` 新しいスキーマが実装するクラスまたはフィールドグループの。 1 つのクラスを、0 個以上の追加のフィールドグループと共に指定する必要があります。 上記の例では、 `allOf` array はスキーマのクラスです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -297,7 +297,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | この `meta:altId` または URL エンコード済み `$id` 」で指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -325,7 +325,7 @@ curl -X PUT \
 
 **応答**
 
-正常な応答は、更新されたスキーマの詳細を返します。
+応答が成功すると、更新されたスキーマの詳細が返されます。
 
 ```JSON
 {
@@ -362,7 +362,7 @@ curl -X PUT \
 
 ## スキーマの一部を更新 {#patch}
 
-スキーマリクエストを使用して、スキーマの一部を更新することがPATCHできます。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
+スキーマリクエストを使用して、スキーマの一部を更新することがPATCHできます。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
@@ -380,7 +380,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -471,7 +471,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -554,7 +554,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

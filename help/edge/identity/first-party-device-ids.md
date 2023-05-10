@@ -4,14 +4,14 @@ description: Adobe Experience Platform Web SDK 用のファーストパーティ
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 1%
+source-wordcount: '1773'
+ht-degree: 2%
 
 ---
 
 # Platform Web SDK のファーストパーティデバイス ID
 
-Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) を web サイト訪問者に対して送信します。 cookie のライフスパンに関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理するように選択できます。 これらはファーストパーティデバイス ID(FPID) と呼ばれます。
+Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) を web サイト訪問者に対して送信します。 cookie のライフスパンに関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理するように選択できます。 これらは、ファーストパーティデバイス ID（FPID）と呼ばれます。
 
 >[!NOTE]
 >
@@ -219,7 +219,7 @@ ID は次の順序で優先されます。
 | 4 回目の訪問 | 3 回目と 4 回目の訪問の間に、ブラウザーポリシーが原因で ECID が削除されたのに十分な時間が経過しました。 以前の訪問と同様、FPID は設定された方法が原因で残ります。 今回は、前回の訪問と同じ ECID が生成されます。 ユーザーは、Experience PlatformおよびExperience Cloudソリューション全体で、以前の訪問と同じユーザーとして表示されます。 |
 | 5 回目の訪問 | 4 回目と 5 回目の訪問の間に、エンドユーザーはブラウザー内のすべての cookie をクリアしました。 新しい FPID が生成され、新しい ECID の作成をシードするために使用されます。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションで新しい訪問者と見なされます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## FAQ
 

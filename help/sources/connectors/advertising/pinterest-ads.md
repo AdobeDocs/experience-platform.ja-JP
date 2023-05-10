@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Pinterest広告；
 title: Pinterest Ads ソースの概要
 description: API またはユーザーインターフェイスを使用してPinterest Ads をAdobe Experience Platformに接続する方法を説明します。
-badge: "ベータ"
+badge: ベータ
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 13%

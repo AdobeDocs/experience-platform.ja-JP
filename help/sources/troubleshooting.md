@@ -5,7 +5,7 @@ title: ソースのトラブルシューティング
 description: このドキュメントでは、Adobe Experience Platform でのソースに関するよくある質問に対する回答を示します。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 100%
 

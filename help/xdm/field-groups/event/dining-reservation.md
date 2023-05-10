@@ -5,7 +5,7 @@ description: このドキュメントでは、「食事の予約スキーマ」�
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 6%
 | `specialOccasion` | ブール値 | 予約が特別な日に行われているかどうかを示します。 |
 | `status` | 整数 | 食事の予約のステータス。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

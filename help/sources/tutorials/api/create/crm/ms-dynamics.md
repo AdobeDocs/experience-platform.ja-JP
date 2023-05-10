@@ -8,7 +8,7 @@ exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 53%
+ht-degree: 56%
 
 ---
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.serviceUri` | 次に、 [!DNL Dynamics] インスタンス。 |
 | `auth.params.username` | ユーザー名 [!DNL Dynamics] アカウント |
 | `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Dynamics] アカウント |
-| `connectionSpec.id` | この [!DNL Dynamics] 接続仕様 ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | [!DNL Dynamics] 接続仕様 ID：`38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **応答**
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `auth.params.serviceUri` | 次に、 [!DNL Dynamics] インスタンス。 |
 | `auth.params.servicePrincipalId` | のクライアント ID [!DNL Dynamics] アカウント この ID は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
 | `auth.params.servicePrincipalKey` | サービスプリンシパル秘密鍵。 この資格情報は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
-| `connectionSpec.id` | この [!DNL Dynamics] 接続仕様 ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | [!DNL Dynamics] 接続仕様 ID：`38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **応答**
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Microsoft Dynamics] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Microsoft Dynamics] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)

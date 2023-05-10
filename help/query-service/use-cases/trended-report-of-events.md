@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
 title: イベントのトレンドレポートの作成
 description: エクスペリエンスイベントを使用して、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成するクエリの作成方法を説明します。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 

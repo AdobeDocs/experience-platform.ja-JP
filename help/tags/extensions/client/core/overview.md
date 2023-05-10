@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Core タグ拡張機能は、Adobe Experience Platform でリリースされたデフォルトの拡張機能です。
 
@@ -524,7 +524,7 @@ URL に存在する 1 つまたは複数のサブドメインを指定します�
 条件が true を返す最大回数を指定します。選択できる項目は次のとおりです。
 
 * Page view
-* セッション
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -592,7 +592,7 @@ Core 拡張機能は、すべての Adobe Experience Platform ユーザーが使
 
 *JavaScript*
 
-JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
+JavaScript のカスタムコードアクションを作成する場合、アクションから [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返すことがあります。ルール内の次のアクションは、返されたプロミスが解決された場合にのみ実行されます。プロミスが拒否された場合、ルールの次のアクションは実行されません。
 
 >[!NOTE]
 >
@@ -799,7 +799,7 @@ CSS セレクターチェーン：
 * URL
 * Hostname
 * Pathname
-* プロトコル
+* Protocol
 * リファラー
 * Title
 

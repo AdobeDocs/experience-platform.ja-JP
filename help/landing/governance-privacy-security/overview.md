@@ -2,12 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: ガバナンス、プライバシー、セキュリティの概要
-description: Adobe Experience Platformには、ビジネスプラクティス、法的義務および開発プロセスに準拠するために、収集されたエクスペリエンスデータを自信を持って制御できるサービスおよびツールがいくつか用意されています。
+description: Adobe Experience Platform には、ビジネスプラクティス、法的義務および開発プロセスに準拠するために、収集されたエクスペリエンスデータを確信を持って制御できるサービスやツールがいくつか用意されています。
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 18%
+ht-degree: 24%
 
 ---
 
@@ -25,13 +25,13 @@ Experience Platformには、ビジネスプラクティス、法的義務、開�
 
 ## データガバナンス {#governance}
 
-データガバナンスは、Experience Platformのすべての機能と組み合わされた必須の概念です。 データガバナンスは、Platform を通じたジャーニー全体を通じてデータを制御し、理解する能力を表します。 これには、データ品質、データ系列、データのカタログ化などの維持が含まれます。
+データガバナンスは、Experience Platformのすべての機能と組み合わされた必須の概念です。 データガバナンスは、Platform を通じたジャーニー全体を通じてデータを制御し、理解する能力を表します。 これには、データ品質、データ系列、データのカタログ化などを維持管理することが必要になります。
 
 ### Adobe Experience Platform のデータガバナンス {#data-governance}
 
 Adobe Experience Platform Data Governance は、Platform サービスとして、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 データ使用のラベル付け、データ使用ポリシー、ポリシーの適用、データ系列など、様々なレベルでExperience Platform内で重要な役割を果たします。
 
-詳しくは、 [データガバナンスの概要](../../data-governance/home.md) を参照してください。
+詳しくは、[データガバナンスの概要](../../data-governance/home.md)を参照してください。
 
 ### カタログとデータセット {#catalog}
 
@@ -65,7 +65,7 @@ IAB Transparency and Consent Framework(TCF)2.0 に従って顧客の同意デー
 
 データの整合性とセキュリティは、ビジネスに不可欠です。このリスクには、業界をリードするセキュリティ機能が必要です。 この課題に対応するために、Platform は、データ操作を保護するためのツールをいくつか提供します。
 
-### データの暗号化
+### データ暗号化
 
 すべての Platform データは、送信時および保存時に暗号化されます。 次のドキュメントを参照してください： [Platform でのデータ暗号化](./encryption.md) を参照してください。
 
@@ -81,7 +81,7 @@ Experience Platform は、デジタルエクスペリエンスアプリケーシ
 
 開発の柔軟性の必要性に対処するため、Experience Platformは、1 つの Platform インスタンスを別々の仮想環境に分割し、独自の開発ライフサイクルに基づいてデジタルエクスペリエンスアプリケーションを発展させるのに役立つサンドボックスを提供します。
 
-詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。
+詳しくは、[サンドボックスの概要](../../sandboxes/home.md)を参照してください。
 
 ## 次の手順
 

@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 8%
+source-wordcount: '237'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 | `campaignName` | 文字列 | キャンペーンの名前。 |
 | `campaignType` | 文字列 | キャンペーンタイプまたはターゲットオーディエンス。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 このクラスが概念上他の B2B クラスとどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法については、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md)
 

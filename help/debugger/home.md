@@ -31,7 +31,7 @@ Web ページ上で Platform Debugger を実行すると、拡張機能は公開
 
 ## ユースケース {#section-9fcd0583ed184943a8f0c2d3c00658e0}
 
-Platform Debugger で収集された情報を使用して、Experience Cloudソリューションの実装方法をより深く理解できます。 例：
+Platform Debugger で収集された情報を使用して、Experience Cloudソリューションの実装方法をより深く理解できます。 以下に例を示します。
 
 * **タグ**:ページにデプロイされるプロパティ、環境、ビルドを確認します。
 * **Adobe Target**:どのアクティビティが適合し、どれが適合しないかとその理由を確認します。

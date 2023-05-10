@@ -5,8 +5,8 @@ description: このドキュメントでは、Adobe Experience Cloud の権限�
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 97%
 
 ---
 

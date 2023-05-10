@@ -4,8 +4,8 @@ description: Adobe Experience Platformの Pega Customer Decision Hub の宛先�
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 7%
+source-wordcount: '1007'
+ht-degree: 27%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 ## ユースケース
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Customer Decision Hub] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL Customer Decision Hub] 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
 
 ### 通信業
 
@@ -41,7 +41,7 @@ ht-degree: 7%
 * OAuth 2.0 の設定 [クライアント資格情報を使用したクライアント登録](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 付与タイプを [!DNL Pega Customer Decision Hub] インスタンス。
 * 設定 [リアルタイム実行データフロー](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) (Adobeセグメントメンバーシップデータフロー ) [!DNL Pega Customer Decision Hub] インスタンス。
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 [!DNL Pega Customer Decision Hub] では、以下の表で説明するカスタムユーザー ID のアクティベーションをサポートしています。 詳しくは、 [id](/help/identity-service/namespaces.md).
 
@@ -49,22 +49,22 @@ ht-degree: 7%
 |---|---|
 | *CustomerID* | プロファイルを一意に識別する共通のユーザー ID [!DNL Pega Customer Decision Hub] とAdobe Experience Platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子 (*CustomerID*)、属性（姓、名、場所など） およびセグメントメンバーシップデータ。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミング先は、常に API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、セグメント評価に基づいて、コネクタが更新を宛先プラットフォームに送信します。 詳しくは、 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先への接続 {#connect}
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -78,7 +78,7 @@ ht-degree: 7%
 * **[!UICONTROL クライアント ID]**:OAuth 2 [!DNL client ID] が [!DNL Pega Customer Decision Hub] インスタンス。
 * **[!UICONTROL クライアント秘密鍵]**:OAuth 2 [!DNL client secret] が [!DNL Pega Customer Decision Hub] インスタンス。
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 への認証接続を確立した後 [!DNL Pega Customer Decision Hub]に設定し、宛先に次の情報を入力します。
 
@@ -86,21 +86,21 @@ ht-degree: 7%
 
 宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
-* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
+* **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL ホスト名]**:プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+詳しくは、[ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
 ### 宛先属性 {#attributes}
 
-内 [[!UICONTROL 属性を選択]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 手順に従い、Adobeでは、 [和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas). 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
+[[!UICONTROL 属性を選択]](../../ui/activate-streaming-profile-destinations.md#select-attributes)の手順では、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の ID を選択することをお勧めします。宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
 ### マッピングの例：プロファイル更新のアクティブ化 [!DNL Pega Customer Decision Hub] {#mapping-example}
 
@@ -118,7 +118,7 @@ ht-degree: 7%
 
 ![ID マッピング](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
-## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
+## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 プロファイルのセグメントメンバーシップの更新が成功すると、セグメント識別子、名前、ステータスが Pega マーケティングセグメントメンバーシップデータストアに挿入されます。 メンバーシップデータは、 [!DNL Pega Customer Decision Hub]、以下に示すように。
 ![顧客プロファイルデザイナーを使用して顧客セグメントメンバーシップデータをAdobeに関連付けることができる UI 画面の画像](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
@@ -139,4 +139,4 @@ ht-degree: 7%
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](/help/data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。

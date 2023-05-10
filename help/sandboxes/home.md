@@ -5,7 +5,7 @@ title: サンドボックスの概要
 description: サンドボックスは、Experience Platform の単一インスタンス内の仮想パーティションで、デジタルエクスペリエンスアプリケーションの開発プロセスとシームレスに統合できます。
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 100%
 

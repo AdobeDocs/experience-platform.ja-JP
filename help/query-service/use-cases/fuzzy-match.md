@@ -1,7 +1,8 @@
 ---
 title: クエリサービスでのあいまい一致
 description: 複数のデータセットの結果を組み合わせ、選択した文字列とほぼ一致させる Platform データの照合を実行する方法を説明します。
-source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
+exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 1%
@@ -363,5 +364,3 @@ WHERE
 {})
 '''.format(matching_sql))
 ```
-
-

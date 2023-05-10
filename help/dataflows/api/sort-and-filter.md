@@ -4,8 +4,8 @@ description: このチュートリアルでは、フローサービス API の�
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 7%
+source-wordcount: '586'
+ht-degree: 4%
 
 ---
 
@@ -127,7 +127,7 @@ GET /flows?property=state==enabled&count=true
 | `providerId` | `/connectionSpecs?property=providerId==3897933` |
 | `attributes.{ATTRIBUTE_NAME}` | `/connectionSpecs?property=attributes.sampleAttribute="abc"` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`flowSpec`**
 
@@ -137,7 +137,7 @@ GET /flows?property=state==enabled&count=true
 | `name` | `/flowSpecs?property=name==TestConn` |
 | `providerId` | `/flowSpecs?property=providerId==3897933` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`connection`**
 
@@ -149,7 +149,7 @@ GET /flows?property=state==enabled&count=true
 | `connectionSpec.id` | `/connections?property=connectionSpec.id==938903,849048` |
 | `state` | `/connections?property=state==enabled` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`sourceConnection`**
 
@@ -159,7 +159,7 @@ GET /flows?property=state==enabled&count=true
 | `connectionSpec.id` | `/sourceConnections?property=connectionSpec.id==938903,849048` |
 | `baseConnectionId` | `/sourceConnections?property=baseConnectionId==983908,4908095` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`targetConnection`**
 
@@ -169,7 +169,7 @@ GET /flows?property=state==enabled&count=true
 | `connectionSpec.id` | `/targetConnections?property=connectionSpec.id==938903,849048` |
 | `baseConnectionId` | `/targetConnections?property=baseConnectionId==983908,4908095` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`flow`**
 
@@ -183,7 +183,7 @@ GET /flows?property=state==enabled&count=true
 | `sourceConnectionIds` | `/flows?property=sourceConnectionIds[]==9874984,6980696` |
 | `targetConnectionIds` | `/flows?property=targetConnectionIds[]==598590,690666` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`run`**
 
@@ -193,7 +193,7 @@ GET /flows?property=state==enabled&count=true
 | `flowId` | `/runs?property=flowId==8749844` |
 | `state` | `/runs?property=state==inProgress` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

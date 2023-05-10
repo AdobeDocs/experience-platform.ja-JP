@@ -6,8 +6,8 @@ description: このドキュメントでは、Order Experience Data Model(XDM) �
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 23%
+source-wordcount: '186'
+ht-degree: 22%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 23%
 | `purchaseID` | 文字列 | 販売者がこの購入または契約に割り当てた一意の ID。 これは販売者が定義するので、ID が一意であるという保証はありません。 |
 | `purchaseOrderNumber` | 文字列 | 購入者がこの購入または契約に割り当てた一意の ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

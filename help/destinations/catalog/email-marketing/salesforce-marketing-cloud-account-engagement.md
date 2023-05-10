@@ -2,10 +2,11 @@
 title: SalesforceMarketing Cloudアカウントエンゲージメント
 description: SalesforceMarketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用して、アカウントデータをエクスポートし、SalesforceMarketing Cloudアカウントエンゲージメント内で、ビジネスニーズに応じてアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
-source-git-commit: 65feb905bfa7d663d1d463d94af428a04dc55b01
+exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
+source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
 workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 34%
 
 ## ユースケース {#use-cases}
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Marketing Cloud Account Engagement] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL Marketing Cloud Account Engagement] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
 ### マーケティングキャンペーン用の連絡先へのメール送信 {#use-case-send-emails}
 

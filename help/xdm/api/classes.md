@@ -6,7 +6,7 @@ description: スキーマレジストリ API の/classes エンドポイント�
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1508'
 ht-degree: 24%
 
 ---
@@ -47,7 +47,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | クラスの取得元のコンテナ： `global` (Adobe作成クラスの場合 ) または `tenant` 組織が所有するクラスの場合。 |
 | `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -70,7 +70,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -127,7 +127,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | 取得するクラスを格納するコンテナ。 `global` (Adobe作成クラスまたは `tenant` 組織が所有するクラスの場合。 |
 | `{CLASS_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索するクラスの |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -153,7 +153,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` および `allOf` で解決、タイトルや説明なし |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` および `allOf` で解決、説明を含む |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `_{TENANT_ID}` | 組織の `TENANT_ID` 名前空間。内の他のリソースとの競合を避けるために、組織で作成されるすべてのリソースにこのプロパティを含める必要があります [!DNL Schema Registry]. |
 | `allOf` | 新しいリストによってプロパティが継承されるリソースのクラス。配列内の `$ref` オブジェクトの 1 つが、クラスの動作を定義します。この例では、クラスは「レコード」動作を継承します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -408,7 +408,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | この `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -529,7 +529,7 @@ curl -X PUT \
 
 ## クラスの一部を更新する {#patch}
 
-クラスの一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
+クラスの一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
@@ -545,7 +545,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL エンコードされた `$id` URI or `meta:altId` 更新するクラスの。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -647,7 +647,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL エンコードされた `$id` URI or `meta:altId` を削除します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

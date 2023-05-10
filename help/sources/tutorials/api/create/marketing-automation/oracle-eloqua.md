@@ -88,7 +88,7 @@ curl -X POST \
 | `name` | [!DNL Oracle Eloqua] ベース接続名。この値を使用してベース接続を検索できるので、わかりやすい名前を指定することをお勧めします。 |
 | `description` | （オプション）ベース接続に関する補足情報を提供するために含めることができるプロパティ。 |
 | `auth.specName` | 接続に使用する認証タイプ。 |
-| `auth.params.endpoint` | のエンドポイント [!DNL Oracle Eloqua] サーバー。 |
+| `auth.params.endpoint` | [!DNL Oracle Eloqua] サーバーのエンドポイント。 |
 | `auth.params.username` | の [!DNL Oracle Eloqua] アカウント |
 | `auth.params.password` | [!DNL Oracle Eloqua] アカウントに対応するパスワード。 |
 | `connectionSpec.id` | [!DNL Oracle Eloqua] ソースの接続仕様 ID の値は、`35d6c4d8-c9a9-11eb-b8bc-0242ac130003` に固定されています。 |

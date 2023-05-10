@@ -1,13 +1,13 @@
 ---
 title: Adobe Analytics Assurance での表示
 description: このガイドでは、Adobe AnalyticsをAdobe Experience Platform Assurance と共に使用する方法を説明します。
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '359'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # アシュランスのAdobe Analytics表示
 

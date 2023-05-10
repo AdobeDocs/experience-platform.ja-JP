@@ -7,7 +7,7 @@ exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1797'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 このガイドは、Adobe Experience Platformユーザーインターフェイス (UI) の使用方法の紹介として機能し、様々なコンポーネントの用途を説明し、詳細なドキュメントへのリンクを提供します。
 
-Adobe Experience Platformの詳細については、 [Experience Platformの概要](home.md).
+Adobe Experience Platform について詳しくは、[Experience Platform の概要](home.md)を参照してください。
 
 ## ホーム画面
 

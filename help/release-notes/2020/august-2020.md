@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 8 月
-description: Adobe Experience Platformの 2020 年 8 月のリリースノート。
+title: Adobe Experience Platform リリースノート 2020年8月
+description: Adobe Experience Platform の 2020年8月のリリースノート。
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
@@ -8,7 +8,7 @@ exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 29%
+ht-degree: 31%
 
 ---
 

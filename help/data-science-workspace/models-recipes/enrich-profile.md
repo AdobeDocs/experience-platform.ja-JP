@@ -8,7 +8,7 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 15%
+ht-degree: 20%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデ
 
 クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。独自のスキーマの作成を開始するには、次のチュートリアルの手順に従います： [スキーマエディターを使用したスキーマの作成](../../xdm/tutorials/create-schema-ui.md). データセットを有効にする前に、 [!DNL Profile]の場合は、データセットのスキーマにプライマリ id フィールドを設定し、次にのスキーマを有効にする必要があります。 [!DNL Profile]. データが [!DNL Profile]-enabled データセット。同じデータも [!DNL Profile] レコード。
 
-を使用してスキーマを作成する場合は、 [!DNL Schema Registry] API を使用する場合は、まず [[!DNL Schema Registry] 開発者ガイド](../../xdm/api/getting-started.md) ～に関するチュートリアルを試みる前に [API を使用したスキーマの作成](../../xdm/tutorials/create-schema-api.md).
+[!DNL Schema Registry] API を使用してスキーマを作成する場合は、[[!DNL Schema Registry] 開発者ガイド](../../xdm/api/getting-started.md)を参照してから、[API を使用したスキーマの作成](../../xdm/tutorials/create-schema-api.md)に関するチュートリアルを試してください。
 
 スキーマとデータセットの準備が整ったら、適切なモデルを使用してスコアリングの実行を実行し、スコアリングデータを生成してデータセットに取り込むことができます。
 
@@ -45,7 +45,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデ
 
 スコアリングデータインサイトを生成し、 [!DNL Profile]有効なデータセットの場合は、 [!DNL Segment Builder].
 
-この [!DNL Segment Builder] は、操作できる豊富なワークスペースを提供します。 [!DNL Profile] データ要素。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。フォロー： [[!DNL Segment Builder] ユーザーガイド](../../segmentation/ui/segment-builder.md) 詳しくは、以下を参照してください。
+この [!DNL Segment Builder] は、操作できる豊富なワークスペースを提供します。 [!DNL Profile] データ要素。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。フォロー： [[!DNL Segment Builder] ユーザーガイド](../../segmentation/ui/segment-builder.md) 詳しくは、以下を参照してください。
 
 - 属性、イベントおよび既存のオーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成する。
 - ルールビルダーキャンバスとコンテナを使用した、セグメントルールの実行順序の制御。

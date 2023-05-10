@@ -6,14 +6,14 @@ keywords: adobe analytics；変数；analytics；自動マップ；自動マッ�
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '915'
 ht-degree: 35%
 
 ---
 
 # 変数は、 [!DNL Analytics]
 
-以下に、Adobe Experience Platform Edge Network がAdobe Analyticsに自動的にマッピングする変数のリストを示します。 Adobe Analyticsのデータ収集クエリーパラメーターについて詳しくは、 [Analytics 実装ガイド](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+以下に、Adobe Experience Platform Edge Network がAdobe Analyticsに自動的にマッピングする変数のリストを示します。 Adobe Analyticsのデータ収集クエリーパラメーターについて詳しくは、 [Analytics 実装ガイド](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html?lang=ja).
 
 >[!NOTE]
 >このページの情報は、Mobile SDKAdobeにも当てはまります。
@@ -106,4 +106,4 @@ ht-degree: 35%
 | web.webPageDetails.siteSection | ch | AppMeasurement クエリパラメーター CHANNEL のマッピング。 |
 | web.webReferrer.URL | r | AppMeasurement クエリパラメーター REFERRER のマッピング。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

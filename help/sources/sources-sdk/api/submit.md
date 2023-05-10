@@ -29,11 +29,11 @@ ht-degree: 16%
 
 テストを開始するには、まず、次のようにしてコレクションと環境を設定する必要があります。 [!DNL Postman]. 次に、テストする接続仕様 ID を指定します。
 
-###  `authSpecName`
+###   `authSpecName`
 
 接続仕様 ID を入力したら、 `authSpecName` をベース接続に使用している。 選択に応じて、次のいずれかを選択します。 `OAuth 2 Refresh Code` または  `Basic Authentication`. 指定した後、 `authSpecName`を使用する場合は、必要な資格情報を環境に含める必要があります。 例えば、 `authSpecName` as `OAuth 2 Refresh Code`の場合、OAuth 2 に必要な資格情報 ( `host` および `accessToken`.
 
-###  `sourceSpec`
+###   `sourceSpec`
 
 認証仕様パラメータを追加したら、次にソース仕様から必要なプロパティを追加する必要があります。 必要なプロパティは、 `sourceSpec.spec.properties`. の場合、 [!DNL MailChimp Members] 以下の例では、必須プロパティは `listId`は、を意味します。 `listId` また、 [!DNL Postman] 環境。
 

@@ -5,7 +5,7 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイム顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 100%
 

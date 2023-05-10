@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: エンティティ（プロファイルアクセス）API エンドポイント
 type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
@@ -17,7 +17,7 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] RESTful API
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ID によるプロファイルデータへのアクセス
 

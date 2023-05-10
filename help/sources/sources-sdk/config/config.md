@@ -5,8 +5,8 @@ description: このドキュメントでは、セルフサービスソース（�
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 23%
+source-wordcount: '294'
+ht-degree: 22%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 23%
 | `sourceSpec` | この `sourceSpec` 配列には、ソースに関する一般的な情報が含まれます。これには、UI でソースを提示するために必要な属性、ドキュメントリンク、ページネーション、ヘッダー、本文、スケジュールに関するパラメーターに関する情報が含まれます。 さらに、 `sourceSpec` は、ベース接続からソース接続を作成するために必要なパラメータのスキーマを表し、ソース接続を作成するために必要です。 |
 | `exploreSpec` | この `exploreSpec` 配列は、ソースに含まれるオブジェクトの調査と検査に必要なパラメータを定義します。 この `exploreSpec` また、オブジェクトを調査および検査する際に返される応答形式も定義します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 接続仕様値の入力
 

@@ -6,8 +6,8 @@ description: このドキュメントでは、ブラウザーの詳細 XDM デ�
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 24%
+source-wordcount: '263'
+ht-degree: 23%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 24%
 | `viewportHeight` | 整数 | イベントが表示されたウィンドウ内の垂直方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、これはブラウザーの表示域の高さです。 |
 | `viewportWidth` | 整数 | イベントが表示されたウィンドウ内の水平方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、これはブラウザーの表示域の幅です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -6,7 +6,7 @@ exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 46%
+ht-degree: 57%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->この [!DNL Teradata Vantage] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Teradata Vantage] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -33,11 +33,11 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Teradata Vantage] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次のために [!DNL Flow Service] ～とつながる [!DNL Teradata Vantage]に値を入力する場合は、次の接続プロパティを指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `connectionString` | 接続文字列は、データソースに関する情報とその接続方法を提供する文字列です。 次の接続文字列パターン： [!DNL Teradata Vantage] が `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Teradata Vantage] 次に該当： `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
@@ -100,7 +100,7 @@ curl -X POST \
 }
 ```
 
-このチュートリアルに従って、 [!DNL Teradata Vantage] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Teradata Vantage] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
-* [を使用してデータテーブルの構造と内容を調べる [!DNL Flow Service] API](../../explore/tabular.md)
+* [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)

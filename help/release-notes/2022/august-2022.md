@@ -3,8 +3,8 @@ title: Adobe Experience Platform リリースノート 2022年8月
 description: Adobe Experience Platform の 2022年8月のリリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
-workflow-type: ht
-source-wordcount: '2109'
+workflow-type: tm+mt
+source-wordcount: '2082'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 
 ### アトリビューション AI
 
-アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
+アトリビューション AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが定量化する際に役立ちます。
 
 **更新された機能**
 
@@ -38,7 +38,7 @@ AI／ML サービスは、マーケティングアナリストや実務担当者
 | ------- | ----------- |
 | プライバシーのサポート | <ul><li> アトリビューション AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割およびアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。この属性は、ラベルなどのオブジェクトに追加されるメタデータにすることができます。管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。  </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **メモ**：既存のヘルスケアシールドのお客様は、追加の通知が届くまでアトリビューション AI を利用できません。
 
@@ -54,7 +54,7 @@ Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 | ------- | ----------- |
 | プライバシーのサポート | <ul><li> 顧客 AI は、製品アプリケーション内の機能とオブジェクトの[権限](../../../help/access-control/abac/ui/permissions.md)を管理するユーザーの役割とアクセスポリシーの定義をサポートするようになりました。 </li><li>監査ログのリソースは、アクティビティが発生すると自動的に記録されます。</li><li> [属性ベースのアクセス制御](../../access-control/abac/overview.md)により、管理者は特定の属性に基づいて、特定のオブジェクトや機能へのアクセスを制御できます。 これらの属性は、オブジェクトに追加されるメタデータ（ラベルなど）にすることができます。 管理者は、特定のフィールドと、これらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義することもできます。</li><li>顧客 AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。 </li><li>モデルの入出力に使用されるすべてのデータセットは、Platform のガイドラインに従います。Platform データ暗号化は、保存中および送信中のデータに適用されます。[データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)について詳しくは、ドキュメントを参照してください。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **メモ**：既存の Healthcare Shield のお客様は、追加の通知が届くまで顧客 AI を利用できません。
 
@@ -82,7 +82,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 | --- | --- |
 | 警告を含むレコードの取り込みのサポート | Data Prep では、警告（重要でないエラー）をフィールドにローカライズし、残りの行を取り込めるようになりました。すべてのマッパー変換エラーが警告としてレポートされるようになりました。また、部分的に取り込んだ行は成功と見なされ、警告が表示されるようになりました。モニタリングは、警告および診断の詳細を含むレコードに対してもサポートされます。警告を含むレコードの部分的な取り込みは、現在、ストリーミングデータでのみ使用できます。詳しくは、[警告を含むレコードの取り込み](../../sources/tutorials/ui/monitor-streaming.md)に関するドキュメントを確認してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
@@ -96,7 +96,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 | ----------- | ----------- |
 | （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;の宛先では、データ収集に [Edge Network Server API](../../server-api/overview.md) を使用する必要があります。さらに、すべての Server API 呼び出しは、[認証済みコンテキスト](../../server-api/authentication.md)で行う必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新しい宛先**
 
@@ -104,7 +104,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 | ----------- | ----------- |
 | [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) は、世界で最も B2B のバイヤーとセラーのインタラクションデータを扱う Sales Execution Platform で、販売データをインテリジェンスに変換するための独自の AI テクノロジーへの大量の投資を行っています。[!DNL Outreach] は、組織がセールスエンゲージメントを自動化、収益インテリジェンスに基づいて行動し、効率、予測可能性、成長を向上させるのに役立ちます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -119,7 +119,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer のルックアップスキーマを作成するためのレコードベースのクラス。 |
 | フィールドグループ | [[!UICONTROL Workfront 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront のすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新された XDM コンポーネント**
 
@@ -135,7 +135,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | データタイプとフィールドグループ | （複数） | 複数のメディアデータタイプとフィールドグループに、新しいフィールドと説明が更新されました。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1582/files)を参照してください。 |
 | (すべて) | （複数） | `enum` フィールドを含むすべてのスキーマオブジェクトには、対応する `meta:enum` フィールドも含まれるようになり、各制約の表示値を示します。詳しくは、次の[プルリクエスト](https://github.com/adobe/xdm/pull/1601/files)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
@@ -148,7 +148,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 結合ポリシーのハード制限 | Platform は、サンドボックスごとに **5** つの結合ポリシーのハード制限を適用するようになりました。サンドボックスに現在 5 つを超える結合ポリシーがある場合、サンドボックスの結合ポリシーが 5 つ未満になるまで、新しい結合ポリシーを作成できま&#x200B;**せん**。 |
 | 孤立したプロファイルエッジ属性のクリーンアップ | すべての組織で、プロファイルサービスは、ユーザーアクティビティ領域の残りのエッジ属性を毎日削除して、システム内のプロファイルをより正確に表示できるようになりました。このクリーンアップは、特定のプロファイルのすべてのプロファイルフラグメントが削除された後に発生し、`com_adobe_aep_profile_region_dataset` が `true` とマークされているデータセットから結合されるプロファイルに影響を与えます。このリリース以前の残りのエッジ属性フラグメントはこの指標に含まれていたため、クリーンアップによってライセンス使用状況ダッシュボードの「アドレス可能なオーディエンス」指標が低下したり、プロファイルダッシュボードの「プロファイル数」指標が低下したりする場合があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルについて詳しくは、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
@@ -179,6 +179,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | [!DNL Teradata Vantage] ソース（ベータ版） | [!DNL Teradata Vantage] ソースを使用すると、ハイブリッドマルチクラウド環境から Experience Platform にデータを取り込むことができます。詳しくは、[[!DNL Teradata Vantage]  ソース](../../sources/connectors/databases/teradata-vantage.md)に関するドキュメントを参照してください。 |
 | Adobe Analytics ソースのクロスリージョンサポート | 任意の地域（米国、英国またはシンガポール）からレポートスイートを取り込めるようになりました。レポートスイートは、ソース接続が作成されている Experience Platform サンドボックスインスタンスと同じ組織にマッピングする必要があります。詳しくは、[UI での Adobe Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

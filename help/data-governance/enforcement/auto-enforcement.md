@@ -5,7 +5,7 @@ title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 100%
 

@@ -146,7 +146,7 @@ CEE フィールドグループ内には、次の目的で使用する必要の�
 
 次に、ドロップダウンの定義済み名前空間のリストから **[!UICONTROL ID 名前空間]** を指定する必要があります。この例では、ECID 名前空間がAdobe Audience Manager ID 以降に選択されています `mcid.id` が使用されている。 選択 **[!UICONTROL 適用]** 更新を確定するには、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマに対する変更を保存します。
 
-![変更を保存します。](./images/data-preparation/select_namespace.png)
+![変更内容を保存します](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 

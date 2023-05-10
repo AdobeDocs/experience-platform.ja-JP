@@ -5,7 +5,7 @@ exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 59%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| エンドポイント | のエンドポイント [!DNL Oracle Eloqua] サーバー。 [!DNL Oracle Eloqua] は、複数のデータセンターをサポートしています。 エンドポイントを見つけるには、 [[!DNL Oracle Eloqua] インターフェイス](https://login.eloqua.com) 資格情報を使用して、リダイレクト URL からベース URL の部分をコピーします。 URL パターンの形式は次のとおりです。 `xxx.xx.eloqua.com` そして、 `http` または `https`. |
+| エンドポイント | [!DNL Oracle Eloqua] サーバーのエンドポイント。[!DNL Oracle Eloqua] は、複数のデータセンターをサポートしています。 エンドポイントを見つけるには、 [[!DNL Oracle Eloqua] インターフェイス](https://login.eloqua.com) 資格情報を使用して、リダイレクト URL からベース URL の部分をコピーします。 URL パターンの形式は次のとおりです。 `xxx.xx.eloqua.com` そして、 `http` または `https`. |
 | ユーザー名 | ユーザー名 [!DNL Oracle Eloqua] サーバー。 ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `Eloqua\Andy`. **注意**:バックスラッシュ (`\`)Experience PlatformUI は自動的にバックスラッシュ (`\`) をクリックします。 |
 | パスワード | 次に対応するパスワード： [!DNL Oracle Eloqua] ユーザー名。 |
 

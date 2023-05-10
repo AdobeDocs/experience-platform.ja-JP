@@ -1,13 +1,13 @@
 ---
 title: Places ビュー
 description: このガイドでは、Adobe Experience Platform Assurance の Places ビューに関する詳細情報を説明します。
-source-git-commit: 24f452bdb923179eefe53fdb28d3a92d43e533cd
+exl-id: 23086aae-8894-4350-aa02-7e2faabe000d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
 
 ---
-
 
 # Assurance の Places Service ビュー
 

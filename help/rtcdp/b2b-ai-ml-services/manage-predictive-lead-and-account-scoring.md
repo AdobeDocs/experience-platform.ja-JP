@@ -156,5 +156,5 @@ ht-degree: 5%
 
 このチュートリアルに従うと、スコアを正しく作成および管理できます。 詳しくは、次のドキュメントを参照してください。
 
-* [予測リードとアカウントスコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [リードおよびアカウントの予測スコアリング](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
 * [予測リードおよびアカウントスコアリングジョブの監視](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)

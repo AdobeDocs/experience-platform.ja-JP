@@ -1,10 +1,11 @@
 ---
 description: ファイルベースの宛先のファイル形式オプションの設定
 title: Destination SDKを使用して、ファイルベースの宛先のファイル形式設定オプションを設定する方法について説明します。
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 2%
+source-wordcount: '929'
+ht-degree: 3%
 
 ---
 
@@ -710,10 +711,10 @@ emptyValue -> ""
 
 | 名 | 姓 | 国 | state |
 |---------|----------|---------|--------|
-| マイケル | ローズ | USA | NY |
+| マイケル | ローズ | 米国 | NY |
 | James | Smith |  | null |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 これにより、次のような出力が生成されます。 テーブルからの null 値が、誤ってエスケープされた引用符として書き出されることに注意してください。
 

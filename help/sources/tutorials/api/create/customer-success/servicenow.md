@@ -6,7 +6,7 @@ type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を ServiceNow サーバーに接続する方法について説明します。
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 100%
 

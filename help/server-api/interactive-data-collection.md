@@ -5,7 +5,7 @@ exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 7%
+ht-degree: 19%
 
 ---
 
@@ -63,7 +63,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | はい。 | データストリーム ID。 |
-| `requestId` | `String` | × | 内部サーバーリクエストを関連付けるためのクライアントのランダム ID を指定します。 何も指定されない場合、Edge ネットワークはそれらを生成し、応答で返します。 |
+| `requestId` | `String` | いいえ | 内部サーバーリクエストを関連付けるためのクライアントのランダム ID を指定します。 何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
 
 ### 応答 {#response}
 

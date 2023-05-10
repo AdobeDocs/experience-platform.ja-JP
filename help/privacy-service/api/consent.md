@@ -6,8 +6,8 @@ description: Privacy ServiceAPI を使用して、Experience Cloudアプリケ�
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 5%
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -65,7 +65,7 @@ curl -X POST \
 | `nameSpace` | 各オブジェクト ( `entities` 配列には、次のいずれかを含める必要があります： [標準 id 名前空間](./appendix.md#standard-namespaces) はPrivacy ServiceAPI で認識される。 |
 | `values` | 各ユーザーの値の配列で、指定した `nameSpace`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

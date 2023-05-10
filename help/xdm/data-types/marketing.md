@@ -6,8 +6,8 @@ description: このドキュメントでは、マーケティング XDM デー�
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 7%
+source-wordcount: '137'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 | `campaignName` | 文字列 | マーケティングキャンペーンの名前（例： ） `50%_DISCOUNT_USA` または `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | 文字列 | イベントが関連付けられているマーケティングキャンペーンを識別するために使用できるトラッキングコード。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

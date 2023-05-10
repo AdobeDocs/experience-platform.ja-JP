@@ -6,7 +6,7 @@ description: このドキュメントには、Privacy ServiceAPI の操作に関
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '476'
 ht-degree: 69%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 69%
 | [!DNL Google] 広告 ID | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ ht-degree: 69%
 | `analytics` | 内部的にマッピングされるカスタム名前空間 [!DNL Analytics]ではなく、名前空間サービスで使用されます。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
 | `target` | 内部的に認識されるカスタム名前空間 [!DNL Target]ではなく、名前空間サービスで使用されます。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 使用可能な製品値
 
@@ -75,4 +75,4 @@ ht-degree: 69%
 | ID サービス | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

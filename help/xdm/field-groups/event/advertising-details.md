@@ -4,8 +4,8 @@ description: このドキュメントでは、「広告の詳細」スキーマ�
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 22%
+source-wordcount: '1004'
+ht-degree: 21%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 22%
 | `timePlayed` | [[!UICONTROL 測定]](../../data-types/measure.md) | 特定のタイムドメディアアセットでエンドユーザーが費やした時間。 |
 | `downloadedPlayback` | ブール値 | に設定する場合 `true`は、ダウンロードされた広告セッションの再生によってヒットが生成されたことを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
@@ -52,7 +52,7 @@ ht-degree: 22%
 | `placementID` | 文字列 | 広告のプレースメント ID. |
 | `siteID` | 文字列 | 広告サイトの ID. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
@@ -66,7 +66,7 @@ ht-degree: 22%
 | `index` | 整数 | 親広告ブレーク内の広告のインデックス。 例えば、最初の広告にインデックスがあるとします `0` 2 つ目の広告はインデックスを持ちます `1`. |
 | `playerName` | 文字列 | 広告のレンダリングをおこなうプレーヤーの名前. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
@@ -98,6 +98,6 @@ ht-degree: 22%
 | `viewportHeight` | 整数 | 実行時に測定された、エクスペリエンスが表示されたウィンドウ内の垂直方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、この値はブラウザーのビューポートの高さを示します。 |
 | `viewportWidth` | 整数 | 実行時に測定された、エクスペリエンスが表示されたウィンドウ内の水平方向のサイズ（ピクセル単位）。 Web ビューポートイベントの場合、この値はブラウザービューポートの幅を示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

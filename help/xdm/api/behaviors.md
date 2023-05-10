@@ -6,8 +6,8 @@ description: スキーマレジストリ API の/behaviors エンドポイント
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 28%
+source-wordcount: '425'
+ht-degree: 27%
 
 ---
 
@@ -101,7 +101,7 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | --- | --- |
 | `{BEHAVIOR_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索する動作の数を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

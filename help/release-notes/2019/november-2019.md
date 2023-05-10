@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platformリリースノート 2019 年 11 月
+title: Adobe Experience Platform リリースノート 2019年11月
 description: Adobe Experience Platform の 2019年11月 のリリースノート。
 doc-type: release notes
 last-update: November 18, 2019
@@ -14,7 +14,7 @@ ht-degree: 63%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2019 年 11 月 18 日（PT）**
+**リリース日：2019年11月18日（PT）**
 
 Adobe Experience Platform の新機能：
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
@@ -140,7 +140,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。を使用 [!DNL Real-Time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] では、様々な顧客データを統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供できます。
 
 | 機能 | 説明 |
 | -----------| ---------- |

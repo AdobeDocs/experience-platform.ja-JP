@@ -1,7 +1,8 @@
 ---
 title: 監査クエリ API ガイド
 description: 監査クエリは、開発者がAdobe Experience Platformで何アクションを実行したかを確認できる RESTful API です。
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 9%
@@ -18,6 +19,6 @@ ht-degree: 9%
 
 監査イベントは、アクションタイプ、日時、アクションを実行したユーザーの E メール ID、Adobe Experience Platformの様々な機能のアクションタイプに関連する追加の属性など、Platform のユーザーアクションに関するインサイトを提供します。 API を使用して指標を取得する方法については、 [イベントエンドポイントガイド](./events.md).
 
-## エクスポート
+## 書き出し
 
 監査書き出しを使用すると、ペイロードで取得するイベントを指定して、イベントデータを取得できます。 API を使用して指標を取得する方法については、 [書き出しエンドポイントガイド](./export.md).

@@ -8,7 +8,7 @@ exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->CSV データを Platform に取り込む場合は、 [AI で生成されたレコメンデーションによって作成された XDM スキーマにそのデータをマッピングします。](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。手動でスキーマを作成する必要はありません。
+>CSV データを Platform に取り込む場合は、[そのデータを、AI 生成のレコメンデーションツール（現在はベータ版）で作成された XDM スキーマにマッピング](../../ingestion/tutorials/map-csv/recommendations.md)できます。その際、スキーマを手動で作成する必要はありません。
 
 ## はじめに
 
@@ -28,10 +28,10 @@ ht-degree: 38%
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-このチュートリアルを開始する前に、 [開発者ガイド](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、を参照してください。 [!DNL Schema Registry] API これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（ ヘッダーと使用可能な値には特に注意を払う）が含まれます。`Accept`
+このチュートリアルを開始する前に、 [開発者ガイド](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、を参照してください。 [!DNL Schema Registry] API そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ `Accept` ヘッダーとその取り得る値には特に注意を払います）。
 
 このチュートリアルでは、小売ロイヤルティプログラムのメンバーに関連するデータを記述する「ロイヤルティメンバー」スキーマを作成する手順について説明します。開始する前に、付録にある[完全なロイヤルティメンバースキーマ](#complete-schema)をプレビューできます。
 
@@ -201,7 +201,7 @@ curl -X GET \
 }
 ```
 
-### フィールドグループを追加 {#add-a-field-group}
+### フィールドグループの追加 {#add-a-field-group}
 
 「ロイヤルティメンバー」スキーマが作成され、確認されたので、フィールドグループを追加できます。
 
@@ -298,7 +298,7 @@ curl -X PATCH \
 }
 ```
 
-### さらにフィールドグループを追加
+### さらなるフィールドグループの追加
 
 「ロイヤルティメンバー」スキーマには、さらに 2 つの標準フィールドグループが必要です。追加するには、別のフィールドグループを使用して手順を繰り返します。
 

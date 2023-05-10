@@ -8,13 +8,13 @@ exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 # Platform Web SDK でのAdobe Analytics for Target(A4T) のログ
 
-パーソナライゼーションにAdobe Targetを使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) では、Target レポートとAdobe Analyticsレポートのどちらを選択できます。
+パーソナライゼーションにAdobe Targetを使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja) では、Target レポートとAdobe Analyticsレポートのどちらを選択できます。
 
 Analytics レポートを使用している場合、Adobe Targetは Analytics に次の情報を伝える必要があります。
 

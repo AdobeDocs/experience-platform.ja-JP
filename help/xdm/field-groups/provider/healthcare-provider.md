@@ -4,8 +4,8 @@ description: このドキュメントでは、ヘルスケアプロバイダー�
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 12%
+source-wordcount: '267'
+ht-degree: 11%
 
 ---
 
@@ -30,6 +30,6 @@ ht-degree: 12%
 | `practiceType` | 文字列 | サービスプロバイダーのプラクティスのタイプ。 |
 | `specialties` | 文字列の配列 | このプロバイダーが提供する特産品のリスト。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

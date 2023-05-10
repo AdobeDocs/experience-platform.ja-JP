@@ -6,8 +6,8 @@ description: このドキュメントでは、 E メールアドレス XDM デ�
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 | `statusReason` | 現在の `status`. |
 | `type` | アカウントと個人との関連 ( `work` または `personal`) をクリックします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 電子メールアドレスのデータタイプについて詳しくは、パブリック XDM リポジトリを参照してください。

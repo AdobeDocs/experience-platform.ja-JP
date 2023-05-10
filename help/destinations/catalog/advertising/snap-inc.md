@@ -35,7 +35,7 @@ ht-degree: 32%
 * Snap Inc はセグメント名の変更をサポートしていません。 セグメント名を変更するには、非アクティブ化して名前を変更してからアクティブ化する必要があります。
 * オーディエンスセグメントのメンバーのリテンション期間を定義することはできません。 すべてのメンバーは全期間を保持し、削除されるまでセグメントに含まれます。
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 この *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -90,7 +90,7 @@ ht-degree: 32%
 
 「続行」を選択した後、Adobe Experience Platformにリダイレクトされるまで待ちます。
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 ![宛先の詳細](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 

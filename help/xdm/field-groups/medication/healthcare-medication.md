@@ -4,8 +4,8 @@ description: このドキュメントでは、ヘルスケアの薬のスキー�
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 14%
+source-wordcount: '210'
+ht-degree: 12%
 
 ---
 
@@ -26,10 +26,10 @@ ht-degree: 14%
 | `genericName` | 文字列 | 薬物の総称。 |
 | `lotNumber` | 文字列 | 薬物のバッチの一意の識別子。 |
 | `manufacturerName` | 文字列 | 薬の製造元の名前。 |
-| `quantity` | ダブル | パッケージ内の薬の量。 |
+| `quantity` | Double | パッケージ内の薬の量。 |
 | `status` | 文字列 | 薬物/薬物が有効かどうかを示す一般的なステータス。 |
-| `volume` | ダブル | 薬の量。 |
+| `volume` | Double | 薬の量。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

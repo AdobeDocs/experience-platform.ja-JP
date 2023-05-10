@@ -5,8 +5,8 @@ description: SendGrid の宛先を使用すると、ファーストパーティ�
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 8%
+source-wordcount: '1542'
+ht-degree: 28%
 
 ---
 
@@ -34,7 +34,7 @@ SendGrid は、SendGrid API と通信するための認証メカニズムとし�
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid の宛先に対してデータをアクティブ化する前に、 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 次で作成： [!DNL Experience Platform]. また、 [制限](#limits) の節をこのページの後半に示します。
+SendGrid の宛先に対してデータをアクティブ化する前に、 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja) 次で作成： [!DNL Experience Platform]. また、 [制限](#limits) の節をこのページの後半に示します。
 
 >[!IMPORTANT]
 >
@@ -43,26 +43,26 @@ SendGrid の宛先に対してデータをアクティブ化する前に、 [ス
 >* 現在、プロファイルがExperience Platformのセグメントから削除される際に、SendGrid からプロファイルを削除する機能はありません。
 
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
-SendGrid では、以下の表で説明する ID のアクティブ化がサポートされています。 詳細情報： [id](/help/identity-service/namespaces.md).
+SendGrid では、以下の表で説明する ID のアクティブ化がサポートされています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| 電子メール | メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、 [!DNL Adobe Experience Platform]. Experience Platform ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。<br/><br/> 注意： **SendGrid** では、ハッシュ化された電子メールアドレスをサポートしていないので、変換をおこなわないプレーンテキストデータのみが宛先に送信されます。 |
+| メール | メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、 [!DNL Adobe Experience Platform]. Experience Platform ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。<br/><br/> 注意： **SendGrid** では、ハッシュ化された電子メールアドレスをサポートしていないので、変換をおこなわないプレーンテキストデータのみが宛先に送信されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 
@@ -76,9 +76,9 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションに記載されているフィールドに入力します。
+この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -97,9 +97,9 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
-この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en)するとき、次の情報を指定する必要があります。
+この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)するとき、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**:今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**:将来この宛先を識別するのに役立つオプションの説明です。
@@ -108,17 +108,17 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 この宛先に固有の詳細については、以下の画像を参照してください。
 
@@ -162,13 +162,13 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. 選択 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** をクリックして、宛先のリストに移動します。
+1. **[!UICONTROL 宛先]**／**[!UICONTROL 参照]** を選択して、宛先のリストに移動します。
    ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**.
+1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 次に切り替え： **[!DNL Activation data]** 」タブをクリックし、セグメント名を選択します。
+1. 「**[!DNL Activation data]**」タブに切り替えて、セグメント名を選択します。
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. セグメントの概要を監視し、データセット内で作成された数に対応するプロファイルの数を確認します。
@@ -188,7 +188,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。詳しくは、 [!DNL Adobe Experience Platform] データガバナンスを強制します。詳しくは、 [データガバナンスの概要](/help/data-governance/home.md).
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのようにデータガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
 
 ## その他のリソース {#additional-resources}
 

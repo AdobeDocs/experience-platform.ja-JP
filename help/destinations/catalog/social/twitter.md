@@ -67,7 +67,7 @@ twitterで既存のフォロワーや顧客をターゲットに設定し、Adob
    ![LinkedInへの認証](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. twitter資格情報を入力し、「 」を選択します。 **ログイン**.
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"

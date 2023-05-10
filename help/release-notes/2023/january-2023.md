@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
-workflow-type: ht
-source-wordcount: '2432'
+exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
+source-wordcount: '2414'
 ht-degree: 100%
 
 ---
@@ -38,7 +39,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 | HIPAA 対応 | Healthcare Shield のお客様は、アトリビューション AI およびその他の特定の Experience Platform ベースのアプリケーションで、保護された医療情報を受信、使用、保守または送信できるようになりました。Healthcare Shield は、HIPAA の対象事業者またはビジネスアソシエイトである医療関係のお客様向けです。詳しくは、[HIPAA およびアドビ製品とサービス](https://www.adobe.com/trust/compliance/hipaa-ready.html)のドキュメントを参照してください |
 | 追加のスコアデータセット列の編集 | 既存のモデルを編集する際に、追加のスコアデータセット列（レポート列）を追加または削除できるようになりました。これにより、アトリビューションスコアの柔軟性が拡張され、モデルが既に作成された後で、追加のディメンションに対するインサイトが得られます。詳しくは、[アトリビューション UI ガイド](../../intelligent-services/attribution-ai/user-guide.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、[AI／ML サービス](../../intelligent-services/attribution-ai/overview.md)の概要を参照してください。
 
@@ -52,7 +53,7 @@ Real-Time Customer Data Platform の顧客 AI は、個々のプロファイル�
 | ------- | ----------- |
 | HIPAA 対応 | Healthcare Shield のお客様は、Real-Time Customer Data Platform およびその他の特定の Experience Platform ベースのアプリケーションの顧客 AI で、保護された医療情報を受信、使用、保守または送信できるようになりました。 Healthcare Shield は、HIPAA の対象事業者またはビジネスアソシエイトである医療関係のお客様向けです。詳しくは、[HIPAA およびアドビ製品とサービス](https://www.adobe.com/trust/compliance/hipaa-ready.html)のドキュメントを参照してください |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、[AI／ML サービス](../../intelligent-services/customer-ai/overview.md)の概要を参照してください。
 
@@ -66,7 +67,7 @@ Adobe Assurance を使用すると、モバイルアプリでデータを収集�
 | ------- | ----------- |
 | 検証エディター | 検証エディターに新しい機能強化が追加されました。 これらの機能強化には、検証列、新しいコード作成ツール、改善された表示が含まれます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Assurance について詳しくは、[Assurance のドキュメント](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)を参照してください。
 
@@ -81,7 +82,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 新しいホーム画面 | データ収集 UI のホームページが更新され、生産性を向上させるための便利なオンボーディング情報やリンクが含まれるようになりました。 これには以下が含まれます。<ol><li>基本を学ぶためのドキュメントと推奨されるワークフロー</li><li>最近のプロパティ、ルールおよびデータ要素</li><li>人気の高い拡張機能</li><li>クイックインストール機能を備えた新しい拡張機能のアップデート</li></ol> |
 | イベント転送を使用した [!DNL Google Ads] へのデータの送信 | これで、イベント転送用の [[!DNL Google Ads Enhanced Conversions] API 拡張機能](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)を [Google Oauth 2 シークレット](../../tags/ui/event-forwarding/secrets.md#google-oauth2)と組み合わせて使用し、サーバーサイドのデータをリアルタイムで安全に [!DNL Google Ads] へと送信できるようになりました。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 宛先（更新日：2月2日（PT）） {#destinations}
 
@@ -160,7 +161,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | [[!UICONTROL 気象トリガー]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | `weatherTriggers` フィールドを `weather` オブジェクトの下にネストしました。 |
 | フィールドグループ | [[!UICONTROL XDM 関連ビジネスアカウント]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | フィールドグループが安定しました。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
@@ -190,7 +191,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 外部オーディエンスのメンバーシップの有効期限 | デフォルトでは、外部オーディエンスのメンバーシップは 30 日間保持されます。これよりも長期間保持するには、オーディエンスデータの取り込み中に `validUntil` フィールドを使用します。 |
 | Platform が生成したセグメントメンバーシップの有効期限 | `lastQualificationTime` フィールドに基づき、30 日を超えて `Exited` 状態にあるセグメントメンバーシップは、削除の対象となります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 

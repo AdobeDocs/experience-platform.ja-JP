@@ -6,8 +6,8 @@ description: このドキュメントでは、支払い項目エクスペリエ�
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 26%
+source-wordcount: '161'
+ht-degree: 24%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 26%
 | `paymentType` | 文字列 | この注文の支払方法。使用できる列挙値は次のとおりです。 <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | 文字列 | この支払品目の一意のトランザクション識別子。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -6,7 +6,7 @@ exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
 source-git-commit: 6a9882224cba08718c81a3aead237107b3e47726
 workflow-type: tm+mt
 source-wordcount: '315'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -21,4 +21,4 @@ Adobe Experience Platform Web SDK を使用するには、まず以下をおこ�
 >
 >**11/10/20以降、ファーストパーティ CNAME 実装では、すべての Safari ブラウザーとモバイルiOSデバイスで 7 日間の有効期限が設定されます。**
 
-- Web サイトが既に [Experience CloudID サービス](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) ( 訪問者 API またはAdobe Experience Platform LaunchのExperience CloudID サービス拡張機能を通じて )Web サイトで、Adobe Experience Platform Web SDK への移行中に引き続き使用する場合は、訪問者 API の最新バージョンまたはExperience CloudID サービス拡張機能を使用する必要があります。 詳しくは、 [ID の移行](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) を参照してください。
+- Web サイトが既に [Experience CloudID サービス](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=ja) ( 訪問者 API またはAdobe Experience Platform LaunchのExperience CloudID サービス拡張機能を通じて )Web サイトで、Adobe Experience Platform Web SDK への移行中に引き続き使用する場合は、訪問者 API の最新バージョンまたはExperience CloudID サービス拡張機能を使用する必要があります。 詳しくは、 [ID の移行](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) を参照してください。

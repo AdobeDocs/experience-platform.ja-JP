@@ -7,7 +7,7 @@ exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 36%
+ht-degree: 49%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->この [!DNL Zendesk] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Zendesk] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -29,11 +29,11 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 ## の認証 [!DNL Zendesk] アカウント
 
-[!DNL Zendesk] は、bearer トークンを認証メカニズムとして使用し、 [!DNL Zendesk] API
+[!DNL Zendesk] は、 API と通信するための認証メカニズムとして Bearer トークンを使用します。 [!DNL Zendesk]
 
 この節では、を認証するために完了する必要がある前提条件の手順について説明します。 [!DNL Zendesk] アカウント
 
-* の認証の最初の手順 [!DNL Zendesk] アカウントは、 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk] 登録ページ](https://www.zendesk.com/register/) 登録して Zendesk アカウントを作成します。
+* の認証の最初の手順 [!DNL Zendesk] アカウントは、 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk] 登録ページ](https://www.zendesk.co.jp/register/) 登録して Zendesk アカウントを作成します。
 * 登録が完了したら、 [[!DNL Zendesk] web サイト](https://www.zendesk.com/login/) の **サブドメイン**.
 * 次に、 **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * 最後に、 **[!DNL API token]** 」セクションに入力します。
@@ -44,11 +44,11 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zendesk] と Platform を接続する方法について説明します。
 
-## 接続 [!DNL Zendesk] API を使用して Platform に接続
+## API を使用して [!DNL Zendesk] と Platform を接続する
 
 * [のソース接続とデータフローの作成 [!DNL Zendesk] フローサービス API の使用](../../tutorials/api/create/customer-success/zendesk.md)
 
-## 接続 [!DNL Zendesk] UI を使用して Platform に接続
+## UI を使用した [!DNL Zendesk] の Platform への接続
 
-* [UI での [!DNL Zendesk ]ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
+* [UI での  [!DNL Zendesk ] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
 * [UI での顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

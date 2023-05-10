@@ -1,10 +1,11 @@
 ---
 title: Python と SQLAlchemy を使用した Platform データの管理
 description: SQL の代わりに Python を使用して、SQLAlchemy を使用して Platform データを管理する方法を説明します。
-source-git-commit: 6b7de4236982181eaac2aa37d525604cba31198e
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
+source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -16,11 +17,11 @@ SQLAlchemy を使用して、Adobe Experience Platformデータの管理をよ�
 
 ## はじめに
 
-接続に必要な資格情報を取得するには [!DNL SQLAlchemy] をExperience Platformするには、Platform UI の「クエリ」ワークスペースにアクセスできる必要があります。 現在クエリワークスペースへのアクセス権がない場合は、組織の管理者に問い合わせてください。
+[!DNL SQLAlchemy] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在クエリワークスペースへのアクセス権がない場合は、組織の管理者に問い合わせてください。
 
 ## [!DNL Query Service] 資格情報 {#credentials}
 
-資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. ログイン資格情報の見つけ方の詳細については、 [資格情報ガイド](../ui/credentials.md).
+資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから「**[!UICONTROL クエリ]**」を選択し、続いて「**[!UICONTROL 資格情報]**」を選択します。ログイン資格情報の見つけ方の詳細については、 [資格情報ガイド](../ui/credentials.md).
 
 ![クエリサービスの資格情報の期限が近づいている「資格情報」タブがハイライト表示されています。](../images/use-cases/credentials.png)
 

@@ -3,10 +3,11 @@ title: フローサービス API を使用して、ストリーミング SDK 用
 description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、セルフサービスソースを使用して新しいソースを統合する手順を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 38%
+source-wordcount: '748'
+ht-degree: 37%
 
 ---
 
@@ -44,7 +45,7 @@ ht-degree: 38%
 | {your_source}-label.txt | ソースの名前。ソースカタログに表示されるExperience Platformです。 | メダリア |
 | {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このガイドを完了すると、接続仕様に入力されるので、このファイルは最初は必要ありません。 | `medallia-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

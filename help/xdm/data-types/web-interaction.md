@@ -6,8 +6,8 @@ description: このドキュメントでは、Web インタラクションエク
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 5%
+source-wordcount: '187'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 | `name` | 文字列 | この Web リンクに使用される基準となる名前。 これは分類の目的で使用されます。 |
 | `type` | 文字列 | リンクタイプ。 このプロパティは、次の列挙値のいずれかと等しい必要があります。 <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

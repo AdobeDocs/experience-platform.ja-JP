@@ -5,7 +5,7 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 39%
+ht-degree: 45%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 [Adobe Experience PlatformとのAdobe Campaign統合の詳細](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 *Adobe Campaign Managed Cloud Services* では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -56,8 +56,8 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 |---|---|---|
 | external_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 この ID を使用し、顧客 (loyalty_ID、account_ID、customer_ID...) を表す Campaign インスタンス内の ID にマッピングすることをお勧めします |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 
@@ -141,7 +141,7 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 1. マッピングが実行されたら、宛先設定を確認して完了し、へのデータの送信を開始できます。 **[!DNL Campaign]**.
    [宛先の設定を確認して完了する方法を説明します](/help/destinations/destination-types.md#review).
 
-## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
+## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 宛先がアクティブ化されると、Campaign で対応するジョブおよびエクスポートしたデータにアクセスできます。
 

@@ -25,11 +25,11 @@ ht-degree: 45%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Square] の使用 [!DNL Flow Service] API
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Square] に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | `host` | の URL [!DNL Square] インスタンス。 |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL Square] アカウント |

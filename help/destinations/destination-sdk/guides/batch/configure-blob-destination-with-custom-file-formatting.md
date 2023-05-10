@@ -1,11 +1,11 @@
 ---
 description: Destination SDKを使用して、カスタムファイルフォーマットオプションとカスタムファイル名設定を使用して Azure BLOB ストレージの宛先を設定する方法を説明します。
-title: カスタムのファイルフォーマットオプションとカスタムのファイル名設定を使用して、Azure Blob ストレージの宛先を構成します。
+title: カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Blob ストレージの宛先の設定.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '742'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 

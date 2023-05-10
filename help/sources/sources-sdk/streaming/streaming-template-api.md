@@ -3,7 +3,8 @@ title: ストリーミング SDK API 用のドキュメントセルフサービ�
 description: フローサービス API を使用して、ソースからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1699'
 ht-degree: 42%

@@ -8,7 +8,7 @@ exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 56%
+ht-degree: 64%
 
 ---
 
@@ -33,9 +33,9 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `endpoint` | のエンドポイント [!DNL ServiceNow] サーバー。 |
-| `username` | に接続するために使用するユーザー名 [!DNL ServiceNow] 認証用のサーバ。 |
-| `password` | に接続するパスワード [!DNL ServiceNow] 認証用のサーバ。 |
+| `endpoint` | [!DNL ServiceNow] サーバーのエンドポイント。 |
+| `username` | 認証のために [!DNL ServiceNow] サーバーに接続するために使用するユーザー名。 |
+| `password` | 認証のために [!DNL ServiceNow] サーバーに接続するためのパスワード。 |
 
 の導入について詳しくは、 [この [!DNL ServiceNow] 文書](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 

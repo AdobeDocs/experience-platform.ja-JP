@@ -4,7 +4,7 @@ title: Destination SDK のサーバーとテンプレートの仕様の設定オ
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 100%
 | `templatingStrategy` | 文字列 | *必須。* <ul><li>`value` フィールドで固定値ではなくマクロを使用している場合は、`PEBBLE_V1` を使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` のようなエンドポイントがある場合は、このオプションを使用します。 </li><li> アドビ側での変換が不要な場合（例えば、`https://api.moviestar.com/data/items` のようなエンドポイントがある場合）は、`NONE` を使用します。 </li></ul> |
 | `value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## テンプレート仕様 {#template-specs}
 
@@ -75,4 +75,4 @@ ht-degree: 100%
 | `value` | 文字列 | *必須。* この文字列は、Platform 顧客のデータを、ご利用のサービスが期待する形式に変換する、文字エスケープバージョンです。<br> テンプレートの書き込み方法について詳しくは、[テンプレートセクションの使用](./message-format.md#using-templating)を参照してください。<br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、[プロファイル属性](./message-format.md#attributes)変換を参照してください。 |
 | `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。この値は `application/json` である可能性が高いです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

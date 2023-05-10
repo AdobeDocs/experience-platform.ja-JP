@@ -5,8 +5,8 @@ description: プライバシー、パーソナライゼーション、マーケ�
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '2058'
-ht-degree: 3%
+source-wordcount: '2034'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 このドキュメントでは、XDM と、 [!DNL Experience Platform]. 続行する前に、次のドキュメントを確認してください。
 
-* [XDM システムの概要](https://www.adobe.com/go/xdm-home-en)
+* [XDM システムの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)
 * [スキーマ構成の基本](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## データタイプの構造 {#structure}
@@ -141,7 +141,7 @@ ht-degree: 3%
 | --- | --- |
 | `val` | この使用例に対する、お客様が指定した同意の選択。 詳しくは、 [付録](#choice-values) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `adID`
 
@@ -159,7 +159,7 @@ ht-degree: 3%
 | `idType` | 広告 ID タイプ。 `IDFA` (Apple広告主 ID または `GAID` (Google広告主 ID の場合 )。Android 広告主 ID(AAID) とも呼ばれます。 |
 | `val` | この使用例に対する、お客様が指定した同意の選択。 詳しくは、 [付録](#choice-values) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `share`
 
@@ -175,7 +175,7 @@ ht-degree: 3%
 | --- | --- |
 | `val` | この使用例に対する、お客様が指定した同意の選択。 詳しくは、 [付録](#choice-values) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -200,7 +200,7 @@ ht-degree: 3%
 | `content` | Web サイトまたはアプリケーション上で、パーソナライズされたコンテンツに対する顧客の環境設定を表します。 |
 | `val` | 指定した使用例に対する、お客様が指定したパーソナライゼーションの環境設定。 お客様が同意を求められる必要がない場合は、このフィールドの値に、パーソナライゼーションをおこなう基準を示す必要があります。 詳しくは、 [付録](#choice-values) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -236,7 +236,7 @@ ht-degree: 3%
 | `time` | マーケティング環境設定が変更されたときの ISO 8601 タイムスタンプ（該当する場合）。 個々の環境設定のタイムスタンプが、以下で指定したタイムスタンプと同じ場合に注意してください。 `metadata`の場合、このフィールドはその環境設定では設定されません。 |
 | `reason` | 顧客がマーケティングの使用例からオプトアウトした場合、この文字列フィールドは、顧客がオプトアウトした理由を表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `metadata`
 
@@ -252,7 +252,7 @@ ht-degree: 3%
 | --- | --- |
 | `time` | 顧客の同意および環境設定が最後に更新された時点の ISO 8601 タイムスタンプ。 このフィールドは、負荷と複雑さを軽減するために、個々の環境設定にタイムスタンプを適用する代わりに使用できます。 の指定 `time` 個々の環境設定の値が `metadata` 特定の環境設定のタイムスタンプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## データタイプを使用したデータの取り込み {#ingest}
 
@@ -292,7 +292,7 @@ ht-degree: 3%
 | `VI` | 個人の生命の関心 | 特定の目的のためのデータの収集は、個人の重要な利益を保護するために必要です。 |
 | `PI` | 公益 | 特定の目的のためのデータの収集は、公益上のタスクを実行するか、公的な権限の行使に必要です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `preferred` の許容値 {#preferred-values}
 
@@ -300,7 +300,7 @@ ht-degree: 3%
 
 | 値 | 説明 |
 | --- | --- |
-| `email` | 電子メール メッセージ。 |
+| `email` | E メールメッセージ. |
 | `push` | プッシュ通知. |
 | `inApp` | アプリ内メッセージ. |
 | `sms` | SMS メッセージ. |
@@ -314,7 +314,7 @@ ht-degree: 3%
 | `none` | 優先チャネルがありません。 |
 | `unknown` | 優先チャネルが不明です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 完全 [!UICONTROL 同意および環境設定] スキーマ {#full-schema}
 

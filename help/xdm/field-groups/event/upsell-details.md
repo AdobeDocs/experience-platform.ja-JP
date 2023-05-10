@@ -4,8 +4,8 @@ description: このドキュメントでは、アップセル詳細スキーマ�
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 | `upsellImpressions` | の配列 [Impressions](../../data-types/impressions.md) | 顧客に記録されたインプレッション（デジタルビュー、アップセルオファーを含むエンゲージメント）をリストする配列。 |
 | `upsellTransaction` | [トランザクション](../../data-types/transaction.md) | アップセルの通貨トランザクションを記述します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

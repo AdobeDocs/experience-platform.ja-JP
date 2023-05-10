@@ -5,8 +5,8 @@ description: Adobe Experience Platformで使用する Experience Data Model(XDM)
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 11%
+source-wordcount: '419'
+ht-degree: 10%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 11%
 | 関連する広告と自動化されたパーソナライズされた E メールを通じて、買い物かごの放棄者をリターゲティングします。 コンバージョン時に広告を抑制します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL コマースの詳細]](../../field-groups/event/upsell-details.md) （買い物かごの放棄をキャプチャするため）</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 通信サブスクリプション]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL デモグラフィックの詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 | 顧客が（従業員のインタラクションまたは自動機械学習アルゴリズムに基づいて）チャーンする可能性が高いとマークされた場合、顧客の詳細をデジタルチャネルと非デジタルチャネルに送信します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL キャンペーンマーケティング詳細]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL チャンネル詳細]](../../field-groups/event/channel-details.md)</li><li>パーソナライズされたコンテンツを含むカスタムフィールドグループ</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL デモグラフィックの詳細]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人の連絡先の詳細]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

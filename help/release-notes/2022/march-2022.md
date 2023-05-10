@@ -3,8 +3,8 @@ title: Adobe Experience Platform リリースノート 2022年3月
 description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '1194'
+workflow-type: tm+mt
+source-wordcount: '1176'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 | データセット、スキーマ、クラス、フィールドグループ、データタイプ、サンドボックス、宛先、セグメント、結合ポリシー、計算属性、製品プロファイルおよびアカウント（アドビ）に関する監査ログ | これらは、監査ログで記録されるリソースです。この機能を有効にすると、アクティビティが発生したときに監査ログが自動的に収集されます。ログ収集を手動で有効にする必要はありません。 |
 | 監査ログの書き出し | 監査ログは、`CSV` または `JSON` ファイルとしてダウンロードできます。生成されるファイルは、マシンに直接保存されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の監査ログについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
 
@@ -67,7 +67,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 | --- | --- |
 | 新しいアラートルール | データ取り込みに関連するソースに対して、2 つの新しいアラートルールが使用できるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform のアラートについて詳しくは、[アラートの概要](../../observability/alerts/overview.md)を参照してください。
 
@@ -88,7 +88,7 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 | セグメント化されていないプロファイル（ID 別）ウィジェット | このウィジェットは、セグメント化されていないプロファイルの合計数を、一意の識別子で分類します。データは、棒グラフで可視化されます。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
 | 単一の ID プロファイルウィジェット | このウィジェットは、ID を作成する ID タイプが電子メールか ECID のどちらかのみである組織のプロファイルの数を提供します。詳しくは、[プロファイル標準ウィジェットのドキュメント](../../dashboards/guides/profiles.md#standard-widgets)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 プロファイルダッシュボードについて詳しくは、[プロファイルダッシュボードの概要](../../dashboards/guides/profiles.md)を参照してください。
 
@@ -102,7 +102,7 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 | --- | --- |
 | 宛先数ウィジェット | このウィジェットには、システム内でオーディエンスをアクティブにして配信できる、利用可能なエンドポイントの合計数が表示されます。この数には、アクティブな宛先と非アクティブな宛先の両方が含まれます。詳しくは、[宛先標準ウィジェットのドキュメント](../../dashboards/guides/destinations.md#standard-widgets)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の宛先ダッシュボードについて詳しくは[宛先ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
 
@@ -129,7 +129,7 @@ Platform のデータ収集について詳しくは、[データ収集概要](..
 | --- | --- |
 | `table_exists` | この新機能コマンドは、現在、システム内にテーブルが存在するかどうかを確認するために使用されます。このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。詳しくは、[SQL 構文ドキュメント](../../query-service/sql/syntax.md)を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 使用できる機能について詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 
@@ -147,6 +147,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）から Platform にシームレスにデータを取り込むことができるようになりました。詳しくは、[ [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
 | [!DNL Data Landing Zone] の API の強化 | [!DNL Data Landing Zone] ソースは、[!DNL Flow Service] API 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

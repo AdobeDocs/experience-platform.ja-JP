@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: エッジ投影 API エンドポイント
 type: Documentation
 description: Adobe Experience Platformでは、複数のチャネルをまたいで顧客に対して、調整され、一貫性とパーソナライズされたエクスペリエンスをリアルタイムで提供できます。これにより、変更が発生したときに適切なデータを容易に利用でき、継続的に更新できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーであるエッジを使用しておこなわれます。
@@ -17,7 +17,7 @@ ht-degree: 86%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 >[!NOTE]
 >

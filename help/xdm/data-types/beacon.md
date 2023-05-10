@@ -6,8 +6,8 @@ description: このドキュメントでは、XDM 個人プロファイルクラ
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 11%
+source-wordcount: '250'
+ht-degree: 10%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 11%
 | `proximity` | 文字列 | ビーコンからの推定距離。詳しくは、 [付録](#proximity) を参照してください。 |
 | `proximityUUID` | 文字列 | 近接 UUID(Universally Unique Identifier) は、ネットワーク内のビーコンを制御外のネットワーク内の他のすべてのビーコンと区別するために使用される特別なタイプの識別子です。 近接 UUID は、組織のビーコンを識別するために、範囲内のモバイルデバイスに送信されるビーコンに設定されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

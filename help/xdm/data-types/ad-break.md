@@ -4,8 +4,8 @@ description: このドキュメントでは、広告ブレークエクスペリ�
 exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 7%
+source-wordcount: '125'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 | `_id` | 文字列 | 広告ブレークの一意の識別子。 |
 | `offset` | 整数 | プライマリコンテンツの開始時からの広告ブレークのオフセット（秒）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

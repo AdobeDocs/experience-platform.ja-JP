@@ -5,8 +5,8 @@ description: このドキュメントでは、トランザクションエクス�
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 11%
+source-wordcount: '96'
+ht-degree: 8%
 
 ---
 
@@ -23,4 +23,4 @@ ht-degree: 11%
 | `transactionId` | [!UICONTROL 文字列] | トランザクションの一意の ID。 |
 | `transactionType` | [!UICONTROL 文字列] | 訪問者が使用するトランザクションのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

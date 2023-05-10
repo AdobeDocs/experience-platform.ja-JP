@@ -8,7 +8,7 @@ exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 69%
+ht-degree: 73%
 
 ---
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.username` | ユーザー名 [!DNL Salesforce Service Cloud] アカウント |
 | `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Salesforce Service Cloud] アカウント |
 | `auth.params.securityToken` | に関連付けられたセキュリティトークン [!DNL Salesforce Service Cloud] アカウント |
-| `connectionSpec.id` | この [!DNL Salesforce Service Cloud] 接続仕様 ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | [!DNL Salesforce Service Cloud] 接続仕様 ID：`b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **応答**
 
@@ -106,7 +106,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Salesforce Service Cloud] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce Service Cloud] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [ [!DNL Flow Service]  API を使用した、カスタマーサクセスデータを Platform に取り込むデータフローの作成](../../collect/customer-success.md)

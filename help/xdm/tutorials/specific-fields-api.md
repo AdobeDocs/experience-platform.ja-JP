@@ -1,7 +1,8 @@
 ---
 title: スキーマレジストリ API を使用したスキーマへの特定のフィールドの追加
 description: スキーマレジストリ API を使用して、既存のフィールドグループから Experience Data Model（XDM）スキーマに個々のフィールドを追加する方法について説明します。
-source-git-commit: 4bcd949e901c11bb933000f7ae76f17134dda496
+exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 100%

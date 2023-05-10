@@ -1,7 +1,8 @@
 ---
 title: UI での SugarCRM イベントソース接続の作成
 description: Adobe Experience Platform UI を使用して SugarCRM イベントのソース接続を作成する方法を説明します。
-source-git-commit: 17d8a6517686ee2459955f766d75980b41851320
+exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 47%

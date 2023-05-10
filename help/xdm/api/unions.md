@@ -6,7 +6,7 @@ description: Schema Registry API の/unions エンドポイントを使用する
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '896'
 ht-degree: 47%
 
 ---
@@ -64,7 +64,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | URL エンコードされた `$id` 検索する和集合の URI。 和集合スキーマの URI には「__union」が追加されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -131,7 +131,7 @@ curl -X GET \
 | `application/vnd.adobe.xed+json; version=1` | `$ref` と `allOf` を含む未処理の和集合。タイトルと説明が含まれます。 |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` 属性と `allOf` が解決されます。タイトルと説明が含まれます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -196,7 +196,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | この `$id` のスキーマを設定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -219,7 +219,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 

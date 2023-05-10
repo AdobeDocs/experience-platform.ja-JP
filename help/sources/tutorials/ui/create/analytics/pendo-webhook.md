@@ -1,8 +1,9 @@
 ---
 title: UI での Pendo ソース接続の作成
 description: Adobe Experience Platform UI を使用して Pendo ソース接続を作成する方法を説明します。
-badge: "ベータ"
-source-git-commit: 5a199262acd517516b1e5313a25ddff8f1b11959
+badge: ベータ
+exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 22%

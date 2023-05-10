@@ -7,7 +7,7 @@ exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 52%
+ht-degree: 61%
 
 ---
 
@@ -23,13 +23,13 @@ Experience Platformは、サードパーティの支払い申請からデータ�
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL PayPal] と Platform を接続する方法について説明します。
 
-## 接続 [!DNL PayPal] API を使用して Platform に接続
+## API を使用して [!DNL PayPal] と Platform を接続する
 
 - [フローサービス API を使用した PayPal ベース接続の作成](../../tutorials/api/create/payments/paypal.md)
-- [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [フローサービス API を使用して、支払いソースのデータフローを作成します](../../tutorials/api/collect/payments.md)
 
-## 接続 [!DNL PayPal] UI を使用して Platform に接続
+## UI を使用した [!DNL PayPal] の Platform への接続
 
 - [UI での PayPal ソース接続の作成](../../tutorials/ui/create/payments/paypal.md)
 - [UI での支払いソース接続のデータフローの作成](../../tutorials/ui/dataflow/payments.md)

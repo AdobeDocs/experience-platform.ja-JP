@@ -4,13 +4,13 @@ solution: Experience Platform
 feature: Customer AI
 title: 顧客 AI のアクセス制御
 description: このドキュメントでは、顧客 AI の属性ベースのアクセス制御について説明します。
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
-workflow-type: ht
+exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 
 ---
-
 
 # 属性ベースのアクセス制御
 

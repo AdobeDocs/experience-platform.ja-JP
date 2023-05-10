@@ -143,7 +143,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | データタイプ | [[!UICONTROL 製品リスト項目 ]](https://github.com/adobe/xdm/pull/1677/files) | この製品のカテゴリデータのリストに製品カテゴリが追加されました。 |
 | データタイプ | [!UICONTROL セッションの詳細情報] | 追加された `pev3` 文字列フィールド [レポートに使用されるメディアストリームのタイプを示します](https://github.com/adobe/xdm/pull/1676/files). また、 `pccr` プロパティは、リダイレクトが発生したかどうかを示します。 |
 | データタイプ | [!UICONTROL 購買依頼リスト] | 次を提供： [購買依頼リスト・プロパティ](https://github.com/adobe/xdm/pull/1675/files). これには、名前、ID、説明が含まれます。 |
-| データタイプ | [!UICONTROL コマース] | この [コマースデータタイプが更新されました](https://github.com/adobe/xdm/pull/1675/files) 含める `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`、および `requisitionList`. |
+| データタイプ | [!UICONTROL Commerce] | この [コマースデータタイプが更新されました](https://github.com/adobe/xdm/pull/1675/files) 含める `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`、および `requisitionList`. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ description: このガイドでは、クエリサービスを使用して、プ�
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 3%
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5,000 | 銀 |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | 新しいクレジットカード | 10000 | チラシ |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 十分なデータセットを生成
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: データ取得 API の使用の手引き
 type: Documentation
 description: 『データ取得 API 入門ガイド』では、API を使用してデータをExperience Platformに取り込む前に知っておく必要がある主要な概念と基本機能の概要を説明しています。
@@ -7,7 +7,7 @@ exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
-ht-degree: 51%
+ht-degree: 53%
 
 ---
 

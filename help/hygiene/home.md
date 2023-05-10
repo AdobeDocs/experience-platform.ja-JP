@@ -3,7 +3,7 @@ title: データハイジーンの概要
 description: Adobe Experience Platform のデータハイジーンを使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 100%
 

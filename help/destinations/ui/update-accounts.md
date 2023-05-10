@@ -7,7 +7,7 @@ exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 3%
+ht-degree: 11%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 3%
 
 既存の宛先への接続の詳細を更新するには、以下の手順に従います。
 
-1. にログインします。 [Experience PlatformUI](https://platform.adobe.com/) を選択し、 **[!UICONTROL 宛先]** をクリックします。 選択 **[!UICONTROL アカウント]** 上部のヘッダーから既存のアカウントを表示します。
+1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。選択 **[!UICONTROL アカウント]** 上部のヘッダーから既存のアカウントを表示します。
 
    ![「アカウント」タブ](../assets/ui/update-accounts/accounts-tab.png)
 
-2. フィルターアイコンを選択します。 ![フィルターアイコン](../assets/ui/update-accounts/filter.png) をクリックして、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択すると、選択した宛先に関連付けられたアカウントのフィルターされた選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/update-accounts/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択すると、選択した宛先に関連付けられたアカウントのフィルターされた選択を表示できます。
 
    ![宛先アカウントのフィルター](../assets/ui/update-accounts/filter-accounts.png)
 

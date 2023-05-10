@@ -4,8 +4,8 @@ description: このドキュメントでは、「Quote Request Details」スキ�
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 8%
+source-wordcount: '147'
+ht-degree: 6%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 8%
 | `requestID` | [!UICONTROL 文字列] | 見積もり依頼の一意の ID。 |
 | `selectedRetailer` | [!UICONTROL 文字列] | 見積もり依頼に対して選択した小売業者（該当する場合）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

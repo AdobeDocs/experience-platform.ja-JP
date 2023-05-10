@@ -4,8 +4,8 @@ description: このドキュメントでは、XDM ビジネスユーザーコン
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 7%
+source-wordcount: '549'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 7%
 | `sourceExternalID` | 文字列 | 個人のデータの元となるソースシステムの一意の文字列ベースの識別子。 |
 | `sourcePersonID` | 文字列 | 人物の一意の文字列ベースの識別子。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

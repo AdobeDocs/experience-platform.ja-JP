@@ -4,8 +4,8 @@ title: Salesforce マッピングフィールド
 description: 次の表には、Salesforce ソースフィールドと、対応する XDM フィールドとのマッピングが含まれています。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
-workflow-type: ht
-source-wordcount: '494'
+workflow-type: tm+mt
+source-wordcount: '479'
 ht-degree: 100%
 
 ---
@@ -72,7 +72,7 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## リード {#lead}
 
@@ -123,7 +123,7 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アカウント {#account}
 
@@ -179,7 +179,7 @@ XDM クラスについて詳しくは、[XDM ビジネスアカウントの詳�
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunity {#opportunity}
 
@@ -189,7 +189,7 @@ XDM クラスについて詳しくは、[XDM Business Opportunity の概要](../
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリ ID。 `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | プライマリ ID。`"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | 関係。 |
 | `Amount` | `opportunityAmount.amount` |
@@ -220,7 +220,7 @@ XDM クラスについて詳しくは、[XDM Business Opportunity の概要](../
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 商談連絡先の役割 {#opportunity-contact-role}
 
@@ -246,7 +246,7 @@ XDM クラスについて詳しくは、[XDM Business Opportunity ユーザー�
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 

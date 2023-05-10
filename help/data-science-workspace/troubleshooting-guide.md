@@ -5,7 +5,7 @@ title: データサイエンスワークスペーストラブルシューティ�
 description: このドキュメントでは、Adobe Experience Platform データサイエンスワークスペースに関するよくある質問に対する回答を示します。
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 100%
 

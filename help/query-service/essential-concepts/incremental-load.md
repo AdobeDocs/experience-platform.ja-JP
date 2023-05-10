@@ -3,7 +3,7 @@ title: クエリサービスでの増分読み込み
 description: 増分読み込み機能は、匿名ブロックとスナップショットの両方の機能を使用して、一致するデータを無視しながらデータレイクからデータウェアハウスにデータを移動するための、ほぼリアルタイムのソリューションを提供します。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 source-git-commit: 11a947addce65887385c983ac81d884fb4244291
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 100%
 

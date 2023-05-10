@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2020 年 3 月
-description: Adobe Experience Platformの 2020 年 3 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2020年3月）
+description: Adobe Experience Platform の 2020年3月のリリースノート。
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
@@ -9,7 +9,7 @@ exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 68%
+ht-degree: 70%
 
 ---
 
@@ -83,7 +83,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 ## [!DNL Identity Service] {#identity}
 
-関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
+適切なデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
 
 Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をわかりやすく表示できます。これによって、インパクトのある個人的なデジタル体験をリアルタイムで提供できます。
 

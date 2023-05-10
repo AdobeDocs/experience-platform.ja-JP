@@ -2,7 +2,8 @@
 keywords: インサイト;Attribution AI;アトリビューション AI インサイト;AAI クエリサービス;アトリビューションクエリ;アトリビューションスコア
 title: アトリビューション AI の監査ログの概要
 description: アトリビューション AI で監査ログを表示および管理する方法について説明します。
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
@@ -22,4 +23,3 @@ ht-degree: 100%
 組織に対してこの機能が有効になっている場合、アクティビティの発生に応じて監査ログが自動的に収集されます。ログ収集を手動で有効にする必要はありません。
 
 監査ログを表示および書き出すには、Adobe コンソールで監査ログのアクセスアクセス制御権限を付与されている必要があります。アトリビューション AI 機能の個々の権限を管理する方法については、[アクセス制御ドキュメント](../aai-data-governance/access-controls.md)を参照してください。
-

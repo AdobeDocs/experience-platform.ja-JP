@@ -3,7 +3,7 @@ title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 100%
 

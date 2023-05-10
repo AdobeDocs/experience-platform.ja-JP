@@ -4,7 +4,7 @@ description: このドキュメントでは、キーと値のペアの Experienc
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
 source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '118'
 ht-degree: 100%
 
 ---
@@ -20,6 +20,6 @@ ht-degree: 100%
 | `key` | 文字列 | 汎用の変数または値のキー（名前）です。 |
 | `value` | 文字列 | 変数の値です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、[パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json)を参照してください。

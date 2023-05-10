@@ -2,13 +2,13 @@
 title: （ベータ版）Experience CloudAudiences
 description: セグメントをExperience Platformから様々なExperience Platformソリューションに共有する方法を説明します。
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
+exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1509'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
-
 
 # （ベータ版） [!UICONTROL Experience Cloudオーディエンス] 接続
 
@@ -85,7 +85,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 * ベータ版リリースでは、 **Audiences の宛先への単一のExperience Cloud接続**&#x200B;を、Experience Platform組織に属するすべてのサンドボックスにまたがって使用できます。
 * ここに **4 時間の遅延** Experience Platformでデータがアクティブ化されてから、Audience Managerや他のExperience Cloudソリューションでデータを使用する準備が整うまでの間。
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 に書き出されるプロファイル [!UICONTROL Experience Cloudオーディエンス] 宛先は、次の表で説明する id にマッピングされます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -94,7 +94,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](/help/identity-service/ecid.md) を参照してください。 |
 | GAID | Google Advertising ID | Google広告 ID(GAID) のプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
 | IDFA | Apple の広告主 ID | Apple ID for Advertisers(IDFA) のプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | ハッシュ化された電子メールアドレスのプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | ハッシュ化された電子メールアドレスのプライマリ ID を持つExperience Platformに取り込まれたプロファイルは、この宛先に書き出すことができます。 |
 
 {style="table-layout:auto"}
 

@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；
+keywords: Experience Platform;ホーム;人気のトピック;Flow Service;
 title: 失敗したデータフロー実行を再試行
 description: このチュートリアルでは、フローサービス API を使用して、失敗したデータフローの実行を再試行する手順を説明します
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 37%
+ht-degree: 42%
 
 ---
 
-# 失敗したデータフローの実行を再試行
+# 失敗したデータフロー実行の再試行
 
 >[!IMPORTANT]
 >

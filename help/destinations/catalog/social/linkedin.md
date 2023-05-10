@@ -108,7 +108,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
    ![LinkedInへの認証](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn資格情報を入力し、「 」を選択します。 **ログイン**.
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_linkedin_accountid"

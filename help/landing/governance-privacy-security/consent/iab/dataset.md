@@ -98,7 +98,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 既に [!DNL Real-Time Customer Profile]を選択します。 **[!UICONTROL 保存]** をクリックして変更を確定してから、 [同意スキーマに基づくデータセットの作成](#dataset). 新しいスキーマを作成する場合は、次のサブセクションで説明する手順に従います。
 
-#### でのスキーマ使用の有効化 [!DNL Real-Time Customer Profile]
+#### [!DNL Real-Time Customer Profile] で使用するためのスキーマの有効化 
 
 Platform が受け取った同意データを特定の顧客プロファイルに関連付けるには、での使用を同意スキーマで有効にする必要があります。 [!DNL Real-Time Customer Profile].
 

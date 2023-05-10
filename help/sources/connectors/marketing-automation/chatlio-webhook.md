@@ -1,6 +1,6 @@
 ---
 title: Chatlio ソースの概要
-description: Web フックを活用して API またはユーザーインターフェイスを使用して Chatlio をAdobe Experience Platformに接続する方法を説明します
+description: Web フックを活用して、API またはユーザーインターフェイスを使用して Chatlio をAdobe Experience Platformに接続する方法を説明します
 badge: ベータ
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18

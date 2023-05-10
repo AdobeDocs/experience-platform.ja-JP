@@ -6,7 +6,7 @@ exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->この [!DNL Mixpanel] ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Mixpanel] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 次のチュートリアルでは、ソース接続とデータフローを作成して、 [!DNL Mixpanel] Adobe Experience Platformに [フローサービス API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

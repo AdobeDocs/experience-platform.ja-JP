@@ -6,7 +6,7 @@ exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 56%
+ht-degree: 66%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->この [!DNL Google Ads] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>[!DNL Google Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 ### API の使用
 
 * [フローサービス API を使用したGoogle Ads ベース接続の作成](../../tutorials/api/create/advertising/ads.md)
-* [フローサービス API を使用したデータテーブルの調査](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [フローサービス API を使用した広告ソースのデータフローの作成](../../tutorials/api/collect/advertising.md)
 
 ### UI の使用

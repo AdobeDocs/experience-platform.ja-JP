@@ -1,20 +1,20 @@
 ---
-title: TikTok接続
-description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTok上にカスタムオーディエンスを構築します。 これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のセグメントをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
+title: TikTok 接続
+description: お持ちのデータを使用して TikTok でカスタムオーディエンスを作成し、広告キャンペーンのターゲティングを行えます。これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のセグメントをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
-source-git-commit: 7bfcd0132380f0c847742ff05c1f334542adfba2
+exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 37%
+ht-degree: 47%
 
 ---
 
-
-# TikTok接続
+# TikTok 接続
 
 ## 概要 {#overview}
 
-広告キャンペーンでターゲティングするためのデータを使用して、TikTok上にカスタムオーディエンスを構築します。 これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のセグメントをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 訪問 [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) を参照してください。
+お持ちのデータを使用して TikTok でカスタムオーディエンスを作成し、広告キャンペーンのターゲティングを行えます。これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のセグメントをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 訪問 [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ TikTokの宛先をいつどのように使用するかを理解しやすくす�
 
 にデータを送信する前に [!DNL TikTok Ads Manager] アカウントを使用する場合は、次の広告アカウントにアクセスするためのAdobe Experience Platform権限を付与する必要があります： `Audience Management`. この権限は、Experience Platformで広告主 ID を入力し、リダイレクトに従って権限を付与することで提供できます。 詳しい手順については、 [TikTok API ドキュメント](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 TikTokでは、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -40,8 +40,8 @@ TikTokでは、以下の表で説明する ID のアクティブ化をサポー�
 |---|---|---|
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
-| メール | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
+| 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| メール | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 
 {style="table-layout:auto"}
 

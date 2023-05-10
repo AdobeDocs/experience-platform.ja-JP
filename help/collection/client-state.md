@@ -129,7 +129,7 @@ Edge Network は状態管理プロトコルを使用することで、ストレ�
 | 属性 | タイプ | 説明 |
 | --- | --- | --- |
 | `cookiesEnabled` | ブール値 | 設定すると、cookie のサポートが有効になります。デフォルト値は `false` です。 |
-| `domain` | 文字列 | 必須`cookiesEnabled: true` の場合。Cookie を書き込むトップレベルドメイン。Edge Network はこの値を使用して、状態を cookie で保持できるかどうかを判定します。 |
+| `domain` | 文字列 | 必須の場合 `cookiesEnabled: true`. Cookie を書き込むトップレベルドメイン。Edge Network はこの値を使用して、状態を cookie で保持できるかどうかを判定します。 |
 
 `cookiesEnabled` フラグで cookie サポートが有効になっていても、Adobe Experience Platform Edge Network は、リクエストのトップレベルドメインが呼び出し元によって指定された `domain` に一致する場合にのみ、状態エントリを書き込みます。不一致がある場合、エントリは `state:store` ハンドルで返されます。
 

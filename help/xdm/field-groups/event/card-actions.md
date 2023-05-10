@@ -4,8 +4,8 @@ description: このドキュメントでは、「カードアクション」ス�
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 9%
+source-wordcount: '190'
+ht-degree: 7%
 
 ---
 
@@ -29,6 +29,6 @@ ht-degree: 9%
 | `cardType` | 文字列 | カードのタイプ。 |
 | `cardUnlocked` | 整数 | カードがロック解除された際にトラッキングします。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

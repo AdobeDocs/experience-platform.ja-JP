@@ -6,8 +6,8 @@ description: このドキュメントでは、ジオインタラクションの�
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 6%
+source-wordcount: '156'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 | `deviceGeoAccuracy` | Double | 地域測定デバイスまたはメカニズムの精度（メートル単位で測定）。 |
 | `distanceToCenter` | Double | ジオサークルの場合のジオの中心までの距離（メートル単位で測定）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

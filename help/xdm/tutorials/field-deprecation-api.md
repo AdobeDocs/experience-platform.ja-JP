@@ -3,7 +3,7 @@ title: API での XDM フィールドの非推奨化
 description: Schema Registry API でエクスペリエンスデータモデル（XDM）フィールドを非推奨（廃止予定）にする方法を説明します。
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 100%
 

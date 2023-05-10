@@ -6,8 +6,8 @@ description: このドキュメントでは、XDM ExperienceEvent クラスの I
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '250'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `consentStrings` | の配列 [同意文字列](../../data-types/consent-string.md) | イベントに関連付けられた同意文字列値の配列。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Platform での IAB TCF 2.0 のサポート](../../../landing/governance-privacy-security/consent/iab/overview.md) を参照してください。 フィールドグループ自体について詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -5,8 +5,8 @@ description: このドキュメントでは、セルフサービスソース（�
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '519'
+ht-degree: 4%
 
 ---
 
@@ -130,7 +130,7 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 | `authSpec.spec.properties.requestParameterOverride` | 認証時に上書きする秘密鍵証明書のパラメーターを指定できます。 |
 | `authSpec.spec.required` | 認証に必要な資格情報が表示されます。 | `accessToken` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 ### 基本認証
@@ -177,7 +177,7 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 | `authSpec.spec.properties.password` | アプリケーションに関連付けられたアカウントのパスワード。 |
 | `authSpec.spec.required` | Platform で入力する必須の値として必要なフィールドを指定します。 | `username` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 認証仕様の例
 

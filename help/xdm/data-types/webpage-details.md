@@ -6,8 +6,8 @@ description: このドキュメントでは、Web ページの詳細に関する
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 11%
+source-wordcount: '408'
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 11%
 | `siteSection` | 文字列 | この Web ページが存在するサイトセクションの基準となる名前。 これは、インタラクションを分類または分類するために使用できます。 |
 | `viewName` | 文字列 | ページ内のビューの名前。 このプロパティは、通常、ページレイアウトの大部分を変更するタブやコントロールを持つシングルページアプリケーションやページで使用されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

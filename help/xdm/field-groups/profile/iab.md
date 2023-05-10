@@ -6,8 +6,8 @@ description: このドキュメントでは、XDM Individual Profile クラス�
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 2%
+source-wordcount: '338'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `identityPrivacyInfo` | マップ | 顧客の個々の ID 値を異なる TCF コンセントストリングに関連付けるマップタイプオブジェクト。 このオブジェクトの構造の例を以下に示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次の JSON は、 `identityPrivacyInfo` マップ。
 

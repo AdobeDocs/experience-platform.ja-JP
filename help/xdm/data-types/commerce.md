@@ -6,8 +6,8 @@ description: このドキュメントでは、Commerce Experience Data Model(XDM
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 13%
+source-wordcount: '338'
+ht-degree: 12%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 13%
 | `purchases` | [[!UICONTROL 測定]](./measure.md) | 注文が許可されたタイミングを追跡するために使用します。 コマースコンバージョンで必要なアクションは、購入イベントのみです。 購入イベントでは、製品リストが参照されている必要があります。 |
 | `saveForLaters` | [[!UICONTROL 測定]](./measure.md) | 製品リストは、ウィッシュリストなど今後の使用のために保存されます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

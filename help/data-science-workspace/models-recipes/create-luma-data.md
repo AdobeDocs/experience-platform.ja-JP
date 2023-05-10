@@ -8,7 +8,7 @@ exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 - 傾向モデルのスコアリングデータセット
 - 傾向モデルのスコアリング結果のデータセット
 
-## アセットのダウンロード {#assets}
+## アセットをダウンロード {#assets}
 
 次のチュートリアルでは、カスタム Luma 購入傾向モデルを使用します。 先に進む前に [必要なアセットのダウンロード](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip フォルダー。 このフォルダーには次が含まれます。
 

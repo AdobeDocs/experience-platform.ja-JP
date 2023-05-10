@@ -140,7 +140,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
    ![facebookへの認証](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. facebook資格情報を入力し、「 」を選択します。 **ログイン**.
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"

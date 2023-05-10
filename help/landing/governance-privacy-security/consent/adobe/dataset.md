@@ -201,7 +201,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 * [[!UICONTROL サブスクリプション付きの汎用マーケティング環境設定フィールド]](../../../../xdm/data-types/marketing-field-subscriptions.md)
 * [[!UICONTROL 汎用パーソナライゼーション環境設定フィールド]](../../../../xdm/data-types/personalization-field.md)
 
-終了したら、「 」を選択します。 **[!UICONTROL 適用]**.
+完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 

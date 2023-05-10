@@ -1,13 +1,13 @@
 ---
 title: デバッグ表示をプッシュ
 description: このガイドでは、Adobe Experience Platform Assurance のプッシュデバッグビューに関する詳細情報を説明します。
-source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
+exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 1%
 
 ---
-
 
 # デバッグビューをプッシュ
 

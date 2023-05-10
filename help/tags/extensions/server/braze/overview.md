@@ -3,13 +3,13 @@ keywords: イベント転送拡張機能；braze;braze イベント転送拡張�
 title: Braze イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能は、Adobe Experience Edge ネットワークイベントを Braze に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
-
 
 # [!DNL Braze Track Events API] イベント転送拡張機能
 

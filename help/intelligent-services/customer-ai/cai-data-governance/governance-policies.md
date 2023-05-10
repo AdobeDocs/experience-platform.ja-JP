@@ -3,13 +3,13 @@ keywords: Experience Platform;ユーザーガイド;顧客 AI;人気のトピッ
 feature: Customer AI
 title: 顧客 AI のガバナンスポリシー
 description: Adobe Experience Platform には、収集したエクスペリエンスデータを確信を持って制御できるいくつかのサービスおよびツールが用意されています。
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
-workflow-type: ht
+exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 100%
 
 ---
-
 
 # ガバナンスポリシー
 

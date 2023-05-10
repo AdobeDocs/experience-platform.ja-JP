@@ -4,7 +4,7 @@ description: Reactor API でリソースをリストする際に結果をフィ�
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | 指定された `{VALUE}` に対する結果の評価方法を決定する演算子。サポートされる演算子については、 [付録の節](#supported-operators) を参照してください。 |
 | `{VALUE}` | 返された結果を比較する値。`EQ` 演算子を使用して等価を比較する場合、値を応答に含めるには、大文字と小文字を区別した完全一致の値を指定する必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

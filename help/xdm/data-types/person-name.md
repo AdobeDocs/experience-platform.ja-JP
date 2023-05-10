@@ -6,8 +6,8 @@ description: このドキュメントでは、ユーザー名 XDM データタ�
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '253'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 21%
 | `middleName` | 姓と名の間に付けられたミドルネーム、代替ネームまたは追加ネーム。 |
 | `suffix` | 追加情報 ( 例えば、 `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`など )。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 人物名データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

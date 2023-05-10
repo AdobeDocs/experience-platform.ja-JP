@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 8%
+source-wordcount: '442'
+ht-degree: 7%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 8%
 | `relationStartDate` | 日時 | アカウントと人物の間の関係が開始した日付。 |
 | `relationshipSource` | 文字列 | アカウントと人物の関係のソース。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

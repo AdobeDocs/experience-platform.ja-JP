@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.secretAccessKey` | に関連付けられた秘密アクセスキー [!DNL Google Cloud Storage] アカウント |
 | `auth.params.bucketName` | お客様の [!DNL Google Cloud Storage] バケット。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーのパスです。 |
-| `connectionSpec.id` | この [!DNL Google Cloud Storage] 接続仕様 ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `connectionSpec.id` | [!DNL Google Cloud Storage] 接続仕様 ID：`32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **応答**
 

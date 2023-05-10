@@ -4,8 +4,8 @@ description: このドキュメントでは、外部ソースシステム監査�
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 8%
+source-wordcount: '214'
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 8%
 | `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 |
 | `lastViewedDate` | 日時 | ソースシステムの最終表示日です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

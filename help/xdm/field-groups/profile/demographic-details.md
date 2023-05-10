@@ -6,8 +6,8 @@ description: このドキュメントでは、人口統計の詳細スキーマ�
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 30%
+source-wordcount: '279'
+ht-degree: 29%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 30%
 | `person.nationality` | 文字列 | ISO 3166-1 Alpha-2 コードを使用して表される、個人とその国との法的関係。 |
 | `person.taxId` | 文字列 | 人物の税/会計 ID （米国の TIN やスペインの CIF/NIF など）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

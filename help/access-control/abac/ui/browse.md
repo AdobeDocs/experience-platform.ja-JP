@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；アクセス制御；属性ベースのアクセス制御；ABAC
+keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;属性ベースのアクセス制御;ABAC
 title: 属性ベースのアクセス制御の参照
 description: このドキュメントでは、Adobe Experience Cloudでの権限インターフェイスの使用に関する情報を提供します
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 21%
+ht-degree: 36%
 
 ---
 
@@ -35,7 +35,7 @@ Adobe Experience Cloudの属性ベースのアクセス制御ワークスペー�
 
 >[!IMPORTANT]
 >
->組織で属性ベースのアクセス制御を有効にしたら、Adobe Admin Consoleの製品プロファイルではなくAdobe Experience Cloudで権限を使用して、組織のユーザー、機能、ラベル、その他のリソースに対する権限を管理できます。
+>組織で属性ベースのアクセス制御を有効にすると、Adobe Admin Console の製品プロファイルの代わりに Adobe Experience Cloud の権限を使用して、組織内のユーザー、機能、ラベル、その他のリソースに対する権限の管理を開始できます。
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 

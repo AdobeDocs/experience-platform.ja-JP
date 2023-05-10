@@ -6,13 +6,13 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 # 行の一部更新を次に送信： [!DNL Profile Service] using [!DNL Data Prep]
 
-でのアップサートのストリーミング [!DNL Data Prep] 部分行の更新を次の項目に送信できます。 [!DNL Profile Service] データを作成し、単一の API リクエストで新しい id リンクを確立することもできます。
+[!DNL Data Prep] でアップサートをストリーミングすると、[!DNL Profile Service] データに部分行の更新を送信しながら、単一の API リクエストで新しい ID リンクを作成および確立できます。
 
 アップサートをストリーミングすることで、データをに変換しながら、データの形式を保持できます。 [!DNL Profile Service] 取り込み中のPATCHリクエスト。 指定した入力に基づいて、 [!DNL Data Prep] を使用すると、単一の API ペイロードを送信し、データを [!DNL Profile Service] PATCHと [!DNL Identity Service] CREATE リクエスト。
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] では、データエンジニアが Experience Data Model(XDM) との間で、データのマッピング、変換、検証をおこなうことができます。
 * [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、個々の顧客とその行動をより良く把握できます。
-* [リアルタイム顧客プロファイル](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [リアルタイム顧客プロファイル](../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された顧客プロファイルをリアルタイムに提供します。
 * [ソース](../sources/home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 
 ## でのストリーミングアップサートの使用 [!DNL Data Prep] {#streaming-upserts-in-data-prep}

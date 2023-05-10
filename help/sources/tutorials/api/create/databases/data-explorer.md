@@ -8,7 +8,7 @@ exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 59%
+ht-degree: 61%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 59%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `endpoint` | のエンドポイント [!DNL Azure Data Explorer] サーバー。 |
+| `endpoint` | [!DNL Azure Data Explorer] サーバーのエンドポイント。 |
 | `database` | の名前 [!DNL Azure Data Explorer] データベース。 |
 | `tenant` | への接続に使用される一意のテナント ID [!DNL Azure Data Explorer] データベース。 |
 | `servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Azure Data Explorer] データベース。 |
@@ -93,7 +93,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.endpoint` | のエンドポイント [!DNL Azure Data Explorer] サーバー。 |
+| `auth.params.endpoint` | [!DNL Azure Data Explorer] サーバーのエンドポイント。 |
 | `auth.params.database` | の名前 [!DNL Azure Data Explorer] データベース。 |
 | `auth.params.tenant` | への接続に使用される一意のテナント ID [!DNL Azure Data Explorer] データベース。 |
 | `auth.params.servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Azure Data Explorer] データベース。 |

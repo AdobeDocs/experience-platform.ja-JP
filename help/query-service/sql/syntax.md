@@ -7,7 +7,7 @@ exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
 source-wordcount: '3406'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -423,7 +423,7 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-次のコード行は、 `@from_snapshot_id` 最も早く手に入る `snapshot_id` メタデータから。
+次のコード行では、メタデータから入手できる最も古い `snapshot_id` で `@from_snapshot_id` をオーバーライドしています。
 
 ```sql
 $$ BEGIN
@@ -452,7 +452,7 @@ $$;
 ```
 
 
-## データアセットの組織
+## データアセット組織
 
 Adobe Experience Platformデータレイク内のデータアセットを、成長に合わせて論理的に整理することが重要です。 クエリサービスは、サンドボックス内のデータアセットを論理的にグループ化できる SQL 構成を拡張します。 この編成方法を使用すると、データアセットを物理的に移動する必要なく、スキーマ間でデータアセットを共有できます。
 

@@ -6,11 +6,11 @@ exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
 source-wordcount: '363'
-ht-degree: 31%
+ht-degree: 33%
 
 ---
 
-# 「監査」タブ
+# 「Auditor」タブ
 
 Adobe Experience Platform Debugger で、 **[!UICONTROL Auditor]** タブを使用して、ページに対して一連の監査テストを実行します。
 

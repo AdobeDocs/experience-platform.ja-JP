@@ -8,7 +8,7 @@ exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -98,7 +98,7 @@ curl -X POST \
 | `auth.params.database` | データベースが [!DNL Amazon Redshift] アカウント |
 | `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント |
 | `auth.params.username` | ユーザー名 [!DNL Amazon Redshift] アカウント |
-| `connectionSpec.id` | この [!DNL Amazon Redshift] 接続仕様 ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `connectionSpec.id` | [!DNL Amazon Redshift] 接続仕様 ID：`3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **応答**
 

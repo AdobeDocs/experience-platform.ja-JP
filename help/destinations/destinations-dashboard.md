@@ -6,14 +6,14 @@ type: Documentation
 source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 27%
+ht-degree: 52%
 
 ---
 
 
-# [!UICONTROL 宛先] dashboard {#destinations-dashboard}
+# [!UICONTROL 宛先]ダッシュボード {#destinations-dashboard}
 
-Adobe Experience Platformのユーザーインターフェイス (UI) は、毎日のスナップショットで取り込まれた、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
+Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードが用意されています。
 
 UI で宛先ダッシュボードにアクセスして操作する方法とダッシュボードに表示される使用可能な指標の詳細については、 [宛先ダッシュボードガイド](../dashboards/guides/destinations.md).
 

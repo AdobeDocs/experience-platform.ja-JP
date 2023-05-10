@@ -1,8 +1,9 @@
 ---
 title: UI での XDM フィールドの非推奨化
 description: Experience Platform 内でスキーマエディターを使用して、エクスペリエンスデータモデル（XDM）フィールドを非推奨（廃止予定）にする方法を説明します。
-source-git-commit: f791d32ae38dffe82723800aa9fb5b44bb4f0109
-workflow-type: ht
+exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 100%
 

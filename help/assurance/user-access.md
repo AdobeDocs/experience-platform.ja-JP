@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Assurance ユーザーアクセス
 description: このガイドでは、Admin Consoleを使用してAdobe Experience Platform Assurance に管理し、ユーザーがアクセスできるようにする方法について説明します。
-source-git-commit: 6aee145c6c778730d1c2728d7463e8b54a7aab8e
+exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 5%
 
 ---
-
 
 # ユーザーアクセス
 

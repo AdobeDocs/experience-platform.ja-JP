@@ -6,8 +6,8 @@ description: Experience Platformユーザーインターフェイスで配列フ
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 2%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platformユーザーインターフェイスで Experience Data
 | [!UICONTROL 最大長] | 取り込みを正常におこなうために配列に含める必要がある項目の最大数。 |
 | [!UICONTROL 一意の項目のみ] | &quot;[!UICONTROL True]「」と入力する場合、取り込みを正常におこなうには、配列内の各項目が一意である必要があります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドの設定が完了したら、「 **[!UICONTROL 適用]** をクリックして、スキーマに変更を適用します。
 

@@ -241,7 +241,7 @@ PATCHリクエストでは、 [state](#update-state) または [cron スケジ�
 
 ### スケジュール状態の更新 {#update-state}
 
-JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティ `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
+JSON パッチ操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティとして `/state` そして、 `value` どちらか `active` または `inactive`. JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。
 
 **API 形式**
 

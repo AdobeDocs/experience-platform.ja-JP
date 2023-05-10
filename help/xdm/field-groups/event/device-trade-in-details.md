@@ -6,8 +6,8 @@ description: このドキュメントでは、「 Device Trade-In Details 」ス
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 16%
+source-wordcount: '175'
+ht-degree: 15%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 16%
 | `newDeviceID` | 文字列 | 取引対象の新しいデバイスの ID。 |
 | `originalDeviceID` | 文字列 | 取引されるデバイスの ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

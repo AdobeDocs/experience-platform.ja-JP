@@ -1,13 +1,13 @@
 ---
 title: イベントトランザクションビュー
 description: このガイドでは、Adobe Experience Platform Assurance のイベントトランザクションビューに関する詳細情報を説明します。
-source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
+exl-id: ad97f2c1-5bbc-49e2-8378-edcb8af149a3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
 
 ---
-
 
 # イベントトランザクションビュー
 

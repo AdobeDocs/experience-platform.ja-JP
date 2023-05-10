@@ -4,8 +4,8 @@ description: このドキュメントでは、「製品カテゴリ」スキー�
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 10%
+source-wordcount: '100'
+ht-degree: 8%
 
 ---
 
@@ -22,6 +22,6 @@ ht-degree: 10%
 | `productSubcategoryDescription` | 文字列 | 商品サブカテゴリの説明。 |
 | `productSubcategoryName` | 文字列 | 商品サブカテゴリの名前。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).

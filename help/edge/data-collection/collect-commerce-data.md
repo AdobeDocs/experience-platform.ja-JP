@@ -61,7 +61,7 @@ alloy("sendEvent", {
 |---|---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | 注文合計の [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 通貨。 |
 | [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | 注文の支払の一覧。[paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) には、次が含まれます。 |
-|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | オプション | この支払い方法の [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 通貨。 |
+|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | オプション | この支払い方法の [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 通貨。 |
 |  | [paymentAmount](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymentamount) | 強く推奨 | 指定した通貨コードでの支払金額。 |
 |  | [paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype) | 強く推奨 | 支払のタイプ（例：`credit_card`、`gift_card`、`paypal`）。詳しくは、[既知の値](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values)のリストを参照。 |
 |  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | オプション | この支払トランザクションの一意の ID。 |
@@ -113,7 +113,7 @@ alloy("sendEvent",{
 
 | **フィールド** | **推奨** | **説明** |
 |---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | オプション | 製品の [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 通貨。異なる通貨コードを持つ製品がある場合と、該当する場合にのみ便利です。例えば、購入があった場合や買い物かごに追加された場合などです。 |
+| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | オプション | 製品の [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 通貨。異なる通貨コードを持つ製品がある場合と、該当する場合にのみ便利です。例えば、購入があった場合や買い物かごに追加された場合などです。 |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強く推奨 | 該当する場合にのみ設定する必要があります。例えば、 `productView` 製品の異なるバリエーションは、異なる価格を持つことができますが、 `productListAdds` イベント。 |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 強く推奨 | 製品の XDM ID。 |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 強く推奨 | 訪問者が製品項目をリストに追加するために使用した方法。`productListAdds` 測定とともに設定され、製品がリストに追加された場合にのみ使用します。例として、`add to cart button`、`quick add`、および `upsell` があります。 |

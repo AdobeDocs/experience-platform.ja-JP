@@ -6,7 +6,7 @@ description: Adobe Experience Platformで使用するAdobe Targetイベントフ
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '479'
 ht-degree: 87%
 
 ---
@@ -87,4 +87,4 @@ Adobe Experience Platform を使用すると、Adobe Target のデータを Targ
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

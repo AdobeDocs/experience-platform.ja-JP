@@ -6,8 +6,8 @@ description: スキーマレジストリ API の/auditlog エンドポイント�
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 18%
+source-wordcount: '401'
+ht-degree: 16%
 
 ---
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | この `meta:altId` または URL エンコード済み `$id` を取得します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -125,4 +125,4 @@ curl -X GET \
 | `path` | A [JSON ポインター](../../landing/api-fundamentals.md#json-pointer) 変更または追加された特定のフィールドへのパスを示す文字列。 |
 | `value` | 新しいフィールドまたは更新されたフィールドに割り当てられた値。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

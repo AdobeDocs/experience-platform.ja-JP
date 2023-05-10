@@ -80,7 +80,7 @@ ht-degree: 60%
 * **[!UICONTROL 名前空間]**:次の項目を入力します。 [!DNL Azure Event Hubs] 名前空間。 詳細 [!DNL Azure Event Hubs] 名前空間 [Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL イベントハブ名]**:次の項目を入力します。 [!DNL Azure Event Hub] 名前を入力します。 詳細 [!DNL Azure Event Hubs] 名前 [Microsoftドキュメント](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"

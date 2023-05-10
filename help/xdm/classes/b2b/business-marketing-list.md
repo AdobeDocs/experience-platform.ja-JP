@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 6%
+source-wordcount: '308'
+ht-degree: 5%
 
 ---
 
@@ -29,6 +29,6 @@ ht-degree: 6%
 | `marketingListID` | 文字列 | マーケティングリストエンティティの一意の ID。 |
 | `marketingListName` | 文字列 | マーケティングリストの名前。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

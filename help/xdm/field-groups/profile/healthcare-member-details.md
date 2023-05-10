@@ -4,7 +4,7 @@ description: このドキュメントでは、「ヘルスケアメンバーの�
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '655'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 6%
 | `personalEmail` | [[!UICONTROL メールアドレス]](../../data-types/email-address.md) | 人物の個人の電子メールアドレス。 |
 | `shippingAddress` | [[!UICONTROL 住所]](../../data-types/postal-address.md) | 人物の配送先住所。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `memberDetails` {#memberDetails}
 
@@ -54,7 +54,7 @@ ht-degree: 6%
 | `preferredAvailability` | 文字列 | 人物の予定の希望日時。 |
 | `primaryMemberID` | 文字列 | 個人が依存している場合のプライマリサブスクライバーの一意の識別子。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

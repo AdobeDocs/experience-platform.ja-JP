@@ -4,7 +4,7 @@ title: Destination SDKの設定オプション
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platformの宛先サービスは、宛先機能を構築する�
 | [ストリーミング宛先のテストツール](./test-destination.md) | [ファイルベースの宛先のテストツール](/help/destinations/destination-sdk/file-based-destination-testing-overview.md) | [宛先テスト API の操作](./destination-testing-api.md) |
 | [宛先の公開](./configure-destination-instructions.md#publish-destination) | ストリーミングの宛先と同じ | [宛先公開 API の操作](./destination-publish-api.md) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順 {#next-steps}
 

@@ -4,7 +4,7 @@ description: 次のドキュメントでは、クエリサービスで使用で�
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '714'
 ht-degree: 8%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 | 容量の監視 | ○ | ○ |
 | クエリアラートの設定容量 | × | ○ |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## アクセス制御
 
@@ -58,7 +58,7 @@ Experience Platformのアクセス制御は、 [Adobe Admin Console](https://adm
 | [!DNL Manage Queries] （データ書き込み権限なし） | アドホッククエリを実行するためのアクセスを提供します |
 | [!DNL Manage Queries] （データ書き込み権限を持つ） | バッチクエリを実行するためのアクセスを提供します |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## サンドボックスのサポート
 

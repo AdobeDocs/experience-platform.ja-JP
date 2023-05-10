@@ -1,7 +1,8 @@
 ---
 title: フローサービス API を使用して、SugarCRM イベントのソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを SugarCRM イベントに接続する方法を説明します。
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 60%

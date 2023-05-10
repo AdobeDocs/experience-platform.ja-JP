@@ -107,7 +107,7 @@ ht-degree: 65%
 * **[!DNL Amazon Web Services]アクセスキー と  秘密鍵**：[!DNL Amazon Web Services] で `access key - secret access key` ペアを生成して、[!DNL Amazon Kinesis] アカウントに Platform アクセス権を付与します。詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **[!UICONTROL 地域]**:対象を指定 [!DNL Amazon Web Services] データのストリーミング先の地域。
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"

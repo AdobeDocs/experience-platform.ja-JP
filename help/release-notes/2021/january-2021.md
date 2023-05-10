@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platformリリースノート 2021 年 1 月
-description: Adobe Experience Platformの 2021 年 1 月のリリースノート。
+title: Adobe Experience Platform リリースノート（2021年1月）
+description: Adobe Experience Platform の 2021年1月のリリースノートです。
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
@@ -8,7 +8,7 @@ exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
+Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
 
 **新機能**
 

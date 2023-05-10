@@ -1,5 +1,5 @@
 ---
-keywords: インサイト；attribution ai;attribution ai インサイト；AAI クエリサービス；アトリビューションクエリ；アトリビューションスコア
+keywords: インサイト;Attribution AI;アトリビューション AI インサイト;AAI クエリサービス;アトリビューションクエリ;アトリビューションスコア
 feature: Attribution AI
 title: クエリサービスを使用したアトリビューションスコアの分析
 description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法について説明します。
@@ -7,7 +7,7 @@ exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 

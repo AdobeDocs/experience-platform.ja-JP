@@ -5,8 +5,8 @@ description: このドキュメントでは、セルフサービスソース（�
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 7%
+source-wordcount: '255'
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 7%
 | `responseSpec.schema.properties.columns.items.properties.name` | ファイルの名前を表示します。 |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | ファイル名のデータタイプを定義します。 | `string` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

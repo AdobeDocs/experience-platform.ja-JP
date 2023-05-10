@@ -5,7 +5,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -87,7 +87,7 @@ API がプロジェクトに追加されると、プロジェクトページが 
 
 ![以前に生成されたアクセストークンが、プロジェクトの概要ページに貼り付けられ、 [!UICONTROL トークンを生成] 次の後に選択されたボタン](../images/api/getting-started/paste-private-key.png)
 
-新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが提供されます。 この値は、必要な Authorization ヘッダーに使用され、の形式で指定する必要があります `Bearer {ACCESS_TOKEN}`.
+新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが表示されます。この値は、必要な Authorization ヘッダーに使用され、の形式で指定する必要があります `Bearer {ACCESS_TOKEN}`.
 
 ![UI からコピーされる生成されたアクセストークン](../images/api/getting-started/generated-access-token.png)
 

@@ -1,7 +1,8 @@
 ---
 title: 監査クエリ API の概要
 description: 監査クエリ API を使用すると、様々なAdobe Experience Platform機能の指標データを取得できます。 このドキュメントでは、監査クエリ API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 49%

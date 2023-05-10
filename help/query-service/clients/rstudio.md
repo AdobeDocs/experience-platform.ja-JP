@@ -7,11 +7,11 @@ exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '449'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
-# 接続 [!DNL RStudio] クエリサービスへ
+# クエリサービスへの [!DNL RStudio] の接続
 
 このドキュメントでは、 [!DNL RStudio] Adobe Experience Platform [!DNL Query Service].
 
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
 
-データベース名、ホスト、ポート、ログイン資格情報の検索の詳細については、 [資格情報ガイド](../ui/credentials.md). 資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
+データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
 
 コンソール出力のメッセージで、クエリサービスへの接続を確認します。
 

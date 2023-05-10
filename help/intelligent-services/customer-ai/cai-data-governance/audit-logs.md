@@ -2,8 +2,9 @@
 keywords: インサイト;顧客 AI;顧客 AI インサイト;CAI クエリサービス;顧客 AI クエリ;顧客 AI スコア
 title: 顧客 AI の監査ログの概要
 description: 顧客 AI で監査ログを表示および管理する方法について説明します。
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
-workflow-type: ht
+exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%
 

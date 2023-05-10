@@ -6,8 +6,8 @@ description: このドキュメントでは、「通信購読スキーマ」フ�
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 12%
+source-wordcount: '715'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 12%
 | `bundleName` | 文字列 | 顧客が登録されている任意のタイプのサブスクリプションバンドルの名前をキャプチャします（例： ）。 `Internet + Media`. |
 | `primaryPartyID` | 文字列 | サブスクリプションを担当する主要人物の識別子。通常は、デバイスの電話番号になります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
@@ -55,7 +55,7 @@ ht-degree: 12%
 | `selfSetup` | ブール値 | 顧客が技術者の訪問なしでインターネット設定に適格かどうかを示します。 |
 | `uploadSpeed` | 整数 | サブスクリプションで使用できる最大アップロード速度 ( メガバイト (MB) 単位 )。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `landlineSubscription` {#landlineSubscription}
 
@@ -78,7 +78,7 @@ ht-degree: 12%
 | `unlimitedLocalCalling` | ブール値 | 固定電話の契約に、市内通話無制限機能が含まれているかどうかを示します。 |
 | `voicemail` | ブール値 | 固定電話の契約にボイスメール機能が含まれているかどうかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mediaSubscription` {#mediaSubscription}
 
@@ -92,7 +92,7 @@ ht-degree: 12%
 | `subscriptionDetails` | [[!UICONTROL 通信サブスクリプション]](../../data-types/telecom-subscription.md) | サブスクリプションに関する一般的な詳細（サブスクリプションの長さ、料金、ステータスなど）を説明します。 |
 | `channels` | 整数 | メディアサブスクリプションに含まれるチャネルの数。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
@@ -108,4 +108,4 @@ ht-degree: 12%
 | `planLevel` | 文字列 | このサブスクリプションに割り当てられたモバイルプランの名前。 |
 | `portedNumber` | ブール値 | お客様が番号を別の通信事業者から移植するかどうかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

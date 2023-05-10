@@ -2,10 +2,11 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: UI でのPinterest Ads ソース接続の作成
 description: Adobe Experience Platform UI を使用してPinterest Ads ソース接続を作成する方法を説明します。
-badge: "ベータ"
+badge: ベータ
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 29%

@@ -6,7 +6,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 9%
+ht-degree: 31%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->このドキュメントページは Criteo が作成しました。 現在はベータ版の製品であり、機能は変更される場合があります。 お問い合わせや更新のご依頼については、Criteo に直接お問い合わせください [ここ](mailto:criteoTechnicalPartnerships@criteo.com).
+>このドキュメントページは Criteo が作成しました。 現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のご依頼については、Criteo に直接お問い合わせください [ここ](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo は、信頼できる効果的な広告を提供し、オープンインターネットを介してすべての消費者に豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI を備えた Criteo は、ショッピングジャーニー全体の各タッチポイントをパーソナライズし、適切な広告を適切なタイミングで顧客に届けます。
 
@@ -33,23 +33,23 @@ Criteo は、信頼できる効果的な広告を提供し、オープンイン�
 
 ![前提条件](../../assets/catalog/advertising/criteo/prerequisites.png)
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
-Criteo では、以下の表で説明する ID のアクティブ化をサポートしています。 詳細情報： [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started).
+Criteo では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
 | `email_sha256` | SHA-256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA-256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 [!UICONTROL 変換を適用] オプションを使用し、アクティベーション時に Platform が自動的にデータをハッシュ化する必要があります。 |
 | `gum_id` | Criteo [!DNL GUM] cookie 識別子 | [!DNL GUM IDs] 顧客がユーザー識別システムと Criteo のユーザー ID([!DNL UID]) をクリックします。 識別子のタイプが `gum_id`、追加のパラメーター、 [!DNL GUM Caller ID]、も含める必要があります。 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 [!DNL GUM ID] 同期（必要に応じて） |
 
-## エクスポートのタイプと頻度 {#export-type-frequency}
+## 書き出しのタイプと頻度 {#export-type-frequency}
 
-宛先の書き出しのタイプと頻度について詳しくは、次の表を参照してください。
+宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
-| 項目 | タイプ | 備考 |
+| 項目 | タイプ | メモ |
 | --- | --- | --- |
-| 書き出しタイプ | セグメントエクスポート | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Criteo] 宛先。 |
-| 書き出し頻度 | ストリーミング | ストリーミングの宛先は、API ベースの接続です。 セグメント評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳細を表示 [ストリーミング先](../../destination-types.md#streaming-destinations). |
+| 書き出しタイプ | セグメントの書き出し | [!DNL Criteo] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | ストリーミング | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](../../destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 ## ユースケース {#use-cases}
 
@@ -67,7 +67,7 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -97,23 +97,23 @@ Criteo では、以下の表で説明する ID のアクティブ化をサポー
 | フィールド | 説明 | 必須 |
 | --- | --- | --- |
 | 名前 | 将来この宛先を認識するのに役立つ名前です。 ここで選択する名前は、 [!DNL Audience] Criteo Management Center での名前。後の段階では変更できません。 | ○ |
-| 説明 | 将来この宛先を識別するのに役立つ説明。 | × |
+| 説明 | 将来この宛先を識別するのに役立つ説明。 | いいえ |
 | 広告主 ID | 組織の Criteo 広告主 ID。 この情報を入手するには、Criteo のアカウントマネージャーにお問い合わせください。 | ○ |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] 組織内の 該当するについては、Criteo アカウントチームにお問い合わせください [!DNL GUM Caller ID] またはこの詳細を取得 [!DNL GUM] 同期（必要に応じて） | はい、いつでも [!DNL GUM ID] は識別子として指定されます |
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にして、宛先へのデータフローのステータスに関する通知を受け取ることができます。 リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の指定が完了したら、 **[!UICONTROL 次へ]**.
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate-segments}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、 [アクセス制御の概要](/help/access-control/ui/overview.md) または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [ストリーミングセグメントの書き出し先に対するプロファイルとセグメントのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 

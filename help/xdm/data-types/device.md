@@ -6,7 +6,7 @@ description: このドキュメントでは、デバイス XDM データタイ�
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '326'
 ht-degree: 18%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 18%
 | `typeID` | 文字列 | デバイスの識別子。これは、使用されているハードウェアを識別する DeviceAtlas または他のサービスからの識別子である可能性があります。 |
 | `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。詳しくは、 [付録](#typeIDService) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

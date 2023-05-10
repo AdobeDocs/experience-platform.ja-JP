@@ -1,15 +1,15 @@
 ---
 description: ファイルベースの宛先テスト API は、Destination SDKを通じて構築されたファイルベースの宛先の設定を検証するために使用できるエンドポイントの集まりです。
-title: ファイルベースの宛先テスト API
+title: ファイルベースの宛先のテスト API
 exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# ファイルベースの宛先テスト API
+# ファイルベースの宛先のテスト API
 
 ## 概要 {#overview}
 

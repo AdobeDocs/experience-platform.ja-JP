@@ -6,7 +6,7 @@ exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->この [!DNL Mixpanel] ソースはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Mixpanel] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -50,13 +50,13 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 ![スキーマを作成](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## 接続 [!DNL Mixpanel] API を使用して Platform に接続
+## API を使用して [!DNL Mixpanel] と Platform を接続する
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Mixpanel] と Platform を接続する方法について説明します。
 
 * [のソース接続とデータフローの作成 [!DNL Mixpanel] フローサービス API の使用](../../tutorials/api/create/analytics/mixpanel.md)
 
-## 接続 [!DNL Mixpanel] UI を使用して Platform に接続
+## UI を使用した [!DNL Mixpanel] の Platform への接続
 
-* [UI での [!DNL Mixpanel] ソース接続の作成](../../tutorials/ui/create/analytics/mixpanel.md)
+* [UI での  [!DNL Mixpanel]  ソース接続の作成](../../tutorials/ui/create/analytics/mixpanel.md)
 * [UI での顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/analytics.md)

@@ -5,8 +5,8 @@ description: このドキュメントでは、「 Reservation Details 」スキ�
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 8%
+source-wordcount: '334'
+ht-degree: 7%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 8%
 | `startDate` | 日時 | 予約の受け取り開始日、アウトバウンド日、またはチェックイン日。 |
 | `triptype` | 文字列 | 予約が片道の旅行、往復、または複数都市の旅行のどちらであるかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -6,8 +6,8 @@ description: このドキュメントでは、電話番号 XDM データタイ�
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 10%
+source-wordcount: '210'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 | `statusReason` | 現在のステータスの説明。 |
 | `validity` | 電話番号の技術的な正確性のレベル。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 電話番号のデータタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

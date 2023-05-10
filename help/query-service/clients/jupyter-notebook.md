@@ -5,19 +5,19 @@ exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
 source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# 接続 [!DNL Jupyter Notebook] クエリサービスへ
+# クエリサービスへの [!DNL Jupyter Notebook] の接続
 
 このドキュメントでは、接続に必要な手順を説明します [!DNL Jupyter Notebook] をAdobe Experience Platform Query Service と連携させることができます。
 
 ## はじめに
 
-このガイドでは、 [!DNL Jupyter Notebook] そしてそのインターフェイスに詳しい ダウンロードするには [!DNL Jupyter Notebook] 詳しくは、 [公式 [!DNL Jupyter Notebook] ドキュメント](https://jupyter.org/).
+このガイドでは、 [!DNL Jupyter Notebook] そしてそのインターフェイスに詳しい [!DNL Jupyter Notebook] をダウンロードするには、または詳細情報については、[公式 [!DNL Jupyter Notebook] ドキュメント](https://jupyter.org/)を参照してください。
 
-接続に必要な資格情報を取得するには [!DNL Jupyter Notebook] をExperience Platformするには、 [!UICONTROL クエリ] ワークスペース（Platform UI 内） 現在、 [!UICONTROL クエリ] ワークスペース。
+[!DNL Jupyter Notebook] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、 [!UICONTROL クエリ] ワークスペース。
 
 >[!TIP]
 >

@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Assurance の概要
-description: Adobe Experience Platform Assurance を使用すると、モバイルアプリケーション内でデータを収集したりエクスペリエンスを提供したりする方法を調査、配達確認、シミュレーションおよび検証できます。
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+description: Adobe Experience Platform Assurance を使用すると、モバイルアプリケーションでデータを収集したりエクスペリエンスを提供したりする方法を検査、配達確認、シミュレートおよび検証できます。
+exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '824'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
-
 
 # Adobe Experience Platform Assurance
 
@@ -23,7 +23,7 @@ Adobe Experience Platform Assurance は、 [Adobe Experience Cloud](https://www.
 >
 >アシュランスパブリック API を利用できます。
 >
->[Assurance API](https://developer.adobe.com/adobe-assurance-public-apis/) は、AdobeAssurance Mobile SDK に適合しない場合に、Web およびモバイルアプリのテストとデバッグを可能にする API のコレクションです。
+>[Assurance API](https://developer.adobe.com/adobe-assurance-public-apis/) は、AdobeAssurance Mobile SDK に適合しない場合に、Web およびモバイルアプリのテストとデバッグを実行できる API のコレクションです。
 
 ## 一般公開
 

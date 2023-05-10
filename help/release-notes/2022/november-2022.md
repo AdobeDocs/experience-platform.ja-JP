@@ -3,8 +3,8 @@ title: Adobe Experience Platform リリースノート 2022年11月
 description: Adobe Experience Platform の 2022年11月 のリリースノート。
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
-workflow-type: ht
-source-wordcount: '454'
+workflow-type: tm+mt
+source-wordcount: '451'
 ht-degree: 100%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## データ収集 {#data-collection}
 
-Adobe Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
 
 **新機能または更新された機能**
 
@@ -43,7 +43,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- |
 | スキーマに直接追加する際にカスタムクラスにフィールドを割り当てる | [個々のフィールドをスキーマに直接追加](../../xdm/ui/resources/schemas.md#add-individual-fields)する際に、以前はフィールドをその親リソースとしてフィールドグループに割り当てることしかできませんでした。現在は、フィールドグループに加えて、親リソースとして[カスタムクラスにフィールドを割り当てる](../../xdm/ui/resources/schemas.md#add-to-class)ことができます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 

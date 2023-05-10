@@ -4,7 +4,7 @@ description: このドキュメントでは、「XDM ビジネスキャンペー
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '357'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 6%
 | `webinarConfirmationUrl` | [!UICONTROL 文字列] | キャンペーンメンバーのウェビナー確認 URL。 |
 | `webinarRegistrationID` | [!UICONTROL 文字列] | キャンペーンメンバーのウェビナー登録 ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

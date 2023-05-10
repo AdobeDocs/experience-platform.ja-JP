@@ -8,7 +8,7 @@ exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 57%
+ht-degree: 61%
 
 ---
 
@@ -86,7 +86,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | のエンドポイント [!DNL Shopify] サーバー。 |
+| `auth.params.host` | [!DNL Shopify] サーバーのエンドポイント。 |
 | `auth.params.accessToken` | のアクセストークン [!DNL Shopify] ユーザーアカウント。 |
 | `connectionSpec.id` | この [!DNL Shopify] 接続仕様 ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
@@ -103,7 +103,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Shopify] を使用したベース接続 [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Shopify] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/ecommerce.md)

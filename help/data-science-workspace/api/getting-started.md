@@ -43,6 +43,6 @@ ht-degree: 74%
 * [実験](./experiments.md)
 * [Insights](./insights.md)
 * [MLInstance（レシピ）](./mlinstances.md)
-* [MLService](./mlservices.md)
+* [MLServices](./mlservices.md)
 * [モデル](./models.md)
 * [付録](./appendix.md)

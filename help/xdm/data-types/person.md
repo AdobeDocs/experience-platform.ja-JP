@@ -6,8 +6,8 @@ description: このドキュメントでは、Person Experience Data Model(XDM) 
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 17%
+source-wordcount: '338'
+ht-degree: 16%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 17%
 | `nationality` | 文字列 | ISO 3166-1 Alpha-2 コードを使用して表される、個人とその国との法的関係。 このプロパティの形式は、この正規表現に準拠している必要があります `^[A-Z]{2}$`. |
 | `taxId` | 文字列 | 個人の税金または会計 ID ( 米国の納税者識別番号 (TIN) やスペインの証明書 de Identificación 会計 (CIF/NIF) など )。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

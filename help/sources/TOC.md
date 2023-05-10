@@ -5,7 +5,7 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 100%
 

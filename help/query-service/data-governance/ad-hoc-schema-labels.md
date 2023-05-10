@@ -5,7 +5,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -50,7 +50,7 @@ Platform UI でアドホックスキーマを表示できるようにするに�
 
 ![アドホックスキーマの構造図の例です。](../images/data-governance/adhoc-schema-structure-diagram.png)
 
-## ガバナンスラベルを編集
+## ガバナンスラベルの編集
 
 アドホックスキーマのデータラベルを編集するには、 [!UICONTROL ラベル] タブをクリックします。 ラベルワークスペースでは、アドホックスキーマのフィールドにラベルを適用、作成および編集し、UI を使用してアクセス権限を制御できます。 アドホックスキーマ内のすべてのフィールドは、ここで表されます。
 

@@ -1,8 +1,9 @@
 ---
 title: CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
-workflow-type: ht
+exl-id: b80ab18f-9f4d-4044-b11d-238e9a45710f
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
 

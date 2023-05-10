@@ -3,8 +3,8 @@ title: プライバシーコンソールの概要
 description: Adobe Experience Platform UI でプライバシー関連のワークフローを監視する方法について説明します。
 source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 4%
+source-wordcount: '403'
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 | 最もアクティブなユーザー | 組織内で最もアクティブな Platform ユーザーを、次の条件でキャプチャして表示します。 [監査ログ](./audit-logs/overview.md) 選択した時間枠に設定します。 ドロップダウンメニューを使用して、過去 7 日間、14 日間、30 日間の期間を変更します。 |
 | データ主体のリクエスト | 送信され、完了したデータ主体の要求の数を [Privacy Service](../../privacy-service/home.md) ある日に |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 使用例ガイド
 

@@ -7,11 +7,11 @@ exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 1%
+ht-degree: 12%
 
 ---
 
-# 接続 [!DNL Tableau] クエリサービスへ
+# クエリサービスへの [!DNL Tableau] の接続
 
 このドキュメントでは、 [!DNL Tableau] Adobe Experience Platform [!DNL Query Service].
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->サードパーティの BI ツールのネストされたデータ構造は、フラット化して、使いやすさを向上させ、データの取得、分析、変換、レポートに必要なワークロードを削減できます。 詳しくは、[`FLATTEN` 機能](../essential-concepts/flatten-nested-data.md) を参照してください。
+>ネストされたデータ構造をサードパーティの BI ツール用にフラット化して、より使いやすいデータ構造にし、データの取得、分析、変換およびレポートに必要なワークロードを軽減できます。データベースへの接続時にこの設定をアクティブにする方法については、[`FLATTEN`機能](../essential-concepts/flatten-nested-data.md)に関するドキュメントを参照してください。
 
 すべての資格情報を入力した後、設定を確認して続行します。 Adobe Experience Platformとの連携が完了しました。
 

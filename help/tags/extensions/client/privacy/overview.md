@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Adobe Privacy タグ拡張機能を使用すると、クライアントサイドデバイス上のアドビソリューションによってエンドユーザーに割り当てられているユーザー ID を収集および削除できます。 その後、収集した ID を[Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) に送信し、Adobe Experience Cloud のサポート対象アプリケーションにある関連する個人データにアクセスしたり削除したりできます。
 

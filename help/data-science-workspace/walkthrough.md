@@ -16,7 +16,7 @@ ht-degree: 2%
 
 このドキュメントでは、Adobe Experience Platform Data Science Workspace コースで期待される学習結果について説明します。 コースを表示するには、Adobe IDを使用してExperience Leagueにログインする必要があります。
 
-この [データサイエンティスト向け Data Science Workspace の概要コース](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) は、JupyterLab Notebooks を使用して、インサイトとクエリデータを取得し、プロファイル対応データセットを作成し、自動機械学習モデルを公開し、Adobeアプリケーションと非Adobeアプリケーションの両方で機械学習の洞察をアクティブ化する方法を学ぶデータ科学者向けに設計されています。
+この [データサイエンティスト向け Data Science Workspace の概要コース](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) は、JupyterLab Notebooks を使用して、インサイトとクエリデータを取得し、プロファイル対応データセットを作成し、自動機械学習モデルを公開し、Adobeアプリケーションと非Adobeアプリケーションの両方で機械学習の洞察をアクティブ化する方法を学ぶデータ科学者向けに設計されています。
 
 ## コースの前提条件
 

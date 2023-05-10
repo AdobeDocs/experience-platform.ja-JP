@@ -1,13 +1,13 @@
 ---
 title: データストリームの上書きの設定
 description: Web SDK を使用して、データストリームの上書きを設定し、データストリームの上書きをアクティブにする方法について説明します。
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
 
 ---
-
 
 # データストリームの上書きの設定
 
@@ -233,4 +233,3 @@ alloy("configure", {
   }
 }
 ```
-

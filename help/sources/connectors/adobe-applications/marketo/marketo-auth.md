@@ -83,7 +83,7 @@ ht-degree: 1%
 
 新しいサービスにわかりやすい表示名を付け、「 」を選択します。 **[!DNL Custom]** から **[!DNL Service]** ドロップダウンメニュー。 適切な説明を入力し、プロビジョニングするユーザーを **[!DNL API Only User]** ドロップダウンメニュー。 必要な情報を入力したら、「 」を選択します。 **[!DNL Create]** をクリックして、新しいカスタムサービスを作成します。
 
-![作成](../images/marketo/create.png)
+![create](../images/marketo/create.png)
 
 ## クライアント ID とクライアント秘密鍵を取得する
 

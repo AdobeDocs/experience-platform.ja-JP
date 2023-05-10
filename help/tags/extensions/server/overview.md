@@ -5,7 +5,7 @@ exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
 source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 50%
+ht-degree: 52%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 50%
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [コア](./core/overview.md)
-* [Epsilon イベント API](https://exchange.adobe.com/apps/ec/109127)*
+* [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)

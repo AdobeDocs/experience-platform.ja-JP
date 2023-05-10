@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1360'
 ht-degree: 9%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->この [!DNL Shared Device Detection] 機能はベータ版です。 機能とドキュメントは変更される場合があります。
+>この [!DNL Shared Device Detection] 機能はベータ版です。 その機能とドキュメントは変更される可能性があります。
 
 Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をわかりやすく表示できます。これによって、インパクトのある個人的なデジタル体験をリアルタイムで提供できます。
 
 [!DNL Shared Device] は、複数の個人が使用するデバイスを指します。 共有デバイスの例としては、タブレット、ライブラリコンピューター、キオスクなどがあります。 を通じて [!DNL Shared Device Detection] 機能を使用すると、同じデバイスの異なるユーザーが単一の ID に結合されるのを防ぐことができ、個人をより正確に表現できます。
 
-[!DNL Shared Device Detection] では、以下のことが可能です。
+[!DNL Shared Device Detection] を使用すると、次のことが可能です。
 
 * 同じデバイスの異なるユーザーに対して別々の ID グラフを作成する
 * 同じデバイスを使用して異なる個人からのデータが混在しないようにする。
@@ -55,7 +55,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 | ユーザー ID 名前空間 | ユーザー ID 名前空間は、共有デバイスの認証済み（ログイン済み）ユーザーを表します。 |
 | 最後に認証されたユーザー | 最後に認証されたユーザーは、デバイスが複数のアカウントでログオンしている場合に、そのデバイスに最後にログインしたユーザーを表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Shared Device Detection] は、2 つの名前空間を設定することで機能します。の **共有 ID 名前空間** そして **ユーザー ID 名前空間**.
 

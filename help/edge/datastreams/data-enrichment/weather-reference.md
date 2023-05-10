@@ -1,15 +1,15 @@
 ---
-title: 天気データフィールドのマッピング
+title: 気象データフィールドのマッピング
 description: The Weather Channel との統合の一部として使用できる、使用可能な天気データフィールドの参照ページです。
-source-git-commit: 3e5ca8fe67e5ad9ce0fe70d0c9f1e2fbc20cee17
+exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '12238'
 ht-degree: 0%
 
 ---
 
-
-# 天気データフィールドのマッピング
+# 気象データフィールドのマッピング
 
 Adobeが～と提携した [!DNL [The Weather Company]](https://www.ibm.com/weather) データストリームを介して収集されたデータに米国の天気の追加コンテキストを取り込みます。 このデータは、分析、ターゲティングおよびセグメントのExperience Platform作成に使用できます。
 

@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 6%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
@@ -21,6 +21,6 @@ ht-degree: 6%
 | `planId` | [!UICONTROL 文字列] | プランの一意の ID。 |
 | `planName` | [!UICONTROL 文字列] | プランの名前。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 クラスは、 [[!UICONTROL 医療プランの詳細] フィールドグループ](../field-groups/plan/healthcare-plan-details.md) 健康保険計画の詳細を説明する。

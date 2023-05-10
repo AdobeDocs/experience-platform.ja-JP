@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 29%
+source-wordcount: '1383'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。の構造内でこれらの関係を定義する [!DNL Experience Data Model] (XDM) スキーマを使用すると、顧客データに関する複雑なインサイトを得ることができます。
 
-スキーマの関係は、和集合スキーマと [!DNL Real-Time Customer Profile]同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、専用の関係フィールドを **ソーススキーマ**：別の **参照スキーマ**.
+スキーマの関係は、結合スキーマと [!DNL Real-Time Customer Profile] を使用して推論できますが、同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、専用の関係フィールドを **ソーススキーマ**：別の **参照スキーマ**.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 29%
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [開発者ガイド](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、を参照してください。 [!DNL Schema Registry] API これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（ ヘッダーと使用可能な値には特に注意を払う）が含まれます。[!DNL Accept]
+このチュートリアルを開始する前に、 [開発者ガイド](../api/getting-started.md) を正しく呼び出すために知っておく必要がある重要な情報については、を参照してください。 [!DNL Schema Registry] API そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ [!DNL Accept] ヘッダーとその取り得る値には特に注意を払います）。
 
 ## ソースと参照スキーマの定義 {#define-schemas}
 
@@ -232,7 +232,7 @@ curl -X POST\
 | --- | --- |
 | `$id` | システムが生成した、新しいフィールドグループの一意の ID です。 URI の形式を取ります。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次を記録： `$id` 次の手順でフィールドグループをソーススキーマに追加する際に使用するフィールドグループの URI。
 
@@ -250,7 +250,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL エンコードされた `$id` URI またはソーススキーマの `meta:altId`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -281,7 +281,7 @@ curl -X PATCH \
 | `path` | 新しいリソースを追加するスキーマフィールドへのパス。フィールドグループをスキーマに追加する場合、値は「/allOf/ — 」である必要があります。 |
 | `value.$ref` | この `$id` 追加するフィールドグループの |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -385,7 +385,7 @@ curl -X POST \
 | `sourceProperty` | 参照スキーマのプライマリ ID を参照するために使用されるソーススキーマ内のフィールドへのパス。 |
 | `xdm:identityNamespace` | 参照フィールドの ID 名前空間。これは、参照スキーマのプライマリ ID と同じ名前空間である必要があります。 詳しくは、「[ID 名前空間の概要](../../identity-service/home.md)」を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | `xdm:destinationVersion` | 参照スキーマのバージョン番号。 |
 | `xdm:destinationProperty` | 参照スキーマ内のプライマリ ID フィールドへのパス。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 応答
 

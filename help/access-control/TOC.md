@@ -7,7 +7,7 @@ feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 98%
 * [アクセス制御の概要](home.md)
 * 属性ベースのアクセス制御 {#abac}
    * [概要](abac/overview.md)
-   * [エンドツーエンドガイド](abac/end-to-end-guide.md)
+   * [エンドツーエンドのガイド](abac/end-to-end-guide.md)
    * 権限 {#permissions-ui}
       * [参照](abac/ui/browse.md)
       * [ラベル](abac/ui/labels.md)

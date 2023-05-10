@@ -5,8 +5,8 @@ description: このドキュメントでは、汎用マーケティング環境�
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 2%
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 | `time` | 日時 | マーケティング環境設定が変更されたときの ISO 8601 タイムスタンプ（該当する場合）。 |
 | `val` | 文字列 | このマーケティング使用例での、お客様が指定する環境設定の選択。 使用可能な値と定義については、以下の表を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次の表に、 `val`:
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 | `VI` | 個人の生命の関心 | 特定の目的のためのデータの収集は、個人の重要な利益を保護するために必要です。 |
 | `PI` | 公益 | 特定の目的のためのデータの収集は、公益上のタスクを実行するか、公的な権限の行使に必要です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

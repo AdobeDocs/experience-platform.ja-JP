@@ -6,8 +6,8 @@ description: このドキュメントでは、Subscription Experience Data Model
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 25%
+source-wordcount: '417'
+ht-degree: 24%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 25%
 | `topUp` | 文字列 | 請求期間中にサブスクリプションの消耗品を再購入する方法に関して同意された条件を説明します。 |
 | `type` | 文字列 | サブスクリプションの対象となる人数に関するエンタイトルメントの範囲。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

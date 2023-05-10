@@ -8,7 +8,7 @@ exl-id: 561bf948-fc92-4401-8631-e2a408667507
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `endpoint` | のエンドポイント [!DNL Data Explorer] サーバー。 |
+| `endpoint` | [!DNL Data Explorer] サーバーのエンドポイント。 |
 | `database` | の名前 [!DNL Data Explorer] データベース。 |
 | `tenant` | への接続に使用される一意のテナント ID [!DNL Data Explorer] データベース。 |
 | `servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Data Explorer] データベース。 |

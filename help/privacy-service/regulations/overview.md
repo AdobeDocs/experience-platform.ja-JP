@@ -6,7 +6,7 @@ description: このドキュメントでは、Adobe Experience Cloudでサポー
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '721'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 7%
 | PDPA（タイ） | この [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者が個人データの違法な収集、使用、開示を受けるのを防ぐために導入されました。 EU の GDPR に影響を受け、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求したり、そのデータを削除したりする権利を付与します。 |
 | VCDPA（バージニア） | この [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) は、個人データにアクセス、削除、修正する権利など、バージニア在住者（「消費者」）に対する新しいデータプライバシー権を提供します。 また、消費者は、個人データの販売のオプトアウト、個人データに基づくプロファイルのオプトアウト、個人広告目的の処理をおこなう権利も持ちます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 次の手順
 

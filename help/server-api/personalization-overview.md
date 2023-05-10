@@ -5,13 +5,13 @@ exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 # パーソナライゼーションの概要
 
-を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
 また、 [!DNL Server API] では、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../destinations/ui/configure-personalization-destinations.md).
 
@@ -310,8 +310,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | ○ | データ収集エンドポイントで使用されるデータストリームの ID。 |
-| `requestId` | `String` | × | 外部リクエストトレース ID。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
-| `silent` | `Boolean` | × | Edge ネットワークが `204 No Content` 空のペイロードを持つ応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
+| `requestId` | `String` | いいえ | 外部リクエストトレース ID。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
+| `silent` | `Boolean` | いいえ | Edge ネットワークが `204 No Content` 空のペイロードを持つ応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
 
 ### 応答 {#notifications-response}
 

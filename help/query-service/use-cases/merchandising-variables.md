@@ -1,14 +1,15 @@
 ---
 title: 分析データからマーチャンダイジング変数を返して使用する
 description: Analytics データセット内のマーチャンダイジング変数にアクセスするための XDM フィールドとサンプルクエリの提供方法について説明します。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# 分析データからマーチャンダイジング変数を返して使用する
+# 分析データからのマーチャンダイジング変数の返しと使用
 
 クエリサービスを使用して、Adobe AnalyticsからAdobe Experience Platformにデータセットとして取り込まれたデータを管理します。 以下の節では、Analytics データセット内のマーチャンダイジング変数にアクセスするために使用できるクエリ例を示します。 詳しくは、ドキュメントを参照してください。 [Adobe Analyticsデータの取得とマッピング方法](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=ja) Analytics ソースを使用
 

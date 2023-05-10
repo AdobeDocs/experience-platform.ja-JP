@@ -7,7 +7,7 @@ description: フローサービス API を使用して Apache Cassandra をAdobe
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
-ht-degree: 41%
+ht-degree: 47%
 
 ---
 
@@ -35,8 +35,8 @@ ht-degree: 41%
 | ---------- | ----------- |
 | `host` | の IP アドレスまたはホスト名 [!DNL Cassandra] サーバー。 |
 | `port` | TCP ポート [!DNL Cassandra] サーバーは、を使用してクライアント接続をリッスンします。 デフォルトのポートは `9042`. |
-| `username` | に接続するために使用するユーザー名 [!DNL Cassandra] 認証用のサーバ。 |
-| `password` | に接続するパスワード [!DNL Cassandra] 認証用のサーバ。 |
+| `username` | 認証のために [!DNL Cassandra] サーバーに接続するために使用するユーザー名。 |
+| `password` | 認証のために [!DNL Cassandra] サーバーに接続するためのパスワード。 |
 | `connectionSpec.id` | 接続の作成に必要な一意の識別子。 の接続仕様 ID [!DNL Cassandra] が `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 の導入について詳しくは、 [この Cassandra ドキュメント](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
@@ -106,8 +106,8 @@ curl -X POST \
 | --------- | ----------- |
 | `auth.params.host` | の IP アドレスまたはホスト名 [!DNL Cassandra] サーバー。 |
 | `auth.params.port` | TCP ポート [!DNL Cassandra] サーバーは、を使用してクライアント接続をリッスンします。 デフォルトのポートは `9042`. |
-| `auth.params.username` | に接続するために使用するユーザー名 [!DNL Cassandra] 認証用のサーバ。 |
-| `auth.params.password` | に接続するパスワード [!DNL Cassandra] 認証用のサーバ。 |
+| `auth.params.username` | 認証のために [!DNL Cassandra] サーバーに接続するために使用するユーザー名。 |
+| `auth.params.password` | 認証のために [!DNL Cassandra] サーバーに接続するためのパスワード。 |
 | `connectionSpec.id` | [!DNL Cassandra] 接続仕様 ID：`a8f4d393-1a6b-43f3-931f-91a16ed857f4`。 |
 
 **応答**

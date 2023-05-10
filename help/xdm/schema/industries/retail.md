@@ -5,8 +5,8 @@ description: Adobe Experience Platformで使用するエクスペリエンスデ
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 16%
+source-wordcount: '519'
+ht-degree: 17%
 
 ---
 
@@ -45,6 +45,6 @@ ht-degree: 16%
 | ロイヤリティ（パートナー）データを取り込み、Web、電子メール、デジタルマーケティングチャネルにわたって関連製品情報を増やします。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Web 詳細](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[デモグラフィックの詳細](../../field-groups/profile/demographic-details.md)</li><li>[ロイヤルティの詳細](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**[製品](../../classes/product.md)**:<ul><li>[製品カタログ](../../field-groups/product/product-catalog.md)</li><li>[製品カテゴリ](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | 自動およびパーソナライズされた E メールで、買い物かごの放棄者を再ターゲット化します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[コマース詳細](../../field-groups/event/commerce-details.md)</li><li>[Web 詳細](../../field-groups/event/web-details.md)</li></ul></li><li>**[製品](../../classes/product.md)**:<ul><li>[製品カタログ](../../field-groups/product/product-catalog.md)</li><li>[製品カテゴリ](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 *\*今後のリリースでは、標準の製品クラスが予定されていますが、製品スキーマは現在、カスタムクラスを使用して構築されている必要があります。 したがって、スキーマのクラスの構造と、スキーマに追加するフィールドグループの構造を手動で構築する必要があります。 詳しくは、 [カスタムクラスの作成](../../ui/resources/classes.md#create) （ XDM UI ガイド）を参照してください。*

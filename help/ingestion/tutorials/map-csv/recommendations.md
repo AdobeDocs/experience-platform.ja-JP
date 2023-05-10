@@ -4,8 +4,8 @@ description: このチュートリアルでは、AI で生成されたレコメ�
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1014'
+ht-degree: 96%
 
 ---
 

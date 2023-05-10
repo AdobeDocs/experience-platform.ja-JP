@@ -5,7 +5,7 @@ title: ストリーミング取り込みトラブルシューティングガイ�
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 100%
 

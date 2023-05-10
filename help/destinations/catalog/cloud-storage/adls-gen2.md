@@ -5,7 +5,7 @@ exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
 
@@ -48,11 +48,11 @@ ht-degree: 90%
 * **[!UICONTROL テナント]**：アプリケーションを含んだテナント情報。
 * **[!UICONTROL サービスプリンシパル ID]**：アプリケーションのクライアント ID。
 * **[!UICONTROL サービスプリンシパルキー]**：アプリケーションのキー。
-* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 以下の画像で、正しく書式設定された暗号化キーの例を参照してください。
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しく書式設定された PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 

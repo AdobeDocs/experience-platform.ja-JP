@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: プロファイルシステムジョブ API エンドポイント
 type: Documentation
 description: Adobe Experience Platformでは、不要になった、またはエラーで追加されたリアルタイム顧客プロファイルデータを削除するために、プロファイルストアからデータセットまたはバッチを削除できます。 これには、プロファイル API を使用してプロファイルシステムジョブを作成するか、削除リクエストを作成する必要があります。
@@ -7,7 +7,7 @@ exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1316'
-ht-degree: 67%
+ht-degree: 68%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-jp) の一部です。先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 削除リクエストの表示
 

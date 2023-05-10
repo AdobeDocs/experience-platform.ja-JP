@@ -6,8 +6,8 @@ description: このドキュメントでは、通信サブスクリプション�
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 18%
+source-wordcount: '605'
+ht-degree: 17%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 18%
 | `topUp` | 文字列 | 請求期間中にサブスクリプションの消耗品を再購入する方法に関して同意された条件を説明します。 |
 | `type` | 文字列 | サブスクリプションの対象となる人数に関するエンタイトルメントの範囲。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
@@ -77,4 +77,4 @@ ht-degree: 18%
 | `storageCapacity` | 文字列 | デバイスのストレージ容量。 |
 | `type` | 文字列 | デバイスタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -4,7 +4,7 @@ title: Google gtag 拡張機能
 description: Google gtag 拡張機能は、Adobe Experience Platform の広告の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 

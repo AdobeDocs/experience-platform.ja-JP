@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 7%
+source-wordcount: '365'
+ht-degree: 6%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 7%
 | `personID` | 文字列 | オポチュニティと人物の関係にある人物の一意の識別子。 |
 | `personRole` | 文字列 | オポチュニティと人物の関係における人物の役割。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

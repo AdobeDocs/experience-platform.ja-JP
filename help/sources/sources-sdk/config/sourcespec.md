@@ -5,8 +5,8 @@ description: このドキュメントでは、セルフサービスソース（�
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1690'
-ht-degree: 50%
+source-wordcount: '1687'
+ht-degree: 49%
 
 ---
 
@@ -265,7 +265,7 @@ ht-degree: 50%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | 詳しくは、 [その他のリソース](#user-input) 例： `spec.properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## その他のリソース {#appendix}
 

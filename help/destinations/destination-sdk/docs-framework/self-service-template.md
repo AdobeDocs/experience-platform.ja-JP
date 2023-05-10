@@ -5,7 +5,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1528'
-ht-degree: 29%
+ht-degree: 38%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 29%
 
 *お客様に役立つ場合は、関連するドキュメントにリンクアウトできます。*
 
-## サポートされる ID {#supported-identities}
+## サポートされている ID {#supported-identities}
 
 *宛先でサポートされている ID に関する情報をこの節に追加します。 テーブルには、いくつかの標準値が事前入力されています。 宛先に適用しない値と、事前入力されていない値を削除します。*
 
@@ -67,8 +67,8 @@ ht-degree: 29%
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを読む： [ECID](/help/identity-service/ecid.md) を参照してください。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 ハッシュ化された電話番号の両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -105,9 +105,9 @@ ht-degree: 29%
 
 ![宛先への認証方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
-* **[!UICONTROL Bearer トークン]**:宛先への認証をおこなうために bearer トークンを入力します。
+* **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
 
 *新しい宛先を設定する際に顧客が入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有で、Destination SDKの設定に応じて異なります。 宛先のフィールドが次に示すフィールドと異なる場合があります。 また、以下のサンプルのスクリーンショットに似たスクリーンショットを含めてください。*
 
@@ -121,7 +121,7 @@ ht-degree: 29%
 
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートの詳細については、 [UI を使用した宛先アラートの購読](../../ui/alerts.md).
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
 
 宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
@@ -135,7 +135,7 @@ ht-degree: 29%
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
-読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 読み取り [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) を参照してください。
 
@@ -146,7 +146,7 @@ ht-degree: 29%
 * *[ペガ](/help/destinations/catalog/personalization/pega.md#mapping-example)*
 * *[メダリア](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
-## エクスポートされたデータ/データエクスポートの検証 {#exported-data}
+## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 *宛先へのデータの書き出し方法に関する段落を追加します。 これにより、顧客が宛先と正しく統合されていることを確認できます。 例えば、以下のような JSON のサンプルを指定できます。 または、宛先プラットフォームでのセグメントの生成を顧客が期待する方法を示すスクリーンショットと情報を、宛先のインターフェイスから提供できます。*
 

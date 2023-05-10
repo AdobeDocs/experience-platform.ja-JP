@@ -6,8 +6,8 @@ description: このドキュメントでは、「 ExperienceEvent 環境の詳�
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 14%
+source-wordcount: '212'
+ht-degree: 13%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 14%
 | `environment` | [環境](../../data-types/environment.md) | イベント観測の状況に関する情報、特にネットワークやソフトウェアのバージョンなどの一時的な情報の詳細を説明します。 |
 | `placeContext` | [場所の背景](../../data-types/place-context.md) | イベント観測に関連する一時的な状況を示します。 例としては、天気、現地時間、交通量、曜日、就業日と休日、就業時間など、ロケール固有の情報が含まれます。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

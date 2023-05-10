@@ -6,8 +6,8 @@ description: このドキュメントでは、Search Experience Data Model(XDM) 
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 17%
+source-wordcount: '181'
+ht-degree: 16%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 17%
 | `searchEngineID` | 文字列 | 検索エンジンの識別に使用されるアプリケーション固有の識別子。 |
 | `slot` | 文字列 | 検索結果が表示されたページの名前付きセクション。 このプロパティの値は、定義した既知の列挙値（例： ）の 1 つと等しい必要があります `top`, `side`または `bottom`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -6,7 +6,7 @@ exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platformユーザーインターフェイス内では、これ�
 
 Adobe Real-time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience PlatformUI のプロファイル表示機能を利用できます。 Platform ユーザーインターフェイス内での顧客プロファイルの表示に関する詳細なガイドについては、 [リアルタイム顧客プロファイルユーザーガイド](../../profile/ui/user-guide.md).
 
-## Real-Time CDP, B2B Edition のプロファイルの強化
+## Real-Time CDP B2B Edition のプロファイルの機能強化
 
 Adobe Experience Platform、Real-Time CDP、B2B Edition のユーザーは、B2B の属性とイベントに、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定します。 B2B データは、セグメント化の実行にも使用でき、これらのセグメントは顧客の [!UICONTROL セグメントのメンバーシップ] タブを非 B2B セグメントと一緒に表示します。
 

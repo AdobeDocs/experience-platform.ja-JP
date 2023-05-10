@@ -1,7 +1,8 @@
 ---
 title: Data Distillerの概要
 description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
-source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -49,4 +50,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

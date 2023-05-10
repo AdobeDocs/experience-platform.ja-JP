@@ -6,8 +6,8 @@ description: このドキュメントでは、「 End User ID Details 」スキ�
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 15%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 15%
 | `phonenumberid` | [ID](../../data-types/identity.md) | 電話番号 ID。 |
 | `tntid` | [ID](../../data-types/identity.md) | Adobe Targetのエンドユーザー ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

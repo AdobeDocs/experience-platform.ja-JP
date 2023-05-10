@@ -6,8 +6,8 @@ description: このドキュメントでは、「仕事用連絡先詳細」ス�
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 17%
+source-wordcount: '190'
+ht-degree: 15%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 17%
 | `workPhone` | [電話番号](../../data-types/phone-number.md) | 人物の勤務先電話番号を表します。 |
 | `organizations` | 文字列（配列） | 人物が属する組織を表す自由形式の文字列の配列。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

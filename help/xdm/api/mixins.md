@@ -6,8 +6,8 @@ description: スキーマレジストリ API の/mixins エンドポイントを
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 18%
+source-wordcount: '1189'
+ht-degree: 17%
 
 ---
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Mixin を取得するコンテナ： `global` (Adobeで作成された mixin またはの ) `tenant` 組織が所有する mixin の場合。 |
 | `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -68,7 +68,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全な JSON mixin を元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -131,7 +131,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | 取得する mixin を格納するコンテナ： `global` Adobeが作成した mixin または `tenant` 組織が所有する Mixin の場合。 |
 | `{MIXIN_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索する mixin の数を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -157,7 +157,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` および `allOf` で解決、タイトルや説明なし |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` および `allOf` で解決、説明を含む |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **応答**
 
@@ -411,7 +411,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | この `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -580,7 +580,7 @@ curl -X PUT \
 
 ## Mixin の一部の更新 {#patch}
 
-mixin の一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチの詳細については、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
+mixin の一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
@@ -596,7 +596,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL エンコードされた `$id` URI or `meta:altId` 更新する mixin の。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 
@@ -735,7 +735,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL エンコードされた `$id` URI or `meta:altId` 削除する mixin の数を指定します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **リクエスト**
 

@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 8%
+source-wordcount: '319'
+ht-degree: 7%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 8%
 | `opportunityStage` | 文字列 | オポチュニティの販売ステージ。 |
 | `opportunityType` | 文字列 | オポチュニティのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

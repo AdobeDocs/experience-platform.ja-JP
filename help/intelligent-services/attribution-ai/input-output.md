@@ -7,7 +7,7 @@ exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2504'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -49,7 +49,7 @@ Attribution AIは、次のデータセットを分析してアルゴリズムス
 | Marketing.trackingCode | タッチポイント |
 | Marketing.campaignname | タッチポイント |
 | Marketing.campaigngroup | タッチポイント |
-| コマース | 変換 |
+| Commerce | 変換 |
 
 通常、アトリビューションは、「コマース」下の注文、購入、チェックアウトなどのコンバージョン列で実行されます。 「チャネル」および「マーケティング」の列は、Attribution AIのタッチポイント ( 例： `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`) をクリックします。 最適な結果とインサイトを得るには、できる限り多くのコンバージョン列とタッチポイント列を含めることを強くお勧めします。 また、上記の列に限定されるわけではありません。 その他の推奨列またはカスタム列をコンバージョンまたはタッチポイント定義として含めることができます。
 
@@ -219,7 +219,7 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 
 | 列名 | 生のスコアの参照列 |
 | --- | --- |
-| customrevents_date | timestamp |
+| customrevents_date | タイムスタンプ |
 | mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
 | セグメント | _tenantID.your_schema_name.segmentation |
 | conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
@@ -237,7 +237,7 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 >[!IMPORTANT]
 >
 > - Attribution AIは、更なるトレーニングとスコアリングに、更新されたデータのみを使用します。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
-> - アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る消費者権利リクエストをサポートするには、PlatformPrivacy Serviceを使用して、アクセスおよび削除の消費者リクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
+> - アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
 > - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
 
 

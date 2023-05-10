@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 11%
+source-wordcount: '241'
+ht-degree: 10%
 
 ---
 
@@ -34,4 +34,4 @@ ht-degree: 11%
 | `startDate` | [!UICONTROL 日時] | 保険契約の適用が開始（または開始）される日付。 |
 | `type` | [!UICONTROL 文字列] | 保険証券のタイプ（自宅、自動車、レンター、ボートなど）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

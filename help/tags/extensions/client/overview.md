@@ -4,8 +4,8 @@ description: Adobe Experience Platformのタグ拡張機能に関するドキュ
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
 source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '714'
+ht-degree: 86%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics 製品文字列](./product-string/overview.md)
 * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Experience Platform Web SDK を使用したAdobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Experience Platform Web SDK を使用した Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Adobe Client Data Layer](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)

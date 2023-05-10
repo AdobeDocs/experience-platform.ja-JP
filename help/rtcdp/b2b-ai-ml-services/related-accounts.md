@@ -5,7 +5,7 @@ description: Experience PlatformReal-Time CDP B2B の関連アカウント機能
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 22%
 
 ---
@@ -24,7 +24,7 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 | 4 | Acme コンサルティングサービス | `http://www.acme.com/consulting` | テクノロジーコンサルティング | NY | (212)471-0904 | x |
 | 5 | Acme IT |  |  | CA |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 関連するアカウントを使用する場合 [!DNL Real-Time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。
 

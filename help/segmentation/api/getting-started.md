@@ -7,7 +7,7 @@ exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '353'
-ht-degree: 56%
+ht-degree: 63%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Segmentation Service] では、 [!DNL Real-Time 
 開発者ガイドでは、 [!DNL Experience Platform] 使用に関わるサービス [!DNL Segmentation Service].
 
 - [[!DNL Segmentation]](../home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-Time Customer Profile] データ。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最適に利用するには、 [データモデリングのベストプラクティス](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 

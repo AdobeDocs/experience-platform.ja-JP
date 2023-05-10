@@ -1,13 +1,13 @@
 ---
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
 
 ---
-
 
 # 宛先での設定可能で一般的な書き出し設定
 

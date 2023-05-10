@@ -10,7 +10,7 @@ ht-degree: 28%
 
 ---
 
-# UI での Adobe Audience Manager ソースコネクタの作成
+# UI での Adobe Audience Manager ソース接続の作成
 
 このチュートリアルでは、ユーザーインターフェイスを使用して消費者エクスペリエンスイベントデータを Platform に取り込むための、Adobe Audience Manager用のソースコネクタを作成する手順を説明します。
 

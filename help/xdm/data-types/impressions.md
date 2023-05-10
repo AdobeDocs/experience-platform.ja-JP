@@ -4,8 +4,8 @@ description: このドキュメントでは、インプレッション XDM デ�
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 7%
+source-wordcount: '138'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 7%
 | `selected` | 整数 | インプレッション項目が選択またはクリックされた回数。 |
 | `type` | 文字列 | インプレッションのタイプ。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

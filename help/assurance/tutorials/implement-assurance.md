@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Assurance 拡張機能の実装
 description: このガイドでは、Adobe Experience Platform Assurance 拡張機能の実装およびインストール方法を説明します。
-source-git-commit: 24f452bdb923179eefe53fdb28d3a92d43e533cd
+exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Adobe Experience Platform Assurance 拡張機能の実装
 

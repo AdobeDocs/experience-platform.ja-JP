@@ -7,7 +7,7 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
-ht-degree: 46%
+ht-degree: 51%
 
 ---
 
@@ -87,7 +87,7 @@ ht-degree: 46%
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-組織がを購入した場合 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択します。 **[!UICONTROL 該当する同意ポリシーの表示]** を使用して、適用される同意ポリシーと、その結果としてアクティベーションに含まれるプロファイルの数を確認します。 詳細 [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳細 [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 

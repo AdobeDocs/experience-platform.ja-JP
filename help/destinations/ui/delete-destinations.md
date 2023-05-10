@@ -7,7 +7,7 @@ exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 3%
+ht-degree: 33%
 
 ---
 
@@ -28,11 +28,11 @@ Adobe Experience Platformユーザーインターフェイスで、宛先への�
 
 次の手順に従って、 [!UICONTROL 参照] タブをクリックします。
 
-1. にログインします。 [Experience PlatformUI](https://platform.adobe.com/) を選択し、 **[!UICONTROL 宛先]** をクリックします。 既存の宛先を表示するには、「 」を選択します。 **[!UICONTROL 参照]** を上部のヘッダーから削除します。
+1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。既存の宛先を表示するには、「 」を選択します。 **[!UICONTROL 参照]** を上部のヘッダーから削除します。
 
    ![宛先の参照](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. フィルターアイコンを選択します。 ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) をクリックして、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたデータフローのフィルタリングされた選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![宛先のフィルタリング](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -47,11 +47,11 @@ Adobe Experience Platformユーザーインターフェイスで、宛先への�
 
 宛先の詳細ページから宛先を削除するには、以下の手順に従います。
 
-1. にログインします。 [Experience PlatformUI](https://platform.adobe.com/) を選択し、 **[!UICONTROL 宛先]** をクリックします。 既存の宛先を表示するには、「 」を選択します。 **[!UICONTROL 参照]** を上部のヘッダーから削除します。
+1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。既存の宛先を表示するには、「 」を選択します。 **[!UICONTROL 参照]** を上部のヘッダーから削除します。
 
    ![宛先の参照](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. フィルターアイコンを選択します。 ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) をクリックして、並べ替えパネルを起動します。 並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたデータフローのフィルタリングされた選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![宛先のフィルタリング](../assets/ui/delete-destinations/filter-destinations.png)
 

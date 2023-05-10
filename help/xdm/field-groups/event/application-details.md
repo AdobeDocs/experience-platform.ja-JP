@@ -4,8 +4,8 @@ description: このドキュメントでは、「アプリケーション詳細�
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 5%
+source-wordcount: '137'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,6 @@ ht-degree: 5%
 | --- | --- | --- |
 | `application` | [[!UICONTROL アプリケーション]](../../data-types/financial-account.md) | イベントに関連するアプリケーション情報をキャプチャします（アプリケーション名、アプリのバージョン、インストール、起動、クラッシュ、クロージャなど）。 イベントのターゲットとなるアプリケーション（プッシュ通知の送信先など）またはイベントを発信するアプリケーション（クリック、ログインなど）のどちらかです。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

@@ -1,7 +1,8 @@
 ---
 title: 派生属性のシームレスな SQL フロー
 description: クエリサービス SQL が拡張され、派生属性をシームレスにサポートできるようになりました。 この SQL 拡張機能を使用して、プロファイルに対して有効な派生属性を作成する方法、およびリアルタイム顧客プロファイルとセグメント化サービスに対して属性を使用する方法について説明します。
-source-git-commit: 1ff66d0ac8e0491a6db518545d122555d9d54c75
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 2%

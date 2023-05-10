@@ -5,8 +5,8 @@ description: このドキュメントでは、「フライト予約スキーマ�
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 5%
+source-wordcount: '649'
+ht-degree: 4%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 5%
 | `ticketNumber` | 文字列 | 予約番号または識別子。 |
 | `tripType` | 文字列 | 予約が片道の旅行、往復、または複数都市の旅行のどちらであるかを示します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

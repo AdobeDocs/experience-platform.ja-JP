@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: 外部オーディエンスのインポートと使用
+title: 外部オーディエンスの読み込みと使用
 description: このチュートリアルでは、Adobe Experience Platformで外部オーディエンスを使用する方法について説明します。
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
 source-wordcount: '1664'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
-# 外部オーディエンスのインポートと使用
+# 外部オーディエンスの読み込みと使用
 
 Adobe Experience Platformは、外部オーディエンスをインポートする機能をサポートしています。これは、その後、新しいセグメント定義のコンポーネントとして使用できます。 このドキュメントでは、外部オーディエンスをインポートして使用するExperience Platformを設定するためのチュートリアルを提供します。
 
@@ -20,7 +20,7 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスセグメントの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [セグメント化サービス](../home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [リアルタイム顧客プロファイル](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
 - [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。

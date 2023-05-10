@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: サブスクリプションデータタイプを含む汎用マーケティング環境設定フィールド
-description: このドキュメントでは、Subscriptions XDM データタイプを持つ汎用マーケティング環境設定フィールドの概要を説明します。
+description: このドキュメントでは、Subscriptions XDM データ型を持つ汎用マーケティング環境設定フィールドの概要を説明します。
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 2%
+source-wordcount: '891'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 | `time` | 日時 | マーケティング環境設定が変更されたときの ISO 8601 タイムスタンプ（該当する場合）。 |
 | `val` | 文字列 | このマーケティング使用例での、お客様が指定する環境設定の選択。 詳しくは、 [次のセクション](#val) を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `val` {#val}
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 | `VI` | 個人の生命の関心 | 特定の目的のためのデータの収集は、個人の重要な利益を保護するために必要です。 |
 | `PI` | 公益 | 特定の目的のためのデータの収集は、公益上のタスクを実行するか、公的な権限の行使に必要です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -99,7 +99,7 @@ ht-degree: 2%
 | `topics` | 顧客が購読する関心のある領域を表す文字列の配列です。顧客に関連するコンテンツを送信するために使用できます。 |
 | `subscribers` | 特定のサブスクリプションを購読した識別子（電子メールアドレスや電話番号など）のセットを表す、オプションの map-type フィールドです。 このオブジェクトの各キーは、問題の識別子を表し、次の 2 つのサブプロパティを含みます。 <ul><li>`time`:ID が購読した時点の ISO 8601 タイムスタンプ（該当する場合）。</li><li>`source`:サブスクライバーの元のソース。 15 文字以下の任意の説明的な文字列を指定できます。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## その他のリソース
 

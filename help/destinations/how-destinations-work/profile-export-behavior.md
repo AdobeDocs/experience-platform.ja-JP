@@ -1,7 +1,8 @@
 ---
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 97%

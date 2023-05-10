@@ -6,7 +6,7 @@ description: 次のドキュメントでは、フローサービス API を使�
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '797'
 ht-degree: 46%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 46%
 | {your_source}-label.txt | ソースの名前。ソースカタログに表示されるExperience Platformです。 | Mailchimp メンバー |
 | {your_source}-connectionSpec.json | ソースの接続仕様を含む JSON ファイル。 このガイドを完了すると、接続仕様に入力されるので、このファイルは最初は必要ありません。 | `mailchimp-members-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

@@ -6,7 +6,7 @@ type: Tutorial
 description: Policy Service API を使用してデータガバナンスポリシーを作成する方法について説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ ERD は次の業種向けに提供されています。
 
 * [[!UICONTROL 小売]](./retail.md)
 * [[!UICONTROL 金融機関]](./financial.md)
-* [[!UICONTROL 医療]](./healthcare.md)
+* [[!UICONTROL ヘルスケア]](./healthcare.md)
 * [[!UICONTROL 通信業]](./telecom.md)
 * [[!UICONTROL 旅行およびホスピタリティ]](./travel-hospitality.md)
 

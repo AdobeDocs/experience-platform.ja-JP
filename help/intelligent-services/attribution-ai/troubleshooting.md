@@ -9,7 +9,7 @@ exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '167'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## Chrome の匿名Attribution AIにアクセスできません
 
-Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。 この問題は、experience.adobe.com を信頼されたドメインにするために、Chrome で積極的に作業を進めています。
+Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。アドビでは、experience.adobe.com を信頼できるドメインにするために、Chrome でこの問題に鋭意取り組んでいるところです。
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### 推奨される修正
 
-この問題に対処するには、常に cookie を使用できるサイトとして experience.adobe.com を追加する必要があります。 最初に、 **chrome://settings/cookies**. 次に、 **カスタマイズされた動作** セクションで **追加** ボタンをクリックします。 表示されるポップオーバーで、コピーして貼り付けます。 `[*.]experience.adobe.com` 次に、 **サードパーティ Cookie を含める** （このサイトのチェックボックス）。 完了したら、「 」を選択します。 **追加** をクリックし、匿名でAttribution AIを再読み込みします。
+この問題を回避するには、experience.adobe.com を、常に Cookie を使用できるサイトとして追加する必要があります。まず、**chrome://settings/cookies** に移動します。次に、「**カスタマイズされた動作**」セクションまでスクロールしたあと、「常に Cookie を使用できるサイト」の隣にある「**追加**」ボタンを選択します。表示されたポップオーバーで `[*.]experience.adobe.com` をコピー＆ペーストし、「**このサイトでサードパーティの Cookie を許可する**」のチェックボックスをオンにします。完了したら、「 」を選択します。 **追加** をクリックし、匿名でAttribution AIを再読み込みします。
 
-![推奨修正](./images/faq/cookies2.gif)
+![推奨される修正](./images/faq/cookies2.gif)

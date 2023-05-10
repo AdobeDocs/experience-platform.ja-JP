@@ -5,8 +5,8 @@ description: このドキュメントでは、汎用同意フィールド XDM �
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 2%
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `val` | 文字列 | この使用例に対する、お客様が指定した同意の選択。 使用可能な値と定義については、以下の表を参照してください。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 次の表に、 `val`:
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 | `VI` | 個人の生命の関心 | 特定の目的のためのデータの収集は、個人の重要な利益を保護するために必要です。 |
 | `PI` | 公益 | 特定の目的のためのデータの収集は、公益上のタスクを実行するか、公的な権限の行使に必要です。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

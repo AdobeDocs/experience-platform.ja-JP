@@ -4,8 +4,8 @@ description: このドキュメントでは、エクスペリエンスデータ�
 exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 7%
+source-wordcount: '133'
+ht-degree: 5%
 
 ---
 
@@ -21,4 +21,4 @@ ht-degree: 7%
 | `payerId` | [!UICONTROL 文字列] | 支払者の一意の識別子。 |
 | `payerName` | [!UICONTROL 文字列] | 支払者の名前。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -6,8 +6,8 @@ description: このドキュメントでは、通貨 XDM データタイプの�
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 7%
+source-wordcount: '124'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 | `conversionDate` | 日時 | 通貨換算が行われた時点のタイムスタンプ。 |
 | `currencyCode` | 文字列 | 通貨のタイプを示す ISO 4217 コード `amount` は、を表します。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -90,8 +90,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | ○ | データ収集エンドポイントで使用されるデータストリームの ID。 |
-| `requestId` | `String` | × | 外部リクエストトレース ID を指定します。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
-| `silent` | `Boolean` | × | Edge ネットワークが `204 No Content` 空のペイロードを含む応答、または含まない応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
+| `requestId` | `String` | いいえ | 外部リクエストトレース ID を指定します。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
+| `silent` | `Boolean` | いいえ | Edge ネットワークが `204 No Content` 空のペイロードを含む応答、または含まない応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
 
 
 ### 応答 {#response}

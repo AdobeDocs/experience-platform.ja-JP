@@ -4,8 +4,8 @@ description: このドキュメントでは、アカウント詳細のエクス�
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 19%
+source-wordcount: '432'
+ht-degree: 18%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 19%
 | `twitterHandleUrl` | 文字列 | 組織のtwitterハンドルへの Web サイトリンク。 |
 | `website` | 文字列 | 組織の web サイトの URL。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 

@@ -5,7 +5,7 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ ht-degree: 100%
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
       * [金融機関](./schema/industries/financial.md)
-      * [医療](./schema/industries/healthcare.md)
+      * [ヘルスケア](./schema/industries/healthcare.md)
       * [通信業](./schema/industries/telecom.md)
       * [旅行およびホスピタリティ](./schema/industries/travel-hospitality.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
@@ -91,14 +91,14 @@ ht-degree: 100%
    * XDM ビジネスキャンペーンメンバー {#b2b-campaign-members}
       * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
    * 医薬品 {#medication}
-      * [医薬品](./field-groups/medication/healthcare-medication.md)
+      * [ヘルスケア薬品](./field-groups/medication/healthcare-medication.md)
    * プラン {#plan}
-      * [医療プランの詳細](./field-groups/plan/healthcare-plan-details.md)
+      * [ヘルスケアプランの詳細](./field-groups/plan/healthcare-plan-details.md)
    * 製品 {#product}
       * [製品カタログ](./field-groups/product/product-catalog.md)
       * [製品カテゴリ](./field-groups/product/product-category.md)
    * プロバイダー {#provider}
-      * [医療機関](./field-groups/provider/healthcare-provider.md)
+      * [ヘルスケア提供組織](./field-groups/provider/healthcare-provider.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アカウントの詳細](./data-types/account-details.md)
