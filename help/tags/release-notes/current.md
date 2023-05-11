@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 86%
 
 ## 2023年4月26日（PT）
 
-* **OAuth JWT 秘密鍵**:この [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) では、AdobeおよびGoogleサービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。
+* **OAuth JWT 秘密鍵**：[OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ja)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。
 
 次の新しい拡張機能がリリースされました。
 
-* **[!DNL Pinterest Conversions API]拡張**:この [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取り込んだデータを活用し、 [!DNL Pinterest] を使用して、サーバー側のイベントの形式で [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]拡張機能**：[[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Pinterest Conversions API] を使用してサーバーサイドイベントの形式で [!DNL Pinterest] に送信したりできます。
 
 ## 2023年3月29日（PT）
 
@@ -30,8 +30,8 @@ ht-degree: 86%
 次の新しい拡張機能がリリースされました。
 
 * **[!DNL Braze]イベント転送拡張機能**：[[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Braze] User Track API を使用してサーバーサイドイベントの形式で [!DNL Braze] に送信したりできます。
-* **[Epsilon イベント API] イベント転送拡張機能**:この [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。
-* **[!DNL Mixpanel]イベント転送拡張機能**：[[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja)[!DNL Mixpanel] 拡張機能を使用すると、イベント転送を活用して Adobe Experience Platform Edge Network でイベント情報を取得し、Track Events API を使用して に送信できます。
+* **[Epsilon Events API] イベント転送拡張機能**：[[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用して Adobe Experience Platform Edge Network でイベント情報を取得し、[!DNL Epsilon] Events API を使用して [!DNL Epsilon] に送信できます。
+* **[!DNL Mixpanel]イベント転送拡張機能**：[[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用して Adobe Experience Platform Edge Network でイベント情報を取得し、Track Events API を使用して [!DNL Mixpanel] に送信できます。
 
 ## 2023年1月25日（PT）
 

@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
 source-wordcount: '1663'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 99%
 
 **新機能**
 
-* Adobe Experience Platform Web SDK のバージョン2.16.0が含まれています。
-* のサポートを追加しました。 [datastream 設定の上書き](../datastreams/overrides.md).
+* Adobe Experience Platform Web SDK のバージョン 2.16.0 が含まれます。
+* [データストリーム設定の上書き](../datastreams/overrides.md)のサポートを追加しました。
 * `sendEvent` コマンドの `datasetId` オプションに非推奨（廃止予定）通知を追加しました。
 
 

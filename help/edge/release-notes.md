@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-* のサポートを追加しました。 [datastream 設定の上書き](datastreams/overrides.md).
+* [データストリーム設定の上書き](datastreams/overrides.md)のサポートを追加しました。
 
 ## バージョン 2.15.0 - 2023年3月30日（PT）
 
