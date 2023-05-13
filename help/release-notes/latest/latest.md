@@ -2,14 +2,18 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
 workflow-type: tm+mt
-source-wordcount: '1841'
-ht-degree: 100%
+source-wordcount: '2094'
+ht-degree: 92%
 
 ---
 
 # Adobe Experience Platform リリースノート
+
+>[!IMPORTANT]
+>
+>2023 年 5 月 15 日以降、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`. この変更の詳細については、 [セグメント化サービスセクション](#segmentation).
 
 **リリース日：2023年4月26日（PT）**
 
@@ -22,6 +26,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [エクスペリエンスデータモデル](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [リアルタイム顧客プロファイル](#profile)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
 ## ダッシュボード {#dashboards}
@@ -160,6 +165,20 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | 偽名プロファイルデータの有効期限 | 偽名プロファイルデータの有効期限が一般に利用できるようになりました。このリリースでは、有効にすると、Experience Platform インスタンスから古い偽名プロファイルが継続的に削除されます。この機能と偽名プロファイルについて詳しくは、[偽名プロファイルデータの有効期限ガイド](../../profile/pseudonymous-profiles.md)を参照してください。 |
 
 {style="table-layout:auto"}
+
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| セグメントメンバーシップマップ | 2023 年 5 月 15 日 (PT) に発表された前の発表に対するフォローアップとして、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`.<br/><br/> この変更は、 [企業の宛先](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure Event Hubs、HTTP API) の `Existing` ステータス。 該当する場合は、ダウンストリーム統合を確認してください。 特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
+
+{style="table-layout:auto"}
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
