@@ -2,7 +2,7 @@
 title: オーサリングのベストプラクティス
 description: 宛先のドキュメントページをオーサリングする際に従う必要があるルールとヒントを説明します。これにより、Adobe Experience Platformのドキュメント品質標準を確実に満たすことができます。
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 3%
@@ -56,5 +56,5 @@ ht-degree: 3%
 
 ## プロセス {#process}
 
-* この [ドキュメントテンプレート](./self-service-template.md) は、パートナーのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* この [ドキュメントテンプレート](./self-service-template.md) は、パートナーのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](../assets/docs-framework/yourdestination-template.zip).
 * ドキュメントを作成し、フォークのブランチからドキュメントプル要求 (PR) を作成します *本枝以外の*. でのオーサリング時に、レビュー用の送信先を参照してください。 [GitHub インターフェイス](./use-github-interface-to-create-documentation.md#submit-review) または [ローカル環境](./work-in-local-environment.md#submit-review).

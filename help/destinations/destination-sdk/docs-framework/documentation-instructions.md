@@ -2,7 +2,7 @@
 title: Adobe Experience Platform の宛先のドキュメント化
 description: Adobe Experience Platformで宛先のドキュメントページを作成する手順を説明します。
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 8%
@@ -51,7 +51,7 @@ Adobe Experience Platformへようこそ、ここに来てくれて嬉しい！
 
 ドキュメントページの作成を支援するために、Adobeは、 [ドキュメントテンプレート](./self-service-template.md) あなたのために。 以下では、テンプレートを編集し、プル要求を開く方法について説明します。 Adobeドキュメントチームが、新しい宛先のドキュメントを確認して公開します。
 
-[ここでテンプレートをダウンロード](assets/yourdestination-template.zip) を展開し、抽出するファイルを解凍します。 `yourdestination.md` ファイル。
+[ここでテンプレートをダウンロード](../assets/docs-framework/yourdestination-template.zip) を展開し、抽出するファイルを解凍します。 `yourdestination.md` ファイル。
 
 テンプレートを使用してドキュメントページを作成する手順は、以下のとおりです。
 

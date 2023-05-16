@@ -2,7 +2,7 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 38%
@@ -18,7 +18,7 @@ ht-degree: 38%
 >[!IMPORTANT]
 >
 >* このテンプレートのすべてのセクションを、テンプレートで説明されている順序で入力します。
->* このテンプレートは、パートナーからのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* このテンプレートは、パートナーからのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## 概要 {#overview}
@@ -103,7 +103,7 @@ ht-degree: 38%
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![宛先への認証方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![宛先への認証方法を示すサンプルスクリーンショット](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
 
@@ -113,7 +113,7 @@ ht-degree: 38%
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![宛先の詳細を入力する方法を示すサンプルスクリーンショット](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![宛先の詳細を入力する方法を示すサンプルスクリーンショット](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。

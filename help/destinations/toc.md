@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 100%
+source-wordcount: '1178'
+ht-degree: 87%
 
 ---
 
@@ -196,44 +196,34 @@ ht-degree: 100%
 * Destination SDK {#destination-sdk}
    * [概要](./destination-sdk/overview.md)
    * [統合の前提条件](./destination-sdk/integration-prerequisites.md)
-   * [はじめに](./destination-sdk/getting-started.md)
-   * Destination SDK の機能 {#functionality}
-      * [設定オプション](./destination-sdk/configuration-options.md)
-      * [ストリーミング先の構成](./destination-sdk/destination-configuration.md)
-      * [ファイルベースの宛先設定](./destination-sdk/file-based-destination-configuration.md)
-      * [ストリーミング宛先のサーバーとテンプレートの仕様](./destination-sdk/server-and-template-configuration.md)
-      * [ファイルベースの宛先のサーバーとファイルの仕様](./destination-sdk/server-and-file-configuration.md)
-      * [メッセージの形式](./destination-sdk/message-format.md)
-      * [オーディエンスメタデータの管理](./destination-sdk/audience-metadata-management.md)
-      * 認証 {#authentication}
-         * [認証設定](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2 認証](./destination-sdk/oauth2-authentication.md)
-      * デベロッパーツール {#developer-tools}
-         * [メッセージ変換テンプレートの作成とテスト](./destination-sdk/create-template.md)
-         * [宛先設定のテスト](./destination-sdk/test-destination.md)
-   * API 操作 {#api}
-      * [Destination SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [宛先エンドポイント API の操作](./destination-sdk/destination-configuration-api.md)
-      * [宛先サーバーエンドポイント API の操作](./destination-sdk/destination-server-api.md)
-      * [オーディエンスメタデータエンドポイント API の操作](./destination-sdk/audience-metadata-api.md)
-      * [資格情報エンドポイント API の操作](./destination-sdk/credentials-configuration-api.md)
-      * [公開エンドポイント API の操作](./destination-sdk/destination-publish-api.md)
-      * デベロッパーツールリファレンス {#developer-tools-reference}
-         * ストリーミングの宛先のテスト API {#streaming-destination-testing-api}
-            * [サンプルテンプレート取得 API の操作](./destination-sdk/sample-template-api.md)
-            * [テンプレートレンダリング API の操作](./destination-sdk/render-template-api.md)
-            * [宛先テスト API の操作](./destination-sdk/destination-testing-api.md)
-            * [サンプルプロファイル生成 API の操作](./destination-sdk/sample-profile-generation-api.md)
-         * ファイルベースの宛先のテスト API {#file-based-destination-testing-api}
-            * [ファイルベースの宛先のテスト API の概要](./destination-sdk/file-based-destination-testing-overview.md)
-            * [ソーススキーマに基づくサンプルプロファイルの生成](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [サンプルプロファイルを使用したファイルベースの宛先のテスト](./destination-sdk/file-based-destination-testing-api.md)
-            * [詳細なアクティベーション結果の表示](./destination-sdk/file-based-destination-results-api.md)
-            * [テンプレート化された顧客フィールドの検証](./destination-sdk/file-based-render-template-api.md)
+   * [はじめに Destination SDK](./destination-sdk/getting-started.md)
+   * 機能 {#functionality}
+      * [設定オプション](./destination-sdk/functionality/configuration-options.md)
+      * 宛先サーバーコンポーネント {#destination-server}
+         * [サーバーの仕様](./destination-sdk/functionality/destination-server/server-specs.md)
+         * [テンプレート仕様](./destination-sdk/functionality/destination-server/templating-specs.md)
+         * [メッセージの形式](./destination-sdk/functionality/destination-server/message-format.md)
+         * [サポートされる変換関数](./destination-sdk/functionality/destination-server/supported-functions.md)
+         * [ファイル形式設定](./destination-sdk/functionality/destination-server/file-formatting.md)
+      * 宛先設定コンポーネント {#destination-configuration}
+         * [顧客認証設定](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+         * [OAuth 2 認証](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [顧客データフィールド](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+         * [UI 属性](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+         * [パートナースキーマ設定](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+         * [ID 名前空間の設定](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+         * [サポートされるマッピング設定](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
+         * [宛先配信](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+         * [オーディエンスメタデータの設定](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+         * [集計ポリシー](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+         * [バッチ設定](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+         * [プロファイル選定履歴](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [ストリーミングの宛先のレート制限および再試行ポリシー](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [オーディエンスメタデータの管理](./destination-sdk/functionality/audience-metadata-management.md)
    * ガイド {#guides}
-      * [Destination SDK を使用したストリーミングの宛先の設定](./destination-sdk/configure-destination-instructions.md)
-      * [Destination SDK を使用したファイルベースの宛先の設定](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Destination SDK で作成した宛先のレビュー用に送信する](./destination-sdk/submit-destination.md)
+      * [Destination SDK を使用したストリーミングの宛先の設定](./destination-sdk/guides/configure-destination-instructions.md)
+      * [Destination SDK を使用したファイルベースの宛先の設定](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [Destination SDK で作成した宛先のレビュー用に送信する](./destination-sdk/guides/submit-destination.md)
       * ファイルベースの宛先の設定 {#configure-file-based-destinations}
          * [ファイル形式設定オプションの設定](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [事前定義済みのファイル形式オプションとカスタムファイル名設定を使用した Amazon S3 の宛先の設定](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
@@ -242,9 +232,45 @@ ht-degree: 100%
          * [カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Data Lake Storage の宛先の設定](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用した、データランディングゾーン（DLZ）の宛先の設定](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [事前定義済みファイル形式オプションとカスタムファイル名設定を使用した、 SFTP の宛先の設定](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * リファレンス {#reference}
-      * [ストリーミングの宛先のレート制限および再試行ポリシー](./destination-sdk/rate-limiting-retry-policy.md)
-      * [サポートされる変換関数](./destination-sdk/supported-functions.md)
+   * 宛先オーサリング API リファレンス {#authoring-api}
+      * [Destination SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * 宛先サーバーの操作 {#server-operations}
+         * [宛先サーバー設定の作成](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [宛先サーバー設定の取得](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+         * [宛先サーバー設定の更新](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+         * [宛先サーバー設定の削除](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+      * 宛先設定操作 {#destination-operations}
+         * [宛先設定の作成](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+         * [宛先設定の取得](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+         * [宛先設定の更新](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
+         * [宛先設定の削除](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+   * オーディエンスメタデータ API リファレンス {#audience-template-api}
+      * [オーディエンステンプレートの作成](./destination-sdk/metadata-api/create-audience-template.md)
+      * [オーディエンステンプレートの取得](./destination-sdk/metadata-api/retrieve-audience-template.md)
+      * [オーディエンステンプレートの更新](./destination-sdk/metadata-api/update-audience-template.md)
+      * [オーディエンステンプレートの削除](./destination-sdk/metadata-api/delete-audience-template.md)
+   * 資格情報設定 API リファレンス {#credentials-api}
+      * [資格情報設定の作成](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [資格情報設定の取得](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [資格情報設定の更新](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [秘密鍵証明書の設定の削除](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * 宛先テスト API リファレンス {#testing-api}
+      * ストリーミングの宛先のテスト API {#streaming-destinations}
+         * [ストリーミング宛先テスト API の概要](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
+         * [ソーススキーマに基づくサンプルプロファイルの生成](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+         * [サンプルメッセージ変換テンプレートを生成します ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [書き出されたプロファイル構造を検証する](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+         * [サンプルプロファイルを使用してストリーミング先をテストする](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+         * [メッセージ変換テンプレートの作成とテスト](./destination-sdk/testing-api/streaming-destinations/create-template.md)
+      * ファイルベースの宛先のテスト API {#batch-destinations}
+         * [ファイルベースの宛先のテスト API の概要](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [ソーススキーマに基づくサンプルプロファイルの生成](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+         * [サンプルプロファイルを使用したファイルベースの宛先のテスト](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+         * [詳細なアクティベーション結果の表示](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+         * [テンプレート化された顧客フィールドの検証](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
+   * 宛先公開 API リファレンス {#publishing-api}
+      * [宛先の公開リクエストの作成](./destination-sdk/publishing-api/create-publishing-request.md)
+      * [宛先の公開リクエストの取得](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * 宛先のドキュメント化 {#document-destination}
       * [Adobe Experience Platform の宛先のドキュメント化](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub web インターフェイスを使用した宛先ドキュメントページの作成](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

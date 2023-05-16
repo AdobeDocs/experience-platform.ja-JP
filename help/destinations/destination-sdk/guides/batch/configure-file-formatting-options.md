@@ -2,9 +2,9 @@
 description: ファイルベースの宛先のファイル形式オプションの設定
 title: Destination SDKを使用して、ファイルベースの宛先のファイル形式設定オプションを設定する方法について説明します。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '913'
 ht-degree: 3%
 
 ---
@@ -23,18 +23,14 @@ Destination SDKを使用すると、ストレージの場所でのダウンス�
 
 Adobeでは、先に進む前に、次のドキュメントを読み、よく理解しておくことをお勧めします。
 
-* 使用可能なすべてのファイルフォーマットオプションについては、 [ファイルフォーマット設定](../../server-and-file-configuration.md#file-configuration) 」セクションに入力します。
-* 次の手順を実行します。 [ファイルベースの宛先の設定](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) Destination SDKを使用。
+* 使用可能なすべてのファイルフォーマットオプションについては、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) 」セクションに入力します。
+* 次の手順を実行します。 [ファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md) Destination SDKを使用。
 
 ## サーバーとファイル設定の作成 {#create-server-file-configuration}
 
 まず、 `/destination-server` endpoint ：書き出されたファイルに対して設定するファイル形式設定オプションを決定します。
 
 次に、 [!DNL Amazon S3] 宛先に書き出します。複数のファイル形式設定オプションが選択されています。
-
->[!TIP]
->
->利用可能なすべてのファイル形式設定オプションについては、 [ファイルフォーマット設定](../../server-and-file-configuration.md#file-configuration) 」セクションに入力します。
 
 **API 形式**
 
@@ -116,13 +112,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 この手順では、表示されたオプションを任意の順序でグループ化し、選択したファイルタイプに基づいてカスタムグループ化、ドロップダウンフィールド、条件付きグループを作成できます。 これらの設定はすべて、記録および後述のセクションに表示されます。
 
-![バッチファイルの様々なファイル形式オプションを示す画面記録。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![バッチファイルの様々なファイル形式オプションを示す画面記録。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### ファイル形式設定オプションの並べ替え {#ordering}
 
 宛先設定で顧客データフィールドとしてファイル形式オプションを追加する順序は、UI に反映されます。 例えば、以下の設定は UI に応じて反映され、オプションは順番に表示されます **[!UICONTROL 区切り]**, **[!UICONTROL 引用符文字]**, **[!UICONTROL エスケープ文字]**, **[!UICONTROL 空の値]**, **[!UICONTROL Null 値]**.
 
-![画像 UI のファイル形式設定オプションの順序を示すExperience Platform。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![画像 UI のファイル形式設定オプションの順序を示すExperience Platform。](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -247,38 +243,43 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 これをおこなうには、 `"type": "object"` グループを作成し、必要なファイルフォーマットオプションを `properties` 次の例に示すように、グループ化の場所のパラメーター **[!UICONTROL CSV オプション]** がハイライト表示されます。
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![UI での CSV オプションのグループ化を示す画像。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
+![UI での CSV オプションのグループ化を示す画像。](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### ファイル形式設定オプション用のドロップダウンセレクターを作成します {#dropdown-selectors}
 
@@ -286,27 +287,44 @@ CSV ファイルのフィールドを区切る文字など、複数のオプシ�
 
 これをおこなうには、 `namedEnum` 以下に示すようにオブジェクトを選択し、 `default` ユーザーが選択できるオプションの値。
 
-```json
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![上記の設定で作成されたドロップダウンセレクターの例を示す画面記録。](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![上記の設定で作成されたドロップダウンセレクターの例を示す画面記録。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### 条件付きファイル書式設定オプションの作成 {#conditional-options}
 
@@ -467,7 +485,7 @@ CSV ファイルのフィールドを区切る文字など、複数のオプシ�
 
 以下に、上記の設定に基づいて、結果の UI 画面を示します。 ユーザーがファイルタイプ CSV を選択すると、CSV ファイルタイプを参照する追加のファイル形式設定オプションが UI に表示されます。
 
-![CSV ファイルの条件付きファイル形式オプションを示す画面記録。](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![CSV ファイルの条件付きファイル形式オプションを示す画面記録。](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### 上記のすべてのオプションを含む完全な API リクエスト
 
@@ -486,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"

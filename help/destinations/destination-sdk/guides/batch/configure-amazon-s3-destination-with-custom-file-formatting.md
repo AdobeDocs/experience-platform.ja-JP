@@ -2,10 +2,10 @@
 description: Destination SDKを使用して、カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する方法について説明します。
 title: カスタムのファイル名とファイル形式オプションを使用した Amazon S3 の宛先の設定.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 13%
+source-wordcount: '700'
+ht-degree: 14%
 
 ---
 
@@ -13,17 +13,19 @@ ht-degree: 13%
 
 ## 概要 {#overview}
 
-このページでは、Destination SDKを使用して、カスタムでAmazon S3 の宛先を設定する方法について説明します [ファイル形式オプション](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
+このページでは、Destination SDKを使用して、カスタムでAmazon S3 の宛先を設定する方法について説明します [ファイル形式オプション](configure-file-formatting-options.md) そして習慣 [ファイル名設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 このページには、Amazon S3 の宛先で使用できるすべての設定オプションが表示されます。 以下の手順で示す設定を編集したり、必要に応じて設定の特定の部分を削除したりできます。
 
+以下で使用するパラメーターについて詳しくは、 [宛先 SDK の設定オプション](../../functionality/configuration-options.md).
+
 ## 前提条件 {#prerequisites}
 
-以下の手順に進む前に、 [Destination SDKの概要](/help/destinations/destination-sdk/getting-started.md) ページを参照してください。Adobe I/O認証に必要な資格情報や、Destination SDKAPI を使用するためのその他の前提条件が取得されます。
+以下の手順に進む前に、 [Destination SDKの概要](../../getting-started.md) ページを参照してください。Adobe I/O認証に必要な資格情報や、Destination SDKAPI を使用するためのその他の前提条件が取得されます。
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、 `/destination-server` エンドポイント：サーバーとファイルの設定を作成します。 HTTP リクエストのパラメーターについて詳しくは、 [ファイルベースの宛先のサーバーおよびファイル構成の仕様](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example) そして関連する [ファイル形式設定](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration).
+まず、 `/destination-server` endpoint to [サーバーとファイルの設定を作成する](../../authoring-api/destination-server/create-destination-server.md).
 
 **API 形式**
 
@@ -33,7 +35,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、カスタムを使用した一般的なAmazon S3 設定が含まれています [CSV ファイル形式](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、カスタムを使用した一般的なAmazon S3 設定が含まれています [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -126,12 +128,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 でサーバー設定を接続するには、以下を実行します。 [手順 1](#create-server-file-configuration) をこの宛先設定に追加するには、 `destinationServerId` の値と、 [手順 1](#create-server-file-configuration).
 
-以下で使用するパラメーターについて詳しくは、次のページを参照してください。
-
-* [認証設定](/help/destinations/destination-sdk/authentication-configuration.md#s3)
-* [バッチ保存先の設定](/help/destinations/destination-sdk/file-based-destination-configuration.md#batch-configuration)
-* [ファイルベースの宛先設定 API の操作](/help/destinations/destination-sdk/destination-configuration-api.md#create-file-based)
-
 **API 形式**
 
 ```http
@@ -151,7 +147,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -417,9 +412,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 上記の設定に基づいて、Experience Platformカタログに新しいプライベートの宛先カードが表示され、使用できるようになります。
 
-![選択した宛先カードを含む宛先カタログページを示す画面記録。](../../assets/destination-card.gif)
+![選択した宛先カードを含む宛先カタログページを示す画面記録。](../../assets/guides/batch/destination-card.gif)
 
-以下の画像と記録で、 [ファイルベースの宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md) の宛先設定で選択したオプションに一致する。
+以下の画像と記録で、 [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) の宛先設定で選択したオプションに一致する。
 
 宛先に関する詳細を入力する際に、表示されるフィールドは設定で設定したカスタムデータフィールドです。
 
@@ -427,13 +422,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >カスタムデータフィールドを宛先設定に追加する順序は、UI に反映されません。 カスタムデータフィールドは、次の画面の記録で表示される順序で常に表示されます。
 
-![宛先の詳細を入力](../../assets/file-configuration-options.gif)
+![宛先の詳細を入力](../../assets/guides/batch/file-configuration-options.gif)
 
 書き出し間隔を設定する場合、表示されるフィールドは、 `batchConfig` 設定。
-![書き出しスケジュールオプション](../../assets/file-export-scheduling.png)
+![書き出しスケジュールオプション](../../assets/guides/batch/file-export-scheduling.png)
 
 ファイル名の設定オプションを表示する際に、表示されるフィールドが `filenameConfig` オプションを設定します。
-![ファイル名設定オプション](../../assets/file-naming-options.gif)
+![ファイル名設定オプション](../../assets/guides/batch/file-naming-options.gif)
 
 上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
 
@@ -443,7 +438,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
-宛先を設定した後、 [宛先公開 API](/help/destinations/destination-sdk/destination-publish-api.md) 設定をレビュー用にAdobeに送信します。
+宛先を設定した後、 [宛先公開 API](../../publishing-api/create-publishing-request.md) 設定をレビュー用にAdobeに送信します。
 
 ## 手順 5:（オプション）宛先のドキュメント化 {#document-destination}
 
@@ -451,8 +446,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](/help/destinations/destination-sdk/overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](/help/destinations/catalog/overview.md)に作成します。
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](../../overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](../../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](../../../catalog/overview.md)に作成します。
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、カスタムの作成方法がわかります [!DNL Amazon S3] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。
+この記事を読むと、カスタムの作成方法がわかります [!DNL Amazon S3] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。

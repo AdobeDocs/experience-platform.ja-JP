@@ -1,0 +1,221 @@
+---
+description: このページでは、Adobe Experience Platform Destination SDKを介したオーディエンステンプレートの作成に使用される API 呼び出しの例を示します。
+title: オーディエンステンプレートの作成
+source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+workflow-type: tm+mt
+source-wordcount: '626'
+ht-degree: 71%
+
+---
+
+
+# オーディエンステンプレートの作成
+
+>[!IMPORTANT]
+>
+>**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/audience-templates`
+
+Destination SDKを使用して作成される一部の宛先では、オーディエンスのメタデータ設定を作成して、宛先のセグメントメタデータをプログラムで作成、更新、削除する必要があります。 このページでは、 `/authoring/audience-templates` 設定を作成する API エンドポイント。
+
+このエンドポイントを通じて設定できる機能について詳しくは、 [audience metadata management](../functionality/audience-metadata-management.md).
+
+>[!IMPORTANT]
+>
+>Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+
+## オーディエンステンプレート API 操作の概要 {#get-started}
+
+続ける前に「[はじめる前に](../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+
+## オーディエンステンプレートの作成 {#create}
+
+新しいオーディエンステンプレートを作成するには、 `POST` にリクエスト `/authoring/audience-templates` endpoint.
+
+**API 形式**
+
+```http
+POST /authoring/audience-templates
+```
+
++++リクエスト
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しいオーディエンステンプレートを作成します。 以下のペイロードには、エンドポイント `/authoring/audience-templates` が受け取れるパラメーターがすべて含まれます。呼び出しにすべてのパラメーターを追加する必要はなく、テンプレートは API 要件に応じてカスタマイズできることに注意してください。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "metadataTemplate":{
+      "name":"string",
+      "create":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
+      },
+      "update":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
+      },
+      "delete":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
+      },
+      "validate":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
+      }
+   },
+   "validations":[
+      {
+         "field":"string",
+         "regex":"string"
+      }
+   ]
+}'
+```
+
+| プロパティ | タイプ | 説明 |
+| -------- | ----------- | ----------- |
+| `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。 この名前は、Adobe Experience Platform のユーザーインターフェイスであらゆるパートナー固有のエラーメッセージに表示され、その後に `metadataTemplate.create.errorSchemaMap` から解析されたエラーメッセージが続きます。 |
+| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスやセグメントを作成、更新、削除、検証するために使用します。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
+| `httpMethod` | 文字列 | 宛先のセグメントやオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
+| `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
+| `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。 例：`"application/x-www-form-urlencoded"` |
+| `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。 `requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。例については、オーディエンスメタデータ機能ドキュメントの[最初のテンプレートの例](../functionality/audience-metadata-management.md#example-1)を参照してください。 |
+| `responseFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
+| `responseFields.value` | 文字列 | 呼び出し時に API が返す応答フィールドの値を指定します。 |
+| `responseErrorFields.name` | 文字列 | 呼び出し時に API が返す応答フィールドを指定します。例については、オーディエンスメタデータ機能ドキュメントの[テンプレートの例](../functionality/audience-metadata-management.md#examples)を参照してください。 |
+| `responseErrorFields.value` | 文字列 | API 呼び出しに対する宛先からの応答で返されたエラーメッセージを解析します。これらのエラーメッセージは、Adobe Experience Platform のユーザーインターフェイスでユーザーに表示されます。 |
+| `validations.field` | 文字列 | 宛先に対する API 呼び出しが実行される前に、いずれかのフィールドに対して検証を実行する必要があるかどうかを示します。例えば、ユーザーのアカウント ID の検証に `{{validations.accountId}}` を使用できます。 |
+| `validations.regex` | 文字列 | 検証に合格するために、フィールドをどのように構成するべきかを示します。 |
+
+{style="table-layout:auto"}
+
++++
+
++++応答
+
+リクエストが成功した場合は、HTTP ステータス 200と新しく作成されたオーディエンステンプレートの詳細が返されます。
+
++++
+
+## API エラー処理
+
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+
+## 次の手順
+
+このドキュメントを読むと、オーディエンステンプレートを使用するタイミングと、 `/authoring/audience-templates` API エンドポイント。 [Destination SDK を使用して宛先を設定する方法](../guides/configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスの中でどのように位置づけられるかを把握します。

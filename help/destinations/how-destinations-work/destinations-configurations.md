@@ -2,7 +2,7 @@
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
@@ -32,7 +32,7 @@ Experience Platform の宛先への書き出し動作について考える際は
 宛先開発者は、[Destination SDK](/help/destinations/destination-sdk/overview.md) を使用して、カスタムまたは製品化された（プライベートまたはパブリック）宛先を作成できます。Destination SDK は、API エンドポイントとファイル受信システムのダウンストリーム機能に基づいて宛先を設定するための優れた柔軟性を開発者に提供します。ダウンストリーム機能に基づいて、宛先開発者は、Destination SDK を使用して宛先を設定する際に、次の設定オプションを使用できます。
 
 * Experience Platform から宛先に書き出すことができる属性と ID を決定します。また、データの書き出しを正常に行うために、宛先で必要な ID も決定します。
-* API 統合に送信される HTTP メッセージを集計する際に、Experience Platform が待機する時間を決定する集計ポリシーを設定します。宛先開発者は、様々な集計タイプを設定して、送信 HTTP メッセージに含めるプロファイルの数と、HTTP メッセージをディスパッチするまで Experience Platform が待機する時間を決定できます。 Destination SDK ドキュメントで、宛先開発者が使用できる[集計ポリシー設定オプション](/help/destinations/destination-sdk/destination-configuration.md#aggregation)に関する詳細な情報を参照してください。
+* API 統合に送信される HTTP メッセージを集計する際に、Experience Platform が待機する時間を決定する集計ポリシーを設定します。宛先開発者は、様々な集計タイプを設定して、送信 HTTP メッセージに含めるプロファイルの数と、HTTP メッセージをディスパッチするまで Experience Platform が待機する時間を決定できます。 Destination SDK ドキュメントで、宛先開発者が使用できる[集計ポリシー設定オプション](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)に関する詳細な情報を参照してください。
 * HTTP メッセージの書き出しに、セグメントに適合するプロファイル、セグメントから削除されたプロファイル、またはその両方を含める必要があるかどうかを決定します。
 * ファイルを書き出す際に、ユーザーが使用できるファイル名とファイル形式の設定を決定します。
 

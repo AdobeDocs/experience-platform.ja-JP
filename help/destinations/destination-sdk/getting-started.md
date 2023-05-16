@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 95%
+source-wordcount: '627'
+ht-degree: 89%
 
 ---
 
@@ -56,7 +56,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## 役割ベースのアクセス制御（RBAC） {#rbac}
 
-[リファレンスドキュメント](./configuration-options.md)に記載されている Destination SDK API エンドポイントを使用するには、**[!UICONTROL 宛先オーサリング]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
+[リファレンスドキュメント](functionality/configuration-options.md)に記載されている Destination SDK API エンドポイントを使用するには、**[!UICONTROL 宛先オーサリング]**&#x200B;のアクセス制御権限が必要です。 Adobe Exchange チームに依頼して、[Adobe Admin Console](https://adminconsole.adobe.com/) でこの権限を割り当ててもらいます。
 
 ![宛先オーサリング権限](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## その他の留意事項 {#additional-considerations}
 
-* 宛先設定を作成する場合も編集する場合も、宛先設定に加える変更はすべて、アドビによる審査と承認が必要です。変更内容は、審査が完了した後にのみ、宛先に反映されます。
+* 製品化された/公開先の場合、宛先設定に対しておこなった変更（宛先設定の作成または編集を問わず）は、Adobeが確認および承認する必要があります。 変更内容は、審査が完了した後にのみ、宛先に反映されます。これは、自分だけが利用できるプライベートの宛先には適用されません。
 * 宛先設定を編集できるのは、同じ組織に所属し、サンドボックスにアクセスできるユーザーのみです。
 
 ## 次の手順 {#next-steps}
@@ -77,8 +77,8 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 * 宛先のタイプに応じて、以下の設定ガイドをお読みください。
 
-   * [Destination SDK を使用したストリーミングの宛先の設定](./configure-destination-instructions.md)
-   * [Destination SDK を使用したファイルベースの宛先の設定](./configure-file-based-destination-instructions.md)
+   * [Destination SDK を使用したストリーミングの宛先の設定](guides/configure-destination-instructions.md)
+   * [Destination SDK を使用したファイルベースの宛先の設定](guides/configure-file-based-destination-instructions.md)
 
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。
 * Destination SDK API エンドポイントを使用して使用して宛名を設定するには、 [宛先オーサリング API Postman コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)を使用します。Postman の使用を開始するには、 [環境とコレクションのインポート手順](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)および [Postman 環境を作成するためのビデオガイド](https://video.tv.adobe.com/v/28832)を参照してください。

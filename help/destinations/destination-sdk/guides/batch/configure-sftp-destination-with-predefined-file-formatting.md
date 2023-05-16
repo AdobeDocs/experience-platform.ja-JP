@@ -2,9 +2,9 @@
 description: Destination SDKを使用して、事前に定義されたファイル形式オプションとカスタムファイル名設定を使用して SFTP の宛先を設定する方法について説明します。
 title: 事前定義済みファイル形式オプションとカスタムファイル名設定を使用した、 SFTP の宛先の設定.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '706'
 ht-degree: 14%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 14%
 
 ## 概要 {#overview}
 
-このページでは、Destination SDKを使用して、事前に定義されたデフォルトの SFTP の宛先を設定する方法について説明します [ファイル形式オプション](../../server-and-file-configuration.md#file-configuration) そして習慣 [ファイル名設定](../../file-based-destination-configuration.md#file-name-configuration).
+このページでは、Destination SDKを使用して、事前に定義されたデフォルトの SFTP の宛先を設定する方法について説明します [ファイル形式オプション](configure-file-formatting-options.md) そして習慣 [ファイル名設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 このページには、SFTP の宛先で使用できるすべての設定オプションが表示されます。 以下の手順で示す設定を編集したり、必要に応じて設定の特定の部分を削除したりできます。
+
+以下で使用するパラメーターについて詳しくは、 [宛先 SDK の設定オプション](../../functionality/configuration-options.md).
 
 ## 前提条件 {#prerequisites}
 
@@ -23,7 +25,7 @@ ht-degree: 14%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、 `/destination-server` エンドポイント：サーバーとファイルの設定を作成します。 HTTP リクエストのパラメーターについて詳しくは、 [ファイルベースの宛先のサーバーおよびファイル構成の仕様](../../server-and-file-configuration.md#sftp-example) そして関連する [ファイル形式設定](../../server-and-file-configuration.md#file-configuration).
+まず、 `/destination-server` endpoint to [サーバーとファイルの設定を作成する](../../authoring-api/destination-server/create-destination-server.md).
 
 **API 形式**
 
@@ -33,7 +35,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、事前に定義されたデフォルトの汎用 SFTP 設定が含まれています [CSV ファイル形式](../../server-and-file-configuration.md#file-configuration) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、事前に定義されたデフォルトの汎用 SFTP 設定が含まれています [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -128,12 +130,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 でサーバー設定を接続するには、以下を実行します。 [手順 1](#create-server-file-configuration) をこの宛先設定に追加するには、 `destinationServerId` の値と、 [手順 1](#create-server-file-configuration).
 
-以下で使用するパラメーターについて詳しくは、次のページを参照してください。
-
-* [認証設定](../../authentication-configuration.md#sftp)
-* [バッチ保存先の設定](../../file-based-destination-configuration.md#batch-configuration)
-* [ファイルベースの宛先設定 API の操作](../../destination-configuration-api.md#create-file-based)
-
 **API 形式**
 
 ```http
@@ -153,7 +149,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"SFTP destination with predefined CSV formatting options",
    "description":"SFTP destination with predefined CSV formatting options",
-   "releaseNotes":"",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -257,7 +252,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 上記の設定に基づいて、Experience Platformカタログに新しいプライベートの宛先カードが表示され、使用できるようになります。
 
-![選択した宛先カードを含む宛先カタログページを示す画面記録。](../../assets/destination-card.gif)
+![選択した宛先カードを含む宛先カタログページを示す画面記録。](../../assets/guides/batch/destination-card.gif)
 
 以下の画像と記録で、 [ファイルベースの宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md) の宛先設定で選択したオプションに一致する。
 
@@ -267,13 +262,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >カスタムデータフィールドを宛先設定に追加する順序は、UI に反映されません。 カスタムデータフィールドは、次の画面の記録で表示される順序で常に表示されます。
 
-![宛先の詳細を入力](../../assets/file-configuration-options.gif)
+![宛先の詳細を入力](../../assets/guides/batch/file-configuration-options.gif)
 
 書き出し間隔を設定する場合、表示されるフィールドは、 `batchConfig` 設定。
-![書き出しスケジュールオプション](../../assets/file-export-scheduling.png)
+![書き出しスケジュールオプション](../../assets/guides/batch/file-export-scheduling.png)
 
 ファイル名の設定オプションを表示する際に、表示されるフィールドが `filenameConfig` オプションを設定します。
-![ファイル名設定オプション](../../assets/file-naming-options.gif)
+![ファイル名設定オプション](../../assets/guides/batch/file-naming-options.gif)
 
 上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
 
@@ -283,7 +278,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
 
-宛先を設定した後、 [宛先公開 API](../../destination-publish-api.md) 設定をレビュー用にAdobeに送信します。
+宛先を設定した後、 [宛先公開 API](../../publishing-api/create-publishing-request.md) 設定をレビュー用にAdobeに送信します。
 
 ## 手順 5:（オプション）宛先のドキュメント化 {#document-destination}
 

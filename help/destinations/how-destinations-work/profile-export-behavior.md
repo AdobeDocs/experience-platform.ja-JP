@@ -2,7 +2,7 @@
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 97%
@@ -27,16 +27,16 @@ Experience Platform の宛先では、データを HTTPS 呼び出しとして A
 
 プロファイルを HTTPS メッセージに集計してから宛先 API エンドポイントにディスパッチするプロセスを&#x200B;*マイクロバッチ処理*&#x200B;と呼びます。
 
-*[設定可能な集計](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)*&#x200B;ポリシーを持つ [Facebook 宛先](/help/destinations/catalog/social/facebook.md)を例に取ります。データは集計されて送信されます。この場合、宛先サービスは、プロファイルサービスアップストリームから受信するすべてのデータを取得し、それを次のいずれかで集計してから Facebook にディスパッチします。
+*[設定可能な集計](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;ポリシーを持つ [Facebook 宛先](/help/destinations/catalog/social/facebook.md)を例に取ります。データは集計されて送信されます。この場合、宛先サービスは、プロファイルサービスアップストリームから受信するすべてのデータを取得し、それを次のいずれかで集計してから Facebook にディスパッチします。
 
 * レコード数（最大 10,000 件）または
 * 間隔（30 分）
 
 上記のしきい値のいずれかに初めて達したときに、Facebook への書き出しがトリガーされます。そのため、[!DNL Facebook Custom Audiences] ダッシュボードの表示では、オーディエンスが 10,000 件単位で Experience Platform から追加されるようになります。 データが 30 分の書き出し間隔よりも高速に処理および集計されて、より高速に送信されるので、すべてのレコードが処理されるまで、約 10～15 分ごとに 10,000 件のレコードが表示されます。10,000 件から成るバッチを構成できるだけの十分なレコードがない場合は、期間のしきい値に達したときに現在のレコード数がそのまま送信されるので、より小規模なバッチも Facebook に送信される場合があります。
 
-別の例として、[HTTP API 宛先](/help/destinations/catalog/streaming/http-destination.md)について考えます。この場合は、*[ベストエフォート集計](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)*&#x200B;ポリシーと `maxUsersPerRequest: 10` の条件が適用されます。 つまり、最大 10 個のプロファイルが集計されてから、この宛先に対する HTTP 呼び出しが実行されます。ただし、Experience Platform は、更新された再評価情報を宛先サービスがアップストリームサービスから受け取るとすぐに、宛先へのプロファイルのディスパッチを試みます。
+別の例として、[HTTP API 宛先](/help/destinations/catalog/streaming/http-destination.md)について考えます。この場合は、*[ベストエフォート集計](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;ポリシーと `maxUsersPerRequest: 10` の条件が適用されます。 つまり、最大 10 個のプロファイルが集計されてから、この宛先に対する HTTP 呼び出しが実行されます。ただし、Experience Platform は、更新された再評価情報を宛先サービスがアップストリームサービスから受け取るとすぐに、宛先へのプロファイルのディスパッチを試みます。
 
-集計ポリシーは設定可能で、宛先の開発者が、API エンドポイントのダウンストリームでのレート制限に最もよく合うように集計ポリシーを設定する方法を決定できます。 詳しくは、Destination SDK のドキュメントで[集計ポリシー](/help/destinations/destination-sdk/destination-configuration.md#aggregation)を参照してください。
+集計ポリシーは設定可能で、宛先の開発者が、API エンドポイントのダウンストリームでのレート制限に最もよく合うように集計ポリシーを設定する方法を決定できます。 詳しくは、Destination SDK のドキュメントで[集計ポリシー](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)を参照してください。
 
 ## ストリーミングプロファイル書き出し宛先（エンタープライズ宛先） {#streaming-profile-destinations}
 

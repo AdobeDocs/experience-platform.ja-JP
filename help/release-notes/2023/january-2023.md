@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2414'
 ht-degree: 100%
@@ -102,7 +102,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | ----------- | ----------- |
 | ストリーミング宛先との統合に関する有料メディア同意ポリシーの機能強化 | 有料メディアアクティベーションユースケースの[ストリーミング宛先](/help/destinations/destination-types.md#streaming-destinations)での[同意ポリシーの適用に対する機能強化](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement)。プロファイルが同意ポリシーの対象として認定されなくなった場合、Experience Platform はポリシーの終了とストリーミング宛先との間で積極的に通信するようになりました。<br> <b>メモ</b>：この機能は、**[!UICONTROL Privacy and Security Shield]** および **[!UICONTROL Healthcare Shield]** のお客様のみが使用できます。 |
 | ベータ版クラウドストレージの宛先コネクタの新しい区切り文字オプション | 3 つの新しい区切り文字オプション（コロン `:`、パイプ、セミコロン `;`）が、新しいベータ版クラウドストレージの宛先（[（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）で使用できるようになりました。<br> ファイルベースの宛先については、サポート対象の[ファイル形式オプション](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。 |
-| [Destination SDK](/help/destinations/destination-sdk/overview.md) の[顧客データフィールド](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields)設定で使用できる新しいオプションパラメーター | `unique`：ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。<br> 例えば、[[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters)宛先の「**[!UICONTROL 統合エイリアス]**」フィールドは一意である必要があります。つまり、この宛先への 2 つの個別のデータフローがこのフィールドに同じ値を持つことはできません。 |
+| [Destination SDK](/help/destinations/destination-sdk/overview.md) の[顧客データフィールド](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md)設定で使用できる新しいオプションパラメーター | `unique`：ユーザーの組織によって設定されたすべての宛先データフローで値が一意である必要がある顧客データフィールドを作成する必要がある場合は、このパラメーターを使用します。<br> 例えば、[[!UICONTROL カスタムパーソナライゼーション]](/help/destinations/catalog/personalization/custom-personalization.md#parameters)宛先の「**[!UICONTROL 統合エイリアス]**」フィールドは一意である必要があります。つまり、この宛先への 2 つの個別のデータフローがこのフィールドに同じ値を持つことはできません。 |
 
 **修正および機能強化** {#destinations-fixes-and-enhancements}
 
