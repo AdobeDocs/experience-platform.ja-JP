@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 小売業界のデータモデル
 description: Adobe Experience Platformで使用するエクスペリエンスデータモデル (XDM) と互換性のある、小売業界用の標準化されたデータモデルを表示します。
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 17%
+source-wordcount: '458'
+ht-degree: 20%
 
 ---
 
@@ -46,5 +46,3 @@ ht-degree: 17%
 | 自動およびパーソナライズされた E メールで、買い物かごの放棄者を再ターゲット化します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[コマース詳細](../../field-groups/event/commerce-details.md)</li><li>[Web 詳細](../../field-groups/event/web-details.md)</li></ul></li><li>**[製品](../../classes/product.md)**:<ul><li>[製品カタログ](../../field-groups/product/product-catalog.md)</li><li>[製品カテゴリ](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}
-
-*\*今後のリリースでは、標準の製品クラスが予定されていますが、製品スキーマは現在、カスタムクラスを使用して構築されている必要があります。 したがって、スキーマのクラスの構造と、スキーマに追加するフィールドグループの構造を手動で構築する必要があります。 詳しくは、 [カスタムクラスの作成](../../ui/resources/classes.md#create) （ XDM UI ガイド）を参照してください。*

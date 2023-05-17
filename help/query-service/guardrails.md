@@ -3,9 +3,9 @@ keywords: Experience Platform；クエリ；クエリサービス；トラブル
 title: クエリサービスのガードレール
 description: このドキュメントでは、クエリの使用を最適化するのに役立つ、クエリサービスデータの使用制限に関する情報を提供します。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1004'
 ht-degree: 7%
 
 ---
@@ -33,8 +33,6 @@ Guardrail は、データとシステムの使用状況、パフォーマンス�
 * **レポート API**:データ取得呼び出しを（内部または外部に）おこなうための API です。 拡張レポートのデータモデルは、Real-Time CDPダッシュボードのデータモデルなど、Adobe Experience Platformのネイティブレポートのデータモデルから派生します。
 
 次の図は、クエリサービス機能が現在パッケージ化され、ライセンスを受け取っている方法をまとめたものです。
-
-![ライセンスに関するクエリサービス機能の配布とパッケージを説明する図です。](./images/guardrails/query-capabilities.png)
 
 ## 上限のタイプ
 
