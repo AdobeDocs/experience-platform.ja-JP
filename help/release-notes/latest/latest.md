@@ -3,9 +3,9 @@ title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2094'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 >
->2023 年 5 月 15 日以降、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`. この変更の詳細については、 [セグメント化サービスセクション](#segmentation).
+>2023年5月15日（PT）以降、セグメントメンバーシップのライフサイクルの冗長性を取り除くために、`Existing` ステータスはセグメントメンバーシップマップから廃止される予定です。この変更後、セグメントで認定されたプロファイルは `Realized`、不適格となったプロファイルは引き続き `Exited` として表されます。この変更について詳しくは、[セグメント化サービス](#segmentation)の項を参照してください。
 
 **リリース日：2023年4月26日（PT）**
 
@@ -174,7 +174,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| セグメントメンバーシップマップ | 2023 年 5 月 15 日 (PT) に発表された前の発表に対するフォローアップとして、 `Existing` セグメントメンバーシップのライフサイクルでの冗長性を削除するために、セグメントメンバーシップマップでステータスが非推奨となります。 この変更後、セグメントで認定されたプロファイルは、 `Realized` 不適格なプロファイルは、引き続き次のように表されます。 `Exited`.<br/><br/> この変更は、 [企業の宛先](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure Event Hubs、HTTP API) の `Existing` ステータス。 該当する場合は、ダウンストリーム統合を確認してください。 特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
+| セグメントメンバーシップマップ | 2月に行った前回のお知らせのフォローアップとして、2023年5月15日（PT）に、セグメントメンバーシップのライフサイクルの冗長性を取り除くため、セグメントメンバーシップマップから `Existing` ステータスが廃止される予定です。この変更後、セグメントで認定されたプロファイルは `Realized`、不適格となったプロファイルは引き続き `Exited` として表されます。<br/><br/>この変更は、[企業の宛先](../../destinations/destination-types.md#streaming-profile-export)（Amazon Kinesis、Azure Event Hubs、HTTP API）を使用していて、`Existing` ステータスに基づいて自動化されたダウンストリームプロセスを導入している可能性がある場合に影響を与える可能性があります。該当する場合は、ダウンストリーム統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
 
 {style="table-layout:auto"}
 
