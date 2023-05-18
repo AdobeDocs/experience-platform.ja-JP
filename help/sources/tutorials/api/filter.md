@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；フロ
 title: フローサービス API を使用してソースの行レベルのデータをフィルタリングする
 description: このチュートリアルでは、フローサービス API を使用してソースレベルでデータをフィルタリングする手順を説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 17%
+source-wordcount: '780'
+ht-degree: 16%
 
 ---
 
@@ -17,9 +17,7 @@ ht-degree: 17%
 >現在、行レベルのデータのフィルタリングのサポートは、次のソースでのみ利用できます。
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
->* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
 

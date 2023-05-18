@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
-workflow-type: ht
-source-wordcount: '2095'
-ht-degree: 100%
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+workflow-type: tm+mt
+source-wordcount: '2084'
+ht-degree: 98%
 
 ---
 
@@ -190,7 +190,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| Microsoft Dynamics、Salesforce CRM および Salesforce Marketing Cloud の行レベルデータをフィルタリングするための API サポート | 論理演算子と比較演算子を使用すると、Microsoft Dynamics、Salesforce CRM および Salesforce Marketing Cloud ソースの行レベルデータをフィルタリングできます。[API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
+| Salesforce CRM ソースの行レベルのデータをフィルタリングする API のサポート。 | 論理演算子と比較演算子を使用して、Salesforce CRM ソースの行レベルのデータをフィルタリングします。 [API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
 | Shopify ストリーミングのベータ版の提供 | [Shopify ストリーミングソース](../../sources/connectors/ecommerce/shopify-streaming.md)のベータ版が利用可能になりました。Shopify ストリーミングソースを使用すると、Shopify パートナーアカウントから Experience Platform にデータをストリーミングできます。 |
 | OneTrust 統合の一般提供 | [OneTrust 統合ソース](../../sources/connectors/consent-and-preferences/onetrust.md)は一般提供（GA）版になりました。OneTrust 統合ソースを使用すると、OneTrust 統合アカウントから Experience Platform に同意と環境設定のデータを取り込むことができます。 |
 | Oracle Service Cloud の一般提供 | [Oracle Service Cloud ソース](../../sources/connectors/customer-success/oracle-service-cloud.md)は一般提供（GA）版になりました。Oracle Service Cloud ソースを使用すると、Oracle Service Cloud データを Experience Platform に取り込むことができます。 |
