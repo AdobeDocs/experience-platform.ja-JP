@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;ホーム;人気のあるトピック;データ管理;ライセンス使用権限;ライセンス;ベストプラクティス
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
+source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
 workflow-type: tm+mt
-source-wordcount: '2169'
-ht-degree: 79%
+source-wordcount: '2203'
+ht-degree: 78%
 
 ---
 
@@ -106,6 +105,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | プロファイル用データセットの有効化／無効化のサポート | データをリアルタイム顧客プロファイルに取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Profile Richness] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
 | Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。詳しくは、[SDK の基礎の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#fundamentals)に関するガイドを参照してください。 |
 | サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。詳しくは、[イベントおよび条件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=ja#events-and-conditions-(if))に関するドキュメントを参照してください。 |
+| ソースレベルでのデータのフィルタリング | 接続を作成し、データをExperience Platformに取り込む前に、論理演算子と比較演算子を使用して、ソースから行レベルのデータをフィルタリングできます。 詳しくは、 [を使用してソースの行レベルのデータをフィルタリングする [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
