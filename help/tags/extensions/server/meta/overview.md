@@ -2,9 +2,9 @@
 title: メタコンバージョン API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送のメタコンバージョン API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
+source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2368'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,10 @@ ht-degree: 2%
 >に関する節 [イベントの重複排除](#deduplication) このドキュメントの後半では、同じイベントがブラウザーとサーバーの両方から受け取る場合があるので、同じイベントが 2 回使用されないようにする手順について説明します。
 
 を使用するには、 [!DNL Conversions API] 拡張機能を使用するには、イベント転送にアクセスでき、有効な [!DNL Meta] ～を利用できる口座 [!DNL Ad Manager] および [!DNL Event Manager]. 特に、既存の [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) ( または [新しい [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) 代わりに )、拡張機能をアカウントに設定できます。
+
+>[!INFO]
+>
+>この拡張機能をモバイルアプリデータで使用する場合、または [!DNL Meta] キャンペーンの場合は、既存のアプリからデータセットを作成し、 **ピクセル ID から作成** プロンプトが表示されたら、 この記事を参照してください [ビジネスに最適なデータセット作成オプションを決定する](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) 」を参照してください。 詳しくは、 [アプリイベントのコンバージョン API](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) ドキュメントを参照してください。
 
 ## 拡張機能のインストール
 
@@ -45,7 +49,7 @@ ht-degree: 2%
 
 ## イベント転送ルールの設定 {#rule}
 
-この節では、 [!DNL Conversions API] 汎用のイベント転送ルールの拡張。 実際には、すべての許可済みを送信するために、複数のルールを設定する必要があります [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference) 経由 [!DNL Meta Pixel] および [!DNL Conversions API].
+この節では、 [!DNL Conversions API] 汎用のイベント転送ルールの拡張。 実際には、すべての許可済みを送信するために、複数のルールを設定する必要があります [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference) 経由 [!DNL Meta Pixel] および [!DNL Conversions API]. モバイルアプリデータについては、必須フィールド、アプリデータフィールド、顧客情報パラメーターおよびカスタムデータの詳細を参照してください [ここ](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
