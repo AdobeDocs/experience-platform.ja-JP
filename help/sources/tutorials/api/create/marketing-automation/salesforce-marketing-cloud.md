@@ -1,33 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；salesforce marketing cloud;SalesforceMarketing Cloud
-solution: Experience Platform
 title: フローサービス API を使用した SalesforceMarketing Cloudベース接続の作成
-type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを SalesforceMarketing Cloudに接続する方法を説明します。
+description: フローサービス API を使用して、SalesforceMarketing CloudアカウントをExperience Platformに対して認証する方法を説明します。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 58%
+source-wordcount: '507'
+ht-degree: 57%
 
 ---
 
 # [!DNL Flow Service] API を使用した [!DNL Salesforce Marketing Cloud] ベース接続の作成
 
->[!NOTE]
+>[!IMPORTANT]
 >
->[!DNL Salesforce Marketing Cloud] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>カスタムオブジェクトの取り込みは、現在、 [!DNL Salesforce Marketing Cloud] ソースの統合。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Salesforce Marketing Cloud] のベース接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して、[!DNL Salesforce Marketing Cloud] のベース接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)[!DNL Platform]：Experience を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)[!DNL Platform]：Experience には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
@@ -41,12 +38,12 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** を `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
+| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** を `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Marketing Cloud] の接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 |
 
-導入の詳細については、 [[!DNL Salesforce Marketing Cloud] 文書](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+導入の詳細については、 [[!DNL Salesforce Marketing Cloud] 文書](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## ベース接続の作成
 
@@ -66,28 +63,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Marketing Cloud base connection",
-        "description": "Salesforce Marketing Cloud base connection",
-        "auth": {
-            "specName": "Client-Id-Secret Based Authentication",
-            "params": {
-                "host": "{HOST}"
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}"
-            }
-        },
-        "connectionSpec": {
-            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Marketing Cloud base connection",
+      "description": "Salesforce Marketing Cloud base connection",
+      "auth": {
+          "specName": "Client-Id-Secret Based Authentication",
+          "params": {
+              "host": "acme-ab12c3d4e5fg6hijk7lmnop8qrst"
+              "clientId": "acme-salesforce-marketing-cloud",
+              "clientSecret": "xxxx"
+          }
+      },
+      "connectionSpec": {
+          "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | プロパティ | 説明 |

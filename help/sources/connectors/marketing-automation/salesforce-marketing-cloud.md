@@ -1,25 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Salesforce Marketing Cloud;SalesforceMarketing Cloud；マーケティング自動化
 solution: Experience Platform
 title: SalesforceMarketing Cloudソースの概要
 description: API またはユーザーインターフェイスを使用して SalesforceMarketing CloudをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 45%
+source-wordcount: '334'
+ht-degree: 42%
 
 ---
 
-# （ベータ版）[!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->[!DNL Salesforce Marketing Cloud] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取り込む機能を備えています。 マーケティング自動化プロバイダーのサポートは次のとおりです。 [!DNL Salesforce Marketing Cloud].
+Experience Platformは、サードパーティのマーケティングオートメーションシステムからデータを取り込む機能を提供しています。 マーケティング自動化プロバイダーのサポートは次のとおりです。 [!DNL Salesforce Marketing Cloud].
 
 ## 前提条件
 
@@ -28,9 +23,13 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 * `campaign_read`
 * `list_and_subscribers_read`
 
-スコープをリクエストするには、 `v2/userinfo` リソース [!DNL Salesforce Marketing Cloud] API 詳しくは、 [[!DNL Salesforce Marketing Cloud] API 統合権限スコープドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) スコープのリクエスト方法と比較方法に関するガイダンスを参照してください。
+スコープをリクエストするには、 `v2/userinfo` リソース [!DNL Salesforce Marketing Cloud] API 詳しくは、 [[!DNL Salesforce Marketing Cloud] API 統合権限スコープドキュメント](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) スコープのリクエスト方法と比較方法に関するガイダンスを参照してください。
 
-スコープの関連する権限と動作の一覧を含むスコープの詳細については、次を参照してください [[!DNL Salesforce Marketing Cloud] REST API ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+スコープの関連する権限と動作の一覧を含むスコープの詳細については、次を参照してください [[!DNL Salesforce Marketing Cloud] REST API ドキュメント](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>カスタムオブジェクトの取り込みは、現在、 [!DNL Salesforce Marketing Cloud] ソースの統合。
 
 ## IP アドレス許可リスト
 
