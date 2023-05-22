@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
+source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '974'
 ht-degree: 100%
 
 ---
@@ -326,6 +326,7 @@ ht-degree: 100%
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
    - [ソースアラートの購読](tutorials/ui/alerts.md)
+   - [データフローをドラフトとして保存](tutorials/ui/draft.md)
 - セルフサービスソース（Batch SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
    - 接続仕様の設定 {#config}
