@@ -2,16 +2,16 @@
 title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 371947cff518c16816692210054680367fd6504c
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 71%
+source-wordcount: '961'
+ht-degree: 68%
 
 ---
 
 # Flow Service API を使用した [!DNL Google PubSub] ソース接続の作成
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Google PubSub]（以下「[!DNL PubSub]」）を Experience Platform に接続する手順を詳しく説明します。
+このチュートリアルでは、 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Google PubSub]（以下「[!DNL PubSub]」）を Experience Platform に接続する手順を詳しく説明します。
 
 ## はじめに
 
@@ -30,8 +30,8 @@ ht-degree: 71%
 | ---------- | ----------- |
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | `credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
-| `topicId` | の ID [!DNL PubSub] メッセージのフィードを表すリソース。 トピック ID を指定する必要があるのは、 [!DNL Google PubSub] ソース。 |
-| `subscriptionId` | の ID [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
+| `topicName` | メッセージのフィードを表すリソースの名前。 トピック名を指定する必要があるのは、 [!DNL PubSub] ソース。 トピック名の形式は次のとおりです。 `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**:単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 購読名の形式は次のとおりです。 `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
 これらの値について詳しくは、こちらの [[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)に関するドキュメントを参照してください。サービスアカウントベースの認証を使用するには、こちらの[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)で、資格情報の生成手順を確認してください。
@@ -50,11 +50,11 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL PubSub] 認証資格情報をリクエストパラメーターの一部として指定します。
 
-この手順では、トピック ID を指定して、アカウントがアクセスできるデータを定義できます。 そのトピック ID に関連付けられている購読のみにアクセスできます。
+この [!DNL PubSub] 「ソース」では、認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、ルートアクセスを持たせたり、特定のアクセスに対してアクセスを制限したりできます [!DNL PubSub] トピックおよび購読。
 
 >[!NOTE]
 >
->パブサブプロジェクトに割り当てられたプリンシパル（ロール）は、 [!DNL PubSub] プロジェクト。 特定のトピックに対するアクセス権を持つプリンシパル（役割）を追加する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、 [[!DNL PubSub] アクセス制御に関するドキュメント](https://cloud.google.com/pubsub/docs/access-control).
+>に割り当てられたプリンシパル（ロール） [!DNL PubSub] プロジェクトは、 [!DNL PubSub] プロジェクト。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、 [[!DNL PubSub] アクセス制御に関するドキュメント](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API 形式**
 
@@ -63,6 +63,10 @@ POST /connections
 ```
 
 **リクエスト**
+
+>[!BEGINTABS]
+
+>[!TAB プロジェクトベースの認証]
 
 ```shell
 curl -X POST \
@@ -76,12 +80,10 @@ curl -X POST \
       "name": "Google PubSub connection",
       "description": "Google PubSub connection",
       "auth": {
-          "specName": "Google PubSub authentication credentials",
+          "specName": "Project Based Authentication",
           "params": {
-              "projectId": "acme-project",
-              "credentials": "{CREDENTIALS}",
-              "topicId": "acmeProjectAPI",
-              "subscriptionId": "acme-project-api-new"
+              "projectId": "{PROJECT_ID}",
+              "credentials": "{CREDENTIALS}"
           }
       },
       "connectionSpec": {
@@ -95,9 +97,44 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
 | `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
-| `auth.params.topicId` | のトピック ID [!DNL PubSub] アクセスを提供するソース。 |
-| `auth.params.subscriptionId` | に対するサブスクリプションの ID [!DNL PubSub] トピック。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
+
+>[!TAB トピックおよび購読ベースの認証]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Topic & Subscription Based Authentication",
+          "params": {
+              "credentials": "{CREDENTIALS}",
+              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
+| `auth.params.topicName` | のプロジェクト ID とトピック ID の組み合わせ [!DNL PubSub] アクセスを提供するソース。 |
+| `auth.params.subscriptionName` | のプロジェクト ID と購読 ID の組み合わせ [!DNL PubSub] アクセスを提供するソース。 |
+| `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
+
+>[!ENDTABS]
 
 **応答**
 
@@ -144,8 +181,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "acme-project",
-          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}",
           "dataType": "raw"
       }
   }'
@@ -158,8 +195,8 @@ curl -X POST \
 | `baseConnectionId` | 前の手順で生成された [!DNL PubSub] ソースのベース接続 ID。 |
 | `connectionSpec.id` | [!DNL PubSub] の固定接続仕様 ID。この ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 | `data.format` | 取り込む [!DNL PubSub] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.topicId` | の名前または ID [!DNL PubSub] トピック。 In [!DNL PubSub]の場合、トピックは、メッセージのフィードを表す名前付きリソースです。 |
-| `params.subscriptionId` | 特定のトピックに対応する購読 ID。 In [!DNL PubSub]を使用すると、購読を使用してトピックからメッセージを読み取ることができます。 1 つ以上の購読を 1 つのトピックに割り当てることができます。 |
+| `params.topicName` | お客様の [!DNL PubSub] トピック。 In [!DNL PubSub]の場合、トピックは、メッセージのフィードを表す名前付きリソースです。 |
+| `params.subscriptionName` | 特定のトピックに対応する購読名。 In [!DNL PubSub]を使用すると、購読を使用してトピックからメッセージを読み取ることができます。 1 つ以上の購読を 1 つのトピックに割り当てることができます。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
 
 **応答**
