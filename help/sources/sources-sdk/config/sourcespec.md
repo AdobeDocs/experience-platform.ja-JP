@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソース（バッチ SDK）のソース仕様の設定
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 49%
+source-wordcount: '1847'
+ht-degree: 45%
 
 ---
 
@@ -439,9 +439,11 @@ ht-degree: 49%
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ ht-degree: 49%
 | `type` | データを返すために使用されるページネーションのタイプ。 |
 | `limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 |
 | `limitValue` | 1 ページで取得するレコードの数。 |
+| `initialPageIndex` | （オプション）最初のページインデックスは、ページネーションを開始するページ番号を定義します。 このフィールドは、ページネーションが 0 から開始しないソースに使用できます。 指定しない場合、最初のページインデックスはデフォルトで 0 に設定されます。 このフィールドには整数が必要です。 |
+| `endPageIndex` | （オプション）終了ページのインデックスを使用すると、終了条件を確立し、ページネーションを停止できます。 このフィールドは、ページネーションを停止するデフォルトの終了条件が使用できない場合に使用できます。 このフィールドは、取り込むページの数または最後のページ番号が応答ヘッダーを通じて指定される場合にも使用できます。このヘッダーは、 `PAGE` ページネーションを入力します。 終了ページのインデックスの値は、最後のページ番号か、応答ヘッダーからの文字列型式の値にすることができます。 例えば、 `headers.x-pagecount` 終了ページのインデックスを `x-pagecount` の値を返します。 **注意**: `x-pagecount` は、一部のソースに対する必須の応答ヘッダーで、取り込むページ数の値を保持しています。 |
 | `pageParamName` | 戻りデータの様々なページをトラバースするためにクエリパラメーターに追加する必要があるパラメーターの名前。 例： `https://abc.com?pageIndex=1` は API の戻りペイロードの 2 番目のページを返します。 |
 | `maximumRequest` | 特定の増分実行に対してソースが実行できるリクエストの最大数。 現在のデフォルトの制限は10000です。 |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
