@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 37%
+source-wordcount: '1485'
+ht-degree: 34%
 
 ---
 
@@ -122,9 +122,9 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ![データセットの詳細ページ内で、「プロファイル」切り替えが強調表示されます。](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## データセットのデータガバナンスの管理と実施
+## データセットのデータガバナンスの管理と実施 {#manage-and-enforce-data-governance}
 
-データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルについて詳しくは、『[データガバナンスの概要](../../data-governance/home.md)』を参照してください。また、データセットにラベルを適用する方法については、『[データ使用レベルユーザガイド](../../data-governance/labels/overview.md)』を参照してください。
+スキーマレベルで適用されるデータ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 詳しくは、 [データガバナンスの概要](../../data-governance/home.md) ラベルの詳細を確認するには、 [データ使用ラベルユーザーガイド](../../data-governance/labels/overview.md) データセットに伝達するためにスキーマにラベルを適用する方法については、を参照してください。
 
 ## データセットの削除 {#delete}
 

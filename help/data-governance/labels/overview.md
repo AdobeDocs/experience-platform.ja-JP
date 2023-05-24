@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 description: Adobe Experience Platform でデータガバナンスのコンプライアンスを適用するために、データ使用ラベルを使用する方法について説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 100%
+source-wordcount: '802'
+ht-degree: 83%
 
 ---
 
@@ -57,21 +57,17 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 ### UI の使用
 
-[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して[エクスペリエンスデータモデル（XDM）スキーマにラベルを適用](../../xdm/tutorials/labels.md)したり、代わりに **[!DNL Datasets]** ワークスペースを使用して[データセットにラベルを適用](./user-guide.md)したりできます。
+[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。以下を使用して、 **[!UICONTROL スキーマ]** ワークスペース [エクスペリエンスデータモデル (XDM) スキーマへのラベルの適用](../../xdm/tutorials/labels.md)または、 [カスタムラベルの作成と管理**[!UICONTROL ポリシー] UI](./user-guide.md) 代わりに、『データ使用ラベルユーザガイド』を読んでください。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->データセットレベルでのラベルの適用は、データガバナンスのユースケースでのみサポートされています。データのアクセスポリシーを作成しようとしている場合は、データセットが基づいているスキーマにラベルを適用する必要があります。詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)の概要を参照してください。
+>データセットレベルのフィールドにラベルを適用できなくなりました。 スキーマレベルでラベルを適用するため、このワークフローは廃止されました。 データセットオブジェクトレベルで以前に適用されたラベルは、2024 年 5 月 31 日まで、引き続き Platform UI を通じてサポートされます。 すべてのスキーマでラベルの一貫性を確保するには、データセットレベルで以前フィールドに関連付けられていたラベルを、来年度にユーザーがスキーマレベルに移行する必要があります。 詳しくは、 [以前に適用したラベルの移行](../e2e.md#migrate-labels) を参照してください。
 
 ### API の使用
 
 [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
 
 [データセットサービス API ](https://www.adobe.io/experience-platform-apis/references/dataset-service/)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
-
->[!NOTE]
->
->データセットレベルでのラベルの適用は、データガバナンスのユースケースでのみサポートされています。データのアクセスポリシーを作成しようとしている場合は、データセットが基づいている[スキーマにラベルを適用](../../xdm/tutorials/labels.md)する必要があります。詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)の概要を参照してください。
 
 ## 次の手順
 
