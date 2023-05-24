@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 8%
 
 ---
@@ -568,7 +568,7 @@ SET property_key = property_value
 
 以下のサブセクションでは、 [!DNL PostgreSQL] クエリサービスでサポートされるコマンド。
 
-### テーブルを分析
+### テーブルを分析 {#analyze-table}
 
 この `ANALYZE TABLE` コマンドは、高速ストア上のテーブルの統計を計算します。 統計は、高速ストアの特定のテーブルに対して実行された CTAS または ITAS クエリに対して計算されます。
 
@@ -591,6 +591,60 @@ ANALYZE TABLE <original_table_name>
 | `min` | 分析されたテーブルの最小値。 |
 | `mean` | 分析されたテーブルの平均値。 |
 | `stdev` | 分析されたテーブルの標準偏差です。 |
+
+#### 統計を計算 {#compute-statistics}
+
+次の項目で列レベルの統計を計算できるようになりました： [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンド データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
+
+`COMPUTE STATISTICS` は `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` data warehouse テーブルでは、コマンドはサポートされていません。 これらの `ANALYZE TABLE` コマンドは、現在、ADLS テーブルでのみサポートされています。
+
+**例**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` 指定されたフィルター条件に基づいて、データセットのサブセットに関する統計を計算し、 `FOR COLUMNS` 特定の分析列をターゲットに設定します。
+
+コンソール出力は次のように表示されます。
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+その後、返された統計 ID を使用して、 `SHOW STATISTICS` コマンドを使用します。
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` は、配列またはマップのデータ型をサポートしていません。 次の項目を設定できます。 `skip_stats_for_complex_datatypes` フラグを指定します。 デフォルトでは、このフラグは true に設定されています。 通知またはエラーを有効にするには、次のコマンドを使用します。 `SET skip_stats_for_complex_datatypes = false`.
+
+詳しくは、 [データセット統計ドキュメント](../essential-concepts/dataset-statistics.md) を参照してください。
+
+#### 大さじ {#tablesample}
+
+Adobe Experience Platform クエリサービスは、近似クエリ処理機能の一部としてサンプルデータセットを提供します。データセットのサンプルは、データセットに対する集計操作に正確な答えが必要ない場合に最も適しています。 この機能を使用すると、近似クエリを発行して近似回答を返すことで、大規模なデータセットに関するより効率的な探索的クエリを実行できます。
+
+サンプルデータセットは、既存のサンプルから均一なランダムサンプルを使用して作成されます [!DNL Azure Data Lake Storage] (ADLS) データセット（元のレコードの割合のみを使用） データセットサンプル機能は、 `ANALYZE TABLE` コマンドを `TABLESAMPLE` および `SAMPLERATE` SQL コマンド
+
+次の例の 1 行目は、テーブルの 5%のサンプルを計算する方法を示しています。 2 行目は、テーブル内のデータのフィルター表示から 5%のサンプルを計算する方法を示しています。
+
+**例**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+詳しくは、 [データセットサンプルドキュメント](../essential-concepts/dataset-samples.md) を参照してください。
 
 ### BEGIN
 
