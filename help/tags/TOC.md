@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '985'
 ht-degree: 100%
 
 ---
@@ -234,6 +234,8 @@ ht-degree: 100%
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [概要](./extensions/server/splunk/overview.md)
+      * [!DNL Twitter] {#twitter}
+         * [概要](./extensions/server/twitter/overview.md)
       * [!DNL Zendesk]イベント API {#zendesk}
          * [概要](./extensions/server/zendesk/overview.md)
 * 拡張機能の開発 {#extension-dev}
