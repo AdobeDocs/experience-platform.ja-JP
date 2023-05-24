@@ -2,9 +2,9 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 29%
 
 ---
@@ -54,6 +54,7 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 | --- | --- | --- |
 | Platform | Web | へのアクセスを許可 [web プロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
 | Platform | Mobile | へのアクセスを許可 [モバイルプロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
+| Platform | Edge | へのアクセスを許可 [イベント転送の Edge プロパティ](../tags/ui/event-forwarding/getting-started.md) を他のプロパティ権限と組み合わせた場合。 |
 | プロパティ | （N/A） | 組織で作成されたプロパティに応じて、「Admin Console」のこの権限カテゴリを使用して、各プロパティへのアクセスを制御できます。<br><br>ユーザーに割り当てられたプロパティ権限は、この権限カテゴリを通じてアクセス権を付与されたプロパティにのみ適用されます。 |
 | プロパティ権限 | 承認 | の一部としてライブラリビルドを承認する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | プロパティ権限 | 開発 | の一部としてライブラリビルドを開発する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
