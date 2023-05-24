@@ -8,7 +8,7 @@ exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 31%
+ht-degree: 44%
 
 ---
 
@@ -56,7 +56,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-Time CDP]) は、企業が既知のデータと不明なデータを統合し、カスタマージャーニー全体を通じてインテリジェントな判定をおこなって、顧客プロファイルをアクティブ化するのに役立ちます。 [!DNL Real-Time CDP] は、複数の企業データソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。 その後、これらのプロファイルから作成されたセグメントをダウンストリームの宛先に送信して、すべてのチャネルとデバイスにわたって 1 対 1 でパーソナライズされた顧客体験を提供できます。
+Experience Platform 上に構築された Real-time Customer Data Platform（[!DNL Real-Time CDP]）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定により顧客プロファイルをアクティブ化するのに役立ちます。[!DNL Real-Time CDP] では、複数のエンタープライズデータソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。これらのプロファイルから構築されたセグメントをダウンストリームの宛先に送信し、すべてのチャネルとデバイスにわたって 1 対 1 のパーソナライズされた顧客体験を提供できます。
 
 **新機能**
 
@@ -64,7 +64,7 @@ Experience Platform上に構築、Real-time Customer Data Platform([!DNL Real-Ti
 | ------- | ----------- |
 | IAB TCF 2.0 のサポート | [!DNL Real-Time CDP] は、現在は、2.0 バージョンの [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) を参照してください。 CMP で生成される顧客の同意データを受け入れるようにデータ操作とプロファイルスキーマを設定し、ダウンストリームの宛先に対してセグメントをアクティブ化する際に、顧客の同意設定を適用できます。 |
 
-詳しくは、 [!DNL Real-Time CDP]を参照し、 [[!DNL Real-Time CDP] 概要](../../rtcdp/overview.md).
+[!DNL Real-Time CDP] について詳しくは、[[!DNL Real-Time CDP] 概要](../../rtcdp/overview.md)を参照してください。
 
 ## ソース {#sources}
 

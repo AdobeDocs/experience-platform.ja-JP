@@ -125,7 +125,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | [[!UICONTROL XDM プロファイルの計算済み属性]](https://github.com/adobe/xdm/pull/1686/files) | これにより、内部顧客からの計算済み属性が受信Adobe サービスデータに追加されます。 データの取り込みには、このオプションを使用しないでください。 |
 | データタイプ | [[!UICONTROL 払い戻し項目]](https://github.com/adobe/xdm/pull/1685/files) | 払い戻しが注文に関連付けられているかどうかを示し、払い戻しのタイプ、金額、および関連する通貨を定義します。 |
 | データタイプ | [[!UICONTROL カテゴリデータ]](https://github.com/adobe/xdm/pull/1677/files) | この新しいデータ型は製品のカテゴリを表します。 |
-| スキーマ | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Target 分類データセット用に新しい XDM スキーマが作成されました。 Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドが含まれています。 |
+| スキーマ | [[!UICONTROL Adobe Target 分類フィールド]](https://github.com/adobe/xdm/pull/1682/files) | Target 分類データセット用に新しい XDM スキーマが作成されました。 Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドが含まれています。 |
 
 {style="table-layout:auto"}
 

@@ -5,7 +5,7 @@ exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -111,8 +111,8 @@ SDK は、自動的にリンククリック情報を収集できます。 デフ
 
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
-1. まず、データストリーム設定の上書きを [datastream 設定ページ](../datastreams/configure.md).
-2. 次に、Web SDK コマンドを使用するか、Web SDK タグ拡張を使用して、オーバーライドを Edge Network に送信する必要があります。
+1. 最初に、[データストリーム設定ページ](../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
+2. 次に、Web SDK コマンドまたは Web SDK タグ拡張機能を使用して、上書きを Edge Network に送信する必要があります。
 
 データストリームを参照 [設定の上書きドキュメント](../datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
 

@@ -728,7 +728,7 @@ emptyValue -> ""
 
 | 名 | 姓 | 国 | state |
 |---------|----------|---------|--------|
-| マイケル | ローズ | 米国 | NY |
+| マイケル | Rose | 米国 | NY |
 | James | Smith |  | null |
 
 {style="table-layout:auto"}

@@ -3,7 +3,7 @@ title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 100%
 

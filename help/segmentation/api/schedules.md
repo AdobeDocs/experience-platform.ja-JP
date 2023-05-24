@@ -282,7 +282,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 ### Cron スケジュールを更新 {#update-schedule}
 
-JSON パッチ操作を使用して、cron スケジュールを更新できます。 スケジュールを更新するには、 `path` プロパティ `/schedule` そして、 `value` を有効な cron スケジュールに追加します。 JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。 Cron スケジュールの詳細については、 [cron 式形式](#appendix).
+JSON パッチ操作を使用して、cron スケジュールを更新できます。 スケジュールを更新するには、 `path` プロパティとして `/schedule` そして、 `value` を有効な cron スケジュールに追加します。 JSON パッチの詳細については、 [JSON パッチ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメント。 Cron スケジュールの詳細については、 [cron 式形式](#appendix).
 
 **API 形式**
 

@@ -91,7 +91,7 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 >
 >接続に指定したパスワード [!DNL SQLAlchemy] をExperience Platformに追加すると、有効期限が切れます。 詳しくは、 [資格情報セクション](#credentials) を参照してください。
 
-これで、次を使用して Platform データに対してクエリを実行する準備が整いました： [!DNL Python]. 次の例は、クエリサービステーブル名の配列を返します。
+これで、次を使用して Platform データをクエリする準備が整いました： [!DNL Python]. 次の例は、クエリサービステーブル名の配列を返します。
 
 ```python
 from sqlalchemy import inspect

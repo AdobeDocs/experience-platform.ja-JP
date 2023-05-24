@@ -1,15 +1,15 @@
 ---
-title: データストリームの上書きの設定
+title: データストリームの設定の上書き
 description: Web SDK を使用して、データストリームの上書きを設定し、データストリームの上書きをアクティブにする方法について説明します。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
 source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# データストリームの上書きの設定
+# データストリームの設定の上書き
 
 データストリームのオーバーライドを使用すると、Web SDK を介して Edge ネットワークに渡されるデータストリームの追加設定を定義できます。
 
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
-1. まず、データストリーム設定の上書きを [datastream 設定ページ](configure.md).
-2. 次に、Web SDK コマンドを使用するか、Web SDK を使用して、オーバーライドを Edge ネットワークに送信する必要があります [タグ拡張](../extension/web-sdk-extension-configuration.md).
+1. 最初に、[データストリーム設定ページ](configure.md)でデータストリーム設定の上書きを定義する必要があります。
+2. 次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](../extension/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 

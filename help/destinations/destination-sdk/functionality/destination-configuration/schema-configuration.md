@@ -123,7 +123,7 @@ Destination SDKは、動的パートナースキーマの作成をサポート�
 >
 >動的スキーマを作成する前に、次の操作を行う必要があります [動的スキーマサーバーの作成](../../authoring-api/destination-server/create-destination-server.md).
 
-動的スキーマ設定では、 `profileFields` 配列が `dynamicSchemaConfig` 」セクションに表示されます。
+動的スキーマ設定では、 `profileFields` 配列が `dynamicSchemaConfig` 」セクションに含まれます。
 
 ```json
 "schemaConfig":{

@@ -6,7 +6,7 @@ exl-id: c3097030-0242-404f-9e4c-72a7fa574011
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 67%
+ht-degree: 70%
 
 ---
 
@@ -24,4 +24,4 @@ UI で ID フィールドにラベルを付ける手順については、 [UI �
 
 ## 次の手順
 
-詳しくは、 [!DNL Identity Service]を参照し、 [[!DNL Identity Service] 概要](../home.md).
+[!DNL Identity Service] について詳しくは、[[!DNL Identity Service] 概要](../home.md)を参照してください。
