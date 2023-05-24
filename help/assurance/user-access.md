@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Assurance ユーザーアクセス
 description: このガイドでは、Admin Consoleを使用してAdobe Experience Platform Assurance に管理し、ユーザーがアクセスできるようにする方法について説明します。
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 5%
+source-wordcount: '203'
+ht-degree: 16%
 
 ---
 
@@ -19,32 +19,14 @@ ht-degree: 5%
 
 Assurance への妨げられることのないアクセスを受け取る、または維持するには、Admin Consoleで次の手順を実行します。
 
-## 製品プロファイルの作成
+## 製品プロファイルを使用した Experience Platform へのユーザーの追加
 
->[!NOTE]
->
->既存のプロファイルを使用している場合は、次の節にスキップできます。
+製品プロファイルにユーザーを追加するには、Admin Console にログインし、「**ユーザーを追加**」を選択します。。
 
-にログインします。 [Admin Console](https://adminconsole.adobe.com/) 新しいAdobe Experience Platform製品プロファイルを作成します。
+![「ユーザーを追加」ボタンがハイライト表示されます。](./images/get-access/product-profile-add-users.png)
 
-を選択します。 **製品** 」タブに移動し、その後にAdobe Experience Platform製品カードが表示されます。
+この **チームにユーザーを追加する** ダイアログが表示されます。 このダイアログでは、追加するユーザーの詳細を入力できます。 ユーザーの電子メールアドレス、名（オプション）および姓（オプション）を入力します。
 
-![Adobe Experience Platform Assurance 分析ビュー](./images/get-access/analytics-view.png)
+鉛筆アイコンを選択して、製品とユーザーグループを選択します。 ここからを選択します。 **Adobe Experience Platform**&#x200B;を、 **AEP-Default-All-Users**&#x200B;に続いて **保存**.
 
-## 製品プロファイルへのユーザーの追加
-
-製品カードにアクセスした後、名前を入力し、「 」を選択します。 **保存**.
-
->[!NOTE]
->
->アシュランスアクセスに使用する製品プロファイルが **not** 追加の権限が必要です。
-
-![Adobe Experience Platform製品プロファイル](./images/get-access/product-profile.png)
-
-これで、製品カードが作成されたので、ユーザーをAdobe Experience Platform製品プロファイルに割り当てることができます。 を選択します。 **製品** タブ、続いて **ユーザーの割り当て** Adobe Experience Platformカードで
-
-![製品プロファイルへのユーザーの割り当て](./images/get-access/assign-users.png)
-
-製品プロファイルに 1 人以上のユーザーを追加し、保存します。
-
-![製品プロファイルへのユーザーの追加](./images/get-access/add-users.png)
+![製品プロファイルの追加方法を示すダイアログが表示されます。](./images/get-access/product-profile-add-profile.png)
