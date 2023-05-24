@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
+source-git-commit: 97ae7002d4bacb224f7cd57cca4a0c1ede11dd26
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 100%
+source-wordcount: '1549'
+ht-degree: 98%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 100%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](extension/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン2.16.0 - 2023 年 5 月 17 日
+
+**修正点および改善点**
+
+* Web SDK は、 [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
 
 ## バージョン 2.16.0 - 2023年4月25日（PT）
 
