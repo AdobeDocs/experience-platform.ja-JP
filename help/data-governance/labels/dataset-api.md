@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API を使用したデータセットのデータ使用ラベルの管理
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 52%
+source-wordcount: '1151'
+ht-degree: 50%
 
 ---
 
@@ -103,7 +103,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 >[!NOTE]
 >
->現在、問題のデータセットにラベルが存在する場合、新しいラベルは、PUTリクエスト ( `If-Match` ヘッダー。 ラベルがデータセットに追加されると、`etag` 値が割り当てられ、後でラベルの更新や削除に使用できます。
+>現在、問題のデータセットにラベルが存在する場合、新しいラベルは、PUTリクエスト ( `If-Match` ヘッダー。 データセットにラベルが追加されると、最新の `etag` 後でラベルを更新または削除するには、値が必要です。
 
 データセットラベルエンティティの最新バージョンを取得するには、`/datasets/{DATASET_ID}/labels` エンドポイントに対して [GET リクエスト](#look-up)を実行します。現在の値は、応答の `etag` ヘッダーの下で返されます。既存のデータセットラベルを更新する場合、ベストプラクティスは、最新の `etag` 値を取得するために、最初にデータセットのルックアップリクエストを実行してから、後続の PUT リクエストの `If-Match` ヘッダーでその値を使用することです。
 
