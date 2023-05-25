@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2406'
-ht-degree: 63%
+source-wordcount: '2299'
+ht-degree: 59%
 
 ---
 
@@ -120,49 +120,54 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 
 ![マッピング](../../../../images/tutorials/create/analytics/mapping.png)
 
-ソースレポートスイートと選択したスキーマ間でフレンドリ名の競合がある場合も、フィールド記述子は変更されないことを確認すれば、[!DNL Analytics] データフローを続行することが可能です。または、空の記述子セットで新しいスキーマを作成することもできます。
-
-「**[!UICONTROL 次へ]**」を選択して進みます。
-
-![注意](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>ソースレポートスイートと選択したスキーマ間でフレンドリ名の競合がある場合も、フィールド記述子は変更されないことを確認すれば、[!DNL Analytics] データフローを続行することが可能です。または、空の記述子セットで新しいスキーマを作成することもできます。
 
 #### カスタムマッピング
 
-データ準備関数を使用し、カスタム属性の新しいマッピングまたは計算フィールドを追加するには、「**[!UICONTROL カスタムマッピングの表示]**」を選択します。
+Data Prep 関数を使用して、カスタム属性に新しいカスタムマッピングまたは計算フィールドを追加できます。 カスタムマッピングを追加するには、「 **[!UICONTROL カスタム]**.
 
-![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+![custom](../../../../images/tutorials/create/analytics/custom.png)
 
-次に、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
-
-必要に応じて、表示されるオプションから「**[!UICONTROL 新しいマッピングを追加]**」または「**[!UICONTROL 計算フィールドを追加]**」を選択できます。
-
-![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
-
-空のマッピングセットが表示されます。 マッピングアイコンを選択して、ソースフィールドを追加します。
-
-![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
-
-インターフェイスを使用して、ソーススキーマ構造内を移動し、使用する新しいソースフィールドを特定できます。 マッピングするソースフィールドを選択したら、「**[!UICONTROL 選択]**」をクリックします。
-
-![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
-
-次に、[!UICONTROL ターゲットフィールド]の下にあるマッピングアイコンを選択し、選択したソースフィールドを適切なターゲットフィールドにマッピングします。
-
-![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
-
-ソーススキーマと同様に、インターフェイスを使用してターゲットスキーマ構造内を移動し、マッピングしたいターゲットフィールドを選択できます。 適切なターゲットフィールドを選択したら、「**[!UICONTROL 選択]**」をクリックします。
-
-![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
-
-カスタムマッピングセットが完了したら、「**[!UICONTROL 次へ]**」をクリックして続行します。
-
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+必要に応じて、次のいずれかを選択できます。 **[!UICONTROL 新しいマッピングを追加]** または **[!UICONTROL 計算フィールドを追加]** カスタム属性のカスタムマッピングの作成に進みます。 Data Prep 関数の使用方法に関する包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
 次のドキュメントでは、データ準備、計算フィールド、およびマッピング機能について理解するための詳細なリソースを提供します。
 
 * [データ準備の概要](../../../../../data-prep/home.md)
 * [データ準備のマッピング機能](../../../../../data-prep/functions.md)
 * [計算フィールドを追加](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### リアルタイム顧客プロファイルのフィルタリング {#filtering-for-profile}
 
