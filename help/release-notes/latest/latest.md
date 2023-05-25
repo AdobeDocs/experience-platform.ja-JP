@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
+source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1360'
 ht-degree: 30%
 
 ---
@@ -33,6 +33,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [データガバナンス](#data-governance)
 - [データ取り込み](#data-ingestion)
 - [宛先](#destinations)
+- [ID サービス](#identity-service)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
 
@@ -108,6 +109,18 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
+## ID サービス {#identity-service}
+
+Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
+
+**機能を更新**
+
+| 機能 | 説明 |
+| --- | --- |
+| Adobe Experience Cloudアプリケーションでの Partner ID のサポート | パートナー ID を ID サービスで使用できるようになりました。 パートナー ID は、人物を表すためにデータパートナーが使用する識別子です。 Real-time Customer Data Platformでは、パートナー ID は主に、オーディエンスのアクティベーションの拡張とデータエンリッチメントに使用されます。 パートナー ID は、ID グラフには保存されません。 詳しくは、 [id タイプ](../../identity-service/namespaces.md#identity-types). |
+
+ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md)
+
 ## クエリサービス {#query-service}
 
 クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL data lake] でデータに対してクエリを実行できます。データレイクの任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
@@ -132,6 +145,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
+| からのデータストリーミングの API サポート [!DNL Snowflake] データベース | これで、 [[!DNL Snowflake] ソース](../../sources/connectors/databases/snowflake-streaming.md) の使用 [!DNL Flow Service] API |
 | ドラフトモード用に API サポートを拡張 | これで、 [!DNL Flow Service] API をいつでも使用できます。 以下を使用： `mode=draft` ベース、ソース、ターゲットの接続をドラフトとして保存する状態。 すべてのドラフトエンティティは、後で完了するように再訪問できます。 次のガイドを読む： [設定 [!DNL Flow Service] ドラフト状態のエンティティ](../../sources/tutorials/api/draft.md) を参照してください。 |
 | [!DNL Salesforce Marketing Cloud] ソースの一般提供 | この [[!DNL Salesforce Marketing Cloud source] は現在 GA に含まれています](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). このソースを使用して、 [!DNL Salesforce Marketing Cloud] データをExperience Platformに送信します。 |
 | [!DNL Google Ads] 認証の更新 | 認証時にログイン顧客 ID を指定できるようになりました。 [!DNL Google Ads] 特定のオペレーティング顧客からレポートデータを取得するソースアカウント。 詳しくは、 [[!DNL Google Ads] ソースドキュメント](../../sources/connectors/advertising/ads.md) を参照してください。 |
@@ -142,5 +156,3 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 {style="table-layout:auto"}
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
