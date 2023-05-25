@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
+source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 29%
+source-wordcount: '1224'
+ht-degree: 30%
 
 ---
 
@@ -32,6 +32,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [データ収集](#data-collection)
 - [データガバナンス](#data-governance)
 - [データ取り込み](#data-ingestion)
+- [宛先](#destinations)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
 
@@ -75,6 +76,37 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 | データ取り込みテンプレートのベータ版の可用性 | データ取り込みテンプレートを使用すると、データアーキテクトとエンジニアは、標準のテンプレートと自動化ツールを使用して、スキーマ、データセットの作成、マッピングルールの設定など、データ取り込みプロセスを高速化できます。 現在、 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) および [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) ソース。 詳しくは、 [UI でのテンプレートの使用](../../sources/tutorials/ui/templates.md). |
 
 データ取り込みの詳細については、 [データ取得の概要](../../ingestion/home.md).
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先** {#new-destinations}
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| **[[!UICONTROL Mailchimp 関心カテゴリ]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** は、メーリングリストや電子メールマーケティングキャンペーンを使用して連絡先（顧客、顧客、その他の関心のある関係者）を管理し、連絡を取るために企業が使用する、人気のあるマーケティングオートメーションプラットフォームおよび電子メールマーケティングサービスです。 このコネクタを使用して、連絡先を興味と好みに基づいて並べ替えます。 |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**修正および機能強化** {#destinations-fixes-and-enhancements}
+
+- （ベータ版）SFTP クラウドストレージの宛先で、ユーザーが Port パラメーターの値をカスタマイズできない問題を修正しました。 を通じて（ベータ版）SFTP の宛先接続を設定する際、値を編集できるようになりました。 [API](/help/destinations/api/activate-segments-file-based-destinations.md) または [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
