@@ -2,10 +2,10 @@
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
-ht-degree: 97%
+ht-degree: 93%
 
 ---
 
@@ -29,10 +29,10 @@ Experience Platform の宛先では、データを HTTPS 呼び出しとして A
 
 *[設定可能な集計](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;ポリシーを持つ [Facebook 宛先](/help/destinations/catalog/social/facebook.md)を例に取ります。データは集計されて送信されます。この場合、宛先サービスは、プロファイルサービスアップストリームから受信するすべてのデータを取得し、それを次のいずれかで集計してから Facebook にディスパッチします。
 
-* レコード数（最大 10,000 件）または
+* レコードの数（最大 10,000）または
 * 間隔（30 分）
 
-上記のしきい値のいずれかに初めて達したときに、Facebook への書き出しがトリガーされます。そのため、[!DNL Facebook Custom Audiences] ダッシュボードの表示では、オーディエンスが 10,000 件単位で Experience Platform から追加されるようになります。 データが 30 分の書き出し間隔よりも高速に処理および集計されて、より高速に送信されるので、すべてのレコードが処理されるまで、約 10～15 分ごとに 10,000 件のレコードが表示されます。10,000 件から成るバッチを構成できるだけの十分なレコードがない場合は、期間のしきい値に達したときに現在のレコード数がそのまま送信されるので、より小規模なバッチも Facebook に送信される場合があります。
+上記のしきい値のいずれかに初めて達したときに、Facebook への書き出しがトリガーされます。では、 [!DNL Facebook Custom Audiences] ダッシュボードに追加すると、Experience Platformからのオーディエンスが 10,000 レコード増分で表示される場合があります。 10 ～ 15 分ごとに 10,000 個のレコードが表示される場合があります。これは、データの処理と集計が 30 分のエクスポート間隔よりも高速におこなわれ、送信も高速になるからです。つまり、すべてのレコードが処理されるまで、約 10 ～ 15 分ごとです。 10,000 個のバッチを構成するレコードが不十分な場合、現在のレコード数は時間枠のしきい値を満たした時点のまま送信されるので、Facebookに送信される小さなバッチも表示される場合があります。
 
 別の例として、[HTTP API 宛先](/help/destinations/catalog/streaming/http-destination.md)について考えます。この場合は、*[ベストエフォート集計](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;ポリシーと `maxUsersPerRequest: 10` の条件が適用されます。 つまり、最大 10 個のプロファイルが集計されてから、この宛先に対する HTTP 呼び出しが実行されます。ただし、Experience Platform は、更新された再評価情報を宛先サービスがアップストリームサービスから受け取るとすぐに、宛先へのプロファイルのディスパッチを試みます。
 
