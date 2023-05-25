@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
-ht-degree: 8%
+source-wordcount: '3761'
+ht-degree: 7%
 
 ---
 
@@ -570,6 +570,10 @@ SET property_key = property_value
 
 ### テーブルを分析 {#analyze-table}
 
+この `ANALYZE TABLE` コマンドは、名前付きのテーブル（複数可）の分布分析と統計計算を実行します。 の使用 `ANALYZE TABLE` データセットが [加速貯蔵](#compute-statistics-accelerated-store) または [データレイク](#compute-statistics-data-lake). 使用方法について詳しくは、それぞれの節を参照してください。
+
+#### 高速ストアで統計を計算 {#compute-statistics-accelerated-store}
+
 この `ANALYZE TABLE` コマンドは、高速ストア上のテーブルの統計を計算します。 統計は、高速ストアの特定のテーブルに対して実行された CTAS または ITAS クエリに対して計算されます。
 
 **例**
@@ -592,9 +596,9 @@ ANALYZE TABLE <original_table_name>
 | `mean` | 分析されたテーブルの平均値。 |
 | `stdev` | 分析されたテーブルの標準偏差です。 |
 
-#### 統計を計算 {#compute-statistics}
+#### データレイクの統計を計算 {#compute-statistics-data-lake}
 
-次の項目で列レベルの統計を計算できるようになりました： [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンド データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
+次の項目に関する列レベルの統計を計算できるようになりました： [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンド データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
 
 `COMPUTE STATISTICS` は `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` data warehouse テーブルでは、コマンドはサポートされていません。 これらの `ANALYZE TABLE` コマンドは、現在、ADLS テーブルでのみサポートされています。
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` 指定されたフィルター条件に基づいて、データセットのサブセットに関する統計を計算し、 `FOR COLUMNS` 特定の分析列をターゲットに設定します。
 
-コンソール出力は次のように表示されます。
+コンソール出力は、次のように表示されます。
 
 ```console
   Statistics ID 
