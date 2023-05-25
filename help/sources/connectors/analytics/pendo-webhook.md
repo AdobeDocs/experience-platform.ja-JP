@@ -2,9 +2,8 @@
 title: ペンドソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Pendo をAdobe Experience Platformに接続する方法を説明します
 badge: ベータ
-last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 20%

@@ -2,8 +2,9 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Service Cloud;oracle service cloud
 title: Oracle Service Cloud ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Oracle Service Cloud を Adobe Experience Platform に接続する方法について説明します。
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 98%
