@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービス資格情報ガイド
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 5%
+source-wordcount: '1462'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,10 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 
 有効期限のない資格情報を使用して、外部クライアントへのより永続的な接続を設定できます。
 
+>[!NOTE]
+>
+>有効期限のない資格情報には、次の制限があります。<br><ul><li>ユーザーは、ユーザー名とパスワードを構成する `{technicalAccountId}:{credential}`. 詳しくは、 [資格情報を生成](#generate-credentials) 」セクションに入力します。</li><li>有効期限が切れる資格情報を作成すると、一連の基本権限を持つ新しい役割が作成され、ユーザーはスキーマとデータセットを表示できます。 「クエリの管理」権限も、クエリサービスで使用するために、この役割に割り当てられます。</li><li>サードパーティクライアントの実行方法は、クエリオブジェクトをリストアウトする場合とは異なる場合があります。 例えば、一部のサードパーティクライアント ( [!DNL DB Visualizer] は、左のパネルにビュー名を表示しません。 ただし、SELECT クエリ内で呼び出すと、ビュー名にアクセスできます。 同様に、 [!DNL PowerUI] ダッシュボードの作成用に選択する SQL で作成された一時ビューのリストが表示されない場合があります。</li></ul>
+
 ### 前提条件
 
 有効期限のない資格情報を生成する前に、Adobe Admin Consoleで次の手順を実行する必要があります。
@@ -63,7 +67,7 @@ Adobe Experience Platformクエリサービスを使用すると、外部クラ�
 
 必要な権限がすべてAdobe Developerコンソールで設定され、ユーザーが資格情報の期限切れ機能を使用できるようになりました。
 
-### 資格情報を生成
+### 資格情報を生成 {#generate-credentials}
 
 有効期限のない資格情報のセットを作成するには、Platform UI に戻って、「 」を選択します。 **[!UICONTROL クエリ]** 左側のナビゲーションから [!UICONTROL クエリ] ワークスペース。 次に、 **[!UICONTROL 資格情報]** タブの後に続く **[!UICONTROL 資格情報を生成]**.
 
