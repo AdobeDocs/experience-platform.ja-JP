@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 30%
 
 ---
@@ -117,7 +117,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| Adobe Experience Cloudアプリケーションでの Partner ID のサポート | パートナー ID を ID サービスで使用できるようになりました。 パートナー ID は、人物を表すためにデータパートナーが使用する識別子です。 Real-time Customer Data Platformでは、パートナー ID は主に、オーディエンスのアクティベーションの拡張とデータエンリッチメントに使用されます。 パートナー ID は、ID グラフには保存されません。 詳しくは、 [id タイプ](../../identity-service/namespaces.md#identity-types). |
+| Adobe Experience Cloudアプリケーションでの Partner ID のサポート [!BADGE ベータ版]{type=Informative} | パートナー ID を ID サービスで使用できるようになりました。 パートナー ID は、人物を表すためにデータパートナーが使用する識別子です。 Real-time Customer Data Platformでは、パートナー ID は主に、オーディエンスのアクティベーションの拡張とデータエンリッチメントに使用されます。 パートナー ID は、ID グラフには保存されません。 詳しくは、 [id タイプ](../../identity-service/namespaces.md#identity-types). |
 
 ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md)
 

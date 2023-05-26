@@ -3,8 +3,8 @@ solution: Experience Platform
 title: SalesforceMarketing Cloudソースの概要
 description: API またはユーザーインターフェイスを使用して SalesforceMarketing CloudをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2023-03-25T00:00:00Z
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+last-substantial-update: 2023-05-25T00:00:00Z
+source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 42%

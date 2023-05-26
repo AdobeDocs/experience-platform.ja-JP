@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;Salesforce;Salesforce;フィールドマッピング;フィールドマッピング;マッピング;marketo;B2B;b2b
 title: Microsoft Dynamics マッピングフィールド
 description: 以下の表に、Microsoft Dynamics ソースフィールドと、対応する XDM フィールドとのマッピングを示します。
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 39%
+source-wordcount: '524'
+ht-degree: 37%
 
 ---
 
