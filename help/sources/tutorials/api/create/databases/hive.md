@@ -5,10 +5,10 @@ title: フローサービス API を使用して Azure HDInsights Base Connectio
 type: Tutorial
 description: フローサービス API を使用して、Azure HDInsights 上の Apache Hive をAdobe Experience Platformに接続する方法を説明します。
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 60%
+ht-degree: 58%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->この [!DNL Apache Hive] オン [!DNL Azure HDInsights] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL Apache Hive] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

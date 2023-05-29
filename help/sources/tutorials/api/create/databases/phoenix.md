@@ -5,10 +5,10 @@ title: フローサービス API を使用した Phoenix ベース接続の作�
 type: Tutorial
 description: フローサービス API を使用して Phoenix データベースをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->この [!DNL Phoenix] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL Phoenix] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 [!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
 

@@ -2,10 +2,10 @@
 title: UI でのGoogle Ads ソース接続の作成
 description: Adobe Experience Platform UI を使用してGoogle Ads ソース接続を作成する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac87434c857a39f4be3714cba57519cbb4fa54a6
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->Google Ads ソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>Google Ads ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、Adobe Experience Platformユーザーインターフェイスを使用してGoogle Ads ソース接続を作成する手順を説明します。
 

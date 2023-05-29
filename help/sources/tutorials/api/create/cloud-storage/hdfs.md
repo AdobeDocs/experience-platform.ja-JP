@@ -5,10 +5,10 @@ title: フローサービス API を使用した Apache HDFS ベース接続の�
 type: Tutorial
 description: フローサービス API を使用して、ApacheHadoopの分散ファイルシステムをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 56%
+ht-degree: 54%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

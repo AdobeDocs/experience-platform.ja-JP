@@ -5,10 +5,10 @@ description: Platform UI を使用して Adobe Experience Platform を Oracle Re
 hide: true
 hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
-source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->[!DNL Oracle Responsys] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Oracle Responsys] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用した [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) ソース接続を作成する手順を説明します。
 

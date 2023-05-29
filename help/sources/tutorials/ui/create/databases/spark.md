@@ -5,10 +5,10 @@ title: UI での Azure HDInsights Source Connection での Apache Spark の作�
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure HDInsights ソース接続で Apache Spark を作成する方法を説明します。
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 48%
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-> この [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+> この [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Apache Spark] オン [!DNL Azure HDInsights] を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 

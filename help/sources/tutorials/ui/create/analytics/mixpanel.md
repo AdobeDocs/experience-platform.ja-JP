@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: （ベータ版）UI での Mixpanel ソース接続の作成
 description: Adobe Experience Platform UI を使用して Mixpanel ソース接続を作成する方法を説明します。
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 43%
+ht-degree: 41%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->[!DNL Mixpanel] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Mixpanel] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、 [!DNL Mixpanel] Adobe Experience Platform Platform ユーザーインターフェイスを使用したソース接続
 

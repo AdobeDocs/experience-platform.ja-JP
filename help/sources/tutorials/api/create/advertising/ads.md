@@ -2,10 +2,10 @@
 title: フローサービス API を使用したGoogle Ads ベース接続の作成
 description: フローサービス API を使用してAdobe Experience PlatformをGoogle広告に接続する方法を説明します。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 7c77b0dc658ad45a25f4ead4e14f5826701cf645
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Google Ads ソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>Google Ads ソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

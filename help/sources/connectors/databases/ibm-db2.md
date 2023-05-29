@@ -4,10 +4,10 @@ solution: Experience Platform
 title: IBM DB2 Source Connector の概要
 description: API またはユーザーインターフェイスを使用してIBM DB2 をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '229'
-ht-degree: 31%
+ht-degree: 26%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>IBM DB2 コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 

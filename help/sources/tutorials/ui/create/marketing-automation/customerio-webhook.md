@@ -3,7 +3,7 @@ title: UI での Customer.io ソース接続とデータフローの作成
 description: Adobe Experience Platform UI を使用して Customer.io ソース接続を作成する方法を説明します。
 badge: ベータ
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 20%

@@ -5,10 +5,10 @@ title: UI での Phoenix ソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Phoenix ソース接続を作成する方法を説明します。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '520'
-ht-degree: 48%
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
-> この [!DNL Phoenix] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+> この [!DNL Phoenix] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL Phoenix] ソースコネクタを作成する手順を説明します。
 

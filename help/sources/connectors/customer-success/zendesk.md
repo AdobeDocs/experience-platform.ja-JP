@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zendesk Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Zendesk をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 49%
+ht-degree: 46%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->[!DNL Zendesk] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Zendesk] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

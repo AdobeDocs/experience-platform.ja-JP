@@ -5,10 +5,10 @@ title: フローサービス API を使用して HP Vertica ベース接続を�
 type: Tutorial
 description: フローサービス API を使用して HP Vertica をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->この [!DNL HP Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL HP Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

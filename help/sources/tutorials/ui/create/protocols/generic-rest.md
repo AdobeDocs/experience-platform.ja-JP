@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；汎用
 title: UI での汎用 REST API ソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して汎用 REST API ソース接続を作成する方法を説明します。
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 38%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
-> [!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+> [!DNL Generic REST API] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 このチュートリアルでは、 [!DNL Generic REST API] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
 

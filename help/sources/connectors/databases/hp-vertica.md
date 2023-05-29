@@ -4,10 +4,10 @@ solution: Experience Platform
 title: HP Vertica ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して HP Vertica をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 44%
+ht-degree: 39%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->この [!DNL HP Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL HP Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 

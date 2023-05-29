@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Azure HDInsights での Apache Spark ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して、Azure HDInsights 上の Apache Spark をAdobe Experience Platformに接続する方法を説明します。
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 46%
+ht-degree: 42%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->この [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL Apache Spark] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Terada
 title: フローサービス API を使用したTeradataVantage ベース接続の作成
 description: フローサービス API を使用してAdobe Experience PlatformをTeradataVantage に接続する方法を説明します。
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 57%
+ht-degree: 54%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->[!DNL Teradata Vantage] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Teradata Vantage] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -40,7 +40,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 | 資格情報 | 説明 |
 | --- | --- |
 | `connectionString` | 接続文字列は、データソースに関する情報とその接続方法を提供する文字列です。 次の接続文字列パターン： [!DNL Teradata Vantage] が `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Teradata Vantage] 次に該当： `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Teradata Vantage] 次に該当： `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
 
 導入の詳細については、 [[!DNL Teradata Vantage] 文書](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 

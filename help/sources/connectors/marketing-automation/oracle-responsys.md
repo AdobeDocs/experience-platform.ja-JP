@@ -5,10 +5,10 @@ description: API またはユーザーインターフェイスを使用して Or
 hide: true
 hidefromtoc: true
 exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
-source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->[!DNL Oracle Responsys] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Oracle Responsys] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

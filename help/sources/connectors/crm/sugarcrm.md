@@ -4,10 +4,10 @@ description: API またはユーザーインターフェイスを使用して Su
 badge: ベータ
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 43%
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->[!DNL SugarCRM] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL SugarCRM] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

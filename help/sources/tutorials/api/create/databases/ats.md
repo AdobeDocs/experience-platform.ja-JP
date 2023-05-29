@@ -5,10 +5,10 @@ title: フローサービス API を使用した Azure Table Storage Base Connec
 type: Tutorial
 description: フローサービス API を使用して Azure Table Storage をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->この [!DNL Azure Table Storage] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL Azure Table Storage] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

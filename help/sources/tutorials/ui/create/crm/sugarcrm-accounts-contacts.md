@@ -2,10 +2,10 @@
 title: UI での SugarCRM アカウントおよび連絡先ソース接続の作成
 description: Adobe Experience Platform UI を使用して SugarCRM アカウントと連絡先ソース接続を作成する方法を説明します。
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 41%
+ht-degree: 39%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->[!DNL SugarCRM Accounts & Contacts] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL SugarCRM Accounts & Contacts] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、 [!DNL SugarCRM Accounts & Contacts] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 

@@ -3,7 +3,7 @@ title: フローサービス API を使用した Pendo のソース接続とデ�
 description: フローサービス API を使用してAdobe Experience Platformを Pendo に接続する方法を説明します。
 badge: ベータ
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 55%

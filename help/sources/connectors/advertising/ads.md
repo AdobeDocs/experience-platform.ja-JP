@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Google
 title: Google Ads ソースの概要
 description: API またはユーザーインターフェイスを使用してGoogle Ads をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 66%
+ht-degree: 62%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->[!DNL Google Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Google Ads] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

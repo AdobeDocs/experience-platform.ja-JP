@@ -5,10 +5,10 @@ title: IBMの作成 [!DNL IBM DB2] フローサービス API を使用したベ�
 type: Tutorial
 description: IBMの接続方法 [!DNL IBM DB2] フローサービス API を使用してAdobe Experience Platformに送信する。
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 51%
+ht-degree: 48%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->ザIBM [!DNL IBM DB2] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>ザIBM [!DNL IBM DB2] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

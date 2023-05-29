@@ -5,10 +5,10 @@ title: UI での HP Vertica ソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して HP Vertica ソース接続を作成する方法を説明します。
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '495'
-ht-degree: 41%
+ht-degree: 39%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
-> HP [!DNL Vertica] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+> HP [!DNL Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、HP を作成する手順を説明します [!DNL Vertica] を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 

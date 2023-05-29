@@ -2,10 +2,10 @@
 title: フローサービス API を使用して、SugarCRM イベントのソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを SugarCRM イベントに接続する方法を説明します。
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2009'
-ht-degree: 60%
+ht-degree: 59%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->[!DNL SugarCRM Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL SugarCRM Events] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 次のチュートリアルでは、 [!DNL SugarCRM Events] ソース接続と、 [[!DNL SugarCRM]](https://www.sugarcrm.com/) イベントデータをAdobe Experience Platformに送信するには、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

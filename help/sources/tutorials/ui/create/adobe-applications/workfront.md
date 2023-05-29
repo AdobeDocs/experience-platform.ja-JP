@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;
 title: （ベータ版）UI での Adobe Workfront ソース接続の作成
 description: このチュートリアルでは、ユーザーインターフェイスを使用して Workfront データを Adobe Experience Platform に取り込むための Adobe Workfront ソース接続を作成する手順について説明します。
 exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '771'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Workfront ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>Adobe Workfront ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、ユーザーインターフェイスを使用して Workfront データを Adobe Experience Platform に取り込むための Adobe Workfront ソース接続を作成する手順について説明します。
 

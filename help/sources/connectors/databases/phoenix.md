@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Phoenix ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Phoenix をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 61%
+ht-degree: 57%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->この [!DNL Phoenix] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>この [!DNL Phoenix] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

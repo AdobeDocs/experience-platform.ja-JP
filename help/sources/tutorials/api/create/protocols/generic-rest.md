@@ -5,10 +5,10 @@ title: フローサービス API を使用した汎用 REST API ベース接続�
 type: Tutorial
 description: フローサービス API を使用して汎用 REST API をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 60%
+ht-degree: 59%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->[!DNL Generic REST API] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Generic REST API] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

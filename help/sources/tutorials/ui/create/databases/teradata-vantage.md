@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Terada
 title: UI でのTeradataVantage ソース接続の作成
 description: Adobe Experience Platform UI を使用してTeradataVantage ソース接続を作成する方法を説明します。
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 42%
+ht-degree: 40%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
-> [!DNL Teradata Vantage] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+> [!DNL Teradata Vantage] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、 [!DNL Teradata Vantage] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
 
