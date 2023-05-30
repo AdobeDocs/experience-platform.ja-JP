@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: XDM ユーザーインターフェイスで XDM フィールドを定義するExperience Platformについて説明します。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 
 | Field プロパティ | 互換性のあるタイプ | 説明 |
 | --- | --- | --- |
-| [!UICONTROL デフォルト値] | [!UICONTROL 文字列], [!UICONTROL ダブル], [!UICONTROL Long], [!UICONTROL 整数], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL ブール値] | 取り込み中に他の値が指定されない場合にこのフィールドに割り当てられるデフォルト値。 この値は、フィールドの選択されたタイプに準拠している必要があります。 |
+| [!UICONTROL デフォルト値] | [!UICONTROL 文字列], [!UICONTROL ダブル], [!UICONTROL Long], [!UICONTROL 整数], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL ブール値] | 取り込み中に他の値が指定されない場合にこのフィールドに割り当てられるデフォルト値。 この値は、フィールドの選択されたタイプに準拠している必要があります。<br><br>デフォルト値は、時間の経過と共に変化する可能性があるので、取得時にデータセットに保存されません。 スキーマに設定されたデフォルト値は、ダウンストリームの Platform サービスやアプリケーションがデータセットからデータを読み取る際に、それらによって推論されます。 例えば、クエリサービスを使用してデータをクエリする場合、属性に NULL 値が含まれ、デフォルトはに設定されているとします。 `5` スキーマレベルでは、クエリサービスは `5` NULL の代わりに使用します。 現在、この動作はすべての AEP サービスで共通ではありません。 |
 | [!UICONTROL パターン] | [!UICONTROL 文字列] | A [正規表現](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) 取り込み時に受け入れられるように、このフィールドの値がに準拠している必要があります。 |
 | [!UICONTROL 形式] | [!UICONTROL 文字列] | 値が準拠する必要がある文字列に対して、事前定義済みの形式のリストから選択します。 使用可能な形式は次のとおりです。 <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子メール]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長] | [!UICONTROL 文字列] | 取得時に受け入れられる値の最小文字数。 |
