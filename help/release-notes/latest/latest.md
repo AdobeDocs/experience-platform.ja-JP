@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
+source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
 workflow-type: tm+mt
-source-wordcount: '1559'
-ht-degree: 35%
+source-wordcount: '1565'
+ht-degree: 36%
 
 ---
 
@@ -121,7 +121,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- | --- |
 | フィールドグループ | （複数） | の複数のフィールド [オファー項目](https://github.com/adobe/xdm/pull/1720/files) が更新され、スキーマから二重階層が削除されました。 |
 | フィールドグループ | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1721/files) | この `partnerProspect` メタデータタグのオプションが [!UICONTROL XDM 個別見込み客プロファイル] クラス。 |
-| データタイプ | （複数） | の複数のフィールドが追加されました [!UICONTROL メディアの詳細情報] データ型。 |
+| データタイプ | （複数） | の複数のフィールドが追加されました [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/pull/1716/files) データ型。 |
 | データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/pull/1716/files) | リダイレクトが発生したかどうかを示す新しいフィールドが追加されました。 |
 | フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/pull/1716/files) | メディアレポートに関連する新しいフィールドが追加されました。 |
 
