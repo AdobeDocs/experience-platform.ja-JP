@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 30%
+source-wordcount: '1559'
+ht-degree: 35%
 
 ---
 
@@ -33,9 +33,11 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [データガバナンス](#data-governance)
 - [データ取り込み](#data-ingestion)
 - [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
+
 
 ## データ収集 {#data-collection}
 
@@ -108,6 +110,24 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 - （ベータ版）SFTP クラウドストレージの宛先で、ユーザーが Port パラメーターの値をカスタマイズできない問題を修正しました。 を通じて（ベータ版）SFTP の宛先接続を設定する際、値を編集できるようになりました。 [API](/help/destinations/api/activate-segments-file-based-destinations.md) または [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| フィールドグループ | （複数） | の複数のフィールド [オファー項目](https://github.com/adobe/xdm/pull/1720/files) が更新され、スキーマから二重階層が削除されました。 |
+| フィールドグループ | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1721/files) | この `partnerProspect` メタデータタグのオプションが [!UICONTROL XDM 個別見込み客プロファイル] クラス。 |
+| データタイプ | （複数） | の複数のフィールドが追加されました [!UICONTROL メディアの詳細情報] データ型。 |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/pull/1716/files) | リダイレクトが発生したかどうかを示す新しいフィールドが追加されました。 |
+| フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/pull/1716/files) | メディアレポートに関連する新しいフィールドが追加されました。 |
+
+{style="table-layout:auto"}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
