@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UI でのソース接続データフローの更新
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '782'
+ht-degree: 13%
 
 ---
 
@@ -23,7 +23,12 @@ ht-degree: 14%
 * [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## データフローの更新
+## データフローの更新 {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="データセットの有効期限"
+>abstract="この列は、ターゲットのデータセットが自動的に期限切れになるまでの残り日数を示します。<br>ターゲットデータセットの有効期限が切れると、データフローは失敗します。 データフローが失敗しないようにするには、ターゲットデータセットが正しい日付に期限切れになるように設定されていることを確認します。 有効期限を更新する方法については、ドキュメントを参照してください。"
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。選択 **[!UICONTROL データフロー]** をクリックして、既存のデータフローのリストを表示します。
 
