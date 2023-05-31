@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2022年8月
 description: Adobe Experience Platform の 2022年8月のリリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
 workflow-type: tm+mt
 source-wordcount: '2082'
 ht-degree: 100%
@@ -94,7 +94,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;の宛先では、データ収集に [Edge Network Server API](../../server-api/overview.md) を使用する必要があります。さらに、すべての Server API 呼び出しは、[認証済みコンテキスト](../../server-api/authentication.md)で行う必要があります。 |
+| （ベータ版）パーソナライゼーションの宛先に対する属性ベースのパーソナライゼーションのサポート | 属性ベースのパーソナライゼーションのベータ版リリースでは、[宛先カタログ](../../destinations/catalog/overview.md)に次の 2 つの新しいカードが表示されます。 <ul><li>**[!UICONTROL Adobe Target V2]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。Adobe Target V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li><li>**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**：このコネクタは現在ベータ版で、一部のお客様のみご利用いただけます。**[!UICONTROL カスタムパーソナライゼーション]**&#x200B;が提供する機能に加えて、 **[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;コネクタにより、オプションの[マッピング手順](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性をカスタムパーソナライゼーションの宛先にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。</li></ul> <br> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL 属性を含むカスタムパーソナライゼーション]**&#x200B;の宛先では、データ収集に [Edge Network Server API](../../server-api/overview.md) を使用する必要があります。さらに、すべての Server API 呼び出しは、[認証済みコンテキスト](../../server-api/authentication.md)で行う必要があります。 |
 
 {style="table-layout:auto"}
 

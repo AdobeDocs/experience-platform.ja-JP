@@ -3,7 +3,7 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 85%
@@ -61,7 +61,7 @@ Adobe Experience Platformでは、接続、データセットの書き出し、�
 
 Experience Platform のエッジパーソナライゼーション宛先には、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) や[カスタムパーソナライゼーション宛先](/help/destinations/catalog/personalization/custom-personalization.md)が含まれます。これらの宛先を使用すると、同じページや次のページのパーソナライゼーションのユースケースを顧客に対して実現できます。
 
-詳しくは、[同じページと次のページのパーソナライゼーション用にパーソナライゼーション宛先を設定](/help/destinations/ui/configure-personalization-destinations.md)する方法を参照してください。
+詳しくは、[同じページと次のページのパーソナライゼーション用にパーソナライゼーション宛先を設定](/help/destinations/ui/activate-edge-personalization-destinations.md)する方法を参照してください。
 
 ## プロファイル書き出し宛先とセグメント書き出し宛先 - 概要ビデオ {#video}
 

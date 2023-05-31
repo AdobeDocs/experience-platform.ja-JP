@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 60%
+source-wordcount: '908'
+ht-degree: 57%
 
 ---
 
@@ -14,18 +14,21 @@ ht-degree: 60%
 
 ## 宛先の変更ログ {#changelog}
 
->[!IMPORTANT]
->
->拡張Adobe Target V2 宛先コネクタのベータリリースにより、宛先カタログに 2 つのAdobe Targetカードが表示される場合がありました。
->Adobe Target V2 宛先コネクタは現在ベータ版で、一部のお客様のみが利用できます。 Adobe V1 カードが提供する機能に加えて、Target V2 コネクタにより、[マッピング手順](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes)をアクティベーションワークフローに追加します。これにより、プロファイル属性を Adobe Target にマッピングし、属性ベースの同じページおよび次のページのパーソナライゼーションを有効にできます。
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2023年4月 | 機能とドキュメントの更新 | 2023 年 4 月現在、 **[!UICONTROL Adobe Target]** 接続サポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) およびは、すべてのお客様が一般に利用できます。 |
 
-![2 つのAdobe Target宛先カードの横並び表示の画像。](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## 概要 {#overview}
 
 Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 
 Adobe Targetは、Adobe Experience Platformの宛先カタログのパーソナライゼーション接続です。
+
+Experience PlatformでのAdobe Target接続の設定方法の概要については、以下のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -37,7 +40,7 @@ datastream ID を使用せずにAdobe Target接続を設定する場合、Web SD
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Target] 接続を作成する前に、[同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](../../ui/configure-personalization-destinations.md)を行う方法を参照してください。このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。同じページと次のページのパーソナライゼーションでは、Adobe Target接続を設定する際にデータストリーム ID を使用する必要があります。
+>[!DNL Adobe Target] 接続を作成する前に、[同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](../../ui/activate-edge-personalization-destinations.md)を行う方法を参照してください。このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。同じページと次のページのパーソナライゼーションでは、Adobe Target接続を設定する際にデータストリーム ID を使用する必要があります。
 
 ### Adobe Targetの前提条件 {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
-
-## ユースケース {#use-cases}
-
-**ホームページバナーのパーソナライズ**
-
-家庭用品のレンタルと販売を行う会社が、Adobe Experience Platform での顧客セグメント選定に基づいて、自身のホームページをバナー付きでパーソナライズしたいと考えています。会社は、パーソナライズされたエクスペリエンスを体験できるオーディエンスを選択し、それらのオーディエンスを Target オファーのターゲッティング条件として Adobe Target に送信できます。
 
 ## 宛先への接続 {#connect}
 
@@ -92,7 +89,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 | データストリームが選択されていません | データストリームが選択されました |
 |---|---|
-| <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされていません。</li><li>セグメントをAdobe Target接続に共有できるのは、 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/configure-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、セグメントの共有がサポートされています。</li></ul> |
+| <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>セグメントをAdobe Target接続に共有できるのは、 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、セグメントの共有がサポートされています。</li></ul> |
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -106,7 +103,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントを有効化する手順については、[プロファイルリクエストの宛先へのプロファイルとセグメントの有効化](../../ui/activate-profile-request-destinations.md)を参照してください。
+この宛先にオーディエンスセグメントを有効化する手順については、[プロファイルリクエストの宛先へのプロファイルとセグメントの有効化](../../ui/activate-edge-personalization-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
