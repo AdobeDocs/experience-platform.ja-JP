@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング接続；ストリーミング接続の作成；ui ガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取得；取り込み；
-solution: Experience Platform
 title: UI を使用した HTTP API ストリーミング接続の作成
-type: Tutorial
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 27%
+source-wordcount: '1000'
+ht-degree: 28%
 
 ---
 
@@ -71,7 +68,7 @@ HTTP API 接続を作成した後、 **[!UICONTROL データを選択]** の手�
 
 この [!UICONTROL マッピング] の手順が表示され、ソースデータを Platform データセットにマッピングするためのインターフェイスが提供されます。
 
-Parquet ファイルは XDM に準拠している必要があり、手動でマッピングを設定する必要はありません。また、CSV ファイルではマッピングを明示的に設定する必要がありますが、マッピングするソースデータフィールドを選択できます。 JSON ファイルは、XDM に対する苦情としてマークされている場合、手動設定は必要ありません。 ただし、XDM 準拠としてマークされていない場合は、マッピングを明示的に設定する必要があります。
+この [!DNL HTTP API] ソースは、JSON ファイルの取り込みをサポートしています。 JSON ファイルが XDM に対する苦情としてマークされている場合、手動設定は必要ありません。 そうでない場合は、マッピングを明示的に設定する必要があります。
 
 取り込むインバウンドデータのデータセットを選択します。既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
@@ -88,7 +85,6 @@ Parquet ファイルは XDM に準拠している必要があり、手動でマ�
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### 標準フィールドをマッピング
-
 
 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
