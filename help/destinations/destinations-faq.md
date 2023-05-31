@@ -3,10 +3,10 @@ keywords: 宛先；質問；よくある質問faq;宛先の faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 12%
+source-wordcount: '1364'
+ht-degree: 8%
 
 ---
 
@@ -104,3 +104,53 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/l
 **でアクティブ化できる ID の種類 [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] は、次の ID のアクティブ化をサポートしています。ハッシュ化された電子メール [!DNL GAID]、および [!DNL IDFA].
+
+## Adobe Targetおよびカスタムパーソナライゼーションの宛先を使用した、同じページおよび次のページのパーソナライゼーション {#same-next-page-personalization}
+
+**Experience PlatformWeb SDK を使用して、オーディエンスと属性をAdobe Targetに送信する必要がありますか？**
+
+いいえ、 [Web SDK](../edge/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+ただし、 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) が Web SDK の代わりに使用され、次回のセッションのパーソナライゼーションのみがサポートされます。
+
+の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../edge/home.md) または [Edge Network Server API](../server-api/overview.md). 詳しくは、 [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
+
+**Real-time Customer Data PlatformからAdobe Targetまたはカスタムパーソナライゼーションの宛先に送信できる属性の数に制限はありますか。**
+
+はい。同じページおよび次のページのパーソナライゼーションの使用例では、Adobe Targetまたはカスタムパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する際に、サンドボックスあたり最大 30 個の属性をサポートします。 アクティベーションガードレールの詳細については、 [guardrails のドキュメント](guardrails.md#edge-destinations-activation).
+
+**アクティベーションでサポートされる属性の種類（配列、マップなど）は何ですか。**
+
+現在、アクティベーションではリーフレベルの属性のみがサポートされています。
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Experience Platformでオーディエンスを作成した後、そのオーディエンスがエッジセグメント化の使用例で使用できるようになるまで、どの程度の時間がかかりますか？**
+
+オーディエンス定義は [Edge Network](../edge/home.md) 最大 1 時間で ただし、この最初の 1 時間以内にオーディエンスがアクティブ化された場合、そのオーディエンスの資格を持つ一部の訪問者が欠落する可能性があります。
+
+**アクティベートされた属性はAdobe Targetのどこで確認できますか？**
+
+属性は、 [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) および [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja) オファー。
+
+**データストリームを使用せずに宛先を作成し、後で同じ宛先にデータストリームを追加することはできますか？**
+
+これは、現在、宛先 UI ではサポートされていません。 この場合に不明な点がある場合は、Adobe担当者にお問い合わせください。
+
+**Adobe Targetの宛先を削除するとどうなりますか。**
+
+宛先を削除すると、その宛先にマッピングされているすべてのオーディエンスと属性がAdobe Targetから削除され、Edge ネットワークからも削除されます。
+
+**統合は Edge Network Server API を使用して動作しますか？**
+
+はい、Edge Network Server API は、カスタムパーソナライゼーションの宛先で機能します。 プロファイル属性には機密データが含まれている場合があるので、このデータを保護するために、カスタムパーソナライゼーションの宛先では、データ収集に Edge Network Server API を使用する必要があります。 さらに、すべての API 呼び出しは、 [認証コンテキスト](../server-api/authentication.md).
+
+**エッジ上でアクティブな結合ポリシーは 1 つだけです。 別の結合ポリシーを使用し、ストリーミングセグメントとしてAdobe Targetに送信するオーディエンスを構築できますか？**
+
+いいえ。Adobe Targetに対してアクティブ化するすべてのオーディエンスは、エッジ上でアクティブである必要があります [結合ポリシー](../profile/merge-policies/ui-guide.md).
+
+**Data Usage Labeling and Enforcement(DULE) と同意ポリシーは適用されますか。**
+
+はい。この [データガバナンスと同意ポリシー](../data-governance/home.md) 選択したマーケティングアクションに作成され、関連付けられている場合、選択した属性のアクティベーションが制御されます。
