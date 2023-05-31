@@ -1,10 +1,10 @@
 ---
 description: Destination SDKで作成した宛先のファイル書き出し設定を設定する方法について説明します。
 title: バッチ設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 18%
+source-wordcount: '1073'
+ht-degree: 16%
 
 ---
 
@@ -82,6 +82,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 | `filenameConfig.allowedFilenameAppendOptions` | 文字列 | *必須*。ユーザーが選択できるファイル名マクロのリスト。 これにより、書き出されるファイル名（セグメント ID、組織名、書き出しの日時など）に追加される項目が決まります。 設定時 `defaultFilename`の場合は、マクロの重複を避けてください。 <br><br>サポートされている値。 <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>マクロを定義する順序に関係なく、Experience PlatformUI では常に、ここに示す順序で表示されます。 <br><br> If `defaultFilename` が空の場合、 `allowedFilenameAppendOptions` リストには少なくとも 1 つのマクロを含める必要があります。 |
 | `filenameConfig.defaultFilenameAppendOptions` | 文字列 | *必須*。事前に選択されたデフォルトのファイル名マクロ（ユーザーがチェックを外すことができます）。<br><br> このリストのマクロは、 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 文字列 | *オプション*。書き出すファイルの既定のファイル名マクロを定義します。 これらをユーザーが上書きすることはできません。 <br><br>で定義された任意のマクロ `allowedFilenameAppendOptions` が `defaultFilename` マクロ。 <br><br>If `defaultFilename` が空の場合は、に少なくとも 1 つのマクロを定義する必要があります。 `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | ブール値 | アクティブ化されたオーディエンスを、オーディエンスに基づいて 1 つのファイルまたは複数のファイルのどちらで書き出すかを定義します [結合ポリシー](../../../../profile/merge-policies/overview.md). サポートされている値。 <ul><li>`true`:は、結合ポリシーごとに 1 ファイルをエクスポートします。</li><li>`false`:は、結合ポリシーに関係なく、オーディエンスごとに 1 つのファイルを書き出します。 これはデフォルトの動作です。 このパラメーターを完全に省略することで、同じ結果を得ることができます。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 | `DATETIME` または `TIMESTAMP` | [!UICONTROL 日時] | `DATETIME` および `TIMESTAMP` どちらも、ファイルが生成された日時を定義しますが、形式は異なります。 <br><br><ul><li>`DATETIME` は次の形式を使用します。YYYYMMDD_HHMMSS です。</li><li>`TIMESTAMP` は 10 桁の Unix 形式を使用します。 </li></ul> `DATETIME` および `TIMESTAMP` は相互に排他的で、同時に使用することはできません。 | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL カスタムテキスト] | ファイル名に含めるユーザ定義のカスタムテキスト。 では使用できません `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日時] | ファイルが生成された時刻の 10 桁のタイムスタンプ（UNIX 形式）。 | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL 結合ポリシー ID] | の ID [結合ポリシー](../../../../profile/merge-policies/overview.md) 書き出したオーディエンスの生成に使用します。 このマクロは、結合ポリシーに基づいて、ファイル内の書き出されたセグメントをグループ化する場合に使用します。 このマクロをと一緒に使用します。 `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL 結合ポリシー名] | の名前 [結合ポリシー](../../../../profile/merge-policies/overview.md) 書き出したオーディエンスの生成に使用します。 このマクロは、結合ポリシーに基づいて、ファイル内の書き出されたセグメントをグループ化する場合に使用します。 このマクロをと一緒に使用します。 `segmentGroupingEnabled:true`. | カスタム結合ポリシー |
 
 {style="table-layout:auto"}
 
