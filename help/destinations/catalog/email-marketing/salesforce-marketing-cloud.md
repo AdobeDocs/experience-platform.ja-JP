@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メールの宛先；Salesfo
 title: Salesforce Marketing Cloud 接続
 description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 62%
+source-wordcount: '748'
+ht-degree: 64%
 
 ---
 
@@ -53,15 +53,15 @@ SFTP ストレージを使用した電子メールマーケティングの宛先
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * の場合 **[!UICONTROL パスワード付き SFTP]** 接続には、次を指定する必要があります。
-   * [!UICONTROL ドメイン]
-   * [!UICONTROL ポート]
-   * [!UICONTROL ユーザー名]
-   * [!UICONTROL パスワード]
+   * **[!UICONTROL ドメイン]**:SFTP アカウントの IP アドレスまたはドメイン名。
+   * **[!UICONTROL ポート]**：SFTP ストレージの場所で使用されるポート
+   * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
+   * **[!UICONTROL パスワード]**：SFTP ストレージの場所にログインするためのパスワード
 * の場合 **[!UICONTROL SSH キーを使用した SFTP]** 接続には、次を指定する必要があります。
-   * [!UICONTROL ドメイン]
-   * [!UICONTROL ポート]
-   * [!UICONTROL ユーザー名]
-   * [!UICONTROL SSH キー]
+   * **[!UICONTROL ドメイン]**:SFTP アカウントの IP アドレスまたはドメイン名。
+   * **[!UICONTROL ポート]**：SFTP ストレージの場所で使用されるポート
+   * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
+   * **[!UICONTROL SSH キー]**：SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。 秘密鍵は、Base64 でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
 
 * 必要に応じて、RSA 形式の公開鍵を添付し、PGP/GPG を使用して、 **[!UICONTROL キー]** 」セクションに入力します。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
 * **[!UICONTROL 名前]**：宛先の名前を選択します。

@@ -2,10 +2,10 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 54%
+source-wordcount: '1226'
+ht-degree: 53%
 
 ---
 
@@ -111,8 +111,8 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 
 空の値の文字列表現を設定するには、このコントロールを使用します。 このオプションは、書き出した CSV ファイルで空の値をどのように表すかを決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **二重引用符で囲まれた空の文字列 (&quot;&quot;)**
 * **[!UICONTROL 空の文字列]**
 
 #### 例
@@ -136,8 +136,8 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 
 このコントロールを使用して、書き出されたファイル内の null 値の文字列表現を設定します。このオプションは、書き出した CSV ファイルで null 値をどのように表すかを決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **二重引用符で囲まれた空の文字列 (&quot;&quot;)**
 * **[!UICONTROL 空の文字列]**
 
 #### 例

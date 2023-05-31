@@ -4,9 +4,9 @@ title: クラウドストレージ宛先の API 移行ガイド
 description: 追加機能を持つ新しいクラウドストレージの宛先カードへの移行の一環として、クラウドストレージの宛先をアクティブ化するワークフローの変更点について説明します。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 4%
 
 ---
@@ -433,7 +433,6 @@ API ユーザーに対する後方互換性のない変更が更新されまし�
 上記の更新されたフローおよび接続仕様に加えて、SFTP ベース接続を作成する際に必要なパラメーターに変更が加えられました。
 
 * 以前は、SFTP の宛先のベース接続には、 `host` パラメーター。 このパラメーターの名前は「 `domain`.
-* SSH キーでの認証オプションの場合、ベース接続の認証パラメーターには `port` オプション。 このパラメーターは現在廃止されており、不要になりました。
 
 下のタブで、SFTP の完全なレガシーおよび新しいベース接続とターゲット接続の例を確認してください。変更される行が強調表示されます。 SFTP の宛先のターゲット接続を作成するために必要なパラメーターは変更されません。
 
@@ -567,7 +566,8 @@ API ユーザーに対する後方互換性のない変更が更新されまし�
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

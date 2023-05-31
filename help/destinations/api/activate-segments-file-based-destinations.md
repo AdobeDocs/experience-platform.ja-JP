@@ -4,9 +4,9 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4442'
 ht-degree: 11%
 
 ---
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| プロパティ | 説明 |
+| --------- | ----------- |
+| `specName` | `SFTP with Password`.を使用します。 |
+| `domain` | SFTP ストレージの場所の IP アドレスまたはドメイン名。 |
+| `username` | SFTP ストレージの場所にログインするユーザー名。 |
+| `password` | SFTP ストレージの場所にログインするためのパスワード。 |
+| `port` | SFTP ストレージの場所で使用されるポート。 |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| プロパティ | 説明 |
+| --------- | ----------- |
+| `specName` | `SFTP with Password`.を使用します。 |
+| `domain` | SFTP ストレージの場所の IP アドレスまたはドメイン名。 |
+| `username` | SFTP ストレージの場所にログインするユーザー名。 |
+| `sshKey` | SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。 秘密鍵は、Base64 でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。 |
+| `port` | SFTP ストレージの場所で使用されるポート。 |
+
+{style="table-layout:auto"}
 
 +++
 
