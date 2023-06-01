@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 86%
+source-wordcount: '1172'
+ht-degree: 85%
 
 ---
 
@@ -121,7 +121,7 @@ ht-degree: 86%
       * [（ベータ版）データランディングゾーン](./catalog/cloud-storage/data-landing-zone.md)
       * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [クラウドストレージの宛先の IP アドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [SFTP の宛先の IP ア許可リストドレスの](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}
       * [Salesforce CRM 接続](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 接続](./catalog/crm/microsoft-dynamics-365.md)

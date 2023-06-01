@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 88%
+source-wordcount: '908'
+ht-degree: 86%
 
 ---
 
@@ -127,4 +127,4 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 ## IP アドレス許可リスト
 
-Adobe IP を許可リストに追加する必要がある場合は、[クラウドストレージ宛先の IP アドレス許可リスト](ip-address-allow-list.md)を参照してください。
+参照： [SFTP の宛先の IP アドレス許可リスト](ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
