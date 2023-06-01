@@ -3,10 +3,10 @@ title: （ベータ版）Experience CloudAudiences
 description: セグメントをExperience Platformから様々なExperience Platformソリューションに共有する方法を説明します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 26%
+source-wordcount: '1576'
+ht-degree: 25%
 
 ---
 
@@ -83,7 +83,14 @@ Note: briefly talk about when to share segments to these destinations using the 
 * 宛先に接続する際に、次のオプションが表示されます。 [データフローアラートの有効化](#enable-alerts). UI には表示されますが、 **アラートオプションを有効にするはサポートされていません** ベータ版リリースの
 * **バックフィルはサポートされていません**. 最初のAudience Managerへの書き出しまたはその他のExperience Cloudソリューションには、セグメントの過去の母集団は含まれません。
 * ベータ版リリースでは、 **Audiences の宛先への単一のExperience Cloud接続**&#x200B;を、Experience Platform組織に属するすべてのサンドボックスにまたがって使用できます。
-* ここに **4 時間の遅延** Experience Platformでデータがアクティブ化されてから、Audience Managerや他のExperience Cloudソリューションでデータを使用する準備が整うまでの間。
+
+### オーディエンスをアクティブ化する際の遅延 {#audience-activation-latency}
+
+オーディエンスがExperience Platformで最初にアクティブ化されてから、特定の使用例に対してAudience Managerや他のExperience Cloudソリューションでオーディエンスを使用する準備が整うまでに、4 時間の遅延が生じます。
+
+オーディエンスがすべての使用例に対してAudience Managerで完全に利用できるようになるまでに最大 24 時間かかり、Experience CloudのオーディエンスからのオーディエンスがAudience Managerレポートに表示されるまで最大 48 時間かかる場合があります。
+
+セグメント名などのメタデータは、「 Audiences の宛先への書き出し」が設定されてから数分以内に、Audience ManagerでExperience Cloudで使用できます。
 
 ## サポートされている ID {#supported-identities}
 
