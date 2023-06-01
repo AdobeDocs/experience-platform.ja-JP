@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 91%
+source-wordcount: '990'
+ht-degree: 87%
 
 ---
 
@@ -90,7 +90,7 @@ ht-degree: 91%
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパスを入力します。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。
-
+* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。
 
 >[!TIP]
 >

@@ -2,10 +2,10 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 74%
+source-wordcount: '1189'
+ht-degree: 72%
 
 ---
 
@@ -137,6 +137,8 @@ curl -X GET \
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* 
+   * **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
 
 ### アラートの有効化 {#enable-alerts}
 

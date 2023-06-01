@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 92%
+source-wordcount: '909'
+ht-degree: 88%
 
 ---
 
@@ -106,6 +106,8 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 * **[!UICONTROL フォルダーパス]**：SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。
+* 
+   * **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。
 
 ## この宛先に対してセグメントをアクティブ化 {#activate}
 

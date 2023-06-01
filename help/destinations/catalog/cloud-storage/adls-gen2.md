@@ -2,10 +2,10 @@
 title: （ベータ版）Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 93%
+source-wordcount: '709'
+ht-degree: 90%
 
 ---
 
@@ -61,6 +61,8 @@ ht-degree: 93%
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* 
+   * **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
 
 ### アラートの有効化 {#enable-alerts}
 
