@@ -2,7 +2,7 @@
 title: （ベータ版）Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、セグメントをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 92%
@@ -76,8 +76,7 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする保存先フォルダーのパス。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
-* 
-   * **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
+* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
 
 ### アラートの有効化 {#enable-alerts}
 

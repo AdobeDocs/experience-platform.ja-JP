@@ -1,11 +1,10 @@
 ---
-keywords: Azure Blob;Blob 宛先;s3;azure blob 宛先
 title: Azure Blob 接続
 description: Azure Blob Storage へのライブアウトバウンド接続を作成して、Adobe Experience Platform から CSV データファイルを定期的に書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '952'
 ht-degree: 89%
 
 ---
@@ -95,8 +94,7 @@ ht-degree: 89%
 * **[!UICONTROL コンテナ]**：この宛先で使用する [!DNL Azure Blob Storage] コンテナの名前を入力します。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
-* 
-   * **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
+* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
 
 ### アラートの有効化 {#enable-alerts}
 
