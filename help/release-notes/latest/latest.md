@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 09d8014eea2d31649eed3814ad07172027b2c435
+source-git-commit: bf4c39c311bf206ba9113804e0a2fd5f3610d8dc
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 34%
+source-wordcount: '1993'
+ht-degree: 33%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 34%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [ダッシュボード](#dashboards)
 - [データ収集](#data-collection)
 - [データガバナンス](#data-governance)
 - [データ取り込み](#data-ingestion)
@@ -38,6 +39,32 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [クエリサービス](#query-service)
 - [ソース](#sources)
 
+## ダッシュボード {#dashboards}
+
+Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを確認できる複数のダッシュボードを提供しています。
+
+<!-- 
+The [!UICONTROL License Usage] dashboard and individual license data for customers has been updated to resolve previous discrepancies between the license entitlements recorded in the Sales Orders and those originally reported in the Experience Platform [!UICONTROL License Usage] dashboard. The updates of individual license data will happen in phases between June 2023 and June 11, 2023. Your actual usage values remain accurate.<br><br>Experience Platform provides multiple capabilities to manage the usage volume:<br><ul><li>[Review and apply best practices to manage data and license usage](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html)</li><li>Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.</li><li>[Contact Adobe support to apply expiration times for Pseudonymous Profiles.](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contact Adobe support to enable Experience Event expirations on desired datasets.](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Contact your Adobe representative to discuss options to increase your license entitlements.</li></ul>
+ 
+
+<br><ul><li></li></ul><br><br>
+
+Adobe has corrected erroneous entries in your product's associated TermSheets to match their corresponding [Product Descriptions](https://helpx.adobe.com/legal/product-descriptions.html). Discrepancies in base quantities for the **Average Profile Richness** add-on packs will be corrected on **June 9, 2023**. This will provide an accurate representation of your license usage and ensure contractual compliance for your organization. Note that it can take up to 24-36 hours for the licence usage reports to reflect the update.
+
+As a result of this update, you may notice a one-time drop in your license usage for **Average Profile Richness** and **total consumed storage** metrics. If this update brings you close to your licensed limit there are several measures you can take to mitigate your usage.
+
+-[Apply expiration times for Pseudonymous Profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)
+-[Contact support in order to enable Experience Event expirations on your required datasets. Adobe support representatives can configure expiration times for all Experience Events that are ingested into a dataset enabled for Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)
+-Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.
+
+Contact your Adobe Support representative to discuss options to reduce your usage or increase your license limits.
+ -->
+
+| 機能 | 説明 |
+| --- | --- |
+| ライセンス権限の修正 | この [!UICONTROL ライセンスの使用状況] お客様のダッシュボードおよび個々のライセンスデータが更新され、販売注文に記録されたライセンスの使用権限と、Experience Platformで最初に報告されたライセンスの使用権限との間の以前の相違が解決されました。 [!UICONTROL ライセンスの使用状況] ダッシュボード。 個々のライセンスデータの更新は、2023 年 6 月から 2023 年 6 月 11 日の間に段階的におこなわれます。 実際の使用状況の値は正確なままです。<br><br>Experience Platformには、使用量を管理する複数の機能が用意されています。<br><ul><li>[データとライセンスの使用状況を管理するためのベストプラクティスを確認し適用する](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html).</li><li>フィルタールールと条件の適用先 [リアルタイム顧客プロファイルへの取り込みからデータを選択的に含める、または除外する](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) Analytics データを Profile に取り込む前に、</li><li>[偽名プロファイルの有効期限を適用するには、Adobeサポートにお問い合わせください。](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Adobeのサポートに連絡して、目的のデータセットで Experience Event の有効期限を有効にします。](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja)</li><li>ライセンスの使用権限を増やすためのオプションについては、Adobe担当者にお問い合わせください。</li></ul> |
+
+アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
