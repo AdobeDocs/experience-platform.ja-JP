@@ -3,9 +3,9 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先接続の編集
 type: Tutorial
 description: フローサービス API を使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 33%
 
 ---
@@ -329,11 +329,11 @@ curl -X PATCH \
 
 ## 基本接続コンポーネント（認証パラメーターおよび他のコンポーネント）の編集 {#patch-base-connection}
 
-ベース接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先の場合、アクセスキーと秘密鍵を [!DNL Amazon S3] 場所。
+宛先の資格情報を更新する場合は、ベース接続を編集します。 ベース接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先の場合、アクセスキーと秘密鍵を [!DNL Amazon S3] 場所。
 
 ベース接続のコンポーネントを更新するには、 `/connections` エンドポイントを使用して、基本接続 ID、バージョンおよび使用する新しい値を指定します。
 
-前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ベース接続 ID を取得したことを忘れないでください。
+ベース接続 ID は [前の手順](#look-up-dataflow-details)（既存のデータフローを目的の宛先に対してパラメーターを調べた場合） `baseConnection`.
 
 >[!IMPORTANT]
 >
