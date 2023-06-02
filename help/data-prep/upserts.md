@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、プロファイル・サービスに部分的な行更新を送信
 description: このドキュメントでは、Data Prep を使用して、プロファイル・サービスに部分的な行更新を送信する方法に関する情報を提供します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1177'
 ht-degree: 8%
 
 ---
@@ -37,11 +37,11 @@ ht-degree: 8%
 
 でのアップサートのストリーミング [!DNL Data Prep] は次のように機能します。
 
-* 最初に、のデータセットを作成して有効にする必要があります。 [!DNL Profile] 消費。 詳しくは、 [のデータセットの有効化 [!DNL Profile]](../catalog/datasets/enable-for-profile.md) 詳細は、
-* 新しい ID をリンクする必要がある場合は、追加のデータセットも作成する必要があります **同じスキーマで** の [!DNL Profile] データセット；
+* 最初に、のデータセットを作成して有効にする必要があります。 [!DNL Profile] 消費。 詳しくは、 [のデータセットの有効化 [!DNL Profile]](../catalog/datasets/enable-for-profile.md) を参照してください。
+* 新しい ID をリンクする必要がある場合は、追加のデータセットも作成する必要があります **同じスキーマで** の [!DNL Profile] データセット。
 * データセットを準備したら、データフローを作成して、受信リクエストを [!DNL Profile] データセット；
 * 次に、受信リクエストを更新して、必要なヘッダーを含める必要があります。 次のヘッダーで定義されます。
-   * を使用して実行する必要があるデータ操作 [!DNL Profile]: `create`, `merge`、および `delete`;
+   * を使用して実行する必要があるデータ操作 [!DNL Profile]: `create`, `merge`、および `delete`.
    * 実行するオプションの ID 操作 [!DNL Identity Service]: `create`.
 
 ### ID データセットの設定
@@ -50,7 +50,7 @@ ht-degree: 8%
 
 * ID データセットには、 [!DNL Profile] データセット。 スキーマが一致しないと、システムの動作に一貫性がなくなる場合があります。
 * ただし、ID データセットが [!DNL Profile] データセット。 データセットが同じ場合、データは更新されずに上書きされます。
-* 最初のデータセットを有効にする必要があるのは、 [!DNL Profile]、ID データセット **次の値を指定しない** 有効にする [!DNL Profile]. そうしないと、データが更新されずに上書きされます。
+* 最初のデータセットを有効にする必要があるのは、 [!DNL Profile]、ID データセット **は有効ではありません** 対象 [!DNL Profile]. そうしないと、データが更新されずに上書きされます。 ただし、ID データセットは **有効にする必要がある** 対象 [!DNL Identity Service].
 
 #### ID データセットに関連付けられたスキーマ内の必須フィールド {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
