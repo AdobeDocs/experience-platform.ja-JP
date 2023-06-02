@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 44%
+source-wordcount: '1462'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 44%
 
 このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 
+## ラベルの管理 {#manage-labels}
+
+データにラベルを適用するには、 **[!UICONTROL 使用状況ラベルを管理]** 実稼動サンドボックスで使用する権限です。 カスタムラベルを作成するには、製品プロファイルに対する管理権限も必要です。 各組織には適用可能なラベルのリストが 1 つしかなく、現在、ラベルの削除はサポートされていません。
+
+方法に関するガイドを参照してください。 [権限の設定](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) または [アクセス制御の概要](../../access-control/home.md) 権限の割り当て方法の詳細については、を参照してください。 組織のAdmin Consoleへのアクセス権がない場合は、組織の管理者にお問い合わせください。
+
 ## スキーマレベルでのラベルの管理
+
+ラベルをスキーマまたはそのスキーマ内のフィールドに直接追加できます。スキーマレベルで適用されたフィールドは、そのスキーマに基づいてすべてのデータセットに反映されます。
 
 スキーマレベルでデータ使用状況ラベルを管理するには、既存のスキーマを選択するか、新しく作成する必要があります。 Adobe Experience Platformにログインした後、 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 **[!UICONTROL スキーマ]** ワークスペース。 このページには、組織に属する作成済みのすべてのスキーマと、各スキーマに関する有用な詳細が一覧表示されます。
 
@@ -32,7 +40,7 @@ ht-degree: 44%
 
 新しいスキーマを作成するには、「 **[!UICONTROL スキーマを作成]** の右上隅に **[!UICONTROL スキーマ]** ワークスペース。 詳しくは、 [スキーマエディターを使用してスキーマを作成する方法](../../xdm/tutorials/create-schema-ui.md#create) 」を参照してください。 または、 [スキーマレジストリ API を使用してスキーマを作成する](../../xdm/tutorials/create-schema-api.md) （必要に応じて）
 
-### スキーマにデータ使用状況ラベルを追加する {#add-labels-to-schema}
+### スキーマへのデータ使用状況ラベルの追加 {#add-labels-to-schema}
 
 新しいスキーマを作成した後、または [!UICONTROL 参照] タブ [!UICONTROL スキーマ] ワークスペースで、スキーマエディターのスキーマからフィールドを選択します。 内 [!UICONTROL フィールドプロパティ] サイドバー、選択 **[!UICONTROL アクセスおよびデータガバナンスラベルの適用]**.
 
@@ -98,12 +106,6 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >データセットのラベル付け機能の廃止前に適用されたラベルは、関連するデータセットを見つけ、ラベルの「キャンセル」アイコンを選択することで、データセットから削除できます。
 >![「データセット」ワークスペースの「データガバナンス」タブで、削除可能なラベルが強調表示されています。](../images/labels/remove-governance-labels.png)
 >手順については、ドキュメントを参照してください。 [以前に適用したラベルをデータセットからスキーマレベルに移行する方法](../e2e.md#migrate-labels).
-
-## スキーマレベルでのラベルの管理
-
-ラベルをスキーマまたはそのスキーマ内のフィールドに直接追加できます。スキーマレベルで適用されたフィールドは、そのスキーマに基づいてすべてのデータセットに反映されます。
-
-詳しくは、[スキーマレベルのラベルの管理](../../xdm/tutorials/labels.md)に関するチュートリアルを参照してください。
 
 ## カスタムラベルの管理 {#manage-custom-labels}
 
