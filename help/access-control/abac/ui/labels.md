@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御ラベルの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してラベルを管理する方法について説明します
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 42%
+source-wordcount: '190'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->カスタムラベルを作成するには、管理者権限が必要です。 現在、ラベルの削除はサポートされていません。
+>組織全体で使用できるラベルのリストは 1 つです。 カスタムラベルを作成するには、 **[!UICONTROL 使用状況ラベルを管理]** 実稼動サンドボックスに対する権限。 ラベルの削除は現在サポートされていません。
 
 新しいラベルを作成するには、 **[!UICONTROL ラベル]** サイドバーの「 」タブで「 」を選択し、 **[!UICONTROL ラベルを作成]**.
 
