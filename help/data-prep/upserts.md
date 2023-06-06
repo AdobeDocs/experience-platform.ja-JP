@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；データ準備；ストリーミング；アップサート；ストリーミングアップサート
-title: データ準備を使用して、プロファイル・サービスに部分的な行更新を送信
-description: このドキュメントでは、Data Prep を使用して、プロファイル・サービスに部分的な行更新を送信する方法に関する情報を提供します。
+title: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信
+description: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する方法を説明します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d167975c9c7a267f2888153a05c5857748367822
+source-git-commit: 15aa27e19f287a39242860b91eedae87aace3d27
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1175'
 ht-degree: 8%
 
 ---
 
-# 行の一部更新を次に送信： [!DNL Profile Service] using [!DNL Data Prep]
+# 行の一部更新を次に送信： [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
-[!DNL Data Prep] でアップサートをストリーミングすると、[!DNL Profile Service] データに部分行の更新を送信しながら、単一の API リクエストで新しい ID リンクを作成および確立できます。
+[!DNL Data Prep] でアップサートをストリーミングすると、[!DNL Real-Time Customer Profile] データに部分行の更新を送信しながら、単一の API リクエストで新しい ID リンクを作成および確立できます。
 
-アップサートをストリーミングすることで、データをに変換しながら、データの形式を保持できます。 [!DNL Profile Service] 取り込み中のPATCHリクエスト。 指定した入力に基づいて、 [!DNL Data Prep] を使用すると、単一の API ペイロードを送信し、データを [!DNL Profile Service] PATCHと [!DNL Identity Service] CREATE リクエスト。
+アップサートをストリーミングすることで、データをに変換しながら、データの形式を保持できます。 [!DNL Real-Time Customer Profile] 取り込み中のPATCHリクエスト。 指定した入力に基づいて、 [!DNL Data Prep] を使用すると、単一の API ペイロードを送信し、データを [!DNL Real-Time Customer Profile] PATCHと [!DNL Identity Service] CREATE リクエスト。
 
 このドキュメントでは、でアップサートをストリーミングする方法について説明します。 [!DNL Data Prep].
 
@@ -110,19 +110,19 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 | `imsOrgId` | 組織に対応する ID。 |
 | `datasetId` | の ID [!DNL Profile]-enabled データフローのターゲットデータセット。 **注意**:これは、 [!DNL Profile]データフロー内で有効なターゲットデータセット ID が見つかりました。 |
 | `operations` | このパラメーターでは、 [!DNL Data Prep] は、受信リクエストに基づいて実行されます。 |
-| `operations.data` | で実行する必要があるアクションを定義します。 [!DNL Profile Service]. |
+| `operations.data` | で実行する必要があるアクションを定義します。 [!DNL Real-Time Customer Profile]. |
 | `operations.identity` | データに対して許可する操作を次のように定義します。 [!DNL Identity Service]. |
 | `operations.identityDatasetId` | （オプション）新しい ID をリンクする必要がある場合にのみ必要な ID データセットの ID。 |
 
 #### サポートされる操作
 
-次の操作は、 [!DNL Profile Service]:
+次の操作は、 [!DNL Real-Time Customer Profile]:
 
 | 運用 | 説明 |
 | --- | --- | 
-| `create` | デフォルトの操作。 これにより、の XDM エンティティ作成メソッドが生成されます。 [!DNL Profile Service]. |
-| `merge` | これにより、の XDM エンティティ更新メソッドが生成されます。 [!DNL Profile Service]. |
-| `delete` | これにより、の XDM エンティティ削除メソッドが生成されます。 [!DNL Profile Service] また、 [!DNL Profile Store]. |
+| `create` | デフォルトの操作。 これにより、の XDM エンティティ作成メソッドが生成されます。 [!DNL Real-Time Customer Profile]. |
+| `merge` | これにより、の XDM エンティティ更新メソッドが生成されます。 [!DNL Real-Time Customer Profile]. |
+| `delete` | これにより、の XDM エンティティ削除メソッドが生成されます。 [!DNL Real-Time Customer Profile] また、 [!DNL Profile Store]. |
 
 次の操作は、 [!DNL Identity Service]:
 
@@ -132,7 +132,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 ### ID 設定のないペイロード
 
-新しい ID をリンクする必要がない場合は、 `identity` および `identityDatasetId` パラメーターを使用します。 これにより、にのみデータが送信されます。 [!DNL Profile Service] そしてスキップ [!DNL Identity Service]. 以下の例のペイロードを参照してください。
+新しい ID をリンクする必要がない場合は、 `identity` および `identityDatasetId` パラメーターを使用します。 これにより、にのみデータが送信されます。 [!DNL Real-Time Customer Profile] そしてスキップ [!DNL Identity Service]. 以下の例のペイロードを参照してください。
 
 ```shell
 {
@@ -157,7 +157,7 @@ XDM の更新の場合、スキーマを有効にする必要があります。 
 
 ### 静的フィールドを XDM スキーマのプライマリ ID フィールドとして指定する
 
-次の例では、 `state`, `homePhone.number` その他の属性は、それぞれの指定された値で [!DNL Profile] ～の主なアイデンティティを持つ `sampleEmail@gmail.com`. 次に、XDM エンティティ更新メッセージがストリーミングによって生成されます [!DNL Data Prep] コンポーネント。 [!DNL Profile Service] 次に、XDM 更新メッセージがプロファイルレコードをアップサートすることを確認します。
+次の例では、 `state`, `homePhone.number` その他の属性は、それぞれの指定された値で [!DNL Profile] ～の主なアイデンティティを持つ `sampleEmail@gmail.com`. 次に、XDM エンティティ更新メッセージがストリーミングによって生成されます [!DNL Data Prep] コンポーネント。 [!DNL Real-Time Customer Profile] 次に、XDM 更新メッセージがプロファイルレコードをアップサートすることを確認します。
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### XDM スキーマの ID マップフィールドグループを使用して、いずれかの ID フィールドをプライマリ ID として指定します
 
-この例では、ヘッダーに `operations` 属性 `identity` および `identityDatasetId` プロパティ。 これにより、データを [!DNL Profile Service] また、に渡される ID [!DNL Identity Service].
+この例では、ヘッダーに `operations` 属性 `identity` および `identityDatasetId` プロパティ。 これにより、データを [!DNL Real-Time Customer Profile] また、に渡される ID [!DNL Identity Service].
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -255,10 +255,10 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 次に、 [!DNL Data Prep]:
 
-* ストリーミングアップサートメソッドは、部分行の更新をに送信する場合にのみ使用してください。 [!DNL Profile Service]. 行の一部の更新は、 **not** データレイクによって消費されます。
+* ストリーミングアップサートメソッドは、部分行の更新をに送信する場合にのみ使用してください。 [!DNL Real-Time Customer Profile]. 行の一部の更新は、 **not** データレイクによって消費されます。
 * ストリーミングアップサートメソッドでは、ID の更新、置換、削除はサポートされていません。 存在しない場合は新しい ID が作成されます。 したがって、 `identity` 操作は常に作成するように設定する必要があります。 ID が既に存在する場合、操作は何も実行されません。
 * 現在、ストリーミングアップサートメソッドはをサポートしていません [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) および [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## 次の手順
 
-このドキュメントを読むと、でアップサートをストリーミングする方法を理解できます。 [!DNL Data Prep] 部分的な行の更新を [!DNL Profile Service] データを作成し、単一の API リクエストに id を作成してリンクすることもできます。 その他の情報 [!DNL Data Prep] 機能、お読みください [[!DNL Data Prep] 概要](./home.md). マッピングセットを [!DNL Data Prep] API( [[!DNL Data Prep] 開発者ガイド](./api/overview.md).
+このドキュメントを読むと、でアップサートをストリーミングする方法を理解できます。 [!DNL Data Prep] 部分的な行の更新を [!DNL Real-Time Customer Profile] データを作成し、単一の API リクエストに id を作成してリンクすることもできます。 その他の情報 [!DNL Data Prep] 機能、お読みください [[!DNL Data Prep] 概要](./home.md). マッピングセットを [!DNL Data Prep] API( [[!DNL Data Prep] 開発者ガイド](./api/overview.md).
