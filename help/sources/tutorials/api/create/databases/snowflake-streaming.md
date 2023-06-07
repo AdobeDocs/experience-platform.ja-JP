@@ -3,7 +3,7 @@ title: SnowflakeストリーミングアカウントをAdobe Experience Platform
 description: フローサービス API を使用してAdobe Experience PlatformをSnowflakeストリーミングに接続する方法について説明します。
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 8bc232034301fa713f61bd3f11fbde122afcdcf9
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 30%
@@ -15,7 +15,7 @@ ht-degree: 30%
 >[!IMPORTANT]
 >
 >* この [!DNL Snowflake] ストリーミングソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
->* この [!DNL Snowflake] ストリーミングソースは、Real-Time CDP Ultimate を購入したお客様向けのソースカタログで利用できます。
+>* の API サポート [!DNL Snowflake] ストリーミングソースは、Real-Time CDP Ultimate を購入済みのお客様のみご利用いただけます。
 
 
 このチュートリアルでは、 [!DNL Snowflake] を使用してAdobe Experience Platformにアカウント [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
