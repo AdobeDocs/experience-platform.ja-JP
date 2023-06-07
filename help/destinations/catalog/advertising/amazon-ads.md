@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
 workflow-type: tm+mt
-source-wordcount: '1277'
-ht-degree: 100%
+source-wordcount: '1401'
+ht-degree: 78%
 
 ---
 
@@ -18,8 +18,6 @@ Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle
 
 Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 
-この接続では、`US`、`CA`、`MX`、`BR` の Amazon マーケットプレイスでのオーディエンス作成をサポートしています。
-
 >[!IMPORTANT]
 >
 >このドキュメントページは、*Amazon Ads* チームが作成したものです。現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
@@ -30,11 +28,11 @@ Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP�
 
 ### アクティブ化とターゲティング {#activation-and-targeting}
 
-この Amazon DSP との統合により、Amazon Ads の広告主は広告主の CDP セグメントを Adobe Experience Platform から Amazon の DSP に渡して、広告ターゲティング用の広告主オーディエンスを作成できます。オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。さらに、Amazon Marketing Cloud を通じて生成されたシグナルを使用して、広告主は広告主オーディエンスを最適化し、オーディエンスの変更を Amazon DSP と同期させることができます。
+この Amazon DSP との統合により、Amazon Ads の広告主は広告主の CDP セグメントを Adobe Experience Platform から Amazon の DSP に渡して、広告ターゲティング用の広告主オーディエンスを作成できます。オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。
 
 ## 前提条件 {#prerequisites}
 
-Adobe Experience Platform で Amazon Ads 接続を使用するには、まずユーザーが Amazon DSP 広告主アカウントにアクセスできる必要があります。これらのインスタンスをプロビジョニングするには、Amazon Ads web サイトの次のページにアクセスしてください。
+Adobe Experience PlatformとのAmazon Ads 接続を使用するには、最初にAmazon DSP Advertiser アカウントにアクセスできる必要があります。 これらのインスタンスをプロビジョニングするには、Amazon Ads Web サイトの次のページにアクセスします。
 
 * [Amazon DSP - デマンドサイドプラットフォームで広告を始める](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -72,7 +70,7 @@ Adobe Experience Platform で Amazon Ads 接続を使用するには、まずユ
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-Amazon Ads 接続インターフェイスに移動するので、まず接続先の広告主アカウントを選択します。接続すると、選択した広告主アカウントの ID が付与された新しい接続で Adobe Experience Platform にリダイレクトされます。宛先の設定画面で適切な広告主アカウントを選択して続行します。
+Amazon Ads 接続インターフェイスに移動し、最初に接続先の広告主アカウントを選択します。 接続すると、選択した広告主アカウントの ID が付いた新しい接続で、Adobe Experience Platformにリダイレクトされます。 宛先の設定画面で適切な広告主アカウントを選択して続行します。
 
 * **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
 
@@ -83,10 +81,14 @@ Amazon Ads 接続インターフェイスに移動するので、まず接続先
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL Amazon Ads 広告主 ID]**：宛先に使用するターゲット Amazon Ads アカウントの ID を選択します。
+>[!NOTE]
+>
+>宛先の設定を保存すると、Amazonアカウントを通じて再認証した場合でも、Amazon Ads Advertiser ID を変更できなくなります。 別のAmazon Ads 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。
+* **[!UICONTROL 広告主の地域]**:広告主がホストされている適切な地域を選択します。 各地域でサポートされるマーケットプレースについて詳しくは、 [Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-メモ：この Amazon Ads 広告主 ID を選択したら、新しい宛先を作成してこれを変更する必要があります。OAuth 資格情報を再認証し、新しい広告主 ID を選択した場合、変更は適用されません。
 
-![新しい宛先の設定](../../assets/catalog/advertising/amazon_ads_image_1.png)
+
+![新しい宛先の設定](../../assets/catalog/advertising/amazon_ads_image_4.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -112,7 +114,7 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 * ハッシュ化された電話番号をマッピングするには、`Phone_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化されていないメールアドレスまたは電話番号をマッピングするには、対応する ID 名前空間をソースフィールドとして選択し、「`Apply Transformation`」オプションをオンにして、アクティブ化時に Platform で ID をハッシュ化するように設定します。
 
-使用できる限りのフィールドをマッピングすることを強くお勧めします。使用可能なソース属性が 1 つしかない場合は、1 つのフィールドだけをマッピングできます。Amazon Ads 宛先では、マッピングされたすべてのフィールドをマッピング目的で使用し、より多くのフィールドを指定するほどマッチ率が高くなります。使用できる識別子について詳しくは、[Amazon Ads のハッシュ化されたオーディエンスのヘルプページ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)を参照してください。
+使用できる限りのフィールドをマッピングすることを強くお勧めします。使用可能なソース属性が 1 つしかない場合は、1 つのフィールドだけをマッピングできます。Amazon Ads の宛先は、マッピングの目的ですべてのマッピングされたフィールドを利用し、より多くのフィールドが提供される場合は、より高い一致率を生成します。 使用できる識別子について詳しくは、[Amazon Ads のハッシュ化されたオーディエンスのヘルプページ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)を参照してください。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -132,4 +134,19 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 
 その他のヘルプドキュメントについては、次の Amazon Ads ヘルプリソースを参照してください。
 
-* [Amazon DSP ヘルプセンター](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+* [Amazon DSP ヘルプセンター](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+
+### 変更ログ {#changelog}
+
+この節では、この宛先コネクタに対する機能の概要と重要なドキュメントの更新について説明します。
+
++++ 変更ログを表示
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2023年5月 | 機能とドキュメントの更新 | <ul><li>宛先接続ワークフローに、広告主の地域の選択のサポートが追加されました。</li><li>広告主の地域の選択が追加されたことを反映するようにドキュメントが更新されました。 正しい広告主の地域の選択について詳しくは、 [Amazonドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| 2023年3月 | 初回リリース | 宛先の初期リリースとドキュメント公開。 |
+
+{style="table-layout:auto"}
+
++++
