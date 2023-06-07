@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 40%
+ht-degree: 42%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 40%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Platform でのデータ使用の管理"
->abstract="<h2>説明</h2><p>Experience Platformのデータガバナンスフレームワークを使用すると、データ使用制限に従って属性とスキーマにラベルを付け、特定のマーケティングアクションに対してこれらの制限を識別し遵守するポリシーを設定できます。</p>"
+>abstract="<h2>説明</h2><p>Experience Platform のデータガバナンスフレームワークを使用すると、データ使用制限に従って属性やスキーマにラベルを付け、これらの制限を識別し遵守するポリシーを特定のマーケティングアクションに設定できます。</p>"
 
 このユーザガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 

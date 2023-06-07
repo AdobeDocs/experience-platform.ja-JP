@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 34%
+ht-degree: 35%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 34%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
 >title="データセットの有効期限"
->abstract="この列は、ターゲットのデータセットが自動的に期限切れになるまでの残り日数を示します。"
+>abstract="この列は、ターゲットデータセットが自動的に期限切れになるまでの残り日数を示します。"
 
 内 [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで **[!UICONTROL データセット]** ダッシュボード。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 
