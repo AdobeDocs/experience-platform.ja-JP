@@ -2,10 +2,10 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 86%
+source-wordcount: '987'
+ht-degree: 72%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 86%
 >
 >データセットの書き出し機能のベータ版リリースと、ファイル書き出し機能の改善により、宛先カタログに 2 つの [!DNL SFTP] カードが表示されるようになりました。
 >* 既に **[!UICONTROL SFTP]** 宛先にファイルを書き出している場合：新しい **[!UICONTROL SFTP ベータ版]**&#x200B;宛先への新しいデータフローを作成してください。
->* **[!UICONTROL SFTP]** 宛先へのデータフローをまだ作成していない場合は、新しい **[!UICONTROL SFTP ベータ版]**&#x200B;カードを使用してファイルを **[!UICONTROL SFTP]** に書き出してください。
+>* まだ **[!UICONTROL SFTP]** 宛先、新しい **[!UICONTROL SFTP ベータ版]** 書き出し先のカード **[!UICONTROL SFTP]**.
 
 
 ![2 つの SFTP 宛先カードを並べて表示した画像](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
@@ -36,6 +36,11 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 >[!IMPORTANT]
 >
 > Experience Platform では SFTP サーバーへのデータの書き出しをサポートしていますが、データを書き出す際に推奨されるクラウドストレージの場所は [!DNL Amazon S3] と [!DNL SFTP] です。
+
+## API または UI を使用した SFTP への接続 {#connect-api-or-ui}
+
+* Platform ユーザーインターフェイスを使用して SFTP ストレージの場所に接続するには、以下の節を参照してください [宛先に接続](#connect) および [この宛先へのセグメントのアクティブ化](#activate) 下
+* プログラムで SFTP ストレージの場所に接続するには、 [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対してセグメントをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -70,12 +75,13 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 >title="SSH 秘密鍵"
 >abstract="SSH 秘密鍵は、Base64 でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。"
 
-**[!UICONTROL 基本認証]**&#x200B;タイプを選択して SFTP ストレージの場所に接続する場合：
+次を選択した場合、 **[!UICONTROL パスワード付き SFTP]** SFTP ロケーションに接続するための認証タイプ：
 
 ![SFTP 宛先の基本認証](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL ホスト]**：SFTP ストレージの場所のアドレス
+* **[!UICONTROL ドメイン]**:SFTP ストレージの場所のアドレス。
 * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
+* **[!UICONTROL ポート]**：SFTP ストレージの場所で使用されるポート
 * **[!UICONTROL パスワード]**：SFTP ストレージの場所にログインするためのパスワード
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
@@ -100,7 +106,7 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 ![SFTP 宛先に対して使用可能な宛先詳細](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL 名前]**：Experience Platform ユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
+* **[!UICONTROL 名前]**:Experience Platformユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**：この宛先の説明を入力します
 * **[!UICONTROL フォルダーパス]**：SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
 * **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、[データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md)を参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
 
 ## 書き出したデータ {#exported-data}
 
 [!DNL SFTP] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの[プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
-## IP アドレス許可リスト
+## IP アドレス許可リスト {#ip-address-allow-list}
 
 参照： [SFTP の宛先の IP アドレス許可リスト](ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。

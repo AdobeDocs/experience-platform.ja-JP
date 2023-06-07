@@ -2,10 +2,10 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 72%
+source-wordcount: '1265'
+ht-degree: 64%
 
 ---
 
@@ -26,6 +26,11 @@ ht-degree: 72%
 
 Platform では、[!DNL Data Landing Zone] コンテナへアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。すべてのファイルは 7 日後に削除されます。
 
+## に接続 [!UICONTROL データランディングゾーン] API または UI を介したストレージ {#connect-api-or-ui}
+
+* 次に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先へのセグメントのアクティブ化](#activate) 下
+* 次に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対してセグメントをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
@@ -43,7 +48,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 ### 接続 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer]
 
-[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。を使用し始めるには [!DNL Data Landing Zone]の場合、最初に資格情報を取得し、に入力する必要があります [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
+[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。を使用し始めるには [!DNL Data Landing Zone]を使用する場合は、まず資格情報を取得し、に入力する必要があります。 [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
 
 [!DNL Azure Storage Explorer] UI 内で、左側のナビゲーションバーの「接続」アイコンを選択します。**リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** を選択し、[!DNL Data Landing Zone] ストレージに接続します。
 
@@ -97,7 +102,7 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `containerName` | ランディングゾーンの名前。 |
-| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの承認に必要な情報がすべて含まれています。 |
+| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストを承認するために必要なすべての情報が含まれます。 |
 | `SASUri` | ランディングゾーンの共有アクセス署名 URI です。 この文字列は、認証先のランディングゾーンへの URI と、対応する SAS トークンの組み合わせです。 |
 
 >[!ENDSHADEBOX]
@@ -114,7 +119,7 @@ curl -X GET \
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、以下の節で説明されているように、Experience Platform UI で [!DNL Data Landing Zone] の宛先への接続を確立する必要があります。
+[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、 [!DNL Data Landing Zone] の宛先を指定します（以下の節で説明）。
 
 ## 宛先への接続 {#connect}
 
@@ -163,7 +168,10 @@ curl -X GET \
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出し設定方法について詳しくは、[データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md)を参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
 
 ## データの正常な書き出しの検証 {#exported-data}
 

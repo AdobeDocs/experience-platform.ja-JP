@@ -2,10 +2,10 @@
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 87%
+source-wordcount: '1054'
+ht-degree: 79%
 
 ---
 
@@ -32,6 +32,11 @@ ht-degree: 87%
 ## 概要 {#overview}
 
 [!DNL Amazon S3] ストレージへのライブアウトバウンド接続を作成して、Adobe Experience Platform から独自の S3 バケットにデータファイルを定期的に書き出します。
+
+## に接続 [!DNL Amazon S3] API または UI を介したストレージ {#connect-api-or-ui}
+
+* 次に接続するには： [!DNL Amazon S3] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先へのセグメントのアクティブ化](#activate) 下
+* 次に接続するには： [!DNL Amazon S3] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対してセグメントをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -132,7 +137,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、[データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md)を参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
 
 ## 書き出したデータ {#exported-data}
 

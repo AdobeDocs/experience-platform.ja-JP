@@ -2,10 +2,10 @@
 title: （ベータ版）Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、セグメントをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 92%
+source-wordcount: '1005'
+ht-degree: 84%
 
 ---
 
@@ -18,6 +18,11 @@ ht-degree: 92%
 ## 概要 {#overview}
 
 [!DNL Google Cloud Storage] へのライブアウトバウンド接続を作成して、Adobe Experience Platform から独自のバケットにデータファイルを定期的に書き出します。
+
+## に接続 [!DNL Google Cloud Storage] API または UI を介したストレージ {#connect-api-or-ui}
+
+* 次に接続するには： [!DNL Google Cloud Storage] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先へのセグメントのアクティブ化](#activate) 下
+* 次に接続するには： [!DNL Google Cloud Storage] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対してセグメントをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -102,7 +107,10 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットの書き出し設定方法について詳しくは、[データセットの書き出しチュートリアル](/help/destinations/ui/export-datasets.md)を参照してください。
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
 
 ## データの正常な書き出しの検証 {#exported-data}
 
