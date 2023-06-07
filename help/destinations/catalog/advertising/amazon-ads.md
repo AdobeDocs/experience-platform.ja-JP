@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 78%
@@ -81,9 +81,11 @@ Amazon Ads 接続インターフェイスに移動し、最初に接続先の広
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL Amazon Ads 広告主 ID]**：宛先に使用するターゲット Amazon Ads アカウントの ID を選択します。
+
 >[!NOTE]
 >
 >宛先の設定を保存すると、Amazonアカウントを通じて再認証した場合でも、Amazon Ads Advertiser ID を変更できなくなります。 別のAmazon Ads 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。
+
 * **[!UICONTROL 広告主の地域]**:広告主がホストされている適切な地域を選択します。 各地域でサポートされるマーケットプレースについて詳しくは、 [Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 
 * [Amazon DSP ヘルプセンター](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### 変更ログ {#changelog}
+## 変更ログ {#changelog}
 
 この節では、この宛先コネクタに対する機能の概要と重要なドキュメントの更新について説明します。
 
@@ -144,7 +146,7 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年5月 | 機能とドキュメントの更新 | <ul><li>宛先接続ワークフローに、広告主の地域の選択のサポートが追加されました。</li><li>広告主の地域の選択が追加されたことを反映するようにドキュメントが更新されました。 正しい広告主の地域の選択について詳しくは、 [Amazonドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| 2023年5月 | 機能とドキュメントの更新 | <ul><li>広告主の地域の選択のサポートを [宛先接続ワークフロー](#destination-details).</li><li>広告主の地域の選択が追加されたことを反映するようにドキュメントが更新されました。 正しい広告主の地域の選択について詳しくは、 [Amazonドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初期リリースとドキュメント公開。 |
 
 {style="table-layout:auto"}
