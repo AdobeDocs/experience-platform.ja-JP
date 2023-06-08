@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データランディングゾーンのソース
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を説明します
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 43%
+source-wordcount: '869'
+ht-degree: 41%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 43%
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、制御文字 ( `0x00` から `0x1F`, `\u0081`など ) は許可されていません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## [!DNL Data Landing Zone] のコンテンツを管理
+## データランディングゾーンのコンテンツを管理{#manage-the-contents-of-your-data-landing-zone}
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
@@ -162,3 +162,8 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 - [UI を使用した  [!DNL Data Landing Zone]  の Platform への接続](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>現在、 [!DNL Data Landing Zone]. アクセスに対してサポートされているメソッドは次のとおりです [ここ](#manage-the-contents-of-your-data-landing-zone).
+
