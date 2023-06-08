@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: プレイブックの概要
+title: 使用例のプレイブックの概要
 description: 様々なマーケティングの使用例を開始するためのExperience Platformのユースケースプレイブック機能の使用方法を説明します
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 3%
 このドキュメントガイドの内容は次のとおりです。
 
 * **[ユースケースプレイブックの概要](#overview)**
-* [プレイブックの表示とアセットの生成](ui-guide.md#view-playbook-generate-assets)
-* [プレイブックのインスタンスを有効、使用、再利用する ](ui-guide.md#enable-playbook)
+* [適切なプレイブックを見つける](/help/use-case-playbooks/playbooks/discover.md)
+* [プレイブックインスタンスの作成、共有、再利用](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [トラブルシューティングおよび既知の制限事項](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -48,7 +48,7 @@ Adobe Journey Optimizerプレイブックを選択する場合、目的は、製
 
 ## UI ガイド
 
-使用するプレイブックを決定したら、UI から選択して使用を開始します。 UI ガイド ( [プレイブックを有効にして再利用する方法](/help/use-case-playbooks/playbooks/ui-guide.md) を参照してください。
+使用するプレイブックを決定したら、UI から選択して使用を開始します。 UI ガイドを読む： [適切なプレイブックを見つける方法](/help/use-case-playbooks/playbooks/discover.md) お前と [プレイブックインスタンスの作成、共有、再利用方法](/help/use-case-playbooks/playbooks/create-share-reuse.md) を参照してください。
 
 ## トラブルシューティングおよび既知の制限事項
 

@@ -5,10 +5,10 @@ breadcrumb-title: Adobe Experience Platform Use Case Playbooks
 user-guide-description: Adobe Experience Platformのプレイブックを使用してアセットを生成し、様々なマーケティングの使用例に取り組みます。
 feature: Playbooks
 hide: true
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 4%
+source-wordcount: '52'
+ht-degree: 1%
 
 ---
 
@@ -17,5 +17,6 @@ ht-degree: 4%
 
 * プレイブック {#playbooks}
    * [概要](/help/use-case-playbooks/playbooks/overview.md)
-   * [プレイブックを有効にして再利用する方法](/help/use-case-playbooks/playbooks/ui-guide.md)
-   * [トラブルシューティング](/help/use-case-playbooks/playbooks/troubleshooting.md)
+   * [適切なプレイブックを見つける](/help/use-case-playbooks/playbooks/discover.md)
+   * [プレイブックインスタンスの作成、共有、再利用](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+   * [トラブルシューティングおよび既知の制限事項](/help/use-case-playbooks/playbooks/troubleshooting.md)
