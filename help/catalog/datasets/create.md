@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API を使用したデータセットの作成
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 86%
+source-wordcount: '1303'
+ht-degree: 81%
 
 ---
 
@@ -45,9 +45,7 @@ ht-degree: 86%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
-
-* Content-Type: application/json
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、追加の `Content-Type: application/json` ヘッダーが必要です。JSON+PATCH要求の場合、 `Content-Type` は、 `application/json-patch+json`.
 
 ## チュートリアル
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **応答** 
 
-成功した応答は、HTTP ステータス 201（作成済み）と、新しく作成されたバッチの詳細を含む応答オブジェクトを返します。これには、読み取り専用のシステム生成文字列である `id` が含まれます。
+正常な応答は、HTTP ステータス 201（作成済み）と応答オブジェクトを返します。 応答オブジェクトは、新しく作成されたバッチの ID をの形式で含む配列で構成されます `"@/batches/{BATCH_ID}"`. バッチ ID は、API 呼び出しでバッチを参照するために使用される、読み取り専用のシステム生成文字列です。
 
 ```JSON
 {
@@ -355,12 +353,12 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 ## 取得の監視
 
-データのサイズに応じて、バッチ取得には様々な時間がかかります。バッチの ID を含む `batch` リクエストパラメーターを `GET /batches` リクエストに追加することで、バッチのステータスを監視できます。API は、データセットをポーリングし、バッチの取得から、応答内の `status` が完了（「成功」または「失敗」）を示すまでの状態を調べます。
+データのサイズに応じて、バッチ取得には様々な時間がかかります。バッチの ID をに追加することで、バッチのステータスを監視できます `GET /batches` リクエスト。
 
 **API 形式**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | パラメーター | 説明 |

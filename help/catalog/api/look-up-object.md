@@ -4,10 +4,10 @@ solution: Experience Platform
 title: カタログオブジェクトの検索
 description: 特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 71%
+ht-degree: 63%
 
 ---
 
@@ -28,16 +28,16 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、ID でデータセットを取得し、その `name`、`description`、`state`、`tags`、`files`プロパティを返します。
+次のリクエストでは、ID でデータセットを取得し、その ID を返します `name`, `description`, `tags`、および `files` プロパティ。
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,state,tags,files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,tags,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -53,7 +53,6 @@ curl -X GET \
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset",
         "description": "Sample dataset containing important data.",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: カタログサービス API ガイド
 description: カタログサービス API を使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 58%
 
 ---
@@ -63,6 +63,6 @@ ht-degree: 58%
 
 このドキュメントでは、 [!DNL Catalog] API これで、この開発者ガイドに記載されているサンプル呼び出しに進んで、その手順に従うことができます。
 
-このガイドの例のほとんどでは、 `/dataSets` エンドポイントに適用されますが、原則は、 [!DNL Catalog] ( `/batches` および `/accounts`) をクリックします。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
+このガイドの例のほとんどでは、 `/dataSets` エンドポイントに適用されますが、原則は、 [!DNL Catalog] ( `/batches`) をクリックします。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
 
 を [!DNL Catalog] API はデータ取得に関わっています。詳しくは、 [データセットの作成](../datasets/create.md).

@@ -4,7 +4,7 @@ title: API を使用したデータセットのプロファイル更新の有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 95%
@@ -77,7 +77,6 @@ curl -X POST \
   -d '{
         "name": "Sample dataset",
         "description: "A sample dataset with a sample description.",
-        "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -159,15 +158,6 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
                 "enabled:true"
             ]
         },
-        "lastBatchId": "{BATCH_ID}",
-        "lastBatchStatus": "success",
-        "dule": {},
-        "statsCache": {
-            "startDate": null,
-            "endDate": null
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
         "version": "1.0.1",
         "created": 1536536917382,
         "updated": 1539793978215,
@@ -175,15 +165,8 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "status": "enabled",
-        "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "{SCHEMA}",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": []
-        },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
             "contentType": "application/vnd.adobe.xed+json"

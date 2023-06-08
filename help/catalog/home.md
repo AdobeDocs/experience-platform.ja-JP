@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Catalog Service の概要
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '694'
 ht-degree: 100%
 
 ---
@@ -53,10 +53,7 @@ XDM システムの一般的な情報については、「[XDM システムの�
 
 | オブジェクト | API エンドポイント | 定義 |
 |---|---|---|
-| アカウント | `/accounts` | ソース接続を作成する場合は、認証資格情報を指定する必要があります。アカウントは、特定の種類の接続の作成に使用された認証資格情報のコレクションを表します。各接続には、[!DNL Catalog] で保持され、 [!DNL Azure Key Vault] で保護される一意のパラメーターのセットが含まれます。 |
 | バッチ | `/batches` | バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] 内のバッチオブジェクトは、バッチの取得指標（処理されたレコード数やディスク上のサイズなど）の概要を示し、バッチ操作の影響を受けたデータセット、ビュー、その他のリソースへのリンクも含みます。 |
-| 接続 | `/connections` | 接続はソースコネクタの単一インスタンスです。接続は組織に固有で、コネクタの種類に適した認証資格情報を使用して構成されます。 |
-| コネクタ | `/connectors` | コネクタは、ソース接続が他のアドビアプリケーション（Adobe Analytics、Adobe Audience Manager など）、サードパーティのクラウドストレージソース（[!DNL Azure Blob]、[!DNL Amazon S3]、FTP サーバー、SFTP サーバーなど）、サードパーティ CRM システム（[!DNL Microsoft Dynamics] や [!DNL Salesforce] など）からデータを収集する方法を定義します 。 |
 | データセット | `/dataSets` | データセットは、スキーマ（列）とフィールド（行）を含むデータ（通常はテーブル）の収集に使用されるストレージと管理の構成体です。詳しくは、[データセットの概要](./datasets/overview.md)を参照してください。 |
 | データセットファイル | `/datasetFiles` | データセットファイルは、[!DNL Platform] に保存されたデータのブロックを表します。リテラルファイルのレコードについては、ファイルのサイズ、ファイルに含まれるレコードの数、およびファイルを取得したバッチへの参照を見つけることができます。 |
 

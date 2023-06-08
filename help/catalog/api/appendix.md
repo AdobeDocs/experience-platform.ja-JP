@@ -4,10 +4,10 @@ solution: Experience Platform
 title: カタログサービス API ガイドの付録
 description: このドキュメントには、Adobe Experience Platformでカタログ API を使用する際に役立つ追加情報が含まれています。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 75%
+source-wordcount: '458'
+ht-degree: 77%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 75%
 
 一部 [!DNL Catalog] オブジェクトは他のオブジェクトと相互に関連付けることができます [!DNL Catalog] オブジェクト。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
 
-[特定のデータセットの検索](look-up-object.md)時にドキュメントに返されるデータセットの例には、URI 値 `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"` を持つ `files` フィールドが含まれています。この URI を新しい GET リクエストのパスとして使用すると、`files` フィールドの内容を表示できます。
+[特定のデータセットの検索](look-up-object.md)時にドキュメントに返されるデータセットの例には、URI 値 `"@/datasetFiles?datasetId={DATASET_ID}"` を持つ `files` フィールドが含まれています。この URI を新しい GET リクエストのパスとして使用すると、`files` フィールドの内容を表示できます。
 
 **API 形式**
 
@@ -37,7 +37,7 @@ GET {OBJECT_URI}
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -88,90 +88,6 @@ curl -X GET \
     }
 }
 ```
-
-## 1 回の呼び出しでの複数リクエスト
-
-のルートエンドポイント [!DNL Catalog] API を使用すると、1 回の呼び出しで複数のリクエストを実行できます。 リクエストのペイロードには、通常は個々のリクエストを表すオブジェクトの配列が含まれており、順番に実行されます。
-
-これらのリクエストが [!DNL Catalog] どの変更も失敗し、すべての変更が元に戻ります。
-
-**API 形式**
-
-```http
-POST /
-```
-
-**リクエスト**
-
-次のリクエストでは、新しいデータセットを作成し、そのデータセットに関連する表示を作成します。この例は、テンプレート言語を使用して、以前の呼び出しで返された値にアクセスし、後続の呼び出しで使用する方法を示しています。
-
-例えば、前のサブリクエストから返された値を参照する場合、`<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` の形式で参照を作成できます。ここで `{REQUEST_ID}` は、以下に示すように、サブリクエストのユーザー指定 ID です。これらのテンプレートを使用して、前のサブリクエストの応答オブジェクトの本文で使用可能な任意の属性を参照できます。
-
->[!NOTE]
->
-> 実行されたサブリクエストがオブジェクトへの参照のみを返す場合（カタログ API のほとんどの POST リクエストと PUT リクエストのデフォルト）、この参照は `id` 値にエイリアスされ、`<<{OBJECT_ID}.id>>` として使用できます 。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `id` | 応答にリクエストを照合できるように、応答オブジェクトに添付されるユーザー指定の ID。[!DNL Catalog] はこの値を格納せず、参照用に応答で返します。 |
-| `resource` | リソースのルートを基準としたリソースパス [!DNL Catalog] API プロトコルとドメインはこの値の一部ではなく、「/」というプリフィックスを付ける必要があります。<br/><br/> サブリクエストの `method` として PATCH または DELETE を使用する場合は、リソースパスにオブジェクト ID を含めます。ユーザーが指定した `id`の場合、リソースパスは [!DNL Catalog] オブジェクト自体 ( 例： `resource: "/dataSets/1234567890"`) をクリックします。 |
-| `method` | リクエストでとられるアクションに関連するメソッド（GET、PUT、POST、PATCH、DELETE）の名前。 |
-| `body` | 通常、POST、PUT、PATCH リクエストのペイロードとして渡される JSON ドキュメント。このプロパティは、GET または DELETE リクエストには必要ありません。 |
-
-**応答**
-
-成功した応答は、各リクエストに割り当てた `id`、個々のリクエストの HTTP ステータスコード、および応答 `body` を含むオブジェクトの配列を返します。3 つのリクエスト例はすべて新しいオブジェクトを作成するため、 `body` 各オブジェクトのは、新しく作成されたオブジェクトの ID のみを含む配列で、は、成功したPOST応答で最も多い [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-複数のリクエストに対する応答を検査する際は、各サブリクエストのコードを検証し、親の POST リクエストの HTTP ステータスコードだけに依存しないように注意してください。  単一のサブリクエストが 404（無効なリソースに対する GET リクエストなど）を返す一方、リクエスト全体が 200 を返す可能性があります。
 
 ## 追加のリクエストヘッダー
 
