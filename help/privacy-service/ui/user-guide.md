@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1467'
 ht-degree: 67%
 
 ---
@@ -38,7 +38,9 @@ ht-degree: 67%
 
 | UI ラベル | 規則 |
 | --- | --- |
+| [!UICONTROL CPA] | 「[!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | 「[!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | 「[!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | 欧州連合 [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | タイ [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | ブラジル [!DNL Lei Geral de Proteção de Dados] |

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシージョブ API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 63%
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
+| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
 
