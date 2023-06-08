@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 67%
+source-wordcount: '1473'
+ht-degree: 66%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 67%
 
 それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、 **[!UICONTROL 規制のタイプ]** ドロップダウンメニューを開き、リストから目的の規制を選択します。
 
-![Regulation Type ドロップダウン](../images/user-guide/regulation.png)
+![Privacy Serviceコンソールと「 Regulation Type 」ドロップダウン](../images/user-guide/regulation.png)
 
 規制の種類を変更すると、ダッシュボードが更新され、選択した規制に適用されるすべての操作、フィルター、ウィジェット、ジョブ作成のダイアログが表示されます。
 

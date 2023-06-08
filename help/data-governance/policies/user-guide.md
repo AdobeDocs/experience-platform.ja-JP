@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのデータ使用ポリシーの管理
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platform ユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要について説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 100%
+source-wordcount: '1788'
+ht-degree: 91%
 
 ---
 
@@ -59,7 +59,19 @@ ht-degree: 100%
 
 * ベータ版に属していない場合は、すぐに[データガバナンスポリシーの作成](#create-governance-policy)のワークフローが表示されます。
 * ベータ版に属している場合は、[同意ポリシーを作成する](#consent-policy)追加のオプションが表示されます。
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### データガバナンスと同意ポリシーの併用 {#combine-policies}
+
+>[!NOTE]
+>
+>同意ポリシーは、現在、Adobe Healthcare Shield または Adobe Privacy and Security Shield を購入した組織でのみ使用できます。
+
+ガバナンスと同意ポリシーを組み合わせて、宛先にマッピングされたオーディエンスを管理するための堅牢なルールを作成できます。 同意ポリシーは本質的に包含的です。つまり、各マーケティングエクスペリエンスに含めるプロファイルを指定します。 逆に、ガバナンスポリシーは、特定のラベル付き属性を使用してアクティベーションを設定することを除外します。
+
+この動作を使用すると、正しいプロファイルを含むポリシーと同意ルールの組み合わせを設定できますが、設定した組織ルールに反するデータを含めることはできません。 例えば、機密データを含めるのを除外し、ソーシャルメディアを介したマーケティングに関して同意したユーザーをターゲットにできる場合などです。 このシナリオに必要な手順については、以下の解説図で説明します。
+
+![ガバナンスと同意ポリシーを組み合わせて、オーディエンスを管理する堅牢なルールを作成する手順を説明した解説図です。](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### データガバナンスポリシーの作成 {#create-governance-policy}
 
