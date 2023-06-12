@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge API の概要
 description: Media Edge API の概要
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 8%
 
 ---
@@ -206,6 +206,8 @@ curl -X 'POST' \
 
 バッファー開始エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
 
+成功時の応答はステータスが 200 で、コンテンツは含まれていません。
+
 ## イベントリクエストを再生
 
 Play イベントは、メディアプレーヤーがその状態を「再生中」から「バッファリング」、「一時停止」、「エラー」などの別の状態に変更したときに送信されます。 Play イベントをリクエストするには、 `sessionId` を次のエンドポイントへの呼び出しのペイロードに追加します。
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+成功時の応答はステータスが 200 で、コンテンツは含まれていません。
 
 Play エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-セッション完了エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
+成功時の応答はステータスが 200 で、コンテンツは含まれていません。
 
 ## 応答コード
 
