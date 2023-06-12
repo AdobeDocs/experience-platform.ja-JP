@@ -1,25 +1,25 @@
 ---
-description: Destination SDKで作成した宛先に対して、オーディエンスのメタデータを設定する方法を説明します。
-title: オーディエンスメタデータの設定
+description: Destination SDK で作成された宛先に対するオーディエンスメタデータ設定の設定方法を説明します。
+title: オーディエンスメタデータ設定
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 
-# オーディエンスメタデータの設定
+# オーディエンスメタデータ設定
 
-Experience Platformから宛先にデータを書き出す際、Experience Platformと宛先の間で共有するために、セグメント名やセグメント ID など、特定のオーディエンスメタデータが必要になる場合があります。
+Experience Platform から宛先にデータを書き出す場合、特定のオーディエンスメタデータ（セグメント名やセグメント ID など）を Experience Platform と宛先の間で共有する必要がある可能性があります。
 
-Destination SDKは、宛先プラットフォームでオーディエンスをプログラムによって作成、更新、削除するために使用できるツールを提供します。
+Destination SDK には、宛先プラットフォームのオーディエンスをプログラムで作成、更新または削除するのに使用できるツールが用意されています。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
+このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したストリーミング宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration)方法に関するガイドを参照してください。
 
-オーディエンスメタデータテンプレートは、 `/authoring/audience-templates` endpoint. オーディエンスのメタデータ設定を作成した後、 `/authoring/destinations` エンドポイント：設定 `audienceMetadataConfig` 」セクションに入力します。 このセクションは、オーディエンステンプレートにマッピングする必要があるセグメントメタデータを宛先に伝えます。
+`/authoring/audience-templates` エンドポイントを介してオーディエンスメタデータテンプレートを設定できます。オーディエンスメタデータ設定を作成したら、`/authoring/destinations` エンドポイントを使用して、`audienceMetadataConfig` セクションを設定できます。このセクションは、オーディエンステンプレートにマッピングする必要があるセグメントメタデータを宛先に指示します。
 
-このページに示すコンポーネントを設定できる API 呼び出しの詳細な例については、次の API リファレンスページを参照してください。
+このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
 * [宛先設定の作成](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [宛先設定の更新](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -28,20 +28,20 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
-## サポートされる統合のタイプ {#supported-integration-types}
+## サポートされる統合タイプ {#supported-integration-types}
 
-このページで説明する機能をサポートする統合のタイプについて詳しくは、次の表を参照してください。
+このページで説明される機能をサポートする統合のタイプについて詳しくは、以下の表を参照してください。
 
-| 統合タイプ | 機能をサポート |
+| 統合タイプ | 機能のサポート |
 |---|---|
 | リアルタイム（ストリーミング）統合 | ○ |
-| ファイルベース（バッチ）の統合 | ○ |
+| ファイルベースの（バッチ）統合 | ○ |
 
-## サポートされているパラメーター {#supported-parameters}
+## サポートされるパラメーター {#supported-parameters}
 
-オーディエンスのメタデータ設定を作成する場合、次の表で説明するパラメーターを使用して、セグメントマッピング設定を指定できます。
+オーディエンスメタデータ設定を作成する際に、 以下の表で説明されているパラメーターを使用して、セグメントマッピング設定を設定できます。
 
 ```json
   "audienceMetadataConfig":{
@@ -54,25 +54,25 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | ブール値 | を返します。 [[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 宛先のアクティベーションワークフローの値は、Experience Platformセグメント名である必要があります。 |
-| `mapExperiencePlatformSegmentId` | ブール値 | を返します。 [[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 宛先のアクティベーションワークフローの値は、Experience Platformセグメント ID である必要があります。 |
-| `mapUserInput` | ブール値 | のユーザー入力を有効または無効にします [[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) の値を指定します。 次に設定した場合： `true`, `audienceTemplateId` は存在しません。 |
-| `audienceTemplateId` | ブール値 | この `instanceId` の [オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md) を宛先に使用します。 |
+| `mapExperiencePlatformSegmentName` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値が Experience Platform セグメント名である必要があるかどうかを示します。 |
+| `mapExperiencePlatformSegmentId` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値が Experience Platform セグメント ID である必要があるかどうかを示します。 |
+| `mapUserInput` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値に対するユーザー入力を有効または無効にします。`true` に設定すると、`audienceTemplateId` は存在できません。 |
+| `audienceTemplateId` | ブール値 | 宛先に使用される[オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md)の `instanceId`。 |
 
 {style="table-layout:auto"}
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、宛先に対するオーディエンスメタデータの設定方法をより深く理解できるようになります。
+この記事を読むことで、宛先に対するオーディエンスメタデータの設定方法について、理解を深めることができました。
 
-その他の宛先コンポーネントについて詳しくは、次の記事を参照してください。
+その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
 * [OAuth 2 認証](oauth2-authentication.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)
-* [ID 名前空間の設定](identity-namespace-configuration.md)
+* [ID 名前空間設定](identity-namespace-configuration.md)
 * [サポートされるマッピング設定](supported-mapping-configurations.md)
 * [宛先配信](destination-delivery.md)
 * [集計ポリシー](aggregation-policy.md)

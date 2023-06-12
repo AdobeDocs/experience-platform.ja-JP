@@ -1,38 +1,38 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを通じて宛先の公開リクエストの詳細を取得するために使用される API 呼び出しの例を示します。
-title: 宛先の公開リクエストの取得
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先公開リクエストに関する詳細を取得するために使用される API 呼び出しの例を示します。
+title: 宛先公開リクエストの取得
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '834'
-ht-degree: 36%
+ht-degree: 100%
 
 ---
 
 
-# 宛先の公開リクエストの取得
+# 宛先公開リクエストの取得
 
 >[!IMPORTANT]
 >
->この API エンドポイントを使用する必要があるのは、製品化された（公開）宛先を送信し、他のExperience Platformのお客様が使用できるようにする場合のみです。 独自の用途で非公開の宛先を作成する場合は、公開 API を使用して正式に宛先を送信する必要はありません。
+>他の Experience Platform 顧客が使用できるように、製品化（公開）された宛先を送信している場合にのみ、この API エンドポイントを使用する必要があります。自分で使用するためにプライベート宛先を作成している場合は、公開 API を使用して正式に宛先を送信する必要はありません。
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-宛先を設定およびテストしたら、レビューおよび公開用にアドビへと送信できます。読み取り [送信してレビュー用に、Destination SDKで作成した宛先を送信](../guides/submit-destination.md) 宛先の送信プロセスの一環として実行する必要があるその他のすべての手順については、を参照してください。
+宛先を設定してテストしたら、レビューおよび公開用にアドビに送信できます。宛先送信プロセスの一環として実行する必要があるその他のすべての手順については、[Destination SDK で作成した宛先をレビュー用に送信](../guides/submit-destination.md)を参照してください。
 
-公開リクエストを送信するには、次の場合に Publish Destinations API エンドポイントを使用します。
+以下の場合に、公開宛先 API エンドポイントを使用して公開リクエストを送信します。
 
-* Destination SDK パートナーとして、すべての Experience Platform 組織をまたいですべての Experience Platform の顧客がすべての Experience Platform の顧客が製品化された宛先を利用できるようにする場合。
-* あなたは *更新の有無* を設定に追加します。 設定の更新は、新しい公開リクエストを送信した後にのみ、宛先に反映されます。このリクエストはExperience Platformチームが承認します。
+* Destination SDK パートナーとして、すべての Experience Platform 顧客のすべての Experience Platform 組織にわたって、製品化された宛先を利用できるようにする場合。
+* 設定に対して&#x200B;*任意の更新*&#x200B;を行います。設定の更新は、新しい公開リクエストを送信し、Experience Platform チームによって承認された後にのみ、宛先に反映されます。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 宛先公開 API 操作の概要 {#get-started}
 
-続行する前に、[はじめる前に](../getting-started.md)の重要情報を参照してください。これは、必要な宛先オーサリング権限および必要なヘッダーを取得する方法を含む、API への呼び出しに成功するために確認する必要があります。
+続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 宛先の公開リクエストのリスト {#retrieve-list}
 
@@ -40,13 +40,13 @@ IMS 組織のすべての宛先のリストを取得するには、`/authoring/d
 
 **API 形式**
 
-次の API 形式を使用して、アカウントのすべての公開リクエストを取得します。
+以下の API 形式を使用して、お使いのアカウントに関するすべての公開リクエストを取得します。
 
 ```http
 GET /authoring/destinations/publish
 ```
 
-次の API 形式を使用して、 `{DESTINATION_ID}` パラメーター。
+以下の API 形式を使用して、`{DESTINATION_ID}` パラメーターで定義された、特定の公開リクエストを取得します。
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -54,17 +54,17 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 **リクエスト**
 
-次の 2 つのリクエストでは、 `DESTINATION_ID` パラメーターを指定します。
+以下の 2 つのリクエストは、リクエストで `DESTINATION_ID` パラメーターを渡すかどうかに応じて、お客様の IMS 組織に対するすべての公開リクエストか、特定の公開リクエストを取得します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
->[!TAB すべての発行リクエストを取得]
+>[!TAB すべての公開リクエストの取得]
 
 +++リクエスト
 
-次のリクエストは、に基づいて、送信した発行リクエストのリストを取得します [!DNL IMS Org ID] およびサンドボックス設定
+以下のリクエストは、[!DNL IMS Org ID] およびサンドボックス設定に基づいて、送信した公開リクエストのリストを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -78,7 +78,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-次の応答は、使用した IMS 組織 ID とサンドボックス名に基づいて、HTTP ステータス 200 と、アクセス権のある公開用に送信されたすべての宛先のリストを返します。 1 つの `configId` は、1 つの宛先の公開リクエストに対応します。
+以下の応答では、HTTP ステータス 200 が、使用した IMS 組織 ID およびサンドボックス名に基づいた、アクセス権のある公開用に送信されたすべての宛先のリストと共に返されます。1 つの `configId` は、1 つの宛先の公開リクエストに対応します。
 
 ```json
 {
@@ -118,9 +118,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 文字列 | 公開用に送信した宛先設定の宛先 ID。 |
 | `publishDetailsList.configId` | 文字列 | 送信された宛先の宛先公開リクエストの一意の ID。 |
-| `publishDetailsList.allowedOrgs` | 文字列 | 宛先が使用可能なExperience Platform組織を返します。 <br> <ul><li> の場合 `"destinationType": "PUBLIC"`の場合、このパラメーターは `"*"`：宛先は、すべてのExperience Platform組織で使用できます。</li><li> の場合 `"destinationType": "DEV"`の場合、このパラメーターは宛先の作成およびテストに使用した組織の組織 ID を返します。</li></ul> |
-| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。使用可能な値は `TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED` です。値を持つ宛先 `PUBLISHED` は実稼動環境であり、Experience Platformのお客様が使用できます。 |
-| `publishDetailsList.destinationType` | 文字列 | 宛先のタイプ。 値は `DEV` および `PUBLIC`. `DEV` は、Experience Platform組織の宛先に対応します。 `PUBLIC` は、公開用に送信した宛先に対応します。 Git では、これら 2 つのオプションを考えて、 `DEV` バージョンは、ローカルのオーサリングブランチを表し、 `PUBLIC` version は、リモートメインブランチを表します。 |
+| `publishDetailsList.allowedOrgs` | 文字列 | 宛先を使用できる Experience Platform 組織を返します。<br> <ul><li> `"destinationType": "PUBLIC"` の場合、このパラメーターは、`"*"` を返します（つまり、宛先は、すべての Experience Platform 組織で使用できます）。</li><li> `"destinationType": "DEV"` の場合、このパラメーターは、宛先の作成およびテストに使用した組織の組織 ID を返します。</li></ul> |
+| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。使用可能な値は、`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED` です。値 `PUBLISHED` を持つ宛先は、ライブで、Experience Platform 顧客が使用できます。 |
+| `publishDetailsList.destinationType` | 文字列 | 宛先のタイプ。値には、`DEV` および `PUBLIC` を取ることができます。`DEV` は、Experience Platform 組織の宛先に対応します。`PUBLIC` は、公開用に送信した宛先に対応します。これらの 2 つのオプションを Git 用語で考えてみると、`DEV` バージョンは、ローカルオーサリングブランチを、`PUBLIC` バージョンは、リモートメインブランチを表します。 |
 | `publishDetailsList.publishedDate` | 文字列 | 宛先が公開用に送信された日付（エポック時間）。 |
 
 {style="table-layout:auto"}
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-もし `DESTINATION_ID` API 呼び出しでは、応答は HTTP ステータス 200 と、指定された宛先公開リクエストに関する詳細情報を返します。
+API 呼び出しで `DESTINATION_ID` が渡されると、応答は、HTTP ステータス 200 を、指定された宛先公開リクエストに関する詳細情報と共に返します。
 
 ```json
 {
@@ -170,9 +170,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 文字列 | 公開用に送信した宛先設定の宛先 ID。 |
 | `publishDetailsList.configId` | 文字列 | 送信された宛先の宛先公開リクエストの一意の ID。 |
-| `publishDetailsList.allowedOrgs` | 文字列 | 宛先が使用可能なExperience Platform組織を返します。 <br> <ul><li> の場合 `"destinationType": "PUBLIC"`の場合、このパラメーターは `"*"`：宛先は、すべてのExperience Platform組織で使用できます。</li><li> の場合 `"destinationType": "DEV"`の場合、このパラメーターは宛先の作成およびテストに使用した組織の組織 ID を返します。</li></ul> |
-| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。使用可能な値は `TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED` です。値を持つ宛先 `PUBLISHED` は実稼動環境であり、Experience Platformのお客様が使用できます。 |
-| `publishDetailsList.destinationType` | 文字列 | 宛先のタイプ。 値は `DEV` および `PUBLIC`. `DEV` は、Experience Platform組織の宛先に対応します。 `PUBLIC` は、公開用に送信した宛先に対応します。 Git では、これら 2 つのオプションを考えて、 `DEV` バージョンは、ローカルのオーサリングブランチを表し、 `PUBLIC` version は、リモートメインブランチを表します。 |
+| `publishDetailsList.allowedOrgs` | 文字列 | 宛先を使用できる Experience Platform 組織を返します。<br> <ul><li> `"destinationType": "PUBLIC"` の場合、このパラメーターは、`"*"` を返します（つまり、宛先は、すべての Experience Platform 組織で使用できます）。</li><li> `"destinationType": "DEV"` の場合、このパラメーターは、宛先の作成およびテストに使用した組織の組織 ID を返します。</li></ul> |
+| `publishDetailsList.status` | 文字列 | 宛先の公開リクエストのステータス。使用可能な値は、`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED` です。値 `PUBLISHED` を持つ宛先は、ライブで、Experience Platform 顧客が使用できます。 |
+| `publishDetailsList.destinationType` | 文字列 | 宛先のタイプ。値には、`DEV` および `PUBLIC` を取ることができます。`DEV` は、Experience Platform 組織の宛先に対応します。`PUBLIC` は、公開用に送信した宛先に対応します。これらの 2 つのオプションを Git 用語で考えてみると、`DEV` バージョンは、ローカルオーサリングブランチを、`PUBLIC` バージョンは、リモートメインブランチを表します。 |
 | `publishDetailsList.publishedDate` | 文字列 | 宛先が公開用に送信された日付（エポック時間）。 |
 
 {style="table-layout:auto"}

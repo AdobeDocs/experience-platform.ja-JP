@@ -1,38 +1,38 @@
 ---
-description: このページでは、Destination SDKの/sample-profiles API エンドポイントを使用して、ソーススキーマに基づくサンプルプロファイルを生成する方法について説明します。 これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
+description: このページでは、Destination SDK から /sample-profiles API エンドポイントを使用して、ソーススキーマに基づいてサンプルプロファイルを生成する方法について説明します。これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '651'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
 
 # ソーススキーマに基づくサンプルプロファイルの生成
 
-ファイルベースの宛先をテストする最初の手順は、 `/sample-profiles` エンドポイント：既存のソーススキーマに基づいてサンプルプロファイルを生成します。
+ファイルベースの宛先をテストする最初の手順は、`/sample-profiles` エンドポイントを使用して、既存のソーススキーマに基づいてサンプルプロファイルを生成することです。
 
-サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。 さらに、独自のプロファイルデータを使用してをカスタマイズし、宛先テストを実施するためのデフォルトが提供されます。
+サンプルプロファイルは、プロファイルの JSON 構造を理解するのに役立ちます。また、これをデフォルトとして、独自のプロファイルデータでカスタマイズすることで、より詳細に宛先をテストできます。
 
 ## はじめに {#getting-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 前提条件 {#prerequisites}
 
-使用する前に `/sample-profiles` エンドポイントで、次の条件を満たしていることを確認します。
+`/sample-profiles` エンドポイントを使用する前に、以下の条件を満たしていることを確認してください。
 
-* Destination SDKを通じて作成された既存のファイルベースの宛先があり、 [宛先カタログ](../../../ui/destinations-workspace.md).
-* 宛先 UI に、少なくとも 1 つのアクティベーションフローがExperience Platformされました。 この `/sample-profiles` エンドポイントは、アクティベーションフローで定義したソーススキーマに基づいてプロファイルを作成します。 詳しくは、 [activation チュートリアル](../../../ui/activate-batch-profile-destinations.md) を参照してください。
-* API リクエストを正常に実行するには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。 Platform UI で宛先との接続を参照する際に、API 呼び出しで使用する必要がある宛先インスタンス ID を URL から取得します。
+* Destination SDK で作成した既存のファイルベースの宛先があり、[宛先カタログ](../../../ui/destinations-workspace.md)で確認できる。
+* Experience Platform UI で、宛先に対して少なくとも 1 つのアクティベーションフローを作成している。`/sample-profiles` エンドポイントは、アクティベーションフローでしたソーススキーマに基づいてプロファイルを作成します。アクティベーションフローの作成方法について詳しくは、[アクティベーションチュートリアル](../../../ui/activate-batch-profile-destinations.md)を参照してください。
+* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
 
-   ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
+  ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
 
-## 宛先テスト用のサンプルプロファイルを生成 {#generate-sample-profiles}
+## 宛先テスト用のサンプルプロファイルの生成 {#generate-sample-profiles}
 
-に対してGETリクエストを実行することで、ソーススキーマに基づいてサンプルプロファイルを生成できます `/sample-profiles` endpoint は、テストする宛先の宛先インスタンス ID です。
+テストしたい宛先の宛先インスタンス ID を使用して `/sample-profiles` エンドポイントに対して GET リクエストを行うことで、ソーススキーマに基づいてサンプルプロファイルを生成できます。
 
 **API 形式**
 
@@ -42,12 +42,12 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 
 | クエリパラメーター | 説明 |
 | -------- | ----------- |
-| `destinationInstanceId` | サンプルプロファイルを生成する宛先インスタンスの ID。 詳しくは、 [前提条件](#prerequisites) の節を参照してください。 |
-| `count` | *オプション*。生成するサンプルプロファイルの数。 パラメーターは、 `1 - 1000`. このプロパティを定義しない場合、API は単一のサンプルプロファイルを生成します。 |
+| `destinationInstanceId` | サンプルプロファイルを生成する宛先インスタンスの ID。この ID の取得方法について詳しくは、[前提条件](#prerequisites)の節を参照してください。 |
+| `count` | *オプション*。生成するサンプルプロファイルの数。このパラメーターは、`1 - 1000` の値を取ることができます。このプロパティが定義されていない場合は、API が 1 つのサンプルプロファイルを生成します。 |
 
 **リクエスト**
 
-次のリクエストでは、対応する `destinationInstanceId`.
+以下のリクエストは、対応する `destinationInstanceId` を持つ宛先インスタンスで定義されたソーススキーマに基づいて、サンプルプロファイルを生成します。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **応答**
 
-正常な応答は、指定された数のサンプルプロファイルと共に HTTP ステータス 200 を返します。このとき、セグメントメンバーシップ、ID、およびソース XDM スキーマに対応するプロファイル属性が返されます。
+応答が成功すると、HTTP ステータス 200 が、指定された数のサンプルプロファイル（ソース XDM スキーマに対応するセグメントメンバーシップ、ID およびプロファイル属性を含む）と共に返されます。
 
 >[!NOTE]
 >
-> 応答は、宛先インスタンスで使用されるセグメントのメンバーシップ、ID、プロファイル属性のみを返します。 ソーススキーマに他のフィールドが含まれている場合でも、それらは無視されます。
+> 応答は、宛先インスタンスで使用されたセグメントメンバーシップ、ID およびプロファイル属性のみを返します。ソーススキーマに他のフィールドがあっても、それらは無視されます。
 
 ```json
 [
@@ -101,14 +101,14 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 ]
 ```
 
-![UI から API 応答のフィールドへのマッピングを示す画像です。](../../assets/testing-api/batch-destinations/sample-api-response-mapping.png)
+![UI から API 応答のフィールドへのマッピングを示す画像。](../../assets/testing-api/batch-destinations/sample-api-response-mapping.png)
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentMembership` | 個人のセグメントメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [セグメントメンバーシップの詳細](../../../../xdm/field-groups/profile/segmentation.md). |
-| `lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`realized`:プロファイルはセグメントの一部です。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
-| `identityMap` | 個々の ID の様々な値と、関連する名前空間を説明する map-type フィールドです。 詳しくは、 `identityMap`を参照してください。 [スキーマ構成の基盤](../../../../xdm/schema/composition.md#identityMap). |
+| `segmentMembership` | 個人のセグメントメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[セグメントメンバーシップの詳細](../../../../xdm/field-groups/profile/segmentation.md)を参照してください。 |
+| `lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
+| `status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
+| `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](../../../../xdm/schema/composition.md#identityMap)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -118,6 +118,6 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読むと、宛先で設定したソーススキーマに基づいてサンプルプロファイルを生成する方法がわかります [活性化フロー](../../../ui/activate-batch-profile-destinations.md).
+このドキュメントでは、宛先[アクティベーションフロー](../../../ui/activate-batch-profile-destinations.md)で設定されたソーススキーマに基づいてサンプルプロファイルを生成する方法を確認しました。
 
-これらのプロファイルをカスタマイズしたり、API から返されるプロファイルを次の場所に使用したりできるようになりました。 [ファイルベースの宛先設定をテストする](file-based-destination-testing-api.md).
+これで、これらのプロファイルをカスタマイズしたり、API から返されたプロファイルをそのまま使用して、[ファイルベースの宛先設定をテスト](file-based-destination-testing-api.md)できるようになりました。

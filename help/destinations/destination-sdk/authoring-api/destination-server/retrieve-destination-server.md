@@ -1,36 +1,36 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを使用した宛先サーバー設定の取得に使用する API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先サーバー設定を取得するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の取得
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
 
 # 宛先サーバー設定の取得
 
-このページの例では、API リクエストとペイロードが示されています。この API リクエストを使用して、 `/authoring/destination-servers` API エンドポイント。
+このページでは、`/authoring/destination-servers` API エンドポイントを使用して、既存の宛先サーバー設定に関する情報を取得するために使用できる API リクエストおよびペイロードの例を示します。
 
-宛先サーバーで使用される機能の詳細については、次の記事を参照してください。
+宛先サーバーによって使用される機能について詳しくは、以下の記事を参照してください。
 
-* [Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
-* [メッセージの形式](../../../destination-sdk/functionality/destination-server/message-format.md)
+* [Destination SDK で作成される宛先のサーバー仕様](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Destination SDK で作成される宛先のテンプレート仕様](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [メッセージ形式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [ファイル形式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 宛先サーバー設定の取得 {#retrieve}
 
-既存の宛先サーバー設定を取得するには、 `GET` にリクエスト `/authoring/destination-servers` endpoint.
+`/authoring/destination-servers` エンドポイントに `GET` リクエストを行うことで、既存の宛先サーバー設定を取得できます。
 
 >[!TIP]
 >
@@ -38,27 +38,27 @@ ht-degree: 23%
 
 **API 形式**
 
-次の API 形式を使用して、アカウントのすべての宛先サーバー設定を取得します。
+以下の API 形式を使用して、お使いのアカウントに関するすべての宛先サーバー設定を取得します。
 
 ```http
 GET /authoring/destination-servers
 ```
 
-次の API 形式を使用して、 `{INSTANCE_ID}` パラメーター。
+以下の API 形式を使用して、`{INSTANCE_ID}` パラメーターで定義された、特定の宛先サーバー設定を取得します。
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-次の 2 つのリクエストでは、 `INSTANCE_ID` パラメーターを指定します。
+以下の 2 つのリクエストは、リクエストで `INSTANCE_ID` パラメーターを渡すかどうかに応じて、お客様の IMS 組織に対するすべての宛先サーバー設定か、特定の宛先サーバー設定を取得します。
 
-下の各タブを選択し、対応するペイロードとその応答を表示します。
+以下の各タブを選択して、対応するペイロードおよびその応答を表示します。
 
 >[!BEGINTABS]
 
->[!TAB すべての宛先サーバー設定を取得する]
+>[!TAB すべての宛先サーバー設定の取得]
 
-次のリクエストでは、に基づいて、アクセス権のある宛先サーバー設定のリストを取得します [!DNL IMS Org ID] およびサンドボックス設定
+以下のリクエストは、[!DNL IMS Org ID] およびサンドボックスの設定に基づいて、アクセス権のある宛先サーバー設定のリストを取得します。
 
 +++リクエスト
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、アクセス権のある宛先サーバー設定のリストを、 [!DNL IMS Org ID] および使用したサンドボックス名。 1 `instanceId` は 1 つの宛先サーバーに対応します。 以下のレスポンスの例には、2 つの宛先サーバー設定が含まれています。
+応答が成功すると、HTTP ステータス 200 が、使用した [!DNL IMS Org ID] およびサンドボックス名に基づいた、アクセス権のある宛先サーバー設定のリストと共に返されます。1 つの `instanceId` は、1 つの宛先サーバーに対応します。以下の応答のサンプルには、2 つの宛先サーバー設定が含まれます。
 
 ```json
 {
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB 特定の宛先サーバー設定の取得]
 
-次のリクエストは、 `{INSTANCE_ID}` パラメーター。
+以下のリクエストは、`{INSTANCE_ID}` パラメーターで定義された、特定の宛先サーバー設定を取得します。
 
 +++リクエスト
 
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、 `{INSTANCE_ID}` 指定した内容。
+応答が成功すると、HTTP ステータス 200 が、提供された `{INSTANCE_ID}` に対応する宛先サーバーの設定と共に返されます。
 
 ```json
 {
@@ -225,9 +225,9 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、Destination SDKを使用して宛先サーバーの設定を取得する方法がわかりました `/authoring/destination-servers` API エンドポイント。
+このドキュメントでは、Destination SDK `/authoring/destination-servers` API エンドポイントを使用した、宛先サーバー設定の取得方法を確認しました。
 
-このエンドポイントで実行できる操作について詳しくは、次の記事を参照してください。
+このエンドポイントでできることについて詳しくは、以下の記事を参照してください。
 
 * [宛先サーバー設定の作成](create-destination-server.md)
 * [宛先サーバー設定の更新](update-destination-server.md)

@@ -1,35 +1,34 @@
 ---
-description: 宛先テスト API を使用して、宛先のテストメッセージ変換テンプレートを生成する方法を説明します。
-title: サンプルメッセージ変換テンプレートを生成します
+description: 宛先テスト API を使用して、宛先用のテストメッセージ変換テンプレートを生成する方法を説明します。
+title: サンプルメッセージ変換テンプレートの生成
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '375'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
-# サンプルメッセージ変換テンプレートを生成します {#get-sample-template-api-operations}
+# サンプルメッセージ変換テンプレートの生成 {#get-sample-template-api-operations}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**：`https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-このページでは、 `/authoring/testing/template/sample` API エンドポイント（を生成するため） [メッセージ変換テンプレート](../../functionality/destination-server/message-format.md#using-templating) を設定します。 このエンドポイントでサポートされる機能についての説明は、[テンプレートを作成](create-template.md)をお読みください。
+このページでは、宛先用に[メッセージ変換テンプレート](../../functionality/destination-server/message-format.md#using-templating)を生成するために、`/authoring/testing/template/sample` API エンドポイントを使用して実行できる、すべての API 操作を一覧表示および説明しています。このエンドポイントでサポートされる機能の説明については、[テンプレートの作成](create-template.md)を参照してください。
 
 ## サンプルテンプレート API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## サンプルテンプレートの取得 {#generate-sample-template}
 
-サンプルテンプレートを取得するには、 `authoring/testing/template/sample/` エンドポイントを作成し、テンプレートを作成する場所に基づいて宛先設定の宛先 ID を指定します。
+`authoring/testing/template/sample/` エンドポイントに対して GET リクエストを行い、作成しているテンプレートに基づいて宛先設定の宛先 ID を指定することで、サンプルテンプレートを取得できます。
 
 >[!TIP]
 >
->* ここで使用する必要がある宛先 ID は `instanceId` で、`/destinations` エンドポイントを使用して作成された、宛先の設定に対応します。詳しくは、 [宛先設定の取得](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) を参照してください。
-
+>* ここで使用する必要がある宛先 ID は、宛先設定に対応した `instanceId` で、`/destinations` エンドポイントを使用して作成されています。詳しくは、[宛先設定の取得](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)を参照してください。
 
 **API 形式**
 
@@ -39,11 +38,11 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | メッセージ変換テンプレートを生成する宛先設定の ID。 |
+| `{DESTINATION_ID}` | メッセージ変換テンプレートを生成している宛先設定の ID。 |
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された新しいサンプルテンプレートを生成します。
+以下のリクエストは、ペイロードで提供されるパラメーター設定に基づいて、新しいサンプルテンプレートを生成します。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/template/sample/5114d758-ce71-43ba-b53e-e2a91d67b67f' \
@@ -57,9 +56,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、期待されるデータ形式に合わせて編集できるサンプルテンプレートを返します。
+応答が成功すると、HTTP ステータス 200 が、想定されるデータ形式に一致するように編集できるサンプルテンプレートと共に返されます。
 
-指定した宛先 ID が [ベストエフォート集計](../../functionality/destination-configuration/aggregation-policy.md) および `maxUsersPerRequest=1` 集計ポリシーでは、リクエストは次のようなサンプルテンプレートを返します。
+指定する宛先 ID が、[ベストエフォート集計](../../functionality/destination-configuration/aggregation-policy.md)と集計ポリシーの `maxUsersPerRequest=1` を含む宛先設定に対応する場合、リクエストは、以下に類似したサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +91,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-指定した宛先 ID が、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) または [ベストエフォート集計](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) と `maxUsersPerRequest` 1 より大きい場合、リクエストは次のようなサンプルテンプレートを返します。
+指定する宛先 ID が、[設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)または[ベストエフォート集計](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)を含み、`maxUsersPerRequest` が 1 より大きい宛先サーバーテンプレートに対応する場合、リクエストは、以下に類似したサンプルテンプレートを返します。
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -137,4 +136,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、 `/authoring/testing/template/sample` API エンドポイント。 次に、 [レンダリングテンプレート API エンドポイント](render-template-api.md) を使用して、テンプレートに基づいて書き出されたプロファイルを生成し、宛先の期待されるデータ形式と比較します。
+このドキュメントでは、`/authoring/testing/template/sample` API エンドポイントを使用した、メッセージ変換テンプレートの生成方法を確認しました。次に、[レンダリングテンプレート API エンドポイント](render-template-api.md)を使用して、テンプレートに基づいて書き出されたプロファイルを生成し、それらを宛先で想定されているデータ形式と比較できます。

@@ -1,10 +1,10 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを使用してオーディエンステンプレートを取得するための API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを取得するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの取得
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
@@ -15,45 +15,45 @@ ht-degree: 25%
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-このページの例では、 `/authoring/audience-templates` API エンドポイント。
+このページでは、`/authoring/audience-templates` API エンドポイントを使用して、オーディエンスメタデータテンプレートを取得するために使用できる API リクエストおよびペイロードの例を示します。
 
-このエンドポイントを通じて設定できる機能について詳しくは、 [audience metadata management](../functionality/audience-metadata-management.md).
+このエンドポイントを通じて設定できる機能について詳しくは、[オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## オーディエンステンプレート API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## オーディエンステンプレートの取得 {#retrieve}
 
-既存のオーディエンステンプレートを取得するには、 `GET` にリクエスト `/authoring/audience-templates` endpoint.
+`/authoring/audience-templates` エンドポイントに `GET` リクエストを行うことで、既存のオーディエンステンプレートを取得できます。
 
 **API 形式**
 
-次の API 形式を使用して、アカウントのすべてのオーディエンステンプレートを取得します。
+以下の API 形式を使用して、お使いのアカウントに関するすべてのオーディエンステンプレートを取得します。
 
 ```http
 GET /authoring/audience-templates
 ```
 
-次の API 形式を使用して、 `{INSTANCE_ID}` パラメーター。
+以下の API 形式を使用して、`{INSTANCE_ID}` パラメーターで定義された、特定のオーディエンステンプレートを取得します。
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-次の 2 つのリクエストでは、 `INSTANCE_ID` パラメーターを指定します。
+以下の 2 つのリクエストは、リクエストで `INSTANCE_ID` パラメーターを渡すかどうかに応じて、お客様の IMS 組織に対するすべてのオーディエンステンプレートか、特定のオーディエンステンプレートを取得します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
->[!TAB すべてのオーディエンステンプレートを取得]
+>[!TAB すべてのオーディエンステンプレートの取得]
 
-次のリクエストでは、に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します [!DNL IMS Org ID] およびサンドボックス設定
+以下のリクエストは、[!DNL IMS Org ID] およびサンドボックス設定に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します。
 
 +++リクエスト
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、アクセス可能なオーディエンステンプレートのリスト ( [!DNL IMS Org ID] および使用したサンドボックス名。 1 `instanceId` は、1 つのオーディエンステンプレートに対応します。
+応答が成功すると、HTTP ステータス 200 が、使用した [!DNL IMS Org ID] およびサンドボックス名に基づいた、アクセス権のあるオーディエンステンプレートのリストと共に返されます。1 つの `instanceId` は、1 つのオーディエンステンプレートに対応します。
 
 ```json
 {
@@ -182,7 +182,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 >[!TAB 特定のオーディエンステンプレートの取得]
 
-次のリクエストでは、に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します [!DNL IMS Org ID] およびサンドボックス設定
+以下のリクエストは、[!DNL IMS Org ID] およびサンドボックス設定に基づいて、アクセス権のあるオーディエンステンプレートのリストを取得します。
 
 +++リクエスト
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、 `{INSTANCE_ID}` が呼び出し時に指定されます。
+応答が成功すると、HTTP ステータス 200 が、呼び出しで提供された `{INSTANCE_ID}` に対応するオーディエンステンプレートの詳細と共に返されます。
 
 ```json
 {
@@ -321,4 +321,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、 `/authoring/destination-servers` API エンドポイント。 [Destination SDK を使用して宛先を設定する方法](../guides/configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスの中でどのように位置づけられるかを把握します。
+このドキュメントでは、`/authoring/destination-servers` API エンドポイントを使用した、宛先サーバー設定に関する詳細の取得方法を確認しました。この手順が宛先設定プロセスのどこに当てはまるかを把握するには、[Destination SDK を使用した宛先の設定方法](../guides/configure-destination-instructions.md)を参照してください。

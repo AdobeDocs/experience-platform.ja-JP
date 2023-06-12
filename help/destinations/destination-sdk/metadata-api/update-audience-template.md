@@ -1,10 +1,10 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを通じたオーディエンステンプレートの更新に使用される API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを更新するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの更新
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 36%
+ht-degree: 100%
 
 ---
 
@@ -15,23 +15,23 @@ ht-degree: 36%
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-このページでは、 `/authoring/audience-templates` API エンドポイント。
+このページでは、`/authoring/audience-templates` API エンドポイントを使用して、オーディエンステンプレートを更新するために使用できる API リクエストおよびペイロードの例を示します。
 
-このエンドポイントを通じて設定できる機能について詳しくは、 [audience metadata management](../functionality/audience-metadata-management.md).
+このエンドポイントを通じて設定できる機能について詳しくは、[オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## オーディエンステンプレート API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## オーディエンステンプレートの更新 {#create}
 
-以下の項目を更新し、 [既存](create-audience-template.md) オーディエンステンプレートを作成する `PUT` にリクエスト `/authoring/audience-templates` エンドポイントと、更新されたペイロード。
+更新されたペイロードで `/authoring/audience-templates` エンドポイントに `PUT` リクエストを行うことで、[既存の](create-audience-template.md)オーディエンステンプレートを更新できます。
 
-既存のオーディエンステンプレートとそれに対応するオーディエンステンプレートを取得するには `{INSTANCE_ID}`に関する記事を参照してください。 [オーディエンステンプレートの取得](retrieve-audience-template.md).
+既存のオーディエンステンプレートおよびその関連する `{INSTANCE_ID}` を取得するには、[オーディエンステンプレートの取得](retrieve-audience-template.md)に関する記事を参照してください。
 
 **API 形式**
 
@@ -41,9 +41,9 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 更新するオーディエンステンプレートの ID。 既存のオーディエンステンプレートとそれに対応するオーディエンステンプレートを取得するには `{INSTANCE_ID}`を参照してください。 [オーディエンステンプレートの取得](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | 更新するオーディエンステンプレートの ID。既存のオーディエンステンプレートおよびその関連する `{INSTANCE_ID}` を取得するには、[オーディエンステンプレートの取得](retrieve-audience-template.md)を参照してください。 |
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、既存のオーディエンスメタデータテンプレートを更新します。
+以下のリクエストは、ペイロードで提供されるパラメーター設定に基づいて、既存のオーディエンスメタデータテンプレートを更新します。
 
 +++リクエスト
 
@@ -147,7 +147,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新されたオーディエンステンプレートの詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新されたオーディエンステンプレートの詳細と共に返されます。
 
 +++
 
@@ -157,4 +157,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読むと、オーディエンステンプレートを使用するタイミングと、 `/authoring/audience-templates` API エンドポイント。 [Destination SDK を使用して宛先を設定する方法](../guides/configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスの中でどのように位置づけられるかを把握します。
+このドキュメントでは、オーディエンステンプレートを使用するタイミングと、`/authoring/audience-templates` API エンドポイントを使用してオーディエンステンプレートを更新する方法について確認しました。この手順が宛先設定プロセスのどこに当てはまるかを把握するには、[Destination SDK を使用した宛先の設定方法](../guides/configure-destination-instructions.md)を参照してください。

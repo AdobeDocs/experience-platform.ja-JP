@@ -1,40 +1,40 @@
 ---
-description: サポートされる ID および属性マッピング設定の宛先を設定する方法について説明します。
+description: サポートされる ID および属性マッピング設定に関する宛先の設定方法を説明します。
 title: サポートされるマッピング設定
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
 # サポートされるマッピング設定
 
-Destination SDKを使用して構築された宛先は、宛先タイプに基づいて、特定の ID 名前空間と属性マッピング設定をサポートします。
+Destination SDK で作成された宛先は、宛先タイプに基づいて、特定の ID 名前空間および属性マッピング設定をサポートします。
 
 この記事では、宛先を設定する際に使用できる、サポートされるすべてのマッピング設定について説明します。
 
 >[!WARNING]
 >
->この記事に記載されていないマッピング設定は、Destination SDKではサポートされていません。
+>この記事で説明されていない任意のマッピング設定は、Destination SDK でサポートされていません。
 
-宛先を構築する際は、このページで説明しているマッピング設定の 1 つに従って、スキーマと ID 名前空間を設定します。
+宛先を作成する場合、このページで説明されているいずれかのマッピング設定に応じて、スキーマおよび ID 名前空間を設定します。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
-## ストリーミング宛先のサポートされるマッピング {#streaming-mappings}
+## ストリーミング宛先でサポートされるマッピング {#streaming-mappings}
 
-Destination SDKで構築されたリアルタイム（ストリーミング）の宛先は、次の表で説明するマッピング設定をサポートします。
+Destination SDK で作成されたリアルタイム（ストリーミング）宛先は、以下の表で説明されているマッピング設定をサポートします。
 
 | ソースフィールド | ターゲットフィールド |
 | --- | --- |
 | XDM 属性 | カスタム属性 |
 | ID 名前空間 | ID 名前空間 |
 
-次の設定例では、上記の表で両方のマッピングを使用できます。
+以下の設定例を使用すると、お客様は、上記の表の両方のマッピングを使用できます。
 
 ```json
 "schemaConfig":{
@@ -60,35 +60,35 @@ Destination SDKで構築されたリアルタイム（ストリーミング）�
 
 ### XDM 属性のカスタム属性へのマッピング {#streaming-xdm-to-custom}
 
-ユーザーは、ソース XDM プロファイルの属性を、宛先の側のカスタム属性にマッピングできます。
+ユーザーは、ソース XDM プロファイルから宛先側のカスタム属性に属性をマッピングできます。
 
-ターゲットフィールドマッピングを選択する際は、ターゲットカスタム属性の名前を手動で入力する必要があります。
+ユーザーは、ターゲットフィールドマッピングを選択する際に、ターゲットのカスタム属性の名前を手動で入力する必要があります。
 
-![カスタム属性の選択を示す Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![カスタム属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
-結果の UI エクスペリエンスは、次の画像に表示されます。
+以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ストリーミング宛先のカスタム属性への XDM 属性マッピングを示す、Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![ストリーミング宛先のカスタム属性への XDM 属性マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
-### ID 名前空間をパートナー ID 名前空間にマッピングする {#streaming-identity-to-identity}
+### ID 名前空間のパートナー ID 名前空間へのマッピング {#streaming-identity-to-identity}
 
-ユーザーは、カスタム ID 名前空間またはグローバル ID 名前空間を Platform から、定義した ID 名前空間にマッピングできます。
+ユーザーは、Platform からユーザーが定義した ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
 
-結果の UI エクスペリエンスは、次の画像に表示されます。
+以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ストリーミング宛先の ID への ID マッピングを示す Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![ストリーミング宛先の ID への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
-## ファイルベースの宛先に対してサポートされるマッピング {#batch-mappings}
+## ファイルベースの宛先でサポートされるマッピング {#batch-mappings}
 
-Destination SDKで構築されたファイルベースの宛先では、次の表で説明するマッピング設定をサポートしています。 詳細なマッピングの例については、次の節を参照してください。
+Destination SDK で作成されたファイルベースの宛先は、以下の表で説明されているマッピング設定をサポートします。詳細なマッピングの例については、次の節を参照してください。
 
 | ソースフィールド | ターゲットフィールド |
 | --- | --- |
-| XDM 属性 | 属性/カスタム属性 |
-| ID 名前空間 | 属性/カスタム属性 |
+| XDM 属性 | 属性／カスタム属性 |
+| ID 名前空間 | 属性／カスタム属性 |
 | ID 名前空間 | ID 名前空間 |
 
-次の設定例では、上記の表のすべてのマッピングを使用できます。
+以下の設定例を使用すると、お客様は、上記の表からすべてのマッピングを使用できます。
 
 ```json
 "schemaConfig":{
@@ -112,55 +112,55 @@ Destination SDKで構築されたファイルベースの宛先では、次の�
 
 ### XDM 属性のカスタム属性へのマッピング {#batch-xdm-to-custom}
 
-ユーザーは、ソース XDM プロファイルの属性を、宛先の側のカスタム属性にマッピングできます。
+ユーザーは、ソース XDM プロファイルから宛先側のカスタム属性に属性をマッピングできます。
 
-ファイルベースの宛先の場合、ターゲットフィールドには、ソースフィールドと同じ名前のデフォルト属性が自動的に入力されます。
+ファイルベースの宛先の場合、ターゲットフィールドは、ソースフィールドと同じ名前のデフォルトの属性で自動的に設定されます。
 
-結果の UI エクスペリエンスは、次の画像に表示されます。
+以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先のカスタム属性への XDM マッピングを示した、Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![ファイルベースの宛先のカスタム属性への XDM マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
-ユーザーは、デフォルトの名前をそのまま使用するか、ターゲットフィールドの選択画面にカスタム属性名を入力できます。
+ユーザーは、デフォルトの名前のままでも、ターゲットフィールドの選択画面でカスタム属性名を入力することもできます。
 
-![ファイルベースの宛先のカスタムターゲット属性選択を示した、Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![ファイルベースの宛先のカスタムターゲット属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
-### ID 名前空間をカスタム属性にマッピングする {#batch-identity-to-custom}
+### ID 名前空間のカスタム属性へのマッピング {#batch-identity-to-custom}
 
-ユーザーは、カスタム ID 名前空間またはグローバル ID 名前空間を Platform から宛先の側のカスタム属性にマッピングできます。
+ユーザーは、Platform から宛先側のカスタム属性にカスタムまたはグローバル ID 名前空間をマッピングできます。
 
-ID 名前空間をソースフィールドとして選択すると、ターゲットフィールドには、同等の ID 名前空間が自動的に入力されます。 ターゲットフィールドをカスタム属性で置き換えるには、ユーザーは、ターゲットフィールドの選択画面にカスタム属性名を入力する必要があります。
+ID 名前空間をソースフィールドとして選択する場合、ターゲットフィールドは、同等の ID 名前空間に自動的に設定されます。ターゲットフィールドをカスタム属性に置き換えるには、ユーザーは、ターゲットフィールドの選択画面でカスタム属性名を入力する必要があります。
 
-![ファイルベースの宛先のカスタムターゲット属性選択を示した、Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![ファイルベースの宛先のカスタムターゲット属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
-結果の UI エクスペリエンスは、次の画像に表示されます。
+以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先のカスタム属性への ID マッピングを示す Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![ファイルベースの宛先のカスタム属性への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
-### ID 名前空間をパートナー ID 名前空間にマッピングする {#batch-identity-to-identity}
+### ID 名前空間のパートナー ID 名前空間へのマッピング {#batch-identity-to-identity}
 
-ユーザーは、カスタム ID 名前空間またはグローバル ID 名前空間を Platform から同等の ID 名前空間にマッピングできます。
+ユーザーは、Platform から同等の ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
 
-ID 名前空間をソースフィールドとして選択すると、ターゲットフィールドには、同等の ID 名前空間が自動的に入力されます。
+ID 名前空間をソースフィールドとして選択する場合、ターゲットフィールドは、同等の ID 名前空間に自動的に設定されます。
 
-結果の UI エクスペリエンスは、次の画像に表示されます。
+以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先の ID への ID マッピングを示す Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![ファイルベースの宛先の ID への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 次の手順 {#next-steps}
 
-この記事を読んだ後、Destination SDKで構築された宛先でサポートされるマッピングについて、より深く理解する必要があります。
+この記事を読むことで、Destination SDK で作成された宛先でサポートされているマッピングについて、理解を深めることができました。
 
-その他の宛先コンポーネントについて詳しくは、次の記事を参照してください。
+その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
 * [OAuth 2 認証](oauth2-authentication.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)
-* [ID 名前空間の設定](identity-namespace-configuration.md)
+* [ID 名前空間設定](identity-namespace-configuration.md)
 * [宛先配信](destination-delivery.md)
-* [オーディエンスメタデータの設定](audience-metadata-configuration.md)
+* [オーディエンスメタデータ設定](audience-metadata-configuration.md)
 * [集計ポリシー](aggregation-policy.md)
 * [バッチ設定](batch-configuration.md)
 * [プロファイル選定履歴](historical-profile-qualifications.md)

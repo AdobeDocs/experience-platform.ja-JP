@@ -5,17 +5,17 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2022年3月7日（PT）**
+**リリース日：2022年3月7日**
 
 >[!NOTE]
 >
->今回のリリースは、元の 2 月 23 日から 3 月 7 日に移行しました。
+>このリリースは、当初の日付の 2月23日から 3月7日に変更されました。
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -33,7 +33,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しい標準の宛先ウィジェット | 次の標準ウィジェットを使用すると、宛先に関連する様々な指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）. このウィジェットには、最近アクティブ化された上位 5 つのセグメントが、選択した宛先に応じて降順で表示されます。</li><li>オーディエンスサイズのトレンド. このウィジェットは、対象のアカウントにマッピングされたセグメントの一定期間のプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）. このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）. このウィジェットは、マッピングされた上位 5 つのセグメントをリストします。 セグメントは、ウィジェットのドロップダウンメニューで選択した宛先 ID と一致するソース ID の数に応じて、高い順から低い順に並べられます。</li><li>一般的なオーディエンス. このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用可能な標準ウィジェットについて詳しくは、 [宛先ダッシュボードドキュメント。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| 新しい標準宛先ウィジェット | 以下の標準ウィジェットを使用すると、宛先に関連する異なる指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。このウィジェットは、選択した宛先に応じて、最近アクティブ化された上位 5 つのセグメントを降順で示します。</li><li>オーディエンスサイズのトレンド。このウィジェットは、宛先アカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）。このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）。このウィジェットは、上位 5 つのマッピングされたセグメントのリストを表示します。セグメントは、ウィジェットのドロップダウンメニューから選択した宛先 ID に一致するソース ID のそれぞれのカウント数に従って、多い順に並べられます。</li><li>一般的なオーディエンス。このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用できる標準ウィジェットについて詳しくは、[宛先ダッシュボードドキュメント](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=ja#standard-widgets)を参照してください。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -46,8 +46,8 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 | 機能 | 説明 |
 | --- | --- |
 | データストリーム設定時の UI ワークフローの改善 | データ収集 UI で新しいデータストリームを作成するためのワークフローが新しくなりました。データストリームにサービスを追加するとき、アクセス許可のあるサービスのみがオプションのリストに含まれるようになります。詳しくは、[データストリームの設定](../../edge/datastreams/overview.md)のガイドを参照してください。 |
-| データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバー側の Experience Data Model（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/datastreams/data-prep.md)に関する節を参照してください。 |
-| ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID をAdobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。詳しくは、[ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
+| データ収集のためのデータ準備 | Adobe Experience Platform Web SDK を使用している場合、データ準備機能を利用して、サーバーサイドのエクスペリエンスデータモデル（XDM）にデータをマッピングできるようになりました。詳しくは、データストリームガイドの[データ収集用のデータ準備](../../edge/datastreams/data-prep.md)に関する節を参照してください。 |
+| ファーストパーティデバイス ID | Platform Web SDK を使用して顧客データを収集する際に、独自のデバイス ID を Adobe Experience Platform Edge Network に送信できるようになりました。これにより、サードパーティ cookie の有効期間に関する最近のブラウザー制限の回避策を使用できます。詳しくは、[ファーストパーティデバイス ID](../../edge/identity/first-party-device-ids.md) に関するガイドを参照してください。 |
 
 Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
 
@@ -59,7 +59,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （ベータ版）ファイルベースの宛先のDestination SDKのサポート | [Destination SDKによるファイルベースの宛先のサポート](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) は現在非公開ベータ版で、一部の数のパートナーや顧客のみが利用できます。 機能と関連ドキュメントは、一般リリースの前に変更される場合があります。<br><br>この機能へのアクセス方法については、Adobeのアカウント担当者にお問い合わせください。 Adobe内部のアカウント担当者は、Experience Platformの宛先の製品およびエンジニアリングチームに連絡して、サポートされる使用例について話し合う必要があります。 <br><br> ファイルベースの宛先のDestination SDKサポートのベータ段階では、ベータパートナーおよびお客様は、 [Experience PlatformDestination SDK](../../destinations/destination-sdk/overview.md) 非公開の宛先を構築して、次の機能を活用します。 <ul><li>Amazon S3、SFTP サーバー、Azure Blob、Azure Data Lake Storage、Data Landing Zone ストレージを使用して、ファイルベース（バッチ）の宛先を作成します。</li><li>デフォルトのファイル書き出しスケジュールおよび頻度オプションを設定および設定します。</li><li>書き出した CSV ファイルの形式（区切り文字、エスケープ文字、その他のオプション）を設定するオプションを設定および設定します。</li><li>カスタムファイルヘッダーを設定および編集する機能。</li><li>ファイルとセグメントの書き出しに関するイベント通知を受け取る機能。</li><li>CSV、TSV、JSON、Parquet など、追加のファイルタイプを書き出す機能。</li></ul>  <br>新機能の使用を開始するには、以下をお読みください。 [（ベータ版）Destination SDKを使用してファイルベースの宛先を設定する](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> 非公開または製品化されたを作成する機能 *ストリーミング* Destination SDKを使用して宛先を設定する方法は、すべてのExperience Platformの顧客およびパートナーが既に利用できます。 方法に関するガイドを読む [Destination SDKを使用したストリーミング先の設定](../../destinations/destination-sdk/guides/configure-destination-instructions.md) 」を参照してください。 |
+| （ベータ版）Destination SDK によるファイルベースの宛先のサポート | [Destination SDK によるファイルベースの宛先のサポート](../../destinations/destination-sdk/functionality/destination-server/server-specs.md)は、現在、プライベートベータ版で、一部のパートナーおよびお客様にのみ提供されています。機能および関連するドキュメントは、一般リリース前に変更されることがあります。<br><br>機能へのアクセス方法については、アドビアカウント担当者にお問い合わせください。アドビの社内アカウント担当者が Experience Platform 宛先製品およびエンジニアリングチームに連絡して、サポートされるユースケースについて相談します。<br><br> Destination SDK によるファイルベースの宛先のサポートのベータ版フェーズでは、ベータ版パートナーおよびお客様が [Experience Platform Destination SDK](../../destinations/destination-sdk/overview.md) を使用して、以下の機能を利用できるプライベート宛先を作成できます。 <ul><li>Amazon S3、SFTP サーバー、Azure Blob、Azure Data Lake Storage、データランディングゾーンストレージを介して、ファイルベースの（バッチ）宛先を作成。</li><li>デフォルトのファイル書き出しスケジュールおよび頻度オプションを設定。</li><li>書き出された CSV ファイルを書式設定するオプションを設定（区切り文字、エスケープ文字、その他のオプション）。</li><li>カスタムファイルヘッダーを設定および編集する機能。</li><li>ファイルおよびセグメントの書き出しに関するイベント通知を受信する機能。</li><li>追加のファイルタイプを書き出す機能（CSV、TSV、JSON、Parquet など）。</li></ul>  <br>新しい機能の使用を開始するには、[（ベータ版）Destination SDK を使用したファイルベースの宛先の設定](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)を参照してください。Destination SDK を使用して<br><br>プライベートまたは製品化された&#x200B;*ストリーミング*&#x200B;宛先を作成する機能は、既にすべての Experience Platform 顧客およびパートナーが使用できます。詳しくは、[Destination SDK を使用したストリーミング宛先の設定](../../destinations/destination-sdk/guides/configure-destination-instructions.md)方法に関するガイドを参照してください。 |
 
 ## [!DNL Identity Service] {#identity}
 

@@ -1,54 +1,54 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを通じて既存の宛先設定を更新するための API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先設定の更新
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 
 # 宛先設定の更新
 
-このページでは、 `/authoring/destinations` API エンドポイント。
+このページでは、`/authoring/destinations` API エンドポイントを使用して、既存の宛先設定を更新するために使用できる API リクエストおよびペイロードの例を示します。
 
 >[!TIP]
 >
->製品化/公開先に対する更新操作は、 [公開 API](../../publishing-api/create-publishing-request.md) 「更新」を送信して、Adobeレビューを行います。
+>製品化された宛先や公開されている宛先に対する更新操作は、[公開 API](../../publishing-api/create-publishing-request.md) を使用してアドビレビュー用に更新を送信した後でのみ、表示されます。
 
-宛先設定の機能について詳しくは、次の記事を参照してください。
+宛先設定の機能について詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](../../functionality/destination-configuration/customer-authentication.md)
 * [OAuth 2 認証](../../functionality/destination-configuration/oauth2-authentication.md)
 * [顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI 属性](../../functionality/destination-configuration/ui-attributes.md)
 * [スキーマ設定](../../functionality/destination-configuration/schema-configuration.md)
-* [ID 名前空間の設定](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [ID 名前空間設定](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [宛先配信](../../functionality/destination-configuration/destination-delivery.md)
-* [オーディエンスメタデータの設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [オーディエンスメタデータの設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
+* [オーディエンスメタデータ設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
+* [オーディエンスメタデータ設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [集計ポリシー](../../functionality/destination-configuration/aggregation-policy.md)
 * [バッチ設定](../../functionality/destination-configuration/batch-configuration.md)
 * [プロファイル選定履歴](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 宛先設定の更新 {#update}
 
-以下の項目を更新し、 [既存](create-destination-configuration.md) 宛先の設定を行う `PUT` にリクエスト `/authoring/destinations` エンドポイントと、更新されたペイロード。
+更新されたペイロードで `/authoring/destinations` エンドポイントに `PUT` リクエストを行うことで、[既存の](create-destination-configuration.md)宛先設定を更新できます。
 
 >[!TIP]
 >
->API エンドポイント: `platform.adobe.io/data/core/activation/authoring/destinations`
+>API エンドポイント：`platform.adobe.io/data/core/activation/authoring/destinations`
 
-既存の宛先設定とそれに対応する設定を取得するには `{INSTANCE_ID}`に関する記事を参照してください。 [宛先設定の取得](retrieve-destination-configuration.md).
+既存の宛先設定およびその関連する `{INSTANCE_ID}` を取得するには、[宛先設定の取得](retrieve-destination-configuration.md)に関する記事を参照してください。
 
 **API 形式**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 更新する宛先設定の ID。既存の宛先設定とそれに対応する設定を取得するには `{INSTANCE_ID}`を参照してください。 [宛先設定の取得](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | 更新する宛先設定の ID。既存の宛先設定およびその関連する `{INSTANCE_ID}` を取得するには、[宛先設定の取得](retrieve-destination-configuration.md)を参照してください。 |
 
 +++リクエスト
 
-次のリクエストは、で作成した宛先を更新します。 [この例](create-destination-configuration.md#create) 異なる `filenameConfig` オプション。
+以下のリクエストは、[この例](create-destination-configuration.md#create)で作成した宛先を別の `filenameConfig` オプションで更新します。
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先設定の詳細と共に返されます。
 
 +++
 
@@ -211,9 +211,9 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読んだ後、Destination SDKを使用して宛先設定を更新する方法がわかりました。 `/authoring/destinations` API エンドポイント。
+このドキュメントでは、Destination SDK `/authoring/destinations` API エンドポイントを使用した、宛先設定の更新方法を確認しました。
 
-このエンドポイントで実行できる操作について詳しくは、次の記事を参照してください。
+このエンドポイントでできることについて詳しくは、以下の記事を参照してください。
 
 * [宛先設定の作成](create-destination-configuration.md)
 * [宛先設定の取得](retrieve-destination-configuration.md)

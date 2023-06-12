@@ -1,16 +1,16 @@
 ---
-description: 宛先テスト API を使用し、メッセージ変換テンプレートに基づいてストリーミング宛先への出力を検証する方法について説明します。
-title: 書き出されたプロファイル構造を検証する
+description: 宛先テスト API を使用して、メッセージ変換テンプレートに基づいて、ストリーミング宛先への出力を検証する方法を説明します。
+title: 書き出されたプロファイル構造の検証
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 
-# 書き出されたプロファイル構造を検証する {#render-template-api-operations}
+# 書き出されたプロファイル構造の検証 {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
@@ -20,18 +20,17 @@ ht-degree: 94%
 
 ## レンダリングテンプレート API 操作の概要 {#get-started}
 
-続行する前に、[はじめる前に](../../getting-started.md)を参照して、必要な宛先オーサリング権限や必要なヘッダーの取得方法など、API を正常に呼び出すために必要な重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## メッセージ変換テンプレートに基づいて、書き出されたプロファイルをレンダリング {#render-exported-data}
 
-書き出されプロファイルをレンダリングするには、`authoring/testing/template/render` エンドポイントに POST リクエストを行い、宛先設定の宛先 ID と [sample template API エンドポイント](sample-template-api.md)を使用して作成したテンプレートを指定します。
+`authoring/testing/template/render` エンドポイントに対して POST リクエストを行い、宛先設定の宛先 ID と[サンプルテンプレート API エンドポイント](sample-template-api.md)を使用して作成したテンプレートを指定することで、書き出されたプロファイルをレンダリングできます。
 
-まず、変換を適用しない生のプロファイルをエクスポートする単純なテンプレートから始めて、次に変換をプロファイルに適用する、より複雑なテンプレートに移行することができます。シンプルなテンプレートの構文は次のとおりです。<br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+まず、変換を適用しない生のプロファイルをエクスポートする単純なテンプレートから始めて、次に変換をプロファイルに適用する、より複雑なテンプレートに移行することができます。シンプルなテンプレートの構文を以下に示します。<br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* ここで使用する必要がある宛先 ID は `instanceId` で、`/destinations` エンドポイントを使用して作成された、宛先の設定に対応します。参照： [宛先設定の取得](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) を参照してください。
-
+>* ここで使用する必要がある宛先 ID は、宛先設定に対応した `instanceId` で、`/destinations` エンドポイントを使用して作成されています。詳しくは、[宛先設定の取得](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)を参照してください。
 
 **API 形式**
 
@@ -44,11 +43,11 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | 書き出されたプロファイルをレンダリングする宛先設定の ID。 |
 | `template` | 書き出されたプロファイルをレンダリングする際に基となる、文字がエスケープされたバージョンのテンプレート。 |
-| `profiles` | *オプション*。リクエスト本文にプロファイルを追加できます。プロファイルを追加しない場合、Experience Platform は自動的にプロファイルを生成し、リクエストに追加します。<br> 呼び出しの本文にプロファイルを追加する場合は、[Sample profile generation API](sample-profile-generation-api.md) を使用して、プロファイルを生成できます。 |
+| `profiles` | *オプション*。リクエスト本文にプロファイルを追加できます。プロファイルを追加しない場合、Experience Platform は自動的にプロファイルを生成し、リクエストに追加します。<br>呼び出しの本文にプロファイルを追加する場合は、[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用することで、一部のプロファイルを生成できます。 |
 
 {style="table-layout:auto"}
 
-Render template API エンドポイントから返される応答は、宛先の集計ポリシーに基づいて異なることに注意してください。宛先に設定可能な集計ポリシーがある場合、プロファイルの集計方法を決定する集計キーも応答で返されます。詳細 [集計ポリシー](../../functionality/destination-configuration/aggregation-policy.md) を参照してください。
+Render template API エンドポイントから返される応答は、宛先の集計ポリシーに基づいて異なることに注意してください。宛先に設定可能な集計ポリシーがある場合、プロファイルの集計方法を決定する集計キーも応答で返されます。詳しくは、[集計ポリシー](../../functionality/destination-configuration/aggregation-policy.md)を参照してください。
 
 | 応答パラメーター | 説明 |
 | -------- | ----------- |
@@ -56,7 +55,7 @@ Render template API エンドポイントから返される応答は、宛先の
 | `profiles` | リクエストで提供されたプロファイル、またはリクエストでプロファイルが指定されていない場合は、自動生成されたプロファイルを表示します。 |
 | `output` | 指定されたメッセージ変換テンプレートに基づいて、エスケープ文字列としてレンダリングされたプロファイル |
 
-次の節では、前述の両方のケースに関するリクエストと応答の詳細を示します。
+以下の節では、前述の両方のケースに関するリクエストと応答の詳細を示します。
 
 * [ベストエフォート集計とリクエスト本文に含まれるプロファイル](#best-effort)
 * [リクエスト本文に含まれる設定可能な集計とプロファイル](#configurable-aggregation)
@@ -65,7 +64,7 @@ Render template API エンドポイントから返される応答は、宛先の
 
 **リクエスト**
 
-次のリクエストでは、宛先で想定される形式に一致する、エクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、ベストエフォート集計を使用した宛先設定に対応し、サンプルプロファイルがリクエストの本文に含まれています。
+以下のリクエストでは、宛先で想定される形式に一致する、エクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、ベストエフォート集計を使用した宛先設定に対応し、サンプルプロファイルがリクエストの本文に含まれています。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -127,7 +126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **応答**
 
 応答は、テンプレートのレンダリング結果、または発生したエラーを返します。
-リクエストが成功した場合は、HTTP ステータス 200 と共に、書き出されたデータの詳細が返されます。エスケープした文字列として、`output` パラメーターでエクスポートされたプロファイルを検索します。
+応答が成功すると、HTTP ステータス 200 が、書き出されたデータの詳細と共に返されます。エスケープした文字列として、`output` パラメーターでエクスポートされたプロファイルを検索します。
 応答が失敗すると、発生したエラーの説明と共に HTTP ステータス 400 が返されます。
 
 ```json
@@ -187,7 +186,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **リクエスト**
 
 
-次のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのセグメント資格と 5 つの ID が含まれます。[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
+以下のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのセグメント資格と 5 つの ID が含まれます。[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -308,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **応答**
 
 応答は、テンプレートのレンダリング結果、または発生したエラーを返します。
-リクエストが成功した場合は、HTTP ステータス 200 と共に、書き出されたデータの詳細が返されます。応答では、セグメントメンバーシップと ID に基づいてプロファイルを集計する方法に注意してください。`output` パラメーターで、エスケープ文字列として書き出されたプロファイルを見つけます。
+応答が成功すると、HTTP ステータス 200 が、書き出されたデータの詳細と共に返されます。応答では、セグメントメンバーシップと ID に基づいてプロファイルを集計する方法に注意してください。`output` パラメーターで、エスケープ文字列として書き出されたプロファイルを見つけます。
 応答が失敗すると、発生したエラーの説明と共に HTTP ステータス 400 が返されます。
 
 ```json
@@ -1071,4 +1070,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読み、メッセージ変換テンプレートを使用して、宛先で期待されるデータ形式に一致する、書き出されたプロファイルを生成する方法を学びました。[宛先の設定に Destination SDK を使用する方法](../../guides/configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
+このドキュメントでは、メッセージ変換テンプレートを使用して、宛先で想定されているデータ形式に一致する、書き出されたプロファイルを生成する方法を確認しました。この手順が宛先設定プロセスのどこに当てはまるかを把握するには、[Destination SDK を使用した宛先の設定方法](../../guides/configure-destination-instructions.md)を参照してください。

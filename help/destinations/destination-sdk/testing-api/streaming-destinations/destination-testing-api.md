@@ -1,43 +1,42 @@
 ---
-description: 宛先テスト API を使用して、ストリーミング宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証する方法について説明します。
-title: サンプルプロファイルを使用してストリーミング先をテストする
+description: 宛先テスト API を使用して、ストリーミング宛先が正しく設定されているかどうかをテストし、設定された宛先に対するデータフローの整合性を検証する方法を説明します。
+title: サンプルプロファイルを使用したストリーミング宛先のテスト
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 
-# サンプルプロファイルを使用してストリーミング先をテストする {#template-api-operations}
+# サンプルプロファイルを使用したストリーミング宛先のテスト {#template-api-operations}
 
 >[!IMPORTANT]
 >
 >**API エンドポイント**：`https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-このページでは、 `/authoring/testing/destinationInstance/` API エンドポイント：宛先が正しく設定されているかどうかをテストし、設定した宛先へのデータフローの整合性を検証します。 このエンドポイントでサポートされる機能については、 [宛先設定のテスト](streaming-destination-testing-overview.md).
+このページでは、宛先が正しく設定されているかどうかをテストしたり、設定された宛先に対するデータフローの整合性を検証したりするために、`/authoring/testing/destinationInstance/` API エンドポイントを使用して実行できるすべての API 操作を一覧表示し、説明しています。このエンドポイントでサポートされる機能については、[宛先設定のテスト](streaming-destination-testing-overview.md)を参照してください。
 
-呼び出しにプロファイルを追加するかどうかに関わらず、テストエンドポイントにリクエストをおこないます。 リクエストでプロファイルを送信しない場合、Adobeは内部でプロファイルを生成し、リクエストに追加します。
+呼び出しにプロファイルを追加してもしなくても、エンドポイントをテストするためのリクエストを行います。リクエスト時に任意のプロファイルを送信しない場合、アドビでは、ユーザーのためにこれらを内部で生成して、リクエストに追加します。
 
-以下を使用して、 [サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、宛先テスト API へのリクエストで使用するプロファイルを作成します。
+[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、宛先テスト API に対するリクエストで使用するためのプロファイルを作成できます。
 
 ## 宛先インスタンス ID の取得方法 {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience PlatformUI で宛先への既存の接続が必要です。 読み取り [宛先に接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja) および [宛先へのプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) を参照してください。
-> * 宛先への接続を確立したら、このエンドポイントに対する API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。この ID は、 [宛先との接続の参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![UI 画像宛先インスタンス ID の取得方法](../../assets/testing-api/get-destination-instance-id.png)
-
+>* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとセグメントのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
+> * 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
+>![宛先インスタンス ID の取得方法の UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 宛先テスト API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
-## 呼び出しにプロファイルを追加せずに、宛先設定をテストする {#test-without-adding-profiles}
+## 呼び出しにプロファイルを追加しないで宛先設定をテスト {#test-without-adding-profiles}
 
-宛先の設定をテストするには、 `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` エンドポイントを作成し、テストする宛先の宛先インスタンス ID を指定します。
+`authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` エンドポイントに対して POST リクエストを行い、テストしている宛先の宛先インスタンス ID を指定することで、宛先設定をテストできます。
 
 **API 形式**
 
@@ -46,13 +45,13 @@ ht-degree: 14%
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
-| クエリパラメータ | 説明 |
+| クエリパラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | テストする宛先の宛先インスタンス ID。 |
+| `{DESTINATION_INSTANCE_ID}` | テストしている宛先の宛先インスタンス ID。 |
 
 **リクエスト**
 
-次のリクエストは、宛先の REST API エンドポイントを呼び出します。 リクエストは `{DESTINATION_INSTANCE_ID}` クエリパラメーター。
+以下のリクエストは、宛先の REST API エンドポイントを呼び出します。リクエストは、`{DESTINATION_INSTANCE_ID}` クエリパラメーターで設定されます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -66,7 +65,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と共に、宛先の REST API エンドポイントからの API 応答を返します。
+応答が成功すると、HTTP ステータス 200 が、宛先の REST API エンドポイントからの API 応答と共に返されます。
 
 ```json
 {
@@ -157,17 +156,17 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `aggregationKey` | 宛先に対して設定された集計ポリシーに関する情報が含まれます。 詳しくは、 [集計ポリシー](../../functionality/destination-configuration/aggregation-policy.md) ドキュメント。 |
-| `traceId` | 操作の一意の ID。 エラーが発生した場合は、この ID をトラブルシューティング用にAdobeチームと共有できます。 |
-| `results.httpCalls.request` | 宛先にAdobeで送信されたリクエストを含めます。 |
-| `results.httpCalls.response` | 宛先からAdobeが受け取った応答を含みます。 |
-| `inputProfiles` | 宛先への呼び出し時に書き出されたプロファイルが含まれます。 プロファイルは、ソーススキーマと一致します。 |
+| `aggregationKey` | 宛先用に設定された集計ポリシーに関する情報が含まれます。詳しくは、[集計ポリシー](../../functionality/destination-configuration/aggregation-policy.md)ドキュメントを参照してください。 |
+| `traceId` | 操作の一意の ID。エラーが発生した場合、トラブルシューティングのために、この ID をアドビチームと共有できます。 |
+| `results.httpCalls.request` | アドビが宛先に送信したリクエストが含まれます。 |
+| `results.httpCalls.response` | アドビが宛先から受信した応答が含まれます。 |
+| `inputProfiles` | 宛先への呼び出し時に書き出されたプロファイルが含まれます。プロファイルは、ソーススキーマに一致します。 |
 
 {style="table-layout:auto"}
 
-## 呼び出しに追加されたプロファイルを使用して、宛先設定をテストする {#test-with-added-profiles}
+## 呼び出しにプロファイルを追加して宛先設定をテスト {#test-with-added-profiles}
 
-宛先の設定をテストするには、 `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` エンドポイントを作成し、テストする宛先の宛先インスタンス ID を指定します。
+`authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` エンドポイントに対して POST リクエストを行い、テストしている宛先の宛先インスタンス ID を指定することで、宛先設定をテストできます。
 
 **API 形式**
 
@@ -175,13 +174,13 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
-| クエリパラメータ | 説明 |
+| クエリパラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | テストする宛先の宛先インスタンス ID。 |
+| `{DESTINATION_INSTANCE_ID}` | テストしている宛先の宛先インスタンス ID。 |
 
 **リクエスト**
 
-次のリクエストは、宛先の REST API エンドポイントを呼び出します。 リクエストは、ペイロードで指定されたパラメーターと `{DESTINATION_INSTANCE_ID}` クエリパラメーター。
+以下のリクエストは、宛先の REST API エンドポイントを呼び出します。リクエストは、ペイロードで提供されるパラメーターおよび `{DESTINATION_INSTANCE_ID}` クエリパラメーターによって設定されます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -230,7 +229,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と共に、宛先の REST API エンドポイントからの API 応答を返します。
+応答が成功すると、HTTP ステータス 200 が、宛先の REST API エンドポイントからの API 応答と共に返されます。
 
 ```json
 {
@@ -327,4 +326,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読んだ後、宛先のテスト方法がわかりました。 これで、Adobe [セルフサービスドキュメント化プロセス](../../docs-framework/documentation-instructions.md) をクリックして、宛先のドキュメントページを作成します。
+このドキュメントでは、宛先のテスト方法を確認しました。これで、アドビ[セルフサービスドキュメントプロセス](../../docs-framework/documentation-instructions.md)を使用して、宛先用のドキュメントページを作成できるようになりました。

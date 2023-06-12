@@ -1,29 +1,29 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを使用した宛先設定の取得に使用する API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先設定を取得するために使用される API 呼び出しの例を示します。
 title: 宛先設定の取得
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
 
 # 宛先設定の取得
 
-このページの例では、 `/authoring/destination` API エンドポイント。
+このページでは、`/authoring/destination` API エンドポイントを使用して、既存の宛先設定に関する情報を取得するために使用できる API リクエストおよびペイロードの例を示します。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 宛先設定 API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 宛先設定の取得 {#retrieve}
 
-次の [既存](create-destination-configuration.md) 宛先の設定を行う `GET` にリクエスト `/authoring/destination` endpoint.
+`/authoring/destination` エンドポイントに `GET` リクエストを行うことで、[既存の](create-destination-configuration.md)宛先設定を取得できます。
 
 >[!TIP]
 >
@@ -32,25 +32,25 @@ ht-degree: 25%
 
 **API 形式**
 
-次の API 形式を使用して、アカウントのすべての宛先設定を取得します。
+以下の API 形式を使用して、お使いのアカウントに関するすべての宛先設定を取得します。
 
 ```http
 GET /authoring/destinations
 ```
 
-次の API 形式を使用して、 `{INSTANCE_ID}` パラメーター。
+以下の API 形式を使用して、`{INSTANCE_ID}` パラメーターで定義された、特定の宛先設定を取得します。
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-次の 2 つのリクエストでは、 `INSTANCE_ID` パラメーターを指定します。
+以下の 2 つのリクエストは、リクエストで `INSTANCE_ID` パラメーターを渡すかどうかに応じて、お客様の IMS 組織に対するすべての宛先設定か、特定の宛先設定を取得します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
->[!TAB すべての宛先設定を取得]
+>[!TAB すべての宛先設定の取得]
 
 +++リクエスト
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、アクセス権のある宛先設定のリストを、 [!DNL IMS Org ID] および使用したサンドボックス名。 1 `instanceId` は、1 つの宛先設定に対応します。
+応答が成功すると、HTTP ステータス 200 が、使用した [!DNL IMS Org ID] およびサンドボックス名に基づいた、アクセス権のある宛先設定のリストと共に返されます。1 つの `instanceId` は、1 つの宛先設定に対応します。
 
 ```json
 {
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、 `{INSTANCE_ID}` は呼び出しで指定されます。
+応答が成功すると、HTTP ステータス 200 が、呼び出しで提供された `{INSTANCE_ID}` に対応する宛先設定の詳細と共に返されます。
 
 ```json
 {
@@ -310,9 +310,9 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読んだ後、Destination SDKを使用して宛先設定を取得する方法がわかりました `/authoring/destinations` API エンドポイント。
+このドキュメントでは、Destination SDK `/authoring/destinations` API エンドポイントを使用した、宛先設定の取得方法を確認しました。
 
-このエンドポイントで実行できる操作について詳しくは、次の記事を参照してください。
+このエンドポイントでできることについて詳しくは、以下の記事を参照してください。
 
 * [宛先設定の作成](create-destination-configuration.md)
 * [宛先設定の更新](update-destination-configuration.md)

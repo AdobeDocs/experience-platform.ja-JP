@@ -1,11 +1,11 @@
 ---
 title: オーサリングのベストプラクティス
-description: 宛先のドキュメントページをオーサリングする際に従う必要があるルールとヒントを説明します。これにより、Adobe Experience Platformのドキュメント品質標準を確実に満たすことができます。
+description: Adobe Experience Platform ドキュメント品質基準を確実に満たすために、宛先ドキュメントページをオーサリングする際に従うべきルールおよびヒントについて説明します。
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -13,48 +13,48 @@ ht-degree: 3%
 
 ## 概要 {#overview}
 
-このページでは、次の場合に従う必要があるルールについて説明します [宛先ドキュメントのオーサリング](./documentation-instructions.md) ページを開き、Adobe Experience Platformのドキュメント品質標準を満たしていることを確認します。
+このページでは、Adobe Experience Platform ドキュメント品質基準を確実に満たすために、[宛先ドキュメントページをオーサリング](./documentation-instructions.md)する際に従うべきルールについて説明します。
 
 ## 一般的なガイダンス {#general-guidance}
 
-* を [テンプレート](./self-service-template.md) 宛先のドキュメントについては、『Adobe投稿者ガイド』を参照してください。 [リンク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [テーブル](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables)、 [サポートされる markdown 構文](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [記述指針](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en)など。
-* 製品ドキュメントには、観測と推定を含めないでください。
-* Experience Platformドキュメントでは、Adobeライターは **太字書式** 次のように、ユーザーインターフェイスコントロールを参照するには、次の手順を実行します。
-   * **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。ユーザーインターフェイスコントロールが [宛先のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+* 宛先ドキュメント用に[テンプレート](./self-service-template.md)に入力する場合、[リンク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja)、[テーブル](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#テーブル)、[サポートされるマークダウン構文](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)、[ライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja)などについて詳しくは、アドビコントリビューターガイドを参照してください。
+* 製品ドキュメントに所見や推定を含めないでください。
+* Experience Platform ドキュメントでは、アドビのライターは、ユーザーインターフェイスコントロールを参照するために、以下のように、**太字書式**&#x200B;を使用しています。
+   * **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。ユーザーインターフェイスコントロールの表記方法の例を表示するには、[宛先チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-destination)を参照してください。
 
-## 書き方
+## ライティングスタイル
 
 >[!IMPORTANT]
 >
->読み取り [Adobe文書の記述ガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) 宛先ドキュメントページのオーサリングを開始する前に、
+>宛先ドキュメントページのオーサリングを開始する前に、[アドビドキュメントのライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja)を参照してください。
 
-* 文章を短くして、早く要点にたどり着きましょう。 文の長さが 20 語を超える場合や、複数のコンマを使用する場合は、文を別々の文に分割することを検討してください。 20 語を超える文は、読者にとって特に難しい文章です。
-* 過度に礼儀正しくするな。 「please」や「dyndly do ...」を使用しないでください。 （技術ドキュメント）。
+* 文を短くして、要点を早く伝えます。文が 20 単語を超える長さだったり、複数のコンマを使用している場合は、別の文に分割することを検討してください。20 単語を超える長さの文は、読者にとって特に読みにくい可能性があります。
+* 過剰に丁寧な表現をしないようにします。テクニカルドキュメントでは、「お願いいたします」や「...していただく」などの使用は避けます。
 
 ## リンク {#linking}
 
-提供されたドキュメントテンプレートに従い、テンプレート内の既存のリンクを編集しないでください。 新しいリンクを含める場合は、 [ドキュメント内でのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) （コントリビューターガイド）。
+提供されるドキュメントテンプレートに従い、テンプレート内の既存のリンクを編集しないようにします。新しいリンクを含める場合は、コントリビューターガイドの[ドキュメントでのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja)を参照してください。
 
-## ブランディングのガイドライン {#branding}
+## ブランディングガイドライン {#branding}
 
-* AEP は、公開用語として承認されていません。 最初の使用時にAdobe Experience Platformを使用し、次にExperience Platformを使用し、次に Platform を使用してください。
-   * **次を使用しない**:AEP から宛先にデータを書き出す前に、次の前提条件を読み、満たしていることを確認してください。
-   * **用途**:Adobe Experience Platformから宛先にデータを書き出す前に、次の前提条件を読み、満たしていることを確認してください。
+* AEP は、承認された、一般向けの用語ではありません。最初の使用時には Adobe Experience Platform を使用し、次に Experience Platform、その次に Platform を使用してください。
+   * **使用不可**：AEP から宛先にデータを書き出す前に、以下の前提条件を参照し、必ず完了するようにしてください。
+   * **使用可**：Adobe Experience Platform から宛先にデータを書き出す前に、以下の前提条件を参照し、必ず完了するようにしてください。
 
 ## 画像とスクリーンショット {#images-and-screenshots}
 
-* 詳しくは、 [画像へのリンク方法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#images)（コントリビューターガイドを参照）。
-* スクリーンショットを使用する場合は、スクリーンショットに Platform UI の画面全体が取り込まれていることを確認してください。
-* ページ上の特定のコントロールまたはラベルをハイライト表示するために画像をマークアップする場合は、Experience Platformドキュメントチームが使用するマークアップスタイルに従ってください。 プロファイルベースが [このスクリーンショット](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
-* 以下を使用してください： `png` 画像の形式設定
-* 番号付きスクリーンショットはファイル名として使用しないでください。 画像ファイル名は説明的である必要があります。
-   * **次を使用しない**: `1.png`, `2.png`, `3.png`
-   * **使用方法**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
-* ドキュメントに追加する画像に代替テキストを使用し、代替テキストに適切な文法を使用してください。
-   * **次を使用しない**:宛先接続の詳細
-   * **用途**:宛先接続の詳細を示す、Platform UI の画像が入力されました。
+* [画像へのリンク方法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#画像)について詳しくは、コントリビューターガイドを参照してください。
+* スクリーンショットを使用する場合、スクリーンショットが Platform UI 画面全体をキャプチャしていることを確認してください。
+* ページ上の特定のコントロールやラベルをハイライト表示するために画像をマークアップする場合、Experience Platform ドキュメントチームによって使用されるマークアップスタイルに従ってください。[このスクリーンショット](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency)で「Profile-based」がどのようにハイライト表示されているかを確認してください。
+* `png` 形式の画像を使用してください。
+* 番号が付けられたスクリーンショットをファイル名として使用しないでください。画像ファイル名は、説明的である必要があります。
+   * **使用不可**：`1.png`、`2.png`、`3.png`
+   * **使用可**：`yourdestination-authentication-details.png`、`yourdestination-destination-details.png`
+* ドキュメントに追加するすべての画像に alt テキストを使用し、alt テキストに適した文法を使用してください。
+   * **使用不可**：宛先接続の詳細
+   * **使用可**：宛先接続の詳細が入力されていることを表す、Platform UI の画像。
 
 ## プロセス {#process}
 
-* この [ドキュメントテンプレート](./self-service-template.md) は、パートナーのフィードバックに基づいて、まれに更新されます。 宛先のオーサリングドキュメントを開始する前に、 [テンプレートの最新バージョン](../assets/docs-framework/yourdestination-template.zip).
-* ドキュメントを作成し、フォークのブランチからドキュメントプル要求 (PR) を作成します *本枝以外の*. でのオーサリング時に、レビュー用の送信先を参照してください。 [GitHub インターフェイス](./use-github-interface-to-create-documentation.md#submit-review) または [ローカル環境](./work-in-local-environment.md#submit-review).
+* [ドキュメントテンプレート](./self-service-template.md)は、パートナーのフィードバックに基づいて、まれに更新されます。宛先用のドキュメントのオーサリングを開始する前に、[テンプレートの最新バージョン](../assets/docs-framework/yourdestination-template.zip)をダウンロードしていることを確認してください。
+* ドキュメントをオーサリングして、*メインブランチ以外*&#x200B;のフォーク内のブランチからドキュメントのプルリクエスト（PR）を作成します。[GitHub インターフェイス](./use-github-interface-to-create-documentation.md#submit-review)や[ローカル環境](./work-in-local-environment.md#submit-review)でオーサリングする場合は、レビューのための宛先の送信に関する節を参照してください。

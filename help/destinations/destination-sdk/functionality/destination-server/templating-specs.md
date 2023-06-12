@@ -1,41 +1,41 @@
 ---
-description: エンドポイントに送信される HTTP リクエストの形式を設定する方法を説明します。 /authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK内の宛先サーバーテンプレート仕様を設定します。
-title: Destination SDK
+description: エンドポイントに送信される HTTP リクエストの書式設定方法を説明します。/authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK の宛先サーバーテンプレート仕様を設定します。
+title: Destination SDK で作成される宛先のテンプレート仕様
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
 
-# Destination SDK
+# Destination SDK で作成される宛先のテンプレート仕様
 
-宛先サーバー設定の template spec 部分を使用して、宛先に送信する HTTP リクエストの形式を設定する方法を設定します。
+宛先サーバー設定のテンプレート仕様部分を使用して、宛先に送信される HTTP リクエストの書式設定方法を設定します。
 
-テンプレート仕様では、XDM スキーマと、プラットフォームがサポートする形式の間でプロファイル属性フィールドを変換する方法を定義できます。
+テンプレート仕様では、XDM スキーマとプラットフォームがサポートする形式の間でのプロファイル属性フィールドの変換方法を定義できます。
 
-テンプレート仕様は、リアルタイム（ストリーミング）宛先の宛先サーバー設定の一部です。
+テンプレート仕様は、リアルタイム（ストリーミング）宛先用の宛先サーバー設定の一部です。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したストリーミング宛先の設定](../../guides/configure-destination-instructions.md#create-server-template-configuration)方法に関するガイドを参照してください。
 
-宛先のテンプレート仕様は、 `/authoring/destination-servers` endpoint. このページに示すコンポーネントを設定できる API 呼び出しの詳細な例については、次の API リファレンスページを参照してください。
+`/authoring/destination-servers` エンドポイントを介して宛先用のテンプレート仕様を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
 * [宛先サーバー設定の作成](../../authoring-api/destination-server/create-destination-server.md)
 * [宛先サーバー設定の更新](../../authoring-api/destination-server/update-destination-server.md)
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
-## サポートされる統合のタイプ {#supported-integration-types}
+## サポートされる統合タイプ {#supported-integration-types}
 
-このページで説明する機能をサポートする統合のタイプについて詳しくは、次の表を参照してください。
+このページで説明される機能をサポートする統合のタイプについて詳しくは、以下の表を参照してください。
 
-| 統合タイプ | 機能をサポート |
+| 統合タイプ | 機能のサポート |
 |---|---|
 | リアルタイム（ストリーミング）統合 | ○ |
-| ファイルベース（バッチ）の統合 | いいえ |
+| ファイルベースの（バッチ）統合 | × |
 
 ## テンプレート仕様の設定 {#configure-template-spec}
 
@@ -45,14 +45,14 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 
 変換について詳しくは、以下のリンクを参照してください。
 
-* [メッセージの形式](message-format.md)
-* [テンプレート言語を使用して ID、属性、セグメントメンバーシップを変換 ](message-format.md#using-templating)
+* [メッセージ形式](message-format.md)
+* [テンプレート言語を使用して ID、属性、セグメントメンバーシップを変換](message-format.md#using-templating)
 
 >[!TIP]
 >
 >アドビは、メッセージ変換テンプレートの作成とテストに役立つ[開発者ツール](../../testing-api/streaming-destinations/create-template.md)を提供しています。
 
-以下に、HTTP リクエストテンプレートの例と、個々のパラメーターの説明を示します。
+以下の HTTP リクエストテンプレートの例と各パラメーターの説明を参照してください。
 
 ```json
 {
@@ -69,19 +69,19 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 
 | パラメーター | タイプ | 説明 |
 |---|---|---|
-| `httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。サポートされるメソッド： `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。サポートされるメソッド：`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `value` | 文字列 | *必須。* この文字列は、Platform によって送信される HTTP リクエストを、宛先で想定される形式に書式設定する、テンプレートの文字エスケープバージョンです。 <br> テンプレートの書き込み方法について詳しくは、 [テンプレートの使用](message-format.md#using-templating). <br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br> 単純な変換の例については、 [プロファイル属性](message-format.md#attributes) 変換。 |
-| `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。変換テンプレートで生成される出力の種類に応じて、次のいずれかがサポートされます [HTTP アプリケーションコンテンツタイプ](https://www.iana.org/assignments/media-types/media-types.xhtml#application). ほとんどの場合、この値は `application/json`. |
+| `value` | 文字列 | *必須。* この文字列は、Platform によって送信される HTTP リクエストを宛先で想定される形式に書式設定するテンプレートの文字がエスケープされたバージョンです。<br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br>単純な変換の例については、[プロファイル属性](message-format.md#attributes)変換を参照してください。 |
+| `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。変換テンプレートが生成する出力のタイプに応じて、これは、サポートされる任意の [HTTP アプリケーションコンテンツタイプ](https://www.iana.org/assignments/media-types/media-types.xhtml#application)になります。ほとんどの場合、この値は、`application/json` に設定する必要があります。 |
 
 {style="table-layout:auto"}
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、テンプレート仕様の内容と、その設定方法をより深く理解できるはずです。
+この記事を読むことで、テンプレート仕様とは何か、およびどのように設定できるかについて、理解を深めることができました。
 
-その他の宛先サーバーコンポーネントの詳細については、次の記事を参照してください。
+その他の宛先サーバーコンポーネントについて詳しくは、以下の記事を参照してください。
 
-* [Destination SDK](server-specs.md)
-* [メッセージの形式](message-format.md)
+* [Destination SDK で作成される宛先のサーバー仕様](server-specs.md)
+* [メッセージ形式](message-format.md)
 * [ファイル形式設定](file-formatting.md)

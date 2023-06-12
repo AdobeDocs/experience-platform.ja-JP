@@ -1,10 +1,10 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを通じて既存の資格情報設定を更新するための API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の資格情報設定を更新するために使用される API 呼び出しの例を示します。
 title: 資格情報設定の更新
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
@@ -15,33 +15,33 @@ ht-degree: 34%
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/credentials`
 
-このページでは、 `/authoring/credentials` API エンドポイント。
+このページでは、`/authoring/credentials` API エンドポイントを使用して、既存の資格情報設定を更新するために使用できる API リクエストおよびペイロードの例を示します。
 
 ## `/credentials` API エンドポイントを使用するタイミング {#when-to-use}
 
 >[!IMPORTANT]
 >
->ほとんどの場合、`/credentials` API エンドポイントを使用する必要は&#x200B;***ありません***。代わりに、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを介して宛先の認証情報を設定できます。
+>ほとんどの場合、`/credentials` API エンドポイントを使用する必要は&#x200B;***ありません***。代わりに、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを介して宛先の認証情報を設定できます。
 > 
->読み取り [顧客認証設定](../functionality/destination-configuration/customer-authentication.md) を参照してください。
+>サポートされる認証タイプについて詳しくは、[顧客認証設定](../functionality/destination-configuration/customer-authentication.md)を参照してください。
 
-この API エンドポイントを使用して、Adobeと宛先プラットフォームの間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 `/credentials` API エンドポイント。
+アドビと宛先プラットフォームとの間にグローバル認証システムがあり、[!DNL Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合にのみ、この API エンドポイントを使用して資格情報設定を作成します。この場合、`/credentials` API エンドポイントを使用して、資格情報設定を作成する必要があります。
 
-グローバル認証システムを使用する場合、 `"authenticationRule":"PLATFORM_AUTHENTICATION"` 内 [宛先の配信](../functionality/destination-configuration/destination-delivery.md) 設定、時 [新しい宛先設定の作成](../authoring-api/destination-configuration/create-destination-configuration.md).
+グローバル認証システムを使用する場合、[新しい宛先設定を作成する](../authoring-api/destination-configuration/create-destination-configuration.md)際に、[宛先配信](../functionality/destination-configuration/destination-delivery.md)設定で `"authenticationRule":"PLATFORM_AUTHENTICATION"` を設定する必要があります。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 資格情報 API 操作の概要 {#get-started}
 
-続ける前に「[はじめる前に](../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 資格情報設定の更新 {#update}
 
-以下の項目を更新し、 [既存](create-credential-configuration.md) 資格情報の設定 `PUT` にリクエスト `/authoring/credentials` エンドポイントと、更新されたペイロード。
+更新されたペイロードで `/authoring/credentials` エンドポイントに `PUT` リクエストを行うことで、[既存の](create-credential-configuration.md)資格情報設定を更新できます。
 
-既存の秘密鍵証明書の設定と、それに対応する証明書の設定を取得するには `{INSTANCE_ID}`に関する記事を参照してください。 [資格情報設定の取得](retrieve-credential-configuration.md).
+既存の資格情報設定およびその関連する `{INSTANCE_ID}` を取得するには、[資格情報設定の取得](retrieve-credential-configuration.md)に関する記事を参照してください。
 
 **API 形式**
 
@@ -51,17 +51,17 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 更新する秘密鍵証明書設定の ID。 既存の秘密鍵証明書の設定と、それに対応する証明書の設定を取得するには `{INSTANCE_ID}`を参照してください。 [資格情報設定の取得](retrieve-credential-configuration.md). |
+| `{INSTANCE_ID}` | 更新する資格情報設定の ID。既存の資格情報設定およびその関連する `{INSTANCE_ID}` を取得するには、[資格情報設定の取得](retrieve-credential-configuration.md)を参照してください。 |
 
-次のリクエストは、ペイロードで指定されたパラメーターで定義された、既存の資格情報設定を更新します。
+以下のリクエストは、ペイロードで提供されるパラメーターの定義に基づいて、既存の資格情報設定を更新します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
 >[!TAB 基本]
 
-**基本的な秘密鍵証明書設定の更新**
+**基本資格情報設定の更新**
 
 +++リクエスト
 
@@ -85,8 +85,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `url` | 文字列 | 認証プロバイダーの URL |
-| `username` | 文字列 | 認証情報設定ログインユーザー名 |
-| `password` | 文字列 | 認証情報構成のログインパスワード |
+| `username` | 文字列 | 資格情報設定のログインユーザー名 |
+| `password` | 文字列 | 資格情報設定のログインパスワード |
 
 {style="table-layout:auto"}
 
@@ -94,13 +94,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++応答
 
-正常な応答は、更新された資格情報設定の詳細と共に HTTP ステータス 200 を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB Amazon S3]
 
-**の更新 [!DNL Amazon S3] 資格情報設定**
+**[!DNL Amazon S3] 資格情報設定の更新**
 
 +++リクエスト
 
@@ -131,13 +131,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++応答
 
-正常な応答は、更新された資格情報設定の詳細と共に HTTP ステータス 200 を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB SSH]
 
-**の更新 [!DNL SSH] 資格情報設定**
+**[!DNL SSH] 資格情報設定の更新**
 
 +++リクエスト
 
@@ -159,8 +159,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `username` | 文字列 | 認証情報設定ログインユーザー名 |
-| `sshKey` | 文字列 | [!DNL SSH] ～の鍵 [!DNL SFTP] と [!DNL SSH] 認証 |
+| `username` | 文字列 | 資格情報設定のログインユーザー名 |
+| `sshKey` | 文字列 | [!DNL SSH] 認証を使用した [!DNL SFTP] の [!DNL SSH] キー |
 
 {style="table-layout:auto"}
 
@@ -168,13 +168,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++応答
 
-正常な応答は、更新された資格情報設定の詳細と共に HTTP ステータス 200 を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB Azure Data Lake Storage]
 
-**の更新 [!DNL Azure Data Lake Storage] 資格情報設定**
+**[!DNL Azure Data Lake Storage] 資格情報設定の更新**
 
 +++リクエスト
 
@@ -200,7 +200,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- | ----------- |
 | `url` | 文字列 | 認証プロバイダーの URL |
 | `tenant` | 文字列 | Azure Data Lake Storage のテナント |
-| `servicePrincipalId` | 文字列 | [!DNL Azure Service Principal] の ID [!DNL Azure Data Lake Storage] |
+| `servicePrincipalId` | 文字列 | [!DNL Azure Data Lake Storage] の [!DNL Azure Service Principal] ID |
 | `servicePrincipalKey` | 文字列 | [!DNL Azure Service Principal Key] for [!DNL Azure Data Lake Storage] |
 
 {style="table-layout:auto"}
@@ -209,13 +209,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++応答
 
-正常な応答は、更新された資格情報設定の詳細と共に HTTP ステータス 200 を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された資格情報設定の詳細と共に返されます。
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
-**の更新 [!DNL Azure Blob] 資格情報設定**
+**[!DNL Azure Blob] 資格情報設定の更新**
 
 +++リクエスト
 
@@ -244,7 +244,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++応答
 
-正常な応答は、更新された資格情報設定の詳細と共に HTTP ステータス 200 を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された資格情報設定の詳細と共に返されます。
 
 +++
 
@@ -256,4 +256,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、 `/authoring/credentials` API エンドポイント。 [Destination SDK を使用して宛先を設定する方法](../guides/configure-destination-instructions.md)を参照して、この手順が宛先を設定するプロセスの中でどのように位置づけられるかを把握します。
+このドキュメントでは、`/authoring/credentials` API エンドポイントを使用した、資格情報設定の更新方法を確認しました。この手順が宛先設定プロセスのどこに当てはまるかを把握するには、[Destination SDK を使用した宛先の設定方法](../guides/configure-destination-instructions.md)を参照してください。

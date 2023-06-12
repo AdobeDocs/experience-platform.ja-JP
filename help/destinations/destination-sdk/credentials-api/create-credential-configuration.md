@@ -1,10 +1,10 @@
 ---
-description: このページでは、秘密鍵証明書の設定Adobe Experience Platform Destination SDKの作成に使用する API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK で、資格情報設定を作成するために使用される API 呼び出しの例を示します。
 title: 資格情報設定の作成
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '559'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -15,31 +15,31 @@ ht-degree: 49%
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/credentials`
 
-このページでは、API リクエストとペイロードの例を示します。この例を使用して、 `/authoring/credentials` API エンドポイント。
+このページでは、`/authoring/credentials` API エンドポイントを使用して、資格情報設定を作成するために使用できる API リクエストおよびペイロードの例を示します。
 
 ## `/credentials` API エンドポイントを使用するタイミング {#when-to-use}
 
 >[!IMPORTANT]
 >
->ほとんどの場合、`/credentials` API エンドポイントを使用する必要は&#x200B;***ありません***。代わりに、エンドポイント `/destinations` の `customerAuthenticationConfigurations` パラメーターを介して宛先の認証情報を設定できます。
+>ほとんどの場合、`/credentials` API エンドポイントを使用する必要は&#x200B;***ありません***。代わりに、`/destinations` エンドポイントの `customerAuthenticationConfigurations` パラメーターを介して宛先の認証情報を設定できます。
 > 
->読み取り [顧客認証設定](../functionality/destination-configuration/customer-authentication.md) を参照してください。
+>サポートされる認証タイプについて詳しくは、[顧客認証設定](../functionality/destination-configuration/customer-authentication.md)を参照してください。
 
-この API エンドポイントを使用して、Adobeと宛先プラットフォームの間にグローバル認証システムがあり、 [!DNL Platform] のお客様は、宛先に接続するための認証資格情報を提供する必要はありません。 この場合、 `/credentials` API エンドポイント。
+アドビと宛先プラットフォームとの間にグローバル認証システムがあり、[!DNL Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合にのみ、この API エンドポイントを使用して資格情報設定を作成します。この場合、`/credentials` API エンドポイントを使用して、資格情報設定を作成する必要があります。
 
-グローバル認証システムを使用する場合、 `"authenticationRule":"PLATFORM_AUTHENTICATION"` 内 [宛先の配信](../functionality/destination-configuration/destination-delivery.md) 設定、時 [新しい宛先設定の作成](../authoring-api/destination-configuration/create-destination-configuration.md).
+グローバル認証システムを使用する場合、[新しい宛先設定を作成する](../authoring-api/destination-configuration/create-destination-configuration.md)際に、[宛先配信](../functionality/destination-configuration/destination-delivery.md)設定で `"authenticationRule":"PLATFORM_AUTHENTICATION"` を設定する必要があります。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 資格情報 API 操作の概要 {#get-started}
 
-続行する前に、[入門ガイド](../getting-started.md)で、必要な宛先作成許可やヘッダーの取得方法など、API に対する呼び出しを正常に行うためにに知っておく必要がある、重要な情報を確認しておいてください。
+続行する前に、「[はじめる前に](../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
-## 認証情報設定の作成 {#create}
+## 資格情報設定の作成 {#create}
 
-新しい資格情報設定を作成するには、 `POST` にリクエスト `/authoring/credentials` endpoint.
+`/authoring/credentials` エンドポイントに `POST` リクエストを行うことで、新しい資格情報設定を作成できます。
 
 **API 形式**
 
@@ -47,15 +47,15 @@ ht-degree: 49%
 POST /authoring/credentials
 ```
 
-次のリクエストでは、ペイロードで指定されたパラメーターで定義された新しい資格情報設定を作成します。
+以下のリクエストは、ペイロードで提供されるパラメーターの定義に基づいて、新しい資格情報設定を作成します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
 >[!TAB 基本]
 
-**基本的な秘密鍵証明書設定の作成**
+**基本資格情報設定の作成**
 
 +++リクエスト
 
@@ -79,8 +79,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `url` | 文字列 | 認証プロバイダーの URL |
-| `username` | 文字列 | 認証情報設定ログインユーザー名 |
-| `password` | 文字列 | 認証情報構成のログインパスワード |
+| `username` | 文字列 | 資格情報設定のログインユーザー名 |
+| `password` | 文字列 | 資格情報設定のログインパスワード |
 
 {style="table-layout:auto"}
 
@@ -88,13 +88,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++応答
 
-リクエストが成功した場合は、新しく作成した資格情報の構成の詳細とともに、HTTP ステータス 200 が返されます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB Amazon S3]
 
-**の作成 [!DNL Amazon S3] 資格情報設定**
+**[!DNL Amazon S3] 資格情報設定の作成**
 
 +++**リクエスト**
 
@@ -125,13 +125,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++応答
 
-リクエストが成功した場合は、新しく作成した資格情報の構成の詳細とともに、HTTP ステータス 200 が返されます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB SSH]
 
-**SSH 秘密鍵証明書設定の作成**
+**SSH 資格情報設定の作成**
 
 +++リクエスト
 
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `username` | 文字列 | 認証情報設定ログインユーザー名 |
+| `username` | 文字列 | 資格情報設定のログインユーザー名 |
 | `sshKey` | 文字列 | SSH 認証を使用した SFTP 用の SSH キー |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++応答
 
-リクエストが成功した場合は、新しく作成した資格情報の構成の詳細とともに、HTTP ステータス 200 が返されます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成された資格情報設定の詳細と共に返されます。
 
 +++
 
 >[!TAB Azure Data Lake Storage]
 
-**の作成 [!DNL Azure Data Lake Storage] 資格情報設定**
+**[!DNL Azure Data Lake Storage] 資格情報設定の作成**
 
 +++リクエスト
 
@@ -203,13 +203,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++応答
 
-リクエストが成功した場合は、新しく作成した資格情報の構成の詳細とともに、HTTP ステータス 200 が返されます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成された資格情報設定の詳細と共に返されます。
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
-**の作成 [!DNL Azure Blob Storage] 資格情報設定**
+**[!DNL Azure Blob Storage] 資格情報設定の作成**
 
 +++リクエスト
 
@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++応答
 
-リクエストが成功した場合は、新しく作成した資格情報の構成の詳細とともに、HTTP ステータス 200 が返されます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成された資格情報設定の詳細と共に返されます。
 
 +++
 
@@ -250,4 +250,4 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読むと、資格情報エンドポイントを使用するタイミングと、 `/authoring/credentials` API エンドポイント読み取り [宛先の設定にDestination SDKを使用する方法](../guides/configure-destination-instructions.md) を参照して、この手順が宛先を設定するプロセスに適した場所を把握します。
+このドキュメントでは、資格情報エンドポイントを使用するタイミングと、`/authoring/credentials` API エンドポイントを使用した資格情報設定の設定方法を確認しました。この手順が宛先設定プロセスのどこに当てはまるかを把握するには、[Destination SDK を使用した宛先の設定方法](../guides/configure-destination-instructions.md)を参照してください。

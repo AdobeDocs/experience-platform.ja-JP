@@ -1,46 +1,46 @@
 ---
-description: Experience Platformがストリーミング宛先で返される様々なタイプのエラーを処理する方法と、宛先プラットフォームへのデータの送信を再試行する方法について説明します。
-title: Destination SDKで構築されたストリーミング宛先のレート制限および再試行ポリシー
+description: Experience Platform がストリーミング宛先によって返される様々なタイプのエラーをどのように処理し、宛先プラットフォームへのデータ送信をどのように再試行するかを説明します。
+title: Destination SDK で作成されたストリーミング宛先のレート制限および再試行ポリシー
 source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Destination SDKで構築されたストリーミング宛先のレート制限および再試行ポリシー
+# Destination SDK で作成されたストリーミング宛先のレート制限および再試行ポリシー
 
-パートナーが構築した宛先は、様々なエラーを返し、異なるレート制限ポリシーを持つ場合があります。 このページでは、Experience Platformがストリーミング先から返された様々なタイプのエラーを処理する方法について説明します。
+パートナーが作成した宛先は、様々なエラーを返し、異なるレート制限ポリシーを持つ可能性があります。このページでは、ストリーミング宛先によって返される様々なタイプのエラーを Experience Platform がどのように処理するかについて説明します。
 
-宛先を設定する際に、Destination SDKを使用して 2 つの集計タイプから選択できます。 [ベストエフォート集計](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) および [設定可能な集計](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). 選択した集計の種類に応じて、次に示すように、Experience Platformがエラーとレートの制限を処理する方法を示します。
+Destination SDK を使用して宛先を設定する場合、[ベストエフォート集計](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)と[設定可能な集計](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)の 2 つの集計タイプから選択できます。選択する集計タイプに応じて、以下の Experience Platform によるエラーおよびレート制限の処理方法を参照してください。
 
 ## ベストエフォート集計 {#best-effort-aggregation}
 
-宛先に対する HTTP 呼び出しが失敗した場合、Experience Platformは、最初の呼び出しの直後に、もう一度呼び出しをおこなおうとします。 2 回目の試行でも呼び出しが失敗する場合、Experience Platformは呼び出しを破棄し、3 回目の再試行はおこないません。
+宛先に対する任意の HTTP 呼び出しに失敗した場合、Experience Platform は、最初の呼び出しの後、即座にもう一度、呼び出しを試します。2 回目の呼び出しでも失敗する場合、Experience Platform は、呼び出しをドロップして、3 回目の再試行は行いません。
 
-## 構成可能な集計 {#configurable-aggregation}
+## 設定可能な集計 {#configurable-aggregation}
 
-設定可能な集計を使用して設定された宛先プラットフォームの場合、Experience Platformは、プラットフォームから返されるエラータイプを区別します。
+設定可能な集計で設定された宛先プラットフォームの場合、Experience Platform は、プラットフォームによって返されるエラータイプを以下のように区別します。
 
-* Experience Platformがプラットフォームへのデータの送信を再試行するエラー：
+* Experience Platform がプラットフォームへのデータ送信を再試行するエラー：
    * HTTP 応答コード 420 および 429
-   * 500 を超える HTTP 応答コード
-* Experience Platform *次の値と等しくない* データをプラットフォームに送信し直します。プラットフォームから返されるその他すべてのもの
+   * HTTP 応答コード 500 番台
+* Experience Platform がプラットフォームへのデータ送信を再試行&#x200B;*しない*&#x200B;エラー：プラットフォームによって返されるその他のすべてのエラー
 
-### 再試行方法の説明 {#retry-approach}
+### 再試行アプローチについて {#retry-approach}
 
-設定可能な集計のExperience Platformアプローチを以下に示します。 この例では、Experience Platformが 1 分あたり 50,000 件を超えるリクエストを受信した場合、429 エラーコードを返し始める宛先プラットフォームにデータを送信すると仮定します。
+設定可能な集計に対する Experience Platform のアプローチを以下に示します。この例では、1 分間に 50,000 回を超えるリクエストを受信すると 429 エラーコードを返し始める宛先プラットフォームに Experience Platform がデータを送信することを想定しています。
 
-* 分 1:Experience Platformは、40,000 個のバッチをプロファイルと共に集計して、宛先プラットフォームに送信します。 Experience Platformが 40,000 個の HTTP リクエストをおこない、すべてが成功しました。
-* 分 2:Experience Platformは、70,000 個のバッチをプロファイルと共に集計して、宛先プラットフォームに送信します。 Experience Platformが 70,000 個の HTTP リクエストを実行し、50,000 個が成功しました。 残りの 20k は、エンドポイントからレート制限エラーを受け取り、30 分後に再試行されます。
-* 分 3:Experience Platformは、30,000 個のバッチをプロファイルと共に集計して、宛先プラットフォームに送信します。 Experience Platformが 30,000 個の HTTP リクエストを実行し、すべてが成功しました。
+* 1 分：Experience Platform がプロファイルを含む 40,000 件のバッチを集計して、宛先プラットフォームに送信します。Experience Platform は、40,000 件の HTTP リクエストを行い、すべて成功します。
+* 2 分：Experience Platform がプロファイルを含む 70,000 件のバッチを集計して、宛先プラットフォームに送信します。Experience Platform は、70,000 件の HTTP リクエストを行い、50,000 件が成功します。その他の 20,000 件は、エンドポイントからレート制限エラーを受け取り、30 分後に再試行します。
+* 3 分：Experience Platform がプロファイルを含む 30,000 件のバッチを集計して、宛先プラットフォームに送信します。Experience Platform は、30,000 件の HTTP リクエストを行い、すべて成功します。
 * ...
 * ...
-* 分 32:Experience Platformは、2 分目に失敗した 20,000 個のバッチの送信を再試行します。 すべての呼び出しが成功しました。
+* 32 分：Experience Platform は、2 分の時点で失敗していた 20,000 件のバッチの送信を再試行します。すべての呼び出しが成功します。
 
 ## 次の手順 {#next-steps}
 
-これで、Experience Platformが宛先プラットフォームでエラーとレート制限を処理する方法がわかりました。これは、ストリーミング宛先の設定時に選択した集計ポリシーに応じて異なります。 次に、次のドキュメントを確認できます。
+ストリーミング宛先を設定した際に選択した集計ポリシーに応じて、Experience Platform が宛先プラットフォームからのエラーおよびレート制限をどのように処理するかについて確認しました。次に、以下のドキュメントを確認できます。
 
 * [宛先設定のテスト](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)
-* [Destination SDK で作成した宛先のレビュー用に送信する](../guides/submit-destination.md)
+* [Destination SDK で作成した宛先をレビュー用に送信](../guides/submit-destination.md)

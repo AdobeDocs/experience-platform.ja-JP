@@ -1,46 +1,46 @@
 ---
-description: このページでは、Adobe Experience Platform Destination SDKを介した既存の宛先サーバー設定の更新に使用する API 呼び出しの例を示します。
+description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先サーバー設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の更新
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '1098'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
 
 # 宛先サーバー設定の更新
 
-このページでは、 `/authoring/destination-servers` API エンドポイント。
+このページでは、`/authoring/destination-servers` API エンドポイントを使用して、既存の宛先サーバー設定を更新するために使用できる API リクエストおよびペイロードの例を示します。
 
 >[!TIP]
 >
->製品化/公開先に対する更新操作は、 [公開 API](../../publishing-api/create-publishing-request.md) 「更新」を送信して、Adobeレビューを行います。
+>製品化された宛先や公開されている宛先に対する更新操作は、[公開 API](../../publishing-api/create-publishing-request.md) を使用してアドビレビュー用に更新を送信した後でのみ、表示されます。
 
-このエンドポイントを通じて設定できる機能について詳しくは、次の記事を参照してください。
+このエンドポイントを通じて設定できる機能について詳しくは、以下の記事を参照してください。
 
-* [Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
-* [メッセージの形式](../../../destination-sdk/functionality/destination-server/message-format.md)
+* [Destination SDK で作成される宛先のサーバー仕様](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Destination SDK で作成される宛先のテンプレート仕様](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [メッセージ形式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [ファイル形式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
 ## 宛先サーバー API 操作の概要 {#get-started}
 
-続行する前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 宛先サーバー設定の更新 {#update}
 
-以下の項目を更新し、 [既存](create-destination-server.md) 宛先サーバーの設定を行う `PUT` にリクエスト `/authoring/destination-servers` エンドポイントと、更新されたペイロード。
+更新されたペイロードで `/authoring/destination-servers` エンドポイントに `PUT` リクエストを行うことで、[既存の](create-destination-server.md)宛先サーバー設定を更新できます。
 
 >[!TIP]
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-既存の宛先サーバー設定と、それに対応する設定を取得するには `{INSTANCE_ID}`に関する記事を参照してください。 [宛先サーバー設定の取得](retrieve-destination-server.md).
+既存の宛先サーバー設定およびその関連する `{INSTANCE_ID}` を取得するには、[宛先サーバー設定の取得](retrieve-destination-server.md)に関する記事を参照してください。
 
 **API 形式**
 
@@ -50,11 +50,11 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 更新する宛先サーバー設定の ID。既存の宛先サーバー設定と、それに対応する設定を取得するには `{INSTANCE_ID}`を参照してください。 [宛先サーバー設定の取得](retrieve-destination-server.md). |
+| `{INSTANCE_ID}` | 更新する宛先サーバー設定の ID。既存の宛先サーバー設定およびその関連する `{INSTANCE_ID}` を取得するには、[宛先サーバー設定の取得](retrieve-destination-server.md)を参照してください。 |
 
-次のリクエストは、ペイロードで指定されたパラメーターで設定された、既存の宛先サーバー設定を更新します。
+以下のリクエストは、ペイロードで提供されるパラメーター設定に基づいて、既存の宛先サーバー設定を更新します。
 
-下の各タブを選択し、対応するペイロードを表示します。
+以下の各タブを選択して、対応するペイロードを表示します。
 
 >[!BEGINTABS]
 
@@ -93,8 +93,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `name` | 文字列 | *必須。* サーバーのわかりやすい名前を表し、アドビにのみ表示されます。この名前は、パートナーや顧客には表示されません。例えば `Moviestar destination server` です。 |
-| `destinationServerType` | 文字列 | *必須。* に設定 `URL_BASED` ( リアルタイム（ストリーミング）宛先の場合 ) |
-| `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須。* <ul><li>以下の `value` フィールドの URL をアドビが変換する必要がある場合は、`PEBBLE_V1` を使用します。次のようなエンドポイントがある場合は、このオプションを使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> アドビ側での変換が不要な場合は、`NONE` を使用します。例えば、次のようなエンドポイントがある場合です。`https://api.moviestar.com/data/items`</li></ul> |
+| `destinationServerType` | 文字列 | *必須。*&#x200B;リアルタイム（ストリーミング）宛先用に `URL_BASED` に設定します。 |
+| `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須。* <ul><li>以下の `value` フィールドの URL をアドビが変換する必要がある場合は、`PEBBLE_V1` を使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` のようなエンドポイントがある場合は、このオプションを使用します。 </li><li> アドビ側での変換が不要な場合（例えば、`https://api.moviestar.com/data/items` のようなエンドポイントがある場合）は、`NONE` を使用します。</li></ul> |
 | `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 | `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。オプションは、`GET`、`PUT`、`PUT`、`DELETE`、`PATCH` です。 |
 | `httpTemplate.requestBody.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
@@ -107,7 +107,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
@@ -202,12 +202,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL Amazon S3] の場合は、これを `FILE_BASED_S3` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Amazon S3] の場合は、これを `FILE_BASED_S3` に設定します。 |
 | `fileBasedS3Destination.bucket.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedS3Destination.bucket.value` | 文字列 | この宛先が使用する [!DNL Amazon S3] バケット名。 |
 | `fileBasedS3Destination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedS3Destination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -215,7 +215,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
@@ -308,14 +308,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL SFTP] の宛先の場合、これを `FILE_BASED_SFTP` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL SFTP] の宛先の場合、これを `FILE_BASED_SFTP` に設定します。 |
 | `fileBasedSftpDestination.rootDirectory.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedSftpDestination.rootDirectory.value` | 文字列 | 宛先ストレージのルートディレクトリ。 |
 | `fileBasedSftpDestination.hostName.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedSftpDestination.hostName.value` | 文字列 | 宛先ストレージのホスト名。 |
 | `port` | 整数 | SFTP ファイルサーバーのポート。 |
-| `encryptionMode` | 文字列 | ファイルの暗号化を使用するかどうかを示します。 サポートされている値。 <ul><li>PGP</li><li>なし</li></ul> |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `encryptionMode` | 文字列 | ファイルの暗号化を使用するかどうかを示します。サポートされている値： <ul><li>PGP</li><li>なし</li></ul> |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -323,7 +323,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
@@ -414,10 +414,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL Azure Data Lake Storage] の宛先の場合、これを `FILE_BASED_ADLS_GEN2` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Azure Data Lake Storage] の宛先の場合、これを `FILE_BASED_ADLS_GEN2` に設定します。 |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedAdlsGen2Destination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -425,11 +425,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 +++リクエスト
 
@@ -520,12 +520,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL Azure Blob Storage] の宛先の場合、これを `FILE_BASED_AZURE_BLOB` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Azure Blob Storage] の宛先の場合、これを `FILE_BASED_AZURE_BLOB` に設定します。 |
 | `fileBasedAzureBlobDestination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedAzureBlobDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedAzureBlobDestination.container.value` | 文字列 | この宛先で使用される [!DNL Azure Blob Storage] コンテナ名。 |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -533,11 +533,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 +++リクエスト
 
@@ -625,10 +625,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL Data Landing Zone] の宛先の場合、これを `FILE_BASED_DLZ` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Data Landing Zone] の宛先の場合、これを `FILE_BASED_DLZ` に設定します。 |
 | `fileBasedDlzDestination.path.templatingStrategy` | 文字列 | *必須。*`PEBBLE_V1` を使用します。 |
 | `fileBasedDlzDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -636,7 +636,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
@@ -731,12 +731,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | パラメーター | タイプ | 説明 |
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
-| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。 [!DNL Google Cloud Storage] の宛先の場合、これを `FILE_BASED_GOOGLE_CLOUD` に設定します。 |
+| `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL Google Cloud Storage] の宛先の場合、これを `FILE_BASED_GOOGLE_CLOUD` に設定します。 |
 | `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 文字列 | *必須。*`PEBBLE_V1` を使用します。 |
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | 文字列 | この宛先が使用する [!DNL Google Cloud Storage] バケット名。 |
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 文字列 | 書き出したファイルをホストする保存先フォルダーのパス。 |
-| `fileConfigurations` | なし | 詳しくは、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) を参照してください。 |
+| `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -744,7 +744,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++応答
 
-正常な応答は、HTTP ステータス 200 と、更新された宛先サーバー設定の詳細を返します。
+応答が成功すると、HTTP ステータス 200 が、更新された宛先サーバー設定の詳細と共に返されます。
 
 +++
 
@@ -756,9 +756,9 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読んだ後、Destination SDKを使用して宛先サーバーの設定を更新する方法がわかりました `/authoring/destination-servers` API エンドポイント。
+このドキュメントでは、Destination SDK `/authoring/destination-servers` API エンドポイントを使用した、宛先サーバー設定の更新方法を確認しました。
 
-このエンドポイントで実行できる操作について詳しくは、次の記事を参照してください。
+このエンドポイントでできることについて詳しくは、以下の記事を参照してください。
 
 * [宛先サーバー設定の作成](create-destination-server.md)
 * [宛先サーバー設定の取得](retrieve-destination-server.md)

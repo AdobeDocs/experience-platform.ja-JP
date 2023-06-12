@@ -1,11 +1,11 @@
 ---
-description: このページでは、/testing/destinationInstance API エンドポイントを使用してテスト結果の完全な詳細を表示する方法について説明します。 この API エンドポイントは、フローサービス API を使用してデータフローを監視する場合と同じ結果を返します。
+description: このページでは、/testing/destinationInstance API エンドポイントを使用して、テスト結果の完全な詳細を表示する方法について説明します。この API エンドポイントは、データフローを監視するためのフローサービス API を使用する際に取得するのと同じ結果を返します。
 title: 詳細なアクティベーション結果の表示
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
@@ -13,36 +13,36 @@ ht-degree: 16%
 
 ## 概要 {#overview}
 
-このページでは、 `/testing/destinationInstance` API エンドポイントを使用して、ファイルベースの宛先テスト結果の完全な詳細を表示できます。
+このページでは、`/testing/destinationInstance` API エンドポイントを使用して、ファイルベースの宛先テスト結果の完全な詳細を表示する方法について説明します。
 
-既に [宛先をテストしました](file-based-destination-testing-api.md) とが有効な API 応答を受け取った場合、宛先は正しく動作しています。
+既に[宛先をテスト済み](file-based-destination-testing-api.md)で、有効な API 応答を受信している場合、宛先は正しく機能しています。
 
-アクティベーションフローの詳細を確認するには、 `results` プロパティを [宛先のテスト](file-based-destination-testing-api.md) エンドポイントの応答（後述）。
+アクティベーションフローに関するさらに詳細な情報を確認したい場合は、後述するように、[宛先テスト](file-based-destination-testing-api.md)エンドポイント応答から `results` プロパティを使用できます。
 
 >[!NOTE]
 >
->この API エンドポイントは、 [フローサービス API](../../../api/update-destination-dataflows.md) データフローを監視する。
+>この API エンドポイントは、データフローを監視するための[フローサービス API](../../../api/update-destination-dataflows.md) を使用する際に取得するのと同じ結果を返します。
 
 ## はじめに {#getting-started}
 
-続ける前に「[はじめる前に](../../getting-started.md)」を参照し、必要な宛先オーサリング権限および必要なヘッダーの取得方法など、API の呼び出しを正常に行うために必要となる重要な情報を確認してください。
+続行する前に、「[はじめる前に](../../getting-started.md)」を参照し、API の呼び出しを正常に行うために必要となる重要な情報（必要な宛先オーサリング権限および必要なヘッダーの取得方法など）を確認してください。
 
 ## 前提条件 {#prerequisites}
 
-使用する前に `/testing/destinationInstance` エンドポイントで、次の条件を満たしていることを確認します。
+`/testing/destinationInstance` エンドポイントを使用する前に、以下の条件を満たしていることを確認してください。
 
-* Destination SDKを通じて作成された既存のファイルベースの宛先があり、 [宛先カタログ](../../../ui/destinations-workspace.md).
-* 宛先 UI に、少なくとも 1 つのアクティベーションフローがExperience Platformされました。
-* API リクエストを正常に実行するには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。 Platform UI で宛先との接続を参照する際に、API 呼び出しで使用する必要がある宛先インスタンス ID を URL から取得します。
+* Destination SDK で作成した既存のファイルベースの宛先があり、[宛先カタログ](../../../ui/destinations-workspace.md)で確認できる。
+* Experience Platform UI で、宛先に対して少なくとも 1 つのアクティベーションフローを作成している。
+* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
 
-   ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
-* 以前 [宛先設定をテストしました](file-based-destination-testing-api.md)を受け取り、有効な API 応答 ( `results` プロパティ。 これを使用します `results` の値を使用して、宛先をさらにテストします。
+  ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
+* 以前に[宛先設定をテスト済み](file-based-destination-testing-api.md)で、`results` プロパティを含む、有効な API 応答を受信している。この `results` 値を使用して、より詳細に宛先をテストします。
 
 ## 詳細な宛先テスト結果の表示 {#test-activation-results}
 
-一度 [宛先設定を検証しました](file-based-destination-testing-api.md)に値を入力すると、詳細なアクティベーション結果を表示できます。それには、 `authoring/testing/destinationInstance/` エンドポイントを作成し、テストする宛先の宛先インスタンス ID と、アクティブ化されたセグメントのフロー実行 ID を指定します。
+[宛先設定を検証](file-based-destination-testing-api.md)したら、`authoring/testing/destinationInstance/` エンドポイントに対して GET リクエストを行い、テストしている宛先の宛先インスタンス ID とアクティブ化されたセグメントのフロー実行 ID を指定することで、詳細なアクティベーション結果を表示できます。
 
-使用する必要のある完全な API URL は、 `results` プロパティが [宛先テスト呼び出しの応答](file-based-destination-testing-api.md).
+[宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、使用する必要がある完全な API URL を見つけることができます。
 
 **API 形式**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | パスパラメーター | 説明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する宛先インスタンスの ID。 詳しくは、 [前提条件](#prerequisites) の節を参照してください。 |
+| `{DESTINATION_INSTANCE_ID}` | サンプルプロファイルを生成する宛先インスタンスの ID。この ID の取得方法について詳しくは、[前提条件](#prerequisites)の節を参照してください。 |
 
 | クエリ文字列パラメーター | 説明 |
 | -------- | ----------- |
-| `flowRunIds` | アクティブ化されたセグメントに対応するフロー実行 ID。 フロー実行 ID は、 `results` プロパティが [宛先テスト呼び出しの応答](file-based-destination-testing-api.md). |
+| `flowRunIds` | アクティブ化されたセグメントに対応するフロー実行 ID。[宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、フロー実行 ID を見つけることができます。 |
 
 **リクエスト**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **応答**
 
-応答には、アクティベーションフローの完全な詳細が含まれます。 同じ応答を取得するには、 [フローサービス API](../../../api/update-destination-dataflows.md) データフローを監視する。
+応答には、アクティベーションフローの完全な詳細が含まれます。データフローを監視するための[フローサービス API](../../../api/update-destination-dataflows.md) を呼び出すことで、同じ応答を取得できます。
 
 ```json
 {
@@ -217,6 +217,6 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 ## 次の手順
 
-このドキュメントを読んだ後、ファイルベースの宛先設定をテストする方法と、アクティベーション結果の詳細を確認する方法がわかりました。
+このドキュメントでは、ファイルベースの宛先設定をテストして、アクティベーション結果の完全な詳細を表示する方法を確認しました。
 
-公開先を作成する場合、 [宛先設定を送信](../../guides/submit-destination.md) をAdobeに追加します。
+公開されている宛先を作成している場合、これで、レビュー用にアドビに[宛先設定を送信](../../guides/submit-destination.md)できるようになりました。

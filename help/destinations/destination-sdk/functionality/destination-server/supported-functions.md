@@ -1,68 +1,67 @@
 ---
-description: Experience PlatformDestination SDKでは、ペブルテンプレートを使用するので、Experience Platformから書き出されたデータを、宛先で必要な形式に変換できます。
-title: Destination SDKでサポートされる変換関数
+description: Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、Pebble テンプレートを使用します。
+title: Destination SDK でサポートされる変換関数
 source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
 workflow-type: tm+mt
 source-wordcount: '579'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
-# Destination SDKでサポートされる変換関数
+# Destination SDK でサポートされる変換関数
 
-Experience PlatformDestination SDKの用途 [[!DNL Pebble] テンプレート](https://pebbletemplates.io/)を使用すると、Experience Platformから書き出されたデータを、宛先で必要な形式に変換できます。
+Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、[[!DNL Pebble] テンプレート](https://pebbletemplates.io/)を使用します。
 
-Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実装にはいくつかの変更があります。 [!DNL Pebble]. また、次のような標準の関数に加えて、 [!DNL Pebble]Adobeは、Destination SDKで使用できる関数をいくつか作成しました。
+Experience Platform [!DNL Pebble] 実装には、[!DNL Pebble] が提供する標準バージョンと比較して、いくつかの変更があります。また、[!DNL Pebble] が提供する標準関数に加えて、アドビは、Destination SDK で使用できるいくつかの追加の関数を作成しています。
 
 >[!IMPORTANT]
 >
->Destination SDKでサポートされるすべてのパラメーター名と値は **大文字と小文字を区別**. 大文字と小文字の区別に関するエラーを避けるには、ドキュメントに示すように、パラメーターの名前と値を正確に使用してください。
+>Destination SDK でサポートされているすべてのパラメーター名および値は、**大文字と小文字が区別**&#x200B;されます。大文字と小文字を区別することに関するエラーを避けるために、ドキュメントに示すように、パラメーター名および値を正確に使用してください。
 
-## 使用場所 {#where-to-use}
+## 使用する場所 {#where-to-use}
 
-このページで後述する、サポートされる関数を使用すると、 [メッセージ変換テンプレートの作成](../../testing-api/streaming-destinations/create-template.md) 宛先に書き出されたExperience Platformの
+Experience Platform から宛先に書き出されたデータ用に[メッセージ変換テンプレートを作成](../../testing-api/streaming-destinations/create-template.md)する場合、このページで後述する、サポートされる関数を使用します。
 
-メッセージ変換テンプレートは、 [宛先サーバーの設定](templating-specs.md) ストリーミング先用
+メッセージ変換テンプレートは、ストリーミング宛先の[宛先サーバー設定](templating-specs.md)で使用されます。
 
 ## 前提条件 {#prerequisites}
 
-このリファレンスページの概念と機能を理解するには、 [メッセージ形式](message-format.md) 最初にドキュメントを作成します。 次を理解する必要があります。 [プロファイルの構造](message-format.md#profile-structure) Experience Platformで [!DNL Pebble] 変換するテンプレートと、書き出されたデータ。
+このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。変換するための [!DNL Pebble] テンプレートおよび書き出されたデータを使用する前に、Experience Platform の[プロファイルの構造](message-format.md#profile-structure)を理解する必要があります。
 
-以下に説明する関数に進む前に、「 」セクションのテンプレートの例を確認してください。 [ID、属性、セグメントメンバーシップの変換にテンプレート言語を使用する](message-format.md#using-templating). この例は非常に単純で複雑なものから始まります
+以下に説明する関数に進む前に、[ID、属性、セグメントメンバーシップを変換するためのテンプレート言語の使用](message-format.md#using-templating)の節のテンプレートの例を確認してください。そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
 
-## サポート [!DNL Pebble] 関数 {#supported-functions}
+## サポートされる [!DNL Pebble] 関数 {#supported-functions}
 
-次の [!DNL Pebble] タグセクション、Destination SDKは次の項目のみをサポートします。
+[!DNL Pebble] タグセクションからは、Destination SDK は、以下のみをサポートします。
 
-* [フィルター](https://pebbletemplates.io/wiki/tag/filter/)
+* [filter](https://pebbletemplates.io/wiki/tag/filter/)
 * [for](https://pebbletemplates.io/wiki/tag/for/)
 * [if](https://pebbletemplates.io/wiki/tag/if/)
 * [set](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]
 >
->使用 `for` は、 *配列* または *マップ* 要素を作成します。 配列を繰り返し処理する場合、要素を直接取得できます。 マップを繰り返し処理すると、キーと値のペアを持つ各マップエントリが得られます。
+>テンプレートで&#x200B;*配列*&#x200B;または&#x200B;*マップ*&#x200B;要素を反復する場合、`for` の使用方法が異なります。配列を反復する場合、要素を直接取得できます。マップを反復する場合、各マップエントリ（キーと値のペアを持つ）を取得します。
 >
-> * 配列要素の例を考えてみましょう。 [identityMap](message-format.md#identities) 名前空間では、次のような要素を繰り返し処理できます。 `identityMap.gaid`, `identityMap.email`、または類似したもの
-> * map 要素の例については、次の点を考えてください。 [segmentMembership](message-format.md#segment-membership).
+> * 配列要素の例の場合、[identityMap](message-format.md#identities) 名前空間の ID について考慮します。ここでは、`identityMap.gaid` や `identityMap.email` などの要素を反復できます。
+> * マッピング要素の例の場合、[segmentMembership](message-format.md#segment-membership) について考慮します。
 
+[!DNL Pebble] フィルターセクションからは、Destination SDK は、すべての関数をサポートします。後述の例では、Destination SDK 内で `date` 関数をどのように使用できるかを示します。
 
-次の [!DNL Pebble] フィルタセクション、Destination SDKは、すべての関数をサポートします。 次の例は、 `date` 関数は、Destination SDK内で使用できます。
+[!DNL Pebble] 関数セクションからは、アドビは [range](https://pebbletemplates.io/wiki/function/range/) 関数をサポート&#x200B;*しません*。
 
-次の [!DNL Pebble] 関数セクション、Adobe *not* 支持する [範囲](https://pebbletemplates.io/wiki/function/range/) 関数に置き換えます。
+## `date` 関数の使用例 {#date-function}
 
-## 例 `date` 関数が使用される {#date-function}
-
-例を示すには [!DNL Pebble] 関数は、Destination SDKで使用されます。[Pebble ドキュメント内のリンク](https://pebbletemplates.io/wiki/filter/date/)) は、タイムスタンプの形式を変換するために使用されます。
+Destination SDK での [!DNL Pebble] 関数の使用例として、date 関数（[Pebble ドキュメントへのリンク](https://pebbletemplates.io/wiki/filter/date/)）を使用してタイムスタンプの形式を変換する方法について、以下を参照してください。
 
 ### ユースケース
 
-次を変更する： `lastQualificationTime` デフォルトのタイムスタンプ [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) の値を指定します。Experience Platformが、宛先で優先される別の値に書き出します。
+Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) 値から宛先で優先される別の値に `lastQualificationTime` タイムスタンプを変更します。
 
 ### 例
 
-#### 必要情報
+#### 入力
 
 ```json
 {
@@ -84,19 +83,19 @@ Experience Platform [!DNL Pebble] の標準バージョンとは異なり、実�
 }
 ```
 
-## Adobe {#functions-added-by-adobe}
+## アドビが追加した関数 {#functions-added-by-adobe}
 
-次に示す既製の関数に加えて、 [!DNL Pebble]を参照してください。データのエクスポートに使用できる、Adobeで作成された追加の関数を以下に示します。
+[!DNL Pebble] が提供する標準関数に加えて、データ書き出しに使用できる、アドビが作成した追加の関数について、以下を参照してください。
 
 ### `addedSegments` および `removedSegments` 関数 {#addedsegments-removedsegments-functions}
 
 #### ユースケース
 
-これらの関数は、プロファイルに追加またはプロファイルから削除されたセグメントのリストを取得するために使用できます。
+これらの関数は、プロファイルに追加された／プロファイルから削除されたセグメントのリストを取得するために使用できます。
 
 #### 例
 
-##### 必要情報
+##### 入力
 
 ```json
 {
@@ -200,7 +199,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## 次の手順 {#next-steps}
 
-これでどちらか分かりました [!DNL Pebble] 関数は、Destination SDKでサポートされているほか、関数を使用して、必要に応じて書き出されるデータの形式を調整する方法もサポートされています。 次に、次のページを確認します。
+Destination SDK でサポートされる [!DNL Pebble] 関数と、それらを使用して、書き出されたデータの形式をニーズに合わせて調整する方法について確認しました。次に、以下のページを確認する必要があります。
 
 * [メッセージ変換テンプレートの作成とテスト](../../testing-api/streaming-destinations/create-template.md)
 * [テンプレートレンダリング API の操作](../../testing-api/streaming-destinations/render-template-api.md)
