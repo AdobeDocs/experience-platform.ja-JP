@@ -3,7 +3,7 @@ title: データセットのサンプル
 description: クエリサービスのサンプルデータセットを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。このガイドでは、近似クエリ処理のサンプルを管理する方法について説明します
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '639'
 ht-degree: 100%
 
