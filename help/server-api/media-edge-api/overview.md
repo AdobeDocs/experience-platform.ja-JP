@@ -4,10 +4,10 @@ solution: Experience Platform
 title: メディアエッジ API
 description: メディアエッジ API の概要。
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Media Edge API は、Adobe Experience Platform(AEP) 上に構築され、のフ�
 
 ## メディアトラッキングデータフローの最適化
 
-両方 [メディアコレクション](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) API と Media Edge API は、RESTful サービスとしてメディアトラッキングデータを提供します。 ただし、Media Edge サービスを使用すると、次の利点があります。
+両方 [メディアコレクション API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) と Media Edge API は、RESTful サービスとしてメディアトラッキングデータを提供します。 ただし、Media Edge サービスを使用すると、次の利点があります。
 
 * XDM スキーマをデータフローに組み込む最も簡単な方法です。
 
@@ -33,14 +33,14 @@ Media Edge API は、Adobe Experience Platform(AEP) 上に構築され、のフ�
 
 * メディアイベントを最も効率的に追跡します。
 
-次の表に、様々なAdobe分析ケースで最適なメディア API サービスを示します。
+次の表に、様々なAdobe分析ケースで使用可能なメディア API サービスを示します。
 
-| ユースケース | Platform | API サービス |
-| -------- | ------ | ---------- |
-| CJA | AEP | Media Edge |
-| CDP + CJA | AEP | Media Edge |
-| Analytics と CJA | AEP | Media Edge |
-| 従来の Analytics | なし | メディアコレクション |
+| ユースケース | API サービス |
+| -------- | ------ |
+| AEP ソリューション（CJA、RTDCP、AJO など） | Media Edge |
+| CDP + CJA | Media Edge |
+| Adobe Analytics + AEP ソリューション | Media Edge |
+| Adobe Analyticsのみ（既にトラッキング中） | メディアコレクション |
 
 >[!NOTE]
 >
