@@ -3,8 +3,7 @@ keywords: Experience Platform；メディアエッジ；人気の高いトピッ
 solution: Experience Platform
 title: Media Edge API の概要
 description: Media Edge API の概要
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 7%

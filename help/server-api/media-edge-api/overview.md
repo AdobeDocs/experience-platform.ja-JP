@@ -3,8 +3,7 @@ keywords: Experience Platform；メディアエッジ；人気の高いトピッ
 solution: Experience Platform
 title: メディアエッジ API
 description: メディアエッジ API の概要。
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 4%
