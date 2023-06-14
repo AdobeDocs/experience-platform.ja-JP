@@ -3,9 +3,9 @@ keywords: Experience Platform；メディアエッジ；人気の高いトピッ
 solution: Experience Platform
 title: メディアエッジ API
 description: メディアエッジ API の概要。
-source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '396'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Media Edge API は、Adobe Experience Platform(AEP) 上に構築され、のフ�
 
 * を使用 [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)のお客様は、ほぼリアルタイムで詳細な時間の詳細、開始および停止を取得して、メディア指標を評価および組み合わせることができます。 Adobe Analyticsから移行するお客様は、CJA ですべてのレポート指標を利用できます。
 
-* を使用 [Adobe Real-time Customer Data Platform(CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja)のお客様は、メディア消費データを使用して、リアルタイムプロファイルを強化できます。
+* を使用 [Adobe Real-time Customer Data Platform(RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja)のお客様は、メディア消費データを使用して、リアルタイムプロファイルを強化できます。
 
 * を使用 [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en)のお客様は、チャネルキャンペーンを最適化して、メディア消費シグナルを使用してジャーニーを自動化できます。
 
@@ -30,7 +30,7 @@ Media Edge API は、Adobe Experience Platform(AEP) 上に構築され、のフ�
 
 * 呼び出しは、メディアプレーヤーから [Experience Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
-* メディアイベントを最も効率的に追跡します。
+* 最小限のクロスサーバー呼び出しでメディアイベントを効率的に追跡します。
 
 次の表に、様々なAdobe分析ケースで使用可能なメディア API サービスを示します。
 
@@ -51,7 +51,7 @@ Media Edge API は、Adobe Experience Platform(AEP) 上に構築され、のフ�
 ![Media Analytics データフロー](../assets/edge-api-dataflow.png)
 
 
-Media Edge API の使用について詳しくは、はじめにのドキュメントを参照してください。
+Media Edge API の使用について詳しくは、 [はじめにのドキュメント](getting-started.md).
 
 Platform Edge の使用について詳しくは、 [Media Edge を使用した Media Analytics のExperience Platform](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 

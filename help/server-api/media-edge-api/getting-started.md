@@ -3,9 +3,9 @@ keywords: Experience Platform；メディアエッジ；人気の高いトピッ
 solution: Experience Platform
 title: Media Edge API の概要
 description: Media Edge API の概要
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '979'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 7%
 * sessionComplete
 * statesUpdate
 
-各イベントには、独自のエンドポイントがあります。 すべての Media Edge API エンドポイントはPOSTメソッドで、イベントデータ用の JSON リクエスト本文が含まれます。 Media Edge API のエンドポイント、パラメーターおよび例について詳しくは、 Media Edge Swagger ファイルを参照してください。
+各イベントには、独自のエンドポイントがあります。 すべての Media Edge API エンドポイントはPOSTメソッドで、イベントデータ用の JSON リクエスト本文が含まれます。 Media Edge API エンドポイント、パラメーターおよび例について詳しくは、 [Media Edge Swagger ファイル](swagger.md).
 
 このガイドでは、セッションの開始後に次のイベントを追跡する方法について説明します。
 
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 ## API の実装
 
-呼び出されるモデルとパスの小さな違いに加えて、Media Edge API はメディアコレクション API と同じです。 メディアコレクションの実装の詳細は、次のドキュメントに示すように、引き続き Media Edge API に対して有効です。
+Media Edge API は、と呼び出されるモデルとパスの小さな違いに加えて、メディアコレクション API と同じ実装を持ちます。 メディアコレクションの実装の詳細は、次のドキュメントに示すように、引き続き Media Edge API に対して有効です。
 
 * [プレーヤーでの HTTP リクエストタイプの設定](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [ping イベントの送信](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 セッション開始リクエストを実行する前に、次の手順を実行する必要があります。
 
-* この `datastreamId` は、セッションセッション開始リクエストの必須POSTです。 を取得するには、以下を実行します。 `datastreamId`を参照してください。 [データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=ja).
+* この `datastreamId`—POSTSession Start リクエストの必須パラメータ。 を取得するには、以下を実行します。 `datastreamId`を参照してください。 [データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=ja).
 
 * 必要最小限のデータ（以下のリクエストの例で示すように）を含む、リクエストペイロードの JSON オブジェクト。
 
@@ -98,7 +98,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-上記の例では、 `eventType` 値にプレフィックスが含まれる `media` 次によると [エクスペリエンスデータモデル (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) ドメインを指定する場合。
+上記の例では、 `eventType` 値にプレフィックスが含まれる `media.` 次によると [エクスペリエンスデータモデル (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) ドメインを指定する場合。
 
 また、のデータ型マッピング `eventType` 上記の例では、次のようになります。
 
@@ -165,7 +165,7 @@ x-content-type-options: nosniff
 
 上記の例の応答では、 `sessionId` は次のように表示されます。 `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. この ID は、後続のイベントリクエストで必須パラメーターとして使用します。
 
-セッション開始エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
+セッション開始エンドポイントのパラメーターと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
 
 XDM メディアデータパラメーターについて詳しくは、 [メディア詳細情報スキーマ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
@@ -201,11 +201,12 @@ curl -X 'POST' \
 }'
 ```
 
-上記の例では、同じ `sessionId` 前の呼び出しで返された値は、Buffer Start リクエストの必須パラメーターとして使用されます。
-
-バッファー開始エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
+上記の例のリクエストでは、同じ `sessionId` 前の呼び出しで返された値は、Buffer Start リクエストの必須パラメーターとして使用されます。
 
 成功時の応答はステータスが 200 で、コンテンツは含まれていません。
+
+Buffer Start エンドポイントのパラメータと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
+
 
 ## イベントリクエストを再生
 
@@ -240,7 +241,7 @@ curl -X 'POST' \
 
 成功時の応答はステータスが 200 で、コンテンツは含まれていません。
 
-Play エンドポイントのパラメーターと例について詳しくは、 Media Edge Swagger ファイルを参照してください。
+Play エンドポイントのパラメーターと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
 
 ## Session Complete イベントリクエスト
 
@@ -275,6 +276,8 @@ curl -X 'POST' \
 
 成功時の応答はステータスが 200 で、コンテンツは含まれていません。
 
+セッション完了エンドポイントのパラメーターと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
+
 ## 応答コード
 
 次の表に、Media Edge API リクエストによって生じる可能性のある応答コードを示します。
@@ -282,10 +285,10 @@ curl -X 'POST' \
 | ステータス | 説明 |
 | ---------- | --------- |
 | 200 | セッションが正常に作成されました |
-| 207 | Experience Edge Network に接続するサービスの 1 つに関する問題（トラブルシューティングガイドの詳細を参照） |
+| 207 | Experience Edge ネットワークに接続するサービスの 1 つに関する問題 ( 詳しくは、 [トラブルシューティングガイド](troubleshooting.md)) |
 | 400 レベル | Bad request |
 | 500 レベル | サーバーエラー |
 
-エラーと失敗した応答コードの処理について詳しくは、 Media Edge のトラブルシューティングガイドを参照してください。
+エラーと失敗した応答コードの処理について詳しくは、 [メディアエッジトラブルシューティングガイド](troubleshooting.md).
 
 
