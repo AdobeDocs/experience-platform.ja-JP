@@ -5,7 +5,7 @@ title: データの取り込みExperience Platform
 type: Tutorial
 description: Adobe Experience Platformでは、Parquet ファイルの形式のバッチファイル、または既知の Experience Data Model(XDM) スキーマに準拠するデータを、簡単にバッチファイルとして読み込むことができます。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 51%
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 Adobe Experience Platformでは、次の場所に簡単にデータを読み込むことができます。 [!DNL Platform] をバッチファイルとして使用します。 取り込むデータの例としては、CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）や、既知の [!DNL Experience Data Model] (XDM) スキーマをスキーマレジストリに追加します。
 
-## はじめに
+## Destination SDK の
 
 このチュートリアルを完了するには、 [!DNL Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 
@@ -82,7 +82,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 データセットは、にデータを取り込むために使用されます [!DNL Experience Platform]に含まれるデータは、最終的には個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 この情報を組み合わせたものを、 [!DNL Real-Time Customer Profile]. 次のために [!DNL Platform] どの情報を含めるべきかを知る [!DNL Real-Time Profile]を使用すると、データセットを **[!UICONTROL プロファイル]** 切り替え
 
-デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれたすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
+デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれるすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
 
 詳しくは、以下を参照してください。 [!DNL Real-Time Customer Profile] ID の使用については、 [ID サービス](../../identity-service/home.md) ドキュメント。
 
@@ -110,7 +110,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 ![「データを追加」タブ](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## ファイルのアップロード
+## ファイルのアップロード {#upload-file}
 
 アップロードする Parquet または JSON ファイルをドラッグ&amp;ドロップ（または参照して選択）したら、次の手順を実行します。 [!DNL Platform] が直ちにファイルの処理を開始し、 **[!UICONTROL アップロード中]** ダイアログが **[!UICONTROL データを追加]** タブに、ファイルのアップロードの進行状況が表示されます。
 
