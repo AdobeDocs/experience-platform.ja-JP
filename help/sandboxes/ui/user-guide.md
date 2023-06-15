@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス UI ガイド
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 100%
+source-wordcount: '953'
+ht-degree: 85%
 
 ---
 
@@ -77,7 +77,30 @@ Platform UI で、左側のナビゲーションの「**[!UICONTROL サンドボ
 
 >[!WARNING]
 >
->次に、デフォルトの実稼動サンドボックスまたはユーザー作成の実稼動サンドボックスをリセットできない可能性のある例外のリストを示します。 <ul><li>サンドボックスでホストされている ID グラフが[クロスデバイス分析（CDA）](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja)機能向けに Adobe Analytics でも使用されている場合、デフォルトの実稼働サンドボックスをリセットすることはできません。</li><li>サンドボックスでホストされている ID グラフが [People Based Destinations（PBD）](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)の Adobe Audience Manager でも使用されている場合、デフォルトの実稼動サンドボックスをリセットすることはできません。</li><li>CDA 機能と PBD 機能の両方のデータが含まれている場合、デフォルトの実稼動サンドボックスをリセットすることはできません。</li><li>Adobe Audience Manager または Audience Core Service での双方向のセグメント共有に使用される、ユーザー作成の実稼動用サンドボックスは、警告メッセージの後でリセットできます。</li></ul>
+>次に、デフォルトの実稼動サンドボックスまたはユーザー作成の実稼動サンドボックスをリセットできない可能性のある例外のリストを示します。
+>* サンドボックスでホストされている ID グラフが[クロスデバイス分析（CDA）](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja)機能向けに Adobe Analytics でも使用されている場合、デフォルトの実稼働サンドボックスをリセットすることはできません。
+>* サンドボックスでホストされている ID グラフが [People Based Destinations（PBD）](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)の Adobe Audience Manager でも使用されている場合、デフォルトの実稼動サンドボックスをリセットすることはできません。
+>* CDA 機能と PBD 機能の両方のデータが含まれている場合、デフォルトの実稼動サンドボックスをリセットすることはできません。
+>* Adobe Audience Manager または Audience Core Service での双方向のセグメント共有に使用される、ユーザー作成の実稼動用サンドボックスは、警告メッセージの後でリセットできます。
+>* サンドボックスのリセットを開始する前に、関連するオーディエンスデータが正しくクリーンアップされるように、構成を手動で削除する必要があります。
+
+### オーディエンス構成を削除
+
+オーディエンスの構成は、現在、サンドボックスのリセット機能と統合されていないので、サンドボックスのリセットを実行する前にオーディエンスを手動で削除する必要があります。
+
+選択 **[!UICONTROL オーディエンス]** 左のナビゲーションから、 **[!UICONTROL 構成]**.
+
+![この [!UICONTROL 構成] 」タブをクリックします。 [!UICONTROL オーディエンス] ワークスペース。](../images/ui/audiences.png)
+
+次に、省略記号 (`...`) をクリックし、「 **[!UICONTROL 削除]**.
+
+![オーディエンスメニューで [!UICONTROL 削除] オプション。](../images/ui/delete-composition.png)
+
+削除が成功したことを示す確認メッセージが表示され、 **[!UICONTROL 構成]** タブをクリックします。
+
+すべてのコンポジションで上記の手順を繰り返します。 これにより、オーディエンスインベントリからすべてのオーディエンスが削除されます。 すべてのオーディエンスが削除されたら、引き続きサンドボックスのリセットをおこなうことができます。
+
+### サンドボックスのリセット
 
 実稼動または開発のサンドボックスをリセットすると、サンドボックスの名前と関連付けられた権限は保持されたまま、そのサンドボックスに関連付けられているすべてのスキーマ（リソース、データセットなど）が削除されます。この「クリーンな」サンドボックスは、引き続き、アクセス権を持つユーザーと同じ名前で使用できます。
 
