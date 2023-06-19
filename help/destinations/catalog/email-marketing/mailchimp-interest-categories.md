@@ -2,9 +2,9 @@
 title: Mailchimp 関心カテゴリ
 description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用して、連絡先を興味と好みに基づいて並べ替えます。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2357'
 ht-degree: 22%
 
 ---
@@ -110,9 +110,9 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**.
 
-| [!DNL Mailchimp] 宛先 | [!DNL Mailchimp] |
+| フィールド | 説明 |
 | --- | --- |
-| **[!UICONTROL ユーザー名]** | お使いの [!DNL Salesforce Marketing Cloud] ドメインプレフィックス。 <br>例えば、ドメインが<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> 次を指定する必要があります： `mcq4jrssqdlyc4lph19nnqgzzs84` ユーザー名の値。 |
+| **[!UICONTROL ユーザー名]** | お使いの [!DNL Mailchimp Interest Categories] ユーザー名。 |
 | **[!UICONTROL パスワード]** | お使いの [!DNL Mailchimp] **API キー**&#x200B;君が書いた [収集 [!DNL Mailchimp] 資格情報](#gather-credentials) 」セクションに入力します。<br> API キーは、 `{KEY}-{DC}`( `{KEY}` 部分は、 [[!DNL Mailchimp] API キー](#gather-credentials) セクションおよび `{DC}` 部分は [[!DNL Mailchimp] データセンター](#identify-data-center). <br>次のいずれかを指定できます。 `{KEY}` の一部またはフォーム全体。<br> 例えば、API キーが <br>*`0123456789abcdef0123456789abcde-us14`*,<br> 次のいずれかを指定できます。*`0123456789abcdef0123456789abcde`*または&#x200B;*`0123456789abcdef0123456789abcde-us14`*を値として使用します。 |
 
 {style="table-layout:auto"}
