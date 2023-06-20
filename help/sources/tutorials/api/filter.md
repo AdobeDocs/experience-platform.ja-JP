@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；フロ
 title: フローサービス API を使用してソースの行レベルのデータをフィルタリングする
 description: このチュートリアルでは、フローサービス API を使用してソースレベルでデータをフィルタリングする手順を説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 16%
+source-wordcount: '782'
+ht-degree: 17%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 16%
 >現在、行レベルのデータのフィルタリングのサポートは、次のソースでのみ利用できます。
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

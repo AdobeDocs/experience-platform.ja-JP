@@ -1,21 +1,25 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Snowflake
 title: UI でのSnowflakeソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用してSnowflakeソース接続を作成する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 41%
+source-wordcount: '504'
+ht-degree: 36%
 
 ---
 
 # UI での [!DNL Snowflake] ソース接続の作成
 
+>[!IMPORTANT]
+>
+>この [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+
 このチュートリアルでは、 [!DNL Snowflake] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
 
-## はじめに
+## Destination SDK の
 
 このチュートリアルは、  Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -33,9 +37,14 @@ ht-degree: 41%
 | データベース | この [!DNL Snowflake] データベースには、Platform を取り込むデータが含まれます。 |
 | ユーザー名 | のユーザー名 [!DNL Snowflake] アカウント |
 | パスワード | のパスワード [!DNL Snowflake] ユーザーアカウント。 |
+| 役割 | デフォルトのアクセス制御の役割で、 [!DNL Snowflake] セッション。 この役割は、指定したユーザーに既に割り当てられている既存の役割である必要があります。 デフォルトの役割は `PUBLIC`. |
 | 接続文字列 | の [!DNL Snowflake] インスタンス。 次の接続文字列パターン： [!DNL Snowflake] が `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 これらの値について詳しくは、 [このSnowflake文書](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>次の項目を設定する必要があります。 `PREVENT_UNLOAD_TO_INLINE_URL` フラグ設定 `FALSE` データのアンロードを許可 [!DNL Snowflake] データベースからExperience Platformへ
 
 ## Snowflakeアカウントに接続
 

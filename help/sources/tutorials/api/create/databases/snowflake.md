@@ -1,22 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Snowflake;snowflake
-solution: Experience Platform
 title: フローサービス API を使用したSnowflakeベース接続の作成
-type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをSnowflakeに接続する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 50%
+source-wordcount: '589'
+ht-degree: 45%
 
 ---
 
 # [!DNL Flow Service] API を使用した [!DNL Snowflake] ベース接続の作成
 
+>[!IMPORTANT]
+>
+>この [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Snowflake] のベース接続を作成する手順を説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して、[!DNL Snowflake] のベース接続を作成する手順を説明します。
 
 ## はじめに
 
@@ -42,10 +44,15 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 | `database` | この [!DNL Snowflake] データベースには、Platform を取り込むデータが含まれます。 |
 | `username` | のユーザー名 [!DNL Snowflake] アカウント |
 | `password` | のパスワード [!DNL Snowflake] ユーザーアカウント。 |
+| `role` | デフォルトのアクセス制御の役割で、 [!DNL Snowflake] セッション。 この役割は、指定したユーザーに既に割り当てられている既存の役割である必要があります。 デフォルトの役割は `PUBLIC`. |
 | `connectionString` | の [!DNL Snowflake] インスタンス。 次の接続文字列パターン： [!DNL Snowflake] が `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Snowflake] が `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 導入の詳細については、 [[!DNL Snowflake] 文書](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>次の項目を設定する必要があります。 `PREVENT_UNLOAD_TO_INLINE_URL` フラグ設定 `FALSE` データのアンロードを許可 [!DNL Snowflake] データベースからExperience Platformへ
 
 ## ベース接続の作成
 
