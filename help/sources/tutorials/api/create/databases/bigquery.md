@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；bigquery;Google;google;Google BigQuery
-solution: Experience Platform
 title: フローサービス API を使用したGoogle BigQuery ベース接続の作成
-type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをGoogle BigQuery に接続する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 59%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # [!DNL Flow Service] API を使用した [!DNL Google BigQuery] ベース接続の作成
+
+>[!IMPORTANT]
+>
+>この [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

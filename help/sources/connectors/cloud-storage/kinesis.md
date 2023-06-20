@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: Amazon Kinesis Source Connector の概要
 description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 19%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Kinesis] コネクタ
+# [!DNL Amazon Kinesis] ソース
+
+>[!IMPORTANT]
+>
+>この [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
@@ -75,7 +78,7 @@ A [!DNL Kinesis] ストリームでソース接続を作成するには、次の
 | ------------- | ----------- |
 | `AT_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
 | `AFTER_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別される位置の後から読み出される。 |
-| `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別された位置から読み出される。 |
+| `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別される位置から読み出される。 |
 | `TRIM_HORIZON` | データは、最も古いデータレコードから読み取られます。 |
 | `LATEST` | データは、最新のデータレコードから読み取られます。 |
 

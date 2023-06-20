@@ -3,15 +3,20 @@ keywords: Experience Platform；ホーム；人気のトピック；Amazon Redsh
 solution: Experience Platform
 title: Snowflakeソースコネクタの概要
 description: API またはユーザーインターフェイスを使用してSnowflakeをAdobe Experience Platformに接続する方法について説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 61%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # [!DNL Snowflake] ソース
+
+>[!IMPORTANT]
+>
+>この [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

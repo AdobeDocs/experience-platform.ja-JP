@@ -1,26 +1,28 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Amazon Redshift;Amazon Redshift;Redshift;Redshift
-solution: Experience Platform
 title: UI でのAmazon Redshift ソース接続の作成
-type: Tutorial
 description: Adobe Experience Platform UI を使用してAmazon Redshift ソース接続を作成する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 55%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# の作成 [!DNL Amazon Redshift] UI のソース接続
+# 接続 [!DNL Amazon Redshift] ソースワークスペースを使用したアカウント
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Amazon Redshift] （以下「」という。）[!DNL Redshift]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+>[!IMPORTANT]
+>
+>この [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+
+このチュートリアルでは、 [!DNL Amazon Redshift] （以下「」という。）[!DNL Redshift]&quot;) ユーザーインターフェイスを使用してAdobe Experience Platformにアカウントする必要があります。
 
 ## はじめに
 
-このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -29,24 +31,25 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 必要な認証情報の収集
 
- で [!DNL Redshift] アカウントにアクセスするには、次の値を指定する必要があります。[!DNL Platform]
+次の項目にアクセスするには、 [!DNL Redshift] Experience Platformのアカウントでは、次の値を指定する必要があります。
 
 | **資格情報** | **説明** |
 | -------------- | --------------- |
-| `server` | サーバーが [!DNL Redshift] アカウント |
-| `username` | ユーザー名 [!DNL Redshift] アカウント |
-| `password` | ユーザーに関連付けられたパスワード [!DNL Redshift] アカウント |
-| `database` | この [!DNL Redshift] アクセスするデータベース。 |
+| サーバー | サーバーが [!DNL Redshift] アカウント |
+| ポート | TCP ポート [!DNL Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
+| ユーザー名 | ユーザー名 [!DNL Redshift] アカウント |
+| パスワード | ユーザーに関連付けられたパスワード [!DNL Redshift] アカウント |
+| データベース | この [!DNL Redshift] アクセスするデータベース。 |
 
 の導入について詳しくは、 [この [!DNL Redshift] 文書](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+
+必要な資格情報を収集したら、次の手順に従って、 [!DNL Redshift] アカウントからExperience Platformへ。
 
 ## [!DNL Redshift] アカウントを接続
 
 >[!NOTE]
 >
 >のデフォルトのエンコーディング規格 [!DNL Redshift] は Unicode です。 これは変更できません。
-
-必要な認証情報が揃ったら、次の手順に従って、[!DNL Redshift] アカウントを [!DNL Platform] にリンクします。
 
 にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -72,4 +75,4 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Redshift] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。
+このチュートリアルでは、[!DNL Redshift] アカウントとの接続を確立しました。次のチュートリアルに進み、 [データをExperience Platformに取り込むようにデータフローを設定](../../dataflow/databases.md).

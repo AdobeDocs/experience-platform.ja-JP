@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Azure synapse分析；Synapse;Synapse;azure synapse分析
-solution: Experience Platform
 title: UI でのAzure synapseAnalytics ソース接続の作成
-type: Tutorial
 description: Adobe Experience Platform UI を使用して、Azure synapse分析（以下「Synapse」と呼ばれます）ソース接続を作成する方法について説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 58%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# UI での [!DNL Azure Synapse Analytics] ソース接続の作成
+# の作成 [!DNL Azure Synapse Analytics] UI のソース接続
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Azure Synapse Analytics] （以下「」という。）[!DNL Synapse]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+>[!IMPORTANT]
+>
+>この [!DNL Azure Synapse Analytics] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+
+このチュートリアルでは、 [!DNL Azure Synapse Analytics] （以下「」という。）[!DNL Synapse]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 
 ## はじめに
 

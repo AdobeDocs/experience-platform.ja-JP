@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: UI でのAmazon Kinesisソース接続の作成
-type: Tutorial
 description: Adobe Experience Platform UI を使用してAmazon Kinesisソース接続を作成する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 45%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # の作成 [!DNL Amazon Kinesis] UI のソース接続
+
+>[!IMPORTANT]
+>
+>この [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Amazon Kinesis] ( 以下「 [!DNL "Kinesis"]) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 

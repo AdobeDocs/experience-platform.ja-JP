@@ -1,19 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Azure synapse分析；azure synapse分析；Synapse;Synapse
-solution: Experience Platform
 title: azure synapseAnalytics ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用してAzure synapseAnalytics をAdobe Experience Platformに接続する方法について説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 58%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# [!DNL Azure Synapse Analytics] コネクタ
+# [!DNL Azure Synapse Analytics] ソース
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、[!DNL Platform] サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+>[!IMPORTANT]
+>
+>この [!DNL Azure Synapse Analytics] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Azure Synapse Analytics].
 

@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Synapse;synapse;Azure synapse分析
-solution: Experience Platform
 title: フローサービス API を使用したAzure synapseAnalytics ベース接続の作成
-type: Tutorial
 description: フローサービス API を使用してAzure synapseAnalytics をAdobe Experience Platformに接続する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 63%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # の作成 [!DNL Azure Synapse Analytics] を使用したベース接続 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>この [!DNL Azure Synapse Analytics] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -60,26 +62,26 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Connection for Azure Synapse Analytics",
-        "description": "Connection for Azure Synapse Analytics",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
-            }
-        },
-        "connectionSpec": {
-            "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Connection for Azure Synapse Analytics",
+      "description": "Connection for Azure Synapse Analytics",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
+          }
+      },
+      "connectionSpec": {
+          "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | パラメーター | 説明 |

@@ -1,15 +1,20 @@
 ---
 title: UI で Google PubSub ソース接続を作成
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # UI での [!DNL Google PubSub] ソース接続の作成
+
+>[!IMPORTANT]
+>
+>この [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、Platform ユーザーインターフェイスを使用して、[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）を作成する手順について説明します。
 

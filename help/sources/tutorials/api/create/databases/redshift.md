@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；redshift;Redshift;Amazon Redshift;Amazon Redshift
-solution: Experience Platform
 title: フローサービス API を使用したAmazon Redshift ベース接続の作成
-type: Tutorial
 description: フローサービス API を使用してAdobe Experience PlatformをAmazon Redshift に接続する方法を説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 62%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # の作成 [!DNL Amazon Redshift] を使用したベース接続 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>この [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -34,6 +36,7 @@ ht-degree: 62%
 | **資格情報** | **説明** |
 | -------------- | --------------- |
 | `server` | サーバーが [!DNL Amazon Redshift] アカウント |
+| `port` | TCP ポート [!DNL Amazon Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
 | `username` | ユーザー名 [!DNL Amazon Redshift] アカウント |
 | `password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント |
 | `database` | この [!DNL Amazon Redshift] アクセスするデータベース。 |
@@ -67,34 +70,36 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | プロパティ | 説明 |
 | ------------- | --------------- |
 | `auth.params.server` | お使いの [!DNL Amazon Redshift] サーバー。 |
+| `auth.params.port` | TCP ポート [!DNL Amazon Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
 | `auth.params.database` | データベースが [!DNL Amazon Redshift] アカウント |
 | `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント |
 | `auth.params.username` | ユーザー名 [!DNL Amazon Redshift] アカウント |
