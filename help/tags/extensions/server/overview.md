@@ -2,9 +2,9 @@
 title: イベント転送拡張機能リファレンス
 description: Adobe Experience Platformのイベント転送拡張機能に関するドキュメントを見つけます。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
+source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '180'
 ht-degree: 53%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 53%
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Google Analytics4 用 Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [コア](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
