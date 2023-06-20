@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；メディアエッジ；人気の高いトピック；日付範囲
 solution: Experience Platform
 title: Media Edge API の概要
 description: Media Edge API のトラブルシューティングガイド
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -22,7 +21,7 @@ ht-degree: 1%
 
 ## セッション開始の検証
 
-セッション開始リクエストの作成時に発生したほとんどの問題に対して、207 件のマルチステータス応答が発生します。
+セッション開始リクエストの問題の多くは、207 Multi-Status 応答になります。
 ペイロードは、Experience Edge Network Server API の致命的でないエラーに似ています。 すべての Media Analytics エラーのタイプは次のとおりです。  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. 応答に表示される数値は、エラーステータスに対応します。
 
 次の例は、セッション開始リクエストの応答本文で、必須フィールドがなく、無効なフィールドが含まれているものを示しています。

@@ -1,61 +1,60 @@
 ---
-keywords: Experience Platform；メディアエッジ；人気の高いトピック；日付範囲
 solution: Experience Platform
 title: Media Edge API の概要
 description: Media Edge API の概要
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 7%
+source-wordcount: '960'
+ht-degree: 6%
 
 ---
 
 
 # Media Edge API の概要
 
-このガイドでは、Media Edge API サービスとの最初のインタラクションを成功させる手順を説明します。 これには、メディアセッションの開始と、Adobe Experience Platform(AEP) ソリューションに送信されたCustomer Journey Analytics(CJA) の追跡が含まれます。 Media Edge API サービスは、セッション開始エンドポイントで開始されます。 セッションが開始されると、次のイベントを 1 つ以上追跡できます。
+このガイドでは、Media Edge API サービスとの最初のインタラクションを成功させる手順を説明します。 これには、メディアセッションの開始と、Adobe Experience Platformソリューションに送信されるCustomer Journey Analytics(CJA) の追跡が含まれます。 Media Edge API サービスは、セッション開始エンドポイントで開始されます。 セッションが開始されると、次のイベントを 1 つ以上追跡できます。
 
-* play
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 各イベントには、独自のエンドポイントがあります。 すべての Media Edge API エンドポイントはPOSTメソッドで、イベントデータ用の JSON リクエスト本文が含まれます。 Media Edge API エンドポイント、パラメーターおよび例について詳しくは、 [Media Edge Swagger ファイル](swagger.md).
 
 このガイドでは、セッションの開始後に次のイベントを追跡する方法について説明します。
 
-* バッファー開始
-* Play
-* セッション完了
+* [バッファー開始](#buffer-start-event-request)
+* [Play](#play-event-request)
+* [セッション完了](#session-complete-event-request)
 
-## API の実装
+## API の実装 {#implement-api}
 
-Media Edge API は、と呼び出されるモデルとパスの小さな違いに加えて、メディアコレクション API と同じ実装を持ちます。 メディアコレクションの実装の詳細は、次のドキュメントに示すように、引き続き Media Edge API に対して有効です。
+呼び出されるモデルとパスの小さな違いに加えて、Media Edge API は、 [メディアコレクション API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). メディアコレクションの実装の詳細は、次のドキュメントに示すように、引き続き Media Edge API に対して有効です。
 
 * [プレーヤーでの HTTP リクエストタイプの設定](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [ping イベントの送信](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [タイムアウト条件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [イベントの順序の制御](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 現在、Media Edge API は、リクエストに認証ヘッダーを必要としません。
 
 
-## セッションの開始
+## セッションの開始 {#start-session}
 
 サーバーでメディアセッションを開始するには、セッション開始エンドポイントを使用します。 成功した応答には、 `sessionId`：後続のイベントリクエストの必須パラメーター。
 
@@ -104,7 +103,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 | eventType | データタイプ |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ x-content-type-options: nosniff
 XDM メディアデータパラメーターについて詳しくは、 [メディア詳細情報スキーマ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## バッファー開始イベントリクエスト
+## バッファー開始イベントリクエスト {#buffer-start}
 
 メディアプレーヤーでバッファリングが開始する際に、バッファー開始イベントシグナルが発生します。 バッファー再開は API サービスのイベントではありません。代わりに、バッファー開始の後に play イベントが送信されると推論されます。 バッファー開始イベントリクエストを作成するには、 `sessionId` を次のエンドポイントへの呼び出しのペイロードに追加します。
 
@@ -208,7 +207,7 @@ curl -X 'POST' \
 Buffer Start エンドポイントのパラメータと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
 
 
-## イベントリクエストを再生
+## イベントリクエストを再生 {#play-event}
 
 Play イベントは、メディアプレーヤーがその状態を「再生中」から「バッファリング」、「一時停止」、「エラー」などの別の状態に変更したときに送信されます。 Play イベントをリクエストするには、 `sessionId` を次のエンドポイントへの呼び出しのペイロードに追加します。
 
@@ -243,7 +242,7 @@ curl -X 'POST' \
 
 Play エンドポイントのパラメーターと例について詳しくは、 [Media Edge Swagger](swagger.md) ファイル。
 
-## Session Complete イベントリクエスト
+## Session Complete イベントリクエスト {#session-complete}
 
 セッション完了イベントは、メインコンテンツの終わりに達したときに送信されます。 Session Complete イベントリクエストを作成するには、 `sessionId` を次のエンドポイントへの呼び出しのペイロードに追加します。
 
@@ -289,6 +288,9 @@ curl -X 'POST' \
 | 400 レベル | Bad request |
 | 500 レベル | サーバーエラー |
 
-エラーと失敗した応答コードの処理について詳しくは、 [メディアエッジトラブルシューティングガイド](troubleshooting.md).
+## この機能に関するその他のヘルプ
+
+* [メディアエッジトラブルシューティングガイド](troubleshooting.md)
+* [メディアエッジ API の概要](overview.md)
 
 
