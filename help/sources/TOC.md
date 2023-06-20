@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 99%
+source-wordcount: '988'
+ht-degree: 98%
 
 ---
 
@@ -61,6 +61,7 @@ ht-degree: 99%
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
+      - [SAP Hybris コネクタ](connectors/crm/sap-hybris.md)
       - [Salesforce コネクタ](connectors/crm/salesforce.md)
       - [SugarCRM コネクタ](connectors/crm/sugarcrm.md)
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
@@ -138,6 +139,7 @@ ht-degree: 99%
          - [OneTrust 統合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM アカウントおよび連絡先](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/api/create/crm/sugarcrm-events.md)
@@ -258,6 +260,7 @@ ht-degree: 99%
          - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM アカウントおよび連絡先](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/ui/create/crm/sugarcrm-events.md)
