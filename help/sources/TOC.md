@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 98%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 98%
       - [Analytics ソース](connectors/adobe-applications/analytics.md)
       - [Audience Manager ソース](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services ソース](connectors/adobe-applications/campaign.md)
+      - [Adobe Commerceソース](connectors/adobe-applications/commerce.md)
       - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
       - [データ収集ソース](connectors/adobe-applications/data-collection.md)
       - [Workfront ソース](connectors/adobe-applications/workfront.md)
