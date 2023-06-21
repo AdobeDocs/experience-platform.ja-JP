@@ -1,13 +1,13 @@
 ---
 title: 暗号化されたデータの取り込み
-description: Adobe Experience Platform では、クラウドストレージバッチソースから、暗号化されたファイルを取り込むことができます。
+description: API を使用して、クラウドストレージバッチソースを通じて暗号化されたファイルを取り込む方法を説明します。
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 100%
+source-wordcount: '1017'
+ht-degree: 93%
 
 ---
 
@@ -40,6 +40,29 @@ Adobe Experience Platform では、クラウドストレージバッチソース
 ### Platform API の使用
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
+
+### 暗号化されたファイルでサポートされるファイル拡張子
+
+暗号化されたファイルでサポートされるファイル拡張子のリストを次に示します。
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Adobe Experience Platform Sources での暗号化されたファイル取り込みは、openPGP をサポートしており、PGP の特定の独自バージョンはサポートしていません。
 
 ## 暗号化キーペアの作成 {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ curl -X POST \
 >[!NOTE]
 >
 >暗号化されたデータの取り込みのデータフローを作成するには、次のものが必要です。
+>
 >* [公開鍵 ID](#create-encryption-key-pair)
 >* [ソース接続 ID](../api/collect/cloud-storage.md#source)
 >* [ターゲット接続 ID](../api/collect/cloud-storage.md#target)
 >* [マッピング ID](../api/collect/cloud-storage.md#mapping)
-
 
 データフローを作成するには、[!DNL Flow Service] API の `/flows` エンドポイントに対して POST リクエストを実行します。暗号化されたデータを取り込むには、`transformations` プロパティに `encryption` セクションを追加し、その中に、前の手順で作成した `publicKeyId` を含める必要があります。
 
