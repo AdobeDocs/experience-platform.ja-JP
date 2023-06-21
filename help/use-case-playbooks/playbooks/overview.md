@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 使用例のプレイブックの概要
 description: 様々なマーケティングの使用例を開始するためのExperience Platformのユースケースプレイブック機能の使用方法を説明します
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '400'
 ht-degree: 3%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 3%
 このドキュメントガイドの内容は次のとおりです。
 
 * **[ユースケースプレイブックの概要](#overview)**
+* [基本を学ぶ](/help/use-case-playbooks/playbooks/get-started.md)
 * [適切なプレイブックを見つける](/help/use-case-playbooks/playbooks/discover.md)
 * [プレイブックインスタンスの作成、共有、再利用](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [トラブルシューティングおよび既知の制限事項](troubleshooting.md)
