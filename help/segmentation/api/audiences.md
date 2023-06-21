@@ -5,7 +5,7 @@ description: Adobe Experience Platform Segmentation Service API のオーディ�
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 9%
@@ -20,7 +20,7 @@ ht-degree: 9%
 
 オーディエンスとは、類似した行動や特性を共有する人々の集まりです。 これらの人々のコレクションは、Adobe Experience Platformを使用して、または外部ソースから生成できます。 以下を使用して、 `/audiences` エンドポイントを使用して、オーディエンスをプログラムで取得、作成、更新および削除できます。
 
-## はじめに
+## Destination SDK の
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
@@ -62,7 +62,7 @@ GET /audiences?{QUERY_PARAMETERS}
 次のリクエストでは、組織で作成された直近 5 人のオーディエンスを取得します。
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | オーディエンスの ID。 これは、外部のオーディエンスで使用されます |
 | `name` | オーディエンスの名前。 |
-| `namespace` |  |
+| `namespace` | |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 以下の値を指定できます。 `SegmentDefinition` および `ExternalAudience`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、 `ExternalAudience` は、Platform で生成されなかったオーディエンスを指します。 |
 | `lifecycle` | オーディエンスのステータス。以下の値を指定できます。 `draft`, `published`, `inactive`、および `archived`. `draft` は、オーディエンスが作成される日時を表します。 `published` オーディエンスが公開された時点で、 `inactive` オーディエンスがアクティブでなくなり、 `archived` （オーディエンスが削除された場合） |

@@ -3,10 +3,10 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル API ガイド
 description: リアルタイム顧客プロファイル API を使用すると、開発者は、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプル、不要になった、またはエラーで追加されたプロファイルデータの削除など、プロファイルデータを調査および操作できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 24%
+source-wordcount: '963'
+ht-degree: 27%
 
 ---
 
@@ -20,17 +20,17 @@ ht-degree: 24%
 
 の操作に関するガイド [!DNL Real-Time Customer Profile] データ [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
-<!-- ## (Alpha) Computed attributes {#computed-attributes}
+## [!BADGE ベータ版]{type=Informative} 計算済み属性 {#computed-attributes}
 
 >[!IMPORTANT]
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>計算済み属性機能はベータ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+各計算済み属性には、受信データを評価し、結果の値をプロファイル属性に保存する式（「ルール」）が含まれます。 これらの計算により、ライフタイム購入値、購入間隔、アプリケーションを開いた数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。これらの計算済み属性値は、その後、プロファイルで表示したり、セグメントの作成に使用したり、様々なアクセスパターンを通じてアクセスしたりできます。
 
-You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
+計算済み属性の作成、表示、編集および削除は、 `ca/attributes/` endpoint. 計算済み属性の使用方法については、 [計算済み属性の概要](../computed-attributes/overview.md). API 操作については、 [計算済み属性 API エンドポイントガイド](../computed-attributes/api.md).
 
 ## エッジ投影 {#edge-projections}
 

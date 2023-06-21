@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platformユーザーインターフェイスでリアルタイム顧客プロファイルを操作する際のガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '2008'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 [!DNL Real-Time Customer Profile] は、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、 [!DNL Real-Time Customer Profile] データをAdobe Experience Platformユーザーインターフェイス (UI) に表示します。
 
-## はじめに
+## Destination SDK の
 
 この UI ガイドでは、 [!DNL Experience Platform] 管理に関わるサービス [!DNL Real-Time Customer Profiles]. このガイドを読む前、または UI で作業する前に、次のサービスのドキュメントを確認してください。
 
@@ -175,6 +175,14 @@ Experience Platformでのセグメント化について詳しくは、 [AdobeExp
 和集合スキーマについて詳しくは、 [和集合スキーマ UI ガイド](union-schema.md).
 
 ![「和集合スキーマ」タブがハイライト表示されます。 組織に属する和集合スキーマが表示されます。](../images/user-guide/union-schema.png)
+
+## 計算済み属性 {#computed-attributes}
+
+メインから **[!UICONTROL プロファイル]** メニューで、 **[!UICONTROL 計算済み属性]** タブをクリックして、組織に属する計算済み属性のリストを表示します。
+
+計算済み属性の詳細については、 [計算済み属性の概要](../computed-attributes/overview.md). Platform UI 内で計算済み属性を使用する方法の詳細については、 [計算済み属性 UI ガイド](../computed-attributes/ui.md).
+
+画像
 
 ## 次の手順
 
