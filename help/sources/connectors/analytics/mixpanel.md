@@ -1,20 +1,16 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;
-title: （ベータ版）Mixpanel Source Connector の概要
+title: Mixpanel ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Mixpanel をAdobe Experience Platformに接続する方法を説明します。
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 30%
+source-wordcount: '449'
+ht-degree: 29%
 
 ---
 
-# （ベータ版）[!DNL Mixpanel]
-
->[!NOTE]
->
->[!DNL Mixpanel] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# [!DNL Mixpanel]
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

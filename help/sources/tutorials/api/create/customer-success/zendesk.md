@@ -1,23 +1,17 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-solution: Experience Platform
 title: フローサービス API を使用した Zendesk のデータフローの作成
 description: フローサービス API を使用してAdobe Experience Platformを Zendesk に接続する方法を説明します。
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1966'
 ht-degree: 64%
 
 ---
 
-# （ベータ版）のデータフローの作成 [!DNL Zendesk] の使用 [!DNL Flow Service] API
+# のデータフローの作成 [!DNL Zendesk] の使用 [!DNL Flow Service] API
 
->[!NOTE]
->
->[!DNL Zendesk] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
-
-以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Zendesk] のデータを Platform に取り込む手順を詳しく説明します。
+以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service]  API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Zendesk] のデータを Platform に取り込む手順を詳しく説明します。
 
 ## はじめに
 

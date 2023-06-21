@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Zendesk;zendesk
-solution: Experience Platform
 title: Zendesk Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Zendesk をAdobe Experience Platformに接続する方法を説明します。
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 46%
+source-wordcount: '367'
+ht-degree: 47%
 
 ---
 
-# （ベータ版）[!DNL Zendesk]
-
->[!NOTE]
->
->[!DNL Zendesk] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# [!DNL Zendesk]
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -40,7 +35,7 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 ![Zendesk API トークン](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-詳しくは、 [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) サブドメインの取得方法に関する情報を参照してください。 API トークンの生成について詳しくは、 [[!DNL Zendesk] 新しい API トークンの生成に関するガイド](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+詳しくは、 [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) サブドメインの取得方法に関する情報を参照してください。 API トークンの生成について詳しくは、 [[!DNL Zendesk] 新しい API トークンの生成に関するガイド](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zendesk] と Platform を接続する方法について説明します。
 
