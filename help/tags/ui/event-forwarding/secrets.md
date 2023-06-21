@@ -2,10 +2,10 @@
 title: イベント転送でのシークレットの設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために UI でシークレットを設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 100%
+source-wordcount: '2182'
+ht-degree: 85%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 100%
 
 イベント転送では、秘密鍵は別のシステムの認証情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
 
-現在、次の 3 つのタイプの秘密鍵がサポートされています。
+現在、次のシークレットタイプがサポートされています。
 
 | 秘密鍵タイプ | 説明 |
 | --- | --- |
-| [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
+| [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
 | [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
-| [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
+| [!UICONTROL OAuth 2 JWT] | 次の JSON Web トークン (JWT) プロファイルをサポートする属性が複数含まれます。 [OAuth 2.0 の認証](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 交付金 システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
+| [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ ht-degree: 100%
 * [[!UICONTROL トークン]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL トークン] {#token}
@@ -116,6 +118,40 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
 
 ![OAuth2 オフセットの保存](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+OAuth 2 JWT シークレットを作成するには、「 」を選択します。 **[!UICONTROL OAuth 2 JWT]** から **[!UICONTROL タイプ]** ドロップダウン。
+
+![この [!UICONTROL 秘密鍵を作成] 」タブに、 [!UICONTROL タイプ] ドロップダウン。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>唯一の [!UICONTROL アルゴリズム] JWT への署名が現在サポートされている RS256
+
+以下に表示されるフィールドで、 [!UICONTROL 発行者], [!UICONTROL 件名], [!UICONTROL 対象ユーザ], [!UICONTROL カスタム要求], [!UICONTROL TTL]を選択し、 [!UICONTROL アルゴリズム] をドロップダウンから選択します。 次に、 [!UICONTROL 秘密鍵 ID]、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] フィールドは必須フィールドではありません。 値を指定した場合、JWT はアクセストークンと交換されます。 秘密は `expires_in` 属性を返します。 [!UICONTROL オフセットを更新] の値です。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT になります。 JWT は、 [!UICONTROL TTL] および [!UICONTROL オフセットを更新] 値。
+
+![この [!UICONTROL 秘密鍵を作成] タブ内で選択した入力フィールドがハイライト表示されています。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+の下 **[!UICONTROL 資格情報オプション]**&#x200B;を使用する場合、 `jwt_param` キーと値のペアの形式で書き込まれます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
+
+![この [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL 資格情報オプション] フィールド。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+最後に、シークレットの&#x200B;**[!UICONTROL 更新オフセット]**&#x200B;値を設定できます。これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
+
+![この [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL オフセットを更新] フィールドに入力します。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+たとえば、更新オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` 値 `3600` （1 時間）の場合、1 時間でシークレットが自動的に更新されます。
+
+>[!IMPORTANT]
+>
+>OAuth 2 JWT シークレットは、更新の間隔を 30 分以上にする必要があり、1 時間以上有効である必要があります。 この制限により、生成されたトークンに問題が発生した場合に介入するまでに最低 30 分かかります。
+>
+>例えば、オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` / `2700` （45 分）、結果として 30 分未満になる差異が原因で、交換が失敗する場合があります。
+
+終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
+
+![この [!UICONTROL 秘密鍵を作成] タブのハイライト [!UICONTROL 秘密鍵を作成]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth2] {#google-oauth2}
 
