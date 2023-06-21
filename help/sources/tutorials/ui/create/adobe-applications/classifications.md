@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UI での分類データ用のAdobe Analyticsソース接続の作成
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 25%
+source-wordcount: '628'
+ht-degree: 19%
 
 ---
 
@@ -30,7 +30,7 @@ Analytics Classifications Data Connector では、新しい [!DNL Classification
 
 にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから、ソースワークスペースにアクセスします。 この **[!UICONTROL カタログ]** 画面には、インバウンド接続を作成するために使用可能なソースが表示されます。 各ソースカードには、新しいアカウントを設定するか、既存のアカウントにデータを追加するかのどちらかのオプションが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
 以下 **[!UICONTROL Adobe]** カテゴリの **[!UICONTROL Adobe Analytics]** カードを選択し、 **[!UICONTROL データを追加]** をクリックして、Analytics 分類データの操作を開始します。
 
@@ -72,12 +72,7 @@ Analytics Classifications Data Connector では、新しい [!DNL Classification
 
 この **[!UICONTROL データセットアクティビティ]** ページには、選択したターゲットデータセットに関する情報（バッチステータス、データセット ID、スキーマに関する詳細など）が表示されます。
 
->[!IMPORTANT]
->
->データセットの削除は、他のソースコネクタでは可能ですが、Analytics 分類データコネクタでは現在サポートされていません。データセットを誤って削除した場合は、アドビカスタマーサポートにお問い合わせください。
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## 次の手順
 
