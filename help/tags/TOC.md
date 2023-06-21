@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1001'
 ht-degree: 99%
 
 ---
@@ -235,7 +235,7 @@ ht-degree: 99%
       * [!DNL Pinterest] {#pinterest}
          * [概要](./extensions/server/pinterest/overview.md)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
-      * [Snowflake] {#snowflake}
+      * [!DNL Snowflake] {#snowflake}
          * [概要](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [概要](./extensions/server/splunk/overview.md)
