@@ -1,10 +1,9 @@
 ---
 title: RainFocus ソースの概要
 description: RainFocus アカウントからExperience Platformにイベント管理と分析データを取り込む方法を説明します
+last-substantial-update: 2023-06-21T00:00:00Z
 badge: ベータ
-hide: true
-hidefromtoc: true
-source-git-commit: e9728e1e673a4018d1d776a9d9ddad023ad1393e
+source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 8%

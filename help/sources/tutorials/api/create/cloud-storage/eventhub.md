@@ -3,10 +3,10 @@ title: フローサービス API を使用した Azure Event Hubs ソース接�
 description: フローサービス API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '773'
+ht-degree: 55%
 
 ---
 
@@ -104,6 +104,10 @@ curl -X POST \
 
 ## ソース接続の作成
 
+>[!TIP]
+>
+>An [!DNL Event Hubs] 消費者グループは、特定の時間に 1 つのフローに対してのみ使用できます。
+
 ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。ソース接続インスタンスは、テナントと組織に固有です。
 
 ソース接続を作成するには、[!DNL Flow Service] API の `/sourceConnections` エンドポイントに POST リクエストを実行します。
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
 | `params.reset` | このパラメーターは、データの読み取り方法を定義します。 用途 `latest` 最新のデータから読み込みを開始するには、 `earliest` をクリックして、ストリーム内の最初の使用可能なデータから読み取りを開始します。 このパラメーターはオプションで、デフォルトはです。 `earliest` 指定されていない場合は。 |
-| `params.consumerGroup` | 使用する公開または購読のメカニズム [!DNL Event Hubs]. このパラメーターはオプションで、デフォルトはです。 `$Default` 指定されていない場合は。 詳しくは、 [[!DNL Event Hubs] イベント消費者向けガイド](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 |
+| `params.consumerGroup` | 使用する公開または購読のメカニズム [!DNL Event Hubs]. このパラメーターはオプションで、デフォルトはです。 `$Default` 指定されていない場合は。 詳しくは、 [[!DNL Event Hubs] イベント消費者向けガイド](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **注意**:An [!DNL Event Hubs] 消費者グループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
 
 ## 次の手順
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
+source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 84%
@@ -63,6 +63,7 @@ Experience Platform には、サードパーティの分析プラットフォー
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
 
 ### クラウドストレージ {#cloud-storage}
 
@@ -128,7 +129,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
+- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
@@ -137,7 +138,7 @@ Experience Platform は、サードパーティのデータベースからデー
 Adobe Experience Platform には、サードパーティの e コマースシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
 ### ローカルシステム {#local-system}
 
