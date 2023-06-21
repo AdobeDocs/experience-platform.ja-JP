@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 98%
+source-wordcount: '278'
+ht-degree: 97%
 
 ---
 
@@ -60,6 +60,7 @@ ht-degree: 98%
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザガイド](ui/user-guide.md)
    - [クエリテンプレート](ui/query-templates.md)
+   - [パラメーター化されたクエリ（制限）](ui/parameterized-queries.md)
    - [クエリスケジュール](ui/query-schedules.md)
    - [クエリログ](ui/query-logs.md)
    - [スケジュール済みクエリの監視](ui/monitor-queries.md)
@@ -86,6 +87,7 @@ ht-degree: 98%
    - [ネストされたデータ構造の使用](essential-concepts/nested-data-structures.md)
    - [ネストされたデータ構造の統合](essential-concepts/flatten-nested-data.md)
    - [匿名ブロック](essential-concepts/anonymous-block.md)
+   - [インラインテンプレート](essential-concepts/inline-templates.md)
    - [増分読み込み](essential-concepts/incremental-load.md)
    - [データ重複排除](essential-concepts/deduplication.md)
    - [データセットのサンプル](essential-concepts/dataset-samples.md)
