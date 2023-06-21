@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1002'
 ht-degree: 99%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 99%
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
          * [概要](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Google Cloud Platform {#google-cloud-platform}
+         * [概要](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [概要](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
@@ -233,6 +235,8 @@ ht-degree: 99%
       * [!DNL Pinterest] {#pinterest}
          * [概要](./extensions/server/pinterest/overview.md)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
+      * [Snowflake] {#snowflake}
+         * [概要](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [概要](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
