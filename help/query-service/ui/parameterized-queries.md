@@ -1,9 +1,9 @@
 ---
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法について説明します。
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 このガイドを続行する前に、 [クエリエディター UI ガイド](./user-guide.md). クエリエディターガイドでは、Experience Platformユーザーインターフェイス内で顧客体験データのクエリを記述、検証、実行する方法に関する詳細情報を提供します。
 
+>[!NOTE]
 >
->
->パラメーター化クエリは、インラインテンプレート内で、直近の親レベルを超えるクエリはサポートされません。 パラメーター化クエリは、元のテンプレート内または直接の子インラインテンプレート内で使用される場合にのみ機能します。
+>Adobe Experience Platform UI 内では、パラメーター化されたクエリは、インラインテンプレートの親レベルでのみサポートされます。 つまり、パラメーター化されたクエリは、元のテンプレートで使用された場合にのみ機能します。 子テンプレートは、静的テンプレートである必要があり、動的パラメーターを持つことはできません。 詳しくは、 [インラインテンプレートドキュメント](../essential-concepts/inline-templates.md) を参照してください。
 
 ## パラメーター化クエリ構文 {#syntax}
 

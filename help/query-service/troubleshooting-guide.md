@@ -4,10 +4,10 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
-ht-degree: 100%
+source-wordcount: '4309'
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ SELECT count(1) FROM myTableName
 
 また、[UI でのスケジュール済みクエリの実行](./ui/user-guide.md#scheduled-queries)と [API](./api/scheduled-queries.md) を使用したスケジュール済みクエリの実行の方法については、ドキュメントを参照してください。
 
-[!DNL Query Editor] を使用する場合にスケジュール済みクエリについて考慮すべき事項を以下に列挙します。[!DNL Query Service] API には適用されません：<br/>既に作成、保存、実行されたクエリにのみスケジュールを追加できます。<br/>パラメーター化クエリにスケジュールを追加することは&#x200B;**できません**。<br/>スケジュールされたクエリに匿名ブロックを含めることは&#x200B;**できません**。<br/>UI を使用してスケジュールできるクエリテンプレートは **1 つ**だけです。クエリテンプレートにスケジュールを追加する場合は、API を使用する必要があります。 API を使用してスケジュールが既に追加されている場合、UI でスケジュールを追加することはできません。
+注意： [!DNL Query Editor] 作成、保存、実行済みのクエリにのみスケジュールを追加できます。 これは、 [!DNL Query Service] API
 +++
 
 ### 「セッション制限に達しました」エラーはどういう意味ですか？

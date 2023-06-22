@@ -1,9 +1,9 @@
 ---
 title: インラインテンプレート
 description: インラインテンプレートを使用した多数のクエリで複数の条件を再利用する方法を説明します。
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 >
 >
->Adobe Experience Platform UI 内では、パラメーター化されたクエリ形式のインラインテンプレートは親レベルでのみサポートされます。 つまり、パラメーター化されたクエリは、元のテンプレートで使用された場合にのみ機能します。 子テンプレートは、静的テンプレートである必要があり、動的パラメーターを持つことはできません。
+>Adobe Experience Platform UI 内では、パラメーター化されたクエリ形式のインラインテンプレートは親レベルでのみサポートされます。 つまり、パラメーター化されたクエリは、元のテンプレートで使用された場合にのみ機能します。 子テンプレートは、静的テンプレートである必要があり、動的パラメーターを持つことはできません。 詳しくは、 [パラメーター化クエリドキュメント](../ui/parameterized-queries.md) を参照してください。
 
 ## 次の手順
 
