@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年6月 のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
+source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 24%
+source-wordcount: '988'
+ht-degree: 26%
 
 ---
 
@@ -15,9 +15,19 @@ ht-degree: 24%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [Experience PlatformAPI に対する認証](#authentication-platform-apis)
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [クエリサービス](#query-service)
 - [ソース](#sources)
+
+## Experience PlatformAPI に対する認証 {#authentication-platform-apis}
+
+Experience PlatformAPI ユーザーの場合、認証および API エンドポイントの呼び出しをおこなうために必要なアクセストークンを取得する方法が簡略化されました。 アクセストークンを取得する JWT メソッドは廃止され、よりシンプルな OAuth サーバー間認証方法に置き換えられました。<p>![ハイライト表示されたアクセストークンを取得する新しい OAuth 認証方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "ハイライト表示されたアクセストークンを取得する新しい OAuth 認証方法。"){width="100" zoomable="yes"}</p>
+
+JWT 認証方式を使用した既存の API 統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 次のガイドを読む： [サービスアカウント (JWT) 秘密鍵証明書から OAuth サーバー間秘密鍵証明書への移行](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+更新された [Experience Platform認証のチュートリアル](/help/landing/api-authentication.md) を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -35,6 +45,40 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 {style="table-layout:auto"}
 
 データ収集について詳しくは、 [データ収集の概要](../../tags/home.md).
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新規宛先または更新された宛先** {#new-updated-destinations}
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 接続](../../destinations/catalog/advertising/amazon-ads.md) | この [!DNL Amazon Ads] Adobe Experience Platformとの統合で、様々な [!DNL Amazon Ads] marketplaces. 詳しくは、 [宛先の変更ログ](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
