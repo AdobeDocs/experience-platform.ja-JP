@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年6月 のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
+source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 26%
+source-wordcount: '1055'
+ht-degree: 25%
 
 ---
 
@@ -58,17 +58,13 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 {style="table-layout:auto"}
 
-<!-- 
+**新機能または更新された機能** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| 機能 | 説明 |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| Workspace でののサポート [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 宛先。 | 新しいAdobe Targetの宛先接続を設定する際に、オーディエンスを共有するAdobe Targetワークスペースを選択できるようになりました。 詳しくは、 [接続パラメータ](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) 」の節を参照してください。 さらに、 [ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) Adobe Targetでを参照してください。 |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 

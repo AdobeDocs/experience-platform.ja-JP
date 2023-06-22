@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
+source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 57%
+source-wordcount: '1079'
+ht-degree: 48%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 57%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
+| 2023年6月 | 機能とドキュメントの更新 | 2023 年 6 月以降は、新しいAdobe Targetの宛先接続を設定する際に、オーディエンスを共有するAdobe Targetワークスペースを選択できます。 詳しくは、 [接続パラメータ](#parameters) 」の節を参照してください。 さらに、 [ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) Adobe Targetでを参照してください。 |
 | 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月現在、 **[!UICONTROL Adobe Target]** 接続サポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) およびは、すべてのお客様が一般に利用できます。 |
 
 {style="table-layout:auto"}
@@ -80,12 +81,19 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 ### 接続パラメーター {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="Adobe Target Workspaces について"
+>abstract="オーディエンスを共有するAdobe Targetワークスペースを選択します。 Adobe Target接続ごとに 1 つのワークスペースを選択できます。 アクティベーション時、オーディエンスは、該当するワークスペースデータ使用ラベルに従って、選択したExperience Platformにルーティングされます。"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Adobe Target Workspaces の詳細"
+
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
 * **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 * **データストリーム ID**:これにより、セグメントを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
    * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたセグメントは、次回のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
+* **Workspace**:Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) オーディエンスの共有先となるもの。 Adobe Target接続ごとに 1 つのワークスペースを選択できます。 アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
 
 | データストリームが選択されていません | データストリームが選択されました |
 |---|---|
