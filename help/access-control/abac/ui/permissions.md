@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 97%
@@ -101,7 +101,7 @@ ht-degree: 97%
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## 役割での API 資格情報の管理
+## 役割での API 資格情報の管理 {#manage-api-credentials-for-role}
 
 「**[!UICONTROL API 資格情報]**」タブをクリックして役割 API 資格情報ページを開き、「**[!UICONTROL API 資格情報を追加]**」を選択して、API 資格情報を役割に割り当てます。
 
