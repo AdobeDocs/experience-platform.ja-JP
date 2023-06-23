@@ -3,7 +3,7 @@ title: Adobe Experience Platform リリースノート 2022年8月
 description: Adobe Experience Platform の 2022年8月のリリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2082'
 ht-degree: 100%
 
@@ -110,7 +110,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
 
 **新しい XDM コンポーネント**
 
