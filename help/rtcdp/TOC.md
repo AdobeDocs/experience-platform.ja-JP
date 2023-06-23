@@ -7,7 +7,7 @@ user-guide-description: 複数のエンタープライズソースからの既�
 source-git-commit: 8f885181f8ec06f719e4a82b2cb5f13641f65607
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 92%
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
       * [Real-Time CDP B2B Edition のガードレール](b2b-guardrails.md)
-* Audience Managerとリアルタイム CDP {#evolution}
-   * [Audience Managerからの変化](aam-to-rtcdp.md)
+* Audience Manager と Real-Time CDP {#evolution}
+   * [Audience Manager からの進化](aam-to-rtcdp.md)
 * アカウントプロファイル {#account}
    * [アカウントプロファイルの概要](accounts/account-profile-overview.md)
    * [アカウントプロファイル UI ガイド](accounts/account-profile-ui-guide.md)

@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
 source-wordcount: '1172'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 98%
       * [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md)
       * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md)
       * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md)
-      * [エッジパーソナライゼーションの宛先に対するオーディエンスデータのアクティブ化](./ui/activate-edge-personalization-destinations.md)
+      * [エッジパーソナライゼーションの宛先に対するオーディエンスデータの有効化](./ui/activate-edge-personalization-destinations.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
@@ -121,7 +121,7 @@ ht-degree: 98%
       * [（ベータ版）データランディングゾーン](./catalog/cloud-storage/data-landing-zone.md)
       * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [SFTP の宛先の IP ア許可リストドレスの](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [SFTP の宛先の IP アドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}
       * [Salesforce CRM 接続](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 接続](./catalog/crm/microsoft-dynamics-365.md)
@@ -139,7 +139,7 @@ ht-degree: 98%
       * [メールマーケティングの宛先の概要](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 接続](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp 関心カテゴリ](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp の興味カテゴリ](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [（API）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（ファイル）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 接続](./catalog/email-marketing/oracle-responsys.md)

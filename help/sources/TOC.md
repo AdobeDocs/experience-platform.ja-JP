@@ -90,7 +90,7 @@ ht-degree: 98%
       - [Oracle コネクタ](connectors/databases/oracle.md)
       - [Phoenix コネクタ](connectors/databases/phoenix.md)
       - [PostgreSQL コネクタ](connectors/databases/postgres.md)
-      - [Snowflakeストリーミングコネクタ](connectors/databases/snowflake-streaming.md)
+      - [Snowflake ストリーミングコネクタ](connectors/databases/snowflake-streaming.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - e コマース {#ecommerce}
