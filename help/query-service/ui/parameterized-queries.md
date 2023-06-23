@@ -1,9 +1,9 @@
 ---
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法について説明します。
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ UI でパラメーター化されたクエリを作成するには、クエリ�
 
 パラメーターを削除し、既に実行された後にクエリを再実行しようとすると、エラーメッセージが [!UICONTROL クエリパラメーター] 」セクションで、警告を表示します。
 
+>[!NOTE]
+>
+>クエリがパラメータを取らない場合でも、クエリエディタ内で不要なパラメータを入力できます。 クエリエディターは、不要なキーと値のペアをすべて無視し、クエリの実行や結果には影響しません。
+
 ![値が空のフィールドとクエリーパラメーターのエラーが強調表示されたクエリーエディター。](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## クエリログの詳細を使用してパラメーター値を確認 {#check-parameter-values}
@@ -77,4 +81,4 @@ UI でパラメーター化されたクエリを作成するには、クエリ�
 
 このドキュメントでは、Adobe Experience Platform UI でクエリをパラメータ化し、スケジュールされたクエリの実行で使用する方法を学びました。 また、クエリの実行で使用されるパラメーター値をログで確認する方法も強調されました。
 
-まだ読んでいない場合は、 [スケジュール済みクエリの監視](./monitor-queries.md) を使用すると、Platform UI を通じてすべてのクエリジョブのステータスをより深く理解できます。
+次に、 [スケジュール済みクエリの監視](./monitor-queries.md) を使用すると、Platform UI を通じてすべてのクエリジョブのステータスをより深く理解できます。
