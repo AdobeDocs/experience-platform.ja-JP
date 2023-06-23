@@ -4,9 +4,9 @@ description: Amazon Ads には、登録販売者、ベンダー、書籍ベン�
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1401'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP�
 
 ## 前提条件 {#prerequisites}
 
-Adobe Experience PlatformとのAmazon Ads 接続を使用するには、最初にAmazon DSP Advertiser アカウントにアクセスできる必要があります。 これらのインスタンスをプロビジョニングするには、Amazon Ads Web サイトの次のページにアクセスします。
+Adobe Experience Platform で Amazon Ads 接続を使用するには、まずユーザーが Amazon DSP 広告主アカウントにアクセスできる必要があります。これらのインスタンスをプロビジョニングするには、Amazon Ads web サイトの次のページにアクセスします。
 
 * [Amazon DSP - デマンドサイドプラットフォームで広告を始める](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -70,7 +70,7 @@ Adobe Experience PlatformとのAmazon Ads 接続を使用するには、最初�
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-Amazon Ads 接続インターフェイスに移動し、最初に接続先の広告主アカウントを選択します。 接続すると、選択した広告主アカウントの ID が付いた新しい接続で、Adobe Experience Platformにリダイレクトされます。 宛先の設定画面で適切な広告主アカウントを選択して続行します。
+Amazon Ads 接続インターフェイスに移動するので、まず接続先の広告主アカウントを選択します。接続すると、選択した広告主アカウントの ID が付与された新しい接続で Adobe Experience Platform にリダイレクトされます。宛先の設定画面で適切な広告主アカウントを選択して続行します。
 
 * **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
 
@@ -84,9 +84,9 @@ Amazon Ads 接続インターフェイスに移動し、最初に接続先の広
 
 >[!NOTE]
 >
->宛先の設定を保存すると、Amazonアカウントを通じて再認証した場合でも、Amazon Ads Advertiser ID を変更できなくなります。 別のAmazon Ads 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。
+>宛先の設定を保存すると、Amazon アカウントを通じて再認証した場合でも、Amazon Ads 広告主 ID を変更できなくなります。別の Amazon Ads 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。
 
-* **[!UICONTROL 広告主の地域]**:広告主がホストされている適切な地域を選択します。 各地域でサポートされるマーケットプレースについて詳しくは、 [Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL 広告主地域]**：広告主がホストされている適切な地域を選択します。各地域でサポートされているマーケットプレイスについて詳しくは、[Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。
 
 
 
@@ -116,7 +116,7 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 * ハッシュ化された電話番号をマッピングするには、`Phone_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化されていないメールアドレスまたは電話番号をマッピングするには、対応する ID 名前空間をソースフィールドとして選択し、「`Apply Transformation`」オプションをオンにして、アクティブ化時に Platform で ID をハッシュ化するように設定します。
 
-使用できる限りのフィールドをマッピングすることを強くお勧めします。使用可能なソース属性が 1 つしかない場合は、1 つのフィールドだけをマッピングできます。Amazon Ads の宛先は、マッピングの目的ですべてのマッピングされたフィールドを利用し、より多くのフィールドが提供される場合は、より高い一致率を生成します。 使用できる識別子について詳しくは、[Amazon Ads のハッシュ化されたオーディエンスのヘルプページ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)を参照してください。
+使用できる限りのフィールドをマッピングすることを強くお勧めします。使用可能なソース属性が 1 つしかない場合は、1 つのフィールドだけをマッピングできます。Amazon Ads 宛先では、マッピングされたすべてのフィールドをマッピング目的で使用し、より多くのフィールドを指定するほどマッチ率が高くなります。使用できる識別子について詳しくは、[Amazon Ads のハッシュ化されたオーディエンスのヘルプページ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)を参照してください。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -146,8 +146,8 @@ Amazon Ads 接続では、ID 照合のために、ハッシュ化されたメー
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年5月 | 機能とドキュメントの更新 | <ul><li>広告主の地域の選択のサポートを [宛先接続ワークフロー](#destination-details).</li><li>広告主の地域の選択が追加されたことを反映するようにドキュメントが更新されました。 正しい広告主の地域の選択について詳しくは、 [Amazonドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
-| 2023年3月 | 初回リリース | 宛先の初期リリースとドキュメント公開。 |
+| 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |
+| 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
 
 {style="table-layout:auto"}
 
