@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8d612c826164bab48a78d04649c5cca27e5797b0
+source-git-commit: d145aa43274c9406e1ff8d96513667edaa7d07bf
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1688'
 ht-degree: 99%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 99%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+
+## バージョン2.19.0 - 2023 年 6 月 21 日
+
+* この **[!UICONTROL 変数]** データ要素および **[!UICONTROL 変数を更新]** アクションが一般に使用できるようになりました。
 
 ## バージョン2.18.0 - 2023 年 5 月 18 日
 
