@@ -1,54 +1,54 @@
 ---
-title: Audience ManagerからReal-Time CDPへの変化
-description: Audience ManagerからReal-Time CDPへの移行を計画する前に考慮すべき事項を理解します。
+title: Audience Manager から Real-Time CDP への進化
+description: Audience Manager から Real-Time CDP への移行を計画する前の考慮事項について説明します。
 source-git-commit: 147e95cce203933d591fc807d9d20bcbc06e68e3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '538'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Audience ManagerからReal-Time CDPへの変化
+# Audience Manager から Real-Time CDP への進化
 
-組織がAdobe Real-Time CDPの使用に進化するにつれ、以下の考慮事項を検討して、データを準備し、2 つのテクノロジー間の重要な違いを認識します。 この記事は、開業医向けの内容です。
+組織が Adobe Real-Time CDP を使用するように進化するにつれて、データを準備し、2 つのテクノロジー間の重要な違いを認識するために次の考慮事項を検討します。この記事は、実務担当者オーディエンスを対象としています。
 
-![Audience ManagerからReal-Time CDPへの展開図](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
+![Audience Manager から Real-Time CDP への進化を示す図](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
 
-## 1.Audience Manager内のデータ・アーキテクチャを検討する
+## 1. Audience Manager 内のデータアーキテクチャの検討
 
-Audience ManagerからReal-Time CDPへの移行を考えると、今は、 [Audience Managerセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=en) そして何を決めるか [シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=en), [特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=en)、および [ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=en#segment-builder-section) これらのセグメントを構成するのがです。
+Audience Manager から Real-Time CDP への進化を検討する場合、今が [Audience Manager のセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=ja)を分析し、これらのセグメントを構成する[シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=ja)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=ja)、[ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=ja#segment-builder-section)が何であるかを判断する重要な時期です。
 
-さらに、現在Audience Managerで使用しているデータソースについて考えてみましょう。
+さらに、Audience Manager で現在使用しているデータソースについても考慮します。
 
-Adobeでは、次のようにセグメントを分類することをお勧めします。
+アドビでは、セグメントを次のように分類することをお勧めします。
 
-* セグメントの一部として、 [[!UICONTROL Audience Managerソースコネクタ]](/help/sources/connectors/adobe-applications/audience-manager.md)にはデータの依存関係がないので、宛先やアクティブ化の課題はなく、セグメント化ルールはリアルタイム CDP を使用して作成できます。 [セグメントビルダー](/help/segmentation/ui/segment-builder.md) 後で。
-* サポート可能なルールを持つが、Real-Time CDPで使用できないデータを含むセグメント。
-* リアルタイム CDP で作成できず、機能が欠落しているセグメント。
+* [[!UICONTROL Audience Manager ソースコネクタ]](/help/sources/connectors/adobe-applications/audience-manager.md)経由で Experience Platform に送信できるセグメント：データの依存関係がなく、宛先やアクティブ化の課題もないので、後で Real-Time CDP [セグメントビルダー](/help/segmentation/ui/segment-builder.md)を通じてセグメント化ルールを作成できます。
+* サポートできるルールがあるセグメント：Real-Time CDP で使用できないデータが含まれている場合があります。
+* Real-Time CDP で作成できず、機能が欠落しているセグメント。
 
 >[!TIP]
 >
->Adobe Real-Time CDPオファー [3 種類のセグメント評価](/help/segmentation/home.md#evaluate-segments): [!UICONTROL バッチ], [!UICONTROL ストリーミング]、および [!UICONTROL Edge]. Audience Managerでリアルタイムセグメントを使用するお客様は、Real-Time CDPでのストリーミングセグメント 500 件という現在の制限により、制限される場合があります。 詳細を表示 [セグメント化ガードレール](/help/profile/guardrails.md).
+>Adobe Real-Time CDP では、[!UICONTROL バッチ]、[!UICONTROL ストリーミング]、[!UICONTROL エッジ]の [3 種類のセグメント評価](/help/segmentation/home.md#evaluate-segments)が提供されます。Audience Manager でリアルタイムセグメントを使用するお客様は、Real-Time CDP での 500 個のストリーミングセグメントという現在の制限により、制限される場合があります。詳しくは、[セグメント化ガードレール](/help/profile/guardrails.md)を参照してください。
 
-## 2.を介して送信するのに重要なセグメント [!UICONTROL Audience Managerソースコネクタ]?
+## 2. [!UICONTROL Audience Manager ソースコネクタ]経由で送信するために重要なセグメント
 
-評価基準に基づき、データに依存しないセグメント、宛先やアクティブ化の課題がないセグメント、セグメント化ルールは、Real-Time CDPのデータ収集 ( [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) は、後日、Audience Managerソースコネクタを通じて送信する必要があります。
+評価基準に基づいて、データの依存関係がなく、宛先やアクティブ化の課題がなく、後日 [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) などの Real-Time CDP データ収集を通じて作成できるセグメントは、Audience Manager ソースコネクタ経由で送信する必要があります。
 
-## 3. [!UICONTROL Experience Cloudオーディエンス] 宛先にデータを取り込みますか？
+## 3. [!UICONTROL Experience Cloud Audiences] の宛先を使用してデータを Audience Manager に戻す
 
-ルールを持ち、Real-Time CDPでサポートできるが、Audience Managerにアクティベーションの依存関係を持つセグメントは、 [Experience Cloudオーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 宛先カード。
+Real-Time CDP でサポートできるルールはあるが、Audience Manager へのアクティブ化依存関係があるセグメントは、[Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 宛先カード経由で Audience Manager に送信できます。
 
-## 4.今日、Real-Time CDPへの移行を開始できるAudience Managerの宛先はどれですか？
+## 4. Real-Time CDP への移行を開始できる、現在 Audience Manager に設定されている宛先
 
-Adobeでは、Audience Managerでアクティブ化されたセグメントを [ユーザーベースの宛先](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en) 経由でReal-Time CDPに押し込まれる [!UICONTROL Audience Managerソースコネクタ]をクリックし、Real-Time CDPからアクティベートします。
+アドビでは、Audience Manager で[人物ベースの宛先](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)にアクティブ化されたセグメントを、[!UICONTROL Audience Manager ソースコネクタ]経由で Real-Time CDP にプッシュし、Real-Time CDP を通じてアクティブ化することを強くお勧めします。
 
-Audience Manager — で使用可能なすべてのユーザーベースの宛先 [Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [linkedIn](/help/destinations/catalog/social/linkedin.md)  — は、Real-Time CDPでも使用できます。
+Audience Manager で使用できるすべての人物ベースの宛先（[Facebook](/help/destinations/catalog/social/facebook.md)、[[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md)、[LinkedIn](/help/destinations/catalog/social/linkedin.md)）は、Real-Time CDP でも使用できます。
 
-その他のファーストパーティデータおよびメディア戦略パートナー ( [Pinterest](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md)、および [[!UICONTROL トレードデスク]](/help/destinations/catalog/advertising/tradedesk.md) が使用可能です。
+[Pinterest](/help/destinations/catalog/advertising/pinterest.md)、[Snapchat](/help/destinations/catalog/advertising/snap-inc.md)、[TikTok](/help/destinations/catalog/social/tiktok.md)、[Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md)、[[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) などの追加のファーストパーティデータおよびメディア戦略パートナーも使用できます。
 
-Real-Time CDPは現在、 [カタログ](/help/destinations/catalog/overview.md)（そのうち 20 件以上が、ファーストパーティオーディエンスのマッチングをサポートする広告またはソーシャルの宛先）。
+Real-Time CDP は現在、[カタログ](/help/destinations/catalog/overview.md)内で 60 を超える宛先をネイティブにサポートしており、そのうち 20 を超える宛先は、ファーストパーティオーディエンスマッチングをサポートする広告宛先またはソーシャル宛先です。
 
 ## 次の手順
 
-このページを読んだ後、Audience ManagerからReal-Time CDPへの移行を開始する際に、最初に検討すべき点がいくつかあります。
+このページを参照すると、Audience Manager から Real-Time CDP への進化を開始する際に、最初に検討すべき一連の考慮事項が得られます。
