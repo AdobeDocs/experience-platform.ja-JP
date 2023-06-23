@@ -1,38 +1,38 @@
 ---
 title: データセット統計の計算
-description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage(ADLS) データセットの列レベルの統計を計算する方法について説明します。
+description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage（ADLS）データセットに関する列レベルの統計を計算する方法を説明します。
 source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '785'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # データセット統計の計算
 
-次の項目に関する列レベルの統計を計算できるようになりました： [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンド データセット統計を計算する SQL コマンドは、 `ANALYZE TABLE` コマンドを使用します。 詳細は、 `ANALYZE TABLE` コマンドは、 [SQL リファレンスドキュメント](../sql/syntax.md#analyze-table).
+`COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンドを使用して、[!DNL Azure Data Lake Storage]（ADLS）データセットに関する列レベルの統計を計算できるようになりました。データセット統計を計算する SQL コマンドは、`ANALYZE TABLE` コマンドの拡張機能です。`ANALYZE TABLE` コマンドについて詳しくは、[SQL リファレンスドキュメント](../sql/syntax.md#analyze-table)を参照してください。
 
 >[!NOTE]
 >
->現在、生成された統計は、そのセッションに対してのみ有効で、セッション間で保持されません。 異なる PSQL セッションをまたいでアクセスすることはできません。
+>現在、生成された統計はそのセッションに対してのみ有効であり、セッション間では永続的ではありません。異なる PSQL セッション間でアクセスすることはできません。
 
-を使用 `SHOW STATISTICS FOR <alias_name>` コマンドを使用すると、 `ANALYZE TABLE COMPUTE STATISTICS` コマンドを使用します。 これらのコマンドを組み合わせることで、データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算できるようになりました。
+`SHOW STATISTICS FOR <alias_name>` コマンドを使用すると、`ANALYZE TABLE COMPUTE STATISTICS` コマンドで計算された統計を確認できます。これらのコマンドを組み合わせることにより、データセット全体、データセットのサブセット、すべての列、列のサブセットのいずれかに関する列の統計を計算できるようになりました。
 
 >[!IMPORTANT]
 >
->この `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` data warehouse テーブルでは、コマンドはサポートされていません。 これらの `ANALYZE TABLE` コマンドは、現在、ADLS テーブルでのみサポートされています。 詳しくは、 [テーブルの分析セクション](../sql/syntax.md#analyze-table) 」を参照してください。
+>`COMPUTE STATISTICS`、`FILTERCONTEXT`、`FOR COLUMNS` および `SHOW STATISTICS` コマンドは、データウェアハウステーブルではサポートされていません。`ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。詳細については、SQL 構文ガイドの [ANALYZE TABLE](../sql/syntax.md#analyze-table) の節を参照してください。
 
-このガイドでは、ADLS データセットの列の統計を計算できるように、クエリを構造化する方法について説明します。 これらのコマンドを使用すると、SQL クエリを使用して PSQL クライアントを通じて、セッションで生成された統計を確認できます。
+このガイドは、ADLS データセットの列の統計を計算できるようにクエリを構造化するのに役立ちます。これらのコマンドを使用すると、SQL クエリを使用して PSQL クライアントを通じてセッションで生成された統計を確認できます。
 
 ## 統計を計算 {#compute-statistics}
 
-追加の構成が `ANALYZE TABLE` 次の操作を行うためのコマンド **データセットのサブセットと特定の列の統計を計算する**. これをおこなうには、 `ANALYZE TABLE <tableName> COMPUTE STATISTICS` 形式
+`ANALYZE TABLE` コマンドに追加の構造が追加され、**データセットのサブセットおよび特定の列の統計を計算**&#x200B;できるようになりました。これを行うには、`ANALYZE TABLE <tableName> COMPUTE STATISTICS` 形式を使用する必要があります。
 
 >[!IMPORTANT]
 >
->デフォルトの動作では、 **データセット全体** および **すべての列**. すべての列の統計を計算するには、クエリフォーマットを使用します `ANALYZE TABLE COMPUTE STATISTICS`. あなたは **not** データセットのサイズは非常に大きい（ペタバイトのデータになる可能性がある）可能性があるので、ADLS データセットでこれを使用することをお勧めします。 代わりに、次を使用して analyze コマンドを実行することを常に検討してください。 `FILTERCONTEXT` および指定した列のリスト。 詳しくは、 [分析された列の制限](#limit-included-columns) および [フィルター条件の追加](#filter-condition) を参照してください。
+>デフォルトの動作では、**データセット全体**&#x200B;と&#x200B;**すべての列**&#x200B;の統計が計算されます。すべての列の統計を計算するには、クエリ形式 `ANALYZE TABLE COMPUTE STATISTICS` を使用します。データセットのサイズが非常に大きくなる可能性がある（ペタバイト単位のデータになる可能性がある）ので、ADLS データセットで使用することはお勧めし&#x200B;**ません**。代わりに、`FILTERCONTEXT` と指定された列のリストを使用して分析コマンドを実行することを常に検討する必要があります。詳しくは、[分析された列の制限](#limit-included-columns)および[フィルター条件の追加](#filter-condition)を参照してください。
 
-以下の例では、 `adc_geometric` データセットと **すべて** 列を含める必要があります。
+以下に示す例では、`adc_geometric` データセットとデータセット内の&#x200B;**すべて**&#x200B;の列の統計を計算します。
 
 ```sql
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
@@ -40,7 +40,7 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 
 >[!NOTE]
 >
->`COMPUTE STATISTICS` は、配列またはマップのデータ型をサポートしていません。 次の項目を設定できます。 `skip_stats_for_complex_datatypes` フラグを指定します。 デフォルトでは、このフラグは true に設定されています。 通知またはエラーを有効にするには、次のコマンドを使用します。 `SET skip_stats_for_complex_datatypes = false`.
+>`COMPUTE STATISTICS` は、配列またはマップのデータタイプをサポートしません。入力データフレームに配列およびマップデータタイプを含む列がある場合に、通知を受信するかエラーが発生するように、`skip_stats_for_complex_datatypes` フラグを設定できます。デフォルトでは、フラグは true に設定されています。通知またはエラーを有効にするには、コマンド `SET skip_stats_for_complex_datatypes = false` を使用します。
 
 <!-- Commented out until the <alias_name> feature is released.
 This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
@@ -49,7 +49,7 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-コンソール出力では、分析テーブル計算統計コマンドに応じて統計が表示されません。 代わりに、コンソールには次の 1 行の列が表示されます： `Statistics ID` 結果を参照する UUID（汎用固有識別子） の正常な完了時 `COMPUTE STATISTICS` クエリの場合、結果は次のように表示されます。
+コンソール出力には、分析テーブル計算統計コマンドに応じた統計は表示されません。代わりに、コンソールには、結果を参照するためのユニバーサル固有識別子（UUID）を持つ `Statistics ID` の 1 行の列が表示されます。`COMPUTE STATISTICS` クエリが正常に完了すると、結果が次のように表示されます。
 
 ```console
 | Statistics ID    | 
@@ -58,17 +58,17 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 (1 row)
 ```
 
-出力を表示するには、 `SHOW STATISTICS` コマンドを使用します。 手順： [統計の表示方法](#show-statistics) は、ドキュメントの後半で提供されます。
+出力を確認するには、`SHOW STATISTICS` コマンドを使用する必要があります。[統計を表示する方法](#show-statistics)については、ドキュメントの後半で説明します。
 
-## 含める列を制限 {#limit-included-columns}
+## 含める列の制限 {#limit-included-columns}
 
-特定のデータセット列の統計を計算するには、名前で参照します。 以下を使用： `FOR COLUMNS (<col1>, <col2>)` ターゲット固有の列の構文。 次の例では、列の統計を計算します  `commerce`, `id`、および `timestamp` （データセット用） `tableName`.
+特定のデータセット列の統計を計算するには、名前で参照します。特定の列をターゲットにするには、`FOR COLUMNS (<col1>, <col2>)` 構文を使用します。以下の例では、データセット `tableName` の列 `commerce`、`id` および `timestamp` の統計を計算します。
 
 ```sql
 ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-任意のルートレベルまたはネストされた列の統計を計算できます。 次の例は、これらの参照を示しています。
+任意のルートレベルまたはネストされた列の統計を計算できます。次の例は、これらの参照を示しています。
 
 ```sql
 ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.purchases.value, commerce.productListAdds.value);
@@ -76,15 +76,15 @@ ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.pu
 
 ## タイムスタンプフィルター条件の追加 {#filter-condition}
 
-タイムスタンプフィルター条件を追加して、列の分析に焦点を当てることができます。 これを使用して、履歴データを除外したり、特定の期間にデータ分析を絞り込んだりできます。 この `FILTERCONTEXT` コマンドは、指定したフィルター条件に基づいて、データセットのサブセットに関する統計を計算します。
+タイムスタンプフィルター条件を追加して、列の分析に焦点を当てることができます。これを使用して、履歴データを除外したり、特定の期間に焦点を当ててデータ分析を行うことができます。`FILTERCONTEXT` コマンドは、指定したフィルター条件に基づいてデータセットのサブセットに関する統計を計算します。
 
-次の例では、データセットのすべての列に関する統計が計算されます `tableName`( 列のタイムスタンプには、指定した `2023-04-01 00:00:00` および `2023-04-05 00:00:00`.
+以下の例では、データセット `tableName` のすべての列に関する統計が計算されます。列のタイムスタンプの値は、指定された範囲 `2023-04-01 00:00:00` から `2023-04-05 00:00:00` までです。
 
 ```sql
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
 ```
 
-列の制限とフィルターを組み合わせて、データセット列に対して非常に具体的な計算クエリを作成できます。 例えば、次のクエリは、列の統計を計算します `commerce`, `id`、および `timestamp` （データセット用） `tableName`( 列のタイムスタンプには、指定した `2023-04-01 00:00:00` および `2023-04-05 00:00:00`.
+列の制限とフィルターを組み合わせて、データセット列に対して非常に具体的な計算クエリを作成できます。例えば、次のクエリは、データセット `tableName` の列 `commerce`、`id` および `timestamp` に関する統計を計算します。列のタイムスタンプの値は、指定された範囲 `2023-04-01 00:00:00` から `2023-04-05 00:00:00` までです。
 
 ```sql
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
@@ -106,14 +106,14 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 
 The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
 
-## 統計を表示 {#show-statistics}
+## 統計の表示 {#show-statistics}
 
 <!-- Commented out until the <alias_name> feature is released.
 The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
 
-フィルター条件や列リストがあっても、計算では大量のデータをターゲットにすることができます。 クエリサービスは、この計算情報を保存するために、統計 ID の汎用的に一意の識別子を生成します。 この統計 ID を使用して、 `SHOW STATISTICS` コマンドを実行できます。
+フィルター条件と列リストを使用しても、計算のターゲットとなるデータは大量になる可能性があります。クエリサービスは、この計算された情報を保存するために統計 ID のユニバーサル固有識別子（UUID）を生成します。その後、この統計 ID を使用して、セッション内でいつでも `SHOW STATISTICS` コマンドで計算された統計を検索できます。
 
-生成された統計 ID と統計は、この特定のセッションでのみ有効で、異なる PSQL セッションをまたいでアクセスすることはできません。 計算された統計は、現在、永続的ではありません。 統計を表示するには、次に示すコマンドを使用します。
+統計 ID と生成された統計は、この特定のセッションに対してのみ有効であり、異なる PSQL セッション間でアクセスすることはできません。計算された統計は、現在、永続的ではありません。 統計を表示するには、次に示すコマンドを使用します。
 
 ```sql
 SHOW STATISTICS FOR <STATISTICS_ID>;
@@ -141,4 +141,4 @@ SHOW STATISTICS FOR <STATISTICS_ID>;
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、SQL クエリを使用して ADLS データセットから列レベルの統計を生成する方法について、より深く理解しています。 次を読むことをお勧めします。 [SQl 構文ガイド](../sql/syntax.md) をクリックして、Adobe Experience Platform Query Service のその他の機能を確認します。
+このドキュメントを参照することで、SQL クエリを使用して ADLS データセットから列レベルの統計を生成する方法をより深く理解できるようになります。Adobe Experience Platform クエリサービスの機能について詳しくは、[SQL 構文ガイド](../sql/syntax.md)を参照することをお勧めします。
