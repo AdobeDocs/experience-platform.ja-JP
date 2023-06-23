@@ -6,9 +6,9 @@ title: 顧客 AI におけるデータガバナンス
 description: Adobe Experience Platform には、ビジネスプラクティス、法的義務および開発プロセスに準拠するために、収集されたエクスペリエンスデータを確信を持って制御できるサービスやツールがいくつか用意されています。
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Platform で使用されるデータセットに関して作成されたデー�
 
 ## 同意ポリシー {#consent-policy}
 
-顧客 AI は、お客様の同意設定に従います。 一度 [同意ポリシーをセットアップして有効にします](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ja#consent-policy)に設定されている場合、顧客 AI は、お客様から収集された同意データに従います。 モデルの後続の実行で、モデルのスコアリングに同意されたデータのみが使用されます。 新しいスコアは、古いスコアに代わり、セグメント化で使用できます。 この機能は、現在、HealthCare Shield のお客様と、Privacy and Security shield のお客様のみが利用できます。
+顧客 AI は、ユーザーの同意環境設定に従います。[同意ポリシーを設定して有効にする](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ja#consent-policy)と、顧客 AI はユーザーから収集した同意データに従います。モデルの後続の実行で、モデルのスコアリングに同意されたデータのみが使用されます。新しいスコアは、古いスコアを置き換わり、セグメント化に使用できます。この機能は現在、HealthCare Shield の顧客と Privacy and Security Shield の顧客のみが使用できます。
 
 この機能について詳しくは、以下を参照してください。
 
