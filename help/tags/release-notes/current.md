@@ -3,9 +3,9 @@ title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '841'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->今後のタグおよびイベント転送のリリースノートの移行は、このページでは提供されなくなります。 最新の [Adobe Experience Platformリリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) 詳細なタグとイベント転送の更新については、を参照してください。
+>今後、このページではタグとイベント転送のリリースノートは提供されなくなります。タグとイベント転送の更新について詳しくは、最新の [Adobe Experience Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja#data-collection)を参照してください。
 
 ## 2023年4月26日（PT）
 
