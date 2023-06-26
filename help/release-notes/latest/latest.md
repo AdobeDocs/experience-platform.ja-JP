@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年6月 のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
+source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 36%
+source-wordcount: '1538'
+ht-degree: 37%
 
 ---
 
@@ -41,7 +41,6 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 拡張機能 | [!DNL Google Cloud Platform] イベント転送拡張機能 | この [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) イベント転送拡張機能を使用すると、イベントデータをGoogleに転送し、 [!DNL Google Pub/Sub]. |
 | 拡張機能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 拡張機能 | この [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) イベント転送拡張機能を使用すると、新しい [!DNL Google Analytics 4 (ga4)] 標準。 |
 | 秘密鍵 | OAuth 2 JWT 秘密鍵 | この [OAuth 2 JWT 秘密鍵](../../tags/ui/event-forwarding/secrets.md) では、Adobeと [!DNL Google] イベント転送でのサーバーとサーバーのやり取りをサポートするサービストークン。 |
-| タグとイベントの転送 | ユーザー属性 | ユーザーアトリビューションは、 [タグ](../../tags/home.md) および [イベント転送](../../tags/ui/event-forwarding/overview.md) UI<br><br>データには、誰が何を変更し、何時に変更を加えたかが含まれます。 このデータは、次の画面のタグとイベント転送 UI に表示されます。<br><ul><li> プロパティの概要</li><li> インストール済みの拡張機能</li><li>ルールの比較と確認</li><li>データ要素の比較レビュー</li><li>拡張機能の比較レビュー</li><li>ライブラリリソースの変更</li><li>ライブラリの最終ビルドと公開</li></ul> |
 
 {style="table-layout:auto"}
 
