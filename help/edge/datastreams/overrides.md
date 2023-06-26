@@ -2,9 +2,9 @@
 title: データストリームの設定の上書き
 description: Web SDK を使用して、データストリームの上書きを設定し、データストリームの上書きをアクティブにする方法について説明します。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '971'
 ht-degree: 4%
 
 ---
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| パラメーター | 説明 |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | 単一のリクエストを `configure` コマンドを使用します。 |
+
 ### を介して設定の上書きを送信する `configure` command {#send-configure}
 
 次の例は、設定の上書きが `configure` コマンドを使用します。
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
