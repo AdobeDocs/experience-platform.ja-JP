@@ -3,10 +3,10 @@ title: （ベータ版）クラウドストレージ宛先へのデータセッ�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 94%
+source-wordcount: '1425'
+ht-degree: 88%
 
 ---
 
@@ -16,8 +16,7 @@ ht-degree: 94%
 >
 >* データセットの書き出し機能は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 >* このベータ版機能では、Real-time Customer Data Platform の[製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義されている第 1 世代データの書き出しをサポートしています。
->* この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、アドビ担当者にお問い合わせください。
-
+>* この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、Adobe担当者にお問い合わせください。
 
 この記事では、エクスポートに必要なワークフローについて説明します [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
 
@@ -90,7 +89,7 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 >title="データセットのファイル書き出しオプション"
 >abstract="「**増分ファイルの書き出し**」を選択すると、前回の書き出し以降にデータセットに追加されたデータのみを書き出すことができます。<br> 最初の増分ファイル書き出しには、データセット内のすべてのデータが含まれ、バックフィルとして機能します。 以後の増分ファイルには、最初の書き出し以降にデータセットに追加されたデータのみが含まれます。"
 
-**[!UICONTROL スケジュール設定]**&#x200B;ステップでは、データセット書き出しの開始日と書き出しケイデンスを設定できます。
+内 **[!UICONTROL スケジュール]** 手順では、データセットのエクスポートの開始日とエクスポートケイデンスを設定できます。
 
 「**[!UICONTROL 増分ファイルの書き出し]**」オプションが自動的に選択されます。 これにより、書き出しがトリガーされます。最初のファイルがデータセットの完全なスナップショットになり、それ以降のファイルは前回の書き出し以降のデータセットへの増分追加になります。
 
@@ -135,11 +134,22 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 これらのファイルがストレージの場所に存在すれば、書き出しは成功しています。書き出されたファイルの構造を理解するには、サンプルの [.parquet ファイル](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet)または [.json ファイル](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)をダウンロードできます。
 
+#### 圧縮データセットファイル {#compressed-dataset-files}
+
+内 [宛先ワークフローに接続](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)次に示すように、書き出したデータセットファイルを選択して圧縮できます。
+
+![宛先に接続してデータセットを書き出す際のファイルタイプと圧縮の選択。](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+圧縮時のファイル形式の違いに注意してください。
+
+* 圧縮 JSON ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `json.gz`
+* 圧縮 Parquet ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `gz.parquet`
+
 ## 宛先からのデータセットの削除 {#remove-dataset}
 
 既存のデータフローからデータセットを削除するには、次の手順に従います。
 
-1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。上部のヘッダーから「**[!UICONTROL 参照]**」を選択して、既存の宛先データフローを表示します。
+1. [Experience Platform UI](https://experience.adobe.com/platform/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。上部のヘッダーから「**[!UICONTROL 参照]**」を選択して、既存の宛先データフローを表示します。
 
    ![宛先接続が表示され残りの部分がぼかされた宛先参照ビュー](../assets/ui/export-datasets/browse-dataset-connections.png)
 

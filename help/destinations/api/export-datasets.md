@@ -4,10 +4,10 @@ title: （ベータ版）フローサービス API を使用したデータセ�
 description: フローサービス API を使用してデータセットを書き出し、宛先を選択する方法について説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
-ht-degree: 17%
+source-wordcount: '3524'
+ht-degree: 19%
 
 ---
 
@@ -17,8 +17,7 @@ ht-degree: 17%
 >
 >* データセットの書き出し機能は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 >* このベータ版機能では、Real-time Customer Data Platform の[製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義されている第 1 世代データの書き出しをサポートしています。
->* この機能は、Real-Time CDP Prime または Ultimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
-
+>* この機能は、Real-Time CDP Prime または Ultimate パッケージを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
 この記事では、 [!DNL Flow Service API] エクスポート [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage].
 
@@ -39,7 +38,7 @@ ht-degree: 17%
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## はじめに {#get-started}
+## Destination SDK の {#get-started}
 
 ![概要 — 宛先の作成手順とデータセットの書き出し手順](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
@@ -142,7 +141,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -210,7 +209,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -547,7 +546,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 表示中 [!DNL auth spec]
 
@@ -644,7 +643,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 表示中 [!DNL auth spec]
 
@@ -858,7 +857,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -961,7 +960,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -1235,7 +1234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
@@ -1376,7 +1375,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
@@ -1641,7 +1640,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -1747,7 +1746,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -1970,7 +1969,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -2076,7 +2075,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 次の項目に関する情報を検索できます。 [データフロー実行 API から返される様々なパラメーター](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) （ API リファレンスドキュメント）を参照してください。
+
+## データセットの正常な書き出しの確認 {#verify}
+
+データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。指定した日時に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に保存されます [データフローの作成](#create-dataflow).
+
+Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 書き出しのたびに、次のパターンに従って新しいフォルダーが作成されます。
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+デフォルトのファイル名はランダムに生成され、書き出されたファイルの名前は必ず一意になります。
+
+### サンプルデータセットファイル {#sample-files}
+
+これらのファイルがストレージの場所に存在すれば、書き出しは成功しています。書き出されたファイルの構造を理解するには、サンプルの [.parquet ファイル](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet)または [.json ファイル](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)をダウンロードできます。
+
+#### 圧縮データセットファイル {#compressed-dataset-files}
+
+次の手順で [ターゲット接続の作成](#create-target-connection)に含めると、書き出したデータセットファイルを圧縮して選択できます。
+
+圧縮時のファイル形式の違いに注意してください。
+
+* 圧縮 JSON ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `json.gz`
+* 圧縮 Parquet ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `gz.parquet`
 
 ## API エラー処理 {#api-error-handling}
 
