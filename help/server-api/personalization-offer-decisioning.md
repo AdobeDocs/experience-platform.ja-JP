@@ -2,10 +2,10 @@
 title: offer decisioning
 description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 3%
+source-wordcount: '580'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 3%
 Edge Network Server API は、 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) を web チャネルに追加します。
 
 [!DNL Offer Decisioning] は、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化、配信するための、非視覚的なインターフェイスをサポートしています。
+
+## 前提条件 {#prerequisites}
+
+パーソナライゼーション経由 [!DNL Offer Decisioning] には、次のアクセス権が必要です： [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) 統合を設定する前に、
 
 ## データストリームの設定 {#configure-your-datastream}
 
