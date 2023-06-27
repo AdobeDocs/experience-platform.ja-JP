@@ -4,7 +4,7 @@ title: プレイブックインスタンスの作成、共有、再利用
 description: マーケティングのユースケースを達成するために、プレイブックインスタンスを作成、共有、再利用する方法を学びます。
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '724'
 ht-degree: 100%
 
