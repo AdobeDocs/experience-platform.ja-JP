@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 99%
+source-wordcount: '1005'
+ht-degree: 98%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 99%
    * [下位互換性規格](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
    * [概要](./api/overview.md)
-   * [はじめに](./api/getting-started.md)
+   * [Reactor API の認証とアクセス](./api/getting-started.md)
    * エンドポイント {#endpoints}
       * [会社](./api/endpoints/companies.md)
       * [プロパティ](./api/endpoints/properties.md)

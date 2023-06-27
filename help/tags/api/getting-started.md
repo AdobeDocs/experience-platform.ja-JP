@@ -1,17 +1,17 @@
 ---
-title: Reactor API の概要
+title: Reactor API の認証とアクセス
 description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 95%
+source-wordcount: '921'
+ht-degree: 53%
 
 ---
 
-# Reactor API の概要
+# Reactor API の認証とアクセス
 
-[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) を使用するには、各リクエストに次の認証ヘッダーを含める必要があります。
+を使用するには、 [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/) タグ拡張機能を作成および管理するには、各リクエストに次の認証ヘッダーを含める必要があります。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -19,11 +19,11 @@ ht-degree: 95%
 
 このガイドでは、Adobe Developer Console を使用してこれらの各ヘッダーの値を収集し、Reactor API の呼び出しを開始する方法について説明します。
 
-## Adobe Experience Platform への開発者のアクセス
+## Adobe Experience Platform への開発者のアクセス {#gain-developer-access}
 
-Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)の最初の手順に従ってください。「ユーザーアクセスを取得」手順が完了したら、このチュートリアルに戻り、Reactor API に固有の資格情報を生成します。
+Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](/help/landing/api-authentication.md)の最初の手順に従ってください。完了したら、 [ユーザーアクセスの取得](/help/landing/api-authentication.md#gain-user-access) 手順を実行するには、このチュートリアルに戻り、Reactor API に固有の資格情報を生成します。
 
-## アクセス認証情報の生成
+## アクセス認証情報の生成 {#generate-access-credentials}
 
 Adobe Developer Console を使用して、次の 3 つのアクセス認証情報を生成する必要があります。
 
@@ -35,7 +35,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス認証情�
 
 これらの値を生成する手順については、以下で詳しく説明します。
 
-### 1 回限りのセットアップ
+### 1 回限りのセットアップ {#one-time-setup}
 
 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Developer Console のドキュメントにある[空のプロジェクトを作成](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)に関するチュートリアルで説明されている手順に従います。
 
@@ -43,128 +43,83 @@ Adobe Developer Console を使用して、次の 3 つのアクセス認証情�
 
 ![](../images/api/getting-started/add-api-button.png)
 
-**API の追加**&#x200B;画面が表示されます。 「**次へ**」を選択する前に、使用可能な API のリストから「**Experience Platform Reactor API**」を選択します。
+**API の追加**&#x200B;画面が表示されます。 選択 **Experience Platform LaunchAPI** を選択する前に、使用可能な API のリストから **次へ**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-次の画面では、JSON Web Token（JWT）認証情報の作成用に、新しいキーペアを生成するか、自身の公開鍵をアップロードするかを選択します。このチュートリアルでは、「**キーペアを生成**」オプションを選択し、右下隅で「**キーペアを生成**」を選択します。
+次に、アクセストークンを生成する認証タイプを選択し、Experience PlatformAPI にアクセスします。
 
-![](../images/api/getting-started/create-jwt.png)
-
-次の画面では、キーペアが正常に生成されたことを確認し、公開証明書と秘密キーを含む圧縮フォルダーが自動的にマシンにダウンロードされます。この秘密キーは、後の手順でアクセストークンを生成するために必要です。
+>[!IMPORTANT]
+>
+>を選択します。 **[!UICONTROL OAuth サーバー間]** メソッドのみを使用します。これは、今後の移行がサポートされる唯一のメソッドです。 この **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](/help/landing/api-authentication.md#jwt) （「 Platform API 認証に関するチュートリアル」）を参照してください。
 
 「**次へ**」をクリックして続行します。
 
-![](../images/api/getting-started/keypair-generated.png)
+![「 OAuth Server-to-Server 」認証方式を選択します。](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
 次の画面では、API 統合に関連付ける 1 つ以上の製品プロファイルを選択します。
 
 >[!NOTE]
 >
->製品プロファイルは、Adobe Admin Console を通じて組織によって管理され、詳細な機能に対する特定の権限セットが含まれています。製品プロファイルとその権限は、組織内の管理者権限を持つユーザーのみが管理できます。API 用に選択する製品プロファイルが不明な場合は、管理者に問い合わせてください。
+製品プロファイルは、Adobe Admin Console を通じて組織によって管理され、詳細な機能に対する特定の権限セットが含まれています。製品プロファイルとその権限は、組織内の管理者権限を持つユーザーのみが管理できます。API 用に選択する製品プロファイルが不明な場合は、管理者に問い合わせてください。
 
 リストから目的の製品プロファイルを選択し、「**設定済み API を保存**」を選択して API の登録を完了します。
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-API をプロジェクトに追加すると、プロジェクトページが Experience Platform Reactor API のページに再び表示されます。ここから、「**サービスアカウント（JWT）**」セクションまでスクロールします。このセクションには、Reactor API へのすべての呼び出しで必要な次のアクセス資格情報が表示されます。
+###  資格情報の収集 {#gather-credentials}
 
-* **クライアント ID**：クライアント ID は必須の `{API_KEY}` で、`x-api-key` ヘッダーで指定する必要があります。
-* **組織 ID**：組織 ID は、`x-gw-ims-org-id` ヘッダーで使用する必要がある `{ORG_ID}` 値です。
+API がプロジェクトに追加されると、 **[!UICONTROL Experience PlatformAPI]** プロジェクトのページには、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 
-![](../images/api/getting-started/access-creds.png)
+* `{API_KEY}` ([!UICONTROL クライアント ID])
+* `{ORG_ID}` ([!UICONTROL 組織 ID])
 
-### 各セッションの認証
+![開発者コンソールで API を追加した後の統合情報。](/help/tags/images/api/getting-started/api-integration-information.png)
 
-これで、`{API_KEY}` と `{ORG_ID}` の値が揃ったので、最後の手順として `{ACCESS_TOKEN}` の値を生成します。
+### アクセストークンの生成 {#generate-access-token}
 
->[!NOTE]
+次の手順では、 `{ACCESS_TOKEN}` Platform API 呼び出しで使用する資格情報。 の値とは異なる `{API_KEY}` および `{ORG_ID}`に設定する場合、Platform API を使用し続けるには、24 時間ごとに新しいトークンを生成する必要があります。
+
+>[!TIP]
 >
->これらのトークンは、24 時間後に期限切れになります。この統合をアプリケーションに使用している場合は、アプリケーション内からプログラムでベアラートークンを取得することをお勧めします。
+これらのトークンは、24 時間後に期限切れになります。この統合をアプリケーションに使用している場合は、アプリケーション内からプログラムでベアラートークンを取得することをお勧めします。
 
 使用例に応じて、アクセストークンを生成するための 2 つのオプションがあります。
 
 * [トークンの手動生成](#manual)
-* [プログラムによるトークンの生成](#program)
+* [トークン生成の自動化](#auto-token)
 
 #### アクセストークンの手動生成 {#manual}
 
-以前にダウンロードした秘密キーをテキストエディターまたはブラウザーで開き、その内容をコピーします。次に Developer Console に戻り、プロジェクトの Reactor API ページの「**アクセストークンを生成**」セクションに秘密キーを貼り付けて、「**トークンを生成**」を選択します。
+新しい `{ACCESS_TOKEN}`に移動します。 **[!UICONTROL 資格情報]** > **[!UICONTROL OAuth サーバー間]** を選択し、 **[!UICONTROL アクセストークンを生成]**、以下に示すように。
 
-![](../images/api/getting-started/paste-private-key.png)
+![開発者コンソールの UI で、およびアクセストークンが生成された方法を示す画面記録。](/help/tags/images/api/getting-started/generate-access-token.gif)
 
-新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが表示されます。この値は、必要な `Authorization` ヘッダーに使用され、`Bearer {ACCESS_TOKEN}` の形式で指定する必要があります。
+新しいアクセストークンが生成され、トークンをクリップボードにコピーするためのボタンが表示されます。この値は、必要な Authorization ヘッダーに使用され、の形式で指定する必要があります `Bearer {ACCESS_TOKEN}`.
 
-![](../images/api/getting-started/token-generated.png)
+#### トークン生成の自動化 {#auto-token}
 
-#### プログラムによるアクセストークンの生成 {#program}
+また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、 [Postmanを使用した API 呼び出しの認証とテスト](/help/landing/api-authentication.md#use-postman) (Experience PlatformAPI 認証ガイド ) を参照してください。
 
-アプリケーションで 統合を使用している場合、API リクエストを通じてプログラムによってアクセストークンを生成できます。これを実現するには、次の値を取得する必要があります。
+## API 資格情報のテスト {#test-api-credentials}
 
-* クライアント ID (`{API_KEY}`)
-* クライアントシークレット（`{SECRET}`）
-* JSON Web トークン（`{JWT}`）
-
-クライアント ID とシークレットは、[前の手順](#one-time-setup)で説明したように、プロジェクトのメインページから取得できます。
-
-![](../images/api/getting-started/auto-access-creds.png)
-
-JWT 認証情報を取得するには、左側のナビゲーションで「**サービスアカウント（JWT）**」に移動し、「**JWT を生成**」タブを選択します。 このページの「**カスタム JWT を生成**」で、秘密鍵の内容を指定されたテキストボックスに貼り付けて、「**トークンを生成**」を選択します。
-
-![](../images/api/getting-started/generate-jwt.png)
-
-生成された JWT は、処理が完了すると以下に表示されます。また、必要に応じてトークンのテストに使用できるサンプルの cURL コマンドも含まれます。 「**コピー**」ボタンを使用して、トークンをクリップボードにコピーします。
-
-![](../images/api/getting-started/jwt-generated.png)
-
-認証情報を収集したら、以下の API 呼び出しをアプリケーションに統合して、プログラムでアクセストークンを生成できます。
-
-**リクエスト**
-
-リクエストは、次に示す認証資格情報を提供して、`multipart/form-data` ペイロードを送信する必要があります。
-
-```shell
-curl -X POST \
-  https://ims-na1.adobelogin.com/ims/exchange/jwt/ \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-**応答**
-
-応答が成功すると、新しいアクセストークンと、有効期限が切れるまでの残りの秒数が返されます。
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399999
-}
-```
-
-| プロパティ | 説明 |
-| :-- | :-- |
-| `access_token` | 新しく生成されたアクセストークンの値。 この値は、必要な `Authorization` ヘッダーに使用され、`Bearer {ACCESS_TOKEN}` の形式で指定する必要があります。 |
-| `expires_in` | トークンの有効期限が切れるまでの残り時間（ミリ秒）。 トークンの有効期限が切れたら、新しいトークンを生成する必要があります。 |
-
-{style="table-layout:auto"}
-
-## 次の手順
-
-このチュートリアルの手順に従うことで、`{ORG_ID}`、`{API_KEY}`、および `{ACCESS_TOKEN}` に有効な値を指定できます。 これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
+このチュートリアルの手順に従うことで、の有効な値を取得できます。 `{ORG_ID}`, `{API_KEY}`、および `{ACCESS_TOKEN}`. これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
 
 まず、[すべての会社をリスト](./endpoints/companies.md#list)する API 呼び出しを試みます。
 
 >[!NOTE]
 >
->組織に会社が存在しない場合、応答は HTTP ステータス 404（未検出）になります。403（禁止）エラーが発生しない限り、アクセス資格情報は有効となり、機能します。
+組織に会社が存在しない場合、応答は HTTP ステータス 404（未検出）になります。403（禁止）エラーが発生しない限り、アクセス資格情報は有効となり、機能します。
 
 アクセス資格情報が機能していることを確認したら、引き続き他の API リファレンスドキュメントを参照して、API の多くの機能を確認します。
 
-## その他のリソース
+## API 呼び出し例の読み取り {#read-sample-api-calls}
 
-JWT ライブラリおよび SDK：[https://jwt.io/](https://jwt.io/)
+各エンドポイントガイドには、API 呼び出しの例が用意されており、リクエストの形式を設定する方法を示しています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、 Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
 
-Postman API の開発：[https://www.postman.com/](https://www.postman.com/)
+## 次の手順 {#next-steps}
+
+これで、使用するヘッダーを理解できたので、Reactor API への呼び出しを開始する準備が整いました。 開始するには、次のいずれかのエンドポイントガイドを選択します。
+
+* [Reactor API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [Reactor API ガイドの概要](/help/tags/api/overview.md)
