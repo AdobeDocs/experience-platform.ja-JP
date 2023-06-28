@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能のデータ要素タイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なデータ要素タイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ XDM オブジェクトデータ要素を使用すると、データの XDM へ�
 >
 >収集したい情報のみを入力します。 データがソリューションに送信される際には、入力されなかった項目はすべて省略されます。
 
-## （ベータ版）変数 {#variable}
+## Variable {#variable}
 
 >[!IMPORTANT]
 >

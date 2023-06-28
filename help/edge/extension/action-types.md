@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 ページ上のイベント結合 ID をリセットする場合は、このアクションで実行できます。 ID をリセットするには、リセットする結合 ID を選択し、必要に応じてアクションを実行します。
 
-## （ベータ版）変数を更新 {#update-variable}
+## 変数を更新 {#update-variable}
 
 >[!IMPORTANT]
 >
