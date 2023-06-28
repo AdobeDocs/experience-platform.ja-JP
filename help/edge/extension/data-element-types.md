@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能のデータ要素タイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なデータ要素タイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 6%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # データ要素タイプ
 
 設定後、 [アクションタイプ](action-types.md) 内 [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md)を設定する場合は、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素のタイプについて説明します。
-
-## イベント結合 ID {#event-merge-id}
-
-このデータ要素を使用すると、イベント結合 ID が提供されます。このデータ要素には設定は必要ありません。提供されたデータ要素は、訪問者がページを離れるか、 **[!UICONTROL イベント結合 ID をリセット]** アクションタイプが使用されます。
 
 ## ID マップ {#identity-map}
 

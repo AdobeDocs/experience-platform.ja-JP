@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '778'
 ht-degree: 4%
 
 ---
@@ -34,10 +34,6 @@ ht-degree: 4%
 ユーザーから同意を得たら、「同意の設定」アクションタイプを使用して、この同意をAdobe Experience Platform Web SDK に伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。詳しくは、 [顧客の同意設定のサポート](../consent/supporting-consent.md). Adobeバージョン 2.0 を使用する場合、データ要素の値のみがサポートされます。 同意オブジェクトに解決するデータ要素を作成する必要があります。
 
 このアクションには、ID マップを含めるためのオプションのフィールドも用意されています。これにより、同意を受け取った後に ID を同期することができます。 同期は、同意の呼び出しが最初に実行される可能性が高いので、同意が「保留」または「送信」として設定されている場合に役立ちます。
-
-## イベント結合 ID をリセット {#reset-event-merge-id}
-
-ページ上のイベント結合 ID をリセットする場合は、このアクションで実行できます。 ID をリセットするには、リセットする結合 ID を選択し、必要に応じてアクションを実行します。
 
 ## 変数を更新 {#update-variable}
 
