@@ -4,10 +4,10 @@ title: API を使用したデータセットのプロファイル更新の有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 95%
+source-wordcount: '1069'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->アップサートワークフローは、バッチ取り込みに対してのみ機能します。 ストリーミング取り込みはサポート&#x200B;**対象外**&#x200B;です。
+>このチュートリアルで説明するワークフローは、バッチ取り込みでのみ機能します。 ストリーミング取り込みのアップサートについては、 [データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する](../../data-prep/upserts.md).
 
 ## はじめに
 
