@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -57,4 +57,4 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] 個々の�
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。この [!DNL Experience Platform] 拡張機能では、でフォーマットされたビーコンを送信するアクションが提供されます。 [!DNL Experience Data Model] (XDM) を使用して [!DNL Experience Platform]. 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/sdk/overview.md)に関するドキュメントを参照してください。
+Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。この [!DNL Experience Platform] 拡張機能では、でフォーマットされたビーコンを送信するアクションが提供されます。 [!DNL Experience Data Model] (XDM) を使用して [!DNL Experience Platform]. 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/web-sdk/overview.md)に関するドキュメントを参照してください。

@@ -3,7 +3,7 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 87%
@@ -18,7 +18,7 @@ ht-degree: 87%
 
 Adobe Experience Platform でイベント転送を使用するには、次の 3 つのオプションの 1 つ以上を使用して、データを Adobe Experience Platform Edge ネットワークに送信する必要があります。
 
-* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
 * [サーバー間 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=ja)
 
@@ -100,7 +100,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 プロパティを **[!UICONTROL タグ]** workspace に移動して、に移動します。 **[!UICONTROL 拡張機能]** をクリックし、カタログからExperience PlatformWeb SDK 拡張機能を選択して、設定およびインストールします。
 
-詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/client/sdk/overview.md) 設定オプションの詳細については、を参照してください。
+詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/client/web-sdk/overview.md) 設定オプションの詳細については、を参照してください。
 
 ## Platform Web SDK にデータを送信するタグルールを作成する
 

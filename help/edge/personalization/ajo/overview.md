@@ -3,7 +3,7 @@ title: Platform Web SDK でのAdobe Journey Optimizerの使用
 description: Adobe Journey Optimizerを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: ajo;ajoweb;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
    })
    ```
 
-3. 必要に応じて、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDK は現在の Web ページの Web サーフェスを自動的に生成し、Edge Network へのリクエストに含めます。 必要に応じて、リクエストに追加のサーフェスを含めるには、 `personalization.surfaces` オプション `sendEvent` コマンド、または対応する **[!UICONTROL サーフェス]** [[!UICONTROL イベントを送信] アクション](../../extension/action-types.md#send-event) Web SDK 拡張機能の設定。
+3. 必要に応じて、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDK は現在の Web ページの Web サーフェスを自動的に生成し、Edge Network へのリクエストに含めます。 必要に応じて、リクエストに追加のサーフェスを含めるには、 `personalization.surfaces` オプション `sendEvent` コマンド、または対応する **[!UICONTROL サーフェス]** [[!UICONTROL イベントを送信] アクション](../../../tags/extensions/client/web-sdk/action-types.md#send-event) Web SDK 拡張機能の設定。
 
    ```javascript
    alloy("sendEvent", {

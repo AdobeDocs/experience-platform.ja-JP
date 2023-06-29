@@ -2,7 +2,7 @@
 title: タグ拡張機能リファレンス
 description: Adobe Experience Platformのタグ拡張機能に関するドキュメントを検索します。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 86%
@@ -39,7 +39,7 @@ ht-degree: 86%
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID サービス](./id-service/overview.md)
 * [Adobe Experience Platform デモ](./platform-demo/overview.md)
-* [Adobe Experience Platform Web SDK](./sdk/overview.md)
+* [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Media Analytics for Audio and Video](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ ht-degree: 86%
 * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Common Analytics Plugins](./plugins/overview.md)
-* [Common Web SDK Plugins](./web-sdk-plugins/overview.md)
+* [Common Web SDK Plugins](./web-sdk/web-sdk-plugins.md)
 * [連結](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)

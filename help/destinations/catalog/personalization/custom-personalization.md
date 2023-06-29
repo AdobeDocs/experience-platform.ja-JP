@@ -3,7 +3,7 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platform からセグメント情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。この宛先は、ユーザープロファイルセグメントのメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 77%
@@ -87,7 +87,7 @@ ht-degree: 77%
 
 ## 書き出したデータ {#exported-data}
 
-[Adobe Experience Platform のタグ](../../../tags/home.md)を使用して Experience Platform Web SDK をデプロイする場合、[イベント完了の送信](../../../edge/extension/event-types.md)機能を使用すると、カスタムコードアクションには `event.destinations` 変数が追加され、書き出したデータを確認できます。
+[Adobe Experience Platform のタグ](../../../tags/home.md)を使用して Experience Platform Web SDK をデプロイする場合、[イベント完了の送信](../../../tags/extensions/client/web-sdk/event-types.md)機能を使用すると、カスタムコードアクションには `event.destinations` 変数が追加され、書き出したデータを確認できます。
 
 `event.destinations` 変数のサンプル値は次のようになります。
 

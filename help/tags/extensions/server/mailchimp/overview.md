@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)を参照してください。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja)を参照してください。
 
 Mailchimp [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能は、Mailchimp マーケティングキャンペーン、ジャーニー、トランザクション用のメールをトリガー化できるイベントを Mailchimp マーケティング API に送信します。
 
@@ -103,7 +103,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 ## データ収集
 
-この拡張機能を [ルール](../../../ui/managing-resources/rules.md)の場合、各イベントと共に拡張機能が Mailchimp に送信するデータ値は複数あります。 一般的な実装の場合、 [Adobe Experience Platform Web SDK 拡張機能](../../client/sdk/overview.md) そのデータをに送信する [!DNL Platform Edge Network] 拡張機能でイベント転送プロパティに使用するためのもの。
+この拡張機能を [ルール](../../../ui/managing-resources/rules.md)の場合、各イベントと共に拡張機能が Mailchimp に送信するデータ値は複数あります。 一般的な実装の場合、 [Adobe Experience Platform Web SDK 拡張機能](../../client/web-sdk/overview.md) そのデータをに送信する [!DNL Platform Edge Network] 拡張機能でイベント転送プロパティに使用するためのもの。
 
 この拡張機能で必要なデータは、XDM データまたは非 XDM データとして Web SDK から送信できます。 詳しくは、ドキュメントを参照してください。 [XDM データの送信](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
@@ -122,9 +122,9 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 | `email` | `arc.event.xdm._tenant.emailId`<br /> または<br /> `arc.event.data._tenant.emailId` | 文字列 | 電子メールを受信するアドレス | **○** | Mailchimp オーディエンスに存在する必要があります |
 | `listId` | `arc.event.xdm._tenant.listId`<br /> または<br /> `arc.event.data._tenant.listid` | 文字列 | オーディエンス ID | **○** | 既存のオーディエンス ID と一致する必要があります |
 | `name` | `arc.event.xdm._tenant.name`<br /> または<br /> `arc.event.data._tenant.name` | 文字列 | イベント名 | **○** | 2～30 文字 |
-| `properties` | `arc.event.xdm._tenant.properties`<br /> または<br /> `arc.event.data._tenant.properties` | オブジェクト | JSON 形式のプロパティのオプションのリストとイベントの詳細 | いいえ |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> または<br /> `arc.event.data._tenant.isSyncing` | ブール値 | で作成されたイベント `is_syncing` に設定 `true` **次の条件を満たさない** トリガー自動化 | いいえ |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> または `arc.event.data._tenant.occuredAt` | 文字列 | イベントが発生した時点の ISO 8601 タイムスタンプ。 | いいえ |  |
+| `properties` | `arc.event.xdm._tenant.properties`<br /> または<br /> `arc.event.data._tenant.properties` | オブジェクト | JSON 形式のプロパティのオプションのリストとイベントの詳細 | × |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> または<br /> `arc.event.data._tenant.isSyncing` | ブール値 | で作成されたイベント `is_syncing` に設定 `true` **次の条件を満たさない** トリガー自動化 | × |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> または `arc.event.data._tenant.occuredAt` | 文字列 | イベントが発生した時点の ISO 8601 タイムスタンプ。 | × |  |
 
 {style="table-layout:auto"}
 

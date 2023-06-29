@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 98%
+source-wordcount: '1027'
+ht-degree: 97%
 
 ---
 
@@ -96,8 +96,16 @@ ht-degree: 98%
          * [リリースノート](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform デモ {#platform-demo}
          * [概要](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#sdk}
-         * [概要](./extensions/client/sdk/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [概要](./extensions/client/web-sdk/overview.md)
+         * [Web SDK タグ拡張機能の設定](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [イベントタイプ](./extensions/client/web-sdk/event-types.md)
+         * [アクションタイプ](./extensions/client/web-sdk/action-types.md)
+         * [データ要素タイプ](./extensions/client/web-sdk/data-element-types.md)
+         * [ECID へのアクセス](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK プラグイン](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Web SDK 拡張機能リリースノート](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Web SDK プラグインリリースノート](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概要](./extensions/client/asset-insights/overview.md)
          * [リリースノート](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 98%
       * Common Analytics Plugins {#plugins}
          * [概要](./extensions/client/plugins/overview.md)
          * [リリースノート](./extensions/client/plugins/release-notes.md)
-      * Common Web SDK Plugins {#web-sdk-plugins}
-         * [概要](./extensions/client/web-sdk-plugins/overview.md)
-         * [リリースノート](./extensions/client/web-sdk-plugins/release-notes.md)
       * [連結](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)

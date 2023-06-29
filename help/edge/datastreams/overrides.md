@@ -2,7 +2,7 @@
 title: データストリームの設定の上書き
 description: Web SDK を使用して、データストリームの上書きを設定し、データストリームの上書きをアクティブにする方法について説明します。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
 1. 最初に、[データストリーム設定ページ](configure.md)でデータストリーム設定の上書きを定義する必要があります。
-2. 次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](../extension/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。
+2. 次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
@@ -91,7 +91,7 @@ Experience Platformイベントデータセットのデータストリームの�
 
 >[!NOTE]
 >
->Web SDK コマンドを使用して設定のオーバーライドを送信する代わりに、設定のオーバーライドを Web SDK に追加することもできます [タグ拡張](../extension/web-sdk-extension-configuration.md).
+>Web SDK コマンドを使用して設定のオーバーライドを送信する代わりに、設定のオーバーライドを Web SDK に追加することもできます [タグ拡張](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 後 [データストリームの上書きの設定](#configure-overrides) データ収集 UI で、Web SDK を使用して、上書きを Edge ネットワークに送信できるようになりました。
 

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform デモ拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Platform デモ拡張機能について説明します。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->この拡張機能は廃止され、[Adobe Experience Platform Web SDK](../sdk/overview.md) に置き換わりました。
+>この拡張機能は廃止され、[Adobe Experience Platform Web SDK](../web-sdk/overview.md) に置き換わりました。
 
 この拡張機能の内容は、新しい拡張機能に移植されています。現在の機能の簡単な比較を示します。
 
@@ -26,11 +26,11 @@ ht-degree: 100%
 | カスタム顧客 ID のサポート | カスタム顧客 ID のサポート |
 | XDM 用のクライアント側マッピング UI | ECID で構築（visitor.js は不要） |
 | ストリーミング接続の作成 | オプトインのサポート |
-|  | データ要素としての XDM のサポート |
-|  | ファーストパーティドメインのサポート |
-|  | 組み込みのデバッグツール |
-|  | ブラウザーコンテキストを自動的に収集 |
-|  | 完全なオープンソース |
+| | データ要素としての XDM のサポート |
+| | ファーストパーティドメインのサポート |
+| | 組み込みのデバッグツール |
+| | ブラウザーコンテキストを自動的に収集 |
+| | 完全なオープンソース |
 
 
 ## Adobe Experience Platform 拡張機能の設定
