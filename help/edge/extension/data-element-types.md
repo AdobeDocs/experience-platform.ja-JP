@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能のデータ要素タイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なデータ要素タイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '568'
 ht-degree: 6%
 
 ---
@@ -45,10 +45,6 @@ XDM オブジェクトデータ要素を使用すると、データの XDM へ�
 >収集したい情報のみを入力します。 データがソリューションに送信される際には、入力されなかった項目はすべて省略されます。
 
 ## Variable {#variable}
-
->[!IMPORTANT]
->
->現在はベータ版機能で、変更される可能性があります。 将来のバージョンでは、重大な変更が含まれる可能性があります。
 
 XDM オブジェクトを作成する別の方法は、 **[!UICONTROL 変数]** データ要素。 一方、XDM オブジェクトのデータ要素は、参照時に作成されます ( 例： `sendEvent` コマンド、 **[!UICONTROL 変数]** データ要素は、 [!UICONTROL 変数を更新] アクション。 データ要素を使用するには、適切なAdobe Experience Platformサンドボックスとスキーマを選択します。
 
