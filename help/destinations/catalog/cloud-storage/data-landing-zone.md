@@ -2,10 +2,10 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 64%
+source-wordcount: '1378'
+ht-degree: 60%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 64%
 >
 >* この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
 >* このドキュメントページでは、 [!DNL Data Landing Zone] *宛先*. また、 [!DNL Data Landing Zone] *ソース* ソースカタログ内。 詳しくは、 [[!DNL Data Landing Zone] ソース](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメント。
-
 
 
 ## 概要 {#overview}
@@ -72,6 +71,12 @@ Platform API を使用して、 [!DNL Data Landing Zone] 資格情報。 資格�
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| クエリパラメーター | 説明 |
+| --- | --- |
+| `dlz_destination` | この `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+
+{style="table-layout:auto"}
+
 **リクエスト**
 
 次のリクエストの例では、既存のランディングゾーンの資格情報を取得します。
@@ -104,6 +109,52 @@ curl -X GET \
 | `containerName` | ランディングゾーンの名前。 |
 | `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストを承認するために必要なすべての情報が含まれます。 |
 | `SASUri` | ランディングゾーンの共有アクセス署名 URI です。 この文字列は、認証先のランディングゾーンへの URI と、対応する SAS トークンの組み合わせです。 |
+
+{style="table-layout:auto"}
+
+## 更新 [!DNL Data Landing Zone] 資格情報
+
+必要に応じて、資格情報を更新することもできます。 次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API
+
+**API 形式**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| クエリパラメーター | 説明 |
+| --- | --- |
+| `dlz_destination` | この `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `refresh` | この `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
+
+{style="table-layout:auto"}
+
+**リクエスト**
+
+次のリクエストは、ランディングゾーンの資格情報を更新します。
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+次の応答は、 `SASToken` および `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
