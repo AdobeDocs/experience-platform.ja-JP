@@ -2,7 +2,7 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してセグメントをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
+source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 60%
@@ -61,7 +61,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 >[!BEGINSHADEBOX]
 
-### の資格情報を取得します。 [!DNL Data Landing Zone]
+### の資格情報を取得します。 [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 Platform API を使用して、 [!DNL Data Landing Zone] 資格情報。 資格情報を取得する API 呼び出しについては、以下で説明します。 ヘッダーに必要な値の取得について詳しくは、 [Adobe Experience Platform API の概要](/help/landing/api-guide.md) ガイド。
 
@@ -112,7 +112,7 @@ curl -X GET \
 
 {style="table-layout:auto"}
 
-## 更新 [!DNL Data Landing Zone] 資格情報
+### 更新 [!DNL Data Landing Zone] 資格情報 {#update-dlz-credentials}
 
 必要に応じて、資格情報を更新することもできます。 次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API
 
