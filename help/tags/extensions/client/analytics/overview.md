@@ -3,9 +3,9 @@ title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2275'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -107,7 +107,7 @@ Activity Map は、AAM モジュールと同様、個別のモジュールとし
 
 設定ページの「General」セクションからオプションを選択します。次の設定オプションを使用できます。
 
-### Enable EU compliance for Adobe Analytics で EU 
+### Adobe AnalyticsのEUコンプライアンスを有効にする 
 
 EU プライバシー Cookie に基づいたトラッキングを有効または無効にします。
 
@@ -329,13 +329,13 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 #### ページ名
 
-この値は、特定のページの名前を参照し、 [`pageName` 変数](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics の
+この値は、特定のページの名前を参照し、Analytics の [`pageName` 変数](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=ja)に対応します。
 
 >[!IMPORTANT]
 >
->Adobe Experience Manager実装では、この変数は、取得した Analytics レポートの保存場所をAEMに指示します。 レポートが適切に保持されるようにするには、ページ名の文字列をコロンで区切ったサイトへのパスとして書式設定する必要があります。
+>Adobe Experience Manager 実装では、この変数は、取得した Analytics レポートの保存場所を AEM に指示します。レポートが適切に保持されるようにするには、ページ名の文字列を、コロンで区切ったサイトへのパスとして書式設定する必要があります。
 >
->例えば、 `content/we-retail/language-masters/en/men.html` ページ名の値は次の値にする必要があります： `content:we-retail:language-masters:en:men`.
+>例えば、`content/we-retail/language-masters/en/men.html` にある web ページでは、ページ名の値を `content:we-retail:language-masters:en:men` にする必要があります。
 
 #### その他の情報
 
@@ -350,7 +350,7 @@ Analytics 拡張機能は、次のアクションを提供します。
 * キャンペーン
 * 購入 ID
 
-   値またはクエリパラメータのいずれかを指定します
+  値またはクエリパラメータのいずれかを指定します
 
 * 都道府県
 * 郵便番号
