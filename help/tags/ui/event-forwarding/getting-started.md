@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 87%
+source-wordcount: '875'
+ht-degree: 86%
 
 ---
 
@@ -29,7 +29,7 @@ Edge ネットワークにデータを送信した後、Adobeソリューショ�
 
 ## 前提条件
 
-* Adobe Experience Platform Collection Enterprise( 価格については、Adobeのアカウントチームにお問い合わせください )
+* Adobe Real-Time CDP Connections、Prime、または Ultimate( 価格については、Adobeのアカウントチームにお問い合わせください )
 * Adobe Experience Platform でのイベント転送
 * Edge ネットワークにデータを送信するように設定された Adobe Experience Platform Web SDK または Mobile SDK
 * エクスペリエンスデータモデル（XDM）へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
