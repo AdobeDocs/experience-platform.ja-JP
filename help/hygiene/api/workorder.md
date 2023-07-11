@@ -4,7 +4,7 @@ description: Data Whealthy API の/workorder エンドポイントを使用す�
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 74%
@@ -216,7 +216,7 @@ PUT /workorder{WORK_ORDER_ID}
 **リクエスト**
 
 ```shell
-curl -X GET \
+curl -X PUT \
   https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
