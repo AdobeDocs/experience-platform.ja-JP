@@ -4,7 +4,7 @@ title: Braze イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能は、Adobe Experience Edge ネットワークイベントを Braze に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 | キータイプ | 説明 | 例 |
 | --- | --- | --- |
-| [!DNL Braze] インスタンス | に関連付けられた REST エンドポイント [!DNL Braze] アカウント 詳しくは、 [!DNL Braze] ドキュメント [インスタンス](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) 指導のために | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] インスタンス | に関連付けられた REST エンドポイント [!DNL Braze] アカウント 詳しくは、 [!DNL Braze] ドキュメント [インスタンス](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 指導のために | `https://rest.iad-03.braze.com` |
 | API キー | この [!DNL Braze] に関連付けられた API キー [!DNL Braze] アカウント <br/>詳しくは、 [!DNL Braze] に関するドキュメント [REST API キー](https://www.braze.com/docs/api/basics/#rest-api-key) 指導のために | `YOUR-BRAZE-REST-API-KEY` |
 
 ### 秘密鍵の作成
@@ -91,7 +91,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 **[!UICONTROL ユーザー ID]**
 
-| 必要情報 | 説明 |
+| 入力 | 説明 |
 | --- | --- |
 | [!UICONTROL 外部ユーザー ID] | 長く、ランダムで分散された UUID または GUID。 別の方法でユーザー ID に名前を付ける場合は、長い、ランダムで、十分に分散されている必要もあります。 詳細情報： [推奨されるユーザー ID の命名規則](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL ユーザー ID をブレーズ] | ユーザー識別子をブレーズします。 |
@@ -105,11 +105,11 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 **[!UICONTROL イベントデータ]**
 
-| 必要情報 | 説明 | 必須 |
+| 入力 | 説明 | 必須 |
 | --- | --- | --- |
 | [!UICONTROL イベント名 &#x200B;] | イベントの名前。 | ○ |
-| [!UICONTROL イベント時刻 ] | ISO 8601 またはでの文字列としての日時 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式 | ○ |
-| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL イベント時刻] | ISO 8601 またはでの文字列としての日時 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式 | ○ |
+| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL イベントのプロパテ&#x200B;ィ] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL 名] |  |
-| [!UICONTROL 姓] |  |
-| [!UICONTROL Phone] |  |
-| [!UICONTROL メール] |  |
+| [!UICONTROL 名] | |
+| [!UICONTROL 姓] | |
+| [!UICONTROL Phone] | |
+| [!UICONTROL メール] | |
 | [!UICONTROL 性別] | 次のいずれかの文字列：&quot;M&quot;、&quot;F&quot;、&quot;O&quot;（その他）、&quot;N&quot;（該当なし）、&quot;P&quot;（言わない方が良い）。 |
-| [!UICONTROL 市区町村] |  |
+| [!UICONTROL 市区町村] | |
 | [!UICONTROL 国] | 国を文字列として [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式 |
 | [!UICONTROL 言語] | の文字列としての言語 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式 |
 | [!UICONTROL 生年月日] | 形式「YYYY-MM-DD」の文字列 ( 例：1980-12-21)。 |
@@ -147,7 +147,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 **[!UICONTROL ユーザー ID]**
 
-| 必要情報 | 説明 |
+| 入力 | 説明 |
 | --- | --- |
 | [!UICONTROL 外部ユーザー ID] | 長く、ランダムで分散された UUID または GUID。 別の方法でユーザー ID に名前を付ける場合は、長い、ランダムで、十分に分散されている必要もあります。 詳細情報： [推奨されるユーザー ID の命名規則](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL ユーザー ID をブレーズ] | ユーザー識別子をブレーズします。 |
@@ -161,14 +161,14 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 **[!UICONTROL 購入データ]**
 
-| 必要情報 | 説明 | 必須 |
+| 入力 | 説明 | 必須 |
 | --- | --- | --- |
 | [!UICONTROL 製品 ID &#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
-| [!UICONTROL 購入時間 ] | ISO 8601 またはでの文字列としての日時 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式 | ○ |
+| [!UICONTROL 購入時間] | ISO 8601 またはでの文字列としての日時 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式 | ○ |
 | [!UICONTROL 通貨 &#x200B;] | 通貨を文字列として [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 英字通貨コード形式。 | ○ |
 | [!UICONTROL 価格 &#x200B;] | 価格. | ○ |
-| [!UICONTROL 数量 &#x200B;] | 指定しない場合、デフォルト値は 1 です。 最大値は 100 より小さい値にする必要があります。 |  |
-| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL 数量 &#x200B;] | 指定しない場合、デフォルト値は 1 です。 最大値は 100 より小さい値にする必要があります。 | |
+| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 購入プロパティ&#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL 名] |  |
-| [!UICONTROL 姓] |  |
-| [!UICONTROL Phone] |  |
-| [!UICONTROL メール] |  |
+| [!UICONTROL 名] | |
+| [!UICONTROL 姓] | |
+| [!UICONTROL Phone] | |
+| [!UICONTROL メール] | |
 | [!UICONTROL 性別] | 次のいずれかの文字列：&quot;M&quot;、&quot;F&quot;、&quot;O&quot;（その他）、&quot;N&quot;（該当なし）、&quot;P&quot;（言わない方が良い）。 |
-| [!UICONTROL 市区町村] |  |
+| [!UICONTROL 市区町村] | |
 | [!UICONTROL 国] | 国を文字列として [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式 |
 | [!UICONTROL 言語] | の文字列としての言語 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式 |
 | [!UICONTROL 生年月日] | 形式「YYYY-MM-DD」の文字列 ( 例：1980-12-21)。 |

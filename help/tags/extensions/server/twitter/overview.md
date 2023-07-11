@@ -3,16 +3,16 @@ keywords: イベント転送拡張機能；twitter;twitterイベント転送拡�
 title: Twitter event forwarding extension
 description: このAdobe Experience Platformイベント転送拡張機能を使用すると、ビジネス要件に合わせてTwitterにイベントを取り込むことができます。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1143'
 ht-degree: 7%
 
 ---
 
 # [!DNL Twitter] イベント転送拡張機能
 
-[[!DNL Twitter]](https://www.twitter.com) は、ユーザーが投稿し、280 文字の長さのメッセージ（ツイートと呼ばれる）を操作する、オンラインのソーシャルメディアおよびソーシャルネットワーキングサービスです。 ユーザーは、ブラウザー、モバイルフロントエンドソフトウェアを使用してTwitterとやり取りすることも、プログラムを通じてやり取りすることもできます [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) は、ユーザーが投稿し、280 文字の長さのメッセージ（ツイートと呼ばれる）を操作する、オンラインのソーシャルメディアおよびソーシャルネットワーキングサービスです。 ユーザーは、ブラウザー、モバイルフロントエンドソフトウェアを使用してTwitterとやり取りすることも、プログラムを通じてやり取りすることもできます [API](https://developer.twitter.com/en/docs/twitter-api)
 
 この [!DNL Twitter] Web コンバージョン API [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能を使用すると、 Adobe Experience Platform Edge Network で取得したデータを活用し、に送信できます。 [!DNL Twitter]. このドキュメントでは、拡張機能の使用例、拡張機能のインストール方法、イベント転送に拡張機能を統合する方法について説明します [ルール](../../../ui/managing-resources/rules.md).
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 
 有効な [!DNL Twitter] アカウントを使用して、この拡張機能を使用する必要があります。 次に移動： [[!DNL Twitter] 登録ページ](https://help.twitter.com/en/using-twitter/create-twitter-account) をクリックして、アカウントを作成します（まだ持っていない場合）。
 
-アカウントは、 [!DNL Twitter] 開発者アカウント。 開発者としての新規登録方法については、 [[!DNL Twitter] 開発者アカウント](https://developer.twitter.com/en/support/twitter-api/developer-account).
+アカウントは、 [!DNL Twitter] 開発者アカウント。 開発者としての新規登録方法については、 [[!DNL Twitter] 開発者アカウント](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### API ガードレール {#guardrails}
 
@@ -44,7 +44,7 @@ Experience Platformを [!DNL Twitter]の場合、次の入力が必要です。
 
 | キータイプ | 説明 |
 | --- | --- |
-| 消費者キー | &#x200B;: [!DNL Twitter] API 詳しくは、 [!DNL Twitter] ドキュメント [api キーと秘密鍵](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 指導のために |  |
+| 消費者キー | &#x200B;: [!DNL Twitter] API 詳しくは、 [!DNL Twitter] ドキュメント [api キーと秘密鍵](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 指導のために | |
 | 消費者の秘密鍵 | API Secret を使用すると、アプリが [!DNL Twitter] API 詳しくは、 [!DNL Twitter] ドキュメント [api キーと秘密鍵](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 指導のために |
 | トークン秘密鍵 | アプリの有効期限のないトークン秘密鍵。 [!DNL Twitter] OAuth 経由の API。 詳しくは、 [!DNL Twitter] ドキュメント [取得，アクセストークン](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 指導のために |
 | アクセストークン | アプリの有効期限が切れないアクセストークン。 [!DNL Twitter] OAuth 経由の API。 詳しくは、 [!DNL Twitter] ドキュメント [取得，アクセストークン](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 指導のために |
@@ -98,11 +98,11 @@ Experience Platformを [!DNL Twitter]の場合、次の入力が必要です。
 | --- | --- | --- | --- |
 | [!UICONTROL コンバージョン時間] | ISO 8601 または yyyy-MM-dd&#39;T&#39;HH での文字列としての日時:mm:ss:SSSZ 形式。 | 2022-02-18T01:14:00.603Z | ○ |
 | [!UICONTROL イベント ID] | 特定のイベントの base-36 ID。 この ID は、 [!DNL Twitter] 広告アカウント。 これは、イベントマネージャーで対応するイベントの ID と呼ばれます。 | o87ne または tw-o8z6j-o87ne (tw-pixel_id-event-id) | ○ |
-| [!UICONTROL 項目数] | イベントで購入された品目の数。 0 より大きい正の数を指定する必要があります。 | 4 | いいえ |
-| [!UICONTROL 通貨] | イベントで購入される品目の通貨。 これは ISO-4217 で表現され、指定されていない場合、デフォルトは USD です。 | USD | いいえ |
-| [!UICONTROL 値] | イベントで購入される品目の価格値。 | 100.00 | いいえ |
-| [!UICONTROL コンバージョン ID] | 同じイベントタグ内の Web ピクセルとコンバージョン API のコンバージョンの重複排除に使用できるコンバージョンイベントの識別子。 | 23294827 | いいえ |
-| [!UICONTROL 説明] | コンバージョンに関する追加情報を含む説明。 | コンバージョンのテスト | いいえ |
+| [!UICONTROL 項目数] | イベントで購入された品目の数。 0 より大きい正の数を指定する必要があります。 | 4 | × |
+| [!UICONTROL 通貨] | イベントで購入される品目の通貨。 これは ISO-4217 で表現され、指定されていない場合、デフォルトは USD です。 | USD | × |
+| [!UICONTROL 値] | イベントで購入される品目の価格値。 | 100.00 | × |
+| [!UICONTROL コンバージョン ID] | 同じイベントタグ内の Web ピクセルとコンバージョン API のコンバージョンの重複排除に使用できるコンバージョンイベントの識別子。 | 23294827 | × |
+| [!UICONTROL 説明] | コンバージョンに関する追加情報を含む説明。 | コンバージョンのテスト | × |
 
 ## 内のデータの検証 [!DNL Twitter]
 

@@ -4,9 +4,9 @@ title: Mixpanel Track Events API イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能は、Adobe Experience Edge ネットワークイベントを Mixpanel に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 特有の使用例の詳細 [!DNL Mixpanel]（次のドキュメントを参照）。
 
-* [新規ユーザ [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [新規ユーザ [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [ [!DNL Mixpanel] とは？](https://developer.mixpanel.com/docs)
 * [12 の必須 [!DNL Mixpanel] 機能](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -76,14 +76,14 @@ Experience Platformを [!DNL Mixpanel] 次の入力が必要です。
 
 イベント転送プロパティで新しいルールの作成を開始します。 の下 **[!UICONTROL アクション]**、新しいアクションを追加し、拡張機能をに設定します。 **[!UICONTROL Mixpanel]**. 次に、アクションタイプをに設定します。 **[!UICONTROL イベントの追跡]** Adobe Experience Edge ネットワークイベントの送信先 [!DNL Mixpanel].
 
-| 必要情報 | 説明 | 必須 |
+| 入力 | 説明 | 必須 |
 | --- | --- | --- |
 | [!UICONTROL プロジェクトトークン] | このフィールドは、 [!DNL Mixpanel] アカウント | ○ |
 | [!UICONTROL イベントタイプ] | イベント名。 | ○ |
-| [!UICONTROL イベント時刻] | イベント時間。  |  |
-| [!UICONTROL Mixpanel Distinct ID] | イベントを実行したユーザーの一意の識別子。 |  |
-| [!UICONTROL ID を挿入] | 重複排除に使用される、イベントの一意の識別子。 |  |
-| [!UICONTROL イベントのプロパティ] | イベントのカスタムプロパティを含む JSON オブジェクト。 生の JSON を提供するか、シンプル化されたキーと値の入力セットを使用するかを選択します。 |  |
+| [!UICONTROL イベント時刻] | イベント時間。  | |
+| [!UICONTROL Mixpanel Distinct ID] | イベントを実行したユーザーの一意の識別子。 | |
+| [!UICONTROL ID を挿入] | 重複排除に使用される、イベントの一意の識別子。 | |
+| [!UICONTROL イベントのプロパティ] | イベントのカスタムプロパティを含む JSON オブジェクト。 生の JSON を提供するか、シンプル化されたキーと値の入力セットを使用するかを選択します。 | |
 
 >[!NOTE]
 >

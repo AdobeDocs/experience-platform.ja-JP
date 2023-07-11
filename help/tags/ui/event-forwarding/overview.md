@@ -3,9 +3,9 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: eb9d2f9a233f4214057db5136f32fc1290ece63c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1047'
 ht-degree: 87%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 >
 >イベント転送が Platform のデータ収集エコシステム内でどのように適合するかについての情報は、[データ収集の概要](../../../collection/home.md)を参照してください。
 
-イベント転送を Adobe Experience Platform [Web SDK](../../../edge/home.md) および [Mobile SDK](https://aep-sdks.gitbook.io/docs/) と組み合わせると、次のような利点があります。
+イベント転送を Adobe Experience Platform [Web SDK](../../../edge/home.md) および [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ja) と組み合わせると、次のような利点があります。
 
 **パフォーマンス**：
 
