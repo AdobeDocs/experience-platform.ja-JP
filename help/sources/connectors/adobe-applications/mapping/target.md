@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ターゲットマッピング；ターゲットマッピング
 solution: Experience Platform
 title: Adobe Targetイベントデータの XDM へのマッピング
 description: Adobe Experience Platformで使用するAdobe Targetイベントフィールドを Experience Data Model(XDM) スキーマにマッピングする方法について説明します。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 87%
+source-wordcount: '430'
+ht-degree: 82%
 
 ---
 
 # ターゲットマッピングフィールドマッピング
 
-Adobe Experience Platform を使用すると、Adobe Target のデータを Target ソースコネクタを介して取り込めます。コネクタを使用する場合、Target フィールドのすべてのデータを、XDM ExperienceEvent クラスに関連付けられた「[エクスペリエンスデータモデル（XDM）](../../../../xdm/home.md)」フィールドにマッピングする必要があります。
-
-次の表に、エクスペリエンスイベントスキーマのフィールド（*XDM ExperienceEvent フィールド*）と、マッピング先の対応する Target フィールド（*Target Request フィールド*）の概要を示します。一部のマッピングに関する追加のメモも示します。
+次の表に、エクスペリエンスデータモデル (XDM) エクスペリエンスイベントスキーマのフィールドと、マッピング先のAdobe Targetの対応するフィールドの概要を示します。 一部のマッピングに関する追加のメモも示します。
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ Adobe Experience Platform を使用すると、Adobe Target のデータを Targ
 | XDM ExperienceEvent フィールド | Target Request フィールド | メモ |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 一意のリクエスト識別子 |
-| **`dataSource`** |  | すべてのクライアントに対して「1」に設定されます。 |
+| **`dataSource`** | | すべてのクライアントに対して「1」に設定されます。 |
 | `dataSource._id` | リクエストで渡すことができないシステム生成値。 | このデータソースの一意の ID。この ID は、データソースを作成した個人またはシステムによって提供されます。 |
 | `dataSource.code` | リクエストで渡すことができないシステム生成値。 | 完全な @id へのショートカット。少なくとも 1 つのコードまたは @id を使用できます。このコードは、データソース統合コードと呼ばれる場合があります。 |
 | `dataSource.tags` | リクエストで渡すことができないシステム生成値。 | タグを使用して、特定のデータソースで表されるエイリアスが、それらのエイリアスを使用するアプリケーションでどのように解釈されるかを示します。<br><br>例：<br><ul><li>`isAVID`：Analytics の訪問者 ID を表すデータソース。</li><li>`isCRSKey`：CRS でキーとして使用する必要があるエイリアスを表すデータソース。</li></ul>タグはデータソースの作成時に設定されますが、特定のデータソースを参照する際に、パイプラインメッセージにも含まれます。 |
@@ -76,7 +73,7 @@ Adobe Experience Platform を使用すると、Adobe Target のデータを Targ
 | `placeContext.geo.postalCode` | リクエストの IP アドレスに基づいて解決された郵便番号。 |
 | `placeContext.geo.stateProvince` | リクエストの IP アドレスに基づいて解決された州または地域。 |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | リクエストに注文の詳細が存在する場合にのみ設定します。 |
+| **`commerce`** | | リクエストに注文の詳細が存在する場合にのみ設定します。 |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
