@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services 接続
 description: Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
+source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 45%
+source-wordcount: '1548'
+ht-degree: 40%
 
 ---
 
@@ -33,18 +33,24 @@ Campaign を使用すると、次のことを行えます。
 >* Azure Blob ストレージデータランディングゾーン (DLZ) でのデータ保持：7 日
 >* 有効化の頻度は 3 時間以上です。
 
-
 ## ユースケース {#use-cases}
 
 Adobe Campaign Manage Service の宛先をいつどのように使用するかを理解しやすくするために、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
-Adobe Experience Platformは、ID グラフ、分析の行動データ、オフラインとオンラインのデータなどの情報を組み込んだ顧客プロファイルを作成します。 この統合を使用すると、Adobe Experience Platformを利用したオーディエンスを使用して、Adobe Campaign内に既に存在するセグメント化機能を拡張できます。その結果、Campaign でそのデータをアクティブ化できます。
+* Adobe Experience Platformは、ID グラフ、分析の行動データ、オフラインとオンラインのデータなどの情報を組み込んだ顧客プロファイルを作成します。 この統合を使用すると、Adobe Experience Platformを利用したオーディエンスを使用して、Adobe Campaign内に既に存在するセグメント化機能を拡張できます。その結果、Campaign でそのデータをアクティブ化できます。
 
-例えば、スポーツフォース会社は、Adobe Experience Platformを活用したスマートセグメントを活用し、Adobe Campaignを使用してそれらをアクティブ化して、Adobe Campaignがサポートする様々なチャネルをまたいで顧客ベースにリーチしたいと考えています。
+  例えば、スポーツフォース会社は、Adobe Experience Platformを活用したスマートセグメントを活用し、Adobe Campaignを使用してそれらをアクティブ化して、Adobe Campaignがサポートする様々なチャネルをまたいで顧客ベースにリーチしたいと考えています。 メッセージが送信されたら、送信、開封、クリックなどのAdobe Campaignからのエクスペリエンスデータを使用して、Adobe Experience Platform の顧客プロファイルを強化したいと考えます。
 
-メッセージが送信されたら、送信、開封、クリックなどのAdobe Campaignからのエクスペリエンスデータを使用して、Adobe Experience Platform の顧客プロファイルを強化したいと考えます。
+  その結果、Adobe Experience Cloud のエコシステム全体で一貫性の高いクロスチャネルキャンペーンと、迅速な適応および学習をおこなう豊富な顧客プロファイルが実現します。
 
-その結果、Adobe Experience Cloud のエコシステム全体で一貫性の高いクロスチャネルキャンペーンと、迅速な適応および学習をおこなう豊富な顧客プロファイルが実現します。
+
+* Campaign のセグメントのアクティベーションに加えて、Adobe Campaign Managed Servicesの宛先を活用して、Adobe Experience Platform上のプロファイルに関連付けられ、同期プロセスを実行している追加のプロファイル属性を取り込み、Adobe Campaignデータベースで更新できます。
+
+  例えば、Adobe Experience Platformでオプトインとオプトアウトの値を取り込んでいるとします。 この接続を使用すると、これらの値をAdobe Campaignに取り込み、同期プロセスを実行して、定期的に更新することができます。
+
+  >[!NOTE]
+  >
+  >プロファイル属性の同期は、Adobe Campaignデータベースに既に存在するプロファイルで使用できます。
 
 [Adobe Experience PlatformとのAdobe Campaign統合の詳細](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ja)
 
@@ -92,6 +98,10 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL インスタンスを選択]**:お使いの **[!DNL Campaign]** マーケティングインスタンス。
 * **[!UICONTROL ターゲットマッピング]**:で使用しているターゲットマッピングを選択します。 **[!DNL Adobe Campaign]** 配信を送信します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)
+* **[!UICONTROL 同期タイプを選択]**:
+
+   * **[!UICONTROL オーディエンスの同期]**:このオプションを使用して、Adobe Experience PlatformオーディエンスをAdobe Campaignに送信します。
+   * **[!UICONTROL プロファイル同期（更新のみ）]**:このオプションを使用して、Adobe Experience Platformプロファイル属性をAdobe Campaignに取り込み、同期プロセスを実行して、定期的に更新できるようにします。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -122,6 +132,7 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
    * を選択します。 **識別子** ( 例：電子メールフィールド ) は、Adobe Experience PlatformとAdobe Campaignでプロファイルを一意に識別するソース id です。
 
    * その他すべてを選択 **XDM ソースプロファイル属性** Adobe Campaignに書き出す必要がある
+
    >[!NOTE]
    >
    >「segmentMembershipStatus」フィールドは、segmentMembership ステータスを反映するために必須のマッピングです。 このフィールドはデフォルトで追加され、変更または削除できません。
@@ -133,9 +144,10 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
    * [必須の属性](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 選択した属性がすべてのプロファイルレコードに含まれていることを確認します。 例：書き出されるすべてのプロファイルには、電子メールアドレスが含まれています。 重複排除キーとして使用する ID フィールドとフィールドの両方を必須に設定することをお勧めします。
    * [重複排除キー](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) は、ユーザーがプロファイルの重複排除を希望する ID を決定するプライマリキーです。
 
-      >[!IMPORTANT]
-      >
-      >重複排除キー属性の名前が、選択したターゲットマッピングの列名と一致していることを確認してください。
+     >[!IMPORTANT]
+     >
+     >重複排除キー属性の名前が、選択したターゲットマッピングの列名と一致していることを確認してください。
+
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. マッピングが実行されたら、宛先設定を確認して完了し、へのデータの送信を開始できます。 **[!DNL Campaign]**.
@@ -153,9 +165,11 @@ Adobe Experience Platformは、ID グラフ、分析の行動データ、オフ�
 
 ### 書き出されたデータにアクセス {#data}
 
-次に移動： **[!UICONTROL プロファイルとターゲット]** > **[!UICONTROL リスト]** > **[!UICONTROL AEP オーディエンス]** メニューを使用して、宛先をアクティブ化した後に作成されたオーディエンスにアクセスできます。
+の場合 **[!UICONTROL オーディエンスの同期]**&#x200B;に含まれている場合、 **[!UICONTROL プロファイルとターゲット]** > **[!UICONTROL リスト]** > **[!UICONTROL AEP オーディエンス]** メニュー
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+の場合 **[!UICONTROL プロファイル同期（更新のみ）]**&#x200B;の場合、宛先でアクティブ化されたセグメントのターゲットとなる各プロファイルのデータが自動的に Campaign データベースに更新されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
