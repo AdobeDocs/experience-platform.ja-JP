@@ -2,10 +2,10 @@
 title: アカウント詳細データタイプ
 description: このドキュメントでは、アカウント詳細のエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 18%
 | `jigsaw` | 文字列 | 組織の Data.com キー。 |
 | `linkedinPageUrl` | 文字列 | 組織のLinkedInアカウントへの Web サイトリンク。 |
 | `logoUrl` | 文字列 | Salesforce インスタンスの URL と組み合わせるパス ( 例： `https://yourInstance.salesforce.com/`) をクリックして、組織に関連付けられたソーシャルネットワークプロファイル画像をリクエストする URL を生成します。 生成された URL は、組織のソーシャルネットワークプロファイル画像への HTTP リダイレクト（コード 302）を返します。 |
-| `marketSegment` | 文字列 | 組織が参加する名前付きのマーケットセグメント。これは自由形式のフィールドで、クエリやプロパティの使用には、構造化された値または `xdm:identifier` を使用することをお勧めします。 |
+| `marketSegment` | 文字列 | 組織が参加している名前付きのマーケットオーディエンス。 これは自由形式のフィールドで、クエリやプロパティの使用には、構造化された値または `xdm:identifier` を使用することをお勧めします。 |
 | `numberOfEmployees` | 整数 | 組織の従業員数。 |
 | `organizationType` | 文字列 | 組織のタイプを説明するラベル。 |
 | `primaryEmailDomain` | 文字列 | 組織がその担当者に使用する主な E メールドメイン。 |

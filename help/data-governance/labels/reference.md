@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ラベルの用語集
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
-ht-degree: 100%
+source-wordcount: '2109'
+ht-degree: 98%
 
 ---
 
@@ -134,11 +134,11 @@ DAA：オンライン行動広告には、ファーストパーティ、広告�
 
 #### C10 {#c10}
 
-一部のデータガバナンスポリシーでは、ステッチ ID データをパーソナライゼーションに使用することを制限しています。C10 ラベルは、セグメントの結合ポリシーで「プライベートグラフ」オプションが使用されている場合に、セグメントに自動適用されます。
+一部のデータガバナンスポリシーでは、ステッチ ID データをパーソナライゼーションに使用することを制限しています。結合ポリシーで「プライベートグラフ」オプションが使用されている場合、C10 ラベルはオーディエンスに自動的に適用されます。
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match を使用すると、ファーストパーティセグメントをプライバシーおよび同意の環境設定で照合して、エンリッチメントされたプロファイリングやダウンストリームのインサイトを促進できます。C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。Segment Match から除外するデータセットやフィールドを決定し、それに応じて C11 ラベルを追加したら、そのラベルが Segment Match ワークフローによって自動的に適用されます。
+Adobe Experience Platform Segment Match を使用すると、プライバシーと同意の環境設定で Platform で生成されたオーディエンスを一致させ、エンリッチメントされたプロファイルやダウンストリームのインサイトを容易におこなうことができます。 C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。Segment Match から除外するデータセットやフィールドを決定し、それに応じて C11 ラベルを追加したら、そのラベルが Segment Match ワークフローによって自動的に適用されます。
 
 #### C12 {#c12}
 

@@ -2,10 +2,10 @@
 title: Query Accelerated Store レポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
-ht-degree: 95%
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 95%
 
 クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存のAdobe Real-time Customer Data Platformデータモデルを拡張したりできます。 その後、任意のレポート／ビジュアライゼーションフレームワークにレポートインサイトを組み込むことができます。[SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../../dashboards/cdp-insights-data-model.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
 
-Adobe Experience Platform の Real-Time CDP データモデルは、プロファイル、セグメントおよび宛先に関するインサイトを提供し、Real-Time CDP インサイトダッシュボードを有効にします。このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、Real-Time CDP データモデルを必要に応じて拡張する方法について説明します。
+Adobe Experience PlatformのReal-Time CDPデータモデルは、プロファイル、オーディエンスおよび宛先に関するインサイトを提供し、Real-Time CDPインサイトダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、Real-Time CDP データモデルを必要に応じて拡張する方法について説明します。
 
 ## 前提条件
 
@@ -37,7 +37,7 @@ Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#
 
 ![オーディエンスインサイトユーザーモデルのエンティティ関係図（ERD）。](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。`externalaudiencemapping` ディメンションテーブル／データセットは、外部 ID を Platform の宛先とセグメントにマップします。
+この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。この `externalaudiencemapping` ディメンションテーブル/データセットは、外部 ID を Platform 上の宛先とオーディエンスにマッピングします。
 
 ## Data Distiller を使用したレポートインサイト用のモデルの作成
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Real-Time CDP インサイトデータモデルを使用したデータモデルの拡張
 
-詳細を追加してオーディエンスモデルを拡張し、より充実したディメンションテーブルを作成できます。例えば、セグメント名と宛先名を外部オーディエンス ID にマッピングできます。これを行うには、クエリサービスを使用して新しいデータセットを作成または更新し、セグメントと宛先を外部 ID と組み合わせるオーディエンスモデルに追加します。次の図は、このデータモデル拡張の概念を示しています。
+詳細を追加してオーディエンスモデルを拡張し、より充実したディメンションテーブルを作成できます。例えば、オーディエンス名と宛先名を外部オーディエンスの識別子にマッピングできます。 これをおこなうには、クエリサービスを使用して、新しいデータセットを作成または更新し、オーディエンスと宛先を外部 ID と組み合わせるオーディエンスモデルに追加します。 次の図は、このデータモデル拡張の概念を示しています。
 
 ![Real-Time CDP インサイトデータモデルとクエリ高速化ストアモデルをリンクした ERD 図。](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ ext_custom_audience_id | approximate_count_upper_bound
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audie
 
 ## 拡張した高速ストアレポートインサイトデータモデルのクエリ
 
-これで `audienceinsight` データモデルが強化されたので、クエリを実行する準備が整いました。次の SQL は、マッピングされた宛先とセグメントのリストを示します。
+これで `audienceinsight` データモデルが強化されたので、クエリを実行する準備が整いました。次の SQL は、マッピングされた宛先とオーディエンスのリストを示しています。
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 クエリは、クエリ高速ストア上のすべてのデータセットを返します。
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 これで、カスタムデータモデルが作成されたので、カスタムクエリおよびユーザー定義ダッシュボードを使用してデータを視覚化する準備が整いました。
 
-次の SQL は、宛先のオーディエンスごとの一致数の分類と、セグメント別のオーディエンスの各宛先の分類を示します。
+次の SQL は、宛先のオーディエンスごとの一致数の分類と、オーディエンスごとの各オーディエンスの宛先の分類を提供します。
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 次の画像は、レポートインサイトデータモデルを使用して可能なカスタムビジュアライゼーションの例を示しています。
 
-![新しいレポートインサイトデータモデルから作成された宛先およびセグメントウィジェット別の一致数。](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![新しいレポートインサイトデータモデルから作成された、宛先およびオーディエンス別の一致数。](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 カスタムデータモデルは、ユーザー定義のダッシュボードワークスペースで使用可能なデータモデルのリストに表示されます。カスタムデータモデルの活用方法について詳しくは、[ユーザー定義ダッシュボードガイド](../../../dashboards/user-defined-dashboards.md)を参照してください。

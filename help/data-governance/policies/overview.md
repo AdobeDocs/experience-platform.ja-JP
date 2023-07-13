@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ポリシーの概要
 description: データ使用ポリシーは、Adobe Experience Platform 内のデータに対する実行が許可される、または制限される、マーケティングアクションの種類を記述するルールです。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 95%
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ API でのマーケティングアクションとデータ使用ポリシーの�
 | サードパーティに書き出し | 顧客と直接関係のないプロセッサーおよびエンティティにデータを書き出すアクション。多くのデータプロバイダーは、契約の条件で、最初に収集された場所からのデータの書き出しを禁止しています。例えば、ソーシャルネットワークの契約では、多くの場合、ソーシャルネットワークから受け取ったデータの転送を制限しています。 |
 | オンサイト広告 | 組織の Web サイトまたはアプリでの広告の選択と配信を含む、オンサイト広告のデータを使用するアクション、またはそのような広告の配信と有効性を測定するアクション。 |
 | オンサイトのパーソナライズ機能 | オンサイトコンテンツのパーソナライゼーションにデータを使用するアクション。オンサイトパーソナライゼーションは、ユーザーの興味に関する推論をおこなうために使用されるデータであり、それらの推論に基づいて提供されるコンテンツまたは広告の選択に使用されます。 |
-| Segment Match | Adobe Experience Platform Segment Match（複数の Platform ユーザーがセグメントデータを交換できるサービス） のデータを使用するアクション。このアクションを参照するポリシーを有効にすると、Segment Match に使用するデータを制限できます。例えば、コアポリシー「データ共有を制限」が有効になっている場合、[C11 ラベル](../labels/reference.md#c11)を持つデータは Segment Match に使用できません。 |
+| Segment Match | Adobe Experience Platform Segment Match のデータを使用するアクション。2 人以上の Platform ユーザーがオーディエンスデータを交換できます。 このアクションを参照するポリシーを有効にすると、Segment Match に使用するデータを制限できます。例えば、コアポリシー「データ共有を制限」が有効になっている場合、[C11 ラベル](../labels/reference.md#c11)を持つデータは Segment Match に使用できません。 |
 | 単一 ID のパーソナライゼーション | 複数のソースから ID をステッチするのではなく、単一の ID をパーソナライズの目的で使用する必要があるアクション。 |

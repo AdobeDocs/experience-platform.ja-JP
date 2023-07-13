@@ -3,7 +3,7 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスとセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 30%
@@ -41,7 +41,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 この **[!UICONTROL オーディエンス]** ダッシュボードでは、組織のオーディエンスデータに関連する主要指標の概要を説明します。
 
-詳しくは、 [audiences ダッシュボードガイド](../../dashboards/guides/segments.md).
+詳しくは、 [audiences ダッシュボードガイド](../../dashboards/guides/audiences.md).
 
 ![オーディエンスダッシュボードが表示されます。 オーディエンスサイズ、ID 別のプロファイル、ID の重複、オーディエンスサイズの変更トレンドなど、様々なウィジェットを表示します。](../../dashboards/images/segments/dashboard-overview.png)
 

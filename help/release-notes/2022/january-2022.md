@@ -2,8 +2,8 @@
 title: Adobe Experience Platform リリースノート（2022年1月）
 description: Adobe Experience Platform の 2022年1月のリリースノートです。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
-workflow-type: ht
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| インテリジェントキャプション | 機械学習アルゴリズムは、プロファイルとオーディエンスデータに関するインサイトを自動的に提供し、30 ～ 90 日（12 か月）のパターンとトレンドを示します。キャプションには、以下に関する情報が含まれます。 <ul><li>全体的な形状と統計</li><li>トレンドと急激な変化</li><li>季節的パターン</li><li>予期しない異常値</li></ul> 詳しくは、[プロファイルダッシュボード](../../dashboards/guides/profiles.md#profiles-count-trend)および[セグメントダッシュボード](../../dashboards/guides/segments.md#audience-size-trend)ドキュメントで確認することができます。 |
+| インテリジェントキャプション | 機械学習アルゴリズムは、プロファイルとオーディエンスデータに関するインサイトを自動的に提供し、30 ～ 90 日（12 か月）のパターンとトレンドを示します。キャプションには、以下に関する情報が含まれます。 <ul><li>全体的な形状と統計</li><li>トレンドと急激な変化</li><li>季節的パターン</li><li>予期しない異常値</li></ul> 詳しくは、[プロファイルダッシュボード](../../dashboards/guides/profiles.md#profiles-count-trend)および[セグメントダッシュボード](../../dashboards/guides/audiences.md#audience-size-trend)ドキュメントで確認することができます。 |
 | ダッシュボードインベントリ | プロファイル、セグメント、宛先ダッシュボード（PowerBI などのインストール済みの統合を含む）の事前設定済みレポートに一箇所でアクセスします。 詳しくは、[[!DNL Dashboards] インベントリのドキュメント](../../dashboards/inventory.md)を参照してください。 |
 | PowerBI レポートテンプレート | 新しい PowerBI グラフを使用して、プロファイル、セグメントおよび宛先レポートのデータモデルから指標を作成、カスタマイズ、拡張します。 自動インストールワークフローを使用すると、PowerBI 環境内から組織全体でマーケティングインサイトを共有できます。詳しくは、[PowerBI レポートテンプレートドキュメント](../../dashboards/integrations/power-bi.md)を参照してください。 |
 

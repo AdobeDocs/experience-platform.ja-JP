@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -26,9 +26,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。
+ Platform は複数のダッシュボードを提供しており、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
 
-ダッシュボードは、組織のデータ用に事前設定されたレポートオプションを提供し、Platform 内のマーケターワークフローに直接組み込まれます。これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
+ダッシュボードは、組織のデータに事前設定されたレポートオプションを提供し、Platform 内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
 
 次のウィジェットは、各ダッシュボードのウィジェットライブラリで使用できます。[ウィジェットライブラリを使用したウィジェットの追加方法](../../dashboards/customize/widget-library.md)について詳しくは、ドキュメントを参照してください。
 
@@ -57,7 +57,7 @@ Platform は、毎日のスナップショットで取得した、組織のデ�
 
 {style="table-layout:auto"}
 
-[[!DNL Profiles]](../../dashboards/guides/profiles.md)、[[!DNL Destinations]](../../dashboards/guides/destinations.md) および [[!DNL Segments]](../../dashboards/guides/segments.md) ダッシュボードについて詳しくは、ドキュメントを参照してください。
+[[!DNL Profiles]](../../dashboards/guides/profiles.md)、[[!DNL Destinations]](../../dashboards/guides/destinations.md) および [[!DNL Segments]](../../dashboards/guides/audiences.md) ダッシュボードについて詳しくは、ドキュメントを参照してください。
 
 ## データフロー {#dataflows}
 
@@ -118,7 +118,7 @@ Amazon Kinesis、Azure Event Hubs および HTTP API 宛先について、リリ
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
 
 **新機能**
 
@@ -173,7 +173,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。
+AI／ML サービスは、マーケティングアナリストや実務担当者に対して、顧客体験のユースケースで人工知能とマシンラーニングの機能を活用する機能を提供します。これにより、マーケティングアナリストは、データサイエンスの専門知識がなくても、ビジネスレベルの設定を使用して、会社のニーズに特化した予測を設定できます。
 
 ### アトリビューション AI
 

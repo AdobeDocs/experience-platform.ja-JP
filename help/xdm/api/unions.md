@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 和集合 API エンドポイント
 description: Schema Registry API の/unions エンドポイントを使用すると、エクスペリエンスアプリケーションで XDM 和集合スキーマをプログラムで管理できます。
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 47%
+source-wordcount: '897'
+ht-degree: 42%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 47%
 
 ### セグメントメンバーシップマップ
 
-`segmentMembership` マップには、セグメント評価の結果が格納されます。[Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。また、`segmentMembership` には、Platform に取り込まれた評価済みのオーディエンスセグメントも格納されます。このため、Adobe Audience Manager などの他のソリューションと統合することができます。詳しくは、[API を使用したセグメ ントの作成](../../segmentation/tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
+この `segmentMembership` map は、セグメント定義の評価結果を格納します。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` また、には、Platform に取り込まれた評価済みのオーディエンスも格納されます。これにより、Adobe Audience Managerなどの他のソリューションと統合することができます。 に関するチュートリアルを参照してください。 [API を使用したオーディエンスの作成](../../segmentation/tutorials/create-a-segment.md) を参照してください。
 
 ## 和集合のリストの取得 {#list}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのセグメントを評価して、[!DNL Real-Time Customer Profile] のデータをより詳細に分析できます。[!DNL Query Service] を使用して、[!DNL Data Lake] 内でこのセグメントデータに対してクエリを実行することにより、この分析を提供できます。セグメント化の詳細については [!DNL Segmentation Service] の概要を、セグメントの分析方法の詳細については [!DNL Profile Query Language]（PQL）ガイドを参照してください。
+Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのオーディエンスを評価して、 [!DNL Real-Time Customer Profile] データ。 [!DNL Query Service] を使用して、 [!DNL Data Lake]. 詳しくは、 [!DNL Segmentation Service] の概要を参照してください。 [!DNL Profile Query Language] (PQL) ガイドを参照してください。
 
 ## ユースケース
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユ�
 
 ### Adobe Analytics の閲覧放棄
 
-この[閲覧放棄の例では、Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) データを使用して、特定の実用的なオーディエンスを作成することに重点を置いています。[!DNL Query Service] では、セグメント化の複雑なロジックを調整して、ダウンストリームで使用するためのパーソナライズされた様々な属性を計算したり、セグメントの作成方法を大幅に簡略化したりできます。
+この[閲覧放棄の例では、Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) データを使用して、特定の実用的なオーディエンスを作成することに重点を置いています。[!DNL Query Service] は、セグメント化の複雑なロジックに対応して、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、オーディエンスの構築方法を大幅に簡略化したりします。
 
 ### Looker BI ダッシュボード
 

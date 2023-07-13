@@ -2,10 +2,10 @@
 title: データシグナルを追跡して顧客のライフタイム値を生成する
 description: このガイドでは、Real-time Customer Data Platformで Data Distillerとユーザー定義ダッシュボードを使用して、顧客のライフタイム値を測定および視覚化する方法に関するエンドツーエンドのデモを提供します。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 13%
+source-wordcount: '1269'
+ht-degree: 12%
 
 ---
 
@@ -17,18 +17,18 @@ Real-time Customer Data Platformを使用して、顧客のライフタイム値
 
 ![観測から分析、行動までのデータの往復の解説図。](../images/use-cases/infographic-use-case-cycle.png)
 
-このエンドツーエンドの使用例では、データシグナルを取得して変更し、顧客のライフタイム値の派生属性を計算する方法を示しています。 これらの派生属性は、その後、Real-Time CDPのプロファイルデータに適用でき、ユーザー定義のダッシュボードで使用してインサイト分析用のダッシュボードを作成できます。 Data Distillerを通じて、Real-Time CDPインサイトデータモデルを拡張し、CLV 派生属性とダッシュボードインサイトを使用して、新しいセグメントを作成し、目的の宛先にアクティブ化できます。 その後、これらのセグメントを使用して、パフォーマンスの高いオーディエンスを作成し、次のマーケティングキャンペーンを強化できます。
+このエンドツーエンドの使用例では、データシグナルを取得して変更し、顧客のライフタイム値の派生属性を計算する方法を示しています。 これらの派生属性は、その後、Real-Time CDPのプロファイルデータに適用でき、ユーザー定義のダッシュボードで使用してインサイト分析用のダッシュボードを作成できます。 Data Distillerを通じて、Real-Time CDPインサイトデータモデルを拡張し、CLV 派生属性とダッシュボードインサイトを使用して、新しいオーディエンスを構築し、目的の宛先にアクティブ化できます。 これらの高パフォーマンスのオーディエンスを使用して、次のマーケティングキャンペーンを強化できます。
 
 このガイドは、CLV を推進する主要なタッチポイントにわたってデータシグナルを測定し、お客様の環境に同様の使用例を実装することで、顧客体験をより深く理解できるようにすることを目的としています。 プロセス全体を次の図にまとめます。
 
 ![顧客のライフタイムバリューを活用するために必要な幅広い手順の解説図。](../images/use-cases/implementation-steps.png)
 
-## はじめに {#getting-started}
+## Destination SDK の {#getting-started}
 
 このガイドでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [クエリサービス](../home.md):SQL クエリを使用してデータを分析およびエンリッチメントできるユーザーインターフェイスと RESTful API を提供します。
-* [セグメント化サービス](../../segmentation/home.md):リアルタイム顧客プロファイルデータからセグメントを作成し、オーディエンスを生成できます。
+* [セグメント化サービス](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスを生成できます。
 
 ## 前提条件
 
@@ -71,23 +71,23 @@ CLV を設定する最初の手順は、ユーザーのアクションからキ�
 
 ![カスタムのデシルベースの CLTV ウィジェットのコレクションです。](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## セグメントの作成とアクティブ化による高パフォーマンスのオーディエンスの構築 {#create-and-activate-segments}
+## 高パフォーマンスのオーディエンスの作成とアクティブ化 {#create-and-activate-audiences}
 
-次の手順では、セグメントを作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成します。 方法については、セグメントビルダーの UI ガイドを参照してください [Platform でのセグメントの作成とアクティブ化](../../segmentation/ui/segment-builder.md). このガイドでは、以下の方法に関する節を提供します。
+次の手順では、セグメント定義を作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成します。 方法については、セグメントビルダーの UI ガイドを参照してください [Platform でのオーディエンスの作成とアクティブ化](../../segmentation/ui/segment-builder.md). このガイドでは、以下の方法に関する節を提供します。
 
 * 属性、イベントおよび既存のオーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成する。
-* ルールビルダーキャンバスとコンテナを使用して、セグメントルールの実行順を制御する。
+* ルールビルダーキャンバスとコンテナを使用して、セグメント化ルールの実行順序を制御します。
 * 見込みオーディエンスの予測値を表示する。必要に応じてセグメント定義を調整できます。
 * スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 * ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-また、 [セグメントビルダーのビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 詳しくは、こちらを参照してください。
+また、 [セグメントビルダーのビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) 詳しくは、こちらを参照してください。
 
-## 電子メールキャンペーンのセグメントをアクティブ化 {#activate-segment-for-campaign}
+## 電子メールキャンペーンのオーディエンスを有効化 {#activate-audience-for-campaign}
 
-セグメントを構築したら、宛先に対してアクティブ化する準備が整います。 Platform は、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できる、様々な電子メールサービスプロバイダー (ESP) をサポートしています。
+オーディエンスを構築したら、宛先に対してアクティブ化する準備が整います。 Platform は、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できる、様々な電子メールサービスプロバイダー (ESP) をサポートしています。
 
-次を確認します。 [電子メールマーケティングの宛先の概要](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) データの書き出し先となる、サポートされている宛先のリスト ( 例： [OracleEloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) ページ ) を参照してください。
+次を確認します。 [電子メールマーケティングの宛先の概要](../../destinations/catalog/email-marketing/overview.md#connect-destination) データの書き出し先となる、サポートされている宛先のリスト ( 例： [OracleEloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) ページ ) を参照してください。
 
 ## キャンペーンから返された分析データを確認する {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ CLV を設定する最初の手順は、ユーザーのアクションからキ�
 
 データモデルが更新されると、カスタムダッシュボードウィジェットは、顧客のライフタイム値を測定し視覚化できる、意味のあるシグナルを提供します。
 
-![セグメントと電子メールキャンペーンに従って開封された電子メールの数を示すカスタムウィジェット。](../images/use-cases/post-activation-and-email-response-kpis.png)
+![オーディエンスと電子メールキャンペーンに従って開封された電子メールの数を示すカスタムウィジェット。](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 カスタム分析には、様々なビジュアライゼーションオプションが用意されています。
 

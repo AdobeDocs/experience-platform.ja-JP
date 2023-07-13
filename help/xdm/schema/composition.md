@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマ構成の基本
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 29%
@@ -285,12 +285,12 @@ While [!DNL Experience Platform] では、特定の使用例に関するスキ�
 
 に取り込まれるすべてのデータファイル [!DNL Experience Platform] は、XDM スキーマの構造に準拠している必要があります。 XDM 階層（サンプルファイルを含む）に準拠するようにデータファイルをフォーマットする方法の詳細は、[ETL 変換のサンプル](../../etl/transformations.md)に関するドキュメントを参照してください。へのデータファイルの取り込みに関する一般的な情報 [!DNL Experience Platform]を参照し、 [バッチ取得の概要](../../ingestion/batch-ingestion/overview.md).
 
-## 外部セグメントのスキーマ
+## 外部オーディエンスのスキーマ
 
-外部システムからセグメントを Platform に取り込む場合は、次のコンポーネントを使用してスキーマに取り込む必要があります。
+外部システムからオーディエンスを Platform に取り込む場合は、次のコンポーネントを使用してスキーマに取り込む必要があります。
 
 * [[!UICONTROL セグメント定義] クラス](../classes/segment-definition.md):この標準クラスを使用して、外部セグメント定義のキー属性をキャプチャします。
-* [[!UICONTROL セグメントメンバーシップの詳細] フィールドグループ](../field-groups/profile/segmentation.md):このフィールドグループを [!UICONTROL XDM 個人プロファイル] スキーマを使用して、顧客プロファイルを特定のセグメントに関連付けます。
+* [[!UICONTROL セグメントメンバーシップの詳細] フィールドグループ](../field-groups/profile/segmentation.md):このフィールドグループを [!UICONTROL XDM 個人プロファイル] スキーマを使用して顧客プロファイルを特定のオーディエンスに関連付けます。
 
 ## 次の手順
 

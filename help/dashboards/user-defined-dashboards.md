@@ -2,7 +2,7 @@
 title: ユーザー定義ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 4%
@@ -170,7 +170,7 @@ Adobe Real-time Customer Data Platform Insights ダッシュボードの各ク�
 
 このドキュメントでは、カスタムダッシュボードの作成方法と、そのダッシュボードのカスタムウィジェットの作成、編集、更新方法についてより深く理解しています。
 
-次の用途で使用可能な事前設定済みの指標とビジュアライゼーションを見つけるには： [プロファイル](./guides/profiles.md#standard-widgets), [セグメント](./guides/segments.md#standard-widgets)、および [宛先](./guides/destinations.md#standard-widgets) ダッシュボードについては、各ダッシュボードのドキュメントにある標準ウィジェットのリストを参照してください。
+次の用途で使用可能な事前設定済みの指標とビジュアライゼーションを見つけるには： [プロファイル](./guides/profiles.md#standard-widgets), [セグメント](./guides/audiences.md#standard-widgets)、および [宛先](./guides/destinations.md#standard-widgets) ダッシュボードについては、各ダッシュボードのドキュメントにある標準ウィジェットのリストを参照してください。
 
 ユーザー定義のダッシュボードのExperience Platformに関する理解を深めるには、次のビデオをご覧ください。
 

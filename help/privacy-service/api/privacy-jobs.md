@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシージョブ API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 63%
@@ -165,8 +165,8 @@ curl -X POST \
 | `expandIDs` | に設定した場合のオプションのプロパティです。 `true`は、アプリケーションで ID を処理するための最適化を表します ( 現在、は [!DNL Analytics]) をクリックします。 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
-| `mergePolicyId` | リアルタイム顧客プロファイル (`profileService`) を使用する場合は、必要に応じて特定の [結合ポリシー](../../profile/merge-policies/overview.md) ID ステッチに使用する 結合ポリシーを指定すると、プライバシーリクエストには、顧客のデータを返す際にセグメント情報を含めることができます。 1 回のリクエストにつき、1 つの結合ポリシーのみ指定できます。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
-| `regulation` **(必須)** | プライバシージョブの規則です。 次の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
+| `mergePolicyId` | リアルタイム顧客プロファイル (`profileService`) を使用する場合は、必要に応じて特定の [結合ポリシー](../../profile/merge-policies/overview.md) ID ステッチに使用する 結合ポリシーを指定すると、プライバシーリクエストには、顧客のデータを返す際にオーディエンス情報を含めることができます。 1 回のリクエストにつき、1 つの結合ポリシーのみ指定できます。 結合ポリシーが指定されていない場合、セグメント化情報は応答に含まれません。 |
+| `regulation` **(必須)** | プライバシージョブの規則です。 以下の値を使用できます。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 
 {style="table-layout:auto"}
 

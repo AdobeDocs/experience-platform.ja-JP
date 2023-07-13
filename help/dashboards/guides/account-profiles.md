@@ -2,7 +2,7 @@
 title: アカウントプロファイルダッシュボードガイド
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 9%
@@ -15,7 +15,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) には、�
 
 アカウントプロファイルユーザーインターフェイス内のすべての機能の概要については、 [アカウントプロファイル UI ガイド](../../rtcdp/accounts/account-profile-ui-guide.md).
 
-## はじめに
+## Destination SDK の
 
 次の権限を持っている必要があります。 [Adobe Real-time Customer Data Platform B2B エディション](../../rtcdp/b2b-overview.md) B2B にアクセスするために [!UICONTROL アカウントプロファイル] ダッシュボード。
 
@@ -39,7 +39,7 @@ Adobe Experience Platformのユーザーインターフェイス (UI) には、�
 
 ## アカウントプロファイルの参照 {#browse-account-profiles}
 
-この [!UICONTROL 参照] 「 」タブでは、接続されたエンタープライズソースのアカウント ID を使用して、またはソースの詳細を直接入力することで、組織に取り込まれた読み取り専用アカウントプロファイルを検索および表示できます。 ここから、アカウントプロファイルに属する重要な情報（名前、業種、売上高、セグメントなど）を確認できます。
+この [!UICONTROL 参照] 「 」タブでは、接続されたエンタープライズソースのアカウント ID を使用して、またはソースの詳細を直接入力することで、組織に取り込まれた読み取り専用アカウントプロファイルを検索および表示できます。 ここから、名前、業種、売上高、オーディエンスなど、アカウントプロファイルに属する重要な情報を確認できます。
 
 を選択します。 [!UICONTROL プロファイル ID] を [!UICONTROL 参照] タブをクリックして、 [!UICONTROL 詳細] タブをクリックします。
 

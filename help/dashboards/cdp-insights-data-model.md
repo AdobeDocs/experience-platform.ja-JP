@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform Insights データモデル
 description: Real-time Customer Data Platformインサイトのデータモデルで SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自のReal-Time CDPレポートをカスタマイズする方法を説明します。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Real-time Customer Data Platformインサイトデータモデル機能では、
 
 ## Real-Time CDP Insight レポートと使用例
 
-Real-Time CDPレポートは、プロファイルデータと、セグメントおよび宛先との関係に関するインサイトを提供します。 様々なスタースキーマモデルが開発され、様々な一般的なマーケティングの使用例に回答しました。また、各データモデルは複数の使用例をサポートできます。
+Real-Time CDPレポートは、プロファイルデータと、そのオーディエンスおよび宛先との関係に関するインサイトを提供します。 様々なスタースキーマモデルが開発され、様々な一般的なマーケティングの使用例に回答しました。また、各データモデルは複数の使用例をサポートできます。
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### セグメントモデル {#segment-model}
+### オーディエンスモデル {#audience-model}
 
-セグメントモデルは、次のデータセットで構成されます。
+オーディエンスモデルは、次のデータセットで構成されます。
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ GROUP BY
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![セグメントモデルの ERD。](./images/cdp-insights/segment-model.png)
+![オーディエンスモデルの ERD。](./images/cdp-insights/audience-model.png)
 
 #### オーディエンスサイズの使用例
 
-に使用されるロジック [!UICONTROL オーディエンスサイズ] ウィジェットは、最新のスナップショットの時点で選択したセグメント内で結合されたプロファイルの合計数を返します。 詳しくは、 [[!UICONTROL オーディエンスサイズ] ウィジェットドキュメント](./guides/segments.md#audience-size) を参照してください。
+に使用されるロジック [!UICONTROL オーディエンスサイズ] ウィジェットは、最新のスナップショットの時点での、選択したオーディエンス内の結合されたプロファイルの合計数を返します。 詳しくは、 [[!UICONTROL オーディエンスサイズ] ウィジェットドキュメント](./guides/audiences.md#audience-size) を参照してください。
 
 を生成する SQL [!UICONTROL オーディエンスサイズ] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### オーディエンスサイズの変更のトレンドの使用例
 
-に使用されるロジック [!UICONTROL オーディエンスサイズの変更の傾向] widget は、最新の日別スナップショット間の特定のセグメントについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 詳しくは、 [[!UICONTROL オーディエンスサイズの変更の傾向] ウィジェットドキュメント](./guides/segments.md#audience-size-change-trend) を参照してください。
+に使用されるロジック [!UICONTROL オーディエンスサイズの変更の傾向] widget は、最新の日別スナップショット間の特定のオーディエンスについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 詳しくは、 [[!UICONTROL オーディエンスサイズの変更の傾向] ウィジェットドキュメント](./guides/audiences.md#audience-size-change-trend) を参照してください。
 
 を生成する SQL [!UICONTROL オーディエンスサイズの変更の傾向] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### 最も使用されている宛先の使用例
 
-で使用されるロジック [!UICONTROL 最も使用されている宛先] ウィジェットには、マッピングされたセグメントの数に応じて、組織で最も使用されている宛先がリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先に関するインサイトも提供します。詳しくは、 [[!UICONTROL 最も使用されている宛先] widget](./guides/destinations.md#most-used-destinations) を参照してください。
+で使用されるロジック [!UICONTROL 最も使用されている宛先] ウィジェットには、マッピングされているオーディエンスの数に応じて、組織で最も使用されている宛先が表示されます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先に関するインサイトも提供します。詳しくは、 [[!UICONTROL 最も使用されている宛先] widget](./guides/destinations.md#most-used-destinations) を参照してください。
 
 を生成する SQL [!UICONTROL 最も使用されている宛先] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### 最近アクティブにしたセグメントの使用例
+#### 最近アクティブ化されたオーディエンスの使用例
 
-のロジック [!UICONTROL 最近アクティブ化されたセグメント] widget は、宛先に最近マッピングされたセグメントのリストを提供します。 このリストには、システムでアクティブに使用されているセグメントと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。詳しくは、 [[!UICONTROL 最近アクティブ化されたセグメント] ウィジェットドキュメント](./guides/destinations.md#recently-activated-segments) を参照してください。
+のロジック [!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットは、宛先に最も最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、 [[!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットドキュメント](./guides/destinations.md#recently-activated-audiences) を参照してください。
 
-を生成する SQL [!UICONTROL 最近アクティブ化されたセグメント] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
+を生成する SQL [!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Namespace-segment モデル
+### 名前空間 — オーディエンスモデル
 
-名前空間セグメントモデルは、次のデータセットで構成されます。
+namespace-audience モデルは、次のデータセットで構成されます。
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![名前空間セグメントモデルの ERD。](./images/cdp-insights/namespace-segment-model.png)
+![namespace-audience モデルの ERD。](./images/cdp-insights/namespace-audience-model.png)
 
-#### セグメントの使用例に対する ID 別プロファイル
+#### オーディエンスの使用例の ID 別プロファイル
 
-で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のセグメントに対して、プロファイルストア内のすべての結合プロファイルで id を分類します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/segments.md#profiles-by-identity) を参照してください。
+で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のオーディエンスに対して、プロファイルストア内のすべての結合プロファイルで id を分類します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/audiences.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### セグメントモデル別の Overlap Namespace
+### オーディエンスモデル別の重複名前空間
 
-セグメントモデル別の重複名前空間は、次のデータセットで構成されます。
+オーディエンスモデル別の重複名前空間は、次のデータセットで構成されます。
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 次の画像には、各データセットの関連するデータフィールドが含まれています。
 
-![セグメントモデル別の重複名前空間の ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![オーディエンスモデル別の重複名前空間の ERD。](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### ID の重複（セグメント）の使用例
+#### ID の重複（オーディエンス）の使用例
 
-で使用されるロジック [!UICONTROL セグメント] dashboard [!UICONTROL ID の重複] ウィジェットは、特定のセグメントに対して選択された 2 つの id を含むプロファイルの重複を示します。 詳しくは、 [[!UICONTROL ID の重複] ウィジェットセクション [!UICONTROL セグメント化] ダッシュボードドキュメント](./guides/segments.md#identity-overlap).
+で使用されるロジック [!UICONTROL オーディエンス] dashboard [!UICONTROL ID の重複] ウィジェットは、特定のオーディエンスに対して選択された 2 つの ID を含むプロファイルの重複を示します。 詳しくは、 [[!UICONTROL ID の重複] ウィジェットセクション [!UICONTROL オーディエンス] ダッシュボードドキュメント](./guides/audiences.md#identity-overlap).
 
 を生成する SQL [!UICONTROL ID の重複] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
