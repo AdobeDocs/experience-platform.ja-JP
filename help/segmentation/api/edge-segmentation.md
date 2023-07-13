@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;セグメント化;セグメント化;セグメント化サービス;エッジセグメント化;エッジセグメント化;ストリーミングエッジ;
 solution: Experience Platform
 title: API を使用したエッジのセグメント化
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 96%
+source-wordcount: '1169'
+ht-degree: 92%
 
 ---
 
@@ -17,9 +16,9 @@ ht-degree: 96%
 >
 >次のドキュメントでは、API を使用してエッジのセグメント化を実行する方法を説明します。 UI を使用してエッジのセグメント化を実行する方法については、[エッジセグメント化 UI ガイド](../ui/edge-segmentation.md)を参照してください。
 >
->エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメントを作成した場合、これらのセグメントは引き続き動作します。
+>エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメント定義を作成した場合、これらのセグメント定義は引き続き機能します。
 
-エッジのセグメント化は、Adobe Experience Platform のセグメントを Experience Edge 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。
+エッジのセグメント化とは、エッジ上で瞬時にAdobe Experience Platformのセグメント定義を評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
 
 >[!IMPORTANT]
 >
@@ -32,7 +31,7 @@ ht-degree: 96%
 この開発者ガイドでは、エッジのセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについての十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [[!DNL Segmentation]](../home.md)：[!DNL Real-Time Customer Profile] データからセグメントやオーディエンスを作成できます。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):次の場所からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 Experience Platform API エンドポイントへの呼び出しを正常に行うには、[Platform API の基本を学ぶ](../../landing/api-guide.md)のガイドを読み、必要なヘッダーとサンプル API 呼び出しの読み方を確認してください。

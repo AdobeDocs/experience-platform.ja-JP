@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;プロファイル;セグメント;セグメント化;ユーザーインターフェイス;UI;カスタマイズ;セグメントダッシュボード;ダッシュボード
 title: セグメントダッシュボード
 description: Adobe Experience Platform UI には、組織が作成および管理するセグメントに関連する重要な指標を確認できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '136'
 ht-degree: 100%
 
 ---
@@ -19,4 +18,4 @@ UI でのセグメントダッシュボードへのアクセス方法と操作�
 
 Experience Platform ユーザーインターフェイス内のすべてのダッシュボード機能の概要については、最初に[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
-![セグメントダッシュボード。これは、オーディエンスサイズウィジェット、オーディエンスサイズ変化トレンドウィジェット、ID 別プロファイルウィジェットの 3 つのウィジェットを表示しています。](../images/ui/segment-dashboard/dashboard-overview.png)
+![セグメントダッシュボード。これは、オーディエンスサイズウィジェット、オーディエンスサイズ変化トレンドウィジェット、ID 別プロファイルウィジェットの 3 つのウィジェットを表示しています。](../../dashboards/images/segments/dashboard-overview.png)

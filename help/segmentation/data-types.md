@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データタイプ；データタイプ；データタイプ；データタイプ；データタイプ；セグメント化データタイプ；セグメント化；セグメント化サービス；セグメント化サービスデータタイプ；
 solution: Experience Platform
 title: セグメント化サービスでサポートされるデータタイプ
 description: Experience Data Model(XDM) のすべてのデータタイプは、Segmentation Service 内でサポートされています。Adobe セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 62%
+source-wordcount: '490'
+ht-degree: 54%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 62%
 
 ## 文字列データ
 
-セグメント定義では、文字列データを使用して、「国名」や「ロイヤルティプログラムレベル」など、セグメントオーディエンスの数値以外の制約を定義します。
+セグメント定義では、文字列データを使用して、「国名」や「ロイヤルティプログラムレベル」など、オーディエンスの数値以外の制約を定義します。
 
 文字列データは、論理ステートメント、包含／排他ステートメント、比較ステートメントを使用して、セグメント定義に含まれます。文字列属性をセグメント定義に追加したら、文字列関連ステートメントを使用して、他の文字列フィールドと比較して評価できます。
 
@@ -33,7 +32,7 @@ ht-degree: 62%
 
 | フィールドの例 | 日付関連ステートメント | タイムライン |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`、`yesterday`、`this month`、`this year` | セグメントが作成された日に関連します。 |
+| person.firstPurchase | `today`、`yesterday`、`this month`、`this year` | セグメント定義が作成された日に関連します。 |
 | person.lastPurchase | `in last`、`during`、`before`、`after`、`within` | 任意の週内／月内に関連します。 |
 
 ## エクスペリエンスイベント
@@ -45,19 +44,19 @@ Adobe Experience Platformスキーマとして、 [!DNL XDM ExperienceEvents] �
 | キーワード | 用途 |
 | ------- | --- |
 | 含む／除く | データを含めるまたは省略してイベントの動作を記述します。 |
-| 任意／すべて | 適格なセグメントの数の判断に役立ちます。 |
+| 任意／すべて | 適格なセグメント定義の数の決定に役立ちます。 |
 | 「時間ルールを適用」切り替えボタン | 日付データを組み込みます。 |
 | 等しい、等しくない、～で開始する、～で開始しない、～で終わる、～で終わらない、含む、含まない、存在する、存在しない | 文字列データを組み込みます。 |
 
 ### オーディエンスの共有
 
-外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
+外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメント定義に追加できます。
 
 現在、外部オーディエンスとしてはAdobe Audience Managerのみがサポートされており、今後、追加のソースが有効になる予定です。 Platform でのAdobe Audience Managerオーディエンスの使用について詳しくは、 [Adobe Audience Managerドキュメント内のオーディエンス共有ガイド](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja).
 
-### セグメントの共有
+### セグメント定義の共有
 
-Platform で作成されたセグメントは、他の [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja). この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
+Platform で作成されたセグメント定義は、他の [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja). この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントにお問い合わせください。
 
 ## その他のデータタイプ
 

@@ -1,29 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；オプトアウト；セグメント化；セグメント化サービス；セグメント化サービス；オプトアウトを優先；オプトアウト；オプトアウト；同意；共有；収集；
 solution: Experience Platform
 title: セグメントでの同意の遵守
 description: セグメント操作での個人データの収集および共有に関する顧客の同意設定を遵守する方法を説明します。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 2%
 
 ---
 
 # セグメントでの同意の遵守
 
+>[!NOTE]
+>
+>このガイドでは、内で同意を尊重する方法を説明します **セグメント定義**.
+
 法的プライバシー規制 ( [!DNL California Consumer Privacy Act] (CCPA) は、消費者に対し、自分の個人データを収集したり、サードパーティと共有したりすることをオプトアウトする権利を提供します。 Adobe Experience Platformは、リアルタイム顧客プロファイルデータで顧客の同意設定を取り込むための標準の Experience Data Model(XDM) コンポーネントを提供します。
 
 顧客が個人データの共有に関する同意を撤回または拒否した場合、組織はマーケティング活動のオーディエンスを生成する際に、その優先順位に従うことが重要です。 このドキュメントでは、顧客ユーザーインターフェイスを使用して、セグメント定義にExperience Platformの同意値を統合する方法について説明します。
 
-## はじめに
+## Destination SDK の
 
 顧客の同意値を遵守するには、 [!DNL Adobe Experience Platform] 関連するサービス。 このチュートリアルを開始する前に、次のサービスに関する詳細を必ず理解しておく必要があります。
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Real-Time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):以下からオーディエンスセグメントを作成できます： [!DNL Real-Time Customer Profile] データ。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):次の場所からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
 
 ## 同意スキーマフィールド
 
@@ -35,7 +38,7 @@ ht-degree: 2%
 
 ## セグメント化での同意の処理
 
-オプトアウトプロファイルをセグメントに含めないようにするには、特別なフィールドを既存のセグメントに追加し、新しいセグメントの作成時に含める必要があります。
+オプトアウトプロファイルがセグメント定義に含まれないようにするには、新しいセグメント定義を作成する際に、特別なフィールドを既存のセグメント定義に追加し、含める必要があります。
 
 以下の手順は、2 種類のオプトアウトフラグ用に適切なフィールドを追加する方法を示しています。
 
@@ -44,13 +47,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->このガイドでは、上記 2 つのオプトアウトフラグに焦点を当てていますが、追加の同意シグナルを組み込むようにセグメントを設定することもできます。 この [同意および環境設定リファレンスガイド](../xdm/field-groups/profile/consents.md) では、これらの各オプションと、その意図された使用例について詳しく説明しています。
+>このガイドでは、上記 2 つのオプトアウトフラグに焦点を当てていますが、セグメント定義を設定して、追加の同意シグナルを組み込むこともできます。 この [同意および環境設定リファレンスガイド](../xdm/field-groups/profile/consents.md) では、これらの各オプションと、その意図された使用例について詳しく説明しています。
 
-UI でセグメントを作成する際、 **[!UICONTROL 属性]**&#x200B;に移動します。 **[!UICONTROL XDM 個人プロファイル]**&#x200B;を選択し、「 **[!UICONTROL 同意および環境設定]**. ここから、 **[!UICONTROL データ収集]** および **[!UICONTROL データを共有]**.
+UI でセグメント定義を作成する際、 **[!UICONTROL 属性]**&#x200B;に移動します。 **[!UICONTROL XDM 個人プロファイル]**&#x200B;を選択し、「 **[!UICONTROL 同意および環境設定]**. ここから、 **[!UICONTROL データ収集]** および **[!UICONTROL データを共有]**.
 
 ![](./images/opt-outs/consents.png)
 
-まず、 **[!UICONTROL データ収集]** カテゴリに移動し、 **[!UICONTROL 選択値]** をセグメントビルダーに追加します。 属性をセグメントに追加する際に、 [同意値](../xdm/field-groups/profile/consents.md#choice-values) を含めるか除外する必要があります。
+まず、 **[!UICONTROL データ収集]** カテゴリに移動し、 **[!UICONTROL 選択値]** をセグメントビルダーに追加します。 セグメント定義に属性を追加する際に、 [同意値](../xdm/field-groups/profile/consents.md#choice-values) を含めるか除外する必要があります。
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -66,11 +69,11 @@ UI でセグメントを作成する際、 **[!UICONTROL 属性]**&#x200B;に移
 
 ![](./images/opt-outs/share.png)
 
-両方の **[!UICONTROL データ収集]** および **[!UICONTROL データを共有]** セグメントに追加された同意値を使用すると、データの使用をオプトアウトした顧客は、結果として生成されるオーディエンスから除外されます。 ここから、を選択する前にセグメント定義のカスタマイズを続行できます。 **[!UICONTROL 保存]** をクリックしてプロセスを終了します。
+両方の **[!UICONTROL データ収集]** および **[!UICONTROL データを共有]** セグメント定義に追加された同意値を使用すると、データの使用をオプトアウトした顧客は、結果として生成されるオーディエンスから除外されます。 ここから、を選択する前にセグメント定義のカスタマイズを続行できます。 **[!UICONTROL 保存]** をクリックしてプロセスを終了します。
 
 ## 次の手順
 
-このチュートリアルに従うと、Experience Platformでセグメントを作成する際に、顧客の同意と環境設定を尊重する方法をより深く理解できます。
+このチュートリアルに従うと、Experience Platformでセグメント定義を作成する際に、顧客の同意と環境設定を尊重する方法をより深く理解できます。
 
 Platform での同意の管理について詳しくは、次のドキュメントを参照してください。
 

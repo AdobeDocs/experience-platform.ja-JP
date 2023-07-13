@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；書き出しジョブ；api;
 solution: Experience Platform
 title: セグメント書き出しジョブ API エンドポイント
 description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience Platform Segmentation Service API の/export/jobs エンドポイントを使用すると、書き出しジョブをプログラムで取得、作成およびキャンセルできます。
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1617'
 ht-degree: 35%
 
 ---
@@ -19,7 +18,7 @@ ht-degree: 35%
 >
 >このガイドでは、 [!DNL Segmentation API]. の書き出しジョブの管理方法の詳細 [!DNL Real-Time Customer Profile] データについては、 [プロファイル API でのジョブの書き出し](../../profile/api/export-jobs.md)
 
-## はじめに
+## Destination SDK の
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 

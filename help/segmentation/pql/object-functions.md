@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；オブジェクト関数；オブジェクト；
 solution: Experience Platform
 title: PQL オブジェクト関数
 description: プロファイルクエリ言語（PQL）は、オブジェクトとのやり取りをより簡単にするための機能を備えています。
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 70%
+source-wordcount: '121'
+ht-degree: 80%
 
 ---
 

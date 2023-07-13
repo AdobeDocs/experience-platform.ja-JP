@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;セグメント化;セグメントビルダー
 solution: Experience Platform
 title: リファクタリングされたセグメント化時間制約 UI のガイド
 description: セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '286'
 ht-degree: 100%
 
 ---

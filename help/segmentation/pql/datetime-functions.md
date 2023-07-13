@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；日付と時間関数；日時関数；日時；時刻；
 solution: Experience Platform
 title: PQL 日付および時間関数
 description: 日付および時間関数は、プロファイルクエリ言語（PQL）内の値に対して日付と時間の操作を実行するために使用されます。
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 88%
+source-wordcount: '485'
+ht-degree: 93%
 
 ---
 

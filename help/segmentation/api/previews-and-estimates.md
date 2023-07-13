@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；プレビュー；予測；プレビューと予測；予測とプレビュー；API;
 solution: Experience Platform
 title: プレビューと推定 API エンドポイント
 description: セグメント定義の開発時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待されるオーディエンスを確実に特定することができます。
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '959'
 ht-degree: 23%
 
 ---
@@ -23,7 +22,7 @@ ht-degree: 23%
 >
 >特定の名前空間内のプロファイルフラグメントと結合プロファイルの合計数、またはプロファイルデータストア全体など、リアルタイム顧客プロファイルデータに関連する類似の指標にアクセスするには、 [プロファイルプレビュー（サンプルステータスのプレビュー）エンドポイントガイド](../../profile/api/preview-sample-status.md)（プロファイル API 開発者ガイドの一部）
 
-## はじめに
+## Destination SDK の
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 

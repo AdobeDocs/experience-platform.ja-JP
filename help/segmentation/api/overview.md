@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；API;API;
 title: セグメント化サービス API ガイド
 description: Segmentation Service API を使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 8%
+source-wordcount: '560'
+ht-degree: 5%
 
 ---
 
 # セグメント化サービス API ガイド
 
-[!DNL Adobe Experience Platform Segmentation Service] では、セグメントを作成し、 [!DNL Adobe Experience Platform] から [!DNL Real-Time Customer Profile] データ。
+Adobe Experience Platform [!DNL Segmentation Service] では、Adobe Experience Platformのセグメント定義や他のソースを使用して、 [!DNL Real-Time Customer Profile] データ。
 
 この [!DNL Segmentation Service] API は、でのセグメント化操作をプログラムで管理できる複数のエンドポイントを提供します。 [!DNL Experience Platform]. この概要ドキュメントでは、これらの各エンドポイントの概要を説明し、詳しくは、関連するエンドポイントガイドへのリンクを示します。 個々のエンドポイントガイドを読む前に、 [入門ガイド](./getting-started.md) 必要なヘッダー、サンプル API 呼び出しなどに関する重要な情報については、を参照してください。
 
 使用可能なすべてのエンドポイントと CRUD 操作を表示するには、 [セグメント化サービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## オーディエンス
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+オーディエンスとは、類似した行動や特性を共有する人の集まりです。 これらは、Platform を使用して、または外部ソースから生成できます。 以下を使用して、 `/audiences` エンドポイント：すべてのオーディエンスの取得、新しいオーディエンスの作成、特定のオーディエンスの詳細の取得、特定のオーディエンスの更新または特定のオーディエンスの削除をおこないます。
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+このエンドポイントの使用方法の詳細については、 [audiences endpoint guide](./audiences.md).
 
 ## ジョブの書き出し
 
@@ -46,13 +45,13 @@ For more information on using this endpoint, please read the [audiences endpoint
 
 ## セグメントの定義
 
-セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 以下を使用して、 `/segment/definitions` エンドポイント：セグメント定義を管理します。
+セグメント定義は、どのプロファイルがどのオーディエンスに含まれるかを定義します。 以下を使用して、 `/segment/definitions` エンドポイント：セグメント定義を管理します。
 
 このエンドポイントの使用方法の詳細については、 [セグメント定義エンドポイントガイド](./segment-definitions.md).
 
 ## セグメントジョブ
 
-セグメントジョブでは、以前に確立されたセグメント定義が処理され、オーディエンスセグメントが生成されます。以下を使用して、 `/segment/jobs` エンドポイント：セグメントジョブを管理します。
+セグメントジョブは、以前に確立されたセグメント定義を処理して、オーディエンスを生成します。 以下を使用して、 `/segment/jobs` エンドポイント：セグメントジョブを管理します。
 
 このエンドポイントの使用方法の詳細については、 [セグメントジョブエンドポイントガイド](./segment-jobs.md).
 

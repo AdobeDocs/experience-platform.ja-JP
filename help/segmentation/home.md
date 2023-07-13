@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;ホーム;人気のあるトピック;セグメント化;セグメンテーション;セグメントサービス;セグメント;セグメント;セグメント;セグメント
 solution: Experience Platform
 title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 100%
+source-wordcount: '1629'
+ht-degree: 93%
 
 ---
 
 # [!DNL Segmentation Service] の概要
 
-Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] には、セグメント定義や他のソースを使用してオーディエンスを作成できるユーザーインターフェイスおよび RESTful API が用意されています。 [!DNL Real-Time Customer Profile] データ。 これらのオーディエンスは、 [!DNL Platform]を使用し、任意のAdobeソリューションから簡単にアクセスできます。
 
 このドキュメントでは、[!DNL Segmentation Service] の概要と Adobe Experience Platform での役割について説明します。
 
 ## [!DNL Segmentation Service] 入門
 
-このドキュメント全体で使用される以下の主要用語を理解しておくことが重要です。
+このドキュメント全体で使用される次の主要用語を理解する必要があります。
 
 - **セグメント**：多数の個人（顧客、見込み客、ユーザーまたは組織など）を、類似の特性を共有しマーケティング戦略に対して同様の対応をする小さなグループに分割します。
-- **セグメント定義**：ターゲットオーディエンスの主要な特性や行動を記述するルールセットです。概念化が完了すると、セグメント定義で記述されているルールを使用して、セグメントの適格なオーディエンスメンバーが決定されます。
-- **オーディエンス**：セグメント定義の条件を満たすプロファイルの結果セットです。
+- **対象ユーザ**:類似した行動や特性を共有する人々のコレクション。 この人々のコレクションは、セグメント定義（プラットフォーム生成オーディエンス）を使用してAdobe Experience Platformで生成することも、外部ソース（外部生成オーディエンス）から生成することもできます。
+- **セグメント定義**:ルールセットAdobe Experience Platformは、ターゲットオーディエンスの主要な特性や動作を記述するために使用します。
 
 ## セグメント化の仕組み
 

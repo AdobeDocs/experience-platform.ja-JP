@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；マップ関数；マップ；
 solution: Experience Platform
 title: PQL マップ関数
 description: Profile Query Language（PQL）には、マップとのやり取りを容易にする関数が用意されています。
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 81%
+source-wordcount: '156'
+ht-degree: 90%
 
 ---
 

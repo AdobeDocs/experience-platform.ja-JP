@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；セグメント定義；セグメント定義；API;
 solution: Experience Platform
 title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 46%
+source-wordcount: '1209'
+ht-degree: 40%
 
 ---
 
 # セグメント定義エンドポイント
 
-Adobe Experience Platform を使用すると、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメントを作成できます。セグメント定義は、 [!DNL Profile Query Language] (PQL) を参照してください。 このオブジェクトは PQL 述語とも呼ばれます。PQL 述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメントのルールを定義します [!DNL Real-Time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
+Adobe Experience Platformでは、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメント定義を作成できます。 セグメント定義は、 [!DNL Profile Query Language] (PQL) を参照してください。 セグメント定義は、オーディエンスを作成するためにプロファイルに適用されます。 このオブジェクト（セグメント定義）は、PQL 述語とも呼ばれます。 PQL 述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します [!DNL Real-Time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
 このガイドには、セグメント定義をより深く理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するための API 呼び出しの例を含んでいます。
 
-## はじめに
+## Destination SDK の
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | **必須**。セグメントを参照する際に使用される一意の名前です。 |
-| `description` | 作成するセグメント定義の説明。 |
-| `evaluationInfo` | 作成するセグメントのタイプ。 バッチセグメントを作成する場合は、 `evaluationInfo.batch.enabled` を真にする。 ストリーミングセグメントを作成する場合は、 `evaluationInfo.continuous.enabled` を真にする。 エッジセグメントを作成する場合は、 `evaluationInfo.synchronous.enabled` を真にする。 空白の場合、セグメントは **バッチ** セグメント。 |
-| `schema` | **必須**。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
-| `expression` | **必須**。セグメント定義に関するフィールド情報を含んだエンティティです。 |
+| `name` | セグメント定義を参照する際に使用される一意の名前。 |
+| `description` | (オプション.) 作成するセグメント定義の説明。 |
+| `evaluationInfo` | (オプション.) 作成するセグメント定義のタイプ。 バッチセグメントを作成する場合は、 `evaluationInfo.batch.enabled` を真にする。 ストリーミングセグメントを作成する場合は、 `evaluationInfo.continuous.enabled` を真にする。 エッジセグメントを作成する場合は、 `evaluationInfo.synchronous.enabled` を真にする。 空のままにすると、セグメント定義は **バッチ** セグメント。 |
+| `schema` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
+| `expression` | 。セグメント定義に関するフィールド情報を含んだエンティティです。 |
 | `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
 | `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
-| `description` | 人間が判読できる、定義の説明。 |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システムで生成された、セグメント定義の読み取り専用 ID。 |
-| `name` | 。セグメントを参照する際に使用される一意の名前です。 |
+| `name` | セグメント定義を参照する際に使用される一意の名前。 |
 | `schema` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
 | `expression` | 。セグメント定義に関するフィールド情報を含んだエンティティです。 |
 | `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
@@ -472,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システムで生成された、セグメント定義の読み取り専用 ID。 |
-| `name` | 。セグメントを参照する際に使用される一意の名前です。 |
+| `name` | セグメント定義を参照する際に使用される一意の名前。 |
 | `schema` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
 | `expression` | 。セグメント定義に関するフィールド情報を含んだエンティティです。 |
 | `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
@@ -487,7 +485,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 >[!NOTE]
 >
-> 宛先のアクティベーションで使用されているセグメントを削除することはでき&#x200B;**ません**。
+> 宛先のアクティベーションで使用されるセグメント定義 **できません** を削除します。
 
 **API 形式**
 

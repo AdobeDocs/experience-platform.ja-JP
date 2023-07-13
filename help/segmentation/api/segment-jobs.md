@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；セグメントジョブ；セグメントジョブ；API;API;
 solution: Experience Platform
 title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 24%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した 組織のセグメントジョブのリストを JSON として返します。ただし、応答は、セグメントジョブ内のセグメントの数に応じて異なります。
+正常な応答は、HTTP ステータス 200 と、指定した 組織のセグメントジョブのリストを JSON として返します。ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
 
-**セグメントジョブの 1500 以下のセグメント**
+**セグメントジョブ内の 1500 個以下のセグメント定義**
 
-セグメントジョブで実行されているセグメントが 1500 件未満の場合は、すべてのセグメントの完全なリストが `children.segments` 属性。
+セグメントジョブで実行されているセグメント定義が 1500 件未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性。
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-**1500 を超えるセグメント**
+**1500 を超えるセグメント定義**
 
-セグメントジョブで 1500 を超えるセグメントが実行されている場合、 `children.segments` 属性が表示されます `*`：すべてのセグメントが評価されていることを示します。
+セグメントジョブで 1500 を超えるセグメント定義が実行されている場合、 `children.segments` 属性が表示されます `*`」に設定され、すべてのセグメント定義が評価されていることを示します。
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.totalTime` | セグメントジョブの開始および終了時間に関する情報と、合計所要時間に関する情報を含むオブジェクト。 |
 | `metrics.profileSegmentationTime` | セグメント化評価の開始および終了時間に関する情報と、合計所要時間に関する情報を含むオブジェクト。 |
 | `metrics.segmentProfileCounter` | セグメントごとに認定されたプロファイルの数。 |
-| `metrics.segmentedProfileByNamespaceCounter` | セグメントごとに各 ID 名前空間で認定されたプロファイルの数。 |
-| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の 3 つのステータスがサポートされています。 <ul><li>「認識済み」 — セグメントに適合するプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | セグメント定義ごとに各 ID 名前空間で認定されたプロファイルの数。 |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の 3 つのステータスがサポートされています。 <ul><li>「適合」 — セグメント定義の対象となるプロファイルの数。</li><li>「出口」 — セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとの結合プロファイルの合計数です。 |
 
 ## 新しいセグメントジョブの作成 {#create}
@@ -286,9 +285,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 POST /segment/jobs
 ```
 
-新しいセグメントジョブを作成する場合、リクエストと応答は、セグメントジョブ内のセグメントの数に応じて異なります。
+新しいセグメントジョブを作成する場合、リクエストと応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
 
-**セグメントジョブの 1500 以下のセグメント**
+**セグメントジョブ内の 1500 個以下のセグメント定義**
 
 **リクエスト**
 
@@ -411,13 +410,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 指定したセグメント定義の ID。 |
 | `segments.segment.expression` | セグメント定義の式に関する情報を含む、PQL で記述されたオブジェクト。 |
 
-**1500 を超えるセグメント**
+**1500 を超えるセグメント定義**
 
 **リクエスト**
 
 >[!NOTE]
 >
->1500 を超えるセグメントを含むセグメントジョブを作成できますが、これは **非常に推奨されない**.
+>1500 を超えるセグメント定義を含むセグメントジョブを作成できますが、これは **非常に推奨されない**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `schema.name` | セグメントのスキーマの名前。 |
+| `schema.name` | セグメント定義のスキーマの名前。 |
 | `segments.segmentId` | 1500 を超えるセグメントを含むセグメントジョブを実行する場合、 `*` をセグメント ID として使用し、すべてのセグメントでセグメントジョブを実行することを示します。 |
 
 **応答**
@@ -528,7 +527,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `id` | 新しく作成されたセグメントジョブのシステム生成の読み取り専用識別子。 |
 | `status` | セグメントジョブの現在のステータス。 セグメントジョブは新しく作成されるので、ステータスは常に「 `NEW`. |
 | `segments` | このセグメントジョブが実行されているセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | この `*` は、このセグメントジョブが組織内のすべてのセグメントで実行されていることを意味します。 |
+| `segments.segment.id` | この `*` は、このセグメントジョブが組織内のすべてのセグメント定義で実行されていることを意味します。 |
 
 ## 特定のセグメントジョブの取得 {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定したセグメントジョブに関する詳細情報を返します。ただし、応答は、セグメントジョブ内のセグメントの数に応じて異なります。
+正常な応答は、HTTP ステータス 200 と、指定したセグメントジョブに関する詳細情報を返します。ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
 
-**セグメントジョブの 1500 以下のセグメント**
+**セグメントジョブ内の 1500 個以下のセグメント定義**
 
-セグメントジョブで実行されているセグメントが 1500 件未満の場合は、すべてのセグメントの完全なリストが `children.segments` 属性。
+セグメントジョブで実行されているセグメント定義が 1500 件未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性。
 
 ```json
 {
@@ -622,9 +621,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-**1500 を超えるセグメント**
+**1500 を超えるセグメント定義**
 
-セグメントジョブで 1500 を超えるセグメントが実行されている場合、 `children.segments` 属性が表示されます `*`：すべてのセグメントが評価されていることを示します。
+セグメントジョブで 1500 を超えるセグメント定義が実行されている場合、 `children.segments` 属性が表示されます `*`」に設定され、すべてのセグメント定義が評価されていることを示します。
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **応答**
 
-正常な応答は、HTTP ステータス 207 と、リクエストされたセグメントジョブを返します。 ただし、 `children.segments` 属性は、1500 を超えるセグメントに対してセグメントジョブが実行されているかどうかによって異なります。
+正常な応答は、HTTP ステータス 207 と、リクエストされたセグメントジョブを返します。 ただし、 `children.segments` 属性は、1500 を超えるセグメント定義に対してセグメントジョブが実行されているかどうかによって異なります。
 
 >[!NOTE]
 >

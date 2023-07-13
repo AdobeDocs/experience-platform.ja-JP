@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；セグメント化；セグメント化サービス；トラブルシューティング；API;SEG；セグメント；セグメント；検索；セグメント検索；
 title: セグメント検索 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API では、セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返すために使用されます。 このガイドには、セグメント検索をより深く理解するのに役立つ情報が記載されており、API を使用して基本的なアクションを実行するための API 呼び出し例が含まれています。
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 45%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 45%
 
 このガイドには、セグメント検索をより深く理解するのに役立つ情報が記載されており、API を使用して基本的なアクションを実行するための API 呼び出し例が含まれています。
 
-## はじめに
+## Destination SDK の
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
@@ -37,8 +36,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} は、Microsoftによる [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
+| `schema.name={SCHEMA}` | **（必須）** ここで、 {SCHEMA} は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、 {SEARCH_TERM} は、のMicrosoft実装に準拠するクエリを表します [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
 
 **リクエスト**
 
@@ -97,12 +96,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `namespace={NAMESPACE}` | **（必須）** ここで、{NAMESPACE} には、検索する名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* ここで、{SEARCH_TERM} には、のMicrosoft実装に準拠するクエリが含まれます [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
-| `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID} で指定された指定フォルダー内に検索を制限します。 |
-| `limit={LIMIT}` | *（オプション）* {LIMIT} は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
-| `page={PAGE}` | *（オプション）* ここで、{PAGE} は、検索したクエリの結果に使用されるページ番号を表します。 ページ番号は **0**. |
+| `schema.name={SCHEMA}` | **（必須）** ここで、 {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `namespace={NAMESPACE}` | **（必須）** ここで、 {NAMESPACE} には、検索する名前空間が含まれます。 |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、 {SEARCH_TERM} は、のMicrosoft実装に準拠するクエリを含みます [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
+| `entityId={ENTITY_ID}` | *（オプション）* 検索範囲を、 {ENTITY_ID}. |
+| `limit={LIMIT}` | *（オプション）* ここで、 {LIMIT} は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
+| `page={PAGE}` | *（オプション）* ここで、 {PAGE} 検索したクエリの結果に使用するページ番号を表します。 ページ番号は **0**. |
 
 
 **リクエスト**
@@ -168,9 +167,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** ここで、{SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
-| `namespace={NAMESPACE}` | **（必須）** ここで、{NAMESPACE} には、検索する名前空間が含まれます。 |
-| `entityId={ENTITY_ID}` | **（必須）** {ENTITY_ID} で指定された、構造情報を取得する検索オブジェクトの ID。 |
+| `schema.name={SCHEMA}` | **（必須）** ここで、 {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `namespace={NAMESPACE}` | **（必須）** ここで、 {NAMESPACE} には、検索する名前空間が含まれます。 |
+| `entityId={ENTITY_ID}` | **（必須）** 構造情報を取得する検索オブジェクトの ID。 {ENTITY_ID}. |
 
 **リクエスト**
 
@@ -223,9 +222,9 @@ curl -X GET \
 
 ## 付録 {#appendix}
 
-以下の節では、検索用語の仕組みに関する追加情報を示します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. 例えば、AAMや [!DNL Platform]を使用する場合は、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
+以下の節では、検索用語の仕組みに関する追加情報を示します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. 例えば、AAMやという名前のセグメント定義を検索する場合は、 [!DNL Platform]を使用する場合は、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] ベストプラクティスについては、上記の例のように、検索式をHTMLエンコードする必要があります。
+>  ベストプラクティスについては、上記の例のように、検索式をHTMLエンコードする必要があります。
 
 ### 検索フィールド {#search-fields}
 
@@ -235,16 +234,16 @@ curl -X GET \
 | ---------- | ----------- |
 | folderId | 指定した検索のフォルダー ID を持つフォルダー（複数可）。 |
 | folderLocation | 指定した検索のフォルダーの場所を持つ場所です。 |
-| parentFolderId | 指定した検索の親フォルダー ID を持つセグメントまたはフォルダー。 |
-| segmentId | このセグメントは、指定した検索のセグメント ID と一致します。 |
-| segmentName | このセグメントは、指定した検索のセグメント名と一致します。 |
-| segmentDescription | このセグメントは、指定した検索のセグメントの説明と一致します。 |
+| parentFolderId | 指定した検索の親フォルダー ID を持つセグメント定義またはフォルダー。 |
+| segmentId | 指定した検索のセグメント ID に一致するセグメント定義。 |
+| segmentName | 指定した検索のセグメント名に一致するセグメント定義。 |
+| segmentDescription | 指定した検索のセグメント説明に一致するセグメント定義。 |
 
 ### 検索式 {#search-expression}
 
 次の表に、セグメント検索 API を使用する際の検索クエリの仕組みに関する詳細を示します。
 
->!![NOTE] 次の例は、非HTMLエンコード形式で、わかりやすく示しています。 ベストプラクティスについては、HTMLで検索式をエンコードしてください。
+>  次の例は、非HTMLエンコード形式で、わかりやすく示しています。 ベストプラクティスについては、HTMLで検索式をエンコードしてください。
 
 | 検索式の例 | 説明 |
 | ------------------------- | ----------- |

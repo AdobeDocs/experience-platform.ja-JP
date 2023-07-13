@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；セグメント化サービス；pql;PQL；プロファイルクエリ言語；演算関数；算術演算；
 solution: Experience Platform
 title: PAL 演算関数
 description: 演算関数は、プロファイルクエリ言語（PQL）の値に対する基本的な計算を実行するために使用されます。
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 87%
+source-wordcount: '243'
+ht-degree: 93%
 
 ---
 

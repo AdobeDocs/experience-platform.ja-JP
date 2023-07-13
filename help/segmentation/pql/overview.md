@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;PQL;pql;プロファイルクエリ言語
 solution: Experience Platform
 title: プロファイルクエリ言語（PQL）の概要
 description: このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 100%
+source-wordcount: '706'
+ht-degree: 97%
 
 ---
 
@@ -67,7 +66,6 @@ PQL では次のリテラル型をサポートしています。
 | 配列 | 他のリテラル値のグループとして構成されるデータ型です。複数の値を区切る場合は、角括弧で囲んでグループ化し、カンマで区切ります。<br> **注意**：配列内の項目のプロパティに直接アクセスすることはできません。したがって、配列内のプロパティにアクセスする必要がある場合、サポートされているメソッドは `select X from array where X.item = ...` です。<br> PQL には、プロファイルにリンクされたエクスペリエンスイベントの配列を指す予約語 `xEvent` があります。 | `[1, 4, 7]`、`["US", "CA"]` |
 | 相対時間参照 | タイムスタンプおよび時間間隔の参照の形式設定に使用できる予約語。 <ul><li>now、today、yesterday、tomorrow</li><li>this、last、next</li><li>before、after、from</li><li>millisecond／milliseconds、second／seconds、minute／minutes、hour／hours、day／days、week／weeks、month／months、year／years、decade／decades、century／centuries、millennium／millennia</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL 関数
 
 サポートされている PQL 関数の各種カテゴリを次の表に示します。詳細を説明するドキュメントへのリンクも含まれています。
@@ -89,4 +87,4 @@ PQL では次のリテラル型をサポートしています。
 
 ## 次の手順
 
-これで、[!DNL Profile Query Language] の使用方法を説明したので、セグメントの作成および変更時に PQL を使用できます。セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
+これで、 [!DNL Profile Query Language]の場合は、セグメント定義を作成および変更する際に PQL を使用できます。 セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
