@@ -1,10 +1,10 @@
 ---
 title: データセット統計の計算
 description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage（ADLS）データセットに関する列レベルの統計を計算する方法を説明します。
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
-workflow-type: ht
-source-wordcount: '785'
-ht-degree: 100%
+source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 90%
 
 ---
 
@@ -49,16 +49,37 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-コンソール出力には、分析テーブル計算統計コマンドに応じた統計は表示されません。代わりに、コンソールには、結果を参照するためのユニバーサル固有識別子（UUID）を持つ `Statistics ID` の 1 行の列が表示されます。`COMPUTE STATISTICS` クエリが正常に完了すると、結果が次のように表示されます。
+コンソール出力には、分析テーブル計算統計コマンドに応じた統計は表示されません。代わりに、コンソールには、結果を参照するためのユニバーサル固有識別子（UUID）を持つ `Statistics ID` の 1 行の列が表示されます。また、 **直接`Statistics ID`**. `COMPUTE STATISTICS` クエリが正常に完了すると、結果が次のように表示されます。
 
 ```console
 | Statistics ID    | 
 | ---------------- |
-| QqMtDfHQOdYJpZlb |
+| adc_geometric_stats_1 |
 (1 row)
 ```
 
-出力を確認するには、`SHOW STATISTICS` コマンドを使用する必要があります。[統計を表示する方法](#show-statistics)については、ドキュメントの後半で説明します。
+統計の出力を直接クエリするには、 `Statistics ID` 以下に示すように。
+
+```sql
+SELECT * FROM adc_geometric_stats_1; 
+```
+
+この文を SHOW STATISTICS コマンドと同様の方法で、 `Statistics ID`.
+
+SHOW STATISTICS コマンドを実行すると、セッション内の計算済みの統計のリストを表示できます。 SHOW STATISTICS コマンドの出力例を次に示します。
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+-----------+---------------+-----------+---------------------------------------+---------------
+adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+```
+
+<!-- Commented out until the <alias_name> feature is released.
+
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+
+-->
 
 ## 含める列の制限 {#limit-included-columns}
 
@@ -90,7 +111,8 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- ## Create an alias name {#alias-name}
+<!-- Commented out until the <alias_name> feature is released.
+## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -104,22 +126,24 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
-
-## 統計の表示 {#show-statistics}
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
+-->
 
 <!-- Commented out until the <alias_name> feature is released.
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
 
-フィルター条件と列リストを使用しても、計算のターゲットとなるデータは大量になる可能性があります。クエリサービスは、この計算された情報を保存するために統計 ID のユニバーサル固有識別子（UUID）を生成します。その後、この統計 ID を使用して、セッション内でいつでも `SHOW STATISTICS` コマンドで計算された統計を検索できます。
+## Show the statistics {#show-statistics}
 
-統計 ID と生成された統計は、この特定のセッションに対してのみ有効であり、異なる PSQL セッション間でアクセスすることはできません。計算された統計は、現在、永続的ではありません。 統計を表示するには、次に示すコマンドを使用します。
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
+
+Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
+
+The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <STATISTICS_ID>;
 ```
 
-出力は、次の例のようになります。
+An output might look similar to the example below. 
 
 ```console
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
@@ -138,6 +162,8 @@ SHOW STATISTICS FOR <STATISTICS_ID>;
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
+-->
 
 ## 次の手順 {#next-steps}
 
