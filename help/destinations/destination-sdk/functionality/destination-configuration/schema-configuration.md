@@ -1,10 +1,10 @@
 ---
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 100%
+source-wordcount: '1892'
+ht-degree: 90%
 
 ---
 
@@ -91,7 +91,10 @@ Destination SDK は、以下の複数のスキーマ設定をサポートしま�
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Destination SDK は、以下の複数のスキーマ設定をサポートしま�
 | `profileRequired` | ブール値 | オプション | ユーザーが Experience Platform から宛先プラットフォームのカスタム属性にプロファイル属性をマッピングできる必要がある場合は、`true` を使用します。 |
 | `segmentRequired` | ブール値 | 必須 | このパラメーターは、Destination SDK に必須で、常に `true` に設定される必要があります。 |
 | `identityRequired` | ブール値 | 必須 | ユーザーが Experience Platform から `profileFields` 配列で定義した属性に [ID タイプ](identity-namespace-configuration.md)をマッピングできる必要がある場合は、`true` に設定します。 |
+| `segmentNamespaceAllowList` | 配列 | オプション | ユーザーがオーディエンスを宛先にマッピングできる特定のオーディエンス名前空間を定義します。 このパラメーターを使用して、配列で定義したオーディエンス名前空間からのみオーディエンスをエクスポートするよう Platform ユーザーを制限します。 このパラメーターは、と一緒に使用することはできません `segmentNamespaceDenyList`.<br> <br> 例： `"segmentNamespaceAllowList": ["AudienceManager"]` は、ユーザーが `AudienceManager` 名前空間をこの宛先に追加します。 <br> <br> ユーザーが任意のオーディエンスを宛先に書き出すことを許可するには、このパラメーターを無視します。 <br> <br> 両方の `segmentNamespaceAllowList` および `segmentNamespaceDenyList` が設定にない場合、ユーザーは、 [セグメント化サービス](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | 配列 | オプション | 配列で定義されたオーディエンス名前空間からユーザーがオーディエンスを宛先にマッピングできないように制限します。 と一緒に使用することはできません `segmentNamespaceAllowed`. <br> <br> 例： `"segmentNamespaceDenyList": ["AudienceManager"]` は、ユーザーが `AudienceManager` 名前空間をこの宛先に追加します。 <br> <br> ユーザーが任意のオーディエンスを宛先に書き出すことを許可するには、このパラメーターを無視します。 <br> <br> 両方の `segmentNamespaceAllowed` および `segmentNamespaceDenyList` が設定にない場合、ユーザーは、 [セグメント化サービス](../../../../segmentation/home.md). <br> <br> 接触チャネルに関係なく、すべてのオーディエンスのエクスポートを許可するには、 `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
