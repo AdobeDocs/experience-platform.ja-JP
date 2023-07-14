@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
+source-git-commit: 387d47fd073456d73fc6aafd58d382398ff2c235
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 58%
+source-wordcount: '1118'
+ht-degree: 53%
 
 ---
 
@@ -58,8 +58,8 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのセグメントを要求しています。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのオーディエンスを要求しています。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="データストリーム ID について"
->abstract="このオプションは、セグメントを含めるデータ収集データストリームを決定します。ドロップダウンメニューには、ターゲット設定が有効になっているデータストリームのみが表示されます。エッジセグメント化を使用するには、データストリーム ID を選択する必要があります。なにも選択しないと、エッジセグメント化を使用するすべてのユースケースが無効になります。"
+>abstract="このオプションは、オーディエンスを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、ターゲット設定が有効になっているデータストリームのみが表示されます。エッジセグメント化を使用するには、データストリーム ID を選択する必要があります。なにも選択しないと、エッジセグメント化を使用するすべてのユースケースが無効になります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ja#parameters" text="データストリームの選択についての詳細"
 
 >[!IMPORTANT]
@@ -91,12 +91,12 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 * **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
-* **データストリーム ID**:これにより、セグメントを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
-   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたセグメントは、次回のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
+* **データストリーム ID**:これにより、オーディエンスを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../edge/datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
+   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
 
   | データストリームが選択されていません | データストリームが選択されました |
   |---|---|
-  | <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>セグメントをAdobe Target接続に共有できるのは、 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、セグメントの共有がサポートされています。</li></ul> |
+  | <ul><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>オーディエンスをAdobe Target接続に共有できるのは、 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスでは、オーディエンスの共有がサポートされています。</li></ul> |
 
 * **Workspace**:Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja) オーディエンスの共有先となるもの。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
 
@@ -110,15 +110,15 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントを有効化する手順については、[プロファイルリクエストの宛先へのプロファイルとセグメントの有効化](../../ui/activate-edge-personalization-destinations.md)を参照してください。
+読み取り [エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化](../../ui/activate-edge-personalization-destinations.md) を参照してください。
 
 ## 書き出したデータ {#exported-data}
 

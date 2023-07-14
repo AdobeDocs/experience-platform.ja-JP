@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1856'
-ht-degree: 40%
+source-wordcount: '1906'
+ht-degree: 34%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 40%
 
 のプロファイルをアクティブ化 [!DNL Facebook] ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのキャンペーン。
 
-この宛先を、 [!DNL Facebook’s] サポートされるアプリのファミリー [!DNL Custom Audiences]を含む [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]、および [!DNL Messenger]. キャンペーンを実行するアプリの選択範囲が、[!DNL Facebook Ads Manager] の配置レベルで示されます。
+この宛先を、 [!DNL Facebook's] サポートされるアプリのファミリー [!DNL Custom Audiences]を含む [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]、および [!DNL Messenger]. キャンペーンを実行するアプリの選択範囲が、[!DNL Facebook Ads Manager] の配置レベルで示されます。
 
 ![Adobe Experience Platform UI でのfacebookの宛先](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ ht-degree: 40%
 
 ### 使用例#1
 
-オンライン小売業者は、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと願っています。オンライン小売業者は、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成し、これらのセグメントをに送信できます。 [!DNL Facebook] ソーシャルプラットフォームを使用して、広告費用を最適化します。
+オンライン小売業者は、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと願っています。オンライン小売業者は、独自の CRM からAdobe Experience Platformに電子メールアドレスを取り込み、独自のオフラインデータからオーディエンスを構築し、それらのオーディエンスを [!DNL Facebook] ソーシャルプラットフォームを使用して、広告費用を最適化します。
 
 ### 使用例#2
 
@@ -34,7 +34,7 @@ ht-degree: 40%
 
 ソーシャルメディアをまたいでターゲットを設定するには、電子メールアドレスを識別子として使用して、顧客データを CRM からAdobe Experience Platformにオンボーディングできます。
 
-次に、関連するメンバーシップ ID や顧客層を含むオフラインデータを使用して、 [!DNL Facebook] 宛先。
+次に、関連するメンバーシップ ID や顧客層を含むオフラインデータを使用して、を通じてターゲットに設定できる新しいオーディエンスを構築できます。 [!DNL Facebook] 宛先。
 
 ## サポートされている ID {#supported-identities}
 
@@ -48,30 +48,44 @@ ht-degree: 40%
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。「 [ID 一致要件](#id-matching-requirements-id-matching-requirements) を参照し、プレーンテキストとハッシュ化された電子メールアドレスに適切な名前空間をそれぞれ使用してください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+
+| オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+
+{style="table-layout:auto"}
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | facebookの宛先で使用されている識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | facebookの宛先で使用されている識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## Facebookアカウントの前提条件 {#facebook-account-prerequisites}
 
-オーディエンスセグメントを [!DNL Facebook] に送信する前に、次の要件を満たしていることを確認してください。
+オーディエンスをに送信する前に [!DNL Facebook]次の要件を満たしていることを確認します。
 
 * お使いの [!DNL Facebook] ユーザーアカウントには **[!DNL Manage campaigns]** 使用する予定の広告アカウントに対して有効になっている権限です。
 * この **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
-   >[!IMPORTANT]
-   >
-   > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。権限は、 [!DNL Adobe Experience Platform] 統合とも呼ばれます。
+  >[!IMPORTANT]
+  >
+  > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。権限は、 [!DNL Adobe Experience Platform] 統合とも呼ばれます。
 * [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、に移動します。 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`で、 `accountID` は [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >を [!DNL Facebook Custom Audiences] 利用条件については、Facebook API での認証に使用したのと同じユーザーアカウントを必ず使用してください。
+  >[!IMPORTANT]
+  >
+  >を [!DNL Facebook Custom Audiences] 利用条件については、Facebook API での認証に使用したのと同じユーザーアカウントを必ず使用してください。
 
 ## ID 一致要件 {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
-次のビデオでは、 [!DNL Facebook] の宛先に移動して、セグメントをアクティブ化します。
+次のビデオでは、 [!DNL Facebook] の宛先に移動して、オーディエンスをアクティブ化します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -157,14 +171,14 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="オーディエンスのオリジン"
->abstract="セグメント内の顧客データが最初に収集された方法を選択します。ユーザーがセグメントのターゲットになっている場合、このデータが Facebook に表示されます"
+>abstract="オーディエンスの顧客データが最初に収集された方法を選択します。 ユーザーがセグメントのターゲットになっている場合、このデータが Facebook に表示されます"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
+詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-内 **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL オーディエンスの起源] にセグメントを送信する際 [!DNL Facebook Custom Audiences].
+内 **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL オーディエンスの起源] オーディエンスを [!DNL Facebook Custom Audiences].
 
 ![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 ## 書き出したデータ {#exported-data}
 
-の場合 [!DNL Facebook]が成功した場合、アクティベーションは [!DNL Facebook] カスタムオーディエンスは、 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
+の場合 [!DNL Facebook]が成功した場合、アクティベーションは [!DNL Facebook] カスタムオーディエンスは、 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). ユーザーがアクティブ化されたオーディエンスの対象として認定または不適格となるので、オーディエンスメンバーシップが追加および削除されます。
 
 >[!TIP]
 >
->Adobe Experience Platformと [!DNL Facebook] は、履歴オーディエンスのバックフィルをサポートします。 すべての過去のセグメント認定がに送信されます。 [!DNL Facebook] 宛先へのセグメントをアクティブ化した場合。
+>Adobe Experience Platformと [!DNL Facebook] は、履歴オーディエンスのバックフィルをサポートします。 すべての履歴オーディエンスの資格がに送信されます。 [!DNL Facebook] オーディエンスを宛先に対してアクティブ化する場合。
 
 ## トラブルシューティング {#troubleshooting}
 

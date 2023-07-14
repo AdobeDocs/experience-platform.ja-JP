@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 83%
+source-wordcount: '1030'
+ht-degree: 73%
 
 ---
 
@@ -36,6 +36,20 @@ ht-degree: 83%
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | オーディエンスを [!DNL Google Ad Manager 360] に送信するには、このターゲット ID を選択します。 |
+
+{style="table-layout:auto"}
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+
+| オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="セグメント名へのセグメント ID の追加"
->abstract="Google アドマネージャー 360 のセグメント名に Experience Platform のセグメント ID を含めるには、次のように、このオプションを選択します。`Segment Name (Segment ID)`"
+>title="オーディエンス名にオーディエンス ID を追加する"
+>abstract="Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含める場合は、次のように、このオプションを選択します。 `Audience Name (Audience ID)`"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
@@ -98,28 +112,28 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 * **[!UICONTROL アカウントタイプ]**:次の条件に応じて、オプションを選択します。 [!DNL Google] アカウント：
    * [!DNL Google AdX] に `AdX buyer` を使用する
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
-* **[!UICONTROL セグメント名にセグメント ID を追加]**:Google Ad Manager 360 のセグメント名にExperience Platformのセグメント ID を含めるには、次のように、このオプションを選択します。 `Segment Name (Segment ID)`.
+* **[!UICONTROL オーディエンス名にオーディエンス ID を追加する]**:Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含める場合は、次のように、このオプションを選択します。 `Audience Name (Audience ID)`.
 
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、 [バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
+詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ID マッピングステップでは、次の事前入力済みマッピングが表示されます。
 
 | 事前入力済みマッピング | 説明 |
 |---------|----------|
 | `ECID` -> `ppid` | ユーザーによる編集が可能な事前入力済みのマッピングは、これだけです。Platform から任意の属性または ID 名前空間を選択し、それを `ppid` にマッピングすることができます。 |
-| `metadata.segment.alias` -> `list_id` | Experience Platform セグメント名を Google プラットフォームのセグメント ID にマッピングします。 |
+| `metadata.segment.alias` -> `list_id` | Experience Platformのオーディエンス名をGoogleプラットフォームのオーディエンス ID にマッピングします。 |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 不適格なユーザーをセグメントから削除するタイミングを Google プラットフォームに指示します。 |
 
 これらのマッピングは [!DNL Google Ad Manager 360] で必要であり、すべての [!DNL Google Ad Manager 360] 接続に対してAdobe Experience Platform によって自動的に作成されます。
