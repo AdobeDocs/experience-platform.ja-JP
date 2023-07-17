@@ -1,10 +1,10 @@
 ---
 description: 「/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK で作成されたファイルベースの宛先に対するファイル形式オプションの設定方法を説明します。
 title: ファイル形式設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 100%
+source-wordcount: '1001'
+ht-degree: 98%
 
 ---
 
@@ -159,7 +159,8 @@ Experience Platform から受け取ったファイルを最適に読み取り、
             "templatingStrategy":"PEBBLE_V1",
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
-      }
+      },
+      "maxFileRowCount":5000000
    }
 }
 ```
@@ -190,6 +191,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
+| `maxFileRowCount` | オプション | エクスポートするファイルあたりの最大行数を示します。1,000,000～10,000,000 行の間です。 | 5,000,000 |
 
 {style="table-layout:auto"}
 
