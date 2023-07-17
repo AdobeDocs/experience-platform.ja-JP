@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK から /sample-profiles API エンドポイントを使用して、ソーススキーマに基づいてサンプルプロファイルを生成する方法について説明します。これらのサンプルプロファイルを使用して、ファイルベースの宛先設定をテストできます。
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '651'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **応答**
 
-応答が成功すると、HTTP ステータス 200 が、指定された数のサンプルプロファイル（ソース XDM スキーマに対応するセグメントメンバーシップ、ID およびプロファイル属性を含む）と共に返されます。
+正常な応答は、指定された数のサンプルプロファイルと共に HTTP ステータス 200 を返します。このとき、オーディエンスのメンバーシップ、ID、およびソース XDM スキーマに対応するプロファイル属性が返されます。
 
 >[!NOTE]
 >
-> 応答は、宛先インスタンスで使用されたセグメントメンバーシップ、ID およびプロファイル属性のみを返します。ソーススキーマに他のフィールドがあっても、それらは無視されます。
+> 応答は、宛先インスタンスで使用されるオーディエンスのメンバーシップ、ID およびプロファイル属性のみを返します。 ソーススキーマに他のフィールドがあっても、それらは無視されます。
 
 ```json
 [
@@ -105,9 +105,9 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentMembership` | 個人のセグメントメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[セグメントメンバーシップの詳細](../../../../xdm/field-groups/profile/segmentation.md)を参照してください。 |
+| `segmentMembership` | 個人のオーディエンスメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [オーディエンスメンバーシップの詳細](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
-| `status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
+| `status` | オーディエンスのメンバーシップが現在のリクエストの一部として認識されたかどうかを示す文字列フィールド。 以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてオーディエンスから退出しています。</li></ul> |
 | `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](../../../../xdm/schema/composition.md#identityMap)を参照してください。 |
 
 {style="table-layout:auto"}

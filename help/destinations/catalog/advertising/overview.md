@@ -3,7 +3,7 @@ keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム (DSP、広告ネットワーク、SSP など ) に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 58%
@@ -59,4 +59,4 @@ Adobe Experience Platformを、デマンドサイドプラットフォーム (DS
 
 ## 新しい広告の宛先に接続 {#connect-destination}
 
-キャンペーンの広告の宛先にセグメントを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーンの広告の宛先にオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。

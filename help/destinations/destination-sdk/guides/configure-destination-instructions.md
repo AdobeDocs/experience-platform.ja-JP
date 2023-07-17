@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 71%
+ht-degree: 65%
 
 ---
 
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 3：メッセージ変換テンプレートの作成。テンプレート言語を使用して、メッセージの出力形式を指定します {#create-transformation-template}
 
-宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 [ID、属性、セグメントメンバーシップの変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating)の節のテンプレートの例を参照し、アドビの[テンプレートオーサリングツール](../testing-api/streaming-destinations/create-template.md)を使用します。
+宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 「 」セクションのテンプレートの例を参照してください [ID、属性、オーディエンスのメンバーシップ変換にテンプレート言語を使用する](../functionality/destination-server/message-format.md#using-templating) また、 [テンプレートオーサリングツール](../testing-api/streaming-destinations/create-template.md) Adobe
 
 自分の用途に合ったメッセージ変換テンプレートを作成したら、そのテンプレートを手順 1 で作成したサーバーおよびテンプレートの構成に追加します。
 
@@ -273,10 +273,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 前の手順の構成エンドポイントを使用して宛先を設定した後、 [宛先テストツール](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)を使用して、Adobe Experience Platform と宛先の統合をテストすることができます。
 
-宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platform でセグメントを作成する方法については、以下の 2 つのリソースを参照してください。
+宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
-* [セグメントのドキュメントページを作成](/help/segmentation/ui/overview.md#create-segment)
-* [セグメントの作成のビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [オーディエンスドキュメントの作成ページ](/help/segmentation/ui/overview.md#create-segment)
+* [オーディエンスのビデオチュートリアルの作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
 
 ## 手順 7：宛先を公開する {#publish-destination}
 

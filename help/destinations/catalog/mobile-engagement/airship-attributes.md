@@ -3,10 +3,10 @@ keywords: 飛行船の属性；飛行船の宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンス属性として Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 38%
+source-wordcount: '1017'
+ht-degree: 32%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 38%
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスセグメントを [!DNL Airship]を使用する場合は、次の操作を行う必要があります。
+オーディエンスをに送信する前に [!DNL Airship]を使用する場合は、次の操作を行う必要があります。
 
 * 属性を [!DNL Airship] プロジェクト。
 * 認証用の bearer トークンを生成します。
@@ -35,6 +35,18 @@ ht-degree: 38%
 >
 >の作成 [!DNL Airship] 経由のアカウント [この登録リンク](https://go.airship.eu/accounts/register/plan/starter/) まだお持ちでない場合は、
 
+## 外部オーディエンスのサポート {#external-audiences-support}
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明する外部オーディエンスのアクティブ化もサポートされます。
+
+| 外部オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+
+{style="table-layout:auto"}
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
@@ -42,7 +54,7 @@ ht-degree: 38%
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：フィールドマッピングに従った電子メールアドレス、電話番号、姓 ) や ID。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -72,7 +84,7 @@ Adobe Experience Platform内で収集されたプロファイルデータを活�
 
 ### 使用例#2
 
-Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] プロファイルを作成し、SDK または [!DNL Airship] 予測データ。 例えば、小売業者は、ロイヤリティステータスと場所のデータ（Platform の属性）を含むセグメントを作成し、 [!DNL Airship] では、強いターゲットを絞ったメッセージを、ネバダ州ラスベガスに住む、チャーンの確率が高いゴールドロイヤリティステータスのユーザーに送信するようにデータをチャーン化する予測がおこなわれていました。
+Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] プロファイルを作成し、SDK または [!DNL Airship] 予測データ。 例えば、小売業者は、ロイヤリティステータスと場所のデータ（Platform の属性）を持つオーディエンスを作成し、 [!DNL Airship] では、強いターゲットを絞ったメッセージを、ネバダ州ラスベガスに住む、チャーンの確率が高いゴールドロイヤリティステータスのユーザーに送信するようにデータをチャーン化する予測がおこなわれていました。
 
 ## 宛先への接続 {#connect}
 
@@ -100,15 +112,15 @@ Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] 
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
+詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 

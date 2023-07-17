@@ -3,10 +3,10 @@ title: エッジパーソナライゼーションの宛先に対するオーデ�
 description: 同じページおよび次のページのパーソナライゼーションのユースケースで、Adobe Experience Platformからエッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
-ht-degree: 21%
+source-wordcount: '1833'
+ht-degree: 19%
 
 ---
 
@@ -130,6 +130,14 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 ## オーディエンスを選択 {#select-audiences}
 
 オーディエンス名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するオーディエンスを選択してから、を選択します。 **[!UICONTROL 次へ]**.
+
+宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用して、 **[!UICONTROL 次へ]**.
+
+オリジンに応じて、複数のタイプのオーディエンスから選択できます。
+
+* **[!UICONTROL セグメント化サービス]**:セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
 ![オーディエンスを選択](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

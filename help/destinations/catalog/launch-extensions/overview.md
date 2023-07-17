@@ -3,7 +3,7 @@ keywords: タグ拡張機能；タグ拡張；Launch の宛先；platform tag �
 title: Adobe Experience Platformのタグ拡張
 description: Adobe Experience Platformは、Adobeが提供する次世代タグ管理機能を提供します。 Platform は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 28%
@@ -37,7 +37,7 @@ A [タグ拡張](../../../tags/home.md#extensions) は、Web サイトやモバ�
 
 Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 既存のプラットフォームのお客様は、Platform のタグ機能を無料でExperience Cloudできます。 このシステムは、使いやすい拡張機能を使用して、Web サイト上にタグを簡単に導入できるようにします。拡張機能は、インストール、設定、更新および削除できます。 タグを使用すると、Web サイトに小さな足跡が残り、ページをすばやく読み込むことができます。
 
-セグメントをアクティブ化して拡張機能にタグを付けることはできませんが、特定の状況でのみイベントデータを転送するルールを設定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、 [タグドキュメント](../../../tags/ui/managing-resources/rules.md).
+オーディエンスをアクティブ化して拡張機能にタグを付けることはできませんが、特定の状況でイベントデータを転送するルールを設定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、 [タグドキュメント](../../../tags/ui/managing-resources/rules.md).
 
 ##  の拡張機能の使用事例 {#extensions-use-cases}
 

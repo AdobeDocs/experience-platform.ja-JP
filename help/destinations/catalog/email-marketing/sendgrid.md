@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メールの宛先；送信�
 title: SendGrid 接続
 description: SendGrid の宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 28%
+source-wordcount: '1541'
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 [SendGrid](https://www.sendgrid.com) は、トランザクション E メールとマーケティング E メールに関する一般的な顧客通信プラットフォームです。
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)：ファーストパーティの E メールプロファイルを書き出し、ビジネスニーズに合わせて新しい SendGrid セグメント内でアクティブ化できます。
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)：ファーストパーティの E メールプロファイルを書き出し、ビジネスニーズに合わせて新しい SendGrid オーディエンス内でアクティブ化できます。
 
 SendGrid は、SendGrid API と通信するための認証メカニズムとして、API ベアラートークンを使用します。
 
@@ -40,8 +40,7 @@ SendGrid の宛先に対してデータをアクティブ化する前に、 [ス
 >
 >* E メールプロファイルからメーリングリストを作成するために使用される SendGrid API では、各プロファイル内に一意の E メールアドレスを提供する必要があります。 これは、がの値として使用されているかどうかに関係ありません *電子メール* または *代替メール*. SendGrid 接続は、電子メールと代替電子メールの両方の値のマッピングをサポートしているので、使用する電子メールアドレスは、 *データセット*. そうしないと、電子メールプロファイルが SendGrid に送信された場合に、エラーが発生し、その電子メールプロファイルはデータエクスポートに存在しなくなります。
 >
->* 現在、プロファイルがExperience Platformのセグメントから削除される際に、SendGrid からプロファイルを削除する機能はありません。
-
+>* 現在、プロファイルがExperience Platformのオーディエンスから削除される際に、SendGrid からプロファイルを削除する機能はありません。
 
 ## サポートされている ID {#supported-identities}
 
@@ -60,7 +59,7 @@ SendGrid では、以下の表で説明する ID のアクティブ化がサポ�
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -110,31 +109,29 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 この宛先に固有の詳細については、以下の画像を参照してください。
 
-1. SendGrid に書き出すセグメントを 1 つ以上選択します。
+1. SendGrid にエクスポートする 1 つ以上のオーディエンスを選択します。
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. 内 **[!UICONTROL マッピング]** ステップ、選択後 **[!UICONTROL 新しいマッピングを追加]**&#x200B;に値を入力すると、ソース XDM フィールドを SendGrid API ターゲットフィールドにマッピングするためのマッピングページが表示されます。 以下の画像は、ID 名前空間を SendGrid と SendGrid の間でマッピングするExperience Platformを示しています。 次の項目を確認してください： **[!UICONTROL ソースフィールド]** *電子メール* は **[!UICONTROL ターゲットフィールド]** *external_id* 以下に示すように。
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. 同様に、目的の [!DNL Adobe Experience Platform] SendGrid の宛先に書き出す属性。
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. マッピングを完了したら、 **[!UICONTROL 次へ]** をクリックして、レビュー画面に進みます。
@@ -155,7 +152,7 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 | identityMap:<br/> 電子メール | ID:<br/> external_id | 文字列 | 連絡先のプライマリ E メール。 これは有効な E メールである必要があります。 | 最大長：<br/> 254 文字 |
 | xdm:<br/> person.name.firstName | xdm:<br/> first_name | 文字列 | 連絡先の名前 | 最大長：<br/> 50 文字 |
 | xdm:<br/> person.name.lastName | xdm:<br/> last_name | 文字列 | 連絡先の姓 | 最大長：<br/> 50 文字 |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | 文字列 | 連絡先の郵便番号。 |  |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | 文字列 | 連絡先の郵便番号。 | |
 | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_province_region | 文字列 | 連絡先の州、都道府県または地域。 | 最大長：<br/> 50 文字 |
 
 ## SendGrid 内でのデータエクスポートの検証 {#validate}
@@ -168,22 +165,20 @@ SendGrid を使用するマーケティングチームは、SendGrid 内にメ�
 1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 「**[!DNL Activation data]**」タブに切り替えて、セグメント名を選択します。
+1. 次に切り替え： **[!DNL Activation data]** 」タブをクリックし、オーディエンス名を選択します。
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. セグメントの概要を監視し、データセット内で作成された数に対応するプロファイルの数を確認します。
+1. オーディエンスの概要を監視し、データセット内で作成された数に対応するプロファイルの数を確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. この [SendGrid マーケティングリスト/リスト API を作成](https://docs.sendgrid.com/api-reference/lists/create-list) は、 *list_name* 属性とデータエクスポートのタイムスタンプ。 SendGrid サイトに移動し、名前のパターンに従った新しい連絡先リストが作成されたかどうかを確認します。
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. 新しく作成した連絡先リストを選択し、作成したデータセットの新しい電子メールレコードが新しい連絡先リスト内に入力されているかどうかを確認します。
 
 1. さらに、フィールドマッピングが正しいかどうかを検証する電子メールも 2 通チェックします。
    ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## データの使用とガバナンス {#data-usage-governance}

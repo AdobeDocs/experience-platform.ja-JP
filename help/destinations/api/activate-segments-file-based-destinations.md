@@ -1,22 +1,21 @@
 ---
 solution: Experience Platform
-title: フローサービス API を使用して、ファイルベースの宛先に対するセグメントをアクティブ化する
+title: フローサービス API を使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化する
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '4442'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
-# フローサービス API を使用して、ファイルベースの宛先に対するセグメントをアクティブ化する
+# フローサービス API を使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化する
 
 >[!IMPORTANT]
 >
 >* このベータ版機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
-
 
 拡張ファイルエクスポート機能（現在はベータ版）を使用して、Experience Platform外のファイルをエクスポートする際に、拡張カスタマイズ機能にアクセスします。
 
@@ -44,14 +43,14 @@ ht-degree: 11%
 
 既にフローサービス API を使用して、Amazon S3、Azure Blob、または SFTP クラウドストレージの宛先にプロファイルを書き出している場合は、 [API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) ユーザーが従来の宛先から新しい宛先にAdobeを移行する際に必要な移行手順について説明します。
 
-## はじめに {#get-started}
+## Destination SDK の {#get-started}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)：[!DNL Adobe Experience Platform Segmentation Service] により、[!DNL Adobe Experience Platform] で [!DNL Real-Time Customer Profile] のデータからセグメントを作成し、オーディエンスを生成できます。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] では、オーディエンスを構築してオーディエンスを生成できます。 [!DNL Adobe Experience Platform] から [!DNL Real-Time Customer Profile] データ。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、Platform でファイルベースの宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報を示します。
@@ -92,18 +91,18 @@ ht-degree: 11%
 
 この API チュートリアルで遭遇する用語の説明については、 [用語集セクション](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API リファレンスドキュメントの
 
-## セグメントの書き出し先の選択 {#select-destination}
+## オーディエンスのエクスポート先を選択 {#select-destination}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
-プロファイルの書き出しワークフローを開始する前に、セグメントの書き出し先の接続仕様とフロー仕様 ID を特定します。 以下の表を参考にしてください。
+プロファイルの書き出しワークフローを開始する前に、オーディエンスの書き出し先の接続仕様とフロー仕様 ID を特定します。 以下の表を参考にしてください。
 
 | 宛先 | 接続仕様 | フロー仕様 |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
-| Azure Blob ストレージ | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
+| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
-| データランディングゾーン (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
+| データランディングゾーン（DLZ） | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
 
@@ -147,7 +146,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -215,7 +214,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -319,13 +318,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-以下の手順に従って、クラウドストレージの宛先へのセグメントエクスポートデータフローを設定します。 一部の手順では、クラウドストレージの様々な宛先でリクエストと応答が異なります。 このような場合は、ページのタブを使用して、接続してセグメントの書き出し先となる宛先に固有のリクエストと応答を取得します。 正しい `connection spec` および `flow spec` を設定します。
+以下の手順に従って、クラウドストレージの宛先へのオーディエンスの書き出しデータフローを設定します。 一部の手順では、クラウドストレージの様々な宛先でリクエストと応答が異なります。 このような場合は、ページのタブを使用して、接続してオーディエンスのエクスポート先となる宛先に固有のリクエストと応答を取得します。 正しい `connection spec` および `flow spec` を設定します。
 
 ## ソース接続の作成 {#create-source-connection}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-セグメントの書き出し先を決定したら、ソース接続を作成する必要があります。 この [ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 内部への接続を表します [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store).
+オーディエンスのエクスポート先を決定したら、ソース接続を作成する必要があります。 この [ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 内部への接続を表します [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -373,9 +372,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ベース接続の作成 {#create-base-connection}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、宛先への資格情報を安全に保存します。 宛先のタイプに応じて、その宛先に対する認証に必要な資格情報が異なる場合があります。 これらの認証パラメーターを検索するには、まず `connection spec` を設定します。 [セグメントの書き出し先の選択](#select-destination) そして、 `authSpec` 応答の。 以下のタブを参照して、 `authSpec` サポートされるすべての宛先のプロパティ。
+A [ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、宛先への資格情報を安全に保存します。 宛先のタイプに応じて、その宛先に対する認証に必要な資格情報が異なる場合があります。 これらの認証パラメーターを検索するには、まず `connection spec` を設定します。 [オーディエンスのエクスポート先を選択](#select-destination) そして、 `authSpec` 応答の。 以下のタブを参照して、 `authSpec` サポートされるすべての宛先のプロパティ。
 
 >[!BEGINTABS]
 
@@ -426,7 +425,7 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 表示中 [!DNL auth spec]
 
@@ -523,7 +522,7 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 +++
 
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 表示中 [!DNL auth spec]
 
@@ -737,7 +736,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -840,7 +839,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -1144,9 +1143,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## ターゲット接続の作成 {#create-target-connection}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-次に、ターゲット接続を作成する必要があります。 [ターゲット接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 書き出したセグメントの書き出しパラメーターを保存します。 書き出しパラメータには、書き出しの場所、ファイル形式、圧縮、その他の詳細が含まれます。 例えば、CSV ファイルの場合、複数の書き出しオプションを選択できます。 でサポートされるすべての CSV 書き出しオプションに関する詳細な情報を取得します。 [ファイルフォーマット設定ページ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+次に、ターゲット接続を作成する必要があります。 [ターゲット接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) エクスポートするオーディエンスのエクスポートパラメーターを保存します。 書き出しパラメータには、書き出しの場所、ファイル形式、圧縮、その他の詳細が含まれます。 例えば、CSV ファイルの場合、複数の書き出しオプションを選択できます。 でサポートされるすべての CSV 書き出しオプションに関する詳細な情報を取得します。 [ファイルフォーマット設定ページ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 詳しくは、 `targetSpec` 宛先の `connection spec` を参照して、各宛先タイプでサポートされるプロパティを理解してください。 以下のタブを参照して、 `targetSpec` サポートされるすべての宛先のプロパティ。
 
@@ -1156,7 +1155,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1214,7 +1213,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1363,11 +1362,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1413,7 +1412,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1567,7 +1566,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1606,7 +1605,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1754,11 +1753,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1796,7 +1795,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1948,7 +1947,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1994,7 +1993,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2147,7 +2146,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++SFTP - [!DNL Connection spec] ターゲット接続パラメータの表示
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* セグメントの書き出し先に適用できます。
+強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* オーディエンスの書き出し先に適用できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2186,7 +2185,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2432,7 +2431,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
@@ -2615,7 +2614,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
@@ -2891,15 +2890,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-次の点に注意してください。 `target connection ID` 応答から。 この ID は、セグメントをエクスポートするデータフローを作成する次の手順で必要になります。
+次の点に注意してください。 `target connection ID` 応答から。 この ID は、オーディエンスをエクスポートするデータフローを作成する次の手順で必要になります。
 
 成功すると、ID(`id`) を新しく追加し、 `etag`. 後でデータフローを作成する際に必要になるので、ターゲット接続 ID をメモしておきます。
 
 ## データフローの作成 {#create-dataflow}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-宛先設定の次の手順は、データフローの作成です。 A [データフロー](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、以前に作成したエンティティと結び付け、セグメントの書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて、以下のペイロードを使用し、前の手順のフローエンティティ ID を置き換えます。 この手順では、属性または ID マッピングに関する情報をデータフローに追加しません。 それは次のステップで続きます。
+宛先設定の次の手順は、データフローの作成です。 A [データフロー](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、以前に作成したエンティティと結び付け、オーディエンスの書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて、以下のペイロードを使用し、前の手順のフローエンティティ ID を置き換えます。 この手順では、属性または ID マッピングに関する情報をデータフローに追加しません。 それは次のステップで続きます。
 
 >[!BEGINTABS]
 
@@ -2907,7 +2906,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++セグメントエクスポートデータフローの作成先 [!DNL Amazon S3] destination — リクエスト
++++オーディエンスの書き出しデータフローの作成先 [!DNL Amazon S3] destination — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2920,8 +2919,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Amazon S3 cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Amazon S3 cloud storage destination",
+    "name": "Activate audiences to an Amazon S3 cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Amazon S3 cloud storage destination",
     "flowSpec": {
         "id": "1a0514a6-33d4-4c7f-aff8-594799c47549", // Amazon S3 flow spec ID
         "version": "1.0"
@@ -2951,11 +2950,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob ストレージ]
+>[!TAB Azure Blob Storage]
 
 **リクエスト**
 
-+++セグメントエクスポートデータフローの作成先 [!DNL Azure Blob Storage] destination — リクエスト
++++オーディエンスの書き出しデータフローの作成先 [!DNL Azure Blob Storage] destination — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2968,8 +2967,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Blob Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Blob Storage cloud storage destination",
+    "name": "Activate audiences to an Azure Blob Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Blob Storage cloud storage destination",
     "flowSpec": {
         "id": "752d422f-b16f-4f0d-b1c6-26e448e3b388", // Azure Blob Storage flow spec ID
         "version": "1.0"
@@ -3015,7 +3014,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++セグメントエクスポートデータフローの作成先 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination — リクエスト
++++オーディエンスの書き出しデータフローの作成先 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -3028,8 +3027,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "name": "Activate audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
     "flowSpec": {
         "id": "17be2013-2549-41ce-96e7-a70363bec293", // Azure Data Lake Gen 2(ADLS Gen2) flow spec ID
         "version": "1.0"
@@ -3059,11 +3058,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン (DLZ)]
+>[!TAB データランディングゾーン（DLZ）]
 
 **リクエスト**
 
-+++セグメントエクスポートデータフローの作成先 [!DNL Data Landing Zone] destination — リクエスト
++++オーディエンスの書き出しデータフローの作成先 [!DNL Data Landing Zone] destination — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -3076,8 +3075,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Data Landing Zone cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Data Landing Zone cloud storage destination",
+    "name": "Activate audiences to a Data Landing Zone cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Data Landing Zone cloud storage destination",
     "flowSpec": {
         "id": "cd2fc47e-e838-4f38-a581-8fff2f99b63a", // Data Landing Zone flow spec ID
         "version": "1.0"
@@ -3111,7 +3110,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++セグメントエクスポートデータフローの作成先 [!DNL Google Cloud Storage] destination — リクエスト
++++オーディエンスの書き出しデータフローの作成先 [!DNL Google Cloud Storage] destination — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -3124,8 +3123,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Google Cloud Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Google Cloud Storage destination",
+    "name": "Activate audiences to a Google Cloud Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Google Cloud Storage destination",
     "flowSpec": {
         "id": "585c15c4-6cbf-4126-8f87-e26bff78b657", // Google Cloud Storage flow spec ID
         "version": "1.0"
@@ -3159,7 +3158,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++SFTP 宛先へのセグメントエクスポートデータフローの作成 — リクエスト
++++SFTP 宛先へのオーディエンス書き出しデータフローの作成 — リクエスト
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -3172,8 +3171,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an SFTP cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an SFTP cloud storage destination",
+    "name": "Activate audiences to an SFTP cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an SFTP cloud storage destination",
     "flowSpec": {
         "id": "fd36aaa4-bf2b-43fb-9387-43785eeeb799", // SFTP flow spec ID
         "version": "1.0"
@@ -3207,14 +3206,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 応答のデータフロー ID をメモします。 この ID は、後の手順で必要になります。
 
-### エクスポートにセグメントを追加
+### オーディエンスをエクスポートに追加
 
-この手順では、宛先に書き出すセグメントを選択することもできます。 この手順と、セグメントをデータフローに追加するためのリクエスト形式に関する詳細は、 [宛先のデータフローの更新](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) API リファレンスドキュメントの節を参照してください。
+この手順では、宛先に書き出すオーディエンスも選択できます。 この手順と、オーディエンスをデータフローに追加するためのリクエスト形式に関する詳細は、 [宛先のデータフローの更新](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) API リファレンスドキュメントの節を参照してください。
 
 
 ## 属性と ID マッピングの設定 {#attribute-and-identity-mapping}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 データフローを作成した後、エクスポートする属性と ID のマッピングを設定する必要があります。 これは、次の 3 つの手順で構成されます。
 
@@ -3346,7 +3345,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "First name",
-                            "description": "The first segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The first audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "fullName": {
                             "type": "string",
@@ -3358,7 +3357,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "Last name",
-                            "description": "The last segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The last audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "middleName": {
                             "type": "string",
@@ -3783,7 +3782,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                         "exited":"Entity is exiting the segment.",
                         "realized":"Entity is entering the segment."
                      },
-                     "description":"Is the segment participation realized as part of the current request.",
+                     "description":"Is the audience participation realized as part of the current request.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:status"
                   },
@@ -3844,14 +3843,14 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                            "exclusiveMinimum":0
                         }
                      },
-                     "description":"Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                     "description":"Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:payload"
                   },
                   "version":{
                      "type":"string",
                      "title":"Version",
-                     "description":"The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                     "description":"The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:version"
                   },
@@ -3863,7 +3862,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                            "type":"string",
                            "title":"Identifier",
                            "format":"uri-reference",
-                           "description":"Identity of the segment in the related namespace.",
+                           "description":"Identity of the audience in the related namespace.",
                            "meta:xdmType":"string",
                            "meta:xdmField":"@id"
                         },
@@ -3895,7 +3894,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                            "meta:referencedFrom":"https://ns.adobe.com/xdm/context/namespace"
                         }
                      },
-                     "description":"The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                     "description":"The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                      "meta:status":"deprecated",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:segmentID",
@@ -3905,7 +3904,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                      "type":"string",
                      "title":"Valid until",
                      "format":"date-time",
-                     "description":"The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                     "description":"The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:validUntil"
                   },
@@ -3956,7 +3955,7 @@ Inspect上記の呼び出しを実行すると取得する応答。 応答をド
                      "type":"string",
                      "title":"Last qualification time",
                      "format":"date-time",
-                     "description":"The timestamp when the assertion of segment membership was made.",
+                     "description":"The timestamp when the assertion of audience membership was made.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:lastQualificationTime"
                   }
@@ -4070,14 +4069,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                             "version": {
                                 "meta:xdmField": "xdm:version",
                                 "meta:xdmType": "string",
-                                "description": "The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                                "description": "The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                                 "type": "string",
                                 "title": "Version"
                             },
                             "validUntil": {
                                 "meta:xdmField": "xdm:validUntil",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                                "description": "The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Valid until"
@@ -4094,7 +4093,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "exited"
                                 ],
                                 "default": "realized",
-                                "description": "Is the segment participation realized as part of the current request.",
+                                "description": "Is the audience participation realized as part of the current request.",
                                 "type": "string",
                                 "title": "Status"
                             },
@@ -4132,7 +4131,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "_id": {
                                         "meta:xdmField": "@id",
                                         "meta:xdmType": "string",
-                                        "description": "Identity of the segment in the related namespace.",
+                                        "description": "Identity of the audience in the related namespace.",
                                         "format": "uri-reference",
                                         "type": "string",
                                         "title": "Identifier"
@@ -4140,7 +4139,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 },
                                 "meta:xdmType": "object",
                                 "type": "object",
-                                "description": "The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                                "description": "The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                                 "meta:status": "deprecated",
                                 "title": "Segment ID"
                             },
@@ -4245,13 +4244,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     }
                                 },
                                 "type": "object",
-                                "description": "Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                                "description": "Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                                 "title": "Payload"
                             },
                             "lastQualificationTime": {
                                 "meta:xdmField": "xdm:lastQualificationTime",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp when the assertion of segment membership was made.",
+                                "description": "The timestamp when the assertion of audience membership was made.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Last qualification time"
@@ -4323,7 +4322,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >* 以下に示すマッピングオブジェクトでは、 `destination` パラメーターはドットを受け入れません `"."`. 例えば、設定例でハイライト表示されているように personalEmail_address または segmentMembership_status を使用する必要があります。
 >* ソース属性が ID 属性で、ドットが含まれている場合は、特に異なります。 この場合、属性をでエスケープする必要があります。 `//`以下に示すように、を選択します。
 >* 以下の例の設定ではが含まれていますが、 `Email` および `Phone_E.164`を使用する場合、データフローごとに 1 つの id 属性のみをエクスポートできます。
-
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
@@ -4449,7 +4447,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 他のデータフローの更新 {#other-dataflow-updates}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 データフローを更新するには、 `PATCH` operation.例えば、データフローを更新して、フィールドを必須キーまたは重複排除キーとして選択できます。
 
@@ -4599,7 +4597,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## データフローの検証（データフローを取得） {#get-dataflow-runs}
 
-![ユーザーが表示している現在のステップをハイライト表示してセグメントをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 データフローの実行を確認するには、次の Dataflow Run API を使用します。
 
@@ -4679,7 +4677,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、Platform を目的のクラウドストレージの宛先の 1 つに接続し、セグメントをエクスポートするための各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
+このチュートリアルでは、Platform を目的のクラウドストレージの宛先の 1 つに接続し、オーディエンスをエクスポートするための各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

@@ -4,10 +4,10 @@ title: メールマーケティングの宛先の概要
 type: Tutorial
 description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。宛先としてサポートされる ESP をExperience Platformします。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 76%
+ht-degree: 66%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 76%
 
 ## 概要 {#overview}
 
-メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。Adobe Experience Platform は、メールマーケティングの宛先に対してセグメントをアクティブ化できるようにすることで、ESP と統合されます。
+メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。Adobe Experience Platformは、電子メールマーケティングの宛先に対するオーディエンスをアクティブ化できるようにすることで、ESP と統合されます。
 
 ## サポートされているメールマーケティングの宛先 {#supported-destinations}
 
@@ -23,7 +23,7 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
-* [Mailchimp 関心カテゴリ](mailchimp-interest-categories.md)
+* [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
 * [(API)OracleEloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）OracleEloqua](oracle-eloqua.md)
@@ -34,7 +34,7 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 ## 新しいメールマーケティングの宛先への接続 {#connect-destination}
 
-キャンペーン用のメールマーケティングの宛先に対するセグメントを送信するには、まずは Platform が宛先に接続する必要があります。新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーンの電子メールマーケティングの宛先にオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
 ## メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス {#best-practices}
 
@@ -67,13 +67,13 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 {style="table-layout:auto"}
 
-## メールマーケティングの宛先に対してセグメントをアクティブ化 {#activate}
+## 電子メールマーケティングの宛先に対してオーディエンスをアクティブ化 {#activate}
 
 カタログの書き出しプロファイルの一部の電子メールマーケティングの宛先は、宛先との API 統合を通じて、ストリーミング方式で行われます。
 
 クラウドストレージの場所に、その他の宛先の書き出しファイルを書き出します。 書き出しが完了したら、クラウドストレージの場所から電子メールマーケティングの宛先にデータを読み込む必要があります。
 
-リンク先の [サポートされる電子メールマーケティングの宛先](#supported-destinations) の節を参照して、各電子メールマーケティングの宛先に対してセグメントをアクティブ化する方法を確認してください。
+リンク先の [サポートされる電子メールマーケティングの宛先](#supported-destinations) 各電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する方法については、「 」セクションを参照してください。
 
 ## その他のリソース {#additional-resources}
 

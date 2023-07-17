@@ -1,11 +1,11 @@
 ---
 title: Pega Customer Decision Hub 接続
-description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とセグメントメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適な判定をおこないます。
+description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適なアクションを決定します。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 27%
+source-wordcount: '1006'
+ht-degree: 25%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 27%
 
 ## 概要 {#overview}
 
-以下を使用： [!DNL Pega Customer Decision Hub] の宛先 (Adobe Experience Platformの宛先 )：プロファイル属性とセグメントメンバーシップデータをに送信します。 [!DNL Pega Customer Decision Hub] 次に最適な判定をおこなう場合。
+以下を使用： [!DNL Pega Customer Decision Hub] の宛先（プロファイル属性とオーディエンスメンバーシップデータをに送信） [!DNL Pega Customer Decision Hub] 次に最適な判定をおこなう場合。
 
-に読み込まれたときの、Adobe Experience Platformからのプロファイルセグメントメンバーシップ [!DNL Pega Customer Decision Hub]は、アダプティブモデルで予測子として使用し、次に最適な判定をおこなうために、適切なコンテキストデータと行動データを配信するのに役立ちます。
+に読み込まれたときの、Adobe Experience Platformからのプロファイルオーディエンスメンバーシップ [!DNL Pega Customer Decision Hub]は、アダプティブモデルで予測子として使用し、次に最適な判定をおこなうために、適切なコンテキストデータと行動データを配信するのに役立ちます。
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ ht-degree: 27%
 
 ### 金融機関
 
-マーケターは、年金プランまたはリタイアメントプランのニュースレターを購読または購読解除した顧客に対するオファーを最適化したいと考えています。 金融サービス会社は、複数の顧客 ID を独自の CRM からAdobe Experience Platformに取り込み、独自のオフラインデータからセグメントを作成し、セグメントを開始および終了するプロファイルをに送信できます。 [!DNL Pega Customer Decision Hub] 送信チャネルでの次善の策 (NBA) 判定。
+マーケターは、年金プランまたはリタイアメントプランのニュースレターを購読または購読解除した顧客に対するオファーを最適化したいと考えています。 金融サービス会社は、複数の顧客 ID を独自の CRM からAdobe Experience Platformに取り込み、独自のオフラインデータからオーディエンスを構築し、オーディエンスを開始および終了するプロファイルをに送信できます。 [!DNL Pega Customer Decision Hub] 送信チャネルでの次善の策 (NBA) 判定。
 
 ## 前提条件 {#prerequisites}
 
 この宛先を使用してAdobe Experience Platformからデータを書き出す前に、次の前提条件を満たしていることを確認してください。 [!DNL Pega Customer Decision Hub]:
 
-* の設定 [Adobe Experience Platformプロファイルとセグメントメンバーシップの統合コンポーネント](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) の [!DNL Pega Customer Decision Hub] インスタンス。
+* の設定 [Adobe Experience Platformプロファイルとオーディエンスメンバーシップの統合コンポーネント](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) の [!DNL Pega Customer Decision Hub] インスタンス。
 * OAuth 2.0 の設定 [クライアント資格情報を使用したクライアント登録](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 付与タイプを [!DNL Pega Customer Decision Hub] インスタンス。
-* 設定 [リアルタイム実行データフロー](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) (Adobeセグメントメンバーシップデータフロー ) [!DNL Pega Customer Decision Hub] インスタンス。
+* 設定 [リアルタイム実行データフロー](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) (Adobeオーディエンスメンバーシップのデータフロー ) [!DNL Pega Customer Decision Hub] インスタンス。
 
 ## サポートされている ID {#supported-identities}
 
@@ -57,8 +57,8 @@ ht-degree: 27%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子 (*CustomerID*)、属性（姓、名、場所など） およびセグメントメンバーシップデータ。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミング先は、常に API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、セグメント評価に基づいて、コネクタが更新を宛先プラットフォームに送信します。 詳しくは、 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子 (*CustomerID*)、属性（姓、名、場所など） および Audience Membership データ。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミング先は、常に API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、オーディエンスの評価に基づいて、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ ht-degree: 27%
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL ホスト名]**:プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、[ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
+詳しくは、 [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md) を参照してください。
 
 ### 宛先属性 {#attributes}
 
@@ -120,14 +120,14 @@ ht-degree: 27%
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-プロファイルのセグメントメンバーシップの更新が成功すると、セグメント識別子、名前、ステータスが Pega マーケティングセグメントメンバーシップデータストアに挿入されます。 メンバーシップデータは、 [!DNL Pega Customer Decision Hub]、以下に示すように。
-![顧客プロファイルデザイナーを使用して顧客セグメントメンバーシップデータをAdobeに関連付けることができる UI 画面の画像](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+プロファイルのオーディエンスメンバーシップの更新が成功すると、Pega マーケティングオーディエンスメンバーシップデータストアにオーディエンス識別子、名前、ステータスが挿入されます。 メンバーシップデータは、 [!DNL Pega Customer Decision Hub]、以下に示すように。
+![顧客プロファイルデザイナーを使用して顧客オーディエンスメンバーシップAdobeを顧客に関連付けることができる UI 画面の画像](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-セグメントメンバーシップデータは、次に示すように、Pega Next-Best-Action Designer Engagement Polices で、次に最適な判定を行うために使用されます。
-![Pega の次に最適なアクションデザイナーのエンゲージメントポリシーの条件としてセグメントメンバーシップフィールドを追加できる UI 画面の画像](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+オーディエンスメンバーシップデータは、次に示すように、Pega Next-Best-Action Designer Engagement ポリシーで、次に最適な判定を行うために使用されます。
+![Pega の次に最適なアクションデザイナーのエンゲージメントポリシーの条件としてオーディエンスメンバーシップフィールドを追加できる UI 画面の画像](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-次に示すように、顧客セグメントメンバーシップデータフィールドは、アダプティブモデルで述語として追加されます。
-![UI 画面の画像です。この画面では、Prediction Studio を使用して、アダプティブモデルの述語としてセグメントメンバーシップフィールドを追加できます](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+次に示すように、顧客オーディエンスメンバーシップデータフィールドは、アダプティブモデルで述語として追加されます。
+![UI 画面の画像です。この画面では、Prediction Studio を使用して、アダプティブモデルでオーディエンスメンバーシップフィールドを述語として追加できます](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## その他のリソース {#additional-resources}
 

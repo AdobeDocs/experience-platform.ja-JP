@@ -1,25 +1,25 @@
 ---
-title: Mailchimp 関心カテゴリ
-description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用して、連絡先を興味と好みに基づいて並べ替えます。
+title: Mailchimp の興味カテゴリ
+description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2356'
 ht-degree: 22%
 
 ---
 
 # [!DNL Mailchimp Interest Categories] 接続
 
-[[!DNL Mailchimp]](https://mailchimp.com) は、企業が連絡先の管理や連絡に使用する、人気の高いマーケティングオートメーションプラットフォームおよび電子メールマーケティングサービスです *（顧客、顧客その他の利害関係人）* メーリングリストと電子メールマーケティングキャンペーンの使用 このコネクタを使用して、連絡先を興味と好みに基づいて並べ替えます。
+[[!DNL Mailchimp]](https://mailchimp.com) は、企業が連絡先の管理や連絡に使用する、人気の高いマーケティングオートメーションプラットフォームおよび電子メールマーケティングサービスです *（顧客、顧客その他の利害関係人）* メーリングリストと電子メールマーケティングキャンペーンの使用 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 
-[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [グループ](https://mailchimp.com/help/getting-started-with-groups/)、興味カテゴリ *（グループ名またはグループタイトルとも呼ばれます）。*. 各 [!DNL Mailchimp] group は、関心のあるカテゴリのリストです。 連絡先は、Web サイトのサインアップフォームを通じて 1 つ以上の興味カテゴリを購読する際に、興味カテゴリに関連付けられます。 オーディエンス内で、連絡先をグループに整理し、関心のあるカテゴリに関連付けることもできます。これらを使用して、セグメントを作成できます。 これらのセグメントを使用して、購読済みの連絡先にターゲットキャンペーン E メールをブロードキャストできます。
+[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [グループ](https://mailchimp.com/help/getting-started-with-groups/)、興味カテゴリ *（グループ名またはグループタイトルとも呼ばれます）。*. 各 [!DNL Mailchimp] group は、関心のあるカテゴリのリストです。 連絡先は、Web サイトのサインアップフォームを通じて 1 つ以上の興味カテゴリを購読する際に、興味カテゴリに関連付けられます。 オーディエンス内で、連絡先をグループに整理し、関心のあるカテゴリに関連付けることもできます。これらを使用して、セグメントを作成できます。 これらのオーディエンスを使用して、購読済みの連絡先にターゲットキャンペーン E メールをブロードキャストできます。
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 作成する API [興味カテゴリ](https://mailchimp.com/developer/marketing/api/interest-categories/) 次に、選択した各 Platform セグメントの連絡先を、対応する関心カテゴリに追加します。 以下が可能です。 **新規連絡先の追加** または **既存の情報を更新する [!DNL Mailchimp] 連絡先**&#x200B;を、 **目的のグループに追加または削除します。** 既存の [!DNL Mailchimp] オーディエンスに反映されます。 [!DNL Mailchimp Interest Groups] は、Platform で選択したセグメント名を、内の関心カテゴリとして使用します。 [!DNL Mailchimp].
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 作成する API [興味カテゴリ](https://mailchimp.com/developer/marketing/api/interest-categories/) 次に、選択した各 Platform オーディエンスからの連絡先を、対応する関心カテゴリに追加します。 以下が可能です。 **新規連絡先の追加** または **既存の情報を更新する [!DNL Mailchimp] 連絡先**&#x200B;を、 **目的のグループに追加または削除します。** 既存の [!DNL Mailchimp] オーディエンスに反映されます。 [!DNL Mailchimp Interest Groups] は、Platform から選択したオーディエンス名を、 [!DNL Mailchimp].
 
 ## ユースケース {#use-cases}
 
@@ -27,7 +27,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### マーケティングキャンペーン用の連絡先へのメール送信 {#use-case-send-emails}
 
-スポーツグッズの Web サイトの販売部門は、サッカーに興味を持つと自己識別した連絡先のリストに、電子メールベースのマーケティングキャンペーンを放送したいと考えています。 連絡先のリストは、Web サイトの開発チームから受け取ったデータ書き出しでバッチとして分けられるので、トラッキングする必要があります。 チームが既存の [!DNL Mailchimp] オーディエンスを作成し、各Experience Platformの連絡先を追加するリストセグメントの作成を開始します。 これらのセグメントを [!DNL Mailchimp Interest Categories]選択したに存在しない連絡先がある場合は、 [!DNL Mailchimp] オーディエンス訪問者が、その連絡先が属するセグメント名のグループに追加されます。 既に [!DNL Mailchimp] オーディエンスまたはグループを選択した場合、その情報が更新されます。 データがに送信された後 [!DNL Mailchimp Interest Categories]を使用している場合、セールスチームはマーケティングキャンペーンの電子メールを選択し、 [!DNL Mailchimp] オーディエンス。
+スポーツグッズの Web サイトの販売部門は、サッカーに興味を持つと自己識別した連絡先のリストに、電子メールベースのマーケティングキャンペーンを放送したいと考えています。 連絡先のリストは、Web サイトの開発チームから受け取ったデータ書き出しでバッチとして分けられるので、トラッキングする必要があります。 チームが既存の [!DNL Mailchimp] オーディエンスを作成し、各Experience Platformの連絡先を追加するリストオーディエンスの作成を開始します。 これらのオーディエンスをに送信した後 [!DNL Mailchimp Interest Categories]選択したに存在しない連絡先がある場合は、 [!DNL Mailchimp] オーディエンス訪問者が、その連絡先が属するオーディエンス名のグループに追加されます。 既に [!DNL Mailchimp] オーディエンスまたはグループを選択した場合、その情報が更新されます。 データがに送信された後 [!DNL Mailchimp Interest Categories]を使用している場合、セールスチームはマーケティングキャンペーンの電子メールを選択し、 [!DNL Mailchimp] オーディエンス。
 
 ## 前提条件 {#prerequisites}
 
@@ -91,8 +91,8 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各セグメントに対して、 [!DNL Mailchimp Interest Categories] セグメントのステータスが、Platform からのセグメントのステータスで更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメントの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各オーディエンスに対して、 [!DNL Mailchimp Interest Categories] セグメントのステータスは、Platform からのオーディエンスのステータスに合わせて更新されます。</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -145,15 +145,15 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィール�
 
 ![Audience グループページを示す mailchimp UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 「グループ」を選択し、選択したセグメントが Platform のセグメント名を持つカテゴリとして作成されているかどうかを確認します。カテゴリの後に、自動生成されたサフィックスが付く場合があります。
-   * この宛先では、選択したセグメントの名前を使用して、 [[!DNL Mailchimp] 興味カテゴリ API を追加](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 新しい宛先を作成し、同じセグメントを再度アクティブ化した場合、 [!DNL Mailchimp] 既存のセグメントと新しいセグメントを区別するためのサフィックスが追加されます。
+* 「グループ」を選択し、選択したオーディエンスが、Platform のオーディエンス名を持つカテゴリとして作成されているかどうかを確認します。カテゴリの後に、自動生成されたサフィックスが付く場合があります。
+   * この宛先では、選択したセグメントの名前を使用して、 [[!DNL Mailchimp] 興味カテゴリ API を追加](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 新しい宛先を作成し、同じオーディエンスを再度アクティブ化した場合、 [!DNL Mailchimp] 既存のセグメントと新しいセグメントを区別するためのサフィックスが追加されます。
 * グループに E メールが存在しなかった連絡先は、新しく作成されたカテゴリに追加されます。
 * グループ内に既に存在する連絡先の場合、属性フィールドのデータが更新され、新しく作成したカテゴリに追加された連絡先が更新されます。
 

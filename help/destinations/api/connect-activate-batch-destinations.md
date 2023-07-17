@@ -5,10 +5,10 @@ title: Flow Service API を使用したバッチ宛先への接続とデータ�
 description: Flow Service API を使用して、Experience Platform でクラウドストレージまたはメールマーケティングのバッチ宛先を作成し、データを有効化する手順を説明します
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3402'
-ht-degree: 92%
+source-wordcount: '3399'
+ht-degree: 80%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 92%
 
 このチュートリアルでは、すべての例で [!DNL Adobe Campaign] 宛先を使用しますが、どのクラウドストレージおよびメールマーケティングのバッチ宛先でも手順は同じです。
 
-![概要 - 宛先の作成およびセグメントの有効化の手順](../assets/api/email-marketing/overview.png)
+![概要 — 宛先の作成手順とオーディエンスのアクティブ化の手順](../assets/api/email-marketing/overview.png)
 
 Platform ユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[宛先の接続](../ui/connect-destination.md)および[プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../ui/activate-batch-profile-destinations.md)に関するチュートリアルを参照してください。
 
@@ -35,14 +35,14 @@ Platform ユーザーインターフェイスを使用して宛先に接続し�
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)：[!DNL Adobe Experience Platform Segmentation Service] により、[!DNL Adobe Experience Platform] で [!DNL Real-Time Customer Profile] のデータからセグメントを作成し、オーディエンスを生成できます。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] では、 [!DNL Adobe Experience Platform] から [!DNL Real-Time Customer Profile] データ。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、Platform でバッチ宛先に対してデータを有効化するために必要な追加情報を示します。
 
 ### 必要な認証情報の収集 {#gather-required-credentials}
 
-このチュートリアルの手順を完了するには、接続してセグメントを有効化する宛先の種類に応じて、次の資格情報を準備しておく必要があります。
+このチュートリアルの手順を完了するには、接続してオーディエンスをアクティブ化する宛先のタイプに応じて、次の資格情報を準備しておく必要があります。
 
 * [!DNL Amazon S3] 接続：`accessId`、`secretKey`
 * [!DNL Adobe Campaign] への [!DNL Amazon S3] 接続：`accessId`、`secretKey`
@@ -85,7 +85,7 @@ Platform ユーザーインターフェイスを使用して宛先に接続し�
 
 ![宛先手順の概要 - 手順 1](../assets/api/batch-destination/step1.png)
 
-最初の手順として、データを有効化する宛先を決定する必要があります。最初に、接続してセグメントをアクティブ化できる、使用可能な宛先のリストを要求する呼び出しを実行します。`connectionSpecs` エンドポイントに次の GET リクエストを実行すると、使用可能な宛先のリストが返されます。
+最初の手順として、データを有効化する宛先を決定する必要があります。まず、接続してオーディエンスをアクティブ化できる、使用可能な宛先のリストをリクエストする呼び出しを実行します。 `connectionSpecs` エンドポイントに次の GET リクエストを実行すると、使用可能な宛先のリストが返されます。
 
 **API 形式**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、[!DNL Adobe Campaign] に接続してセグメントを提供する場合、レスポンス内で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、オーディエンスを接続して配信する場合は、 [!DNL Adobe Campaign]の場合、応答内で次のスニペットを探します。
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | 接続先のバッチ宛先のフロー仕様 ID を使用します。フロー仕様 ID を取得するには、`flowspecs` エンドポイントで GET 操作を実行します。詳しくは、[フロー仕様 API リファレンスドキュメント](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec)を参照してください。応答で `upsTo` を探し、接続先のバッチ宛先の対応する ID をコピーします。例えば、Adobe Campaign の場合、`upsToCampaign` を探し、`id` パラメーターをコピーします。 |
 | `sourceConnectionIds` | 手順「[Experience Platform データへの接続](#connect-to-your-experience-platform-data)」で取得したソース接続 ID を使用します。 |
 | `targetConnectionIds` | 手順「[バッチ宛先への接続](#connect-to-batch-destination)」で取得したターゲット接続 ID を使用します。 |
-| `transformations` | 次の手順で、有効化するセグメントとプロファイル属性をこのセクションに入力します。 |
+| `transformations` | 次の手順では、アクティブ化するオーディエンスおよびプロファイル属性をこのセクションに入力します。 |
 
 参考までに、一般的に使用されるバッチ宛先のフロー仕様 ID を次の表に示します。
 
@@ -933,7 +933,7 @@ curl -X POST \
 
 **応答** 
 
-リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）と `etag` が返されます。両方の値を控えておきます。これらは次の手順で、セグメントを有効化し、データファイルを書き出すために必要になります。
+リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）と `etag` が返されます。次の手順で、オーディエンスをアクティブ化し、データファイルをエクスポートするために、両方の値をメモしておきます。
 
 ```json
 {
@@ -947,11 +947,11 @@ curl -X POST \
 
 ![宛先の指定手順の概要 - 手順 5](../assets/api/batch-destination/step5.png)
 
-ここまで、すべての接続とデータフローを作成しました。これで、宛先プラットフォームに対してプロファイルデータを有効化できます。この手順では、宛先に書き出すセグメントとプロファイル属性を選択します。
+ここまで、すべての接続とデータフローを作成しました。これで、宛先プラットフォームに対してプロファイルデータを有効化できます。この手順では、宛先に書き出すオーディエンスとプロファイル属性を選択します。
 
 また、書き出すファイルのファイル命名形式や、どの属性を[重複排除キー](../ui/activate-batch-profile-destinations.md#mandatory-keys)または[必須属性](../ui/activate-batch-profile-destinations.md#mandatory-attributes)として使用するかを指定することもできます。この手順では、宛先にデータを送信するスケジュールも指定できます。
 
-新しい宛先に対してセグメントをアクティブ化するには、次の例のような JSON パッチ操作を実行する必要があります。1 回の呼び出しで、複数のセグメントとプロファイル属性をアクティブ化できます。JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
+新しい宛先に対してオーディエンスをアクティブ化するには、次の例のような JSONPATCH操作を実行する必要があります。 1 回の呼び出しで、複数のオーディエンスおよびプロファイル属性をアクティブ化できます。 JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
 
 **API 形式**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
 | `{ETAG}` | を取得 `{ETAG}` 前の手順の応答から、 [データフローの作成](#create-dataflow). 前の手順の応答形式は、エスケープ引用符で囲まれています。 リクエストのヘッダーでは、エスケープされていない値を使用する必要があります。 次の例を参照してください。 <br> <ul><li>応答の例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br>ETag の値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すセグメント ID を指定します。有効化したいセグメントのセグメント ID の取得方法については、Adobe Experience Platform API リファレンスの[セグメント定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID の取得については、 [オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (Experience PlatformAPI リファレンス ) |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、`add` 操作を使用します。 |
-| `path` | 更新するフローの部分を定義します。セグメントをデータフローに追加する場合は、例で指定したパスを使用します。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。オーディエンスをデータフローに追加するには、 `add` 操作。 |
+| `path` | 更新するフローの部分を定義します。オーディエンスをデータフローに追加する場合は、例で指定したパスを使用します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
-| `id` | 宛先データフローに追加するセグメントの ID を指定します。 |
-| `name` | *オプション*。宛先データフローに追加するセグメントの名前を指定します。このフィールドは必須ではなく、名前を指定しなくてもセグメントを宛先データフローに正常に追加できます。 |
-| `filenameTemplate` | このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。<br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されるファイルには、書き出されたセグメントの ID が含まれます。</li><li>`%SEGMENT_NAME%`：オプション。書き出されるファイルには、書き出されたセグメントの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`：オプション。ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`：オプション。ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)」の節を参照してください。 |
+| `id` | 宛先データフローに追加するオーディエンスの ID を指定します。 |
+| `name` | *オプション*。宛先データフローに追加するオーディエンスの名前を指定します。 このフィールドは必須ではなく、名前を指定せずにオーディエンスを宛先データフローに正常に追加できます。 |
+| `filenameTemplate` | このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。<br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されたファイルには、書き出されたオーディエンスの ID が含まれます。</li><li>`%SEGMENT_NAME%`：オプション。書き出されたファイルには、書き出されたオーディエンスの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`：オプション。ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`：オプション。ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)」の節を参照してください。 |
 | `exportMode` | 必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
-| `startDate` | セグメントが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
+| `startDate` | オーディエンスが宛先へのプロファイルのエクスポートを開始する日付を選択します。 |
 | `frequency` | 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
 | `triggerType` | の場合 *バッチ宛先* のみ。 このフィールドは、 `"DAILY_FULL_EXPORT"` モード `frequency` セレクター。 <br> 必須. <br> <ul><li>選択 `"AFTER_SEGMENT_EVAL"` ：毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行する場合。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>選択 `"SCHEDULED"` を追加して、特定の時間にアクティベーションジョブを実行する必要があります。 これにより、Experience Platformプロファイルデータは毎日同時に書き出されますが、アクティベーションジョブの開始前にバッチセグメントジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、 `startTime` を使用して、毎日の書き出しが発生する時刻 (UTC) を指定します。</li></ul> |
-| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> セグメントメンバーが宛先への書き出しを停止する日付を設定します。 |
-| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイルエクスポート先でセグメントをデータフローに追加する場合にのみ必要です。 <br>必須。セグメントのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
+| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し先でオーディエンスをデータフローに追加する場合にのみ必要です。 <br>`"exportMode":"DAILY_FULL_EXPORT"` かつ `"frequency":"ONCE"` を選択している場合は適用されません。<br> オーディエンスメンバーが宛先への書き出しを停止する日付を設定します。 |
+| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し先でオーディエンスをデータフローに追加する場合にのみ必要です。 <br>必須。オーディエンスのメンバーを含むファイルを生成し、宛先に書き出す時間を選択します。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> 詳しくは、 [データフローのセグメントのコンポーネントを更新](/help/destinations/api/update-destination-dataflows.md#update-segment) 書き出したセグメントの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法を説明します。
+> 詳しくは、 [データフロー内のオーディエンスのコンポーネントを更新](/help/destinations/api/update-destination-dataflows.md#update-segment) 書き出したオーディエンスの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法について説明します。
 
 **応答**
 
@@ -1055,7 +1055,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![宛先手順の概要 - 手順 6](../assets/api/batch-destination/step6.png)
 
-このチュートリアルの最後の手順として、セグメントとプロファイル属性が正しくデータフローにマッピングされたことを検証する必要があります。
+このチュートリアルの最後の手順では、オーディエンスとプロファイル属性が実際にデータフローに正しくマッピングされていることを検証する必要があります。
 
 検証するには、次の GET リクエストを実行します。
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **応答** 
 
-返されたレスポンスの `transformations` パラメーターに、前述の手順で送信したセグメントとプロファイル属性が含まれています。レスポンス内のサンプル `transformations` パラメーターは次のようになります。
+返される応答は、 `transformations` パラメーターは、前の手順で送信したオーディエンスおよびプロファイル属性です。 レスポンス内のサンプル `transformations` パラメーターは次のようになります。
 
 ```json
 "transformations":[

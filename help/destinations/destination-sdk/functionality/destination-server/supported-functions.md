@@ -1,10 +1,10 @@
 ---
 description: Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、Pebble テンプレートを使用します。
 title: Destination SDK でサポートされる変換関数
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '579'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
@@ -29,7 +29,7 @@ Experience Platform から宛先に書き出されたデータ用に[メッセ�
 
 このリファレンスページの概念および関数を理解するには、最初に[メッセージ形式](message-format.md)ドキュメントを参照してください。変換するための [!DNL Pebble] テンプレートおよび書き出されたデータを使用する前に、Experience Platform の[プロファイルの構造](message-format.md#profile-structure)を理解する必要があります。
 
-以下に説明する関数に進む前に、[ID、属性、セグメントメンバーシップを変換するためのテンプレート言語の使用](message-format.md#using-templating)の節のテンプレートの例を確認してください。そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
+以下に説明する関数に進む前に、「 」セクションのテンプレートの例を確認してください。 [ID、属性、オーディエンスのメンバーシップ変換にテンプレート言語を使用する](message-format.md#using-templating). そこに記載されている例は、非常にシンプルなものから始まり、だんだん複雑になっていきます。
 
 ## サポートされる [!DNL Pebble] 関数 {#supported-functions}
 
@@ -91,7 +91,7 @@ Experience Platform が書き出すデフォルトの [ISO 8601](https://ja.wiki
 
 #### ユースケース
 
-これらの関数は、プロファイルに追加された／プロファイルから削除されたセグメントのリストを取得するために使用できます。
+これらの関数は、プロファイルに追加またはプロファイルから削除されたオーディエンスのリストを取得するために使用できます。
 
 #### 例
 
@@ -142,7 +142,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

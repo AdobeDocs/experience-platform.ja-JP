@@ -2,10 +2,10 @@
 title: Azure Blob 接続
 description: Azure Blob Storage へのライブアウトバウンド接続を作成して、Adobe Experience Platform から CSV データファイルを定期的に書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 80%
+source-wordcount: '1085'
+ht-degree: 69%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 80%
 >データセットの書き出し機能のベータ版リリースと、ファイルの書き出し機能の改善により、宛先カタログに 2 つの [!DNL Azure Blob] カードが表示される場合があります。
 >* **[!UICONTROL Azure Blob]** 宛先に既にファイルを書き出している場合は、新しい **[!UICONTROL Azure Blob ベータ版]** 宛先への新しいデータフローを作成してください。
 >* **[!UICONTROL Azure Blob]** 宛先へのデータフローをまだ作成していない場合は、新しい **[!UICONTROL Azure Blob ベータ版]** カードを使用して **[!UICONTROL Azure Blob]** にファイルを書き出してください。
-
 
 ![2 つの Azure Blob 宛先カードの並列表示の画像](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
@@ -35,8 +34,8 @@ ht-degree: 80%
 
 ## に接続 [!UICONTROL Azure Blob] API または UI を介したストレージ {#connect-api-or-ui}
 
-* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先へのセグメントのアクティブ化](#activate) 下
-* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対してセグメントをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
+* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## はじめに
 
@@ -47,7 +46,21 @@ ht-degree: 80%
    * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-有効な [!DNL Blob] 宛先が既にある場合は、このドキュメントの残りの部分をスキップし、[宛先に対するセグメントのアクティブ化](../../ui/activate-batch-profile-destinations.md)に関するチュートリアルに進んで構いません。
+既に有効な [!DNL Blob] の宛先については、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください。 [宛先へのオーディエンスのアクティブ化](../../ui/activate-batch-profile-destinations.md).
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+
+| オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -87,7 +100,7 @@ ht-degree: 80%
    * [!DNL Blob] 接続文字列の設定について詳しくは、Microsoftドキュメントの [Azure Storage アカウントの接続文字列を構成する](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -105,15 +118,15 @@ ht-degree: 80%
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントを有効化する手順については、[プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../../ui/activate-batch-profile-destinations.md)を参照してください。
+詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ## （ベータ版）データセットの書き出し {#export-datasets}
 
@@ -124,4 +137,4 @@ ht-degree: 80%
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Azure Blob Storage] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、セグメントのアクティブ化に関するチュートリアルの[プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
+[!DNL Azure Blob Storage] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルの詳細については、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。

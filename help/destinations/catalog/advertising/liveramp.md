@@ -4,10 +4,10 @@ description: LiveRamp コネクタを使用して、Adobe Real-time Customer Dat
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
-ht-degree: 100%
+source-wordcount: '1736'
+ht-degree: 81%
 
 ---
 
@@ -19,7 +19,6 @@ LiveRamp 接続を使用して、Adobe Real-time Customer Data Platform から [
 >
 ><p>この宛先接続は現在アルファ版の段階にあり、一部のお客様のみにご利用いただけます。機能とドキュメントは変更される場合があります。</p>
 &gt;<p>この宛先接続の最終バージョンでは、お客様による移行が必要になる場合があります。</p>
-
 
 ## ユースケース {#use-cases}
 
@@ -45,8 +44,8 @@ LiveRamp SFTP では、公式の [LiveRamp ドキュメント](https://docs.live
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | [!DNL LiveRamp SFTP] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | セグメント評価に基づいて Experience Platform 内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 [!DNL LiveRamp SFTP] 宛先。 |
+| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ LiveRamp SFTP では、公式の [LiveRamp ドキュメント](https://docs.live
 * **[!UICONTROL パスワード]**：[!DNL LiveRamp SFTP] ストレージの場所のパスワード。
 * **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。暗号化キーを入力する場合は、「[宛先の詳細](#destination-details)」セクションで&#x200B;**[!UICONTROL 暗号化サブキー ID]** も入力する必要があります。
 
-   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SSH キー認証を使用した SFTP** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ LiveRamp SFTP では、公式の [LiveRamp ドキュメント](https://docs.live
 
 * **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。暗号化キーを入力する場合は、「[宛先の詳細](#destination-details)」セクションで&#x200B;**[!UICONTROL 暗号化サブキー ID]** も入力する必要があります。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -108,30 +107,30 @@ LiveRamp SFTP では、公式の [LiveRamp ドキュメント](https://docs.live
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
+読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### スケジュール設定 {#scheduling}
 
-[!UICONTROL スケジュール設定]ステップでは、以下に示す設定で各セグメントの書き出しスケジュールを作成します。
+内 [!UICONTROL スケジュール] 次の設定で、各オーディエンスの書き出しスケジュールを作成します。
 
 >[!IMPORTANT]
 >
->この宛先に対してアクティブ化するすべてのセグメントを、まったく同じスケジュールに設定する必要があります（下図を参照）。
+>この宛先に対してアクティブ化されるすべてのオーディエンスは、以下に示すように、同じスケジュールで設定する必要があります。
 
 * **[!UICONTROL ファイル書き出しオプション]**：[!UICONTROL 完全ファイルを書き出し]。[増分ファイル書き出し](../../ui/activate-batch-profile-destinations.md#export-incremental-files)は現在、[!DNL LiveRamp] 宛先ではサポートされていません。
 * **[!UICONTROL 頻度]**：[!UICONTROL 毎日]
-* 書き出し時間を&#x200B;**[!UICONTROL セグメント評価後]**&#x200B;に設定します。スケジュール設定したセグメント書き出しと[オンデマンドファイル書き出し](../../ui/export-file-now.md)は現在、[!DNL LiveRamp] 宛先ではサポートされていません。
+* 書き出し時間を&#x200B;**[!UICONTROL セグメント評価後]**&#x200B;に設定します。スケジュールされたオーディエンスのエクスポートおよび [オンデマンドファイルの書き出し](../../ui/export-file-now.md) は現在、 [!DNL LiveRamp] 宛先。
 * **[!UICONTROL 日付]**：希望する書き出し開始時刻および終了時刻を選択します。
 
-![セグメントのスケジュール設定ステップを示す Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![オーディエンスのスケジュール設定手順を示した Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 書き出すファイルの名前は現在、ユーザーが設定することはできません。[!DNL LiveRamp SFTP] 宛先に書き出すすべてのファイルは、次のテンプレートに基づいて自動的に名前が付けられます。
 
@@ -179,28 +178,28 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 ファイルを [!DNL LiveRamp SFTP] 宛先に書き出す場合、Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成します。
 
-例えば、次のセグメントについて考えてみます。
+例えば、次のオーディエンスについて考えてみましょう。
 
-* セグメント A（結合ポリシー 1）
-* セグメント B（結合ポリシー 2）
-* セグメント C（結合ポリシー 1）
-* セグメント D（結合ポリシー 1）
+* オーディエンス A（結合ポリシー 1）
+* オーディエンス B（結合ポリシー 2）
+* オーディエンス C（結合ポリシー 1）
+* オーディエンス D（結合ポリシー 1）
 
 Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp SFTP] に書き出します。
 
-* セグメント A、C および D を含んだ 1 つの CSV ファイル。
-* セグメント B を含んだ 1 つの CSV ファイル。
+* オーディエンス A、C、D を含む 1 つの CSV ファイル
+* オーディエンス B を含む 1 つの CSV ファイル。
 
-書き出される CSV ファイルには、選択した属性とそれに対応するセグメントステータスを持つプロファイルが別々の列に含まれ、属性名とセグメント ID が列ヘッダーとなっています。
+書き出された CSV ファイルには、選択した属性と対応するオーディエンスステータスを持つプロファイルが別々の列に含まれ、属性名とオーディエンス ID が列ヘッダーとして含まれます。
 
-書き出されたファイルに含まれているプロファイルは、次のセグメント選定ステータスのいずれかと一致する可能性があります。
+書き出されたファイルに含まれるプロファイルは、次のオーディエンス資格ステータスのいずれかに一致します。
 
-* `Active`：プロファイルは現在、セグメントに対して選定されています。
-* `Expired`：プロファイルはセグメントに対して選定されなくなりましたが、過去に選定されたことがあります。
-* `""`（空の文字列）：プロファイルはセグメントに対して選定されたことはありません。
+* `Active`:プロファイルは現在、オーディエンスに適合しています。
+* `Expired`:プロファイルは、オーディエンスの資格を失い、過去に認定されています。
+* `""`（空の文字列）:プロファイルは、オーディエンスに対して認定されませんでした。
 
 
-例えば、書き出された CSV ファイルに 1 つの `email` 属性と 3 つのセグメントが含まれている場合、CSV ファイルは次のようになります。
+例えば、書き出された CSV ファイル（1 つを含む） `email` 属性と 3 つのオーディエンスは次のようになります。
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
-つまり、[データフロー実行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)ページの&#x200B;**[!UICONTROL アクティブ化された ID]** 指標と&#x200B;**[!UICONTROL 受信したプロファイル]**&#x200B;指標が、セグメントごとに表示されるのではなく、同じ結合ポリシーを使用するセグメントのグループごとに集計されます。
+これは、 **[!UICONTROL アクティブ化された ID]** および **[!UICONTROL 受信したプロファイル]** 指標 [データフロー実行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) ページは、各オーディエンスに対して表示されるのではなく、同じ結合ポリシーを使用するオーディエンスの各グループに対して集計されます。
 
-同じ結合ポリシーを使用するセグメントのグループに対してデータフロー実行が生成されるので、セグメント名は[モニタリングダッシュボード](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)に表示されません。
+同じ結合ポリシーを使用するオーディエンスのグループに対してデータフローの実行が生成されるので、オーディエンス名は [監視ダッシュボード](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![「アクティブ化された ID」指標を示す Experience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

@@ -1,17 +1,17 @@
 ---
 description: Destination SDK で作成された宛先でサポートされるプロファイル選定履歴について説明します。
 title: プロファイル選定履歴
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 100%
+ht-degree: 69%
 
 ---
 
 
 # プロファイル選定履歴
 
-Destination SDK を通じて作成したすべての宛先は、デフォルトでプロファイル選定履歴をサポートしています。つまり、ユーザーが最初に宛先に対するアクティベーションデータフローを設定すると、最初の書き出しには、これまでにそのセグメントに選定されたことのある、セグメントのすべてのメンバーが含まれます。
+Destination SDK を通じて作成したすべての宛先は、デフォルトでプロファイル選定履歴をサポートしています。つまり、ユーザーが最初に宛先に対するアクティベーションデータフローを設定したとき、最初の書き出しには、そのセグメントに対してこれまでに認定されたすべてのオーディエンスメンバーが含まれます。
 
 この動作は、宛先設定の `"backfillHistoricalProfileData":true` パラメーターで定義されます。
 
@@ -33,14 +33,14 @@ Destination SDK を通じて作成したすべての宛先は、デフォルト�
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、Experience Platform では、最初にセグメントを宛先に書き出す際に、これまでにアクティブ化されたセグメントに選定されたことのあるすべてのプロファイルの母集団履歴が自動的に書き出されることを理解しました。このオプションは、Destination SDK や Experience Platform UI では設定できません。
+この記事を読むと、Experience Platformは、オーディエンスが最初に宛先に書き出されたときに、アクティブ化されたオーディエンスの対象として認定されたすべてのプロファイルの過去の母集団を自動的に書き出すことになります。 このオプションは、Destination SDK や Experience Platform UI では設定できません。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 

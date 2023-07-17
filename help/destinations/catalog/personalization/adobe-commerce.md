@@ -2,7 +2,7 @@
 title: Adobe Commerce Destination Connector
 description: Adobe CommerceとReal-Time CDPの商人が、Real-Time CDP内で作成および管理する顧客オーディエンスに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、買い物体験をパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 59%
@@ -67,7 +67,7 @@ Experience Platform で、以下を作成します。
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [プロファイルリクエストの宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-edge-personalization-destinations.md) オーディエンスを [!DNL Commerce] 宛先。
+読み取り [プロファイルリクエストの宛先へのプロファイルとオーディエンスのアクティブ化](../../ui/activate-edge-personalization-destinations.md) オーディエンスを [!DNL Commerce] 宛先。
 
 ## [!DNL Adobe Commerce] での次の手順
 

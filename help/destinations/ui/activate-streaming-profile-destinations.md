@@ -1,17 +1,18 @@
 ---
 keywords: プロファイルの宛先のアクティベート;宛先のアクティベート;データのアクティベート;メールマーケティングの宛先アクティベート;クラウドストレージの宛先をアクティベート
-title: ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化
+title: ストリーミングプロファイルの書き出し先に対するオーディエンスのアクティブ化
 type: Tutorial
-description: ストリーミングプロファイルベースの宛先にセグメントを送信して、Adobe Experience Platformでオーディエンスデータをアクティブ化する方法について説明します。
+description: オーディエンスをストリーミングプロファイルベースの宛先に送信して、Adobe Experience Platformでオーディエンスデータをアクティブ化する方法について説明します。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 51%
+source-wordcount: '760'
+ht-degree: 28%
 
 ---
 
-# ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化
+
+# ストリーミングプロファイルの書き出し先に対するオーディエンスのアクティブ化
 
 >[!IMPORTANT]
 > 
@@ -34,35 +35,31 @@ ht-degree: 51%
 
    ![宛先カタログタブを示す画像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 以下に示す画像のように、セグメントをアクティベートする宛先に対応するカードで「**[!UICONTROL セグメントのアクティベート]**」を選択します。
+1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
 
-   ![「宛先カタログ」タブの「セグメントをアクティブ化」コントロールをハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![「宛先カタログ」タブで、オーディエンスコントロールをアクティブ化したことをハイライトする画像。](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. セグメントをアクティベートするために使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
    ![接続できる 2 つの宛先の選択を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. 次のセクションの「[セグメントを選択](#select-segments)」に移動します。
+1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
-## セグメントを選択 {#select-segments}
+## オーディエンスを選択 {#select-audiences}
 
-セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティベートするセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
+宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用して、 **[!UICONTROL 次へ]**.
 
-![アクティベーションワークフローのセグメントを選択ステップでのチェックボックス選択をハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+オリジンに応じて、複数のタイプのオーディエンスから選択できます。
+
+* **[!UICONTROL セグメント化サービス]**:セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
+
+![アクティベーションワークフローのオーディエンスを選択ステップで選択されたチェックボックスをハイライトした画像です。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## プロファイル属性の選択 {#select-attributes}
 
 内 **[!UICONTROL マッピング]** 手順：ターゲットの宛先に送信するプロファイル属性を選択します。
-
->[!NOTE]
->
-> Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
-
-ファイルのエクスポートは、`segmentMembership.status` が選択されているかどうかによって、次のように異なります。
-* `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
-* `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
-
-![マッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. **[!UICONTROL 属性を選択]**&#x200B;ページで「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
 
@@ -76,14 +73,13 @@ ht-degree: 51%
 
    ![ソースフィールドとして選択できる XDM フィールドの選択を示す画像です。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-
-1. さらにマッピングを追加するには、手順 1 ～ 3 を繰り返して、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. フィールドをさらに追加するには、手順 1 ～ 3 を繰り返して、「 」を選択します。 **[!UICONTROL 次へ]**.
 
 ## レビュー {#review}
 
 「**[!UICONTROL レビュー]**」ページには、選択内容の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
-![レビューステップの選択の概要。](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
+![レビューステップの選択の概要。](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
@@ -91,21 +87,21 @@ ht-degree: 51%
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-内 **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。ポリシー違反の解決方法については、 [データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）。
+内 **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
-### セグメントのフィルタリング {#filter-segments}
+### オーディエンスのフィルタリング {#filter-audiences}
 
-また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたセグメントのみを表示できます。
+また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。
 
-![レビューステップで使用可能なセグメントフィルターを示す画面記録。](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+![レビュー手順で使用可能なオーディエンスフィルターを示す画面記録。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
 選択が完了し、ポリシー違反が検出されなかった場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
 
-## セグメントのアクティベーションを検証 {#verify}
+## オーディエンスのアクティベーションを検証 {#verify}
 
-エクスポート済み [!DNL Experience Platform] データは、ターゲットとなる宛先に JSON 形式で配置されます。 例えば、以下のイベントには、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれます。 この見込み客の ID は、ECID と電子メールです。
+エクスポート済み [!DNL Experience Platform] データは、ターゲットとなる宛先に JSON 形式で配置されます。 例えば、以下のイベントには、特定のオーディエンスに適合し、別のオーディエンスから離脱したプロファイルの電子メールアドレス属性が含まれます。 この見込み客の ID は次のとおりです `ECID` および `email_lc_sha256`.
 
 ```json
 {

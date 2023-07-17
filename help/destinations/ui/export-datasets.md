@@ -3,10 +3,10 @@ title: （ベータ版）クラウドストレージ宛先へのデータセッ�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
-ht-degree: 88%
+ht-degree: 84%
 
 ---
 
@@ -35,14 +35,14 @@ ht-degree: 88%
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## セグメントをアクティブ化するタイミングまたはデータセットを書き出すタイミング {#when-to-activate-segments-or-activate-datasets}
+## オーディエンスをアクティブ化する場合、またはデータセットを書き出す場合 {#when-to-activate-audiences-or-activate-datasets}
 
-Experience Platform カタログ内の一部のファイルベース宛先では、セグメントのアクティベーションとデータセットの書き出しの両方をサポートしています。
+Experience Platformカタログ内の一部のファイルベースの宛先は、オーディエンスのアクティベーションとデータセットの書き出しの両方をサポートしています。
 
-* データを、オーディエンスの関心または選定別にグループ化されたプロファイルに構造化する場合は、セグメントのアクティブ化を検討してください。
+* オーディエンスの興味または資格別にデータをプロファイルに構造化する場合は、オーディエンスのアクティブ化を検討してください。
 * また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 このデータは、レポート、データサイエンスワークフロー、コンプライアンス要件への適合、その他多くのユースケースに使用できます。
 
-このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。クラウドストレージ宛先またはメールマーケティング宛先に対してセグメントをアクティブ化する場合は、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
+このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。クラウドストレージまたは電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する場合は、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## 前提条件 {#prerequisites}
 

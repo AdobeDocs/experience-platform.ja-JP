@@ -4,7 +4,7 @@ title: 宛先アカウントの更新
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で宛先アカウントを更新する手順を示します
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 11%
@@ -37,7 +37,7 @@ ht-degree: 11%
 
    ![宛先アカウントのフィルター](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 省略記号 (`...`) をクリックします。 ポップアップパネルが表示され、次のオプションが表示されます。 **[!UICONTROL セグメントのアクティブ化]**, **[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** アカウント を選択します。 ![「詳細を編集」ボタン](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 詳細を編集]** ボタンをクリックして、アカウント情報を編集します。
+3. 省略記号 (`...`) をクリックします。 ポップアップパネルが表示され、次のオプションが表示されます。 **[!UICONTROL オーディエンスをアクティブ化]**, **[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** アカウント を選択します。 ![「詳細を編集」ボタン](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 詳細を編集]** ボタンをクリックして、アカウント情報を編集します。
 
    ![アカウントを編集](../assets/ui/update-accounts/accounts-edit.png)
 

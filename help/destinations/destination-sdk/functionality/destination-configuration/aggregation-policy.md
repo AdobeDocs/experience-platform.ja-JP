@@ -1,10 +1,10 @@
 ---
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -112,8 +112,8 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | `configurableAggregation.maxBatchAgeInSecs` | 整数 | このパラメーターは、`maxNumEventsInBatch` と共に使用して、Experience Platform がエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <ul><li>最小値（秒）：1800</li><li>最大値（秒）：3600</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整数 | このパラメーターは、`maxBatchAgeInSecs` と共に使用して API 呼び出しにいくつの認定プロファイルを集計するかを決定します。 <ul><li>最小値：1000</li><li>最大値：10000</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
 | `configurableAggregation.aggregationKey` | - | 以下に記述するパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。 |
-| `configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | 宛先に書き出されたプロファイルをセグメント ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | ブール値 | 宛先に書き出されたプロファイルをセグメント ID とセグメントステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
+| `configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | このパラメーターをに設定します。 `true` オーディエンス ID で宛先に書き出したプロファイルをグループ化する場合。 |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | ブール値 | このパラメーターと `includeSegmentId` から `true`の場合は、オーディエンス ID とオーディエンスのステータス別に宛先に書き出されたプロファイルをグループ化します。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | ブール値 | 宛先に書き出されたプロファイルを ID 名前空間でグループ化する場合は、このパラメーターを `true` に設定します。 |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | ブール値 | 書き出されたプロファイルを単一の ID（GAID、IDFA、電話番号、メールなど）に基づいてグループに集計する場合は、このパラメーターを `true` に設定します。 |
 | `configurableAggregation.aggregationKey.groups` | 配列 | 宛先に書き出されたプロファイルを ID 名前空間のグループでグループ化する場合は、ID グループのリストを作成します。例えば、上記の例に示した設定を使用して、IDFA および GAID モバイル識別子を含むプロファイルを宛先に対する 1 つの呼び出しに、メールを別の呼び出しに、それぞれ組み合わせることができます。 |

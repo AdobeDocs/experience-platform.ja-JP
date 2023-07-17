@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 100%
+source-wordcount: '1167'
+ht-degree: 96%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
    * [クラウドストレージ宛先の API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
-   * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスセグメントを有効化する](./api/ad-hoc-activation-api.md)
+   * [（ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスをアクティブ化します](./api/ad-hoc-activation-api.md)
    * [宛先の編集](./api/edit-destination.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 100%
    * [新しい宛先接続の作成](./ui/connect-destination.md)
    * 宛先へのオーディエンスデータの有効化 {#activate}
       * [有効化の概要](./ui/activation-overview.md)
-      * [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md)
-      * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md)
-      * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md)
-      * [エッジパーソナライゼーションの宛先に対するオーディエンスデータの有効化](./ui/activate-edge-personalization-destinations.md)
+      * [ストリーミングオーディエンスの書き出し先に対するオーディエンスのアクティブ化](./ui/activate-segment-streaming-destinations.md)
+      * [ストリーミングプロファイルの書き出し先に対するオーディエンスのアクティブ化](./ui/activate-streaming-profile-destinations.md)
+      * [オーディエンスをアクティブ化して、プロファイルの一括書き出し先に](./ui/activate-batch-profile-destinations.md)
+      * [エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化](./ui/activate-edge-personalization-destinations.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 100%
       * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform セグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+      * [Experience Platformオーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
    * 広告の宛先 {#advertising}
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)

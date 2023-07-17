@@ -4,7 +4,7 @@ title: 宛先の削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で既存の宛先を削除する手順を示します
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 33%
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 Adobe Experience Platformユーザーインターフェイスで、宛先への既存の接続を削除できます。
 
-宛先を削除すると、その宛先への既存のデータフローが削除されます。 削除する宛先に対してアクティブ化されているセグメントは、データフローが削除される前にマッピング解除されます。
+宛先を削除すると、その宛先への既存のデータフローが削除されます。 削除する宛先に対してアクティブ化されているオーディエンスは、データフローが削除される前にマッピング解除されます。
 
 から宛先を削除する方法は 2 つあります [!DNL Platform] [!DNL UI]. 次のことができます。
 
@@ -61,11 +61,11 @@ Adobe Experience Platformユーザーインターフェイスで、宛先への�
 
    * 宛先に既存のデータフローがある場合は、「 [!UICONTROL データフローの実行] タブをクリックします。
 
-      ![「データフロー実行」タブ](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![「データフロー実行」タブ](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 宛先に既存のデータフローがない場合は、空のページが表示され、オーディエンスのアクティブ化を開始できます。
 
-      ![宛先の詳細](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![宛先の詳細](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. 選択 **[!UICONTROL 削除]** をクリックします。
 

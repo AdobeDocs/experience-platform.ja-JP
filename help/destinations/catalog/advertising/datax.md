@@ -2,10 +2,10 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 51%
+source-wordcount: '776'
+ht-degree: 48%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->100 を超えるセグメントをアクティブ化する場合 [!DNL Verizon Media/Yahoo DataX]の場合は、宛先からレート制限エラーが発生する可能性があります。 この宛先に対してセグメントをアクティブ化する場合は、1 つのアクティベーションデータフローで 100 個未満のセグメントをアクティブ化するようにしてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントで新しい宛先を作成します。
+>100 を超えるオーディエンスをアクティブ化する場合 [!DNL Verizon Media/Yahoo DataX]の場合は、宛先からレート制限エラーが発生する可能性があります。 この宛先に対してオーディエンスをアクティブ化する場合は、1 つのアクティベーションデータフローで 100 未満のオーディエンスをアクティブ化するようにします。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントで新しい宛先を作成します。
 
 [!DNL DataX] は、 [DataX ドキュメント](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ ht-degree: 51%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | Verizon Media の宛先で使用される識別子（E メール、GAID、IDFA）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Verizon Media の宛先で使用される識別子（E メール、GAID、IDFA）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 
-[!DNL DataX] API は、 [!DNL Verizon Media] (VMG) は、VMG のほぼリアルタイム API を使用して、新しいセグメントをすばやく作成し、目的のオーディエンスグループをプッシュできます。
+[!DNL DataX] API は、 [!DNL Verizon Media] (VMG) は、VMG のほぼリアルタイム API を使用して、新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュできます。
 
 ## 宛先に接続 {#connect}
 
@@ -114,15 +114,15 @@ ht-degree: 51%
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-segment-streaming-destinations.md) 宛先に対してオーディエンスセグメントをアクティブ化する手順については、を参照してください。
+読み取り [宛先へのプロファイルとオーディエンスのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

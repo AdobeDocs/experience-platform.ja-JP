@@ -3,10 +3,10 @@ keywords: CRM;CRM;CRM の宛先；Outreach;Outreach crm の宛先
 title: アウトリーチ接続
 description: Outreach の宛先を使用すると、アカウントデータを書き出し、Outreach 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 53%
+source-wordcount: '1710'
+ht-degree: 42%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 53%
 
 ## ユースケース {#use-cases}
 
-マーケターは、Adobe Experience Platformプロファイルの属性に基づいて、見込み客にパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからセグメントを作成し、それらのセグメントをに送信できます。 [!DNL Outreach]:Adobe Experience Platformでセグメントとプロファイルが更新されるとすぐに、見込み客のフィードに表示されます。
+マーケターは、Adobe Experience Platformプロファイルの属性に基づいて、見込み客にパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからオーディエンスを構築し、そのオーディエンスをに送信できます。 [!DNL Outreach]:Adobe Experience Platformでオーディエンスとプロファイルが更新されるとすぐに、見込み客のフィードに表示されます。
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 53%
 
 [!DNL Outreach] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
 
-セグメントのステータスに関するガイダンスが必要な場合は、[セグメントメンバーシップの詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md)に関するアドビのドキュメントを参照してください。
+詳しくは、Adobeのドキュメントを参照してください。 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) オーディエンスのステータスに関するガイダンスが必要な場合は、を参照してください。
 
 ### アウトリーチの前提条件 {#prerequisites-destination}
 
@@ -49,12 +49,12 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 #### カスタムフィールドラベルの設定 {#prerequisites-custom-fields}
 
-[!DNL Outreach] は、次のカスタムフィールドをサポートします： [見込み客](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). 参照： [Outreach にカスタムフィールドを追加する方法](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) を参照してください。 識別しやすいように、デフォルトを維持する代わりに、ラベルを対応するセグメント名に手動で更新することをお勧めします。 例：
+[!DNL Outreach] は、次のカスタムフィールドをサポートします： [見込み客](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). 参照： [Outreach にカスタムフィールドを追加する方法](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) を参照してください。 識別しやすくするために、デフォルトを維持する代わりに、ラベルを対応するオーディエンス名に手動で更新することをお勧めします。 例：
 
 [!DNL Outreach] カスタムフィールドを表示する見込み客の設定ページです。
 ![設定ページにカスタムフィールドを示す Outreach UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] カスタムフィールドを表示する見込み客の設定ページ *使いやすい* セグメント名に一致するラベル。 これらのラベルに対して、見込み客ページでセグメントのステータスを表示できます。
+[!DNL Outreach] カスタムフィールドを表示する見込み客の設定ページ *使いやすい* オーディエンス名に一致するラベル。 これらのラベルに対して、見込み客ページでオーディエンスのステータスを表示できます。
 ![設定ページ上に、カスタムフィールドと関連ラベルを示す Outreach UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 この [!DNL Outreach] API には、ユーザーあたり 1 時間に 10,000 件のリクエストのレート制限があります。 この制限に達すると、 `429` 応答に次のメッセージが表示されます。 `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
-このメッセージが表示された場合は、レートしきい値に従ってセグメントの書き出しスケジュールを更新する必要があります。
+このメッセージが表示された場合は、レートしきい値に従ってオーディエンスの書き出しスケジュールを更新する必要があります。
 
 詳しくは、 [[!DNL Outreach] ドキュメント](https://api.outreach.io/api/v2/docs#rate-limiting) を参照してください。
 
@@ -83,8 +83,8 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Outreach] の各セグメントのステータスは、[セグメントスケジュール](#schedule-segment-export-example)手順の最中に指定された[!UICONTROL マッピング ID] 値に基づいて、Platform の対応するセグメントステータスとともに更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li> ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> 各セグメントのステータス ( [!DNL Outreach] は、 [!UICONTROL マッピング ID] 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example) 手順</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li> ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -130,15 +130,15 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
-> データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+> データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](../../ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
@@ -152,7 +152,7 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 
 1. [!UICONTROL ターゲットフィールドを選択]ウィンドウで、ソースフィールドにマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
-      ![OutreachId を使用した Target マッピングを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![OutreachId を使用した Target マッピングを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間の次のマッピングを追加：
 |XDM プロファイルスキーマ|[!DNL Outreach] インスタンス| 必須|
@@ -160,34 +160,33 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 |`Oid`|`OutreachId`| はい |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「[!UICONTROL 属性名]」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。参照： [[!DNL Outreach] 見込み客向けドキュメント](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
-      ![LastName を使用した Target マッピングを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![LastName を使用した Target マッピングを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Outreach] インスタンス： |XDM プロファイルスキーマ|[!DNL Outreach] インスタンス| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
 
    * これらのマッピングの使用例を次に示します。
-      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
+     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
 
-### セグメントの書き出しをスケジュールと例 {#schedule-segment-export-example}
+### オーディエンスのエクスポートと例をスケジュール {#schedule-segment-export-example}
 
-* 実行時に [セグメントの書き出しをスケジュール](../../ui/activate-segment-streaming-destinations.md) 手順 Platform セグメントを [!DNL Outreach].
+* 実行時に [オーディエンスの書き出しをスケジュール](../../ui/activate-segment-streaming-destinations.md) 手順 Platform オーディエンスを、 [!DNL Outreach].
 
 * これをおこなうには、各セグメントを選択し、 *カスタムフィールド `N` ラベル* ～から離れる [!DNL Outreach] 内 **[!UICONTROL マッピング ID]** フィールドに入力します。
 
-   >[!IMPORTANT]
-   >
-   > * 数値 *(`N`)* 内で使用される [!UICONTROL マッピング ID] は、の数値でサフィックスが付いたカスタム属性キーに一致する必要があります [!DNL Outreach]. 例： *カスタムフィールド `N` ラベル*.
-   > * 指定する必要があるのは数値のみで、カスタムフィールドのラベル全体は指定できません。
-   > * [!DNL Outreach] では、最大 150 個のカスタムラベルフィールドをサポートしています。
-   > * 参照： [[!DNL Outreach] 見込み客向けドキュメント](https://api.outreach.io/api/v2/docs#prospect) 」を参照してください。
-
+  >[!IMPORTANT]
+  >
+  > * 数値 *(`N`)* 内で使用される [!UICONTROL マッピング ID] は、の数値でサフィックスが付いたカスタム属性キーに一致する必要があります [!DNL Outreach]. 例： *カスタムフィールド `N` ラベル*.
+  > * 指定する必要があるのは数値のみで、カスタムフィールドのラベル全体は指定できません。
+  > * [!DNL Outreach] では、最大 150 個のカスタムラベルフィールドをサポートしています。
+  > * 参照： [[!DNL Outreach] 見込み客向けドキュメント](https://api.outreach.io/api/v2/docs#prospect) 」を参照してください。
 
    * 以下に例を示します。
 
-      | [!DNL Outreach] フィールド | プラットフォームマッピング ID |
-      |---|---|
-      | カスタムフィールド `4` ラベル | `4` |
+     | [!DNL Outreach] フィールド | プラットフォームマッピング ID |
+     |---|---|
+     | カスタムフィールド `4` ラベル | `4` |
 
-      ![スケジュールセグメントの書き出し中のマッピング ID の例を示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![スケジュールオーディエンスの書き出し中のマッピング ID の例を示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## データの書き出しを検証する {#exported-data}
 
@@ -199,15 +198,15 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
    ![選択した宛先の宛先データフロー実行を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 「**[!DNL Activation data]**」タブに切り替えて、セグメント名を選択します。
+1. 次に切り替え： **[!DNL Activation data]** 」タブをクリックし、オーディエンス名を選択します。
    ![宛先のアクティベーションデータを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
-1. セグメント概要をモニターし、プロファイルの数がセグメント内で作成された数と一致していることを確認します。
+1. オーディエンスの概要を監視し、プロファイルの数がセグメント内で作成された数に対応していることを確認します。
    ![セグメントの概要を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/segment.png)
 
-1. [!DNL Outreach] web サイトににログインして、[!DNL Apps]／[!DNL Contacts] ページに移動し、セグメントのプロファイルが追加されたかどうかを確認します。[!DNL Outreach] の各セグメントステータスが、[セグメントスケジューリング](#schedule-segment-export-example)の手順で提供された[!UICONTROL マッピング ID] の値に基づいて、Platform から対応するセグメントステータスに更新されたことがわかります。
+1. にログインします。 [!DNL Outreach] web サイトに移動し、 [!DNL Apps] > [!DNL Contacts] ページを開き、オーディエンスからのプロファイルが追加されたかどうかを確認します。 各オーディエンスのステータスは、 [!DNL Outreach] は、 [!UICONTROL マッピング ID] 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example) 手順
 
-![Outreach UI のスクリーンショットに、Outreach の見込み客ページと、更新されたセグメントのステータスが表示されています。](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![Outreach UI のスクリーンショットに、Outreach の見込み客ページと、更新されたオーディエンスのステータスが表示されています。](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -219,7 +218,7 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 
 ![無効なリクエストエラーを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/error.png)
 
-このエラーを修正するには、 [!UICONTROL マッピング ID] Platform で指定した [!DNL Outreach] セグメントは有効で、次に存在します： [!DNL Outreach].
+このエラーを修正するには、 [!UICONTROL マッピング ID] Platform で指定した [!DNL Outreach] オーディエンスが有効で、次に存在する [!DNL Outreach].
 
 ## その他のリソース {#additional-resources}
 

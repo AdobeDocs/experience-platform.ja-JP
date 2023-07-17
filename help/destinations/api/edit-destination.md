@@ -3,7 +3,7 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先接続の編集
 type: Tutorial
 description: フローサービス API を使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -18,7 +18,7 @@ ht-degree: 33%
 >
 > このチュートリアルで説明する編集操作は、現在、フローサービス API を通じてのみサポートされています。
 
-## はじめに {#get-started}
+## Destination SDK の {#get-started}
 
 このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、 [宛先カタログ](../catalog/overview.md) そして、以下に示す手順に従います。 [宛先に接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に
 
@@ -245,7 +245,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) または [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 新しい [**[!UICONTROL セグメント名にセグメント ID を追加]**](/help/release-notes/2023/april-2023.md#destinations) フィールドに入力します。
+次のリクエストは、 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) または [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 新しい [**[!UICONTROL オーディエンス名にオーディエンス ID を追加する]**](/help/release-notes/2023/april-2023.md#destinations) フィールドに入力します。
 
 ```shell
 curl -X PATCH \

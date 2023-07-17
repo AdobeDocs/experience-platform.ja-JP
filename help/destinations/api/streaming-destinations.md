@@ -5,10 +5,10 @@ title: Adobe Experience Platformのフローサービス API を使用して、�
 description: このドキュメントでは、Adobe Experience Platform API を使用したストリーミング先の作成について説明します
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 57%
+ht-degree: 45%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 57%
 
 このチュートリアルでは、 [!DNL Amazon Kinesis] の宛先はすべての例で同じですが、手順は [!DNL Azure Event Hubs].
 
-![概要 — ストリーミング宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/streaming-destination/overview.png)
+![概要 — ストリーミング宛先の作成手順とオーディエンスのアクティブ化の手順](../assets/api/streaming-destination/overview.png)
 
-Platform のユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md) および [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../ui/activate-segment-streaming-destinations.md) チュートリアル
+Platform のユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md) および [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../ui/activate-segment-streaming-destinations.md) チュートリアル
 
 ## はじめに
 
@@ -42,7 +42,7 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 ### 必要な資格情報の収集
 
-このチュートリアルの手順を完了するには、接続してセグメントをアクティブ化する宛先の種類に応じて、次の資格情報を準備しておく必要があります。
+このチュートリアルの手順を完了するには、接続してオーディエンスをアクティブ化する宛先の種類に応じて、次の資格情報を準備しておく必要があります。
 
 * の場合 [!DNL Amazon Kinesis] 接続： `accessKeyId`, `secretKey`, `region` または `connectionUrl`
 * の場合 [!DNL Azure Event Hubs] 接続： `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ![宛先手順の概要 - 手順 1](../assets/api/streaming-destination/step1.png)
 
-最初の手順として、データをアクティブ化するストリーミング先を決定する必要があります。 最初に、接続してセグメントをアクティブ化できる、使用可能な宛先のリストを要求する呼び出しを実行します。`connectionSpecs` エンドポイントに次の GET リクエストを実行すると、使用可能な宛先のリストが返されます。
+最初の手順として、データをアクティブ化するストリーミング先を決定する必要があります。 まず、接続してオーディエンスをアクティブ化できる、使用可能な宛先のリストをリクエストする呼び出しを実行します。 `connectionSpecs` エンドポイントに次の GET リクエストを実行すると、使用可能な宛先のリストが返されます。
 
 **API 形式**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、に接続してセグメントを配信する場合は、 [!DNL Amazon Kinesis] または [!DNL Azure Event Hubs]の場合、応答内で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、オーディエンスを接続して配信する場合は、 [!DNL Amazon Kinesis] または [!DNL Azure Event Hubs]の場合、応答内で次のスニペットを探します。
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **応答** 
 
-リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）と `etag` が返されます。両方の値をメモしておきます。これらの値は、次の手順でセグメントをアクティブ化する際に使用します。
+リクエストが成功した場合は、新しく作成したデータフローの ID（`id`）と `etag` が返されます。両方の値をメモしておきます。次の手順でオーディエンスをアクティブ化する際に使用します。
 
 ```json
 {
@@ -423,9 +423,9 @@ curl -X POST \
 
 ![宛先の指定手順の概要 - 手順 5](../assets/api/streaming-destination/step5.png)
 
-これで、すべての接続とデータフローを作成したので、ストリーミングプラットフォームに対してプロファイルデータをアクティブ化できます。 この手順では、宛先に送信するセグメントとプロファイル属性を選択し、スケジュールを設定して宛先にデータを送信します。
+これで、すべての接続とデータフローを作成したので、ストリーミングプラットフォームに対してプロファイルデータをアクティブ化できます。 この手順では、宛先に送信するオーディエンスとプロファイル属性を選択し、スケジュールを設定して宛先にデータを送信します。
 
-新しい宛先に対してセグメントをアクティブ化するには、次の例のような JSON パッチ操作を実行する必要があります。1 回の呼び出しで、複数のセグメントとプロファイル属性をアクティブ化できます。JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
+新しい宛先に対してオーディエンスをアクティブ化するには、次の例のような JSONPATCH操作を実行する必要があります。 1 回の呼び出しで、複数のオーディエンスおよびプロファイル属性をアクティブ化できます。 JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
 
 **API 形式**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
 | `{ETAG}` | を取得 `{ETAG}` 前の手順の応答から、 [データフローの作成](#create-dataflow). 前の手順の応答形式は、エスケープ引用符で囲まれています。 リクエストのヘッダーでは、エスケープされていない値を使用する必要があります。 次の例を参照してください。 <br> <ul><li>応答の例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br>ETag の値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すセグメント ID を指定します。有効化したいセグメントのセグメント ID の取得方法については、Adobe Experience Platform API リファレンスの[セグメント定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById)を参照してください。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID の取得については、 [オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (Experience PlatformAPI リファレンス ) |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。セグメントをデータフローに追加するには、`add` 操作を使用します。 |
-| `path` | 更新するフローの部分を定義します。セグメントをデータフローに追加する場合は、例で指定したパスを使用します。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。オーディエンスをデータフローに追加するには、 `add` 操作。 |
+| `path` | 更新するフローの部分を定義します。オーディエンスをデータフローに追加する場合は、例で指定したパスを使用します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
-| `id` | 宛先データフローに追加するセグメントの ID を指定します。 |
-| `name` | *オプション*。宛先データフローに追加するセグメントの名前を指定します。このフィールドは必須ではなく、名前を指定しなくてもセグメントを宛先データフローに正常に追加できます。 |
+| `id` | 宛先データフローに追加するオーディエンスの ID を指定します。 |
+| `name` | *オプション*。宛先データフローに追加するオーディエンスの名前を指定します。 このフィールドは必須ではなく、名前を指定せずにオーディエンスを宛先データフローに正常に追加できます。 |
 
 **応答** 
 
@@ -490,7 +490,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![宛先の指定手順の概要 - 手順 6](../assets/api/streaming-destination/step6.png)
 
-このチュートリアルの最後の手順では、セグメントとプロファイル属性が実際にデータフローに正しくマッピングされたことを検証する必要があります。
+このチュートリアルの最後の手順では、オーディエンスとプロファイル属性が実際にデータフローに正しくマッピングされていることを検証する必要があります。
 
 検証するには、次の GET リクエストを実行します。
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **応答** 
 
-返されたレスポンスの `transformations` パラメーターに、前述の手順で送信したセグメントとプロファイル属性が含まれています。レスポンス内のサンプル `transformations` パラメーターは次のようになります。
+返される応答は、 `transformations` パラメーターは、前の手順で送信したオーディエンスおよびプロファイル属性です。 レスポンス内のサンプル `transformations` パラメーターは次のようになります。
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 手順のプロファイル属性とセグメントに加えて [新しい宛先に対してデータをアクティブ化する](#activate-data)、で書き出されたデータ [!DNL AWS Kinesis] および [!DNL Azure Event Hubs] id マップに関する情報も含まれます。 これは、エクスポートされたプロファイルの ID を表します ( 例： [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど )。 以下の例を参照してください。
+> 手順のプロファイル属性とオーディエンスに加えて、 [新しい宛先に対してデータをアクティブ化する](#activate-data)、で書き出されたデータ [!DNL AWS Kinesis] および [!DNL Azure Event Hubs] id マップに関する情報も含まれます。 これは、エクスポートされたプロファイルの ID を表します ( 例： [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja)、モバイル ID、Google ID、電子メールアドレスなど )。 以下の例を参照してください。
 
 ```json
 {

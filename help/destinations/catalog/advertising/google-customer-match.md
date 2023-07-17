@@ -3,10 +3,10 @@ keywords: Google カスタマーマッチ；Googleカスタマーマッチ；Goo
 title: Google Customer Match 接続
 description: Google Customer Match を使用すると、Search、Shopping、Gmail、YouTubeなど、Googleが所有および運用するプロパティをまたいで、オンラインデータとオフラインデータを使用して顧客にリーチし、再び関与することができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 27%
+source-wordcount: '1818'
+ht-degree: 23%
 
 ---
 
@@ -24,13 +24,13 @@ ht-degree: 27%
 
 ### 使用例#1
 
-スポーツアパレルブランドは、を通じて既存の顧客にリーチしたいと考えています [!DNL Google Search] および [!DNL Google Shopping] 過去の購入と閲覧履歴に基づいてオファーと品目をパーソナライズする。 アパレルブランドは、独自の CRM からExperience Platformに電子メールアドレスを取り込み、独自のオフラインデータからセグメントを作成できます。 その後、これらのセグメントを [!DNL Google Customer Match] 広く用いられる [!DNL Search] および [!DNL Shopping]広告費用を最適化しています。
+スポーツアパレルブランドは、を通じて既存の顧客にリーチしたいと考えています [!DNL Google Search] および [!DNL Google Shopping] 過去の購入と閲覧履歴に基づいてオファーと品目をパーソナライズする。 アパレルブランドは、独自の CRM からExperience Platformに電子メールアドレスを取り込み、独自のオフラインデータからオーディエンスを構築できます。 その後、これらのオーディエンスを [!DNL Google Customer Match] 広く用いられる [!DNL Search] および [!DNL Shopping]広告費用を最適化しています。
 
 ### 使用例#2
 
 有名なテクノロジー企業が新しい電話を始めました。 この新しい電話モデルを推進するため、電話の新機能を、以前のモデルの携帯電話を所有するお客様に知らせようとしています。
 
-このリリースを促進するには、電子メールアドレスを識別子として使用して、CRM データベースからExperience Platformに電子メールアドレスをアップロードします。 セグメントは、古い電話モデルを所有している顧客に基づいて作成されます。 次に、セグメントがに送信されます。 [!DNL Google Customer Match]を使用することで、現在の顧客、古い電話モデルを所有している顧客および類似の顧客を [!DNL YouTube].
+このリリースを促進するには、電子メールアドレスを識別子として使用して、CRM データベースからExperience Platformに電子メールアドレスをアップロードします。 オーディエンスは、古い電話モデルを所有する顧客に基づいて作成されます。 その後、オーディエンスがに送信されます [!DNL Google Customer Match]を使用することで、現在の顧客、古い電話モデルを所有している顧客および類似の顧客を [!DNL YouTube].
 
 ## のデータガバナンス [!DNL Google Customer Match] 宛先 {#data-governance}
 
@@ -50,14 +50,28 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 {style="table-layout:auto"}
 
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+
+| オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+
+{style="table-layout:auto"}
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Google Customer Match] 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 [!DNL Google Customer Match] 宛先。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >
 > * この **[!UICONTROL PII との組み合わせ]** マーケティングアクションは、デフォルトで [!DNL Google Customer Match] 宛先および削除できません。
 
-
 ### アラートの有効化 {#enable-alerts}
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
+詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-内 **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL アプリ ID] 送信時 [!DNL IDFA] または [!DNL GAID] セグメントを [!DNL Google Customer Match].
+内 **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL アプリ ID] 送信時 [!DNL IDFA] または [!DNL GAID] オーディエンス [!DNL Google Customer Match].
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ![ID マッピング変換](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## セグメントのアクティベーションが成功したことを確認します。  {#verify-activation}
+## オーディエンスのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-アクティベーションフローが完了したら、 **[!UICONTROL Google Ads]** アカウント アクティブ化されたセグメントは、顧客リストとしてGoogleアカウントに表示されます。 なお、一部のオーディエンスは、セグメントサイズに応じて、提供するアクティブユーザーが 100 人を超えない限り、設定されません。
+アクティベーションフローが完了したら、 **[!UICONTROL Google Ads]** アカウント アクティブ化されたオーディエンスは、顧客リストとしてGoogleアカウントに表示されます。 なお、オーディエンスのサイズによっては、提供するアクティブユーザーが 100 人を超えない限り、一部のオーディエンスは設定されないことに注意してください。
 
-セグメントを [!DNL IDFA] および [!DNL GAID] モバイル ID [!DNL Google Customer Match] は ID マッピングごとに個別のセグメントを作成します。 お使いの [!DNL Google Ads] アカウントには 2 つの異なるセグメントが表示され、1 つは [!DNL IDFA]で、1 つは [!DNL GAID] マッピング。
+オーディエンスを両方にマッピングする場合 [!DNL IDFA] および [!DNL GAID] モバイル ID [!DNL Google Customer Match] は、ID マッピングごとに個別のオーディエンスを作成します。 お使いの [!DNL Google Ads] アカウントには 2 つの異なるセグメントが表示され、1 つは [!DNL IDFA]で、1 つは [!DNL GAID] マッピング。
 
 ## トラブルシューティング {#troubleshooting}
 

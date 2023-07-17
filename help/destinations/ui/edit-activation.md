@@ -4,7 +4,7 @@ title: アクティベーションデータフローを編集
 type: Tutorial
 description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションデータフローを編集します。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 26%
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 # アクティベーションデータフローを編集 {#edit-activation-flows}
 
-Adobe Experience Platformでは、既存のアクティベーションデータフローの様々なコンポーネントを、書き出したセグメントやプロファイル属性、書き出し頻度、アクティベーションデータフローが有効か無効かなど、宛先に編集できます。
+Adobe Experience Platformでは、書き出されたオーディエンスやプロファイル属性、書き出し頻度、アクティベーションデータフローが有効か無効かなど、既存のアクティベーションデータフローの様々なコンポーネントを宛先に編集できます。
 
 ## データフローを編集 {#edit-dataflows}
 
@@ -33,10 +33,11 @@ Adobe Experience Platformでは、既存のアクティベーションデータ�
 
 4. この **[!UICONTROL データフローの実行]** リンク先のページが表示され、使用可能なコントロールが示されます。 この時点で、宛先データフローの複数のコンポーネントを編集できます。
 
-   * 選択 **[!UICONTROL セグメントのアクティブ化]** をクリックして、宛先に送信するセグメントまたはプロファイル属性を変更します。 このアクションを実行すると、アクティベーションワークフローが表示されます。このワークフローは、宛先のタイプに応じて異なります。 詳しくは、次のガイドを参照してください。
-      * [ストリーミング宛先をセグメント化するためのオーディエンスデータのアクティブ化](./activate-segment-streaming-destinations.md) ( 例：Facebook、Twitter)。
+   * 選択 **[!UICONTROL オーディエンスをアクティブ化]** をクリックして、宛先に送信するオーディエンスまたはプロファイル属性を変更します。 このアクションを実行すると、アクティベーションワークフローが表示されます。このワークフローは、宛先のタイプに応じて異なります。 詳しくは、次のガイドを参照してください。
+      * [オーディエンスストリーミング宛先へのオーディエンスデータのアクティブ化](./activate-segment-streaming-destinations.md) ( 例：Facebook、Twitter)。
       * [プロファイルベースの宛先へのオーディエンスデータのアクティブ化](./activate-batch-profile-destinations.md) ( 例：Amazon S3 またはOracleEloqua)。
       * [ストリーミングプロファイルベースの宛先に対するオーディエンスデータのアクティブ化](./activate-streaming-profile-destinations.md) ( 例：HTTP API やAmazon Kinesis)。
+
    * さらに、宛先のデータフローの名前と説明を編集できます。
    * 以下を使用して、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
 

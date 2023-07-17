@@ -3,10 +3,10 @@ title: （API）Oracle Eloqua 接続
 description: (API)Oracleの Eloqua の宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてOracleEloqua 内でアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2125'
-ht-degree: 32%
+source-wordcount: '2124'
+ht-degree: 31%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 32%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) マーケターは、見込み客に合わせてパーソナライズされたカスタマーエクスペリエンスを提供しながら、キャンペーンを計画および実行できます。 統合されたリード管理と簡単なキャンペーン作成により、マーケターは適切なタイミングで適切なオーディエンスを購入者のジャーニーにエンゲージし、電子メール、ディスプレイ検索、ビデオ、モバイルなどの様々なチャネルでオーディエンスに到達できます。 セールスチームは、より迅速に取引を成立させ、リアルタイムのインサイトを通じてマーケティングの ROI を向上させることができます。
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [連絡先の更新](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作 [!DNL Oracle Eloqua] REST API（次の操作を実行できます） **id を更新** ～へのセグメント内で [!DNL Oracle Eloqua].
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [連絡先の更新](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 操作 [!DNL Oracle Eloqua] REST API（次の操作を実行できます） **id を更新** ～に対する観客の中で [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [基本認証](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) 話をする [!DNL Oracle Eloqua] REST API。 [!DNL Oracle Eloqua] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
 ## ユースケース {#use-cases}
 
-オンラインプラットフォームのマーケティング部門は、厳選されたリードのオーディエンスに対して、電子メールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 プラットフォームのマーケティングチームは、Adobe Experience Platformを通じて既存のリード情報を更新し、独自のオフラインデータからセグメントを作成し、それらのセグメントをに送信できます。 [!DNL Oracle Eloqua]：マーケティングキャンペーンの電子メールの送信に使用できます。
+オンラインプラットフォームのマーケティング部門は、厳選されたリードのオーディエンスに対して、電子メールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 プラットフォームのマーケティングチームは、Adobe Experience Platformを通じて既存のリード情報を更新し、独自のオフラインデータからオーディエンスを構築し、それらのオーディエンスをに送信できます。 [!DNL Oracle Eloqua]：マーケティングキャンペーンの電子メールの送信に使用できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -29,7 +29,7 @@ ht-degree: 32%
 
 [!DNL Oracle Eloqua] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
 
-詳しくは、Experience Platformドキュメントを参照してください。 [セグメントメンバーシップの詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) セグメントのステータスに関するガイダンスが必要な場合。
+詳しくは、Experience Platformドキュメントを参照してください。 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) オーディエンスのステータスに関するガイダンスが必要な場合は、を参照してください。
 
 ### [!DNL Oracle Eloqua] 前提条件 {#prerequisites-destination}
 
@@ -56,9 +56,8 @@ Platform からにデータを書き出すには、以下を実行します。 [
 >
 >* [!DNL Oracle Eloqua] カスタム連絡先フィールドは、 **[!UICONTROL セグメントを選択]** 手順
 
-
 * [!DNL Oracle Eloqua] には、250 個のカスタム連絡先フィールドの上限があります。
-* 新しいセグメントを書き出す前に、Platform セグメントの数と、内の既存のセグメントの数を確認してください [!DNL Oracle Eloqua] この制限を超えないでください。
+* 新しいオーディエンスをエクスポートする前に、Platform オーディエンスの数と、内の既存のオーディエンスの数を確認してください [!DNL Oracle Eloqua] この制限を超えないでください。
 * この制限を超えると、Experience Platform中にエラーが発生します。 これは、 [!DNL Oracle Eloqua] API はリクエストの検証に失敗し、 — を使用して応答します。 *400:検証エラーが発生しました*  — 問題を説明するエラーメッセージ。
 * 上記の制限に達した場合は、既存のマッピングを宛先から削除し、 [!DNL Oracle Eloqua] アカウントを使用して、さらに多くのセグメントを書き出すことができます。
 
@@ -78,8 +77,8 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各セグメントに対して、 [!DNL Oracle Eloqua] セグメントのステータスが、Platform からのセグメントのステータスで更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各オーディエンスに対して、 [!DNL Oracle Eloqua] セグメントのステータスは、Platform からのオーディエンスのステータスに合わせて更新されます。</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -128,15 +127,15 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
@@ -150,7 +149,7 @@ XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドは、次の手
    * これらの手順を繰り返して、XDM プロファイルスキーマとの間に必要な属性マッピングと必要な属性マッピングの両方を追加します。 [!DNL Oracle Eloqua]: |ソースフィールド |ターゲットフィールド |必須 | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`|はい | |`xdm: personalEmail.address`|`Attribute: emailAddress`|はい | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
    * 上記のマッピングの例を次に示します。
-      ![属性マッピングを使用した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![属性マッピングを使用した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -178,20 +177,20 @@ XDM フィールドを [!DNL Oracle Eloqua] 宛先フィールドは、次の手
 
 >[!NOTE]
 >
->宛先は、連絡先フィールド情報をに送信する際に、各実行で選択されたセグメント名に、一意の識別子を自動的にサフィックス付けします。 [!DNL Oracle Eloqua]. これにより、セグメント名に対応する連絡先フィールド名が重複しなくなります。 詳しくは、 [データの書き出しを検証する](#exported-data) セクションのスクリーンショットの例 [!DNL Oracle Eloqua] セグメント名を使用して作成されたカスタム連絡先フィールドを含む連絡先詳細ページ。
+>宛先は、連絡先フィールド情報をに送信する際に、各実行で選択されたオーディエンス名に、自動的に一意の識別子を付加します。 [!DNL Oracle Eloqua]. これにより、オーディエンス名に対応する連絡先フィールド名が重複しなくなります。 詳しくは、 [データの書き出しを検証する](#exported-data) セクションのスクリーンショットの例 [!DNL Oracle Eloqua] オーディエンス名を使用して作成されたカスタム連絡先フィールドを含む連絡先詳細ページ。
 
 ## データの書き出しを検証する {#exported-data}
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. 選択 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** をクリックし、宛先のリストに移動します。
-1. 次に、宛先を選択し、 **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、セグメント名を選択します。
+1. 次に、宛先を選択し、 **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、オーディエンス名を選択します。
    ![宛先のアクティベーションデータを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. セグメント概要を監視し、プロファイルの数がセグメント内の数に対応していることを確認します。
+1. オーディエンスの概要を監視し、プロファイルの数がセグメント内の数に対応していることを確認します。
    ![セグメントを示す Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. にログインします。 [!DNL Oracle Eloqua] web サイトに移動し、 **[!UICONTROL 連絡先の概要]** ページを開いて、セグメントのプロファイルが追加されたかどうかを確認します。 セグメントのステータスを確認するには、 **[!UICONTROL 連絡先の詳細]** ページを開き、選択したセグメント名をプレフィックスとして持つ連絡先フィールドが作成されたかどうかを確認します。
+1. にログインします。 [!DNL Oracle Eloqua] web サイトに移動し、 **[!UICONTROL 連絡先の概要]** ページを使用して、オーディエンスからのプロファイルが追加されたかどうかを確認します。 オーディエンスのステータスを確認するには、 **[!UICONTROL 連絡先の詳細]** ページを開き、選択したオーディエンス名をプレフィックスとして持つ連絡先フィールドが作成されたかどうかを確認します。
 
 ![Oracle名で作成されたカスタム連絡先フィールドを含む連絡先詳細ページを示す Eloqua UI のスクリーンショット。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 

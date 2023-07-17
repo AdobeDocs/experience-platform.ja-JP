@@ -3,16 +3,16 @@ title: SalesforceMarketing Cloudアカウントエンゲージメント
 description: SalesforceMarketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用して、アカウントデータをエクスポートし、SalesforceMarketing Cloudアカウントエンゲージメント内で、ビジネスニーズに応じてアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 36%
+source-wordcount: '1588'
+ht-degree: 33%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud Account Engagement] 接続
 
-以下を使用： [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *( 旧称： [!DNL Pardot])* リードをキャプチャ、トラッキング、スコアリングおよびグレードする宛先。 また、電子メールドリップキャンペーンやリード管理を通じて、ターゲットとする市場セグメントおよび顧客グループに対して、パイプラインのすべてのステージのリードトラックを設計し、育成、スコアリング、キャンペーンのセグメント化を行うこともできます。
+以下を使用： [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *( 旧称： [!DNL Pardot])* リードをキャプチャ、トラッキング、スコアリングおよびグレードする宛先。 また、電子メールドリップキャンペーンや、育成、スコアリング、キャンペーンのセグメント化を使用したリード管理を通じて、ターゲット市場のオーディエンスや顧客グループ向けに、パイプラインのすべてのステージのリードトラックを設計できます。
 
 比較対象 [!DNL Salesforce Marketing Cloud Engagement] それはより向いている **B2C** マーケティング [!DNL Marketing Cloud Account Engagement] はに最適です。 **B2B** 販売サイクルと決定サイクルを長くする必要がある複数の部門や意思決定者が関与する使用例 また、CRM との近接性と統合を維持し、適切な販売およびマーケティングの決定を下すこともできます。 *注意：Experience Platformには、 [!DNL Salesforce Marketing Cloud Engagement]を使用する場合、 [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) および [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) ページ。*
 
@@ -26,7 +26,7 @@ ht-degree: 36%
 
 ### マーケティングキャンペーン用の連絡先へのメール送信 {#use-case-send-emails}
 
-オンラインプラットフォームのマーケティング部門は、B2B リードの厳選されたオーディエンスに電子メールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 プラットフォームのマーケティングチームは、Adobe Experience Platformを通じて新しいリードを追加したり、既存のリード情報を更新したり、独自のオフラインデータからセグメントを作成したり、これらのセグメントをに送信したりできます。 [!DNL Marketing Cloud Account Engagement]：マーケティングキャンペーンの電子メールの送信に使用できます。
+オンラインプラットフォームのマーケティング部門は、B2B リードの厳選されたオーディエンスに電子メールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 プラットフォームのマーケティングチームは、Adobe Experience Platformを通じて新しいリードを追加したり、既存のリード情報を更新したり、独自のオフラインデータからオーディエンスを構築したり、これらのオーディエンスを [!DNL Marketing Cloud Account Engagement]：マーケティングキャンペーンの電子メールの送信に使用できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -86,8 +86,8 @@ A [!DNL Marketing Cloud Account Engagement] のサブスクリプションを持
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各セグメントに対して、 [!DNL Salesforce Marketing Cloud Account Engagement] セグメントのステータスが、Platform からのセグメントのステータスで更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各オーディエンスに対して、 [!DNL Salesforce Marketing Cloud Account Engagement] セグメントのステータスは、Platform からのオーディエンスのステータスに合わせて更新されます。</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -132,15 +132,15 @@ A [!DNL Marketing Cloud Account Engagement] のサブスクリプションを持
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
@@ -155,7 +155,7 @@ XDM フィールドを [!DNL Marketing Cloud Account Engagement] 宛先フィー
    * XDM プロファイルスキーマとのマッピングを追加するには、以下の手順を繰り返します。 [!DNL Marketing Cloud Account Engagement]: |ソースフィールド |ターゲットフィールド |必須 | | — | — | — | |`IdentityMap: Email`|`Identity: email`|はい | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 上記のマッピングの例を次に示します。
-      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 宛先接続のマッピングの指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -163,14 +163,14 @@ XDM フィールドを [!DNL Marketing Cloud Account Engagement] 宛先フィー
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. 選択したセグメントの 1 つに移動します。 「**[!DNL Activation data]**」タブを選択します。この **[!UICONTROL マッピング ID]** 列には、 [!DNL Marketing Cloud Account Engagement Prospects] ページ。
+1. 選択したオーディエンスの 1 つに移動します。 「**[!DNL Activation data]**」タブを選択します。この **[!UICONTROL マッピング ID]** 列には、 [!DNL Marketing Cloud Account Engagement Prospects] ページ。
    ![選択したセグメントのマッピング ID を示す、Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. にログインします。 [[!DNL Salesforce]](https://login.salesforce.com/) web サイト。 次に、 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** ページを開き、セグメントからの見込み客が追加/更新されたかどうかを確認します。 または、 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) および **[!DNL Prospects]** ページ。
+1. にログインします。 [[!DNL Salesforce]](https://login.salesforce.com/) web サイト。 次に、 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** ページを開き、オーディエンスからの見込み客が追加/更新されたかどうかを確認します。 または、 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) および **[!DNL Prospects]** ページ。
    ![見込み客ページを示す Salesforce UI のスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. 見込み客が更新されたかどうかを確認するには、見込み客を選択し、カスタム見込み客フィールドがExperience Platformセグメントのステータスで更新されたかどうかを確認します。
-   ![選択した見込み客ページを示す Salesforce UI スクリーンショット。カスタム見込み客フィールドがセグメントのステータスで更新されます。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. 見込み客が更新されたかどうかを確認するには、見込み客を選択し、カスタム見込み客フィールドがExperience Platformのオーディエンスステータスで更新されたかどうかを確認します。
+   ![選択した見込み客ページを示す Salesforce UI スクリーンショット。カスタム見込み客フィールドは、オーディエンスのステータスで更新されます。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

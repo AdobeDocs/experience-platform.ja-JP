@@ -1,13 +1,13 @@
 ---
 keywords: モバイル；モバイルエンゲージメントの宛先；LINE;LINE モバイルエンゲージメントの宛先
 title: LINE 接続
-description: LINE の宛先を使用すると、Platform セグメントにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを配信できます。
+description: LINE の宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 47%
+source-wordcount: '1178'
+ht-degree: 42%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 47%
 
 [[!DNL LINE]](https://line.me/en/) は、人物、サービスおよび情報をつなぎ、チャットアプリからエンターテインメント、ソーシャルおよび日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL LINE] メッセージング API](https://developers.line.biz/en/reference/messaging-api/). 内で、接続としてExperience Platformセグメントからプロファイルをアクティブ化できます [!DNL LINE] ビジネスニーズに合わせて
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL LINE] メッセージング API](https://developers.line.biz/en/reference/messaging-api/). 内の接続として、Experience Platformオーディエンスからプロファイルをアクティブ化できます [!DNL LINE] ビジネスニーズに合わせて
 
 [!DNL LINE] は、Bearer トークンを認証メカニズムとして使用し、 [!DNL LINE] メッセージング API への認証手順 [!DNL LINE] インスタンスは下、内 [宛先に対する認証](#authenticate) 」セクションに入力します。
 
 ## ユースケース {#use-cases}
 
-マーケターは、セグメントを組み込んで、モバイルエンゲージメントの宛先でユーザーをターゲット設定できます [!DNL Adobe Experience Platform]. さらに、エクスペリエンスの属性に基づいて、パーソナライズされたエクスペリエンスを配信できます [!DNL Adobe Experience Platform] プロファイル：セグメントとプロファイルが [!DNL Adobe Experience Platform].
+マーケターは、オーディエンスの組み込みを使用して、モバイルエンゲージメントの宛先でユーザーをターゲットにすることができます [!DNL Adobe Experience Platform]. さらに、エクスペリエンスの属性に基づいて、パーソナライズされたエクスペリエンスを配信できます [!DNL Adobe Experience Platform] プロファイル：オーディエンスとプロファイルが [!DNL Adobe Experience Platform].
 
 ## 前提条件 {#prerequisites}
 
@@ -67,8 +67,8 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [!DNL LINE] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | オーディエンスのすべてのメンバーを、 [!DNL LINE] 宛先。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -105,15 +105,15 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -129,13 +129,13 @@ Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデ�
 
 ## データの書き出しを検証する {#exported-data}
 
-データのエクスポートが正常にExperience Platformされると、 [!DNL LINE] 宛先が以下の範囲内に新しいオーディエンスを作成 [!DNL LINE] 選択したセグメント名を使用します。
+データのエクスポートが正常にExperience Platformされると、 [!DNL LINE] 宛先が以下の範囲内に新しいオーディエンスを作成 [!DNL LINE] 選択したオーディエンス名を使用します。
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. In [!DNL LINE]、にログインします。 [マネージャコンソール](https://manager.line.biz/).
 
-1. 次に、に移動します。 **[!UICONTROL データ制御]** > **[!UICONTROL オーディエンス]** をクリックし、 **[!UICONTROL オーディエンス名]** 列。
+1. 次に、に移動します。 **[!UICONTROL データ制御]** > **[!UICONTROL オーディエンス]** また、 **[!UICONTROL オーディエンス名]** 列。
 
 1. 更新されたボリュームは、セグメント内のカウントと一致します。
 

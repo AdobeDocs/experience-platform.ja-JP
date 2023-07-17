@@ -3,10 +3,10 @@ title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
-ht-degree: 21%
+source-wordcount: '1076'
+ht-degree: 19%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 21%
 
 ## 前提条件 {#prerequisites}
 
-セグメントをアクティブ化する前に [!DNL The Trade Desk]を使用する場合、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
+オーディエンスをアクティブ化する前に [!DNL The Trade Desk]を使用する場合、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
 
 ## ID 一致の要件 {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）で書き出します。 |
-| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | セグメントの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示 [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示 [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 Experience Platform [データガバナンスの概要](/help/data-governance/policies/overview.md) を参照してください。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
-読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) 宛先に対するオーディエンスセグメントをアクティブ化する手順について説明します。
+読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) 宛先に対するオーディエンスのアクティブ化の手順については、を参照してください。
 
-**[!UICONTROL スケジュール]**&#x200B;ページでは、書き出す各セグメントのスケジュールとファイル名を設定できます。スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+内 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
-![セグメントのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->アクティブ化されたすべてのセグメント [!DNL The Trade Desk] CRM の宛先は、毎日の頻度とフルファイルエクスポートに自動的に設定されます。
+>アクティブ化されたすべてのオーディエンス [!DNL The Trade Desk] CRM の宛先は、毎日の頻度とフルファイルエクスポートに自動的に設定されます。
 
-![セグメントのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 内 **[!UICONTROL マッピング]** 」ページで、属性または id 名前空間をソース列から選択し、ターゲット列にマッピングする必要があります。
 
-![セグメントのアクティベーションをマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![オーディエンスのアクティベーションをマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-セグメントをアクティブ化する際の正しい ID マッピングの例を以下に示します。 [!DNL The Trade Desk] CRM の宛先。
+以下に、オーディエンスをアクティブ化する際の正しい ID マッピングの例を示します。 [!DNL The Trade Desk] CRM の宛先。
 
 >[!IMPORTANT]
 >
@@ -133,7 +133,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 ## データ書き出しの検証 {#validate}
 
-データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]の下のAdobe1PD データタイルの下にセグメントがあります。 [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、 [!DNL Trade Desk] UI:
+データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]を使用する場合は、内のAdobe1PD データタイルの下にオーディエンスを探してください [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、 [!DNL Trade Desk] UI:
 
 1. まず、 **[!UICONTROL データ]** タブとレビュー **[!UICONTROL ファーストパーティ]**.
 2. ページを下にスクロールし、の下に移動します。 **[!UICONTROL インポートされたデータ]**&#x200B;を検索すると、 **[!UICONTROL Adobe1PD タイル]**.

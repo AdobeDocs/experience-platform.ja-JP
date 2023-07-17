@@ -3,9 +3,9 @@ keywords: 宛先；質問；よくある質問faq;宛先の faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1395'
 ht-degree: 8%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 8%
 
 +++回答これは、セグメント化の実行方法が原因で発生する通常のExperience Platformです。
 
-ストリーミングセグメント化では、1 日を通じてストリーミングセグメントのプロファイル数が更新され、バッチセグメント化では、24 時間に 1 回、バッチセグメントのプロファイル数が更新されます。
+ストリーミングセグメント化では、1 日を通じてストリーミングオーディエンスのプロファイル数が更新され、バッチセグメント化では、24 時間に 1 回、バッチオーディエンスのプロファイル数が更新されます。
 
-セグメントの書き出しスケジュールがセグメント化スケジュールと異なる場合、プロファイルは UI と書き出した [!DNL CSV] ファイルは、特にストリーミングセグメントに関しては異なります。
+オーディエンスの書き出しスケジュールがセグメント化スケジュールと異なる場合、UI と書き出した UI の間のプロファイル数 [!DNL CSV] ファイルは、特にストリーミングオーディエンスの場合は異なります。
 
 詳しくは、 [セグメント化サービスのドキュメント](../segmentation/home.md) を参照してください。
 +++
@@ -33,7 +33,7 @@ ht-degree: 8%
 
 ### でオーディエンスをアクティブ化する前に必要なこと [!DNL Facebook Custom Audiences]?
 
-+++回答オーディエンスセグメントをに送信する前に [!DNL Facebook]次の要件を満たしていることを確認します。
++++回答オーディエンスを次に送信する前に： [!DNL Facebook]次の要件を満たしていることを確認します。
 
 * お使いの [!DNL Facebook] ユーザーアカウントには **[!DNL Manage campaigns]** 使用する予定の広告アカウントに対して有効になっている権限です。
 * この **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
@@ -93,9 +93,9 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 
 ## Google カスタマーマッチ {#google-customer-match}
 
-### Google Customer Match にセグメントを書き出すと、Googleインターフェイスのセグメント名の末尾に追加された余分な数字が表示されるのはなぜですか。
+### オーディエンスをGoogle Customer Match にエクスポートする際に、Googleインターフェイスのオーディエンス名の末尾に余分な数字が追加されているのはなぜですか。
 
-+++Answer Googleでは、セグメント名を一意にする必要があります。 表示される数は次のとおりです [UNIX タイムスタンプ](https://www.unixtimestamp.com/) 同じセグメントを複数のGoogleの宛先にマッピングした場合、セグメント名を一意にするために追加されます。
++++回答Googleは一意のオーディエンス名を必要とします。 表示される数は次のとおりです [UNIX タイムスタンプ](https://www.unixtimestamp.com/) 同じオーディエンスを複数のGoogle宛先にマッピングした場合、オーディエンス名を一意にするために、が追加されます。
 +++
 
 ## linkedIn Matched Audiences {#linkedin}
@@ -133,7 +133,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/l
 
 +++答えない。 [Web SDK](../edge/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-ただし、 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) が Web SDK の代わりに使用され、次回のセッションのパーソナライゼーションのみがサポートされます。
+ただし、 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja) が Web SDK の代わりに使用され、次回のセッションのパーソナライゼーションのみがサポートされます。
 
 の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../edge/home.md) または [Edge Network Server API](../server-api/overview.md). 詳しくは、 [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
 +++
@@ -177,7 +177,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++回答はい、Edge Network Server API はカスタムパーソナライゼーションの宛先で機能します。 プロファイル属性には機密データが含まれている場合があるので、このデータを保護するために、カスタムパーソナライゼーションの宛先では、データ収集に Edge Network Server API を使用する必要があります。 さらに、すべての API 呼び出しは、 [認証コンテキスト](../server-api/authentication.md).
 +++
 
-### エッジ上でアクティブな結合ポリシーは 1 つだけです。 別の結合ポリシーを使用し、ストリーミングセグメントとしてAdobe Targetに送信するオーディエンスを構築できますか？
+### エッジ上でアクティブな結合ポリシーは 1 つだけです。 別の結合ポリシーを使用し、ストリーミングオーディエンスとしてAdobe Targetに送信するオーディエンスを構築できますか？
 
 +++回答
 いいえ。Adobe Targetに対してアクティブ化するすべてのオーディエンスは、エッジ上でアクティブである必要があります [結合ポリシー](../profile/merge-policies/ui-guide.md).

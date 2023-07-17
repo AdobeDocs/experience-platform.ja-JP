@@ -3,10 +3,10 @@ keywords: 宛先；experience cloud ソリューション；ターゲット；�
 title: アドビの宛先の概要
 description: Platform のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこなうことで、顧客体験を管理します
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
-ht-degree: 34%
+ht-degree: 32%
 
 ---
 
@@ -45,8 +45,8 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 * [Marketo Munchkin 拡張機能](../email/marketo-munchkin.md)
 * [Marketo web パーソナライゼーション拡張機能](../personalization/marketo-web-personalization.md)
 
-## Experience Platform セグメントの共有
+## Experience Platformオーディエンス共有
 
-Experience Platformセグメント共有機能を使用して、Experience Platformセグメントを追加のAdobe先と共有します。 詳しくは、以下のページを参照してください (Audience Managerドキュメントポータルで開く )。
+Experience Platformオーディエンス共有機能を使用して、Experience Platformのオーディエンスを追加のAdobe先と共有します。 詳しくは、以下のページを参照してください (Audience Managerドキュメントポータルで開く )。
 
-* [コアサービスの統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとのExperience Platformセグメント共有が可能になりました。](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+* [コアサービスの統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platformオーディエンスを共有する](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)

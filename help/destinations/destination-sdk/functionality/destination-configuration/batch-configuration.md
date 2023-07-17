@@ -1,10 +1,10 @@
 ---
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
-source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '1073'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
@@ -15,7 +15,7 @@ Destination SDK でバッチ設定オプションを使用して、ユーザー�
 
 Destination SDK でファイルベースの宛先を作成する場合、デフォルトのファイル名および書き出しスケジュールを設定したり、Platform UI からこれらの設定を行うオプションをユーザーに与えたりできます。例えば、以下のような動作を設定できます。
 
-* ファイル名に特定の情報を含める（セグメント ID、宛先 ID、カスタム情報など）。
+* ファイル名に特定の情報を含める（オーディエンス ID、宛先 ID、カスタム情報など）。
 * ユーザーに Platform UI からのファイル名のカスタマイズを許可する。
 * 設定した間隔でファイル書き出しが発生するように設定する。
 * Platform UI でユーザーが表示できるファイル名および書き出しスケジュールのカスタマイズオプションを定義する。
@@ -46,7 +46,7 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 
 ## サポートされるパラメーター {#supported-parameters}
 
-ここで設定する値は、ファイルベースの宛先アクティベーションワークフローの[セグメント書き出しのスケジュール](../../../ui/activate-batch-profile-destinations.md#scheduling)手順で表示されます。
+ここで設定した値は、 [オーディエンスの書き出しをスケジュール](../../../ui/activate-batch-profile-destinations.md#scheduling) ファイルベースの宛先のアクティベーションワークフローの手順です。
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 | `allowedScheduleFrequency` | リスト | 顧客が使用できるファイルエクスポートの頻度を定義します。サポートされている値：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | 列挙 | デフォルトのファイルエクスポートの頻度を定義します。サポートされている値を以下に示します。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> デフォルト値は `DAILY` です。 |
 | `defaultStartTime` | 文字列 | ファイルエクスポートのデフォルトの開始時間を定義します。24 時間のファイル形式を使用します。デフォルト値は「00:00」です。 |
-| `filenameConfig.allowedFilenameAppendOptions` | 文字列 | *必須*。ユーザーが選択できる、使用可能なファイル名マクロのリスト。これは、書き出されたファイル名に追加される項目を決定します（セグメント ID、組織名、書き出し日時など）。`defaultFilename` を設定する場合、必ずマクロが重複するのを避けてください。<br><br>サポートされている値： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>マクロを定義する順序にかかわらず、Experience Platform UI は、常に、ここに提示された順序で表示します。<br><br> `defaultFilename` が空の場合、`allowedFilenameAppendOptions` リストには、少なくとも 1 つのマクロが含まれている必要があります。 |
+| `filenameConfig.allowedFilenameAppendOptions` | 文字列 | *必須*。ユーザーが選択できる、使用可能なファイル名マクロのリスト。これにより、書き出されるファイル名（オーディエンス ID、組織名、書き出しの日時など）に追加される項目が決まります。 `defaultFilename` を設定する場合、必ずマクロが重複するのを避けてください。<br><br>サポートされている値： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>マクロを定義する順序にかかわらず、Experience Platform UI は、常に、ここに提示された順序で表示します。<br><br> `defaultFilename` が空の場合、`allowedFilenameAppendOptions` リストには、少なくとも 1 つのマクロが含まれている必要があります。 |
 | `filenameConfig.defaultFilenameAppendOptions` | 文字列 | *必須*。ユーザーがチェックを外すことができる、事前に選択されたデフォルトのファイル名マクロ。<br><br> このリストのマクロは、`allowedFilenameAppendOptions` で定義されたもののサブセットです。 |
 | `filenameConfig.defaultFilename` | 文字列 | *オプション*。書き出されたファイル用にデフォルトのファイル名マクロを定義します。ユーザーは、これらを上書きできません。<br><br> `allowedFilenameAppendOptions` で定義されたマクロは、`defaultFilename` マクロの後に追加されます。<br><br> `defaultFilename` が空の場合、`allowedFilenameAppendOptions` に少なくとも 1 つのマクロを定義する必要があります。 |
 | `segmentGroupingEnabled` | ブール値 | オーディエンス[結合ポリシー](../../../../profile/merge-policies/overview.md)に基づいて、アクティブ化されたオーディエンスを単一のファイルで書き出すか複数のファイルで書き出すかを定義します。サポートされている値： <ul><li>`true`：結合ポリシーごとに 1 つのファイルを書き出します。</li><li>`false`：結合ポリシーに関係なく、オーディエンスごとに 1 つのファイルを書き出します。これはデフォルトの動作です。このパラメーターを完全に省略しても、同じ結果を得ることができます。</li></ul> |
@@ -113,8 +113,8 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 | マクロ | UI ラベル | 説明 | 例 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 宛先] | UI の宛先名。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL セグメント ID] | 一意の、Platform で生成されたセグメント ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL セグメント名] | ユーザー定義のセグメント名 | VIP subscriber |
+| `SEGMENT_ID` | [!UICONTROL セグメント ID] | プラットフォームで生成された一意のオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL セグメント名] | ユーザー定義のオーディエンス名 | VIP subscriber |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL 宛先 ID] | 一意の、宛先インスタンスの Platform で生成された ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 宛先名] | 宛先インスタンスのユーザー定義の名前。 | My 2022 Advertising Destination |
 | `ORGANIZATION_NAME` | [!UICONTROL 組織名] | Adobe Experience Platform でのお客様の組織の名前。 | My Organization Name |
@@ -122,8 +122,8 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 | `DATETIME` または `TIMESTAMP` | [!UICONTROL 日時] | `DATETIME` と `TIMESTAMP` は両方とも、ファイルが生成されたタイミングを定義しますが、形式が異なります。<br><br><ul><li>`DATETIME` は、YYYYMMDD_HHMMSS の形式を使用します。</li><li>`TIMESTAMP` は、10 桁の Unix 形式を使用します。 </li></ul> `DATETIME` と `TIMESTAMP` は、相互に排他的で、同時に使用できません。 | <ul><li>`DATETIME`：20220509_210543</li><li>`TIMESTAMP`：1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL カスタムテキスト] | ファイル名に含まれる、ユーザー定義のカスタムテキスト。`defaultFilename` で使用することはできません。 | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日時] | ファイルが生成された時間の 10 桁のタイムスタンプ（Unix 形式）。 | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL 結合ポリシー ID] | 書き出されたオーディエンスを生成するために使用される[結合ポリシー](../../../../profile/merge-policies/overview.md)の ID。このマクロは、結合ポリシーに基づいてファイル内の書き出されたセグメントをグループ化する際に使用します。このマクロは `segmentGroupingEnabled:true` と併用してください。 | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL 結合ポリシー名] | 書き出されたオーディエンスの生成に使用される[結合ポリシー](../../../../profile/merge-policies/overview.md)の名前。このマクロは、結合ポリシーに基づいてファイル内の書き出されたセグメントをグループ化する際に使用します。このマクロは `segmentGroupingEnabled:true` と併用してください。 | カスタム結合ポリシー |
+| `MERGE_POLICY_ID` | [!UICONTROL 結合ポリシー ID] | 書き出されたオーディエンスを生成するために使用される[結合ポリシー](../../../../profile/merge-policies/overview.md)の ID。このマクロは、結合ポリシーに基づいて、ファイル内のエクスポートされたオーディエンスをグループ化する場合に使用します。 このマクロは `segmentGroupingEnabled:true` と併用してください。 | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL 結合ポリシー名] | 書き出されたオーディエンスの生成に使用される[結合ポリシー](../../../../profile/merge-policies/overview.md)の名前。このマクロは、結合ポリシーに基づいて、ファイル内のエクスポートされたオーディエンスをグループ化する場合に使用します。 このマクロは `segmentGroupingEnabled:true` と併用してください。 | カスタム結合ポリシー |
 
 {style="table-layout:auto"}
 

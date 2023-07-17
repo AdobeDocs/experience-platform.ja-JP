@@ -2,10 +2,10 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 35%
+source-wordcount: '910'
+ht-degree: 25%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 35%
 >* 既に **[!UICONTROL Marketo V1]** 宛先：新しいデータフローを **[!UICONTROL Marketo V2]** 宛先への既存のデータフローの削除 **[!UICONTROL Marketo V1]** 2023 年 2 月までに宛先に追加されました。 この日付以降、 **[!UICONTROL Marketo V1]** 宛先カードが削除されます。
 >* まだ **[!UICONTROL Marketo V1]** 宛先、新しい **[!UICONTROL Marketo V2]** Marketoに接続してデータを書き出すためのカード。
 
-
 ![2 つのMarketo宛先カードの横並び表示の画像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2 の宛先の改善点を次に示します。
@@ -31,7 +30,7 @@ Marketo V2 の宛先の改善点を次に示します。
 
 [!DNL Marketo Engage] は、マーケティング、広告、分析、コマースに対応する、唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 
- の宛先を利用することで、マーケターは、Adobe Experience Platform で作成したセグメントを Marketo にプッシュできます。それらのセグメントは静的リストとして表示されます。
+宛先を使用すると、マーケターは、Adobe Experience Platformで作成したオーディエンスを静的リストとして表示するMarketoにプッシュできます。
 
 ## サポートされる ID と属性 {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ Marketo V2 の宛先の改善点を次に示します。
 
 Experience Platformの属性を、組織がMarketoでアクセスできる任意の属性にマッピングできます。 Marketoでは、 [API リクエストの説明](https://developers.marketo.com/rest-api/lead-database/leads/#describe) ：組織がアクセス権を持つ属性フィールドを取得します。
 
+## 外部オーディエンスのサポート {#external-audiences-support}
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明する外部オーディエンスのアクティブ化もサポートされます。
+
+| 外部オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+
+{style="table-layout:auto"}
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、 [!DNL Marketo Engage] 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 [!DNL Marketo Engage] 宛先。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
-## 宛先の設定とセグメントのアクティブ化 {#set-up}
+## 宛先の設定とオーディエンスのアクティブ化 {#set-up}
 
 >[!IMPORTANT]
 > 
 >* 宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。
 >* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
+宛先の設定方法とオーディエンスのアクティブ化方法について詳しくは、 [Adobe Experience PlatformオーディエンスをMarketo静的リストにプッシュ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) (Marketoドキュメント ) を参照してください。
 
-宛先の設定方法とセグメントのアクティブ化方法について詳しくは、 [Adobe Experience PlatformセグメントをMarketo静的リストにプッシュ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) (Marketoドキュメント ) を参照してください。
-
-次のビデオでは、Marketoの宛先を設定し、セグメントをアクティブ化する手順についても説明します。
+次のビデオでは、Marketoの宛先を設定し、オーディエンスをアクティブ化する手順も示しています。
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ Experience Platformの属性を、組織がMarketoでアクセスできる任意
 > 
 >* Experience PlatformUI で使用する必要がある宛先カードは、 **[!UICONTROL Marketo V2]**.
 >* ビデオに新しい **[!UICONTROL 担当者の作成]** 宛先への接続ワークフローの「セレクター」フィールド
->* このビデオで呼び出された 2 つの制限は、現在は適用されません。 ビデオの録画時にサポートされていたセグメントメンバーシップ情報に加えて、他の多数のプロファイル属性フィールドをマッピングできるようになりました。 また、Marketo静的リストにまだ存在しないセグメントメンバーをMarketoに書き出して、リストに追加することもできます。
->* Marketo V1 では、アクティベーションワークフローの&#x200B;****&#x200B;セグメントをスケジュール手順で、**[!UICONTROL マッピング ID]** を手動で追加して、Marketo にデータを正常に書き出す必要がありました。この手動の手順は、Marketo V2 では不要になりました。
-
+>* このビデオで呼び出された 2 つの制限は、現在は適用されません。 ビデオの録画時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多数のプロファイル属性フィールドをマッピングできるようになりました。 まだMarketo静的リストに存在しないオーディエンスメンバーをMarketoに書き出して、リストに追加することもできます。
+>* 内 **[!UICONTROL オーディエンスステップのスケジュール]** アクティベーションワークフローのMarketo V1 で、手動で **[!UICONTROL マッピング ID]** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

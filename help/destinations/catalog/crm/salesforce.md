@@ -3,10 +3,10 @@ keywords: crm;CRM;crm の宛先；salesforce crm;salesforce crm の宛先
 title: Salesforce CRM 接続
 description: Salesforce CRM の宛先を使用すると、アカウントデータをエクスポートし、Salesforce CRM 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: edf49d8a52eeddea65a18c1dad0035ec7e5d2c12
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '3086'
-ht-degree: 23%
+source-wordcount: '3085'
+ht-degree: 20%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 23%
 
 この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm)：前述の両方のタイプのプロファイルをサポートします。
 
-条件 [セグメントのアクティブ化](#activate)を使用する場合は、リードまたは連絡先のいずれかを選択し、属性とセグメントデータを [!DNL Salesforce CRM].
+条件 [セグメントのアクティブ化](#activate)を使用する場合は、リードまたは連絡先のいずれかを選択し、属性とオーディエンスデータを [!DNL Salesforce CRM].
 
 [!DNL Salesforce CRM] は、Salesforce REST API と通信するための認証メカニズムとして、パスワード付与付きの OAuth 2 を使用しています。 [!DNL Salesforce CRM] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからセグメントを作成し、Salesforce CRM に送信して、Adobe Experience Platformでセグメントとプロファイルが更新されるとすぐにユーザーのフィードに表示できます。
+マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからオーディエンスを構築し、Salesforce CRM に送信して、Adobe Experience Platformでオーディエンスとプロファイルが更新されるとすぐに、ユーザーのフィードに表示できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -70,16 +70,16 @@ Salesforce CRM の宛先に対してデータをアクティブ化する前に�
 
 #### 内にカスタムフィールドを作成する [!DNL Salesforce] {#prerequisites-custom-field}
 
-次に対してセグメントをアクティブ化する場合 [!DNL Salesforce CRM] 宛先の場合、 **[!UICONTROL マッピング ID]** アクティブ化された各セグメントのフィールド ( **[セグメントスケジュール](#schedule-segment-export-example)** 手順
+オーディエンスを [!DNL Salesforce CRM] 宛先の場合、 **[!UICONTROL マッピング ID]** フィールドをアクティブ化したオーディエンスごとに、 **[オーディエンススケジュール](#schedule-segment-export-example)** 手順
 
-[!DNL Salesforce CRM] では、この値がExperience Platformから取り込まれたセグメントを正しく読み取り、解釈し、内でセグメントステータスを更新するために必要です。 [!DNL Salesforce]. 詳しくは、Experience Platformドキュメントを参照してください。 [セグメントメンバーシップの詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) セグメントのステータスに関するガイダンスが必要な場合。
+[!DNL Salesforce CRM] では、この値がExperience Platformからのオーディエンスを正しく読み取り、解釈し、内でオーディエンスのステータスを更新するために必要です。 [!DNL Salesforce]. 詳しくは、Experience Platformドキュメントを参照してください。 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) オーディエンスのステータスに関するガイダンスが必要な場合は、を参照してください。
 
-Platform からに対してアクティブ化した各セグメントに対して、 [!DNL Salesforce CRM]の場合は、タイプのカスタムフィールドを作成する必要があります `Text Area (Long)` 範囲 [!DNL Salesforce]. ビジネス要件に応じて、256～131,072 文字の任意のサイズのフィールド文字長を定義できます。 詳しくは、 [!DNL Salesforce] [カスタムフィールドタイプ](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) カスタムフィールドタイプの追加情報については、ドキュメントページを参照してください。 また、 [!DNL Salesforce] ～に関する文書 [カスタムフィールドの作成](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) フィールドの作成に関するサポートが必要な場合は、を参照してください。
+Platform からに対してアクティブ化する各オーディエンスに対して [!DNL Salesforce CRM]の場合は、タイプのカスタムフィールドを作成する必要があります `Text Area (Long)` 範囲 [!DNL Salesforce]. ビジネス要件に応じて、256～131,072 文字の任意のサイズのフィールド文字長を定義できます。 詳しくは、 [!DNL Salesforce] [カスタムフィールドタイプ](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) カスタムフィールドタイプの追加情報については、ドキュメントページを参照してください。 また、 [!DNL Salesforce] ～に関する文書 [カスタムフィールドの作成](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) フィールドの作成に関するサポートが必要な場合は、を参照してください。
 
 >[!IMPORTANT]
 >
 >フィールド名に空白文字を含めないでください。 代わりに、アンダースコアを使用します。 `(_)` 文字を区切り文字として使用します。
->内 [!DNL Salesforce] カスタムフィールドを **[!UICONTROL フィールド名]** が、 **[!UICONTROL マッピング ID]** 」と入力します。 例えば、以下のスクリーンショットには、という名前のカスタムフィールドが表示されています。 `crm_2_seg`. この宛先に対してセグメントをアクティブ化する際に、 `crm_2_seg` as **[!UICONTROL マッピング ID]** セグメントのオーディエンスをExperience Platformからこのカスタムフィールドに入力する
+>内 [!DNL Salesforce] カスタムフィールドを **[!UICONTROL フィールド名]** が、 **[!UICONTROL マッピング ID]** 」と入力します。 例えば、以下のスクリーンショットには、という名前のカスタムフィールドが表示されています。 `crm_2_seg`. この宛先に対してオーディエンスをアクティブ化する場合は、 `crm_2_seg` as **[!UICONTROL マッピング ID]** オーディエンスオーディエンスをExperience Platformからこのカスタムフィールドに入力する場合。
 
 でのカスタムフィールド作成の例 [!DNL Salesforce], *手順 1 — データタイプの選択*を使用する場合、は以下のようになります。
 ![カスタムフィールドの作成を示す Salesforce UI スクリーンショット、手順 1 — データタイプを選択します。](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -89,16 +89,14 @@ Platform からに対してアクティブ化した各セグメントに対し�
 
 >[!TIP]
 >
->* Platform セグメントに使用されるカスタムフィールドと、 [!DNL Salesforce] カスタムフィールドの作成時には、認識可能なプレフィックスまたはサフィックスを含めることができます。 例えば、の代わりに `test_segment`，使用 `Adobe_test_segment` または `test_segment_Adobe`
+>* Platform オーディエンスに使用されるカスタムフィールドと、 [!DNL Salesforce] カスタムフィールドの作成時には、認識可能なプレフィックスまたはサフィックスを含めることができます。 例えば、の代わりに `test_segment`，使用 `Adobe_test_segment` または `test_segment_Adobe`
 >* 他のカスタムフィールドが既にで作成されている場合は、 [!DNL Salesforce]を使用すると、Platform セグメントと同じ名前を使用して、 [!DNL Salesforce].
-
 
 >[!NOTE]
 >
 >* Salesforce 内のオブジェクトは 25 個の外部フィールドに制限されています。詳しくは、 [カスタムフィールド属性](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
->* この制限は、いつでもアクティブなExperience Platformセグメントメンバーシップを最大 25 個までにすることを意味します。
->* Salesforce 内でこの制限に達した場合は、Experience Platform内の古いセグメントに対するセグメントステータスの保存に使用された Salesforce から、新しい **[!UICONTROL マッピング ID]** を使用できます。
-
+>* この制限は、いつでもアクティブなExperience Platformオーディエンスメンバーシップを最大 25 個まで持つことができることを意味します。
+>* Salesforce 内でこの制限に達した場合は、新しい **[!UICONTROL マッピング ID]** を使用できます。
 
 #### [!DNL Salesforce CRM] 資格情報の収集 {#gather-credentials}
 
@@ -106,12 +104,12 @@ Platform からに対してアクティブ化した各セグメントに対し�
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `Username` | お使いの [!DNL Salesforce] アカウントのユーザー名。 |  |
-| `Password` | お使いの [!DNL Salesforce] アカウントのパスワード。 |  |
+| `Username` | お使いの [!DNL Salesforce] アカウントのユーザー名。 | |
+| `Password` | お使いの [!DNL Salesforce] アカウントのパスワード。 | |
 | `Security Token` | お使いの [!DNL Salesforce] 後で追加するセキュリティトークン [!DNL Salesforce] 連結された文字列を作成し、 **[!UICONTROL パスワード]** when [宛先への認証](#authenticate).<br> 詳しくは、 [!DNL Salesforce] ～に関する文書 [セキュリティトークンをリセット](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) 再生する方法を学ぶ [!DNL Salesforce] インターフェイスを使用します。 |  |
 | `Custom Domain` | お使いの [!DNL Salesforce] ドメインプレフィックス。 <br> 詳しくは、 [[!DNL Salesforce] ドキュメント](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) この値を [!DNL Salesforce] インターフェイス。 | 次に、 [!DNL Salesforce] ドメインは<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> 必要なもの `d5i000000isb4eak-dev-ed` を値として使用します。 |
-| `Client ID` | Salesforce `Consumer Key`. <br> 詳しくは、 [[!DNL Salesforce] ドキュメント](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) この値を [!DNL Salesforce] インターフェイス。 |  |
-| `Client Secret` | Salesforce `Consumer Secret`. <br> 詳しくは、 [[!DNL Salesforce] ドキュメント](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) この値を [!DNL Salesforce] インターフェイス。 |  |
+| `Client ID` | Salesforce `Consumer Key`. <br> 詳しくは、 [[!DNL Salesforce] ドキュメント](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) この値を [!DNL Salesforce] インターフェイス。 | |
+| `Client Secret` | Salesforce `Consumer Secret`. <br> 詳しくは、 [[!DNL Salesforce] ドキュメント](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) この値を [!DNL Salesforce] インターフェイス。 | |
 
 ### ガードレール {#guardrails}
 
@@ -121,7 +119,7 @@ Platform からに対してアクティブ化した各セグメントに対し�
 
 >[!IMPORTANT]
 >
->条件 [セグメントのアクティブ化](#activate) 次のいずれかを選択する必要があります。 *連絡先* または *リード* タイプ。 選択したタイプに従って、セグメントに適切なデータマッピングがあることを確認する必要があります。
+>条件 [セグメントのアクティブ化](#activate) 次のいずれかを選択する必要があります。 *連絡先* または *リード* タイプ。 選択したタイプに従って、オーディエンスに適切なデータマッピングがあることを確認する必要があります。
 
 ## サポートされる ID {#supported-identities}
 
@@ -137,8 +135,8 @@ Platform からに対してアクティブ化した各セグメントに対し�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Salesforce CRM] の各セグメントのステータスは、[セグメントスケジュール](#schedule-segment-export-example)手順の最中に指定された&#x200B;**[!UICONTROL マッピング ID]** 値に基づいて、Platform の対応するセグメントステータスとともに更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> での各オーディエンスのステータス [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example) 手順</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -175,15 +173,15 @@ Platform からに対してアクティブ化した各セグメントに対し�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対してセグメントをアクティブ化 {#activate}
+## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
@@ -206,42 +204,40 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
    * を使用して *連絡先* セグメント内で、Salesforce のオブジェクト参照を参照してください。 [連絡先](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) ：更新するフィールドのマッピングを定義します。
    * 必須フィールドは、 *必須*：前述のリンクのフィールドの説明で説明されています。
    * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド|メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 連絡先の姓（最大 80 文字）。 |\
-      |`xdm: person.name.firstName`|`Attribute: FirstName`|連絡先の名（40 文字以内）。 | |`xdm: personalEmail.address`|`Attribute: Email`|連絡先の電子メールアドレス。 |
+     |`xdm: person.name.firstName`|`Attribute: FirstName`|連絡先の名（40 文字以内）。 | |`xdm: personalEmail.address`|`Attribute: Email`|連絡先の電子メールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
-      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **リードの使用**
 
    * を使用して *リード* セグメント内で、Salesforce のオブジェクト参照を参照してください。 [リード](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) ：更新するフィールドのマッピングを定義します。
    * 必須フィールドは、 *必須*：前述のリンクのフィールドの説明で説明されています。
    * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド|メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 80 文字までのリードの姓です。 |\
-      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. リードの会社。 | |`xdm: personalEmail.address`|`Attribute: Email`|リードの電子メールアドレス。 |
+     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. リードの会社。 | |`xdm: personalEmail.address`|`Attribute: Email`|リードの電子メールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
-      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-leads.png)
-
-
+     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 宛先接続のマッピングの指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-### セグメントの書き出しをスケジュールと例 {#schedule-segment-export-example}
+### オーディエンスのエクスポートと例をスケジュール {#schedule-segment-export-example}
 
-実行時に [セグメントの書き出しをスケジュール](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順 Platform からアクティブ化したセグメントを、 [!DNL Salesforce].
+実行時に [オーディエンスの書き出しをスケジュール](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順 Platform からアクティブ化されたオーディエンスを、 [!DNL Salesforce].
 
 これをおこなうには、各セグメントを選択し、次の場所からカスタムフィールド名を入力します。 [!DNL Salesforce] 内 [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]** フィールドに入力します。 詳しくは、 [内にカスタムフィールドを作成する [!DNL Salesforce]](#prerequisites-custom-field) のカスタムフィールドの作成に関するガイダンスとベストプラクティスの節 [!DNL Salesforce].
 
-例えば、 [!DNL Salesforce] カスタムフィールド： `crm_2_seg`を使用する場合は、この値を [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]** セグメントのオーディエンスをExperience Platformからこのカスタムフィールドに入力する
+例えば、 [!DNL Salesforce] カスタムフィールド： `crm_2_seg`を使用する場合は、この値を [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]** オーディエンスオーディエンスをExperience Platformからこのカスタムフィールドに入力する場合。
 
 のカスタムフィールドの例 [!DNL Salesforce] は次のように表示されます。
 ![[!DNL Salesforce] カスタムフィールドを示す UI スクリーンショット。](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 の場所を示す例 [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]** は次のように表示されます。
-![スケジュールセグメントの書き出しを示した、Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![スケジュールオーディエンスの書き出しを示した、Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 上記の [!DNL Salesforce] **[!UICONTROL フィールド名]** で指定された値と完全に一致 [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]**.
 
-使用事例に応じて、アクティブ化されたすべてのセグメントを同じにマッピングできます [!DNL Salesforce] カスタムフィールドまたは異なる **[!UICONTROL フィールド名]** in [!DNL Salesforce CRM]. 上記の画像に基づく典型的な例は、次のようになります。
+使用例に応じて、アクティブ化されたすべてのオーディエンスを同じにマッピングできます [!DNL Salesforce] カスタムフィールドまたは異なる **[!UICONTROL フィールド名]** in [!DNL Salesforce CRM]. 上記の画像に基づく典型的な例は、次のようになります。
 | [!DNL Salesforce CRM] セグメント名 | [!DNL Salesforce] **[!UICONTROL フィールド名]** | [!DNL Salesforce CRM] **[!UICONTROL マッピング ID]** | | — | — | — | | crm_1_seg | `crm_1_seg` | `crm_1_seg` | | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
 アクティブ化された Platform セグメントごとに、このセクションを繰り返します。
@@ -256,30 +252,29 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
 1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
    ![宛先のデータフロー実行を示した Platform UI のスクリーンショット。](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. 次に切り替え： **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、セグメント名を選択します。
+1. 次に切り替え： **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、オーディエンス名を選択します。
    ![宛先のアクティベーションデータを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
-1. セグメント概要をモニターし、プロファイルの数がセグメント内で作成された数と一致していることを確認します。
+1. オーディエンスの概要を監視し、プロファイルの数がセグメント内で作成された数に対応していることを確認します。
    ![セグメントを示す Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/segment.png)
 
-1. 最後に、Salesforce Web サイトにログインし、セグメントのプロファイルが追加または更新されたかどうかを検証します。
+1. 最後に、Salesforce Web サイトにログインし、オーディエンスからのプロファイルが追加または更新されたかどうかを検証します。
 
    **連絡先の操作**
 
    * 次を選択した場合、 *連絡先* Platform セグメント内で、 **[!DNL Apps]** > **[!DNL Contacts]** ページ。
-      ![Salesforce CRM のスクリーンショットに、セグメントのプロファイルを含む連絡先ページが表示されました。](../../assets/catalog/crm/salesforce/contacts.png)
+     ![Salesforce CRM のスクリーンショットに、セグメントのプロファイルを含む連絡先ページが表示されました。](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * を選択します。 *連絡先* フィールドが更新されたかどうかを確認します。 各セグメントのステータスは、 [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [セグメントスケジュール](#schedule-segment-export-example).
-      ![連絡先詳細ページが表示された Salesforce CRM スクリーンショットと、更新されたセグメントステータス。](../../assets/catalog/crm/salesforce/contact-info.png)
+   * を選択します。 *連絡先* フィールドが更新されたかどうかを確認します。 各オーディエンスのステータスは、 [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example).
+     ![連絡先の詳細ページが表示された Salesforce CRM スクリーンショットと、オーディエンスのステータスが更新されました。](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **リードの使用**
 
    * 次を選択した場合、 *リード* を Platform セグメント内でクリックし、 **[!DNL Apps]** > **[!DNL Leads]** ページ。
-      ![セグメントのプロファイルを含むリードページを示す Salesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/leads.png)
+     ![セグメントのプロファイルを含むリードページを示す Salesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/leads.png)
 
-   * を選択します。 *リード* フィールドが更新されたかどうかを確認します。 各セグメントのステータスは、 [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [セグメントスケジュール](#schedule-segment-export-example).
-      ![Salesforce CRM のスクリーンショットに、リード詳細ページと更新されたセグメントステータスが表示されています。](../../assets/catalog/crm/salesforce/lead-info.png)
-
+   * を選択します。 *リード* フィールドが更新されたかどうかを確認します。 各オーディエンスのステータスは、 [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example).
+     ![Salesforce CRM のスクリーンショットに、リード詳細ページとオーディエンスのステータスが表示されました。](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -290,8 +285,7 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
 ### イベントを宛先にプッシュする際に不明なエラーが発生しました {#unknown-errors}
 
 * データフローの実行をチェックする際に、次のエラーメッセージが表示される場合があります。 `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-
-   ![エラーを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/salesforce/error.png)
+  ![エラーを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/salesforce/error.png)
 
    * このエラーを修正するには、 **[!UICONTROL マッピング ID]** アクティベーションワークフローで [!DNL Salesforce CRM] 宛先は、 [!DNL Salesforce]. 詳しくは、 [内にカスタムフィールドを作成する [!DNL Salesforce]](#prerequisites-custom-field) の節を参照してください。
 

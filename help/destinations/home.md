@@ -3,10 +3,10 @@ keywords: 宛先;Adobe Experience Platform;Platform;宛先の概要;データの
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -30,7 +30,7 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 ## 宛先の手順 {#steps}
 
 * Platform で使用可能なすべての宛先の[セルフサービスカタログ](./catalog/overview.md)から選択します。
-* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信します。
+* 宛先を使用して、プロファイルやオーディエンスをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
@@ -40,8 +40,8 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Platform を宛先プラットフォームのアカウントにリンクする。
-* 宛先に対してアクティブにするセグメントを選択する。
-* 電子メールマーケティングの宛先にセグメントをアクティブ化する際に書き出す[エクスペリエンスデータモデル（XDM）フィールド](../xdm/home.md)を選択します。
+* 宛先に対してアクティブ化するオーディエンスを選択する。
+* 選択 [エクスペリエンスデータモデル (XDM) フィールド](../xdm/home.md) 電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する際に書き出す
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
@@ -56,8 +56,8 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 | 権限レベル | 説明 |
 | ---- | ----|
 | **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してセグメントをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してセグメントをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を非表示にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | オーディエンスを宛先に対してアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | オーディエンスを宛先に対してアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 宛先の作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Platform の様々な宛先タイプに関する次のページを参照してください。
 
-* [広告の宛先 - Google アド マネージャー ](./catalog/advertising/google-ad-manager.md)
+* [広告の宛先 - Google アド マネージャー](./catalog/advertising/google-ad-manager.md)
 * [広告の宛先 - Google 広告](./catalog/advertising/google-ads-destination.md)
-* [広告の宛先 - Google ディスプレイ＆ビデオ 360 ](./catalog/advertising/google-dv360.md)
+* [広告の宛先 - Google ディスプレイ＆ビデオ 360](./catalog/advertising/google-dv360.md)
 * [クラウドストレージの宛先](./catalog/cloud-storage/overview.md)
 * [メールマーケティングの宛先](./catalog/email-marketing/overview.md)
 * [ソーシャルの宛先 ](./catalog/social/overview.md)
 
-セグメントのアクティベーションワークフローにおけるデータポリシー違反について詳しくは、次のガイドの&#x200B;**[!UICONTROL レビュー]**&#x200B;手順を参照してください。
+オーディエンスのアクティベーションワークフローでのデータポリシー違反について詳しくは、 **[!UICONTROL レビュー]** 次のガイドの手順を実行します。
 
-* [ストリーミングセグメント書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md#review)
+* [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md#review)
 * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md#review)
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md#review)

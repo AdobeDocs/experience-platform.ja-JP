@@ -2,7 +2,7 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 53%
@@ -37,7 +37,7 @@ Experience Platform UI を使用して、書き出したファイルに対して
 > 
 >新しいクラウドストレージの宛先 — [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md) ：現在、以下で強調表示されている 6 つの CSV オプションのみをサポートしています。
 
-![使用可能なファイル形式オプションの一部を示す画像。](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![使用可能なファイル形式オプションの一部を示す画像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### 区切り {#delimiter}
 

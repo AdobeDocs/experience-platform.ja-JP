@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 85%
+ht-degree: 72%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platformでは、接続、データセットの書き出し、�
 
 ## 接続 {#connections}
 
-**[!UICONTROL プロファイルの書き出し]**, **[!UICONTROL ストリーミングセグメントの書き出し]**、および **[!DNL Edge Personalization]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化の適用、セグメントおよび絞り込まれたプロファイルの書き出しをおこないます。
+**[!UICONTROL プロファイルの書き出し]**, **[!UICONTROL ストリーミングオーディエンスの書き出し]**、および **[!DNL Edge Personalization]** Adobe Experience Platformの宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせて、を形成します。 [リアルタイム顧客プロファイル](../profile/home.md)、セグメント化を適用し、オーディエンスと絞り込まれたプロファイルを宛先に書き出します。
 
 ## プロファイル書き出し宛先 {#profile-export}
 
@@ -41,7 +41,7 @@ Adobe Experience Platformでは、接続、データセットの書き出し、�
 
 エンタープライズ宛先データコネクタを使用すると、Adobe Real-Time Customer Data Platform プロファイルをほぼリアルタイムで社内システムや他のサードパーティシステムに配信して、データの同期、分析、さらにはプロファイルエンリッチメントのユースケースを実現します。
 
-これらの宛先は、セグメントデータとプロファイルデータを Experience Platform データストリームとして受け取ります。
+これらの宛先は、オーディエンスおよびプロファイルデータをExperience Platformデータストリームとして受け取ります。
 
 エンタープライズ宛先には、次のものが含まれます。
 
@@ -53,9 +53,9 @@ Adobe Experience Platformでは、接続、データセットの書き出し、�
 
 ファイルベース宛先は、プロファイルや属性を含んだ `.csv` ファイルを受け取ります。[Amazon S3](catalog/cloud-storage/amazon-s3.md) は、プロファイルの書き出しを含んだファイルを書き出せる宛先の例です。
 
-## ストリーミングセグメント書き出し宛先 {#streaming-destinations}
+## ストリーミングオーディエンスの書き出し先 {#streaming-destinations}
 
-セグメント書き出し先は、Experience Platform セグメントデータを受け取ります。 これらの宛先では、セグメント ID またはユーザー ID を使用します。広告宛先やソーシャル宛先（[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)、[Facebook](catalog/social/facebook.md) など）は、このような宛先の例です。
+オーディエンスの書き出し先は、Experience Platformオーディエンスデータを受け取ります。 これらの宛先では、オーディエンス ID またはユーザー ID を使用します。 広告宛先やソーシャル宛先（[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)、[Facebook](catalog/social/facebook.md) など）は、このような宛先の例です。
 
 ## エッジパーソナライゼーション宛先 {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Experience Platform のエッジパーソナライゼーション宛先には、
 
 詳しくは、[同じページと次のページのパーソナライゼーション用にパーソナライゼーション宛先を設定](/help/destinations/ui/activate-edge-personalization-destinations.md)する方法を参照してください。
 
-## プロファイル書き出し宛先とセグメント書き出し宛先 - 概要ビデオ {#video}
+## プロファイルの書き出しとオーディエンスの書き出し先 — ビデオの概要 {#video}
 
 次のビデオでは、次の 2 種類の宛先の詳細について説明します。
 
@@ -91,7 +91,7 @@ Platform では、タグ管理の機能と柔軟性を活用しているので�
 
 マーケターは、接続と拡張機能の組み合わせを使用して、お客様の使用例に対処できます。
 
-接続は、一元化された完全な顧客プロファイルや顧客セグメントをアクティブ化に活用する必要がある場合に役立ちます。例えば、アップロードされた CRM データを含む Analytics システムの行動データを結合して、ユーザーにパーソナライズされたメッセージを配信する前に、特定のセグメントに対してそのユーザーを評価する場合、接続を使用します。
+接続は、完全な一元化された顧客プロファイルまたは顧客オーディエンスをアクティベーションに活用する必要がある場合に役立ちます。 例えば、アップロードされた CRM データを含む Analytics システムの行動データを結合して、ユーザーにパーソナライズされたメッセージを配信する前に、特定のオーディエンスに対するユーザーの評価をおこなう場合、接続を使用します。
 
 拡張機能は、イベントデータを使用してアクションをトリガーしたり、外部環境でセグメント化をおこなう場合に役立ちます。例えば、特定のユーザーについて、行動データをファイル上の他のデータソースと結合せずに、外部システムに転送する必要がある場合です。
 
