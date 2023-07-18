@@ -2,7 +2,7 @@
 title: Adobe Targetを使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
+source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 3%
@@ -51,9 +51,9 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 
 Target でオーディエンスを作成する場合、次の値がカスタムパラメーターとして使用できます。
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target プロファイルの更新 {#profile-update}
 
