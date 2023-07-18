@@ -4,9 +4,9 @@ title: 有効化の概要
 type: Tutorial
 description: 様々なタイプの宛先に対してAdobe Experience Platformでオーディエンスをアクティブ化する方法を説明します。
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 26%
 
 ---
@@ -49,9 +49,9 @@ Adobe Experience Platformは様々な宛先をサポートしています。 オ
    * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](activate-streaming-profile-destinations.md)
    * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](activate-batch-profile-destinations.md)
 
-### オーディエンスの詳細ページからのオーディエンスのアクティブ化 {#activate-segment-details}
+### オーディエンスの詳細ページからのオーディエンスのアクティブ化 {#activate-audience-details}
 
-オーディエンスの詳細ページから、オーディエンスを宛先に対してアクティブ化できます。 詳しくは、 [セグメントの詳細](../../segmentation/ui/overview.md#segment-details) を参照してください。
+オーディエンスの詳細ページから、オーディエンスを宛先に対してアクティブ化できます。 詳しくは、 [オーディエンスの詳細](../../segmentation/ui/overview.md#audience-details) を参照してください。
 
 選択した宛先に応じて、以下の記事で説明されている手順に従って、アクティベーションワークフローを完了します。
 
