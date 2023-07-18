@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；スキーマ；セグメント；segmentMembership；セグメントメンバーシップ；スキーマデザイン；マップ；マップ；
 solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
 description: このドキュメントでは、「セグメントメンバーシップの詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 19%
 
 ---
 
@@ -28,7 +27,7 @@ ht-degree: 7%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `segmentMembership` | マップ | 個人のセグメントメンバーシップを表す map オブジェクト。 このオブジェクトの構造について、以下で詳しく説明します。 |
+| `segmentMembership` | マップ | 個人のセグメントメンバーシップを記述するマップオブジェクト。このオブジェクトの構造について、以下で詳しく説明します。 |
 
 {style="table-layout:auto"}
 
@@ -74,9 +73,9 @@ ht-degree: 7%
 | プロパティ | 説明 |
 | --- | --- |
 | `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
-| `xdm:lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
+| `xdm:lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
 | `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 外部オーディエンスの場合、このフィールドを設定しないと、セグメントのメンバーシップは、 `lastQualificationTime`. |
-| `xdm:status` | 現在のリクエストの一環としてセグメントのメンバーシップが認識されたかどうかを示す文字列フィールド。 次の値を使用できます。 <ul><li>`realized`:プロファイルがセグメントの対象になります。</li><li>`exited`:プロファイルは、現在のリクエストの一環としてセグメントから退出しています。</li></ul> |
+| `xdm:status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`:プロファイルがセグメントの対象になります。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
 | `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、1 つのタイプのみです。 `xdm:payloadType` ペイロードのタイプを示します (`boolean`, `number`, `propensity`または `string`) の代わりに、兄弟プロパティがペイロードタイプの値を提供します。 |
 
 {style="table-layout:auto"}

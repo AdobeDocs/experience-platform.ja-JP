@@ -3,10 +3,10 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: リアルタイム顧客プロファイルの概要
 description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 100%
+source-wordcount: '1990'
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ### プロファイルエンティティの構成
 
-リアルタイム顧客プロファイルは、**プライマリエンティティ**&#x200B;と呼ばれるメインエンティティと、様々なサポートエンティティで構成されます。Experience Platform のコンテキストでは、プライマリエンティティは通常&#x200B;**プロファイルエンティティ**&#x200B;であり、個人の特徴、行動およびセグメントメンバーシップで構成されます。その他のエンティティには次のものがあり、セグメント化エンジンでプロファイルのプライマリエンティティ外部のデータを利用できます。
+リアルタイム顧客プロファイルは、**プライマリエンティティ**&#x200B;と呼ばれるメインエンティティと、様々なサポートエンティティで構成されます。Experience Platformの場合、通常、プライマリエンティティは **プロファイルエンティティ**：個々の人の特性、行動、オーディエンスのメンバーシップで構成されます。 その他のエンティティには次のものがあり、セグメント化エンジンでプロファイルのプライマリエンティティ外部のデータを利用できます。
 
 - **ディメンションエンティティ**：イベントやプロファイルレコード間で共有される情報のデータモデリングプロセスを簡略化するために使用されるエンティティ。これは、ルックアップエンティティまたは分類エンティティとも呼ばれます。
 - **B2B エンティティ**：プロファイルと B2B アカウントおよびオポチュニティとの関係を表すエンティティ。
@@ -98,13 +98,13 @@ UI の結合スキーマへのアクセス方法など、結合スキーマに�
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## プロファイルとセグメント
+## プロファイルとオーディエンス
 
-Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向けのエクスペリエンスを強化するために必要なオーディエンスを生成します。オーディエンスセグメントを作成すると、そのセグメントの ID が、すべての資格を持つプロファイルのセグメントメンバーのリストに追加されます。セグメントルールは、RESTful API とセグメントビルダーのユーザーインターフェイスを使用して作成され、[!DNL Real-Time Customer Profile] データに適用されます。セグメント化の詳細については、「[セグメント化サービスの概要](../segmentation/home.md)」を参照してください。
+Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向けのエクスペリエンスを強化するために必要なオーディエンスを生成します。オーディエンスを作成すると、そのオーディエンスの ID が、すべての資格を持つプロファイルのオーディエンスメンバーシップのリストに追加されます。 セグメントルールは、RESTful API とセグメントビルダーのユーザーインターフェイスを使用して作成され、[!DNL Real-Time Customer Profile] データに適用されます。セグメント化の詳細については、「[セグメント化サービスの概要](../segmentation/home.md)」を参照してください。
 
 ### ストリーミングの取得とストリーミングのセグメント化
 
-リアルタイム入力は、ストリーミング取得と呼ばれるプロセスを通じて可能になります。プロファイルと時系列データが取得されると、[!DNL Real-Time Customer Profile] は、既存のデータと結合して和集合表示を更新する前に、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータをセグメントに含めるか除外するかを自動的に決定します。その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。取得される間、データが正しく取得され、データセットの基になるスキーマに適合していることを確認する検証も行われます。取得中の検証の詳細については、まず「[データ取得の質の概要](../ingestion/quality/overview.md)」を読んでください。
+リアルタイム入力は、ストリーミング取得と呼ばれるプロセスを通じて可能になります。プロファイルおよび時系列データが取り込まれると、 [!DNL Real-Time Customer Profile] は、ストリーミングセグメント化と呼ばれる継続的なプロセスを通じて、そのデータを自動的にオーディエンスに含めるかオーディエンスから除外するかを決定してから、既存のデータと結合して和集合表示を更新します。 その結果、顧客がブランドとやり取りする際に、瞬時に計算を行い、顧客に対して強化された個別的なエクスペリエンスを提供する意思決定を行うことができます。取得される間、データが正しく取得され、データセットの基になるスキーマに適合していることを確認する検証も行われます。取得中の検証の詳細については、まず「[データ取得の質の概要](../ingestion/quality/overview.md)」を読んでください。
 
 ## エッジ投影
 

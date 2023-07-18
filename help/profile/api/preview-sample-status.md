@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: サンプルステータスのプレビュー（プロファイルプレビュー）API エンドポイント
 description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID 別にプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platformを使用すると、複数のソースから顧客デ�
 
 >[!NOTE]
 >
->Adobe Experience Platform Segmentation Service API の一部として使用できる推定およびプレビューエンドポイントがあり、期待されるオーディエンスを確実に特定するのに役立つ、セグメント定義に関する概要レベルの情報を表示できます。 セグメントのプレビューおよび推定エンドポイントを使用する手順の詳細については、 [プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)( [!DNL Segmentation] API 開発者ガイド。
+>Adobe Experience Platform Segmentation Service API の一部として使用できる推定およびプレビューエンドポイントがあり、期待されるオーディエンスを確実に特定するのに役立つ、セグメント定義に関する概要レベルの情報を表示できます。 プレビューエンドポイントと推定エンドポイントを使用する手順の詳細については、 [プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)( [!DNL Segmentation] API 開発者ガイド。
 
 ## はじめに
 
@@ -592,5 +592,5 @@ curl -X GET \
 
 ## 次の手順
 
-これで、プロファイルストアでサンプルデータをプレビューし、データに関する複数のレポートを実行する方法がわかったので、Segmentation Service API の推定エンドポイントとプレビューエンドポイントを使用して、セグメント定義に関する概要レベルの情報を表示できます。 この情報は、セグメント内の期待されるオーディエンスを確実に分離するのに役立ちます。 セグメント化 API を使用したセグメントプレビューと推定の操作について詳しくは、 [エンドポイントガイドのプレビューと推定](../../segmentation/api/previews-and-estimates.md).
+これで、プロファイルストアでサンプルデータをプレビューし、データに関する複数のレポートを実行する方法がわかったので、Segmentation Service API の推定エンドポイントとプレビューエンドポイントを使用して、セグメント定義に関する概要レベルの情報を表示できます。 この情報は、期待されるオーディエンスを確実に特定するのに役立ちます。 セグメント化 API を使用したプレビューと推定の操作について詳しくは、 [エンドポイントガイドのプレビューと推定](../../segmentation/api/previews-and-estimates.md).
 

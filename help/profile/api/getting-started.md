@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイル API の概要
 type: Documentation
 description: プロファイル API の概要ガイドでは、リアルタイム顧客プロファイル API エンドポイントを使用してプロファイルデータに対して基本的な CRUD 操作を実行する際に知っておく必要がある主要な概念と基本機能の概要を説明しています。
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '410'
 ht-degree: 53%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 53%
 
 * [[!DNL Real-Time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握できます。
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 

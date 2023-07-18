@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Audiences UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作できる豊富なワークスペースを提供します。 ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 74%
+source-wordcount: '1737'
+ht-degree: 55%
 
 ---
 
@@ -108,6 +108,64 @@ ht-degree: 74%
 
 ![属性のリストが表示されます。](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL エンリッチメント] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>この時点で、エンリッチメント属性は次の操作を実行できます。 **のみ** をダウンストリームのAdobe Journey Optimizerシナリオで使用する
+
+この **[!UICONTROL 強化]** ブロックタイプを使用すると、データセットの追加属性でオーディエンスをエンリッチメントできます。 これらの属性は、パーソナライゼーションの使用例で使用できます。
+
+次の手順で **[!UICONTROL 強化]** ブロック、 **+** アイコン、その後に **[!UICONTROL 強化]**.
+
+![この [!UICONTROL 強化] 」オプションが選択されている。](../images/ui/audience-composition/add-enrich-block.png)
+
+この **[!UICONTROL 強化]** ブロックが追加されます。 このブロックを選択すると、エンリッチメントの詳細が右側のパネルに表示されます。 これには、ブロックのラベルとエンリッチメントデータセットが含まれます。
+
+オーディエンスのエンリッチメントに使用するデータセットを選択するには、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+
+![フィルターボタンがハイライト表示されます。 これを選択すると、 [!UICONTROL データセットを選択] ポップオーバー](../images/ui/audience-composition/enrich-select-dataset.png)
+
+この **[!UICONTROL データセットを選択]** ポップオーバーが表示されます。 エンリッチメント用に追加するデータセットを選択し、その後に **[!UICONTROL 選択]** をクリックして、エンリッチメント用のデータセットを追加します。
+
+![選択したデータセットが選択されます。](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>選択したデータセット **必須** 次の条件を満たしている。
+>
+>- データセット **必須** はレコードタイプです。
+>   - データセット **できません** イベントタイプであるか、システム生成であるか、プロファイル用にマークされている。
+>- データセット **必須** は 1 GB 以下です。
+
+この **[!UICONTROL エンリッチメント条件]** セクションが右側のパネルに表示されるようになりました。 このセクションでは、 **[!UICONTROL ソース結合キー]** そして **[!UICONTROL エンリッチメントデータセット結合キー]**：エンリッチメントデータセットを、作成しようとしているオーディエンスとリンクできます。
+
+![この [!UICONTROL エンリッチメント条件] 領域がハイライト表示されます。](../images/ui/audience-composition/enrichment-criteria.png)
+
+次の項目を選択します。 **[!UICONTROL ソース結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+
+![次に示すフィルターアイコン： [!UICONTROL ソース結合キー] がハイライト表示されます。](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+この **[!UICONTROL プロファイル属性を選択]** ポップオーバーが表示されます。 ソース結合キーとして使用するプロファイル属性を選択し、その後に **[!UICONTROL 選択]** をクリックして、その属性をソース結合キーとして選択します。
+
+![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+次の項目を選択します。 **[!UICONTROL エンリッチメントデータセット結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+
+![次に示すフィルターアイコン： [!UICONTROL エンリッチメントデータセット結合キー] がハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+この **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 エンリッチメントデータセット結合キーとして使用する属性を選択し、その後に **[!UICONTROL 選択]** を使用して、その属性をエンリッチメントデータセット結合キーとして選択します。
+
+![エンリッチメントデータセット結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+これで、2 つの結合キー、 **[!UICONTROL エンリッチメント属性]** セクションが表示されます。 これで、オーディエンスを強化する属性を追加できます。 これらの属性を追加するには、「 **[!UICONTROL 属性を追加]**.
+
+![この [!UICONTROL 属性を追加] ボタンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+この **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 データセットから属性を選択してオーディエンスをエンリッチメントし、その後に **[!UICONTROL 選択]** をクリックして、オーディエンスに属性を追加します。
+
+![追加するエンリッチメント属性がハイライト表示されます。](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 **[!UICONTROL 分割]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL 分割]**」の順に選択します。
 
 ![「分割」オプションが選択されている様子。](../images/ui/audience-composition/add-split-block.png)
+
+オーディエンスを分割する場合は、割合で分割するか、属性で分割します。
 
 ### 割合で分割 {#split-percentage}
 
