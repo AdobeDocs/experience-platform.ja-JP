@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 30%
+ht-degree: 31%
 
 ---
 
@@ -50,7 +50,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="チャーン"
->abstract="チャーンは、セグメントジョブが最後に実行された時点と比較した、オーディエンス内で変化しているプロファイルの割合を表します。"
+>abstract="チャーンは、セグメントジョブが最後に実行された時点と比較して、オーディエンス内で変化しているプロファイルの割合を示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
@@ -59,8 +59,8 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="すべてのオーディエンスをスケジュールに追加"
->abstract="有効にすると、バッチセグメント化を使用して評価されたすべてのオーディエンスが、スケジュールされた日次更新に含まれます。 「無効」を選択すると、スケジュールされた更新からすべてのオーディエンスが削除されます。"
+>title="スケジュールへのすべてのオーディエンスの追加"
+>abstract="毎日のスケジュール済みアップデートに、バッチセグメント化を使用して評価されたすべてのオーディエンスを含めることを有効にします。無効にすると、スケジュール済みアップデートからすべてのオーディエンスが削除されます。"
 
 を選択します。 **[!UICONTROL 参照]** 」タブをクリックして、組織のすべてのオーディエンスのリストを表示します。
 
