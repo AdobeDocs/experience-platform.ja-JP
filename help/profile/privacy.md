@@ -5,10 +5,10 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護�
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
-## はじめに
+## Destination SDK の
 
 このガイドでは、次の点に関する十分な知識が必要です [!DNL Platform] コンポーネント：
 
@@ -189,11 +189,11 @@ UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL AE
 
 >[!IMPORTANT]
 >
->プライバシー削除リクエストは即座にはおこなわれず、関連するサービスや、地理的な場所など、影響を受ける他の要因によって異なる場合があります。 プライバシージョブが完了するまでの期間は 15 ～ 45 日になる場合がありますが、保証されていません。
+>プライバシー削除リクエストは即座にはおこなわれず、関連するサービスや、地理的な場所など、影響を受ける他の要因によって異なる場合があります。 プライバシージョブが完了するまでの期間は 15 ～ 45 日の範囲ですが、保証されていません。
 
 ID サービス (`identity`) とデータレイク (`aepDataLake`) をプロファイルのプライバシーリクエスト (`ProfileService`) の場合、プロファイルに関連する様々なデータセットが、次のように異なるタイミングでシステムから削除されます。
 
-| 含まれる製品 | エフェクト |
+| 含まれる製品 | 効果 |
 | --- | --- |
 | `ProfileService` のみ | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルが削除されます。 ただし、プロファイルの ID グラフは引き続き残り、同じ ID を持つ新しいデータが取り込まれると、プロファイルを再構築できる可能性があります。 プロファイルに関連付けられたデータも、データレイクに残ります。 |
 | `ProfileService` および `identity` | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルとそれに関連する ID グラフが削除されます。 プロファイルに関連付けられたデータは、データレイクに残ります。 |
@@ -213,7 +213,8 @@ ID サービス (`identity`) とデータレイク (`aepDataLake`) をプロフ�
 ### 結合ポリシーの制限 {#merge-policy-limitations}
 
 Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、 **[!DNL None]** その [!UICONTROL ID のステッチ] タイプ。 つまり、 [!UICONTROL ID のステッチ] が [!UICONTROL プライベートグラフ].
->![結合ポリシーの ID の組み合わせは「なし」に設定されます](./images/privacy/no-id-stitch.png)
+>>
+![結合ポリシーの ID の組み合わせは「なし」に設定されます](./images/privacy/no-id-stitch.png)
 >
 ## 次の手順
 
