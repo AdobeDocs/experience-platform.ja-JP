@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；はじめに；顧客 ai；人気のトピック；顧客 ai 入力；顧客 ai 出力；データ要件
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI のデータ要件
 topic-legacy: Getting started
 description: 顧客 AI が使用する必要なイベント、入力、出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 17%
@@ -18,7 +18,7 @@ ht-degree: 17%
 
 次のドキュメントでは、顧客 AI で使用される様々な必要なイベント、入力、出力の概要を説明します。
 
-## はじめに {#getting-started}
+## Destination SDK の {#getting-started}
 
 次に、傾向モデルを構築し、顧客 AI でパーソナライズされたマーケティングのターゲットオーディエンスを特定する手順を示します。
 

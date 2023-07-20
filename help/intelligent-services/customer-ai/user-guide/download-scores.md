@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform、ダウンロードスコア、顧客 AI、人気の高いトピック、エクスポート、エクスポート、顧客 AI ダウンロード、顧客 AI スコア
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI でのスコアのダウンロード
 description: 顧客 AI を使用すると、Parquet ファイル形式でスコアをダウンロードできます。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 81%

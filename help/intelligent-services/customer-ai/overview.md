@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform、概要、顧客 AI、人気のトピック、顧客 AI の概要
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 顧客 AI の概要
 description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
 landing-page-description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 short-description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 66%
@@ -19,7 +19,7 @@ ht-degree: 66%
 
 マーケティング担当者は、インテリジェントサービスの一部である顧客 AI を使用して、顧客予測と説明を個人レベルで生成する力を提供します。
 
-顧客 AI は、影響力のある要因の助けを借りて、顧客が何をする可能性があるかとその理由を知ることができます。さらに、マーケティング担当者は顧客 AI の予測とインサイトを活用し、最も適切なオファーとメッセージを提供することで、顧客体験をパーソナライズできます。
+顧客 AI は、影響力のある要因の助けを借りて、顧客が何をする可能性があるかとその理由を知ることができます。さらに、マーケターは顧客 AI の予測とインサイトを活用し、最も適切なオファーとメッセージを提供することで、顧客体験をパーソナライズできます。
 
 ## 顧客 AI について
 
