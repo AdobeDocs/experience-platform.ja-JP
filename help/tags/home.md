@@ -2,18 +2,14 @@
 title: タグの概要
 description: Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ管理機能です。タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '562'
 ht-degree: 100%
 
 ---
 
 # タグの概要
-
->[!NOTE]
->
->イベント転送は、Adobe Real-time Customer Data Platform Connections、Prime または Ultimate の一部として提供される有料機能です。
 
 >[!NOTE]
 >
