@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
+source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 98%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 98%
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
-      - [SAP Hybris コネクタ](connectors/crm/sap-hybris.md)
       - [Salesforce コネクタ](connectors/crm/salesforce.md)
       - [SugarCRM コネクタ](connectors/crm/sugarcrm.md)
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
@@ -94,6 +93,7 @@ ht-degree: 98%
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - e コマース {#ecommerce}
+      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify ストリーミング](connectors/ecommerce/shopify-streaming.md)
    - ローカルシステム {#local-system}
@@ -140,7 +140,6 @@ ht-degree: 98%
          - [OneTrust 統合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM アカウントおよび連絡先](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/api/create/crm/sugarcrm-events.md)
@@ -173,6 +172,7 @@ ht-degree: 98%
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - e コマース {#ecommerce}
+         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify ストリーミング](tutorials/api/create/ecommerce/shopify-streaming.md)
       - マーケティングの自動処理 {#marketing-automation}
@@ -261,7 +261,6 @@ ht-degree: 98%
          - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM アカウントおよび連絡先](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -293,6 +292,7 @@ ht-degree: 98%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - e コマース {#ecommerce}
+         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify ストリーミング](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - ローカルシステム {#local-system}
