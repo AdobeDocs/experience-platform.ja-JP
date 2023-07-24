@@ -3,7 +3,7 @@ title: Platform Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 6%
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 有効にするには [!DNL Target]、次の操作を実行します。
 
-1. 有効にする [!DNL Target] の [datastream](../../datastreams/overview.md) を適切なクライアントコードに置き換えます。
+1. 有効にする [!DNL Target] の [datastream](../../../datastreams/overview.md) を適切なクライアントコードに置き換えます。
 1. を `renderDecisions` オプションをイベントに追加できます。
 
 その後、オプションで、次のオプションも追加できます。
@@ -80,7 +80,7 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 * ジオ
 * ネットワーク
 * オペレーティングシステム
-* サイトのページ
+* サイトページ
 * ブラウザー
 * トラフィックソース
 * 時間枠

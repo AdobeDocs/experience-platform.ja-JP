@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;A4T；ログ；Web SDK;Experience;Platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Adobe Experience Platform Web SDK を使用すると、 [Adobe Analytics for Tar
 
 ### Analytics クライアント側ログを有効にする {#enable-analytics-client-side-logging}
 
-お使いの実装で Analytics クライアント側ログを有効にすると見なすには、 [datastream](../../../datastreams/overview.md).
+お使いの実装で Analytics クライアント側ログを有効にすると見なすには、 [datastream](../../../../datastreams/overview.md).
 
 ![Analytics データストリーム設定が無効です](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 >
 >次の節で示す実装例では、複数の Analytics トークンが反復的に収集されています。 Analytics トークンの配列を連結するには、次のような関数を使用します。
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

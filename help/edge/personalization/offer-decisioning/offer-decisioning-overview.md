@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -32,28 +32,28 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
 * **決定範囲：** offer decisioningの場合、決定範囲は、offer decisioningサービスがオファーの提案に使用するアクティビティと配置 ID を含む、Base64 でエンコードされた JSON の文字列です。
 
-   *決定範囲 JSON:*
+  *決定範囲 JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *決定範囲 Base64 エンコードされた文字列：*
+  *決定範囲 Base64 エンコードされた文字列：*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >決定範囲の値は、 **アクティビティの概要** ページを使用します。
+  >[!TIP]
+  >
+  >決定範囲の値は、 **アクティビティの概要** ページを使用します。
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **データストリーム：** 詳しくは、 [datastreams](../../datastreams/overview.md) ドキュメント。
+* **データストリーム：** 詳しくは、 [datastreams](../../../datastreams/overview.md) ドキュメント。
 
 * **ID**:詳しくは、このドキュメントを読んで、方法を説明してください [Platform Web SDK は ID サービスを使用します](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
 offer decisioningを有効にするには、次の手順を実行します。
 
-1. でAdobe Experience Platformを有効にした [datastream](../../datastreams/overview.md) 「Offer decisioning」ボックスをオンにします。
+1. でAdobe Experience Platformを有効にした [datastream](../../../datastreams/overview.md) 「Offer decisioning」ボックスをオンにします。
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,10 +81,11 @@ offer decisioningを有効にするには、次の手順を実行します。
              ]
           })
          ```
+
    * タグを使用した SDK のインストール
 
       1. [タグプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
-      1. [埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=ja)
       1. 「データストリーム」ドロップダウンから設定を選択し、作成したデータストリームを使用して、Platform Web SDK 拡張機能をインストールして設定します。 詳しくは、[拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -101,10 +102,9 @@ offer decisioningを有効にするには、次の手順を実行します。
 
          * Platform Web SDK の「イベントの送信」アクションを追加し、関連する `decisionScopes` アクションの設定に対して
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [ライブラリの作成と公開](../../../tags/ui/publishing/libraries.md) には、設定したすべての関連するルール、データ要素、拡張機能が含まれています。
-
-
 
 ## リクエストと応答のサンプル
 

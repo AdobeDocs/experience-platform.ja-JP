@@ -2,7 +2,7 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 100%
@@ -82,7 +82,7 @@ ht-degree: 100%
 
 これらの宛先では、[!UICONTROL Experience CloudI D サービス] または [!UICONTROL Experience Platform Web SDK] のどちらかで ID 同期が行われる必要があります。
 
-[!UICONTROL Experience Platform Web SDK] を使用していて、従来の [!UICONTROL Experience Cloud ID サービス]がページに実装されていない場合は、問題の web サイトのデータストリームでサードパーティ ID の同期が有効になっていることを確認する必要があります（概要については[データストリームの設定に関するドキュメント](/help/edge/datastreams/configure.md#create)を参照）。
+[!UICONTROL Experience Platform Web SDK] を使用していて、従来の [!UICONTROL Experience Cloud ID サービス]がページに実装されていない場合は、問題の web サイトのデータストリームでサードパーティ ID の同期が有効になっていることを確認する必要があります（概要については[データストリームの設定に関するドキュメント](/help/datastreams/configure.md#create)を参照）。
 
 上記でリンクを示したドキュメントの説明に従ってデータストリームを設定する際は、**[!UICONTROL サードパーティ ID の同期]**&#x200B;スライダーが有効になっていることを確認する必要があります。ほとんどのお客様は、`container_id` フィールドを空白のまま残すでしょう（デフォルトは 0）。 従来の Audience Manager 実装で特定のコンテナ ID を使用していた場合にのみ、この値を変更する必要があります（ただし、それはごく少数のお客様の場合です）。
 

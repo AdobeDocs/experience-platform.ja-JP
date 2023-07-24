@@ -2,7 +2,7 @@
 title: ECID へのアクセス
 description: データ準備またはExperience Cloudからタグ ID にアクセスする方法を説明します
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 この [!DNL Experience Cloud Identity (ECID)] は、ユーザーが Web サイトを訪問した際にユーザーに割り当てられる永続的な識別子です。 特定の状況で、 [!DNL ECID] （サードパーティに送信する場合など）。 別の使用例として、 [!DNL ECID] カスタム XDM フィールドに追加する必要があります。
 
-ECID には、 [データ収集用のデータ準備](../../../../edge/datastreams/data-prep.md) （推奨）またはタグを使用します。
+ECID には、 [データ収集用のデータ準備](../../../../datastreams/data-prep.md) （推奨）またはタグを使用します。
 
 ## データ準備を使用した ECID へのアクセス（推奨される方法） {#accessing-ecid-data-prep}
 

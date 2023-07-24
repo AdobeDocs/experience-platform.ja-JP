@@ -2,7 +2,7 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 30%
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 このガイドでは、データ収集機能の権限を管理する方法について説明します。
 
-## はじめに
+## Destination SDK の
 
 データ収集用にアクセス制御を設定するには、Adobe Experience Platformデータ収集との統合を持つ組織の管理者権限が必要です。 権限を付与または取り消す最小の役割は、**製品プロファイル管理者**&#x200B;です。権限を管理できる他の管理者の役割は、**製品管理者**（製品内のすべてのプロファイルを管理）と&#x200B;**システム管理者**（制限なし）です。詳しくは、『Adobe エンタープライズ管理ガイド』の[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する記事を参照してください。
 
@@ -36,7 +36,7 @@ Adobe Experience Platformの権限には、データストリーム、ID、ス�
 | データモデリング | スキーマの表示 | スキーマへの読み取り専用アクセスを許可します。 |
 | Identity Management | ID 名前空間の管理 | 表示、作成および編集の機能を付与します [ID 名前空間](../identity-service/namespaces.md). |
 | Identity Management | ID 名前空間の表示 | ID 名前空間への読み取り専用アクセスを許可します。 |
-| データ収集 | データストリームの管理 | 表示、作成および編集の機能を付与します [datastreams](../edge/datastreams/overview.md). |
+| データ収集 | データストリームの管理 | 表示、作成および編集の機能を付与します [datastreams](../datastreams/overview.md). |
 | データ収集 | データストリームの表示 | データストリームへの読み取り専用アクセスを許可します。 |
 
 {style="table-layout:auto"}

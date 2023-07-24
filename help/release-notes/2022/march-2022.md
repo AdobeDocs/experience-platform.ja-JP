@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2022年3月
 description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 100%
@@ -114,7 +114,7 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 
 | 機能 | 説明 |
 | --- | --- |
-| グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../edge/datastreams/overview.md#create)の節を参照してください。 |
+| グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../datastreams/overview.md#create)の節を参照してください。 |
 | [Edge Network Server API](../../server-api/overview.md) | この Server API を使用すると、お客様は、新しい認証済みエンドポイントを使用して Experience Platform Edge Network を操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
 
 Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。

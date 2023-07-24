@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 31%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->この `datasetId` オプション `sendEvent` コマンドは廃止されました。 データセット ID を上書きするには、 [設定の上書き](../datastreams/overrides.md) 代わりに、
+>この `datasetId` オプション `sendEvent` コマンドは廃止されました。 データセット ID を上書きするには、 [設定の上書き](../../datastreams/overrides.md) 代わりに、
 
 場合によっては、設定 UI で設定されたデータセット以外のデータセットにイベントを送信する必要があります。 そのためには、 `datasetId` オプションを `sendEvent` コマンド：
 
@@ -254,20 +254,20 @@ alloy("configure", {
 
 * イベント XDM は、コールバック中に変更できます。 コールバックが返された後、 content.xdm および content.data オブジェクトの変更されたフィールドと値は、イベントと共に送信されます。
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * コールバックで例外がスローされると、イベントの処理が中断され、イベントは送信されません。
 * このコールバックが `false`を呼び出すと、イベントの処理が中断され、エラーが発生せずに停止し、イベントは送信されません。 このメカニズムを使用すると、イベントデータを調べて `false` を返します。
 
-   >[!NOTE]
-   >ページの最初のイベントで false が返されるのを防ぐため、注意が必要です。 最初のイベントで false を返すと、パーソナライゼーションに悪影響を与える可能性があります。
+  >[!NOTE]
+  >ページの最初のイベントで false が返されるのを防ぐため、注意が必要です。 最初のイベントで false を返すと、パーソナライゼーションに悪影響を与える可能性があります。
 
 ```javascript
    onBeforeEventSend: function(content) {

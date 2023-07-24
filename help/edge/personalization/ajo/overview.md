@@ -3,7 +3,7 @@ title: Platform Web SDK でのAdobe Journey Optimizerの使用
 description: Adobe Journey Optimizerを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: ajo;ajoweb;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 1. 詳しくは、 [前提条件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) から [!DNL Adobe Journey Optimizer] [Web エクスペリエンスガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)具体的には、
    * 設定 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 有効にする [!DNL Adobe Journey Optimizer] の [datastream](../../datastreams/overview.md).
+   * 有効にする [!DNL Adobe Journey Optimizer] の [datastream](../../../datastreams/overview.md).
    * を有効にします。 [!UICONTROL エッジ上のアクティブな結合ポリシー] オプション。
 
 2. を `renderDecisions` オプションをイベントに追加できます。 設定 `renderDecisions` から `true` 配信されたJourney Optimizerコンテンツ提案を web ページ上に自動レンダリングする場合。

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK 拡張機能の設定
 description: UI でのAdobe Experience Platform Web SDK タグ拡張機能の設定方法。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 9%
@@ -52,7 +52,7 @@ Adobe Experience Platform Web SDK 拡張機能は、ページ上の複数のイ�
 
 リクエストがAdobe Experience Platform Edge ネットワークに送信されると、データストリーム ID がサーバー側設定の参照に使用されます。 Web サイト上でコードを変更しなくても、設定を更新できます。
 
-詳しくは、 [datastreams](../../../../edge/datastreams/overview.md) を参照してください。
+詳しくは、 [datastreams](../../../../datastreams/overview.md) を参照してください。
 
 
 ## [!UICONTROL プライバシー]
@@ -112,10 +112,10 @@ SDK は、自動的にリンククリック情報を収集できます。 デフ
 
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
-1. 最初に、[データストリーム設定ページ](../../../../edge/datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
+1. 最初に、[データストリーム設定ページ](../../../../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
 2. 次に、Web SDK コマンドまたは Web SDK タグ拡張機能を使用して、上書きを Edge Network に送信する必要があります。
 
-データストリームを参照 [設定の上書きドキュメント](../../../../edge/datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
+データストリームを参照 [設定の上書きドキュメント](../../../../datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
 
 オーバーライドを Web SDK コマンドに渡す代わりに、次に示すタグ拡張画面でオーバーライドを設定できます。
 

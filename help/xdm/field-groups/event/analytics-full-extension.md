@@ -2,7 +2,7 @@
 title: Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループ
 description: このドキュメントでは、Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループの概要を説明します。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 100%
@@ -103,4 +103,4 @@ Analytics 拡張機能フィールドグループには、最大 100 個の[カ�
 
 このドキュメントでは、Analytics 拡張機能フィールドグループの構造と使用例について説明しました。 フィールドグループ自体の詳細については、[公開 XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)を参照してください。
 
-Adobe Experience Platform Web SDK を使用した Analytics データの収集にこのフィールドグループを使用している場合は、[データストリームの設定](../../../edge/datastreams/overview.md)に関するガイドを参照し、サーバー側でデータを XDM にマッピングする方法を確認してください。
+Adobe Experience Platform Web SDK を使用した Analytics データの収集にこのフィールドグループを使用している場合は、[データストリームの設定](../../../datastreams/overview.md)に関するガイドを参照し、サーバー側でデータを XDM にマッピングする方法を確認してください。

@@ -2,7 +2,7 @@
 title: Adobe Analyticsの操作
 description: Edge Network Server API を使用してAdobe Analyticsとやり取りする方法について説明します。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 2%
@@ -17,7 +17,7 @@ Adobe Analyticsのデータ収集は、XDM データをAdobe Analyticsが理解�
 
 また、 [XDM 値の手動マッピング](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) を従来の Analytics 変数に追加します。
 
-Adobe Analyticsが Server API からデータを受け取れるようにするには、次の手順を実行する必要があります。 [データストリームの設定](../edge/datastreams/overview.md#adobe-analytics-settings) イベントをAdobe Analyticsに転送するには、データストリーム設定ページでレポートスイート ID を入力します。
+Adobe Analyticsが Server API からデータを受け取れるようにするには、次の手順を実行する必要があります。 [データストリームの設定](../datastreams/overview.md#adobe-analytics-settings) イベントをAdobe Analyticsに転送するには、データストリーム設定ページでレポートスイート ID を入力します。
 
 ![Adobe Analytics Datastream 設定](assets/analytics-datastream.png)
 
@@ -31,7 +31,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### リクエスト {#request}
 
-以下のサンプルには、 `_experience.analytics` フィールドグループを使用します。 また、JSON ベースのデータレイヤーも含まれます。 これらのデータレイヤーは自動的にマッピングできませんが、 [データ収集用のデータ準備](../edge/datastreams/data-prep.md) を使用して、上記で参照されているフィールドグループを含むスキーマにこれらの値をマッピングできます。
+以下のサンプルには、 `_experience.analytics` フィールドグループを使用します。 また、JSON ベースのデータレイヤーも含まれます。 これらのデータレイヤーは自動的にマッピングできませんが、 [データ収集用のデータ準備](../datastreams/data-prep.md) を使用して、上記で参照されているフィールドグループを含むスキーマにこれらの値をマッピングできます。
 
 ユーザーがこれらのフィールドにマッピングしたすべての値は、API リクエストに含まれる場合と同じように、適切な Analytics 値に自動的にマッピングされます。
 

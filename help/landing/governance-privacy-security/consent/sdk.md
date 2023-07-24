@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK を使用した顧客の同意データの処理
 description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK を使用すると、同意管理プラット�
 
 このガイドでは、UI のタグ拡張を使用した SDK のセットアップワークフローに従います。 拡張機能を使用しない場合で、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく、次のドキュメントを参照してください。
 
-* [データストリームの設定](../../../edge/datastreams/overview.md)
+* [データストリームの設定](../../../datastreams/overview.md)
 * [SDK のインストール](../../../edge/fundamentals/installing-the-sdk.md)
 * [SDK の設定 同意コマンド用](../../../edge/consent/supporting-consent.md)
 

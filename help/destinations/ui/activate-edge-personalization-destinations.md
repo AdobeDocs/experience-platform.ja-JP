@@ -3,7 +3,7 @@ title: エッジパーソナライゼーションの宛先に対するオーデ�
 description: 同じページおよび次のページのパーソナライゼーションのユースケースで、Adobe Experience Platformからエッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 19%
@@ -80,7 +80,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ![データストリーム設定](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-データストリームの設定方法の詳細については、[Platform Web SDK ドキュメント](../../edge/datastreams/configure.md#aep)に記載されている手順に従ってください。
+データストリームの設定方法の詳細については、[Platform Web SDK ドキュメント](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
 
 ### の作成 [!DNL Active-On-Edge] 結合ポリシー {#create-merge-policy}
 

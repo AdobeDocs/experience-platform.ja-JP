@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API の基本を学ぶ
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 62%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 62%
 
 セッション開始リクエストを行う前に、次の情報が必要です。
 
-* この `datastreamId`—POSTSession Start リクエストの必須パラメータ。 `datastreamId` を取得するには、[データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=ja)を参照してください。
+* この `datastreamId`—POSTSession Start リクエストの必須パラメータ。 `datastreamId` を取得するには、[データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja)を参照してください。
 
 * 必要最小限のデータを含むリクエストペイロードの JSON オブジェクト（以下のリクエストの例を参照）。
 

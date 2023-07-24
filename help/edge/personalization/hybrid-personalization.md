@@ -3,7 +3,7 @@ title: Web SDK と Edge Network Server API を使用したハイブリッドパ�
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 100%
@@ -65,7 +65,7 @@ Cookie は、ユーザー ID とクラスター情報を保持するために使
 
 ハイブリッドパーソナライゼーションを実装する場合、Analytics でページヒットが複数回カウントされないように、特に注意する必要があります。
 
-Analytics 用に[データストリームを設定](../datastreams/overview.md)すると、ページヒットが取り込まれるように、イベントが自動転送されます。
+Analytics 用に[データストリームを設定](../../datastreams/overview.md)すると、ページヒットが取り込まれるように、イベントが自動転送されます。
 
 この実装のサンプルでは、次の 2 つの異なるデータストリームを使用しています。
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | はい。 | Edge Network にインタラクションを渡すために使用するデータストリームの ID。データストリームの設定方法については、[データストリームの概要](../datastreams/overview.md)を参照してください。 |
+| `dataStreamId` | `String` | はい。 | Edge Network にインタラクションを渡すために使用するデータストリームの ID。データストリームの設定方法については、[データストリームの概要](../../datastreams/overview.md)を参照してください。 |
 | `requestId` | `String` | いいえ | 内部サーバーリクエストを関連付けるためのランダム ID。何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
 
 ### サーバーサイド応答 {#server-response}

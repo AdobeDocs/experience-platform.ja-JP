@@ -2,10 +2,10 @@
 title: Adobe Commerce Source Connector
 description: Adobe Commerceソースを使用してコマースデータをExperience Platformに取り込む方法を説明します。
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 49098cd11249a44ad7780857e85d054ece864046
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 3%
+source-wordcount: '542'
+ht-degree: 2%
 
 ---
 
@@ -39,6 +39,6 @@ Adobe Commerceソースアカウントを完全にオンボーディングする
 * Connector 拡張機能が正常にインストールされたら、Experience CloudのAdobeアカウントにログインし、 [組織 ID を確認する](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html?lang=en#concept_EA8AEE5B02CF46ACBDAD6A8508646255). この ID は、プロビジョニングされたExperience Cloud会社に関連付けられます。 24 文字の英数字の形式で、必須の文字が含まれています `@AdobeOrg`.
 * 次に、コマース固有のフィールドグループを使用して、Experience Data Model(XDM) スキーマを作成または更新します。 コマース固有のフィールドグループを XDM スキーマに追加する方法について詳しくは、 [XDM スキーマへのフィールドグループの追加](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html?lang=ja).
 * スキーマを設定したら、新しいスキーマに基づいてデータセットを作成する必要があります。 このデータセットには、 [!DNL Commerce] 送信するデータ。 のデータセットを作成する方法の詳細な手順については、 [!DNL Commerce] データについては、 [データをExperience Platformに送信中](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html?lang=en#create-a-dataset).
-* 次に、データストリームを作成し、コマース固有のフィールドグループを含む XDM スキーマを選択します。 データストリームの詳細については、 [データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=ja).
+* 次に、データストリームを作成し、コマース固有のフィールドグループを含む XDM スキーマを選択します。 データストリームの詳細については、 [データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=ja).
 * 次に、Adobe Commerceインスタンスを [Commerce Services コネクタ](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). これにより、コマースインスタンスを SaaS(Software as a Service) としてデプロイできます。
 * 前述のすべての設定が完了したら、を使用して Commerce Services コネクタとExperience Platformコネクタの両方を設定することで、Experience Platformに接続できるようになりました。 [!DNL Commerce Admin]. この最後の手順の詳細については、 [コマースデータのExperience Platformへの接続](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).

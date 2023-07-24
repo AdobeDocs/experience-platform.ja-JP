@@ -2,8 +2,8 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
-workflow-type: ht
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ ht-degree: 100%
 
 ## 2022年10月26日（PT）
 
-* **データストリームの機密データ処理**：データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制に従って機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../edge/datastreams/overview.md#sensitive)を参照してください。
+* **データストリームの機密データ処理**：データストリームでは、複数の Platform テクノロジーを活用して、HIPAA（Health Insurance Portability and Accountability Act）などの規制に従って機密データを適切に処理するようになりました。詳しくは、[データストリームでの機密データの処理](../../datastreams/overview.md#sensitive)を参照してください。
 * **[!DNL Splunk]のイベント転送用拡張機能**：[イベント転送](../ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Splunk] にデータを送信できるようになりました。詳しくは、[[!DNL Splunk] 拡張機能の概要](../extensions/server/splunk/overview.md)を参照してください。
 * **[!DNL Zendesk]のイベント転送用拡張機能**：[イベント転送](../ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Zendesk] にデータを送信できるようになりました。詳しくは、[[!DNL Zendesk] 拡張機能の概要](../extensions/server/zendesk/overview.md)を参照してください。
 

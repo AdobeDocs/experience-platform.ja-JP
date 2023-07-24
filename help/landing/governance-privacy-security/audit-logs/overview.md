@@ -2,7 +2,7 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 50%
@@ -46,7 +46,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | 計算済み属性 | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
-| [データストリーム](../../../edge/datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [データストリーム](../../../datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
 | [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
 | [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
 | [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
@@ -90,6 +90,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 ### 監査ログのフィルタリング
 
 >[!NOTE]
+>
 この新機能により、表示されるデータは 2022 年 3 月まで遡ります。 選択したリソースに応じて、2022 年 1 月より前のデータを利用できるようになります。
 
 

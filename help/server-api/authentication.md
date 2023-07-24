@@ -2,7 +2,7 @@
 title: 認証
 description: Adobe Experience Platform Edge Network Server API の認証を設定する方法について説明します。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 19%
@@ -17,7 +17,7 @@ ht-degree: 19%
 
 リクエストごとに、 [!DNL Server API] データストリームを検証します。 [!DNL access type] 設定。 この設定を使用すると、お客様は認証済みデータを受け入れるか、認証済みデータと未認証データの両方を受け入れるようにデータストリームを設定できます。 デフォルトでは、両方のタイプのデータが受け入れられます。
 
-データストリームアクセスタイプの設定について詳しくは、 [データストリームの作成と設定](../edge/datastreams/overview.md#create).
+データストリームアクセスタイプの設定について詳しくは、 [データストリームの作成と設定](../datastreams/overview.md#create).
 
 以下に、データストリームに基づく動作の概要を示します [!DNL Access Type] 設定およびリクエストを受信したエンドポイント。
 

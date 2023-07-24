@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 同意データと環境設定データを取り込むためのデータセットの設定
 description: Adobe Experience Platformで同意データと環境設定データを取り込むための Experience Data Model(XDM) スキーマとデータセットの設定方法について説明します。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -26,7 +26,6 @@ Adobe Experience Platformが顧客の同意/環境設定データを処理する
 >* 標準化された同意フィールドグループ
 >* 組織で作成されたカスタム同意フィールドグループ
 >* 標準化された同意フィールドグループと、カスタム同意フィールドグループによって提供される追加フィールドの組み合わせ
-
 
 ## 前提条件
 
@@ -160,7 +159,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-これでデータセットが保存され、での使用が有効になりました。 [!DNL Profile]. Platform Web SDK を使用して同意データをプロファイルに送信する場合は、このデータセットを [!UICONTROL プロファイルデータセット] ( [datastream](../../../../edge/datastreams/overview.md).
+これでデータセットが保存され、での使用が有効になりました。 [!DNL Profile]. Platform Web SDK を使用して同意データをプロファイルに送信する場合は、このデータセットを [!UICONTROL プロファイルデータセット] ( [datastream](../../../../datastreams/overview.md).
 
 ## 次の手順
 

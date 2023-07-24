@@ -2,7 +2,7 @@
 title: offer decisioning
 description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 4%
@@ -25,7 +25,7 @@ Edge Network Server API は、 [offer decisioning](https://experienceleague.adob
 
 Server API をOffer decisioningと組み合わせて使用する前に、データストリーム設定でAdobe Experience Platformのパーソナライゼーションを有効にし、 **[!UICONTROL offer decisioning]** オプション。
 
-詳しくは、 [データストリームへのサービスの追加に関するガイド](../edge/datastreams/overview.md#adobe-experience-platform-settings)offer decisioning
+詳しくは、 [データストリームへのサービスの追加に関するガイド](../datastreams/overview.md#adobe-experience-platform-settings)offer decisioning
 
 ![データストリームサービス設定画面を示す UI 画像 (Offer decisioningを選択 )](assets/aep-od-datastream.png)
 
