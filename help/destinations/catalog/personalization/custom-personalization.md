@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルのオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 59%
+source-wordcount: '933'
+ht-degree: 58%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 59%
 >id="platform_destinations_custom_personalization_datastream"
 >title="データストリーム ID について"
 >abstract="このオプションは、ページへの応答にオーディエンスを含めるデータ収集データストリームを決定します。ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。宛先を設定する前に、データストリームを設定する必要があります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=ja" text="データストリームの設定方法の説明"
+>additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="データストリームの設定方法の説明"
 
 >[!IMPORTANT]
 > 
