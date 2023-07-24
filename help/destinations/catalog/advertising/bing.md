@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 45%
+ht-degree: 51%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 45%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="マッピング ID"
->abstract="選択したセグメントのマッピング先となる Bing オーディエンス ID を数値で入力します。 指定した [!UICONTROL マッピング ID] が Bing の宛先のオーディエンス ID に対応していない場合、Bing アカウントには期待されたオーディエンスデータが表示されません。"
+>abstract="選択したセグメントをマッピングする、数値の Bing オーディエンス ID を入力します。指定された[!UICONTROL マッピング ID] が Bing 宛先のオーディエンス ID に対応していない場合、Bing アカウントの期待されるオーディエンスデータは表示されません。"
 
 >[!IMPORTANT]
 > 

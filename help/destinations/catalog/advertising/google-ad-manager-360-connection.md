@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 73%
+ht-degree: 75%
 
 ---
 
@@ -99,8 +99,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="オーディエンス名にオーディエンス ID を追加する"
->abstract="Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含める場合は、次のように、このオプションを選択します。 `Audience Name (Audience ID)`"
+>title="オーディエンス名へのオーディエンス ID の追加"
+>abstract="Google アドマネージャー 360 のオーディエンス名に Experience Platform のオーディエンス ID を含めるには、`Audience Name (Audience ID)` のように、このオプションを選択します。"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 

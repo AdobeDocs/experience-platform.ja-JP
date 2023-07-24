@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -89,8 +89,8 @@ Platform で最初の [!DNL Google Ad Manager] の宛先を設定する前に、
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="オーディエンス名にオーディエンス ID を追加する"
->abstract="Google Ad Manager でオーディエンス名にExperience Platformのオーディエンス ID を含める場合は、次のように、このオプションを選択します。 `Audience Name (Audience ID)`"
+>title="オーディエンス名へのオーディエンス ID の追加"
+>abstract="Google アドマネージャーのオーディエンス名に Experience Platform のオーディエンス ID を含めるには、`Audience Name (Audience ID)` のように、このオプションを選択します。"
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 

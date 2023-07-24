@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -103,7 +103,7 @@ ht-degree: 24%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="終了日"
->abstract="オーディエンススケジュールの終了日の追加は使用できません。"
+>abstract="オーディエンススケジュールの終了日を追加することはできません。"
 
 デフォルトでは、 **[!UICONTROL オーディエンススケジュール]** ページには、現在のアクティベーションフローで選択した新しく選択されたオーディエンスのみが表示されます。
 

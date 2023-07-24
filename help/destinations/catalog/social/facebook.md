@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 34%
+ht-degree: 35%
 
 ---
 
@@ -178,7 +178,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="オーディエンスのオリジン"
->abstract="オーディエンスの顧客データが最初に収集された方法を選択します。 ユーザーがセグメントのターゲットになっている場合、このデータが Facebook に表示されます"
+>abstract="オーディエンス内の顧客データが最初に収集された方法を選択します。ユーザーがセグメントのターゲットになっている場合、このデータが Facebook に表示されます"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

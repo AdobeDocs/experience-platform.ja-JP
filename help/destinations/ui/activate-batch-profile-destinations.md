@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -87,12 +87,12 @@ ht-degree: 65%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="ファイルの書き出しオプション"
->abstract="選択 **完全なファイルを書き出し** を使用して、オーディエンスの資格を持つすべてのプロファイルの完全なスナップショットを書き出します。 選択 **増分ファイルの書き出し** ：最後のエクスポート以降にオーディエンスの資格を持つプロファイルのみをエクスポートします。 <br> 最初の増分ファイル書き出しには、オーディエンスの資格を持つすべてのプロファイルが含まれ、バックフィルとして機能します。 今後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに認定されたプロファイルのみが含まれます。"
+>abstract="「**完全ファイルを書き出し**」を選択して、オーディエンスに該当するすべてのプロファイルの完全なスナップショットを書き出します。「**増分ファイルの書き出し**」を選択して、前回の書き出し以降にオーディエンスの対象として認定されたプロファイルのみを書き出します。<br> 最初の増分ファイルの書き出しには、オーディエンスに該当するすべてのプロファイルが含まれ、バックフィルとして機能します。それ以後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに該当したプロファイルのみが含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#export-incremental-files" text="増分ファイルの書き出し"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="オーディエンス評価後にアクティブ化"
+>title="オーディエンス評価後にアクティベート"
 >abstract="アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。"
 
 >[!CONTEXTUALHELP]
@@ -170,7 +170,7 @@ ht-degree: 65%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="ファイル名の設定"
->abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
 
 ほとんどの宛先では、デフォルトのファイル名は、宛先名、オーディエンス ID、日付と時刻のインジケーターで構成されます。 例えば、書き出したファイル名を編集して、異なるキャンペーンを区別したり、データの書き出し時間をファイルに追加したりできます。一部の宛先開発者は、別のデフォルトのファイル名追加オプションを宛先に表示するように選択する場合があります。
 
@@ -247,7 +247,7 @@ ht-degree: 65%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="必須の属性について"
->abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての認定プロファイルがエクスポートされます。"
+>abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての該当プロファイルを書き出します。"
 
 必須属性は、選択した属性がすべてのプロファイルレコードに含まれるようにする、ユーザーが有効にしたチェックボックスです。例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。
 
@@ -477,8 +477,8 @@ ht-degree: 65%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="エンリッチメント属性の除外"
->abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出し、属性をすべて除外できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
+>abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
 
 >[!IMPORTANT]
 >
