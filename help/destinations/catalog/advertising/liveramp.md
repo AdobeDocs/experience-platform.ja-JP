@@ -4,10 +4,10 @@ description: LiveRamp コネクタを使用して、Adobe Real-time Customer Dat
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 81%
+source-wordcount: '1834'
+ht-degree: 77%
 
 ---
 
@@ -37,6 +37,20 @@ Experience Platform から [!DNL LiveRamp SFTP] にデータを送信するに�
 LiveRamp SFTP では、公式の [LiveRamp ドキュメント](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)に記載されている、PII ベースの識別子、既知の識別子、カスタム ID などの ID のアクティブ化をサポートしています。
 
 アクティブ化ワークフローの[マッピングステップ](#map)では、ターゲットマッピングをカスタム属性として定義する必要があります。
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+
+すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+
+| オーディエンスタイプ | 説明 |
+---------|----------|
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#importing-an-audience) を CSV ファイルからExperience Platformに追加します。 |
+
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -190,7 +204,9 @@ Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp SFTP] に�
 * オーディエンス A、C、D を含む 1 つの CSV ファイル
 * オーディエンス B を含む 1 つの CSV ファイル。
 
-書き出された CSV ファイルには、選択した属性と対応するオーディエンスステータスを持つプロファイルが別々の列に含まれ、属性名とオーディエンス ID が列ヘッダーとして含まれます。
+書き出された CSV ファイルには、選択した属性と対応するオーディエンスステータスを持つプロファイルが、別々の列に、属性名と共に含まれています。 `audience_namespace:audience_ID` は、次の例に示すように、列ヘッダーとしてペア化されます。
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 書き出されたファイルに含まれるプロファイルは、次のオーディエンス資格ステータスのいずれかに一致します。
 
@@ -198,11 +214,10 @@ Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp SFTP] に�
 * `Expired`:プロファイルは、オーディエンスの資格を失い、過去に認定されています。
 * `""`（空の文字列）:プロファイルは、オーディエンスに対して認定されませんでした。
 
-
-例えば、書き出された CSV ファイル（1 つを含む） `email` 属性と 3 つのオーディエンスは次のようになります。
+例えば、書き出された CSV ファイル（1 つを含む） `email` 属性。Experience Platform [セグメント化サービス](../../../segmentation/home.md)と、 [インポート済み](../../../segmentation/ui/overview.md#importing-an-audience) 外部オーディエンスは次のようになります。
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+上記の例では、 `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` および `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節では、セグメント化サービスからのオーディエンスについて説明し、 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` は、Platform as a にインポートされたオーディエンスを表します [カスタムアップロード](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
