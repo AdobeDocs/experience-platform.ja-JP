@@ -5,9 +5,9 @@ breadcrumb-title: Privacy Service ガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、顧客データリクエストを管理します。
 feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '93'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 92%
 * [プライバシー JS ライブラリの概要](./js-library.md)
 * Privacy Service API {#api}
    * [概要](./api/overview.md)
-   * [Privacy ServiceAPI の認証とアクセス](./api/getting-started.md)
+   * [Privacy Service API の認証とアクセス](./api/getting-started.md)
    * [プライバシージョブ](./api/privacy-jobs.md)
    * [同意](./api/consent.md)
    * [付録](./api/appendix.md)
