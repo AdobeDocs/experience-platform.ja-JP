@@ -4,7 +4,7 @@ title: ユースケースプレイブックの概要
 description: Experience Platform のユースケースプレイブック機能を使用して、様々なマーケティングユースケースの基本を学ぶ
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '400'
 ht-degree: 100%
 
