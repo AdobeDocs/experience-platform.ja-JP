@@ -1,28 +1,24 @@
 ---
-title: （ベータ版）Azure Data Lake Storage Gen2 接続
+title: Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続して、オーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 70%
+source-wordcount: '805'
+ht-degree: 68%
 
 ---
 
-# （ベータ版）[!DNL Azure Data Lake Storage Gen2] 接続
-
->[!IMPORTANT]
->
->この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Azure Data Lake Storage Gen2] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
+# [!DNL Azure Data Lake Storage Gen2] 接続
 
 ## 概要 {#overview}
 
 このページでは、[[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-introduction)（[!DNL ADLS Gen2]）データレイクへのライブアウトバウンド接続を作成し、Experience Platform から定期的にデータファイルを書き出す方法を説明します。
 
-## に接続 [!DNL ADLS Gen2] API または UI を介したストレージ {#connect-api-or-ui}
+## 次に接続： [!DNL ADLS Gen2] API または UI を介したストレージ {#connect-api-or-ui}
 
-* 次に接続するには： [!DNL ADLS Gen2] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
-* 次に接続するには： [!DNL ADLS Gen2] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次の URL に接続するには： [!DNL ADLS Gen2] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
+* 次の URL に接続するには： [!DNL ADLS Gen2] ストレージの場所をプログラムで設定し、読み取る [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -78,9 +74,9 @@ ht-degree: 70%
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
-* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
-* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
+* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
 
 ### アラートの有効化 {#enable-alerts}
 

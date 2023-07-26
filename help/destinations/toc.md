@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 96%
 
 ---
@@ -116,10 +116,10 @@ ht-degree: 96%
       * [Amazon Kinesis 接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 接続](./catalog/cloud-storage/azure-blob.md)
-      * [（ベータ版）Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure Event Hubs 接続](./catalog/cloud-storage/azure-event-hubs.md)
-      * [（ベータ版）データランディングゾーン](./catalog/cloud-storage/data-landing-zone.md)
-      * [（ベータ版）Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
       * [SFTP の宛先の IP アドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}

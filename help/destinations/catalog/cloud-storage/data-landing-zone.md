@@ -2,19 +2,18 @@
 title: データランディングゾーンの宛先
 description: データランディングゾーンに接続して、オーディエンスをアクティブ化し、データセットを書き出す方法について説明します。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 55%
+source-wordcount: '1404'
+ht-degree: 54%
 
 ---
 
-# （ベータ版）データランディングゾーンの宛先
+# データランディングゾーンの宛先
 
 >[!IMPORTANT]
 >
->* この宛先は現在ベータ版で、一部のお客様のみご利用いただけます。[!DNL Data Landing Zone] 接続へのアクセスをリクエストするには、アドビ担当者に連絡し、[!DNL Organization ID] を提供します。
->* このドキュメントページでは、 [!DNL Data Landing Zone] *宛先*. また、 [!DNL Data Landing Zone] *ソース* ソースカタログ内。 詳しくは、 [[!DNL Data Landing Zone] ソース](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメント。
+>このドキュメントページでは、 [!DNL Data Landing Zone] *宛先*. また、 [!DNL Data Landing Zone] *ソース* ソースカタログ内。 詳しくは、 [[!DNL Data Landing Zone] ソース](/help/sources/connectors/cloud-storage/data-landing-zone.md) ドキュメント。
 
 
 ## 概要 {#overview}
@@ -25,10 +24,10 @@ ht-degree: 55%
 
 Platform では、[!DNL Data Landing Zone] コンテナへアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。すべてのファイルは 7 日後に削除されます。
 
-## に接続 [!UICONTROL データランディングゾーン] API または UI を介したストレージ {#connect-api-or-ui}
+## 次に接続： [!UICONTROL データランディングゾーン] API または UI を介したストレージ {#connect-api-or-ui}
 
-* 次に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
-* 次に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次の URL に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
+* 次の URL に接続するには： [!UICONTROL データランディングゾーン] ストレージの場所をプログラムで設定し、読み取る [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -59,7 +58,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 を使用する前に満たす必要がある前提条件は、次のとおりです。 [!DNL Data Landing Zone] 宛先。
 
-### 接続 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer]
+### 接続する [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer]
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。を使用し始めるには [!DNL Data Landing Zone]を使用する場合は、まず資格情報を取得し、に入力する必要があります。 [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
 
@@ -77,7 +76,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 ### の資格情報を取得します。 [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-Platform API を使用して、 [!DNL Data Landing Zone] 資格情報。 資格情報を取得する API 呼び出しについては、以下で説明します。 ヘッダーに必要な値の取得について詳しくは、 [Adobe Experience Platform API の概要](/help/landing/api-guide.md) ガイド。
+Platform API を使用して、 [!DNL Data Landing Zone] 認証情報。 資格情報を取得するための API 呼び出しを以下に示します。 ヘッダーに必要な値の取得について詳しくは、 [Adobe Experience Platform API の概要](/help/landing/api-guide.md) ガイド。
 
 **API 形式**
 
@@ -87,7 +86,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | この `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `dlz_destination` | The `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
 
 {style="table-layout:auto"}
 
@@ -107,7 +106,7 @@ curl -X GET \
 
 **応答**
 
-次の応答は、現在の `SASToken` および `SASUri`、および `storageAccountName` ランディングゾーンコンテナに対応する
+次の応答は、現在の `SASToken` および `SASUri`、および `storageAccountName` をランディングゾーンコンテナに対応させます。
 
 ```json
 {
@@ -128,7 +127,7 @@ curl -X GET \
 
 ### 更新 [!DNL Data Landing Zone] 資格情報 {#update-dlz-credentials}
 
-必要に応じて、資格情報を更新することもできます。 次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API
+必要に応じて、資格情報を更新することもできます。 次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API.
 
 **API 形式**
 
@@ -138,8 +137,8 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | この `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
-| `refresh` | この `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
+| `dlz_destination` | The `dlz_destination` タイプを使用すると、API はランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `refresh` | The `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +195,7 @@ curl -X POST \
 
 ### 宛先に対する認証 {#authenticate}
 
-次のページとの間に [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer] 例えば、 [前提条件](#prerequisites) 」セクションに入力します。 理由： [!DNL Data Landing Zone] は、Adobeがプロビジョニングしたストレージです。Experience PlatformUI で追加の手順を実行して、宛先への認証をおこなう必要はありません。
+次のページとの連携を確認します： [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer] 例えば、 [前提条件](#prerequisites) 」セクションに入力します。 理由： [!DNL Data Landing Zone] は、Adobeがプロビジョニングしたストレージです。Experience PlatformUI で追加の手順を実行して、宛先への認証をおこなう必要はありません。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -205,9 +204,9 @@ curl -X POST \
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
-* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
-* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。
+* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
 
 ### アラートの有効化 {#enable-alerts}
 

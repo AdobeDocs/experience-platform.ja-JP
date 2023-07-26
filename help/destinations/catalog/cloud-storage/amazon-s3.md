@@ -2,9 +2,9 @@
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '975'
 ht-degree: 70%
 
 ---
@@ -13,29 +13,17 @@ ht-degree: 70%
 
 ## 宛先の変更ログ {#changelog}
 
->[!IMPORTANT]
->
->データセットの書き出し機能のベータ版リリースと、ファイルの書き出し機能の改善により、宛先カタログに 2 つの [!DNL Amazon S3] カードが表示される場合があります。
->* 既ににファイルを書き出している場合は、 **[!UICONTROL Amazon S3]** の宛先です。新しいデータフローを作成して新しいデータフローを作成してください **[!UICONTROL Amazon S3 beta]** 宛先。
->* **[!UICONTROL Amazon S3]** の宛先へのデータフローをまだ作成していない場合は、新しい **[!UICONTROL Amazon S3 ベータ版]**&#x200B;カードを使用してファイルを **[!UICONTROL Amazon S3]** に書き出してください。
+2023 年 7 月のExperience Platformリリースに伴い、 [!DNL Amazon S3] の宛先には、次に示す新しい機能が用意されています。
 
-![2 つの Amazon S3 の宛先カードを並べて表示した画像。](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-新しい [!DNL Amazon S3] 宛先カードの改善点は次のとおりです。
-
-* [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
+* [!BADGE Beta]{type=Informative}[データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
 
-## 概要 {#overview}
+## 次に接続： [!DNL Amazon S3] API または UI を介したストレージ {#connect-api-or-ui}
 
-[!DNL Amazon S3] ストレージへのライブアウトバウンド接続を作成して、Adobe Experience Platform から独自の S3 バケットにデータファイルを定期的に書き出します。
-
-## に接続 [!DNL Amazon S3] API または UI を介したストレージ {#connect-api-or-ui}
-
-* 次に接続するには： [!DNL Amazon S3] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
-* 次に接続するには： [!DNL Amazon S3] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次の URL に接続するには： [!DNL Amazon S3] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
+* 次の URL に接続するには： [!DNL Amazon S3] ストレージの場所をプログラムで設定し、読み取る [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -105,9 +93,9 @@ ht-degree: 70%
 * **[!UICONTROL 説明]**：この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**：この宛先で使用する [!DNL Amazon S3] バケットの名前を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパスを入力します。
-* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。
-* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL Amazon S3 beta]** 宛先。
+* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
 
 >[!TIP]
 >
@@ -157,4 +145,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Amazon S3] の宛先の場合、[!DNL Platform] には、指定したストレージの場所にデータファイルが作成されます。ファイルの詳細については、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
+[!DNL Amazon S3] の宛先の場合、[!DNL Platform] には、指定したストレージの場所にデータファイルが作成されます。ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。

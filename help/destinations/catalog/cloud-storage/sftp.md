@@ -2,9 +2,9 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '940'
 ht-degree: 61%
 
 ---
@@ -13,17 +13,9 @@ ht-degree: 61%
 
 ## 宛先の変更ログ {#changelog}
 
->[!IMPORTANT]
->
->データセットの書き出し機能のベータ版リリースと、ファイル書き出し機能の改善により、宛先カタログに 2 つの [!DNL SFTP] カードが表示されるようになりました。
->* 既に **[!UICONTROL SFTP]** 宛先にファイルを書き出している場合：新しい **[!UICONTROL SFTP ベータ版]**&#x200B;宛先への新しいデータフローを作成してください。
->* まだ **[!UICONTROL SFTP]** 宛先、新しい **[!UICONTROL SFTP ベータ版]** 書き出し先のカード **[!UICONTROL SFTP]**.
+2023 年 7 月のExperience Platformリリースでは、SFTP の宛先は次に示す新しい機能を提供します。
 
-![2 つの SFTP 宛先カードを並べて表示した画像](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-新しい [!DNL SFTP] 宛先カードの改善点は次のとおりです。
-
-* [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
+* [!BADGE Beta]{type=Informative}[データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
@@ -122,9 +114,9 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 * **[!UICONTROL 名前]**:Experience Platformユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**：この宛先の説明を入力します
 * **[!UICONTROL フォルダーパス]**：SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
-* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。
-* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL SFTP ベータ版]** 宛先。
+* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
 
 ## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
@@ -143,7 +135,7 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL SFTP] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルの詳細については、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
+[!DNL SFTP] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
 
 ## IP アドレス許可リスト {#ip-address-allow-list}
 

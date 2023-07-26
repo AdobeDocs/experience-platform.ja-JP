@@ -3,10 +3,10 @@ keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、Amazon S3、AWS Kinesis、Azure Event Hubs、または SFTP クラウドのストレージの場所に、オーディエンスをデータファイルとして配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 66%
+source-wordcount: '385'
+ht-degree: 49%
 
 ---
 
@@ -20,15 +20,15 @@ Adobe Experience Platformは、オーディエンスをデータファイルと�
 
 ## サポートされているクラウドストレージの宛先 {#supported-destinations}
 
-Adobe Experience Platform は、次のクラウドストレージの宛先をサポートしています。
+Adobe Experience Platformは、次のクラウドストレージの宛先へのデータの書き出しをサポートします。
 
 * [Amazon Kinesis 接続](amazon-kinesis.md)
 * [Amazon S3 接続](amazon-s3.md)
 * [Azure Blob 接続](azure-blob.md)
-* [（ベータ版）Azure Data Lake Storage Gen2](adls-gen2.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure Event Hubs 接続](azure-event-hubs.md)
-* [（ベータ版）データランディングゾーン](data-landing-zone.md)
-* [（ベータ版）Google Cloud Storage](google-cloud-storage.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
 * [SFTP 接続](sftp.md)
 
 ## 新しいクラウドストレージの宛先への接続 {#connect-destination}
@@ -65,4 +65,10 @@ Adobe Experience Platform は、次のクラウドストレージの宛先をサ
 
 ## データの書き出しのタイプ {#export-type}
 
-クラウドストレージの宛先は、**プロファイルベースの書き出し**&#x200B;をサポートします。これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスのメンバーシップなどを含めることができます。
+クラウドストレージの宛先では、次の書き出しタイプをサポートしています。
+* **プロファイルベースの書き出し**. これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスのメンバーシップなどを含めることができます。
+* [!BADGE Beta]{type=Informative}**データセットの書き出し**. この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 [詳細を表示](/help/destinations/ui/export-datasets.md) 機能について。
+
+## 次の手順 {#next-steps}
+
+次のいずれかを選択した後： [サポートされるクラウドの宛先](#supported-destinations) を使用したい場合は、 [宛先への接続チュートリアル](/help/destinations/ui/connect-destination.md) を参照して、宛先への接続を確立する方法を確認してください。 次に、ファイルベースの宛先に対するアクティベーションのチュートリアルを読んで、の開始方法を学びます [書き出し](/help/destinations/ui/activate-batch-profile-destinations.md) データをクラウドストレージの宛先に送信します。

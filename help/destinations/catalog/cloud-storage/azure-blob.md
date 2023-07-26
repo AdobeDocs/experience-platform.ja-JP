@@ -2,10 +2,10 @@
 title: Azure Blob 接続
 description: Azure Blob Storage へのライブアウトバウンド接続を作成して、Adobe Experience Platform から CSV データファイルを定期的に書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 69%
+source-wordcount: '973'
+ht-degree: 68%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 69%
 
 ## 宛先の変更ログ {#changelog}
 
->[!IMPORTANT]
->
->データセットの書き出し機能のベータ版リリースと、ファイルの書き出し機能の改善により、宛先カタログに 2 つの [!DNL Azure Blob] カードが表示される場合があります。
->* **[!UICONTROL Azure Blob]** 宛先に既にファイルを書き出している場合は、新しい **[!UICONTROL Azure Blob ベータ版]** 宛先への新しいデータフローを作成してください。
->* **[!UICONTROL Azure Blob]** 宛先へのデータフローをまだ作成していない場合は、新しい **[!UICONTROL Azure Blob ベータ版]** カードを使用して **[!UICONTROL Azure Blob]** にファイルを書き出してください。
+2023 年 7 月のExperience Platformリリースに伴い、 [!DNL Azure Blob] の宛先には、次に示す新しい機能が用意されています。
 
-![2 つの Azure Blob 宛先カードの並列表示の画像](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-新しい [!DNL Azure Blob] 宛先カードの改善点は次のとおりです。
-
-* [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
+* [!BADGE Beta]{type=Informative}[データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
@@ -32,10 +24,10 @@ ht-degree: 69%
 
 [!DNL Azure Blob]（以下「[!DNL Blob]」）は、Microsoft のクラウド用オブジェクトストレージソリューションです。このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Blob] 宛先を作成する手順を説明します。
 
-## に接続 [!UICONTROL Azure Blob] API または UI を介したストレージ {#connect-api-or-ui}
+## 次に接続： [!UICONTROL Azure Blob] API または UI を介したストレージ {#connect-api-or-ui}
 
-* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
-* 次に接続するには： [!UICONTROL Azure Blob] ストレージの場所をプログラムで設定し、読み取り [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次の URL に接続するには： [!UICONTROL Azure Blob] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
+* 次の URL に接続するには： [!UICONTROL Azure Blob] ストレージの場所をプログラムで設定し、読み取る [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## はじめに
 
@@ -110,9 +102,9 @@ ht-degree: 69%
 * **[!UICONTROL 説明]**：この宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーのパスを入力します。
 * **[!UICONTROL コンテナ]**：この宛先で使用する [!DNL Azure Blob Storage] コンテナの名前を入力します。
-* **[!UICONTROL ファイルタイプ]**:書き出すファイルに使用する形式Experience Platformを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**:書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
-* **[!UICONTROL マニフェストファイルを含める]**:書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 このオプションは、 **[!UICONTROL Azure Blob ベータ版]** 宛先。
+* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -137,4 +129,4 @@ ht-degree: 69%
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Azure Blob Storage] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルの詳細については、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
+[!DNL Azure Blob Storage] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
