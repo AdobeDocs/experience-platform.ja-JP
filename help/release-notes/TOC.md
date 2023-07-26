@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートを検索します。
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
-workflow-type: ht
-source-wordcount: '76'
+source-git-commit: 4e0df3b62837e925954b221bfcb1f18483c4ded2
+workflow-type: tm+mt
+source-wordcount: '77'
 ht-degree: 100%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 100%
 
 * [現在の Platform リリースノート](latest/latest.md)
 * 2023年 {#2023}
+   * [2023年7月](2023/july-2023.md)
    * [2023年6月](2023/june-2023.md)
    * [2023年5月](2023/may-2023.md)
    * [2023年4月](2023/april-2023.md)
