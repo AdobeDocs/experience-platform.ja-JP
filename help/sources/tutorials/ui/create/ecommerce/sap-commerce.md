@@ -1,10 +1,8 @@
 ---
 title: UI での SAP Commerce ソース接続の作成
 description: Adobe Experience Platform UI を使用して SAP Commerce ソース接続を作成する方法を説明します。
-hide: true
-hidefromtoc: true
 badge: ベータ版
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 33%
@@ -17,7 +15,7 @@ ht-degree: 33%
 >
 >[!DNL SAP Commerce] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
-次のチュートリアルでは、 [!DNL SAP Commerce] 持ち込むソース接続 [[!DNL SAP] サブスクリプション請求](https://www.sap.com/products/financial-management/subscription-billing.html) Adobe Experience Platformユーザーインターフェイスを使用しての連絡先と顧客データ。
+次のチュートリアルでは、 [!DNL SAP Commerce] 持ち込むソース接続 [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) Adobe Experience Platformユーザーインターフェイスを使用しての連絡先と顧客データ。
 
 ## はじめに {#getting-started}
 
@@ -39,7 +37,7 @@ ht-degree: 33%
 | クライアント ID | の値 `clientId` サービスキーから。 |
 | クライアントシークレット | の値 `clientSecret` サービスキーから。 |
 | トークンエンドポイント | の値 `url` サービスキーから、次のようになります。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| 領域 | データセンターの場所。 地域が `url` の値は、 `eu10` または `us10`. 例えば、 `url` が `https://eu10.revenue.cloud.sap/api` 必要なもの `eu10`. |
+| 領域 | データセンターの場所。 地域が `url` との値は、 `eu10` または `us10`. 例えば、 `url` 次に該当 `https://eu10.revenue.cloud.sap/api` 必要なもの `eu10`. |
 
 詳しくは、 [[!DNL SAP Commerce] ドキュメント](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
@@ -148,11 +146,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 *e コマース* カテゴリ、選択 **[!UICONTROL SAP Commerce]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *e コマース* カテゴリ、選択 **[!UICONTROL SAP Commerce]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![SAP Commerce カードを使用したカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-この **[!UICONTROL SAP Commerce アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL SAP Commerce アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント {#existing-account}
 
@@ -179,13 +177,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB 顧客]
 
-顧客データを取り込むには、 **[!UICONTROL 顧客]** を選択し、 **[!UICONTROL 次へ]**.
+顧客データを取り込むには、 **[!UICONTROL 顧客]** を選択し、を選択します。 **[!UICONTROL 次へ]**.
 
 ![SAP Commerce の Platform UI のスクリーンショットに、「顧客」オプションが選択された設定が表示される](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB 連絡先]
 
-連絡先データを取り込むには、 **[!UICONTROL 連絡先]** を選択し、 **[!UICONTROL 次へ]**.
+連絡先データを取り込むには、 **[!UICONTROL 連絡先]** を選択し、を選択します。 **[!UICONTROL 次へ]**.
 
 ![連絡先オプションが選択された状態で設定が表示された、SAP Commerce の Platform UI スクリーンショット](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 

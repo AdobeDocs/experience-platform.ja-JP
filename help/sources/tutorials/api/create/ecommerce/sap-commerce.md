@@ -1,10 +1,8 @@
 ---
-title: フローサービス API を使用して、SAP Commerce のソース接続とデータフローを作成します
+title: フローサービス API を使用して、SAP Commerce のソース接続とデータフローを作成します。
 description: フローサービス API を使用して SAP コマースデータをExperience Platformに取り込むソース接続とデータフローを作成する方法を説明します。
-hide: true
-hidefromtoc: true
 badge: ベータ版
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 55%
@@ -17,7 +15,7 @@ ht-degree: 55%
 >
 >[!DNL SAP Commerce] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
-次のチュートリアルでは、 [!DNL SAP Commerce] ソース接続と取り込むデータフロー [[!DNL SAP] サブスクリプション請求](https://www.sap.com/products/financial-management/subscription-billing.html) を使用してAdobe Experience Platformに連絡先と顧客データを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+次のチュートリアルでは、 [!DNL SAP Commerce] ソース接続と取り込むデータフロー [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) を使用してAdobe Experience Platformに連絡先と顧客データを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
@@ -26,7 +24,7 @@ ht-degree: 55%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL SAP Commerce] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL SAP Commerce] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
@@ -37,13 +35,13 @@ ht-degree: 55%
 | `clientId` | の値 `clientId` サービスキーから。 |
 | `clientSecret` | の値 `clientSecret` サービスキーから。 |
 | `tokenEndpoint` | の値 `url` サービスキーから、次のようになります。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | データセンターの場所。 地域が `url` の値は、 `eu10` または `us10`. 例えば、 `url` が `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`を選択した場合、 `eu10`. |
+| `region` | データセンターの場所。 地域が `url` との値は、 `eu10` または `us10`. 例えば、 `url` 次に該当 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`を選択した場合、 `eu10`. |
 
 これらの資格情報について詳しくは、 [[!DNL SAP Commerce] ドキュメント](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ## 接続 [!DNL SAP Commerce] を使用して Platform に [!DNL Flow Service] API
 
-次に、 [!DNL SAP Commerce] ソース、ソース接続を作成し、データフローを作成して、アカウントおよび連絡先データをExperience Platformに取り込みます。
+次に、の認証に必要な手順を示します [!DNL SAP Commerce] ソース、ソース接続を作成し、データフローを作成して、アカウントおよび連絡先データをExperience Platformに取り込みます。
 
 ### ベース接続の作成 {#base-connection}
 
@@ -94,7 +92,7 @@ curl -X POST \
 | `description` | ベース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.region` | データセンターの場所。 地域が `url` の値は、 `eu10` または `us10`. 例えば、 `url` が `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` 必要なもの `eu10`. |
+| `auth.params.region` | データセンターの場所。 地域が `url` との値は、 `eu10` または `us10`. 例えば、 `url` 次に該当 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` 必要なもの `eu10`. |
 | `auth.params.clientId` | の値 `clientId` サービスキーから。 |
 | `auth.params.clientSecret` | の値 `clientSecret` サービスキーから。 |
 | `auth.params.tokenEndpoint` | の値 `url` サービスキーから、次のようになります。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
@@ -131,7 +129,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
 | `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`の場合は、base64 で文字列全体をエンコードする必要があります。 <br> [!DNL SAP Commerce] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
-この [!DNL SAP Commerce] ソースは複数の API をサポートしています。 送信するリクエストを活用するオブジェクトのタイプに応じて、次のようになります。
+The [!DNL SAP Commerce] ソースは複数の API をサポートしています。 送信するリクエストを活用するオブジェクトのタイプに応じて、次のようになります。
 
 >[!NOTE]
 >
@@ -466,7 +464,7 @@ curl -X GET \
 
 +++リクエスト
 
-の場合 [!DNL SAP Commerce] 連絡先 API の値 `{SOURCE_PARAMS}` が `{"object_type":"contacts"}`. base64 でエンコードされた場合、はと同じ値になります。 `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` 以下に示すように。
+の場合 [!DNL SAP Commerce] 連絡先 API の値： `{SOURCE_PARAMS}` が `{"object_type":"contacts"}`. base64 でエンコードされた場合、はと同じ値になります。 `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` 以下に示すように。
 
 ```shell
 curl -X GET \
@@ -557,7 +555,7 @@ curl -X GET \
 
 ### ソース接続の作成 {#source-connection}
 
-ソース接続を作成するには、 `/sourceConnections` エンドポイント [!DNL Flow Service] API ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
+ソース接続を作成するには、 `/sourceConnections` エンドポイント [!DNL Flow Service] API. ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
 **API 形式**
 
@@ -607,8 +605,8 @@ curl -X POST \
 | `baseConnectionId` | [!DNL SAP Commerce] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL SAP Commerce] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `object_type` | [!DNL SAP Commerce] は複数の API をサポートしています。 顧客 API の場合、 `object_type` パラメーターは `customers`. |
-| `path` | これは、 `object_type`. |
+| `object_type` | [!DNL SAP Commerce] は複数の API をサポートしています。 顧客 API の場合、 `object_type` パラメーターは次のように設定する必要があります： `customers`. |
+| `path` | この値は、 `object_type`. |
 
 +++
 
@@ -663,8 +661,8 @@ curl -X POST \
 | `baseConnectionId` | [!DNL SAP Commerce] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL SAP Commerce] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `object_type` | [!DNL SAP Commerce] は複数の API をサポートしています。 連絡先 API の場合、 `object_type` パラメーターは `contacts`. |
-| `path` | これは、 *`object_type`*. |
+| `object_type` | [!DNL SAP Commerce] は複数の API をサポートしています。 連絡先 API の場合、 `object_type` パラメーターは次のように設定する必要があります： `contacts`. |
+| `path` | この値は、 *`object_type`*. |
 
 +++
 
@@ -762,7 +760,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -987,7 +985,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-データを取り込むための最後の手順 [!DNL SAP Commerce] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+からデータを取り込むための最後の手順 [!DNL SAP Commerce] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -1076,15 +1074,15 @@ curl -X POST \
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
+に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
 
 ### アカウントを削除
 

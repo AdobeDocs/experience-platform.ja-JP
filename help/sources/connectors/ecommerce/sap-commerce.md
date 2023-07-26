@@ -2,10 +2,8 @@
 title: SAP Commerce ソースの概要
 description: API またはユーザーインターフェイスを使用して SAP Commerce をAdobe Experience Platformに接続する方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: ベータ版
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 17%
@@ -18,9 +16,9 @@ ht-degree: 17%
 >
 >[!DNL SAP Commerce] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
-[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)は、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP Customer Experience ポートフォリオの一部として利用できます。 [[!DNL SAP] サブスクリプション請求](https://www.sap.com/products/financial-management/subscription-billing.html) は、ポートフォリオの下の製品で、標準化された統合による販売と支払いの経験をシンプル化し、完全なサブスクリプションライフサイクル管理を可能にします。
+[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)は、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP Customer Experience ポートフォリオの一部として利用できます。 [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) は、ポートフォリオの下の製品で、標準化された統合による販売と支払いの経験をシンプル化し、完全なサブスクリプションライフサイクル管理を可能にします。
 
-この [!DNL SAP Commerce] ソースを使用すると、 [[!DNL SAP] サブスクリプション請求](https://www.sap.com/products/financial-management/subscription-billing.html) 以下のビジネスパートナー API エンドポイント：
+The [!DNL SAP Commerce] ソースを使用すると、 [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) 以下のビジネスパートナー API エンドポイント：
 
 * [顧客](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [連絡先](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
@@ -33,16 +31,16 @@ ht-degree: 17%
 
 ## 前提条件 {#prerequisites}
 
-次を持ってくる前に [!DNL SAP Commerce] Experience Platformにデータを送信する場合は、まず、次の条件を満たす必要があります。
+次を持ってくる前に、 [!DNL SAP Commerce] Experience Platformにデータを送信する場合は、まず、次の条件を満たす必要があります。
 
-* A [!DNL SAP Subscription Billing] アカウント 有効な請求アカウントをまだお持ちでない場合は、 [!DNL SAP] アカウントマネージャー。 詳しくは、 [[!DNL SAP] プラットフォーム設定](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) ドキュメントを参照してください。
+* A [!DNL SAP Subscription Billing] アカウント。 有効な請求アカウントをまだお持ちでない場合は、 [!DNL SAP] アカウントマネージャー。 詳しくは、 [[!DNL SAP] プラットフォーム設定](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) ドキュメントを参照してください。
 
-* [!DNL SAP] サービスキー。 この [!DNL SAP] サービスキーを使用すると、 [!DNL SAP Subscription Billing] Experience Platformを介した API [!DNL SAP Commerce] には、以下が必要です。
+* [!DNL SAP] サービスキー。 The [!DNL SAP] サービスキーを使用すると、 [!DNL SAP Subscription Billing] Experience Platformを介した API [!DNL SAP Commerce] には、以下が必要です。
    * クライアント ID
    * クライアントシークレット
-   * URL. URL のパターンは次のとおりです。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. この値は後での値の取得に使用されます。 `region` および `tokenEndpoint` いつ [ベース接続を作成](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) API を使用する場合、または [接続 [!DNL SAP Commerce] アカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) Platform UI を使用します。
+   * URL. URL のパターンは次のとおりです。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. この値は後での値の取得に使用されます。 `region` および `tokenEndpoint` いつ [ベース接続を作成](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) API を使用する場合、または [接続する [!DNL SAP Commerce] アカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) Platform UI を使用します。
 
-+++「 」を選択して、サービスキーの例を表示します
++++「 」を選択して、サービスキーの例を表示します。
 
 ```json
 { 
@@ -75,5 +73,5 @@ ht-degree: 17%
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL SAP Commerce] と Platform を接続する方法について説明します。
 
 * [ソース接続とデータフローを作成して、 [!DNL SAP Commerce] API を使用した Platform へのデータの取得](../../tutorials/api/create/ecommerce/sap-commerce.md).
-* [接続 [!DNL SAP Commerce] UI を使用してExperience Platformにアカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md).
+* [接続する [!DNL SAP Commerce] UI を使用してExperience Platformにアカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [UI を使用したソースのデータフローの作成](../../tutorials/ui/dataflow/ecommerce.md)
