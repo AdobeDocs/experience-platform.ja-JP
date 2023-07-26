@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '278'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 98%
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザガイド](ui/user-guide.md)
    - [クエリテンプレート](ui/query-templates.md)
-   - [パラメーター化されたクエリ（制限）](ui/parameterized-queries.md)
+   - [パラメーター化クエリ（制限付き）](ui/parameterized-queries.md)
    - [クエリスケジュール](ui/query-schedules.md)
    - [クエリログ](ui/query-logs.md)
    - [スケジュール済みクエリの監視](ui/monitor-queries.md)
