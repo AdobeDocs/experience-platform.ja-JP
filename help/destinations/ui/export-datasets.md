@@ -3,10 +3,10 @@ title: （ベータ版）クラウドストレージ宛先へのデータセッ�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 84%
+source-wordcount: '1421'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 84%
 >* このベータ版機能では、Real-time Customer Data Platform の[製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義されている第 1 世代データの書き出しをサポートしています。
 >* この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、Adobe担当者にお問い合わせください。
 
-この記事では、エクスポートに必要なワークフローについて説明します [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
+この記事では、エクスポートに必要なワークフローについて説明します。 [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
 
 また、Experience PlatformAPI を使用してデータセットを書き出すこともできます。 詳しくは、 [データセット API の書き出しチュートリアル](/help/destinations/api/export-datasets.md) を参照してください。
 
@@ -39,7 +39,7 @@ ht-degree: 84%
 
 Experience Platformカタログ内の一部のファイルベースの宛先は、オーディエンスのアクティベーションとデータセットの書き出しの両方をサポートしています。
 
-* オーディエンスの興味または資格別にデータをプロファイルに構造化する場合は、オーディエンスのアクティブ化を検討してください。
+* オーディエンスの関心または資格別にデータをプロファイルに構造化する場合は、オーディエンスのアクティブ化を検討します。
 * また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 このデータは、レポート、データサイエンスワークフロー、コンプライアンス要件への適合、その他多くのユースケースに使用できます。
 
 このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。クラウドストレージまたは電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する場合は、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md).
@@ -50,7 +50,7 @@ Experience Platformカタログ内の一部のファイルベースの宛先は�
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットを書き出すには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
 データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に「**[!UICONTROL アクティブ化]**」または「**[!UICONTROL データセットを書き出し]**」コントロールがある場合、適切な権限を持っています。
 
@@ -89,7 +89,7 @@ Experience Platformカタログ内の一部のファイルベースの宛先は�
 >title="データセットのファイル書き出しオプション"
 >abstract="「**増分ファイルの書き出し**」を選択すると、前回の書き出し以降にデータセットに追加されたデータのみを書き出すことができます。<br> 最初の増分ファイル書き出しには、データセット内のすべてのデータが含まれ、バックフィルとして機能します。 以後の増分ファイルには、最初の書き出し以降にデータセットに追加されたデータのみが含まれます。"
 
-内 **[!UICONTROL スケジュール]** 手順では、データセットのエクスポートの開始日とエクスポートケイデンスを設定できます。
+Adobe Analytics の **[!UICONTROL スケジュール]** 手順では、データセットのエクスポートの開始日とエクスポートケイデンスを設定できます。
 
 「**[!UICONTROL 増分ファイルの書き出し]**」オプションが自動的に選択されます。 これにより、書き出しがトリガーされます。最初のファイルがデータセットの完全なスナップショットになり、それ以降のファイルは前回の書き出し以降のデータセットへの増分追加になります。
 
@@ -136,7 +136,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 #### 圧縮データセットファイル {#compressed-dataset-files}
 
-内 [宛先ワークフローに接続](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)次に示すように、書き出したデータセットファイルを選択して圧縮できます。
+Adobe Analytics の [宛先ワークフローに接続](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)次に示すように、書き出したデータセットファイルを選択して圧縮できます。
 
 ![宛先に接続してデータセットを書き出す際のファイルタイプと圧縮の選択。](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
 
