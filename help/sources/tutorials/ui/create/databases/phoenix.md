@@ -1,77 +1,82 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Phoenix；フェニックス
-solution: Experience Platform
-title: UI での Phoenix ソース接続の作成
-type: Tutorial
-description: Adobe Experience Platform UI を使用して Phoenix ソース接続を作成する方法を説明します。
+title: '[Experience Platform] ユーザーインターフェイスを使用して Phoenix アカウントに接続する'
+description: ユーザーインターフェイスを使用して Phoenix アカウントを接続し、Phoenix データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 46%
+source-wordcount: '604'
+ht-degree: 25%
 
 ---
 
-# UI での [!DNL Phoenix] ソース接続の作成
+# 接続する [!DNL Phoenix] UI を使用してExperience Platformにアカウント
 
->[!NOTE]
->
-> この [!DNL Phoenix] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
-
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL Phoenix] ソースコネクタを作成する手順を説明します。
+このチュートリアルでは、 [!DNL Phoenix] アカウントとデータの取り込み [!DNL Phoenix] データベースからExperience Platformへ。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Phoenix] 接続する場合は、このドキュメントの残りの部分をスキップして、 [データフローの設定](../../dataflow/databases.md)
+既に [!DNL Phoenix] アカウントを使用する場合は、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください。 [データベースのデータフローの設定](../../dataflow/databases.md).
 
 ### 必要な資格情報の収集
 
- で [!DNL Phoenix] アカウントにアクセスするには、次の値を指定する必要があります。[!DNL Platform]
+次の項目にアクセスするには、 [!DNL Phoenix] Experience Platformのアカウントでは、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
-| ---------- | ----------- |
-| `host` | の IP アドレスまたはホスト名 [!DNL Phoenix] サーバー。 |
-| `port` | TCP ポート [!DNL Phoenix] サーバーは、を使用してクライアント接続をリッスンします。 次に接続する場合： [!DNL Azure HDInsights]で、ポートを 443 と指定します。 |
-| `httpPath` | URL の一部 [!DNL Phoenix] サーバー。 /hbasephoenix0 を指定します。 [!DNL Azure HDInsights] クラスター。 |
-| `username` | 次にアクセスするために使用するユーザー名 [!DNL Phoenix] サーバー。 |
-| `password` | ユーザーに対応するパスワード。 |
-| `enableSsl` | SSL を使用してサーバーへの接続を暗号化するかどうかを指定するトグル。 |
+| --- | --- |
+| ホスト | の IP アドレスまたはホスト名 [!DNL Phoenix] サーバー。 |
+| ポート | TCP ポート [!DNL Phoenix] サーバーは、を使用してクライアント接続をリッスンします。 次に接続する場合： [!DNL Azure HDInsights]で、ポートを 443 に指定します。 このパラメーターを指定しない場合、値のデフォルトは 8765 です。 |
+| HTTP パス | URL の一部 [!DNL Phoenix] サーバー。 /hbasephoenix0 を指定します。 [!DNL Azure HDInsights] クラスター。 |
+| ユーザー名 | 次にアクセスするために使用するユーザー名： [!DNL Phoenix] サーバー。 |
+| パスワード | ユーザーに対応するパスワード。 |
+| Enable SSL | SSL を使用してサーバーへの接続を暗号化するかどうかを指定するトグル。 |
 
 の導入について詳しくは、 [この [!DNL Phoenix] 文書](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
+必要な資格情報を収集したら、次の手順に従って、 [!DNL Phoenix] アカウントからExperience Platformへ。
+
 ## [!DNL Phoenix] アカウントを接続
 
-必要な資格情報を収集したら、次の手順に従って、 [!DNL Phoenix] 接続するアカウント [!DNL Platform].
+Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションからソースワークスペースにアクセスします。 The *[!UICONTROL カタログ]* 画面には、「ソース」カタログで使用可能な様々なソースがExperience Platformされます。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索オプションを使用して特定のソースを検索できます。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+選択 **[!UICONTROL データベース]** ソースカテゴリのリストから、「 」を選択します。 **[!UICONTROL データを追加]** から [!DNL Phoenix] カード。
 
-以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL Phoenix]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Phoenix] アカウント
+>[!TIP]
+>
+>ソースカタログ内のソースには、ソースのステータスに応じて異なるプロンプトが表示される場合があります。
+> 
+>* **[!UICONTROL データを追加]** は、選択したソースに関連付けられている既存の認証済みアカウントがあることを意味します。
+>
+>* **[!UICONTROL 設定]** は、選択したソースを使用するには、資格情報を入力し、新しいアカウントを認証する必要があることを意味します。
 
-![カタログ](../../../../images/tutorials/create/phoenix/catalog.png)
+![Phoenix ソースカードが選択されたExperience PlatformUI 上のソースカタログ。](../../../../images/tutorials/create/phoenix/catalog.png)
 
-この **[!UICONTROL Phoenix に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Phoenix に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
-### 新しいアカウント
+>[!BEGINTABS]
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Phoenix] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+>[!TAB 既存の Phoenix アカウントを使用]
 
-![接続](../../../../images/tutorials/create/phoenix/new.png)
+既存のアカウントを使用するには、「[!UICONTROL 既存のアカウント]」を選択し、表示されるリストから使用するアカウントを選択します。終了したら、「 」を選択します。 [!UICONTROL 次へ] をクリックして続行します。
 
-### 既存のアカウント
+![組織に既に存在する認証済みの Phoenix データベースアカウントのリスト。](../../../../images/tutorials/create/phoenix/existing.png)
 
-既存のアカウントに接続するには、 [!DNL Phoenix] 接続するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして続行します。
+>[!TAB 新しい Phoenix アカウントを作成]
 
-![既存](../../../../images/tutorials/create/phoenix/existing.png)
+新しいアカウントを使用するには、 [!UICONTROL 新しいアカウント] 名前、説明、 [!DNL Phoenix] 認証資格情報。 終了したら、「 」を選択します。 [!UICONTROL ソースに接続] そして、新しい接続が確立されるまで数秒間待ちます。
+
+![認証資格情報を入力し、Phoenix アカウントを作成できる新しいアカウントインターフェイス。](../../../../images/tutorials/create/phoenix/new.png)
+
+>[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Phoenix] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。
+このチュートリアルでは、[!DNL Phoenix] アカウントとの接続を確立しました。次のチュートリアルに進み、 [データをExperience Platformに取り込むようにデータフローを設定](../../dataflow/databases.md).

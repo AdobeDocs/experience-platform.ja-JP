@@ -1,39 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Phoenix；フェニックス
-solution: Experience Platform
-title: Phoenix ソースコネクタの概要
-description: API またはユーザーインターフェイスを使用して Phoenix をAdobe Experience Platformに接続する方法を説明します。
+title: Phoenix ソースの概要
+description: API またはユーザーインターフェイスを使用して Phoenix アカウントをAdobe Experience Platformに接続する方法を説明します。
+last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 57%
+source-wordcount: '186'
+ht-degree: 32%
 
 ---
 
-# （ベータ版） [!DNL Phoenix] コネクタ
+# [!DNL Phoenix]
 
->[!NOTE]
->
->この [!DNL Phoenix] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
-
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
-
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Phoenix].
+Adobe Experience Platform Sources は、次のようなサードパーティのデータベースからのデータ取り込みをサポートしています。 [[!DNL Phoenix]](https://phoenix.apache.org/index.html). このドキュメントでは、 [!DNL Phoenix] を通じて説明する [!DNL Flow Service] API またはExperience Platformユーザーインターフェイス。
 
 ## IP アドレス許可リスト
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Phoenix] と を接続する方法について説明します。[!DNL Platform]
+以下のドキュメントでは、接続方法に関する情報を提供します [!DNL Phoenix] API またはユーザーインターフェイスを使用してExperience Platformを設定するには：
 
-## API を使用して [!DNL Phoenix] と [!DNL Platform] を接続する
+## 接続 [!DNL Phoenix] API を使用してExperience Platformを設定するには：
 
-- [フローサービス API を使用した Phoenix ベース接続の作成](../../tutorials/api/create/databases/phoenix.md)
-- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-- [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
+* [フローサービス API を使用した Phoenix ベース接続の作成](../../tutorials/api/create/databases/phoenix.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
+* [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して [!DNL Phoenix] と [!DNL Platform] を接続する
+## 接続 [!DNL Phoenix] UI を使用してExperience Platformを設定するには
 
-- [UI での Phoenix ソース接続の作成](../../tutorials/ui/create/databases/phoenix.md)
-- [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
+* [接続する [!DNL Phoenix] アカウントユーザーインターフェイスを使用したExperience Platform](../../tutorials/ui/create/databases/phoenix.md)
+* [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
