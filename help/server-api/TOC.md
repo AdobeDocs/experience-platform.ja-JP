@@ -6,9 +6,9 @@ breadcrumb-title: Edge Network Server API ドキュメント
 user-guide-description: Experience Cloud サービスまたは Experience Platform Edge サービスを使用したデータ収集、パーソナライズ、広告およびマーケティングのユースケースには、Edge Network Server API を使用します。
 feature: Data Collection
 source-git-commit: be073dcc62f0cf5b94f94082348442e2526604a7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '108'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
 
@@ -22,17 +22,17 @@ ht-degree: 41%
 * データ収集 {#data-collection}
    * [単一イベントのデータ収集](interactive-data-collection.md)
    * [バッチイベントのデータ収集](non-interactive-data-collection.md)
-* 他のAdobeソリューション {#interacting-other-adobe-solutions}
-   * [Adobe Analyticsの操作](interacting-adobe-analytics.md)
-* パーソナライズ機能 {#personalization}
+* 他のアドビソリューションの操作 {#interacting-other-adobe-solutions}
+   * [Adobe Analytics の操作](interacting-adobe-analytics.md)
+* パーソナライゼーション {#personalization}
    * [パーソナライゼーションの概要](personalization-overview.md)
-   * [Adobe Targetを使用したパーソナライゼーション](personalization-target.md)
-   * [offer decisioning](personalization-offer-decisioning.md)
+   * [Adobe Target を使用したパーソナライゼーション](personalization-target.md)
+   * [Offer Decisioning を使用したパーソナライゼーション](personalization-offer-decisioning.md)
 * [場所のヒント](location-hints.md)
 * [エラー処理](error-handling.md)
 * [トラブルシューティング](troubleshooting.md)
-* メディアエッジ API {#media-edge-apis}
-   * [メディアエッジ API の概要](media-edge-api/overview.md)
-   * [Media Edge API の概要](media-edge-api/getting-started.md)
+* Media Edge API {#media-edge-apis}
+   * [Media Edge API の概要](media-edge-api/overview.md)
+   * [Media Edge API の基本を学ぶ](media-edge-api/getting-started.md)
    * [Media Edge API のトラブルシューティング](media-edge-api/troubleshooting.md)
    * [Media Edge API Open API 仕様リソース](media-edge-api/swagger.md)
