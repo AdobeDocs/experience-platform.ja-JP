@@ -6,7 +6,7 @@ user-guide-description: Adobe Experience Platform のプレイブックを使用
 feature: Playbooks
 hide: true
 source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '54'
 ht-degree: 100%
 
