@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスとセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
+source-wordcount: '3607'
 ht-degree: 31%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 31%
 
 オーディエンスとセグメント定義を使用する場合は、 [!DNL Experience Platform] セグメント化に関連するサービス。 このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] では、 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] では、次に保存されているデータをセグメント化できます。 [!DNL Experience Platform] 小さなグループに分類された個人（顧客、見込み客、ユーザー、組織など）に関連する
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：[!DNL Platform] に取り込まれる様々なデータソースの ID を結合することで、顧客プロファイルの作成を有効にします。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 また、このドキュメントで使用される次の 2 つの主要用語を理解し、それらの違いを理解する必要があります。
 
-- **対象ユーザ**:類似した行動や特性を共有する一連の人物。 このユーザーのコレクションは、セグメント定義やオーディエンス構成（プラットフォーム生成オーディエンス）を使用してAdobe Experience Platformで生成することも、カスタムアップロードなどの外部ソース（外部生成オーディエンス）から生成することもできます。
-- **セグメント定義**:ルールAdobe Experience Platformでは、ターゲットオーディエンスの主要な特性や動作を記述するために使用されます。
+- **対象ユーザ**：類似した行動や特性を共有する一連の人物。 このユーザーのコレクションは、セグメント定義やオーディエンス構成（プラットフォーム生成オーディエンス）を使用してAdobe Experience Platformで生成することも、カスタムアップロードなどの外部ソース（外部生成オーディエンス）から生成することもできます。
+- **セグメント定義**: Adobe Experience Platformでは、ターゲットオーディエンスの主要な特性や動作を記述するルールが使用されます。
 - **セグメント**：プロファイルをオーディエンスに分割する行為です。
 
 ## 概要
@@ -39,7 +39,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 ### [!UICONTROL オーディエンス] dashboard {#segments-dashboard}
 
-この **[!UICONTROL オーディエンス]** ダッシュボードでは、組織のオーディエンスデータに関連する主要指標の概要を説明します。
+The **[!UICONTROL オーディエンス]** ダッシュボードでは、組織のオーディエンスデータに関連する主要指標の概要を説明します。
 
 詳しくは、 [audiences ダッシュボードガイド](../../dashboards/guides/audiences.md).
 
@@ -125,15 +125,15 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 >
 > 以下をおこないます。 **not** を使用すれば、宛先のアクティベーションで使用されているオーディエンスを削除できます。
 
-### フィルターとタグ付け {#manage-audiences}
+### フィルター、フォルダー、タグ付け {#manage-audiences}
 
 作業効率を向上させるために、既存のオーディエンスの検索、オーディエンスへのユーザー定義タグの追加、フォルダーへのオーディエンスの配置、表示されたオーディエンスのフィルタリングをおこなうことができます。
 
 **検索** {#search}
 
-で最大 9 つの異なる言語で既存のオーディエンスを検索できます。 [!DNL Unified Search].
+を使用して、最大 9 つの異なる言語で既存のオーディエンスを検索できます。 [!DNL Unified Search].
 
-使用する [!DNL Unified Search]」をクリックし、ハイライト表示されている検索バーに検索する語句を追加します。
+次を使用するには： [!DNL Unified Search]」をクリックし、ハイライト表示されている検索バーに検索する語句を追加します。
 
 ![検索バーがハイライト表示されます。](../images/ui/overview/browse-audience-search.png)
 
@@ -141,24 +141,24 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 **タグ** {#tags}
 
-オーディエンスの説明、検索、管理をより適切におこなうために、ユーザー定義のタグを追加できます。
+オーディエンスの説明、検索、管理をより適切に行うために、ユーザー定義のタグを追加できます。
 
 タグを追加するには、「 **[!UICONTROL タグの管理]** タグを付けるオーディエンスに対して。
 
-![この [!UICONTROL タグの管理] ボタンが選択されている場合は、選択したオーディエンスに対して表示されます。](../images/ui/overview/browse-manage-tags.png)
+![The [!UICONTROL タグの管理] ボタンが選択されている場合は、選択したオーディエンスに対して表示されます。](../images/ui/overview/browse-manage-tags.png)
 
-この **[!UICONTROL タグの管理]** ポップオーバーが表示されます。 このポップオーバーで、分類されたタグまたは未分類のタグを選択できます。
+The **[!UICONTROL タグの管理]** ポップオーバーが表示されます。 このポップオーバーで、分類されたタグまたは未分類のタグを選択できます。
 
 | タグタイプ | 説明 |
 | -------- | ----------- |
 | 分類 | 組織の管理者が作成および管理するタグ。 |
-| 未分類 | タグは [!UICONTROL タグの管理] ポップオーバー これらのタグタイプは誰でも作成または管理できます。 |
+| 未分類 | タグは、 [!UICONTROL タグの管理] ポップオーバー これらのタグタイプは誰でも作成または管理できます。 |
 
-![この [!UICONTROL タグの管理] ポップオーバーが表示されます。 分類済みまたは未分類を選択するオプションがハイライト表示されます。](../images/ui/overview/create-tag.png)
+![The [!UICONTROL タグの管理] ポップオーバーが表示されます。 分類済みまたは未分類を選択するオプションがハイライト表示されます。](../images/ui/overview/create-tag.png)
 
 オーディエンスに関連付けるすべてのタグを追加したら、「 」を選択します。 **[!UICONTROL 保存]**.
 
-![の [!UICONTROL タグの管理] 「 」ポップオーバーで、追加したタグがハイライト表示されます。](../images/ui/overview/created-tags.png)
+![次の日： [!UICONTROL タグの管理] 「 」ポップオーバーで、追加したタグがハイライト表示されます。](../images/ui/overview/created-tags.png)
 
 タグの作成と管理について詳しくは、 [タグ管理ガイド](../../administrative-tags/ui/managing-tags.md).
 
@@ -168,9 +168,9 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 オーディエンスをフォルダーに移動するには、「 **[!UICONTROL フォルダーに移動]** を選択します。
 
-![この [!UICONTROL フォルダーに移動] ボタンが選択されている場合は、そのオーディエンスのみが対象となります。](../images/ui/overview/browse-move-to-folder.png)
+![The [!UICONTROL フォルダーに移動] ボタンが選択されている場合は、そのオーディエンスのみが対象となります。](../images/ui/overview/browse-move-to-folder.png)
 
-この **オーディエンスをフォルダーに移動** ポップオーバーが表示されます。 オーディエンスの移動先のフォルダーを選択し、「 」を選択します。 **[!UICONTROL 保存]**.
+The **オーディエンスをフォルダーに移動** ポップオーバーが表示されます。 オーディエンスの移動先のフォルダーを選択し、「 」を選択します。 **[!UICONTROL 保存]**.
 
 ![「オーディエンスをフォルダーに移動」ポップオーバーが表示されます。 オーディエンスの移動先となるフォルダーがハイライト表示されます。](../images/ui/overview/move-to-folder.png)
 
@@ -191,9 +191,9 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 | フィルター | 説明 |
 | ------ | ----------- |
 | [!UICONTROL 接触チャネル] | オーディエンスの起源に基づいてフィルタリングできます。 使用できるオプションには、セグメント化サービス、カスタムアップロード、オーディエンス構成、Audience Managerなどがあります。 |
-| [!UICONTROL 任意のタグがある] | タグでフィルターできます。 次の中から選択できます。 **[!UICONTROL 任意のタグがある]** および **[!UICONTROL すべてのタグあり]**. 条件 **[!UICONTROL 任意のタグがある]** が選択されている場合、フィルターされたオーディエンスは次を含みます。 **任意** 追加したタグの数。 条件 **[!UICONTROL すべてのタグあり]** が選択されている場合、フィルターされたオーディエンスは次を含む必要があります **すべて** 追加したタグの数。 |
+| [!UICONTROL 任意のタグがある] | タグでフィルターできます。 次の中から選択できます。 **[!UICONTROL 任意のタグがある]** および **[!UICONTROL すべてのタグあり]**. 条件 **[!UICONTROL 任意のタグがある]** が選択されている場合、フィルターされたオーディエンスは次の条件を満たします。 **任意** 追加したタグの数。 条件 **[!UICONTROL すべてのタグあり]** が選択されている場合、フィルターされたオーディエンスは次を含む必要があります。 **すべて** 追加したタグの数。 |
 | [!UICONTROL ライフサイクルステータス] | オーディエンスのライフサイクルステータスに基づいてフィルタリングできます。 次のオプションを使用できます。 [!UICONTROL アクティブ], [!UICONTROL アーカイブ済み], [!UICONTROL 削除済み], [!UICONTROL ドラフト], [!UICONTROL 非アクティブ]、および [!UICONTROL 公開済み]. |
-| [!UICONTROL 更新頻度] | オーディエンスの更新頻度に基づいてフィルタリングできます。 次のオプションを使用できます。 [!UICONTROL 予定], [!UICONTROL 連続]、および [!UICONTROL オンデマンド]. |
+| [!UICONTROL 更新頻度] | オーディエンスの更新頻度に基づいてフィルタリングできます。 次のオプションを使用できます。 [!UICONTROL Scheduled], [!UICONTROL 連続]、および [!UICONTROL オンデマンド]. |
 | [!UICONTROL 作成者] | オーディエンスを作成したユーザーに基づいてフィルタリングできます。 |
 | [!UICONTROL 作成日] | オーディエンスの作成日に基づいてフィルタリングできます。 オーディエンスが作成された日時をフィルタリングする日付範囲を選択できます。 |
 | [!UICONTROL 変更日] | オーディエンスの最終変更日に基づいてフィルタリングできます。 オーディエンスが最後に変更された日時をフィルタリングする日付範囲を選択できます。 |
@@ -210,7 +210,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 **オーディエンスの概要** {#segment-summary}
 
-この **[!UICONTROL オーディエンスの概要]** 「 」セクションには、ID、名前、説明、接触チャネル、属性の詳細などの情報が表示されます。
+The **[!UICONTROL オーディエンスの概要]** 「 」セクションには、ID、名前、説明、接触チャネル、属性の詳細などの情報が表示されます。
 
 さらに、オーディエンスを宛先に対してアクティブ化したり、アクセスラベルを適用したり、オーディエンスを編集/更新したりするオプションも提供されます。
 
@@ -250,13 +250,13 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 **オーディエンス合計** {#audience-total}
 
-この **[!UICONTROL オーディエンス合計]** 「 」セクションには、オーディエンスに適合するプロファイルの合計数が表示されます。
+The **[!UICONTROL オーディエンス合計]** 「 」セクションには、オーディエンスに適合するプロファイルの合計数が表示されます。
 
 予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合は、データセット全体が使用されます。100 万個から 2,000 万個のエンティティがある場合は、100 万個のエンティティが使用されます。2,000 万個を超えるエンティティがある場合は、合計エンティティ数の 5％が使用されます。推定サイズの生成について詳しくは、 [推定生成セクション](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) オーディエンス作成のチュートリアル
 
 **アクティブ化された宛先** {#activated-destinations}
 
-この **[!UICONTROL アクティブ化された宛先]** 「 」セクションには、このオーディエンスがアクティブ化される宛先が表示されます。
+The **[!UICONTROL アクティブ化された宛先]** 「 」セクションには、このオーディエンスがアクティブ化される宛先が表示されます。
 
 >[!NOTE]
 >
@@ -286,7 +286,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 ### オーディエンスの作成 {#create-audience}
 
-次を選択できます。 **[!UICONTROL オーディエンスを作成]** をクリックして、オーディエンスを作成します。
+次の項目を選択できます。 **[!UICONTROL オーディエンスを作成]** をクリックして、オーディエンスを作成します。
 
 ![オーディエンスの参照ページで、「オーディエンスを作成」ボタンがハイライト表示されます。](../images/ui/overview/browse-create-audience.png)
 
@@ -294,7 +294,7 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 ![作成できる 2 種類のオーディエンスを表示するポップオーバー。](../images/ui/overview/create-audience-type.png)
 
-**オーディエンスの構成** {#audience-composition}
+**オーディエンス構成** {#audience-composition}
 
 選択 **[!UICONTROL オーディエンスを作成]** をクリックすると、Audience Composition に移動します。 このワークスペースには、オーディエンスを作成および編集するための直感的なコントロールが用意されています。例えば、様々なアクションを表すために使用するドラッグ&amp;ドロップタイルなどです。 オーディエンスの作成について詳しくは、 [Audience Composition ガイド](./audience-composition.md).
 
@@ -302,51 +302,51 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 
 **セグメントビルダー** {#segment-builder}
 
-選択 **[!UICONTROL ルールを作成]** を使用すると、セグメントビルダーに移動します。 このワークスペースには、セグメント定義を作成および編集するための直感的なコントロールが用意されています。例えば、データプロパティを表すために使用するドラッグ&amp;ドロップタイルなどです。 セグメント定義の作成の詳細については、 [セグメントビルダーガイド](./segment-builder.md)
+選択 **[!UICONTROL ルールを作成]** を使用すると、セグメントビルダーに移動します。 このワークスペースには、セグメント定義を作成および編集するための直感的なコントロールが用意されています。例えば、データプロパティを表すために使用するドラッグ&amp;ドロップタイルなどです。 セグメント定義の作成について詳しくは、 [セグメントビルダーガイド](./segment-builder.md)
 
 ![セグメントビルダーワークスペースが表示されます。](../images/ui/overview/segment-builder.png)
 
 ### オーディエンスのインポート {#import-audience}
 
-次を選択できます。 **[!UICONTROL オーディエンスのインポート]** 外部で生成されたオーディエンスを読み込む場合。
+次の項目を選択できます。 **[!UICONTROL オーディエンスのインポート]** 外部で生成されたオーディエンスを読み込む場合。
 
 ![オーディエンスの参照ページで、「オーディエンスをインポート」ボタンがハイライト表示されます。](../images/ui/overview/browse-import-audience.png)
 
-この **[!UICONTROL オーディエンス CSV をインポート]** ワークフローが表示されます。 外部で生成されたオーディエンスとしてインポートする CSV ファイルを選択できます。
+The **[!UICONTROL オーディエンス CSV をインポート]** ワークフローが表示されます。 外部で生成されたオーディエンスとしてインポートする CSV ファイルを選択できます。
 
-![内 [!UICONTROL オーディエンス CSV をインポート] ワークフロー、 [!UICONTROL ファイルをドラッグ&amp;ドロップ] ボックスがハイライト表示され、外部で生成したオーディエンスをアップロードできる場所が示されます。](../images/ui/overview/import-audience-csv.png)
+![Adobe Analytics の [!UICONTROL オーディエンス CSV をインポート] ワークフロー、 [!UICONTROL ファイルをドラッグ&amp;ドロップ] ボックスがハイライト表示され、外部で生成したオーディエンスをアップロードできる場所が示されます。](../images/ui/overview/import-audience-csv.png)
 
 >[!NOTE]
 >
->外部で生成されたオーディエンス **必須** CSV 形式の場合は、 **最大** を 11 列に設定し、1 GB 未満にする必要があります。
+>外部で生成されたオーディエンス **必須** が CSV 形式の場合は、 **最大** を 11 列に設定し、1 GB 未満にする必要があります。
 
 インポートする CSV ファイルを選択すると、この外部で生成されたオーディエンスのサンプルデータのリストが表示されます。 サンプルデータが正しいことを確認したら、「 **[!UICONTROL 次へ]**.
 
 ![外部で生成されたオーディエンスのサンプルデータが表示されます。](../images/ui/overview/import-audience-sample-data.png)
 
-この **[!UICONTROL オーディエンスの詳細]** ページが表示されます。 オーディエンスの名前、説明、プライマリ ID、ID 名前空間の値など、オーディエンスに関する情報を追加できます。
+The **[!UICONTROL オーディエンスの詳細]** ページが表示されます。 オーディエンスの名前、説明、プライマリ ID、ID 名前空間の値など、オーディエンスに関する情報を追加できます。
 
-![この [!UICONTROL オーディエンスの詳細] ページが表示されます。](../images/ui/overview/import-audience-audience-details.png)
+![The [!UICONTROL オーディエンスの詳細] ページが表示されます。](../images/ui/overview/import-audience-audience-details.png)
 
 オーディエンスの詳細を入力した後、 **[!UICONTROL 次へ]**.
 
-![この [!UICONTROL 次へ] ボタンが [!UICONTROL オーディエンスの詳細] ページ。](../images/ui/overview/import-audience-filled-details.png)
+![The [!UICONTROL 次へ] ボタンが [!UICONTROL オーディエンスの詳細] ページに貼り付けます。](../images/ui/overview/import-audience-filled-details.png)
 
-この **[!UICONTROL レビュー]** ページが表示されます。 新しく読み込んだ外部生成オーディエンスの詳細を確認できます。
+The **[!UICONTROL レビュー]** ページが表示されます。 新しく読み込んだ外部生成オーディエンスの詳細を確認できます。
 
-![この [!UICONTROL レビュー] ページが表示され、新しく読み込んだ外部生成オーディエンスの詳細が示されます。](../images/ui/overview/import-audience-review-details.png)
+![The [!UICONTROL レビュー] ページが表示され、新しく読み込んだ外部生成オーディエンスの詳細が示されます。](../images/ui/overview/import-audience-review-details.png)
 
-詳細が正しいことを確認したら、「 」を選択します。 **[!UICONTROL 完了]** 外部で生成されたオーディエンスをAdobe Experience Platformに読み込む。
+詳細が正しいことを確認したら、「 」を選択します。 **[!UICONTROL 完了]** を使用して、外部で生成されたオーディエンスをAdobe Experience Platformに読み込みます。
 
 ## スケジュールされたセグメント化 {#scheduled-segmentation}
 
-オーディエンスを作成したら、オンデマンドで、またはスケジュールに沿った（継続的に）オーディエンスの評価をおこなうことができます。 評価手段移動 [!DNL Real-Time Customer Profile] セグメントジョブを通じたデータを取得し、対応するオーディエンスを生成します。 作成したオーディエンスは、[!DNL Experience Platform] API を使用して書き出すことができるように保存されます。
+オーディエンスを作成したら、オンデマンドで、またはスケジュールに沿った（継続的に）オーディエンスの評価をおこなうことができます。 評価手段移動 [!DNL Real-Time Customer Profile] セグメントジョブを通じてのデータを取得し、対応するオーディエンスを生成します。 作成したオーディエンスは、[!DNL Experience Platform] API を使用して書き出すことができるように保存されます。
 
 オンデマンド評価では、API を使用して評価を実行し、必要に応じてオーディエンスを構築します。一方、スケジュール評価（「スケジュール済みセグメント化」とも呼ばれます）では、特定の時間（最大 1 日に 1 回）にオーディエンスを評価する定期的なスケジュールを作成できます。
 
 ### スケジュールに沿ったセグメント化を有効にする {#enable-scheduled-segmentation}
 
-オーディエンスでスケジュールに沿った評価を有効にするには、UI または API を使用します。 UI で、に戻ります。 **[!UICONTROL 参照]** タブ内 **[!UICONTROL オーディエンス]** と切り替え **[!UICONTROL すべてのオーディエンスをスケジュール]**. これにより、すべてのオーディエンスが組織で設定されたスケジュールに基づいて評価されます。
+オーディエンスでスケジュールに沿った評価を有効にするには、UI または API を使用します。 UI で、に戻ります。 **[!UICONTROL 参照]** タブ内 **[!UICONTROL オーディエンス]** と切り替えます。 **[!UICONTROL すべてのオーディエンスをスケジュール]**. これにより、すべてのオーディエンスが組織で設定されたスケジュールに基づいて評価されます。
 
 >[!NOTE]
 >
@@ -407,12 +407,12 @@ Experience PlatformUI で、 **[!UICONTROL オーディエンス]** 左側のナ
 >
 >ポリシー違反は、宛先に割り当てられたオーディエンスを作成する場合にのみ適用されます。
 
-オーディエンスの作成が完了すると、オーディエンスがAdobe Experience Platformデータガバナンスによって分析され、オーディエンス内にポリシー違反がないことを確認します。 詳しくは、[データガバナンスの概要](../../data-governance/home.md)を参照してください。
+オーディエンスの作成が完了すると、オーディエンスがAdobe Experience Platformデータガバナンスによって分析され、オーディエンス内にポリシー違反がないことが確認されます。 詳しくは、[データガバナンスの概要](../../data-governance/home.md)を参照してください。
 
 ![オーディエンスのポリシー違反が表示されます。](../images/ui/overview/audience-dule-policy-violations.png)
 
 ## 次の手順とその他のリソース {#next-steps}
 
-この [!DNL Segmentation Service] UI には、マーケティング可能なオーディエンスを次から作成できる豊富なワークフローが用意されています。 [!DNL Real-Time Customer Profile] データ。
+The [!DNL Segmentation Service] UI には、マーケティング可能なオーディエンスを次から作成できる豊富なワークフローが用意されています。 [!DNL Real-Time Customer Profile] データ。
 
 [!DNL Segmentation Service] について詳しくは、引き続きこのドキュメントを参照してください。[!DNL Segmentation Service] API の使用方法については、[[!DNL Segmentation Service] 開発者ガイド](../api/overview.md)を参照してください。

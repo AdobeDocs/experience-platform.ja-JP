@@ -3,14 +3,18 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 89%
+source-wordcount: '3338'
+ht-degree: 88%
 
 ---
 
 # [!DNL Segment Builder] UI ガイド
+
+>[!NOTE]
+>
+>このガイドでは、 **セグメント定義** を使用して、セグメントビルダーを起動します。 オーディエンスの構成を使用してオーディエンスを作成する方法については、 [Audience Composition UI ガイド](./audience-composition.md).
 
 [!DNL Segment Builder] のワークスペースには、[!DNL Profile] のデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 

@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Audiences UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作できる豊富なワークスペースを提供します。 ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 55%
+source-wordcount: '1767'
+ht-degree: 54%
 
 ---
 
 # Audience Composition UI ガイド
+
+>[!NOTE]
+>
+>このガイドでは、オーディエンス構成を使用してオーディエンスを作成する方法を説明します。 セグメントビルダーを使用して、セグメント定義を通じてオーディエンスを作成する方法については、 [セグメントビルダー UI ガイド](./segment-builder.md).
 
 オーディエンス構成は、様々なアクションを表すために使用されるブロックを使用して、オーディエンスを構築および編集するためのワークスペースを提供します。
 
@@ -18,7 +22,7 @@ ht-degree: 55%
 
 タイトルや説明など、構成の詳細を変更するには、 ![スライダ](../images/ui/audience-composition/sliders.png) 」ボタンをクリックします。
 
-この **[!UICONTROL 合成プロパティ]** ポップオーバーが表示されます。 タイトルや説明など、構成の詳細をここに挿入できます。
+The **[!UICONTROL 合成のプロパティ]** ポップオーバーが表示されます。 タイトルや説明など、構成の詳細をここに挿入できます。
 
 ![「コンポジションプロパティ」ポップオーバーが表示されます。](../images/ui/audience-composition/composition-properties.png)
 
@@ -34,11 +38,11 @@ ht-degree: 55%
 
 **[!UICONTROL オーディエンス]**&#x200B;ブロックタイプを使用すると、より大きな新しいオーディエンスを構成するサブオーディエンスを追加できます。 デフォルトでは、**[!UICONTROL オーディエンス]**&#x200B;ブロックは構成キャンバスの上部に含まれています。
 
-を選択し、 **[!UICONTROL 対象ユーザ]** ブロックの場合、右側のパネルには、オーディエンスにラベルを付けたり、オーディエンスをブロックに追加したり、オーディエンスブロックのカスタムルールを作成したりするためのコントロールが表示されます。
+次の項目を選択した場合： **[!UICONTROL 対象ユーザ]** ブロックの場合、右側のパネルには、オーディエンスにラベルを付けたり、オーディエンスをブロックに追加したり、オーディエンスブロックのカスタムルールを作成したりするためのコントロールが表示されます。
 
 >[!NOTE]
 >
->オーディエンスを追加することもできます **または** カスタムルールを作成します。 次の 2 つの機能 **できません** 一緒に使用する
+>オーディエンスを追加することもできます **または** カスタムルールを作成します。 次の 2 つの機能 **できません** 一緒に使用する。
 
 ![オーディエンスブロックの詳細が表示されている様子。](../images/ui/audience-composition/audience-block.png)
 
@@ -114,19 +118,19 @@ ht-degree: 55%
 >
 >この時点で、エンリッチメント属性は次の操作を実行できます。 **のみ** をダウンストリームのAdobe Journey Optimizerシナリオで使用する
 
-この **[!UICONTROL 強化]** ブロックタイプを使用すると、データセットの追加属性でオーディエンスをエンリッチメントできます。 これらの属性は、パーソナライゼーションの使用例で使用できます。
+The **[!UICONTROL エンリッチ]** ブロックタイプを使用すると、データセットの追加属性でオーディエンスをエンリッチメントできます。 これらの属性は、パーソナライゼーションの使用例で使用できます。
 
-次の手順で **[!UICONTROL 強化]** ブロック、 **+** アイコン、その後に **[!UICONTROL 強化]**.
+次の手順で **[!UICONTROL エンリッチ]** ブロック、 **+** アイコン、その後に **[!UICONTROL エンリッチ]**.
 
-![この [!UICONTROL 強化] 」オプションが選択されている。](../images/ui/audience-composition/add-enrich-block.png)
+![The [!UICONTROL エンリッチ] 」オプションが選択されている。](../images/ui/audience-composition/add-enrich-block.png)
 
-この **[!UICONTROL 強化]** ブロックが追加されます。 このブロックを選択すると、エンリッチメントの詳細が右側のパネルに表示されます。 これには、ブロックのラベルとエンリッチメントデータセットが含まれます。
+The **[!UICONTROL エンリッチ]** ブロックが追加されます。 このブロックを選択すると、エンリッチメントの詳細が右側のパネルに表示されます。 これには、ブロックのラベルとエンリッチメントデータセットが含まれます。
 
-オーディエンスのエンリッチメントに使用するデータセットを選択するには、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+オーディエンスのエンリッチメントに使用するデータセットを選択するには、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン。
 
 ![フィルターボタンがハイライト表示されます。 これを選択すると、 [!UICONTROL データセットを選択] ポップオーバー](../images/ui/audience-composition/enrich-select-dataset.png)
 
-この **[!UICONTROL データセットを選択]** ポップオーバーが表示されます。 エンリッチメント用に追加するデータセットを選択し、その後に **[!UICONTROL 選択]** をクリックして、エンリッチメント用のデータセットを追加します。
+The **[!UICONTROL データセットを選択]** ポップオーバーが表示されます。 エンリッチメント用に追加するデータセットを選択し、その後に **[!UICONTROL 選択]** をクリックして、エンリッチメント用のデータセットを追加します。
 
 ![選択したデータセットが選択されます。](../images/ui/audience-composition/enrich-dataset-selected.png)
 
@@ -138,31 +142,31 @@ ht-degree: 55%
 >   - データセット **できません** イベントタイプであるか、システム生成であるか、プロファイル用にマークされている。
 >- データセット **必須** は 1 GB 以下です。
 
-この **[!UICONTROL エンリッチメント条件]** セクションが右側のパネルに表示されるようになりました。 このセクションでは、 **[!UICONTROL ソース結合キー]** そして **[!UICONTROL エンリッチメントデータセット結合キー]**：エンリッチメントデータセットを、作成しようとしているオーディエンスとリンクできます。
+The **[!UICONTROL エンリッチメント条件]** セクションが右側のパネルに表示されるようになりました。 このセクションでは、 **[!UICONTROL ソース結合キー]** そして **[!UICONTROL エンリッチメントデータセット結合キー]**：エンリッチメントデータセットを、作成しようとしているオーディエンスとリンクできます。
 
-![この [!UICONTROL エンリッチメント条件] 領域がハイライト表示されます。](../images/ui/audience-composition/enrichment-criteria.png)
+![The [!UICONTROL エンリッチメント条件] 領域がハイライト表示されます。](../images/ui/audience-composition/enrichment-criteria.png)
 
-次の項目を選択します。 **[!UICONTROL ソース結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+次の項目を選択します。 **[!UICONTROL ソース結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン。
 
 ![次に示すフィルターアイコン： [!UICONTROL ソース結合キー] がハイライト表示されます。](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
-この **[!UICONTROL プロファイル属性を選択]** ポップオーバーが表示されます。 ソース結合キーとして使用するプロファイル属性を選択し、その後に **[!UICONTROL 選択]** をクリックして、その属性をソース結合キーとして選択します。
+The **[!UICONTROL プロファイル属性を選択]** ポップオーバーが表示されます。 ソース結合キーとして使用するプロファイル属性を選択し、その後に **[!UICONTROL 選択]** をクリックして、その属性をソース結合キーとして選択します。
 
 ![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-次の項目を選択します。 **[!UICONTROL エンリッチメントデータセット結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン
+次の項目を選択します。 **[!UICONTROL エンリッチメントデータセット結合キー]**&#x200B;を選択し、 ![フィルター](../images/ui/audience-composition/filter-attribute.png) アイコン。
 
 ![次に示すフィルターアイコン： [!UICONTROL エンリッチメントデータセット結合キー] がハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
-この **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 エンリッチメントデータセット結合キーとして使用する属性を選択し、その後に **[!UICONTROL 選択]** を使用して、その属性をエンリッチメントデータセット結合キーとして選択します。
+The **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 エンリッチメントデータセット結合キーとして使用する属性を選択し、その後に **[!UICONTROL 選択]** を使用して、その属性をエンリッチメントデータセット結合キーとして選択します。
 
 ![エンリッチメントデータセット結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
 これで、2 つの結合キー、 **[!UICONTROL エンリッチメント属性]** セクションが表示されます。 これで、オーディエンスを強化する属性を追加できます。 これらの属性を追加するには、「 **[!UICONTROL 属性を追加]**.
 
-![この [!UICONTROL 属性を追加] ボタンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-add-attribute.png)
+![The [!UICONTROL 属性を追加] ボタンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
-この **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 データセットから属性を選択してオーディエンスをエンリッチメントし、その後に **[!UICONTROL 選択]** をクリックして、オーディエンスに属性を追加します。
+The **[!UICONTROL エンリッチメント属性]** ポップオーバーが表示されます。 データセットから属性を選択してオーディエンスをエンリッチメントし、その後に **[!UICONTROL 選択]** をクリックして、オーディエンスに属性を追加します。
 
 ![追加するエンリッチメント属性がハイライト表示されます。](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
 
@@ -188,7 +192,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL ランク] {#rank-block}
 
-この **[!UICONTROL ランク]** ブロックタイプを使用すると、指定した属性に基づいてプロファイルのランク付けと並べ替えをおこない、これらのランク付けされたプロファイルを構成に含めることができます。
+The **[!UICONTROL ランク]** ブロックタイプを使用すると、指定した属性に基づいてプロファイルのランク付けと並べ替えをおこない、これらのランク付けされたプロファイルを構成に含めることができます。
 
 **[!UICONTROL ランク]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL ランク]**」の順に選択します。
 
