@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1017'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 >[!NOTE]
 >
->Adobe Experience Platform Sources での暗号化されたファイル取り込みは、openPGP をサポートしており、PGP の特定の独自バージョンはサポートしていません。
+>Adobe Experience Platform ソースでの暗号化されたファイル取り込みは、openPGP をサポートしており、PGP の特定の独自バージョンはサポートしていません。
 
 ## 暗号化キーペアの作成 {#create-encryption-key-pair}
 
