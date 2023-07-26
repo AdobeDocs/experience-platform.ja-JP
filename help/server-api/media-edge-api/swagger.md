@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API を使用すると、開発者は Media Edge Analytics および Customer Journey Analytics のデータを収集できます。
 source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '82'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 90%
 
 このドキュメントには、JSON Open API 仕様（OAS）または「Swagger」リファレンスが含まれています。この仕様を editor.swagger.io などのレンダリングツールにコピー＆ペーストして、Media Edge API 情報を表示できます。 この仕様には、各エンドポイントのパラメーター、例、スキーマが含まれます。
 
-+++ 「API 仕様を開く」を表示およびコピーする場合に選択します
++++ 選択して Open API 仕様を表示およびコピー
 
 ```
 {
