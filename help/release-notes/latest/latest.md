@@ -1,34 +1,24 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の 2023年6月 のリリースノート。
+description: Adobe Experience Platform の 2023年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
+source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 100%
+source-wordcount: '659'
+ht-degree: 35%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2023年6月21日（PT）**
+**リリース日：2023年7月26日（PT）**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
-- [Experience Platform API に対する認証](#authentication-platform-apis)
 - [データ収集](#data-collection)
-- [宛先](#destinations)
-- [エクスペリエンスデータモデル（XDM）](#xdm)
-- [クエリサービス](#query-service)
+- [データ準備](#data-prep)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
-
-## Experience Platform API に対する認証 {#authentication-platform-apis}
-
-Experience Platform API ユーザーの場合、API エンドポイントの認証と呼び出しに必要なアクセストークンを取得する方法が簡素化されました。アクセストークンを取得する JWT 認証方法は非推奨（廃止予定）になり、よりシンプルな OAuth サーバー間認証方法に置き換えられました。<p>![ハイライト表示された、アクセストークンを取得する新しい OAuth 認証方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "ハイライト表示された、アクセストークンを取得する新しい OAuth 認証方法。"){width="100" zoomable="yes"}</p>
-
-JWT 認証方法を使用した既存の API 統合は 2025年1月1日（PT）まで引き続き機能しますが、アドビでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。[サービスアカウント（JWT）資格情報から OAuth サーバー間資格情報への移行](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)に関するガイドを参照してください。
-
-詳しくは、更新された [Experience Platform 認証のチュートリアル](/help/landing/api-authentication.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -38,114 +28,51 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| 拡張機能 | [!DNL Google Cloud Platform] イベント転送拡張機能 | [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) イベント転送拡張機能では、イベントデータを Google に転送して、[!DNL Google Pub/Sub] を介してアクティブ化できます。 |
-| 拡張機能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 拡張機能 | [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) イベント転送拡張機能では、新しい [!DNL Google Analytics 4 (ga4)] 標準を介して分析を追跡できます。 |
-| 秘密鍵 | OAuth 2 JWT 秘密鍵 | [OAuth 2 JWT 秘密鍵](../../tags/ui/event-forwarding/secrets.md)では、アドビおよび [!DNL Google] サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。 |
+| タグとイベント転送 | データ収集監査ログ | アクションが実行された日時、およびタグとイベントの転送をまたいでこのアクションを実行したユーザーを確認できるようになりました。 これにより、製品のトラブルシューティング、適切なガバナンス、内部監査アクティビティを容易におこなえます。 この監査データは、クイックアクションやリソースステータスの更新を含む、コンテキスト内のスライドアウトメニューから表示されます。 このデータは、次の画面のタグとイベント転送 UI にわたって表示されます。<br><ul><li>[プロパティの概要](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[ルール](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[データ要素](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[拡張機能](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[ライブラリレビュー](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[ライブラリの最終ビルドと公開](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| データストリーム | [地域ルックアップ](../../datastreams/configure.md#advanced-options) | データストリームの位置情報とネットワーク検索を設定して、次のような情報を含めることができるようになりました。 <ul><li>国</li><li>郵便番号</li><li>都道府県</li><li>DMA</li><li>市区町村</li><li>緯度 </li><li>経度</li><li>通信事業者</li><li>ドメイン</li><li>ISP</li></ul> お客様は、適用される法令に基づき、正確な位置情報を含む個人データの収集、処理、送信に必要なすべての権限、同意、明確性、および承認を取得したことを確認する責任を負います。 <br> IP アドレスの難読化の選択は、IP アドレスから派生し、設定したAdobeソリューションに送信される位置情報のレベルには影響しません。 位置情報の参照は、別々に制限するか無効にする必要があります。 <br> 詳しくは、 [datastreams に関するドキュメント](../../datastreams/configure.md#advanced-options) を参照してください。 |
 
 {style="table-layout:auto"}
 
-データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
+データ収集の詳細については、 [データコレクションの概要](../../tags/home.md).
 
-## 宛先 {#destinations}
+## データ準備 {#data-prep}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+データ準備を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換および検証を行うことができます。
 
-**新規宛先または更新された宛先** {#new-updated-destinations}
-
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 接続](../../destinations/catalog/advertising/amazon-ads.md) | [!DNL Amazon Ads] と Adobe Experience Platform の統合により、様々な [!DNL Amazon Ads] マーケットプレイスへの地域ルーティングがサポートされるようになりました。詳しくは、[宛先の変更ログ](../../destinations/catalog/advertising/amazon-ads.md#changelog)を参照してください。 |
-
-{style="table-layout:auto"}
-
-**新機能または更新された機能** {#destinations-new-updated-functionality}
-
-| 機能 | 説明 |
-| ----------- | ----------- |
-| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) の宛先に対するワークスペースのサポート。 | 新しい Adobe Target の宛先接続を設定する際に、オーディエンスを共有する Adobe Target ワークスペースを選択できるようになりました。詳しくは、[接続パラメーター](../../destinations/catalog/personalization/adobe-target-connection.md#parameters)の節を参照してください。また、ワークスペースについて詳しくは、Adobe Target での[ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja)に関するチュートリアルを参照してください。 |
-
-{style="table-layout:auto"}
-
-<!--
-
-**Fixes and enhancements** {#destinations-fixes-and-enhancements}
-
-- Placeholder for fixes and enhancements
-
--->
-
-宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
-
-## エクスペリエンスデータモデル（XDM） {#xdm}
-
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
-
-**新しい XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明 |
-| --- | --- | --- |
-| 拡張機能（見込み客 - プロファイル） | [[!UICONTROL Adobe 統合プロファイルサービス見込み客 - プロファイル和集合拡張機能]](https://github.com/adobe/xdm/pull/1735/files) | 見込み客 - プロファイルの結合スキーマに必須フィールドを追加しました。 |
-| 拡張機能 | [[!UICONTROL アセットの判定]](https://github.com/adobe/xdm/pull/1732/files) | 判定で使用されるアセットを表すデータタイプを追加します。[!UICONTROL アセットの判定]は、`decisionItems` のレンダリングに使用されるアセットへの参照を提供します。 |
-| データタイプ | [[!UICONTROL コマース]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL コマース]は、購入および販売活動に関連するレコードを保存します。 |
-| フィールドグループ | [[!UICONTROL プロファイルパートナーエンリッチメント（サンプル）]](https://github.com/adobe/xdm/pull/1747/files) | プロファイルパートナーエンリッチメント用にサンプルスキーマを追加しました。 |
-| フィールドグループ | [[!UICONTROL パートナー見込み客の詳細（サンプル）]](https://github.com/adobe/xdm/pull/1747/files) | データベンダーの見込み客プロファイル拡張機能のサンプルスキーマを追加しました。 |
-| データタイプ | [[!UICONTROL コマース範囲]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL コマース範囲]は、イベントが発生した場所を特定します。例えば、ストアビュー、ストア、web サイトなどです。 |
-| データタイプ | [[!UICONTROL 請求]](https://github.com/adobe/xdm/pull/1734/files) | 1 つ以上の支払いに関する課金情報を[!UICONTROL コマース]スキーマに追加しました。 |
-
-{style="table-layout:auto"}
-
-**更新された XDM コンポーネント**
-
-| コンポーネントのタイプ | 名前 | 説明のアップデート |
-| --- | --- | --- |
-| フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` を 100 から「800 ～ 899」に変更しました。 |
-| データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` のデータタイプを文字列に変更しました。 |
-| フィールドグループ | [[!UICONTROL セグメントメンバーシップの詳細]](https://github.com/adobe/xdm/pull/1735/files) | 見込み客プロファイルクラスに追加しました。 |
-| スキーマ | [[!UICONTROL 計算属性システムスキーマ]](https://github.com/adobe/xdm/pull/1735/files) | [!UICONTROL 計算属性システムスキーマ]に ID マップを追加しました。 |
-| データタイプ | [[!UICONTROL コンテンツ配信ネットワーク]](https://github.com/adobe/xdm/pull/1733/files) | 使用するコンテンツ配信ネットワークを説明するために[!UICONTROL セッションの詳細情報]にフィールドを追加しました。 |
-| 拡張機能 | [[!UICONTROL Adobe 統合プロファイルサービスアカウント和集合拡張機能]](https://github.com/adobe/xdm/pull/1731/files) | [!UICONTROL Adobe 統合プロファイルサービスアカウント和集合拡張機能]に ID マップを追加しました。 |
-| データタイプ | [[!UICONTROL 注文]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` を[!UICONTROL 注文]に追加しました。これは、通常の注文価格と特別価格の違いを表します。個々の製品ではなく、注文全体に適用されます。 |
-| スキーマ | [[!UICONTROL AEP ハイジーン操作リクエスト]](https://github.com/adobe/xdm/pull/1728/files) | データハイジーン操作を処理するサービスの名前を指定するために、`targetServices` フィールドを追加しました。 |
-| データタイプ | [[!UICONTROL 送料]](https://github.com/adobe/xdm/pull/1727/files) | 1 つ以上の製品の配送情報に `currencyCode` を追加しました。製品の価格設定に使用される ISO 4217 のアルファベット通貨コードです。 |
-| データタイプ | [[!UICONTROL アプリケーション]](https://github.com/adobe/xdm/pull/1726/files) | ユーザーの言語的、地理的、文化的好みをアプリケーションに指定するために、`language` フィールドを追加しました。 |
-| 拡張機能 | [[!UICONTROL AJO エンティティフィールド]](https://github.com/adobe/xdm/pull/1746/files) | メッセージを最後に変更した時刻を示すために、[!UICONTROL AJO タイムスタンプエンティティ]を追加しました。 |
-| データタイプ | （複数） | 一貫性を保つため、複数のデータタイプをまたいで[複数のメディアの詳細を削除しました](https://github.com/adobe/xdm/pull/1739/files)。 |
-
-{style="table-layout:auto"}
-
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
-
-## クエリサービス {#query-service}
-
-クエリサービスでは、標準 SQL を使用して Adobe Experience Platform データレイクでデータに対してクエリを実行できます。データレイクの任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
-
-**更新された機能**
+**新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| インラインテンプレート | クエリサービスでは、SQL 内の他のテンプレートを参照するテンプレートの使用がサポートされるようになりました。クエリでインラインテンプレートを活用することで、ワークロードを軽減し、エラーを回避します。文や条件を再利用したり、ネストされたテンプレートを参照したりして、SQL の柔軟性を高めることができます。テンプレートとして保存できるクエリのサイズや、元のクエリから参照できるテンプレートの数に制限はありません。 詳しくは、[インラインテンプレートガイド](../../query-service/essential-concepts/inline-templates.md)を参照してください。 |
-| スケジュール済みクエリ UI の更新 | [[!UICONTROL 「スケジュール済みクエリ」タブ]](../../query-service/ui/monitor-queries.md#inline-actions)を使用して、スケジュール済みクエリのすべてを UI の 1 か所から管理します。[!UICONTROL スケジュール済みクエリ] UI は、インラインクエリアクションと新しいクエリステータス列の追加により改善されました。最近追加された機能には、スケジュールを有効化、無効化、削除したり、今後のクエリ実行に関するアラートを[!UICONTROL スケジュール済みクエリ]ビューから直接購読したりできる機能が含まれています。 <p>![[!UICONTROL スケジュール済みクエリ]ビューでハイライト表示されたインラインアクション。](../../query-service/images/ui/monitor-queries/disable-inline.png "[!UICONTROL スケジュール済みクエリ]ビューでハイライト表示されたインラインアクション。"){width="100" zoomable="yes"}</p> |
+| 新しいマッパー関数 | Data Prep でオブジェクトをマッピングする際に、次の関数を使用できるようになりました。 <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> これらの関数について詳しくは、 [データ準備関数ガイド](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
+データ準備について詳しくは、[データ準備の概要](../../data-prep/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] では、次に保存されているデータをセグメント化できます。 [!DNL Experience Platform] オーディエンスに組み込まれた個人（顧客、見込み客、ユーザー、組織など）に関連する オーディエンスは、セグメント定義や、 [!DNL Real-Time Customer Profile] データ。 これらのオーディエンスは、 [!DNL Platform]を使用し、任意のAdobeソリューションから簡単にアクセスできます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| Audience Portal | Audience Portal は、Adobe Experience Platform内のオーディエンスにアクセスし、作成し、管理するための新しい閲覧操作を提供します。 Audience Portal 内では、Platform で生成されたオーディエンスと外部で生成されたオーディエンスを表示し、フィルタリング、フォルダー、タグを使用して作業効率を向上させ、Platform で生成されたオーディエンスを作成し、CSV ファイルを使用して外部で生成されたオーディエンスをインポートできます。 Audience Portal の詳細については、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md). |
+| オーディエンス構成 | オーディエンス構成は、様々なアクションを表すために使用されるブロックを使用して、オーディエンスを作成および編集するための使いやすいワークスペースを提供します。 オーディエンスの構成について詳しくは、 [Audience Composition UI ガイド](../../segmentation/ui/audience-composition.md). |
+
+詳しくは、 [!DNL Segmentation Service]を読んでください。 [セグメント化の概要](../../segmentation/home.md).
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
-
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
-**更新された機能**
+**新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Adobe Analytics 分類のソースデータフローの削除に関するサポート | Adobe Analytics 分類をソースとして使用するソースデータフローを削除できるようになりました。**[!UICONTROL ソース]**／**[!UICONTROL データフローで]**、目的のデータフローを選択し、「削除」を選択します。詳しくは、[Adobe Analytics 分類データのソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/classifications.md)に関するガイドを参照してください。 |
-| API を使用した [!DNL Microsoft Dynamics] のフィルタリングサポート | 論理演算子と比較演算子を使用して、[[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) ソースの行レベルのデータをフィルタリングします。詳しくは、[API を使用したソースのデータのフィルタリング](../../sources/tutorials/api/filter.md)に関するガイドを参照してください。 |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | [!DNL RainFocus] ソース統合を使用して、[!DNL RainFocus] アカウントから Experience Platform にイベント管理および分析データを取り込むことができるようになりました。詳しくは、[[!DNL RainFocus]  ソースの概要](../../sources/connectors/analytics/rainfocus.md)を参照してください。 |
-| Adobe Commerce のサポート | Adobe Commerce ソース統合を使用して、Adobe Commerce アカウントから Experience Platform にデータを取り込むことができるようになりました。詳しくは、[Adobe Commerce ソースの概要](../../sources/connectors/adobe-applications/commerce.md)を参照してください。 |
-| [!DNL Mixpanel] のサポート | [!DNL Mixpanel] ソース統合を使用して、API またはユーザーインターフェイスを介して [!DNL Mixpanel] アカウントから Experience Platform に分析データを取り込むことができるようになりました。詳しくは、[[!DNL Mixpanel]  ソースの概要](../../sources/connectors/analytics/mixpanel.md)を参照してください。 |
-| [!DNL Zendesk] のサポート | [!DNL Zendesk] ソース統合を使用して、API またはユーザーインターフェイスを介して [!DNL Zendesk] アカウントから Experience Platform にカスタマーサクセスデータを取り込むことができるようになりました。詳しくは、[[!DNL Zendesk]  ソースの概要](../../sources/connectors/customer-success/zendesk.md)を参照してください。 |
+| [!BADGE Beta]{type=Informative}[!DNL SAP Commerce] | これで、 [[!DNL SAP Commerce] ソース](../../sources/connectors/ecommerce/sap-commerce.md) サブスクリプションの請求データを [!DNL SAP Commerce] アカウントからExperience Platformへ。 |
+| [!DNL Phoenix] のサポート | これで、 [[!DNL Phoenix] ソース](../../sources/connectors/databases/phoenix.md) データを取り込む [!DNL Phoenix] データベースからExperience Platformへ。 |
+| 認証の更新先 [!DNL Salesforce] および [!DNL Salesforce Service Cloud] | これで、 [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) および [[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md) Experience PlatformUI または [!DNL Flow Service] API. |
 
 {style="table-layout:auto"}
 
