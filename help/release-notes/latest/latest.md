@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 261729515ba25f20cd9606d378a3ec39471ee2cb
+source-git-commit: 62a0b6327f1707fcc639a309ae7db5bf0e4c828a
 workflow-type: tm+mt
-source-wordcount: '1061'
-ht-degree: 37%
+source-wordcount: '993'
+ht-degree: 36%
 
 ---
 
@@ -16,7 +16,6 @@ ht-degree: 37%
 Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [データ収集](#data-collection)
-- [データ準備](#data-prep)
 - [宛先](#data-prep)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
@@ -35,20 +34,20 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 {style="table-layout:auto"}
 
 データ収集の詳細については、 [データコレクションの概要](../../tags/home.md).
+<!-- 
+## Data Prep {#data-prep}
 
-## データ準備 {#data-prep}
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-データ準備を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換および検証を行うことができます。
+**New or updated features**
 
-**新機能または更新された機能**
-
-| 機能 | 説明 |
+| Feature | Description |
 | --- | --- |
-| 新しいマッパー関数 | Data Prep でオブジェクトをマッピングする際に、次の関数を使用できるようになりました。 <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> これらの関数について詳しくは、 [データ準備関数ガイド](../../data-prep/functions.md#hierarchies---objects). |
+| New mapper functions | You can now use the following functions when mapping objects in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-データ準備について詳しくは、[データ準備の概要](../../data-prep/home.md)を参照してください。
+For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## 宛先 {#destinations}
 
