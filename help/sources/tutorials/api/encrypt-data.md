@@ -4,10 +4,10 @@ description: API を使用して、クラウドストレージバッチソース
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: ht
-source-wordcount: '1017'
-ht-degree: 100%
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 76%
 
 ---
 
@@ -76,7 +76,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **リクエスト**
 
-次のリクエストでは、PGP 暗号化アルゴリズムを使用して暗号化キーペアを生成しています。
+次のリクエストは、PGP 暗号化アルゴリズムを使用して暗号化キーペアを生成します。
 
 ```shell
 curl -X POST \
@@ -110,6 +110,65 @@ curl -X POST \
     ​"expiryTime": "1684843168"
 }
 ```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `publicKey` | 公開鍵は、クラウドストレージ内のデータの暗号化に使用されます。 このキーは、この手順でも作成された秘密鍵に対応します。 ただし、秘密鍵は直ちにExperience Platformに送信されます。 |
+| `publicKeyId` | 公開鍵 ID は、データフローを作成し、暗号化されたクラウドストレージデータをExperience Platformに取り込むために使用されます。 |
+| `expiryTime` | 有効期限は、暗号化キーペアの有効期限を定義します。 この日付は、キーの生成日から 180 日後に自動的に設定され、UNIX タイムスタンプ形式で表示されます。 |
+
++++（オプション）署名済みデータの署名検証キーペアを作成します
+
+### 顧客管理キーペアの作成
+
+オプションで、署名検証キーのペアを作成して、暗号化されたデータに署名し、取り込むことができます。
+
+この段階では、独自の秘密鍵と公開鍵の組み合わせを生成し、秘密鍵を使用して暗号化されたデータに署名する必要があります。 次に、Platform で署名を検証するために、Base64 で公開鍵をエンコードしてから、Experience Platformで共有する必要があります。
+
+### 公開鍵をExperience Platformに共有
+
+公開鍵を共有するには、 `/customer-keys` エンドポイントを使用して、暗号化アルゴリズムと Base64 でエンコードされた公開鍵を提供する際に使用されます。
+
+**API 形式**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `encryptionAlgorithm` | 使用する暗号化アルゴリズムのタイプ。 サポートされているタイプは `PGP` と `GPG` です。 |
+| `publicKey` | 暗号化された署名に使用する、顧客が管理する鍵に対応する公開鍵。 このキーは、Base64 でエンコードする必要があります。 |
+
+**応答**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `publicKeyId` | この公開鍵 ID は、顧客管理鍵をExperience Platformと共有した場合に返されます。 署名済みおよび暗号化されたデータのデータフローを作成する際に、この公開鍵 ID を署名検証キー ID として指定できます。 |
+
++++
 
 ## [!DNL Flow Service] API を使用した Experience Platform へのクラウドストレージソースの接続 
 
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **リクエスト**
+
+>[!BEGINTABS]
+
+>[!TAB 暗号化されたデータ取り込み用のデータフローの作成]
 
 次のリクエストでは、クラウドストレージソースの暗号化されたデータを取り込むデータフローを作成しています。
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
 | `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
+
+
+>[!TAB 暗号化された署名済みのデータを取り込むためのデータフローの作成]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `params.signVerificationKeyId` | 署名検証キー ID は、Base64 でエンコードされた公開鍵をExperience Platformと共有した後に取得された公開鍵 ID と同じです。 |
+
+>[!ENDTABS]
 
 **応答**
 
