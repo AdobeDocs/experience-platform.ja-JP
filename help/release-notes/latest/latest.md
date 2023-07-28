@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
+source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 35%
+source-wordcount: '1297'
+ht-degree: 38%
 
 ---
 
@@ -15,10 +15,24 @@ ht-degree: 35%
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
+- [カタログサービス](#catalog-service)
 - [データ収集](#data-collection)
 - [宛先](#data-prep)
+- [クエリサービス](#query-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## カタログサービス {#catalog-service}
+
+カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
+
+| 機能 | 説明 |
+| --- | --- |
+| データセット在庫管理 | データセット UI に、データセットをより適切に管理するための一連のインラインアクションが用意されるようになりました。 高度なデータセット管理により、フォルダーとタグを作成し、データセットに割り当ててフィルタリングを実行し、検出性を向上させることで、作業効率を向上させます。 詳しくは、ドキュメントを参照してください。 [インラインアクション](../../catalog/datasets/user-guide.md#inline-actions)、方法 [データセットの検索とフィルタリング](../../catalog/datasets/user-guide.md#search-and-filter)、および [データセットをフォルダーに移動する](../../catalog/datasets/user-guide.md#move-to-folders). |
+
+{style="table-layout:auto"}
+
+カタログサービスについて詳しくは、 [カタログサービスの概要](../../catalog/home.md).
 
 ## データ収集 {#data-collection}
 
@@ -84,6 +98,21 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 - Microsoft Dynamics 365 の宛先に関する問題を修正しました。 宛先で、 [地域セレクター](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)を使用すると、Microsoftエコシステム内で会社がプロビジョニングされている地域に応じて、データエクスポートをルーティングできます。 ![新しい地域セレクターがハイライト表示されています。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "新しい地域セレクターがハイライト表示されています。"){width="100" zoomable="yes"}
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## クエリサービス {#query-service}
+
+クエリサービスでは、標準 SQL を使用して Adobe Experience Platform データレイクでデータに対してクエリを実行できます。データレイクの任意のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりすることで、それらのデータセットをレポートやデータサイエンスワークスペースで使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| クエリエディターの切り替え機能の強化 | 「クエリエディター」の切り替え機能が強化され、アクセシビリティと複数テーマのサポートが向上しました。 エディターの設定が強化され、暗いテーマや明るいテーマを有効にすることができます。 詳しくは、[ドキュメント](../../query-service/ui/user-guide.md#enhanced-editor-toggle)を参照してください。 |
+| 計算された統計のエイリアス名 | SQL クエリで計算された統計内での結果を記述的に参照するエイリアス名を指定できるようになりました。 この他の COMPUTE STATISTICS コマンドの更新については、ドキュメントを参照してください。 詳しくは、[ドキュメント](../../query-service/essential-concepts/dataset-statistics.md#alias-name)を参照してください。 |
+
+{style="table-layout:auto"}
+
+クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
