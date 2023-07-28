@@ -5,10 +5,10 @@ title: フローサービス API を使用した生データのストリーミ�
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 55%
+source-wordcount: '1124'
+ht-degree: 54%
 
 ---
 
@@ -206,7 +206,7 @@ curl -X POST \
 
 ターゲット接続は、Platform への宛先接続、または転送されたデータが送信される場所を作成および管理します。 ターゲット接続には、データ宛先、データ形式、およびデータフローの作成に必要なターゲット接続 ID に関する情報が含まれます。 ターゲット接続インスタンスは、テナントと組織に固有です。
 
-ターゲット接続を作成するには、 `/targetConnections` エンドポイント [!DNL Flow Service] API リクエストの一環として、データ形式、 `dataSetId` 前の手順で取得され、 [!DNL Data Lake]. この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続を作成するには、 `/targetConnections` エンドポイント [!DNL Flow Service] API. リクエストの一環として、データ形式、 `dataSetId` 前の手順で取得され、に関連付けられた固定接続仕様 ID [!DNL Data Lake]. この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API 形式**
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `connectionSpec.id` | に接続するために使用する接続仕様 ID [!DNL Data Lake]. この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
-| `data.format` | に取り込むデータの指定された形式 [!DNL Data Lake]. |
-| `params.dataSetId` | 前の手順で取得したターゲットデータセットの ID。 |
+| `data.format` | データレイクに取り込むデータの指定された形式。 |
+| `params.dataSetId` | 前の手順で生成したターゲットデータセットの ID。 **注意**：ターゲット接続を作成する際は、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 **応答**
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、データフロー仕様のリストを返します。 任意の [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]または  [!DNL Google PubSub]、 `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+正常な応答は、データフロー仕様のリストを返します。 次のいずれかを使用してデータフローを作成するために取得する必要があるデータフロー仕様 ID。 [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]または  [!DNL Google PubSub]、は `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {

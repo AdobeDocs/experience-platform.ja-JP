@@ -5,10 +5,10 @@ title: Flow Service API を使用したクラウドストレージソースの�
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 74%
+source-wordcount: '1765'
+ht-degree: 72%
 
 ---
 
@@ -37,7 +37,7 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 
 ## ソース接続の作成 {#source}
 
-ソース接続を作成するには、 `sourceConnections` エンドポイント [!DNL Flow Service] API は、ベース接続 ID、取り込むソースファイルへのパス、およびソースの対応する接続仕様 ID を提供します。
+ソース接続を作成するには、 `sourceConnections` の終点 [!DNL Flow Service] API は、ベース接続 ID、取り込むソースファイルへのパス、およびソースの対応する接続仕様 ID を提供します。
 
 ソース接続を作成する場合は、データ形式属性の enum 値も定義する必要があります。
 
@@ -95,10 +95,10 @@ curl -X POST \
 | `baseConnectionId` | クラウドストレージソースのベース接続 ID。 |
 | `data.format` | Platform に取り込むデータの形式。 次の値がサポートされています。 `delimited`, `JSON`、および `parquet`. |
 | `data.properties` | （オプション）ソース接続の作成時にデータに適用できるプロパティのセット。 |
-| `data.properties.columnDelimiter` | （オプション）フラットファイルを収集する際に指定できる 1 文字の列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合、コンマ (`,`) がデフォルト値として使用されます。 **注意**:この `columnDelimiter` プロパティは、区切り文字付きファイルを取り込む場合にのみ使用できます。 |
-| `data.properties.encoding` | （オプション）データを Platform に取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**:この `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
-| `data.properties.compressionType` | （オプション）取り込み用に圧縮ファイルタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは次のとおりです。 `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`、および `tar`. **注意**:この `compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
-| `params.path` | アクセスするソースファイルのパス。このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**:ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例： `/acme/summerCampaign/*.csv` は、 `/acme/summerCampaign/` フォルダー。 |
+| `data.properties.columnDelimiter` | （オプション）フラットファイルを収集する際に指定できる 1 文字の列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合は、コンマ (`,`) がデフォルト値として使用されます。 **注意**: `columnDelimiter` プロパティは、区切り文字付きファイルを取り込む場合にのみ使用できます。 |
+| `data.properties.encoding` | （オプション）データを Platform に取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**: `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
+| `data.properties.compressionType` | （オプション）取り込み用に圧縮ファイルタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは次のとおりです。 `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`、および `tar`. **注意**: `compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
+| `params.path` | アクセスするソースファイルのパス。このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**：ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例： `/acme/summerCampaign/*.csv` は全体を取り込みます `/acme/summerCampaign/` フォルダー。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプを使用 `file` 個々のファイルを取り込んでタイプを使用するには `folder` フォルダー全体を取り込みます。 |
 | `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられている接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-以下の例では、ファイルパスで正規表現を使用して、 `premium` 名前で
+以下の例では、ファイルパスで正規表現を使用して、 `premium` 名前に。
 
 ```shell
 curl -X POST \
@@ -253,8 +253,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
 | `data.schema.version` | スキーマのバージョン番号。この値を、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。 |
-| `params.dataSetId` | ターゲットデータセットの ID。 |
-| `connectionSpec.id` | データレイクへの固定接続仕様 ID。この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
+| `params.dataSetId` | 前の手順で生成したターゲットデータセットの ID。 **注意**：ターゲット接続を作成する際は、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 **応答**
 

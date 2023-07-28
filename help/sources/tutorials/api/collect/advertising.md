@@ -5,10 +5,10 @@ title: Flow Service API を使用した広告ソースのデータフローの�
 type: Tutorial
 description: このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタと Flow Service API を使用して Platform に取り込む手順について説明します。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1320'
-ht-degree: 95%
+source-wordcount: '1347'
+ht-degree: 92%
 
 ---
 
@@ -194,7 +194,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
 | `data.schema.version` | スキーマのバージョン番号。この値を、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。 |
-| `params.dataSetId` | ターゲットデータセットの ID。 |
+| `params.dataSetId` | 前の手順で生成したターゲットデータセットの ID。 **注意**：ターゲット接続を作成する際は、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
 | `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 ```json
@@ -685,7 +685,7 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローの監視方法について詳しくは、[API でのデータフローの監視](../monitor.md)に関するチュートリアルを参照してください。
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。データフローのモニタリング方法について詳しくは、[API でのデータフローの監視](../monitor.md)のチュートリアルを参照してください。
 
 ## 次の手順
 
