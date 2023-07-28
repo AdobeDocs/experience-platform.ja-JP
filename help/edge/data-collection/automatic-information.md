@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK で自動的に収集された情報
 description: Adobe Experience Platform SDK が自動的に収集する各情報の概要です。
 keywords: 情報の収集；コンテキスト；設定；device;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;environment;viewportHeight;viewportWidth;viewportWidth;viewportDetails;browserDetails；実装の詳細；name;placeContext;localTime;localTime;localTimezoneOffset；ローカルタイムゾーンオフセット；timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 59%
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 # 自動的に収集された情報
 
-Adobe Experience Platform Web SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
+Adobe Experience Platform Web SDK は、特別な設定を行わずに、多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
 ## デバイス（`device`）
 
@@ -90,9 +90,9 @@ Adobe Experience Platform Web SDK は、特別な設定をしなくても、多�
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-スタンドアロンライブラリを使用する場合、の値は単にライブラリのバージョンになります。 ライブラリをタグ拡張の一部として使用する場合、これはライブラリバージョンで、「+」で結合されたタグ拡張バージョンです。 例えば、ライブラリのバージョンが 2.1.0 で、タグ拡張のバージョンが 2.1.3 の場合、値はになります。 `2.1.0+2.1.3`.
+スタンドアロンライブラリを使用する場合、の値は単にライブラリバージョンになります。 ライブラリをタグ拡張の一部として使用する場合、これはライブラリバージョンで、「+」で結合されたタグ拡張バージョンです。 例えば、ライブラリのバージョンが 2.1.0 で、タグ拡張のバージョンが 2.1.3 の場合、値はになります。 `2.1.0+2.1.3`.
 
-### 環境
+### 環境 {#environment}
 
 | **ペイロード内のパス：** | **例：** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Adobe Experience Platform Web SDK は、特別な設定をしなくても、多�
 
 データが収集された環境。 これは常にに設定されています。 `browser`.
 
-## 場所コンテキスト（`placeContext`）
+## 場所の背景 (`placeContext`) {#place-context}
 
 エンドユーザーの場所に関する限定的な情報。
 

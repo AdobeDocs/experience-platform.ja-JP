@@ -2,10 +2,10 @@
 title: データストリームの設定
 description: クライアント側 Web SDK の統合を、他のAdobe製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: ac0d92938332f04d0b2813172d0d4a75cacdcd1d
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
-source-wordcount: '2247'
-ht-degree: 73%
+source-wordcount: '2275'
+ht-degree: 72%
 
 ---
 
@@ -50,8 +50,8 @@ Experience Platform で使用するためにこのデータストリームを設
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL 地域ルックアップ] | 訪問者の IP アドレスに基づいて、選択したオプションの位置情報を検索できるようにします。 選択可能なオプション： <ul><li>国</li><li>郵便番号</li><li>都道府県</li><li>DMA</li><li>市区町村</li><li>緯度 </li><li>経度</li></ul>選択 **[!UICONTROL 市区町村]**, **[!UICONTROL 緯度]**&#x200B;または **[!UICONTROL 経度]** 他にどのオプションが選択されているかに関係なく、最大 2 つの小数点までの座標を提供します。 これは、市区町村レベルの精度と見なされます。 <br> <br>オプションを選択しないと、位置情報の参照が無効になります。 位置情報は次の前に発生します： [!UICONTROL IP Obfuscation（IP の不明化）] また、  [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 |
-| [!UICONTROL ネットワーク参照] | 訪問者の IP アドレスに基づいて、選択したオプションに対してネットワーク検索を有効にします。 選択可能なオプション： <ul><li>通信事業者</li><li>ドメイン</li><li>ISP</li></ul>これらのオプションを使用して、要求の送信元の特定のネットワークに関する他のサービスに詳細な情報を提供します。 |
+| [!UICONTROL 地域ルックアップ] | 訪問者の IP アドレスに基づいて、選択したオプションの位置情報を検索できるようにします。 位置情報の検索では、 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) フィールドグループが含まれているかどうかを確認します。 <br>選択可能なオプション： <ul><li>国</li><li>郵便番号</li><li>都道府県</li><li>DMA</li><li>市区町村</li><li>緯度 </li><li>経度</li></ul>選択 **[!UICONTROL 市区町村]**, **[!UICONTROL 緯度]**&#x200B;または **[!UICONTROL 経度]** 他にどのオプションが選択されているかに関係なく、最大 2 つの小数点までの座標を提供します。 これは、市区町村レベルの精度と見なされます。 <br> <br>オプションを選択しないと、位置情報の参照が無効になります。 位置情報は次の前に発生します： [!UICONTROL IP Obfuscation（IP の不明化）] また、  [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 |
+| [!UICONTROL ネットワーク参照] | 訪問者の IP アドレスに基づいて、選択したオプションに対してネットワーク検索を有効にします。 ネットワーク検索では、 [`Environment`](../edge/data-collection/automatic-information.md#environment) フィールドグループが含まれているかどうかを確認します。 <br>選択可能なオプション： <ul><li>通信事業者</li><li>ドメイン</li><li>ISP</li></ul>これらのオプションを使用して、要求の送信元の特定のネットワークに関する他のサービスに詳細な情報を提供します。 |
 | [!UICONTROL IP Obfuscation（IP の不明化）] | データストリームに適用する IP 難読化のタイプを示します。 顧客 IP に基づく処理は、IP の不明化設定の影響を受けます。 これには、Experience Cloudストリームからデータを受け取るすべてのデータサービスが含まれます。 <p>選択可能なオプション：</p> <ul><li>**[!UICONTROL なし]**:IP の不明化を無効にします。 ユーザーの完全な IP アドレスは、データストリームを介して送信されます。</li><li>**[!UICONTROL 部分的]**:IPv4 アドレスの場合、ユーザー IP アドレスの最後のオクテットを難読化します。 IPv6 アドレスの場合、はアドレスの最後の 80 ビットを不明化します。 <p>例：</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完全]**:IP アドレス全体を難読化します。 <p>例：</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> 他のAdobe製品に対する IP の不明化の影響： <ul><li>**Adobe Target**：データストリームレベル。 [!UICONTROL IP Obfuscation（IP の不明化）] の設定は、Adobe Targetで設定される IP の難読化オプションよりも優先されます。 例えば、データストリームレベルの場合、 [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 完全]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 最終オクテットの難読化]**&#x200B;を指定した場合、Adobe Targetは完全に不明化された IP を受け取ります。 詳しくは、 Adobe Targetのドキュメントを参照してください。 [IP Obfuscation（IP の不明化）](https://developer.adobe.com/target/before-implement/privacy/privacy/) および [位置情報](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) を参照してください。</li><li>**Audience Manager**：データストリームレベルの IP の難読化設定は、Audience Managerで設定された IP の難読化オプションよりも優先され、すべての IP アドレスに適用されます。 Audience Managerが行った位置情報参照は、データストリームレベルの影響を受けます [!UICONTROL IP Obfuscation（IP の不明化）] オプション。 完全に不明化された IP に基づく、Audience Managerの位置情報参照は、不明な地域になり、結果として得られた位置情報データに基づくセグメントは認識されません。 次のドキュメントのAudience Managerを参照してください： [IP Obfuscation（IP の不明化）](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) を参照してください。</li><li>**Adobe Analytics**: Adobe Analyticsは、現在、NONE 以外の IP の不明化オプションが選択されている場合、部分的に不明化された IP アドレスを受け取ります。 Analytics が完全に不明化された IP アドレスを受け取るには、Adobe Analyticsで、別途 IP の不明化を設定する必要があります。 この動作は、今後のリリースで更新される予定です。Adobe Analytics [ドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) を参照してください。</li></ul> |
 | [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../edge/identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
