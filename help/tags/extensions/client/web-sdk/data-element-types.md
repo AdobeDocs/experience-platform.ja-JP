@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能のデータ要素タイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なデータ要素タイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '603'
 ht-degree: 6%
 
 ---
@@ -12,25 +12,31 @@ ht-degree: 6%
 
 # データ要素タイプ
 
-設定後、 [アクションタイプ](action-types.md) 内 [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md)を設定する場合は、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素のタイプについて説明します。
+次の設定を行った後、 [アクションタイプ](action-types.md) （内） [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md)を設定する場合は、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素のタイプについて説明します。
 
 ## ID マップ {#identity-map}
 
-ID マップを使用すると、Web ページの訪問者の ID を設定できます。 ID マップは、次のような名前空間で構成されます。 _phone_ または _電子メール_&#x200B;を作成し、各名前空間に 1 つ以上の識別子を含めます。 例えば、Web サイト上のユーザーが 2 つの電話番号を指定した場合、電話の名前空間には 2 つの識別子を含める必要があります。
+ID マップを使用すると、Web ページの訪問者の ID を設定できます。 ID マップは、次のような名前空間で構成されます。 `CRMID`, `Phone` または `Email`を作成し、各名前空間に 1 つ以上の識別子を含めます。 例えば、Web サイト上のユーザーが 2 つの電話番号を指定した場合、電話の名前空間には 2 つの識別子を含める必要があります。
 
-内 [!UICONTROL ID マップ] データ要素に関連付ける場合、識別子ごとに次の情報が提供されます。
+Adobe Analytics の [!UICONTROL ID マップ] データ要素に関連付ける場合、識別子ごとに次の情報が提供されます。
 
-* **[!UICONTROL ID]**:訪問者を識別する値。 例えば、識別子が _phone_ 名前空間、 [!UICONTROL ID] may _555-555-5555_. この値は、通常、ページ上の JavaScript 変数または他のデータから派生するので、ページデータを参照するデータ要素を作成し、 [!UICONTROL ID] 内の [!UICONTROL ID マップ] データ要素。 ページ上で実行されているとき、ID 値が設定された文字列以外の値の場合、識別子は ID マップから自動的に削除されます。
-* **[!UICONTROL 認証状態]**:訪問者が認証されたかどうかを示す選択。
-* **[!UICONTROL プライマリ]**:識別子を個人の主識別子として使用する必要があるかどうかを示す選択。 プライマリとしてマークされている識別子がない場合、ECID がプライマリ識別子として使用されます。
+* **[!UICONTROL ID]**：訪問者を識別する値。 例えば、識別子が _phone_ 名前空間、 [!UICONTROL ID] may _555-555-5555_. この値は、通常、ページ上の JavaScript 変数または他のデータから派生するので、ページデータを参照するデータ要素を作成し、 [!UICONTROL ID] 内のフィールド [!UICONTROL ID マップ] データ要素。 ページ上で実行されているとき、ID 値が設定された文字列以外の値の場合、識別子は ID マップから自動的に削除されます。
+* **[!UICONTROL 認証済み状態]**：訪問者が認証されているかどうかを示す選択。
+* **[!UICONTROL プライマリ]**：識別子を個人のプライマリ識別子として使用するかどうかを示す選択。 プライマリとしてマークされている識別子がない場合、ECID がプライマリ識別子として使用されます。
 
 ![データ要素を編集画面を示す UI 画像。](assets/identity-map-data-element.png)
 
-次の項目は指定しないでください： [!DNL ECID] id マップを作成する際に使用します。 SDK を使用する場合、 [!DNL ECID] はサーバー上で自動的に生成され、id マップに含まれます。
+>[!TIP]
+>
+>Adobeでは、人物を表す ID（例： ）を送信することをお勧めします。 `Luma CRM Id` をプライマリ id として設定します。
+>
+>ID マップに人物識別子 ( 例： `Luma CRM Id`) の場合、ユーザー識別子がプライマリ識別子になります。 それ以外の場合は、 `ECID` がプライマリ id になります。
+
+次の項目は指定しないでください： [!DNL ECID] id マップを構築する際に使用します。 SDK を使用する場合、 [!DNL ECID] はサーバー上で自動的に生成され、id マップに含まれます。
 
 ID マップデータ要素は、多くの場合、 [[!UICONTROL XDM オブジェクト] データ要素の種類](#xdm-object) そして [[!UICONTROL 同意の設定] アクションタイプ](action-types.md#set-consent).
 
-詳細を表示 [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
+詳細を表示： [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 
 ## XDM オブジェクト {#xdm-object}
 
