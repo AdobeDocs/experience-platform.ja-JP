@@ -4,10 +4,10 @@ description: 見込み客オーディエンスを作成および使用して、�
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 8%
+source-wordcount: '399'
+ht-degree: 7%
 
 ---
 
@@ -64,4 +64,4 @@ Experience Platformの見込み客オーディエンス機能を他の Platform 
 
 ## 次の手順
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+このガイドを読むと、Adobe Experience Platformで見込み客のオーディエンスを作成および管理する方法がわかります。 見込み客オーディエンスを他のダウンストリームサービスに対してアクティブ化する方法については、 [見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md).

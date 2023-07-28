@@ -3,10 +3,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
-source-git-commit: 52836892736a075981ee06f28fbdf178f4492e09
-workflow-type: ht
-source-wordcount: '139'
-ht-degree: 100%
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 98%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 100%
 * プロファイル UI {#ui}
    * [[!DNL Profile] UI ガイド](ui/user-guide.md)
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
+   * [見込み客プロファイル](ui/prospect-profile.md)
 * （ベータ版）計算属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
    * [計算属性 APIガイド](computed-attributes/api.md)
