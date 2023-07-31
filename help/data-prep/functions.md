@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 33f1265820b4bf60fbdec81283a975fbb1ddd175
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '4916'
-ht-degree: 14%
+source-wordcount: '5221'
+ht-degree: 13%
 
 ---
 
@@ -148,9 +148,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 無効にする | 属性の値をに設定します。 `null`. これは、フィールドをターゲットスキーマにコピーしない場合に使用します。 | | nullify() | nullify() | `null` |
 | get_keys | キーと値のペアを解析し、すべてのキーを返します。 | <ul><li>オブジェクト： **必須** キーの抽出元のオブジェクト。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Pairands&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | キーと値のペアを解析し、指定されたキーに基づいて文字列の値を返します。 | <ul><li>文字列： **必須** 解析する文字列です。</li><li>キー： **必須** 値を抽出するキー。</li><li>値の区切り： **必須** フィールドと値を区切る区切り文字。 次のいずれかの場合、 `null` または空の文字列が指定された場合、この値は `:`.</li><li>FIELD_DELIMITER: *オプション* フィールドと値のペアを区切る区切り文字。 次のいずれかの場合、 `null` または空の文字列が指定された場合、この値は `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
-<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
-| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
-| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
+| map_get_values | マップとキー入力を取得します。 入力が単一のキーの場合、この関数はそのキーに関連付けられた値を返します。 入力が文字列配列の場合、この関数は指定されたキーに対応するすべての値を返します。 受信マップに重複するキーがある場合、戻り値はキーの重複を排除し、一意の値を返す必要があります。 | <ul><li>マップ： **必須** 入力マップデータ。</li><li>キー：  **必須** キーは、単一の文字列または文字列配列です。 他のプリミティブ型（データ/数値）が指定されている場合は、文字列として扱われます。</li></ul> | get_values(MAP, KEY) | 詳しくは、 [付録](#map_get_values) を参照してください。 | |
+| map_has_keys | 1 つ以上の入力キーが指定されている場合、この関数は true を返します。 文字列配列を入力として指定した場合、この関数は、見つかった最初のキーに対して true を返します。 | <ul><li>マップ：  **必須** 入力マップデータ</li><li>キー：  **必須** キーは、単一の文字列または文字列配列です。 他のプリミティブ型（データ/数値）が指定されている場合は、文字列として扱われます。</li></ul> | map_has_keys(MAP, KEY) | 詳しくは、 [付録](#map_has_keys) を参照してください。 | |
+| add_to_map | 2 つ以上の入力を受け入れます。 任意の数のマップを入力として指定できます。 Data Prep は、すべての入力からすべてのキーと値のペアを持つ単一のマップを返します。 1 つ以上のキーが同じマップ内または複数のマップ間で繰り返される場合、Data Prep はキーの重複を排除し、最初のキーと値のペアが入力で渡された順に保持されるようにします。 | マップ： **必須** 入力マップデータ。 | add_to_map(MAP 1, MAP 2, MAP 3, ...) | 詳しくは、 [付録](#add_to_map) を参照してください。 | |
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ address.line1 -> addr.addrLine1
 | ハッカー | このデバイス値は、 `useragent` 文字列。 |
 
 {style="table-layout:auto"}
-<!-- 
-### Code samples {#code-samples}
+
+### コードサンプル {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++Select to view example
++++選択して例を表示
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ address.line1 -> addr.addrLine1
 
 #### map_has_keys {#map_has_keys}
 
-+++Select to view example
++++選択して例を表示
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ address.line1 -> addr.addrLine1
 
 #### add_to_map {#add_to_map}
 
-+++Select to view example
++++選択して例を表示
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++ -->
++++
