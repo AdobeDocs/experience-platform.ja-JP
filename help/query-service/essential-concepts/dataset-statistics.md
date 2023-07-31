@@ -1,7 +1,7 @@
 ---
 title: データセット統計の計算
 description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage（ADLS）データセットに関する列レベルの統計を計算する方法を説明します。
-source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
+source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 39%
@@ -61,8 +61,8 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 の出力例 `COMPUTE STATISTICS` クエリは次のようになります。
 
 ```console
-| Statistics ID    | 
-| ---------------- |
+| Statistics ID         | 
+| --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
 ```
@@ -100,11 +100,11 @@ SELECT * FROM adc_geometric_stats_1;
 の出力例 `SHOW STATISTICS` を以下に示します。
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
 メタデータ列名の説明を以下に示します。

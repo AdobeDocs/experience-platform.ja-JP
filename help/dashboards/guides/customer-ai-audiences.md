@@ -3,7 +3,7 @@ title: オーディエンスダッシュボード Customer AI ウィジェット
 description: 顧客 AI が、組織のリアルタイム顧客プロファイルオーディエンスの傾向や傾向に関する重要なインサイトを提供する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 10%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL スコアの顧客 AI 配分] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="スコアの配分"
 >abstract="このウィジェットは、傾向スコアによるプロファイルの合計数の分布を 5%単位で視覚化します。 プロファイル数の配分は、AI モデルと選択した結合ポリシーによって決まります。 AI モデルは、ウィジェットタイトルの下にあるドロップダウンメニューから変更できます。"
 
@@ -52,7 +52,7 @@ The [!UICONTROL スコアの顧客 AI 配分] ウィジェットは、プロフ�
 ## [!UICONTROL 顧客 AI スコア付けの概要] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="スコア付けの概要"
 >abstract="このウィジェットは、スコアリングされたプロファイルの合計数を表示し、傾向が高い、中、低い、を含むグループに分類します。 ドーナツグラフは、傾向が高、中、低のプロファイルの総数の比例構成を示しています。"
 
