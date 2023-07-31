@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 38%
@@ -17,7 +17,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 - [カタログサービス](#catalog-service)
 - [データ収集](#data-collection)
-- [宛先](#data-prep)
+- [宛先](#destinations)
 - [クエリサービス](#query-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
@@ -95,7 +95,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 **修正および機能強化** {#destinations-fixes-and-enhancements}
 
 - (API)SalesforceMarketing Cloud先で、マッピング手順で、使用可能なターゲット属性の一部が Salesforce から返されない問題を修正しました。 現在、 [ターゲット属性の上限 2,000 個](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) 表示可能な Salesforce から。
-- Microsoft Dynamics 365 の宛先に関する問題を修正しました。 宛先で、 [地域セレクター](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)を使用すると、Microsoftエコシステム内で会社がプロビジョニングされている地域に応じて、データエクスポートをルーティングできます。 ![新しい地域セレクターがハイライト表示されています。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "新しい地域セレクターがハイライト表示されています。"){width="100" zoomable="yes"}
+- Microsoft Dynamics 365 の宛先に関する問題を修正しました。 宛先で、 [地域セレクター](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)を使用すると、Microsoftエコシステム内で会社がプロビジョニングされている地域に応じて、データエクスポートをルーティングできます。 <br> ![新しい地域セレクターがハイライト表示されています。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "新しい地域セレクターがハイライト表示されています。"){width="100" zoomable="yes"}
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 

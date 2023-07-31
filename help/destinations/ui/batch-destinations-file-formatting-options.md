@@ -2,19 +2,16 @@
 description: ファイルベースの宛先に対してデータをアクティブ化する際に、ファイル形式オプションを設定する方法を説明します
 title: （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 53%
+source-wordcount: '1190'
+ht-degree: 52%
 
 ---
 
 # （ベータ版）ファイルベースの宛先のファイル形式オプションの設定
 
 >[!IMPORTANT]
->
->Adobe Experience Platform の&#x200B;**[!UICONTROL ファイル形式オプション]**機能は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
->この機能に対するアクセス権については、アドビ担当者にお問い合わせください。
 > 
 >このドキュメントで説明するファイル形式オプションは、現在 CSV ファイルでのみ使用できます。
 
@@ -27,7 +24,7 @@ Experience Platform UI を使用して、書き出したファイルに対して
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## ファイル形式設定 CSV ファイルの場合 {#file-configuration}
+## ファイル形式設定 （CSV ファイルの場合） {#file-configuration}
 
 ファイル形式設定オプションを表示するには、 [宛先に接続](/help/destinations/ui/connect-destination.md) ワークフロー。 選択 **データタイプ：セグメント** および **ファイルタイプ：CSV** 書き出したファイルのフォーマット設定を表示するには `CSV` ファイル。
 
@@ -35,7 +32,7 @@ Experience Platform UI を使用して、書き出したファイルに対して
 >
 >接続先には、これらのオプションの一部が使用できない場合があります。 宛先でサポートするファイル形式オプションは、宛先の開発者が決定します。 宛先の開発者は、宛先に接続する際に使用できるオプションを決定できます。 必須オプションは、Experience Platform UI でアスタリスクでマークされます。
 > 
->新しいクラウドストレージの宛先 — [（ベータ版）Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（ベータ版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [（ベータ版）Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（ベータ版）データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（ベータ版）Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（ベータ版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md) ：現在、以下で強調表示されている 6 つの CSV オプションのみをサポートしています。
+>Adobeが構築したクラウドストレージの宛先 — [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) ：現在、以下で強調表示されている 6 つの CSV オプションのみをサポートしています。
 
 ![使用可能なファイル形式オプションの一部を示す画像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -125,7 +122,7 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 
 >[!TIP]
 >
->空の値出力と以下のセクションでの null 値出力の違いは、空の値には実際の空の値が含まれるということです。 NULL 値には値がまったくありません。 空の値はテーブル上の空のガラスと考え、null 値はテーブル上にガラスがまったくないと考えます。
+>空の値出力と以下のセクションでの null 値出力の違いは、空の値には実際の空の値が含まれるという点です。 NULL 値には値がまったくありません。 空の値はテーブル上の空のガラスとして考え、null 値はテーブル上にガラスがまったくないと考えます。
 
 ### Null 値出力 {#null-value-output}
 

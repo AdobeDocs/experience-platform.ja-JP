@@ -4,18 +4,14 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '4442'
-ht-degree: 12%
+source-wordcount: '4415'
+ht-degree: 11%
 
 ---
 
 # フローサービス API を使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化する
-
->[!IMPORTANT]
->
->* このベータ版機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 拡張ファイルエクスポート機能（現在はベータ版）を使用して、Experience Platform外のファイルをエクスポートする際に、拡張カスタマイズ機能にアクセスします。
 
@@ -24,14 +20,14 @@ ht-degree: 12%
 * 次の項目を選択できます。 [ファイルタイプ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 」と入力します。
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
 
-この機能は、以下に示す 6 つの新しいベータ版クラウドストレージカードでサポートされています。
+この機能は、以下に示す 6 つのクラウドストレージカードでサポートされています。
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 この記事では、 [フローサービス API](https://developer.adobe.com/experience-platform-apis/references/destinations/) Adobe Experience Platformから上記にリンクしたクラウドストレージの場所の 1 つに適格なプロファイルを書き出す場合。
 
@@ -116,7 +112,7 @@ ht-degree: 12%
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象 [!DNL Amazon S3]
++++取得 [!DNL connection spec] 対象： [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -150,7 +146,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象 [!DNL Azure Blob Storage]
++++取得 [!DNL connection spec] 対象： [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -184,7 +180,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象 [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++取得 [!DNL connection spec] 対象： [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -218,7 +214,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象 [!DNL Data Landing Zone(DLZ)]
++++取得 [!DNL connection spec] 対象： [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -252,7 +248,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象 [!DNL Google Cloud Storage]
++++取得 [!DNL connection spec] 対象： [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -324,7 +320,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-オーディエンスのエクスポート先を決定したら、ソース接続を作成する必要があります。 この [ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 内部への接続を表します [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store).
+オーディエンスのエクスポート先を決定したら、ソース接続を作成する必要があります。 The [ソース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 内部への接続を表します。 [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -368,13 +364,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-成功すると、ID(`id`) をクリックし、 `etag`. 後でデータフローを作成する際に必要になるので、ソース接続 ID をメモしておきます。
+正常な応答は、ID(`id`) をクリックし、新しく作成されたソース接続と `etag`. 後でデータフローを作成する際に必要になるので、ソース接続 ID をメモしておきます。
 
 ## ベース接続の作成 {#create-base-connection}
 
 ![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、宛先への資格情報を安全に保存します。 宛先のタイプに応じて、その宛先に対する認証に必要な資格情報が異なる場合があります。 これらの認証パラメーターを検索するには、まず `connection spec` を設定します。 [オーディエンスのエクスポート先を選択](#select-destination) そして、 `authSpec` 応答の。 以下のタブを参照して、 `authSpec` サポートされるすべての宛先のプロパティ。
+A [ベース接続](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、宛先に対する資格情報を安全に保存します。 宛先のタイプに応じて、その宛先に対する認証に必要な資格情報が異なる場合があります。 これらの認証パラメーターを検索するには、まず `connection spec` を設定します。 [オーディエンスのエクスポート先を選択](#select-destination) そして、 `authSpec` 応答の。 以下のタブを参照して、 `authSpec` サポートされるすべての宛先のプロパティ。
 
 >[!BEGINTABS]
 
@@ -595,7 +591,7 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 
 >[!NOTE]
 >
->SFTP の宛先では、 [!DNL auth spec]（パスワードと SSH キー認証の両方をサポートするので）
+>SFTP の宛先では、 [!DNL auth spec]（パスワードと SSH キー認証の両方をサポートするので）。
 
 インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
 
@@ -2347,7 +2343,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) セクション [!DNL Amazon S3] リンク先のドキュメントページ。
+>必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) のセクション [!DNL Amazon S3] リンク先のドキュメントページ。
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2439,7 +2435,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) セクション [!DNL Azure Blob Storage] リンク先のドキュメントページ。
+>必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) のセクション [!DNL Azure Blob Storage] リンク先のドキュメントページ。
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2622,7 +2618,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) セクション [!DNL Data Landing Zone] リンク先のドキュメントページ。
+>必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) のセクション [!DNL Data Landing Zone] リンク先のドキュメントページ。
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2713,7 +2709,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) セクション [!DNL Google Cloud Storage] リンク先のドキュメントページ。
+>必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) のセクション [!DNL Google Cloud Storage] リンク先のドキュメントページ。
 
 リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2890,9 +2886,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-次の点に注意してください。 `target connection ID` 応答から。 この ID は、オーディエンスをエクスポートするデータフローを作成する次の手順で必要になります。
+次の点に注意してください。 `target connection ID` を返します。 この ID は、オーディエンスをエクスポートするデータフローを作成する際に、次の手順で必要になります。
 
-成功すると、ID(`id`) を新しく追加し、 `etag`. 後でデータフローを作成する際に必要になるので、ターゲット接続 ID をメモしておきます。
+正常な応答は、ID(`id`) を新しいターゲットソース接続と `etag`. 後でデータフローを作成する際に必要になるので、ターゲット接続 ID をメモしておきます。
 
 ## データフローの作成 {#create-dataflow}
 
@@ -3420,7 +3416,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 **応答**
 
-+++ 入力スキーマで使用可能な ID を表示
++++ 入力スキーマで使用可能な ID を表示します
 
 応答は、入力スキーマの作成時に使用できる ID を返します。 この応答は、 [標準](/help/identity-service/namespaces.md#standard) および [カスタム](/help/identity-service/namespaces.md#manage-namespaces) id 名前空間を設定します。Experience Platform
 
@@ -3687,7 +3683,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答とサンプルスキーマ**
 
-Inspect上記の呼び出しを実行すると取得する応答。 応答をドリルダウンして、オブジェクトを検索する必要があります `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspect上記の呼び出しを実行すると得られる応答。 応答をドリルダウンして、オブジェクトを検索する必要があります `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ 出力スキーマのパートナースキーマを取得するための応答
 
@@ -4320,7 +4316,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >[!IMPORTANT]
 >
 >* 以下に示すマッピングオブジェクトでは、 `destination` パラメーターはドットを受け入れません `"."`. 例えば、設定例でハイライト表示されているように personalEmail_address または segmentMembership_status を使用する必要があります。
->* ソース属性が ID 属性で、ドットが含まれている場合は、特に異なります。 この場合、属性をでエスケープする必要があります。 `//`以下に示すように、を選択します。
+>* ソース属性が ID 属性で、ドットが含まれている場合は、特に異なる場合があります。 この場合、属性をでエスケープする必要があります。 `//`以下に示すように、を選択します。
 >* 以下の例の設定ではが含まれていますが、 `Email` および `Phone_E.164`を使用する場合、データフローごとに 1 つの id 属性のみをエクスポートできます。
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
@@ -4621,7 +4617,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-+++データフロー実行の取得 — 応答
++++データフローの実行の取得 — 応答
 
 ```json
 {
