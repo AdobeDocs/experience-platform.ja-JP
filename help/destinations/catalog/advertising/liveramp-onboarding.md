@@ -3,10 +3,10 @@ title: LiveRamp — オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボードする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 70%
+source-wordcount: '1830'
+ht-degree: 71%
 
 ---
 
@@ -36,9 +36,9 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+また、この宛先では、以下の表で説明する追加のオーディエンスのアクティブ化もサポートされています。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
@@ -129,13 +129,8 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 Adobe Analytics の [!UICONTROL スケジュール] 次の設定で、各オーディエンスの書き出しスケジュールを作成します。
 
->[!IMPORTANT]
->
->この宛先に対してアクティブ化されるすべてのオーディエンスは、以下に示すように、同じスケジュールで設定する必要があります。
-
 * **[!UICONTROL ファイル書き出しオプション]**：[!UICONTROL 完全ファイルを書き出し]。[増分ファイル書き出し](../../ui/activate-batch-profile-destinations.md#export-incremental-files)は現在、[!DNL LiveRamp] 宛先ではサポートされていません。
 * **[!UICONTROL 頻度]**：[!UICONTROL 毎日]
-* 書き出し時間を&#x200B;**[!UICONTROL セグメント評価後]**&#x200B;に設定します。スケジュールされたオーディエンスのエクスポートおよび [オンデマンドファイルの書き出し](../../ui/export-file-now.md) は、現在、 [!DNL LiveRamp] 宛先。
 * **[!UICONTROL 日付]**：希望する書き出し開始時刻および終了時刻を選択します。
 
 ![オーディエンスのスケジュール設定手順を示した Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
