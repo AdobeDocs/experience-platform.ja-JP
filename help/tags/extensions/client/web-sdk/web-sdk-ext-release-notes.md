@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 99%
+source-wordcount: '1723'
+ht-degree: 98%
 
 ---
 
@@ -14,9 +14,20 @@ ht-degree: 99%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
 
-## バージョン2.19.0 - 2023 年 6 月 21 日
+## バージョン2.20.0 - 2023 年 7 月 31 日
 
-* この **[!UICONTROL 変数]** データ要素および **[!UICONTROL 変数を更新]** アクションが一般に使用できるようになりました。
+**新機能**
+
+* のサポートを追加しました。 [datastream ID のコマンドごとの上書き](../../../../datastreams/overrides.md).
+
+**修正点および改善点**
+
+* 非推奨 `edgeConfigId` ～を支持して `datastreamId` （SDK 設定）を参照してください。
+* データストリーム設定に関する複数のユーザーエクスペリエンス強化が、ユーザーインターフェイスを上書きします。
+
+## バージョン 2.19.0 - 2023年6月21日（PT）
+
+* **[!UICONTROL 変数]**&#x200B;データ要素と&#x200B;**[!UICONTROL 変数を更新]**&#x200B;アクションが一般提供されるようになりました。
 
 ## バージョン 2.18.0 - 2023年5月18日（PT）
 
@@ -196,7 +207,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 ## バージョン 2.1.0 - 2020年8月5日（PT）
 
-* 重大な変更：`syncIdentity` アクションを削除し、代わりに `sendEvent` アクションにこれらの ID を渡すことをサポートします。拡張機能をアップグレードする前に、この操作を使用する既存のルールを無効にしてください。
+* 重大な変更：`syncIdentity` アクションを削除し、代わりに `sendEvent` アクションにこれらの ID を渡すことをサポートします。拡張機能をアップグレードする前に、このアクションを使用する既存のルールを無効にしてください。
 * Ally v. 2.1.0 へのアップデート（[リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)）。
 * `setConsent` アクションでの IAB 2.0 Consent Standard をサポートします。
 * `sendEvent` アクションでのデータセット ID の上書きをサポートします。
