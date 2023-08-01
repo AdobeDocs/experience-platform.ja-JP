@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '781'
 ht-degree: 48%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 >
->このドキュメントページは次のユーザーが作成しました： [!DNL Verizon Media/Yahoo]&#39;s [!DNL DataX] チーム。 お問い合わせや更新のご依頼は、直接 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>この宛先コネクタとドキュメントページは、によって作成および管理されます [!DNL Verizon Media/Yahoo]&#39;s [!DNL DataX] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## 前提条件 {#prerequisites}
 
@@ -27,7 +27,7 @@ ht-degree: 48%
 
 **分類メタデータ**
 
-分類リソースは、ベースを介して拡張を定義します [!DNL DataX] メタデータの構造
+分類リソースは、ベースを介して拡張を定義します。 [!DNL DataX] メタデータの構造
 
 ```
 {
@@ -48,7 +48,7 @@ ht-degree: 48%
 }
 ```
 
-詳細を表示 [分類メタデータ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) 内 [!DNL DataX] 開発者向けドキュメント。
+詳細を表示： [分類メタデータ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) （内） [!DNL DataX] 開発者向けドキュメント。
 
 ## レート制限とガードレール {#rate-limits-guardrails}
 
@@ -56,12 +56,12 @@ ht-degree: 48%
 >
 >100 を超えるオーディエンスをアクティブ化する場合 [!DNL Verizon Media/Yahoo DataX]の場合は、宛先からレート制限エラーが発生する可能性があります。 この宛先に対してオーディエンスをアクティブ化する場合は、1 つのアクティベーションデータフローで 100 未満のオーディエンスをアクティブ化するようにします。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントで新しい宛先を作成します。
 
-[!DNL DataX] は、 [DataX ドキュメント](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+[!DNL DataX] は、分類およびオーディエンスの投稿に対するクォータ制限に従って、 [DataX ドキュメント](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
 
 | エラーコード | エラーメッセージ | 説明 |
 |---------|----------|---------|
-| 429 リクエストが多すぎます | レート制限を 1 時間に超えました **( 制限：100)** | プロバイダーあたり 1 時間で許可されるリクエストの数。 |
+| 429 リクエストが多すぎます | レート制限を 1 時間に超えました **（上限：100）** | プロバイダーあたり 1 時間で許可されるリクエストの数。 |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ ht-degree: 48%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL MDM ID]**:これは、 [!DNL Yahoo DataX] この宛先へのデータエクスポートを設定する際には、必須のフィールドです。 この ID がわからない場合は、 [!DNL Yahoo DataX] アカウントマネージャー。  MDM ID を使用すると、データは特定の排他的ユーザー（広告主のファーストパーティデータなど）とのみ使用するように制限できます。
+* **[!UICONTROL MDM ID]**：これは、 [!DNL Yahoo DataX] この宛先へのデータエクスポートを設定する際には、必須のフィールドです。 この ID がわからない場合は、 [!DNL Yahoo DataX] アカウントマネージャー。  MDM ID を使用すると、データは特定の排他的ユーザー（広告主のファーストパーティデータなど）とのみ使用するように制限できます。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -130,4 +130,4 @@ ht-degree: 48%
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、 [!DNL Yahoo/Verizon Media] [ドキュメント [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
+詳しくは、 [!DNL Yahoo/Verizon Media] [に関するドキュメント [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).

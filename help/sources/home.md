@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 84%
+source-wordcount: '1449'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,12 @@ Experience Platform を使用すると、異なるソースから収集したデ
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Adobeで作成されたソースとパートナーで作成されたソース {#adobe-and-partner-built-sources}
+
+Experience Platformソースカタログ内のコネクタの一部はAdobeによって作成および管理され、その他はパートナー企業によって作成および管理されます。 [ソース SDK](/help/sources/sources-sdk/overview.md). ソースがパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタのドキュメントページ上部にあるメモが呼び出されます。 例えば、 [Amazon S3 コネクタ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、 [RainFocus コネクタ](/help/sources/connectors/analytics/rainfocus.md) は、RainFocus チームによって作成および管理されます。
+
+パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。 Adobeが作成および維持するコネクタに関する問題については、Adobe担当者またはカスタマーケアにお問い合わせください。
 
 ## ソースのタイプ
 

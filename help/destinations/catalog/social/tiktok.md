@@ -3,9 +3,9 @@ title: TikTok 接続
 description: お持ちのデータを使用して TikTok でカスタムオーディエンスを作成し、広告キャンペーンのターゲティングを行えます。これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '983'
 ht-degree: 42%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->このドキュメントページはTikTokチームが作成しました。 お問い合わせや更新のご依頼は、直接 [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>この宛先コネクタとドキュメントページは、TikTokチームが作成および管理します。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## ユースケース {#use-cases}
 
@@ -78,7 +78,7 @@ TikTokでは、以下の表で説明する ID のアクティブ化をサポー�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL TikTok Ads Manager ID]**:お使いの [!DNL TikTok Ads Manager ID]. これは、 [!DNL TikTok Ads manager] アカウント
+* **[!UICONTROL TikTok Ads Manager ID]**: [!DNL TikTok Ads Manager ID]. これは、 [!DNL TikTok Ads manager] アカウント。
 
 ![TikTok Ads Manager ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "TikTok Ads Manager UI の画像 (TikTok Ads Manager ID の取得方法を示す )")
 

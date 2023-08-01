@@ -3,9 +3,9 @@ keywords: 飛行船タグ；飛行船の宛先
 title: Airship Tags 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンスタグとして Airship にシームレスに渡します。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 31%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 31%
 
 この統合により、Adobe Experience Platformのオーディエンスデータが [!DNL Airship] as [タグ](https://docs.airship.com/guides/audience/tags/) （ターゲティングまたはトリガーの場合）
 
-詳しくは、以下を参照してください。 [!DNL Airship]を参照し、 [航空船ドキュメント](https://docs.airship.com).
+詳しくは、以下を参照してください。 [!DNL Airship]を参照し、 [航空船に関するドキュメント](https://docs.airship.com).
 
 
 >[!TIP]
 >
->このドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接 [support.airship.com](https://support.airship.com/).
+>この宛先コネクタとドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
 
 ## 前提条件
 
@@ -61,7 +61,7 @@ Adobe Experience Platformオーディエンスを [!DNL Airship]を使用する�
 
 ## タググループ
 
-Adobe Experience Platform でのオーディエンスの概念は、 [タグ](https://docs.airship.com/guides/audience/tags/) 飛行船では、実装のわずかな違いがあります。 この統合により、ユーザーの [Experience Platformセグメントのメンバーシップ](../../../xdm/field-groups/profile/segmentation.md) 存在または存在しない [!DNL Airship] タグを使用します。 例えば、Platform オーディエンスの場合、 `xdm:status` 変更 `realized`に値を指定しない場合、タグは [!DNL Airship] このプロファイルがマッピングされているチャネルまたは名前付きユーザー。 この `xdm:status` 変更 `exited`の場合、タグは削除されます。
+Adobe Experience Platform でのオーディエンスの概念は、 [タグ](https://docs.airship.com/guides/audience/tags/) 飛行船では、実装のわずかな違いがあります。 この統合により、ユーザーの [Experience Platformセグメントのメンバーシップ](../../../xdm/field-groups/profile/segmentation.md) 存在または存在しない [!DNL Airship] タグを使用します。 例えば、Platform オーディエンスの場合、 `xdm:status` 次に変更： `realized`に値を指定しない場合、タグは [!DNL Airship] このプロファイルがマッピングされているチャネルまたは名前付きユーザー。 次の場合、 `xdm:status` 次に変更： `exited`の場合、タグは削除されます。
 
 この統合を有効にするには、 *タググループ* in [!DNL Airship] 名前付き `adobe-segments`.
 
@@ -73,7 +73,7 @@ Adobe Experience Platform でのオーディエンスの概念は、 [タグ](ht
 
 ## bearer トークンを生成
 
-に移動します。 **[!UICONTROL 設定]** &quot; **[!UICONTROL API と統合]** 内 [飛行船ダッシュボード](https://go.airship.com) を選択し、 **[!UICONTROL トークン]** をクリックします。
+に移動します。 **[!UICONTROL 設定]** &quot; **[!UICONTROL API と統合]** （内） [飛行船ダッシュボード](https://go.airship.com) を選択し、 **[!UICONTROL トークン]** をクリックします。
 
 クリック **[!UICONTROL トークンを作成]**.
 
@@ -107,15 +107,15 @@ Adobe Experience Platform でのオーディエンスの概念は、 [タグ](ht
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL Bearer トークン]**:から生成した bearer トークン [!DNL Airship] ダッシュボード。
+* **[!UICONTROL Bearer トークン]**: [!DNL Airship] ダッシュボード。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**：この宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL 説明]**:この宛先の説明を入力します。
-* **[!UICONTROL ドメイン]**:米国または EU のデータセンターを選択します（どちらかに応じて選択します）。 [!DNL Airship] データセンターがこの宛先に適用されます。
+* **[!UICONTROL 説明]**：この宛先の説明を入力します。
+* **[!UICONTROL ドメイン]**：米国または EU のデータセンターを、どちらかに応じて選択します [!DNL Airship] データセンターはこの宛先に適用されます。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -133,7 +133,7 @@ Adobe Experience Platform でのオーディエンスの概念は、 [タグ](ht
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
-[!DNL Airship] タグは、デバイスインスタンス (iPhoneなど ) を表すチャネルに対して設定できます。また、すべてのユーザーのデバイスを、顧客 ID などの共通の識別子にマッピングする名前付きユーザーに対して設定することもできます。 スキーマにプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがプライマリ ID である場合は、 **[!UICONTROL ソース属性]** と [!DNL Airship] の下の右側の列にユーザーという名前が付けられました **[!UICONTROL ターゲット ID]**、以下に示すように。
+[!DNL Airship] タグは、デバイスインスタンス (iPhoneなど ) を表すチャネルに対して設定できます。また、すべてのユーザーのデバイスを、顧客 ID などの共通の識別子にマッピングする名前付きユーザーに対して設定することもできます。 スキーマにプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがプライマリ ID である場合は、 **[!UICONTROL ソース属性]** と、 [!DNL Airship] の下の右側の列にユーザーという名前が付けられました **[!UICONTROL ターゲット ID]**、以下に示すように。
 
 ![特定ユーザーマッピング](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

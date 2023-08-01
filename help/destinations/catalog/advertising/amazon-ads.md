@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 92%
+source-wordcount: '1404'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP�
 
 >[!IMPORTANT]
 >
->このドキュメントページは、*Amazon Ads* チームが作成したものです。現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
+>この宛先コネクタとドキュメントページは、 *Amazon Ads* チーム。 現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
 
 ## ユースケース {#use-cases}
 

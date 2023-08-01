@@ -3,9 +3,9 @@ title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1081'
 ht-degree: 19%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 19%
 >* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。
 >* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。
 >
->現在、Experience Platformの両方の宛先はベータ版です。 このドキュメントページは、 *[!DNL Trade Desk]* チーム。 お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
+>現在、Experience Platformの両方の宛先はベータ版です。 この宛先コネクタとドキュメントページは、 *[!DNL Trade Desk]* チーム。 お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
 
 ## 概要 {#overview}
 
@@ -30,11 +30,11 @@ ht-degree: 19%
 
 >[!TIP]
 >
->用途 [!DNL The Trade Desk] CRM データマッピング用の CRM の宛先（電子メールやハッシュ化された電子メールアドレスなど）。 以下を使用： [その他のトレードデスクの宛先](/help/destinations/catalog/advertising/tradedesk.md) ( Adobe Experience Platformカタログの cookie とデバイス ID のマッピング )
+>用途 [!DNL The Trade Desk] CRM データマッピング用の CRM の宛先（電子メールやハッシュ化された電子メールアドレスなど）。 以下を使用します。 [その他のトレードデスクの宛先](/help/destinations/catalog/advertising/tradedesk.md) ( Adobe Experience Platformカタログの cookie とデバイス ID のマッピング )
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスをアクティブ化する前に [!DNL The Trade Desk]を使用する場合、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
+オーディエンスをアクティブ化する前に [!DNL The Trade Desk]を使用する場合は、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
 
 ## ID 一致の要件 {#id-matching-requirements}
 
@@ -48,7 +48,7 @@ Adobe Experience Platform では、プレーンテキストと SHA256 でハッ�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | 電子メールアドレス（クリアテキスト） | 入力 `email` ソース id が E メールの名前空間または属性の場合、をターゲット id として使用します。 |
+| メール | E メールアドレス（クリアテキスト） | 入力 `email` ソース id が E メールの名前空間または属性の場合、をターゲット id として使用します。 |
 | Email_LC_SHA256 | 電子メールアドレスは、SHA256 を使用してハッシュ化し、小文字にする必要があります。 必ず次の手順に従ってください。 [電子メールの正規化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) ルールが必要です。 後でこの設定を変更することはできません。 | 入力 `hashed_email` ソース id が Email_LC_SHA256 名前空間または属性の場合、をターゲット id として設定します。 |
 
 {style="table-layout:auto"}
@@ -74,7 +74,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示 [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
+| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示： [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -88,10 +88,10 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL アカウントタイプ]**:を選択してください。 **[!UICONTROL 既存のアカウント]** オプション。
+* **[!UICONTROL アカウントタイプ]**：を選択してください。 **[!UICONTROL 既存のアカウント]** オプション。
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 広告主 ID]**:あなたの [!DNL Trade Desk Advertiser ID]は、 [!DNL Trade Desk] アカウントマネージャーまたは次の場所にあります： [!DNL Advertiser Preferences] 内 [!DNL Trade Desk] UI
+* **[!UICONTROL 広告主 ID]**: [!DNL Trade Desk Advertiser ID]は、 [!DNL Trade Desk] アカウントマネージャーまたは次の場所にあります： [!DNL Advertiser Preferences] （内） [!DNL Trade Desk] UI
 
 ![宛先の詳細を入力する方法を示す Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
@@ -101,7 +101,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) 宛先に対するオーディエンスのアクティブ化の手順については、を参照してください。
 
-内 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
 ![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
@@ -111,7 +111,7 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 ![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-内 **[!UICONTROL マッピング]** 」ページで、属性または id 名前空間をソース列から選択し、ターゲット列にマッピングする必要があります。
+Adobe Analytics の **[!UICONTROL マッピング]** 」ページで、属性または id 名前空間をソース列から選択し、ターゲット列にマッピングする必要があります。
 
 ![オーディエンスのアクティベーションをマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
@@ -133,11 +133,11 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 ## データ書き出しの検証 {#validate}
 
-データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]を使用する場合は、内のAdobe1PD データタイルの下にオーディエンスを探してください [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、 [!DNL Trade Desk] UI:
+データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]を使用する場合は、内のAdobe1PD データタイルの下にオーディエンスを探してください。 [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、内で対応する ID を見つける手順を示します。 [!DNL Trade Desk] UI:
 
 1. まず、 **[!UICONTROL データ]** タブとレビュー **[!UICONTROL ファーストパーティ]**.
-2. ページを下にスクロールし、の下に移動します。 **[!UICONTROL インポートされたデータ]**&#x200B;を検索すると、 **[!UICONTROL Adobe1PD タイル]**.
-3. をクリックします**[!UICONTROL Adobe1PD]**タイルに表示され、 [!DNL Trade Desk] 広告主の宛先。 また、検索機能を使用することもできます。
+2. ページを下にスクロールし、の下に移動します。 **[!UICONTROL インポートされたデータ]**&#x200B;を見つけると、 **[!UICONTROL Adobe1PD タイル]**.
+3. をクリックします**[!UICONTROL ADOBE1PD]**タイルに表示され、 [!DNL Trade Desk] 広告主の宛先。 また、検索機能を使用することもできます。
 4. セグメント ID # fromExperience Platformは、 [!DNL Trade Desk] UI
 
 ## データの使用とガバナンス {#data-usage-governance}

@@ -3,9 +3,9 @@ keywords: 飛行船の属性；飛行船の宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンス属性として Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1022'
 ht-degree: 32%
 
 ---
@@ -18,17 +18,17 @@ ht-degree: 32%
 
 この統合により、Adobeプロファイルデータが [!DNL Airship] as [属性](https://docs.airship.com/guides/audience/attributes/) （ターゲティングまたはトリガーの場合）
 
-詳しくは、以下を参照してください。 [!DNL Airship]を参照し、 [航空船ドキュメント](https://docs.airship.com).
+詳しくは、以下を参照してください。 [!DNL Airship]を参照し、 [航空船に関するドキュメント](https://docs.airship.com).
 
 >[!TIP]
 >
->このドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接 [support.airship.com](https://support.airship.com/).
+>この宛先コネクタとドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
 
 ## 前提条件 {#prerequisites}
 
 オーディエンスをに送信する前に [!DNL Airship]を使用する場合は、次の操作を行う必要があります。
 
-* 属性を [!DNL Airship] プロジェクト。
+* の属性を有効にします。 [!DNL Airship] プロジェクト。
 * 認証用の bearer トークンを生成します。
 
 >[!TIP]
@@ -53,7 +53,7 @@ ht-degree: 32%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：フィールドマッピングに従った電子メールアドレス、電話番号、姓 ) や ID。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、フィールドマッピングに従って、目的のスキーマフィールド（電子メールアドレス、電話番号、姓）や ID と共に書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -62,11 +62,11 @@ ht-degree: 32%
 
 Adobe Experience Platformプロファイル属性は、 [!DNL Airship] このページで後述するマッピングツールを使用して、属性を Platform 内で簡単に相互にマッピングできます。
 
-[!DNL Airship] プロジェクトには、事前定義済みの属性とデフォルトの属性がいくつかあります。 カスタム属性がある場合、その属性を [!DNL Airship] 1 つ目は 詳しくは、 [属性の設定と管理](https://docs.airship.com/tutorials/audience/attributes/) 」を参照してください。
+[!DNL Airship] プロジェクトには、事前定義済みの属性とデフォルトの属性がいくつかあります。 カスタム属性がある場合、その属性を [!DNL Airship] 1 つ目は。 詳しくは、 [属性の設定と管理](https://docs.airship.com/tutorials/audience/attributes/) 」を参照してください。
 
 ## bearer トークンを生成 {#bearer-token}
 
-に移動します。 **[!UICONTROL 設定]** &quot; **[!UICONTROL API と統合]** 内 [飛行船ダッシュボード](https://go.airship.com) を選択し、 **[!UICONTROL トークン]** をクリックします。
+に移動します。 **[!UICONTROL 設定]** &quot; **[!UICONTROL API と統合]** （内） [飛行船ダッシュボード](https://go.airship.com) を選択し、 **[!UICONTROL トークン]** をクリックします。
 
 クリック **[!UICONTROL トークンを作成]**.
 
@@ -98,15 +98,15 @@ Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] 
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL Bearer トークン]**:から生成した bearer トークン [!DNL Airship] ダッシュボード。
+* **[!UICONTROL Bearer トークン]**: [!DNL Airship] ダッシュボード。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**：この宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL 説明]**:この宛先の説明を入力します。
-* **[!UICONTROL ドメイン]**:米国または EU のデータセンターを選択します（どちらかに応じて選択します）。 [!DNL Airship] データセンターがこの宛先に適用されます。
+* **[!UICONTROL 説明]**：この宛先の説明を入力します。
+* **[!UICONTROL ドメイン]**：米国または EU のデータセンターを、どちらかに応じて選択します [!DNL Airship] データセンターはこの宛先に適用されます。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -124,7 +124,7 @@ Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] 
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
-[!DNL Airship] 属性は、デバイスインスタンス (iPhoneなど ) を表すチャネルに対して設定できます。また、すべてのユーザーのデバイスを顧客 ID などの共通の識別子にマッピングする名前付きユーザーに対して設定することもできます。 スキーマにプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがプライマリ ID である場合は、 **[!UICONTROL ソース属性]** と [!DNL Airship] の下の右側の列にユーザーという名前が付けられました **[!UICONTROL ターゲット ID]**、以下に示すように。
+[!DNL Airship] 属性は、デバイスインスタンス (iPhoneなど ) を表すチャネルに対して設定できます。また、すべてのユーザーのデバイスを顧客 ID などの共通の識別子にマッピングする名前付きユーザーに対して設定することもできます。 スキーマにプレーンテキスト（ハッシュ化されていない）の電子メールアドレスがプライマリ ID である場合は、 **[!UICONTROL ソース属性]** と、 [!DNL Airship] の下の右側の列にユーザーという名前が付けられました **[!UICONTROL ターゲット ID]**、以下に示すように。
 
 ![特定ユーザーマッピング](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

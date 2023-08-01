@@ -4,9 +4,9 @@ description: フローサービス API を使用して、ソースからAdobe Ex
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1704'
 ht-degree: 42%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 42%
 
 *このテンプレートの操作中に、斜体のすべての段落を置き換えるか削除します（この段落から始まります）。*
 
-*まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページにある DNL のインスタンスをすべて無視してください。 これは、機械翻訳プロセスがページをサポートする複数の言語に正しく翻訳するのに役立つタグです。 提出後、ドキュメントにタグを追加します。*
+*まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページにある DNL のインスタンスをすべて無視してください。 これは、機械翻訳プロセスがページをサポートする複数の言語に正しく翻訳するのに役立つタグです。 お客様がドキュメントを送信した後、ドキュメントにタグを追加します。*
 
 ## 概要
 
@@ -23,13 +23,13 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->このドキュメントページは、 *YOURSOURCE* チーム。 お問い合わせや更新のご依頼は、直接 *更新用にアクセスできるリンクまたは電子メールアドレスを挿入します*.
+>このソースコネクタとドキュメントページは、 *YOURSOURCE* チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 *更新用にアクセスできるリンクまたは電子メールアドレスを挿入します*.
 
 ## 前提条件
 
 *Adobe Experience Platformユーザーインターフェイスでソースの設定を開始する前に顧客が認識しておく必要がある事項に関する情報を、この節に追加します。 次のような場合が考えられます。*
 
-* *許可リスト*
+* *許可リストに追加する必要がある*
 * *電子メールハッシュの要件*
 * *お客様側のアカウントの詳細*
 * *プラットフォームに接続するための API キーの取得方法*
@@ -40,7 +40,7 @@ ht-degree: 42%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| *資格情報* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
+| *資格情報 1* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
 | *資格情報 2* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
 | *資格 3* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
 
@@ -136,7 +136,7 @@ POST /targetConnections
 
 **リクエスト**
 
-次のリクエストは、 *YOURSOURCE*:
+次のリクエストは、のターゲット接続を作成します。 *YOURSOURCE*:
 
 
 ```shell
@@ -190,7 +190,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -253,7 +253,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-データを取り込むための最後の手順 *YOURSOURCE* を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+からデータを取り込むための最後の手順 *YOURSOURCE* を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -325,7 +325,7 @@ curl -X POST \
 }
 ```
 
-### ストリーミングエンドポイント URL の取得
+### ストリーミングエンドポイント URL を取得する
 
 データフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイント URL を使用して、ソースを Webhook に登録し、ソースとの通信を可能にします。Experience Platform
 
@@ -350,7 +350,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、としてマークされたエンドポイント URL を含む、データフローに関する情報を返します `inletUrl`.
+正常な応答は、としてマークされたエンドポイント URL を含む、データフローに関する情報を返します。 `inletUrl`.
 
 ```json
 {
@@ -439,15 +439,15 @@ curl -X GET \
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### アカウントを削除
 

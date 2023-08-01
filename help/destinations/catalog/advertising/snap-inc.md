@@ -2,9 +2,9 @@
 title: Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスを書き出す方法を説明します。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 25%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-[Snapchat 広告](https://forbusiness.snapchat.com/) 規模や業界に関係なく、あらゆるビジネスに対して作成されます。 Snapchatters の日常会話の一部となり、フルスクリーンのデジタル広告を使用して、ビジネスにとって最も重要な人々の行動を喚起します。
+[Snapchat 広告](https://forbusiness.snapchat.com/) 規模や業界に関係なく、あらゆるビジネスに対して作成されます。 Snapchatters の日常会話の一部となり、フルスクリーンのデジタル広告を使用して、ビジネスにとって最も重要な人々の行動を呼び起こします。
 
 >[!IMPORTANT]
 >
->このドキュメントページは、 *Snap Inc* チーム。 お問い合わせや更新のご依頼は、直接 *dev-support@snap.com*
+>この宛先コネクタとドキュメントページは、 *Snap Inc* チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 *dev-support@snap.com*
 
 ## ユースケース {#use-cases}
 
@@ -37,7 +37,7 @@ ht-degree: 25%
 
 ## サポートされている ID {#supported-identities}
 
-この *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+The *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 に送信されたすべての識別子 *Snap Inc* の宛先は、SHA-256 形式でハッシュ化する必要があります。 プレーンテキストの識別子をハッシュ化してから宛先に送信するには、 **[!UICONTROL 変換を適用]** オプションを使用します。
 
@@ -65,7 +65,7 @@ ht-degree: 25%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *宛先* 宛先。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *YOURDESTINATION* 宛先。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -83,7 +83,7 @@ ht-degree: 25%
 1. 次を検索： *Snap Inc* Adobe Experience Platformの宛先カタログからの宛先を選択し、「 **設定**.
 2. 選択 **[!UICONTROL 宛先に接続]**. 次の画面にリダイレクトされます。
    ![認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
-3. Snapchat の認証情報を入力し、 **ログイン**.
+3. Snapchat の認証情報を入力し、[ ] を選択します。 **ログイン**.
 4. Adobe Experience Platformがアクセスできる Snapchat データが表示されます。 選択 **続行** をクリックして、接続プロセスを続行します。
 
 ![認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
@@ -98,7 +98,7 @@ ht-degree: 25%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:オーディエンスのインポート先の広告アカウントに関連付けられている広告アカウント ID。 これの見つけ方について詳しくは、 [Snapchat Business ヘルプセンターに関するこのドキュメント](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL アカウント ID]**：オーディエンスのインポート先の広告アカウントに関連付けられている広告アカウント ID。 これの見つけ方について詳しくは、 [Snapchat Business ヘルプセンターに関するこのドキュメント](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 

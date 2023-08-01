@@ -2,9 +2,9 @@
 title: Pega Customer Decision Hub 接続
 description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適なアクションを決定します。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 25%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-以下を使用： [!DNL Pega Customer Decision Hub] の宛先（プロファイル属性とオーディエンスメンバーシップデータをに送信） [!DNL Pega Customer Decision Hub] 次に最適な判定をおこなう場合。
+以下を使用します。 [!DNL Pega Customer Decision Hub] の宛先（プロファイル属性とオーディエンスメンバーシップデータをに送信） [!DNL Pega Customer Decision Hub] 次に最適な判定を行う場合。
 
 に読み込まれたときの、Adobe Experience Platformからのプロファイルオーディエンスメンバーシップ [!DNL Pega Customer Decision Hub]は、アダプティブモデルで予測子として使用し、次に最適な判定をおこなうために、適切なコンテキストデータと行動データを配信するのに役立ちます。
 
 >[!IMPORTANT]
 >
->このドキュメントページは Pegasystems によって作成されました。 お問い合わせや更新のご依頼は、Pega に直接お問い合わせください [ここ](mailto:support@pega.com).
+>この宛先コネクタとドキュメントページは、Pegasystems によって作成および管理されます。 お問い合わせや更新のご依頼は、Pega に直接お問い合わせください。 [ここ](mailto:support@pega.com).
 
 ## ユースケース
 
@@ -37,7 +37,7 @@ ht-degree: 25%
 
 この宛先を使用してAdobe Experience Platformからデータを書き出す前に、次の前提条件を満たしていることを確認してください。 [!DNL Pega Customer Decision Hub]:
 
-* の設定 [Adobe Experience Platformプロファイルとオーディエンスメンバーシップの統合コンポーネント](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) の [!DNL Pega Customer Decision Hub] インスタンス。
+* を設定します。 [Adobe Experience Platformプロファイルとオーディエンスメンバーシップの統合コンポーネント](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) の [!DNL Pega Customer Decision Hub] インスタンス。
 * OAuth 2.0 の設定 [クライアント資格情報を使用したクライアント登録](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 付与タイプを [!DNL Pega Customer Decision Hub] インスタンス。
 * 設定 [リアルタイム実行データフロー](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) (Adobeオーディエンスメンバーシップのデータフロー ) [!DNL Pega Customer Decision Hub] インスタンス。
 
@@ -58,7 +58,7 @@ ht-degree: 25%
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子 (*CustomerID*)、属性（姓、名、場所など） および Audience Membership データ。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミング先は、常に API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、オーディエンスの評価に基づいて、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、 [ストリーミング先](/help/destinations/destination-types.md#streaming-destinations). |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミング先は、常に API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、オーディエンスの評価に基づいて、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -74,9 +74,9 @@ ht-degree: 25%
 
 以下のフィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**:
 
-* **[!UICONTROL トークン URL にアクセス]**:の OAuth 2 アクセストークン URL [!DNL Pega Customer Decision Hub] インスタンス。
+* **[!UICONTROL トークン URL にアクセス]**：の OAuth 2 アクセストークン URL [!DNL Pega Customer Decision Hub] インスタンス。
 * **[!UICONTROL クライアント ID]**:OAuth 2 [!DNL client ID] が [!DNL Pega Customer Decision Hub] インスタンス。
-* **[!UICONTROL クライアント秘密鍵]**:OAuth 2 [!DNL client secret] が [!DNL Pega Customer Decision Hub] インスタンス。
+* **[!UICONTROL クライアントの秘密鍵]**:OAuth 2 [!DNL client secret] が [!DNL Pega Customer Decision Hub] インスタンス。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -88,7 +88,7 @@ ht-degree: 25%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ホスト名]**:プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
+* **[!UICONTROL ホスト名]**：プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
 
 ## この宛先に対するオーディエンスをアクティブ化 {#activate}
 
@@ -102,13 +102,13 @@ ht-degree: 25%
 
 [[!UICONTROL 属性を選択]](../../ui/activate-streaming-profile-destinations.md#select-attributes)の手順では、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の ID を選択することをお勧めします。宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
-### マッピングの例：プロファイル更新のアクティブ化 [!DNL Pega Customer Decision Hub] {#mapping-example}
+### マッピングの例：でのプロファイル更新のアクティブ化 [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 プロファイルをに書き出す際の正しい ID マッピングの例を以下に示します。 [!DNL Pega Customer Decision Hub].
 
 ソースフィールドを選択しています。
 
-* 識別子を選択します ( 例：(CustomerID) をAdobe Experience Platformでプロファイルを一意に識別するソース ID として、 [!DNL Pega Customer Decision Hub].
+* Adobe Experience Platformでプロファイルを一意に識別するソース ID として識別子（例： CustomerID）を選択し、 [!DNL Pega Customer Decision Hub].
 * で書き出して更新する必要がある XDM ソースプロファイル属性の変更を選択します。 [!DNL Pega Customer Decision Hub].
 
 ターゲットフィールドの選択：

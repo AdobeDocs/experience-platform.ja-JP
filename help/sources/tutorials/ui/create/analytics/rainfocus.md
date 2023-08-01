@@ -1,15 +1,15 @@
 ---
-title: UI を使用して RainFocus アカウントをExperience Platformに接続
+title: UI を使用して RainFocus アカウントをExperience Platformに接続する
 description: UI を使用して RainFocus アカウントをExperience Platformに接続する方法を説明します。
-badge: ベータ
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+badge: ベータ版
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 29%
 
 ---
 
-# 接続 [!DNL RainFocus] UI を使用してExperience Platformにアカウント
+# 接続する [!DNL RainFocus] UI を使用してExperience Platformにアカウント
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 >[!IMPORTANT]
 >
->このドキュメントページは、 [!DNL RainFocus] チーム。 お問い合わせや更新のご依頼は、clientcare から直接お問い合わせください。<span>@rainfocus.com または [[!DNL RainFocus] ヘルプセンター](https://help.rainfocus.com/hc/en-us)
+>このソースコネクタとドキュメントページは、 [!DNL RainFocus] チーム。 お問い合わせや更新のご依頼は、clientcare から直接お問い合わせください。<span>@rainfocus.comまたは [[!DNL RainFocus] ヘルプセンター](https://help.rainfocus.com/hc/en-us)
 
 ## はじめに
 
@@ -42,11 +42,11 @@ ht-degree: 29%
 
 ## RainFocus アカウントをExperience Platformに接続
 
-Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、ソースワークスペースにアクセスします。 *[!UICONTROL カタログ]*&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションバーから、ソースワークスペースにアクセスします。 *[!UICONTROL カタログ]*&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 *[!UICONTROL Analytics]* カテゴリ、選択 **[!UICONTROL RainFocus エクスペリエンス]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *[!UICONTROL Analytics]* カテゴリ、選択 **[!UICONTROL RainFocus エクスペリエンス]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![RainFocus ソースが選択されたExperience PlatformUI のソースカタログ。](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
@@ -71,7 +71,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 ## データフローの詳細
 
-この **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
+The **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -98,7 +98,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ![ソースワークフローのレビューステップ。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
-## ストリーミングエンドポイント URL の取得 {#get-your-streaming-endpoint-url}
+## ストリーミングエンドポイント URL を取得する {#get-your-streaming-endpoint-url}
 
 ストリーミングデータフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイントは、Webhook を購読するために使用され、ストリーミングソースとExperience Platformが通信できます。
 
@@ -110,9 +110,9 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 データフローが完了し、ストリーミングエンドポイント URL を取得したら、 [!DNL Integration Profile] in [!DNL RainFocus].
 
-* にログインします。 [[!DNL RainFocus] platform](https://app.rainfocus.com). プライマリナビゲーションで、 **[!DNL Libraries]** および **[!DNL Integration Profiles]**
+* にログインします。 [[!DNL RainFocus] platform](https://app.rainfocus.com). プライマリナビゲーションで、「 」を選択します。 **[!DNL Libraries]** および **[!DNL Integration Profiles]**
 * を開きます。 [!DNL Integration Profile] 以前に [前提条件](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
-* 貼り付け **データフロー ID** および **ストリーミングエンドポイント** データフローからコピーしたExperience Platformを選択し、 **保存**
+* を貼り付けます。 **データフロー ID** および **ストリーミングエンドポイント** データフローからコピーしたExperience Platformを選択し、 **保存**
 
 ## 次の手順
 

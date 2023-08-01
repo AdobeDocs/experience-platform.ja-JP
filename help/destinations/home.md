@@ -3,10 +3,10 @@ keywords: 宛先;Adobe Experience Platform;Platform;宛先の概要;データの
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 82%
+source-wordcount: '925'
+ht-degree: 71%
 
 ---
 
@@ -46,6 +46,12 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
 Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、[宛先のタイプとカテゴリの概要](./destination-types.md)を参照してください。
+
+## Adobeで構築された、パートナーで構築された宛先 {#adobe-and-partner-built-destinations}
+
+Experience Platformの宛先カタログのコネクタの一部はAdobeが作成および管理するのに対して、他のコネクタは [Destination SDK](/help/destinations/destination-sdk/overview.md). 宛先がパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタに関するドキュメントページの上部にあるメモが呼び出されます。 例えば、 [Amazon S3 コネクタ](/help/destinations/catalog/cloud-storage/amazon-s3.md) はAdobeによって作成され、 [TikTok connector](/help/destinations/catalog/social/tiktok.md) は、TikTokチームが作成および管理します。
+
+パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。 Adobeが作成および維持するコネクタに関する問題については、Adobe担当者またはカスタマーケアにお問い合わせください。
 
 ## 宛先とアクセス制御 {#access-controls}
 

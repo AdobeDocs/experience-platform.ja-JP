@@ -2,9 +2,9 @@
 title: Medallia 接続
 description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 >[!IMPORTANT]
 >
->このドキュメントページは Medallia チームが作成したものです。 お問い合わせや更新のご依頼は、adobe-integrations@medallia.comから直接お問い合わせください。
+>この宛先コネクタとドキュメントページは、Medalia チームが作成および管理します。 お問い合わせや更新のご依頼は、adobe-integrations@medallia.comから直接お問い合わせください。
 
 ## ユースケース {#use-cases}
 
@@ -49,7 +49,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | メール | メールアドレス | 電子メールの招待状の調査を送信する場合は、電子メールのターゲット ID を選択します。 プロファイルが複数の電子メールアドレスに関連付けられている場合、Medalia は最初の電子メールにのみ招待をトリガーします。 |
-| phone | E.164 形式でハッシュ化された電話番号 | SMS ベースの調査を送信する場合は、電話のターゲット ID を選択します。 電話番号は E.164 形式である必要があります。この形式には、プラス記号 (+)、国際電話番号、市外局番、電話番号などが含まれます。 例：(+)（国コード）（市外局番）（電話番号）。 プロファイルが複数の電話番号に関連付けられている場合、Medalia は最初の電話番号への招待のみをトリガーにします。 |
+| phone | E.164 形式でハッシュ化された電話番号 | SMS ベースの調査を送信する場合は、電話のターゲット ID を選択します。 電話番号は E.164 形式である必要があります。この形式には、プラス記号 (+)、国際電話番号、市外局番、電話番号などが含まれます。 例： (+)（国コード）（市外局番）（電話番号）。 プロファイルが複数の電話番号に関連付けられている場合、Medalia は最初の電話番号への招待のみをトリガーにします。 |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントの新しく認定されたすべてのメンバーを、目的のスキーマフィールドと共に書き出します ( 例：（電子メールアドレス、電話番号、姓）。「プロファイル属性を選択」画面で選択します。 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントの新しく認定されたすべてのメンバーを、目的のスキーマフィールド（例：E メールアドレス、電話番号、姓）と共に、 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -76,9 +76,9 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL OAuth トークンエンドポイント URL]**:通常はhttps://instance.medallia.tld/oauth/tenant/tokenの形式を取ります。
+* **[!UICONTROL OAuth トークンエンドポイント URL]**：通常はhttps://instance.medallia.tld/oauth/tenant/tokenの形式を取ります。
 * **[!UICONTROL クライアント ID]**:Medalia 配信チームから入手します。
-* **[!UICONTROL クライアント秘密鍵]**:Medalia 配信チームから入手します。
+* **[!UICONTROL クライアントの秘密鍵]**:Medalia 配信チームから入手します。
 
 ![この宛先の認証画面を示す画像。](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
@@ -110,7 +110,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 ### 属性と ID のマッピング {#map}
 
 使用例に応じて、次のターゲット ID 名前空間をマッピングする必要があります。
-* 電子メールベースの調査の場合、 **電子メール** は、 **ターゲットフィールド** > **ID 名前空間を選択** > **電子メール**
+* E メールベースの調査の場合、 **電子メール** は、 **ターゲットフィールド** > **ID 名前空間を選択** > **電子メール**
 * SMS ベースの調査の場合、 **phone** は、 **ターゲットフィールド** > **ID 名前空間を選択** > **phone**. 電話番号は E.164 形式である必要があります。この形式には、プラス記号 (+)、国際電話番号、市外局番、電話番号が含まれます
 
 追加のターゲットカスタム属性をマッピングして、パーソナライズされた調査を作成し、顧客に関する追加情報を調査レコードに追加することを強くお勧めします。
@@ -128,7 +128,7 @@ Medalia では、以下の表で説明する ID のアクティベーション�
 
 ## 書き出したデータ {#exported-data}
 
-宛先に対してセグメントをアクティブ化したら、Medalia 配信チームに通知します。このチームは、Adobe Experience Platformから Medalia に書き出されたデータを検証できるようになります。 調査は、データの検証が成功した後に Medalia 内でのみアクティブ化できます。これより前、データは Medalia に書き出されますが、お客様にはトリガー調査は送信されません。
+宛先に対してセグメントをアクティブ化したら、Medalia 配信チームに通知します。このチームは、Adobe Experience Platformから Medalia に書き出されたデータを検証できるようになります。 調査は、データの検証に成功した後に Medalia 内でのみ有効化できます。それ以前の場合、データは Medalia に書き出されますが、お客様への調査のトリガーはおこなわれません。
 
 書き出されたデータのサンプル JSON を以下に示します。これは、上記のスクリーンショットのマッピング例を使用しています ( **属性と ID のマッピング** セクション：
 
@@ -140,8 +140,8 @@ Medalia では、以下の表で説明する ID のアクティベーション�
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]
