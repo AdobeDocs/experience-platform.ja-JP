@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1159'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 100%
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル](#xdm)
 - [クエリサービス](#query-service)
-- [ソース](#sources-sources)
 
 ## 顧客管理キー {#cmk}
 
@@ -79,7 +78,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
 **更新された XDM コンポーネント**
 
@@ -109,16 +108,3 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 Adobe Experience Platform の新機能：
 
-## ソース {#sources}
-
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
-
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- | 
-| Adobe Workfront ソースのベータ版の提供 | [Adobe Workfront ソース](../../sources/connectors/adobe-applications/workfront.md)を使用すると、Workfront データを Experience Platform に取り込み、作業レコードとサードパーティデータの結合、作業レコードへの履歴分析と時系列分析の適用、標準 SQL を使用した作業データのクエリなどのユースケースを実行できます。詳しくは、[UI での Workfront ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/workfront.md)に関するガイドを参照してください。 |
-
-ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

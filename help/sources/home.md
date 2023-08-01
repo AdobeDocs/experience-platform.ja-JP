@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1437'
 ht-degree: 77%
 
 ---
@@ -54,8 +54,6 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
    - [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
    - [の作成 [!DNL Marketo Engage] カスタムアクティビティデータのソース接続とデータフロー](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Adobe Workfront ソースの概要](connectors/adobe-applications/workfront.md)
-   - [UI での Workfront ソース接続の作成](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### 広告 {#advertising}
 

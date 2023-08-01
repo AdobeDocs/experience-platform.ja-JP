@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 98%
+source-wordcount: '987'
+ht-degree: 99%
 
 ---
 
@@ -21,10 +21,9 @@ ht-degree: 98%
       - [Analytics ソース](connectors/adobe-applications/analytics.md)
       - [Audience Manager ソース](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services ソース](connectors/adobe-applications/campaign.md)
-      - [Adobe Commerceソース](connectors/adobe-applications/commerce.md)
+      - [Adobe Commerce ソース](connectors/adobe-applications/commerce.md)
       - [顧客属性ソース](connectors/adobe-applications/customer-attributes.md)
       - [データ収集ソース](connectors/adobe-applications/data-collection.md)
-      - [Workfront ソース](connectors/adobe-applications/workfront.md)
       - フィールドマッピング {#mapping}
          - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager フィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
@@ -62,7 +61,7 @@ ht-degree: 98%
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
-      - [Salesforce コネクタ](connectors/crm/salesforce.md)
+      - [Salesforce コネクター](connectors/crm/salesforce.md)
       - [SugarCRM コネクタ](connectors/crm/sugarcrm.md)
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
       - [Zoho CRM コネクタ](connectors/crm/zoho.md)
@@ -234,7 +233,6 @@ ht-degree: 98%
          - [カスタマー属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo カスタムアクティビティ](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - 広告 {#advertising}
          - [Google 広告](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
