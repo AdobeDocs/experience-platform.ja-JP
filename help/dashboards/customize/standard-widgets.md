@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: 標準ダッシュボードウィジェット
 description: このガイドでは、Adobe Experience Platform のダッシュボードに標準ウィジェットを追加するための手順を説明します。
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 93%
+source-wordcount: '508'
+ht-degree: 75%
 
 ---
 
@@ -14,7 +14,12 @@ ht-degree: 93%
 
 Adobe Experience Platform では、複数のダッシュボードを使用して、組織のデータを表示し、操作できます。また、ダッシュボードビューに新しいウィジェットを追加することで、特定のダッシュボードを更新することもできます。アドビでは、選択してダッシュボードに追加できる標準ウィジェットを用意しています。
 
-このガイドでは、標準ウィジェットを追加して、Platform UI の [!UICONTROL プロファイル]、 [!UICONTROL セグメント] および [!UICONTROL 宛先] ダッシュボードをカスタマイズするためのステップバイステップの手順を説明します。
+The [!UICONTROL プロファイル], [!UICONTROL オーディエンス]、および [!UICONTROL 宛先] 各ダッシュボードには、新しい Platform インスタンスの作成時にデフォルトのウィジェットが読み込まれます。 このガイドでは、標準ウィジェットを追加して [!UICONTROL プロファイル], [!UICONTROL オーディエンス]、および [!UICONTROL 宛先] ダッシュボードを使用して、Platform UI に表示できます。
+
+>[!NOTE]
+>
+>2023 年 7 月 26 日現在 [!UICONTROL プロファイル], [!UICONTROL オーディエンス]、および [!UICONTROL 宛先] 概要ダッシュボードは、過去 6 か月間に表示を変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みにリセットされました。
+>詳しくは、 [プロファイル](../guides/profiles.md#default-widgets), [オーディエンス](../guides/audiences.md#default-widgets)、および [宛先](../guides/destinations.md#default-widgets) デフォルトのウィジェットセクションを参照してください。
 
 標準ウィジェットについて詳しくは、 [標準ウィジェットの作成](custom-widgets.md) に関するガイドを参照してください。
 
@@ -38,7 +43,7 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 >
 >ウィジェットは、選択したカテゴリに一致するダッシュボードにのみ追加できます。例えば、 [!UICONTROL プロファイル] カテゴリのウィジェットのみを [!UICONTROL プロファイル] ダッシュボードに追加できます。
 
-![「標準」タブと使用可能なカテゴリがハイライトされたウィジェットライブラリワークスペース](../images/customization/standard-widgets.png)
+![「標準」タブと使用可能なカテゴリがハイライトされたウィジェットライブラリワークスペース。](../images/customization/standard-widgets.png)
 
 ## ダッシュボードへの標準ウィジェットの追加
 

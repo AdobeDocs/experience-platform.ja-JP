@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
 workflow-type: tm+mt
-source-wordcount: '3393'
-ht-degree: 82%
+source-wordcount: '3520'
+ht-degree: 64%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 82%
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-Time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でプロファイルダッシュボードにアクセスし操作する方法の概要と、ダッシュボードに表示される指標に関する情報を説明します。
 
-Experience Platformユーザーインターフェイス内のすべてのプロファイル機能の概要については、 [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md).
+詳しくは、 [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md) を参照してください。
 
 ## プロファイルダッシュボードのデータ
 
@@ -39,9 +39,9 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 
 ### プロファイルダッシュボードの変更
 
-プロファイルダッシュボードの外観は、「**[!UICONTROL ダッシュボードを変更]**」を選択することによって変更できます。これにより、ダッシュボードにあるウィジェットの移動、追加、削除のほか、**[!UICONTROL ウィジェットライブラリ]**&#x200B;にアクセスして使用可能なウィジェットを探し、組織に必要なカスタムウィジェットを作成できます。
+プロファイルダッシュボードの外観は、「**[!UICONTROL ダッシュボードを変更]**」を選択することによって変更できます。ダッシュボードからウィジェットの移動、追加、サイズ変更、削除を行うことができます。また、 **[!UICONTROL Widget ライブラリ]** 使用可能なウィジェットを表示し、組織のカスタムウィジェットを作成するには、以下を実行します。
 
-詳しくは、[ダッシュボードの変更](../customize/modify.md)および[ウィジェットライブラリの概要](../customize/widget-library.md)についてのドキュメントを参照してください。
+詳しくは、 [ダッシュボードの変更](../customize/modify.md) および [ウィジェットライブラリの概要](../customize/widget-library.md) ドキュメント。
 
 ### ウィジェットを追加 {#add-widget}
 
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 「[!UICONTROL 参照]」タブを使用すると、組織に取り込まれた読み取り専用プロファイルを検索および表示できます。ここから、プロファイルの好み、過去のイベント、インタラクション、オーディエンスに関する重要な情報を確認できます。
 
-Platform UI に用意されているプロファイル表示機能について詳しくは、[Adobe Real-time Customer Data Platformでのプロファイルの参照](../../rtcdp/profile/profile-browse.md)に関するドキュメントを参照してください。
+Platform UI で提供されるプロファイル表示機能について詳しくは、 [Adobe Real-time Customer Data Platformでのプロファイルの参照](../../rtcdp/profile/profile-browse.md).
 
 ## 結合ポリシー {#merge-policies}
 
@@ -77,7 +77,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 組織のデフォルトの結合ポリシーを作成、編集、宣言する方法など、結合ポリシーについて詳しくは、[結合ポリシーの概要](../../profile/merge-policies/overview.md)を参照してください。
 
-ダッシュボードは、使用する結合ポリシーを自動的に選択します。適用した結合ポリシーは、結合ポリシー名の横にあるドロップダウンメニューを使用して変更できます。
+ダッシュボードは、使用する結合ポリシーを自動的に選択します。 適用した結合ポリシーは、結合ポリシー名の横にあるドロップダウンメニューを使用して変更できます。
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 結合スキーマは、同じクラスを共有し、プロファイルが有効になっている複数のスキーマで構成されています。これにより、同じクラスを共有する各スキーマ内に含まれているすべてのフィールドを 1 つのビューに統合して表示できます。
 
-[Platform UI 内で結合スキーマを表示する](../../profile/ui/union-schema.md#view-union-schemas)方法について詳しくは、結合スキーマの UI ガイドを参照してください。
+詳しくは、以下を参照してください。 [Platform UI 内での和集合スキーマの表示](../../profile/ui/union-schema.md#view-union-schemas)（和集合スキーマ UI ガイドを参照）。
 
 ## ウィジェットと指標
 
@@ -101,9 +101,23 @@ Platform UI に用意されているプロファイル表示機能について�
 
 ![最新のスナップショットのタイムスタンプがハイライト表示されプロファイルダッシュボードの「概要」タブ。](../images/profiles/snapshot-timestamp.png)
 
+## デフォルトのウィジェット {#default-widgets}
+
+デフォルトのウィジェット読み込みアウトが、データから利用可能な最新のインサイトをハイライト表示する、Adobe Experience Platformのすべての新しいインスタンスに対して提供されます。 次のウィジェットは、セグメントビューで、最初のセットから事前に設定されています。 ウィジェットの目的と機能について詳しくは、以下を参照してください。
+
+* [[!UICONTROL プロファイル数]](#profile-count)
+* [[!UICONTROL プロファイル数の変更]](#profile-count-change)
+* [[!UICONTROL プロファイル数の変化のトレンド]](#profiles-count-change-trend)
+* [[!UICONTROL ID 別のプロファイル]](#profiles-by-identity)
+* [[!UICONTROL ID の重複]](#identity-overlap)
+
+>[!NOTE]
+>
+>2023 年 7 月 26 日現在、 [!UICONTROL プロファイル], [!UICONTROL オーディエンス]、および [!UICONTROL 宛先] 概要ダッシュボードは、過去 6 か月間に表示を変更しなかったすべてのユーザーに対して、新しいデフォルトのウィジェット読み込みにリセットされました。 詳しくは、 [宛先](./destinations.md#default-widgets) および [オーディエンス](./audiences.md#default-widgets) デフォルトのウィジェットセクションを参照してください。 以前と同様に、ダッシュボードウィジェットを引き続きカスタマイズできます。
+
 ## 標準ウィジェット {#standard-widgets}
 
-アドビは、プロファイルデータに関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットを提供します。 [!UICONTROL ウィジェットライブラリ]を使用して、組織で共有するカスタムウィジェットを作成することもできます。カスタムウィジェットの作成について詳しくは、[ウィジェットライブラリの概要](../customize/widget-library.md)を参照してください。
+アドビは、プロファイルデータに関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットを提供します。 [!UICONTROL ウィジェットライブラリ]を使用して、組織で共有するカスタムウィジェットを作成することもできます。カスタムウィジェットの作成の詳細については、まず [ウィジェットライブラリの概要](../customize/widget-library.md).
 
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
@@ -138,7 +152,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 >[!NOTE]
 >
->[!UICONTROL プロファイル数]ウィジェットは、複数の理由により、UI の「[!UICONTROL プロファイル]」セクションの「[!UICONTROL 参照]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。これが生じる最も一般的な原因は、「[!UICONTROL 参照]」タブが組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照し、[!UICONTROL プロファイル数]ウィジェットがダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照するためです。
+>[!UICONTROL プロファイル数]ウィジェットは、複数の理由により、UI の「[!UICONTROL プロファイル]」セクションの「[!UICONTROL 参照]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。この違いの最も一般的な理由は、 [!UICONTROL 参照] 「 」タブは、組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照しますが、 [!UICONTROL プロファイル数] ウィジェットは、ダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照します。
 >
 >もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。サンプルジョブが [!UICONTROL 参照] タブ、「 [リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ja#profile-count).
 
@@ -146,7 +160,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 ### [!UICONTROL プロファイル数のトレンド] {#profile-count-trend}
 
-[!UICONTROL プロファイル数のトレンド]ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。この合計数には、前回の日別スナップショット以降にシステムに読み込まれたプロファイルが含まれます。 30 日、90 日および 12 か月の期間のデータを可視化できます。期間は、ウィジェットのドロップダウンメニューから選択します。
+[!UICONTROL プロファイル数のトレンド]ウィジェットは、折れ線グラフを使用して、システムに含まれるプロファイルの合計数のトレンドの推移を示します。この合計数には、前回の日別スナップショット以降にシステムに読み込まれたプロファイルが含まれます。 データは 30 日、90 日、12 か月の期間で視覚化できます。 期間は、ウィジェットのドロップダウンメニューから選択します。
 
 ![プロファイル数のトレンドウィジェット。](../images/profiles/profile-count-trend.png)
 
@@ -161,7 +175,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 >[!NOTE]
 >
->[!UICONTROL プロファイル数の変化]ウィジェットは、最初のプロファイルの取り込みとプロファイルストア設定&#x200B;**後**&#x200B;に追加されたプロファイル数を反映します。つまり、組織がプロファイルストアを設定し、1 日目に 4,000,000 個を取り込んだ場合、24 時間以内にダッシュボードは使用可能になりますが、[!UICONTROL プロファイル数の変更]ウィジェットは 0 に設定されます。 これは、プロファイルのシステムへの初期取り込みに関連するスパイクを避けるために行われます。次の 30 日間で、組織はさらに 1,000,000 個のプロファイルをプロファイルストアに取り込みます。次のスナップショットが作成されると、[!UICONTROL プロファイル数の変更]ウィジェットには合計 1,000,000 個のプロファイルが追加表示され、[!UICONTROL プロファイル数]ウィジェットには合計 5,000,000 個のプロファイルが表示されます。
+>[!UICONTROL プロファイル数の変化]ウィジェットは、最初のプロファイルの取り込みとプロファイルストア設定&#x200B;**後**&#x200B;に追加されたプロファイル数を反映します。つまり、組織がプロファイルストアを設定し、1 日目に 4,000,000 個を取り込んだ場合、24 時間以内にダッシュボードは使用可能になりますが、[!UICONTROL プロファイル数の変更]ウィジェットは 0 に設定されます。 このカウント方法は、プロファイルの初期システムへの取り込みに関連するスパイクを避けるためにおこなわれます。 次の 30 日間で、組織はさらに 1,000,000 個のプロファイルをプロファイルストアに取り込みます。次のスナップショットが作成されると、[!UICONTROL プロファイル数の変更]ウィジェットには合計 1,000,000 個のプロファイルが追加表示され、[!UICONTROL プロファイル数]ウィジェットには合計 5,000,000 個のプロファイルが表示されます。
 
 ![プロファイル数の変更ウィジェットが強調表示された Platform UI プロファイルダッシュボード。](../images/profiles/profile-count-change.png)
 
@@ -174,9 +188,9 @@ Platform UI に用意されているプロファイル表示機能について�
 
 **[!UICONTROL プロファイル数の変化のトレンド]**&#x200B;ウィジェットには、過去 30 日、90 日、12 か月間にわたって毎日プロファイルストアに追加された、結合プロファイルの合計数が表示されます。 この数はスナップショットが作成されるたびに更新されるため、プロファイルを Platform に取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されたプロファイルの数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
 
-詳しくは、[このドキュメント前半の結合ポリシーの節](#merge-policies)を参照してください。
+詳しくは、 [このドキュメントで前述した結合ポリシーに関する節](#merge-policies).
 
-**[!UICONTROL プロファイル数の変化のトレンド]**&#x200B;ウィジェットは、ウィジェットの右上に「キャプション」ボタンを表示します。**[!UICONTROL キャプション]**&#x200B;を選択して、自動キャプションダイアログを開きます。
+**[!UICONTROL プロファイル数の変化のトレンド]**&#x200B;ウィジェットは、ウィジェットの右上に「キャプション」ボタンを表示します。自動キャプションダイアログを開くには、「 」を選択します。 **[!UICONTROL キャプション]**.
 
 ![キャプションボタンがハイライト表示されたプロファイル数の変化のトレンドウィジェットを表示する「プロファイルの概要」タブ。](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -188,7 +202,7 @@ Platform UI に用意されているプロファイル表示機能について�
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-このウィジェットは、選択したソース ID と結合ポリシーに基づいてプロファイル数をフィルタリングし、折れ線グラフを使用して様々な期間の数の変化を示します。ページ上部の概要ドロップダウンから結合ポリシーを選択し、ウィジェットのドロップダウンメニューからソース ID と期間を選択します。30 日、90 日および 12 か月の期間のトレンドを可視化できます。
+このウィジェットは、選択したソース ID に基づいてプロファイル数をフィルタリングし、ポリシーを結合します。その後、線グラフを使用して、様々な期間の数の変化を示します。 結合ポリシーは、ページ上部の概要ドロップダウンから選択し、ソース ID と期間は、ウィジェットのドロップダウンメニューから選択します。 トレンドは、30 日、90 日、12 か月の期間で視覚化できます。
 
 このウィジェットは、必要な ID でフィルタリングされたプロファイルの成長パターンを示すことで、宛先のアクティブ化のニーズを管理するのに役立ちます。
 
@@ -201,19 +215,19 @@ Platform UI に用意されているプロファイル表示機能について�
 >title="ID 別プロファイル"
 >abstract="このウィジェットは、プロファイルストアにあるすべての結合済みプロファイルの分類を ID 別に表示します。"
 
-**[!UICONTROL ID 別プロファイル]**&#x200B;ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。
+**[!UICONTROL ID 別プロファイル]**&#x200B;ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 1 つのプロファイルに複数の名前空間が関連付けられている可能性があるので、ID 別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、結合されたプロファイルの合計数より多くなる場合があります。例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間が個々の顧客に関連付けられます。
 
-詳しくは、[このドキュメントの前の結合ポリシーに関する節](#merge-policies)を参照してください。
+詳しくは、 [このドキュメントで前述した結合ポリシーに関する節](#merge-policies).
 
 ![ID 別プロファイルウィジェットがハイライトされたプロファイルの概要ダッシュボード。](../images/profiles/profiles-by-identity.png)
 
-「**[!UICONTROL キャプション]**」を選択して、自動キャプションダイアログを開きます。
+自動キャプションダイアログを開くには、「 」を選択します。 **[!UICONTROL キャプション]**.
 
 ![ID キャプションダイアログ別プロファイル。](../images/profiles/profiles-by-identity-captions.png)
 
 機械学習モデルは、データの全体的な分布と主要なディメンションを分析することにより、データインサイトを自動的に生成します。
 
-ID について詳しくは、[Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md)を参照してください。
+ID について詳しくは、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
 ### [!UICONTROL ID の重複] {#identity-overlap}
 
@@ -224,11 +238,11 @@ ID について詳しくは、[Adobe Experience Platform ID サービスドキ�
 
 **[!UICONTROL ID の重複]**&#x200B;ウィジェットは、ベン図（セット図）を使用して、選択した 2 つの ID を含むプロファイルストア内のプロファイルの重複を表示します。
 
-ウィジェットのドロップダウンメニューを使用して、比較する ID を選択します。円には、各 ID を含むプロファイルの相対合計数が表示されます。両方の ID を含むプロファイルの数は、円の重なり部分の大きさで表されます。顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその個々の顧客に関連付けられるため、組織は複数の ID からのフラグメントを含む複数のプロファイルを持つ可能性があります。
+ウィジェットのドロップダウンメニューを使用して、比較する ID を選択します。円には、各 ID を含むプロファイルの相対合計数が表示されます。両方の ID を含むプロファイルの数は、円の重なり部分の大きさで表されます。顧客が複数のチャネルでブランドとやり取りする場合、複数の ID がその顧客に関連付けられます。 この場合、組織に複数の ID のフラグメントを含む複数のプロファイルが存在する可能性があります。
 
-プロファイルフラグメントについて詳しくは、 [プロファイルフラグメントと結合プロファイル](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=ja#profile-fragments-vs-merged-profiles) （リアルタイム顧客プロファイルの概要）を参照してください。
+プロファイルフラグメントについて詳しくは、 [プロファイルフラグメントと結合プロファイル](../../profile/home.md#profile-fragments-vs-merged-profiles) （リアルタイム顧客プロファイルの概要）を参照してください。
 
-ID について詳しくは、[Adobe Experience Platform ID サービスのドキュメント](../../identity-service/home.md)を参照してください。
+ID について詳しくは、 [Adobe Experience Platform ID サービスドキュメント](../../identity-service/home.md).
 
 ![ID 重複ウィジェットがハイライト表示された「プロファイル」ダッシュボードの概要。](../images/profiles/identity-overlap.png)
 
@@ -247,7 +261,7 @@ ID について詳しくは、[Adobe Experience Platform ID サービスのド�
 
 このウィジェットは、棒グラフを使用して、単一の一意の ID のみで識別されるプロファイルの合計数を示します。このウィジェットは、最も一般的な ID を最大 5 つサポートします。
 
-個々のバーにポインタを合わせると、ID のプロファイルの合計数を示すダイアログが表示されます。
+ID のプロファイルの合計数の詳細を示すダイアログを表示するには、カーソルを個々のバーの上に移動します。
 
 ![ID ウィジェット別の単一の ID プロファイル。](../images/profiles/single-identity-profiles-by-identity.png)
 
@@ -294,7 +308,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 このウィジェットは、プロファイルデータに適用された選択した結合ポリシーに従って、アクティブ化する準備ができたオーディエンスの合計数を提供します。
 
-「**[!UICONTROL オーディエンス]**」を選択し、[!UICONTROL セグメント]ダッシュボードの「[!UICONTROL 参照]」タブに移動します。 ここから、組織のすべてのセグメント定義のリストが表示されます。
+選択 **[!UICONTROL オーディエンス]** をクリックして、 [!UICONTROL オーディエンス] dashboard [!UICONTROL 参照] タブをクリックします。 ここから、組織のすべてのセグメント定義のリストが表示されます。
 
 ![オーディエンスウィジェット。](../images/profiles/audiences.png)
 
@@ -303,7 +317,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 <!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
 <!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
-This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.
 
 The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
 
@@ -319,19 +333,19 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![「さらに表示」がハイライト表示されたオーディエンスの重複レポートウィジェット。](../images/profiles/profiles-audience-overlap-report.png)
 
-[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。設定アイコン（![設定アイコン](../images/profiles/settings-icon.png)）を選択して、テーブルから列を削除または追加します。
+[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。テーブルから列を削除または追加するには、設定アイコン (![設定アイコン。](../images/profiles/settings-icon.png)) をクリックします。
 
 ![オーディエンスの重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->「**[!UICONTROL 重複]**」列ヘッダーを選択して、結果のランキングを高い順または低い順に変更できます。
+>結果のランクを最も高いものから最も低いもの、または最も低いものから最も高いものへと変更するには、 **[!UICONTROL 重複]** 列ヘッダー。
 
 レポート全体を PDF 形式でダウンロードするには、オプションメニュー（**`...`**）に続いて「**[!UICONTROL ダウンロード]**」を選択します。
 
 ![省略記号と「ダウンロード」オプションがハイライト表示されたオーディエンス重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
-レポートから行を選択して、重複分析のベン図を開きます。ベン図のセクションの上にマウスポインターを置くと、ダイアログでプロファイル数が表示されます。
+重複分析のベン図を開くには、レポートから行を選択します。 ダイアログでプロファイル数を表示するには、ベン図のセクションにカーソルを置きます。
 
 ![ベン図と行がハイライト表示されたオーディエンスの重複レポートダイアログ。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
@@ -436,4 +450,4 @@ The three levels of completeness are:
 
 ## 次の手順
 
-このドキュメントに従うと、プロファイルダッシュボードを見つけて、使用可能なウィジェットに表示される指標を理解できます。の使用に関する詳細を学ぶには [!DNL Profile] Experience PlatformUI のデータについては、 [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md).
+このドキュメントに従うと、プロファイルダッシュボードを見つけて、使用可能なウィジェットに表示される指標を理解できるようになります。 の使用に関する詳細を学ぶには [!DNL Profile] Experience PlatformUI のデータ ( [リアルタイム顧客プロファイル UI ガイド](../../profile/ui/user-guide.md).
