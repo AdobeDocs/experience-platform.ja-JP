@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスとセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
+source-wordcount: '3610'
 ht-degree: 31%
 
 ---
@@ -80,7 +80,7 @@ The **[!UICONTROL オーディエンス]** ダッシュボードでは、組織�
 | [!UICONTROL タグ] | オーディエンスに属するユーザー定義のタグ。 これらのタグについて詳しくは、 [タグに関する節](#tags). |
 | [!UICONTROL 分類] | オーディエンスのプロファイルステータスの分類。 このプロファイルのステータスの分類について詳しくは、以下を参照してください。 |
 | [!UICONTROL ライフサイクルステータス] | オーディエンスのステータス。このフィールドの可能な値には、`Draft`、`Published` および `Archived` が含まれます。 |
-| [!UICONTROL 更新頻度] | オーディエンスのデータが更新される頻度を示す値。このフィールドの可能な値には、`On Demand`、`Scheduled` および `Continuous` が含まれます。 |
+| [!UICONTROL 更新頻度] | オーディエンスのデータが更新される頻度を示す値。このフィールドで使用できる値は次のとおりです。 `On Demand` （バッチ）、 `Scheduled` （ストリーミング）および `Continuous` （エッジ）。 |
 | [!UICONTROL 最終更新者] | オーディエンスを最後に更新したユーザーの名前。 |
 | [!UICONTROL 説明] | オーディエンスの説明。 |
 | [!UICONTROL 作成者] | オーディエンスを作成した人の名前。 |
@@ -101,7 +101,7 @@ The **[!UICONTROL オーディエンス]** ダッシュボードでは、組織�
 | アクション | 起源 | 説明 |
 | ------ | ------- | ----------- |
 | Edit | セグメント化サービス | セグメントビルダーを開いて、オーディエンスを編集できます。 セグメントビルダーの使用に関する詳細については、 [セグメントビルダー UI ガイド](./segment-builder.md). |
-| 構成を開く | オーディエンスの構成 | オーディエンスの構成を開いて、オーディエンスを確認できます。 オーディエンスの構成について詳しくは、 [audience composition UI ガイド](./audience-composition.md). |
+| 構成を開く | オーディエンス構成 | オーディエンスの構成を開いて、オーディエンスを確認できます。 オーディエンスの構成について詳しくは、 [audience composition UI ガイド](./audience-composition.md). |
 | 宛先に対して有効化 | セグメント化サービス | 宛先に対するオーディエンスをアクティブ化できます。 宛先へのオーディエンスのアクティブ化について詳しくは、 [アクティベーションの概要](../../destinations/ui/activation-overview.md). |
 | パートナーと共有 | オーディエンスの構成、カスタムアップロード、セグメント化サービス | オーディエンスを他の Platform ユーザーと共有できます。 この機能の詳細については、 [セグメントマッチの概要](./segment-match/overview.md). |
 | タグの管理 | オーディエンスの構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するユーザー定義のタグを管理できます。 この機能の詳細については、 [フィルタとタグ付け](#manage-audiences). |
@@ -224,7 +224,7 @@ The **[!UICONTROL オーディエンスの概要]** 「 」セクションには
 
 >[!BEGINTABS]
 
->[!TAB オーディエンスの構成]
+>[!TAB オーディエンス構成]
 
 ![オーディエンスの詳細ページが表示され、 [!UICONTROL 構成を開く] ボタンをハイライト表示します。](../images/ui/overview/audience-details-open-composition.png)
 
