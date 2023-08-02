@@ -2,9 +2,9 @@
 title: データストリームの設定の上書き
 description: Web SDK を使用して、データストリームの上書きを設定し、データストリームの上書きをアクティブにする方法について説明します。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '997'
 ht-degree: 4%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 4%
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
+>[!IMPORTANT]
+>
+>データストリームの上書きは、次の場合にのみサポートされます。 [Web SDK](../edge/home.md) 統合と呼ばれます。 [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/) および [サーバー API](../server-api/overview.md) 統合は、現在、データストリームの上書きをサポートしていません。
+
 ## データストリーム UI でのデータストリームオーバーライドの設定 {#configure-overrides}
 
 データストリーム設定の上書きを使用して、次のデータストリーム設定を変更できます。
@@ -35,7 +39,7 @@ ht-degree: 4%
 
 Adobe Targetのデータストリームの上書きを設定するには、まずAdobe Targetのデータストリームを作成する必要があります。 手順に従って、 [データストリームの設定](configure.md) と [Adobe Target](configure.md#target) サービス。
 
-データストリームを作成したら、 [Adobe Target](configure.md#target) 追加して使用したサービス **[!UICONTROL プロパティトークンの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加します（下図を参照）。 1 行につき 1 つのプロパティトークンを追加します。
+データストリームを作成したら、 [Adobe Target](configure.md#target) 追加して使用したサービス **[!UICONTROL プロパティトークンの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加できます（下図を参照）。 1 行につき 1 つのプロパティトークンを追加します。
 
 ![プロパティトークンのオーバーライドが示された、Adobe Targetサービス設定を示すデータストリーム UI のスクリーンショット。](assets/overrides/override-target.png)
 
@@ -47,7 +51,7 @@ Adobe Targetのデータストリームの上書きを設定するには、ま�
 
 Adobe Analyticsのデータストリームの上書きを設定するには、まず、 [Adobe Analytics](configure.md#analytics) データストリームが作成されました。 手順に従って、 [データストリームの設定](configure.md) と [Adobe Analytics](configure.md#analytics) サービス。
 
-データストリームを作成したら、 [Adobe Analytics](configure.md#target) 追加して使用したサービス **[!UICONTROL レポートスイートの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加します（下図を参照）。
+データストリームを作成したら、 [Adobe Analytics](configure.md#target) 追加して使用したサービス **[!UICONTROL レポートスイートの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加できます（下図を参照）。
 
 選択 **[!UICONTROL バッチモードを表示]** ：レポートスイートの上書きのバッチ編集を有効にします。 1 行に 1 つのレポートスイートを入力して、レポートスイートのオーバーライドのリストをコピー&amp;ペーストできます。
 
@@ -73,13 +77,13 @@ Experience Platformイベントデータセットのデータストリームの�
 
 サードパーティの ID 同期コンテナに対してデータストリームの上書きを設定するには、まずデータストリームを作成する必要があります。 手順に従って、 [データストリームの設定](configure.md) をクリックして、1 つを作成します。
 
-データストリームを作成したら、に移動します。 **[!UICONTROL 詳細オプション]** また、 **[!UICONTROL サードパーティ ID の同期]** オプション。
+データストリームを作成したら、に移動します。 **[!UICONTROL 詳細オプション]** をクリックし、 **[!UICONTROL サードパーティ ID の同期]** オプション。
 
 次に、 **[!UICONTROL コンテナ ID の上書き]** セクションを使用して、デフォルト設定を上書きするコンテナ ID を追加します（下図を参照）。
 
 >[!IMPORTANT]
 >
->コンテナ ID は、 `1234567`、文字列ではなく `"1234567"`. Web SDK をコンテナ ID の上書きとして使用して文字列値を送信した場合、エラーが表示されます。
+>コンテナ ID は、 `1234567`、文字列ではなく、 `"1234567"`. Web SDK をコンテナ ID の上書きとして使用して文字列値を送信した場合、エラーが表示されます。
 
 ![サードパーティの ID 同期コンテナがハイライト表示された状態で、データストリーム設定を示すデータストリーム UI のスクリーンショット。](assets/overrides/override-container.png)
 
@@ -99,7 +103,7 @@ Web SDK を使用して Edge ネットワークに上書きを送信すること
 
 データストリーム設定の上書きは、 `edgeConfigOverrides` Web SDK コマンド。 このコマンドは、 [!DNL Edge Network] 次のコマンド、または `configure` コマンドを呼び出します。
 
-この `edgeConfigOverrides` コマンドは、に渡されるデータストリームの上書きを作成します。 [!DNL Edge Network] 次のコマンドで、または `configure`、リクエストごとに
+The `edgeConfigOverrides` コマンドは、に渡されるデータストリームの上書きを作成します。 [!DNL Edge Network] 次のコマンドで、または `configure`、リクエストごとに
 
 設定の上書きが `configure` コマンドに含まれている場合、次の Web SDK コマンドに含まれています。
 
@@ -151,7 +155,7 @@ alloy("sendEvent", {
 
 | パラメーター | 説明 |
 |---|---|
-| `edgeConfigOverrides.datastreamId` | 単一のリクエストを `configure` コマンドを使用します。 |
+| `edgeConfigOverrides.datastreamId` | 単一のリクエストを、 `configure` コマンドを使用します。 |
 
 ### を介して設定の上書きを送信する `configure` command {#send-configure}
 
