@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform Datastreams ヘルプ
+user-guide-title: Adobe Experience Platform データストリームのヘルプ
 breadcrumb-title: データストリームガイド
-user-guide-description: Adobe Experience Platformでデータストリームを設定する方法を説明します。
+user-guide-description: Adobe Experience Platform でデータストリームを設定する方法を説明します。
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 55%
+ht-degree: 91%
 
 ---
 
