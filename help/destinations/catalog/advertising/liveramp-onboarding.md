@@ -3,10 +3,10 @@ title: LiveRamp — オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボードする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
-ht-degree: 71%
+source-wordcount: '1814'
+ht-degree: 69%
 
 ---
 
@@ -75,9 +75,9 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL パスワード]**：[!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
-* **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。暗号化キーを入力する場合は、「[宛先の詳細](#destination-details)」セクションで&#x200B;**[!UICONTROL 暗号化サブキー ID]** も入力する必要があります。
-
+* **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL サブキー ID]**：暗号化キーを指定する場合は、暗号化も指定する必要があります **[!UICONTROL サブキー ID]**. サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 **SSH キー認証を使用した SFTP** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
    * [!DNL SSH] キーを [!DNL LiveRamp - Onboarding] サーバーに接続するには、[!DNL LiveRamp] のテクニカルサポートポータルを通じてチケットを送信し、公開鍵を入力する必要があります。詳しくは、[LiveRamp ドキュメント](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client)を参照してください。
 
-* **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。暗号化キーを入力する場合は、「[宛先の詳細](#destination-details)」セクションで&#x200B;**[!UICONTROL 暗号化サブキー ID]** も入力する必要があります。正しい形式の暗号化キーの例については、以下の画像を参照してください。
-
+* **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL サブキー ID]**：暗号化キーを指定する場合は、暗号化も指定する必要があります **[!UICONTROL サブキー ID]**. サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -109,7 +109,6 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする [!DNL LiveRamp] `uploads` サブフォルダーへのパス。`uploads` プレフィックスがフォルダーパスに自動的に追加されます。[!DNL LiveRamp] 他の既存のフィードとは別にファイルを保存し、すべての自動処理がスムーズに実行されるように、 Adobe Real-Time CDPからの配信用に専用のサブフォルダーを作成することをお勧めします。
    * 例えば、ファイルを `uploads/my_export_folder` に書き出す場合は、「**[!UICONTROL フォルダーパス]**」フィールドに `my_export_folder` と入力します。
 * **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。使用可能なオプションは、**[!UICONTROL GZIP]** または&#x200B;**[!UICONTROL なし]**&#x200B;です。
-* **[!UICONTROL 暗号化サブキー ID]**：[!DNL LiveRamp] 公開暗号化キーに基づく、暗号化に使用するサブキー。[認証](#authenticate)手順で暗号化キーを入力した場合、このフィールドは必須です。サブキー ID の取得方法については、[!DNL LiveRamp] [暗号化ドキュメント](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
