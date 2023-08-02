@@ -1,11 +1,11 @@
 ---
-keywords: 宛先；質問；よくある質問faq;宛先の faq
+keywords: 宛先；質問；よくある質問； faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 8%
 
 ---
@@ -29,6 +29,27 @@ ht-degree: 8%
 詳しくは、 [セグメント化サービスのドキュメント](../segmentation/home.md) を参照してください。
 +++
 
+### 同じ宛先に対して更新されたオーディエンスを非アクティブ化し、再アクティブ化すると、一致率が低くなるのはなぜですか。
+
++++回答
+
+ストリーミング先からのオーディエンスのアクティベーション解除とは、同じストリーミング先に対してオーディエンスの再アクティベーションを行ったときに、バックフィルをトリガーしません。
+
+**例**
+
+10 個のプロファイルから成るオーディエンスをストリーミング先に対してアクティブ化しました。
+
+オーディエンスをアクティブ化した後、オーディエンスの設定を変更したいことに気がついたので、オーディエンスを非アクティブ化し、その母集団の条件を変更すると、100 個のプロファイルのオーディエンス母集団が作成されます。
+
+同じ宛先に対して更新されたオーディエンスを再度アクティブ化したときに、バックフィルがトリガーされないので、宛先は追加の 90 件のプロファイルを受け取りません。
+
+**ソリューション**
+
+すべてのプロファイルを確実に宛先に送信するには、新しい設定で新しいオーディエンスを作成し、宛先に対してアクティブ化する必要があります。
+
++++
+
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### でオーディエンスをアクティブ化する前に必要なこと [!DNL Facebook Custom Audiences]?
@@ -36,7 +57,7 @@ ht-degree: 8%
 +++回答オーディエンスを次に送信する前に： [!DNL Facebook]次の要件を満たしていることを確認します。
 
 * お使いの [!DNL Facebook] ユーザーアカウントには **[!DNL Manage campaigns]** 使用する予定の広告アカウントに対して有効になっている権限です。
-* この **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
+* The **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
   >[!IMPORTANT]
   >
   > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。これは、[!DNL Adobe Experience Platform] 統合に必要です。
@@ -51,24 +72,24 @@ ht-degree: 8%
 
 ### facebookがAdobe Experience Platformからの情報を処理するのにどのくらい時間がかかりますか？
 
-+++2021 年 3 月現在の回答 [!DNL Facebook Custom Audiences] から受け取った情報を処理するには、最大 1 時間必要です [!DNL Platform].
++++2021 年 3 月現在の回答 [!DNL Facebook Custom Audiences] から受け取った情報を処理するには、最大 1 時間必要です。 [!DNL Platform].
 +++
 
-### 使用可能な [!DNL Facebook Custom Audiences] （他のオーディエンスのターゲティング用） [!DNL Facebook] アプリ、など [!DNL Instagram]?
+### 使用可能な機能 [!DNL Facebook Custom Audiences] （他のオーディエンスのターゲティング用） [!DNL Facebook] アプリ、など [!DNL Instagram]?
 
-+++Amswer [!DNL Facebook Custom Audiences] facebookファミリーのアプリをまたいでオーディエンスのターゲティングをおこなう宛先。 [!DNL Facebook Custom Audiences]を含む [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]、および [!DNL Messenger]. キャンペーンを実行するアプリの選択は、 [!DNL Facebook Ads Manager].
++++Amswer [!DNL Facebook Custom Audiences] facebookファミリーのアプリをまたいでオーディエンスのターゲティングをおこなう宛先。 [!DNL Facebook Custom Audiences]を含む [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]、および [!DNL Messenger]. キャンペーンを実行する広告主のアプリの選択は、 [!DNL Facebook Ads Manager].
 +++
 
 ### 違いは何ですか？ [!DNL Facebook Custom Audiences] 接続と [!DNL Facebook Pixel] 拡張？
 
-+++ [!DNL Facebook Custom Audiences] 接続を使用 [!DNL Platform] オーディエンスを次に送信する際の id [!DNL Facebook]、 [[!DNL Facebook Pixel] 接続](../destinations/catalog/advertising/facebook-pixel.md) は [!DNL Facebook] web サイトに統合されたピクセル。
++++ [!DNL Facebook Custom Audiences] 接続を使用 [!DNL Platform] オーディエンスを次に送信する際の id [!DNL Facebook]を返し、 [[!DNL Facebook Pixel] 接続](../destinations/catalog/advertising/facebook-pixel.md) は [!DNL Facebook] web サイトに統合されたピクセル。
 
-これら 2 つの統合は補完的です。両方を使用して、オーディエンス対象範囲を改善することができます。例えば、 [!DNL Facebook Pixel] アカウントを作成していない見込み Web サイト訪問者を対象とする拡張 [!DNL Facebook Custom Audiences] は、 [!DNL Platform] id.
+これら 2 つの統合は補完的です。両方を使用して、オーディエンス対象範囲を改善することができます。例えば、 [!DNL Facebook Pixel] アカウントを作成していない見込み Web サイト訪問者を対象とする拡張 [!DNL Facebook Custom Audiences] は、 [!DNL Platform] ID。
 +++
 
 ### Adobe Experience Platformと [!DNL Facebook Custom Audiences] 資格がなくなったユーザーのオーディエンスからの除外をサポートします?**
 
-+++回答はい。統合は、次の場所からのユーザーの削除をサポートします： [!DNL Facebook Custom Audiences] 条件を満たさなくなったとき
++++回答はい。統合は、次の場所からのユーザーの削除をサポートします： [!DNL Facebook Custom Audiences] 条件を満たさなくなったときに
 +++
 
 ### に送信する前にオーディエンスデータをハッシュ化する方法 [!DNL Facebook]?
@@ -82,23 +103,23 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 ### でアクティブ化できる ID の種類 [!DNL Facebook Custom Audiences]?
 
 +++回答
-[!DNL Facebook Custom Audiences] は、次の ID のアクティブ化をサポートしています。ハッシュ化された電子メール、ハッシュ化された電話番号 [!DNL GAID], [!DNL IDFA]、およびカスタム外部 ID。
+[!DNL Facebook Custom Audiences] は、次の ID の有効化をサポートしています：ハッシュ化された電子メール、ハッシュ化された電話番号、 [!DNL GAID], [!DNL IDFA]、およびカスタム外部 ID。
 +++
 
 ### Platform UI で、個別のFacebookアカウントに対して複数のFacebook宛先を作成できますか？
 
 +++回答
-はい。 facebookのExperience Platform先は、Facebookの広告アカウントに 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。 接続できるFacebook広告アカウントの数に制限はありません。
+はい。 facebookのExperience Platform先は、Facebookの広告アカウントに対して 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。 接続できるFacebook広告アカウントの数に制限はありません。
 +++
 
 ## Google カスタマーマッチ {#google-customer-match}
 
 ### オーディエンスをGoogle Customer Match にエクスポートする際に、Googleインターフェイスのオーディエンス名の末尾に余分な数字が追加されているのはなぜですか。
 
-+++回答Googleは一意のオーディエンス名を必要とします。 表示される数は次のとおりです [UNIX タイムスタンプ](https://www.unixtimestamp.com/) 同じオーディエンスを複数のGoogle宛先にマッピングした場合、オーディエンス名を一意にするために、が追加されます。
++++回答Googleは一意のオーディエンス名を必要とします。 表示される数は次のとおりです。 [UNIX タイムスタンプ](https://www.unixtimestamp.com/) 同じオーディエンスを複数のGoogle宛先にマッピングした場合、オーディエンス名を一意にするために、が追加されます。
 +++
 
-## linkedIn Matched Audiences {#linkedin}
+## LinkedIn Matched Audiences {#linkedin}
 
 ### アプリやピクセルを [!DNL LinkedIn] 広告主の口座？
 
@@ -108,7 +129,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 
 ### でオーディエンスをアクティブ化する前に必要なこと [!DNL LinkedIn Matched Audiences]?
 
-+++回答使用する前に [!UICONTROL linkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
++++回答使用する前に [!UICONTROL LinkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
 +++
@@ -124,23 +145,23 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/l
 ### でアクティブ化できる ID の種類 [!DNL LinkedIn]?
 
 +++回答
-[!DNL LinkedIn Matched Audiences] は、次の ID のアクティブ化をサポートしています。ハッシュ化された電子メール [!DNL GAID]、および [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] は、次の ID の有効化をサポートしています：ハッシュ化された電子メール、 [!DNL GAID]、および [!DNL IDFA].
 +++
 
 ## Adobe Targetおよびカスタムパーソナライゼーションの宛先を使用した、同じページおよび次のページのパーソナライゼーション {#same-next-page-personalization}
 
 ### Experience PlatformWeb SDK を使用して、オーディエンスと属性をAdobe Targetに送信する必要がありますか？
 
-+++答えない。 [Web SDK](../edge/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++答えはいいえ。 [Web SDK](../edge/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 ただし、 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja) が Web SDK の代わりに使用され、次回のセッションのパーソナライゼーションのみがサポートされます。
 
-の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../edge/home.md) または [Edge Network Server API](../server-api/overview.md). 詳しくは、 [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
+の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../edge/home.md) または [Edge Network Server API](../server-api/overview.md). 次のドキュメントを参照してください： [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
 +++
 
 ### Real-time Customer Data PlatformからAdobe Targetまたはカスタムパーソナライゼーションの宛先に送信できる属性の数に制限はありますか。
 
-+++回答はい。同じページおよび次のページのパーソナライゼーションの使用例では、Adobe Targetまたはカスタムパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する際に、サンドボックスあたり最大 30 個の属性をサポートします。 アクティベーションガードレールの詳細については、 [guardrails のドキュメント](guardrails.md#edge-destinations-activation).
++++回答はい。同じページおよび次のページのパーソナライゼーションの使用例では、Adobe Targetまたはカスタムパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する際に、サンドボックスあたり最大 30 個の属性をサポートします。 アクティベーションガードレールについて詳しくは、 [guardrails のドキュメント](guardrails.md#edge-destinations-activation).
 +++
 
 ### アクティベーションでサポートされる属性の種類（配列、マップなど）は何ですか。
@@ -174,7 +195,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### 統合は Edge Network Server API を使用して動作しますか？
 
-+++回答はい、Edge Network Server API はカスタムパーソナライゼーションの宛先で機能します。 プロファイル属性には機密データが含まれている場合があるので、このデータを保護するために、カスタムパーソナライゼーションの宛先では、データ収集に Edge Network Server API を使用する必要があります。 さらに、すべての API 呼び出しは、 [認証コンテキスト](../server-api/authentication.md).
++++回答はい、Edge Network Server API はカスタムパーソナライゼーションの宛先で機能します。 プロファイル属性には機密データが含まれている場合があるので、このデータを保護するために、カスタムパーソナライゼーションの宛先では、データ収集に Edge Network Server API を使用する必要があります。 さらに、すべての API 呼び出しは、 [認証済みコンテキスト](../server-api/authentication.md).
 +++
 
 ### エッジ上でアクティブな結合ポリシーは 1 つだけです。 別の結合ポリシーを使用し、ストリーミングオーディエンスとしてAdobe Targetに送信するオーディエンスを構築できますか？
@@ -186,5 +207,5 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Data Usage Labeling and Enforcement(DULE) と同意ポリシーは適用されますか。
 
 +++回答
-はい。 この [データガバナンスと同意ポリシー](../data-governance/home.md) 選択したマーケティングアクションに作成され、関連付けられている場合、選択した属性のアクティベーションが制御されます。
+はい。 The [データガバナンスと同意ポリシー](../data-governance/home.md) 選択したマーケティングアクションに作成され、関連付けられている場合、選択した属性のアクティベーションが制御されます。
 +++
