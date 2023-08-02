@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK を使用したリンクの追跡
 description: Experience PlatformWeb SDK を使用してAdobe Analyticsにリンクデータを送信する方法について説明します
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web インタラクション；ページビュー；リンクトラッキング；リンク；clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # リンクのトラッキング
 
-リンクは手動で設定することも、追跡することもできます [自動](#automaticLinkTracking). 手動トラッキングは、 `web.webInteraction` スキーマの一部。 次の 3 つの必須変数があります。
+リンクは手動で設定することも、追跡することもできます [自動的に](#automaticLinkTracking). 手動トラッキングは、 `web.webInteraction` スキーマの一部。 次の 2 つの必須変数があります。
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
@@ -43,7 +42,7 @@ alloy("sendEvent", {
 * **`download`:** ダウンロードリンク
 * **`exit`:** 出口リンク
 
-これらの値は次のとおりです。 [自動的にマッピング](adobe-analytics/automatically-mapped-vars.md) Adobe Analyticsに [設定済み](adobe-analytics/analytics-overview.md) そうする必要がある。
+これらの値は次のとおりです。 [自動的にマッピング](adobe-analytics/automatically-mapped-vars.md) 次の場合にAdobe Analyticsに [設定済み](adobe-analytics/analytics-overview.md) そうする必要がある。
 
 ## 自動リンクトラッキング {#automaticLinkTracking}
 
@@ -57,9 +56,9 @@ clickCollectionEnabled: false
 
 ### リンクトラッキングに適したタグは何ですか？{#qualifyingLinks}
 
-アンカーの自動リンクトラッキングが実行されました `A` および `AREA` タグ。 ただし、これらのタグがリンクトラッキングの対象とならないのは、 `onclick` ハンドラ
+アンカーの自動リンクトラッキングが実行されました `A` および `AREA` タグ。 ただし、これらのタグがリンクトラッキングの対象とならないのは、これらのタグに `onclick` ハンドラー
 
-### リンクにラベルは付きますか？{#labelingLinks}
+### リンクにはどのようなラベルが付けられますか？{#labelingLinks}
 
 アンカータグにダウンロード属性が含まれる場合、またはリンクが一般的なファイル拡張子で終わる場合、リンクはダウンロードリンクとしてラベル付けされます。 ダウンロードリンク修飾子は次の場合があります。 [設定済み](../fundamentals/configuring-the-sdk.md) を次の正規表現で指定します。
 
@@ -111,4 +110,4 @@ alloy("configure", {
 
 >[!NOTE]
 >
->** `onBeforeEventSend` および `onBeforeLinkClickSend` コールバック関数が設定されている場合、Web SDK は `onBeforeLinkClickSend` リンククリックインタラクションイベントをフィルタリングおよび拡張し、その後に `onBeforeEventSend` コールバック関数。
+>**両方の `onBeforeEventSend` および `onBeforeLinkClickSend` コールバック関数が設定されている場合、Web SDK は `onBeforeLinkClickSend` リンククリックインタラクションイベントをフィルタリングおよび補強し、その後に `onBeforeEventSend` コールバック関数。
