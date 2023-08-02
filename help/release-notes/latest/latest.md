@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: d639b0830b88307b249e7da232b3f48b142ad37b
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 39%
+source-wordcount: '1804'
+ht-degree: 45%
 
 ---
 
@@ -22,6 +22,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [クエリサービス](#query-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 
 ## カタログサービス {#catalog-service}
 
@@ -143,3 +144,42 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 {style="table-layout:auto"}
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーのファネルトップの顧客獲得の使用例から提供される見込み客プロファイルを取り込みます。 |
+| フィールドグループ | [[!UICONTROL 強化されたイベントセグメントの詳細]](https://github.com/adobe/xdm/pull/1754/files) | イベントの収集時にプロファイルが認定するオーディエンスのリスト。 |
+
+{style="table-layout:auto"}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明のアップデート |
+| --- | --- | --- |
+| フィールドグループ | [[!UICONTROL Media Analytics インタラクションの詳細]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` 実験からに更新された `stable`. |
+| フィールドグループ | [[!UICONTROL メディアインタラクションの詳細]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `stable` から `deprecated`. |
+| データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL プレーヤーの状態データ情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental`から `stable`. |
+| データタイプ | [[!UICONTROL メディアイベント情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL メディアの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `stable` から `deprecated`. |
+| データタイプ | [[!UICONTROL カスタムメタデータの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL チャプターの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL 広告ポッドの詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| データタイプ | [[!UICONTROL 広告の詳細情報]](https://github.com/adobe/xdm/pull/1756/files) | The `meta:status` は次の日から更新されました： `experimental` から `stable`. |
+| 拡張機能 ( 顧客ジャーニー管理 ) | [[!UICONTROL ドメイン]](https://github.com/adobe/xdm/pull/1756/files) | `Domain` フィールドが [!UICONTROL AdobeCJM ExperienceEvent — メッセージプロファイルの詳細] ：受信者の e メールアドレスのドメインを記録します。 |
+| 拡張機能 ( 顧客ジャーニー管理 ) | [[!UICONTROL チャネルのバリアント名]](https://github.com/adobe/xdm/pull/1753/files) | このフィールドは [!UICONTROL AJO エンティティフィールド] チャネルのバリアント名を表します。 |
+| 拡張機能 (Adobe Analytics) | [[!UICONTROL コンテキスト値]](https://github.com/adobe/xdm/pull/1761/files) | `Context value` がに追加されました [!UICONTROL `Adobe Analytics ExperienceEvent Full Extension`]. |
+
+{style="table-layout:auto"}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
