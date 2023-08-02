@@ -3,9 +3,9 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続して、オーディエンスをアクティブ化し、データセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1405'
 ht-degree: 54%
 
 ---
@@ -34,13 +34,13 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 

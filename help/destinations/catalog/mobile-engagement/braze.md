@@ -1,11 +1,11 @@
 ---
-keywords: モバイル；勇気づけメッセージ；
+keywords: モバイル；ブレーズ；メッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1040'
 ht-degree: 31%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 ## 概要 {#overview}
 
-この [!DNL Braze] の宛先は、次にプロファイルデータを送信する際に役立ちます： [!DNL Braze].
+The [!DNL Braze] の宛先は、次にプロファイルデータを送信する際に役立ちます： [!DNL Braze].
 
 [!DNL Braze] は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 
@@ -22,13 +22,13 @@ ht-degree: 31%
 
 ## 宛先の詳細 {#specifics}
 
-次に示す、 [!DNL Braze] 宛先：
+次に示す詳細は、 [!DNL Braze] 宛先：
 
-* [!DNL Adobe Experience Platform] オーディエンスは次の場所にエクスポートされます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
+* [!DNL Adobe Experience Platform] オーディエンスは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
 
 >[!NOTE]
 >
->追加のカスタム属性をに送信する際には、 [!DNL Braze] が [!DNL Braze] データポイントの使用。 詳しくは、 [!DNL Braze] 追加のカスタム属性を送信する前に、アカウントマネージャーに問い合わせてください。
+>追加のカスタム属性をに送信する際には、次のことに注意してください。 [!DNL Braze] は、 [!DNL Braze] データポイントの使用。 詳しくは、 [!DNL Braze] 追加のカスタム属性を送信する前に、アカウントマネージャーに問い合わせてください。
 
 ## ユースケース {#use-cases}
 
@@ -44,15 +44,15 @@ ht-degree: 31%
 
 {style="table-layout:auto"}
 
-## 外部オーディエンスのサポート {#external-audiences-support}
+## サポートされるオーディエンス {#supported-audiences}
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明する外部オーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | 外部オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 31%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、目的のスキーマフィールド ( 例：フィールドマッピングに従った電子メールアドレス、電話番号、姓 ) や ID。[!DNL Adobe Experience Platform] オーディエンスは次の場所にエクスポートされます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、フィールドマッピングに従って、目的のスキーマフィールド（電子メールアドレス、電話番号、姓）や ID と共に書き出します。[!DNL Adobe Experience Platform] オーディエンスは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -79,15 +79,15 @@ ht-degree: 31%
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL アカウントトークンをブレーズ]**:これがあなたの [!DNL Braze] [!DNL API] キー。 詳細な手順については、 [!DNL API] キー： [REST API キーの概要](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL アカウントトークンをブレーズ]**：これは、 [!DNL Braze] [!DNL API] キー。 詳細な手順については、 [!DNL API] キー： [REST API キーの概要](https://www.braze.com/docs/api/api_key/).
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL 名前]**:この宛先が将来認識される名前を入力します。
-* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明を入力します。
-* **[!UICONTROL エンドポイントインスタンス]**:に尋ねる [!DNL Braze] 使用する必要のあるエンドポイントインスタンスを表します。
+* **[!UICONTROL 名前]**：この宛先が将来認識される名前を入力します。
+* **[!UICONTROL 説明]**：この宛先を将来識別するのに役立つ説明を入力します。
+* **[!UICONTROL エンドポイントインスタンス]**：に質問します。 [!DNL Braze] 使用する必要のあるエンドポイントインスタンスを表します。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -111,32 +111,32 @@ ht-degree: 31%
 
 XDM フィールドを [!DNL Braze] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-内 [!UICONTROL マッピング] ステップ、クリック **[!UICONTROL 新しいマッピングを追加]**.
+Adobe Analytics の [!UICONTROL マッピング] ステップ、クリック **[!UICONTROL 新しいマッピングを追加]**.
 
 ![宛先の追加マッピングをブレーズ](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-内 [!UICONTROL ソースフィールド] 「 」セクションで、空のフィールドの横にある矢印ボタンをクリックします。
+Adobe Analytics の [!UICONTROL ソースフィールド] 「 」セクションで、空のフィールドの横にある矢印ボタンをクリックします。
 
 ![宛先ソースマッピングを分割](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-内 [!UICONTROL ソースフィールドを選択] ウィンドウで、次の 2 つのカテゴリの XDM フィールドを選択できます。
-* [!UICONTROL 属性を選択]:このオプションを使用して、XDM スキーマの特定のフィールドを [!DNL Braze] 属性。
+Adobe Analytics の [!UICONTROL ソースフィールドを選択] ウィンドウで、次の 2 つのカテゴリの XDM フィールドを選択できます。
+* [!UICONTROL 属性を選択]：このオプションを使用して、XDM スキーマの特定のフィールドを [!DNL Braze] 属性。
 
-![宛先マッピングソース属性をブレーズ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![宛先マッピングのソース属性をブレーズ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL ID 名前空間を選択]:このオプションを使用して、 [!DNL Platform] ID 名前空間を [!DNL Braze] 名前空間。
+* [!UICONTROL ID 名前空間を選択]：このオプションを使用して、 [!DNL Platform] ID 名前空間を [!DNL Braze] 名前空間。
 
 ![宛先マッピングソース名前空間を分割](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 ソースフィールドを選択し、「 **[!UICONTROL 選択]**.
 
-内 [!UICONTROL ターゲットフィールド] 「 」セクションで、「 」フィールドの右側にあるマッピングアイコンをクリックします。
+Adobe Analytics の [!UICONTROL ターゲットフィールド] 「 」セクションで、「 」フィールドの右側にあるマッピングアイコンをクリックします。
 
 ![宛先ターゲットマッピングを分解](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-内 [!UICONTROL ターゲットフィールドを選択] ウィンドウで、次の 2 つのカテゴリのターゲットフィールドを選択できます。
-* [!UICONTROL ID 名前空間を選択]:このオプションを使用して、 [!DNL Platform] ID 名前空間への変換 [!DNL Braze] ID 名前空間。
-* [!UICONTROL カスタム属性を選択]:XDM 属性をカスタムにマッピングするには、このオプションを使用します。 [!DNL Braze] 属性 [!DNL Braze] アカウント <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Braze]. 例えば、 `lastName` カスタムの XDM 属性 `Last_Name` 属性 [!DNL Braze]を作成し、 `Last_Name` 属性 [!DNL Braze]（まだ存在しない場合）、 `lastName` XDM 属性を含めています。
+Adobe Analytics の [!UICONTROL ターゲットフィールドを選択] ウィンドウで、次の 2 つのカテゴリのターゲットフィールドを選択できます。
+* [!UICONTROL ID 名前空間を選択]：このオプションを使用して、マッピングします。 [!DNL Platform] ID 名前空間への変換 [!DNL Braze] ID 名前空間。
+* [!UICONTROL カスタム属性を選択]：このオプションを使用して、XDM 属性をカスタムにマッピングします [!DNL Braze] 属性 [!DNL Braze] アカウント。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Braze]. 例えば、 `lastName` カスタムの XDM 属性 `Last_Name` 属性 [!DNL Braze]、を作成します。 `Last_Name` 属性 [!DNL Braze]（まだ存在しない場合）、および `lastName` XDM 属性を含めています。
 
 ![宛先ターゲットマッピングフィールドを分割](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
@@ -163,7 +163,7 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスには、�
 
 ## 書き出したデータ {#exported-data}
 
-データがに正常に [!DNL Braze] の宛先に書き出されたかどうかを確認するには、[!DNL Braze] アカウントを確認します。 [!DNL Adobe Experience Platform] オーディエンスは次の場所にエクスポートされます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
+データがに正常に [!DNL Braze] の宛先に書き出されたかどうかを確認するには、[!DNL Braze] アカウントを確認します。 [!DNL Adobe Experience Platform] オーディエンスは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

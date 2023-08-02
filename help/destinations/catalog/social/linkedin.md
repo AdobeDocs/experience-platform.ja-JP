@@ -3,9 +3,9 @@ keywords: linkedin 接続；linkedin 接続；linkedin 宛先；linkedin;linkedi
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1088'
 ht-degree: 40%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 ## 概要 {#overview}
 
-のプロファイルをアクティブ化 [!DNL LinkedIn] ハッシュ化された電子メールとモバイル ID に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのキャンペーンを作成します。
+のプロファイルをアクティブ化する [!DNL LinkedIn] ハッシュ化された電子メールとモバイル ID に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのキャンペーンを作成します。
 
 ![Adobe Experience Platform UI でのlinkedInの宛先](../../assets/catalog/social/linkedin/catalog.png)
 
@@ -22,7 +22,7 @@ ht-degree: 40%
 
 を使用する方法とタイミングをより深く理解するために [!DNL LinkedIn Matched Audiences] の宛先に関しては、Adobe Experience Platformのお客様がこの機能を使用して解決できる使用例を以下に示します。
 
-ソフトウェア会社が会議を開催し、参加者と連絡を取り合い、参加者の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、独自の電子メールアドレスやモバイルデバイス ID を取り込むことができます [!DNL CRM] Adobe Experience Platformに その後、独自のオフラインデータからオーディエンスを構築し、そのオーディエンスを [!DNL LinkedIn] ソーシャルプラットフォームを使用して、広告費用を最適化します。
+ソフトウェア会社が会議を開催し、参加者と連絡を取り合い、参加者の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、独自の電子メールアドレスやモバイルデバイス ID を取り込むことができます [!DNL CRM] Adobe Experience Platformに その後、独自のオフラインデータからオーディエンスを構築し、それらのオーディエンスを [!DNL LinkedIn] ソーシャルプラットフォームを使用して、広告費用を最適化します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -32,7 +32,7 @@ ht-degree: 40%
 |---|---|---|
 | GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。「 [ID 一致要件](#id-matching-requirements-id-matching-requirements) を参照し、適切な名前空間を、それぞれプレーンテキストとハッシュ化された電子メールに使用してください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。詳しくは、 [ID 一致要件](#id-matching-requirements-id-matching-requirements) を参照し、適切な名前空間を、それぞれプレーンテキストとハッシュ化された電子メールに使用してください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 
 {style="table-layout:auto"}
 
@@ -40,13 +40,13 @@ ht-degree: 40%
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -61,9 +61,9 @@ ht-degree: 40%
 
 {style="table-layout:auto"}
 
-## linkedInアカウントの前提条件 {#LinkedIn-account-prerequisites}
+## LinkedInアカウントの前提条件 {#LinkedIn-account-prerequisites}
 
-使用する前に [!UICONTROL linkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
+使用する前に、 [!UICONTROL LinkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
 
@@ -75,13 +75,13 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 ## 電子メールのハッシュ要件 {#email-hashing-requirements}
 
-電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、電子メールアドレスをExperience Platformで明確に使用したり、 [!DNL Platform] 有効化時にハッシュ化します。
+電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、電子メールアドレスをExperience Platformで明確に使用したり、 [!DNL Platform] アクティベーション時にハッシュ化します。
 
-E メールアドレスの取り込みについて詳しくは、Experience Platform [バッチ取得の概要](/help/ingestion/batch-ingestion/overview.md) そして [ストリーミング取得の概要](/help/ingestion/streaming-ingestion/overview.md).
+E メールアドレスの取り込みについて詳しくは、Experience Platformの [バッチ取得の概要](/help/ingestion/batch-ingestion/overview.md) そして [ストリーミング取り込みの概要](/help/ingestion/streaming-ingestion/overview.md).
 
 電子メールアドレスを自分でハッシュ化する場合は、次の要件に従ってください。
 
-* 電子メール文字列から先頭および末尾の空白文字をすべてトリミングします。 例： `johndoe@example.com`ではない `<space>johndoe@example.com<space>`;
+* 電子メール文字列から先頭および末尾の空白文字をすべてトリミングします。 例： `johndoe@example.com`，ではない `<space>johndoe@example.com<space>`;
 * 電子メール文字列をハッシュする場合は、必ず小文字の文字列をハッシュ化するようにしてください。
    * 例：`example@email.com`（`EXAMPLE@EMAIL.COM` ではない）
 * ハッシュ化された文字列がすべて小文字であることを確認します。
@@ -93,9 +93,9 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 >ハッシュ化されていない名前空間のデータは、によって自動的にハッシュ化されます。 [!DNL Platform] 有効化時。
 > 属性ソースデータは自動的にハッシュ化されません。
 > 
-> 期間 [ID マッピング](../../ui/activate-segment-streaming-destinations.md#mapping) ステップ、ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。
+> 期間 [ID マッピング](../../ui/activate-segment-streaming-destinations.md#mapping) ステップ、ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション、 [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。
 > 
-> この **[!UICONTROL 変換を適用]** オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
+> The **[!UICONTROL 変換を適用]** オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
 ![ID マッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -119,8 +119,8 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 1. 次を検索： [!DNL LinkedIn Matched Audiences] 宛先カタログの宛先および「 」を選択します。 **[!UICONTROL 設定]**.
 2. 選択 **[!UICONTROL 宛先に接続]**.
-   ![LinkedInへの認証](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
-3. LinkedIn資格情報を入力し、「 」を選択します。 **ログイン**.
+   ![linkedInへの認証](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. linkedIn資格情報を入力し、「 」を選択します。 **ログイン**.
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -133,7 +133,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:お使いの [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント
+* **[!UICONTROL アカウント ID]**: [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -151,7 +151,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 ## 書き出したデータ {#exported-data}
 
-アクティベーションが成功した場合、 [!DNL LinkedIn] カスタムオーディエンスは、 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). ユーザーがアクティブ化されたオーディエンスの対象として認定または不適格となるので、オーディエンスメンバーシップが追加および削除されます。
+アクティベーションが成功した場合、 [!DNL LinkedIn] カスタムオーディエンスは、 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). ユーザーがアクティブ化されたオーディエンスの対象として認定または不適格となるので、オーディエンスメンバーシップは追加および削除されます。
 
 >[!TIP]
 >

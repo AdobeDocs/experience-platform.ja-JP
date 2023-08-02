@@ -2,9 +2,9 @@
 title: Twitter Custom Audiences 接続
 description: twitterで既存のフォロワーや顧客をターゲットに設定し、Adobe Experience Platform内で作成したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 51%
 
 ---
@@ -37,13 +37,13 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ### ユースケース 1
 
-twitterで既存のフォロワーや顧客をターゲットに設定し、Adobe Experience Platform内で構築されたオーディエンスを [!DNL List Custom Audiences] twitter
+twitterで既存のフォロワーや顧客をターゲットに設定し、Adobe Experience Platform内で作成されたオーディエンスを [!DNL List Custom Audiences] twitterで
 
 ## 宛先に接続 {#connect}
 
@@ -78,7 +78,7 @@ twitterで既存のフォロワーや顧客をターゲットに設定し、Adob
 
 1. 次を検索： [!DNL Twitter Custom Audiences] 宛先カタログの宛先および「 」を選択します。 **[!UICONTROL 設定]**.
 2. 選択 **[!UICONTROL 宛先に接続]**.
-   ![LinkedInへの認証](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+   ![linkedInへの認証](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. twitter資格情報を入力し、「 」を選択します。 **ログイン**.
 
 ### 宛先の詳細の入力 {#destination-details}
@@ -92,7 +92,7 @@ twitterで既存のフォロワーや顧客をターゲットに設定し、Adob
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:お使いの [!DNL Twitter Ads] アカウント ID。 これは、 [!DNL Twitter Ads] 設定。
+* **[!UICONTROL アカウント ID]**: [!DNL Twitter Ads] アカウント ID。 これは、 [!DNL Twitter Ads] 設定。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -117,6 +117,6 @@ twitterで既存のフォロワーや顧客をターゲットに設定し、Adob
 オーディエンスをTwitterにマッピングする場合は、次のオーディエンスの命名要件を満たしていることを確認してください。
 
 1. 人間が読み取り可能なオーディエンスマッピング名を指定する。 Experience Platformセグメントに使用したのと同じ名前を使用することをお勧めします。
-2. 特殊文字 (+ &amp; 、 % ) は使用しないでください。;@ / = ? $) がオーディエンスおよびオーディエンスマッピング名に含まれています。 Experience Platformのオーディエンス名にこれらの文字が含まれている場合は、オーディエンスをTwitterの宛先にマッピングする前に、それらの文字を削除してください。
+2. 特殊文字 (+ &amp; 、 % : ; @ / = ? $) がオーディエンスおよびオーディエンスマッピング名に含まれています。 Experience Platformのオーディエンス名にこれらの文字が含まれている場合は、オーディエンスをTwitterの宛先にマッピングする前に、それらの文字を削除してください。
 
 詳細情報： [!DNL List Custom Audiences] twitterの [Twitterドキュメント](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

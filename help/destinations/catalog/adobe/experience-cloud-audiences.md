@@ -3,9 +3,9 @@ title: （ベータ版）Experience CloudAudiences
 description: Experience Platformから様々なExperience Platformソリューションにオーディエンスを共有する方法を説明します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1632'
 ht-degree: 20%
 
 ---
@@ -39,7 +39,7 @@ Experience Cloudのオーディエンスの宛先で、新しいセルフサー�
 
 従来のオーディエンス共有統合では、どのオーディエンスをAudience Manager以降に書き出すかを詳細に制御できませんでした。
 
-### 他のExperience PlatformソリューションとExperience Cloudオーディエンスを共有 {#share-segments-with-other-solutions}
+### 他のExperience PlatformソリューションとExperience Cloudオーディエンスを共有する {#share-segments-with-other-solutions}
 
 オーディエンスをAudience Managerと共有する以外にも、「オーディエンスのExperience Platform」の宛先カードを使用すると、次のような、プロビジョニングした他のExperience Cloudソリューションとオーディエンスを共有できます。
 
@@ -60,12 +60,12 @@ Note: briefly talk about when to share audiences to these destinations using the
 >[!IMPORTANT]
 >
 > * この宛先は次の場所で使用できます： [Adobe Real-time Customer Data Platform Prime と Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 顧客。
-> * を有効にするにはAudience Managerライセンスが必要です [データ管理プラットフォームの使用例](#dmp-use-cases) 詳しくは、上記を参照してください。
+> * を有効にするにはAudience Managerライセンスが必要です。 [データ管理プラットフォームの使用例](#dmp-use-cases) 詳しくは、上記を参照してください。
 > * あなた *不要* Experience PlatformオーディエンスをAdobe Advertising Cloud、Adobe Target、Marketoおよびその他のExperience Cloudソリューション ( [上のセクション](#share-segments-with-other-solutions).
 
 ### 従来のオーディエンス共有ソリューションを使用しているお客様向け
 
-既に、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)従来の統合を無効にするには、カスタマーケアまたはAdobeのアカウントチームに問い合わせる必要があります。 カスタマーケアおよびAdobeのアカウントチームは、統合を無効にする Jira チケットを提出する必要があります ( テンプレートチケット PLAT-160986を参照 )。
+既に、Experience PlatformからAudience Managerや他のExperience Cloudソリューションに、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)従来の統合を無効にするには、カスタマーケアまたはAdobeのアカウントチームに問い合わせる必要があります。 カスタマーケアおよびAdobeのアカウントチームは、統合を無効にする Jira チケットを提出する必要があります ( テンプレートチケット PLAT-160986を参照 )。
 
 ベータ版のお客様向けのプロビジョニング解除チケットの解決にかかる所要時間は 6 営業日以下です。 既存のレガシー統合を無効にした後、次に進むことができます： [接続の作成](#connect) セルフサービスの宛先カードを使用する。
 
@@ -78,7 +78,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 「Experience Cloudオーディエンス」カードのベータリリースにおける既知の制限事項と重要な注意事項を次に示します。
 
 * [データフローの監視](/help/dataflows/ui/monitor-destinations.md) はサポートされていません。
-* 宛先に接続する際に、次のオプションが表示されます。 [データフローアラートの有効化](#enable-alerts). UI には表示されますが、 **アラートオプションを有効にするはサポートされていません** ベータ版リリースの
+* 宛先に接続する際に、次のオプションが表示されます。 [データフローアラートを有効にする](#enable-alerts). UI には表示されますが、 **アラートオプションを有効にするはサポートされていません** （ベータ版リリース）。
 * **バックフィルはサポートされていません**. 最初のAudience Managerへの書き出しや他のExperience Cloudソリューションには、オーディエンスの過去の母集団は含まれません。
 * ベータ版リリースでは、 **Audiences の宛先への単一のExperience Cloud接続**&#x200B;を、Experience Platform組織に属するすべてのサンドボックスにまたがって使用できます。
 
@@ -107,13 +107,13 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -179,9 +179,9 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 データの書き出しが正常に行われたことを検証するには、オーディエンスが目的のExperience Cloudソリューションに正常に到達したことを確認します。
 
-### データの検証Audience Manager
+### データの検証のAudience Manager
 
-Experience Platformのオーディエンスは、次のようにAudience Managerに表示されます。 [シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits)、および [セグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 上記のドキュメントリンクで説明したようにデータが表示されたかどうかをAudience Managerで確認できます。
+Experience Platformのオーディエンスは、次のようにAudience Managerに表示されます。 [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits)、および [セグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 上記のドキュメントリンクで説明したようにデータが表示されたかどうかをAudience Managerで確認できます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -190,7 +190,7 @@ Experience Platformのオーディエンスは、次のようにAudience Manager
 Experience Platformのデータガバナンスは、 [データ使用ラベル](/help/data-governance/labels/reference.md) およびマーケティングアクション。
 データ使用ラベルはアプリケーションに転送されますが、マーケティングアクションは転送されません。 つまり、Audience Managerに到達すると、Experience Platformのオーディエンスを、使用可能な任意の宛先に書き出すことができます。 Audience Managerでは、 [データ書き出しコントロール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) を使用して、オーディエンスが特定の宛先に書き出されるのを防ぎます。
 
-### 権限管理 (Audience Manager)
+### 権限の管理 (Audience Manager)
 
 Audience Managerのオーディエンスと特性は、 [ロールベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=ja) (RBAC) を参照してください。
 

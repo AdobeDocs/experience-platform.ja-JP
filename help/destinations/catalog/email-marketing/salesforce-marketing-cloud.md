@@ -3,9 +3,9 @@ keywords: 電子メール；電子メール；電子メールの宛先；Salesfo
 title: Salesforce Marketing Cloud 接続
 description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '804'
 ht-degree: 56%
 
 ---
@@ -16,19 +16,19 @@ ht-degree: 56%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです（旧称 ExactTarget）。
 
-オーディエンスデータをに送信するには、以下を実行します。 [!DNL Salesforce Marketing Cloud]、最初に [宛先に接続](#connect-destination) プラットフォーム内で [データインポートの設定](#import-data-into-salesforce) ストレージの場所から [!DNL Salesforce Marketing Cloud].
+オーディエンスデータをに送信するには、以下を実行します。 [!DNL Salesforce Marketing Cloud]を選択し、最初に [宛先に接続](#connect-destination) プラットフォーム内で、 [データインポートの設定](#import-data-into-salesforce) ストレージの場所から [!DNL Salesforce Marketing Cloud].
 
 ## サポートされるオーディエンス {#supported-audiences}
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ SFTP ストレージを使用した電子メールマーケティングの宛先
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:Platform が書き出しデータを CSV ファイルとして格納するストレージの場所のパスを指定します。
-* **[!UICONTROL ファイル形式]**:選択 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
+* **[!UICONTROL ファイル形式]**：を選択します。 **CSV** を使用して、CSV ファイルをストレージの場所に書き出します。
 
 <!--
 
@@ -111,8 +111,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Salesforce Marketing Cloud] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルの詳細については、 [オーディエンスのアクティベーションを検証](../../ui/activate-batch-profile-destinations.md#verify) （ audience activation チュートリアル）を参照してください。
+[!DNL Salesforce Marketing Cloud] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [オーディエンスのアクティベーションを検証](../../ui/activate-batch-profile-destinations.md#verify) （ audience activation チュートリアル）を参照してください。
 
 ## へのデータインポートの設定 [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-接続後 [!DNL Platform] を [!DNL SFTP] ストレージの場合は、ストレージの場所から次の場所へのデータインポートを設定する必要があります。 [!DNL Salesforce Marketing Cloud]. これを実現する方法については、「 [ファイルからのMarketing Cloudへの購読者のインポート](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) 内 [!DNL Salesforce Help Center].
+接続後 [!DNL Platform] を [!DNL SFTP] ストレージの場合は、ストレージの場所から次の場所へのデータインポートを設定する必要があります。 [!DNL Salesforce Marketing Cloud]. これを実現する方法については、「 [ファイルからのMarketing Cloudへの購読者のインポート](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) （内） [!DNL Salesforce Help Center].

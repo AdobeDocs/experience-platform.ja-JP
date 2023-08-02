@@ -3,9 +3,9 @@ keywords: Google広告；google 広告；google adwords;Google AdWords;Google Ad
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '995'
 ht-degree: 68%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 68%
 
 ## 概要 {#overview}
 
-[!DNL Google Ads]( 旧称： [!DNL Google AdWords]は、テキストベースの検索、グラフィック表示をまたいで、企業がクリック課金広告を可能にするオンライン広告サービスです。 [!DNL YouTube] ビデオおよびアプリ内モバイルディスプレイ。
+[!DNL Google Ads]（旧称： ） [!DNL Google AdWords]は、テキストベースの検索、グラフィック表示をまたいで、企業がクリック課金広告を可能にするオンライン広告サービスです。 [!DNL YouTube] ビデオおよびアプリ内モバイルディスプレイ。
 
 ## 宛先の詳細 {#specifics}
 
@@ -47,13 +47,13 @@ ht-degree: 68%
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ ht-degree: 68%
 
 >[!IMPORTANT]
 >
-> [!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の節の許可リスト手順を実行するには、 [!DNL Google Ads]. その結果、 [!DNL Google Ads] は [!DNL Google Customer Match] 統合とも呼ばれます。 詳しくは、 [!DNL Google Customer Match] 統合については、 [[!DNL Google Customer Match]](./google-customer-match.md) 接続。
+> [!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の節の許可リスト手順を実行するには、 [!DNL Google Ads]. その結果、 [!DNL Google Ads] は、 [!DNL Google Customer Match] 統合とも呼ばれます。 詳しくは、 [!DNL Google Customer Match] 統合については、 [[!DNL Google Customer Match]](./google-customer-match.md) 接続。
 
 ### 許可リストへの登録 {#allow-listing}
 
@@ -88,7 +88,7 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
 * アカウントのタイプ：**AdWords**
-* **Google AdWords ID**:これは ID です。 [!DNL Google]. 通常、ID の形式は 123-456-7890 です。
+* **Google AdWords ID**：これは ID です。 [!DNL Google]. 通常、ID の形式は 123-456-7890 です。
 
 ## 宛先への接続 {#connect}
 
@@ -105,7 +105,7 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
-* **[!UICONTROL アカウント ID]**:アカウント ID に [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
+* **[!UICONTROL アカウント ID]**：アカウント ID にを入力します。 [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -133,8 +133,8 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [前提条件](#prerequisites) または、顧客が既存の [!DNL Google Ads] アカウント
+このエラーは、顧客アカウントが [前提条件](#prerequisites) または、顧客が既存の [!DNL Google Ads] アカウント。
 
 [!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の手順で [allow-list](#allow-listing) の手順では、 [!DNL Google Ads].
 
-を使用するための推奨される方法 [!DNL Google Ads] は [[!DNL Google Customer Match]](google-customer-match.md) 統合とも呼ばれます。
+を使用するための推奨される方法 [!DNL Google Ads] は、 [[!DNL Google Customer Match]](google-customer-match.md) 統合とも呼ばれます。

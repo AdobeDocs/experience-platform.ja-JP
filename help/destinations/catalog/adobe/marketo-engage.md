@@ -2,9 +2,9 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 25%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 25%
 >[!IMPORTANT]
 >
 >のリリースに伴い、 [Marketo V2 宛先コネクタの機能強化](/help/release-notes/2022/july-2022.md#destinations)に設定すると、宛先カタログに 2 つのMarketoカードが表示されます。
->* 既に **[!UICONTROL Marketo V1]** 宛先：新しいデータフローを **[!UICONTROL Marketo V2]** 宛先への既存のデータフローの削除 **[!UICONTROL Marketo V1]** 2023 年 2 月までに宛先に追加されました。 この日付以降、 **[!UICONTROL Marketo V1]** 宛先カードが削除されます。
+>* 既に **[!UICONTROL Marketo V1]** 宛先：新しいデータフローを作成して、 **[!UICONTROL Marketo V2]** 宛先への宛先の追加と、既存のデータフローの削除 **[!UICONTROL Marketo V1]** 2023 年 2 月までに宛先に追加されました。 この日付以降、 **[!UICONTROL Marketo V1]** 宛先カードが削除されます。
 >* まだ **[!UICONTROL Marketo V1]** 宛先、新しい **[!UICONTROL Marketo V2]** Marketoに接続してデータを書き出すためのカード。
 
-![2 つのMarketo宛先カードの横並び表示の画像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
+![2 枚のMarketo宛先カードの横並び表示の画像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2 の宛先の改善点を次に示します。
 
@@ -36,7 +36,7 @@ Marketo V2 の宛先の改善点を次に示します。
 
 >[!NOTE]
 >
->内 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 「宛先のアクティブ化」ワークフローの「 *必須* ID をマッピングするには、および *オプション* 属性をマッピングします。 「 ID 名前空間」タブから電子メールや ECID をマッピングすることは、Marketoで人物が一致するようにするために最も重要な作業です。 「E メールのマッピング」を選択すると、最も高い一致率が確保されます。
+>Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 「宛先のアクティブ化」ワークフローの「 *必須* ID をマッピングするには、および *オプション* 属性をマッピングします。 「 ID 名前空間」タブから電子メールや ECID をマッピングすることは、Marketoで人物が一致するようにするために最も重要な作業です。 「E メールのマッピング」を選択すると、最も高い一致率が確保されます。
 
 ### サポートされている ID {#supported-identities}
 
@@ -51,15 +51,15 @@ Marketo V2 の宛先の改善点を次に示します。
 
 Experience Platformの属性を、組織がMarketoでアクセスできる任意の属性にマッピングできます。 Marketoでは、 [API リクエストの説明](https://developers.marketo.com/rest-api/lead-database/leads/#describe) ：組織がアクセス権を持つ属性フィールドを取得します。
 
-## 外部オーディエンスのサポート {#external-audiences-support}
+## サポートされるオーディエンス {#supported-audiences}
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明する外部オーディエンスのアクティブ化もサポートされます。
+また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | 外部オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -90,9 +90,9 @@ Experience Platformの属性を、組織がMarketoでアクセスできる任意
 >このビデオは、現在の機能を完全に反映しているわけではありません。 最新情報については、上記にリンクされたガイドを参照してください。 ビデオの次の部分は古くなっています。
 > 
 >* Experience PlatformUI で使用する必要がある宛先カードは、 **[!UICONTROL Marketo V2]**.
->* ビデオに新しい **[!UICONTROL 担当者の作成]** 宛先への接続ワークフローの「セレクター」フィールド
+>* ビデオに新しい **[!UICONTROL 担当者の作成]** 「宛先に接続」ワークフローの「セレクター」フィールド
 >* このビデオで呼び出された 2 つの制限は、現在は適用されません。 ビデオの録画時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多数のプロファイル属性フィールドをマッピングできるようになりました。 まだMarketo静的リストに存在しないオーディエンスメンバーをMarketoに書き出して、リストに追加することもできます。
->* 内 **[!UICONTROL オーディエンスステップのスケジュール]** アクティベーションワークフローのMarketo V1 で、手動で **[!UICONTROL マッピング ID]** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。
+>* Adobe Analytics の **[!UICONTROL オーディエンスのスケジュール設定手順]** アクティベーションワークフローのMarketo V1 で、手動で **[!UICONTROL マッピング ID]** データをMarketoに正常に書き出すために使用します。 この手動の手順は、Marketo V2 では不要になりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 

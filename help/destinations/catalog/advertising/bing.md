@@ -1,11 +1,11 @@
 ---
-keywords: 広告；ビング
+keywords: 広告；Bing;
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 51%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 ## 概要 {#overview}
 
-この [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送信する際に役立ちます： [!DNL Microsoft Display Advertising].
+The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送信する際に役立ちます： [!DNL Microsoft Display Advertising].
 
 プロファイルデータをに送信するには [!DNL Microsoft Bing]の場合、最初に宛先に接続する必要があります。
 
@@ -36,13 +36,13 @@ ht-degree: 51%
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ ht-degree: 51%
 
 宛先を設定する際は、次の情報を指定する必要があります。
 
-* [!UICONTROL アカウント ID]:こちらは [!DNL Bing Ads CID]（整数形式）
+* [!UICONTROL アカウント ID]：こちらが [!DNL Bing Ads CID]（整数形式）
 
 ## 宛先への接続 {#connect}
 
@@ -83,7 +83,7 @@ ht-degree: 51%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:お使いの [!DNL Bing Ads Customer ID] (CID) を使用します。 CID は整数で、にログインする際に URL に含まれます。 [!DNL Microsoft Advertising].
+* **[!UICONTROL アカウント ID]**: [!DNL Bing Ads Customer ID] (CID) を使用します。 CID は整数で、にログインする際に URL に含まれます。 [!DNL Microsoft Advertising].
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -104,7 +104,7 @@ ht-degree: 51%
 
 詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-内 [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、 [!UICONTROL マッピング ID] フィールドに入力します。 これにより、オーディエンスのメタデータがに正しく渡されます。 [!DNL Bing].
+Adobe Analytics の [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、 [!UICONTROL マッピング ID] フィールドに入力します。 これにより、オーディエンスのメタデータがに正しく渡されます。 [!DNL Bing].
 
 ![オーディエンス名を Bing マッピング ID にマッピングする方法の例を示す、オーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
 

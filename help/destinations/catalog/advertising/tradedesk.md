@@ -1,11 +1,11 @@
 ---
-keywords: 広告；トレードデスク広告販売店
+keywords: 広告、トレードデスク、広告業務用デスク
 title: Trade Desk 接続
 description: トレードデスクは、広告バイヤーがディスプレイ、ビデオ、モバイルの在庫ソースをまたいで再ターゲティングを実行し、オーディエンスにターゲットを絞ったデジタルキャンペーンを実施するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '726'
 ht-degree: 40%
 
 ---
@@ -40,13 +40,13 @@ ht-degree: 40%
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -81,8 +81,8 @@ ht-degree: 40%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**:お使いの [!DNL Trade Desk] [!UICONTROL アカウント ID].
-* **[!UICONTROL サーバーの場所]**:質問する [!DNL Trade Desk] 使用する必要のある地域サーバーを表す担当者。 次の中から選択できる地域サーバーを選択します。
+* **[!UICONTROL アカウント ID]**: [!DNL Trade Desk] [!UICONTROL アカウント ID].
+* **[!UICONTROL サーバーの場所]**: [!DNL Trade Desk] 使用する必要のある地域サーバーを表す担当者。 次の中から選択できる地域サーバーがあります。
    * **[!UICONTROL ヨーロッパ]**
    * **[!UICONTROL シンガポール]**
    * **[!UICONTROL 東京]**
@@ -104,7 +104,7 @@ ht-degree: 40%
 
 詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
-内 [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、オーディエンスを、宛先プラットフォームの対応する ID またはわかりやすい名前に手動でマッピングする必要があります。
+Adobe Analytics の [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、オーディエンスを、宛先プラットフォームの対応する ID またはわかりやすい名前に手動でマッピングする必要があります。
 
 セグメントをマッピングする場合は、使いやすくするために、Platform オーディエンス名または短い形式を使用することをお勧めします。 ただし、宛先のオーディエンス ID または名前が Platform アカウントのオーディエンス ID と一致している必要はありません。 マッピングフィールドに挿入した値は、宛先によって反映されます。
 
@@ -114,4 +114,4 @@ ht-degree: 40%
 
 ## 書き出したデータ {#exported-data}
 
-データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL The Trade Desk] 宛先、 [!DNL Trade Desk] アカウント アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。
+データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL The Trade Desk] 宛先、 [!DNL Trade Desk] アカウント。 アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。

@@ -2,9 +2,9 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1031'
 ht-degree: 75%
 
 ---
@@ -43,13 +43,13 @@ ht-degree: 75%
 
 この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
 
-すべての宛先は、Experience Platformを通じて生成されたオーディエンスのアクティブ化をサポートします [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | CSV ファイルからExperience Platformに取り込まれたオーディエンス。 |
+| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
 
 {style="table-layout:auto"}
 
@@ -74,8 +74,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 >
 >このルールの例外は、既存の [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客。 この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-1. 次に示す手順に従います： [Google Ad Manager ドキュメント](https://support.google.com/admanager/answer/3289669?hl=ja) Adobeをリンクされたデータ管理プラットフォーム (DMP) として追加する。
-2. 内 [!DNL Google Ad Manager] インターフェイス、に移動します。 **[!UICONTROL 管理者]** > **[!UICONTROL グローバル設定]** > **[!UICONTROL ネットワーク設定]**&#x200B;をクリックし、 **[!UICONTROL API アクセス]** スライダー。
+1. 次に示す手順に従います： [Google Ad Manager のドキュメント](https://support.google.com/admanager/answer/3289669?hl=ja) Adobeをリンクされたデータ管理プラットフォーム (DMP) として追加する。
+2. Adobe Analytics の [!DNL Google Ad Manager] インターフェイス、に移動します。 **[!UICONTROL 管理者]** > **[!UICONTROL グローバル設定]** > **[!UICONTROL ネットワーク設定]**、を有効にします。 **[!UICONTROL API アクセス]** スライダー。
 
 
 ## 宛先への接続 {#connect}
@@ -108,11 +108,11 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
 * **[!UICONTROL バケット名]**：この宛先が使用する [!DNL Google Cloud Storage] バケット名を入力します。
-* **[!UICONTROL アカウント ID]**:を入力します。 [!DNL Audience Link ID] から [!DNL Google] アカウント これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) をクリックします。 これは、の下にあります。 **[!UICONTROL 管理者/グローバル設定]** 内 [!DNL Google Ad Manager] インターフェイス。
-* **[!UICONTROL アカウントタイプ]**:次の条件に応じて、オプションを選択します。 [!DNL Google] アカウント：
+* **[!UICONTROL アカウント ID]**: [!DNL Audience Link ID] から [!DNL Google] アカウント。 これは、 [!DNL Google Ad Manager] ネットワーク ( [!DNL Network code]) をクリックします。 これは、の下にあります。 **[!UICONTROL 管理者/グローバル設定]** （内） [!DNL Google Ad Manager] インターフェイス。
+* **[!UICONTROL アカウントタイプ]**：選択した特性に応じて、オプションを選択します [!DNL Google] アカウント：
    * [!DNL Google AdX] に `AdX buyer` を使用する
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
-* **[!UICONTROL オーディエンス名にオーディエンス ID を追加する]**:Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含める場合は、次のように、このオプションを選択します。 `Audience Name (Audience ID)`.
+* **[!UICONTROL オーディエンス名にオーディエンス ID を追加する]**:Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。 `Audience Name (Audience ID)`.
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -150,5 +150,5 @@ ID マッピングステップでは、次の事前入力済みマッピング�
 
 AdobeのGoogleアカウント ID は次のとおりです。
 
-* **[!UICONTROL アカウント ID]**:87933855
-* **[!UICONTROL 顧客 ID]**:89690775
+* **[!UICONTROL アカウント ID]**: 87933855
+* **[!UICONTROL 顧客 ID]**: 89690775
