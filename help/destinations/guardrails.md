@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 77%
@@ -94,7 +94,7 @@ ht-degree: 77%
 
 {style="table-layout:auto"}
 
-## [!BADGE ベータ版]{type=Informative} 個のデータセットの書き出し {#dataset-exports}
+### [!BADGE ベータ版]{type=Informative} 個のデータセットの書き出し {#dataset-exports}
 
 データセットのエクスポートは、現在、 **[!UICONTROL 最初にフルにしてから増分にしてください]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). この節で説明するガードレールは、データセットエクスポートワークフローの設定後に発生する最初の完全エクスポートに適用されます。
 
