@@ -7,7 +7,7 @@ landing-page-description: よくある質問への回答、および Experience 
 short-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
+source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 98%
@@ -90,7 +90,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 |--- | --- | ---|
 | 400 | Bad request | リクエストが不適切に構築され、キー情報が欠落している、または正しくない構文が含まれていました。 |
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
-| 403 | Forbidden | <p>リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。</p><p> このエラーの原因としては、必要な [アクセス制御権限](/help/access-control/home.md) をクリックして、リソースにアクセスしたり、リソースを編集したりします。 方法を読む [必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions) を使用して Platform API を使用する場合。 </p> |
+| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br> このエラーの原因としては、必要な [アクセス制御権限](/help/access-control/home.md) をクリックして、リソースにアクセスしたり、リソースを編集したりします。 方法を読む [必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions) を使用して Platform API を使用する場合。 </p> |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
 | 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの[データのフィルタリング](../catalog/api/filter-data.md)に関するサブガイドを参照してください。）リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 
