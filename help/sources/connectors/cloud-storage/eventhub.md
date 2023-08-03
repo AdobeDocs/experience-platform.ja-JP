@@ -3,10 +3,10 @@ title: Azure Event Hubs ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '538'
+ht-degree: 19%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムのデータを Platform に取り込むことができます。
 
@@ -30,13 +30,13 @@ Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネ�
 
 ### の並列性の向上 [!DNL Event Hubs] および Platform
 
-並列処理とは、複数の処理単位で同じタスクを同時に実行し、速度とパフォーマンスを向上させることを指します。 並列性を [!DNL Event Hubs] パーティションを増やす、またはより多くの処理単位を取得することで、並んで [!DNL Event Hubs] アカウント 参照 [[!DNL Event Hubs] 拡大・縮小に関する文書](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
+並列処理とは、複数の処理単位で同じタスクを同時に実行し、速度とパフォーマンスを向上させることを指します。 並列性を [!DNL Event Hubs] パーティションを増やす、またはより多くの処理単位を取得することで、並んで [!DNL Event Hubs] アカウント。 詳しくは、 [[!DNL Event Hubs] 拡大・縮小に関する文書](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
 
 Platform 側での取り込み速度を上げるには、Platform で、ソースコネクタで読み込むタスクの数を増やす必要があります [!DNL Event Hubs] パーティション。 次に、 [!DNL Event Hubs] 新しいパーティションに基づいてAdobeタスクをスケールするには、Platform 担当者にお問い合わせください。 現在、この処理は自動化されていません。
 
 ## 仮想ネットワークを使用して接続する [!DNL Event Hubs] Platform へ
 
-仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) およびは、次に示す手順に従います。
+仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います。 [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) およびは、次に示す手順に従います。
 
 * 選択 **所要時間** （REST API パネルから）
 * の認証 [!DNL Azure] 同じブラウザーの資格情報を使用するアカウント
@@ -88,7 +88,7 @@ Platform サブネットの様々な地域については、以下のリスト�
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
