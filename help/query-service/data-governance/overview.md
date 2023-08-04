@@ -2,9 +2,9 @@
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ Adobe Experience Platformは、複数のエンタープライズシステムの�
 1. 監査
 1. データ使用状況
 1. プライバシー
-<!-- 1. Data hygiene -->
+1. データハイジーン
 
 このドキュメントでは、ガバナンスの各領域を調べ、クエリサービスを使用する際にデータコンプライアンスを容易にする方法を示します。 詳しくは、 [ガバナンス、プライバシー、セキュリティの概要](../../landing/governance-privacy-security/overview.md) を参照して、Experience Platformが顧客データを管理し、コンプライアンスを確保する方法に関する幅広い情報を確認してください。
 
-## セキュリティ
+## セキュリティ {#security}
 
 データセキュリティとは、データを不正なアクセスから保護し、ライフサイクル全体を通じて安全なアクセスを確保するプロセスです。 安全なアクセスは、役割に基づくアクセス制御や属性に基づくアクセス制御などの機能によって、役割および権限の適用を通じてExperience Platformで維持されます。 また、Platform 全体でのデータ保護を確保するために、資格情報、SSL、データ暗号化も使用されます。
 
@@ -35,8 +35,7 @@ Adobe Experience Platformは、複数のエンタープライズシステムの�
 
 * [アクセス制御](#access-control)：アクセスは、データセットや列レベルの権限を含む役割と権限によって制御されます。
 * を通じてデータを保護する [接続](#connectivity)：資格情報の有効期限が近づいている、または期限が近づいていない資格情報で制限付きの接続を達成することで、Platform および外部クライアントを通じてデータを保護します。
-* を通じてデータを保護する [暗号化とシステムレベルのキー](#encryption)：データが保存中の場合、暗号化を使用してデータのセキュリティを確保します。
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* を通じてデータを保護する [暗号化と顧客管理キー (CMK)](#encryption-and-customer-managed-keys)：データが保存されている場合は、暗号化を通じてアクセスを制御します。
 
 ### アクセス制御 {#access-control}
 
@@ -132,17 +131,14 @@ The `CREATE VIEW` キーワードは、クエリのビューを定義します�
 
 利用可能なに関するガイドを参照してください。 [クエリサービスへのサードパーティクライアント接続の SSL オプション](../clients/ssl-modes.md) を参照してください。 `verify-full` SSL パラメーター値。
 
-### 暗号化 {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### 暗号化と顧客管理キー (CMK) {#encryption-and-customer-managed-keys}
 
 暗号化とは、データをエンコードされた読み取り不可能なテキストに変換し、情報を復号化キーなしで保護し、アクセスできないようにする、アルゴリズムプロセスの使用です。
 
 クエリサービスのデータコンプライアンスにより、データが常に暗号化されます。 送信中のデータは常に HTTPS に準拠し、保存時のデータはシステムレベルのキーを使用して Azure Data Lake ストアで暗号化されます。 次のドキュメントを参照してください： [Adobe Experience Platformでのデータの暗号化方法](../../landing/governance-privacy-security/encryption.md) を参照してください。 Azure Data Lake Storage での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+送信中のデータは常に HTTPS に準拠しており、同様に、データレイクでデータが保存されている場合、暗号化は顧客管理キー (CMK) を使用しておこなわれます。CMK は、データレイク管理で既にサポートされています。 現在サポートされているバージョンは TLS1.2 です。詳しくは、 [顧客管理キー (CMK) ドキュメント](../../landing/governance-privacy-security/customer-managed-keys.md) Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
+
 
 ## 監査 {#audit}
 
@@ -206,14 +202,14 @@ Platform のデータガバナンスフレームワークは、すべてのAdobe
 
 スキーマデータフィールドは、Platform UI とクエリサービスを使用して ID フィールドとして設定できます。また、次のことも可能です。 [SQL コマンド「ALTER TABLE」を使用してプライマリ ID をマークします。](../sql/syntax.md#alter-table). を使用した ID の設定 `ALTER TABLE` コマンドは、Platform UI を使用してスキーマから直接データセットを作成するのではなく、SQL を使用してデータセットを作成する場合に特に便利です。 手順については、ドキュメントを参照してください。 [UI での id フィールドの定義](../../xdm/ui/fields/identity.md) 標準スキーマを使用する場合。
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## データハイジーン {#data-hygiene}
 
-## Data hygiene 
+「データの衛生状態」とは、古い、不正確な、誤った形式、複製、不完全なデータを修復または削除するプロセスを指します。 これらのプロセスにより、すべてのシステムでデータセットの正確性と一貫性が確保されます。 データのジャーニーのあらゆる段階に沿って、また最初のデータストレージの場所からでも、適切なデータの衛生状態を確保することが重要です。 Experience Platformクエリサービスでは、これはデータレイクまたは高速ストアです。
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+派生データセットに ID を割り当てて、Platform の一元化されたデータ衛生サービスに従ったデータ管理を可能にすることができます。
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+逆に、Accelerated Store で集計データセットを作成する場合、集計データを使用して元のデータを取得することはできません。 このデータ集計の結果、データの衛生要求を高める必要がなくなりました。
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+このシナリオの例外は、削除の場合です。 データセットでデータの衛生状態の削除が要求され、削除が完了する前に別の派生データセットクエリが実行されると、派生データセットは元のデータセットから情報を取り込みます。 この場合、データセットを削除するリクエストが送信された場合は、同じデータセットソースを使用して新しく派生したデータセットクエリを実行しないようにする必要があります。
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+詳しくは、 [データの衛生状態の概要](../../hygiene/home.md) Adobe Experience Platformでのデータの衛生に関する詳細
