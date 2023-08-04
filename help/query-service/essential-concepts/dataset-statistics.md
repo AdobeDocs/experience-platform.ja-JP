@@ -1,16 +1,16 @@
 ---
 title: データセット統計の計算
 description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage（ADLS）データセットに関する列レベルの統計を計算する方法を説明します。
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 38%
+source-wordcount: '1085'
+ht-degree: 37%
 
 ---
 
 # データセット統計の計算
 
-`COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンドを使用して、[!DNL Azure Data Lake Storage]（ADLS）データセットに関する列レベルの統計を計算できるようになりました。データセット統計を計算する SQL コマンドは、`ANALYZE TABLE` コマンドの拡張機能です。`ANALYZE TABLE` コマンドについて詳しくは、[SQL リファレンスドキュメント](../sql/syntax.md#analyze-table)を参照してください。
+次の項目に関する列レベルの統計を計算できるようになりました： [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` SQL コマンド。 データセット統計を計算する SQL コマンドは、`ANALYZE TABLE` コマンドの拡張機能です。`ANALYZE TABLE` コマンドについて詳しくは、[SQL リファレンスドキュメント](../sql/syntax.md#analyze-table)を参照してください。
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 >
->The `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。詳細については、SQL 構文ガイドの [ANALYZE TABLE](../sql/syntax.md#analyze-table) の節を参照してください。
+>The `COMPUTE STATISTICS`, `FILTERCONTEXT`、および `FOR COLUMNS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。詳細については、SQL 構文ガイドの [ANALYZE TABLE](../sql/syntax.md#analyze-table) の節を参照してください。
 
 このガイドは、ADLS データセットの列の統計を計算できるようにクエリを構造化するのに役立ちます。これらのコマンドを使用すると、SQL クエリを使用して PSQL クライアントを通じてセッションで生成された統計を確認できます。
 

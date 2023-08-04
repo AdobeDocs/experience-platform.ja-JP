@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 8%
 
 ---
@@ -597,9 +597,9 @@ ANALYZE TABLE <original_table_name>
 
 #### データレイクの統計を計算 {#compute-statistics-data-lake}
 
-次の項目に関する列レベルの統計を計算できるようになりました。 [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` および `SHOW STATISTICS` SQL コマンド。 データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
+次の項目に関する列レベルの統計を計算できるようになりました。 [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` SQL コマンド。 データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
 
-`COMPUTE STATISTICS` は、 `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。
+`COMPUTE STATISTICS` は、 `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`、および `FOR COLUMNS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。
 
 **例**
 
@@ -611,7 +611,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 
 >[!NOTE]
 >
->The `Statistics ID` および生成された統計は、各セッションでのみ有効で、異なる PSQL セッションをまたいでアクセスすることはできません。<br><br>制限事項:<ul><li>配列またはマップのデータタイプでは、統計の生成はサポートされていません</li><li>計算された統計は保持されません</li></ul><br><br>オプション:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>デフォルトでは、フラグは true に設定されています。その結果、サポートされていないデータ型に対して統計がリクエストされた場合、エラーアウトはおこなわれず、代わりに警告なしで失敗します。<br>サポートされていないデータ型に関する統計がリクエストされた場合にエラーに関する通知を有効にするには、次を使用します。 `SET skip_stats_for_complex_datatypes = false`.
+>The `Statistics ID` および生成された統計は、各セッションでのみ有効で、異なる PSQL セッションをまたいでアクセスすることはできません。<br><br>制限事項:<ul><li>配列またはマップのデータタイプでは、統計の生成はサポートされていません</li><li>計算済みの統計は次のとおりです **not** セッション間で保持されます。</li></ul><br><br>オプション:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>デフォルトでは、フラグは true に設定されています。その結果、サポートされていないデータ型に対して統計がリクエストされた場合、エラーは発生しませんが、サポートされていないデータ型のフィールドは警告なくスキップされます。<br>サポートされていないデータ型に関する統計がリクエストされた場合にエラーに関する通知を有効にするには、次を使用します。 `SET skip_stats_for_complex_datatypes = false`.
 
 コンソール出力は、次のように表示されます。
 
@@ -629,7 +629,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-以下を使用します。 `SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時的な統計テーブルのメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
+以下を使用します。 `SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時的な統計のメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
 
 ```sql
 SHOW STATISTICS;
