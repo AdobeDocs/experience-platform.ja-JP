@@ -4,7 +4,7 @@ description: Real-Time CDPのパートナーデータサポートが有効にす
 hide: true
 hidefromtoc: true
 badgeBeta: label="ベータ版" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 15%
@@ -76,7 +76,7 @@ Real-Time CDPを拡張して新しい顧客を惹きつけ、獲得する前に�
 * **（ドキュメントは近日公開予定）** パートナーデータサポートに合わせてカスタマイズされたフィールドグループ
 * **（ドキュメントは近日公開予定）** パートナーから取得される属性に追加するサードパーティラベル
 
-#### パートナー ID 名前空間の作成
+#### パートナー ID 名前空間の作成 {#create-partner-id-namespace}
 
 まず、パートナーから受け取るプロファイルの新しい ID タイプを作成します。 これをおこなうには、「ID」セクションで、タイプの新しい ID 名前空間を作成する必要があります **[!UICONTROL パートナー ID]**.
 

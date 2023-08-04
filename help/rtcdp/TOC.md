@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成して、それらのセグメントをサードパーティの宛先に対してアクティブ化します。
-source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
+source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 93%
+source-wordcount: '242'
+ht-degree: 90%
 
 ---
 
@@ -65,8 +65,9 @@ ht-degree: 93%
    * [ソースの概要](sources/sources-overview.md)
    * [Real-Time CDP B2B Edition のソース](sources/b2b.md)
 * ユースケース {#use-cases}
-   * パートナーデータの使用例 {#partner-data}
-      * [ファーストパーティプロファイルの補足](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [見込みサポートを通じて新規顧客との関わりと獲得](/help/rtcdp/partner-data/prospecting.md)
+   * パートナーデータのユースケース {#partner-data}
+      * [見込みサポートを通じて新規顧客を惹きつけ、獲得する](/help/rtcdp/partner-data/prospecting.md)
+      * [パートナーが指定した属性でファーストパーティプロファイルを補完する](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)
