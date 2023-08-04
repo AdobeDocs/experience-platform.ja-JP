@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK の概要
 description: Adobe Experience Platform Web SDK を使用して、Platform 機能を web サイトに統合する方法を説明します。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;エッジ;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 606052562da79982cbe4977c65ecf8ab64e4fa66
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '802'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform Web SDK は、Adobe Experience Cloud のお客様が A
 [!DNL Adobe Experience Platform Web SDK] は、[!DNL Adobe Experience Edge] を構成するコレクションの一部です。[!DNL Experience Edge] は、次のテクノロジーで構成されます。
 
 * **[[!DNL Adobe Experience Platform Web SDK]](#overview)：**[!DNL Adobe] テクノロジーのデプロイを大幅に簡素化するための JavaScript SDK およびタグ拡張
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview)：**&#x200B;お客様が新しいデプロイメント手法を使用できるようにするための v5 モバイル SDK の拡張機能
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/)：**&#x200B;お客様が新しいデプロイメント手法を使用できるようにするための v5 モバイル SDK の拡張機能
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md)：**[!DNL Adobe] 製品の新しいデプロイ手法を可能にする、サーバーのグローバル分散ネットワーク
 
 [!DNL Adobe Experience Edge] は、すべてのアドレス可能なチャネルにわたる、低遅延のデータ収集、プラグ可能なコンピューティング、迅速なデータアクティブ化のための新しいフレームワークです。
@@ -62,7 +62,7 @@ Web SDK は、次の SDK を置き換えます。
 
 新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。この新しいライブラリおよびエンドポイントでは、ID の取得、[!DNL Target] エクスペリエンスの取得、[!DNL Audience Manager] へのデータの送信、1 回の呼び出しでの Adobe Experience Platform へのデータの受け渡しが可能です。
 
-次のビデオでは、Adobe Experience Platform [!DNL Web SDK] および Adobe Experience Platform [!DNL Edge Network] を実際に動作させています。ビデオの例では、アドビへの 1 回の呼び出しを使用して、[!DNL Experience Platform]、[!DNL Analytics]、[!DNL Audience Manager] および [!DNL Target] にデータを送信しています。
+次のビデオでは、Adobe Experience Platform [!DNL Web SDK] および Adobe Experience Platform [!DNL Edge Network] を実際に使用して説明しています。ビデオの例では、アドビへの 1 回の呼び出しを使用して、[!DNL Experience Platform]、[!DNL Analytics]、[!DNL Audience Manager] および [!DNL Target] にデータを送信しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148)
 
