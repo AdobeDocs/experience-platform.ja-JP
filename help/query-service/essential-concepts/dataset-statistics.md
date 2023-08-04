@@ -1,10 +1,10 @@
 ---
 title: データセット統計の計算
 description: このドキュメントでは、SQL コマンドを使用して Azure Data Lake Storage（ADLS）データセットに関する列レベルの統計を計算する方法を説明します。
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 39%
+source-wordcount: '1086'
+ht-degree: 38%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 39%
 
 >[!IMPORTANT]
 >
->`COMPUTE STATISTICS`、`FILTERCONTEXT`、`FOR COLUMNS` および `SHOW STATISTICS` コマンドは、データウェアハウステーブルではサポートされていません。`ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。詳細については、SQL 構文ガイドの [ANALYZE TABLE](../sql/syntax.md#analyze-table) の節を参照してください。
+>The `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`、および `SHOW STATISTICS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。詳細については、SQL 構文ガイドの [ANALYZE TABLE](../sql/syntax.md#analyze-table) の節を参照してください。
 
 このガイドは、ADLS データセットの列の統計を計算できるようにクエリを構造化するのに役立ちます。これらのコマンドを使用すると、SQL クエリを使用して PSQL クライアントを通じてセッションで生成された統計を確認できます。
 
@@ -95,7 +95,7 @@ SELECT * FROM adc_geometric_stats_1;
 
 ## 統計分析のメタデータを表示 {#show-statistics}
 
-以下を使用すると、 `SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時的な統計テーブルのメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
+以下を使用すると、 `SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時的な統計のメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
 
 の出力例 `SHOW STATISTICS` を以下に示します。
 
