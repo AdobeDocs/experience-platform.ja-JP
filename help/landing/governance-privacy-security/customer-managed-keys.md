@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 92%
+source-wordcount: '1774'
+ht-degree: 79%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 
 >[!NOTE]
 >
->Adobe Experience Platformデータレイクとプロファイルストア (CosmosDB) のデータは、CMK を使用して暗号化されます。
+>Adobe Experience Platformのデータレイクとプロファイルストアのデータは、CMK を使用して暗号化されます。 これらは主要なデータストアと見なされます。
 
 このドキュメントでは、Platform で顧客管理キー（CMK）機能を有効にするプロセスについて説明します。
 
@@ -110,7 +110,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリンクする CMK アプリケーションを登録します 。
 
-### はじめに
+### Destination SDK の
 
 CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../landing/api-authentication.md)を参照してください。
 
@@ -282,12 +282,21 @@ curl -X GET \
 1. `COMPLETED`：Key Vault とキー名がデータストアに追加されました。
 1. `FAILED`：問題が発生しました。主にキー、Key Vault、またはマルチテナントのアプリ設定に関連しています。
 
-## 次の手順
+## アクセスを取り消し {#revoke-access}
 
-上記の手順を完了すると、組織で CMK が正常に有効になります。 Platform に取り込まれたデータは、[!DNL Azure] Key Vault のキーを使用して暗号化および復号化されるようになりました。データへの Platform アクセスを取り消す場合は、アプリケーションに関連付けられているユーザーの役割を [!DNL Azure] 内の Key Vault から削除できます。
-
-アプリケーションへのアクセスを無効にした後、Platform でデータにアクセスできなくなるまで、数分から 24 時間かかる場合があります。アプリケーションへのアクセスを再度有効にすると、データが再び使用可能になるまで、同じように遅延時間が発生します。
+データへの Platform アクセスを取り消す場合は、アプリケーションに関連付けられているユーザーの役割を [!DNL Azure] 内の Key Vault から削除できます。
 
 >[!WARNING]
 >
->Key Vault、キー、または CMK アプリが無効になり、Platform でデータにアクセスできなくなると、そのデータに関連するダウンストリーム操作ができなくなります。 設定を変更する前に、Platform でのデータアクセスができなくなることによるダウンストリームの影響を理解しておく必要があります。
+>キー Vault、キー、または CMK アプリを無効にすると、重大な変更がおこなわれる場合があります。 Platform でキー Vault、キー、または CMK アプリが無効になり、データにアクセスできなくなると、そのデータに関連するダウンストリーム操作はできなくなります。 設定を変更する前に、Platform のアクセスを取り消すことによるダウンストリームの影響を理解しておく必要があります。
+
+キーアクセスを削除した後、またはキーを [!DNL Azure] キー vault、この設定がプライマリデータストアに反映されるまでに、数分から 24 時間かかる場合があります。 Platform のワークフローには、パフォーマンスとコアアプリケーションの機能に必要なキャッシュおよび一時的なデータストアも含まれます。 このようなキャッシュされたストアと一時的なストアを通じて CMK 失効を伝達するには、データ処理ワークフローの判断に従って、最大 7 日間かかる場合があります。 例えば、プロファイルダッシュボードはキャッシュデータストアのデータを保持して表示し、更新サイクルの一環としてキャッシュデータストアに保持されているデータの有効期限を 7 日間に設定します。 アプリケーションへのアクセスを再度有効にすると、データが再び使用可能になるまで、同じように遅延時間が発生します。
+
+>[!NOTE]
+>
+>非プライマリ（キャッシュ/一時的）データの 7 日間のデータセット有効期限には、2 つのユースケース固有の例外があります。 これらの機能について詳しくは、それぞれのドキュメントを参照してください。<ul><li>[Adobe Journey Optimizer URL 短縮サービス](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms)</li><li>[エッジ投影](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## 次の手順
+
+上記の手順を完了すると、組織で CMK が正常に有効になります。 プライマリデータストアに取り込まれたデータは、暗号化され、 [!DNL Azure] キー Vault。
+
