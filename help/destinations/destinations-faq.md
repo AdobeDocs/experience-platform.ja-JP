@@ -3,10 +3,10 @@ keywords: 宛先；質問；よくある質問； faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 8%
+source-wordcount: '1638'
+ht-degree: 7%
 
 ---
 
@@ -146,6 +146,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/l
 
 +++回答
 [!DNL LinkedIn Matched Audiences] は、次の ID の有効化をサポートしています：ハッシュ化された電子メール、 [!DNL GAID]、および [!DNL IDFA].
+
 +++
 
 ## Adobe Targetおよびカスタムパーソナライゼーションの宛先を使用した、同じページおよび次のページのパーソナライゼーション {#same-next-page-personalization}
@@ -209,3 +210,20 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++回答
 はい。 The [データガバナンスと同意ポリシー](../data-governance/home.md) 選択したマーケティングアクションに作成され、関連付けられている場合、選択した属性のアクティベーションが制御されます。
 +++
+
+### は [!DNL Adobe Target] および [!DNL Custom Personalization] 宛先 [!DNL HIPAA]準拠しているか？
+
++++回答
+[!DNL Adobe Target] 等しくない [!DNL HIPPA]～に準拠している [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). 顧客は、に関して自社の法務チームに確認する必要があります。 [!DNL HIPPA]を介してエッジパーソナライゼーションを使用する前のカスタム最適化チャネルへの対応 [!DNL Adobe Target] または [!DNL Custom Personalization] 宛先。
+
+同意ポリシー管理を大規模に適用する必要がある使用例の場合、お客様は [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] 機能は高度な機能スイートとして販売され、別途購入することはできません。
+
+このサービスには、顧客が管理する鍵と、顧客データのライフサイクルを管理するための高いしきい値が含まれます。
+
+The [!DNL Adobe Target] および [!DNL Custom Personalization] の宛先は、 [Experience Platformデータ使用ラベル](../data-governance/labels/overview.md) そして [同意ポリシー実施サービス](../data-governance/enforcement/overview.md). これらの機能は、すべてのお客様が利用できます。
+
+
+
+
++++
+
