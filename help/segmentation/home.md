@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -57,7 +57,7 @@ API を使用したセグメント定義の作成について詳しくは、 [AP
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="評価方法"
->abstract="Platform では、現在、オーディエンスを評価する 3 つの方法（ストリーミングのセグメント化、バッチのセグメント化、エッジのセグメント化）をサポートしています。"
+>abstract="Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ API を使用したセグメント定義の作成について詳しくは、 [AP
 >abstract="ストリーミングセグメント化は、ユーザーのアクティビティに応じてオーディエンスを更新する継続的なデータ選択プロセスです。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ja" text="ストリーミングセグメント化を使用したほぼリアルタイムのイベント評価"
 
-Platform では、現在、オーディエンスを評価する 3 つの方法（ストリーミングのセグメント化、バッチのセグメント化、エッジのセグメント化）をサポートしています。
+Platform は、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。
 
 ### ストリーミングセグメント化 {#streaming}
 
@@ -78,7 +78,7 @@ Platform では、現在、オーディエンスを評価する 3 つの方法�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="バッチ評価"
->abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したオーディエンスは保存され、保存されて使用するために書き出すことができます。"
+>abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したオーディエンスは保存されるので、書き出して使用できます。"
 
 継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したオーディエンスは保存され、保存されて使用するために書き出すことができます。
 
