@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
 source-wordcount: '1027'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -64,11 +64,11 @@ ht-degree: 97%
    * [ユーザー権限](./ui/administration/user-permissions.md)
 * 拡張機能 {#extensions}
    * [概要](./extensions/overview.md)
-   * タグ拡張機能（クライアントサイド）{#client}
+   * タグ拡張機能（クライアントサイド） {#client}
       * [概要](./extensions/client/overview.md)
       * [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
-      * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)
+      * [アクションページ更新](https://exchange.adobe.com/apps/ec/102848)
       * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
@@ -220,7 +220,7 @@ ht-degree: 97%
       * [!DNL Braze] {#braze}
          * [概要](./extensions/server/braze/overview.md)
       * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Google Analytics4 用 Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
+      * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * コア {#core}
          * [概要](./extensions/server/core/overview.md)
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)

@@ -1,69 +1,69 @@
 ---
-title: （ベータ版）ファーストパーティプロファイルをパートナー提供の属性で補完する
-description: ファーストパーティプロファイルを信頼できるデータパートナーの属性で補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
+title: （ベータ版）パートナー提供の属性を使用してファーストパーティプロファイルを補完
+description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
 hide: true
 hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
+badgeBeta: label="ベータ版" type="informative" before-title="true"
 source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ファーストパーティプロファイルをパートナー提供の属性で補完
+# パートナー提供の属性を使用してファーストパーティプロファイルを補完
 
 >[!AVAILABILITY]
 >
->* このベータ版機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージの詳細については、 [製品の説明](https://helpx.adobe.com/legal/product-descriptions.html) 詳しくは、Adobe担当者にお問い合わせください。
+>* このベータ版機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
-信頼できるデータパートナーの属性でファーストパーティプロファイルを補完し、データ基盤を強化して、顧客ベースに対する新しいインサイトを得て、より優れたオーディエンス最適化を実現します。
+信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。
 
-![パートナー提供の属性の使用例によるプロファイルのエンリッチメントの概要レベルの視覚的な概要。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+![パートナー提供の属性を使用してプロファイルを強化し、ユースケースの高レベルの視覚的な概要を表示します。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## 前提条件と計画 {#prerequisites-and-planning}
 
-独自のファーストパーティプロファイルにデータパートナーの属性を追加する場合は、データパートナーとのデータエンリッチメントループに関して次の詳細について話し合い、対処する必要があります。
+データパートナーからの属性を使用して独自のファーストパーティプロファイルを補完することを検討する場合は、データエンリッチメントループに関する次の詳細についてデータパートナーと話し合って対処する必要があります。
 
-* オーディエンスリストがReal-Time CDPから書き出され、データベンダーと共有される場所について考えます。 この場所は、ファイルの書き出しをサポートする必要があります。
-* 追加の属性を重ね合わせるためにデータベンダーが想定する識別子は何ですか。
-* パートナーが提供する属性を含むファイルをリアルタイム CDP に取り込む方法を教えてください。 例えば、ファイルは、次のようなクラウドストレージソースコネクタを通じて取り込むことができます。 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) または [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
-* パートナー提供の属性がReal-Time CDPに取り込まれて更新されると予想されるケイデンスは何ですか？
+* データベンダーと共有するために、Real-Time CDP からオーディエンスリストを書き出す場所を検討します。この場所は、ファイルの書き出しをサポートする必要があります。
+* 追加の属性を重ね合わせるために、データベンダーが前提とする識別子は何ですか？
+* パートナー提供の属性を含むファイルを Real-Time CDP に取り込むにはどうすればよいですか？例えば、[Amazon S3](/help/sources/connectors/cloud-storage/s3.md) や [SFTP](/help/sources/connectors/cloud-storage/sftp.md) などのクラウドストレージソースコネクタを通じてファイルを取り込むことができます。
+* パートナー提供の属性が Real-Time CDP に戻されて更新されるケイデンスはどれくらいですか？
 
 >[!WARNING]
 >
->Real-Time CDPに取り込まれる追加のパートナー提供属性は、 *平均的なプロファイル充実度*. 詳しくは、 [Real-time Customer Data Platform Product Description](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) プロファイルの充実性に関する詳細
+>Real-Time CDP に取り込まれたパートナー提供の追加属性は、*平均プロファイルの充実度*&#x200B;に影響を与えます。プロファイルの充実度について詳しくは、[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)を参照してください。
 
-## このユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
+## ユースケースの達成方法：おおまかな概要 {#achieve-the-use-case-high-level}
 
-![パートナー提供の属性の使用例によるプロファイルのエンリッチメントの概要レベルの視覚的な概要。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
+![パートナー提供の属性を使用してプロファイルを強化し、ユースケースのおおまかな概要図を表示します。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
-1. As a **顧客**&#x200B;の場合は、 **データパートナー**.
-2. As a **顧客**&#x200B;を使用する場合は、 **パートナー** — 指定された属性。
-3. As a **顧客**&#x200B;を使用すると、データパートナーでエンリッチメントするオーディエンスをオンボーディングできます。 一般に、これらのオーディエンスは、電子メール、名前、住所などの個人を特定できる情報 (PII) 要素などの入力識別子でキー設定されます。
-4. この **パートナー** 照合可能なプロファイルのライセンス済み属性をに追加します。 オプションで、 [パートナー ID](/help/identity-service/namespaces.md) は、パートナースコープ ID 名前空間に含め、取り込むことができます。
-5. As a **顧客**&#x200B;を使用して、データパートナーからReal-Time CDPの顧客プロファイルに属性を読み込みます。
+1. **顧客**&#x200B;は、**データパートナー**&#x200B;から属性のライセンスを取得します。
+2. **顧客**&#x200B;は、**パートナー**&#x200B;提供の属性に対応するためにプロファイルデータとガバナンスモデルを拡張します。
+3. **顧客**&#x200B;は、データパートナーと共に、強化するオーディエンスをオンボーディングします。一般に、これらのオーディエンスのメール、名前、住所などの個人を特定できる情報（PII）要素などの入力識別子を取得します。
+4. **パートナー**&#x200B;は、照合できるプロファイルにライセンス済み属性を追加します。オプションで、[パートナー ID](/help/identity-service/namespaces.md) を含めて、パートナースコープの ID 名前空間に取り込むことができます。
+5. **顧客**&#x200B;は、データパートナーからの属性を Real-Time CDP の顧客プロファイルに読み込みます。
 
-## このユースケースの達成方法：手順 {#step-by-step-instructions}
+## ユースケースの達成方法：手順 {#step-by-step-instructions}
 
-上記の概要の各手順を完了するには、以下の節に記載されている詳細ドキュメントへのリンクをお読みください。
+上記の概要の各手順を完了するには、詳しいドキュメントへのリンクを含む以下の節を参照してください。
 
 ### パートナーからのライセンス属性 {#license-attributes-from-partner}
 
-この手順については、 [前提条件](#prerequisites-and-planning) およびAdobeは、信頼されたデータベンダーとの間で、ファーストパーティプロファイルを拡張するための適切な契約がおこなわれていることを前提としています。
+この手順については、[前提条件](#prerequisites-and-planning)で説明しています。アドビでは、ファーストパーティプロファイルを強化するために、信頼できるデータベンダーと適切な契約が締結されていることを前提としています。
 
-### パートナーが提供する属性に対応するように、プロファイルデータとガバナンスモデルを拡張します。 {#extend-governance-model}
+### プロフィールデータとガバナンスモデルを拡張して、パートナー提供の属性に対応します。 {#extend-governance-model}
 
-この時点で、パートナーが指定した属性に対応するように、Real-Time CDPでデータ管理フレームワークを拡張します。
+この時点で、Real-Time CDP のデータ管理フレームワークを拡張して、パートナー提供の属性に対応します。
 
-新しいスキーマを作成するオプションは、 **[!UICONTROL XDM 個人プロファイル]** クラスを使用するか、同じタイプの既存のスキーマを拡張して、パートナー指定の属性を含めます。 Adobeでは、データベンダーの追加属性を最も適切に表す新しいフィールドグループセットを使用して、新しいスキーマを作成することを強くお勧めします。 これにより、データスキーマが明確になり、互いに独立して発展することができます。
+**[!UICONTROL XDM 個人プロファイル]**&#x200B;クラスの新しいスキーマを作成するか、同じタイプの既存スキーマを拡張して、パートナー提供の属性を含めるようにするかを選択できます。アドビでは、データベンダーからの追加属性を最もよく表す、フィールドグループの新しいセットを使用して新しいスキーマを作成することを強くお勧めします。これにより、データスキーマが明確になり、相互に独立して発展できるようになります。
 
-Adobeにパートナー提供の属性を含めるには、必要な属性を持つ新しいフィールドグループを作成するか、スキーマが提供する事前設定済みのフィールドグループの 1 つを使用します。
+パートナー提供の属性をスキーマに含めるには、必要な属性を含む新しいフィールドグループを作成するか、アドビが提供する事前設定済みのフィールドグループの 1 つを使用します。
 
-詳しくは、以下のドキュメントページを参照してください。
+詳しくは、次のドキュメントページを参照してください。
 
 * [スキーマ構成の基本](/help/xdm/schema/composition.md)
-* [の概要 [!UICONTROL XDM 個人プロファイル] クラス](/help/xdm/classes/individual-profile.md)
+* [[!UICONTROL XDM 個人プロファイル]クラスの概要](/help/xdm/classes/individual-profile.md)
 * [UI でのスキーマの作成と編集](/help/xdm/ui/resources/schemas.md)
 * [UI でのスキーマフィールドグループの作成と編集](/help/xdm/ui/resources/field-groups.md)
 
@@ -76,50 +76,50 @@ Commenting out links for now
 
 -->
 
-また、この手順では、データ管理戦略を拡大して、パートナーから提供されるサードパーティのデータを含める際の、データガバナンスモデルの変化について考えます。 以下のドキュメントリンクにある考慮事項を参照してください。
+また、この手順では、パートナーが提供するサードパーティデータを含めるようにデータ管理戦略を拡張する際の、データガバナンスモデルの変化についても検討します。次のドキュメントリンクにある考慮事項を参照してください。
 
-* (**近日開始**) サードパーティデータを別のデータセットに保持して、統合の削除と取り消しを容易におこなえるようにします。
-* (**近日開始**) [データセットの有効期限](/help/hygiene/ui/dataset-expiration.md) の機能は、データ衛生アドオンを購入したクライアントのデータセットに対して使用できます。
-* (**近日開始**) サードパーティデータを取り込む派生データセットを作成する場合は注意が必要です。混在させた場合、サードパーティデータを削除する唯一の方法は、派生データセット全体を削除することです。
+* （**近日公開**）サードパーティデータを別のデータセットに保存すると、削除や統合の取り消しが簡単になります。
+* （**近日公開**）データハイジーンアドオンを購入したクライアントのデータセットに対して[データセットの有効期限](/help/hygiene/ui/dataset-expiration.md)機能を使用します。
+* （**近日公開**）サードパーティデータを取り込む派生データセットを作成する場合は注意が必要です。一度混合すると、サードパーティデータを削除する唯一の解決策は、派生データセット全体を削除することになるからです。
 
 >[!TIP]
 >
->データベンダーの個人ベースの識別子で顧客プロファイルを補完する場合は、タイプの新しい ID タイプを作成できます **[[!UICONTROL パートナー ID]](/help/identity-service/namespaces.md)**.
+>データベンダーからの個人ベースの識別子で顧客プロファイルを補完することを選択した場合は、**[[!UICONTROL パートナー ID]](/help/identity-service/namespaces.md)** タイプの新しい ID タイプを作成できます。
 >
->詳しくは、 [id タイプセクション](/help/identity-service/namespaces.md).
->詳細 [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md) 」をクリックします。
+>パートナー ID について詳しくは、[ID タイプの節](/help/identity-service/namespaces.md)を参照してください。
+>詳しくは、Experience Platform ユーザーインターフェイスの [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md)を参照してください。
 
-### 個人識別情報 (PII) またはハッシュ化された PII をキーオフしたときにエンリッチメントするオーディエンスをエクスポートします {#export-audiences}
+### 個人を特定できる情報（PII）またはハッシュ化された PII をキーオフした際に強化するオーディエンスを書き出します {#export-audiences}
 
-パートナーにエンリッチメントするオーディエンスをエクスポートします。 Amazon S3 や SFTP など、リアルタイム CDP によって提供されるクラウドストレージの宛先を使用します。 この手順を完了するには、次のドキュメントページをお読みください。
+パートナーに強化してもらうオーディエンスを書き出します。Amazon S3 や SFTP など、Real-Time CDP によって提供されるクラウドストレージの宛先を使用します。この手順を完了するには、次のドキュメントページを参照してください。
 
-* [Amazon S3 の宛先](/help/destinations/catalog/cloud-storage/amazon-s3.md) ドキュメントページ
-* [SFTP の宛先](/help/destinations/catalog/cloud-storage/sftp.md) ドキュメントページ
-* 方法 [宛先に接続](/help/destinations/ui/connect-destination.md)
-* 方法 [クラウドストレージの宛先へのデータの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md)
+* [Amazon S3 の宛先](/help/destinations/catalog/cloud-storage/amazon-s3.md)ドキュメントページ
+* [SFTP の宛先](/help/destinations/catalog/cloud-storage/sftp.md)ドキュメントページ
+* [宛先への接続](/help/destinations/ui/connect-destination.md)方法
+* [クラウドストレージの宛先へのデータの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md)方法
 
-### データパートナーは、照合可能なプロファイルのライセンス済み属性を追加します {#partner-appends-attributes}
+### データパートナーは、照合できるプロファイルにライセンス済み属性を追加します。 {#partner-appends-attributes}
 
-この手順では、データパートナーが、エクスポートするオーディエンスのライセンス済み属性を追加します。 通常、出力は、Real-Time CDPに取り込み可能なフラットファイルとして使用できます。 詳細を表示 [Real-Time CDPへのファイルの取り込み](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
+この手順では、データパートナーは、書き出されたオーディエンスにライセンス済み属性を追加します。通常、出力は、Real-Time CDP に取り込むことができるフラットファイルとして使用できます。詳しくは、[Real-Time CDP へのファイルの取り込み](/help/ingestion/tutorials/ingest-batch-data.md#upload-file)を参照してください。
 
-### Real-Time CDPは、顧客プロファイルにエンリッチメントされた属性を追加します {#ingest-data}
+### Real-Time CDP は、顧客プロファイルに強化された属性を追加します {#ingest-data}
 
-次に、ソースコネクタを通じてパートナーからデータを取り込み、エンリッチメントされたデータをReal-Time CDPに戻し、パートナー提供のデータでプロファイルを補完する必要があります。
+次に、ソースコネクタを通じてパートナーからデータを取り込み、強化されたデータを Real-Time CDP に戻し、パートナーが提供するデータでプロファイルを補完する必要があります。
 
-この目的で推奨されるソースコネクタは次のとおりです。
+この目的で推奨されるソースコネクタを次に示します。
 
 * [Amazon S3](/help/sources/connectors/cloud-storage/s3.md)
 * [SFTP](/help/sources/connectors/cloud-storage/sftp.md)
 
 ## 制限事項とトラブルシューティング {#limitations-and-troubleshooting}
 
-このページで説明する使用例を参照する際は、次の制限事項に注意してください。
+このページで説明するユースケースを参照する際は、次の制限事項に注意してください。
 
-* パートナー ID を使用することを選択した場合、 [ID グラフ](/help/identity-service/ui/identity-graph-viewer.md).
+* パートナー ID の使用を選択した場合、これらの ID は [ID グラフの作成](/help/identity-service/ui/identity-graph-viewer.md)時に使用されません。
 
-## パートナーデータサポートを通じて達成されたその他の使用例 {#other-use-cases}
+## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 
-Real-Time CDPのパートナーデータサポートを通じて有効化されたその他の使用例を調べる：
+Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
-* (**近日開始**) [!BADGE ベータ版]{type=Informative}**パートナーの支援認識を活用** 訪問中のオンサイトエクスペリエンスのパーソナライズ、および訪問後のオフサイトリターゲティング（ユーザーによる認証やブランドとの以前の履歴がない）。
-* (**近日開始**) [!BADGE ベータ版]{type=Informative}**拡張されたアクティベーション** PII またはハッシュ化された PII を受け入れないエコシステムを公開するためのパートナー ID の使用。
+* （**近日公開**）[!BADGE ベータ版]{type=Informative}ユーザーがブランドを認証したり以前の履歴を持っていたりすることなく、訪問中のオンサイトエクスペリエンスをパーソナライズしたり、訪問後のオフサイトリターゲティングを行うために&#x200B;**パートナー支援認識を活用します**。
+* （**近日公開**）[!BADGE ベータ版]{type=Informative}パートナー ID を使用して、PII またはハッシュ化された PII を受け入れないパブリッシングエコシステムに&#x200B;**アクティベーションを拡張しました**。

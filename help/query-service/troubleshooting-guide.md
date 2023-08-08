@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ SELECT count(1) FROM myTableName
 
 また、[UI でのスケジュール済みクエリの実行](./ui/user-guide.md#scheduled-queries)と [API](./api/scheduled-queries.md) を使用したスケジュール済みクエリの実行の方法については、ドキュメントを参照してください。
 
-注意： [!DNL Query Editor] 作成、保存、実行済みのクエリにのみスケジュールを追加できます。 これは、 [!DNL Query Service] API
+[!DNL Query Editor] を使用する場合、既に作成、保存、実行されたクエリにのみスケジュールを追加できます。これは、[!DNL Query Service] API には適用されません。
 +++
 
 ### 「セッション制限に達しました」エラーはどういう意味ですか？
