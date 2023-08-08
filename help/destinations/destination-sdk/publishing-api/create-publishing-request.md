@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK を通じて、宛先公開リクエストを送信するための API 呼び出しを書式設定する方法を説明します。
 title: 宛先公開リクエストの作成
 source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '447'
 ht-degree: 100%
 
