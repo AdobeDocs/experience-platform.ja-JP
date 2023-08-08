@@ -7,7 +7,7 @@ description: 顧客 AI の一般的なエラーに対する回答を示します
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '529'
 ht-degree: 100%
 
