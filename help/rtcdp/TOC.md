@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成して、それらのセグメントをサードパーティの宛先に対してアクティブ化します。
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: 4a89650a8c1599b95e109a710e4f12df34e67f6f
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 90%
+source-wordcount: '250'
+ht-degree: 88%
 
 ---
 
@@ -65,6 +65,8 @@ ht-degree: 90%
    * [ソースの概要](sources/sources-overview.md)
    * [Real-Time CDP B2B Edition のソース](sources/b2b.md)
 * ユースケース {#use-cases}
+   * インテリジェントな再エンゲージメントの使用例 {#intelligent-re-engagement}
+      * [顧客をインテリジェントに再び関与](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * パートナーデータのユースケース {#partner-data}
       * [見込みサポートを通じて新規顧客を惹きつけ、獲得する](/help/rtcdp/partner-data/prospecting.md)
       * [パートナーが指定した属性でファーストパーティプロファイルを補完する](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
