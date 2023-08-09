@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
 workflow-type: tm+mt
-source-wordcount: '1907'
-ht-degree: 35%
+source-wordcount: '1926'
+ht-degree: 34%
 
 ---
 
@@ -77,6 +77,7 @@ ht-degree: 35%
 
 オーディエンスをに送信する前に [!DNL Facebook]次の要件を満たしていることを確認します。
 
+* お使いの [!DNL Facebook] ユーザーアカウントは、 [!DNL Facebook Business Account] 使用する広告アカウントを所有する
 * お使いの [!DNL Facebook] ユーザーアカウントには **[!DNL Manage campaigns]** 使用する予定の広告アカウントに対して有効になっている権限です。
 * The **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
   >[!IMPORTANT]

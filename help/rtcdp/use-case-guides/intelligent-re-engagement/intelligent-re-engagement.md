@@ -3,9 +3,9 @@ title: インテリジェントな再エンゲージメント
 description: コンバージョンの重要な瞬間に、説得力のあるつながりのあるエクスペリエンスを提供し、まれな顧客をインテリジェントに再エンゲージします。
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 9%
 
 ---
@@ -110,9 +110,7 @@ Experience Data Model(XDM) のリソースは、 [!UICONTROL スキーマ] Adobe
 
 スキーマの作成について詳しくは、 [スキーマの作成に関するチュートリアル](/help/xdm/tutorials/create-schema-ui.md)
 
-再エンゲージメントジャーニーに使用されるスキーマデザインは 4 つあります。
-
-各スキーマでは、特定のフィールドを設定する必要があります。また、推奨されるフィールドもいくつか必要です。
+再エンゲージメントジャーニーに使用されるスキーマデザインは 4 つあります。 各スキーマでは、特定のフィールドを設定する必要があります。また、推奨されるフィールドもいくつか必要です。
 
 #### 顧客属性スキーマのフィールドグループ要件
 
@@ -315,8 +313,6 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 AdobeWeb コネクタスキーマは、 [!UICONTROL XDM ExperienceEvent] スキーマ。次のフィールドグループが含まれます。
 
-Adobe Analytics Data Feed のエクスペリエンスイベントスキーマに必要なフィールドグループは次のとおりです。
-
 +++Adobe Analytics ExperienceEvent テンプレート（フィールドグループ）
 
 | フィールド | 要件 | 説明 |
@@ -382,8 +378,6 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 +++
 
 ![AdobeWeb コネクタスキーマで、フィールドグループのリストを強調表示します。](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### スキーマからのデータセットの作成
 
