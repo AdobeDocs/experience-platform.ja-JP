@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ ID フィールドは、Platform で顧客 ID グラフを構築する方法に�
 
 * [Adobe Experience Platform ID サービス](../../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
    * [ID 名前空間](../../../identity-service/namespaces.md)：ID 名前空間は、1 人の人物に関連している可能性のある様々なタイプの ID 情報を定義する、各 ID フィールドに必須のコンポーネントです。
-* [リアルタイム顧客プロファイル](../../../profile/home.md):顧客の ID グラフを活用して、ほぼリアルタイムで更新された、複数のソースからの集計データに基づいて統合された消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../../../profile/home.md)：顧客 ID グラフを活用して、ほぼリアルタイムで更新された、複数のソースからの集計データに基づいて統合された消費者プロファイルを提供します。
 
 ## ID フィールドの定義 {#define-a-identity-field}
 

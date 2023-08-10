@@ -2,8 +2,8 @@
 solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API を使用すると、開発者は Media Edge Analytics および Customer Journey Analytics のデータを収集できます。
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
-workflow-type: ht
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 100%
 
@@ -3227,7 +3227,7 @@ ht-degree: 100%
     },
     "/sessionStart": {
       "post": {
-        "description": "Signals the the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
+        "description": "Signals the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
         "parameters": [
           {
             "name": "configId",

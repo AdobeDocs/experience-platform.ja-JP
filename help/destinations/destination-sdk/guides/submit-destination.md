@@ -2,9 +2,9 @@
 description: このページでは、Destination SDKを使用して作成された、製品化された宛先のレビュー用に送信する必要があるすべての情報を提供します。
 title: 送信してレビュー用に生産済みの宛先をDestination SDKで作成
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 36%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 36%
    * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
    * 書き出されたファイルをストレージの場所からシステムに正常に取り込んだことを示す、何らかの配達確認の形式を送信します。
 * [destination publishing API](../publishing-api/create-publishing-request.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* ドキュメント PR（プル要求）。 [セルフサービスドキュメント化プロセス](../docs-framework/documentation-instructions.md).
+* ドキュメントの PR（プル要求）。 [セルフサービスドキュメント化プロセス](../docs-framework/documentation-instructions.md).
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
@@ -44,8 +44,8 @@ ht-degree: 36%
 
 Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md):顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
-* [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにしたい広告主は、VMG のほぼリアルタイム API を使用して、新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュできます。
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こしている人からオーディエンスを作成します。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media(VMG) の電子メールアドレスをキーにした特定のオーディエンスグループをターゲットにする広告主は、DataX API を使用して新しいオーディエンスをすばやく作成し、VMG のほぼリアルタイム API を使用して目的のオーディエンスグループをプッシュできます。
 
 ## 更新の理由 {#reason-for-update}
 
@@ -243,7 +243,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 * ストレージの場所から手動でファイルを取り出し、システムに取り込むスクリーンショットまたは短いスクリーンキャプチャビデオ。
 * システムの UI で、Experience Platformによって生成されたファイル名がシステムに正常に取り込まれたことを確認するスクリーンショットや短いスクリーンキャプチャビデオ。
-* Adobeがファイル名またはExperience Platformから生成されたデータと関連付けることのできる、システムの行をログに記録します。
+* Adobeがファイル名またはExperience Platformから生成されたデータと関連付けることのできる、システムからの行をログに記録します。
 
 ## 宛先の公開リクエストを提出したことの証明 {#destination-publishing-request-proof}
 

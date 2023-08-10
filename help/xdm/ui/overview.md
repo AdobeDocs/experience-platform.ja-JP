@@ -4,22 +4,22 @@ solution: Experience Platform
 title: スキーマ UI の概要
 description: この概要では、スキーマのスキーマワークスペースの主な機能についてExperience Platformします。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 9%
 
 ---
 
 # [!UICONTROL スキーマ] UI の概要
 
-この [!UICONTROL スキーマ] Adobe Experience Platformユーザーインターフェイスの workspace を使用すると、スキーマ、クラス、スキーマフィールドグループ、データ型などの Experience Data Model(XDM) リソースを管理できます。 アドビから提供されるコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
+The [!UICONTROL スキーマ] Adobe Experience Platformユーザーインターフェイスの workspace を使用すると、スキーマ、クラス、スキーマフィールドグループ、データ型などの Experience Data Model(XDM) リソースを管理できます。 アドビから提供されるコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
 Platform UI のワークスペースにアクセスするには、「 **[!UICONTROL スキーマ]** をクリックします。
 
 ![](../images/ui/overview/schemas-tab.png)
 
-## はじめに
+## Destination SDK の
 
 初めてワークスペースを使用する場合は、まず [UI の既存のリソースの詳細](./explore.md) を参照して、様々なタブとスキーマキャンバスについて理解します。
 
@@ -27,7 +27,7 @@ Platform UI のワークスペースにアクセスするには、「 **[!UICONT
 
 ## XDM リソースの作成と管理
 
-この [!UICONTROL スキーマ] workspace は、組織の XDM リソースを作成およびカスタマイズするための強力なツールを提供します。 UI で各リソースタイプを作成および編集する方法については、次のドキュメントを参照してください。
+The [!UICONTROL スキーマ] workspace は、組織の XDM リソースを作成およびカスタマイズするための強力なツールを提供します。 UI で各リソースタイプを作成および編集する方法については、次のドキュメントを参照してください。
 
 * [スキーマ](./resources/schemas.md)
 * [クラス](./resources/classes.md)
@@ -36,7 +36,7 @@ Platform UI のワークスペースにアクセスするには、「 **[!UICONT
 
 ## XDM フィールドの定義
 
-クラス、フィールドグループ、データ型はすべて、フィールドをスキーマに提供します。 これらのリソースにフィールドを追加する際に、標準のフィールドタイプのリストから選択できます。また、特定の使用例に対して特殊なフィールドを定義することもできます。 詳しくは、 [UI での XDM フィールドの定義](./fields/overview.md) を参照してください。
+クラス、フィールドグループ、データ型はすべて、フィールドをスキーマに提供します。 これらのリソースにフィールドを追加する際に、標準のフィールドタイプのリストから選択できます。また、特定の使用例に対して特殊なフィールドを定義することもできます。 に関するガイドを参照してください。 [UI での XDM フィールドの定義](./fields/overview.md) を参照してください。
 
 ## 次の手順
 

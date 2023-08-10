@@ -2,23 +2,23 @@
 title: ID 名前空間の概要
 description: ID 名前空間 は、ID の関連先コンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1766'
-ht-degree: 29%
+source-wordcount: '1765'
+ht-degree: 30%
 
 ---
 
 # ID 名前空間の概要
 
-ID 名前空間は、 [[!DNL Identity Service]](./home.md) id が関連するコンテキストのインジケーターとして機能する 例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
+ID 名前空間は [[!DNL Identity Service]](./home.md) のコンポーネントで、ID が関連付けられているコンテキストを示します。例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
 
 ## はじめに
 
 ID 名前空間を使用するには、関連する様々な Adobe Experience Platform サービスについて理解している必要があります。名前空間の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-- [[!DNL Identity Service]](./home.md):デバイスやシステム間で ID を結び付けることで、個々の顧客とその行動をより良く把握できます。
+- [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+- [[!DNL Identity Service]](./home.md)：デバイスやシステム間で ID を結び付けることで、個々の顧客とその行動をより良く把握します。
 - [[!DNL Privacy Service]](../privacy-service/home.md):ID 名前空間は、EU 一般データ保護規則 (GDPR) などの法的プライバシー規制への準拠リクエストで使用されます。 各プライバシーリクエストは、影響を受ける消費者のデータを識別するために、名前空間に対しておこなわれます。
 
 ## ID 名前空間について
@@ -61,11 +61,11 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 
 | 表示名 | 説明 |
 | ------------ | ----------- |
-| AdCloud | AdCloud を表すAdobe。 |
+| AdCloud | AdobeAdCloud を表す名前空間。 |
 | Adobe Analytics（レガシー ID） | Adobe Analyticsを表す名前空間。 次のドキュメントを参照してください： [Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
 | Apple Push Notification service | Appleプッシュ通知サービスを使用して収集された ID を表す名前空間。 次のドキュメントを参照してください： [Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) を参照してください。 |
-| CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前でも参照できます。「Adobe AudienceManager」 次のドキュメントを参照してください： [Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) を参照してください。 |
+| CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前 (「Adobe AudienceManager」) でも参照できます。 次のドキュメントを参照してください： [Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) を参照してください。 |
 | ECID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](./ecid.md) を参照してください。 |
 | メール | 電子メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、1 人のユーザーに関連付けられているので、様々なチャネルをまたいでそのユーザーを識別するために使用できます。 |
 | メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。次のドキュメントを参照してください： [SHA256 ハッシュサポート](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) を参照してください。 |
@@ -76,7 +76,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | 電話 (E.164) | E.164 形式でハッシュ化する必要がある生の電話番号を表す名前空間。 E.164 形式には、プラス記号 (`+`)、国際電話番号、市外局番、電話番号。 例：`(+)(country code)(area code)(phone number)`。 |
 | 電話 (SHA256) | SHA256 を使用してハッシュ化する必要がある電話番号を表す名前空間。 記号、文字、および先頭のゼロを削除する必要があります。 また、国呼び出しコードをプレフィックスとして追加する必要があります。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
-| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [ターゲット](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) 詳細情報を参照してください。 |
+| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) 詳細情報を参照してください。 |
 | Windows AID | Windows 広告 ID を表す名前空間。 次のドキュメントを参照してください： [Windows 広告 ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) を参照してください。 |
 
 ### ID 名前空間の表示 {#view-identity-namespaces}
@@ -110,7 +110,7 @@ UI を使用してカスタム名前空間を作成するには、 **[!UICONTROL
 
 ![select-create](./images/select-create.png)
 
-この **[!UICONTROL ID 名前空間を作成]** ダイアログボックスが表示されます。 一意の **[!UICONTROL 表示名]** および **[!UICONTROL ID シンボル]** 次に、作成する id タイプを選択します。 オプションで説明を追加して、名前空間に関する詳細情報を追加することもできます。 を除くすべての ID タイプ **人以外の識別子** では、同じステッチ動作に従います。 次を選択した場合、 **人以外の識別子** 名前空間を作成する際に id タイプとして、ステッチはおこなわれません。 各 ID タイプに関する詳細は、 [id タイプ](#identity-types).
+The **[!UICONTROL ID 名前空間を作成]** ダイアログボックスが表示されます。 一意の **[!UICONTROL 表示名]** および **[!UICONTROL ID シンボル]** 次に、作成する id タイプを選択します。 オプションで説明を追加して、名前空間に関する詳細情報を追加することもできます。 を除くすべての ID タイプ **人以外の識別子** では、同じステッチ動作に従います。 次を選択した場合、 **人以外の識別子** 名前空間を作成する際に id タイプとして、ステッチはおこなわれません。 各 ID タイプに関する詳細は、 [ID タイプ](#identity-types).
 
 完了したら、「**[!UICONTROL 作成]**」をクリックします。
 

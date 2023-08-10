@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ID；データ型；データ型；
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ID；データ型；データ型；
 solution: Experience Platform
 title: ID データタイプ
 description: このドキュメントでは、ID XDM データタイプの概要を説明します。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '283'
 ht-degree: 10%
 
 ---
 
 # [!UICONTROL ID] データタイプ
 
-[!UICONTROL ID] は標準の XDM データ型で、デジタルエクスペリエンスとやり取りしている人を明確に区別するために使用されます。 ID は ID プロバイダーによって確立され、プロバイダー自体は `namespace` 属性。 各 `namespace`の場合、ID は一意です。
+[!UICONTROL ID] は標準の XDM データ型で、デジタルエクスペリエンスとやり取りしている人を明確に区別するために使用されます。 ID は ID プロバイダーによって確立され、ID プロバイダー自体は `namespace` 属性。 次の期間内 `namespace`の場合、ID は一意です。
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
@@ -30,7 +30,7 @@ ht-degree: 10%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## 付録
 

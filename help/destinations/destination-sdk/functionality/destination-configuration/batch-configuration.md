@@ -1,10 +1,10 @@
 ---
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 91%
+source-wordcount: '1072'
+ht-degree: 87%
 
 ---
 
@@ -22,7 +22,7 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 
 バッチ設定は、ファイルベースの宛先に対する宛先設定の一部です。
 
-このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)方法に関するガイドを参照してください。
+Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 `/authoring/destinations` エンドポイントを介してファイル名および書き出しスケジュールを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

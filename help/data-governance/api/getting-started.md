@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Policy Service API の概要
 description: Policy Service API を使用すると、Adobe Experience Platform データガバナンスに関連する様々なリソースを作成および管理できます。このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 100%
+source-wordcount: '442'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ## 前提条件
 
-デベロッパーガイドを使用するには、データガバナンス機能の操作に関わる様々な [!DNL Experience Platform] サービスについて実際に理解しておく必要があります。[!DNL Policy Service API] の使用を開始する前に、次のサービスのドキュメントを確認してください。
+開発者ガイドを使用するには、 [!DNL Experience Platform] データガバナンス機能の操作に関わるサービス。 [!DNL Policy Service API] の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
 * [データガバナンス](../home.md)：[!DNL Experience Platform] がデータ使用コンプライアンスを実施するためのフレームワーク。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。

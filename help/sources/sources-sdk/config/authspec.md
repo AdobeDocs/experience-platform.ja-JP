@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソース（バッチ SDK）の認証仕様の設定
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 認証仕様は、Adobe Experience Platformユーザーがソースに接続する方法を定義します。
 
-この `authSpec` 配列には、ソースを Platform に接続するために必要な認証パラメーターに関する情報が含まれています。 任意のソースが複数の異なる種類の認証をサポートできます。
+The `authSpec` 配列には、ソースを Platform に接続するために必要な認証パラメーターに関する情報が含まれています。 任意のソースが複数の異なる種類の認証をサポートできます。
 
 ## 認証仕様
 
@@ -237,4 +237,4 @@ OAuth 2 の更新コードは、一時的なアクセストークンと更新ト
 
 ## 次の手順
 
-認証仕様を入力したら、Platform に統合するソースのソース仕様を設定できます。 ドキュメントを [ソース仕様の構成](./sourcespec.md) を参照してください。
+認証仕様を入力したら、Platform に統合するソースのソース仕様を設定できます。 次のドキュメントを参照してください： [ソース仕様の構成](./sourcespec.md) を参照してください。

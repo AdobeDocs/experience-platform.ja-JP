@@ -1,10 +1,10 @@
 ---
 description: Destination SDK で作成された宛先でサポートされるターゲット ID の設定方法を説明します。
 title: ID 名前空間設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 100%
+source-wordcount: '841'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 * ユーザーは、[標準的な ID 名前空間](../../../../identity-service/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
 * ユーザーは、[カスタム ID 名前空間](../../../../identity-service/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
 
-このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)方法に関するガイドを参照してください。
+Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 `/authoring/destinations` エンドポイントを介して、サポートされる ID 名前空間を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

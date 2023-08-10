@@ -1,11 +1,11 @@
 ---
 title: UI での Chatlio ソース接続の作成
 description: Adobe Experience Platform UI を使用して Chatlio ソース接続を作成する方法を説明します。
-badge: ベータ
+badge: ベータ版
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 22%
 
 ---
@@ -56,17 +56,17 @@ ht-degree: 22%
 
 ## [!DNL Chatlio] アカウントを接続 {#connect-account}
 
-Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
+Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから、 [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
 
-以下を使用： *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
+以下を使用します。 *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-次に移動： [!UICONTROL マーケティングの自動化] 表示するカテゴリ [!DNL Chatlio] ソースカード。 最初に、 **[!UICONTROL データを追加]**.
+次に移動： [!UICONTROL マーケティングの自動化] 表示するカテゴリ [!DNL Chatlio] ソースカード。 最初に、「 」を選択します。 **[!UICONTROL データを追加]**.
 
 ![Chatlio カードを含む Platform UI カタログ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## データの選択 {#select-data}
 
-この **[!UICONTROL データを選択]** の手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが提供されます。
+The **[!UICONTROL データを選択]** の手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが提供されます。
 
 * インターフェイスの左側には、アカウント内で使用可能なデータストリームを表示できるブラウザーがあります。
 * インターフェイスの右側では、JSON ファイルから最大 100 行のデータをプレビューできます。
@@ -83,7 +83,7 @@ Platform UI で、「 **[!UICONTROL ソース]** 左側のナビゲーション�
 
 ## データフローの詳細 {#dataflow-detail}
 
-この **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
+The **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -99,7 +99,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 | ターゲットフィールド | 説明 |
 | --- | --- |
-| `UUID` | この [!DNL Chatlio] イベントの識別子。 |
+| `UUID` | The [!DNL Chatlio] イベントの識別子。 |
 
 ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -116,7 +116,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 ![ソースワークフローのレビューステップ。](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
-## ストリーミングエンドポイント URL の取得 {#get-streaming-endpoint-url}
+## ストリーミングエンドポイント URL を取得する {#get-streaming-endpoint-url}
 
 ストリーミングデータフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイントは、Webhook を購読するために使用され、ストリーミングソースとExperience Platformが通信できます。
 
@@ -125,13 +125,13 @@ Webhook の設定に使用する URL を構築するために [!DNL Chatlio] 次
 * **[!UICONTROL データフロー ID]**
 * **[!UICONTROL ストリーミングエンドポイント]**
 
-次の手順で **[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]**、 [!UICONTROL データフローアクティビティ] 作成したデータフローのページを開き、詳細を [!UICONTROL プロパティ] パネル。
+次の手順で **[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]**、に移動します。 [!UICONTROL データフローアクティビティ] 作成したデータフローのページを開き、詳細を [!UICONTROL プロパティ] パネル。
 
 ![データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
 ストリーミングエンドポイントとデータフロー ID を取得したら、次のパターンに基づいて URL を作成します。 ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. 例えば、生成される Webhook URL は次のようになります。 ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
 
-## でウェブフックを設定する [!DNL Chatlio] {#set-up-webhook}
+## で Webhook を設定します。 [!DNL Chatlio] {#set-up-webhook}
 
 Webhook URL を作成すると、 [!DNL Chatlio] ユーザーインターフェイス。
 
@@ -161,11 +161,11 @@ Webhook URL を作成すると、 [!DNL Chatlio] ユーザーインターフェ�
 
 ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Chatlio] メッセージを取り込むには、次の手順に従います。
 
-* 次の項目を確認できます。 [!DNL Chatlio] **[!UICONTROL レポート]** > **[!UICONTROL チャット履歴]** キャプチャされたイベントを識別するページ [!DNL Chatlio].
+* 次の項目を確認できます。 [!DNL Chatlio] **[!UICONTROL レポート]** > **[!UICONTROL チャット履歴]** がキャプチャしたイベントを識別するページ [!DNL Chatlio].
 
 ![チャット履歴を示す Chatlio UI のスクリーンショット](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Platform UI で、「 **[!UICONTROL データフローを表示]** の横に [!DNL Chatlio] ソースカタログのカードメニュー 次に、 **[!UICONTROL データセットをプレビュー]** で設定した web フック用に取り込まれたデータを検証するには、以下を実行します。 [!DNL Chatlio].
+* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL Chatlio] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** で設定した web フック用に取り込まれたデータを検証するには、以下を実行します。 [!DNL Chatlio].
 
 ![取り込んだイベントを示す Platform UI のスクリーンショット](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 

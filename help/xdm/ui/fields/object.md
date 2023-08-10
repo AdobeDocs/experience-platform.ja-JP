@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのオブジェクトフィールドの定義
 description: Experience Platformユーザーインターフェイスでオブジェクトタイプフィールドを定義する方法を説明します。
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Adobe Experience Platformでは、カスタムの Experience Data Model(XDM) クラス、スキーマフィールドグループ、データタイプの構造を完全にカスタマイズできます。 関連するフィールドをカスタム XDM リソースで整理およびネストするには、追加のサブフィールドを含めることができるオブジェクトタイプのフィールドを定義します。
 
-条件 [新しいフィールドの定義](./overview.md#define) Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTROL タイプ]** ドロップダウンと選択[!UICONTROL オブジェクト]」をリストから削除します。
+条件 [新しいフィールドの定義](./overview.md#define) Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTROL タイプ]** ドロップダウンして「 」を選択します。[!UICONTROL オブジェクト]」をリストから削除します。
 
 ![](../../images/ui/fields/special/object.png)
 
-選択 **[!UICONTROL 適用]** をクリックして、スキーマにオブジェクトを追加します。 キャンバスが更新され、新しいフィールドが [!UICONTROL オブジェクト] サブフィールドを編集し、オブジェクトに追加するコントロールなど、適用されるデータタイプ。
+選択 **[!UICONTROL 適用]** をクリックして、スキーマにオブジェクトを追加します。 キャンバスが更新され、新しいフィールドが [!UICONTROL オブジェクト] サブフィールドを編集し、オブジェクトに追加するコントロールを含む、適用されるデータタイプ。
 
 ![](../../images/ui/fields/special/object-applied.png)
 

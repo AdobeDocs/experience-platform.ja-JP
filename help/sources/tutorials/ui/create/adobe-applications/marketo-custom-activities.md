@@ -2,9 +2,9 @@
 title: UI でのMarketo Engageソース接続とカスタムアクティビティデータのデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 22%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->このチュートリアルでは、 **カスタムアクティビティ** からのデータ [!DNL Marketo] Experience Platformに 次の項目については、 **標準活動** データ、読み取り [[!DNL Marketo] UI ガイド](./marketo.md).
+>このチュートリアルでは、を設定し、 **カスタムアクティビティ** からのデータ [!DNL Marketo] をExperience Platformに追加します。 次の項目については、 **標準活動** データ、読み取り [[!DNL Marketo] UI ガイド](./marketo.md).
 
-に加えて [標準アクティビティ](../../../../connectors/adobe-applications/mapping/marketo.md#activities)また、 [!DNL Marketo] カスタムアクティビティデータをAdobe Experience Platformに取り込むソース。 このドキュメントでは、 [!DNL Marketo] UI のソース。
+に加えて [標準アクティビティ](../../../../connectors/adobe-applications/mapping/marketo.md#activities)を使用する場合、 [!DNL Marketo] カスタムアクティビティデータをAdobe Experience Platformに取り込むソース。 このドキュメントでは、 [!DNL Marketo] UI 内のソース。
 
 ## はじめに
 
@@ -41,11 +41,11 @@ ht-degree: 22%
 
 選択 **フィールド** 上部のヘッダーから、カスタムアクティビティに関連付けられたフィールドを表示します。 このページでは、カスタムアクティビティのフィールドの名前、API 名、説明、データタイプを表示できます。 個々のフィールドに関する詳細は、後の手順（スキーマの作成時）で使用します。
 
-![Marketo EngageUI のMarketoカスタムアクティビティフィールドの詳細ページ](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![Marketo EngageUI のMarketoカスタムアクティビティフィールドの詳細ページ。](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## B2B アクティビティスキーマでカスタムアクティビティのフィールドグループを設定する
 
-内 *[!UICONTROL スキーマ]* ダッシュボード UI で、「Experience Platform」を選択します。 **[!UICONTROL 参照]** 次に、 **[!UICONTROL B2B アクティビティ]** スキーマのリストから。
+Adobe Analytics の *[!UICONTROL スキーマ]* ダッシュボード UI で、「Experience Platform」を選択します。 **[!UICONTROL 参照]** 次に、「 **[!UICONTROL B2B アクティビティ]** スキーマのリストから。
 
 >[!TIP]
 >
@@ -55,13 +55,13 @@ ht-degree: 22%
 
 ### カスタムアクティビティ用の新しいフィールドグループを作成します
 
-次に、 [!DNL B2B Activity] スキーマ。 このフィールドグループは、取り込むカスタムアクティビティに対応し、以前に取得したカスタムアクティビティの表示名を使用する必要があります。
+次に、新しいフィールドグループを [!DNL B2B Activity] スキーマ。 このフィールドグループは、取り込むカスタムアクティビティに対応し、以前に取得したカスタムアクティビティの表示名を使用する必要があります。
 
 新しいフィールドグループを追加するには、「 **[!UICONTROL +追加]** の横に *[!UICONTROL フィールドグループ]* 下のパネル *[!UICONTROL 構成]*.
 
 ![スキーマの構造。](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-この *[!UICONTROL フィールドグループを追加]* ウィンドウが表示されます。 選択 **[!UICONTROL 新しいフィールドグループを作成]** 次に、前の手順で取得したカスタムアクティビティと同じ表示名を指定し、新しいフィールドグループの説明を任意で指定します。 終了したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
+The *[!UICONTROL フィールドグループを追加]* ウィンドウが表示されます。 選択 **[!UICONTROL 新しいフィールドグループを作成]** 次に、前の手順で取得したカスタムアクティビティと同じ表示名を指定し、新しいフィールドグループの説明を任意で指定します。 終了したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
 
 ![ラベルを付けて新しいフィールドグループを作成するためのウィンドウ。](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
@@ -71,9 +71,9 @@ ht-degree: 22%
 
 ### スキーマ構造に新しいフィールドを追加します
 
-次に、スキーマに新しいフィールドを追加します。 この新しいフィールドは、 `type: object` とには、カスタムアクティビティの個々のフィールドが含まれます。
+次に、スキーマに新しいフィールドを追加します。 この新しいフィールドはに設定する必要があります `type: object` とには、カスタムアクティビティの個々のフィールドが含まれます。
 
-新しいフィールドを追加するには、プラス記号 (`+`) をクリックします。 エントリ *[!UICONTROL 名称未設定フィールド |タイプ]* が表示されます。 次に、 *[!UICONTROL フィールドプロパティ]* パネル。 フィールド名をカスタムアクティビティの API 名に設定し、表示名をカスタムアクティビティの表示名に設定します。 次に、タイプをに設定します。 `object` フィールドグループを、前の手順で作成したカスタムアクティビティフィールドグループに割り当てます。 完了したら、「**[!UICONTROL 適用]**」を選択します。
+新しいフィールドを追加するには、プラス記号 (`+`) をクリックします。 のエントリ *[!UICONTROL 名称未設定フィールド |タイプ]* が表示されます。 次に、 *[!UICONTROL フィールドのプロパティ]* パネル。 フィールド名をカスタムアクティビティの API 名に設定し、表示名をカスタムアクティビティの表示名に設定します。 次に、タイプをに設定します。 `object` フィールドグループを、前の手順で作成したカスタムアクティビティフィールドグループに割り当てます。 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![プラス (`+`) 記号を選択し、新しいフィールドを追加できるようにします。](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
@@ -81,7 +81,7 @@ ht-degree: 22%
 
 ![スキーマに追加された新しいフィールド。](../../../../images/tutorials/create/marketo-custom-activities/new-object-field-added.png)
 
-### オブジェクトフィールドにサブフィールドを追加 {#add-sub-fields-to-the-object-field}
+### オブジェクトフィールドにサブフィールドを追加する {#add-sub-fields-to-the-object-field}
 
 スキーマを準備する最後の手順は、前の手順で作成したフィールド内に個々のフィールドを追加することです。
 
@@ -101,7 +101,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### データの選択
 
-選択 **[!UICONTROL アクティビティ]** リストから [!DNL Marketo] データセットと選択 **[!UICONTROL 次へ]**.
+選択 **[!UICONTROL アクティビティ]** 次のリストから： [!DNL Marketo] データセットを選択し、 **[!UICONTROL 次へ]**.
 
 ![アクティビティデータセットを選択した状態で、ソースワークフローのデータを選択する手順です。](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
@@ -115,7 +115,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 標準アクティビティフィールドのマッピングは自動入力されますが、カスタムアクティビティフィールドは、対応するターゲットフィールドに手動でマッピングする必要があります。
 
-カスタムアクティビティフィールドのマッピングを開始するには、「 **[!UICONTROL 新しいフィールドタイプ]** 次に、 **[!UICONTROL 新しいフィールドを追加]**.
+カスタムアクティビティフィールドのマッピングを開始するには、「 **[!UICONTROL 新しいフィールドタイプ]** 次に、「 **[!UICONTROL 新しいフィールドを追加]**.
 
 ![新しいフィールドを追加するためのドロップダウンメニューを含むマッピング手順。](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
@@ -160,7 +160,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
 ```
 
-以下を使用： `IN` 句で複数のカスタムアクティビティをフィルターします。
+以下を使用します。 `IN` 句で複数のカスタムアクティビティをフィルターします。
 
 ```sql
 SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
@@ -173,4 +173,4 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 ## 次の手順
 
-このチュートリアルに従って、次の用の Platform スキーマを設定しました。 [!DNL Marketo] カスタムアクティビティデータを作成し、そのデータを Platform に取り込むためのデータフローを作成しました。 に関する一般的な情報 [!DNL Marketo] ソース、読む [[!DNL Marketo] ソースの概要](../../../../connectors/adobe-applications/marketo/marketo.md).
+このチュートリアルに従って、次の用の Platform スキーマを設定しました。 [!DNL Marketo] カスタムアクティビティデータを作成し、そのデータを Platform に取り込むためのデータフローを作成しました。 に関する一般的な情報 [!DNL Marketo] ソース、読み取り [[!DNL Marketo] ソースの概要](../../../../connectors/adobe-applications/marketo/marketo.md).

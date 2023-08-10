@@ -4,10 +4,10 @@ description: API を使用して、クラウドストレージバッチソース
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 76%
+source-wordcount: '1342'
+ht-degree: 75%
 
 ---
 
@@ -335,4 +335,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、クラウドストレージデータの暗号化キーペアと、暗号化されたデータを [!DNL Flow Service API] を使用して取り込むデータフローを作成しました。データフローの完全性、エラーおよび指標に関するステータスの更新については、[ [!DNL Flow Service]  API を使用したデータフローの監視](./monitor.md)に関するガイドを参照してください。
+このチュートリアルでは、クラウドストレージデータの暗号化キーペアと、暗号化されたデータを [!DNL Flow Service API] を使用して取り込むデータフローを作成しました。データフローの完全性、エラー、指標に関するステータスの更新については、 [を使用したデータフローの監視 [!DNL Flow Service] API](./monitor.md).

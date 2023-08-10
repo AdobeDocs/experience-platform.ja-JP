@@ -2,10 +2,10 @@
 title: データ要素エンドポイント
 description: Reactor API で /data_elements エンドポイントを呼び出す方法を説明します。
 exl-id: ea346682-441b-415b-af06-094158eb7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 100%
+source-wordcount: '1368'
+ht-degree: 99%
 
 ---
 
@@ -1314,7 +1314,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたデータ要素のオリジンの詳細が返されます。
+正常な応答は、指定されたデータ要素の接触チャネルの詳細を返します。
 
 ```json
 {

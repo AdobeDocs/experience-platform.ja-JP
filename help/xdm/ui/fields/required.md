@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;
 title: UI での必須フィールドの定義
 description: Experience Platformユーザーインターフェイスで必須の XDM フィールドを定義する方法を説明します。
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Experience Data Model(XDM) の必須フィールドは、データの取り込�
 
 >[!IMPORTANT]
 >
->スキーマフィールドが必須かどうかに関係なく、Platform は受け入れません `null` 取り込まれたフィールドの空の値 レコードまたはイベントの特定のフィールドに値がない場合、そのフィールドのキーを取り込みペイロードから除外する必要があります。
+>スキーマフィールドが必須かどうかに関係なく、Platform は受け入れません `null` 取り込まれたフィールドの空の値。 レコードまたはイベントの特定のフィールドに値がない場合、そのフィールドのキーを取り込みペイロードから除外する必要があります。
 
 条件 [新しいフィールドの定義](./overview.md#define) Adobe Experience Platformユーザーインターフェイスで、「 **[!UICONTROL 必須]** 」チェックボックスをオンにします。 選択 **[!UICONTROL 適用]** をクリックして、スキーマに変更を適用します。
 
@@ -28,7 +28,7 @@ Experience Data Model(XDM) の必須フィールドは、データの取り込�
 
 ただし、必須フィールドが必須とマークされていないオブジェクト内にネストされている場合は、ネストされたフィールドはの下に表示されません。 **[!UICONTROL 必須フィールド]** をクリックします。
 
-次の例では、 `internalSKU` フィールドは必須として設定されていますが、親オブジェクトです `SKUs` がではありません。 この場合、 `SKUs` は、データの取り込み時に子フィールドを含めても除外されます `internalSKU` が必要としてマークされています。 つまり、 `SKUs` オプションの場合は、次を含める必要があります。 `internalSKU` フィールドに含まれるイベントのフィールド。
+次の例では、 `internalSKU` フィールドは必須として設定されていますが、親オブジェクトです `SKUs` がではありません。 この場合、 `SKUs` は、データの取り込み時に子フィールドを含めても除外されます `internalSKU` が必要としてマークされています。 言い換えれば、 `SKUs` オプションの場合は、次を含める必要があります。 `internalSKU` フィールドに含まれるイベントのフィールド。
 
 ![入れ子の必須フィールド](../../images/ui/fields/required/nested.png)
 

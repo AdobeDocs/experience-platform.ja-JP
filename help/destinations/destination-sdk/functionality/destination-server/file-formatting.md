@@ -1,10 +1,10 @@
 ---
 description: 「/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK で作成されたファイルベースの宛先に対するファイル形式オプションの設定方法を説明します。
 title: ファイル形式設定
-source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 98%
+source-wordcount: '999'
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ Destination SDK でファイルベースの宛先を作成する場合、書き�
 
 ファイル形式設定は、ファイルベースの宛先に対する宛先サーバー設定の一部です。
 
-このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)方法に関するガイドを参照してください。
+Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 `/authoring/destination-servers` エンドポイントを介してファイル形式オプションを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

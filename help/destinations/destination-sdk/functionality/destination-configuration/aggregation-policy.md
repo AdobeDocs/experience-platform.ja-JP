@@ -1,10 +1,10 @@
 ---
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 96%
+source-wordcount: '995'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ API エンドポイントにデータを書き出す際に最大の効率を確�
 
 Destination SDK を使用してリアルタイム（ストリーミング）宛先を作成する際に、書き出されたプロファイルを結果の書き出しにどのように組み合わせるかを設定できます。この動作は、集計ポリシー設定によって決まります。
 
-このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、[Destination SDK を使用したストリーミング宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration)方法に関するガイドを参照してください。
+Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 `/authoring/destinations` エンドポイントを介して集計ポリシー設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

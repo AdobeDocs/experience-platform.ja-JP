@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 79%
+source-wordcount: '1773'
+ht-degree: 78%
 
 ---
 
@@ -92,7 +92,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 ![キーの生成](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-提供されたフォームを使用してキーの名前を指定し、キータイプに「**RSA**」を選択します。最小でも、**[!DNL RSA key size]** は、[!DNL Cosmos DB] で要求されているように、少なくとも **3072** ビットである必要があります。[!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
+提供されたフォームを使用してキーの名前を指定し、キータイプに「**RSA**」を選択します。少なくとも、 **[!DNL RSA key size]** は、少なくとも **3072** 必要なビット数 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
 
 >[!NOTE]
 >

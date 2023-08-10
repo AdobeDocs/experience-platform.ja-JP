@@ -7,10 +7,10 @@ landing-page-description: よくある質問への回答、および Experience 
 short-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1905'
-ht-degree: 98%
+source-wordcount: '1904'
+ht-degree: 97%
 
 ---
 
@@ -68,7 +68,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## [!DNL Platform] の必要システム構成は何ですか？{#what-are-the-system-requirements-for-platform}
 
-UI と API のどちらを使用しているかによって、次の必要システム構成が適用されます。
+UI と API のどちらを使用しているかに応じて、次の必要システム構成が適用されます。
 
 **UI ベースの操作の場合：**
 - 最新の標準的な Web ブラウザー。最新バージョンの [!DNL Chrome] をお勧めしますが、[!DNL Firefox] の最新および以前のメジャーリリース、[!DNL Internet Explorer]、Safari もサポートされています。

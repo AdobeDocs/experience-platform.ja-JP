@@ -2,10 +2,10 @@
 title: プロパティエンドポイント
 description: Reactor API で /properties エンドポイントを呼び出す方法を説明します。
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 100%
+source-wordcount: '1103'
+ht-degree: 99%
 
 ---
 
@@ -1406,7 +1406,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定したプロパティの会社の詳細が返されます。
+正常な応答は、指定されたプロパティの会社の詳細を返します。
 
 ```json
 {

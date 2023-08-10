@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソース（バッチ SDK）のソース仕様の設定
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1846'
 ht-degree: 45%
 
 ---
@@ -253,7 +253,7 @@ ht-degree: 45%
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | このプロパティを使用すると、`explodeEntityPath` で指定した属性名の値を上書きできます。 | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | ユーザーの現在のページの応答から次のページへのリンクを取得するため、または次のページ URL を作成する際に指定する必要があるパラメーターまたはフィールドを定義します。 |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | ソースでサポートされているページネーションタイプを表示します。 | <ul><li>`OFFSET`：このページネーションタイプを使用すると、結果の配列を開始する場所のインデックスと、返される結果の上限数を指定することで、結果を解析できます。</li><li>`POINTER`：このページネーションタイプを使用すると、リクエストと共に送信する必要がある特定の項目を、`pointer` 変数を使用して指定することができます。ポインタータイプのページネーションでは、次のページを指すパスがペイロード内に必要です。</li><li>`CONTINUATION_TOKEN`:このページネーションタイプを使用すると、クエリまたはヘッダーパラメーターに継続トークンを追加して、事前に決定された最大値により最初に返されなかった残りの戻りデータをソースから取得できます。</li><li>`PAGE`:このページネーションタイプを使用すると、0 ページから始まり、ページごとに戻りデータをトラバースするページングパラメーターと共にクエリパラメーターを追加できます。</li><li>`NONE`:このページネーションタイプは、使用可能なページネーションタイプをサポートしないソースに使用できます。 ページネーションタイプ `NONE` リクエストの後に応答データ全体を返します。</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | ソースでサポートされているページネーションタイプを表示します。 | <ul><li>`OFFSET`：このページネーションタイプを使用すると、結果の配列を開始する場所のインデックスと、返される結果の上限数を指定することで、結果を解析できます。</li><li>`POINTER`：このページネーションタイプを使用すると、リクエストと共に送信する必要がある特定の項目を、`pointer` 変数を使用して指定することができます。ポインタータイプのページネーションでは、次のページを指すパスがペイロード内に必要です。</li><li>`CONTINUATION_TOKEN`：このページネーションタイプを使用すると、クエリまたはヘッダーパラメーターに継続トークンを追加して、事前に決定された最大値により最初に返されなかった残りの戻りデータをソースから取得できます。</li><li>`PAGE`：このページネーションタイプを使用すると、0 ページから始まり、ページごとに戻りデータをトラバースするページングパラメーターと共にクエリパラメーターを追加できます。</li><li>`NONE`：このページネーションタイプは、使用可能なページネーションタイプをサポートしないソースに使用できます。 ページネーションタイプ `NONE` は、リクエストの後に応答データ全体を返します。</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | API が 1 ページで取得するレコードの数を指定できる制限の名前。 | `limit` または `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | 1 ページで取得するレコードの数。 | `limit=10` または `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | オフセット属性名。 ページネーションタイプが `offset` に設定されている場合に必要です。 | `offset` |
@@ -263,7 +263,7 @@ ht-degree: 45%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 終了時間のパラメーター名を定義します | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName` でサポートされる形式を定義します。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | 詳しくは、 [その他のリソース](#user-input) 例： `spec.properties`. |
+| `sourceSpec.spec.properties` | リソース値を取得するためのユーザー指定のパラメーターを定義します。 | 詳しくは、 [その他のリソース](#user-input) 例えば、 `spec.properties`. |
 
 {style="table-layout:auto"}
 
@@ -401,9 +401,9 @@ ht-degree: 45%
 | --- | --- |
 | `type` | データを返すために使用されるページネーションのタイプ。 |
 | `continuationTokenPath` | 返された結果の次のページに移動するためにクエリパラメーターに追加する必要がある値。 |
-| `parameterType` | この `parameterType` プロパティは、 `parameterName` を追加する必要があります。 この `QUERYPARAM` タイプを使用すると、クエリを `parameterName`. この `HEADERPARAM` を使用すると、 `parameterName` をヘッダーリクエストに追加します。 |
+| `parameterType` | The `parameterType` プロパティは、 `parameterName` を追加する必要があります。 The `QUERYPARAM` タイプを使用すると、クエリを `parameterName`. The `HEADERPARAM` を使用すると、 `parameterName` をヘッダーリクエストに追加します。 |
 | `parameterName` | 継続トークンの組み込みに使用するパラメーターの名前。 形式は次のとおりです。 `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
-| `delayRequestMillis` | この `delayRequestMillis` プロパティをページネーションで使用すると、ソースに対するリクエストの割合を制御できます。 一部のソースでは、1 分あたりに実行できるリクエスト数に制限がある場合があります。 例： [!DNL Zendesk] には、1 分あたり 100 件のリクエストの制限があり、  `delayRequestMillis` から `850` では、1 分あたり 100 件のリクエストしきい値の下で、1 分あたり約 80 件のリクエストで呼び出しをおこなうようにソースを設定できます。 |
+| `delayRequestMillis` | The `delayRequestMillis` プロパティをページネーションで使用すると、ソースに対するリクエストの割合を制御できます。 一部のソースでは、1 分あたりに実行できるリクエスト数に制限がある場合があります。 例： [!DNL Zendesk] には、1 分あたり 100 件のリクエストと定義の制限があります。  `delayRequestMillis` から `850` では、1 分あたり 100 件のリクエストしきい値の下で、1 分あたり約 80 件のリクエストで呼び出しをおこなうようにソースを設定できます。 |
 
 次に、ページネーションの継続トークンタイプを使用して返される応答の例を示します。
 
@@ -434,7 +434,7 @@ ht-degree: 45%
 
 #### `PAGE`
 
-この `PAGE` ページネーションのタイプを使用すると、0 から始まるページ数で戻りデータをトラバースできます。 を使用する場合 `PAGE` 「ページネーション」と入力する場合、単一のページで指定するレコード数を指定する必要があります。
+The `PAGE` ページネーションのタイプを使用すると、0 から始まるページ数で戻りデータをトラバースできます。 を使用する場合 `PAGE` 「ページネーション」と入力する場合、単一のページで指定するレコード数を指定する必要があります。
 
 ```json
 "paginationParams": {
@@ -463,7 +463,7 @@ ht-degree: 45%
 
 #### `NONE`
 
-この `NONE` ページネーションタイプは、使用可能なページネーションタイプをサポートしていないソースに使用できます。 ページネーションタイプを使用するソース `NONE` 単に、取得可能なすべてのレコードを、GETリクエストがおこなわれたときに返します。
+The `NONE` ページネーションタイプは、使用可能なページネーションタイプをサポートしないソースに使用できます。 ページネーションタイプを使用するソース `NONE` 単に、取得可能なすべてのレコードを、GETリクエストがおこなわれたときに返します。
 
 ```json
 "paginationParams": {
@@ -471,9 +471,9 @@ ht-degree: 45%
 }
 ```
 
-### セルフサービスソース（バッチ SDK）の高度なスケジュール
+### セルフサービスソース（バッチ SDK）の高度なスケジュール設定
 
-高度なスケジュールを使用して、ソースの増分スケジュールとバックフィルスケジュールを設定します。 この `incremental` プロパティを使用すると、新しいレコードや変更されたレコードのみを取り込むスケジュールを設定できます。 `backfill` プロパティを使用すると、履歴データを取り込むスケジュールを作成できます。
+高度なスケジュールを使用して、ソースの増分スケジュールとバックフィルスケジュールを設定します。 The `incremental` プロパティを使用すると、新しいレコードや変更されたレコードのみを取り込むスケジュールを設定できます。 `backfill` プロパティを使用すると、履歴データを取り込むスケジュールを作成できます。
 
 高度なスケジュール設定では、ソースに固有の式や関数を使用して、増分スケジュールとバックフィルスケジュールを設定できます。 次の例では、 [!DNL Zendesk] ソースでは、増分スケジュールの形式を設定する必要があります `type:user updated > {START_TIME} updated < {END_TIME}` およびバックフィル： `type:user updated < {END_TIME}`.
 
@@ -488,12 +488,12 @@ ht-degree: 45%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `scheduleParams.type` | ソースで使用するスケジュールのタイプ。 この値をに設定します。 `ADVANCE` 詳細スケジュールタイプを使用する場合。 |
+| `scheduleParams.type` | ソースで使用するスケジュールのタイプ。 この値をに設定します。 `ADVANCE` 詳細スケジュールタイプを使用するには、次の手順に従います。 |
 | `scheduleParams.paramFormat` | スケジュールパラメーターの定義された形式。 この値は、ソースの `scheduleStartParamFormat` および `scheduleEndParamFormat` 値。 |
-| `scheduleParams.incremental` | ソースの増分クエリ。 増分とは、新しいデータまたは変更されたデータのみを取り込む取り込み方法を指します。 |
+| `scheduleParams.incremental` | ソースの増分処理クエリ。 増分とは、新しいデータまたは変更されたデータのみを取り込む取り込み方法を指します。 |
 | `scheduleParams.backfill` | ソースのバックフィルクエリ。 バックフィルとは、履歴データを取り込む取り込み方法を指します。 |
 
-高度なスケジュールを設定したら、 `scheduleParams` 「 URL 」、「 body 」または「 header params 」セクションの値を指定します。 次の例では、 `{SCHEDULE_QUERY}` は、増分およびバックフィルのスケジューリング式を使用する場所を指定するために使用されるプレースホルダーです。 の場合、 [!DNL Zendesk] ソース `query` が `queryParams` をクリックして、アドバンススケジュールを指定します。
+高度なスケジュールを設定したら、 `scheduleParams` 「 URL 」、「 body 」または「 header params 」セクションの値を指定します。 次の例では、 `{SCHEDULE_QUERY}` は、増分およびバックフィルのスケジューリング式を使用する場所を指定するために使用されるプレースホルダーです。 の場合、 [!DNL Zendesk] ソース、 `query` が `queryParams` をクリックして、アドバンススケジュールを指定します。
 
 ```json
 "urlParams": {
@@ -611,4 +611,4 @@ ht-degree: 45%
 
 ## 次の手順
 
-ソースの仕様を入力したので、次は Platform に統合するソースの探索仕様を設定できます。詳しくは、[探索仕様の設定](./explorespec.md)に関するドキュメントを参照してください。
+ソースの仕様を入力したので、次は Platform に統合するソースの探索仕様を設定できます。次のドキュメントを参照してください： [仕様の構成](./explorespec.md) を参照してください。

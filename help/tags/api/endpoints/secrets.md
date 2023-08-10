@@ -2,10 +2,10 @@
 title: 秘密鍵エンドポイント
 description: Reactor API で /secrets エンドポイントを呼び出す方法を説明します。
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 92%
+source-wordcount: '1246'
+ht-degree: 89%
 
 ---
 
@@ -302,7 +302,7 @@ POST リクエストを行うことで、秘密鍵を作成できます。
 
 >[!NOTE]
 >
->新しい秘密鍵を作成すると、API はそのリソースの情報を含む応答を即座に返します。同時に、秘密鍵の交換タスクがトリガーされ、認証情報の交換が機能しているかどうかをテストします。このタスクは非同期で処理され、秘密鍵のステータス属性が結果に応じて `succeeded` または `failed` に更新されます。
+>新しい秘密鍵を作成すると、API はそのリソースの情報を含む応答を即座に返します。同時に、秘密鍵の交換タスクがトリガーされ、認証情報の交換が機能しているかどうかをテストします。このタスクは非同期で処理され、シークレットの status 属性をに更新します。 `succeeded` または `failed` 結果に応じて。
 
 **API 形式**
 
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **応答**
 
-応答が成功すると、秘密鍵の詳細と、`meta.test_exchange` 配下に格納される認証サービスの応答が返されます。
+正常な応答は、シークレットの詳細を返し、認証サービスの応答はの下に含まれます。 `meta.test_exchange`.
 
 ```json
 { 
@@ -540,7 +540,7 @@ curl -X PATCH \
 
 ## 秘密鍵の再試行 {#retry}
 
-秘密鍵の再試行は、秘密鍵の交換を手動でトリガーする操作です。PATCH リクエストのパスに ID を含めることで、秘密鍵を再試行できます。
+秘密鍵の再試行は、秘密鍵の交換を手動でトリガーするアクションです。PATCH リクエストのパスに ID を含めることで、秘密鍵を再試行できます。
 
 **API 形式**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SECRET_ID}` | この `id` 再認証する秘密鍵を設定します。 |
+| `{SECRET_ID}` | The `id` 再認証する秘密鍵の数を指定します。 |
 
 **リクエスト**
 
-この `data` リクエストペイロードのオブジェクトには、 `meta.action` プロパティを `reauthorize`.
+The `data` リクエストペイロードのオブジェクトには、 `meta.action` プロパティをに設定 `reauthorize`.
 
 ```shell
 curl -X PATCH \

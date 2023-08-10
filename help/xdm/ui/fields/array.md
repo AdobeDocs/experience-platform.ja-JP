@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI で配列フィールドを定義
 description: Experience Platformユーザーインターフェイスで配列フィールドを定義する方法を説明します。
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platformユーザーインターフェイスで Experience Data Model(XDM) フィールドを定義する際に、そのフィールドを配列として指定できます。
 
-配列の内容は、 [!UICONTROL タイプ] を選択します。 例えば、フィールドの [!UICONTROL タイプ] が&quot;に設定されている[!UICONTROL 文字列]」の場合、そのフィールドを配列として設定すると、フィールドが文字列の配列として指定されます。 フィールドの [!UICONTROL タイプ] が「[!UICONTROL 郵送先住所]「」の場合、データ型に準拠する郵送先住所オブジェクトの配列になります。
+配列の内容は、 [!UICONTROL タイプ] を選択します。 例えば、フィールドの [!UICONTROL タイプ] が「」に設定されている[!UICONTROL 文字列]」の場合、そのフィールドを配列として設定すると、フィールドが文字列の配列として指定されます。 フィールドの [!UICONTROL タイプ] が「[!UICONTROL 郵送先住所]「」の場合、データ型に準拠する郵送先住所オブジェクトの配列になります。
 
 次の条件が満たされた後 [UI で新しいフィールドを定義](./overview.md#define)を使用する場合は、 **[!UICONTROL 配列]** 」チェックボックスをオンにします。
 
@@ -33,7 +33,7 @@ Adobe Experience Platformユーザーインターフェイスで Experience Data
 
 {style="table-layout:auto"}
 
-フィールドの設定が完了したら、「 **[!UICONTROL 適用]** をクリックして、スキーマに変更を適用します。
+フィールドの設定が完了したら、「 」を選択します。 **[!UICONTROL 適用]** をクリックして、スキーマに変更を適用します。
 
 ![](../../images/ui/fields/special/array-config.png)
 

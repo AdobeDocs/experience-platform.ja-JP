@@ -1,12 +1,12 @@
 ---
 title: 自己識別サーベイを使用した Experience Platform 個人プロファイルの作成
-description: 自己識別サーベイ UI を使用して、職務および関連する目的に応じて関連性の高いコンテンツを受け取る方法を説明します。
-badge: ベータ
+description: 自己識別調査 UI を使用して、職務機能や関連する目的に基づいて関連するコンテンツを受け取る方法を学びます。
+badge: ベータ版
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 100%
+source-wordcount: '560'
+ht-degree: 96%
 
 ---
 

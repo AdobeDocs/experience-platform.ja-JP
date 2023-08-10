@@ -2,10 +2,10 @@
 title: ルールコンポーネントエンドポイント
 description: Reactor API で /rule_components エンドポイントを呼び出す方法を説明します。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 95%
+source-wordcount: '1155'
+ht-degree: 93%
 
 ---
 
@@ -310,7 +310,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | この `id` ルールコンポーネントを定義するプロパティの。 |
+| `PROPERTY_ID` | The `id` ルールコンポーネントを定義するプロパティの。 |
 
 {style="table-layout:auto"}
 
@@ -788,7 +788,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定したルールコンポーネントの拡張機能の詳細が返されます。
+正常な応答は、指定されたルールコンポーネントの拡張の詳細を返します。
 
 ```json
 {
@@ -908,7 +908,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定したルールコンポーネントの起点の詳細が返されます。
+正常な応答は、指定されたルールコンポーネントの接触チャネルの詳細を返します。
 
 ```json
 {

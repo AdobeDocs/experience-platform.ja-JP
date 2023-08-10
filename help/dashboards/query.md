@@ -4,10 +4,10 @@ title: クエリサービスを使用したダッシュボードデータセッ�
 type: Documentation
 description: クエリサービスを使用して、プロファイル、オーディエンス、宛先ダッシュボードを機能させる未加工のデータセットを調査および処理する方法について説明します。Experience Platform
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 38%
+source-wordcount: '946'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platformは、Experience PlatformUI 内で使用できるダッ
 
 Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用してデータレイクのデータに対してクエリを実行できるようにし、マーケターがデータからインサイトを得るのをサポートします。 [!DNL Query Service] は、データレイク内の任意のデータセットを結合し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、リアルタイム顧客プロファイルへの取り込みに使用できるユーザーインターフェイスと API を提供します。
 
-詳しくは、以下を参照してください。 [!DNL Query Service] Experience Platform内での役割は、まず読んでください [[!DNL Query Service] 概要](../query-service/home.md).
+詳しくは、以下を参照してください。 [!DNL Query Service] Experience Platform内での役割は、まず読んでください。 [[!DNL Query Service] 概要](../query-service/home.md).
 
 ## 使用可能なデータセットへのアクセス
 
@@ -39,7 +39,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 サイドバーが開き、2 つのトグルが表示されます。 [!UICONTROL プロファイルに含まれる] および [!UICONTROL システムデータセットを表示]. 切り替えを選択 [!UICONTROL システムデータセットを表示] を使用して、システム生成データセットをデータセットの参照可能なリストに含めます。
 
-![「システムデータセットを表示」切り替えがハイライトされた「データセットの参照」タブ](./images/query/show-system-datasets.png)
+![「システムデータセットを表示」切り替えがハイライトされた「データセットの参照」タブ。](./images/query/show-system-datasets.png)
 
 ### プロファイル属性データセット
 
@@ -82,11 +82,7 @@ DIM の宛先データセットの完全なスキーマを理解するには、E
 
 ![DIM_Destination データセットのプレビュー。](images/query/destinations-metadata.png)
 
-## （ベータ版）顧客データプラットフォーム (CDP) のインサイトレポート
-
->[!IMPORTANT]
->
->CDP インサイトデータモデル機能はベータ版です。 その機能とドキュメントは変更される可能性があります。
+## 顧客データプラットフォーム (CDP) インサイトレポート
 
 CDP インサイトデータモデル機能は、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化する SQL を公開します。 これらの SQl クエリテンプレートをカスタマイズして、マーケティングおよび KPI の使用例に応じて CDP レポートを作成できます。
 

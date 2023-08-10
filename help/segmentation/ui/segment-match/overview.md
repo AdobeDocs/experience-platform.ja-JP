@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 100%
+source-wordcount: '1996'
+ht-degree: 98%
 
 ---
 
@@ -58,7 +58,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 [!DNL Segment Match] のデフォルトの同意設定は `opt-out` に指定されています。データのオプトインモデルを適用するには、アドビアカウントチームにメールでリクエストを送信してください。
 
-データ共有の同意値を設定するために使用される `share` 属性について詳しくは、[プライバシーと同意フィールドグループ](../../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
+詳しくは、 `share` 属性を使用して、データ共有の同意の値を設定します。 [プライバシーと同意フィールドグループ](../../../xdm/field-groups/profile/consents.md). プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 
 ### データ使用ラベルの設定
 

@@ -2,9 +2,9 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2298'
 ht-degree: 59%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 59%
 >* 13 か月間にわたって履歴レポートスイートデータをデータレイクにバックフィルするデータフロー。 このデータフローは、バックフィルが完了すると終了します。
 >* ライブデータをデータレイクとに送信するデータフロー [!DNL Real-Time Customer Profile]. このデータフローは継続的に実行されます。
 
-
 Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。また、検索バーを使用して、表示されるソースを絞り込むこともできます。
@@ -54,7 +53,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 >
 >画面に表示されるレポートスイートは、様々な地域からのものです。 お客様は、データの制限事項と義務、およびAdobe Experience Platformの複数の地域でのデータの使用方法について理解する必要があります。 会社で許可されていることを確認してください。
 
-この **[!UICONTROL Analytics ソースデータの追加]** 手順に従って、 [!DNL Analytics] ソース接続を作成するレポートスイートデータ。
+The **[!UICONTROL Analytics ソースデータの追加]** 手順に従って、 [!DNL Analytics] ソース接続を作成するレポートスイートデータ。
 
 レポートスイートは、 [!DNL Analytics] レポート。 組織は、様々なデータセットを含む多数のレポートスイートを持つことができます。
 
@@ -68,7 +67,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 >
 >複数のレポートスイートのデータをリアルタイム顧客プロファイルに対して有効にできるのは、意味が異なる 2 つのカスタムプロパティ（eVar、リストおよび prop）など、データの競合がない場合のみです。
 
-次の手順で [!DNL Analytics] ソース接続を選択し、レポートスイートを選択して、 **[!UICONTROL 次へ]** をクリックして続行します。
+次の手順で、 [!DNL Analytics] ソース接続を選択し、レポートスイートを選択して、 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -184,11 +183,11 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >
 >行レベルのフィルタリングを使用して、条件を適用し、**プロファイルの取り込みに含める**&#x200B;データを指示します。列レベルのフィルタリングを使用して、**プロファイルの取り込みから除外する**&#x200B;データの列を選択します。
 
-データをフィルターできます [!DNL Profile] 行レベルおよび列レベルでの取り込み。 行レベルのフィルタリングでは、文字列の含む、等しい、始まる、次で終わるなどの条件を定義できます。 また、行レベルのフィルターを使用して、 `AND` 同様に `OR`を使用して、条件を無効にする `NOT`.
+データをフィルターできます。 [!DNL Profile] 行レベルおよび列レベルでの取り込み。 行レベルのフィルタリングでは、文字列の含む、等しい、始まる、次で終わるなどの条件を定義できます。 また、行レベルのフィルターを使用して、 `AND` 同様に `OR`を使用して、条件を無効にする `NOT`.
 
 次の手順で [!DNL Analytics] 行レベルのデータで、 **[!UICONTROL 行フィルター]**.
 
-![行フィルター](../../../../images/tutorials/create/analytics/row-filter.png)
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
 左側のレールを使用してスキーマ階層間を移動し、選択したスキーマ属性を選択して、特定のスキーマをさらに詳しく掘り下げます。
 
@@ -226,11 +225,11 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![add-container](../../../../images/tutorials/create/analytics/add-container.png)
 
-新しいコンテナを追加したら、「 」を選択します。 **[!UICONTROL 次を含む]** 次に、 **[!UICONTROL 除外]** をクリックします。
+新しいコンテナを追加したら、「 」を選択します。 **[!UICONTROL 次を含む]** 次に、「 **[!UICONTROL 除外]** をクリックします。
 
 ![exclude](../../../../images/tutorials/create/analytics/exclude.png)
 
-次に、スキーマ属性をドラッグし、フィルタリングから除外する値を追加して、同じ手順を完了します。 次の例では、 [!DNL iPhone 12], [!DNL iPhone 12 mini]、および [!DNL Google Pixel 5] はすべて、 **[!UICONTROL モデル]** 属性、横長は **[!UICONTROL 画面の向き]**、およびモデル番号 [!DNL A1633] 次から除外： **[!UICONTROL モデル番号]**.
+次に、スキーマ属性をドラッグし、フィルタリングから除外する値を追加して、同じ手順を完了します。 次の例では、 [!DNL iPhone 12], [!DNL iPhone 12 mini]、および [!DNL Google Pixel 5] はすべて、次の項目から除外されます。 **[!UICONTROL モデル]** 属性、横置きは **[!UICONTROL 画面の向き]**、およびモデル番号 [!DNL A1633] 次から除外： **[!UICONTROL モデル番号]**.
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -248,7 +247,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![列 — 選択](../../../../images/tutorials/create/analytics/columns-selected.png)
+![列 — 選択済み](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### データフローの詳細を入力
 

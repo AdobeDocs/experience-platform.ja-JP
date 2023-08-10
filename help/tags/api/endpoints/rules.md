@@ -2,10 +2,10 @@
 title: ルールエンドポイント
 description: Reactor API で /rules エンドポイントを呼び出す方法を説明します。
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 98%
+source-wordcount: '896'
+ht-degree: 95%
 
 ---
 
@@ -858,7 +858,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたルールの拡張の詳細が返されます。
+正常な応答は、指定されたルールの拡張の詳細を返します。
 
 ```json
 {
@@ -960,7 +960,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたルールのプロパティの詳細が返されます。
+正常な応答は、指定されたルールのプロパティの詳細を返します。
 
 ```json
 {

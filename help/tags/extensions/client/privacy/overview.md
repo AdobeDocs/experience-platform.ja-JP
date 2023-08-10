@@ -2,10 +2,10 @@
 title: Adobe Privacy 拡張機能の概要
 description: Adobe Experience Platform の Adobe Privacy タグ拡張機能について説明します。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 92%
+source-wordcount: '900'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Privacy タグ拡張機能を使用すると、クライアントサイド
 
 >[!NOTE]
 >
->タグを使用せずにこれらの機能をインストールする場合は、[Privacy の JavaScript ライブラリの概要](../../../../privacy-service/js-library.md)を参照し、ローコードを使用して実装する手順を確認してください。
+>タグを使用せずにこれらの機能をインストールする場合は、 [プライバシー JavaScript ライブラリの概要](../../../../privacy-service/js-library.md) raw コードを使用したを実装する手順を参照してください。
 
 ## 拡張機能のインストールと設定
 
@@ -71,7 +71,7 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ### ID を処理するデータ要素の定義
 
-新しいデータ要素の作成プロセスを開始するには、次を選択します。 **[!UICONTROL データ要素]** 左のナビゲーションで、その後に **[!UICONTROL データ要素を追加]**. 設定画面が表示されたら、拡張機能で「**[!UICONTROL Core]**」を選択し、データ要素タイプで「**[!UICONTROL カスタムコード]**」を選択します。ここから、右側のパネルの「**[!UICONTROL 編集画面を開く]**」を選択します。
+新しいデータ要素の作成プロセスを開始するには、次を選択します。 **[!UICONTROL データ要素]** 左のナビゲーションで、の後にが続きます。 **[!UICONTROL データ要素を追加]**. 設定画面が表示されたら、拡張機能で「**[!UICONTROL Core]**」を選択し、データ要素タイプで「**[!UICONTROL カスタムコード]**」を選択します。ここから、右側のパネルの「**[!UICONTROL 編集画面を開く]**」を選択します。
 
 ![データ要素タイプの選択](../../../images/extensions/client/privacy/data-element-type.png)
 

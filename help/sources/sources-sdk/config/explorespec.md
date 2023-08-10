@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソース（バッチ SDK）の仕様の設定
 description: このドキュメントでは、セルフサービスソース（バッチ SDK）を使用するために準備する必要がある設定の概要を説明します。
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 6%
 
 ---
@@ -84,4 +84,4 @@ ht-degree: 6%
 
 ## 次の手順
 
-エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API 詳しくは、 [セルフサービスソース（バッチ SDK）API ガイド](../api/api-overview.md) を参照してください。
+エクスプローラ仕様を入力したら、次を使用して完全な接続仕様を作成できます： [!DNL Flow Service] API. 詳しくは、 [セルフサービスソース（バッチ SDK）API ガイド](../api/api-overview.md) を参照してください。
