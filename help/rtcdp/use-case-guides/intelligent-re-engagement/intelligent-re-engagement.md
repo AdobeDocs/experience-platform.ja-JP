@@ -3,9 +3,9 @@ title: インテリジェントな再エンゲージメント
 description: コンバージョンの重要な瞬間に、説得力のあるつながりのあるエクスペリエンスを提供し、まれな顧客をインテリジェントに再エンゲージします。
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3258'
 ht-degree: 8%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->注釈
+>[!NOTE]
 >
 >スキーマを作成する手順と同様に、データセットをリアルタイム顧客プロファイルに含める必要があります。 リアルタイム顧客プロファイルでデータセットを使用する方法について詳しくは、 [スキーマの作成に関するチュートリアル](/help/xdm/tutorials/create-schema-ui.md#profile).
 
