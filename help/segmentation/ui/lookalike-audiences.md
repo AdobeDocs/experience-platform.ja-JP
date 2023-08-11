@@ -5,9 +5,9 @@ description: 類似 (look-alike) オーディエンスを使用して、Adobe Ex
 badgeLimitedAvailability: label="限定提供（LA）" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platformでは、類似 (look-alike) モデルは、次の 3 �
 
 これらのデータポイントはすべて、類似 (look-alike) モデルに入力されるキー値ペアに変換されます。 一致するプロファイルの大きな割合を持つキー値ペアのみが保持されます。
 
-類似モデルは頻繁に実行され、ベースオーディエンスの影響を及ぼす要因と類似性グラフを作成および再作成します。 類似 (look-alike) オーディエンスのスコアも頻繁に実行されます。
+現時点では、類似モデルは 24 時間ごとに実行され、ベースオーディエンスの影響を与える要因と類似性グラフを作成および再作成します。 類似 (look-alike) オーディエンスのスコアも頻繁に実行されます。
 
 ## 権利 {#entitlements}
 
@@ -52,11 +52,26 @@ Adobe Experience Platformでは、類似 (look-alike) モデルは、次の 3 �
 - Real-Time CDP Ultimate のお客様には、次の権限が付与されます。 **20** 実稼動サンドボックス内のアクティブな類似オーディエンス
 - 開発サンドボックスは次に制限されています： **5** すべてのReal-Time CDPのお客様向けの類似オーディエンス
 
-アドオンパックを利用できるので、実稼動用サンドボックスの使用権限がパックあたり 20 人の類似オーディエンスに増加します。
+アドオンパック（後日利用可能になる予定）は、1 パックにつき 20 人の類似オーディエンスが実稼動用サンドボックスの使用権限を増やします。
 
 類似 (look-alike) オーディエンスへのアクセス権があるかどうかを確認するには、Adobe担当者にお問い合わせください。
 
 ## 類似のインサイトを表示 {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="不適格"
+>abstract="このオーディエンスは、現在、トレーニングに必要な最小数のプロファイル数を下回っているか、またはプロファイルの書き出しがまだトリガーされていないので、類似インサイトに対する資格がありません。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="処理中"
+>abstract="このオーディエンスは現在処理中です。 モデルの処理が完了するまでに最大 24 時間かかる場合があります。 後でもう一度確認してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="エラー"
+>abstract="このモデルの処理中にエラーが発生しました。 このモデルを削除して再構築するか、後で再試行してください。"
 
 類似のインサイトは、オーディエンスの詳細ページに組み込まれています。 オーディエンスの類似のインサイトを確認するには、「 **[!UICONTROL オーディエンス]** 左側のナビゲーションバーで、 **[!UICONTROL 参照]**、およびインサイトを表示するオーディエンス。
 
@@ -68,10 +83,10 @@ Adobe Experience Platformでは、類似 (look-alike) モデルは、次の 3 �
 
 ### 類似性とリーチ {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="類似性とリーチ"
+>abstract="類似性およびリーチグラフには、特定の類似性スコアを上回るプロファイルから成る、類似 (look-alike) オーディエンスの予想リーチがグラフ表示されます。 グラフ内の特定のポイントにマウスポインターを置くと、現在ハイライトされているポイントの類似率および期待されるプロファイル数が表示されます。"
 
 「類似性とリーチ」セクションには、特定の類似性スコアを上回るプロファイルから成る、類似 (look-alike) オーディエンスの予想リーチを示すグラフが表示されます。 類似性スコアは、 **距離** の類似性に関する情報を含みます。
 
@@ -93,11 +108,11 @@ y 軸は、x 軸の一致値に対応する類似性の割合を持つプロフ�
 
 ### 影響を与える要因 {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="影響を与える要因"
+>abstract="影響を及ぼす要因は、属性、イベントおよびオーディエンスのメンバーシップで、基本オーディエンスのメンバーに対するプロファイルの類似性を説明する際に重要です。 データ使用ラベルとポリシーを使用すると、類似モデルで特定のデータが影響を及ぼす要因と見なされるのを除外できます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="データの除外"
 
 影響要因セクションには、選択したベースオーディエンスの類似モデルに影響する上位 100 件の要因が表示されます。 これらの影響を及ぼす要因は、プロファイル属性、エクスペリエンスイベント、およびベースオーディエンスの類似性を説明する際に最も重要なオーディエンスのメンバーシップです。 最も影響を及ぼす要因を把握することで、このオーディエンスと、そこから作成する類似オーディエンスのマーケティングコンテンツをより適切にパーソナライズできます。 類似 (look-alike) モデルに影響を与える影響を与える要因がすべて表示されるわけではありません。
 
