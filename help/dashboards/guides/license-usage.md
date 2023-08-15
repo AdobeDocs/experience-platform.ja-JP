@@ -27,7 +27,7 @@ Platform UI の一般的な概要については、 [Experience PlatformUI ガ�
 
 ## ライセンス使用状況ダッシュボードの確認
 
-Platform UI 内でライセンス使用状況ダッシュボードに移動するには、「 」を選択します。 **[!UICONTROL ライセンスの使用]** をクリックします。 これにより、ダッシュボードに表示される「**[!UICONTROL 概要]**」タブを開きます。
+Platform UI 内でライセンス使用状況ダッシュボードに移動するには、「 」を選択します。 **[!UICONTROL ライセンスの使用状況]** をクリックします。 これにより、ダッシュボードに表示される「**[!UICONTROL 概要]**」タブを開きます。
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 サンドボックスの使用状況レポートは、同じタイプのすべてのサンドボックスの累積的なものです。 つまり、選択 [!UICONTROL 実稼動] または [!UICONTROL 開発] は、それぞれすべての実稼動サンドボックスまたは開発サンドボックスの使用状況レポートを提供します。
 
-![サンドボックスセレクターがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/select-sandbox.png)
+![サンドボックスセレクターがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ。](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -51,12 +51,11 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >2. 「サンドボックス」カテゴリの「権限」で、ライセンス使用状況ダッシュボードに表示するすべてのサンドボックスを追加します。
 >3. 「ユーザーダッシュボード権限」カテゴリで、「ライセンス使用状況ダッシュボードの表示」権限を追加します。
 
-
 ### 日付範囲を選択
 
 サンドボックスを選択した後、日付範囲ドロップダウンを使用して、ダッシュボードに表示する期間を選択できます。 過去 30 日間のデフォルト値を含む、複数のオプションを使用できます。
 
-![日付範囲ドロップダウンがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/select-date-range.png)
+![日付範囲ドロップダウンがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ。](../images/license-usage/select-date-range.png)
 
 また、 **[!UICONTROL カスタム日付]** をクリックして、表示する期間を選択します。
 
@@ -68,11 +67,11 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 各ウィジェットには、組織の実際の数と、組織のライセンスで使用可能な合計を比較した線グラフが表示され、合計使用量の割合が示されます。
 
-![サンプルライセンス使用状況指標ウィジェットの線グラフがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ](../images/license-usage/widgets.png)
+![サンプルライセンス使用状況指標ウィジェットの線グラフがハイライト表示された「ライセンス使用状況ダッシュボードの概要」タブ。](../images/license-usage/widgets.png)
 
 ## 使用可能な指標
 
-ライセンス使用状況ダッシュボードは、4 つの主要指標に関するレポートを作成し、その後のリリースで追加される指標が増えます。 使用可能な指標は次のとおりです。
+ライセンス使用状況ダッシュボードは、4 つの主要指標に関するレポートを作成し、以降のリリースではさらに指標を追加する必要があります。 使用可能な指標は次のとおりです。
 
 * [!UICONTROL アドレス可能なオーディエンス]
 * [!UICONTROL 平均プロファイル充実度]
@@ -83,16 +82,16 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 | ライセンス | 製品の説明 |
 |---|---|
-| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform、アプリサービスおよびインテリジェントサービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービスおよびインテリジェントサービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT 顧客データプラットフォーム：OD</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT 顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD のアクティベーション</li><li>AEP:OD アクティベーション PRFL から 10M</li><li>AEP:OD アクティベーション（最大 50M）</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD インテリジェンス</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
->ライセンス使用状況ダッシュボードは、組織用にプロビジョニングされた最新のライセンスに関するレポートのみ表示されます。 お客様の組織でプロビジョニングされた最新のライセンスが上記の表に表示されない場合は、ライセンス使用状況ダッシュボードが正しく表示されないことがあります。 1 つの組織で追加のライセンスと複数のライセンスをサポートする予定は、今後のリリースです。
+>ライセンス使用状況ダッシュボードは、組織用にプロビジョニングされた最新のライセンスに関するレポートのみを表示します。 お客様の組織でプロビジョニングされた最新のライセンスが上記の表に表示されない場合は、ライセンス使用状況ダッシュボードが正しく表示されないことがあります。 1 つの組織で追加のライセンスと複数のライセンスをサポートする予定は、今後のリリースです。
 
 ## 次の手順
 
