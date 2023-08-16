@@ -3,10 +3,10 @@ title: TikTok 接続
 description: お持ちのデータを使用して TikTok でカスタムオーディエンスを作成し、広告キャンペーンのターゲティングを行えます。これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 42%
+source-wordcount: '1010'
+ht-degree: 41%
 
 ---
 
@@ -30,7 +30,9 @@ TikTokの宛先をいつどのように使用するかを理解しやすくす�
 
 ## 前提条件 {#prerequisites}
 
-にデータを送信する前に [!DNL TikTok Ads Manager] アカウントを使用する場合は、次の広告アカウントにアクセスするためのAdobe Experience Platform権限を付与する必要があります： `Audience Management`. この権限は、Experience Platformで広告主 ID を入力し、リダイレクトに従って権限を付与することで提供できます。 詳しい手順については、 [TikTok API ドキュメント](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+次が必要です： [!DNL Admin] または [!DNL Operator] オーディエンスの送信先のTikTok Ads Manager アカウントへのアクセス。 その他の手順については、 [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+データをTikTok Ads Manager アカウントに送信する前に、Adobe Experience Platformに次の広告アカウントへのアクセス権を付与する必要があります： `Audience Management`. この権限は、次の方法で指定できます。 [Ads Manager ID の入力](#authenticate) (Experience PlatformUI) をクリックし、TikTok Ads Manager アカウントにリダイレクトされた後での権限の付与 ) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
