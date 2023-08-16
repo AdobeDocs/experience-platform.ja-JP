@@ -3,9 +3,7 @@ solution: Experience Platform
 title: 類似オーディエンス
 description: 類似 (look-alike) オーディエンスを使用して、Adobe Experience Platformで新しい高価値オーディエンスをターゲットにする方法を説明します。
 badgeLimitedAvailability: label="限定提供（LA）" type=Caution
-hide: true
-hidefromtoc: true
-source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
+source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 1%
