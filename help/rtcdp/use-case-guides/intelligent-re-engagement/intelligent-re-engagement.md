@@ -3,9 +3,9 @@ title: インテリジェントな再エンゲージメント
 description: コンバージョンの重要な瞬間に、説得力のあるつながりのあるエクスペリエンスを提供し、まれな顧客をインテリジェントに再エンゲージします。
 hide: true
 hidefromtoc: true
-source-git-commit: 43e365e20a2fd91a0e822eb6f66bb7db6fc218f5
+source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '3395'
 ht-degree: 5%
 
 ---
@@ -30,12 +30,12 @@ ht-degree: 5%
 
 このユースケースを実装する手順を完了したら、次のReal-Time CDP機能と UI 要素（使用順に一覧表示）を利用します。 これらの領域に必要な属性ベースのアクセス制御権限を持っていることを確認するか、必要な権限をシステム管理者に与えてもらってください。
 
-* [ADOBE REAL-TIME CUSTOMER DATA PLATFORM(REAL-TIME CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)  — 複数のデータソースをまたいでデータを集計し、キャンペーンに燃料を供給します。 次に、このデータを使用して、キャンペーンオーディエンスを作成し、E メールや Web プロモーションタイルで使用するパーソナライズされたデータ要素（名前やアカウント関連の情報など）を表示します。 また、CDP は、(Adobe Targetを介して ) 電子メールと Web にまたがってオーディエンスをアクティブ化するためにも使用されます。
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)  — 複数のデータソースのデータを統合して、キャンペーンの燃料化をおこないます。 次に、このデータを使用して、キャンペーンオーディエンスを作成し、E メールや Web プロモーションタイルで使用するパーソナライズされたデータ要素（名前やアカウント関連の情報など）を表示します。 また、CDP は、E メールと Web( [!DNL Adobe Target]) をクリックします。
    * [スキーマ](/help/xdm/home.md)
    * [プロファイル](/help/profile/home.md)
    * [データセット](/help/catalog/datasets/overview.md)
    * [オーディエンス](/help/segmentation/home.md)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
    * [宛先](/help/destinations/home.md)
    * [イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [オーディエンス/イベント](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
@@ -49,10 +49,10 @@ ht-degree: 5%
 
 >[!TAB 再エンゲージメントジャーニー]
 
-再エンゲージメントのジャーニーは、Web サイトとモバイルアプリの両方で製品の閲覧を中止したことをターゲットにします。 このジャーニーは、製品が表示されたが、購入されなかった、または買い物かごに追加されなかった場合にトリガーされます。 過去 24 時間以内にリストが追加されなかった場合、ブランドエンゲージメントは 3 日後にトリガーされます。<p>![顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/re-engagement-journey.png "顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。"){width="1920" zoomable="yes"}</p>
+再エンゲージメントのジャーニーは、Web サイトとモバイルアプリの両方で製品の閲覧を中止したことをターゲットにします。 このジャーニーは、製品が表示されたが、購入されなかった、または買い物かごに追加されなかった場合にトリガーされます。 過去 24 時間以内にリストが追加されなかった場合、ブランドエンゲージメントは 3 日後にトリガーされます。<p>![顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/re-engagement-journey.png "顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。"){width="2560" zoomable="yes"}</p>
 
-1. 用にマークされたスキーマとデータセットを作成します [!UICONTROL プロファイル].
-2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに集計されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+1. スキーマとデータセットを作成し、 [!UICONTROL プロファイル].
+2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに統合されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、ガバナンスポリシーを構築して、責任を持って使用するようにします。
 4. プロファイルのリストから焦点を絞ったオーディエンスを作成し、 **顧客** が過去 3 日間に契約を結んでいます
 5. 再エンゲージメントのジャーニーは、で作成します。 [!DNL Adobe Journey Optimizer].
@@ -61,26 +61,25 @@ ht-degree: 5%
 
 >[!TAB 放棄された買い物かごのジャーニー]
 
-廃止された買い物かごジャーニーは、買い物かごに入れられたが、Web サイトとモバイルアプリの両方でまだ購入されていない製品をターゲットにします。 また、有料メディアキャンペーンは、この方法を使用して開始および停止されます。<p>![顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/abandoned-cart-journey.png "顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。"){width="1920" zoomable="yes"}</p>
+廃止された買い物かごジャーニーは、買い物かごに入れられたが、Web サイトとモバイルアプリの両方でまだ購入されていない製品をターゲットにします。 また、有料メディアキャンペーンは、この方法を使用して開始および停止されます。<p>![顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/abandoned-cart-journey.png "顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。"){width="2560" zoomable="yes"}</p>
 
-1. 用にマークされたスキーマとデータセットを作成します [!UICONTROL プロファイル].
-2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに集計されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+1. スキーマとデータセットを作成し、 [!UICONTROL プロファイル].
+2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに統合されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、ガバナンスポリシーを構築して、責任を持って使用するようにします。
 4. プロファイルのリストから焦点を絞ったオーディエンスを作成し、 **顧客** は買い物かごに品目を配置しましたが、まだ購入を完了していません。 The **[!UICONTROL 買い物かごに追加]** イベントは、30 分間待機し、購入を確認するタイマーを開始します。 購入が行われていない場合、 **顧客** が **[!UICONTROL 買い物かごを放棄]** オーディエンス。
-5. Adobe Journey Optimizerで放棄された買い物かごのジャーニーを作成する
+5. 次の場所で買い物かごの放棄済みジャーニーを作成します。 [!DNL Adobe Journey Optimizer].
 6. 必要に応じて、 **データパートナー** 対象の有料メディアの宛先に対するオーディエンスのアクティブ化。
 7. [!DNL Adobe Journey Optimizer] は同意を確認し、設定された様々なアクションを送信します。
 
 >[!TAB 注文確認ジャーニー]
 
-注文確認ジャーニーは、Web サイトやモバイルアプリを通じておこなわれた製品の購入に重点を置いています。<p>![顧客の注文確認ジャーニーの概要レベルの視覚的な概要。](../intelligent-re-engagement/images/order-confirmation-journey.png "顧客の注文確認ジャーニーの概要レベルの視覚的な概要。"){width="1920" zoomable="yes"}</p>
+注文確認ジャーニーは、Web サイトやモバイルアプリを通じておこなわれた製品の購入に重点を置いています。<p>![顧客の注文確認ジャーニーの概要レベルの視覚的な概要。](../intelligent-re-engagement/images/order-confirmation-journey.png "顧客の注文確認ジャーニーの概要レベルの視覚的な概要。"){width="2560" zoomable="yes"}</p>
 
-1. 用にマークされたスキーマとデータセットを作成します [!UICONTROL プロファイル].
-2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに集計されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+1. スキーマとデータセットを作成し、 [!UICONTROL プロファイル].
+2. データは、Web SDK、Mobile Edge SDK、または API を介してExperience Platformに統合されます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、ガバナンスポリシーを構築して、責任を持って使用するようにします。
-4. プロファイルのリストから焦点を絞ったオーディエンスを作成し、 **顧客** が購入されました。
-5. 確認ジャーニーは、Adobe Journey Optimizerで作成します。
-6. [!DNL Adobe Journey Optimizer] は、優先チャネルを使用して注文確認メッセージを送信します。
+4. 確認ジャーニーは、で作成します。 [!DNL Adobe Journey Optimizer].
+5. [!DNL Adobe Journey Optimizer] は、優先チャネルを使用して注文確認メッセージを送信します。
 
 >[!ENDTABS]
 
@@ -94,13 +93,15 @@ ht-degree: 5%
 
 ### スキーマデザインの作成とフィールドグループの指定
 
-Experience Data Model(XDM) のリソースは、 [!UICONTROL スキーマ] Adobe Experience Platformのワークスペース Adobeが提供するコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
+Experience Data Model(XDM) のリソースは、 [!UICONTROL スキーマ] のワークスペース [!DNL Adobe Experience Platform]. 次のツールで提供されるコアリソースを表示および調査できます。 [!DNL Adobe] ( 例： [!UICONTROL フィールドグループ]) をクリックし、組織のカスタムリソースおよびスキーマを作成します。
 
-スキーマの作成について詳しくは、 [スキーマの作成に関するチュートリアル](/help/xdm/tutorials/create-schema-ui.md)
+作成に関する詳細 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)を読む [スキーマの作成に関するチュートリアル](/help/xdm/tutorials/create-schema-ui.md)
 
-再エンゲージメントジャーニーに使用されるスキーマデザインは 4 つあります。 各スキーマでは、特定のフィールドを設定する必要があります。また、強く推奨されるフィールドもいくつかあります。
+再エンゲージメントの使用例には、4 つのスキーマデザインが使用されます。 各スキーマでは、特定のフィールドを設定する必要があります。また、強く推奨されるフィールドもいくつかあります。
 
 #### 顧客属性スキーマ
+
+このスキーマは、顧客情報を構成するプロファイルデータを構造化し、参照するために使用されます。 このデータは通常、 [!DNL Adobe Experience Platform] CRM または類似のシステムを使用し、パーソナライゼーション、マーケティング同意、拡張セグメント化機能に使用される顧客の詳細を参照するために必要です。
 
 顧客属性スキーマは、 [!UICONTROL XDM 個人プロファイル] クラス。次のフィールドグループが含まれます。
 
@@ -154,6 +155,8 @@ Experience Data Model(XDM) のリソースは、 [!UICONTROL スキーマ] Adobe
 +++
 
 #### 顧客のデジタルトランザクションスキーマ
+
+このスキーマは、Web サイトや関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このデータは通常、 [!DNL Adobe Experience Platform] Web SDK を使用し、ジャーニーのトリガー、詳細なオンライン顧客分析、強化されたセグメント化機能に使用される様々な参照イベントやコンバージョンイベントを参照するために必要です。
 
 顧客のデジタルトランザクションスキーマは、 [!UICONTROL XDM ExperienceEvent] クラス。次のフィールドグループが含まれます。
 
@@ -225,18 +228,9 @@ Web 詳細は、XDM ExperienceEvent クラスの標準スキーマフィール�
 | `endUserIDs._experience.emailid.authenticatedState` | 必須 | エンドユーザーの電子メールアドレス ID 認証状態。 |
 | `endUserIDs._experience.emailid.id` | 必須 | エンドユーザーの電子メールアドレス ID。 |
 | `endUserIDs._experience.emailid.namespace.code` | 必須 | エンドユーザーの電子メールアドレス ID 名前空間コード。 |
-| `endUserIDs._experience.mcid.authenticatedState` | 必須 | Adobe Marketing Cloud ID(MCID) 認証済み状態。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
-| `endUserIDs._experience.mcid.id` | 必須 | Adobe Marketing Cloud ID(MCID)。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
-| `endUserIDs._experience.mcid.namespace.code` | 必須 | Adobe Marketing Cloud ID(MCID) 名前空間コード。 |
-
-+++
-
-+++クラス値（フィールドグループ）
-
-| フィールド | 要件 |
-| --- | --- |
-| `eventType` | 必須 |
-| `timestamp` | 必須 |
+| `endUserIDs._experience.mcid.authenticatedState` | 必須 | [!DNL Adobe] Marketing CloudID(MCID) 認証済み状態。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
+| `endUserIDs._experience.mcid.id` | 必須 | [!DNL Adobe] Marketing CloudID(MCID)。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
+| `endUserIDs._experience.mcid.namespace.code` | 必須 | [!DNL Adobe] Marketing CloudID(MCID) 名前空間コード。 |
 
 +++
 
@@ -247,6 +241,8 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 +++
 
 #### 顧客オフライントランザクションスキーマ
+
+このスキーマは、Web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用します。 このデータは通常、 [!DNL Adobe Experience Platform] を POS（または類似のシステム）から取得し、最も多くの場合、API 接続を介して Platform にストリーミングします。 ジャーニーのトリガーに使用される様々なオフラインコンバージョンイベント、ディープオンラインとオフラインの顧客分析、強化されたセグメント化機能を参照することが目的です。
 
 顧客オフライントランザクションスキーマは、 [!UICONTROL XDM ExperienceEvent] クラス。次のフィールドグループが含まれます。
 
@@ -276,15 +272,6 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 +++
 
-+++クラス値（フィールドグループ）
-
-| フィールド | 要件 |
-| --- | --- |
-| `eventType` | 必須 |
-| `timestamp` | 必須 |
-
-+++
-
 +++外部ソースシステム監査の詳細（フィールドグループ）
 
 External Source System Audit Attributes は、外部ソースシステムに関する監査の詳細を取り込む、標準の Experience Data Model(XDM) データ型です。
@@ -293,7 +280,13 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 #### AdobeWeb コネクタのスキーマ
 
-AdobeWeb コネクタスキーマは、 [!UICONTROL XDM ExperienceEvent] クラス。次のフィールドグループが含まれます。
+>[!NOTE]
+>
+>これは、 [!DNL Adobe Analytics Data Connector].
+
+このスキーマは、Web サイトや関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、Web SDK がデータ収集のオプションではない場合に使用することを意図している点が異なります。そのため、このスキーマは、 [!DNL Adobe Analytics Data Connector] オンラインデータをに送信するには、以下を実行します。 [!DNL Adobe Experience Platform] プライマリまたはセカンダリのデータストリームとして。
+
+The [!DNL Adobe] web コネクタスキーマは、 [!UICONTROL XDM ExperienceEvent] クラス。次のフィールドグループが含まれます。
 
 +++Adobe Analytics ExperienceEvent テンプレート（フィールドグループ）
 
@@ -338,9 +331,9 @@ AdobeWeb コネクタスキーマは、 [!UICONTROL XDM ExperienceEvent] クラ�
 | `endUserIDs._experience.emailid.authenticatedState` | 必須 | エンドユーザーの電子メールアドレス ID 認証状態。 |
 | `endUserIDs._experience.emailid.id` | 必須 | エンドユーザーの電子メールアドレス ID。 |
 | `endUserIDs._experience.emailid.namespace.code` | 必須 | エンドユーザーの電子メールアドレス ID 名前空間コード。 |
-| `endUserIDs._experience.mcid.authenticatedState` | 必須 | Adobe Marketing Cloud ID(MCID) 認証済み状態。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
-| `endUserIDs._experience.mcid.id` | 必須 | Adobe Marketing Cloud ID(MCID)。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
-| `endUserIDs._experience.mcid.namespace.code` | 必須 | Adobe Marketing Cloud ID(MCID) 名前空間コード。 |
+| `endUserIDs._experience.mcid.authenticatedState` | 必須 | [!DNL Adobe] Marketing CloudID(MCID) 認証済み状態。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
+| `endUserIDs._experience.mcid.id` | 必須 | [!DNL Adobe] Marketing CloudID(MCID)。 MCID は、Experience CloudID(ECID) と呼ばれます。 |
+| `endUserIDs._experience.mcid.namespace.code` | 必須 | [!DNL Adobe] Marketing CloudID(MCID) 名前空間コード。 |
 
 +++
 
@@ -361,9 +354,9 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 ### スキーマからのデータセットの作成
 
-データセットは、データのグループ ( 多くの場合、フィールド（行）とスキーマ（列）を含むテーブル ) のストレージと管理の構造です。 インテリジェントな再エンゲージメントジャーニーのすべてのスキーマには、1 つのデータセットがあります。
+データセットは、データのグループのストレージと管理の構造です。 インテリジェントな再エンゲージメントジャーニーの各スキーマには、1 つのデータセットがあります。
 
-スキーマからデータセットを作成する方法について詳しくは、 [データセット UI ガイド](/help/catalog/datasets/user-guide.md).
+を作成する方法の詳細については、 [データセット](/help/catalog/datasets/overview.md) スキーマから、 [データセット UI ガイド](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE]
 >
@@ -377,23 +370,23 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 >
 >顧客がブランドからの通信を購読解除する機能を提供することは、法的要件であり、この選択を確実に受け入れるためにも必要です。 該当する法律について詳しくは、[Experience Platformドキュメント](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)を参照してください。
 
-再エンゲージメントパスを作成する場合は、次の同意ポリシーを考慮して使用する必要があります。
+再エンゲージメントパスを作成する場合は、次の同意ポリシーを考慮する必要があります。
 
 * 次の場合 `consents.marketing.email.val = "Y"` その後、電子メールを送信可能
 * 次の場合 `consents.marketing.sms.val = "Y"` その後、SMS を送信可能
 * 次の場合 `consents.marketing.push.val = "Y"` 次にプッシュ可能
 * 次の場合 `consents.share.val = "Y"` 次に、広告を作成可能
-* お客様の実装によって定義される必要性
 
 #### DULE ラベルと実施
 
-個人の電子メールアドレスは、デバイスではなく特定の個人を識別したり、特定の個人と連絡を取り合うために使用される、直接識別可能なデータとして使用されます。
+再エンゲージメントパスを作成する際は、次の DULE ラベルを考慮する必要があります。
 
-* `personalEmail.address = I1`
+* 個人の電子メールアドレスは、デバイスではなく特定の個人を識別したり、特定の個人と連絡を取り合うために使用される、直接識別可能なデータとして使用されます。
+   * `personalEmail.address = I1`
 
 #### マーケティングポリシー
 
-再エンゲージメントジャーニーに追加のマーケティングポリシーは必要ありませんが、必要に応じて、以下を考慮する必要があります。
+再エンゲージメントジャーニーに必要なマーケティングポリシーはありませんが、必要に応じて、以下を考慮する必要があります。
 
 * 機密データの制限
 * オンサイト広告の制限
@@ -405,9 +398,9 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 #### ブランドの再エンゲージメントジャーニー用のオーディエンスの作成
 
-再エンゲージメントジャーニーは、オーディエンスを使用して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから区別します。 オーディエンスは、Adobe Experience Platform上で 2 つの異なる方法で作成できます。オーディエンスとして直接構成するか、Platform 派生のセグメント定義を通じて作成します。
+再エンゲージメントジャーニーは、オーディエンスを使用して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから区別します。 オーディエンスは、次の複数の方法で作成できます。 [!DNL Adobe Experience Platform].
 
-オーディエンスを直接作成する方法について詳しくは、 [Audience Composition UI ガイド](/help/segmentation/ui/audience-composition.md).
+直接作成する方法の詳細 [オーディエンス](/help/segmentation/home.md)を読む [Audience Composition UI ガイド](/help/segmentation/ui/audience-composition.md).
 
 Platform 派生セグメント定義を使用してオーディエンスを構築する方法について詳しくは、 [Audience Builder UI ガイド](/help/segmentation/ui/segment-builder.md).
 
@@ -415,13 +408,15 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
 
 >[!TAB 再エンゲージメントジャーニー]
 
+このオーディエンスは、従来の「買い物かごの放棄」シナリオの強化として作成されます。 買い物かごの放棄では通常、特定の期間内に後続の購入をおこなわずに買い物かごへの追加に注力しますが、このオーディエンスは、特定の製品を閲覧したが買い物かごに追加せず、特定の期間内にサイトでフォローアップアクティビティをおこなわなかった場合に、 このオーディエンスは、この包含条件を満たす顧客のブランドを「最優先」に保ち、従来の e コマースモデルとは異なるデジタルプロパティを持つ顧客のためにも利用できます。
+
 次のイベントは、ユーザーが製品をオンラインで表示し、次の 24 時間に買い物かごに追加せず、その後 3 日間はブランドエンゲージメントがおこなわれなかった再エンゲージメントジャーニーに使用されます。
 
 このオーディエンスを設定する際は、次のフィールドと条件が必要です。
 
 * `EventType: commerce.productViews`
    * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.productListAdds`
+* `EventType is not: commerce.procuctListAdds`
    * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
 * `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: <= 2 days before now`
@@ -432,16 +427,18 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
 
 >[!TAB 放棄された買い物かごのジャーニー]
 
+このオーディエンスは、従来の「買い物かごの放棄」シナリオをサポートするために作成されています。 その目的は、買い物かごに商品を追加したが、最終的に購入に従わなかった顧客を見つけることです。 このオーディエンスは、顧客のブランドの「トップオブマインド」だけでなく、顧客が後で購入せずに残した製品も保つのに役立ちます。
+
 次のイベントは、離脱した買い物かごへの移動に使用されます。このイベントでは、ユーザーは買い物かごに製品を追加しましたが、過去 24 時間に購入を完了しなかったか、買い物かごをクリアしませんでした。
 
 このオーディエンスを設定する際は、次のフィールドと条件が必要です。
 
 * `EventType: commerce.productListAdds`
-   * `Timestamp: >= 30 minutes before now and <= 1440 minutes before now`
+   * `Timestamp: >= 1 days before now and <= 4 days before now `
 * `EventType: commerce.purchases`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 * `EventType: commerce.productListRemovals`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 
 放棄された買い物かごのジャーニーの記述子は、次のように表示されます。
 
@@ -453,17 +450,19 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
 
 >[!NOTE]
 >
->Adobe Journey Optimizerは、このページの上部にある図に表示されるすべてを網羅しているわけではありません。 すべての有料メディア広告は、で作成されます。 [!UICONTROL 宛先].
+>[!DNL Adobe Journey Optimizer] では、図に表示されるすべての項目を網羅していません。 すべての有料メディア広告は、で作成されます。 [!UICONTROL 宛先].
 
-Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応じた、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーとは、顧客がブランドとやり取りするプロセス全体を指します。 各ユースケースのジャーニーには、具体的な情報が必要です。 以下に、各ジャーニー分岐に必要な正確なデータを示します。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) は、顧客とのつながり、コンテキストに沿ったパーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーとは、顧客がブランドとやり取りするプロセス全体を指します。 各ユースケースのジャーニーには、具体的な情報が必要です。 以下に、各ジャーニー分岐に必要な正確なデータを示します。
 
 >[!BEGINTABS]
 
 >[!TAB 再エンゲージメントジャーニー]
 
+再エンゲージメントのジャーニーは、Web サイトとモバイルアプリの両方で製品の閲覧を中止したことをターゲットにします。<p>![顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/re-engagement-journey.png "顧客インテリジェントな再エンゲージメントジャーニーの概要を視覚的に説明します。"){width="2560" zoomable="yes"}</p>
+
 +++イベント
 
-* 製品表示
+* イベント 1：製品表示
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -489,7 +488,7 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* 買い物かごに追加
+* イベント 2：買い物かごに追加
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -516,7 +515,7 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* ブランドエンゲージメント
+* イベント 3：ブランドエンゲージメント
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -568,7 +567,7 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
       * `timestamp > timestamp of product last viewed`
 
    * 製品が最後に閲覧されてから少なくとも 1 回のオフライン購入を確認してください：
-      * スキーマ：顧客オフライントランザクション v.1
+      * スキーマ：顧客オフライントランザクション
       * `eventType = commerce.purchases`
       * `timestamp > timestamp of product last viewed`
 
@@ -587,9 +586,11 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
 
 >[!TAB 放棄された買い物かごのジャーニー]
 
+廃止された買い物かごジャーニーは、買い物かごに入れられたが、Web サイトとモバイルアプリの両方でまだ購入されていない製品をターゲットにします。<p>![顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。](../intelligent-re-engagement/images/abandoned-cart-journey.png "顧客が離脱した買い物かごのジャーニーの概要を視覚的に説明します。"){width="2560" zoomable="yes"}</p>
+
 +++イベント
 
-* 買い物かごに追加
+* イベント 2：買い物かごに追加
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -616,7 +617,7 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* オンライン購入
+* イベント 4：オンライン購入
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -642,7 +643,7 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* ブランドエンゲージメント
+* イベント 3：ブランドエンゲージメント
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -690,12 +691,12 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
 * 認証済みの AuthenticatedState
 
 * 条件：買い物かごが最後に破棄された後のオフライン購入：
-   * スキーマ：顧客オフライントランザクション v.1
+   * スキーマ：顧客オフライントランザクション
    * `eventType = commerce.purchases`
    * `timestamp > timestamp of cart was last abandoned`
 
 * 条件：買い物かごが最後に破棄されてからクリアされた買い物かご：
-   * スキーマ：顧客デジタルトランザクション v.1
+   * スキーマ：顧客のデジタルトランザクション
    * `eventType = commerce.cartCleared`
    * `cartID` （買い物かごの ID）
    * `timestamp > timestamp of cart was last abandoned`
@@ -714,9 +715,11 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
 
 >[!TAB 注文確認ジャーニー]
 
+注文確認ジャーニーは、Web サイトやモバイルアプリを通じておこなわれた製品の購入に重点を置いています。<p>![顧客の注文確認ジャーニーの概要レベルの視覚的な概要。](../intelligent-re-engagement/images/order-confirmation-journey.png "顧客の注文確認ジャーニーの概要レベルの視覚的な概要。"){width="2560" zoomable="yes"}</p>
+
 +++イベント
 
-* オンライン購入
+* イベント 4：オンライン購入
    * スキーマ：顧客のデジタルトランザクション
    * フィールド:
       * `EventType`
@@ -763,11 +766,11 @@ Adobe Journey Optimizerは、顧客とのつながり、コンテキストに応
 
 >[!ENDTABS]
 
-でのジャーニー作成の詳細 [Adobe Journey Optimizer]を読む [ジャーニーの概要ガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja).
+でのジャーニー作成の詳細 [!DNL Adobe Journey Optimizer]を読む [ジャーニーの概要ガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja).
 
 ### 宛先での有料メディア広告の設定
 
-宛先フレームワークは、有料メディア広告に使用されます。 同意が確認されると、設定された様々な宛先に送信されます。 例えば、ダイレクトメール、E メール、プッシュ、SMS などです。
+宛先フレームワークは、有料メディア広告に使用されます。 同意が確認されると、設定された様々な宛先に送信されます。 宛先について詳しくは、 [宛先の概要](/help/destinations/home.md) 文書。
 
 #### 宛先に必要なデータ
 
