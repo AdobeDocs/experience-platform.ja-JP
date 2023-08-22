@@ -4,10 +4,10 @@ description: AI Assistant を使用してExperience PlatformとReal-time Custome
 badge: アルファ版
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2627'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,7 @@ AI アシスタントには、Experience PlatformUI のヘッダーナビゲー�
 
 例えば、 **イベントスキーマでのデバイスの取引**. ExperienceEvent スキーマの作成プロセスで、 `eventType` フィールドに入力します。 この時点で、ワークフローを終了し、 [スキーマ構成の基本](../xdm/schema/composition.md)または、AI Assistant を使用して、質問に対する直接の回答を取得できます。
 
-まず、表示されるテキストボックスに質問を入力します。 以下の例では、AI アシスタントに「エクスペリエンスイベントスキーマの eventType フィールドとは何ですか？」という質問が表示されます。
+まず、表示されるテキストボックスに質問を入力します。 次の例では、AI アシスタントは次の質問を提供します。**エクスペリエンスイベントスキーマの eventType フィールドとは何ですか。**&quot;
 
 ![AI Assistant は、次の質問を用意してExperience Platformを実行します。「ExperienceEvent スキーマの eventType フィールドとは何ですか。](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ AI アシスタントには、Experience PlatformUI のヘッダーナビゲー�
 
 フォローアップの質問をして、特定のトピックに関する詳細を確認できます。 次の例では、AI アシスタントが、eventType をセグメント化でどのように使用できるかを尋ねられます。
 
-![AI アシスタントに表示されるExperience Platformのフォローアップの質問と回答。](./images/ai-assistant/follow-up-question.png)
+![AI アシスタントに表示されるExperience Platformのフォローアップの質問と回答。](./images/ai-assistant/follow-up-answer.png)
 
 また、AI Assistant にデータの使用に関する質問をすることもできます。 データの使用に関して質問する場合、AI Assistant がクエリに回答するには、アクティブなサンドボックスにいる必要があります。
 
@@ -100,15 +100,13 @@ AI アシスタントは、すべての回答に対して、そのソースを�
 
 >[!ENDSHADEBOX]
 
-![Experience Platform表示用 AI アシスタントは、クエリの後から選択できます。](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Show source]
 
 選択 **[!UICONTROL ソースを表示]** :AI アシスタントが応答を計算するために参照するドキュメントへのリンクのリストです。
 
-![AI アシスタントに表示される引用へのリンク。](./images/ai-assistant/citations.png)
+![AI アシスタントに表示されるソースへのリンク。](./images/ai-assistant/show-sources.png)
 
 >[!TAB 親指を上に]
 
@@ -134,7 +132,7 @@ AI アシスタントは、すべての回答に対して、そのソースを�
 
 また、AI Assistant が提供する事前設定プロンプトを使用して開始することもできます。
 
-![AI アシスタントパネルに表示されるプロンプト。](./images/ai-assistant/ideas-to-get-started.png)
+![AI アシスタントパネルに表示されるプロンプト。](./images/ai-assistant/ideas.png)
 
 ## 追加情報
 
