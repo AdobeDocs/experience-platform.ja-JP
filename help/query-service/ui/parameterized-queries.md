@@ -1,14 +1,19 @@
 ---
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法について説明します。
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '755'
 ht-degree: 2%
 
 ---
 
-# パラメーター化されたクエリ（限定的なリリース）
+# パラメーター化されたクエリ（限定的なリリース） {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="パラメーター化クエリ"
+>abstract="パラメーター化クエリを使用して、実行時にパラメーター値を追加します。 これにより、動的データを操作し、様々な使用例でクエリを再利用できます。 以下を使用します。 `'$'` 「 」を入力し、テキストエディターでクエリにクエリパラメーターを入力します。 次に、エディターの下にある「クエリパラメーター」セクションで、キーの値を追加します。"
 
 >[!IMPORTANT]
 >
