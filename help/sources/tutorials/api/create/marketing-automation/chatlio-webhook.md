@@ -1,20 +1,15 @@
 ---
 title: フローサービス API を使用した Chatlio 用のソース接続とデータフローの作成
 description: フローサービス API を使用してAdobe Experience Platformを Chatlio に接続する方法を説明します。
-badge: ベータ
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 55%
+source-wordcount: '1440'
+ht-degree: 56%
 
 ---
 
 # のソース接続とデータフローの作成 [!DNL Chatlio] フローサービス API の使用
-
->[!NOTE]
->
->[!DNL Chatlio] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 次のチュートリアルでは、ソース接続とデータフローを作成し、 [[!DNL Chatlio]](https://chatlio.com/) イベントデータをAdobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -162,7 +157,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -252,7 +247,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-データを取り込むための最後の手順 [!DNL Chatlio] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+からデータを取り込むための最後の手順 [!DNL Chatlio] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -324,7 +319,7 @@ curl -X POST \
 }
 ```
 
-### ストリーミングエンドポイント URL の取得 {#get-streaming-endpoint}
+### ストリーミングエンドポイント URL を取得する {#get-streaming-endpoint}
 
 データフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイント URL を使用して、ソースを Webhook に登録し、ソースとの通信を可能にします。Experience Platform
 
@@ -349,7 +344,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、としてマークされたエンドポイント URL を含む、データフローに関する情報を返します `inletUrl`. 詳しくは、 [ウェブフックの設定](../../../ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint-url) ページを開き、必要な値を取得します。
+正常な応答は、としてマークされたエンドポイント URL を含む、データフローに関する情報を返します。 `inletUrl`. 詳しくは、 [Webhook を設定](../../../ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint-url) ページを開き、必要な値を取得します。
 
 ```json
 {
@@ -437,15 +432,15 @@ curl -X GET \
 
 ### データフローの更新 {#update-dataflow}
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### アカウントを更新 {#update-account}
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### データフローの削除 {#delete-dataflow}
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### アカウントを削除 {#delete-account}
 

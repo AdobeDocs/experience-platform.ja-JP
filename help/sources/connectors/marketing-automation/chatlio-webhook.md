@@ -1,42 +1,37 @@
 ---
 title: Chatlio ソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Chatlio をAdobe Experience Platformに接続する方法を説明します
-badge: ベータ
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 21%
+source-wordcount: '346'
+ht-degree: 20%
 
 ---
 
 # [!DNL Chatlio]
 
->[!NOTE]
->
->[!DNL Chatlio] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
-
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platformは、ストリーミングアプリケーションからデータを取り込む機能を備えています。 ストリーミングプロバイダーのサポートには以下が含まれます。 [!DNL Chatlio].
 
-[[!DNL Chatlio]](https://chatlio.com/) は、と完全に統合されたライブチャットアプリです [!DNL Slack] およびは、複数のサポートエージェントが個々のサイト訪問者を同時に支援するのを支援します。 [!DNL Chatlio] は [!DNL Chatio Zapier App] 接続する [!DNL Chatlio] 2,000 を超える異なるアプリやサービスを使用して
+[[!DNL Chatlio]](https://chatlio.com/) は、と完全に統合されたライブチャットアプリです。 [!DNL Slack] およびは、複数のサポートエージェントが個々のサイト訪問者を同時に支援するのを容易にします。 [!DNL Chatlio] は [!DNL Chatio Zapier App] 接続する [!DNL Chatlio] 2,000 を超える異なるアプリやサービスを使用して
 
-この [!DNL Chatlio] ソースを使用すると、サポートされる webhook イベントスキーマとその関連イベントデータを [!DNL Chatlio.com] の使用 [[!DNL Chatlio] ウェブフック](https://chatlio.com/docs/webhooks/).
+The [!DNL Chatlio] ソースを使用すると、サポートされる webhook イベントスキーマとそれに関連するイベントデータを [!DNL Chatlio.com] の使用 [[!DNL Chatlio] ウェブフック](https://chatlio.com/docs/webhooks/).
 
 次の Web フックがサポートされています。
 
 * チャットトランスクリプトの書き出し
 * オフラインメッセージの書き出し
 * 新しい会話が開始されました
-* 訪問者は時間内に回答を得られませんでした
+* 訪問者は時間内に回答を受け取りませんでした
 * 訪問者がチャットの後にフィードバックを残しました
 
 ## 前提条件 {#prerequisites}
 
 事前に [!DNL Chatlio] ソース接続を使用する場合は、まず次の点を確認する必要があります。
 
-* A [!DNL Chatlio] アカウント まだ [[!DNL Chatlio] 登録ページ](https://chatlio.com/app/#/signup) をクリックして、アカウントを登録および作成します。
+* A [!DNL Chatlio] アカウント。 まだ [[!DNL Chatlio] 登録ページ](https://chatlio.com/app/#/signup) をクリックして、アカウントを登録および作成します。
 * アカウントの登録が完了したら、 [[!DNL Chatlio] 設定ドキュメント](https://chatlio.com/docs/setup/) をクリックして、アカウントの設定を完了します。
 
 ### 設定 [!DNL Chatlio] webhook {#set-up-webhook}

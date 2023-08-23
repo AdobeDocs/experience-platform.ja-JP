@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
-workflow-type: ht
-source-wordcount: '278'
-ht-degree: 100%
+source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 99%
 
 ---
 
@@ -34,6 +34,7 @@ ht-degree: 100%
    - [属性分析](use-cases/attribution-analysis.md)
    - [ボットフィルタリング](use-cases/bot-filtering.md)
    - [イベントのトレンドレポートの作成](use-cases/trended-report-of-events.md)
+   - [同意分析](use-cases/consent-analysis.md)
    - [顧客のライフタイムバリュー](use-cases/customer-lifetime-value.md)
    - [デシルベースの派生属性](use-cases/deciles-use-case.md)
    - [あいまい一致](use-cases/fuzzy-match.md)

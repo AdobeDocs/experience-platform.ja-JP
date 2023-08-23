@@ -2,18 +2,14 @@
 title: フローサービス API を使用して、SugarCRM アカウントおよび連絡先のソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを SugarCRM アカウントおよび連絡先に接続する方法を説明します。
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 54%
+source-wordcount: '2164'
+ht-degree: 55%
 
 ---
 
-# （ベータ版）のソース接続とデータフローの作成 [!DNL SugarCRM Accounts & Contacts] フローサービス API の使用
-
->[!NOTE]
->
->[!DNL SugarCRM Accounts & Contacts] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# のソース接続とデータフローの作成 [!DNL SugarCRM Accounts & Contacts] フローサービス API の使用
 
 次のチュートリアルでは、 [!DNL SugarCRM Accounts & Contacts] ソース接続と、 [[!DNL SugarCRM]](https://www.sugarcrm.com/) アカウントと連絡先データをAdobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -24,7 +20,7 @@ ht-degree: 54%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL SugarCRM] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL SugarCRM] の使用 [!DNL Flow Service] API.
 
 ### 必要な認証情報の収集
 
@@ -38,7 +34,7 @@ ht-degree: 54%
 
 ## 接続 [!DNL SugarCRM Accounts & Contacts] を使用して Platform に [!DNL Flow Service] API
 
-次に、 [!DNL SugarCRM] ソース、ソース接続を作成し、データフローを作成して、アカウントおよび連絡先データをExperience Platformに取り込みます。
+次に、の認証に必要な手順を示します [!DNL SugarCRM] ソース、ソース接続を作成し、データフローを作成して、アカウントおよび連絡先データをExperience Platformに取り込みます。
 
 ### ベース接続の作成 {#base-connection}
 
@@ -123,9 +119,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。このソースの場合、値は次のようになります。 `json`. |
 | `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`の場合は、base64 で文字列全体をエンコードする必要があります。 <br> [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`accounts` :組織が関係を持つ会社。</li><li>`contacts` :組織と既に関係が構築されている個人。</li></ul> |
+| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`の場合は、base64 で文字列全体をエンコードする必要があります。 <br> [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`accounts` ：組織と関係のある会社。</li><li>`contacts` ：組織と既に関係が確立されている個人。</li></ul> |
 
-この [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 送信するリクエストを活用するオブジェクトのタイプに応じて、次のようになります。
+The [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 送信するリクエストを活用するオブジェクトのタイプに応じて、次のようになります。
 
 **リクエスト**
 
@@ -146,7 +142,7 @@ curl -X GET \
 
 >[!TAB 連絡先]
 
-の場合 [!DNL SugarCRM] 連絡先 API の値 `{SOURCE_PARAMS}` が `{"object_type":"contacts"}`. base64 でエンコードされる場合、はと同じ値になります。 `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` 以下に示すように。
+の場合 [!DNL SugarCRM] 連絡先 API の値： `{SOURCE_PARAMS}` が `{"object_type":"contacts"}`. base64 でエンコードされる場合、はと同じ値になります。 `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` 以下に示すように。
 
 ```shell
 curl -X GET \
@@ -654,8 +650,8 @@ curl -X POST \
 | `baseConnectionId` | [!DNL SugarCRM Accounts & Contacts] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL SugarCRM Accounts & Contacts] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `object_type` | [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`accounts` :組織が関係を持つ会社。</li><li>`contacts` :組織と既に関係が構築されている個人。</li></ul> |
-| `path` | これは、 *`object_type`*. |
+| `object_type` | [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`accounts` ：組織と関係のある会社。</li><li>`contacts` ：組織と既に関係が確立されている個人。</li></ul> |
+| `path` | この値は、 *`object_type`*. |
 
 **応答**
 
@@ -747,7 +743,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -886,7 +882,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-データを取り込むための最後の手順 [!DNL SugarCRM Accounts & Contacts] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+からデータを取り込むための最後の手順 [!DNL SugarCRM Accounts & Contacts] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -894,7 +890,7 @@ curl -X POST \
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次のいずれかに設定する必要があります。 `hour` または `day`. 間隔の値は、2 つの連続した取り込み間隔を指定します。 間隔の値は次のように設定する必要があります `1` または `24` 次に応じて： `scheduleParams.frequency` いずれかの選択 `hour` または `day`.
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次のいずれかに設定する必要があります。 `hour` または `day`. 間隔の値は、2 つの連続した取り込みの間隔を指定します。 間隔の値は次のように設定する必要があります `1` または `24` 次に応じて： `scheduleParams.frequency` いずれかの選択 `hour` または `day`.
 
 **API 形式**
 
@@ -978,15 +974,15 @@ curl -X POST \
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### アカウントを削除
 

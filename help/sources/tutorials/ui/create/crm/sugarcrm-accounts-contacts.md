@@ -2,18 +2,14 @@
 title: UI での SugarCRM アカウントおよび連絡先ソース接続の作成
 description: Adobe Experience Platform UI を使用して SugarCRM アカウントと連絡先ソース接続を作成する方法を説明します。
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 39%
+source-wordcount: '762'
+ht-degree: 41%
 
 ---
 
-# （ベータ版） [!DNL SugarCRM Accounts & Contacts] UI のソース接続
-
->[!NOTE]
->
->[!DNL SugarCRM Accounts & Contacts] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# UI での [!DNL SugarCRM Accounts & Contacts] ソース接続の作成
 
 このチュートリアルでは、 [!DNL SugarCRM Accounts & Contacts] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 
@@ -42,7 +38,7 @@ ht-degree: 39%
 
 を作成する前に [!DNL SugarCRM] ソース接続の場合は、まず、ソースに使用する Platform スキーマを作成する必要もあります。 に関するチュートリアルを参照してください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
 
-この [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用するオブジェクトタイプに応じて、別のスキーマを作成する必要があります。 アカウントスキーマと連絡先スキーマの両方について、以下の例を参照してください。
+The [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用するオブジェクトタイプに応じて、別のスキーマを作成する必要があります。 アカウントスキーマと連絡先スキーマの両方について、以下の例を参照してください。
 
 >[!BEGINTABS]
 
@@ -62,11 +58,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 *CRM* カテゴリ、選択 **[!UICONTROL SugarCRM アカウントおよび連絡先]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *CRM* カテゴリ、選択 **[!UICONTROL SugarCRM アカウントおよび連絡先]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![SugarCRM アカウントおよび連絡先カードを含むカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
-この **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -97,7 +93,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB 連絡先]
 
-![「連絡先」オプションが選択された設定を示す SugarCRM アカウントおよび連絡先用のプラットフォーム UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![「連絡先」オプションが選択された設定を示す SugarCRM アカウントおよび連絡先用の Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
@@ -111,13 +107,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### ガードレール {#guardrails}
 
-この [!DNL SugarCRM] API スロットル率は、1 分あたり 90 呼び出し、または 1 日あたり 2,000 呼び出し（いずれか最初に実行される方）です。 ただし、この制限は、レート制限に達しないようにリクエスト時間を遅延させるパラメーターを接続仕様に追加することで回避されました。
+The [!DNL SugarCRM] API スロットル率は、1 分あたり 90 呼び出し、または 1 日あたり 2,000 呼び出し（いずれか最初に実行される方）です。 ただし、この制限は、レート制限に達しないようにリクエスト時間を遅延させるパラメーターを接続仕様に追加することで回避されました。
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL SugarCRM Accounts & Contacts] データを取り込むには、次の手順に従います。
+ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL SugarCRM Accounts & Contacts] データを取り込む場合は、次の手順に従います。
 
-* Platform UI で、「 **[!UICONTROL データフローを表示]** の横に [!DNL SugarCRM Accounts & Contacts] ソースカタログのカードメニュー 次に、 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを確認します。
+* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL SugarCRM Accounts & Contacts] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを確認します。
 
 * 操作しているオブジェクトタイプに応じて、集計データを、 [!DNL SugarMarket] 以下のアカウントまたは連絡先ページ：
 
@@ -125,7 +121,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB アカウント]
 
-![SugarMarket アカウントページのスクリーンショットに、アカウントのリストが表示されています](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
+![SugarMarket アカウントページのスクリーンショットに、アカウントのリストが表示されています。](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
 
 >[!TAB 連絡先]
 
@@ -135,4 +131,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!NOTE]
 >
->この [!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには削除された数も含まれるので、削除済みフラグが付けられます。
+>The [!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには削除された数も含まれるので、削除済みフラグが付けられます。

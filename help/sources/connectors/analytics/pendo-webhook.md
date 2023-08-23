@@ -1,20 +1,15 @@
 ---
 title: ペンドソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Pendo をAdobe Experience Platformに接続する方法を説明します
-badge: ベータ
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 20%
+source-wordcount: '352'
+ht-degree: 19%
 
 ---
 
 # [!DNL Pendo]
-
->[!NOTE]
->
->[!DNL Pendo] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -22,7 +17,7 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 [[!DNL Pendo]](https://pendo.io/) は、ソフトウェア会社が顧客の共感を呼ぶ製品を開発するのに役立つように構築された、製品分析アプリです。 このアプリを使用すると、ソフトウェアメーカーは様々なツールを使用して製品を埋め込むことができ、ユーザーにとっての製品エクスペリエンスの向上と、製品チームの新しいインサイトの向上の両方につながります。
 
-この [!DNL Pendo] ソースを使用すると、サポートされる webhook イベントスキーマとその関連イベントデータを [!DNL Pendo.io] の使用 [[!DNL Pendo] ウェブフック](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). この [!DNL Pendo] ソースは [!DNL Pendo] URL Web フック。
+The [!DNL Pendo] ソースを使用すると、サポートされる webhook イベントスキーマとそれに関連するイベントデータを [!DNL Pendo.io] の使用 [[!DNL Pendo] ウェブフック](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). The [!DNL Pendo] ソースは次の場合に使用します。 [!DNL Pendo] URL Web フック。
 
 次の Web フックがサポートされています。
 
@@ -34,7 +29,7 @@ Experience Platformは、サードパーティの分析アプリケーション�
 
 事前に [!DNL Pendo] ソース接続を使用する場合は、まず次の点を確認する必要があります。
 
-A [!DNL Pendo] アカウント まだ [[!DNL Pendo] 登録](https://app.pendo.io/register) 登録してアカウントを作成するページ。
+A [!DNL Pendo] アカウント。 まだ [[!DNL Pendo] 登録者](https://app.pendo.io/register) 登録してアカウントを作成するページ。
 
 ### 設定 [!DNL Pendo] ウェブフック {#set-up-webhook}
 

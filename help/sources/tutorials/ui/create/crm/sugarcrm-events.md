@@ -2,18 +2,14 @@
 title: UI での SugarCRM イベントソース接続の作成
 description: Adobe Experience Platform UI を使用して SugarCRM イベントのソース接続を作成する方法を説明します。
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 45%
+source-wordcount: '646'
+ht-degree: 46%
 
 ---
 
-# （ベータ版） [!DNL SugarCRM Events] UI のソース接続
-
->[!NOTE]
->
->[!DNL SugarCRM Events] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# UI での [!DNL SugarCRM Events] ソース接続の作成
 
 このチュートリアルでは、 [!DNL SugarCRM Events] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 
@@ -54,11 +50,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 *CRM* カテゴリ、選択 **[!UICONTROL SugarCRM イベント]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *CRM* カテゴリ、選択 **[!UICONTROL SugarCRM イベント]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![SugarCRM イベントカードを含むカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
-この **[!UICONTROL SugarCRM イベントアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL SugarCRM イベントアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -82,18 +78,18 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### ガードレール {#guardrails}
 
-この [!DNL SugarCRM] API スロットル率は、1 分あたり 90 呼び出し、または 1 日あたり 2,000 呼び出し（いずれか最初に実行される方）です。 ただし、この制限は、レート制限に達しないようにリクエスト時間を遅延させるパラメーターを接続仕様に追加することで回避されました。
+The [!DNL SugarCRM] API スロットル率は、1 分あたり 90 呼び出し、または 1 日あたり 2,000 呼び出し（いずれか最初に実行される方）です。 ただし、この制限は、レート制限に達しないようにリクエスト時間を遅延させるパラメーターを接続仕様に追加することで回避されました。
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL SugarCRM Events] データを取り込むには、次の手順に従います。
+ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL SugarCRM Events] データを取り込む場合は、次の手順に従います。
 
-* Platform UI で、「 **[!UICONTROL データフローを表示]** の横に [!DNL SugarCRM Events] ソースカタログのカードメニュー 次に、 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを確認します。
+* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL SugarCRM Events] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを確認します。
 
 * 操作しているオブジェクトタイプに応じて、集計データを、 [!DNL SugarMarket] 以下のイベントページ：
 
-![SugarMarket アカウントページのスクリーンショットに、アカウントのリストが表示されています](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
+![SugarMarket アカウントページのスクリーンショットに、アカウントのリストが表示されています。](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
 
 >[!NOTE]
 >
->この [!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには削除された数も含まれるので、削除済みフラグが付けられます。
+>The [!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには削除された数も含まれるので、削除済みフラグが付けられます。
