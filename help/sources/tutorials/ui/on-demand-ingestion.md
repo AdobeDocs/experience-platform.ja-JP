@@ -1,9 +1,7 @@
 ---
 title: UI でのソースデータフローのオンデマンド取り込み
 description: Experience Platformユーザーインターフェイスを使用して、ソース接続のデータフローをオンデマンドで作成する方法について説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 812aa0bb0ec9199ef575ac972038115afc2fa647
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 11%
