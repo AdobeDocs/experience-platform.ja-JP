@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
-source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
+source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 94%
+source-wordcount: '112'
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 94%
 - [ID サービスの概要](home.md)
 - [ID 名前空間の概要](namespaces.md)
 - [ID データ用のガードレール](guardrails.md)
-- [削除ロジックを含む ID データのガードレール](guardrails-beta.md)
 - ID サービス API {#api}
    - [はじめに](api/getting-started.md)
    - [フィールドを ID としてラベル付け](api/label-identities.md)
