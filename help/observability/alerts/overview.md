@@ -4,10 +4,10 @@ title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformでのアラートの概要を説明します。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 91%
+source-wordcount: '796'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->非実稼働用サンドボックスでは、アラートはサポートされていません。 アラートを購読するには、実稼動用サンドボックスを使用していることを確認する必要があります。
+>非実稼働用サンドボックスでは、アラートはサポートされていません。 アラートを購読するには、実稼動用サンドボックスを使用していることを確認する必要があります。 サンドボックスがリセットされると、すべての購読アラートがリセットされます。 サンドボックスが削除されると、すべての購読アラートも同様に消去されます。
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
