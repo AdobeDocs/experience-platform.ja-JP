@@ -3,10 +3,10 @@ title: インテリジェントな再エンゲージメント
 description: コンバージョンの重要な瞬間に、説得力のあるつながりのあるエクスペリエンスを提供し、まれな顧客をインテリジェントに再エンゲージします。
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 5%
+source-wordcount: '3424'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ ht-degree: 5%
 
 >[!ENDTABS]
 
-## ユースケースの達成方法：手順 {#step-by-step-instructions}
+## 使用例の達成方法 {#achieve-use-case-instruction}
 
 上記の概要に記載されている各手順を完了するには、以下の節をお読みください。詳細情報と詳細な手順へのリンクが用意されています。
 
@@ -91,7 +91,7 @@ ht-degree: 5%
 
 ユースケースを実装する手順が完了したら、このドキュメントの最初に示すReal-Time CDPの機能と UI 要素を利用します。 これらの領域に必要な属性ベースのアクセス制御権限を持っていることを確認するか、必要な権限をシステム管理者に与えてもらってください。
 
-### スキーマデザインの作成とフィールドグループの指定
+### スキーマデザインの作成とフィールドグループの指定 {#schema-design}
 
 Experience Data Model(XDM) のリソースは、 [!UICONTROL スキーマ] のワークスペース [!DNL Adobe Experience Platform]. 次のツールで提供されるコアリソースを表示および調査できます。 [!DNL Adobe] ( 例： [!UICONTROL フィールドグループ]) をクリックし、組織のカスタムリソースおよびスキーマを作成します。
 
@@ -337,22 +337,13 @@ The [!DNL Adobe] web コネクタスキーマは、 [!UICONTROL XDM ExperienceEv
 
 +++
 
-+++クラス値（フィールドグループ）
-
-| フィールド | 要件 |
-| --- | --- |
-| `eventType` | 必須 |
-| `timestamp` | 必須 |
-
-+++
-
 +++外部ソースシステム監査の詳細（フィールドグループ）
 
 External Source System Audit Attributes は、外部ソースシステムに関する監査の詳細を取り込む、標準の Experience Data Model(XDM) データ型です。
 
 +++
 
-### スキーマからのデータセットの作成
+### スキーマからのデータセットの作成 {#dataset-from-schema}
 
 データセットは、データのグループのストレージと管理の構造です。 インテリジェントな再エンゲージメントジャーニーの各スキーマには、1 つのデータセットがあります。
 
@@ -362,31 +353,31 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 >
 >スキーマを作成する手順と同様に、データセットをリアルタイム顧客プロファイルに含める必要があります。 リアルタイム顧客プロファイルでデータセットを使用する方法について詳しくは、 [スキーマの作成に関するチュートリアル](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### プライバシー、同意、データガバナンス
+### プライバシー、同意、データガバナンス {#privacy-consent}
 
 #### 同意ポリシー
 
 >[!IMPORTANT]
 >
->顧客がブランドからの通信を購読解除する機能を提供することは、法的要件であり、この選択を確実に受け入れるためにも必要です。 該当する法律について詳しくは、[Experience Platformドキュメント](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)を参照してください。
+>顧客がブランドからの通信を購読解除する機能を提供することは、法的要件であり、この選択を確実に受け入れるためにも必要です。 該当する法律について詳しくは、 [プライバシー規制の概要](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-再エンゲージメントパスを作成する場合は、次の同意ポリシーを考慮する必要があります。
+再エンゲージメントパスを作成する場合、次の手順を実行します。 [同意ポリシー](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) 考慮する必要があります。
 
 * 次の場合 `consents.marketing.email.val = "Y"` その後、電子メールを送信可能
 * 次の場合 `consents.marketing.sms.val = "Y"` その後、SMS を送信可能
 * 次の場合 `consents.marketing.push.val = "Y"` 次にプッシュ可能
 * 次の場合 `consents.share.val = "Y"` 次に、広告を作成可能
 
-#### DULE ラベルと実施
+#### データガバナンスのラベルと実施
 
-再エンゲージメントパスを作成する際は、次の DULE ラベルを考慮する必要があります。
+再エンゲージメントパスを作成する場合、次の手順を実行します。 [データガバナンスラベル](/help/data-governance/labels/overview.md) 考慮する必要があります。
 
 * 個人の電子メールアドレスは、デバイスではなく特定の個人を識別したり、特定の個人と連絡を取り合うために使用される、直接識別可能なデータとして使用されます。
    * `personalEmail.address = I1`
 
 #### マーケティングポリシー
 
-再エンゲージメントジャーニーに必要なマーケティングポリシーはありませんが、必要に応じて、以下を考慮する必要があります。
+次の項目はありません： [マーケティングポリシー](/help/data-governance/policies/overview.md) ただし、再エンゲージメントジャーニーには必須です。必要に応じて、次の項目を考慮する必要があります。
 
 * 機密データの制限
 * オンサイト広告の制限
@@ -394,11 +385,13 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 * クロスサイトターゲティングの制限
 * 直接識別可能なデータと匿名データの組み合わせを制限
 
-### オーディエンスの作成
+### オーディエンスの作成 {#create-audience}
 
 #### ブランドの再エンゲージメントジャーニー用のオーディエンスの作成
 
 再エンゲージメントジャーニーは、オーディエンスを使用して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから区別します。 オーディエンスは、次の複数の方法で作成できます。 [!DNL Adobe Experience Platform].
+
+オーディエンスの作成方法について詳しくは、 [Audience Service UI ガイド](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 直接作成する方法の詳細 [オーディエンス](/help/segmentation/home.md)を読む [Audience Composition UI ガイド](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB 注文確認ジャーニー]
+
+このジャーニーでは、オーディエンスを作成する必要はありません。
+
 >[!ENDTABS]
 
-### Adobe Journey Optimizerでのジャーニーの設定
+### Adobe Journey Optimizerでのジャーニーの設定 {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] では、図に表示されるすべての項目を網羅していません。 すべての有料メディア広告は、で作成されます。 [!UICONTROL 宛先].
+>[!DNL Adobe Journey Optimizer] では、図に表示されるすべての項目を網羅していません。 すべて [有料メディア広告](/help/destinations/catalog/social/overview.md) 次で作成： [!UICONTROL 宛先].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) は、顧客とのつながり、コンテキストに沿ったパーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーとは、顧客がブランドとやり取りするプロセス全体を指します。 各ユースケースのジャーニーには、具体的な情報が必要です。 以下に、各ジャーニー分岐に必要な正確なデータを示します。
 
@@ -768,7 +765,7 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
 
 でのジャーニー作成の詳細 [!DNL Adobe Journey Optimizer]を読む [ジャーニーの概要ガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja).
 
-### 宛先での有料メディア広告の設定
+### 宛先での有料メディア広告の設定 {#paid-media-ads}
 
 宛先フレームワークは、有料メディア広告に使用されます。 同意が確認されると、設定された様々な宛先に送信されます。 宛先について詳しくは、 [宛先の概要](/help/destinations/home.md) 文書。
 
@@ -787,6 +784,3 @@ Platform 派生セグメント定義を使用してオーディエンスを構�
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [ストリーミング先](/help/destinations/catalog/streaming/http-destination.md)
    * [カスタムDestination SDK](/help/destinations/destination-sdk/overview.md)
-
-* 3 時間ごとのファイル/スケジュール
-   * [電子メールマーケティング](/help/destinations/catalog/email-marketing/overview.md)
