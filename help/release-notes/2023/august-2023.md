@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
 workflow-type: tm+mt
 source-wordcount: '1592'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -63,10 +63,14 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを確認できる複数のダッシュボードを提供しています。
 
 **新機能または更新された機能**
-&#x200B; |機能 |説明 | | — | — | |同意分析と追跡の使用例 | Real-Time CDPデータに関する様々なマーケティングユースケースに対し、 [同意分析および追跡ドキュメント](../../dashboards/insights-use-cases/consent-analysis.md). ビジネスニーズに適した属性でオーディエンスを作成し、Adobe Experience Platform UI で事前設定済みのウィジェットを使用してインサイトを利用する方法について詳しく説明します。 また、ユーザー定義のダッシュボード機能を使用して独自のカスタムウィジェットを作成する方法についても説明します。 このドキュメントでは、同意トレンドと同意重複の使用例について説明します。 |
+
+| 機能 | 説明 |
+| --- | --- |
+| 同意分析およびトラッキングの使用例 | を使用して、Real-Time CDPデータの様々なマーケティングユースケースに対する同意ダッシュボードを作成する方法を説明します。 [同意分析および追跡ドキュメント](../../dashboards/insights-use-cases/consent-analysis.md). ビジネスニーズに適した属性でオーディエンスを作成し、Adobe Experience Platform UI で事前設定済みのウィジェットを使用してインサイトを利用する方法について詳しく説明します。 また、ユーザー定義のダッシュボード機能を使用して独自のカスタムウィジェットを作成する方法についても説明します。 このドキュメントでは、同意トレンドと同意重複の使用例について説明します。 |
 
 {style="table-layout:auto"}
-アクセス権&#x200B;限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず [ダッシュボードの概要](../../dashboards/home.md).
+
+アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
