@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
-source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
+source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1649'
 ht-degree: 41%
 
 ---
@@ -122,6 +122,17 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
 | クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーのファネルトップの顧客獲得の使用例から提供される見込み客プロファイルを取り込みます。 |
+
+{style="table-layout:auto"}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明のアップデート |
+| --- | --- | --- |
+| 拡張子 ([!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能]) | [[!UICONTROL コンテキストデータ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL コンテキストデータ] マップオブジェクトを [!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能] Adobe Analyticsのコンテキストデータを提供する。 |
+| フィールドグループ | 複数 | 複数のフィールドが [[!UICONTROL 強化されたイベントセグメントの詳細]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
 
 詳しくは、 [XDM システムの概要](../../xdm/home.md).
 
