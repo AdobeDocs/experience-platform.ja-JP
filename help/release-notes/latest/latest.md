@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
+source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 41%
 
 ---
@@ -37,7 +37,7 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 | 機能 | 説明 |
 | --- | --- |
 | インテリジェントな再エンゲージメントの使用例ガイド | The [インテリジェントな再エンゲージメント](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) インテリジェントで責任のある方法でコンバージョンを完了する前に、コンバージョンを放棄した顧客を再び関与させる方法の詳細を、使用例ガイドで説明します。 このガイドでは、次のジャーニーの例を使用して、顧客を再び関与させます。 <ul><li>再エンゲージメントジャーニー — 製品の閲覧を中止した顧客をターゲティングします。</li><li>カート放棄のジャーニー — 買い物かごに製品を入れたが購入を完了していない顧客をターゲティングします。</li><li>注文確認のジャーニー — 製品購入に重点を置く</li></ul> 詳細なフィードバックオプションリンクは、 [インテリジェントな再エンゲージメントの使用例ガイド](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) フィードバックを提供する。 |
-| 見込み客プロファイル | 新しい顧客にリーチし、ファーストパーティデータをエンリッチメントするために、パートナーソースの見込み客プロファイルとパートナー ID を使用して、Real-Time CDPで上位ファネルマーケティングを実行します。 <ul><li>顧客の獲得とアドレス可能性：選択したデータパートナーからの cookie にも対応できない識別子とハッシュ化された PII を活用して、新しい顧客にリーチし、サードパーティ cookie への依存を減らします。</li><li>単一システムでの完全なファネルマーケティング：セルフサービスのセグメント化、オーディエンスのキュレーション、単一システムでの見込み客と既知の顧客に対するネイティブアクティベーション。</li><li>信頼の基盤：特許取得済みのデータの使用、ラベル付け、アクセス制御などを使用して、パートナーのデータとプロファイルを責任を持って市場に提供します。 詳しくは、次の使用例ガイドを参照してください。今後の見込みの使用例ガイドが利用できます。 見込み客の使用例を通じて新しい顧客を惹きつけ、獲得する方法については、見込み客の使用例ガイドを参照してください。<ul><li>[見込み](../../rtcdp/partner-data/prospecting.md)</li><li>[オンサイトのパーソナライズ機能](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[ファーストパーティプロファイルを補完](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| パートナーデータサポート | 新しい顧客にリーチし、ファーストパーティデータをエンリッチメントするために、パートナーソースの見込み客プロファイルとパートナー ID を使用して、Real-Time CDPで上位ファネルマーケティングを実行します。 <ul><li>顧客の獲得とアドレス可能性：選択したデータパートナーからの cookie にも対応できない識別子とハッシュ化された PII を活用して、新しい顧客にリーチし、サードパーティ cookie への依存を減らします。</li><li>単一システムでの完全なファネルマーケティング：セルフサービスのセグメント化、オーディエンスのキュレーション、単一システムでの見込み客と既知の顧客に対するネイティブアクティベーション。</li><li>信頼の基盤：特許取得済みのデータの使用、ラベル付け、アクセス制御などを使用して、パートナーのデータとプロファイルを責任を持って市場に提供します。 詳しくは、次の使用例ガイドを参照してください。今後の見込みの使用例ガイドが利用できます。 見込み客の使用例を通じて新しい顧客を惹きつけ、獲得する方法については、見込み客の使用例ガイドを参照してください。<ul><li>[見込み](../../rtcdp/partner-data/prospecting.md)</li><li>[オンサイトのパーソナライズ機能](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[ファーストパーティプロファイルを補完](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
