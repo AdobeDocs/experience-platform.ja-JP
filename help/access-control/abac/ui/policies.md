@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: アクセス制御ポリシーの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してアクセス制御ポリシーを管理する方法について説明します。
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 31%
+source-wordcount: '613'
+ht-degree: 13%
 
 ---
 
@@ -116,6 +116,74 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
+## サンドボックスのポリシーを設定する
+
+>[!IMPORTANT]
+>
+>デフォルトでは、 [!UICONTROL 自動インクルード] の機能はすべての顧客に対して有効になっています。つまり、すべてのサンドボックスがポリシーに追加されます。
+
+>[!NOTE]
+>
+>The **[!UICONTROL Default-Label-Based-Access-Control-Policy]** ポリシーは現在、設定で使用できる唯一のポリシーです。
+
+ポリシーに関連付けられたサンドボックスを表示するには、 **[!UICONTROL ポリシー]** タブをクリックします。
+
+![使用可能な既存のポリシーのリストを示すポリシーページ。](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+次に、ポリシーを選択し、「 」を選択します。 **[!UICONTROL サンドボックス]** タブをクリックします。 ポリシーに関連付けられているサンドボックスのリストが表示されます。
+
+![使用可能な既存のポリシーのリストを示すポリシーページ。](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### すべてのサンドボックスにポリシーを追加する
+
+以下を使用します。 **[!UICONTROL 自動インクルード]** オンに切り替える **[!UICONTROL サンドボックス]** タブをクリックして、すべてのサンドボックスのポリシーを有効にします。
+
+![The [!UICONTROL サンドボックス] タブ [!UICONTROL 自動インクルード] 切り替え](../../images/flac-ui/abac-policies-auto-include.png)
+
+The **[!UICONTROL 自動インクルードを有効にする]** 選択を確認するダイアログが表示されます。 選択 **[!UICONTROL 有効にする]** をクリックして設定を完了します。
+
+![The [!UICONTROL 自動インクルードを有効にする] ダイアログの強調表示 [!UICONTROL 有効にする].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>このポリシーは、既存のすべてのサンドボックスに対して有効化され、新しいサンドボックスが利用可能になると自動的に追加されます。
+
+### サンドボックスを選択するためのポリシーを追加
+
+>[!IMPORTANT]
+>
+>今後のサンドボックスは、 [!UICONTROL 自動インクルード] 切り替えがオフになっている。 サンドボックスを手動で管理し、ポリシーに追加する必要があります。
+
+以下を使用します。 **[!UICONTROL 自動インクルード]** オンに切り替える **[!UICONTROL サンドボックス]** タブをクリックして、すべてのサンドボックスのポリシーを無効にします。
+
+![The [!UICONTROL サンドボックス] タブ [!UICONTROL 自動インクルード] 切り替え](../../images/flac-ui/abac-policies-auto-include.png)
+
+次から： **[!UICONTROL サンドボックス]** タブ、選択 **[!UICONTROL サンドボックスを追加]** ：このポリシーを適用するサンドボックスを選択します。
+
+![The [!UICONTROL サンドボックス] タブに、ポリシーに追加されたサンドボックスのリストが表示されます。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+サンドボックスのリストが表示されます。 リストから追加するサンドボックスを選択します。 または、検索バーを使用してサンドボックスを検索します。 「**[!UICONTROL 保存]**」を選択します。
+
+![The [!UICONTROL サンドボックスを追加] ポリシーに追加できる既存のサンドボックスのリストを示すページ。](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>選択したサンドボックスは、ポリシーに正常に追加されました。
+
+### ポリシーからサンドボックスを削除する
+
+サンドボックスを削除するには、 **X** サンドボックス名の横にあるアイコン。
+
+![The [!UICONTROL サンドボックス] タブでサンドボックスのリストを表示し、 [!UICONTROL X] を削除します。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+The **[!UICONTROL 削除]** 選択を確認するダイアログが表示されます。 選択 **[!UICONTROL 確認]** をクリックして削除を完了します。
+
+![The [!UICONTROL 削除] ダイアログの強調表示 [!UICONTROL 確認].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>選択したサンドボックスは、ポリシーから正常に削除されました。
+
 ## ポリシーのアクティベート
 
 既存のポリシーをアクティブにするには、「**[!UICONTROL ポリシー]**」タブをクリックします。
@@ -126,7 +194,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-この **[!UICONTROL ポリシーを有効化]** ダイアログが表示され、アクティベーションを確認するプロンプトが表示されます。
+The **[!UICONTROL ポリシーを有効化]** ダイアログが表示され、アクティベーションを確認するプロンプトが表示されます。
 
 ![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
