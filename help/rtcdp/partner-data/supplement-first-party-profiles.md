@@ -1,13 +1,10 @@
 ---
-title: （ベータ版）パートナー提供の属性を使用してファーストパーティプロファイルを補完
+title: パートナー提供の属性を使用してファーストパーティプロファイルを補完
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
-hide: true
-hidefromtoc: true
-badgeBeta: label="ベータ版" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* このベータ版機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。
 
@@ -32,7 +29,7 @@ ht-degree: 100%
 
 >[!WARNING]
 >
->Real-Time CDP に取り込まれたパートナー提供の追加属性は、*平均プロファイルの充実度*&#x200B;に影響を与えます。プロファイルの充実度について詳しくは、[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)を参照してください。
+>Real-Time CDP に取り込まれたパートナー提供の追加属性は、*平均プロファイルリッチネス*&#x200B;に影響を与えます。プロファイルリッチネスについて詳しくは、[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)を参照してください。
 
 ## ユースケースの達成方法：おおまかな概要 {#achieve-the-use-case-high-level}
 
@@ -121,5 +118,6 @@ Commenting out links for now
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
-* （**近日公開**）[!BADGE ベータ版]{type=Informative}ユーザーがブランドを認証したり以前の履歴を持っていたりすることなく、訪問中のオンサイトエクスペリエンスをパーソナライズしたり、訪問後のオフサイトリターゲティングを行うために&#x200B;**パートナー支援認識を活用します**。
-* （**近日公開**）[!BADGE ベータ版]{type=Informative}パートナー ID を使用して、PII またはハッシュ化された PII を受け入れないパブリッシングエコシステムに&#x200B;**アクティベーションを拡張しました**。
+* Real-Time CDPでのサードパーティデータのサポートを使用して、 [データパートナーの見込み客プロファイルを使用してプロファイルベースを拡大し、顧客との関わりを深めて新しい顧客を獲得または獲得する](/help/rtcdp/partner-data/prospecting.md).
+* [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。
+* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。

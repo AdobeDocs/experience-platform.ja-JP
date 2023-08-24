@@ -1,13 +1,11 @@
 ---
 title: 見込み客オーディエンスを宛先に対してアクティブ化
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: 見込み客オーディエンスを宛先に対してアクティブ化する方法を説明します。
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 18%
+source-wordcount: '619'
+ht-degree: 23%
 
 ---
 
@@ -33,7 +31,7 @@ ht-degree: 18%
 
 ### 必要な権限 {#permissions}
 
-見込み客オーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+見込み客オーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 見込み客オーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL 有効化]** コントロールを使用する場合、適切な権限を持っています。
 
@@ -82,3 +80,11 @@ ht-degree: 18%
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
+
+Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
+
+* [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Real-Time CDPでのサードパーティデータのサポートを使用して、 [データパートナーの見込み客プロファイルを使用してプロファイルベースを拡大し、顧客との関わりを深めて新しい顧客を獲得または獲得する](/help/rtcdp/partner-data/prospecting.md).
+* [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。

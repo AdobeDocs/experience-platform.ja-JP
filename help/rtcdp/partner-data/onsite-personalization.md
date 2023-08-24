@@ -1,16 +1,18 @@
 ---
 title: パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズする
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2530'
 ht-degree: 8%
 
 ---
 
 # パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズする
+
+>[!AVAILABILITY]
+>
+>この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 パートナー支援認識を使用して、Web プロパティ訪問者にパーソナライズされたエクスペリエンスを提供する方法を説明します。 このチュートリアルを使用して、Experience Platformおよび他のExperience Cloudソリューションにおける様々な要素の実装順序を理解し、認証済み訪問者と未認証訪問者に対してパーソナライズされたエクスペリエンスを表示します。
 
@@ -265,4 +267,4 @@ Real-Time CDP のパートナーデータサポートを通じて達成される
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Real-Time CDPでのサードパーティデータのサポートを使用して、 [データパートナーの見込み客プロファイルを使用してプロファイルベースを拡大し、顧客との関わりを深めて新しい顧客を獲得または獲得する](/help/rtcdp/partner-data/prospecting.md).
-* （**近日公開**）[!BADGE ベータ版]{type=Informative}パートナー ID を使用して、PII またはハッシュ化された PII を受け入れないパブリッシングエコシステムに&#x200B;**アクティベーションを拡張しました**。
+* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。

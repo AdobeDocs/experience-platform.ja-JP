@@ -1,13 +1,10 @@
 ---
-title: （ベータ版）見込み顧客の使用例を通じて新規顧客を惹きつけ、獲得する
+title: 見込み顧客の使用例を通じて新規顧客を惹きつけ、獲得する
 description: Real-Time CDPのパートナーデータサポートが有効にする、見込み客の使用例を通じて新しい顧客を惹きつけ、獲得する方法を説明します。
-hide: true
-hidefromtoc: true
-badgeBeta: label="ベータ版" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 15%
+source-wordcount: '1941'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->* このベータ版機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 Real-Time CDPのサードパーティのデータサポートを利用して、データパートナーの見込み客プロファイルを活用してプロファイルベースを拡張し、新しい顧客を獲得またはリーチするためにデータパートナーと連携します。
 
@@ -57,8 +54,8 @@ Real-Time CDPを拡張して新しい顧客を惹きつけ、獲得する前に�
 * [データ使用ラベル](/help/data-governance/labels/overview.md)
 * [データセット](/help/catalog/datasets/overview.md)
 * [ソース](/help/sources/home.md)
-* プロファイル（見込み客プロファイルへのリンク）
-* オーディエンス（見込み客のオーディエンスへのリンク）
+* [見込み客プロファイル](/help/profile/ui/prospect-profile.md)
+* [見込み客のオーディエンス](/help/segmentation/ui/prospect-audience.md)
 * [宛先](/help/destinations/home.md)
 
 ### パートナーからサードパーティのプロファイルの詳細をライセンス取得 {#license-profiles-from-partner}
@@ -176,7 +173,7 @@ Real-Time CDPに読み込んだ見込み客プロファイルが **[!UICONTROL �
 
 >[!TIP]
 >
->次の項目が存在することに注意してください： **[!UICONTROL ID 名前空間]** 列。 複数のデータベンダーと連携している場合は、この列を使用して、見込み客のプロファイルの起源を推測します。
+>次の項目が存在することに注意してください： **[!UICONTROL ID 名前空間]** 列。 複数のデータベンダーと連携している場合は、この列を使用して、見込み客プロファイルの起源を推測します。
 
 ![Real-Time CDPに読み込まれた見込み客プロファイルの表示。](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -184,7 +181,7 @@ Real-Time CDPに読み込んだ見込み客プロファイルが **[!UICONTROL �
 
 ![見込み客プロファイルの検査方法のビュー。](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**近日開始**) 見込み客プロファイルの詳細を表示します。
+詳細を表示： [見込み客プロファイル](/help/profile/ui/prospect-profile.md).
 
 ### 見込み客オーディエンスの作成 {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Real-Time CDPのセグメント化機能を使用して、見込み客プロフ�
 * バッチプロファイル評価のみ。
 * は、時系列イベントに基づくオーディエンスの作成をサポートしていません。
 
-(**近日開始**) 見込み客オーディエンスの詳細を表示します。
+詳細を表示： [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md).
 
 ### 宛先への見込み客プロファイルのアクティブ化 {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Real-Time CDPのセグメント化機能を使用して、見込み客プロフ�
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
-* [!BADGE Beta]{type=Informative}[信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* （**近日公開**）[!BADGE ベータ版]{type=Informative}ユーザーがブランドを認証したり以前の履歴を持っていたりすることなく、訪問中のオンサイトエクスペリエンスをパーソナライズしたり、訪問後のオフサイトリターゲティングを行うために&#x200B;**パートナー支援認識を活用します**。
+* [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。
+* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。
