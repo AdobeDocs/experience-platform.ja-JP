@@ -1,21 +1,14 @@
 ---
 title: XDM 個別見込み客プロファイルクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM 個別見込み客プロファイルクラスの概要を説明します。
-badgeBeta: label="ベータ版" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 83f01c58e21bc42a53e2e7a08bd7a60ef90b41e6
+source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 16%
+source-wordcount: '348'
+ht-degree: 14%
 
 ---
 
 # [!UICONTROL XDM 個別見込み客プロファイル] クラス
-
->[!IMPORTANT]
->
->The [!UICONTROL XDM 個別見込み客プロファイル] クラスはベータ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
 エクスペリエンスデータモデル (XDM) では、 [!UICONTROL XDM 個別見込み客プロファイル] クラスは、通常、ファネルの上位にある顧客獲得の使用例に関して、データパートナーから提供される見込み客プロファイルをキャプチャします。
 

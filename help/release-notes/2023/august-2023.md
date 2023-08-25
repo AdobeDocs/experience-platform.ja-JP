@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1650'
+source-wordcount: '1664'
 ht-degree: 41%
 
 ---
@@ -120,7 +120,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーのファネルトップの顧客獲得の使用例から提供される見込み客プロファイルを取り込みます。 |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーのファネルトップの顧客獲得の使用例から提供される見込み客プロファイルを取り込みます。 詳しくは、 [[!UICONTROL XDM 個別見込み客プロファイル]](../../xdm/classes/prospect.md) 例を参照し、詳細を確認するドキュメントです。 |
 
 {style="table-layout:auto"}
 

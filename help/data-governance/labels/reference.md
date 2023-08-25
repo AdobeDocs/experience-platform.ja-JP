@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ラベルの用語集
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
-ht-degree: 93%
+source-wordcount: '2185'
+ht-degree: 94%
 
 ---
 
@@ -64,11 +64,7 @@ ht-degree: 93%
 | **PSPD** | PSPD（Permitted Sensitive Personal Data）とは、アドビが「機密」、「特殊なデータカテゴリ」または適用法令で使用される類似の用語をアップロードすることを、契約上許可されているデータを指します。保護対象保健情報（PHI）やその他の規制対象の保健データは、明確に除外されます。 |
 | **RHD** | 保護対象保健情報（PHI）を参照するデータ、またはアドビが契約上アップロードを許可している患者に関する情報。 |
 
-## （ベータ版）パートナーエコシステムのラベル {#partner}
-
->[!IMPORTANT]
->
->サードパーティのデータラベルはベータ版です。 すべてのユーザーが利用できるわけではなく、ドキュメントが変更される場合があります。
+## パートナーエコシステムラベル {#partner}
 
 パートナーエコシステムラベルは、組織の外部のソースから取得したデータを分類するために使用します。
 
