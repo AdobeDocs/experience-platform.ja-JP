@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 92%
+source-wordcount: '1394'
+ht-degree: 89%
 
 ---
 
@@ -15,16 +15,29 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 >[!NOTE]
 >
->Analytics タグ拡張 ( [AppMeasurement JavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurement リリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
+>Analytics タグ拡張 ( [AppMeasurementJavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurementリリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
 
-## 2022年9月23日
+## 2023年7月19日（PT）
+
+**Adobe Analytics Extension 1.9.2**
+
+**機能**:
+
+* AppMeasurementv2.24.0にアップグレード。
+* オプションの設定 (`decodeLinkParameters` デフォルト `false`) を使用して、2 バイトエンコードされた文字を含むリンク URL をデコードします。
+
+**バグの修正**:
+* 高エントロピーの誤ったブラウザーに対するエラー処理を追加しました。 [User-Agent クライアントのヒント](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ja) API です。
+* 変更済み [POST](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) 使用する Content-Type ヘッダー `x-www-form-urlencoded` デフォルトでは。
+
+## 2022年9月23日（PT）
 
 **Adobe Analytics Extension 1.9.1**
 
 **機能**:
 
-* AppMeasurement v2.23.0にアップグレード。
-* 拡張機能は高エントロピーを収集できるようになった [user-agent クライアントのヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンの AppMeasurement でサポートされている
+* AppMeasurementv2.23.0にアップグレード。
+* 拡張機能は高エントロピーを収集できるようになった [user-agent クライアントのヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンのAppMeasurementでサポートされる
 
 ## 2022年2月28日（PT）
 
@@ -32,7 +45,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **バグの修正**:
 
-* AppMeasurement の一部のデバッグ文を削除しました。
+* デバッグ文の一部を削除し、AppMeasurement。
 
 ## 2021年11月29日
 
@@ -172,7 +185,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
 * [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
-* 次のチェックボックスは、サポートされなくなったので、削除しました。&quot;宛先パブリッシング IFRAME を DOM に付加したり、宛先を有効にしたりしない&quot;
+* 現在はサポートされていないので、次のチェックボックスを削除しました：「Do not attach the destination publishing IFRAME to the DOM or fire destinations」
 
 ## 2019 年 6 月 4 日（PT）
 
