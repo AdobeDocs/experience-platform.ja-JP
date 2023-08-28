@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 41%
+source-wordcount: '1749'
+ht-degree: 42%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 - [データ収集](#data-collection)
 - [データ取得](#data-ingestion)
 - [データ準備](#data-prep)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [セグメント化サービス](#segmentation)
@@ -111,6 +112,17 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 {style="table-layout:auto"}
 
 詳しくは、 [データ準備の概要](../../data-prep/home.md).
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+- 次の操作を実行できます。 [見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md) をファイルベースの宛先に追加する。
+- 将軍 [活性化ガードレール](../../destinations/guardrails.md#general-activation-guardrails) サンドボックスあたり最大 100 件の宛先が、 _ハードリミット_.
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
