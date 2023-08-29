@@ -3,7 +3,7 @@ title: LiveRamp — オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボードする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 69%
@@ -209,7 +209,7 @@ Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp - Onboardin
 例えば、書き出された CSV ファイル（1 つを含む） `email` 属性。Experience Platformからの 2 つのオーディエンス [セグメント化サービス](../../../segmentation/home.md)と 1 つ [インポート済み](../../../segmentation/ui/overview.md#importing-an-audience) 外部オーディエンスは次のようになります。
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、 `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` および `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節では、セグメント化サービスからのオーディエンスについて説明し、 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` は、Platform as a にインポートされたオーディエンスを表します [カスタムアップロード](../../../segmentation/ui/overview.md#importing-an-audience).
+上記の例では、 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` および `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節では、セグメント化サービスからのオーディエンスについて説明し、 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` は、Platform as a にインポートされたオーディエンスを表します [カスタムアップロード](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
