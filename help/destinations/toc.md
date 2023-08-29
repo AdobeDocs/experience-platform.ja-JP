@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: d16a4cf7db12c92ab6ead498846f17d76f6ac641
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 95%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 95%
    * [アクティベーションデータフローを編集](./ui/edit-activation.md)
    * [宛先の削除](./ui/delete-destinations.md)
    * [データフローのモニタリング](./ui/monitor-dataflows.md)
-   * [（ベータ版）ファイルベースの宛先のファイル形式オプションの設定](./ui/batch-destinations-file-formatting-options.md)
+   * [ファイルベースの宛先のファイル形式オプションの設定](./ui/batch-destinations-file-formatting-options.md)
    * [コンテキスト内宛先アラートを購読](ui/alerts.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
