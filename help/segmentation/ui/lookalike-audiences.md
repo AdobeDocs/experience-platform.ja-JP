@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="限定提供（LA）" type=Caution
 source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -84,7 +84,7 @@ Adobe Experience Platformでは、類似 (look-alike) モデルは、次の 3 �
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="類似性とリーチ"
->abstract="類似性およびリーチグラフには、特定の類似性スコアを上回るプロファイルから成る、類似 (look-alike) オーディエンスの予想リーチがグラフ表示されます。 グラフ内の特定のポイントにポインターを合わせると、現在ハイライト表示されているポイントの類似率および予想プロファイル数が表示されます。"
+>abstract="類似性およびリーチグラフでは、特定の類似性スコアを上回るプロファイルから構成される、類似オーディエンスの予想リーチを図にします。グラフ内の特定のポイントにポインターを合わせると、現在ハイライト表示されているポイントの類似率および予想プロファイル数が表示されます。"
 
 「類似性とリーチ」セクションには、特定の類似性スコアを上回るプロファイルから成る、類似 (look-alike) オーディエンスの予想リーチを示すグラフが表示されます。 類似性スコアは、 **距離** の類似性に関する情報を含みます。
 
