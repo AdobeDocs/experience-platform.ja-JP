@@ -1,15 +1,20 @@
 ---
 title: フローサービス API を使用した Pendo のソース接続とデータフローの作成
 description: フローサービス API を使用してAdobe Experience Platformを Pendo に接続する方法を説明します。
+badge: ベータ版
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 56%
+source-wordcount: '1459'
+ht-degree: 55%
 
 ---
 
 # のソース接続とデータフローの作成 [!DNL Pendo] フローサービス API の使用
+
+>[!NOTE]
+>
+>[!DNL Pendo] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 次のチュートリアルでは、ソース接続とデータフローを作成して、 [[!DNL Pendo]](https://Pendo.com/) イベントデータをAdobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

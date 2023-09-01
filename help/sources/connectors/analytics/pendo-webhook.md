@@ -1,16 +1,20 @@
 ---
 title: ペンドソースの概要
 description: Web フックを活用して API またはユーザーインターフェイスを使用して Pendo をAdobe Experience Platformに接続する方法を説明します
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: ベータ版
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 19%
+source-wordcount: '370'
+ht-degree: 20%
 
 ---
 
 # [!DNL Pendo]
+
+>[!NOTE]
+>
+>[!DNL Pendo] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

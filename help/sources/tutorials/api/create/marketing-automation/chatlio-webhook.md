@@ -1,15 +1,20 @@
 ---
 title: フローサービス API を使用した Chatlio 用のソース接続とデータフローの作成
 description: フローサービス API を使用してAdobe Experience Platformを Chatlio に接続する方法を説明します。
+badge: ベータ版
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 56%
+source-wordcount: '1458'
+ht-degree: 55%
 
 ---
 
 # のソース接続とデータフローの作成 [!DNL Chatlio] フローサービス API の使用
+
+>[!NOTE]
+>
+>[!DNL Chatlio] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 次のチュートリアルでは、ソース接続とデータフローを作成し、 [[!DNL Chatlio]](https://chatlio.com/) イベントデータをAdobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

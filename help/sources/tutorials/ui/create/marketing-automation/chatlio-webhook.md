@@ -1,15 +1,20 @@
 ---
 title: UI での Chatlio ソース接続の作成
 description: Adobe Experience Platform UI を使用して Chatlio ソース接続を作成する方法を説明します。
+badge: ベータ版
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1167'
 ht-degree: 22%
 
 ---
 
 # UI での [!DNL Chatlio] ソース接続の作成
+
+>[!NOTE]
+>
+>[!DNL Chatlio] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 このチュートリアルでは、 [!DNL Chatlio] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
 
