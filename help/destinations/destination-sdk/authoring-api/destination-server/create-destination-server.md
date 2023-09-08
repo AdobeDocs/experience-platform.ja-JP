@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先サーバーを作成するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の作成
 source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1696'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ POST /authoring/destination-servers
 
 ### 静的スキーマの宛先サーバーの作成 {#static-destination-servers}
 
-を使用する宛先については、宛先サーバーの例の下にあるタブのを参照してください。 [静的スキーマ](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+[静的スキーマ](../../functionality/destination-configuration/schema-configuration.md#attributes-schema)を使用する宛先については、以下の各タブで宛先サーバーの例を参照してください。
 
 以下のサンプルペイロードには、各宛先サーバータイプでサポートされているすべてのパラメーターが含まれます。リクエストにすべてのパラメーターを含める必要はありません。ペイロードは、必要に基づいてカスタマイズできます。
 
@@ -778,9 +778,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 動的スキーマの宛先サーバーの作成 {#dynamic-schema-servers}
 
-動的スキーマを使用すると、サポートされるターゲット属性を動的に取得し、独自の API に基づいてスキーマを生成できます。 動的スキーマを設定する前に、動的スキーマの宛先サーバーを設定する必要があります。
+動的スキーマを使用すると、サポートされているターゲット属性を動的に取得し、独自の API に基づいてスキーマを生成できます。動的スキーマを設定する前に、動的スキーマの宛先サーバーを設定する必要があります。
 
-を使用する宛先については、の「 」タブにある宛先サーバーの例を参照してください。 [動的スキーマ](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+[動的スキーマ](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration)を使用する宛先については、以下のタブで宛先サーバーの例を参照してください。
 
 以下のサンプルペイロードには、動的スキーマサーバーに必要なすべてのパラメーターが含まれています。
 
