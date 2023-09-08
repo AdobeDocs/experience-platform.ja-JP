@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK の最新のリリースノート
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1589'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 97%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン2.18.0 - 2023 年 7 月 31 日
+## バージョン 2.18.0 - 2023年7月31日（PT）
 
 **新機能**
 
-* のサポートを追加しました。 [datastream ID のコマンドごとの上書き](../datastreams/overrides.md).
+* ](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
-* ドメインがクエリの一部であるため、出口リンクが検証されなかった問題を修正しました。
-* 非推奨 `edgeConfigId` ～を支持して `datastreamId` （Web SDK 設定）を参照してください。
+* ドメインがクエリの一部として含まれていることが原因で離脱リンクが適合しない問題を修正しました。
+* Web SDK 設定では `edgeConfigId` が非推奨となり、`datastreamId` が優先されます。
 
 ## バージョン 2.17.0 - 2023年5月17日（PT）
 
