@@ -3,9 +3,9 @@ description: 宛先テスト API を使用して、メッセージ変換テン�
 title: 書き出されたプロファイル構造の検証
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '789'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -186,7 +186,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **リクエスト**
 
 
-以下のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのオーディエンス資格と 5 つの ID があります。 [サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
+以下のリクエストでは、宛先で想定されている形式に一致する、複数のエクスポートされたプロファイルがレンダリングされます。この例では、宛先 ID は、設定可能な集計を使用した宛先設定に対応しています。リクエストの本文には、2 つのプロファイルが含まれ、それぞれに 3 つのオーディエンス資格と 5 つの ID が含まれます。[サンプルプロファイル生成 API](sample-profile-generation-api.md) を使用して、呼び出し時に送信するプロファイルを生成できます。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **応答**
 
 応答は、テンプレートのレンダリング結果、または発生したエラーを返します。
-応答が成功すると、HTTP ステータス 200 が、書き出されたデータの詳細と共に返されます。応答では、オーディエンスのメンバーシップと ID に基づいてプロファイルを集計する方法に注意します。 `output` パラメーターで、エスケープ文字列として書き出されたプロファイルを見つけます。
+応答が成功すると、HTTP ステータス 200 が、書き出されたデータの詳細と共に返されます。応答では、オーディエンスメンバーシップと ID に基づいてプロファイルが集計されていることがわかります。`output` パラメーターで、エスケープ文字列として書き出されたプロファイルを見つけます。
 応答が失敗すると、発生したエラーの説明と共に HTTP ステータス 400 が返されます。
 
 ```json
