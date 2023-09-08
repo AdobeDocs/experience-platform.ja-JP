@@ -4,9 +4,9 @@ title: プロファイルクエリ言語（PQL）の概要
 description: このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '706'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -87,4 +87,4 @@ PQL では次のリテラル型をサポートしています。
 
 ## 次の手順
 
-これで、 [!DNL Profile Query Language]の場合は、セグメント定義を作成および変更する際に PQL を使用できます。 セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
+これで [!DNL Profile Query Language] の使用方法を学習したので、セグメント定義を作成および変更する時に PQL を使用できるようになりました。セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
