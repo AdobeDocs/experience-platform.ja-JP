@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: Schemas
 source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '519'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
