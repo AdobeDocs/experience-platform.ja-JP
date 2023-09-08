@@ -5,9 +5,9 @@ title: データ収集の概要
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 998cc9a9c490124ff21fdbf5f3a7b91abef3e8b8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '514'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ Adobe Experience Platform は、クライアントサイドのソースから顧
 * [イベント転送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform モバイル SDK](https://aep-sdks.gitbook.io/docs/)
-* [Edge ネットワークサーバー API](../server-api/overview.md)
+* [Edge Network Server API](../server-api/overview.md)
 * [Adobe Experience Platform デバッガー](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=ja)
-* [Experience Platform保証](../assurance/home.md)
+* [Experience Platform Assurance](../assurance/home.md)
 
 
 このガイドでは、データ収集の概要と、このフレームワークが Platform Edge Network を介して Adobe Experience Cloud 製品やアドビ以外のアプリケーションにデータを送信する仕組みについて説明します。
