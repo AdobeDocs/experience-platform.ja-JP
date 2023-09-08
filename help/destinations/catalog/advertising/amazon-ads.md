@@ -4,9 +4,9 @@ description: Amazon Ads には、登録販売者、ベンダー、書籍ベン�
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1404'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP�
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、 *Amazon Ads* チーム。 現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
+>この宛先コネクタとドキュメントページは、*Amazon Ads* チームによって作成および管理されています。現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
 
 ## ユースケース {#use-cases}
 
@@ -28,7 +28,7 @@ Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP�
 
 ### アクティブ化とターゲティング {#activation-and-targeting}
 
-このAmazon DSPとの統合により、Amazon Ads 広告主は、広告主 CDP オーディエンスをAdobe Experience PlatformからAmazonのDSPに渡して、広告ターゲティング用の広告主オーディエンスを作成できます。 オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。
+この Amazon DSP との統合により、Amazon Ads の広告主は、広告主の CDP オーディエンスを Adobe Experience Platform から Amazon の DSP に渡して、広告ターゲティング用の広告主オーディエンスを作成できます。オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -53,8 +53,8 @@ Adobe Experience Platform で Amazon Ads 接続を使用するには、まずユ
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *Amazon Ads* 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | *Amazon Ads* 宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ Amazon Ads 接続インターフェイスに移動するので、まず接続先
 
 宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
