@@ -3,9 +3,9 @@ description: このページでは、/testing/destinationInstance API エンド�
 title: 詳細なアクティベーション結果の表示
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '545'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 90%
 
 ## 詳細な宛先テスト結果の表示 {#test-activation-results}
 
-一度 [宛先設定を検証しました](file-based-destination-testing-api.md)に値を入力すると、詳細なアクティベーション結果を表示できます。それには、 `authoring/testing/destinationInstance/` エンドポイントを作成し、テストする宛先の宛先インスタンス ID と、アクティブ化されたオーディエンスのフロー実行 ID を指定します。
+[宛先設定を検証](file-based-destination-testing-api.md)したら、`authoring/testing/destinationInstance/` エンドポイントに対して GET リクエストを行い、テストしている宛先の宛先インスタンス ID とアクティブ化されたオーディエンスのフロー実行 ID を指定することで、詳細なアクティベーション結果を表示できます。
 
 [宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、使用する必要がある完全な API URL を見つけることができます。
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | クエリ文字列パラメーター | 説明 |
 | -------- | ----------- |
-| `flowRunIds` | アクティブ化されたオーディエンスに対応するフロー実行 ID。 [宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、フロー実行 ID を見つけることができます。 |
+| `flowRunIds` | アクティブ化されたオーディエンスに対応するフロー実行 ID。[宛先テスト呼び出しの応答](file-based-destination-testing-api.md)で返される `results` プロパティに、フロー実行 ID を見つけることができます。 |
 
 **リクエスト**
 
