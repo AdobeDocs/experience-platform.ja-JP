@@ -4,9 +4,9 @@ title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '925'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -40,18 +40,18 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Platform を宛先プラットフォームのアカウントにリンクする。
-* 宛先に対してアクティブ化するオーディエンスを選択する。
-* 選択 [エクスペリエンスデータモデル (XDM) フィールド](../xdm/home.md) 電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する際に書き出す。
+* 宛先に対してアクティブにするオーディエンスを選択します。
+* メールマーケティングの宛先にオーディエンスをアクティブ化する際に書き出す[エクスペリエンスデータモデル（XDM）フィールド](../xdm/home.md)を選択します。
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
 Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、[宛先のタイプとカテゴリの概要](./destination-types.md)を参照してください。
 
-## Adobeで構築された、パートナーで構築された宛先 {#adobe-and-partner-built-destinations}
+## アドビが作成した宛先とパートナーが作成した宛先 {#adobe-and-partner-built-destinations}
 
-Experience Platformの宛先カタログのコネクタの一部はAdobeが作成および管理するのに対して、他のコネクタは [Destination SDK](/help/destinations/destination-sdk/overview.md). 宛先がパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタに関するドキュメントページの上部にあるメモが呼び出されます。 例えば、 [Amazon S3 コネクタ](/help/destinations/catalog/cloud-storage/amazon-s3.md) はAdobeによって作成され、 [TikTok connector](/help/destinations/catalog/social/tiktok.md) は、TikTokチームが作成および管理します。
+Experience Platform 宛先カタログのコネクタには、アドビによって作成および管理されているものと、[Destination SDK](/help/destinations/destination-sdk/overview.md) を使用してパートナー企業によって作成および管理されているものがあります。宛先がパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタに関するドキュメントページの上部にあるメモが呼び出されます。例えば、[Amazon S3 コネクタ](/help/destinations/catalog/cloud-storage/amazon-s3.md) はアドビが作成し、[TikTok コネクタ](/help/destinations/catalog/social/tiktok.md) は、TikTok チームが作成および管理しています。
 
-パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。 Adobeが作成および維持するコネクタに関する問題については、Adobe担当者またはカスタマーケアにお問い合わせください。
+パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
 ## 宛先とアクセス制御 {#access-controls}
 
@@ -62,8 +62,8 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 | 権限レベル | 説明 |
 | ---- | ---- |
 | **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
-| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | オーディエンスを宛先に対してアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでのセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** | オーディエンスを宛先に対してアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでのセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL 宛先の管理]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を非表示にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 
 {style="table-layout:auto"}
 
@@ -99,10 +99,10 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 * [広告の宛先 - Google ディスプレイ＆ビデオ 360](./catalog/advertising/google-dv360.md)
 * [クラウドストレージの宛先](./catalog/cloud-storage/overview.md)
 * [メールマーケティングの宛先](./catalog/email-marketing/overview.md)
-* [ソーシャルの宛先 ](./catalog/social/overview.md)
+* [ソーシャルの宛先](./catalog/social/overview.md)
 
-オーディエンスのアクティベーションワークフローでのデータポリシー違反について詳しくは、 **[!UICONTROL レビュー]** 次のガイドの手順を実行します。
+オーディエンスのアクティベーションワークフローにおけるデータポリシー違反について詳しくは、次のガイドの&#x200B;**[!UICONTROL レビュー]**&#x200B;手順を参照してください。
 
-* [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md#review)
+* [ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-segment-streaming-destinations.md#review)
 * [ストリーミングプロファイル書き出し宛先に対するオーディエンスデータの有効化](./ui/activate-streaming-profile-destinations.md#review)
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](./ui/activate-batch-profile-destinations.md#review)
