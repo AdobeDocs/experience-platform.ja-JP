@@ -3,9 +3,9 @@ description: 宛先テスト API を使用して、宛先テストで使用で�
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1018'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ Adobe XDM ソーススキーマ（宛先をテストする際に使用）また�
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。読み取り [宛先に接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja) および [宛先へのプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja) を参照してください。
+>* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
 > * 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
 >![宛先インスタンス ID の取得方法の UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -80,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **応答**
 
-正常な応答は、指定された数のサンプルプロファイルと共に HTTP ステータス 200 を返します。このとき、オーディエンスのメンバーシップ、ID、およびソース XDM スキーマに対応するプロファイル属性が返されます。
+応答が成功すると、HTTP ステータス 200 が、指定された数のサンプルプロファイル（ソース XDM スキーマに対応するオーディエンスメンバーシップ、ID およびプロファイル属性を含む）と共に返されます。
 
 >[!TIP]
 >
-> 応答は、宛先インスタンスで使用されるオーディエンスのメンバーシップ、ID およびプロファイル属性のみを返します。 ソーススキーマに他のフィールドがあっても、それらは無視されます。
+> 応答は、宛先インスタンスで使用されたオーディエンスメンバーシップ、ID およびプロファイル属性のみを返します。ソーススキーマに他のフィールドがあっても、それらは無視されます。
 
 ```json
 [
@@ -180,9 +180,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentMembership` | 個人のオーディエンスメンバーシップを表す map オブジェクト。 詳しくは、 `segmentMembership`，読み取り [オーディエンスメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | 個人のオーディエンスメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[オーディエンスメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)を参照してください。 |
 | `lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
-| `xdm:status` | オーディエンスのメンバーシップが現在のリクエストの一部として認識されたかどうかを示す文字列フィールド。 以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてオーディエンスから退出しています。</li></ul> |
+| `xdm:status` | オーディエンスメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてオーディエンスから外れています。</li></ul> |
 | `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja#identityMap)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -229,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **応答**
 
-正常な応答は、指定された数のサンプルプロファイルと共に HTTP ステータス 200 を返します。このとき、オーディエンスのメンバーシップ、ID およびターゲット XDM スキーマに対応するプロファイル属性が返されます。
+応答が成功すると、HTTP ステータス 200 が、指定された数のサンプルプロファイル（ターゲット XDM スキーマに対応するオーディエンスメンバーシップ、ID およびプロファイル属性を含む）と共に返されます。
 
 ```json
 [
