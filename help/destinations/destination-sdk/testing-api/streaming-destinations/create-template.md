@@ -3,9 +3,9 @@ description: 宛先テスト API を使用して、宛先を公開する前に�
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '950'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform のターゲットスキーマと宛先でサポート
 
 ## メッセージ変換テンプレートの作成とテストが必要な理由 {#why-create-message-transformation-template}
 
-Destination SDKでの宛先を作成する最初の手順の 1 つは、オーディエンスのメンバーシップ、ID、プロファイル属性のデータ形式がAdobe Experience Platformから宛先に書き出される際に変換される方法を考えることです。 Adobe XDM スキーマと宛先スキーマとの間の変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
+Destination SDK で宛先を作成する最初の手順のひとつは、Adobe Experience Platform から宛先に書き出される際に、オーディエンスメンバーシップ、ID、プロファイル属性のデータ形式がどのように変換されるかを考慮することです。Adobe XDM スキーマと宛先スキーマとの間の変換について詳しくは、[メッセージ形式ドキュメント](../../functionality/destination-server/message-format.md#using-templating)を参照してください。
 
 変換を成功させるためには、[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](../../functionality/destination-server/message-format.md#segments-identities-attributes)の例に類似した変換テンプレートを提供する必要があります。
 
@@ -38,8 +38,8 @@ Destination SDKでの宛先を作成する最初の手順の 1 つは、オー�
 テンプレート作成の準備を整える前に、必ず以下の手順を完了してください。
 
 1. [宛先サーバー設定を作成](../../authoring-api/destination-server/create-destination-server.md)します。生成するテンプレートは、`maxUsersPerRequest` パラメーターに指定した値に基づいて異なります。
-   * 用途 `maxUsersPerRequest=1` 宛先への API 呼び出しで単一のプロファイルを、オーディエンス資格、ID、プロファイル属性と共に含める場合。
-   * 用途 `maxUsersPerRequest` 宛先への API 呼び出しに複数のプロファイルと、そのオーディエンスの資格、ID、プロファイル属性を含める場合は、値が 1 より大きい。
+   * 宛先への API 呼び出しに、単一のプロファイルと、そのオーディエンスの選定、ID およびプロファイル属性を含めたい場合は、`maxUsersPerRequest=1` を使用します。
+   * 宛先への API 呼び出しに、複数のプロファイルと、そのオーディエンスの選定、ID およびプロファイル属性を含めたい場合は、1 より大きな値を持つ `maxUsersPerRequest` を使用します。
 2. [宛先設定を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)して、宛先サーバー設定の ID を `destinationDelivery.destinationServerId` に追加します。
 3. 先ほど作成した[宛先設定の ID を取得](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)して、テンプレート作成ツールで使用します。
 4. メッセージ変換テンプレートで[使用できるのはどの関数およびフィルターか](../../functionality/destination-server/supported-functions.md)を理解します。
