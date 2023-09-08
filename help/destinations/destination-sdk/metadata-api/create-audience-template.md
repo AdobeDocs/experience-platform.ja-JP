@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを作成するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの作成
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '624'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 89%
 >
 >**API エンドポイント**：`platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Destination SDKを使用して作成される一部の宛先では、宛先のオーディエンスメタデータをプログラムで作成、更新、削除するために、オーディエンスメタデータ設定を作成する必要があります。 このページでは、`/authoring/audience-templates` API エンドポイントを使用した設定の作成方法を示します。
+Destination SDK を使用して作成した一部の宛先では、オーディエンスメタデータ設定を作成して、宛先のオーディエンスメタデータをプログラムで作成、更新または削除する必要があります。このページでは、`/authoring/audience-templates` API エンドポイントを使用した設定の作成方法を示します。
 
 このエンドポイントを通じて設定できる機能について詳しくは、[オーディエンスメタデータ管理](../functionality/audience-metadata-management.md)を参照してください。
 
@@ -190,8 +190,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | プロパティ | タイプ | 説明 |
 | -------- | ----------- | ----------- |
 | `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。この名前は、Adobe Experience Platform のユーザーインターフェイスであらゆるパートナー固有のエラーメッセージに表示され、その後に `metadataTemplate.create.errorSchemaMap` から解析されたエラーメッセージが続きます。 |
-| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスの作成、更新、削除または検証に使用されます。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
-| `httpMethod` | 文字列 | 宛先のオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。 例：`POST`、`PUT`、`DELETE` |
+| `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスを作成、更新、削除、検証するために使用します。`https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
+| `httpMethod` | 文字列 | 宛先のオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
 | `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
 | `headers.value` | 文字列 | API への呼び出しに追加する HTTP ヘッダーの値を指定します。例：`"application/x-www-form-urlencoded"` |
 | `requestBody` | 文字列 | API に送信するメッセージ本文のコンテンツを指定します。`requestBody` オブジェクトに追加する必要があるパラメーターは、API が受け入れるフィールドに応じて異なります。例については、オーディエンスメタデータ機能ドキュメントの[最初のテンプレートの例](../functionality/audience-metadata-management.md#example-1)を参照してください。 |
