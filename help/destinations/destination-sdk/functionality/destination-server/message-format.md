@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2237'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 78%
 * **エクスペリエンスデータモデル（XDM）**。[XDM の概要](../../../../xdm/home.md)および [Adobe Experience Platform での XDM スキーマの作成方法](../../../../xdm/tutorials/create-schema-ui.md)。
 * **クラス**。[UI でのクラスの作成と編集](../../../../xdm/ui/resources/classes.md)。
 * **identityMap**。ID マップは、Adobe Experience Platform のすべてのエンドユーザー ID のマップを表します。[XDM フィールド辞書](../../../../xdm/schema/field-dictionary.md)の `xdm:identityMap` を参照してください。
-* **segmentMembership**。この [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 属性は、プロファイルがどのオーディエンスに属するかを通知します。 の `status` フィールドには、 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/segmentation.md).
+* **segmentMembership**。[segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 属性は、プロファイルが属するオーディエンスを知らせます。`status` フィールドの 3 つの異なる値については、[オーディエンスメンバーシップの詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/segmentation.md)に関するドキュメントを参照してください。
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 プロファイルには、以下の 3 つのセクションがあります。
 
 * `segmentMembership`（常にプロファイルに存在）
-   * このセクションには、プロファイルに存在するすべてのオーディエンスが含まれます。 オーディエンスには、次の 2 つのステータスのいずれかを設定できます。 `realized` または `exited`.
+   * このセクションには、プロファイルに存在するすべてのオーディエンスが含まれます。オーディエンスのステータスは、2 つ（`realized` または `exited`）のいずれかになります。
 * `identityMap`（常にプロファイルに存在）
    * このセクションには、プロファイル（メール、Google GAID、Apple IDFA など）に存在し、アクティベーションワークフローで書き出すためにユーザーがマッピングしたすべての ID が含まれます。
 * 属性（宛先設定に応じて、これらはプロファイルに存在する可能性があります）。また、事前定義済みの属性とフリーフォーム属性には、注意すべきわずかな違いがあります。
@@ -170,15 +170,15 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 }
 ```
 
-## ID、属性、オーディエンスのメンバーシップ変換にテンプレート言語を使用する {#using-templating}
+## ID、属性およびオーディエンスメンバーシップの変換へのテンプレート言語の使用 {#using-templating}
 
 アドビは [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) と類似したテンプレート言語である [Pebble テンプレート](https://pebbletemplates.io/)を使用して、Experience Platform XDM スキーマのフィールドを宛先でサポートされる形式に変換します。
 
 この節では、これらの変換がどのように行われるか（入力 XDM スキーマから、テンプレートを経て、宛先で受け入れられるペイロード形式に出力するまで）について、いくつかの例を示します。後述の例は、以下のように複雑さが増していきます。
 
-1. シンプルな変換例。テンプレートが、 [プロファイル属性](#attributes), [オーディエンスのメンバーシップ](#segment-membership)、および [ID](#identities) フィールド。
-2. 上記のフィールドを組み合わせたテンプレートの複雑な例を増やしました。 [オーディエンスと ID を送信するテンプレートの作成](./message-format.md#segments-and-identities) および [セグメント、ID およびプロファイル属性を送信するテンプレートの作成](#segments-identities-attributes).
-3. 集計キーが含まれるテンプレート。を使用する場合、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 宛先設定では、Experience Platformは、オーディエンス ID、オーディエンスのステータス、id 名前空間などの条件に基づいて、宛先に書き出されたプロファイルをグループ化します。
+1. シンプルな変換例。[プロファイル属性](#attributes)、[オーディエンスメンバーシップ](#segment-membership)および [ID](#identities) フィールドに対するシンプルな変換でのテンプレートの仕組みを説明します。
+2. 上記のフィールドを組み合わせてテンプレートの複雑さが増した例：[オーディエンスおよび ID を送信するテンプレートの作成](./message-format.md#segments-and-identities)および[セグメント、ID およびプロファイル属性を送信するテンプレートの作成](#segments-identities-attributes)。
+3. 集約キーが含まれるテンプレート。宛先設定で[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用する場合、Experience Platform は、条件（オーディエンス ID、オーディエンスステータス、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルをグループ化します。
 
 ### プロファイル属性 {#attributes}
 
@@ -265,8 +265,8 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 ### オーディエンスのメンバーシップ {#audience-membership}
 
-この [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 属性は、プロファイルがどのオーディエンスに属するかを通知します。
-の `status` フィールドには、 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/segmentation.md).
+[segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 属性は、プロファイルが属するのはどのオーディエンスかを知らせます。
+`status` フィールドの 3 つの異なる値については、[オーディエンスメンバーシップの詳細スキーマフィールドグループ](../../../../xdm/field-groups/profile/segmentation.md)に関するドキュメントを参照してください。
 
 **入力**
 
@@ -490,10 +490,10 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 }
 ```
 
-### オーディエンスと ID を送信するテンプレートの作成 {#segments-and-identities}
+### オーディエンスおよび ID を送信するテンプレートの作成 {#segments-and-identities}
 
 この節では、Adobe XDM スキーマとパートナー宛先スキーマの間で一般的に使用される変換の例を示します。
-以下の例では、オーディエンスのメンバーシップと ID の形式を変換し、それらを宛先に出力する方法を示します。
+以下の例に、オーディエンスメンバーシップおよび ID 形式の変換方法と宛先への出力方法を示します。
 
 **入力**
 
@@ -661,7 +661,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 この節では、Adobe XDM スキーマとパートナー宛先スキーマの間で一般的に使用される変換の例を示します。
 
-もう 1 つの一般的な使用例は、オーディエンスのメンバーシップ、ID（例： ）を含むデータを書き出す場合です。電子メールアドレス、電話番号、広告 ID) およびプロファイル属性。 この方法でデータを書き出すには、以下の例を参照してください。
+もうひとつの一般的なユースケースは、オーディエンスメンバーシップ、ID（例：メールアドレス、電話番号、広告 ID）およびプロファイル属性が含まれるデータの書き出しです。この方法でデータを書き出すには、以下の例を参照してください。
 
 **入力**
 
@@ -859,21 +859,21 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 ### 様々な条件でグループ化されて書き出されたプロファイルにアクセスするために、テンプレートに集計キーを含める {#template-aggregation-key}
 
-を使用する場合、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 宛先設定で、オーディエンス ID、オーディエンスエイリアス、オーディエンスメンバーシップ、id 名前空間などの条件に基づいて、宛先に書き出したプロファイルをグループ化できます。
+宛先設定で[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用する場合、条件（オーディエンス ID、オーディエンスエイリアス、オーディエンスメンバーシップ、ID 名前空間など）に基づいて、宛先に書き出されたプロファイルグループ化できます。
 
 メッセージ変換テンプレートでは、以下の節の例に示すように、前述の集計キーにアクセスできます。宛先で想定される形式およびレート制限に合致するように、集計キーを使用して、Experience Platform から書き出された HTTP メッセージを構造化します。
 
-#### テンプレートでオーディエンス ID 集計キーを使用 {#aggregation-key-segment-id}
+#### テンプレートでのオーディエンス ID 集約キーの使用 {#aggregation-key-segment-id}
 
-次を使用する場合、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) および設定 `includeSegmentId` を true に設定すると、宛先に書き出される HTTP メッセージ内のプロファイルは、オーディエンス ID でグループ化されます。 テンプレートでオーディエンス ID にアクセスする方法については、以下を参照してください。
+[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、宛先に書き出された HTTP メッセージのプロファイルは、オーディエンス ID でグループ化されます。テンプレートのオーディエンス ID にアクセスできる方法については、以下を参照してください。
 
 **入力**
 
 以下の 4 つのプロファイルについて考えてみます。
 
-* 最初の 2 つは、オーディエンス ID を持つオーディエンスの一部です `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* 3 つ目のプロファイルは、オーディエンス ID を持つオーディエンスの一部です `8f812592-3f06-416b-bd50-e7831848a31a`
-* 4 つ目のプロファイルは、上記の両方のオーディエンスの一部です。
+* 最初の 2 つは、オーディエンス ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` のオーディエンスの一部
+* 3 番目のプロファイルは、オーディエンス ID `8f812592-3f06-416b-bd50-e7831848a31a` のオーディエンスの一部
+* 4 番目のプロファイルは、上記の両方のオーディエンスの一部。
 
 プロファイル 1：
 
@@ -965,7 +965,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 >
 >使用するすべてのテンプレートについて、[宛先サーバー設定](../../authoring-api/destination-server/create-destination-server.md)に[テンプレート](../../functionality/destination-server/templating-specs.md)を挿入する前に、無効な文字（二重引用符 `""` など）をエスケープする必要があります。二重引用符のエスケープについて詳しくは、[JSON 標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)の第 9 章を参照してください。
 
-以下に、 `audienceId` は、オーディエンス ID にアクセスするためにテンプレートで使用されます。 この例では、 `audienceId` 宛先分類のオーディエンスメンバーシップに関する情報。 独自の分類に応じて、代わりにその他のフィールド名を使用できます。
+以下で、オーディエンス ID にアクセスするために、テンプレートでどのように `audienceId` が使用されているかに注意してください。この例では、宛先の分類のオーディエンスメンバーシップに `audienceId` を使用することを想定しています。独自の分類に応じて、代わりにその他のフィールド名を使用できます。
 
 ```python
 {
@@ -982,7 +982,7 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 
 **結果**
 
-宛先に書き出すと、プロファイルは、オーディエンス ID に基づいて 2 つのグループに分割されます。
+宛先に書き出されると、プロファイルは、そのオーディエンス ID に基づいて 2 つのグループに分割されます。
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Experience Platform の ID について詳しくは、[ID 名前空間の概要]
 }
 ```
 
-#### テンプレートでオーディエンスエイリアス集計キーを使用 {#aggregation-key-segment-alias}
+#### テンプレートでのオーディエンスエイリアス集約キーの使用 {#aggregation-key-segment-alias}
 
-次を使用する場合、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) および設定 `includeSegmentId` を true に設定すると、テンプレート内のオーディエンスエイリアスにアクセスすることもできます。
+[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` を true に設定すると、テンプレートのオーディエンスエイリアスにもアクセスできます。
 
-テンプレートの下に行を追加して、オーディエンスエイリアスでグループ化された書き出されたプロファイルにアクセスします。
+テンプレートに以下の行を追加して、オーディエンスエイリアスでグループ化されて書き出されたプロファイルにアクセスします。
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### テンプレートでオーディエンスステータス集計キーを使用 {#aggregation-key-segment-status}
+#### テンプレートでのオーディエンスステータス集約キーの使用 {#aggregation-key-segment-status}
 
-次を使用する場合、 [設定可能な集計](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) および設定 `includeSegmentId` および `includeSegmentStatus` を true に設定する場合は、テンプレートのオーディエンスのステータスにアクセスできます。 この方法で、プロファイルがセグメントに追加／セグメントから削除される必要があるかどうかに基づいて、宛先に書き出された HTTP メッセージのプロファイルをグループ化できます。
+[設定可能な集約](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)を使用して `includeSegmentId` および `includeSegmentStatus` を true に設定すると、テンプレートのオーディエンスステータスにアクセスできます。この方法で、プロファイルがセグメントに追加／セグメントから削除される必要があるかどうかに基づいて、宛先に書き出された HTTP メッセージのプロファイルをグループ化できます。
 
 使用可能な値：
 
@@ -1206,10 +1206,10 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | 関数 | 説明 |
 |---------|----------|
 | `input.profile` | プロファイル（[JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) として表されます）。このページで前述したパートナー XDM スキーマに従います。 |
-| `destination.segmentAliases` | Adobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 |
-| `destination.segmentNames` | Adobe Experience Platform名前空間内のオーディエンス名からパートナーのシステム内のオーディエンス名にマッピングします。 |
-| `addedSegments(listOfSegments)` | ステータスを持つオーディエンスのみを返します `realized`. |
-| `removedSegments(listOfSegments)` | ステータスを持つオーディエンスのみを返します `exited`. |
+| `destination.segmentAliases` | Adobe Experience Platform 名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 |
+| `destination.segmentNames` | Adobe Experience Platform 名前空間のオーディエンス名からパートナーのシステムのオーディエンス名にマッピングします。 |
+| `addedSegments(listOfSegments)` | ステータス `realized` を持つオーディエンスのみを返します。 |
+| `removedSegments(listOfSegments)` | ステータス `exited` を持つオーディエンスのみを返します。 |
 
 {style="table-layout:auto"}
 
