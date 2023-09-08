@@ -6,14 +6,14 @@ breadcrumb-title: データストリームガイド
 user-guide-description: Adobe Experience Platform でデータストリームを設定する方法を説明します。
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platform Datastreams {#datastreams}
+# Adobe Experience Platform データストリーム {#datastreams}
 
 * [データストリームの概要](overview.md)
 * [データストリームの設定](configure.md)
