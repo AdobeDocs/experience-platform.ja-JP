@@ -1,12 +1,12 @@
 ---
-keywords: contentsquare 拡張機能；contentsquare 宛先；contentsquare
+keywords: Contentsquare 拡張機能;Contentsquare 出力先;Contentsquare
 title: Contentsquare 拡張機能
-description: Contentsquare 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Contentsquare 拡張機能は、Adobe Experience Platform における分析の出力先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '479'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 89%
 
 ## 概要 {#overview}
 
-ページ内の行動を視覚化し、顧客が放棄した理由と改善策を探りましょう。各 Analytics オーディエンスおよび Target テストの UX およびコンテンツ要素の売上高に関連付けます。 のインストール [!DNL Contentsquare] タグを作成し、カスタム変数とイベントを設定します。 数回のクリックするだけで UX 分析のデータ収集を開始できます。
+ページ内の行動を視覚化し、顧客が放棄した理由と改善策を探りましょう。Analytics オーディエンスおよび Target テストごとに、UX およびコンテンツ要素の売上高への貢献度を評価します。[!DNL Contentsquare] タグをインストールし、カスタム変数とイベントを設定します。数回のクリックするだけで UX 分析のデータ収集を開始できます。
 
-[!DNL Contentsquare] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html) の拡張機能のページを参照してください。
+[!DNL Contentsquare] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -31,7 +31,7 @@ ht-degree: 89%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Contentsquare] 拡張子：
+[!DNL Contentsquare] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
