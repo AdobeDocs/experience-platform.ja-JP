@@ -1,12 +1,12 @@
 ---
-keywords: Google広告；google 広告；google adwords;Google AdWords;Google Adwords
+keywords: Google 広告;google 広告;google adwords;Google AdWords;Google Adwords
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '995'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 68%
 
 ## 概要 {#overview}
 
-[!DNL Google Ads]（旧称： ） [!DNL Google AdWords]は、テキストベースの検索、グラフィック表示をまたいで、企業がクリック課金広告を可能にするオンライン広告サービスです。 [!DNL YouTube] ビデオおよびアプリ内モバイルディスプレイ。
+[!DNL Google Ads]（旧称 [!DNL Google AdWords]）は、テキストベースの検索、グラフィック表示、[!DNL YouTube] ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 
 ## 宛先の詳細 {#specifics}
 
@@ -25,7 +25,7 @@ ht-degree: 68%
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads] での最初の宛先を作成しようとしており、これまで（Audience Manager などのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしたことがない場合は、アドビのコンサルティングまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。以前にAudience ManagerでGoogle統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>[!DNL Google Ads] での最初の宛先を作成しようとしており、これまで（Audience Manager などのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしたことがない場合は、アドビのコンサルティングまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
@@ -45,15 +45,15 @@ ht-degree: 68%
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+この節では、この宛先に書き出しできるすべてのオーディエンスについて説明します。
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
+この宛先では、Experience Platform の[セグメント化サービス](../../../segmentation/home.md)で生成したすべてのオーディエンスのアクティブ化をサポートします。
 
-*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
+*さらに*、この宛先では、以下の表に示すオーディエンスのアクティブ化もサポートします。
 
 | オーディエンスタイプ | 説明 |
 ---------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| カスタムアップロード | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -63,18 +63,18 @@ ht-degree: 68%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーをGoogleの宛先に書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを Google の宛先に書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## 前提条件 {#prerequisites}
 
-### 既存 [!DNL Google Ads] アカウント
+### 既存の [!DNL Google Ads] アカウント
 
 >[!IMPORTANT]
 >
-> [!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の節の許可リスト手順を実行するには、 [!DNL Google Ads]. その結果、 [!DNL Google Ads] は、 [!DNL Google Customer Match] 統合とも呼ばれます。 詳しくは、 [!DNL Google Customer Match] 統合については、 [[!DNL Google Customer Match]](./google-customer-match.md) 接続。
+> [!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次のセクションの許可リストのステップを実行するには、[!DNL Google Ads] との既存の統合が必要です。そのため、[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[!DNL Google Customer Match] 統合をセットアップすることです。[!DNL Google Customer Match] 統合の作成について詳しくは、[[!DNL Google Customer Match]](./google-customer-match.md) 接続の作成に関するチュートリアルを参照してください。
 
 ### 許可リストへの登録 {#allow-listing}
 
@@ -88,7 +88,7 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
 * アカウントのタイプ：**AdWords**
-* **Google AdWords ID**：これは ID です。 [!DNL Google]. 通常、ID の形式は 123-456-7890 です。
+* **Google AdWords ID**：これは [!DNL Google] でのあなたの ID です。通常、ID の形式は 123-456-7890 です。
 
 ## 宛先への接続 {#connect}
 
@@ -105,7 +105,7 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
-* **[!UICONTROL アカウント ID]**：アカウント ID にを入力します。 [!DNL Google Ads]. 通常、ID の形式は 123-456-7890 です。
+* **[!UICONTROL アカウント ID]**：[!DNL Google Ads] のアカウント ID を入力します。通常、ID の形式は 123-456-7890 です。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -113,13 +113,13 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 
 宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ
 
@@ -133,8 +133,8 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [前提条件](#prerequisites) または、顧客が既存の [!DNL Google Ads] アカウント。
+このエラーは、顧客アカウントが[前提条件](#prerequisites)に準拠していない場合、または顧客が既存の [!DNL Google Ads] アカウントなしで宛先を設定しようとした場合に発生します。
 
-[!DNL Google] は非推奨です [!DNL Google Ads] cookie とサードパーティベンダーの統合に関する情報を含む )。 次の手順で [allow-list](#allow-listing) の手順では、 [!DNL Google Ads].
+[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。[allow-list](#allow-listing) のステップを実行するには、[!DNL Google Ads] との既存の統合が必要です。
 
-を使用するための推奨される方法 [!DNL Google Ads] は、 [[!DNL Google Customer Match]](google-customer-match.md) 統合とも呼ばれます。
+[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[[!DNL Google Customer Match]](google-customer-match.md) 統合をセットアップすることです。
