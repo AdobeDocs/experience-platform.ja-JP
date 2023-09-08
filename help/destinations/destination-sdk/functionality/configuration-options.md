@@ -2,9 +2,9 @@
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '828'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -45,14 +45,14 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 * [スキーマ設定](destination-configuration/schema-configuration.md)：ユーザーがプロファイル属性と ID をマッピングする、宛先のターゲットスキーマの定義方法を説明します。
 * [ID 名前空間設定](destination-configuration/identity-namespace-configuration.md)：宛先でサポートされる ID の設定方法を説明します。 この設定により、Experience Platform ユーザーインターフェイスの[マッピング手順](../../ui/activate-segment-streaming-destinations.md#mapping)でターゲット ID が設定され、ユーザーが XDM スキーマから宛先のスキーマに ID および属性をマッピングします。
 * [宛先配信](destination-configuration/destination-delivery.md)：書き出されたデータの正確な移動先や、データが到達する場所で使用される認証ルールの設定方法を説明します。
-* [オーディエンスメタデータの設定](destination-configuration/audience-metadata-configuration.md):オーディエンス名や ID などのオーディエンスメタデータを、Experience Platformと宛先の間で共有する方法について説明します。
+* [オーディエンスメタデータ設定](destination-configuration/audience-metadata-configuration.md)：オーディエンスメタデータ（オーディエンス名や ID）を Experience Platform と宛先の間でどのように共有すべきかを説明します。
 * [集計ポリシー](destination-configuration/aggregation-policy.md)：集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 * [バッチ設定](destination-configuration/batch-configuration.md)：Experience Platform ユーザーインターフェイスで宛先に接続する際にユーザーが使用できる様々なファイル名および書き出しスケジュールを設定します。
 * [プロファイル選定履歴](destination-configuration/historical-profile-qualifications.md)：Destination SDK で作成された宛先でサポートされるプロファイル選定履歴について説明します。
 
 ## オーディエンスメタデータ設定 {#audience-metadata-configuration}
 
-このコンポーネントを使用すると、宛先でのオーディエンスのプログラムによる作成、更新、削除の方法を設定できます。 ファイルベースの宛先の場合、ファイルが正常に宛先に配信されるといつでも通知されるように設定できます。[オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
+このコンポーネントを使用すると、宛先でオーディエンスがプログラムでどのように作成、更新または削除されるかを設定できます。ファイルベースの宛先の場合、ファイルが正常に宛先に配信されるといつでも通知されるように設定できます。[オーディエンステンプレートエンドポイント](../metadata-api/create-audience-template.md)を介して、この機能を設定できます。
 
 ## 次の手順 {#next-steps}
 
