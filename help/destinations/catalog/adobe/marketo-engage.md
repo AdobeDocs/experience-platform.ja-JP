@@ -2,10 +2,10 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対する唯一のエンドツーエンドのカスタマーエクスペリエンス管理 (CXM) ソリューションです。 CRM リード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高属性に至るアクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 25%
+source-wordcount: '900'
+ht-degree: 30%
 
 ---
 
@@ -53,13 +53,12 @@ Experience Platformの属性を、組織がMarketoでアクセスできる任意
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-また、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
-
-| 外部オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Experience Platformの属性を、組織がMarketoでアクセスできる任意
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 [!DNL Marketo Engage] 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 

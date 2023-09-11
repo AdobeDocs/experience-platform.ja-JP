@@ -3,10 +3,10 @@ keywords: モバイル；ブレーズ；メッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 31%
+source-wordcount: '1031'
+ht-degree: 37%
 
 ---
 
@@ -46,13 +46,12 @@ The [!DNL Braze] の宛先は、次にプロファイルデータを送信する
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
-
-| 外部オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -63,7 +62,7 @@ The [!DNL Braze] の宛先は、次にプロファイルデータを送信する
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、フィールドマッピングに従って、目的のスキーマフィールド（電子メールアドレス、電話番号、姓）や ID と共に書き出します。[!DNL Adobe Experience Platform] オーディエンスは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -93,15 +92,15 @@ The [!DNL Braze] の宛先は、次にプロファイルデータを送信する
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 

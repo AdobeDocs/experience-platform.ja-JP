@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 宛先ガイド
-user-guide-description: クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
+user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 95%
+source-wordcount: '1170'
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 95%
    * [クラウドストレージ宛先の API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
-   * [（ベータ版）アドホックアクティベーション API を使用して、バッチ保存先に対するオーディエンスをアクティブ化します](./api/ad-hoc-activation-api.md)
+   * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスをアクティブ化する](./api/ad-hoc-activation-api.md)
    * [宛先の編集](./api/edit-destination.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
@@ -35,13 +35,13 @@ ht-degree: 95%
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
-   * 宛先へのオーディエンスデータの有効化 {#activate}
+   * 宛先へのオーディエンスデータの有効化{#activate}
       * [有効化の概要](./ui/activation-overview.md)
-      * [ストリーミングオーディエンスの書き出し先に対するオーディエンスのアクティブ化](./ui/activate-segment-streaming-destinations.md)
-      * [ストリーミングプロファイルの書き出し先に対するオーディエンスのアクティブ化](./ui/activate-streaming-profile-destinations.md)
-      * [オーディエンスをアクティブ化して、プロファイルの一括書き出し先に](./ui/activate-batch-profile-destinations.md)
-      * [エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化](./ui/activate-edge-personalization-destinations.md)
-      * [見込み客オーディエンスを宛先に対してアクティブ化](./ui/activate-prospect-audiences.md)
+      * [ストリーミングオーディエンスの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-segment-streaming-destinations.md)
+      * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
+      * [バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-batch-profile-destinations.md)
+      * [エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する](./ui/activate-edge-personalization-destinations.md)
+      * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
@@ -55,13 +55,13 @@ ht-degree: 95%
    * [コンテキスト内宛先アラートを購読](ui/alerts.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
-   * アドビの宛先 {#adobe}
+   * アドビの宛先{#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
       * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platformオーディエンス共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
-   * 広告の宛先 {#advertising}
+      * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+   * 広告の宛先{#advertising}
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 拡張機能](./catalog/advertising/adobe-advertising-cloud.md)
@@ -82,7 +82,8 @@ ht-degree: 95%
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
-      * [LiveRamp — オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp — 配布接続](./catalog/advertising/liveramp-distribution.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
@@ -171,7 +172,7 @@ ht-degree: 95%
       * [Marketo web パーソナライゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
       * [Pega Customer Decision Hub 接続](./catalog/personalization/pega.md)
       * [Pega プロファイル接続](./catalog/personalization/pega-profile.md)
-   * ソーシャルの宛先 {#social}
+   * ソーシャルの宛先{#social}
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook 接続](./catalog/social/facebook.md)

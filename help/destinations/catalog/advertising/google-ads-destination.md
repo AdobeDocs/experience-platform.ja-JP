@@ -3,10 +3,10 @@ keywords: Google 広告;google 広告;google adwords;Google AdWords;Google Adwor
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
-workflow-type: ht
-source-wordcount: '995'
-ht-degree: 100%
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+workflow-type: tm+mt
+source-wordcount: '974'
+ht-degree: 97%
 
 ---
 
@@ -45,15 +45,12 @@ ht-degree: 100%
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出しできるすべてのオーディエンスについて説明します。
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-この宛先では、Experience Platform の[セグメント化サービス](../../../segmentation/home.md)で生成したすべてのオーディエンスのアクティブ化をサポートします。
-
-*さらに*、この宛先では、以下の表に示すオーディエンスのアクティブ化もサポートします。
-
-| オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -111,7 +108,7 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 

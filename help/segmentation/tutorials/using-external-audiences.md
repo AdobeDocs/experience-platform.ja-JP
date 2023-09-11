@@ -5,9 +5,9 @@ description: このチュートリアルでは、Adobe Experience Platformで外
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 5%
 
 ---
@@ -20,21 +20,21 @@ ht-degree: 5%
 
 Adobe Experience Platformは、外部オーディエンスをインポートする機能をサポートしています。これは、その後、新しいオーディエンスのコンポーネントとして使用できます。 このドキュメントでは、外部オーディエンスをインポートして使用するExperience Platformを設定するためのチュートリアルを提供します。
 
-## Destination SDK の
+## はじめに
 
-このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスの作成に関わるサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [セグメント化サービス](../home.md):リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
+- [セグメント化サービス](../home.md)：リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
 - [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
-- [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
+- [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
 ### オーディエンスとセグメント定義
 
 外部オーディエンスのインポートと使用を開始する前に、オーディエンスとセグメント定義の違いを理解しておくことが重要です。
 
-オーディエンスとは、フィルタリング対象のプロファイルのグループを指します。 セグメント定義を使用する場合、セグメント認定条件を満たすサブセットにプロファイルをフィルタリングするセグメント定義を作成することで、オーディエンスを作成できます。
+オーディエンスとは、フィルタリング対象のプロファイルのグループを指します。 セグメント定義を使用する場合、セグメント認定条件を満たすサブセットにプロファイルをフィルタリングするセグメント定義を作成して、オーディエンスを作成できます。
 
 セグメント定義には、名前、説明、式（該当する場合）、作成日、最終変更日、ID などの情報が含まれます。 ID は、セグメントメタデータを、セグメントの認定を満たし、結果として得られるオーディエンスの一部となる個々のプロファイルにリンクします。
 
@@ -52,7 +52,7 @@ ID 名前空間を作成するには、 [id 名前空間ガイド](../../identit
 
 ## セグメントメタデータのスキーマの作成
 
-ID 名前空間を作成した後、作成するセグメント用に新しいスキーマを作成する必要があります。
+ID 名前空間を作成したら、作成するセグメント用に新しいスキーマを作成する必要があります。
 
 スキーマの構成を開始するには、まず「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションバーで、 **[!UICONTROL スキーマを作成]** を使用して、スキーマワークスペースの右上隅に表示します。 ここからを選択します。 **[!UICONTROL 参照]** をクリックして、使用可能なスキーマタイプの完全な選択を確認します。
 
@@ -66,7 +66,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ![選択したフィールドをプライマリ ID としてマークするチェックボックスが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-Time Customer Profile].
+をマークした後 `_id` 「 」フィールドをプライマリ id として、スキーマのタイトルを選択し、「 」というラベルの付いた切り替えを選択します。 **[!UICONTROL プロファイル]**. 選択 **[!UICONTROL 有効にする]** スキーマを有効にするには [!DNL Real-Time Customer Profile].
 
 ![プロファイルのスキーマを有効にする切り替えが、スキーマエディターでハイライト表示されます。](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -76,7 +76,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 スキーマを設定した後、セグメントメタデータのデータセットを作成する必要があります。
 
-データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
+データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションに値を指定します。
 
 ![データセットのベースにするスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
@@ -94,7 +94,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ### ストリーミング接続を使用したデータの取り込み
 
-ストリーミング接続を作成するには、 [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
+ストリーミング接続を作成するには、次のいずれかの手順に従います： [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
 
 ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
@@ -171,7 +171,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ![「 XDM Individual Profile 」領域がハイライト表示されます。](../images/tutorials/external-audiences/create-schema-profile.png)
 
-スキーマが作成されたので、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 それには、「 [!UICONTROL セグメントメンバーシップの詳細]に続いて [!UICONTROL フィールドグループを追加].
+スキーマが作成されたので、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 それには、「 」を選択します。 [!UICONTROL セグメントメンバーシップの詳細]に続いて [!UICONTROL フィールドグループを追加].
 
 ![「セグメントメンバーシップの詳細」フィールドグループがハイライト表示されます。](../images/tutorials/external-audiences/segment-membership-details.png)
 
@@ -183,7 +183,7 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 スキーマを作成したら、データセットを作成する必要があります。
 
-データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションを選択します。
+データセットを作成するには、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#create). 次の手順に従う必要があります。 **[!UICONTROL スキーマからデータセットを作成]** 」オプションに値を指定します。
 
 ![データベースの作成に使用するスキーマがハイライト表示されます。](../images/tutorials/external-audiences/select-schema.png)
 
@@ -201,13 +201,13 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 ### ストリーミング接続を使用したデータの取り込み
 
-ストリーミング接続を作成するには、 [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
+ストリーミング接続を作成するには、次のいずれかの手順に従います： [API チュートリアル](../../sources/tutorials/api/create/streaming/http.md) または [UI チュートリアル](../../sources/tutorials/ui/create/streaming/http.md).
 
 ストリーミング接続を作成したら、固有のストリーミングエンドポイントにアクセスし、データの送信先にすることができます。 これらのエンドポイントにデータを送信する方法については、 [レコードデータのストリーミングに関するチュートリアル](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![ソースの詳細ページで、ストリーミング接続のストリーミングエンドポイントがハイライト表示されます。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
-## セグメントメンバーシップ構造
+## セグメントメンバーシップの構造
 
 接続を作成した後、データを Platform に取り込めるようになりました。
 
@@ -265,4 +265,4 @@ ID 名前空間を作成した後、作成するセグメント用に新しい�
 
 >[!NOTE]
 >
->デフォルトでは、外部オーディエンスのメンバーシップは 30 日間のみ保持されます。 30 日間以上保持する場合は、 `validUntil` フィールドに値を入力する必要があります。 このフィールドの詳細については、 [セグメントメンバーシップの詳細スキーマフィールドグループ](../../xdm/field-groups/profile/segmentation.md).
+>デフォルトでは、外部オーディエンスのメンバーシップは 30 日後に削除されます。 削除を防ぎ、30 日以上保持する場合は、 `validUntil` フィールドに値を入力する必要があります。 このフィールドの詳細については、 [セグメントメンバーシップの詳細スキーマフィールドグループ](../../xdm/field-groups/profile/segmentation.md).

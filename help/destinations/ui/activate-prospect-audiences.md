@@ -1,11 +1,11 @@
 ---
-title: 見込み客オーディエンスを宛先に対してアクティブ化
+title: 見込み客のオーディエンスを宛先に対してアクティブ化する
 type: Tutorial
 description: 見込み客オーディエンスを宛先に対してアクティブ化する方法を説明します。
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 23%
+source-wordcount: '620'
+ht-degree: 28%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 23%
 
 ## サポートされる宛先 {#supported-destinations}
 
-**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。以下を使用します。 **[!UICONTROL データタイプ]** フィルターと選択 **[!UICONTROL 見込み客]** を参照して、見込み客オーディエンスのアクティブ化をサポートする宛先を確認します。 現在、見込み客オーディエンスのエクスポートは、 [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) 宛先。
+**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。以下を使用します。 **[!UICONTROL データタイプ]** フィルターと選択 **[!UICONTROL 見込み客]** を参照して、見込み客オーディエンスのアクティブ化をサポートする宛先を確認します。 現在、見込み客オーディエンスのエクスポートは、クラウドストレージの宛先でのみ使用できます。
 
 ![データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -86,5 +86,5 @@ Note that we will need to add links to other destination types here as more dest
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Real-Time CDPでのサードパーティデータのサポートを使用して、 [データパートナーの見込み客プロファイルを使用してプロファイルベースを拡大し、顧客との関わりを深めて新しい顧客を獲得または獲得する](/help/rtcdp/partner-data/prospecting.md).
+* Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
 * [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。

@@ -3,10 +3,10 @@ keywords: 広告；Bing;
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 51%
+source-wordcount: '650'
+ht-degree: 62%
 
 ---
 
@@ -34,15 +34,12 @@ The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
-
-*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
-
-| オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -55,7 +52,7 @@ The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーをにエクスポートしています [!DNL Microsoft Bing] 宛先。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -89,9 +86,9 @@ The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
@@ -102,7 +99,7 @@ The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-詳しくは、 [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 Adobe Analytics の [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、 [!UICONTROL マッピング ID] フィールドに入力します。 これにより、オーディエンスのメタデータがに正しく渡されます。 [!DNL Bing].
 

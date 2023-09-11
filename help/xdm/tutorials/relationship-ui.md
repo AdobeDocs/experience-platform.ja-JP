@@ -5,10 +5,10 @@ title: スキーマエディターを使用した 2 つのスキーマ間の関�
 description: このドキュメントでは、スキーマユーザーインターフェイスのスキーマエディターを使用して 2 つのスキーマ間の関係を定義するためのExperience Platformを提供します。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1109'
-ht-degree: 27%
+source-wordcount: '1161'
+ht-degree: 26%
 
 ---
 
@@ -33,6 +33,10 @@ ht-degree: 27%
 
 スキーマの関係は、結合スキーマと [!DNL Real-Time Customer Profile] を使用して推論できますが、同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する 2 つのスキーマ間の関係を確立するには、他の関連するスキーマの ID を参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
 
+>[!NOTE]
+>
+>ソーススキーマと宛先スキーマの両方が同じクラスに属している場合は、専用の関係フィールドを使用する必要があります **not** を使用します。 この場合、和集合スキーマの UI を使用して関係を確認します。 これをおこなう方法については、 [関係を表示](../../profile/ui/union-schema.md#view-relationships) 和集合スキーマ UI ガイドの「 」の節を参照してください。
+
 このドキュメントでは、 [!DNL Experience Platform] ユーザーインターフェイス。 API を使用してスキーマ関係を定義する手順については、[スキーマレジストリ API を使用した関係の定義](relationship-api.md)についてのチュートリアルを参照してください。
 
 >[!NOTE]
@@ -41,11 +45,11 @@ ht-degree: 27%
 
 ## はじめに
 
-このチュートリアルでは、 [!DNL XDM System] と、 [!DNL Experience Platform] UI このチュートリアルを始める前に、次のドキュメントを確認してください。
+このチュートリアルでは、 [!DNL XDM System] とスキーマエディター ( [!DNL Experience Platform] UI このチュートリアルを始める前に、次のドキュメントを確認してください。
 
 * [XDM システムのExperience Platform](../home.md):XDM と、 [!DNL Experience Platform].
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
-* [を使用してスキーマを作成する [!DNL Schema Editor]](create-schema-ui.md):の操作の基本を説明するチュートリアル [!DNL Schema Editor].
+* [を使用してスキーマを作成する [!DNL Schema Editor]](create-schema-ui.md)：の操作の基本を説明するチュートリアルです。 [!DNL Schema Editor].
 
 ## ソースと参照スキーマの定義
 
@@ -55,7 +59,7 @@ ht-degree: 27%
 >
 >関係を確立するには、両方のスキーマでプライマリ ID が定義され、 [!DNL Real-Time Customer Profile]. 詳しくは、 [プロファイルで使用するスキーマの有効化](./create-schema-ui.md#profile) スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成のチュートリアルを参照してください。
 
-スキーマの関係は、 **ソーススキーマ** が **参照スキーマ**. 次の手順で、「[!DNL Loyalty Members]」がソーススキーマになり、「[!DNL Hotels]「 」は参照スキーマとして機能します。
+スキーマの関係は、 **ソーススキーマ** が **参照スキーマ**. 次の手順では、「[!DNL Loyalty Members]」がソーススキーマになり、「[!DNL Hotels]「 」は参照スキーマとして機能します。
 
 次の節では、関係が定義される前に、このチュートリアルで使用する各スキーマの構造について説明します。
 
@@ -83,11 +87,11 @@ ht-degree: 27%
 
 2 つのスキーマ間の関係を定義するには、参照スキーマのプライマリ ID を示す専用のフィールドがソーススキーマに必要です。 新しいスキーマフィールドグループを作成するか、既存のスキーマフィールドグループを拡張することで、このフィールドをソーススキーマに追加できます。
 
-の場合、 [!DNL Loyalty Members] スキーマ、新しい `preferredHotel` フィールドが追加され、ロイヤルティメンバーの会社訪問に関する優先ホテルを示します。 最初に、プラスアイコン (**+**) をクリックします。
+の場合、 [!DNL Loyalty Members] スキーマ、新しい `preferredHotel` フィールドが追加され、ロイヤルティメンバーの会社訪問に対する優先ホテル名が示されます。 最初に、プラスアイコン (**+**) をクリックします。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-キャンバスに新しいフィールドプレースホルダーが表示されます。 の下 **[!UICONTROL フィールドプロパティ]**」で、フィールドの名前と表示名を指定し、タイプを「[!UICONTROL 文字列]&quot;. の下 **[!UICONTROL 割り当て先]**、拡張する既存のフィールドグループを選択するか、固有の名前を入力して新しいフィールドグループを作成します。 この場合、新しい[!DNL Preferred Hotel]」フィールドグループが作成されます。
+キャンバスに新しいフィールドプレースホルダーが表示されます。 の下 **[!UICONTROL フィールドのプロパティ]**」で、フィールドの名前と表示名を指定し、タイプを「[!UICONTROL 文字列]&quot;. の下 **[!UICONTROL 割り当て先]**、拡張する既存のフィールドグループを選択するか、固有の名前を入力して新しいフィールドグループを作成します。 この場合、新しい[!DNL Preferred Hotel]」フィールドグループが作成されます。
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -95,7 +99,7 @@ ht-degree: 27%
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-更新済み `preferredHotel` フィールドがキャンバスに表示されます。 `_tenantId` オブジェクトを選択します。 選択 **[!UICONTROL 保存]** 変更をスキーマに確定します。
+更新済み `preferredHotel` フィールドがキャンバスに表示されます。 `_tenantId` オブジェクトを指定する必要があります。 選択 **[!UICONTROL 保存]** 変更をスキーマに確定します。
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -107,15 +111,15 @@ ht-degree: 27%
 >
 >以下の手順では、キャンバスの右側のパネルコントロールを使用して関係フィールドを定義する方法を説明します。 Real-Time CDP B2B Edition にアクセスできる場合は、 [同じ対話](./relationship-b2b.md#relationship-field) 多対 1 の関係を作成する場合と同様です。
 
-を選択します。 `preferredHotel` キャンバスの「 」フィールドを選択し、下にスクロールします。 **[!UICONTROL フィールドプロパティ]** まで **[!UICONTROL 関係]** チェックボックスが表示されます。 このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
+を選択します。 `preferredHotel` キャンバスの「 」フィールドを選択し、「 」の下にスクロールします。 **[!UICONTROL フィールドのプロパティ]** まで **[!UICONTROL 関係]** チェックボックスが表示されます。 このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-次のドロップダウンを選択します。 **[!UICONTROL 参照スキーマ]** をクリックし、関係の参照スキーマ ([!DNL Hotels]」と呼ばれます )。 の下 **[!UICONTROL 参照 ID 名前空間]**、参照スキーマの id フィールドの名前空間 ( この場合は「[!DNL Hotel ID]&quot;) です。 選択 **[!UICONTROL 適用]** 終了したとき。
+次のドロップダウンを選択します。 **[!UICONTROL 参照スキーマ]** をクリックし、関係の参照スキーマを選択します (&quot;[!DNL Hotels]」と呼ばれます )。 の下 **[!UICONTROL 参照 ID 名前空間]**、参照スキーマの ID フィールドの名前空間 ( この場合は「[!DNL Hotel ID]」) をクリックします。 選択 **[!UICONTROL 適用]** 終了したとき。
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-この `preferredHotel` フィールドがキャンバスで関係としてハイライト表示され、参照スキーマの名前が表示されます。 選択 **[!UICONTROL 保存]** 変更を保存し、ワークフローを完了します。
+The `preferredHotel` フィールドがキャンバスで関係としてハイライト表示され、参照スキーマの名前が表示されます。 選択 **[!UICONTROL 保存]** 変更を保存し、ワークフローを完了します。
 
 ![](../images/tutorials/relationship/relationship-save.png)
 

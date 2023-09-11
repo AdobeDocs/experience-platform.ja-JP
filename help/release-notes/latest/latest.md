@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 42%
+source-wordcount: '1750'
+ht-degree: 46%
 
 ---
 
@@ -116,11 +116,11 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 
 ## 宛先 {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
-- 次の操作を実行できます。 [見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md) をファイルベースの宛先に追加する。
+- 次の操作を実行できます。 [見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md) クラウドストレージの宛先へのアクセス。
 - 将軍 [活性化ガードレール](../../destinations/guardrails.md#general-activation-guardrails) サンドボックスあたり最大 100 件の宛先が、 _ハードリミット_.
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
@@ -133,7 +133,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーのファネルトップの顧客獲得の使用例から提供される見込み客プロファイルを取り込みます。 詳しくは、 [[!UICONTROL XDM 個別見込み客プロファイル]](../../xdm/classes/prospect.md) 例を参照し、詳細を確認するドキュメントです。 |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーの上位顧客獲得の事例から得た見込み客プロファイルを取り込みます。詳しくは、 [[!UICONTROL XDM 個別見込み客プロファイル]](../../xdm/classes/prospect.md) 例を参照し、詳細を確認するドキュメントです。 |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ## セグメント化サービス {#segmentation}
 
-[!DNL Segmentation Service] では、次に保存されているデータをセグメント化できます。 [!DNL Experience Platform] オーディエンスに組み込まれた個人（顧客、見込み客、ユーザー、組織など）に関連する オーディエンスは、セグメント定義や、 [!DNL Real-Time Customer Profile] データ。 これらのオーディエンスは、 [!DNL Platform]を使用し、任意のAdobeソリューションから簡単にアクセスできます。
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
 
 **新機能または更新された機能**
 

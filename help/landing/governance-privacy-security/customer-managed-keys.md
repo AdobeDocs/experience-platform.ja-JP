@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 78%
+source-wordcount: '1855'
+ht-degree: 75%
 
 ---
 
@@ -20,6 +20,10 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 このドキュメントでは、Platform で顧客管理キー（CMK）機能を有効にするプロセスについて説明します。
 
 ## 前提条件
+
+CMK API にアクセスするには、 [!UICONTROL 顧客管理キーの管理] API 資格情報に関連付けられた新規または既存の役割に対する、実稼動サンドボックスへの権限とアクセス。 この API 資格情報に CMK アクセスのみを指定する場合は、前述の必要な権限を持つ新しい CMK 管理者ロールを作成することをお勧めします。
+
+Experience Platformでの役割および権限の割り当てについて詳しくは、 [権限に関するドキュメントの設定](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja).
 
 CMK を有効にするには、 [!DNL Azure] Key Vault は、次の設定で構成する必要があります。
 
@@ -110,7 +114,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリンクする CMK アプリケーションを登録します 。
 
-### Destination SDK の
+### はじめに
 
 CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../landing/api-authentication.md)を参照してください。
 

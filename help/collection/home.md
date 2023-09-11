@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ収集の概要
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 998cc9a9c490124ff21fdbf5f3a7b91abef3e8b8
-workflow-type: ht
-source-wordcount: '514'
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+workflow-type: tm+mt
+source-wordcount: '515'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform は、クライアントサイドのソースから顧
 * [データストリーム](../datastreams/overview.md)
 * [イベント転送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
-* [Adobe Experience Platform モバイル SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform モバイル SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [Edge Network Server API](../server-api/overview.md)
 * [Adobe Experience Platform デバッガー](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=ja)
 * [Experience Platform Assurance](../assurance/home.md)

@@ -3,7 +3,7 @@ title: モバイルから web、およびクロスドメインでの ID の共�
 description: モバイルから Web プロパティ、およびドメイン間で訪問者 ID を保持する方法を説明します。
 keywords: ID；モバイル；ID；共有；ドメイン；クロスドメイン；sdk；プラットフォーム；
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
-source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 2%
@@ -32,23 +32,23 @@ Adobe Experience Platform Web SDK は、訪問者 ID 共有機能をサポート
 
 ## 前提条件 {#prerequisites}
 
-モバイルから Web への ID とクロスドメイン ID の共有を使用するには、 [!DNL Web SDK] バージョン2.11.0以降。
+モバイルから Web への ID とクロスドメインの ID の共有を使用するには、 [!DNL Web SDK] バージョン2.11.0以降。
 
-Edge Network モバイル実装の場合、この機能は [Edge ネットワークの ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) バージョン 1.1.0(iOSおよび Android) 以降の拡張機能。
+Edge Network モバイル実装の場合、この機能は [Edge ネットワークの ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) バージョン 1.1.0(iOSおよび Android) 以降の拡張機能。
 
 この機能は、 [!DNL VisitorAPI.js] バージョン 1.7.0 以降。
 
 ## モバイルから Web への ID の共有 {#mobile-to-web}
 
-以下を使用： `getUrlVariables` からの API [Edge ネットワークの ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) 拡張機能を使用して、識別子をクエリパラメーターとして取得し、を開いたときに URL に関連付けることができます。 [!DNL webViews].
+以下を使用します。 `getUrlVariables` からの API [Edge ネットワークの ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) 拡張機能を使用して、識別子をクエリパラメーターとして取得し、を開いたときに URL に関連付けることができます。 [!DNL webViews].
 
 Web SDK が受け入れるための追加設定は不要です `ECID` クエリー文字列の値。
 
 クエリー文字列パラメーターには次が含まれます。
 
 * `MCID`:Experience CloudID (`ECID`)
-* `MCORGID`:Experience Cloud `orgID` それは `orgID` 設定済み [!DNL Web SDK].
-* `TS`:5 分を超えないタイムスタンプパラメーター。
+* `MCORGID`:EXPERIENCE CLOUD `orgID` それは `orgID` 設定済み [!DNL Web SDK].
+* `TS`：タイムスタンプパラメーター（5 分を超えることはできません）。
 
 
 モバイルから Web への ID の共有では、 `adobe_mc` パラメーター。 次の場合に `adobe_mc` パラメーターが存在し、有効な場合は、 `ECID` からのを呼び出すと、Edge ネットワークに対する最初のリクエストで id マップに自動的に追加されます。 以降のすべての Edge ネットワークインタラクションでは、 `ECID`.
@@ -59,13 +59,13 @@ Web SDK が受け入れるための追加設定は不要です `ECID` クエリ�
 
 クロスドメイン ID 共有の場合、Web SDK バージョン2.11.0では、 `appendIdentityToUrl` コマンドを使用します。 このコマンドを使用すると、 `adobe_mc` クエリー文字列パラメーター。
 
-このコマンドは、1 つのプロパティを持つオブジェクトを受け入れます。 `url`を返し、 `url`.
+このコマンドは、1 つのプロパティを持つオブジェクトを受け入れます。 `url`を返し、プロパティを持つオブジェクトを返します。 `url`.
 
 このコマンドは、同意の更新を待ちません。 同意が提供されていない場合、URL は変更されずに返されます。
 
-次の場合、 `ECID` が指定されていない場合、 `/acquire` エンドポイントが呼び出され、 `ECID`.
+次の場合、 `ECID` が指定されていない場合、 `/acquire` エンドポイントが呼び出されて、 `ECID`.
 
-顧客が Web サイトでクロスドメイン ID 共有を実装する方法の例を以下に示します。
+お客様が Web サイトでクロスドメイン ID 共有を実装する方法の例を以下に示します。
 
 このコードは、ページ上のすべてのクリックに対してイベントリスナーを追加します。クリックが対応するドメインへのリンク ( この場合は `adobe.com` または `behance.com`) をクリックすると、ID が URL に追加され、そこにユーザーをリダイレクトします。
 
@@ -88,7 +88,7 @@ document.addEventListener("click", event => {
 
 ## タグ拡張機能の使用 {#tags-extension}
 
-次の [!DNL Web SDK]、 [!DNL Tags] 拡張機能を使用して、URL を介して渡された id を使用できます。
+の使用と同様 [!DNL Web SDK]を使用する場合、 [!DNL Tags] 拡張機能を使用して、URL を介して渡された id を使用できます。
 
 タグ拡張機能でモバイルから Web への ID とクロスドメイン ID の共有を使用するには、タグ拡張機能のバージョン2.12.0以降を使用する必要があります。
 
@@ -99,10 +99,10 @@ document.addEventListener("click", event => {
 * [!UICONTROL イベント設定]:
    * **[!UICONTROL 拡張機能：Core]**
    * **[!UICONTROL イベントタイプ：クリック]**
-   * 選択 **[!UICONTROL ユーザーが/特定の要素をクリックしたとき]**
-   * を **[!UICONTROL セレクター]**: `a[href]`. このイベントは、 `href` プロパティ。
+   * 選択 **[!UICONTROL ユーザーが/特定の要素をクリックしたとき。]**
+   * 次に **[!UICONTROL セレクター]**: `a[href]`. このイベントは、 `href` プロパティ。
 
-      ![上記の設定を使用したイベント設定を示す UI 画像](assets/id-sharing-event-configuration.png)
+     ![上記の設定を使用したイベント設定を示す UI 画像](assets/id-sharing-event-configuration.png)
 
 * [!UICONTROL 条件の設定]
    * **[!UICONTROL 論理タイプ]**: [!UICONTROL 標準]
@@ -112,15 +112,15 @@ document.addEventListener("click", event => {
    * **[!UICONTROL 演算子]**: [!UICONTROL Matches Regex]
    * **[!UICONTROL 右オペランド]**:ID を共有するドメインに一致する正規表現を入力します。 例えば、で終わるホスト名を持つリンクを照合するには、次のようにします。 `adobe.com` または `behance.com`、次の正規表現を使用します。 `behance.com$|adobe.com$`. リンクされたページには、 [!DNL Web SDK] または [!DNL Visitor ID] id を受け入れるためにインストールされました。
 
-      ![上記の設定を使用した条件設定を示す UI 画像](assets/id-sharing-condition-configuration.png)
+     ![上記の設定を使用した条件設定を示す UI 画像](assets/id-sharing-condition-configuration.png)
 
 * [!UICONTROL アクションの設定]
    * **[!UICONTROL 拡張]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL アクションタイプ]**: [!UICONTROL ID でリダイレクト]
-   * **[!UICONTROL インスタンス]**:インスタンスを選択します。 ほとんどの場合、1 つのインスタンスのみが設定されます。 複数のインスタンスがある場合、共有する ID を持つインスタンスを選択します。
+   * **[!UICONTROL インスタンス]**：インスタンスを選択します。 ほとんどの場合、1 つのインスタンスのみが設定されます。 複数のインスタンスがある場合、共有する ID を持つインスタンスを選択します。
 
-      ![上記の設定を使用したアクション設定を示す UI 画像](assets/id-sharing-action-configuration.png)
+     ![上記の設定を使用したアクション設定を示す UI 画像](assets/id-sharing-action-configuration.png)
 
-この **[!UICONTROL ID でリダイレクト]** 「 」アクションを実行すると、ブラウザーがリンクに移動するのを停止します。 次に、 `appendIdentityToUrl` メソッド [!DNL Web SDK] インスタンス。
+The **[!UICONTROL ID でリダイレクト]** 「 」アクションを実行すると、ブラウザーがリンクに移動するのを停止します。 次に、 `appendIdentityToUrl` メソッドを [!DNL Web SDK] インスタンス。
 
 最後に、ユーザーを [!DNL URL] と `adobe_mc` クエリー文字列パラメーターを追加しました。

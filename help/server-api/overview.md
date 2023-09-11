@@ -4,18 +4,19 @@ description: Edge Network Server API の概要と使用方法について説明�
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: データ収集；収集；Adobe Experience Platform Edge Network;server api;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
+
 
 # Edge Network Server API の概要 {#overview}
 
 Adobe Experience Platform Edge Network は、Adobe Experience Cloud または Adobe Experience Platform Edge サービスの最適な利用方法をお客様に提供します。
 
-この [!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に使用できます。 この [!DNL Server API] はサーバーで使用できます。 [!DNL IoT] デバイス、セットトップボックス、およびその他の様々なデバイス。
+The [!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に使用できます。 The [!DNL Server API] はサーバーで使用できます。 [!DNL IoT] デバイス、セットトップボックス、およびその他の様々なデバイス。
 
 以降 [!DNL Server API] は、読み込みにどのライブラリにも依存せず、Adobe Experience Platform Edge Network やサポートされているソリューションとの迅速なやり取りを提供します。
 
@@ -26,12 +27,12 @@ Adobe Experience Platform Edge Network は、Adobe Experience Cloud または Ad
 * ファーストパーティデータ収集
 * 合理化された、サーバー側でのサービス間通信
 
-この [!DNL Server API] は、2 つの専用エンドポイントを介したインタラクティブなデータ収集とバッチデータ収集をサポートします。
+The [!DNL Server API] は、2 つの専用エンドポイントを介したインタラクティブなデータ収集とバッチデータ収集をサポートします。
 
 1. インタラクティブエンドポイントは、高度なセグメント化、パーソナライゼーション、その他のマーケティングの使用例をサポートする、Adobe Experience PlatformおよびAdobe Experience Cloudのサービスとの通信をサポートします。
 2. バッチエンドポイントを使用すると、呼び出されるアプリケーションからの応答を受信せずにデータをオンボードする必要がある場合に、リクエストをバッチで送信できます。
 
-この [!DNL Server API] は、次のタイプのリクエストをサポートします。
+The [!DNL Server API] は、次のタイプのリクエストをサポートします。
 
 * 認証済みリクエスト（経由） [Adobe I/O](https://developer.adobe.com/)、新しい `server.adobedc.net` endpoint.
 * を介した未認証のリクエスト `edge.adobedc.net` endpoint.

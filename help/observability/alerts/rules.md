@@ -4,10 +4,10 @@ title: 標準アラートルール
 description: このドキュメントでは、Experience Platform が提供する事前定義済みのアラートルールについて説明します。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 78%
+source-wordcount: '961'
+ht-degree: 77%
 
 ---
 
@@ -20,6 +20,10 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 ## データ取得
 
 次のアラートルールは、[データ取り込み](../../ingestion/home.md)および[ソース](../../sources/home.md)に特化しています。
+
+>[!NOTE]
+>
+>ストリーミングソースは、現在、アラートでサポートされていません。 バッチソースのアラート通知のサブスクライブのみが可能です。
 
 | I/O イベントの登録 | アラートルール | 説明 |
 | --- | --- | --- |
@@ -35,7 +39,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 | I/O イベントの登録 | アラートルール | 説明 |
 | --- | --- | --- |
-| ソースフロー実行の遅延、失敗、エラー | 摂取不足 | このアラートは、取り込みが 7 時間以上遅れ、データが Platform に取り込まれない場合に、メッセージを送信します。 |
+| ソースフロー実行の遅延、失敗、エラー | 取り込み不足 | このアラートは、取り込みが 7 時間以上遅れ、データが Platform に取り込まれない場合に、メッセージを送信します。 |
 
 {style="table-layout:auto"}
 

@@ -2,10 +2,10 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 33%
+source-wordcount: '1604'
+ht-degree: 38%
 
 ---
 
@@ -74,19 +74,14 @@ ht-degree: 33%
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-*この節では、宛先でサポートされるオーディエンスに関する情報を追加します。 テーブルには、いくつかの標準値が事前入力されています。 宛先に適用しない値と、事前入力されていない値を削除します。*
+*この節では、宛先でサポートされるオーディエンスに関する情報を追加します。 テーブルには、いくつかの標準値が事前入力されています。 以下を使用します。 `✓` および `X` オーディエンスタイプがこの宛先でサポートされているかどうかを示す文字。*
 
-この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
-
-*宛先で外部オーディエンスのアクティベーションがサポートされていない場合は、以下のフレーズをテーブルと共に削除します。*
-
-*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
-
-| オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +96,7 @@ ht-degree: 33%
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *宛先* 宛先。 |
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
 | 書き出しタイプ | **[!UICONTROL データセットの書き出し]** | オーディエンスの関心や資格でグループ化または構造化されていない未加工のデータセットを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -140,9 +135,9 @@ ht-degree: 33%
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -150,9 +145,9 @@ ht-degree: 33%
 
 *必要に応じて削除します。新しいストリーミング先をドキュメント化する場合は、最初の段落を残します。 新しいファイルベースの宛先をドキュメント化する場合は、2 番目の段落を残します。 データセットを書き出す宛先をドキュメント化する場合は、3 番目の段落を残します。*
 
-読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
-読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 読み取り [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) を参照してください。
 

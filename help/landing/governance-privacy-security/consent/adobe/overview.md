@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1568'
 ht-degree: 1%
 
 ---
@@ -26,11 +26,11 @@ Adobe Experience Platformを使用すると、顧客から収集した同意デ�
 このガイドでは、同意データの処理に関わる様々なExperience Platformサービスに関する十分な知識が必要です。
 
 * [Experience Data Model（XDM）](../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md):使用 [!DNL Identity Service] データセットから詳細な顧客プロファイルをリアルタイムで作成する機能。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md):様々な Platform サービスを顧客向け Web サイトに統合できる、クライアント側の JavaScript ライブラリ。
-   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md):このガイドに示す同意関連の SDK コマンドの使用例の概要です。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md):リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略と同様に対応する個人のグループに分割できます。
+* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
+* [リアルタイム顧客プロファイル](../../../../profile/home.md)：使用 [!DNL Identity Service] データセットから詳細な顧客プロファイルをリアルタイムで作成する機能。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
+* [Adobe Experience Platform Web SDK](../../../../edge/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
+   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md)：リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略に同様の応答をする個人のグループに分割できます。
 
 ## 同意処理フローの概要 {#summary}
 
@@ -61,9 +61,9 @@ Platform での同意処理のサポートの現在のリリースでは、デ�
 
 このダイアログでは、顧客がデータに対して特定のマーケティングおよびパーソナライゼーションの使用例をオプトインまたはオプトアウトできるようにする必要があります。 これらの同意および環境設定は、 [!DNL Profile]-enabled データセットを次の手順で使用します。
 
-## への標準化された同意フィールドの追加 [!DNL Profile]有効なデータセット {#dataset}
+## に標準化された同意フィールドを追加する [!DNL Profile] — 有効なデータセット {#dataset}
 
-顧客の同意データを [!DNL Profile]スキーマに同意フィールドが含まれる有効なデータセット。 これらのフィールドは、個々の顧客に関する属性情報を取り込むために使用するのと同じスキーマおよびデータセットに含める必要があります。
+顧客の同意データをに送信する必要がある [!DNL Profile]スキーマに同意フィールドが含まれる有効なデータセット。 これらのフィールドは、個々の顧客に関する属性情報を取り込むために使用するのと同じスキーマおよびデータセットに含める必要があります。
 
 次のチュートリアルを参照してください。 [同意データを取得するためのデータセットの設定](./dataset.md) を参照してください。 [!DNL Profile]有効なデータセットを有効にしてから、このガイドに進んでください。
 
@@ -87,13 +87,13 @@ Platform での同意処理のサポートの現在のリリースでは、デ�
 
 ### 同意データを処理するExperience PlatformWeb SDK の設定 {#web-sdk}
 
-Web サイト上の同意変更イベントをリッスンするように CMP を設定したら、Experience PlatformWeb SDK を統合して、更新された同意設定を受け取り、ページの読み込みのたびに、同意変更イベントが発生した場合に Platform に送信できます。 詳しくは、 [顧客の同意データを処理するための Web SDK の設定](../sdk.md) を参照してください。
+Web サイト上の同意変更イベントをリッスンするように CMP を設定したら、Experience PlatformWeb SDK を統合して、更新された同意設定を受け取り、ページの読み込みのたびに、同意変更イベントが発生した場合に Platform に送信できます。 次のガイドを参照してください： [顧客の同意データを処理するための Web SDK の設定](../sdk.md) を参照してください。
 
 ### 同意データを処理するExperience PlatformMobile SDK を設定する {#mobile-sdk}
 
 モバイルアプリケーションでExperience Platformの同意設定が必要な場合は、Consent API が呼び出されるたびに同意設定を取得および更新し、Platform に送信するように、顧客の Mobile SDK を統合できます。
 
-詳しくは、 Mobile SDK のドキュメントを参照してください。 [同意モバイル拡張機能の設定](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) および [同意 API の使用](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). Mobile SDK を使用してプライバシーに関する問題を処理する方法について詳しくは、の節を参照してください。 [プライバシーと GDPR](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+詳しくは、 Mobile SDK のドキュメントを参照してください。 [同意モバイル拡張機能の設定](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) および [同意 API の使用](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK を使用してプライバシーに関する問題を処理する方法について詳しくは、の節を参照してください。 [プライバシーと GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
 
 ### XDM 準拠の同意データを直接取り込む {#batch}
 
@@ -111,7 +111,7 @@ Web サイト上の同意変更イベントをリッスンするように CMP �
 >
 >この情報へのアクセス権がない場合は、独自のテスト同意データを取り込み、代わりに既知の ID 値/名前空間に関連付けることができます。
 
-詳しくは、 [ID によるプロファイルの参照](../../../../profile/ui/user-guide.md#browse) 内 [!DNL Profile] プロファイルの詳細を検索する方法に関する特定の手順については、UI ガイドを参照してください。
+詳しくは、 [ID によるプロファイルの参照](../../../../profile/ui/user-guide.md#browse) （内） [!DNL Profile] プロファイルの詳細を検索する方法に関する特定の手順については、UI ガイドを参照してください。
 
 新しい同意属性は、デフォルトではプロファイルのダッシュボードに表示されません。 したがって、 **[!UICONTROL 属性]** 」タブをクリックして、期待どおりに取り込まれたことを確認します。 詳しくは、 [プロファイルダッシュボード](../../../../profile/ui/profile-dashboard.md) ダッシュボードをニーズに合わせてカスタマイズする方法を説明します。
 

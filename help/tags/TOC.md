@@ -5,10 +5,10 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 98%
+source-wordcount: '1034'
+ht-degree: 99%
 
 ---
 
@@ -98,7 +98,7 @@ ht-degree: 98%
          * [概要](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
          * [概要](./extensions/client/web-sdk/overview.md)
-         * [Web SDK タグ拡張機能の設定](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Web SDK 拡張機能の設定](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [イベントタイプ](./extensions/client/web-sdk/event-types.md)
          * [アクションタイプ](./extensions/client/web-sdk/action-types.md)
          * [データ要素タイプ](./extensions/client/web-sdk/data-element-types.md)
@@ -210,7 +210,7 @@ ht-degree: 98%
       * [!DNL YouTube] ビデオトラッキング {#youtube}
          * [概要](./extensions/client/youtube/overview.md)
          * [リリースノート](./extensions/client/youtube/release-notes.md)
-   * イベント転送拡張機能（サーバーサイド）{#server}
+   * イベント転送拡張機能（サーバーサイド） {#server}
       * [概要](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [概要](./extensions/server/cloud-connector/overview.md)
@@ -246,6 +246,7 @@ ht-degree: 98%
          * [概要](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [概要](./extensions/server/twitter/overview.md)
+      * [[!DNL Tiktok] ウェブイベント API](https://exchange.adobe.com/apps/ec/109834)
       * [!DNL Zendesk]イベント API {#zendesk}
          * [概要](./extensions/server/zendesk/overview.md)
 * 拡張機能の開発 {#extension-dev}

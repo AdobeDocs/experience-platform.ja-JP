@@ -1,11 +1,11 @@
 ---
 title: at.js とExperience PlatformWeb SDK の比較
-description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します
+description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します。
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 8%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 8%
 
 ### at.js のインストール
 
-お客様が、「実装」タブのAdobe Experience Cloudから直接ライブラリをダウンロードできるようになっています。 at.js ライブラリは、お客様が以下のような設定でカスタマイズされています。clientCode、imsOrgId など
+お客様が、「実装」タブのAdobe Experience Cloudから直接ライブラリをダウンロードできるようになっています。 at.js ライブラリは、顧客が次のような設定を使用してカスタマイズされています。 clientCode、imsOrgId など。
 
 ### Web SDK のインストール
 
 事前ビルドバージョンは、CDN で使用できます。 CDN 上のライブラリをページで直接参照することも、独自のインフラストラクチャでダウンロードしてホストすることもできます。 縮小形式および縮小されていない形式で使用できます。 非縮小バージョンは、デバッグに役立ちます。
 
-URL 構造：https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.js または alloy.js （非縮小版）
+URL 構造： https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.js または alloy.js （非縮小版）
 
 以下に例を示します。
 
-* 縮小済み： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* 縮小： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * 縮小解除済み： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 [詳細情報](../../fundamentals/installing-the-sdk.md)
@@ -84,7 +84,7 @@ SDK の設定は、`configure` コマンドを使用しておこないます。
 
 >[!IMPORTANT]
 >
->`configure` が *常に* 最初に呼び出されたコマンド。
+>`configure` 次に該当 *常に* 最初に呼び出されたコマンド。
 
 例：
 
@@ -330,7 +330,7 @@ adobe.target.getOffers({
 
 ### Web SDK の使用
 
-を使用して、フォームベースのコンポーザーベースのアクティビティを取得できます `sendEvent` コマンドを使用して、 `decisionScopes` オプション。 この `sendEvent` コマンドは、リクエストされたアクティビティ/提案を含むオブジェクトで解決されたプロミスを返します。これが `propositions` 配列は次のようになります。
+を使用して、フォームベースのコンポーザーベースのアクティビティを取得できます。 `sendEvent` コマンドを使用して、 `decisionScopes` オプション。 The `sendEvent` コマンドは、リクエストされたアクティビティ/提案を含むオブジェクトで解決されるプロミスを返します。これが `propositions` 配列は次のようになります。
 
 ```javascript
 [
@@ -521,9 +521,9 @@ adobe.target.sendNotifications({
 イベントとユーザーアクションは、 `sendEvent` コマンド、 `_experience.decisioning.propositions` XDM フィールドグループと、 `eventType` を 2 つの値のいずれかに変更します。
 
 * `decisioning.propositionDisplay`:Target アクティビティのレンダリングを示します。
-* `decisioning.propositionInteract`:マウスのクリックと同様に、ユーザーがアクティビティを操作することを示します。
+* `decisioning.propositionInteract`：マウスクリックと同様に、ユーザーがアクティビティを操作することを示します。
 
-この `_experience.decisioning.propositions` XDM フィールドグループは、オブジェクトの配列です。 各オブジェクトのプロパティは、 `result.propositions` が `sendEvent` コマンド： `{ id, scope, scopeDetails }`
+The `_experience.decisioning.propositions` XDM フィールドグループは、オブジェクトの配列です。 各オブジェクトのプロパティは、 `result.propositions` が `sendEvent` コマンド： `{ id, scope, scopeDetails }`
 
 **例 1 — トラッキング a `decisioning.propositionDisplay` アクティビティのレンダリング後のイベント**
 
@@ -637,7 +637,7 @@ alloy("sendEvent", {
 
 ### at.js の使用
 
-以下を使用： `adobe.target.triggerView` 関数に置き換えます。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。Visual Experience Composer(VEC) を使用して A/B テストおよびエクスペリエンスターゲット設定 (XT) アクティビティを作成するには、 adobe.target.triggerView() をシングルページアプリケーション (SPA) に実装する必要があります。 サイトに adobe.target.triggerView() が実装されていない場合、VEC はSPAで使用できません。
+以下を使用します。 `adobe.target.triggerView` 関数に置き換えます。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。Visual Experience Composer(VEC) を使用して A/B テストおよびエクスペリエンスターゲット設定 (XT) アクティビティを作成するには、 adobe.target.triggerView() をシングルページアプリケーション (SPA) に実装する必要があります。 サイトに adobe.target.triggerView() が実装されていない場合、VEC はSPAで使用できません。
 
 **例**
 
@@ -650,7 +650,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK の使用
 
-単一ページアプリケーションの View Change をトリガーまたはシグナルにするには、 `web.webPageDetails.viewName` プロパティ `xdm` オプション `sendEvent` コマンドを使用します。 Web SDK は、 `viewName` 指定： `sendEvent` 実行され、表示通知イベントが送信されます。
+単一ページアプリケーションの View Change をトリガーまたはシグナルにするには、 `web.webPageDetails.viewName` プロパティは `xdm` オプション `sendEvent` コマンドを使用します。 Web SDK は、 `viewName` 次の場所で指定： `sendEvent` 実行され、表示通知イベントが送信されます。
 
 **例**
 
@@ -776,7 +776,7 @@ Web SDK を非同期的に読み込む場合は、Web SDK が挿入される前�
 at.js の使用に対応している A4T ログには、次の 2 種類があります。
 
 * Analytics クライアント側ログ
-* Analytics Server Side ログ
+* Analytics Server Side Logging
 
 #### Analytics クライアント側ログ
 
@@ -798,7 +798,7 @@ Analytics クライアント側のログは、 `analyticsLogging: client_side` (
 
 ペイロードは、その後、Data Insertion API を使用して Analytics に転送できます。
 
-例 2:次の間隔で設定： `getOffers` 関数：
+例 2: `getOffers` 関数：
 
 ```javascript
 adobe.target.getOffers({
@@ -852,7 +852,7 @@ adobe.target.getOffers({
 
 Analytics ペイロード (`tnta` トークン ) は、 [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
-#### Analytics Server Side ログ
+#### Analytics Server Side Logging
 
 Analytics Server Side のログは、 `analyticsLogging: server_side` (at.js 設定内、または `window.targetglobalSettings` オブジェクト。
 その後、データフローは次のようになります。
@@ -875,7 +875,7 @@ Analytics クライアント側のログは、Adobe Analyticsがその DataStrea
 ![](assets/analytics-disabled-datastream-config.png)
 
 お客様が Analytics トークン (`tnta`) を使用して Analytics と共有する必要がある [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
-鎖をつけて `sendEvent` コマンドを実行し、結果の提案配列を繰り返し処理します。
+鎖をつけて入る `sendEvent` コマンドを実行し、結果の提案配列を繰り返し処理します。
 
 **例**
 
@@ -912,7 +912,7 @@ alloy("sendEvent", {
 
 ![](assets/analytics-client-side-logging.png)
 
-#### Analytics Server Side ログ
+#### Analytics Server Side Logging
 
 Analytics がその DataStream 設定で有効になっている場合、Analytics Server Side Logging が有効になります。
 
@@ -1102,9 +1102,9 @@ adobe.target.getOffers({
 ```
 
 または、 `mbox3rdPartyId` 次のいずれか `targetPageParams` または `targetPageParamsAll`.
-で設定する場合 `targetPageParams`を探すと、 `target-global-mbox` 別名 `pag-lLoad`.
+で設定する場合 `targetPageParams`を探すと、次のリクエストで送信されます： `target-global-mbox` 別名 `pag-lLoad`.
 レコメンデーションは、 `targetPageParamsAll` すべての target リクエストで送信されるので、
-を使用する利点 `targetPageParamsAll` は、 `mbox3rdPartyId` を 1 回ページに配置すると、すべての target リクエストに適切な権限が付与されます `mbox3rdPartyId`.
+を使用する利点 `targetPageParamsAll` は、 `mbox3rdPartyId` を 1 回ページに配置すると、すべての target リクエストに適切な権限が付与されます。 `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1126,7 +1126,7 @@ window.targetPageParams = function() {
 
 ### Web SDK の使用
 
-Web SDK は、Target サードパーティ ID をサポートします。 ただし、その場合はさらにいくつかの手順が必要です。 ソリューションに取り組む前に、 `identityMap`.
+Web SDK は、Target サードパーティ ID をサポートします。 ただし、その場合はさらにいくつかの手順が必要です。 ソリューションに取り組む前に、以下について少しお話しします。 `identityMap`.
 ID マップを使用すると、顧客は複数の ID を送信できます。 すべての ID は名前空間に分けられています。 各名前空間は 1 つ以上の ID を持つことができます。 特定の ID をプライマリとしてマークできます。
 この知識を念頭に置いて、Target サードパーティ ID を使用するために Web SDK を設定するために必要な手順を確認できます。
 
@@ -1188,7 +1188,7 @@ Web SDK を使用すると、お客様は、Adobe Target名前空間でデータ
 
 ### at.js の使用
 
-この機能は、at.js 2.x でのみ使用できます。at.js 2.x には、という名前の新しい関数があります。 `getOffers`. `getOffers` お客様が 1 つ以上の mbox のコンテンツをプリフェッチすることを許可します。 次に例を示します。
+この機能は at.js 2.x でのみ使用できます。at.js 2.x には、という名前の新しい関数があります。 `getOffers`. `getOffers` お客様が 1 つ以上の mbox のコンテンツをプリフェッチすることを許可します。 次に例を示します。
 
 ```javascript
 adobe.target.getOffers({
@@ -1211,7 +1211,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-注意：を `mbox` 内 `mboxes` 配列には独自のインデックスがあります。 通常、最初の mbox には `index=0`次の `index=1`など
+注意： `mbox` （内） `mboxes` 配列には独自のインデックスがあります。 通常、最初の mbox には `index=0`、次の `index=1`など
 
 ### Web SDK の使用
 
@@ -1233,7 +1233,7 @@ at.js は次のデバッグ機能を公開します。
 
 Web SDK を使用する場合、次の複数のデバッグ機能があります。
 
-* 使用 [グリフォン](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* 使用 [アシュランス](../../../assurance/home.md)
 * [Web SDK のデバッグが有効](../../../edge/fundamentals/debugging.md)
 * 用途 [Web SDK 監視フック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * 用途 [Adobe Experience Platform Debugger](../../../debugger/home.md)

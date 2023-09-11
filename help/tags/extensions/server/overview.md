@@ -2,10 +2,10 @@
 title: イベント転送拡張機能リファレンス
 description: Adobe Experience Platformのイベント転送拡張機能に関するドキュメントを見つけます。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 54%
+source-wordcount: '191'
+ht-degree: 57%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 54%
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Google Analytics4 用 Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+* [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [コア](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
@@ -47,4 +47,5 @@ ht-degree: 54%
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] ウェブイベント API](https://exchange.adobe.com/apps/ec/109834)*
 * [[!DNL Zendesk]イベント API ](./zendesk/overview.md)

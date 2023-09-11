@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 51%
+source-wordcount: '1224'
+ht-degree: 53%
 
 ---
 
@@ -33,9 +33,9 @@ Experience PlatformでのAdobe Target接続の設定方法の概要について�
 
 ## 前提条件 {#prerequisites}
 
-### データストリーム ID {#datastream-id}
+### Datastream ID {#datastream-id}
 
-Adobe Target接続を [datastream ID の使用](#parameters)を使用する場合、 [Adobe Experience Platform Web SDK](../../../edge/home.md) 実装済み
+へのAdobe Target接続を設定する際 [datastream ID の使用](#parameters)を使用する場合、 [Adobe Experience Platform Web SDK](../../../edge/home.md) 実装済み。
 
 datastream ID を使用せずにAdobe Target接続を設定する場合、Web SDK を実装する必要はありません。
 
@@ -48,9 +48,20 @@ datastream ID を使用せずにAdobe Target接続を設定する場合、Web SD
 Adobe Targetで、ユーザーが以下を持っていることを確認します。
 
 * へのアクセス [デフォルトのワークスペース](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
-* この **承認者** [役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+* The **承認者** [役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
 
-権限の付与の詳細を表示： [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) および [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+権限の付与の詳細を表示： [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) そして [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
+
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+
+{style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -59,7 +70,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!DNL Profile request]** | 単一のプロファイルに対して、Adobe Targetの宛先にマッピングされているすべてのオーディエンスを要求しています。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいてExperience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -91,18 +102,18 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 * **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
-* **データストリーム ID**:これにより、オーディエンスを含めるデータ収集データストリームが決まります。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
+* **Datastream ID**：オーディエンスを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
    * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
 
   | Adobe Target実装（Web SDK を使用しない） | Web SDK の実装 |
   |---|---|
   | <ul><li>データストリームは不要です。 Adobe Targetは、 [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja), [サーバーサイド](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation)または [ハイブリッド](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) 実装メソッド。</li><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>オーディエンスとプロファイル属性は、次の場合にのみAdobe Target接続に共有できます。 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Adobe TargetとExperience Platformがサービスとして設定されたデータストリームが必要です。</li><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスからのオーディエンスおよびプロファイル属性の共有がサポートされます。</li></ul> |
 
-* **Workspace**:Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja) オーディエンスの共有先となるもの。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
+* **Workspace**:Adobe Targetを選択します。 [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja) オーディエンスの共有先となるもの。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
->に対してカスタム Target ワークスペースを使用する場合 [属性を含む同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md)、 [選択したオーディエンス](../../ui/activate-edge-personalization-destinations.md#select-audiences) 選択した Target ワークスペースに送信されます。 この [マップされた属性](../../ui/activate-edge-personalization-destinations.md#mapping) がデフォルトの Target ワークスペースに送信されます。
+>に対してカスタム Target ワークスペースを使用する場合 [属性を含む同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md)、 [選択したオーディエンス](../../ui/activate-edge-personalization-destinations.md#select-audiences) 選択した Target ワークスペースに送信されます。 The [マップされた属性](../../ui/activate-edge-personalization-destinations.md#mapping) がデフォルトの Target ワークスペースに送信されます。
 ><br>
 >この動作は、将来のアップデートで変更されます。
 
@@ -110,9 +121,9 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 

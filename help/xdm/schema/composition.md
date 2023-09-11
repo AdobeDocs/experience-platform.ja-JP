@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマ構成の基本
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4141'
 ht-degree: 29%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 29%
 
 スキーマは、データの構造を説明するだけでなく、制約や期待をデータに適用し、システム間の移動時に検証できるようにします。これらの標準的な定義により、接触チャネルに関係なくデータを一貫して解釈でき、アプリケーション間での翻訳の必要性を排除できます。
 
-[!DNL Experience Platform] は、スキーマを使用して、このセマンティックの正規化を維持します。 スキーマは、 [!DNL Experience Platform]を使用すると、スキーマに準拠するすべてのデータを、競合のない組織全体で再利用したり、複数の組織間で共有したりできます。
+[!DNL Experience Platform] は、スキーマを使用して、このセマンティックの正規化を維持します。 スキーマは、でデータを記述する標準的な方法です [!DNL Experience Platform]を使用すると、スキーマに準拠するすべてのデータを、競合のない組織全体で再利用したり、複数の組織間で共有したりできます。
 
-XDM スキーマは、大量の複雑なデータを自己完結型形式で保存するのに最適です。 詳しくは、 [埋め込みオブジェクト](#embedded) および [ビッグデータ](#big-data) XDM がこれをどのように実現するかについて詳しくは、このドキュメントの付録を参照してください。
+XDM スキーマは、大量の複雑なデータを自己完結型形式で保存するのに最適です。 次の節を参照してください： [埋め込みオブジェクト](#embedded) および [ビッグデータ](#big-data) XDM がこれをどのように実現するかについて詳しくは、このドキュメントの付録を参照してください。
 
 ### でのスキーマベースのワークフロー [!DNL Experience Platform]
 
@@ -37,7 +37,7 @@ XDM スキーマは、大量の複雑なデータを自己完結型形式で保�
 
 スキーマを構築する最初の手順は、スキーマ内で捕捉しようとする概念、すなわち現実世界のオブジェクトを決定することです。説明しようとしている概念を特定したら、データのタイプ、潜在的な ID フィールド、将来のスキーマの発展について考え、スキーマの計画を始めることができます。
 
-### でのデータ動作 [!DNL Experience Platform]
+### でのデータの動作 [!DNL Experience Platform]
 
 での使用を意図したデータ [!DNL Experience Platform] は 2 つの動作タイプにグループ化されています。
 
@@ -57,9 +57,9 @@ XDM スキーマは、大量の複雑なデータを自己完結型形式で保�
 
 スキーマは、データをに取り込むために使用されます [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、スキーマについて考える際には、顧客の ID と、データの送信元に関係なく、対象を識別するために使用できるフィールドについて考えることが重要です。
 
-この処理を支援するために、スキーマ内のキーフィールドを ID としてマークできます。 データの取り込み時に、これらのフィールドのデータが[!UICONTROL ID グラフ]」 その後、グラフデータには、 [[!DNL Real-Time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
+この処理を支援するために、スキーマ内のキーフィールドを ID としてマークできます。 データの取り込み時に、これらのフィールドのデータが[!UICONTROL ID グラフ]「その人にとって」 その後、グラフデータには、 [[!DNL Real-Time Customer Profile]](../../profile/home.md) その他 [!DNL Experience Platform] 各顧客の関連付けられたビューを提供するサービス。
 
-一般的に「[!UICONTROL ID]&quot;インクルード：メールアドレス、電話番号、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID またはその他の一意の ID フィールド。 また、「[!UICONTROL ID]」フィールドも同様です。
+一般的に「[!UICONTROL ID]&quot;含む：メールアドレス、電話番号、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM ID またはその他の一意の ID フィールド。 また、「[!UICONTROL ID]」フィールドも同様です。
 
 スキーマ計画段階で顧客の ID を考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。 概要については、 [Adobe Experience Platform Identity Service](../../identity-service/home.md) id 情報が、顧客にデジタルエクスペリエンスを提供するのに役立つ方法について詳しくは、こちらを参照してください。
 
@@ -78,7 +78,7 @@ ID データを Platform に送信する方法は 2 つあります。
 >
 >を使用するスキーマ `identityMap` は、関係内でソーススキーマとして使用できますが、参照スキーマとして使用することはできません。 これは、すべての参照スキーマは、ソーススキーマ内の参照フィールドにマッピングできる、表示可能な ID を持つ必要があるからです。 UI ガイド ( [関係](../tutorials/relationship-ui.md) を参照してください。
 
-ただし、ID を保存するソースからデータを取り込む場合 ( 例えば、 [!DNL Airship] またはAdobe Audience Manager)、またはスキーマの ID 数が可変の場合。 また、 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+ただし、ID を保存するソースからデータを取り込む場合 ( 例えば、 [!DNL Airship] またはAdobe Audience Manager)、またはスキーマの ID 数が可変の場合。 また、 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 単純な ID マップの例を次に示します。
 
@@ -123,7 +123,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 >[!NOTE]
 >
->スキーマがまだデータの取り込みに使用されていない場合 [!DNL Experience Platform] リアルタイム顧客プロファイルでの使用が有効になっていない場合は、そのスキーマに後方互換性のない変更を導入できます。 ただし、 [!DNL Platform]の場合は、追加のバージョン管理ポリシーに従う必要があります。
+>スキーマがまだデータの取り込みに使用されていない場合 [!DNL Experience Platform] リアルタイム顧客プロファイルでの使用が有効になっていない場合は、そのスキーマに後方互換性のない変更を導入できます。 ただし、スキーマが [!DNL Platform]の場合は、追加のバージョン管理ポリシーに従う必要があります。
 
 次の表は、スキーマ、フィールドグループおよびデータタイプの編集時にサポートされる変更を示しています。
 
@@ -139,7 +139,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 >[!IMPORTANT]
 >
->スキーマフィールドが必須かどうかに関係なく、Platform は受け入れません `null` 取り込まれたフィールドの空の値 レコードまたはイベントの特定のフィールドに値がない場合、そのフィールドのキーを取り込みペイロードから除外する必要があります。
+>スキーマフィールドが必須かどうかに関係なく、Platform は受け入れません `null` 取り込まれたフィールドの空の値。 レコードまたはイベントの特定のフィールドに値がない場合、そのフィールドのキーを取り込みペイロードから除外する必要があります。
 
 #### 取り込み後に必要に応じてフィールドを設定 {#post-ingestion-required-fields}
 
@@ -161,7 +161,7 @@ ID データを Platform に送信する方法は 2 つあります。
 
 スキーマは、次の式を使用して構成されます。
 
-**Class + Schema Field Group&amp;ast;= XDM スキーマ**
+**Class + Schema Field Group&amp;ast; = XDM Schema**
 
 &amp;ast；スキーマは、クラスと 0 個以上のスキーマフィールドグループで構成されます。 つまり、フィールドグループをまったく使用せずにデータセットスキーマを作成できます。
 
@@ -202,11 +202,11 @@ Adobeは、いくつかの標準（「コア」）XDM クラスを提供しま�
 
 [!DNL Experience Platform] には多くの標準Adobeフィールドグループが含まれていますが、ベンダーはユーザーのフィールドグループを定義し、個々のユーザーは独自の概念のフィールドグループを定義できます。
 
-例えば、「[!UICONTROL 名]&quot;および&quot;[!UICONTROL 自宅住所]&quot;[!UICONTROL ロイヤルティメンバー]」スキーマの場合は、これらの共通概念を定義する標準フィールドグループを使用できます。 ただし、標準のフィールドグループではカバーされない可能性のある、組織に固有の概念（カスタムロイヤルティプログラムの詳細や製品属性など）。 この場合、この情報を取り込むには、独自のフィールドグループを定義する必要があります。
+例えば、「[!UICONTROL 名]&quot;および&quot;[!UICONTROL 住所（自宅）]&quot;[!UICONTROL ロイヤルティメンバー]」スキーマの場合は、これらの共通概念を定義する標準フィールドグループを使用できます。 ただし、標準のフィールドグループではカバーされない可能性のある、組織に固有の概念（カスタムロイヤルティプログラムの詳細や製品属性など）。 この場合、この情報を取り込むには、独自のフィールドグループを定義する必要があります。
 
 >[!NOTE]
 >
->標準フィールドグループは、で暗黙的に理解されるので、スキーマで可能な限り標準フィールドグループを使用することを強くお勧めします。 [!DNL Experience Platform] サービスを介して使用する場合は、 [!DNL Platform] コンポーネント。
+>標準フィールドグループは、で暗黙的に理解されるので、スキーマで可能な限り標準フィールドグループを使用することを強くお勧めします。 [!DNL Experience Platform] サービスを介して使用する場合は、より一貫性を高めます。 [!DNL Platform] コンポーネント。
 >
 >標準コンポーネント（「名」や「電子メールアドレス」など）で提供されるフィールドには、基本的なスカラーフィールドタイプ以外にも、 [!DNL Platform] 同じデータタイプを共有するフィールドは、同じように動作します。 この動作は、データの送信元や送信先に関係なく、一貫性を保つために信頼できます [!DNL Platform] サービスは、データが使用されている場合に使用します。
 
@@ -224,7 +224,7 @@ Adobeは、いくつかの標準（「コア」）XDM クラスを提供しま�
 
 [!DNL Experience Platform] は、 [!DNL Schema Registry] 共通のデータ構造を記述するための標準パターンの使用を支援する。 詳しくは、 [!DNL Schema Registry] データタイプを定義する手順を実行すると、より明確になるチュートリアルです。
 
-次のスクリーンショットは、Platform UI でデータタイプがどのように表されるかを示しています。 が提供するフィールドの 1 つ [!UICONTROL 人口統計の詳細] フィールドグループは、[!UICONTROL オブジェクト]&quot;データタイプ。パイプ文字 (`|`) をクリックします。 この特定のデータ型は、個人の名前に関連するいくつかのサブフィールドを提供します。これは、人の名前を取り込む必要がある他のフィールドで再利用できる構成体です。
+次のスクリーンショットは、Platform UI でデータタイプがどのように表されるかを示しています。 が提供するフィールドの 1 つ [!UICONTROL 人口統計の詳細] フィールドグループは、「[!UICONTROL オブジェクト]&quot;データタイプ。パイプ文字 (`|`) をクリックします。 この特定のデータ型は、個人の名前に関連するいくつかのサブフィールドを提供します。これは、人の名前を取り込む必要がある他のフィールドで再利用できる構成体です。
 
 ![](../images/schema-composition/data-type.png)
 
@@ -243,7 +243,7 @@ Adobeは、いくつかの標準（「コア」）XDM クラスを提供しま�
 
 >[!TIP]
 >
->詳しくは、 [付録](#objects-v-freeform) を参照してください。
+>詳しくは、 [付録](#objects-v-freeform) オブジェクトタイプのフィールドに対するフリーフォームフィールドの使用に関する長所と短所については、を参照してください。
 
 これらのスカラー型の有効な範囲は、特定のパターン、形式、最小値や最大値、事前定義値にさらに制限できます。これらの制約を使用すると、以下のような、より詳細なフィールドタイプを幅広く表すことができます。
 
@@ -265,9 +265,9 @@ Adobeは、いくつかの標準（「コア」）XDM クラスを提供しま�
 
 例えば、小売店で行われた購入を記述するスキーマを、「[!UICONTROL ストアトランザクション]&quot;. スキーマがを実装します。 [!DNL XDM ExperienceEvent] 標準と組み合わされたクラス [!UICONTROL コマース] フィールドグループとユーザー定義 [!UICONTROL 製品情報] フィールドグループを使用します。
 
-Web サイトトラフィックを追跡する別のスキーマは、「[!UICONTROL ウェブ訪問]&quot;. また、 [!DNL XDM ExperienceEvent] クラスは、今回は標準の [!UICONTROL Web] フィールドグループを使用します。
+Web サイトトラフィックを追跡する別のスキーマは、「[!UICONTROL ウェブ訪問数]&quot;. また、 [!DNL XDM ExperienceEvent] クラスは、今回は標準の [!UICONTROL Web] フィールドグループを使用します。
 
-次の図に、これらのスキーマと各フィールドグループが提供するフィールドを示します。 また、 [!DNL XDM Individual Profile] クラス (「[!UICONTROL ロイヤルティメンバー]」スキーマに関する情報は、このガイドで前述しました。
+次の図に、これらのスキーマと各フィールドグループが提供するフィールドを示します。 また、に基づく 2 つのスキーマが含まれます [!DNL XDM Individual Profile] クラス (「[!UICONTROL ロイヤルティメンバー]」スキーマに関する情報は、このガイドで前述しました。
 
 ![](../images/schema-composition/composition.png)
 
@@ -283,14 +283,14 @@ While [!DNL Experience Platform] では、特定の使用例に関するスキ�
 
 ## XDM スキーマへのデータファイルのマッピング
 
-に取り込まれるすべてのデータファイル [!DNL Experience Platform] は、XDM スキーマの構造に準拠している必要があります。 XDM 階層（サンプルファイルを含む）に準拠するようにデータファイルをフォーマットする方法の詳細は、[ETL 変換のサンプル](../../etl/transformations.md)に関するドキュメントを参照してください。へのデータファイルの取り込みに関する一般的な情報 [!DNL Experience Platform]を参照し、 [バッチ取得の概要](../../ingestion/batch-ingestion/overview.md).
+に取り込まれるすべてのデータファイル [!DNL Experience Platform] は、XDM スキーマの構造に準拠している必要があります。 XDM 階層（サンプルファイルを含む）に準拠するようにデータファイルをフォーマットする方法の詳細は、[ETL 変換のサンプル](../../etl/transformations.md)に関するドキュメントを参照してください。データファイルのへの取り込みに関する一般的な情報 [!DNL Experience Platform]を参照し、 [バッチ取得の概要](../../ingestion/batch-ingestion/overview.md).
 
 ## 外部オーディエンスのスキーマ
 
 外部システムからオーディエンスを Platform に取り込む場合は、次のコンポーネントを使用してスキーマに取り込む必要があります。
 
-* [[!UICONTROL セグメント定義] クラス](../classes/segment-definition.md):この標準クラスを使用して、外部セグメント定義のキー属性をキャプチャします。
-* [[!UICONTROL セグメントメンバーシップの詳細] フィールドグループ](../field-groups/profile/segmentation.md):このフィールドグループを [!UICONTROL XDM 個人プロファイル] スキーマを使用して顧客プロファイルを特定のオーディエンスに関連付けます。
+* [[!UICONTROL セグメント定義] クラス](../classes/segment-definition.md)：この標準クラスを使用して、外部セグメント定義のキー属性をキャプチャします。
+* [[!UICONTROL セグメントメンバーシップの詳細] フィールドグループ](../field-groups/profile/segmentation.md)：このフィールドグループを [!UICONTROL XDM 個人プロファイル] スキーマを使用して顧客プロファイルを特定のオーディエンスに関連付けます。
 
 ## 次の手順
 
@@ -301,7 +301,7 @@ While [!DNL Experience Platform] では、特定の使用例に関するスキ�
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-この [!DNL Schema Registry] は、 [!DNL Schema Library] Adobe Experience Platform内で、には、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API が用意されています。 この [!DNL Schema Library] には、Adobeが定義する業界リソース、次の条件で定義されるベンダーリソースが含まれます： [!DNL Experience Platform] 組織のメンバーが構成するパートナー、クラス、フィールドグループ、データタイプ、スキーマ。
+The [!DNL Schema Registry] は、 [!DNL Schema Library] Adobe Experience Platform内で、には、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API が用意されています。 The [!DNL Schema Library] には、Adobeが定義する業界リソース、次の条件で定義されるベンダーリソースが含まれます： [!DNL Experience Platform] 組織のメンバーが構成するパートナー、クラス、フィールドグループ、データタイプ、スキーマ。
 
 UI を使用してスキーマの構成を開始するには、[スキーマエディターのチュートリアル](../tutorials/create-schema-ui.md)を参照しながら、このドキュメントで取り上げる「ロイヤルティメンバー」スキーマを作成します。
 

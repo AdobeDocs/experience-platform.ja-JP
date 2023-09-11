@@ -1,10 +1,10 @@
 ---
 description: 「/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK で作成されたファイルベースの宛先に対するファイル形式オプションの設定方法を説明します。
 title: ファイル形式設定
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 95%
+source-wordcount: '1004'
+ht-degree: 96%
 
 ---
 
@@ -178,7 +178,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `templatingStrategy` | 必須 | 設定する各ファイル形式オプションについて、パラメーター `templatingStrategy` を追加する必要があります。このパラメーターは、以下の 2 つの値を持つことができます。<br><ul><li>`NONE`：ユーザーが設定で異なる値を選択できるようにする予定のない場合は、この値を使用します。ファイル形式オプションが固定される例については、[この設定](#file-configuration-templating-none)を参照してください。</li><li>`PEBBLE_V1`：ユーザーが設定で異なる値を選択できるようにする場合は、この値を使用します。この場合、UI でユーザーに様々なオプションを表示するために、`/destination` エンドポイント設定で対応する顧客データフィールドも設定する必要があります。ユーザーがファイル形式オプションで異なる値を選択できる例については、[この設定](#file-configuration-templating-pebble)を参照してください。</li></ul> | - | - | - |
 | `compression.value` | オプション | データをファイルに保存する際に使用する圧縮コーデック。サポートされている値：`none`、`bzip2`、`gzip`、`lz4`、`snappy`。 | `none` | - | - |
 | `fileType.value` | オプション | 出力ファイル形式を指定します。サポートされている値：`csv`、`parquet`、`json`。 | `csv` | - | - |
-| `csvOptions.quote.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用された値をエスケープするために使用する 1 文字を設定します。区切り記号を値の一部として使用することもできます。 | `null` | - | - |
+| `csvOptions.quote.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用された値をエスケープするために使用する 1 文字を設定します。区切り記号を値の一部として使用することもできます。 | `null` | デフォルト値の例： `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | カスタムの例： `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。すべての値を常に引用符で囲む必要があるかどうかを示します。デフォルトでは、引用符文字を含む値のみをエスケープします。 | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。各フィールドと値の区切り文字を設定します。この区切り文字には、1 つまたは複数の文字を指定できます。 | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。既に引用されている値の内部で引用符をエスケープするために使用する 1 文字を設定します。 | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
@@ -191,7 +191,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `csvOptions.timestampFormat.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。タイムスタンプ形式を示す文字列を設定します。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | オプション | エクスポートするファイルあたりの最大行数を示します。1,000,000～10,000,000 行の間です。 | 5,000,000 |
+| `maxFileRowCount` | オプション | 書き出されるファイルごとの最大行数を 1,000,000～10,000,000 行の範囲で示します。 | 5,000,000 |
 
 {style="table-layout:auto"}
 
