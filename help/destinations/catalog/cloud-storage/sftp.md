@@ -2,10 +2,10 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 64%
+source-wordcount: '982'
+ht-degree: 63%
 
 ---
 
@@ -35,15 +35,12 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 
 ## サポートされるオーディエンス {#supported-audiences}
 
-この節では、この宛先に書き出すことができるすべてのオーディエンスについて説明します。
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-この宛先では、Experience Platform [セグメント化サービス](../../../segmentation/home.md).
-
-*さらに*&#x200B;の場合、この宛先では、以下の表で説明するオーディエンスのアクティブ化もサポートされます。
-
-| オーディエンスタイプ | 説明 |
----------|----------|
-| カスタムアップロード | オーディエンス [インポート済み](../../../segmentation/ui/overview.md#import-audience) を CSV ファイルからExperience Platformに追加します。 |
+| オーディエンスの起源 | サポートあり | 説明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -112,13 +109,18 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 ![SFTP 宛先に対して使用可能な宛先詳細](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 名前]**:Experience Platformユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
-* **[!UICONTROL 説明]**：この宛先の説明を入力します
-* **[!UICONTROL フォルダーパス]**：SFTP でファイルを書き出す場所のフォルダーのパスを入力します。
-* **[!UICONTROL ファイルタイプ]**：書き出すファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
-* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンにします。
+* **[!UICONTROL 説明]**：この宛先の説明を入力します。
+* **[!UICONTROL フォルダーパス]**:SFTP でファイルを書き出す場所にあるフォルダーのパスを入力します。
+* **[!UICONTROL ファイルタイプ]**：書き出したファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。
+* **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式を使用して付けられます `manifest-<<destinationId>>-<<dataflowRunId>>.json`. を表示します。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). マニフェストファイルには、次のフィールドが含まれます。
+   * `flowRunId`: [データフローの実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 書き出されたファイルを生成した
+   * `scheduledTime`：ファイルが書き出されたときの UTC 時刻 (UTC)。
+   * `exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。
+   * `exportResults.name`：書き出されたファイルの名前。
+   * `size`：書き出されるファイルのサイズ（バイト単位）。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
