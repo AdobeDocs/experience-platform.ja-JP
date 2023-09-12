@@ -1,12 +1,12 @@
 ---
 keywords: 広告；Bing;
 title: Microsoft Bing 接続
-description: Microsoft Bing の接続先を使用すると、Microsoft Display Advertising をまたいで、再ターゲティングとオーディエンスにターゲットを絞ったデジタルキャンペーンを実行できます。
+description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブなど、Microsoft Advertising Network 全体をまたいで、再ターゲティングとオーディエンスにターゲットを設定したデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 62%
+source-wordcount: '690'
+ht-degree: 59%
 
 ---
 
@@ -14,13 +14,15 @@ ht-degree: 62%
 
 ## 概要 {#overview}
 
-The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送信する際に役立ちます： [!DNL Microsoft Display Advertising].
+以下を使用します。 [!DNL Microsoft Bing] 宛先を使用して、プロファイルデータを [!DNL Microsoft Advertising Network]を含む [!DNL Display Advertising], [!DNL Search]、および [!DNL Native].
+
+The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences]* Microsoftで これらは、 [!DNL Microsoft Search Network] および [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) を [Microsoft Advertising ドキュメント](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 プロファイルデータをに送信するには [!DNL Microsoft Bing]の場合、最初に宛先に接続する必要があります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、 [!DNL Microsoft Advertising IDs] をまたいで、ディスプレイ広告を介してユーザーをターゲットにします。 [!DNL Microsoft Advertising] チャネル。
+マーケターは、 [!DNL Microsoft Advertising IDs] 広告を表示または検索してユーザーをターゲットにする [!DNL Microsoft Advertising] チャネル。
 
 ## サポートされている ID {#supported-identities}
 
@@ -74,7 +76,7 @@ The [!DNL Microsoft Bing] の宛先は、次にプロファイルデータを送
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
-### 接続パラメーター {#parameters}
+### 宛先の詳細の入力 {#parameters}
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
