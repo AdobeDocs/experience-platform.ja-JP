@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API を使用すると、開発者は Media Edge Analytics および Customer Journey Analytics のデータを収集できます。
 source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '82'
 ht-degree: 100%
 
