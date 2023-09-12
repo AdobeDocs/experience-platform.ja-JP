@@ -4,10 +4,10 @@ description: API を使用して、クラウドストレージバッチソース
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 75%
+source-wordcount: '1473'
+ht-degree: 89%
 
 ---
 
@@ -113,21 +113,21 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `publicKey` | 公開鍵は、クラウドストレージ内のデータの暗号化に使用されます。 このキーは、この手順でも作成された秘密鍵に対応します。 ただし、秘密鍵は直ちにExperience Platformに送信されます。 |
-| `publicKeyId` | 公開鍵 ID は、データフローを作成し、暗号化されたクラウドストレージデータをExperience Platformに取り込むために使用されます。 |
-| `expiryTime` | 有効期限は、暗号化キーペアの有効期限を定義します。 この日付は、キーの生成日から 180 日後に自動的に設定され、UNIX タイムスタンプ形式で表示されます。 |
+| `publicKey` | 公開鍵は、クラウドストレージ内のデータの暗号化に使用されます。このキーは、この手順で作成された秘密鍵に対応します。ただし、秘密鍵は直ちに Experience Platform に送信されます。 |
+| `publicKeyId` | 公開鍵 ID は、データフローを作成し、暗号化されたクラウドストレージデータを Experience Platform に取り込むために使用されます。 |
+| `expiryTime` | 有効期限は、暗号化キーペアの有効期限を定義します。この日付は、キーの生成日から 180 日後に自動的に設定され、UNIX タイムスタンプ形式で表示されます。 |
 
 +++（オプション）署名済みデータの署名検証キーペアを作成します
 
 ### 顧客管理キーペアの作成
 
-オプションで、署名検証キーのペアを作成して、暗号化されたデータに署名し、取り込むことができます。
+オプションで、署名検証キーペアを作成して、暗号化されたデータに署名し、取り込むことができます。
 
-この段階では、独自の秘密鍵と公開鍵の組み合わせを生成し、秘密鍵を使用して暗号化されたデータに署名する必要があります。 次に、Platform で署名を検証するために、Base64 で公開鍵をエンコードしてから、Experience Platformで共有する必要があります。
+この段階では、独自の秘密鍵および公開鍵の組み合わせを生成し、秘密鍵を使用して暗号化されたデータに署名する必要があります。次に、Platform で署名を検証するために、Base64 で公開鍵をエンコードして、Experience Platform で共有する必要があります。
 
-### 公開鍵をExperience Platformに共有
+### 公開鍵を Experience Platform に共有
 
-公開鍵を共有するには、 `/customer-keys` エンドポイントを使用して、暗号化アルゴリズムと Base64 でエンコードされた公開鍵を提供する際に使用されます。
+公開鍵を共有するには、`/customer-keys` エンドポイントに POST リクエストを行い、暗号化アルゴリズムと Base64 でエンコードされた公開鍵を提供します。
 
 **API 形式**
 
@@ -154,7 +154,7 @@ curl -X POST \
 | パラメーター | 説明 |
 | --- | --- |
 | `encryptionAlgorithm` | 使用する暗号化アルゴリズムのタイプ。 サポートされているタイプは `PGP` と `GPG` です。 |
-| `publicKey` | 暗号化された署名に使用する、顧客が管理する鍵に対応する公開鍵。 このキーは、Base64 でエンコードする必要があります。 |
+| `publicKey` | 暗号化された署名に使用する、顧客が管理する鍵に対応する公開鍵。この鍵は、Base64 でエンコードする必要があります。 |
 
 **応答**
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `publicKeyId` | この公開鍵 ID は、顧客管理鍵をExperience Platformと共有した場合に返されます。 署名済みおよび暗号化されたデータのデータフローを作成する際に、この公開鍵 ID を署名検証キー ID として指定できます。 |
+| `publicKeyId` | この公開鍵 ID は、顧客が管理する鍵を Experience Platform と共有する際に返されます。署名済みおよび暗号化されたデータのデータフローを作成する際に、この公開鍵 ID を署名検証鍵 ID として提供できます。 |
 
 +++
 
@@ -212,7 +212,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB 暗号化されたデータ取り込み用のデータフローの作成]
+>[!TAB 暗号化されたデータ取り込みのデータフローの作成]
 
 次のリクエストでは、クラウドストレージソースの暗号化されたデータを取り込むデータフローを作成しています。
 
@@ -318,7 +318,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `params.signVerificationKeyId` | 署名検証キー ID は、Base64 でエンコードされた公開鍵をExperience Platformと共有した後に取得された公開鍵 ID と同じです。 |
+| `params.signVerificationKeyId` | 署名検証鍵 ID は、Base64 でエンコードされた公開鍵を Experience Platform と共有した後に取得された公開鍵 ID と同じです。 |
 
 >[!ENDTABS]
 
@@ -332,6 +332,40 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**繰り返し取り込みの制限**
+
+暗号化されたデータ取り込みは、ソース内の繰り返しフォルダーや複数レベルのフォルダーの取り込みをサポートしていません。 暗号化されたすべてのファイルは、1 つのフォルダーに格納する必要があります。 1 つのソースパスで複数のフォルダーを使用するワイルドカードもサポートされていません。
+
+次に、サポートされているフォルダー構造の例を示します。ここで、ソースパスは `/ACME-customers/*.csv.gpg`.
+
+このシナリオでは、太字のファイルがExperience Platformに取り込まれます。
+
+* ACME-customers
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+次に、ソースパスが `/ACME-customers/*`.
+
+このシナリオでは、フロー実行は失敗し、ソースからデータをコピーできないことを示すエラーメッセージが返されます。
+
+* ACME-customers
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME-loyalty
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## 次の手順
 
