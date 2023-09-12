@@ -1,10 +1,10 @@
 ---
 description: 「/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK で作成されたファイルベースの宛先に対するファイル形式オプションの設定方法を説明します。
 title: ファイル形式設定
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 96%
+source-wordcount: '1093'
+ht-degree: 88%
 
 ---
 
@@ -119,7 +119,11 @@ Experience Platform から受け取ったファイルを最適に読み取り、
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ Experience Platform から受け取ったファイルを最適に読み取り、
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Experience Platform から受け取ったファイルを最適に読み取り、
 | `csvOptions.charToEscapeQuoteEscaping.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。引用符文字のエスケープに使用する 1 文字を設定します。 | エスケープ文字と引用符文字が異なる場合は `\`。エスケープ文字と引用符文字が同じ場合は `\0` を使用します。 | - | - |
 | `csvOptions.emptyValue.value` | オプション | *`"fileType.value": "csv"`* の場合のみ。空の値の文字列表現を設定します。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | オプション | 書き出されるファイルごとの最大行数を 1,000,000～10,000,000 行の範囲で示します。 | 5,000,000 |
+| `includeFileManifest` | オプション | ファイルの書き出しと共に、ファイルマニフェストの書き出しをサポートします。 マニフェスト JSON ファイルには、書き出し場所や書き出しサイズなどに関する情報が含まれています。 マニフェストの名前は、形式を使用して付けられます `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | を表示します。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). マニフェストファイルには、次のフィールドが含まれます。 <ul><li>`flowRunId`: [データフローの実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 書き出されたファイルを生成した</li><li>`scheduledTime`：ファイルが書き出されたときの UTC 時刻 (UTC)。 </li><li>`exportResults.sinkPath`：書き出されたファイルが格納されるストレージの場所のパス。 </li><li>`exportResults.name`：書き出されたファイルの名前。</li><li>`size`：書き出されるファイルのサイズ（バイト単位）。</li></ul> |
 
 {style="table-layout:auto"}
 
