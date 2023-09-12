@@ -3,10 +3,10 @@ title: UI で Google PubSub ソース接続を作成
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1043'
+ht-degree: 41%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、Platform ユーザーインターフェイスを使用して、[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）を作成する手順について説明します。
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 | 認証情報 | 説明 |
 | ---------- | ----------- |
 | プロジェクト ID | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| 認証情報 | [!DNL PubSub] の認証に必要な資格情報または秘密鍵の ID。 |
-| トピック名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**:単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 |
-| 購読名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
+| 認証情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
+| トピック名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**：単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 |
+| 配信登録名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
 
 これらの値について詳しくは、次の [PubSub 認証](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。サービスアカウントベースの認証を使用している場合、資格情報の生成手順については、次の [PubSub ガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## [!DNL PubSub] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。この [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。The [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -70,11 +70,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >
 >アクセスが制限されたアカウントを作成する場合は、1 つ以上のトピック名またはサブスクリプション名を指定する必要があります。 両方の値が見つからない場合、認証は失敗します。
 
-新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;新しい [!DNL PubSub] アカウント
+新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、新しい [!DNL PubSub] アカウント。
 
 ![ソースワークフローでのGoogle PubSub ソースの新しいアカウントインターフェイス](../../../../images/tutorials/create/google-pubsub/new.png)
 
-この [!DNL PubSub] 「ソース」では、認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、プロジェクトベースの認証を使用することも、トピックおよび購読ベースの認証を使用することもできます。 プロジェクトベースの認証では、アカウント内のルートレベルプロジェクトへのアクセスを許可できますが、トピックおよび購読ベースの認証では、特定のプロジェクトへのアクセスを制限できます [!DNL PubSub] トピックおよび購読。
+The [!DNL PubSub] 「ソース」では、認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、プロジェクトベースの認証を使用することも、トピックおよび購読ベースの認証を使用することもできます。 プロジェクトベースの認証では、アカウント内のルートレベルプロジェクトへのアクセスを許可でき、トピックおよび購読ベースの認証では、特定のプロジェクトへのアクセスを制限できます [!DNL PubSub] トピックおよび購読。
 
 >[!BEGINTABS]
 
@@ -98,13 +98,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## データの選択
 
-認証に成功すると、 [!UICONTROL データを選択] ステップ ( [!DNL PubSub] データ階層を参照し、Experience Platformに取り込むデータを選択します。
+認証に成功すると、 [!UICONTROL データを選択] ステップで、 [!DNL PubSub] データ階層を参照し、Experience Platformに取り込むデータを選択します。
 
 >[!BEGINTABS]
 
 >[!TAB プロジェクトベースの認証]
 
-プロジェクトベースのアクセス権で認証済みの場合、 [!UICONTROL データを選択] インターフェイスには、トピックが関連付けられているプロジェクト内のすべての購読が表示されます。
+プロジェクトベースのアクセス権で認証済みの場合は、 [!UICONTROL データを選択] インターフェイスには、トピックが関連付けられているプロジェクト内のすべての購読が表示されます。
 
 ![プロジェクトベースの認証を使用するソースワークフローのデータ選択手順。](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 

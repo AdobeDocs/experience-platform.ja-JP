@@ -3,10 +3,10 @@ title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '996'
+ht-degree: 65%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Google PubSub]（以下「[!DNL PubSub]」）を Experience Platform に接続する手順を詳しく説明します。
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| `credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
+| `credentials` | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
 | `topicName` | メッセージのフィードを表すリソースの名前。 トピック名を指定する必要があるのは、 [!DNL PubSub] ソース。 トピック名の形式は次のとおりです。 `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**:単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 購読名の形式は次のとおりです。 `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
+| `subscriptionName` | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**：単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 購読名の形式は次のとおりです。 `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
 
 これらの値について詳しくは、こちらの [[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)に関するドキュメントを参照してください。サービスアカウントベースの認証を使用するには、こちらの[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)で、資格情報の生成手順を確認してください。
@@ -55,7 +55,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL PubSub] 認証資格情報をリクエストパラメーターの一部として指定します。
 
-この [!DNL PubSub] 「ソース」では、認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、ルートアクセスを持たせたり、特定のアクセスに対してアクセスを制限したりできます [!DNL PubSub] トピックおよび購読。
+The [!DNL PubSub] 「ソース」では、認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、ルートアクセスを持たせたり、特定のアクセスに対してアクセスを制限したりできます [!DNL PubSub] トピックおよび購読。
 
 >[!NOTE]
 >
