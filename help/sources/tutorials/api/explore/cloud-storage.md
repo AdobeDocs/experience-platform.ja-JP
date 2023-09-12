@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クラ
 title: フローサービス API を使用したクラウドストレージフォルダーの調査
 description: このチュートリアルでは、フローサービス API を使用して、サードパーティのクラウドストレージシステムを調べます。
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 19%
@@ -12,7 +12,7 @@ ht-degree: 19%
 
 # を使用してクラウドストレージフォルダーを調べる [!DNL Flow Service] API
 
-このチュートリアルでは、 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API
+このチュートリアルでは、 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `objectType` | 参照するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`:特定のディレクトリの参照</li><li>`root`:ルートディレクトリを参照します。</li></ul> |
+| `objectType` | 参照するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`：特定のディレクトリを参照します。</li><li>`root`：ルートディレクトリを参照します。</li></ul> |
 | `object` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
 
 
@@ -106,14 +106,14 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | クラウドストレージソースコネクタの接続 ID。 |
 | `{FILE_PATH}` | 検査するファイルへのパス。 |
-| `{FILE_TYPE}` | ファイルのタイプ。 次のファイルタイプがサポートされています。<ul><li>区切り</code>:区切り文字の値。 DSV ファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScript のオブジェクト表記法。 JSON ファイルは XDM に準拠している必要があります</li><li>PARQUET</code>:Apache Parquet。 Parquet ファイルは XDM に準拠している必要があります。</li></ul> |
+| `{FILE_TYPE}` | ファイルのタイプ。 次のファイルタイプがサポートされています。<ul><li><code>区切り</code>：区切り文字で区切られた値。 DSV ファイルはコンマで区切る必要があります。</li><li><code>JSON</code>:JavaScript オブジェクト表記。 JSON ファイルは XDM に準拠している必要があります</li><li><code>PARQUET</code>:Apache Parquet。 Parquet ファイルは XDM に準拠している必要があります。</li></ul> |
 | `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、 [クエリパラメーター](#query) を参照してください。 |
 
 **リクエスト**
@@ -158,14 +158,14 @@ curl -X GET \
 
 ## クエリパラメーターの使用 {#query}
 
-この [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) では、様々なファイルタイプのプレビューと検査をおこなうためのクエリパラメーターの使用をサポートしています。
+The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) では、様々なファイルタイプのプレビューと検査をおこなうためのクエリパラメーターの使用をサポートしています。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `columnDelimiter` | CSV または TSV ファイルを検査する列区切り文字として指定した 1 文字の値。 パラメーターを指定しない場合、値はデフォルトでコンマになります `(,)`. |
 | `compressionType` | 圧縮された区切りファイルまたは JSON ファイルをプレビューするための必須クエリパラメーター。 サポートされる圧縮ファイルは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | プレビューのレンダリング時に使用するエンコーディングの種類を定義します。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**:この `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
+| `encoding` | プレビューのレンダリング時に使用するエンコーディングの種類を定義します。 サポートされるエンコーディングの種類は次のとおりです。 `UTF-8` および `ISO-8859-1`. **注意**: `encoding` パラメーターは、区切られた CSV ファイルを取り込む場合にのみ使用できます。 その他のファイルタイプは、デフォルトのエンコーディングで取り込まれ、 `UTF-8`. |
 
 ## 次の手順
 
-このチュートリアルに従って、クラウドストレージシステムを調べ、に取り込むファイルのパスを見つけました [!DNL Platform]をクリックし、その構造を確認しました。 次のチュートリアルでこの情報を使用して、 [クラウドストレージからデータを収集し、Platform に取り込む](../collect/cloud-storage.md).
+このチュートリアルに従って、クラウドストレージシステムを調べ、に取り込むファイルのパスを見つけました。 [!DNL Platform]をクリックし、その構造を確認しました。 次のチュートリアルでこの情報を使用して、 [クラウドストレージからデータを収集し、Platform に取り込む](../collect/cloud-storage.md).
