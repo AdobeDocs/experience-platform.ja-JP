@@ -1,8 +1,8 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先サーバーを作成するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の作成
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: ht
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 100%
 
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | 文字列 | 宛先接続の名前。 |
 | `destinationServerType` | 文字列 | この値は、宛先プラットフォームに応じて設定します。[!DNL SFTP] の宛先の場合、これを `FILE_BASED_SFTP` に設定します。 |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `fileBasedSftpDestination.rootDirectory.value` | 文字列 | 宛先ストレージのルートディレクトリ。 |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `fileBasedSftpDestination.hostName.value` | 文字列 | 宛先ストレージのホスト名。 |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
+| `fileBasedSFTPDestination.rootDirectory.value` | 文字列 | 宛先ストレージのルートディレクトリ。 |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
+| `fileBasedSFTPDestination.hostName.value` | 文字列 | 宛先ストレージのホスト名。 |
 | `port` | 整数 | SFTP ファイルサーバーのポート。 |
 | `encryptionMode` | 文字列 | ファイルの暗号化を使用するかどうかを示します。サポートされている値： <ul><li>PGP</li><li>なし</li></ul> |
 | `fileConfigurations` | なし | これらの設定の設定方法について詳しくは、[ファイル形式設定](../../functionality/destination-server/file-formatting.md)を参照してください。 |
