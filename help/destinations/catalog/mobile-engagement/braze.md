@@ -3,10 +3,10 @@ keywords: モバイル；ブレーズ；メッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 37%
+source-wordcount: '1096'
+ht-degree: 35%
 
 ---
 
@@ -163,6 +163,14 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスには、�
 ## 書き出したデータ {#exported-data}
 
 データがに正常に [!DNL Braze] の宛先に書き出されたかどうかを確認するには、[!DNL Braze] アカウントを確認します。 [!DNL Adobe Experience Platform] オーディエンスは次の場所に書き出されます： [!DNL Braze] の下に `AdobeExperiencePlatformSegments` 属性。
+
+## トラブルシューティング {#troubleshooting}
+
+**この宛先に対するオーディエンスをアクティブ化中にタイムアウトエラーが発生しました。 どうすればよいですか？**
+
+この宛先に対するオーディエンスのアクティベーションにより、タイムアウトエラーが発生する場合があります。 このエラーは、アクティベーションの問題を示していませんでした。
+
+タイムアウトエラーが発生した場合は、宛先プラットフォームでオーディエンスのサイズを確認します。 オーディエンスのサイズが正しい場合は、統合が期待どおりに動作します。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
