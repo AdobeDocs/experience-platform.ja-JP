@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドのガイドを提供します
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 27%
+source-wordcount: '1748'
+ht-degree: 26%
 
 ---
 
@@ -255,3 +255,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 ロール、スキーマフィールド、セグメントへのラベルの適用が完了している。 これらの役割に割り当てられた外部エージェントでは、スキーマ、データセット、プロファイル表示で、これらのラベルとその値の表示が制限されます。 また、セグメントビルダーを使用する際、これらのフィールドは、セグメント定義で使用できません。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](./overview.md)を参照してください。
+
+次のビデオは、属性ベースのアクセス制御に関する理解を深め、役割、リソース、ポリシーの設定方法の概要を説明しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
