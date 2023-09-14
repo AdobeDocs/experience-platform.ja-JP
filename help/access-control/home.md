@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
-workflow-type: ht
-source-wordcount: '1567'
-ht-degree: 100%
+source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+workflow-type: tm+mt
+source-wordcount: '1678'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,11 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの管理] | 結合ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの表示] | 使用可能な結合ポリシーへの読み取り専用アクセス。 |
 | [!DNL Profile Management] | [!UICONTROL セグメントのオーディエンスの書き出し] | 評価済みのデータセットセグメントをオーディエンスセットに書き出す機能 |
-| [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
+| [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成できます。 |
+| [!DNL Profile Management] | [!UICONTROL B2B AI を表示] | すべての B2B AI/ML サービスの設定と設定への読み取り専用アクセス |
+| [!DNL Profile Management] | [!UICONTROL B2B AI を管理] | すべての B2B AI/ML サービスの設定と設定の読み取り、作成、編集、削除へのアクセス |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルを表示] | B2B エンティティプロファイル（アカウント、商談など）、すべての B2B AI/ML サービスの設定と設定、および B2B ダッシュボードウィジェットへの読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルを管理] | B2B エンティティプロファイル（アカウント、商談など）への読み取り、作成、編集、削除アクセス すべての B2B AI/ML サービスおよび B2B ダッシュボードウィジェットの設定と設定に対する読み取り専用アクセス。 |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
 | [!DNL Identity Management] | [!UICONTROL ID グラフの表示] | ID グラフへの読み取り専用アクセス |
