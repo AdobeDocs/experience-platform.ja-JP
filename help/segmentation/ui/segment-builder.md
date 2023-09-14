@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '3338'
-ht-degree: 100%
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
+workflow-type: tm+mt
+source-wordcount: '3354'
+ht-degree: 99%
 
 ---
 
@@ -98,6 +98,10 @@ ht-degree: 100%
 | 複数のレポートスイート | 汎用変数には、フレンドリ名記述子は含まれません。<br><br>**例：** eVar2 | <ul><li>複数の記述子を持つフィールドは、すべて汎用として表示されます。つまり、UI にフレンドリ名は表示されません。</li><li>クエリでは、eVar を含む任意のデータセットのデータを使用できます。これにより、結果が混在したり、不正確になったりする可能性があります。</li></ul> | クエリでは、複数のデータセットから正しく結合された結果を使用します。 |
 
 ### オーディエンス
+
+>[!NOTE]
+>
+>Platform 内で作成されたオーディエンスの場合、 **同じ** 結合ポリシーが表示されます。
 
 「**[!UICONTROL オーディエンス]**」タブには、Adobe Audience Manager などの外部ソースから読み込まれたすべてのオーディエンスと、[!DNL Experience Platform] 内で作成されたオーディエンスが表示されます。
 
