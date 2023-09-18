@@ -1,15 +1,15 @@
 ---
-title: Adobe Advertising Cloud DSP接続
+title: Adobe Advertising Cloud DSP Connection
 description: Adobe Advertising Cloud DSPはAdobe Real-time Customer Data Platformの統合された宛先で、認証済みのファーストパーティオーディエンスを承認済みの広告主やユーザーと共有して、キャンペーンをアクティブ化できます。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 26%
+source-wordcount: '1083'
+ht-degree: 28%
 
 ---
 
-# Adobe Advertising Cloud DSP接続
+# Adobe Advertising Cloud DSP Connection
 
 ## 概要 {#overview}
 
@@ -34,7 +34,7 @@ DSPアカウントを持つメディアエージェンシーは、接客業の�
 ## 前提条件 {#prerequisites}
 
 * DSPのアカウントレベルとキャンペーンレベルの設定で、 [!DNL LiveRamp RampID]（顧客データをに変換します） [!DNL RampIDs] をクリックして、ターゲット設定可能なセグメントを作成します。 この設定は、DSPアカウントチームが実行します。 [!DNL RampID] は、DSPと [!DNL LiveRamp]お客様独自の [!DNL LiveRamp] 使用するメンバーシップ。
-* Experience CloudアカウントのExperience Platform組織 ID。 ID は、 [!DNL Real-Time CDP] ユーザープロファイルページ
+* Experience CloudアカウントのExperience Platform組織 ID。 ID は、 [!DNL Real-Time CDP] ユーザープロファイルページ。
 * A [[!DNL Real-Time CDP] DSP内のソース](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) :campaign のアクティベーション用のオーディエンスを受け取る。 DSPアカウントチームは、組織 ID を使用してExperience Cloudを作成します。
 * DSPアカウントまたは広告主のソースキー。 [[!DNL Real-Time CDP] ソースがDSPで作成されました](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). DSPアカウントチームがこのキーを共有します。 Experience Platform内で使用して、Advertising Cloud DSPの宛先への宛先接続を作成します。 [以下に説明する](#authenticate).
 * 電子メールまたはハッシュ化された電子メールで構成される顧客データ。
@@ -56,7 +56,7 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Advertising Cloud DSPの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 [ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -64,15 +64,15 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions) Experience Platform [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions) Experience Platform。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先に接続するには、次の手順に従います： [宛先接続の作成](/help/destinations/ui/connect-destination.md) を使用します。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に接続するには、 [!UICONTROL 接続タイプ] セクションで、 **[!UICONTROL 宛先に接続]**.:
+宛先に接続するには、 [!UICONTROL 接続タイプ] 」セクションで、 **[!UICONTROL 宛先に接続]**.:
 
-* **[!UICONTROL アカウントまたは広告主キー]**:この [!UICONTROL ソースキー] が [[!DNL Real-Time CDP] ソースはDSPユーザーインターフェイスで作成されます。](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). ソースを作成した後、DSPアカウントチームがこのキーを共有します。
+* **[!UICONTROL アカウントまたは広告主キー]**：これ [!UICONTROL ソースキー] は、 [[!DNL Real-Time CDP] ソースはDSPユーザーインターフェイスで作成されます。](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). ソースを作成した後、DSPアカウントチームがこのキーを共有します。
 
 ![接続タイプフィールド](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -89,15 +89,16 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
-読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。
+この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
@@ -105,7 +106,7 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 * のデータフロー [!DNL Real-Time CDP] の宛先が正常に作成されました。
 
-* DSPでは、オーディエンスは、 [!UICONTROL オーディエンス] > [!UICONTROL すべてのオーディエンス] または、 [!UICONTROL オーディエンスのターゲティング] 配置設定のセクション。 オーディエンスは、 [!UICONTROL Adobeセグメント] タブを [!UICONTROL Real-Time CDP] フォルダー。
+* DSPでは、オーディエンスは、 [!UICONTROL オーディエンス] > [!UICONTROL すべてのオーディエンス] または内から [!UICONTROL オーディエンスのターゲティング] 配置設定のセクション。 オーディエンスは、 [!UICONTROL Adobeセグメント] 」タブをクリックします。 [!UICONTROL Real-Time CDP] フォルダー。
 
 ![DSPオーディエンス設定のReal-Time CDPオーディエンス](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 

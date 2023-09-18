@@ -4,10 +4,10 @@ title: ストリーミング先へのオーディエンスデータのアクテ�
 type: Tutorial
 description: ストリーミングの宛先にマッピングして、Adobe Experience Platformでオーディエンスをアクティブ化する方法を説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 25%
+source-wordcount: '1065'
+ht-degree: 24%
 
 ---
 
@@ -16,8 +16,9 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 > 
-> * オーディエンスをアクティブ化して [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
-> * を経由せずにオーディエンスをアクティブ化するには [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * オーディエンスをアクティブ化して [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * を経由せずにオーディエンスをアクティブ化するには [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
@@ -37,7 +38,7 @@ ht-degree: 25%
 
 1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
 
-   ![ボタンの有効化](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![ボタンを有効化](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -51,8 +52,8 @@ ht-degree: 25%
 
 オリジンに応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL セグメント化サービス]**:セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
 * 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
 ![オーディエンスを選択](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -65,7 +66,7 @@ ht-degree: 25%
 
 一部のオーディエンスストリーミングの宛先では、宛先のターゲット ID としてマッピングするために、ソース属性または ID 名前空間を選択する必要があります。
 
-1. 内 **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
+1. Adobe Analytics の **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
 
    ![新しいマッピングを追加](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
@@ -73,7 +74,7 @@ ht-degree: 25%
 
    ![ソースフィールドを選択](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
-1. 内 **[!UICONTROL ソースフィールドを選択]** ページで、 **[!UICONTROL 属性を選択]** または **[!UICONTROL ID 名前空間を選択]** 使用可能なソースフィールドの 2 つのカテゴリを切り替えるためのオプション。 使用可能な [!DNL XDM] プロファイル属性と id 名前空間で、宛先にマッピングする名前空間を選択し、「 」を選択します **[!UICONTROL 選択]**.
+1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ページでは、 **[!UICONTROL 属性を選択]** または **[!UICONTROL ID 名前空間を選択]** 使用可能なソースフィールドの 2 つのカテゴリを切り替えるためのオプション。 使用可能な [!DNL XDM] プロファイル属性と id 名前空間で、宛先にマッピングする名前空間を選択し、「 」を選択します。 **[!UICONTROL 選択]**.
 
    ![ソースフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
@@ -81,7 +82,7 @@ ht-degree: 25%
 
    ![ターゲットフィールドを選択](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
-1. 内 **[!UICONTROL ターゲットフィールドを選択]** ページで、ソースフィールドをマッピングするターゲット id 名前空間を選択し、「 」を選択します。 **[!UICONTROL 選択]**.
+1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ページで、ソースフィールドをマッピングするターゲット id 名前空間を選択し、「 」を選択します。 **[!UICONTROL 選択]**.
 
    ![ターゲットフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
@@ -111,7 +112,7 @@ ht-degree: 25%
 
 ![すべてのオーディエンス](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-1. の **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
+1. 次の日： **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
 
    ![オーディエンススケジュール](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
@@ -127,7 +128,7 @@ ht-degree: 25%
 
      ![アプリ ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
-1. 選択 **[!UICONTROL 次へ]** 行く [!UICONTROL レビュー] ページ。
+1. 選択 **[!UICONTROL 次へ]** に行く [!UICONTROL レビュー] ページに貼り付けます。
 
 ## レビュー {#review}
 
@@ -137,11 +138,11 @@ ht-degree: 25%
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳細 [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。お読みください [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-内 **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）。
+Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 

@@ -3,10 +3,10 @@ title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 19%
+source-wordcount: '1150'
+ht-degree: 22%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 19%
 >* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。
 >* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。
 >
->現在、Experience Platformの両方の宛先はベータ版です。 この宛先コネクタとドキュメントページは、 *[!DNL Trade Desk]* チーム。 お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
+>現在、Experience Platformの両方の宛先はベータ版です。 この宛先コネクタとドキュメントページは、*[!DNL Trade Desk]* チームによって作成および管理されています。お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
 
 ## 概要 {#overview}
 
@@ -97,7 +97,12 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 Experience Platform [データガバナンスの概要](/help/data-governance/policies/overview.md) を参照してください。
 
-## この宛先に対するオーディエンスをアクティブ化 {#activate}
+## この宛先に対してオーディエンスをアクティブ化 {#activate}
+
+>[!IMPORTANT]
+> 
+>* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) 宛先に対するオーディエンスのアクティブ化の手順については、を参照してください。
 

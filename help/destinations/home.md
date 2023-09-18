@@ -1,12 +1,11 @@
 ---
-keywords: 宛先;Adobe Experience Platform;Platform;宛先の概要;データのアクティブ化;アクティブ化;
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
-workflow-type: ht
-source-wordcount: '925'
-ht-degree: 100%
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+workflow-type: tm+mt
+source-wordcount: '956'
+ht-degree: 96%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 100%
 
 ![宛先の概要バナー](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+**[!DNL Destinations]** は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -64,6 +63,7 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 | **[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の管理]**[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 | **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を有効にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
 | **[!UICONTROL 宛先の管理]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの[マッピングステップ](ui/activate-batch-profile-destinations.md#mapping)を非表示にするには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**&#x200B;の各[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。 |
+| **[!UICONTROL ID グラフの表示]** | 書き出す *id* 宛先に対して、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

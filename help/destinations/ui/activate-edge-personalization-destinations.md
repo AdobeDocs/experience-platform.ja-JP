@@ -1,17 +1,17 @@
 ---
-title: エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化
+title: エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する
 description: 同じページおよび次のページのパーソナライゼーションのユースケースで、Adobe Experience Platformからエッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 19%
+source-wordcount: '1869'
+ht-degree: 20%
 
 ---
 
 
-# エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化
+# エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する
 
 ## 概要 {#overview}
 
@@ -25,12 +25,13 @@ Adobe Experience Platform使用 [エッジセグメント化](../../segmentation
 
 >[!IMPORTANT]
 > 
-> * データをアクティブ化して [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
-> * を経由せずにデータをアクティブ化するには [マッピング手順](#mapping) ワークフローの **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * データをアクティブ化し、 [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * を経由せずにデータをアクティブ化するには [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の管理]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 > 
-> [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+> [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この記事では、Adobe Experience Platform Edge の宛先でオーディエンスをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) オプション [プロファイル属性マッピング](#mapping)を使用すると、これらの宛先によって、Web およびモバイルプロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
+この記事では、Adobe Experience Platform Edge の宛先でオーディエンスをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) オプションの [プロファイル属性マッピング](#mapping)を使用すると、これらの宛先によって、Web およびモバイルプロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
 
 Edge パーソナライゼーション用のAdobe Target接続の設定方法の概要については、以下のビデオをご覧ください。
 
@@ -50,7 +51,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 以下に説明する使用例には、サイトのパーソナライゼーションとターゲット化されたオンサイト広告の両方が含まれます。
 
-これらのユースケースを有効にするには、Experience Platformからオーディエンスとプロファイル属性の情報をすばやく効率的に取得し、その情報を [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 接続を使用します。
+これらのユースケースを有効にするには、Experience Platformからオーディエンスとプロファイル属性の情報をすばやく合理化された方法で取得し、その情報を [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 接続を使用して、Experience PlatformUI に接続します。
 
 ### 同じページのパーソナライズ機能 {#same-page}
 
@@ -84,17 +85,17 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ### の作成 [!DNL Active-On-Edge] 結合ポリシー {#create-merge-policy}
 
-宛先接続を作成したら、[!DNL Active-On-Edge] 結合ポリシーを作成する必要があります。この [!DNL Active-On-Edge] 結合ポリシーにより、オーディエンスが常に評価されます [端に](../../segmentation/ui/edge-segmentation.md) とは、リアルタイムで次のページにパーソナライゼーションの使用例に使用できます。
+宛先接続を作成したら、[!DNL Active-On-Edge] 結合ポリシーを作成する必要があります。The [!DNL Active-On-Edge] 結合ポリシーにより、オーディエンスが常に評価されます。 [端に](../../segmentation/ui/edge-segmentation.md) とは、リアルタイムで次のページにパーソナライゼーションの使用例に使用できます。
 
 >[!IMPORTANT]
 >
->現在、エッジの宛先は、 [エッジ上のアクティブな結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies) をデフォルトとして設定します。 異なる結合ポリシーを使用するオーディエンスをエッジの宛先にマッピングした場合、それらのオーディエンスは評価されません。
+>現在、エッジの宛先は、 [エッジ上でのアクティブな結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies) をデフォルトとして設定します。 異なる結合ポリシーを使用するオーディエンスをエッジの宛先にマッピングした場合、それらのオーディエンスは評価されません。
 
 [結合ポリシーの作成](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
 
 ### Platform での新しいオーディエンスの作成 {#create-audience}
 
-次の [!DNL Active-On-Edge] 結合ポリシーの場合、Platform で新しいオーディエンスを作成する必要があります。
+作成後、 [!DNL Active-On-Edge] 結合ポリシーの場合、Platform で新しいオーディエンスを作成する必要があります。
 
 フォロー： [audience builder](../../segmentation/ui/segment-builder.md) 新しいオーディエンスを作成するためのガイドを参照し、必ず [割り当てる](../../segmentation/ui/segment-builder.md#merge-policies) の [!DNL Active-On-Edge] 手順 3 で作成した結合ポリシーです。
 
@@ -119,7 +120,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化するパーソナライゼーションの宛先に対応するカード（下図を参照）。
 
-   ![ボタンの有効化](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![ボタンを有効化](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
@@ -135,8 +136,8 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 オリジンに応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL セグメント化サービス]**:セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
 * 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
 ![オーディエンスを選択](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -145,7 +146,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 >[!IMPORTANT]
 >
-> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する際に使用します。 すべてのサーバー API 呼び出しは、 [認証コンテキスト](../../server-api/authentication.md).
+> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する際に使用します。 すべてのサーバー API 呼び出しは、 [認証済みコンテキスト](../../server-api/authentication.md).
 >
 ><br>既に統合に Web SDK または Mobile SDK を使用している場合は、サーバー側の統合を追加して、Server API を介して属性を取得できます。
 >
@@ -159,13 +160,13 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ### ソース属性を選択 {#select-source-attributes}
 
-ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する支配 **[!UICONTROL ソースフィールド]** 列を検索し、以下に示すように、目的の XDM 属性フィールドに移動します。
+ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する制御 **[!UICONTROL ソースフィールド]** 列を検索し、以下に示すように、目的の XDM 属性フィールドに移動します。
 
 ![マッピング手順でターゲット属性を選択する方法を示す画面記録](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### ターゲット属性を選択 {#select-target-attributes}
 
-ターゲット属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する支配 **[!UICONTROL ターゲットフィールド]** 列を開き、ソース属性をマッピングするカスタム属性名を入力します。
+ターゲット属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する制御 **[!UICONTROL ターゲットフィールド]** 列を開き、ソース属性をマッピングするカスタム属性名を入力します。
 
 >[!NOTE]
 >
@@ -181,11 +182,11 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ![すべてのオーディエンス](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-の **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
+次の日： **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
 
 ![オーディエンススケジュール](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-選択 **[!UICONTROL 次へ]** 行く [!UICONTROL レビュー] ページ。
+選択 **[!UICONTROL 次へ]** に行く [!UICONTROL レビュー] ページに貼り付けます。
 
 ## レビュー {#review}
 
@@ -195,11 +196,11 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳細 [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。お読みください [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-内 **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシー違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）。
+Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
