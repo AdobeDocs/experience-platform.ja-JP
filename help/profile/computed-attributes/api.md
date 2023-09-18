@@ -1,27 +1,25 @@
 ---
 title: 計算済み属性 API エンドポイント
 description: リアルタイム顧客プロファイル API を使用して、計算済み属性を作成、表示、更新および削除する方法について説明します。
-badge: 「ベータ版」
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 13%
+source-wordcount: '1654'
+ht-degree: 12%
 
 ---
+
 
 # 計算済み属性 API エンドポイント
 
 >[!IMPORTANT]
 >
->計算済み属性機能は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
->
->また、API へのアクセスは制限されます。 計算済み属性 API へのアクセス方法については、Adobeサポートにお問い合わせください。
+>API へのアクセスは制限されています。 計算済み属性 API へのアクセス方法については、Adobeサポートにお問い合わせください。
 
 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドには、 `/attributes` endpoint.
 
 計算済み属性の詳細については、まず [計算済み属性の概要](overview.md).
 
-## Destination SDK の
+## はじめに
 
 このガイドで使用される API エンドポイントは、 [リアルタイム顧客プロファイル API](https://www.adobe.com/go/profile-apis-en).
 
@@ -30,7 +28,7 @@ ht-degree: 13%
 さらに、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
-   - [スキーマレジストリ入門ガイド](../../xdm/api/getting-started.md#know-your-tenant_id):次に関する情報： `{TENANT_ID}`は、このガイド全体での応答として表示されます。
+   - [スキーマレジストリ入門ガイド](../../xdm/api/getting-started.md#know-your-tenant_id): `{TENANT_ID}`は、このガイド全体での応答として表示されます。
 
 ## 計算済み属性のリストの取得 {#list}
 
@@ -52,7 +50,7 @@ GET /attributes?{QUERY_PARAMETERS}
 | `limit` | 応答の一部として返される項目の最大数を指定するパラメーター。 このパラメーターの最小値は 1 で、最大値は 40 です。 このパラメーターを含めない場合、デフォルトでは 20 個の項目が返されます。 | `limit=20` |
 | `offset` | 項目を返す前にスキップする項目の数を指定するパラメーター。 | `offset=5` |
 | `sortBy` | 返された項目の並べ替え順序を指定するパラメーター。 次のオプションを使用できます。 `name`, `status`, `updateEpoch`、および `createEpoch`. 昇順と降順のどちらで並べ替えるかを、 `-` をクリックします。 デフォルトでは、項目は次の順に並べ替えられます。 `updateEpoch` 降順で並べ替えます。 | `sortBy=name` |
-| `status` | 計算済み属性のステータスでフィルタリングできるパラメーター。 次のオプションを使用できます。 `draft`, `new`, `processing`, `processed`, `failed`, `disabled`、および `initializing`. このオプションでは、大文字と小文字が区別されません。 | `status=draft` |
+| `property` | 様々な計算済み属性フィールドに対してフィルター処理をおこなうためのパラメーター。 次のプロパティがサポートされています。 `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`、および `status`. サポートされる操作は、一覧に表示されるプロパティによって異なります。 <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (!=次を含む())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **リクエスト**
 
@@ -107,19 +105,24 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -252,9 +264,9 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | 式のタイプ。 現在、PQL のみがサポートされています。 |
 | `expression.format` | 式の形式。 現在は、`pql/text` のみがサポートされています。 |
 | `expression.value` | 式の値。 |
-| `keepCurrent` | 計算済み属性の値を最新の状態に保つかどうかを決定するブール値です。 現在、この値は `false`. |
-| `duration` | 計算済み属性のルックバック期間を表すオブジェクト。 ルックバック期間は、計算済み属性を計算するために遡って参照できる範囲を表します。 |
-| `duration.count` | ルックバック期間の期間を表す数値。 可能な値は、 `duration.unit` フィールドに入力します。 <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `keepCurrent` | 計算済み属性の値を、高速更新を使用して最新の状態に保つかどうかを決定するブール値です。 現在、この値は `false`. |
+| `duration` | 計算済み属性のルックバック期間を表すオブジェクト。 ルックバック期間は、計算済み属性を計算するために遡って参照できる距離を表します。 |
+| `duration.count` | ルックバック期間の期間を表す数値。 指定可能な値は、 `duration.unit` フィールドに入力します。 <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | ルックバック期間に使用される時間の単位を表す string。 次の値を指定できます。 `HOURS`, `DAYS`, `WEEKS`、および `MONTHS`. |
 | `status` | 計算済み属性のステータス。 以下の値を指定できます。 `DRAFT` および `NEW`. |
 
@@ -294,6 +306,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 | -------- | ----------- |
 | `id` | 他の API 操作中に計算済み属性を参照するために使用できる、システムで生成された一意の読み取り専用 ID が含まれます。 |
 | `type` | 返されるオブジェクトが計算済み属性であることを示す文字列。 |
+| `name` | 計算済み属性の名前。 |
+| `displayName` | 計算済み属性の表示名。 これは、Adobe Experience Platform UI 内に計算済み属性をリストする際に表示される名前です。 |
+| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
 | `imsOrgId` | 計算済み属性が属する組織の ID。 |
 | `sandbox` | サンドボックスオブジェクトには、計算済み属性が設定されたサンドボックスの詳細が含まれます。この情報は、リクエストで送信されるサンドボックスヘッダーから取得されます。詳しくは、[サンドボックスの概要](../../sandboxes/home.md)を参照してください。 |
-| `path` | この `path` を計算済み属性に追加します。 |
+| `path` | The `path` を計算済み属性に追加します。 |
+| `keepCurrent` | 計算済み属性の値を、高速更新を使用して最新の状態に保つかどうかを決定するブール値です。 |
 | `expression` | 計算済み属性の式を含むオブジェクト。 |
-| `mergeFunction` | 計算済み属性の結合関数を含むオブジェクト。 この値は、計算済み属性の式内の対応する集計パラメーターに基づきます。 |
+| `mergeFunction` | 計算済み属性の結合関数を含むオブジェクト。 この値は、計算済み属性の式内の対応する集計パラメーターに基づきます。 以下の値を指定できます。 `SUM`, `MIN`, `MAX`、および `MOST_RECENT`. |
 | `status` | 計算済み属性のステータス。 次のいずれかの値を指定できます。 `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`または `DISABLED`. |
 | `schema` | 式が評価されるスキーマに関する情報を格納するオブジェクト。 現在は、`_xdm.context.profile` のみがサポートされています。 |
+| `lastEvaluationTs` | 計算済み属性が最後に評価された日時を表すタイムスタンプ。 |
 | `createEpoch` | 計算済み属性が作成された時刻（秒）。 |
 | `updateEpoch` | 計算済み属性が最後に更新された時刻（秒）。 |
 | `createdBy` | 計算済み属性を作成したユーザーの ID。 |
@@ -397,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 
 >[!IMPORTANT]
 >
->削除リクエストは、ステータスが「 **ドラフト** (`DRAFT`) をクリックします。 このエンドポイント **できません** を使用して、他の状態の計算済み属性を削除できます。
+>削除リクエストは、ステータスが「 **下書き** (`DRAFT`) をクリックします。 このエンドポイント **できません** を使用して、他の状態の計算済み属性を削除できます。
 
 **API 形式**
 
@@ -407,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | この `id` 削除する計算済み属性の値。 |
+| `{ATTRIBUTE_ID}` | The `id` 削除する計算済み属性の値。 |
 
 **リクエスト**
 
@@ -457,6 +476,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -473,9 +493,9 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 >
 >計算済み属性を更新する場合、更新できるのは次のフィールドのみです。
 >
->- 現在のステータスが `NEW`の場合、ステータスは `DISABLED`.
+>- 現在のステータスが `NEW`の場合、ステータスは次の値にのみ変更できます： `DISABLED`.
 >- 現在のステータスが `DRAFT`に値を入力すると、次のフィールドの値を変更できます。 `name`, `description`, `keepCurrent`, `expression`、および `duration`. ステータスは、 `DRAFT` から `NEW`. システム生成フィールドに対する変更（例： ） `mergeFunction` または `path` はエラーを返します。
->- 現在のステータスが `PROCESSING` または `PROCESSED`の場合、ステータスは `DISABLED`.
+>- 現在のステータスが `PROCESSING` または `PROCESSED`の場合、ステータスは次の値にのみ変更できます： `DISABLED`.
 
 **API 形式**
 
@@ -485,7 +505,7 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | この `id` 更新する計算済み属性の値。 |
+| `{ATTRIBUTE_ID}` | The `id` 更新する計算済み属性の値。 |
 
 **リクエスト**
 
@@ -548,6 +568,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"
