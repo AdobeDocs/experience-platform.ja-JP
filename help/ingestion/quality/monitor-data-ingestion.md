@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ取得の監視
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 37%
+source-wordcount: '657'
+ht-degree: 36%
 
 ---
 
@@ -24,13 +24,13 @@ ht-degree: 37%
 >title="取り込みレート"
 >abstract="正常に処理された 1 秒間あたりのイベントの数。"
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI でのソースのデータフローの監視"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="UI でのソースのデータフローの監視"
 
 >[!TIP]
 >
 >特定の日付の合計イベント数を計算するには、次の式を使用します。 `total events / day = ingestion rate * 60 * 60 * 24`.
 
-内 [Experience PlatformUI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションメニューで、 **[!UICONTROL エンドツーエンドのストリーミング]**.
+Adobe Analytics の [Experience PlatformUI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションメニューで、 **[!UICONTROL エンドツーエンドのストリーミング]**.
 
 「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、が受信したストリーミングイベントの割合を示すグラフが表示されます。 [!DNL Platform]：で正常に処理されたストリーミングイベントの割合を示すグラフ。 [[!DNL Real-Time Customer Profile]](../../profile/home.md)、および受信データの詳細なリスト。
 
@@ -44,7 +44,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->データをこのグラフに表示するには、次の条件を満たす必要があります。 **明示的に** 有効 [!DNL Profile]. のストリーミングデータを有効にする方法を学ぶには [!DNL Profile]、 [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>データをこのグラフに表示するには、次の条件を満たす必要があります。 **明示的に** 有効： [!DNL Profile]. のストリーミングデータを有効にする方法を学ぶには [!DNL Profile]を読む [データセットユーザーガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -72,7 +72,7 @@ ht-degree: 37%
 
 ## バッチエンドツーエンドデータの取得の監視
 
-内 [[!DNL Experience Platform UI]](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** をクリックします。
+Adobe Analytics の [[!DNL Experience Platform UI]](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** をクリックします。
 
 「**[!UICONTROL バッチエンドツーエンド]**」の監視ページが開き、以前に取得したバッチのリストが表示されます。任意のバッチを選択して、そのレコードに関する詳細情報を表示できます。
 
