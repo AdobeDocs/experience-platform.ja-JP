@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: ユーザーインターフェイスを使用して Campaign で管理されたCloud Servicesを Platform に接続する方法を説明します
+description: ユーザーインターフェイスを使用して Campaign で管理されたCloud Serviceを Platform に接続する方法を説明します
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 11%
+source-wordcount: '757'
+ht-degree: 9%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaig
 >
 >Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールへのアクセス権が必要です。 次にアクセス： [Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) クライアントコンソールをダウンロードしてインストールする方法については、を参照してください。
 
-クライアントコンソールから Campaign v8 インスタンスにログインします。 以下 [!DNL Explorer] タブ、選択 [!DNL Administration] 次に、 [!DNL Configuration]. 次に、 [!DNL Data schemas] 次に、 `broadLog` 名前またはラベルのフィルター。 表示されるリストで、次の名前の受信者配信ログのソーススキーマを選択します。 `broadLogRcp`.
+クライアントコンソールから Campaign v8 インスタンスにログインします。 の下 [!DNL Explorer] タブ、選択 [!DNL Administration] 次に、「 [!DNL Configuration]. 次に、「 [!DNL Data schemas] 次に、 `broadLog` 名前またはラベルのフィルター。 表示されるリストで、次の名前の受信者配信ログのソーススキーマを選択します。 `broadLogRcp`.
 
 ![「エクスプローラー」タブが選択されたAdobe Campaign v8 クライアントコンソール、「管理」、「設定」、「データスキーマ」の各ノードが展開され、フィルタリングが「broad」に設定されます。](./images/campaign/explorer.png)
 
@@ -75,3 +75,9 @@ Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaig
 これで、Campaign クライアントコンソールでデータログにアクセスし、スキーマとデータセットを作成したので、ソース接続を作成して、Campaign Managed Servicesデータを Platform に取り込むことができます。
 
 Campaign v8 の配信ログとトラッキングログデータを Experience Platform に取り込む方法について詳しくは、 [UI での Campaigned Managed Servicesソース接続の作成](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>最近削除された電子メールの受信者と電子メールとのインタラクションによって、個人情報がExperience Platformに再取り込みされる可能性があるエッジケースがあります。 場合によっては、この操作によってそのユーザーに対するマーケティングが再度有効になることがありました。
+>
+>* このシナリオは、Experience Platformでプライバシーリクエストが実行されてからAdobe Campaign Classicで実行されるまでの間にのみアクティブです。 Campaign でリクエストが実行された後に、レコードが Campaign にエクスポートされないことを確認するチェックが表示されます。 この問題を解決するには、72 時間後に GDPR 要求を再発行してください。
