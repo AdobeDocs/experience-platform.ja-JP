@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;統合プロファイル;統合プロファイル;統合;プロファイル;rtcp;XDMグラフ
 title: リアルタイム顧客プロファイルの概要
 description: リアルタイム顧客プロファイルは、様々なソースからのデータを結合し、そのデータへのアクセスを個々の顧客プロファイルおよび関連する時系列イベントの形式で提供します。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: ht
-source-wordcount: '1990'
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+workflow-type: tm+mt
+source-wordcount: '1973'
 ht-degree: 100%
 
 ---

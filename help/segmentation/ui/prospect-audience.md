@@ -2,10 +2,8 @@
 title: 見込み客オーディエンス
 description: 見込み客オーディエンスを作成および使用して、サードパーティ情報を使用して未知の顧客をターゲティングする方法について説明します。
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
-workflow-type: ht
+source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 
