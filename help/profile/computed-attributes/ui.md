@@ -1,15 +1,19 @@
 ---
 title: 計算済み属性 UI ガイド
 description: Adobe Experience Platform UI を使用して計算済み属性を作成、表示および更新する方法について説明します。
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 4%
 
 ---
 
 
 # 計算属性 UI ガイド
+
+>[!NOTE]
+>
+>計算済み属性にアクセスするには、適切な権限 (**計算済み属性の表示** および **計算済み属性の管理**) をクリックします。 必要な権限の詳細については、 [アクセス制御ドキュメント](../../access-control/home.md). これらの権限の適用方法については、 [権限の管理ガイド](../../access-control/ui/permissions.md).
 
 Adobe Experience Platformでは、計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。
 
