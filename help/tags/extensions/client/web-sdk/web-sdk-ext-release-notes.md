@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1758'
 ht-degree: 96%
 
 ---
@@ -26,15 +26,15 @@ ht-degree: 96%
 
 * 保存済みデータストリーム上書き設定の検証を改善しました。
 
-## バージョン2.20.0 - 2023 年 7 月 31 日
+## バージョン 2.20.0 - 2023年7月31日（PT）
 
 **新機能**
 
-* のサポートを追加しました。 [datastream ID のコマンドごとの上書き](../../../../datastreams/overrides.md).
+* ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
-* 非推奨 `edgeConfigId` ～を支持して `datastreamId` （SDK 設定）を参照してください。
+*  SDK 設定では `edgeConfigId` が非推奨となり、`datastreamId` が優先されます。
 * データストリーム設定に関する複数のユーザーエクスペリエンス強化が、ユーザーインターフェイスを上書きします。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）
@@ -145,7 +145,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-* Experience Edge からの追加情報は、`inferences` や `destinations` など、イベント完了を送信イベントで利用できます。これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](../../../../edge/fundamentals/tracking-events.md)を参照してください。
+* Edge ネットワークからの追加情報は、「イベント完了を送信」イベントで使用できます。以下に例を示します。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](../../../../edge/fundamentals/tracking-events.md)を参照してください。
 
 ## バージョン 2.7.3 - 2021年9月7日（PT）
 

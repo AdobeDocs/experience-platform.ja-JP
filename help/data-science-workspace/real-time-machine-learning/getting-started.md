@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リアルタイム機械学習の基本を学ぶ
 description: 次のドキュメントでは、Adobe Experience Platform でリアルタイム機械学習モデルを作成するために必要な手順の概要について説明します。
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 - **DSL：**&#x200B;ドメイン固有の言語。
 - **Edge：**&#x200B;リアルタイム機械学習スコアリングサービスは、アクティベーションとアプリケーションに近い Edge クラスターで実行できます。
-- **Hub：**&#x200B;現在のアルファ版は、Adobe Experience Platform Hub でリアルタイム機械学習スコアリングサービスを実行していますが、Experience Edge Network は開発中です。
+- **Hub：**&#x200B;現在のアルファ版は、Adobe Platform Hub でリアルタイム機械学習スコアリングサービスを実行していますが、Experience Edge Network は開発中です。
 - **ノード：**&#x200B;ノードは、グラフを形成する基本的な単位です。各ノードでは特定のタスクを実行し、リンクを使用してノードを連結して、ML パイプラインを表すグラフを構成できます。 ノードで実行されるタスクは、入力データに対する操作（データやスキーマの変換など）や機械学習の推論を表します。 ノードは、変換された値や推論された値を次のノード（複数の場合あり）に出力します。
 
 ## Adobe Experience Platform のデータセット

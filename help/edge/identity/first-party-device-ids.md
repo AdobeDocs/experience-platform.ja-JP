@@ -2,9 +2,9 @@
 title: Platform Web SDK のファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用のファーストパーティデバイス ID(FPID) の設定方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1774'
 ht-degree: 2%
 
 ---
@@ -25,17 +25,17 @@ Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https
 
 ## FPID の使用
 
-FPID は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS を利用するサーバーを使用して設定される場合に最も効果的です [レコード](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAA レコード](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）。DNS CNAME または JavaScript コードとは異なります。
+FPID は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS を利用するサーバーを使用して設定される場合に最も効果的です。 [レコード](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAA レコード](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）。DNS CNAME または JavaScript コードとは異なります。
 
 >[!IMPORTANT]
 >
 >レコードまたは AAAA レコードは、Cookie の設定とトラッキングに対してのみサポートされます。 データ収集の主な方法は、DNS CNAME を使用する方法です。 つまり、FPID は A レコードまたは AAAA レコードを使用して設定され、CNAME を使用してAdobeに送信されます。
 >
->この [Adobe管理証明書プログラム](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でも引き続きサポートされます。
+>The [Adobe管理証明書プログラム](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でも引き続きサポートされます。
 
 FPID Cookie が設定されると、その値を取得し、イベントデータの収集時にAdobeに送信できます。 収集された FPID は、ECID を生成するシードとして使用されます。ECID は、引き続きAdobe Experience Cloudアプリケーションの主な識別子です。
 
-Web サイト訪問者の FPID を Platform Edge Network に送信するには、 `identityMap` を選択します。 このドキュメントの後半の節を参照 [での FPID の使用 `identityMap`](#identityMap) を参照してください。
+Web サイト訪問者の FPID を Platform Edge Network に送信するには、 `identityMap` を選択します。 このドキュメントの後半の節を参照してください。 [での FPID の使用 `identityMap`](#identityMap) を参照してください。
 
 ### ID 形式の要件
 
@@ -90,13 +90,13 @@ Platform Edge Network に FPID Cookie の値を読み取らせる場合は、 `H
 
 ### `Secure` {#secure}
 
-Cookie が `Secure` 属性は、暗号化されたリクエストで HTTPS プロトコル経由でのみサーバーに送信されます。 このフラグを使用すると、中間者の攻撃者が容易に cookie の値にアクセスできないようにすることができます。 可能な場合は、 `Secure` フラグ。
+Cookie の設定に基づいて、 `Secure` 属性は、暗号化されたリクエストで HTTPS プロトコル経由でのみサーバーに送信されます。 このフラグを使用すると、中間者の攻撃者が容易に cookie の値にアクセスできないようにすることができます。 可能な場合は、 `Secure` フラグ。
 
 ### `SameSite` {#same-site}
 
-この `SameSite` 属性を使用すると、サーバーは、クロスサイトリクエストで cookie を送信するかどうかを決定できます。 属性は、クロスサイトフォージェリ攻撃に対する保護を提供します。 次の 3 つの値が使用可能です。 `Strict`, `Lax` および `None`. お客様の組織に適した設定を判断するには、社内チームにお問い合わせください。
+The `SameSite` 属性を使用すると、サーバーは、クロスサイトリクエストで cookie を送信するかどうかを決定できます。 属性は、クロスサイトフォージェリ攻撃に対する保護を提供します。 次の 3 つの値が使用可能です。 `Strict`, `Lax` および `None`. お客様の組織に適した設定を判断するには、社内チームにお問い合わせください。
 
-指定しない場合 `SameSite` 属性が指定されている場合、一部のブラウザーのデフォルト設定がになりました。 `SameSite=Lax`.
+いいえの場合 `SameSite` 属性が指定されている場合、一部のブラウザーのデフォルト設定がになりました。 `SameSite=Lax`.
 
 ## での FPID の使用 `identityMap` {#identityMap}
 
@@ -155,7 +155,7 @@ Cookie が `Secure` 属性は、暗号化されたリクエストで HTTPS プ�
 }
 ```
 
-以下 `identityMap` Edge ネットワークに `primary` FPID の指標。 最後に、 `identityMap` は、 `primary`.
+次の `identityMap` Edge ネットワークに `primary` FPID の指標。 最後に、に存在する ID の 1 つ `identityMap` は、 `primary`.
 
 ```json
 {
@@ -176,7 +176,7 @@ Cookie が `Secure` 属性は、暗号化されたリクエストで HTTPS プ�
 }
 ```
 
-この場合、Experience Edge から返されるエラー応答は次のようになります。
+この場合、Edge ネットワークから返されるエラー応答は次のようになります。
 
 ```json
 {

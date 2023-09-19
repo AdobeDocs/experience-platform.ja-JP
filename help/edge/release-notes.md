@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
-workflow-type: ht
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -118,7 +118,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 * 単一ページアプリケーションのビュー変更イベントを最適化しました。パーソナライズされたエクスペリエンスがレンダリングされる際に、表示通知がビュー変更イベントに含まれるようになりました。
 * `eventType` が存在しない場合のコンソール警告を削除しました。
 * エクスペリエンスがリクエストされた際、またはキャッシュから取得された際に、`propositions` プロパティが `sendEvent` コマンドからのみ返される問題を修正しました。 `propositions` プロパティは、常に配列として定義されるようになりました。
-* Adobe Experience Edge からエラーが返された場合に、非表示のコンテナが表示されない問題を修正しました。
+* Edge ネットワークからエラーが返された場合に、非表示のコンテナが表示されない問題を修正しました。
 * 操作イベントが Adobe Target でカウントされない問題を修正しました。この問題は、web.webPageDetails.viewName でビュー名を XDM に追加することで修正しました。
 * コンソールメッセージのドキュメントのリンク切れを修正します。
 
@@ -130,7 +130,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.7.0 - 2021年10月26日（PT）
 
-* `inferences` や `destinations` など、Experience Edge からの追加情報を `sendEvent` からの戻り値で公開します。これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](fundamentals/tracking-events.md)を参照してください。
+* からの戻り値に Edge ネットワークからの追加情報を公開します。 `sendEvent`を含む `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](fundamentals/tracking-events.md)を参照してください。
 
 ## バージョン 2.6.4 - 2021年9月7日（PT）
 

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 3%
@@ -62,17 +62,17 @@ Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに
 
 **パフォーマンス：** Web SDK は、現在のすべてのライブラリを使用するよりも小さく、Adobe読み込みが大幅に高速です。
 
-**シンプル：** XDM、Web SDK、タグ、Experience Edge、Adobe Experience Cloudソリューション、Adobe Experience Platformを組み合わせることで、わかりやすく、簡単に追跡できるデータ収集の仕組みを作成できます。
+**シンプル：** XDM、Web SDK、タグ、Edge Network、Adobe Experience Cloudソリューション、Adobe Experience Platformを組み合わせることで、わかりやすく、簡単に追跡できるデータ収集の仕組みを作成できます。
 
 * **XDM:** データをAdobeに送信する際に使用する、ソリューションに依存しないスキーマ。 eVar や mbox のタグ付けは不要になりました。
 * **Adobe Experience Platform Web SDK:** Adobe Experience Platform Edge Network へのデータの送受信が簡単になります。
 * **タグ：** サイト上での Web SDK（およびその他の JavaScript タグ）のデプロイと設定を簡素化します。
-* **エクスペリエンスエッジ：** データを必要な形式でAdobe Experience Platformおよびソリューションに簡単にルーティングできます。
+* **Edge ネットワーク：** データを必要な形式でAdobe Experience Platformおよびソリューションに簡単にルーティングできます。
 * **Adobe Experience PlatformとAdobeのソリューション：** 価値提案を有効にします。
 
 **コントロール：** すべてのデータは 1 つの接続されたデータストリームを使用しているので、ジャーニーのミリ秒ごとに、アプリケーションとの間で、データがどのように表示されるかを論理的に追跡し、制御できます。
 
-**現代的で将来に備えたもの：** Web SDK と Experience Edge Network への接続により、Adobeでのデータ収集、パーソナライゼーション、同意およびサードパーティ Cookie の将来に対する処理方法を大幅に最新化するAdobeが可能になりました。 ( ファーストパーティドメインが有効になり、Adobeが管理します )。
+**現代的で将来に備えたもの：** Web SDK と Edge Network への接続により、Adobeでのデータ収集、パーソナライゼーション、同意およびサードパーティ Cookie の将来に対する処理方法を大幅に最新化するAdobeが可能になりました。 ( ファーストパーティドメインが有効になり、Adobeが管理します )。
 
 **値への時間：** Adobeは、タグを介して Web SDK を簡単にデプロイし、クライアント側のデータを XDM にマッピングできるよう、十分に作業を進めてきました（今後も続けます）。 その後、他のすべてのAdobeソリューションおよびAdobe Experience Platformサービスをサーバー側でオンまたはオフにできます。 例えば、Adobe Analyticsでこれを使用し、Target またはExperience Platformをオンにする場合は、Datastream の設定を切り替えて、これらの使用例を明確にできます。
 
@@ -80,7 +80,7 @@ Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに
 
 Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Experience Platform Web SDK は正式な名前ですが、SDK のソースコードおよびファイル名内で使用されます。
 
-## 顧客が [!DNL Web SDK]?
+## お客様が、 [!DNL Web SDK]?
 
 いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 を使用するお客様 [!DNL Web SDK] は、データ収集 UI またはExperience PlatformUI でスキーマ、データセット、ID 名前空間、データストリームを作成するために、適切な権限を設定する必要があります。
 
@@ -105,15 +105,15 @@ Web SDK は、現在、一般ユーザーが利用でき、Adobe Experience Clou
 
 ## Web SDK で現在サポートされている使用例を教えてください。
 
-Web SDK は急速に進化しています。 現在、さらに多くの使用例が対象となっています。 次の [現在サポートされている使用例のリストはこちらです。](https://github.com/adobe/alloy/projects/5)
+Web SDK は急速に進化しています。 現在、さらに多くの使用例が対象となっています。 次の項目が見つかります。 [現在サポートされている使用例のリストはこちらです。](https://github.com/adobe/alloy/projects/5)
 
 ## 現在のお客様はサイトを再タグ付けする必要がありますか。
 
 場合によります。Adobe Experience Platform Web SDK は、2 つの異なるスタイルでデプロイできます。 今後の移行ドキュメントでは、追加の詳細情報が提供されます。
 
-* **別のタグ：** サイトが既にソリューション用にタグ付けされていて、再タグ付けできず、Experience Platformの使用例や今後のイベント転送機能（以下を参照）を目的としてAdobe Experience Platform Edge Network にデータを送信する場合、 `alloy.js` タグをサイトに追加します。このタグは、「単なる別のタグ」として機能します。
+* **別のタグのみ：** サイトが既にソリューション用にタグ付けされていて、再タグ付けできず、Experience Platformの使用例や今後のイベント転送機能（以下を参照）を目的としてAdobe Experience Platform Edge Network にデータを送信する場合、 `alloy.js` タグをサイトに追加します。このタグは、「単なる別のタグ」として機能します。
 
-* **1 つの唯一のタグは、次のようになります。** Experience Cloudソリューションで Web SDK を使用する場合は、 _すべて_ 」という名前に設定します。 例えば、サイトが既にAdobe Analytics用にタグ付けされていて、それを Target で使用する場合は、今後の他のユーザーも同様に使用する必要があります。
+* **1 つの唯一のタグは、次のようになります。** Experience Cloudソリューションで Web SDK を使用する場合は、Web SDK を _すべて_ 」という名前に変更します。 例えば、サイトが既にAdobe Analytics用にタグ付けされていて、それを Target で使用する場合は、今後の他のユーザーも同様に使用する必要があります。
 
 つまり、ソリューション以外の使用例でAdobe Experience Platform Web SDK を使用する場合は、 `alloy.js` 新しい解決策のように進みます。 Adobe Analytics、Target、Audience Manager、またはアプリケーションの使用例で使用する場合は、ページ上の従来のコードを削除する必要が生じる場合があります。
 
@@ -143,7 +143,7 @@ Web SDK は急速に進化しています。 現在、さらに多くの使用�
 
 ## イベント転送とは
 
-アドビの SDK を使用し、Experience Edge に XDM を送信する場合、これらの新機能のイベント転送を使用すると、新しいサーバー側拡張機能をインストールして、そのデータを任意の場所にマッピングし、アドビのエッジネットワークから任意の場所に送信できます。 これは、「データ収集はサービスとして」と考えてください。 これは、コストで利用できるほか、Adobe Experience Platformの一部としてバンドルされます。
+アドビの SDK を使用し、Edge ネットワークに XDM を送信する場合、これらの新機能のイベント転送を使用すると、新しいサーバー側拡張機能をインストールして、そのデータを任意の場所にマッピングし、Edge ネットワークから任意の場所に送信できます。 これは、「データ収集はサービスとして」と考えてください。 これは、コストで利用できるほか、Adobe Experience Platformの一部としてバンドルされます。
 
 ## CNAME またはファーストパーティドメインとは何ですか？また、なぜ重要なのですか？
 
@@ -153,17 +153,17 @@ CNAME について詳しくは、 [Adobe文書](https://experienceleague.adobe.c
 
 はい。現在、Web SDK は、実装に応じて、1 ～ 7 個の Cookie を使用します。 Web SDK で使用される Cookie と、その使用方法の一覧を以下に示します。
 
-| **名前** | **maxAge** | **親しみやすい時代** | **説明** |
+| **名前** | **maxAge** | **親しみやすい年齢** | **説明** |
 |---|---|---|---|
 | **kndct_orgid_identity** | 34128000 | 395 日 | ID Cookie には、ECID と、ECID に関連するその他の情報が格納されます。 |
 | **kndctr_orgid_consent_check** | 7200 | 2 時間 | この cookie は、Web サイトに対するユーザーの同意設定を保存します。 |
 | **kndctr_orgid_consent** | 15552000 | 180 日 | このセッションベースの Cookie は、サーバーが同意設定サーバー側を検索するように通知します。 |
-| **kndctr_orgid_cluster** | 1800 | 30 分 | この Cookie は、現在のユーザーのリクエストを処理する Experience Edge 地域を保存します。 Experience Edge がリクエストを正しい地域にルーティングできるように、地域は、URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
-| **mbox** | 63072000 | 2 年。 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 これにより、Target が許可されます [mbox の Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を Web SDK で設定します。 |
+| **kndctr_orgid_cluster** | 1800 | 30 分 | この cookie は、現在のユーザーのリクエストを処理する Edge ネットワーク地域を保存します。 Edge Network がリクエストを正しい地域にルーティングできるように、地域は URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
+| **mbox** | 63072000 | 2 年。 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 これにより、Target が許可されます。 [mbox の Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を Web SDK で設定します。 |
 | **mboxEdgeCluster** | 1800 | 30 分 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 Web SDK はこの cookie を使用して正しいエッジクラスターを at.js に通信し、ユーザーがサイト内を移動する際に Target プロファイルの同期を維持できます。 |
 | **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この Cookie は、Adobe Experience Platform Web SDK での ID の移行が有効になっている場合にのみ表示されます。 この cookie は、サイトの一部で visitor.js をまだ使用している間に Web SDK に移行する際に役立ちます。 詳しくは、 [idMigrationEnabled ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) を参照してください。 |
 
-Web SDK を使用する場合、Edge ネットワークは上記の cookie を 1 つ以上設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
+Web SDK を使用する場合、Edge ネットワークは上記の 1 つ以上の cookie を設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
 
 現在、Web サイトにセキュリティで保護されたセクションとセキュリティで保護されていないセクションの両方がある場合、これがユーザーの識別を妨げる可能性があります。 ユーザーがサイトのセキュリティで保護されたセクションからセキュリティで保護されていないセクションに移動すると、Edge ネットワークは新しい `ECID` リクエストに置き換えます。
 

@@ -2,7 +2,7 @@
 title: インタラクティブデータ収集
 description: Adobe Experience Platform Edge Network Server API によるインタラクティブなデータ収集の仕組みについて説明します。
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 19%
@@ -13,7 +13,7 @@ ht-degree: 19%
 
 ## 概要 {#overview}
 
-インタラクティブデータ収集エンドポイントは、単一のイベントを受け取り、クライアントがAdobe Experience Platform Edge Network サーバーによって応答が返されると想定する場合に使用されます。 また、これらのエンドポイントは、データ収集を実行する際に、他の Experience Edge サービスからコンテンツを返すこともできます。
+インタラクティブデータ収集エンドポイントは、単一のイベントを受け取り、クライアントがAdobe Experience Platform Edge Network サーバーによって応答が返されると想定する場合に使用されます。 また、これらのエンドポイントは、データ収集を実行中に、他の Edge ネットワークサービスからコンテンツを返すこともできます。
 
 サーバー応答に 1 つ以上の `Handle` オブジェクトを作成します。
 
@@ -63,11 +63,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | はい。 | データストリーム ID。 |
-| `requestId` | `String` | いいえ | 内部サーバーリクエストを関連付けるためのクライアントのランダム ID を指定します。 何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
+| `requestId` | `String` | × | 内部サーバーリクエストを関連付けるためのクライアントのランダム ID を指定します。 何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
 
 ### 応答 {#response}
 
-正常な応答は HTTP ステータスを返します `200 OK`(1 つ以上の `Handle` データストリーム設定で有効なリアルタイムエッジサービスに応じたオブジェクト。
+正常な応答は HTTP ステータスを返します `200 OK`（1 つ以上） `Handle` データストリーム設定で有効なリアルタイムエッジサービスに応じたオブジェクト。
 
 ```json
 {

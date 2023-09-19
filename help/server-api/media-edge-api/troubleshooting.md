@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API トラブルシューティングガイド
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
-source-wordcount: '669'
-ht-degree: 100%
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 ## セッション開始の検証
 
 セッション開始リクエストに関する問題のほとんどは、207 マルチステータス応答という結果になります。
-ペイロードは、Experience Edge Network Server API の致命的ではないエラーに似ています。すべての
+ペイロードは、 [サーバー API](../error-handling.md)は致命的でないエラーです。 すべての
 Media Analytics エラーのタイプは次のとおりです：`https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`。応答に表示される数値はエラーステータスに対応します。
 
 次の例は、必須フィールドが欠落しているか、無効なフィールドが含まれているセッション開始リクエストの応答本文を示しています。
@@ -65,7 +65,7 @@ Media Analytics エラーのタイプは次のとおりです：`https://ns.adob
 
 ## イベントの検証
 
-ほとんどの無効なイベントリクエストでは、400 無効なリクエスト応答が返されます。このような場合、ペイロードは Experience Edge Network Server API の致命的なエラーに似ています。
+ほとんどの無効なイベントリクエストでは、400 無効なリクエスト応答が返されます。このような場合、ペイロードは Server API の致命的なエラーに似ています。
 
 イベントリクエストの場合、Media Edge API サービスには、XDM モデル自体ではキャプチャされない追加のチェックが含まれています。これには、パス `eventType` がリクエストペイロード `eventType` と一致するかどうかのチェックが含まれます。
 

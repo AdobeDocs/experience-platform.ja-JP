@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Media Edge API
 description: Media Edge API の概要
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ Media Edge API は、Adobe Experience Platform上に作成され、[XDM スキ�
 
 * これは、XDM スキーマをデータフローに組み込む最も簡単な方法です。
 
-* 呼び出しは、メディアプレーヤーから [Experience Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=ja) に直接転送されます。
+* 呼び出しは、メディアプレーヤーから [Experience Platformエッジネットワーク](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=ja).
 
 * 最小限のクロスサーバー呼び出しでメディアイベントを効率的に追跡します。
 

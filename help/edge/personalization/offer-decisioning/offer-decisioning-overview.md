@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理さ�
 
 ## 用語
 
-offer decisioningを扱う際は、次の用語を理解することが重要です。 詳細および追加のキーワードを表示するには、 [offer decisioning用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+offer decisioningを扱う際は、次の用語を理解することが重要です。 詳細および追加のキーワードを表示するには、 [Offer decisioning用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **コンテナ：** コンテナとは、異なる懸念を切り離すための分離メカニズムです。 コンテナ ID は、すべてのリポジトリ API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
@@ -55,9 +55,9 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
 * **データストリーム：** 詳しくは、 [datastreams](../../../datastreams/overview.md) ドキュメント。
 
-* **ID**:詳しくは、このドキュメントを読んで、方法を説明してください [Platform Web SDK は ID サービスを使用します](../../identity/overview.md).
+* **ID**：詳しくは、このドキュメントを読んで、方法の概要を確認してください。 [Platform Web SDK は ID サービスを使用します。](../../identity/overview.md).
 
-## offer decisioning
+## 有効Offer decisioning
 
 offer decisioningを有効にするには、次の手順を実行します。
 
@@ -66,7 +66,7 @@ offer decisioningを有効にするには、次の手順を実行します。
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
 1. 手順に従って、 [SDK のインストール](../../fundamentals/installing-the-sdk.md) (SDK は、スタンドアロンでインストールすることも、UI を通じてインストールすることもできます。 詳しくは、 [タグクイックスタートガイド](../../../tags/quick-start/quick-start.md)) を参照してください。
-1. [SDK の設定](../../fundamentals/configuring-the-sdk.md) offer decisioning その他のOffer decisioning固有の手順を以下に示します。
+1. [SDK の設定](../../fundamentals/configuring-the-sdk.md) offer decisioning。 その他のOffer decisioning固有の手順を以下に示します。
 
    * スタンドアロン SDK のインストール
 
@@ -98,7 +98,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. を [ルール](../../../tags/ui/managing-resources/rules.md).
+      1. を作成します。 [ルール](../../../tags/ui/managing-resources/rules.md).
 
          * Platform Web SDK の「イベントの送信」アクションを追加し、関連する `decisionScopes` アクションの設定に対して
 
@@ -108,7 +108,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 ## リクエストと応答のサンプル
 
-### 1 `decisionScopes` 値
+### 1 つ `decisionScopes` 値
 
 **リクエスト**
 
@@ -139,8 +139,8 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
-| `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | ○ | これを参照してください。 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは `ECID` パラメーターを使用して、API 呼び出しを実行する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
+| `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごとに。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **応答**
 
@@ -236,8 +236,8 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 | プロパティ | 必須 | 説明 | 制限 | 例 |
 |---|---|---|---|---|
-| `identityMap` | ○ | 詳しくは、 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは、 `ECID` パラメーターを使用して設定する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
-| `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごと。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | ○ | これを参照してください。 [ID サービスドキュメント](../../identity/overview.md). | リクエストごとに 1 つの ID。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：ユーザーは `ECID` パラメーターを使用して、API 呼び出しを実行する必要があります。 必要に応じて、このパラメーターは呼び出しに自動的に追加されます。 |
+| `decisionScopes` | ○ | アクティビティ ID と配置 ID を含む、JSON の Base64 エンコードされた文字列の配列。 | 最大 30 `decisionScopes` リクエストごとに。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **応答**
 
@@ -332,4 +332,4 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 ## 制限事項
 
-キャッピングなど、一部のオファー制約は現在、モバイル Experience Edge ワークフローではサポートされていません。キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
+一部のオファー制約は、現在、Capping など、モバイル Edge ネットワークワークフローではサポートされていません。 キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。

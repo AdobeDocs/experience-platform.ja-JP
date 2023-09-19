@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Platform Web ソフトウェア開発キット (SDK) の概要
 description: Adobe Experience Platform Web SDK を使用して、Platform 機能を Web サイトに統合する方法について説明します。
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;エッジ;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 40%
+source-wordcount: '776'
+ht-degree: 33%
 
 ---
+
 
 # Adobe Experience Platform Web SDK の概要 {#overview}
 
@@ -17,17 +16,15 @@ Adobe Experience Platform Web Software Development Kit(SDK) は、Adobe Experien
 * を使用した手動実装 `alloy.js`. このユーザーガイドは、この実装方法に関するドキュメントを提供します。
 * The [Web SDK タグ拡張機能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). 詳しくは、 [Web SDK を使用したAdobe Experience Cloudの実装のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) を参照してください。
 
-## Adobe Experience Edge
+## Experience Platformエッジネットワーク
 
-Adobe Experience Platform Web SDK は、Experience Edge を構成するAdobeの一部です。 AdobeExperience Edge は、次のテクノロジーで構成されています。
+Experience PlatformWeb SDK は、Adobe Experience Platform Edge Network を構成するツールのコレクションの一部です。 Edge ネットワークは、次のコンポーネントで構成されています。
 
-* **[Adobe Experience Platform Web SDK](#overview):** Adobeテクノロジーの導入を大幅に簡略化する JavaScript SDK およびタグ拡張。
-* **[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** v5 モバイル SDK の拡張機能で、顧客が新しいデプロイメント手法を使用できるようになりました。
-* **[Adobe Experience Platform Edge Network](../server-api/overview.md):** 新しい導入方法を可能にする、サーバのグローバル分散ネットワーク [!DNL Adobe] 製品
+* **[Experience PlatformWeb SDK](#overview):** Adobeテクノロジーの導入を大幅に簡略化する JavaScript SDK およびタグ拡張。
+* **[Experience Platformモバイル SDK](https://developer.adobe.com/client-sdks/documentation/):** v5 モバイル SDK の拡張機能で、顧客が新しいデプロイメント手法を使用できるようになりました。
+* **[Experience Platformエッジネットワークサーバー API](../server-api/overview.md):** 様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に使用できる API です。 Server API は、サーバ、IoT デバイス、セットトップボックス、その他の様々なデバイスで使用できます。
 
-AdobeExperience Edge は、低レイテンシのデータ収集、プラグ可能なコンピューティング、およびアドレス可能なすべてのチャネルにわたる迅速なデータアクティベーションのためのフレームワークです。
-
-[!DNL Adobe Experience Edge] は、すべてのチャネル（JavaScript、モバイル、サーバーサイド）に対して単一の統合 SDK を提供し、共通のアドビドメイン（`adobedc.net`）にデータを送信し、データとエクスペリエンスの配信のために単一のペイロードを返信します。
+Edge Network は、低レイテンシのデータ収集、プラグ可能なコンピューティング、およびアドレス可能なすべてのチャネルにわたる迅速なデータアクティベーションを実現するためのフレームワークです。 チャネル（JavaScript、モバイル、サーバー側）ごとに 1 つの統合 SDK を提供し、共通のAdobeドメイン (`adobedc.net`) に送信され、データおよびエクスペリエンス配信用の単一のペイロードを受け取ります。
 
 サーバー側では、統合エッジゲートウェイと共通のプラットフォームサービスフレームワークを使用して、新しい機能をこのリアルタイムコンピューティング環境に簡単に導入できます。 このアーキテクチャには次の特長があります。
 

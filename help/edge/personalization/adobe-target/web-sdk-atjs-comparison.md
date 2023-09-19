@@ -3,7 +3,7 @@ title: at.js とExperience PlatformWeb SDK の比較
 description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します。
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 8%
@@ -918,7 +918,7 @@ Analytics がその DataStream 設定で有効になっている場合、Analyti
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-サーバーサイド分析ログが有効になっている場合、Analytics レポートで正しいインプレッション数とコンバージョン数が Experience Edge レベルで共有され、顧客が追加の処理をおこなう必要がなくなるように、Analytics と共有する必要がある A4T ペイロード。
+サーバーサイド分析ログが有効になっている場合、Analytics レポートで正しいインプレッション数とコンバージョン数が Edge ネットワークレベルで共有され、追加の処理をおこなう必要がないように、Analytics と共有する必要がある A4T ペイロード。
 
 サーバー側分析ログが有効な場合にシステムにデータが送られる仕組みを次に示します。
 
