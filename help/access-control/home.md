@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 92%
+source-wordcount: '1703'
+ht-degree: 91%
 
 ---
 
@@ -83,6 +83,8 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Alerts] | [!UICONTROL アラートの解決] | アラートの読み取り、編集、削除へのアクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの表示] | アラートへの読み取り専用アクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの管理] | アラート履歴の読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Computed Attributes] | [!UICONTROL 計算済み属性の表示] | 「計算済み属性」タブ、在庫および詳細への読み取り専用アクセス。 |
+| [!DNL Computed Attributes] | [!UICONTROL 計算済み属性の管理] | ドラフトの読み取り、作成、削除、および計算済み属性の非アクティブ化を行うアクセス権。 |
 | [!DNL Data Hygiene] | [!UICONTROL データハイジーンの表示] | データハイジーンへの読み取り専用アクセス。 |
 | [!DNL Data Hygiene] | [!UICONTROL データハイジーンの管理] | データハイジーンの読み取り、作成、編集、削除へのアクセス。 |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |

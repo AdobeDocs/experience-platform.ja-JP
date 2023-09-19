@@ -3,14 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御ラベルの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してラベルを管理する方法について説明します
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
+source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 38%
+source-wordcount: '209'
+ht-degree: 35%
 
 ---
 
 # ラベルの管理
+
+>[!NOTE]
+>
+>特定のラベルを含むフィールドで計算済み属性を作成または表示するには、そのラベルへのアクセス権が必要です。
 
 ラベルを使用すると、データに適用される使用状況やアクセスポリシーに従ってデータセットとフィールドを分類できます。 ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが Platform に取得されるとすぐに、またはデータが Platform で使用できるようになるとすぐに、データのラベル付けが推奨されます。
 
@@ -29,7 +33,7 @@ ht-degree: 38%
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-この **[!UICONTROL 新しいラベルを作成]** ダイアログが表示され、名前、わかりやすい名前（オプション）、説明（オプション）を入力するよう求められます。
+The **[!UICONTROL 新しいラベルを作成]** ダイアログが表示され、名前、わかりやすい名前（オプション）、説明（オプション）を入力するよう求められます。
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
