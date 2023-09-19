@@ -3,9 +3,9 @@ title: LiveRamp — 配布接続
 description: LiveRamp - Distribution コネクタを使用して、以前に LiveRamp に転送されたオーディエンスを、他の広告先に対してアクティブ化する方法について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1469'
 ht-degree: 60%
 
 ---
@@ -140,7 +140,9 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="広告主データの宛先に関する利用規約"
 >abstract="`I AGREE` と入力して、Disney 広告主のデータ規約への承認と同意を確認します。"
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="契約書を読む"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
