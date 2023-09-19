@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用可能なサンドボックス API エンドポイント
 description: 現在のユーザーが使用できるサンドボックスのリストを作成するには、使用可能なサンドボックスのエンドポイントに対してGETリクエストを実行します。
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 41%
@@ -33,7 +33,7 @@ GET /{QUERY_PARAMS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
+  https://platform.adobe.io/data/foundation/sandbox-management/?limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -103,7 +103,7 @@ curl -X GET \
 | --- | --- |
 | `name` | サンドボックスの名前。API 呼び出しで参照目的に使用されます。 |
 | `title` | サンドボックスの表示名。 |
-| `state` | サンドボックスの現在の処理状態。サンドボックスの状態は、次のいずれかになります。 <ul><li>`creating`:サンドボックスは作成されましたが、システムによって引き続きプロビジョニングされています。</li><li>`active`:サンドボックスが作成され、アクティブです。</li><li>`failed`:エラーが発生したため、サンドボックスはシステムでプロビジョニングできず、無効になっています。</li><li>`deleted`:サンドボックスは手動で無効にされました。</li></ul> |
+| `state` | サンドボックスの現在の処理状態。サンドボックスの状態は、次のいずれかになります。 <ul><li>`creating`：サンドボックスは作成されましたが、システムによって引き続きプロビジョニングされています。</li><li>`active`：サンドボックスが作成され、アクティブです。</li><li>`failed`：エラーが原因で、サンドボックスはシステムでプロビジョニングできず、無効になっています。</li><li>`deleted`：サンドボックスは手動で無効にされています。</li></ul> |
 | `type` | サンドボックスタイプ（「開発」または「実稼働」）。 |
 | `isDefault` | このサンドボックスが組織のデフォルトの実稼動サンドボックスであるかどうかを示すブール型プロパティです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
