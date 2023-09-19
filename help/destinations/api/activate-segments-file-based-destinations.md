@@ -4,16 +4,16 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4401'
 ht-degree: 11%
 
 ---
 
 # フローサービス API を使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化する
 
-拡張ファイルエクスポート機能（現在はベータ版）を使用して、Experience Platform外のファイルをエクスポートする際に、拡張カスタマイズ機能にアクセスします。
+拡張ファイルエクスポート機能を使用して、Experience Platformからファイルをエクスポートする際に、拡張カスタマイズ機能にアクセスします。
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
@@ -35,11 +35,15 @@ ht-degree: 11%
 >
 >また、Experience Platformユーザーインターフェイスを使用して、プロファイルをクラウドストレージの宛先に書き出すこともできます。 詳しくは、 [ファイルベースの宛先のアクティブ化チュートリアル](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
-## API ユーザーの移行 {#api-migration}
+<!--
 
-既にフローサービス API を使用して、Amazon S3、Azure Blob、または SFTP クラウドストレージの宛先にプロファイルを書き出している場合は、 [API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) ユーザーが従来の宛先から新しい宛先にAdobeを移行する際に必要な移行手順について説明します。
+## API users migration {#api-migration}
 
-## Destination SDK の {#get-started}
+If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
+
+-->
+
+## はじめに {#get-started}
 
 ![ユーザーが現在表示している手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
@@ -53,7 +57,9 @@ ht-degree: 11%
 
 ### 必要な権限 {#permissions}
 
-プロファイルを書き出すには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**、および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+プロファイルを書き出すには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**、および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+
+書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -2356,7 +2362,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2389,7 +2395,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Amazon S3 Beta Target Connection",
+   "name":"Amazon S3 Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2448,7 +2454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2481,7 +2487,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Azure Blob Storage Beta Target Connection",
+   "name":"Azure Blob Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2663,7 +2669,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Data Landing Zone Beta Target Connection",
+   "name":"Data Landing Zone Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2755,7 +2761,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Google Cloud Storage Beta Target Connection",
+   "name":"Google Cloud Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",

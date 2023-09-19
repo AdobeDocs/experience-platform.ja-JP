@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 99%
+source-wordcount: '1159'
+ht-degree: 97%
 
 ---
 
@@ -22,15 +22,14 @@ ht-degree: 99%
    * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
 * API チュートリアル {#api}
-   * [クラウドストレージ宛先の API 移行ガイド](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [フローサービス API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
-   * [Flow Service API でクラウドストレージやメールマーケティングのバッチ宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
+   * [ファイルベースの電子メールマーケティングの宛先に接続し、フローサービス API を使用してデータをアクティブ化します](./api/connect-activate-batch-destinations.md)
    * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスをアクティブ化する](./api/ad-hoc-activation-api.md)
    * [宛先の編集](./api/edit-destination.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
-   * [（ベータ版）Flow Service API の使用によるファイルベース宛先に対するデータのアクティブ化](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [（ベータ版）データセットの書き出し](/help/destinations/api/export-datasets.md)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
