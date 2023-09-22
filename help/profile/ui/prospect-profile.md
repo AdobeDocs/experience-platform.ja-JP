@@ -2,12 +2,10 @@
 title: 見込み客プロファイル
 description: 見込み客プロファイルを作成および使用して、サードパーティの情報を使用して不明な顧客に関する情報を収集する方法を説明します。
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: 6553643789549aec449ceb4f821ea663a0bfcef3
+source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
 workflow-type: tm+mt
 source-wordcount: '399'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -56,11 +54,11 @@ The [!UICONTROL JSON を表示] ダイアログが表示されます。 見込�
 
 ![見込み客プロファイルの属性が JSON 形式で表示されます。](../images/prospect-profile/profile-view-json.png)
 
-## 推奨される使用例 {#use-cases}
+## 推奨されるユースケース {#use-cases}
 
 Experience Platformの見込み客プロファイル機能を他の Platform 機能と組み合わせて使用する方法については、次の使用例のドキュメントを参照してください。
 
-- [見込み客機能を通じて新規顧客を惹きつけ、獲得する](../../rtcdp/partner-data/prospecting.md)
+- [見込み客機能を使用した新規顧客のエンゲージメントと獲得](../../rtcdp/partner-data/prospecting.md)
 
 ## 次の手順
 
