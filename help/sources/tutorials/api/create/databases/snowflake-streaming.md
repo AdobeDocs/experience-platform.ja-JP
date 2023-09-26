@@ -1,12 +1,12 @@
 ---
 title: SnowflakeストリーミングアカウントをAdobe Experience Platformに接続
 description: フローサービス API を使用してAdobe Experience PlatformをSnowflakeストリーミングに接続する方法について説明します。
-badgeBeta: label="Beta" type="Informative"
+badgeBeta: label="ベータ版" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '867'
+ht-degree: 29%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* この [!DNL Snowflake] ストリーミングソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
->* この [!DNL Snowflake] ストリーミングソースは、Real-time Customer Data Platform Ultimate を購入したユーザーが API で使用できます。
+>* The [!DNL Snowflake] ストリーミングソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>* The [!DNL Snowflake] ストリーミングソースは、Real-time Customer Data Platform Ultimate を購入したユーザーが API で使用できます。
 
 このチュートリアルでは、 [!DNL Snowflake] を使用してAdobe Experience Platformにアカウント [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -50,7 +50,7 @@ POST /connections
 
 >[!TIP]
 >
->この `auth.specName` の値は、空白を含め、以下の例のとおりに入力する必要があります。
+>The `auth.specName` の値は、空白を含め、以下の例のとおりに入力する必要があります。
 
 ```shell
 curl -X POST \
@@ -84,14 +84,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `auth.params.account` | お客様の [!DNL Snowflake] ストリーミングアカウント |
+| `auth.params.account` | お客様の [!DNL Snowflake] ストリーミングアカウント。 |
 | `auth.params.database` | お客様の [!DNL Snowflake] データの取り込み元のデータベース。 |
-| `auth.params.warehouse` | お客様の [!DNL Snowflake] 倉庫。 この [!DNL Snowflake] warehouse は、アプリケーションのクエリ実行プロセスを管理します。 各ウェアハウスは互いに独立しており、データを Platform に引き渡す際には、個別にアクセスする必要があります。 |
-| `auth.params.username` | ユーザー名 [!DNL Snowflake] ストリーミングアカウント |
-| `auth.params.schema` | （オプション） [!DNL Snowflake] ストリーミングアカウント |
-| `auth.params.password` | ユーザーのパスワード [!DNL Snowflake] ストリーミングアカウント |
+| `auth.params.warehouse` | お客様の [!DNL Snowflake] 倉庫。 The [!DNL Snowflake] warehouse は、アプリケーションのクエリ実行プロセスを管理します。 各ウェアハウスは互いに独立しており、データを Platform に引き渡す際には、個別にアクセスする必要があります。 |
+| `auth.params.username` | ユーザー名 [!DNL Snowflake] ストリーミングアカウント。 |
+| `auth.params.schema` | （オプション） [!DNL Snowflake] ストリーミングアカウント。 |
+| `auth.params.password` | ユーザーのパスワード [!DNL Snowflake] ストリーミングアカウント。 |
 | `auth.params.role` | （オプション）このユーザーの役割 [!DNL Snowflake] 接続。 指定しない場合、この値はデフォルトでになります。 `public`. |
-| `connectionSpec.id` | この [!DNL Snowflake] 接続仕様 ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `connectionSpec.id` | The [!DNL Snowflake] 接続仕様 ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **応答**
 
@@ -106,7 +106,7 @@ curl -X POST \
 
 ## データテーブルの調査 {#explore-your-data-tables}
 
-次に、ベース接続 ID を使用して、に対してGETリクエストを実行し、ソースのデータテーブルを調べて移動します `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` エンドポイントを使用して、ベース接続 ID をパラメーターとして指定する必要があります。
+次に、ベース接続 ID を使用して、に対してGETリクエストを実行し、ソースのデータテーブルを調べて移動します。 `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` エンドポイントを使用して、ベース接続 ID をパラメーターとして指定する必要があります。
 
 **API 形式**
 
@@ -121,7 +121,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 **リクエスト**
 
-次のリクエストでは、 [!DNL Snowflake] ストリーミングアカウント
+次のリクエストでは、 [!DNL Snowflake] ストリーミングアカウント。
 
 ```shell
 curl -X GET \
@@ -185,22 +185,24 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | の認証済みベース接続 ID [!DNL Snowflake] ストリーミングソース。 この ID は、前の手順で生成されました。 |
+| `baseConnectionId` | の認証済みベース接続 ID。 [!DNL Snowflake] ストリーミングソース。 この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | の接続仕様 ID [!DNL Snowflake] ストリーミングソース。 |
-| `params.tableName` | テーブルの名前 [!DNL Snowflake] データベースを作成します。 |
+| `params.tableName` | テーブルの名前 [!DNL Snowflake] Platform に取り込むデータベースです。 |
 | `params.timestampColumn` | 増分値の取得に使用される timestamp 列の名前です。 |
 | `params.backfill` | データを最初（0 エポック時間）から取得するか、ソースが開始された時刻から取得するかを決定するブール型フラグ。 この値の詳細については、 [[!DNL Snowflake] ストリーミングソースの概要](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | timezone 値は、 [!DNL Snowflake] データベース。 設定のタイムスタンプ列が `TIMESTAMP_NTZ`. 指定されていない場合、 `timezoneValue` デフォルトは UTC です。 |
 
 **応答**
 
-正常な応答は、ソース接続 ID と、対応する etag を返します。 ソース接続 ID は、後の手順でデータフローを作成する際に使用します。
+正常な応答は、ソース接続 ID と、対応する ETag を返します。 ソース接続 ID は、後の手順でデータフローを作成する際に使用します。
 
 ```json
 {
@@ -211,7 +213,7 @@ curl -X POST \
 
 ## データフローの作成
 
-ツアーのデータをストリーミングするデータフローを作成するには [!DNL Snowflake] アカウントを Platform に送信する場合、 `/flows` エンドポイントで次の値を指定します。
+ツアーのデータをストリーミングするデータフローを作成するには [!DNL Snowflake] アカウントを Platform に送信する場合は、 `/flows` エンドポイントで次の値を指定します。
 
 >[!TIP]
 >
@@ -230,7 +232,7 @@ POST /flows
 
 **リクエスト**
 
-次のリクエストでは、 [!DNL Snowflake] アカウント
+次のリクエストでは、 [!DNL Snowflake] アカウント。
 
 ```shell
 curl -X POST \
@@ -284,7 +286,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、 [!DNL Snowflake] データを [!DNL Flow Service] API Adobe Experience Platform Sources について詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、 [!DNL Snowflake] データを [!DNL Flow Service] API. Adobe Experience Platform Sources について詳しくは、次のドキュメントを参照してください。
 
 * [ソースの概要](../../../../home.md)
 * [API を使用したデータフローの監視](../../monitor.md)
