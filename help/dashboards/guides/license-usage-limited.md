@@ -5,14 +5,19 @@ description: Adobe Experience Platformには、組織のライセンス使用状
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 7%
 
 ---
 
 # ライセンス使用状況ダッシュボード（限定リリース） {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="ライセンス使用状況ダッシュボード"
+>abstract="License usage ダッシュボードでは、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みライセンス数など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
 
 >[!IMPORTANT]
 >
