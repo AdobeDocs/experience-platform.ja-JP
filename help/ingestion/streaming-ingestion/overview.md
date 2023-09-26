@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 5adcdf3108fbbaee9e81dc737ae67b563e4dbf1d
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -39,7 +39,7 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] 個々の�
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |
-| リアルタイム顧客プロファイル | &lt; 1 分 |
+| リアルタイム顧客プロファイル | &lt; 15 分 |
 | データレイク | &lt; 60 分 |
 
 ## ストリーミング取り込み時の 1 秒あたりのリクエスト (RPS) ガイダンス
