@@ -4,9 +4,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3707'
 ht-degree: 64%
 
 ---
@@ -27,6 +27,11 @@ ht-degree: 64%
 この記事では、クラウドストレージや電子メールマーケティングの宛先など、Adobe Experience Platformのバッチプロファイルベースの宛先でオーディエンスをアクティブ化するために必要なワークフローについて説明します。
 
 ## 前提条件 {#prerequisites}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="（ベータ版）アレイのエクスポートのサポート"
+>abstract="（ベータ版）プリミティブ値の配列をExperience Platformから目的のクラウドストレージの宛先に書き出します。 このテキストは更新され、詳細情報が表示されます。 <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">詳細情報</a>。 "
 
 オーディエンスを宛先に対してアクティブ化するには、次の条件を満たす必要があります。 [宛先に接続されている](./connect-destination.md). まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
