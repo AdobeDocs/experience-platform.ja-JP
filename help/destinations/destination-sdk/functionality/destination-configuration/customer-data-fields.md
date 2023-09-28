@@ -1,10 +1,10 @@
 ---
 description: Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 title: 顧客データフィールド
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 100%
+source-wordcount: '1580'
+ht-degree: 91%
 
 ---
 
@@ -252,6 +252,93 @@ Experience Platform UI でユーザーがデータを入力する必要がある
 ```
 
 ![上記の設定で作成されたドロップダウンセレクターの例を示す画面録画。](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## 顧客データフィールド用の動的ドロップダウンセレクターの作成 {#dynamic-dropdown-selectors}
+
+API を動的に呼び出し、応答を使用してドロップダウンメニューのオプションを動的に設定する場合は、動的なドロップダウンセレクターを使用できます。
+
+動的なドロップダウンセレクターは、 [正規のドロップダウンセレクター](#dropdown-selectors) を使用します。 唯一の違いは、値が API から動的に取得される点です。
+
+動的なドロップダウンセレクターを作成するには、次の 2 つのコンポーネントを設定する必要があります。
+
+**手順 1.** [宛先サーバーの作成](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) と `responseFields` 動的 API 呼び出しのテンプレート（下図を参照）。
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**手順 2.** 以下を使用します。 `dynamicEnum` オブジェクトに関する情報を示します。 次の例では、 `User` ドロップダウンは、dynamic server を使用して取得します。
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+を設定します。 `destinationServerId` パラメーターを手順 1 で作成した宛先サーバーの ID に設定します。 宛先サーバー ID は、 [宛先サーバー設定の取得](../../authoring-api/destination-server/retrieve-destination-server.md) API 呼び出し。
 
 ## 条件付き顧客データフィールドの作成 {#conditional-options}
 
