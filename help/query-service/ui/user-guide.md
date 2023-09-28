@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 68%
+source-wordcount: '2288'
+ht-degree: 56%
 
 ---
 
@@ -17,13 +17,23 @@ ht-degree: 68%
 
 [!DNL Query Service] の概念と機能について詳しくは、[クエリサービスの概要](../home.md)を参照してください。[!DNL Platform] 上でクエリサービスのユーザーインターフェイスを操作する方法について詳しくは、[クエリサービス UI の概要](./overview.md)を参照してください。
 
+>[!NOTE]
+>
+>一部のクエリサービス機能は、従来のバージョンのクエリエディターでは提供されていません。 このドキュメントで使用するスクリーンショットは、特に記載がない限り、クエリエディターの拡張バージョンを使用して撮影します。 詳しくは、 [クエリエディターの強化](#enhanced-editor-toggle) を参照してください。
+
 ## はじめに {#getting-started}
 
 [!DNL Query Editor] に接続することで、クエリを柔軟に実行できます。 [!DNL Query Service]、およびクエリは、この接続がアクティブな間にのみ実行されます。
 
+## [!DNL Query Editor] へのアクセス {#accessing-query-editor}
+
+[!DNL Experience Platform] UI で、左側のナビゲーションメニューの「**[!UICONTROL クエリ]**」を選択して、[!DNL Query Service] ワークスペースを開きます。次に、クエリの記述を開始するには、「 」を選択します。 **[!UICONTROL クエリを作成]** をクリックします。 このリンクは、[!DNL Query Service] ワークスペースのどのページからも利用できます。
+
+![「クエリを作成」がハイライト表示された「クエリワークスペースの概要」タブ](../images/ui/query-editor/create-query.png)
+
 ### [!DNL Query Service] への接続  {#connecting-to-query-service}
 
-[!DNL Query Editor] を開くと、初期化と [!DNL Query Service] への接続に数秒かかります。クエリサービスに接続されると、コンソールに表示されます（以下を参照）。エディターがクエリサービスに接続される前にクエリを実行しようとすると、接続が完了するまで実行が待機されます。
+クエリエディターを開くと、初期化とクエリサービスへの接続に数秒かかります。 クエリサービスに接続されると、コンソールに表示されます（以下を参照）。エディターがクエリサービスに接続される前にクエリを実行しようとすると、接続が完了するまで実行が待機されます。
 
 ![初回接続時のクエリエディターのコンソール出力](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ ht-degree: 68%
 
 実行元のクエリ [!DNL Query Editor] をインタラクティブに実行するので、ブラウザーを閉じたり、別の場所に移動したりした場合、クエリはキャンセルされます。 クエリ出力からデータセットを生成するために実行されるクエリについても、同じことが言えます。
 
+クエリエディターの拡張版を使用すると、クエリエディターで複数のクエリを記述し、すべてのクエリを順番に実行できます。 詳しくは、 [複数の順次クエリの実行](#execute-multiple-sequential-queries) を参照してください。
+
 ## [!DNL Query Editor] を使用したクエリオーサリング {#query-authoring}
 
 [!DNL Query Editor] を使用すると、顧客体験データのクエリを記述、実行および保存できます。[!DNL Query Editor] で実行または保存されたすべてのクエリは、[!DNL Query Service] にアクセスできる組織内のすべてのユーザーが利用できます。
 
-### [!DNL Query Editor] へのアクセス {#accessing-query-editor}
-
-[!DNL Experience Platform] UI で、左側のナビゲーションメニューの「**[!UICONTROL クエリ]**」を選択して、[!DNL Query Service] ワークスペースを開きます。次に、クエリの記述を開始するには、「 」を選択します。 **[!UICONTROL クエリを作成]** をクリックします。 このリンクは、[!DNL Query Service] ワークスペースのどのページからも利用できます。
-
-![「クエリを作成」がハイライト表示された「クエリワークスペースの概要」タブ](../images/ui/query-editor/create-query.png)
-
-### クエリエディターの切り替え機能の強化 {#enhanced-editor-toggle}
+## クエリエディターの切り替え機能の強化 {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ ht-degree: 68%
 
 ![設定アイコンと「ダークテーマを有効にする」ドロップダウンメニューオプションがハイライトされたクエリエディター。](../images/ui/query-editor/query-editor-settings.png)
 
-### クエリの記述 {#writing-queries}
+### 複数の順次クエリを実行 {#execute-multiple-sequential-queries}
+
+クエリエディターの拡張版を使用すると、クエリエディターで複数のクエリを記述し、すべてのクエリを順番に実行できます。
+
+1 つのシーケンスで複数のクエリを実行すると、それぞれログエントリが生成されます。 ただし、最初のクエリの結果のみがクエリエディターコンソールに表示されます。 実行されたクエリのトラブルシューティングや確認が必要な場合は、クエリログを確認します。 詳しくは、 [クエリログドキュメント](./query-logs.md) を参照してください。
+
+>[!NOTE]
+> 
+>クエリエディターで最初のクエリの後に CTAS クエリが実行された場合でも、テーブルは作成されますが、クエリエディターコンソールには出力はありません。
+
+### 選択したクエリを実行 {#execute-selected-query}
+
+複数のクエリを記述したが、1 つのクエリのみを実行する必要がある場合は、選択したクエリをハイライト表示し、
+[!UICONTROL 選択したクエリを実行] アイコン。 このアイコンは、エディターでクエリを選択しない限り、デフォルトでは無効になっています。
+
+![クエリエディターと [!UICONTROL 選択したクエリを実行] アイコンがハイライト表示されます。](../images/ui/query-editor/run-selected-query.png)
+
+### 結果数 {#result-count}
+
+クエリエディターには、最大 50,000 行の出力があります。 ただし、クエリエディターコンソールには、一度に 50 行のみが表示されます。 コンソールに表示される行数を変更するには、 **[!UICONTROL 結果数]** ドロップダウンを開き、50、100、150、300、500 の値から選択します。
+
+![結果数ドロップダウンがハイライト表示されたクエリエディター。](../images/ui/query-editor/result-count.png)
+
+## クエリの記述 {#writing-queries}
 
 [!UICONTROL クエリエディター]は、クエリをできるだけ簡単に記述できるように構成されています。次のスクリーンショットは、UI でエディターがどのように表示されるかを示しています。ここでは、SQL 入力フィールドと「**再生**」がハイライト表示されています。
 
@@ -70,7 +99,7 @@ ht-degree: 68%
 
 開発時間を最小限に抑えるために、返される行を制限してクエリを開発することをお勧めします。たとえば、`SELECT fields FROM table WHERE conditions LIMIT number_of_rows` のように設定します。クエリが目的どおりの出力を生成することを確認したら、制限を解除して、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行し、データセットを生成します。
 
-### [!DNL Query Editor] の記述ツール {#writing-tools}
+## [!DNL Query Editor] の記述ツール {#writing-tools}
 
 - **構文の自動ハイライト表示：** SQL の読み取りと構成が容易になります。
 
@@ -83,6 +112,18 @@ ht-degree: 68%
 - **テーブルとフィールドのオートコンプリート**：`SELECT` 元のテーブル名の入力を開始し、矢印キーを使用して目的の表に移動して、**Enter** キーを押します。テーブルを選択すると、オートコンプリートはそのテーブルのフィールドを認識します。
 
 ![クエリエディターに入力するとドロップダウンにテーブル名の候補が表示される様子](../images/ui/query-editor/tables-auto.png)
+
+### テキストの書式設定 {#format-text}
+
+The [!UICONTROL テキストの書式設定] 機能により、標準化された構文スタイルを追加することで、クエリがより読みやすくなります。 選択 **[!UICONTROL テキストの書式設定]** を使用して、クエリエディター内のすべてのテキストを標準化します。
+
+![クエリエディターと [!UICONTROL テキストの書式設定] ハイライト表示された SQL 文](../images/ui/query-editor/format-text.png)
+
+### SQL をコピー {#copy-sql}
+
+コピーアイコンを選択して、クエリエディターからクリップボードに SQL をコピーします。 このコピー機能は、クエリテンプレートと、クエリエディターで新しく作成されたクエリの両方で使用できます。
+
+![クエリワークスペースには、コピーアイコンが強調表示されたクエリテンプレートの例が表示されています。](../images/ui/query-editor/copy-sql.png)
 
 ### オートコンプリート UI 設定の切り替え {#auto-complete}
 
