@@ -4,9 +4,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 64%
 
 ---
@@ -397,6 +397,10 @@ ht-degree: 64%
 >* フィールドは、ターゲット先の予測属性として設定されます。
 >
 > 例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
+
+### [!BADGE ベータ版]{type=Informative} 計算フィールドを使用した配列の書き出し {#export-arrays-calculated-fields}
+
+ベータ版のお客様は、アレイオブジェクトをExperience Platformからクラウドストレージの宛先に書き出すことができます。 詳細を表示： [配列と計算フィールドのエクスポート](/help/destinations/ui/export-arrays-calculated-fields.md) 機能にアクセスするには、Adobe担当者にお問い合わせください。
 
 ### 既知の制限事項 {#known-limitations}
 
