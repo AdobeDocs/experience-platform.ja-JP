@@ -1,7 +1,7 @@
 ---
 title: XDM 個別見込み客プロファイルクラス
 description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM 個別見込み客プロファイルクラスの概要を説明します。
-source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
+source-git-commit: 7562da0f07a2109a2030653927d8d2639685e442
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 | `_id` | [!UICONTROL 文字列] | レコードの、システムで生成される一意の文字列識別子。 このフィールドは、個々のレコードの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのレコードを検索するために使用します。<br><br>このフィールドはシステムで生成されるので、データの取り込み中に明示的な値は指定されません。 ただし、必要に応じて独自の一意の ID 値を指定することもできます。 |
 | `createdByBatchID` | [!UICONTROL 文字列] | レコードが作成される原因となった取得済みバッチの ID。 |
 | `modifiedByBatchID` | [!UICONTROL 文字列] | レコードを更新した最後に取得したバッチの ID。 |
-| `partnerID` | [!UICONTROL 文字列] | 通常、個々の見込み客を識別する一意の偽名の識別子。 次のドキュメントを参照してください： [ID タイプ](../../identity-service/namespaces.md#identity-types) を参照して、Adobe Experience Platform内で使用できるパートナー ID およびその他の id タイプについて確認してください。 |
+| `partnerID` | [!UICONTROL 文字列] | 通常、個々の見込み客を識別する一意の偽名の識別子。 次のドキュメントを参照してください： [ID タイプ](../../identity-service/namespaces.md#identity-type) を参照して、Adobe Experience Platform内で使用できるパートナー ID およびその他の id タイプについて確認してください。 |
 | `repositoryCreatedBy` | [!UICONTROL 文字列] | レコードを作成したユーザーの ID。 |
 | `repositoryLastModifiedBy` | [!UICONTROL 文字列] | レコードを最後に変更したユーザーの ID。 レコードが作成されると、 `modifiedByUser` の値が `createdByUser` の値です。 |
 
