@@ -2,7 +2,7 @@
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 3%
@@ -137,7 +137,7 @@ The `CREATE VIEW` キーワードは、クエリのビューを定義します�
 
 クエリサービスのデータコンプライアンスにより、データが常に暗号化されます。 送信中のデータは常に HTTPS に準拠し、保存時のデータはシステムレベルのキーを使用して Azure Data Lake ストアで暗号化されます。 次のドキュメントを参照してください： [Adobe Experience Platformでのデータの暗号化方法](../../landing/governance-privacy-security/encryption.md) を参照してください。 Azure Data Lake Storage での保存データの暗号化方法について詳しくは、 [Azure の公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption).
 
-送信中のデータは常に HTTPS に準拠しており、同様に、データレイクでデータが保存されている場合、暗号化は顧客管理キー (CMK) を使用しておこなわれます。CMK は、データレイク管理で既にサポートされています。 現在サポートされているバージョンは TLS1.2 です。詳しくは、 [顧客管理キー (CMK) ドキュメント](../../landing/governance-privacy-security/customer-managed-keys.md) Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
+送信中のデータは常に HTTPS に準拠しており、同様に、データレイクでデータが保存されている場合、暗号化は顧客管理キー (CMK) を使用しておこなわれます。CMK は、データレイク管理で既にサポートされています。 現在サポートされているバージョンは TLS1.2 です。詳しくは、 [顧客管理キー (CMK) ドキュメント](../../landing/governance-privacy-security/customer-managed-keys/overview.md) Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 
 
 ## 監査 {#audit}

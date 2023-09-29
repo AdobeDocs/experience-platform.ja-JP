@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform を使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +66,11 @@ ht-degree: 0%
          * [イベント](./governance-privacy-security/audit-logs/api/events.md)
          * [書き出し](./governance-privacy-security/audit-logs/api/export.md)
    * [データ暗号化](./governance-privacy-security/encryption.md)
-   * [顧客管理キー](./governance-privacy-security/customer-managed-keys.md)
+   * 顧客管理キー {#customer-managed-keys}
+      * [顧客管理キー](./governance-privacy-security/customer-managed-keys/overview.md)
+      * [Azure Key Vault を設定する](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [API を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [UI を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)

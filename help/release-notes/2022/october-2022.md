@@ -2,8 +2,8 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
-workflow-type: ht
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Adobe Experience Platform に保存されるすべてのデータは、システムレベルのキーを使用して、保存時に暗号化されます。Platform 上に作成されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するように選択できるようになり、データのセキュリティをより詳細に制御できます。
 
-機能について詳しくは、[顧客管理キー](../../landing/governance-privacy-security/customer-managed-keys.md)の概要を参照してください。
+機能について詳しくは、[顧客管理キー](../../landing/governance-privacy-security/customer-managed-keys/overview.md)の概要を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新機能または更新された機能**
 
