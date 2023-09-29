@@ -1,11 +1,11 @@
 ---
-title: （ベータ版）計算フィールドを使用して、フラットファイルに配列を書き出す
+title: （ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す
 type: Tutorial
-description: 配列と計算フィールドをReal-Time CDPからプロファイルベースのバッチ宛先に書き出す方法について説明します。
+description: 計算フィールドを使用して、フラットスキーマファイル内の配列をReal-Time CDPからクラウドストレージの宛先に書き出す方法について説明します。
 badge: 「ベータ版」
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="（ベータ版）アレイのエクスポートのサポート"
 >abstract="int、string または boolean 値の単純な配列をExperience Platformから目的のクラウドストレージの宛先に書き出します。 一部制限があります。 広範な例とサポートされる関数については、ドキュメントを参照してください。"
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="既知の制限事項"
 
 >[!AVAILABILITY]
 >

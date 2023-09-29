@@ -4,10 +4,10 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platform で宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 79%
+source-wordcount: '1141'
+ht-degree: 77%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 79%
 
 3. 「**[!UICONTROL 設定]**」を選択した場合、次の手順にスキップして、宛先に対して「[認証](#authenticate)」を行います。
 
-   選択した場合 **[!UICONTROL 有効化]**, **[!UICONTROL オーディエンスをアクティブ化]**&#x200B;または **[!UICONTROL データセットを書き出し]**&#x200B;に設定すると、既存の宛先接続のリストが表示されるようになります。
+   次を選択した場合： **[!UICONTROL 有効化]**, **[!UICONTROL オーディエンスをアクティブ化]**&#x200B;または **[!UICONTROL データセットを書き出し]**&#x200B;に設定すると、既存の宛先接続のリストが表示されるようになります。
 
    「**[!UICONTROL 新しい宛先を設定]**」を選択すると、宛先への新しい接続を確立します。
 
@@ -78,15 +78,19 @@ ht-degree: 79%
 
 ![Trade Desk 宛先に接続する際の必須およびオプションの入力パラメーターを示す画像](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### （ベータ版）書き出すファイルのファイル形式設定オプションを設定する {#file-formatting-and-compression-options}
+### 書き出されたファイルのファイル形式オプションの設定 {#file-formatting-and-compression-options}
 
 ファイルベースの宛先の場合は、書き出されたファイルの形式と圧縮の方法に関する様々な設定を指定できます。 使用可能なすべての形式および圧縮のオプションについて詳しくは、[ファイルベース宛先のファイル形式オプションの設定に関するチュートリアル](/help/destinations/ui/batch-destinations-file-formatting-options.md)を参照してください。
 
 ![ファイルタイプの選択と CSV ファイルの各種オプションを示す画像](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### オーディエンスのアクティベーションまたはデータセットの書き出しの宛先接続を設定する {#segment-activation-or-dataset-exports}
+### オーディエンスのアクティブ化、見込み客のアクティブ化、データセットの書き出しの宛先接続を設定する {#segment-activation-or-dataset-exports}
 
-一部のファイルベースの宛先では、オーディエンスのアクティブ化とデータセットの書き出しがサポートされています。 これらの宛先では、オーディエンスのアクティブ化とデータセットの書き出しを可能にする接続を作成するかどうかを選択できます。
+一部のファイルベースの宛先は、既知の顧客や見込み客に対するオーディエンスのアクティブ化や、データセットの書き出しをサポートしています。 これらの宛先について、次のことを可能にする接続を作成するかどうかを選択できます。 [オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md), [見込み客](/help/destinations/ui/activate-prospect-audiences.md)または [データセットを書き出し](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>データセットを書き出す場合、JSON ファイルへの書き出しは圧縮モードでのみサポートされることに注意してください。 への書き出し先 [!DNL Parquet] ファイルは、圧縮モードと非圧縮モードでサポートされます。
 
 ![ユーザーがオーディエンスのアクティベーションとデータセットの書き出しのどちらかを選択できるデータタイプ選択コントロールを示す画像です。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
@@ -112,4 +116,4 @@ ht-degree: 79%
 
 このドキュメントでは、Experience Platform UI を使用して宛先への接続を確立する方法について説明しました。使用可能な接続パラメーターと必要な接続パラメーターは、宛先によって異なります。宛先タイプごとに必要な入力と使用可能なオプションについて詳しくは、[宛先カタログ](/help/destinations/catalog/overview.md)の宛先ドキュメントページも参照してください。
 
-次に、 [オーディエンスの有効化](/help/destinations/ui/activation-overview.md) または [データセットの書き出し](/help/destinations/ui/export-datasets.md) を宛先に追加します。
+次に、 [オーディエンスのアクティブ化](/help/destinations/ui/activation-overview.md) または [データセットの書き出し](/help/destinations/ui/export-datasets.md) を宛先に追加します。
