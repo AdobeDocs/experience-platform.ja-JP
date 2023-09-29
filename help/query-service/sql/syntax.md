@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
-ht-degree: 8%
+source-wordcount: '4006'
+ht-degree: 9%
 
 ---
 
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## データベースを作成
 
-The `CREATE DATABASE` コマンドは ADLS データベースを作成します。
+The `CREATE DATABASE` コマンドは、Azure Data Lake Storage(ADLS) データベースを作成します。
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREATE VIEW
 
-次の構文は、 `CREATE VIEW` クエリ：
+次の構文は、 `CREATE VIEW` データセットのクエリ。 このデータセットは、ADLS または高速ストアデータセットにすることができます。
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+次の構文は、 `CREATE VIEW` データベースとスキーマのコンテキストでビューを作成するクエリ。
+
+**例**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| パラメーター | 説明 |
+| ------ | ------ |
+| `db_name` | データベースの名前。 |
+| `schema_name` | スキーマの名前。 |
+| `view_name` | 作成するビューの名前。 |
+| `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
+
+**例**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## ビューを表示
+
+次のクエリは、ビューのリストを示します。
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## DROP VIEW
@@ -622,7 +662,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 (1 row)
 ```
 
-その後、計算済みの統計を直接クエリするには、 `Statistics ID`. 以下の文の例を使用すると、 `Statistics ID` またはエイリアス名。 この機能の詳細については、 [エイリアス名ドキュメント](../essential-concepts/dataset-statistics.md#alias-name).
+`Statistics ID` を参照することで、計算された統計を直接クエリできます。以下の例のステートメントを `Statistics ID` またはエイリアス名とともに使用すると、出力を完全に表示できます。この機能の詳細については、 [エイリアス名ドキュメント](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -945,7 +985,7 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 >[!NOTE]
 >
->テーブルスキーマは一意で、複数のテーブル間で共有されないようにする必要があります。 また、名前空間は、プライマリキー、プライマリ ID、ID の制約に必須です。
+>テーブルスキーマは一意であり、複数のテーブル間で共有されない必要があります。 また、名前空間は、プライマリキー、プライマリ ID、ID の制約に必須です。
 
 #### プライマリ ID とセカンダリ ID の追加またはドロップ
 
