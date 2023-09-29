@@ -1,10 +1,10 @@
 ---
 title: プロスペクティングユースケースを通じて新規顧客をエンゲージおよび獲得
 description: Real-Time CDP のパートナーデータサポートによって可能になる、プロスペクティングユースケースを通じた新規顧客のエンゲージメントと獲得について説明します。
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 96%
+source-wordcount: '1953'
+ht-degree: 95%
 
 ---
 
@@ -40,6 +40,12 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 4. **顧客**&#x200B;として、見込み客プロファイルのリストから焦点を絞ってオーディエンスを作成します。
 5. **顧客**&#x200B;として、見込み客リストで利用可能な ID を受け入れる宛先に対して、見込み客のオーディエンスをアクティブ化します。
 6. 必要に応じて、**データパートナー**&#x200B;と連携し、目的の有料メディアの宛先に対してオーディエンスをラストマイルでアクティブ化します。
+
+## ビデオチュートリアル {#video-walkthrough}
+
+見込み客のオーディエンスにリーチして惹きつける方法については、以下のビデオチュートリアルをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## ユースケースの達成方法：手順 {#step-by-step-instructions}
 

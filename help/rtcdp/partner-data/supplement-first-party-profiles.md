@@ -1,10 +1,10 @@
 ---
 title: パートナー提供の属性を使用してファーストパーティプロファイルを補完
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 92%
+source-wordcount: '1110'
+ht-degree: 93%
 
 ---
 
@@ -31,7 +31,13 @@ ht-degree: 92%
 >
 >Real-Time CDP に取り込まれたパートナー提供の追加属性は、*平均プロファイルリッチネス*&#x200B;に影響を与えます。プロファイルリッチネスについて詳しくは、[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)を参照してください。
 
-## ユースケースの達成方法：おおまかな概要 {#achieve-the-use-case-high-level}
+## ビデオチュートリアル {#video-walkthrough}
+
+以下のビデオチュートリアルでは、パートナーが指定した属性でファーストパーティオーディエンスを補足する方法について説明しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+
+## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
 ![パートナー提供の属性を使用してプロファイルを強化し、ユースケースのおおまかな概要図を表示します。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
@@ -118,6 +124,6 @@ Commenting out links for now
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
-* Real-Time CDPでのサードパーティデータのサポートを使用して、 [データパートナーの見込み客プロファイルを使用してプロファイルベースを拡大し、顧客との関わりを深めて新しい顧客を獲得または獲得する](/help/rtcdp/partner-data/prospecting.md).
+* Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
 * [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。
 * [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。

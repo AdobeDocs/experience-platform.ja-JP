@@ -3,9 +3,9 @@ title: （ベータ版）計算フィールドを使用して、フラットス�
 type: Tutorial
 description: 計算フィールドを使用して、フラットスキーマファイル内の配列をReal-Time CDPからクラウドストレージの宛先に書き出す方法について説明します。
 badge: 「ベータ版」
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ Experience Platform内の他のフィールドタイプには、配列フィー�
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` 配列を書き出す関数 {#iif-function-export-arrays}
+
+以下を使用します。 `iif` 関数を使用して、特定の条件下で配列の要素を書き出すことができます。 例えば、 `organzations` 上から配列オブジェクトを作成すると、 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![最初と最後の関数のマッピングのスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+この場合、出力ファイルは次のようになります。 この場合、配列の最初の要素は「マーケティング」なので、人物はマーケティング部門のメンバーです。
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` 配列を書き出す関数 {#coalesce-function-export-arrays}
 
 以下を使用します。 `coalesce` 関数を使用して、配列の最初の null 以外の要素にアクセスし、文字列に書き出します。
@@ -188,14 +201,6 @@ johndoe@acme.org,"1538097126"
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` および `sha256` ハッシュ関数 {#hashing-functions}
 
