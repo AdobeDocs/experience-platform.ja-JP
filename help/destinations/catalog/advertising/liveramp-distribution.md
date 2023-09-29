@@ -1,48 +1,46 @@
 ---
-title: LiveRamp — 配布接続
-description: LiveRamp - Distribution コネクタを使用して、以前に LiveRamp に転送されたオーディエンスを、他の広告先に対してアクティブ化する方法について説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
+title: LiveRamp - Distribution Connection
+description: LiveRamp - Distribution コネクタを使用して、以前 LiveRamp に転送されたオーディエンスを、ダウンストリーム広告の宛先に合わせて調整およびアクティブ化する方法について説明します。
+source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 60%
+source-wordcount: '2716'
+ht-degree: 32%
 
 ---
 
 
-# [!DNL LiveRamp - Distribution] 接続 {#liveramp-onboarding}
+# [!DNL LiveRamp - Distribution] 接続
 
 The [!DNL LiveRamp - Distribution] 接続を使用すると、モバイル、Web、ディスプレイ、接続されたテレビメディアをまたいで、Experience Platformからプレミアムパブリッシャーに対してオーディエンスをアクティブ化できます。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、LiveRamp によって作成および管理されます。 お問い合わせや更新リクエストについては、LiveRamp に直接お問い合わせください。 [ここ](mailto:example@email.com).
+>この宛先コネクタとドキュメントページは、LiveRamp によって作成および管理されます。 お問い合わせや更新リクエストについては、LiveRamp に直接お問い合わせください。 [ここ](mailto:adobertcdp@liveramp.com).
 
 ## サポートされる宛先 {#supported-destinations}
 
 [!DNL LiveRamp - Distribution] は、現在、次のプラットフォームに対するオーディエンスのアクティベーションをサポートしています。
 
-* [!DNL 4C Insights]
-* [!DNL Acast]
-* [!DNL Amobee]
-* [!DNL Ampersand.tv]
-* [!DNL Captify]
-* [!DNL Cardlytics]
+* [[!DNL 4C Insights]](#insights)
+* [[!DNL Acast]](#acast)
+* [[!DNL Nexxen]](#nexxen)
+* [[!DNL Ampersand.tv]](#ampersand-tv)
+* [[!DNL Captify]](#captify)
+* [[!DNL Cardlytics]](#cardlytics)
 * [[!DNL Disney (Hulu/ESPN/ABC)]](#disney)
-* [!DNL iHeartMedia]
-* [!DNL Index Exchange]
-* [!DNL Magnite CTV Platform]
-* [!DNL Magnite DV+ (Rubicon Project)]
-* [!DNL One Fox]
-* [!DNL Pandora]
-* [!DNL Reddit]
+* [[!DNL iHeartMedia]](#iheartmedia)
+* [[!DNL Index Exchange]](#index-exchange)
+* [[!DNL Magnite CTV Platform]](#magnite)
+* [[!DNL Magnite DV+ (Rubicon Project)]](#magnite-dv)
+* [[!DNL One Fox]](#fox)
+* [[!DNL Pandora]](#pandora)
+* [[!DNL Reddit]](#reddit)
 * [[!DNL Roku]](#roku)
-* [!DNL Spotify]
-* [!DNL Taboola]
-* [!DNL TargetSpot]
-* [!DNL Teads]
-* [!DNL WB Discovery]
+* [[!DNL Spotify]](#spotify)
+* [[!DNL Taboola]](#taboola)
+* [[!DNL TargetSpot]](#targetspot)
+* [[!DNL Teads]](#teads)
+* [[!DNL WB Discovery]](#wb-discovery)
 
 ## ユースケース {#use-cases}
 
@@ -50,13 +48,13 @@ The [!DNL LiveRamp - Distribution] 接続を使用すると、モバイル、Web
 
 スポーツアパレル小売業者のマーケティングチームが、 [LiveRamp - Onboarding](liveramp-onboarding.md) 接続を使用して、Experience Platformから LiveRamp アカウントにオーディエンスを送信する。
 
-を通じて [!DNL LiveRamp - Distribution] 接続を利用して、オンボードオーディエンスの有効化をこのページの上部に記載されている宛先にトリガーできるようになりました。これにより、モバイル、オープンな web、ソーシャル、 [!DNL CTV] プラットフォーム。
+を通じて [!DNL LiveRamp - Distribution] 接続を使用して、オンボードオーディエンスのアクティベーションを、 [サポートされる宛先](#supported-destinations). その後、モバイル、オープン Web、ソーシャル、および [!DNL CTV] プラットフォーム。
 
 ## オーディエンスを LiveRamp にオンボーディングする {#onboarding}
 
 を通じてオーディエンスをアクティブ化する前に [!DNL LiveRamp - Distribution] 接続、 [LiveRamp - Onboarding](liveramp-onboarding.md) 接続を使用して、Experience Platformオーディエンスを LiveRamp に書き出すことができます。
 
-オーディエンスを LiveRamp にオンボーディングした後、 [宛先に接続](#connect) 手順
+オーディエンスを LiveRamp にオンボーディングした後、 [宛先に接続](#connect) データのアクティベーション用にターゲットの宛先プラットフォームを選択し、設定する手順です。
 
 ## 宛先への接続 {#connect}
 
@@ -77,10 +75,10 @@ The [!DNL LiveRamp - Distribution] 接続を使用すると、モバイル、Web
 
 ![宛先接続画面を示す Platform UI 画像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
+* **[!UICONTROL LiveRamp 組織 ID]**:LiveRamp アカウントの組織 ID( _owner_org_ （LiveRamp が指定する資格情報）。
+* **[!UICONTROL パスワード]**:LiveRamp アカウントのパスワード ( _secret_key_ （LiveRamp が指定する資格情報）。
 * **[!UICONTROL トークン URL]**:LiveRamp トークンの URL。
-* **[!UICONTROL LiveRamp 組織 ID]**:LiveRamp アカウントの組織 ID。
-* **[!UICONTROL ユーザー名]**:LiveRamp アカウントのユーザー名。
-* **[!UICONTROL パスワード]**:LiveRamp アカウントのパスワード。
+* **[!UICONTROL ユーザー名]**:LiveRamp アカウントのユーザー名 ( _account_id_ （LiveRamp が指定する資格情報）。
 
 ### 宛先の詳細を設定 {#destination-details}
 
@@ -89,6 +87,13 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 ![宛先の詳細画面を示す Platform UI 画像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL 名前]**：宛先接続の名前を入力します。
+
+>[!NOTE]
+>
+>宛先に名前を付ける場合、Adobeでは次の形式に従うことをお勧めします。 `LiveRamp - Downstream Destination Name`. この命名パターンにより、 [参照](../../ui/destinations-workspace.md#browse) 「宛先」ワークスペースの「 」タブ
+><br>
+>例：`LiveRamp - Roku`。
+
 * **[!UICONTROL 説明]**：宛先についての説明を入力します。この宛先の目的を簡単に識別できる説明を使用します。
 * **[!UICONTROL 宛先]**：ドロップダウンメニューを使用して、オーディエンスをアクティブ化する宛先を選択します。 ここで選択する宛先は、 [宛先固有の設定](#destination-settings) 画面。
 * **[!UICONTROL 統合]**：宛先に使用する統合アカウントを選択します。
@@ -96,7 +101,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 
 ## 宛先固有の設定 {#destination-settings}
 
-各宛先 [サポート](#supported-destinations) 作成者 [!DNL LiveRamp - Onboarding] では、特定の設定オプションを入力する必要があります。
+各宛先 [サポート](#supported-destinations) 作成者 [!DNL LiveRamp - Distribution] では、特定の設定オプションを入力する必要があります。
 
 各宛先の設定方法に関する詳細なガイダンスについては、以下の節を参照してください。
 
@@ -105,9 +110,13 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C ブランドプロファイル ID"
->abstract="4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID をお持ちでない場合は、4C クライアントサービス担当者にお問い合わせください。"
+>abstract="4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID がない場合は、4C クライアントサービスの担当者にお問い合わせください。"
 
-宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![4C インサイトの宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+
+* **[!UICONTROL 4C ブランドプロファイル ID]**:4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID がない場合は、4C クライアントサービスの担当者にお問い合わせください。
 
 ### [!DNL Acast] {#acast}
 
@@ -116,9 +125,24 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
-### [!DNL Amobee] {#amobee}
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Acast の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
 
 ### [!DNL Ampersand.tv] {#ampersand-tv}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_ampersand_company_name"
+>title="会社名"
+>abstract="宛先パートナーに表示する会社名。 スペースや特殊文字は使用しないでください。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![アンパサンドの宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+
+* **[!UICONTROL 会社名]**：宛先パートナーに表示する会社名。 スペースや特殊文字は使用しないでください。
 
 ### [!DNL Captify] {#captify}
 
@@ -127,6 +151,12 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Captify の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### [!DNL Cardlytics] {#cardlytics}
 
 >[!CONTEXTUALHELP]
@@ -134,15 +164,20 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Cardlytics の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="広告主データの宛先に関する利用規約"
->abstract="`I AGREE` と入力して、Disney 広告主のデータ規約への承認と同意を確認します。"
+>abstract="入力 `I AGREE` をクリックして、Disney 広告主のデータ利用条件に対する確認および同意を確認します。"
 
-<!-- 
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
+<!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
@@ -152,7 +187,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="メールアドレス"
->abstract="個人に関連付けられたメールアドレスを入力します。このメールアドレスは、広告主データの利用規約への署名として機能します。このメールアドレスは、必要に応じて連絡する際に使用されます。"
+>abstract="個人に関連付けられたメールアドレスを入力します。このメールアドレスは、広告主データの利用規約への署名として機能します。このメールアドレスは、必要に応じて連絡にも使用されます。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -169,35 +204,113 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![iHeartMedia の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### [!DNL Index Exchange] {#index-exchange}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
+>title="アカウント名"
+>abstract="Index Exchange クライアントアカウント名。 スペースや特殊文字は使用しないでください。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Index Exchange の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+
+* **[!UICONTROL アカウント名]**:Index Exchange クライアントアカウント名。 スペースや特殊文字は使用しないでください。
 
 ### [!DNL Magnite CTV Platform] {#magnite}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitectv_client"
+>title="クライアント"
+>abstract="宛先パートナーに表示するクライアント名です。 会社名を使用します。スペースや特殊文字は使用しないでください。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Magnite CTV の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+
+* **[!UICONTROL クライアント]**：宛先パートナーに表示するクライアント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
+>title="パートナー ID"
+>abstract="セグメント/データを所有するパブリッシャーに関連付けられた Rubicon プロジェクトパートナー ID。 使用すべき値が不明な場合は、Rubicon Project アカウント担当者にお問い合わせください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
+>title="シート ID"
+>abstract="Magnite アカウントマネージャーから提供される Magnite DV+ Seat ID"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Magnite DV+宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+
+* **[!UICONTROL パートナー ID]**：セグメント/データを所有する発行者に関連付けられた Rubicon プロジェクトパートナー ID。 使用すべき値が不明な場合は、Rubicon Project アカウント担当者にお問い合わせください。
+* **[!UICONTROL シート ID]**:Magnite アカウントマネージャーから提供される Magnite DV+ Seat ID
+
+### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_ratetype"
+>title="レートタイプ"
+>abstract="レートタイプは、データ使用量の請求方法を表します。 0.00 ドルの料金はすべて定額料金にする必要があります。 使用するレートの種類が不明な場合は、Nexxen の担当者に確認してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_marketid"
+>title="市場 ID"
+>abstract="Nexxen データ契約の作成先となる数値の市場 ID を入力します。 Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、-1 と入力します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
+>title="広告主 ID"
+>abstract="Nexxen プラットフォームの単一の広告主にデータを送信する場合は、Amobe Advertiser ID という数値を入力します。 データを市場のすべての広告主が利用できるようにする場合、またはこれらのセグメントが「常にオン」の場合は、-1 と入力してください。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_contactemail"
+>title="連絡先メール"
+>abstract="Nexxen がデータ契約の詳細を送信する際に使用する電子メールアドレスを入力します。 おそらくこれは自分のメールアドレスですが、メールのエイリアスでもかまいません。 複数の受信者の場合は、コンマ (`email1@domain.com`,`email2@domain.com`など )。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Nexxen の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+
+* **[!UICONTROL レートタイプ]**：レートタイプは、データ使用量の請求方法を表します。 0.00 ドルの料金はすべて定額料金にする必要があります。 使用するレートの種類が不明な場合は、Nexxen の担当者に確認してください。
+* **[!UICONTROL 市場 ID]**:Nexxen データ契約の作成先となる数値の市場 ID を入力します。 Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、-1 と入力します。
+* **[!UICONTROL 広告主 ID]**:Nexxen プラットフォームの単一の広告主にデータを送信する場合は、Nexxen Advertiser ID という数値を入力します。 データを市場のすべての広告主が利用できるようにする場合、またはこれらのセグメントが「AlwaysOn」の場合は、-1 と入力します。
+* **[!UICONTROL 連絡先メール]**:Nexxen がデータ契約の詳細を送信する際に使用する電子メールアドレスを入力します。 おそらくこれは自分のメールアドレスですが、メールのエイリアスでもかまいません。 複数の受信者の場合は、コンマ ( `email1@domain.com`, `email2@domain.com`) をクリックします。
 
 ### [!DNL One Fox] {#fox}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_fox_client"
+>title="クライアント"
+>abstract="パートナーに表示する会社/配信アカウントの名前。 使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。 スペースや特殊文字は使用しないでください。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![One Fox 宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+
+* **[!UICONTROL クライアント]**：パートナーに表示する会社/配信アカウントの名前。 デフォルトで会社名を使用します。 使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。 スペースや特殊文字は使用しないでください。
+
 ### [!DNL Pandora] {#pandora}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_data_provider_name"
->title="データプロバイダー名"
->abstract="Pandora に表示したい会社名。名前には、最大 40 文字の小文字および英数字を使用できます（例：My_Company）。"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_rep_email"
->title="アカウント担当者のメールアドレス"
->abstract="Pandora のアカウント担当者のメールアドレス。このアドレスは、分類の更新を送信するために使用されます。複数のアドレスを入力する場合は、コンマで区切ります。"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_email"
->title="メールアドレス"
->abstract="このアドレスは、分類の更新を送信するために使用されます。複数のアドレスを入力する場合は、コンマで区切ります。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_pandora_account_name"
 >title="アカウント名"
 >abstract="お客様の Pandora アカウントの名前。アカウント名が不明な場合は、Pandora のアカウント担当者にお問い合わせください。スペースや特殊文字は使用しないでください。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Pandora の宛先の顧客データフィールドを示すプラットフォーム UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+
+* **[!UICONTROL アカウント名]**:Pandora アカウントの名前。 アカウント名が不明な場合は、Pandora のアカウント担当者にお問い合わせください。スペースや特殊文字は使用しないでください。
 
 ### [!DNL Reddit] {#reddit}
 
@@ -211,7 +324,14 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="Reddit の広告主名"
 >abstract="Reddit の広告主名。スペースや特殊文字は使用しないでください。"
 
-### Roku {#roku}
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Reddit の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+
+* **[!UICONTROL 広告主 ID をレディット]**:Reddit 広告主 ID。 「t2_」または「a2_」で始まる必要があります。広告主 ID が不明な場合は、Reddit の担当者にお問い合わせください。
+* **[!UICONTROL 広告主名をレディット]**:Reddit 広告主の名前。 スペースや特殊文字は使用しないでください。
+
+### [!DNL Roku] {#roku}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_roku_email"
@@ -237,10 +357,11 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_spotify_account_token"
->title="アカウントトークン"
->abstract="データを移植する場所と、このワークフローの使用を検証したことを Spotify に通知する英数字の識別子。このトークンを取得するには、Spotify のアカウントマネージャーにお問い合わせください。"
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Spotify の宛先でサポートされている識別子を示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
 
 ### [!DNL Taboola] {#taboola}
 
@@ -249,6 +370,18 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="アカウントマネージャーのメールアドレス"
 >abstract="Taboola アカウントマネージャーのメールアドレス。"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_taboola_seg_type"
+>title="セグメントタイプ"
+>abstract="セグメントタイプ。 現在、ファーストパーティセグメントのみがサポートされています。"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![Taboola の宛先でサポートされている ID を示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+
+* **[!UICONTROL アカウントマネージャーの電子メールアドレス]**:Taboola アカウントマネージャーの電子メールアドレス。
+* **[!UICONTROL セグメントタイプ]**：セグメントタイプ。 現在、ファーストパーティセグメントのみがサポートされています。
+
 ### [!DNL TargetSpot] {#targetspot}
 
 >[!CONTEXTUALHELP]
@@ -256,7 +389,24 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![TargetSpot の宛先でサポートされている識別子を示す、Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### [!DNL Teads] {#teads}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_teads_teadsid"
+>title="ティード ID"
+>abstract="ティード ID"
+
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![TargetSpot の宛先でサポートされている識別子を示す、Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+
+* **[!UICONTROL ティード ID]**：ティード ID
 
 ### [!DNL WB Discovery] {#wb-discovery}
 
@@ -265,9 +415,15 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >title="クライアント名"
 >abstract="宛先パートナーに表示する広告主のアカウント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
+宛先の詳細を設定するには、以下のフィールドに入力します。
+
+![WB Discovery 宛先でサポートされている ID を示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+
+* **[!UICONTROL クライアント名]**：宛先パートナーに表示する広告主アカウント名。 会社名を使用します。スペースや特殊文字は使用しないでください。
+
 ### アラートの有効化 {#enable-alerts}
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。データフローのステータスに関する通知を受け取るには、リストからアラートを選択します。 アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)に関するガイドを参照してください。
 
 宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
@@ -279,17 +435,17 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 
 The [!DNL LiveRamp - Distribution] 接続は、 [LiveRamp - Onboarding](liveramp-onboarding.md) 接続。
 
-オーディエンスを正常にアクティブ化するには、この手順で、 **同じオーディエンス** 以前に LiveRamp にオンボーディングした
+オーディエンスを正常にアクティブ化するには、 **同じオーディエンス** あなたが持っている [以前オンボード済み](liveramp-onboarding.md) を LiveRamp に追加します。
 
 >[!IMPORTANT]
 >
->以前に LiveRamp にオンボーディングされていないオーディエンスを選択しても、新しいオーディエンスのオンボーディングはトリガーされません。
+>以前に [LiveRamp - Onboarding](liveramp-onboarding.md) 接続は、新しいオーディエンスのオンボーディングをトリガーしません。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 オーディエンスのアクティベーションを確認および監視するには、LiveRamp アカウントにログインし、アクティベーション指標を確認します。
 
-オーディエンスのアクティベーションに関するご質問は、LiveRamp アカウント担当者にお問い合わせください。
+オーディエンスのアクティベーションに関するご質問は、LiveRamp のアカウント担当者にお問い合わせください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -297,4 +453,4 @@ The [!DNL LiveRamp - Distribution] 接続は、 [LiveRamp - Onboarding](liveramp
 
 ## その他のリソース {#additional-resources}
 
-[!DNL LiveRamp - Onboarding] ストレージの設定方法について詳しくは、[公式ドキュメント](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)を参照してください。
+の設定方法の詳細については、 [!DNL LiveRamp - Onboarding] 宛先 (「 [LiveRamp — オンボーディングドキュメント](liveramp-onboarding.md).
