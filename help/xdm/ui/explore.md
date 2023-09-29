@@ -5,9 +5,9 @@ title: UI でのスキーマリソースの調査
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループ、データ型を調べる方法について説明します。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platformでは、すべての Experience Data Model(XDM) スキ
 
 ## スキーマリソースの検索 {#lookup}
 
-Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 この [!UICONTROL スキーマ] workspace の **[!UICONTROL 参照]** タブをクリックし、組織内のすべてのスキーマを参照します。また、参照用の専用タブも追加されています。 **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**、および **[!UICONTROL データタイプ]** それぞれ
+Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** をクリックします。 The [!UICONTROL スキーマ] workspace には、 **[!UICONTROL 参照]** タブをクリックし、組織内のすべてのスキーマを参照します。また、参照用の専用タブも追加されています。 **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**、および **[!UICONTROL データタイプ]** それぞれ。
 
 ![](../images/ui/explore/tabs.png)
 
@@ -28,9 +28,9 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 
 例えば、リストをフィルターして、Adobeが提供する標準データ型のみを表示するには、「 」を選択します。 **[!UICONTROL データタイプ]** および **[!UICONTROL Adobe]** の下に **[!UICONTROL タイプ]** および **[!UICONTROL 所有者]** 各セクションに割り当てられます。
 
-この **[!UICONTROL プロファイルに含まれる]** toggle を使用すると、結果をフィルタリングして、で使用可能になっているスキーマで使用されているリソースのみを表示できます [リアルタイム顧客プロファイル](../../profile/home.md).
+The **[!UICONTROL プロファイルに含まれる]** toggle を使用すると、結果をフィルタリングして、で使用可能になっているスキーマで使用されているリソースのみを表示できます。 [リアルタイム顧客プロファイル](../../profile/home.md). The **[!UICONTROL アドホックスキーマを表示]** 切り替えは、1 つのデータセットでのみ使用するために名前空間が設定されたフィールドを使用して作成されたスキーマのリストをフィルターします。
 
-![](../images/ui/explore/filter.png)
+![The [!UICONTROL スキーマ] workspace [!UICONTROL 参照] タブをクリックし、フィルターパネルをハイライトします。](../images/ui/explore/filter.png)
 
 リソースを **[!UICONTROL クラス]**, **[!UICONTROL フィールドグループ]**&#x200B;または **[!UICONTROL データタイプ]** タブ、 **[!UICONTROL Adobe]** 標準のリソースのみを表示するか、 **[!UICONTROL 顧客]** ：組織が作成したリソースのみを表示します。
 
@@ -66,15 +66,15 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 
 ![](../images/ui/explore/data-types.png)
 
-角括弧 (`[]`) は、特定のデータ型の配列を表します。 例えば、 **[!UICONTROL 文字列]\[]** は、フィールドに文字列値の配列が必要であることを示します。 データタイプ **[!UICONTROL 支払い項目]\[]** は、 [!UICONTROL 支払い項目] データタイプ。
+角括弧 (`[]`) は、その特定のデータ型の配列を表します。 例えば、 **[!UICONTROL 文字列]\[]** は、フィールドに文字列値の配列が必要であることを示します。 次のようなデータタイプ **[!UICONTROL 支払い項目]\[]** に準拠するオブジェクトの配列を示します [!UICONTROL 支払い項目] データタイプ。
 
 配列フィールドがオブジェクトタイプに基づいている場合、キャンバスでそのアイコンを選択して、各配列項目に対して期待される属性を表示できます。
 
 ![](../images/ui/explore/array-type.png)
 
-### [!UICONTROL フィールドプロパティ] {#field-properties}
+### [!UICONTROL フィールドのプロパティ] {#field-properties}
 
-キャンバスで任意のフィールドの名前を選択すると、右側のレールが更新され、そのフィールドの詳細が以下に表示されます **[!UICONTROL フィールドプロパティ]**. これには、フィールドの意図した使用例の説明、デフォルト値、パターン、形式、必須フィールドかどうかなどが含まれます。
+キャンバスで任意のフィールドの名前を選択すると、右側のレールが更新され、そのフィールドの詳細が以下に表示されます。 **[!UICONTROL フィールドのプロパティ]**. これには、フィールドの意図した使用例の説明、デフォルト値、パターン、形式、必須フィールドかどうかなどが含まれます。
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -86,13 +86,13 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 
 ID フィールドを含むスキーマを検査する場合、これらのフィールドは、スキーマに提供するクラスまたはフィールドグループの下の左側のレールに表示されます。 左側のレールで ID フィールド名を選択して、フィールドがネストされている深さに関係なく、キャンバスにフィールドを表示します。
 
-キャンバス上で ID フィールドが指紋アイコン (![指紋アイコン画像](../images/ui/explore/identity-symbol.png)) をクリックします。 ID フィールドの名前を選択すると、 [id 名前空間](../../identity-service/namespaces.md) フィールドがスキーマのプライマリ ID かどうかを示します。
+キャンバス上で ID フィールドが指紋アイコン (![指紋アイコン画像](../images/ui/explore/identity-symbol.png)) をクリックします。 ID フィールドの名前を選択すると、 [ID 名前空間](../../identity-service/namespaces.md) フィールドがスキーマのプライマリ ID かどうかを示します。
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->詳しくは、 [ID フィールドの定義](./fields/identity.md) id フィールドとダウンストリームの Platform サービスとの関係に関する詳細。
+>次のガイドを参照してください： [ID フィールドの定義](./fields/identity.md) id フィールドとダウンストリームの Platform サービスとの関係に関する詳細。
 
 ### 関係フィールド {#relationship}
 

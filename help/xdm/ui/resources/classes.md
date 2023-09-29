@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: ユーザーインターフェイスでクラスを作成および編集するExperience Platformを説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 4%
+source-wordcount: '1374'
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"
->title="標準またはカスタムクラスフィルター"
->abstract="使用可能なクラスのリストは、作成方法に基づいて事前にフィルタリングされています。 ラジオボタンを選択して、「標準」オプションと「カスタム」オプションのどちらかを選択します。 「標準」オプションは、Adobeが作成したエンティティを表示し、XDM の個別プロファイルと XDM エクスペリエンスイベントクラスの両方を含みます。 「カスタム」オプションは、組織内で作成されたエンティティを表示します。 クラスの作成と編集について詳しくは、ドキュメントを参照してください。"
+>title="標準またはカスタムのクラスフィルター"
+>abstract="使用可能なクラスのリストは、作成方法に基づいて事前にフィルタリングされています。ラジオボタンを選択して、「標準」オプションと「カスタム」オプションのいずれかを選択します。「標準」オプションは、アドビが作成したエンティティを表示し、XDM 個人プロファイルクラスと XDM エクスペリエンスイベントクラスの両方を含みます。「カスタム」オプションは、組織内で作成したエンティティを表示します。クラスの作成と編集について詳しくは、ドキュメントを参照してください。"
 
 Adobe Experience Platformでは、スキーマのクラスは、スキーマに含まれるデータ（レコードまたは時系列）の動作面を定義します。 これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
@@ -30,17 +30,29 @@ Adobeは、次のような、いくつかの標準（「コア」）Experience D
 
 このガイドは必須ではありませんが、 [UI でのスキーマの構成](../../tutorials/create-schema-ui.md) の様々な機能を身に付ける [!DNL Schema Editor].
 
+## はじめに
+
+Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 [!UICONTROL スキーマ] ワークスペースに移動して、 **[!UICONTROL クラス]** タブをクリックします。 使用可能なクラスのリストが表示されます。
+
+## クラスをフィルター {#filter}
+
+クラスのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定では、Adobeで定義されたクラスが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、 [!UICONTROL 標準] および [!UICONTROL カスタム] オプション。 The [!UICONTROL 標準] 「 」オプションは、Adobeで作成されたエンティティと [!UICONTROL カスタム] 「 」オプションは、組織内で作成されたエンティティを表示します。
+
+![The [!UICONTROL クラス] タブ [!UICONTROL スキーマ] ワークスペース [!UICONTROL 標準] および [!UICONTROL カスタム] ハイライト表示されました。](../../images/ui/resources/classes/standard-and-custom-classes.png)
+
+>[!TIP]
+>
+>ワークスペースの検索機能を使用して、スキーマを見つけやすくすることができます。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
+
 ## 新しいクラスの作成 {#create}
 
-Adobe Analytics の **[!UICONTROL スキーマ]** ワークスペース、選択 **[!UICONTROL スキーマを作成]**&#x200B;を選択し、「 **[!UICONTROL 参照]** をドロップダウンから選択します。
+Platform UI でクラスを作成するには、2 つのメソッドがあります。 Adobe Analytics の **[!UICONTROL スキーマ]** ワークスペース、選択 **[!UICONTROL スキーマを作成]**、または [!UICONTROL クラス] タブの選択 **[!UICONTROL クラスを作成]**.
 
-![](../../images/ui/resources/classes/browse-classes.png)
+![The [!UICONTROL クラス] タブ [!UICONTROL スキーマ] ワークスペース [!UICONTROL スキーマを作成] および [!UICONTROL クラスを作成] ハイライト](../../images/ui/resources/classes/create-class-methods.png)
 
-使用可能なクラスのリストから選択できるダイアログが表示されます。 ダイアログの上部で、「 」を選択します。 **[!UICONTROL 新しいクラスを作成]**. 次に、新しいクラスに、表示名（クラスを説明する短く、一意で、わかりやすいクラス名）、説明、およびスキーマが定義するデータの動作 (**[!UICONTROL レコード]** または **[!UICONTROL 時系列]**) をクリックします。
+次を選択した場合、 **[!UICONTROL クラスを作成]**、 [!UICONTROL クラスを作成] ダイアログが表示されます。 を入力します。 [!UICONTROL 名前] および [!UICONTROL 説明] クラスの場合は、ラジオボタンを使用してクラスの意図した動作を選択します。 クラスは、レコード系列または時系列です。 選択 **[!UICONTROL 作成]** をクリックして選択を確定します。
 
-終了したら、「 」を選択します。 **[!UICONTROL クラスを割り当て]**.
-
-![](../../images/ui/resources/classes/class-details.png)
+![The [!UICONTROL クラスを作成] ～との対話 [!UICONTROL 作成] ハイライト表示されました。](../../images/ui/resources/classes/create-class-dialog.png)
 
 The [!DNL Schema Editor] が表示され、作成したカスタムクラスに基づく新しいスキーマがキャンバスに表示されます。 クラスにはまだフィールドが追加されていないので、スキーマには `_id` フィールド： [!DNL Schema Registry].
 
@@ -50,9 +62,9 @@ The [!DNL Schema Editor] が表示され、作成したカスタムクラスに�
 >
 >組織で定義されたクラスを実装するスキーマを構築する場合、スキーマフィールドグループは互換性のあるクラスでのみ使用できることに注意してください。 定義したクラスは新しいので、互換性のあるフィールドグループは「 **[!UICONTROL フィールドグループを追加]** ダイアログ。 代わりに、 [新しいフィールドグループを作成する](./field-groups.md#create) そのクラスで使用する 次に新しいクラスを実装するスキーマを作成すると、定義したフィールドグループが一覧表示され、使用できます。
 
-これで、以下を開始できます。 [クラスへのフィールドの追加](#add-fields)：クラスを使用するすべてのスキーマで共有されます。
+### クラスの作成または編集 {#create-or-edit}
 
-## 既存のクラスの編集 {#edit}
+次を選択した場合、 **[!UICONTROL スキーマを作成]**、 [!UICONTROL スキーマを作成] ワークフローが表示されます。 Adobe Analytics の [!UICONTROL スキーマの詳細] セクション、選択 **[!UICONTROL その他]**. 使用可能なクラスのリストが表示されます。 ここから、新しいクラスを基にする既存のクラスを参照およびフィルタリングできます。
 
 >[!NOTE]
 >
@@ -60,13 +72,25 @@ The [!DNL Schema Editor] が表示され、作成したカスタムクラスに�
 >
 >カスタムクラスを保存し、データ取り込みで使用した後は、その後は追加的な変更のみおこなうことができます。 詳しくは、 [スキーマ進化のルール](../../schema/composition.md#evolution) を参照してください。
 
-既存のクラスを編集するには、 **[!UICONTROL 参照]** タブをクリックし、編集するクラスを使用するスキーマの名前を選択します。
+![The [!UICONTROL スキーマを作成] を使用したワークフロー [!UICONTROL その他] で強調表示された [!UICONTROL スキーマの詳細] 」セクションに入力します。](../../images/ui/resources/classes/other-schema-details.png)
 
-![](../../images/ui/resources/classes/select-for-edit.png)
+ラジオボタンを選択して、カスタムクラスか標準クラスかに基づいてクラスをフィルタリングします。 また、業種に基づいて使用可能な結果をフィルタリングしたり、検索フィールドを使用して特定のクラスを検索したりできます。
 
->[!TIP]
->
->ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
+![The [!UICONTROL スキーマを作成] 検索バーを含むワークフロー [!UICONTROL カスタム]、および [!UICONTROL 業界] ハイライト表示されました。](../../images/ui/resources/classes/filter-and-search.png)
+
+適切なクラスを決定するのに役立つ情報 (![情報アイコン。](../../images/ui/resources/classes/info.png)) とプレビュー (![プレビューアイコン。](../../images/ui/resources/classes/preview.png)) 個のアイコンをクラスごとに追加します。 情報アイコンをクリックすると、関連付けられているクラスと業界の説明を示すダイアログが開きます。 プレビューアイコンを使用すると、スキーマダイアグラムとそのプロパティを含むクラスのプレビューダイアログが開きます。
+
+![スキーマ図とクラスプロパティがハイライト表示された、選択したクラスのプレビュー。](../../images/ui/resources/classes/class-preview.png)
+
+任意の行を選択してクラスを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして選択を確定します。
+
+![The [!UICONTROL スキーマを作成] 使用可能なクラスのテーブルから選択したクラスを持つワークフローと [!UICONTROL 次へ] ハイライト表示されました。](../../images/ui/resources/classes/select-class.png)
+
+The [!UICONTROL 名前と説明] セクションが表示されます。 この節では、スキーマを識別する名前と説明を指定します。&#x200B;キャンバスには、選択したクラスとスキーマ構造を確認できるように、スキーマの基本構造（クラスで提供）が表示されます。
+
+クラスの短く、わかりやすい、一意の、わかりやすい名前を [!UICONTROL スキーマの表示名] テキストフィールド。 次に、適切な説明を入力して、スキーマが定義するデータの動作を識別します。 スキーマの構造を確認し、設定に満足したら、「 」を選択します。 **[!UICONTROL 完了]** をクリックしてスキーマを作成します。
+
+![The [!UICONTROL 名前とレビュー] のセクション [!UICONTROL スキーマを作成] ワークフローと [!UICONTROL スキーマの表示名], [!UICONTROL 説明]、および [!UICONTROL 完了] ハイライト表示されました。](../../images/ui/resources/classes/name-and-review-class.png)
 
 The [!DNL Schema Editor] が表示され、スキーマの構造がキャンバスに表示されます。 これで、以下を開始できます。 [クラスへのフィールドの追加](#add-fields).
 

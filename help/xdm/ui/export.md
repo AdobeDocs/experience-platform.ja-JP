@@ -4,9 +4,9 @@ title: UI での XDM スキーマの書き出し
 description: Adobe Experience Platformユーザーインターフェイスで、既存のスキーマを別のサンドボックスまたは組織に書き出す方法を説明します。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,19 @@ Platform UI では XDM リソースを書き出すことができますが、ワ
 
 ## 書き出しペイロードの生成 {#generate-export-payload}
 
-Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 内 [!UICONTROL スキーマ] ワークスペースで、書き出すスキーマの行を選択して、右側のサイドバーにスキーマの詳細を表示します。
+書き出しペイロードは、Platform UI の [!UICONTROL 参照] 」タブをクリックするか、スキーマエディターのスキーマのキャンバスから直接アクセスします。
+
+書き出しペイロードを生成するには、「 **[!UICONTROL スキーマ]** をクリックします。 内 [!UICONTROL スキーマ] ワークスペースで、書き出すスキーマの行を選択して、右側のサイドバーにスキーマの詳細を表示します。
 
 >[!TIP]
 >
->詳しくは、 [XDM リソースの調査](./explore.md) を参照してください。
+>次のガイドを参照してください： [XDM リソースの調査](./explore.md) を参照してください。
 
 次に、 **[!UICONTROL JSON をコピー]** アイコン (![コピーアイコン](../images/ui/export/icon.png)) を使用可能なオプションから削除します。
 
 ![スキーマ行と [!UICONTROL JSON にコピー] ハイライト表示されました。](../images/ui/export/copy-json.png)
 
-これにより、スキーマ構造に基づいて生成された JSON ペイロードがクリップボードにコピーされます。 の[!DNL Loyalty Members]」スキーマが上に表示されている場合、次の JSON が生成されます。
+これにより、スキーマ構造に基づいて生成された JSON ペイロードがクリップボードにコピーされます。 (「[!DNL Loyalty Members]」スキーマが上に表示されている場合、次の JSON が生成されます。
 
 ```json
 [
@@ -201,13 +203,21 @@ Platform UI で、「 **[!UICONTROL スキーマ]** をクリックします。 
 ]
 ```
 
+ペイロードは、 [!UICONTROL その他] をクリックします。 ドロップダウンメニューには次の 2 つのオプションがあります。 [!UICONTROL JSON 構造をコピーする] および [!UICONTROL スキーマを削除].
+
+>[!NOTE]
+>
+>プロファイルに対して有効になっているか、関連するデータセットがある場合、スキーマは削除できません。
+
+![次のスキーマエディター： [!UICONTROL その他] および [!UICONTROL JSON にコピー] ハイライト表示されました。](../images/ui/export/schema-editor-copy-json.png)
+
 ペイロードは配列の形式を取り、各配列項目は、書き出すカスタム XDM リソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]&quot;カスタムフィールドグループと&quot;[!DNL Loyalty Members]」個のスキーマが含まれます。 スキーマが使用するコアリソースは、すべてのサンドボックスおよび組織で使用できるので、書き出しには含まれません。
 
 組織のテナント ID の各インスタンスは、次のように表示されます。 `<XDM_TENANTID_PLACEHOLDER>` ペイロード内に含まれます。 これらのプレースホルダーは、次の手順でスキーマを読み込む場所に応じて、自動的に適切なテナント ID 値に置き換えられます。
 
 ## API を使用してリソースを読み込む
 
-スキーマの書き出し JSON をコピーしたら、それをに対するPOSTリクエストのペイロードとして使用できます `/rpc/import` エンドポイント（スキーマレジストリ API 内） 詳しくは、 [インポートエンドポイントガイド](../api/import.md) を参照してください。
+スキーマの書き出し JSON をコピーしたら、それをに対するPOSTリクエストのペイロードとして使用できます。 `/rpc/import` エンドポイント（スキーマレジストリ API 内） 詳しくは、 [インポートエンドポイントガイド](../api/import.md) を参照してください。
 
 ## 次の手順
 

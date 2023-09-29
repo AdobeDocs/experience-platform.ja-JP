@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
 workflow-type: tm+mt
-source-wordcount: '3340'
+source-wordcount: '3571'
 ht-degree: 4%
 
 ---
@@ -31,15 +31,25 @@ ht-degree: 4%
 >
 >この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データを Platform に取り込む場合は、 [AI で生成されたレコメンデーションによって作成された XDM スキーマにそのデータをマッピングします。](../../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）。手動でスキーマを作成する必要はありません。
 
-内 [!UICONTROL スキーマ] ワークスペース、選択 **[!UICONTROL スキーマを作成]** をクリックします。 表示されるドロップダウンで、次の中から選択できます **[!UICONTROL XDM 個人プロファイル]** および **[!UICONTROL XDM ExperienceEvent]** をスキーマの基本クラスとして使用します。 または、 **[!UICONTROL 参照]** 使用可能なクラスの完全なリストから選択する場合、または [新しいカスタムクラスの作成](./classes.md#create) 代わりに、
+Adobe Analytics の [!UICONTROL スキーマ] ワークスペース、選択 **[!UICONTROL スキーマを作成]** をクリックします。
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![スキーマワークスペース [!UICONTROL スキーマを作成] ハイライト表示されました。](../../images/ui/resources/schemas/create-schema.png)
 
-クラスを選択すると、 [!DNL Schema Editor] が表示され、スキーマの基本構造（クラスで指定）がキャンバスに表示されます。 ここから、右側のレールを使用して **[!UICONTROL 表示名]** および **[!UICONTROL 説明]** スキーマの
+The [!UICONTROL スキーマを作成] ワークフローが表示されます。 次のいずれかを選択して、スキーマの基本クラスを選択できます。 **[!UICONTROL 個々のプロファイル]**, **[!UICONTROL エクスペリエンスイベント]**&#x200B;または **[!UICONTROL その他]**&#x200B;に続いて **[!UICONTROL 次へ]** をクリックして選択を確定します。 詳しくは、 [XDM 個人プロファイル](../../classes/individual-profile.md) および [XDM ExperienceEvent](../../classes/experienceevent.md) これらのクラスの詳細については、ドキュメントを参照してください。
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![The [!UICONTROL スキーマを作成] 3 つのクラスオプションを使用するワークフローと [!UICONTROL 次へ] ハイライト表示されました。](../../images/ui/resources/schemas/schema-class-options.png)
 
-これで、次の方法でスキーマの構造の構築を開始できます。 [スキーマフィールドグループの追加](#add-field-groups).
+クラスを選択すると、 [!UICONTROL 名前とレビュー] セクションが表示されます。 この節では、スキーマを識別する名前と説明を指定します。&#x200B;キャンバスには、選択したクラスとスキーマ構造を確認できるように、スキーマの基本構造（クラスで提供）が表示されます。
+
+人に優しいを入力 [!UICONTROL スキーマの表示名] 」と入力します。 次に、スキーマを識別するのに役立つ適切な説明を入力します。 スキーマの構造を確認し、設定に満足したら、「 」を選択します。 **[!UICONTROL 完了]** をクリックしてスキーマを作成します。
+
+![The [!UICONTROL 名前とレビュー] のセクション [!UICONTROL スキーマを作成] ワークフローと [!UICONTROL スキーマの表示名], [!UICONTROL 説明]、および [!UICONTROL 完了] ハイライト表示されました。](../../images/ui/resources/schemas/name-and-review.png)
+
+The [!UICONTROL スキーマ] [!UICONTROL 参照] 」タブが表示されます。 これで、最近作成したスキーマをで編集できるようになりました。 [!DNL Schema Editor] とが使用可能なスキーマのリストに表示されます。
+
+![最近作成したスキーマが表示されるスキーマエディター。](../../images/ui/resources/schemas/schema-details.png)
+
+これで、次の方法でスキーマの構造の構築を開始できます。 [スキーマフィールドグループの追加](#add-field-groups) （内） [!DNL Schema Editor].
 
 ## 既存のスキーマの編集 {#edit}
 
@@ -47,13 +57,13 @@ ht-degree: 4%
 >
 >スキーマを保存し、データ取り込みで使用した後は、追加的な変更のみを加えることができます。 詳しくは、 [スキーマ進化のルール](../../schema/composition.md#evolution) を参照してください。
 
-既存のスキーマを編集するには、 **[!UICONTROL 参照]** タブをクリックし、編集するスキーマの名前を選択します。
+既存のスキーマを編集するには、 **[!UICONTROL 参照]** 」タブをクリックし、編集するスキーマの名前を選択します。 検索バーを使用して、使用可能なオプションのリストを絞り込むこともできます。
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![スキーマが強調表示されたスキーマワークスペース。](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
->ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 詳しくは、 [XDM リソースの調査](../explore.md) を参照してください。
+>ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
 
 スキーマを選択すると、 [!DNL Schema Editor] が表示され、スキーマの構造がキャンバスに表示されます。 次の操作を実行できます。 [フィールドグループを追加](#add-field-groups) スキーマ ( または [個々のフィールドを追加](#add-individual-fields) これらのグループから ) [フィールドの表示名を編集](#display-names)または [既存のカスタムフィールドグループの編集](./field-groups.md#edit) スキーマが適用する場合。
 
@@ -67,49 +77,49 @@ ht-degree: 4%
 
 ![を使用したスキーマエディター [!UICONTROL フィールドの表示名を表示] ハイライト表示されました。](../../images/ui/resources/schemas/display-name-toggle.png)
 
-標準フィールドグループの表示名はシステムで生成されますが、カスタマイズは可能です ( [表示名](#display-names) 」セクションに入力します。 表示名は、マッピングやデータセットプレビューを含む複数の UI ビューに反映されます。 デフォルト設定はオフで、フィールド名が元の値で表示されます。
+標準フィールドグループの表示名はシステムで生成されますが、カスタマイズは可能です ( [名前を表示](#display-names) 」セクションに入力します。 表示名は、マッピングやデータセットプレビューを含む複数の UI ビューに反映されます。 デフォルト設定はオフで、フィールド名が元の値で表示されます。
 
-## スキーマへのフィールドグループの追加 {#add-field-groups}
+## スキーマにフィールドグループを追加する {#add-field-groups}
 
 >[!NOTE]
 >
 >この節では、既存のフィールドグループをスキーマに追加する方法について説明します。 新しいカスタムフィールドグループを作成する場合は、 [フィールドグループの作成と編集](./field-groups.md#create) 代わりに、
 
-以下の [!DNL Schema Editor]に値を入力する場合は、フィールドグループを使用してスキーマにフィールドを追加できます。 開始するには、 **[!UICONTROL 追加]** 次の **[!UICONTROL フィールドグループ]** をクリックします。
+以下に示すように、 [!DNL Schema Editor]に値を入力する場合は、フィールドグループを使用してスキーマにフィールドを追加できます。 開始するには、「 **[!UICONTROL 追加]** 次の **[!UICONTROL フィールドグループ]** をクリックします。
 
-![スキーマエディターと [!UICONTROL 追加] から [!UICONTROL フィールドグループ] セクションがハイライト表示されています。](../../images/ui/resources/schemas/add-field-group-button.png)
+![を含むスキーマエディター [!UICONTROL 追加] から [!UICONTROL フィールドグループ] セクションがハイライト表示されました。](../../images/ui/resources/schemas/add-field-group-button.png)
 
 ダイアログが開き、スキーマ用に選択できるフィールドグループのリストが表示されます。 フィールドグループは 1 つのクラスとのみ互換性があるので、スキーマの選択されたクラスに関連付けられているフィールドグループのみが表示されます。 デフォルトでは、リストに表示されるフィールドグループは、組織内での使用頻度に基づいて並べ替えられます。
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![The [!UICONTROL フィールドグループを追加] 強調表示されたダイアログ [!UICONTROL 人気度] 列がハイライト表示されました。](../../images/ui/resources/schemas/field-group-popularity.png)
 
 追加するフィールドの一般的なアクティビティまたはビジネス領域がわかっている場合は、左側のレールから業種別のカテゴリを 1 つ以上選択して、表示されるフィールドグループのリストをフィルタリングします。
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![The [!UICONTROL フィールドグループを追加] 強調表示されたダイアログ [!UICONTROL 業界] フィルターおよび [!UICONTROL 業界] 列がハイライト表示されました。](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
->XDM での業界固有のデータモデリングのベストプラクティスについて詳しくは、 [業界データモデル](../../schema/industries/overview.md).
+>XDM での業界固有のデータモデリングのベストプラクティスについて詳しくは、 [業界のデータモデル](../../schema/industries/overview.md).
 
 また、検索バーを使用して、目的のフィールドグループを見つけることもできます。 クエリと名前が一致するフィールドグループがリストの上部に表示されます。 の下 **[!UICONTROL 標準フィールド]**、目的のデータ属性を記述するフィールドを含むフィールドグループが表示されます。
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![The [!UICONTROL フィールドグループを追加] ～との対話 [!UICONTROL 標準フィールド] 検索機能がハイライト表示されています。](../../images/ui/resources/schemas/field-group-search.png)
 
 スキーマに追加するフィールドグループの名前の横にあるチェックボックスを選択します。 リストから複数のフィールドグループを選択できます。選択した各フィールドグループが右側のパネルに表示されます。
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![The [!UICONTROL フィールドグループを追加] ダイアログのチェックボックス選択機能がハイライト表示されています。](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->リストに表示されたフィールドグループで、情報アイコン (![](../../images/ui/resources/schemas/info-icon.png)) をクリックすると、フィールドグループが取り込むデータの種類に関する簡単な説明が表示されます。 プレビューアイコン (![](../../images/ui/resources/schemas/preview-icon.png)) を使用して、スキーマに追加する前にフィールドグループが提供するフィールドの構造を表示できます。
+>リストに表示されたフィールドグループに対して、情報アイコン (![](../../images/ui/resources/schemas/info-icon.png)) をクリックすると、フィールドグループが取り込むデータの種類に関する簡単な説明が表示されます。 また、プレビューアイコン (![](../../images/ui/resources/schemas/preview-icon.png)) を使用して、スキーマに追加する前にフィールドグループが提供するフィールドの構造を表示できます。
 
-フィールドグループを選択したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]** スキーマに追加します。
+フィールドグループを選択したら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]** をクリックして、スキーマに追加します。
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![The [!UICONTROL フィールドグループを追加] フィールドグループを選択したダイアログ [!UICONTROL フィールドグループを追加] ハイライト表示されました。](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-この [!DNL Schema Editor] フィールドグループが指定したフィールドがキャンバスに表示された状態で再表示されます。
+The [!DNL Schema Editor] フィールドグループが指定したフィールドがキャンバスに表示された状態で再表示されます。
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![The [!DNL Schema Editor] とサンプルのスキーマが表示されます。](../../images/ui/resources/schemas/field-groups-added.png)
 
 スキーマにフィールドグループを追加した後、オプションで [既存のフィールドを削除](#remove-fields) または [新しいカスタムフィールドを追加](#add-fields) 必要に応じて、これらのグループに追加します。
 
@@ -121,17 +131,17 @@ ht-degree: 4%
 >
 >フィールドグループからフィールドを削除しても、作業中のスキーマにのみ影響し、フィールドグループ自体には影響しません。 1 つのスキーマ内のフィールドを削除した場合、同じフィールドグループを使用する他のすべてのスキーマでも、これらのフィールドを引き続き使用できます。
 
-次の例では、標準フィールドグループが **[!UICONTROL 人口統計の詳細]** がスキーマに追加されました。 次のような単一のフィールドを削除するには `taxId`をクリックし、キャンバスのフィールドを選択して、「 」を選択します。 **[!UICONTROL 削除]** をクリックします。
+次の例では、標準フィールドグループ **[!UICONTROL 人口統計の詳細]** がスキーマに追加されました。 次のような単一のフィールドを削除するには `taxId`をクリックし、キャンバスのフィールドを選択して、「 」を選択します。 **[!UICONTROL 削除]** をクリックします。
 
-![単一のフィールドを削除](../../images/ui/resources/schemas/remove-single-field.png)
+![The [!DNL Schema Editor] 次を使用 [!UICONTROL 削除] ハイライト表示されました。 この操作により、1 つのフィールドが削除されます。](../../images/ui/resources/schemas/remove-single-field.png)
 
 削除するフィールドが複数ある場合は、フィールドグループ全体を管理できます。 キャンバスでグループに属するフィールドを選択し、「 」を選択します。 **[!UICONTROL 関連するフィールドの管理]** をクリックします。
 
-![関連するフィールドの管理](../../images/ui/resources/schemas/manage-related-fields.png)
+![The [!DNL Schema Editor] 次を使用 [!UICONTROL 関連するフィールドの管理] ハイライト表示されました。](../../images/ui/resources/schemas/manage-related-fields.png)
 
 該当するフィールドグループの構造を示すダイアログが表示されます。 ここから、提供されたチェックボックスを使用して、必要なフィールドを選択または選択解除できます。 満足したら、「 」を選択します。 **[!UICONTROL 確認]**.
 
-![フィールドグループからフィールドを選択](../../images/ui/resources/schemas/select-fields.png)
+![The [!UICONTROL 関連するフィールドの管理] 選択したフィールドと [!UICONTROL 確認] ハイライト表示されました。](../../images/ui/resources/schemas/select-fields.png)
 
 キャンバスが再び表示され、選択したフィールドのみがスキーマ構造に存在します。
 
@@ -149,7 +159,7 @@ ht-degree: 4%
 
 ## スキーマへの個々のフィールドの追加 {#add-individual-fields}
 
-スキーマエディターを使用すると、特定の使用例に対してフィールドグループ全体が追加されるのを避けたい場合に、個々のフィールドを直接スキーマに追加できます。 以下が可能です。 [標準フィールドグループから個々のフィールドを追加](#add-standard-fields) または [独自のカスタムフィールドの追加](#add-custom-fields) 代わりに、
+スキーマエディターを使用すると、特定の使用例に対してフィールドグループ全体が追加されるのを避けたい場合に、個々のフィールドを直接スキーマに追加できます。 以下が可能です。 [標準フィールドグループから個々のフィールドを追加する](#add-standard-fields) または [独自のカスタムフィールドの追加](#add-custom-fields) 代わりに、
 
 >[!IMPORTANT]
 >
@@ -161,7 +171,7 @@ ht-degree: 4%
 
 ![フィールドプレースホルダー](../../images/ui/resources/schemas/root-custom-field.png)
 
-の下 **[!UICONTROL フィールド名]**&#x200B;追加するフィールドの名前を入力します。 クエリに一致する標準フィールドが自動的に検索され、以下にリストされます。 **[!UICONTROL 推奨される標準フィールド]**（所属するフィールドグループを含む）
+の下 **[!UICONTROL フィールド名]**&#x200B;をクリックし、追加するフィールドの名前を入力します。 クエリに一致する標準フィールドが自動的に検索され、以下にリストされます。 **[!UICONTROL 推奨される標準フィールド]**（所属するフィールドグループを含む）
 
 ![推奨される標準フィールド](../../images/ui/resources/schemas/standard-field-search.png)
 
@@ -183,11 +193,11 @@ ht-degree: 4%
 
 ![ルートカスタムフィールド](../../images/ui/resources/schemas/root-custom-field.png)
 
-追加するフィールドの名前を入力すると、一致する標準フィールドの検索が自動的に開始されます。 代わりに新しいカスタムフィールドを作成するには、 **([!UICONTROL 新規フィールド])**.
+追加するフィールドの名前を入力すると、一致する標準フィールドの検索が自動的に開始されます。 代わりに新しいカスタムフィールドを作成するには、 **([!UICONTROL 新しいフィールド])**.
 
 ![新しいフィールド](../../images/ui/resources/schemas/custom-field-search.png)
 
-フィールドに表示名とデータ型を指定した後、次の手順では、フィールドを親 XDM リソースに割り当てます。 スキーマでカスタムクラスを使用する場合、 [割り当てられたクラスにフィールドを追加](#add-to-class) または [フィールドグループ](#add-to-field-group) 代わりに、 ただし、スキーマで標準クラスを使用する場合、カスタムフィールドをフィールドグループに割り当てることのみ可能です。
+フィールドに表示名とデータ型を指定した後、次の手順では、フィールドを親 XDM リソースに割り当てます。 スキーマでカスタムクラスを使用する場合は、 [割り当てられたクラスにフィールドを追加](#add-to-class) または [フィールドグループ](#add-to-field-group) 代わりに、 ただし、スキーマで標準クラスを使用する場合、カスタムフィールドをフィールドグループに割り当てることのみ可能です。
 
 #### フィールドをカスタムフィールドグループに割り当てる {#add-to-field-group}
 
@@ -209,7 +219,7 @@ ht-degree: 4%
 
 ![フィールドを適用](../../images/ui/resources/schemas/apply-field.png)
 
-新しいフィールドがキャンバスに追加され、名前空間がユーザーの下に表示されます [テナント ID](../../api/getting-started.md#know-your-tenant_id) 標準 XDM フィールドとの競合を避けるために使用します。 新しいフィールドを関連付けたフィールドグループも、の下に表示されます。 **[!UICONTROL フィールドグループ]** をクリックします。
+新しいフィールドがキャンバスに追加され、ユーザーの下に名前空間が付けられます [テナント ID](../../api/getting-started.md#know-your-tenant_id) 標準 XDM フィールドとの競合を避けるために使用します。 新しいフィールドを関連付けたフィールドグループも、の下に表示されます。 **[!UICONTROL フィールドグループ]** をクリックします。
 
 ![テナント ID](../../images/ui/resources/schemas/tenantId.png)
 
@@ -221,13 +231,13 @@ ht-degree: 4%
 
 の下 **[!UICONTROL 割り当て先]**&#x200B;を選択します。 **[!UICONTROL クラス]**. 以下の入力フィールドは、現在のスキーマのカスタムクラスの名前に置き換えられ、新しいフィールドがこのクラスに割り当てられることを示します。
 
-![この [!UICONTROL クラス] オプションが選択されています。](../../images/ui/resources/schemas/assign-field-to-class.png)
+![The [!UICONTROL クラス] オプションが選択されている場合、新しいフィールドの割り当てに使用されます。](../../images/ui/resources/schemas/assign-field-to-class.png)
 
 必要に応じてフィールドの設定を続行し、「 」を選択します。 **[!UICONTROL 適用]** 終了したとき。
 
 ![[!UICONTROL 適用] 新しいフィールド用に選択されています。](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
 
-新しいフィールドがキャンバスに追加され、名前空間がユーザーの下に表示されます [テナント ID](../../api/getting-started.md#know-your-tenant_id) 標準 XDM フィールドとの競合を避けるために使用します。 左側のレールでクラス名を選択すると、新しいフィールドがクラスの構造の一部として表示されます。
+新しいフィールドがキャンバスに追加され、ユーザーの下に名前空間が付けられます [テナント ID](../../api/getting-started.md#know-your-tenant_id) 標準 XDM フィールドとの競合を避けるために使用します。 左側のレールでクラス名を選択すると、新しいフィールドがクラスの構造の一部として表示されます。
 
 ![カスタムクラスの構造に適用される、キャンバスに表示される新しいフィールド。](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
 
@@ -243,7 +253,7 @@ ht-degree: 4%
 >
 >![標準フィールドグループを変換するための確認ダイアログ](../../images/ui/resources/schemas/beta-extension-confirmation.png)
 
-まず、プラス (**+**) アイコンをクリックし、標準フィールドグループで提供されるオブジェクトのルートの横に表示されます。
+開始するには、プラス (**+**) アイコンをクリックし、標準フィールドグループで提供されるオブジェクトのルートの横に表示されます。
 
 ![標準オブジェクトにフィールドを追加](../../images/ui/resources/schemas/add-field-to-standard-object.png)
 
@@ -270,7 +280,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->のスキーマを有効にするには [!DNL Profile]に値を入力する場合は、プライマリ ID フィールドを定義する必要があります。 詳しくは、 [ID フィールドの定義](../fields/identity.md) を参照してください。
+>のスキーマを有効にするには [!DNL Profile]に値を入力する場合は、プライマリ ID フィールドを定義する必要があります。 次のガイドを参照してください： [ID フィールドの定義](../fields/identity.md) を参照してください。
 
 スキーマを有効にするには、まず左側のパネルでスキーマの名前を選択してから、 **[!UICONTROL プロファイル]** 右側のパネルを切り替えます。
 
@@ -284,7 +294,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->スキーマはまだ保存されていないので、スキーマをリアルタイム顧客プロファイルに参加させることについて考えを変えた場合、戻り値のポイントになりません。有効なスキーマを保存すると、無効にできなくなります。 を選択します。 **[!UICONTROL プロファイル]** スキーマを無効にするには、再度切り替えます。
+>スキーマはまだ保存されていないので、スキーマをリアルタイム顧客プロファイルに参加させることに変更した場合は、戻り値のポイントになりません。有効なスキーマを保存すると、無効にできなくなります。 を選択します。 **[!UICONTROL プロファイル]** スキーマを無効にするには、再度切り替えます。
 
 処理を終了するには、「 」を選択します。 **[!UICONTROL 保存]** スキーマを保存します。
 
@@ -322,7 +332,7 @@ ht-degree: 4%
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-組織で定義されたクラス（所有者は「 」）を含む、使用可能なすべてのクラスのリストを表示するダイアログが表示されます[!UICONTROL 顧客]&quot;) およびAdobeで定義された標準クラス。
+組織で定義されたクラス（所有者は「 」）を含む、使用可能なすべてのクラスのリストを表示するダイアログが表示されます[!UICONTROL 顧客]&quot;) と、Adobeで定義された標準クラス。
 
 リストからクラスを選択し、ダイアログの右側に説明を表示します。 また、 **[!UICONTROL クラス構造をプレビュー]** をクリックして、クラスに関連付けられているフィールドとメタデータを確認します。 選択 **[!UICONTROL クラスを割り当て]** をクリックして続行します。
 
@@ -338,6 +348,6 @@ ht-degree: 4%
 
 このドキュメントでは、Platform UI でのスキーマの作成と編集の基本について説明します。 次の項目を確認することを強くお勧めします。 [スキーマ作成チュートリアル](../../tutorials/create-schema-ui.md) :UI で完全なスキーマを構築するための包括的なワークフロー。一意の使用例のカスタムフィールドグループとデータタイプの作成を含みます。
 
-の機能の詳細については、 [!UICONTROL スキーマ] ワークスペース ( [[!UICONTROL スキーマ] workspace の概要](../overview.md).
+の機能の詳細については、 [!UICONTROL スキーマ] ワークスペースについては、 [[!UICONTROL スキーマ] workspace の概要](../overview.md).
 
 でスキーマを管理する方法については、以下を参照してください。 [!DNL Schema Registry] API( [スキーマエンドポイントガイド](../../api/schemas.md).
