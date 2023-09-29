@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
-source-git-commit: 1bfd5e05642e0ac8f80af5502878eaee0b33c704
+source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 34%
+source-wordcount: '1232'
+ht-degree: 31%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform の新機能：
 
 - [アラート](#alerts)
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [ID サービス](#identity-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
@@ -56,6 +57,45 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 {style="table-layout:auto"}
 
 データ収集の詳細については、 [データ収集の概要](../../tags/home.md).
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新規宛先または更新された宛先** {#new-updated-destinations}
+
+| 宛先 | 新規／アップデート | 説明 |
+| ----------- |----------------|----------- |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | 新規 | [[!DNL HubSpot]](https://www.hubspot.com) は、マーケティング、セールス、コンテンツ管理、顧客サービスに接続するために必要なすべてのソフトウェア、統合、リソースを含む CRM プラットフォームです。 1 つの CRM プラットフォーム上でデータ、チーム、顧客を接続できます。 |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | 更新済み | のサポートを追加しました。 [!DNL Dynamics 365] カスタムフィールドのカスタムフィールドプレフィックス ( [!DNL Dynamics 365]. 新しい入力フィールド **[!UICONTROL Customization Prefix]**&#x200B;に追加され、 [宛先の詳細を入力](#destination-details) 手順 |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+
+Add these to release notes as they go out
+
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
+
+-->
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| Real-Time CDPでのデータエクスポート | The [データセットの書き出し](../../destinations/ui/export-datasets.md) の機能が一般的に利用できるようになりました。 詳しくは、 [Experience Platformアプリに基づいて書き出すことができるデータセット](../../destinations/ui/export-datasets.md#datasets-to-export) 購入した後、 [データセットを書き出すためのガードレール](/help/destinations/guardrails.md#dataset-exports). |
+| （ベータ版）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、整数またはブール値）の配列をフラットスキーマファイルとしてクラウドストレージの宛先に書き出します。 詳しくは、 [ドキュメント](../../destinations/ui/export-arrays-calculated-fields.md). |
+| Destination SDKの動的なドロップダウンセレクター | Destination SDKを通じて宛先を作成する場合、 [動的ドロップダウンセレクター](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) をクリックして、API から取得した値をドロップダウンセレクターのフィールドに入力します。 |
+
+**修正および機能強化** {#destinations-fixes-and-enhancements}
+
+- を利用する [透明性の監視](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) エンタープライズ宛先 ([HTTP API](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) および [Azure イベントハブ](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) をデータフローの実行レベルで更新し、 [データフローの詳細表示](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page)を追加しました。
+- マッピングされたオーディエンスの名前を [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md), [Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)、およびを使用するその他の宛先 [オーディエンス更新テンプレート](../../destinations/destination-sdk/metadata-api/update-audience-template.md)の場合、これらの名前の変更は、宛先の下流で反映されるようになりました。
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
