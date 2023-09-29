@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ダッシュボードのヘルプ
 breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 78%
+source-wordcount: '85'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 78%
 * [ダッシュボードの概要](home.md)
 * [ダッシュボードへのアクセス権限](permissions.md)
 * [ダッシュボードインベントリ](inventory.md)
-* [ユーザー定義のダッシュボード](user-defined-dashboards.md)
+* [ユーザー定義ダッシュボード](user-defined-dashboards.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
@@ -25,7 +25,6 @@ ht-degree: 78%
    * [オーディエンス](guides/audiences.md)
    * [宛先](guides/destinations.md)
    * [ライセンス使用状況](guides/license-usage.md)
-   * [ライセンス使用状況（限定リリース）](guides/license-usage-limited.md)
 * ダッシュボードのカスタマイズ {#customize}
    * [カスタマイズの概要](customize/overview.md)
    * [ダッシュボードの変更](customize/modify.md)
@@ -38,5 +37,5 @@ ht-degree: 78%
 * アプリケーションの統合 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [ダッシュボードデータセットのクエリ](query.md)
-* [Real-time Customer Data Platform Insights データモデル](cdp-insights-data-model.md)
+* [Real-time Customer Data Platform インサイトデータモデル](cdp-insights-data-model.md)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
