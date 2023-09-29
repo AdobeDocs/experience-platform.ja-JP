@@ -1,9 +1,9 @@
 ---
 title: UI でのソースデータフローのオンデマンド取り込み
 description: Experience Platformユーザーインターフェイスを使用して、ソース接続のデータフローをオンデマンドで作成する方法について説明します。
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '499'
 ht-degree: 11%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 11%
 
 >[!ENDSHADEBOX]
 
-## Destination SDK の
+## はじめに
 
 このドキュメントでは、Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
@@ -44,9 +44,9 @@ ht-degree: 11%
 
 | スケジュール設定 | 説明 |
 | --- | --- |
-| [!UICONTROL 取り込み開始時間] | オンデマンドデータフローが開始する日時 (UTC)。 |
-| [!UICONTROL 日付範囲の開始時間] | データの取り込み元の開始日時。 |
-| [!UICONTROL 日付範囲の終了時間] | データの取り込み元の終了日時。 |
+| [!UICONTROL 取り込み開始時間] | オンデマンドフローの実行が開始される予定時間。 |
+| [!UICONTROL 日付範囲の開始時間] | データの取得元となる最も早い日時。 |
+| [!UICONTROL 日付範囲の終了時間] | データが取得されるまでの日時。 |
 
 選択 **[!UICONTROL スケジュール]** オンデマンドのデータフローをトリガーするまで、しばらく待ちます。
 
