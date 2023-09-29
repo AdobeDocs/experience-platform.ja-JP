@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: c2563d43b9ee8b3191954275bd0102507a981071
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 29%
+source-wordcount: '2149'
+ht-degree: 31%
 
 ---
 
@@ -19,9 +19,14 @@ Adobe Experience Platform の新機能：
  Experience Platform の既存の機能に対するアップデート：
 
 - [アラート](#alerts)
+- [ダッシュボード](#dashboards)
 - [データ収集](#data-collection)
+- [データガバナンス](#data-governance)
+- [データハイジーン](#hygiene)
 - [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
+- [クエリサービス](#query-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
@@ -43,6 +48,18 @@ Experience Platform では、様々な Platform アクティビティに関す�
 
 アラートの詳細については、 [[!DNL Observability Insights] 概要](../../observability/home.md).
 
+## ダッシュボード {#dashboards}
+
+Adobe Experience Platform では、複数の [!DNL dashboards] を提供しており、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
+
+| 機能 | 説明 |
+| --- | --- |
+| [ライセンス使用状況ダッシュボードの改善](../../dashboards/guides/license-usage.md) | 組織のライセンス使用状況に関するレポートの改善と主要指標のビジュアライゼーションにより、使用許諾契約の管理を維持します。 これらの改善により、購入したすべてのExperience Platform製品のライセンス使用状況指標に対して高い精度を提供します。 |
+
+{style="table-layout:auto"}
+
+ライセンス使用状況ダッシュボードについて詳しくは、 [ライセンス使用状況ダッシュボードの概要](../../dashboards/guides/destinations.md).
+
 ## データ収集 {#data-collection}
 
 Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
@@ -57,6 +74,35 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 {style="table-layout:auto"}
 
 データ収集の詳細については、 [データ収集の概要](../../tags/home.md).
+
+## データガバナンス {#data-governance}
+
+Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。これは Experience Platform 内の様々なレベルで重要な役割を果たします。例えば、カタログ化、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| サードパーティデータ用の新しいパートナーエコシステムラベル | サードパーティのエンリッチメントおよび見込み客向けの新しいデータ使用ラベルを利用できます。 詳しくは、 [パートナーエコシステムラベルに関するドキュメント](../../data-governance/labels/reference.md#partner) を参照してください。 |
+
+{style="table-layout:auto"}
+
+データガバナンスについて詳しくは、[データガバナンスの概要](../../data-governance/home.md)を参照してください。
+
+## データハイジーン {#hygiene}
+
+Experience Platform は、消費者レコードとデータセットをプログラムで削除することで、保存されたデータを管理できる、一連のデータ衛生機能を提供します。次のいずれかを使用： [!UICONTROL データのライフサイクル] ワークスペースを使用して、またはデータ衛生 API の呼び出しを通じて、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、誤ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断される場合は削除されるようにします。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Adobe Experience Platformの高度なデータライフサイクル管理機能（データセットの有効期限とレコードの削除）を使用して、顧客のコミットメントとライセンス契約を満たすために、すべてのデータストアにわたってデータライフサイクルを管理します。<br>データセットの有効期限を自動化すると、データセット全体を削除し、削除するデータセットの日時を設定できます。<br>レコードの削除を使用すると、プライマリ ID をターゲティングして、個々のコンシューマープロファイルを削除できます。 UI を通じて、または CSV/JSON ファイルのアップロードを通じて、プライマリ ID を個別に指定できます。 詳しくは、 [レコードの削除に関するドキュメント](../../hygiene/ui/record-delete.md) 詳細情報 |
+| データセット有効期限 | データを最小限に抑え、自動データセット有効期限を使用して、使用許諾契約を常に管理します。 データセット全体を削除し、削除するデータセットの日時を設定することで、データの量を減らします。 詳しくは、 [データセット有効期限に関するドキュメント](../../hygiene/ui/dataset-expiration.md) を参照してください。 |
+
+{style="table-layout:auto"}
+
+Platform のデータハイジーン機能について詳しくは、[データハイジーンの概要](../../hygiene/home.md)を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -75,10 +121,10 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 <!-- 
 
+
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-
 
 -->
 
@@ -97,6 +143,23 @@ Add these to release notes as they go out
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| スキーマエディターに追加されたクイックアクション | スキーマエディターのキャンバスに新しいクイックアクションが追加されました。 JSON 構造をコピーしたり、エディターから直接スキーマを削除したりできるようになりました。<br>![スキーマエディターのクイックアクション。](../2023/assets/schema-editor-copy-json.png "「その他」と「 JSON にコピー」が強調表示されたスキーマエディター。"){width="100" zoomable="yes"} |
+| カスタム作成者または標準作成者による XDM リソースのフィルタリング | 使用可能なスキーマ、フィールドグループ、データタイプおよびクラスのリストが、作成方法に基づいて事前にフィルタリングされるようになりました。 これにより、リソースを、カスタムで作成されたか、Adobeで作成されたかに基づいてフィルタリングできます。<br>![スキーマワークスペースの標準フィルターとカスタムフィルター。](../2023/assets/standard-and-custom-classes.png "標準フィルターとカスタムフィルターが強調表示されたスキーマワークスペース。"){width="100" zoomable="yes"} <br> 詳しくは、 [リソースの作成と編集に関するドキュメント](../../xdm/ui/resources/classes.md#filter.md) を参照してください。 |
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| スキーマ作成ワークフローの更新 | プロセスを合理化するための新しいスキーマ作成ワークフローが実装されました。 <br> ![新しいスキーマ作成 UI。](../2023/assets/schema-class-options.png "新しいスキーマ詳細セレクターが強調表示されています。"){width="100" zoomable="yes"} <br> 詳しくは、 [スキーマ作成ドキュメント](../../xdm/ui/resources/schemas.md#create) を参照してください。 |
+
 ## ID サービス {#identity-service}
 
 Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
@@ -111,6 +174,21 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 {style="table-layout:auto"}
 
 ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md).
+
+## クエリサービス {#query-service}
+
+クエリサービスを使用すると、標準 SQL を使用して Adobe Experience Platform [!DNL Data Lake] でデータに対してクエリを実行できます。任意のデータセットを [!DNL Data Lake] から結合し、クエリの結果を新しいデータセットとして取得することで、レポートや Data Science Workspace で使用したり、リアルタイム顧客プロファイルに取り込んだりできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| ログのフィルタリング UI の更新 | クエリログのフィルタリングが改善され、監視、管理、トラブルシューティングに関するユーザー生成ログの可視性が向上しました。 様々な設定に基づいてクエリログのリストをフィルタリングできます。 <br> ![クエリログのフィルター設定です。](../2023/assets/log-filter-settings.png "新しいクエリログフィルターがハイライト表示されます。"){width="100" zoomable="yes"}  <br> 詳しくは、 [クエリログドキュメント](../../query-service/ui/query-logs.md#filter-logs) を参照してください。 |
+| 複数のクエリエディター UI の更新 | クエリエディターで複数の順次クエリを実行したり、複数のクエリを記述して、すべてのクエリを順次実行したりできるようになりました。 クエリの実行に柔軟性を高めるには、選択したクエリをハイライト表示し、他のクエリとは別に実行する特定のクエリを選択します。 詳しくは、 [クエリエディター UI ガイド](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) を参照してください。 |
+
+{style="table-layout:auto"}
+
+クエリサービスについて詳しくは、[クエリサービスの概要](../../query-service/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
