@@ -4,7 +4,7 @@ title: クエリサービスを使用したダッシュボードデータセッ�
 type: Documentation
 description: クエリサービスを使用して、プロファイル、オーディエンス、宛先ダッシュボードを機能させる未加工のデータセットを調査および処理する方法について説明します。Experience Platform
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 37%
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 ![左側のナビゲーションで「データセット」タブがハイライトされた状態の「データセットの参照」ダッシュボード。](./images/query/browse-datasets.png)
 
-### システム生成データセット
+### システム生成データセット {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準 SQL を使用して�
 
 ![「システムデータセットを表示」切り替えがハイライトされた「データセットの参照」タブ。](./images/query/show-system-datasets.png)
 
-### プロファイル属性データセット
+### プロファイル属性データセット {#profile-attribute-datasets}
 
 プロファイルダッシュボードのインサイトは、組織で定義された結合ポリシーに結び付けられます。アクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
 

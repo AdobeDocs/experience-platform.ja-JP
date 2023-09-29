@@ -1,29 +1,33 @@
 ---
 solution: Experience Platform
-title: （ベータ版）フローサービス API を使用したデータセットの書き出し
+title: フローサービス API を使用したデータセットのエクスポート
 description: フローサービス API を使用してデータセットを書き出し、宛先を選択する方法について説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
 workflow-type: tm+mt
-source-wordcount: '3520'
-ht-degree: 19%
+source-wordcount: '3526'
+ht-degree: 18%
 
 ---
 
-# （ベータ版）を使用してデータセットを書き出す [!DNL Flow Service API]
+# を使用してデータセットを書き出す [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* データセットの書き出し機能は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
->* このベータ版機能では、Real-time Customer Data Platform の[製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義されている第 1 世代データの書き出しをサポートしています。
->* この機能は、Real-Time CDP Prime または Ultimate パッケージを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
+>* この機能は、Real-Time CDP Prime および Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
 この記事では、 [!DNL Flow Service API] エクスポートする [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
 >また、Experience Platformユーザーインターフェイスを使用してデータセットを書き出すこともできます。 詳しくは、 [データセットの書き出し UI チュートリアル](/help/destinations/ui/export-datasets.md) を参照してください。
+
+## 書き出しに使用できるデータセット {#datasets-to-export}
+
+書き出すデータセットは、Experience Platformアプリケーション (Real-Time CDP、Adobe Journey Optimizer)、層（Prime または Ultimate）、および購入した任意のアドオン ( 例：Data Distiller) によって異なります。
+
+詳しくは、 [UI チュートリアルページの表](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照して、書き出すことができるデータセットを把握します。
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -38,7 +42,7 @@ ht-degree: 19%
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Destination SDK の {#get-started}
+## はじめに {#get-started}
 
 ![概要 — 宛先の作成手順とデータセットの書き出し手順](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
@@ -51,7 +55,7 @@ ht-degree: 19%
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットを書き出すには、**[!UICONTROL 宛先を表示]**&#x200B;と&#x200B;**[!UICONTROL データセットの宛先を管理およびアクティブ化]**&#x200B;の[アクセス制御権限](/help/access-control/home.md#permissions)が必要です。[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に「**[!UICONTROL アクティブ化]**」または「**[!UICONTROL データセットを書き出し]**」コントロールがある場合、適切な権限を持っています。
 
@@ -1609,7 +1613,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1663,7 +1667,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",

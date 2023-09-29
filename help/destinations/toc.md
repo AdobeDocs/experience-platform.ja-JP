@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
+source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 96%
+source-wordcount: '1165'
+ht-degree: 95%
 
 ---
 
@@ -30,11 +30,11 @@ ht-degree: 96%
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
-   * [（ベータ版）データセットの書き出し](/help/destinations/api/export-datasets.md)
+   * [データセットを書き出し](/help/destinations/api/export-datasets.md)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
-   * 宛先へのオーディエンスデータの有効化{#activate}
+   * 宛先へのデータのアクティブ化{#activate}
       * [有効化の概要](./ui/activation-overview.md)
       * [ストリーミングオーディエンスの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-segment-streaming-destinations.md)
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
@@ -42,7 +42,7 @@ ht-degree: 96%
       * [エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する](./ui/activate-edge-personalization-destinations.md)
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
-      * [（ベータ版）Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
+      * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
       * [クラウドストレージの宛先への配列フィールドの書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)

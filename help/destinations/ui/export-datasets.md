@@ -1,26 +1,65 @@
 ---
-title: （ベータ版）クラウドストレージ宛先へのデータセットの書き出し
+title: クラウドストレージの宛先へのデータセットの書き出し
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 82%
+source-wordcount: '1754'
+ht-degree: 58%
 
 ---
 
-# （ベータ版）クラウドストレージ宛先へのデータセットの書き出し
+# クラウドストレージの宛先へのデータセットの書き出し
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* データセットの書き出し機能は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
->* このベータ版機能では、Real-time Customer Data Platform の[製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)で定義されている第 1 世代データの書き出しをサポートしています。
->* この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、Adobe担当者にお問い合わせください。
+>* この機能は、Real-Time CDP Prime、Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
 この記事では、エクスポートに必要なワークフローについて説明します。 [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage] Experience PlatformUI を使用。
 
 また、Experience PlatformAPI を使用してデータセットを書き出すこともできます。 詳しくは、 [データセット API の書き出しチュートリアル](/help/destinations/api/export-datasets.md) を参照してください。
+
+## 書き出しに使用できるデータセット {#datasets-to-export}
+
+書き出すデータセットは、Experience Platformアプリケーション (Real-Time CDP、Adobe Journey Optimizer)、層（Prime または Ultimate）、および購入したアドオン ( 例：Data Distiller) に応じて異なります。
+
+以下の表で、アプリケーション、製品層、購入したアドオンに応じて、書き出すデータセットのタイプを説明します。
+
+<table>
+<thead>
+  <tr>
+    <th>アプリケーション/アドオン</th>
+    <th>層</th>
+    <th>書き出しに使用できるデータセット</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> システム生成データセット ( <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">プロファイルスナップショットデータセット</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>詳しくは、 <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja"> Adobe Journey Optimizer</a> ドキュメント。 （サポートされるデータセットの AJO テーブルまたはセクションへのディープリンクの更新）</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>詳しくは、 <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja"> Adobe Journey Optimizer</a> ドキュメント。 （サポートされるデータセットの AJO テーブルまたはセクションへのディープリンクの更新）</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Data Distiller （アドオン）</td>
+    <td>クエリサービスを使用して作成された派生データセット。</td>
+  </tr>
+</tbody>
+</table>
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -40,9 +79,9 @@ ht-degree: 82%
 Experience Platformカタログ内の一部のファイルベースの宛先は、オーディエンスのアクティベーションとデータセットの書き出しの両方をサポートしています。
 
 * オーディエンスの関心または資格別にデータをプロファイルに構造化する場合は、オーディエンスのアクティブ化を検討します。
-* また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 このデータは、レポート、データサイエンスワークフロー、コンプライアンス要件への適合、その他多くのユースケースに使用できます。
+* また、オーディエンスの関心や選定別にグループ化または構造化されていない未加工のデータセットを書き出そうとしている場合は、データセットの書き出しを検討します。 このデータは、レポート、データサイエンスワークフロー、その他多くの使用例に使用できます。 例えば、Experience Platform、データエンジニア、アナリストは、管理者からデータを書き出して、Data Warehouse と同期したり、BI 分析ツール、外部クラウド ML ツールで使用したり、長期的なストレージニーズに対応したシステムに保存したりできます。
 
-このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。クラウドストレージまたは電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する場合は、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md).
+このドキュメントには、データセットの書き出しに必要な情報がすべて含まれています。をアクティブ化する場合 *audiences* クラウドストレージまたは電子メールマーケティングの宛先については、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## 前提条件 {#prerequisites}
 
@@ -50,7 +89,7 @@ Experience Platformカタログ内の一部のファイルベースの宛先は�
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットを書き出すには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL データセットを表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
 データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に「**[!UICONTROL アクティブ化]**」または「**[!UICONTROL データセットを書き出し]**」コントロールがある場合、適切な権限を持っています。
 
@@ -106,7 +145,7 @@ Adobe Analytics の **[!UICONTROL スケジュール]** 手順では、データ
 
 2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、ファイルが書き出される時刻を [!DNL UTC] 形式で指定します。
 
-3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、書き出しが行われる間隔を選択します。なお、この機能のベータ版では、書き出しの終了日を設定できません。 詳しくは、[既知の制限事項](#known-limitations)の節を参照してください。
+3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、書き出しが行われる間隔を選択します。現在、エクスポートの終了日を設定することはできません。 詳しくは、[既知の制限事項](#known-limitations)の節を参照してください。
 
 4. 「**[!UICONTROL 次へ]**」を選択して、スケジュールを保存し、**[!UICONTROL レビュー]**&#x200B;ステップに進みます。
 
@@ -169,12 +208,23 @@ Adobe Analytics の [宛先ワークフローに接続](/help/destinations/ui/co
 
    ![データフローからのデータセットの削除を確認するオプションを表示するダイアログ](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## データセット書き出しの権利 {#licensing-entitlement}
+
+製品の説明に関するドキュメントを参照して、各Experience Platformアプリケーションに対して 1 年に書き出す権利があるデータの量を把握します。 例えば、Real-Time CDPの製品説明を表示できます [ここ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+様々なアプリケーションのデータエクスポートの使用権限は、追加的なものではありません。 例えば、Real-Time CDP Ultimate とAdobe Journey Optimizer Ultimate を購入した場合、製品の説明に従って、プロファイルの書き出しに関する権利付与は、2 つの権利のうち大きいほうが大きくなります。 ボリュームの使用権限は、ライセンスが必要なプロファイルの総数を取得し、Real-Time CDP Prime の場合は 500 KB、Real-Time CDP Ultimate の場合は 700 KB を乗じて、使用できるデータ量を決定します。
+
+一方、Data Distillerなどのアドオンを購入した場合、使用権限を持つデータ書き出し制限は、製品層とアドオンの合計を表します。
+
+ライセンスダッシュボードで、契約上の制限に対するプロファイルの書き出しを表示および追跡できます。
+
 ## 既知の制限事項 {#known-limitations}
 
-データセット書き出しのベータ版リリースでは、次の制限事項に注意してください。
+データセットエクスポートの一般リリースでは、次の制限事項に注意してください。
 
-* 現在、データセット宛先に対する管理権限とアクティベート権限を含む単一の権限（**[!UICONTROL データセット宛先の管理とアクティベート]**）が存在します。これらのコントロールは、今後、よりきめ細かい権限に分割される予定です。 データセットの書き出しに必要な権限の完全なリストについては、[必要な権限](#permissions)の節を参照してください。
 * 現在、増分ファイルの書き出しのみ可能で、データセット書き出しでは終了日を選択できません。
 * 書き出されるファイルの名前は現在、カスタマイズできません。
+* API で作成されたデータセットは、現在、書き出しに使用できません。
 * 宛先に書き出されるデータセットの削除は、現在、UI で禁止されていません。 宛先に書き出されるデータセットは削除しないでください。 データセットを削除する場合は、まず、宛先データフローから[データセットを削除](#remove-dataset)します。
 * データセット書き出しの監視指標は、現在、プロファイル書き出しの数値と混在しているので、実際の書き出し数値を反映していません。
