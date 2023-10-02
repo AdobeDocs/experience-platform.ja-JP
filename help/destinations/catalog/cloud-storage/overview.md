@@ -3,9 +3,9 @@ keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、Amazon S3、AWS Kinesis、Azure Event Hubs、または SFTP クラウドのストレージの場所に、オーディエンスをデータファイルとして配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 49%
 
 ---
@@ -67,7 +67,7 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 クラウドストレージの宛先では、次の書き出しタイプをサポートしています。
 * **プロファイルベースの書き出し**. これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスのメンバーシップなどを含めることができます。
-* [!BADGE Beta]{type=Informative}**データセットの書き出し**. この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 [詳細を表示](/help/destinations/ui/export-datasets.md) 機能について。
+* **データセットの書き出し**. この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 [詳細を表示](/help/destinations/ui/export-datasets.md) 機能について。
 
 ## 次の手順 {#next-steps}
 

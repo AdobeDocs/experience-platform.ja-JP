@@ -3,9 +3,9 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続して、オーディエンスをアクティブ化し、データセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1481'
 ht-degree: 53%
 
 ---
@@ -234,7 +234,7 @@ curl -X POST \
 
 **[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
-## （ベータ版）データセットの書き出し {#export-datasets}
+## データセットを書き出し {#export-datasets}
 
 この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
 

@@ -2,9 +2,9 @@
 title: Azure Blob 接続
 description: Azure Blob Storage へのライブアウトバウンド接続を作成して、Adobe Experience Platform から CSV データファイルを定期的に書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1050'
 ht-degree: 63%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 63%
 
 2023 年 7 月のExperience Platformリリースに伴い、 [!DNL Azure Blob] の宛先には、次に示す新しい機能が用意されています。
 
-* [!BADGE Beta]{type=Informative}[データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
+* [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
 * [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。

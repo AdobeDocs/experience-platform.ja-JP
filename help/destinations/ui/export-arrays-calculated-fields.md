@@ -2,21 +2,21 @@
 title: （ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す
 type: Tutorial
 description: 計算フィールドを使用して、フラットスキーマファイル内の配列をReal-Time CDPからクラウドストレージの宛先に書き出す方法について説明します。
-badge: 「ベータ版」
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: ベータ版
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1479'
 ht-degree: 2%
 
 ---
-
 
 # （ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="（ベータ版）アレイのエクスポートのサポート"
->abstract="int、string または boolean 値の単純な配列をExperience Platformから目的のクラウドストレージの宛先に書き出します。 一部制限があります。 広範な例とサポートされる関数については、ドキュメントを参照してください。"
+>abstract="以下を使用します。 **計算フィールドを追加** int、string または boolean 値の単純な配列をExperience Platformから目的のクラウドストレージの宛先に書き出すコントロールです。 一部制限があります。 広範な例とサポートされる関数については、ドキュメントを参照してください。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="例"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="既知の制限事項"
 
@@ -24,12 +24,12 @@ ht-degree: 2%
 >
 >* 計算フィールドを使用して配列を書き出す機能は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-Real-Time CDPの計算フィールドを使用してフラットスキーマファイル内の配列をクラウドストレージの宛先に書き出す方法について説明します。 この機能で有効になる使用例については、このドキュメントをお読みください。
+Real-Time CDPの計算フィールドを使用してフラットスキーマファイルからに配列を書き出す方法を説明します。 [クラウドストレージの宛先](/help/destinations/catalog/cloud-storage/overview.md). この機能で有効になる使用例については、このドキュメントをお読みください。
 
 計算フィールドの内容とその理由に関する詳細な情報を取得します。 Data Prep の計算フィールドの概要と、使用可能なすべての関数の詳細については、以下にリンクされているページを参照してください。
 
 * [UI ガイドと概要](/help/data-prep/ui/mapping.md#calculated-fields)
-* [データ準備関数](/help/data-prep/functions.md)
+* [Data Prep 関数](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
 >
@@ -50,13 +50,13 @@ Experience Platform内の他のフィールドタイプには、配列フィー�
 
 ## 前提条件 {#prerequisites}
 
-の進行状況 [クラウドストレージの宛先のアクティブ化手順](/help/destinations/ui/activate-batch-profile-destinations.md) そして、にアクセスします。 [マッピング](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順
+[接続](/help/destinations/ui/connect-destination.md) を目的のクラウドストレージの宛先に追加する場合は、 [クラウドストレージの宛先のアクティブ化手順](/help/destinations/ui/activate-batch-profile-destinations.md) そして、にアクセスします。 [マッピング](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順
 
 ## 計算フィールドのエクスポート方法 {#how-to-export-calculated-fields}
 
 クラウドストレージの宛先のアクティベーションワークフローのマッピング手順で、「 」を選択します。 **[!UICONTROL （ベータ版）計算フィールドの追加]**.
 
-![エクスポートする計算フィールドを追加](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![バッチアクティベーションワークフローのマッピング手順で強調表示された計算フィールドを追加します。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 モーダルウィンドウが開き、属性を選択してExperience Platformから属性を書き出すことができます。
 
@@ -64,25 +64,25 @@ Experience Platform内の他のフィールドタイプには、配列フィー�
 >
 >で使用できるのは、XDM スキーマの一部のフィールドのみです。 **[!UICONTROL フィールド]** 表示。 文字列値、文字列、整数、ブール値の配列を確認できます。 例えば、 `segmentMembership` 配列は他の配列値を含むので、表示されません。
 
-![モーダルウィンドウ 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![関数がまだ選択されていない計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 例えば、 `join` 関数を `loyaltyID` フィールドに値を入力し、CSV ファイル内でロイヤルティ ID の配列をアンダースコアと連結された文字列として書き出します。 表示 [この他の例の詳細を以下に示します](#join-function-export-arrays).
 
-![モーダルウィンドウ 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![結合関数を選択した計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 選択 **[!UICONTROL 保存]** をクリックして計算フィールドを保持し、マッピングの手順に戻ります。
 
-![モーダルウィンドウ 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![結合機能が選択され、「保存」コントロールがハイライト表示された、計算フィールド機能のモーダルウィンドウ。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 ワークフローのマッピング手順に戻り、 **[!UICONTROL ターゲットフィールド]** を、エクスポートされたファイルのこのフィールドに必要な列ヘッダーの値に設定します。
 
-![ターゲットフィールド 1 を選択](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![ターゲットフィールドをハイライト表示したマッピング手順。](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![ターゲットフィールド 2 を選択](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 準備が整ったら、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして、アクティベーションワークフローの次の手順に進みます。
 
-![「次へ」を選択して次に進みます。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![ターゲットフィールドがハイライト表示され、ターゲット値が入力されたマッピング手順。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## サポートされる  関数 {#supported-functions}
 
@@ -115,20 +115,20 @@ Experience Platform内の他のフィールドタイプには、配列フィー�
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![マッピングのスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![結合関数を含むマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 この場合、出力ファイルは次のようになります。 配列の 3 つの要素が、 `_` 文字。
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` 配列を書き出す関数 {#iif-function-export-arrays}
 
-以下を使用します。 `iif` 関数を使用して、特定の条件下で配列の要素を書き出すことができます。 例えば、 `organzations` 上から配列オブジェクトを作成すると、 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+以下を使用します。 `iif` 関数を使用して、特定の条件下で配列の要素を書き出すことができます。 例えば、 `organizations` 上から配列オブジェクトを作成すると、 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![最初と最後の関数のマッピングのスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![iif 関数を含むマッピングの例です。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 この場合、出力ファイルは次のようになります。 この場合、配列の最初の要素は「マーケティング」なので、人物はマーケティング部門のメンバーです。
 
@@ -137,18 +137,33 @@ John,Doe,"Marketing_Sales_Finance"
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` 配列を書き出す関数 {#add-to-array-function-export-arrays}
+
+以下を使用します。 `add_to_array` 関数を使用して、書き出された配列に要素を追加します。 この関数を `join` 関数に関する情報を示します。
+
+を使用して `organizations` 上から配列オブジェクトを作成する場合、 `source: join('_', add_to_array(organizations,"2023"))`をクリックし、2023 年に個人が属する組織を返します。
+
+![add_to_array 関数を含むマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+この場合、出力ファイルは次のようになります。 配列の 3 つの要素が、 `_` 文字と 2023 も文字列の末尾に追加されます。
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` 配列を書き出す関数 {#coalesce-function-export-arrays}
 
 以下を使用します。 `coalesce` 関数を使用して、配列の最初の null 以外の要素にアクセスし、文字列に書き出します。
 
-例えば、マッピングのスクリーンショットに示すように、以下の XDM フィールドを組み合わせるには、 `coalesce(subscriptions.hasPromotion)` 配列内の false 値の最初の true を返す構文：
+例えば、マッピングのスクリーンショットに示すように、以下の XDM フィールドを組み合わせるには、 `coalesce(subscriptions.hasPromotion)` 最初の `true` / `false` の値を配列に含めます。
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` 配列
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![coalesce 関数のマッピングスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![coalesce 関数を含むマッピングの例です。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 この場合、出力ファイルは次のようになります。 null 以外の最初の `true` 配列の値がファイルにエクスポートされます。
 
@@ -156,7 +171,6 @@ John,Doe, johndoe@acme.org, "isMarketing"
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` 配列を書き出す関数 {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ John,Doe,true
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` 顧客別の 5 回の購入時間を示す配列
 * `personalEmail.address` string
 
-![size_of 関数のマッピングスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![size_of 関数を含むマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 この場合、出力ファイルは次のようになります。 2 番目の列に、顧客が行った個別の購入の数に対応する、配列内の要素の数が示されていることに注意してください。
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 配列のインデックスにアクセスして、配列から単一の項目を書き出すことができます。 例えば、上記の `size_of` 関数を使用する場合、顧客が特定の製品を初めて購入したときにのみアクセスして書き出しをおこなう場合は、 `purchaseTime[0]` タイムスタンプの最初の要素を書き出すには、次の手順を実行します。 `purchaseTime[1]` タイムスタンプの 2 番目の要素を書き出すには、次の手順に従います。 `purchaseTime[2]` タイムスタンプの 3 番目の要素を書き出すなど。
 
-![インデックスにアクセスするためのマッピングスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![マッピングの例では、配列の要素にアクセスする方法を示します。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-この場合、出力ファイルは次のようになります。
+この場合、出力ファイルは次のようになり、顧客が初めて購入したときに書き出されます。
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 以下を使用します。 `first` および `last` 配列の最初または最後の要素を書き出す関数 例えば、 `purchaseTime` 配列オブジェクトに前の例の複数のタイムスタンプを含める場合、これらの関数を使用して、個人が行った最初または最後の購入時間を書き出すことができます。
 
-![最初と最後の関数のマッピングのスクリーンショット](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![最初と最後の関数を含むマッピングの例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-この場合、出力ファイルは次のようになります。
+この場合、出力ファイルは次のようになり、顧客が最初に購入した日時と最後に購入した時間が書き出されます。
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 配列または要素を配列から書き出すための関数に加えて、ハッシュ関数を使用して属性をハッシュ化できます。 例えば、属性に個人を特定できる情報が含まれている場合は、それらのフィールドを書き出す際にハッシュ化できます。
 
 文字列値を直接ハッシュ化できます。例： `md5(personalEmail.address)`. 必要に応じて、次のように配列フィールドの個々の要素をハッシュ化することもできます。 `md5(purchaseTime[0])`
-
-
-
