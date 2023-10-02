@@ -1,10 +1,11 @@
 ---
 title: プロスペクティングユースケースを通じて新規顧客をエンゲージおよび獲得
 description: Real-Time CDP のパートナーデータサポートによって可能になる、プロスペクティングユースケースを通じた新規顧客のエンゲージメントと獲得について説明します。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 95%
+source-wordcount: '1960'
+ht-degree: 93%
 
 ---
 
@@ -207,7 +208,11 @@ Real-Time CDP のセグメント化機能を使用して、見込み客プロフ
 
 ### 宛先への見込み客のプロファイルをアクティブ化 {#activate-to-destinations}
 
-見込み客のオーディエンスを宛先に書き出して利用します。現在、[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) や[!BADGE アルファ]などの特定の宛先のみがサポートされています。{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) 宛先は、見込み客のプロファイルのアクティベーションをサポートします。
+見込み客のオーディエンスを宛先に書き出して利用します。現在、見込み客プロファイルのアクティブ化は、特定のクラウドストレージの宛先でのみサポートされています。
+
+![見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[詳細を表示](/help/destinations/ui/activate-prospect-audiences.md) クラウドストレージの宛先への見込み客のアクティブ化について
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 

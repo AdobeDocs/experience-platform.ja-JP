@@ -2,13 +2,13 @@
 title: 見込み客のオーディエンスを宛先に対してアクティブ化する
 type: Tutorial
 description: 見込み客オーディエンスを宛先に対してアクティブ化する方法を説明します。
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 28%
 
 ---
-
 
 # 見込み客オーディエンスの有効化
 
@@ -22,7 +22,7 @@ ht-degree: 28%
 
 **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。以下を使用します。 **[!UICONTROL データタイプ]** フィルターと選択 **[!UICONTROL 見込み客]** を参照して、見込み客オーディエンスのアクティブ化をサポートする宛先を確認します。 現在、見込み客オーディエンスのエクスポートは、クラウドストレージの宛先でのみ使用できます。
 
-![データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## 前提条件 {#prerequisites}
 
