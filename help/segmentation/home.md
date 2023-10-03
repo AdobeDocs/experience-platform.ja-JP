@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -89,7 +89,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
->abstract="エッジのセグメント化は、Edge ネットワーク上で Platform 内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。"
+>abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
 エッジのセグメント化は、Platform でのセグメントを瞬時に評価する機能です [Edge ネットワーク上](../edge/home.md)を使用して、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。

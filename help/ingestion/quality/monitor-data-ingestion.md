@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 36%
 >title="取り込みレート"
 >abstract="正常に処理された 1 秒間あたりのイベントの数。"
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="UI でのソースのデータフローの監視"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ja" text="UI でのソースのデータフローの監視"
 
 >[!TIP]
 >
