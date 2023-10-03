@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## 宛先 {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新しい宛先** {#new-destinations}
 
@@ -91,7 +91,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | ----------- | ----------- |
 | [!DNL Custom Personalization] と [!DNL Adobe Commerce] の宛先のデータフロー監視 | <p> [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md)、[カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)、[属性を含むカスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md)接続のアクティベーション指標を確認できるようになりました。 </p> <p>![Adobe Commerce の画像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce の指標"){width="100" zoomable="yes"}</p>  詳しくは、[宛先ワークスペースでのデータフローの監視](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)を参照してください。 |
 | [!DNL Google Ad Manager] と [!DNL Google Ad Manager 360] の宛先の新しい「**[!UICONTROL セグメント名にセグメント ID を追加]**」フィールド | <p>[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) のセグメント名と、[[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) に Experience Platform のセグメント ID を `Segment Name (Segment ID)` のように含めることができるようになりました。</p><p>![セグメント ID を追加の画像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新しい「セグメント名にセグメント ID を追加」フィールド "){width="100" zoomable="yes"}</p> |
-| スケジュールされたオーディエンスのバックフィル | <p>[[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) の宛先では、セグメントが最初に宛先接続にマッピングされてから 24～48 時間後に、宛先へのオーディエンスバックフィルのアクティベーションが行われるようにスケジュールされています。この更新は、データの取り込みまで 24 時間待機するという Google のポリシーに対応するものであり、Real-Time CDP と [!DNL Google Display & Video 360] の間の一致率が向上します。</p> <p>これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。</p> |
+| スケジュールされたオーディエンスのバックフィル | <p>[[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) の宛先では、セグメントが最初に宛先接続にマッピングされてから 24～48 時間後に、宛先へのオーディエンスバックフィルのアクティベーションが行われるようにスケジュールされています。この更新は、Googleのデータ取り込みが完了するまで 24 時間待ち、Real-Time CDPと [!DNL Google Display & Video 360].</p> <p>これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。</p> |
 
 {style="table-layout:auto"}
 

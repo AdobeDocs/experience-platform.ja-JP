@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Media Edge API
 description: Media Edge API の概要
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
-
 
 # Media Edge API の概要
 
@@ -36,7 +36,7 @@ Media Edge API は、Adobe Experience Platform上に作成され、[XDM スキ�
 | ユースケース | API サービス |
 | -------- | ----------- |
 | Adobe Experience Platform ソリューション | Media Edge |
-| Real-Time CDP + Customer Journey Analytics | Media Edge |
+| Real-Time CDP +Customer Journey Analytics | Media Edge |
 | Adobe Analytics + Adobe Experience Platform ソリューション | Media Edge |
 | Adobe Analytics のみ（既にトラッキング中） | メディアコレクション |
 
@@ -53,7 +53,3 @@ Media Edge API は、Adobe Experience Platform上に作成され、[XDM スキ�
 * Media Edge API の使用について詳しくは、[基本を学ぶドキュメント](getting-started.md)を参照してください。
 
 * Platform Edge の操作について詳しくは、[Experience Platform Edge を使用した Media Analytics のインストール](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=ja)を参照してください。
-
-
-
-

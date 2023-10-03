@@ -1,10 +1,11 @@
 ---
 title: パートナー提供の属性を使用してファーストパーティプロファイルを補完
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 93%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP(App Service)、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。
 
@@ -24,7 +25,7 @@ ht-degree: 93%
 
 * データベンダーと共有するために、Real-Time CDP からオーディエンスリストを書き出す場所を検討します。この場所は、ファイルの書き出しをサポートする必要があります。
 * 追加の属性を重ね合わせるために、データベンダーが前提とする識別子は何ですか？
-* パートナー提供の属性を含むファイルを Real-Time CDP に取り込むにはどうすればよいですか？例えば、[Amazon S3](/help/sources/connectors/cloud-storage/s3.md) や [SFTP](/help/sources/connectors/cloud-storage/sftp.md) などのクラウドストレージソースコネクタを通じてファイルを取り込むことができます。
+* パートナーが指定した属性を含むファイルをReal-Time CDPに取り込む方法を教えてください。 例えば、[Amazon S3](/help/sources/connectors/cloud-storage/s3.md) や [SFTP](/help/sources/connectors/cloud-storage/sftp.md) などのクラウドストレージソースコネクタを通じてファイルを取り込むことができます。
 * パートナー提供の属性が Real-Time CDP に戻されて更新されるケイデンスはどれくらいですか？
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Commenting out links for now
 
 ### 個人を特定できる情報（PII）またはハッシュ化された PII をキーオフした際に強化するオーディエンスを書き出します {#export-audiences}
 
-パートナーに強化してもらうオーディエンスを書き出します。Amazon S3 や SFTP など、Real-Time CDP によって提供されるクラウドストレージの宛先を使用します。この手順を完了するには、次のドキュメントページを参照してください。
+パートナーに強化してもらうオーディエンスを書き出します。Amazon S3 や SFTP など、Real-Time CDPが提供するクラウドストレージの宛先を使用します。 この手順を完了するには、次のドキュメントページを参照してください。
 
 * [Amazon S3 の宛先](/help/destinations/catalog/cloud-storage/amazon-s3.md)ドキュメントページ
 * [SFTP の宛先](/help/destinations/catalog/cloud-storage/sftp.md)ドキュメントページ

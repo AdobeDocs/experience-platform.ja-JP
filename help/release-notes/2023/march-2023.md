@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年3月）
 description: Adobe Experience Platform の 2023年3月のリリースノート。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 86%
+ht-degree: 85%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | Meta Conversions API（ベータ版）の新しいクイックスタートワークフロー | データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。[Meta Conversions API のクイックスタートワークフロー](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=ja#quick-start)により、お客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。 |
 | Mobile SDK（ベータ版）用の新しいクイックスタートワークフロー | データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。[Mobile SDK 用のクイックスタートワークフロー](https://developer.adobe.com/client-sdks/documentation/)を使用すると、Mobile SDK を迅速に実装し、基本的なモバイルイベントをわずか数回の簡単な手順で検証できます。 |
 | [!DNL Braze] イベント転送拡張機能 | [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Braze] User Track API を使用してサーバーサイドイベントの形式で [!DNL Braze] に送信したりできます。 |
-| [!DNL Epsilon] イベント転送拡張機能 | この [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。 |
+| [!DNL Epsilon] イベント転送拡張機能 | The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=ja) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Network のイベント情報をキャプチャし、に送信できます。 [!DNL Epsilon] の使用 [!DNL Epsilon] イベント API。 |
 | [!DNL Mixpanel] イベント転送拡張機能 | [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、お客様は、イベント転送を活用して、Adobe Experience Platform Edge Network で取得したイベント情報を、Track Events API を使用して Mixpanel に送信できます。 |
 
 {style="table-layout:auto"}
@@ -70,7 +70,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## 宛先 {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新しい宛先** {#new-destinations}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 **修正および機能強化** {#destinations-fixes-and-enhancements}
 
-Real-Time CDP のファイルベース宛先における PGP／GPG 暗号化のバグ修正をリリースしています。この変更により、暗号化を現在使用している既存のファイルベース宛先では、以前とは異なる拡張子を持つファイル名を生成します。
+Real-Time CDPのファイルベースの宛先での PGP/GPG 暗号化のバグ修正をリリースしています。 この変更により、暗号化を現在使用している既存のファイルベース宛先では、以前とは異なる拡張子を持つファイル名を生成します。
 
 - 暗号化を使用する場合の現在の拡張子：`filename.csv`
 - 暗号化を使用する場合の今後の拡張子：`filename.csv.gpg`
@@ -105,7 +105,7 @@ Real-Time CDP のファイルベース宛先における PGP／GPG 暗号化の�
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
 **更新された機能**
 
@@ -137,13 +137,13 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | フィールドグループ | [[!UICONTROL AJO エンティティタグ]](https://github.com/adobe/xdm/pull/1672/files) | AJO エンティティタグを [!UICONTROL AJO エンティティフィールド](ジャーニーまたはキャンペーンに対応 ) |
 | フィールドグループ | （複数） | の複数のフィールドを追加しました。 [[!UICONTROL Journey Orchestrationステップイベントの共通フィールド]](https://github.com/adobe/xdm/pull/1671/files) |
 | フィールドグループ | （複数） | [の複数の XDM イベントタイプを追加しました。 [!UICONTROL メディアレポート]](https://github.com/adobe/xdm/pull/1670/files). |
-| フィールドグループ | [!UICONTROL Workfront 変更イベント] | この `Full Record` および `Accessor Employee Ids` フィールドグループが追加されました。 |
-| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | この [!UICONTROL 返金額] が追加され、項目に対して払い戻しされた金額（ある場合）が示されます。 |
-| データタイプ | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 返金リスト] は、この注文の返金のリストに追加されました。 |
+| フィールドグループ | [!UICONTROL Workfront 変更イベント] | The `Full Record` および `Accessor Employee Ids` フィールドグループが追加されました。 |
+| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | The [!UICONTROL 払い戻し金額] が追加され、項目に対して払い戻しされた金額（ある場合）が示されます。 |
+| データタイプ | [[!UICONTROL 注文 ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 払い戻しリスト] は、この注文の返金のリストに追加されました。 |
 | データタイプ | [[!UICONTROL 製品リスト項目 ]](https://github.com/adobe/xdm/pull/1677/files) | この製品のカテゴリデータのリストに製品カテゴリが追加されました。 |
 | データタイプ | [!UICONTROL セッションの詳細情報] | 追加された `pev3` 文字列フィールド [レポートに使用されるメディアストリームのタイプを示します](https://github.com/adobe/xdm/pull/1676/files). また、 `pccr` プロパティは、リダイレクトが発生したかどうかを示します。 |
-| データタイプ | [!UICONTROL 購買依頼リスト] | 次を提供： [購買依頼リスト・プロパティ](https://github.com/adobe/xdm/pull/1675/files). これには、名前、ID、説明が含まれます。 |
-| データタイプ | [!UICONTROL Commerce] | この [コマースデータタイプが更新されました](https://github.com/adobe/xdm/pull/1675/files) 含める `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`、および `requisitionList`. |
+| データタイプ | [!UICONTROL 購買依頼リスト] | 次を提供します。 [購買依頼リスト・プロパティ](https://github.com/adobe/xdm/pull/1675/files). これには、名前、ID、説明が含まれます。 |
+| データタイプ | [!UICONTROL Commerce] | The [コマースデータタイプが更新されました](https://github.com/adobe/xdm/pull/1675/files) 含める `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`、および `requisitionList`. |
 
 {style="table-layout:auto"}
 

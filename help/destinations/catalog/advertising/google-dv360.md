@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 85%
@@ -21,7 +21,7 @@ ht-degree: 85%
 [!DNL Google Display & Video 360] の宛先に固有な次の詳細に注意ください。
 
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラムを使用して作成されます。
-* オーディエンスのバックフィルを [!DNL Google Display & Video 360] の宛先は、オーディエンスが最初に宛先接続にマッピングされてから 24 ～ 48 時間後に発生するようにスケジュールされます。 この更新は、Googleのデータ取得まで 24 時間待機するポリシーに対応したもので、リアルタイム CDP との一致率を向上させるためのものです。 [!DNL Google Display & Video 360]. これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。
+* オーディエンスのバックフィルを [!DNL Google Display & Video 360] の宛先は、オーディエンスが最初に宛先接続にマッピングされてから 24 ～ 48 時間後に発生するようにスケジュールされます。 この更新は、Googleのデータ取得まで 24 時間待機するポリシーに対応したもので、Real-Time CDPとの一致率を向上させるためのものです。 [!DNL Google Display & Video 360]. これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。
 
 >[!IMPORTANT]
 >

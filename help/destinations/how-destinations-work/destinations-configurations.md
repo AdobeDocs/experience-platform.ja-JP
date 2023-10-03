@@ -2,10 +2,10 @@
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 Experience Platform の宛先への書き出し動作について考える際は、設定が機能する 3 つの異なるレベルを考慮する必要があります。
 
-* 第 1 レベルでは、プロファイルの書き出しの動作と設定の指定に関連する設定の一部は、宛先タイプに属するすべての宛先で共通です。これらの設定では、宛先の書き出しをトリガーする内容と、書き出しに含まれ、宛先開発者または Real-Time CDP ユーザーが編集できない内容を参照します。
+* 第 1 レベルでは、プロファイルの書き出しの動作と設定の指定に関連する設定の一部は、宛先タイプに属するすべての宛先で共通です。これらの設定は、宛先の書き出しのトリガーと、書き出しに含まれるものを指し、宛先の開発者またはReal-Time CDPユーザーは編集できません。
 * 第 2 レベルでは、Destination SDK を使用して宛先を作成する際に、宛先開発者が宛先レベルで一部の設定をカスタマイズできます。
-* 第 3 レベルでは、Real-Time CDP ユーザーがアクティベーションワークフローで設定できる設定の指定があります。
+* 3 番目のレベルでは、Real-Time CDPユーザーがアクティベーションワークフローで設定できる設定があります。
 
 ![宛先の一般的な書き出し設定と設定可能な書き出し設定の間の相互作用を示す図](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -25,7 +25,7 @@ Experience Platform の宛先への書き出し動作について考える際は
 
 宛先の書き出し動作は、*宛先の書き出しをトリガーする内容*&#x200B;と、*宛先の書き出しに含まれる内容*&#x200B;に関して、宛先タイプに属する宛先全体で一貫しています。宛先の書き出しは、宛先サービスが[アップストリームのリアルタイム顧客プロファイルサービス](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=ja#adobe-experience-platform-%26-applications-detailed-architecture-diagram)から受信する通知によってトリガーされます。
 
-宛先の書き出しに含まれる内容は、宛先タイプによって微妙に異なります。詳しくは、[宛先タイプごとの一般的な書き出し動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md)を参照してください。これらの設定は、宛先開発者または Real-Time CDP ユーザーが編集することはできません。
+宛先の書き出しに含まれる内容は、宛先タイプによって微妙に異なります。詳しくは、[宛先タイプごとの一般的な書き出し動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md)を参照してください。これらの設定は、宛先の開発者やReal-Time CDPユーザーは編集できません。
 
 ## 宛先開発者によるカスタマイズ可能な書き出し設定 {#customizable-settings-by-destination-developers}
 

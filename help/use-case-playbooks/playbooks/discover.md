@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: 適切なプレイブックを見つける
 description: ユースケースに適切なプレイブックを見つけてプレイブックを有効にする方法を説明します。
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+badgeBeta: label="ベータ版" type="Informative"
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # （ベータ版）適切なプレイブックを見つける
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ページ上で使用可能な検索ウィンドウとフィルターを使用して、ユースケースに適切なプレイブックを見つけます。
 
-例えば、ターゲットとするマーケティングファネルのステージ（コンバージョン、エンゲージメント、維持）に基づいて、使用できるプレイブックをフィルタリングできます。また、表示されるプレイブックを、所属する業界や、アクセス権のある製品使用権限（Adobe Journey Optimizer または Real-Time CDP）別にフィルタリングすることもできます。
+例えば、ターゲットとするマーケティングファネルのステージ（コンバージョン、エンゲージメント、維持）に基づいて、使用できるプレイブックをフィルタリングできます。また、表示されたプレイブックを、現在の業界や、アクセス権のある製品の使用権限 (Adobe Journey OptimizerまたはReal-Time CDP) 別にフィルタリングすることもできます。
 
 ![マーケティングファネル、業界、製品別でのプレイブックのフィルタリング](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

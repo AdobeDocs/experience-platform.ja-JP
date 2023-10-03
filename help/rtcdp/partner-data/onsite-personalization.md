@@ -1,7 +1,8 @@
 ---
 title: パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズ
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 97%
@@ -12,7 +13,7 @@ ht-degree: 97%
 
 >[!AVAILABILITY]
 >
->この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>この機能は、Real-Time CDP(App Service)、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 パートナー支援による認識を使用して、パーソナライズされたエクスペリエンスを web プロパティ訪問者に提供する方法を説明します。このチュートリアルを使用すると、Experience Platform および他の Experience Cloud ソリューションにおける様々な要素の実装シーケンスを理解して、パーソナライズされたエクスペリエンスを認証済みおよび未認証の訪問者に表示できます。
 

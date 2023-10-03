@@ -2,7 +2,7 @@
 title: Adobe Commerce Destination Connector
 description: Adobe CommerceとReal-Time CDPの商人が、Real-Time CDP内で作成および管理する顧客オーディエンスに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、買い物体験をパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 59%
@@ -13,7 +13,7 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-この [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ化する 1 つ以上のReal-Time CDPオーディエンスを選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 内 [!DNL Adobe Commerce]その後、これらのReal-Time CDPオーディエンスを選択して、買い物かご内の個別オファー（「2 を購入すると 1 回無料になります」など）をパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPオーディエンスにカスタマイズされます。
+The [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ化する 1 つ以上のReal-Time CDPオーディエンスを選択できます [!DNL Adobe Commerce] 顧客に動的にパーソナライズされたエクスペリエンスを提供するアカウント。 Within [!DNL Adobe Commerce]その後、これらのReal-Time CDPオーディエンスを選択して、買い物かご内の個別オファー（「2 を購入すると 1 回無料になります」など）をパーソナライズできます。 また、ヒーローバナーを表示したり、プロモーションオファーを通じて製品の価格を変更したりすることもできます。これらはすべてAdobe Real-Time CDPオーディエンスにカスタマイズされます。
 
 ## 前提条件 {#prerequisites}
 
@@ -22,7 +22,7 @@ ht-degree: 59%
 この宛先接続を使用するには、次へのアクセス権があることを確認してください。
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe 開発者コンソール](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。開発者コンソールにアクセスすると、 [設定を完了](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) Adobe Commerceの拡張機能の
+- [Adobe 開発者コンソール](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。デベロッパーコンソールにアクセスすると、 [設定を完了](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) Adobe Commerceの拡張機能の
 - [Adobe Commerce Cloud バージョン 2.4.4 以降](https://business.adobe.com/jp/products/magento/magento-commerce.html)
 
 Experience Platform で、以下を作成します。
@@ -53,7 +53,7 @@ Experience Platform で、以下を作成します。
 - **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 - **[!UICONTROL 説明]**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 - **[!UICONTROL 統合エイリアス]**：この値は、JSON オブジェクト名として Experience Platform Web SDK に送信されます。
-- **[!UICONTROL データストリーム ID]**:これにより、ページへの応答に含まれるオーディエンスを含むデータ収集データストリームが決定されます。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。詳しくは、[データストリームの設定](../../../datastreams/overview.md)を参照してください。
+- **[!UICONTROL Datastream ID]**：ページへの応答に含まれるオーディエンスを含むデータ収集データストリームを決定します。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。詳しくは、[データストリームの設定](../../../datastreams/overview.md)を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -61,7 +61,7 @@ Experience Platform で、以下を作成します。
 
 宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
-## オーディエンスを [!DNL Commerce] 宛先 {#activate}
+## 以下に対してオーディエンスをアクティブ化 [!DNL Commerce] 宛先 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -71,11 +71,11 @@ Experience Platform で、以下を作成します。
 
 ## [!DNL Adobe Commerce] での次の手順
 
-これで、 [!DNL Commerce] Experience Platform内の宛先、 [!DNL Audience Activation] 拡張 [!DNL Commerce] および [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPオーディエンスをインポートします。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)を参照してください。
+これで、 [!DNL Commerce] の宛先をExperience Platformで指定する場合は、 [!DNL Audience Activation] 拡張 [!DNL Commerce] をクリックし、 [!DNL Commerce Admin] をクリックして、作成したReal-Time CDPオーディエンスをインポートします。 詳しくは、[[!DNL Commerce] ドキュメント](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)を参照してください。
 
 ## Commerce における Audience Activation の検証 {#exported-data}
 
-Real-Time CDP Audiences を [!DNL Adobe Commerce] アカウントを使用する場合、 _管理者_ サイドバー、次に移動 **[!UICONTROL 顧客]** > **[!UICONTROL リアルタイム CDP オーディエンス]**.
+次に対してReal-Time CDP Audiences をアクティブ化した後、 [!DNL Adobe Commerce] アカウントを使用する場合、 _管理者_ サイドバー、次に移動 **[!UICONTROL 顧客]** > **[!UICONTROL Real-Time CDP Audience]**.
 
 ![Real-Time CDP Audiences ダッシュボード](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

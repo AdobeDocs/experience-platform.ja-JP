@@ -3,7 +3,7 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 71%
@@ -18,7 +18,7 @@ ht-degree: 71%
 
 Adobe Experience Platformでは、接続、データセットの書き出し、拡張機能など、様々な宛先タイプを区別します。 接続先には複数のタイプがあり、API ベースの宛先 ( ) にデータを書き出すことができます。
 
-最後に、宛先カタログ内のすべての組織で使用可能な公開先と、Real-time CDP Ultimate のお客様が作成できる非公開の宛先を区別して、特定の書き出し使用例を満たすこともできます。
+最後に、宛先カタログ内のすべての組織で使用可能な公開宛先と、Real-Time CDP Ultimate のお客様が独自の書き出し使用例を満たすために作成できる非公開宛先との間で接続を区別することもできます。
 
 ![宛先のタイプを示す図.](./assets/destination-types/types-of-destinations-no-highlight.png)
 

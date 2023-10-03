@@ -2,7 +2,7 @@
 title: プロスペクティングユースケースを通じて新規顧客をエンゲージおよび獲得
 description: Real-Time CDP のパートナーデータサポートによって可能になる、プロスペクティングユースケースを通じた新規顧客のエンゲージメントと獲得について説明します。
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
 ht-degree: 93%
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、リアルタイム CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP(App Service)、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 Real-Time CDP でサードパーティデータのサポートを使用して、データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客を獲得またはリーチできるよう見込み客にエンゲージします。
 

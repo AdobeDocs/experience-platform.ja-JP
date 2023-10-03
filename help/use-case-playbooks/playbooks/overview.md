@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: ユースケースプレイブックの概要
 description: Experience Platform のユースケースプレイブック機能を使用して、様々なマーケティングユースケースの基本を学ぶ
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+badgeBeta: label="ベータ版" type="Informative"
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # （ベータ版）ユースケースプレイブックの概要
 
@@ -41,11 +41,11 @@ Real-Time CDP プレイブックを選択した場合、マーケティングキ
 
 Adobe Journey Optimizer プレイブックを選択した場合、製品内でカスタマージャーニーを構築し、関連するメッセージをお客様に送信することが目的となる可能性があります。
 
-プレイブックのインスタンスを作成して、ユースケースに合わせて Experience Platform で再利用可能なスキーマ、セグメント、ジャーニーなどの特定のアセットを生成します。これらのオブジェクトの目的は、特定のユースケースを実装するために必要なすべてのリソースを理解するのに役立つことです。データが含まれず、開発用サンドボックスに作成されます。これらのアセットの使用を開始するか、Real-Time CDP または Journey Optimizer でチームと共有して使用する前に編集を行います。
+プレイブックのインスタンスを作成して、ユースケースに合わせて Experience Platform で再利用可能なスキーマ、セグメント、ジャーニーなどの特定のアセットを生成します。これらのオブジェクトの目的は、特定のユースケースを実装するために必要なすべてのリソースを理解するのに役立つことです。データが含まれず、開発用サンドボックスに作成されます。これらのアセットを使用する前に、アセットの使用を開始するか、アセットを編集してから、Real-Time CDPまたはJourney Optimizerのチームと共有します。
 
 ## 対象
 
-一部の[!UICONTROL ユースケース プレイブック]は Real-Time CDP のユースケースに合わせて調整されていますが、その他は Journey Optimizer を使用するお客様に最適です。カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。
+一部 [!UICONTROL ユースケースプレイブック] はReal-Time CDPの使用例に合わせてカスタマイズされていますが、Journey Optimizerを使用するお客様に最適なものもあります。 カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。
 
 ## UI ガイド
 

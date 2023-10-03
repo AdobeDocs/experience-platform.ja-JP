@@ -1,13 +1,13 @@
 ---
 title: オーディエンスに関するよくある質問（FAQ）
 description: オーディエンスおよびその他のセグメント化に関する概念に関するよくある質問への回答を確認します。
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
-ht-degree: 53%
+ht-degree: 52%
 
 ---
-
 
 # よくある質問
 
@@ -140,7 +140,7 @@ Adobe Experience Platform [!DNL Segmentation Service] には、[!DNL Real-Time C
 
 ### オーディエンスコンポジションからすべての下流の宛先とチャネルに、オーディエンスを送信できますか？
 
-現時点では、できません。現在、Adobe Journey Optimizer キャンペーンおよび Real-time CDP の宛先で、オーディエンス構成のオーディエンスを使用できます。Adobe Journey Optimizer のジャーニーは、将来のリリースでサポートされる予定です。
+現時点では、できません。現在、Adobe Journey Optimizer Campaigns およびReal-Time CDPの宛先で、オーディエンス構成のオーディエンスを使用できます。 Adobe Journey Optimizer のジャーニーは、将来のリリースでサポートされる予定です。
 
 ### コンポジションの数にガードレールはありますか？
 
