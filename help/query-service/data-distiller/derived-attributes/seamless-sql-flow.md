@@ -2,7 +2,7 @@
 title: 派生属性のシームレスな SQL フロー
 description: クエリサービス SQL が拡張され、派生属性をシームレスにサポートできるようになりました。 この SQL 拡張機能を使用して、プロファイルに対して有効な派生属性を作成する方法、およびリアルタイム顧客プロファイルとセグメント化サービスに対して属性を使用する方法について説明します。
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 * ID 名前空間が存在しない場合は作成します。
 * 必要に応じて、派生属性を保存するデータ型を作成します。
 * そのデータ型を持つフィールドグループを作成して、派生属性情報を保存します。
-* 作成済みの名前空間でプライマリ ID 列を作成または割り当てます。
+* 先ほど作成した名前空間で、プライマリ ID 列を作成または割り当てます。
 * 先ほど作成したフィールドグループとデータ型を使用してスキーマを作成します。
 * スキーマを使用して新しいデータセットを作成し、必要に応じてプロファイル用に有効にします。
 * オプションで、データセットをプロファイルが有効になっているとマークします。
@@ -35,13 +35,13 @@ ht-degree: 2%
 >
 >以下に示す SQL クエリは、既存の名前空間を使用することを前提としています。
 
-Create Table as Select(CTAS) クエリを使用して、データセットの作成、データ型の割り当て、プライマリ ID の設定、スキーマの作成、プロファイル対応としてのマークをおこないます。 以下の SQL 文の例では、属性を作成し、リアルタイム顧客データプロファイル (Real-Time CDP) で使用できるようにします。 SQL クエリは、次の例に示す形式に従います。
+Create Table as Select(CTAS) クエリを使用して、データセットの作成、データ型の割り当て、プライマリ ID の設定、スキーマの作成、プロファイル対応としてのマークをおこないます。 以下の SQL ステートメントの例では、属性を作成し、Real-time Customer Data Platform(Real-Time CDP) で使用できるようにします。 SQL クエリは、次の例に示す形式に従います。
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-次のデータタイプがサポートされています。boolean、date、datetime、text、float、bigint、integer、map、array、および struct/row
+サポートされるデータタイプは、boolean、date、datetime、text、float、bigint、integer、map、array、struct/row です。
 
 以下の SQl コードブロックは、構造体/行、マップ、配列のデータ型を定義する例です。 行 1 は、行の構文を示しています。 2 行目は、マップの構文と 3 行目の配列の構文を示しています。
 
@@ -53,7 +53,7 @@ ARRAY <data_type>
 
 または、Platform UI を使用して、データセットをプロファイルに対して有効にすることもできます。 データセットをプロファイルで有効としてマークする方法について詳しくは、 [リアルタイム顧客プロファイルドキュメントのデータセットの有効化](../../../catalog/datasets/user-guide.md#enable-profile).
 
-次のクエリの例では、 `decile_table` データセットは `id` をプライマリ id 列として使用し、名前空間を持つ `IDFA`. また、 `decile1Month` マップデータ型の。 作成されたテーブル (`decile_table`) がプロファイルで有効になっている。
+次のクエリの例では、 `decile_table` データセットは `id` をプライマリ id 列として使用し、名前空間を持つ `IDFA`. また、 `decile1Month` マップデータ型の。 作成されたテーブル (`decile_table`) がプロファイルで有効になっていることを確認します。
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,7 +69,7 @@ Created Table DataSet Id
 (1 row)
 ```
 
-用途 `label='PROFILE'` の `CREATE TABLE` コマンドを使用して、プロファイル対応のデータセットを作成します。 この `upsert` デフォルトでは、機能はオンになっています。 この `upsert` 機能は `ALTER` コマンドを使用します。以下の例で示すように。
+用途 `label='PROFILE'` の `CREATE TABLE` コマンドを使用して、プロファイル対応のデータセットを作成します。 The `upsert` デフォルトでは、機能はオンになっています。 The `upsert` 機能は、 `ALTER` コマンドを使用します。以下の例で示すように。
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
@@ -107,7 +107,7 @@ ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-提供された例では、 `id2` は `test1_dataset`.
+提供された例では、 `id2` は、 `test1_dataset`.
 
 ### プロファイルのデータセットの無効化 {#disable-dataset-for-profile}
 
@@ -125,7 +125,7 @@ ALTER TABLE decile_table DROP label 'PROFILE';
 
 この SQL 文は、API 呼び出しを使用する効率的な代替方法を提供します。 詳しくは、 [データセット API を使用してReal-Time CDPで使用するデータセットを無効にする](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
-### データセットの更新および挿入機能を許可 {#enable-upsert-functionality-for-dataset}
+### データセットの更新および挿入機能を許可する {#enable-upsert-functionality-for-dataset}
 
 UPSERT[ 挿入 ] コマンドを使用すると、新しいレコードを挿入したり、テーブル内の既存のデータを更新したりできます。 特に、指定した値がテーブルに既に存在する場合は既存の行を更新でき、指定した値が存在しない場合は新しい行を挿入できます。
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### 各テーブルに関連する追加のテーブル情報を表示 {#show-labels-for-tables}
 
-プロファイルが有効なデータセットに対しては、追加のメタデータが保持されます。 以下を使用： `SHOW TABLES` 追加の `labels` テーブルに関連付けられたラベルに関する情報を提供する列。
+プロファイルが有効なデータセットに対しては、追加のメタデータが保持されます。 以下を使用します。 `SHOW TABLES` 追加のを表示するコマンド `labels` テーブルに関連付けられたラベルに関する情報を提供する列。
 
 このコマンドの出力の例を次に示します。
 
@@ -221,7 +221,7 @@ DROP FIELDGROUP field_group_for_test123;
 
 ### テーブルのすべてのフィールドグループ名と ID を表示
 
-この `SHOW FIELDGROUPS` コマンドは、テーブルの名前、fieldgroupId、および owner を含むテーブルを返します。
+The `SHOW FIELDGROUPS` コマンドは、テーブルの名前、fieldgroupId、および owner を含むテーブルを返します。
 
 このコマンドの出力の例を次に示します。
 

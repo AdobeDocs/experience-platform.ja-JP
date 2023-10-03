@@ -3,7 +3,8 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;カスタ�
 title: ライセンス使用状況ダッシュボード ガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 6%
@@ -19,7 +20,7 @@ ht-degree: 6%
 
 Adobe Experience Platformから、組織のライセンス使用状況に関する重要な情報を表示できます [!UICONTROL ライセンスの使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショットの間にキャプチャされます。
 
-ライセンス使用状況レポートは、ライセンス使用状況の指標に対して高い精度を提供します。 ダッシュボードには、購入した各製品の使用状況指標、すべての実稼動または開発サンドボックスの指標の統合的な使用状況、特定のサンドボックスの使用状況指標が表示されます。 リアルタイムExperience Platformデータプロファイル、Adobe Journey Optimizer、Customer Journey Analyticsの各顧客アプリケーションを使用指標と共に追跡できます。
+ライセンス使用状況レポートは、ライセンス使用状況の指標に対して高い精度を提供します。 ダッシュボードには、購入した各製品の使用状況指標、すべての実稼動または開発サンドボックスの指標の統合的な使用状況、特定のサンドボックスの使用状況指標が表示されます。 Real-time Customer Data Platform、Adobe Journey OptimizerおよびCustomer Journey AnalyticsのExperience Platform指標を使用して追跡できるアプリケーションがあります。
 
 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセスと操作の方法を説明し、ダッシュボードに表示されるビジュアライゼーションに関する詳細を提供します。
 
@@ -59,7 +60,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 >[!NOTE]
 >
->への追加 [!UICONTROL ライセンス数] アドオンの結果、 [!UICONTROL ライセンス数] を参照してください。 （アドオンの後に）そのライセンス金額の使用状況がベース製品を通じて追跡されます。 例えば、5 つのサンドボックスの 1 パックを購入した場合、数量 5 が基本製品の数量に追加されます。この場合、アドオンには [!UICONTROL ライセンス数] が 1 つで、そのアドオンの使用状況は、ベース製品を通じて使用状況が追跡されるので、「空白」になります。
+>への追加 [!UICONTROL ライセンス数] アドオンの結果、 [!UICONTROL ライセンス数] Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsなどの基本製品用。 （アドオンの後に）そのライセンス金額の使用状況がベース製品を通じて追跡されます。 例えば、5 つのサンドボックスの 1 パックを購入した場合、数量 5 が基本製品の数量に追加されます。この場合、アドオンには [!UICONTROL ライセンス数] が 1 つで、そのアドオンの使用状況は、ベース製品を通じて使用状況が追跡されるので、「空白」になります。
 
 この表は、各製品が多数の指標を追跡できるので、各製品の主要指標を示しています。
 
