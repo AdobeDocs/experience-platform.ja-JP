@@ -4,7 +4,7 @@ solution: Experience Platform
 title: フローサービス API を使用して新しい接続仕様を作成します
 description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、セルフサービスソースを使用して新しいソースを統合する手順を説明します。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 46%
@@ -39,7 +39,7 @@ ht-degree: 46%
 | アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
 | {your_source} | ソースの名前。このフォルダーには、ソースに関連するすべてのアーティファクトを、プライベート Git リポジトリ内に含める必要があります。 | `mailchimp-members` |
-| {your_source}-category.txt | ソースが属するカテゴリ。テキストファイル形式で指定します。 セルフサービスソース（バッチ SDK）でサポートされる使用可能なソースカテゴリのリストは、次のとおりです。 <ul><li>広告</li><li>Analytics</li><li>同意および環境設定</li><li>CRM</li><li>カスタマーサクセス</li><li>データベース</li><li>e コマース</li><li>マーケティングの自動処理</li><li>支払い</li><li>プロトコル</li></ul> **注意**:ソースが上記のカテゴリのいずれにも適合しないと思われる場合は、Adobe担当者にお問い合わせください。 | `mailchimp-members-category.txt` ファイル内で、次のようにソースのカテゴリを指定します。 `marketingAutomation`. |
+| {your_source}-category.txt | ソースが属するカテゴリ。テキストファイル形式で指定します。 セルフサービスソース（バッチ SDK）でサポートされる使用可能なソースカテゴリのリストは、次のとおりです。 <ul><li>広告</li><li>Analytics</li><li>同意および環境設定</li><li>CRM</li><li>カスタマーサクセス</li><li>データベース</li><li>e コマース</li><li>マーケティングの自動処理</li><li>支払い</li><li>プロトコル</li></ul> **注意**：ソースが上記のカテゴリのいずれにも適合しないと思われる場合は、Adobe担当者にお問い合わせください。 | `mailchimp-members-category.txt` ファイル内で、次のようにソースのカテゴリを指定します。 `marketingAutomation`. |
 | {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Mailchimp Members] は、 [!DNL Mailchimp Members] データをExperience Platformに送信します。 |
 | {your_source}-icon.svg | 画像ソースカタログでソースを表すために使用するExperience Platform。 このアイコンは、SVGファイルです。 |
 | {your_source}-label.txt | ソースの名前。ソースカタログに表示されるExperience Platformです。 | Mailchimp メンバー |
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ curl -X POST \
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",
