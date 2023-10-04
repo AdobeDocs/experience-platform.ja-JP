@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 31%
+source-wordcount: '2284'
+ht-degree: 33%
 
 ---
 
@@ -160,6 +160,27 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 機能 | 説明 |
 | --- | --- |
 | スキーマ作成ワークフローの更新 | プロセスを合理化するための新しいスキーマ作成ワークフローが実装されました。 <br> ![新しいスキーマ作成 UI。](../2023/assets/schema-class-options.png "新しいスキーマ詳細セレクターが強調表示されています。"){width="100" zoomable="yes"} <br> 詳しくは、 [スキーマ作成ドキュメント](../../xdm/ui/resources/schemas.md#create) を参照してください。 |
+
+**新しい XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明 |
+| --- | --- | --- |
+| データタイプ | [[!UICONTROL 戻る]](https://github.com/adobe/xdm/pull/1773/files) | 発行された RMA(Return Murchandise Authorization)。 |
+| データタイプ | [[!UICONTROL 項目を返す]](https://github.com/adobe/xdm/pull/1773/files) | RMA 内の返品品目の情報（返品商品承認）。 |
+
+{style="table-layout:auto"}
+
+**更新された XDM コンポーネント**
+
+| コンポーネントのタイプ | 名前 | 説明のアップデート |
+| --- | --- | --- |
+| 拡張機能 | [!UICONTROL AJO エンティティフィールド] | The [[!UICONTROL マルチバリアント用のフラグ]](https://github.com/adobe/xdm/pull/1774/files) がに追加されました [!UICONTROL AJO エンティティフィールド] を使用して、バリアントがマルチバリアントかどうかを識別します。 |
+| データタイプ | [!UICONTROL 製品リスト項目] | [[!UICONTROL 項目を返す]](https://github.com/adobe/xdm/pull/1773/files) が追加され、Return Murchandise Authorization 情報が含まれるようになりました。 |
+| データタイプ | 注文 | [[!UICONTROL 情報を返す]](https://github.com/adobe/xdm/pull/1773/files) が追加され、発行された RMA(Return Murchandise Authorization) が含まれます。 |
+
+{style="table-layout:auto"}
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
