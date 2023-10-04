@@ -2,7 +2,7 @@
 title: ID 名前空間の概要
 description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
+source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
 ht-degree: 23%
@@ -90,7 +90,7 @@ Experience Platform内では、次の ID タイプを使用できます。
 | 電話 (E.164) | E.164 形式でハッシュ化する必要がある生の電話番号を表す名前空間。 E.164 形式には、プラス記号 (`+`)、国際電話番号、市外局番、電話番号。 例：`(+)(country code)(area code)(phone number)`。 |
 | 電話 (SHA256) | SHA256 を使用してハッシュ化する必要がある電話番号を表す名前空間。 記号、文字、および先頭のゼロを削除する必要があります。 また、国呼び出しコードをプレフィックスとして追加する必要があります。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
-| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) 詳細情報を参照してください。 |
+| TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) を参照してください。 |
 | Windows AID | Windows 広告 ID を表す名前空間。 次のドキュメントを参照してください： [Windows 広告 ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) を参照してください。 |
 
 ### ID 名前空間の表示 {#view-identity-namespaces}
