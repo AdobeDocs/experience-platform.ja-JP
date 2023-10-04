@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceAPI ガイドの付録
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 69%
 >
 > 各 ID タイプには整数値の `namespaceId` があります。これは、ID の `namespace` プロパティを「namespaceId」に設定する際に `type` 文字列の代わりに使用できます。詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
-組織で使用中の ID 名前空間のリストを取得するには、にGETリクエストを送信します `idnamespace/identities` エンドポイント [!DNL Identity Service] API 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
+組織で使用中の ID 名前空間のリストを取得するには、にGETリクエストを送信します `idnamespace/identities` エンドポイント [!DNL Identity Service] API. 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
 ## 名前空間修飾子
 
@@ -47,8 +47,8 @@ ht-degree: 69%
 
 | 修飾子 | 定義 |
 | --------- | ---------- |
-| `standard` | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
-| `custom` | 組織のコンテキストで作成された一意の名前空間で、すべての [!DNL Experience Cloud]. この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
+| `standard` | 個々の組織データセット（メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
+| `custom` | 組織のコンテキストで作成された一意の名前空間で、全体で共有されるものではありません [!DNL Experience Cloud]. この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
 | `integrationCode` | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
 | `namespaceId` | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
 | `unregistered` | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
@@ -67,9 +67,9 @@ ht-degree: 69%
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform（データレイク） | `aepDataLake` |
+| Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform（リアルタイム顧客プロファイル） | `profileService` |
-| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Pass Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 顧客属性 (CRS) | `CRS` |
 | ID サービス | `identity` |
