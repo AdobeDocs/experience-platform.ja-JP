@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: ユーザーインターフェイスでクラスを作成および編集するExperience Platformを説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1457'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 Adobe Experience Platformでは、スキーマのクラスは、スキーマに含まれるデータ（レコードまたは時系列）の動作面を定義します。 これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
-Adobeは、次のような、いくつかの標準（「コア」）Experience Data Model(XDM) クラスを提供します。 [!DNL XDM Individual Profile] および [!DNL XDM ExperienceEvent]. これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織の具体的な使用例を説明することもできます。
+Adobeには、XDM 個別プロファイルや XDM ExperienceEvent など、いくつかの標準（「コア」）Experience Data Model(XDM) クラスが用意されています。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織の具体的な使用例を説明することもできます。
 
 このドキュメントでは、Experience PlatformUI でカスタムクラスを作成、編集、管理する方法の概要を説明します。
 
@@ -28,7 +28,7 @@ Adobeは、次のような、いくつかの標準（「コア」）Experience D
 
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) クラスが XDM スキーマにどのように貢献するかを学ぶため。
 
-このガイドは必須ではありませんが、 [UI でのスキーマの構成](../../tutorials/create-schema-ui.md) の様々な機能を身に付ける [!DNL Schema Editor].
+このガイドは必須ではありませんが、 [UI でのスキーマの構成](../../tutorials/create-schema-ui.md) を参照して、スキーマエディターの様々な機能について理解してください。
 
 ## はじめに
 
@@ -42,29 +42,25 @@ Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** 左
 
 >[!TIP]
 >
->ワークスペースの検索機能を使用して、スキーマを見つけやすくすることができます。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
+>検索機能を使用して、名前に基づいてクラスをフィルタリングまたは検索します。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
 
 ## 新しいクラスの作成 {#create}
 
-Platform UI でクラスを作成するには、2 つのメソッドがあります。 Adobe Analytics の **[!UICONTROL スキーマ]** ワークスペース、選択 **[!UICONTROL スキーマを作成]**、または [!UICONTROL クラス] タブの選択 **[!UICONTROL クラスを作成]**.
+Platform UI でクラスを作成するには、2 つのメソッドがあります。 Adobe Analytics の [!UICONTROL スキーマ] ワークスペース、選択 **[!UICONTROL スキーマを作成]**、または [!UICONTROL クラス] タブの選択 **[!UICONTROL クラスを作成]**.
 
 ![The [!UICONTROL クラス] タブ [!UICONTROL スキーマ] ワークスペース [!UICONTROL スキーマを作成] および [!UICONTROL クラスを作成] ハイライト](../../images/ui/resources/classes/create-class-methods.png)
 
-次を選択した場合、 **[!UICONTROL クラスを作成]**、 [!UICONTROL クラスを作成] ダイアログが表示されます。 を入力します。 [!UICONTROL 名前] および [!UICONTROL 説明] クラスの場合は、ラジオボタンを使用してクラスの意図した動作を選択します。 クラスは、レコード系列または時系列です。 選択 **[!UICONTROL 作成]** をクリックして選択を確定します。
+次を選択した場合、 **[!UICONTROL クラスを作成]**、 [!UICONTROL クラスを作成] ダイアログが表示されます。 を入力します。 [!UICONTROL 表示名] および [!UICONTROL 説明] クラスの場合は、ラジオボタンを使用してクラスの意図した動作を選択します。 クラスは、型、レコード系列、または時系列のいずれかです。 選択 **[!UICONTROL 作成]** 選択を確定し、に戻るには、以下の手順に従います。 [!UICONTROL クラス] タブをクリックします。
 
 ![The [!UICONTROL クラスを作成] ～との対話 [!UICONTROL 作成] ハイライト表示されました。](../../images/ui/resources/classes/create-class-dialog.png)
 
-The [!DNL Schema Editor] が表示され、作成したカスタムクラスに基づく新しいスキーマがキャンバスに表示されます。 クラスにはまだフィールドが追加されていないので、スキーマには `_id` フィールド： [!DNL Schema Registry].
+作成したクラスが使用可能になり、 [!UICONTROL クラス] 表示。
 
-![](../../images/ui/resources/classes/schema.png)
-
->[!IMPORTANT]
->
->組織で定義されたクラスを実装するスキーマを構築する場合、スキーマフィールドグループは互換性のあるクラスでのみ使用できることに注意してください。 定義したクラスは新しいので、互換性のあるフィールドグループは「 **[!UICONTROL フィールドグループを追加]** ダイアログ。 代わりに、 [新しいフィールドグループを作成する](./field-groups.md#create) そのクラスで使用する 次に新しいクラスを実装するスキーマを作成すると、定義したフィールドグループが一覧表示され、使用できます。
+![The [!UICONTROL クラス] タブ [!UICONTROL スキーマ] 最近作成したクラスがハイライト表示されたワークスペース。](../../images/ui/resources/classes/new-class-listing.png)
 
 ### クラスの作成または編集 {#create-or-edit}
 
-次を選択した場合、 **[!UICONTROL スキーマを作成]**、 [!UICONTROL スキーマを作成] ワークフローが表示されます。 Adobe Analytics の [!UICONTROL スキーマの詳細] セクション、選択 **[!UICONTROL その他]**. 使用可能なクラスのリストが表示されます。 ここから、新しいクラスを基にする既存のクラスを参照およびフィルタリングできます。
+または、 **[!UICONTROL スキーマを作成]**、 [!UICONTROL スキーマを作成] ワークフローが表示されます。 Adobe Analytics の [!UICONTROL スキーマの詳細] セクション、選択 **[!UICONTROL その他]**. 使用可能なクラスのリストが表示されます。 ここから、新しいクラスを基にする既存のクラスを参照およびフィルタリングできます。
 
 >[!NOTE]
 >
@@ -86,21 +82,25 @@ The [!DNL Schema Editor] が表示され、作成したカスタムクラスに�
 
 ![The [!UICONTROL スキーマを作成] 使用可能なクラスのテーブルから選択したクラスを持つワークフローと [!UICONTROL 次へ] ハイライト表示されました。](../../images/ui/resources/classes/select-class.png)
 
-The [!UICONTROL 名前と説明] セクションが表示されます。 この節では、スキーマを識別する名前と説明を指定します。&#x200B;キャンバスには、選択したクラスとスキーマ構造を確認できるように、スキーマの基本構造（クラスで提供）が表示されます。
+The [!UICONTROL 名前とレビュー] 「 」セクションが表示されます。 この節では、スキーマを識別する名前と説明を指定します。&#x200B;キャンバスには、選択したクラスとスキーマ構造を確認できるように、スキーマの基本構造（クラスで提供）が表示されます。
 
 クラスの短く、わかりやすい、一意の、わかりやすい名前を [!UICONTROL スキーマの表示名] テキストフィールド。 次に、適切な説明を入力して、スキーマが定義するデータの動作を識別します。 スキーマの構造を確認し、設定に満足したら、「 」を選択します。 **[!UICONTROL 完了]** をクリックしてスキーマを作成します。
 
 ![The [!UICONTROL 名前とレビュー] のセクション [!UICONTROL スキーマを作成] ワークフローと [!UICONTROL スキーマの表示名], [!UICONTROL 説明]、および [!UICONTROL 完了] ハイライト表示されました。](../../images/ui/resources/classes/name-and-review-class.png)
 
-The [!DNL Schema Editor] が表示され、スキーマの構造がキャンバスに表示されます。 これで、以下を開始できます。 [クラスへのフィールドの追加](#add-fields).
+スキーマエディターが表示され、スキーマの構造がキャンバスに表示されます。 これで、以下を開始できます。 [クラスへのフィールドの追加](#add-fields).
 
-![](../../images/ui/resources/classes/edit.png)
+![スキーマエディターとスキーマの構造がキャンバスに表示されます。](../../images/ui/resources/classes/edit.png)
 
 ## クラスにフィールドを追加する {#add-fields}
 
 カスタムクラスを使用するスキーマをで開いたら、 [!UICONTROL スキーマエディター]を使用すると、クラスへのフィールドの追加を開始できます。 新しいフィールドを追加するには、 **プラス (+)** スキーマ名の横にあるアイコン。
 
-![](../../images/ui/resources/classes/add-field.png)
+>[!IMPORTANT]
+>
+>組織で定義されたクラスを実装するスキーマを構築する場合、スキーマフィールドグループは互換性のあるクラスでのみ使用できることに注意してください。 定義したクラスは新しいので、互換性のあるフィールドグループは「 **[!UICONTROL フィールドグループを追加]** ダイアログ。 代わりに、 [新しいフィールドグループを作成する](./field-groups.md#create) そのクラスで使用する 次に新しいクラスを実装するスキーマを作成すると、定義したフィールドグループが一覧表示され、使用できます。
+
+![「追加」ボタンがハイライトされたスキーマエディター。](../../images/ui/resources/classes/add-field.png)
 
 >[!IMPORTANT]
 >
@@ -108,22 +108,21 @@ The [!DNL Schema Editor] が表示され、スキーマの構造がキャンバ�
 
 An **[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示され、右側のレールが更新されて、フィールドのプロパティを設定するコントロールが表示されます。 の下 **[!UICONTROL 割り当て先]**&#x200B;を選択します。 **[!UICONTROL クラス]**.
 
-![](../../images/ui/resources/classes/assign-to-class.png)
-
-![](../../images/ui/resources/classes/assign-to-class.png)
+![スキーマエディターのキャンバスにある名称未設定フィールドで、「クラスに割り当て」フィールドプロパティが選択され、ハイライト表示されています。](../../images/ui/resources/classes/assign-to-class.png)
 
 次のガイドを参照してください： [UI でのフィールドの定義](../fields/overview.md#define) を参照してください。 引き続き、必要な数のフィールドをクラスに追加します。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** をクリックして、スキーマとクラスの両方を保存します。
 
-![](../../images/ui/resources/classes/save.png)
+![スキーマエディターのキャンバスに新しく作成されたスキーマ。 [!UICONTROL 保存] ハイライト表示されました。](../../images/ui/resources/classes/save.png)
 
 このクラスを使用するスキーマを以前に作成したことがある場合、新しく追加されたフィールドは、これらのスキーマに自動的に表示されます。
 
 ## スキーマクラスの変更 {#schema}
 
-スキーマのクラスは、最初の作成プロセス中、保存前の任意の時点で変更できます。 次のガイドを参照してください： [スキーマの作成と編集](./schemas.md#change-class) を参照してください。
+スキーマのクラスは、最初の作成プロセス中、保存前の任意の時点で変更できます。 ただし、フィールドグループは特定のクラスとのみ互換性があるので、この操作は慎重におこなう必要があります。 クラスを変更すると、キャンバスと追加したフィールドがリセットされます。
+次のガイドを参照してください： [スキーマの作成と編集](./schemas.md#change-class) を参照してください。
 
 ## 次の手順
 
 このドキュメントでは、Platform UI を使用してクラスを作成および編集する方法について説明しました。 の機能の詳細については、 [!UICONTROL スキーマ] ワークスペースについては、 [[!UICONTROL スキーマ] workspace の概要](../overview.md).
 
-を使用してクラスを管理する方法を学ぶには [!DNL Schema Registry] API( [クラスエンドポイントガイド](../../api/classes.md).
+スキーマレジストリ API を使用してクラスを管理する方法については、 [クラスエンドポイントガイド](../../api/classes.md).
