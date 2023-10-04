@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1475'
 ht-degree: 66%
 
 ---
@@ -24,11 +24,11 @@ ht-degree: 66%
 >
 >Privacy Service は、データ主体と消費者の権利リクエストのみを目的としています。それ以外にデータのクリーンアップやメンテナンスに Privacy Service を使用することは、サポートされておらず、許可もされていません。アドビには、それらをタイムリーに履行する法的義務があります。したがって、これが実稼動専用の環境であり、有効なプライバシーリクエストの不要なバックログが作成されるので、Privacy Service の読み込みテストは許可されていません。
 >
->サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーの行為に対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
+>サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーのアクションに対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
 
 ## 次を参照： [!DNL Privacy Service] UI ダッシュボード
 
-のダッシュボード [!DNL Privacy Service] UI には、プライバシージョブのステータスを表示できる 2 つのウィジェットが用意されています。&quot;[!UICONTROL ステータスレポート]&quot;および&quot;[!UICONTROL ジョブリクエスト]&quot;. また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
+のダッシュボード [!DNL Privacy Service] UI には、プライバシージョブのステータスを表示できる 2 つのウィジェットが用意されています。[!UICONTROL ステータスレポート]&quot;および&quot;[!UICONTROL ジョブリクエスト]&quot;. また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
 
 ![UI ダッシュボード](../images/user-guide/dashboard.png)
 
@@ -38,17 +38,18 @@ ht-degree: 66%
 
 | UI ラベル | 規則 |
 | --- | --- |
+| [!UICONTROL APA_AUS] | 「[!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | 「[!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | 「[!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | 「[!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | 「[!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL GDPR] | 欧州連合 [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | タイ [!DNL Personal Data Protection Act] |
+| [!UICONTROL GDPR] | 欧州連合&#39;s [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPAA_AUS] | 「[!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | ブラジル [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | ニュージーランド [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | タイ [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | 「[!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | 「[!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | 「[!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | 「[!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | 「[!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 
@@ -82,11 +83,11 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->フィルターがジョブリクエストウィジェットに適用されている場合は、 **X** フィルターピルで そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
+>フィルターがジョブリクエストウィジェットに適用されている場合は、 **X** フィルターピルを使用して そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
 
 ### ジョブリクエスト
 
-ジョブリクエストウィジェットには、リクエストの種類、現在のステータス、期日、要求者の E メールアドレスなどの詳細も含め、組織内で使用可能なすべてのジョブリクエストがリスト表示されます。
+ジョブリクエストウィジェットには、リクエストの種類、現在のステータス、期日、要求者のメールアドレスなどの詳細も含め、組織内で使用可能なすべてのジョブリクエストがリスト表示されます。
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ ht-degree: 66%
 
 ![ジョブリクエストの検索オプション](../images/user-guide/job-search.png)
 
-特定のジョブリクエストの詳細を表示するには、リストからリクエストのジョブ ID を選択して、 **[!UICONTROL ジョブの詳細]** ページ。
+特定のジョブリクエストの詳細を表示するには、リストからリクエストのジョブ ID を選択して、 **[!UICONTROL ジョブの詳細]** ページに貼り付けます。
 
 ![GDPR UI のジョブ詳細](../images/user-guide/job-details.png)
 
@@ -104,7 +105,7 @@ ht-degree: 66%
 
 ソリューションから追加のデータが提供された場合は、このダイアログで表示できます。このデータを表示するには、個々の製品行を選択します。
 
-完全なジョブデータを CSV ファイルとしてダウンロードするには、「 」を選択します **[!UICONTROL CSV に書き出し]** をクリックします。
+完全なジョブデータを CSV ファイルとしてダウンロードするには、「 」を選択します。 **[!UICONTROL CSV に書き出し]** をクリックします。
 
 ## プライバシージョブリクエストの新規作成 {#create-a-new-privacy-job-request}
 
@@ -117,7 +118,7 @@ ht-degree: 66%
 >
 > プライバシージョブリクエストを作成するには、アクセスまたは削除するデータの所有者である特定の顧客の ID 情報を指定する必要があります。この節を続行する前に、[プライバシーリクエストの ID データ](../identity-data.md)に関するドキュメントを確認してください。
 
-この [!DNL Privacy Service] UI には、新しいジョブリクエストを作成する次の 2 つの方法が用意されています。
+The [!DNL Privacy Service] UI には、新しいジョブリクエストを作成する次の 2 つの方法が用意されています。
 
 * [リクエストビルダーの使用](#request-builder)
 * [JSON ファイルのアップロード](#json)
@@ -140,11 +141,11 @@ ht-degree: 66%
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-の下 **[!UICONTROL 名前空間のタイプ]**、送信先の顧客 ID に適した名前空間タイプを選択します [!DNL Privacy Service].
+の下 **[!UICONTROL 名前空間のタイプ]**、送信先の顧客 ID に適した名前空間タイプを選択します。 [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-standard タイプの名前空間を使用する場合は、ドロップダウンメニューから名前空間（E メール、ECID、AAID のいずれか）を選択し、右側のテキストボックスに ID 値を入力し、ID ごとに **Enter** キーを押してリストに追加します。
+standard タイプの名前空間を使用する場合は、ドロップダウンメニューから名前空間（メール、ECID、AAID のいずれか）を選択し、右側のテキストボックスに ID 値を入力し、ID ごとに **Enter** キーを押してリストに追加します。
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
@@ -170,7 +171,7 @@ custom タイプの名前空間を使用する場合は、名前空間を手動�
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-アップロードする JSON ファイルがない場合は、 **[!UICONTROL Adobe-GDPR-Request.json をダウンロード]** をクリックして、データ主体から収集した値に応じて入力できるテンプレートをダウンロードします。
+アップロードする JSON ファイルがない場合は、「 **[!UICONTROL Adobe-GDPR-Request.json をダウンロード]** をクリックして、データ主体から収集した値に応じて入力できるテンプレートをダウンロードします。
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
