@@ -3,10 +3,11 @@ title: レコードを削除
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
+source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 35%
+source-wordcount: '1533'
+ht-degree: 34%
 
 ---
 
@@ -134,13 +135,13 @@ ID を追加するには、プラスアイコン (![プラスアイコン。](..
 
 ![プラスアイコンと ID を追加アイコンがハイライトされたリクエスト作成ワークフロー。](../images/ui/record-delete/more-identities.png)
 
-## リクエストの送信（#submit）
+## リクエストの送信 {#submit}
 
 リクエストへの ID の追加が完了したら、「**[!UICONTROL 送信]**」を選択する前に&#x200B;**[!UICONTROL リクエスト設定]**&#x200B;でリクエストの名前とオプションの説明を入力します。
 
 >[!IMPORTANT]
 > 
->毎月送信できる個別 ID レコードの削除の合計数には、異なる制限があります。 これらの制限は、使用許諾契約に基づいています。 Adobe Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 個の ID レコード削除を送信できます。 を購入した組織 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド** は、毎月最大 600,000 個の id レコード削除を送信できます。
+>毎月送信できる個別 ID レコードの削除の合計数には、異なる制限があります。 これらの制限は、使用許諾契約に基づいています。 Adobe Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 個の ID レコード削除を送信できます。 を購入した組織 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド** は、毎月最大 600,000 個の id レコード削除を送信できます。<br>UI を通じた 1 件のレコード削除リクエストで、一度に 10,000 個の ID を送信できます。 The [レコードを削除する API メソッド](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) では、一度に 100,000 個の ID を送信できます。
 
 ![リクエスト設定の [!UICONTROL 名前] および [!UICONTROL 説明] 次のフィールド [!UICONTROL 送信] ハイライト表示されました。](../images/ui/record-delete/submit.png)
 

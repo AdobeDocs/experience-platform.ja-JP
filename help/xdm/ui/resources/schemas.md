@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
-ht-degree: 4%
+source-wordcount: '3670'
+ht-degree: 3%
 
 ---
 
@@ -45,11 +45,9 @@ The [!UICONTROL スキーマを作成] ワークフローが表示されます�
 
 ![The [!UICONTROL 名前とレビュー] のセクション [!UICONTROL スキーマを作成] ワークフローと [!UICONTROL スキーマの表示名], [!UICONTROL 説明]、および [!UICONTROL 完了] ハイライト表示されました。](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL スキーマ] [!UICONTROL 参照] 」タブが表示されます。 これで、最近作成したスキーマをで編集できるようになりました。 [!DNL Schema Editor] とが使用可能なスキーマのリストに表示されます。
+The [!UICONTROL スキーマ] [!UICONTROL 参照] 」タブが表示されます。 これで、最近作成したスキーマがスキーマライブラリに表示され、で編集できるようになります。 [!DNL Schema Editor].
 
-![最近作成したスキーマが表示されるスキーマエディター。](../../images/ui/resources/schemas/schema-details.png)
-
-これで、次の方法でスキーマの構造の構築を開始できます。 [スキーマフィールドグループの追加](#add-field-groups) （内） [!DNL Schema Editor].
+![スキーマワークスペースの「参照」タブに、最近作成したスキーマが表示されます。](../../images/ui/resources/schemas/example-schema.png)
 
 ## 既存のスキーマの編集 {#edit}
 
@@ -66,6 +64,14 @@ The [!UICONTROL スキーマ] [!UICONTROL 参照] 」タブが表示されます
 >ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 次のガイドを参照してください： [XDM リソースの調査](../explore.md) を参照してください。
 
 スキーマを選択すると、 [!DNL Schema Editor] が表示され、スキーマの構造がキャンバスに表示されます。 次の操作を実行できます。 [フィールドグループを追加](#add-field-groups) スキーマ ( または [個々のフィールドを追加](#add-individual-fields) これらのグループから ) [フィールドの表示名を編集](#display-names)または [既存のカスタムフィールドグループの編集](./field-groups.md#edit) スキーマが適用する場合。
+
+## その他のアクション {#more}
+
+スキーマエディター内で、スキーマの JSON 構造をコピーしたり、スキーマがリアルタイム顧客プロファイルに対して有効になっていない場合や関連するデータセットがある場合に、スキーマを削除したりするクイックアクションを実行できます。 選択 [!UICONTROL その他] をクイックアクション付きのドロップダウンを表示するには、ビューの上部に表示します。
+
+「 JSON 構造をコピー」機能を使用すると、スキーマとデータパイプラインの構築中に、サンプルペイロードがどのように表示されるかを確認できます。 特に、ID マップなど、スキーマに複雑なオブジェクトマップ構造がある場合に役立ちます。
+
+![「その他」ボタンが強調表示されたスキーマエディターと、ドロップダウンオプションが表示されます。](../../images/tutorials/create-schema/more-actions.png)
 
 ## 表示名の切り替え {#display-name-toggle}
 
