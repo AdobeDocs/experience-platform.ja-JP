@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 役割 API エンドポイント
 description: 属性ベースのアクセス制御 API の/roles エンドポイントを使用すると、Adobe Experience Platformの役割をプログラムで管理できます。
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 27%
+source-wordcount: '1666'
+ht-degree: 28%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 27%
 >
 >ユーザートークンが渡されている場合、トークンのユーザーは、リクエストされた組織に対して「組織管理者」の役割を持つ必要があります。
 
-役割は、管理者、スペシャリスト、またはエンドユーザーが組織のリソースに対して持つアクセス権を定義します。 役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責任とニーズによってグループ化されます。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
+役割は、管理者、スペシャリスト、またはエンドユーザーが組織内のリソースに対して持つアクセス権を定義します。 役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責任とニーズによってグループ化されます。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
 
-この `/roles` 属性ベースのアクセス制御 API のエンドポイントを使用すると、組織内の役割をプログラムで管理できます。
+The `/roles` 属性ベースのアクセス制御 API のエンドポイントを使用すると、組織内の役割をプログラムで管理できます。
 
 ## はじめに
 
@@ -179,7 +179,7 @@ curl -X GET \
 
 ## 役割 ID で件名を検索する
 
-また、 `/roles` {ROLE_ID} を提供する際にエンドポイントが発生しました。
+また、 `/roles` エンドポイントを {ROLE_ID}.
 
 **API 形式**
 
@@ -481,7 +481,7 @@ curl -X PUT \
 
 ## ロール ID で件名を更新
 
-ロールに関連付けられたサブジェクトを更新するには、にPATCHリクエストを実行します `/roles` エンドポイントを使用して、更新するサブジェクトのロール ID を指定します。
+ロールに関連付けられたサブジェクトを更新するには、にPATCHリクエストを実行します。 `/roles` エンドポイントを使用して、更新するサブジェクトのロール ID を指定します。
 
 **API 形式**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 次のリクエストでは、 `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | 運用 | 説明 |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、問い合わせられた役割 ID に関連付けられた更新された件名を返します。
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `subjectId` | 件名の ID。 |
-| `subjectType` | 件名のタイプ。 |
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
 ## ロールの削除 {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
 
 ロールに対してルックアップ (GET) リクエストを試行して、削除を確認できます。 役割が管理から削除されたので、HTTP ステータス 404（見つかりません）が表示されます。
+
+## API 資格情報の追加 {#apicredential}
+
+API 資格情報を追加するには、次に対してPATCHリクエストを実行します。 `/roles` エンドポイントを使用して、件名のロール ID を指定します。
+
+**API 形式**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| 運用 | 説明 |
+| --- | --- |
+| `op` | ロールの更新に必要なアクションを定義するために使用される操作呼び出し。 操作には、`add`、`replace`、`remove` があります。 |
+| `path` | 追加するパラメーターのパス。 |
+| `value` | パラメーターを追加する値です。 |
+
+**応答** 
+
+リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
