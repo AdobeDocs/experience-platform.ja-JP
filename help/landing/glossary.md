@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform用語集
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '7979'
 ht-degree: 13%
@@ -380,6 +380,10 @@ ht-degree: 13%
 **Parquet ファイル**:Parquet ファイルは、複雑にネストされたストレージ構造を持つ円柱形のデータファイル形式です。 パケットファイルは、データセットにデータを入力するためのスキーマを追加する場合に必要です。
 
 **PDPA**: [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者が個人データの違法な収集、使用、開示を受けるのを防ぐために導入されました。 EU の GDPR に影響を受け、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求したり、そのデータを削除したりする権利を付与します。
+
+<!-- Not yet released
+**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
+-->
 
 **パーソナライズされたオファー**：パーソナライズされたオファーは、実施要件ルールと制約に基づいてカスタマイズ可能なマーケティングメッセージです。
 

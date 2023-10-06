@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシー規制の用語
 description: このドキュメントでは、Adobe Experience Cloudでサポートされるプライバシー規制に関する主な用語の定義を示します。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 4%
@@ -108,6 +108,10 @@ ht-degree: 4%
 ## P
 
 **PDPA**: [!DNL Personal Data Protection Act] タイのデータ所有者が個人データの違法な収集、使用、開示から保護するために、タイ (PDPA) が導入されました。 EU の GDPR に影響を受け、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求したり、そのデータを削除したりする権利を付与します。
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **個人データ**：自然人または「データ主体」に関する（個人を直接的または間接的に特定するために使用できる）情報。
 

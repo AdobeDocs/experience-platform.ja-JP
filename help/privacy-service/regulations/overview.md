@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシー規制の概要
 description: このドキュメントでは、Adobe Experience Cloudでサポートされる様々なプライバシー規制の概要を説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ ht-degree: 0%
 | VCDPA（バージニア） | The [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) は、個人データにアクセス、削除、修正する権利など、バージニア在住者（「消費者」）に対する新しいデータプライバシー権を提供します。 また、消費者は、個人データの販売のオプトアウト、個人データに基づくプロファイルのオプトアウト、個人広告目的の処理をおこなう権利も持ちます。 |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## 次の手順
 
