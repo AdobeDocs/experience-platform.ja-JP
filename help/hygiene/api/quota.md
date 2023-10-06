@@ -1,23 +1,19 @@
 ---
 title: Quota API エンドポイント
-description: Data Hygiene API の /quota エンドポイントを使用すると、各ジョブタイプの組織の月間割り当て量制限に対するデータハイジーンの使用状況を監視できます。
+description: データ衛生 API の/quota エンドポイントを使用すると、高度なデータライフサイクル管理の使用状況を、組織の各ジョブタイプの月別の割当制限に照らして監視できます。
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 89%
+source-wordcount: '327'
+ht-degree: 58%
 
 ---
 
 # Quota エンドポイント
 
->[!IMPORTANT]
->
->Adobe Experience Platform のデータハイジーン機能は現在、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみご利用いただけます。
+The `/quota` Data Whealthy API のエンドポイントを使用すると、組織の各ジョブタイプの割り当て制限に照らして、Advanced data lifecycle management の使用状況を監視できます。
 
-Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対するデータハイジーンの使用状況を監視できます。
-
-割り当て量は、次の方法でデータハイジーンの各ジョブタイプに適用されます。
+クォータは、次の方法で、各データライフサイクルジョブの種類に対して適用されます。
 
 * レコードの削除と更新は、1 ヶ月あたりのリクエストの数に制限されます。
 * データセットの有効期限には、有効期限が実行されるタイミングに関係なく、同時にアクティブなジョブの数に対して一定の制限があります。
@@ -43,7 +39,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUOTA_TYPE}` | 取得する割り当て量のタイプを指定するオプションのクエリパラメーター。`quotaType` パラメーターが指定されていない場合、すべての割り当て量の値が API 応答で返されます。使用できるタイプの値は次のとおりです。<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコード削除</li><li>`fieldUpdateWorkOrderDatasetQuota`:レコードの更新</li></ul> |
+| `{QUOTA_TYPE}` | 取得する割り当て量のタイプを指定するオプションのクエリパラメーター。`quotaType` パラメーターが指定されていない場合、すべての割り当て量の値が API 応答で返されます。使用できるタイプの値は次のとおりです。<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコード削除</li><li>`fieldUpdateWorkOrderDatasetQuota`：レコードの更新</li></ul> |
 
 **リクエスト**
 
@@ -58,7 +54,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、データハイジーンの割り当て量の詳細が返されます。
+正常な応答は、データライフサイクルクォータの詳細を返します。
 
 ```json
 {
@@ -81,6 +77,6 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `quotas` | データハイジーンの各ジョブタイプに対する割り当て量の情報をリストします。各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`：データハイジーンのジョブタイプ：<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコード削除</li></ul></li><li>`description`：データハイジーンのジョブタイプの説明。</li><li>`consumed`：今月実行されたこのタイプのジョブの数。</li><li>`quota`：このジョブタイプの割り当て量の制限。レコードの削除および更新の場合、これは、各月の期間に実行できるジョブの数を表します。 データセットの有効期限の場合は、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
+| `quotas` | 各データライフサイクルジョブの種類のクォータ情報を表示します。 各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`：データライフサイクルジョブのタイプ。<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコード削除</li></ul></li><li>`description`：データライフサイクルジョブタイプの説明。</li><li>`consumed`：今月実行されたこのタイプのジョブの数。</li><li>`quota`：このジョブタイプの割り当て量の制限。レコードの削除および更新の場合、これは、各月の期間に実行できるジョブの数を表します。 データセットの有効期限の場合は、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
 
 {style="table-layout:auto"}

@@ -1,15 +1,15 @@
 ---
-title: データセット有効期限の管理
+title: データセットの有効期限の自動化
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 52%
+source-wordcount: '828'
+ht-degree: 49%
 
 ---
 
-# データセット有効期限の管理 {#dataset-expiration}
+# データセットの有効期限の自動化 {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ The [[!UICONTROL データのライフサイクル] workspace](./overview.md) Ad
 >
 >データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないよう、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
 
-このドキュメントでは、Platform UI のデータセット有効期限をスケジュール設定および管理する方法を説明します。
+このドキュメントでは、Platform UI でデータセットの有効期限をスケジュールおよび自動化する方法について説明します。
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ The [[!UICONTROL データのライフサイクル] workspace](./overview.md) Ad
 
 >[!IMPORTANT]
 >
-同時にスケジュールされたデータセットの有効期限は最大 20 個までにすることができます。 つまり、一度に 20 個のデータセットの削除をスケジュールできます。 これらの有効期限を設定する時間や年に制限はありません。 例えば、データセットの有効期限が 20 回スケジュールされていて、あす 1 つのデータセットが削除される予定の場合、そのデータセットが削除されるまでは、それ以上の期限を設定することはできません。
+Real-Time CDP、Adobe Journey OptimizerおよびCustomer Journey Analyticsのユーザーには、20 件の保留中の予定済みのデータセット有効期限作業指示があります。 ヘルスケアシールド、プライバシー、セキュリティシールドのユーザーは、50 件の保留中のデータセット有効期限の作業指示を受け付けています。 つまり、一度に 20 個または 50 個のデータセットの削除をスケジュールできます。<br>例えば、データセットの有効期限が 20 回スケジュールされていて、あす 1 つのデータセットが削除される予定の場合、そのデータセットが削除されるまでは、それ以上の期限を設定することはできません。
 
 ![The [!UICONTROL データのライフサイクル] ワークスペース [!UICONTROL リクエストを作成] ハイライト表示されました。](../images/ui/ttl/create-request-button.png)
 

@@ -4,21 +4,18 @@ description: Data Whealthy API の/workorder エンドポイントを使用す�
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 74%
+source-wordcount: '997'
+ht-degree: 75%
 
 ---
 
 # 作業指示エンドポイント
 
-この `/workorder` Data Whealthy API のエンドポイントを使用すると、Adobe Experience Platformでレコードの削除リクエストをプログラムで管理できます。
+The `/workorder` Data Whealthy API のエンドポイントを使用すると、Adobe Experience Platformでレコードの削除リクエストをプログラムで管理できます。
 
 >[!IMPORTANT]
->
->レコードの削除リクエストは、を購入した組織でのみ使用できます **Adobeヘルスケアシールド**.
->
 >
 >レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
 
@@ -38,7 +35,7 @@ POST /workorder
 
 **リクエスト**
 
-の値に応じて `datasetId` リクエストペイロードで指定された API 呼び出しは、すべてのデータセットまたは指定した単一のデータセットから id を削除します。 次のリクエストでは、特定のデータセットから 3 つの ID を削除します。
+の値に応じて、 `datasetId` リクエストペイロードで指定された API 呼び出しは、すべてのデータセットまたは指定した単一のデータセットから id を削除します。 次のリクエストでは、特定のデータセットから 3 つの ID を削除します。
 
 ```shell
 curl -X POST \
@@ -81,7 +78,7 @@ curl -X POST \
 | `action` | 実行するアクション。値はに設定する必要があります `delete_identity` レコードの削除用。 |
 | `datasetId` | 単一のデータセットから削除する場合、この値は、当該データセットの ID である必要があります。すべてのデータセットから削除する場合、値を `ALL` に設定します。<br><br>単一のデータセットを指定する場合、データセットの関連するエクスペリエンスデータモデル（XDM）スキーマには、プライマリ ID が定義されている必要があります。 |
 | `displayName` | レコード削除リクエストの表示名。 |
-| `description` | レコード削除リクエストの説明。 |
+| `description` | レコードの削除リクエストの説明。 |
 | `identities` | 削除する情報を持つ少なくとも 1 人のユーザーの ID を含む配列。各 ID は、[ID 名前空間](../../identity-service/namespaces.md)および値で構成されます。<ul><li>`namespace`：ID 名前空間を表す、単一の文字列プロパティ `code` が含まれます。 </li><li>`id`：ID 値。</ul>`datasetId` が単一のデータセットを指定している場合、`identities` 以下の各エンティティは、スキーマのプライマリ ID と同じ ID 名前空間を使用する必要があります。<br><br>`datasetId` が `ALL` に設定されている場合、`identities` 配列は、各データセットが異なる可能性があるので、単一の名前空間に制限されません。ただし、[ID サービス](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)でレポートされるように、リクエストは、依然として組織で使用できる名前空間の制約を受けます。 |
 
 {style="table-layout:auto"}
@@ -132,7 +129,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | この `workorderId` 検索中のレコードの削除。 |
+| `{WORK_ORDER_ID}` | The `workorderId` 検索中のレコードの削除。 |
 
 {style="table-layout:auto"}
 
@@ -199,7 +196,7 @@ curl -X GET \
 
 ## レコード削除リクエストの更新
 
-次の項目を更新し、 `displayName` および `description` レコードの削除を行う場合は、削除リクエストをPUTします。
+次の項目を更新して、 `displayName` および `description` レコードの削除を行う場合は、削除リクエストをPUTします。
 
 **API 形式**
 
@@ -209,7 +206,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | この `workorderId` 検索中のレコードの削除。 |
+| `{WORK_ORDER_ID}` | The `workorderId` 検索中のレコードの削除。 |
 
 {style="table-layout:auto"}
 
@@ -231,7 +228,7 @@ curl -X PUT \
 | プロパティ | 説明 |
 | --- | --- |
 | `displayName` | レコード削除リクエストの更新された表示名。 |
-| `description` | レコード削除リクエストの更新された説明。 |
+| `description` | レコードの削除リクエストの更新された説明。 |
 
 {style="table-layout:auto"}
 

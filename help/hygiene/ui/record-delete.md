@@ -1,13 +1,11 @@
 ---
 title: レコードを削除
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 34%
+ht-degree: 33%
 
 ---
 
@@ -69,12 +67,12 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="プライマリ ID"
->abstract="プライマリ ID は、Experience Platform でレコードを消費者のプロファイルに結び付ける属性です。データセットのプライマリ ID フィールドは、そのデータセットが基づいているスキーマによって定義されます。この列では、レコードのプライマリ ID のタイプ (または名前空間) を指定する必要があります (メールアドレスの場合は `email`、Experience Cloud ID の場合は `ecid` など)。詳しくは、データハイジーン UI ガイドを参照してください。"
+>abstract="プライマリ ID は、Experience Platform でレコードを消費者のプロファイルに結び付ける属性です。データセットのプライマリ ID フィールドは、そのデータセットが基づいているスキーマによって定義されます。この列では、レコードのプライマリ ID のタイプ (または名前空間) を指定する必要があります (メールアドレスの場合は `email`、Experience Cloud ID の場合は `ecid` など)。詳しくは、「データライフサイクル UI ガイド」を参照してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 値"
->abstract="この列では、レコードのプライマリ ID の値を指定する必要があります (左の列で指定した ID タイプに対応している必要があります)。プライマリ ID タイプが `email` の場合、値はレコードのメールアドレスである必要があります。詳しくは、データハイジーン UI ガイドを参照してください。"
+>abstract="この列では、レコードのプライマリ ID の値を指定する必要があります (左の列で指定した ID タイプに対応している必要があります)。プライマリ ID タイプが `email` の場合、値はレコードのメールアドレスである必要があります。詳しくは、『データライフサイクル UI ガイド』を参照してください。"
 
 レコードを削除する場合は、削除するレコードをシステムが決定できるように、ID 情報を指定する必要があります。 Platform のデータセットの場合、レコードは、データセットのスキーマによって定義された「**プライマリ ID**」フィールドに基づいて削除されます。
 
