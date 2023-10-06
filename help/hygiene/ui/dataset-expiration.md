@@ -2,7 +2,7 @@
 title: データセットの有効期限の自動化
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 49%
@@ -26,7 +26,7 @@ The [[!UICONTROL データのライフサイクル] workspace](./overview.md) Ad
 
 >[!NOTE]
 >
->現在、データセットの有効期限によってAdobe Experience Platform Edge ネットワークからデータが削除されることはありません。 ただし、データセットの有効期限が切れるように設定した後も、データが Edge ネットワーク内に残る可能性はありません。 これは、データセットの有効期限に関する 14 日間のサービスライセンス契約が、破棄される前に Edge ネットワーク内にデータが存在する 14 日間の期間と一致するためです。
+>現在、データセットの有効期限によってAdobe Experience Platform Edge ネットワークからデータが削除されることはありません。 ただし、データセットの有効期限が切れるように設定した後も、データが Edge ネットワーク内に残る可能性はありません。 これは、データセットの有効期限に関する 15 日間のサービス使用許諾契約が、破棄される前に Edge ネットワーク内にデータが存在する 14 日間の期間と重なっているからです。
 
 ## データセット有効期限のスケジュール設定 {#schedule-dataset-expiration}
 

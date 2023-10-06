@@ -2,7 +2,7 @@
 title: 高度なデータライフサイクル管理の概要
 description: 高度なデータライフサイクル管理を使用すると、古いレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 62%
@@ -49,7 +49,7 @@ The [!UICONTROL データのライフサイクル] UI は、データライフ�
 | プロファイル数が更新される | 30 時間 | 削除するデータセットの内容に応じて、すべてのコンポーネント属性がそのデータセットに関連付けられている場合、一部のプロファイルがシステムから削除されることがあります。 データセットが削除されてから 30 時間が経過すると、結果として生じるプロファイル数全体の変更が、 [ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |
 | オーディエンスが更新される | 48 時間 | 影響を受けるすべてのプロファイルが更新されると、関連するすべての[オーディエンス](../segmentation/home.md)が更新されて、新しいサイズが反映されます。削除したデータセットとセグメント化しようとしている属性に応じて、削除の結果、各オーディエンスのサイズが増減する場合があります。 |
 | ジャーニーと宛先の更新 | 50 時間 | 関連するセグメントの変更に従って、[ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=ja)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=ja)および[宛先](../destinations/home.md)が更新されます。 |
-| ハード削除が完了する | 14 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 The [データライフサイクルジョブのステータス](./ui/browse.md#view-details) 削除されたデータセットは、これを反映するように更新されます。 |
+| ハード削除が完了する | 15 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 The [データライフサイクルジョブのステータス](./ui/browse.md#view-details) 削除されたデータセットは、これを反映するように更新されます。 |
 
 {style="table-layout:auto"}
 
