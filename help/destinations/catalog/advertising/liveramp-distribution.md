@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - Distribution Connection
 description: LiveRamp - Distribution コネクタを使用して、以前 LiveRamp に転送されたオーディエンスを、ダウンストリーム広告の宛先に合わせて調整およびアクティブ化する方法について説明します。
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 32%
+ht-degree: 46%
 
 ---
-
 
 # [!DNL LiveRamp - Distribution] 接続
 
@@ -110,13 +110,13 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C ブランドプロファイル ID"
->abstract="4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID がない場合は、4C クライアントサービスの担当者にお問い合わせください。"
+>abstract="4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID をお持ちでない場合は、4C クライアントサービス担当者にお問い合わせください。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
 ![4C インサイトの宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C ブランドプロファイル ID]**:4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID がない場合は、4C クライアントサービスの担当者にお問い合わせください。
+* **[!UICONTROL 4C ブランドプロファイル ID]**:4C ブランドプロファイルに関連付けられている数値 ID を入力します。 この ID をお持ちでない場合は、4C クライアントサービス担当者にお問い合わせください。
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="会社名"
->abstract="宛先パートナーに表示する会社名。 スペースや特殊文字は使用しないでください。"
+>abstract="宛先パートナーに表示す会社名。スペースや特殊文字は使用しないでください。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -175,7 +175,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="広告主データの宛先に関する利用規約"
->abstract="入力 `I AGREE` をクリックして、Disney 広告主のデータ利用条件に対する確認および同意を確認します。"
+>abstract="`I AGREE` と入力して、Disney の広告主データ規約への承認と同意を確認します。"
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="メールアドレス"
->abstract="個人に関連付けられたメールアドレスを入力します。このメールアドレスは、広告主データの利用規約への署名として機能します。このメールアドレスは、必要に応じて連絡にも使用されます。"
+>abstract="個人に関連付けられたメールアドレスを入力します。このメールアドレスは、広告主データの利用規約への署名として機能します。このメールアドレスは、必要に応じて連絡する際にも使用されます。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -215,7 +215,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="アカウント名"
->abstract="Index Exchange クライアントアカウント名。 スペースや特殊文字は使用しないでください。"
+>abstract="Index Exchange クライアントアカウント名。スペースや特殊文字は使用しないでください。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -228,7 +228,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="クライアント"
->abstract="宛先パートナーに表示するクライアント名です。 会社名を使用します。スペースや特殊文字は使用しないでください。"
+>abstract="宛先パートナーに表示するクライアント名。会社名を使用します。スペースや特殊文字は使用しないでください。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -241,18 +241,18 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
 >title="パートナー ID"
->abstract="セグメント/データを所有するパブリッシャーに関連付けられた Rubicon プロジェクトパートナー ID。 使用すべき値が不明な場合は、Rubicon Project アカウント担当者にお問い合わせください。"
+>abstract="セグメント／データを所有するパブリッシャーに関連付けられた Rubicon プロジェクトパートナー ID。使用すべき値が不明な場合は、Rubicon プロジェクトアカウント担当者にお問い合わせください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
 >title="シート ID"
->abstract="Magnite アカウントマネージャーから提供される Magnite DV+ Seat ID"
+>abstract="Magnite アカウントマネージャーが提供する Magnite DV とシート ID"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
 ![Magnite DV+宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL パートナー ID]**：セグメント/データを所有する発行者に関連付けられた Rubicon プロジェクトパートナー ID。 使用すべき値が不明な場合は、Rubicon Project アカウント担当者にお問い合わせください。
+* **[!UICONTROL パートナー ID]**：セグメント/データを所有する発行者に関連付けられた Rubicon プロジェクトパートナー ID。 使用すべき値が不明な場合は、Rubicon プロジェクトアカウント担当者にお問い合わせください。
 * **[!UICONTROL シート ID]**:Magnite アカウントマネージャーから提供される Magnite DV+ Seat ID
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
@@ -260,44 +260,44 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
 >title="レートタイプ"
->abstract="レートタイプは、データ使用量の請求方法を表します。 0.00 ドルの料金はすべて定額料金にする必要があります。 使用するレートの種類が不明な場合は、Nexxen の担当者に確認してください。"
+>abstract="レートタイプは、データ使用量の請求方法を表します。0.00 ドルの料金はすべて定額料金にする必要があります。使用するレートタイプが不明な場合は、Nexxen の担当者に確認してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
->title="市場 ID"
->abstract="Nexxen データ契約の作成先となる数値の市場 ID を入力します。 Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、-1 と入力します。"
+>title="マーケット ID"
+>abstract="Nexxen データ契約を作成するマーケット ID を数値で入力します。Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、「-1」と入力します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
 >title="広告主 ID"
->abstract="Nexxen プラットフォームの単一の広告主にデータを送信する場合は、Amobe Advertiser ID という数値を入力します。 データを市場のすべての広告主が利用できるようにする場合、またはこれらのセグメントが「常にオン」の場合は、-1 と入力してください。"
+>abstract="Nexxen プラットフォームの単一の広告主にデータを送信する場合は、数値の Amobee 広告主 ID を入力します。データをマーケット内のすべての広告主が利用できるようにする場合、またはこれらのセグメントが「AlwaysOn」の場合は、「-1」と入力してください。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="連絡先メール"
->abstract="Nexxen がデータ契約の詳細を送信する際に使用する電子メールアドレスを入力します。 おそらくこれは自分のメールアドレスですが、メールのエイリアスでもかまいません。 複数の受信者の場合は、コンマ (`email1@domain.com`,`email2@domain.com`など )。"
+>abstract="Nexxen がデータ契約の詳細を送信する際に使用するメールアドレスを入力します。ほとんどの場合、これは自分のメールアドレスですが、メールのエイリアスでも構いません。受信者が複数の場合は、コンマ（`email1@domain.com`、`email2@domain.com` など）で区切ります。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
 ![Nexxen の宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL レートタイプ]**：レートタイプは、データ使用量の請求方法を表します。 0.00 ドルの料金はすべて定額料金にする必要があります。 使用するレートの種類が不明な場合は、Nexxen の担当者に確認してください。
-* **[!UICONTROL 市場 ID]**:Nexxen データ契約の作成先となる数値の市場 ID を入力します。 Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、-1 と入力します。
+* **[!UICONTROL レートタイプ]**：レートタイプは、データ使用量の請求方法を表します。 0.00 ドルの料金はすべて定額料金にする必要があります。使用するレートタイプが不明な場合は、Nexxen の担当者に確認してください。
+* **[!UICONTROL 市場 ID]**:Nexxen データ契約の作成先となる数値の市場 ID を入力します。 Nexxen プラットフォームのすべての市場で「AlwaysOn」シンジケーションを実行する場合は、「-1」と入力します。
 * **[!UICONTROL 広告主 ID]**:Nexxen プラットフォームの単一の広告主にデータを送信する場合は、Nexxen Advertiser ID という数値を入力します。 データを市場のすべての広告主が利用できるようにする場合、またはこれらのセグメントが「AlwaysOn」の場合は、-1 と入力します。
-* **[!UICONTROL 連絡先メール]**:Nexxen がデータ契約の詳細を送信する際に使用する電子メールアドレスを入力します。 おそらくこれは自分のメールアドレスですが、メールのエイリアスでもかまいません。 複数の受信者の場合は、コンマ ( `email1@domain.com`, `email2@domain.com`) をクリックします。
+* **[!UICONTROL 連絡先メール]**:Nexxen がデータ契約の詳細を送信する際に使用する電子メールアドレスを入力します。 ほとんどの場合、これは自分のメールアドレスですが、メールのエイリアスでも構いません。複数の受信者の場合は、コンマ ( `email1@domain.com`, `email2@domain.com`) をクリックします。
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="クライアント"
->abstract="パートナーに表示する会社/配信アカウントの名前。 使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。 スペースや特殊文字は使用しないでください。"
+>abstract="パートナーに表示する会社／配信アカウントの名前。使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。スペースや特殊文字は使用しないでください。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
 ![One Fox 宛先の顧客データフィールドを示す Platform UI 画像。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL クライアント]**：パートナーに表示する会社/配信アカウントの名前。 デフォルトで会社名を使用します。 使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。 スペースや特殊文字は使用しないでください。
+* **[!UICONTROL クライアント]**：パートナーに表示する会社/配信アカウントの名前。 デフォルトで会社名を使用します。 使用する名前が不明な場合は、パートナーアカウント担当者にお問い合わせください。スペースや特殊文字は使用しないでください。
 
 ### [!DNL Pandora] {#pandora}
 
@@ -373,7 +373,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="セグメントタイプ"
->abstract="セグメントタイプ。 現在、ファーストパーティセグメントのみがサポートされています。"
+>abstract="セグメントタイプ。現在、ファーストパーティセグメントのみがサポートされています。"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 
@@ -399,8 +399,8 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_teads_teadsid"
->title="ティード ID"
->abstract="ティード ID"
+>title="Teads D"
+>abstract="あなたの Teads ID"
 
 宛先の詳細を設定するには、以下のフィールドに入力します。
 

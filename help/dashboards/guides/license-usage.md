@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
->abstract="License usage ダッシュボードでは、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みライセンス金額など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
+>abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
 
 Adobe Experience Platformから、組織のライセンス使用状況に関する重要な情報を表示できます [!UICONTROL ライセンスの使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショットの間にキャプチャされます。
 

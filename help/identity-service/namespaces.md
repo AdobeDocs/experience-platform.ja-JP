@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 23%
+ht-degree: 25%
 
 ---
 
@@ -43,13 +43,13 @@ ID 名前空間では、様々なAdobe Experience Platformサービスに関す�
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="ID タイプの指定"
->abstract="ID タイプは、データを ID グラフに保存するかどうかを制御します。ID グラフは、非個人 ID とパートナー ID の ID タイプに対しては生成されません。"
+>abstract="ID タイプは、データを ID グラフに保存するかどうかを制御します。ID グラフは、個人以外の ID とパートナー ID の ID タイプに対しては生成されません。"
 >text="Learn more in documentation"
 
 ID 名前空間の 1 つの要素は、 **ID タイプ**. ID タイプによって、次の要素が決まります。
 
 * ID グラフを生成するかどうか：
-   * ID グラフは、非個人 ID とパートナー ID の ID タイプに対しては生成されません。
+   * ID グラフは、個人以外の ID とパートナー ID の ID タイプに対しては生成されません。
    * ID グラフは、その他すべての ID タイプに対して生成されます。
 * システムの制限に達した場合に ID グラフから削除される ID。 詳しくは、 [ID データのガードレール](guardrails.md).
 

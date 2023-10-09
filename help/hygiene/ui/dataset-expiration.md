@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 49%
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 49%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="不要または期限切れの顧客レコードとデータセットの削除"
->abstract="<h2>説明</h2><p>規制への準拠に関係なく、Experience Platform データのライフサイクルを管理するために、消費者データを削除し、データセットの有効期限をスケジュールできます。 データ主体のリクエストを作成または管理するには、「データ主体のプライバシーリクエストに従う」使用例ブロックを参照してください。</p>"
+>abstract="<h2>説明</h2><p>規制への準拠に関係なく、Experience Platform データのライフサイクルを管理するために、消費者データを削除し、データセットの有効期限をスケジュールできます。 データ主体のリクエストを作成または管理するには、「データ主体のプライバシーリクエストに従う」ユースケースブロックを参照してください。</p>"
 
 The [[!UICONTROL データのライフサイクル] workspace](./overview.md) Adobe Experience Platform UI では、データセットの有効期限をスケジュールできます。 データセットが有効期限に達すると、データレイク、ID サービスおよびリアルタイム顧客プロファイルは別個のプロセスを開始して、それぞれのサービスからデータセットの内容を削除します。3 つのサービスすべてからデータを削除すると、有効期限が完了とマークされます。
 
@@ -33,7 +33,7 @@ The [[!UICONTROL データのライフサイクル] workspace](./overview.md) Ad
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="手順"
->abstract="<ul><li>選択 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=ja">データのライフサイクル</a> 左側のナビゲーションで、「 <b>リクエストを作成</b>.</li><li>レコードを削除する場合：</li>   <li>「<b>レコード</b>」を選択します。</li>   <li>レコードを削除する特定のデータセットを選択するか、すべてのデータセットからレコードを削除するオプションを選択します。</li>   <li>レコードを削除する消費者の ID を指定します。「<b>ID を追加</b>」を選択して ID を 1 つずつ指定するか、「<b>ファイルを選択</b>」を選択して ID の JSON ファイルをアップロードします。</li>   <li>必要に応じて、「<b>テンプレート</b>」を選択して、JSON ファイルの予想される形式を表示します。</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=ja#schedule-dataset-expiration">データセットの有効期限をスケジュール</a>する場合の手順については、ドキュメントを参照してください。</li></ul>"
+>abstract="<ul><li>左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=ja">データライフサイクル</a>」、「<b>リクエストを作成</b>」の順に選択します。</li><li>レコードを削除する場合：</li>   <li>「<b>レコード</b>」を選択します。</li>   <li>レコードを削除する特定のデータセットを選択するか、すべてのデータセットからレコードを削除するオプションを選択します。</li>   <li>レコードを削除する消費者の ID を指定します。「<b>ID を追加</b>」を選択して ID を 1 つずつ指定するか、「<b>ファイルを選択</b>」を選択して ID の JSON ファイルをアップロードします。</li>   <li>必要に応じて、「<b>テンプレート</b>」を選択して、JSON ファイルの予想される形式を表示します。</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=ja#schedule-dataset-expiration">データセットの有効期限をスケジュール</a>する場合の手順については、ドキュメントを参照してください。</li></ul>"
 
 リクエストを作成するには、「 **[!UICONTROL リクエストを作成]** をワークスペースのメインページから削除します。
 

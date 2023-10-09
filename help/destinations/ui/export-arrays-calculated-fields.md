@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="（ベータ版）アレイのエクスポートのサポート"
->abstract="以下を使用します。 **計算フィールドを追加** int、string または boolean 値の単純な配列をExperience Platformから目的のクラウドストレージの宛先に書き出すコントロールです。 一部制限があります。 広範な例とサポートされる関数については、ドキュメントを参照してください。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="例"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="既知の制限事項"
+>title="（ベータ版）書き出し配列のサポート"
+>abstract="**計算フィールドを追加**&#x200B;コントロールを使用して、int、文字列、またブーリアン値の単純な配列を Experience Platform から目的のクラウドストレージの宛先に書き出します。いくつかの制限が適用されます。広範な例とサポートされている関数については、ドキュメントを参照してください。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#examples" text="例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#known-limitations" text="既知の制限事項"
 
 >[!AVAILABILITY]
 >
