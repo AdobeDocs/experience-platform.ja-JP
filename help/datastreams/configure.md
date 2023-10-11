@@ -2,10 +2,10 @@
 title: データストリームの設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ Experience Platform で使用するためにこのデータストリームを設
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL 位置情報の検索] | 訪問者の IP アドレスに基づいて、選択したオプションに対応する位置情報を検索できるようにします。位置情報の検索を使用するには、Web SDK 設定に [`placeContext`](../edge/data-collection/automatic-information.md#place-context) フィールドグループを含める必要があります。<br>選択可能なオプションは次のとおりです。 <ul><li>国</li><li>郵便番号</li><li>都道府県</li><li>DMA</li><li>市区町村</li><li>緯度 </li><li>経度</li></ul>**[!UICONTROL 市区町村]**、**[!UICONTROL 緯度]**&#x200B;または&#x200B;**[!UICONTROL 経度]**&#x200B;を選択すると、他にどのようなオプションが選択されているかに関係なく、小数第 2 位までの座標が表示されます。これは、市区町村レベルの精度と見なされます。<br> <br>オプションを選択しないと、位置情報の検索が無効になります。位置情報は [!UICONTROL IP の不明化]より前に発生し、[!UICONTROL IP の不明化]の設定には影響されません。 |
-| [!UICONTROL ネットワークの検索] | 訪問者の IP アドレスに基づいて、選択したオプションに対応するネットワークを検索できるようにします。ネットワークの検索を使用するには、Web SDK 設定に [`Environment`](../edge/data-collection/automatic-information.md#environment) フィールドグループを含める必要があります。<br>選択可能なオプションは次のとおりです。 <ul><li>通信事業者</li><li>ドメイン</li><li>ISP</li></ul>これらのオプションを使用すると、リクエストの送信元の特定のネットワークに関する詳細情報を他のサービスに提供できます。 |
+| [!UICONTROL 位置情報の検索] | 訪問者の IP アドレスに基づいて、選択したオプションの位置情報を検索できるようにします。 次のオプションを使用できます。 <ul><li>**国**：に値を入力します `xdm.placeContext.geo.countryCode`</li><li>**郵便番号**：に値を入力します `xdm.placeContext.geo.postalCode`</li><li>**都道府県**：に値を入力します `xdm.placeContext.geo.stateProvince`</li><li>**DMA**：に値を入力します `xdm.placeContext.geo.dmaID`</li><li>**市区町村**：に値を入力します `xdm.placeContext.geo.city`</li><li>**緯度**：に値を入力します `xdm.placeContext.geo._schema.latitude`</li><li>**経度**：に値を入力します `xdm.placeContext.geo._schema.longitude`</li></ul>**[!UICONTROL 市区町村]**、**[!UICONTROL 緯度]**&#x200B;または&#x200B;**[!UICONTROL 経度]**&#x200B;を選択すると、他にどのようなオプションが選択されているかに関係なく、小数第 2 位までの座標が表示されます。これは、市区町村レベルの精度と見なされます。<br> <br>オプションを選択しないと、位置情報の参照が無効になります。 位置情報は次の前に発生します： [!UICONTROL IP Obfuscation（IP の不明化）]：これは、 [!UICONTROL IP Obfuscation（IP の不明化）] 設定。 |
+| [!UICONTROL ネットワークの検索] | 訪問者の IP アドレスに基づいて、選択したオプションに関するネットワーク検索を有効にします。 次のオプションを使用できます。 <ul><li>**通信事業者**：に値を入力します `xdm.environment.carrier`</li><li>**ドメイン**：に値を入力します `xdm.environment.domain`</li><li>**ISP**：に値を入力します `xdm.environment.ISP`</li></ul> |
+
+データ収集用に上記のいずれかのフィールドを有効にした場合、 [`context`](../edge/data-collection/automatic-information.md) 配列プロパティ [Web SDK の設定](../edge/fundamentals/configuring-the-sdk.md).
+
+位置情報検索フィールドでは、 `context` 配列文字列 `"placeContext"`ネットワーク検索フィールドは `context` 配列文字列 `"environment"`.
+
+さらに、スキーマに必要な各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
 
 ### デバイス参照の設定 {#geolocation-device-lookup}
 
-The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバイス固有の情報の精度レベルを選択できます。
+The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバイス固有の情報を選択できます。
 
 を展開します。 **[!UICONTROL デバイス参照]** 以下に説明する設定を行う場合は、「 」セクションを参照してください。
 
@@ -65,9 +71,15 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 | 設定 | 説明 |
 | --- | --- |
-| **[!UICONTROL ユーザーエージェントヘッダーとクライアントヒントヘッダーを保持する]** | ユーザーエージェント文字列に保存されている情報のみを収集する場合は、このオプションを選択します。 これはデフォルト設定です。 |
-| **[!UICONTROL デバイス参照を使用して、次の情報を収集します]** | 次のデバイス固有の情報を 1 つ以上収集する場合は、このオプションを選択します。 <ul><li>**[!UICONTROL デバイス]** 情報：<ul><li>デバイスの製造元</li><li>デバイスモデル</li><li>マーケティング名</li></ul></li><li>**[!UICONTROL ハードウェア]** 情報： <ul><li>デバイスタイプ</li><li>表示の高さ</li><li>幅を表示</li><li>画面の色</li></ul></li><li>**[!UICONTROL ブラウザー]** 情報： <ul><li>ブラウザーベンダー</li><li>ブラウザー名</li><li>ブラウザーのバージョン</li></ul></li><li>**[!UICONTROL オペレーティングシステム]** 情報： <ul><li>OS ベンダー</li><li>OS 名</li><li>OS バージョン</li></ul></li></ul> <br>  ユーザーエージェントやクライアントヒントと共に、デバイス参照情報を収集することはできません。 デバイス情報の収集を選択すると、ユーザーエージェントとクライアントヒントの収集が無効になり、その逆も無効になります。 すべてのデバイス参照情報は、 `xdm:device` フィールドグループを使用します。 |
-| **[!UICONTROL デバイス情報を収集しない]** | どのようなルックアップ情報も収集しない場合は、このオプションを選択します。 ユーザーエージェントやクライアントヒントヘッダーを含め、デバイス、ハードウェア、ブラウザー、オペレーティングシステムの情報は収集されません。 |
+| **[!UICONTROL ユーザーエージェントヘッダーとクライアントヒントヘッダーを保持する]** | ユーザーエージェント文字列に保存されている情報のみを収集する場合は、このオプションを選択します。 この設定はデフォルトで選択されています。 入力 `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL デバイス参照を使用して、次の情報を収集します]** | 次のデバイス固有の情報を 1 つ以上収集する場合は、このオプションを選択します。 <ul><li>**[!UICONTROL デバイス]** 情報：<ul><li>**デバイスの製造元**：に値を入力します `xdm.device.manufacturer`</li><li>**デバイスモデル**：に値を入力します `xdm.device.modelNumber`</li><li>**マーケティング名**：に値を入力します `xdm.device.model`</li></ul></li><li>**[!UICONTROL ハードウェア]** 情報： <ul><li>**ハードウェアの種類**：に値を入力します `xdm.device.type`</li><li>**表示の高さ**：に値を入力します `xdm.device.screenHeight`</li><li>**幅を表示**：に値を入力します `xdm.device.screenWidth`</li><li>**画面の色**：に値を入力します `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL ブラウザー]** 情報： <ul><li>**ブラウザーベンダー**：に値を入力します `xdm.environment.browserDetails.vendor`</li><li>**ブラウザー名**：に値を入力します `xdm.environment.browserDetails.name`</li><li>**ブラウザーのバージョン**：に値を入力します `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL オペレーティングシステム]** 情報： <ul><li>**OS ベンダー**：に値を入力します `xdm.environment.operatingSystemVendor`</li><li>**OS 名**：に値を入力します `xdm.environment.operatingSystem`</li><li>**OS バージョン**：に値を入力します `xdm.environment.operatingSystemVersion`</li></ul></li></ul>ユーザーエージェントやクライアントヒントと共に、デバイス参照情報を収集することはできません。 デバイス情報の収集を選択すると、ユーザーエージェントとクライアントヒントの収集が無効になり、その逆も無効になります。 |
+| **[!UICONTROL デバイス情報を収集しない]** | デバイス参照情報を収集しない場合は、このオプションを選択します。 デバイス、ハードウェア、ブラウザー、オペレーティングシステム、ユーザーエージェント、クライアントヒントのデータは収集されません。 |
+
+データ収集用に上記のいずれかのフィールドを有効にした場合、 [`context`](../edge/data-collection/automatic-information.md) 配列プロパティ [Web SDK の設定](../edge/fundamentals/configuring-the-sdk.md).
+
+デバイスとハードウェアの情報は、 `context` 配列文字列 `"device"`ブラウザーとオペレーティングシステムの情報は `context` 配列文字列 `"environment"`.
+
+さらに、スキーマに必要な各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
 
 ### 詳細オプションの設定 {#@advanced-options}
 
