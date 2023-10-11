@@ -2,20 +2,20 @@
 title: 作業指示 API エンドポイント
 description: Data Whealthy API の/workorder エンドポイントを使用すると、ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 75%
+source-wordcount: '1034'
+ht-degree: 72%
 
 ---
 
-# 作業指示エンドポイント
+# [!BADGE ベータ版]{type=Informative} 作業指示エンドポイント {#work-order-endpoint}
 
 The `/workorder` Data Whealthy API のエンドポイントを使用すると、Adobe Experience Platformでレコードの削除リクエストをプログラムで管理できます。
 
 >[!IMPORTANT]
+> 
+>レコードの削除機能は、現在ベータ版で、 **限定リリース**. すべてのお客様が利用できるわけではありません。 レコードの削除リクエストは、限定リリースの組織でのみ使用できます。
 >
 >レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
 
