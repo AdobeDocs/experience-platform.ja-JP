@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1170'
 ht-degree: 95%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 95%
       * [Airship Tags 接続](./catalog/mobile-engagement/airship-tags.md)
       * [Braze 接続](./catalog/mobile-engagement/braze.md)
       * [回線接続](./catalog/mobile-engagement/line.md)
+      * [接続を移動](./catalog/mobile-engagement/moengage.md)
    * パーソナライゼーションの宛先 {#personalization}
       * [パーソナライゼーションの宛先の概要](./catalog/personalization/overview.md)
       * [Adobe Commerce 接続](./catalog/personalization/adobe-commerce.md)
