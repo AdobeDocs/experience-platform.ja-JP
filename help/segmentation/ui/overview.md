@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 94%
+source-wordcount: '3822'
+ht-degree: 92%
 
 ---
 
@@ -92,7 +92,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 「**[!UICONTROL すべてのオーディエンスをスケジュール]**」に切り替えると、スケジュール済みのセグメント化が有効になります。スケジュールされたセグメント化について詳しくは、[このユーザーガイドの「スケジュールされたセグメント化」の節](#scheduled-segmentation)を参照してください。
 
-「**[!UICONTROL オーディエンスを読み込み]**」を選択すると、外部で生成されたオーディエンスを読み込めます。オーディエンスの読み込みについて詳しくは、[このユーザーガイドの「オーディエンスの読み込み」の節](#import-audience)を参照してください。
+選択 **[!UICONTROL オーディエンスのインポート]** を使用すると、外部で生成されたオーディエンスをインポートできます。 オーディエンスのインポートの詳細については、 [ユーザーガイドでのオーディエンスのインポート](#import-audience).
 
 「**[!UICONTROL オーディエンスを作成]**」を選択すると、オーディエンスを作成できます。オーディエンスの作成について詳しくは、[このユーザーガイドの「オーディエンスの作成」の節](#create-audience)を参照してください。
 
@@ -350,6 +350,10 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 ![[!UICONTROL レビュー]ページが表示され、新しく読み込んだ外部生成オーディエンスの詳細が表示されています。](../images/ui/overview/import-audience-review-details.png)
 
 詳細が正しいことを確認したら、「**[!UICONTROL 完了]**」を選択して、外部生成オーディエンスを Adobe Experience Platform に読み込みます。
+
+>[!IMPORTANT]
+>
+>外部から生成されたオーディエンスに機密情報や医療関連の情報が含まれている場合は、 **必須** 任意の宛先にアクティブ化する前に、必要なデータ使用ラベルを適用します。 データ使用ラベルの適用について詳しくは、 [ラベルの管理](../../access-control/abac/ui/labels.md).
 
 ## スケジュールされたセグメント化 {#scheduled-segmentation}
 
