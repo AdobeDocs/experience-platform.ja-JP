@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
+source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 83%
+source-wordcount: '729'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 83%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## v0.20.0（2023 年 10 月 10 日）
+
+- at.js 2.11.0をサポートするように更新しました。
+- カスタムのAdobe Experience Platform sandboxId および sandboxName を targetGlobalSettings に設定することのサポートが追加されました。これらは、getOffer/getOffers 呼び出し時に Delivery API に渡されます。
+- セレクター内のチェーン：eq() に対するシャドウ DOM 修正。
 
 ## v0.19.3（2023 年 9 月 19 日）
 
