@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 61%
 
 ---
@@ -101,7 +101,7 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 
 この機能を使用できるようになると、ID 数の上限である 50 個を超えるグラフは、最大 50 個の ID にまで減らされます。 Real-Time CDP B2C Edition では、以前はセグメント化とアクティベーションから無視されていたので、オーディエンスの資格を持つプロファイルの数が最小限に増える可能性がありました。
 
-#### リアルタイム顧客プロファイル：偽名プロファイルの設定
+#### リアルタイム顧客プロファイル：アドレス可能なオーディエンスへの影響
 
 削除は、リアルタイム顧客プロファイルではなく、ID サービス内のデータに対してのみ発生します。
 

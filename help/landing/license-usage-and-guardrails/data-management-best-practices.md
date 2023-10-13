@@ -2,10 +2,10 @@
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 77%
+source-wordcount: '2287'
+ht-degree: 73%
 
 ---
 
@@ -94,6 +94,12 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * [取り込みフィルター](#ingestion-filters)
 * [プロファイルストア](#profile-service)
 
+### ID サービスとアドレス可能なオーディエンス {#identity-service}
+
+ID グラフは、アドレス可能なオーディエンスとは顧客プロファイルの合計数を表すので、アドレス可能なオーディエンス使用権限の合計にはカウントされません。
+
+ただし、ID グラフの制限は、ID の分割が原因で、アドレス可能なオーディエンスに影響を与える可能性があります。 例えば、最も古い ECID がグラフから削除されても、ECID は偽名プロファイルとして引き続きリアルタイム顧客プロファイルに存在します。 次の設定が可能です。 [偽名プロファイルデータの有効期限](../../profile/pseudonymous-profiles.md) この行動を回避する 詳しくは、 [ID サービスデータのガードレール](../../identity-service/guardrails.md).
+
 ### 取り込みフィルター {#ingestion-filters}
 
 取り込みフィルターを使用すると、ユースケースに必要なデータのみを取り込み、不要なすべてのイベントをフィルターで除外できます。
@@ -104,7 +110,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | Adobe Analytics データ準備 | Analytics ソース接続を作成する際に [!DNL Data Prep] 機能を使用すると、ユースケースに必要のないデータをフィルターで除外できます。[!DNL Data Prep] を使用して、どの属性／列をプロファイルに公開する必要があるかを定義できます。また、条件文を記述して、データをプロファイルに公開するのか、それとも [!DNL data lake] にだけ公開するのかを Platform に通知できます。詳しくは、[Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
 | プロファイル用データセットの有効化／無効化のサポート | データをリアルタイム顧客プロファイルに取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Profile Richness] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
 | Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。詳しくは、[SDK の基礎の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#fundamentals)に関するガイドを参照してください。 |
-| サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。詳しくは、[イベントおよび条件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=ja#events-and-conditions-(if))に関するドキュメントを参照してください。 |
+| サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。次のドキュメントを参照してください： [イベントと条件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)を参照 )。 |
 | ソースレベルでのデータのフィルタリング | 接続を作成し、データをExperience Platformに取り込む前に、論理演算子と比較演算子を使用して、ソースから行レベルのデータをフィルタリングできます。 詳しくは、 [を使用してソースの行レベルのデータをフィルタリングする [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
