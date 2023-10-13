@@ -2,18 +2,14 @@
 title: 外部ソースシステム監査属性データタイプ
 description: このドキュメントでは、外部ソースシステム監査属性エクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '192'
 ht-degree: 7%
 
 ---
 
 # [!UICONTROL 外部ソースシステム監査属性] データタイプ
-
->[!NOTE]
->
->このデータタイプは、Adobe Real-time Customer Data Platformの B2B エディションにアクセスできる組織でのみ使用できます。
 
 [!UICONTROL 外部ソースシステム監査属性] は、外部ソースシステムに関する監査の詳細を取り込む、標準の Experience Data Model(XDM) データ型です。
 
@@ -26,7 +22,7 @@ ht-degree: 7%
 | `createdDate` | 日時 | このレコードが作成された日付。 |
 | `externalID` | 文字列 | ソースの外部の一意の ID。 この値は、必要に応じての識別と重複排除に使用されます。 |
 | `lastActivityDate` | 日時 | ソースシステムの最後のアクティビティの日付。 |
-| `lastReferencedDate` | 日時 | ソースシステムの最終参照日。 |
+| `lastReferencedDate` | 日時 | ソースシステムの最後の参照日。 |
 | `lastUpdatedBy` | 文字列 | このレコードを最後に更新した人の名前。 |
 | `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 |
 | `lastViewedDate` | 日時 | ソースシステムの最終表示日です。 |
@@ -36,4 +32,4 @@ ht-degree: 7%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

@@ -2,9 +2,9 @@
 title: メタコンバージョン API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送のメタコンバージョン API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 目的のプロパティを選択または作成したら、「 」を選択します。 **[!UICONTROL 拡張機能]** 左側のナビゲーションで、 **[!UICONTROL カタログ]** タブをクリックします。 を検索します。 [!UICONTROL メタ変換 API] カードを選択し、「 **[!UICONTROL インストール]**.
 
-![The [!UICONTROL インストール] ボタンが選択されています [!UICONTROL メタ変換 API] 拡張機能を使用して、データ収集 UI に追加できます。](../../../images/extensions/server/meta/install.png)
+![The [!UICONTROL インストール] オプションが選択されています [!UICONTROL メタ変換 API] 拡張機能を使用して、データ収集 UI に追加できます。](../../../images/extensions/server/meta/install.png)
 
 表示される設定ビューで、 [!DNL Pixel] 拡張機能をアカウントにリンクするために以前にコピーした ID。 ID を直接入力に貼り付けることも、代わりにデータ要素を使用することもできます。
 
@@ -46,6 +46,30 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 ![The [!DNL Pixel] 拡張機能の設定表示でデータ要素として指定された ID。](../../../images/extensions/server/meta/configure.png)
 
 拡張機能がインストールされ、イベント転送ルールでその機能を使用できるようになりました。
+
+## Meta Business Extension(MBE) との統合 {#mbe}
+
+Meta Business Extensions(MBE) との統合機能を使用すると、Meta Business アカウントをすばやく認証できます。 これにより、 [!UICONTROL ピクセル ID] とメタ変換 API [!UICONTROL アクセストークン]を使用すると、メタコンバージョン API のインストールと設定が容易になります。
+
+MBE で認証を行うダイアログが、 [!UICONTROL メタ変換 API] 拡張子。
+
+![The [!UICONTROL メタコンバージョン API 拡張機能] インストールページの強調表示 [!UICONTROL メタに接続].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+MBE で認証するためのダイアログプロンプトが、イベント転送内のクイックスタートワークフロー UI にも表示されます。
+
+![クイックスタートワークフローの UI のハイライト [!UICONTROL メタに接続].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## イベント品質一致スコア (EMQ) との統合 {#emq}
+
+イベント品質マッチスコア (EMQ) との統合により、EMQ スコアを表示することで、実装の効果を簡単に確認できます。 この統合により、コンテキストの切り替えを最小限に抑え、メタコンバージョン API 実装の成功を改善できます。 これらのイベントスコアは、 [!UICONTROL メタコンバージョン API 拡張機能] 設定画面。
+
+![The [!UICONTROL メタコンバージョン API 拡張機能] 設定ページのハイライト [!UICONTROL EMQ スコアを表示].](../../../images/extensions/server/meta/emq-score.png)
+
+## LiveRamp との統合 (Alpha) {#alpha}
+
+LiveRamp との統合により、メタコンバージョン API ルールの設定に新しいフィールドが追加され、LiveRamp コンバージョン API との統合が容易になります。 この統合により、PII を直接パートナーやメタと共有する必要がなくなります。 LiveRamp の堅牢な ID グラフにより、 [!UICONTROL パートナー ID（アルファ）] は、ユーザーの一致率を上げることで、統合の品質を向上させます。
+
+![メタ偶数転送 [!UICONTROL ルール] 設定ページのハイライト [!UICONTROL パートナー名（アルファ）] および [!UICONTROL パートナー ID（アルファ）].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## イベント転送ルールの設定 {#rule}
 
