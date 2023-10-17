@@ -3,7 +3,7 @@ title: ID サービスとリアルタイム顧客プロファイル
 description: ID サービスとリアルタイム顧客プロファイルの関係について説明します
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->このページでは、結合ポリシーが ID グラフを使用していることを前提としています。 リアルタイム顧客プロファイルの結合ポリシーの詳細については、 [ポリシーと ID の結合].
+>このページでは、結合ポリシーが ID グラフを使用していることを前提としています。 リアルタイム顧客プロファイルの結合ポリシーの詳細については、 [ポリシーと ID の結合](../../profile/merge-policies/overview.md#identity-stitching).
 
 ID サービスとリアルタイム顧客プロファイルを組み合わせて使用できますが、Adobe Experience Platformの 2 つの機能は本質的に同じではありません。
 
