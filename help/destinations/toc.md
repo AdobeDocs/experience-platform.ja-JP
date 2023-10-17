@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1167'
 ht-degree: 95%
 
 ---
@@ -176,7 +176,6 @@ ht-degree: 95%
       * [Pega プロファイル接続](./catalog/personalization/pega-profile.md)
    * ソーシャルの宛先{#social}
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
-      * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook 接続](./catalog/social/facebook.md)
       * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [TikTok 接続](./catalog/social/tiktok.md)

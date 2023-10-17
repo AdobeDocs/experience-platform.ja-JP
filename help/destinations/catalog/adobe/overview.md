@@ -1,12 +1,12 @@
 ---
-keywords: 宛先；experience cloud ソリューション；ターゲット；ターゲットの宛先；ad cloud;advertising cloud;audience manager;adobe target の宛先；ターゲット；audience manager の宛先；
+keywords: 宛先；experience cloud ソリューション；ターゲット；ターゲットの宛先； ad cloud; advertising cloud; audience manager; adobe target の宛先；ターゲット； audience manager の宛先；
 title: アドビの宛先の概要
-description: Platform のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこなうことで、顧客体験を管理します
+description: Platform のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこない、顧客体験を管理します
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 32%
+source-wordcount: '231'
+ht-degree: 33%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこなうことで、顧客体験を管理します。
+Adobe Experience Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこない、顧客体験を管理します。
 
 ## サポートされるAdobeの宛先 {#supported-destinations}
 
@@ -24,7 +24,7 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 
 ### 接続
 
-* [Adobe Advertising Cloud DSP接続](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising Cloud DSP Connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign 接続](../email-marketing/adobe-campaign.md)
 * [Adobe Target 接続](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -35,7 +35,6 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 
 * [Adobe Advertising Cloud 拡張機能](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 拡張機能](../analytics/adobe-analytics.md)
-* [Adobe Livefyre 拡張機能](../social/adobe-livefyre.md)
 * [Adobe Media Analytics for Audio and Video 拡張機能](../analytics/adobe-video-analytics.md)
 * [Adobe Target 拡張機能](../personalization/adobe-target.md)
 * [Adobe Target v2 拡張機能](../personalization/adobe-target-v2.md)
@@ -45,7 +44,7 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 * [Marketo Munchkin 拡張機能](../email/marketo-munchkin.md)
 * [Marketo web パーソナライゼーション拡張機能](../personalization/marketo-web-personalization.md)
 
-## Experience Platformオーディエンス共有
+## Experience Platform オーディエンスの共有
 
 Experience Platformオーディエンス共有機能を使用して、Experience Platformのオーディエンスを追加のAdobe先と共有します。 詳しくは、以下のページを参照してください (Audience Managerドキュメントポータルで開く )。
 
