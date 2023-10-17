@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データモデリングのベストプラクティス
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
-workflow-type: ht
-source-wordcount: '2709'
-ht-degree: 100%
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+workflow-type: tm+mt
+source-wordcount: '3044'
+ht-degree: 88%
 
 ---
 
@@ -228,6 +228,16 @@ Adobe Analytics の場合、ECID はデフォルトのプライマリ ID です�
 >[!IMPORTANT]
 >
 >アドビアプリケーションフィールドグループを使用する場合、他のフィールドをプライマリ ID としてマークしないでください。ID としてマークする必要がある追加のプロパティがある場合、これらのフィールドは代わりにセカンダリ ID として割り当てる必要があります。
+
+## データ検証フィールド {#data-validation-fields}
+
+不要なデータが Platform に取り込まれないようにするには、スキーマを作成する際に、フィールドレベルの検証の条件を定義することをお勧めします。 特定のフィールドに制約を設定するには、スキーマエディターからフィールドを選択して、 [!UICONTROL フィールドのプロパティ] サイドバー。 次のドキュメントを参照してください： [タイプ固有のフィールドプロパティ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) を参照してください。
+
+![制約フィールドがハイライト表示されたスキーマエディター [!UICONTROL フィールドのプロパティ] サイドバー。](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>スキーマを作成する際のデータモデリングの推奨事項を次に示します。<br><ul><li>**プライマリ ID を考慮**:Web SDK、モバイル SDK、Adobe Analytics、Adobe Journey OptimizerなどのAdobe製品の場合、 `identityMap` フィールドは、多くの場合、プライマリ id として機能します。 追加のフィールドを、そのスキーマのプライマリ ID として指定しないでください。</li><li>**使用の避け `_id` id として**: `_id` id としてのエクスペリエンスイベントスキーマのフィールド。 これは、ID として使用するのではなく、レコードの一意性を目的としています。</li><li>**長さの制約を設定**:ID としてマークされるフィールドには、最小長と最大長を設定することをお勧めします。 これらの制限により、一貫性とデータ品質を維持できます。</li><li>**一貫した値にパターンを適用する**:ID 値が特定のパターンに従っている場合は、 [!UICONTROL パターン] を設定して、この制約を適用します。 この設定には、数字のみ、大文字と小文字の組み合わせ、特定の文字の組み合わせなどのルールを含めることができます。 正規表現を使用して、文字列のパターンを照合します。</li><li>**Analytics スキーマでの eVar の制限**：通常、Analytics スキーマには、1 つのeVarのみを ID として指定する必要があります。 複数のeVarを ID として使用する場合は、データ構造を最適化できるかどうかを再確認する必要があります。</li><li>**選択したフィールドの一意性の確保**：選択したフィールドは、スキーマ内のプライマリ ID と比較して一意である必要があります。 そうでない場合は、ID としてマークしないでください。 例えば、複数の顧客が同じ電子メールアドレスを提供できる場合、その名前空間は適切な ID ではありません。 この原則は、電話番号などの他の ID 名前空間にも当てはまります。</li></ul>
 
 ## 次の手順
 

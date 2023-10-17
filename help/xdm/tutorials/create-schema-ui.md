@@ -5,9 +5,9 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 82%
 
 ---
@@ -201,7 +201,7 @@ The [!UICONTROL スキーマを作成] ワークフローが表示されます�
 * **[!UICONTROL 型]：**&#x200B;フィールドのデータタイプ。これには、基本的なスカラータイプと、[!DNL Schema Registry] に定義されている任意のデータタイプが含まれます。例：[!UICONTROL 文字列]、[!UICONTROL 整数]、[!UICONTROL ブーリアン]、[!UICONTROL 人物]、[!UICONTROL 住所]、[!UICONTROL 電話番号]など
 * **[!UICONTROL 説明]：**&#x200B;フィールドの説明（オプション）は、200 文字以内で指定してください。
 
-`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL 文字列]」に設定すると、デフォルト値、形式、最大長など、制約を適用するためのオプションが&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;セクションに自動的に入力されます。
+`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL 文字列]」に設定すると、デフォルト値、形式、最大長など、制約を適用するためのオプションが&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;セクションに自動的に入力されます。次のドキュメントを参照してください： [データ検証フィールドのベストプラクティス](../schema/best-practices.md#data-validation-fields) を参照してください。
 
 ![新しい ID フィールドのフィールドプロパティ値がハイライトされたスキーマエディター。](../images/tutorials/create-schema/string-constraints.png)
 
