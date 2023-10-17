@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 94%
+source-wordcount: '174'
+ht-degree: 93%
 
 ---
 
@@ -51,13 +51,14 @@ ht-degree: 94%
       * [mbox サードパーティ ID の使用](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [at.js ライブラリと Web SDK の比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Analytics for Target（A4T）ログ {#a4t}
-         * [概要 ](personalization/adobe-target/analytics-logging/overview.md)
-         * [クライアントサイドログ](personalization/adobe-target/analytics-logging/client-side.md)
+         * [概要](personalization/adobe-target/analytics-logging/overview.md)
+         * [クライアント側のログ](personalization/adobe-target/analytics-logging/client-side.md)
          * [サーバーサイドログ](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [概要](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [概要](personalization/ajo/overview.md)
+      * [シングルページアプリケーションの実装](personalization/ajo/web-spa-implementation.md)
 * 同意 {#consent}
    * [同意のサポート](consent/supporting-consent.md)
    * IAB の透明性および同意フレームワーク 2.0 {#iab-tcf}
