@@ -3,17 +3,21 @@ title: Id 設定のシナリオの例
 description: ID 設定を構成するシナリオの例を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: アルファ版
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 1%
+source-wordcount: '433'
+ht-degree: 3%
 
 ---
 
 # ID グラフのリンクルールの設定例
 
-このドキュメントでは、ID グラフのリンクルールを設定する際に考慮すべきシナリオの例を説明します。
+>[!IMPORTANT]
+>
+>ID グラフのリンクルールは、現在Alpha中です。 機能とドキュメントは変更される場合があります。
 
+このドキュメントでは、ID グラフのリンクルールを設定する際に考慮すべきシナリオの例を説明します。
 
 ## 共有デバイス
 

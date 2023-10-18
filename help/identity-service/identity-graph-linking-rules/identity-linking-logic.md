@@ -3,14 +3,19 @@ title: ID サービスのリンクロジック
 description: ID サービスが異なる ID をリンクして顧客の包括的なビューを作成する方法について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+badge: アルファ版
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 3%
+source-wordcount: '791'
+ht-degree: 4%
 
 ---
 
 # ID サービスのリンクロジック
+
+>[!IMPORTANT]
+>
+>ID グラフのリンクルールは、現在Alpha中です。 機能とドキュメントは変更される場合があります。
 
 2 つの ID 間のリンクは、ID 名前空間と ID 値が一致すると確立されます。
 
