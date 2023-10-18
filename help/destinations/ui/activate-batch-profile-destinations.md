@@ -4,10 +4,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
-source-wordcount: '3710'
-ht-degree: 64%
+source-wordcount: '3720'
+ht-degree: 63%
 
 ---
 
@@ -413,8 +413,10 @@ ht-degree: 64%
 ![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面の記録。](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 ファイルのエクスポートは、`segmentMembership.status` が選択されているかどうかによって、次のように異なります。
-* `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
+* 次の場合、 `segmentMembership.status` フィールドが選択され、書き出されたファイルは次を含む **[!UICONTROL アクティブ]** 最初のフルスナップショットと新規の **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** 以降の増分エクスポートのメンバー。
 * `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
+
+詳細を表示： [ファイルベースの宛先に対するプロファイルの書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### ID 名前空間は現在、書き出し用に選択できません
 
