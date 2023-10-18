@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM フィールドタイプ制約
 description: Experience Data Model(XDM) のフィールドタイプ制約の参照です。これには、マッピングできる他のシリアル化形式や、API で独自のフィールドタイプを定義する方法が含まれます。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 12%
@@ -44,15 +44,15 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL 文字列 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type":"string"}</pre>
+{"type": "string"}</pre>
       </td>
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL 数値 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type":"number"}</pre>
+{"type": "number"}</pre>
       </td>
       <td><code>12925.49</code></td>
     </tr>
@@ -60,7 +60,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"integer", "maximum":9007199254740991, "minimum":-9007199254740991 }</pre>
+{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +68,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"integer", "maximum":2147483648, "minimum":-2147483648 }</pre>
+{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +76,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"integer", "maximum":32768, "minimum":-32768 }</pre>
+{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +84,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL バイト ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"integer", "maximum":128、"minimum":-128 }</pre>
+{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +92,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL 日付 ]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"string", "format":"date" }</pre>
+{ "type": "string", "format": "date" }</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +100,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type":"string", "format":"date-time" }</pre>
+{ "type": "string", "format": "date-time" }</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -108,7 +108,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type":"string"}</pre>
+{"type": "string"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
@@ -127,7 +127,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 
 >[!NOTE]
 >
->次の表に示す標準 XDM タイプの中で、 [!UICONTROL マップ] タイプも含まれます。 マップは、特定の値にマッピングされるキーとしてデータが表される場合、またはキーを静的スキーマに合理的に含めることができず、データ値として処理する必要がある場合に、標準スキーマで使用されます。
+>次の表に示す標準 XDM タイプの中で、 [!UICONTROL マップ] タイプも含まれます。 マップは、特定の値にマッピングされるキーとしてデータが表される場合、またはキーを静的スキーマに合理的に含めることができないので、データ値として処理する必要がある場合に、標準スキーマで使用されます。
 >
 >多くの標準 XDM コンポーネントはマップタイプを使用します。また、 [カスタムマップフィールドの定義](../tutorials/custom-fields-api.md#custom-maps) 必要に応じて。 以下の表に含まれるマップタイプの組み込みは、既存のデータが以下に示す形式のいずれかで格納されている場合に、そのデータを XDM にマッピングする方法を判断するのに役立つように作成されています。
 
@@ -136,7 +136,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | PARQUET | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | タイプ： `BYTE_ARRAY`<br>注釈： `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL 倍精度浮動小数点] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL 数値] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | 型：`INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL 整数] | タイプ： `INT32`<br>注釈： `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | タイプ： `INT32`<br>注釈： `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `String` | `System.String` | `String` |
-| [!UICONTROL 倍精度浮動小数点] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL 数値] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL 整数] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `string` | `String` | `string` |
-| [!UICONTROL 倍精度浮動小数点] | `double` | `Double` | `double` |
+| [!UICONTROL 数値] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL 整数] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
@@ -184,4 +184,4 @@ XDM は JSON スキーマの上に構築されているので、XDM フィール
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 
-スキーマレジストリ API を使用すると、形式とオプションの制約を使用してカスタムフィールドを定義できます。 詳しくは、 [スキーマレジストリ API でのカスタムフィールドの定義](../tutorials/custom-fields-api.md) を参照してください。
+スキーマレジストリ API を使用すると、形式とオプションの制約を使用してカスタムフィールドを定義できます。 次のガイドを参照してください： [スキーマレジストリ API でのカスタムフィールドの定義](../tutorials/custom-fields-api.md) を参照してください。

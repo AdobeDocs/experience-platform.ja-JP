@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 90%
+source-wordcount: '308'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 90%
       - [シームレスな SQL フロー](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [デシルベースの派生属性の作成](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - AI/ML 機能パイプライン {#ml-feature-pipelines}
-      - [AI/ML 機能パイプライン](data-distiller/ml-feature-pipelines/overview.md)
+      - [概要](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks に接続](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
