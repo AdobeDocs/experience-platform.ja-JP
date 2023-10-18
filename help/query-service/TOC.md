@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 99%
+source-wordcount: '311'
+ht-degree: 90%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 99%
       - [概要](data-distiller/derived-attributes/overview.md)
       - [シームレスな SQL フロー](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [デシルベースの派生属性の作成](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - AI/ML 機能パイプライン {#ml-feature-pipelines}
+      - [AI/ML 機能パイプライン](data-distiller/ml-feature-pipelines/overview.md)
+      - [Jupyter Notebooks に接続](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
+      - [AI/ML データパイプラインエンリッチメントのエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - ユースケース {#use-cases}
    - [参照を中止](use-cases/abandoned-browse.md)
    - [属性分析](use-cases/attribution-analysis.md)
