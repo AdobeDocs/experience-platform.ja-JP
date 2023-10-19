@@ -2,10 +2,10 @@
 title: パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズ
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ XDM データの横にあるデータベースアイコンを選択し、`pageVi
 
 これで、パーソナライズ機能用にオーディエンスを作成してアクティブ化する準備が整いました。
 
-#### エッジセグメント化の設定
+#### オーディエンスの作成とエッジセグメント化の設定
 
-[エッジセグメント化](/help/segmentation/ui/edge-segmentation.md)を設定すると、訪問者が web プロパティにアクセスした際に、そのオーディエンスのメンバーシップがリアルタイムで評価されます。
+Platform UI で、に移動します。 **[!UICONTROL 顧客]** > **[!UICONTROL オーディエンス]** をクリックして、web サイトの訪問者をキャプチャするためのオーディエンスを作成します。
+
+![オーディエンスへの移動方法のビュー。](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+オーディエンスを設定するには、 [エッジセグメント化](/help/segmentation/ui/edge-segmentation.md) したがって、訪問者のオーディエンスメンバーシップは、Web プロパティを訪問する際にリアルタイムに評価されます。
 
 エッジオーディエンスに対しては、必ず [active-on-edge 結合ポリシー](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)も設定してください。
 
