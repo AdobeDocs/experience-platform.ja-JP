@@ -2,9 +2,9 @@
 title: レコードを削除
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1564'
 ht-degree: 34%
 
 ---
@@ -48,7 +48,7 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 
 ## データセットの選択 {#select-dataset}
 
-次の手順では、1 つのデータセットからレコードを削除するか、すべてのデータセットからレコードを削除するかを決定します。 このオプションが利用できない場合は、 [ID を提供](#provide-identities) 」の節を参照してください。
+次の手順では、1 つのデータセットからレコードを削除するか、すべてのデータセットからレコードを削除するかを決定します。 このオプションが使用できない場合は、 [ID を提供](#provide-identities) 」の節を参照してください。
 
 の下 **[!UICONTROL レコードの詳細]** 「 」セクションでは、ラジオボタンを使用して、特定のデータセットとすべてのデータセットの中から選択します。 次を選択した場合： **[!UICONTROL データセットを選択]**&#x200B;をクリックし、データベースアイコン (![データベースアイコン](../images/ui/record-delete/database-icon.png)) をクリックして、使用可能なデータセットのリストを提供するダイアログを開きます。 リストから目的のデータセットを選択し、その後に **[!UICONTROL 完了]**.
 
@@ -139,7 +139,7 @@ ID を追加するには、プラスアイコン (![プラスアイコン。](..
 
 >[!IMPORTANT]
 > 
->毎月送信できる個別 ID レコードの削除の合計数には、異なる制限があります。 これらの制限は、使用許諾契約に基づいています。 Adobe Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 個の ID レコード削除を送信できます。 を購入した組織 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド** は、毎月最大 600,000 個の id レコード削除を送信できます。<br>UI を通じた 1 件のレコード削除リクエストで、一度に 10,000 個の ID を送信できます。 The [レコードを削除する API メソッド](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) では、一度に 100,000 個の ID を送信できます。
+>毎月送信できる個別 ID レコードの削除の合計数には、異なる制限があります。 これらの制限は、使用許諾契約に基づいています。 Adobe Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 個の ID レコード削除を送信できます。 を購入した組織 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド** は、毎月最大 600,000 個の id レコード削除を送信できます。<br>UI を通じた 1 件のレコード削除リクエストで、一度に 10,000 個の ID を送信できます。 The [レコードを削除する API メソッド](../api/workorder.md#create) では、一度に 100,000 個の ID を送信できます。<br>ID の上限に達するまで、要求ごとに可能な限り多くの ID を送信することをお勧めします。 大量の ID を削除する場合は、レコード削除リクエストごとに少量または単一の ID を送信しないでください。
 
 ![リクエスト設定の [!UICONTROL 名前] および [!UICONTROL 説明] 次のフィールド [!UICONTROL 送信] ハイライト表示されました。](../images/ui/record-delete/submit.png)
 

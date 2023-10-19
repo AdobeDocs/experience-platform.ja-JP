@@ -2,10 +2,10 @@
 title: 作業指示 API エンドポイント
 description: Data Whealthy API の/workorder エンドポイントを使用すると、ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 72%
+source-wordcount: '1181'
+ht-degree: 63%
 
 ---
 
@@ -26,6 +26,10 @@ The `/workorder` Data Whealthy API のエンドポイントを使用すると、
 ## レコード削除リクエストの作成 {#create}
 
 に対してPOSTリクエストを実行することで、1 つのデータセットまたはすべてのデータセットから 1 つ以上の ID を削除できます `/workorder` endpoint.
+
+>[!IMPORTANT]
+> 
+>毎月送信できる個別 ID レコードの削除の合計数には、異なる制限があります。 これらの制限は、使用許諾契約に基づいています。 Adobe Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 個の ID レコード削除を送信できます。 を購入した組織 **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド** は、毎月最大 600,000 個の id レコード削除を送信できます。<br>単一の [UI を使用して削除リクエストを記録する](../ui/record-delete.md) では、一度に 10,000 個の ID を送信できます。 レコードを削除する API メソッドを使用すると、一度に 100,000 個の ID を送信できます。<br>ID の上限に達するまで、要求ごとに可能な限り多くの ID を送信することをお勧めします。 大量の ID を削除する場合は、レコード削除リクエストごとに少量または単一の ID を送信しないでください。
 
 **API 形式**
 
