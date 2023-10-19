@@ -4,14 +4,34 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 100%
+source-wordcount: '526'
+ht-degree: 82%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.5.0 - 2023 年 10 月 20 日
+
+### 新機能
+
+* タグの概要とログに、プロパティ、環境、ルールへのリンクを表示します。
+
+### 修正点および改善点
+
+* タグの概要データが送信されない問題を修正しました。
+* アシュランスセッションが CORS エラーになる問題を修正しました。
+* Target Trace が表示されない問題を修正しました。
+* 「フィードバックを送信」ボタンを修正しました。
+* バージョン≥2.18.0の Web SDK の概要に見つからなかった「Datastream ID」を修正しました。
+* Edge ログが検索できない問題を修正しました。
+* 特定のアカウントタイプの追加プロファイルに関する注意を追加しました。
+
+## バージョン 1.4.1 - 2022 年 11 月 2 日
+
+* 多くのAdobe Experience Platform Assurance イベントを含むページのパフォーマンスが向上しました。
 
 ## バージョン 1.4.0 - 2022年10月3日（PT）
 
