@@ -1,18 +1,17 @@
 ---
 solution: Experience Platform
-title: Media Edge API の基本を学ぶ
-description: Media Edge API を使用すると、開発者は Media Edge Analytics および Customer Journey Analytics のデータを収集できます。
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
-workflow-type: ht
-source-wordcount: '82'
-ht-degree: 100%
+title: Media Edge Open API の仕様
+description: このドキュメントには、YAML Open API Specification(OAS) または「Swagger」リファレンスが含まれています。 この仕様を editor.swagger.io などのレンダリングツールにコピー＆ペーストして、Media Edge API 情報を表示できます。 この仕様には、各エンドポイントのパラメーター、例、スキーマが含まれます。
+source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 72%
 
 ---
 
-
 # Media Edge API 用の Open API 仕様ファイルの使用
 
-このドキュメントには、JSON Open API 仕様（OAS）または「Swagger」リファレンスが含まれています。この仕様を editor.swagger.io などのレンダリングツールにコピー＆ペーストして、Media Edge API 情報を表示できます。 この仕様には、各エンドポイントのパラメーター、例、スキーマが含まれます。
+このドキュメントには、YAML Open API Specification(OAS) または「Swagger」リファレンスが含まれています。 この仕様を editor.swagger.io などのレンダリングツールにコピー＆ペーストして、Media Edge API 情報を表示できます。 この仕様には、各エンドポイントのパラメーター、例、スキーマが含まれます。
 
 +++ 選択して Open API 仕様を表示およびコピー
 
@@ -2660,7 +2659,7 @@ ht-degree: 100%
     },
     "/play": {
       "post": {
-        "description": "Sent when the player changes state to "playing" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to "playing" include "buffering", when the user resumes from "paused", when the player recovers from an error, and during autoplay."
+        "description": "Sent when the player changes state to \"playing\" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to \"playing\" include \"buffering\", when the user resumes from \"paused\", when the player recovers from an error, and during autoplay.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3332,11 +3331,11 @@ ht-degree: 100%
                                     },
                                     "contentType": {
                                       "type": "string",
-                                      "description": "Available values per Stream Type: Audio - "song", "podcast", "audiobook", "radio"; Video: "VoD", "Live", "Linear", "UGC", "DVoD" Customers can provide custom values for this parameter"
+                                      "description": "Available values per Stream Type: Audio - \"song\", \"podcast\", \"audiobook\", \"radio\"; Video: \"VoD\", \"Live\", \"Linear\", \"UGC\", \"DVoD\" Customers can provide custom values for this parameter",
                                     },
                                     "friendlyName": {
                                       "type": "string",
-                                      "description": "This is the "friendly" (human-readable) name of the content"
+                                      "description": "This is the \"friendly\" (human-readable) name of the content"
                                     },
                                     "playerName": {
                                       "type": "string",
