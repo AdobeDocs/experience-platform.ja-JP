@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '1767'
-ht-degree: 100%
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 99%
 
 ---
 
@@ -51,6 +51,10 @@ ht-degree: 100%
 オーディエンスブロックにオーディエンスを追加するには。「**[!UICONTROL オーディエンスを追加]**」を選択します。
 
 ![「オーディエンスを追加」ボタンがハイライト表示されています。](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>注意： **のみ** デフォルトの結合ポリシーを使用して定義されたオーディエンスが表示されます。
 
 オーディエンスのリストが表示されます。含めるオーディエンス、「**[!UICONTROL 追加]**」の順に選択して、オーディエンスブロックに追加します。
 
