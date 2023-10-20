@@ -2,10 +2,10 @@
 title: フローサービス API での応答の並べ替えとフィルタリング
 description: このチュートリアルでは、フローサービス API のクエリパラメーターを使用した並べ替えとフィルタリングの構文について説明します。高度な使用例もいくつかあります。
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 4%
+source-wordcount: '863'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ## 並べ替え
 
-回答は、 `orderby` クエリパラメーター。 API では、次のリソースを並べ替えることができます。
+回答を並べ替えるには、 `orderby` クエリパラメーター。 API では、次のリソースを並べ替えることができます。
 
 * [接続](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
 * [ソース接続](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
@@ -23,7 +23,7 @@ ht-degree: 4%
 * [流れ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [実行](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-パラメーターを使用するには、並べ替えの基準となる特定のプロパティにその値を設定する必要があります ( 例： `?orderby=name`) をクリックします。 値の前にプラス記号 (`+`) を使用します。`-`) を降順に表示します。 並べ替えプレフィックスが指定されない場合、リストはデフォルトで昇順で並べ替えられます。
+パラメーターを使用するには、並べ替えの基準となる特定のプロパティに値を設定する必要があります ( 例： `?orderby=name`) をクリックします。 値の前にプラス記号 (`+`) を使用します。`-`) を降順に並べ替えます。 並べ替えプレフィックスが指定されない場合、リストはデフォルトで昇順で並べ替えられます。
 
 ```http
 GET /flows?orderby=name
@@ -38,7 +38,7 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 ## フィルター
 
-回答は、 `property` パラメーターにキーと値の式を含める必要があります。 例： `?property=id==12345` が返すリソースのみが `id` プロパティが完全に等しい `12345`.
+回答は、 `property` パラメーターにキーと値の式を含める必要があります。 例： `?property=id==12345` が返すリソースのみが `id` プロパティが次と完全に等しい `12345`.
 
 フィルタリングは、そのプロパティの有効なパスがわかっている限り、エンティティ内の任意のプロパティに一般的に適用できます。
 
@@ -46,7 +46,7 @@ GET /flows?property=state==enabled&orderby=createdAt
 >
 >プロパティが配列項目内にネストされている場合は、角括弧 (`[]`) をパス内の配列に追加します。 詳しくは、 [配列プロパティのフィルタリング](#arrays) 例：
 
-**ソース・テーブル名が次の値であるすべてのソース接続を返す `lead`:**
+**ソース・テーブル名が次の値であるすべてのソース接続を返します。 `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
@@ -70,7 +70,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### 配列プロパティのフィルタリング {#arrays}
 
-配列内の項目のプロパティに基づいてフィルタリングするには、次を追加します。 `[]` を配列プロパティの名前に追加します。
+配列内の項目のプロパティに基づいてフィルタリングするには、次の項目を追加します。 `[]` を配列プロパティの名前に追加します。
 
 **特定のソース接続に関連付けられたフローを返す：**
 
@@ -98,7 +98,7 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-任意のフィルタークエリを `count` 値がのクエリパラメーター `true` 結果の数を返します。 API 応答には `count` プロパティの値は、フィルターされた項目の合計数を表します。 この呼び出しでは、実際にフィルターされた項目は返されません。
+任意のフィルタークエリを `count` の値を持つクエリパラメーター `true` 結果の数を返します。 API 応答には、 `count` プロパティの値は、フィルターされた項目の合計数を表します。 この呼び出しでは、実際にフィルターされた項目は返されません。
 
 **システム内の有効なフローの数を返します。**
 
@@ -194,6 +194,58 @@ GET /flows?property=state==enabled&count=true
 | `state` | `/runs?property=state==inProgress` |
 
 {style="table-layout:auto"}
+
+## ユースケース {#use-cases}
+
+この節では、フィルタリングと並べ替えを使用して、特定のコネクタに関する情報を返す方法や、問題のデバッグに役立つ方法の具体的な例を示します。 追加したい使用例が他にある場合は、次をAdobeしてください： **[!UICONTROL 詳細なフィードバックオプション]** をクリックして、リクエストを送信します。
+
+**特定の宛先への接続のみを返すフィルター**
+
+フィルターを使用して、特定の宛先への接続のみを返すことができます。 まず、 `connectionSpecs` 次のようなエンドポイント：
+
+```http
+GET /connectionSpecs
+```
+
+次に、目的のを検索します。 `connectionSpec` 調べて `name` パラメーター。 例えば、Amazon Ads、Pega、SFTP などを `name` パラメーター。 対応する `id` が `connectionSpec` 次の API 呼び出しでで検索できる
+
+例えば、宛先をフィルタリングして、Amazon S3 接続への既存の接続のみを返します。
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**データフローを宛先にのみ返すためのフィルター**
+
+クエリ時に `/flows` エンドポイントでは、すべてのソースと宛先のデータフローを返す代わりに、フィルターを使用して、宛先にデータフローのみを返すことができます。 これをおこなうには、 `isDestinationFlow` をクエリパラメーターとして次のように指定します。
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**データフローを特定のソースまたは宛先にのみ返すためのフィルター**
+
+データフローをフィルタリングして、特定の宛先にデータフローを返したり、特定のソースからのみデータフローを返したりできます。 例えば、宛先をフィルタリングして、Amazon S3 接続への既存の接続のみを返します。
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**特定の期間のデータフローのすべての実行を取得するフィルター**
+
+データフローのデータフロー実行をフィルタリングして、次に示すように、特定の時間間隔での実行のみを確認できます。
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**失敗したデータフローのみを返すフィルター**
+
+デバッグの目的で、次のように、特定のソースまたは宛先のデータフローに対して失敗したデータフローの実行をすべてフィルタリングして表示できます。
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
 
 ## 次の手順
 

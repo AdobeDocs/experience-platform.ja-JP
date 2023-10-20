@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 95%
+source-wordcount: '1182'
+ht-degree: 94%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 95%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
+   * [宛先の API 応答の並べ替えとフィルタリング](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
