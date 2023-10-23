@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 9%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## 匿名ブロック
+## 匿名ブロック {#anonymous-block}
 
 匿名ブロックは、実行可能セクションと例外処理セクションの 2 つのセクションで構成されます。 匿名ブロックでは、実行可能セクションは必須です。 ただし、例外処理セクションはオプションです。
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### 匿名ブロック内の条件ステートメント {#conditional-anonymous-block-statements}
+
+IF-THEN-ELSE 制御構造は、条件が TRUE と評価された場合に、ステートメントのリストを条件付きで実行できるようにします。 このコントロール構造は、匿名ブロック内でのみ適用できます。 この構造をスタンドアロンコマンドとして使用すると、構文エラー（「匿名ブロック外の無効なコマンド」）が発生します。
+
+次のコードスニペットは、匿名ブロック内の IF-THEN-ELSE 条件文の正しい形式を示しています。
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**例**
+
+次の例は、 `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+この構造は、 `raise_error();` をクリックして、カスタムエラーメッセージを返します。 以下に示すコードブロックは、匿名ブロックを「カスタムエラーメッセージ」で終了します。
+
+**例**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### 入れ子の IF 文
+
+ネストされた IF 文は、匿名ブロック内でサポートされます。
+
+**例**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### 例外ブロック
+
+例外ブロックは、匿名ブロック内でサポートされます。
+
+**例**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### JSON に自動 {#auto-to-json}
