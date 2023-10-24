@@ -5,14 +5,14 @@ title: フローサービス API を使用したデータランディングゾ�
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 19%
+source-wordcount: '1304'
+ht-degree: 18%
 
 ---
 
-# 接続 [!DNL Data Landing Zone] フローサービス API を使用してAdobe Experience Platformに送信
+# 接続 [!DNL Data Landing Zone] フローサービス API を使用してAdobe Experience Platformに送信する
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 19%
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込む、クラウドベースの安全なファイルストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
 
-このチュートリアルでは、 [!DNL Data Landing Zone] を使用したソース接続 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). このチュートリアルでは、 [!DNL Data Landing Zone]を更新し、資格情報を表示および更新します。
+このチュートリアルでは、 [!DNL Data Landing Zone] を使用したソース接続 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). このチュートリアルでは、 [!DNL Data Landing Zone]を参照し、資格情報を表示および更新します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ ht-degree: 19%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Data Landing Zone] を使用したソース接続 [!DNL Flow Service] API
+以下の節では、 [!DNL Data Landing Zone] を使用したソース接続 [!DNL Flow Service] API.
 
 また、このチュートリアルでは、 [Platform API の概要](../../../../../landing/api-guide.md) を参照して、Platform API に対する認証方法と、ドキュメントに記載されている呼び出し例の解釈方法について確認してください。
 
@@ -45,7 +45,7 @@ GET /data/foundation/connectors/landingzone?type=user_drop_zone
 
 | ヘッダー | 説明 |
 | --- | --- |
-| `user_drop_zone` | この `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `user_drop_zone` | The `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
 
 **リクエスト**
 
@@ -63,7 +63,7 @@ curl -X GET \
 
 **応答**
 
-次の応答は、ランディングゾーンに関する情報 ( 対応する `containerName` および `containerTTL`.
+次の応答は、ランディングゾーンに関する情報（対応するランディングゾーンも含む）を返します `containerName` および `containerTTL`.
 
 ```json
 {
@@ -79,7 +79,7 @@ curl -X GET \
 
 ## 取得 [!DNL Data Landing Zone] 資格情報
 
-の資格情報を取得するには [!DNL Data Landing Zone]、 `/credentials` エンドポイント [!DNL Connectors] API
+の資格情報を取得するには [!DNL Data Landing Zone]を使用して、 `/credentials` エンドポイント [!DNL Connectors] API.
 
 **API 形式**
 
@@ -103,14 +103,15 @@ curl -X GET \
 
 **応答**
 
-次の応答は、現在の `SASToken` および `SASUri`、および `storageAccountName` ランディングゾーンコンテナに対応する
+次の応答は、現在の `SASToken`, `SASUri`, `storageAccountName`、および有効期限日。
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,11 +120,12 @@ curl -X GET \
 | `containerName` | ランディングゾーンの名前。 |
 | `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの承認に必要な情報がすべて含まれています。 |
 | `SASUri` | ランディングゾーンの共有アクセス署名 URI です。 この文字列は、認証先のランディングゾーンへの URI と、対応する SAS トークンの組み合わせです。 |
+| `expiryDate` | SAS トークンの有効期限が切れる日付です。 データランディングゾーンにデータをアップロードするためにアプリケーションでトークンを引き続き使用するには、有効期限の前にトークンを更新する必要があります。 指定した有効期限より前に手動でトークンを更新しない場合、GET資格情報の呼び出しが実行されると、自動的に更新され、新しいトークンが提供されます。 |
 
 
 ## 更新 [!DNL Data Landing Zone] 資格情報
 
-次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API
+次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API.
 
 **API 形式**
 
@@ -133,8 +135,8 @@ POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&act
 
 | ヘッダー | 説明 |
 | --- | --- |
-| `user_drop_zone` | この `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
-| `refresh` | この `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
+| `user_drop_zone` | The `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `refresh` | The `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
 
 **リクエスト**
 
@@ -159,13 +161,14 @@ curl -X POST \
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
 ## ランディングゾーンのファイル構造とコンテンツの参照
 
-に対してGETリクエストをおこなうことで、ランディングゾーンのファイル構造とコンテンツを確認できます `connectionSpecs` エンドポイント [!DNL Flow Service] API
+に対してGETリクエストをおこなうことで、ランディングゾーンのファイル構造とコンテンツを確認できます。 `connectionSpecs` エンドポイント [!DNL Flow Service] API.
 
 **API 形式**
 
@@ -314,7 +317,7 @@ curl -X GET \
 
 ### 用途 `determineProperties` ファイルのプロパティ情報を自動検出するには [!DNL Data Landing Zone]
 
-以下を使用して、 `determineProperties` パラメータを使用して、 [!DNL Data Landing Zone] GET呼び出しを実行してソースのコンテンツと構造を調べる場合。
+以下を使用すると、 `determineProperties` ファイルコンテンツのプロパティ情報を自動検出するためのパラメータ [!DNL Data Landing Zone] GET呼び出しを実行してソースのコンテンツと構造を調べる場合。
 
 #### `determineProperties` 使用例
 
@@ -322,7 +325,7 @@ curl -X GET \
 
 | `determineProperties` | `queryParams` | 応答 |
 | --- | --- | --- |
-| True | なし | If `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
+| True | なし | 次の場合 `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
 | なし | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
 | True | True | 両方のオプションが同時に実行された場合は、エラーが返されます。 |
 | なし | なし | 2 つのオプションのどちらも指定されていない場合は、応答のプロパティを取得する方法がないので、エラーが返されます。 |
@@ -447,7 +450,7 @@ curl -X GET \
 | --- | --- |
 | `properties.fileType` | クエリされたファイルの対応するファイルタイプ。 次のファイルタイプがサポートされています。 `delimited`, `json`、および `parquet`. |
 | `properties.compressionType` | 問い合わせたファイルに使用される、対応する圧縮タイプ。 サポートされている圧縮タイプは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字。 あらゆる単一の文字の値を、列の区切り文字として使用できます。デフォルト値はコンマです。 `(,)`. |
+| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。デフォルト値はコンマです。 `(,)`. |
 
 
 ## ソース接続の作成
@@ -508,4 +511,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Data Landing Zone] 資格情報は、Platform に取り込むファイルを見つけるためにファイル構造を調べ、ソース接続を作成してデータの Platform への取り込みを開始します。 次のチュートリアルに進み、次の方法を学ぶことができます。 [データフローを作成し、 [!DNL Flow Service] API](../../collect/cloud-storage.md).
+このチュートリアルに従うことで、 [!DNL Data Landing Zone] 資格情報は、Platform に取り込むファイルを見つけるためにファイル構造を調べ、ソース接続を作成してデータの Platform への取り込みを開始します。 次のチュートリアルに進み、次の方法を学ぶことができます。 [を使用してデータフローを作成し、クラウドストレージデータを Platform に取り込みます。 [!DNL Flow Service] API](../../collect/cloud-storage.md).

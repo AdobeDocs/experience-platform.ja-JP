@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: UI を使用したデータランディングゾーンの Platform への接続
 description: Platform ユーザーインターフェイスを使用してデータランディングゾーンソースコネクタを作成する方法を説明します。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 22%
+source-wordcount: '672'
+ht-degree: 20%
 
 ---
 
@@ -33,18 +33,18 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-以下 [!UICONTROL クラウドストレージ] カテゴリ、選択 [!DNL Data Landing Zone] 次に、 **[!UICONTROL データを追加]**.
+の下 [!UICONTROL クラウドストレージ] カテゴリ、選択 [!DNL Data Landing Zone] 次に、「 **[!UICONTROL データを追加]**.
 
-![カタログ](../../../../images/tutorials/create/dlz/catalog.png)
+![データランディングゾーンが選択されたソースカタログ。](../../../../images/tutorials/create/dlz/catalog.png)
 
-この [!UICONTROL データを追加] の手順が表示され、Platform に取り込むデータを選択およびプレビューするためのインターフェイスが提供されます。
+The [!UICONTROL データを追加] の手順が表示され、Platform に取り込むデータを選択およびプレビューするためのインターフェイスが提供されます。
 
 * インターフェイスの左側はフォルダーブラウザーで、コンテナからファイルのリストを提供します。このリストを使用して、Platform に取り込むことができます。
 * インターフェイスの右側では、互換性のあるファイルから最大 100 行のデータをプレビューできます。
 
-Platform に取り込むファイルを選択し、しばらくの間、適切なインターフェイスがプレビュー画面に更新されます。
+Experience Platformにするファイルを選択し、しばらくの間、適切なインターフェイスがプレビュー画面に更新されます。
 
-![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+![「ソース」ワークスペースの「データを追加」インターフェイス。](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -56,19 +56,19 @@ Platform に取り込むファイルを選択し、しばらくの間、適切�
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ファイル検出](../../../../images/tutorials/create/dlz/file-detection.png)
+![ソースワークスペースのデータプレビューページ。](../../../../images/tutorials/create/dlz/file-detection.png)
 
 クラウドストレージソースのデータフローを作成する手順に関する詳細なガイドについては、 [データを Platform に取り込むためのクラウドストレージのデータフローの作成](../../dataflow/batch/cloud-storage.md).
 
 ## を取得して更新します。 [!DNL Data Landing Zone] 資格情報
 
-[!DNL Data Landing Zone] は、Adobe Experience Platform Sources ライセンスに付属している標準のソースです。 [!DNL Data Landing Zone] は、SAS URI と SAS トークンベースの認証を使用します。 認証資格情報は、 [!UICONTROL ソースカタログ] ページ。
+[!DNL Data Landing Zone] は、Adobe Experience Platform Sources ライセンスに付属している標準のソースです。 [!DNL Data Landing Zone] は、SAS URI と SAS トークンベースの認証を使用します。 認証資格情報は、 [!UICONTROL ソースカタログ] ページに貼り付けます。
 
-内 [!UICONTROL ソースカタログ]、 [!UICONTROL クラウドストレージ] カテゴリの中から省略記号 (**...**) を **[!UICONTROL データランディングゾーン]** カード。 表示されるドロップダウンメニューから、「 」を選択します。 **[!UICONTROL 資格情報を表示]**.
+Adobe Analytics の [!UICONTROL ソースカタログ]、 [!UICONTROL クラウドストレージ] カテゴリの中から省略記号 (**...**) を **[!UICONTROL データランディングゾーン]** カード。 表示されるドロップダウンメニューから、「 」を選択します。 **[!UICONTROL 資格情報を表示]**.
 
-![options](../../../../images/tutorials/create/dlz/options.png)
+![データランディングゾーンの表示オプションのリスト。](../../../../images/tutorials/create/dlz/options.png)
 
-ポップオーバーが表示され、コンテナ名、SAS トークン、ストレージアカウント名、SAS URI が表示されます。
+ポップオーバーが表示され、コンテナ名、SAS トークン、ストレージアカウント名、SAS URI、有効期限が表示されます。
 
 選択 **[!UICONTROL 資格情報を更新]** 更新された資格情報が処理されるまで数秒間待ちます。
 
@@ -76,7 +76,7 @@ Platform に取り込むファイルを選択し、しばらくの間、適切�
 >
 >お使いの [!DNL Data Landing Zone] 資格情報は 90 日後に自動期限切れに設定されています。新しい資格情報を使用してに再接続する必要があります。 [!DNL Data Landing Zone] 有効期限後 Platform のデータフローは、期限が切れる資格情報の影響を受けません。新しい資格情報を使用して、新しい既存のデータフローを引き続き使用できます。
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![特定のデータランディングゾーンアカウントに関連付けられた資格情報。](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## 次の手順
 
