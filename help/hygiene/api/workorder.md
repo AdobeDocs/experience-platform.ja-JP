@@ -2,10 +2,10 @@
 title: 作業指示 API エンドポイント
 description: Data Whealthy API の/workorder エンドポイントを使用すると、ID の削除タスクをプログラムで管理できます。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 63%
+source-wordcount: '1281'
+ht-degree: 58%
 
 ---
 
@@ -36,6 +36,10 @@ The `/workorder` Data Whealthy API のエンドポイントを使用すると、
 ```http
 POST /workorder
 ```
+
+>[!NOTE]
+>
+>データライフサイクルリクエストでは、プライマリ ID または ID マップに基づいてデータセットのみを変更できます。 リクエストは、プライマリ ID を指定するか、ID マップを提供する必要があります。
 
 **リクエスト**
 
@@ -80,7 +84,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `action` | 実行するアクション。値はに設定する必要があります `delete_identity` レコードの削除用。 |
-| `datasetId` | 単一のデータセットから削除する場合、この値は、当該データセットの ID である必要があります。すべてのデータセットから削除する場合、値を `ALL` に設定します。<br><br>単一のデータセットを指定する場合、データセットの関連するエクスペリエンスデータモデル（XDM）スキーマには、プライマリ ID が定義されている必要があります。 |
+| `datasetId` | 単一のデータセットから削除する場合、この値は、当該データセットの ID である必要があります。すべてのデータセットから削除する場合、値を `ALL` に設定します。<br><br>単一のデータセットを指定する場合、データセットの関連するエクスペリエンスデータモデル（XDM）スキーマには、プライマリ ID が定義されている必要があります。データセットにプライマリ ID がない場合、データライフサイクルリクエストで変更するには、ID マップが必要です。<br>ID マップが存在する場合、その ID マップはという最上位フィールドとして表示されます。 `identityMap`.<br>データセット行の ID マップには多数の ID が含まれている場合がありますが、プライマリとして指定できるのは 1 つの ID のみです。 `"primary": true` 強制するには、を含める必要があります `id` プライマリ id に一致させる。 |
 | `displayName` | レコード削除リクエストの表示名。 |
 | `description` | レコードの削除リクエストの説明。 |
 | `identities` | 削除する情報を持つ少なくとも 1 人のユーザーの ID を含む配列。各 ID は、[ID 名前空間](../../identity-service/namespaces.md)および値で構成されます。<ul><li>`namespace`：ID 名前空間を表す、単一の文字列プロパティ `code` が含まれます。 </li><li>`id`：ID 値。</ul>`datasetId` が単一のデータセットを指定している場合、`identities` 以下の各エンティティは、スキーマのプライマリ ID と同じ ID 名前空間を使用する必要があります。<br><br>`datasetId` が `ALL` に設定されている場合、`identities` 配列は、各データセットが異なる可能性があるので、単一の名前空間に制限されません。ただし、[ID サービス](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)でレポートされるように、リクエストは、依然として組織で使用できる名前空間の制約を受けます。 |
