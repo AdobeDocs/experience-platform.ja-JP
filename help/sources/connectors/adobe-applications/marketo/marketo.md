@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage コネクタ
 description: このドキュメントでは、Marketo Engage、マッピング、データ遅延に関する情報など、認証ソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f0a3486fc7df7b08a11ec7bfb041841bc2c1c9a3
+source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 16%
+source-wordcount: '678'
+ht-degree: 15%
 
 ---
 
@@ -70,8 +70,12 @@ XDM と Platform での役割について詳しくは、 [XDM システムの概
 
 | 宛先 | 予想される遅延 |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 1 分 |
+| [!DNL Real-Time Customer Profile] | &lt; 10 分 |
 | データレイク | &lt; 60 分 |
+
+>[!NOTE]
+>
+>上記の待ち時間の数値は、95%の信頼水準での予想を表しています。 実際の待ち時間は異なり、まれに、これらの数値を超えると 50%延長される場合があります。
 
 ## 次の手順とその他のリソース
 
