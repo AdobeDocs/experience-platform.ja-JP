@@ -38,30 +38,30 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 
 | リソース | アクション |
 | --- | --- |
-| [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>書き出し</li></ul> |
-| [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| 計算済み属性 | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li></ul> |
-| [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
-| [データストリーム](../../../datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
-| [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
-| [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| 計算済み属性 | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
+| [データストリーム](../../../datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
+| [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [ID グラフ](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
 | [ID 名前空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li> の作成</li><li>更新</li></ul> |
-| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [製品プロファイル](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
+| [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [製品プロファイル](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [クエリ](../../../query-service/ui/overview.md) | <ul><li>実行</li></ul> |
-| [クエリテンプレート](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [ロール（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
-| [サンドボックス](../../../sandboxes/home.md) | <ul><li> の作成</li><li>更新</li><li>リセット</li><li>Delete</li></ul> |
-| [スケジュール済みクエリ](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li></ul> |
-| [スキーマ](../../../xdm/schema/composition.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>プロファイルに対して有効にする</li></ul> |
-| [セグメント](../../../segmentation/home.md) | <ul><li> の作成</li><li>Delete</li><li>セグメントの有効化</li><li>セグメント削除</li></ul> |
-| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>Delete</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [クエリテンプレート](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [ロール（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>ユーザーを追加</li><li>ユーザーを削除</li></ul> |
+| [サンドボックス](../../../sandboxes/home.md) | <ul><li> の作成</li><li>更新</li><li>リセット</li><li>削除</li></ul> |
+| [スケジュール済みクエリ](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
+| [スキーマ](../../../xdm/schema/composition.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>プロファイルに対して有効にする</li></ul> |
+| [セグメント](../../../segmentation/home.md) | <ul><li> の作成</li><li>削除</li><li>セグメントの有効化</li><li>セグメントの削除</li></ul> |
+| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
 | [作業指示](../../../hygiene/home.md) | <ul><li> の作成</li></ul> |
 
 ## 監査ログへのアクセス
@@ -77,11 +77,11 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 >title="手順"
 >abstract="<ul><li>左側のナビゲーションの「<b>監査</b>」を選択します。監査ワークスペースには、記録されたログのリストが表示されます。デフォルトでは、最新のログから古いログの順に並べ替えられています。</li>   <li> メモ：監査ログは、365 日間保持され、その後システムから削除されます。したがって、遡ることができる期間は最大 365 日までです。365 日より前のデータを振り返る必要がある場合は、社内ポリシーの要件を満たすために定期的にログを書き出す必要があります。 </li><li>リストからイベントを選択して、その詳細を右側のパネルに表示します。 </li><li>ファネルアイコンを選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。選択した各種フィルターに関係なく、最新 1000 件のレコードのみが表示されます。 </li><li>監査ログの現在のリストを書き出すには、「**ログをダウンロード**」を選択します。</li><li>この機能に関する詳しいヘルプについては、Experience League の<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ja">監査ログの概要</a>を参照してください。</li></ul>"
 
-監査ログは、 **[!UICONTROL 監査]** ワークスペース（Platform UI 内） ワークスペースには、デフォルトで、記録されたログのリストが最新のログから最新のログへと並べ替えて表示されます。
+内の様々なExperience Platform機能に関する監査ログを表示できます **[!UICONTROL 監査]** ワークスペース（Platform UI 内） ワークスペースには、デフォルトで、記録されたログのリストが最新のログから最新のログへと並べ替えて表示されます。
 
 ![左側のメニューで「監査」をハイライトする「監査」ダッシュボード。](../../images/audit-logs/audits.png)
 
-監査ログは、365 日間保持され、その後システムから削除されます。 したがって、遡ることができる期間は最大 365 日までです。365 日を超えるデータが必要な場合は、内部ポリシー要件を満たすために、ログを定期的に書き出す必要があります。
+監査ログは、365 日間保持され、その後、システムから削除されます。 したがって、遡ることができる期間は最大 365 日までです。365 日を超えるデータが必要な場合は、内部ポリシー要件を満たすために、ログを定期的に書き出す必要があります。
 
 リストからイベントを選択して、その詳細を右側のパネルに表示します。
 
@@ -116,7 +116,7 @@ UI の監査イベントには、次のフィルターを使用できます。
 
 | 列名 | 説明 |
 |---|---|
-| [!UICONTROL タイムスタンプ] | アクションが `month/day/year hour:minute AM/PM` 形式 |
+| [!UICONTROL タイムスタンプ] | 実行されたアクションの正確な日時 ( `month/day/year hour:minute AM/PM` 形式を使用します。 |
 | [!UICONTROL アセット名] | の値 [!UICONTROL アセット名] 「 」フィールドは、フィルターとして選択したカテゴリに応じて異なります。 |
 | [!UICONTROL カテゴリ] | このフィールドは、フィルタードロップダウンで選択したカテゴリと一致します。 |
 | [!UICONTROL アクション] | 使用可能なアクションは、フィルターとして選択したカテゴリによって異なります。 |

@@ -94,7 +94,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいてアクティブ化から除外されたプロファイル ID の合計数です。
 - **[!UICONTROL 失敗した ID]**：エラーが原因で宛先に対してアクティブ化されなかったプロファイル ID の合計数です。
 - **[!UICONTROL アクティブ化率]**：正常にアクティブ化されたかスキップされた受信 ID の割合です。次の数式は、この値の計算方法を示しています。
-   ![アクティブ化率の数式](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![アクティブ化率の数式](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL ステータス]**：データフローの状態（[!UICONTROL 完了]または[!UICONTROL 処理中]）を表します。[!UICONTROL 完了]は、対応するデータフロー実行のすべての ID が 1 時間以内に書き出されたことを意味します。[!UICONTROL 処理中]は、データフロー実行がまだ終了していないことを意味します。
 
 特定のデータフロー実行の詳細を表示するには、実行の開始時刻をリストから選択します。
@@ -171,7 +171,6 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >
 >- 宛先モニタリング機能は、現在、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 宛先と[カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md)宛先を&#x200B;*除く*、Experience Platform 内のすべての宛先でサポートされています。
 >- の [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure イベントハブ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 宛先、除外された id、失敗した id、アクティブ化された id に関連する指標は、推定されます。 アクティベーションデータの量が多いと、指標の精度が高くなります。
-
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -261,7 +260,6 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >セグメントレベルの指標に関する現在の制限事項に注意してください。
 >- セグメントレベルビューは、現在、バッチ宛先でのみ使用できます。
 >- セグメントレベルの指標は、現在、正常なデータフロー実行の場合にのみ記録されます。 失敗したデータフロー実行や除外されたレコードに対しては、記録されません。
-
 
 ![データフローパネル内のセグメント](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 

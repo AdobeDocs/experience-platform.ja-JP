@@ -5,7 +5,7 @@ title: データ使用ポリシーの概要
 description: データ使用ポリシーは、Adobe Experience Platform 内のデータに対する実行が許可される、または制限される、マーケティングアクションの種類を記述するルールです。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 100%
 

@@ -7,13 +7,13 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
 source-wordcount: '3053'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
-# [!UICONTROL オーディエンス] dashboard {#audiences-dashboard}
+# [!UICONTROL オーディエンス]ダッシュボード {#audiences-dashboard}
 
-Adobe Experience Platformのユーザーインターフェイス (UI) は、毎日のスナップショットでキャプチャされた、オーディエンスに関する重要な情報を表示できるダッシュボードを提供します。 このガイドでは、 [!UICONTROL オーディエンス] ダッシュボードを使用して、ダッシュボードに表示されるビジュアライゼーションに関する詳細情報を確認できます。
+Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取り込んだ、オーディエンスに関する重要な情報を確認できるダッシュボードが用意されています。このガイドでは、 [!UICONTROL オーディエンス] ダッシュボードを使用して、ダッシュボードに表示されるビジュアライゼーションに関する詳細情報を確認できます。
 
 Platform ユーザーインターフェイス内の Adobe Experience Platform セグメント化サービスのすべての機能の概要については、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md)を参照してください。
 
@@ -33,7 +33,7 @@ The [!UICONTROL オーディエンス] 「Experience Platform」には、組織�
 
 >[!NOTE]
 >
->組織が Platform を初めて使用し、アクティブなプロファイルデータセットや結合ポリシーがまだ作成されていない場合、 [!UICONTROL オーディエンス] ダッシュボードが表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
+>Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL オーディエンス]ダッシュボードは表示されません。代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
 
 ![The [!UICONTROL オーディエンス] dashboard [!UICONTROL 概要] タブ [!UICONTROL オーディエンス] および [!UICONTROL 概要] ハイライト表示されました。](../images/audiences/dashboard-overview.png)
 

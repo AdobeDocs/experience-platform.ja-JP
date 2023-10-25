@@ -31,7 +31,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
    * [スキーマエディター](../ui/overview.md):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):ラベル付きのデータに対して実行できるマーケティングアクション（または実行できない）を定義するポリシーを使用して、Platform の操作に対してデータ使用制限を適用するためのインフラストラクチャを提供します。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：ラベル付きのデータに対して実行できるマーケティングアクション（または実行できない）を定義するポリシーを使用して、Platform の操作に対してデータ使用制限を実施するためのインフラストラクチャを提供します。
 
 ## ラベルを追加するスキーマまたはフィールドを選択 {#select-schema-field}
 
@@ -42,7 +42,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 
 ラベルの追加を開始するには、まず [編集する既存のスキーマを選択](../ui/resources/schemas.md#edit) または [新しいスキーマの作成](../ui/resources/schemas.md#create) をクリックして、スキーマエディターで構造を表示します。
 
-個々のフィールドのラベルを編集するには、キャンバスでフィールドを選択してから、「 **[!UICONTROL アクセスを管理]** をクリックします。
+個々のフィールドのラベルを編集するには、キャンバスでフィールドを選択し、「 」を選択します。 **[!UICONTROL アクセスを管理]** をクリックします。
 
 ![スキーマエディターキャンバスからフィールドを選択します。](../images/tutorials/labels/manage-access.png)
 
@@ -50,7 +50,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 
 ![次からフィールドを選択： [!UICONTROL ラベル] タブ](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-スキーマ全体のラベルを編集するには、 **[!UICONTROL ラベル]** 」タブで、フィルターアイコンの下のチェックボックスを選択します。 これにより、スキーマ内の使用可能なすべてのフィールドが選択されます。 次に、 **[!UICONTROL アクセスおよびデータガバナンスラベルの適用]** をクリックします。
+スキーマ全体のラベルを編集するには、 **[!UICONTROL ラベル]** 」タブで、フィルターアイコンの下のチェックボックスを選択します。 これにより、スキーマ内の使用可能なすべてのフィールドが選択されます。 次に、「 **[!UICONTROL アクセスおよびデータガバナンスラベルの適用]** をクリックします。
 
 ![次の中からスキーマ名を選択します。 [!UICONTROL ラベル] タブ](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -70,7 +70,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 >
 >スキーマ全体のフィールドを編集している場合、右側のレールには該当するフィールドが表示されず、代わりにスキーマ名が表示されます。
 
-表示されたリストを使用して、スキーマまたはフィールドに追加するラベルを選択します。 ラベルを選択すると、 **[!UICONTROL 適用されたラベル]** 「 」セクションが更新され、これまでに選択したラベルが表示されます。
+表示されたリストを使用して、スキーマまたはフィールドに追加するラベルを選択します。 ラベルを選択すると、 **[!UICONTROL 適用されたラベル]** 「 」セクションが更新され、これまでに選択されたラベルが表示されます。
 
 ![「アクセスおよびデータガバナンスのラベルを適用」ダイアログに、適用されたラベルが強調表示されます。](../images/tutorials/labels/applied-labels.png)
 
@@ -82,7 +82,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 
 ![「保存」がハイライト表示された「アクセスおよびデータガバナンスラベルを適用」ダイアログ。](../images/tutorials/labels/save-labels.png)
 
-この **[!UICONTROL ラベル]** 「 」タブが再び表示され、スキーマに適用されたラベルが表示されます。
+The **[!UICONTROL ラベル]** 「 」タブが再び表示され、スキーマに適用されたラベルが表示されます。
 
 ![適用されたフィールドラベルが強調表示されたスキーマワークスペースの「ラベル」タブ。](../images/tutorials/labels/field-labels-added.png)
 

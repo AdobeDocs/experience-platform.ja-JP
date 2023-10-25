@@ -11,7 +11,7 @@ ht-degree: 85%
 
 # イベント転送でのシークレットの設定
 
-イベント転送では、秘密鍵は別のシステムの認証情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
+イベント転送では、秘密鍵は別のシステムの資格情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
 
 現在、次のシークレットタイプがサポートされています。
 
@@ -89,7 +89,7 @@ HTTP シークレットを作成するには、「**[!UICONTROL タイプ]**」�
 
 >[!NOTE]
 >
->認証情報は、保存時に、[基本「HTTP 認証スキーム」](https://www.rfc-editor.org/rfc/rfc7617.html)を使用してエンコードされます。
+>資格情報は、保存時に、[基本「HTTP 認証スキーム」](https://www.rfc-editor.org/rfc/rfc7617.html)を使用してエンコードされます。
 
 ![HTTP シークレット](../../images/ui/event-forwarding/secrets/http-secret.png)
 
@@ -99,9 +99,9 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 
 ![OAuth2 シークレット](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-「**[!UICONTROL 認証情報オプション]**」で、`scope` や `audience` などの他の認証情報オプションをキーと値のペアの形式で提供できます。キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
+「**[!UICONTROL 資格情報オプション]**」で、`scope` や `audience` などの他の資格情報オプションをキーと値のペアの形式で提供できます。キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
-![認証情報オプション](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
+![資格情報オプション](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
 最後に、シークレットの&#x200B;**[!UICONTROL 更新オフセット]**&#x200B;値を設定できます。これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
 
@@ -123,25 +123,25 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 
 OAuth 2 JWT シークレットを作成するには、「 」を選択します。 **[!UICONTROL OAuth 2 JWT]** から **[!UICONTROL タイプ]** ドロップダウン。
 
-![この [!UICONTROL 秘密鍵を作成] 」タブに、 [!UICONTROL タイプ] ドロップダウン。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![The [!UICONTROL 秘密鍵を作成] 」タブに、 [!UICONTROL タイプ] ドロップダウン。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->唯一の [!UICONTROL アルゴリズム] JWT への署名が現在サポートされている RS256
+>唯一の [!UICONTROL アルゴリズム] JWT への署名が現在サポートされている RS256。
 
-以下に表示されるフィールドで、 [!UICONTROL 発行者], [!UICONTROL 件名], [!UICONTROL 対象ユーザ], [!UICONTROL カスタム要求], [!UICONTROL TTL]を選択し、 [!UICONTROL アルゴリズム] をドロップダウンから選択します。 次に、 [!UICONTROL 秘密鍵 ID]、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 この [!UICONTROL トークン URL] フィールドは必須フィールドではありません。 値を指定した場合、JWT はアクセストークンと交換されます。 秘密は `expires_in` 属性を返します。 [!UICONTROL オフセットを更新] の値です。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT になります。 JWT は、 [!UICONTROL TTL] および [!UICONTROL オフセットを更新] 値。
+以下に表示されるフィールドで、 [!UICONTROL 発行者], [!UICONTROL 件名], [!UICONTROL 対象ユーザ], [!UICONTROL カスタム要求], [!UICONTROL TTL]を選択し、 [!UICONTROL アルゴリズム] をドロップダウンから選択します。 次に、 [!UICONTROL 秘密鍵 ID]、 、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 The [!UICONTROL トークン URL] フィールドは必須フィールドではありません。 値を指定した場合、JWT はアクセストークンと交換されます。 この秘密は `expires_in` 属性を返します。 [!UICONTROL オフセットを更新] の値です。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT になります。 JWT は、 [!UICONTROL TTL] および [!UICONTROL オフセットを更新] 値。
 
-![この [!UICONTROL 秘密鍵を作成] タブ内で選択した入力フィールドがハイライト表示されています。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![The [!UICONTROL 秘密鍵を作成] タブ内で選択した入力フィールドがハイライト表示されています。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-の下 **[!UICONTROL 資格情報オプション]**&#x200B;を使用する場合、 `jwt_param` キーと値のペアの形式で書き込まれます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
+の下 **[!UICONTROL 秘密鍵証明書オプション]**&#x200B;を使用する場合、 `jwt_param` キーと値のペアの形式で書き込まれます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
-![この [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL 資格情報オプション] フィールド。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![The [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL 秘密鍵証明書オプション] フィールド。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 最後に、シークレットの&#x200B;**[!UICONTROL 更新オフセット]**&#x200B;値を設定できます。これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
 
-![この [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL オフセットを更新] フィールドに入力します。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![The [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL オフセットを更新] フィールドに入力します。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
-たとえば、更新オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` 値 `3600` （1 時間）の場合、1 時間でシークレットが自動的に更新されます。
+例えば、更新オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` の値 `3600` （1 時間）の場合、1 時間でシークレットが自動的に更新されます。
 
 >[!IMPORTANT]
 >
@@ -151,7 +151,7 @@ OAuth 2 JWT シークレットを作成するには、「 」を選択します�
 
 終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
 
-![この [!UICONTROL 秘密鍵を作成] タブのハイライト [!UICONTROL 秘密鍵を作成]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![The [!UICONTROL 秘密鍵を作成] タブのハイライト [!UICONTROL 秘密鍵を作成]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth2] {#google-oauth2}
 
@@ -182,13 +182,13 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 ![編集する秘密鍵を選択](../../images/ui/event-forwarding/secrets/edit-secret.png)
 
-次の画面では、秘密鍵の名前と認証情報を変更できます。
+次の画面では、秘密鍵の名前と資格情報を変更できます。
 
 ![秘密鍵の編集](../../images/ui/event-forwarding/secrets/edit-secret-config.png)
 
 >[!NOTE]
 >
->秘密鍵が既存の環境に関連付けられている場合、その秘密鍵を別の環境に再割り当てすることはできません。異なる環境で同じ認証格情報を使用する場合は、代わりに[新しい秘密鍵を作成する](#create)必要があります。この画面から環境を再割り当てできるのは、以前に秘密鍵を環境に割り当てたことがない場合、または秘密鍵が添付されていた環境を削除した場合のみです。
+>秘密鍵が既存の環境に関連付けられている場合、その秘密鍵を別の環境に再割り当てすることはできません。異なる環境で同じ資格情報を使用する場合は、代わりに[新しい秘密鍵を作成する](#create)必要があります。この画面から環境を再割り当てできるのは、以前に秘密鍵を環境に割り当てたことがない場合、または秘密鍵が添付されていた環境を削除した場合のみです。
 
 ### 秘密鍵の交換の再試行
 
@@ -197,8 +197,8 @@ Google アカウントの資格情報を入力するためのダイアログが�
 | 秘密鍵タイプ | 再試行プロトコル |
 | --- | --- |
 | [!UICONTROL トークン] | 「**[!UICONTROL 秘密鍵の交換]**」を選択し、秘密鍵の交換を再試行します。このコントロールは、秘密鍵に接続された環境がある場合にのみ使用できます。 |
-| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、認証情報を base64 に交換します。環境が接続されている場合は、「**[!UICONTROL シークレットの交換とデプロイ]**」を選択して、シークレットを base64 に交換しデプロイします。 |
-| [!UICONTROL OAuth2] | 「**[!UICONTROL トークンの生成]**」を選択して認証情報を交換し、認証プロバイダーからアクセストークンを返します。 |
+| [!UICONTROL HTTP] | 秘密鍵に接続された環境がない場合は、「**[!UICONTROL 秘密鍵の交換]**」を選択し、資格情報を base64 に交換します。環境が接続されている場合は、「**[!UICONTROL シークレットの交換とデプロイ]**」を選択して、シークレットを base64 に交換しデプロイします。 |
+| [!UICONTROL OAuth2] | 「**[!UICONTROL トークンの生成]**」を選択して資格情報を交換し、認証プロバイダーからアクセストークンを返します。 |
 
 ## 秘密鍵の削除
 

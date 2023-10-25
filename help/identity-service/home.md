@@ -133,7 +133,7 @@ ID フィールドでは、共通の PII データを共有している ID を�
 
 ### [!DNL Identity Service] のデータセットの設定
 
-ストリーミング取得プロセス中、[!DNL Identity Service ]はレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、[!DNL Identity Service]を有効にする必要があります。詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md)に関するチュートリアルを参照してください。
+ストリーミング取得プロセス中、[!DNL Identity Service]はレコードおよび時系列データから ID データを自動的に抽出します。ただし、データを取得する前に、[!DNL Identity Service]を有効にする必要があります。詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md)に関するチュートリアルを参照してください。
 
 ### データを [!DNL Identity Service] に取り込む
 

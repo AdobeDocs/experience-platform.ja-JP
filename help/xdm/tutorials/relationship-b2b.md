@@ -34,7 +34,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ## はじめに
 
-このチュートリアルでは、 [!DNL XDM System] と、 [!DNL Experience Platform] UI このチュートリアルを始める前に、次のドキュメントを確認してください。
+このチュートリアルでは、 [!DNL XDM System] とスキーマエディター ( [!DNL Experience Platform] UI このチュートリアルを始める前に、次のドキュメントを確認してください。
 
 * [XDM システムのExperience Platform](../home.md):XDM と、 [!DNL Experience Platform].
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
@@ -44,7 +44,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 この関係で定義される 2 つのスキーマが既に作成されていると想定されます。このチュートリアルでは、デモ目的で、ビジネスオポチュニティ ([!DNL Opportunities]「 」スキーマ ) および関連するビジネスアカウント（「 」で定義）[!DNL Accounts]&quot;スキーマ ) です。
 
-スキーマの関係は、 **ソーススキーマ** が **参照スキーマ**. 次の手順で、「[!DNL Opportunities]」はソーススキーマとして機能し、「[!DNL Accounts]「 」は参照スキーマとして機能します。
+スキーマの関係は、 **ソーススキーマ** が、 **参照スキーマ**. 次の手順では、「[!DNL Opportunities]」はソーススキーマとして機能し、「[!DNL Accounts]「 」は参照スキーマとして機能します。
 
 ### B2B の関係で ID を理解する
 
@@ -67,7 +67,7 @@ Adobe Real-time Customer Data Platform B2B Edition は、を含む、基本的�
 
 ### [!DNL Opportunities] schema
 
-ソーススキーマ「 」[!DNL Opportunities]」が [!UICONTROL XDM ビジネスオポチュニティ] クラス。 クラスが提供するフィールドの 1 つ。 `opportunityKey`は、スキーマの識別子として機能します。 特に、 `sourceKey` 下のフィールド `opportunityKey` オブジェクトは、 [!DNL B2B Opportunity].
+ソーススキーマ「 」[!DNL Opportunities]」が [!UICONTROL XDM ビジネスオポチュニティ] クラス。 クラスが提供するフィールドの 1 つ。 `opportunityKey`は、スキーマの識別子として機能します。 特に、 `sourceKey` の下のフィールド `opportunityKey` オブジェクトは、という名前のカスタム名前空間の下で、スキーマのプライマリ ID として設定されます。 [!DNL B2B Opportunity].
 
 以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-Time Customer Profile].
 

@@ -227,7 +227,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 新しいコンテナを追加したら、「 」を選択します。 **[!UICONTROL 次を含む]** 次に、「 **[!UICONTROL 除外]** をクリックします。
 
-![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+![除外](../../../../images/tutorials/create/analytics/exclude.png)
 
 次に、スキーマ属性をドラッグし、フィルタリングから除外する値を追加して、同じ手順を完了します。 次の例では、 [!DNL iPhone 12], [!DNL iPhone 12 mini]、および [!DNL Google Pixel 5] はすべて、次の項目から除外されます。 **[!UICONTROL モデル]** 属性、横置きは **[!UICONTROL 画面の向き]**、およびモデル番号 [!DNL A1633] 次から除外： **[!UICONTROL モデル番号]**.
 

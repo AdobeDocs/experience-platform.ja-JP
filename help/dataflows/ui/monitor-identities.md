@@ -47,7 +47,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ![「 ID 」ダッシュボード。 ソースごとに受信したレコード数に関する情報が表示されます。](../assets/ui/monitor-identities/sources.png)
 
-この [!UICONTROL ID 処理] ページには、次の場所に取り込まれたレコードに関する情報が含まれます： [!DNL Identity Service]（追加された id 数、作成されたグラフ、更新されたグラフなど）
+The [!UICONTROL ID 処理] ページには、次の場所に取り込まれたレコードに関する情報が含まれます： [!DNL Identity Service]（追加された id 数、作成されたグラフ、更新されたグラフなど）。
 
 このダッシュボードビューでは、次の指標を使用できます。
 
@@ -58,7 +58,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL スキップされたレコード]** | 取り込まれたが、に取り込まれなかったレコードの数 [!DNL Identity Service] レコード行には識別子が 1 つしかなかったので |
 | **[!UICONTROL 取り込まれたレコード]** | に取り込まれたレコードの数 [!DNL Identity Service]. |
 | **[!UICONTROL 追加された ID]** | に追加された新しい識別子の数 [!DNL Identity Service]. |
-| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数 [!DNL Identity Service]. |
+| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数。 [!DNL Identity Service]. |
 | **[!UICONTROL 更新されたグラフ]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
@@ -83,15 +83,15 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL 取り込まれたレコード]** | に取り込まれたレコードの数 [!DNL Identity Service]. |
 | **[!UICONTROL 合計レコード数]** | 失敗したレコード、スキップされたレコード、追加された ID、重複したレコードを含む、すべてのレコードの合計数。 |
 | **[!UICONTROL 追加された ID]** | に追加された新しい識別子の数 [!DNL Identity Service]. |
-| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数 [!DNL Identity Service]. |
+| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数。 [!DNL Identity Service]. |
 | **[!UICONTROL 更新されたグラフ]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-identities/filter.png) を追加し、 [!DNL Identity] データフローの実行。
+フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-identities/filter.png) データフローの実行開始時間の横に、 [!DNL Identity] データフローの実行。
 
 ![フィルターアイコンがハイライト表示されます。 このアイコンを選択すると、選択したデータフローに関する詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
 
-この [!UICONTROL データフロー実行の詳細] ページには、 [!DNL Identity] データフローの実行（組織 ID とデータフローの実行 ID を含む）。 また、このページには、 [!DNL Identity Service]は、取得プロセスでエラーが発生した場合に使用します。
+The [!UICONTROL データフローの実行の詳細] ページには、 [!DNL Identity] データフローの実行（組織 ID とデータフローの実行 ID を含む）。 また、このページには、 [!DNL Identity Service]は、取り込みプロセスでエラーが発生した場合に使用します。
 
 ![選択したデータフローに関する詳細情報を示すダッシュボードが表示されます。](../assets/ui/monitor-identities/dataflow-run-details.png)
 
@@ -104,9 +104,9 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL スキップされたレコード]** | 取り込まれたが、に取り込まれなかったレコードの数 [!DNL Identity Service] レコード行には識別子が 1 つしかなかったので |
 | **[!UICONTROL 取り込まれたレコード]** | に取り込まれたレコードの数 [!DNL Identity Service]. |
 | **[!UICONTROL 追加された ID]** | に追加された新しい識別子の数 [!DNL Identity Service]. |
-| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数 [!DNL Identity Service]. |
+| **[!UICONTROL 作成されたグラフ]** | で作成された新しい ID グラフの数。 [!DNL Identity Service]. |
 | **[!UICONTROL 更新されたグラフ]** | 新しいエッジで更新された既存の ID グラフの数。 |
-| **[!UICONTROL ステータス]** | データフローの全体的なステータスを定義します。 可能なステータス値は次のとおりです。 <ul><li>`Success`:データフローがアクティブで、提供されたスケジュールに従ってデータを取り込んでいることを示します。</li><li>`Failed`:データフローのアクティベーションプロセスがエラーが原因で中断されたことを示します。 </li><li>`Processing`:データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローを作成した直後に発生します。</li></ul> |
+| **[!UICONTROL ステータス]** | データフローの全体的なステータスを定義します。 可能なステータス値は次のとおりです。 <ul><li>`Success`：データフローがアクティブで、提供されたスケジュールに従ってデータを取り込んでいることを示します。</li><li>`Failed`：データフローのアクティベーションプロセスがエラーが原因で中断されたことを示します。 </li><li>`Processing`：データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローを作成した直後に発生します。</li></ul> |
 | **[!UICONTROL データフローの実行開始]** | データフローの実行が開始された日時。 |
 | **[!UICONTROL 最終更新日]** | データフローが最後に更新された日時。 |
 | **[!UICONTROL エラーの概要]** | データフローの実行が失敗した場合は、エラーコードと、データフローの実行が失敗した理由の概要が表示されます。 |

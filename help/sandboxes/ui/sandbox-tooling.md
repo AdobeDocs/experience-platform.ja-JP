@@ -2,18 +2,14 @@
 title: サンドボックスツール
 description: サンドボックス間でのサンドボックス設定のシームレスな書き出しと読み込みをおこないます。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 8%
+source-wordcount: '1820'
+ht-degree: 9%
 
 ---
 
-# [!BADGE ベータ版] サンドボックスツール
-
->[!IMPORTANT]
->
->The **サンドボックスツール** 以下に説明する機能は、一部のベータ版のお客様のみが利用できます。
+# サンドボックスツール
 
 >[!NOTE]
 >

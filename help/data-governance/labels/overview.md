@@ -5,7 +5,7 @@ title: データ使用ラベルの概要
 description: Adobe Experience Platform でデータガバナンスのコンプライアンスを適用するために、データ使用ラベルを使用する方法について説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 100%
 
