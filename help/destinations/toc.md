@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 94%
+source-wordcount: '1185'
+ht-degree: 93%
 
 ---
 
@@ -186,6 +186,7 @@ ht-degree: 94%
       * [ストリーミング宛先の IP アドレス許可リスト](./catalog/streaming/ip-address-allow-list.md)
    * サーベイの宛先 {#survey}
       * [サーベイの宛先の概要](./catalog/survey/overview.md)
+      * [Qualtrics 自動化の宛先](./catalog/survey/qualtrics-automations.md)
       * [Foresee 拡張機能の宛先](./catalog/survey/foresee.md)
       * [InMoment 拡張機能](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback 拡張機能](./catalog/survey/qualtrics.md)
