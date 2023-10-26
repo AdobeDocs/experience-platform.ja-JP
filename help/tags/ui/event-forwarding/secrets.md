@@ -2,10 +2,10 @@
 title: イベント転送でのシークレットの設定
 description: イベント転送のプロパティで使用されるエンドポイントを認証するために UI でシークレットを設定する方法について説明します。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 85%
+source-wordcount: '2458'
+ht-degree: 76%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 85%
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
+| [!UICONTROL [!DNL LinkedIn] OAuth2] | システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL OAuth 2 JWT] | 次の JSON Web トークン (JWT) プロファイルをサポートする属性が複数含まれます。 [OAuth 2.0 の認証](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 交付金 システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
@@ -76,6 +77,7 @@ ht-degree: 85%
 * [[!UICONTROL OAuth2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL トークン] {#token}
 
@@ -175,6 +177,38 @@ Google アカウントの資格情報を入力するためのダイアログが�
 >組織が Google Cloud アプリケーション用に再認証ポリシーを設定している場合、認証の有効期限が切れた後（ポリシー設定に応じて 1～24 時間）、作成されたシークレットは正常に更新されません。
 >
 >この問題を解決するには、Google 管理コンソールにログインし、イベント転送アプリ（Adobe Real-Time CDP イベント転送）を [!DNL Trusted] としてマークできるように **[!DNL App access control]** ページに移動します。詳しくは、Google ドキュメントで [Google Cloud サービスのセッション継続時間を設定する](https://support.google.com/a/answer/9368756)を参照してください。
+
+### [!UICONTROL [!DNL LinkedIn] OAuth2] {#linkedin-oauth2}
+
+を作成するには、以下を実行します。 [!DNL LinkedIn] OAuth 2 シークレット、「 」を選択します。 **[!UICONTROL [!DNL LinkedIn]OAuth 2]** から **[!UICONTROL タイプ]** ドロップダウン。 次に、「 **[!UICONTROL 秘密鍵を作成]**.
+
+![The [!UICONTROL 秘密鍵を作成] タブに [!UICONTROL タイプ] フィールドがハイライト表示されました。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+を使用してシークレットを手動で認証する必要があることを示すポップオーバーが表示されます。 [!DNL LinkedIn]. 選択 **[!UICONTROL での秘密鍵の作成と認証[!DNL LinkedIn]]** をクリックして続行します。
+
+![[!DNL LinkedIn] 認証ポップオーバーのハイライト [!UICONTROL での秘密鍵の作成と認証 [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+ダイアログが開き、 [!DNL LinkedIn] 認証情報。 画面の指示に従って、データへのイベント転送のアクセス権を付与します。
+
+承認プロセスが完了すると、 **[!UICONTROL 秘密]** タブに表示されます。新しく作成した暗号鍵を確認できます。 秘密鍵のステータスと有効期限を表示します。
+
+![The [!UICONTROL 秘密鍵] タブで、新しく作成されたシークレットをハイライト表示します。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### 再認証： [!UICONTROL [!DNL LinkedIn] OAuth 2] 秘密鍵
+
+>重要
+>
+>を使用して再認証する必要があります [!DNL LinkedIn] 資格情報を 365 日ごとに設定します。 しばらくして再認証しない場合、シークレットは更新されず、 [!DNL LinkedIn] コンバージョンリクエストが失敗します。
+
+再認証が必要な秘密鍵の 3 ヶ月前に、プロパティのページを移動する際にポップアップが表示され始めます。 選択 **[!UICONTROL ここをクリックして秘密鍵に移動]**.
+
+![The [!UICONTROL プロパティの概要] タブで秘密鍵の再認証ポップアップをハイライト表示します。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+次のページにリダイレクトされます： [!UICONTROL 秘密] タブをクリックします。 このページに表示される秘密鍵はフィルタリングされ、再認証が必要な秘密のみが表示されます。 選択 **[!UICONTROL 認証が必要です]** 再認証が必要な秘密鍵のためです。
+
+![The [!UICONTROL 秘密鍵] タブのハイライト [!UICONTROL 認証が必要です]（の） [!DNL LinkedIn] 秘密。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+ダイアログが開き、 [!DNL LinkedIn] 認証情報。 画面の指示に従って秘密鍵を再認証します。
 
 ## 秘密鍵の編集
 
